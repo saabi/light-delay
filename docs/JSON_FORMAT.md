@@ -12,15 +12,15 @@ Dialogue and action should live in ordered **cues** inside beats. Shots then ref
 
 ```text
 data/
-├── project.json
-├── script.json
-├── characters.json
-├── locations.json
-├── objects.json
-├── vehicles.json
-├── factions.json
-├── assets.json
-└── voice-profiles.json
+|-- project.json
+|-- script.json
+|-- characters.json
+|-- locations.json
+|-- objects.json
+|-- vehicles.json
+|-- factions.json
+|-- assets.json
+`-- voice-profiles.json
 ```
 
 ## TypeScript definitions

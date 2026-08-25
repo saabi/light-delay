@@ -23,6 +23,10 @@ Fecha de corte: 2026-08-25.
 5. **Festival Cut.** Existe una estrategia de 4:30–5:00, pero todavía no un guion, shot list ni animatic canónicos de esa versión.
 6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 
+## Notas técnicas recientes
+
+- `docs/SVELTEKIT_SETUP.md` restaurado en disco; árboles de directorio en docs usan ASCII para evitar mojibake UTF-8/CP1252 en Windows.
+
 ## Próxima fase técnica
 
 - Crear proyecto SvelteKit en la raíz.

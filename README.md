@@ -14,12 +14,12 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 
 ```text
 .
-├── AGENTS.md                 # Reglas de continuidad para agentes
-├── README.md
-├── CHANGELOG.md
-├── docs/                     # Canon, producción, estado y procedencia
-├── data/                     # Contratos y futuros JSON canónicos
-└── legacy-site/              # Sitio HTML actual y todos sus assets
+|-- AGENTS.md                 # Reglas de continuidad para agentes
+|-- README.md
+|-- CHANGELOG.md
+|-- docs/                     # Canon, producción, estado y procedencia
+|-- data/                     # Contratos y futuros JSON canónicos
+`-- legacy-site/              # Sitio HTML actual y todos sus assets
 ```
 
 La raíz se deja disponible para crear el futuro proyecto SvelteKit. No debe eliminarse `legacy-site/` hasta que la nueva aplicación reproduzca todas sus páginas y el modo Película del animatic.

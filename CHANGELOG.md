@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-25 — Documentación SvelteKit y árboles ASCII
+
+- Se restauró `docs/SVELTEKIT_SETUP.md` (estaba vacío en disco) y se reemplazó el árbol mojibake por ASCII.
+- Se unificaron los diagramas de directorio en `README.md` y `docs/JSON_FORMAT.md` a ASCII para evitar re-corrupción por encoding en Windows.
+
 ## 2026-08-25 — Paquete inicial para Git
 
 - Se preservó el sitio estático completo en `legacy-site/`.
