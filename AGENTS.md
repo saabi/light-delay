@@ -4,8 +4,20 @@
 
 Transformar gradualmente el paquete estático de Light Delay en una aplicación SvelteKit basada en datos, sin perder canon, contenido, imágenes ni comportamiento.
 
+## Idioma y autoridad documental
+
+El español es la fuente de verdad de la documentación del repositorio.
+
+- Si un documento existe en varios idiomas, **editar primero la copia en español**. Las demás lenguas son traducciones o adaptaciones, no fuentes paralelas de autoría.
+- Si **no hay copia en español**, el inglés es el idioma secundario de trabajo hasta que exista versión española (o se decida explícitamente dejarlo solo en inglés).
+- Tras cualquier cambio material, **actualizar las copias en otros idiomas en la misma tarea** (o dejar marcado y visible el desfase en `docs/PROJECT_STATUS.md` si la sincronización debe posponerse).
+- No introducir divergencias de canon, procedimiento o estado entre idiomas. Ante conflicto, prevalece la versión española.
+- Convención de nombres cuando haya pares: `nombre.md` o `nombre.es.md` para español; `nombre.en.md` (u otro sufijo de idioma) para el resto. Si solo hay un archivo sin sufijo, su idioma debe inferirse del contenido; al crear la segunda lengua, renombrar o añadir sufijos de forma explícita.
+- `AGENTS.md` es el único lugar canónico de instrucciones para agentes (cualquier modelo o plataforma). Otras guías de herramienta deben **referenciar** este archivo, no duplicar reglas.
+
 ## Reglas obligatorias
 
+- Leer este archivo completo al inicio de cada sesión de trabajo en el repositorio.
 - Leer `README.md`, `docs/CANON_DECISIONS.md` y `docs/PROJECT_STATUS.md` antes de modificar narrativa o estructura.
 - Tratar `legacy-site/` como referencia de regresión hasta completar la migración.
 - No reescribir el canon para resolver una dificultad de implementación.
@@ -17,6 +29,7 @@ Transformar gradualmente el paquete estático de Light Delay en una aplicación 
 - Preservar la reproducción a pantalla completa, play/pausa/stop, navegación, timeline, panel de detalles y retorno a edición conservando posición.
 - No regenerar imágenes existentes salvo instrucción explícita.
 - Actualizar `CHANGELOG.md` y `docs/PROJECT_STATUS.md` después de cambios materiales.
+- Respetar la sección **Idioma y autoridad documental** al editar o crear documentación.
 
 ## Arquitectura prevista
 

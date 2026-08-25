@@ -30,13 +30,16 @@ Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones d
 
 ## Autoridad documental
 
-1. `docs/CANON_DECISIONS.md` fija las decisiones de canon vigentes.
-2. `legacy-site/guion-30-minutos.html` es el guion corto canónico actual.
-3. `legacy-site/notas-tecnicas-continuidad.html` fija las reglas físicas y de continuidad.
-4. `legacy-site/animatic-textual.html` fija la descomposición actual en tomas.
-5. `legacy-site/reporte-comprensivo.html` y la biblia de producción aportan contexto ampliado.
+1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (español como fuente de verdad; inglés como secundario).
+2. `docs/CANON_DECISIONS.md` fija las decisiones de canon vigentes.
+3. `legacy-site/guion-30-minutos.html` es el guion corto canónico actual.
+4. `legacy-site/notas-tecnicas-continuidad.html` fija las reglas físicas y de continuidad.
+5. `legacy-site/animatic-textual.html` fija la descomposición actual en tomas.
+6. `legacy-site/reporte-comprensivo.html` y la biblia de producción aportan contexto ampliado.
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
+
+Cuando existan copias del mismo documento en varios idiomas, editar primero el español y sincronizar el resto en la misma tarea. Detalle en `AGENTS.md`.
 
 ## Migración prevista
 

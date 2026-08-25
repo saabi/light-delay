@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-25 — Política de idioma y carga de AGENTS.md
+
+- Se definió el español como fuente de verdad documental; el inglés es secundario si no hay copia española.
+- Se exige sincronizar traducciones (o marcar el desfase) en la misma tarea.
+- Se añadió `.cursor/rules/load-agents.mdc` (`alwaysApply`) para cargar `AGENTS.md` en cada sesión de Cursor.
+
 ## 2026-08-25 — Documentación SvelteKit y árboles ASCII
 
 - Se restauró `docs/SVELTEKIT_SETUP.md` (estaba vacío en disco) y se reemplazó el árbol mojibake por ASCII.

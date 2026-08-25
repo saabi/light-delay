@@ -26,6 +26,8 @@ Fecha de corte: 2026-08-25.
 ## Notas técnicas recientes
 
 - `docs/SVELTEKIT_SETUP.md` restaurado en disco; árboles de directorio en docs usan ASCII para evitar mojibake UTF-8/CP1252 en Windows.
+- Política de idioma: español = fuente de verdad; inglés = secundario. Detalle en `AGENTS.md`. Regla Cursor `load-agents.mdc` fuerza la lectura de `AGENTS.md`.
+- Varios docs técnicos (`docs/JSON_FORMAT.md`, `docs/SVELTEKIT_SETUP.md`) están solo en inglés; pendientes de versión española o de decisión explícita de dejarlos monolingües.
 
 ## Próxima fase técnica
 

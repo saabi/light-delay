@@ -1,0 +1,13 @@
+---
+description: Cargar AGENTS.md como única fuente de instrucciones del proyecto
+alwaysApply: true
+---
+
+# Instrucciones del repositorio
+
+Al inicio de cada chat o tarea en este proyecto, leer y seguir `AGENTS.md` en la raíz del repositorio.
+
+- `AGENTS.md` es la fuente canónica de reglas para agentes (independiente del modelo o plataforma).
+- No inventar políticas locales que contradigan `AGENTS.md`.
+- Si una regla de Cursor y `AGENTS.md` divergen, prevalece `AGENTS.md` y hay que alinear la regla.
+- Política de idioma, canon, migración y validación: ver `AGENTS.md` (no duplicar aquí el detalle).
