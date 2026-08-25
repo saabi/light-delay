@@ -4,6 +4,7 @@ Fecha de corte: 2026-08-25.
 
 ## Completado
 
+- **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
 - Guion corto revisado de 17 escenas con objetivo de 30 minutos.
 - Lista de momentos clave y versión acotada sincronizadas.
 - Biblia de producción y reporte comprensivo actualizados al canon reciente.
@@ -24,7 +25,7 @@ Fecha de corte: 2026-08-25.
 2. **Corrección de rumbo — Opción B.** Falta desarrollar y aplicar de forma consistente la solución de navegación/propulsión elegida.
 3. **Terminología del sistema.** Unificar `IA`, `mediación`, `núcleo diplomático`, `núcleo cuántico` y `envoltura` según función dramática y técnica.
 4. **Duración real.** Los 30:00 son un objetivo de montaje. Debe validarse mediante lectura cronometrada y luego con animación/video.
-5. **Festival Cut.** Existe una estrategia de 4:30–5:00, pero todavía no un guion, shot list ni animatic canónicos de esa versión.
+5. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 secuencias y diálogo citado; faltan shot list, takes e imágenes canónicas de esa versión.
 6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 
 ## Notas técnicas recientes

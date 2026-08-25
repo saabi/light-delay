@@ -1,6 +1,8 @@
 /** Plain-string IDs that stay distinguishable in TypeScript. */
 
 export type ProjectId = string;
+export type ScriptId = string;
+export type ContinuityId = string;
 export type ActId = string;
 export type SequenceId = string;
 export type SceneId = string;
@@ -17,3 +19,14 @@ export type FactionId = string;
 export type AssetId = string;
 export type VoiceProfileId = string;
 export type DocumentId = string;
+export type EntityVariantId = string;
+export type NarrativeFunctionId = string;
+
+export type ScriptKind =
+	| 'main_short'
+	| 'long_version'
+	| 'festival_cut'
+	| 'trailer'
+	| 'teaser'
+	| 'proof_of_concept'
+	| 'alternate';

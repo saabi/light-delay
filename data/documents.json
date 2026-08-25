@@ -2,7 +2,7 @@
 	"schemaVersion": "1.0.0",
 	"documents": [
 		{
-			"id": "doc-notas-tecnicas",
+			"id": "document:notas-tecnicas",
 			"slug": "notas-tecnicas-continuidad",
 			"title": "Notas técnicas y continuidad",
 			"status": "extracted",
@@ -200,7 +200,7 @@
 			]
 		},
 		{
-			"id": "doc-biblia-produccion",
+			"id": "document:biblia-produccion",
 			"slug": "biblia-de-produccion",
 			"title": "Biblia de producción",
 			"status": "stub",
@@ -234,7 +234,7 @@
 			]
 		},
 		{
-			"id": "doc-reporte-comprensivo",
+			"id": "document:reporte-comprensivo",
 			"slug": "reporte-comprensivo",
 			"title": "Reporte comprensivo",
 			"status": "stub",
@@ -260,7 +260,7 @@
 			]
 		},
 		{
-			"id": "doc-momentos-clave",
+			"id": "document:momentos-clave",
 			"slug": "momentos-clave",
 			"title": "Momentos clave",
 			"status": "stub",
@@ -291,7 +291,7 @@
 			]
 		},
 		{
-			"id": "doc-canon",
+			"id": "document:canon",
 			"slug": "canon-decisions",
 			"title": "Decisiones de canon",
 			"status": "stub",

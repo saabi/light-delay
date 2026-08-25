@@ -7,7 +7,7 @@
 
 	let { children } = $props();
 
-	const isPlayer = $derived(page.url.pathname.startsWith('/animatic/player'));
+	const isPlayer = $derived(/\/animatic\/.+\/player\/?$/.test(page.url.pathname));
 </script>
 
 <svelte:head>

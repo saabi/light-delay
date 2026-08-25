@@ -1,0 +1,35 @@
+{
+	"schemaVersion": "1.0.0",
+	"functions": [
+		{
+			"id": "function:piloting",
+			"label": "Piloto / navegación",
+			"description": "Detección de señal, estado de navegación y operaciones de puente asociadas."
+		},
+		{
+			"id": "function:communications",
+			"label": "Comunicaciones",
+			"description": "Detección y anuncio de señales; interfaz de comunicaciones."
+		},
+		{
+			"id": "function:command",
+			"label": "Mando",
+			"description": "Autoridad de decisión y revocación de credenciales."
+		},
+		{
+			"id": "function:investigation_payload",
+			"label": "Investigación del payload",
+			"description": "Análisis técnico del payload, disparador y cuarentena."
+		},
+		{
+			"id": "function:diplomatic_greeting_authorship",
+			"label": "Autoría del saludo diplomático",
+			"description": "Autoría del saludo pasivo limpio / read-only."
+		},
+		{
+			"id": "function:override_antagonist",
+			"label": "Override antagonista",
+			"description": "Titular del override hostil y antagonista operativo."
+		}
+	]
+}

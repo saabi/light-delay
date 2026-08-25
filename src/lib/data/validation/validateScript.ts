@@ -1,5 +1,6 @@
 import type { ValidationResult } from '$lib/types/common';
-import type { Cue, ScriptFile } from '$lib/types/script';
+import type { Cue, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
+import type { CharacterId } from '$lib/types/ids';
 
 function uniqueIds(label: string, ids: string[], errors: string[]) {
 	const seen = new Set<string>();
@@ -45,13 +46,23 @@ function validateDialogueCue(cue: Cue, sourceLanguage: string, errors: string[])
 
 export function validateScript(
 	file: ScriptFile,
-	options: { sourceLanguage?: string; expectShotCount?: number; expectSceneCount?: number } = {}
+	options: {
+		sourceLanguage?: string;
+		expectShotCount?: number;
+		expectSceneCount?: number;
+		narrativeFunctions?: NarrativeFunctionsFile;
+		characterIds?: Set<CharacterId>;
+		requireSelectedTakes?: boolean;
+	} = {}
 ): ValidationResult {
 	const errors: string[] = [];
 	const sourceLanguage = options.sourceLanguage ?? 'es';
+	const requireSelectedTakes = options.requireSelectedTakes ?? true;
 
 	if (!file?.schemaVersion) errors.push('script: missing schemaVersion');
 	if (!file?.script?.id) errors.push('script: missing script.id');
+	if (!file?.script?.kind) errors.push('script: missing script.kind');
+	if (!file?.script?.continuityId) errors.push('script: missing script.continuityId');
 	if (!Array.isArray(file?.acts)) errors.push('script: missing acts');
 	if (!Array.isArray(file?.scenes)) errors.push('script: missing scenes');
 	if (!Array.isArray(file?.beats)) errors.push('script: missing beats');
@@ -61,61 +72,85 @@ export function validateScript(
 
 	if (!file) return { ok: false, errors };
 
+	const label = `script(${file.script.id})`;
+
 	uniqueIds(
-		'script.acts',
+		`${label}.acts`,
 		file.acts.map((a) => a.id),
 		errors
 	);
 	uniqueIds(
-		'script.scenes',
+		`${label}.scenes`,
 		file.scenes.map((s) => s.id),
 		errors
 	);
 	uniqueIds(
-		'script.beats',
+		`${label}.beats`,
 		file.beats.map((b) => b.id),
 		errors
 	);
 	uniqueIds(
-		'script.cues',
+		`${label}.cues`,
 		file.cues.map((c) => c.id),
 		errors
 	);
 	uniqueIds(
-		'script.shots',
+		`${label}.shots`,
 		file.shots.map((s) => s.id),
 		errors
 	);
 	uniqueIds(
-		'script.takes',
+		`${label}.takes`,
 		file.takes.map((t) => t.id),
 		errors
 	);
 
 	if (options.expectSceneCount != null && file.scenes.length !== options.expectSceneCount) {
-		errors.push(`script: expected ${options.expectSceneCount} scenes, got ${file.scenes.length}`);
+		errors.push(`${label}: expected ${options.expectSceneCount} scenes, got ${file.scenes.length}`);
 	}
 	if (options.expectShotCount != null && file.shots.length !== options.expectShotCount) {
-		errors.push(`script: expected ${options.expectShotCount} shots, got ${file.shots.length}`);
+		errors.push(`${label}: expected ${options.expectShotCount} shots, got ${file.shots.length}`);
 	}
 
 	const takeById = new Map(file.takes.map((t) => [t.id, t]));
 	for (const shot of file.shots) {
-		if (!shot.selectedTakeId) {
-			errors.push(`script: shot ${shot.id} missing selectedTakeId`);
-		} else if (!takeById.has(shot.selectedTakeId)) {
-			errors.push(`script: shot ${shot.id} selectedTakeId not found`);
+		if (requireSelectedTakes) {
+			if (!shot.selectedTakeId) {
+				errors.push(`${label}: shot ${shot.id} missing selectedTakeId`);
+			} else if (!takeById.has(shot.selectedTakeId)) {
+				errors.push(`${label}: shot ${shot.id} selectedTakeId not found`);
+			}
 		}
 		if (!Array.isArray(shot.cuePlacements)) {
-			errors.push(`script: shot ${shot.id} missing cuePlacements`);
+			errors.push(`${label}: shot ${shot.id} missing cuePlacements`);
 		}
 		if (typeof shot.durationMs !== 'number' || shot.durationMs < 0) {
-			errors.push(`script: shot ${shot.id} invalid durationMs`);
+			errors.push(`${label}: shot ${shot.id} invalid durationMs`);
 		}
 	}
 
 	for (const cue of file.cues) {
 		validateDialogueCue(cue, sourceLanguage, errors);
+	}
+
+	const functionIds = new Set((options.narrativeFunctions?.functions ?? []).map((f) => f.id));
+	const characterIds = options.characterIds;
+	for (const assignment of file.script.characterFunctionAssignments ?? []) {
+		if (functionIds.size && !functionIds.has(assignment.functionId)) {
+			errors.push(`${label}: unknown functionId ${assignment.functionId}`);
+		}
+		if (characterIds && !characterIds.has(assignment.characterId)) {
+			errors.push(`${label}: assignment character ${assignment.characterId} not in catalog`);
+		}
+		for (const src of assignment.sourceCharacterIds ?? []) {
+			if (characterIds && !characterIds.has(src)) {
+				errors.push(`${label}: sourceCharacter ${src} not in catalog`);
+			}
+		}
+	}
+
+	if (file.script.lineage?.sourceScriptId === file.script.id) {
+		errors.push(`${label}: lineage.sourceScriptId cannot equal script.id`);
 	}
 
 	return { ok: errors.length === 0, errors };

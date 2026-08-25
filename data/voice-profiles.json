@@ -2,8 +2,8 @@
 	"schemaVersion": "1.0.0",
 	"voiceProfiles": [
 		{
-			"id": "voice-zao-es",
-			"characterId": "character-zao",
+			"id": "voice:zao-es",
+			"characterId": "character:zao",
 			"name": "Zao (es)",
 			"description": "Practicidad, observación y resolución bajo presión.",
 			"variants": [
@@ -13,8 +13,8 @@
 			]
 		},
 		{
-			"id": "voice-voss-es",
-			"characterId": "character-voss",
+			"id": "voice:voss-es",
+			"characterId": "character:voss",
 			"name": "Elias Voss (es)",
 			"description": "Autoridad contenida, responsabilidad y duelo.",
 			"variants": [
@@ -24,8 +24,8 @@
 			]
 		},
 		{
-			"id": "voice-harlan-es",
-			"characterId": "character-harlan",
+			"id": "voice:harlan-es",
+			"characterId": "character:harlan",
 			"name": "Rylen Harlan (es)",
 			"description": "Competencia creíble, convicción ideológica y quiebre.",
 			"variants": [
@@ -35,8 +35,8 @@
 			]
 		},
 		{
-			"id": "voice-rao-es",
-			"characterId": "character-rao",
+			"id": "voice:rao-es",
+			"characterId": "character:rao",
 			"name": "Elin Rao (es)",
 			"description": "Concentración analítica, alarma y determinación.",
 			"variants": [
@@ -46,8 +46,8 @@
 			]
 		},
 		{
-			"id": "voice-sorell-es",
-			"characterId": "character-sorell",
+			"id": "voice:sorell-es",
+			"characterId": "character:sorell",
 			"name": "Lian Sorell (es)",
 			"description": "Curiosidad, indignación, empatía y esperanza cauta.",
 			"variants": [
@@ -57,8 +57,8 @@
 			]
 		},
 		{
-			"id": "voice-cael-es",
-			"characterId": "character-cael",
+			"id": "voice:cael-es",
+			"characterId": "character:cael",
 			"name": "Juno Cael (es)",
 			"description": "Pragmatismo, concentración, humor seco y asombro.",
 			"variants": [
@@ -68,8 +68,8 @@
 			]
 		},
 		{
-			"id": "voice-proxima-technician-es",
-			"characterId": "character-proxima-technician",
+			"id": "voice:proxima-technician-es",
+			"characterId": "character:proxima-technician",
 			"name": "Técnico de Proxima (es)",
 			"description": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
 			"variants": [
@@ -79,8 +79,8 @@
 			]
 		},
 		{
-			"id": "voice-medical-officer-es",
-			"characterId": "character-medical-officer",
+			"id": "voice:medical-officer-es",
+			"characterId": "character:medical-officer",
 			"name": "Oficial médico (es)",
 			"description": "Examen forense inicial, gravedad clínica y urgencia contenida.",
 			"variants": [
@@ -90,8 +90,8 @@
 			]
 		},
 		{
-			"id": "voice-security-crew-es",
-			"characterId": "character-security-crew",
+			"id": "voice:security-crew-es",
+			"characterId": "character:security-crew",
 			"name": "Tripulante de seguridad (es)",
 			"description": "Autoridad física sin militarización ni armamento visible.",
 			"variants": [
@@ -101,8 +101,8 @@
 			]
 		},
 		{
-			"id": "voice-earth-protesters-es",
-			"characterId": "character-earth-protesters",
+			"id": "voice:earth-protesters-es",
+			"characterId": "character:earth-protesters",
 			"name": "Manifestantes terrestres (es)",
 			"description": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
 			"variants": [

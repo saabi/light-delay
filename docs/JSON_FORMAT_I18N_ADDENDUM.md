@@ -174,7 +174,7 @@ export interface DialogueCue extends CueBase {
   "beatId": "beat-12-02",
   "order": 4,
   "type": "dialogue",
-  "speakerId": "character-zao",
+  "speakerId": "character:zao",
   "presentation": "recording",
   "performance": {
     "emotion": "controlled urgency",

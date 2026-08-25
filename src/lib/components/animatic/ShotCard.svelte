@@ -8,17 +8,19 @@
 		shot,
 		imageSrc,
 		durationMs,
+		playerHref,
 		onduration
 	}: {
 		shot: Shot;
 		imageSrc?: string;
 		durationMs: number;
+		playerHref: string;
 		onduration: (ms: number) => void;
 	} = $props();
 </script>
 
 <article class="shot-card" id={shot.id}>
-	<a class="media" href={`/animatic/player?shot=${encodeURIComponent(shot.id)}`}>
+	<a class="media" href={playerHref}>
 		<AssetThumbnail src={imageSrc} alt={`Toma ${shot.number}`} />
 	</a>
 	<div class="body">

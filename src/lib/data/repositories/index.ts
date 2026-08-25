@@ -1,5 +1,6 @@
 import projectJson from '../../../../data/project.json';
-import scriptJson from '../../../../data/script.json';
+import mainScriptJson from '../../../../data/scripts/light-delay-main-short.json';
+import festivalScriptJson from '../../../../data/scripts/light-delay-festival.json';
 import assetsJson from '../../../../data/assets.json';
 import charactersJson from '../../../../data/characters.json';
 import locationsJson from '../../../../data/locations.json';
@@ -8,9 +9,11 @@ import vehiclesJson from '../../../../data/vehicles.json';
 import factionsJson from '../../../../data/factions.json';
 import voiceProfilesJson from '../../../../data/voice-profiles.json';
 import documentsJson from '../../../../data/documents.json';
+import narrativeFunctionsJson from '../../../../data/narrative-functions.json';
+import entityVariantsJson from '../../../../data/entity-variants.json';
 
-import type { ProjectFile } from '$lib/types/project';
-import type { ScriptFile } from '$lib/types/script';
+import type { ProjectFile, ScriptRegistryEntry } from '$lib/types/project';
+import type { EntityVariantsFile, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
 import type { AssetsFile } from '$lib/types/assets';
 import type {
 	CharactersFile,
@@ -21,14 +24,63 @@ import type {
 	VoiceProfilesFile
 } from '$lib/types/entities';
 import type { DocumentsFile } from '$lib/types/document';
+import type { ScriptId } from '$lib/types/ids';
 import { assertJsonModule } from '../loaders/loadJson.ts';
+
+const SCRIPT_MODULES: Record<string, ScriptFile> = {
+	'script:light-delay-main-short': assertJsonModule(
+		mainScriptJson as ScriptFile,
+		'scripts/light-delay-main-short'
+	),
+	'script:light-delay-festival': assertJsonModule(
+		festivalScriptJson as ScriptFile,
+		'scripts/light-delay-festival'
+	)
+};
+
+function slugFromScriptId(scriptId: ScriptId): string {
+	const bare = scriptId.includes(':') ? scriptId.slice(scriptId.indexOf(':') + 1) : scriptId;
+	return bare;
+}
 
 export function getProject(): ProjectFile {
 	return assertJsonModule(projectJson as ProjectFile, 'project');
 }
 
-export function getScript(): ScriptFile {
-	return assertJsonModule(scriptJson as ScriptFile, 'script');
+export function listScripts(): ScriptRegistryEntry[] {
+	return getProject().project.scripts ?? [];
+}
+
+export function getCanonicalScript(): ScriptFile {
+	const id = getProject().project.canonicalScriptId;
+	return getScript(id);
+}
+
+/**
+ * Load a script by id. Prefer getCanonicalScript() for the default film.
+ * @throws if scriptId is missing or unknown
+ */
+export function getScript(scriptId: ScriptId): ScriptFile {
+	if (!scriptId) {
+		throw new Error('getScript(scriptId): scriptId is required; use getCanonicalScript()');
+	}
+	const cached = SCRIPT_MODULES[scriptId];
+	if (cached) return cached;
+	const registered = listScripts().find((s) => s.id === scriptId);
+	if (!registered) {
+		throw new Error(`getScript: unknown scriptId "${scriptId}"`);
+	}
+	throw new Error(
+		`getScript: registry entry "${scriptId}" has no imported module (expected data/scripts/${slugFromScriptId(scriptId)}.json)`
+	);
+}
+
+export function getNarrativeFunctions(): NarrativeFunctionsFile {
+	return assertJsonModule(narrativeFunctionsJson as NarrativeFunctionsFile, 'narrative-functions');
+}
+
+export function getEntityVariants(): EntityVariantsFile {
+	return assertJsonModule(entityVariantsJson as EntityVariantsFile, 'entity-variants');
 }
 
 export function getAssets(): AssetsFile {
@@ -66,7 +118,8 @@ export function getDocuments(): DocumentsFile {
 export function getCanonicalBundle() {
 	return {
 		project: getProject(),
-		script: getScript(),
+		script: getCanonicalScript(),
+		scripts: listScripts().map((e) => getScript(e.id)),
 		assets: getAssets(),
 		characters: getCharacters(),
 		locations: getLocations(),
@@ -74,7 +127,9 @@ export function getCanonicalBundle() {
 		vehicles: getVehicles(),
 		factions: getFactions(),
 		voiceProfiles: getVoiceProfiles(),
-		documents: getDocuments()
+		documents: getDocuments(),
+		narrativeFunctions: getNarrativeFunctions(),
+		entityVariants: getEntityVariants()
 	};
 }
 

@@ -13,15 +13,21 @@ Dialogue and action should live in ordered **cues** inside beats. Shots then ref
 ```text
 data/
 |-- project.json
-|-- script.json
+|-- scripts/
+|   |-- light-delay-main-short.json
+|   `-- light-delay-festival.json
 |-- characters.json
 |-- locations.json
 |-- objects.json
 |-- vehicles.json
 |-- factions.json
 |-- assets.json
-`-- voice-profiles.json
+|-- voice-profiles.json
+|-- narrative-functions.json
+`-- entity-variants.json
 ```
+
+Multi-script architecture (registry, continuities, lineage, character-function reassignment, entity variants, sourceRefs) is defined in `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`. Each cut is an independent `ScriptFile`; shared entities/assets remain project-level.
 
 ## TypeScript definitions
 
@@ -29,6 +35,8 @@ data/
 // IDs remain plain strings in JSON but are distinguishable in TypeScript.
 
 export type ProjectId = string;
+export type ScriptId = string;
+export type ContinuityId = string;
 export type ActId = string;
 export type SequenceId = string;
 export type SceneId = string;
@@ -44,6 +52,17 @@ export type VehicleId = string;
 export type FactionId = string;
 export type AssetId = string;
 export type VoiceProfileId = string;
+export type EntityVariantId = string;
+export type NarrativeFunctionId = string;
+
+export type ScriptKind =
+  | "main_short"
+  | "long_version"
+  | "festival_cut"
+  | "trailer"
+  | "teaser"
+  | "proof_of_concept"
+  | "alternate";
 
 export type EntityKind =
   | "character"
@@ -57,23 +76,110 @@ export interface EntityRef {
   id: string;
   role?: string;
 }
+
+export interface SourceReference {
+  scriptId: ScriptId;
+  sceneId?: SceneId;
+  beatId?: BeatId;
+  cueId?: CueId;
+  shotId?: ShotId;
+}
+
+export interface SourceTraceable {
+  sourceRefs?: SourceReference[];
+}
+
+export interface NarrativeFunction {
+  id: NarrativeFunctionId;
+  label: string;
+  description?: string;
+}
+
+export interface CharacterFunctionAssignment {
+  functionId: NarrativeFunctionId;
+  /** Character performing this function in this script. */
+  characterId: CharacterId;
+  /** Characters performing it in the source version, when applicable. */
+  sourceCharacterIds?: CharacterId[];
+  relationship:
+    | "unchanged"
+    | "merged"
+    | "reassigned"
+    | "split"
+    | "new";
+  notes?: string;
+}
+
+export interface EntityVariant {
+  id: EntityVariantId;
+  entity: EntityRef;
+  continuityId?: ContinuityId;
+  scriptIds?: ScriptId[];
+  label: string;
+  descriptionOverride?: string;
+  appearanceOverride?: string;
+  costumeOverride?: string;
+  referenceAssetIds: AssetId[];
+}
+
+export interface ScriptEntityVariantSelections {
+  character?: Record<CharacterId, EntityVariantId>;
+  location?: Record<LocationId, EntityVariantId>;
+  object?: Record<ObjectId, EntityVariantId>;
+  vehicle?: Record<VehicleId, EntityVariantId>;
+  faction?: Record<FactionId, EntityVariantId>;
+}
+
+export interface Continuity {
+  id: ContinuityId;
+  name: string;
+  description?: string;
+  derivedFromContinuityId?: ContinuityId;
+}
+
+export interface ScriptLineage {
+  sourceScriptId: ScriptId;
+  relationship:
+    | "cut"
+    | "trailer"
+    | "teaser"
+    | "adaptation"
+    | "rewrite"
+    | "alternate_continuity";
+  sourceVersion?: string;
+  notes?: string;
+}
 ```
+
+Catalog files: `data/narrative-functions.json`, `data/entity-variants.json`. Route encoding for script IDs: `:` → `~` (`src/lib/utils/scriptId.ts`).
 
 ### Project metadata
 
+See ADR-0001 for full registry types. Summary:
+
 ```ts
+export interface ScriptRegistryEntry {
+  id: ScriptId;
+  continuityId: ContinuityId;
+  label: string;
+  kind: ScriptKind;
+  status: "draft" | "review" | "locked" | "deprecated";
+  targetDurationMs?: number;
+  lineage?: ScriptLineage;
+}
+
 export interface ProjectFile {
   schemaVersion: string;
   project: {
     id: ProjectId;
     title: string;
     alternateTitles?: string[];
-    language: string;
     description?: string;
-
-    canonicalScriptId: string;
+    languages: ProjectLanguages;
+    canonicalScriptId: ScriptId;
+    scripts: ScriptRegistryEntry[];
+    continuities: Continuity[];
     targetDurationMs?: number;
-
     createdAt?: string;
     updatedAt?: string;
   };
@@ -87,12 +193,18 @@ export interface ScriptFile {
   schemaVersion: string;
 
   script: {
-    id: string;
+    id: ScriptId;
     projectId: ProjectId;
+    continuityId: ContinuityId;
     title: string;
     version: string;
     status: "draft" | "review" | "locked" | "deprecated";
-
+    kind: ScriptKind;
+    targetDurationMs?: number;
+    lineage?: ScriptLineage;
+    declaredEntityRefs?: EntityRef[];
+    entityVariantSelections?: ScriptEntityVariantSelections;
+    characterFunctionAssignments?: CharacterFunctionAssignment[];
     actIds: ActId[];
   };
 
@@ -105,6 +217,8 @@ export interface ScriptFile {
   takes: Take[];
 }
 ```
+
+Script-owned IDs are globally unique and namespaced (e.g. `main:scene-01`, `festival:cue-02-001`). Project entities use ids such as `character:voss`. Scene, Beat, Cue and Shot may include `sourceRefs` for provenance without live inheritance.
 
 ### Acts, optional sequences and scenes
 
@@ -682,7 +796,7 @@ The dialogue exists once:
   "beatId": "beat-12-02",
   "order": 4,
   "type": "dialogue",
-  "speakerId": "character-zao",
+  "speakerId": "character:zao",
   "text": "No apaguen la mediación. Aqueronte ya está adentro.",
   "presentation": "recording",
   "audioAssetId": "audio-zao-message"
@@ -699,7 +813,7 @@ Three shots can cover different portions of it:
     "visibleRefs": [
       { "kind": "character", "id": "character-voss" }
     ],
-    "offScreenCharacterIds": ["character-zao"],
+    "offScreenCharacterIds": ["character:zao"],
     "cuePlacements": [
       {
         "cueId": "cue-12-004",
@@ -716,7 +830,7 @@ Three shots can cover different portions of it:
     "visibleRefs": [
       { "kind": "character", "id": "character-harlan" }
     ],
-    "offScreenCharacterIds": ["character-zao"],
+    "offScreenCharacterIds": ["character:zao"],
     "cuePlacements": [
       {
         "cueId": "cue-12-004",
@@ -733,7 +847,7 @@ Three shots can cover different portions of it:
     "visibleRefs": [
       { "kind": "object", "id": "object-optical-transmitter" }
     ],
-    "offScreenCharacterIds": ["character-zao"],
+    "offScreenCharacterIds": ["character:zao"],
     "cuePlacements": [
       {
         "cueId": "cue-12-004",

@@ -2,11 +2,14 @@
 	import ShotCard from './ShotCard.svelte';
 	import ContinuityWarnings from './ContinuityWarnings.svelte';
 	import {
-		getEffectiveTotalMs,
-		getShotDurationMs,
-		setShotDurationMs
-	} from '$lib/state/animatic-editor.svelte';
+		durationFromEdits,
+		effectiveTotalMs,
+		loadAnimaticEdits,
+		persistAnimaticEdits,
+		type AnimaticEdits
+	} from '$lib/state/animatic-overlay';
 	import { formatClock } from '$lib/utils/duration';
+	import type { ScriptId } from '$lib/types/ids';
 	import type { Scene, Shot } from '$lib/types/script';
 
 	type SceneGroup = {
@@ -17,16 +20,44 @@
 
 	let {
 		groups,
+		scriptId,
+		scriptVersion,
+		playerHref,
 		targetDurationMs,
 		warnings = []
 	}: {
 		groups: SceneGroup[];
+		scriptId: ScriptId;
+		scriptVersion: string;
+		playerHref: string;
 		targetDurationMs?: number;
 		warnings?: string[];
 	} = $props();
 
+	let localDurations = $state<Record<string, number>>({});
+
+	const persisted = $derived(loadAnimaticEdits(scriptId, scriptVersion));
+	const edits = $derived.by((): AnimaticEdits => ({
+		scriptId,
+		scriptVersion,
+		shotDurations: { ...persisted.shotDurations, ...localDurations }
+	}));
+
 	const allShots = $derived(groups.flatMap((g) => g.shots));
-	const totalMs = $derived(getEffectiveTotalMs(allShots));
+	const totalMs = $derived(effectiveTotalMs(edits, allShots));
+
+	function setDuration(shotId: string, ms: number) {
+		const nextLocal = {
+			...localDurations,
+			[shotId]: Math.max(0, Math.round(ms))
+		};
+		localDurations = nextLocal;
+		persistAnimaticEdits({
+			scriptId,
+			scriptVersion,
+			shotDurations: { ...persisted.shotDurations, ...nextLocal }
+		});
+	}
 </script>
 
 <div class="editor">
@@ -45,7 +76,7 @@
 				style:width={`${targetDurationMs ? Math.min(100, (totalMs / targetDurationMs) * 100) : 0}%`}
 			></span>
 		</div>
-		<a class="play-link" href="/animatic/player">Modo película</a>
+		<a class="play-link" href={playerHref}>Modo película</a>
 	</div>
 
 	<ContinuityWarnings {warnings} />
@@ -56,7 +87,7 @@
 				<h2>Escena {group.scene.number}</h2>
 				<p>{group.scene.summary || group.scene.title}</p>
 				<small>
-					{formatClock(getEffectiveTotalMs(group.shots))} · {group.shots.length} tomas
+					{formatClock(effectiveTotalMs(edits, group.shots))} · {group.shots.length} tomas
 				</small>
 			</header>
 			<div class="shots">
@@ -64,8 +95,9 @@
 					<ShotCard
 						{shot}
 						imageSrc={group.imageByShotId[shot.id]}
-						durationMs={getShotDurationMs(shot.id, shot.durationMs)}
-						onduration={(ms) => setShotDurationMs(shot.id, ms)}
+						durationMs={durationFromEdits(edits, shot.id, shot.durationMs)}
+						playerHref={`${playerHref}?shot=${encodeURIComponent(shot.id)}`}
+						onduration={(ms) => setDuration(shot.id, ms)}
 					/>
 				{/each}
 			</div>

@@ -1,7 +1,8 @@
 import type { Asset } from '$lib/types/assets';
 import type { DocumentRecord } from '$lib/types/document';
 import type { Character, Faction, Location, StoryObject, Vehicle } from '$lib/types/entities';
-import type { Cue, Scene, Shot, Take } from '$lib/types/script';
+import type { Cue, Scene, ScriptFile, Shot, Take } from '$lib/types/script';
+import type { ScriptId } from '$lib/types/ids';
 import {
 	getAssets,
 	getCharacters,
@@ -14,6 +15,11 @@ import {
 } from './index.ts';
 
 export type EntityKind = 'characters' | 'locations' | 'objects' | 'vehicles' | 'factions';
+
+function resolveScript(scriptOrId: ScriptFile | ScriptId): ScriptFile {
+	if (typeof scriptOrId === 'string') return getScript(scriptOrId);
+	return scriptOrId;
+}
 
 export function getDocumentBySlug(slug: string): DocumentRecord | undefined {
 	return getDocuments().documents.find((d) => d.slug === slug);
@@ -92,25 +98,28 @@ export function getEntity(kind: EntityKind, id: string) {
 	return listEntities(kind).find((e) => e.id === id);
 }
 
-export function getSceneById(id: string): Scene | undefined {
-	return getScript().scenes.find((s) => s.id === id);
+export function getSceneById(scriptOrId: ScriptFile | ScriptId, id: string): Scene | undefined {
+	return resolveScript(scriptOrId).scenes.find((s) => s.id === id);
 }
 
-export function getShotById(id: string): Shot | undefined {
-	return getScript().shots.find((s) => s.id === id);
+export function getShotById(scriptOrId: ScriptFile | ScriptId, id: string): Shot | undefined {
+	return resolveScript(scriptOrId).shots.find((s) => s.id === id);
 }
 
-export function getCueById(id: string): Cue | undefined {
-	return getScript().cues.find((c) => c.id === id);
+export function getCueById(scriptOrId: ScriptFile | ScriptId, id: string): Cue | undefined {
+	return resolveScript(scriptOrId).cues.find((c) => c.id === id);
 }
 
-export function getTakeById(id: string): Take | undefined {
-	return getScript().takes.find((t) => t.id === id);
+export function getTakeById(scriptOrId: ScriptFile | ScriptId, id: string): Take | undefined {
+	return resolveScript(scriptOrId).takes.find((t) => t.id === id);
 }
 
 /** Resolve public image path for a shot's selected take. */
-export function getShotImagePath(shot: Shot): string | undefined {
-	const script = getScript();
+export function getShotImagePath(
+	scriptOrId: ScriptFile | ScriptId,
+	shot: Shot
+): string | undefined {
+	const script = resolveScript(scriptOrId);
 	const take = shot.selectedTakeId
 		? script.takes.find((t) => t.id === shot.selectedTakeId)
 		: undefined;

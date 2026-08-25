@@ -1,22 +1,40 @@
 import { describe, it, expect } from 'vitest';
-import { getCanonicalBundle, getScript } from '../repositories/index.ts';
+import {
+	getCanonicalBundle,
+	getCanonicalScript,
+	getScript,
+	listScripts
+} from '../repositories/index.ts';
 import { getEffectiveDuration, getSubtitleSegments } from './index.ts';
 import { validateAll } from '../validation/index.ts';
 
 describe('extracted canonical data', () => {
-	it('has 17 scenes and 100 shots', () => {
-		const script = getScript();
+	it('has 17 scenes and 100 shots on the main short', () => {
+		const script = getCanonicalScript();
 		expect(script.scenes).toHaveLength(17);
 		expect(script.shots).toHaveLength(100);
 		expect(script.takes).toHaveLength(100);
+		expect(script.script.id).toBe('script:light-delay-main-short');
+		expect(script.scenes[0]?.id).toMatch(/^main:/);
+	});
+
+	it('registers festival cut as a second script', () => {
+		const ids = listScripts().map((s) => s.id);
+		expect(ids).toContain('script:light-delay-main-short');
+		expect(ids).toContain('script:light-delay-festival');
+		const festival = getScript('script:light-delay-festival');
+		expect(festival.script.kind).toBe('festival_cut');
+		expect(festival.scenes).toHaveLength(7);
+		expect(festival.shots).toHaveLength(0);
+		expect(festival.script.lineage?.sourceScriptId).toBe('script:light-delay-main-short');
 	});
 
 	it('sums animatic duration to 30 minutes', () => {
-		expect(getEffectiveDuration(getScript())).toBe(30 * 60 * 1000);
+		expect(getEffectiveDuration(getCanonicalScript())).toBe(30 * 60 * 1000);
 	});
 
 	it('derives subtitle segments from cue placements', () => {
-		const segments = getSubtitleSegments(getScript(), { subtitleLanguage: 'es' });
+		const segments = getSubtitleSegments(getCanonicalScript(), { subtitleLanguage: 'es' });
 		expect(segments.length).toBeGreaterThan(90);
 	});
 
@@ -24,5 +42,9 @@ describe('extracted canonical data', () => {
 		const result = validateAll(getCanonicalBundle());
 		expect(result.ok).toBe(true);
 		expect(result.errors).toEqual([]);
+	});
+
+	it('getScript without id throws', () => {
+		expect(() => getScript('' as never)).toThrow(/scriptId is required/);
 	});
 });

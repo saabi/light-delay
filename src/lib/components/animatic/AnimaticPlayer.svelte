@@ -14,7 +14,7 @@
 		toggleDetails
 	} from '$lib/state/player.svelte';
 	import { getLanguageState } from '$lib/state/language.svelte';
-	import { getShotDurationMs } from '$lib/state/animatic-editor.svelte';
+	import { durationFromEdits, loadAnimaticEdits } from '$lib/state/animatic-overlay';
 	import { getSubtitleSegments } from '$lib/data/selectors/index';
 	import { formatClock } from '$lib/utils/duration';
 	import type { Cue, ScriptFile, Shot } from '$lib/types/script';
@@ -38,8 +38,11 @@
 
 	const player = $derived(getPlayerState());
 	const lang = $derived(getLanguageState());
+	const edits = $derived(loadAnimaticEdits(script.script.id, script.script.version));
 
-	const durations = $derived(shots.map((s) => getShotDurationMs(s.shot.id, s.shot.durationMs)));
+	const durations = $derived(
+		shots.map((s) => durationFromEdits(edits, s.shot.id, s.shot.durationMs))
+	);
 
 	const totalMs = $derived(durations.reduce((a, b) => a + b, 0));
 
@@ -79,7 +82,8 @@
 		lastTs = ts;
 
 		const state = getPlayerState();
-		const durs = shots.map((s) => getShotDurationMs(s.shot.id, s.shot.durationMs));
+		const overlay = loadAnimaticEdits(script.script.id, script.script.version);
+		const durs = shots.map((s) => durationFromEdits(overlay, s.shot.id, s.shot.durationMs));
 		let idx = state.shotIndex;
 		let elapsed = state.elapsedInShotMs + delta;
 		let curDur = durs[idx] ?? 0;
@@ -141,7 +145,8 @@
 
 	function onScrub(e: Event) {
 		const value = Number((e.currentTarget as HTMLInputElement).value);
-		const durs = shots.map((s) => getShotDurationMs(s.shot.id, s.shot.durationMs));
+		const overlay = loadAnimaticEdits(script.script.id, script.script.version);
+		const durs = shots.map((s) => durationFromEdits(overlay, s.shot.id, s.shot.durationMs));
 		let remaining = value;
 		let idx = 0;
 		while (idx < durs.length - 1 && remaining >= durs[idx]!) {

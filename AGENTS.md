@@ -22,9 +22,11 @@ El español es la fuente de verdad de la documentación del repositorio.
 - Tratar `legacy-site/` como referencia de regresión hasta completar la migración.
 - No reescribir el canon para resolver una dificultad de implementación.
 - No inventar datos ausentes. Marcar incertidumbres y decisiones pendientes.
-- Mantener IDs estables para escenas y tomas; no usar el índice del array como identidad persistente.
+- Mantener IDs estables para escenas y tomas; no usar el índice del array como identidad persistente. Los IDs de unidades de guion van namespaced por script (`main:…`, `festival:…`); las entidades de proyecto usan ids globales (`character:voss`).
 - Separar datos narrativos, presentación y estado editorial.
-- El guion textual y el animatic deben renderizarse desde una única fuente de datos.
+- El guion textual y el animatic deben renderizarse desde una única fuente de datos **por script/cut** (`ScriptFile`); varios cuts se registran en `project.scripts` (véase `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`).
+- El guion canónico de ~30 min (`canonicalScriptId`) es la fuente de verdad narrativa del cortometraje principal. Cuts derivados (festival, trailer) no reescriben ese guion; se modelan como scripts independientes con `lineage`.
+- Animatic, overlay de edición y rutas se acotan por `scriptId`.
 - Los subtítulos deben derivarse del diálogo de cada toma, no mantenerse como una copia independiente sin validación.
 - Preservar la reproducción a pantalla completa, play/pausa/stop, navegación, timeline, panel de detalles y retorno a edición conservando posición.
 - No regenerar imágenes existentes salvo instrucción explícita.

@@ -11,47 +11,49 @@ import type { ScriptFile } from '$lib/types/script';
 const fixtureScript: ScriptFile = {
 	schemaVersion: '1.0.0',
 	script: {
-		id: 'script-test',
-		projectId: 'project-light-delay',
+		id: 'script:test',
+		projectId: 'project:light-delay',
+		continuityId: 'continuity:test',
 		title: 'Test',
 		version: '0',
 		status: 'draft',
-		actIds: ['act-1']
+		kind: 'proof_of_concept',
+		actIds: ['test:act-1']
 	},
-	acts: [{ id: 'act-1', number: 1, sceneIds: ['scene-01'] }],
+	acts: [{ id: 'test:act-1', number: 1, sceneIds: ['test:scene-01'] }],
 	sequences: [],
 	scenes: [
 		{
-			id: 'scene-01',
-			actId: 'act-1',
+			id: 'test:scene-01',
+			actId: 'test:act-1',
 			number: 1,
 			order: 1,
 			title: 'Test',
-			locationId: 'location-x',
+			locationId: 'location:x',
 			setting: {},
 			summary: 's',
-			characterIds: ['character-zao'],
-			beatIds: ['beat-01-01'],
-			shotIds: ['shot-01-01', 'shot-01-02']
+			characterIds: ['character:zao'],
+			beatIds: ['test:beat-01-01'],
+			shotIds: ['test:shot-01-01', 'test:shot-01-02']
 		}
 	],
 	beats: [
 		{
-			id: 'beat-01-01',
-			sceneId: 'scene-01',
+			id: 'test:beat-01-01',
+			sceneId: 'test:scene-01',
 			order: 1,
 			purpose: 'p',
 			summary: 's',
-			cueIds: ['cue-01-01']
+			cueIds: ['test:cue-01-01']
 		}
 	],
 	cues: [
 		{
-			id: 'cue-01-01',
-			beatId: 'beat-01-01',
+			id: 'test:cue-01-01',
+			beatId: 'test:beat-01-01',
 			order: 1,
 			type: 'dialogue',
-			speakerId: 'character-zao',
+			speakerId: 'character:zao',
 			presentation: 'on_screen',
 			content: {
 				sourceLanguage: 'es',
@@ -63,46 +65,46 @@ const fixtureScript: ScriptFile = {
 	],
 	shots: [
 		{
-			id: 'shot-01-01',
-			sceneId: 'scene-01',
-			beatIds: ['beat-01-01'],
+			id: 'test:shot-01-01',
+			sceneId: 'test:scene-01',
+			beatIds: ['test:beat-01-01'],
 			number: 1,
 			order: 1,
 			description: 'A',
 			composition: { size: 'MS' },
 			durationMs: 2000,
-			cuePlacements: [{ cueId: 'cue-01-01', atMs: 0, durationMs: 2000 }],
-			takeIds: ['take-01-01-01'],
-			selectedTakeId: 'take-01-01-01'
+			cuePlacements: [{ cueId: 'test:cue-01-01', atMs: 0, durationMs: 2000 }],
+			takeIds: ['test:take-01-01-01'],
+			selectedTakeId: 'test:take-01-01-01'
 		},
 		{
-			id: 'shot-01-02',
-			sceneId: 'scene-01',
-			beatIds: ['beat-01-01'],
+			id: 'test:shot-01-02',
+			sceneId: 'test:scene-01',
+			beatIds: ['test:beat-01-01'],
 			number: 2,
 			order: 2,
 			description: 'B',
 			composition: { size: 'CU' },
 			durationMs: 3000,
 			cuePlacements: [],
-			takeIds: ['take-01-02-01'],
-			selectedTakeId: 'take-01-02-01'
+			takeIds: ['test:take-01-02-01'],
+			selectedTakeId: 'test:take-01-02-01'
 		}
 	],
 	takes: [
 		{
-			id: 'take-01-01-01',
-			shotId: 'shot-01-01',
+			id: 'test:take-01-01-01',
+			shotId: 'test:shot-01-01',
 			number: 1,
 			status: 'selected',
-			imageAssetId: 'asset-a'
+			imageAssetId: 'asset:a'
 		},
 		{
-			id: 'take-01-02-01',
-			shotId: 'shot-01-02',
+			id: 'test:take-01-02-01',
+			shotId: 'test:shot-01-02',
 			number: 1,
 			status: 'selected',
-			imageAssetId: 'asset-b'
+			imageAssetId: 'asset:b'
 		}
 	]
 };
@@ -110,16 +112,16 @@ const fixtureScript: ScriptFile = {
 describe('selectors', () => {
 	it('getEffectiveDuration sums shot durations', () => {
 		expect(getEffectiveDuration(fixtureScript)).toBe(5000);
-		expect(getEffectiveDuration(fixtureScript, 'scene-01')).toBe(5000);
+		expect(getEffectiveDuration(fixtureScript, 'test:scene-01')).toBe(5000);
 	});
 
 	it('getShotSelectedTake returns the selected take', () => {
 		const take = getShotSelectedTake(fixtureScript, fixtureScript.shots[0]);
-		expect(take?.id).toBe('take-01-01-01');
+		expect(take?.id).toBe('test:take-01-01-01');
 	});
 
 	it('getDialogueVariant resolves Spanish source', () => {
-		const resolved = getDialogueVariant(fixtureScript, 'cue-01-01', 'es');
+		const resolved = getDialogueVariant(fixtureScript, 'test:cue-01-01', 'es');
 		expect(resolved?.value.spokenText).toBe('Tenemos una ventana.');
 		expect(resolved?.usedFallback).toBe(false);
 	});
@@ -128,7 +130,7 @@ describe('selectors', () => {
 		const segments = getSubtitleSegments(fixtureScript, { subtitleLanguage: 'es' });
 		expect(segments).toHaveLength(1);
 		expect(segments[0].text).toBe('Tenemos una ventana.');
-		expect(segments[0].shotId).toBe('shot-01-01');
+		expect(segments[0].shotId).toBe('test:shot-01-01');
 	});
 
 	it('resolveLocalized falls back to source language', () => {

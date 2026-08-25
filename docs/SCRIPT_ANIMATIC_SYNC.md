@@ -1,6 +1,6 @@
 # Sincronización guion ↔ animatic
 
-El **guion** (`legacy-site/guion-30-minutos.html` → `data/script.json`) es la fuente de verdad narrativa. El animatic se alinea al guion; los desajustes se registran aquí sin reescribir el guion.
+El **guion** (`legacy-site/guion-30-minutos.html` → `data/scripts/light-delay-main-short.json`) es la fuente de verdad narrativa. El animatic se alinea al guion; los desajustes se registran aquí sin reescribir el guion.
 
 ## Conteos verificados (Fase 1 extracción)
 
@@ -61,7 +61,7 @@ _Ninguno._
 
 ## Estado en la app SvelteKit (Fases 2–6)
 
-- Guion y animatic se renderizan desde `data/script.json` (misma fuente).
+- Guion y animatic se renderizan desde `data/scripts/light-delay-main-short.json` (misma fuente por script/cut).
 - Subtítulos del player: `getSubtitleSegments` sobre placements + diálogo localizado.
 - Frames servidos desde `/assets/animatic/...` (`static/assets/`); sin dependencia de `legacy-site/` en la UI.
 - Assets binarios aún no copiados a `static/` (Fases 3/5).

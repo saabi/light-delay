@@ -1,21 +1,47 @@
 <script lang="ts">
-	import type { Act, Beat, Cue, Scene } from '$lib/types/script';
+	import type { Act, Beat, CharacterFunctionAssignment, Cue, Scene } from '$lib/types/script';
 	import SceneSection from './SceneSection.svelte';
 
 	let {
 		acts,
 		scenesById,
 		beatsBySceneId,
-		cuesByBeatId
+		cuesByBeatId,
+		characterFunctionAssignments
 	}: {
 		acts: Act[];
 		scenesById: Record<string, Scene>;
 		beatsBySceneId: Record<string, Beat[]>;
 		cuesByBeatId: Record<string, Cue[]>;
+		characterFunctionAssignments?: CharacterFunctionAssignment[];
 	} = $props();
 </script>
 
 <div class="script-viewer">
+	{#if characterFunctionAssignments?.length}
+		<section class="functions" aria-label="Asignación de funciones narrativas">
+			<h2>Funciones narrativas</h2>
+			<p class="lede">
+				Reasignaciones de función dramática específicas de este cut (no alteran el guion canónico).
+			</p>
+			<ul>
+				{#each characterFunctionAssignments as a (a.functionId + a.characterId)}
+					<li>
+						<code>{a.functionId}</code>
+						→ <code>{a.characterId}</code>
+						<span class="rel">{a.relationship}</span>
+						{#if a.sourceCharacterIds?.length}
+							<small>desde {a.sourceCharacterIds.join(', ')}</small>
+						{/if}
+						{#if a.notes}
+							<p>{a.notes}</p>
+						{/if}
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	{#each acts as act (act.id)}
 		<section class="act">
 			<header>
@@ -38,6 +64,69 @@
 <style>
 	.script-viewer {
 		max-width: var(--max);
+	}
+
+	.functions {
+		margin-bottom: 2.5rem;
+		padding: 1.25rem 1.35rem;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		background: var(--panel);
+	}
+
+	.functions h2 {
+		margin: 0 0 0.35rem;
+		font: 700 1.25rem var(--font-serif);
+	}
+
+	.functions .lede {
+		margin: 0 0 1rem;
+		color: var(--muted);
+		font-size: 0.9rem;
+	}
+
+	.functions ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		gap: 0.75rem;
+	}
+
+	.functions li {
+		padding: 0.65rem 0;
+		border-top: 1px solid var(--line);
+	}
+
+	.functions li:first-child {
+		border-top: 0;
+		padding-top: 0;
+	}
+
+	.functions code {
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+		color: var(--cyan);
+	}
+
+	.functions .rel {
+		margin-left: 0.5rem;
+		color: var(--gold);
+		font-size: 0.78rem;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+
+	.functions small {
+		display: block;
+		margin-top: 0.25rem;
+		color: var(--muted);
+	}
+
+	.functions p {
+		margin: 0.35rem 0 0;
+		color: var(--muted);
+		font-size: 0.88rem;
 	}
 
 	.act {

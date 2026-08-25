@@ -24,7 +24,7 @@ El estado final debe tener una única fuente de datos estructurada. Las vistas d
 - `data/locations.json`: localizaciones.
 - `data/vehicles.json`: naves.
 - `data/props.json`: objetos.
-- `data/script.json`: escenas, acción y diálogo.
+- `data/scripts/*.json`: escenas, acción y diálogo por cut (canónico: `light-delay-main-short.json`).
 - `data/shots.json`: tomas, duración, cámara, audio, subtítulos y asset.
 - `data/assets.json`: procedencia y rutas.
 

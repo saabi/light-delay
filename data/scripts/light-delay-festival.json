@@ -1,0 +1,420 @@
+{
+	"schemaVersion": "1.0.0",
+	"script": {
+		"id": "script:light-delay-festival",
+		"projectId": "project:light-delay",
+		"continuityId": "continuity:light-delay-primary",
+		"title": "Light Delay — Festival Cut",
+		"version": "0.1.0-draft",
+		"status": "draft",
+		"kind": "festival_cut",
+		"targetDurationMs": 290000,
+		"lineage": {
+			"sourceScriptId": "script:light-delay-main-short",
+			"relationship": "adaptation",
+			"sourceVersion": "1.0.0-extract",
+			"notes": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes."
+		},
+		"characterFunctionAssignments": [
+			{
+				"functionId": "function:piloting",
+				"characterId": "character:rao",
+				"sourceCharacterIds": [
+					"character:cael"
+				],
+				"relationship": "merged",
+				"notes": "Cael omitido; detección/navegación absorbidas por Rao/UI."
+			},
+			{
+				"functionId": "function:communications",
+				"characterId": "character:rao",
+				"sourceCharacterIds": [
+					"character:cael"
+				],
+				"relationship": "merged",
+				"notes": "Rao asume detección/comunicaciones de Cael."
+			},
+			{
+				"functionId": "function:command",
+				"characterId": "character:voss",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:investigation_payload",
+				"characterId": "character:rao",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:diplomatic_greeting_authorship",
+				"characterId": "character:sorell",
+				"relationship": "unchanged",
+				"notes": "Sorell off-screen; conserva autoría del saludo pasivo como asset/UI."
+			},
+			{
+				"functionId": "function:override_antagonist",
+				"characterId": "character:harlan",
+				"relationship": "unchanged"
+			}
+		],
+		"actIds": [
+			"festival:act-1"
+		]
+	},
+	"acts": [
+		{
+			"id": "festival:act-1",
+			"number": 1,
+			"title": "Festival Cut",
+			"dramaticPurpose": "Cadena causal condensada de ~4:50.",
+			"sceneIds": [
+				"festival:scene-a",
+				"festival:scene-b",
+				"festival:scene-c",
+				"festival:scene-d",
+				"festival:scene-e",
+				"festival:scene-f",
+				"festival:scene-g"
+			]
+		}
+	],
+	"sequences": [],
+	"scenes": [
+		{
+			"id": "festival:scene-a",
+			"actId": "festival:act-1",
+			"number": 1,
+			"order": 1,
+			"title": "La misión y la anomalía",
+			"locationId": "location:proxima-dock",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "DÍA"
+			},
+			"summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
+			"dramaticPurpose": "Establecer espacio, misión y peligro sin exposición.",
+			"characterIds": [
+				"character:zao",
+				"character:rao",
+				"character:harlan",
+				"character:voss"
+			],
+			"beatIds": [
+				"festival:beat-a-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 25000
+		},
+		{
+			"id": "festival:scene-b",
+			"actId": "festival:act-1",
+			"number": 2,
+			"order": 2,
+			"title": "Zao descubre y transmite",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"interiorExterior": "INT",
+				"timeOfDay": "DÍA"
+			},
+			"summary": "Descubrimiento del sabotaje y mensaje óptico de Zao.",
+			"dramaticPurpose": "Zao confirma el payload, el relé y el vínculo con Harlan; transmite hacia el futuro.",
+			"characterIds": [
+				"character:zao",
+				"character:harlan"
+			],
+			"beatIds": [
+				"festival:beat-b-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 60000
+		},
+		{
+			"id": "festival:scene-c",
+			"actId": "festival:act-1",
+			"number": 3,
+			"order": 3,
+			"title": "Harlan / muerte de Zao / salto temporal",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"interiorExterior": "INT",
+				"timeOfDay": "DÍA"
+			},
+			"summary": "Confrontación breve, muerte elidida y overlay temporal.",
+			"dramaticPurpose": "Harlan interrumpe; transmisión completa; salto a 23 h después.",
+			"characterIds": [
+				"character:zao",
+				"character:harlan"
+			],
+			"beatIds": [
+				"festival:beat-c-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 20000
+		},
+		{
+			"id": "festival:scene-d",
+			"actId": "festival:act-1",
+			"number": 4,
+			"order": 4,
+			"title": "La mitad técnica",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"interiorExterior": "INT",
+				"timeOfDay": "DÍA"
+			},
+			"summary": "Investigación de Rao contra reloj; detección de señal humana.",
+			"dramaticPurpose": "Rao muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+			"characterIds": [
+				"character:rao",
+				"character:voss",
+				"character:harlan"
+			],
+			"beatIds": [
+				"festival:beat-d-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 50000
+		},
+		{
+			"id": "festival:scene-e",
+			"actId": "festival:act-1",
+			"number": 5,
+			"order": 5,
+			"title": "La señal y la doble llave",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"interiorExterior": "INT",
+				"timeOfDay": "DÍA"
+			},
+			"summary": "Doble llave causal; revocación; Harlan activa el override.",
+			"dramaticPurpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
+			"characterIds": [
+				"character:rao",
+				"character:voss",
+				"character:harlan",
+				"character:zao"
+			],
+			"beatIds": [
+				"festival:beat-e-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 45000
+		},
+		{
+			"id": "festival:scene-f",
+			"actId": "festival:act-1",
+			"number": 6,
+			"order": 6,
+			"title": "Override y cuarentena",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"interiorExterior": "INT",
+				"timeOfDay": "DÍA"
+			},
+			"summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
+			"dramaticPurpose": "Carrera física/digital; Rao aísla el payload; canal limpio.",
+			"characterIds": [
+				"character:rao",
+				"character:voss",
+				"character:harlan"
+			],
+			"beatIds": [
+				"festival:beat-f-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 60000
+		},
+		{
+			"id": "festival:scene-g",
+			"actId": "festival:act-1",
+			"number": 7,
+			"order": 7,
+			"title": "Contacto / cierre",
+			"locationId": "location:velari-station",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "DÍA"
+			},
+			"summary": "Envío, contacto y «Llegaste a tiempo».",
+			"dramaticPurpose": "Canal limpio, respuesta Velari y cierre emocional.",
+			"characterIds": [
+				"character:rao",
+				"character:voss"
+			],
+			"beatIds": [
+				"festival:beat-g-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 30000
+		}
+	],
+	"beats": [
+		{
+			"id": "festival:beat-a-01",
+			"sceneId": "festival:scene-a",
+			"order": 1,
+			"title": "La misión y la anomalía",
+			"purpose": "Establecer espacio, misión y peligro sin exposición.",
+			"summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
+			"cueIds": [],
+			"targetDurationMs": 25000
+		},
+		{
+			"id": "festival:beat-b-01",
+			"sceneId": "festival:scene-b",
+			"order": 1,
+			"title": "Zao descubre y transmite",
+			"purpose": "Zao confirma el payload, el relé y el vínculo con Harlan; transmite hacia el futuro.",
+			"summary": "Descubrimiento del sabotaje y mensaje óptico de Zao.",
+			"cueIds": [
+				"festival:cue-b-01"
+			],
+			"targetDurationMs": 60000
+		},
+		{
+			"id": "festival:beat-c-01",
+			"sceneId": "festival:scene-c",
+			"order": 1,
+			"title": "Harlan / muerte de Zao / salto temporal",
+			"purpose": "Harlan interrumpe; transmisión completa; salto a 23 h después.",
+			"summary": "Confrontación breve, muerte elidida y overlay temporal.",
+			"cueIds": [],
+			"targetDurationMs": 20000
+		},
+		{
+			"id": "festival:beat-d-01",
+			"sceneId": "festival:scene-d",
+			"order": 1,
+			"title": "La mitad técnica",
+			"purpose": "Rao muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+			"summary": "Investigación de Rao contra reloj; detección de señal humana.",
+			"cueIds": [
+				"festival:cue-d-01"
+			],
+			"targetDurationMs": 50000
+		},
+		{
+			"id": "festival:beat-e-01",
+			"sceneId": "festival:scene-e",
+			"order": 1,
+			"title": "La señal y la doble llave",
+			"purpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
+			"summary": "Doble llave causal; revocación; Harlan activa el override.",
+			"cueIds": [],
+			"targetDurationMs": 45000
+		},
+		{
+			"id": "festival:beat-f-01",
+			"sceneId": "festival:scene-f",
+			"order": 1,
+			"title": "Override y cuarentena",
+			"purpose": "Carrera física/digital; Rao aísla el payload; canal limpio.",
+			"summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
+			"cueIds": [
+				"festival:cue-f-01"
+			],
+			"targetDurationMs": 60000
+		},
+		{
+			"id": "festival:beat-g-01",
+			"sceneId": "festival:scene-g",
+			"order": 1,
+			"title": "Contacto / cierre",
+			"purpose": "Canal limpio, respuesta Velari y cierre emocional.",
+			"summary": "Envío, contacto y «Llegaste a tiempo».",
+			"cueIds": [
+				"festival:cue-g-01",
+				"festival:cue-g-02"
+			],
+			"targetDurationMs": 30000
+		}
+	],
+	"cues": [
+		{
+			"id": "festival:cue-b-01",
+			"beatId": "festival:beat-b-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "recording",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Si esto llega: Aqueronte está adentro. Harlan comprometió el núcleo. El registro superficial es falso. Crucen el payload con el relé físico. No apaguen la mediación.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "festival:cue-d-01",
+			"beatId": "festival:beat-d-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:rao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Puedo aislarlo. No puedo revocar a quien lo controla.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "festival:cue-f-01",
+			"beatId": "festival:beat-f-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:harlan",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "No voy a entregar nuestra especie a algo que no entendemos.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "festival:cue-g-01",
+			"beatId": "festival:beat-g-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:voss",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Envíen.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "festival:cue-g-02",
+			"beatId": "festival:beat-g-01",
+			"order": 2,
+			"type": "dialogue",
+			"speakerId": "character:voss",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Llegaste a tiempo.",
+						"status": "source"
+					}
+				}
+			}
+		}
+	],
+	"shots": [],
+	"takes": []
+}

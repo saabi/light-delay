@@ -1,12 +1,19 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
-	import { getDocuments, getProject, getScript } from '$lib/data/repositories/index';
+	import {
+		getCanonicalScript,
+		getDocuments,
+		getProject,
+		listScripts
+	} from '$lib/data/repositories/index';
+	import { encodeScriptId } from '$lib/utils/scriptId';
 
 	const project = getProject().project;
 	const documents = getDocuments().documents;
-	const script = getScript();
-	const shotCount = script.shots.length;
-	const sceneCount = script.scenes.length;
+	const scripts = listScripts();
+	const canonical = getCanonicalScript();
+	const shotCount = canonical.shots.length;
+	const sceneCount = canonical.scenes.length;
 </script>
 
 <main class="page">
@@ -14,20 +21,20 @@
 		eyebrow="Proyecto"
 		title="{project.title} / Luz Tardía"
 		lede={project.description ?? 'Cortometraje de ciencia ficción de primer contacto.'}
-		meta={[`${sceneCount} escenas`, `${shotCount} tomas`, 'Guion canónico ES']}
+		meta={[`${sceneCount} escenas (canónico)`, `${shotCount} tomas`, 'Guion canónico ES']}
 	/>
 
 	<section class="grid" aria-label="Secciones del proyecto">
-		<a class="card" href="/script">
+		<a class="card" href={`/script/${encodeScriptId(project.canonicalScriptId)}`}>
 			<span>01</span>
 			<h2>Guion</h2>
 			<p>Lectura del guion corto desde datos estructurados (actos, escenas, beats y cues).</p>
 			<b>Abrir guion →</b>
 		</a>
-		<a class="card" href="/animatic">
+		<a class="card" href={`/animatic/${encodeScriptId(project.canonicalScriptId)}`}>
 			<span>02</span>
 			<h2>Animatic</h2>
-			<p>Desglose de 100 tomas, duraciones editables y modo película.</p>
+			<p>Desglose de tomas, duraciones editables y modo película (por script).</p>
 			<b>Abrir animatic →</b>
 		</a>
 		<a class="card" href="/art">
@@ -42,6 +49,21 @@
 			<p>Índice de personajes, lugares, objetos, naves y facciones.</p>
 			<b>Explorar →</b>
 		</a>
+	</section>
+
+	<section class="scripts" aria-label="Scripts registrados">
+		<h2>Scripts / cuts</h2>
+		<ul>
+			{#each scripts as entry (entry.id)}
+				<li>
+					<div>
+						<a href={`/script/${encodeScriptId(entry.id)}`}>{entry.label}</a>
+						<small>{entry.kind} · {entry.status}</small>
+					</div>
+					<a class="animatic" href={`/animatic/${encodeScriptId(entry.id)}`}>Animatic</a>
+				</li>
+			{/each}
+		</ul>
 	</section>
 
 	<section class="docs">
@@ -112,15 +134,18 @@
 		font-size: 0.85rem;
 	}
 
+	.scripts,
 	.docs {
 		margin-top: 2.75rem;
 	}
 
+	.scripts h2,
 	.docs h2 {
 		margin: 0 0 0.85rem;
 		font: 700 1.25rem var(--font-serif);
 	}
 
+	.scripts ul,
 	.docs ul {
 		list-style: none;
 		margin: 0;
@@ -129,6 +154,7 @@
 		gap: 0.5rem;
 	}
 
+	.scripts li,
 	.docs li {
 		display: flex;
 		justify-content: space-between;
@@ -137,22 +163,34 @@
 		border: 1px solid var(--line);
 		border-radius: 10px;
 		background: var(--panel);
+		align-items: center;
 	}
 
+	.scripts a,
 	.docs a {
 		color: var(--ink);
 		text-decoration: none;
 	}
 
+	.scripts a:hover,
 	.docs a:hover {
 		color: var(--cyan);
 	}
 
+	.scripts small,
 	.docs small {
+		display: block;
+		margin-top: 0.2rem;
 		color: var(--muted);
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
 		font-size: 0.72rem;
+	}
+
+	.scripts .animatic {
+		color: var(--gold);
+		font-size: 0.85rem;
+		white-space: nowrap;
 	}
 
 	@media (max-width: 680px) {

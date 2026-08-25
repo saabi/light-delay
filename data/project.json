@@ -1,7 +1,7 @@
 {
 	"schemaVersion": "1.0.0",
 	"project": {
-		"id": "project-light-delay",
+		"id": "project:light-delay",
 		"title": "Light Delay",
 		"alternateTitles": [
 			"Luz Tardía"
@@ -25,9 +25,39 @@
 				}
 			]
 		},
-		"canonicalScriptId": "script-light-delay-short",
+		"canonicalScriptId": "script:light-delay-main-short",
 		"targetDurationMs": 1800000,
 		"createdAt": "2026-08-25",
-		"updatedAt": "2026-08-25"
+		"updatedAt": "2026-08-25",
+		"continuities": [
+			{
+				"id": "continuity:light-delay-primary",
+				"name": "Light Delay — continuidad primaria",
+				"description": "Continuidad narrativa del cortometraje canónico y cuts derivados (festival, trailers)."
+			}
+		],
+		"scripts": [
+			{
+				"id": "script:light-delay-main-short",
+				"continuityId": "continuity:light-delay-primary",
+				"label": "Guion corto (~30 min)",
+				"kind": "main_short",
+				"status": "draft",
+				"targetDurationMs": 1800000
+			},
+			{
+				"id": "script:light-delay-festival",
+				"continuityId": "continuity:light-delay-primary",
+				"label": "Festival Cut (~4:50)",
+				"kind": "festival_cut",
+				"status": "draft",
+				"targetDurationMs": 290000,
+				"lineage": {
+					"sourceScriptId": "script:light-delay-main-short",
+					"relationship": "adaptation",
+					"sourceVersion": "1.0.0-extract"
+				}
+			}
+		]
 	}
 }

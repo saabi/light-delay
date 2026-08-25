@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-25 — Multi-script / Festival Cut (ADR-0001)
+
+- Migración de IDs a forma `kind:slug` y unidades de guion namespaced (`main:…`, `festival:…`).
+- Scripts en `data/scripts/`; registro y continuidades en `project.json`; `narrative-functions.json` y `entity-variants.json`.
+- Borrador Festival Cut con lineage, `characterFunctionAssignments` y 7 escenas (shots/takes vacíos).
+- Rutas acotadas por `scriptId` (encode `:`→`~`); overlay de animatic por script+versión; validación multi-script.
+- ADR-0001 marcado Accepted.
+
 ## 2026-08-25 — Fases 2–6: shell, documentos, entidades, guion, animatic y player
 
 - Tokens legacy (cian/oro) en `src/app.css`; `AppShell`, navegación y documentos genéricos.

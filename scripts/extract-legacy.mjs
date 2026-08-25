@@ -3,6 +3,12 @@
  * Spanish dialogue only (source of truth). Does not invent translations.
  *
  * Usage: node scripts/extract-legacy.mjs
+ *
+ * NOTE (multi-script / ADR-0001): this extractor still emits the pre-migration
+ * hyphen ID layout and writes `data/script.json`. After a fresh extract, run
+ * `node scripts/migrate-multi-script.mjs` to produce `data/scripts/*.json`,
+ * colon entity IDs, registry, festival draft, narrative-functions and entity-variants.
+ * Prefer not re-running extract over the migrated tree until extract itself is updated.
  */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';

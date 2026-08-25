@@ -3,12 +3,17 @@ import type {
 	AssetId,
 	BeatId,
 	CharacterId,
+	ContinuityId,
 	CueId,
+	EntityVariantId,
 	FactionId,
 	LocationId,
+	NarrativeFunctionId,
 	ObjectId,
 	ProjectId,
 	SceneId,
+	ScriptId,
+	ScriptKind,
 	SequenceId,
 	ShotId,
 	TakeId,
@@ -17,15 +22,79 @@ import type {
 } from './ids.ts';
 import type { EntityRef, Note } from './common.ts';
 import type { LanguageTag, LocalizedValue, TranslationStatus } from './i18n.ts';
+import type { ScriptLineage } from './project.ts';
+
+export interface SourceReference {
+	scriptId: ScriptId;
+	sceneId?: SceneId;
+	beatId?: BeatId;
+	cueId?: CueId;
+	shotId?: ShotId;
+}
+
+export interface SourceTraceable {
+	sourceRefs?: SourceReference[];
+}
+
+export interface NarrativeFunction {
+	id: NarrativeFunctionId;
+	label: string;
+	description?: string;
+}
+
+export interface NarrativeFunctionsFile {
+	schemaVersion: string;
+	functions: NarrativeFunction[];
+}
+
+export interface CharacterFunctionAssignment {
+	functionId: NarrativeFunctionId;
+	characterId: CharacterId;
+	sourceCharacterIds?: CharacterId[];
+	relationship: 'unchanged' | 'merged' | 'reassigned' | 'split' | 'new';
+	notes?: string;
+}
+
+export interface EntityVariant {
+	id: EntityVariantId;
+	entity: EntityRef;
+	continuityId?: ContinuityId;
+	scriptIds?: ScriptId[];
+	label: string;
+	descriptionOverride?: string;
+	appearanceOverride?: string;
+	costumeOverride?: string;
+	referenceAssetIds: AssetId[];
+}
+
+export interface EntityVariantsFile {
+	schemaVersion: string;
+	variants: EntityVariant[];
+}
+
+export interface ScriptEntityVariantSelections {
+	character?: Record<CharacterId, EntityVariantId>;
+	location?: Record<LocationId, EntityVariantId>;
+	object?: Record<ObjectId, EntityVariantId>;
+	vehicle?: Record<VehicleId, EntityVariantId>;
+	faction?: Record<FactionId, EntityVariantId>;
+}
 
 export interface ScriptFile {
 	schemaVersion: string;
 	script: {
-		id: string;
+		id: ScriptId;
 		projectId: ProjectId;
+		continuityId: ContinuityId;
 		title: string;
 		version: string;
 		status: 'draft' | 'review' | 'locked' | 'deprecated';
+		kind: ScriptKind;
+		targetDurationMs?: number;
+		lineage?: ScriptLineage;
+		declaredEntityRefs?: EntityRef[];
+		entityVariantSelections?: ScriptEntityVariantSelections;
+		characterFunctionAssignments?: CharacterFunctionAssignment[];
 		actIds: ActId[];
 	};
 	acts: Act[];
@@ -55,7 +124,7 @@ export interface Sequence {
 	sceneIds: SceneId[];
 }
 
-export interface Scene {
+export interface Scene extends SourceTraceable {
 	id: SceneId;
 	actId: ActId;
 	sequenceId?: SequenceId;
@@ -82,7 +151,7 @@ export interface Scene {
 	notes?: Note[];
 }
 
-export interface Beat {
+export interface Beat extends SourceTraceable {
 	id: BeatId;
 	sceneId: SceneId;
 	order: number;
@@ -99,7 +168,7 @@ export interface Beat {
 export type Cue =
 	ActionCue | DialogueCue | SoundCue | MusicCue | SilenceCue | TransitionCue | TextCue;
 
-export interface CueBase {
+export interface CueBase extends SourceTraceable {
 	id: CueId;
 	beatId: BeatId;
 	order: number;
@@ -188,7 +257,7 @@ export interface TextCue extends CueBase {
 	content: LocalizedValue<TextVariant>;
 }
 
-export interface Shot {
+export interface Shot extends SourceTraceable {
 	id: ShotId;
 	sceneId: SceneId;
 	beatIds: BeatId[];
