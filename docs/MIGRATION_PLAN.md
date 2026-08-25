@@ -1,0 +1,435 @@
+# Migration plan: legacy HTML to SvelteKit
+
+Status: initial architecture proposal. This document defines migration boundaries, routes and reusable components. It does not yet schedule the complete content rewrite or resolve outstanding story issues.
+
+## 1. Outcomes
+
+The SvelteKit application must:
+
+- use structured JSON as the canonical content source;
+- render the screenplay and animatic from the same acts, scenes, beats and cues;
+- distinguish editorial shots from alternative production takes;
+- support dialogue audio and subtitles in multiple languages;
+- centralize characters, locations, objects, vehicles, factions and assets;
+- share layouts, document primitives, entity components and media components across routes;
+- preserve all useful behavior from `legacy-site/`;
+- allow content to be expanded without embedding new data in Svelte components;
+- remain usable as a read-only static project even before editing/storage features are added.
+
+## 2. Architectural rules
+
+### One content graph, several projections
+
+The screenplay, shot breakdown, animatic editor and movie player are different projections of one graph:
+
+```text
+Act -> Scene -> Beat -> Cue
+              \-> Shot -> Take -> Asset
+```
+
+- Beats and cues describe narrative order and meaning.
+- Shots describe editorial coverage and timing.
+- Takes describe candidate generated, filmed or rendered realizations of a shot.
+- Assets describe files and provenance.
+- Entity records describe characters, locations, objects, vehicles and factions.
+
+Dialogue must not be duplicated independently in the screenplay and animatic. Shots reference dialogue cues through cue placements.
+
+### IDs are durable
+
+Every act, scene, beat, cue, shot, take, entity and asset has a stable string ID. Array position controls display order but is never identity.
+
+### Migration before redesign
+
+The first goal is behavioral and content parity with `legacy-site/`, not a visual redesign. Style unification can happen while components are extracted, but narrative editing and schema migration should remain distinguishable in Git history.
+
+### Derived values are not duplicated
+
+The following should be computed:
+
+- total duration from shot durations;
+- scene duration from its shots;
+- dialogue density from dialogue cue placements;
+- character presence from scene/shot references;
+- subtitle tracks from localized dialogue cues;
+- asset usage from take and entity references.
+
+Target durations may remain authored metadata, but effective durations must be derived.
+
+## 3. Route plan
+
+### Public/project routes
+
+| Route | Purpose | Primary reusable view |
+| --- | --- | --- |
+| `/` | Project dashboard and document index | `ProjectHome` |
+| `/documents/[slug]` | Canon reports, production bible, technical notes, key moments and derived documents | `DocumentViewer` |
+| `/script` | Canonical screenplay reader | `ScriptViewer` |
+| `/script/[scriptId]` | Explicit script/version reader | `ScriptViewer` |
+| `/animatic` | Shot breakdown and duration editor | `AnimaticEditor` |
+| `/animatic/player` | Distraction-free/fullscreen movie playback | `AnimaticPlayer` |
+| `/art` | Combined visual/art bible | `EntityGallery` + `AssetGallery` |
+| `/entities/[kind]` | Filtered character/location/object/vehicle/faction index | `EntityGallery` |
+| `/entities/[kind]/[id]` | Entity detail and referenced assets | `EntityDetail` |
+| `/assets/[id]` | Asset preview, metadata and provenance | `AssetDetail` |
+
+### Route decisions
+
+- Use one generic `/documents/[slug]` route rather than a route/component per prose document.
+- Keep `/script` specialized because screenplay semantics are structured, not generic rich text.
+- Keep `/animatic/player` separate from the editor so it can have a clean URL, independent layout and fullscreen lifecycle.
+- Use generic entity routes keyed by `kind` rather than parallel character/location/vehicle implementations.
+- Language selection should use application state plus an optional URL parameter such as `?lang=es&sub=en`, not duplicated language-specific routes.
+- Do not create routes for implementation concepts such as acts, beats or cues unless a later editing workflow demonstrates a need.
+
+## 4. Suggested SvelteKit source structure
+
+```text
+src/
+|-- lib/
+|   |-- components/
+|   |   |-- app/
+|   |   |-- document/
+|   |   |-- entities/
+|   |   |-- script/
+|   |   |-- animatic/
+|   |   |-- media/
+|   |   |-- controls/
+|   |   `-- primitives/
+|   |-- data/
+|   |   |-- repositories/
+|   |   |-- selectors/
+|   |   |-- validation/
+|   |   `-- loaders/
+|   |-- state/
+|   |-- types/
+|   |-- utils/
+|   `-- server/
+|-- routes/
+|   |-- +layout.svelte
+|   |-- +page.svelte
+|   |-- documents/[slug]/
+|   |-- script/[[scriptId]]/
+|   |-- animatic/
+|   |   `-- player/
+|   |-- art/
+|   |-- entities/[kind]/[[id]]/
+|   `-- assets/[id]/
+`-- app.css
+```
+
+The exact optional-parameter route syntax should be validated during implementation. Separate `[kind]` and `[kind]/[id]` directories are acceptable if clearer.
+
+## 5. Component inventory
+
+### Application shell
+
+| Component | Responsibility | Reused by |
+| --- | --- | --- |
+| `AppShell` | Global header, content frame and responsive regions | All non-player routes |
+| `ProjectNav` | Primary route navigation | All non-player routes |
+| `DocumentRail` | Sticky title, metadata and generated table of contents | Documents, script, entity detail |
+| `Breadcrumbs` | Hierarchical navigation | Documents, entities, assets |
+| `PageHeader` | Eyebrow, title, lede and metadata pills | All content routes |
+| `LanguageControls` | Audio language, subtitle language and fallback status | Script, animatic, player |
+| `MetadataPills` | Compact metadata presentation | Headers, cards, assets |
+
+`AppShell` should use slots/snippets for rail, header and main content instead of branching internally for every route.
+
+### Generic document primitives
+
+| Component | Responsibility |
+| --- | --- |
+| `DocumentViewer` | Render a document from ordered block data |
+| `DocumentSection` | Heading, anchor and nested blocks |
+| `RichTextBlock` | Controlled paragraphs and inline emphasis |
+| `Callout` | Note, warning, datum or canonical rule |
+| `DataTable` | Accessible data table with overflow behavior |
+| `TimelineBlock` | Chronology or ordered phases |
+| `CardGrid` | Project index and document cards |
+| `DefinitionList` | Technical/entity properties |
+| `TableOfContents` | Derived from section IDs |
+
+Do not create one-off components for each current HTML class. Consolidate them into a small semantic block vocabulary.
+
+### Entity and art components
+
+| Component | Responsibility |
+| --- | --- |
+| `EntityRef` | Linked compact reference to any entity kind |
+| `EntityRefList` | Characters, locations, props or vehicles associated with content |
+| `EntityCard` | Generic summary card |
+| `EntityGallery` | Filtered list/grid by kind |
+| `EntityDetail` | Shared detail layout with kind-specific property sections |
+| `AssetThumbnail` | Image/audio/video preview with status |
+| `AssetGallery` | Grouped visual assets |
+| `AssetViewer` | Full image/video/audio inspection |
+| `AssetMetadata` | Provenance, dimensions, model/provider and usage |
+
+Prefer configuration or small kind-specific snippets over separate complete components such as `CharacterCard`, `LocationCard` and `VehicleCard` when their structure is the same.
+
+### Script components
+
+| Component | Responsibility | Also reused by |
+| --- | --- | --- |
+| `ScriptViewer` | Assemble acts and scenes | Script route |
+| `ActSection` | Act boundary and summary | Animatic navigation |
+| `SceneSection` | Scene heading, setting, cast and beats | Animatic editor |
+| `BeatBlock` | Dramatic beat and ordered cues | Shot details |
+| `CueRenderer` | Dispatch cue union by type | Script, animatic, player details |
+| `ActionCueView` | Action description | Script, shot details |
+| `DialogueCueView` | Speaker, localized line and delivery | Script, subtitles, shot details |
+| `SoundCueView` | Diegetic/non-diegetic sound direction | Script, shot details |
+| `MusicCueView` | Music operation and track reference | Script, shot details |
+| `TransitionCueView` | Editorial transition | Script, animatic |
+| `SceneHeading` | INT/EXT, location, time and story time | Script, animatic |
+| `ScreenplayLegend` | Shot/cue abbreviations | Script, animatic |
+
+`CueRenderer` is the main reuse boundary: adding a cue type should require one renderer and one registered case, not changes across every route.
+
+### Animatic editor components
+
+| Component | Responsibility |
+| --- | --- |
+| `AnimaticEditor` | Editor orchestration and totals |
+| `AnimaticDashboard` | Effective duration, target duration and progress |
+| `SceneShotList` | Group shots under scene/beat headings |
+| `ShotCard` | Selected take, framing, cues, audio and duration |
+| `ShotMedia` | Resolve and render selected take asset |
+| `ShotComposition` | Frame size, angle, lens and movement |
+| `CuePlacementList` | Cues covered by a shot and their offsets |
+| `DurationInput` | Accessible duration editing |
+| `TakeSelector` | Candidate/selected take switching |
+| `ContinuityWarnings` | Missing entities/assets, timing overlap and untranslated cues |
+
+### Player components
+
+| Component | Responsibility | Shared with editor |
+| --- | --- | --- |
+| `AnimaticPlayer` | Playback state and shot advancement | No |
+| `PlayerStage` | Selected take image/video and overlays | `ShotMedia` |
+| `SubtitleOverlay` | Resolve subtitle language and cue placement | `DialogueCueView` selectors |
+| `PlayerControls` | Play/pause/stop, previous/next and fullscreen | Generic control primitives |
+| `TimelineScrubber` | Seek across derived total duration | `AnimaticDashboard` timing utilities |
+| `ShotDetailsDrawer` | Current beat, shot, camera, cues and audio | `ShotCard` subcomponents |
+| `PlaybackClock` | Absolute/total time formatting | Duration utilities |
+
+The player must preserve current legacy behavior: play/pause, stop, previous/next, scrubber, subtitles, shot counter, elapsed/total time, collapsible details, fullscreen and returning to the editor at the same shot/time.
+
+### Shared control primitives
+
+- `Button`
+- `IconButton`
+- `Select`
+- `Range`
+- `NumberField`
+- `Disclosure`
+- `Tabs`
+- `Dialog`
+- `Tooltip`
+- `StatusBadge`
+
+Build only those needed by migrated routes. They should be accessible semantic wrappers, not an internal design-system project.
+
+## 6. Data layer
+
+### Repositories
+
+Use small read-only repositories initially:
+
+```ts
+interface ProjectRepository {
+  getProject(): Project;
+  getScript(id: string): ScriptFile;
+  getDocument(slug: string): ProjectDocument;
+  getEntity(ref: EntityRef): Entity | undefined;
+  getAsset(id: AssetId): Asset | undefined;
+}
+```
+
+Suggested modules:
+
+```text
+src/lib/data/repositories/project.ts
+src/lib/data/repositories/script.ts
+src/lib/data/repositories/entities.ts
+src/lib/data/repositories/assets.ts
+```
+
+The UI should not search raw arrays or construct asset paths directly. Route loads call repositories; components receive resolved models or IDs plus resolver functions.
+
+### Selectors
+
+Pure selectors should handle graph traversal and derived values:
+
+- `getActScenes(actId)`
+- `getSceneBeats(sceneId)`
+- `getSceneShots(sceneId)`
+- `getShotSelectedTake(shotId)`
+- `getShotCues(shotId)`
+- `getEffectiveDuration(scope)`
+- `getDialogueVariant(cueId, language)`
+- `getSubtitleSegments(shotId, language)`
+- `getEntityAssets(entityRef)`
+- `getAssetUsage(assetId)`
+- `getDialogueDensity(sceneId)`
+
+Selectors must be framework-independent and unit tested.
+
+### Validation
+
+Validate all JSON at application startup in development and during CI/build. Required checks include:
+
+- unique IDs;
+- valid foreign keys;
+- valid ordering within parents;
+- exactly one selected take where required;
+- existing asset paths;
+- non-negative durations and cue offsets;
+- cue placements that do not exceed shot duration unless explicitly allowed;
+- supported language tags;
+- source-language dialogue variant present;
+- no missing subtitle/audio references marked as approved.
+
+TypeScript types alone do not validate JSON at runtime. The migration plan should later choose one schema authority -- JSON Schema or a runtime TypeScript schema library -- rather than maintaining several independent definitions manually.
+
+## 7. State and persistence
+
+### State modules
+
+Use focused Svelte 5 state modules, for example:
+
+```text
+src/lib/state/language.svelte.ts
+src/lib/state/animatic-editor.svelte.ts
+src/lib/state/player.svelte.ts
+src/lib/state/preferences.svelte.ts
+```
+
+Keep canonical loaded data immutable in the first migration. Store edits as an overlay keyed by ID:
+
+```ts
+interface AnimaticEdits {
+  shotDurations: Record<ShotId, number>;
+  selectedTakes: Record<ShotId, TakeId>;
+}
+```
+
+This preserves the legacy `localStorage` behavior without mutating imported JSON. Add import/export or server persistence later behind an interface.
+
+### Language state
+
+Maintain separate settings:
+
+- `interfaceLanguage`
+- `dialogueLanguage`
+- `subtitleLanguage | null`
+- fallback language from project metadata
+
+Changing subtitle language must not change selected dialogue audio unless explicitly linked by the user.
+
+## 8. Styling reuse
+
+Create global tokens once in `src/app.css`:
+
+- background/panel/text/muted/line colors;
+- cyan/gold/red/green semantic accents;
+- content widths;
+- typography families and scales;
+- spacing, radius and shadow scales;
+- responsive breakpoints;
+
+Components own their structural styles, while tokens and document typography remain shared. Avoid copying the entire legacy `<style>` block into every route.
+
+Preserve:
+
+- sticky rails on wide screens;
+- responsive single-column layout;
+- print-friendly screenplay/document views;
+- strong focus states and keyboard controls;
+- reduced-motion behavior for player transitions.
+
+## 9. Migration phases
+
+### Phase 0 -- Baseline and inventory
+
+- Keep `legacy-site/` intact.
+- Capture route screenshots and behavior checks.
+- Inventory all pages, sections, entities, assets and embedded animatic data.
+- Record current counts: 17 scenes, 100 shots and 100 animatic frames.
+
+### Phase 1 -- Types, multilingual extension and validation
+
+- Incorporate `docs/JSON_FORMAT.md` and the multilingual addendum.
+- Select schema authority and runtime validation.
+- Create minimal fixture JSON.
+- Implement repositories and selectors with tests.
+
+### Phase 2 -- Application shell and generic documents
+
+- Implement tokens, `AppShell`, navigation, page header and TOC.
+- Define the generic document block schema.
+- Migrate one prose document as a vertical slice.
+- Migrate the remaining prose documents only after the block vocabulary proves sufficient.
+
+### Phase 3 -- Entities, art and assets
+
+- Convert characters, locations, objects, vehicles, factions and manifests.
+- Implement generic entity routes and asset viewers.
+- Verify every reference image and asset backlink.
+
+### Phase 4 -- Screenplay
+
+- Convert acts, scenes, beats and cues.
+- Render the screenplay from JSON.
+- Add language selection and missing-translation indicators.
+- Compare dialogue/action order against the legacy script.
+
+### Phase 5 -- Shots, takes and animatic editor
+
+- Convert the 100 legacy shots and images.
+- Distinguish existing shot images as selected takes.
+- Implement duration editing and derived totals.
+- Add cue coverage and warnings for shots that should be split.
+
+### Phase 6 -- Animatic player
+
+- Implement playback from shot timing.
+- Render localized subtitles from dialogue cues.
+- Support independent dialogue and subtitle languages.
+- Match all legacy player controls and restoration behavior.
+
+### Phase 7 -- Content development and editorial tools
+
+- Expand underdeveloped dialogue and explanatory beats.
+- Split compound legacy shots.
+- Add missing reaction shots and cue coverage.
+- Add dialogue-density, silence and pacing reports.
+- Add JSON export/import and provenance editing.
+
+Story development begins here, after the data model and baseline renderers can expose changes consistently.
+
+## 10. Reuse rules
+
+- Routes compose domain components; they do not contain bespoke render logic.
+- Entity kinds share cards, galleries and detail shells.
+- All cue display passes through `CueRenderer`.
+- Script and animatic share `SceneHeading`, `BeatBlock`, cue renderers and entity references.
+- Editor and player share media resolution, timing utilities, subtitles and shot-detail components.
+- Prose documents share a block renderer rather than generated HTML strings.
+- Asset paths resolve through the asset repository, never string concatenation in components.
+- Language fallback resolves through one localization module.
+
+## 11. Initial acceptance criteria
+
+The initial migration is successful when:
+
+- every current index destination has an equivalent Svelte route;
+- the canonical screenplay is rendered solely from structured data;
+- the editor and player use the same shots, cues and takes;
+- all 100 existing frames resolve through asset IDs;
+- dialogue/subtitle languages can be chosen independently;
+- existing playback and duration-editing behavior is preserved;
+- the application reports missing references and translations;
+- no narrative fact exists only inside a Svelte component;
+- `legacy-site/` can remain as a read-only regression reference until final parity review.

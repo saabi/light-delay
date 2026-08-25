@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-25 — Diálogo español como fuente de verdad (i18n)
+
+- `docs/JSON_FORMAT_I18N_ADDENDUM.md` aclara que el diálogo en español es la fuente de verdad frente a otras traducciones; editar español primero y no inventar inglés en la extracción mecánica.
+- Se añadió `docs/MIGRATION_PLAN.md`; ambos docs nuevos se guardaron en UTF-8 (sin BOM) y se corrigió mojibake de árboles/guiones en el plan.
+
 ## 2026-08-25 — Bootstrap SvelteKit 2 / Svelte 5
 
 - Se creó la aplicación mínima en la raíz con TypeScript, ESLint, Prettier, Vitest y Playwright.
