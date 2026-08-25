@@ -43,3 +43,9 @@ test('script switcher keeps animatic section', async ({ page }) => {
 	await page.getByLabel('Seleccionar guion o cut').selectOption('script:light-delay-festival');
 	await expect(page).toHaveURL(/\/animatic\/script~light-delay-festival\/?$/);
 });
+
+test('trailer animatic reuses main frames', async ({ page }) => {
+	await page.goto('/animatic/script~light-delay-trailer');
+	await expect(page.getByRole('heading', { name: /Tráiler|Light Delay/i }).first()).toBeVisible();
+	await expect(page.locator('img').first()).toBeVisible();
+});

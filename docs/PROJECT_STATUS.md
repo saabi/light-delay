@@ -6,6 +6,7 @@ Fecha de corte: 2026-08-25.
 
 - **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
 - **Selector de guion en el rail:** `ScriptSwitcher` en `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
+- **Tráiler (~1:30):** `data/scripts/light-delay-trailer.json` — 9 secuencias del brief, 29 tomas reutilizando frames del main short; regenerable con `npm run build:trailer`.
 - Guion corto revisado de 17 escenas con objetivo de 30 minutos.
 - Lista de momentos clave y versión acotada sincronizadas.
 - Biblia de producción y reporte comprensivo actualizados al canon reciente.
@@ -27,7 +28,8 @@ Fecha de corte: 2026-08-25.
 3. **Terminología del sistema.** Unificar `IA`, `mediación`, `núcleo diplomático`, `núcleo cuántico` y `envoltura` según función dramática y técnica.
 4. **Duración real.** Los 30:00 son un objetivo de montaje. Debe validarse mediante lectura cronometrada y luego con animación/video.
 5. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 secuencias y diálogo citado; faltan shot list, takes e imágenes canónicas de esa versión.
-6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
+6. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta afinado editorial de ritmo, posibles stills exclusivos de título y audio.
+7. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 
 ## Notas técnicas recientes
 

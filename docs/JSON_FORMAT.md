@@ -15,7 +15,8 @@ data/
 |-- project.json
 |-- scripts/
 |   |-- light-delay-main-short.json
-|   `-- light-delay-festival.json
+|   |-- light-delay-festival.json
+|   `-- light-delay-trailer.json
 |-- characters.json
 |-- locations.json
 |-- objects.json

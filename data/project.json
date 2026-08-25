@@ -57,6 +57,19 @@
 					"relationship": "adaptation",
 					"sourceVersion": "1.0.0-extract"
 				}
+			},
+			{
+				"id": "script:light-delay-trailer",
+				"continuityId": "continuity:light-delay-primary",
+				"label": "Tráiler (~1:30)",
+				"kind": "trailer",
+				"status": "draft",
+				"targetDurationMs": 90000,
+				"lineage": {
+					"sourceScriptId": "script:light-delay-main-short",
+					"relationship": "trailer",
+					"sourceVersion": "1.0.0-extract"
+				}
 			}
 		]
 	}

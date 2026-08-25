@@ -1,6 +1,7 @@
 import projectJson from '../../../../data/project.json';
 import mainScriptJson from '../../../../data/scripts/light-delay-main-short.json';
 import festivalScriptJson from '../../../../data/scripts/light-delay-festival.json';
+import trailerScriptJson from '../../../../data/scripts/light-delay-trailer.json';
 import assetsJson from '../../../../data/assets.json';
 import charactersJson from '../../../../data/characters.json';
 import locationsJson from '../../../../data/locations.json';
@@ -35,6 +36,10 @@ const SCRIPT_MODULES: Record<string, ScriptFile> = {
 	'script:light-delay-festival': assertJsonModule(
 		festivalScriptJson as ScriptFile,
 		'scripts/light-delay-festival'
+	),
+	'script:light-delay-trailer': assertJsonModule(
+		trailerScriptJson as ScriptFile,
+		'scripts/light-delay-trailer'
 	)
 };
 

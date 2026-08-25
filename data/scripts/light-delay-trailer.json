@@ -1,0 +1,2590 @@
+{
+	"schemaVersion": "1.0.0",
+	"script": {
+		"id": "script:light-delay-trailer",
+		"projectId": "project:light-delay",
+		"continuityId": "continuity:light-delay-primary",
+		"title": "Light Delay — Tráiler (~1:30)",
+		"version": "0.1.0-draft",
+		"status": "draft",
+		"kind": "trailer",
+		"targetDurationMs": 90000,
+		"lineage": {
+			"sourceScriptId": "script:light-delay-main-short",
+			"relationship": "trailer",
+			"sourceVersion": "1.0.0-extract",
+			"notes": "Tráiler según docs/Light Delay — Tráiler de la versión de 30 minutos.md. Frames reutilizados del animatic principal vía imageAssetId; diálogos condensados del brief."
+		},
+		"characterFunctionAssignments": [
+			{
+				"functionId": "function:command",
+				"characterId": "character:voss",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:investigation_payload",
+				"characterId": "character:rao",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:communications",
+				"characterId": "character:cael",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:diplomatic_greeting_authorship",
+				"characterId": "character:sorell",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:override_antagonist",
+				"characterId": "character:harlan",
+				"relationship": "unchanged",
+				"notes": "En el tráiler la voz O.S. permanece deliberadamente no identificable en pantalla."
+			},
+			{
+				"functionId": "function:piloting",
+				"characterId": "character:cael",
+				"relationship": "unchanged"
+			}
+		],
+		"actIds": [
+			"trailer:act-1"
+		]
+	},
+	"acts": [
+		{
+			"id": "trailer:act-1",
+			"number": 1,
+			"title": "Tráiler ~1:30",
+			"dramaticPurpose": "Promesa, amenaza y umbral sin spoilear el desenlace.",
+			"sceneIds": [
+				"trailer:scene-a",
+				"trailer:scene-b",
+				"trailer:scene-c",
+				"trailer:scene-d",
+				"trailer:scene-e",
+				"trailer:scene-f",
+				"trailer:scene-g",
+				"trailer:scene-h",
+				"trailer:scene-i"
+			]
+		}
+	],
+	"sequences": [],
+	"scenes": [
+		{
+			"id": "trailer:scene-a",
+			"actId": "trailer:act-1",
+			"number": 1,
+			"order": 1,
+			"title": "Escala",
+			"locationId": "location:proxima-dock",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Negro a Proxima / Celestial Ardor; misión en V.O.",
+			"dramaticPurpose": "Abrir con escala y doctrina de contacto.",
+			"characterIds": [
+				"character:voss",
+				"character:zao",
+				"character:rao",
+				"character:sorell"
+			],
+			"beatIds": [
+				"trailer:beat-a-01"
+			],
+			"shotIds": [
+				"trailer:shot-a-01",
+				"trailer:shot-a-02"
+			],
+			"targetDurationMs": 8000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-01-01"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-01-08"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-b",
+			"actId": "trailer:act-1",
+			"number": 2,
+			"order": 2,
+			"title": "La misión",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Separación, núcleo y saludo; tarjeta PRIMER CONTACTO.",
+			"dramaticPurpose": "Promesa de la misión diplomática.",
+			"characterIds": [
+				"character:sorell",
+				"character:voss",
+				"character:cael",
+				"character:zao"
+			],
+			"beatIds": [
+				"trailer:beat-b-01"
+			],
+			"shotIds": [
+				"trailer:shot-b-01",
+				"trailer:shot-b-02",
+				"trailer:shot-b-03"
+			],
+			"targetDurationMs": 10000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-02-04"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-04-01"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-05"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-c",
+			"actId": "trailer:act-1",
+			"number": 3,
+			"order": 3,
+			"title": "La anomalía",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Zao detecta la rama ejecutable no declarada.",
+			"dramaticPurpose": "Introducir el peligro técnico.",
+			"characterIds": [
+				"character:zao"
+			],
+			"beatIds": [
+				"trailer:beat-c-01"
+			],
+			"shotIds": [
+				"trailer:shot-c-01",
+				"trailer:shot-c-02",
+				"trailer:shot-c-03"
+			],
+			"targetDurationMs": 13000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-04-02"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-05-02"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-05-01"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-d",
+			"actId": "trailer:act-1",
+			"number": 4,
+			"order": 4,
+			"title": "La advertencia",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Zao transmite hacia el futuro por el corredor de vuelo.",
+			"dramaticPurpose": "Mensaje óptico incompleto.",
+			"characterIds": [
+				"character:zao"
+			],
+			"beatIds": [
+				"trailer:beat-d-01"
+			],
+			"shotIds": [
+				"trailer:shot-d-01",
+				"trailer:shot-d-02",
+				"trailer:shot-d-03",
+				"trailer:shot-d-04"
+			],
+			"targetDurationMs": 13000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-01"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-02"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-03"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-04"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-e",
+			"actId": "trailer:act-1",
+			"number": 5,
+			"order": 5,
+			"title": "Punto de no retorno",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Transmisión completa; silueta O.S.; golpe a negro.",
+			"dramaticPurpose": "Cierre del acto en Proxima.",
+			"characterIds": [
+				"character:zao",
+				"character:harlan"
+			],
+			"beatIds": [
+				"trailer:beat-e-01"
+			],
+			"shotIds": [
+				"trailer:shot-e-01",
+				"trailer:shot-e-02"
+			],
+			"targetDurationMs": 7000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-05"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-06"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-f",
+			"actId": "trailer:act-1",
+			"number": 6,
+			"order": 6,
+			"title": "La nave llega primero",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Cruce de la garganta; T+23 h; Rao contra reloj.",
+			"dramaticPurpose": "Salto temporal y presión técnica.",
+			"characterIds": [
+				"character:rao",
+				"character:voss",
+				"character:cael"
+			],
+			"beatIds": [
+				"trailer:beat-f-01"
+			],
+			"shotIds": [
+				"trailer:shot-f-01",
+				"trailer:shot-f-02",
+				"trailer:shot-f-03",
+				"trailer:shot-f-04"
+			],
+			"targetDurationMs": 11000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-07-03"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-07-05"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-08-01"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-10-01"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-g",
+			"actId": "trailer:act-1",
+			"number": 7,
+			"order": 7,
+			"title": "La señal",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Portadora humana; OVR; fragmento de Zao.",
+			"dramaticPurpose": "La advertencia alcanza a la nave.",
+			"characterIds": [
+				"character:cael",
+				"character:voss",
+				"character:rao",
+				"character:sorell",
+				"character:zao"
+			],
+			"beatIds": [
+				"trailer:beat-g-01"
+			],
+			"shotIds": [
+				"trailer:shot-g-01",
+				"trailer:shot-g-02",
+				"trailer:shot-g-03",
+				"trailer:shot-g-04"
+			],
+			"targetDurationMs": 11000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-11-05"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-12-01"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-12-02"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-10-06"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-h",
+			"actId": "trailer:act-1",
+			"number": 8,
+			"order": 8,
+			"title": "El reloj",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "Montaje acelerado hacia el umbral Velari.",
+			"dramaticPurpose": "Clímax sin revelar el desenlace.",
+			"characterIds": [
+				"character:rao",
+				"character:voss",
+				"character:cael",
+				"character:sorell"
+			],
+			"beatIds": [
+				"trailer:beat-h-01"
+			],
+			"shotIds": [
+				"trailer:shot-h-01",
+				"trailer:shot-h-02",
+				"trailer:shot-h-03",
+				"trailer:shot-h-04",
+				"trailer:shot-h-05"
+			],
+			"targetDurationMs": 9000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-02"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-04"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-06"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-05"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-16-01"
+				}
+			]
+		},
+		{
+			"id": "trailer:scene-i",
+			"actId": "trailer:act-1",
+			"number": 9,
+			"order": 9,
+			"title": "Título",
+			"locationId": "location:velari-station",
+			"setting": {
+				"interiorExterior": "INT_EXT",
+				"timeOfDay": "CONTINUO"
+			},
+			"summary": "LIGHT DELAY / LUZ TARDÍA y lema; pulso Velari.",
+			"dramaticPurpose": "Cierre de marca.",
+			"characterIds": [
+				"character:zao"
+			],
+			"beatIds": [
+				"trailer:beat-i-01"
+			],
+			"shotIds": [
+				"trailer:shot-i-01",
+				"trailer:shot-i-02"
+			],
+			"targetDurationMs": 8000,
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-16-03"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-17-06"
+				}
+			]
+		}
+	],
+	"beats": [
+		{
+			"id": "trailer:beat-a-01",
+			"sceneId": "trailer:scene-a",
+			"order": 1,
+			"title": "Escala",
+			"purpose": "Abrir con escala y doctrina de contacto.",
+			"summary": "Negro a Proxima / Celestial Ardor; misión en V.O.",
+			"cueIds": [
+				"trailer:cue-a-01"
+			]
+		},
+		{
+			"id": "trailer:beat-b-01",
+			"sceneId": "trailer:scene-b",
+			"order": 1,
+			"title": "La misión",
+			"purpose": "Promesa de la misión diplomática.",
+			"summary": "Separación, núcleo y saludo; tarjeta PRIMER CONTACTO.",
+			"cueIds": [
+				"trailer:cue-b-01",
+				"trailer:cue-b-02"
+			]
+		},
+		{
+			"id": "trailer:beat-c-01",
+			"sceneId": "trailer:scene-c",
+			"order": 1,
+			"title": "La anomalía",
+			"purpose": "Introducir el peligro técnico.",
+			"summary": "Zao detecta la rama ejecutable no declarada.",
+			"cueIds": [
+				"trailer:cue-c-01",
+				"trailer:cue-c-02",
+				"trailer:cue-c-03"
+			]
+		},
+		{
+			"id": "trailer:beat-d-01",
+			"sceneId": "trailer:scene-d",
+			"order": 1,
+			"title": "La advertencia",
+			"purpose": "Mensaje óptico incompleto.",
+			"summary": "Zao transmite hacia el futuro por el corredor de vuelo.",
+			"cueIds": [
+				"trailer:cue-d-01",
+				"trailer:cue-d-02"
+			]
+		},
+		{
+			"id": "trailer:beat-e-01",
+			"sceneId": "trailer:scene-e",
+			"order": 1,
+			"title": "Punto de no retorno",
+			"purpose": "Cierre del acto en Proxima.",
+			"summary": "Transmisión completa; silueta O.S.; golpe a negro.",
+			"cueIds": [
+				"trailer:cue-e-01",
+				"trailer:cue-e-02",
+				"trailer:cue-e-03",
+				"trailer:cue-e-04"
+			]
+		},
+		{
+			"id": "trailer:beat-f-01",
+			"sceneId": "trailer:scene-f",
+			"order": 1,
+			"title": "La nave llega primero",
+			"purpose": "Salto temporal y presión técnica.",
+			"summary": "Cruce de la garganta; T+23 h; Rao contra reloj.",
+			"cueIds": [
+				"trailer:cue-f-01",
+				"trailer:cue-f-02",
+				"trailer:cue-f-03",
+				"trailer:cue-f-04"
+			]
+		},
+		{
+			"id": "trailer:beat-g-01",
+			"sceneId": "trailer:scene-g",
+			"order": 1,
+			"title": "La señal",
+			"purpose": "La advertencia alcanza a la nave.",
+			"summary": "Portadora humana; OVR; fragmento de Zao.",
+			"cueIds": [
+				"trailer:cue-g-01",
+				"trailer:cue-g-02",
+				"trailer:cue-g-03",
+				"trailer:cue-g-04",
+				"trailer:cue-g-05",
+				"trailer:cue-g-06"
+			]
+		},
+		{
+			"id": "trailer:beat-h-01",
+			"sceneId": "trailer:scene-h",
+			"order": 1,
+			"title": "El reloj",
+			"purpose": "Clímax sin revelar el desenlace.",
+			"summary": "Montaje acelerado hacia el umbral Velari.",
+			"cueIds": [
+				"trailer:cue-h-01",
+				"trailer:cue-h-02",
+				"trailer:cue-h-03"
+			]
+		},
+		{
+			"id": "trailer:beat-i-01",
+			"sceneId": "trailer:scene-i",
+			"order": 1,
+			"title": "Título",
+			"purpose": "Cierre de marca.",
+			"summary": "LIGHT DELAY / LUZ TARDÍA y lema; pulso Velari.",
+			"cueIds": [
+				"trailer:cue-i-01",
+				"trailer:cue-i-02",
+				"trailer:cue-i-03",
+				"trailer:cue-i-04"
+			]
+		}
+	],
+	"cues": [
+		{
+			"id": "trailer:cue-a-01",
+			"beatId": "trailer:beat-a-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:voss",
+			"presentation": "voice_over",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Primer contacto. Entramos, saludamos y escuchamos.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-b-01",
+			"beatId": "trailer:beat-b-01",
+			"order": 1,
+			"type": "text",
+			"presentation": "title",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "PRIMER CONTACTO",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-b-02",
+			"beatId": "trailer:beat-b-01",
+			"order": 2,
+			"type": "dialogue",
+			"speakerId": "character:sorell",
+			"presentation": "voice_over",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Esto es lenguaje. Una forma de decir quiénes somos.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-01-15"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-c-01",
+			"beatId": "trailer:beat-c-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Eso no debería estar ahí.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-04-02"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-c-02",
+			"beatId": "trailer:beat-c-01",
+			"order": 2,
+			"type": "text",
+			"presentation": "interface",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "RAMA EJECUTABLE NO DECLARADA",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-c-03",
+			"beatId": "trailer:beat-c-01",
+			"order": 3,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "No es un error.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-04-02"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-d-01",
+			"beatId": "trailer:beat-d-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Si no puedo hablarles ahora, les hablo a donde van a estar.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-06-01"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-d-02",
+			"beatId": "trailer:beat-d-01",
+			"order": 2,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Si esto llega...",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-06-03"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-e-01",
+			"beatId": "trailer:beat-e-01",
+			"order": 1,
+			"type": "text",
+			"presentation": "interface",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "TRANSMISIÓN 70%… 92%…",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-e-02",
+			"beatId": "trailer:beat-e-01",
+			"order": 2,
+			"type": "dialogue",
+			"speakerId": "character:harlan",
+			"presentation": "off_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "¿A quién le escribís?",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-06-04"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-e-03",
+			"beatId": "trailer:beat-e-01",
+			"order": 3,
+			"type": "text",
+			"presentation": "interface",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "100% — TRANSMITIDO",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-e-04",
+			"beatId": "trailer:beat-e-01",
+			"order": 4,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Ya está hecho.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-06-05"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-f-01",
+			"beatId": "trailer:beat-f-01",
+			"order": 1,
+			"type": "text",
+			"presentation": "time_card",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "23 HORAS DESPUÉS",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-f-02",
+			"beatId": "trailer:beat-f-01",
+			"order": 2,
+			"type": "text",
+			"presentation": "time_card",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "CONTACTO VELARI — APROXIMACIÓN FINAL",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-f-03",
+			"beatId": "trailer:beat-f-01",
+			"order": 3,
+			"type": "dialogue",
+			"speakerId": "character:rao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Sé qué hace.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-10-04"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-f-04",
+			"beatId": "trailer:beat-f-01",
+			"order": 4,
+			"type": "dialogue",
+			"speakerId": "character:rao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "No sé quién lo controla.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-10-04"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-g-01",
+			"beatId": "trailer:beat-g-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:cael",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Señal humana.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-11-06"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-g-02",
+			"beatId": "trailer:beat-g-01",
+			"order": 2,
+			"type": "dialogue",
+			"speakerId": "character:voss",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "¿De dónde?",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-g-03",
+			"beatId": "trailer:beat-g-01",
+			"order": 3,
+			"type": "dialogue",
+			"speakerId": "character:cael",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "De nuestro corredor de vuelo.",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-11-06"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-g-04",
+			"beatId": "trailer:beat-g-01",
+			"order": 4,
+			"type": "text",
+			"presentation": "interface",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "ORIGEN: TRANSMISOR DE CONTINGENCIA",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-g-05",
+			"beatId": "trailer:beat-g-01",
+			"order": 5,
+			"type": "text",
+			"presentation": "interface",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "OVR-7C41 / TITULAR CIFRADO",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-g-06",
+			"beatId": "trailer:beat-g-01",
+			"order": 6,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "voice_over",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "…no apaguen la mediación…",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-12-02"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-h-01",
+			"beatId": "trailer:beat-h-01",
+			"order": 1,
+			"type": "text",
+			"presentation": "interface",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "CANAL VELARI — 01:32",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-h-02",
+			"beatId": "trailer:beat-h-01",
+			"order": 2,
+			"type": "text",
+			"presentation": "interface",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "SALUDO SORELL-ZAO / SÓLO LECTURA",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-h-03",
+			"beatId": "trailer:beat-h-01",
+			"order": 3,
+			"type": "dialogue",
+			"speakerId": "character:rao",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Si me equivoco, hablamos por él.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-i-01",
+			"beatId": "trailer:beat-i-01",
+			"order": 1,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "voice_over",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Si esto llega...",
+						"status": "source"
+					}
+				}
+			},
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"cueId": "main:cue-06-03"
+				}
+			]
+		},
+		{
+			"id": "trailer:cue-i-02",
+			"beatId": "trailer:beat-i-01",
+			"order": 2,
+			"type": "text",
+			"presentation": "title",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "LIGHT DELAY",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-i-03",
+			"beatId": "trailer:beat-i-01",
+			"order": 3,
+			"type": "text",
+			"presentation": "title",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "LUZ TARDÍA",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "trailer:cue-i-04",
+			"beatId": "trailer:beat-i-01",
+			"order": 4,
+			"type": "text",
+			"presentation": "caption",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"text": "A VECES, LLEGAR TARDE ES LLEGAR A TIEMPO.",
+						"status": "source"
+					}
+				}
+			}
+		}
+	],
+	"shots": [
+		{
+			"id": "trailer:shot-a-01",
+			"sceneId": "trailer:scene-a",
+			"beatIds": [
+				"trailer:beat-a-01"
+			],
+			"number": 1,
+			"order": 1,
+			"description": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, Júpiter pequeño al fondo.",
+			"locationId": "location:proxima-dock",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "24 mm · composición axial · avance muy lento que revele generaciones constructivas."
+			},
+			"durationMs": 3500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-a-01",
+					"atMs": 0,
+					"durationMs": 3500
+				}
+			],
+			"takeIds": [
+				"trailer:take-a-01-01"
+			],
+			"selectedTakeId": "trailer:take-a-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-01-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-a-02",
+			"sceneId": "trailer:scene-a",
+			"beatIds": [
+				"trailer:beat-a-01"
+			],
+			"number": 2,
+			"order": 2,
+			"description": "Sorell entrega el saludo pasivo; Voss ordena puestos.",
+			"locationId": "location:proxima-dock",
+			"composition": {
+				"size": "MS",
+				"framing": "PM",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "50 mm · triángulo Zao–Sorell–Rao, cierre en rampa."
+			},
+			"durationMs": 4500,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-a-02-01"
+			],
+			"selectedTakeId": "trailer:take-a-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-01-08"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-01-08 (asset asset:animatic-01-08)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-b-01",
+			"sceneId": "trailer:scene-b",
+			"beatIds": [
+				"trailer:beat-b-01"
+			],
+			"number": 1,
+			"order": 3,
+			"description": "Celestial Ardor se desprende del muelle, despliega velos radiadores oscuros y orienta la tobera magnética hacia el arco joviano.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "24 mm exterior · deriva amplia; la nave revela su arquitectura axial."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-b-01-01"
+			],
+			"selectedTakeId": "trailer:take-b-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-02-04"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-b-02",
+			"sceneId": "trailer:scene-b",
+			"beatIds": [
+				"trailer:beat-b-01"
+			],
+			"number": 2,
+			"order": 4,
+			"description": "Zao sola frente al núcleo azul; rojo casi imperceptible.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "28 mm · simetría fría."
+			},
+			"durationMs": 3500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-b-01",
+					"atMs": 0,
+					"durationMs": 3500
+				}
+			],
+			"takeIds": [
+				"trailer:take-b-02-01"
+			],
+			"selectedTakeId": "trailer:take-b-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-04-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-04-01 (asset asset:animatic-04-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-b-03",
+			"sceneId": "trailer:scene-b",
+			"beatIds": [
+				"trailer:beat-b-01"
+			],
+			"number": 3,
+			"order": 5,
+			"description": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "INSERT",
+				"framing": "PD",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "85 mm · soporte físico claro."
+			},
+			"durationMs": 3500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-b-02",
+					"atMs": 0,
+					"durationMs": 3500
+				}
+			],
+			"takeIds": [
+				"trailer:take-b-03-01"
+			],
+			"selectedTakeId": "trailer:take-b-03-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-05"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-14-05 (asset asset:animatic-14-05)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-c-01",
+			"sceneId": "trailer:scene-c",
+			"beatIds": [
+				"trailer:beat-c-01"
+			],
+			"number": 1,
+			"order": 6,
+			"description": "Código se abre como envoltura dormida de función ambigua.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "OTS",
+				"framing": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "50 mm sobre hombro · interfaz ocupa dos tercios."
+			},
+			"durationMs": 4000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-c-01",
+					"atMs": 0,
+					"durationMs": 4000
+				}
+			],
+			"takeIds": [
+				"trailer:take-c-01-01"
+			],
+			"selectedTakeId": "trailer:take-c-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-04-02"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-c-02",
+			"sceneId": "trailer:scene-c",
+			"beatIds": [
+				"trailer:beat-c-01"
+			],
+			"number": 2,
+			"order": 7,
+			"description": "Interfaz revela ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "OTS",
+				"framing": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "50 mm · capas translúcidas."
+			},
+			"durationMs": 4500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-c-02",
+					"atMs": 0,
+					"durationMs": 4000
+				}
+			],
+			"takeIds": [
+				"trailer:take-c-02-01"
+			],
+			"selectedTakeId": "trailer:take-c-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-05-02"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-05-02 (asset asset:animatic-05-02)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-c-03",
+			"sceneId": "trailer:scene-c",
+			"beatIds": [
+				"trailer:beat-c-01"
+			],
+			"number": 3,
+			"order": 8,
+			"description": "El núcleo entra en precarga; la envoltura empieza a desplegarse.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "28 mm · cámara se aproxima lentamente."
+			},
+			"durationMs": 4500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-c-03",
+					"atMs": 0,
+					"durationMs": 4000
+				}
+			],
+			"takeIds": [
+				"trailer:take-c-03-01"
+			],
+			"selectedTakeId": "trailer:take-c-03-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-05-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-d-01",
+			"sceneId": "trailer:scene-d",
+			"beatIds": [
+				"trailer:beat-d-01"
+			],
+			"number": 1,
+			"order": 9,
+			"description": "Zao corre a la consola óptica establecida al inicio.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "MS",
+				"framing": "PM",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "35 mm · cámara en mano contenida."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-d-01-01"
+			],
+			"selectedTakeId": "trailer:take-d-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-d-02",
+			"sceneId": "trailer:scene-d",
+			"beatIds": [
+				"trailer:beat-d-01"
+			],
+			"number": 2,
+			"order": 10,
+			"description": "Plan remoto y corredor de intercepción se superponen.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "OTS",
+				"framing": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "50 mm · retícula amplia, no punto perfecto."
+			},
+			"durationMs": 3500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-d-01",
+					"atMs": 0,
+					"durationMs": 3500
+				}
+			],
+			"takeIds": [
+				"trailer:take-d-02-01"
+			],
+			"selectedTakeId": "trailer:take-d-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-02"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-d-03",
+			"sceneId": "trailer:scene-d",
+			"beatIds": [
+				"trailer:beat-d-01"
+			],
+			"number": 3,
+			"order": 11,
+			"description": "Zao graba mirando directamente al sensor.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "CU",
+				"framing": "PP",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "75 mm · frontal, sin movimiento."
+			},
+			"durationMs": 3500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-d-02",
+					"atMs": 0,
+					"durationMs": 3500
+				}
+			],
+			"takeIds": [
+				"trailer:take-d-03-01"
+			],
+			"selectedTakeId": "trailer:take-d-03-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-03"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-d-04",
+			"sceneId": "trailer:scene-d",
+			"beatIds": [
+				"trailer:beat-d-01"
+			],
+			"number": 4,
+			"order": 12,
+			"description": "Barra de transmisión y firma de dispositivo.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "INSERT",
+				"framing": "PD",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "85 mm · 40%, 70%, 100%."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-d-04-01"
+			],
+			"selectedTakeId": "trailer:take-d-04-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-04"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-06-04 (asset asset:animatic-06-04)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-e-01",
+			"sceneId": "trailer:scene-e",
+			"beatIds": [
+				"trailer:beat-e-01"
+			],
+			"number": 1,
+			"order": 13,
+			"description": "Harlan aparece desenfocado tras Zao.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "OTS",
+				"framing": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "50 mm · puerta al fondo."
+			},
+			"durationMs": 3500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-e-01",
+					"atMs": 0,
+					"durationMs": 3500
+				},
+				{
+					"cueId": "trailer:cue-e-02",
+					"atMs": 0,
+					"durationMs": 3500
+				}
+			],
+			"takeIds": [
+				"trailer:take-e-01-01"
+			],
+			"selectedTakeId": "trailer:take-e-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-05"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-e-02",
+			"sceneId": "trailer:scene-e",
+			"beatIds": [
+				"trailer:beat-e-01"
+			],
+			"number": 2,
+			"order": 14,
+			"description": "Harlan comprende que hubo un envío, pero no su destino.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "CU",
+				"framing": "PP",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "85 mm · campo/contracampo cerrado."
+			},
+			"durationMs": 3500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-e-03",
+					"atMs": 0,
+					"durationMs": 3500
+				},
+				{
+					"cueId": "trailer:cue-e-04",
+					"atMs": 0,
+					"durationMs": 3500
+				}
+			],
+			"takeIds": [
+				"trailer:take-e-02-01"
+			],
+			"selectedTakeId": "trailer:take-e-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-06-06"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-f-01",
+			"sceneId": "trailer:scene-f",
+			"beatIds": [
+				"trailer:beat-f-01"
+			],
+			"number": 1,
+			"order": 15,
+			"description": "Nodos negros dispersos alrededor del vacío se conectan; aparece una región navegable de 150–200 m. La nave espera con motor y radiadores recogidos.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "24 mm exterior · sensor compuesto para abarcar nodos separados por kilómetros."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-f-01-01"
+			],
+			"selectedTakeId": "trailer:take-f-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-07-03"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-07-03 (asset asset:animatic-07-03)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-f-02",
+			"sceneId": "trailer:scene-f",
+			"beatIds": [
+				"trailer:beat-f-01"
+			],
+			"number": 2,
+			"order": 16,
+			"description": "La nave atraviesa en T+57:48; la garganta colapsa después.",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "24 mm · destello único, luego estrellas normales."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-f-02-01"
+			],
+			"selectedTakeId": "trailer:take-f-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-07-05"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-07-05 (asset asset:animatic-07-05)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-f-03",
+			"sceneId": "trailer:scene-f",
+			"beatIds": [
+				"trailer:beat-f-01"
+			],
+			"number": 3,
+			"order": 17,
+			"description": "Puente al otro lado; estrellas sin distorsión. Indicadores muestran acumuladores térmicos altos y radiadores desplegándose.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "28 mm · estabilidad recuperada."
+			},
+			"durationMs": 2000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-f-01",
+					"atMs": 0,
+					"durationMs": 2000
+				},
+				{
+					"cueId": "trailer:cue-f-02",
+					"atMs": 0,
+					"durationMs": 2000
+				}
+			],
+			"takeIds": [
+				"trailer:take-f-03-01"
+			],
+			"selectedTakeId": "trailer:take-f-03-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-08-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-08-01 (asset asset:animatic-08-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-f-04",
+			"sceneId": "trailer:scene-f",
+			"beatIds": [
+				"trailer:beat-f-01"
+			],
+			"number": 4,
+			"order": 18,
+			"description": "Rao trabaja en puesto protegido; reloj Velari sigue bajando.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "28 mm · líneas del puente aíslan su estación."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-f-03",
+					"atMs": 0,
+					"durationMs": 3000
+				},
+				{
+					"cueId": "trailer:cue-f-04",
+					"atMs": 0,
+					"durationMs": 3000
+				}
+			],
+			"takeIds": [
+				"trailer:take-f-04-01"
+			],
+			"selectedTakeId": "trailer:take-f-04-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-10-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-g-01",
+			"sceneId": "trailer:scene-g",
+			"beatIds": [
+				"trailer:beat-g-01"
+			],
+			"number": 1,
+			"order": 19,
+			"description": "Una portadora humana aparece en el corredor previsto.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "INSERT",
+				"framing": "PD",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "85 mm · onda apenas sobre ruido."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-g-01",
+					"atMs": 0,
+					"durationMs": 3000
+				},
+				{
+					"cueId": "trailer:cue-g-02",
+					"atMs": 0,
+					"durationMs": 3000
+				},
+				{
+					"cueId": "trailer:cue-g-03",
+					"atMs": 0,
+					"durationMs": 3000
+				}
+			],
+			"takeIds": [
+				"trailer:take-g-01-01"
+			],
+			"selectedTakeId": "trailer:take-g-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-11-05"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-g-02",
+			"sceneId": "trailer:scene-g",
+			"beatIds": [
+				"trailer:beat-g-01"
+			],
+			"number": 2,
+			"order": 20,
+			"description": "Cael autentica dispositivo y hora, no contenido.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "INSERT",
+				"framing": "PD",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "85 mm · metadatos en verde, voz en ámbar."
+			},
+			"durationMs": 2500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-g-04",
+					"atMs": 0,
+					"durationMs": 2500
+				}
+			],
+			"takeIds": [
+				"trailer:take-g-02-01"
+			],
+			"selectedTakeId": "trailer:take-g-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-12-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-12-01 (asset asset:animatic-12-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-g-03",
+			"sceneId": "trailer:scene-g",
+			"beatIds": [
+				"trailer:beat-g-01"
+			],
+			"number": 3,
+			"order": 21,
+			"description": "La voz fragmentada de Zao llena el puente.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "CU",
+				"framing": "PP",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "75 mm · reacciones contenidas."
+			},
+			"durationMs": 3000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-g-06",
+					"atMs": 0,
+					"durationMs": 3000
+				}
+			],
+			"takeIds": [
+				"trailer:take-g-03-01"
+			],
+			"selectedTakeId": "trailer:take-g-03-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-12-02"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-12-02 (asset asset:animatic-12-02)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-g-04",
+			"sceneId": "trailer:scene-g",
+			"beatIds": [
+				"trailer:beat-g-01"
+			],
+			"number": 4,
+			"order": 22,
+			"description": "Aparece OVR-7C41 sin titular.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "OTS",
+				"framing": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "65 mm · firma aislada contra fondo oscuro."
+			},
+			"durationMs": 2500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-g-05",
+					"atMs": 0,
+					"durationMs": 2500
+				}
+			],
+			"takeIds": [
+				"trailer:take-g-04-01"
+			],
+			"selectedTakeId": "trailer:take-g-04-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-10-06"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-10-06 (asset asset:animatic-10-06)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-h-01",
+			"sceneId": "trailer:scene-h",
+			"beatIds": [
+				"trailer:beat-h-01"
+			],
+			"number": 1,
+			"order": 23,
+			"description": "Reloj único: CANAL VELARI — 01:32 / PAYLOAD ARMADO.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "INSERT",
+				"framing": "PD",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "85 mm · contador establecido."
+			},
+			"durationMs": 2000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-h-01",
+					"atMs": 0,
+					"durationMs": 2000
+				}
+			],
+			"takeIds": [
+				"trailer:take-h-01-01"
+			],
+			"selectedTakeId": "trailer:take-h-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-02"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-14-02 (asset asset:animatic-14-02)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-h-02",
+			"sceneId": "trailer:scene-h",
+			"beatIds": [
+				"trailer:beat-h-01"
+			],
+			"number": 2,
+			"order": 24,
+			"description": "Rao abre el mapa de cuarentena preparado antes.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "OTS",
+				"framing": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "50 mm · rutas ya etiquetadas."
+			},
+			"durationMs": 1500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-h-03",
+					"atMs": 0,
+					"durationMs": 1500
+				}
+			],
+			"takeIds": [
+				"trailer:take-h-02-01"
+			],
+			"selectedTakeId": "trailer:take-h-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-04"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-14-04 (asset asset:animatic-14-04)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-h-03",
+			"sceneId": "trailer:scene-h",
+			"beatIds": [
+				"trailer:beat-h-01"
+			],
+			"number": 3,
+			"order": 25,
+			"description": "Cael pilota y fuerza el mamparo simultáneamente.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "MS",
+				"framing": "PM",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "45 mm · manos en controles separados."
+			},
+			"durationMs": 1500,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-h-03-01"
+			],
+			"selectedTakeId": "trailer:take-h-03-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-06"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-14-06 (asset asset:animatic-14-06)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-h-04",
+			"sceneId": "trailer:scene-h",
+			"beatIds": [
+				"trailer:beat-h-01"
+			],
+			"number": 4,
+			"order": 26,
+			"description": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "INSERT",
+				"framing": "PD",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "85 mm · soporte físico claro."
+			},
+			"durationMs": 1500,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-h-02",
+					"atMs": 0,
+					"durationMs": 1500
+				}
+			],
+			"takeIds": [
+				"trailer:take-h-04-01"
+			],
+			"selectedTakeId": "trailer:take-h-04-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-14-05"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-14-05 (asset asset:animatic-14-05)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-h-05",
+			"sceneId": "trailer:scene-h",
+			"beatIds": [
+				"trailer:beat-h-01"
+			],
+			"number": 5,
+			"order": 27,
+			"description": "Celestial Ardor avanza diminuta ante la Estación Velari: varios kilómetros de lóbulos, arcos, cavidades y piel-radiador cambiante.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "24 mm exterior · gran profundidad y escala inequívoca."
+			},
+			"durationMs": 2500,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-h-05-01"
+			],
+			"selectedTakeId": "trailer:take-h-05-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-16-01"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-16-01 (asset asset:animatic-16-01)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-i-01",
+			"sceneId": "trailer:scene-i",
+			"beatIds": [
+				"trailer:beat-i-01"
+			],
+			"number": 1,
+			"order": 28,
+			"description": "Luces de la Celestial Ardor, la emisaria y la estación sincronizan un pulso de reconocimiento.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "INSERT",
+				"framing": "PD",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "65 mm exterior · tres escalas en un eje compartido."
+			},
+			"durationMs": 4000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-i-01",
+					"atMs": 0,
+					"durationMs": 4000
+				},
+				{
+					"cueId": "trailer:cue-i-02",
+					"atMs": 0,
+					"durationMs": 4000
+				},
+				{
+					"cueId": "trailer:cue-i-03",
+					"atMs": 0,
+					"durationMs": 4000
+				}
+			],
+			"takeIds": [
+				"trailer:take-i-01-01"
+			],
+			"selectedTakeId": "trailer:take-i-01-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-16-03"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-16-03 (asset asset:animatic-16-03)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-i-02",
+			"sceneId": "trailer:scene-i",
+			"beatIds": [
+				"trailer:beat-i-01"
+			],
+			"number": 2,
+			"order": 29,
+			"description": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento.",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "LS",
+				"framing": "PG",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "24 mm exterior · sin cierre triunfalista; escala humana subordinada."
+			},
+			"durationMs": 4000,
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-i-04",
+					"atMs": 0,
+					"durationMs": 4000
+				}
+			],
+			"takeIds": [
+				"trailer:take-i-02-01"
+			],
+			"selectedTakeId": "trailer:take-i-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-17-06"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-17-06 (asset asset:animatic-17-06)."
+				}
+			]
+		}
+	],
+	"takes": [
+		{
+			"id": "trailer:take-a-01-01",
+			"shotId": "trailer:shot-a-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-01-01"
+		},
+		{
+			"id": "trailer:take-a-02-01",
+			"shotId": "trailer:shot-a-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-01-08"
+		},
+		{
+			"id": "trailer:take-b-01-01",
+			"shotId": "trailer:shot-b-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-02-04"
+		},
+		{
+			"id": "trailer:take-b-02-01",
+			"shotId": "trailer:shot-b-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-04-01"
+		},
+		{
+			"id": "trailer:take-b-03-01",
+			"shotId": "trailer:shot-b-03",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-14-05"
+		},
+		{
+			"id": "trailer:take-c-01-01",
+			"shotId": "trailer:shot-c-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-04-02"
+		},
+		{
+			"id": "trailer:take-c-02-01",
+			"shotId": "trailer:shot-c-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-05-02"
+		},
+		{
+			"id": "trailer:take-c-03-01",
+			"shotId": "trailer:shot-c-03",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-05-01"
+		},
+		{
+			"id": "trailer:take-d-01-01",
+			"shotId": "trailer:shot-d-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-01"
+		},
+		{
+			"id": "trailer:take-d-02-01",
+			"shotId": "trailer:shot-d-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-02"
+		},
+		{
+			"id": "trailer:take-d-03-01",
+			"shotId": "trailer:shot-d-03",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-03"
+		},
+		{
+			"id": "trailer:take-d-04-01",
+			"shotId": "trailer:shot-d-04",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-04"
+		},
+		{
+			"id": "trailer:take-e-01-01",
+			"shotId": "trailer:shot-e-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-05"
+		},
+		{
+			"id": "trailer:take-e-02-01",
+			"shotId": "trailer:shot-e-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-06"
+		},
+		{
+			"id": "trailer:take-f-01-01",
+			"shotId": "trailer:shot-f-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-07-03"
+		},
+		{
+			"id": "trailer:take-f-02-01",
+			"shotId": "trailer:shot-f-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-07-05"
+		},
+		{
+			"id": "trailer:take-f-03-01",
+			"shotId": "trailer:shot-f-03",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-08-01"
+		},
+		{
+			"id": "trailer:take-f-04-01",
+			"shotId": "trailer:shot-f-04",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-10-01"
+		},
+		{
+			"id": "trailer:take-g-01-01",
+			"shotId": "trailer:shot-g-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-11-05"
+		},
+		{
+			"id": "trailer:take-g-02-01",
+			"shotId": "trailer:shot-g-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-12-01"
+		},
+		{
+			"id": "trailer:take-g-03-01",
+			"shotId": "trailer:shot-g-03",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-12-02"
+		},
+		{
+			"id": "trailer:take-g-04-01",
+			"shotId": "trailer:shot-g-04",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-10-06"
+		},
+		{
+			"id": "trailer:take-h-01-01",
+			"shotId": "trailer:shot-h-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-14-02"
+		},
+		{
+			"id": "trailer:take-h-02-01",
+			"shotId": "trailer:shot-h-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-14-04"
+		},
+		{
+			"id": "trailer:take-h-03-01",
+			"shotId": "trailer:shot-h-03",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-14-06"
+		},
+		{
+			"id": "trailer:take-h-04-01",
+			"shotId": "trailer:shot-h-04",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-14-05"
+		},
+		{
+			"id": "trailer:take-h-05-01",
+			"shotId": "trailer:shot-h-05",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-16-01"
+		},
+		{
+			"id": "trailer:take-i-01-01",
+			"shotId": "trailer:shot-i-01",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-16-03"
+		},
+		{
+			"id": "trailer:take-i-02-01",
+			"shotId": "trailer:shot-i-02",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-17-06"
+		}
+	]
+}

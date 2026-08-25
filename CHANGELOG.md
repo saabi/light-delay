@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-25 — Tráiler (~1:30) desde brief
+
+- Nuevo `script:light-delay-trailer` (9 bloques del brief, 29 tomas, 90 s).
+- Frames reutilizados del animatic de 30 min vía `imageAssetId` compartido; `sourceRefs` a shots del main.
+- Generador `npm run build:trailer` (`scripts/build-trailer-script.mjs`).
+
 ## 2026-08-25 — Selector de guion en navegación
 
 - `ScriptSwitcher` en el rail (`ProjectNav`): elegir cut desde cualquier ruta del AppShell.

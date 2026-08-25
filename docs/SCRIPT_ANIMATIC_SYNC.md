@@ -61,7 +61,8 @@ _Ninguno._
 
 ## Estado en la app SvelteKit (Fases 2–6)
 
-- Guion y animatic se renderizan desde `data/scripts/light-delay-main-short.json` (misma fuente por script/cut).
+- Guion y animatic se renderizan desde `data/scripts/*.json` (misma fuente por script/cut).
 - Subtítulos del player: `getSubtitleSegments` sobre placements + diálogo localizado.
 - Frames servidos desde `/assets/animatic/...` (`static/assets/`); sin dependencia de `legacy-site/` en la UI.
-- Assets binarios aún no copiados a `static/` (Fases 3/5).
+- **Festival Cut:** scaffold sin shots (autoría pendiente).
+- **Tráiler:** 29 shots / 90 s; reutiliza `imageAssetId` del main short; brief en `docs/Light Delay — Tráiler de la versión de 30 minutos.md`.

@@ -29,6 +29,16 @@ describe('extracted canonical data', () => {
 		expect(festival.script.lineage?.sourceScriptId).toBe('script:light-delay-main-short');
 	});
 
+	it('registers trailer with reused animatic frames', () => {
+		expect(listScripts().map((s) => s.id)).toContain('script:light-delay-trailer');
+		const trailer = getScript('script:light-delay-trailer');
+		expect(trailer.script.kind).toBe('trailer');
+		expect(trailer.scenes).toHaveLength(9);
+		expect(trailer.shots).toHaveLength(29);
+		expect(trailer.takes.every((t) => Boolean(t.imageAssetId))).toBe(true);
+		expect(getEffectiveDuration(trailer)).toBe(90_000);
+	});
+
 	it('sums animatic duration to 30 minutes', () => {
 		expect(getEffectiveDuration(getCanonicalScript())).toBe(30 * 60 * 1000);
 	});
