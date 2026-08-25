@@ -11,6 +11,7 @@ The SvelteKit application must:
 - distinguish editorial shots from alternative production takes;
 - support dialogue audio and subtitles in multiple languages;
 - centralize characters, locations, objects, vehicles, factions and assets;
+- serve migrated image (and later audio/video) files from `static/assets/` rather than from `legacy-site/`;
 - share layouts, document primitives, entity components and media components across routes;
 - preserve all useful behavior from `legacy-site/`;
 - allow content to be expanded without embedding new data in Svelte components;
@@ -55,6 +56,34 @@ The following should be computed:
 - asset usage from take and entity references.
 
 Target durations may remain authored metadata, but effective durations must be derived.
+
+### Public media files live under `static/`
+
+Image assets currently under `legacy-site/assets/` must be migrated into `static/assets/` so SvelteKit can serve them as ordinary public files.
+
+- Canonical on-disk root: `static/assets/`.
+- Public URL root: `/assets/` (SvelteKit serves `static/` at the site root).
+- Preserve a readable mirror of the legacy layout unless a documented mapping requires renaming:
+
+```text
+static/assets/
+|-- animatic/frames/...
+|-- art-bible/...
+|-- characters/...
+|-- locations/...
+|-- props/...
+|-- vehicles/...
+`-- (future audio/video as needed)
+```
+
+- JSON `Asset.path` values must point at the public URL path (for example `/assets/animatic/frames/scene-01/shot-01.png`), not at `legacy-site/...`.
+- Do not leave the application depending on `legacy-site/assets/` once migration of a given asset class is complete.
+- Avoid long-lived duplication: after paths and references validate, prefer a move (or a short-lived copy with an explicit cleanup step) so Git LFS storage does not permanently double.
+- Keep Git LFS tracking for PNG/JPEG/WebP/video as already defined in `.gitattributes`.
+- Do not regenerate images during the move. Binary content must stay byte-identical unless an explicit production task says otherwise.
+- `legacy-site/` may retain copies only as a temporary regression reference until parity review; removing those duplicates is a separate, documented cleanup step.
+
+This aligns with `AGENTS.md`: assets move to `static/` only after references are updated and verified.
 
 ## 3. Route plan
 
@@ -116,6 +145,16 @@ src/
 |   |-- entities/[kind]/[[id]]/
 |   `-- assets/[id]/
 `-- app.css
+
+static/
+|-- assets/
+|   |-- animatic/
+|   |-- art-bible/
+|   |-- characters/
+|   |-- locations/
+|   |-- props/
+|   `-- vehicles/
+`-- robots.txt
 ```
 
 The exact optional-parameter route syntax should be validated during implementation. Separate `[kind]` and `[kind]/[id]` directories are acceptable if clearer.
@@ -258,6 +297,20 @@ src/lib/data/repositories/assets.ts
 
 The UI should not search raw arrays or construct asset paths directly. Route loads call repositories; components receive resolved models or IDs plus resolver functions.
 
+### Asset file migration
+
+Treat binary migration as an explicit workstream, not an incidental copy:
+
+1. Inventory every file under `legacy-site/assets/` (animatic frames, character/location/vehicle/prop sheets, art-bible assets, manifests that only describe files).
+2. Assign stable `AssetId` values and map each legacy path to a `static/assets/...` destination and `/assets/...` public URL.
+3. Write or update `data/assets.json` (and related manifests) so every image reference uses the new public path.
+4. Copy or move files into `static/assets/`, confirming Git LFS still attributes them as `filter: lfs`.
+5. Validate that every JSON path exists on disk and that every legacy HTML image URL has a corresponding migrated asset (or an explicit exception).
+6. Point Svelte routes and repositories only at `/assets/...`.
+7. After parity, remove duplicate binaries from `legacy-site/assets/` only when the regression reference no longer needs them -- or keep `legacy-site/` fully intact until final retirement, accepting temporary duplication until that cleanup.
+
+Never hard-code `legacy-site/assets/` inside Svelte components or loaders after the asset phase for that tree is marked complete.
+
 ### Selectors
 
 Pure selectors should handle graph traversal and derived values:
@@ -356,13 +409,14 @@ Preserve:
 - Keep `legacy-site/` intact.
 - Capture route screenshots and behavior checks.
 - Inventory all pages, sections, entities, assets and embedded animatic data.
+- Inventory every binary under `legacy-site/assets/` and draft the `legacy path -> static/assets/...` / `/assets/...` map.
 - Record current counts: 17 scenes, 100 shots and 100 animatic frames.
 
 ### Phase 1 -- Types, multilingual extension and validation
 
 - Incorporate `docs/JSON_FORMAT.md` and the multilingual addendum.
 - Select schema authority and runtime validation.
-- Create minimal fixture JSON.
+- Create minimal fixture JSON that already uses `/assets/...` paths.
 - Implement repositories and selectors with tests.
 
 ### Phase 2 -- Application shell and generic documents
@@ -375,8 +429,10 @@ Preserve:
 ### Phase 3 -- Entities, art and assets
 
 - Convert characters, locations, objects, vehicles, factions and manifests.
-- Implement generic entity routes and asset viewers.
-- Verify every reference image and asset backlink.
+- Move entity/art reference images from `legacy-site/assets/{characters,locations,props,vehicles,art-bible}/` into the matching `static/assets/` trees.
+- Update asset records and entity `referenceAssetIds` to public `/assets/...` paths.
+- Implement generic entity routes and asset viewers that resolve only through the asset repository.
+- Verify every reference image and asset backlink exists under `static/assets/`.
 
 ### Phase 4 -- Screenplay
 
@@ -388,9 +444,11 @@ Preserve:
 ### Phase 5 -- Shots, takes and animatic editor
 
 - Convert the 100 legacy shots and images.
-- Distinguish existing shot images as selected takes.
+- Move all animatic frames from `legacy-site/assets/animatic/frames/` into `static/assets/animatic/frames/`.
+- Distinguish existing shot images as selected takes whose `imageAssetId` resolves under `/assets/animatic/...`.
 - Implement duration editing and derived totals.
 - Add cue coverage and warnings for shots that should be split.
+- Confirm the editor no longer loads frames from `legacy-site/`.
 
 ### Phase 6 -- Animatic player
 
@@ -398,6 +456,7 @@ Preserve:
 - Render localized subtitles from dialogue cues.
 - Support independent dialogue and subtitle languages.
 - Match all legacy player controls and restoration behavior.
+- Confirm player media also resolves exclusively from `static/assets/`.
 
 ### Phase 7 -- Content development and editorial tools
 
@@ -406,6 +465,7 @@ Preserve:
 - Add missing reaction shots and cue coverage.
 - Add dialogue-density, silence and pacing reports.
 - Add JSON export/import and provenance editing.
+- After parity review, optionally delete duplicate migrated binaries from `legacy-site/assets/` (or retire `legacy-site/` entirely) without regenerating images.
 
 Story development begins here, after the data model and baseline renderers can expose changes consistently.
 
@@ -417,7 +477,7 @@ Story development begins here, after the data model and baseline renderers can e
 - Script and animatic share `SceneHeading`, `BeatBlock`, cue renderers and entity references.
 - Editor and player share media resolution, timing utilities, subtitles and shot-detail components.
 - Prose documents share a block renderer rather than generated HTML strings.
-- Asset paths resolve through the asset repository, never string concatenation in components.
+- Asset paths resolve through the asset repository to `/assets/...` under `static/assets/`, never string concatenation in components and never `legacy-site/assets/` after migration of that tree.
 - Language fallback resolves through one localization module.
 
 ## 11. Initial acceptance criteria
@@ -427,7 +487,8 @@ The initial migration is successful when:
 - every current index destination has an equivalent Svelte route;
 - the canonical screenplay is rendered solely from structured data;
 - the editor and player use the same shots, cues and takes;
-- all 100 existing frames resolve through asset IDs;
+- all 100 existing frames and entity/art reference images live under `static/assets/` and resolve through asset IDs and `/assets/...` URLs;
+- no migrated route depends on `legacy-site/assets/` for media;
 - dialogue/subtitle languages can be chosen independently;
 - existing playback and duration-editing behavior is preserved;
 - the application reports missing references and translations;

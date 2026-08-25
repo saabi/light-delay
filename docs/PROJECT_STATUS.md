@@ -28,7 +28,7 @@ Fecha de corte: 2026-08-25.
 
 - Bootstrap SvelteKit validado (`npm run format|lint|check|test:unit|test:e2e|build|preview`). Node pin en `.nvmrc` (`25`).
 - Addendum i18n: el diálogo español es fuente de verdad para traducciones (`docs/JSON_FORMAT_I18N_ADDENDUM.md`).
-- Plan de migración añadido (`docs/MIGRATION_PLAN.md`), UTF-8 sin BOM; árboles ASCII.
+- Plan de migración: las imágenes deben pasar a `static/assets/` con rutas públicas `/assets/...` (fases 0/3/5/6/7 y criterios de aceptación).
 - Docs técnicos en inglés (`SVELTEKIT_SETUP`, `JSON_FORMAT`, addendum i18n, `MIGRATION_PLAN`): pendientes de versión española o de decisión explícita de dejarlos monolingües.
 - Política de idioma: español = fuente de verdad; inglés = secundario. Detalle en `AGENTS.md`.
 

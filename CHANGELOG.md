@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-25 — Migración de imágenes a `static/`
+
+- `docs/MIGRATION_PLAN.md` incluye el traslado de assets de imagen desde `legacy-site/assets/` hacia `static/assets/` (URLs `/assets/...`), con inventario, mapeo, validación LFS y limpieza de duplicados.
+
 ## 2026-08-25 — Diálogo español como fuente de verdad (i18n)
 
 - `docs/JSON_FORMAT_I18N_ADDENDUM.md` aclara que el diálogo en español es la fuente de verdad frente a otras traducciones; editar español primero y no inventar inglés en la extracción mecánica.
