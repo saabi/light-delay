@@ -1,0 +1,24 @@
+:root {
+	color-scheme: light;
+	font-family: Georgia, 'Times New Roman', serif;
+	line-height: 1.5;
+	--bg: #f3efe6;
+	--fg: #1c1a16;
+	--muted: #5c564c;
+	--accent: #2f4a3c;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: var(--bg);
+	color: var(--fg);
+}
+
+a {
+	color: var(--accent);
+}

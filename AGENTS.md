@@ -49,4 +49,3 @@ No mover los assets a `static/` hasta actualizar y verificar todas las referenci
 - La duración total debe recalcularse desde las tomas.
 - El sitio debe funcionar sin JavaScript externo ni recursos remotos obligatorios.
 - Las páginas principales y el modo Película deben tener pruebas de regresión.
-

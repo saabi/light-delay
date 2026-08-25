@@ -4,11 +4,16 @@ build/
 dist/
 node_modules/
 .vite/
+.output
+.vercel
+.netlify
+.wrangler
 
 # Environment and local state
 .env
 .env.*
 !.env.example
+!.env.test
 *.local
 
 # Editors and operating systems
@@ -22,7 +27,10 @@ coverage/
 playwright-report/
 test-results/
 
+# Vite timestamps
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
 # Temporary exports
 *.tmp
 *.bak
-
