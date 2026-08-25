@@ -13,6 +13,7 @@ Fecha de corte: 2026-08-25.
 - 100 imágenes 1536 × 864 asociadas a las tomas.
 - Modo Película con subtítulos, controles, timeline y panel de detalles.
 - Edición de duraciones con persistencia local y recálculo del total.
+- Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright, `adapter-auto`).
 
 ## Decisiones abiertas
 
@@ -25,13 +26,12 @@ Fecha de corte: 2026-08-25.
 
 ## Notas técnicas recientes
 
-- `docs/SVELTEKIT_SETUP.md` restaurado en disco; árboles de directorio en docs usan ASCII para evitar mojibake UTF-8/CP1252 en Windows.
-- Política de idioma: español = fuente de verdad; inglés = secundario. Detalle en `AGENTS.md`. Regla Cursor `load-agents.mdc` fuerza la lectura de `AGENTS.md`.
-- Varios docs técnicos (`docs/JSON_FORMAT.md`, `docs/SVELTEKIT_SETUP.md`) están solo en inglés; pendientes de versión española o de decisión explícita de dejarlos monolingües.
+- Bootstrap SvelteKit validado (`npm run format|lint|check|test:unit|test:e2e|build|preview`). Node pin en `.nvmrc` (`25`).
+- `docs/SVELTEKIT_SETUP.md` y `docs/JSON_FORMAT.md` siguen solo en inglés; pendientes de versión española o de decisión explícita de dejarlos monolingües.
+- Política de idioma: español = fuente de verdad; inglés = secundario. Detalle en `AGENTS.md`.
 
 ## Próxima fase técnica
 
-- Crear proyecto SvelteKit en la raíz.
 - Diseñar esquemas JSON antes de extraer contenido de los HTML.
 - Convertir documentos y animatic a datos estructurados conservando IDs.
 - Crear componentes comunes de navegación, tipografía, fichas, diálogos, tablas y galerías.

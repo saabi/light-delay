@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-25 — Bootstrap SvelteKit 2 / Svelte 5
+
+- Se creó la aplicación mínima en la raíz con TypeScript, ESLint, Prettier, Vitest y Playwright.
+- Se añadieron layout/página de aterrizaje, prueba unitaria y smoke e2e de `/`.
+- `legacy-site/`, `docs/` y `data/` permanecen intactos; no se migraron assets a `static/assets/`.
+- Validación: format, lint, check, unit, e2e, build y preview.
+
 ## 2026-08-25 — Política de idioma y carga de AGENTS.md
 
 - Se definió el español como fuente de verdad documental; el inglés es secundario si no hay copia española.
@@ -18,4 +25,3 @@
 - Se añadió documentación de canon, estado, producción y procedencia.
 - Se reservó `data/` para la futura fuente JSON canónica.
 - Se añadieron instrucciones para la migración a SvelteKit y Git LFS.
-

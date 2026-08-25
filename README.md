@@ -7,8 +7,8 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 - Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
 - Animatic: 100 tomas con imagen, encuadre, audio, subtítulos y duración editable.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
-- Sitio actual: HTML/CSS/JavaScript estático, preservado como referencia funcional.
-- Próxima fase: aplicación SvelteKit con estilos/componentes unificados y datos narrativos en JSON.
+- Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
+- Aplicación SvelteKit 2 / Svelte 5 en la raíz (bootstrap mínimo; sin migración de contenido aún).
 
 ## Estructura
 
@@ -17,14 +17,25 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 |-- AGENTS.md                 # Reglas de continuidad para agentes
 |-- README.md
 |-- CHANGELOG.md
+|-- src/                      # Aplicación SvelteKit
+|-- static/                   # Assets públicos (migración pendiente)
 |-- docs/                     # Canon, producción, estado y procedencia
 |-- data/                     # Contratos y futuros JSON canónicos
 `-- legacy-site/              # Sitio HTML actual y todos sus assets
 ```
 
-La raíz se deja disponible para crear el futuro proyecto SvelteKit. No debe eliminarse `legacy-site/` hasta que la nueva aplicación reproduzca todas sus páginas y el modo Película del animatic.
+No debe eliminarse `legacy-site/` hasta que la nueva aplicación reproduzca todas sus páginas y el modo Película del animatic.
 
-## Abrir la versión actual
+## Abrir la aplicación SvelteKit
+
+```bash
+npm install
+npm run dev
+```
+
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`.
+
+## Abrir la versión legacy
 
 Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones del navegador, también puede servirse desde la raíz con cualquier servidor HTTP estático.
 
@@ -45,7 +56,6 @@ Cuando existan copias del mismo documento en varios idiomas, editar primero el e
 
 La siguiente fase debe:
 
-- crear SvelteKit en la raíz;
 - extraer guion, escenas, tomas, personajes, localizaciones, vehículos y utilería a JSON;
 - renderizar desde los mismos datos tanto el guion textual como el animatic;
 - compartir estilos y componentes entre documentos;
@@ -57,4 +67,3 @@ Los HTML existentes son referencia y material de migración, no el formato final
 ## Archivos grandes
 
 Las imágenes PNG deben almacenarse con Git LFS. Véase `.gitattributes`.
-
