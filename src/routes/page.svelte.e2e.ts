@@ -49,3 +49,13 @@ test('trailer animatic reuses main frames', async ({ page }) => {
 	await expect(page.getByRole('heading', { name: /Tráiler|Light Delay/i }).first()).toBeVisible();
 	await expect(page.locator('img').first()).toBeVisible();
 });
+
+test('movie player chrome matches legacy layout', async ({ page }) => {
+	await page.goto('/animatic/script~light-delay-main-short/player');
+	await expect(page.getByLabel('Reproductor del animatic')).toBeVisible();
+	await expect(page.getByText(/ESCENA \d+ · TOMA \d+/i).first()).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Reproducir o pausar' })).toBeVisible();
+	await expect(page.getByRole('link', { name: 'Editar tiempos' })).toBeVisible();
+	await expect(page.getByText('Detalles de la toma')).toBeVisible();
+	await expect(page.locator('.movie-stage img, .movie-stage .missing').first()).toBeVisible();
+});

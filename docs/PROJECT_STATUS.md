@@ -7,6 +7,7 @@ Fecha de corte: 2026-08-25.
 - **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
 - **Selector de guion en el rail:** `ScriptSwitcher` en `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
 - **Tráiler (~1:30):** `data/scripts/light-delay-trailer.json` — 9 secuencias del brief, 29 tomas reutilizando frames del main short; regenerable con `npm run build:trailer`.
+- **Modo película:** chrome alineado al legacy (`AnimaticPlayer` fullscreen con meta, detalles flotantes y barra inferior).
 - Guion corto revisado de 17 escenas con objetivo de 30 minutos.
 - Lista de momentos clave y versión acotada sincronizadas.
 - Biblia de producción y reporte comprensivo actualizados al canon reciente.

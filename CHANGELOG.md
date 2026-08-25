@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-25 — Paridad visual del modo película
+
+- `AnimaticPlayer` rediseñado al chrome legacy: stage a pantalla completa, viñeta, meta ESCENA/TOMA, panel «Detalles de la toma», barra glass con controles icono + scrubber + «Editar tiempos».
+
 ## 2026-08-25 — Tráiler (~1:30) desde brief
 
 - Nuevo `script:light-delay-trailer` (9 bloques del brief, 29 tomas, 90 s).
