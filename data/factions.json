@@ -1,0 +1,35 @@
+{
+	"schemaVersion": "1.0.0",
+	"factions": [
+		{
+			"id": "faction-human",
+			"name": "Humanidad / misión Proxima",
+			"description": "Tripulación humana y autoridades terrestres.",
+			"memberCharacterIds": [
+				"character-zao",
+				"character-voss",
+				"character-harlan",
+				"character-rao",
+				"character-sorell",
+				"character-cael",
+				"character-proxima-technician",
+				"character-medical-officer",
+				"character-security-crew",
+				"character-earth-protesters",
+				"character-periodista",
+				"character-manifestante-acheron",
+				"character-joven-contacto"
+			]
+		},
+		{
+			"id": "faction-velari",
+			"name": "Velari",
+			"description": "Civilización alienígena del túnel y la estación remota."
+		},
+		{
+			"id": "faction-acheron",
+			"name": "Directiva Aqueronte",
+			"description": "Facción terrestre opuesta al contacto."
+		}
+	]
+}

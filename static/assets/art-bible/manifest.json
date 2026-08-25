@@ -1,0 +1,19 @@
+{
+  "project": "Light Delay",
+  "asset_type": "visual_art_bible",
+  "style": "grounded cinematic hard science fiction",
+  "generated": "2026-08-24",
+  "character_gallery": "../characters/index.html",
+  "collections": {
+    "locations": "../locations/manifest.json",
+    "vehicles": "../vehicles/manifest.json",
+    "props": "../props/manifest.json"
+  },
+  "counts": {
+    "character_sheets": 10,
+    "locations": 7,
+    "vehicles": 2,
+    "props": 4,
+    "total_sheets": 23
+  }
+}

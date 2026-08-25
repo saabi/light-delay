@@ -8,7 +8,7 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 - Animatic: 100 tomas con imagen, encuadre, audio, subtítulos y duración editable.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
-- Aplicación SvelteKit 2 / Svelte 5 en la raíz (bootstrap mínimo; sin migración de contenido aún).
+- Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
 
 ## Estructura
 
@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`.
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run extract:legacy`, `npm run validate:data`.
 
 ## Abrir la versión legacy
 

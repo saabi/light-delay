@@ -1,0 +1,41 @@
+{
+	"schemaVersion": "1.0.0",
+	"objects": [
+		{
+			"id": "object-diplomatic-quantum-core",
+			"name": "Núcleo cuántico diplomático",
+			"description": "Esfera humana fija de aproximadamente un metro. Sus estados cian, rojo y apagado permiten leer nominalidad, corrupción y aislamiento.",
+			"dramaticFunction": "Sistema contaminado",
+			"referenceAssetIds": [
+				"asset-object-diplomatic-quantum-core-sheet"
+			]
+		},
+		{
+			"id": "object-optical-contingency-transmitter",
+			"name": "Transmisor óptico de contingencia",
+			"description": "Consola y telescopio láser con energía, óptica y ruta física propias. Puede emitir aun cuando la red principal está comprometida.",
+			"dramaticFunction": "Canal independiente de Zao",
+			"referenceAssetIds": [
+				"asset-object-optical-contingency-transmitter-sheet"
+			]
+		},
+		{
+			"id": "object-physical-override-relay",
+			"name": "Relé físico del override",
+			"description": "Módulo removible con sellos, llave mecánica y fusible irreversible. Su estado quemado prueba un evento que el software no puede falsificar ni restaurar.",
+			"dramaticFunction": "Prueba material y doble llave",
+			"referenceAssetIds": [
+				"asset-object-physical-override-relay-sheet"
+			]
+		},
+		{
+			"id": "object-read-only-greeting-medium",
+			"name": "Soporte de saludo de Sorell",
+			"description": "Cartucho óptico sellado de sólo lectura: puede almacenar lenguaje diplomático, pero no ejecutar código. Es la tercera pieza del clímax.",
+			"dramaticFunction": "Contenido limpio y pasivo",
+			"referenceAssetIds": [
+				"asset-object-read-only-greeting-medium-sheet"
+			]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+  "project": "Light Delay",
+  "asset_type": "key_prop_sheets",
+  "style": "grounded cinematic hard science fiction",
+  "generated": "2026-08-24",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "items": [
+    {
+      "slug": "diplomatic-quantum-core",
+      "name": "Núcleo cuántico diplomático",
+      "role": "Sistema contaminado",
+      "note": "Esfera humana fija de aproximadamente un metro. Sus estados cian, rojo y apagado permiten leer nominalidad, corrupción y aislamiento.",
+      "file": "diplomatic-quantum-core/prop-sheet.png"
+    },
+    {
+      "slug": "optical-contingency-transmitter",
+      "name": "Transmisor óptico de contingencia",
+      "role": "Canal independiente de Zao",
+      "note": "Consola y telescopio láser con energía, óptica y ruta física propias. Puede emitir aun cuando la red principal está comprometida.",
+      "file": "optical-contingency-transmitter/prop-sheet.png"
+    },
+    {
+      "slug": "physical-override-relay",
+      "name": "Relé físico del override",
+      "role": "Prueba material y doble llave",
+      "note": "Módulo removible con sellos, llave mecánica y fusible irreversible. Su estado quemado prueba un evento que el software no puede falsificar ni restaurar.",
+      "file": "physical-override-relay/prop-sheet.png"
+    },
+    {
+      "slug": "read-only-greeting-medium",
+      "name": "Soporte de saludo de Sorell",
+      "role": "Contenido limpio y pasivo",
+      "note": "Cartucho óptico sellado de sólo lectura: puede almacenar lenguaje diplomático, pero no ejecutar código. Es la tercera pieza del clímax.",
+      "file": "read-only-greeting-medium/prop-sheet.png"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+	"schemaVersion": "1.0.0",
+	"voiceProfiles": [
+		{
+			"id": "voice-zao-es",
+			"characterId": "character-zao",
+			"name": "Zao (es)",
+			"description": "Practicidad, observación y resolución bajo presión.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-voss-es",
+			"characterId": "character-voss",
+			"name": "Elias Voss (es)",
+			"description": "Autoridad contenida, responsabilidad y duelo.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-harlan-es",
+			"characterId": "character-harlan",
+			"name": "Rylen Harlan (es)",
+			"description": "Competencia creíble, convicción ideológica y quiebre.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-rao-es",
+			"characterId": "character-rao",
+			"name": "Elin Rao (es)",
+			"description": "Concentración analítica, alarma y determinación.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-sorell-es",
+			"characterId": "character-sorell",
+			"name": "Lian Sorell (es)",
+			"description": "Curiosidad, indignación, empatía y esperanza cauta.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-cael-es",
+			"characterId": "character-cael",
+			"name": "Juno Cael (es)",
+			"description": "Pragmatismo, concentración, humor seco y asombro.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-proxima-technician-es",
+			"characterId": "character-proxima-technician",
+			"name": "Técnico de Proxima (es)",
+			"description": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-medical-officer-es",
+			"characterId": "character-medical-officer",
+			"name": "Oficial médico (es)",
+			"description": "Examen forense inicial, gravedad clínica y urgencia contenida.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-security-crew-es",
+			"characterId": "character-security-crew",
+			"name": "Tripulante de seguridad (es)",
+			"description": "Autoridad física sin militarización ni armamento visible.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		},
+		{
+			"id": "voice-earth-protesters-es",
+			"characterId": "character-earth-protesters",
+			"name": "Manifestantes terrestres (es)",
+			"description": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
+			"variants": [
+				{
+					"language": "es"
+				}
+			]
+		}
+	]
+}

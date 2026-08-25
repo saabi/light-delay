@@ -14,7 +14,9 @@
 		"format": "prettier --write .",
 		"test:unit": "vitest run",
 		"test": "npm run test:unit && npm run test:e2e",
-		"test:e2e": "playwright install && playwright test"
+		"test:e2e": "playwright install && playwright test",
+		"extract:legacy": "node scripts/extract-legacy.mjs",
+		"validate:data": "node scripts/validate-data.mjs"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",

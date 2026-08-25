@@ -1,0 +1,33 @@
+{
+	"schemaVersion": "1.0.0",
+	"project": {
+		"id": "project-light-delay",
+		"title": "Light Delay",
+		"alternateTitles": [
+			"Luz Tardía"
+		],
+		"description": "Cortometraje de ciencia ficción de primer contacto; guion canónico de 17 escenas.",
+		"languages": {
+			"sourceLanguage": "es",
+			"defaultDialogueLanguage": "es",
+			"defaultSubtitleLanguage": "es",
+			"fallbackLanguage": "es",
+			"supported": [
+				{
+					"tag": "es",
+					"label": "Spanish",
+					"nativeLabel": "Español"
+				},
+				{
+					"tag": "en",
+					"label": "English",
+					"nativeLabel": "English"
+				}
+			]
+		},
+		"canonicalScriptId": "script-light-delay-short",
+		"targetDurationMs": 1800000,
+		"createdAt": "2026-08-25",
+		"updatedAt": "2026-08-25"
+	}
+}

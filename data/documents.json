@@ -1,0 +1,324 @@
+{
+	"schemaVersion": "1.0.0",
+	"documents": [
+		{
+			"id": "doc-notas-tecnicas",
+			"slug": "notas-tecnicas-continuidad",
+			"title": "Notas técnicas y continuidad",
+			"status": "extracted",
+			"language": "es",
+			"sourcePath": "legacy-site/notas-tecnicas-continuidad.html",
+			"summary": "Reglas físicas, visuales y narrativas consolidadas.",
+			"blocks": [
+				{
+					"type": "paragraph",
+					"text": "Este documento reemplaza por completo las notas técnicas anteriores. Cualquier cifra o mecanismo de documentos previos que contradiga lo aquí escrito queda descartado."
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "1. El túnel Velari — reglas fijas",
+					"id": "1-el-túnel-velari--reglas-fijas"
+				},
+				{
+					"type": "list",
+					"items": [
+						"Construido por los Velari, no por humanos. Antigüedad desconocida, probablemente milenaria.",
+						"Garganta piloto: permanentemente abierta, submicroscópica. Sólo admite un repertorio fijo y de bajísimo ancho de banda para sincronización y desafío matemático; no es un canal direccionable para audio, telemetría ni datos de misión.",
+						"Activación: responde cuando una civilización demuestra el umbral tecnológico para detectarla e interpretarla y confirma conscientemente la aceptación. El desafío es un filtro pasivo; la apertura no se dispara por accidente.",
+						"Expansión a diámetro navegable: exige energía extrema, no lineal respecto del tamaño. Ni siquiera los Velari pueden sostenerla más de 60-90 segundos, ni reabrirla a voluntad inmediata.",
+						"Etapas del cruce: precarga (cancelable) → expansión crítica (punto de compromiso, no cancelable con seguridad) → apertura navegable (60-90s) → colapso.",
+						"Boca local: en órbita halo controlada alrededor de L2 (Sol-Júpiter), con estabilización Velari activa. L1 y L2 son dinámicamente inestables. Boca remota: infraestructura fija en su propia órbita cerca de la región de encuentro, no reubicable sin costo energético comparable al de la propia expansión.",
+						"Geometría visible: no hay aro. Cada boca es un campo de nodos negros separados por kilómetros o decenas de kilómetros. En estado piloto rodean un vacío sin estructura visible; en expansión se conectan mediante distorsiones y filamentos. La región navegable final mide aproximadamente 150–200 m."
+					]
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "2. Proxima — origen y funcionamiento",
+					"id": "2-proxima--origen-y-funcionamiento"
+				},
+				{
+					"type": "list",
+					"items": [
+						"Propósito original: observatorio del sistema joviano y laboratorio gravitacional, construido antes de reconocer tecnología Velari. La anomalía se infiere en la ficción a partir de residuos de navegación de Pioneer, Voyager, Galileo y Juno; no se presenta como un hallazgo real de esas misiones.",
+						"Descubrimiento: una red de sondas drag-free, relojes ópticos, interferometría láser y masas de prueba localiza la garganta piloto en L2. Sólo entonces se agregan xenofísica, comunicaciones, control de contacto y apoyo a la misión.",
+						"Arquitectura: eje no rotatorio de 500–800 m con muelles axiales, depósitos, talleres, control, reactores y antenas; dos hábitats cilíndricos contrarrotatorios a 0,4–0,6 g; radiadores y almacenamiento perpendicular; módulos peligrosos aislados en brazos.",
+						"Energía y logística: fusión en operación normal, fisión independiente para cargas críticas y suministro joviano de deuterio/helio-3.",
+						"Soporte vital: más de 95 % de reciclaje de agua, regeneración de oxígeno, eliminación de CO₂ y reservas por meses. Agua, polímeros y consumibles contribuyen al blindaje.",
+						"Continuidad visual: deben coexistir generaciones constructivas. Núcleo científico envejecido, ampliaciones industriales y capa de contacto reciente; nunca una estación construida de una vez para los Velari."
+					]
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "3. Celestial Ardor — envolvente técnica",
+					"id": "3-celestial-ardor--envolvente-técnica"
+				},
+				{
+					"type": "paragraph",
+					"text": "Antes del cruce se recogen los radiadores, se apaga la antorcha y el calor pasa a acumuladores. Tras emerger, los radiadores se despliegan antes del nuevo encendido. Durante la inversión, la gravedad aparente no “se invierte”: desaparece durante la caída libre y retorna hacia el mismo piso después de la rotación."
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "4. Arquitectura Velari — observaciones canónicas",
+					"id": "4-arquitectura-velari--observaciones-canónicas"
+				},
+				{
+					"type": "list",
+					"items": [
+						"Estación Velari: hábitat orgánico continuo de varios kilómetros, sin módulos ensamblados visibles. Lóbulos, arcos, cavidades y vacíos; piel adaptable en reflectividad, textura, transparencia, geometría y emisividad.",
+						"Termodinámica: toda la piel puede actuar como radiador infrarrojo. No se distinguen reactor, combustible, tanques o escape, sólo gradientes energéticos enormes.",
+						"Habitabilidad: no gira; genera gravedad local controlada. Sensores humanos detectan temperaturas compatibles con vida, líquidos circulantes, química compleja y zonas presurizadas: más ecosistema construido que estación mecánica.",
+						"Nave emisaria: 300–600 m, orgánica y bioluminiscente; enorme frente a la Celestial Ardor y pequeña ante la estación. Sin toberas ni escape; perturbaciones métricas sugieren intercambio de momento con estructuras o campos externos.",
+						"Interior emisario: reconfigurable para recibir distintas biologías; este dato es una inferencia instrumental o material para una versión larga, no información que los humanos deban explicar en el cortometraje."
+					]
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "5. Física del tránsito — verificada",
+					"id": "5-física-del-tránsito--verificada"
+				},
+				{
+					"type": "paragraph",
+					"text": "Tramo local (Proxima L1 → Boca L2):"
+				},
+				{
+					"type": "paragraph",
+					"text": "Tramo remoto (Boca remota → Estación Velari):"
+				},
+				{
+					"type": "paragraph",
+					"text": "Comparación con vuelo directo (sin túnel):"
+				},
+				{
+					"type": "paragraph",
+					"text": "La cifra previa de 31.400 km/s como velocidad máxima confundía velocidad pico con delta-v total. Tampoco se fija una proporción energética exacta sin especificar impulso específico, eficiencia y recuperación durante el frenado."
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "6. Ventana de lanzamiento — dos restricciones independientes, jerarquizadas",
+					"id": "6-ventana-de-lanzamiento--dos-restricciones-independientes-jerarquizadas"
+				},
+				{
+					"type": "paragraph",
+					"text": "Separación orbital tras 12 años (boca remota vs. estación Velari, hoy próximas a una configuración nodal entre órbitas con distinta inclinación):"
+				},
+				{
+					"type": "paragraph",
+					"text": "Configuración canónica: inclinación ~30°. Separación actual (misión): ~0,122 UA (18,3×10⁶ km). Separación dentro de 12 años: ~24 veces mayor. Próximo cruce geométrico comparable de ambas órbitas: posiblemente más de mil años (mitad del período orbital a 173 UA, ~2.275 años → ~1.138 años, sin garantía de coincidencia exacta si además difieren período o excentricidad)."
+				},
+				{
+					"type": "paragraph",
+					"text": "Conclusión: la ventana actual es, con alta probabilidad, irrepetible en escala de vida humana."
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "7. El mensaje de Zao",
+					"id": "7-el-mensaje-de-zao"
+				},
+				{
+					"type": "list",
+					"items": [
+						"Contenido final: \"Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor...\"",
+						"Objetivo de puntería: no requiere que Zao derive mecánica orbital nueva bajo presión —usa el plan de vuelo ya cargado y abre el haz para cubrir el corredor previsto. Sólo calcula la geometría de intercepción luz-nave.",
+						"Por qué no vía Tierra: aun sin ningún bloqueo, un rodeo por la Tierra añadiría más de una hora al tránsito de la señal, haciendo que cualquier aviso llegara después del encuentro, no antes. La transmisión directa es la única opción funcionalmente útil, independientemente de cualquier ocultación.",
+						"Por qué no por la garganta: la garganta piloto no transporta datos de misión, y además queda bloqueada durante la expansión crítica.",
+						"Por qué transmisor externo: la partición de seguridad del cruce separa la red interna y sella el núcleo; Harlan la aprovecha y falsifica el estado nominal. El transmisor de emergencia es físicamente independiente.",
+						"Por qué Harlan no bloquea la recepción: sabe que Zao emitió, pero desconoce el corredor exacto del haz. Cambiar la trayectoria haría perder el encuentro y apagar el receptor impediría adquirir la baliza Velari, por lo que intenta justificar el aislamiento del receptor justo antes de que Cael detecte la señal.",
+						"Tiempo de viaje de la señal: ~23h15min (167,8 UA)."
+					]
+				},
+				{
+					"type": "heading",
+					"level": 3,
+					"text": "Doble llave causal",
+					"id": "doble-llave-causal"
+				},
+				{
+					"type": "list",
+					"items": [
+						"Investigación sin mensaje: Rao identifica el payload autónomo, su disparador y la cuarentena necesaria, pero sólo obtiene la firma anónima OVR-7C41. No puede probar quién posee el override ni impedir que su titular libere el payload.",
+						"Mensaje sin investigación: acusa a Harlan y señala el relé, pero no prueba por sí solo que la voz no fue sintetizada ni contiene el mapa técnico para detener un proceso que seguirá activo aunque Harlan sea arrestado.",
+						"Combinación: el cruce entre payload, relé físico y credencial de mando identifica a Harlan; Voss revoca su autoridad y Rao aplica la cuarentena ya preparada. Sorell aporta el saludo pasivo limpio."
+					]
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "8. Motivo de Harlan / Directiva Aqueronte — texto canónico",
+					"id": "8-motivo-de-harlan--directiva-aqueronte--texto-canónico"
+				},
+				{
+					"type": "blockquote",
+					"text": "La Directiva Aqueronte no busca la guerra como fin, sino que la acepta como riesgo calculado. Su convicción es que ofrecer las credenciales diplomáticas de la humanidad sin verificación real a una civilización milenios más avanzada es una ingenuidad que podría costar la especie entera. Para Harlan, obtener inteligencia real y comprobable sobre las capacidades defensivas Velari —aunque el método mismo se lea como agresión— es preferible a la entrega ciega. No es codicia tecnológica: es una doctrina de legítima defensa preventiva, aplicada por alguien convencido de ser el único suficientemente lúcido mientras los demás confían a ciegas."
+				},
+				{
+					"type": "paragraph",
+					"text": "Aqueronte es una doctrina pública y descentralizada, no una organización con membresía formal. Sus protestas son legales y visibles; la célula que ejecuta sabotajes es clandestina. Harlan pudo superar los controles porque no existía una afiliación comprobable que declarar o detectar."
+				},
+				{
+					"type": "paragraph",
+					"text": "El sabotaje no es apurado —tuvo 57h48min para ejecutarlo con cuidado. El registro físico no es un descuido: todo override de emergencia quema esa firma anónima en hardware y borrarla inutilizaría el núcleo. Harlan acepta el riesgo, confiando en la falsificación superficial, la muerte de Zao y su propia autoridad para impedir que las piezas se crucen."
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "9. Cronología maestra consolidada",
+					"id": "9-cronología-maestra-consolidada"
+				},
+				{
+					"type": "paragraph",
+					"text": "Ver Documento 1, Sección VII (idéntica en ambos documentos por diseño, para evitar desincronización)."
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "10. Elementos descartados del canon (no usar en futuras iteraciones)",
+					"id": "10-elementos-descartados-del-canon-no-usar-en-futuras-iteraciones"
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "11. Decisiones de consolidación tomadas en este pase (para tu revisión)",
+					"id": "11-decisiones-de-consolidación-tomadas-en-este-pase-para-tu-revisión"
+				},
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "12. Índice de documentos vigentes",
+					"id": "12-índice-de-documentos-vigentes"
+				},
+				{
+					"type": "paragraph",
+					"text": "Todo documento anterior a este pase de consolidación queda superado en caso de conflicto."
+				}
+			]
+		},
+		{
+			"id": "doc-biblia-produccion",
+			"slug": "biblia-de-produccion",
+			"title": "Biblia de producción",
+			"status": "stub",
+			"language": "es",
+			"sourcePath": "legacy-site/biblia-de-produccion.html",
+			"summary": "Contexto de producción y diseño; extracción completa pendiente.",
+			"blocks": [
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "Estado de migración",
+					"id": "estado-migracion"
+				},
+				{
+					"type": "paragraph",
+					"text": "Esta ruta ya funciona desde datos estructurados. El texto completo de la biblia de producción sigue en legacy-site y se migrará por secciones en una tarea editorial posterior."
+				},
+				{
+					"type": "callout",
+					"kind": "note",
+					"text": "No inventar contenido aquí: usar el HTML legacy o docs/CANON_DECISIONS.md como fuente hasta la extracción."
+				},
+				{
+					"type": "list",
+					"items": [
+						"Canon narrativo: guion corto de 17 escenas.",
+						"Referencia temporal: legacy-site/biblia-de-produccion.html.",
+						"Siguiente paso: bloques semánticos por capítulo, no un volcado HTML."
+					]
+				}
+			]
+		},
+		{
+			"id": "doc-reporte-comprensivo",
+			"slug": "reporte-comprensivo",
+			"title": "Reporte comprensivo",
+			"status": "stub",
+			"language": "es",
+			"sourcePath": "legacy-site/reporte-comprensivo.html",
+			"summary": "Informe amplio de proyecto; placeholder de ruta migrada.",
+			"blocks": [
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "Estado de migración",
+					"id": "estado-migracion"
+				},
+				{
+					"type": "paragraph",
+					"text": "La ruta SvelteKit está operativa. El cuerpo completo del reporte comprensivo permanece en el sitio legacy hasta una extracción revisada."
+				},
+				{
+					"type": "callout",
+					"kind": "note",
+					"text": "Ante conflicto con notas técnicas o el guion, prevalecen notas-tecnicas-continuidad y el guion canónico."
+				}
+			]
+		},
+		{
+			"id": "doc-momentos-clave",
+			"slug": "momentos-clave",
+			"title": "Momentos clave",
+			"status": "stub",
+			"language": "es",
+			"sourcePath": "legacy-site/momentos-clave.html",
+			"summary": "Lista de momentos narrativos; migración completa pendiente.",
+			"blocks": [
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "Estado de migración",
+					"id": "estado-migracion"
+				},
+				{
+					"type": "paragraph",
+					"text": "Placeholder funcional. La lista acotada de momentos clave se migrará alineada al guion (fuente de verdad narrativa)."
+				},
+				{
+					"type": "list",
+					"ordered": true,
+					"items": [
+						"Embarque y primer contacto con la anomalía.",
+						"Descubrimiento del sabotaje / Directiva Aqueronte.",
+						"Mensaje de Zao y doble llave causal.",
+						"Cruce y umbral Velari."
+					]
+				}
+			]
+		},
+		{
+			"id": "doc-canon",
+			"slug": "canon-decisions",
+			"title": "Decisiones de canon",
+			"status": "stub",
+			"language": "es",
+			"sourcePath": "docs/CANON_DECISIONS.md",
+			"summary": "Puntero a las decisiones de canon vigentes en docs/.",
+			"blocks": [
+				{
+					"type": "heading",
+					"level": 2,
+					"text": "Fuente canónica",
+					"id": "fuente-canonica"
+				},
+				{
+					"type": "paragraph",
+					"text": "Las decisiones vigentes viven en docs/CANON_DECISIONS.md. Esta página es un espejo mínimo para navegación desde la app."
+				},
+				{
+					"type": "callout",
+					"kind": "warning",
+					"text": "No reescribir el canon para resolver dificultades de implementación. Registrar conflictos en docs/PROJECT_STATUS.md."
+				},
+				{
+					"type": "paragraph",
+					"text": "Pendiente: importar bloques desde el markdown de decisiones en una fase editorial."
+				}
+			]
+		}
+	]
+}

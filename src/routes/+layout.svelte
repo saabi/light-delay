@@ -1,8 +1,13 @@
 <script lang="ts">
+	import AppShell from '$lib/components/app/AppShell.svelte';
+	import ProjectNav from '$lib/components/app/ProjectNav.svelte';
 	import favicon from '$lib/assets/favicon.svg';
-	import './layout.css';
+	import { page } from '$app/state';
+	import '../app.css';
 
 	let { children } = $props();
+
+	const isPlayer = $derived(page.url.pathname.startsWith('/animatic/player'));
 </script>
 
 <svelte:head>
@@ -10,4 +15,13 @@
 	<title>Light Delay / Luz Tardía</title>
 </svelte:head>
 
-{@render children()}
+{#if isPlayer}
+	{@render children()}
+{:else}
+	<AppShell>
+		{#snippet rail()}
+			<ProjectNav />
+		{/snippet}
+		{@render children()}
+	</AppShell>
+{/if}

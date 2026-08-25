@@ -1,0 +1,187 @@
+{
+  "project": "Light Delay",
+  "asset_type": "character_model_sheets",
+  "style": "grounded cinematic hard science fiction",
+  "characters": [
+    {
+      "slug": "zao",
+      "name": "Zao",
+      "role": "Ingeniera jefe",
+      "note": "Practicidad, observación y resolución bajo presión.",
+      "category": "principal",
+      "file": "zao/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "voss",
+      "name": "Elias Voss",
+      "role": "Capitán",
+      "note": "Autoridad contenida, responsabilidad y duelo.",
+      "category": "principal",
+      "file": "voss/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "harlan",
+      "name": "Rylen Harlan",
+      "role": "Comandante",
+      "note": "Competencia creíble, convicción ideológica y quiebre.",
+      "category": "principal",
+      "file": "harlan/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "rao",
+      "name": "Elin Rao",
+      "role": "Especialista en IA",
+      "note": "Concentración analítica, alarma y determinación.",
+      "category": "principal",
+      "file": "rao/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "sorell",
+      "name": "Lian Sorell",
+      "role": "Xenolingüista",
+      "note": "Curiosidad, indignación, empatía y esperanza cauta.",
+      "category": "principal",
+      "file": "sorell/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "cael",
+      "name": "Juno Cael",
+      "role": "Piloto / Comunicaciones",
+      "note": "Pragmatismo, concentración, humor seco y asombro.",
+      "category": "principal",
+      "file": "cael/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "proxima-technician",
+      "name": "Técnico de Proxima",
+      "role": "Operaciones de estación",
+      "note": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
+      "category": "secundario",
+      "file": "proxima-technician/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "medical-officer",
+      "name": "Oficial médico",
+      "role": "Medicina de vuelo",
+      "note": "Examen forense inicial, gravedad clínica y urgencia contenida.",
+      "category": "secundario",
+      "file": "medical-officer/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "security-crew",
+      "name": "Tripulante de seguridad",
+      "role": "Seguridad de a bordo",
+      "note": "Autoridad física sin militarización ni armamento visible.",
+      "category": "secundario",
+      "file": "security-crew/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "earth-protesters",
+      "name": "Manifestantes terrestres",
+      "role": "Aqueronte / partidarios del contacto",
+      "note": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
+      "category": "fondo",
+      "views": [
+        "two representative turnarounds",
+        "expression studies",
+        "crowd vignettes"
+      ],
+      "expression_count": 8,
+      "file": "earth-protesters/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ]
+}

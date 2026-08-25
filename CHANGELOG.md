@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-08-25 — Fases 2–6: shell, documentos, entidades, guion, animatic y player
+
+- Tokens legacy (cian/oro) en `src/app.css`; `AppShell`, navegación y documentos genéricos.
+- Rutas: `/`, `/documents/[slug]`, `/script`, `/animatic`, `/animatic/player`, `/art`, `/entities/[kind]`, `/entities/[kind]/[id]`, `/assets/[id]`.
+- Copia (no movimiento) de `legacy-site/assets/{characters,locations,props,vehicles,art-bible,animatic}` → `static/assets/` (LFS verificado).
+- Editor con overlay de duraciones en `localStorage`; player con play/pausa/stop, scrubber, subtítulos derivados del diálogo y retorno con `?shot=`.
+- Stubs de documentos ampliados; e2e de inicio/guion/animatic; changelog y estado actualizados.
+
+## 2026-08-25 — Fase 1 tipos, validación y extracción JSON
+
+- Tipos en `src/lib/types/` según `JSON_FORMAT.md` + addendum i18n (`DialogueCue.content` como `LocalizedValue`, `ProjectLanguages`).
+- Validadores a mano (sin Zod), repositorios, selectores y tests.
+- `scripts/extract-legacy.mjs` genera `data/*.json` (100 shots, diálogo ES source); `validate:data` en verde.
+- Actualizado `docs/SCRIPT_ANIMATIC_SYNC.md` (98/98 placements; títulos de escena siguen divergiendo en redacción).
+
+## 2026-08-25 — Fase 0 inventario de migración
+
+- Inventario verificado: 17 escenas, 100 tomas, 100 PNG (1:1). Véase `docs/MIGRATION_INVENTORY.md`, `docs/ASSET_PATH_MAP.md`, `docs/SCRIPT_ANIMATIC_SYNC.md`.
+
 ## 2026-08-25 — Migración de imágenes a `static/`
 
 - `docs/MIGRATION_PLAN.md` incluye el traslado de assets de imagen desde `legacy-site/assets/` hacia `static/assets/` (URLs `/assets/...`), con inventario, mapeo, validación LFS y limpieza de duplicados.

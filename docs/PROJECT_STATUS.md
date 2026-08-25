@@ -14,6 +14,9 @@ Fecha de corte: 2026-08-25.
 - Modo Película con subtítulos, controles, timeline y panel de detalles.
 - Edición de duraciones con persistencia local y recálculo del total.
 - Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright, `adapter-auto`).
+- Fase 0 de migración: inventario HTML/assets; 17 escenas / 100 tomas / 100 frames verificados; mapa `static/assets`; stub de sync guion↔animatic.
+- Fase 1 (+ extracción inicial): tipos TypeScript, validadores a mano, loaders/repositorios/selectores, JSON en `data/` (17 escenas / 100 tomas / 98 diálogos ES), `npm run extract:legacy` y `npm run validate:data`.
+- Fases 2–6 (aplicación): shell + documentos; copia de assets a `static/assets/`; rutas de arte/entidades/assets; lector de guion; editor de animatic; player a pantalla completa. Medios solo vía `/assets/...`.
 
 ## Decisiones abiertas
 
@@ -26,22 +29,19 @@ Fecha de corte: 2026-08-25.
 
 ## Notas técnicas recientes
 
-- Bootstrap SvelteKit validado (`npm run format|lint|check|test:unit|test:e2e|build|preview`). Node pin en `.nvmrc` (`25`).
-- Addendum i18n: el diálogo español es fuente de verdad para traducciones (`docs/JSON_FORMAT_I18N_ADDENDUM.md`).
-- Plan de migración: las imágenes deben pasar a `static/assets/` con rutas públicas `/assets/...` (fases 0/3/5/6/7 y criterios de aceptación).
-- Docs técnicos en inglés (`SVELTEKIT_SETUP`, `JSON_FORMAT`, addendum i18n, `MIGRATION_PLAN`): pendientes de versión española o de decisión explícita de dejarlos monolingües.
-- Política de idioma: español = fuente de verdad; inglés = secundario. Detalle en `AGENTS.md`.
+- Inventario: `docs/MIGRATION_INVENTORY.md`. Sync: `docs/SCRIPT_ANIMATIC_SYNC.md`. Rutas: `docs/ASSET_PATH_MAP.md`.
+- Bootstrap SvelteKit validado. Node pin en `.nvmrc` (`25`).
+- Autoridad de esquema: tipos TypeScript de `JSON_FORMAT.md` + addendum i18n (sin Zod).
+- Política de idioma: español = fuente de verdad. Detalle en `AGENTS.md`.
+- Assets: copia en `static/assets/` (characters 12, locations 8, props 5, vehicles 3, art-bible 2, animatic 101). `legacy-site/assets/` intacto como referencia.
+- Documentos prose: `notas-tecnicas` extraído; resto stubs navegables pendientes de extracción editorial.
 
 ## Próxima fase técnica
 
-- Diseñar esquemas JSON antes de extraer contenido de los HTML.
-- Convertir documentos y animatic a datos estructurados conservando IDs.
-- Crear componentes comunes de navegación, tipografía, fichas, diálogos, tablas y galerías.
-- Renderizar guion y animatic desde una única fuente de datos.
-- Añadir validación de esquemas, rutas y duración.
-- Comparar la nueva aplicación con `legacy-site/` antes de retirar duplicaciones.
+- Fase 7: desarrollo de contenido y herramientas editoriales (beats más finos, extracción completa de documentos, limpieza de duplicados binarios tras revisión de paridad).
+- Refinar títulos de escena animatic vs encabezados de guion (véase `SCRIPT_ANIMATIC_SYNC.md`).
+- Pruebas de regresión ampliadas del modo Película (fullscreen, subtítulos, restauración de toma).
 
 ## Criterio de migración terminada
 
 La migración no está completa hasta que todo contenido accesible desde `legacy-site/index.html`, todas las imágenes y todas las funciones del animatic estén disponibles en la aplicación Svelte sin depender de datos incrustados en HTML.
-

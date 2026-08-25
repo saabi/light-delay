@@ -1,8 +1,14 @@
-# Datos estructurados — área reservada
+# Datos estructurados
 
-Este directorio está reservado para los JSON canónicos y sus esquemas durante la migración a SvelteKit.
+JSON canónicos extraídos del sitio legacy (`npm run extract:legacy`) y validados con `npm run validate:data`.
 
-No se incluyen todavía conversiones automáticas: primero deben definirse IDs, relaciones, esquemas y reglas de validación. Extraer prematuramente los arrays incrustados en HTML podría convertir inconsistencias actuales en una API difícil de corregir.
+| Archivo | Contenido |
+| --- | --- |
+| `project.json` | Metadatos del proyecto e idiomas (`sourceLanguage: es`) |
+| `script.json` | Actos, escenas, beats, cues, shots, takes |
+| `characters.json` / `locations.json` / `objects.json` / `vehicles.json` / `factions.json` | Entidades |
+| `assets.json` | Rutas públicas `/assets/...` (binarios aún en `legacy-site/`) |
+| `voice-profiles.json` | Perfiles de voz por idioma |
+| `documents.json` | Bloques de prosa (notas técnicas extraídas; resto stubs) |
 
-Véase `../docs/WORKFLOW.md` y `../AGENTS.md`.
-
+Autoridad de esquema: `docs/JSON_FORMAT.md` + `docs/JSON_FORMAT_I18N_ADDENDUM.md`. El guion es la fuente narrativa; ver `docs/SCRIPT_ANIMATIC_SYNC.md`.

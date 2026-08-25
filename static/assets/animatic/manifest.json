@@ -1,0 +1,1375 @@
+{
+  "project": "Light Delay",
+  "artifact": "Animatic visual",
+  "version": "2026-08-25",
+  "dimensions": "1536x864",
+  "shots": [
+    {
+      "id": "1.1",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PG",
+      "duration": 18,
+      "path": "frames/scene-01/shot-01.png",
+      "visual": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, Júpiter pequeño al fondo.",
+      "camera": "24 mm · composición axial · avance muy lento que revele generaciones constructivas.",
+      "audio": "Ambiente industrial, radio lejana, crujidos estructurales.",
+      "subtitles": []
+    },
+    {
+      "id": "1.2",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PD",
+      "duration": 20,
+      "path": "frames/scene-01/shot-02.png",
+      "visual": "Pantallas del muelle: retraso Tierra 43:18 y cuenta de apertura.",
+      "camera": "50 mm · foco selectivo entre ambos relojes.",
+      "audio": "Noticias filtradas por altavoces.",
+      "subtitles": []
+    },
+    {
+      "id": "1.3",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PG",
+      "duration": 20,
+      "path": "frames/scene-01/shot-03.png",
+      "visual": "Protesta terrestre contra el contacto, comprimida en mosaico de pantallas.",
+      "camera": "35 mm · archivo inestable dentro de marco fijo.",
+      "audio": "Multitud, golpes de percusión.",
+      "subtitles": [
+        "PERIODISTA (V.O.) — Proxima fue construida para estudiar Júpiter y una anomalía que nadie sabía nombrar. Hoy, la nave que ya operaba desde allí partirá hacia ella. La Directiva Aqueronte exige suspender la misión: si esta alineación se pierde, la próxima comparable podría tardar más de mil años.",
+        "MANIFESTANTE AQUERONTE — Una puerta que sólo ellos pueden abrir no es una invitación entre iguales.",
+        "JOVEN PARTIDARIA DEL CONTACTO — Esperaron hasta que pudiéramos alcanzarla. Si quisieran invadirnos, no necesitarían invitarnos.",
+        "HARLAN — La mitad cree que vamos a salvarlos. La otra, que vamos a condenarlos."
+      ]
+    },
+    {
+      "id": "1.4",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PG",
+      "duration": 20,
+      "path": "frames/scene-01/shot-04.png",
+      "visual": "Celebración optimista en otra ciudad; réplica luminosa de la puerta.",
+      "camera": "35 mm · paneo corto entre carteles.",
+      "audio": "Cánticos contrapuestos.",
+      "subtitles": [
+        "VOSS — Por eso nos enviaron a hablar antes de que el miedo hable por todos. ¿El núcleo está asegurado?",
+        "HARLAN — Zao lo revisó tres veces. Está obsesionada con ese trasto.",
+        "CAEL — Capitán. Si queremos llegar exactos a la apertura, tenemos cuatro minutos antes de que la ventana de salida empiece a comernos margen."
+      ]
+    },
+    {
+      "id": "1.5",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PM",
+      "duration": 20,
+      "path": "frames/scene-01/shot-05.png",
+      "visual": "Harlan observa las noticias; Voss entra en cuadro.",
+      "camera": "50 mm · dos términos, Harlan en sombra lateral.",
+      "audio": "El muelle recupera presencia.",
+      "subtitles": [
+        "VOSS — Ahí estaré.",
+        "SORELL — ¿Alguna vez no te pone nerviosa una puerta que no construimos nosotros?",
+        "CAEL — Todos los días, doctora."
+      ]
+    },
+    {
+      "id": "1.6",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PM",
+      "duration": 24,
+      "path": "frames/scene-01/shot-06.png",
+      "visual": "Cael marca la ventana de salida; Sorell cruza con su equipo.",
+      "camera": "40 mm · travelling lateral de embarque.",
+      "audio": "Avisos de cierre de rampa.",
+      "subtitles": [
+        "ZAO — Mirá esto. Si en algún momento la corrupción de un protocolo supera el treinta por ciento, no intentes repararlo. Aislalo. Repararlo bajo presión es como cortar el cable equivocado.",
+        "RAO — Aislar, no reparar. Entendido.",
+        "ZAO — Y si la red interna cae durante la expansión, éste es el único equipo que sigue respirando."
+      ]
+    },
+    {
+      "id": "1.7",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PD",
+      "duration": 28,
+      "path": "frames/scene-01/shot-07.png",
+      "visual": "Zao y Rao verifican núcleo y transmisor óptico independiente.",
+      "camera": "65 mm · inserto de cableado propio y rótulo de contingencia.",
+      "audio": "Pulso grave del núcleo.",
+      "subtitles": [
+        "ZAO — Vas a estar bien.",
+        "SORELL — El saludo actualizado. Dejé también una copia pasiva, sólo lectura. No ejecuta nada; sólo dice quiénes somos.",
+        "ZAO — Y vos sos la única a bordo que me hace confiar en que vamos a decir lo correcto."
+      ]
+    },
+    {
+      "id": "1.8",
+      "scene": 1,
+      "title": "Estación Proxima — embarque",
+      "type": "PM",
+      "duration": 30,
+      "path": "frames/scene-01/shot-08.png",
+      "visual": "Sorell entrega el saludo pasivo; Voss ordena puestos.",
+      "camera": "50 mm · triángulo Zao–Sorell–Rao, cierre en rampa.",
+      "audio": "Música asciende hacia lanzamiento.",
+      "subtitles": [
+        "TÉCNICO (O.S.) — Ingeniera Zao, control pide confirmación del núcleo.",
+        "ZAO — Confirmo cuando yo diga que confirmo.",
+        "VOSS (O.S.) — Todo el personal, a sus puestos."
+      ]
+    },
+    {
+      "id": "2.1",
+      "scene": 2,
+      "title": "Salida de Proxima",
+      "type": "PG",
+      "duration": 14,
+      "path": "frames/scene-02/shot-01.png",
+      "visual": "Puente reducido; reloj de tránsito ocupa el fondo.",
+      "camera": "28 mm · cámara centrada, estable.",
+      "audio": "Motores en espera.",
+      "subtitles": [
+        "CAEL — Trayectoria confirmada. Arco de paso por Júpiter cargado. Cincuenta y siete horas, cuarenta y ocho minutos hasta la boca. Después de eso, no hay vuelta atrás."
+      ]
+    },
+    {
+      "id": "2.2",
+      "scene": 2,
+      "title": "Salida de Proxima",
+      "type": "PP",
+      "duration": 16,
+      "path": "frames/scene-02/shot-02.png",
+      "visual": "Voss asume el mando.",
+      "camera": "75 mm · leve contrapicado.",
+      "audio": "Silencio previo.",
+      "subtitles": [
+        "VOSS — Entonces que sean cincuenta y siete horas bien empleadas. Adelante."
+      ]
+    },
+    {
+      "id": "2.3",
+      "scene": 2,
+      "title": "Salida de Proxima",
+      "type": "PD",
+      "duration": 16,
+      "path": "frames/scene-02/shot-03.png",
+      "visual": "Mano de Cael confirma separación y empuje.",
+      "camera": "85 mm · corte preciso al comando.",
+      "audio": "Cierres mecánicos, ignición.",
+      "subtitles": []
+    },
+    {
+      "id": "2.4",
+      "scene": 2,
+      "title": "Salida de Proxima",
+      "type": "PG",
+      "duration": 14,
+      "path": "frames/scene-02/shot-04.png",
+      "visual": "Celestial Ardor se desprende del muelle, despliega velos radiadores oscuros y orienta la tobera magnética hacia el arco joviano.",
+      "camera": "24 mm exterior · deriva amplia; la nave revela su arquitectura axial.",
+      "audio": "Motor grave; música se abre.",
+      "subtitles": []
+    },
+    {
+      "id": "3.1",
+      "scene": 3,
+      "title": "Arco de Júpiter e indicio",
+      "type": "PG",
+      "duration": 14,
+      "path": "frames/scene-03/shot-01.png",
+      "visual": "La nave bordea Júpiter con amplio desplazamiento lateral; radiadores recogidos antes del giro.",
+      "camera": "24 mm exterior · planeta fuera del eje de trayectoria.",
+      "audio": "Alarma de inversión.",
+      "subtitles": []
+    },
+    {
+      "id": "3.2",
+      "scene": 3,
+      "title": "Arco de Júpiter e indicio",
+      "type": "PM",
+      "duration": 16,
+      "path": "frames/scene-03/shot-02.png",
+      "visual": "Zao asegurada en caída libre mientras la nave rota; 1 g retorna hacia el mismo piso al reanudar el frenado.",
+      "camera": "40 mm · horizonte rota con la nave; objetos pequeños flotan y vuelven a asentarse.",
+      "audio": "Cese y regreso del zumbido.",
+      "subtitles": []
+    },
+    {
+      "id": "3.3",
+      "scene": 3,
+      "title": "Arco de Júpiter e indicio",
+      "type": "PD",
+      "duration": 16,
+      "path": "frames/scene-03/shot-03.png",
+      "visual": "Tres picos idénticos aparecen en energía.",
+      "camera": "Macro de interfaz · gráfico legible.",
+      "audio": "Tres pulsos electrónicos.",
+      "subtitles": [
+        "ZAO — Pico de consumo. Otra vez.",
+        "ZAO (CONT'D) — Tres veces en tres horas. Eso no es ruido, es un patrón."
+      ]
+    },
+    {
+      "id": "3.4",
+      "scene": 3,
+      "title": "Arco de Júpiter e indicio",
+      "type": "PP",
+      "duration": 14,
+      "path": "frames/scene-03/shot-04.png",
+      "visual": "Un acceso fuera de horario se refleja en los ojos de Zao.",
+      "camera": "85 mm · foco de pantalla a mirada.",
+      "audio": "Ambiente baja.",
+      "subtitles": [
+        "ZAO (CONT'D) — ¿Quién entra al núcleo a esta hora...?"
+      ]
+    },
+    {
+      "id": "4.1",
+      "scene": 4,
+      "title": "Envoltura no declarada",
+      "type": "PG",
+      "duration": 16,
+      "path": "frames/scene-04/shot-01.png",
+      "visual": "Zao sola frente al núcleo azul; rojo casi imperceptible.",
+      "camera": "28 mm · simetría fría.",
+      "audio": "Pulso del núcleo.",
+      "subtitles": [
+        "ZAO — Esto no es protocolo estándar. Es un envoltorio dormido.",
+        "ZAO (CONT'D) — No puedo saber qué hace hasta que se despliegue. Pero no debería estar ahí."
+      ]
+    },
+    {
+      "id": "4.2",
+      "scene": 4,
+      "title": "Envoltura no declarada",
+      "type": "OTS",
+      "duration": 18,
+      "path": "frames/scene-04/shot-02.png",
+      "visual": "Código se abre como envoltura dormida de función ambigua.",
+      "camera": "50 mm sobre hombro · interfaz ocupa dos tercios.",
+      "audio": "Textura digital tenue.",
+      "subtitles": [
+        "ZAO (CONT'D) — Eso no puede ser."
+      ]
+    },
+    {
+      "id": "4.3",
+      "scene": 4,
+      "title": "Envoltura no declarada",
+      "type": "PD",
+      "duration": 18,
+      "path": "frames/scene-04/shot-03.png",
+      "visual": "Registro superficial muestra SORELL — ACCESO NIVEL 3.",
+      "camera": "85 mm · sello visual falsificable.",
+      "audio": "Golpe sonoro corto.",
+      "subtitles": [
+        "ZAO (CONT'D) — Capitán, encontré una envoltura no declarada en la mediación. Aún no puedo clasificarla. Rao y yo vamos a aislarla antes de la apertura."
+      ]
+    },
+    {
+      "id": "4.4",
+      "scene": 4,
+      "title": "Envoltura no declarada",
+      "type": "PM",
+      "duration": 18,
+      "path": "frames/scene-04/shot-04.png",
+      "visual": "Zao informa a Voss sin formular una acusación.",
+      "camera": "50 mm · perfil con canal abierto.",
+      "audio": "Radio limpia.",
+      "subtitles": [
+        "VOSS (V.O.) — Documente todo. Nadie toca el núcleo sin usted."
+      ]
+    },
+    {
+      "id": "4.5",
+      "scene": 4,
+      "title": "Envoltura no declarada",
+      "type": "PD",
+      "duration": 20,
+      "path": "frames/scene-04/shot-05.png",
+      "visual": "Zao marca el registro como NO VERIFICADO y copia datos para Rao.",
+      "camera": "65 mm · cursor y soporte físico.",
+      "audio": "Cierre seco de archivo.",
+      "subtitles": []
+    },
+    {
+      "id": "5.1",
+      "scene": 5,
+      "title": "Confirmación y partición",
+      "type": "PG",
+      "duration": 18,
+      "path": "frames/scene-05/shot-01.png",
+      "visual": "El núcleo entra en precarga; la envoltura empieza a desplegarse.",
+      "camera": "28 mm · cámara se aproxima lentamente.",
+      "audio": "Frecuencia grave creciente.",
+      "subtitles": []
+    },
+    {
+      "id": "5.2",
+      "scene": 5,
+      "title": "Confirmación y partición",
+      "type": "OTS",
+      "duration": 20,
+      "path": "frames/scene-05/shot-02.png",
+      "visual": "Interfaz revela ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA.",
+      "camera": "50 mm · capas translúcidas.",
+      "audio": "Alarma contenida.",
+      "subtitles": [
+        "ZAO — El superficial dice Sorell. El relé dice override de mando."
+      ]
+    },
+    {
+      "id": "5.3",
+      "scene": 5,
+      "title": "Confirmación y partición",
+      "type": "PD",
+      "duration": 20,
+      "path": "frames/scene-05/shot-03.png",
+      "visual": "Registro superficial Sorell frente a firma física OVR-7C41.",
+      "camera": "85 mm · pantalla dividida.",
+      "audio": "Dos firmas con timbres distintos.",
+      "subtitles": [
+        "ZAO (CONT'D) — Harlan."
+      ]
+    },
+    {
+      "id": "5.4",
+      "scene": 5,
+      "title": "Confirmación y partición",
+      "type": "PP",
+      "duration": 22,
+      "path": "frames/scene-05/shot-04.png",
+      "visual": "Zao conecta sesión, recorrido de mantenimiento y firma.",
+      "camera": "85 mm · luz roja entra progresivamente.",
+      "audio": "Respiración.",
+      "subtitles": [
+        "ZAO (CONT'D) — Es autónomo. Detenerlo a él no alcanza."
+      ]
+    },
+    {
+      "id": "5.5",
+      "scene": 5,
+      "title": "Confirmación y partición",
+      "type": "PG",
+      "duration": 20,
+      "path": "frames/scene-05/shot-05.png",
+      "visual": "Mamparos se sellan al entrar en expansión crítica.",
+      "camera": "32 mm · líneas del recinto convergen sobre Zao.",
+      "audio": "Golpes de cierre.",
+      "subtitles": [
+        "ZAO (CONT'D) — Usó la partición. Por supuesto."
+      ]
+    },
+    {
+      "id": "5.6",
+      "scene": 5,
+      "title": "Confirmación y partición",
+      "type": "PD",
+      "duration": 20,
+      "path": "frames/scene-05/shot-06.png",
+      "visual": "Canal al puente falla; Zao mira el transmisor independiente.",
+      "camera": "65 mm · foco cambia del ícono muerto al equipo óptico.",
+      "audio": "Red interna desaparece.",
+      "subtitles": []
+    },
+    {
+      "id": "6.1",
+      "scene": 6,
+      "title": "Mensaje hacia el futuro",
+      "type": "PM",
+      "duration": 14,
+      "path": "frames/scene-06/shot-01.png",
+      "visual": "Zao corre a la consola óptica establecida al inicio.",
+      "camera": "35 mm · cámara en mano contenida.",
+      "audio": "Pasos, alarmas amortiguadas.",
+      "subtitles": [
+        "ZAO — Si no puedo hablarles ahora, les hablo a donde van a estar.",
+        "ZAO (CONT'D) — El plan ya dice dónde van a estar. Abro el haz al corredor y apunto."
+      ]
+    },
+    {
+      "id": "6.2",
+      "scene": 6,
+      "title": "Mensaje hacia el futuro",
+      "type": "OTS",
+      "duration": 16,
+      "path": "frames/scene-06/shot-02.png",
+      "visual": "Plan remoto y corredor de intercepción se superponen.",
+      "camera": "50 mm · retícula amplia, no punto perfecto.",
+      "audio": "Cálculo óptico.",
+      "subtitles": [
+        "ZAO (CONT'D) — Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor..."
+      ]
+    },
+    {
+      "id": "6.3",
+      "scene": 6,
+      "title": "Mensaje hacia el futuro",
+      "type": "PP",
+      "duration": 16,
+      "path": "frames/scene-06/shot-03.png",
+      "visual": "Zao graba mirando directamente al sensor.",
+      "camera": "75 mm · frontal, sin movimiento.",
+      "audio": "Voz seca.",
+      "subtitles": [
+        "HARLAN (O.S.) — ¿A quién le escribís, Zao?"
+      ]
+    },
+    {
+      "id": "6.4",
+      "scene": 6,
+      "title": "Mensaje hacia el futuro",
+      "type": "PD",
+      "duration": 14,
+      "path": "frames/scene-06/shot-04.png",
+      "visual": "Barra de transmisión y firma de dispositivo.",
+      "camera": "85 mm · 40%, 70%, 100%.",
+      "audio": "Portadora sube.",
+      "subtitles": [
+        "ZAO — Ya está hecho.",
+        "HARLAN — No tenías que encontrar esto."
+      ]
+    },
+    {
+      "id": "6.5",
+      "scene": 6,
+      "title": "Mensaje hacia el futuro",
+      "type": "OTS",
+      "duration": 14,
+      "path": "frames/scene-06/shot-05.png",
+      "visual": "Harlan aparece desenfocado tras Zao.",
+      "camera": "50 mm · puerta al fondo.",
+      "audio": "La portadora cesa.",
+      "subtitles": [
+        "ZAO — Y vos no tenías que hacerlo. Todavía podés—"
+      ]
+    },
+    {
+      "id": "6.6",
+      "scene": 6,
+      "title": "Mensaje hacia el futuro",
+      "type": "PP",
+      "duration": 16,
+      "path": "frames/scene-06/shot-06.png",
+      "visual": "Harlan comprende que hubo un envío, pero no su destino.",
+      "camera": "85 mm · campo/contracampo cerrado.",
+      "audio": "Silencio tenso.",
+      "subtitles": [
+        "HARLAN — Ya no hay \"todavía\". Y no vas a decirme dónde apuntaste."
+      ]
+    },
+    {
+      "id": "7.1",
+      "scene": 7,
+      "title": "Asesinato y cruce",
+      "type": "PPP",
+      "duration": 10,
+      "path": "frames/scene-07/shot-01.png",
+      "visual": "Ojos de Zao sostienen a Harlan.",
+      "camera": "100 mm · inmóvil.",
+      "audio": "Respiración y alarma.",
+      "subtitles": []
+    },
+    {
+      "id": "7.2",
+      "scene": 7,
+      "title": "Asesinato y cruce",
+      "type": "NEGRO",
+      "duration": 12,
+      "path": "frames/scene-07/shot-02.png",
+      "visual": "El forcejeo ocurre fuera de campo.",
+      "camera": "Corte a negro, sin coreografía.",
+      "audio": "Golpe breve; silencio.",
+      "subtitles": []
+    },
+    {
+      "id": "7.3",
+      "scene": 7,
+      "title": "Asesinato y cruce",
+      "type": "PG",
+      "duration": 12,
+      "path": "frames/scene-07/shot-03.png",
+      "visual": "Nodos negros dispersos alrededor del vacío se conectan; aparece una región navegable de 150–200 m. La nave espera con motor y radiadores recogidos.",
+      "camera": "24 mm exterior · sensor compuesto para abarcar nodos separados por kilómetros.",
+      "audio": "Espectro armónico no humano.",
+      "subtitles": []
+    },
+    {
+      "id": "7.4",
+      "scene": 7,
+      "title": "Asesinato y cruce",
+      "type": "PD",
+      "duration": 14,
+      "path": "frames/scene-07/shot-04.png",
+      "visual": "Reloj local: T+57:47:30; apertura navegable 00:90.",
+      "camera": "85 mm · contador legible.",
+      "audio": "Cael cuenta.",
+      "subtitles": [
+        "CAEL — Cruzando en tres, dos, uno."
+      ]
+    },
+    {
+      "id": "7.5",
+      "scene": 7,
+      "title": "Asesinato y cruce",
+      "type": "PG",
+      "duration": 12,
+      "path": "frames/scene-07/shot-05.png",
+      "visual": "La nave atraviesa en T+57:48; la garganta colapsa después.",
+      "camera": "24 mm · destello único, luego estrellas normales.",
+      "audio": "Silencio absoluto y retorno del casco.",
+      "subtitles": []
+    },
+    {
+      "id": "8.1",
+      "scene": 8,
+      "title": "El cuerpo",
+      "type": "PG",
+      "duration": 14,
+      "path": "frames/scene-08/shot-01.png",
+      "visual": "Puente al otro lado; estrellas sin distorsión. Indicadores muestran acumuladores térmicos altos y radiadores desplegándose.",
+      "camera": "28 mm · estabilidad recuperada.",
+      "audio": "Sistemas reinician.",
+      "subtitles": [
+        "CAEL — Cruce confirmado. Posición nominal.",
+        "CAEL (CONT'D) — Zao no reporta."
+      ]
+    },
+    {
+      "id": "8.2",
+      "scene": 8,
+      "title": "El cuerpo",
+      "type": "PD",
+      "duration": 16,
+      "path": "frames/scene-08/shot-02.png",
+      "visual": "Chequeo de tripulación: ZAO — SIN RESPUESTA.",
+      "camera": "75 mm · alerta ámbar.",
+      "audio": "Tono distinto.",
+      "subtitles": [
+        "VOSS — Mandá a alguien al núcleo."
+      ]
+    },
+    {
+      "id": "8.3",
+      "scene": 8,
+      "title": "El cuerpo",
+      "type": "PP",
+      "duration": 16,
+      "path": "frames/scene-08/shot-03.png",
+      "visual": "Voss percibe un grito por intercomunicador.",
+      "camera": "85 mm · reacción antes de información.",
+      "audio": "Voz rota.",
+      "subtitles": [
+        "VOZ (O.S.) — ¡Capitán! ¡Es Zao, no responde, hay—!"
+      ]
+    },
+    {
+      "id": "8.4",
+      "scene": 8,
+      "title": "El cuerpo",
+      "type": "PM",
+      "duration": 14,
+      "path": "frames/scene-08/shot-04.png",
+      "visual": "Voss se pone de pie y toma control del puente.",
+      "camera": "50 mm · leve acercamiento.",
+      "audio": "Música corta.",
+      "subtitles": [
+        "VOSS — Aseguren el cuerpo. Que nadie toque nada."
+      ]
+    },
+    {
+      "id": "9.1",
+      "scene": 9,
+      "title": "Investigación y sospecha",
+      "type": "MON",
+      "duration": 16,
+      "path": "frames/scene-09/shot-01.png",
+      "visual": "Lesiones, cámaras vacías y registros se suceden.",
+      "camera": "Macros de 65–85 mm · cortes secos.",
+      "audio": "Golpes de reloj.",
+      "subtitles": []
+    },
+    {
+      "id": "9.2",
+      "scene": 9,
+      "title": "Investigación y sospecha",
+      "type": "OTS",
+      "duration": 18,
+      "path": "frames/scene-09/shot-02.png",
+      "visual": "Voss contempla tres evidencias que no encajan.",
+      "camera": "50 mm · pantallas rodean su silueta.",
+      "audio": "Ambiente bajo.",
+      "subtitles": []
+    },
+    {
+      "id": "9.3",
+      "scene": 9,
+      "title": "Investigación y sospecha",
+      "type": "PM",
+      "duration": 18,
+      "path": "frames/scene-09/shot-03.png",
+      "visual": "Sorell enfrenta el registro que lleva su nombre.",
+      "camera": "50 mm · encuadre neutral, no culpabilizante.",
+      "audio": "Puente en silencio.",
+      "subtitles": [
+        "VOSS — Tenemos un homicidio, cámaras anuladas y un acceso firmado con su nombre.",
+        "SORELL — Ese registro es falso. Zao marcó mi paquete como pasivo. No puede ejecutar nada."
+      ]
+    },
+    {
+      "id": "9.4",
+      "scene": 9,
+      "title": "Investigación y sospecha",
+      "type": "PP",
+      "duration": 22,
+      "path": "frames/scene-09/shot-04.png",
+      "visual": "Harlan propone apartarla con aparente prudencia.",
+      "camera": "75 mm · luz uniforme, sin subrayado villanesco.",
+      "audio": "Tono administrativo.",
+      "subtitles": [
+        "HARLAN — Hasta que sepamos qué fue alterado, mantenerla lejos del núcleo es protocolo, no condena."
+      ]
+    },
+    {
+      "id": "9.5",
+      "scene": 9,
+      "title": "Investigación y sospecha",
+      "type": "PM",
+      "duration": 22,
+      "path": "frames/scene-09/shot-05.png",
+      "visual": "Voss retira temporalmente la credencial de Sorell.",
+      "camera": "50 mm · manos y rostros en el mismo plano.",
+      "audio": "Credencial sobre metal.",
+      "subtitles": [
+        "VOSS — Queda apartada, no acusada. Conserve su comunicador."
+      ]
+    },
+    {
+      "id": "9.6",
+      "scene": 9,
+      "title": "Investigación y sospecha",
+      "type": "OTS",
+      "duration": 24,
+      "path": "frames/scene-09/shot-06.png",
+      "visual": "Sorell deja a Rao la información sobre el saludo pasivo.",
+      "camera": "50 mm · salida al fondo, Rao en primer término.",
+      "audio": "Puerta de observación.",
+      "subtitles": [
+        "SORELL — El saludo limpio está en soporte de sólo lectura. Zao lo verificó."
+      ]
+    },
+    {
+      "id": "10.1",
+      "scene": 10,
+      "title": "La mitad técnica del misterio",
+      "type": "PG",
+      "duration": 22,
+      "path": "frames/scene-10/shot-01.png",
+      "visual": "Rao trabaja en puesto protegido; reloj Velari sigue bajando.",
+      "camera": "28 mm · líneas del puente aíslan su estación.",
+      "audio": "Tecleo y empuje constante.",
+      "subtitles": []
+    },
+    {
+      "id": "10.2",
+      "scene": 10,
+      "title": "La mitad técnica del misterio",
+      "type": "OTS",
+      "duration": 24,
+      "path": "frames/scene-10/shot-02.png",
+      "visual": "La envoltura se reconstruye como ruta hacia el saludo.",
+      "camera": "50 mm · mapa causal legible.",
+      "audio": "Pulsos acompasados.",
+      "subtitles": [
+        "RAO — Aislar, no reparar. Vale. ¿Dónde te escondés?",
+        "RAO (CONT'D) — No espera órdenes. Se dispara con el saludo."
+      ]
+    },
+    {
+      "id": "10.3",
+      "scene": 10,
+      "title": "La mitad técnica del misterio",
+      "type": "PD",
+      "duration": 24,
+      "path": "frames/scene-10/shot-03.png",
+      "visual": "Disparador: APERTURA DE CANAL VELARI.",
+      "camera": "85 mm · texto y flecha roja.",
+      "audio": "Alerta sutil.",
+      "subtitles": [
+        "RAO (CONT'D) — Contenido, no eliminado."
+      ]
+    },
+    {
+      "id": "10.4",
+      "scene": 10,
+      "title": "La mitad técnica del misterio",
+      "type": "PM",
+      "duration": 26,
+      "path": "frames/scene-10/shot-04.png",
+      "visual": "Rao crea un perímetro de cuarentena.",
+      "camera": "50 mm · manos y mapa en profundidad.",
+      "audio": "Procesamiento crece.",
+      "subtitles": []
+    },
+    {
+      "id": "10.5",
+      "scene": 10,
+      "title": "La mitad técnica del misterio",
+      "type": "PD",
+      "duration": 26,
+      "path": "frames/scene-10/shot-05.png",
+      "visual": "El despliegue se detiene en 41%, pero no desaparece.",
+      "camera": "85 mm · estado CONTENIDO.",
+      "audio": "Alarma se estabiliza.",
+      "subtitles": [
+        "RAO (CONT'D) — Sé qué hizo y cómo frenarlo. No sé quién tiene esta firma."
+      ]
+    },
+    {
+      "id": "10.6",
+      "scene": 10,
+      "title": "La mitad técnica del misterio",
+      "type": "OTS",
+      "duration": 28,
+      "path": "frames/scene-10/shot-06.png",
+      "visual": "Aparece OVR-7C41 sin titular.",
+      "camera": "65 mm · firma aislada contra fondo oscuro.",
+      "audio": "Tono de hallazgo.",
+      "subtitles": [
+        "VOSS — ¿Sorell?"
+      ]
+    },
+    {
+      "id": "10.7",
+      "scene": 10,
+      "title": "La mitad técnica del misterio",
+      "type": "PM",
+      "duration": 30,
+      "path": "frames/scene-10/shot-07.png",
+      "visual": "Rao explica a Voss por qué Sorell no está probada culpable.",
+      "camera": "50 mm · conversación sin abandonar estaciones.",
+      "audio": "Reloj de encuentro persiste.",
+      "subtitles": [
+        "RAO — Su nombre está en la capa que cualquiera con privilegios podía falsificar. Esto viene de mando."
+      ]
+    },
+    {
+      "id": "11.1",
+      "scene": 11,
+      "title": "Harlan intenta cegar la nave",
+      "type": "PM",
+      "duration": 14,
+      "path": "frames/scene-11/shot-01.png",
+      "visual": "Harlan recomienda apagar mediación y receptores.",
+      "camera": "50 mm · posición de autoridad.",
+      "audio": "Motores graves.",
+      "subtitles": [
+        "HARLAN — La mediación contiene un proceso autónomo. Recomiendo apagarla y aislar los receptores antes de que los Velari puedan usar el mismo canal contra nosotros.",
+        "VOSS — Rao dice que apagarla destruiría también el único intérprete que tenemos."
+      ]
+    },
+    {
+      "id": "11.2",
+      "scene": 11,
+      "title": "Harlan intenta cegar la nave",
+      "type": "PP",
+      "duration": 14,
+      "path": "frames/scene-11/shot-02.png",
+      "visual": "Voss rechaza una solución irreversible.",
+      "camera": "75 mm · frontal.",
+      "audio": "Pausa.",
+      "subtitles": [
+        "HARLAN — El silencio es preferible a entregarles la nave."
+      ]
+    },
+    {
+      "id": "11.3",
+      "scene": 11,
+      "title": "Harlan intenta cegar la nave",
+      "type": "OTS",
+      "duration": 16,
+      "path": "frames/scene-11/shot-03.png",
+      "visual": "Cael mantiene trayectoria y señala la baliza ausente.",
+      "camera": "50 mm sobre Harlan.",
+      "audio": "Navegación activa.",
+      "subtitles": [
+        "CAEL — Y sin el receptor no podemos adquirir su baliza ni completar la aproximación."
+      ]
+    },
+    {
+      "id": "11.4",
+      "scene": 11,
+      "title": "Harlan intenta cegar la nave",
+      "type": "PP",
+      "duration": 16,
+      "path": "frames/scene-11/shot-04.png",
+      "visual": "Harlan propone abortar el contacto.",
+      "camera": "85 mm · quietud calculada.",
+      "audio": "Silencio.",
+      "subtitles": [
+        "HARLAN — Entonces abortamos el encuentro.",
+        "CAEL — Señal entrante. Humana. Viene exactamente por nuestro corredor de vuelo."
+      ]
+    },
+    {
+      "id": "11.5",
+      "scene": 11,
+      "title": "Harlan intenta cegar la nave",
+      "type": "PD",
+      "duration": 16,
+      "path": "frames/scene-11/shot-05.png",
+      "visual": "Una portadora humana aparece en el corredor previsto.",
+      "camera": "85 mm · onda apenas sobre ruido.",
+      "audio": "Pulso débil.",
+      "subtitles": [
+        "HARLAN — Puede estar usando nuestra propia firma para entrar."
+      ]
+    },
+    {
+      "id": "11.6",
+      "scene": 11,
+      "title": "Harlan intenta cegar la nave",
+      "type": "PM",
+      "duration": 14,
+      "path": "frames/scene-11/shot-06.png",
+      "visual": "Harlan intenta convertir la señal en amenaza.",
+      "camera": "50 mm · Cael no lo mira.",
+      "audio": "Estática.",
+      "subtitles": [
+        "CAEL — No puedo autenticar el contenido todavía. Pero apagar el receptor ahora también borraría la prueba."
+      ]
+    },
+    {
+      "id": "12.1",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "PD",
+      "duration": 14,
+      "path": "frames/scene-12/shot-01.png",
+      "visual": "Cael autentica dispositivo y hora, no contenido.",
+      "camera": "85 mm · metadatos en verde, voz en ámbar.",
+      "audio": "Corrección de errores.",
+      "subtitles": [
+        "CAEL — La firma y la hora corresponden al transmisor óptico de Zao. Eso prueba desde qué consola salió, no que cada palabra sea auténtica.",
+        "ZAO (V.O.) — Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor..."
+      ]
+    },
+    {
+      "id": "12.2",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "PP",
+      "duration": 16,
+      "path": "frames/scene-12/shot-02.png",
+      "visual": "La voz fragmentada de Zao llena el puente.",
+      "camera": "75 mm · reacciones contenidas.",
+      "audio": "Estática.",
+      "subtitles": [
+        "HARLAN — El núcleo podía sintetizar su voz. Esto es exactamente lo que advertí."
+      ]
+    },
+    {
+      "id": "12.3",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "PM",
+      "duration": 16,
+      "path": "frames/scene-12/shot-03.png",
+      "visual": "Voss mira a Harlan pero todavía no ordena arresto.",
+      "camera": "50 mm · ambos en ejes opuestos.",
+      "audio": "Silencio.",
+      "subtitles": [
+        "VOSS — Rao. Cruce la rutina con el relé."
+      ]
+    },
+    {
+      "id": "12.4",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "OTS",
+      "duration": 14,
+      "path": "frames/scene-12/shot-04.png",
+      "visual": "Rao recibe la orden de cruzar rutina y relé.",
+      "camera": "50 mm · Harlan al fondo.",
+      "audio": "Tecleo inmediato.",
+      "subtitles": [
+        "RAO — La investigación prueba el payload. El mensaje nos dijo qué registro faltaba. Juntos identifican su override."
+      ]
+    },
+    {
+      "id": "12.5",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "PD",
+      "duration": 16,
+      "path": "frames/scene-12/shot-05.png",
+      "visual": "Tres capas convergen: payload, relé físico, credencial.",
+      "camera": "85 mm · coincidencia visual progresiva.",
+      "audio": "Tres tonos se unifican.",
+      "subtitles": []
+    },
+    {
+      "id": "12.6",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "PP",
+      "duration": 16,
+      "path": "frames/scene-12/shot-06.png",
+      "visual": "Resultado: R. HARLAN — INTEGRIDAD VERIFICADA.",
+      "camera": "85 mm · reflejo sobre Rao.",
+      "audio": "Confirmación seca.",
+      "subtitles": [
+        "VOSS — Revoco la credencial de Harlan. Deténganlo."
+      ]
+    },
+    {
+      "id": "12.7",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "PM",
+      "duration": 14,
+      "path": "frames/scene-12/shot-07.png",
+      "visual": "Voss revoca credencial y ordena detención.",
+      "camera": "50 mm · autoridad recuperada.",
+      "audio": "Alarma de seguridad.",
+      "subtitles": [
+        "RAO — ¡Lo activó!"
+      ]
+    },
+    {
+      "id": "12.8",
+      "scene": 12,
+      "title": "La doble llave",
+      "type": "PD",
+      "duration": 14,
+      "path": "frames/scene-12/shot-08.png",
+      "visual": "Harlan activa desde muñeca antes de completarse la revocación.",
+      "camera": "85 mm · gesto casi oculto.",
+      "audio": "Tono de ejecución.",
+      "subtitles": [
+        "VOSS — ¡Cael, permanezca en navegación! ¡Liberen a Sorell y tráiganla al puente!"
+      ]
+    },
+    {
+      "id": "13.1",
+      "scene": 13,
+      "title": "Última ventana del override",
+      "type": "PM",
+      "duration": 12,
+      "path": "frames/scene-13/shot-01.png",
+      "visual": "Harlan rompe la contención humana y sale del puente.",
+      "camera": "40 mm · cámara en mano breve.",
+      "audio": "Impacto y alarma.",
+      "subtitles": []
+    },
+    {
+      "id": "13.2",
+      "scene": 13,
+      "title": "Última ventana del override",
+      "type": "TRAV",
+      "duration": 12,
+      "path": "frames/scene-13/shot-02.png",
+      "visual": "Corre mientras módulos revocan su credencial en cascada.",
+      "camera": "35 mm · seguimiento lateral.",
+      "audio": "Pitidos se apagan detrás.",
+      "subtitles": []
+    },
+    {
+      "id": "13.3",
+      "scene": 13,
+      "title": "Última ventana del override",
+      "type": "PD",
+      "duration": 12,
+      "path": "frames/scene-13/shot-03.png",
+      "visual": "El núcleo acepta el último pulso físico y sella el mamparo.",
+      "camera": "75 mm · cierre frontal.",
+      "audio": "Golpe metálico.",
+      "subtitles": [
+        "CAEL — Selló con la última ventana del override. Fuerzo acceso desde aquí.",
+        "SORELL — ¿Qué necesita de mí?"
+      ]
+    },
+    {
+      "id": "13.4",
+      "scene": 13,
+      "title": "Última ventana del override",
+      "type": "PM",
+      "duration": 12,
+      "path": "frames/scene-13/shot-04.png",
+      "visual": "Voss y seguridad llegan; Cael permanece al mando a distancia.",
+      "camera": "50 mm · pantalla dividida puente/pasillo.",
+      "audio": "Cael inicia apertura.",
+      "subtitles": []
+    },
+    {
+      "id": "13.5",
+      "scene": 13,
+      "title": "Última ventana del override",
+      "type": "PM",
+      "duration": 12,
+      "path": "frames/scene-13/shot-05.png",
+      "visual": "Sorell entra al puente junto a Rao.",
+      "camera": "50 mm · dos especialistas en el mismo eje.",
+      "audio": "Reloj Velari.",
+      "subtitles": [
+        "RAO — Decirme qué podemos enviar cuando corte lo demás."
+      ]
+    },
+    {
+      "id": "14.1",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PG",
+      "duration": 18,
+      "path": "frames/scene-14/shot-01.png",
+      "visual": "Núcleo y puente se presentan como espacios paralelos.",
+      "camera": "28 mm · núcleo inestable, puente geométrico.",
+      "audio": "Ritmos sonoros distintos.",
+      "subtitles": []
+    },
+    {
+      "id": "14.2",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PD",
+      "duration": 20,
+      "path": "frames/scene-14/shot-02.png",
+      "visual": "Reloj único: CANAL VELARI — 01:32 / PAYLOAD ARMADO.",
+      "camera": "85 mm · contador establecido.",
+      "audio": "Pulso regular.",
+      "subtitles": []
+    },
+    {
+      "id": "14.3",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PP",
+      "duration": 20,
+      "path": "frames/scene-14/shot-03.png",
+      "visual": "Harlan conecta el mando físico.",
+      "camera": "75 mm · sombra roja.",
+      "audio": "Conector de potencia.",
+      "subtitles": [
+        "HARLAN — No vine hasta acá para que una voz muerta nos devuelva a la obediencia ciega.",
+        "RAO — Puedo cortar la rama hostil. Si no hubiese aislado su recorrido, ahora estaría buscando a ciegas."
+      ]
+    },
+    {
+      "id": "14.4",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "OTS",
+      "duration": 22,
+      "path": "frames/scene-14/shot-04.png",
+      "visual": "Rao abre el mapa de cuarentena preparado antes.",
+      "camera": "50 mm · rutas ya etiquetadas.",
+      "audio": "Procesamiento.",
+      "subtitles": [
+        "SORELL — Y si corta toda la mediación, nuestro saludo desaparece con ella."
+      ]
+    },
+    {
+      "id": "14.5",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PD",
+      "duration": 22,
+      "path": "frames/scene-14/shot-05.png",
+      "visual": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
+      "camera": "85 mm · soporte físico claro.",
+      "audio": "Clic mecánico.",
+      "subtitles": [
+        "SORELL (CONT'D) — Esto es lenguaje. Lo de Harlan no lo es.",
+        "CAEL — Trayectoria nominal. Acceso en doce segundos."
+      ]
+    },
+    {
+      "id": "14.6",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PM",
+      "duration": 22,
+      "path": "frames/scene-14/shot-06.png",
+      "visual": "Cael pilota y fuerza el mamparo simultáneamente.",
+      "camera": "45 mm · manos en controles separados.",
+      "audio": "Motores y cerradura.",
+      "subtitles": [
+        "RAO — La firma revocada ya no manda en red, pero todavía tiene el enlace físico."
+      ]
+    },
+    {
+      "id": "14.7",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "OTS",
+      "duration": 22,
+      "path": "frames/scene-14/shot-07.png",
+      "visual": "Harlan abre una tercera ruta física que Rao no puede cerrar por red.",
+      "camera": "50 mm · línea roja rompe el perímetro.",
+      "audio": "Alarma crece.",
+      "subtitles": [
+        "HARLAN — ¡Si los dejamos examinarnos primero, nunca sabremos qué decidieron ocultar!",
+        "VOSS — Entonces llegaremos con preguntas. No con un arma."
+      ]
+    },
+    {
+      "id": "14.8",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PG",
+      "duration": 22,
+      "path": "frames/scene-14/shot-08.png",
+      "visual": "El mamparo cede; Voss y seguridad entran.",
+      "camera": "32 mm · cámara en mano controlada.",
+      "audio": "Metal, pasos.",
+      "subtitles": [
+        "RAO — ¡Necesito separar el buffer de la mediación!"
+      ]
+    },
+    {
+      "id": "14.9",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PD",
+      "duration": 20,
+      "path": "frames/scene-14/shot-09.png",
+      "visual": "Harlan pulsa INICIAR; buffer cerrado recibe el payload.",
+      "camera": "85 mm · reloj 00:18 a 00:10.",
+      "audio": "Cuenta ya establecida.",
+      "subtitles": [
+        "SORELL — El saludo pasivo no comparte esa firma. Córtela completa.",
+        "HARLAN — No saben qué acaban de elegir."
+      ]
+    },
+    {
+      "id": "14.10",
+      "scene": 14,
+      "title": "Cuarentena antes del contacto",
+      "type": "PP",
+      "duration": 22,
+      "path": "frames/scene-14/shot-10.png",
+      "visual": "Rao confina la rama a 00:07; Harlan es reducido.",
+      "camera": "75 mm · silencio tras confirmación.",
+      "audio": "Alarma cesa.",
+      "subtitles": [
+        "VOSS — Elegimos que no hablara por todos nosotros."
+      ]
+    },
+    {
+      "id": "15.1",
+      "scene": 15,
+      "title": "Saludo limpio",
+      "type": "PG",
+      "duration": 16,
+      "path": "frames/scene-15/shot-01.png",
+      "visual": "El puente recupera simetría; portadora Velari presente.",
+      "camera": "28 mm · cámara vuelve a estabilizarse.",
+      "audio": "Tono orgánico lejano.",
+      "subtitles": []
+    },
+    {
+      "id": "15.2",
+      "scene": 15,
+      "title": "Saludo limpio",
+      "type": "OTS",
+      "duration": 18,
+      "path": "frames/scene-15/shot-02.png",
+      "visual": "Rao muestra payload visible pero sin acceso a salida.",
+      "camera": "50 mm · cuarentena en rojo, canal en azul.",
+      "audio": "Sistema nominal.",
+      "subtitles": [
+        "RAO — El payload sigue ahí, pero no puede tocar la salida. Puedo abrir un conducto de sólo lectura.",
+        "SORELL — El saludo está intacto. Matemática de reconocimiento, procedencia y una solicitud de aproximación. Nada más."
+      ]
+    },
+    {
+      "id": "15.3",
+      "scene": 15,
+      "title": "Saludo limpio",
+      "type": "PM",
+      "duration": 18,
+      "path": "frames/scene-15/shot-03.png",
+      "visual": "Sorell verifica contenido del saludo pasivo.",
+      "camera": "50 mm · Rao y Sorell comparten encuadre.",
+      "audio": "Lectura matemática.",
+      "subtitles": [
+        "VOSS — Envíen."
+      ]
+    },
+    {
+      "id": "15.4",
+      "scene": 15,
+      "title": "Saludo limpio",
+      "type": "PP",
+      "duration": 18,
+      "path": "frames/scene-15/shot-04.png",
+      "visual": "Voss autoriza sin grandilocuencia.",
+      "camera": "75 mm · frontal.",
+      "audio": "Pausa.",
+      "subtitles": [
+        "SORELL — Es autorización de aproximación. No es confianza todavía."
+      ]
+    },
+    {
+      "id": "15.5",
+      "scene": 15,
+      "title": "Saludo limpio",
+      "type": "PD",
+      "duration": 16,
+      "path": "frames/scene-15/shot-05.png",
+      "visual": "Sorell confirma; Rao abre conducto de sólo lectura.",
+      "camera": "85 mm · dos acciones consecutivas.",
+      "audio": "Portadora sale.",
+      "subtitles": []
+    },
+    {
+      "id": "15.6",
+      "scene": 15,
+      "title": "Saludo limpio",
+      "type": "PG",
+      "duration": 16,
+      "path": "frames/scene-15/shot-06.png",
+      "visual": "A enorme distancia, la piel de la Estación Velari responde con un patrón orgánico de luz.",
+      "camera": "24 mm exterior · teleobjetivo instrumental; escala todavía ambigua.",
+      "audio": "Respuesta Velari.",
+      "subtitles": [
+        "CAEL — Pero tampoco es alarma."
+      ]
+    },
+    {
+      "id": "15.7",
+      "scene": 15,
+      "title": "Saludo limpio",
+      "type": "PM",
+      "duration": 18,
+      "path": "frames/scene-15/shot-07.png",
+      "visual": "Cael y Voss aceptan el resultado limitado.",
+      "camera": "50 mm · miradas hacia el frente.",
+      "audio": "Música vuelve con cautela.",
+      "subtitles": [
+        "VOSS — Por ahora, alcanza."
+      ]
+    },
+    {
+      "id": "16.1",
+      "scene": 16,
+      "title": "Región de encuentro",
+      "type": "PG",
+      "duration": 10,
+      "path": "frames/scene-16/shot-01.png",
+      "visual": "Celestial Ardor avanza diminuta ante la Estación Velari: varios kilómetros de lóbulos, arcos, cavidades y piel-radiador cambiante.",
+      "camera": "24 mm exterior · gran profundidad y escala inequívoca.",
+      "audio": "Motor casi imperceptible.",
+      "subtitles": []
+    },
+    {
+      "id": "16.2",
+      "scene": 16,
+      "title": "Región de encuentro",
+      "type": "PG",
+      "duration": 10,
+      "path": "frames/scene-16/shot-02.png",
+      "visual": "Una nave emisaria orgánica de 300–600 m se separa de la estación sin escape visible.",
+      "camera": "32 mm · contraluz bioluminiscente; estación como fondo.",
+      "audio": "Armónicos orgánicos sin sonido de motor.",
+      "subtitles": []
+    },
+    {
+      "id": "16.3",
+      "scene": 16,
+      "title": "Región de encuentro",
+      "type": "PD",
+      "duration": 10,
+      "path": "frames/scene-16/shot-03.png",
+      "visual": "Luces de la Celestial Ardor, la emisaria y la estación sincronizan un pulso de reconocimiento.",
+      "camera": "65 mm exterior · tres escalas en un eje compartido.",
+      "audio": "Un solo pulso común.",
+      "subtitles": []
+    },
+    {
+      "id": "17.1",
+      "scene": 17,
+      "title": "La verdad llega",
+      "type": "PG",
+      "duration": 22,
+      "path": "frames/scene-17/shot-01.png",
+      "visual": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra por el ventanal.",
+      "camera": "28 mm · composición coral con dos profundidades exteriores.",
+      "audio": "Ambiente sin diálogo.",
+      "subtitles": []
+    },
+    {
+      "id": "17.2",
+      "scene": 17,
+      "title": "La verdad llega",
+      "type": "PD",
+      "duration": 24,
+      "path": "frames/scene-17/shot-02.png",
+      "visual": "Mensaje de Zao archivado y detenido en su último cuadro.",
+      "camera": "75 mm · texto y rostro congelado.",
+      "audio": "Eco mínimo de la transmisión.",
+      "subtitles": []
+    },
+    {
+      "id": "17.3",
+      "scene": 17,
+      "title": "La verdad llega",
+      "type": "PM",
+      "duration": 24,
+      "path": "frames/scene-17/shot-03.png",
+      "visual": "Sorell se coloca junto a Rao.",
+      "camera": "50 mm · cercanía sin sentimentalismo excesivo.",
+      "audio": "Respiración.",
+      "subtitles": [
+        "SORELL — Ella hubiera estado orgullosa de vos."
+      ]
+    },
+    {
+      "id": "17.4",
+      "scene": 17,
+      "title": "La verdad llega",
+      "type": "OTS",
+      "duration": 26,
+      "path": "frames/scene-17/shot-04.png",
+      "visual": "Voss mira el archivo de Zao y luego el ventanal.",
+      "camera": "50 mm · rack focus archivo/estrellas.",
+      "audio": "Música asciende.",
+      "subtitles": [
+        "RAO — De todos nosotros. Menos de uno."
+      ]
+    },
+    {
+      "id": "17.5",
+      "scene": 17,
+      "title": "La verdad llega",
+      "type": "PP",
+      "duration": 26,
+      "path": "frames/scene-17/shot-05.png",
+      "visual": "Voss completa la frase casi para sí.",
+      "camera": "85 mm · luz Velari sobre el rostro.",
+      "audio": "Silencio entre cláusulas.",
+      "subtitles": [
+        "VOSS — Llegaste a tiempo. Para todos nosotros. Para todos los que vengan después."
+      ]
+    },
+    {
+      "id": "17.6",
+      "scene": 17,
+      "title": "La verdad llega",
+      "type": "PG",
+      "duration": 28,
+      "path": "frames/scene-17/shot-06.png",
+      "visual": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento.",
+      "camera": "24 mm exterior · sin cierre triunfalista; escala humana subordinada.",
+      "audio": "Tema final, fade out.",
+      "subtitles": []
+    }
+  ]
+}

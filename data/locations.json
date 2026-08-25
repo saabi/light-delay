@@ -1,0 +1,68 @@
+{
+	"schemaVersion": "1.0.0",
+	"locations": [
+		{
+			"id": "location-proxima-station",
+			"name": "Estación Proxima",
+			"description": "Infraestructura científica humana ampliada por décadas: módulos blancos antiguos, adiciones grafito y dos hábitats cilíndricos. Júpiter aparece lejano; no es una estación construida para el portal.",
+			"referenceAssetIds": [
+				"asset-location-proxima-station-sheet"
+			],
+			"atmosphere": "Exterior y silueta orbital"
+		},
+		{
+			"id": "location-proxima-dock",
+			"name": "Muelle axial de Proxima",
+			"description": "Puerto industrial estratificado y desgastado. El Ardor ya estaba destinado allí y recibe el retrofit diplomático contra reloj.",
+			"referenceAssetIds": [
+				"asset-location-proxima-dock-sheet"
+			],
+			"atmosphere": "Partida del Celestial Ardor"
+		},
+		{
+			"id": "location-celestial-ardor-bridge",
+			"name": "Puente del Celestial Ardor",
+			"description": "Puente compacto para seis puestos, iluminación cian funcional, superficies reparables y encuadres que sostienen tensión sin grandilocuencia.",
+			"referenceAssetIds": [
+				"asset-location-celestial-ardor-bridge-sheet"
+			],
+			"atmosphere": "Centro de mando"
+		},
+		{
+			"id": "location-celestial-ardor-engineering",
+			"name": "Ingeniería del Celestial Ardor",
+			"description": "Volumen axial denso, tuberías expuestas y accesos físicos. La nave se entiende como máquina mantenible, no como interior abstracto.",
+			"referenceAssetIds": [
+				"asset-location-celestial-ardor-engineering-sheet"
+			],
+			"atmosphere": "Diagnóstico y cuarentena"
+		},
+		{
+			"id": "location-diplomatic-core-room",
+			"name": "Sala del núcleo diplomático",
+			"description": "Instalación retrofit deliberadamente separada. La esfera cian, su estado rojo corrompido y la puerta sellable hacen legible la amenaza.",
+			"referenceAssetIds": [
+				"asset-location-diplomatic-core-room-sheet"
+			],
+			"atmosphere": "Escenario del sabotaje"
+		},
+		{
+			"id": "location-velari-wormhole-mouth",
+			"name": "Boca Velari del túnel",
+			"description": "Campo distribuido de nodos negros separados por kilómetros; nunca un aro. La apertura de 150–200 m sólo existe durante el pulso energético.",
+			"referenceAssetIds": [
+				"asset-location-velari-wormhole-mouth-sheet"
+			],
+			"atmosphere": "Umbral y ventana única"
+		},
+		{
+			"id": "location-velari-station",
+			"name": "Estación Velari",
+			"description": "Hábitat orgánico continuo de varios kilómetros. La escala, la piel viva y los ecosistemas internos sugieren una civilización muy anterior a la humana.",
+			"referenceAssetIds": [
+				"asset-location-velari-station-sheet"
+			],
+			"atmosphere": "Destino del primer contacto"
+		}
+	]
+}
