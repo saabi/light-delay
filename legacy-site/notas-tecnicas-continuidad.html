@@ -1,0 +1,524 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Light Delay — Notas técnicas y continuidad</title><style>
+:root{--bg:#071019;--panel:#0d1924;--panel2:#112331;--ink:#eef4f8;--muted:#91a3b4;--line:#233849;--cyan:#6ed9e8;--gold:#d7b46a;--red:#ff7b72;--green:#79d9ad;--max:900px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 88% 0,#173047 0,transparent 38rem),var(--bg);color:var(--ink);font:16px/1.68 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.shell{display:grid;grid-template-columns:280px minmax(0,1fr);min-height:100vh}.rail{position:sticky;top:0;height:100vh;padding:30px 23px;border-right:1px solid var(--line);background:#08121ddd;backdrop-filter:blur(14px);overflow:auto}.brand{display:flex;align-items:center;gap:10px;color:var(--cyan);font-weight:850;letter-spacing:.18em;font-size:.73rem;text-decoration:none;text-transform:uppercase}.orb{width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan)}.rail h2{margin:25px 0 8px;font-size:1rem;line-height:1.35}.rail p{margin:0;color:var(--muted);font-size:.8rem}.toc{margin-top:22px;display:grid;gap:3px}.toc a{padding:6px 9px;border-radius:7px;color:var(--muted);font-size:.79rem;text-decoration:none}.toc a:hover,.toc a.active{background:#152838;color:var(--ink)}main{min-width:0}.hero{padding:68px max(34px,calc((100vw - 280px - var(--max))/2)) 46px;border-bottom:1px solid var(--line)}.eyebrow{color:var(--gold);font-size:.73rem;font-weight:850;letter-spacing:.17em;text-transform:uppercase}.hero h1{max-width:940px;margin:12px 0 14px;font:700 clamp(2.35rem,5.5vw,5rem)/1 Georgia,serif;letter-spacing:-.04em}.hero .lede{max-width:760px;color:var(--muted);font-size:1.06rem}.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.pill,.time{display:inline-flex;align-items:center;border:1px solid var(--line);background:#0e1c28;color:var(--muted);border-radius:999px;padding:5px 10px;font-size:.75rem}.content{max-width:var(--max);margin:auto;padding:48px 34px 100px}.content h1,.content h2,.content h3{scroll-margin-top:26px}.content h1{margin:64px 0 20px;padding-top:25px;border-top:1px solid var(--line);font:700 2rem/1.15 Georgia,serif}.content h1:first-of-type{margin-top:12px}.content h2{margin:46px 0 17px;color:var(--cyan);font-size:1.36rem;line-height:1.3}.content h3{margin:34px 0 12px;color:var(--gold);font-size:1rem;letter-spacing:.04em;text-transform:uppercase}.content p{margin:0 0 1em}.content li{margin:8px 0}.content blockquote{margin:20px 0;padding:16px 19px;border-left:3px solid var(--cyan);background:#0e1c28;color:#c6d1db}.scene{padding:17px 19px!important;border:1px solid var(--line)!important;border-left:4px solid var(--cyan)!important;border-radius:10px;background:linear-gradient(90deg,#12283a,#0e1a26);color:var(--ink)!important;font:800 .91rem/1.48 ui-monospace,SFMono-Regular,Consolas,monospace!important}.speaker{max-width:540px;margin:23px auto 3px!important;color:var(--gold);font-weight:850;letter-spacing:.08em;text-align:center}.dialogue{max-width:570px;margin:19px auto!important}.speaker-inline{display:block;margin-bottom:2px;color:var(--gold);font-weight:850;letter-spacing:.08em;text-align:center}.time{margin:25px 0 10px;color:var(--cyan);border-color:#315969}.shot-legend{display:inline-block;max-width:100%;margin:0 0 34px;padding:17px 19px;border:1px solid #315068;border-radius:11px;background:#102230;box-shadow:0 12px 34px #0004}.shot-legend strong{display:block;margin-bottom:12px;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}.shot-grid{display:flex;flex-wrap:wrap;gap:9px 17px}.shot-item{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:.81rem}.shot-pill{display:inline-flex;align-items:center;justify-content:center;min-width:35px;height:22px;padding:0 8px;border:1px solid #39758a;border-radius:999px;background:#153747;color:#a1edf5;font:800 .7rem/1 ui-monospace,monospace;letter-spacing:.04em;white-space:nowrap}.table-wrap{overflow:auto;margin:17px 0 32px;border:1px solid var(--line);border-radius:10px}table{width:100%;border-collapse:collapse;font-size:.88rem}th{background:#132838;color:var(--cyan);font-size:.73rem;letter-spacing:.05em;text-transform:uppercase}th,td{padding:11px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}tr:last-child td{border-bottom:0}.datum{padding:12px 14px;border-left:3px solid var(--gold);background:#0e1c28}.back{display:inline-block;margin-bottom:31px;color:var(--muted);text-decoration:none;font-size:.84rem}.footer{padding:25px;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:.77rem}.status{display:inline-flex;padding:4px 8px;border-radius:99px;background:#123d40;color:#8be8df;font:800 .67rem ui-monospace,monospace;letter-spacing:.05em;text-transform:uppercase}.beat{margin:12px 0;padding:15px 17px;border:1px solid var(--line);border-radius:9px;background:#0e1a28}.beat strong{color:var(--gold)}
+.index{max-width:1120px;margin:auto;padding:68px 30px}.index .hero{padding:0 0 45px;border:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.card{min-height:255px;padding:26px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#112638,#0b1722);text-decoration:none;display:flex;flex-direction:column;transition:.2s}.card:hover{transform:translateY(-3px);border-color:var(--cyan)}.card>span{color:var(--cyan);font:800 .73rem ui-monospace,monospace}.card h2{margin:23px 0 11px;font:700 1.4rem/1.2 Georgia,serif}.card p{color:var(--muted);font-size:.87rem}.card b{margin-top:auto;color:var(--gold);font-size:.8rem}.section-label{grid-column:1/-1;margin:26px 0 0;color:var(--muted);font-size:.72rem;font-weight:850;letter-spacing:.15em;text-transform:uppercase}
+@media(max-width:850px){.shell{display:block}.rail{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}.toc{display:none}.hero{padding:46px 23px 34px}.hero h1{font-size:2.75rem}.content{padding:33px 21px 70px}}@media(max-width:680px){.grid{grid-template-columns:1fr}}@media print{body{background:#fff;color:#111;font-size:10.5pt}.shell{display:block}.rail{display:none}.hero{padding:16mm 16mm 8mm;border-color:#bbb}.hero h1{font-size:30pt}.content{max-width:none;padding:7mm 16mm 16mm}.scene,blockquote,.datum,.beat{background:#f3f5f6;color:#111!important;border-color:#aaa!important}.content h2{color:#075b6a}.content h3,.speaker{color:#76530f}.footer{border-color:#bbb}.shot-legend{background:#f3f5f6;box-shadow:none}}
+</style></head><body><div class="shell"><aside class="rail"><a class="brand" href="index.html"><span class="orb"></span>Light Delay</a><h2>Notas técnicas y continuidad</h2><p>Canon revisado · Agosto 2026</p><nav class="toc" aria-label="Contenido"></nav></aside><main><header class="hero"><div class="eyebrow">Light Delay · Canon revisado</div><h1>Light Delay — Notas técnicas y continuidad</h1><p class="lede">Reglas físicas, visuales y narrativas consolidadas para Proxima, Celestial Ardor y la tecnología Velari.</p><div class="meta"><span class="pill">Canon técnico</span><span class="pill">Diseño operacional</span><span class="pill">Sin deus ex machina</span></div></header><article class="content"><a class="back" href="index.html">← Todos los documentos</a><p><em>Este documento reemplaza por completo las notas técnicas
+anteriores. Cualquier cifra o mecanismo de documentos previos que
+contradiga lo aquí escrito queda descartado.</em></p>
+<h2 id="1-el-túnel-velari--reglas-fijas">1. El túnel Velari — reglas
+fijas</h2>
+<ul>
+<li>Construido por los Velari, no por humanos. Antigüedad desconocida,
+probablemente milenaria.</li>
+<li><strong>Garganta piloto:</strong> permanentemente abierta,
+submicroscópica. Sólo admite un repertorio fijo y de bajísimo ancho de
+banda para sincronización y desafío matemático; no es un canal
+direccionable para audio, telemetría ni datos de misión.</li>
+<li><strong>Activación:</strong> responde cuando una civilización
+demuestra el umbral tecnológico para detectarla e interpretarla y
+confirma conscientemente la aceptación. El desafío es un filtro pasivo;
+la apertura no se dispara por accidente.</li>
+<li><strong>Expansión a diámetro navegable:</strong> exige energía
+extrema, no lineal respecto del tamaño. Ni siquiera los Velari pueden
+sostenerla más de 60-90 segundos, ni reabrirla a voluntad
+inmediata.</li>
+<li><strong>Etapas del cruce:</strong> precarga (cancelable) → expansión
+crítica (punto de compromiso, no cancelable con seguridad) → apertura
+navegable (60-90s) → colapso.</li>
+<li><strong>Boca local:</strong> en órbita halo controlada alrededor de
+L2 (Sol-Júpiter), con estabilización Velari activa. L1 y L2 son
+dinámicamente inestables. <strong>Boca remota:</strong> infraestructura
+fija en su propia órbita cerca de la región de encuentro, no reubicable
+sin costo energético comparable al de la propia expansión.</li>
+<li><strong>Geometría visible:</strong> no hay aro. Cada boca es un
+campo de nodos negros separados por kilómetros o decenas de kilómetros.
+En estado piloto rodean un vacío sin estructura visible; en expansión se
+conectan mediante distorsiones y filamentos. La región navegable final
+mide aproximadamente 150–200 m.</li>
+</ul>
+<h2 id="2-proxima--origen-y-funcionamiento">2. Proxima — origen y
+funcionamiento</h2>
+<ul>
+<li><strong>Propósito original:</strong> observatorio del sistema
+joviano y laboratorio gravitacional, construido antes de reconocer
+tecnología Velari. La anomalía se infiere en la ficción a partir de
+residuos de navegación de Pioneer, Voyager, Galileo y Juno; no se
+presenta como un hallazgo real de esas misiones.</li>
+<li><strong>Descubrimiento:</strong> una red de sondas
+<em>drag-free</em>, relojes ópticos, interferometría láser y masas de
+prueba localiza la garganta piloto en L2. Sólo entonces se agregan
+xenofísica, comunicaciones, control de contacto y apoyo a la
+misión.</li>
+<li><strong>Arquitectura:</strong> eje no rotatorio de 500–800 m con
+muelles axiales, depósitos, talleres, control, reactores y antenas; dos
+hábitats cilíndricos contrarrotatorios a 0,4–0,6 g; radiadores y
+almacenamiento perpendicular; módulos peligrosos aislados en
+brazos.</li>
+<li><strong>Energía y logística:</strong> fusión en operación normal,
+fisión independiente para cargas críticas y suministro joviano de
+deuterio/helio-3.</li>
+<li><strong>Soporte vital:</strong> más de 95 % de reciclaje de agua,
+regeneración de oxígeno, eliminación de CO₂ y reservas por meses. Agua,
+polímeros y consumibles contribuyen al blindaje.</li>
+<li><strong>Continuidad visual:</strong> deben coexistir generaciones
+constructivas. Núcleo científico envejecido, ampliaciones industriales y
+capa de contacto reciente; nunca una estación construida de una vez para
+los Velari.</li>
+</ul>
+<h2 id="3-celestial-ardor--envolvente-técnica">3. Celestial Ardor —
+envolvente técnica</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Canon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Origen</td>
+<td>Construida en la Tierra para exploración y transporte científico de
+larga duración</td>
+</tr>
+<tr class="even">
+<td>Situación al descubrir la garganta</td>
+<td>Ya destinada en Proxima con su tripulación; luego adaptada para
+contacto</td>
+</tr>
+<tr class="odd">
+<td>Longitud / masa de misión</td>
+<td>80–100 m / ~300 t</td>
+</tr>
+<tr class="even">
+<td>Organización</td>
+<td>Axial; sensores → puente → hábitat/refugio → núcleo diplomático
+<em>retrofit</em> → tanques → reactor → motor</td>
+</tr>
+<tr class="odd">
+<td>Propulsión</td>
+<td>Antorcha de fusión D–³He, tobera magnética, escape efectivo
+conceptual de 10.000–15.000 km/s</td>
+</tr>
+<tr class="even">
+<td>Reservas</td>
+<td>70–80 t combinadas de combustible y masa de reacción, incluidas
+contingencias limitadas</td>
+</tr>
+<tr class="odd">
+<td>Disipación</td>
+<td>Radiadores desplegables de metal líquido; velos oscuros/rojizos
+durante empuje</td>
+</tr>
+<tr class="even">
+<td>Autonomía</td>
+<td>~2 semanas para seis tripulantes</td>
+</tr>
+<tr class="odd">
+<td>Gravedad</td>
+<td>1 g por empuje; caída libre durante inversión, cruce y maniobras sin
+motor</td>
+</tr>
+<tr class="even">
+<td>Cargas independientes</td>
+<td>Reactor auxiliar, soporte vital, navegación, medicina,
+comunicaciones, núcleo diplomático y transmisor óptico de
+contingencia</td>
+</tr>
+</tbody>
+</table></div>
+<p>Antes del cruce se recogen los radiadores, se apaga la antorcha y el
+calor pasa a acumuladores. Tras emerger, los radiadores se despliegan
+antes del nuevo encendido. Durante la inversión, la gravedad aparente no
+“se invierte”: desaparece durante la caída libre y retorna hacia el
+mismo piso después de la rotación.</p>
+<h2 id="4-arquitectura-velari--observaciones-canónicas">4. Arquitectura
+Velari — observaciones canónicas</h2>
+<ul>
+<li><strong>Estación Velari:</strong> hábitat orgánico continuo de
+varios kilómetros, sin módulos ensamblados visibles. Lóbulos, arcos,
+cavidades y vacíos; piel adaptable en reflectividad, textura,
+transparencia, geometría y emisividad.</li>
+<li><strong>Termodinámica:</strong> toda la piel puede actuar como
+radiador infrarrojo. No se distinguen reactor, combustible, tanques o
+escape, sólo gradientes energéticos enormes.</li>
+<li><strong>Habitabilidad:</strong> no gira; genera gravedad local
+controlada. Sensores humanos detectan temperaturas compatibles con vida,
+líquidos circulantes, química compleja y zonas presurizadas: más
+ecosistema construido que estación mecánica.</li>
+<li><strong>Nave emisaria:</strong> 300–600 m, orgánica y
+bioluminiscente; enorme frente a la Celestial Ardor y pequeña ante la
+estación. Sin toberas ni escape; perturbaciones métricas sugieren
+intercambio de momento con estructuras o campos externos.</li>
+<li><strong>Interior emisario:</strong> reconfigurable para recibir
+distintas biologías; este dato es una inferencia instrumental o material
+para una versión larga, no información que los humanos deban explicar en
+el cortometraje.</li>
+</ul>
+<h2 id="5-física-del-tránsito--verificada">5. Física del tránsito —
+verificada</h2>
+<p><strong>Tramo local (Proxima L1 → Boca L2):</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Radio de Hill (Júpiter)</td>
+<td>~53×10⁶ km</td>
+</tr>
+<tr class="even">
+<td>Distancia L1–L2</td>
+<td>~106×10⁶ km</td>
+</tr>
+<tr class="odd">
+<td>Perfil de vuelo</td>
+<td>1g / 1g sobre arco propulsado alrededor de Júpiter</td>
+</tr>
+<tr class="even">
+<td>Tiempo total</td>
+<td>57h 48min (28h54min por tramo)</td>
+</tr>
+<tr class="odd">
+<td>Velocidad máxima (cerca de la inversión)</td>
+<td>~1.020 km/s</td>
+</tr>
+<tr class="even">
+<td>Delta-v total</td>
+<td>~2.040 km/s</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Tramo remoto (Boca remota → Estación Velari):</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Perfil de vuelo</td>
+<td>1g / 1g, 24h totales</td>
+</tr>
+<tr class="even">
+<td>Distancia cubierta</td>
+<td>~18,3×10⁶ km</td>
+</tr>
+<tr class="odd">
+<td>Velocidad máxima</td>
+<td>~424 km/s</td>
+</tr>
+<tr class="even">
+<td>Velocidad orbital final (Velari)</td>
+<td>2,26 km/s</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Comparación con vuelo directo (sin túnel):</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Distancia Júpiter–región de encuentro</td>
+<td>167,8 UA</td>
+</tr>
+<tr class="even">
+<td>Tiempo a 1g sostenido</td>
+<td>~37 días</td>
+</tr>
+<tr class="odd">
+<td>Velocidad máxima alcanzada</td>
+<td>~15.700 km/s (~0,052c)</td>
+</tr>
+<tr class="even">
+<td>Delta-v total</td>
+<td>~31.400 km/s</td>
+</tr>
+<tr class="odd">
+<td>Limitación humana</td>
+<td>Impulsor limitado a ~90h acumuladas por masa de reacción y
+disipación térmica</td>
+</tr>
+</tbody>
+</table></div>
+<p>La cifra previa de 31.400 km/s como velocidad máxima confundía
+velocidad pico con delta-v total. Tampoco se fija una proporción
+energética exacta sin especificar impulso específico, eficiencia y
+recuperación durante el frenado.</p>
+<h2
+id="6-ventana-de-lanzamiento--dos-restricciones-independientes-jerarquizadas">6.
+Ventana de lanzamiento — dos restricciones independientes,
+jerarquizadas</h2>
+<ol type="1">
+<li><strong>Restricción dura: fase geométrica Sol-Júpiter-ancla remota
+(~11,86 años).</strong> Determina cuándo una garganta macroscópica puede
+estabilizarse; aproximadamente coincide con el período orbital de
+Júpiter.</li>
+<li><strong>Restricción secundaria: energía acumulada.</strong>
+Determina que la apertura sólo dure 60-90 segundos. La energía puede
+estar disponible antes, pero no sustituye la geometría necesaria.</li>
+</ol>
+<p><strong>Separación orbital tras 12 años (boca remota vs. estación
+Velari, hoy próximas a una configuración nodal entre órbitas con
+distinta inclinación):</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Inclinación relativa</th>
+<th>Separación en 12 años</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5°</td>
+<td>0,50 UA</td>
+</tr>
+<tr class="even">
+<td>10°</td>
+<td>1,00 UA</td>
+</tr>
+<tr class="odd">
+<td>20°</td>
+<td>1,99 UA</td>
+</tr>
+<tr class="even">
+<td>30°</td>
+<td>2,97 UA</td>
+</tr>
+<tr class="odd">
+<td>45°</td>
+<td>4,39 UA</td>
+</tr>
+<tr class="even">
+<td>60°</td>
+<td>5,73 UA</td>
+</tr>
+</tbody>
+</table></div>
+<p>Configuración canónica: inclinación ~30°. Separación actual (misión):
+~0,122 UA (18,3×10⁶ km). Separación dentro de 12 años: ~24 veces mayor.
+Próximo cruce geométrico comparable de ambas órbitas:
+<strong>posiblemente más de mil años</strong> (mitad del período orbital
+a 173 UA, ~2.275 años → ~1.138 años, sin garantía de coincidencia exacta
+si además difieren período o excentricidad).</p>
+<p><strong>Conclusión: la ventana actual es, con alta probabilidad,
+irrepetible en escala de vida humana.</strong></p>
+<h2 id="7-el-mensaje-de-zao">7. El mensaje de Zao</h2>
+<ul>
+<li><strong>Contenido final:</strong> <em>"Si esto llega... Aqueronte
+está adentro. Harlan alteró el núcleo. El registro superficial es falso.
+Crucen la rutina con el relé físico. No apaguen la mediación. Por
+favor..."</em></li>
+<li><strong>Objetivo de puntería:</strong> no requiere que Zao derive
+mecánica orbital nueva bajo presión —usa el plan de vuelo ya cargado y
+abre el haz para cubrir el corredor previsto. Sólo calcula la geometría
+de intercepción luz-nave.</li>
+<li><strong>Por qué no vía Tierra:</strong> aun sin ningún bloqueo, un
+rodeo por la Tierra añadiría más de una hora al tránsito de la señal,
+haciendo que cualquier aviso llegara después del encuentro, no antes. La
+transmisión directa es la única opción funcionalmente útil,
+independientemente de cualquier ocultación.</li>
+<li><strong>Por qué no por la garganta:</strong> la garganta piloto no
+transporta datos de misión, y además queda bloqueada durante la
+expansión crítica.</li>
+<li><strong>Por qué transmisor externo:</strong> la partición de
+seguridad del cruce separa la red interna y sella el núcleo; Harlan la
+aprovecha y falsifica el estado nominal. El transmisor de emergencia es
+físicamente independiente.</li>
+<li><strong>Por qué Harlan no bloquea la recepción:</strong> sabe que
+Zao emitió, pero desconoce el corredor exacto del haz. Cambiar la
+trayectoria haría perder el encuentro y apagar el receptor impediría
+adquirir la baliza Velari, por lo que intenta justificar el aislamiento
+del receptor justo antes de que Cael detecte la señal.</li>
+<li><strong>Tiempo de viaje de la señal:</strong> ~23h15min (167,8
+UA).</li>
+</ul>
+<h3 id="doble-llave-causal">Doble llave causal</h3>
+<ul>
+<li><strong>Investigación sin mensaje:</strong> Rao identifica el
+payload autónomo, su disparador y la cuarentena necesaria, pero sólo
+obtiene la firma anónima OVR-7C41. No puede probar quién posee el
+override ni impedir que su titular libere el payload.</li>
+<li><strong>Mensaje sin investigación:</strong> acusa a Harlan y señala
+el relé, pero no prueba por sí solo que la voz no fue sintetizada ni
+contiene el mapa técnico para detener un proceso que seguirá activo
+aunque Harlan sea arrestado.</li>
+<li><strong>Combinación:</strong> el cruce entre payload, relé físico y
+credencial de mando identifica a Harlan; Voss revoca su autoridad y Rao
+aplica la cuarentena ya preparada. Sorell aporta el saludo pasivo
+limpio.</li>
+</ul>
+<h2 id="8-motivo-de-harlan--directiva-aqueronte--texto-canónico">8.
+Motivo de Harlan / Directiva Aqueronte — texto canónico</h2>
+<blockquote>
+<p>La Directiva Aqueronte no busca la guerra como fin, sino que la
+acepta como riesgo calculado. Su convicción es que ofrecer las
+credenciales diplomáticas de la humanidad sin verificación real a una
+civilización milenios más avanzada es una ingenuidad que podría costar
+la especie entera. Para Harlan, obtener inteligencia real y comprobable
+sobre las capacidades defensivas Velari —aunque el método mismo se lea
+como agresión— es preferible a la entrega ciega. No es codicia
+tecnológica: es una doctrina de legítima defensa preventiva, aplicada
+por alguien convencido de ser el único suficientemente lúcido mientras
+los demás confían a ciegas.</p>
+</blockquote>
+<p>Aqueronte es una doctrina pública y descentralizada, no una
+organización con membresía formal. Sus protestas son legales y visibles;
+la célula que ejecuta sabotajes es clandestina. Harlan pudo superar los
+controles porque no existía una afiliación comprobable que declarar o
+detectar.</p>
+<p>El sabotaje <strong>no es apurado</strong> —tuvo 57h48min para
+ejecutarlo con cuidado. El registro físico no es un descuido: todo
+override de emergencia quema esa firma anónima en hardware y borrarla
+inutilizaría el núcleo. Harlan acepta el riesgo, confiando en la
+falsificación superficial, la muerte de Zao y su propia autoridad para
+impedir que las piezas se crucen.</p>
+<h2 id="9-cronología-maestra-consolidada">9. Cronología maestra
+consolidada</h2>
+<p>Ver Documento 1, Sección VII (idéntica en ambos documentos por
+diseño, para evitar desincronización).</p>
+<h2
+id="10-elementos-descartados-del-canon-no-usar-en-futuras-iteraciones">10.
+Elementos descartados del canon (no usar en futuras iteraciones)</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr class="header">
+<th>Elemento descartado</th>
+<th>Reemplazado por</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Burbuja de curvatura tipo Alcubierre</td>
+<td>Túnel de gusano Velari con garganta piloto</td>
+</tr>
+<tr class="even">
+<td>Maniobra "Caída y Frenado" (asistencia gravitacional en
+Júpiter)</td>
+<td>Arco propulsado 1g/1g alrededor de Júpiter, L1→L2, 57h48min</td>
+</tr>
+<tr class="odd">
+<td>Proxima y boca del túnel en el mismo punto (L1)</td>
+<td>Órbitas halo controladas alrededor de L1 y L2, ~106×10⁶ km entre
+regiones</td>
+</tr>
+<tr class="even">
+<td>Ciclo de lanzamiento "~3,8 años"</td>
+<td>~11,86 años (período orbital de Júpiter), con la separación orbital
+remota haciendo la ventana probablemente única de todos modos</td>
+</tr>
+<tr class="odd">
+<td>"Nube de Oort a 50 AU"</td>
+<td>"Región de encuentro" (~173 UA), sin invocar la nube de Oort</td>
+</tr>
+<tr class="even">
+<td>Motivo de Harlan: "robar tecnología para provocar guerra
+controlada"</td>
+<td>Doctrina de defensa preventiva por desconfianza —ver Sección 8</td>
+</tr>
+<tr class="odd">
+<td>Sabotaje "apurado, por falta de tiempo"</td>
+<td>Meticuloso; la firma de override es un costo inevitable y
+calculado</td>
+</tr>
+<tr class="even">
+<td>Ocultación por Júpiter como razón principal del aislamiento de
+Zao</td>
+<td>Partición y sellado de seguridad durante el cruce + punto de no
+retorno + ineficacia de la vía Tierra</td>
+</tr>
+<tr class="odd">
+<td>Mensaje que resuelve todo por sí solo</td>
+<td>Acusación y orientación que sólo se vuelven prueba y solución al
+combinarse con la investigación de Rao</td>
+</tr>
+<tr class="even">
+<td>Rao apareciendo recién avanzada la trama</td>
+<td>Establecida desde el lanzamiento (Escena 1, línea del 30%)</td>
+</tr>
+<tr class="odd">
+<td>Rao "ya adentro" del núcleo antes de que Harlan sellara la puerta
+sin explicación</td>
+<td>Rao permanece en un terminal protegido del puente y combate el
+payload a distancia</td>
+</tr>
+<tr class="even">
+<td>Sorell reducida a sospechosa y apoyo físico</td>
+<td>Sorell aporta el saludo limpio de sólo lectura que completa el
+contacto</td>
+</tr>
+<tr class="odd">
+<td>Proxima construida como base de contacto</td>
+<td>Estación científica joviana previa; el contacto reutiliza y amplía
+infraestructura existente</td>
+</tr>
+<tr class="even">
+<td>Celestial Ardor diseñada desde origen como nave diplomática</td>
+<td>Nave terrestre de larga duración ya destinada en Proxima; Núcleo
+Diplomático instalado como <em>retrofit</em></td>
+</tr>
+<tr class="odd">
+<td>Portal Velari como aro compacto</td>
+<td>Campo de nodos negros dispersos; región navegable de 150–200 m sólo
+durante la apertura</td>
+</tr>
+<tr class="even">
+<td>Gravedad aparente “invertida” durante el giro</td>
+<td>Caída libre, rotación de 180° y retorno de 1 g hacia el mismo
+piso</td>
+</tr>
+<tr class="odd">
+<td>Estación y nave Velari tratadas como un mismo objeto</td>
+<td>Hábitat-estación de varios km + nave emisaria de 300–600 m</td>
+</tr>
+</tbody>
+</table></div>
+<h2
+id="11-decisiones-de-consolidación-tomadas-en-este-pase-para-tu-revisión">11.
+Decisiones de consolidación tomadas en este pase (para tu revisión)</h2>
+<ol type="1">
+<li><strong>Se retiró la ocultación de la Tierra por Júpiter como
+mecanismo narrativo central.</strong> El aislamiento de Zao queda
+explicado por la partición y el sellado de seguridad del cruce,
+explotados por Harlan, más el punto de no retorno y la ineficacia de
+cualquier ruta vía Tierra.</li>
+<li><strong>Pequeñas diferencias de redondeo</strong> entre distintos
+cálculos previos (23h15min vs. 23h17min para el viaje de la señal) se
+resolvieron a favor de la cifra más verificada de forma independiente;
+la diferencia no tiene consecuencia dramática.</li>
+<li><strong>Los 30 minutos son un objetivo de montaje, no una duración
+demostrada.</strong> El nuevo documento de animatic textual asigna
+tiempos por toma; una lectura cronometrada y luego una animática real
+deberán validar o corregir esas cifras.</li>
+<li><strong>La disponibilidad inmediata deja de ser una
+coincidencia.</strong> Proxima, la Celestial Ardor y su tripulación ya
+cumplían funciones jovianas antes del descubrimiento; el Núcleo
+Diplomático fue instalado durante los años de estudio y el aviso de 60
+horas sólo exige completar el alistamiento y embarcar
+especialistas/equipo de contacto.</li>
+<li><strong>La tecnología visible expresa niveles tecnológicos
+distintos.</strong> Las soluciones humanas exponen tanques, radiadores,
+juntas y redundancias; las Velari ocultan la separación entre
+estructura, propulsión, soporte vital y disipación.</li>
+</ol>
+<h2 id="12-índice-de-documentos-vigentes">12. Índice de documentos
+vigentes</h2>
+<ol type="1">
+<li>Documento 1 — Reporte Comprensivo (canon final)</li>
+<li>Documento 2 — Biblia de Producción (canon final)</li>
+<li>Documento 3 — Guion, cortometraje 30 min (canon final)</li>
+<li>Documento 4 — este documento</li>
+<li>Documento 5 — Animatic textual / plan de tomas y duración</li>
+</ol>
+<p>Todo documento anterior a este pase de consolidación queda superado
+en caso de conflicto.</p>
+</article><footer class="footer">Light Delay · Canon revisado</footer></main></div><script>const toc=document.querySelector('.toc');const hs=[...document.querySelectorAll('.content h1,.content h2,.content h3')];hs.forEach(h=>{if(!h.id)h.id=''+h.textContent.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');const a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent;a.style.paddingLeft=((+h.tagName[1]-1)*9+8)+'px';toc.appendChild(a)});const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)document.querySelectorAll('.toc a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-15% 0px -75%'});hs.forEach(h=>io.observe(h));</script></body></html>

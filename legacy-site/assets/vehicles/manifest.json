@@ -1,0 +1,26 @@
+{
+  "project": "Light Delay",
+  "asset_type": "vehicle_model_sheets",
+  "style": "grounded cinematic hard science fiction",
+  "generated": "2026-08-24",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "items": [
+    {
+      "slug": "celestial-ardor",
+      "name": "Celestial Ardor",
+      "role": "Nave humana de tránsito",
+      "note": "Nave axial de 80–100 m y unas 300 t, antorcha D–³He, radiadores de metal líquido y dos semanas de autonomía. Construida en la Tierra y adaptada en Proxima.",
+      "file": "celestial-ardor/model-sheet.png"
+    },
+    {
+      "slug": "velari-emissary",
+      "name": "Nave emisaria Velari",
+      "role": "Interlocutor del encuentro",
+      "note": "Vehículo orgánico de 300–600 m sin motores, ventanas ni armas visibles. Comparte piel y bioluminiscencia con la estación, pero conserva silueta propia.",
+      "file": "velari-emissary/model-sheet.png"
+    }
+  ]
+}

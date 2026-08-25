@@ -1,0 +1,28 @@
+# SvelteKit / Vite
+.svelte-kit/
+build/
+dist/
+node_modules/
+.vite/
+
+# Environment and local state
+.env
+.env.*
+!.env.example
+*.local
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Tests and generated reports
+coverage/
+playwright-report/
+test-results/
+
+# Temporary exports
+*.tmp
+*.bak
+

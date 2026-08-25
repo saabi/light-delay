@@ -1,0 +1,57 @@
+# Light Delay / Luz Tardía
+
+Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas, el animatic textual de 100 tomas y sus imágenes de referencia.
+
+## Estado actual
+
+- Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
+- Animatic: 100 tomas con imagen, encuadre, audio, subtítulos y duración editable.
+- Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
+- Sitio actual: HTML/CSS/JavaScript estático, preservado como referencia funcional.
+- Próxima fase: aplicación SvelteKit con estilos/componentes unificados y datos narrativos en JSON.
+
+## Estructura
+
+```text
+.
+├── AGENTS.md                 # Reglas de continuidad para agentes
+├── README.md
+├── CHANGELOG.md
+├── docs/                     # Canon, producción, estado y procedencia
+├── data/                     # Contratos y futuros JSON canónicos
+└── legacy-site/              # Sitio HTML actual y todos sus assets
+```
+
+La raíz se deja disponible para crear el futuro proyecto SvelteKit. No debe eliminarse `legacy-site/` hasta que la nueva aplicación reproduzca todas sus páginas y el modo Película del animatic.
+
+## Abrir la versión actual
+
+Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones del navegador, también puede servirse desde la raíz con cualquier servidor HTTP estático.
+
+## Autoridad documental
+
+1. `docs/CANON_DECISIONS.md` fija las decisiones de canon vigentes.
+2. `legacy-site/guion-30-minutos.html` es el guion corto canónico actual.
+3. `legacy-site/notas-tecnicas-continuidad.html` fija las reglas físicas y de continuidad.
+4. `legacy-site/animatic-textual.html` fija la descomposición actual en tomas.
+5. `legacy-site/reporte-comprensivo.html` y la biblia de producción aportan contexto ampliado.
+
+Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
+
+## Migración prevista
+
+La siguiente fase debe:
+
+- crear SvelteKit en la raíz;
+- extraer guion, escenas, tomas, personajes, localizaciones, vehículos y utilería a JSON;
+- renderizar desde los mismos datos tanto el guion textual como el animatic;
+- compartir estilos y componentes entre documentos;
+- preservar IDs estables y rutas de assets;
+- mantener una vista editorial y una vista Película a pantalla completa.
+
+Los HTML existentes son referencia y material de migración, no el formato final de autoría.
+
+## Archivos grandes
+
+Las imágenes PNG deben almacenarse con Git LFS. Véase `.gitattributes`.
+
