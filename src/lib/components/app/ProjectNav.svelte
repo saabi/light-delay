@@ -1,19 +1,29 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { activeScriptIdFromParam } from '$lib/state/active-script.svelte';
+	import { scriptSectionHref } from '$lib/utils/scriptRouting';
+	import ScriptSwitcher from './ScriptSwitcher.svelte';
 
-	const links = [
+	const activeScriptId = $derived(activeScriptIdFromParam(page.params.scriptId));
+
+	const links = $derived([
 		{ href: '/', label: 'Inicio' },
-		{ href: '/script', label: 'Guion' },
-		{ href: '/animatic', label: 'Animatic' },
+		{ href: scriptSectionHref('script', activeScriptId), label: 'Guion', match: '/script' },
+		{
+			href: scriptSectionHref('animatic', activeScriptId),
+			label: 'Animatic',
+			match: '/animatic'
+		},
 		{ href: '/art', label: 'Arte' },
-		{ href: '/entities/characters', label: 'Entidades' },
-		{ href: '/documents/notas-tecnicas-continuidad', label: 'Documentos' }
-	];
+		{ href: '/entities/characters', label: 'Entidades', match: '/entities' },
+		{ href: '/documents/notas-tecnicas-continuidad', label: 'Documentos', match: '/documents' }
+	]);
 
-	function isActive(href: string): boolean {
+	function isActive(href: string, match?: string): boolean {
 		const path = page.url.pathname;
 		if (href === '/') return path === '/';
-		return path === href || path.startsWith(href + '/');
+		const prefix = match ?? href;
+		return path === prefix || path.startsWith(prefix + '/');
 	}
 </script>
 
@@ -22,9 +32,11 @@
 	Light Delay
 </a>
 
+<ScriptSwitcher />
+
 <nav class="nav" aria-label="Principal">
-	{#each links as link (link.href)}
-		<a href={link.href} class:active={isActive(link.href)}>{link.label}</a>
+	{#each links as link (link.label)}
+		<a href={link.href} class:active={isActive(link.href, link.match)}>{link.label}</a>
 	{/each}
 </nav>
 

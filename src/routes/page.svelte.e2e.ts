@@ -31,3 +31,15 @@ test('festival animatic page loads (draft, empty shots)', async ({ page }) => {
 	await page.goto('/animatic/script~light-delay-festival');
 	await expect(page.getByRole('heading', { name: /Festival Cut/i }).first()).toBeVisible();
 });
+
+test('script switcher from home opens chosen script', async ({ page }) => {
+	await page.goto('/');
+	await page.getByLabel('Seleccionar guion o cut').selectOption('script:light-delay-festival');
+	await expect(page).toHaveURL(/\/script\/script~light-delay-festival\/?$/);
+});
+
+test('script switcher keeps animatic section', async ({ page }) => {
+	await page.goto('/animatic/script~light-delay-main-short');
+	await page.getByLabel('Seleccionar guion o cut').selectOption('script:light-delay-festival');
+	await expect(page).toHaveURL(/\/animatic\/script~light-delay-festival\/?$/);
+});

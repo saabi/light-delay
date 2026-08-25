@@ -5,6 +5,7 @@ Fecha de corte: 2026-08-25.
 ## Completado
 
 - **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
+- **Selector de guion en el rail:** `ScriptSwitcher` en `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
 - Guion corto revisado de 17 escenas con objetivo de 30 minutos.
 - Lista de momentos clave y versión acotada sincronizadas.
 - Biblia de producción y reporte comprensivo actualizados al canon reciente.

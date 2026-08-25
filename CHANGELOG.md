@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-25 — Selector de guion en navegación
+
+- `ScriptSwitcher` en el rail (`ProjectNav`): elegir cut desde cualquier ruta del AppShell.
+- Enlaces Guion/Animatic usan el script activo; al cambiar cut se conserva la sección (guion/animatic/player) o se abre el guion elegido.
+- Persistencia del script activo en `sessionStorage`.
+
 ## 2026-08-25 — Multi-script / Festival Cut (ADR-0001)
 
 - Migración de IDs a forma `kind:slug` y unidades de guion namespaced (`main:…`, `festival:…`).
