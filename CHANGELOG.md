@@ -1,5 +1,34 @@
 # Changelog
 
+## 2026-08-26 — Referencias de escala Proxima / Celestial Ardor
+
+- Reubicadas hojas ortográficas: Proxima en `locations/proxima-station/proportional-reference.{svg,png}`, Ardor en `vehicles/celestial-ardor/proportional-reference.{svg,png}`.
+- Comparativa multi-entidad en `art-bible/scale-references/proxima-ardor-common-scale-reference.{svg,png}`.
+- Documentado el patrón en `docs/ASSET_PATH_MAP.md`; sección «Escala» en la biblia visual; assets registrados en `data/assets.json`.
+
+## 2026-08-25 — Paquete higgsfield-uploads
+
+- Staging en `higgsfield-uploads/` con hojas de personaje, localización y props renombradas (`light-delay-{kind}-{slug}.png`) para subir a Higgsfield.
+- Excluidos Harlan y Rao (TODO de redesign); regenerable con `npm run prepare:higgsfield`.
+
+## 2026-08-25 — Política narrativa: sin exposición forzada
+
+- En `AGENTS.md`: regla obligatoria de evitar exposición forzada; revelar información por pensamiento en acción y decisión del personaje (p. ej. el cálculo de Zao al apuntar el láser), no con explicaciones dirigidas al público.
+
+## 2026-08-25 — Comparación de canon y tratamiento largo recuperado
+
+- Nueva taxonomía versionada y ruta `/compare/[scriptId]?against=<ScriptId>` para comparar canon declarado, eventos principales, reparto, variantes y funciones narrativas sin inferencias editoriales.
+- Contratos y validación ampliados para variaciones de canon por script y procedencia desde scripts o documentos registrados.
+- Registrados los dos documentos históricos y su revisión autorizada en español; recuperado el reparto completo de catorce nombres.
+- Nuevo `script:light-delay-long`: tratamiento regenerable de 100 minutos, 4 actos, 28 escenas y 28 beats; adopta el canon vigente y no inventa diálogo, tomas ni assets.
+- Documentados por separado los candidatos de retropropagación a las versiones cortas y las especialidades aún no resueltas de Volkov y Tanaka.
+
+## 2026-08-25 — Retorno y fullscreen del modo película
+
+- El retorno desde Modo película centra y enfoca la toma activa en el editor mediante su ID estable.
+- Se añadió un control visible de «Pantalla completa» como alternativa fiable al intento automático que los navegadores pueden rechazar.
+- `data/README.md` se sincronizó con el registro multi-script y los assets servidos desde `static/assets/`.
+
 ## 2026-08-25 — Paridad visual del modo película
 
 - `AnimaticPlayer` rediseñado al chrome legacy: stage a pantalla completa, viñeta, meta ESCENA/TOMA, panel «Detalles de la toma», barra glass con controles icono + scrubber + «Editar tiempos».

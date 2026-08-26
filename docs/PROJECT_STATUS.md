@@ -1,13 +1,19 @@
 # Estado del proyecto
 
-Fecha de corte: 2026-08-25.
+Fecha de corte: 2026-08-26.
 
 ## Completado
 
+- **Comparación entre guiones (V1):** taxonomía versionada de 10 dimensiones de canon y 11 eventos, perfiles declarativos en los cuatro scripts y ruta `/compare/[scriptId]?against=<ScriptId>` para canon, eventos, reparto, variantes y funciones. La herramienta no infiere herencia de diálogo ni fusiones/divisiones.
+- **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
+- **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Rao, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
 - **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
 - **Selector de guion en el rail:** `ScriptSwitcher` en `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
 - **Tráiler (~1:30):** `data/scripts/light-delay-trailer.json` — 9 secuencias del brief, 29 tomas reutilizando frames del main short; regenerable con `npm run build:trailer`.
 - **Modo película:** chrome alineado al legacy (`AnimaticPlayer` fullscreen con meta, detalles flotantes y barra inferior).
+- **Higgsfield (staging):** `higgsfield-uploads/` con hojas renombradas de personajes (sin Harlan/Rao), localizaciones y props; ver `higgsfield-uploads/TODO.md`.
+- **Referencias de escala:** `proportional-reference` por entidad (Proxima, Celestial Ardor) y comparativa común en `art-bible/scale-references/`.
+- **Retorno de Modo película:** el enlace a edición restaura la toma activa mediante `?shot=` y centra/enfoca su tarjeta; hay control visible de pantalla completa.
 - Guion corto revisado de 17 escenas con objetivo de 30 minutos.
 - Lista de momentos clave y versión acotada sincronizadas.
 - Biblia de producción y reporte comprensivo actualizados al canon reciente.
@@ -31,6 +37,8 @@ Fecha de corte: 2026-08-25.
 5. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 secuencias y diálogo citado; faltan shot list, takes e imágenes canónicas de esa versión.
 6. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta afinado editorial de ritmo, posibles stills exclusivos de título y audio.
 7. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
+8. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
+9. **Retropropagación al corto.** Vega como pista falsa acotada, mayor textura de especialistas y una preparación más legible del relé son candidatos; requieren decisión narrativa independiente antes de modificar versiones cortas.
 
 ## Notas técnicas recientes
 
@@ -38,12 +46,14 @@ Fecha de corte: 2026-08-25.
 - Bootstrap SvelteKit validado. Node pin en `.nvmrc` (`25`).
 - Autoridad de esquema: tipos TypeScript de `JSON_FORMAT.md` + addendum i18n (sin Zod).
 - Política de idioma: español = fuente de verdad. Detalle en `AGENTS.md`.
-- Assets: copia en `static/assets/` (characters 12, locations 8, props 5, vehicles 3, art-bible 2, animatic 101). `legacy-site/assets/` intacto como referencia.
+- Política narrativa: evitar exposición forzada; revelar por pensamiento/decisión del personaje (véase `AGENTS.md`).
+- Assets: copia en `static/assets/` (characters 12, locations 8+proportional, props 5, vehicles 3+proportional, art-bible 2+scale-references, animatic 101). `legacy-site/assets/` intacto como referencia.
 - Documentos prose: `notas-tecnicas` extraído; resto stubs navegables pendientes de extracción editorial.
 
 ## Próxima fase técnica
 
-- Fase 7: desarrollo de contenido y herramientas editoriales (beats más finos, extracción completa de documentos, limpieza de duplicados binarios tras revisión de paridad).
+- Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial; completar documentos y beats, y limpiar duplicados binarios tras revisar paridad.
+- Revisar los tres candidatos de retropropagación sin sincronizarlos automáticamente entre scripts.
 - Refinar títulos de escena animatic vs encabezados de guion (véase `SCRIPT_ANIMATIC_SYNC.md`).
 - Pruebas de regresión ampliadas del modo Película (fullscreen, subtítulos, restauración de toma).
 
