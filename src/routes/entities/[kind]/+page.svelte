@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import EntityGallery from '$lib/components/entities/EntityGallery.svelte';
+	import { withBase } from '$lib/utils/paths';
 
 	let { data } = $props();
 </script>
@@ -13,11 +14,11 @@
 		meta={[`${data.items.length} registros`]}
 	/>
 	<nav class="kinds" aria-label="Tipos de entidad">
-		<a href="/entities/characters">Personajes</a>
-		<a href="/entities/locations">Localizaciones</a>
-		<a href="/entities/objects">Objetos</a>
-		<a href="/entities/vehicles">Vehículos</a>
-		<a href="/entities/factions">Facciones</a>
+		<a href={withBase('/entities/characters')}>Personajes</a>
+		<a href={withBase('/entities/locations')}>Localizaciones</a>
+		<a href={withBase('/entities/objects')}>Objetos</a>
+		<a href={withBase('/entities/vehicles')}>Vehículos</a>
+		<a href={withBase('/entities/factions')}>Facciones</a>
 	</nav>
 	<EntityGallery items={data.items} />
 </main>
