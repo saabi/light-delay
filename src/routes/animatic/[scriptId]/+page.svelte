@@ -4,6 +4,7 @@
 	import { getScript } from '$lib/data/repositories/index';
 	import { getShotImagePath } from '$lib/data/repositories/lookups';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
+	import { withBase } from '$lib/utils/paths';
 	import type { Scene, Shot } from '$lib/types/script';
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
@@ -25,7 +26,8 @@
 			const shots = shotsByScene[scene.id] ?? [];
 			const imageByShotId: Record<string, string | undefined> = {};
 			for (const shot of shots) {
-				imageByShotId[shot.id] = getShotImagePath(script, shot);
+				const imagePath = getShotImagePath(script, shot);
+				imageByShotId[shot.id] = imagePath ? withBase(imagePath) : undefined;
 			}
 			return { scene, shots, imageByShotId };
 		});
@@ -70,7 +72,7 @@
 			{groups}
 			scriptId={script.script.id}
 			scriptVersion={script.script.version}
-			playerHref={`/animatic/${encoded}/player`}
+			playerHref={withBase(`/animatic/${encoded}/player`)}
 			targetDurationMs={script.script.targetDurationMs}
 			{warnings}
 		/>
