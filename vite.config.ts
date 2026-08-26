@@ -2,7 +2,10 @@ import { defineConfig } from 'vitest/config';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 
-const base = process.env.BASE_PATH ?? '';
+const configuredBase = process.env.BASE_PATH;
+const base: '' | `/${string}` = configuredBase?.startsWith('/')
+	? (configuredBase as `/${string}`)
+	: '';
 
 export default defineConfig({
 	plugins: [
