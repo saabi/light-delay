@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { withBase } from '$lib/utils/paths';
+
 	let {
 		src,
 		alt = '',
@@ -8,10 +10,12 @@
 		alt?: string;
 		aspect?: string;
 	} = $props();
+
+	const resolvedSrc = $derived(src ? withBase(src) : undefined);
 </script>
 
-{#if src}
-	<img class="thumb" {src} {alt} style:aspect-ratio={aspect} loading="lazy" />
+{#if resolvedSrc}
+	<img class="thumb" src={resolvedSrc} {alt} style:aspect-ratio={aspect} loading="lazy" />
 {:else}
 	<div class="thumb missing" style:aspect-ratio={aspect} aria-hidden="true"></div>
 {/if}
