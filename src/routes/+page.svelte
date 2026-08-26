@@ -7,6 +7,7 @@
 		listScripts
 	} from '$lib/data/repositories/index';
 	import { encodeScriptId } from '$lib/utils/scriptId';
+	import { withBase } from '$lib/utils/paths';
 
 	const project = getProject().project;
 	const documents = getDocuments().documents;
@@ -25,25 +26,25 @@
 	/>
 
 	<section class="grid" aria-label="Secciones del proyecto">
-		<a class="card" href={`/script/${encodeScriptId(project.canonicalScriptId)}`}>
+		<a class="card" href={withBase(`/script/${encodeScriptId(project.canonicalScriptId)}`)}>
 			<span>01</span>
 			<h2>Guion</h2>
 			<p>Lectura del guion corto desde datos estructurados (actos, escenas, beats y cues).</p>
 			<b>Abrir guion →</b>
 		</a>
-		<a class="card" href={`/animatic/${encodeScriptId(project.canonicalScriptId)}`}>
+		<a class="card" href={withBase(`/animatic/${encodeScriptId(project.canonicalScriptId)}`)}>
 			<span>02</span>
 			<h2>Animatic</h2>
 			<p>Desglose de tomas, duraciones editables y modo película (por script).</p>
 			<b>Abrir animatic →</b>
 		</a>
-		<a class="card" href="/art">
+		<a class="card" href={withBase('/art')}>
 			<span>03</span>
 			<h2>Arte</h2>
 			<p>Galería visual de personajes, localizaciones, objetos y vehículos.</p>
 			<b>Ver arte →</b>
 		</a>
-		<a class="card" href="/entities/characters">
+		<a class="card" href={withBase('/entities/characters')}>
 			<span>04</span>
 			<h2>Entidades</h2>
 			<p>Índice de personajes, lugares, objetos, naves y facciones.</p>
@@ -57,10 +58,10 @@
 			{#each scripts as entry (entry.id)}
 				<li>
 					<div>
-						<a href={`/script/${encodeScriptId(entry.id)}`}>{entry.label}</a>
+						<a href={withBase(`/script/${encodeScriptId(entry.id)}`)}>{entry.label}</a>
 						<small>{entry.kind} · {entry.status}</small>
 					</div>
-					<a class="animatic" href={`/animatic/${encodeScriptId(entry.id)}`}>Animatic</a>
+					<a class="animatic" href={withBase(`/animatic/${encodeScriptId(entry.id)}`)}>Animatic</a>
 				</li>
 			{/each}
 		</ul>
@@ -71,7 +72,7 @@
 		<ul>
 			{#each documents as doc (doc.id)}
 				<li>
-					<a href={`/documents/${doc.slug}`}>{doc.title}</a>
+					<a href={withBase(`/documents/${doc.slug}`)}>{doc.title}</a>
 					<small>{doc.status}</small>
 				</li>
 			{/each}
