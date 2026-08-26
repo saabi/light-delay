@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import { withBase } from '$lib/utils/paths';
 
 	let { data } = $props();
 	const asset = $derived(data.asset);
@@ -15,7 +16,7 @@
 
 	{#if asset.kind === 'image'}
 		<figure>
-			<img src={asset.path} alt={asset.title ?? asset.id} />
+			<img src={withBase(asset.path)} alt={asset.title ?? asset.id} />
 			<figcaption>{asset.path}</figcaption>
 		</figure>
 	{:else}

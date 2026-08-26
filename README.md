@@ -37,6 +37,28 @@ npm run dev
 
 Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run extract:legacy`, `npm run validate:data`.
 
+## Sitio público en GitHub Pages
+
+La aplicación se publica como sitio estático de proyecto en GitHub Pages. El workflow `.github/workflows/pages.yml` valida los JSON, ejecuta `svelte-check` y las pruebas unitarias, compila con `@sveltejs/adapter-static` y publica `build/` tras cada push a `master`.
+
+Para el repositorio `saabi/light-delay`, el despliegue estándar usa la base `/light-delay` y está disponible en:
+
+```text
+https://saabi.github.io/light-delay/
+```
+
+La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
+
+GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
+
+El editor de duración del animatic continúa siendo local al navegador: no modifica el JSON ni el repositorio público.
+
+## Derechos y plataforma reutilizable
+
+La publicación del repositorio y del sitio no concede permiso para reutilizar los guiones, el canon, la historia, el arte ni los assets de Light Delay. Véanse los términos actuales en [`RIGHTS.md`](RIGHTS.md).
+
+El modelo de datos y la aplicación podrían convertirse en una plataforma para desarrollar otros guiones, pero todavía dependen directamente del contenido y de las reglas de Light Delay. La separación del motor genérico y una licencia específica para ese software se anunciarán cuando la extracción esté completa; por ahora no se ofrece la aplicación como plataforma reutilizable.
+
 ## Abrir la versión legacy
 
 Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones del navegador, también puede servirse desde la raíz con cualquier servidor HTTP estático.
@@ -52,7 +74,7 @@ Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones d
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
 
-Cuando existan copias del mismo documento en varios idiomas, editar primero el español y sincronizar el resto en la misma tarea. Detalle en `AGENTS.md`.
+Cuando existan copias del mismo documento en varios idiomas, editar primero la copia en español y sincronizar el resto en la misma tarea. Detalle en `AGENTS.md`.
 
 ## Desarrollo editorial pendiente
 

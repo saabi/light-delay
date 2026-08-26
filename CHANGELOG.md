@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-08-26 — Preparación para despliegue estático en GitHub Pages
+
+- Añadido `@sveltejs/adapter-static`, prerender global y fallback `404.html` para generar un sitio completamente estático.
+- La configuración acepta `BASE_PATH`; el workflow de Pages compila con `/light-delay` mientras el desarrollo local permanece en `/`.
+- Navegación, selector de scripts, comparación editorial prerenderizada, índices de entidades, páginas de assets y las 112 tomas/100 frames del animatic resuelven enlaces y medios mediante la base de SvelteKit; los IDs namespaced usan segmentos portables `:` → `~`.
+- Nuevo workflow `.github/workflows/pages.yml`: instala con `npm ci`, valida datos, ejecuta `svelte-check` y Vitest, compila, sube `build/` y despliega a Pages en pushes a `master`; los pull requests sólo validan el build.
+- La concurrencia del workflow queda aislada por referencia para que un PR no cancele un despliegue de `master`.
+- Eliminada la dependencia ya innecesaria `@sveltejs/adapter-auto`; `BASE_PATH` rechaza valores ambiguos con barra final.
+- README y avisos de derechos actualizados para el sitio público `https://saabi.github.io/light-delay/`: la publicación no concede derechos sobre historia, canon o assets, y la plataforma reutilizable se mantiene como objetivo futuro aún no licenciado.
+
 ## 2026-08-26 — Advertencia de Zao, comunicaciones y arquitectura de Ardor
 
 - Reescritas las escenas 5–8 del corto: Harlan activa el jammer al oír que la firma de Sorell parece falsa, corta COM A/B desde servicio y usa los dos recorridos axiales para construir su coartada.

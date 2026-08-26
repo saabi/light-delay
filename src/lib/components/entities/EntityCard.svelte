@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { withBase } from '$lib/utils/paths';
+
 	let {
 		href,
 		title,
@@ -12,11 +14,14 @@
 		imageSrc?: string;
 		eyebrow?: string;
 	} = $props();
+
+	const resolvedHref = $derived(withBase(href));
+	const resolvedImageSrc = $derived(imageSrc ? withBase(imageSrc) : undefined);
 </script>
 
-<a class="entity-card" {href}>
-	{#if imageSrc}
-		<img src={imageSrc} alt="" loading="lazy" />
+<a class="entity-card" href={resolvedHref}>
+	{#if resolvedImageSrc}
+		<img src={resolvedImageSrc} alt="" loading="lazy" />
 	{:else}
 		<div class="placeholder" aria-hidden="true"></div>
 	{/if}

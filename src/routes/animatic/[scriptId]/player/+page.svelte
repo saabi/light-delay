@@ -5,6 +5,7 @@
 	import { getCueById, getShotImagePath } from '$lib/data/repositories/lookups';
 	import { setShotIndex } from '$lib/state/player.svelte';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
+	import { withBase } from '$lib/utils/paths';
 	import type { Cue, Shot } from '$lib/types/script';
 	import { onMount } from 'svelte';
 
@@ -28,9 +29,10 @@
 				const cue = getCueById(script, placement.cueId);
 				if (cue) cues.push(cue);
 			}
+			const imagePath = getShotImagePath(script, shot);
 			return {
 				shot,
-				imageSrc: getShotImagePath(script, shot),
+				imageSrc: imagePath ? withBase(imagePath) : undefined,
 				cues
 			};
 		})
@@ -44,4 +46,4 @@
 	});
 </script>
 
-<AnimaticPlayer {script} {shots} returnHref={`/animatic/${encoded}`} />
+<AnimaticPlayer {script} {shots} returnHref={withBase(`/animatic/${encoded}`)} />

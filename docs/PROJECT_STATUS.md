@@ -4,6 +4,7 @@ Fecha de corte: 2026-08-26.
 
 ## Completado
 
+- **GitHub Pages:** repositorio público y Pages habilitado para `https://saabi.github.io/light-delay/`; build con `@sveltejs/adapter-static`, prerender global, fallback `404.html`, `BASE_PATH=/light-delay` y workflow que valida datos, tipos y pruebas antes de publicar pushes a `master`.
 - **Secuencia Zao/Harlan antes del cruce:** escenas 5–8 reescritas con cámara y diálogo coherentes: aviso parcial, jammer visible, corte físico de COM A/B, puntería del láser exterior al corredor futuro, rutas distintas en microgravedad, asesinato/limpieza, hallazgo de Sorell y coartada de Harlan. Sorell queda establecida como testigo con credencial comprometida, no como sospechosa.
 - **Animatic principal revisado:** 17 escenas, 112 tomas y 30:00. Las 33 tomas afectadas en escenas 5–8 reutilizan 21 frames heredados; 12 tomas son nuevas. No se regeneraron imágenes.
 - **Arquitectura mínima de Celestial Ardor:** vestíbulo axial encuadrable desde el puente, acceso de servicio oculto, cilindros central/servicio, distribuidor COM A/B y control físico dedicado del láser incorporados a canon, datos y notas técnicas.
@@ -27,7 +28,7 @@ Fecha de corte: 2026-08-26.
 - 100 imágenes 1536 × 864 reutilizadas por 112 takes; los reemplazos pendientes están registrados en `TODO.md` y en notas de toma.
 - Modo Película con subtítulos, controles, timeline y panel de detalles.
 - Edición de duraciones con persistencia local y recálculo del total.
-- Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright, `adapter-auto`).
+- Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright).
 - Fase 0 de migración: inventario HTML/assets; 17 escenas / 100 tomas / 100 frames verificados; mapa `static/assets`; stub de sync guion↔animatic.
 - Fase 1 (+ extracción inicial): tipos TypeScript, validadores a mano, loaders/repositorios/selectores, JSON en `data/` (17 escenas / 100 tomas / 98 diálogos ES), `npm run extract:legacy` y `npm run validate:data`.
 - Fases 2–6 (aplicación): shell + documentos; copia de assets a `static/assets/`; rutas de arte/entidades/assets; lector de guion; editor de animatic; player a pantalla completa. Medios solo vía `/assets/...`.
@@ -46,6 +47,7 @@ Fecha de corte: 2026-08-26.
 
 ## Notas técnicas recientes
 
+- GitHub Pages: build estático con `adapter-static`; `BASE_PATH` permite desarrollo local en `/` y publicación estándar en `/light-delay/`; rutas y medios públicos pasan por helpers de base path. La concurrencia del workflow se separa por referencia.
 - Inventario: `docs/MIGRATION_INVENTORY.md`. Sync: `docs/SCRIPT_ANIMATIC_SYNC.md`. Rutas: `docs/ASSET_PATH_MAP.md`.
 - Bootstrap SvelteKit validado. Node pin en `.nvmrc` (`25`).
 - Autoridad de esquema: tipos TypeScript de `JSON_FORMAT.md` + addendum i18n (sin Zod).
@@ -57,6 +59,7 @@ Fecha de corte: 2026-08-26.
 
 ## Próxima fase técnica
 
+- Separar en el futuro el motor genérico de autoría/consulta y el paquete de contenido de Light Delay antes de ofrecer una plataforma reutilizable con licencia propia.
 - Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial; completar documentos y beats, y limpiar duplicados binarios tras revisar paridad.
 - Revisar los tres candidatos de retropropagación sin sincronizarlos automáticamente entre scripts.
 - Refinar títulos de escena animatic vs encabezados de guion (véase `SCRIPT_ANIMATIC_SYNC.md`).
