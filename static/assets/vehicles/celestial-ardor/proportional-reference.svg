@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1050" viewBox="0 0 1700 1050" role="img" aria-labelledby="title desc">
+<title id="title">Celestial Ardor — proportional orthographic reference</title>
+<desc id="desc">Dimensionally proportional side cutaway of the Celestial Ardor, 90 m long by 18 m maximum diameter, with transverse decks and three axial circulation trunks.</desc>
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L8,4 L0,8 z" fill="#24435f"/>
+  </marker>
+  <marker id="arrow2" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto" markerUnits="strokeWidth">
+    <path d="M8,0 L0,4 L8,8 z" fill="#24435f"/>
+  </marker>
+</defs>
+<style>
+  .bg { fill:#f7f9fb; }
+  .panel { fill:#ffffff; stroke:#b9c7d3; stroke-width:1.2; }
+  .ink { fill:#10253d; font-family:Segoe UI, Arial, sans-serif; }
+  .title { font-size:34px; font-weight:800; letter-spacing:.6px; }
+  .subtitle { font-size:15px; font-weight:700; fill:#8b6400; letter-spacing:.5px; }
+  .h { font-size:17px; font-weight:800; fill:#173f67; }
+  .sh { font-size:12px; font-weight:800; fill:#173f67; }
+  .body { font-size:11.5px; fill:#26394b; }
+  .small { font-size:10px; fill:#465d70; }
+  .tiny { font-size:8.5px; fill:#50677a; }
+  .outline { fill:none; stroke:#20384f; stroke-width:2.5; }
+  .thin { fill:none; stroke:#5a7185; stroke-width:1.2; }
+  .dim { fill:none; stroke:#24435f; stroke-width:1.2; marker-start:url(#arrow2); marker-end:url(#arrow); }
+  .dash { stroke-dasharray:7 5; }
+  .center { text-anchor:middle; }
+  .right { text-anchor:end; }
+</style>
+<rect width="1700" height="1050" class="bg"/>
+
+<text x="42" y="55" class="ink title">CELESTIAL ARDOR</text>
+<text x="44" y="82" class="ink subtitle">ORTHOGRAPHIC REFERENCE · PROPORTIONAL GEOMETRY</text>
+<text x="44" y="105" class="ink body">Working envelope: 90 m length × 18 m max hull diameter · all geometry below uses a single linear scale.</text>
+
+<rect x="40" y="135" width="230" height="300" rx="10" class="panel"/>
+<text x="60" y="168" class="ink h">DIMENSION LOCK</text>
+<text x="60" y="198" class="ink sh">LENGTH</text><text x="60" y="216" class="ink body">90 m</text>
+<text x="60" y="244" class="ink sh">MAX DIAMETER</text><text x="60" y="262" class="ink body">18 m</text>
+<text x="60" y="290" class="ink sh">ASPECT RATIO</text><text x="60" y="308" class="ink body">5 : 1</text>
+<text x="60" y="336" class="ink sh">GRAVITY</text><text x="60" y="354" class="ink body">~1 g by sustained thrust</text>
+<text x="60" y="382" class="ink sh">DECK ORIENTATION</text><text x="60" y="400" class="ink body">perpendicular to thrust axis</text>
+
+<text x="320" y="150" class="ink h">TRUE-PROPORTION LONGITUDINAL CUTAWAY</text>
+<line x1="320" y1="175" x2="640" y2="175" stroke="#24435f" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="330" y="167" class="ink small">BOW / PROGRADE / UP</text>
+<line x1="1400.0" y1="175" x2="1080.0" y2="175" stroke="#8b6400" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="1390.0" y="167" class="ink small right">STERN / ENGINE / DOWN</text>
+
+<path d="M 320.0,318.4 L 344.0,292.0 L 380.0,260.8 L 440.0,240.4 L 536.0,232.0 L 1040.0,232.0 L 1184.0,238.0 L 1280.0,253.6 L 1340.0,270.4 L 1400.0,304.0 L 1400.0,376.0 L 1340.0,409.6 L 1280.0,426.4 L 1184.0,442.0 L 1040.0,448.0 L 536.0,448.0 L 440.0,439.6 L 380.0,419.2 L 344.0,388.0 L 320.0,361.6 Z" fill="#e8eef3" stroke="#20384f" stroke-width="3"/>
+<defs><clipPath id="ardorHull"><path d="M 320.0,318.4 L 344.0,292.0 L 380.0,260.8 L 440.0,240.4 L 536.0,232.0 L 1040.0,232.0 L 1184.0,238.0 L 1280.0,253.6 L 1340.0,270.4 L 1400.0,304.0 L 1400.0,376.0 L 1340.0,409.6 L 1280.0,426.4 L 1184.0,442.0 L 1040.0,448.0 L 536.0,448.0 L 440.0,439.6 L 380.0,419.2 L 344.0,388.0 L 320.0,361.6 Z"/></clipPath></defs>
+<rect x="320.0" y="232.0" width="60.0" height="216.0" fill="#d9e8f3" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="380.0" y1="232.0" x2="380.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="380.0" y="232.0" width="120.0" height="216.0" fill="#b9d9f1" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="500.0" y1="232.0" x2="500.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="500.0" y="232.0" width="120.0" height="216.0" fill="#c7e2ed" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="620.0" y1="232.0" x2="620.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="620.0" y="232.0" width="156.0" height="216.0" fill="#f2dfac" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="776.0" y1="232.0" x2="776.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="776.0" y="232.0" width="132.0" height="216.0" fill="#cee2c9" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="908.0" y1="232.0" x2="908.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="908.0" y="232.0" width="120.0" height="216.0" fill="#e3c6e7" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="1028.0" y1="232.0" x2="1028.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="1028.0" y="232.0" width="120.0" height="216.0" fill="#bcded8" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="1148.0" y1="232.0" x2="1148.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="1148.0" y="232.0" width="84.0" height="216.0" fill="#d4c8e2" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="1232.0" y1="232.0" x2="1232.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="1232.0" y="232.0" width="72.0" height="216.0" fill="#d7dfc5" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="1304.0" y1="232.0" x2="1304.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="1304.0" y="232.0" width="48.0" height="216.0" fill="#efc0b4" clip-path="url(#ardorHull)" opacity=".92"/>
+<line x1="1352.0" y1="232.0" x2="1352.0" y2="448.0" stroke="#40586d" stroke-width="2.2" clip-path="url(#ardorHull)"/>
+<rect x="1352.0" y="232.0" width="48.0" height="216.0" fill="#c6d5e4" clip-path="url(#ardorHull)" opacity=".92"/>
+
+<rect x="368.0" y="330" width="852.0" height="20" rx="10" fill="#f7f7f7" stroke="#333f49" stroke-width="2.4"/>
+<rect x="368.0" y="287.4" width="852.0" height="14" rx="7" fill="#f7df9a" stroke="#9a6900" stroke-width="2"/>
+<rect x="368.0" y="379.6" width="852.0" height="12" rx="6" fill="#b6ddf4" stroke="#23658c" stroke-width="2"/>
+<text x="788.0" y="324" class="ink tiny center">MAIN ACCESS CYLINDER · axial</text>
+<text x="788.0" y="282.4" class="ink tiny center">ELEVATOR SHAFT</text>
+<text x="788.0" y="405.6" class="ink tiny center">SERVICE CYLINDER</text>
+
+<rect x="292" y="320" width="28" height="40" rx="5" fill="#f5f7f9" stroke="#20384f" stroke-width="2.2"/>
+<circle cx="296" cy="340" r="7" fill="#9bd0ed" stroke="#23658c" stroke-width="1.8"/>
+<path d="M330,277.4 Q354,250.4 378,273.0" fill="none" stroke="#4b8fc3" stroke-width="5"/>
+<path d="M330,402.6 Q354,429.6 378,407.0" fill="none" stroke="#4b8fc3" stroke-width="5"/>
+<text x="348" y="214.0" class="ink sh center">BOW DOCK + ANNULAR SENSOR CROWN</text>
+
+<circle cx="968.0" cy="281.2" r="24" fill="#b886c4" stroke="#6d3d7b" stroke-width="3"/>
+<circle cx="968.0" cy="281.2" r="10" fill="#d7f5ff" stroke="#5aa6c4" stroke-width="2"/>
+<text x="968.0" y="247.2" class="ink tiny center">DIPLOMATIC CORE · retrofit · off-axis</text>
+
+<circle cx="1328.0" cy="340" r="34" fill="#b95c48" stroke="#6e2f22" stroke-width="4"/>
+<circle cx="1328.0" cy="340" r="15" fill="#f0a275" stroke="#8c4d37" stroke-width="2.5"/>
+<path d="M1352.0,295 L1400.0,316 L1448.0,329 L1448.0,351 L1400.0,364 L1352.0,385 Z" fill="#879eb3" stroke="#40586d" stroke-width="2.5"/>
+<path d="M1443.0,331 L1490.0,340 L1443.0,349 Z" fill="#9edaf6" opacity=".85"/>
+<text x="350.0" y="476.0" class="ink tiny center">DOCK/SENSORS</text>
+<text x="440.0" y="476.0" class="ink tiny center">COMMAND</text>
+<text x="560.0" y="476.0" class="ink tiny center">MISSION</text>
+<text x="698.0" y="476.0" class="ink tiny center">HABITAT</text>
+<text x="842.0" y="476.0" class="ink tiny center">SUPPORT</text>
+<text x="968.0" y="476.0" class="ink tiny center">DIPLOMATIC</text>
+<text x="1088.0" y="476.0" class="ink tiny center">ENGINEERING</text>
+<text x="1190.0" y="476.0" class="ink tiny center">CARGO</text>
+<text x="1268.0" y="476.0" class="ink tiny center">TANKS</text>
+<text x="1328.0" y="476.0" class="ink tiny center">REACTOR</text>
+<text x="1376.0" y="476.0" class="ink tiny center">ENGINE</text>
+
+<line x1="320" y1="533.0" x2="1400.0" y2="533.0" class="dim"/>
+<line x1="320" y1="523.0" x2="320" y2="543.0" class="thin"/>
+<line x1="1400.0" y1="523.0" x2="1400.0" y2="543.0" class="thin"/>
+<text x="860.0" y="523.0" class="ink sh center">90 m OVERALL LENGTH</text>
+
+<line x1="1470.0" y1="232.0" x2="1470.0" y2="448.0" class="dim"/>
+<line x1="1460.0" y1="232.0" x2="1480.0" y2="232.0" class="thin"/>
+<line x1="1460.0" y1="448.0" x2="1480.0" y2="448.0" class="thin"/>
+<text x="1492.0" y="345" class="ink sh">18 m MAX</text>
+
+<rect x="40" y="670" width="1620" height="330" rx="10" class="panel"/>
+<text x="64" y="703" class="ink h">TRUE TRANSVERSE SECTIONS · SAME SHIP SCALE</text>
+<text x="64" y="725" class="ink small">These are perpendicular to the acceleration axis. Their diameters correspond to the side-profile envelope above.</text>
+<circle cx="300" cy="845" r="108.0" fill="#edf2f5" stroke="#20384f" stroke-width="2.8"/>
+<circle cx="300" cy="845" r="19" fill="#f7f7f7" stroke="#333f49" stroke-width="2"/>
+<circle cx="300" cy="799" r="13" fill="#f7df9a" stroke="#9a6900" stroke-width="2"/>
+<circle cx="300" cy="891" r="11" fill="#b6ddf4" stroke="#23658c" stroke-width="2"/>
+<line x1="300" y1="845" x2="396.0" y2="845.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="300" y1="845" x2="367.9" y2="912.9" stroke="#aebbc7" stroke-width="1"/>
+<line x1="300" y1="845" x2="300.0" y2="941.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="300" y1="845" x2="232.1" y2="912.9" stroke="#aebbc7" stroke-width="1"/>
+<line x1="300" y1="845" x2="204.0" y2="845.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="300" y1="845" x2="232.1" y2="777.1" stroke="#aebbc7" stroke-width="1"/>
+<line x1="300" y1="845" x2="300.0" y2="749.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="300" y1="845" x2="367.9" y2="777.1" stroke="#aebbc7" stroke-width="1"/>
+<text x="300" y="977.0" class="ink sh center">HABITAT / 18 m</text>
+<line x1="192.0" y1="1003.0" x2="408.0" y2="1003.0" class="dim"/>
+<text x="300" y="995.0" class="ink tiny center">18 m</text>
+<circle cx="760" cy="845" r="108.0" fill="#edf2f5" stroke="#20384f" stroke-width="2.8"/>
+<circle cx="760" cy="845" r="19" fill="#f7f7f7" stroke="#333f49" stroke-width="2"/>
+<circle cx="760" cy="799" r="13" fill="#f7df9a" stroke="#9a6900" stroke-width="2"/>
+<circle cx="760" cy="891" r="11" fill="#b6ddf4" stroke="#23658c" stroke-width="2"/>
+<line x1="760" y1="845" x2="856.0" y2="845.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="760" y1="845" x2="827.9" y2="912.9" stroke="#aebbc7" stroke-width="1"/>
+<line x1="760" y1="845" x2="760.0" y2="941.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="760" y1="845" x2="692.1" y2="912.9" stroke="#aebbc7" stroke-width="1"/>
+<line x1="760" y1="845" x2="664.0" y2="845.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="760" y1="845" x2="692.1" y2="777.1" stroke="#aebbc7" stroke-width="1"/>
+<line x1="760" y1="845" x2="760.0" y2="749.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="760" y1="845" x2="827.9" y2="777.1" stroke="#aebbc7" stroke-width="1"/>
+<text x="760" y="977.0" class="ink sh center">DIPLOMATIC / 18 m</text>
+<line x1="652.0" y1="1003.0" x2="868.0" y2="1003.0" class="dim"/>
+<text x="760" y="995.0" class="ink tiny center">18 m</text>
+<circle cx="1220" cy="845" r="108.0" fill="#edf2f5" stroke="#20384f" stroke-width="2.8"/>
+<circle cx="1220" cy="845" r="19" fill="#f7f7f7" stroke="#333f49" stroke-width="2"/>
+<circle cx="1220" cy="799" r="13" fill="#f7df9a" stroke="#9a6900" stroke-width="2"/>
+<circle cx="1220" cy="891" r="11" fill="#b6ddf4" stroke="#23658c" stroke-width="2"/>
+<line x1="1220" y1="845" x2="1316.0" y2="845.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="1220" y1="845" x2="1287.9" y2="912.9" stroke="#aebbc7" stroke-width="1"/>
+<line x1="1220" y1="845" x2="1220.0" y2="941.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="1220" y1="845" x2="1152.1" y2="912.9" stroke="#aebbc7" stroke-width="1"/>
+<line x1="1220" y1="845" x2="1124.0" y2="845.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="1220" y1="845" x2="1152.1" y2="777.1" stroke="#aebbc7" stroke-width="1"/>
+<line x1="1220" y1="845" x2="1220.0" y2="749.0" stroke="#aebbc7" stroke-width="1"/>
+<line x1="1220" y1="845" x2="1287.9" y2="777.1" stroke="#aebbc7" stroke-width="1"/>
+<text x="1220" y="977.0" class="ink sh center">ENGINEERING / 18 m</text>
+<line x1="1112.0" y1="1003.0" x2="1328.0" y2="1003.0" class="dim"/>
+<text x="1220" y="995.0" class="ink tiny center">18 m</text>
+
+<text x="1510" y="815" class="ink small">
+  <tspan x="1510" dy="0">Legend:</tspan>
+  <tspan x="1510" dy="18">center = main access</tspan>
+  <tspan x="1510" dy="18">upper = elevator</tspan>
+  <tspan x="1510" dy="18">lower = service</tspan>
+</text>
+<text x="44" y="1030" class="ink tiny">Reference intent: image-generation / concept-art geometry guide. Exterior detailing may vary, but silhouette proportions and axial architecture should not.</text>
+</svg>

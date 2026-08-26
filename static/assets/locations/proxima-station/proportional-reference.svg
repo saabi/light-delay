@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1250" viewBox="0 0 1900 1250" role="img" aria-labelledby="title desc">
+<title id="title">Estación Proxima — referencia ortográfica proporcional</title>
+<desc id="desc">Vista lateral y vista axial de Proxima con espina de 650 metros, hábitats contrarrotatorios de 150 metros de radio y Celestial Ardor de 90 por 18 metros atracada a la misma escala.</desc>
+<defs>
+  <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0L8,4L0,8Z" fill="#24435f"/></marker>
+  <marker id="a2" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M8,0L0,4L8,8Z" fill="#24435f"/></marker>
+</defs>
+<style>
+.bg{fill:#f7f9fb} .panel{fill:#fff;stroke:#b9c7d3;stroke-width:1.2}
+.ink{fill:#10253d;font-family:Segoe UI,Arial,sans-serif}
+.title{font-size:34px;font-weight:800} .subtitle{font-size:15px;font-weight:700;fill:#8b6400;letter-spacing:.5px}
+.h{font-size:17px;font-weight:800;fill:#173f67} .sh{font-size:12px;font-weight:800;fill:#173f67}
+.body{font-size:11.5px;fill:#26394b} .small{font-size:10px;fill:#465d70} .tiny{font-size:8.5px;fill:#50677a}
+.dim{fill:none;stroke:#24435f;stroke-width:1.2;marker-start:url(#a2);marker-end:url(#a)}
+.thin{fill:none;stroke:#5a7185;stroke-width:1.2} .center{text-anchor:middle} .right{text-anchor:end}
+</style>
+<rect width="1900" height="1250" class="bg"/>
+
+<text x="42" y="55" class="ink title">ESTACIÓN PROXIMA</text>
+<text x="44" y="82" class="ink subtitle">ORTHOGRAPHIC REFERENCE · TRUE PROPORTIONS</text>
+<text x="44" y="105" class="ink body">650 m non-rotating spine · two 150 m-radius counterrotating habitats · Celestial Ardor shown at identical linear scale.</text>
+
+<rect x="40" y="135" width="250" height="330" rx="10" class="panel"/>
+<text x="60" y="168" class="ink h">LOCKED DIMENSIONS</text>
+<text x="60" y="198" class="ink sh">SPINE LENGTH</text><text x="60" y="216" class="ink body">650 m</text>
+<text x="60" y="244" class="ink sh">HABITAT RADIUS</text><text x="60" y="262" class="ink body">150 m</text>
+<text x="60" y="290" class="ink sh">HABITAT DIAMETER</text><text x="60" y="308" class="ink body">300 m</text>
+<text x="60" y="336" class="ink sh">NOMINAL GRAVITY</text><text x="60" y="354" class="ink body">~0.5 g</text>
+<text x="60" y="382" class="ink sh">ROTATION @ 150 m</text><text x="60" y="400" class="ink body">~1.73 rpm</text>
+<text x="60" y="428" class="ink sh">DRUM AXIAL LENGTH</text><text x="60" y="446" class="ink body">110 m · working value</text>
+
+<text x="520" y="150" class="ink h">SIDE ELEVATION · ALL DIMENSIONS PROPORTIONAL</text>
+<rect x="520" y="370.2" width="1072.5" height="39.599999999999994" rx="8" fill="#b8c4ce" stroke="#20384f" stroke-width="3"/>
+<line x1="520" y1="390" x2="1592.5" y2="390" stroke="#647a8b" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="503.25" y="322" width="116" height="136" rx="12" fill="#aebbc7" stroke="#20384f" stroke-width="3"/>
+<text x="561.25" y="304" class="ink sh center">EXTERNAL AXIAL DOCK NODE</text>
+<line x1="503.25" y1="342" x2="421.25" y2="342" stroke="#657a8c" stroke-width="8"/>
+<rect x="401.25" y="330" width="24" height="24" rx="4" fill="#f5f7f9" stroke="#20384f" stroke-width="2"/>
+<text x="391.25" y="345" class="ink tiny right">BERTH 1</text>
+<line x1="503.25" y1="374" x2="421.25" y2="374" stroke="#657a8c" stroke-width="8"/>
+<rect x="401.25" y="362" width="24" height="24" rx="4" fill="#f5f7f9" stroke="#20384f" stroke-width="2"/>
+<text x="391.25" y="377" class="ink tiny right">BERTH 2</text>
+<line x1="503.25" y1="406" x2="421.25" y2="406" stroke="#657a8c" stroke-width="8"/>
+<rect x="401.25" y="394" width="24" height="24" rx="4" fill="#f5f7f9" stroke="#20384f" stroke-width="2"/>
+<text x="391.25" y="409" class="ink tiny right">BERTH 3</text>
+<line x1="503.25" y1="438" x2="421.25" y2="438" stroke="#657a8c" stroke-width="8"/>
+<rect x="401.25" y="426" width="24" height="24" rx="4" fill="#f5f7f9" stroke="#20384f" stroke-width="2"/>
+<text x="391.25" y="441" class="ink tiny right">BERTH 4</text>
+<path d="M401.25,406
+L390.25,391.15
+L276.75,391.15
+L252.75,406
+L276.75,420.85
+L390.25,420.85Z"
+fill="#e7edf2" stroke="#20384f" stroke-width="2"/>
+<text x="327.0" y="439.85" class="ink tiny center">CELESTIAL ARDOR · 90 × 18 m</text>
+<rect x="627.25" y="309.95" width="198.0" height="56.099999999999994" rx="8" fill="#d9e8f3" stroke="#536b7f" stroke-width="2"/>
+<text x="726.25" y="342" class="ink tiny center">OLD SCIENCE CORE</text>
+<rect x="701.5" y="406.95" width="239.25" height="56.099999999999994" rx="8" fill="#c7e2ed" stroke="#536b7f" stroke-width="2"/>
+<text x="821.125" y="439" class="ink tiny center">LABS / CONTROL</text>
+<rect x="1378.0" y="306.95" width="112.19999999999999" height="56.099999999999994" rx="8" fill="#e3c6e7" stroke="#536b7f" stroke-width="2"/>
+<text x="1434.1" y="339" class="ink tiny center">RECENT CONTACT</text>
+<rect x="1382.9499999999998" y="410.6" width="128.7" height="52.8" rx="8" fill="#cee2c9" stroke="#536b7f" stroke-width="2"/>
+<text x="1447.2999999999997" y="441" class="ink tiny center">WORKSHOPS / STORES</text>
+
+<rect x="940.75" y="142.5" width="181.5" height="495.0" rx="28" fill="#f1e0aa" stroke="#8c6f2e" stroke-width="4"/>
+<rect x="958.75" y="160.5" width="145.5" height="459.0" rx="24" fill="#f8edc8" stroke="#b89954" stroke-width="2"/>
+<line x1="1031.5" y1="172.5" x2="1031.5" y2="607.5" stroke="#c5a55b" stroke-width="1.4"/>
+<rect x="1001.5" y="362" width="60" height="56" fill="#cbd5df" stroke="#20384f" stroke-width="2"/>
+<text x="1031.5" y="124.5" class="ink sh center">HABITAT A ↻</text>
+
+<rect x="1171.75" y="142.5" width="181.5" height="495.0" rx="28" fill="#f1e0aa" stroke="#8c6f2e" stroke-width="4"/>
+<rect x="1189.75" y="160.5" width="145.5" height="459.0" rx="24" fill="#f8edc8" stroke="#b89954" stroke-width="2"/>
+<line x1="1262.5" y1="172.5" x2="1262.5" y2="607.5" stroke="#c5a55b" stroke-width="1.4"/>
+<rect x="1232.5" y="362" width="60" height="56" fill="#cbd5df" stroke="#20384f" stroke-width="2"/>
+<text x="1262.5" y="124.5" class="ink sh center">HABITAT B ↺</text>
+<rect x="874.75" y="74.5" width="49.5" height="22" fill="#4b5560" stroke="#273542" stroke-width="2"/>
+<rect x="874.75" y="683.5" width="49.5" height="22" fill="#4b5560" stroke="#273542" stroke-width="2"/>
+<rect x="932.5" y="74.5" width="49.5" height="22" fill="#4b5560" stroke="#273542" stroke-width="2"/>
+<rect x="932.5" y="683.5" width="49.5" height="22" fill="#4b5560" stroke="#273542" stroke-width="2"/>
+<text x="906.0999999999999" y="62.5" class="ink tiny center">RADIATORS / THERMAL STORAGE</text>
+<line x1="1534.75" y1="386" x2="1622.75" y2="272" stroke="#62788b" stroke-width="7"/>
+<circle cx="1642.75" cy="247" r="34" fill="#efc0b4" stroke="#873e2f" stroke-width="3"/>
+<text x="1642.75" y="251" class="ink tiny center">ISOLATED</text>
+
+<line x1="520" y1="719.5" x2="1592.5" y2="719.5" class="dim"/>
+<text x="1056.25" y="709.5" class="ink sh center">650 m NON-ROTATING SPINE</text>
+
+<line x1="1160.25" y1="142.5" x2="1160.25" y2="637.5" class="dim"/>
+<text x="1172.25" y="394" class="ink sh">300 m</text>
+
+<rect x="40" y="720" width="1815" height="455" rx="10" class="panel"/>
+<text x="65" y="755" class="ink h">AXIAL / END-ON VIEW · CIRCULAR HABITAT GEOMETRY</text>
+<text x="65" y="778" class="ink small">This inset uses a second, explicitly marked scale so the 300 m circular diameter is unambiguous. It does not alter the side-elevation proportions above.</text>
+<circle cx="650" cy="940" r="202.94999999999996" fill="#f1e0aa" stroke="#8c6f2e" stroke-width="4"/>
+<circle cx="650" cy="940" r="183.94999999999996" fill="#f8edc8" stroke="#b89954" stroke-width="2"/>
+<circle cx="650" cy="940" r="24.353999999999996" fill="#cbd5df" stroke="#20384f" stroke-width="2"/>
+<line x1="447.05000000000007" y1="1184.95" x2="852.9499999999999" y2="1184.95" class="dim"/>
+<text x="650" y="1176.95" class="ink sh center">300 m DIAMETER</text>
+<line x1="650" y1="940" x2="852.9499999999999" y2="940" class="dim"/>
+<text x="751.475" y="930" class="ink sh center">150 m RADIUS</text>
+
+<circle cx="650" cy="940" r="9.470999999999998" fill="#d9e8f3" stroke="#20384f" stroke-width="2"/>
+<text x="650" y="945" class="ink tiny center">SPINE</text>
+<text x="650" y="717.0500000000001" class="ink sh center">HABITAT A / B SHARE THE SAME 150 m RADIUS</text>
+
+<text x="1110" y="845" class="ink h">SCALE RELATIONSHIP</text>
+<text x="1110" y="880" class="ink body">• Proxima spine: 650 m</text>
+<text x="1110" y="905" class="ink body">• Habitat diameter: 300 m</text>
+<text x="1110" y="930" class="ink body">• Celestial Ardor: 90 m × 18 m</text>
+<text x="1110" y="955" class="ink body">• Ardor length = 13.8% of spine length</text>
+<text x="1110" y="980" class="ink body">• Habitat diameter = 3.33× Ardor length</text>
+<text x="1110" y="1005" class="ink body">• Habitat diameter = 16.67× Ardor diameter</text>
+<text x="1110" y="1045" class="ink small">Image-generation constraint:</text>
+<text x="1110" y="1065" class="ink small">Do not enlarge the Ardor relative to Proxima for readability.</text>
+<text x="1110" y="1085" class="ink small">Do not shrink the rotating habitats into decorative rings.</text>
+<text x="1110" y="1105" class="ink small">They are genuinely ~300 m across.</text>
+
+<line x1="1110" y1="1140" x2="1245.3" y2="1140" stroke="#20384f" stroke-width="4"/>
+<line x1="1110" y1="1131" x2="1110" y2="1149" stroke="#20384f" stroke-width="2"/>
+<line x1="1245.3" y1="1131" x2="1245.3" y2="1149" stroke="#20384f" stroke-width="2"/>
+<text x="1177.65" y="1165" class="ink sh center">100 m · inset scale</text>
+
+<text x="44" y="1228" class="ink tiny">Reference intent: concept-art / image-generation geometry guide. Surface detailing and module styling may vary; locked dimensions and relative scale should not.</text>
+</svg>

@@ -9,11 +9,44 @@
     "vehicles": "../vehicles/manifest.json",
     "props": "../props/manifest.json"
   },
+  "scale_references": [
+    {
+      "slug": "proxima-ardor-common-scale",
+      "name": "Proxima + Celestial Ardor",
+      "role": "Silueta a escala común",
+      "note": "Comparativa multi-entidad; no sustituye concept/model sheets.",
+      "files": [
+        "scale-references/proxima-ardor-common-scale-reference.png",
+        "scale-references/proxima-ardor-common-scale-reference.svg"
+      ]
+    },
+    {
+      "slug": "proxima-station-proportional",
+      "name": "Estación Proxima — ortográfica",
+      "role": "Proporciones de entidad",
+      "note": "Vive con la localización; listada aquí para descubrimiento.",
+      "files": [
+        "../locations/proxima-station/proportional-reference.png",
+        "../locations/proxima-station/proportional-reference.svg"
+      ]
+    },
+    {
+      "slug": "celestial-ardor-proportional",
+      "name": "Celestial Ardor — ortográfica",
+      "role": "Proporciones de entidad",
+      "note": "Vive con el vehículo; listada aquí para descubrimiento.",
+      "files": [
+        "../vehicles/celestial-ardor/proportional-reference.png",
+        "../vehicles/celestial-ardor/proportional-reference.svg"
+      ]
+    }
+  ],
   "counts": {
     "character_sheets": 10,
     "locations": 7,
     "vehicles": 2,
     "props": 4,
+    "scale_references": 3,
     "total_sheets": 23
   }
 }

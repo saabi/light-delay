@@ -112,6 +112,24 @@
 			"height": 1024
 		},
 		{
+			"id": "asset:location-proxima-station-proportional",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/locations/proxima-station/proportional-reference.png",
+			"mimeType": "image/png",
+			"title": "Estación Proxima proportional reference",
+			"width": 1900,
+			"height": 1250
+		},
+		{
+			"id": "asset:location-proxima-station-proportional-svg",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/locations/proxima-station/proportional-reference.svg",
+			"mimeType": "image/svg+xml",
+			"title": "Estación Proxima proportional reference (SVG)"
+		},
+		{
 			"id": "asset:location-proxima-dock-sheet",
 			"kind": "image",
 			"role": "reference",
@@ -220,6 +238,42 @@
 			"title": "Celestial Ardor model sheet",
 			"width": 1536,
 			"height": 1024
+		},
+		{
+			"id": "asset:vehicle-celestial-ardor-proportional",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/vehicles/celestial-ardor/proportional-reference.png",
+			"mimeType": "image/png",
+			"title": "Celestial Ardor proportional reference",
+			"width": 1700,
+			"height": 1050
+		},
+		{
+			"id": "asset:vehicle-celestial-ardor-proportional-svg",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/vehicles/celestial-ardor/proportional-reference.svg",
+			"mimeType": "image/svg+xml",
+			"title": "Celestial Ardor proportional reference (SVG)"
+		},
+		{
+			"id": "asset:scale-reference-proxima-ardor",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.png",
+			"mimeType": "image/png",
+			"title": "Proxima + Celestial Ardor common scale reference",
+			"width": 1800,
+			"height": 820
+		},
+		{
+			"id": "asset:scale-reference-proxima-ardor-svg",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.svg",
+			"mimeType": "image/svg+xml",
+			"title": "Proxima + Celestial Ardor common scale reference (SVG)"
 		},
 		{
 			"id": "asset:vehicle-velari-emissary-sheet",

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="820" viewBox="0 0 1800 820" role="img" aria-labelledby="title desc">
+<title id="title">Light Delay — common scale comparison</title>
+<desc id="desc">Common-scale orthographic comparison of Proxima Station and the Celestial Ardor.</desc>
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L8,4 L0,8 z" fill="#24435f"/>
+  </marker>
+  <marker id="arrow2" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto" markerUnits="strokeWidth">
+    <path d="M8,0 L0,4 L8,8 z" fill="#24435f"/>
+  </marker>
+</defs>
+<style>
+  .bg { fill:#f7f9fb; }
+  .panel { fill:#ffffff; stroke:#b9c7d3; stroke-width:1.2; }
+  .ink { fill:#10253d; font-family:Segoe UI, Arial, sans-serif; }
+  .title { font-size:34px; font-weight:800; letter-spacing:.6px; }
+  .subtitle { font-size:15px; font-weight:700; fill:#8b6400; letter-spacing:.5px; }
+  .h { font-size:17px; font-weight:800; fill:#173f67; }
+  .sh { font-size:12px; font-weight:800; fill:#173f67; }
+  .body { font-size:11.5px; fill:#26394b; }
+  .small { font-size:10px; fill:#465d70; }
+  .tiny { font-size:8.5px; fill:#50677a; }
+  .outline { fill:none; stroke:#20384f; stroke-width:2.5; }
+  .thin { fill:none; stroke:#5a7185; stroke-width:1.2; }
+  .dim { fill:none; stroke:#24435f; stroke-width:1.2; marker-start:url(#arrow2); marker-end:url(#arrow); }
+  .dash { stroke-dasharray:7 5; }
+  .center { text-anchor:middle; }
+  .right { text-anchor:end; }
+</style>
+<rect width="1800" height="820" class="bg"/>
+
+<text x="42" y="55" class="ink title">PROXIMA + CELESTIAL ARDOR</text>
+<text x="44" y="82" class="ink subtitle">COMMON-SCALE SILHOUETTE REFERENCE</text>
+<text x="44" y="105" class="ink body">Both objects use exactly the same linear scale in this sheet.</text>
+
+<rect x="300" y="345" width="1105.0" height="40" rx="8" fill="#b8c4ce" stroke="#20384f" stroke-width="3"/>
+<rect x="733.5" y="110.0" width="187.0" height="510.0" rx="24" fill="#f1e0aa" stroke="#8c6f2e" stroke-width="4"/>
+<rect x="801.0" y="340" width="52" height="50" fill="#cbd5df" stroke="#20384f" stroke-width="2"/>
+<rect x="971.5" y="110.0" width="187.0" height="510.0" rx="24" fill="#f1e0aa" stroke="#8c6f2e" stroke-width="4"/>
+<rect x="1039.0" y="340" width="52" height="50" fill="#cbd5df" stroke="#20384f" stroke-width="2"/>
+<rect x="302.6" y="310" width="90" height="110" rx="10" fill="#aebbc7" stroke="#20384f" stroke-width="3"/>
+<line x1="302.6" y1="390" x2="207.60000000000002" y2="390" stroke="#657a8c" stroke-width="8"/>
+<path d="M207.60000000000002,390 L197.60000000000002,374.7 L76.60000000000002,374.7 L54.60000000000002,390 L76.60000000000002,405.3 L197.60000000000002,405.3 Z"
+fill="#e7edf2" stroke="#20384f" stroke-width="2"/>
+<text x="131.10000000000002" y="425.3" class="ink tiny center">ARDOR 90 × 18 m</text>
+<text x="852.5" y="658.0" class="ink sh center">PROXIMA · 650 m spine · habitat diameter 300 m</text>
+
+<line x1="65" y1="690" x2="235.0" y2="690" stroke="#20384f" stroke-width="4"/>
+<line x1="65" y1="681" x2="65" y2="699" stroke="#20384f" stroke-width="2"/>
+<line x1="235.0" y1="681" x2="235.0" y2="699" stroke="#20384f" stroke-width="2"/>
+<text x="150.0" y="718" class="ink sh center">100 m</text>
+<text x="300" y="690" class="ink body">Use this sheet when prompting concept-art generation for shots containing both Proxima and the Celestial Ardor.</text>
+<text x="300" y="716" class="ink body">Do not enlarge the Ardor for readability: its small size relative to the station is intentional.</text>
+</svg>
