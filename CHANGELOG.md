@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-26 — Advertencia de Zao, comunicaciones y arquitectura de Ardor
+
+- Reescritas las escenas 5–8 del corto: Harlan activa el jammer al oír que la firma de Sorell parece falsa, corta COM A/B desde servicio y usa los dos recorridos axiales para construir su coartada.
+- Zao comprueba wireless y cable, descarta Tierra/Proxima y apunta el láser exterior estándar a la posición futura de la nave mediante divergencia + raster; la decisión se cuenta en acción e interfaz, sin exposición forzada.
+- Sorell presencia el aviso desde el puente, encuentra a Zao sola y queda como testigo con credencial comprometida, no como sospechosa; Okoye acompaña a Harlan por orden de Voss.
+- Animatic principal ampliado de 100 a 112 tomas manteniendo 30:00 y reutilizando los 100 frames existentes; no se generaron imágenes. Las 33 tomas afectadas llevan notas de reemplazo provisional.
+- Sincronizados guion/animatic heredados, Festival Cut, tráiler y tratamiento largo; nueva dimensión comparativa `canon:zao-transmission-mechanics`.
+- Actualizados canon, Ardor, entidades, notas técnicas y requisitos de haz. `TODO.md` registra deuda de stills, documentos, cálculo óptico y futuro flujo JSON de notas de autor/estado visual.
+
 ## 2026-08-26 — Referencias de escala Proxima / Celestial Ardor
 
 - Reubicadas hojas ortográficas: Proxima en `locations/proxima-station/proportional-reference.{svg,png}`, Ardor en `vehicles/celestial-ardor/proportional-reference.{svg,png}`.

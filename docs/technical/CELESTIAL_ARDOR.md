@@ -145,6 +145,12 @@ El puente es compacto y está organizado alrededor de consolas, no alrededor de 
 
 Puede existir una ventana/puerto de observación prograde en el techo/parte superior del puente. No es necesaria para pilotaje rutinario: la navegación es principalmente instrumental y el espacio por delante suele carecer de referencias visuales útiles.
 
+La salida del cilindro central, el pozo de ascensor y el acceso al puente convergen en un **vestíbulo axial de mando**. Desde las consolas puede verse la salida del cilindro central a través del acceso abierto del puente. La entrada restringida al cilindro de servicio queda próxima, pero retranqueada hacia un lateral del vestíbulo: un tripulante puede alcanzarla sin cruzar el campo visual normal del puente.
+
+Dentro del cilindro de servicio, junto a la cubierta de mando, se encuentra el **distribuidor cableado de comunicaciones por cubiertas**. Es un bastidor mantenible con dos troncos redundantes, `COM A` y `COM B`, y acopladores dobles rotulados por zona funcional. Permite aislar una cubierta durante diagnóstico sin cortar energía, soporte vital ni controles locales. El acoplador `SISTEMAS DIPLOMÁTICOS — COM A/B` interrumpe voz, intercomunicador y datos operativos cableados de esa zona.
+
+El respaldo cableado es independiente de la malla inalámbrica. A su vez, la consola local de contingencia del núcleo diplomático controla el láser exterior estándar mediante una canalización física dedicada que no atraviesa este distribuidor.
+
 ### Cubierta(s) de misión
 
 - sala de reuniones/briefing,
@@ -176,13 +182,15 @@ La nave fue concebida para viajes prolongados, por lo que estos espacios deben s
 
 El **núcleo diplomático/cuántico** fue añadido en Proxima como retrofit y, por tanto, **no ocupa el eje central**. Está montado fuera del eje, próximo al cilindro central para acceso operativo pero físicamente separado y sectorizable.
 
+Posee una entrada operativa desde la circulación cotidiana y un ramal técnico secundario desde el cilindro de servicio. Ambos desembocan en puntos distintos de la instalación retrofit, lo que permite mantenimiento sin convertir el núcleo en parte del tronco axial.
+
 El área incluye:
 
 - cámara del núcleo diplomático,
 - consolas de IA/mediación,
 - control de protocolos,
 - interfaces de diagnóstico,
-- transmisor óptico/contingencia independiente cuando corresponda al guion.
+- consola local cableada para puntería y transmisión mediante el láser exterior estándar.
 
 El carácter de retrofit debe ser visible: arquitectura y cableado ligeramente distintos del casco original.
 

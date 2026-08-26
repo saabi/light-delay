@@ -9,11 +9,11 @@ import { getEffectiveDuration, getSubtitleSegments } from './index.ts';
 import { validateAll } from '../validation/index.ts';
 
 describe('extracted canonical data', () => {
-	it('has 17 scenes and 100 shots on the main short', () => {
+	it('has 17 scenes and 112 shots on the main short', () => {
 		const script = getCanonicalScript();
 		expect(script.scenes).toHaveLength(17);
-		expect(script.shots).toHaveLength(100);
-		expect(script.takes).toHaveLength(100);
+		expect(script.shots).toHaveLength(112);
+		expect(script.takes).toHaveLength(112);
 		expect(script.script.id).toBe('script:light-delay-main-short');
 		expect(script.scenes[0]?.id).toMatch(/^main:/);
 	});

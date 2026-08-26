@@ -12,12 +12,19 @@
 		},
 		{
 			"id": "object:optical-contingency-transmitter",
-			"name": "Transmisor óptico de contingencia",
-			"description": "Consola y telescopio láser con energía, óptica y ruta física propias. Puede emitir aun cuando la red principal está comprometida.",
-			"dramaticFunction": "Canal independiente de Zao",
+			"name": "Control local de contingencia del láser exterior",
+			"description": "Consola local con energía y canalización física dedicadas hacia el láser exterior estándar de comunicaciones. Puede orientar y emitir aun cuando fallen la malla inalámbrica y el distribuidor cableado ordinario.",
+			"dramaticFunction": "Canal físico independiente usado por Zao",
 			"referenceAssetIds": [
 				"asset:object-optical-contingency-transmitter-sheet"
 			]
+		},
+		{
+			"id": "object:wired-comms-deck-patch-panel",
+			"name": "Distribuidor cableado de comunicaciones",
+			"description": "Bastidor de mantenimiento en el cilindro de servicio con troncos COM A/B y acopladores dobles rotulados por zona. Permite aislar físicamente voz y datos operativos de una cubierta sin cortar sus sistemas locales.",
+			"dramaticFunction": "Harlan corta y restaura el respaldo cableado de la cubierta diplomática",
+			"referenceAssetIds": []
 		},
 		{
 			"id": "object:physical-override-relay",

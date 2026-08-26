@@ -1,13 +1,13 @@
 # Light Delay / Luz Tardía
 
-Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas, el animatic textual de 100 tomas y sus imágenes de referencia.
+Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas y el animatic textual de 112 tomas con imágenes de referencia reutilizadas donde aún faltan stills definitivos.
 
 ## Estado actual
 
 - Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
-- Animatic: 100 tomas con imagen, encuadre, audio, subtítulos y duración editable.
+- Animatic: 112 tomas con image take, encuadre, audio, subtítulos y duración editable; las 33 tomas reescritas de las escenas 5–8 reutilizan frames provisionales y 12 son unidades narrativas nuevas.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.

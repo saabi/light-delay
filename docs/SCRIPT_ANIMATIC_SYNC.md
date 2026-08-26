@@ -2,16 +2,20 @@
 
 El **guion** (`legacy-site/guion-30-minutos.html` → `data/scripts/light-delay-main-short.json`) es la fuente de verdad narrativa. El animatic se alinea al guion; los desajustes se registran aquí sin reescribir el guion.
 
-## Conteos verificados (Fase 1 extracción)
+## Conteos vigentes (reescritura 2026-08-26)
 
-| Métrica | Guion | Animatic DATA | JSON shots |
+| Métrica | Guion / cues | Animatic legacy | JSON |
 | --- | ---: | ---: | ---: |
-| Escenas | 17 | 17 | (ver script.scenes) |
-| Diálogos / subtítulos | 98 líneas | 98 subs | 98 placements |
+| Escenas | 17 | 17 | 17 escenas |
+| Tomas / takes | — | 112 tomas | 112 shots / 112 takes |
+| Diálogos / subtítulos | 97 cues | 97 subs | 97 placements únicos |
+| Imágenes únicas disponibles | — | 100 PNG | 100 assets de frame reutilizados |
 
-## Resumen de matching automático
+Las escenas 5–8 pasaron de 21 a 33 tomas sin cambiar la duración total. Sus 33 takes conservan frames provisionales; doce son tomas narrativas nuevas. No hay cue de diálogo sin placement.
 
-- Placements aceptados (similitud ≥ 0.55): **98**
+## Resumen del matching automático inicial (histórico)
+
+- Placements aceptados en la extracción de Fase 1 (similitud ≥ 0.55): **98**
 - Subtítulos de animatic sin cue colocado: **0**
 - Líneas de guion sin cobertura de toma: **0**
 - Pares con match difuso (0.55–0.90): **0**
@@ -34,9 +38,9 @@ _Ninguno._
 - ESC. 2: animatic «Salida de Proxima» vs guion «INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO»
 - ESC. 3: animatic «Arco de Júpiter e indicio» vs guion «INT. CELESTIAL ARDOR — SALA DE MÁQUINAS — TRÁNSITO, T+29H»
 - ESC. 4: animatic «Envoltura no declarada» vs guion «INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRÁNSITO, T+40H»
-- ESC. 5: animatic «Confirmación y partición» vs guion «INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRÁNSITO, T+57H43MIN»
-- ESC. 6: animatic «Mensaje hacia el futuro» vs guion «INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRANSMISOR EXTERNO — CONTINUO»
-- ESC. 7: animatic «Asesinato y cruce» vs guion «INT./EXT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO / LA BOCA — CONTINUO»
+- ESC. 5: animatic «Confirmación y silencio» vs guion «INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO / PUENTE — T+57H43MIN»
+- ESC. 6: animatic «Mensaje hacia el futuro» vs guion «INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO / LÁSER EXTERIOR — CONTINUO»
+- ESC. 7: animatic «Asesinato, coartada y cruce» vs guion «INT./EXT. CELESTIAL ARDOR — NÚCLEO / CILINDROS AXIALES / LA BOCA — CONTINUO»
 - ESC. 8: animatic «El cuerpo» vs guion «INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO»
 - ESC. 9: animatic «Investigación y sospecha» vs guion «INT. CELESTIAL ARDOR — PUENTE / NÚCLEO / ENFERMERÍA — MÁS TARDE»
 - ESC. 10: animatic «La mitad técnica del misterio» vs guion «INT. CELESTIAL ARDOR — PUESTO TÉCNICO DEL PUENTE — MÁS TARDE»

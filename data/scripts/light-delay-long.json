@@ -195,6 +195,12 @@
 					"status": "established"
 				},
 				{
+					"dimensionId": "canon:zao-transmission-mechanics",
+					"valueId": "jam-wired-cut-dedicated-laser",
+					"statement": "Harlan corta la malla inalámbrica y COM A/B; Zao usa el láser exterior por control físico dedicado y apunta al corredor futuro de la nave.",
+					"status": "established"
+				},
+				{
 					"dimensionId": "canon:rao-containment",
 					"valueId": "bounded-quarantine",
 					"statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
@@ -589,11 +595,12 @@
 			"setting": {
 				"storyTime": "T+57H43M"
 			},
-			"summary": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
-			"dramaticPurpose": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
+			"summary": "La envoltura revela un escaneo intrusivo. Zao avisa al puente que la firma de Sorell parece falsa; Harlan oye “relé físico” desde el acceso, activa el jammer sin ser visto y corta COM A/B en el distribuidor del cilindro de servicio.",
+			"dramaticPurpose": "La envoltura revela un escaneo intrusivo. Zao avisa al puente que la firma de Sorell parece falsa; Harlan oye “relé físico” desde el acceso, activa el jammer sin ser visto y corta COM A/B en el distribuidor del cilindro de servicio.",
 			"characterIds": [
 				"character:zao",
-				"character:rao",
+				"character:voss",
+				"character:sorell",
 				"character:harlan"
 			],
 			"beatIds": [
@@ -622,11 +629,12 @@
 			"setting": {
 				"storyTime": "T+57H45M"
 			},
-			"summary": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
-			"dramaticPurpose": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
+			"summary": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
+			"dramaticPurpose": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
 			"characterIds": [
 				"character:zao",
-				"character:harlan"
+				"character:harlan",
+				"character:sorell"
 			],
 			"beatIds": [
 				"long:beat-08"
@@ -654,11 +662,12 @@
 			"setting": {
 				"storyTime": "T+57H46M"
 			},
-			"summary": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
-			"dramaticPurpose": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
+			"summary": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
+			"dramaticPurpose": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
 			"characterIds": [
 				"character:zao",
-				"character:harlan"
+				"character:harlan",
+				"character:sorell"
 			],
 			"beatIds": [
 				"long:beat-09"
@@ -782,13 +791,13 @@
 			"actId": "long:act-2",
 			"number": 13,
 			"order": 13,
-			"title": "Sorell bajo sospecha",
+			"title": "Credencial de Sorell comprometida",
 			"locationId": "location:celestial-ardor-bridge",
 			"setting": {
 				"storyTime": "MÁS TARDE"
 			},
-			"summary": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
-			"dramaticPurpose": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
+			"summary": "El puente y la orden directa de Voss corroboran el trayecto de Sorell. Se bloquea su credencial falsificada sin apartarla como sospechosa; Harlan intenta explotar la incertidumbre técnica.",
+			"dramaticPurpose": "El puente y la orden directa de Voss corroboran el trayecto de Sorell. Se bloquea su credencial falsificada sin apartarla como sospechosa; Harlan intenta explotar la incertidumbre técnica.",
 			"characterIds": [
 				"character:voss",
 				"character:harlan",
@@ -911,8 +920,8 @@
 			"setting": {
 				"storyTime": "MÁS TARDE"
 			},
-			"summary": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
-			"dramaticPurpose": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
+			"summary": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
+			"dramaticPurpose": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
 			"characterIds": [
 				"character:carvalho",
 				"character:sorell",
@@ -1546,8 +1555,8 @@
 			"sceneId": "long:scene-07",
 			"order": 1,
 			"title": "Despliegue hostil",
-			"purpose": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
-			"summary": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
+			"purpose": "La envoltura revela un escaneo intrusivo. Zao avisa al puente que la firma de Sorell parece falsa; Harlan oye “relé físico” desde el acceso, activa el jammer sin ser visto y corta COM A/B en el distribuidor del cilindro de servicio.",
+			"summary": "La envoltura revela un escaneo intrusivo. Zao avisa al puente que la firma de Sorell parece falsa; Harlan oye “relé físico” desde el acceso, activa el jammer sin ser visto y corta COM A/B en el distribuidor del cilindro de servicio.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1555,7 +1564,11 @@
 				},
 				{
 					"kind": "character",
-					"id": "character:rao"
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
 				},
 				{
 					"kind": "character",
@@ -1580,8 +1593,8 @@
 			"sceneId": "long:scene-08",
 			"order": 1,
 			"title": "Mensaje hacia el corredor",
-			"purpose": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
-			"summary": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
+			"purpose": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
+			"summary": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1590,6 +1603,10 @@
 				{
 					"kind": "character",
 					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
 				}
 			],
 			"cueIds": [],
@@ -1610,8 +1627,8 @@
 			"sceneId": "long:scene-09",
 			"order": 1,
 			"title": "Muerte fuera de campo",
-			"purpose": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
-			"summary": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
+			"purpose": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
+			"summary": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1620,6 +1637,10 @@
 				{
 					"kind": "character",
 					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
 				}
 			],
 			"cueIds": [],
@@ -1749,9 +1770,9 @@
 			"id": "long:beat-13",
 			"sceneId": "long:scene-13",
 			"order": 1,
-			"title": "Sorell bajo sospecha",
-			"purpose": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
-			"summary": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
+			"title": "Credencial de Sorell comprometida",
+			"purpose": "El puente y la orden directa de Voss corroboran el trayecto de Sorell. Se bloquea su credencial falsificada sin apartarla como sospechosa; Harlan intenta explotar la incertidumbre técnica.",
+			"summary": "El puente y la orden directa de Voss corroboran el trayecto de Sorell. Se bloquea su credencial falsificada sin apartarla como sospechosa; Harlan intenta explotar la incertidumbre técnica.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1878,8 +1899,8 @@
 			"sceneId": "long:scene-17",
 			"order": 1,
 			"title": "Carvalho continúa el lenguaje",
-			"purpose": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
-			"summary": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
+			"purpose": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
+			"summary": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
 			"participantRefs": [
 				{
 					"kind": "character",

@@ -14,19 +14,229 @@
 		"continuityId": "continuity:light-delay-primary",
 		"kind": "main_short",
 		"targetDurationMs": 1800000,
-		"declaredEntityRefs": [{"kind":"character","id":"character:zao"},{"kind":"character","id":"character:voss"},{"kind":"character","id":"character:harlan"},{"kind":"character","id":"character:rao"},{"kind":"character","id":"character:sorell"},{"kind":"character","id":"character:cael"}],
+		"declaredEntityRefs": [
+			{
+				"kind": "character",
+				"id": "character:zao"
+			},
+			{
+				"kind": "character",
+				"id": "character:voss"
+			},
+			{
+				"kind": "character",
+				"id": "character:harlan"
+			},
+			{
+				"kind": "character",
+				"id": "character:rao"
+			},
+			{
+				"kind": "character",
+				"id": "character:sorell"
+			},
+			{
+				"kind": "character",
+				"id": "character:cael"
+			},
+			{
+				"kind": "character",
+				"id": "character:okoye"
+			}
+		],
 		"comparisonProfile": {
 			"version": "1.0.0",
-			"canonClaims": [{"dimensionId":"canon:proxima-origin","valueId":"scientific-before-contact","statement":"Proxima fue una estación científica joviana anterior al contacto.","status":"established"},{"dimensionId":"canon:ardor-deployment","valueId":"earth-built-prepositioned","statement":"Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.","status":"established"},{"dimensionId":"canon:tunnel-geometry","valueId":"distributed-nodes","statement":"La boca es un campo distribuido de nodos, no un aro.","status":"established"},{"dimensionId":"canon:tunnel-location","valueId":"sol-jupiter-l2","statement":"La boca local está en una órbita halo controlada cerca de L2.","status":"established"},{"dimensionId":"canon:trajectory","valueId":"conventional-to-wormhole","statement":"La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.","status":"established"},{"dimensionId":"canon:velari-objects","valueId":"station-and-emissary","statement":"La estación Velari y la nave emisaria son objetos distintos.","status":"established"},{"dimensionId":"canon:evidence-chain","valueId":"relay-optical-readonly","statement":"El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.","status":"established"},{"dimensionId":"canon:sorell-status","valueId":"false-log-not-conclusive","statement":"Sorell no queda culpabilizada por un único registro falsificable.","status":"established"},{"dimensionId":"canon:rao-containment","valueId":"bounded-quarantine","statement":"Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.","status":"established"},{"dimensionId":"canon:ending","valueId":"limited-acknowledgement","statement":"La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.","status":"established"}],
-			"eventCoverage": [{"eventId":"event:embarkation","status":"present","sceneIds":["main:scene-01","main:scene-02"]},{"eventId":"event:anomaly-discovery","status":"present","sceneIds":["main:scene-03","main:scene-04","main:scene-05"]},{"eventId":"event:zao-warning-death","status":"present","sceneIds":["main:scene-06","main:scene-07"]},{"eventId":"event:tunnel-crossing","status":"present","sceneIds":["main:scene-07"]},{"eventId":"event:investigation","status":"present","sceneIds":["main:scene-08","main:scene-09","main:scene-10"]},{"eventId":"event:message-reception","status":"present","sceneIds":["main:scene-11","main:scene-12"]},{"eventId":"event:harlan-exposed","status":"present","sceneIds":["main:scene-12","main:scene-13"]},{"eventId":"event:quarantine","status":"present","sceneIds":["main:scene-14"]},{"eventId":"event:clean-greeting","status":"present","sceneIds":["main:scene-15"]},{"eventId":"event:first-contact","status":"present","sceneIds":["main:scene-16"]},{"eventId":"event:aftermath","status":"present","sceneIds":["main:scene-17"]}]
+			"canonClaims": [
+				{
+					"dimensionId": "canon:proxima-origin",
+					"valueId": "scientific-before-contact",
+					"statement": "Proxima fue una estación científica joviana anterior al contacto.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ardor-deployment",
+					"valueId": "earth-built-prepositioned",
+					"statement": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-geometry",
+					"valueId": "distributed-nodes",
+					"statement": "La boca es un campo distribuido de nodos, no un aro.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-location",
+					"valueId": "sol-jupiter-l2",
+					"statement": "La boca local está en una órbita halo controlada cerca de L2.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:trajectory",
+					"valueId": "conventional-to-wormhole",
+					"statement": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:velari-objects",
+					"valueId": "station-and-emissary",
+					"statement": "La estación Velari y la nave emisaria son objetos distintos.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:evidence-chain",
+					"valueId": "relay-optical-readonly",
+					"statement": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:sorell-status",
+					"valueId": "false-log-not-conclusive",
+					"statement": "Sorell no queda culpabilizada por un único registro falsificable.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:rao-containment",
+					"valueId": "bounded-quarantine",
+					"statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ending",
+					"valueId": "limited-acknowledgement",
+					"statement": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:zao-transmission-mechanics",
+					"valueId": "jam-wired-cut-dedicated-laser",
+					"statement": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
+					"status": "established"
+				}
+			],
+			"eventCoverage": [
+				{
+					"eventId": "event:embarkation",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-01",
+						"main:scene-02"
+					]
+				},
+				{
+					"eventId": "event:anomaly-discovery",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-03",
+						"main:scene-04",
+						"main:scene-05"
+					]
+				},
+				{
+					"eventId": "event:zao-warning-death",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-06",
+						"main:scene-07"
+					]
+				},
+				{
+					"eventId": "event:tunnel-crossing",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-07"
+					]
+				},
+				{
+					"eventId": "event:investigation",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-08",
+						"main:scene-09",
+						"main:scene-10"
+					]
+				},
+				{
+					"eventId": "event:message-reception",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-11",
+						"main:scene-12"
+					]
+				},
+				{
+					"eventId": "event:harlan-exposed",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-12",
+						"main:scene-13"
+					]
+				},
+				{
+					"eventId": "event:quarantine",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-14"
+					]
+				},
+				{
+					"eventId": "event:clean-greeting",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-15"
+					]
+				},
+				{
+					"eventId": "event:first-contact",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-16"
+					]
+				},
+				{
+					"eventId": "event:aftermath",
+					"status": "present",
+					"sceneIds": [
+						"main:scene-17"
+					]
+				}
+			]
 		},
 		"characterFunctionAssignments": [
-			{"functionId":"function:piloting","characterId":"character:cael","relationship":"unchanged"},
-			{"functionId":"function:communications","characterId":"character:cael","sourceCharacterIds":["character:wei"],"relationship":"merged","notes":"La versión corta fusiona en Cael la función de Wei."},
-			{"functionId":"function:command","characterId":"character:voss","relationship":"unchanged"},
-			{"functionId":"function:investigation_payload","characterId":"character:rao","relationship":"unchanged"},
-			{"functionId":"function:diplomatic_greeting_authorship","characterId":"character:sorell","relationship":"unchanged"},
-			{"functionId":"function:override_antagonist","characterId":"character:harlan","relationship":"unchanged"}
+			{
+				"functionId": "function:piloting",
+				"characterId": "character:cael",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:communications",
+				"characterId": "character:cael",
+				"sourceCharacterIds": [
+					"character:wei"
+				],
+				"relationship": "merged",
+				"notes": "La versión corta fusiona en Cael la función de Wei."
+			},
+			{
+				"functionId": "function:command",
+				"characterId": "character:voss",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:investigation_payload",
+				"characterId": "character:rao",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:diplomatic_greeting_authorship",
+				"characterId": "character:sorell",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:override_antagonist",
+				"characterId": "character:harlan",
+				"relationship": "unchanged"
+			}
 		]
 	},
 	"acts": [
@@ -201,15 +411,18 @@
 			"actId": "main:act-1",
 			"number": 5,
 			"order": 5,
-			"title": "INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRÁNSITO, T+57H43MIN",
+			"title": "Confirmación y silencio",
 			"locationId": "location:diplomatic-core-room",
 			"setting": {
 				"interiorExterior": "INT",
 				"storyTime": "T."
 			},
-			"summary": "Confirmación y partición",
+			"summary": "Confirmación y silencio",
 			"characterIds": [
-				"character:zao"
+				"character:zao",
+				"character:voss",
+				"character:harlan",
+				"character:sorell"
 			],
 			"beatIds": [
 				"main:beat-05-01"
@@ -220,9 +433,19 @@
 				"main:shot-05-03",
 				"main:shot-05-04",
 				"main:shot-05-05",
-				"main:shot-05-06"
+				"main:shot-05-06",
+				"main:shot-05-07",
+				"main:shot-05-08"
 			],
-			"targetDurationMs": 120000
+			"targetDurationMs": 120000,
+			"objectIds": [
+				"object:wired-comms-deck-patch-panel"
+			],
+			"secondaryLocationIds": [
+				"location:celestial-ardor-command-vestibule",
+				"location:celestial-ardor-central-access",
+				"location:celestial-ardor-service-cylinder"
+			]
 		},
 		{
 			"id": "main:scene-06",
@@ -239,7 +462,8 @@
 			"summary": "Mensaje hacia el futuro",
 			"characterIds": [
 				"character:zao",
-				"character:harlan"
+				"character:harlan",
+				"character:sorell"
 			],
 			"beatIds": [
 				"main:beat-06-01"
@@ -250,9 +474,20 @@
 				"main:shot-06-03",
 				"main:shot-06-04",
 				"main:shot-06-05",
-				"main:shot-06-06"
+				"main:shot-06-06",
+				"main:shot-06-07",
+				"main:shot-06-08"
 			],
-			"targetDurationMs": 90000
+			"targetDurationMs": 90000,
+			"objectIds": [
+				"object:wired-comms-deck-patch-panel",
+				"object:optical-contingency-transmitter"
+			],
+			"secondaryLocationIds": [
+				"location:celestial-ardor-command-vestibule",
+				"location:celestial-ardor-central-access",
+				"location:celestial-ardor-service-cylinder"
+			]
 		},
 		{
 			"id": "main:scene-07",
@@ -268,7 +503,8 @@
 			},
 			"summary": "Asesinato y cruce",
 			"characterIds": [
-				"character:cael"
+				"character:cael",
+				"character:sorell"
 			],
 			"beatIds": [
 				"main:beat-07-01"
@@ -278,9 +514,22 @@
 				"main:shot-07-02",
 				"main:shot-07-03",
 				"main:shot-07-04",
-				"main:shot-07-05"
+				"main:shot-07-05",
+				"main:shot-07-06",
+				"main:shot-07-07",
+				"main:shot-07-08",
+				"main:shot-07-09",
+				"main:shot-07-10"
 			],
-			"targetDurationMs": 60000
+			"targetDurationMs": 60000,
+			"objectIds": [
+				"object:wired-comms-deck-patch-panel"
+			],
+			"secondaryLocationIds": [
+				"location:celestial-ardor-command-vestibule",
+				"location:celestial-ardor-central-access",
+				"location:celestial-ardor-service-cylinder"
+			]
 		},
 		{
 			"id": "main:scene-08",
@@ -297,7 +546,11 @@
 			"summary": "El cuerpo",
 			"characterIds": [
 				"character:cael",
-				"character:voss"
+				"character:voss",
+				"character:harlan",
+				"character:sorell",
+				"character:okoye",
+				"character:keene"
 			],
 			"beatIds": [
 				"main:beat-08-01"
@@ -306,9 +559,20 @@
 				"main:shot-08-01",
 				"main:shot-08-02",
 				"main:shot-08-03",
-				"main:shot-08-04"
+				"main:shot-08-04",
+				"main:shot-08-05",
+				"main:shot-08-06",
+				"main:shot-08-07"
 			],
-			"targetDurationMs": 60000
+			"targetDurationMs": 60000,
+			"objectIds": [
+				"object:wired-comms-deck-patch-panel"
+			],
+			"secondaryLocationIds": [
+				"location:celestial-ardor-command-vestibule",
+				"location:celestial-ardor-central-access",
+				"location:celestial-ardor-service-cylinder"
+			]
 		},
 		{
 			"id": "main:scene-09",
@@ -689,7 +953,7 @@
 			"order": 1,
 			"title": "Escena 5",
 			"purpose": "Unidad dramática inicial (1 beat por escena; refinable).",
-			"summary": "Confirmación y partición",
+			"summary": "Zao identifica a Harlan; él corta wireless y respaldo cableado antes de dirigirse al núcleo.",
 			"cueIds": [
 				"main:cue-05-01",
 				"main:cue-05-02",
@@ -698,7 +962,14 @@
 				"main:cue-05-05",
 				"main:cue-05-06",
 				"main:cue-05-07",
-				"main:cue-05-08"
+				"main:cue-05-08",
+				"main:cue-05-09",
+				"main:cue-05-10",
+				"main:cue-05-11",
+				"main:cue-05-12",
+				"main:cue-05-13",
+				"main:cue-05-14",
+				"main:cue-05-15"
 			]
 		},
 		{
@@ -707,7 +978,7 @@
 			"order": 1,
 			"title": "Escena 6",
 			"purpose": "Unidad dramática inicial (1 beat por escena; refinable).",
-			"summary": "Mensaje hacia el futuro",
+			"summary": "Zao calcula y transmite al futuro mientras Harlan y Sorell toman rutas axiales distintas.",
 			"cueIds": [
 				"main:cue-06-01",
 				"main:cue-06-02",
@@ -722,7 +993,9 @@
 				"main:cue-06-11",
 				"main:cue-06-12",
 				"main:cue-06-13",
-				"main:cue-06-14"
+				"main:cue-06-14",
+				"main:cue-06-15",
+				"main:cue-06-16"
 			]
 		},
 		{
@@ -731,7 +1004,7 @@
 			"order": 1,
 			"title": "Escena 7",
 			"purpose": "Unidad dramática inicial (1 beat por escena; refinable).",
-			"summary": "Asesinato y cruce",
+			"summary": "Harlan mata a Zao, limpia y restaura el cable; Sorell encuentra el cuerpo antes del cruce.",
 			"cueIds": [
 				"main:cue-07-01",
 				"main:cue-07-02",
@@ -739,7 +1012,13 @@
 				"main:cue-07-04",
 				"main:cue-07-05",
 				"main:cue-07-06",
-				"main:cue-07-07"
+				"main:cue-07-07",
+				"main:cue-07-08",
+				"main:cue-07-09",
+				"main:cue-07-10",
+				"main:cue-07-11",
+				"main:cue-07-12",
+				"main:cue-07-13"
 			]
 		},
 		{
@@ -748,7 +1027,7 @@
 			"order": 1,
 			"title": "Escena 8",
 			"purpose": "Unidad dramática inicial (1 beat por escena; refinable).",
-			"summary": "El cuerpo",
+			"summary": "Harlan consolida su coartada; Voss lo envía con Okoye a buscar a Sorell.",
 			"cueIds": [
 				"main:cue-08-01",
 				"main:cue-08-02",
@@ -757,8 +1036,7 @@
 				"main:cue-08-05",
 				"main:cue-08-06",
 				"main:cue-08-07",
-				"main:cue-08-08",
-				"main:cue-08-09"
+				"main:cue-08-08"
 			]
 		},
 		{
@@ -1154,18 +1432,8 @@
 			"id": "main:cue-01-13",
 			"beatId": "main:beat-01-01",
 			"order": 13,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Y si la red interna cae durante la expansión, éste es el único equipo que sigue respirando.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "Rao corta la malla de prueba. La consola principal queda sin enlace; el control cableado del láser exterior conserva su indicador verde: “CONTROL LOCAL / LÁSER EXTERIOR”. Zao lo verifica de un vistazo."
 		},
 		{
 			"id": "main:cue-01-14",
@@ -1329,14 +1597,14 @@
 			"beatId": "main:beat-01-01",
 			"order": 27,
 			"type": "action",
-			"text": "Corte a ZAO (40s, mono de ingeniería) frente al núcleo diplomático, una esfera de cristal pulsante. RAO (30s) está a su lado con un tablet. Junto al núcleo, una consola más pequeña lleva el rótulo TRANSMISOR ÓPTICO DE CONTINGENCIA — RED INDEPENDIENTE."
+			"text": "Corte a ZAO (40s, mono de ingeniería) frente al núcleo diplomático, una esfera de cristal pulsante. RAO (30s) está a su lado con un tablet. En la consola técnica contigua, un control lleva el rótulo CONTROL LOCAL / LÁSER EXTERIOR."
 		},
 		{
 			"id": "main:cue-01-28",
 			"beatId": "main:beat-01-01",
 			"order": 28,
 			"type": "action",
-			"text": "Golpea suavemente la carcasa del transmisor independiente."
+			"text": "Zao confirma el enlace físico del control; la prueba de la malla sigue caída."
 		},
 		{
 			"id": "main:cue-01-29",
@@ -1536,35 +1804,15 @@
 			"id": "main:cue-04-04",
 			"beatId": "main:beat-04-01",
 			"order": 4,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Capitán, encontré una envoltura no declarada en la mediación. Aún no puedo clasificarla. Rao y yo vamos a aislarla antes de la apertura.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "Zao compara la firma superficial con el comportamiento del bloque, pero todavía no abre un canal: necesita confirmar si la envoltura puede ejecutarse de forma autónoma."
 		},
 		{
 			"id": "main:cue-04-05",
 			"beatId": "main:beat-04-01",
 			"order": 5,
-			"type": "dialogue",
-			"speakerId": "character:voss",
-			"presentation": "voice_over",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Documente todo. Nadie toca el núcleo sin usted.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "Copia el estado para Rao y deja el registro de Sorell marcado como NO VERIFICADO."
 		},
 		{
 			"id": "main:cue-04-06",
@@ -1592,7 +1840,7 @@
 			"beatId": "main:beat-04-01",
 			"order": 9,
 			"type": "action",
-			"text": "Abre un canal al puente."
+			"text": "Zao mantiene la investigación local; no informa al puente hasta contar con la prueba física."
 		},
 		{
 			"id": "main:cue-04-10",
@@ -1605,29 +1853,23 @@
 			"id": "main:cue-05-01",
 			"beatId": "main:beat-05-01",
 			"order": 1,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "El superficial dice Sorell. El relé dice override de mando.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "Overlay: \"GARGANTA: PRECARGA / PROPULSIÓN: CERO\". En microgravedad, la envoltura se despliega como ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA. Zao cruza el registro superficial contra el relé físico."
 		},
 		{
 			"id": "main:cue-05-02",
 			"beatId": "main:beat-05-01",
 			"order": 2,
+			"type": "action",
+			"text": "En pantalla, la firma superficial de SORELL queda junto al relé físico de override. Las capas no coinciden."
+		},
+		{
+			"id": "main:cue-05-03",
+			"beatId": "main:beat-05-01",
+			"order": 3,
 			"type": "dialogue",
 			"speakerId": "character:zao",
 			"presentation": "on_screen",
-			"performance": {
-				"emotion": "inmóvil un segundo"
-			},
 			"content": {
 				"sourceLanguage": "es",
 				"variants": {
@@ -1639,114 +1881,222 @@
 			}
 		},
 		{
-			"id": "main:cue-05-03",
-			"beatId": "main:beat-05-01",
-			"order": 3,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
-			"performance": {
-				"emotion": "reaccionando"
-			},
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Es autónomo. Detenerlo a él no alcanza.",
-						"status": "source"
-					}
-				}
-			}
-		},
-		{
 			"id": "main:cue-05-04",
 			"beatId": "main:beat-05-01",
 			"order": 4,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
-			"performance": {
-				"emotion": "golpeando la consola"
-			},
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Usó la partición. Por supuesto.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "Desde las consolas del puente, Voss queda en primer término; detrás, la tripulación sujeta a sus puestos y Sorell escuchan. Al fondo, Harlan emerge del cilindro central y se afirma fuera del umbral sin que nadie lo vea."
 		},
 		{
 			"id": "main:cue-05-05",
 			"beatId": "main:beat-05-01",
 			"order": 5,
-			"type": "action",
-			"text": "Overlay: \"GARGANTA: PRECARGA.\" La envoltura dormida se despliega en pantalla. El patrón ya es inequívoco: ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA AL ABRIR CANAL. Zao cruza el registro superficial contra el relé físico."
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "radio",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Capitán, hay un payload autónomo firmado por Sorell.",
+						"status": "source"
+					}
+				}
+			}
 		},
 		{
 			"id": "main:cue-05-06",
 			"beatId": "main:beat-05-01",
 			"order": 6,
-			"type": "action",
-			"text": "En pantalla: \"FIRMA DE HARDWARE: OVR-7C41 — TITULAR CIFRADO — REGISTRO INALTERABLE.\" Zao lo cruza con la sesión fuera de horario y el recorrido físico de mantenimiento."
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "radio",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "La firma parece falsa. El relé físico apunta a—",
+						"status": "source"
+					}
+				}
+			}
 		},
 		{
 			"id": "main:cue-05-07",
 			"beatId": "main:beat-05-01",
 			"order": 7,
 			"type": "action",
-			"text": "El overlay cambia: \"GARGANTA: EXPANSIÓN CRÍTICA — PARTICIÓN DE RED / MAMPAROS SELLADOS.\""
+			"text": "Harlan oye “relé físico” y activa discretamente el jammer desde su muñeca. La voz se corta de manera abrupta en el puente."
 		},
 		{
 			"id": "main:cue-05-08",
 			"beatId": "main:beat-05-01",
 			"order": 8,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "radio",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "—Harlan. Es su override.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "main:cue-05-09",
+			"beatId": "main:beat-05-01",
+			"order": 9,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "radio",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Capitán… ¿me recibe?",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "main:cue-05-10",
+			"beatId": "main:beat-05-01",
+			"order": 10,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "radio",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Puente, responda.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "main:cue-05-11",
+			"beatId": "main:beat-05-01",
+			"order": 11,
 			"type": "action",
-			"text": "Intenta abrir un canal al puente. La señal muere. Ícono: \"PARTICIÓN DE CRUCE ACTIVA.\" Prueba el mamparo: sellado."
+			"text": "La interfaz de Zao muestra “MALLA INALÁMBRICA — SIN ENLACE” y “MENSAJE EN COLA”. La precisión del corte transforma su frustración en alarma."
+		},
+		{
+			"id": "main:cue-05-12",
+			"beatId": "main:beat-05-01",
+			"order": 12,
+			"type": "action",
+			"text": "Harlan se retira del acceso al puente, entra en el receso lateral del cilindro de servicio y abre el distribuidor cableado. Libera el seguro y extrae “SISTEMAS DIPLOMÁTICOS — COM A/B”. Ambas portadoras se apagan."
+		},
+		{
+			"id": "main:cue-05-13",
+			"beatId": "main:beat-05-01",
+			"order": 13,
+			"type": "dialogue",
+			"speakerId": "character:voss",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Sorell, vaya al núcleo. Averigüe qué falsificaron y qué encontró Zao.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "main:cue-05-14",
+			"beatId": "main:beat-05-01",
+			"order": 14,
+			"type": "dialogue",
+			"speakerId": "character:voss",
+			"presentation": "on_screen",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Espere. No vaya sola. Busque a Harlan y entren juntos.",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "main:cue-05-15",
+			"beatId": "main:beat-05-01",
+			"order": 15,
+			"type": "action",
+			"text": "Sorell libera sus correas y sale por el vestíbulo. Harlan ya se impulsa por el cilindro de servicio con el acoplador asegurado al traje."
 		},
 		{
 			"id": "main:cue-06-01",
 			"beatId": "main:beat-06-01",
 			"order": 1,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Si no puedo hablarles ahora, les hablo a donde van a estar.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "Zao abre el intercomunicador de pared. “COM A — SIN PORTADORA”. Prueba el respaldo: “COM B — SIN PORTADORA”. Que fallen a la vez la malla y los dos enlaces físicos confirma una intervención deliberada."
 		},
 		{
 			"id": "main:cue-06-02",
 			"beatId": "main:beat-06-01",
 			"order": 2,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "El plan ya dice dónde van a estar. Abro el haz al corredor y apunto.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "La consola local del láser exterior conserva energía y control por su canalización dedicada. Zao pasa a ella sin explicar su conclusión."
 		},
 		{
 			"id": "main:cue-06-03",
 			"beatId": "main:beat-06-01",
 			"order": 3,
+			"type": "action",
+			"text": "La solución Tierra queda en rojo: recepción posterior al encuentro. Proxima no ofrece adquisición óptica utilizable."
+		},
+		{
+			"id": "main:cue-06-04",
+			"beatId": "main:beat-06-01",
+			"order": 4,
+			"type": "action",
+			"text": "Zao superpone el plan de vuelo, el tiempo lumínico y la posición futura de Celestial Ardor. La ventana de intercepción anterior al encuentro queda disponible."
+		},
+		{
+			"id": "main:cue-06-05",
+			"beatId": "main:beat-06-01",
+			"order": 5,
+			"type": "action",
+			"text": "La huella divergente del láser cubre parte de la elipse de incertidumbre. Zao ajusta un barrido estrecho sólo sobre la región restante."
+		},
+		{
+			"id": "main:cue-06-06",
+			"beatId": "main:beat-06-01",
+			"order": 6,
+			"type": "action",
+			"text": "Harlan se lanza por un tramo libre del cilindro de servicio, corrige entre bandejas periféricas y frena en la compuerta del ramal técnico."
+		},
+		{
+			"id": "main:cue-06-07",
+			"beatId": "main:beat-06-01",
+			"order": 7,
+			"type": "action",
+			"text": "Sorell busca el puesto de Harlan, no lo encuentra y avanza sola por el cilindro central, mano sobre mano entre descansos y compuertas."
+		},
+		{
+			"id": "main:cue-06-08",
+			"beatId": "main:beat-06-01",
+			"order": 8,
+			"type": "action",
+			"text": "Zao graba mirando al sensor; el paquete se repetirá a lo largo del barrido."
+		},
+		{
+			"id": "main:cue-06-09",
+			"beatId": "main:beat-06-01",
+			"order": 9,
 			"type": "dialogue",
 			"speakerId": "character:zao",
-			"presentation": "on_screen",
+			"presentation": "recording",
 			"content": {
 				"sourceLanguage": "es",
 				"variants": {
@@ -1758,12 +2108,26 @@
 			}
 		},
 		{
-			"id": "main:cue-06-04",
+			"id": "main:cue-06-10",
 			"beatId": "main:beat-06-01",
-			"order": 4,
+			"order": 10,
+			"type": "action",
+			"text": "Presiona TRANSMITIR. La portadora recorre el barrido: 40%… 70%… 100%. TRANSMITIDO."
+		},
+		{
+			"id": "main:cue-06-11",
+			"beatId": "main:beat-06-01",
+			"order": 11,
+			"type": "action",
+			"text": "Harlan entra por el ramal técnico cuando la solución de puntería ya se ha cerrado. Ve el envío completado, no su destino."
+		},
+		{
+			"id": "main:cue-06-12",
+			"beatId": "main:beat-06-01",
+			"order": 12,
 			"type": "dialogue",
 			"speakerId": "character:harlan",
-			"presentation": "off_screen",
+			"presentation": "on_screen",
 			"content": {
 				"sourceLanguage": "es",
 				"variants": {
@@ -1775,9 +2139,9 @@
 			}
 		},
 		{
-			"id": "main:cue-06-05",
+			"id": "main:cue-06-13",
 			"beatId": "main:beat-06-01",
-			"order": 5,
+			"order": 13,
 			"type": "dialogue",
 			"speakerId": "character:zao",
 			"presentation": "on_screen",
@@ -1792,15 +2156,12 @@
 			}
 		},
 		{
-			"id": "main:cue-06-06",
+			"id": "main:cue-06-14",
 			"beatId": "main:beat-06-01",
-			"order": 6,
+			"order": 14,
 			"type": "dialogue",
 			"speakerId": "character:harlan",
 			"presentation": "on_screen",
-			"performance": {
-				"emotion": "un paso adelante, la calma\nresquebrajándose"
-			},
 			"content": {
 				"sourceLanguage": "es",
 				"variants": {
@@ -1812,9 +2173,9 @@
 			}
 		},
 		{
-			"id": "main:cue-06-07",
+			"id": "main:cue-06-15",
 			"beatId": "main:beat-06-01",
-			"order": 7,
+			"order": 15,
 			"type": "dialogue",
 			"speakerId": "character:zao",
 			"presentation": "on_screen",
@@ -1829,9 +2190,9 @@
 			}
 		},
 		{
-			"id": "main:cue-06-08",
+			"id": "main:cue-06-16",
 			"beatId": "main:beat-06-01",
-			"order": 8,
+			"order": 16,
 			"type": "dialogue",
 			"speakerId": "character:harlan",
 			"presentation": "on_screen",
@@ -1839,58 +2200,103 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Ya no hay \"todavía\". Y no vas a decirme dónde apuntaste.",
+						"spokenText": "Ya no hay “todavía”. Y no vas a decirme dónde apuntaste.",
 						"status": "source"
 					}
 				}
 			}
 		},
 		{
-			"id": "main:cue-06-09",
-			"beatId": "main:beat-06-01",
-			"order": 9,
-			"type": "action",
-			"text": "Zao corre a la consola de contingencia mostrada antes —óptica y alimentación propias, físicamente separadas de la red."
-		},
-		{
-			"id": "main:cue-06-10",
-			"beatId": "main:beat-06-01",
-			"order": 10,
-			"type": "action",
-			"text": "Calcula rápido, verificando contra el plan de vuelo ya cargado."
-		},
-		{
-			"id": "main:cue-06-11",
-			"beatId": "main:beat-06-01",
-			"order": 11,
-			"type": "action",
-			"text": "Graba, la voz firme pero apurada."
-		},
-		{
-			"id": "main:cue-06-12",
-			"beatId": "main:beat-06-01",
-			"order": 12,
-			"type": "action",
-			"text": "Presiona TRANSMITIR. Barra de progreso: 40%... 70%..."
-		},
-		{
-			"id": "main:cue-06-13",
-			"beatId": "main:beat-06-01",
-			"order": 13,
-			"type": "action",
-			"text": "La puerta se abre detrás de ella. Zao no se da vuelta."
-		},
-		{
-			"id": "main:cue-06-14",
-			"beatId": "main:beat-06-01",
-			"order": 14,
-			"type": "action",
-			"text": "Se gira. La barra llega a 100%. TRANSMITIDO."
-		},
-		{
 			"id": "main:cue-07-01",
 			"beatId": "main:beat-07-01",
 			"order": 1,
+			"type": "action",
+			"text": "Zao y Harlan se sostienen la mirada en microgravedad."
+		},
+		{
+			"id": "main:cue-07-02",
+			"beatId": "main:beat-07-01",
+			"order": 2,
+			"type": "action",
+			"text": "CORTE A NEGRO. Forcejeo breve. Silencio."
+		},
+		{
+			"id": "main:cue-07-03",
+			"beatId": "main:beat-07-01",
+			"order": 3,
+			"type": "action",
+			"text": "Harlan asegura temporalmente el cuerpo, borra su acceso, cámaras y el archivo local, y limpia las superficies que tocó. Conserva el jammer activo."
+		},
+		{
+			"id": "main:cue-07-04",
+			"beatId": "main:beat-07-01",
+			"order": 4,
+			"type": "action",
+			"text": "Harlan abandona el núcleo por el ramal técnico y se impulsa de regreso por el cilindro de servicio."
+		},
+		{
+			"id": "main:cue-07-05",
+			"beatId": "main:beat-07-01",
+			"order": 5,
+			"type": "action",
+			"text": "Sorell entra por el acceso operativo y encuentra a Zao. Se asegura, contiene el cuerpo y comprueba respiración y pulso."
+		},
+		{
+			"id": "main:cue-07-06",
+			"beatId": "main:beat-07-01",
+			"order": 6,
+			"type": "action",
+			"text": "Sorell fija a Zao contra una superficie de sujeción e intenta reanimarla, alterando involuntariamente la escena."
+		},
+		{
+			"id": "main:cue-07-07",
+			"beatId": "main:beat-07-01",
+			"order": 7,
+			"type": "dialogue",
+			"speakerId": "character:sorell",
+			"presentation": "radio",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Puente, emergencia en el núcleo. Zao no responde. ¿Me reciben?",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "main:cue-07-08",
+			"beatId": "main:beat-07-01",
+			"order": 8,
+			"type": "action",
+			"text": "El jammer bloquea el comunicador de Sorell. En el intercomunicador de pared, COM A y COM B siguen sin portadora. La voz no queda en cola."
+		},
+		{
+			"id": "main:cue-07-09",
+			"beatId": "main:beat-07-01",
+			"order": 9,
+			"type": "action",
+			"text": "En el distribuidor junto a mando, Harlan reinserta el acoplador COM A/B, confirma ambas portadoras, limpia el tablero y cierra el panel."
+		},
+		{
+			"id": "main:cue-07-10",
+			"beatId": "main:beat-07-01",
+			"order": 10,
+			"type": "action",
+			"text": "Harlan reaparece en el vestíbulo y se sujeta en el puente como si regresara de sus tareas. Sorell, ansiosa, permanece junto a Zao y ya no vuelve a llamar."
+		},
+		{
+			"id": "main:cue-07-11",
+			"beatId": "main:beat-07-01",
+			"order": 11,
+			"type": "action",
+			"text": "Los nodos negros separados por kilómetros se conectan. La región navegable alcanza 150–200 m; Celestial Ardor deriva con motor apagado y radiadores recogidos."
+		},
+		{
+			"id": "main:cue-07-12",
+			"beatId": "main:beat-07-01",
+			"order": 12,
 			"type": "dialogue",
 			"speakerId": "character:cael",
 			"presentation": "on_screen",
@@ -1905,46 +2311,11 @@
 			}
 		},
 		{
-			"id": "main:cue-07-02",
+			"id": "main:cue-07-13",
 			"beatId": "main:beat-07-01",
-			"order": 2,
+			"order": 13,
 			"type": "action",
-			"text": "CORTE A NEGRO. Sonido de forcejeo breve. Silencio."
-		},
-		{
-			"id": "main:cue-07-03",
-			"beatId": "main:beat-07-01",
-			"order": 3,
-			"type": "action",
-			"text": "PG exterior Los nodos negros, separados por kilómetros alrededor del vacío, se conectan mediante distorsiones y filamentos imposibles. Entre ellos aparece una región transitable de 150–200 m donde antes no había nada. La Celestial Ardor cruza con motor apagado y radiadores recogidos. Overlay: \"APERTURA NAVEGABLE: 00:87\" descendiendo."
-		},
-		{
-			"id": "main:cue-07-04",
-			"beatId": "main:beat-07-01",
-			"order": 4,
-			"type": "action",
-			"text": "En el puente, Voss y Cael ejecutan la secuencia final, absortos, sin margen de atención para nada más."
-		},
-		{
-			"id": "main:cue-07-05",
-			"beatId": "main:beat-07-01",
-			"order": 5,
-			"type": "action",
-			"text": "La nave atraviesa. Un instante de distorsión total. Silencio absoluto."
-		},
-		{
-			"id": "main:cue-07-06",
-			"beatId": "main:beat-07-01",
-			"order": 6,
-			"type": "action",
-			"text": "Overlay: \"COLAPSO.\" La Boca desaparece tras ellos."
-		},
-		{
-			"id": "main:cue-07-07",
-			"beatId": "main:beat-07-01",
-			"order": 7,
-			"type": "action",
-			"text": "Overlay: \"RELOJ REMOTO — T+00:00:00.\""
+			"text": "La nave atraviesa por inercia. Distorsión total, silencio y colapso de la garganta detrás de ella."
 		},
 		{
 			"id": "main:cue-08-01",
@@ -1967,18 +2338,8 @@
 			"id": "main:cue-08-02",
 			"beatId": "main:beat-08-01",
 			"order": 2,
-			"type": "dialogue",
-			"speakerId": "character:cael",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Zao no reporta.",
-						"status": "source"
-					}
-				}
-			}
+			"type": "action",
+			"text": "El puente continúa en microgravedad. Los radiadores comienzan a desplegarse antes del siguiente encendido; Harlan está visiblemente sujeto en su puesto."
 		},
 		{
 			"id": "main:cue-08-03",
@@ -1991,7 +2352,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Mandá a alguien al núcleo.",
+						"spokenText": "¿Lo encontró Sorell?",
 						"status": "source"
 					}
 				}
@@ -2002,13 +2363,13 @@
 			"beatId": "main:beat-08-01",
 			"order": 4,
 			"type": "dialogue",
-			"speakerId": "character:voz",
-			"presentation": "off_screen",
+			"speakerId": "character:harlan",
+			"presentation": "on_screen",
 			"content": {
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "¡Capitán! ¡Es Zao, no responde, hay—!",
+						"spokenText": "No la vi.",
 						"status": "source"
 					}
 				}
@@ -2025,7 +2386,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Aseguren el cuerpo. Que nadie toque nada.",
+						"spokenText": "Okoye, vaya con Harlan. Búsquenla en el puesto de Zao.",
 						"status": "source"
 					}
 				}
@@ -2036,28 +2397,21 @@
 			"beatId": "main:beat-08-01",
 			"order": 6,
 			"type": "action",
-			"text": "Estrellas normales al otro lado. Los acumuladores térmicos están al límite; los radiadores comienzan a desplegarse antes del encendido remoto. Cael revisa un panel."
+			"text": "Harlan y Okoye salen por el vestíbulo. Fuera del campo visual del puente, Harlan desactiva el jammer."
 		},
 		{
 			"id": "main:cue-08-07",
 			"beatId": "main:beat-08-01",
 			"order": 7,
 			"type": "action",
-			"text": "Una alarma distinta: chequeo de tripulación incompleto."
+			"text": "Harlan conduce a Okoye por el cilindro central y el acceso operativo, ocultando la ruta de servicio que usó antes."
 		},
 		{
 			"id": "main:cue-08-08",
 			"beatId": "main:beat-08-01",
 			"order": 8,
 			"type": "action",
-			"text": "Un GRITO ahogado por el intercomunicador."
-		},
-		{
-			"id": "main:cue-08-09",
-			"beatId": "main:beat-08-01",
-			"order": 9,
-			"type": "action",
-			"text": "Voss se pone de pie de golpe."
+			"text": "Encuentran a Sorell junto a Zao. Okoye asegura el recinto y solicita a Keene; Harlan representa ver la escena por primera vez."
 		},
 		{
 			"id": "main:cue-09-01",
@@ -2070,7 +2424,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Tenemos un homicidio, cámaras anuladas y un acceso firmado con su nombre.",
+						"spokenText": "Usted oyó el aviso y llegó por orden mía. La firma usada es la de su credencial; no la convierte en sospechosa.",
 						"status": "source"
 					}
 				}
@@ -2087,7 +2441,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Ese registro es falso. Zao marcó mi paquete como pasivo. No puede ejecutar nada.",
+						"spokenText": "Zao alcanzó a decir que parecía falsa. Mi saludo está en soporte pasivo; no puede ejecutar nada.",
 						"status": "source"
 					}
 				}
@@ -2104,7 +2458,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Hasta que sepamos qué fue alterado, mantenerla lejos del núcleo es protocolo, no condena.",
+						"spokenText": "Entonces bloquee esa credencial hasta saber qué copiaron.",
 						"status": "source"
 					}
 				}
@@ -2124,7 +2478,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Queda apartada, no acusada. Conserve su comunicador.",
+						"spokenText": "Bloqueada. Sorell permanece en la investigación.",
 						"status": "source"
 					}
 				}
@@ -2159,14 +2513,14 @@
 			"beatId": "main:beat-09-01",
 			"order": 7,
 			"type": "action",
-			"text": "PD El médico registra lesiones incompatibles con una caída. PD Las cámaras del núcleo muestran un vacío exacto durante la partición de cruce. OTS Cael compara accesos; el registro superficial resalta a SORELL. PP Voss observa los tres datos sin encontrar una cadena común."
+			"text": "PD Keene registra lesiones incompatibles con una caída. PD Cámaras y malla muestran un vacío durante la interferencia. PD El distribuidor COM A/B conserva marcas de manipulación. OTS Cael confirma que Sorell estaba en el puente cuando Voss la envió."
 		},
 		{
 			"id": "main:cue-09-08",
 			"beatId": "main:beat-09-01",
 			"order": 8,
 			"type": "action",
-			"text": "Sorell entrega su credencial. Antes de salir, mira a Rao."
+			"text": "Sorell entrega la credencial comprometida para análisis y se coloca junto a Rao."
 		},
 		{
 			"id": "main:cue-10-01",
@@ -2250,7 +2604,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "¿Sorell?",
+						"spokenText": "¿La credencial de Sorell?",
 						"status": "source"
 					}
 				}
@@ -2469,7 +2823,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "La firma y la hora corresponden al transmisor óptico de Zao. Eso prueba desde qué consola salió, no que cada palabra sea auténtica.",
+						"spokenText": "La firma y la hora corresponden al control local del láser exterior. Eso prueba desde qué consola salió, no que cada palabra sea auténtica.",
 						"status": "source"
 					}
 				}
@@ -2588,7 +2942,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "¡Cael, permanezca en navegación! ¡Liberen a Sorell y tráiganla al puente!",
+						"spokenText": "¡Cael, permanezca en navegación! ¡Sorell, al puente!",
 						"status": "source"
 					}
 				}
@@ -2599,7 +2953,7 @@
 			"beatId": "main:beat-12-01",
 			"order": 9,
 			"type": "action",
-			"text": "Cael reconstruye el paquete. Toda la tripulación permanece en sus puestos; Sorell escucha desde el compartimento de observación por comunicador."
+			"text": "Cael reconstruye el paquete. Toda la tripulación permanece en sus puestos; Sorell escucha desde el puesto de investigación por comunicador."
 		},
 		{
 			"id": "main:cue-12-10",
@@ -2706,7 +3060,7 @@
 			"beatId": "main:beat-13-01",
 			"order": 5,
 			"type": "action",
-			"text": "Voss y un tripulante de seguridad llegan al mamparo. En el puente, Sorell ocupa el puesto junto a Rao."
+			"text": "Voss y Okoye llegan al mamparo. En el puente, Sorell ocupa el puesto junto a Rao."
 		},
 		{
 			"id": "main:cue-14-01",
@@ -3455,7 +3809,7 @@
 			],
 			"number": 7,
 			"order": 7,
-			"description": "Zao y Rao verifican núcleo y transmisor óptico independiente.",
+			"description": "Zao y Rao verifican núcleo y control local del láser exterior.",
 			"locationId": "location:proxima-dock",
 			"composition": {
 				"size": "INSERT",
@@ -3491,8 +3845,14 @@
 				{
 					"type": "sound",
 					"text": "Pulso grave del núcleo."
+				},
+				{
+					"type": "todo",
+					"text": "El frame heredado muestra el antiguo transmisor independiente; reemplazar por la consola cableada del láser exterior.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Zao y Rao verifican núcleo y control local del láser exterior."
 		},
 		{
 			"id": "main:shot-01-08",
@@ -3905,7 +4265,7 @@
 			],
 			"number": 3,
 			"order": 19,
-			"description": "Registro superficial muestra SORELL — ACCESO NIVEL 3.",
+			"description": "Zao contrasta la firma superficial con el bloque autónomo.",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
 				"size": "INSERT",
@@ -3932,7 +4292,8 @@
 					"type": "sound",
 					"text": "Golpe sonoro corto."
 				}
-			]
+			],
+			"purpose": "Zao contrasta la firma superficial con el bloque autónomo."
 		},
 		{
 			"id": "main:shot-04-04",
@@ -3942,7 +4303,7 @@
 			],
 			"number": 4,
 			"order": 20,
-			"description": "Zao informa a Voss sin formular una acusación.",
+			"description": "Zao marca el registro como no verificado y preserva una copia local.",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
 				"size": "MS",
@@ -3967,9 +4328,10 @@
 			"notes": [
 				{
 					"type": "sound",
-					"text": "Radio limpia."
+					"text": "Confirmación seca de archivo local."
 				}
-			]
+			],
+			"purpose": "Zao marca el registro como no verificado y preserva una copia local."
 		},
 		{
 			"id": "main:shot-04-05",
@@ -4010,28 +4372,40 @@
 			],
 			"number": 1,
 			"order": 22,
-			"description": "El núcleo entra en precarga; la envoltura empieza a desplegarse.",
+			"description": "Payload autónomo y relé físico",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "LS",
+				"size": "OTS",
 				"framing": "PG",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "28 mm · cámara se aproxima lentamente."
+				"movementDescription": "Sobre Zao: firma superficial y relé físico comparten el cuadro; avance corto hacia la discrepancia.",
+				"movement": "dolly"
 			},
-			"durationMs": 18000,
-			"cuePlacements": [],
+			"durationMs": 14000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-05-01",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-05-02",
+					"atMs": 7000
+				}
+			],
 			"takeIds": [
 				"main:take-05-01-01"
 			],
 			"selectedTakeId": "main:take-05-01-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Frecuencia grave creciente."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-05-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Payload autónomo y relé físico"
 		},
 		{
 			"id": "main:shot-05-02",
@@ -4041,22 +4415,22 @@
 			],
 			"number": 2,
 			"order": 23,
-			"description": "Interfaz revela ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA.",
+			"description": "Zao identifica la firma de Harlan",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "OTS",
+				"size": "CU",
 				"framing": "OTS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "50 mm · capas translúcidas."
+				"movementDescription": "Rack focus de la firma de Harlan al rostro de Zao; sin diálogo explicativo.",
+				"movement": "locked"
 			},
-			"durationMs": 20000,
+			"durationMs": 14000,
 			"cuePlacements": [
 				{
-					"cueId": "main:cue-05-01",
-					"atMs": 0,
-					"durationMs": 8000
+					"cueId": "main:cue-05-03",
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4065,10 +4439,12 @@
 			"selectedTakeId": "main:take-05-02-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Alarma contenida."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-05-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Zao identifica la firma de Harlan"
 		},
 		{
 			"id": "main:shot-05-03",
@@ -4078,22 +4454,30 @@
 			],
 			"number": 3,
 			"order": 24,
-			"description": "Registro superficial Sorell frente a firma física OVR-7C41.",
-			"locationId": "location:diplomatic-core-room",
+			"description": "Voss, tripulación y Harlan en el acceso axial",
+			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
-				"size": "INSERT",
+				"size": "MS",
 				"framing": "PD",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "85 mm · pantalla dividida."
+				"movementDescription": "Frontal de Voss; tripulación en segundo término y umbral axial profundo con Harlan al fondo.",
+				"movement": "locked"
 			},
-			"durationMs": 20000,
+			"durationMs": 18000,
 			"cuePlacements": [
 				{
-					"cueId": "main:cue-05-02",
-					"atMs": 0,
-					"durationMs": 8000
+					"cueId": "main:cue-05-04",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-05-05",
+					"atMs": 6000
+				},
+				{
+					"cueId": "main:cue-05-06",
+					"atMs": 12000
 				}
 			],
 			"takeIds": [
@@ -4102,10 +4486,12 @@
 			"selectedTakeId": "main:take-05-03-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Dos firmas con timbres distintos."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Voss, tripulación y Harlan en el acceso axial"
 		},
 		{
 			"id": "main:shot-05-04",
@@ -4115,22 +4501,22 @@
 			],
 			"number": 4,
 			"order": 25,
-			"description": "Zao conecta sesión, recorrido de mantenimiento y firma.",
-			"locationId": "location:diplomatic-core-room",
+			"description": "Harlan activa el jammer; la voz se corta",
+			"locationId": "location:celestial-ardor-command-vestibule",
 			"composition": {
-				"size": "CU",
+				"size": "ECU",
 				"framing": "PP",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "85 mm · luz roja entra progresivamente."
+				"movementDescription": "Detalle de la mano de Harlan activando el jammer; el puente queda desenfocado detrás.",
+				"movement": "locked"
 			},
-			"durationMs": 22000,
+			"durationMs": 12000,
 			"cuePlacements": [
 				{
-					"cueId": "main:cue-05-03",
-					"atMs": 0,
-					"durationMs": 8000
+					"cueId": "main:cue-05-07",
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4139,10 +4525,12 @@
 			"selectedTakeId": "main:take-05-04-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Respiración."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Harlan activa el jammer; la voz se corta"
 		},
 		{
 			"id": "main:shot-05-05",
@@ -4152,22 +4540,30 @@
 			],
 			"number": 5,
 			"order": 26,
-			"description": "Mamparos se sellan al entrar en expansión crítica.",
+			"description": "Zao termina sin ser oída",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "LS",
+				"size": "MS",
 				"framing": "PG",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "32 mm · líneas del recinto convergen sobre Zao."
+				"movementDescription": "Corte frontal a Zao terminando la frase y esperando una respuesta que no llega.",
+				"movement": "handheld"
 			},
-			"durationMs": 20000,
+			"durationMs": 12000,
 			"cuePlacements": [
 				{
-					"cueId": "main:cue-05-04",
-					"atMs": 0,
-					"durationMs": 8000
+					"cueId": "main:cue-05-08",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-05-09",
+					"atMs": 4000
+				},
+				{
+					"cueId": "main:cue-05-10",
+					"atMs": 8000
 				}
 			],
 			"takeIds": [
@@ -4176,10 +4572,12 @@
 			"selectedTakeId": "main:take-05-05-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Golpes de cierre."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-05-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Zao termina sin ser oída"
 		},
 		{
 			"id": "main:shot-05-06",
@@ -4189,7 +4587,7 @@
 			],
 			"number": 6,
 			"order": 27,
-			"description": "Canal al puente falla; Zao mira el transmisor independiente.",
+			"description": "Wireless sin enlace y mensaje en cola",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
 				"size": "INSERT",
@@ -4197,18 +4595,110 @@
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "65 mm · foco cambia del ícono muerto al equipo óptico."
+				"movementDescription": "Íconos SIN ENLACE y MENSAJE EN COLA; foco pasa a la reacción de Zao.",
+				"movement": "locked"
 			},
-			"durationMs": 20000,
-			"cuePlacements": [],
+			"durationMs": 16000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-05-11",
+					"atMs": 0
+				}
+			],
 			"takeIds": [
 				"main:take-05-06-01"
 			],
 			"selectedTakeId": "main:take-05-06-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Red interna desaparece."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-05-06; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			],
+			"purpose": "Wireless sin enlace y mensaje en cola"
+		},
+		{
+			"id": "main:shot-05-07",
+			"sceneId": "main:scene-05",
+			"beatIds": [
+				"main:beat-05-01"
+			],
+			"number": 7,
+			"order": 28,
+			"purpose": "Harlan se retira del acceso y desconecta COM A/B",
+			"description": "Harlan se retira del acceso y desconecta COM A/B",
+			"locationId": "location:celestial-ardor-service-cylinder",
+			"composition": {
+				"size": "MS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "tracking",
+				"movementDescription": "Desde el umbral, acompaña el retiro furtivo de Harlan hasta el receso; termina en el acoplador COM A/B."
+			},
+			"durationMs": 16000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-05-12",
+					"atMs": 0
+				}
+			],
+			"takeIds": [
+				"main:take-05-07-01"
+			],
+			"selectedTakeId": "main:take-05-07-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-05-08",
+			"sceneId": "main:scene-05",
+			"beatIds": [
+				"main:beat-05-01"
+			],
+			"number": 8,
+			"order": 29,
+			"purpose": "Voss envía a Sorell y luego exige escolta",
+			"description": "Voss envía a Sorell y luego exige escolta",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "MS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "locked",
+				"movementDescription": "Corte al puente: Voss retiene a Sorell cuando ella ya se impulsa hacia la salida."
+			},
+			"durationMs": 18000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-05-13",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-05-14",
+					"atMs": 6000
+				},
+				{
+					"cueId": "main:cue-05-15",
+					"atMs": 12000
+				}
+			],
+			"takeIds": [
+				"main:take-05-08-01"
+			],
+			"selectedTakeId": "main:take-05-08-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
 			]
 		},
@@ -4219,28 +4709,27 @@
 				"main:beat-06-01"
 			],
 			"number": 1,
-			"order": 28,
-			"description": "Zao corre a la consola óptica establecida al inicio.",
+			"order": 30,
+			"description": "Fracasan ambos respaldos cableados",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "MS",
+				"size": "INSERT",
 				"framing": "PM",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "35 mm · cámara en mano contenida."
+				"movementDescription": "Intercomunicador de pared: COM A y luego COM B pierden portadora; indicador del láser permanece verde.",
+				"movement": "locked"
 			},
-			"durationMs": 14000,
+			"durationMs": 10000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-06-01",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				},
 				{
 					"cueId": "main:cue-06-02",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 5000
 				}
 			],
 			"takeIds": [
@@ -4249,10 +4738,12 @@
 			"selectedTakeId": "main:take-06-01-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Pasos, alarmas amortiguadas."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-05-06; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Fracasan ambos respaldos cableados"
 		},
 		{
 			"id": "main:shot-06-02",
@@ -4261,8 +4752,8 @@
 				"main:beat-06-01"
 			],
 			"number": 2,
-			"order": 29,
-			"description": "Plan remoto y corredor de intercepción se superponen.",
+			"order": 31,
+			"description": "Tierra y Proxima quedan descartadas",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
 				"size": "OTS",
@@ -4270,14 +4761,14 @@
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "50 mm · retícula amplia, no punto perfecto."
+				"movementDescription": "Interfaz de puntería descarta Tierra y después Proxima sin abandonar las manos de Zao.",
+				"movement": "pan"
 			},
-			"durationMs": 16000,
+			"durationMs": 12000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-06-03",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4286,10 +4777,12 @@
 			"selectedTakeId": "main:take-06-02-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Cálculo óptico."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-06-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Tierra y Proxima quedan descartadas"
 		},
 		{
 			"id": "main:shot-06-03",
@@ -4298,23 +4791,27 @@
 				"main:beat-06-01"
 			],
 			"number": 3,
-			"order": 30,
-			"description": "Zao graba mirando directamente al sensor.",
+			"order": 32,
+			"description": "Solución de intercepción futura",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "CU",
+				"size": "OTS",
 				"framing": "PP",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "75 mm · frontal, sin movimiento."
+				"movementDescription": "Plan de vuelo, intercepción, elipse, huella divergente y raster convergen en una solución legible.",
+				"movement": "dolly"
 			},
-			"durationMs": 16000,
+			"durationMs": 12000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-06-04",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-06-05",
+					"atMs": 6000
 				}
 			],
 			"takeIds": [
@@ -4323,10 +4820,12 @@
 			"selectedTakeId": "main:take-06-03-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Voz seca."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-06-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Solución de intercepción futura"
 		},
 		{
 			"id": "main:shot-06-04",
@@ -4335,28 +4834,23 @@
 				"main:beat-06-01"
 			],
 			"number": 4,
-			"order": 31,
-			"description": "Barra de transmisión y firma de dispositivo.",
-			"locationId": "location:diplomatic-core-room",
+			"order": 33,
+			"description": "Harlan cruza el cilindro de servicio",
+			"locationId": "location:celestial-ardor-service-cylinder",
 			"composition": {
-				"size": "INSERT",
+				"size": "LS",
 				"framing": "PD",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "85 mm · 40%, 70%, 100%."
+				"movementDescription": "Eje largo del cilindro de servicio; Harlan cruza balísticamente y frena en el ramal técnico.",
+				"movement": "tracking"
 			},
-			"durationMs": 14000,
+			"durationMs": 10000,
 			"cuePlacements": [
 				{
-					"cueId": "main:cue-06-05",
-					"atMs": 0,
-					"durationMs": 8000
-				},
-				{
 					"cueId": "main:cue-06-06",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4365,10 +4859,12 @@
 			"selectedTakeId": "main:take-06-04-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Portadora sube."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-13-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Harlan cruza el cilindro de servicio"
 		},
 		{
 			"id": "main:shot-06-05",
@@ -4377,23 +4873,23 @@
 				"main:beat-06-01"
 			],
 			"number": 5,
-			"order": 32,
-			"description": "Harlan aparece desenfocado tras Zao.",
-			"locationId": "location:diplomatic-core-room",
+			"order": 34,
+			"description": "Sorell busca y avanza por el cilindro central",
+			"locationId": "location:celestial-ardor-central-access",
 			"composition": {
-				"size": "OTS",
+				"size": "LS",
 				"framing": "OTS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "50 mm · puerta al fondo."
+				"movementDescription": "Sorell avanza mano sobre mano por el cilindro central entre barras, descansos y compuertas.",
+				"movement": "tracking"
 			},
-			"durationMs": 14000,
+			"durationMs": 10000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-06-07",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4402,10 +4898,12 @@
 			"selectedTakeId": "main:take-06-05-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "La portadora cesa."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-03-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Sorell busca y avanza por el cilindro central"
 		},
 		{
 			"id": "main:shot-06-06",
@@ -4414,8 +4912,8 @@
 				"main:beat-06-01"
 			],
 			"number": 6,
-			"order": 33,
-			"description": "Harlan comprende que hubo un envío, pero no su destino.",
+			"order": 35,
+			"description": "Zao graba el mensaje",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
 				"size": "CU",
@@ -4423,14 +4921,18 @@
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "85 mm · campo/contracampo cerrado."
+				"movementDescription": "Zao graba contra el sensor; la elipse y el reloj quedan reflejados en el visor.",
+				"movement": "locked"
 			},
-			"durationMs": 16000,
+			"durationMs": 12000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-06-08",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-06-09",
+					"atMs": 6000
 				}
 			],
 			"takeIds": [
@@ -4439,8 +4941,106 @@
 			"selectedTakeId": "main:take-06-06-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Silencio tenso."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-06-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			],
+			"purpose": "Zao graba el mensaje"
+		},
+		{
+			"id": "main:shot-06-07",
+			"sceneId": "main:scene-06",
+			"beatIds": [
+				"main:beat-06-01"
+			],
+			"number": 7,
+			"order": 36,
+			"purpose": "El barrido llega a cien; Harlan entra",
+			"description": "El barrido llega a cien; Harlan entra",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "handheld",
+				"movementDescription": "Barra 40–100; la puerta técnica se abre sólo después de cerrarse la solución de puntería."
+			},
+			"durationMs": 12000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-06-10",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-06-11",
+					"atMs": 4000
+				},
+				{
+					"cueId": "main:cue-06-12",
+					"atMs": 8000
+				}
+			],
+			"takeIds": [
+				"main:take-06-07-01"
+			],
+			"selectedTakeId": "main:take-06-07-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-06-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-06-08",
+			"sceneId": "main:scene-06",
+			"beatIds": [
+				"main:beat-06-01"
+			],
+			"number": 8,
+			"order": 37,
+			"purpose": "Confrontación tras la transmisión",
+			"description": "Confrontación tras la transmisión",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "MS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "handheld",
+				"movementDescription": "Dos cuerpos sujetos en microgravedad; eje cerrado entre Zao y Harlan."
+			},
+			"durationMs": 12000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-06-13",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-06-14",
+					"atMs": 3000
+				},
+				{
+					"cueId": "main:cue-06-15",
+					"atMs": 6000
+				},
+				{
+					"cueId": "main:cue-06-16",
+					"atMs": 9000
+				}
+			],
+			"takeIds": [
+				"main:take-06-08-01"
+			],
+			"selectedTakeId": "main:take-06-08-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-06-06; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
 			]
 		},
@@ -4451,29 +5051,37 @@
 				"main:beat-07-01"
 			],
 			"number": 1,
-			"order": 34,
-			"description": "Ojos de Zao sostienen a Harlan.",
+			"order": 38,
+			"description": "Última mirada entre Zao y Harlan",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "ECU",
+				"size": "CU",
 				"framing": "PPP",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "100 mm · inmóvil."
+				"movementDescription": "Última mirada sostenida, sin cobertura explicativa.",
+				"movement": "locked"
 			},
-			"durationMs": 10000,
-			"cuePlacements": [],
+			"durationMs": 5000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-01",
+					"atMs": 0
+				}
+			],
 			"takeIds": [
 				"main:take-07-01-01"
 			],
 			"selectedTakeId": "main:take-07-01-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Respiración y alarma."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-07-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Última mirada entre Zao y Harlan"
 		},
 		{
 			"id": "main:shot-07-02",
@@ -4482,8 +5090,8 @@
 				"main:beat-07-01"
 			],
 			"number": 2,
-			"order": 35,
-			"description": "El forcejeo ocurre fuera de campo.",
+			"order": 39,
+			"description": "Asesinato fuera de campo",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
 				"size": "OTHER",
@@ -4491,20 +5099,28 @@
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "Corte a negro, sin coreografía."
+				"movementDescription": "Corte a negro; el forcejeo se narra sólo por sonido.",
+				"movement": "locked"
 			},
-			"durationMs": 12000,
-			"cuePlacements": [],
+			"durationMs": 6000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-02",
+					"atMs": 0
+				}
+			],
 			"takeIds": [
 				"main:take-07-02-01"
 			],
 			"selectedTakeId": "main:take-07-02-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Golpe breve; silencio."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-07-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Asesinato fuera de campo"
 		},
 		{
 			"id": "main:shot-07-03",
@@ -4513,29 +5129,37 @@
 				"main:beat-07-01"
 			],
 			"number": 3,
-			"order": 36,
-			"description": "Nodos negros dispersos alrededor del vacío se conectan; aparece una región navegable de 150–200 m. La nave espera con motor y radiadores recogidos.",
+			"order": 40,
+			"description": "Harlan borra y limpia el núcleo",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "LS",
+				"size": "MS",
 				"framing": "PG",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "24 mm exterior · sensor compuesto para abarcar nodos separados por kilómetros."
+				"movementDescription": "Montaje corto de archivo, cámaras y superficies mientras Harlan asegura el cuerpo.",
+				"movement": "handheld"
 			},
-			"durationMs": 12000,
-			"cuePlacements": [],
+			"durationMs": 7000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-03",
+					"atMs": 0
+				}
+			],
 			"takeIds": [
 				"main:take-07-03-01"
 			],
 			"selectedTakeId": "main:take-07-03-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Espectro armónico no humano."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-06-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Harlan borra y limpia el núcleo"
 		},
 		{
 			"id": "main:shot-07-04",
@@ -4544,23 +5168,23 @@
 				"main:beat-07-01"
 			],
 			"number": 4,
-			"order": 37,
-			"description": "Reloj local: T+57:47:30; apertura navegable 00:90.",
-			"locationId": "location:diplomatic-core-room",
+			"order": 41,
+			"description": "Regreso por el cilindro de servicio",
+			"locationId": "location:celestial-ardor-service-cylinder",
 			"composition": {
-				"size": "INSERT",
+				"size": "LS",
 				"framing": "PD",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "85 mm · contador legible."
+				"movementDescription": "Harlan se impulsa de vuelta por servicio; profundidad axial y velocidad balística.",
+				"movement": "tracking"
 			},
-			"durationMs": 14000,
+			"durationMs": 6000,
 			"cuePlacements": [
 				{
-					"cueId": "main:cue-07-01",
-					"atMs": 0,
-					"durationMs": 8000
+					"cueId": "main:cue-07-04",
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4569,10 +5193,12 @@
 			"selectedTakeId": "main:take-07-04-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Cael cuenta."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-13-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Regreso por el cilindro de servicio"
 		},
 		{
 			"id": "main:shot-07-05",
@@ -4581,27 +5207,237 @@
 				"main:beat-07-01"
 			],
 			"number": 5,
-			"order": 38,
-			"description": "La nave atraviesa en T+57:48; la garganta colapsa después.",
+			"order": 42,
+			"description": "Sorell encuentra a Zao",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "LS",
+				"size": "MS",
 				"framing": "PG",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "24 mm · destello único, luego estrellas normales."
+				"movementDescription": "Sorell entra por el acceso operativo y detiene la deriva de Zao.",
+				"movement": "handheld"
 			},
-			"durationMs": 12000,
-			"cuePlacements": [],
+			"durationMs": 7000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-05",
+					"atMs": 0
+				}
+			],
 			"takeIds": [
 				"main:take-07-05-01"
 			],
 			"selectedTakeId": "main:take-07-05-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Silencio absoluto y retorno del casco."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			],
+			"purpose": "Sorell encuentra a Zao"
+		},
+		{
+			"id": "main:shot-07-06",
+			"sceneId": "main:scene-07",
+			"beatIds": [
+				"main:beat-07-01"
+			],
+			"number": 6,
+			"order": 43,
+			"purpose": "Sorell intenta reanimarla",
+			"description": "Sorell intenta reanimarla",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "MS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "handheld",
+				"movementDescription": "Sorell se asegura, fija el cuerpo e intenta reanimarlo; comunicador visible."
+			},
+			"durationMs": 7000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-06",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-07-07",
+					"atMs": 2333
+				},
+				{
+					"cueId": "main:cue-07-08",
+					"atMs": 4666
+				}
+			],
+			"takeIds": [
+				"main:take-07-06-01"
+			],
+			"selectedTakeId": "main:take-07-06-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-07-07",
+			"sceneId": "main:scene-07",
+			"beatIds": [
+				"main:beat-07-01"
+			],
+			"number": 7,
+			"order": 44,
+			"purpose": "Harlan restaura COM A/B y reaparece",
+			"description": "Harlan restaura COM A/B y reaparece",
+			"locationId": "location:celestial-ardor-command-vestibule",
+			"composition": {
+				"size": "INSERT",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "tracking",
+				"movementDescription": "Acoplador COM A/B vuelve a cerrar; la cámara acompaña a Harlan hasta el vestíbulo."
+			},
+			"durationMs": 6000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-09",
+					"atMs": 0
+				},
+				{
+					"cueId": "main:cue-07-10",
+					"atMs": 3000
+				}
+			],
+			"takeIds": [
+				"main:take-07-07-01"
+			],
+			"selectedTakeId": "main:take-07-07-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-07-08",
+			"sceneId": "main:scene-07",
+			"beatIds": [
+				"main:beat-07-01"
+			],
+			"number": 8,
+			"order": 45,
+			"purpose": "Los nodos forman la garganta",
+			"description": "Los nodos forman la garganta",
+			"locationId": "location:velari-wormhole-mouth",
+			"composition": {
+				"size": "ELS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "locked",
+				"movementDescription": "Exterior instrumental: nodos separados por kilómetros forman la región navegable."
+			},
+			"durationMs": 6000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-11",
+					"atMs": 0
+				}
+			],
+			"takeIds": [
+				"main:take-07-08-01"
+			],
+			"selectedTakeId": "main:take-07-08-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-07-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-07-09",
+			"sceneId": "main:scene-07",
+			"beatIds": [
+				"main:beat-07-01"
+			],
+			"number": 9,
+			"order": 46,
+			"purpose": "Cuenta final en el puente",
+			"description": "Cuenta final en el puente",
+			"locationId": "location:celestial-ardor-bridge",
+			"composition": {
+				"size": "MS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "locked",
+				"movementDescription": "Puente coral en microgravedad; Cael cuenta mientras Harlan ya está sujeto al fondo."
+			},
+			"durationMs": 5000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-12",
+					"atMs": 0
+				}
+			],
+			"takeIds": [
+				"main:take-07-09-01"
+			],
+			"selectedTakeId": "main:take-07-09-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-07-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-07-10",
+			"sceneId": "main:scene-07",
+			"beatIds": [
+				"main:beat-07-01"
+			],
+			"number": 10,
+			"order": 47,
+			"purpose": "Cruce por inercia y colapso",
+			"description": "Cruce por inercia y colapso",
+			"locationId": "location:velari-wormhole-mouth",
+			"composition": {
+				"size": "ELS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "locked",
+				"movementDescription": "La Ardor cruza por inercia; distorsión total y colapso detrás."
+			},
+			"durationMs": 5000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-07-13",
+					"atMs": 0
+				}
+			],
+			"takeIds": [
+				"main:take-07-10-01"
+			],
+			"selectedTakeId": "main:take-07-10-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-07-05; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
 			]
 		},
@@ -4612,28 +5448,27 @@
 				"main:beat-08-01"
 			],
 			"number": 1,
-			"order": 39,
-			"description": "Puente al otro lado; estrellas sin distorsión. Indicadores muestran acumuladores térmicos altos y radiadores desplegándose.",
+			"order": 48,
+			"description": "Cruce confirmado en microgravedad",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
-				"size": "LS",
+				"size": "MS",
 				"framing": "PG",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "28 mm · estabilidad recuperada."
+				"movementDescription": "Puente tras el cruce; Harlan queda inequívocamente visible en su puesto.",
+				"movement": "locked"
 			},
-			"durationMs": 14000,
+			"durationMs": 8000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-08-01",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				},
 				{
 					"cueId": "main:cue-08-02",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 4000
 				}
 			],
 			"takeIds": [
@@ -4642,10 +5477,12 @@
 			"selectedTakeId": "main:take-08-01-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Sistemas reinician."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Cruce confirmado en microgravedad"
 		},
 		{
 			"id": "main:shot-08-02",
@@ -4654,23 +5491,23 @@
 				"main:beat-08-01"
 			],
 			"number": 2,
-			"order": 40,
-			"description": "Chequeo de tripulación: ZAO — SIN RESPUESTA.",
+			"order": 49,
+			"description": "Voss pregunta por Sorell",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
-				"size": "INSERT",
+				"size": "CU",
 				"framing": "PD",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "75 mm · alerta ámbar."
+				"movementDescription": "Voss mira el puesto vacío de Sorell antes de preguntar.",
+				"movement": "locked"
 			},
-			"durationMs": 16000,
+			"durationMs": 8000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-08-03",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4679,10 +5516,12 @@
 			"selectedTakeId": "main:take-08-02-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Tono distinto."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Voss pregunta por Sorell"
 		},
 		{
 			"id": "main:shot-08-03",
@@ -4691,8 +5530,8 @@
 				"main:beat-08-01"
 			],
 			"number": 3,
-			"order": 41,
-			"description": "Voss percibe un grito por intercomunicador.",
+			"order": 50,
+			"description": "Harlan niega haberla visto",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "CU",
@@ -4700,14 +5539,14 @@
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "85 mm · reacción antes de información."
+				"movementDescription": "Harlan responde sin apartarse de las sujeciones.",
+				"movement": "locked"
 			},
-			"durationMs": 16000,
+			"durationMs": 7000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-08-04",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4716,10 +5555,12 @@
 			"selectedTakeId": "main:take-08-03-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Voz rota."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
-			]
+			],
+			"purpose": "Harlan niega haberla visto"
 		},
 		{
 			"id": "main:shot-08-04",
@@ -4728,8 +5569,8 @@
 				"main:beat-08-01"
 			],
 			"number": 4,
-			"order": 42,
-			"description": "Voss se pone de pie y toma control del puente.",
+			"order": 51,
+			"description": "Voss envía a Harlan y Okoye",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "MS",
@@ -4737,14 +5578,14 @@
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "50 mm · leve acercamiento."
+				"movementDescription": "Voss asigna a Okoye; ambos quedan en cuadro con Harlan.",
+				"movement": "locked"
 			},
-			"durationMs": 14000,
+			"durationMs": 8000,
 			"cuePlacements": [
 				{
 					"cueId": "main:cue-08-05",
-					"atMs": 0,
-					"durationMs": 8000
+					"atMs": 0
 				}
 			],
 			"takeIds": [
@@ -4753,8 +5594,124 @@
 			"selectedTakeId": "main:take-08-04-01",
 			"notes": [
 				{
-					"type": "sound",
-					"text": "Música corta."
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-08-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			],
+			"purpose": "Voss envía a Harlan y Okoye"
+		},
+		{
+			"id": "main:shot-08-05",
+			"sceneId": "main:scene-08",
+			"beatIds": [
+				"main:beat-08-01"
+			],
+			"number": 5,
+			"order": 52,
+			"purpose": "Harlan desactiva el jammer",
+			"description": "Harlan desactiva el jammer",
+			"locationId": "location:celestial-ardor-command-vestibule",
+			"composition": {
+				"size": "ECU",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "locked",
+				"movementDescription": "Fuera del puente, la mano de Harlan desactiva el jammer."
+			},
+			"durationMs": 7000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-08-06",
+					"atMs": 0
+				}
+			],
+			"takeIds": [
+				"main:take-08-05-01"
+			],
+			"selectedTakeId": "main:take-08-05-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-08-06",
+			"sceneId": "main:scene-08",
+			"beatIds": [
+				"main:beat-08-01"
+			],
+			"number": 6,
+			"order": 53,
+			"purpose": "Harlan y Okoye usan la circulación normal",
+			"description": "Harlan y Okoye usan la circulación normal",
+			"locationId": "location:celestial-ardor-central-access",
+			"composition": {
+				"size": "LS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "tracking",
+				"movementDescription": "Harlan y Okoye descienden por la ruta cotidiana; el acceso de servicio queda fuera de cuadro."
+			},
+			"durationMs": 8000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-08-07",
+					"atMs": 0
+				}
+			],
+			"takeIds": [
+				"main:take-08-06-01"
+			],
+			"selectedTakeId": "main:take-08-06-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-13-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "main:shot-08-07",
+			"sceneId": "main:scene-08",
+			"beatIds": [
+				"main:beat-08-01"
+			],
+			"number": 7,
+			"order": 54,
+			"purpose": "Okoye asegura el recinto y llama a Keene",
+			"description": "Okoye asegura el recinto y llama a Keene",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "MS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movement": "handheld",
+				"movementDescription": "Sorell junto a Zao; Okoye entra, asegura el recinto y llama a Keene."
+			},
+			"durationMs": 14000,
+			"cuePlacements": [
+				{
+					"cueId": "main:cue-08-08",
+					"atMs": 0
+				}
+			],
+			"takeIds": [
+				"main:take-08-07-01"
+			],
+			"selectedTakeId": "main:take-08-07-01",
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Frame provisional reutilizado de main:shot-13-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
+					"resolved": false
 				}
 			]
 		},
@@ -4765,7 +5722,7 @@
 				"main:beat-09-01"
 			],
 			"number": 1,
-			"order": 43,
+			"order": 55,
 			"description": "Lesiones, cámaras vacías y registros se suceden.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -4796,8 +5753,8 @@
 				"main:beat-09-01"
 			],
 			"number": 2,
-			"order": 44,
-			"description": "Voss contempla tres evidencias que no encajan.",
+			"order": 56,
+			"description": "Voss ordena separar la credencial comprometida de la responsabilidad de Sorell.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "OTS",
@@ -4818,7 +5775,8 @@
 					"type": "sound",
 					"text": "Ambiente bajo."
 				}
-			]
+			],
+			"purpose": "Voss ordena separar la credencial comprometida de la responsabilidad de Sorell."
 		},
 		{
 			"id": "main:shot-09-03",
@@ -4827,8 +5785,8 @@
 				"main:beat-09-01"
 			],
 			"number": 3,
-			"order": 45,
-			"description": "Sorell enfrenta el registro que lleva su nombre.",
+			"order": 57,
+			"description": "Sorell reconstruye el aviso que oyó en el puente.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "MS",
@@ -4860,7 +5818,8 @@
 					"type": "sound",
 					"text": "Puente en silencio."
 				}
-			]
+			],
+			"purpose": "Sorell reconstruye el aviso que oyó en el puente."
 		},
 		{
 			"id": "main:shot-09-04",
@@ -4869,8 +5828,8 @@
 				"main:beat-09-01"
 			],
 			"number": 4,
-			"order": 46,
-			"description": "Harlan propone apartarla con aparente prudencia.",
+			"order": 58,
+			"description": "Harlan propone bloquear la credencial con aparente prudencia.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "CU",
@@ -4897,7 +5856,8 @@
 					"type": "sound",
 					"text": "Tono administrativo."
 				}
-			]
+			],
+			"purpose": "Harlan propone bloquear la credencial con aparente prudencia."
 		},
 		{
 			"id": "main:shot-09-05",
@@ -4906,8 +5866,8 @@
 				"main:beat-09-01"
 			],
 			"number": 5,
-			"order": 47,
-			"description": "Voss retira temporalmente la credencial de Sorell.",
+			"order": 59,
+			"description": "Voss bloquea la credencial sin apartar a Sorell.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "MS",
@@ -4934,7 +5894,8 @@
 					"type": "sound",
 					"text": "Credencial sobre metal."
 				}
-			]
+			],
+			"purpose": "Voss bloquea la credencial sin apartar a Sorell."
 		},
 		{
 			"id": "main:shot-09-06",
@@ -4943,7 +5904,7 @@
 				"main:beat-09-01"
 			],
 			"number": 6,
-			"order": 48,
+			"order": 60,
 			"description": "Sorell deja a Rao la información sobre el saludo pasivo.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -4980,7 +5941,7 @@
 				"main:beat-10-01"
 			],
 			"number": 1,
-			"order": 49,
+			"order": 61,
 			"description": "Rao trabaja en puesto protegido; reloj Velari sigue bajando.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5011,7 +5972,7 @@
 				"main:beat-10-01"
 			],
 			"number": 2,
-			"order": 50,
+			"order": 62,
 			"description": "La envoltura se reconstruye como ruta hacia el saludo.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5053,7 +6014,7 @@
 				"main:beat-10-01"
 			],
 			"number": 3,
-			"order": 51,
+			"order": 63,
 			"description": "Disparador: APERTURA DE CANAL VELARI.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5090,7 +6051,7 @@
 				"main:beat-10-01"
 			],
 			"number": 4,
-			"order": 52,
+			"order": 64,
 			"description": "Rao crea un perímetro de cuarentena.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5121,7 +6082,7 @@
 				"main:beat-10-01"
 			],
 			"number": 5,
-			"order": 53,
+			"order": 65,
 			"description": "El despliegue se detiene en 41%, pero no desaparece.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5158,7 +6119,7 @@
 				"main:beat-10-01"
 			],
 			"number": 6,
-			"order": 54,
+			"order": 66,
 			"description": "Aparece OVR-7C41 sin titular.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5195,7 +6156,7 @@
 				"main:beat-10-01"
 			],
 			"number": 7,
-			"order": 55,
+			"order": 67,
 			"description": "Rao explica a Voss por qué Sorell no está probada culpable.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5232,7 +6193,7 @@
 				"main:beat-11-01"
 			],
 			"number": 1,
-			"order": 56,
+			"order": 68,
 			"description": "Harlan recomienda apagar mediación y receptores.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5274,7 +6235,7 @@
 				"main:beat-11-01"
 			],
 			"number": 2,
-			"order": 57,
+			"order": 69,
 			"description": "Voss rechaza una solución irreversible.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5311,7 +6272,7 @@
 				"main:beat-11-01"
 			],
 			"number": 3,
-			"order": 58,
+			"order": 70,
 			"description": "Cael mantiene trayectoria y señala la baliza ausente.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5348,7 +6309,7 @@
 				"main:beat-11-01"
 			],
 			"number": 4,
-			"order": 59,
+			"order": 71,
 			"description": "Harlan propone abortar el contacto.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5390,7 +6351,7 @@
 				"main:beat-11-01"
 			],
 			"number": 5,
-			"order": 60,
+			"order": 72,
 			"description": "Una portadora humana aparece en el corredor previsto.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5427,7 +6388,7 @@
 				"main:beat-11-01"
 			],
 			"number": 6,
-			"order": 61,
+			"order": 73,
 			"description": "Harlan intenta convertir la señal en amenaza.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5464,8 +6425,8 @@
 				"main:beat-12-01"
 			],
 			"number": 1,
-			"order": 62,
-			"description": "Cael autentica dispositivo y hora, no contenido.",
+			"order": 74,
+			"description": "Cael autentica el control local del láser y la hora, no el contenido.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "INSERT",
@@ -5497,7 +6458,8 @@
 					"type": "sound",
 					"text": "Corrección de errores."
 				}
-			]
+			],
+			"purpose": "Cael autentica el control local del láser y la hora, no el contenido."
 		},
 		{
 			"id": "main:shot-12-02",
@@ -5506,7 +6468,7 @@
 				"main:beat-12-01"
 			],
 			"number": 2,
-			"order": 63,
+			"order": 75,
 			"description": "La voz fragmentada de Zao llena el puente.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5543,7 +6505,7 @@
 				"main:beat-12-01"
 			],
 			"number": 3,
-			"order": 64,
+			"order": 76,
 			"description": "Voss mira a Harlan pero todavía no ordena arresto.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5580,7 +6542,7 @@
 				"main:beat-12-01"
 			],
 			"number": 4,
-			"order": 65,
+			"order": 77,
 			"description": "Rao recibe la orden de cruzar rutina y relé.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5617,7 +6579,7 @@
 				"main:beat-12-01"
 			],
 			"number": 5,
-			"order": 66,
+			"order": 78,
 			"description": "Tres capas convergen: payload, relé físico, credencial.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5648,7 +6610,7 @@
 				"main:beat-12-01"
 			],
 			"number": 6,
-			"order": 67,
+			"order": 79,
 			"description": "Resultado: R. HARLAN — INTEGRIDAD VERIFICADA.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5685,7 +6647,7 @@
 				"main:beat-12-01"
 			],
 			"number": 7,
-			"order": 68,
+			"order": 80,
 			"description": "Voss revoca credencial y ordena detención.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5722,8 +6684,8 @@
 				"main:beat-12-01"
 			],
 			"number": 8,
-			"order": 69,
-			"description": "Harlan activa desde muñeca antes de completarse la revocación.",
+			"order": 81,
+			"description": "Harlan activa desde muñeca; Voss llama a Sorell al puente.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "INSERT",
@@ -5750,7 +6712,8 @@
 					"type": "sound",
 					"text": "Tono de ejecución."
 				}
-			]
+			],
+			"purpose": "Harlan activa desde muñeca; Voss llama a Sorell al puente."
 		},
 		{
 			"id": "main:shot-13-01",
@@ -5759,7 +6722,7 @@
 				"main:beat-13-01"
 			],
 			"number": 1,
-			"order": 70,
+			"order": 82,
 			"description": "Harlan rompe la contención humana y sale del puente.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5790,7 +6753,7 @@
 				"main:beat-13-01"
 			],
 			"number": 2,
-			"order": 71,
+			"order": 83,
 			"description": "Corre mientras módulos revocan su credencial en cascada.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5821,7 +6784,7 @@
 				"main:beat-13-01"
 			],
 			"number": 3,
-			"order": 72,
+			"order": 84,
 			"description": "El núcleo acepta el último pulso físico y sella el mamparo.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5863,8 +6826,8 @@
 				"main:beat-13-01"
 			],
 			"number": 4,
-			"order": 73,
-			"description": "Voss y seguridad llegan; Cael permanece al mando a distancia.",
+			"order": 85,
+			"description": "Voss y Okoye llegan; Cael permanece al mando a distancia.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "MS",
@@ -5894,7 +6857,7 @@
 				"main:beat-13-01"
 			],
 			"number": 5,
-			"order": 74,
+			"order": 86,
 			"description": "Sorell entra al puente junto a Rao.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5931,7 +6894,7 @@
 				"main:beat-14-01"
 			],
 			"number": 1,
-			"order": 75,
+			"order": 87,
 			"description": "Núcleo y puente se presentan como espacios paralelos.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5962,7 +6925,7 @@
 				"main:beat-14-01"
 			],
 			"number": 2,
-			"order": 76,
+			"order": 88,
 			"description": "Reloj único: CANAL VELARI — 01:32 / PAYLOAD ARMADO.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -5993,7 +6956,7 @@
 				"main:beat-14-01"
 			],
 			"number": 3,
-			"order": 77,
+			"order": 89,
 			"description": "Harlan conecta el mando físico.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6035,7 +6998,7 @@
 				"main:beat-14-01"
 			],
 			"number": 4,
-			"order": 78,
+			"order": 90,
 			"description": "Rao abre el mapa de cuarentena preparado antes.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6072,7 +7035,7 @@
 				"main:beat-14-01"
 			],
 			"number": 5,
-			"order": 79,
+			"order": 91,
 			"description": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6114,7 +7077,7 @@
 				"main:beat-14-01"
 			],
 			"number": 6,
-			"order": 80,
+			"order": 92,
 			"description": "Cael pilota y fuerza el mamparo simultáneamente.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6151,7 +7114,7 @@
 				"main:beat-14-01"
 			],
 			"number": 7,
-			"order": 81,
+			"order": 93,
 			"description": "Harlan abre una tercera ruta física que Rao no puede cerrar por red.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6193,8 +7156,8 @@
 				"main:beat-14-01"
 			],
 			"number": 8,
-			"order": 82,
-			"description": "El mamparo cede; Voss y seguridad entran.",
+			"order": 94,
+			"description": "El mamparo cede; Voss y Okoye entran.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "LS",
@@ -6230,7 +7193,7 @@
 				"main:beat-14-01"
 			],
 			"number": 9,
-			"order": 83,
+			"order": 95,
 			"description": "Harlan pulsa INICIAR; buffer cerrado recibe el payload.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6272,7 +7235,7 @@
 				"main:beat-14-01"
 			],
 			"number": 10,
-			"order": 84,
+			"order": 96,
 			"description": "Rao confina la rama a 00:07; Harlan es reducido.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6309,7 +7272,7 @@
 				"main:beat-15-01"
 			],
 			"number": 1,
-			"order": 85,
+			"order": 97,
 			"description": "El puente recupera simetría; portadora Velari presente.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6340,7 +7303,7 @@
 				"main:beat-15-01"
 			],
 			"number": 2,
-			"order": 86,
+			"order": 98,
 			"description": "Rao muestra payload visible pero sin acceso a salida.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6382,7 +7345,7 @@
 				"main:beat-15-01"
 			],
 			"number": 3,
-			"order": 87,
+			"order": 99,
 			"description": "Sorell verifica contenido del saludo pasivo.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6419,7 +7382,7 @@
 				"main:beat-15-01"
 			],
 			"number": 4,
-			"order": 88,
+			"order": 100,
 			"description": "Voss autoriza sin grandilocuencia.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6456,7 +7419,7 @@
 				"main:beat-15-01"
 			],
 			"number": 5,
-			"order": 89,
+			"order": 101,
 			"description": "Sorell confirma; Rao abre conducto de sólo lectura.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6487,7 +7450,7 @@
 				"main:beat-15-01"
 			],
 			"number": 6,
-			"order": 90,
+			"order": 102,
 			"description": "A enorme distancia, la piel de la Estación Velari responde con un patrón orgánico de luz.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6524,7 +7487,7 @@
 				"main:beat-15-01"
 			],
 			"number": 7,
-			"order": 91,
+			"order": 103,
 			"description": "Cael y Voss aceptan el resultado limitado.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6561,7 +7524,7 @@
 				"main:beat-16-01"
 			],
 			"number": 1,
-			"order": 92,
+			"order": 104,
 			"description": "Celestial Ardor avanza diminuta ante la Estación Velari: varios kilómetros de lóbulos, arcos, cavidades y piel-radiador cambiante.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6592,7 +7555,7 @@
 				"main:beat-16-01"
 			],
 			"number": 2,
-			"order": 93,
+			"order": 105,
 			"description": "Una nave emisaria orgánica de 300–600 m se separa de la estación sin escape visible.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6623,7 +7586,7 @@
 				"main:beat-16-01"
 			],
 			"number": 3,
-			"order": 94,
+			"order": 106,
 			"description": "Luces de la Celestial Ardor, la emisaria y la estación sincronizan un pulso de reconocimiento.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6654,7 +7617,7 @@
 				"main:beat-17-01"
 			],
 			"number": 1,
-			"order": 95,
+			"order": 107,
 			"description": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra por el ventanal.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6685,7 +7648,7 @@
 				"main:beat-17-01"
 			],
 			"number": 2,
-			"order": 96,
+			"order": 108,
 			"description": "Mensaje de Zao archivado y detenido en su último cuadro.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6716,7 +7679,7 @@
 				"main:beat-17-01"
 			],
 			"number": 3,
-			"order": 97,
+			"order": 109,
 			"description": "Sorell se coloca junto a Rao.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6753,7 +7716,7 @@
 				"main:beat-17-01"
 			],
 			"number": 4,
-			"order": 98,
+			"order": 110,
 			"description": "Voss mira el archivo de Zao y luego el ventanal.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6790,7 +7753,7 @@
 				"main:beat-17-01"
 			],
 			"number": 5,
-			"order": 99,
+			"order": 111,
 			"description": "Voss completa la frase casi para sí.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -6827,7 +7790,7 @@
 				"main:beat-17-01"
 			],
 			"number": 6,
-			"order": 100,
+			"order": 112,
 			"description": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
@@ -7552,6 +8515,90 @@
 			"number": 1,
 			"status": "selected",
 			"imageAssetId": "asset:animatic-17-06"
+		},
+		{
+			"id": "main:take-05-07-01",
+			"shotId": "main:shot-05-07",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-12-08"
+		},
+		{
+			"id": "main:take-05-08-01",
+			"shotId": "main:shot-05-08",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-08-04"
+		},
+		{
+			"id": "main:take-06-07-01",
+			"shotId": "main:shot-06-07",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-04"
+		},
+		{
+			"id": "main:take-06-08-01",
+			"shotId": "main:shot-06-08",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-06-06"
+		},
+		{
+			"id": "main:take-07-06-01",
+			"shotId": "main:shot-07-06",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-08-03"
+		},
+		{
+			"id": "main:take-07-07-01",
+			"shotId": "main:shot-07-07",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-12-08"
+		},
+		{
+			"id": "main:take-07-08-01",
+			"shotId": "main:shot-07-08",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-07-03"
+		},
+		{
+			"id": "main:take-07-09-01",
+			"shotId": "main:shot-07-09",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-07-04"
+		},
+		{
+			"id": "main:take-07-10-01",
+			"shotId": "main:shot-07-10",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-07-05"
+		},
+		{
+			"id": "main:take-08-05-01",
+			"shotId": "main:shot-08-05",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-12-08"
+		},
+		{
+			"id": "main:take-08-06-01",
+			"shotId": "main:shot-08-06",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-13-02"
+		},
+		{
+			"id": "main:take-08-07-01",
+			"shotId": "main:shot-08-07",
+			"number": 1,
+			"status": "selected",
+			"imageAssetId": "asset:animatic-13-04"
 		}
 	]
 }

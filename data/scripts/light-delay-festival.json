@@ -15,11 +15,184 @@
 			"sourceVersion": "1.0.0-extract",
 			"notes": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes."
 		},
-		"declaredEntityRefs": [{"kind":"character","id":"character:zao"},{"kind":"character","id":"character:voss"},{"kind":"character","id":"character:harlan"},{"kind":"character","id":"character:rao"},{"kind":"character","id":"character:sorell"}],
+		"declaredEntityRefs": [
+			{
+				"kind": "character",
+				"id": "character:zao"
+			},
+			{
+				"kind": "character",
+				"id": "character:voss"
+			},
+			{
+				"kind": "character",
+				"id": "character:harlan"
+			},
+			{
+				"kind": "character",
+				"id": "character:rao"
+			},
+			{
+				"kind": "character",
+				"id": "character:sorell"
+			},
+			{
+				"kind": "character",
+				"id": "character:okoye"
+			}
+		],
 		"comparisonProfile": {
 			"version": "1.0.0",
-			"canonClaims": [{"dimensionId":"canon:proxima-origin","valueId":"scientific-before-contact","statement":"Proxima fue una estación científica joviana anterior al contacto.","status":"established"},{"dimensionId":"canon:ardor-deployment","valueId":"earth-built-prepositioned","statement":"Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.","status":"established"},{"dimensionId":"canon:tunnel-geometry","valueId":"distributed-nodes","statement":"La boca es un campo distribuido de nodos, no un aro.","status":"established"},{"dimensionId":"canon:tunnel-location","valueId":"sol-jupiter-l2","statement":"La boca local está en una órbita halo controlada cerca de L2.","status":"established"},{"dimensionId":"canon:trajectory","valueId":"conventional-to-wormhole","statement":"La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.","status":"established"},{"dimensionId":"canon:velari-objects","valueId":"station-and-emissary","statement":"La estación Velari y la nave emisaria son objetos distintos.","status":"established"},{"dimensionId":"canon:evidence-chain","valueId":"relay-optical-readonly","statement":"El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.","status":"established"},{"dimensionId":"canon:sorell-status","valueId":"false-log-not-conclusive","statement":"Sorell no queda culpabilizada por un único registro falsificable.","status":"established"},{"dimensionId":"canon:rao-containment","valueId":"bounded-quarantine","statement":"Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.","status":"established"},{"dimensionId":"canon:ending","valueId":"limited-acknowledgement","statement":"La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.","status":"established"}],
-			"eventCoverage": [{"eventId":"event:embarkation","status":"reworked","sceneIds":["festival:scene-a"]},{"eventId":"event:anomaly-discovery","status":"reworked","sceneIds":["festival:scene-a","festival:scene-b"]},{"eventId":"event:zao-warning-death","status":"reworked","sceneIds":["festival:scene-b","festival:scene-c"]},{"eventId":"event:tunnel-crossing","status":"reworked","sceneIds":["festival:scene-c"]},{"eventId":"event:investigation","status":"reworked","sceneIds":["festival:scene-d"]},{"eventId":"event:message-reception","status":"reworked","sceneIds":["festival:scene-e"]},{"eventId":"event:harlan-exposed","status":"reworked","sceneIds":["festival:scene-e"]},{"eventId":"event:quarantine","status":"reworked","sceneIds":["festival:scene-f"]},{"eventId":"event:clean-greeting","status":"reworked","sceneIds":["festival:scene-f","festival:scene-g"]},{"eventId":"event:first-contact","status":"reworked","sceneIds":["festival:scene-g"]},{"eventId":"event:aftermath","status":"reworked","sceneIds":["festival:scene-g"]}]
+			"canonClaims": [
+				{
+					"dimensionId": "canon:proxima-origin",
+					"valueId": "scientific-before-contact",
+					"statement": "Proxima fue una estación científica joviana anterior al contacto.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ardor-deployment",
+					"valueId": "earth-built-prepositioned",
+					"statement": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-geometry",
+					"valueId": "distributed-nodes",
+					"statement": "La boca es un campo distribuido de nodos, no un aro.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-location",
+					"valueId": "sol-jupiter-l2",
+					"statement": "La boca local está en una órbita halo controlada cerca de L2.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:trajectory",
+					"valueId": "conventional-to-wormhole",
+					"statement": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:velari-objects",
+					"valueId": "station-and-emissary",
+					"statement": "La estación Velari y la nave emisaria son objetos distintos.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:evidence-chain",
+					"valueId": "relay-optical-readonly",
+					"statement": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:sorell-status",
+					"valueId": "false-log-not-conclusive",
+					"statement": "Sorell no queda culpabilizada por un único registro falsificable.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:rao-containment",
+					"valueId": "bounded-quarantine",
+					"statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ending",
+					"valueId": "limited-acknowledgement",
+					"statement": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:zao-transmission-mechanics",
+					"valueId": "jam-wired-cut-dedicated-laser",
+					"statement": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
+					"status": "established"
+				}
+			],
+			"eventCoverage": [
+				{
+					"eventId": "event:embarkation",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-a"
+					]
+				},
+				{
+					"eventId": "event:anomaly-discovery",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-a",
+						"festival:scene-b"
+					]
+				},
+				{
+					"eventId": "event:zao-warning-death",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-b",
+						"festival:scene-c"
+					]
+				},
+				{
+					"eventId": "event:tunnel-crossing",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-c"
+					]
+				},
+				{
+					"eventId": "event:investigation",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-d"
+					]
+				},
+				{
+					"eventId": "event:message-reception",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-e"
+					]
+				},
+				{
+					"eventId": "event:harlan-exposed",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-e"
+					]
+				},
+				{
+					"eventId": "event:quarantine",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-f"
+					]
+				},
+				{
+					"eventId": "event:clean-greeting",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-f",
+						"festival:scene-g"
+					]
+				},
+				{
+					"eventId": "event:first-contact",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-g"
+					]
+				},
+				{
+					"eventId": "event:aftermath",
+					"status": "reworked",
+					"sceneIds": [
+						"festival:scene-g"
+					]
+				}
+			]
 		},
 		"characterFunctionAssignments": [
 			{
@@ -54,7 +227,7 @@
 				"functionId": "function:diplomatic_greeting_authorship",
 				"characterId": "character:sorell",
 				"relationship": "unchanged",
-				"notes": "Sorell off-screen; conserva autoría del saludo pasivo como asset/UI."
+				"notes": "Aparece brevemente en el puente y en el hallazgo; conserva la autoría del saludo pasivo como asset/UI."
 			},
 			{
 				"functionId": "function:override_antagonist",
@@ -121,17 +294,28 @@
 				"interiorExterior": "INT",
 				"timeOfDay": "DÍA"
 			},
-			"summary": "Descubrimiento del sabotaje y mensaje óptico de Zao.",
-			"dramaticPurpose": "Zao confirma el payload, el relé y el vínculo con Harlan; transmite hacia el futuro.",
+			"summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
+			"dramaticPurpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
 			"characterIds": [
 				"character:zao",
-				"character:harlan"
+				"character:harlan",
+				"character:voss",
+				"character:sorell"
 			],
 			"beatIds": [
 				"festival:beat-b-01"
 			],
 			"shotIds": [],
-			"targetDurationMs": 60000
+			"targetDurationMs": 60000,
+			"secondaryLocationIds": [
+				"location:celestial-ardor-bridge",
+				"location:celestial-ardor-command-vestibule",
+				"location:celestial-ardor-service-cylinder"
+			],
+			"objectIds": [
+				"object:wired-comms-deck-patch-panel",
+				"object:optical-contingency-transmitter"
+			]
 		},
 		{
 			"id": "festival:scene-c",
@@ -144,17 +328,24 @@
 				"interiorExterior": "INT",
 				"timeOfDay": "DÍA"
 			},
-			"summary": "Confrontación breve, muerte elidida y overlay temporal.",
-			"dramaticPurpose": "Harlan interrumpe; transmisión completa; salto a 23 h después.",
+			"summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
+			"dramaticPurpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
 			"characterIds": [
 				"character:zao",
-				"character:harlan"
+				"character:harlan",
+				"character:sorell",
+				"character:voss",
+				"character:okoye"
 			],
 			"beatIds": [
 				"festival:beat-c-01"
 			],
 			"shotIds": [],
-			"targetDurationMs": 20000
+			"targetDurationMs": 20000,
+			"secondaryLocationIds": [
+				"location:celestial-ardor-service-cylinder",
+				"location:celestial-ardor-bridge"
+			]
 		},
 		{
 			"id": "festival:scene-d",
@@ -269,10 +460,15 @@
 			"sceneId": "festival:scene-b",
 			"order": 1,
 			"title": "Zao descubre y transmite",
-			"purpose": "Zao confirma el payload, el relé y el vínculo con Harlan; transmite hacia el futuro.",
-			"summary": "Descubrimiento del sabotaje y mensaje óptico de Zao.",
+			"purpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
+			"summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
 			"cueIds": [
-				"festival:cue-b-01"
+				"festival:cue-b-02",
+				"festival:cue-b-03",
+				"festival:cue-b-04",
+				"festival:cue-b-05",
+				"festival:cue-b-01",
+				"festival:cue-b-06"
 			],
 			"targetDurationMs": 60000
 		},
@@ -281,9 +477,13 @@
 			"sceneId": "festival:scene-c",
 			"order": 1,
 			"title": "Harlan / muerte de Zao / salto temporal",
-			"purpose": "Harlan interrumpe; transmisión completa; salto a 23 h después.",
-			"summary": "Confrontación breve, muerte elidida y overlay temporal.",
-			"cueIds": [],
+			"purpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
+			"summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
+			"cueIds": [
+				"festival:cue-c-01",
+				"festival:cue-c-02",
+				"festival:cue-c-03"
+			],
 			"targetDurationMs": 20000
 		},
 		{
@@ -336,9 +536,47 @@
 	],
 	"cues": [
 		{
-			"id": "festival:cue-b-01",
+			"id": "festival:cue-b-02",
 			"beatId": "festival:beat-b-01",
 			"order": 1,
+			"type": "action",
+			"text": "En microgravedad, Harlan llega al acceso axial del puente sin ser visto mientras Zao abre canal."
+		},
+		{
+			"id": "festival:cue-b-03",
+			"beatId": "festival:beat-b-01",
+			"order": 2,
+			"type": "dialogue",
+			"speakerId": "character:zao",
+			"presentation": "radio",
+			"content": {
+				"sourceLanguage": "es",
+				"variants": {
+					"es": {
+						"spokenText": "Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. El relé físico apunta a—",
+						"status": "source"
+					}
+				}
+			}
+		},
+		{
+			"id": "festival:cue-b-04",
+			"beatId": "festival:beat-b-01",
+			"order": 3,
+			"type": "action",
+			"text": "Harlan activa el jammer, se oculta y desconecta COM A/B en el distribuidor del cilindro de servicio."
+		},
+		{
+			"id": "festival:cue-b-05",
+			"beatId": "festival:beat-b-01",
+			"order": 4,
+			"type": "action",
+			"text": "Zao comprueba wireless y ambos enlaces cableados. El control dedicado del láser exterior sigue activo; descarta Tierra y Proxima y ajusta un barrido sobre la posición futura de la nave."
+		},
+		{
+			"id": "festival:cue-b-01",
+			"beatId": "festival:beat-b-01",
+			"order": 5,
 			"type": "dialogue",
 			"speakerId": "character:zao",
 			"presentation": "recording",
@@ -346,11 +584,39 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Si esto llega: Aqueronte está adentro. Harlan comprometió el núcleo. El registro superficial es falso. Crucen el payload con el relé físico. No apaguen la mediación.",
+						"spokenText": "Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación.",
 						"status": "source"
 					}
 				}
 			}
+		},
+		{
+			"id": "festival:cue-b-06",
+			"beatId": "festival:beat-b-01",
+			"order": 6,
+			"type": "action",
+			"text": "El envío completa el barrido cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino."
+		},
+		{
+			"id": "festival:cue-c-01",
+			"beatId": "festival:beat-c-01",
+			"order": 1,
+			"type": "action",
+			"text": "Harlan mata a Zao fuera de campo, borra cámaras y archivo local y regresa por el cilindro de servicio."
+		},
+		{
+			"id": "festival:cue-c-02",
+			"beatId": "festival:beat-c-01",
+			"order": 2,
+			"type": "action",
+			"text": "Sorell llega sola por el cilindro central, intenta reanimar a Zao y no logra comunicarse mientras el jammer sigue activo."
+		},
+		{
+			"id": "festival:cue-c-03",
+			"beatId": "festival:beat-c-01",
+			"order": 3,
+			"type": "action",
+			"text": "Harlan restaura COM A/B, vuelve al puente y niega haber visto a Sorell; Voss lo envía con Okoye al núcleo."
 		},
 		{
 			"id": "festival:cue-d-01",

@@ -89,9 +89,9 @@ const rows = [
 		7,
 		1,
 		'Despliegue hostil',
-		'La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.',
+		'La envoltura revela un escaneo intrusivo. Zao avisa al puente que la firma de Sorell parece falsa; Harlan oye “relé físico” desde el acceso, activa el jammer sin ser visto y corta COM A/B en el distribuidor del cilindro de servicio.',
 		'location:diplomatic-core-room',
-		['character:zao', 'character:rao', 'character:harlan'],
+		['character:zao', 'character:voss', 'character:sorell', 'character:harlan'],
 		'T+57H43M',
 		'main:scene-05'
 	],
@@ -99,9 +99,9 @@ const rows = [
 		8,
 		1,
 		'Mensaje hacia el corredor',
-		'Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.',
+		'Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.',
 		'location:diplomatic-core-room',
-		['character:zao', 'character:harlan'],
+		['character:zao', 'character:harlan', 'character:sorell'],
 		'T+57H45M',
 		'main:scene-06'
 	],
@@ -109,9 +109,9 @@ const rows = [
 		9,
 		1,
 		'Muerte fuera de campo',
-		'Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.',
+		'Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.',
 		'location:diplomatic-core-room',
-		['character:zao', 'character:harlan'],
+		['character:zao', 'character:harlan', 'character:sorell'],
 		'T+57H46M',
 		'main:scene-07'
 	],
@@ -148,8 +148,8 @@ const rows = [
 	[
 		13,
 		2,
-		'Sorell bajo sospecha',
-		'La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.',
+		'Credencial de Sorell comprometida',
+		'El puente y la orden directa de Voss corroboran el trayecto de Sorell. Se bloquea su credencial falsificada sin apartarla como sospechosa; Harlan intenta explotar la incertidumbre técnica.',
 		'location:celestial-ardor-bridge',
 		['character:voss', 'character:harlan', 'character:sorell', 'character:okoye'],
 		'MÁS TARDE',
@@ -187,7 +187,7 @@ const rows = [
 		17,
 		2,
 		'Carvalho continúa el lenguaje',
-		'Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.',
+		'Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.',
 		'location:celestial-ardor-bridge',
 		['character:carvalho', 'character:sorell', 'character:rao'],
 		'MÁS TARDE'
@@ -417,6 +417,11 @@ const canonClaims = [
 		'canon:sorell-status',
 		'false-log-not-conclusive',
 		'Sorell no queda culpabilizada por un único registro falsificable.'
+	],
+	[
+		'canon:zao-transmission-mechanics',
+		'jam-wired-cut-dedicated-laser',
+		'Harlan corta la malla inalámbrica y COM A/B; Zao usa el láser exterior por control físico dedicado y apunta al corredor futuro de la nave.'
 	],
 	[
 		'canon:rao-containment',
