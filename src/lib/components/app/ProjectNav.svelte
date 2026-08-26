@@ -3,12 +3,13 @@
 	import { activeScriptIdFromParam } from '$lib/state/active-script.svelte';
 	import { scriptSectionHref } from '$lib/utils/scriptRouting';
 	import { encodeScriptId } from '$lib/utils/scriptId';
+	import { withBase, withoutBase } from '$lib/utils/paths';
 	import ScriptSwitcher from './ScriptSwitcher.svelte';
 
 	const activeScriptId = $derived(activeScriptIdFromParam(page.params.scriptId));
 
 	const links = $derived([
-		{ href: '/', label: 'Inicio' },
+		{ href: withBase('/'), label: 'Inicio', match: '/' },
 		{ href: scriptSectionHref('script', activeScriptId), label: 'Guion', match: '/script' },
 		{
 			href: scriptSectionHref('animatic', activeScriptId),
@@ -16,24 +17,28 @@
 			match: '/animatic'
 		},
 		{
-			href: `/compare/${encodeScriptId(activeScriptId)}`,
+			href: withBase(`/compare/${encodeScriptId(activeScriptId)}`),
 			label: 'Comparar',
 			match: '/compare'
 		},
-		{ href: '/art', label: 'Arte' },
-		{ href: '/entities/characters', label: 'Entidades', match: '/entities' },
-		{ href: '/documents/notas-tecnicas-continuidad', label: 'Documentos', match: '/documents' }
+		{ href: withBase('/art'), label: 'Arte', match: '/art' },
+		{ href: withBase('/entities/characters'), label: 'Entidades', match: '/entities' },
+		{
+			href: withBase('/documents/notas-tecnicas-continuidad'),
+			label: 'Documentos',
+			match: '/documents'
+		}
 	]);
 
 	function isActive(href: string, match?: string): boolean {
-		const path = page.url.pathname;
-		if (href === '/') return path === '/';
-		const prefix = match ?? href;
+		const path = withoutBase(page.url.pathname);
+		const prefix = match ?? withoutBase(href);
+		if (prefix === '/') return path === '/';
 		return path === prefix || path.startsWith(prefix + '/');
 	}
 </script>
 
-<a class="brand" href="/">
+<a class="brand" href={withBase('/')}>
 	<span class="orb" aria-hidden="true"></span>
 	Light Delay
 </a>
