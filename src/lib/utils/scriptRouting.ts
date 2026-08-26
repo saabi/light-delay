@@ -1,4 +1,5 @@
 import { decodeScriptId, encodeScriptId } from './scriptId';
+import { withBase, withoutBase } from './paths';
 
 export const ACTIVE_SCRIPT_STORAGE_KEY = 'light-delay.activeScriptId';
 
@@ -45,28 +46,31 @@ export function hrefAfterScriptSwitch(
 	newScriptId: string,
 	options: { againstId?: string | null; registeredIds?: readonly string[] } = {}
 ): string {
+	const localPathname = withoutBase(pathname);
 	const encoded = encodeScriptId(newScriptId);
-	if (/^\/compare\/[^/]+\/?$/.test(pathname)) {
+	if (/^\/compare\/[^/]+\/?$/.test(localPathname)) {
 		const against =
 			options.againstId && options.againstId !== newScriptId
 				? options.againstId
 				: options.registeredIds?.find((id) => id !== newScriptId);
-		return against
-			? `/compare/${encoded}?against=${encodeURIComponent(against)}`
-			: `/compare/${encoded}`;
+		return withBase(
+			against
+				? `/compare/${encoded}?against=${encodeURIComponent(against)}`
+				: `/compare/${encoded}`
+		);
 	}
-	if (/^\/animatic\/[^/]+\/player\/?$/.test(pathname)) {
-		return `/animatic/${encoded}/player`;
+	if (/^\/animatic\/[^/]+\/player\/?$/.test(localPathname)) {
+		return withBase(`/animatic/${encoded}/player`);
 	}
-	if (/^\/animatic(\/[^/]+)?\/?$/.test(pathname)) {
-		return `/animatic/${encoded}`;
+	if (/^\/animatic(\/[^/]+)?\/?$/.test(localPathname)) {
+		return withBase(`/animatic/${encoded}`);
 	}
-	if (/^\/script(\/[^/]+)?\/?$/.test(pathname)) {
-		return `/script/${encoded}`;
+	if (/^\/script(\/[^/]+)?\/?$/.test(localPathname)) {
+		return withBase(`/script/${encoded}`);
 	}
-	return `/script/${encoded}`;
+	return withBase(`/script/${encoded}`);
 }
 
 export function scriptSectionHref(section: 'script' | 'animatic', scriptId: string): string {
-	return `/${section}/${encodeScriptId(scriptId)}`;
+	return withBase(`/${section}/${encodeScriptId(scriptId)}`);
 }
