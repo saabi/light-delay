@@ -607,6 +607,12 @@ export interface Take {
   imageAssetId?: AssetId;
   videoAssetId?: AssetId;
 
+  // Editorial state of this image in the context of this take. A reused
+  // source frame remains valid as an Asset even when this take needs art.
+  imageStatus?: ImageEditorialStatus & {
+    sourceShotId?: ShotId;
+  };
+
   generation?: {
     provider?: string;
     model?: string;
@@ -756,6 +762,27 @@ export interface Faction {
 ## Assets
 
 ```ts
+export type ImageEditorialState =
+  | "current"
+  | "needs_review"
+  | "needs_replacement"
+  | "needs_regeneration";
+
+export type ImageEditorialReason =
+  | "canon_mismatch"
+  | "wrong_composition"
+  | "continuity_error"
+  | "placeholder"
+  | "quality"
+  | "missing_subject";
+
+export interface ImageEditorialStatus {
+  status: ImageEditorialState;
+  reasons: ImageEditorialReason[];
+  explanation?: string;
+  replacementBrief?: string;
+}
+
 export interface AssetsFile {
   schemaVersion: string;
   assets: Asset[];
@@ -777,6 +804,7 @@ export interface Asset {
   role:
     | "reference"
     | "animatic"
+    | "animatic_placeholder"
     | "production"
     | "voice_sample"
     | "music"
@@ -803,8 +831,13 @@ export interface Asset {
   };
 
   metadata?: Record<string, string | number | boolean | null>;
+  imageStatus?: ImageEditorialStatus;
 }
 ```
+
+The missing-frame slate is an `animatic_placeholder` asset. `Take.imageStatus`
+describes contextual reuse; `Asset.imageStatus` is reserved for a file that is
+globally obsolete or defective. An absent status is equivalent to `current`.
 
 ## Shared notes
 

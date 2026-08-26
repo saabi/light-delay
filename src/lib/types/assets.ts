@@ -1,5 +1,23 @@
 import type { AssetId } from './ids.ts';
 
+export type ImageEditorialState =
+	'current' | 'needs_review' | 'needs_replacement' | 'needs_regeneration';
+
+export type ImageEditorialReason =
+	| 'canon_mismatch'
+	| 'wrong_composition'
+	| 'continuity_error'
+	| 'placeholder'
+	| 'quality'
+	| 'missing_subject';
+
+export interface ImageEditorialStatus {
+	status: ImageEditorialState;
+	reasons: ImageEditorialReason[];
+	explanation?: string;
+	replacementBrief?: string;
+}
+
 export interface AssetsFile {
 	schemaVersion: string;
 	assets: Asset[];
@@ -19,6 +37,7 @@ export interface Asset {
 	role:
 		| 'reference'
 		| 'animatic'
+		| 'animatic_placeholder'
 		| 'production'
 		| 'voice_sample'
 		| 'music'
@@ -40,4 +59,5 @@ export interface Asset {
 		externalId?: string;
 	};
 	metadata?: Record<string, string | number | boolean | null>;
+	imageStatus?: ImageEditorialStatus;
 }

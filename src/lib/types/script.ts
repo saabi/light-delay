@@ -24,6 +24,7 @@ import type { EntityRef, Note } from './common.ts';
 import type { LanguageTag, LocalizedValue, TranslationStatus } from './i18n.ts';
 import type { ScriptLineage } from './project.ts';
 import type { ComparisonProfile } from './comparison.ts';
+import type { ImageEditorialStatus } from './assets.ts';
 
 export interface ScriptSourceReference {
 	kind?: 'script';
@@ -364,6 +365,9 @@ export interface Take {
 	status: 'candidate' | 'selected' | 'rejected' | 'needs_revision' | 'archived';
 	imageAssetId?: AssetId;
 	videoAssetId?: AssetId;
+	imageStatus?: ImageEditorialStatus & {
+		sourceShotId?: ShotId;
+	};
 	generation?: {
 		provider?: string;
 		model?: string;

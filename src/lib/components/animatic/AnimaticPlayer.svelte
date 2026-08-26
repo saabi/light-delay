@@ -1,10 +1,11 @@
 <script lang="ts">
 	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
+	import AnimaticFrame from './AnimaticFrame.svelte';
+	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
 	import {
 		getPlayerState,
 		pause,
 		play,
-		setDetailsOpen,
 		setElapsedInShotMs,
 		setShotIndex,
 		setStatus,
@@ -15,12 +16,14 @@
 	import { durationFromEdits, loadAnimaticEdits } from '$lib/state/animatic-overlay';
 	import { getSubtitleSegments } from '$lib/data/selectors/index';
 	import { formatClock } from '$lib/utils/duration';
+	import { withBase } from '$lib/utils/paths';
 	import type { Cue, ScriptFile, Shot } from '$lib/types/script';
+	import type { ShotMedia } from '$lib/data/repositories/lookups';
 	import { onDestroy, onMount } from 'svelte';
 
 	type ShotView = {
 		shot: Shot;
-		imageSrc?: string;
+		media: ShotMedia;
 		cues: Cue[];
 	};
 
@@ -65,19 +68,9 @@
 
 	const sceneTitle = $derived(currentScene?.title ?? currentScene?.summary ?? '');
 
-	const cameraText = $derived(
-		current?.shot.camera?.movementDescription ?? current?.shot.camera?.movement ?? '—'
+	const currentAbsoluteInMs = $derived(
+		durations.slice(0, player.shotIndex).reduce((sum, duration) => sum + duration, 0)
 	);
-
-	const audioText = $derived.by(() => {
-		const notes = (current?.shot.notes ?? [])
-			.filter((n) => n.type === 'sound')
-			.map((n) => n.text)
-			.filter(Boolean);
-		return notes.length ? notes.join(' ') : '—';
-	});
-
-	const durationSecondsLabel = $derived(`${Math.round(currentDuration / 1000)} s`);
 
 	const editorHref = $derived(
 		`${returnHref}${current ? `?shot=${encodeURIComponent(current.shot.id)}` : ''}`
@@ -101,7 +94,6 @@
 	let raf = 0;
 	let lastTs = 0;
 	let rootEl: HTMLElement | undefined = $state();
-	let detailsEl: HTMLDetailsElement | undefined = $state();
 
 	function framingCode(shot: Shot): string {
 		if (shot.composition?.framing) return shot.composition.framing;
@@ -226,12 +218,10 @@
 		}
 	}
 
-	function onDetailsToggle(e: Event) {
-		const el = e.currentTarget as HTMLDetailsElement;
-		setDetailsOpen(el.open);
-	}
-
 	function onKey(e: KeyboardEvent) {
+		const target = e.target as HTMLElement | null;
+		const interactive = target?.matches('input, select, textarea, button, a');
+		if (interactive && (e.key === ' ' || e.code === 'Space' || e.key.startsWith('Arrow'))) return;
 		if (e.key === ' ' || e.code === 'Space') {
 			e.preventDefault();
 			onPlayPause();
@@ -245,16 +235,15 @@
 			toggleFullscreen();
 		} else if (e.key === 'd' || e.key === 'D') {
 			toggleDetails();
-			if (detailsEl) detailsEl.open = getPlayerState().detailsOpen;
 		}
 	}
 
 	$effect(() => {
 		if (typeof Image === 'undefined') return;
 		const next = shots[player.shotIndex + 1];
-		if (next?.imageSrc) {
+		if (next?.media.displayPath) {
 			const pre = new Image();
-			pre.src = next.imageSrc;
+			pre.src = withBase(next.media.displayPath);
 		}
 	});
 
@@ -277,10 +266,12 @@
 
 <div class="player" bind:this={rootEl} aria-label="Reproductor del animatic">
 	<div class="movie-stage">
-		{#if current?.imageSrc}
-			<img src={current.imageSrc} alt={`Toma ${current.shot.number}`} />
-		{:else}
-			<div class="missing">Sin imagen</div>
+		{#if current}
+			<AnimaticFrame
+				media={current.media}
+				shotId={current.shot.id}
+				alt={`Toma ${current.shot.number}`}
+			/>
 		{/if}
 
 		<div class="movie-vignette" aria-hidden="true"></div>
@@ -301,37 +292,36 @@
 			</div>
 		{/if}
 
-		<details
-			class="movie-details"
-			bind:this={detailsEl}
-			open={player.detailsOpen}
-			ontoggle={onDetailsToggle}
-		>
-			<summary>Detalles de la toma</summary>
-			<div class="movie-detail-body">
-				{#if current}
-					<p>
-						<b>Contenido</b><br />
-						{current.shot.description}
-					</p>
-					<p>
-						<b>Cámara y encuadre</b><br />
-						{cameraText}
-					</p>
-					<p>
-						<b>Audio y ritmo</b><br />
-						{audioText}
-					</p>
-					<p>
-						<b>Duración actual</b><br />
-						{durationSecondsLabel}
-					</p>
-				{/if}
-				<div class="lang-slot">
-					<LanguageControls />
+		<div class="movie-details">
+			<button
+				type="button"
+				class="details-toggle"
+				aria-expanded={player.detailsOpen}
+				aria-controls="shot-details-body"
+				onclick={toggleDetails}
+			>
+				<span aria-hidden="true">{player.detailsOpen ? '▾' : '▸'}</span>
+				Detalles de la toma
+			</button>
+			{#if player.detailsOpen}
+				<div class="movie-detail-body" id="shot-details-body">
+					{#if current}
+						<ShotDetailsPanel
+							{script}
+							shot={current.shot}
+							cues={current.cues}
+							media={current.media}
+							effectiveDurationMs={currentDuration}
+							absoluteInMs={currentAbsoluteInMs}
+							shotIndex={player.shotIndex}
+							totalShots={shots.length}
+						/>
+					{:else}
+						<LanguageControls />
+					{/if}
 				</div>
-			</div>
-		</details>
+			{/if}
+		</div>
 
 		<div class="movie-controls">
 			<button type="button" class="btn secondary" onclick={goPrev} aria-label="Toma anterior"
@@ -385,16 +375,10 @@
 		overflow: hidden;
 	}
 
-	.movie-stage > img {
+	.movie-stage > :global(.frame) {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
 		background: #000;
-	}
-
-	.missing {
-		color: var(--muted);
-		padding: 3rem;
 	}
 
 	.movie-vignette {
@@ -466,53 +450,40 @@
 		top: 58px;
 		width: min(420px, calc(100vw - 36px));
 		max-height: calc(100vh - 210px);
-		overflow: auto;
+		overflow: hidden;
 		border: 1px solid #ffffff2b;
 		border-radius: 10px;
 		background: #06101bed;
 		backdrop-filter: blur(14px);
 	}
 
-	.movie-details summary {
+	.details-toggle {
+		display: flex;
+		width: 100%;
+		gap: 0.45rem;
+		align-items: center;
 		cursor: pointer;
 		padding: 12px 14px;
 		color: var(--gold);
 		font-weight: 850;
-		list-style: none;
+		font-family: inherit;
+		text-align: left;
+		border: 0;
+		background: transparent;
 	}
 
-	.movie-details summary::-webkit-details-marker {
-		display: none;
-	}
-
-	.movie-details summary::before {
-		content: '▾ ';
-		display: inline-block;
-		transition: transform 0.15s ease;
-	}
-
-	.movie-details:not([open]) summary::before {
-		transform: rotate(-90deg);
+	.details-toggle:hover,
+	.details-toggle:focus-visible {
+		background: #ffffff0c;
+		outline: 2px solid var(--cyan);
+		outline-offset: -2px;
 	}
 
 	.movie-detail-body {
 		padding: 0 14px 14px;
-		color: #c8d2db;
-		font-size: 0.88rem;
-	}
-
-	.movie-detail-body p {
-		margin: 8px 0;
-	}
-
-	.movie-detail-body b {
-		color: #fff;
-	}
-
-	.lang-slot {
-		margin-top: 1rem;
-		padding-top: 0.75rem;
-		border-top: 1px solid #ffffff22;
+		max-height: calc(100vh - 270px);
+		overflow: auto;
+		overscroll-behavior: contain;
 	}
 
 	.movie-controls {

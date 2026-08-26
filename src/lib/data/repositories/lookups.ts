@@ -127,6 +127,44 @@ export function getShotImagePath(
 	return getAssetById(take.imageAssetId)?.path;
 }
 
+export const ANIMATIC_PLACEHOLDER_ASSET_ID = 'asset:animatic-placeholder-missing-frame';
+
+export interface ShotMedia {
+	take?: Take;
+	asset?: Asset;
+	imagePath?: string;
+	fallbackPath?: string;
+	displayPath?: string;
+	state: 'current' | 'provisional' | 'missing';
+}
+
+/** Resolve a selected take, its image and the data-driven generic fallback. */
+export function getShotMedia(scriptOrId: ScriptFile | ScriptId, shot: Shot): ShotMedia {
+	const script = resolveScript(scriptOrId);
+	const take = shot.selectedTakeId
+		? script.takes.find((candidate) => candidate.id === shot.selectedTakeId)
+		: undefined;
+	const asset = take?.imageAssetId ? getAssetById(take.imageAssetId) : undefined;
+	const imagePath = asset?.kind === 'image' ? asset.path : undefined;
+	const fallback = getAssetById(ANIMATIC_PLACEHOLDER_ASSET_ID);
+	const fallbackPath =
+		fallback?.kind === 'image' && fallback.role === 'animatic_placeholder'
+			? fallback.path
+			: undefined;
+	const provisional =
+		take?.imageStatus?.reasons.includes('placeholder') ||
+		asset?.imageStatus?.reasons.includes('placeholder');
+
+	return {
+		take,
+		asset,
+		imagePath,
+		fallbackPath,
+		displayPath: imagePath ?? fallbackPath,
+		state: !imagePath ? 'missing' : provisional ? 'provisional' : 'current'
+	};
+}
+
 export function getEntityPrimaryImagePath(referenceAssetIds: string[]): string | undefined {
 	for (const id of referenceAssetIds) {
 		const asset = getAssetById(id);

@@ -70,6 +70,7 @@ export interface CanonicalDataBundle {
 export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 	const scripts = bundle.scripts?.length ? bundle.scripts : [bundle.script];
 	const characterIds = new Set(bundle.characters.characters.map((c) => c.id));
+	const assetIds = new Set(bundle.assets.assets.map((asset) => asset.id));
 	const sourceLanguage = bundle.project.project.languages.sourceLanguage;
 
 	const results: ValidationResult[] = [
@@ -123,7 +124,8 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 				expectShotCount: isCanonical ? 112 : undefined,
 				requireSelectedTakes: script.shots.length > 0,
 				narrativeFunctions: bundle.narrativeFunctions,
-				characterIds
+				characterIds,
+				assetIds
 			})
 		);
 	}

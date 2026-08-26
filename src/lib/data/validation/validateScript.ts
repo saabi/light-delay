@@ -1,6 +1,7 @@
 import type { ValidationResult } from '$lib/types/common';
 import type { Cue, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
-import type { CharacterId } from '$lib/types/ids';
+import type { AssetId, CharacterId } from '$lib/types/ids';
+import { validateImageEditorialStatus } from './validateAssets.ts';
 
 function uniqueIds(label: string, ids: string[], errors: string[]) {
 	const seen = new Set<string>();
@@ -52,6 +53,7 @@ export function validateScript(
 		expectSceneCount?: number;
 		narrativeFunctions?: NarrativeFunctionsFile;
 		characterIds?: Set<CharacterId>;
+		assetIds?: Set<AssetId>;
 		requireSelectedTakes?: boolean;
 	} = {}
 ): ValidationResult {
@@ -113,6 +115,7 @@ export function validateScript(
 	}
 
 	const takeById = new Map(file.takes.map((t) => [t.id, t]));
+	const shotIds = new Set(file.shots.map((shot) => shot.id));
 	for (const shot of file.shots) {
 		if (requireSelectedTakes) {
 			if (!shot.selectedTakeId) {
@@ -126,6 +129,20 @@ export function validateScript(
 		}
 		if (typeof shot.durationMs !== 'number' || shot.durationMs < 0) {
 			errors.push(`${label}: shot ${shot.id} invalid durationMs`);
+		}
+	}
+
+	for (const take of file.takes) {
+		if (take.imageAssetId && options.assetIds && !options.assetIds.has(take.imageAssetId)) {
+			errors.push(`${label}: take ${take.id} references unknown image asset ${take.imageAssetId}`);
+		}
+		if (!take.imageStatus) continue;
+		validateImageEditorialStatus(take.imageStatus, `${label}: take ${take.id}`, errors);
+		if (take.imageStatus.reasons.includes('placeholder') && !take.imageStatus.sourceShotId) {
+			errors.push(`${label}: placeholder take ${take.id} requires sourceShotId`);
+		}
+		if (take.imageStatus.sourceShotId && !shotIds.has(take.imageStatus.sourceShotId)) {
+			errors.push(`${label}: take ${take.id} references unknown sourceShotId`);
 		}
 	}
 

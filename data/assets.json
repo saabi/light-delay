@@ -1384,6 +1384,26 @@
 			"width": 1536,
 			"height": 864,
 			"description": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento."
+		},
+		{
+			"id": "asset:animatic-placeholder-missing-frame",
+			"kind": "image",
+			"role": "animatic_placeholder",
+			"path": "/assets/animatic/placeholder-missing-frame.png",
+			"mimeType": "image/png",
+			"title": "Placeholder técnico para frame faltante",
+			"description": "Claqueta editorial neutral usada cuando una toma no tiene una imagen resoluble.",
+			"width": 1680,
+			"height": 945,
+			"source": {
+				"provider": "OpenAI",
+				"generatedAt": "2026-08-26"
+			},
+			"metadata": {
+				"useCase": "stylized-concept",
+				"containsNarrativeContent": false,
+				"containsText": false
+			}
 		}
 	]
 }

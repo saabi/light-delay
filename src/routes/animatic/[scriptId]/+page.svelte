@@ -2,7 +2,7 @@
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import AnimaticEditor from '$lib/components/animatic/AnimaticEditor.svelte';
 	import { getScript } from '$lib/data/repositories/index';
-	import { getShotImagePath } from '$lib/data/repositories/lookups';
+	import { getShotMedia } from '$lib/data/repositories/lookups';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import { withBase } from '$lib/utils/paths';
 	import type { Scene, Shot } from '$lib/types/script';
@@ -24,19 +24,18 @@
 		}
 		return scenes.map((scene: Scene) => {
 			const shots = shotsByScene[scene.id] ?? [];
-			const imageByShotId: Record<string, string | undefined> = {};
+			const mediaByShotId = {} as Record<string, ReturnType<typeof getShotMedia>>;
 			for (const shot of shots) {
-				const imagePath = getShotImagePath(script, shot);
-				imageByShotId[shot.id] = imagePath ? withBase(imagePath) : undefined;
+				mediaByShotId[shot.id] = getShotMedia(script, shot);
 			}
-			return { scene, shots, imageByShotId };
+			return { scene, shots, mediaByShotId };
 		});
 	});
 
 	const warnings = $derived.by(() => {
 		const list: string[] = [];
 		for (const shot of script.shots) {
-			if (!getShotImagePath(script, shot)) {
+			if (getShotMedia(script, shot).state === 'missing') {
 				list.push(`Toma ${shot.id} sin imagen de take seleccionado.`);
 			}
 		}

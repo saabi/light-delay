@@ -1,18 +1,19 @@
 <script lang="ts">
-	import AssetThumbnail from '$lib/components/media/AssetThumbnail.svelte';
+	import AnimaticFrame from './AnimaticFrame.svelte';
 	import DurationInput from './DurationInput.svelte';
 	import { formatClock } from '$lib/utils/duration';
 	import type { Shot } from '$lib/types/script';
+	import type { ShotMedia } from '$lib/data/repositories/lookups';
 
 	let {
 		shot,
-		imageSrc,
+		media,
 		durationMs,
 		playerHref,
 		onduration
 	}: {
 		shot: Shot;
-		imageSrc?: string;
+		media: ShotMedia;
 		durationMs: number;
 		playerHref: string;
 		onduration: (ms: number) => void;
@@ -21,7 +22,13 @@
 
 <article class="shot-card" id={shot.id} tabindex="-1">
 	<a class="media" href={playerHref}>
-		<AssetThumbnail src={imageSrc} alt={`Toma ${shot.number}`} />
+		<AnimaticFrame
+			{media}
+			shotId={shot.id}
+			alt={`Toma ${shot.number}`}
+			loading="lazy"
+			fit="cover"
+		/>
 	</a>
 	<div class="body">
 		<header>
@@ -50,6 +57,10 @@
 	.media {
 		display: block;
 		text-decoration: none;
+		aspect-ratio: 16 / 9;
+		border: 1px solid var(--line);
+		border-radius: 8px;
+		overflow: hidden;
 	}
 
 	.body {

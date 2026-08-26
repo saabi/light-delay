@@ -2,7 +2,7 @@
 	import { page } from '$app/state';
 	import AnimaticPlayer from '$lib/components/animatic/AnimaticPlayer.svelte';
 	import { getScript } from '$lib/data/repositories/index';
-	import { getCueById, getShotImagePath } from '$lib/data/repositories/lookups';
+	import { getCueById, getShotMedia } from '$lib/data/repositories/lookups';
 	import { setShotIndex } from '$lib/state/player.svelte';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import { withBase } from '$lib/utils/paths';
@@ -29,10 +29,9 @@
 				const cue = getCueById(script, placement.cueId);
 				if (cue) cues.push(cue);
 			}
-			const imagePath = getShotImagePath(script, shot);
 			return {
 				shot,
-				imageSrc: imagePath ? withBase(imagePath) : undefined,
+				media: getShotMedia(script, shot),
 				cues
 			};
 		})

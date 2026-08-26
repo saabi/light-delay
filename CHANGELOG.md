@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-26 — Placeholder y detalles editoriales del animatic
+
+- Generada y registrada una claqueta técnica neutral 16:9 para referencias de imagen ausentes o fallos de carga, sin reemplazar ningún frame existente.
+- Añadido estado editorial estructurado a `Asset` y `Take`; las 33 tomas provisionales de escenas 5–8 indican motivo, explicación, brief y toma de origen. Los reusos intencionales del tráiler permanecen sin marca.
+- Editor y Modo película comparten resolución de medios: los frames reutilizados muestran «PLACEHOLDER» y los faltantes usan «IMAGEN PENDIENTE» sobre la claqueta.
+- Reparado «Detalles de la toma» mediante un panel controlado y accesible, accionable por clic o con `D`, con información narrativa, técnica, temporal, editorial y de procedencia.
+- Ampliadas validaciones y regresiones unitarias/E2E para estados visuales, fallback, navegación y panel móvil.
+
 ## 2026-08-26 — Preparación para despliegue estático en GitHub Pages
 
 - Añadido `@sveltejs/adapter-static`, prerender global y fallback `404.html` para generar un sitio completamente estático.

@@ -14,19 +14,11 @@ Este archivo registra trabajo detectado pero deliberadamente fuera del alcance d
 - **Informe:** añadir `npm run notes:build` para generar de forma determinista `docs/PENDING_AUTHOR_NOTES.md`, agrupado por prioridad y entidad, con archivo y JSON path exactos. Excluir notas resueltas y advertir que el archivo generado no se edita directamente.
 - **Cierre:** tipos, validador, migración, pruebas y script funcionan; una nota eliminada del JSON desaparece del informe al regenerarlo.
 
-### Estado estructurado de imágenes
-
-- **Archivos afectados:** contratos `Asset` y `Take`, validador, datos de assets/takes y futuro informe de notas.
-- **Problema:** hoy no se distingue un frame provisional para una toma de una imagen globalmente incompatible con el canon.
-- **Trabajo:** añadir estado `current`, `needs_review`, `needs_replacement` o `needs_regeneration`, motivos normalizados (`canon_mismatch`, `wrong_composition`, `continuity_error`, `placeholder`, `quality`, `missing_subject`), explicación, brief opcional y referencias a notas editoriales.
-- **Regla:** marcar el `Take` como reemplazable cuando el asset sólo sea un placeholder contextual; marcar el `Asset` para regeneración cuando la propia imagen sea obsoleta en todo uso.
-- **Cierre:** el informe de notas enumera ambas clases sin marcar erróneamente como obsoleto un asset compartido válido.
-
 ## Prioridad media
 
 ### Stills definitivos para la secuencia de Zao
 
-- **Archivos afectados:** takes nuevos de las escenas 5–8 y sus assets provisionales.
+- **Archivos afectados:** los 33 takes con `imageStatus.status = needs_replacement` de las escenas 5–8.
 - **Problema:** las 33 tomas reescritas de las escenas 5–8 —incluidas doce tomas añadidas— reutilizan 21 frames heredados que no representan exactamente vestíbulo, cilindros, tablero cableado, microgravedad o reanimación.
 - **Fuente:** `docs/technical/CELESTIAL_ARDOR.md` y guion principal revisado.
 - **Cierre:** cada take provisional se reemplaza por un still coherente sin cambiar su `shotId`.

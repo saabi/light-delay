@@ -14,6 +14,7 @@ Ejemplos:
 - `legacy-site/assets/props/...` → `static/assets/props/...` → `/assets/props/...`
 - `legacy-site/assets/vehicles/...` → `static/assets/vehicles/...` → `/assets/vehicles/...`
 - `legacy-site/assets/art-bible/...` → `static/assets/art-bible/...` → `/assets/art-bible/...`
+- El fallback generado para frames faltantes no proviene de legacy: `static/assets/animatic/placeholder-missing-frame.png` → `/assets/animatic/placeholder-missing-frame.png`.
 
 ### Hojas canónicas vs referencias de escala
 

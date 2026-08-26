@@ -9,6 +9,35 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
 const SCRIPTS_DIR = join(DATA, 'scripts');
+const IMAGE_STATES = new Set([
+	'current',
+	'needs_review',
+	'needs_replacement',
+	'needs_regeneration'
+]);
+const IMAGE_REASONS = new Set([
+	'canon_mismatch',
+	'wrong_composition',
+	'continuity_error',
+	'placeholder',
+	'quality',
+	'missing_subject'
+]);
+
+function validateImageStatus(status, label, errors) {
+	if (!IMAGE_STATES.has(status.status))
+		errors.push(`${label}: invalid image status ${status.status}`);
+	if (!Array.isArray(status.reasons) || status.reasons.length === 0) {
+		errors.push(`${label}: image status requires reasons`);
+	} else {
+		for (const reason of status.reasons) {
+			if (!IMAGE_REASONS.has(reason)) errors.push(`${label}: invalid image reason ${reason}`);
+		}
+	}
+	if (status.status !== 'current' && !status.explanation?.trim()) {
+		errors.push(`${label}: non-current image status requires explanation`);
+	}
+}
 
 function load(name) {
 	return JSON.parse(readFileSync(join(DATA, name), 'utf8'));
@@ -43,7 +72,8 @@ function validateScriptFile(
 		taxonomy,
 		scriptsById,
 		documentIds,
-		errors
+		errors,
+		assetIds
 	}
 ) {
 	const label = `script(${script.script?.id})`;
@@ -92,11 +122,27 @@ function validateScriptFile(
 	}
 
 	const takeIds = new Set((script.takes || []).map((t) => t.id));
+	const shotIds = new Set((script.shots || []).map((shot) => shot.id));
 	if ((script.shots || []).length > 0) {
 		for (const shot of script.shots) {
 			if (!shot.selectedTakeId || !takeIds.has(shot.selectedTakeId)) {
 				errors.push(`${label} shot ${shot.id}: invalid selectedTakeId`);
 			}
+		}
+	}
+	for (const take of script.takes || []) {
+		if (take.imageAssetId && !assetIds.has(take.imageAssetId)) {
+			errors.push(`${label} take ${take.id}: unknown image asset ${take.imageAssetId}`);
+		}
+		if (!take.imageStatus) continue;
+		validateImageStatus(take.imageStatus, `${label} take ${take.id}`, errors);
+		if (take.imageStatus.reasons?.includes('placeholder') && !take.imageStatus.sourceShotId) {
+			errors.push(`${label} take ${take.id}: placeholder requires sourceShotId`);
+		}
+		if (take.imageStatus.sourceShotId && !shotIds.has(take.imageStatus.sourceShotId)) {
+			errors.push(
+				`${label} take ${take.id}: unknown sourceShotId ${take.imageStatus.sourceShotId}`
+			);
 		}
 	}
 
@@ -300,12 +346,17 @@ function main() {
 		if (!asset.path?.startsWith('/assets/')) {
 			errors.push(`asset ${asset.id} path must start with /assets/: ${asset.path}`);
 		}
+		if (asset.role === 'animatic_placeholder' && asset.kind !== 'image') {
+			errors.push(`asset ${asset.id}: animatic_placeholder must be an image`);
+		}
+		if (asset.imageStatus) validateImageStatus(asset.imageStatus, `asset ${asset.id}`, errors);
 	}
 
 	const sourceLang = langs?.sourceLanguage || 'es';
 	const functionIds = new Set(narrativeFunctions.functions.map((f) => f.id));
 	const characterIds = new Set(characters.characters.map((c) => c.id));
 	const documentIds = new Set(documents.documents.map((d) => d.id));
+	const assetIds = new Set(assets.assets.map((asset) => asset.id));
 	const ownedIds = new Set();
 
 	for (const [id, script] of scriptsById) {
@@ -319,7 +370,8 @@ function main() {
 			taxonomy,
 			scriptsById,
 			documentIds,
-			errors
+			errors,
+			assetIds
 		});
 		for (const collection of [
 			script.acts,

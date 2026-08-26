@@ -4,11 +4,13 @@ Fecha de corte: 2026-08-26.
 
 ## Completado
 
+- **Deuda visual del animatic estructurada:** las 33 tomas provisionales de escenas 5–8 se marcan en `Take.imageStatus` con toma de origen; los assets originales siguen vigentes y el tráiler no recibe marcas por su montaje intencional.
+- **Fallback y detalle de toma:** claqueta técnica neutral registrada para imágenes faltantes/fallidas; editor y player señalizan placeholders. «Detalles de la toma» funciona por clic/tecla `D` y presenta contexto, cámara, cues, takes, revisión y procedencia.
 - **GitHub Pages:** repositorio público y Pages habilitado para `https://saabi.github.io/light-delay/`; build con `@sveltejs/adapter-static`, prerender global, fallback `404.html`, `BASE_PATH=/light-delay` y workflow que descarga Git LFS y valida datos, tipos y pruebas antes de publicar pushes a `master`.
 - **Secuencia Zao/Harlan antes del cruce:** escenas 5–8 reescritas con cámara y diálogo coherentes: aviso parcial, jammer visible, corte físico de COM A/B, puntería del láser exterior al corredor futuro, rutas distintas en microgravedad, asesinato/limpieza, hallazgo de Sorell y coartada de Harlan. Sorell queda establecida como testigo con credencial comprometida, no como sospechosa.
 - **Animatic principal revisado:** 17 escenas, 112 tomas y 30:00. Las 33 tomas afectadas en escenas 5–8 reutilizan 21 frames heredados; 12 tomas son nuevas. No se regeneraron imágenes.
 - **Arquitectura mínima de Celestial Ardor:** vestíbulo axial encuadrable desde el puente, acceso de servicio oculto, cilindros central/servicio, distribuidor COM A/B y control físico dedicado del láser incorporados a canon, datos y notas técnicas.
-- **Deuda diferida:** `TODO.md` concentra stale docs/arte, cálculo del enlace láser y el futuro sistema JSON de notas editoriales y estado de regeneración/reemplazo de imágenes.
+- **Deuda diferida:** `TODO.md` concentra stale docs/arte, cálculo del enlace láser y el futuro sistema general de notas editoriales; el estado estructurado de imágenes ya está implementado.
 - **Comparación entre guiones (V1):** taxonomía versionada de 11 dimensiones de canon y 11 eventos, perfiles declarativos en los cuatro scripts y ruta `/compare/[scriptId]?against=<ScriptId>` para canon, eventos, reparto, variantes y funciones. La herramienta no infiere herencia de diálogo ni fusiones/divisiones.
 - **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
 - **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Rao, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
@@ -54,7 +56,7 @@ Fecha de corte: 2026-08-26.
 - Política de idioma: español = fuente de verdad. Detalle en `AGENTS.md`.
 - Política narrativa: evitar exposición forzada; revelar por pensamiento/decisión del personaje (véase `AGENTS.md`).
 - Haz de Zao: `docs/SIGNAL_BEAM_REQUIREMENTS.md` conserva sólo una aproximación visual; el presupuesto óptico exacto permanece en `TODO.md`.
-- Assets: copia en `static/assets/` (characters 12, locations 8+proportional, props 5, vehicles 3+proportional, art-bible 2+scale-references, animatic 101). `legacy-site/assets/` intacto como referencia.
+- Assets: copia en `static/assets/` (characters 12, locations 8+proportional, props 5, vehicles 3+proportional, art-bible 2+scale-references; animatic con 100 frames legacy, manifest y 1 placeholder técnico). `legacy-site/assets/` intacto como referencia.
 - Documentos prose: `notas-tecnicas` extraído; resto stubs navegables pendientes de extracción editorial.
 
 ## Próxima fase técnica

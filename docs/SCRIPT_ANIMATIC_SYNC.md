@@ -9,9 +9,9 @@ El **guion** (`legacy-site/guion-30-minutos.html` → `data/scripts/light-delay-
 | Escenas | 17 | 17 | 17 escenas |
 | Tomas / takes | — | 112 tomas | 112 shots / 112 takes |
 | Diálogos / subtítulos | 97 cues | 97 subs | 97 placements únicos |
-| Imágenes únicas disponibles | — | 100 PNG | 100 assets de frame reutilizados |
+| Imágenes únicas disponibles | — | 100 PNG | 100 frames + 1 placeholder técnico |
 
-Las escenas 5–8 pasaron de 21 a 33 tomas sin cambiar la duración total. Sus 33 takes conservan frames provisionales; doce son tomas narrativas nuevas. No hay cue de diálogo sin placement.
+Las escenas 5–8 pasaron de 21 a 33 tomas sin cambiar la duración total. Sus 33 takes conservan frames provisionales marcados en `Take.imageStatus`; hay doce reutilizaciones directas adicionales de assets. El tráiler conserva sus reusos intencionales sin marca de placeholder. No hay cue de diálogo sin placement.
 
 ## Resumen del matching automático inicial (histórico)
 
@@ -68,5 +68,7 @@ _Ninguno._
 - Guion y animatic se renderizan desde `data/scripts/*.json` (misma fuente por script/cut).
 - Subtítulos del player: `getSubtitleSegments` sobre placements + diálogo localizado.
 - Frames servidos desde `/assets/animatic/...` (`static/assets/`); sin dependencia de `legacy-site/` en la UI.
+- Las imágenes provisionales conservan el frame y muestran su toma de origen; las referencias faltantes o fallidas usan el asset `asset:animatic-placeholder-missing-frame`.
+- El panel controlado «Detalles de la toma» expone contexto narrativo, cámara, cues, takes, estado visual, revisión y procedencia; se abre por clic o con `D`.
 - **Festival Cut:** scaffold sin shots (autoría pendiente).
 - **Tráiler:** 29 shots / 90 s; reutiliza `imageAssetId` del main short; brief en `docs/Light Delay — Tráiler de la versión de 30 minutos.md`.

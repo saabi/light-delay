@@ -7,7 +7,7 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 - Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
-- Animatic: 112 tomas con image take, encuadre, audio, subtítulos y duración editable; las 33 tomas reescritas de las escenas 5–8 reutilizan frames provisionales y 12 son unidades narrativas nuevas.
+- Animatic: 112 tomas con image take, encuadre, audio, subtítulos y duración editable; las 33 tomas reescritas de las escenas 5–8 identifican sus frames provisionales y su origen. Un placeholder técnico cubre imágenes ausentes o fallidas.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.

@@ -4398,13 +4398,6 @@
 				"main:take-05-01-01"
 			],
 			"selectedTakeId": "main:take-05-01-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-05-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Payload autónomo y relé físico"
 		},
 		{
@@ -4437,13 +4430,6 @@
 				"main:take-05-02-01"
 			],
 			"selectedTakeId": "main:take-05-02-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-05-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Zao identifica la firma de Harlan"
 		},
 		{
@@ -4484,13 +4470,6 @@
 				"main:take-05-03-01"
 			],
 			"selectedTakeId": "main:take-05-03-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Voss, tripulación y Harlan en el acceso axial"
 		},
 		{
@@ -4523,13 +4502,6 @@
 				"main:take-05-04-01"
 			],
 			"selectedTakeId": "main:take-05-04-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Harlan activa el jammer; la voz se corta"
 		},
 		{
@@ -4570,13 +4542,6 @@
 				"main:take-05-05-01"
 			],
 			"selectedTakeId": "main:take-05-05-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-05-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Zao termina sin ser oída"
 		},
 		{
@@ -4609,13 +4574,6 @@
 				"main:take-05-06-01"
 			],
 			"selectedTakeId": "main:take-05-06-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-05-06; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Wireless sin enlace y mensaje en cola"
 		},
 		{
@@ -4647,14 +4605,7 @@
 			"takeIds": [
 				"main:take-05-07-01"
 			],
-			"selectedTakeId": "main:take-05-07-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-05-07-01"
 		},
 		{
 			"id": "main:shot-05-08",
@@ -4693,14 +4644,7 @@
 			"takeIds": [
 				"main:take-05-08-01"
 			],
-			"selectedTakeId": "main:take-05-08-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-05-08-01"
 		},
 		{
 			"id": "main:shot-06-01",
@@ -4736,13 +4680,6 @@
 				"main:take-06-01-01"
 			],
 			"selectedTakeId": "main:take-06-01-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-05-06; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Fracasan ambos respaldos cableados"
 		},
 		{
@@ -4775,13 +4712,6 @@
 				"main:take-06-02-01"
 			],
 			"selectedTakeId": "main:take-06-02-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-06-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Tierra y Proxima quedan descartadas"
 		},
 		{
@@ -4818,13 +4748,6 @@
 				"main:take-06-03-01"
 			],
 			"selectedTakeId": "main:take-06-03-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-06-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Solución de intercepción futura"
 		},
 		{
@@ -4857,13 +4780,6 @@
 				"main:take-06-04-01"
 			],
 			"selectedTakeId": "main:take-06-04-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-13-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Harlan cruza el cilindro de servicio"
 		},
 		{
@@ -4896,13 +4812,6 @@
 				"main:take-06-05-01"
 			],
 			"selectedTakeId": "main:take-06-05-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-03-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Sorell busca y avanza por el cilindro central"
 		},
 		{
@@ -4939,13 +4848,6 @@
 				"main:take-06-06-01"
 			],
 			"selectedTakeId": "main:take-06-06-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-06-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Zao graba el mensaje"
 		},
 		{
@@ -4985,14 +4887,7 @@
 			"takeIds": [
 				"main:take-06-07-01"
 			],
-			"selectedTakeId": "main:take-06-07-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-06-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-06-07-01"
 		},
 		{
 			"id": "main:shot-06-08",
@@ -5035,14 +4930,7 @@
 			"takeIds": [
 				"main:take-06-08-01"
 			],
-			"selectedTakeId": "main:take-06-08-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-06-06; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-06-08-01"
 		},
 		{
 			"id": "main:shot-07-01",
@@ -5074,13 +4962,6 @@
 				"main:take-07-01-01"
 			],
 			"selectedTakeId": "main:take-07-01-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-07-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Última mirada entre Zao y Harlan"
 		},
 		{
@@ -5113,13 +4994,6 @@
 				"main:take-07-02-01"
 			],
 			"selectedTakeId": "main:take-07-02-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-07-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Asesinato fuera de campo"
 		},
 		{
@@ -5152,13 +5026,6 @@
 				"main:take-07-03-01"
 			],
 			"selectedTakeId": "main:take-07-03-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-06-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Harlan borra y limpia el núcleo"
 		},
 		{
@@ -5191,13 +5058,6 @@
 				"main:take-07-04-01"
 			],
 			"selectedTakeId": "main:take-07-04-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-13-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Regreso por el cilindro de servicio"
 		},
 		{
@@ -5230,13 +5090,6 @@
 				"main:take-07-05-01"
 			],
 			"selectedTakeId": "main:take-07-05-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Sorell encuentra a Zao"
 		},
 		{
@@ -5276,14 +5129,7 @@
 			"takeIds": [
 				"main:take-07-06-01"
 			],
-			"selectedTakeId": "main:take-07-06-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-07-06-01"
 		},
 		{
 			"id": "main:shot-07-07",
@@ -5318,14 +5164,7 @@
 			"takeIds": [
 				"main:take-07-07-01"
 			],
-			"selectedTakeId": "main:take-07-07-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-07-07-01"
 		},
 		{
 			"id": "main:shot-07-08",
@@ -5356,14 +5195,7 @@
 			"takeIds": [
 				"main:take-07-08-01"
 			],
-			"selectedTakeId": "main:take-07-08-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-07-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-07-08-01"
 		},
 		{
 			"id": "main:shot-07-09",
@@ -5394,14 +5226,7 @@
 			"takeIds": [
 				"main:take-07-09-01"
 			],
-			"selectedTakeId": "main:take-07-09-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-07-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-07-09-01"
 		},
 		{
 			"id": "main:shot-07-10",
@@ -5432,14 +5257,7 @@
 			"takeIds": [
 				"main:take-07-10-01"
 			],
-			"selectedTakeId": "main:take-07-10-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-07-05; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-07-10-01"
 		},
 		{
 			"id": "main:shot-08-01",
@@ -5475,13 +5293,6 @@
 				"main:take-08-01-01"
 			],
 			"selectedTakeId": "main:take-08-01-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-01; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Cruce confirmado en microgravedad"
 		},
 		{
@@ -5514,13 +5325,6 @@
 				"main:take-08-02-01"
 			],
 			"selectedTakeId": "main:take-08-02-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Voss pregunta por Sorell"
 		},
 		{
@@ -5553,13 +5357,6 @@
 				"main:take-08-03-01"
 			],
 			"selectedTakeId": "main:take-08-03-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-03; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Harlan niega haberla visto"
 		},
 		{
@@ -5592,13 +5389,6 @@
 				"main:take-08-04-01"
 			],
 			"selectedTakeId": "main:take-08-04-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-08-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			],
 			"purpose": "Voss envía a Harlan y Okoye"
 		},
 		{
@@ -5630,14 +5420,7 @@
 			"takeIds": [
 				"main:take-08-05-01"
 			],
-			"selectedTakeId": "main:take-08-05-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-12-08; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-08-05-01"
 		},
 		{
 			"id": "main:shot-08-06",
@@ -5668,14 +5451,7 @@
 			"takeIds": [
 				"main:take-08-06-01"
 			],
-			"selectedTakeId": "main:take-08-06-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-13-02; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-08-06-01"
 		},
 		{
 			"id": "main:shot-08-07",
@@ -5706,14 +5482,7 @@
 			"takeIds": [
 				"main:take-08-07-01"
 			],
-			"selectedTakeId": "main:take-08-07-01",
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Frame provisional reutilizado de main:shot-13-04; reemplazar por still coherente con la nueva arquitectura y microgravedad.",
-					"resolved": false
-				}
-			]
+			"selectedTakeId": "main:take-08-07-01"
 		},
 		{
 			"id": "main:shot-09-01",
@@ -7968,147 +7737,336 @@
 			"shotId": "main:shot-05-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-01"
+			"imageAssetId": "asset:animatic-05-01",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-05-01; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-05-01"
+			}
 		},
 		{
 			"id": "main:take-05-02-01",
 			"shotId": "main:shot-05-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-02"
+			"imageAssetId": "asset:animatic-05-02",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-05-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-05-02"
+			}
 		},
 		{
 			"id": "main:take-05-03-01",
 			"shotId": "main:shot-05-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-03"
+			"imageAssetId": "asset:animatic-05-03",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-01; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-01"
+			}
 		},
 		{
 			"id": "main:take-05-04-01",
 			"shotId": "main:shot-05-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-04"
+			"imageAssetId": "asset:animatic-05-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-12-08; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-12-08"
+			}
 		},
 		{
 			"id": "main:take-05-05-01",
 			"shotId": "main:shot-05-05",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-05"
+			"imageAssetId": "asset:animatic-05-05",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-05-04; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-05-04"
+			}
 		},
 		{
 			"id": "main:take-05-06-01",
 			"shotId": "main:shot-05-06",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-06"
+			"imageAssetId": "asset:animatic-05-06",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-05-06; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-05-06"
+			}
 		},
 		{
 			"id": "main:take-06-01-01",
 			"shotId": "main:shot-06-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-01"
+			"imageAssetId": "asset:animatic-06-01",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-05-06; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-05-06"
+			}
 		},
 		{
 			"id": "main:take-06-02-01",
 			"shotId": "main:shot-06-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-02"
+			"imageAssetId": "asset:animatic-06-02",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-06-01; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-06-01"
+			}
 		},
 		{
 			"id": "main:take-06-03-01",
 			"shotId": "main:shot-06-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-03"
+			"imageAssetId": "asset:animatic-06-03",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-06-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-06-02"
+			}
 		},
 		{
 			"id": "main:take-06-04-01",
 			"shotId": "main:shot-06-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-04"
+			"imageAssetId": "asset:animatic-06-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-13-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-13-02"
+			}
 		},
 		{
 			"id": "main:take-06-05-01",
 			"shotId": "main:shot-06-05",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-05"
+			"imageAssetId": "asset:animatic-06-05",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-03-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-03-02"
+			}
 		},
 		{
 			"id": "main:take-06-06-01",
 			"shotId": "main:shot-06-06",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-06"
+			"imageAssetId": "asset:animatic-06-06",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-06-03; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-06-03"
+			}
 		},
 		{
 			"id": "main:take-07-01-01",
 			"shotId": "main:shot-07-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-01"
+			"imageAssetId": "asset:animatic-07-01",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-07-01; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-07-01"
+			}
 		},
 		{
 			"id": "main:take-07-02-01",
 			"shotId": "main:shot-07-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-02"
+			"imageAssetId": "asset:animatic-07-02",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-07-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-07-02"
+			}
 		},
 		{
 			"id": "main:take-07-03-01",
 			"shotId": "main:shot-07-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-03"
+			"imageAssetId": "asset:animatic-07-03",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-06-04; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-06-04"
+			}
 		},
 		{
 			"id": "main:take-07-04-01",
 			"shotId": "main:shot-07-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-04"
+			"imageAssetId": "asset:animatic-07-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-13-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-13-02"
+			}
 		},
 		{
 			"id": "main:take-07-05-01",
 			"shotId": "main:shot-07-05",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-05"
+			"imageAssetId": "asset:animatic-07-05",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-03; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-03"
+			}
 		},
 		{
 			"id": "main:take-08-01-01",
 			"shotId": "main:shot-08-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-08-01"
+			"imageAssetId": "asset:animatic-08-01",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-01; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-01"
+			}
 		},
 		{
 			"id": "main:take-08-02-01",
 			"shotId": "main:shot-08-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-08-02"
+			"imageAssetId": "asset:animatic-08-02",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-02"
+			}
 		},
 		{
 			"id": "main:take-08-03-01",
 			"shotId": "main:shot-08-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-08-03"
+			"imageAssetId": "asset:animatic-08-03",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-03; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-03"
+			}
 		},
 		{
 			"id": "main:take-08-04-01",
 			"shotId": "main:shot-08-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-08-04"
+			"imageAssetId": "asset:animatic-08-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-04; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-04"
+			}
 		},
 		{
 			"id": "main:take-09-01-01",
@@ -8521,84 +8479,192 @@
 			"shotId": "main:shot-05-07",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-12-08"
+			"imageAssetId": "asset:animatic-12-08",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-12-08; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-12-08"
+			}
 		},
 		{
 			"id": "main:take-05-08-01",
 			"shotId": "main:shot-05-08",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-08-04"
+			"imageAssetId": "asset:animatic-08-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-04; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-04"
+			}
 		},
 		{
 			"id": "main:take-06-07-01",
 			"shotId": "main:shot-06-07",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-04"
+			"imageAssetId": "asset:animatic-06-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-06-04; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-06-04"
+			}
 		},
 		{
 			"id": "main:take-06-08-01",
 			"shotId": "main:shot-06-08",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-06"
+			"imageAssetId": "asset:animatic-06-06",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-06-06; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-06-06"
+			}
 		},
 		{
 			"id": "main:take-07-06-01",
 			"shotId": "main:shot-07-06",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-08-03"
+			"imageAssetId": "asset:animatic-08-03",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-08-03; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-08-03"
+			}
 		},
 		{
 			"id": "main:take-07-07-01",
 			"shotId": "main:shot-07-07",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-12-08"
+			"imageAssetId": "asset:animatic-12-08",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-12-08; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-12-08"
+			}
 		},
 		{
 			"id": "main:take-07-08-01",
 			"shotId": "main:shot-07-08",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-03"
+			"imageAssetId": "asset:animatic-07-03",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-07-03; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-07-03"
+			}
 		},
 		{
 			"id": "main:take-07-09-01",
 			"shotId": "main:shot-07-09",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-04"
+			"imageAssetId": "asset:animatic-07-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-07-04; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-07-04"
+			}
 		},
 		{
 			"id": "main:take-07-10-01",
 			"shotId": "main:shot-07-10",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-05"
+			"imageAssetId": "asset:animatic-07-05",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-07-05; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-07-05"
+			}
 		},
 		{
 			"id": "main:take-08-05-01",
 			"shotId": "main:shot-08-05",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-12-08"
+			"imageAssetId": "asset:animatic-12-08",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-12-08; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-12-08"
+			}
 		},
 		{
 			"id": "main:take-08-06-01",
 			"shotId": "main:shot-08-06",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-13-02"
+			"imageAssetId": "asset:animatic-13-02",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-13-02; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-13-02"
+			}
 		},
 		{
 			"id": "main:take-08-07-01",
 			"shotId": "main:shot-08-07",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-13-04"
+			"imageAssetId": "asset:animatic-13-04",
+			"imageStatus": {
+				"status": "needs_replacement",
+				"reasons": [
+					"placeholder"
+				],
+				"explanation": "Frame provisional reutilizado de main:shot-13-04; no representa con precisión la toma reescrita.",
+				"replacementBrief": "Crear un still coherente con la descripción, la nueva arquitectura de Celestial Ardor y la microgravedad de la secuencia.",
+				"sourceShotId": "main:shot-13-04"
+			}
 		}
 	]
 }

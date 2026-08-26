@@ -11,11 +11,12 @@
 	import { formatClock } from '$lib/utils/duration';
 	import type { ScriptId } from '$lib/types/ids';
 	import type { Scene, Shot } from '$lib/types/script';
+	import type { ShotMedia } from '$lib/data/repositories/lookups';
 
 	type SceneGroup = {
 		scene: Scene;
 		shots: Shot[];
-		imageByShotId: Record<string, string | undefined>;
+		mediaByShotId: Record<string, ShotMedia>;
 	};
 
 	let {
@@ -94,7 +95,7 @@
 				{#each group.shots as shot (shot.id)}
 					<ShotCard
 						{shot}
-						imageSrc={group.imageByShotId[shot.id]}
+						media={group.mediaByShotId[shot.id]}
 						durationMs={durationFromEdits(edits, shot.id, shot.durationMs)}
 						playerHref={`${playerHref}?shot=${encodeURIComponent(shot.id)}`}
 						onduration={(ms) => setDuration(shot.id, ms)}
