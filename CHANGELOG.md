@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-26 — Ajustes de copy de portada
+
+- Revisados en español e inglés el eyebrow, la síntesis de la historia, el conteo/nombre del corto y el CTA del archivo; el inglés adopta además `traveling` según el locale `en_US`.
+- Conservados sin cambios los enlaces, metadatos, imágenes, markup y el resto del contenido de la landing; ampliadas las regresiones E2E para verificar los textos equivalentes de ambos idiomas.
+
 ## 2026-08-26 — Auditoría y consolidación de deuda
 
 - Ampliado `TODO.md` con deuda antes no registrada: extractor legacy destructivo, deriva entre contrato y JSON, validación incompleta, Node 25 fuera de soporte, lint/E2E ausentes del gate, madurez editorial, medios, regresiones y duplicados binarios.

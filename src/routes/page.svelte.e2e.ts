@@ -13,7 +13,22 @@ test('public landing is English-first and has crawlable project links', async ({
 		page.getByRole('heading', { name: 'A message aimed at where the ship will be.' })
 	).toBeVisible();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-	await expect(page.getByRole('link', { name: 'Open the project archive' })).toBeVisible();
+	await expect(page.getByText('Hard science-fiction short film · In development')).toBeVisible();
+	await expect(
+		page.getByText(
+			'Light Delay is a first-contact thriller about a crew crossing an interstellar gateway and a warning that can only catch them by traveling at the speed of light.'
+		)
+	).toBeVisible();
+	await expect(
+		page.getByText(
+			"A human mission approaches an unrepeatable encounter. When an engineer discovers sabotage and internal communications fail, she must aim the ship's external laser at its future trajectory before the saboteur reaches her."
+		)
+	).toBeVisible();
+	await expect(page.getByText('17 scenes from the main short film.')).toBeVisible();
+	const archiveCard = page.locator('.cards a').filter({
+		has: page.getByRole('heading', { name: 'Project archive' })
+	});
+	await expect(archiveCard.locator('b')).toHaveText('Open →');
 	await expect(page.getByRole('link', { name: 'Read the script' })).toBeVisible();
 });
 
@@ -23,7 +38,19 @@ test('Spanish landing is prerendered and localized', async ({ page }) => {
 		page.getByRole('heading', { name: 'Un mensaje dirigido al lugar donde estará la nave.' })
 	).toBeVisible();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'es');
-	await expect(page.getByRole('link', { name: 'Abrir el archivo del proyecto' })).toBeVisible();
+	await expect(
+		page.getByText('Cortometraje de ciencia ficción dura · En desarrollo')
+	).toBeVisible();
+	await expect(
+		page.getByText(
+			'Una misión humana se aproxima a un encuentro irrepetible. Cuando una ingeniera descubre un sabotaje y las comunicaciones internas fallan, debe apuntar el láser exterior de la nave a su trayectoria futura antes de que el saboteador la alcance.'
+		)
+	).toBeVisible();
+	await expect(page.getByText('17 escenas del cortometraje principal.')).toBeVisible();
+	const archiveCard = page.locator('.cards a').filter({
+		has: page.getByRole('heading', { name: 'Archivo del proyecto' })
+	});
+	await expect(archiveCard.locator('b')).toHaveText('Abrir →');
 });
 
 test('/script redirects to the encoded canonical script', async ({ page }) => {
