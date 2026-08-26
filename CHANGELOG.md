@@ -2,10 +2,11 @@
 
 ## 2026-08-26 — Navegación y diseño responsive
 
-- Reemplazado el rail lateral por un header global fijo con menú hamburguesa y drawer modal accesible en todas las rutas salvo Modo película.
+- Corregido el shell responsive: escritorio recupera header global compacto + rail persistente, mientras móvil usa una barra inferior con marca, GitHub y hamburguesa que abre una hoja modal desde abajo.
+- El cambio de layout se decide por capacidad tipográfica mediante `calc(26.88em + 52.8ch)`; el cuerpo usa `1rem` para respetar tamaño de texto, zoom y preferencias de accesibilidad sin incorporar un sensor JavaScript.
 - El player conserva su presentación inmersiva en landscape; en portrait ordena frame, detalles de toma desplegables y controles persistentes, sin perder transporte, timeline ni retorno a edición.
 - Auditadas las rutas de inicio, guion, animatic, arte, comparación, documentos, entidades y assets para evitar desborde horizontal y adaptar grillas, tablas, metadatos y controles a pantallas estrechas.
-- Ampliadas las regresiones E2E para navegación por drawer, viewport de 320 px, composición portrait del player y cambios de orientación sin perder toma, progreso ni estado del panel.
+- Ampliadas las regresiones E2E para rail de escritorio, hoja inferior móvil, breakpoint tipográfico, viewport de 320 px, composición portrait del player y cambios de orientación sin perder toma, progreso ni estado del panel.
 
 ## 2026-08-26 — Placeholder y detalles editoriales del animatic
 

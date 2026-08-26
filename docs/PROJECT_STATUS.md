@@ -4,7 +4,7 @@ Fecha de corte: 2026-08-26.
 
 ## Completado
 
-- **Navegación responsive:** todas las rutas salvo Modo película usan un header global fijo con menú hamburguesa y drawer modal accesible; el selector de guion y la navegación permanecen disponibles sin ocupar un rail lateral.
+- **Navegación responsive:** todas las rutas salvo Modo película usan header global compacto + rail persistente en escritorio y barra inferior + hoja modal en móvil. El umbral `calc(26.88em + 52.8ch)` responde a capacidad tipográfica; ambos modos enlazan el repositorio de GitHub.
 - **Player adaptable:** landscape conserva la composición inmersiva; portrait ordena frame, detalles desplegables y controles persistentes, con continuidad de toma, progreso y panel al cambiar orientación.
 - **Auditoría móvil:** inicio, guion, animatic, arte, comparación, documentos, entidades y assets adaptan grillas, tablas, metadatos y controles sin desborde horizontal a 320 px.
 - **Deuda visual del animatic estructurada:** las 33 tomas provisionales de escenas 5–8 se marcan en `Take.imageStatus` con toma de origen; los assets originales siguen vigentes y el tráiler no recibe marcas por su montaje intencional.
@@ -18,7 +18,7 @@ Fecha de corte: 2026-08-26.
 - **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
 - **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Rao, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
 - **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
-- **Selector de guion en el menú:** `ScriptSwitcher` en el drawer de `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
+- **Selector de guion adaptable:** `ScriptSwitcher` permanece visible en el rail de escritorio y dentro de la hoja móvil de `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
 - **Tráiler (~1:30):** `data/scripts/light-delay-trailer.json` — 9 secuencias del brief, 29 tomas reutilizando frames del main short; regenerable con `npm run build:trailer`.
 - **Modo película:** chrome alineado al legacy en landscape (`AnimaticPlayer` fullscreen con meta, detalles flotantes y barra inferior) y flujo frame → detalles → controles en portrait.
 - **Higgsfield (staging):** `higgsfield-uploads/` con hojas renombradas de personajes (sin Harlan/Rao), localizaciones y props; ver `higgsfield-uploads/TODO.md`.

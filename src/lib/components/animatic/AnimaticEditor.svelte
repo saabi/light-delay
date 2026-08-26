@@ -109,7 +109,7 @@
 <style>
 	.dashboard {
 		position: sticky;
-		top: calc(var(--header-height) + 0.75rem);
+		top: calc(var(--site-top-offset) + 0.75rem);
 		z-index: 5;
 		display: flex;
 		align-items: center;

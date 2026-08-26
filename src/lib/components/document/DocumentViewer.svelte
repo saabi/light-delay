@@ -55,7 +55,7 @@
 	h4 {
 		font-family: var(--font-serif);
 		line-height: 1.2;
-		scroll-margin-top: calc(var(--header-height) + 1rem);
+		scroll-margin-top: calc(var(--site-top-offset) + 1rem);
 		overflow-wrap: anywhere;
 	}
 

@@ -10,8 +10,8 @@ async function openNavigation(page: import('@playwright/test').Page) {
 test('home page loads and lists scripts', async ({ page }) => {
 	await page.goto('/');
 	await expect(page.getByRole('heading', { name: /Light Delay/i })).toBeVisible();
-	await expect(page.getByRole('button', { name: 'Abrir menú principal' })).toBeVisible();
-	await openNavigation(page);
+	await expect(page.getByRole('complementary', { name: 'Navegación del proyecto' })).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Abrir menú principal' })).toBeHidden();
 	await expect(page.getByRole('link', { name: /Guion/i }).first()).toBeVisible();
 	await expect(page.getByRole('link', { name: /Animatic/i }).first()).toBeVisible();
 	await expect(page.getByRole('heading', { name: /Scripts \/ cuts/i })).toBeVisible();
@@ -43,15 +43,19 @@ test('festival animatic page loads (draft, empty shots)', async ({ page }) => {
 
 test('script switcher from home opens chosen script', async ({ page }) => {
 	await page.goto('/');
-	await openNavigation(page);
-	await page.getByLabel('Seleccionar guion o cut').selectOption('script:light-delay-festival');
+	await page
+		.getByRole('complementary', { name: 'Navegación del proyecto' })
+		.getByLabel('Seleccionar guion o cut')
+		.selectOption('script:light-delay-festival');
 	await expect(page).toHaveURL(/\/script\/script~light-delay-festival\/?$/);
 });
 
 test('script switcher keeps animatic section', async ({ page }) => {
 	await page.goto('/animatic/script~light-delay-main-short');
-	await openNavigation(page);
-	await page.getByLabel('Seleccionar guion o cut').selectOption('script:light-delay-festival');
+	await page
+		.getByRole('complementary', { name: 'Navegación del proyecto' })
+		.getByLabel('Seleccionar guion o cut')
+		.selectOption('script:light-delay-festival');
 	await expect(page).toHaveURL(/\/animatic\/script~light-delay-festival\/?$/);
 });
 
@@ -72,11 +76,37 @@ test('movie player chrome matches legacy layout', async ({ page }) => {
 	await expect(page.locator('.movie-frame img, .movie-frame .missing').first()).toBeVisible();
 });
 
-test('global navigation drawer is accessible and closes after navigation', async ({ page }) => {
+test('desktop shell keeps its header and persistent rail without a hamburger', async ({ page }) => {
 	await page.setViewportSize({ width: 1440, height: 900 });
 	await page.goto('/');
+	await expect(page.locator('.desktop-header')).toBeVisible();
+	await expect(page.getByRole('complementary', { name: 'Navegación del proyecto' })).toBeVisible();
+	await expect(page.locator('.desktop-header .github-link')).toHaveAttribute(
+		'href',
+		'https://github.com/saabi/light-delay'
+	);
+	await expect(page.getByRole('button', { name: 'Abrir menú principal' })).toBeHidden();
+});
+
+test('mobile bottom sheet is accessible and closes after navigation', async ({ page }) => {
+	await page.setViewportSize({ width: 390, height: 844 });
+	await page.goto('/');
+	await expect(page.locator('.desktop-header')).toBeHidden();
+	await expect(page.getByRole('complementary', { name: 'Navegación del proyecto' })).toBeHidden();
+	const bar = page.locator('.mobile-bar');
+	await expect(bar).toBeVisible();
+	await expect(bar.getByRole('link', { name: 'GitHub' })).toHaveAttribute(
+		'href',
+		'https://github.com/saabi/light-delay'
+	);
+	const barBox = await bar.boundingBox();
+	expect(barBox).not.toBeNull();
+	expect(Math.abs(barBox!.y + barBox!.height - 844)).toBeLessThanOrEqual(1);
 	const button = await openNavigation(page);
 	await expect(button).toHaveAttribute('aria-expanded', 'true');
+	const sheetBox = await page.getByRole('dialog', { name: 'Navegación' }).boundingBox();
+	expect(sheetBox).not.toBeNull();
+	expect(Math.abs(sheetBox!.y + sheetBox!.height - 844)).toBeLessThanOrEqual(1);
 	await page.keyboard.press('Escape');
 	await expect(page.getByRole('dialog', { name: 'Navegación' })).toBeHidden();
 	await expect(button).toHaveAttribute('aria-expanded', 'false');
@@ -85,6 +115,18 @@ test('global navigation drawer is accessible and closes after navigation', async
 	await page.getByRole('link', { name: 'Arte', exact: true }).click();
 	await expect(page).toHaveURL(/\/art\/?$/);
 	await expect(page.getByRole('dialog', { name: 'Navegación' })).toBeHidden();
+});
+
+test('the shell breakpoint follows typographic capacity', async ({ page }) => {
+	await page.setViewportSize({ width: 1000, height: 800 });
+	await page.goto('/');
+	await expect(page.locator('.desktop-header')).toBeVisible();
+	await page.evaluate(() => {
+		document.documentElement.style.fontSize = '20px';
+	});
+	await expect(page.locator('.desktop-header')).toBeHidden();
+	await expect(page.locator('.mobile-bar')).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Abrir menú principal' })).toBeVisible();
 });
 
 test('principal routes do not overflow a narrow viewport', async ({ page }) => {

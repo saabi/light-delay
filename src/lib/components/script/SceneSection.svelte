@@ -29,7 +29,7 @@
 <style>
 	.scene {
 		margin: 2.5rem 0;
-		scroll-margin-top: calc(var(--header-height) + 1rem);
+		scroll-margin-top: calc(var(--site-top-offset) + 1rem);
 	}
 
 	.num {

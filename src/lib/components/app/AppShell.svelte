@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
 	import { withBase } from '$lib/utils/paths';
-	import type { Snippet } from 'svelte';
+	import { onMount, type Snippet } from 'svelte';
 
 	let {
 		children,
@@ -22,7 +22,10 @@
 	}
 
 	function closeMenu({ restoreFocus = true } = {}) {
-		if (!drawer?.open) return;
+		if (!drawer?.open) {
+			menuOpen = false;
+			return;
+		}
 		drawer.close();
 		menuOpen = false;
 		if (restoreFocus) requestAnimationFrame(() => menuButton?.focus());
@@ -35,6 +38,14 @@
 
 	afterNavigate(() => closeMenu({ restoreFocus: false }));
 
+	onMount(() => {
+		const onResize = () => {
+			if (drawer?.open) closeMenu({ restoreFocus: false });
+		};
+		window.addEventListener('resize', onResize);
+		return () => window.removeEventListener('resize', onResize);
+	});
+
 	$effect(() => {
 		if (!menuOpen || typeof document === 'undefined') return;
 		const previous = document.documentElement.style.overflow;
@@ -45,87 +56,130 @@
 	});
 </script>
 
-<div class="shell">
-	<header class="site-header">
-		<a class="brand" href={withBase('/')}>
-			<span class="orb" aria-hidden="true"></span>
-			<span>Light Delay</span>
-		</a>
-		{#if navigation}
-			<button
-				bind:this={menuButton}
-				type="button"
-				class="menu-button"
-				aria-label="Abrir menú principal"
-				aria-expanded={menuOpen}
-				aria-controls="project-navigation"
-				onclick={openMenu}
+<div class="shell-container">
+	<div class="shell">
+		<header class="desktop-header">
+			<a class="brand" href={withBase('/')}>
+				<span class="orb" aria-hidden="true"></span>
+				<span>Light Delay</span>
+			</a>
+			<a
+				class="github-link"
+				href="https://github.com/saabi/light-delay"
+				target="_blank"
+				rel="noopener noreferrer">GitHub</a
 			>
-				<span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
-				<span>Menú</span>
-			</button>
+		</header>
+
+		{#if navigation}
+			<aside class="desktop-rail" aria-label="Navegación del proyecto">
+				{@render navigation()}
+			</aside>
 		{/if}
-	</header>
 
-	{#if navigation}
-		<dialog
-			bind:this={drawer}
-			class="navigation-dialog"
-			id="project-navigation"
-			aria-labelledby="navigation-title"
-			onclose={() => (menuOpen = false)}
-			onclick={onDrawerClick}
-		>
-			<div class="drawer-panel">
-				<header>
-					<div>
-						<span class="eyebrow">Proyecto</span>
-						<h2 id="navigation-title">Navegación</h2>
+		<div class="main">
+			{@render children()}
+		</div>
+
+		<nav class="mobile-bar" aria-label="Acciones del sitio">
+			<a class="brand mobile-brand" href={withBase('/')} aria-label="Ir al inicio">
+				<span class="orb" aria-hidden="true"></span>
+				<span>Light Delay</span>
+			</a>
+			<a
+				class="github-link mobile-github"
+				href="https://github.com/saabi/light-delay"
+				target="_blank"
+				rel="noopener noreferrer">GitHub</a
+			>
+			{#if navigation}
+				<button
+					bind:this={menuButton}
+					type="button"
+					class="menu-button"
+					aria-label="Abrir menú principal"
+					aria-expanded={menuOpen}
+					aria-controls="project-navigation"
+					onclick={openMenu}
+				>
+					<span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
+					<span>Menú</span>
+				</button>
+			{/if}
+		</nav>
+
+		{#if navigation}
+			<dialog
+				bind:this={drawer}
+				class="navigation-dialog"
+				id="project-navigation"
+				aria-labelledby="navigation-title"
+				onclose={() => (menuOpen = false)}
+				onclick={onDrawerClick}
+			>
+				<div class="drawer-panel">
+					<header>
+						<div>
+							<span class="eyebrow">Proyecto</span>
+							<h2 id="navigation-title">Navegación</h2>
+						</div>
+						<button
+							type="button"
+							class="close-button"
+							aria-label="Cerrar menú"
+							onclick={() => closeMenu()}>×</button
+						>
+					</header>
+					<div class="drawer-body">
+						{@render navigation()}
 					</div>
-					<button
-						type="button"
-						class="close-button"
-						aria-label="Cerrar menú"
-						onclick={() => closeMenu()}>×</button
-					>
-				</header>
-				<div class="drawer-body">
-					{@render navigation()}
 				</div>
-			</div>
-		</dialog>
-	{/if}
-
-	<div class="main">
-		{@render children()}
+			</dialog>
+		{/if}
 	</div>
 </div>
 
 <style>
-	.shell {
+	.shell-container {
+		container: app-shell / inline-size;
 		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
+		font-family: var(--font-sans);
 	}
 
-	.site-header {
+	.shell {
+		--site-top-offset: 0rem;
+		--site-bottom-offset: calc(var(--mobile-bar-height) + env(safe-area-inset-bottom));
+		min-height: 100vh;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.desktop-header,
+	.desktop-rail {
+		display: none;
+	}
+
+	.main {
+		min-width: 0;
+		padding-bottom: var(--site-bottom-offset);
+	}
+
+	.desktop-header,
+	.mobile-bar {
+		background: var(--rail);
+		backdrop-filter: blur(14px);
+	}
+
+	.desktop-header {
 		position: sticky;
 		top: 0;
 		z-index: 40;
 		min-height: var(--header-height);
-		padding: env(safe-area-inset-top) var(--page-gutter) 0;
+		padding: 0 var(--page-gutter);
 		border-bottom: 1px solid var(--line);
-		background: var(--rail);
-		backdrop-filter: blur(14px);
-		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
-	}
-
-	.main {
-		flex: 1;
-		min-width: 0;
 	}
 
 	.brand {
@@ -139,14 +193,59 @@
 		font-size: 0.73rem;
 		text-decoration: none;
 		text-transform: uppercase;
+		white-space: nowrap;
 	}
 
 	.orb {
-		width: 11px;
-		height: 11px;
+		width: 0.6875rem;
+		height: 0.6875rem;
 		border-radius: 50%;
 		background: var(--cyan);
-		box-shadow: 0 0 20px var(--cyan);
+		box-shadow: 0 0 1.25rem var(--cyan);
+		flex: none;
+	}
+
+	.github-link {
+		padding: 0.45rem 0.7rem;
+		border: 1px solid var(--line);
+		border-radius: 0.5rem;
+		color: var(--muted);
+		font-size: 0.78rem;
+		font-weight: 700;
+		text-decoration: none;
+	}
+
+	.github-link:hover {
+		border-color: var(--cyan);
+		color: var(--cyan);
+	}
+
+	.mobile-bar {
+		position: fixed;
+		inset: auto 0 0;
+		z-index: 40;
+		min-height: calc(var(--mobile-bar-height) + env(safe-area-inset-bottom));
+		padding: 0.35rem var(--page-gutter) max(0.35rem, env(safe-area-inset-bottom));
+		border-top: 1px solid var(--line);
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto auto;
+		align-items: center;
+		gap: 0.45rem;
+	}
+
+	.mobile-brand {
+		min-height: 2.75rem;
+		min-width: 0;
+		overflow: hidden;
+	}
+
+	.mobile-brand > span:last-child {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.mobile-github {
+		white-space: nowrap;
 	}
 
 	.menu-button,
@@ -162,33 +261,35 @@
 		align-items: center;
 		gap: 0.55rem;
 		padding: 0.5rem 0.7rem;
-		border-radius: 8px;
+		border-radius: 0.5rem;
 		font-size: 0.82rem;
 		font-weight: 700;
 	}
 
 	.hamburger {
 		display: grid;
-		gap: 3px;
-		width: 17px;
+		gap: 0.1875rem;
+		width: 1.0625rem;
 	}
 
 	.hamburger i {
 		display: block;
-		height: 2px;
-		border-radius: 2px;
+		height: 0.125rem;
+		border-radius: 0.125rem;
 		background: currentColor;
 	}
 
 	.navigation-dialog {
-		width: min(22rem, calc(100vw - 2rem));
+		position: fixed;
+		inset: auto 0 0;
+		width: min(100%, 36rem);
 		max-width: none;
-		height: 100dvh;
-		max-height: none;
-		margin: 0;
+		max-height: min(80dvh, 42rem);
+		margin: auto auto 0;
 		padding: 0;
-		border: 0;
-		border-right: 1px solid var(--line);
+		border: 1px solid var(--line);
+		border-bottom: 0;
+		border-radius: 1rem 1rem 0 0;
 		background: var(--rail);
 		color: var(--ink);
 	}
@@ -201,8 +302,16 @@
 	.drawer-panel {
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		padding-top: env(safe-area-inset-top);
+		max-height: inherit;
+	}
+
+	.drawer-panel::before {
+		content: '';
+		width: 2.75rem;
+		height: 0.25rem;
+		margin: 0.55rem auto 0;
+		border-radius: 999px;
+		background: var(--line);
 	}
 
 	.drawer-panel > header {
@@ -210,7 +319,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 1rem;
-		padding: 1rem 1.25rem;
+		padding: 0.65rem 1.25rem 0.85rem;
 		border-bottom: 1px solid var(--line);
 	}
 
@@ -242,8 +351,42 @@
 		padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
 	}
 
-	@media (max-width: 480px) {
-		.menu-button > span:last-child {
+	@container app-shell (min-width: calc(26.88em + 52.8ch)) {
+		.shell {
+			--site-top-offset: var(--header-height);
+			--site-bottom-offset: 0rem;
+			grid-template-columns: 16.25rem minmax(0, 1fr);
+			grid-template-rows: var(--header-height) minmax(0, 1fr);
+		}
+
+		.desktop-header {
+			display: flex;
+			grid-column: 1 / -1;
+			grid-row: 1;
+		}
+
+		.desktop-rail {
+			display: block;
+			grid-column: 1;
+			grid-row: 2;
+			position: sticky;
+			top: var(--header-height);
+			height: calc(100vh - var(--header-height));
+			height: calc(100dvh - var(--header-height));
+			padding: 1.75rem 1.35rem;
+			border-right: 1px solid var(--line);
+			background: var(--rail);
+			backdrop-filter: blur(14px);
+			overflow: auto;
+		}
+
+		.main {
+			grid-column: 2;
+			grid-row: 2;
+		}
+
+		.mobile-bar,
+		.navigation-dialog {
 			display: none;
 		}
 	}

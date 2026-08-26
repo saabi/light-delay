@@ -15,6 +15,9 @@
 	--content-max: 1120px;
 	--radius: 12px;
 	--header-height: 3.75rem;
+	--mobile-bar-height: 3.75rem;
+	--site-top-offset: 0rem;
+	--site-bottom-offset: 0rem;
 	--page-gutter: clamp(1rem, 3vw, 1.75rem);
 	--font-sans: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
 	--font-serif: Georgia, 'Times New Roman', serif;
@@ -43,13 +46,13 @@ body {
 	min-height: 100vh;
 	background: radial-gradient(circle at 88% 0, #173047 0, transparent 38rem), var(--bg);
 	color: var(--ink);
-	font: 16px/1.68 var(--font-sans);
+	font: 1rem/1.68 var(--font-sans);
 }
 
 main[id],
 section[id],
 article[id] {
-	scroll-margin-top: calc(var(--header-height) + 1rem);
+	scroll-margin-top: calc(var(--site-top-offset) + 1rem);
 }
 
 main.page {
@@ -93,8 +96,8 @@ textarea {
 	}
 }
 
-@media (max-width: 700px) {
+@media (max-width: 43.75em) {
 	body {
-		font-size: 15px;
+		font-size: 0.9375rem;
 	}
 }

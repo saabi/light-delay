@@ -165,15 +165,15 @@ The exact optional-parameter route syntax should be validated during implementat
 
 | Component | Responsibility | Reused by |
 | --- | --- | --- |
-| `AppShell` | Sticky global header, modal navigation drawer, content frame and responsive regions | All non-player routes |
-| `ProjectNav` | Primary route navigation and script selector inside the drawer | All non-player routes |
+| `AppShell` | Compact desktop header and persistent rail; mobile bottom bar and modal sheet; content frame and responsive offsets | All non-player routes |
+| `ProjectNav` | Primary route navigation and script selector in the desktop rail or mobile sheet | All non-player routes |
 | `DocumentRail` | Sticky title, metadata and generated table of contents | Documents, script, entity detail |
 | `Breadcrumbs` | Hierarchical navigation | Documents, entities, assets |
 | `PageHeader` | Eyebrow, title, lede and metadata pills | All content routes |
 | `LanguageControls` | Audio language, subtitle language and fallback status | Script, animatic, player |
 | `MetadataPills` | Compact metadata presentation | Headers, cards, assets |
 
-`AppShell` should use slots/snippets for drawer navigation and main content instead of branching internally for every route. The immersive player remains outside the global header.
+`AppShell` should use slots/snippets for responsive navigation and main content instead of branching internally for every route. Its shell switches with a calibrated `em/ch` capacity query, while the immersive player remains outside all global chrome.
 
 ### Generic document primitives
 
@@ -396,7 +396,8 @@ Components own their structural styles, while tokens and document typography rem
 
 Preserve:
 
-- a sticky global header and keyboard-accessible modal navigation drawer;
+- a compact sticky desktop header with persistent rail, plus a thumb-reachable mobile bottom bar and keyboard-accessible modal sheet;
+- typography-relative `em/ch` shell thresholds instead of a fixed pixel breakpoint;
 - responsive single-column layouts without horizontal page overflow;
 - an immersive landscape player and a portrait flow ordered frame, shot details, then persistent controls;
 - print-friendly screenplay/document views;
