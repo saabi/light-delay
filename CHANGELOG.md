@@ -7,7 +7,7 @@
 - Navegación, selector de scripts, comparación editorial, índices de entidades, páginas de assets y 100 frames del animatic ahora resuelven enlaces y medios mediante la base de SvelteKit.
 - Nuevo workflow `.github/workflows/pages.yml`: valida datos, ejecuta `svelte-check`, compila, sube `build/` y despliega a Pages en pushes a `master`; los pull requests sólo validan el build.
 - README actualizado con la URL esperada `https://saabi.github.io/light-delay/` y el paso necesario para seleccionar GitHub Actions como fuente de Pages.
-- Pendiente antes de integrar: refrescar `package-lock.json` con `npm install` y verificar el build real de Actions.
+- `package-lock.json` sincronizado con `adapter-static`; PR #1 validado con `validate:data`, `svelte-check` (0 errores / 0 advertencias) y build estático correcto con `BASE_PATH=/light-delay`.
 
 ## 2026-08-26 — Referencias de escala Proxima / Celestial Ardor
 
