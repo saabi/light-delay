@@ -5,14 +5,14 @@
 ### Cortometraje completo
 
 - Duración objetivo actual: 30:00.
-- Base: guion canónico de 17 escenas y animatic de 100 tomas.
+- Base: guion canónico de 17 escenas y animatic de 112 tomas que reutilizan 100 frames; 33 takes requieren stills definitivos.
 - El objetivo de duración debe validarse con lectura y montaje reales.
 
 ### Festival Cut
 
 - Duración propuesta: 4:30–5:00.
 - Núcleo narrativo previsto: sabotaje de Zao → mensaje tardío → revelación sobre Harlan → Rao evita la transmisión → contacto Velari.
-- Esta versión todavía no tiene guion ni animatic canónicos y no debe confundirse con un simple recorte automático.
+- Existe un borrador estructurado de siete escenas con causalidad revisada, pero todavía no tiene shot list, takes ni imágenes canónicas. No debe confundirse con un simple recorte automático.
 
 ## Higgsfield
 
@@ -50,4 +50,3 @@ Estas cifras son orientativas y deben recalcularse con factura vigente, consumo 
 5. Generar la toma final en la plataforma requerida por el destino.
 6. Registrar procedencia y parámetros.
 7. Montar, revisar continuidad y decidir regeneraciones.
-

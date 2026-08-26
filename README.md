@@ -38,7 +38,9 @@ npm install
 npm run dev
 ```
 
-Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run extract:legacy`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`.
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand` y `npm run validate:data`.
+
+> `npm run extract:legacy` es una herramienta histórica anterior a la arquitectura multi-script. No debe ejecutarse sobre el árbol canónico actual: todavía sobrescribe varios archivos de `data/` con el formato previo. Su aislamiento o retiro está registrado en [`TODO.md`](TODO.md).
 
 ## Sitio público en GitHub Pages
 
@@ -72,10 +74,10 @@ Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones d
 
 1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (español como fuente de verdad; inglés como secundario).
 2. `docs/CANON_DECISIONS.md` fija las decisiones de canon vigentes.
-3. `legacy-site/guion-30-minutos.html` es el guion corto canónico actual.
-4. `legacy-site/notas-tecnicas-continuidad.html` fija las reglas físicas y de continuidad.
-5. `legacy-site/animatic-textual.html` fija la descomposición actual en tomas.
-6. `legacy-site/reporte-comprensivo.html` y la biblia de producción aportan contexto ampliado.
+3. `data/scripts/light-delay-main-short.json` es la fuente estructurada vigente del guion corto y del animatic; diálogo, cues, shots y takes se proyectan desde ese grafo.
+4. `docs/technical/` y los documentos prose reconciliados en `data/documents.json` fijan las reglas físicas y de continuidad complementarias.
+5. `legacy-site/guion-30-minutos.html`, `legacy-site/animatic-textual.html` y las demás páginas HTML se conservan como referencia de regresión y procedencia, no como una segunda autoridad editable.
+6. Los documentos históricos de largometraje sólo aportan procedencia; `docs/REVISION_LARGOMETRAJE_RECUPERADO.md` determina qué material fue aceptado, reescrito o rechazado.
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
 

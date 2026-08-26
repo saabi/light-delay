@@ -17,7 +17,7 @@ Fecha de corte: 2026-08-26.
 - **Secuencia Zao/Harlan antes del cruce:** escenas 5–8 reescritas con cámara y diálogo coherentes: aviso parcial, jammer visible, corte físico de COM A/B, puntería del láser exterior al corredor futuro, rutas distintas en microgravedad, asesinato/limpieza, hallazgo de Sorell y coartada de Harlan. Sorell queda establecida como testigo con credencial comprometida, no como sospechosa.
 - **Animatic principal revisado:** 17 escenas, 112 tomas y 30:00. Las 33 tomas afectadas en escenas 5–8 reutilizan 21 frames heredados; 12 tomas son nuevas. No se regeneraron imágenes.
 - **Arquitectura mínima de Celestial Ardor:** vestíbulo axial encuadrable desde el puente, acceso de servicio oculto, cilindros central/servicio, distribuidor COM A/B y control físico dedicado del láser incorporados a canon, datos y notas técnicas.
-- **Deuda diferida:** `TODO.md` concentra stale docs/arte, cálculo del enlace láser y el futuro sistema general de notas editoriales; el estado estructurado de imágenes ya está implementado.
+- **Deuda diferida:** `TODO.md` concentra el registro vigente de deuda narrativa, visual y técnica: extractor legacy inseguro, autoridad/validación de esquema, Node/CI, stale docs/arte, cálculo del enlace láser, traducción narrativa y futuro sistema general de notas editoriales. El estado estructurado de imágenes ya está implementado.
 - **Comparación entre guiones (V1):** taxonomía versionada de 11 dimensiones de canon y 11 eventos, perfiles declarativos en los cuatro scripts y ruta `/compare/[scriptId]?against=<ScriptId>` para canon, eventos, reparto, variantes y funciones. La herramienta no infiere herencia de diálogo ni fusiones/divisiones.
 - **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
 - **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Rao, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
@@ -48,7 +48,7 @@ Fecha de corte: 2026-08-26.
 2. **Corrección de rumbo — Opción B.** Falta desarrollar y aplicar de forma consistente la solución de navegación/propulsión elegida.
 3. **Terminología del sistema.** Unificar `IA`, `mediación`, `núcleo diplomático`, `núcleo cuántico` y `envoltura` según función dramática y técnica.
 4. **Duración real.** Los 30:00 son un objetivo de montaje. Debe validarse mediante lectura cronometrada y luego con animación/video.
-5. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 secuencias y causalidad de la transmisión sincronizada; faltan shot list, takes e imágenes canónicas de esa versión.
+5. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 escenas y causalidad de la transmisión sincronizada; faltan shot list, takes e imágenes canónicas de esa versión. El array `sequences` está vacío.
 6. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta afinado editorial de ritmo, posibles stills exclusivos de título y audio.
 7. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 8. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
@@ -58,16 +58,21 @@ Fecha de corte: 2026-08-26.
 
 - GitHub Pages: build estático con `adapter-static`; `BASE_PATH` permite desarrollo local en `/` y publicación estándar en `/light-delay/`; rutas y medios públicos pasan por helpers de base path. La concurrencia del workflow se separa por referencia.
 - Inventario: `docs/MIGRATION_INVENTORY.md`. Sync: `docs/SCRIPT_ANIMATIC_SYNC.md`. Rutas: `docs/ASSET_PATH_MAP.md`.
-- Bootstrap SvelteKit validado. Node pin en `.nvmrc` (`25`).
-- Autoridad de esquema: tipos TypeScript de `JSON_FORMAT.md` + addendum i18n (sin Zod).
+- Bootstrap SvelteKit validado. `.nvmrc` aún fija Node 25, ya fuera de soporte; migrar a una línea LTS forma parte de la deuda prioritaria.
+- Autoridad de esquema documentada actualmente: tipos TypeScript de `JSON_FORMAT.md` + addendum i18n (sin Zod). Falta convertirla en autoridad runtime única y eliminar la deriva con el validador JavaScript.
 - Política de idioma: español = fuente de verdad. Detalle en `AGENTS.md`.
 - Política narrativa: evitar exposición forzada; revelar por pensamiento/decisión del personaje (véase `AGENTS.md`).
 - Haz de Zao: `docs/SIGNAL_BEAM_REQUIREMENTS.md` conserva sólo una aproximación visual; el presupuesto óptico exacto permanece en `TODO.md`.
 - Assets: copia en `static/assets/` (characters 12, locations 8+proportional, props 5, vehicles 3+proportional, art-bible 2+scale-references; animatic con 100 frames legacy, manifest y 1 placeholder técnico). `legacy-site/assets/` intacto como referencia.
 - Documentos prose: cinco páginas legacy extraídas y traducidas en `data/documents.json`; validación exige paridad de bloques ES/EN y cobertura del ledger de migración.
+- Estado editorial: las cinco traducciones prose permanecen en `draft`; el canon estructurado es todavía un `stub`; los cuatro scripts registrados continúan en `draft`.
+- Calidad: `validate:data`, ESLint y 12 pruebas E2E pasan localmente; `npm run lint` falla por formato en 16 archivos. El workflow de Pages todavía no ejecuta lint ni E2E.
+- Validación pendiente: los 130 assets registrados existen y el grafo actual no mostró referencias rotas en la auditoría puntual, pero el validador de CI no comprueba todavía paths físicos ni toda la integridad padre/hijo.
 
 ## Próxima fase técnica
 
+- Retirar o aislar `npm run extract:legacy` antes de volver a presentarlo como comando seguro y resolver la autoridad ejecutable del esquema.
+- Migrar CI a Node LTS, normalizar formato y añadir lint + Playwright al gate de Pages.
 - Separar en el futuro el motor genérico de autoría/consulta y el paquete de contenido de Light Delay antes de ofrecer una plataforma reutilizable con licencia propia.
 - Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial y limpiar duplicados binarios tras revisar paridad.
 - Revisar los tres candidatos de retropropagación sin sincronizarlos automáticamente entre scripts.

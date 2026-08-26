@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-26 — Auditoría y consolidación de deuda
+
+- Ampliado `TODO.md` con deuda antes no registrada: extractor legacy destructivo, deriva entre contrato y JSON, validación incompleta, Node 25 fuera de soporte, lint/E2E ausentes del gate, madurez editorial, medios, regresiones y duplicados binarios.
+- Corregida la autoridad documental: `data/scripts/light-delay-main-short.json` es la fuente estructurada vigente; los HTML legacy quedan como procedencia y regresión, no como autoridad paralela.
+- Actualizados conteos y estado del Festival Cut en el plan de producción y `PROJECT_STATUS.md`; documentados los estados `draft` de scripts/traducciones y las limitaciones actuales de CI.
+- Marcados `SVELTEKIT_SETUP.md` y `MIGRATION_PLAN.md` como referencias históricas, y añadidas advertencias explícitas a las dos fuentes antiguas de largometraje para impedir que sus mecánicas FTL vuelvan al canon.
+- Actualizado el inventario de procedencia a 130 imágenes y cuantificado el faltante de metadatos; sincronizado el brief del tráiler con el láser exterior estándar de la Ardor.
+
 ## 2026-08-26 — Sitio bilingüe, landing pública y migración prose completa
 
 - Incorporado Paraglide JS con inglés por defecto y rutas españolas bajo `/es/`; navegación, lector de guion, animatic, detalle técnico, comparador, documentos, arte y entidades responden al locale sin cambiar el español como autoridad editorial.
