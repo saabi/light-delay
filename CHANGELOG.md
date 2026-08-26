@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-26 — Preparación para despliegue estático en GitHub Pages
+
+- Añadido `@sveltejs/adapter-static`, prerender global y fallback `404.html` para generar un sitio completamente estático.
+- La configuración acepta `BASE_PATH`; el workflow de Pages compila con `/light-delay` mientras el desarrollo local permanece en `/`.
+- Navegación, selector de scripts, comparación editorial, índices de entidades, páginas de assets y 100 frames del animatic ahora resuelven enlaces y medios mediante la base de SvelteKit.
+- Nuevo workflow `.github/workflows/pages.yml`: valida datos, ejecuta `svelte-check`, compila, sube `build/` y despliega a Pages en pushes a `master`; los pull requests sólo validan el build.
+- README actualizado con la URL esperada `https://saabi.github.io/light-delay/` y el paso necesario para seleccionar GitHub Actions como fuente de Pages.
+- Pendiente antes de integrar: refrescar `package-lock.json` con `npm install` y verificar el build real de Actions.
+
 ## 2026-08-26 — Referencias de escala Proxima / Celestial Ardor
 
 - Reubicadas hojas ortográficas: Proxima en `locations/proxima-station/proportional-reference.{svg,png}`, Ardor en `vehicles/celestial-ardor/proportional-reference.{svg,png}`.
