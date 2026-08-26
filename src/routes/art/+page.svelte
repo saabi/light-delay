@@ -7,6 +7,7 @@
 		listEntities,
 		type EntityKind
 	} from '$lib/data/repositories/lookups';
+	import { withBase } from '$lib/utils/paths';
 
 	const kinds: EntityKind[] = ['characters', 'locations', 'objects', 'vehicles'];
 
@@ -35,7 +36,7 @@
 		<section class="section">
 			<div class="section-head">
 				<h2>{section.label}</h2>
-				<a href={`/entities/${section.kind}`}>Ver índice →</a>
+				<a href={withBase(`/entities/${section.kind}`)}>Ver índice →</a>
 			</div>
 			<EntityGallery items={section.items} />
 		</section>
