@@ -4,6 +4,7 @@ Fecha de corte: 2026-08-26.
 
 ## Completado
 
+- **Preparación para GitHub Pages:** rama de despliegue con `@sveltejs/adapter-static`, prerender global, `404.html` de fallback, `BASE_PATH` para `/light-delay`, navegación/media compatibles con subruta y workflow de GitHub Actions que valida datos, ejecuta `svelte-check`, compila y publica `build/` en pushes a `master`.
 - **Comparación entre guiones (V1):** taxonomía versionada de 10 dimensiones de canon y 11 eventos, perfiles declarativos en los cuatro scripts y ruta `/compare/[scriptId]?against=<ScriptId>` para canon, eventos, reparto, variantes y funciones. La herramienta no infiere herencia de diálogo ni fusiones/divisiones.
 - **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
 - **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Rao, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
@@ -23,7 +24,7 @@ Fecha de corte: 2026-08-26.
 - 100 imágenes 1536 × 864 asociadas a las tomas.
 - Modo Película con subtítulos, controles, timeline y panel de detalles.
 - Edición de duraciones con persistencia local y recálculo del total.
-- Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright, `adapter-auto`).
+- Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright).
 - Fase 0 de migración: inventario HTML/assets; 17 escenas / 100 tomas / 100 frames verificados; mapa `static/assets`; stub de sync guion↔animatic.
 - Fase 1 (+ extracción inicial): tipos TypeScript, validadores a mano, loaders/repositorios/selectores, JSON en `data/` (17 escenas / 100 tomas / 98 diálogos ES), `npm run extract:legacy` y `npm run validate:data`.
 - Fases 2–6 (aplicación): shell + documentos; copia de assets a `static/assets/`; rutas de arte/entidades/assets; lector de guion; editor de animatic; player a pantalla completa. Medios solo vía `/assets/...`.
@@ -39,9 +40,11 @@ Fecha de corte: 2026-08-26.
 7. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 8. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
 9. **Retropropagación al corto.** Vega como pista falsa acotada, mayor textura de especialistas y una preparación más legible del relé son candidatos; requieren decisión narrativa independiente antes de modificar versiones cortas.
+10. **Publicación del repositorio / Pages.** Antes de hacer público el repositorio, revisar `RIGHTS.md`, procedencia de assets y política de licencia. Para activar el sitio, seleccionar GitHub Pages → Source: GitHub Actions. El `package-lock.json` debe refrescarse con `npm install` tras incorporar `adapter-static`.
 
 ## Notas técnicas recientes
 
+- GitHub Pages: build estático con `adapter-static`; `BASE_PATH` permite desarrollo local en `/` y publicación estándar en `/light-delay/`; rutas y medios públicos pasan por helpers de base path.
 - Inventario: `docs/MIGRATION_INVENTORY.md`. Sync: `docs/SCRIPT_ANIMATIC_SYNC.md`. Rutas: `docs/ASSET_PATH_MAP.md`.
 - Bootstrap SvelteKit validado. Node pin en `.nvmrc` (`25`).
 - Autoridad de esquema: tipos TypeScript de `JSON_FORMAT.md` + addendum i18n (sin Zod).
@@ -52,6 +55,7 @@ Fecha de corte: 2026-08-26.
 
 ## Próxima fase técnica
 
+- Validar el PR de GitHub Pages mediante Actions y corregir cualquier ruta dinámica no descubierta por el prerender; después activar Pages desde GitHub Actions cuando se decida publicar el repositorio.
 - Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial; completar documentos y beats, y limpiar duplicados binarios tras revisar paridad.
 - Revisar los tres candidatos de retropropagación sin sincronizarlos automáticamente entre scripts.
 - Refinar títulos de escena animatic vs encabezados de guion (véase `SCRIPT_ANIMATIC_SYNC.md`).
