@@ -22,7 +22,7 @@
 	{/if}
 	{#if meta?.length}
 		<ul class="meta">
-			{#each meta as item (item)}
+			{#each meta as item, index (`${index}:${item}`)}
 				<li>{item}</li>
 			{/each}
 		</ul>

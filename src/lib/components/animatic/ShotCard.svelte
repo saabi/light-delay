@@ -19,7 +19,7 @@
 	} = $props();
 </script>
 
-<article class="shot-card" id={shot.id}>
+<article class="shot-card" id={shot.id} tabindex="-1">
 	<a class="media" href={playerHref}>
 		<AssetThumbnail src={imageSrc} alt={`Toma ${shot.number}`} />
 	</a>

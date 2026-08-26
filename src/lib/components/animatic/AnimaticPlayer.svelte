@@ -360,6 +360,9 @@
 				aria-label="Progreso de la película"
 			/>
 			<span class="movie-time">{formatClock(absoluteMs)} / {formatClock(totalMs)}</span>
+			<button type="button" class="btn" onclick={toggleFullscreen} aria-label="Pantalla completa">
+				Pantalla completa
+			</button>
 			<a class="btn" href={editorHref}>Editar tiempos</a>
 		</div>
 	</div>

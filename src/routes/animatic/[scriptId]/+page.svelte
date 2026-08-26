@@ -6,6 +6,7 @@
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import type { Scene, Shot } from '$lib/types/script';
 	import { page } from '$app/state';
+	import { onMount } from 'svelte';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const script = $derived(getScript(scriptId));
@@ -43,6 +44,17 @@
 			list.push(`…y ${extra} avisos más.`);
 		}
 		return list;
+	});
+
+	onMount(() => {
+		const shotId = page.url.searchParams.get('shot');
+		if (!shotId) return;
+		requestAnimationFrame(() => {
+			const card = document.getElementById(shotId);
+			if (!card) return;
+			card.scrollIntoView({ block: 'center' });
+			card.focus({ preventScroll: true });
+		});
 	});
 </script>
 
