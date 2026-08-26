@@ -12,6 +12,7 @@
 	} from '$lib/data/repositories/index';
 	import { compareScripts } from '$lib/data/selectors/comparison';
 	import { getFoundationalConflictWarnings } from '$lib/data/validation/validateComparison';
+	import { withBase } from '$lib/utils/paths';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import { onMount } from 'svelte';
 
@@ -81,15 +82,16 @@
 
 	function changeAgainst(event: Event) {
 		const next = (event.currentTarget as HTMLSelectElement).value;
-		void goto(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(next)}`);
+		void goto(withBase(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(next)}`));
 	}
 
 	onMount(() => {
 		interactive = true;
 		if (requestedAgainst === againstId) return;
-		void goto(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(againstId)}`, {
-			replaceState: true
-		});
+		void goto(
+			withBase(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(againstId)}`),
+			{ replaceState: true }
+		);
 	});
 </script>
 
@@ -176,13 +178,13 @@
 							<th>{row.definition.label}</th>
 							<td
 								>{row.primary?.status ?? 'Sin especificar'}{#if row.primary?.sceneIds?.[0]}<a
-										href={`/script/${encodeScriptId(primaryId)}#${row.primary.sceneIds[0]}`}
+										href={withBase(`/script/${encodeScriptId(primaryId)}#${row.primary.sceneIds[0]}`)}
 										>Ver escena</a
 									>{/if}</td
 							>
 							<td
 								>{row.against?.status ?? 'Sin especificar'}{#if row.against?.sceneIds?.[0]}<a
-										href={`/script/${encodeScriptId(againstId)}#${row.against.sceneIds[0]}`}
+										href={withBase(`/script/${encodeScriptId(againstId)}#${row.against.sceneIds[0]}`)}
 										>Ver escena</a
 									>{/if}</td
 							>
