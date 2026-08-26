@@ -30,6 +30,36 @@
 			"id": "function:override_antagonist",
 			"label": "Override antagonista",
 			"description": "Titular del override hostil y antagonista operativo."
+		},
+		{
+			"id": "function:medical",
+			"label": "Medicina y peritaje",
+			"description": "Atención clínica y constatación forense."
+		},
+		{
+			"id": "function:systems",
+			"label": "Sistemas de a bordo",
+			"description": "Diagnóstico y mantenimiento general de sistemas."
+		},
+		{
+			"id": "function:physics-corroboration",
+			"label": "Corroboración física",
+			"description": "Verificación independiente de anomalías físicas y energéticas."
+		},
+		{
+			"id": "function:linguistic-continuity",
+			"label": "Continuidad lingüística",
+			"description": "Continuación controlada del análisis de lenguaje."
+		},
+		{
+			"id": "function:security",
+			"label": "Seguridad",
+			"description": "Custodia y respuesta física bajo autoridad de mando."
+		},
+		{
+			"id": "function:manual-controls",
+			"label": "Controles manuales",
+			"description": "Acceso físico a controles no disponibles por red."
 		}
 	]
 }

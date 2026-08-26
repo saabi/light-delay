@@ -2,6 +2,8 @@ import type { LocalizedResolution, LocalizedValue } from '$lib/types/i18n';
 import type { LanguageTag } from '$lib/types/common';
 import type { DialogueVariant, ScriptFile, Shot, Take } from '$lib/types/script';
 
+export { compareScripts } from './comparison.ts';
+
 function baseLanguage(tag: LanguageTag): LanguageTag {
 	return tag.split('-')[0] ?? tag;
 }

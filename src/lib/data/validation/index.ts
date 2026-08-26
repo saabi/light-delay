@@ -2,6 +2,12 @@ export { validateProject } from './validateProject.ts';
 export { validateScript } from './validateScript.ts';
 export { validateAssets } from './validateAssets.ts';
 export {
+	validateComparisonTaxonomy,
+	validateScriptComparison,
+	validateEntityVariants,
+	getFoundationalConflictWarnings
+} from './validateComparison.ts';
+export {
 	validateCharacters,
 	validateLocations,
 	validateObjects,
@@ -24,6 +30,7 @@ import type {
 	VoiceProfilesFile
 } from '$lib/types/entities';
 import type { DocumentsFile } from '$lib/types/document';
+import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import { validateProject } from './validateProject.ts';
 import { validateScript } from './validateScript.ts';
 import { validateAssets } from './validateAssets.ts';
@@ -36,6 +43,11 @@ import {
 	validateVoiceProfiles,
 	validateDocuments
 } from './validateEntities.ts';
+import {
+	validateComparisonTaxonomy,
+	validateEntityVariants,
+	validateScriptComparison
+} from './validateComparison.ts';
 
 export interface CanonicalDataBundle {
 	project: ProjectFile;
@@ -52,6 +64,7 @@ export interface CanonicalDataBundle {
 	documents?: DocumentsFile;
 	narrativeFunctions?: NarrativeFunctionsFile;
 	entityVariants?: EntityVariantsFile;
+	comparisonTaxonomy?: ComparisonTaxonomyFile;
 }
 
 export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
@@ -71,6 +84,35 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 	];
 
 	if (bundle.documents) results.push(validateDocuments(bundle.documents));
+	if (bundle.entityVariants) {
+		results.push(
+			validateEntityVariants({
+				file: bundle.entityVariants,
+				scripts,
+				entityIds: {
+					character: new Set(bundle.characters.characters.map((item) => item.id)),
+					location: new Set(bundle.locations.locations.map((item) => item.id)),
+					object: new Set(bundle.objects.objects.map((item) => item.id)),
+					vehicle: new Set(bundle.vehicles.vehicles.map((item) => item.id)),
+					faction: new Set(bundle.factions.factions.map((item) => item.id))
+				},
+				assetIds: new Set(bundle.assets.assets.map((item) => item.id))
+			})
+		);
+	}
+	if (bundle.comparisonTaxonomy) {
+		results.push(validateComparisonTaxonomy(bundle.comparisonTaxonomy));
+		for (const script of scripts) {
+			results.push(
+				validateScriptComparison({
+					script,
+					taxonomy: bundle.comparisonTaxonomy,
+					scripts,
+					documents: bundle.documents
+				})
+			);
+		}
+	}
 
 	for (const script of scripts) {
 		const isCanonical = script.script.id === bundle.project.project.canonicalScriptId;

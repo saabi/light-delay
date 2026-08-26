@@ -2,6 +2,7 @@
 	import { page } from '$app/state';
 	import { activeScriptIdFromParam } from '$lib/state/active-script.svelte';
 	import { scriptSectionHref } from '$lib/utils/scriptRouting';
+	import { encodeScriptId } from '$lib/utils/scriptId';
 	import ScriptSwitcher from './ScriptSwitcher.svelte';
 
 	const activeScriptId = $derived(activeScriptIdFromParam(page.params.scriptId));
@@ -13,6 +14,11 @@
 			href: scriptSectionHref('animatic', activeScriptId),
 			label: 'Animatic',
 			match: '/animatic'
+		},
+		{
+			href: `/compare/${encodeScriptId(activeScriptId)}`,
+			label: 'Comparar',
+			match: '/compare'
 		},
 		{ href: '/art', label: 'Arte' },
 		{ href: '/entities/characters', label: 'Entidades', match: '/entities' },

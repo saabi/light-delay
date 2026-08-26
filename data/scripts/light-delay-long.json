@@ -1,0 +1,2304 @@
+{
+	"schemaVersion": "1.0.0",
+	"script": {
+		"id": "script:light-delay-long",
+		"projectId": "project:light-delay",
+		"continuityId": "continuity:light-delay-primary",
+		"title": "Light Delay — Tratamiento de largometraje",
+		"version": "0.1.0-draft",
+		"status": "draft",
+		"kind": "long_version",
+		"targetDurationMs": 6000000,
+		"lineage": {
+			"sourceScriptId": "script:light-delay-main-short",
+			"relationship": "rewrite",
+			"sourceVersion": "1.0.0-extract",
+			"notes": "Recuperación revisada mediante docs/REVISION_LARGOMETRAJE_RECUPERADO.md."
+		},
+		"declaredEntityRefs": [
+			{
+				"kind": "character",
+				"id": "character:zao"
+			},
+			{
+				"kind": "character",
+				"id": "character:voss"
+			},
+			{
+				"kind": "character",
+				"id": "character:harlan"
+			},
+			{
+				"kind": "character",
+				"id": "character:sorell"
+			},
+			{
+				"kind": "character",
+				"id": "character:rao"
+			},
+			{
+				"kind": "character",
+				"id": "character:cael"
+			},
+			{
+				"kind": "character",
+				"id": "character:keene"
+			},
+			{
+				"kind": "character",
+				"id": "character:vega"
+			},
+			{
+				"kind": "character",
+				"id": "character:wei"
+			},
+			{
+				"kind": "character",
+				"id": "character:hassan"
+			},
+			{
+				"kind": "character",
+				"id": "character:carvalho"
+			},
+			{
+				"kind": "character",
+				"id": "character:okoye"
+			},
+			{
+				"kind": "character",
+				"id": "character:volkov"
+			},
+			{
+				"kind": "character",
+				"id": "character:tanaka"
+			}
+		],
+		"entityVariantSelections": {
+			"character": {
+				"character:cael": "variant:cael-long-pilot"
+			}
+		},
+		"characterFunctionAssignments": [
+			{
+				"functionId": "function:command",
+				"characterId": "character:voss",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:piloting",
+				"characterId": "character:cael",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:communications",
+				"characterId": "character:wei",
+				"relationship": "split",
+				"sourceCharacterIds": [
+					"character:cael"
+				]
+			},
+			{
+				"functionId": "function:investigation_payload",
+				"characterId": "character:rao",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:diplomatic_greeting_authorship",
+				"characterId": "character:sorell",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:override_antagonist",
+				"characterId": "character:harlan",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:medical",
+				"characterId": "character:keene",
+				"relationship": "new"
+			},
+			{
+				"functionId": "function:systems",
+				"characterId": "character:vega",
+				"relationship": "new"
+			},
+			{
+				"functionId": "function:physics-corroboration",
+				"characterId": "character:hassan",
+				"relationship": "new"
+			},
+			{
+				"functionId": "function:linguistic-continuity",
+				"characterId": "character:carvalho",
+				"relationship": "new"
+			},
+			{
+				"functionId": "function:security",
+				"characterId": "character:okoye",
+				"relationship": "new"
+			},
+			{
+				"functionId": "function:manual-controls",
+				"characterId": "character:volkov",
+				"relationship": "new"
+			}
+		],
+		"comparisonProfile": {
+			"version": "1.0.0",
+			"canonClaims": [
+				{
+					"dimensionId": "canon:proxima-origin",
+					"valueId": "scientific-before-contact",
+					"statement": "Proxima fue una estación científica joviana anterior al contacto.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ardor-deployment",
+					"valueId": "earth-built-prepositioned",
+					"statement": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-geometry",
+					"valueId": "distributed-nodes",
+					"statement": "La boca es un campo distribuido de nodos, no un aro.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-location",
+					"valueId": "sol-jupiter-l2",
+					"statement": "La boca local está en una órbita halo controlada cerca de L2.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:trajectory",
+					"valueId": "conventional-to-wormhole",
+					"statement": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:velari-objects",
+					"valueId": "station-and-emissary",
+					"statement": "La estación Velari y la nave emisaria son objetos distintos.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:evidence-chain",
+					"valueId": "relay-optical-readonly",
+					"statement": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:sorell-status",
+					"valueId": "false-log-not-conclusive",
+					"statement": "Sorell no queda culpabilizada por un único registro falsificable.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:rao-containment",
+					"valueId": "bounded-quarantine",
+					"statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ending",
+					"valueId": "limited-acknowledgement",
+					"statement": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
+					"status": "established"
+				}
+			],
+			"eventCoverage": [
+				{
+					"eventId": "event:embarkation",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-01",
+						"long:scene-02"
+					]
+				},
+				{
+					"eventId": "event:anomaly-discovery",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-04",
+						"long:scene-05",
+						"long:scene-06",
+						"long:scene-07"
+					]
+				},
+				{
+					"eventId": "event:zao-warning-death",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-08",
+						"long:scene-09"
+					]
+				},
+				{
+					"eventId": "event:tunnel-crossing",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-10"
+					]
+				},
+				{
+					"eventId": "event:investigation",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-11",
+						"long:scene-12",
+						"long:scene-13",
+						"long:scene-14",
+						"long:scene-15",
+						"long:scene-16",
+						"long:scene-17"
+					]
+				},
+				{
+					"eventId": "event:message-reception",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-18",
+						"long:scene-19"
+					]
+				},
+				{
+					"eventId": "event:harlan-exposed",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-20",
+						"long:scene-21"
+					]
+				},
+				{
+					"eventId": "event:quarantine",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-22",
+						"long:scene-23",
+						"long:scene-24"
+					]
+				},
+				{
+					"eventId": "event:clean-greeting",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-25"
+					]
+				},
+				{
+					"eventId": "event:first-contact",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-26",
+						"long:scene-27"
+					]
+				},
+				{
+					"eventId": "event:aftermath",
+					"status": "present",
+					"sceneIds": [
+						"long:scene-28"
+					]
+				}
+			]
+		},
+		"actIds": [
+			"long:act-1",
+			"long:act-2",
+			"long:act-3",
+			"long:act-4"
+		]
+	},
+	"acts": [
+		{
+			"id": "long:act-1",
+			"number": 1,
+			"title": "El cruce y el cadáver",
+			"dramaticPurpose": "Presentar el conjunto, descubrir el sabotaje y aislar la misión.",
+			"sceneIds": [
+				"long:scene-01",
+				"long:scene-02",
+				"long:scene-03",
+				"long:scene-04",
+				"long:scene-05",
+				"long:scene-06",
+				"long:scene-07",
+				"long:scene-08",
+				"long:scene-09",
+				"long:scene-10"
+			]
+		},
+		{
+			"id": "long:act-2",
+			"number": 2,
+			"title": "Sospecha en el vacío",
+			"dramaticPurpose": "Fracturar la confianza y preparar evidencia y contención.",
+			"sceneIds": [
+				"long:scene-11",
+				"long:scene-12",
+				"long:scene-13",
+				"long:scene-14",
+				"long:scene-15",
+				"long:scene-16",
+				"long:scene-17",
+				"long:scene-18"
+			]
+		},
+		{
+			"id": "long:act-3",
+			"number": 3,
+			"title": "Señal y supervivencia",
+			"dramaticPurpose": "Autenticar la advertencia y contener el ataque humano.",
+			"sceneIds": [
+				"long:scene-19",
+				"long:scene-20",
+				"long:scene-21",
+				"long:scene-22",
+				"long:scene-23",
+				"long:scene-24",
+				"long:scene-25"
+			]
+		},
+		{
+			"id": "long:act-4",
+			"number": 4,
+			"title": "Epílogo: contacto limitado",
+			"dramaticPurpose": "Abrir el horizonte Velari y preservar el costo humano.",
+			"sceneIds": [
+				"long:scene-26",
+				"long:scene-27",
+				"long:scene-28"
+			]
+		}
+	],
+	"sequences": [],
+	"scenes": [
+		{
+			"id": "long:scene-01",
+			"actId": "long:act-1",
+			"number": 1,
+			"order": 1,
+			"title": "Preparativos en Proxima",
+			"locationId": "location:proxima-dock",
+			"setting": {
+				"storyTime": "T-2H"
+			},
+			"summary": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
+			"dramaticPurpose": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
+			"characterIds": [
+				"character:zao",
+				"character:voss",
+				"character:harlan",
+				"character:rao",
+				"character:sorell",
+				"character:cael",
+				"character:wei",
+				"character:keene",
+				"character:vega",
+				"character:hassan",
+				"character:carvalho",
+				"character:okoye",
+				"character:volkov",
+				"character:tanaka"
+			],
+			"beatIds": [
+				"long:beat-01"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-01"
+				}
+			]
+		},
+		{
+			"id": "long:scene-02",
+			"actId": "long:act-1",
+			"number": 2,
+			"order": 2,
+			"title": "Salida y reparto de guardias",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "T+0H"
+			},
+			"summary": "Voss fija autoridad, Cael prepara navegación, Wei toma comunicaciones y Harlan muestra una fricción todavía plausible ante la misión.",
+			"dramaticPurpose": "Voss fija autoridad, Cael prepara navegación, Wei toma comunicaciones y Harlan muestra una fricción todavía plausible ante la misión.",
+			"characterIds": [
+				"character:voss",
+				"character:harlan",
+				"character:cael",
+				"character:wei"
+			],
+			"beatIds": [
+				"long:beat-02"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-02"
+				}
+			]
+		},
+		{
+			"id": "long:scene-03",
+			"actId": "long:act-1",
+			"number": 3,
+			"order": 3,
+			"title": "Vega como peón involuntario",
+			"locationId": "location:celestial-ardor-engineering",
+			"setting": {
+				"storyTime": "T+12H"
+			},
+			"summary": "Harlan induce a Ansel Vega a silenciar una alerta de diagnóstico aparentemente redundante; la acción abre una ventana sin convertir a Vega en cómplice.",
+			"dramaticPurpose": "Harlan induce a Ansel Vega a silenciar una alerta de diagnóstico aparentemente redundante; la acción abre una ventana sin convertir a Vega en cómplice.",
+			"characterIds": [
+				"character:harlan",
+				"character:vega",
+				"character:zao"
+			],
+			"beatIds": [
+				"long:beat-03"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:scene-04",
+			"actId": "long:act-1",
+			"number": 4,
+			"order": 4,
+			"title": "Primeros picos",
+			"locationId": "location:celestial-ardor-engineering",
+			"setting": {
+				"storyTime": "T+29H"
+			},
+			"summary": "Zao detecta consumos repetidos que no corresponden al perfil del núcleo y comienza una investigación discreta.",
+			"dramaticPurpose": "Zao detecta consumos repetidos que no corresponden al perfil del núcleo y comienza una investigación discreta.",
+			"characterIds": [
+				"character:zao",
+				"character:volkov"
+			],
+			"beatIds": [
+				"long:beat-04"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-03"
+				}
+			]
+		},
+		{
+			"id": "long:scene-05",
+			"actId": "long:act-1",
+			"number": 5,
+			"order": 5,
+			"title": "La envoltura dormida",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "T+40H"
+			},
+			"summary": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"dramaticPurpose": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"characterIds": [
+				"character:zao",
+				"character:rao",
+				"character:hassan"
+			],
+			"beatIds": [
+				"long:beat-05"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-04"
+				}
+			]
+		},
+		{
+			"id": "long:scene-06",
+			"actId": "long:act-1",
+			"number": 6,
+			"order": 6,
+			"title": "Registro falsificable",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "T+48H"
+			},
+			"summary": "El registro superficial apunta a Sorell, pero Zao lo marca como no verificado y preserva una copia para contrastarla con el relé.",
+			"dramaticPurpose": "El registro superficial apunta a Sorell, pero Zao lo marca como no verificado y preserva una copia para contrastarla con el relé.",
+			"characterIds": [
+				"character:zao",
+				"character:rao",
+				"character:sorell"
+			],
+			"beatIds": [
+				"long:beat-06"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-04"
+				}
+			]
+		},
+		{
+			"id": "long:scene-07",
+			"actId": "long:act-1",
+			"number": 7,
+			"order": 7,
+			"title": "Despliegue hostil",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "T+57H43M"
+			},
+			"summary": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
+			"dramaticPurpose": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
+			"characterIds": [
+				"character:zao",
+				"character:rao",
+				"character:harlan"
+			],
+			"beatIds": [
+				"long:beat-07"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-05"
+				}
+			]
+		},
+		{
+			"id": "long:scene-08",
+			"actId": "long:act-1",
+			"number": 8,
+			"order": 8,
+			"title": "Mensaje hacia el corredor",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "T+57H45M"
+			},
+			"summary": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
+			"dramaticPurpose": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
+			"characterIds": [
+				"character:zao",
+				"character:harlan"
+			],
+			"beatIds": [
+				"long:beat-08"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-06"
+				}
+			]
+		},
+		{
+			"id": "long:scene-09",
+			"actId": "long:act-1",
+			"number": 9,
+			"order": 9,
+			"title": "Muerte fuera de campo",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "T+57H46M"
+			},
+			"summary": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
+			"dramaticPurpose": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
+			"characterIds": [
+				"character:zao",
+				"character:harlan"
+			],
+			"beatIds": [
+				"long:beat-09"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-07"
+				}
+			]
+		},
+		{
+			"id": "long:scene-10",
+			"actId": "long:act-1",
+			"number": 10,
+			"order": 10,
+			"title": "Expansión y cruce",
+			"locationId": "location:velari-wormhole-mouth",
+			"setting": {
+				"storyTime": "T+57H48M"
+			},
+			"summary": "Los nodos distribuidos conectan la región navegable durante una ventana limitada. La nave cruza sin que la expansión crítica pueda cancelarse con seguridad.",
+			"dramaticPurpose": "Los nodos distribuidos conectan la región navegable durante una ventana limitada. La nave cruza sin que la expansión crítica pueda cancelarse con seguridad.",
+			"characterIds": [
+				"character:voss",
+				"character:cael",
+				"character:wei"
+			],
+			"beatIds": [
+				"long:beat-10"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-07"
+				}
+			]
+		},
+		{
+			"id": "long:scene-11",
+			"actId": "long:act-2",
+			"number": 11,
+			"order": 11,
+			"title": "El cuerpo",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "DESPUÉS DEL CRUCE"
+			},
+			"summary": "Tras el cruce, Keene confirma la muerte de Zao y Okoye preserva el recinto. La tripulación entiende que el asesino está a bordo.",
+			"dramaticPurpose": "Tras el cruce, Keene confirma la muerte de Zao y Okoye preserva el recinto. La tripulación entiende que el asesino está a bordo.",
+			"characterIds": [
+				"character:keene",
+				"character:okoye",
+				"character:voss"
+			],
+			"beatIds": [
+				"long:beat-11"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-08"
+				}
+			]
+		},
+		{
+			"id": "long:scene-12",
+			"actId": "long:act-2",
+			"number": 12,
+			"order": 12,
+			"title": "Investigación distribuida",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "MÁS TARDE"
+			},
+			"summary": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"dramaticPurpose": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"characterIds": [
+				"character:voss",
+				"character:rao",
+				"character:keene",
+				"character:okoye",
+				"character:wei"
+			],
+			"beatIds": [
+				"long:beat-12"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-09"
+				}
+			]
+		},
+		{
+			"id": "long:scene-13",
+			"actId": "long:act-2",
+			"number": 13,
+			"order": 13,
+			"title": "Sorell bajo sospecha",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "MÁS TARDE"
+			},
+			"summary": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
+			"dramaticPurpose": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
+			"characterIds": [
+				"character:voss",
+				"character:harlan",
+				"character:sorell",
+				"character:okoye"
+			],
+			"beatIds": [
+				"long:beat-13"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-09"
+				}
+			]
+		},
+		{
+			"id": "long:scene-14",
+			"actId": "long:act-2",
+			"number": 14,
+			"order": 14,
+			"title": "Sabotaje ambiental acotado",
+			"locationId": "location:celestial-ardor-engineering",
+			"setting": {
+				"storyTime": "TURNO SIGUIENTE"
+			},
+			"summary": "Fluctuaciones de soporte vital y navegación fuerzan a Cael, Vega y Tanaka a trabajar bajo presión; la función exacta de Tanaka sigue pendiente de definición.",
+			"dramaticPurpose": "Fluctuaciones de soporte vital y navegación fuerzan a Cael, Vega y Tanaka a trabajar bajo presión; la función exacta de Tanaka sigue pendiente de definición.",
+			"characterIds": [
+				"character:cael",
+				"character:vega",
+				"character:tanaka"
+			],
+			"beatIds": [
+				"long:beat-14"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:scene-15",
+			"actId": "long:act-2",
+			"number": 15,
+			"order": 15,
+			"title": "Rao aísla el recorrido",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "CONTINUO"
+			},
+			"summary": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"dramaticPurpose": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"characterIds": [
+				"character:rao",
+				"character:hassan"
+			],
+			"beatIds": [
+				"long:beat-15"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-10"
+				}
+			]
+		},
+		{
+			"id": "long:scene-16",
+			"actId": "long:act-2",
+			"number": 16,
+			"order": 16,
+			"title": "Conflicto de estrategia",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "MÁS TARDE"
+			},
+			"summary": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"dramaticPurpose": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"characterIds": [
+				"character:voss",
+				"character:harlan",
+				"character:rao"
+			],
+			"beatIds": [
+				"long:beat-16"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:scene-17",
+			"actId": "long:act-2",
+			"number": 17,
+			"order": 17,
+			"title": "Carvalho continúa el lenguaje",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "MÁS TARDE"
+			},
+			"summary": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
+			"dramaticPurpose": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
+			"characterIds": [
+				"character:carvalho",
+				"character:sorell",
+				"character:rao"
+			],
+			"beatIds": [
+				"long:beat-17"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:scene-18",
+			"actId": "long:act-2",
+			"number": 18,
+			"order": 18,
+			"title": "La portadora débil",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "APROXIMACIÓN"
+			},
+			"summary": "Wei detecta una señal humana en el corredor previsto. Cael mantiene navegación y Voss ordena conservarla sin asumir autenticidad.",
+			"dramaticPurpose": "Wei detecta una señal humana en el corredor previsto. Cael mantiene navegación y Voss ordena conservarla sin asumir autenticidad.",
+			"characterIds": [
+				"character:wei",
+				"character:cael",
+				"character:voss"
+			],
+			"beatIds": [
+				"long:beat-18"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-11"
+				}
+			]
+		},
+		{
+			"id": "long:scene-19",
+			"actId": "long:act-3",
+			"number": 19,
+			"order": 19,
+			"title": "El mensaje de Zao",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "CONTINUO"
+			},
+			"summary": "La tripulación escucha fragmentos del mensaje. La firma prueba origen y hora del dispositivo, no todavía la verdad de cada palabra.",
+			"dramaticPurpose": "La tripulación escucha fragmentos del mensaje. La firma prueba origen y hora del dispositivo, no todavía la verdad de cada palabra.",
+			"characterIds": [
+				"character:voss",
+				"character:rao",
+				"character:wei",
+				"character:harlan"
+			],
+			"beatIds": [
+				"long:beat-19"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-12"
+				}
+			]
+		},
+		{
+			"id": "long:scene-20",
+			"actId": "long:act-3",
+			"number": 20,
+			"order": 20,
+			"title": "La doble llave",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "MINUTOS DESPUÉS"
+			},
+			"summary": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"dramaticPurpose": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"characterIds": [
+				"character:rao",
+				"character:sorell",
+				"character:hassan",
+				"character:voss"
+			],
+			"beatIds": [
+				"long:beat-20"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-12"
+				}
+			]
+		},
+		{
+			"id": "long:scene-21",
+			"actId": "long:act-3",
+			"number": 21,
+			"order": 21,
+			"title": "Harlan actúa",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "CONTINUO"
+			},
+			"summary": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
+			"dramaticPurpose": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
+			"characterIds": [
+				"character:voss",
+				"character:harlan",
+				"character:okoye"
+			],
+			"beatIds": [
+				"long:beat-21"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-13"
+				}
+			]
+		},
+		{
+			"id": "long:scene-22",
+			"actId": "long:act-3",
+			"number": 22,
+			"order": 22,
+			"title": "Decisión de Okoye",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "CONTINUO"
+			},
+			"summary": "Okoye elige ejecutar la orden de Voss bajo evidencia incompleta mientras seguridad contiene a Harlan sin convertir la escena en combate armado.",
+			"dramaticPurpose": "Okoye elige ejecutar la orden de Voss bajo evidencia incompleta mientras seguridad contiene a Harlan sin convertir la escena en combate armado.",
+			"characterIds": [
+				"character:okoye",
+				"character:harlan",
+				"character:voss"
+			],
+			"beatIds": [
+				"long:beat-22"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:scene-23",
+			"actId": "long:act-3",
+			"number": 23,
+			"order": 23,
+			"title": "Controles manuales",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "CONTINUO"
+			},
+			"summary": "Volkov accede a controles manuales documentados por Zao mientras Cael fuerza el mamparo desde el puente. Su especialidad definitiva queda abierta.",
+			"dramaticPurpose": "Volkov accede a controles manuales documentados por Zao mientras Cael fuerza el mamparo desde el puente. Su especialidad definitiva queda abierta.",
+			"characterIds": [
+				"character:volkov",
+				"character:cael",
+				"character:voss"
+			],
+			"beatIds": [
+				"long:beat-23"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-14"
+				}
+			]
+		},
+		{
+			"id": "long:scene-24",
+			"actId": "long:act-3",
+			"number": 24,
+			"order": 24,
+			"title": "Cuarentena",
+			"locationId": "location:diplomatic-core-room",
+			"setting": {
+				"storyTime": "CUENTA REGRESIVA"
+			},
+			"summary": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"dramaticPurpose": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"characterIds": [
+				"character:rao",
+				"character:sorell",
+				"character:harlan"
+			],
+			"beatIds": [
+				"long:beat-24"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-14"
+				}
+			]
+		},
+		{
+			"id": "long:scene-25",
+			"actId": "long:act-3",
+			"number": 25,
+			"order": 25,
+			"title": "Saludo limpio",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "DESPUÉS"
+			},
+			"summary": "La tripulación envía matemática de reconocimiento, procedencia y solicitud de aproximación por un conducto de sólo lectura.",
+			"dramaticPurpose": "La tripulación envía matemática de reconocimiento, procedencia y solicitud de aproximación por un conducto de sólo lectura.",
+			"characterIds": [
+				"character:voss",
+				"character:rao",
+				"character:sorell",
+				"character:carvalho"
+			],
+			"beatIds": [
+				"long:beat-25"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-15"
+				}
+			]
+		},
+		{
+			"id": "long:scene-26",
+			"actId": "long:act-4",
+			"number": 26,
+			"order": 26,
+			"title": "Reconocimiento limitado",
+			"locationId": "location:velari-station",
+			"setting": {
+				"storyTime": "MINUTOS DESPUÉS"
+			},
+			"summary": "La estación Velari responde con un patrón que autoriza aproximación sin equivaler a confianza, alianza ni explicación completa.",
+			"dramaticPurpose": "La estación Velari responde con un patrón que autoriza aproximación sin equivaler a confianza, alianza ni explicación completa.",
+			"characterIds": [
+				"character:voss",
+				"character:cael",
+				"character:wei"
+			],
+			"beatIds": [
+				"long:beat-26"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-16"
+				}
+			]
+		},
+		{
+			"id": "long:scene-27",
+			"actId": "long:act-4",
+			"number": 27,
+			"order": 27,
+			"title": "Emisaria",
+			"locationId": "location:velari-station",
+			"setting": {
+				"storyTime": "CONTINUO"
+			},
+			"summary": "Una nave emisaria distinta de la estación se aproxima. La escala humana queda subordinada al encuentro y la amenaza inmediata termina.",
+			"dramaticPurpose": "Una nave emisaria distinta de la estación se aproxima. La escala humana queda subordinada al encuentro y la amenaza inmediata termina.",
+			"characterIds": [
+				"character:voss",
+				"character:rao",
+				"character:sorell",
+				"character:cael"
+			],
+			"beatIds": [
+				"long:beat-27"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-16"
+				}
+			]
+		},
+		{
+			"id": "long:scene-28",
+			"actId": "long:act-4",
+			"number": 28,
+			"order": 28,
+			"title": "La verdad sigue viajando",
+			"locationId": "location:celestial-ardor-bridge",
+			"setting": {
+				"storyTime": "EPÍLOGO"
+			},
+			"summary": "El archivo de Zao queda preservado y Harlan bajo custodia. La transmisión hacia la Tierra parte, pero sus consecuencias permanecen fuera de campo.",
+			"dramaticPurpose": "El archivo de Zao queda preservado y Harlan bajo custodia. La transmisión hacia la Tierra parte, pero sus consecuencias permanecen fuera de campo.",
+			"characterIds": [
+				"character:voss",
+				"character:rao",
+				"character:sorell",
+				"character:keene",
+				"character:okoye"
+			],
+			"beatIds": [
+				"long:beat-28"
+			],
+			"shotIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-17"
+				}
+			]
+		}
+	],
+	"beats": [
+		{
+			"id": "long:beat-01",
+			"sceneId": "long:scene-01",
+			"order": 1,
+			"title": "Preparativos en Proxima",
+			"purpose": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
+			"summary": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:zao"
+				},
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:cael"
+				},
+				{
+					"kind": "character",
+					"id": "character:wei"
+				},
+				{
+					"kind": "character",
+					"id": "character:keene"
+				},
+				{
+					"kind": "character",
+					"id": "character:vega"
+				},
+				{
+					"kind": "character",
+					"id": "character:hassan"
+				},
+				{
+					"kind": "character",
+					"id": "character:carvalho"
+				},
+				{
+					"kind": "character",
+					"id": "character:okoye"
+				},
+				{
+					"kind": "character",
+					"id": "character:volkov"
+				},
+				{
+					"kind": "character",
+					"id": "character:tanaka"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-01"
+				}
+			]
+		},
+		{
+			"id": "long:beat-02",
+			"sceneId": "long:scene-02",
+			"order": 1,
+			"title": "Salida y reparto de guardias",
+			"purpose": "Voss fija autoridad, Cael prepara navegación, Wei toma comunicaciones y Harlan muestra una fricción todavía plausible ante la misión.",
+			"summary": "Voss fija autoridad, Cael prepara navegación, Wei toma comunicaciones y Harlan muestra una fricción todavía plausible ante la misión.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:cael"
+				},
+				{
+					"kind": "character",
+					"id": "character:wei"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-02"
+				}
+			]
+		},
+		{
+			"id": "long:beat-03",
+			"sceneId": "long:scene-03",
+			"order": 1,
+			"title": "Vega como peón involuntario",
+			"purpose": "Harlan induce a Ansel Vega a silenciar una alerta de diagnóstico aparentemente redundante; la acción abre una ventana sin convertir a Vega en cómplice.",
+			"summary": "Harlan induce a Ansel Vega a silenciar una alerta de diagnóstico aparentemente redundante; la acción abre una ventana sin convertir a Vega en cómplice.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:vega"
+				},
+				{
+					"kind": "character",
+					"id": "character:zao"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:beat-04",
+			"sceneId": "long:scene-04",
+			"order": 1,
+			"title": "Primeros picos",
+			"purpose": "Zao detecta consumos repetidos que no corresponden al perfil del núcleo y comienza una investigación discreta.",
+			"summary": "Zao detecta consumos repetidos que no corresponden al perfil del núcleo y comienza una investigación discreta.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:zao"
+				},
+				{
+					"kind": "character",
+					"id": "character:volkov"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-03"
+				}
+			]
+		},
+		{
+			"id": "long:beat-05",
+			"sceneId": "long:scene-05",
+			"order": 1,
+			"title": "La envoltura dormida",
+			"purpose": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"summary": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:zao"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:hassan"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-04"
+				}
+			]
+		},
+		{
+			"id": "long:beat-06",
+			"sceneId": "long:scene-06",
+			"order": 1,
+			"title": "Registro falsificable",
+			"purpose": "El registro superficial apunta a Sorell, pero Zao lo marca como no verificado y preserva una copia para contrastarla con el relé.",
+			"summary": "El registro superficial apunta a Sorell, pero Zao lo marca como no verificado y preserva una copia para contrastarla con el relé.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:zao"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-04"
+				}
+			]
+		},
+		{
+			"id": "long:beat-07",
+			"sceneId": "long:scene-07",
+			"order": 1,
+			"title": "Despliegue hostil",
+			"purpose": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
+			"summary": "La envoltura revela un escaneo intrusivo. Zao separa la firma superficial del override físico y comprende la implicación de Harlan.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:zao"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-05"
+				}
+			]
+		},
+		{
+			"id": "long:beat-08",
+			"sceneId": "long:scene-08",
+			"order": 1,
+			"title": "Mensaje hacia el corredor",
+			"purpose": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
+			"summary": "Zao dirige el transmisor óptico al corredor remoto previsto. El mensaje identifica el relé que la tripulación deberá autenticar.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:zao"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-06"
+				}
+			]
+		},
+		{
+			"id": "long:beat-09",
+			"sceneId": "long:scene-09",
+			"order": 1,
+			"title": "Muerte fuera de campo",
+			"purpose": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
+			"summary": "Harlan confronta a Zao. El ataque queda elidido; sus intentos apresurados de limpiar rastros dejan inconsistencias físicas.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:zao"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-07"
+				}
+			]
+		},
+		{
+			"id": "long:beat-10",
+			"sceneId": "long:scene-10",
+			"order": 1,
+			"title": "Expansión y cruce",
+			"purpose": "Los nodos distribuidos conectan la región navegable durante una ventana limitada. La nave cruza sin que la expansión crítica pueda cancelarse con seguridad.",
+			"summary": "Los nodos distribuidos conectan la región navegable durante una ventana limitada. La nave cruza sin que la expansión crítica pueda cancelarse con seguridad.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:cael"
+				},
+				{
+					"kind": "character",
+					"id": "character:wei"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-07"
+				}
+			]
+		},
+		{
+			"id": "long:beat-11",
+			"sceneId": "long:scene-11",
+			"order": 1,
+			"title": "El cuerpo",
+			"purpose": "Tras el cruce, Keene confirma la muerte de Zao y Okoye preserva el recinto. La tripulación entiende que el asesino está a bordo.",
+			"summary": "Tras el cruce, Keene confirma la muerte de Zao y Okoye preserva el recinto. La tripulación entiende que el asesino está a bordo.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:keene"
+				},
+				{
+					"kind": "character",
+					"id": "character:okoye"
+				},
+				{
+					"kind": "character",
+					"id": "character:voss"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-08"
+				}
+			]
+		},
+		{
+			"id": "long:beat-12",
+			"sceneId": "long:scene-12",
+			"order": 1,
+			"title": "Investigación distribuida",
+			"purpose": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"summary": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:keene"
+				},
+				{
+					"kind": "character",
+					"id": "character:okoye"
+				},
+				{
+					"kind": "character",
+					"id": "character:wei"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-09"
+				}
+			]
+		},
+		{
+			"id": "long:beat-13",
+			"sceneId": "long:scene-13",
+			"order": 1,
+			"title": "Sorell bajo sospecha",
+			"purpose": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
+			"summary": "La credencial superficial de Sorell alimenta la desconfianza, pero Voss evita tratarla como prueba concluyente. Harlan impulsa su aislamiento.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:okoye"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-09"
+				}
+			]
+		},
+		{
+			"id": "long:beat-14",
+			"sceneId": "long:scene-14",
+			"order": 1,
+			"title": "Sabotaje ambiental acotado",
+			"purpose": "Fluctuaciones de soporte vital y navegación fuerzan a Cael, Vega y Tanaka a trabajar bajo presión; la función exacta de Tanaka sigue pendiente de definición.",
+			"summary": "Fluctuaciones de soporte vital y navegación fuerzan a Cael, Vega y Tanaka a trabajar bajo presión; la función exacta de Tanaka sigue pendiente de definición.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:cael"
+				},
+				{
+					"kind": "character",
+					"id": "character:vega"
+				},
+				{
+					"kind": "character",
+					"id": "character:tanaka"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:beat-15",
+			"sceneId": "long:scene-15",
+			"order": 1,
+			"title": "Rao aísla el recorrido",
+			"purpose": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"summary": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:hassan"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-10"
+				}
+			]
+		},
+		{
+			"id": "long:beat-16",
+			"sceneId": "long:scene-16",
+			"order": 1,
+			"title": "Conflicto de estrategia",
+			"purpose": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"summary": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:beat-17",
+			"sceneId": "long:scene-17",
+			"order": 1,
+			"title": "Carvalho continúa el lenguaje",
+			"purpose": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
+			"summary": "Con Sorell aislada, Carvalho verifica patrones mínimos de su trabajo sin alterar el soporte pasivo de sólo lectura.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:carvalho"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:beat-18",
+			"sceneId": "long:scene-18",
+			"order": 1,
+			"title": "La portadora débil",
+			"purpose": "Wei detecta una señal humana en el corredor previsto. Cael mantiene navegación y Voss ordena conservarla sin asumir autenticidad.",
+			"summary": "Wei detecta una señal humana en el corredor previsto. Cael mantiene navegación y Voss ordena conservarla sin asumir autenticidad.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:wei"
+				},
+				{
+					"kind": "character",
+					"id": "character:cael"
+				},
+				{
+					"kind": "character",
+					"id": "character:voss"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-11"
+				}
+			]
+		},
+		{
+			"id": "long:beat-19",
+			"sceneId": "long:scene-19",
+			"order": 1,
+			"title": "El mensaje de Zao",
+			"purpose": "La tripulación escucha fragmentos del mensaje. La firma prueba origen y hora del dispositivo, no todavía la verdad de cada palabra.",
+			"summary": "La tripulación escucha fragmentos del mensaje. La firma prueba origen y hora del dispositivo, no todavía la verdad de cada palabra.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:wei"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-12"
+				}
+			]
+		},
+		{
+			"id": "long:beat-20",
+			"sceneId": "long:scene-20",
+			"order": 1,
+			"title": "La doble llave",
+			"purpose": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"summary": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:hassan"
+				},
+				{
+					"kind": "character",
+					"id": "character:voss"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-12"
+				}
+			]
+		},
+		{
+			"id": "long:beat-21",
+			"sceneId": "long:scene-21",
+			"order": 1,
+			"title": "Harlan actúa",
+			"purpose": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
+			"summary": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:okoye"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-13"
+				}
+			]
+		},
+		{
+			"id": "long:beat-22",
+			"sceneId": "long:scene-22",
+			"order": 1,
+			"title": "Decisión de Okoye",
+			"purpose": "Okoye elige ejecutar la orden de Voss bajo evidencia incompleta mientras seguridad contiene a Harlan sin convertir la escena en combate armado.",
+			"summary": "Okoye elige ejecutar la orden de Voss bajo evidencia incompleta mientras seguridad contiene a Harlan sin convertir la escena en combate armado.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:okoye"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				},
+				{
+					"kind": "character",
+					"id": "character:voss"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				}
+			]
+		},
+		{
+			"id": "long:beat-23",
+			"sceneId": "long:scene-23",
+			"order": 1,
+			"title": "Controles manuales",
+			"purpose": "Volkov accede a controles manuales documentados por Zao mientras Cael fuerza el mamparo desde el puente. Su especialidad definitiva queda abierta.",
+			"summary": "Volkov accede a controles manuales documentados por Zao mientras Cael fuerza el mamparo desde el puente. Su especialidad definitiva queda abierta.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:volkov"
+				},
+				{
+					"kind": "character",
+					"id": "character:cael"
+				},
+				{
+					"kind": "character",
+					"id": "character:voss"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-14"
+				}
+			]
+		},
+		{
+			"id": "long:beat-24",
+			"sceneId": "long:scene-24",
+			"order": 1,
+			"title": "Cuarentena",
+			"purpose": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"summary": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:harlan"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-14"
+				}
+			]
+		},
+		{
+			"id": "long:beat-25",
+			"sceneId": "long:scene-25",
+			"order": 1,
+			"title": "Saludo limpio",
+			"purpose": "La tripulación envía matemática de reconocimiento, procedencia y solicitud de aproximación por un conducto de sólo lectura.",
+			"summary": "La tripulación envía matemática de reconocimiento, procedencia y solicitud de aproximación por un conducto de sólo lectura.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:carvalho"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-15"
+				}
+			]
+		},
+		{
+			"id": "long:beat-26",
+			"sceneId": "long:scene-26",
+			"order": 1,
+			"title": "Reconocimiento limitado",
+			"purpose": "La estación Velari responde con un patrón que autoriza aproximación sin equivaler a confianza, alianza ni explicación completa.",
+			"summary": "La estación Velari responde con un patrón que autoriza aproximación sin equivaler a confianza, alianza ni explicación completa.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:cael"
+				},
+				{
+					"kind": "character",
+					"id": "character:wei"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-16"
+				}
+			]
+		},
+		{
+			"id": "long:beat-27",
+			"sceneId": "long:scene-27",
+			"order": 1,
+			"title": "Emisaria",
+			"purpose": "Una nave emisaria distinta de la estación se aproxima. La escala humana queda subordinada al encuentro y la amenaza inmediata termina.",
+			"summary": "Una nave emisaria distinta de la estación se aproxima. La escala humana queda subordinada al encuentro y la amenaza inmediata termina.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:cael"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-16"
+				}
+			]
+		},
+		{
+			"id": "long:beat-28",
+			"sceneId": "long:scene-28",
+			"order": 1,
+			"title": "La verdad sigue viajando",
+			"purpose": "El archivo de Zao queda preservado y Harlan bajo custodia. La transmisión hacia la Tierra parte, pero sus consecuencias permanecen fuera de campo.",
+			"summary": "El archivo de Zao queda preservado y Harlan bajo custodia. La transmisión hacia la Tierra parte, pero sus consecuencias permanecen fuera de campo.",
+			"participantRefs": [
+				{
+					"kind": "character",
+					"id": "character:voss"
+				},
+				{
+					"kind": "character",
+					"id": "character:rao"
+				},
+				{
+					"kind": "character",
+					"id": "character:sorell"
+				},
+				{
+					"kind": "character",
+					"id": "character:keene"
+				},
+				{
+					"kind": "character",
+					"id": "character:okoye"
+				}
+			],
+			"cueIds": [],
+			"targetDurationMs": 214286,
+			"sourceRefs": [
+				{
+					"kind": "document",
+					"documentId": "document:legacy-feature-beats"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"sceneId": "main:scene-17"
+				}
+			]
+		}
+	],
+	"cues": [],
+	"shots": [],
+	"takes": []
+}

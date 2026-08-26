@@ -18,6 +18,8 @@
 		"extract:legacy": "node scripts/extract-legacy.mjs",
 		"migrate:multi-script": "node scripts/migrate-multi-script.mjs",
 		"build:trailer": "node scripts/build-trailer-script.mjs",
+		"build:long": "node scripts/build-long-script.mjs",
+		"prepare:higgsfield": "node scripts/prepare-higgsfield-uploads.mjs",
 		"validate:data": "node scripts/validate-data.mjs"
 	},
 	"devDependencies": {

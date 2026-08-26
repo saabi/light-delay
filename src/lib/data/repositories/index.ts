@@ -2,6 +2,7 @@ import projectJson from '../../../../data/project.json';
 import mainScriptJson from '../../../../data/scripts/light-delay-main-short.json';
 import festivalScriptJson from '../../../../data/scripts/light-delay-festival.json';
 import trailerScriptJson from '../../../../data/scripts/light-delay-trailer.json';
+import longScriptJson from '../../../../data/scripts/light-delay-long.json';
 import assetsJson from '../../../../data/assets.json';
 import charactersJson from '../../../../data/characters.json';
 import locationsJson from '../../../../data/locations.json';
@@ -12,6 +13,7 @@ import voiceProfilesJson from '../../../../data/voice-profiles.json';
 import documentsJson from '../../../../data/documents.json';
 import narrativeFunctionsJson from '../../../../data/narrative-functions.json';
 import entityVariantsJson from '../../../../data/entity-variants.json';
+import comparisonTaxonomyJson from '../../../../data/comparison-taxonomy.json';
 
 import type { ProjectFile, ScriptRegistryEntry } from '$lib/types/project';
 import type { EntityVariantsFile, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
@@ -26,6 +28,7 @@ import type {
 } from '$lib/types/entities';
 import type { DocumentsFile } from '$lib/types/document';
 import type { ScriptId } from '$lib/types/ids';
+import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import { assertJsonModule } from '../loaders/loadJson.ts';
 
 const SCRIPT_MODULES: Record<string, ScriptFile> = {
@@ -40,6 +43,10 @@ const SCRIPT_MODULES: Record<string, ScriptFile> = {
 	'script:light-delay-trailer': assertJsonModule(
 		trailerScriptJson as ScriptFile,
 		'scripts/light-delay-trailer'
+	),
+	'script:light-delay-long': assertJsonModule(
+		longScriptJson as ScriptFile,
+		'scripts/light-delay-long'
 	)
 };
 
@@ -88,6 +95,10 @@ export function getEntityVariants(): EntityVariantsFile {
 	return assertJsonModule(entityVariantsJson as EntityVariantsFile, 'entity-variants');
 }
 
+export function getComparisonTaxonomy(): ComparisonTaxonomyFile {
+	return assertJsonModule(comparisonTaxonomyJson as ComparisonTaxonomyFile, 'comparison-taxonomy');
+}
+
 export function getAssets(): AssetsFile {
 	return assertJsonModule(assetsJson as AssetsFile, 'assets');
 }
@@ -134,7 +145,8 @@ export function getCanonicalBundle() {
 		voiceProfiles: getVoiceProfiles(),
 		documents: getDocuments(),
 		narrativeFunctions: getNarrativeFunctions(),
-		entityVariants: getEntityVariants()
+		entityVariants: getEntityVariants(),
+		comparisonTaxonomy: getComparisonTaxonomy()
 	};
 }
 

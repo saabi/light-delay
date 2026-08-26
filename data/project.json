@@ -3,9 +3,7 @@
 	"project": {
 		"id": "project:light-delay",
 		"title": "Light Delay",
-		"alternateTitles": [
-			"Luz Tardía"
-		],
+		"alternateTitles": ["Luz Tardía"],
 		"description": "Cortometraje de ciencia ficción de primer contacto; guion canónico de 17 escenas.",
 		"languages": {
 			"sourceLanguage": "es",
@@ -33,7 +31,7 @@
 			{
 				"id": "continuity:light-delay-primary",
 				"name": "Light Delay — continuidad primaria",
-				"description": "Continuidad narrativa del cortometraje canónico y cuts derivados (festival, trailers)."
+				"description": "Continuidad narrativa del cortometraje canónico, su tratamiento largo y los cuts derivados."
 			}
 		],
 		"scripts": [
@@ -69,6 +67,20 @@
 					"sourceScriptId": "script:light-delay-main-short",
 					"relationship": "trailer",
 					"sourceVersion": "1.0.0-extract"
+				}
+			},
+			{
+				"id": "script:light-delay-long",
+				"continuityId": "continuity:light-delay-primary",
+				"label": "Tratamiento de largometraje (~100 min)",
+				"kind": "long_version",
+				"status": "draft",
+				"targetDurationMs": 6000000,
+				"lineage": {
+					"sourceScriptId": "script:light-delay-main-short",
+					"relationship": "rewrite",
+					"sourceVersion": "1.0.0-extract",
+					"notes": "Recuperación revisada contra el canon corto vigente."
 				}
 			}
 		]

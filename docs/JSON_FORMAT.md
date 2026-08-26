@@ -15,6 +15,7 @@ data/
 |-- project.json
 |-- scripts/
 |   |-- light-delay-main-short.json
+|   |-- light-delay-long.json
 |   |-- light-delay-festival.json
 |   `-- light-delay-trailer.json
 |-- characters.json
@@ -25,7 +26,8 @@ data/
 |-- assets.json
 |-- voice-profiles.json
 |-- narrative-functions.json
-`-- entity-variants.json
+|-- entity-variants.json
+`-- comparison-taxonomy.json
 ```
 
 Multi-script architecture (registry, continuities, lineage, character-function reassignment, entity variants, sourceRefs) is defined in `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`. Each cut is an independent `ScriptFile`; shared entities/assets remain project-level.
@@ -78,13 +80,24 @@ export interface EntityRef {
   role?: string;
 }
 
-export interface SourceReference {
+export interface ScriptSourceReference {
+  kind?: "script";
   scriptId: ScriptId;
   sceneId?: SceneId;
   beatId?: BeatId;
   cueId?: CueId;
   shotId?: ShotId;
 }
+
+export interface DocumentSourceReference {
+  kind: "document";
+  documentId: string;
+  anchor?: string;
+}
+
+export type SourceReference =
+  | ScriptSourceReference
+  | DocumentSourceReference;
 
 export interface SourceTraceable {
   sourceRefs?: SourceReference[];
@@ -117,10 +130,14 @@ export interface EntityVariant {
   continuityId?: ContinuityId;
   scriptIds?: ScriptId[];
   label: string;
+  roleOverride?: string;
+  traitsOverride?: string[];
+  biographyOverride?: string;
   descriptionOverride?: string;
   appearanceOverride?: string;
   costumeOverride?: string;
   referenceAssetIds: AssetId[];
+  notes?: Note[];
 }
 
 export interface ScriptEntityVariantSelections {
@@ -129,6 +146,26 @@ export interface ScriptEntityVariantSelections {
   object?: Record<ObjectId, EntityVariantId>;
   vehicle?: Record<VehicleId, EntityVariantId>;
   faction?: Record<FactionId, EntityVariantId>;
+}
+
+export interface CanonClaim {
+  dimensionId: string;
+  valueId: string;
+  statement: string;
+  status: "established" | "proposed" | "unresolved" | "not_applicable";
+}
+
+export interface EventCoverage {
+  eventId: string;
+  status: "present" | "reworked" | "omitted" | "planned" | "unresolved";
+  sceneIds?: SceneId[];
+  note?: string;
+}
+
+export interface ComparisonProfile {
+  version: string;
+  canonClaims: CanonClaim[];
+  eventCoverage: EventCoverage[];
 }
 
 export interface Continuity {
@@ -206,6 +243,7 @@ export interface ScriptFile {
     declaredEntityRefs?: EntityRef[];
     entityVariantSelections?: ScriptEntityVariantSelections;
     characterFunctionAssignments?: CharacterFunctionAssignment[];
+    comparisonProfile?: ComparisonProfile;
     actIds: ActId[];
   };
 
@@ -219,7 +257,7 @@ export interface ScriptFile {
 }
 ```
 
-Script-owned IDs are globally unique and namespaced (e.g. `main:scene-01`, `festival:cue-02-001`). Project entities use ids such as `character:voss`. Scene, Beat, Cue and Shot may include `sourceRefs` for provenance without live inheritance.
+Script-owned IDs are globally unique and namespaced (e.g. `main:scene-01`, `festival:cue-02-001`). Project entities use ids such as `character:voss`. Scene, Beat, Cue and Shot may include `sourceRefs` for provenance without live inheritance. `comparisonProfile` uses the stable dimensions and events in `comparison-taxonomy.json`; missing claims remain unspecified and must not be inferred.
 
 ### Acts, optional sequences and scenes
 

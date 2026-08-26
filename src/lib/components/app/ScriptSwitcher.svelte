@@ -20,7 +20,12 @@
 		const next = select.value;
 		if (!next || next === activeScriptId) return;
 		setActiveScriptId(next);
-		void goto(hrefAfterScriptSwitch(page.url.pathname, next));
+		void goto(
+			hrefAfterScriptSwitch(page.url.pathname, next, {
+				againstId: page.url.searchParams.get('against'),
+				registeredIds: scripts.map((entry) => entry.id)
+			})
+		);
 	}
 </script>
 

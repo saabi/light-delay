@@ -23,14 +23,24 @@ import type {
 import type { EntityRef, Note } from './common.ts';
 import type { LanguageTag, LocalizedValue, TranslationStatus } from './i18n.ts';
 import type { ScriptLineage } from './project.ts';
+import type { ComparisonProfile } from './comparison.ts';
 
-export interface SourceReference {
+export interface ScriptSourceReference {
+	kind?: 'script';
 	scriptId: ScriptId;
 	sceneId?: SceneId;
 	beatId?: BeatId;
 	cueId?: CueId;
 	shotId?: ShotId;
 }
+
+export interface DocumentSourceReference {
+	kind: 'document';
+	documentId: string;
+	anchor?: string;
+}
+
+export type SourceReference = ScriptSourceReference | DocumentSourceReference;
 
 export interface SourceTraceable {
 	sourceRefs?: SourceReference[];
@@ -61,10 +71,14 @@ export interface EntityVariant {
 	continuityId?: ContinuityId;
 	scriptIds?: ScriptId[];
 	label: string;
+	roleOverride?: string;
+	traitsOverride?: string[];
+	biographyOverride?: string;
 	descriptionOverride?: string;
 	appearanceOverride?: string;
 	costumeOverride?: string;
 	referenceAssetIds: AssetId[];
+	notes?: Note[];
 }
 
 export interface EntityVariantsFile {
@@ -95,6 +109,7 @@ export interface ScriptFile {
 		declaredEntityRefs?: EntityRef[];
 		entityVariantSelections?: ScriptEntityVariantSelections;
 		characterFunctionAssignments?: CharacterFunctionAssignment[];
+		comparisonProfile?: ComparisonProfile;
 		actIds: ActId[];
 	};
 	acts: Act[];

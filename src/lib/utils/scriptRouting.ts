@@ -40,8 +40,21 @@ export function resolveActiveScriptId(options: {
  * Keep the same section when switching cuts on script/animatic/player routes;
  * otherwise land on the chosen script page.
  */
-export function hrefAfterScriptSwitch(pathname: string, newScriptId: string): string {
+export function hrefAfterScriptSwitch(
+	pathname: string,
+	newScriptId: string,
+	options: { againstId?: string | null; registeredIds?: readonly string[] } = {}
+): string {
 	const encoded = encodeScriptId(newScriptId);
+	if (/^\/compare\/[^/]+\/?$/.test(pathname)) {
+		const against =
+			options.againstId && options.againstId !== newScriptId
+				? options.againstId
+				: options.registeredIds?.find((id) => id !== newScriptId);
+		return against
+			? `/compare/${encoded}?against=${encodeURIComponent(against)}`
+			: `/compare/${encoded}`;
+	}
 	if (/^\/animatic\/[^/]+\/player\/?$/.test(pathname)) {
 		return `/animatic/${encoded}/player`;
 	}

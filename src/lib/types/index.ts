@@ -1,5 +1,6 @@
 export * from './ids.ts';
 export * from './common.ts';
+export * from './comparison.ts';
 export * from './i18n.ts';
 export * from './project.ts';
 export * from './script.ts';

@@ -34,7 +34,17 @@ function slugFromScriptId(scriptId) {
 
 function validateScriptFile(
 	script,
-	{ sourceLang, expectScenes, expectShots, functionIds, characterIds, errors }
+	{
+		sourceLang,
+		expectScenes,
+		expectShots,
+		functionIds,
+		characterIds,
+		taxonomy,
+		scriptsById,
+		documentIds,
+		errors
+	}
 ) {
 	const label = `script(${script.script?.id})`;
 	if (!script.script?.id) errors.push(`${label}: missing id`);
@@ -107,10 +117,69 @@ function validateScriptFile(
 	if (script.script?.lineage?.sourceScriptId === script.script?.id) {
 		errors.push(`${label}: lineage cannot reference self`);
 	}
+
+	const profile = script.script?.comparisonProfile;
+	if (profile) {
+		if (profile.version !== taxonomy.profileVersion) {
+			errors.push(`${label}: comparison profile version mismatch`);
+		}
+		unique(
+			`${label}.canonClaims`,
+			profile.canonClaims.map((item) => item.dimensionId),
+			errors
+		);
+		unique(
+			`${label}.eventCoverage`,
+			profile.eventCoverage.map((item) => item.eventId),
+			errors
+		);
+		const dimensionIds = new Set(taxonomy.canonDimensions.map((item) => item.id));
+		const eventIds = new Set(taxonomy.majorEvents.map((item) => item.id));
+		const sceneIds = new Set(script.scenes.map((item) => item.id));
+		for (const claim of profile.canonClaims) {
+			if (!dimensionIds.has(claim.dimensionId))
+				errors.push(`${label}: unknown canon dimension ${claim.dimensionId}`);
+			if (!claim.statement?.trim())
+				errors.push(`${label}: empty canon statement ${claim.dimensionId}`);
+		}
+		for (const coverage of profile.eventCoverage) {
+			if (!eventIds.has(coverage.eventId))
+				errors.push(`${label}: unknown event ${coverage.eventId}`);
+			for (const sceneId of coverage.sceneIds || []) {
+				if (!sceneIds.has(sceneId))
+					errors.push(`${label}: event ${coverage.eventId} unknown scene ${sceneId}`);
+			}
+		}
+	}
+
+	for (const collection of [script.scenes, script.beats, script.cues, script.shots]) {
+		for (const item of collection || []) {
+			for (const ref of item.sourceRefs || []) {
+				if (ref.kind === 'document') {
+					if (!documentIds.has(ref.documentId))
+						errors.push(`${label}: unknown source document ${ref.documentId}`);
+					continue;
+				}
+				const source = scriptsById.get(ref.scriptId);
+				if (!source) errors.push(`${label}: unknown source script ${ref.scriptId}`);
+				else {
+					if (ref.sceneId && !source.scenes.some((x) => x.id === ref.sceneId))
+						errors.push(`${label}: unknown source scene ${ref.sceneId}`);
+					if (ref.beatId && !source.beats.some((x) => x.id === ref.beatId))
+						errors.push(`${label}: unknown source beat ${ref.beatId}`);
+					if (ref.cueId && !source.cues.some((x) => x.id === ref.cueId))
+						errors.push(`${label}: unknown source cue ${ref.cueId}`);
+					if (ref.shotId && !source.shots.some((x) => x.id === ref.shotId))
+						errors.push(`${label}: unknown source shot ${ref.shotId}`);
+				}
+			}
+		}
+	}
 }
 
 function main() {
 	const errors = [];
+	const warnings = [];
 	const project = load('project.json');
 	const assets = load('assets.json');
 	const characters = load('characters.json');
@@ -121,7 +190,8 @@ function main() {
 	const voiceProfiles = load('voice-profiles.json');
 	const documents = load('documents.json');
 	const narrativeFunctions = load('narrative-functions.json');
-	load('entity-variants.json');
+	const entityVariants = load('entity-variants.json');
+	const taxonomy = load('comparison-taxonomy.json');
 
 	if (!project.schemaVersion) errors.push('project: missing schemaVersion');
 	const langs = project.project?.languages;
@@ -210,6 +280,21 @@ function main() {
 		narrativeFunctions.functions.map((f) => f.id),
 		errors
 	);
+	unique(
+		'entityVariants',
+		entityVariants.variants.map((v) => v.id),
+		errors
+	);
+	unique(
+		'canonDimensions',
+		taxonomy.canonDimensions.map((v) => v.id),
+		errors
+	);
+	unique(
+		'majorEvents',
+		taxonomy.majorEvents.map((v) => v.id),
+		errors
+	);
 
 	for (const asset of assets.assets) {
 		if (!asset.path?.startsWith('/assets/')) {
@@ -220,6 +305,7 @@ function main() {
 	const sourceLang = langs?.sourceLanguage || 'es';
 	const functionIds = new Set(narrativeFunctions.functions.map((f) => f.id));
 	const characterIds = new Set(characters.characters.map((c) => c.id));
+	const documentIds = new Set(documents.documents.map((d) => d.id));
 	const ownedIds = new Set();
 
 	for (const [id, script] of scriptsById) {
@@ -230,6 +316,9 @@ function main() {
 			expectShots: isCanonical ? 100 : undefined,
 			functionIds,
 			characterIds,
+			taxonomy,
+			scriptsById,
+			documentIds,
 			errors
 		});
 		for (const collection of [
@@ -247,12 +336,79 @@ function main() {
 		}
 	}
 
+	for (const variant of entityVariants.variants) {
+		if (variant.entity?.kind === 'character' && !characterIds.has(variant.entity.id)) {
+			errors.push(`entityVariant ${variant.id}: unknown character ${variant.entity.id}`);
+		}
+		for (const scriptId of variant.scriptIds || []) {
+			if (!registryIds.has(scriptId))
+				errors.push(`entityVariant ${variant.id}: unknown script ${scriptId}`);
+		}
+		for (const assetId of variant.referenceAssetIds || []) {
+			if (!assets.assets.some((asset) => asset.id === assetId))
+				errors.push(`entityVariant ${variant.id}: unknown asset ${assetId}`);
+		}
+	}
+
+	const variantsById = new Map(entityVariants.variants.map((variant) => [variant.id, variant]));
+	for (const [scriptId, script] of scriptsById) {
+		for (const [kind, selections] of Object.entries(script.script?.entityVariantSelections || {})) {
+			for (const [entityId, variantId] of Object.entries(selections || {})) {
+				const variant = variantsById.get(variantId);
+				if (!variant) {
+					errors.push(`${scriptId}: unknown selected variant ${variantId}`);
+					continue;
+				}
+				if (variant.entity?.kind !== kind || variant.entity?.id !== entityId) {
+					errors.push(`${scriptId}: variant ${variantId} does not belong to ${kind}:${entityId}`);
+				}
+				if (variant.scriptIds?.length && !variant.scriptIds.includes(scriptId)) {
+					errors.push(`${scriptId}: variant ${variantId} is not enabled for this script`);
+				}
+				if (variant.continuityId && variant.continuityId !== script.script.continuityId) {
+					errors.push(`${scriptId}: variant ${variantId} has incompatible continuity`);
+				}
+			}
+		}
+	}
+
+	const foundational = new Set(
+		taxonomy.canonDimensions.filter((item) => item.foundational).map((item) => item.id)
+	);
+	const loadedScripts = [...scriptsById.values()];
+	for (let leftIndex = 0; leftIndex < loadedScripts.length; leftIndex += 1) {
+		for (let rightIndex = leftIndex + 1; rightIndex < loadedScripts.length; rightIndex += 1) {
+			const left = loadedScripts[leftIndex];
+			const right = loadedScripts[rightIndex];
+			if (left.script.continuityId !== right.script.continuityId) continue;
+			const rightClaims = new Map(
+				(right.script.comparisonProfile?.canonClaims || []).map((claim) => [
+					claim.dimensionId,
+					claim
+				])
+			);
+			for (const claim of left.script.comparisonProfile?.canonClaims || []) {
+				if (!foundational.has(claim.dimensionId) || claim.status !== 'established') continue;
+				const other = rightClaims.get(claim.dimensionId);
+				if (
+					other?.status === 'established' &&
+					(claim.valueId || claim.statement) !== (other.valueId || other.statement)
+				) {
+					warnings.push(
+						`${left.script.id} / ${right.script.id}: foundational conflict ${claim.dimensionId}`
+					);
+				}
+			}
+		}
+	}
+
 	if (errors.length) {
 		console.error('validate:data FAILED');
 		for (const e of errors) console.error(' -', e);
 		process.exit(1);
 	}
 	console.log('validate:data OK');
+	for (const warning of warnings) console.warn(' warning:', warning);
 	const main = scriptsById.get(project.project.canonicalScriptId);
 	console.log(
 		`scripts=${scriptsById.size} scenes(main)=${main?.scenes?.length} shots(main)=${main?.shots?.length} assets=${assets.assets.length}`

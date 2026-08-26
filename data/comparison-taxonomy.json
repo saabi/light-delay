@@ -1,0 +1,79 @@
+{
+	"schemaVersion": "1.0.0",
+	"profileVersion": "1.0.0",
+	"canonDimensions": [
+		{
+			"id": "canon:proxima-origin",
+			"category": "mission",
+			"label": "Origen de Proxima",
+			"foundational": true
+		},
+		{
+			"id": "canon:ardor-deployment",
+			"category": "mission",
+			"label": "Origen y despliegue de Celestial Ardor",
+			"foundational": true
+		},
+		{
+			"id": "canon:tunnel-geometry",
+			"category": "technology",
+			"label": "Geometría del túnel",
+			"foundational": true
+		},
+		{
+			"id": "canon:tunnel-location",
+			"category": "technology",
+			"label": "Ubicación de la boca local",
+			"foundational": true
+		},
+		{
+			"id": "canon:trajectory",
+			"category": "technology",
+			"label": "Propulsión y trayecto",
+			"foundational": true
+		},
+		{
+			"id": "canon:velari-objects",
+			"category": "contact",
+			"label": "Estación y emisaria Velari",
+			"foundational": true
+		},
+		{ "id": "canon:evidence-chain", "category": "conflict", "label": "Cadena de evidencia" },
+		{
+			"id": "canon:sorell-status",
+			"category": "conflict",
+			"label": "Acusación y vindicación de Sorell"
+		},
+		{ "id": "canon:rao-containment", "category": "conflict", "label": "Contención de Rao" },
+		{ "id": "canon:ending", "category": "contact", "label": "Alcance del contacto final" }
+	],
+	"majorEvents": [
+		{ "id": "event:embarkation", "category": "setup", "label": "Embarque y salida" },
+		{
+			"id": "event:anomaly-discovery",
+			"category": "mystery",
+			"label": "Descubrimiento de la anomalía"
+		},
+		{
+			"id": "event:zao-warning-death",
+			"category": "mystery",
+			"label": "Advertencia y muerte de Zao"
+		},
+		{ "id": "event:tunnel-crossing", "category": "mission", "label": "Cruce del túnel" },
+		{
+			"id": "event:investigation",
+			"category": "mystery",
+			"label": "Investigación y fractura de confianza"
+		},
+		{
+			"id": "event:message-reception",
+			"category": "revelation",
+			"label": "Recepción del mensaje de Zao"
+		},
+		{ "id": "event:harlan-exposed", "category": "revelation", "label": "Exposición de Harlan" },
+		{ "id": "event:quarantine", "category": "climax", "label": "Cuarentena del payload" },
+		{ "id": "event:clean-greeting", "category": "climax", "label": "Envío del saludo limpio" },
+		{ "id": "event:first-contact", "category": "resolution", "label": "Primer contacto limitado" },
+		{ "id": "event:aftermath", "category": "resolution", "label": "Consecuencias y memoria de Zao" }
+	]
+}

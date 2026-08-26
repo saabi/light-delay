@@ -13,7 +13,21 @@
 		],
 		"continuityId": "continuity:light-delay-primary",
 		"kind": "main_short",
-		"targetDurationMs": 1800000
+		"targetDurationMs": 1800000,
+		"declaredEntityRefs": [{"kind":"character","id":"character:zao"},{"kind":"character","id":"character:voss"},{"kind":"character","id":"character:harlan"},{"kind":"character","id":"character:rao"},{"kind":"character","id":"character:sorell"},{"kind":"character","id":"character:cael"}],
+		"comparisonProfile": {
+			"version": "1.0.0",
+			"canonClaims": [{"dimensionId":"canon:proxima-origin","valueId":"scientific-before-contact","statement":"Proxima fue una estación científica joviana anterior al contacto.","status":"established"},{"dimensionId":"canon:ardor-deployment","valueId":"earth-built-prepositioned","statement":"Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.","status":"established"},{"dimensionId":"canon:tunnel-geometry","valueId":"distributed-nodes","statement":"La boca es un campo distribuido de nodos, no un aro.","status":"established"},{"dimensionId":"canon:tunnel-location","valueId":"sol-jupiter-l2","statement":"La boca local está en una órbita halo controlada cerca de L2.","status":"established"},{"dimensionId":"canon:trajectory","valueId":"conventional-to-wormhole","statement":"La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.","status":"established"},{"dimensionId":"canon:velari-objects","valueId":"station-and-emissary","statement":"La estación Velari y la nave emisaria son objetos distintos.","status":"established"},{"dimensionId":"canon:evidence-chain","valueId":"relay-optical-readonly","statement":"El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.","status":"established"},{"dimensionId":"canon:sorell-status","valueId":"false-log-not-conclusive","statement":"Sorell no queda culpabilizada por un único registro falsificable.","status":"established"},{"dimensionId":"canon:rao-containment","valueId":"bounded-quarantine","statement":"Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.","status":"established"},{"dimensionId":"canon:ending","valueId":"limited-acknowledgement","statement":"La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.","status":"established"}],
+			"eventCoverage": [{"eventId":"event:embarkation","status":"present","sceneIds":["main:scene-01","main:scene-02"]},{"eventId":"event:anomaly-discovery","status":"present","sceneIds":["main:scene-03","main:scene-04","main:scene-05"]},{"eventId":"event:zao-warning-death","status":"present","sceneIds":["main:scene-06","main:scene-07"]},{"eventId":"event:tunnel-crossing","status":"present","sceneIds":["main:scene-07"]},{"eventId":"event:investigation","status":"present","sceneIds":["main:scene-08","main:scene-09","main:scene-10"]},{"eventId":"event:message-reception","status":"present","sceneIds":["main:scene-11","main:scene-12"]},{"eventId":"event:harlan-exposed","status":"present","sceneIds":["main:scene-12","main:scene-13"]},{"eventId":"event:quarantine","status":"present","sceneIds":["main:scene-14"]},{"eventId":"event:clean-greeting","status":"present","sceneIds":["main:scene-15"]},{"eventId":"event:first-contact","status":"present","sceneIds":["main:scene-16"]},{"eventId":"event:aftermath","status":"present","sceneIds":["main:scene-17"]}]
+		},
+		"characterFunctionAssignments": [
+			{"functionId":"function:piloting","characterId":"character:cael","relationship":"unchanged"},
+			{"functionId":"function:communications","characterId":"character:cael","sourceCharacterIds":["character:wei"],"relationship":"merged","notes":"La versión corta fusiona en Cael la función de Wei."},
+			{"functionId":"function:command","characterId":"character:voss","relationship":"unchanged"},
+			{"functionId":"function:investigation_payload","characterId":"character:rao","relationship":"unchanged"},
+			{"functionId":"function:diplomatic_greeting_authorship","characterId":"character:sorell","relationship":"unchanged"},
+			{"functionId":"function:override_antagonist","characterId":"character:harlan","relationship":"unchanged"}
+		]
 	},
 	"acts": [
 		{

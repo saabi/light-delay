@@ -32,7 +32,7 @@ These versions may:
 - have independent animatic timing and selected takes;
 - support different dialogue and subtitle languages.
 
-The condensed version already demonstrates this requirement. Its cast was reduced from twelve characters to six principal characters: Zao, Voss, Harlan, Rao, Sorell and Cael. Wei's communications function was merged into Cael. Other long-version characters were removed, reduced to mentions or reserved for the longer version. This is not adequately described as a visual character variant or as a runtime filter over the longer script.
+The condensed version already demonstrates this requirement. Its cast was reduced from the fourteen names recovered from the older feature documents to six principal characters: Zao, Voss, Harlan, Rao, Sorell and Cael. Wei's communications function was merged into Cael. Other long-version characters were removed, reduced to mentions or reserved for the longer version. This is not adequately described as a visual character variant or as a runtime filter over the longer script.
 
 The data model therefore needs to represent complete independent scripts while preserving shared project entities and traceable relationships between versions.
 
@@ -275,11 +275,15 @@ export interface EntityVariant {
 
   label: string;
 
+  roleOverride?: string;
+  traitsOverride?: string[];
+  biographyOverride?: string;
   descriptionOverride?: string;
   appearanceOverride?: string;
   costumeOverride?: string;
 
   referenceAssetIds: AssetId[];
+  notes?: Note[];
 }
 ```
 
@@ -390,13 +394,24 @@ The same model supports:
 Scenes, beats, cues and shots may point to the source material from which they were adapted:
 
 ```ts
-export interface SourceReference {
+export interface ScriptSourceReference {
+  kind?: "script";
   scriptId: ScriptId;
   sceneId?: SceneId;
   beatId?: BeatId;
   cueId?: CueId;
   shotId?: ShotId;
 }
+
+export interface DocumentSourceReference {
+  kind: "document";
+  documentId: string;
+  anchor?: string;
+}
+
+export type SourceReference =
+  | ScriptSourceReference
+  | DocumentSourceReference;
 
 export interface SourceTraceable {
   sourceRefs?: SourceReference[];
@@ -426,6 +441,7 @@ Example:
 - Editors can compare derived and source scripts.
 - A festival beat may combine several source beats.
 - Reused shots can retain editorial provenance even when their order changes.
+- Recovered treatments can cite a registered document even when no older structured script exists.
 - Provenance enables reports without imposing live synchronization.
 
 ### 11. Keep declared rosters optional and advisory
@@ -452,6 +468,7 @@ Use script IDs in route paths:
 /animatic
 /animatic/[scriptId]
 /animatic/[scriptId]/player
+/compare/[scriptId]?against=<ScriptId>
 ```
 
 `/script` and `/animatic` resolve or redirect to `canonicalScriptId`.
@@ -538,6 +555,19 @@ The multilingual dialogue model in `JSON_FORMAT_I18N_ADDENDUM.md` remains attach
 
 Shared voice profiles remain project-level; cue variants select the appropriate voice/audio.
 
+### 16. Compare explicit profiles, not inferred adaptations
+
+Each script may declare a versioned `comparisonProfile`. Its canon claims and major-event coverage use IDs from `data/comparison-taxonomy.json`. The comparison route is `/compare/[scriptId]?against=<ScriptId>`.
+
+Version 1 compares:
+
+- explicit canon values and their editorial status;
+- declared coverage of major events, with scene links when available;
+- declared and actual cast participation;
+- selected entity variants and narrative-function assignments.
+
+Missing data is reported as unspecified. Version 1 does not infer character merges/splits, dialogue inheritance or the character who inherited a removed line. Conflicting `established` values on foundational dimensions inside one continuity produce a warning rather than silently creating a new continuity.
+
 ## Validation requirements
 
 ### Project registry
@@ -596,7 +626,7 @@ With these decisions, the data model can fully describe the previously discussed
 
 - a six-character principal cast: Zao, Voss, Harlan, Rao, Sorell and Cael;
 - Wei's communications function merged into Cael;
-- Volkov, Okoye, Hassan, Tanaka, Carvalho and Keene/Vega omitted, reduced to mentions or retained only in the long version;
+- Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov and Tanaka omitted, reduced to mentions or retained only in the long version;
 - a simplified Sorell subplot;
 - Sorell accused through planted evidence;
 - Rao handling the digital containment from a protected terminal;
@@ -753,4 +783,3 @@ These questions do not block the initial implementation:
 3. Whether entity variants should remain in their entity files or move to a shared `entity-variants.json`.
 4. Whether a later editor needs first-class comparison and cherry-pick operations between scripts.
 5. When a screenplay with several edits justifies separating `StoryScript`, `EditorialCut` and `ProductionPlan`.
-

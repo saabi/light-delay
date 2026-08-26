@@ -7,17 +7,10 @@
 			"shortName": "Zao",
 			"role": "Ingeniera jefe",
 			"description": "Practicidad, observación y resolución bajo presión.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-zao-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-zao-sheet"],
 			"defaultVoiceProfileId": "voice:zao-es",
-			"aliases": [
-				"ZAO",
-				"ZAO"
-			]
+			"aliases": ["ZAO", "ZAO"]
 		},
 		{
 			"id": "character:voss",
@@ -25,17 +18,10 @@
 			"shortName": "Voss",
 			"role": "Capitán",
 			"description": "Autoridad contenida, responsabilidad y duelo.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-voss-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-voss-sheet"],
 			"defaultVoiceProfileId": "voice:voss-es",
-			"aliases": [
-				"ELIAS VOSS",
-				"VOSS"
-			]
+			"aliases": ["ELIAS VOSS", "VOSS"]
 		},
 		{
 			"id": "character:harlan",
@@ -43,17 +29,10 @@
 			"shortName": "Harlan",
 			"role": "Comandante",
 			"description": "Competencia creíble, convicción ideológica y quiebre.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-harlan-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-harlan-sheet"],
 			"defaultVoiceProfileId": "voice:harlan-es",
-			"aliases": [
-				"RYLEN HARLAN",
-				"HARLAN"
-			]
+			"aliases": ["RYLEN HARLAN", "HARLAN"]
 		},
 		{
 			"id": "character:rao",
@@ -61,17 +40,10 @@
 			"shortName": "Rao",
 			"role": "Especialista en IA",
 			"description": "Concentración analítica, alarma y determinación.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-rao-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-rao-sheet"],
 			"defaultVoiceProfileId": "voice:rao-es",
-			"aliases": [
-				"ELIN RAO",
-				"RAO"
-			]
+			"aliases": ["ELIN RAO", "RAO"]
 		},
 		{
 			"id": "character:sorell",
@@ -79,17 +51,10 @@
 			"shortName": "Sorell",
 			"role": "Xenolingüista",
 			"description": "Curiosidad, indignación, empatía y esperanza cauta.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-sorell-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-sorell-sheet"],
 			"defaultVoiceProfileId": "voice:sorell-es",
-			"aliases": [
-				"LIAN SORELL",
-				"SORELL"
-			]
+			"aliases": ["LIAN SORELL", "SORELL"]
 		},
 		{
 			"id": "character:cael",
@@ -97,17 +62,10 @@
 			"shortName": "Cael",
 			"role": "Piloto / Comunicaciones",
 			"description": "Pragmatismo, concentración, humor seco y asombro.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-cael-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-cael-sheet"],
 			"defaultVoiceProfileId": "voice:cael-es",
-			"aliases": [
-				"JUNO CAEL",
-				"CAEL"
-			]
+			"aliases": ["JUNO CAEL", "CAEL"]
 		},
 		{
 			"id": "character:proxima-technician",
@@ -115,17 +73,10 @@
 			"shortName": "Proxima",
 			"role": "Operaciones de estación",
 			"description": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-proxima-technician-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-proxima-technician-sheet"],
 			"defaultVoiceProfileId": "voice:proxima-technician-es",
-			"aliases": [
-				"TÉCNICO DE PROXIMA",
-				"PROXIMA"
-			]
+			"aliases": ["TÉCNICO DE PROXIMA", "PROXIMA"]
 		},
 		{
 			"id": "character:medical-officer",
@@ -133,17 +84,10 @@
 			"shortName": "médico",
 			"role": "Medicina de vuelo",
 			"description": "Examen forense inicial, gravedad clínica y urgencia contenida.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-medical-officer-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-medical-officer-sheet"],
 			"defaultVoiceProfileId": "voice:medical-officer-es",
-			"aliases": [
-				"OFICIAL MÉDICO",
-				"MÉDICO"
-			]
+			"aliases": ["OFICIAL MÉDICO", "MÉDICO"]
 		},
 		{
 			"id": "character:security-crew",
@@ -151,17 +95,10 @@
 			"shortName": "seguridad",
 			"role": "Seguridad de a bordo",
 			"description": "Autoridad física sin militarización ni armamento visible.",
-			"factionIds": [
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-security-crew-sheet"
-			],
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": ["asset:character-security-crew-sheet"],
 			"defaultVoiceProfileId": "voice:security-crew-es",
-			"aliases": [
-				"TRIPULANTE DE SEGURIDAD",
-				"SEGURIDAD"
-			]
+			"aliases": ["TRIPULANTE DE SEGURIDAD", "SEGURIDAD"]
 		},
 		{
 			"id": "character:earth-protesters",
@@ -169,56 +106,124 @@
 			"shortName": "terrestres",
 			"role": "Aqueronte / partidarios del contacto",
 			"description": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
-			"factionIds": [
-				"faction:acheron",
-				"faction:human"
-			],
-			"referenceAssetIds": [
-				"asset:character-earth-protesters-sheet"
-			],
+			"factionIds": ["faction:acheron", "faction:human"],
+			"referenceAssetIds": ["asset:character-earth-protesters-sheet"],
 			"defaultVoiceProfileId": "voice:earth-protesters-es",
-			"aliases": [
-				"MANIFESTANTES TERRESTRES",
-				"TERRESTRES"
-			]
+			"aliases": ["MANIFESTANTES TERRESTRES", "TERRESTRES"]
 		},
 		{
 			"id": "character:periodista",
 			"name": "Periodista",
 			"role": "Voz en off de noticias",
 			"description": "Narración de transmisión terrestre.",
-			"factionIds": [
-				"faction:human"
-			],
+			"factionIds": ["faction:human"],
 			"referenceAssetIds": [],
-			"aliases": [
-				"PERIODISTA"
-			]
+			"aliases": ["PERIODISTA"]
 		},
 		{
 			"id": "character:manifestante-acheron",
 			"name": "Manifestante Aqueronte",
 			"role": "Manifestante",
 			"description": "Voz de la Directiva Aqueronte en transmisión.",
-			"factionIds": [
-				"faction:human"
-			],
+			"factionIds": ["faction:human"],
 			"referenceAssetIds": [],
-			"aliases": [
-				"MANIFESTANTE AQUERONTE"
-			]
+			"aliases": ["MANIFESTANTE AQUERONTE"]
 		},
 		{
 			"id": "character:joven-contacto",
 			"name": "Joven partidaria del contacto",
 			"role": "Manifestante",
 			"description": "Voz partidaria del contacto en transmisión.",
-			"factionIds": [
-				"faction:human"
-			],
+			"factionIds": ["faction:human"],
 			"referenceAssetIds": [],
-			"aliases": [
-				"JOVEN PARTIDARIA DEL CONTACTO"
+			"aliases": ["JOVEN PARTIDARIA DEL CONTACTO"]
+		},
+		{
+			"id": "character:keene",
+			"name": "Marcus Keene",
+			"shortName": "Keene",
+			"role": "Médico",
+			"description": "Médico de la misión, atrapado entre el deber clínico y la incertidumbre moral.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["MARCUS KEENE", "KEENE"]
+		},
+		{
+			"id": "character:vega",
+			"name": "Ansel Vega",
+			"shortName": "Vega",
+			"role": "Técnico de sistemas",
+			"description": "Técnico manipulable que participa sin saberlo en una distracción temprana.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["ANSEL VEGA", "VEGA"]
+		},
+		{
+			"id": "character:wei",
+			"name": "Wei",
+			"role": "Comunicaciones",
+			"description": "Responsable de detectar y autenticar inicialmente la señal entrante.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["WEI"]
+		},
+		{
+			"id": "character:hassan",
+			"name": "Hassan",
+			"role": "Física cuántica",
+			"description": "Especialista que aporta corroboración física independiente de la investigación informática.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["HASSAN"]
+		},
+		{
+			"id": "character:carvalho",
+			"name": "Carvalho",
+			"role": "Análisis lingüístico",
+			"description": "Continúa de forma limitada el trabajo lingüístico de Sorell durante su confinamiento.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["CARVALHO"]
+		},
+		{
+			"id": "character:okoye",
+			"name": "Okoye",
+			"role": "Seguridad",
+			"description": "Responsable de seguridad obligado a decidir bajo evidencia incompleta.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["OKOYE"]
+		},
+		{
+			"id": "character:volkov",
+			"name": "Volkov",
+			"role": "Función técnica por definir",
+			"description": "La fuente sólo lo vincula con controles manuales y conocimientos heredados de Zao.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["VOLKOV"],
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Precisar especialidad y arco sin inventar datos ausentes.",
+					"resolved": false
+				}
+			]
+		},
+		{
+			"id": "character:tanaka",
+			"name": "Tanaka",
+			"role": "Función de misión por definir",
+			"description": "Nombre recuperado de la documentación histórica; las fuentes disponibles no fijan una función dramática.",
+			"factionIds": ["faction:human"],
+			"referenceAssetIds": [],
+			"aliases": ["TANAKA"],
+			"notes": [
+				{
+					"type": "todo",
+					"text": "Recuperar o decidir función antes de escribir diálogo.",
+					"resolved": false
+				}
 			]
 		}
 	]

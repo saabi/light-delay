@@ -5,6 +5,8 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 ## Estado actual
 
 - Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
+- Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
+- Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Animatic: 100 tomas con imagen, encuadre, audio, subtítulos y duración editable.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
@@ -18,7 +20,7 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 |-- README.md
 |-- CHANGELOG.md
 |-- src/                      # Aplicación SvelteKit
-|-- static/                   # Assets públicos (migración pendiente)
+|-- static/                   # Assets públicos usados por la aplicación
 |-- docs/                     # Canon, producción, estado y procedencia
 |-- data/                     # Contratos y futuros JSON canónicos
 `-- legacy-site/              # Sitio HTML actual y todos sus assets
@@ -52,15 +54,14 @@ Ante una contradicción, no se debe elegir silenciosamente: registrar el conflic
 
 Cuando existan copias del mismo documento en varios idiomas, editar primero el español y sincronizar el resto en la misma tarea. Detalle en `AGENTS.md`.
 
-## Migración prevista
+## Desarrollo editorial pendiente
 
-La siguiente fase debe:
+Las siguientes fases deben:
 
-- extraer guion, escenas, tomas, personajes, localizaciones, vehículos y utilería a JSON;
-- renderizar desde los mismos datos tanto el guion textual como el animatic;
-- compartir estilos y componentes entre documentos;
-- preservar IDs estables y rutas de assets;
-- mantener una vista editorial y una vista Película a pantalla completa.
+- completar el tratamiento largo con escenas dialogadas, tomas y recursos sólo cuando se apruebe su revisión narrativa;
+- evaluar por separado los candidatos de retropropagación al corto, Festival Cut y tráiler;
+- ampliar la comparación sin inferir automáticamente herencia de diálogo o fusiones de personajes;
+- completar la extracción editorial de documentos que aún son stubs.
 
 Los HTML existentes son referencia y material de migración, no el formato final de autoría.
 

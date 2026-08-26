@@ -319,6 +319,53 @@
 					"text": "Pendiente: importar bloques desde el markdown de decisiones en una fase editorial."
 				}
 			]
+		},
+		{
+			"id": "document:legacy-feature-overview",
+			"slug": "legacy-feature-overview",
+			"title": "Informe histórico del largometraje",
+			"status": "review",
+			"language": "en",
+			"sourcePath": "docs/light-delay-full-feature-overview.md",
+			"summary": "Fuente histórica en inglés; no autoritativa frente a la revisión española.",
+			"blocks": [
+				{
+					"type": "callout",
+					"kind": "warning",
+					"text": "Documento histórico. Consultar docs/REVISION_LARGOMETRAJE_RECUPERADO.md para decisiones vigentes."
+				}
+			]
+		},
+		{
+			"id": "document:legacy-feature-beats",
+			"slug": "legacy-feature-beats",
+			"title": "Momentos históricos del largometraje",
+			"status": "review",
+			"language": "es",
+			"sourcePath": "docs/light-delay-long-full-feature-cut.md",
+			"summary": "Lista histórica de 28 momentos; contiene mecánicas descartadas.",
+			"blocks": [
+				{
+					"type": "callout",
+					"kind": "warning",
+					"text": "Fuente de recuperación, no canon vigente por sí sola."
+				}
+			]
+		},
+		{
+			"id": "document:feature-recovery-review",
+			"slug": "revision-largometraje-recuperado",
+			"title": "Revisión del largometraje recuperado",
+			"status": "review",
+			"language": "es",
+			"sourcePath": "docs/REVISION_LARGOMETRAJE_RECUPERADO.md",
+			"summary": "Decisiones editoriales sobre canon, reparto y material recuperado.",
+			"blocks": [
+				{
+					"type": "paragraph",
+					"text": "Esta página apunta a la revisión española autoritativa del material histórico."
+				}
+			]
 		}
 	]
 }

@@ -39,6 +39,17 @@ describe('extracted canonical data', () => {
 		expect(getEffectiveDuration(trailer)).toBe(90_000);
 	});
 
+	it('registers the reviewed long treatment without invented production units', () => {
+		const long = getScript('script:light-delay-long');
+		expect(long.script.kind).toBe('long_version');
+		expect(long.script.targetDurationMs).toBe(100 * 60 * 1000);
+		expect(long.scenes).toHaveLength(28);
+		expect(long.beats).toHaveLength(28);
+		expect(long.cues).toHaveLength(0);
+		expect(long.shots).toHaveLength(0);
+		expect(long.script.declaredEntityRefs).toHaveLength(14);
+	});
+
 	it('sums animatic duration to 30 minutes', () => {
 		expect(getEffectiveDuration(getCanonicalScript())).toBe(30 * 60 * 1000);
 	});
