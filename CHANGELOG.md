@@ -8,6 +8,7 @@
 - Añadidos overlays ingleses completos para las galerías de personajes, lugares, objetos, vehículos y facciones, más un ledger de migración que permite validar que toda página enlazada desde el índice legacy tenga destino actual.
 - Ampliados los contratos de documentos con `LocalizedValue`, procedencia y estado de traducción; `npm run port:legacy-text` recompone la migración y `validate:data` comprueba paridad ES/EN.
 - El build de marca genera PNG derivados desde SVG con Sharp; el build estático se verificó con `BASE_PATH=/light-delay`, incluidas rutas profundas bajo `/es/`.
+- Corregida la instalación limpia de CI: `npm run check` compila primero los módulos generados de Paraglide y comparte su configuración con Vite, sin depender de archivos residuales de un build local anterior.
 - El guion, diálogo, subtítulos derivados y descripciones narrativas de toma permanecen en español y quedan explícitamente diferidos a una fase editorial posterior.
 
 ## 2026-08-26 — Navegación y diseño responsive

@@ -2,14 +2,7 @@ import { defineConfig } from 'vitest/config';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { paraglideVitePlugin } from '@inlang/paraglide-js';
-
-function resolveBase(configuredBase: string | undefined): '' | `/${string}` {
-	if (!configuredBase || configuredBase === '/') return '';
-	if (!configuredBase.startsWith('/') || configuredBase.endsWith('/')) {
-		throw new Error('BASE_PATH must start with "/" and must not end with "/"');
-	}
-	return configuredBase as `/${string}`;
-}
+import { paraglideOptions, resolveBase } from './paraglide.config.mjs';
 
 const base = resolveBase(process.env.BASE_PATH);
 
@@ -29,22 +22,7 @@ export default defineConfig({
 				relative: false
 			}
 		}),
-		paraglideVitePlugin({
-			project: './project.inlang',
-			outdir: './src/lib/paraglide',
-			emitTsDeclarations: true,
-			strategy: ['url', 'baseLocale'],
-			trailingSlash: 'always',
-			urlPatterns: [
-				{
-					pattern: `:protocol://:domain(.*)::port?${base}/:path(.*)?`,
-					localized: [
-						['es', `:protocol://:domain(.*)::port?${base}/es/:path(.*)?`],
-						['en', `:protocol://:domain(.*)::port?${base}/:path(.*)?`]
-					]
-				}
-			]
-		})
+		paraglideVitePlugin(paraglideOptions(base))
 	],
 	test: {
 		expect: { requireAssertions: true },
