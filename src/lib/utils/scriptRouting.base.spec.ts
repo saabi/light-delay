@@ -10,21 +10,24 @@ const festival = 'script:light-delay-festival';
 describe('script routing under a project base path', () => {
 	it('preserves the current section without duplicating the base', () => {
 		expect(
-			hrefAfterScriptSwitch('/light-delay/animatic/script~light-delay-main-short', festival)
-		).toBe('/light-delay/animatic/script~light-delay-festival');
+			hrefAfterScriptSwitch('/light-delay/animatic/script~light-delay-main-short', festival, {
+				locale: 'en'
+			})
+		).toBe('/light-delay/animatic/script~light-delay-festival/');
 		expect(
 			hrefAfterScriptSwitch('/light-delay/compare/script~light-delay-main-short', festival, {
 				againstId: main,
-				registeredIds: [main, festival]
+				registeredIds: [main, festival],
+				locale: 'en'
 			})
 		).toBe(
-			'/light-delay/compare/script~light-delay-festival?against=script%3Alight-delay-main-short'
+			'/light-delay/compare/script~light-delay-festival/?against=script%3Alight-delay-main-short'
 		);
 	});
 
 	it('builds section links under the configured base', () => {
-		expect(scriptSectionHref('script', main)).toBe(
-			'/light-delay/script/script~light-delay-main-short'
+		expect(scriptSectionHref('script', main, 'en')).toBe(
+			'/light-delay/script/script~light-delay-main-short/'
 		);
 	});
 });

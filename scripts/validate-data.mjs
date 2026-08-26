@@ -235,6 +235,8 @@ function main() {
 	const factions = load('factions.json');
 	const voiceProfiles = load('voice-profiles.json');
 	const documents = load('documents.json');
+	const legacyMigration = load('legacy-text-migration.json');
+	const entityTranslations = load('translations/entities.en.json');
 	const narrativeFunctions = load('narrative-functions.json');
 	const entityVariants = load('entity-variants.json');
 	const taxonomy = load('comparison-taxonomy.json');
@@ -321,6 +323,56 @@ function main() {
 		documents.documents.map((d) => d.id),
 		errors
 	);
+	const entityCollections = [
+		...characters.characters,
+		...locations.locations,
+		...objects.objects,
+		...vehicles.vehicles,
+		...factions.factions
+	];
+	const entityIds = new Set(entityCollections.map((entity) => entity.id));
+	for (const entity of entityCollections) {
+		const translation = entityTranslations[entity.id];
+		if (!translation?.description?.trim()) {
+			errors.push(`entity translations: ${entity.id} missing English description`);
+		}
+		if ('role' in entity && !translation?.role?.trim()) {
+			errors.push(`entity translations: ${entity.id} missing English role`);
+		}
+	}
+	for (const id of Object.keys(entityTranslations)) {
+		if (!entityIds.has(id)) errors.push(`entity translations: unknown entity ${id}`);
+	}
+	for (const document of documents.documents) {
+		const source = document.content?.variants?.[document.sourceLanguage];
+		if (!Array.isArray(source)) {
+			errors.push(`documents: ${document.id} missing ${document.sourceLanguage} source blocks`);
+			continue;
+		}
+		const english = document.content.variants.en;
+		if (document.translationStatus?.en && !Array.isArray(english)) {
+			errors.push(`documents: ${document.id} declares EN status without EN content`);
+		}
+		if (Array.isArray(english)) {
+			if (english.length !== source.length)
+				errors.push(`documents: ${document.id} ES/EN block count mismatch`);
+			for (let index = 0; index < Math.min(source.length, english.length); index += 1) {
+				if (source[index].type !== english[index].type || source[index].id !== english[index].id) {
+					errors.push(`documents: ${document.id} block ${index + 1} topology mismatch`);
+				}
+			}
+		}
+	}
+	if (
+		!legacyMigration.pages?.length ||
+		legacyMigration.pages.some(
+			(page) => !page.destination || !page.disposition || !page.translation
+		)
+	) {
+		errors.push(
+			'legacy-text-migration: every legacy page needs destination, disposition, and translation status'
+		);
+	}
 	unique(
 		'narrativeFunctions',
 		narrativeFunctions.functions.map((f) => f.id),

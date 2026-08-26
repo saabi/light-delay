@@ -136,7 +136,9 @@ export function validateDocuments(file: DocumentsFile): ValidationResult {
 	);
 	for (const doc of file.documents) {
 		if (!doc.slug) errors.push(`documents: ${doc.id} missing slug`);
-		if (!Array.isArray(doc.blocks)) errors.push(`documents: ${doc.id} missing blocks`);
+		if (!doc.content || !Array.isArray(doc.content.variants?.[doc.content.sourceLanguage])) {
+			errors.push(`documents: ${doc.id} missing source content blocks`);
+		}
 	}
 	return { ok: errors.length === 0, errors };
 }

@@ -5,6 +5,8 @@
 	import { activeScriptIdFromParam, setActiveScriptId } from '$lib/state/active-script.svelte';
 	import { decodeScriptId } from '$lib/utils/scriptId';
 	import { hrefAfterScriptSwitch } from '$lib/utils/scriptRouting';
+	import * as m from '$lib/paraglide/messages.js';
+	import { scriptKindLabel, scriptLabel } from '$lib/data/selectors/scriptPresentation';
 
 	const scripts = listScripts();
 
@@ -30,10 +32,10 @@
 </script>
 
 <label class="switcher">
-	<span class="label">Guion / cut</span>
-	<select aria-label="Seleccionar guion o cut" value={activeScriptId} onchange={onChange}>
+	<span class="label">{m.script_switcher()}</span>
+	<select aria-label={m.script_switcher_aria()} value={activeScriptId} onchange={onChange}>
 		{#each scripts as entry (entry.id)}
-			<option value={entry.id}>{entry.label} ({entry.kind})</option>
+			<option value={entry.id}>{scriptLabel(entry)} ({scriptKindLabel(entry.kind)})</option>
 		{/each}
 	</select>
 </label>

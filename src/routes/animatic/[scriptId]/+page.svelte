@@ -4,10 +4,12 @@
 	import { getScript } from '$lib/data/repositories/index';
 	import { getShotMedia } from '$lib/data/repositories/lookups';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
-	import { withBase } from '$lib/utils/paths';
+	import { withLocale } from '$lib/utils/paths';
 	import type { Scene, Shot } from '$lib/types/script';
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
+	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
+	import * as m from '$lib/paraglide/messages.js';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const script = $derived(getScript(scriptId));
@@ -36,13 +38,13 @@
 		const list: string[] = [];
 		for (const shot of script.shots) {
 			if (getShotMedia(script, shot).state === 'missing') {
-				list.push(`Toma ${shot.id} sin imagen de take seleccionado.`);
+				list.push(m.animatic_missing_take_warning({ shotId: shot.id }));
 			}
 		}
 		const extra = list.length - 8;
 		if (extra > 0) {
 			list.length = 8;
-			list.push(`…y ${extra} avisos más.`);
+			list.push(m.animatic_more_warnings({ count: extra }));
 		}
 		return list;
 	});
@@ -61,17 +63,22 @@
 
 <main class="page">
 	<PageHeader
-		eyebrow="Animatic"
+		eyebrow={m.animatic_label()}
 		title={script.script.title}
-		lede="Duraciones editables se guardan en este navegador (por script y versión); el JSON canónico no se modifica."
-		meta={[`${script.shots.length} tomas`, `${script.scenes.length} escenas`, script.script.kind]}
+		lede={m.animatic_editor_lede()}
+		meta={[
+			`${script.shots.length} ${m.animatic_shots()}`,
+			`${script.scenes.length} ${m.script_scenes()}`,
+			script.script.kind
+		]}
 	/>
+	<StoryLanguageNotice />
 	{#key `${script.script.id}:${script.script.version}`}
 		<AnimaticEditor
 			{groups}
 			scriptId={script.script.id}
 			scriptVersion={script.script.version}
-			playerHref={withBase(`/animatic/${encoded}/player`)}
+			playerHref={withLocale(`/animatic/${encoded}/player`)}
 			targetDurationMs={script.script.targetDurationMs}
 			{warnings}
 		/>

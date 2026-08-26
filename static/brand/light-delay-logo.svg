@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" role="img" aria-labelledby="title desc">
+  <title id="title">Light Delay</title>
+  <desc id="desc">A delayed light signal crossing an eclipse.</desc>
+  <defs>
+    <linearGradient id="beam" x1="16" y1="64" x2="112" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5ee7ff" stop-opacity="0"/><stop offset=".4" stop-color="#5ee7ff"/><stop offset="1" stop-color="#f1bd62"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#07131d"/>
+  <path d="M14 64h100" stroke="url(#beam)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="58" cy="64" r="27" fill="#07131d" stroke="#5ee7ff" stroke-width="6"/>
+  <path d="M80 49a27 27 0 0 1 0 30" fill="none" stroke="#f1bd62" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="106" cy="64" r="6" fill="#f1bd62"/>
+  <text x="158" y="77" fill="#eef7fb" font-family="Georgia, serif" font-size="55" font-weight="700" letter-spacing="-2">Light Delay</text>
+</svg>

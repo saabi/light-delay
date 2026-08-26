@@ -3,36 +3,38 @@
 	import { activeScriptIdFromParam } from '$lib/state/active-script.svelte';
 	import { scriptSectionHref } from '$lib/utils/scriptRouting';
 	import { encodeScriptId } from '$lib/utils/scriptId';
-	import { withBase, withoutBase } from '$lib/utils/paths';
+	import { canonicalPathname, withLocale } from '$lib/utils/paths';
+	import * as m from '$lib/paraglide/messages.js';
 	import ScriptSwitcher from './ScriptSwitcher.svelte';
 
 	const activeScriptId = $derived(activeScriptIdFromParam(page.params.scriptId));
 
 	const links = $derived([
-		{ href: withBase('/'), label: 'Inicio', match: '/' },
-		{ href: scriptSectionHref('script', activeScriptId), label: 'Guion', match: '/script' },
+		{ href: withLocale('/'), label: m.nav_home(), match: '/' },
+		{ href: withLocale('/project'), label: m.nav_project(), match: '/project' },
+		{ href: scriptSectionHref('script', activeScriptId), label: m.nav_script(), match: '/script' },
 		{
 			href: scriptSectionHref('animatic', activeScriptId),
-			label: 'Animatic',
+			label: m.nav_animatic(),
 			match: '/animatic'
 		},
 		{
-			href: withBase(`/compare/${encodeScriptId(activeScriptId)}`),
-			label: 'Comparar',
+			href: withLocale(`/compare/${encodeScriptId(activeScriptId)}`),
+			label: m.nav_compare(),
 			match: '/compare'
 		},
-		{ href: withBase('/art'), label: 'Arte', match: '/art' },
-		{ href: withBase('/entities/characters'), label: 'Entidades', match: '/entities' },
+		{ href: withLocale('/art'), label: m.nav_art(), match: '/art' },
+		{ href: withLocale('/entities/characters'), label: m.nav_entities(), match: '/entities' },
 		{
-			href: withBase('/documents/notas-tecnicas-continuidad'),
-			label: 'Documentos',
+			href: withLocale('/documents/notas-tecnicas-continuidad'),
+			label: m.nav_documents(),
 			match: '/documents'
 		}
 	]);
 
 	function isActive(href: string, match?: string): boolean {
-		const path = withoutBase(page.url.pathname);
-		const prefix = match ?? withoutBase(href);
+		const path = canonicalPathname(page.url);
+		const prefix = match ?? canonicalPathname(new URL(href, page.url));
 		if (prefix === '/') return path === '/';
 		return path === prefix || path.startsWith(prefix + '/');
 	}
@@ -40,7 +42,7 @@
 
 <ScriptSwitcher />
 
-<nav class="nav" aria-label="Principal">
+<nav class="nav" aria-label={m.nav_primary()}>
 	{#each links as link (link.label)}
 		<a href={link.href} class:active={isActive(link.href, link.match)}>{link.label}</a>
 	{/each}

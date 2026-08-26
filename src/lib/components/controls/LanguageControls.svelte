@@ -4,6 +4,7 @@
 		setDialogueLanguage,
 		setSubtitleLanguage
 	} from '$lib/state/language.svelte';
+	import * as m from '$lib/paraglide/messages.js';
 
 	const languages = [
 		{ tag: 'es', label: 'Español' },
@@ -13,9 +14,9 @@
 	const lang = $derived(getLanguageState());
 </script>
 
-<div class="lang-controls" role="group" aria-label="Idioma de diálogo y subtítulos">
+<div class="lang-controls" role="group" aria-label={m.language_label()}>
 	<label>
-		Diálogo
+		{m.language_dialogue()}
 		<select
 			value={lang.dialogueLanguage}
 			onchange={(e) => setDialogueLanguage((e.currentTarget as HTMLSelectElement).value)}
@@ -26,7 +27,7 @@
 		</select>
 	</label>
 	<label>
-		Subtítulos
+		{m.language_subtitles()}
 		<select
 			value={lang.subtitleLanguage ?? 'off'}
 			onchange={(e) => {
@@ -34,7 +35,7 @@
 				setSubtitleLanguage(v === 'off' ? null : v);
 			}}
 		>
-			<option value="off">Desactivados</option>
+			<option value="off">{m.language_off()}</option>
 			{#each languages as option (option.tag)}
 				<option value={option.tag}>{option.label}</option>
 			{/each}

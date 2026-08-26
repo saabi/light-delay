@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { withBase } from '$lib/utils/paths';
+	import { withBase, withLocale } from '$lib/utils/paths';
 
 	let {
 		href,
@@ -15,7 +15,7 @@
 		eyebrow?: string;
 	} = $props();
 
-	const resolvedHref = $derived(withBase(href));
+	const resolvedHref = $derived(withLocale(href));
 	const resolvedImageSrc = $derived(imageSrc ? withBase(imageSrc) : undefined);
 </script>
 

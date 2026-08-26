@@ -5,7 +5,7 @@
 </script>
 
 <div class="document-viewer">
-	{#each blocks as block, i (i)}
+	{#each blocks as block, i (block.id ?? `${block.type}-${i}`)}
 		{#if block.type === 'heading'}
 			{#if block.level === 1}
 				<h1 id={block.id}>{block.text}</h1>
@@ -38,6 +38,28 @@
 			<aside class="callout" data-kind={block.kind ?? 'note'}>
 				{block.text}
 			</aside>
+		{:else if block.type === 'table'}
+			<div class="table-scroll">
+				<table id={block.id}>
+					{#if block.caption}<caption>{block.caption}</caption>{/if}
+					<thead
+						><tr
+							>{#each block.headers as header, column (column)}<th scope="col">{header}</th
+								>{/each}</tr
+						></thead
+					>
+					<tbody
+						>{#each block.rows as row, rowIndex (rowIndex)}<tr
+								>{#each row as cell, column (column)}<td>{cell}</td>{/each}</tr
+							>{/each}</tbody
+					>
+				</table>
+			</div>
+		{:else if block.type === 'beat'}
+			<article class="beat" id={block.id}>
+				<strong>{block.title}</strong>
+				<p>{block.text}</p>
+			</article>
 		{:else if block.type === 'hr'}
 			<hr />
 		{/if}
@@ -93,6 +115,52 @@
 		border: 0;
 		border-top: 1px solid var(--line);
 		margin: 2rem 0;
+	}
+
+	.table-scroll {
+		margin: 1.25rem 0;
+		overflow-x: auto;
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+	}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		min-width: 34rem;
+		font-size: 0.86rem;
+	}
+	caption {
+		padding: 0.8rem 1rem;
+		color: var(--muted);
+		text-align: left;
+	}
+	th,
+	td {
+		padding: 0.7rem 0.85rem;
+		border-bottom: 1px solid var(--line);
+		text-align: left;
+		vertical-align: top;
+	}
+	th {
+		color: var(--cyan);
+		background: var(--panel2);
+		font: 700 0.72rem var(--font-mono);
+		text-transform: uppercase;
+	}
+	tr:last-child td {
+		border-bottom: 0;
+	}
+	.beat {
+		margin: 1rem 0;
+		padding: 1rem 1.1rem;
+		border-left: 0.2rem solid var(--gold);
+		background: var(--panel);
+	}
+	.beat strong {
+		color: var(--gold);
+	}
+	.beat p {
+		margin: 0.35rem 0 0;
 	}
 
 	ul,

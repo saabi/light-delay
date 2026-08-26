@@ -13,6 +13,7 @@
 	import type { EntityRef, Note } from '$lib/types/common';
 	import type { Cue, CuePlacement, ScriptFile, Shot, SourceReference } from '$lib/types/script';
 	import { formatClock } from '$lib/utils/duration';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let {
 		script,
@@ -72,7 +73,7 @@
 	}
 
 	function noteLabel(note: Note): string {
-		return `${note.type}${note.resolved ? ' · resuelta' : ''}: ${note.text}`;
+		return `${note.type}${note.resolved ? ` · ${m.details_resolved()}` : ''}: ${note.text}`;
 	}
 
 	function sourceLabel(source: SourceReference): string {
@@ -85,61 +86,64 @@
 	}
 
 	function timingLabel(placement: CuePlacement | undefined): string {
-		if (!placement) return 'Sin ubicación temporal';
-		const parts = [`inicio ${ms(placement.atMs)}`];
-		if (placement.durationMs !== undefined) parts.push(`duración ${ms(placement.durationMs)}`);
+		if (!placement) return m.details_no_timing();
+		const parts = [`${m.details_start()} ${ms(placement.atMs)}`];
+		if (placement.durationMs !== undefined)
+			parts.push(`${m.details_duration()} ${ms(placement.durationMs)}`);
 		if (placement.sourceOffsetMs !== undefined)
-			parts.push(`offset ${ms(placement.sourceOffsetMs)}`);
-		if (placement.gainDb !== undefined) parts.push(`ganancia ${placement.gainDb} dB`);
+			parts.push(`${m.details_offset()} ${ms(placement.sourceOffsetMs)}`);
+		if (placement.gainDb !== undefined) parts.push(`${m.details_gain()} ${placement.gainDb} dB`);
 		if (placement.presentationOverride)
-			parts.push(`presentación ${placement.presentationOverride}`);
+			parts.push(`${m.details_presentation()} ${placement.presentationOverride}`);
 		const localized = placement.timingByLanguage?.[lang.dialogueLanguage];
-		if (localized) parts.push(`temporización ${lang.dialogueLanguage} disponible`);
+		if (localized) parts.push(m.details_timing_available({ language: lang.dialogueLanguage }));
 		return parts.join(' · ');
 	}
 </script>
 
 <div class="details-content">
 	<section>
-		<h3>Identidad y tiempo</h3>
+		<h3>{m.details_identity_time()}</h3>
 		<dl>
 			<div>
-				<dt>Escena / toma</dt>
+				<dt>{m.details_scene_shot()}</dt>
 				<dd>{scene?.number ?? '—'} / {shot.number}</dd>
 			</div>
 			<div>
-				<dt>Posición</dt>
+				<dt>{m.details_position()}</dt>
 				<dd>{shotIndex + 1} de {totalShots}</dd>
 			</div>
 			<div>
-				<dt>ID de toma</dt>
+				<dt>{m.details_shot_id()}</dt>
 				<dd class="mono">{shot.id}</dd>
 			</div>
 			<div>
-				<dt>Duración actual</dt>
+				<dt>{m.animatic_current_duration()}</dt>
 				<dd>{ms(effectiveDurationMs)}</dd>
 			</div>
 			<div>
-				<dt>Duración canónica</dt>
+				<dt>{m.details_canonical_duration()}</dt>
 				<dd>{ms(shot.durationMs)}</dd>
 			</div>
 			<div>
-				<dt>Entrada / salida</dt>
+				<dt>{m.details_in_out()}</dt>
 				<dd>{ms(absoluteInMs)} / {ms(absoluteInMs + effectiveDurationMs)}</dd>
 			</div>
 		</dl>
-		<p><b>Contenido</b><br />{shot.description}</p>
-		{#if shot.purpose}<p><b>Propósito</b><br />{shot.purpose}</p>{/if}
+		<p><b>{m.animatic_content()}</b><br />{shot.description}</p>
+		{#if shot.purpose}<p><b>{m.details_purpose()}</b><br />{shot.purpose}</p>{/if}
 	</section>
 
 	{#if scene}
 		<section>
-			<h3>Contexto narrativo</h3>
+			<h3>{m.details_narrative_context()}</h3>
 			<p><b>{scene.title}</b><br />{scene.summary}</p>
-			{#if scene.dramaticPurpose}<p><b>Propósito dramático</b><br />{scene.dramaticPurpose}</p>{/if}
+			{#if scene.dramaticPurpose}<p>
+					<b>{m.details_dramatic_purpose()}</b><br />{scene.dramaticPurpose}
+				</p>{/if}
 			<dl>
 				<div>
-					<dt>Localización</dt>
+					<dt>{m.details_location()}</dt>
 					<dd>
 						{getLocationById(shot.locationId ?? scene.locationId)?.name ??
 							shot.locationId ??
@@ -147,19 +151,19 @@
 					</dd>
 				</div>
 				<div>
-					<dt>Interior / exterior</dt>
+					<dt>{m.details_interior_exterior()}</dt>
 					<dd>{present(scene.setting.interiorExterior)}</dd>
 				</div>
 				<div>
-					<dt>Momento</dt>
+					<dt>{m.details_moment()}</dt>
 					<dd>{present(scene.setting.timeOfDay)}</dd>
 				</div>
 				<div>
-					<dt>Tiempo del relato</dt>
+					<dt>{m.details_story_time()}</dt>
 					<dd>{present(scene.setting.storyTime)}</dd>
 				</div>
 				<div>
-					<dt>Continuidad</dt>
+					<dt>{m.animatic_continuity()}</dt>
 					<dd>{present(scene.setting.continuity)}</dd>
 				</div>
 			</dl>
@@ -168,9 +172,9 @@
 					<b>{beat.title ?? `Beat ${beat.order}`}</b>
 					<p>{beat.summary}</p>
 					<p>
-						<span>Función:</span>
+						<span>{m.details_function()}:</span>
 						{beat.purpose}{#if beat.tension !== undefined}
-							· Tensión {beat.tension}{/if}
+							· {m.details_tension()} {beat.tension}{/if}
 					</p>
 				</div>
 			{/each}
@@ -178,97 +182,105 @@
 	{/if}
 
 	<section>
-		<h3>Personas y entidades</h3>
+		<h3>{m.details_people_entities()}</h3>
 		{#if shot.visibleRefs?.length}<p>
-				<b>En cuadro</b><br />{shot.visibleRefs.map(entityLabel).join(', ')}
+				<b>{m.details_in_frame()}</b><br />{shot.visibleRefs.map(entityLabel).join(', ')}
 			</p>{/if}
 		{#if shot.offScreenCharacterIds?.length}<p>
-				<b>Fuera de cuadro</b><br />{shot.offScreenCharacterIds.map(characterName).join(', ')}
+				<b>{m.details_offscreen()}</b><br />{shot.offScreenCharacterIds
+					.map(characterName)
+					.join(', ')}
 			</p>{/if}
 		{#if scene?.characterIds.length}<p>
-				<b>Personajes de la escena</b><br />{scene.characterIds.map(characterName).join(', ')}
+				<b>{m.details_scene_characters()}</b><br />{scene.characterIds
+					.map(characterName)
+					.join(', ')}
 			</p>{/if}
 		{#if scene?.objectIds?.length}<p>
-				<b>Objetos</b><br />{scene.objectIds.map((id) => getObjectById(id)?.name ?? id).join(', ')}
+				<b>{m.entities_objects()}</b><br />{scene.objectIds
+					.map((id) => getObjectById(id)?.name ?? id)
+					.join(', ')}
 			</p>{/if}
 		{#if scene?.vehicleIds?.length}<p>
-				<b>Vehículos</b><br />{scene.vehicleIds
+				<b>{m.entities_vehicles()}</b><br />{scene.vehicleIds
 					.map((id) => getVehicleById(id)?.name ?? id)
 					.join(', ')}
 			</p>{/if}
 		{#if scene?.factionIds?.length}<p>
-				<b>Facciones</b><br />{scene.factionIds
+				<b>{m.entities_factions()}</b><br />{scene.factionIds
 					.map((id) => getFactionById(id)?.name ?? id)
 					.join(', ')}
 			</p>{/if}
 	</section>
 
 	<section>
-		<h3>Composición y cámara</h3>
+		<h3>{m.animatic_camera()}</h3>
 		<dl>
 			<div>
-				<dt>Tamaño</dt>
+				<dt>{m.details_size()}</dt>
 				<dd>{shot.composition.size}</dd>
 			</div>
 			<div>
-				<dt>Ángulo</dt>
+				<dt>{m.details_angle()}</dt>
 				<dd>{present(shot.composition.angle)}</dd>
 			</div>
 			<div>
-				<dt>Encuadre</dt>
+				<dt>{m.details_framing()}</dt>
 				<dd>{present(shot.composition.framing)}</dd>
 			</div>
 			<div>
-				<dt>Foco</dt>
+				<dt>{m.details_focus()}</dt>
 				<dd>{present(shot.composition.focus)}</dd>
 			</div>
 			<div>
-				<dt>Primer término</dt>
+				<dt>{m.details_foreground()}</dt>
 				<dd>{present(shot.composition.foreground)}</dd>
 			</div>
 			<div>
-				<dt>Fondo</dt>
+				<dt>{m.details_background()}</dt>
 				<dd>{present(shot.composition.background)}</dd>
 			</div>
 			<div>
-				<dt>Relación de aspecto</dt>
+				<dt>{m.details_aspect_ratio()}</dt>
 				<dd>{present(shot.composition.aspectRatio)}</dd>
 			</div>
 			<div>
-				<dt>Lente</dt>
+				<dt>{m.details_lens()}</dt>
 				<dd>{shot.camera?.lensMm ? `${shot.camera.lensMm} mm` : '—'}</dd>
 			</div>
 			<div>
-				<dt>Movimiento</dt>
+				<dt>{m.details_movement()}</dt>
 				<dd>{present(shot.camera?.movement)}</dd>
 			</div>
 			<div>
-				<dt>Descripción</dt>
+				<dt>{m.details_description()}</dt>
 				<dd>{present(shot.camera?.movementDescription)}</dd>
 			</div>
 			<div>
-				<dt>Cuadro inicial</dt>
+				<dt>{m.details_start_frame()}</dt>
 				<dd>{present(shot.camera?.startFrame)}</dd>
 			</div>
 			<div>
-				<dt>Cuadro final</dt>
+				<dt>{m.details_end_frame()}</dt>
 				<dd>{present(shot.camera?.endFrame)}</dd>
 			</div>
 		</dl>
 		{#if shot.transitionIn}<p>
-				<b>Entrada</b><br />{shot.transitionIn.type}{shot.transitionIn.durationMs
+				<b>{m.details_transition_in()}</b><br />{shot.transitionIn.type}{shot.transitionIn
+					.durationMs
 					? ` · ${ms(shot.transitionIn.durationMs)}`
 					: ''}{shot.transitionIn.description ? ` · ${shot.transitionIn.description}` : ''}
 			</p>{/if}
 		{#if shot.transitionOut}<p>
-				<b>Salida</b><br />{shot.transitionOut.type}{shot.transitionOut.durationMs
+				<b>{m.details_transition_out()}</b><br />{shot.transitionOut.type}{shot.transitionOut
+					.durationMs
 					? ` · ${ms(shot.transitionOut.durationMs)}`
 					: ''}{shot.transitionOut.description ? ` · ${shot.transitionOut.description}` : ''}
 			</p>{/if}
 	</section>
 
 	<section>
-		<h3>Cues y línea temporal</h3>
+		<h3>{m.details_cues_timeline()}</h3>
 		{#if cues.length}
 			<ol class="cue-list">
 				{#each cues as cue (cue.id)}
@@ -281,18 +293,20 @@
 							{@const resolved = resolveLocalized(cue.content, lang.dialogueLanguage, 'es')}
 							<p>
 								<b>{characterName(cue.speakerId)}</b>{cue.addresseeIds?.length
-									? ` a ${cue.addresseeIds.map(characterName).join(', ')}`
+									? ` ${m.details_to()} ${cue.addresseeIds.map(characterName).join(', ')}`
 									: ''} · {placement?.presentationOverride ?? cue.presentation}
 							</p>
-							<p class="quote">“{resolved?.value.spokenText ?? 'Sin variante disponible'}”</p>
+							<p class="quote">“{resolved?.value.spokenText ?? m.details_no_variant()}”</p>
 							{#if cue.performance}<p>
-									Interpretación: {Object.entries(cue.performance)
+									{m.details_performance()}: {Object.entries(cue.performance)
 										.map(([key, value]) => `${key} ${value}`)
 										.join(' · ')}
 								</p>{/if}
-							{#if resolved?.value.delivery}<p>Entrega: {resolved.value.delivery}</p>{/if}
+							{#if resolved?.value.delivery}<p>
+									{m.details_delivery()}: {resolved.value.delivery}
+								</p>{/if}
 							{#if resolved?.value.pronunciationNote}<p>
-									Pronunciación: {resolved.value.pronunciationNote}
+									{m.details_pronunciation()}: {resolved.value.pronunciationNote}
 								</p>{/if}
 						{:else if cue.type === 'sound'}
 							<p>
@@ -308,7 +322,7 @@
 							</p>
 						{:else if cue.type === 'silence'}
 							<p>
-								{cue.purpose ?? 'Silencio'}{cue.estimatedDurationMs !== undefined
+								{cue.purpose ?? m.script_silence()}{cue.estimatedDurationMs !== undefined
 									? ` · ${ms(cue.estimatedDurationMs)}`
 									: ''}
 							</p>
@@ -316,7 +330,7 @@
 							<p>{cue.transition}{cue.description ? ` · ${cue.description}` : ''}</p>
 						{:else if cue.type === 'text'}
 							{@const resolved = resolveLocalized(cue.content, lang.dialogueLanguage, 'es')}
-							<p>{cue.presentation} · {resolved?.value.text ?? 'Sin variante disponible'}</p>
+							<p>{cue.presentation} · {resolved?.value.text ?? m.details_no_variant()}</p>
 						{/if}
 						{#if cue.notes?.length}<ul>
 								{#each cue.notes as note (note)}<li>{noteLabel(note)}</li>{/each}
@@ -324,30 +338,32 @@
 					</li>
 				{/each}
 			</ol>
-		{:else}<p>Sin cues asignados.</p>{/if}
+		{:else}<p>{m.details_no_cues()}</p>{/if}
 	</section>
 
 	<section>
-		<h3>Take, imagen y revisión</h3>
+		<h3>{m.details_take_image_review()}</h3>
 		<dl>
 			<div>
-				<dt>Take seleccionado</dt>
-				<dd>{media.take ? `${media.take.number} · ${media.take.status}` : 'No disponible'}</dd>
+				<dt>{m.details_selected_take()}</dt>
+				<dd>
+					{media.take ? `${media.take.number} · ${media.take.status}` : m.details_unavailable()}
+				</dd>
 			</div>
 			<div>
-				<dt>ID de take</dt>
+				<dt>{m.details_take_id()}</dt>
 				<dd class="mono">{media.take?.id ?? '—'}</dd>
 			</div>
 			<div>
-				<dt>Asset</dt>
-				<dd>{media.asset?.title ?? media.asset?.id ?? 'Sin asset resoluble'}</dd>
+				<dt>{m.details_asset()}</dt>
+				<dd>{media.asset?.title ?? media.asset?.id ?? m.details_unresolved_asset()}</dd>
 			</div>
 			<div>
-				<dt>Ruta</dt>
+				<dt>{m.details_path()}</dt>
 				<dd class="mono">{media.asset?.path ?? media.fallbackPath ?? '—'}</dd>
 			</div>
 			<div>
-				<dt>Dimensiones</dt>
+				<dt>{m.asset_dimensions()}</dt>
 				<dd>
 					{media.asset?.width && media.asset.height
 						? `${media.asset.width} × ${media.asset.height}`
@@ -355,7 +371,7 @@
 				</dd>
 			</div>
 			<div>
-				<dt>Estado visual</dt>
+				<dt>{m.details_visual_status()}</dt>
 				<dd>
 					{media.take?.imageStatus?.status ??
 						media.asset?.imageStatus?.status ??
@@ -364,30 +380,34 @@
 			</div>
 		</dl>
 		{#if imageStatus}
-			<p><b>Motivos</b><br />{imageStatus.reasons.join(', ')}</p>
-			{#if imageStatus.explanation}<p><b>Explicación</b><br />{imageStatus.explanation}</p>{/if}
+			<p><b>{m.details_reasons()}</b><br />{imageStatus.reasons.join(', ')}</p>
+			{#if imageStatus.explanation}<p>
+					<b>{m.details_explanation()}</b><br />{imageStatus.explanation}
+				</p>{/if}
 			{#if imageStatus.replacementBrief}<p>
-					<b>Brief de reemplazo</b><br />{imageStatus.replacementBrief}
+					<b>{m.details_replacement_brief()}</b><br />{imageStatus.replacementBrief}
 				</p>{/if}
 			{#if media.take?.imageStatus?.sourceShotId}<p>
-					<b>Toma de origen</b><br /><span class="mono">{media.take.imageStatus.sourceShotId}</span>
+					<b>{m.details_source_shot()}</b><br /><span class="mono"
+						>{media.take.imageStatus.sourceShotId}</span
+					>
 				</p>{/if}
 		{/if}
 		{#if media.take?.generation}
 			<p>
-				<b>Generación</b><br />{[
+				<b>{m.details_generation()}</b><br />{[
 					media.take.generation.provider,
 					media.take.generation.model,
 					media.take.generation.generatedAt
 				]
 					.filter(Boolean)
-					.join(' · ') || 'Metadatos parciales'}
+					.join(' · ') || m.details_partial_metadata()}
 			</p>
 			{#if media.take.generation.prompt}<p>
 					<b>Prompt</b><br />{media.take.generation.prompt}
 				</p>{/if}
 			{#if media.take.generation.negativePrompt}<p>
-					<b>Prompt negativo</b><br />{media.take.generation.negativePrompt}
+					<b>{m.details_negative_prompt()}</b><br />{media.take.generation.negativePrompt}
 				</p>{/if}
 			{#if media.take.generation.seed !== undefined}<p>
 					<b>Seed</b><br />{media.take.generation.seed}
@@ -395,7 +415,7 @@
 		{/if}
 		{#if media.take?.review}
 			<p>
-				<b>Revisión</b><br />{Object.entries(media.take.review)
+				<b>{m.details_review()}</b><br />{Object.entries(media.take.review)
 					.map(([key, value]) => `${key}: ${value}`)
 					.join(' · ')}
 			</p>
@@ -404,19 +424,21 @@
 
 	{#if shot.notes?.length || shot.sourceRefs?.length || beats.some((beat) => beat.notes?.length || beat.sourceRefs?.length)}
 		<section>
-			<h3>Notas y procedencia</h3>
+			<h3>{m.details_notes_provenance()}</h3>
 			{#if shot.notes?.length}<ul>
 					{#each shot.notes as note (note)}<li>{noteLabel(note)}</li>{/each}
 				</ul>{/if}
 			{#if shot.sourceRefs?.length}<p>
-					<b>Fuentes de la toma</b><br />{shot.sourceRefs.map(sourceLabel).join('; ')}
+					<b>{m.details_shot_sources()}</b><br />{shot.sourceRefs.map(sourceLabel).join('; ')}
 				</p>{/if}
 			{#each beats as beat (beat.id)}
 				{#if beat.notes?.length}<p>
-						<b>Notas de {beat.title ?? beat.id}</b><br />{beat.notes.map(noteLabel).join('; ')}
+						<b>{m.details_notes_for({ name: beat.title ?? beat.id })}</b><br />{beat.notes
+							.map(noteLabel)
+							.join('; ')}
 					</p>{/if}
 				{#if beat.sourceRefs?.length}<p>
-						<b>Fuentes de {beat.title ?? beat.id}</b><br />{beat.sourceRefs
+						<b>{m.details_sources_for({ name: beat.title ?? beat.id })}</b><br />{beat.sourceRefs
 							.map(sourceLabel)
 							.join('; ')}
 					</p>{/if}
@@ -425,7 +447,7 @@
 	{/if}
 
 	<section class="language-section">
-		<h3>Idioma</h3>
+		<h3>{m.language_label()}</h3>
 		<LanguageControls />
 	</section>
 </div>

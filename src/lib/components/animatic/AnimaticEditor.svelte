@@ -12,6 +12,7 @@
 	import type { ScriptId } from '$lib/types/ids';
 	import type { Scene, Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
+	import * as m from '$lib/paraglide/messages.js';
 
 	type SceneGroup = {
 		scene: Scene;
@@ -66,9 +67,9 @@
 		<div>
 			<strong>{formatClock(totalMs)}</strong>
 			<small>
-				efectivo
+				{m.animatic_effective()}
 				{#if targetDurationMs !== undefined}
-					/ objetivo {formatClock(targetDurationMs)}
+					/ {m.animatic_target().toLowerCase()} {formatClock(targetDurationMs)}
 				{/if}
 			</small>
 		</div>
@@ -77,7 +78,7 @@
 				style:width={`${targetDurationMs ? Math.min(100, (totalMs / targetDurationMs) * 100) : 0}%`}
 			></span>
 		</div>
-		<a class="play-link" href={playerHref}>Modo película</a>
+		<a class="play-link" href={playerHref}>{m.action_view_movie()}</a>
 	</div>
 
 	<ContinuityWarnings {warnings} />
@@ -85,10 +86,11 @@
 	{#each groups as group (group.scene.id)}
 		<section class="scene-group">
 			<header>
-				<h2>Escena {group.scene.number}</h2>
+				<h2>{m.script_scene()} {group.scene.number}</h2>
 				<p>{group.scene.summary || group.scene.title}</p>
 				<small>
-					{formatClock(effectiveTotalMs(edits, group.shots))} · {group.shots.length} tomas
+					{formatClock(effectiveTotalMs(edits, group.shots))} · {group.shots.length}
+					{m.animatic_shots()}
 				</small>
 			</header>
 			<div class="shots">

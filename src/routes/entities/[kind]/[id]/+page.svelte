@@ -1,31 +1,35 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
-	import { withBase } from '$lib/utils/paths';
+	import { withBase, withLocale } from '$lib/utils/paths';
 	import { encodeRouteId } from '$lib/utils/routeId';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let { data } = $props();
 	const entity = $derived(data.entity);
+	const labels = {
+		characters: m.entities_characters(),
+		locations: m.entities_locations(),
+		objects: m.entities_objects(),
+		vehicles: m.entities_vehicles(),
+		factions: m.entities_factions()
+	};
+	const label = $derived(labels[data.kind as keyof typeof labels]);
 </script>
 
 <main class="page">
 	<p class="crumb">
-		<a href={withBase(`/entities/${data.kind}`)}>{data.label}</a>
+		<a href={withLocale(`/entities/${data.kind}`)}>{label}</a>
 		<span>/</span>
 		<span>{entity.name}</span>
 	</p>
-	<PageHeader
-		eyebrow={data.label}
-		title={entity.name}
-		lede={entity.description}
-		meta={[entity.id]}
-	/>
+	<PageHeader eyebrow={label} title={entity.name} lede={entity.description} meta={[entity.id]} />
 
 	{#if data.assets.length}
 		<section>
-			<h2>Assets de referencia</h2>
+			<h2>{m.entities_related_assets()}</h2>
 			<div class="assets">
 				{#each data.assets as asset (asset.id)}
-					<a class="asset" href={withBase(`/assets/${encodeRouteId(asset.id)}`)}>
+					<a class="asset" href={withLocale(`/assets/${encodeRouteId(asset.id)}`)}>
 						{#if asset.kind === 'image'}
 							<img src={withBase(asset.path)} alt={asset.title ?? asset.id} loading="lazy" />
 						{/if}

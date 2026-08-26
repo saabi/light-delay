@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation';
-	import { withBase } from '$lib/utils/paths';
+	import { withBase, withLocale } from '$lib/utils/paths';
+	import * as m from '$lib/paraglide/messages.js';
+	import LocaleSwitcher from '$lib/components/controls/LocaleSwitcher.svelte';
 	import { onMount, type Snippet } from 'svelte';
 
 	let {
@@ -59,20 +61,23 @@
 <div class="shell-container">
 	<div class="shell">
 		<header class="desktop-header">
-			<a class="brand" href={withBase('/')}>
-				<span class="orb" aria-hidden="true"></span>
+			<a class="brand" href={withLocale('/')}>
+				<img src={withBase('/brand/light-delay-mark.svg')} alt="" aria-hidden="true" />
 				<span>Light Delay</span>
 			</a>
-			<a
-				class="github-link"
-				href="https://github.com/saabi/light-delay"
-				target="_blank"
-				rel="noopener noreferrer">GitHub</a
-			>
+			<div class="header-actions">
+				<LocaleSwitcher compact />
+				<a
+					class="github-link"
+					href="https://github.com/saabi/light-delay"
+					target="_blank"
+					rel="noopener noreferrer">{m.nav_github()}</a
+				>
+			</div>
 		</header>
 
 		{#if navigation}
-			<aside class="desktop-rail" aria-label="Navegación del proyecto">
+			<aside class="desktop-rail" aria-label={m.nav_primary()}>
 				{@render navigation()}
 			</aside>
 		{/if}
@@ -81,29 +86,29 @@
 			{@render children()}
 		</div>
 
-		<nav class="mobile-bar" aria-label="Acciones del sitio">
-			<a class="brand mobile-brand" href={withBase('/')} aria-label="Ir al inicio">
-				<span class="orb" aria-hidden="true"></span>
+		<nav class="mobile-bar" aria-label={m.nav_primary()}>
+			<a class="brand mobile-brand" href={withLocale('/')} aria-label={m.nav_home()}>
+				<img src={withBase('/brand/light-delay-mark.svg')} alt="" aria-hidden="true" />
 				<span>Light Delay</span>
 			</a>
 			<a
 				class="github-link mobile-github"
 				href="https://github.com/saabi/light-delay"
 				target="_blank"
-				rel="noopener noreferrer">GitHub</a
+				rel="noopener noreferrer">{m.nav_github()}</a
 			>
 			{#if navigation}
 				<button
 					bind:this={menuButton}
 					type="button"
 					class="menu-button"
-					aria-label="Abrir menú principal"
+					aria-label={m.nav_open_menu()}
 					aria-expanded={menuOpen}
 					aria-controls="project-navigation"
 					onclick={openMenu}
 				>
 					<span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
-					<span>Menú</span>
+					<span>{m.nav_primary()}</span>
 				</button>
 			{/if}
 		</nav>
@@ -120,17 +125,18 @@
 				<div class="drawer-panel">
 					<header>
 						<div>
-							<span class="eyebrow">Proyecto</span>
-							<h2 id="navigation-title">Navegación</h2>
+							<span class="eyebrow">{m.nav_project()}</span>
+							<h2 id="navigation-title">{m.nav_primary()}</h2>
 						</div>
 						<button
 							type="button"
 							class="close-button"
-							aria-label="Cerrar menú"
+							aria-label={m.nav_close_menu()}
 							onclick={() => closeMenu()}>×</button
 						>
 					</header>
 					<div class="drawer-body">
+						<LocaleSwitcher />
 						{@render navigation()}
 					</div>
 				</div>
@@ -196,13 +202,16 @@
 		white-space: nowrap;
 	}
 
-	.orb {
-		width: 0.6875rem;
-		height: 0.6875rem;
-		border-radius: 50%;
-		background: var(--cyan);
-		box-shadow: 0 0 1.25rem var(--cyan);
+	.brand img {
+		width: 1.25rem;
+		height: 1.25rem;
 		flex: none;
+	}
+
+	.header-actions {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
 	}
 
 	.github-link {
@@ -349,6 +358,10 @@
 		overscroll-behavior: contain;
 		padding: 1.25rem;
 		padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+	}
+
+	.drawer-body :global(.locale-switcher) {
+		margin-bottom: 1rem;
 	}
 
 	@container app-shell (min-width: calc(26.88em + 52.8ch)) {

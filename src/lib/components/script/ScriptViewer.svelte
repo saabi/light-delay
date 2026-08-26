@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Act, Beat, CharacterFunctionAssignment, Cue, Scene } from '$lib/types/script';
 	import SceneSection from './SceneSection.svelte';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let {
 		acts,
@@ -19,10 +20,10 @@
 
 <div class="script-viewer">
 	{#if characterFunctionAssignments?.length}
-		<section class="functions" aria-label="Asignación de funciones narrativas">
-			<h2>Funciones narrativas</h2>
+		<section class="functions" aria-label={m.script_functions()}>
+			<h2>{m.script_functions()}</h2>
 			<p class="lede">
-				Reasignaciones de función dramática específicas de este cut (no alteran el guion canónico).
+				{m.script_functions_lede()}
 			</p>
 			<ul>
 				{#each characterFunctionAssignments as a (a.functionId + a.characterId)}
@@ -31,7 +32,7 @@
 						→ <code>{a.characterId}</code>
 						<span class="rel">{a.relationship}</span>
 						{#if a.sourceCharacterIds?.length}
-							<small>desde {a.sourceCharacterIds.join(', ')}</small>
+							<small>{m.script_from()} {a.sourceCharacterIds.join(', ')}</small>
 						{/if}
 						{#if a.notes}
 							<p>{a.notes}</p>
@@ -45,8 +46,8 @@
 	{#each acts as act (act.id)}
 		<section class="act">
 			<header>
-				<p class="eyebrow">Acto {act.number}</p>
-				<h2>{act.title ?? `Acto ${act.number}`}</h2>
+				<p class="eyebrow">{m.script_act()} {act.number}</p>
+				<h2>{act.title ?? `${m.script_act()} ${act.number}`}</h2>
 				{#if act.dramaticPurpose}
 					<p>{act.dramaticPurpose}</p>
 				{/if}

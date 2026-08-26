@@ -1,5 +1,6 @@
 import { decodeScriptId, encodeScriptId } from './scriptId';
-import { withBase, withoutBase } from './paths';
+import { canonicalPathname, withLocale } from './paths';
+import type { Locale } from '$lib/paraglide/runtime.js';
 
 export const ACTIVE_SCRIPT_STORAGE_KEY = 'light-delay.activeScriptId';
 
@@ -44,33 +45,38 @@ export function resolveActiveScriptId(options: {
 export function hrefAfterScriptSwitch(
 	pathname: string,
 	newScriptId: string,
-	options: { againstId?: string | null; registeredIds?: readonly string[] } = {}
+	options: { againstId?: string | null; registeredIds?: readonly string[]; locale?: Locale } = {}
 ): string {
-	const localPathname = withoutBase(pathname);
+	const localPathname = canonicalPathname(new URL(pathname, 'https://light-delay.local'));
 	const encoded = encodeScriptId(newScriptId);
 	if (/^\/compare\/[^/]+\/?$/.test(localPathname)) {
 		const against =
 			options.againstId && options.againstId !== newScriptId
 				? options.againstId
 				: options.registeredIds?.find((id) => id !== newScriptId);
-		return withBase(
+		return withLocale(
 			against
 				? `/compare/${encoded}?against=${encodeURIComponent(against)}`
-				: `/compare/${encoded}`
+				: `/compare/${encoded}`,
+			options.locale
 		);
 	}
 	if (/^\/animatic\/[^/]+\/player\/?$/.test(localPathname)) {
-		return withBase(`/animatic/${encoded}/player`);
+		return withLocale(`/animatic/${encoded}/player`, options.locale);
 	}
 	if (/^\/animatic(\/[^/]+)?\/?$/.test(localPathname)) {
-		return withBase(`/animatic/${encoded}`);
+		return withLocale(`/animatic/${encoded}`, options.locale);
 	}
 	if (/^\/script(\/[^/]+)?\/?$/.test(localPathname)) {
-		return withBase(`/script/${encoded}`);
+		return withLocale(`/script/${encoded}`, options.locale);
 	}
-	return withBase(`/script/${encoded}`);
+	return withLocale(`/script/${encoded}`, options.locale);
 }
 
-export function scriptSectionHref(section: 'script' | 'animatic', scriptId: string): string {
-	return withBase(`/${section}/${encodeScriptId(scriptId)}`);
+export function scriptSectionHref(
+	section: 'script' | 'animatic',
+	scriptId: string,
+	locale?: Locale
+): string {
+	return withLocale(`/${section}/${encodeScriptId(scriptId)}`, locale);
 }

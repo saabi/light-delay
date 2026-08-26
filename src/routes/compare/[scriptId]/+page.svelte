@@ -13,9 +13,12 @@
 	} from '$lib/data/repositories/index';
 	import { compareScripts } from '$lib/data/selectors/comparison';
 	import { getFoundationalConflictWarnings } from '$lib/data/validation/validateComparison';
-	import { withBase } from '$lib/utils/paths';
+	import { withLocale } from '$lib/utils/paths';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import { onMount } from 'svelte';
+	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
+	import { scriptLabel } from '$lib/data/selectors/scriptPresentation';
+	import * as m from '$lib/paraglide/messages.js';
 
 	const registry = listScripts();
 	const taxonomy = getComparisonTaxonomy();
@@ -54,7 +57,11 @@
 	const againstEntry = $derived(registry.find((entry) => entry.id === againstId));
 
 	function comparisonLabel(value: string) {
-		return value === 'same' ? 'Coincide' : value === 'different' ? 'Difiere' : 'Sin especificar';
+		return value === 'same'
+			? m.compare_same()
+			: value === 'different'
+				? m.compare_different()
+				: m.compare_not_declared();
 	}
 
 	function characterName(id: string) {
@@ -66,25 +73,25 @@
 		used: boolean;
 		functionAssigned: boolean;
 	}) {
-		if (!value) return 'No consta';
+		if (!value) return m.compare_not_declared();
 		const labels = [];
-		if (value.declared) labels.push('declarado');
-		if (value.used) labels.push('usado');
-		if (value.functionAssigned) labels.push('función');
-		return labels.length ? labels.join(' · ') : 'No consta';
+		if (value.declared) labels.push(m.compare_declared());
+		if (value.used) labels.push(m.compare_used());
+		if (value.functionAssigned) labels.push(m.compare_function());
+		return labels.length ? labels.join(' · ') : m.compare_not_declared();
 	}
 
 	function roleText(
 		character: (typeof characters)[number] | undefined,
 		variant: (typeof variants)[number] | undefined
 	) {
-		return variant?.roleOverride ?? character?.role ?? 'Sin perfil declarado';
+		return variant?.roleOverride ?? character?.role ?? m.compare_profile_missing();
 	}
 
 	function changeAgainst(event: Event) {
 		const next = (event.currentTarget as HTMLSelectElement).value;
 		void goto(
-			withBase(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(next)}`)
+			withLocale(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(next)}`)
 		);
 	}
 
@@ -92,7 +99,7 @@
 		interactive = true;
 		if (requestedAgainst === againstId) return;
 		void goto(
-			withBase(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(againstId)}`),
+			withLocale(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(againstId)}`),
 			{ replaceState: true }
 		);
 	});
@@ -100,47 +107,43 @@
 
 <main class="page">
 	<PageHeader
-		eyebrow="Comparación editorial"
-		title={`${primaryEntry?.label ?? primary.script.title} ↔ ${againstEntry?.label ?? against.script.title}`}
-		lede="Comparación declarativa de canon, eventos, reparto y funciones. La ausencia de datos no implica omisión narrativa."
+		eyebrow={m.compare_eyebrow()}
+		title={`${primaryEntry ? scriptLabel(primaryEntry) : primary.script.title} ↔ ${againstEntry ? scriptLabel(againstEntry) : against.script.title}`}
+		lede={m.compare_lede()}
 		meta={[primary.script.status, against.script.status, primary.script.continuityId]}
 	/>
 
 	<label class="against-picker">
-		<span>Comparar con</span>
+		<span>{m.compare_against()}</span>
 		<select
-			aria-label="Comparar con otro guion"
+			aria-label={m.compare_picker_aria()}
 			value={againstId}
 			disabled={!interactive}
 			onchange={changeAgainst}
 		>
 			{#each registry.filter((entry) => entry.id !== primaryId) as entry (entry.id)}
-				<option value={entry.id}>{entry.label}</option>
+				<option value={entry.id}>{scriptLabel(entry)}</option>
 			{/each}
 		</select>
 	</label>
+	<StoryLanguageNotice />
 
 	{#if foundationalWarnings.length}
-		<aside class="warning" aria-label="Conflictos fundacionales">
-			<strong>Conflicto de continuidad:</strong> estos scripts declaran valores establecidos distintos
-			en una dimensión fundacional. Revise el canon antes de tratarlos como equivalentes.
+		<aside class="warning" aria-label={m.compare_foundational_conflicts()}>
+			<strong>{m.compare_conflict_title()}</strong>
+			{m.compare_conflict_body()}
 		</aside>
 	{/if}
 
 	<section>
-		<h2>Canon</h2>
+		<h2>{m.compare_canon()}</h2>
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex (la tabla debe poder desplazarse con teclado) -->
-		<div
-			class="table-wrap"
-			role="region"
-			tabindex="0"
-			aria-label="Comparación de canon; desplazamiento horizontal"
-		>
+		<div class="table-wrap" role="region" tabindex="0" aria-label={m.compare_canon_region()}>
 			<table>
 				<thead
 					><tr
-						><th>Dimensión</th><th>{primaryEntry?.label}</th><th>{againstEntry?.label}</th><th
-							>Resultado</th
+						><th>{m.compare_dimension()}</th><th>{primaryEntry ? scriptLabel(primaryEntry) : ''}</th
+						><th>{againstEntry ? scriptLabel(againstEntry) : ''}</th><th>{m.compare_result()}</th
 						></tr
 					></thead
 				>
@@ -149,12 +152,12 @@
 						<tr>
 							<th>{row.definition.label}</th>
 							<td
-								>{row.primary?.statement ?? 'Sin especificar'}<small
+								>{row.primary?.statement ?? m.compare_unspecified()}<small
 									>{row.primary?.status ?? ''}</small
 								></td
 							>
 							<td
-								>{row.against?.statement ?? 'Sin especificar'}<small
+								>{row.against?.statement ?? m.compare_unspecified()}<small
 									>{row.against?.status ?? ''}</small
 								></td
 							>
@@ -171,20 +174,15 @@
 	</section>
 
 	<section>
-		<h2>Eventos principales</h2>
+		<h2>{m.compare_events()}</h2>
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex (la tabla debe poder desplazarse con teclado) -->
-		<div
-			class="table-wrap"
-			role="region"
-			tabindex="0"
-			aria-label="Comparación de eventos; desplazamiento horizontal"
-		>
+		<div class="table-wrap" role="region" tabindex="0" aria-label={m.compare_events_region()}>
 			<table>
 				<thead
 					><tr
-						><th>Evento</th><th>{primaryEntry?.label}</th><th>{againstEntry?.label}</th><th
-							>Resultado</th
-						></tr
+						><th>{m.compare_event()}</th><th>{primaryEntry ? scriptLabel(primaryEntry) : ''}</th><th
+							>{againstEntry ? scriptLabel(againstEntry) : ''}</th
+						><th>{m.compare_result()}</th></tr
 					></thead
 				>
 				<tbody>
@@ -192,17 +190,17 @@
 						<tr>
 							<th>{row.definition.label}</th>
 							<td
-								>{row.primary?.status ?? 'Sin especificar'}{#if row.primary?.sceneIds?.[0]}<a
-										href={withBase(
+								>{row.primary?.status ?? m.compare_unspecified()}{#if row.primary?.sceneIds?.[0]}<a
+										href={withLocale(
 											`/script/${encodeScriptId(primaryId)}#${row.primary.sceneIds[0]}`
-										)}>Ver escena</a
+										)}>{m.compare_view_scene()}</a
 									>{/if}</td
 							>
 							<td
-								>{row.against?.status ?? 'Sin especificar'}{#if row.against?.sceneIds?.[0]}<a
-										href={withBase(
+								>{row.against?.status ?? m.compare_unspecified()}{#if row.against?.sceneIds?.[0]}<a
+										href={withLocale(
 											`/script/${encodeScriptId(againstId)}#${row.against.sceneIds[0]}`
-										)}>Ver escena</a
+										)}>{m.compare_view_scene()}</a
 									>{/if}</td
 							>
 							<td>{comparisonLabel(row.comparison)}</td>
@@ -214,28 +212,34 @@
 	</section>
 
 	<section>
-		<h2>Reparto</h2>
+		<h2>{m.compare_cast()}</h2>
 		<div class="cast-grid">
 			{#each result.cast as row (row.characterId)}
 				<article>
 					<h3>{row.character?.name ?? row.characterId}</h3>
-					<p><b>{primaryEntry?.label}:</b> {participationText(row.primary)}</p>
+					<p>
+						<b>{primaryEntry ? scriptLabel(primaryEntry) : ''}:</b>
+						{participationText(row.primary)}
+					</p>
 					{#if row.primary}<p class="profile">
-							Rol: {roleText(row.character, row.primaryVariant)}
+							{m.compare_role()}: {roleText(row.character, row.primaryVariant)}
 						</p>{/if}
-					<p><b>{againstEntry?.label}:</b> {participationText(row.against)}</p>
+					<p>
+						<b>{againstEntry ? scriptLabel(againstEntry) : ''}:</b>
+						{participationText(row.against)}
+					</p>
 					{#if row.against}<p class="profile">
-							Rol: {roleText(row.character, row.againstVariant)}
+							{m.compare_role()}: {roleText(row.character, row.againstVariant)}
 						</p>{/if}
 					{#if row.primaryVariant || row.againstVariant}
 						<p class="variant">
-							Variantes: {row.primaryVariant?.label ?? 'base'} / {row.againstVariant?.label ??
-								'base'}
+							{m.compare_variants()}: {row.primaryVariant?.label ?? m.compare_base()} / {row
+								.againstVariant?.label ?? m.compare_base()}
 						</p>
 						{#if row.primaryVariant?.biographyOverride || row.againstVariant?.biographyOverride}
 							<p class="profile">
-								Biografía: {row.primaryVariant?.biographyOverride ?? 'base'} / {row.againstVariant
-									?.biographyOverride ?? 'base'}
+								{m.compare_biography()}: {row.primaryVariant?.biographyOverride ?? m.compare_base()} /
+								{row.againstVariant?.biographyOverride ?? m.compare_base()}
 							</p>
 						{/if}
 					{/if}
@@ -245,18 +249,18 @@
 	</section>
 
 	<section>
-		<h2>Funciones narrativas</h2>
+		<h2>{m.compare_functions()}</h2>
 		<ul class="functions">
 			{#each [...result.functions] as [id, assignments] (id)}
 				<li>
 					<strong>{functionLabels.get(id) ?? id}</strong>
 					<span
 						>{assignments.primary.map((item) => characterName(item.characterId)).join(', ') ||
-							'Sin asignar'}</span
+							m.compare_unassigned()}</span
 					>
 					<span
 						>{assignments.against.map((item) => characterName(item.characterId)).join(', ') ||
-							'Sin asignar'}</span
+							m.compare_unassigned()}</span
 					>
 				</li>
 			{/each}

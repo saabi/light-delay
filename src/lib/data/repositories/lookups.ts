@@ -3,6 +3,8 @@ import type { DocumentRecord } from '$lib/types/document';
 import type { Character, Faction, Location, StoryObject, Vehicle } from '$lib/types/entities';
 import type { Cue, Scene, ScriptFile, Shot, Take } from '$lib/types/script';
 import type { ScriptId } from '$lib/types/ids';
+import entityTranslations from '../../../../data/translations/entities.en.json';
+import { getLocale } from '$lib/paraglide/runtime.js';
 import {
 	getAssets,
 	getCharacters,
@@ -15,6 +17,12 @@ import {
 } from './index.ts';
 
 export type EntityKind = 'characters' | 'locations' | 'objects' | 'vehicles' | 'factions';
+
+function translatedEntity<T extends { id: string }>(entity: T | undefined): T | undefined {
+	if (!entity || getLocale() !== 'en') return entity;
+	const variant = (entityTranslations as Record<string, Record<string, string>>)[entity.id];
+	return variant ? ({ ...entity, ...variant } as T) : entity;
+}
 
 function resolveScript(scriptOrId: ScriptFile | ScriptId): ScriptFile {
 	if (typeof scriptOrId === 'string') return getScript(scriptOrId);
@@ -30,67 +38,82 @@ export function getAssetById(id: string): Asset | undefined {
 }
 
 export function getCharacterById(id: string): Character | undefined {
-	return getCharacters().characters.find((c) => c.id === id);
+	return translatedEntity(getCharacters().characters.find((c) => c.id === id));
 }
 
 export function getLocationById(id: string): Location | undefined {
-	return getLocations().locations.find((l) => l.id === id);
+	return translatedEntity(getLocations().locations.find((l) => l.id === id));
 }
 
 export function getObjectById(id: string): StoryObject | undefined {
-	return getObjects().objects.find((o) => o.id === id);
+	return translatedEntity(getObjects().objects.find((o) => o.id === id));
 }
 
 export function getVehicleById(id: string): Vehicle | undefined {
-	return getVehicles().vehicles.find((v) => v.id === id);
+	return translatedEntity(getVehicles().vehicles.find((v) => v.id === id));
 }
 
 export function getFactionById(id: string): Faction | undefined {
-	return getFactions().factions.find((f) => f.id === id);
+	return translatedEntity(getFactions().factions.find((f) => f.id === id));
 }
 
 export function listEntities(kind: EntityKind) {
 	switch (kind) {
 		case 'characters':
-			return getCharacters().characters.map((e) => ({
-				kind,
-				id: e.id,
-				name: e.name,
-				description: e.description,
-				referenceAssetIds: e.referenceAssetIds
-			}));
+			return getCharacters().characters.map((source) => {
+				const e = translatedEntity(source)!;
+				return {
+					kind,
+					id: e.id,
+					name: e.name,
+					description: e.description,
+					referenceAssetIds: e.referenceAssetIds
+				};
+			});
 		case 'locations':
-			return getLocations().locations.map((e) => ({
-				kind,
-				id: e.id,
-				name: e.name,
-				description: e.description,
-				referenceAssetIds: e.referenceAssetIds
-			}));
+			return getLocations().locations.map((source) => {
+				const e = translatedEntity(source)!;
+				return {
+					kind,
+					id: e.id,
+					name: e.name,
+					description: e.description,
+					referenceAssetIds: e.referenceAssetIds
+				};
+			});
 		case 'objects':
-			return getObjects().objects.map((e) => ({
-				kind,
-				id: e.id,
-				name: e.name,
-				description: e.description,
-				referenceAssetIds: e.referenceAssetIds
-			}));
+			return getObjects().objects.map((source) => {
+				const e = translatedEntity(source)!;
+				return {
+					kind,
+					id: e.id,
+					name: e.name,
+					description: e.description,
+					referenceAssetIds: e.referenceAssetIds
+				};
+			});
 		case 'vehicles':
-			return getVehicles().vehicles.map((e) => ({
-				kind,
-				id: e.id,
-				name: e.name,
-				description: e.description,
-				referenceAssetIds: e.referenceAssetIds
-			}));
+			return getVehicles().vehicles.map((source) => {
+				const e = translatedEntity(source)!;
+				return {
+					kind,
+					id: e.id,
+					name: e.name,
+					description: e.description,
+					referenceAssetIds: e.referenceAssetIds
+				};
+			});
 		case 'factions':
-			return getFactions().factions.map((e) => ({
-				kind,
-				id: e.id,
-				name: e.name,
-				description: e.description,
-				referenceAssetIds: e.referenceAssetIds ?? []
-			}));
+			return getFactions().factions.map((source) => {
+				const e = translatedEntity(source)!;
+				return {
+					kind,
+					id: e.id,
+					name: e.name,
+					description: e.description,
+					referenceAssetIds: e.referenceAssetIds ?? []
+				};
+			});
 	}
 }
 

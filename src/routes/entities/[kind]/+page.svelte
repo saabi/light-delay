@@ -1,24 +1,33 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import EntityGallery from '$lib/components/entities/EntityGallery.svelte';
-	import { withBase } from '$lib/utils/paths';
+	import { withLocale } from '$lib/utils/paths';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let { data } = $props();
+	const labels = {
+		characters: m.entities_characters(),
+		locations: m.entities_locations(),
+		objects: m.entities_objects(),
+		vehicles: m.entities_vehicles(),
+		factions: m.entities_factions()
+	};
+	const label = $derived(labels[data.kind as keyof typeof labels]);
 </script>
 
 <main class="page">
 	<PageHeader
-		eyebrow="Entidades"
-		title={data.label}
-		lede={`Índice de ${data.label.toLowerCase()} del proyecto.`}
-		meta={[`${data.items.length} registros`]}
+		eyebrow={m.nav_entities()}
+		title={label}
+		lede={m.art_lede()}
+		meta={[String(data.items.length)]}
 	/>
-	<nav class="kinds" aria-label="Tipos de entidad">
-		<a href={withBase('/entities/characters')}>Personajes</a>
-		<a href={withBase('/entities/locations')}>Localizaciones</a>
-		<a href={withBase('/entities/objects')}>Objetos</a>
-		<a href={withBase('/entities/vehicles')}>Vehículos</a>
-		<a href={withBase('/entities/factions')}>Facciones</a>
+	<nav class="kinds" aria-label={m.entities_kind_navigation()}>
+		<a href={withLocale('/entities/characters')}>{m.entities_characters()}</a>
+		<a href={withLocale('/entities/locations')}>{m.entities_locations()}</a>
+		<a href={withLocale('/entities/objects')}>{m.entities_objects()}</a>
+		<a href={withLocale('/entities/vehicles')}>{m.entities_vehicles()}</a>
+		<a href={withLocale('/entities/factions')}>{m.entities_factions()}</a>
 	</nav>
 	<EntityGallery items={data.items} />
 </main>

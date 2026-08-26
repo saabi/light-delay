@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Beat, Cue, Scene } from '$lib/types/script';
 	import BeatBlock from './BeatBlock.svelte';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let {
 		scene,
@@ -15,7 +16,7 @@
 
 <section class="scene" id={scene.id}>
 	<header>
-		<p class="num">Escena {scene.number}</p>
+		<p class="num">{m.script_scene()} {scene.number}</p>
 		<h3>{scene.title}</h3>
 		{#if scene.summary}
 			<p class="summary">{scene.summary}</p>

@@ -1,384 +1,2890 @@
 {
-	"schemaVersion": "1.0.0",
-	"documents": [
-		{
-			"id": "document:notas-tecnicas",
-			"slug": "notas-tecnicas-continuidad",
-			"title": "Notas técnicas y continuidad",
-			"status": "extracted",
-			"language": "es",
-			"sourcePath": "legacy-site/notas-tecnicas-continuidad.html",
-			"summary": "Reglas físicas, visuales y narrativas consolidadas.",
-			"blocks": [
-				{
-					"type": "paragraph",
-					"text": "Este documento reemplaza por completo las notas técnicas anteriores. Cualquier cifra o mecanismo de documentos previos que contradiga lo aquí escrito queda descartado."
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "1. El túnel Velari — reglas fijas",
-					"id": "1-el-túnel-velari--reglas-fijas"
-				},
-				{
-					"type": "list",
-					"items": [
-						"Construido por los Velari, no por humanos. Antigüedad desconocida, probablemente milenaria.",
-						"Garganta piloto: permanentemente abierta, submicroscópica. Sólo admite un repertorio fijo y de bajísimo ancho de banda para sincronización y desafío matemático; no es un canal direccionable para audio, telemetría ni datos de misión.",
-						"Activación: responde cuando una civilización demuestra el umbral tecnológico para detectarla e interpretarla y confirma conscientemente la aceptación. El desafío es un filtro pasivo; la apertura no se dispara por accidente.",
-						"Expansión a diámetro navegable: exige energía extrema, no lineal respecto del tamaño. Ni siquiera los Velari pueden sostenerla más de 60-90 segundos, ni reabrirla a voluntad inmediata.",
-						"Etapas del cruce: precarga (cancelable) → expansión crítica (punto de compromiso, no cancelable con seguridad) → apertura navegable (60-90s) → colapso.",
-						"Boca local: en órbita halo controlada alrededor de L2 (Sol-Júpiter), con estabilización Velari activa. L1 y L2 son dinámicamente inestables. Boca remota: infraestructura fija en su propia órbita cerca de la región de encuentro, no reubicable sin costo energético comparable al de la propia expansión.",
-						"Geometría visible: no hay aro. Cada boca es un campo de nodos negros separados por kilómetros o decenas de kilómetros. En estado piloto rodean un vacío sin estructura visible; en expansión se conectan mediante distorsiones y filamentos. La región navegable final mide aproximadamente 150–200 m."
-					]
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "2. Proxima — origen y funcionamiento",
-					"id": "2-proxima--origen-y-funcionamiento"
-				},
-				{
-					"type": "list",
-					"items": [
-						"Propósito original: observatorio del sistema joviano y laboratorio gravitacional, construido antes de reconocer tecnología Velari. La anomalía se infiere en la ficción a partir de residuos de navegación de Pioneer, Voyager, Galileo y Juno; no se presenta como un hallazgo real de esas misiones.",
-						"Descubrimiento: una red de sondas drag-free, relojes ópticos, interferometría láser y masas de prueba localiza la garganta piloto en L2. Sólo entonces se agregan xenofísica, comunicaciones, control de contacto y apoyo a la misión.",
-						"Arquitectura: eje no rotatorio de 500–800 m con muelles axiales, depósitos, talleres, control, reactores y antenas; dos hábitats cilíndricos contrarrotatorios a 0,4–0,6 g; radiadores y almacenamiento perpendicular; módulos peligrosos aislados en brazos.",
-						"Energía y logística: fusión en operación normal, fisión independiente para cargas críticas y suministro joviano de deuterio/helio-3.",
-						"Soporte vital: más de 95 % de reciclaje de agua, regeneración de oxígeno, eliminación de CO₂ y reservas por meses. Agua, polímeros y consumibles contribuyen al blindaje.",
-						"Continuidad visual: deben coexistir generaciones constructivas. Núcleo científico envejecido, ampliaciones industriales y capa de contacto reciente; nunca una estación construida de una vez para los Velari."
-					]
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "3. Celestial Ardor — envolvente técnica",
-					"id": "3-celestial-ardor--envolvente-técnica"
-				},
-				{
-					"type": "paragraph",
-					"text": "Antes del cruce se recogen los radiadores, se apaga la antorcha y el calor pasa a acumuladores. Tras emerger, los radiadores se despliegan antes del nuevo encendido. Durante la inversión, la gravedad aparente no “se invierte”: desaparece durante la caída libre y retorna hacia el mismo piso después de la rotación."
-				},
-				{
-					"type": "list",
-					"id": "celestial-ardor--circulacion-y-comunicaciones",
-					"items": [
-						"Arquitectura interior: decks transversales al eje de empuje, tres cilindros axiales —central, servicio y logística— y núcleo diplomático retrofit fuera del eje.",
-						"Puente: vestíbulo axial visible detrás de la tripulación; la desembocadura del cilindro central entra en el encuadre frontal de Voss. El acceso al cilindro de servicio queda en un receso lateral fuera de la línea de visión de las consolas.",
-						"Circulación sin empuje: el cilindro central tiene barras, descansos y compuertas para tránsito cotidiano; el de servicio permite impulsos balísticos más rápidos entre bandejas y ramales técnicos.",
-						"Comunicaciones: la malla inalámbrica tiene respaldo cableado COM A/B por deck. El distribuidor próximo a mando reúne acopladores rotulados por sector y permite aislar físicamente una cubierta.",
-						"Láser exterior: equipo estándar de larga distancia. Su control local y alimentación de puntería tienen canalización física dedicada, separada de la malla y de COM A/B."
-					]
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "4. Arquitectura Velari — observaciones canónicas",
-					"id": "4-arquitectura-velari--observaciones-canónicas"
-				},
-				{
-					"type": "list",
-					"items": [
-						"Estación Velari: hábitat orgánico continuo de varios kilómetros, sin módulos ensamblados visibles. Lóbulos, arcos, cavidades y vacíos; piel adaptable en reflectividad, textura, transparencia, geometría y emisividad.",
-						"Termodinámica: toda la piel puede actuar como radiador infrarrojo. No se distinguen reactor, combustible, tanques o escape, sólo gradientes energéticos enormes.",
-						"Habitabilidad: no gira; genera gravedad local controlada. Sensores humanos detectan temperaturas compatibles con vida, líquidos circulantes, química compleja y zonas presurizadas: más ecosistema construido que estación mecánica.",
-						"Nave emisaria: 300–600 m, orgánica y bioluminiscente; enorme frente a la Celestial Ardor y pequeña ante la estación. Sin toberas ni escape; perturbaciones métricas sugieren intercambio de momento con estructuras o campos externos.",
-						"Interior emisario: reconfigurable para recibir distintas biologías; este dato es una inferencia instrumental o material para una versión larga, no información que los humanos deban explicar en el cortometraje."
-					]
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "5. Física del tránsito — verificada",
-					"id": "5-física-del-tránsito--verificada"
-				},
-				{
-					"type": "paragraph",
-					"text": "Tramo local (Proxima L1 → Boca L2):"
-				},
-				{
-					"type": "paragraph",
-					"text": "Tramo remoto (Boca remota → Estación Velari):"
-				},
-				{
-					"type": "paragraph",
-					"text": "Comparación con vuelo directo (sin túnel):"
-				},
-				{
-					"type": "paragraph",
-					"text": "La cifra previa de 31.400 km/s como velocidad máxima confundía velocidad pico con delta-v total. Tampoco se fija una proporción energética exacta sin especificar impulso específico, eficiencia y recuperación durante el frenado."
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "6. Ventana de lanzamiento — dos restricciones independientes, jerarquizadas",
-					"id": "6-ventana-de-lanzamiento--dos-restricciones-independientes-jerarquizadas"
-				},
-				{
-					"type": "paragraph",
-					"text": "Separación orbital tras 12 años (boca remota vs. estación Velari, hoy próximas a una configuración nodal entre órbitas con distinta inclinación):"
-				},
-				{
-					"type": "paragraph",
-					"text": "Configuración canónica: inclinación ~30°. Separación actual (misión): ~0,122 UA (18,3×10⁶ km). Separación dentro de 12 años: ~24 veces mayor. Próximo cruce geométrico comparable de ambas órbitas: posiblemente más de mil años (mitad del período orbital a 173 UA, ~2.275 años → ~1.138 años, sin garantía de coincidencia exacta si además difieren período o excentricidad)."
-				},
-				{
-					"type": "paragraph",
-					"text": "Conclusión: la ventana actual es, con alta probabilidad, irrepetible en escala de vida humana."
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "7. El mensaje de Zao",
-					"id": "7-el-mensaje-de-zao"
-				},
-				{
-					"type": "list",
-					"items": [
-						"Contenido final: \"Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor...\"",
-						"Primer aviso: Zao sólo alcanza a transmitir que existe un payload autónomo firmado por Sorell y que la firma parece falsa. La frase se corta antes de que el puente oiga el nombre de Harlan.",
-						"Bloqueo: Harlan activa un jammer desde el acceso axial del puente y después desconecta el acoplador SISTEMAS DIPLOMÁTICOS — COM A/B en el distribuidor del cilindro de servicio. Wireless, texto y ambos respaldos cableados quedan inutilizados.",
-						"Salida disponible: el láser exterior no es un transmisor de emergencia separado, sino el sistema estándar de larga distancia. Su control local conserva energía y mando por una canalización física dedicada.",
-						"Objetivo de puntería: Zao usa el plan de vuelo cargado, el tiempo lumínico y la posición futura de Celestial Ardor. La divergencia cubre parte de la elipse de incertidumbre y un barrido estrecho cubre el resto; errar esa región pierde la señal.",
-						"Por qué no vía Tierra: el rodeo hace que el aviso llegue después del encuentro. Proxima tampoco ofrece una línea de adquisición óptica utilizable en ese instante.",
-						"Por qué no por la garganta: la garganta piloto no transporta datos de misión.",
-						"Por qué Harlan no bloquea la recepción: llega cuando la solución de puntería ya se cerró. Ve TRANSMITIDO, pero no el corredor exacto del haz.",
-						"Tiempo de viaje de la señal: ~23h15min (167,8 UA)."
-					]
-				},
-				{
-					"type": "heading",
-					"level": 3,
-					"text": "Doble llave causal",
-					"id": "doble-llave-causal"
-				},
-				{
-					"type": "list",
-					"items": [
-						"Investigación sin mensaje: Rao identifica el payload autónomo, su disparador y la cuarentena necesaria, pero sólo obtiene la firma anónima OVR-7C41. No puede probar quién posee el override ni impedir que su titular libere el payload.",
-						"Mensaje sin investigación: acusa a Harlan y señala el relé, pero no prueba por sí solo que la voz no fue sintetizada ni contiene el mapa técnico para detener un proceso que seguirá activo aunque Harlan sea arrestado.",
-						"Combinación: el cruce entre payload, relé físico y credencial de mando identifica a Harlan; Voss revoca su autoridad y Rao aplica la cuarentena ya preparada. Sorell aporta el saludo pasivo limpio."
-					]
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "8. Motivo de Harlan / Directiva Aqueronte — texto canónico",
-					"id": "8-motivo-de-harlan--directiva-aqueronte--texto-canónico"
-				},
-				{
-					"type": "blockquote",
-					"text": "La Directiva Aqueronte no busca la guerra como fin, sino que la acepta como riesgo calculado. Su convicción es que ofrecer las credenciales diplomáticas de la humanidad sin verificación real a una civilización milenios más avanzada es una ingenuidad que podría costar la especie entera. Para Harlan, obtener inteligencia real y comprobable sobre las capacidades defensivas Velari —aunque el método mismo se lea como agresión— es preferible a la entrega ciega. No es codicia tecnológica: es una doctrina de legítima defensa preventiva, aplicada por alguien convencido de ser el único suficientemente lúcido mientras los demás confían a ciegas."
-				},
-				{
-					"type": "paragraph",
-					"text": "Aqueronte es una doctrina pública y descentralizada, no una organización con membresía formal. Sus protestas son legales y visibles; la célula que ejecuta sabotajes es clandestina. Harlan pudo superar los controles porque no existía una afiliación comprobable que declarar o detectar."
-				},
-				{
-					"type": "paragraph",
-					"text": "El sabotaje no es apurado —tuvo 57h48min para ejecutarlo con cuidado. El registro físico no es un descuido: todo override de emergencia quema esa firma anónima en hardware y borrarla inutilizaría el núcleo. Harlan acepta el riesgo, confiando en la falsificación superficial, la muerte de Zao y su propia autoridad para impedir que las piezas se crucen."
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "9. Cronología maestra consolidada",
-					"id": "9-cronología-maestra-consolidada"
-				},
-				{
-					"type": "paragraph",
-					"text": "Ver Documento 1, Sección VII (idéntica en ambos documentos por diseño, para evitar desincronización)."
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "10. Elementos descartados del canon (no usar en futuras iteraciones)",
-					"id": "10-elementos-descartados-del-canon-no-usar-en-futuras-iteraciones"
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "11. Decisiones de consolidación tomadas en este pase (para tu revisión)",
-					"id": "11-decisiones-de-consolidación-tomadas-en-este-pase-para-tu-revisión"
-				},
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "12. Índice de documentos vigentes",
-					"id": "12-índice-de-documentos-vigentes"
-				},
-				{
-					"type": "paragraph",
-					"text": "Todo documento anterior a este pase de consolidación queda superado en caso de conflicto."
-				}
-			]
-		},
-		{
-			"id": "document:biblia-produccion",
-			"slug": "biblia-de-produccion",
-			"title": "Biblia de producción",
-			"status": "stub",
-			"language": "es",
-			"sourcePath": "legacy-site/biblia-de-produccion.html",
-			"summary": "Contexto de producción y diseño; extracción completa pendiente.",
-			"blocks": [
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "Estado de migración",
-					"id": "estado-migracion"
-				},
-				{
-					"type": "paragraph",
-					"text": "Esta ruta ya funciona desde datos estructurados. El texto completo de la biblia de producción sigue en legacy-site y se migrará por secciones en una tarea editorial posterior."
-				},
-				{
-					"type": "callout",
-					"kind": "note",
-					"text": "No inventar contenido aquí: usar el HTML legacy o docs/CANON_DECISIONS.md como fuente hasta la extracción."
-				},
-				{
-					"type": "list",
-					"items": [
-						"Canon narrativo: guion corto de 17 escenas.",
-						"Referencia temporal: legacy-site/biblia-de-produccion.html.",
-						"Siguiente paso: bloques semánticos por capítulo, no un volcado HTML."
-					]
-				}
-			]
-		},
-		{
-			"id": "document:reporte-comprensivo",
-			"slug": "reporte-comprensivo",
-			"title": "Reporte comprensivo",
-			"status": "stub",
-			"language": "es",
-			"sourcePath": "legacy-site/reporte-comprensivo.html",
-			"summary": "Informe amplio de proyecto; placeholder de ruta migrada.",
-			"blocks": [
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "Estado de migración",
-					"id": "estado-migracion"
-				},
-				{
-					"type": "paragraph",
-					"text": "La ruta SvelteKit está operativa. El cuerpo completo del reporte comprensivo permanece en el sitio legacy hasta una extracción revisada."
-				},
-				{
-					"type": "callout",
-					"kind": "note",
-					"text": "Ante conflicto con notas técnicas o el guion, prevalecen notas-tecnicas-continuidad y el guion canónico."
-				}
-			]
-		},
-		{
-			"id": "document:momentos-clave",
-			"slug": "momentos-clave",
-			"title": "Momentos clave",
-			"status": "stub",
-			"language": "es",
-			"sourcePath": "legacy-site/momentos-clave.html",
-			"summary": "Lista de momentos narrativos; migración completa pendiente.",
-			"blocks": [
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "Estado de migración",
-					"id": "estado-migracion"
-				},
-				{
-					"type": "paragraph",
-					"text": "Placeholder funcional. La lista acotada de momentos clave se migrará alineada al guion (fuente de verdad narrativa)."
-				},
-				{
-					"type": "list",
-					"ordered": true,
-					"items": [
-						"Embarque y primer contacto con la anomalía.",
-						"Descubrimiento del sabotaje / Directiva Aqueronte.",
-						"Mensaje de Zao y doble llave causal.",
-						"Cruce y umbral Velari."
-					]
-				}
-			]
-		},
-		{
-			"id": "document:canon",
-			"slug": "canon-decisions",
-			"title": "Decisiones de canon",
-			"status": "stub",
-			"language": "es",
-			"sourcePath": "docs/CANON_DECISIONS.md",
-			"summary": "Puntero a las decisiones de canon vigentes en docs/.",
-			"blocks": [
-				{
-					"type": "heading",
-					"level": 2,
-					"text": "Fuente canónica",
-					"id": "fuente-canonica"
-				},
-				{
-					"type": "paragraph",
-					"text": "Las decisiones vigentes viven en docs/CANON_DECISIONS.md. Esta página es un espejo mínimo para navegación desde la app."
-				},
-				{
-					"type": "callout",
-					"kind": "warning",
-					"text": "No reescribir el canon para resolver dificultades de implementación. Registrar conflictos en docs/PROJECT_STATUS.md."
-				},
-				{
-					"type": "paragraph",
-					"text": "Pendiente: importar bloques desde el markdown de decisiones en una fase editorial."
-				}
-			]
-		},
-		{
-			"id": "document:legacy-feature-overview",
-			"slug": "legacy-feature-overview",
-			"title": "Informe histórico del largometraje",
-			"status": "review",
-			"language": "en",
-			"sourcePath": "docs/light-delay-full-feature-overview.md",
-			"summary": "Fuente histórica en inglés; no autoritativa frente a la revisión española.",
-			"blocks": [
-				{
-					"type": "callout",
-					"kind": "warning",
-					"text": "Documento histórico. Consultar docs/REVISION_LARGOMETRAJE_RECUPERADO.md para decisiones vigentes."
-				}
-			]
-		},
-		{
-			"id": "document:legacy-feature-beats",
-			"slug": "legacy-feature-beats",
-			"title": "Momentos históricos del largometraje",
-			"status": "review",
-			"language": "es",
-			"sourcePath": "docs/light-delay-long-full-feature-cut.md",
-			"summary": "Lista histórica de 28 momentos; contiene mecánicas descartadas.",
-			"blocks": [
-				{
-					"type": "callout",
-					"kind": "warning",
-					"text": "Fuente de recuperación, no canon vigente por sí sola."
-				}
-			]
-		},
-		{
-			"id": "document:feature-recovery-review",
-			"slug": "revision-largometraje-recuperado",
-			"title": "Revisión del largometraje recuperado",
-			"status": "review",
-			"language": "es",
-			"sourcePath": "docs/REVISION_LARGOMETRAJE_RECUPERADO.md",
-			"summary": "Decisiones editoriales sobre canon, reparto y material recuperado.",
-			"blocks": [
-				{
-					"type": "paragraph",
-					"text": "Esta página apunta a la revisión española autoritativa del material histórico."
-				}
-			]
-		}
-	]
+  "schemaVersion": "2.0.0",
+  "documents": [
+    {
+      "id": "document:notas-tecnicas",
+      "slug": "notas-tecnicas-continuidad",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Notas técnicas y continuidad",
+          "en": "Technical notes and continuity"
+        }
+      },
+      "status": "extracted",
+      "sourceLanguage": "es",
+      "sourcePath": "legacy-site/notas-tecnicas-continuidad.html",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Reglas físicas, visuales y narrativas consolidadas.",
+          "en": "Consolidated physical, visual, and narrative rules."
+        }
+      },
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-001",
+              "text": "Este documento reemplaza por completo las notas técnicas\nanteriores. Cualquier cifra o mecanismo de documentos previos que\ncontradiga lo aquí escrito queda descartado."
+            },
+            {
+              "type": "heading",
+              "id": "1-el-túnel-velari--reglas-fijas",
+              "level": 2,
+              "text": "1. El túnel Velari — reglas\nfijas"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-003",
+              "ordered": false,
+              "items": [
+                "Construido por los Velari, no por humanos. Antigüedad desconocida,\nprobablemente milenaria.",
+                "Garganta piloto: permanentemente abierta,\nsubmicroscópica. Sólo admite un repertorio fijo y de bajísimo ancho de\nbanda para sincronización y desafío matemático; no es un canal\ndireccionable para audio, telemetría ni datos de misión.",
+                "Activación: responde cuando una civilización\ndemuestra el umbral tecnológico para detectarla e interpretarla y\nconfirma conscientemente la aceptación. El desafío es un filtro pasivo;\nla apertura no se dispara por accidente.",
+                "Expansión a diámetro navegable: exige energía\nextrema, no lineal respecto del tamaño. Ni siquiera los Velari pueden\nsostenerla más de 60-90 segundos, ni reabrirla a voluntad\ninmediata.",
+                "Etapas del cruce: precarga (cancelable) → expansión\ncrítica (punto de compromiso, no cancelable con seguridad) → apertura\nnavegable (60-90s) → colapso.",
+                "Boca local: en órbita halo controlada alrededor de\nL2 (Sol-Júpiter), con estabilización Velari activa. L1 y L2 son\ndinámicamente inestables. Boca remota: infraestructura\nfija en su propia órbita cerca de la región de encuentro, no reubicable\nsin costo energético comparable al de la propia expansión.",
+                "Geometría visible: no hay aro. Cada boca es un\ncampo de nodos negros separados por kilómetros o decenas de kilómetros.\nEn estado piloto rodean un vacío sin estructura visible; en expansión se\nconectan mediante distorsiones y filamentos. La región navegable final\nmide aproximadamente 150–200 m."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "2-proxima--origen-y-funcionamiento",
+              "level": 2,
+              "text": "2. Proxima — origen y\nfuncionamiento"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-005",
+              "ordered": false,
+              "items": [
+                "Propósito original: observatorio del sistema\njoviano y laboratorio gravitacional, construido antes de reconocer\ntecnología Velari. La anomalía se infiere en la ficción a partir de\nresiduos de navegación de Pioneer, Voyager, Galileo y Juno; no se\npresenta como un hallazgo real de esas misiones.",
+                "Descubrimiento: una red de sondas\ndrag-free , relojes ópticos, interferometría láser y masas de\nprueba localiza la garganta piloto en L2. Sólo entonces se agregan\nxenofísica, comunicaciones, control de contacto y apoyo a la\nmisión.",
+                "Arquitectura: eje no rotatorio de 500–800 m con\nmuelles axiales, depósitos, talleres, control, reactores y antenas; dos\nhábitats cilíndricos contrarrotatorios a 0,4–0,6 g; radiadores y\nalmacenamiento perpendicular; módulos peligrosos aislados en\nbrazos.",
+                "Energía y logística: fusión en operación normal,\nfisión independiente para cargas críticas y suministro joviano de\ndeuterio/helio-3.",
+                "Soporte vital: más de 95 % de reciclaje de agua,\nregeneración de oxígeno, eliminación de CO₂ y reservas por meses. Agua,\npolímeros y consumibles contribuyen al blindaje.",
+                "Continuidad visual: deben coexistir generaciones\nconstructivas. Núcleo científico envejecido, ampliaciones industriales y\ncapa de contacto reciente; nunca una estación construida de una vez para\nlos Velari."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "3-celestial-ardor--envolvente-técnica",
+              "level": 2,
+              "text": "3. Celestial Ardor —\nenvolvente técnica"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-007",
+              "headers": [
+                "Parámetro",
+                "Canon"
+              ],
+              "rows": [
+                [
+                  "Origen",
+                  "Construida en la Tierra para exploración y transporte científico de\nlarga duración"
+                ],
+                [
+                  "Situación al descubrir la garganta",
+                  "Ya destinada en Proxima con su tripulación; luego adaptada para\ncontacto"
+                ],
+                [
+                  "Longitud / masa de misión",
+                  "80–100 m / ~300 t"
+                ],
+                [
+                  "Organización",
+                  "Axial; sensores → puente → hábitat/refugio → núcleo diplomático\nretrofit → tanques → reactor → motor"
+                ],
+                [
+                  "Propulsión",
+                  "Antorcha de fusión D–³He, tobera magnética, escape efectivo\nconceptual de 10.000–15.000 km/s"
+                ],
+                [
+                  "Reservas",
+                  "70–80 t combinadas de combustible y masa de reacción, incluidas\ncontingencias limitadas"
+                ],
+                [
+                  "Disipación",
+                  "Radiadores desplegables de metal líquido; velos oscuros/rojizos\ndurante empuje"
+                ],
+                [
+                  "Autonomía",
+                  "~2 semanas para seis tripulantes"
+                ],
+                [
+                  "Gravedad",
+                  "1 g por empuje; caída libre durante inversión, cruce y maniobras sin\nmotor"
+                ],
+                [
+                  "Cargas y rutas dedicadas",
+                  "Reactor auxiliar, soporte vital, navegación, medicina y control físico dedicado del láser exterior"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-008",
+              "text": "Antes del cruce se recogen los radiadores, se apaga la antorcha y el\ncalor pasa a acumuladores. Tras emerger, los radiadores se despliegan\nantes del nuevo encendido. Durante la inversión, la gravedad aparente no\n“se invierte”: desaparece durante la caída libre y retorna hacia el\nmismo piso después de la rotación."
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-009",
+              "ordered": false,
+              "items": [
+                "Arquitectura interior: decks transversales al eje de empuje, tres cilindros axiales —central, servicio y logística— y núcleo diplomático retrofit fuera del eje.",
+                "Puente: el vestíbulo axial y la salida central quedan detrás de la tripulación en el encuadre frontal de Voss; el acceso de servicio está en un receso lateral fuera de la línea de visión de las consolas.",
+                "Circulación sin empuje: barras y descansos en el cilindro central; trayectoria balística rápida entre bandejas y ramales en el cilindro de servicio.",
+                "Comunicaciones: malla inalámbrica más COM A/B cableados por deck. El distribuidor próximo a mando reúne acopladores rotulados por sector.",
+                "Láser exterior: sistema estándar de larga distancia con control local y puntería por canalización física dedicada."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "4-arquitectura-velari--observaciones-canónicas",
+              "level": 2,
+              "text": "4. Arquitectura\nVelari — observaciones canónicas"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-011",
+              "ordered": false,
+              "items": [
+                "Estación Velari: hábitat orgánico continuo de\nvarios kilómetros, sin módulos ensamblados visibles. Lóbulos, arcos,\ncavidades y vacíos; piel adaptable en reflectividad, textura,\ntransparencia, geometría y emisividad.",
+                "Termodinámica: toda la piel puede actuar como\nradiador infrarrojo. No se distinguen reactor, combustible, tanques o\nescape, sólo gradientes energéticos enormes.",
+                "Habitabilidad: no gira; genera gravedad local\ncontrolada. Sensores humanos detectan temperaturas compatibles con vida,\nlíquidos circulantes, química compleja y zonas presurizadas: más\necosistema construido que estación mecánica.",
+                "Nave emisaria: 300–600 m, orgánica y\nbioluminiscente; enorme frente a la Celestial Ardor y pequeña ante la\nestación. Sin toberas ni escape; perturbaciones métricas sugieren\nintercambio de momento con estructuras o campos externos.",
+                "Interior emisario: reconfigurable para recibir\ndistintas biologías; este dato es una inferencia instrumental o material\npara una versión larga, no información que los humanos deban explicar en\nel cortometraje."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "5-física-del-tránsito--verificada",
+              "level": 2,
+              "text": "5. Física del tránsito —\nverificada"
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-013",
+              "text": "Tramo local (Proxima L1 → Boca L2):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-014",
+              "headers": [
+                "Parámetro",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "Radio de Hill (Júpiter)",
+                  "~53×10⁶ km"
+                ],
+                [
+                  "Distancia L1–L2",
+                  "~106×10⁶ km"
+                ],
+                [
+                  "Perfil de vuelo",
+                  "1g / 1g sobre arco propulsado alrededor de Júpiter"
+                ],
+                [
+                  "Tiempo total",
+                  "57h 48min (28h54min por tramo)"
+                ],
+                [
+                  "Velocidad máxima (cerca de la inversión)",
+                  "~1.020 km/s"
+                ],
+                [
+                  "Delta-v total",
+                  "~2.040 km/s"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-015",
+              "text": "Tramo remoto (Boca remota → Estación Velari):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-016",
+              "headers": [
+                "Parámetro",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "Perfil de vuelo",
+                  "1g / 1g, 24h totales"
+                ],
+                [
+                  "Distancia cubierta",
+                  "~18,3×10⁶ km"
+                ],
+                [
+                  "Velocidad máxima",
+                  "~424 km/s"
+                ],
+                [
+                  "Velocidad orbital final (Velari)",
+                  "2,26 km/s"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-017",
+              "text": "Comparación con vuelo directo (sin túnel):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-018",
+              "headers": [
+                "Parámetro",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "Distancia Júpiter–región de encuentro",
+                  "167,8 UA"
+                ],
+                [
+                  "Tiempo a 1g sostenido",
+                  "~37 días"
+                ],
+                [
+                  "Velocidad máxima alcanzada",
+                  "~15.700 km/s (~0,052c)"
+                ],
+                [
+                  "Delta-v total",
+                  "~31.400 km/s"
+                ],
+                [
+                  "Limitación humana",
+                  "Impulsor limitado a ~90h acumuladas por masa de reacción y\ndisipación térmica"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-019",
+              "text": "La cifra previa de 31.400 km/s como velocidad máxima confundía\nvelocidad pico con delta-v total. Tampoco se fija una proporción\nenergética exacta sin especificar impulso específico, eficiencia y\nrecuperación durante el frenado."
+            },
+            {
+              "type": "heading",
+              "id": "6-ventana-de-lanzamiento--dos-restricciones-independientes-jerarquizadas",
+              "level": 2,
+              "text": "6.\nVentana de lanzamiento — dos restricciones independientes,\njerarquizadas"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-021",
+              "ordered": true,
+              "items": [
+                "Restricción dura: fase geométrica Sol-Júpiter-ancla remota\n(~11,86 años). Determina cuándo una garganta macroscópica puede\nestabilizarse; aproximadamente coincide con el período orbital de\nJúpiter.",
+                "Restricción secundaria: energía acumulada.\nDetermina que la apertura sólo dure 60-90 segundos. La energía puede\nestar disponible antes, pero no sustituye la geometría necesaria."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-022",
+              "text": "Separación orbital tras 12 años (boca remota vs. estación\nVelari, hoy próximas a una configuración nodal entre órbitas con\ndistinta inclinación):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-023",
+              "headers": [
+                "Inclinación relativa",
+                "Separación en 12 años"
+              ],
+              "rows": [
+                [
+                  "5°",
+                  "0,50 UA"
+                ],
+                [
+                  "10°",
+                  "1,00 UA"
+                ],
+                [
+                  "20°",
+                  "1,99 UA"
+                ],
+                [
+                  "30°",
+                  "2,97 UA"
+                ],
+                [
+                  "45°",
+                  "4,39 UA"
+                ],
+                [
+                  "60°",
+                  "5,73 UA"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-024",
+              "text": "Configuración canónica: inclinación ~30°. Separación actual (misión):\n~0,122 UA (18,3×10⁶ km). Separación dentro de 12 años: ~24 veces mayor.\nPróximo cruce geométrico comparable de ambas órbitas:\nposiblemente más de mil años (mitad del período orbital\na 173 UA, ~2.275 años → ~1.138 años, sin garantía de coincidencia exacta\nsi además difieren período o excentricidad)."
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-025",
+              "text": "Conclusión: la ventana actual es, con alta probabilidad,\nirrepetible en escala de vida humana."
+            },
+            {
+              "type": "heading",
+              "id": "7-el-mensaje-de-zao",
+              "level": 2,
+              "text": "7. El mensaje de Zao"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-027",
+              "ordered": false,
+              "items": [
+                "Contenido final: “Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor...”",
+                "Primer aviso: el puente oye que existe un payload autónomo firmado por Sorell y que la firma parece falsa. El corte impide que oigan el nombre de Harlan.",
+                "Bloqueo: Harlan activa un jammer desde el acceso al puente y desconecta SISTEMAS DIPLOMÁTICOS — COM A/B en el distribuidor del cilindro de servicio. Caen wireless, texto y ambos respaldos cableados.",
+                "Salida disponible: el láser exterior es el sistema estándar de larga distancia; su control local conserva energía y mando por una canalización física dedicada.",
+                "Objetivo: Zao combina plan de vuelo, tiempo lumínico y posición futura de la nave. La divergencia cubre parte de la elipse de incertidumbre y un barrido estrecho cubre el resto.",
+                "Destinos descartados: Tierra haría llegar el aviso después del encuentro; Proxima no ofrece adquisición óptica útil; la garganta piloto no transporta datos de misión.",
+                "Por qué Harlan no bloquea la recepción: llega después de cerrarse la solución de puntería. Ve TRANSMITIDO , pero no el corredor exacto.",
+                "Tiempo de viaje: ~23h15min (167,8 UA)."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "doble-llave-causal",
+              "level": 3,
+              "text": "Doble llave causal"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-029",
+              "ordered": false,
+              "items": [
+                "Investigación sin mensaje: Rao identifica el\npayload autónomo, su disparador y la cuarentena necesaria, pero sólo\nobtiene la firma anónima OVR-7C41. No puede probar quién posee el\noverride ni impedir que su titular libere el payload.",
+                "Mensaje sin investigación: acusa a Harlan y señala\nel relé, pero no prueba por sí solo que la voz no fue sintetizada ni\ncontiene el mapa técnico para detener un proceso que seguirá activo\naunque Harlan sea arrestado.",
+                "Combinación: el cruce entre payload, relé físico y\ncredencial de mando identifica a Harlan; Voss revoca su autoridad y Rao\naplica la cuarentena ya preparada. Sorell aporta el saludo pasivo\nlimpio."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "8-motivo-de-harlan--directiva-aqueronte--texto-canónico",
+              "level": 2,
+              "text": "8.\nMotivo de Harlan / Directiva Aqueronte — texto canónico"
+            },
+            {
+              "type": "blockquote",
+              "id": "notas-tecnicas-continuidad:block-031",
+              "text": "La Directiva Aqueronte no busca la guerra como fin, sino que la\nacepta como riesgo calculado. Su convicción es que ofrecer las\ncredenciales diplomáticas de la humanidad sin verificación real a una\ncivilización milenios más avanzada es una ingenuidad que podría costar\nla especie entera. Para Harlan, obtener inteligencia real y comprobable\nsobre las capacidades defensivas Velari —aunque el método mismo se lea\ncomo agresión— es preferible a la entrega ciega. No es codicia\ntecnológica: es una doctrina de legítima defensa preventiva, aplicada\npor alguien convencido de ser el único suficientemente lúcido mientras\nlos demás confían a ciegas."
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-032",
+              "text": "Aqueronte es una doctrina pública y descentralizada, no una\norganización con membresía formal. Sus protestas son legales y visibles;\nla célula que ejecuta sabotajes es clandestina. Harlan pudo superar los\ncontroles porque no existía una afiliación comprobable que declarar o\ndetectar."
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-033",
+              "text": "El sabotaje no es apurado —tuvo 57h48min para\nejecutarlo con cuidado. El registro físico no es un descuido: todo\noverride de emergencia quema esa firma anónima en hardware y borrarla\ninutilizaría el núcleo. Harlan acepta el riesgo, confiando en la\nfalsificación superficial, la muerte de Zao y su propia autoridad para\nimpedir que las piezas se crucen."
+            },
+            {
+              "type": "heading",
+              "id": "9-cronología-maestra-consolidada",
+              "level": 2,
+              "text": "9. Cronología maestra\nconsolidada"
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-035",
+              "text": "Ver Documento 1, Sección VII (idéntica en ambos documentos por\ndiseño, para evitar desincronización)."
+            },
+            {
+              "type": "heading",
+              "id": "10-elementos-descartados-del-canon-no-usar-en-futuras-iteraciones",
+              "level": 2,
+              "text": "10.\nElementos descartados del canon (no usar en futuras iteraciones)"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-037",
+              "headers": [
+                "Elemento descartado",
+                "Reemplazado por"
+              ],
+              "rows": [
+                [
+                  "Burbuja de curvatura tipo Alcubierre",
+                  "Túnel de gusano Velari con garganta piloto"
+                ],
+                [
+                  "Maniobra \"Caída y Frenado\" (asistencia gravitacional en\nJúpiter)",
+                  "Arco propulsado 1g/1g alrededor de Júpiter, L1→L2, 57h48min"
+                ],
+                [
+                  "Proxima y boca del túnel en el mismo punto (L1)",
+                  "Órbitas halo controladas alrededor de L1 y L2, ~106×10⁶ km entre\nregiones"
+                ],
+                [
+                  "Ciclo de lanzamiento \"~3,8 años\"",
+                  "~11,86 años (período orbital de Júpiter), con la separación orbital\nremota haciendo la ventana probablemente única de todos modos"
+                ],
+                [
+                  "\"Nube de Oort a 50 AU\"",
+                  "\"Región de encuentro\" (~173 UA), sin invocar la nube de Oort"
+                ],
+                [
+                  "Motivo de Harlan: \"robar tecnología para provocar guerra\ncontrolada\"",
+                  "Doctrina de defensa preventiva por desconfianza —ver Sección 8"
+                ],
+                [
+                  "Sabotaje \"apurado, por falta de tiempo\"",
+                  "Meticuloso; la firma de override es un costo inevitable y\ncalculado"
+                ],
+                [
+                  "Ocultación por Júpiter como razón principal del aislamiento de\nZao",
+                  "Jammer de Harlan + corte físico de COM A/B + ineficacia temporal de\nla vía Tierra"
+                ],
+                [
+                  "Mensaje que resuelve todo por sí solo",
+                  "Acusación y orientación que sólo se vuelven prueba y solución al\ncombinarse con la investigación de Rao"
+                ],
+                [
+                  "Rao apareciendo recién avanzada la trama",
+                  "Establecida desde el lanzamiento (Escena 1, línea del 30%)"
+                ],
+                [
+                  "Rao \"ya adentro\" del núcleo antes de que Harlan sellara la puerta\nsin explicación",
+                  "Rao permanece en un terminal protegido del puente y combate el\npayload a distancia"
+                ],
+                [
+                  "Sorell reducida a sospechosa y apoyo físico",
+                  "Sorell aporta el saludo limpio de sólo lectura que completa el\ncontacto"
+                ],
+                [
+                  "Proxima construida como base de contacto",
+                  "Estación científica joviana previa; el contacto reutiliza y amplía\ninfraestructura existente"
+                ],
+                [
+                  "Celestial Ardor diseñada desde origen como nave diplomática",
+                  "Nave terrestre de larga duración ya destinada en Proxima; Núcleo\nDiplomático instalado como retrofit"
+                ],
+                [
+                  "Portal Velari como aro compacto",
+                  "Campo de nodos negros dispersos; región navegable de 150–200 m sólo\ndurante la apertura"
+                ],
+                [
+                  "Gravedad aparente “invertida” durante el giro",
+                  "Caída libre, rotación de 180° y retorno de 1 g hacia el mismo\npiso"
+                ],
+                [
+                  "Estación y nave Velari tratadas como un mismo objeto",
+                  "Hábitat-estación de varios km + nave emisaria de 300–600 m"
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "11-decisiones-de-consolidación-tomadas-en-este-pase-para-tu-revisión",
+              "level": 2,
+              "text": "11.\nDecisiones de consolidación tomadas en este pase (para tu revisión)"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-039",
+              "ordered": true,
+              "items": [
+                "Se retiró la ocultación de la Tierra por Júpiter y la partición automática de cruce como mecanismos centrales. Harlan causa el aislamiento: activa un jammer, corta físicamente COM A/B desde el cilindro de servicio y aprovecha la microgravedad para alcanzar a Zao antes que Sorell. La vía Tierra sigue siendo inútil por demora lumínica.",
+                "Pequeñas diferencias de redondeo entre distintos\ncálculos previos (23h15min vs. 23h17min para el viaje de la señal) se\nresolvieron a favor de la cifra más verificada de forma independiente;\nla diferencia no tiene consecuencia dramática.",
+                "Los 30 minutos son un objetivo de montaje, no una duración\ndemostrada. El nuevo documento de animatic textual asigna\ntiempos por toma; una lectura cronometrada y luego una animática real\ndeberán validar o corregir esas cifras.",
+                "La disponibilidad inmediata deja de ser una\ncoincidencia. Proxima, la Celestial Ardor y su tripulación ya\ncumplían funciones jovianas antes del descubrimiento; el Núcleo\nDiplomático fue instalado durante los años de estudio y el aviso de 60\nhoras sólo exige completar el alistamiento y embarcar\nespecialistas/equipo de contacto.",
+                "La tecnología visible expresa niveles tecnológicos\ndistintos. Las soluciones humanas exponen tanques, radiadores,\njuntas y redundancias; las Velari ocultan la separación entre\nestructura, propulsión, soporte vital y disipación."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "12-índice-de-documentos-vigentes",
+              "level": 2,
+              "text": "12. Índice de documentos\nvigentes"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-041",
+              "ordered": true,
+              "items": [
+                "Documento 1 — Reporte Comprensivo (canon final)",
+                "Documento 2 — Biblia de Producción (canon final)",
+                "Documento 3 — Guion, cortometraje 30 min (canon final)",
+                "Documento 4 — este documento",
+                "Documento 5 — Animatic textual / plan de tomas y duración"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-042",
+              "text": "Todo documento anterior a este pase de consolidación queda superado\nen caso de conflicto."
+            }
+          ],
+          "en": [
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-001",
+              "text": "This document completely replaces the previous technical notes. Any figure or mechanism in earlier documents that contradicts it is discarded."
+            },
+            {
+              "type": "heading",
+              "id": "1-el-túnel-velari--reglas-fijas",
+              "level": 2,
+              "text": "1. The Velari tunnel — fixed rules"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-003",
+              "ordered": false,
+              "items": [
+                "Built by the Velari, not by humans. Its age is unknown and probably measured in millennia.",
+                "Pilot throat: permanently open and submicroscopic. It accepts only a fixed, extremely low-bandwidth synchronization and mathematical-challenge vocabulary; it cannot carry addressable audio, telemetry, or mission data.",
+                "Activation occurs when a civilization demonstrates the ability to detect and interpret it and consciously accepts. The challenge is a passive filter; the opening cannot be triggered accidentally.",
+                "Expansion to navigable diameter demands extreme energy that scales nonlinearly. Even the Velari can sustain it for only 60–90 seconds and cannot reopen it immediately at will.",
+                "Crossing stages: preload (cancelable) → critical expansion (commit point; unsafe to cancel) → navigable opening (60–90 s) → collapse.",
+                "The local mouth occupies a controlled halo orbit around Sol–Jupiter L2 under active Velari stabilization. The remote mouth is fixed infrastructure in its own orbit near the meeting region and cannot be moved without expansion-scale energy.",
+                "There is no ring. Each mouth is a field of black nodes separated by kilometres or tens of kilometres. During expansion, distortions and filaments connect them; the final navigable region is about 150–200 m wide."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "2-proxima--origen-y-funcionamiento",
+              "level": 2,
+              "text": "2. Proxima — origin and operation"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-005",
+              "ordered": false,
+              "items": [
+                "Original purpose: Jovian observatory and gravitational laboratory, built before Velari technology was recognized. The story extrapolates from fictional navigation residuals in Pioneer, Voyager, Galileo, and Juno data; it does not claim a real discovery.",
+                "A network of drag-free probes, optical clocks, laser interferometry, and test masses locates the pilot throat at L2. Xenophysics, communications, contact control, and mission support are added only afterward.",
+                "Architecture: a 500–800 m non-rotating spine with axial docks, tanks, workshops, control, reactors, and antennas; two counter-rotating cylindrical habitats at 0.4–0.6 g; perpendicular radiators and storage; hazardous modules isolated on arms.",
+                "Normal power comes from fusion, with independent fission for critical loads and Jovian deuterium/helium-3 logistics.",
+                "Life support recycles more than 95% of its water, regenerates oxygen, removes CO₂, and holds months of reserves. Water, polymers, and consumables contribute to shielding.",
+                "Different construction generations must remain visible: an aged scientific core, industrial additions, and a recent contact layer—not a station built all at once for the Velari."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "3-celestial-ardor--envolvente-técnica",
+              "level": 2,
+              "text": "3. Celestial Ardor — technical envelope"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-007",
+              "headers": [
+                "Parameter",
+                "Canon"
+              ],
+              "rows": [
+                [
+                  "Origin",
+                  "Built on Earth for long-duration exploration and scientific transport"
+                ],
+                [
+                  "At discovery",
+                  "Already assigned to Proxima with its crew; later adapted for contact"
+                ],
+                [
+                  "Length / mission mass",
+                  "80–100 m / ~300 t"
+                ],
+                [
+                  "Organization",
+                  "Axial: sensors → bridge → habitat/shelter → retrofit diplomatic core → tanks → reactor → engine"
+                ],
+                [
+                  "Propulsion",
+                  "D–³He fusion torch, magnetic nozzle, conceptual effective exhaust velocity of 10,000–15,000 km/s"
+                ],
+                [
+                  "Reserves",
+                  "70–80 t combined fuel and reaction mass, including limited contingencies"
+                ],
+                [
+                  "Heat rejection",
+                  "Deployable liquid-metal radiators; dark/reddish veils under thrust"
+                ],
+                [
+                  "Endurance",
+                  "~2 weeks for six crew"
+                ],
+                [
+                  "Gravity",
+                  "1 g under thrust; free fall during turnover, crossing, and engine-off manoeuvres"
+                ],
+                [
+                  "Dedicated loads and routes",
+                  "Auxiliary reactor, life support, navigation, medicine, and dedicated physical control of the external laser"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-008",
+              "text": "Before crossing, the radiators retract, the torch shuts down, and heat moves into accumulators. They deploy again before the next burn. Apparent gravity does not reverse during turnover: it vanishes in free fall and returns toward the same deck after rotation."
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-009",
+              "ordered": false,
+              "items": [
+                "Interior: decks transverse to thrust, three axial cylinders—central, service, and logistics—and an off-axis retrofit diplomatic core.",
+                "Bridge: the axial vestibule and central exit sit behind the crew in Voss’s frontal composition; the service access is recessed beyond the consoles’ sightline.",
+                "Engine-off circulation: bars and rests in the central cylinder; fast ballistic travel among trays and branches in the service cylinder.",
+                "Communications: wireless mesh plus wired COM A/B on every deck. A distributor near command gathers sector-labelled couplers.",
+                "External laser: standard long-range equipment with local control and aiming on a dedicated physical route."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "4-arquitectura-velari--observaciones-canónicas",
+              "level": 2,
+              "text": "4. Velari architecture — canonical observations"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-011",
+              "ordered": false,
+              "items": [
+                "Velari station: a continuous organic habitat several kilometres across, without visible assembled modules. Lobes, arches, cavities, voids, and a skin able to change reflectivity, texture, transparency, geometry, and emissivity.",
+                "The entire skin can radiate in infrared. No separate reactor, fuel, tanks, or exhaust can be identified—only immense energy gradients.",
+                "It does not spin and generates controlled local gravity. Human sensors find life-compatible temperatures, circulating liquids, complex chemistry, and pressurized zones: more built ecosystem than mechanical station.",
+                "Emissary ship: 300–600 m, organic and bioluminescent; huge beside Celestial Ardor and small beside the station. No nozzles or exhaust; metric disturbances imply momentum exchange with external structures or fields.",
+                "Its reconfigurable interior is an instrumental inference or feature-length material, not information the humans must explain in the short."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "5-física-del-tránsito--verificada",
+              "level": 2,
+              "text": "5. Transit physics — verified"
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-013",
+              "text": "Local leg (Proxima L1 → L2 mouth):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-014",
+              "headers": [
+                "Parameter",
+                "Value"
+              ],
+              "rows": [
+                [
+                  "Jupiter Hill radius",
+                  "~53×10⁶ km"
+                ],
+                [
+                  "L1–L2 distance",
+                  "~106×10⁶ km"
+                ],
+                [
+                  "Flight profile",
+                  "1 g / 1 g powered arc around Jupiter"
+                ],
+                [
+                  "Total time",
+                  "57 h 48 min (28 h 54 min per half)"
+                ],
+                [
+                  "Peak speed near turnover",
+                  "~1,020 km/s"
+                ],
+                [
+                  "Total delta-v",
+                  "~2,040 km/s"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-015",
+              "text": "Remote leg (remote mouth → Velari station):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-016",
+              "headers": [
+                "Parameter",
+                "Value"
+              ],
+              "rows": [
+                [
+                  "Flight profile",
+                  "1 g / 1 g, 24 h total"
+                ],
+                [
+                  "Distance",
+                  "~18.3×10⁶ km"
+                ],
+                [
+                  "Peak speed",
+                  "~424 km/s"
+                ],
+                [
+                  "Final Velari orbital speed",
+                  "2.26 km/s"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-017",
+              "text": "Comparison with direct flight (without the tunnel):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-018",
+              "headers": [
+                "Parameter",
+                "Value"
+              ],
+              "rows": [
+                [
+                  "Jupiter to meeting region",
+                  "167.8 AU"
+                ],
+                [
+                  "Time at sustained 1 g",
+                  "~37 days"
+                ],
+                [
+                  "Peak speed",
+                  "~15,700 km/s (~0.052c)"
+                ],
+                [
+                  "Total delta-v",
+                  "~31,400 km/s"
+                ],
+                [
+                  "Human limitation",
+                  "Drive limited to ~90 accumulated hours by reaction mass and heat rejection"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-019",
+              "text": "The former 31,400 km/s ‘maximum speed’ confused peak speed with total delta-v. No exact energy ratio is fixed without specifying specific impulse, efficiency, and braking recovery."
+            },
+            {
+              "type": "heading",
+              "id": "6-ventana-de-lanzamiento--dos-restricciones-independientes-jerarquizadas",
+              "level": 2,
+              "text": "6. Launch window — two independent, ranked constraints"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-021",
+              "ordered": true,
+              "items": [
+                "Hard constraint: Sol–Jupiter–remote-anchor geometry (~11.86 years), which determines when a macroscopic throat can stabilize and roughly matches Jupiter’s orbital period.",
+                "Secondary constraint: stored energy, which limits the opening to 60–90 seconds. Energy may be ready sooner but cannot replace the required geometry."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-022",
+              "text": "Orbital separation after 12 years (remote mouth versus Velari station, currently near a node between differently inclined orbits):"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-023",
+              "headers": [
+                "Relative inclination",
+                "Separation after 12 years"
+              ],
+              "rows": [
+                [
+                  "5°",
+                  "0.50 AU"
+                ],
+                [
+                  "10°",
+                  "1.00 AU"
+                ],
+                [
+                  "20°",
+                  "1.99 AU"
+                ],
+                [
+                  "30°",
+                  "2.97 AU"
+                ],
+                [
+                  "45°",
+                  "4.39 AU"
+                ],
+                [
+                  "60°",
+                  "5.73 AU"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-024",
+              "text": "Canonical configuration: ~30° inclination. Current mission separation is ~0.122 AU (18.3×10⁶ km); in 12 years it is about 24 times greater. A comparable orbital crossing may take more than a thousand years, with no guarantee of an exact match if period or eccentricity also differ."
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-025",
+              "text": "Conclusion: the current window is very likely unique on a human-lifetime scale."
+            },
+            {
+              "type": "heading",
+              "id": "7-el-mensaje-de-zao",
+              "level": 2,
+              "text": "7. Zao’s message"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-027",
+              "ordered": false,
+              "items": [
+                "Final content: ‘If this arrives… Acheron is inside. Harlan altered the core. The surface log is false. Cross-check the routine against the physical relay. Don’t shut down mediation. Please…’",
+                "First warning: the bridge hears that an autonomous payload bears Sorell’s signature and that the signature appears false. The cutoff prevents them from hearing Harlan’s name.",
+                "Block: Harlan activates a jammer at the bridge access and disconnects DIPLOMATIC SYSTEMS — COM A/B in the service-cylinder distributor. Wireless, text, and both wired backups fail.",
+                "Available path: the external laser is the standard long-range system; local control retains power and command through dedicated physical routing.",
+                "Aim: Zao combines the flight plan, light time, and the ship’s future position. Beam divergence covers part of the uncertainty ellipse and a narrow sweep covers the rest.",
+                "Rejected destinations: Earth would deliver the warning after the encounter; Proxima has no useful optical acquisition; the pilot throat cannot carry mission data.",
+                "Harlan cannot stop reception because the pointing solution is already closed. He sees TRANSMITTED but not the exact corridor.",
+                "Signal travel time: ~23 h 15 min (167.8 AU)."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "doble-llave-causal",
+              "level": 3,
+              "text": "Causal double key"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-029",
+              "ordered": false,
+              "items": [
+                "Investigation without message: Rao identifies the autonomous payload, trigger, and required quarantine, but obtains only anonymous signature OVR-7C41. She cannot prove who owns the override or stop that owner from releasing it.",
+                "Message without investigation: it accuses Harlan and names the relay, but cannot prove the voice is genuine or supply the technical map needed to stop a process that remains active after arrest.",
+                "Together: payload, physical relay, and command credential identify Harlan; Voss revokes his authority and Rao applies her prepared quarantine. Sorell supplies the clean passive greeting."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "8-motivo-de-harlan--directiva-aqueronte--texto-canónico",
+              "level": 2,
+              "text": "8. Harlan’s motive / Acheron Directive — canonical text"
+            },
+            {
+              "type": "blockquote",
+              "id": "notas-tecnicas-continuidad:block-031",
+              "text": "The Acheron Directive does not seek war as an end; it accepts war as a calculated risk. It holds that offering humanity’s diplomatic credentials without verification to a civilization millennia more advanced could cost the species. Harlan prefers verifiable intelligence about Velari defenses—even if obtaining it reads as aggression—to blind surrender. This is not technological greed but preventive self-defense applied by someone convinced he alone sees clearly."
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-032",
+              "text": "Acheron is a public, decentralized doctrine rather than a membership organization. Its protests are legal and visible; the sabotage cell is clandestine. Harlan passed screening because there was no verifiable affiliation to declare or detect."
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-033",
+              "text": "The sabotage was not rushed: he had 57 h 48 min to execute it carefully. The physical record is unavoidable—every emergency override burns an anonymous signature into hardware, and erasing it would disable the core. He accepts that risk, trusting the surface forgery, Zao’s death, and his authority to keep the pieces apart."
+            },
+            {
+              "type": "heading",
+              "id": "9-cronología-maestra-consolidada",
+              "level": 2,
+              "text": "9. Consolidated master timeline"
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-035",
+              "text": "See Document 1, Section VII. It is deliberately identical in both documents to prevent drift."
+            },
+            {
+              "type": "heading",
+              "id": "10-elementos-descartados-del-canon-no-usar-en-futuras-iteraciones",
+              "level": 2,
+              "text": "10. Discarded canon elements (do not use in later iterations)"
+            },
+            {
+              "type": "table",
+              "id": "notas-tecnicas-continuidad:block-037",
+              "headers": [
+                "Discarded element",
+                "Replacement"
+              ],
+              "rows": [
+                [
+                  "Alcubierre-style warp bubble",
+                  "Velari wormhole with a pilot throat"
+                ],
+                [
+                  "‘Fall and Brake’ Jupiter gravity assist",
+                  "Powered 1 g / 1 g arc around Jupiter, L1→L2, 57 h 48 min"
+                ],
+                [
+                  "Proxima and tunnel mouth both at L1",
+                  "Controlled halo orbits around L1 and L2, ~106×10⁶ km apart"
+                ],
+                [
+                  "~3.8-year launch cycle",
+                  "~11.86 years, while remote orbital separation makes the window probably unique"
+                ],
+                [
+                  "‘Oort Cloud at 50 AU’",
+                  "Meeting region at ~173 AU, without invoking the Oort Cloud"
+                ],
+                [
+                  "Harlan steals technology to provoke controlled war",
+                  "Preventive-defense doctrine rooted in distrust"
+                ],
+                [
+                  "Rushed sabotage",
+                  "Meticulous; the override signature is an unavoidable calculated cost"
+                ],
+                [
+                  "Jupiter occultation as Zao’s main isolation",
+                  "Harlan’s jammer, physical COM A/B cut, and the lateness of an Earth relay"
+                ],
+                [
+                  "Message solves everything alone",
+                  "Accusation and direction become proof and a solution only with Rao’s investigation"
+                ],
+                [
+                  "Rao introduced late",
+                  "Established from launch"
+                ],
+                [
+                  "Rao inexplicably inside the core",
+                  "Rao works remotely from a protected bridge terminal"
+                ],
+                [
+                  "Sorell reduced to suspect and physical support",
+                  "Sorell supplies the clean read-only greeting"
+                ],
+                [
+                  "Proxima built for contact",
+                  "Pre-existing Jovian science station later expanded"
+                ],
+                [
+                  "Ardor designed as a diplomatic ship",
+                  "Pre-existing long-duration Earth ship with a retrofit diplomatic core"
+                ],
+                [
+                  "Compact Velari ring portal",
+                  "Distributed black-node field; 150–200 m region only while open"
+                ],
+                [
+                  "Gravity ‘reverses’ during turnover",
+                  "Free fall, 180° rotation, then 1 g toward the same deck"
+                ],
+                [
+                  "Station and ship treated as one object",
+                  "Kilometre-scale habitat station plus 300–600 m emissary"
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "11-decisiones-de-consolidación-tomadas-en-este-pase-para-tu-revisión",
+              "level": 2,
+              "text": "11. Consolidation decisions in this pass"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-039",
+              "ordered": true,
+              "items": [
+                "Jupiter occultation and automatic crossing partition are no longer the central mechanisms. Harlan isolates Zao with a jammer and physical COM A/B cut, then uses the service cylinder in microgravity to beat Sorell to her station. An Earth relay remains too slow.",
+                "Rounding differences in signal time were resolved in favor of the independently verified ~23 h 15 min figure; the difference has no dramatic effect.",
+                "Thirty minutes is an editing target, not a proven duration. A timed read and actual animatic must validate it.",
+                "Immediate availability is not coincidence: Proxima, Ardor, and her crew already served Jovian operations; the diplomatic core was installed during years of study, and the 60-hour warning requires only final preparation and boarding.",
+                "Visible technology expresses different levels: human systems expose tanks, radiators, joints, and redundancy; Velari systems hide the boundaries between structure, propulsion, life support, and heat rejection."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "12-índice-de-documentos-vigentes",
+              "level": 2,
+              "text": "12. Current document index"
+            },
+            {
+              "type": "list",
+              "id": "notas-tecnicas-continuidad:block-041",
+              "ordered": true,
+              "items": [
+                "Document 1 — Comprehensive Report (final canon)",
+                "Document 2 — Production Bible (final canon)",
+                "Document 3 — 30-minute short screenplay (final canon)",
+                "Document 4 — this document",
+                "Document 5 — Textual animatic / shot and timing plan"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "notas-tecnicas-continuidad:block-042",
+              "text": "If they conflict, every document predating this consolidation pass is superseded."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source",
+        "en": "draft"
+      },
+      "provenance": [
+        "legacy-site/notas-tecnicas-continuidad.html",
+        "docs/CANON_DECISIONS.md",
+        "docs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "id": "document:biblia-produccion",
+      "slug": "biblia-de-produccion",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Biblia de producción",
+          "en": "Production bible"
+        }
+      },
+      "status": "extracted",
+      "sourceLanguage": "es",
+      "sourcePath": "legacy-site/biblia-produccion.html",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Personajes, espacios, naves, sistemas y objetos con funciones dramáticas y visuales verificables.",
+          "en": "Characters, spaces, ships, systems, and objects with verifiable dramatic and visual functions."
+        }
+      },
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "heading",
+              "id": "personajes-elenco-del-cortometraje",
+              "level": 2,
+              "text": "PERSONAJES (elenco del\ncortometraje)"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-002",
+              "text": "ZAO — Ingeniera Jefe Rol: descubre el sabotaje a lo\nlargo del tránsito, transmite el mensaje de emergencia, es asesinada\nminutos antes del cruce. Motor emocional de la historia. Apariencia:\n40-50 años, complexión práctica. Mono de ingeniería gris oscuro o azul\nmarino, herramientas al cinturón. Vínculos establecidos: mentora\ninformal de Rao (la instruye antes del lanzamiento sobre cómo manejar\nuna corrupción de código si supera cierto umbral); confía en el trabajo\nlingüístico de Sorell."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-003",
+              "text": "CAPITÁN ELIAS VOSS Rol: líder de la nave. Debe\nsostener el orden durante un viaje sin posibilidad de retorno ni\nconsulta con Tierra. Apariencia: 50s, porte erguido, entrecano."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-004",
+              "text": "COMANDANTE RYLEN HARLAN Rol: saboteador. Oficial de\ncarrera, adherente secreto de la célula operativa de la Directiva\nAqueronte. La doctrina es pública y descentralizada, sin padrón de\nmiembros; por eso su simpatía no apareció como afiliación verificable\ndurante la selección. No actúa por codicia sino por una convicción de\ndefensa preventiva. Apariencia: 40s, mandíbula marcada, calma calculada\nque se resquebraja en el clímax. Acceso: invoca un protocolo de\nanulación de emergencia de un solo oficial —pensado para crisis reales\ndonde el segundo oficial cualificado no está disponible— que sólo abre\nun modo de mantenimiento. Durante el tránsito usa ese acceso para\ninsertar el payload. El override quema una firma anónima e imborrable en\nel relé físico; puede revocarse desde mando cuando su titular queda\nidentificado."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-005",
+              "text": "ELIN RAO — Especialista en IA Rol: descubre el\ncomportamiento autónomo del payload, obtiene su firma técnica y prepara\nla cuarentena que permite detenerlo en el clímax sin destruir la\nmediación. Apariencia: 30s, postura introvertida, encorvada frente a\npantallas. Vínculo establecido: Zao la involucra activamente desde el\nlanzamiento —no aparece por primera vez recién avanzada la historia—,\ndejándole una instrucción que resultará decisiva: no intentar reparar\nuna corrupción avanzada, sino aislarla. Nota de continuidad: en el\nclímax, Rao trabaja desde un terminal protegido del puente. La\ninvestigación sola no identifica al titular de la firma; el mensaje solo\nacusa. Al cruzar ambas evidencias obtiene la prueba y el método técnico\nindispensable."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-006",
+              "text": "DRA. LIAN SORELL — Xenolingüista Rol: apartada\ntemporalmente por evidencia superficial plantada por Harlan. Tras quedar\nexonerada, demuestra que el payload no es lenguaje Velari y aporta el\nsaludo limpio preparado antes del lanzamiento; su competencia\nlingüística es indispensable para completar el contacto. Apariencia:\n30s, apariencia académica. Vínculo establecido: entrega a Zao una\ntraducción actualizada del saludo Velari. Esa secuencia, almacenada como\npaquete pasivo de sólo lectura, reaparece en el clímax."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-007",
+              "text": "LT. JUNO CAEL — Piloto / Comunicaciones Rol: voz\npragmática; pilota el tránsito de 57h48min y el tramo remoto de 24h;\ndetecta y autentica técnicamente la señal entrante de Zao. Permanece en\nel puente durante el clímax y fuerza remotamente el cierre del núcleo\nsin abandonar la navegación. Apariencia: 30s, complexión atlética."
+            },
+            {
+              "type": "heading",
+              "id": "personajes-secundarios-presentes-en-pantalla",
+              "level": 2,
+              "text": "Personajes\nsecundarios presentes en pantalla"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-009",
+              "text": "TÉCNICO DE PROXIMA — personal de mantenimiento y\ncontrol de muelle. En la apertura solicita a Zao la confirmación del\nnúcleo. Vestuario de trabajo grafito con acentos ocres, distinto del\nuniforme azul marino de la tripulación."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-010",
+              "text": "OFICIAL MÉDICO DE LA CELESTIAL ARDOR — examina el\ncuerpo de Zao y establece que las lesiones no corresponden a una caída.\nUniforme médico de vuelo azul petróleo, sin bata ni indumentaria\nhospitalaria contemporánea."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-011",
+              "text": "TRIPULANTE DE SEGURIDAD — intenta detener a Harlan y\nacompaña a Voss durante la entrada al núcleo. Uniforme carbón con\nprotección flexible y elementos de inmovilización; no porta armas de\nfuego."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-012",
+              "text": "MANIFESTANTES TERRESTRES — dos corrientes mostradas\ncon igual seriedad en material de noticias: Aqueronte expresa temor y\ndefensa preventiva; los partidarios del contacto sostienen una esperanza\ncautelosa. Se distinguen por paleta, símbolos geométricos y actitud, no\npor caricaturas morales."
+            },
+            {
+              "type": "heading",
+              "id": "personajes-reservados-para-una-versión-larga",
+              "level": 2,
+              "text": "Personajes\nreservados para una versión larga"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-014",
+              "text": "Okoye, Volkov, Keene, Vega, Carvalho, Tanaka, Hassan y Wei no\naparecen en el cortometraje actual. Sus funciones, edades y vínculos\ndeben definirse antes de fijar su diseño visual."
+            },
+            {
+              "type": "heading",
+              "id": "lugares",
+              "level": 2,
+              "text": "LUGARES"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-016",
+              "text": "ESTACIÓN PROXIMA (órbita halo alrededor de L1,\nSol-Júpiter) Estación científica joviana anterior al\ndescubrimiento Velari. Su núcleo antiguo estudia Júpiter y anomalías\ngravitacionales; las ampliaciones posteriores incorporan astillero,\ndepósitos, xenofísica, comunicaciones y control de contacto. Eje central\nno rotatorio de ~500–800 m; dos hábitats cilíndricos contrarrotatorios a\n0,4–0,6 g; muelles axiales, radiadores negros y brazos con módulos\npeligrosos aislables. La mezcla de celosías, talleres, observatorios y\ngeneraciones constructivas debe leerse como “ISS + refinería +\nastillero”. Iluminación fría azulada; Júpiter visible pero angularmente\nmodesto (~0,15°)."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-017",
+              "text": "LA BOCA (órbita halo controlada alrededor de L2,\nSol-Júpiter) El extremo local del túnel Velari. No es un portal\nanular: nodos negros dispersos por kilómetros o decenas de kilómetros\nrodean un vacío casi indetectable. Durante la expansión crítica aparecen\nfilamentos, lentes estelares incompatibles y luz no familiar; sólo\ndurante 60–90 s se forma una región navegable de ~150–200 m."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-018",
+              "text": "CELESTIAL ARDOR — Interior. Cubiertas transversales al eje de empuje y tres recorridos longitudinales: cilindro central de uso cotidiano, pozo de ascensor y cilindro de servicio estrecho para tránsito balístico y bandejas técnicas. El puente se abre a un vestíbulo axial visible detrás de Voss; el acceso al cilindro de servicio queda oculto en un receso lateral. El núcleo diplomático retrofit está fuera del eje y posee accesos operativo y técnico separados. Un distribuidor próximo a mando reúne los acopladores COM A/B de cada cubierta. Durante el empuje el piso recibe 1 g; en la aproximación final y el cruce hay microgravedad."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-019",
+              "text": "BOCA REMOTA — Nueva ubicación Gemela funcional de la\nboca local: nodos Velari negros, dispersos y sin aro. Está anclada como\ninfraestructura fija cerca de la región de encuentro; no puede\nreubicarse sin un costo comparable al de la expansión."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-020",
+              "text": "REGIÓN DE ENCUENTRO / ESTACIÓN VELARI A ~18,3\nmillones de km de la boca remota. La estación es un hábitat orgánico\ncontinuo de varios kilómetros, con lóbulos, arcos, cavidades y una piel\nbioluminiscente que altera textura, transparencia y emisividad. No gira:\nutiliza gravedad local. No revela reactor, depósitos ni escape\nidentificables; sus zonas presurizadas y líquidos circulantes sugieren\nun ecosistema construido. Una nave emisaria se separa de ella para el\nencuentro."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-021",
+              "text": "TIERRA (material de archivo/noticias) Aparece solo\ncomo transmisión en pantallas durante la escena de apertura:\nmanifestaciones a favor y en contra del contacto."
+            },
+            {
+              "type": "heading",
+              "id": "naves",
+              "level": 2,
+              "text": "NAVES"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-023",
+              "text": "CELESTIAL ARDOR — nave terrestre de larga duración,\nadaptada para diplomacia. 80–100 m, ~300 t, casco blanco mate/plateado\ncon detalles dorados, forma axial alargada, tobera magnética y\nradiadores de metal líquido desplegables. El núcleo diplomático ocupa\nuna bahía científica reacondicionada bajo un domo protector. Antorcha\nD–³He; 70–80 t de combustible y masa de reacción con reservas; autonomía\nnominal de dos semanas para seis personas."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-024",
+              "text": "NAVE EMISARIA VELARI — 300–600 m; orgánica, curva y\nbioluminiscente. No presenta toberas ni escape. Perturbaciones métricas\ny cambios de momento sugieren propulsión acoplada al entorno. Su\ninterior parece reconfigurable para distintas biologías. En producción\npuede resolverse primero mediante silueta, luz y escala, reservando el\ndetalle para planos próximos."
+            },
+            {
+              "type": "heading",
+              "id": "props",
+              "level": 2,
+              "text": "PROPS"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-026",
+              "text": "NÚCLEO DIPLOMÁTICO CUÁNTICO — esfera/cristal\npulsante (azul = nominal, rojo = corrupto). Aloja también la IA de\nmediación —mismo sistema, no dos separados."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-027",
+              "text": "LÁSER EXTERIOR DE COMUNICACIONES — sistema estándar de larga distancia de la Celestial Ardor. Su control local, alimentación y puntería usan una canalización física dedicada, separada de la malla inalámbrica y del distribuidor COM A/B. Zao lo apunta al corredor futuro de la nave usando el plan de vuelo, el tiempo lumínico, la divergencia y un barrido estrecho. Firma dispositivo y hora, pero no certifica la veracidad del mensaje."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-028",
+              "text": "REGISTRO FÍSICO DEL RELÉ — huella técnica anónima\nque todo override graba en hardware y que no puede alterarse sin\ninutilizar el núcleo. Es distinta del registro superficial falsificable\nque incrimina a Sorell. Sólo al cruzarla con la rutina aislada por Rao y\nla indicación del mensaje puede asociarse de manera concluyente con la\ncredencial de Harlan."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-029",
+              "text": "PAQUETE DE SALUDO DE SORELL — secuencia pasiva, sin\ncódigo ejecutable, almacenada en soporte de sólo lectura desde antes del\nlanzamiento. Rao puede transmitirla por un canal limpio una vez aislado\nel payload; evita que la solución final aparezca de improviso."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-030",
+              "text": "LA GARGANTA / INDICADOR DE EXPANSIÓN — pantalla o\nproyección que muestra el estado de la puerta: PRECARGA → EXPANSIÓN\nCRÍTICA → APERTURA NAVEGABLE (cuenta regresiva de 60-90s) → COLAPSO.\nReemplaza cualquier indicador de \"oclusión\" de versiones anteriores."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-031",
+              "text": "PANTALLAS DE NOTICIAS (muelle de Proxima) —\ntransmiten el montaje de protestas/celebraciones terrestres, con\nindicador de retraso de señal Tierra-estación visible en pantalla."
+            }
+          ],
+          "en": [
+            {
+              "type": "heading",
+              "id": "personajes-elenco-del-cortometraje",
+              "level": 2,
+              "text": "CHARACTERS (short-film cast)"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-002",
+              "text": "ZAO — Chief Engineer. She uncovers the sabotage during transit, sends the emergency message, and is murdered minutes before the crossing. She is the story’s emotional engine. In her forties or fifties, practical build, dark gray or navy engineering coveralls, tools at her belt. She informally mentors Rao and trusts Sorell’s linguistic work."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-003",
+              "text": "CAPTAIN ELIAS VOSS — Ship commander. He must preserve order on a journey with no return and no consultation with Earth. In his fifties, upright, graying."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-004",
+              "text": "COMMANDER RYLEN HARLAN — Saboteur and career officer, secretly aligned with an operational Acheron cell. He acts from preventive-defense conviction, not greed. His emergency single-officer override opens maintenance mode and burns an anonymous, indelible signature into the physical relay; command can revoke it once its owner is identified."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-005",
+              "text": "ELIN RAO — AI specialist. She discovers the payload’s autonomous behavior, extracts its technical signature, and prepares the quarantine that stops it without destroying mediation. Zao involves her from launch and teaches her to isolate advanced corruption instead of repairing it. Rao works from a protected bridge terminal; investigation and message are both required."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-006",
+              "text": "DR. LIAN SORELL — Xenolinguist. Harlan’s planted surface evidence temporarily sidelines her. Once cleared, she shows the payload is not Velari language and supplies the clean, read-only greeting prepared before launch."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-007",
+              "text": "LT. JUNO CAEL — Pilot / Communications. Pragmatic bridge voice; pilots the 57 h 48 min local transit and 24-hour remote leg, then detects and authenticates Zao’s incoming signal. She remotely forces the core closed without leaving navigation."
+            },
+            {
+              "type": "heading",
+              "id": "personajes-secundarios-presentes-en-pantalla",
+              "level": 2,
+              "text": "On-screen supporting characters"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-009",
+              "text": "PROXIMA TECHNICIAN — dock maintenance and control staff. Graphite workwear with ochre accents distinguishes station crew from the mission’s navy uniforms."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-010",
+              "text": "CELESTIAL ARDOR MEDICAL OFFICER — examines Zao and establishes that her injuries are not a fall. Petrol-blue flight medical uniform, without a modern hospital coat."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-011",
+              "text": "SECURITY CREWMEMBER — attempts to restrain Harlan and accompanies Voss into the core. Charcoal uniform with flexible protection and restraints; no firearms."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-012",
+              "text": "EARTH PROTESTERS — two currents shown with equal seriousness in news footage: Acheron fear and preventive defense versus cautious hope for contact. Palette, geometry, and behavior distinguish them without moral caricature."
+            },
+            {
+              "type": "heading",
+              "id": "personajes-reservados-para-una-versión-larga",
+              "level": 2,
+              "text": "Characters reserved for a longer version"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-014",
+              "text": "Okoye, Volkov, Keene, Vega, Carvalho, Tanaka, Hassan, and Wei do not appear in the current short. Their functions, ages, and relationships must be defined before their visual design is fixed."
+            },
+            {
+              "type": "heading",
+              "id": "lugares",
+              "level": 2,
+              "text": "LOCATIONS"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-016",
+              "text": "PROXIMA STATION — controlled halo orbit around Sol–Jupiter L1. A pre-contact Jovian science station with an old observational core and later shipyard, storage, xenophysics, communications, and contact-control additions. A 500–800 m non-rotating spine, counter-rotating habitats, axial docks, black radiators, and isolated hazardous arms read as ISS + refinery + shipyard."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-017",
+              "text": "THE MOUTH — controlled halo orbit around Sol–Jupiter L2. Not a ring: black nodes spread across kilometres surround a nearly undetectable void. Critical expansion produces filaments, impossible lensing, and unfamiliar light; a 150–200 m navigable region exists for only 60–90 seconds."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-018",
+              "text": "CELESTIAL ARDOR — INTERIOR. Transverse decks and three longitudinal routes: everyday central cylinder, lift shaft, and narrow service cylinder for ballistic travel and technical trays. The bridge opens to a visible axial vestibule while service access hides in a side recess. The off-axis retrofit diplomatic core has separate operational and technical access; a nearby distributor gathers deck COM A/B couplers. Thrust gives 1 g; final approach and crossing are in microgravity."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-019",
+              "text": "REMOTE MOUTH — functional twin of the local mouth, fixed near the meeting region and movable only at expansion-scale cost."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-020",
+              "text": "MEETING REGION / VELARI STATION — about 18.3 million km from the remote mouth. A continuous, kilometre-scale organic habitat with lobes, arches, cavities, bioluminescent adaptive skin, controlled local gravity, pressurized zones, and circulating liquids. An emissary craft departs it for the rendezvous."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-021",
+              "text": "EARTH — appears only in opening news screens: demonstrations for and against contact."
+            },
+            {
+              "type": "heading",
+              "id": "naves",
+              "level": 2,
+              "text": "SHIPS"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-023",
+              "text": "CELESTIAL ARDOR — 80–100 m, ~300 t, long-duration Earth ship retrofitted for diplomacy. Matte white/silver hull, gold details, long axial form, magnetic nozzle, liquid-metal radiators, D–³He torch, 70–80 t of fuel and reaction mass, and two-week endurance for six."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-024",
+              "text": "VELARI EMISSARY — 300–600 m, organic, curved, and bioluminescent. No nozzles or exhaust; metric disturbances imply propulsion coupled to the environment. Its interior appears reconfigurable for different biologies."
+            },
+            {
+              "type": "heading",
+              "id": "props",
+              "level": 2,
+              "text": "PROPS"
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-026",
+              "text": "QUANTUM DIPLOMATIC CORE — pulsing sphere/crystal: blue when nominal, red when corrupted. It also houses the mediation AI; these are one system, not two."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-027",
+              "text": "EXTERNAL COMMUNICATIONS LASER — Ardor’s standard long-range system. Local control, power, and aiming use a dedicated physical route separate from wireless and COM A/B. Zao aims it at the ship’s future corridor using the flight plan, light time, divergence, and a narrow sweep. It signs device and time, not the truth of the message."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-028",
+              "text": "PHYSICAL RELAY RECORD — anonymous hardware trace burned by every override and impossible to alter without disabling the core. It differs from the falsifiable surface log implicating Sorell and becomes conclusive only when combined with Rao’s isolated routine and Zao’s message."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-029",
+              "text": "SORELL’S GREETING PACKAGE — passive, non-executable, read-only sequence stored before launch. Rao can transmit it over a clean channel after isolating the payload."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-030",
+              "text": "THROAT / EXPANSION INDICATOR — PRELOAD → CRITICAL EXPANSION → NAVIGABLE OPENING (60–90 s countdown) → COLLAPSE. It replaces the obsolete ‘occlusion’ indicator."
+            },
+            {
+              "type": "paragraph",
+              "id": "biblia-de-produccion:block-031",
+              "text": "NEWS SCREENS — Proxima dock displays the Earth protest/celebration montage with a visible Earth-to-station signal-delay indicator."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source",
+        "en": "draft"
+      },
+      "provenance": [
+        "legacy-site/biblia-produccion.html",
+        "docs/CANON_DECISIONS.md",
+        "docs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "id": "document:reporte-comprensivo",
+      "slug": "reporte-comprensivo",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Reporte comprensivo",
+          "en": "Comprehensive report"
+        }
+      },
+      "status": "extracted",
+      "sourceLanguage": "es",
+      "sourcePath": "legacy-site/reporte-comprensivo.html",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Concepto, causalidad, tránsito e infraestructura reconciliados.",
+          "en": "Reconciled concept, causality, transit, and infrastructure."
+        }
+      },
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "heading",
+              "id": "i-concepto-general",
+              "level": 2,
+              "text": "I. Concepto General"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-002",
+              "text": "Light Delay es un thriller de ciencia ficción dura centrado\nen el mensaje final de una ingeniera asesinada a bordo de una nave en la\nprimera misión de contacto humano con una civilización alienígena\nantigua, los Velari. La historia usa limitaciones reales de propagación\nluminosa, mecánica orbital y una tecnología de tránsito interestelar de\norigen alienígena —no humano— para estructurar su trama y su\ntensión."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-003",
+              "text": "A diferencia de versiones anteriores del concepto, la misión no parte\nen un momento elegido por conveniencia humana: parte porque una\ninfraestructura milenaria, construida y controlada enteramente por los\nVelari, se activó por primera vez, abriendo una ventana de tránsito que\npodría no repetirse en más de mil años."
+            },
+            {
+              "type": "heading",
+              "id": "ii-contexto-de-la-misión",
+              "level": 2,
+              "text": "II. Contexto de la misión"
+            },
+            {
+              "type": "heading",
+              "id": "la-puerta-velari",
+              "level": 3,
+              "text": "La Puerta Velari"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-006",
+              "text": "Cerca del punto de Lagrange L2 del sistema Sol-Júpiter existe una\nestructura Velari de antigüedad desconocida: una garganta\npiloto , un canal cuántico permanentemente abierto pero\nsubmicroscópico. No funciona como enlace de comunicaciones general: sólo\nadmite un repertorio fijo de pulsos de sincronización y desafío\nmatemático, con un ancho de banda insignificante y sin capacidad para\naudio, telemetría o datos de misión."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-007",
+              "text": "La historia de la detección precede al contacto. Décadas antes,\nresiduos diminutos e incongruentes en la navegación de Pioneer, Voyager,\nGalileo y Juno —una extrapolación ficticia de datos de sondas reales—\nmotivaron una red de observación dedicada. Proxima se construyó\nen L1 como estación científica joviana y laboratorio\ngravitacional , no como base de contacto. Sus sondas\ndrag-free , relojes ópticos, interferometría láser y masas de\nprueba localizaron finalmente cerca de L2 una anomalía artificial: la\ngarganta piloto."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-008",
+              "text": "El descubrimiento transformó una infraestructura ya existente.\nProxima añadió xenofísica, comunicaciones y navegación de contacto; la\nCelestial Ardor, una nave terrestre de exploración y transporte\ncientífico ya destinada allí con su tripulación, fue adaptada con el\nNúcleo Diplomático. Avances recientes en interpretación matemática —obra\nen parte de Rao y Zao— permitieron responder correctamente al protocolo.\nUna autorización humana consciente completó el desafío y activó la\nsecuencia: la garganta anunció una apertura navegable exactamente 60\nhoras después, por un intervalo de apenas 60 a 90 segundos."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-009",
+              "text": "Expandir la garganta a escala macroscópica exige una cantidad de\nenergía extrema, desproporcionada respecto de su tamaño —ni siquiera los\nVelari pueden sostenerla más que ese breve intervalo, ni reabrirla a\nvoluntad. La energía acumulada determina la duración; la geometría\nSol-Júpiter-ancla remota determina cuándo la expansión puede\nestabilizarse. La siguiente fase local comparable ocurre unos 11,86 años\ndespués, aproximadamente un período orbital de Júpiter."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-010",
+              "text": "Peor aún: la estación Velari en el otro extremo no permanece fija\nrespecto de la boca remota del túnel. Hoy ambos objetos se encuentran\ncerca de una configuración de nodo entre órbitas con inclinaciones\ndistintas, aunque todavía separados por 0,122 UA. Dentro de 12 años, la\nseparación podría acercarse a 3 UA —un viaje de días y demasiado lejos\npara que la advertencia de Zao alcance a la nave antes del encuentro. La\nsiguiente configuración nodal comparable podría tardar más de mil años.\nCon toda probabilidad, esta es la única oportunidad de contacto que\ntendrá la humanidad durante muchas generaciones."
+            },
+            {
+              "type": "heading",
+              "id": "reacción-en-la-tierra",
+              "level": 3,
+              "text": "Reacción en la Tierra"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-012",
+              "text": "La noticia de la apertura divide a la opinión pública. Sectores\noptimistas la celebran como el primer saludo real de la humanidad a otra\ncivilización. La Directiva Aqueronte —una doctrina pública y\ndescentralizada que desconfía profundamente de la asimetría tecnológica—\nexige la suspensión de la misión. No posee una membresía formal que\npermita excluir automáticamente a sus simpatizantes; dentro de su\nmovimiento amplio existe una célula operativa clandestina a la que\nHarlan pertenece. Su argumento público es que cruzar una puerta\ncontrolada sólo por los Velari equivale a entregar la iniciativa\nestratégica humana sin garantía de reciprocidad."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-013",
+              "text": "Con solo unas 60 horas de aviso antes de la apertura, no hay margen\npara el debate público. La misión puede partir porque la Celestial Ardor\nno debe llegar desde la Tierra: ya operaba desde Proxima, donde había\nsido mantenida y reabastecida mientras se estudiaba la garganta. El\nnúcleo diplomático y los especialistas de contacto son adaptaciones\nrecientes sobre una nave y una tripulación veteranas del sistema\njoviano."
+            },
+            {
+              "type": "heading",
+              "id": "la-nave",
+              "level": 3,
+              "text": "La nave"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-015",
+              "text": "Celestial Ardor — nave humana de exploración y\ntransporte científico de larga duración, construida en la Tierra y\nconvertida en plataforma diplomática mediante un retrofit . Mide\nunos 80–100 m , desplaza cerca de 300 t\nen configuración de misión y mantiene una arquitectura axial: sensores y\ncomunicaciones en proa; puente, hábitat y refugio radiológico en el\ncentro; bahía científica convertida en Núcleo Diplomático; tanques,\nreactor y antorcha de fusión hacia popa. Su casco blanco mate/plateado,\ndetalles dorados, juntas, esclusas y líneas de servicio deben mostrar\nuna máquina mantenida, no un objeto impecable."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-016",
+              "text": "La antorcha de fusión D–³He y su tobera magnética sostienen el perfil\n1g/1g. Unas 70–80 t de combustible y masa de reacción,\nincluidas reservas, cubren los dos tramos y contingencias limitadas.\nRadiadores desplegables de metal líquido aparecen como velos oscuros o\nrojizos durante el empuje; antes del cruce se recogen, el motor se apaga\ny el calor pasa a acumuladores. Un reactor auxiliar independiente\nmantiene soporte vital, navegación, medicina, comunicaciones y el Núcleo\nDiplomático. La autonomía nominal ronda dos semanas para seis\ntripulantes, con agua casi cerrada, oxígeno regenerado y un refugio\ncentral blindado por agua, alimentos y polímeros ricos en hidrógeno."
+            },
+            {
+              "type": "heading",
+              "id": "estación-proxima",
+              "level": 3,
+              "text": "Estación Proxima"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-018",
+              "text": "Ubicada en una órbita halo controlada alrededor de L1 del sistema\nSol-Júpiter, Proxima es una estación científica construida por\ngeneraciones. Su eje central no rotatorio —aproximadamente\n500–800 m — reúne muelles axiales, ascensores\npresurizados, control, talleres, depósitos, antenas y reactores. Dos\nhábitats cilíndricos contrarrotatorios producen 0,4–0,6\ng ; radiadores negros y almacenamientos se extienden\nperpendicularmente, mientras materiales peligrosos ocupan brazos o\nmódulos aislables."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-019",
+              "text": "La silueta debe leerse como observatorio + refinería +\nastillero , no como hotel: celosía antigua descolorida,\nlaboratorios de distintas épocas y una capa reciente de xenotecnología\nhumana, comunicaciones y control de misión. Fusión para operación normal\ny fisión independiente para cargas críticas; logística joviana de\ndeuterio y helio-3; reciclaje de agua superior al 95 %, regeneración de\noxígeno, eliminación de CO₂ y reservas por meses. Su escala e historia\nexplican que pudiera estudiar la anomalía durante décadas y preparar una\nmisión en sólo 60 horas."
+            },
+            {
+              "type": "heading",
+              "id": "iii-el-viaje--mecánica-de-tránsito",
+              "level": 2,
+              "text": "III. El viaje — mecánica de\ntránsito"
+            },
+            {
+              "type": "heading",
+              "id": "tramo-local-proxima-l1--boca-del-túnel-l2",
+              "level": 3,
+              "text": "Tramo local: Proxima\n(L1) → Boca del túnel (L2)"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-022",
+              "text": "La Celestial Ardor no puede recorrer la distancia entre ambos puntos\nde Lagrange (~106 millones de km) con un salto instantáneo: navega con\nun impulsor humano de alto empuje, acelerando a 1g durante la primera\nmitad y desacelerando a 1g durante la segunda. Como L1 y L2 están en\nlados opuestos de Júpiter, la nave sigue un arco propulsado con amplio\ndesplazamiento lateral alrededor del planeta; no atraviesa Júpiter ni\nutiliza una asistencia gravitacional significativa. El tránsito completo\nse mantiene en 57 horas y 48 minutos , alcanzando\naproximadamente 1.020 km/s cerca del punto de\ninversión."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-023",
+              "text": "El impulsor puede sostener 1g durante unas 90 horas acumuladas antes\nde agotar sus reservas térmicas y de reacción. El giro de inversión\nocurre en caída libre: el empuje cesa, se recogen o protegen los\nradiadores, la nave rota y el empuje vuelve; la gravedad aparente no se\ninvierte dentro de las cubiertas. Un sistema ideal sin esa limitación\nrecorrería los 167,8 UA en unos 37 días, alcanzando cerca de\n15.700 km/s y acumulando un delta-v total próximo a\n31.400 km/s . La Celestial Ardor no dispone de la\nautonomía, la disipación térmica ni la masa de reacción necesarias: el\ntúnel es indispensable para esta nave, no sólo conveniente."
+            },
+            {
+              "type": "heading",
+              "id": "el-cruce",
+              "level": 3,
+              "text": "El cruce"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-025",
+              "text": "La Boca no es un aro. En estado piloto, sensores humanos sólo\ndistinguen varios nodos negros separados por kilómetros o decenas de\nkilómetros alrededor de una región aparentemente vacía. En los minutos\nfinales, filamentos y distorsiones no euclidianas conectan esos nodos\nmientras la garganta pasa por precarga (aún cancelable)\n→ expansión crítica (punto de compromiso) →\napertura navegable (60-90 segundos) →\ncolapso . Sólo durante la apertura aparece una región\ntransitable de unos 150–200 m , suficiente para la\nCelestial Ardor."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-026",
+              "text": "El cruce en sí es virtualmente instantáneo desde la perspectiva de la\nnave."
+            },
+            {
+              "type": "heading",
+              "id": "tramo-remoto-boca-remota--estación-velari",
+              "level": 3,
+              "text": "Tramo remoto: Boca\nremota → Estación Velari"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-028",
+              "text": "Al otro lado, la nave despliega otra vez sus radiadores y repite el\nperfil 1g/1g durante 24 horas, cubriendo unos 18,3 millones de km hasta\nigualar la posición y velocidad orbital de la Estación\nVelari (2,26 km/s). El destino es una estructura orgánica de\nvarios kilómetros: lóbulos, arcos, cavidades y vacíos sin módulos\nensamblados. No gira; mantiene materia y espacios habitables mediante\ngravedad local controlada. Su piel cambia reflectividad, textura,\ntransparencia y emisividad, funcionando también como radiador adaptable.\nLos sensores detectan temperaturas, líquidos circulantes, química\ncompleja y zonas presurizadas, pero ningún reactor, combustible o\nsistema de soporte vital separable."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-029",
+              "text": "El primer encuentro directo no exige que la nave humana se acerque de\ninmediato a esa megastructura. Una nave emisaria Velari de\n300–600 m , enorme frente a la Celestial Ardor pero pequeña ante\nla estación, se separa de ella y completa el rendezvous. No muestra\nmotores ni escape detectable; su interior parece reconfigurable y\npreparado para recibir distintas biologías. Esta distinción conserva la\nestación como destino orbital y la nave Velari como presencia dramática\ndel final."
+            },
+            {
+              "type": "heading",
+              "id": "iv-descubrimiento-y-muerte-de-zao",
+              "level": 2,
+              "text": "IV. Descubrimiento y muerte\nde Zao"
+            },
+            {
+              "type": "heading",
+              "id": "el-aislamiento-de-zao",
+              "level": 3,
+              "text": "El aislamiento de Zao"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-032",
+              "text": "Como Ingeniera Jefe, el puesto asignado de Zao durante el cruce es el monitoreo del Núcleo Diplomático. Está sola donde le corresponde. Harlan conoce esa ubicación porque llega sin ser visto a la puerta del puente justo cuando Zao informa por radio que existe un payload autónomo firmado por Sorell y que la firma parece falsa. Antes de que ella pueda nombrarlo, activa remotamente un jammer y se retira hacia el acceso lateral del cilindro de servicio."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-033",
+              "text": "A lo largo de las 57h48min de tránsito, Zao acumula indicios\ndispersos: fluctuaciones de consumo energético, un acceso fuera de\nhorario y fragmentos de código camuflados en lo que debería ser\nprotocolo lingüístico estándar. A T+40h sólo puede demostrar que existe\nuna envoltura anómala potencialmente peligrosa; informa a Voss y trabaja\ncon Rao sin acusar a Sorell, porque el registro superficial puede haber\nsido falsificado. En los minutos finales, ya con la garganta en\nexpansión crítica, el despliegue programado revela que la rutina es un\nescaneo intrusivo autónomo. Zao cruza entonces los datos con el\nregistro físico del relé : una firma criptográfica\ngrabada de manera irreversible por el override, pero expresada como una\nhuella técnica que por sí sola no identifica a una persona ante el resto\nde la tripulación."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-034",
+              "text": "El jammer derriba voz, texto y la malla inalámbrica. Desde el cilindro de servicio, Harlan desconecta además los acopladores SISTEMAS DIPLOMÁTICOS — COM A/B antes de que Zao pruebe el respaldo cableado. Se impulsa balísticamente por el tubo técnico y llega antes que Sorell, que avanza por el corredor cotidiano agarrándose de las barras en microgravedad. Zao reconoce que el silencio simultáneo, justo después de su aviso abierto, significa que alguien va hacia ella. El único enlace que conserva es el control local del láser exterior estándar, cuya ruta física dedicada no pasa por la malla ni por COM A/B."
+            },
+            {
+              "type": "heading",
+              "id": "por-qué-no-transmite-hacia-la-tierra",
+              "level": 3,
+              "text": "Por qué no transmite hacia\nla Tierra"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-036",
+              "text": "Incluso sin ningún tipo de bloqueo, retransmitir el aviso a través de\nla Tierra sería inútil: el rodeo añadiría más de una hora al tiempo de\nviaje de la señal, haciendo que cualquier advertencia llegara después\n—no antes— del encuentro con los Velari. La única transmisión con\nposibilidad real de ayudar es una dirigida directamente al punto futuro\ndonde su propia tripulación, ya del otro lado del túnel, podrá\nrecibirla."
+            },
+            {
+              "type": "heading",
+              "id": "el-mensaje",
+              "level": 3,
+              "text": "El mensaje"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-038",
+              "text": "Zao no necesita derivar una nueva solución de mecánica orbital bajo\npresión: el plan de vuelo ya conocido —el mismo que la nave debe seguir\npara llegar a horario a la cita— le indica dónde estará la nave en cada\nmomento tras el cruce. Sólo calcula la geometría de puntería y abre el\nhaz lo suficiente para cubrir el corredor de navegación previsto. La\nseñal viaja durante unas 23 horas y cuarto y alcanza a la nave poco\nantes del encuentro. El transmisor añade una firma de dispositivo y\ntiempo, pero esa firma sólo acredita que el mensaje salió de la consola\nde Zao: no convierte su acusación en prueba concluyente."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-039",
+              "text": "Transmite:"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-040",
+              "text": "\"Si esto llega... Aqueronte está adentro. Harlan alteró el\nnúcleo. El registro superficial es falso. Crucen la rutina con el relé\nfísico. No apaguen la mediación. Por favor...\""
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-041",
+              "text": "El mensaje y la investigación funcionan como una doble\nllave . Rao descubre qué hace el payload, cuándo se ejecutará y\ncómo contenerlo, pero no puede vincular por sí sola la huella anónima\ndel override con Harlan. El mensaje señala al sospechoso y el registro\ncorrecto, pero por sí solo sigue siendo una acusación y no contiene el\nmétodo para neutralizar un payload que continuará activo aunque Harlan\nsea detenido. Al cruzar la firma técnica encontrada por Rao con el relé\nindicado por Zao, Voss obtiene prueba suficiente para revocar el\noverride de Harlan; al mismo tiempo, el aislamiento preparado por Rao\npermite impedir la transmisión hostil sin apagar la mediación."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-042",
+              "text": "Harlan llega cuando la solución de puntería ya está cerrada. Ve TRANSMITIDO, pero no el corredor exacto, asesina a Zao y limpia sus huellas. Regresa rápidamente por el cilindro de servicio para reconstruir su coartada. Sorell llega más tarde por el corredor central, intenta reanimar a Zao y llama al puente, pero el jammer sigue activo. Cuando Harlan reaparece en mando dice no haberla visto; Voss lo envía con otro tripulante a buscarla. La nave cruza sin posibilidad de abortar ni regresar."
+            },
+            {
+              "type": "heading",
+              "id": "v-el-motivo-de-harlan",
+              "level": 2,
+              "text": "V. El motivo de Harlan"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-044",
+              "text": "Harlan no busca la guerra como fin. Actúa bajo la convicción de que\nentregar las credenciales tecnológicas de la humanidad, sin ninguna\nverificación real, a una civilización milenios más avanzada, es una\ningenuidad que podría costarle la especie entera. Para él, obtener\ninteligencia comprobable sobre las capacidades defensivas Velari —aunque\nel método mismo se lea como una agresión— es preferible a la entrega\nciega. No es codicia: es una doctrina de legítima defensa preventiva,\nsostenida por alguien convencido de ser el único suficientemente lúcido\nmientras los demás confían a ciegas."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-045",
+              "text": "El Núcleo Diplomático, alterado, no genera lenguaje hostil de forma\nincidental: contiene rutinas autónomas de escaneo e intrusión camufladas\ndentro de lo que debería ser un intercambio tecnológico pacífico. Al\nabrirse el canal de contacto, el payload intentaría penetrar los\nsistemas Velari y enviaría simultáneamente a la Tierra un registro\nsesgado de la reacción. Harlan acepta la probable pérdida de la nave:\npretende que la destrucción automática, la expulsión o el cierre\npermanente del contacto puedan presentarse 23 horas después ante la\nTierra como prueba de hostilidad no provocada."
+            },
+            {
+              "type": "heading",
+              "id": "vi-estructura-de-la-trama",
+              "level": 2,
+              "text": "VI. Estructura de la trama"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-047",
+              "text": "ACTO I — El tránsito y la garganta. Activación con\n60 horas hasta la apertura; 2h12min de alistamiento final; 57h48min de\nviaje, con indicios crecientes que Zao y Rao investigan; descubrimiento\nfinal y transmisión de emergencia; asesinato; cruce."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-048",
+              "text": "ACTO II — Investigación en tierra extraña. Hallazgo\ndel cuerpo del otro lado del túnel; revisión médica, fallas de cámaras y\nauditoría de accesos; Sorell apartada por evidencia superficial\nplantada; Rao descubre que el payload es autónomo y prepara una\ncuarentena, pero sólo obtiene una firma de override anónima; Harlan\npresiona para apagar la mediación y aislar los receptores; detección de\nuna señal débil entrante."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-049",
+              "text": "ACTO III — Señal y supervivencia. Llegada del\nmensaje de Zao, apenas ~40-45 minutos antes del encuentro; cruce de sus\nmetadatos con la investigación de Rao; prueba conjunta contra Harlan;\nintento de activar anticipadamente el payload; revocación de su override\ny confrontación física/digital; cuarentena del sabotaje antes de la\napertura del canal; saludo limpio de Sorell transmitido por Rao;\nrespuesta Velari de autorización de aproximación; encuentro orbital."
+            },
+            {
+              "type": "heading",
+              "id": "vii-cronología-maestra",
+              "level": 2,
+              "text": "VII. Cronología maestra"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-051",
+              "text": "Reloj local (desde el despegue en Proxima):"
+            },
+            {
+              "type": "table",
+              "id": "reporte-comprensivo:block-052",
+              "headers": [
+                "Evento",
+                "Tiempo"
+              ],
+              "rows": [
+                [
+                  "Autorización / ventana anunciada",
+                  "T-2h12min"
+                ],
+                [
+                  "Despegue desde Proxima (L1)",
+                  "T+0"
+                ],
+                [
+                  "Paso por Júpiter, inversión de empuje",
+                  "T+28h54min"
+                ],
+                [
+                  "Punto de compromiso (expansión crítica)",
+                  "T+57h43min"
+                ],
+                [
+                  "Transmisión de Zao",
+                  "T+57h45min"
+                ],
+                [
+                  "Asesinato",
+                  "T+57h46min"
+                ],
+                [
+                  "Apertura navegable",
+                  "T+57h47min30s – 57h49min"
+                ],
+                [
+                  "Llegada a la boca / cruce",
+                  "T+57h48min"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-053",
+              "text": "Reloj remoto (desde la salida del túnel):"
+            },
+            {
+              "type": "table",
+              "id": "reporte-comprensivo:block-054",
+              "headers": [
+                "Evento",
+                "Tiempo"
+              ],
+              "rows": [
+                [
+                  "Salida del túnel",
+                  "T+0"
+                ],
+                [
+                  "Hallazgo del cuerpo",
+                  "T+5–10min"
+                ],
+                [
+                  "Llegada del mensaje de Zao",
+                  "~T+23h15min"
+                ],
+                [
+                  "Encuentro con los Velari",
+                  "T+24h"
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "viii-temas-y-simbolismo",
+              "level": 2,
+              "text": "VIII. Temas y simbolismo"
+            },
+            {
+              "type": "list",
+              "id": "reporte-comprensivo:block-056",
+              "ordered": false,
+              "items": [
+                "El retraso de la luz como metáfora: la verdad llega demasiado tarde\npara evitar la tragedia, justo a tiempo para cambiar el desenlace.",
+                "Una puerta que la humanidad no construyó ni comprende del todo: la\nvulnerabilidad como condición necesaria del primer contacto\ngenuino.",
+                "El miedo razonable y su radicalización: Harlan no es una aberración\naislada, sino el ala extrema de una duda legítima y ampliamente\ncompartida.",
+                "Heroísmo sin testigos: los actos de Zao permanecen invisibles hasta\nque la luz —literal— los alcanza."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "ix-tono-y-género",
+              "level": 2,
+              "text": "IX. Tono y género"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-058",
+              "text": "Tenso, cerebral, claustrofóbico. Ciencia ficción dura, misterio,\nthriller político. Referencias de tono: The Expanse ,\nArrival , 2001: A Space Odyssey , Tenet ."
+            }
+          ],
+          "en": [
+            {
+              "type": "heading",
+              "id": "i-concepto-general",
+              "level": 2,
+              "text": "I. General concept"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-002",
+              "text": "Light Delay is a hard-science-fiction thriller centered on the final message of an engineer murdered aboard humanity’s first-contact mission to the ancient Velari. Real constraints of light propagation and orbital mechanics combine with alien—not human—interstellar transit technology to shape plot and tension."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-003",
+              "text": "The mission does not depart at a time chosen for human convenience. Millennia-old Velari infrastructure activates for the first time, opening a transit window that may not recur for more than a thousand years."
+            },
+            {
+              "type": "heading",
+              "id": "ii-contexto-de-la-misión",
+              "level": 2,
+              "text": "II. Mission context"
+            },
+            {
+              "type": "heading",
+              "id": "la-puerta-velari",
+              "level": 3,
+              "text": "The Velari Gate"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-006",
+              "text": "Near Sol–Jupiter L2 lies a Velari pilot throat: permanently open but submicroscopic. It carries only fixed synchronization and mathematical-challenge pulses, not general audio, telemetry, or mission data."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-007",
+              "text": "Detection precedes contact. Fictional residuals in Pioneer, Voyager, Galileo, and Juno navigation motivate a dedicated network. Proxima is built at L1 as a Jovian science station and gravitational laboratory; drag-free probes, optical clocks, interferometry, and test masses eventually locate the artificial anomaly near L2."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-008",
+              "text": "The discovery transforms existing infrastructure. Proxima adds xenophysics and contact systems; the already-stationed Celestial Ardor receives a diplomatic core. Rao and Zao help interpret the protocol, and conscious human authorization starts a 60-hour countdown to a 60–90-second navigable opening."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-009",
+              "text": "Macroscopic expansion demands extreme, nonlinear energy. Stored energy sets duration; Sol–Jupiter–remote-anchor geometry sets when it can stabilize. The next comparable local phase is about 11.86 years later."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-010",
+              "text": "The Velari station also moves relative to the fixed remote mouth. They are now near an orbital node but still 0.122 AU apart; in 12 years separation may approach 3 AU, and the next comparable node may take over a millennium. This is probably humanity’s only contact opportunity for generations."
+            },
+            {
+              "type": "heading",
+              "id": "reacción-en-la-tierra",
+              "level": 3,
+              "text": "Reaction on Earth"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-012",
+              "text": "The opening divides public opinion. Optimists celebrate; the decentralized Acheron Directive demands suspension because the Velari control the gate. It has no formal membership list, while a clandestine operational cell includes Harlan."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-013",
+              "text": "Sixty hours leave no time for public debate. Ardor already operates from Proxima and needs only final preparation, contact specialists, and equipment."
+            },
+            {
+              "type": "heading",
+              "id": "la-nave",
+              "level": 3,
+              "text": "The ship"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-015",
+              "text": "Celestial Ardor is an Earth-built long-duration exploration and science vessel retrofitted for diplomacy: 80–100 m, ~300 t, axial, with forward sensors, central bridge/habitat/shelter, retrofit diplomatic core, and aft tanks, reactor, and fusion torch. Wear, joints, locks, and service lines keep it visibly maintained rather than pristine."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-016",
+              "text": "A D–³He torch and magnetic nozzle support 1 g / 1 g flight. Some 70–80 t of fuel and reaction mass cover both legs and limited contingencies. Liquid-metal radiators retract for crossing; an auxiliary reactor sustains critical loads. Endurance is about two weeks for six."
+            },
+            {
+              "type": "heading",
+              "id": "estación-proxima",
+              "level": 3,
+              "text": "Proxima Station"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-018",
+              "text": "Proxima occupies a controlled halo orbit around L1. Its 500–800 m non-rotating spine holds axial docks, lifts, control, workshops, storage, antennas, and reactors; counter-rotating habitats provide 0.4–0.6 g, with radiators and hazardous modules extending outward."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-019",
+              "text": "Its silhouette reads observatory + refinery + shipyard. Old truss, laboratories from different eras, and recent xenotechnology explain decades of study and a mission prepared in sixty hours."
+            },
+            {
+              "type": "heading",
+              "id": "iii-el-viaje--mecánica-de-tránsito",
+              "level": 2,
+              "text": "III. The journey — transit mechanics"
+            },
+            {
+              "type": "heading",
+              "id": "tramo-local-proxima-l1--boca-del-túnel-l2",
+              "level": 3,
+              "text": "Local leg: Proxima (L1) → tunnel mouth (L2)"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-022",
+              "text": "Ardor crosses ~106 million km on a powered arc around Jupiter, accelerating at 1 g for half the trip and braking at 1 g for the rest. It neither crosses Jupiter nor relies on a major gravity assist. Total transit is 57 h 48 min, peaking near 1,020 km/s."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-023",
+              "text": "The drive supports about 90 accumulated hours at 1 g. Turnover occurs in free fall and apparent gravity returns toward the same deck. An unlimited ideal system could cross 167.8 AU in ~37 days at ~15,700 km/s, but Ardor lacks the reaction mass, endurance, and heat rejection; the tunnel is essential."
+            },
+            {
+              "type": "heading",
+              "id": "el-cruce",
+              "level": 3,
+              "text": "The crossing"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-025",
+              "text": "The mouth is not a ring. Black nodes spread over kilometres surround empty space, then non-Euclidean distortions connect them through preload, critical expansion, a 60–90-second navigable opening, and collapse. Only then does a 150–200 m passage appear."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-026",
+              "text": "The crossing is virtually instantaneous from the ship’s perspective."
+            },
+            {
+              "type": "heading",
+              "id": "tramo-remoto-boca-remota--estación-velari",
+              "level": 3,
+              "text": "Remote leg: remote mouth → Velari station"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-028",
+              "text": "On the far side, Ardor redeploys radiators and flies another 24-hour 1 g / 1 g profile over 18.3 million km. The station is a multi-kilometre organic habitat with local gravity, adaptive radiating skin, circulating liquids, and pressurized zones but no separable reactor, fuel, or life-support system."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-029",
+              "text": "A 300–600 m Velari emissary leaves the station for the first direct meeting. It has no visible engines or exhaust and appears reconfigurable for different biologies, preserving the station as destination and the emissary as the finale’s dramatic presence."
+            },
+            {
+              "type": "heading",
+              "id": "iv-descubrimiento-y-muerte-de-zao",
+              "level": 2,
+              "text": "IV. Zao’s discovery and death"
+            },
+            {
+              "type": "heading",
+              "id": "el-aislamiento-de-zao",
+              "level": 3,
+              "text": "Zao’s isolation"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-032",
+              "text": "Zao is correctly stationed at the diplomatic core. Harlan reaches the bridge entrance unseen as she reports an autonomous payload signed by Sorell and says the signature appears false. Before she can name him, he remotely activates a jammer and slips toward the service cylinder."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-033",
+              "text": "Across the 57 h 48 min transit, Zao gathers power anomalies, an off-hours access, and code hidden in linguistic protocol. By T+40 h she can prove only a dangerous wrapper and works with Rao without accusing Sorell. Critical expansion reveals an autonomous intrusion scan and an indelible but anonymous hardware signature."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-034",
+              "text": "The jammer kills voice, text, and wireless. Harlan disconnects DIPLOMATIC SYSTEMS — COM A/B from the service distributor before Zao can use wired backup, then travels ballistically through the service tube. Sorell moves more slowly along handrails. The only surviving path is local control of Ardor’s standard external laser on dedicated physical routing."
+            },
+            {
+              "type": "heading",
+              "id": "por-qué-no-transmite-hacia-la-tierra",
+              "level": 3,
+              "text": "Why she does not transmit toward Earth"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-036",
+              "text": "Even without blocking, an Earth relay adds enough light time for the warning to arrive after the Velari encounter. Only a direct beam toward the crew’s future position can still help."
+            },
+            {
+              "type": "heading",
+              "id": "el-mensaje",
+              "level": 3,
+              "text": "The message"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-038",
+              "text": "The loaded flight plan already tells Zao where the ship must be after crossing. Under pressure she solves the pointing geometry, sets divergence and a narrow sweep for the uncertainty corridor, and transmits. The signal travels ~23 h 15 min. Device and time signatures prove only that it left her console, not that its accusation is true."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-039",
+              "text": "She transmits:"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-040",
+              "text": "‘If this arrives… Acheron is inside. Harlan altered the core. The surface log is false. Cross-check the routine against the physical relay. Don’t shut down mediation. Please…’"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-041",
+              "text": "Message and investigation form a double key. Rao knows what the payload does and how to contain it but cannot identify the override owner; Zao names Harlan and the relay but supplies neither proof nor the neutralization method. Together they let Voss revoke Harlan and Rao quarantine the attack without disabling mediation."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-042",
+              "text": "Harlan arrives after the pointing solution closes, sees TRANSMITTED but not the corridor, kills Zao, cleans his traces, and returns by the service cylinder. Sorell arrives later, attempts resuscitation, and cannot reach the bridge while the jammer remains active. Harlan returns to command and claims not to have seen her. The ship crosses with no way to abort or return."
+            },
+            {
+              "type": "heading",
+              "id": "v-el-motivo-de-harlan",
+              "level": 2,
+              "text": "V. Harlan’s motive"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-044",
+              "text": "Harlan does not seek war. He believes handing humanity’s technological credentials to a far older civilization without verification could cost the species. He prefers defensible intelligence—even acquired by a method the Velari may read as aggression—to blind surrender. His doctrine is preventive self-defense, not greed."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-045",
+              "text": "The altered diplomatic core hides autonomous scanning and intrusion inside a peaceful exchange. It would penetrate Velari systems and send Earth a biased record of the response. Harlan accepts the ship’s likely loss so destruction, expulsion, or permanent closure can later be framed as unprovoked hostility."
+            },
+            {
+              "type": "heading",
+              "id": "vi-estructura-de-la-trama",
+              "level": 2,
+              "text": "VI. Plot structure"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-047",
+              "text": "ACT I — Transit and throat. Sixty-hour activation; final preparation; 57 h 48 min of growing clues; discovery, emergency transmission, murder, and crossing."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-048",
+              "text": "ACT II — Investigation in strange space. The body, medical review, missing cameras, planted evidence against Sorell, Rao’s autonomous-payload discovery and incomplete anonymous signature, Harlan’s pressure to disable mediation, and detection of a weak incoming signal."
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-049",
+              "text": "ACT III — Signal and survival. Zao’s message arrives 40–45 minutes before contact; evidence converges; Harlan triggers early; his override is revoked; Rao quarantines the sabotage; Sorell’s clean greeting is sent; the Velari authorize approach."
+            },
+            {
+              "type": "heading",
+              "id": "vii-cronología-maestra",
+              "level": 2,
+              "text": "VII. Master timeline"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-051",
+              "text": "Local clock (from departure at Proxima):"
+            },
+            {
+              "type": "table",
+              "id": "reporte-comprensivo:block-052",
+              "headers": [
+                "Event",
+                "Time"
+              ],
+              "rows": [
+                [
+                  "Authorization / announced window",
+                  "T−2 h 12 min"
+                ],
+                [
+                  "Departure from Proxima (L1)",
+                  "T+0"
+                ],
+                [
+                  "Jupiter passage and turnover",
+                  "T+28 h 54 min"
+                ],
+                [
+                  "Commit point / critical expansion",
+                  "T+57 h 43 min"
+                ],
+                [
+                  "Zao transmits",
+                  "T+57 h 45 min"
+                ],
+                [
+                  "Murder",
+                  "T+57 h 46 min"
+                ],
+                [
+                  "Navigable opening",
+                  "T+57 h 47 min 30 s – 57 h 49 min"
+                ],
+                [
+                  "Arrival / crossing",
+                  "T+57 h 48 min"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-053",
+              "text": "Remote clock (from tunnel exit):"
+            },
+            {
+              "type": "table",
+              "id": "reporte-comprensivo:block-054",
+              "headers": [
+                "Event",
+                "Time"
+              ],
+              "rows": [
+                [
+                  "Tunnel exit",
+                  "T+0"
+                ],
+                [
+                  "Body found",
+                  "T+5–10 min"
+                ],
+                [
+                  "Zao’s message arrives",
+                  "~T+23 h 15 min"
+                ],
+                [
+                  "Velari encounter",
+                  "T+24 h"
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "viii-temas-y-simbolismo",
+              "level": 2,
+              "text": "VIII. Themes and symbolism"
+            },
+            {
+              "type": "list",
+              "id": "reporte-comprensivo:block-056",
+              "ordered": false,
+              "items": [
+                "Light delay as metaphor: truth arrives too late to prevent tragedy, just in time to alter the outcome.",
+                "A gate humanity neither built nor fully understands: vulnerability as a condition of genuine first contact.",
+                "Reasonable fear and radicalization: Harlan is the extreme wing of a legitimate, widely shared doubt.",
+                "Heroism without witnesses: Zao’s actions remain unseen until the light literally catches up."
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "ix-tono-y-género",
+              "level": 2,
+              "text": "IX. Tone and genre"
+            },
+            {
+              "type": "paragraph",
+              "id": "reporte-comprensivo:block-058",
+              "text": "Tense, cerebral, claustrophobic: hard science fiction, mystery, and political thriller. Tonal references include The Expanse, Arrival, 2001: A Space Odyssey, and Tenet."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source",
+        "en": "draft"
+      },
+      "provenance": [
+        "legacy-site/reporte-comprensivo.html",
+        "docs/CANON_DECISIONS.md",
+        "docs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "id": "document:momentos-clave",
+      "slug": "momentos-clave",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Momentos clave",
+          "en": "Key moments"
+        }
+      },
+      "status": "extracted",
+      "sourceLanguage": "es",
+      "sourcePath": "legacy-site/momentos-clave.html",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Los siete giros que sostienen la versión revisada.",
+          "en": "The seven turns supporting the revised version."
+        }
+      },
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "heading",
+              "id": "momentos-clave-revisados",
+              "level": 1,
+              "text": "Momentos clave revisados"
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-002",
+              "title": "1 · La elección",
+              "text": "La humanidad acepta conscientemente una apertura que quizá no se repita. Protesta y esperanza comparten la escena."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-003",
+              "title": "2 · La anomalía",
+              "text": "Zao detecta una envoltura peligrosa, pero no abre canal hasta contrastar la firma superficial con el relé físico."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-004",
+              "title": "3 · La verdad antes del cruce",
+              "text": "Zao advierte que la firma de Sorell parece falsa. Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro, transmite y muere antes del cruce."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-005",
+              "title": "4 · La mitad técnica",
+              "text": "Rao descubre disparador, firma anónima y método de cuarentena. No puede identificar al titular."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-006",
+              "title": "5 · La mitad humana",
+              "text": "El mensaje de Zao acusa a Harlan e indica el relé correcto, pero exige corroboración."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-007",
+              "title": "6 · La doble llave",
+              "text": "Payload, relé y credencial convergen. Voss revoca el override; Rao usa el trabajo ya preparado."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-008",
+              "title": "7 · El saludo",
+              "text": "Sorell aporta la secuencia pasiva; Rao abre un conducto limpio. Los Velari autorizan la aproximación, sin conceder todavía confianza."
+            }
+          ],
+          "en": [
+            {
+              "type": "heading",
+              "id": "momentos-clave-revisados",
+              "level": 1,
+              "text": "Revised key moments"
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-002",
+              "title": "1 · The choice",
+              "text": "Humanity knowingly accepts an opening that may never recur. Protest and hope share the scene."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-003",
+              "title": "2 · The anomaly",
+              "text": "Zao detects a dangerous wrapper but does not open a channel until she checks the surface signature against the physical relay."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-004",
+              "title": "3 · Truth before crossing",
+              "text": "Zao warns that Sorell’s signature appears false. Harlan cuts wireless and COM A/B; she aims the external laser at the future corridor, transmits, and dies before the crossing."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-005",
+              "title": "4 · The technical half",
+              "text": "Rao finds the trigger, anonymous signature, and quarantine method, but cannot identify the credential holder."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-006",
+              "title": "5 · The human half",
+              "text": "Zao’s message accuses Harlan and identifies the correct relay, but still requires corroboration."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-007",
+              "title": "6 · The double key",
+              "text": "Payload, relay, and credential converge. Voss revokes the override; Rao uses the work already prepared."
+            },
+            {
+              "type": "beat",
+              "id": "momentos-clave:block-008",
+              "title": "7 · The greeting",
+              "text": "Sorell supplies the passive sequence and Rao opens a clean conduit. The Velari authorize approach without yet granting trust."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source",
+        "en": "draft"
+      },
+      "provenance": [
+        "legacy-site/momentos-clave.html",
+        "docs/CANON_DECISIONS.md",
+        "docs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "id": "document:estructura-30-minutos",
+      "slug": "estructura-30-minutos",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Estructura de 30 minutos",
+          "en": "30-minute structure"
+        }
+      },
+      "status": "extracted",
+      "sourceLanguage": "es",
+      "sourcePath": "legacy-site/version-acotada-30-min.html",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Presupuesto de tiempo y arquitectura causal del cortometraje.",
+          "en": "The short film’s timing budget and causal architecture."
+        }
+      },
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "heading",
+              "id": "estructura-y-presupuesto-inicial-de-duración",
+              "level": 1,
+              "text": "Estructura y\npresupuesto inicial de duración"
+            },
+            {
+              "type": "table",
+              "id": "estructura-30-minutos:block-002",
+              "headers": [
+                "Escena",
+                "Función",
+                "Duración objetivo",
+                "Tomas"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "Estación Proxima — embarque",
+                  "3:00",
+                  "8"
+                ],
+                [
+                  "2",
+                  "Salida de Proxima",
+                  "1:00",
+                  "4"
+                ],
+                [
+                  "3",
+                  "Arco de Júpiter e indicio",
+                  "1:00",
+                  "4"
+                ],
+                [
+                  "4",
+                  "Envoltura no declarada",
+                  "1:30",
+                  "5"
+                ],
+                [
+                  "5",
+                  "Confirmación y silencio",
+                  "2:00",
+                  "8"
+                ],
+                [
+                  "6",
+                  "Mensaje hacia el futuro",
+                  "1:30",
+                  "8"
+                ],
+                [
+                  "7",
+                  "Asesinato, coartada y cruce",
+                  "1:00",
+                  "10"
+                ],
+                [
+                  "8",
+                  "El cuerpo",
+                  "1:00",
+                  "7"
+                ],
+                [
+                  "9",
+                  "Investigación y sospecha",
+                  "2:00",
+                  "6"
+                ],
+                [
+                  "10",
+                  "La mitad técnica del misterio",
+                  "3:00",
+                  "7"
+                ],
+                [
+                  "11",
+                  "Harlan intenta cegar la nave",
+                  "1:30",
+                  "6"
+                ],
+                [
+                  "12",
+                  "La doble llave",
+                  "2:00",
+                  "8"
+                ],
+                [
+                  "13",
+                  "Última ventana del override",
+                  "1:00",
+                  "5"
+                ],
+                [
+                  "14",
+                  "Cuarentena antes del contacto",
+                  "3:30",
+                  "10"
+                ],
+                [
+                  "15",
+                  "Saludo limpio",
+                  "2:00",
+                  "7"
+                ],
+                [
+                  "16",
+                  "Región de encuentro",
+                  "0:30",
+                  "3"
+                ],
+                [
+                  "17",
+                  "La verdad llega",
+                  "2:30",
+                  "6"
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "arquitectura-causal-del-clímax",
+              "level": 2,
+              "text": "Arquitectura causal del\nclímax"
+            },
+            {
+              "type": "table",
+              "id": "estructura-30-minutos:block-004",
+              "headers": [
+                "Pieza",
+                "Aporte exclusivo",
+                "Sin la otra pieza"
+              ],
+              "rows": [
+                [
+                  "Investigación de Rao",
+                  "Descubre el payload autónomo, el disparador y la cuarentena",
+                  "No identifica al titular del override ni impide que lo libere"
+                ],
+                [
+                  "Mensaje de Zao",
+                  "Acusa a Harlan y dirige al relé físico correcto",
+                  "No prueba por sí solo la acusación ni neutraliza el código"
+                ],
+                [
+                  "Saludo de Sorell",
+                  "Proporciona contenido limpio y pasivo",
+                  "Apagar el núcleo dejaría a la nave sin lenguaje válido"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "estructura-30-minutos:block-005",
+              "text": "La suma planificada es 30:00 , pero sigue siendo una\nhipótesis. El animatic textual permite ajustar cada toma y recalcular el\ntotal antes de producir una animática visual."
+            }
+          ],
+          "en": [
+            {
+              "type": "heading",
+              "id": "estructura-y-presupuesto-inicial-de-duración",
+              "level": 1,
+              "text": "Structure and initial timing budget"
+            },
+            {
+              "type": "table",
+              "id": "estructura-30-minutos:block-002",
+              "headers": [
+                "Scene",
+                "Function",
+                "Target duration",
+                "Shots"
+              ],
+              "rows": [
+                [
+                  "1",
+                  "Proxima Station — boarding",
+                  "3:00",
+                  "8"
+                ],
+                [
+                  "2",
+                  "Departure from Proxima",
+                  "1:00",
+                  "4"
+                ],
+                [
+                  "3",
+                  "Jupiter arc and clue",
+                  "1:00",
+                  "4"
+                ],
+                [
+                  "4",
+                  "Undeclared wrapper",
+                  "1:30",
+                  "5"
+                ],
+                [
+                  "5",
+                  "Confirmation and silence",
+                  "2:00",
+                  "8"
+                ],
+                [
+                  "6",
+                  "Message to the future",
+                  "1:30",
+                  "8"
+                ],
+                [
+                  "7",
+                  "Murder, alibi, and crossing",
+                  "1:00",
+                  "10"
+                ],
+                [
+                  "8",
+                  "The body",
+                  "1:00",
+                  "7"
+                ],
+                [
+                  "9",
+                  "Investigation and suspicion",
+                  "2:00",
+                  "6"
+                ],
+                [
+                  "10",
+                  "The technical half of the mystery",
+                  "3:00",
+                  "7"
+                ],
+                [
+                  "11",
+                  "Harlan tries to blind the ship",
+                  "1:30",
+                  "6"
+                ],
+                [
+                  "12",
+                  "The double key",
+                  "2:00",
+                  "8"
+                ],
+                [
+                  "13",
+                  "The override’s final window",
+                  "1:00",
+                  "5"
+                ],
+                [
+                  "14",
+                  "Quarantine before contact",
+                  "3:30",
+                  "10"
+                ],
+                [
+                  "15",
+                  "Clean greeting",
+                  "2:00",
+                  "7"
+                ],
+                [
+                  "16",
+                  "Meeting region",
+                  "0:30",
+                  "3"
+                ],
+                [
+                  "17",
+                  "The truth arrives",
+                  "2:30",
+                  "6"
+                ]
+              ]
+            },
+            {
+              "type": "heading",
+              "id": "arquitectura-causal-del-clímax",
+              "level": 2,
+              "text": "Causal architecture of the climax"
+            },
+            {
+              "type": "table",
+              "id": "estructura-30-minutos:block-004",
+              "headers": [
+                "Piece",
+                "Unique contribution",
+                "Without the other piece"
+              ],
+              "rows": [
+                [
+                  "Rao’s investigation",
+                  "Finds the autonomous payload, trigger, and quarantine",
+                  "Cannot identify the override holder or prevent release"
+                ],
+                [
+                  "Zao’s message",
+                  "Accuses Harlan and points to the correct physical relay",
+                  "Cannot prove the accusation or neutralize the code alone"
+                ],
+                [
+                  "Sorell’s greeting",
+                  "Provides clean, passive content",
+                  "Shutting down the core would leave the ship without valid language"
+                ]
+              ]
+            },
+            {
+              "type": "paragraph",
+              "id": "estructura-30-minutos:block-005",
+              "text": "The planned total is 30:00, but remains a hypothesis. The textual animatic allows every shot to be adjusted and the total recalculated before producing final animation."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source",
+        "en": "draft"
+      },
+      "provenance": [
+        "legacy-site/version-acotada-30-min.html",
+        "docs/CANON_DECISIONS.md",
+        "docs/PROJECT_STATUS.md"
+      ]
+    },
+    {
+      "id": "document:canon",
+      "slug": "canon-decisions",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Decisiones de canon"
+        }
+      },
+      "status": "stub",
+      "language": "es",
+      "sourcePath": "docs/CANON_DECISIONS.md",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Puntero a las decisiones de canon vigentes en docs/."
+        }
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "Fuente canónica",
+          "id": "fuente-canonica"
+        },
+        {
+          "type": "paragraph",
+          "text": "Las decisiones vigentes viven en docs/CANON_DECISIONS.md. Esta página es un espejo mínimo para navegación desde la app."
+        },
+        {
+          "type": "callout",
+          "kind": "warning",
+          "text": "No reescribir el canon para resolver dificultades de implementación. Registrar conflictos en docs/PROJECT_STATUS.md."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pendiente: importar bloques desde el markdown de decisiones en una fase editorial."
+        }
+      ],
+      "sourceLanguage": "es",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Fuente canónica",
+              "id": "fuente-canonica"
+            },
+            {
+              "type": "paragraph",
+              "text": "Las decisiones vigentes viven en docs/CANON_DECISIONS.md. Esta página es un espejo mínimo para navegación desde la app."
+            },
+            {
+              "type": "callout",
+              "kind": "warning",
+              "text": "No reescribir el canon para resolver dificultades de implementación. Registrar conflictos en docs/PROJECT_STATUS.md."
+            },
+            {
+              "type": "paragraph",
+              "text": "Pendiente: importar bloques desde el markdown de decisiones en una fase editorial."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source"
+      }
+    },
+    {
+      "id": "document:legacy-feature-overview",
+      "slug": "legacy-feature-overview",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Informe histórico del largometraje"
+        }
+      },
+      "status": "review",
+      "language": "en",
+      "sourcePath": "docs/light-delay-full-feature-overview.md",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Fuente histórica en inglés; no autoritativa frente a la revisión española."
+        }
+      },
+      "blocks": [
+        {
+          "type": "callout",
+          "kind": "warning",
+          "text": "Documento histórico. Consultar docs/REVISION_LARGOMETRAJE_RECUPERADO.md para decisiones vigentes."
+        }
+      ],
+      "sourceLanguage": "es",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "callout",
+              "kind": "warning",
+              "text": "Documento histórico. Consultar docs/REVISION_LARGOMETRAJE_RECUPERADO.md para decisiones vigentes."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source"
+      }
+    },
+    {
+      "id": "document:legacy-feature-beats",
+      "slug": "legacy-feature-beats",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Momentos históricos del largometraje"
+        }
+      },
+      "status": "review",
+      "language": "es",
+      "sourcePath": "docs/light-delay-long-full-feature-cut.md",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Lista histórica de 28 momentos; contiene mecánicas descartadas."
+        }
+      },
+      "blocks": [
+        {
+          "type": "callout",
+          "kind": "warning",
+          "text": "Fuente de recuperación, no canon vigente por sí sola."
+        }
+      ],
+      "sourceLanguage": "es",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "callout",
+              "kind": "warning",
+              "text": "Fuente de recuperación, no canon vigente por sí sola."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source"
+      }
+    },
+    {
+      "id": "document:feature-recovery-review",
+      "slug": "revision-largometraje-recuperado",
+      "title": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Revisión del largometraje recuperado"
+        }
+      },
+      "status": "review",
+      "language": "es",
+      "sourcePath": "docs/REVISION_LARGOMETRAJE_RECUPERADO.md",
+      "summary": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": "Decisiones editoriales sobre canon, reparto y material recuperado."
+        }
+      },
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Esta página apunta a la revisión española autoritativa del material histórico."
+        }
+      ],
+      "sourceLanguage": "es",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": [
+            {
+              "type": "paragraph",
+              "text": "Esta página apunta a la revisión española autoritativa del material histórico."
+            }
+          ]
+        }
+      },
+      "translationStatus": {
+        "es": "source"
+      }
+    }
+  ]
 }

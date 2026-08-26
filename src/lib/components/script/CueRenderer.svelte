@@ -3,6 +3,7 @@
 	import { getCharacterById } from '$lib/data/repositories/lookups';
 	import { resolveLocalized } from '$lib/data/selectors/index';
 	import { getLanguageState } from '$lib/state/language.svelte';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let { cue }: { cue: Cue } = $props();
 
@@ -24,24 +25,26 @@
 		{#if resolved}
 			<p class="line">{resolved.value.spokenText}</p>
 			{#if resolved.usedFallback}
-				<p class="fallback">Traducción no disponible; mostrando {resolved.resolvedLanguage}</p>
+				<p class="fallback">
+					{m.script_translation_unavailable({ language: resolved.resolvedLanguage })}
+				</p>
 			{/if}
 		{:else}
-			<p class="fallback">Sin variante de diálogo</p>
+			<p class="fallback">{m.script_dialogue_unavailable()}</p>
 		{/if}
 	</div>
 {:else if cue.type === 'sound'}
 	<p class="meta">SFX — {cue.description}</p>
 {:else if cue.type === 'music'}
-	<p class="meta">Música — {cue.operation}: {cue.description}</p>
+	<p class="meta">{m.script_music()} — {cue.operation}: {cue.description}</p>
 {:else if cue.type === 'silence'}
 	<p class="meta">
-		Silencio{#if cue.purpose}
+		{m.script_silence()}{#if cue.purpose}
 			— {cue.purpose}{/if}
 	</p>
 {:else if cue.type === 'transition'}
 	<p class="meta">
-		Transición — {cue.transition}{#if cue.description}: {cue.description}{/if}
+		{m.script_transition()} — {cue.transition}{#if cue.description}: {cue.description}{/if}
 	</p>
 {:else if cue.type === 'text'}
 	{@const resolved = resolveLocalized(cue.content, lang.dialogueLanguage, 'es')}

@@ -8,33 +8,39 @@ export type LanguageState = {
 
 function load(): LanguageState {
 	if (typeof localStorage === 'undefined') {
-		return { interfaceLanguage: 'es', dialogueLanguage: 'es', subtitleLanguage: 'es' };
+		return { interfaceLanguage: getLocale(), dialogueLanguage: 'es', subtitleLanguage: 'es' };
 	}
 	try {
 		const raw = localStorage.getItem(STORAGE_KEY);
 		if (!raw) {
-			return { interfaceLanguage: 'es', dialogueLanguage: 'es', subtitleLanguage: 'es' };
+			return { interfaceLanguage: getLocale(), dialogueLanguage: 'es', subtitleLanguage: 'es' };
 		}
 		const parsed = JSON.parse(raw) as Partial<LanguageState>;
 		return {
-			interfaceLanguage: parsed.interfaceLanguage ?? 'es',
+			interfaceLanguage: getLocale(),
 			dialogueLanguage: parsed.dialogueLanguage ?? 'es',
 			subtitleLanguage: parsed.subtitleLanguage === undefined ? 'es' : parsed.subtitleLanguage
 		};
 	} catch {
-		return { interfaceLanguage: 'es', dialogueLanguage: 'es', subtitleLanguage: 'es' };
+		return { interfaceLanguage: getLocale(), dialogueLanguage: 'es', subtitleLanguage: 'es' };
 	}
 }
 
 function persist(state: LanguageState) {
 	if (typeof localStorage === 'undefined') return;
-	localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+	localStorage.setItem(
+		STORAGE_KEY,
+		JSON.stringify({
+			dialogueLanguage: state.dialogueLanguage,
+			subtitleLanguage: state.subtitleLanguage
+		})
+	);
 }
 
 let language = $state<LanguageState>(load());
 
 export function getLanguageState(): LanguageState {
-	return language;
+	return { ...language, interfaceLanguage: getLocale() };
 }
 
 export function setDialogueLanguage(tag: string) {
@@ -46,3 +52,4 @@ export function setSubtitleLanguage(tag: string | null) {
 	language = { ...language, subtitleLanguage: tag };
 	persist(language);
 }
+import { getLocale } from '$lib/paraglide/runtime.js';

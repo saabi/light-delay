@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import { withBase } from '$lib/utils/paths';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let { data } = $props();
 	const asset = $derived(data.asset);
@@ -29,16 +30,16 @@
 			<dd>{asset.id}</dd>
 		</div>
 		<div>
-			<dt>Tipo</dt>
+			<dt>{m.asset_type()}</dt>
 			<dd>{asset.kind}</dd>
 		</div>
 		<div>
-			<dt>Rol</dt>
+			<dt>{m.asset_role()}</dt>
 			<dd>{asset.role}</dd>
 		</div>
 		{#if asset.width && asset.height}
 			<div>
-				<dt>Dimensiones</dt>
+				<dt>{m.asset_dimensions()}</dt>
 				<dd>{asset.width} × {asset.height}</dd>
 			</div>
 		{/if}

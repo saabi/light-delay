@@ -5,7 +5,7 @@
 	import { getCueById, getShotMedia } from '$lib/data/repositories/lookups';
 	import { setShotIndex } from '$lib/state/player.svelte';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
-	import { withBase } from '$lib/utils/paths';
+	import { withLocale } from '$lib/utils/paths';
 	import type { Cue, Shot } from '$lib/types/script';
 	import { onMount } from 'svelte';
 
@@ -45,4 +45,4 @@
 	});
 </script>
 
-<AnimaticPlayer {script} {shots} returnHref={withBase(`/animatic/${encoded}`)} />
+<AnimaticPlayer {script} {shots} returnHref={withLocale(`/animatic/${encoded}`)} />

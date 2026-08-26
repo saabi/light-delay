@@ -1,219 +1,329 @@
 <script lang="ts">
-	import PageHeader from '$lib/components/app/PageHeader.svelte';
-	import {
-		getCanonicalScript,
-		getDocuments,
-		getProject,
-		listScripts
-	} from '$lib/data/repositories/index';
+	import LocaleSwitcher from '$lib/components/controls/LocaleSwitcher.svelte';
+	import { getProject } from '$lib/data/repositories/index';
+	import * as m from '$lib/paraglide/messages.js';
 	import { encodeScriptId } from '$lib/utils/scriptId';
-	import { withBase } from '$lib/utils/paths';
+	import { withBase, withLocale } from '$lib/utils/paths';
 
 	const project = getProject().project;
-	const documents = getDocuments().documents;
-	const scripts = listScripts();
-	const canonical = getCanonicalScript();
-	const shotCount = canonical.shots.length;
-	const sceneCount = canonical.scenes.length;
+	const scriptId = encodeScriptId(project.canonicalScriptId);
 </script>
 
-<main class="page">
-	<PageHeader
-		eyebrow="Proyecto"
-		title="{project.title} / Luz Tardía"
-		lede={project.description ?? 'Cortometraje de ciencia ficción de primer contacto.'}
-		meta={[`${sceneCount} escenas (canónico)`, `${shotCount} tomas`, 'Guion canónico ES']}
-	/>
+<svelte:head
+	><meta
+		name="keywords"
+		content="science fiction, short film, first contact, animatic, hard science fiction"
+	/></svelte:head
+>
 
-	<section class="grid" aria-label="Secciones del proyecto">
-		<a class="card" href={withBase(`/script/${encodeScriptId(project.canonicalScriptId)}`)}>
-			<span>01</span>
-			<h2>Guion</h2>
-			<p>Lectura del guion corto desde datos estructurados (actos, escenas, beats y cues).</p>
-			<b>Abrir guion →</b>
-		</a>
-		<a class="card" href={withBase(`/animatic/${encodeScriptId(project.canonicalScriptId)}`)}>
-			<span>02</span>
-			<h2>Animatic</h2>
-			<p>Desglose de tomas, duraciones editables y modo película (por script).</p>
-			<b>Abrir animatic →</b>
-		</a>
-		<a class="card" href={withBase('/art')}>
-			<span>03</span>
-			<h2>Arte</h2>
-			<p>Galería visual de personajes, localizaciones, objetos y vehículos.</p>
-			<b>Ver arte →</b>
-		</a>
-		<a class="card" href={withBase('/entities/characters')}>
-			<span>04</span>
-			<h2>Entidades</h2>
-			<p>Índice de personajes, lugares, objetos, naves y facciones.</p>
-			<b>Explorar →</b>
-		</a>
-	</section>
-
-	<section class="scripts" aria-label="Scripts registrados">
-		<h2>Scripts / cuts</h2>
-		<ul>
-			{#each scripts as entry (entry.id)}
-				<li>
-					<div>
-						<a href={withBase(`/script/${encodeScriptId(entry.id)}`)}>{entry.label}</a>
-						<small>{entry.kind} · {entry.status}</small>
-					</div>
-					<a class="animatic" href={withBase(`/animatic/${encodeScriptId(entry.id)}`)}>Animatic</a>
-				</li>
-			{/each}
-		</ul>
-	</section>
-
-	<section class="docs">
-		<h2>Documentos</h2>
-		<ul>
-			{#each documents as doc (doc.id)}
-				<li>
-					<a href={withBase(`/documents/${doc.slug}`)}>{doc.title}</a>
-					<small>{doc.status}</small>
-				</li>
-			{/each}
-		</ul>
-	</section>
-</main>
+<div class="landing">
+	<header class="site-header">
+		<a class="brand" href={withLocale('/')} aria-label={m.nav_home()}
+			><img src={withBase('/brand/light-delay-logo.svg')} alt="Light Delay" /></a
+		>
+		<nav aria-label={m.nav_primary()}>
+			<a href={withLocale(`/animatic/${scriptId}`)}>{m.nav_animatic()}</a><a
+				href={withLocale('/project')}>{m.nav_project()}</a
+			><a href="https://github.com/saabi/light-delay">{m.nav_github()}</a><LocaleSwitcher compact />
+		</nav>
+	</header>
+	<main id="content">
+		<section class="hero">
+			<div class="hero-copy">
+				<p class="eyebrow">{m.landing_eyebrow()}</p>
+				<h1>{m.landing_title()}</h1>
+				<p class="lede">{m.landing_lede()}</p>
+				<div class="actions">
+					<a class="primary" href={withLocale(`/animatic/${scriptId}`)}>{m.landing_watch()}</a><a
+						href={withLocale(`/script/${scriptId}`)}>{m.landing_read()}</a
+					>
+				</div>
+			</div>
+			<div class="signal" aria-hidden="true">
+				<div class="beam"></div>
+				<div class="eclipse"></div>
+				<div class="arrival"></div>
+			</div>
+		</section>
+		<section class="overview" aria-label={m.landing_format_title()}>
+			<article>
+				<span>01</span>
+				<h2>{m.landing_about_title()}</h2>
+				<p>{m.landing_about_body()}</p>
+			</article>
+			<article>
+				<span>02</span>
+				<h2>{m.landing_format_title()}</h2>
+				<p>{m.landing_format_body()}</p>
+			</article>
+			<article>
+				<span>03</span>
+				<h2>{m.landing_status_title()}</h2>
+				<p>{m.landing_status_body()}</p>
+			</article>
+		</section>
+		<section class="explore">
+			<p class="eyebrow">{m.landing_explore_title()}</p>
+			<div class="cards">
+				<a href={withLocale(`/script/${scriptId}`)}
+					><h2>{m.landing_card_script()}</h2>
+					<p>{m.landing_card_script_body()}</p>
+					<b>{m.action_open()} →</b></a
+				><a href={withLocale(`/animatic/${scriptId}`)}
+					><h2>{m.landing_card_animatic()}</h2>
+					<p>{m.landing_card_animatic_body()}</p>
+					<b>{m.action_open()} →</b></a
+				><a href={withLocale('/art')}
+					><h2>{m.landing_card_art()}</h2>
+					<p>{m.landing_card_art_body()}</p>
+					<b>{m.action_open()} →</b></a
+				><a href={withLocale('/project')}
+					><h2>{m.landing_card_archive()}</h2>
+					<p>{m.landing_card_archive_body()}</p>
+					<b>{m.landing_project()} →</b></a
+				>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<span>Light Delay · {m.footer_development()}</span><span>{m.landing_rights()}</span>
+	</footer>
+</div>
 
 <style>
-	.page {
-		max-width: var(--content-max);
-		margin: 0 auto;
-		padding: 3.5rem var(--page-gutter) 4.5rem;
+	.landing {
+		min-height: 100vh;
+		overflow: hidden;
+		background: radial-gradient(circle at 78% 18%, #153149 0, #07131d 32%, #03090e 72%);
 	}
-
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+	.site-header {
+		position: relative;
+		z-index: 4;
+		max-width: 82rem;
+		margin: auto;
+		padding: 1.25rem var(--page-gutter);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.5rem;
+	}
+	.brand img {
+		display: block;
+		width: clamp(10rem, 18vw, 15rem);
+		height: auto;
+	}
+	.site-header nav {
+		display: flex;
+		align-items: center;
 		gap: 1rem;
 	}
-
-	.card {
-		min-height: 220px;
-		padding: 1.5rem;
-		border: 1px solid var(--line);
-		border-radius: 14px;
-		background: linear-gradient(145deg, #112638, #0b1722);
+	.site-header nav > a {
+		color: var(--muted);
+		font-size: 0.82rem;
+		font-weight: 700;
 		text-decoration: none;
-		display: flex;
-		flex-direction: column;
-		transition:
-			0.2s transform,
-			0.2s border-color;
 	}
-
-	.card:hover {
-		transform: translateY(-3px);
-		border-color: var(--cyan);
-	}
-
-	.card > span {
+	.site-header nav > a:hover {
 		color: var(--cyan);
-		font: 800 0.73rem var(--font-mono);
 	}
-
-	.card h2 {
-		margin: 1.25rem 0 0.65rem;
-		font: 700 1.35rem/1.2 var(--font-serif);
+	main {
+		max-width: 82rem;
+		margin: auto;
+		padding: 0 var(--page-gutter) 5rem;
 	}
-
-	.card p {
+	.hero {
+		min-height: min(46rem, 78vh);
+		display: grid;
+		grid-template-columns: minmax(0, 0.95fr) minmax(22rem, 1.05fr);
+		align-items: center;
+		gap: 4rem;
+	}
+	.hero-copy {
+		position: relative;
+		z-index: 2;
+	}
+	.eyebrow {
+		color: var(--cyan);
+		font: 800 0.72rem var(--font-mono);
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+	h1 {
+		max-width: 14ch;
+		margin: 0.7rem 0 1.25rem;
+		font: 700 clamp(3.1rem, 7vw, 6.8rem)/0.92 var(--font-serif);
+		letter-spacing: -0.055em;
+	}
+	.lede {
+		max-width: 43rem;
 		margin: 0;
 		color: var(--muted);
-		font-size: 0.9rem;
+		font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+		line-height: 1.6;
 	}
-
-	.card b {
-		margin-top: auto;
-		padding-top: 1rem;
-		color: var(--gold);
-		font-size: 0.85rem;
-	}
-
-	.scripts,
-	.docs {
-		margin-top: 2.75rem;
-	}
-
-	.scripts h2,
-	.docs h2 {
-		margin: 0 0 0.85rem;
-		font: 700 1.25rem var(--font-serif);
-	}
-
-	.scripts ul,
-	.docs ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		display: grid;
-		gap: 0.5rem;
-	}
-
-	.scripts li,
-	.docs li {
+	.actions {
 		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
-		padding: 0.75rem 1rem;
-		border: 1px solid var(--line);
-		border-radius: 10px;
-		background: var(--panel);
-		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-top: 2rem;
 	}
-
-	.scripts a,
-	.docs a {
+	.actions a {
+		padding: 0.8rem 1.1rem;
+		border: 1px solid var(--line);
+		border-radius: 0.65rem;
+		color: var(--ink);
+		font-weight: 750;
+		text-decoration: none;
+	}
+	.actions .primary {
+		border-color: var(--cyan);
+		background: var(--cyan);
+		color: #031019;
+	}
+	.signal {
+		position: relative;
+		min-height: 28rem;
+	}
+	.beam {
+		position: absolute;
+		top: 50%;
+		left: -10%;
+		right: -20%;
+		height: 0.3rem;
+		background: linear-gradient(90deg, transparent, var(--cyan) 42%, var(--gold));
+		box-shadow: 0 0 2rem #5ee7ff88;
+	}
+	.eclipse {
+		position: absolute;
+		top: 50%;
+		left: 47%;
+		width: 14rem;
+		aspect-ratio: 1;
+		transform: translate(-50%, -50%);
+		border: 0.3rem solid var(--cyan);
+		border-radius: 50%;
+		background: #03090e;
+		box-shadow:
+			inset -1rem 0 2rem #f1bd6226,
+			0 0 5rem #5ee7ff22;
+	}
+	.eclipse:after {
+		content: '';
+		position: absolute;
+		inset: 9% -7% 9% 67%;
+		border-right: 0.35rem solid var(--gold);
+		border-radius: 50%;
+	}
+	.arrival {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		width: 1rem;
+		aspect-ratio: 1;
+		transform: translateY(-50%);
+		border-radius: 50%;
+		background: var(--gold);
+		box-shadow: 0 0 2rem var(--gold);
+	}
+	.overview {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		border-block: 1px solid var(--line);
+	}
+	.overview article {
+		padding: 2rem;
+		border-right: 1px solid var(--line);
+	}
+	.overview article:last-child {
+		border-right: 0;
+	}
+	.overview span {
+		color: var(--gold);
+		font: 800 0.7rem var(--font-mono);
+	}
+	.overview h2,
+	.cards h2 {
+		margin: 0.75rem 0;
+		font: 700 1.5rem var(--font-serif);
+	}
+	.overview p,
+	.cards p {
+		color: var(--muted);
+		line-height: 1.6;
+	}
+	.explore {
+		padding-top: 5rem;
+	}
+	.cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1rem;
+		margin-top: 1.2rem;
+	}
+	.cards a {
+		min-height: 15rem;
+		padding: 1.4rem;
+		display: flex;
+		flex-direction: column;
+		border: 1px solid var(--line);
+		border-radius: 0.8rem;
+		background: var(--panel);
 		color: var(--ink);
 		text-decoration: none;
 	}
-
-	.scripts a:hover,
-	.docs a:hover {
+	.cards a:hover {
+		border-color: var(--cyan);
+		transform: translateY(-2px);
+	}
+	.cards b {
+		margin-top: auto;
 		color: var(--cyan);
+		font-size: 0.82rem;
 	}
-
-	.scripts small,
-	.docs small {
-		display: block;
-		margin-top: 0.2rem;
+	footer {
+		max-width: 82rem;
+		margin: auto;
+		padding: 1.5rem var(--page-gutter) 2.5rem;
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		border-top: 1px solid var(--line);
 		color: var(--muted);
-		text-transform: uppercase;
-		letter-spacing: 0.06em;
-		font-size: 0.72rem;
+		font-size: 0.75rem;
 	}
-
-	.scripts .animatic {
-		color: var(--gold);
-		font-size: 0.85rem;
-		white-space: nowrap;
-	}
-
-	@media (max-width: 680px) {
-		.page {
-			padding-top: 2rem;
-			padding-bottom: 3rem;
+	@media (max-width: 760px) {
+		.site-header {
+			align-items: flex-start;
 		}
-
-		.grid {
+		.site-header nav > a {
+			display: none;
+		}
+		.hero {
+			min-height: auto;
+			grid-template-columns: 1fr;
+			gap: 1rem;
+			padding: 4rem 0 2rem;
+		}
+		.signal {
+			min-height: 17rem;
+			order: -1;
+		}
+		.eclipse {
+			width: 9rem;
+		}
+		.overview,
+		.cards {
 			grid-template-columns: 1fr;
 		}
-
-		.card {
-			min-height: 190px;
-			padding: 1.2rem;
+		.overview article {
+			border-right: 0;
+			border-bottom: 1px solid var(--line);
+			padding-inline: 0;
 		}
-	}
-
-	@media (max-width: 480px) {
-		.scripts li,
-		.docs li {
-			align-items: flex-start;
+		.cards a {
+			min-height: 11rem;
+		}
+		footer {
 			flex-direction: column;
 		}
 	}

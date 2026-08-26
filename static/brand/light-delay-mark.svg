@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Light Delay</title>
+  <defs>
+    <linearGradient id="beam" x1="8" y1="32" x2="56" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5ee7ff" stop-opacity="0"/>
+      <stop offset=".42" stop-color="#5ee7ff"/>
+      <stop offset="1" stop-color="#f1bd62"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#07131d"/>
+  <path d="M7 32h50" stroke="url(#beam)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="29" cy="32" r="13" fill="#07131d" stroke="#5ee7ff" stroke-width="3"/>
+  <path d="M39.5 24.5a13 13 0 0 1 0 15" fill="none" stroke="#f1bd62" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="53" cy="32" r="3" fill="#f1bd62"/>
+</svg>

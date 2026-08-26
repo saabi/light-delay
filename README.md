@@ -4,6 +4,9 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 
 ## Estado actual
 
+- Sitio público bilingüe: inglés en `/` y español en `/es/`, con selector de idioma, metadatos SEO, sitemap, identidad visual y landing de presentación. El español continúa siendo la fuente editorial.
+- Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
+- Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
 - Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
@@ -35,7 +38,7 @@ npm install
 npm run dev
 ```
 
-Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run extract:legacy`, `npm run validate:data`.
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run extract:legacy`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`.
 
 ## Sitio público en GitHub Pages
 
@@ -48,6 +51,8 @@ https://saabi.github.io/light-delay/
 ```
 
 La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
+
+El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. Por ahora el guion, el diálogo y las descripciones narrativas de las tomas permanecen en español y el sitio lo indica expresamente.
 
 GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
 
@@ -83,7 +88,7 @@ Las siguientes fases deben:
 - completar el tratamiento largo con escenas dialogadas, tomas y recursos sólo cuando se apruebe su revisión narrativa;
 - evaluar por separado los candidatos de retropropagación al corto, Festival Cut y tráiler;
 - ampliar la comparación sin inferir automáticamente herencia de diálogo o fusiones de personajes;
-- completar la extracción editorial de documentos que aún son stubs.
+- traducir en una fase posterior el guion, el diálogo, los subtítulos derivados y las descripciones narrativas de toma, sin alterar la autoridad del español.
 
 Los HTML existentes son referencia y material de migración, no el formato final de autoría.
 

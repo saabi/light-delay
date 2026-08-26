@@ -4,6 +4,7 @@
 	import { formatClock } from '$lib/utils/duration';
 	import type { Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let {
 		shot,
@@ -25,14 +26,14 @@
 		<AnimaticFrame
 			{media}
 			shotId={shot.id}
-			alt={`Toma ${shot.number}`}
+			alt={`${m.animatic_take()} ${shot.number}`}
 			loading="lazy"
 			fit="cover"
 		/>
 	</a>
 	<div class="body">
 		<header>
-			<span class="num">Toma {shot.number}</span>
+			<span class="num">{m.animatic_take()} {shot.number}</span>
 			<span class="size">{shot.composition.size}</span>
 		</header>
 		<p class="desc">{shot.description}</p>

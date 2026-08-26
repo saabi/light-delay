@@ -2,42 +2,50 @@
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import EntityGallery from '$lib/components/entities/EntityGallery.svelte';
 	import {
-		ENTITY_KIND_LABELS,
 		getEntityPrimaryImagePath,
 		listEntities,
 		type EntityKind
 	} from '$lib/data/repositories/lookups';
-	import { withBase } from '$lib/utils/paths';
+	import { withLocale } from '$lib/utils/paths';
 	import { encodeRouteId } from '$lib/utils/routeId';
+	import * as m from '$lib/paraglide/messages.js';
 
 	const kinds: EntityKind[] = ['characters', 'locations', 'objects', 'vehicles'];
 
 	const sections = kinds.map((kind) => ({
 		kind,
-		label: ENTITY_KIND_LABELS[kind],
+		label: {
+			characters: m.entities_characters(),
+			locations: m.entities_locations(),
+			objects: m.entities_objects(),
+			vehicles: m.entities_vehicles(),
+			factions: m.entities_factions()
+		}[kind],
 		items: listEntities(kind).map((e) => ({
 			id: e.id,
 			href: `/entities/${kind}/${encodeRouteId(e.id)}`,
 			title: e.name,
 			description: e.description,
 			imageSrc: getEntityPrimaryImagePath(e.referenceAssetIds),
-			eyebrow: ENTITY_KIND_LABELS[kind]
+			eyebrow: {
+				characters: m.entities_characters(),
+				locations: m.entities_locations(),
+				objects: m.entities_objects(),
+				vehicles: m.entities_vehicles(),
+				factions: m.entities_factions()
+			}[kind]
 		}))
 	}));
 </script>
 
 <main class="page">
-	<PageHeader
-		eyebrow="Biblia visual"
-		title="Arte"
-		lede="Referencias visuales servidas desde /assets/ (migradas a static/assets)."
-	/>
+	<PageHeader eyebrow={m.art_eyebrow()} title={m.art_title()} lede={m.art_lede()} />
 
 	{#each sections as section (section.kind)}
 		<section class="section">
 			<div class="section-head">
 				<h2>{section.label}</h2>
-				<a href={withBase(`/entities/${section.kind}`)}>Ver índice →</a>
+				<a href={withLocale(`/entities/${section.kind}`)}>{m.action_view_index()}</a>
 			</div>
 			<EntityGallery items={section.items} />
 		</section>

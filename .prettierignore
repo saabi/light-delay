@@ -18,3 +18,7 @@ bun.lockb
 /coverage/
 /playwright-report/
 /test-results/
+/src/lib/paraglide/
+/project.inlang/.meta.json
+/project.inlang/cache/
+/project.inlang/README.md

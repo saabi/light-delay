@@ -43,26 +43,34 @@ describe('resolveActiveScriptId', () => {
 
 describe('hrefAfterScriptSwitch', () => {
 	it('keeps script / animatic / player section', () => {
-		expect(hrefAfterScriptSwitch('/script/script~light-delay-main-short', festival)).toBe(
-			'/script/script~light-delay-festival'
-		);
-		expect(hrefAfterScriptSwitch('/animatic/script~light-delay-main-short', festival)).toBe(
-			'/animatic/script~light-delay-festival'
-		);
-		expect(hrefAfterScriptSwitch('/animatic/script~light-delay-main-short/player', festival)).toBe(
-			'/animatic/script~light-delay-festival/player'
-		);
+		expect(
+			hrefAfterScriptSwitch('/script/script~light-delay-main-short', festival, { locale: 'en' })
+		).toBe('/script/script~light-delay-festival/');
+		expect(
+			hrefAfterScriptSwitch('/animatic/script~light-delay-main-short', festival, { locale: 'en' })
+		).toBe('/animatic/script~light-delay-festival/');
+		expect(
+			hrefAfterScriptSwitch('/animatic/script~light-delay-main-short/player', festival, {
+				locale: 'en'
+			})
+		).toBe('/animatic/script~light-delay-festival/player/');
 	});
 
 	it('defaults to script page on other routes', () => {
-		expect(hrefAfterScriptSwitch('/', festival)).toBe('/script/script~light-delay-festival');
-		expect(hrefAfterScriptSwitch('/art', festival)).toBe('/script/script~light-delay-festival');
+		expect(hrefAfterScriptSwitch('/', festival, { locale: 'en' })).toBe(
+			'/script/script~light-delay-festival/'
+		);
+		expect(hrefAfterScriptSwitch('/art', festival, { locale: 'en' })).toBe(
+			'/script/script~light-delay-festival/'
+		);
 	});
 });
 
 describe('scriptSectionHref', () => {
 	it('builds scoped section links', () => {
-		expect(scriptSectionHref('script', main)).toBe('/script/script~light-delay-main-short');
-		expect(scriptSectionHref('animatic', festival)).toBe('/animatic/script~light-delay-festival');
+		expect(scriptSectionHref('script', main, 'en')).toBe('/script/script~light-delay-main-short/');
+		expect(scriptSectionHref('animatic', festival, 'en')).toBe(
+			'/animatic/script~light-delay-festival/'
+		);
 	});
 });

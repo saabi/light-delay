@@ -18,6 +18,29 @@ This addendum extends `docs/JSON_FORMAT.md`. It is intentionally limited to lang
 
 This matches the repository language policy in `AGENTS.md` for authored content: Spanish first; other languages must not drift silently.
 
+## 1.1 Current Website and Document Scope
+
+The SvelteKit interface uses Paraglide JS. Interface locale is encoded in the URL: English uses unprefixed routes and Spanish uses `/es/`. This routing choice does not change authorship authority: Spanish remains the source language for narrative and project documentation.
+
+Structured prose documents use the same `LocalizedValue<T>` container for `title`, `summary`, and `content`. `content` is an ordered array of blocks; translated variants must preserve block count, type, and stable block ID so tables of contents, deep links, and editorial comparison remain deterministic.
+
+```ts
+export interface DocumentRecord {
+  id: DocumentId;
+  slug: string;
+  sourceLanguage: LanguageTag;
+  title: LocalizedValue<string>;
+  summary?: LocalizedValue<string>;
+  content: LocalizedValue<DocumentBlock[]>;
+  translationStatus?: Record<LanguageTag, TranslationStatus>;
+  provenance?: string[];
+}
+```
+
+Entity galleries currently keep Spanish records canonical and apply a complete English translation overlay at read time. The overlay may translate human-facing names, roles, and descriptions, but never IDs, asset links, or canon relationships.
+
+The screenplay, dialogue, derived subtitles, scene/beat prose, and shot descriptions are intentionally outside the completed website-copy migration. Until their English variants are authored and reviewed, English pages display a visible notice and render those narrative fields from Spanish.
+
 ## 2. Language Definitions
 
 Add these types:

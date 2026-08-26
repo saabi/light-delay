@@ -6,6 +6,8 @@
 	import { decodeScriptId } from '$lib/utils/scriptId';
 	import type { Beat, Cue, Scene } from '$lib/types/script';
 	import { page } from '$app/state';
+	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
+	import * as m from '$lib/paraglide/messages.js';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const script = $derived(getScript(scriptId));
@@ -40,18 +42,19 @@
 <main class="page">
 	<div class="head-row">
 		<PageHeader
-			eyebrow={script.script.kind === 'festival_cut' ? 'Festival Cut' : 'Guion'}
+			eyebrow={script.script.kind === 'festival_cut' ? 'Festival Cut' : m.script_label()}
 			title={script.script.title}
-			lede="Renderizado desde datos estructurados. El diálogo en español es la fuente de verdad."
+			lede={m.script_structured_lede()}
 			meta={[
 				`v${script.script.version}`,
-				`${script.scenes.length} escenas`,
+				`${script.scenes.length} ${m.script_scenes()}`,
 				script.script.status,
 				script.script.kind
 			]}
 		/>
 		<LanguageControls />
 	</div>
+	<StoryLanguageNotice />
 	<ScriptViewer
 		acts={script.acts}
 		{scenesById}

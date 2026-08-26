@@ -1,17 +1,26 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import DocumentViewer from '$lib/components/document/DocumentViewer.svelte';
+	import { resolveDocument } from '$lib/data/selectors/localized';
+	import { getLocale } from '$lib/paraglide/runtime.js';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let { data } = $props();
-	const doc = $derived(data.document);
+	const doc = $derived(resolveDocument(data.document, getLocale()));
 </script>
 
 <main class="page">
 	<PageHeader
-		eyebrow="Documento"
+		eyebrow={m.documents_eyebrow()}
 		title={doc.title}
 		lede={doc.summary}
-		meta={[doc.status, doc.language ?? 'es']}
+		meta={[
+			doc.status,
+			doc.resolvedLanguage.toUpperCase(),
+			...(doc.translationStatus?.en === 'draft' && getLocale() === 'en'
+				? [m.documents_translation_draft()]
+				: [])
+		]}
 	/>
 	<DocumentViewer blocks={doc.blocks} />
 </main>

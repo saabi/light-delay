@@ -20,6 +20,7 @@
 	import type { Cue, ScriptFile, Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
 	import { onDestroy, onMount } from 'svelte';
+	import * as m from '$lib/paraglide/messages.js';
 
 	type ShotView = {
 		shot: Shot;
@@ -63,7 +64,7 @@
 		const sceneN = String(currentScene?.number ?? 0).padStart(2, '0');
 		const tomaN = String(current.shot.number).padStart(2, '0');
 		const code = framingCode(current.shot);
-		return `ESCENA ${sceneN} · TOMA ${tomaN} · ${code}`;
+		return `${m.script_scene().toUpperCase()} ${sceneN} · ${m.animatic_take().toUpperCase()} ${tomaN} · ${code}`;
 	});
 
 	const sceneTitle = $derived(currentScene?.title ?? currentScene?.summary ?? '');
@@ -264,14 +265,14 @@
 
 <svelte:window onkeydown={onKey} />
 
-<div class="player" bind:this={rootEl} aria-label="Reproductor del animatic">
+<div class="player" bind:this={rootEl} aria-label={m.animatic_player()}>
 	<div class="movie-layout">
 		<div class="movie-frame">
 			{#if current}
 				<AnimaticFrame
 					media={current.media}
 					shotId={current.shot.id}
-					alt={`Toma ${current.shot.number}`}
+					alt={`${m.animatic_take()} ${current.shot.number}`}
 				/>
 			{/if}
 
@@ -303,7 +304,7 @@
 				onclick={toggleDetails}
 			>
 				<span aria-hidden="true">{player.detailsOpen ? '▾' : '▸'}</span>
-				Detalles de la toma
+				{m.animatic_details()}
 			</button>
 			{#if player.detailsOpen}
 				<div class="movie-detail-body" id="shot-details-body">
@@ -326,19 +327,22 @@
 		</div>
 
 		<div class="movie-controls">
-			<button type="button" class="btn previous" onclick={goPrev} aria-label="Toma anterior"
+			<button type="button" class="btn previous" onclick={goPrev} aria-label={m.animatic_previous()}
 				>◀</button
 			>
 			<button
 				type="button"
 				class="btn primary play"
 				onclick={onPlayPause}
-				aria-label="Reproducir o pausar"
+				aria-label={m.animatic_play_pause()}
 			>
 				{player.status === 'playing' ? '❚❚' : '▶'}
 			</button>
-			<button type="button" class="btn stop" onclick={onStop} aria-label="Detener">■</button>
-			<button type="button" class="btn next" onclick={goNext} aria-label="Toma siguiente">▶|</button
+			<button type="button" class="btn stop" onclick={onStop} aria-label={m.animatic_stop()}
+				>■</button
+			>
+			<button type="button" class="btn next" onclick={goNext} aria-label={m.animatic_next()}
+				>▶|</button
 			>
 			<input
 				class="movie-range"
@@ -348,18 +352,18 @@
 				step="50"
 				value={absoluteMs}
 				oninput={onScrub}
-				aria-label="Progreso de la película"
+				aria-label={m.animatic_progress()}
 			/>
 			<span class="movie-time">{formatClock(absoluteMs)} / {formatClock(totalMs)}</span>
 			<button
 				type="button"
 				class="btn fullscreen"
 				onclick={toggleFullscreen}
-				aria-label="Pantalla completa"
+				aria-label={m.action_fullscreen()}
 			>
-				Pantalla completa
+				{m.action_fullscreen()}
 			</button>
-			<a class="btn edit" href={editorHref}>Editar tiempos</a>
+			<a class="btn edit" href={editorHref}>{m.action_edit_timing()}</a>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages.js';
 	let {
 		valueMs,
 		onchange
@@ -9,7 +10,7 @@
 </script>
 
 <label class="duration">
-	<span>Duración (s)</span>
+	<span>{m.animatic_duration_seconds()}</span>
 	<input
 		type="number"
 		min="0"

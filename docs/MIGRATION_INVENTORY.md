@@ -1,6 +1,24 @@
 # Inventario de migración (Fase 0)
 
-Fecha: 2026-08-25. Fuente: `legacy-site/` sin modificar.
+Fecha: 2026-08-25. Fuente: `legacy-site/` sin modificar. Estado actualizado: 2026-08-26.
+
+## Estado de portado textual
+
+Todas las páginas enlazadas por el índice legacy tienen un destino actual. El detalle legible por herramientas está en `data/legacy-text-migration.json` y se valida con `npm run validate:data`.
+
+| Fuente legacy | Destino actual | Estado de idioma |
+| --- | --- | --- |
+| `index.html` | `/` y `/project` | ES/EN completo |
+| `notas-tecnicas-continuidad.html` | `/documents/notas-tecnicas-continuidad` | ES reconciliado + EN draft |
+| `biblia-produccion.html` | `/documents/biblia-de-produccion` | ES reconciliado + EN draft |
+| `reporte-comprensivo.html` | `/documents/reporte-comprensivo` | ES reconciliado + EN draft |
+| `momentos-clave.html` | `/documents/momentos-clave` | ES reconciliado + EN draft |
+| `version-acotada-30-min.html` | `/documents/estructura-30-minutos` | ES reconciliado + EN draft |
+| `guion-30-minutos.html` | `/script/[scriptId]` | estructura portada; traducción narrativa diferida |
+| `animatic-textual.html` | `/animatic/[scriptId]` | estructura portada; traducción narrativa diferida |
+| índices de arte/personajes | `/art` y `/entities/*` | ES/EN completo |
+
+`npm run port:legacy-text` vuelve a extraer los cinco documentos prose de forma determinista. No modifica `legacy-site/`: aplica reconciliaciones explícitas de canon a la copia española estructurada y exige que la traducción inglesa conserve la misma topología de bloques.
 
 ## Páginas HTML
 

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-08-26 — Sitio bilingüe, landing pública y migración prose completa
+
+- Incorporado Paraglide JS con inglés por defecto y rutas españolas bajo `/es/`; navegación, lector de guion, animatic, detalle técnico, comparador, documentos, arte y entidades responden al locale sin cambiar el español como autoridad editorial.
+- Reemplazado el dashboard inicial por una landing pública sin spoilers y trasladado el archivo editorial a `/project`; añadidos logotipo, isotipo, favicon, manifest, tarjeta social, metadatos canónicos, `hreflang`, Open Graph y sitemap bilingüe.
+- Portadas y traducidas las cinco páginas prose del legacy —notas, biblia, reporte, momentos y estructura— preservando headings, listas, tablas y beats. La versión española fue reconciliada con el canon actual y el inglés se registra como traducción en revisión.
+- Añadidos overlays ingleses completos para las galerías de personajes, lugares, objetos, vehículos y facciones, más un ledger de migración que permite validar que toda página enlazada desde el índice legacy tenga destino actual.
+- Ampliados los contratos de documentos con `LocalizedValue`, procedencia y estado de traducción; `npm run port:legacy-text` recompone la migración y `validate:data` comprueba paridad ES/EN.
+- El build de marca genera PNG derivados desde SVG con Sharp; el build estático se verificó con `BASE_PATH=/light-delay`, incluidas rutas profundas bajo `/es/`.
+- El guion, diálogo, subtítulos derivados y descripciones narrativas de toma permanecen en español y quedan explícitamente diferidos a una fase editorial posterior.
+
 ## 2026-08-26 — Navegación y diseño responsive
 
 - Corregido el shell responsive: escritorio recupera header global compacto + rail persistente, mientras móvil usa una barra inferior con marca, GitHub y hamburguesa que abre una hoja modal desde abajo.

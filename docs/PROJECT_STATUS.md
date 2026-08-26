@@ -4,6 +4,9 @@ Fecha de corte: 2026-08-26.
 
 ## Completado
 
+- **Sitio público bilingüe y presentación:** inglés por defecto en `/`, español en `/es/`, landing pública, archivo editorial en `/project`, selector de idioma con rutas recargables, Paraglide JS, SEO canónico con `hreflang`, Open Graph, sitemap, manifest, favicon y marca propia. Las rutas EN/ES se prerenderizan también con `BASE_PATH=/light-delay`.
+- **Texto legacy portado y traducido:** las cinco páginas prose, los índices de arte/personajes y la portada legacy tienen equivalentes basados en datos. Notas, biblia, reporte, momentos y estructura de 30 minutos se migraron con jerarquía, listas, tablas y beats; la copia española se reconcilió con el canon vigente y la inglesa conserva la misma topología. `data/legacy-text-migration.json` funciona como ledger verificable.
+- **Galerías bilingües:** nombres y descripciones de personajes, lugares, objetos, vehículos y facciones tienen overlay inglés; la interfaz completa del lector, animatic, panel técnico y comparador responde al locale. El contenido narrativo del guion, diálogos y descripciones de toma sigue en español y se señala como alcance diferido.
 - **Navegación responsive:** todas las rutas salvo Modo película usan header global compacto + rail persistente en escritorio y barra inferior + hoja modal en móvil. El umbral `calc(26.88em + 52.8ch)` responde a capacidad tipográfica; ambos modos enlazan el repositorio de GitHub.
 - **Player adaptable:** landscape conserva la composición inmersiva; portrait ordena frame, detalles desplegables y controles persistentes, con continuidad de toma, progreso y panel al cambiar orientación.
 - **Auditoría móvil:** inicio, guion, animatic, arte, comparación, documentos, entidades y assets adaptan grillas, tablas, metadatos y controles sin desborde horizontal a 320 px.
@@ -60,12 +63,12 @@ Fecha de corte: 2026-08-26.
 - Política narrativa: evitar exposición forzada; revelar por pensamiento/decisión del personaje (véase `AGENTS.md`).
 - Haz de Zao: `docs/SIGNAL_BEAM_REQUIREMENTS.md` conserva sólo una aproximación visual; el presupuesto óptico exacto permanece en `TODO.md`.
 - Assets: copia en `static/assets/` (characters 12, locations 8+proportional, props 5, vehicles 3+proportional, art-bible 2+scale-references; animatic con 100 frames legacy, manifest y 1 placeholder técnico). `legacy-site/assets/` intacto como referencia.
-- Documentos prose: `notas-tecnicas` extraído; resto stubs navegables pendientes de extracción editorial.
+- Documentos prose: cinco páginas legacy extraídas y traducidas en `data/documents.json`; validación exige paridad de bloques ES/EN y cobertura del ledger de migración.
 
 ## Próxima fase técnica
 
 - Separar en el futuro el motor genérico de autoría/consulta y el paquete de contenido de Light Delay antes de ofrecer una plataforma reutilizable con licencia propia.
-- Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial; completar documentos y beats, y limpiar duplicados binarios tras revisar paridad.
+- Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial y limpiar duplicados binarios tras revisar paridad.
 - Revisar los tres candidatos de retropropagación sin sincronizarlos automáticamente entre scripts.
 - Refinar títulos de escena animatic vs encabezados de guion (véase `SCRIPT_ANIMATIC_SYNC.md`).
 - Pruebas de regresión ampliadas del modo Película (fullscreen, subtítulos, restauración de toma y controles por teclado).

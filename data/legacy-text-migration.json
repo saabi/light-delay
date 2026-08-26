@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "sourceIndex": "legacy-site/index.html",
+  "pages": [
+    {
+      "source": "legacy-site/index.html",
+      "destination": "/",
+      "disposition": "reconciled",
+      "translation": "complete"
+    },
+    {
+      "source": "legacy-site/notas-tecnicas-continuidad.html",
+      "destination": "/documents/notas-tecnicas-continuidad",
+      "disposition": "ported-reconciled",
+      "translation": "complete"
+    },
+    {
+      "source": "legacy-site/biblia-produccion.html",
+      "destination": "/documents/biblia-de-produccion",
+      "disposition": "ported-reconciled",
+      "translation": "complete"
+    },
+    {
+      "source": "legacy-site/reporte-comprensivo.html",
+      "destination": "/documents/reporte-comprensivo",
+      "disposition": "ported-reconciled",
+      "translation": "complete"
+    },
+    {
+      "source": "legacy-site/momentos-clave.html",
+      "destination": "/documents/momentos-clave",
+      "disposition": "ported-reconciled",
+      "translation": "complete"
+    },
+    {
+      "source": "legacy-site/version-acotada-30-min.html",
+      "destination": "/documents/estructura-30-minutos",
+      "disposition": "ported-reconciled",
+      "translation": "complete"
+    },
+    {
+      "source": "legacy-site/guion-30-minutos.html",
+      "destination": "/script/[scriptId]",
+      "disposition": "ported",
+      "translation": "deferred-story"
+    },
+    {
+      "source": "legacy-site/animatic-textual.html",
+      "destination": "/animatic/[scriptId]",
+      "disposition": "ported",
+      "translation": "deferred-story"
+    },
+    {
+      "source": "legacy-site/assets/art-bible/index.html",
+      "destination": "/art",
+      "disposition": "merged-into-entities",
+      "translation": "complete"
+    },
+    {
+      "source": "legacy-site/assets/characters/index.html",
+      "destination": "/entities/characters",
+      "disposition": "merged-into-entities",
+      "translation": "complete"
+    }
+  ]
+}

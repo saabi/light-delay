@@ -1,9 +1,10 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages.js';
 	let { warnings }: { warnings: string[] } = $props();
 </script>
 
 {#if warnings.length}
-	<ul class="warnings" aria-label="Avisos de continuidad">
+	<ul class="warnings" aria-label={m.animatic_continuity()}>
 		{#each warnings as warning, i (i)}
 			<li>{warning}</li>
 		{/each}

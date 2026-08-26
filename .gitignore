@@ -31,6 +31,12 @@ test-results/
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
+# Generated localization output and local editor cache
+src/lib/paraglide/
+project.inlang/.meta.json
+project.inlang/cache/
+project.inlang/README.md
+
 # Temporary exports
 *.tmp
 *.bak
