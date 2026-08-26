@@ -109,7 +109,7 @@
 <style>
 	.dashboard {
 		position: sticky;
-		top: 0.75rem;
+		top: calc(var(--header-height) + 0.75rem);
 		z-index: 5;
 		display: flex;
 		align-items: center;
@@ -193,6 +193,25 @@
 		.progress {
 			order: 3;
 			flex: 1 1 100%;
+		}
+
+		.play-link {
+			margin-left: auto;
+		}
+	}
+
+	@media (max-width: 420px) {
+		.dashboard {
+			align-items: stretch;
+		}
+
+		.dashboard > div:first-child,
+		.play-link {
+			flex: 1 1 calc(50% - 0.5rem);
+		}
+
+		.play-link {
+			margin-left: 0;
 		}
 	}
 </style>

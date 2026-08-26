@@ -82,6 +82,6 @@
 	.page {
 		max-width: 1320px;
 		margin: 0 auto;
-		padding: 2.5rem 1.5rem 4rem;
+		padding: 2.5rem var(--page-gutter) 4rem;
 	}
 </style>

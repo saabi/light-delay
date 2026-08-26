@@ -55,7 +55,8 @@
 	h4 {
 		font-family: var(--font-serif);
 		line-height: 1.2;
-		scroll-margin-top: 1.5rem;
+		scroll-margin-top: calc(var(--header-height) + 1rem);
+		overflow-wrap: anywhere;
 	}
 
 	h2 {
@@ -97,5 +98,17 @@
 	ul,
 	ol {
 		padding-left: 1.25rem;
+	}
+
+	@media (max-width: 480px) {
+		blockquote,
+		.callout {
+			padding: 0.85rem;
+		}
+
+		ul,
+		ol {
+			padding-left: 1.05rem;
+		}
 	}
 </style>

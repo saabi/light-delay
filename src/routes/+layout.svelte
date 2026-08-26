@@ -19,7 +19,7 @@
 	{@render children()}
 {:else}
 	<AppShell>
-		{#snippet rail()}
+		{#snippet navigation()}
 			<ProjectNav />
 		{/snippet}
 		{@render children()}

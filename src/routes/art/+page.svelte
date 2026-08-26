@@ -48,7 +48,7 @@
 	.page {
 		max-width: var(--content-max);
 		margin: 0 auto;
-		padding: 2.5rem 1.75rem 4rem;
+		padding: 2.5rem var(--page-gutter) 4rem;
 	}
 
 	.section {
@@ -72,5 +72,13 @@
 		color: var(--cyan);
 		text-decoration: none;
 		font-size: 0.9rem;
+	}
+
+	@media (max-width: 480px) {
+		.section-head {
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 0.35rem;
+		}
 	}
 </style>

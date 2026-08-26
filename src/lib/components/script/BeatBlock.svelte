@@ -35,4 +35,10 @@
 		color: var(--muted);
 		font-size: 0.88rem;
 	}
+
+	@media (max-width: 480px) {
+		.beat {
+			padding: 0.85rem;
+		}
+	}
 </style>

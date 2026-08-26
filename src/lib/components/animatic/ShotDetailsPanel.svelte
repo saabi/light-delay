@@ -537,4 +537,21 @@
 	.language-section {
 		padding-bottom: 0;
 	}
+
+	@media (max-width: 480px) {
+		dl > div {
+			grid-template-columns: 1fr;
+			gap: 0.05rem;
+		}
+
+		dt {
+			font-size: 0.72rem;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+		}
+
+		.cue-heading {
+			display: grid;
+		}
+	}
 </style>

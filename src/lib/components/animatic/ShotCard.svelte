@@ -110,5 +110,9 @@
 		.shot-card {
 			grid-template-columns: 1fr;
 		}
+
+		.row {
+			flex-wrap: wrap;
+		}
 	}
 </style>

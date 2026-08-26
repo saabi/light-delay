@@ -69,5 +69,22 @@
 		border-radius: 999px;
 		font-size: 0.78rem;
 		color: var(--gold);
+		max-width: 100%;
+		overflow-wrap: anywhere;
+	}
+
+	@media (max-width: 560px) {
+		.page-header {
+			margin-bottom: 1.5rem;
+		}
+
+		h1 {
+			font-size: clamp(1.75rem, 10vw, 2.35rem);
+			overflow-wrap: anywhere;
+		}
+
+		.meta {
+			gap: 0.4rem;
+		}
 	}
 </style>

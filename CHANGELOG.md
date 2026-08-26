@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-26 — Navegación y diseño responsive
+
+- Reemplazado el rail lateral por un header global fijo con menú hamburguesa y drawer modal accesible en todas las rutas salvo Modo película.
+- El player conserva su presentación inmersiva en landscape; en portrait ordena frame, detalles de toma desplegables y controles persistentes, sin perder transporte, timeline ni retorno a edición.
+- Auditadas las rutas de inicio, guion, animatic, arte, comparación, documentos, entidades y assets para evitar desborde horizontal y adaptar grillas, tablas, metadatos y controles a pantallas estrechas.
+- Ampliadas las regresiones E2E para navegación por drawer, viewport de 320 px, composición portrait del player y cambios de orientación sin perder toma, progreso ni estado del panel.
+
 ## 2026-08-26 — Placeholder y detalles editoriales del animatic
 
 - Generada y registrada una claqueta técnica neutral 16:9 para referencias de imagen ausentes o fallos de carga, sin reemplazar ningún frame existente.

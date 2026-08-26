@@ -41,7 +41,7 @@
 	.page {
 		max-width: var(--content-max);
 		margin: 0 auto;
-		padding: 2.5rem 1.75rem 4rem;
+		padding: 2.5rem var(--page-gutter) 4rem;
 	}
 
 	.crumb {
@@ -64,7 +64,7 @@
 
 	.assets {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
 		gap: 1rem;
 	}
 
@@ -92,5 +92,11 @@
 		padding: 0 0.75rem;
 		font-size: 0.88rem;
 		color: var(--muted);
+	}
+
+	@media (max-width: 480px) {
+		.crumb {
+			flex-wrap: wrap;
+		}
 	}
 </style>

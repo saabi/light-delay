@@ -84,7 +84,7 @@
 	.page {
 		max-width: var(--content-max);
 		margin: 0 auto;
-		padding: 3.5rem 1.75rem 4.5rem;
+		padding: 3.5rem var(--page-gutter) 4.5rem;
 	}
 
 	.grid {
@@ -195,8 +195,26 @@
 	}
 
 	@media (max-width: 680px) {
+		.page {
+			padding-top: 2rem;
+			padding-bottom: 3rem;
+		}
+
 		.grid {
 			grid-template-columns: 1fr;
+		}
+
+		.card {
+			min-height: 190px;
+			padding: 1.2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.scripts li,
+		.docs li {
+			align-items: flex-start;
+			flex-direction: column;
 		}
 	}
 </style>

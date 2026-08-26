@@ -1,8 +1,17 @@
 import { expect, test } from '@playwright/test';
 
+async function openNavigation(page: import('@playwright/test').Page) {
+	const button = page.getByRole('button', { name: 'Abrir menú principal' });
+	await button.click();
+	await expect(page.getByRole('dialog', { name: 'Navegación' })).toBeVisible();
+	return button;
+}
+
 test('home page loads and lists scripts', async ({ page }) => {
 	await page.goto('/');
 	await expect(page.getByRole('heading', { name: /Light Delay/i })).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Abrir menú principal' })).toBeVisible();
+	await openNavigation(page);
 	await expect(page.getByRole('link', { name: /Guion/i }).first()).toBeVisible();
 	await expect(page.getByRole('link', { name: /Animatic/i }).first()).toBeVisible();
 	await expect(page.getByRole('heading', { name: /Scripts \/ cuts/i })).toBeVisible();
@@ -34,12 +43,14 @@ test('festival animatic page loads (draft, empty shots)', async ({ page }) => {
 
 test('script switcher from home opens chosen script', async ({ page }) => {
 	await page.goto('/');
+	await openNavigation(page);
 	await page.getByLabel('Seleccionar guion o cut').selectOption('script:light-delay-festival');
 	await expect(page).toHaveURL(/\/script\/script~light-delay-festival\/?$/);
 });
 
 test('script switcher keeps animatic section', async ({ page }) => {
 	await page.goto('/animatic/script~light-delay-main-short');
+	await openNavigation(page);
 	await page.getByLabel('Seleccionar guion o cut').selectOption('script:light-delay-festival');
 	await expect(page).toHaveURL(/\/animatic\/script~light-delay-festival\/?$/);
 });
@@ -58,7 +69,45 @@ test('movie player chrome matches legacy layout', async ({ page }) => {
 	await expect(page.getByRole('button', { name: 'Pantalla completa' })).toBeVisible();
 	await expect(page.getByRole('link', { name: 'Editar tiempos' })).toBeVisible();
 	await expect(page.getByRole('button', { name: 'Detalles de la toma' })).toBeVisible();
-	await expect(page.locator('.movie-stage img, .movie-stage .missing').first()).toBeVisible();
+	await expect(page.locator('.movie-frame img, .movie-frame .missing').first()).toBeVisible();
+});
+
+test('global navigation drawer is accessible and closes after navigation', async ({ page }) => {
+	await page.setViewportSize({ width: 1440, height: 900 });
+	await page.goto('/');
+	const button = await openNavigation(page);
+	await expect(button).toHaveAttribute('aria-expanded', 'true');
+	await page.keyboard.press('Escape');
+	await expect(page.getByRole('dialog', { name: 'Navegación' })).toBeHidden();
+	await expect(button).toHaveAttribute('aria-expanded', 'false');
+	await expect(button).toBeFocused();
+	await openNavigation(page);
+	await page.getByRole('link', { name: 'Arte', exact: true }).click();
+	await expect(page).toHaveURL(/\/art\/?$/);
+	await expect(page.getByRole('dialog', { name: 'Navegación' })).toBeHidden();
+});
+
+test('principal routes do not overflow a narrow viewport', async ({ page }) => {
+	await page.setViewportSize({ width: 320, height: 800 });
+	const routes = [
+		'/',
+		'/script/script~light-delay-main-short',
+		'/animatic/script~light-delay-main-short',
+		'/art',
+		'/entities/characters',
+		'/entities/characters/character~zao',
+		'/assets/asset~animatic-01-01',
+		'/documents/notas-tecnicas-continuidad',
+		'/compare/script~light-delay-main-short?against=script%3Alight-delay-festival'
+	];
+	for (const route of routes) {
+		await page.goto(route);
+		await expect(page.getByRole('button', { name: 'Abrir menú principal' })).toBeVisible();
+		expect(
+			await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1),
+			`overflow horizontal en ${route}`
+		).toBe(true);
+	}
 });
 
 test('shot details open by click and with the D shortcut', async ({ page }) => {
@@ -106,11 +155,49 @@ test('shot details remain scrollable on a mobile viewport', async ({ page }) => 
 	await page.setViewportSize({ width: 390, height: 844 });
 	await page.goto('/animatic/script~light-delay-main-short/player');
 	await page.getByRole('button', { name: 'Reproducir o pausar' }).click();
+	const frame = page.locator('.movie-frame');
+	const details = page.locator('.movie-details');
+	const controls = page.locator('.movie-controls');
+	const frameBox = await frame.boundingBox();
+	const detailsBox = await details.boundingBox();
+	const controlsBox = await controls.boundingBox();
+	expect(frameBox).not.toBeNull();
+	expect(detailsBox).not.toBeNull();
+	expect(controlsBox).not.toBeNull();
+	expect(frameBox!.y + frameBox!.height).toBeLessThanOrEqual(detailsBox!.y + 1);
+	expect(detailsBox!.y + detailsBox!.height).toBeLessThanOrEqual(controlsBox!.y + 1);
+	await expect(page.getByRole('button', { name: 'Detalles de la toma' })).toHaveAttribute(
+		'aria-expanded',
+		'false'
+	);
 	await page.getByRole('button', { name: 'Detalles de la toma' }).click();
 	const body = page.locator('#shot-details-body');
 	await expect(body).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Toma anterior' })).toBeVisible();
+	await expect(page.getByRole('button', { name: 'Toma siguiente' })).toBeVisible();
 	await expect(page.getByRole('button', { name: 'Pantalla completa' })).toBeVisible();
 	expect(await body.evaluate((element) => element.scrollHeight > element.clientHeight)).toBe(true);
+});
+
+test('player preserves shot and details state when orientation changes', async ({ page }) => {
+	await page.setViewportSize({ width: 390, height: 844 });
+	await page.goto('/animatic/script~light-delay-main-short/player?shot=main%3Ashot-05-07');
+	await page.getByRole('button', { name: 'Reproducir o pausar' }).click();
+	await page.getByRole('button', { name: 'Detalles de la toma' }).click();
+	const before = await page.getByLabel('Progreso de la película').inputValue();
+	await expect(page.getByText('main:shot-05-07', { exact: true }).first()).toBeVisible();
+	await page.setViewportSize({ width: 844, height: 390 });
+	await expect(page.getByRole('button', { name: 'Detalles de la toma' })).toHaveAttribute(
+		'aria-expanded',
+		'true'
+	);
+	await expect(page.getByText('main:shot-05-07', { exact: true }).first()).toBeVisible();
+	await expect(page.getByLabel('Progreso de la película')).toHaveValue(before);
+	const frameBox = await page.locator('.movie-frame').boundingBox();
+	const detailsBox = await page.locator('.movie-details').boundingBox();
+	expect(frameBox).not.toBeNull();
+	expect(detailsBox).not.toBeNull();
+	expect(detailsBox!.x).toBeGreaterThan(frameBox!.x + frameBox!.width / 2);
 });
 
 test('returning from Movie mode restores the selected editor shot', async ({ page }) => {

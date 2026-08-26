@@ -4,6 +4,9 @@ Fecha de corte: 2026-08-26.
 
 ## Completado
 
+- **Navegación responsive:** todas las rutas salvo Modo película usan un header global fijo con menú hamburguesa y drawer modal accesible; el selector de guion y la navegación permanecen disponibles sin ocupar un rail lateral.
+- **Player adaptable:** landscape conserva la composición inmersiva; portrait ordena frame, detalles desplegables y controles persistentes, con continuidad de toma, progreso y panel al cambiar orientación.
+- **Auditoría móvil:** inicio, guion, animatic, arte, comparación, documentos, entidades y assets adaptan grillas, tablas, metadatos y controles sin desborde horizontal a 320 px.
 - **Deuda visual del animatic estructurada:** las 33 tomas provisionales de escenas 5–8 se marcan en `Take.imageStatus` con toma de origen; los assets originales siguen vigentes y el tráiler no recibe marcas por su montaje intencional.
 - **Fallback y detalle de toma:** claqueta técnica neutral registrada para imágenes faltantes/fallidas; editor y player señalizan placeholders. «Detalles de la toma» funciona por clic/tecla `D` y presenta contexto, cámara, cues, takes, revisión y procedencia.
 - **GitHub Pages:** repositorio público y Pages habilitado para `https://saabi.github.io/light-delay/`; build con `@sveltejs/adapter-static`, prerender global, fallback `404.html`, `BASE_PATH=/light-delay` y workflow que descarga Git LFS y valida datos, tipos y pruebas antes de publicar pushes a `master`.
@@ -15,9 +18,9 @@ Fecha de corte: 2026-08-26.
 - **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
 - **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Rao, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
 - **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
-- **Selector de guion en el rail:** `ScriptSwitcher` en `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
+- **Selector de guion en el menú:** `ScriptSwitcher` en el drawer de `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
 - **Tráiler (~1:30):** `data/scripts/light-delay-trailer.json` — 9 secuencias del brief, 29 tomas reutilizando frames del main short; regenerable con `npm run build:trailer`.
-- **Modo película:** chrome alineado al legacy (`AnimaticPlayer` fullscreen con meta, detalles flotantes y barra inferior).
+- **Modo película:** chrome alineado al legacy en landscape (`AnimaticPlayer` fullscreen con meta, detalles flotantes y barra inferior) y flujo frame → detalles → controles en portrait.
 - **Higgsfield (staging):** `higgsfield-uploads/` con hojas renombradas de personajes (sin Harlan/Rao), localizaciones y props; ver `higgsfield-uploads/TODO.md`.
 - **Referencias de escala:** `proportional-reference` por entidad (Proxima, Celestial Ardor) y comparativa común en `art-bible/scale-references/`.
 - **Retorno de Modo película:** el enlace a edición restaura la toma activa mediante `?shot=` y centra/enfoca su tarjeta; hay control visible de pantalla completa.
@@ -65,7 +68,7 @@ Fecha de corte: 2026-08-26.
 - Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial; completar documentos y beats, y limpiar duplicados binarios tras revisar paridad.
 - Revisar los tres candidatos de retropropagación sin sincronizarlos automáticamente entre scripts.
 - Refinar títulos de escena animatic vs encabezados de guion (véase `SCRIPT_ANIMATIC_SYNC.md`).
-- Pruebas de regresión ampliadas del modo Película (fullscreen, subtítulos, restauración de toma).
+- Pruebas de regresión ampliadas del modo Película (fullscreen, subtítulos, restauración de toma y controles por teclado).
 
 ## Criterio de migración terminada
 

@@ -29,7 +29,7 @@
 <style>
 	.scene {
 		margin: 2.5rem 0;
-		scroll-margin-top: 1.5rem;
+		scroll-margin-top: calc(var(--header-height) + 1rem);
 	}
 
 	.num {
@@ -48,5 +48,15 @@
 	.summary {
 		margin: 0;
 		color: var(--muted);
+	}
+
+	@media (max-width: 480px) {
+		.scene {
+			margin: 2rem 0;
+		}
+
+		h3 {
+			overflow-wrap: anywhere;
+		}
 	}
 </style>

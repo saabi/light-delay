@@ -165,15 +165,15 @@ The exact optional-parameter route syntax should be validated during implementat
 
 | Component | Responsibility | Reused by |
 | --- | --- | --- |
-| `AppShell` | Global header, content frame and responsive regions | All non-player routes |
-| `ProjectNav` | Primary route navigation | All non-player routes |
+| `AppShell` | Sticky global header, modal navigation drawer, content frame and responsive regions | All non-player routes |
+| `ProjectNav` | Primary route navigation and script selector inside the drawer | All non-player routes |
 | `DocumentRail` | Sticky title, metadata and generated table of contents | Documents, script, entity detail |
 | `Breadcrumbs` | Hierarchical navigation | Documents, entities, assets |
 | `PageHeader` | Eyebrow, title, lede and metadata pills | All content routes |
 | `LanguageControls` | Audio language, subtitle language and fallback status | Script, animatic, player |
 | `MetadataPills` | Compact metadata presentation | Headers, cards, assets |
 
-`AppShell` should use slots/snippets for rail, header and main content instead of branching internally for every route.
+`AppShell` should use slots/snippets for drawer navigation and main content instead of branching internally for every route. The immersive player remains outside the global header.
 
 ### Generic document primitives
 
@@ -396,8 +396,9 @@ Components own their structural styles, while tokens and document typography rem
 
 Preserve:
 
-- sticky rails on wide screens;
-- responsive single-column layout;
+- a sticky global header and keyboard-accessible modal navigation drawer;
+- responsive single-column layouts without horizontal page overflow;
+- an immersive landscape player and a portrait flow ordered frame, shot details, then persistent controls;
 - print-friendly screenplay/document views;
 - strong focus states and keyboard controls;
 - reduced-motion behavior for player transitions.

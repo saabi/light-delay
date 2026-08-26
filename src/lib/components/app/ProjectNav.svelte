@@ -38,11 +38,6 @@
 	}
 </script>
 
-<a class="brand" href={withBase('/')}>
-	<span class="orb" aria-hidden="true"></span>
-	Light Delay
-</a>
-
 <ScriptSwitcher />
 
 <nav class="nav" aria-label="Principal">
@@ -52,27 +47,6 @@
 </nav>
 
 <style>
-	.brand {
-		display: flex;
-		align-items: center;
-		gap: 0.65rem;
-		color: var(--cyan);
-		font-weight: 800;
-		letter-spacing: 0.18em;
-		font-size: 0.73rem;
-		text-decoration: none;
-		text-transform: uppercase;
-		margin-bottom: 1.75rem;
-	}
-
-	.orb {
-		width: 11px;
-		height: 11px;
-		border-radius: 50%;
-		background: var(--cyan);
-		box-shadow: 0 0 20px var(--cyan);
-	}
-
 	.nav {
 		display: flex;
 		flex-direction: column;

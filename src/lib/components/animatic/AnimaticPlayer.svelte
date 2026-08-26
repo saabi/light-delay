@@ -265,34 +265,36 @@
 <svelte:window onkeydown={onKey} />
 
 <div class="player" bind:this={rootEl} aria-label="Reproductor del animatic">
-	<div class="movie-stage">
-		{#if current}
-			<AnimaticFrame
-				media={current.media}
-				shotId={current.shot.id}
-				alt={`Toma ${current.shot.number}`}
-			/>
-		{/if}
+	<div class="movie-layout">
+		<div class="movie-frame">
+			{#if current}
+				<AnimaticFrame
+					media={current.media}
+					shotId={current.shot.id}
+					alt={`Toma ${current.shot.number}`}
+				/>
+			{/if}
 
-		<div class="movie-vignette" aria-hidden="true"></div>
+			<div class="movie-vignette" aria-hidden="true"></div>
 
-		<div class="movie-top">
-			<div>
-				<b>{shotLabel}</b>
-				<div class="movie-scene">{sceneTitle}</div>
+			<div class="movie-top">
+				<div>
+					<b>{shotLabel}</b>
+					<div class="movie-scene">{sceneTitle}</div>
+				</div>
+				<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
 			</div>
-			<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
+
+			{#if activeSubtitles.length}
+				<div class="movie-subs" aria-live="polite">
+					{#each activeSubtitles as sub (sub.cueId)}
+						<div class="subtitle">{sub.text}</div>
+					{/each}
+				</div>
+			{/if}
 		</div>
 
-		{#if activeSubtitles.length}
-			<div class="movie-subs" aria-live="polite">
-				{#each activeSubtitles as sub (sub.cueId)}
-					<div class="subtitle">{sub.text}</div>
-				{/each}
-			</div>
-		{/if}
-
-		<div class="movie-details">
+		<div class="movie-details" class:open={player.detailsOpen}>
 			<button
 				type="button"
 				class="details-toggle"
@@ -324,20 +326,19 @@
 		</div>
 
 		<div class="movie-controls">
-			<button type="button" class="btn secondary" onclick={goPrev} aria-label="Toma anterior"
+			<button type="button" class="btn previous" onclick={goPrev} aria-label="Toma anterior"
 				>◀</button
 			>
 			<button
 				type="button"
-				class="btn primary"
+				class="btn primary play"
 				onclick={onPlayPause}
 				aria-label="Reproducir o pausar"
 			>
 				{player.status === 'playing' ? '❚❚' : '▶'}
 			</button>
-			<button type="button" class="btn" onclick={onStop} aria-label="Detener">■</button>
-			<button type="button" class="btn secondary" onclick={goNext} aria-label="Toma siguiente"
-				>▶|</button
+			<button type="button" class="btn stop" onclick={onStop} aria-label="Detener">■</button>
+			<button type="button" class="btn next" onclick={goNext} aria-label="Toma siguiente">▶|</button
 			>
 			<input
 				class="movie-range"
@@ -350,10 +351,15 @@
 				aria-label="Progreso de la película"
 			/>
 			<span class="movie-time">{formatClock(absoluteMs)} / {formatClock(totalMs)}</span>
-			<button type="button" class="btn" onclick={toggleFullscreen} aria-label="Pantalla completa">
+			<button
+				type="button"
+				class="btn fullscreen"
+				onclick={toggleFullscreen}
+				aria-label="Pantalla completa"
+			>
 				Pantalla completa
 			</button>
-			<a class="btn" href={editorHref}>Editar tiempos</a>
+			<a class="btn edit" href={editorHref}>Editar tiempos</a>
 		</div>
 	</div>
 </div>
@@ -367,15 +373,22 @@
 		color: #fff;
 	}
 
-	.movie-stage {
+	.movie-layout {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+	}
+
+	.movie-frame {
 		position: absolute;
 		inset: 0;
 		display: grid;
 		place-items: center;
 		overflow: hidden;
+		background: #000;
 	}
 
-	.movie-stage > :global(.frame) {
+	.movie-frame > :global(.frame) {
 		width: 100%;
 		height: 100%;
 		background: #000;
@@ -497,7 +510,7 @@
 		background: #06101be8;
 		backdrop-filter: blur(14px);
 		display: grid;
-		grid-template-columns: auto auto auto auto 1fr auto auto;
+		grid-template-columns: auto auto auto auto minmax(80px, 1fr) auto auto auto;
 		gap: 9px;
 		align-items: center;
 	}
@@ -544,13 +557,15 @@
 		white-space: nowrap;
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 900px) and (orientation: landscape) {
 		.movie-controls {
-			grid-template-columns: auto auto auto 1fr auto;
-		}
-
-		.movie-controls .secondary {
-			display: none;
+			left: 8px;
+			right: 8px;
+			bottom: 8px;
+			grid-template-columns: repeat(4, auto) minmax(80px, 1fr) auto auto auto;
+			gap: 6px;
+			padding: 8px;
+			font-size: 0.76rem;
 		}
 
 		.movie-subs {
@@ -558,27 +573,139 @@
 		}
 	}
 
-	@media (max-width: 560px) {
+	@media (orientation: portrait) {
+		.player {
+			overflow: hidden;
+		}
+
+		.movie-layout {
+			position: absolute;
+			inset: 0;
+			display: grid;
+			grid-template-rows: auto minmax(0, 1fr) auto;
+			background: #02070c;
+			overflow: hidden;
+		}
+
+		.movie-frame {
+			position: relative;
+			inset: auto;
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			max-height: 42dvh;
+			min-height: 0;
+		}
+
+		.movie-details {
+			position: relative;
+			right: auto;
+			top: auto;
+			align-self: start;
+			width: 100%;
+			max-height: none;
+			border-right: 0;
+			border-left: 0;
+			border-radius: 0;
+			background: #06101b;
+			backdrop-filter: none;
+		}
+
+		.movie-details.open {
+			align-self: stretch;
+			display: flex;
+			min-height: 0;
+			flex-direction: column;
+		}
+
+		.movie-detail-body {
+			flex: 1;
+			min-height: 0;
+			max-height: none;
+			padding-bottom: 1rem;
+		}
+
 		.movie-controls {
-			left: 8px;
-			right: 8px;
-			bottom: 8px;
+			position: relative;
+			left: auto;
+			right: auto;
+			bottom: auto;
+			z-index: 3;
+			padding: 9px max(9px, env(safe-area-inset-right)) max(9px, env(safe-area-inset-bottom))
+				max(9px, env(safe-area-inset-left));
+			border-right: 0;
+			border-left: 0;
+			border-bottom: 0;
+			border-radius: 0;
+			background: #06101b;
+			backdrop-filter: none;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			grid-template-areas:
+				'previous play stop next'
+				'range range range range'
+				'time time fullscreen edit';
+			gap: 7px;
+		}
+
+		.previous {
+			grid-area: previous;
+		}
+
+		.play {
+			grid-area: play;
+		}
+
+		.stop {
+			grid-area: stop;
+		}
+
+		.next {
+			grid-area: next;
+		}
+
+		.movie-range {
+			grid-area: range;
+		}
+
+		.movie-time {
+			grid-area: time;
+			align-self: center;
+		}
+
+		.fullscreen {
+			grid-area: fullscreen;
+		}
+
+		.edit {
+			grid-area: edit;
+		}
+
+		.movie-controls .btn {
+			min-width: 0;
+			padding: 8px 7px;
+			font-size: clamp(0.68rem, 2.5vw, 0.8rem);
 		}
 
 		.movie-top {
 			left: 12px;
 			right: 12px;
+			top: 10px;
+		}
+
+		.movie-scene {
+			max-width: 70vw;
+			font-size: 0.78rem;
+			line-height: 1.3;
 		}
 
 		.movie-subs {
-			left: 5%;
-			right: 5%;
-			bottom: 104px;
+			left: 4%;
+			right: 4%;
+			bottom: 10px;
 		}
 
-		.movie-details {
-			right: 8px;
-			top: 48px;
+		.movie-subs .subtitle {
+			padding: 5px 9px;
+			font-size: clamp(0.78rem, 3.5vw, 1.05rem);
 		}
 	}
 </style>

@@ -72,4 +72,13 @@
 		letter-spacing: normal;
 		font-weight: 500;
 	}
+
+	@media (max-width: 480px) {
+		.lang-controls,
+		label,
+		select {
+			width: 100%;
+			min-width: 0;
+		}
+	}
 </style>

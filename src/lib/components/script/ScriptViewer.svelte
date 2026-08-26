@@ -150,4 +150,18 @@
 		margin: 0;
 		color: var(--muted);
 	}
+
+	@media (max-width: 480px) {
+		.functions {
+			padding: 1rem;
+		}
+
+		.functions code {
+			overflow-wrap: anywhere;
+		}
+
+		h2 {
+			font-size: 1.55rem;
+		}
+	}
 </style>

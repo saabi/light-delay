@@ -55,7 +55,7 @@
 	.page {
 		max-width: var(--content-max);
 		margin: 0 auto;
-		padding: 2.5rem 1.75rem 4rem;
+		padding: 2.5rem var(--page-gutter) 4rem;
 	}
 
 	figure {
@@ -79,6 +79,7 @@
 		color: var(--muted);
 		font-family: var(--font-mono);
 		font-size: 0.8rem;
+		overflow-wrap: anywhere;
 	}
 
 	.path {
@@ -108,5 +109,13 @@
 		margin: 0;
 		font-family: var(--font-mono);
 		font-size: 0.9rem;
+		overflow-wrap: anywhere;
+	}
+
+	@media (max-width: 480px) {
+		dl div {
+			grid-template-columns: 1fr;
+			gap: 0.1rem;
+		}
 	}
 </style>

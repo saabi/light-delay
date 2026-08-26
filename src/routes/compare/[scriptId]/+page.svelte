@@ -129,7 +129,13 @@
 
 	<section>
 		<h2>Canon</h2>
-		<div class="table-wrap">
+		<!-- svelte-ignore a11y_no_noninteractive_tabindex (la tabla debe poder desplazarse con teclado) -->
+		<div
+			class="table-wrap"
+			role="region"
+			tabindex="0"
+			aria-label="Comparación de canon; desplazamiento horizontal"
+		>
 			<table>
 				<thead
 					><tr
@@ -166,7 +172,13 @@
 
 	<section>
 		<h2>Eventos principales</h2>
-		<div class="table-wrap">
+		<!-- svelte-ignore a11y_no_noninteractive_tabindex (la tabla debe poder desplazarse con teclado) -->
+		<div
+			class="table-wrap"
+			role="region"
+			tabindex="0"
+			aria-label="Comparación de eventos; desplazamiento horizontal"
+		>
 			<table>
 				<thead
 					><tr
@@ -256,7 +268,7 @@
 	.page {
 		max-width: 1320px;
 		margin: 0 auto;
-		padding: 2.5rem 1.5rem 4rem;
+		padding: 2.5rem var(--page-gutter) 4rem;
 	}
 	section {
 		margin-top: 2.5rem;
@@ -288,8 +300,18 @@
 	}
 	.table-wrap {
 		overflow-x: auto;
+		overscroll-behavior-x: contain;
 		border: 1px solid var(--line);
 		border-radius: var(--radius);
+		background:
+			linear-gradient(90deg, var(--panel), transparent 1rem) left,
+			linear-gradient(-90deg, var(--panel), transparent 1rem) right;
+		background-repeat: no-repeat;
+		background-size: 2rem 100%;
+	}
+	.table-wrap:focus-visible {
+		outline: 2px solid var(--cyan);
+		outline-offset: 2px;
 	}
 	table {
 		width: 100%;
@@ -332,7 +354,7 @@
 	}
 	.cast-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
 		gap: 0.75rem;
 	}
 	.cast-grid article {
@@ -371,6 +393,19 @@
 		border-radius: 8px;
 	}
 	@media (max-width: 700px) {
+		.page {
+			padding-top: 2rem;
+		}
+
+		.against-picker {
+			max-width: none;
+		}
+
+		.against-picker select {
+			width: 100%;
+			min-width: 0;
+		}
+
 		.functions li {
 			grid-template-columns: 1fr;
 		}

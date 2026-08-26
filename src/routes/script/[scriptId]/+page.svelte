@@ -65,7 +65,7 @@
 	.page {
 		max-width: var(--content-max);
 		margin: 0 auto;
-		padding: 2.5rem 1.75rem 4rem;
+		padding: 2.5rem var(--page-gutter) 4rem;
 	}
 
 	.head-row {
@@ -75,5 +75,11 @@
 		gap: 1.25rem;
 		align-items: start;
 		margin-bottom: 0.5rem;
+	}
+
+	@media (max-width: 560px) {
+		.head-row > :global(*) {
+			width: 100%;
+		}
 	}
 </style>
