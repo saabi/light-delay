@@ -15,11 +15,182 @@
 			"sourceVersion": "1.0.0-extract",
 			"notes": "Tráiler según docs/Light Delay — Tráiler de la versión de 30 minutos.md. Frames reutilizados del animatic principal vía imageAssetId; diálogos condensados del brief."
 		},
-		"declaredEntityRefs": [{"kind":"character","id":"character:zao"},{"kind":"character","id":"character:voss"},{"kind":"character","id":"character:harlan"},{"kind":"character","id":"character:rao"},{"kind":"character","id":"character:sorell"},{"kind":"character","id":"character:cael"}],
+		"declaredEntityRefs": [
+			{
+				"kind": "character",
+				"id": "character:zao"
+			},
+			{
+				"kind": "character",
+				"id": "character:voss"
+			},
+			{
+				"kind": "character",
+				"id": "character:harlan"
+			},
+			{
+				"kind": "character",
+				"id": "character:rao"
+			},
+			{
+				"kind": "character",
+				"id": "character:sorell"
+			},
+			{
+				"kind": "character",
+				"id": "character:cael"
+			}
+		],
 		"comparisonProfile": {
 			"version": "1.0.0",
-			"canonClaims": [{"dimensionId":"canon:proxima-origin","valueId":"scientific-before-contact","statement":"Proxima fue una estación científica joviana anterior al contacto.","status":"established"},{"dimensionId":"canon:ardor-deployment","valueId":"earth-built-prepositioned","statement":"Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.","status":"established"},{"dimensionId":"canon:tunnel-geometry","valueId":"distributed-nodes","statement":"La boca es un campo distribuido de nodos, no un aro.","status":"established"},{"dimensionId":"canon:tunnel-location","valueId":"sol-jupiter-l2","statement":"La boca local está en una órbita halo controlada cerca de L2.","status":"established"},{"dimensionId":"canon:trajectory","valueId":"conventional-to-wormhole","statement":"La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.","status":"established"},{"dimensionId":"canon:velari-objects","valueId":"station-and-emissary","statement":"La estación Velari y la nave emisaria son objetos distintos.","status":"established"},{"dimensionId":"canon:evidence-chain","valueId":"relay-optical-readonly","statement":"El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.","status":"established"},{"dimensionId":"canon:sorell-status","valueId":"false-log-not-conclusive","statement":"Sorell no queda culpabilizada por un único registro falsificable.","status":"established"},{"dimensionId":"canon:rao-containment","valueId":"bounded-quarantine","statement":"Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.","status":"established"},{"dimensionId":"canon:ending","valueId":"limited-acknowledgement","statement":"La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.","status":"established"}],
-			"eventCoverage": [{"eventId":"event:embarkation","status":"reworked","sceneIds":["trailer:scene-a","trailer:scene-b"]},{"eventId":"event:anomaly-discovery","status":"reworked","sceneIds":["trailer:scene-c"]},{"eventId":"event:zao-warning-death","status":"reworked","sceneIds":["trailer:scene-d","trailer:scene-e"]},{"eventId":"event:tunnel-crossing","status":"present","sceneIds":["trailer:scene-f"]},{"eventId":"event:investigation","status":"reworked","sceneIds":["trailer:scene-f"]},{"eventId":"event:message-reception","status":"present","sceneIds":["trailer:scene-g"]},{"eventId":"event:harlan-exposed","status":"reworked","sceneIds":["trailer:scene-g"]},{"eventId":"event:quarantine","status":"present","sceneIds":["trailer:scene-h"]},{"eventId":"event:clean-greeting","status":"reworked","sceneIds":["trailer:scene-h"]},{"eventId":"event:first-contact","status":"present","sceneIds":["trailer:scene-h","trailer:scene-i"]},{"eventId":"event:aftermath","status":"omitted","note":"El tráiler termina en el umbral del contacto."}]
+			"canonClaims": [
+				{
+					"dimensionId": "canon:proxima-origin",
+					"valueId": "scientific-before-contact",
+					"statement": "Proxima fue una estación científica joviana anterior al contacto.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ardor-deployment",
+					"valueId": "earth-built-prepositioned",
+					"statement": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-geometry",
+					"valueId": "distributed-nodes",
+					"statement": "La boca es un campo distribuido de nodos, no un aro.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:tunnel-location",
+					"valueId": "sol-jupiter-l2",
+					"statement": "La boca local está en una órbita halo controlada cerca de L2.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:trajectory",
+					"valueId": "conventional-to-wormhole",
+					"statement": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:velari-objects",
+					"valueId": "station-and-emissary",
+					"statement": "La estación Velari y la nave emisaria son objetos distintos.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:evidence-chain",
+					"valueId": "relay-optical-readonly",
+					"statement": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:sorell-status",
+					"valueId": "false-log-not-conclusive",
+					"statement": "Sorell no queda culpabilizada por un único registro falsificable.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:rao-containment",
+					"valueId": "bounded-quarantine",
+					"statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ending",
+					"valueId": "limited-acknowledgement",
+					"statement": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:zao-transmission-mechanics",
+					"valueId": "jam-wired-cut-dedicated-laser",
+					"statement": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
+					"status": "established"
+				}
+			],
+			"eventCoverage": [
+				{
+					"eventId": "event:embarkation",
+					"status": "reworked",
+					"sceneIds": [
+						"trailer:scene-a",
+						"trailer:scene-b"
+					]
+				},
+				{
+					"eventId": "event:anomaly-discovery",
+					"status": "reworked",
+					"sceneIds": [
+						"trailer:scene-c"
+					]
+				},
+				{
+					"eventId": "event:zao-warning-death",
+					"status": "reworked",
+					"sceneIds": [
+						"trailer:scene-d",
+						"trailer:scene-e"
+					]
+				},
+				{
+					"eventId": "event:tunnel-crossing",
+					"status": "present",
+					"sceneIds": [
+						"trailer:scene-f"
+					]
+				},
+				{
+					"eventId": "event:investigation",
+					"status": "reworked",
+					"sceneIds": [
+						"trailer:scene-f"
+					]
+				},
+				{
+					"eventId": "event:message-reception",
+					"status": "present",
+					"sceneIds": [
+						"trailer:scene-g"
+					]
+				},
+				{
+					"eventId": "event:harlan-exposed",
+					"status": "reworked",
+					"sceneIds": [
+						"trailer:scene-g"
+					]
+				},
+				{
+					"eventId": "event:quarantine",
+					"status": "present",
+					"sceneIds": [
+						"trailer:scene-h"
+					]
+				},
+				{
+					"eventId": "event:clean-greeting",
+					"status": "reworked",
+					"sceneIds": [
+						"trailer:scene-h"
+					]
+				},
+				{
+					"eventId": "event:first-contact",
+					"status": "present",
+					"sceneIds": [
+						"trailer:scene-h",
+						"trailer:scene-i"
+					]
+				},
+				{
+					"eventId": "event:aftermath",
+					"status": "omitted",
+					"note": "El tráiler termina en el umbral del contacto."
+				}
+			]
 		},
 		"characterFunctionAssignments": [
 			{
@@ -211,10 +382,11 @@
 				"interiorExterior": "INT_EXT",
 				"timeOfDay": "CONTINUO"
 			},
-			"summary": "Zao transmite hacia el futuro por el corredor de vuelo.",
-			"dramaticPurpose": "Mensaje óptico incompleto.",
+			"summary": "Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.",
+			"dramaticPurpose": "Convertir la transmisión en una decisión bajo presión.",
 			"characterIds": [
-				"character:zao"
+				"character:zao",
+				"character:harlan"
 			],
 			"beatIds": [
 				"trailer:beat-d-01"
@@ -229,7 +401,11 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-01"
+					"shotId": "main:shot-05-04"
+				},
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-05-07"
 				},
 				{
 					"scriptId": "script:light-delay-main-short",
@@ -238,10 +414,6 @@
 				{
 					"scriptId": "script:light-delay-main-short",
 					"shotId": "main:shot-06-03"
-				},
-				{
-					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-04"
 				}
 			]
 		},
@@ -273,11 +445,11 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-05"
+					"shotId": "main:shot-06-07"
 				},
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-06"
+					"shotId": "main:shot-06-08"
 				}
 			]
 		},
@@ -312,11 +484,11 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-07-03"
+					"shotId": "main:shot-07-08"
 				},
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-07-05"
+					"shotId": "main:shot-07-10"
 				},
 				{
 					"scriptId": "script:light-delay-main-short",
@@ -508,8 +680,8 @@
 			"sceneId": "trailer:scene-d",
 			"order": 1,
 			"title": "La advertencia",
-			"purpose": "Mensaje óptico incompleto.",
-			"summary": "Zao transmite hacia el futuro por el corredor de vuelo.",
+			"purpose": "Convertir la transmisión en una decisión bajo presión.",
+			"summary": "Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.",
 			"cueIds": [
 				"trailer:cue-d-01",
 				"trailer:cue-d-02"
@@ -717,7 +889,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Si no puedo hablarles ahora, les hablo a donde van a estar.",
+						"spokenText": "La firma parece falsa. El relé físico apunta a—",
 						"status": "source"
 					}
 				}
@@ -725,7 +897,7 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"cueId": "main:cue-06-01"
+					"cueId": "main:cue-05-06"
 				}
 			]
 		},
@@ -733,24 +905,17 @@
 			"id": "trailer:cue-d-02",
 			"beatId": "trailer:beat-d-01",
 			"order": 2,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "on_screen",
+			"type": "text",
+			"presentation": "interface",
 			"content": {
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"spokenText": "Si esto llega...",
+						"text": "SIN ENLACE / COM A-B SIN PORTADORA",
 						"status": "source"
 					}
 				}
-			},
-			"sourceRefs": [
-				{
-					"scriptId": "script:light-delay-main-short",
-					"cueId": "main:cue-06-03"
-				}
-			]
+			}
 		},
 		{
 			"id": "trailer:cue-e-01",
@@ -981,7 +1146,7 @@
 				"sourceLanguage": "es",
 				"variants": {
 					"es": {
-						"text": "ORIGEN: TRANSMISOR DE CONTINGENCIA",
+						"text": "ORIGEN: LÁSER EXTERIOR / CONTROL LOCAL",
 						"status": "source"
 					}
 				}
@@ -1094,7 +1259,7 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"cueId": "main:cue-06-03"
+					"cueId": "main:cue-06-09"
 				}
 			]
 		},
@@ -1402,15 +1567,16 @@
 			],
 			"number": 2,
 			"order": 7,
-			"description": "Interfaz revela ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA.",
+			"description": "Zao identifica la firma de Harlan",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "OTS",
+				"size": "CU",
 				"framing": "OTS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "50 mm · capas translúcidas."
+				"movementDescription": "Rack focus de la firma de Harlan al rostro de Zao; sin diálogo explicativo.",
+				"movement": "locked"
 			},
 			"durationMs": 4500,
 			"cuePlacements": [
@@ -1445,15 +1611,16 @@
 			],
 			"number": 3,
 			"order": 8,
-			"description": "El núcleo entra en precarga; la envoltura empieza a desplegarse.",
+			"description": "Payload autónomo y relé físico",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "LS",
+				"size": "OTS",
 				"framing": "PG",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "28 mm · cámara se aproxima lentamente."
+				"movementDescription": "Sobre Zao: firma superficial y relé físico comparten el cuadro; avance corto hacia la discrepancia.",
+				"movement": "dolly"
 			},
 			"durationMs": 4500,
 			"cuePlacements": [
@@ -1488,18 +1655,25 @@
 			],
 			"number": 1,
 			"order": 9,
-			"description": "Zao corre a la consola óptica establecida al inicio.",
-			"locationId": "location:diplomatic-core-room",
+			"description": "Harlan activa el jammer; la voz se corta",
+			"locationId": "location:celestial-ardor-command-vestibule",
 			"composition": {
-				"size": "MS",
-				"framing": "PM",
+				"size": "ECU",
+				"framing": "PP",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "35 mm · cámara en mano contenida."
+				"movementDescription": "Detalle de la mano de Harlan activando el jammer; el puente queda desenfocado detrás.",
+				"movement": "locked"
 			},
 			"durationMs": 3000,
-			"cuePlacements": [],
+			"cuePlacements": [
+				{
+					"cueId": "trailer:cue-d-01",
+					"atMs": 0,
+					"durationMs": 3000
+				}
+			],
 			"takeIds": [
 				"trailer:take-d-01-01"
 			],
@@ -1507,13 +1681,13 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-01"
+					"shotId": "main:shot-05-04"
 				}
 			],
 			"notes": [
 				{
 					"type": "editorial",
-					"text": "Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01)."
+					"text": "Reutiliza frame de main:shot-05-04 (asset asset:animatic-05-04)."
 				}
 			]
 		},
@@ -1525,20 +1699,20 @@
 			],
 			"number": 2,
 			"order": 10,
-			"description": "Plan remoto y corredor de intercepción se superponen.",
-			"locationId": "location:diplomatic-core-room",
+			"description": "Harlan se retira del acceso y desconecta COM A/B",
+			"locationId": "location:celestial-ardor-service-cylinder",
 			"composition": {
-				"size": "OTS",
-				"framing": "OTS",
+				"size": "MS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "50 mm · retícula amplia, no punto perfecto."
+				"movement": "tracking",
+				"movementDescription": "Desde el umbral, acompaña el retiro furtivo de Harlan hasta el receso; termina en el acoplador COM A/B."
 			},
 			"durationMs": 3500,
 			"cuePlacements": [
 				{
-					"cueId": "trailer:cue-d-01",
+					"cueId": "trailer:cue-d-02",
 					"atMs": 0,
 					"durationMs": 3500
 				}
@@ -1547,6 +1721,44 @@
 				"trailer:take-d-02-01"
 			],
 			"selectedTakeId": "trailer:take-d-02-01",
+			"sourceRefs": [
+				{
+					"scriptId": "script:light-delay-main-short",
+					"shotId": "main:shot-05-07"
+				}
+			],
+			"notes": [
+				{
+					"type": "editorial",
+					"text": "Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08)."
+				}
+			]
+		},
+		{
+			"id": "trailer:shot-d-03",
+			"sceneId": "trailer:scene-d",
+			"beatIds": [
+				"trailer:beat-d-01"
+			],
+			"number": 3,
+			"order": 11,
+			"description": "Tierra y Proxima quedan descartadas",
+			"locationId": "location:diplomatic-core-room",
+			"composition": {
+				"size": "OTS",
+				"framing": "OTS",
+				"aspectRatio": "16:9"
+			},
+			"camera": {
+				"movementDescription": "Interfaz de puntería descarta Tierra y después Proxima sin abandonar las manos de Zao.",
+				"movement": "pan"
+			},
+			"durationMs": 3500,
+			"cuePlacements": [],
+			"takeIds": [
+				"trailer:take-d-03-01"
+			],
+			"selectedTakeId": "trailer:take-d-03-01",
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
@@ -1561,35 +1773,30 @@
 			]
 		},
 		{
-			"id": "trailer:shot-d-03",
+			"id": "trailer:shot-d-04",
 			"sceneId": "trailer:scene-d",
 			"beatIds": [
 				"trailer:beat-d-01"
 			],
-			"number": 3,
-			"order": 11,
-			"description": "Zao graba mirando directamente al sensor.",
+			"number": 4,
+			"order": 12,
+			"description": "Solución de intercepción futura",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "CU",
+				"size": "OTS",
 				"framing": "PP",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "75 mm · frontal, sin movimiento."
+				"movementDescription": "Plan de vuelo, intercepción, elipse, huella divergente y raster convergen en una solución legible.",
+				"movement": "dolly"
 			},
-			"durationMs": 3500,
-			"cuePlacements": [
-				{
-					"cueId": "trailer:cue-d-02",
-					"atMs": 0,
-					"durationMs": 3500
-				}
-			],
+			"durationMs": 3000,
+			"cuePlacements": [],
 			"takeIds": [
-				"trailer:take-d-03-01"
+				"trailer:take-d-04-01"
 			],
-			"selectedTakeId": "trailer:take-d-03-01",
+			"selectedTakeId": "trailer:take-d-04-01",
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
@@ -1604,43 +1811,6 @@
 			]
 		},
 		{
-			"id": "trailer:shot-d-04",
-			"sceneId": "trailer:scene-d",
-			"beatIds": [
-				"trailer:beat-d-01"
-			],
-			"number": 4,
-			"order": 12,
-			"description": "Barra de transmisión y firma de dispositivo.",
-			"locationId": "location:diplomatic-core-room",
-			"composition": {
-				"size": "INSERT",
-				"framing": "PD",
-				"aspectRatio": "16:9"
-			},
-			"camera": {
-				"movementDescription": "85 mm · 40%, 70%, 100%."
-			},
-			"durationMs": 3000,
-			"cuePlacements": [],
-			"takeIds": [
-				"trailer:take-d-04-01"
-			],
-			"selectedTakeId": "trailer:take-d-04-01",
-			"sourceRefs": [
-				{
-					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-04"
-				}
-			],
-			"notes": [
-				{
-					"type": "editorial",
-					"text": "Reutiliza frame de main:shot-06-04 (asset asset:animatic-06-04)."
-				}
-			]
-		},
-		{
 			"id": "trailer:shot-e-01",
 			"sceneId": "trailer:scene-e",
 			"beatIds": [
@@ -1648,15 +1818,15 @@
 			],
 			"number": 1,
 			"order": 13,
-			"description": "Harlan aparece desenfocado tras Zao.",
+			"description": "El barrido llega a cien; Harlan entra",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
 				"size": "OTS",
-				"framing": "OTS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "50 mm · puerta al fondo."
+				"movement": "handheld",
+				"movementDescription": "Barra 40–100; la puerta técnica se abre sólo después de cerrarse la solución de puntería."
 			},
 			"durationMs": 3500,
 			"cuePlacements": [
@@ -1678,13 +1848,13 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-05"
+					"shotId": "main:shot-06-07"
 				}
 			],
 			"notes": [
 				{
 					"type": "editorial",
-					"text": "Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05)."
+					"text": "Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04)."
 				}
 			]
 		},
@@ -1696,15 +1866,15 @@
 			],
 			"number": 2,
 			"order": 14,
-			"description": "Harlan comprende que hubo un envío, pero no su destino.",
+			"description": "Confrontación tras la transmisión",
 			"locationId": "location:diplomatic-core-room",
 			"composition": {
-				"size": "CU",
-				"framing": "PP",
+				"size": "MS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "85 mm · campo/contracampo cerrado."
+				"movement": "handheld",
+				"movementDescription": "Dos cuerpos sujetos en microgravedad; eje cerrado entre Zao y Harlan."
 			},
 			"durationMs": 3500,
 			"cuePlacements": [
@@ -1726,13 +1896,13 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-06-06"
+					"shotId": "main:shot-06-08"
 				}
 			],
 			"notes": [
 				{
 					"type": "editorial",
-					"text": "Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06)."
+					"text": "Reutiliza frame de main:shot-06-08 (asset asset:animatic-06-06)."
 				}
 			]
 		},
@@ -1744,15 +1914,15 @@
 			],
 			"number": 1,
 			"order": 15,
-			"description": "Nodos negros dispersos alrededor del vacío se conectan; aparece una región navegable de 150–200 m. La nave espera con motor y radiadores recogidos.",
-			"locationId": "location:diplomatic-core-room",
+			"description": "Los nodos forman la garganta",
+			"locationId": "location:velari-wormhole-mouth",
 			"composition": {
-				"size": "LS",
-				"framing": "PG",
+				"size": "ELS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "24 mm exterior · sensor compuesto para abarcar nodos separados por kilómetros."
+				"movement": "locked",
+				"movementDescription": "Exterior instrumental: nodos separados por kilómetros forman la región navegable."
 			},
 			"durationMs": 3000,
 			"cuePlacements": [],
@@ -1763,13 +1933,13 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-07-03"
+					"shotId": "main:shot-07-08"
 				}
 			],
 			"notes": [
 				{
 					"type": "editorial",
-					"text": "Reutiliza frame de main:shot-07-03 (asset asset:animatic-07-03)."
+					"text": "Reutiliza frame de main:shot-07-08 (asset asset:animatic-07-03)."
 				}
 			]
 		},
@@ -1781,15 +1951,15 @@
 			],
 			"number": 2,
 			"order": 16,
-			"description": "La nave atraviesa en T+57:48; la garganta colapsa después.",
-			"locationId": "location:diplomatic-core-room",
+			"description": "Cruce por inercia y colapso",
+			"locationId": "location:velari-wormhole-mouth",
 			"composition": {
-				"size": "LS",
-				"framing": "PG",
+				"size": "ELS",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "24 mm · destello único, luego estrellas normales."
+				"movement": "locked",
+				"movementDescription": "La Ardor cruza por inercia; distorsión total y colapso detrás."
 			},
 			"durationMs": 3000,
 			"cuePlacements": [],
@@ -1800,13 +1970,13 @@
 			"sourceRefs": [
 				{
 					"scriptId": "script:light-delay-main-short",
-					"shotId": "main:shot-07-05"
+					"shotId": "main:shot-07-10"
 				}
 			],
 			"notes": [
 				{
 					"type": "editorial",
-					"text": "Reutiliza frame de main:shot-07-05 (asset asset:animatic-07-05)."
+					"text": "Reutiliza frame de main:shot-07-10 (asset asset:animatic-07-05)."
 				}
 			]
 		},
@@ -1818,15 +1988,16 @@
 			],
 			"number": 3,
 			"order": 17,
-			"description": "Puente al otro lado; estrellas sin distorsión. Indicadores muestran acumuladores térmicos altos y radiadores desplegándose.",
+			"description": "Cruce confirmado en microgravedad",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
-				"size": "LS",
+				"size": "MS",
 				"framing": "PG",
 				"aspectRatio": "16:9"
 			},
 			"camera": {
-				"movementDescription": "28 mm · estabilidad recuperada."
+				"movementDescription": "Puente tras el cruce; Harlan queda inequívocamente visible en su puesto.",
+				"movement": "locked"
 			},
 			"durationMs": 2000,
 			"cuePlacements": [
@@ -1967,7 +2138,7 @@
 			],
 			"number": 2,
 			"order": 20,
-			"description": "Cael autentica dispositivo y hora, no contenido.",
+			"description": "Cael autentica el control local del láser y la hora, no el contenido.",
 			"locationId": "location:celestial-ardor-bridge",
 			"composition": {
 				"size": "INSERT",
@@ -2450,35 +2621,35 @@
 			"shotId": "trailer:shot-d-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-01"
+			"imageAssetId": "asset:animatic-05-04"
 		},
 		{
 			"id": "trailer:take-d-02-01",
 			"shotId": "trailer:shot-d-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-02"
+			"imageAssetId": "asset:animatic-12-08"
 		},
 		{
 			"id": "trailer:take-d-03-01",
 			"shotId": "trailer:shot-d-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-03"
+			"imageAssetId": "asset:animatic-06-02"
 		},
 		{
 			"id": "trailer:take-d-04-01",
 			"shotId": "trailer:shot-d-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-04"
+			"imageAssetId": "asset:animatic-06-03"
 		},
 		{
 			"id": "trailer:take-e-01-01",
 			"shotId": "trailer:shot-e-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-05"
+			"imageAssetId": "asset:animatic-06-04"
 		},
 		{
 			"id": "trailer:take-e-02-01",

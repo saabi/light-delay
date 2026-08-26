@@ -17,6 +17,11 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 - La misión no requiere que llegue desde la Tierra a último momento.
 - El núcleo/complemento diplomático Velari fue añadido posteriormente mediante retrofit en Proxima.
 - Es una nave humana axial de aproximadamente 80–100 m y unas 300 t, funcional, reparable y sin estética de nave de lujo.
+- Sus cubiertas son transversales al eje de empuje. En los tramos propulsados, la aceleración produce gravedad aparente; durante la aproximación final y el cruce de la garganta, la nave viaja por inercia y queda en microgravedad.
+- La circulación longitudinal se reparte entre un cilindro central de acceso, un pozo de ascensor y un cilindro de servicio más estrecho. El núcleo diplomático está fuera del eje y posee accesos operativo y técnico separados.
+- La cubierta de mando conecta con un vestíbulo axial: el puente ve la salida del cilindro central, mientras el acceso lateral al cilindro de servicio queda fuera de la línea visual de las consolas.
+- La voz y los datos operativos disponen de respaldo cableado redundante por cubierta. Un distribuidor A/B accesible desde el cilindro de servicio permite aislar físicamente una zona para mantenimiento.
+- El control local de contingencia gobierna el láser exterior estándar de comunicaciones mediante una ruta física dedicada que no atraviesa la malla inalámbrica ni el distribuidor ordinario por cubiertas.
 
 ## Túnel Velari
 
@@ -48,4 +53,3 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 - Sorell no debe quedar culpabilizada sólo por un registro superficial falsificado.
 - Rao contiene el proceso, pero la resolución no debe ser técnicamente mágica ni completamente inequívoca.
 - El contacto Velari se mantiene como horizonte dramático mientras la amenaza principal surge dentro de la misión humana.
-

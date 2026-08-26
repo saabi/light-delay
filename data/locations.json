@@ -22,11 +22,32 @@
 		{
 			"id": "location:celestial-ardor-bridge",
 			"name": "Puente del Celestial Ardor",
-			"description": "Puente compacto para seis puestos, iluminación cian funcional, superficies reparables y encuadres que sostienen tensión sin grandilocuencia.",
+			"description": "Puente compacto para seis puestos alrededor de consolas instrumentales. Su acceso permite ver la salida del cilindro central en el vestíbulo de mando; el acceso lateral al servicio queda oculto desde los puestos. Un puerto prograde superior puede aportar observación limitada, nunca una cabina frontal de aeronave.",
 			"referenceAssetIds": [
 				"asset:location-celestial-ardor-bridge-sheet"
 			],
 			"atmosphere": "Centro de mando"
+		},
+		{
+			"id": "location:celestial-ardor-command-vestibule",
+			"name": "Vestíbulo axial de mando",
+			"description": "Descanso de la cubierta de mando donde convergen cilindro central, ascensor y puente. La entrada al cilindro de servicio está próxima pero retranqueada fuera de la línea visual de las consolas.",
+			"referenceAssetIds": [],
+			"atmosphere": "Tránsito axial y punto ciego del puente"
+		},
+		{
+			"id": "location:celestial-ardor-central-access",
+			"name": "Cilindro central de acceso",
+			"description": "Tronco axial principal con pasamanos, descansos y compuertas. En microgravedad permite circulación segura mano sobre mano entre cubiertas.",
+			"referenceAssetIds": [],
+			"atmosphere": "Circulación cotidiana en microgravedad"
+		},
+		{
+			"id": "location:celestial-ardor-service-cylinder",
+			"name": "Cilindro de servicio",
+			"description": "Conducto axial restringido con bandejas técnicas periféricas, agarres de mantenimiento y tramos libres para desplazamiento por inercia. Aloja junto a mando el distribuidor cableado por cubiertas.",
+			"referenceAssetIds": [],
+			"atmosphere": "Ruta técnica restringida"
 		},
 		{
 			"id": "location:celestial-ardor-engineering",
@@ -40,7 +61,7 @@
 		{
 			"id": "location:diplomatic-core-room",
 			"name": "Sala del núcleo diplomático",
-			"description": "Instalación retrofit deliberadamente separada. La esfera cian, su estado rojo corrompido y la puerta sellable hacen legible la amenaza.",
+			"description": "Instalación retrofit fuera del eje, con entrada operativa desde la circulación cotidiana y ramal técnico desde el cilindro de servicio. La esfera cian, su estado rojo corrompido y la puerta sellable hacen legible la amenaza.",
 			"referenceAssetIds": [
 				"asset:location-diplomatic-core-room-sheet"
 			],

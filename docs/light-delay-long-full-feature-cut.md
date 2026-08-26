@@ -33,20 +33,24 @@
 - Tensión visual: Júpiter dominando toda la pantalla/ventana
 
 **6. La Transmisión de Emergencia** *(T+2.8h)*
-- Zao calcula la posición futura de salida FTL
-- Configura y dirige el haz de radio de precisión
-- Envía el mensaje: *"Si esto te alcanza… están adentro. La IA—no es lo que parece. Revisa los registros del relé… por favor…"*
+- En microgravedad, Zao avisa al puente que el payload figura a nombre de Sorell y que la firma parece falsa
+- Harlan oye «relé físico» desde el acceso axial, activa el jammer sin ser visto y desconecta COM A/B en el distribuidor del cilindro de servicio
+- Zao comprueba la caída de wireless y de ambos respaldos cableados; el control físico dedicado del láser exterior sigue operativo
+- Descarta Tierra por demora y Proxima por falta de adquisición óptica útil
+- Calcula la intercepción con la posición futura de la nave y ajusta un barrido estrecho sobre la elipse de incertidumbre
+- Envía el mensaje: *«Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor...»*
 - Sensación de carrera contra el tiempo
 
 **7. El Asesinato** *(T+3h)*
-- Harlan confronta a Zao (posible forcejeo o ataque sorpresa)
+- Harlan llega por el cilindro de servicio mientras Sorell, enviada por Voss para buscarlo y entrar con él, avanza por el cilindro central
+- Harlan confronta a Zao después de que la transmisión termina; sólo ve que hubo un envío, no dónde fue apuntado
 - Zao es asesinada — escena puede ser elidida/sugerida, no explícita
-- Harlan intenta borrar rastros pero actúa con prisa, deja errores
+- Harlan borra cámaras, archivo local y huellas; regresa por servicio y restaura COM A/B antes de reaparecer en el puente
 
 **8. Descubrimiento del Cuerpo** *(T+4h)*
-- Cambio de turno; alguien nota la ausencia de Zao
-- El cuerpo es hallado
-- Pánico inicial, llamado a Voss
+- Sorell encuentra a Zao sola, intenta reanimarla y no logra llamar al puente mientras el jammer sigue activo
+- Harlan niega ante Voss haber visto a Sorell
+- Voss envía a Harlan con Okoye al puesto de Zao; Harlan desactiva el jammer fuera de la línea de visión del puente
 
 **9. Salida de la Sombra de Júpiter** *(T+4h a T+6h)*
 - Nave estabiliza velocidad de salida (3-5 km/s)
@@ -69,8 +73,8 @@
 
 **12. Fracturas en la Tripulación** *(T+8h a T+12h)*
 - Grupos se forman, rumores se esparcen
-- Evidencia falsa aparece contra Sorell (plantada por Harlan)
-- Sorell es confinada — protesta su inocencia
+- La credencial falsa de Sorell queda comprometida, pero su presencia en el puente y la orden directa de Voss corroboran su trayecto
+- Voss bloquea la credencial sin tratar a Sorell como sospechosa; Harlan intenta explotar la incertidumbre técnica
 
 **13. Sabotaje se Intensifica** *(T+10h a T+16h)*
 - Fluctuaciones en soporte vital
@@ -89,7 +93,7 @@
 - Voss posterga la decisión, generando más tensión
 
 **16. Carvalho Continúa el Trabajo de Sorell** *(T+16h a T+20h)*
-- En secreto, Carvalho retoma las notas lingüísticas de Sorell
+- Carvalho y Sorell verifican las notas lingüísticas y el soporte pasivo sin dar acceso a la credencial comprometida
 - Encuentra patrones que después cobrarán sentido
 
 **17. Salida de FTL** *(T+12h narrativo / T+18h de investigación acumulada)*
@@ -114,7 +118,7 @@
 **20. La Revelación** *(T+24h a T+24.5h)*
 - Rao cruza los datos del mensaje con los registros que ya tenía
 - Se confirma el vínculo de Harlan con la Directiva Acheron
-- Sorell es liberada — vindicación breve pero cargada de emoción
+- La triple coincidencia demuestra cómo Harlan clonó la credencial de Sorell y valida formalmente su testimonio
 
 **21. Harlan Actúa** *(T+24.5h)*
 - Al verse descubierto, Harlan corre hacia el núcleo de IA

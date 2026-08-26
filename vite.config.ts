@@ -2,10 +2,15 @@ import { defineConfig } from 'vitest/config';
 import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
 
-const configuredBase = process.env.BASE_PATH;
-const base: '' | `/${string}` = configuredBase?.startsWith('/')
-	? (configuredBase as `/${string}`)
-	: '';
+function resolveBase(configuredBase: string | undefined): '' | `/${string}` {
+	if (!configuredBase || configuredBase === '/') return '';
+	if (!configuredBase.startsWith('/') || configuredBase.endsWith('/')) {
+		throw new Error('BASE_PATH must start with "/" and must not end with "/"');
+	}
+	return configuredBase as `/${string}`;
+}
+
+const base = resolveBase(process.env.BASE_PATH);
 
 export default defineConfig({
 	plugins: [

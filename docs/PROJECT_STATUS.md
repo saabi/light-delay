@@ -4,8 +4,12 @@ Fecha de corte: 2026-08-26.
 
 ## Completado
 
-- **Preparación para GitHub Pages:** rama de despliegue con `@sveltejs/adapter-static`, prerender global, `404.html` de fallback, `BASE_PATH` para `/light-delay`, navegación/media compatibles con subruta y workflow de GitHub Actions que valida datos, ejecuta `svelte-check`, compila y publica `build/` en pushes a `master`. PR #1 validado con `validate:data`, `svelte-check` (0 errores / 0 advertencias) y build estático real bajo `/light-delay`.
-- **Comparación entre guiones (V1):** taxonomía versionada de 10 dimensiones de canon y 11 eventos, perfiles declarativos en los cuatro scripts y ruta `/compare/[scriptId]?against=<ScriptId>` para canon, eventos, reparto, variantes y funciones. La herramienta no infiere herencia de diálogo ni fusiones/divisiones.
+- **GitHub Pages:** repositorio público y Pages habilitado para `https://saabi.github.io/light-delay/`; build con `@sveltejs/adapter-static`, prerender global, fallback `404.html`, `BASE_PATH=/light-delay` y workflow que valida datos, tipos y pruebas antes de publicar pushes a `master`.
+- **Secuencia Zao/Harlan antes del cruce:** escenas 5–8 reescritas con cámara y diálogo coherentes: aviso parcial, jammer visible, corte físico de COM A/B, puntería del láser exterior al corredor futuro, rutas distintas en microgravedad, asesinato/limpieza, hallazgo de Sorell y coartada de Harlan. Sorell queda establecida como testigo con credencial comprometida, no como sospechosa.
+- **Animatic principal revisado:** 17 escenas, 112 tomas y 30:00. Las 33 tomas afectadas en escenas 5–8 reutilizan 21 frames heredados; 12 tomas son nuevas. No se regeneraron imágenes.
+- **Arquitectura mínima de Celestial Ardor:** vestíbulo axial encuadrable desde el puente, acceso de servicio oculto, cilindros central/servicio, distribuidor COM A/B y control físico dedicado del láser incorporados a canon, datos y notas técnicas.
+- **Deuda diferida:** `TODO.md` concentra stale docs/arte, cálculo del enlace láser y el futuro sistema JSON de notas editoriales y estado de regeneración/reemplazo de imágenes.
+- **Comparación entre guiones (V1):** taxonomía versionada de 11 dimensiones de canon y 11 eventos, perfiles declarativos en los cuatro scripts y ruta `/compare/[scriptId]?against=<ScriptId>` para canon, eventos, reparto, variantes y funciones. La herramienta no infiere herencia de diálogo ni fusiones/divisiones.
 - **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
 - **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Rao, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
 - **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
@@ -20,8 +24,8 @@ Fecha de corte: 2026-08-26.
 - Biblia de producción y reporte comprensivo actualizados al canon reciente.
 - Notas técnicas de continuidad revisadas.
 - Biblia visual con personajes, localizaciones, naves y objetos clave.
-- Animatic textual de 100 tomas.
-- 100 imágenes 1536 × 864 asociadas a las tomas.
+- Animatic textual de 112 tomas.
+- 100 imágenes 1536 × 864 reutilizadas por 112 takes; los reemplazos pendientes están registrados en `TODO.md` y en notas de toma.
 - Modo Película con subtítulos, controles, timeline y panel de detalles.
 - Edición de duraciones con persistencia local y recálculo del total.
 - Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright).
@@ -35,27 +39,27 @@ Fecha de corte: 2026-08-26.
 2. **Corrección de rumbo — Opción B.** Falta desarrollar y aplicar de forma consistente la solución de navegación/propulsión elegida.
 3. **Terminología del sistema.** Unificar `IA`, `mediación`, `núcleo diplomático`, `núcleo cuántico` y `envoltura` según función dramática y técnica.
 4. **Duración real.** Los 30:00 son un objetivo de montaje. Debe validarse mediante lectura cronometrada y luego con animación/video.
-5. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 secuencias y diálogo citado; faltan shot list, takes e imágenes canónicas de esa versión.
+5. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 secuencias y causalidad de la transmisión sincronizada; faltan shot list, takes e imágenes canónicas de esa versión.
 6. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta afinado editorial de ritmo, posibles stills exclusivos de título y audio.
 7. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 8. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
 9. **Retropropagación al corto.** Vega como pista falsa acotada, mayor textura de especialistas y una preparación más legible del relé son candidatos; requieren decisión narrativa independiente antes de modificar versiones cortas.
-10. **Publicación del repositorio / Pages.** Antes de hacer público el repositorio, revisar `RIGHTS.md`, procedencia de assets y política de licencia. Para activar el sitio, seleccionar GitHub Pages → Source: GitHub Actions.
 
 ## Notas técnicas recientes
 
-- GitHub Pages: build estático con `adapter-static`; `BASE_PATH` permite desarrollo local en `/` y publicación estándar en `/light-delay/`; rutas y medios públicos pasan por helpers de base path. `package-lock.json` está sincronizado con `adapter-static`.
+- GitHub Pages: build estático con `adapter-static`; `BASE_PATH` permite desarrollo local en `/` y publicación estándar en `/light-delay/`; rutas y medios públicos pasan por helpers de base path. La concurrencia del workflow se separa por referencia.
 - Inventario: `docs/MIGRATION_INVENTORY.md`. Sync: `docs/SCRIPT_ANIMATIC_SYNC.md`. Rutas: `docs/ASSET_PATH_MAP.md`.
 - Bootstrap SvelteKit validado. Node pin en `.nvmrc` (`25`).
 - Autoridad de esquema: tipos TypeScript de `JSON_FORMAT.md` + addendum i18n (sin Zod).
 - Política de idioma: español = fuente de verdad. Detalle en `AGENTS.md`.
 - Política narrativa: evitar exposición forzada; revelar por pensamiento/decisión del personaje (véase `AGENTS.md`).
+- Haz de Zao: `docs/SIGNAL_BEAM_REQUIREMENTS.md` conserva sólo una aproximación visual; el presupuesto óptico exacto permanece en `TODO.md`.
 - Assets: copia en `static/assets/` (characters 12, locations 8+proportional, props 5, vehicles 3+proportional, art-bible 2+scale-references, animatic 101). `legacy-site/assets/` intacto como referencia.
 - Documentos prose: `notas-tecnicas` extraído; resto stubs navegables pendientes de extracción editorial.
 
 ## Próxima fase técnica
 
-- Cuando se decida publicar: hacer público el repositorio, seleccionar GitHub Pages → Source: GitHub Actions y realizar una prueba manual del sitio desplegado.
+- Separar en el futuro el motor genérico de autoría/consulta y el paquete de contenido de Light Delay antes de ofrecer una plataforma reutilizable con licencia propia.
 - Fase 7: desarrollar el tratamiento largo sólo tras revisión editorial; completar documentos y beats, y limpiar duplicados binarios tras revisar paridad.
 - Revisar los tres candidatos de retropropagación sin sincronizarlos automáticamente entre scripts.
 - Refinar títulos de escena animatic vs encabezados de guion (véase `SCRIPT_ANIMATIC_SYNC.md`).

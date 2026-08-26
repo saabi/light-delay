@@ -44,6 +44,11 @@
 			"category": "conflict",
 			"label": "Acusación y vindicación de Sorell"
 		},
+		{
+			"id": "canon:zao-transmission-mechanics",
+			"category": "technology",
+			"label": "Bloqueo de comunicaciones y transmisión de Zao"
+		},
 		{ "id": "canon:rao-containment", "category": "conflict", "label": "Contención de Rao" },
 		{ "id": "canon:ending", "category": "contact", "label": "Alcance del contacto final" }
 	],

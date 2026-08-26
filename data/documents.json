@@ -60,6 +60,17 @@
 					"text": "Antes del cruce se recogen los radiadores, se apaga la antorcha y el calor pasa a acumuladores. Tras emerger, los radiadores se despliegan antes del nuevo encendido. Durante la inversión, la gravedad aparente no “se invierte”: desaparece durante la caída libre y retorna hacia el mismo piso después de la rotación."
 				},
 				{
+					"type": "list",
+					"id": "celestial-ardor--circulacion-y-comunicaciones",
+					"items": [
+						"Arquitectura interior: decks transversales al eje de empuje, tres cilindros axiales —central, servicio y logística— y núcleo diplomático retrofit fuera del eje.",
+						"Puente: vestíbulo axial visible detrás de la tripulación; la desembocadura del cilindro central entra en el encuadre frontal de Voss. El acceso al cilindro de servicio queda en un receso lateral fuera de la línea de visión de las consolas.",
+						"Circulación sin empuje: el cilindro central tiene barras, descansos y compuertas para tránsito cotidiano; el de servicio permite impulsos balísticos más rápidos entre bandejas y ramales técnicos.",
+						"Comunicaciones: la malla inalámbrica tiene respaldo cableado COM A/B por deck. El distribuidor próximo a mando reúne acopladores rotulados por sector y permite aislar físicamente una cubierta.",
+						"Láser exterior: equipo estándar de larga distancia. Su control local y alimentación de puntería tienen canalización física dedicada, separada de la malla y de COM A/B."
+					]
+				},
+				{
 					"type": "heading",
 					"level": 2,
 					"text": "4. Arquitectura Velari — observaciones canónicas",
@@ -125,11 +136,13 @@
 					"type": "list",
 					"items": [
 						"Contenido final: \"Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor...\"",
-						"Objetivo de puntería: no requiere que Zao derive mecánica orbital nueva bajo presión —usa el plan de vuelo ya cargado y abre el haz para cubrir el corredor previsto. Sólo calcula la geometría de intercepción luz-nave.",
-						"Por qué no vía Tierra: aun sin ningún bloqueo, un rodeo por la Tierra añadiría más de una hora al tránsito de la señal, haciendo que cualquier aviso llegara después del encuentro, no antes. La transmisión directa es la única opción funcionalmente útil, independientemente de cualquier ocultación.",
-						"Por qué no por la garganta: la garganta piloto no transporta datos de misión, y además queda bloqueada durante la expansión crítica.",
-						"Por qué transmisor externo: la partición de seguridad del cruce separa la red interna y sella el núcleo; Harlan la aprovecha y falsifica el estado nominal. El transmisor de emergencia es físicamente independiente.",
-						"Por qué Harlan no bloquea la recepción: sabe que Zao emitió, pero desconoce el corredor exacto del haz. Cambiar la trayectoria haría perder el encuentro y apagar el receptor impediría adquirir la baliza Velari, por lo que intenta justificar el aislamiento del receptor justo antes de que Cael detecte la señal.",
+						"Primer aviso: Zao sólo alcanza a transmitir que existe un payload autónomo firmado por Sorell y que la firma parece falsa. La frase se corta antes de que el puente oiga el nombre de Harlan.",
+						"Bloqueo: Harlan activa un jammer desde el acceso axial del puente y después desconecta el acoplador SISTEMAS DIPLOMÁTICOS — COM A/B en el distribuidor del cilindro de servicio. Wireless, texto y ambos respaldos cableados quedan inutilizados.",
+						"Salida disponible: el láser exterior no es un transmisor de emergencia separado, sino el sistema estándar de larga distancia. Su control local conserva energía y mando por una canalización física dedicada.",
+						"Objetivo de puntería: Zao usa el plan de vuelo cargado, el tiempo lumínico y la posición futura de Celestial Ardor. La divergencia cubre parte de la elipse de incertidumbre y un barrido estrecho cubre el resto; errar esa región pierde la señal.",
+						"Por qué no vía Tierra: el rodeo hace que el aviso llegue después del encuentro. Proxima tampoco ofrece una línea de adquisición óptica utilizable en ese instante.",
+						"Por qué no por la garganta: la garganta piloto no transporta datos de misión.",
+						"Por qué Harlan no bloquea la recepción: llega cuando la solución de puntería ya se cerró. Ve TRANSMITIDO, pero no el corredor exacto del haz.",
 						"Tiempo de viaje de la señal: ~23h15min (167,8 UA)."
 					]
 				},

@@ -1,55 +1,37 @@
-# Signal Strength and Beam Width Requirements
+# Signal Beam Requirements — Working Notes
 
-## Signal Requirements
+> Status: non-canonical engineering aid. The Spanish screenplay and `docs/technical/CELESTIAL_ARDOR.md` are authoritative. This file preserves useful scale estimates from an older version while removing its FTL-drive and radio-transmitter assumptions.
 
-### 1. Position Uncertainty
+## 1. Interception geometry
 
-- **Distance:** 173 AU (24 light-hours)
-- **Ship velocity post-FTL:** ~300 km/s (about 0.1% of lightspeed)
-- **18-hour drift:**  
-  300 km/s × 64,800s = **19.4 million km**
-- **Beam angle needed:**  
-  arctan(19.4 million km / 25.9 billion km) = **0.043°** (43 millidegrees)
+- **Canonical signal travel:** approximately 23 h 15 min across 167.8 AU.
+- **Target:** the future flight corridor of Celestial Ardor after it crosses the Velari wormhole, not an FTL exit point.
+- **Source solution:** the loaded flight plan, light-time and the ship's expected future state provide the centre of an uncertainty ellipse.
+- **Coverage:** natural beam divergence covers part of that ellipse; a narrow raster covers the remainder. The transmitted packet repeats throughout the raster.
+- **Inherited scale check:** the former 19.4-million-km uncertainty at roughly 173 AU implied about **0.043°**. This remains a visual-order estimate only; it is not current canon until trajectory uncertainty, aperture and wavelength are recalculated together.
 
-### 2. Power Requirements
+## 2. Optical link budget
 
-For a signal sent over this distance with reasonable assumptions:
+The previous estimate assumed a 1–10 GHz radio link, a 30 m transmitting dish and 5–50 kW. Those values do **not** specify the current optical system and must not appear as settled facts in dialogue or UI.
 
-- **Transmitter dish:** 30m (at Jupiter)
-- **Receiver dish:** 10m (on ship)
-- **Frequency:** 1–10 GHz (optimal for deep space)
-- **Required power:** 5–50 kilowatts
+Current screenplay requirements:
 
-This is actually quite reasonable! Deep space missions like Voyager receive signals from 20 W transmitters, but use massive 70m receiver dishes on Earth.
+- Celestial Ardor has a standard external laser for long-distance communications.
+- Its local pointing control uses a dedicated physical route independent of the wireless mesh and deck COM A/B distributor.
+- The ship's receiver can acquire the repeated packet while performing the already-required Velari approach observations.
+- Exact wavelength, aperture, pulse energy, coding gain and receiver sensitivity remain an engineering TODO.
 
----
+## 3. Narrative precision requirements
 
-## FTL Navigation Precision
+The sequence must communicate the following visually:
 
-This is where it gets tricky:
+1. Earth is rejected because the warning would arrive after the meeting.
+2. Proxima has no usable optical acquisition path at that moment.
+3. The future ship corridor is the only useful destination.
+4. Missing the uncertainty ellipse loses the signal.
+5. Zao must refine the raster while Harlan is approaching.
+6. Harlan sees that a transmission completed but not where it was aimed.
 
-### 1. FTL Exit Uncertainty
+Suggested interface elements are a predicted track, a light-time intercept, an uncertainty ellipse, the divergent footprint, the residual raster and a visible completion percentage. They should reveal Zao's reasoning without explanatory dialogue.
 
-Realistic estimates for FTL exit precision:
-
-- **Best case:** ±1 million km (0.007 AU)
-- **Typical:** ±10 million km (0.07 AU)
-- **Worst case:** ±100 million km (0.7 AU)
-
-### 2. Sublight Drift
-
-After FTL exit, in 18 hours at 300 km/s:
-
-- **Additional uncertainty:** 19.4 million km
-- **Total uncertainty radius:** ~30–120 million km
-
-### 3. Prediction Accuracy
-
-The crew could predict their position using:
-
-- Pre-FTL trajectory calculations
-- Known FTL drive characteristics
-- Gravitational field modeling
-- Previous jump calibration data
-
-Note: these are general considerations from older versions of the script. We should use them as approximations for the optical laser signal, but if not applicable, laser optics and physics have to be considered.
+Do not turn these controls into spoken exposition. The audience only needs to understand destination, risk of missing and time pressure.

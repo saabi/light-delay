@@ -1,13 +1,13 @@
 # Light Delay / Luz Tardía
 
-Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas, el animatic textual de 100 tomas y sus imágenes de referencia.
+Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas y el animatic textual de 112 tomas con imágenes de referencia reutilizadas donde aún faltan stills definitivos.
 
 ## Estado actual
 
 - Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
-- Animatic: 100 tomas con imagen, encuadre, audio, subtítulos y duración editable.
+- Animatic: 112 tomas con image take, encuadre, audio, subtítulos y duración editable; las 33 tomas reescritas de las escenas 5–8 reutilizan frames provisionales y 12 son unidades narrativas nuevas.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
@@ -39,9 +39,9 @@ Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm r
 
 ## Sitio público en GitHub Pages
 
-La aplicación puede publicarse como sitio estático de proyecto en GitHub Pages. El workflow `.github/workflows/pages.yml` valida los JSON, ejecuta `svelte-check`, compila con `@sveltejs/adapter-static` y publica `build/`.
+La aplicación se publica como sitio estático de proyecto en GitHub Pages. El workflow `.github/workflows/pages.yml` valida los JSON, ejecuta `svelte-check` y las pruebas unitarias, compila con `@sveltejs/adapter-static` y publica `build/` tras cada push a `master`.
 
-Para el repositorio `saabi/light-delay`, el despliegue estándar usa la base `/light-delay` y queda preparado para:
+Para el repositorio `saabi/light-delay`, el despliegue estándar usa la base `/light-delay` y está disponible en:
 
 ```text
 https://saabi.github.io/light-delay/
@@ -49,9 +49,15 @@ https://saabi.github.io/light-delay/
 
 La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
 
-Antes del primer despliegue, en GitHub debe seleccionarse **Settings → Pages → Source: GitHub Actions**. Los pull requests ejecutan el build de Pages sin desplegar; los pushes a `master` publican el sitio.
+GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
 
 El editor de duración del animatic continúa siendo local al navegador: no modifica el JSON ni el repositorio público.
+
+## Derechos y plataforma reutilizable
+
+La publicación del repositorio y del sitio no concede permiso para reutilizar los guiones, el canon, la historia, el arte ni los assets de Light Delay. Véanse los términos actuales en [`RIGHTS.md`](RIGHTS.md).
+
+El modelo de datos y la aplicación podrían convertirse en una plataforma para desarrollar otros guiones, pero todavía dependen directamente del contenido y de las reglas de Light Delay. La separación del motor genérico y una licencia específica para ese software se anunciarán cuando la extracción esté completa; por ahora no se ofrece la aplicación como plataforma reutilizable.
 
 ## Abrir la versión legacy
 

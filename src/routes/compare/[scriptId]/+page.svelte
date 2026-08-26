@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import {
@@ -29,7 +30,7 @@
 	const validAgainstIds = $derived(
 		registry.map((entry) => entry.id).filter((id) => id !== primaryId)
 	);
-	const requestedAgainst = $derived(page.url.searchParams.get('against'));
+	const requestedAgainst = $derived(browser ? page.url.searchParams.get('against') : null);
 	const againstId = $derived(
 		requestedAgainst && validAgainstIds.includes(requestedAgainst)
 			? requestedAgainst
@@ -82,7 +83,9 @@
 
 	function changeAgainst(event: Event) {
 		const next = (event.currentTarget as HTMLSelectElement).value;
-		void goto(withBase(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(next)}`));
+		void goto(
+			withBase(`/compare/${encodeScriptId(primaryId)}?against=${encodeURIComponent(next)}`)
+		);
 	}
 
 	onMount(() => {
@@ -178,14 +181,16 @@
 							<th>{row.definition.label}</th>
 							<td
 								>{row.primary?.status ?? 'Sin especificar'}{#if row.primary?.sceneIds?.[0]}<a
-										href={withBase(`/script/${encodeScriptId(primaryId)}#${row.primary.sceneIds[0]}`)}
-										>Ver escena</a
+										href={withBase(
+											`/script/${encodeScriptId(primaryId)}#${row.primary.sceneIds[0]}`
+										)}>Ver escena</a
 									>{/if}</td
 							>
 							<td
 								>{row.against?.status ?? 'Sin especificar'}{#if row.against?.sceneIds?.[0]}<a
-										href={withBase(`/script/${encodeScriptId(againstId)}#${row.against.sceneIds[0]}`)}
-										>Ver escena</a
+										href={withBase(
+											`/script/${encodeScriptId(againstId)}#${row.against.sceneIds[0]}`
+										)}>Ver escena</a
 									>{/if}</td
 							>
 							<td>{comparisonLabel(row.comparison)}</td>

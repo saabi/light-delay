@@ -12,7 +12,7 @@ Este documento define **cómo transformar la versión canónica de 30 minutos de
 
 La versión reducida debe tratarse como un **cut alternativo derivado del mismo canon**, no como un reemplazo del guion de 30 minutos. Su objetivo es conservar la premisa, el mecanismo del retraso de la luz, el sacrificio de Zao, la doble llave causal que identifica a Harlan y el primer contacto Velari, eliminando casi todo lo que no participe directamente en esa cadena.
 
-La compresión buscada es extrema: pasar de **17 escenas / 30:00 / ~100 tomas** a aproximadamente **7 secuencias / 4:45–5:00 / ~35–50 tomas**.
+La compresión buscada es extrema: pasar de **17 escenas / 30:00 / 112 tomas** a aproximadamente **7 secuencias / 4:45–5:00 / ~35–50 tomas**.
 
 ---
 
@@ -25,7 +25,7 @@ La cadena irreductible es:
 1. La misión humana se dirige a un primer contacto con los Velari.
 2. Zao descubre que el sistema diplomático contiene un payload hostil no autorizado.
 3. Zao comprende que Harlan está vinculado al sabotaje y envía un mensaje hacia la posición futura de la nave.
-4. Harlan impide que Zao pueda advertir a los demás; Zao muere después de lograr transmitir.
+4. Harlan corta la malla inalámbrica y COM A/B; Zao recurre al control dedicado del láser exterior y logra transmitir antes de morir.
 5. Horas después, Rao descubre la mitad técnica del sabotaje: qué hace el payload y cómo aislarlo, pero no quién controla el override.
 6. El mensaje retrasado de Zao llega cuando todavía puede modificar el desenlace.
 7. La investigación de Rao y el mensaje de Zao se combinan para identificar a Harlan de manera verificable.
@@ -103,7 +103,7 @@ La solución sigue siendo humana:
 
 ## 4. Reducción del elenco visible
 
-La versión de 30 minutos utiliza seis personajes principales visibles: Zao, Voss, Harlan, Rao, Sorell y Cael. Para una versión de cinco minutos conviene reducir el elenco en pantalla a **cuatro personajes principales**.
+La versión de 30 minutos utiliza seis personajes principales visibles: Zao, Voss, Harlan, Rao, Sorell y Cael. La versión de cinco minutos mantiene **cuatro personajes focales**, con Sorell y Okoye como apariciones funcionales breves para no romper la causalidad del hallazgo y la coartada.
 
 | Personaje | Festival Cut | Tratamiento |
 |---|---|---|
@@ -111,8 +111,9 @@ La versión de 30 minutos utiliza seis personajes principales visibles: Zao, Vos
 | **Harlan** | Mantener | Antagonista y titular del override. |
 | **Rao** | Mantener | Protagonista técnica del segundo acto y ejecutora de la cuarentena. |
 | **Voss** | Mantener | Autoridad que debe decidir y revocar el override. |
-| **Sorell** | Fuera de pantalla / función preservada como asset | El “saludo pasivo limpio” sigue siendo obra de Sorell en el canon, pero no necesita aparecer físicamente. Puede figurar en UI como `SORELL — SALUDO PASIVO / READ ONLY`. |
+| **Sorell** | Aparición funcional breve | Escucha el aviso en el puente, recibe la orden de buscar a Harlan y encuentra a Zao sola; su saludo pasivo sigue identificado en UI. |
 | **Cael** | Función absorbida | La detección de la señal y estado de navegación pueden ser comunicados por la computadora del puente o por Rao. No hace falta un quinto rostro estable. |
+| **Okoye** | Aparición funcional breve | Acompaña a Harlan sólo después de que éste regresa al puente; confirma que Sorell ya estaba sola con Zao. |
 
 ### Razón de esta reducción
 
@@ -132,10 +133,10 @@ La versión canónica revisada contiene 17 escenas. No deben recortarse proporci
 | 2 | Salida de Proxima | Apertura / montaje | Integrar en 3–5 s de exterior de Celestial Ardor. |
 | 3 | Arco de Júpiter e indicio | Descubrimiento | Integrar visualmente mientras Zao ve la primera anomalía. |
 | 4 | Envoltura no declarada | Descubrimiento | Fusionar con Esc. 5. |
-| 5 | Confirmación y partición | Descubrimiento | Mantener sólo payload + relé + vínculo de mando. |
+| 5 | Confirmación y silencio | Descubrimiento | Mantener payload + firma falsa + jammer + corte de COM A/B. |
 | 6 | Mensaje hacia el futuro | **Secuencia esencial** | Mantener y comprimir a ~30–35 s. |
-| 7 | Asesinato y cruce | **Secuencia esencial** | Harlan entra; transmisión completa; muerte elidida por corte/sonido. |
-| 8 | El cuerpo | Eliminar | Se comunica por el salto temporal y/o un registro `ZAO — DECEASED`. |
+| 7 | Asesinato, coartada y cruce | **Secuencia esencial** | Transmisión completa; muerte elidida; regreso de Harlan y hallazgo de Sorell en montaje comprimido. |
+| 8 | El cuerpo | Fusionar con Esc. 7 | Conservar sólo reanimación fallida, comunicaciones bloqueadas y orden final a Harlan + Okoye. |
 | 9 | Investigación y sospecha | Eliminar casi por completo | No desarrollar falsa acusación ni interrogatorio. |
 | 10 | Mitad técnica del misterio | **Secuencia esencial** | Rao ya trabaja contra reloj; se muestra lo que sabe y lo que le falta. |
 | 11 | Harlan intenta cegar la nave | Fusionar | Su presión para apagar el sistema ocurre dentro de la secuencia de Rao/señal. |
@@ -175,10 +176,12 @@ Debe contener, en orden:
 2. Descubre que el registro lógico puede haber sido manipulado.
 3. Localiza la existencia del **relé físico/registro inmutable**.
 4. Encuentra el vínculo con una credencial de mando que apunta a Harlan.
-5. Ve que la red interna entra en partición / cruce / punto de no retorno.
-6. Reconfigura el transmisor óptico independiente.
-7. Calcula la posición futura de recepción.
-8. Graba el mensaje.
+5. Alcanza a advertir que la firma parece falsa; Harlan activa el jammer desde el acceso al puente.
+6. Comprueba que también fallan COM A y COM B porque Harlan cortó el distribuidor del deck.
+7. Verifica que el control físico dedicado del láser exterior continúa activo.
+8. Descarta Tierra por demora y Proxima por falta de adquisición útil.
+9. Calcula la intercepción con la posición futura de la nave y ajusta un barrido sobre la elipse de incertidumbre.
+10. Graba y repite el mensaje durante el barrido.
 
 Mensaje condensado recomendado:
 
@@ -188,18 +191,20 @@ El mensaje debe transmitir **identidad + instrucción de verificación + adverte
 
 ### Secuencia C — Harlan / muerte de Zao / salto temporal — `1:25–1:45` (20 s)
 
-- Harlan entra antes de que Zao pueda esconder lo que hizo.
+- Harlan llega por el cilindro de servicio; Sorell avanza más despacio por el cilindro central.
 - Barra de transmisión: 93% → 100%.
 - Harlan: “¿A quién enviaste eso?”
 - Zao ve `TRANSMITIDO`.
 - Corte antes de mostrar el asesinato.
 - Sonido breve de lucha.
+- Harlan limpia el recinto y regresa por servicio.
+- Sorell encuentra a Zao, intenta reanimarla y no logra llamar al puente.
+- Harlan restaura COM A/B, vuelve al puente y Voss lo envía con Okoye a buscar a Sorell.
 - Exterior de la nave / transición.
 - Overlay: **`23 H DESPUÉS · CANAL VELARI EN 03:00`**.
 
 Esta transición sustituye completamente:
 
-- hallazgo del cuerpo;
 - deliberación extensa;
 - viaje intermedio;
 - interrogatorios;
@@ -305,9 +310,9 @@ Funciona en 30 minutos porque desarrolla paranoia, fragilidad de confianza y age
 
 ### 7.2. Investigación policial del asesinato
 
-El Festival Cut no necesita demostrar forensemente cómo murió Zao. El espectador ve a Harlan entrar inmediatamente después de la transmisión y escucha el forcejeo.
+El Festival Cut no necesita demostrar forensemente cómo murió Zao. El espectador ve a Harlan entrar inmediatamente después de la transmisión y escucha el forcejeo. Sí necesita un montaje breve de Sorell llegando sola y de Harlan regresando primero al puente, porque esa relación espacial sostiene la coartada.
 
-**Acción:** eliminar hallazgo del cuerpo, interrogatorios y búsqueda del asesino.
+**Acción:** comprimir el hallazgo del cuerpo a dos o tres planos; eliminar interrogatorios y búsqueda prolongada del asesino.
 
 El misterio no es “¿quién mató a Zao?”; pasa a ser “¿llegará a tiempo lo que Zao descubrió y podrán demostrarlo antes del contacto?”.
 
@@ -454,11 +459,11 @@ El Festival Cut debe respetar las correcciones ya consolidadas en las notas téc
 
 ### No restaurar la antigua “oclusión de Júpiter” como explicación central
 
-El aislamiento de Zao no debe depender de que Júpiter bloquee una transmisión a Tierra. La versión revisada utiliza:
+El silencio de Zao no debe depender de que Júpiter bloquee una transmisión a Tierra. La versión revisada utiliza:
 
-- partición/bloqueo de red interna;
-- punto de compromiso del cruce;
-- transmisor óptico independiente;
+- jammer inalámbrico activado por Harlan;
+- corte físico de COM A/B en el distribuidor del deck;
+- control local dedicado del láser exterior estándar;
 - inutilidad práctica de enviar la advertencia vía Tierra;
 - señal directa hacia la posición futura de la nave.
 

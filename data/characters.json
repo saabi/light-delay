@@ -188,10 +188,12 @@
 		{
 			"id": "character:okoye",
 			"name": "Okoye",
+			"shortName": "Okoye",
 			"role": "Seguridad",
 			"description": "Responsable de seguridad obligado a decidir bajo evidencia incompleta.",
 			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
+			"referenceAssetIds": ["asset:character-security-crew-sheet"],
+			"defaultVoiceProfileId": "voice:security-crew-es",
 			"aliases": ["OKOYE"]
 		},
 		{

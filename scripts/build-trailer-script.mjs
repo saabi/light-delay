@@ -108,16 +108,16 @@ const SEGMENTS = [
 	{
 		key: 'd',
 		title: 'La advertencia',
-		summary: 'Zao transmite hacia el futuro por el corredor de vuelo.',
-		dramaticPurpose: 'Mensaje óptico incompleto.',
+		summary: 'Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.',
+		dramaticPurpose: 'Convertir la transmisión en una decisión bajo presión.',
 		locationId: 'location:diplomatic-core-room',
 		targetDurationMs: 13000,
-		characterIds: ['character:zao'],
+		characterIds: ['character:zao', 'character:harlan'],
 		shots: [
-			{ mainShotId: 'main:shot-06-01', durationMs: 3000 },
+			{ mainShotId: 'main:shot-05-04', durationMs: 3000 },
+			{ mainShotId: 'main:shot-05-07', durationMs: 3500 },
 			{ mainShotId: 'main:shot-06-02', durationMs: 3500 },
-			{ mainShotId: 'main:shot-06-03', durationMs: 3500 },
-			{ mainShotId: 'main:shot-06-04', durationMs: 3000 }
+			{ mainShotId: 'main:shot-06-03', durationMs: 3000 }
 		]
 	},
 	{
@@ -129,8 +129,8 @@ const SEGMENTS = [
 		targetDurationMs: 7000,
 		characterIds: ['character:zao', 'character:harlan'],
 		shots: [
-			{ mainShotId: 'main:shot-06-05', durationMs: 3500 },
-			{ mainShotId: 'main:shot-06-06', durationMs: 3500 }
+			{ mainShotId: 'main:shot-06-07', durationMs: 3500 },
+			{ mainShotId: 'main:shot-06-08', durationMs: 3500 }
 		]
 	},
 	{
@@ -142,8 +142,8 @@ const SEGMENTS = [
 		targetDurationMs: 11000,
 		characterIds: ['character:rao', 'character:voss', 'character:cael'],
 		shots: [
-			{ mainShotId: 'main:shot-07-03', durationMs: 3000 },
-			{ mainShotId: 'main:shot-07-05', durationMs: 3000 },
+			{ mainShotId: 'main:shot-07-08', durationMs: 3000 },
+			{ mainShotId: 'main:shot-07-10', durationMs: 3000 },
 			{ mainShotId: 'main:shot-08-01', durationMs: 2000 },
 			{ mainShotId: 'main:shot-10-01', durationMs: 3000 }
 		]
@@ -343,24 +343,13 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				beatId,
 				1,
 				'character:zao',
-				'Si no puedo hablarles ahora, les hablo a donde van a estar.',
+				'La firma parece falsa. El relé físico apunta a—',
 				'on_screen',
-				'main:cue-06-01'
+				'main:cue-05-06'
 			),
-			1
+			0
 		);
-		addCue(
-			dialogue(
-				'trailer:cue-d-02',
-				beatId,
-				2,
-				'character:zao',
-				'Si esto llega...',
-				'on_screen',
-				'main:cue-06-03'
-			),
-			2
-		);
+		addCue(textCue('trailer:cue-d-02', beatId, 2, 'SIN ENLACE / COM A-B SIN PORTADORA', 'interface'), 1);
 	}
 	if (seg.key === 'e') {
 		addCue(textCue('trailer:cue-e-01', beatId, 1, 'TRANSMISIÓN 70%… 92%…', 'interface'), 0);
@@ -451,7 +440,7 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			0
 		);
 		addCue(
-			textCue('trailer:cue-g-04', beatId, 4, 'ORIGEN: TRANSMISOR DE CONTINGENCIA', 'interface'),
+			textCue('trailer:cue-g-04', beatId, 4, 'ORIGEN: LÁSER EXTERIOR / CONTROL LOCAL', 'interface'),
 			1
 		);
 		addCue(textCue('trailer:cue-g-05', beatId, 5, 'OVR-7C41 / TITULAR CIFRADO', 'interface'), 3);
@@ -496,7 +485,7 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'character:zao',
 				'Si esto llega...',
 				'voice_over',
-				'main:cue-06-03'
+				'main:cue-06-09'
 			),
 			0
 		);
@@ -585,6 +574,30 @@ const file = {
 			sourceVersion: '1.0.0-extract',
 			notes:
 				'Tráiler según docs/Light Delay — Tráiler de la versión de 30 minutos.md. Frames reutilizados del animatic principal vía imageAssetId; diálogos condensados del brief.'
+		},
+		declaredEntityRefs: ['zao', 'voss', 'harlan', 'rao', 'sorell', 'cael'].map((id) => ({
+			kind: 'character',
+			id: `character:${id}`
+		})),
+		comparisonProfile: {
+			version: '1.0.0',
+			canonClaims: main.script.comparisonProfile.canonClaims,
+			eventCoverage: [
+				['event:embarkation', 'reworked', ['trailer:scene-a', 'trailer:scene-b']],
+				['event:anomaly-discovery', 'reworked', ['trailer:scene-c']],
+				['event:zao-warning-death', 'reworked', ['trailer:scene-d', 'trailer:scene-e']],
+				['event:tunnel-crossing', 'present', ['trailer:scene-f']],
+				['event:investigation', 'reworked', ['trailer:scene-f']],
+				['event:message-reception', 'present', ['trailer:scene-g']],
+				['event:harlan-exposed', 'reworked', ['trailer:scene-g']],
+				['event:quarantine', 'present', ['trailer:scene-h']],
+				['event:clean-greeting', 'reworked', ['trailer:scene-h']],
+				['event:first-contact', 'present', ['trailer:scene-h', 'trailer:scene-i']]
+			].map(([eventId, status, sceneIds]) => ({ eventId, status, sceneIds })).concat({
+				eventId: 'event:aftermath',
+				status: 'omitted',
+				note: 'El tráiler termina en el umbral del contacto.'
+			})
 		},
 		characterFunctionAssignments: [
 			{ functionId: 'function:command', characterId: 'character:voss', relationship: 'unchanged' },

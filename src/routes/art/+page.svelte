@@ -8,6 +8,7 @@
 		type EntityKind
 	} from '$lib/data/repositories/lookups';
 	import { withBase } from '$lib/utils/paths';
+	import { encodeRouteId } from '$lib/utils/routeId';
 
 	const kinds: EntityKind[] = ['characters', 'locations', 'objects', 'vehicles'];
 
@@ -16,7 +17,7 @@
 		label: ENTITY_KIND_LABELS[kind],
 		items: listEntities(kind).map((e) => ({
 			id: e.id,
-			href: `/entities/${kind}/${e.id}`,
+			href: `/entities/${kind}/${encodeRouteId(e.id)}`,
 			title: e.name,
 			description: e.description,
 			imageSrc: getEntityPrimaryImagePath(e.referenceAssetIds),

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import { withBase } from '$lib/utils/paths';
+	import { encodeRouteId } from '$lib/utils/routeId';
 
 	let { data } = $props();
 	const entity = $derived(data.entity);
@@ -24,7 +25,7 @@
 			<h2>Assets de referencia</h2>
 			<div class="assets">
 				{#each data.assets as asset (asset.id)}
-					<a class="asset" href={withBase(`/assets/${asset.id}`)}>
+					<a class="asset" href={withBase(`/assets/${encodeRouteId(asset.id)}`)}>
 						{#if asset.kind === 'image'}
 							<img src={withBase(asset.path)} alt={asset.title ?? asset.id} loading="lazy" />
 						{/if}

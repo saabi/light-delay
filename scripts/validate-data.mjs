@@ -313,7 +313,7 @@ function main() {
 		validateScriptFile(script, {
 			sourceLang,
 			expectScenes: isCanonical ? 17 : undefined,
-			expectShots: isCanonical ? 100 : undefined,
+			expectShots: isCanonical ? 112 : undefined,
 			functionIds,
 			characterIds,
 			taxonomy,
