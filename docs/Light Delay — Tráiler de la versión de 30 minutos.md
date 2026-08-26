@@ -31,7 +31,7 @@ No es un error.
 Corte breve a negro.
 
 **0:31–0:44 — La advertencia**  
-Zao corre al transmisor independiente. Proyección del haz hacia la posición futura de la nave.
+Zao pasa al control local de contingencia del láser exterior. La interfaz resuelve la intercepción y proyecta el haz hacia el corredor futuro de la nave.
 
 **ZAO**  
 Si no puedo hablarles ahora, les hablo a donde van a estar.

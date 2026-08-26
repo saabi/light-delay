@@ -1,6 +1,8 @@
 # Migration plan: legacy HTML to SvelteKit
 
-Status: initial architecture proposal. This document defines migration boundaries, routes and reusable components. It does not yet schedule the complete content rewrite or resolve outstanding story issues.
+Status: historical architecture baseline; phases 0–6 are implemented. This document remains useful for acceptance criteria and intended boundaries, but route, localization, responsive-layout and deployment decisions have since evolved. Current state and remaining debt live in `docs/PROJECT_STATUS.md` and `TODO.md`.
+
+The most important unclosed architectural item from this plan is schema authority and runtime validation. Current hand-written validators do not yet enforce every requirement listed in section 6, including physical asset existence and complete graph integrity.
 
 ## 1. Outcomes
 

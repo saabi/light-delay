@@ -1,4 +1,6 @@
-> The following sci-fi story is still incomplete and may have a few flaws. Maybe you can point them out:
+> **HISTORICAL, NON-CANONICAL SOURCE.** This file preserves an older version with FTL mechanics and other discarded decisions. Do not complete its TODOs or copy its claims into current canon. The authoritative Spanish review is `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`; the current structured treatment is `data/scripts/light-delay-long.json`.
+
+> Original framing preserved below: “The following sci-fi story is still incomplete and may have a few flaws.”
 
 # Light Delay – Comprehensive Report
 

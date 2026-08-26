@@ -2,11 +2,11 @@
 
 ## Inventario actual
 
-- 10 hojas de personajes.
-- 7 hojas de localizaciones.
-- 2 hojas de vehículos.
-- 4 hojas de objetos clave.
-- 100 fotogramas del animatic en 17 escenas.
+- **130 imágenes registradas** en `data/assets.json`.
+- 100 fotogramas legacy del animatic en 17 escenas.
+- 29 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala y presentación.
+- 1 placeholder técnico para frames faltantes o fallidos.
+- No hay todavía assets de audio ni video registrados.
 
 Los manifests existentes se encuentran bajo `legacy-site/assets/` y documentan nombres, rutas, categorías y descripciones visuales.
 
@@ -22,6 +22,13 @@ Los assets fueron generados con herramientas de generación de imágenes asistid
 - imágenes de referencia utilizadas;
 - historial de ediciones;
 - identificador de generación o comprobante de plataforma.
+
+Auditoría de corte 2026-08-26:
+
+- 129 de 130 assets no tienen objeto `source`;
+- los 130 carecen de modelo/versionado exacto;
+- sólo el placeholder técnico registra proveedor y fecha de generación;
+- ningún asset registra todavía una decisión verificable de elegibilidad para concurso.
 
 No debe inventarse esa información. Cuando no pueda recuperarse, registrar el campo como `unknown`.
 
@@ -52,4 +59,3 @@ Cada asset nuevo debería registrar:
 - Conservar comprobantes de generación cuando una plataforma exija que el contenido final haya sido producido dentro de su servicio.
 - Revisar términos de uso, derechos comerciales y requisitos de atribución antes de publicación o distribución.
 - Mantener separados los assets de referencia y los assets finales de producción.
-

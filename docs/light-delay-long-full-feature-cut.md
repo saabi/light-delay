@@ -1,4 +1,7 @@
 # Retraso de Luz
+
+> **FUENTE HISTÓRICA NO CANÓNICA.** Este texto conserva una versión antigua con mecánicas FTL y otras decisiones descartadas. No completar sus pendientes ni copiar sus afirmaciones al canon vigente. La revisión autorizada en español es `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`; el tratamiento estructurado actual está en `data/scripts/light-delay-long.json`.
+
 ## Lista de Momentos Clave para Guion
 
 ---

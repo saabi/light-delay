@@ -1,5 +1,7 @@
 # SvelteKit 2 / Svelte 5 setup
 
+> **Documento histórico de bootstrap.** El scaffold ya fue completado y varias instrucciones siguientes describen decisiones deliberadamente temporales. El estado vigente usa `@sveltejs/adapter-static`, prerender, GitHub Pages y Paraglide; consultar `docs/PROJECT_STATUS.md` y `README.md` antes de aplicar cualquier paso de este documento. La mención de `adapter-auto` en la sección 9 no es una instrucción actual.
+
 This document covers project bootstrap only. It deliberately does not define the full content migration, JSON extraction process, final routes, visual system or editor architecture. Those decisions belong in the later migration plan.
 
 ## Goals

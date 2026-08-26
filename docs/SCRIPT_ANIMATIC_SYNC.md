@@ -1,6 +1,6 @@
 # Sincronización guion ↔ animatic
 
-El **guion** (`legacy-site/guion-30-minutos.html` → `data/scripts/light-delay-main-short.json`) es la fuente de verdad narrativa. El animatic se alinea al guion; los desajustes se registran aquí sin reescribir el guion.
+El **guion estructurado** (`data/scripts/light-delay-main-short.json`) es la fuente de verdad narrativa vigente y alimenta también el animatic. `legacy-site/guion-30-minutos.html` documenta la procedencia y permanece como referencia de regresión; ya no debe editarse como autoridad paralela. Los desajustes se registran aquí sin duplicar diálogo ni subtítulos.
 
 ## Conteos vigentes (reescritura 2026-08-26)
 

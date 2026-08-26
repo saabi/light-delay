@@ -1,6 +1,6 @@
 # Datos estructurados
 
-JSON canónicos extraídos del sitio legacy (`npm run extract:legacy`) y validados con `npm run validate:data`.
+JSON canónicos derivados inicialmente del sitio legacy y desarrollados después en la arquitectura multi-script. Se validan con `npm run validate:data`; `npm run extract:legacy` ya no es un regenerador seguro del árbol actual y no debe ejecutarse sobre `data/` hasta resolver la deuda registrada en `TODO.md`.
 
 | Archivo | Contenido |
 | --- | --- |
@@ -9,7 +9,7 @@ JSON canónicos extraídos del sitio legacy (`npm run extract:legacy`) y validad
 | `characters.json` / `locations.json` / `objects.json` / `vehicles.json` / `factions.json` | Entidades |
 | `assets.json` | Rutas públicas `/assets/...` para binarios en `static/assets/` |
 | `voice-profiles.json` | Perfiles de voz por idioma |
-| `documents.json` | Bloques de prosa (notas técnicas extraídas; resto stubs) |
+| `documents.json` | Cinco documentos prose ES/EN extraídos, canon estructurado aún como stub y tres referencias históricas/editoriales en revisión |
 | `narrative-functions.json` / `entity-variants.json` | Funciones dramáticas compartidas y perfiles específicos por guion |
 | `comparison-taxonomy.json` | Dimensiones de canon y eventos principales comparables entre scripts |
 
