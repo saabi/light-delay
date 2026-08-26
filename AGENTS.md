@@ -22,6 +22,7 @@ El español es la fuente de verdad de la documentación del repositorio.
 - Tratar `legacy-site/` como referencia de regresión hasta completar la migración.
 - No reescribir el canon para resolver una dificultad de implementación.
 - No inventar datos ausentes. Marcar incertidumbres y decisiones pendientes.
+- Evitar la exposición forzada: no tratar al público como incapaz de inferir. La información se revela de forma natural (pensamiento en acción, decisión bajo presión, consecuencia visible), no con diálogos o monólogos que explican el mundo «para el espectador». Ejemplo: cuando Zao decide dónde apuntar el láser y por qué elige la posición futura de la nave, son su propio razonamiento y la elección lo que exponen el porqué; no hace falta que alguien se lo diga a la audiencia.
 - Mantener IDs estables para escenas y tomas; no usar el índice del array como identidad persistente. Los IDs de unidades de guion van namespaced por script (`main:…`, `festival:…`); las entidades de proyecto usan ids globales (`character:voss`).
 - Separar datos narrativos, presentación y estado editorial.
 - El guion textual y el animatic deben renderizarse desde una única fuente de datos **por script/cut** (`ScriptFile`); varios cuts se registran en `project.scripts` (véase `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`).
