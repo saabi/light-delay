@@ -319,7 +319,7 @@
 							<p>{cue.presentation} · {resolved?.value.text ?? 'Sin variante disponible'}</p>
 						{/if}
 						{#if cue.notes?.length}<ul>
-								{#each cue.notes as note}<li>{noteLabel(note)}</li>{/each}
+								{#each cue.notes as note (note)}<li>{noteLabel(note)}</li>{/each}
 							</ul>{/if}
 					</li>
 				{/each}
@@ -406,7 +406,7 @@
 		<section>
 			<h3>Notas y procedencia</h3>
 			{#if shot.notes?.length}<ul>
-					{#each shot.notes as note}<li>{noteLabel(note)}</li>{/each}
+					{#each shot.notes as note (note)}<li>{noteLabel(note)}</li>{/each}
 				</ul>{/if}
 			{#if shot.sourceRefs?.length}<p>
 					<b>Fuentes de la toma</b><br />{shot.sourceRefs.map(sourceLabel).join('; ')}

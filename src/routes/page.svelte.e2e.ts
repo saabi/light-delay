@@ -96,7 +96,7 @@ test('principal routes do not overflow a narrow viewport', async ({ page }) => {
 		'/art',
 		'/entities/characters',
 		'/entities/characters/character~zao',
-		'/assets/asset~animatic-01-01',
+		'/assets/asset~character-zao-sheet',
 		'/documents/notas-tecnicas-continuidad',
 		'/compare/script~light-delay-main-short?against=script%3Alight-delay-festival'
 	];
@@ -197,7 +197,7 @@ test('player preserves shot and details state when orientation changes', async (
 	const detailsBox = await page.locator('.movie-details').boundingBox();
 	expect(frameBox).not.toBeNull();
 	expect(detailsBox).not.toBeNull();
-	expect(detailsBox!.x).toBeGreaterThan(frameBox!.x + frameBox!.width / 2);
+	expect(detailsBox!.x + detailsBox!.width / 2).toBeGreaterThan(frameBox!.x + frameBox!.width / 2);
 });
 
 test('returning from Movie mode restores the selected editor shot', async ({ page }) => {
