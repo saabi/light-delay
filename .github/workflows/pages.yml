@@ -36,15 +36,17 @@ jobs:
       - name: Type-check SvelteKit
         run: npm run check
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Build static site
         env:
           BASE_PATH: /${{ github.event.repository.name }}
         run: npm run build
 
+      - name: Configure GitHub Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
       - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v4
         with:
           path: build/
