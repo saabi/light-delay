@@ -37,6 +37,22 @@ npm run dev
 
 Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run extract:legacy`, `npm run validate:data`.
 
+## Sitio público en GitHub Pages
+
+La aplicación puede publicarse como sitio estático de proyecto en GitHub Pages. El workflow `.github/workflows/pages.yml` valida los JSON, ejecuta `svelte-check`, compila con `@sveltejs/adapter-static` y publica `build/`.
+
+Para el repositorio `saabi/light-delay`, el despliegue estándar usa la base `/light-delay` y queda preparado para:
+
+```text
+https://saabi.github.io/light-delay/
+```
+
+La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
+
+Antes del primer despliegue, en GitHub debe seleccionarse **Settings → Pages → Source: GitHub Actions**. Los pull requests ejecutan el build de Pages sin desplegar; los pushes a `master` publican el sitio.
+
+El editor de duración del animatic continúa siendo local al navegador: no modifica el JSON ni el repositorio público.
+
 ## Abrir la versión legacy
 
 Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones del navegador, también puede servirse desde la raíz con cualquier servidor HTTP estático.
@@ -52,7 +68,7 @@ Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones d
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
 
-Cuando existan copias del mismo documento en varios idiomas, editar primero el español y sincronizar el resto en la misma tarea. Detalle en `AGENTS.md`.
+Cuando existan copias del mismo documento en varios idiomas, editar primero la copia en español y sincronizar el resto en la misma tarea. Detalle en `AGENTS.md`.
 
 ## Desarrollo editorial pendiente
 
