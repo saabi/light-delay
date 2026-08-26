@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import { withBase } from '$lib/utils/paths';
 
 	let { data } = $props();
 	const entity = $derived(data.entity);
@@ -7,7 +8,7 @@
 
 <main class="page">
 	<p class="crumb">
-		<a href={`/entities/${data.kind}`}>{data.label}</a>
+		<a href={withBase(`/entities/${data.kind}`)}>{data.label}</a>
 		<span>/</span>
 		<span>{entity.name}</span>
 	</p>
@@ -23,9 +24,9 @@
 			<h2>Assets de referencia</h2>
 			<div class="assets">
 				{#each data.assets as asset (asset.id)}
-					<a class="asset" href={`/assets/${asset.id}`}>
+					<a class="asset" href={withBase(`/assets/${asset.id}`)}>
 						{#if asset.kind === 'image'}
-							<img src={asset.path} alt={asset.title ?? asset.id} loading="lazy" />
+							<img src={withBase(asset.path)} alt={asset.title ?? asset.id} loading="lazy" />
 						{/if}
 						<span>{asset.title ?? asset.id}</span>
 					</a>
