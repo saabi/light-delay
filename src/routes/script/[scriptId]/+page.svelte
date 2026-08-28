@@ -2,7 +2,9 @@
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
 	import ScriptViewer from '$lib/components/script/ScriptViewer.svelte';
+	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import { getLocalizedScript } from '$lib/data/repositories/index';
+	import { estimateScriptSpokenMs, montageScriptMs } from '$lib/data/selectors/dialogueTiming';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import { decodeScriptId } from '$lib/utils/scriptId';
 	import type { Beat, Cue, Scene } from '$lib/types/script';
@@ -14,6 +16,8 @@
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const language = $derived(getLanguageState());
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
+	const scriptMontageMs = $derived(montageScriptMs(script));
+	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, language.dialogueLanguage));
 
 	const scenesById = $derived(
 		Object.fromEntries(script.scenes.map((s) => [s.id, s])) as Record<string, Scene>
@@ -57,6 +61,10 @@
 		/>
 		<LanguageControls />
 	</div>
+	<p class="timing-lede">{m.timing_compare_lede()}</p>
+	<p class="timing-total">
+		<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} />
+	</p>
 	<StoryLanguageNotice />
 	<ScriptViewer
 		acts={script.acts}
@@ -64,6 +72,8 @@
 		{beatsBySceneId}
 		{cuesByBeatId}
 		characterFunctionAssignments={script.script.characterFunctionAssignments}
+		{script}
+		dialogueLanguage={language.dialogueLanguage}
 	/>
 </main>
 
@@ -81,6 +91,16 @@
 		gap: 1.25rem;
 		align-items: start;
 		margin-bottom: 0.5rem;
+	}
+
+	.timing-lede {
+		margin: 0 0 0.35rem;
+		color: var(--muted);
+		font-size: 0.88rem;
+	}
+
+	.timing-total {
+		margin: 0 0 1rem;
 	}
 
 	@media (max-width: 560px) {

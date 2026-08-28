@@ -3,6 +3,7 @@ import type { LanguageTag } from '$lib/types/common';
 import type { DialogueVariant, ScriptFile, Shot, Take } from '$lib/types/script';
 
 export { compareScripts } from './comparison.ts';
+export * from './dialogueTiming.ts';
 
 function baseLanguage(tag: LanguageTag): LanguageTag {
 	return tag.split('-')[0] ?? tag;

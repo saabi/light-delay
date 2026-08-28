@@ -1,17 +1,30 @@
 <script lang="ts">
-	import type { Beat, Cue, Scene } from '$lib/types/script';
+	import type { Beat, Cue, Scene, ScriptFile } from '$lib/types/script';
 	import BeatBlock from './BeatBlock.svelte';
+	import DurationPair from '$lib/components/timing/DurationPair.svelte';
+	import {
+		estimateSceneSpokenMs,
+		montageSceneMs
+	} from '$lib/data/selectors/dialogueTiming';
+	import type { LanguageTag } from '$lib/types/i18n';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let {
 		scene,
 		beats,
-		cuesByBeatId
+		cuesByBeatId,
+		script,
+		dialogueLanguage
 	}: {
 		scene: Scene;
 		beats: Beat[];
 		cuesByBeatId: Record<string, Cue[]>;
+		script: ScriptFile;
+		dialogueLanguage: LanguageTag;
 	} = $props();
+
+	const sceneMontageMs = $derived(montageSceneMs(script, scene.id));
+	const sceneSpokenMs = $derived(estimateSceneSpokenMs(script, scene.id, dialogueLanguage));
 </script>
 
 <section class="scene" id={scene.id}>
@@ -21,6 +34,9 @@
 		{#if scene.summary}
 			<p class="summary">{scene.summary}</p>
 		{/if}
+		<p class="timing">
+			<DurationPair montageMs={sceneMontageMs} spokenMs={sceneSpokenMs} compact />
+		</p>
 	</header>
 	{#each beats as beat (beat.id)}
 		<BeatBlock {beat} cues={cuesByBeatId[beat.id] ?? []} />
@@ -49,6 +65,10 @@
 	.summary {
 		margin: 0;
 		color: var(--muted);
+	}
+
+	.timing {
+		margin: 0.5rem 0 0;
 	}
 
 	@media (max-width: 480px) {

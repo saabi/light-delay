@@ -2,12 +2,17 @@
 	import type { Cue } from '$lib/types/script';
 	import { getCharacterById } from '$lib/data/repositories/lookups';
 	import { resolveLocalized } from '$lib/data/selectors/index';
+	import { estimateCueSpokenMs } from '$lib/data/selectors/dialogueTiming';
 	import { getLanguageState } from '$lib/state/language.svelte';
+	import { formatClock } from '$lib/utils/duration';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let { cue }: { cue: Cue } = $props();
 
 	const lang = $derived(getLanguageState());
+	const spokenMs = $derived(
+		cue.type === 'dialogue' ? estimateCueSpokenMs(cue, lang.dialogueLanguage) : 0
+	);
 </script>
 
 {#if cue.type === 'action'}
@@ -23,7 +28,12 @@
 			{/if}
 		</p>
 		{#if resolved}
-			<p class="line">{resolved.value.spokenText}</p>
+			<p class="line">
+				{resolved.value.spokenText}
+				{#if spokenMs > 0}
+					<span class="spoken-clock" title={m.timing_spoken_dialogue()}>~{formatClock(spokenMs)}</span>
+				{/if}
+			</p>
 			{#if resolved.usedFallback}
 				<p class="fallback">
 					{m.script_translation_unavailable({ language: resolved.resolvedLanguage })}
@@ -81,6 +91,15 @@
 	.line {
 		margin: 0;
 		font-family: var(--font-serif);
+	}
+
+	.spoken-clock {
+		display: block;
+		margin-top: 0.25rem;
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--gold);
+		font-style: normal;
 	}
 
 	.fallback,

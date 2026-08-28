@@ -26,6 +26,7 @@ Thumbs.db
 coverage/
 playwright-report/
 test-results/
+reports/dialogue-timing/
 
 # Vite timestamps
 vite.config.js.timestamp-*

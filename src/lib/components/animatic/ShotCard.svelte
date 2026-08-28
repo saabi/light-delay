@@ -1,7 +1,8 @@
 <script lang="ts">
 	import AnimaticFrame from './AnimaticFrame.svelte';
 	import DurationInput from './DurationInput.svelte';
-	import { formatClock } from '$lib/utils/duration';
+	import DurationPair from '$lib/components/timing/DurationPair.svelte';
+	import type { ShotDialogueAnalysis } from '$lib/data/selectors/dialogueTiming';
 	import type { Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
 	import * as m from '$lib/paraglide/messages.js';
@@ -10,12 +11,19 @@
 		shot,
 		media,
 		durationMs,
+		spokenMs,
+		dialogueFlags,
 		playerHref,
 		onduration
 	}: {
 		shot: Shot;
 		media: ShotMedia;
 		durationMs: number;
+		spokenMs: number;
+		dialogueFlags?: Pick<
+			ShotDialogueAnalysis,
+			'multiSpeaker' | 'offCameraDialogue' | 'speakerCount'
+		>;
 		playerHref: string;
 		onduration: (ms: number) => void;
 	} = $props();
@@ -39,7 +47,17 @@
 		<p class="desc">{shot.description}</p>
 		<div class="row">
 			<DurationInput valueMs={durationMs} onchange={onduration} />
-			<span class="clock">{formatClock(durationMs)}</span>
+			<div class="timing">
+				<DurationPair montageMs={durationMs} spokenMs={spokenMs} compact />
+				{#if dialogueFlags?.multiSpeaker}
+					<span class="flag" title={m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}>
+						{m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}
+					</span>
+				{/if}
+				{#if dialogueFlags?.offCameraDialogue}
+					<span class="flag off" title={m.timing_flag_off_camera()}>{m.timing_flag_off_camera()}</span>
+				{/if}
+			</div>
 		</div>
 	</div>
 </article>
@@ -99,21 +117,35 @@
 		align-items: end;
 		gap: 1rem;
 		margin-top: auto;
+		flex-wrap: wrap;
 	}
 
-	.clock {
-		font-family: var(--font-mono);
-		color: var(--muted);
-		font-size: 0.85rem;
+	.timing {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+	}
+
+	.flag {
+		display: inline-block;
+		width: fit-content;
+		padding: 0.1rem 0.45rem;
+		border-radius: 4px;
+		background: #1a2a38;
+		border: 1px solid var(--line);
+		color: var(--cyan);
+		font: 600 0.68rem var(--font-mono);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.flag.off {
+		color: #e8a87c;
 	}
 
 	@media (max-width: 620px) {
 		.shot-card {
 			grid-template-columns: 1fr;
-		}
-
-		.row {
-			flex-wrap: wrap;
 		}
 	}
 </style>

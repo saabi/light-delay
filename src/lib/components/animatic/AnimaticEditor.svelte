@@ -1,6 +1,14 @@
 <script lang="ts">
 	import ShotCard from './ShotCard.svelte';
 	import ContinuityWarnings from './ContinuityWarnings.svelte';
+	import DurationPair from '$lib/components/timing/DurationPair.svelte';
+	import {
+		analyzeShotDialogue,
+		estimateSceneSpokenMs,
+		estimateScriptSpokenMs,
+		montageSceneMs,
+		montageScriptMs
+	} from '$lib/data/selectors/dialogueTiming';
 	import {
 		durationFromEdits,
 		effectiveTotalMs,
@@ -8,9 +16,10 @@
 		persistAnimaticEdits,
 		type AnimaticEdits
 	} from '$lib/state/animatic-overlay';
+	import { getLanguageState } from '$lib/state/language.svelte';
 	import { formatClock } from '$lib/utils/duration';
 	import type { ScriptId } from '$lib/types/ids';
-	import type { Scene, Shot } from '$lib/types/script';
+	import type { Scene, ScriptFile, Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
 	import * as m from '$lib/paraglide/messages.js';
 
@@ -22,6 +31,7 @@
 
 	let {
 		groups,
+		script,
 		scriptId,
 		scriptVersion,
 		playerHref,
@@ -29,12 +39,15 @@
 		warnings = []
 	}: {
 		groups: SceneGroup[];
+		script: ScriptFile;
 		scriptId: ScriptId;
 		scriptVersion: string;
 		playerHref: string;
 		targetDurationMs?: number;
 		warnings?: string[];
 	} = $props();
+
+	const lang = $derived(getLanguageState());
 
 	let localDurations = $state<Record<string, number>>({});
 
@@ -47,6 +60,8 @@
 
 	const allShots = $derived(groups.flatMap((g) => g.shots));
 	const totalMs = $derived(effectiveTotalMs(edits, allShots));
+	const scriptMontageMs = $derived(montageScriptMs(script, edits));
+	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, lang.dialogueLanguage));
 
 	function setDuration(shotId: string, ms: number) {
 		const nextLocal = {
@@ -65,9 +80,9 @@
 <div class="editor">
 	<div class="dashboard">
 		<div>
-			<strong>{formatClock(totalMs)}</strong>
+			<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} />
 			<small>
-				{m.animatic_effective()}
+				{m.animatic_effective()} {formatClock(totalMs)}
 				{#if targetDurationMs !== undefined}
 					/ {m.animatic_target().toLowerCase()} {formatClock(targetDurationMs)}
 				{/if}
@@ -84,21 +99,28 @@
 	<ContinuityWarnings {warnings} />
 
 	{#each groups as group (group.scene.id)}
+		{@const sceneMontageMs = montageSceneMs(script, group.scene.id, edits)}
+		{@const sceneSpokenMs = estimateSceneSpokenMs(script, group.scene.id, lang.dialogueLanguage)}
 		<section class="scene-group">
 			<header>
 				<h2>{m.script_scene()} {group.scene.number}</h2>
 				<p>{group.scene.summary || group.scene.title}</p>
 				<small>
-					{formatClock(effectiveTotalMs(edits, group.shots))} · {group.shots.length}
+					<DurationPair montageMs={sceneMontageMs} spokenMs={sceneSpokenMs} compact />
+					· {group.shots.length}
 					{m.animatic_shots()}
 				</small>
 			</header>
 			<div class="shots">
 				{#each group.shots as shot (shot.id)}
+					{@const shotMontageMs = durationFromEdits(edits, shot.id, shot.durationMs)}
+					{@const shotAnalysis = analyzeShotDialogue(script, shot, lang.dialogueLanguage)}
 					<ShotCard
 						{shot}
 						media={group.mediaByShotId[shot.id]}
-						durationMs={durationFromEdits(edits, shot.id, shot.durationMs)}
+						durationMs={shotMontageMs}
+						spokenMs={shotAnalysis.spokenMs}
+						dialogueFlags={shotAnalysis}
 						playerHref={`${playerHref}?shot=${encodeURIComponent(shot.id)}`}
 						onduration={(ms) => setDuration(shot.id, ms)}
 					/>
@@ -122,11 +144,6 @@
 		background: #091722ee;
 		backdrop-filter: blur(12px);
 		margin-bottom: 1.5rem;
-	}
-
-	.dashboard strong {
-		font: 800 1.3rem var(--font-mono);
-		color: var(--cyan);
 	}
 
 	.dashboard small {

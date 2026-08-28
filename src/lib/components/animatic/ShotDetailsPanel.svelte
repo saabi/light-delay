@@ -1,5 +1,6 @@
 <script lang="ts">
 	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
+	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import {
 		getCharacterById,
 		getFactionById,
@@ -10,6 +11,10 @@
 	} from '$lib/data/repositories/lookups';
 	import { resolveLocalized } from '$lib/data/selectors/index';
 	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
+	import {
+		analyzeShotDialogue,
+		estimateShotSpokenMs
+	} from '$lib/data/selectors/dialogueTiming';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import type { EntityRef, Note } from '$lib/types/common';
 	import type { Cue, CuePlacement, ScriptFile, Shot, SourceReference } from '$lib/types/script';
@@ -47,6 +52,8 @@
 		new Map(shot.cuePlacements.map((placement) => [placement.cueId, placement]))
 	);
 	const imageStatus = $derived(media.take?.imageStatus ?? media.asset?.imageStatus);
+	const shotSpokenMs = $derived(estimateShotSpokenMs(script, shot, lang.dialogueLanguage));
+	const dialogueFlags = $derived(analyzeShotDialogue(script, shot, lang.dialogueLanguage));
 
 	function present(value: unknown): string {
 		return editorialValueLabel(value, lang.interfaceLanguage);
@@ -119,8 +126,23 @@
 			</div>
 			<div>
 				<dt>{m.animatic_current_duration()}</dt>
-				<dd>{ms(effectiveDurationMs)}</dd>
+				<dd>
+					<DurationPair montageMs={effectiveDurationMs} spokenMs={shotSpokenMs} />
+				</dd>
 			</div>
+			{#if dialogueFlags.multiSpeaker || dialogueFlags.offCameraDialogue}
+				<div>
+					<dt>{m.timing_spoken_short()}</dt>
+					<dd class="flags">
+						{#if dialogueFlags.multiSpeaker}
+							<span class="flag">{m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}</span>
+						{/if}
+						{#if dialogueFlags.offCameraDialogue}
+							<span class="flag">{m.timing_flag_off_camera()}</span>
+						{/if}
+					</dd>
+				</div>
+			{/if}
 			<div>
 				<dt>{m.details_canonical_duration()}</dt>
 				<dd>{ms(shot.durationMs)}</dd>
@@ -560,6 +582,23 @@
 		font-family: var(--font-serif), serif;
 		font-size: 0.9rem;
 		color: #f4f6f7;
+	}
+
+	.flags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+	}
+
+	.flag {
+		display: inline-block;
+		padding: 0.1rem 0.45rem;
+		border-radius: 4px;
+		background: #ffffff12;
+		border: 1px solid #ffffff2a;
+		color: var(--cyan);
+		font: 600 0.68rem var(--font-mono);
+		text-transform: uppercase;
 	}
 
 	.language-section {

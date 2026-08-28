@@ -25,6 +25,7 @@
 		"prepare:higgsfield": "node scripts/prepare-higgsfield-uploads.mjs",
 		"thumbs:generate": "node scripts/generate-asset-thumbnails.mjs generate",
 		"thumbs:sync": "node scripts/generate-asset-thumbnails.mjs sync",
+		"report:dialogue-timing": "node scripts/report-dialogue-timing.mjs",
 		"validate:data": "node scripts/validate-data.mjs",
 		"validate:docs": "node scripts/validate-docs.mjs",
 		"validate:translations": "node scripts/validate-translations.mjs"

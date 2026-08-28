@@ -2,6 +2,7 @@
 	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
 	import AnimaticFrame from './AnimaticFrame.svelte';
 	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
+	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import {
 		getPlayerState,
 		pause,
@@ -15,6 +16,11 @@
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import { durationFromEdits, loadAnimaticEdits } from '$lib/state/animatic-overlay';
 	import { getSubtitleSegments } from '$lib/data/selectors/index';
+	import {
+		analyzeShotDialogue,
+		estimateScriptSpokenMs,
+		montageScriptMs
+	} from '$lib/data/selectors/dialogueTiming';
 	import { formatClock } from '$lib/utils/duration';
 	import { withBase } from '$lib/utils/paths';
 	import type { Cue, ScriptFile, Shot } from '$lib/types/script';
@@ -47,6 +53,8 @@
 	);
 
 	const totalMs = $derived(durations.reduce((a, b) => a + b, 0));
+	const scriptMontageMs = $derived(montageScriptMs(script, edits));
+	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, lang.dialogueLanguage));
 
 	const absoluteMs = $derived(
 		durations.slice(0, player.shotIndex).reduce((a, b) => a + b, 0) + player.elapsedInShotMs
@@ -54,6 +62,9 @@
 
 	const current = $derived(shots[player.shotIndex]);
 	const currentDuration = $derived(durations[player.shotIndex] ?? 0);
+	const currentShotAnalysis = $derived(
+		current ? analyzeShotDialogue(script, current.shot, lang.dialogueLanguage) : undefined
+	);
 
 	const currentScene = $derived(
 		current ? script.scenes.find((s) => s.id === current.shot.sceneId) : undefined
@@ -282,8 +293,20 @@
 				<div>
 					<b>{shotLabel}</b>
 					<div class="movie-scene">{sceneTitle}</div>
+					{#if currentShotAnalysis}
+						<div class="movie-timing">
+							<DurationPair
+								montageMs={currentDuration}
+								spokenMs={currentShotAnalysis.spokenMs}
+								compact
+							/>
+						</div>
+					{/if}
 				</div>
-				<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
+				<div class="movie-counter-col">
+					<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
+					<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
+				</div>
 			</div>
 
 			{#if activeSubtitles.length}
@@ -429,6 +452,17 @@
 		margin-top: 0.2rem;
 		font-size: 0.92rem;
 		color: #eef4f8;
+	}
+
+	.movie-timing {
+		margin-top: 0.35rem;
+	}
+
+	.movie-counter-col {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.35rem;
 	}
 
 	.movie-counter {

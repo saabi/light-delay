@@ -247,5 +247,12 @@
 	"error_document_not_found": "No se encontró el documento solicitado.",
 	"error_entity_not_found": "No se encontró la entidad solicitada.",
 	"footer_canon": "Canon revisado",
-	"footer_development": "Proyecto en desarrollo"
+	"footer_development": "Proyecto en desarrollo",
+	"timing_montage": "Montaje",
+	"timing_spoken_dialogue": "Diálogo hablado estimado",
+	"timing_spoken_short": "Diálogo",
+	"timing_compare_lede": "Duración de montaje frente a tiempo de diálogo hablado estimado (WPM).",
+	"timing_flag_multi_speaker": "{count} hablantes",
+	"timing_flag_off_camera": "Fuera de cámara",
+	"timing_spoken_over_montage": "El diálogo estimado supera la duración de montaje de esta toma"
 }

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-28 — Estimación de diálogo hablado
+
+- Nuevo modelo WPM (ES 150 / EN 160) con multiplicadores de ritmo, suelo de 400 ms y preferencia por `estimatedDurationMs` cuando existe.
+- Selectores de montaje vs diálogo hablado en guion, animatic, player y panel de detalles (`DurationPair`); badges de más de dos hablantes y diálogo fuera de cámara en tarjetas de toma.
+- Informe editorial regenerable: `npm run report:dialogue-timing` → `reports/dialogue-timing/{scriptId}.{lang}.md|json` (ignorado en git).
+
 ## 2026-08-28 — Traducción estructurada de contenido público
 
 - Añadido `data/translations/public.en.json` como overlay inglés `draft` para los cuatro scripts, diálogo, subtítulos derivados, escenas, beats, tomas, assets y datos del comparador; el español permanece intacto y autoritativo.

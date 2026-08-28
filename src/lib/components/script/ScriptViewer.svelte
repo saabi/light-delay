@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type { Act, Beat, CharacterFunctionAssignment, Cue, Scene } from '$lib/types/script';
+	import type { Act, Beat, CharacterFunctionAssignment, Cue, Scene, ScriptFile } from '$lib/types/script';
 	import SceneSection from './SceneSection.svelte';
+	import type { LanguageTag } from '$lib/types/i18n';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let {
@@ -8,13 +9,17 @@
 		scenesById,
 		beatsBySceneId,
 		cuesByBeatId,
-		characterFunctionAssignments
+		characterFunctionAssignments,
+		script,
+		dialogueLanguage
 	}: {
 		acts: Act[];
 		scenesById: Record<string, Scene>;
 		beatsBySceneId: Record<string, Beat[]>;
 		cuesByBeatId: Record<string, Cue[]>;
 		characterFunctionAssignments?: CharacterFunctionAssignment[];
+		script: ScriptFile;
+		dialogueLanguage: LanguageTag;
 	} = $props();
 </script>
 
@@ -55,7 +60,13 @@
 			{#each act.sceneIds as sceneId (sceneId)}
 				{@const scene = scenesById[sceneId]}
 				{#if scene}
-					<SceneSection {scene} beats={beatsBySceneId[scene.id] ?? []} {cuesByBeatId} />
+					<SceneSection
+						{scene}
+						beats={beatsBySceneId[scene.id] ?? []}
+						{cuesByBeatId}
+						{script}
+						{dialogueLanguage}
+					/>
 				{/if}
 			{/each}
 		</section>

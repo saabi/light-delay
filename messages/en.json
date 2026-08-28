@@ -247,5 +247,12 @@
 	"error_document_not_found": "The requested document could not be found.",
 	"error_entity_not_found": "The requested entity could not be found.",
 	"footer_canon": "Revised canon",
-	"footer_development": "Project in development"
+	"footer_development": "Project in development",
+	"timing_montage": "Montage",
+	"timing_spoken_dialogue": "Estimated spoken dialogue",
+	"timing_spoken_short": "Dialogue",
+	"timing_compare_lede": "Montage length vs estimated spoken dialogue time (WPM).",
+	"timing_flag_multi_speaker": "{count} speakers",
+	"timing_flag_off_camera": "Off camera",
+	"timing_spoken_over_montage": "Estimated dialogue exceeds this shot's montage duration"
 }

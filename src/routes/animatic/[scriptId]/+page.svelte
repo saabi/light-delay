@@ -79,6 +79,7 @@
 	{#key `${script.script.id}:${script.script.version}`}
 		<AnimaticEditor
 			{groups}
+			{script}
 			scriptId={script.script.id}
 			scriptVersion={script.script.version}
 			playerHref={withLocale(`/animatic/${encoded}/player`)}
