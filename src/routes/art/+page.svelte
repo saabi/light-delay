@@ -2,7 +2,7 @@
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import EntityGallery from '$lib/components/entities/EntityGallery.svelte';
 	import {
-		getEntityPrimaryImagePath,
+		getEntityPrimaryThumbnailPath,
 		listEntities,
 		type EntityKind
 	} from '$lib/data/repositories/lookups';
@@ -26,7 +26,7 @@
 			href: `/entities/${kind}/${encodeRouteId(e.id)}`,
 			title: e.name,
 			description: e.description,
-			imageSrc: getEntityPrimaryImagePath(e.referenceAssetIds),
+			imageSrc: getEntityPrimaryThumbnailPath(e.referenceAssetIds),
 			eyebrow: {
 				characters: m.entities_characters(),
 				locations: m.entities_locations(),

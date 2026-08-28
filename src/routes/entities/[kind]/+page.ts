@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import {
 	ENTITY_KIND_LABELS,
-	getEntityPrimaryImagePath,
+	getEntityPrimaryThumbnailPath,
 	listEntities,
 	VALID_ENTITY_KINDS,
 	type EntityKind
@@ -19,7 +19,7 @@ export const load: PageLoad = ({ params }) => {
 		href: `/entities/${kind}/${encodeRouteId(e.id)}`,
 		title: e.name,
 		description: e.description,
-		imageSrc: getEntityPrimaryImagePath(e.referenceAssetIds),
+		imageSrc: getEntityPrimaryThumbnailPath(e.referenceAssetIds),
 		eyebrow: ENTITY_KIND_LABELS[kind]
 	}));
 	return {

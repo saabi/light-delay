@@ -23,6 +23,8 @@
 		"build:brand": "node scripts/build-brand-assets.mjs",
 		"port:legacy-text": "node scripts/port-legacy-documents.mjs",
 		"prepare:higgsfield": "node scripts/prepare-higgsfield-uploads.mjs",
+		"thumbs:generate": "node scripts/generate-asset-thumbnails.mjs generate",
+		"thumbs:sync": "node scripts/generate-asset-thumbnails.mjs sync",
 		"validate:data": "node scripts/validate-data.mjs"
 	},
 	"devDependencies": {

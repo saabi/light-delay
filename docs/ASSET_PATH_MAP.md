@@ -27,6 +27,17 @@ Ejemplos:
 
 Las hojas proporcionales **no sustituyen** concept/model sheets. Las comparativas de escala común (estación + nave, etc.) viven en `art-bible/scale-references/` porque no pertenecen a una sola entidad.
 
+### Miniaturas derivadas
+
+| Origen canónico | Disco | URL pública |
+| --- | --- | --- |
+| `/assets/<tree>/<file>.(png\|svg\|…)` | `static/assets/_thumbs/<tree>/<file>.(png\|svg\|…).webp` | `/assets/_thumbs/<tree>/<file>.(png\|svg\|…).webp` |
+
+- Generación: `npm run thumbs:generate` (crea/actualiza según `static/assets/_thumbs/manifest.json`).
+- Sincronización: `npm run thumbs:sync` (regenera obsoletas y borra huérfanas; `--dry-run` disponible).
+- Las galerías de arte/entidades usan miniaturas; el carrusel de detalle y las páginas de asset siguen en resolución completa.
+- `validate:data` **no** exige que existan las miniaturas (clon usable antes de generar); el árbol `_thumbs/` sí debe estar versionado para GitHub Pages.
+
 Durante las fases 3 y 5 se **copia** (no se mueve) para conservar `legacy-site/` como regresión. Los JSON `Asset.path` usan la URL pública `/assets/...`.
 
 Git LFS sigue aplicando a PNG/JPEG/WebP/video vía `.gitattributes`.
