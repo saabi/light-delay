@@ -25,3 +25,7 @@ Copias renombradas para subir a Higgsfield. Origen canónico: `static/assets/`.
 | `props/light-delay-prop-read-only-greeting-medium.png` | Soporte de saludo de Sorell | prop | `static/assets/props/read-only-greeting-medium/prop-sheet.png` |
 | `brief/light-delay-brief-celestial-ardor-jupiter.png` | Celestial Ardor bordeando Júpiter (animatic esc. 3 / toma 1) | brief | `static/assets/animatic/frames/scene-03/shot-01.png` |
 | `brief/light-delay-brief-zao-optical-contingency-transmitter.png` | Zao ante el transmisor óptico de contingencia (animatic esc. 5 / toma 6) | brief | `static/assets/animatic/frames/scene-05/shot-06.png` |
+| `brief/light-delay-brief-proxima-ardor-berthed.png` | Proxima con Celestial Ardor atracada (bloqueo 3D, escala común) | brief | `static/assets/locations/proxima-station/proxima-with-ardor-berthed.png` |
+| `brief/light-delay-brief-proxima-station-proportional-reference.png` | Proxima Station — referencia proporcional (diagrama) | brief | `static/assets/locations/proxima-station/proportional-reference.png` |
+| `brief/light-delay-brief-celestial-ardor-proportional-reference.png` | Celestial Ardor — referencia proporcional (diagrama) | brief | `static/assets/vehicles/celestial-ardor/proportional-reference.png` |
+| `brief/light-delay-brief-proxima-ardor-common-scale-reference.png` | Proxima + Celestial Ardor — escala común (diagrama) | brief | `static/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.png` |

@@ -144,6 +144,30 @@ const ENTRIES = [
 		slug: 'zao-optical-contingency-transmitter',
 		label: 'Zao ante el transmisor óptico de contingencia (animatic esc. 5 / toma 6)',
 		sourceRel: 'animatic/frames/scene-05/shot-06.png'
+	},
+	{
+		kind: 'brief',
+		slug: 'proxima-ardor-berthed',
+		label: 'Proxima con Celestial Ardor atracada (bloqueo 3D, escala común)',
+		sourceRel: 'locations/proxima-station/proxima-with-ardor-berthed.png'
+	},
+	{
+		kind: 'brief',
+		slug: 'proxima-station-proportional-reference',
+		label: 'Proxima Station — referencia proporcional (diagrama)',
+		sourceRel: 'locations/proxima-station/proportional-reference.png'
+	},
+	{
+		kind: 'brief',
+		slug: 'celestial-ardor-proportional-reference',
+		label: 'Celestial Ardor — referencia proporcional (diagrama)',
+		sourceRel: 'vehicles/celestial-ardor/proportional-reference.png'
+	},
+	{
+		kind: 'brief',
+		slug: 'proxima-ardor-common-scale-reference',
+		label: 'Proxima + Celestial Ardor — escala común (diagrama)',
+		sourceRel: 'art-bible/scale-references/proxima-ardor-common-scale-reference.png'
 	}
 ];
 
