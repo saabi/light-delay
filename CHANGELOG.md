@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-08-28 — Miniaturas de assets
+
+- Pipeline Sharp: `npm run thumbs:generate` / `thumbs:sync` escribe WebP (máx. 480 px) en `static/assets/_thumbs/` con manifiesto de procedencia.
+- Helper `thumbnailPathForAsset`; galerías de arte y listados de entidad cargan miniaturas; detalle de entidad y asset siguen a resolución completa.
+
+## 2026-08-28 — Carrusel de imágenes en entidades
+
+- Nuevo `ImageCarousel` en detalle de entidad: navega hojas, diagramas y renders vinculados vía `referenceAssetIds`.
+- Proxima Station y Celestial Ardor enlazan sheet, proportional PNG, stills de bloqueo (atraque / Júpiter) y la comparativa de escala común.
+- Cadenas Paraglide ES/EN para controles y etiquetas del carrusel.
+
 ## 2026-08-28 — Bloqueo 3D y plan de exteriores
 
 - Añadidos checklists de modelado Blender a `CELESTIAL_ARDOR.md` y `PROXIMA_STATION.md` (hábitats como rueda radial, espina estratificada, casco/motor/radiadores de la Ardor).

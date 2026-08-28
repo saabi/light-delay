@@ -130,6 +130,16 @@
 			"title": "Estación Proxima proportional reference (SVG)"
 		},
 		{
+			"id": "asset:location-proxima-station-berthed",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
+			"mimeType": "image/png",
+			"title": "Proxima con Celestial Ardor atracada",
+			"width": 1486,
+			"height": 1058
+		},
+		{
 			"id": "asset:location-proxima-dock-sheet",
 			"kind": "image",
 			"role": "reference",
@@ -256,6 +266,16 @@
 			"path": "/assets/vehicles/celestial-ardor/proportional-reference.svg",
 			"mimeType": "image/svg+xml",
 			"title": "Celestial Ardor proportional reference (SVG)"
+		},
+		{
+			"id": "asset:vehicle-celestial-ardor-jupiter",
+			"kind": "image",
+			"role": "reference",
+			"path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
+			"mimeType": "image/png",
+			"title": "Celestial Ardor con Júpiter",
+			"width": 1409,
+			"height": 1117
 		},
 		{
 			"id": "asset:scale-reference-proxima-ardor",

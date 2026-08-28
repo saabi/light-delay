@@ -7,7 +7,10 @@
 			"description": "Nave axial de 80–100 m y unas 300 t, antorcha D–³He, radiadores de metal líquido y dos semanas de autonomía. Sus cubiertas son transversales al empuje; un cilindro central, un ascensor y un cilindro de servicio conectan las zonas. El núcleo diplomático es un retrofit fuera del eje. Construida en la Tierra y adaptada en Proxima.",
 			"factionId": "faction:human",
 			"referenceAssetIds": [
-				"asset:vehicle-celestial-ardor-sheet"
+				"asset:vehicle-celestial-ardor-sheet",
+				"asset:vehicle-celestial-ardor-proportional",
+				"asset:vehicle-celestial-ardor-jupiter",
+				"asset:scale-reference-proxima-ardor"
 			]
 		},
 		{

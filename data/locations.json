@@ -6,7 +6,10 @@
 			"name": "Estación Proxima",
 			"description": "Infraestructura científica humana ampliada por décadas: módulos blancos antiguos, adiciones grafito y dos hábitats cilíndricos. Júpiter aparece lejano; no es una estación construida para el portal.",
 			"referenceAssetIds": [
-				"asset:location-proxima-station-sheet"
+				"asset:location-proxima-station-sheet",
+				"asset:location-proxima-station-proportional",
+				"asset:location-proxima-station-berthed",
+				"asset:scale-reference-proxima-ardor"
 			],
 			"atmosphere": "Exterior y silueta orbital"
 		},
