@@ -7,6 +7,7 @@
 		title: string;
 		description?: string;
 		imageSrc?: string;
+		imageSrcs?: string[];
 		eyebrow?: string;
 	};
 
@@ -20,6 +21,7 @@
 			title={item.title}
 			description={item.description}
 			imageSrc={item.imageSrc}
+			imageSrcs={item.imageSrcs}
 			eyebrow={item.eyebrow}
 		/>
 	{/each}

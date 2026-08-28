@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ImageCarousel from '$lib/components/media/ImageCarousel.svelte';
 	import { withBase, withLocale } from '$lib/utils/paths';
 
 	let {
@@ -6,22 +7,38 @@
 		title,
 		description,
 		imageSrc,
+		imageSrcs,
 		eyebrow
 	}: {
 		href: string;
 		title: string;
 		description?: string;
 		imageSrc?: string;
+		imageSrcs?: string[];
 		eyebrow?: string;
 	} = $props();
 
 	const resolvedHref = $derived(withLocale(href));
-	const resolvedImageSrc = $derived(imageSrc ? withBase(imageSrc) : undefined);
+	const sources = $derived(
+		imageSrcs && imageSrcs.length > 0 ? imageSrcs : imageSrc ? [imageSrc] : []
+	);
+	const singleSrc = $derived(sources.length === 1 ? withBase(sources[0]) : undefined);
+	const slides = $derived(
+		sources.map((src, i) => ({
+			id: `${src}-${i}`,
+			src,
+			alt: ''
+		}))
+	);
 </script>
 
 <a class="entity-card" href={resolvedHref}>
-	{#if resolvedImageSrc}
-		<img src={resolvedImageSrc} alt="" loading="lazy" />
+	{#if sources.length > 1}
+		<div class="media">
+			<ImageCarousel mode="auto" objectFit="cover" {slides} />
+		</div>
+	{:else if singleSrc}
+		<img src={singleSrc} alt="" loading="lazy" />
 	{:else}
 		<div class="placeholder" aria-hidden="true"></div>
 	{/if}
@@ -56,12 +73,27 @@
 		border-color: var(--cyan);
 	}
 
+	.media,
 	img,
 	.placeholder {
 		aspect-ratio: 16 / 10;
 		width: 100%;
 		object-fit: cover;
 		background: var(--panel2);
+	}
+
+	.media {
+		overflow: hidden;
+	}
+
+	.media :global(.carousel),
+	.media :global(.frame),
+	.media :global(.frame img) {
+		height: 100%;
+	}
+
+	.media :global(.frame) {
+		aspect-ratio: auto;
 	}
 
 	.body {

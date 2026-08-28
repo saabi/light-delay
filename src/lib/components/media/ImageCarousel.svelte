@@ -11,13 +11,23 @@
 	};
 
 	let {
-		slides
+		slides,
+		mode = 'manual',
+		intervalMs = 4000,
+		objectFit = 'contain'
 	}: {
 		slides: CarouselSlide[];
+		mode?: 'manual' | 'auto';
+		intervalMs?: number;
+		objectFit?: 'contain' | 'cover';
 	} = $props();
 
 	let index = $state(0);
+	let hovered = $state(false);
+	let rootEl: HTMLDivElement | undefined = $state();
 
+	const isAuto = $derived(mode === 'auto');
+	const showControls = $derived(!isAuto);
 	const count = $derived(slides.length);
 	const hasMultiple = $derived(count > 1);
 	const safeIndex = $derived(count === 0 ? 0 : ((index % count) + count) % count);
@@ -26,6 +36,7 @@
 	const statusLabel = $derived(
 		count > 0 ? m.carousel_slide({ current: safeIndex + 1, total: count }) : ''
 	);
+	const fitStyle = $derived(objectFit === 'cover' ? 'cover' : 'contain');
 
 	function go(delta: number) {
 		if (!hasMultiple) return;
@@ -38,7 +49,7 @@
 	}
 
 	function onNavKeydown(event: KeyboardEvent) {
-		if (!hasMultiple) return;
+		if (!hasMultiple || !showControls) return;
 		if (event.key === 'ArrowLeft') {
 			event.preventDefault();
 			go(-1);
@@ -47,12 +58,52 @@
 			go(1);
 		}
 	}
+
+	$effect(() => {
+		if (!isAuto || !rootEl) return;
+		const el = rootEl;
+		const onEnter = () => {
+			hovered = true;
+		};
+		const onLeave = () => {
+			hovered = false;
+		};
+		el.addEventListener('pointerenter', onEnter);
+		el.addEventListener('pointerleave', onLeave);
+		return () => {
+			el.removeEventListener('pointerenter', onEnter);
+			el.removeEventListener('pointerleave', onLeave);
+		};
+	});
+
+	$effect(() => {
+		if (!isAuto || !hasMultiple) return;
+
+		const reduced =
+			typeof window !== 'undefined' &&
+			window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (reduced || hovered) return;
+
+		const ms = intervalMs;
+		const id = window.setInterval(() => {
+			index += 1;
+		}, ms);
+
+		return () => window.clearInterval(id);
+	});
 </script>
 
 {#if current && resolvedSrc}
-	<div class="carousel" role="region" aria-roledescription="carousel" aria-label={m.carousel_label()}>
+	<div
+		bind:this={rootEl}
+		class="carousel"
+		class:auto={isAuto}
+		role="region"
+		aria-roledescription="carousel"
+		aria-label={m.carousel_label()}
+	>
 		<div class="stage">
-			{#if hasMultiple}
+			{#if showControls && hasMultiple}
 				<button
 					type="button"
 					class="nav prev"
@@ -65,16 +116,16 @@
 			{/if}
 
 			<figure class="slide">
-				{#if current.href}
-					<a class="frame" href={current.href}>
+				{#if !isAuto && current.href}
+					<a class="frame" href={current.href} style:--carousel-fit={fitStyle}>
 						<img src={resolvedSrc} alt={current.alt} loading="lazy" />
 					</a>
 				{:else}
-					<div class="frame">
+					<div class="frame" style:--carousel-fit={fitStyle}>
 						<img src={resolvedSrc} alt={current.alt} loading="lazy" />
 					</div>
 				{/if}
-				{#if current.caption || hasMultiple}
+				{#if showControls && (current.caption || hasMultiple)}
 					<figcaption>
 						<span class="caption">{current.caption ?? current.alt}</span>
 						{#if hasMultiple}
@@ -84,7 +135,7 @@
 				{/if}
 			</figure>
 
-			{#if hasMultiple}
+			{#if showControls && hasMultiple}
 				<button
 					type="button"
 					class="nav next"
@@ -97,7 +148,7 @@
 			{/if}
 		</div>
 
-		{#if hasMultiple}
+		{#if showControls && hasMultiple}
 			<div class="dots" role="group" aria-label={m.carousel_label()}>
 				{#each slides as slide, i (slide.id)}
 					<button
@@ -123,6 +174,11 @@
 		gap: 0.5rem;
 	}
 
+	.carousel.auto .stage {
+		display: block;
+		gap: 0;
+	}
+
 	.slide {
 		margin: 0;
 		min-width: 0;
@@ -141,10 +197,17 @@
 		text-decoration: none;
 	}
 
+	.carousel.auto .frame {
+		max-height: none;
+		border: none;
+		border-radius: 0;
+		background: var(--panel2);
+	}
+
 	.frame img {
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
+		object-fit: var(--carousel-fit, contain);
 		display: block;
 	}
 
@@ -213,23 +276,23 @@
 	}
 
 	@media (max-width: 560px) {
-		.stage {
+		.carousel:not(.auto) .stage {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			gap: 0.65rem;
 		}
 
-		.slide {
+		.carousel:not(.auto) .slide {
 			flex: 1 1 100%;
 			order: 1;
 		}
 
-		.nav.prev {
+		.carousel:not(.auto) .nav.prev {
 			order: 2;
 		}
 
-		.nav.next {
+		.carousel:not(.auto) .nav.next {
 			order: 3;
 		}
 	}

@@ -203,9 +203,21 @@ export function getEntityPrimaryImagePath(referenceAssetIds: string[]): string |
 export function getEntityPrimaryThumbnailPath(
 	referenceAssetIds: string[]
 ): string | undefined {
-	const full = getEntityPrimaryImagePath(referenceAssetIds);
-	if (!full) return undefined;
-	return thumbnailPathForAsset(full);
+	const paths = getEntityThumbnailPaths(referenceAssetIds);
+	return paths[0];
+}
+
+/** Raster reference thumbs in `referenceAssetIds` order (SVG sources skipped). */
+export function getEntityThumbnailPaths(referenceAssetIds: string[]): string[] {
+	const out: string[] = [];
+	for (const id of referenceAssetIds) {
+		const asset = getAssetById(id);
+		if (!asset || asset.kind !== 'image' || !asset.path.startsWith('/assets/')) continue;
+		if (asset.path.toLowerCase().endsWith('.svg')) continue;
+		const thumb = thumbnailPathForAsset(asset.path);
+		if (thumb) out.push(thumb);
+	}
+	return out;
 }
 
 export const ENTITY_KIND_LABELS: Record<EntityKind, string> = {

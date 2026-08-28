@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-28 — Carrusel automático en tarjetas
+
+- Las tarjetas de arte/entidades con varias miniaturas usan `ImageCarousel` en modo `auto` (sin controles, rotación periódica, pausa al hover y con `prefers-reduced-motion`).
+- El detalle de entidad conserva el carrusel manual con controles.
+
 ## 2026-08-28 — Miniaturas de assets
 
 - Pipeline Sharp: `npm run thumbs:generate` / `thumbs:sync` escribe WebP (máx. 480 px) en `static/assets/_thumbs/` con manifiesto de procedencia.
