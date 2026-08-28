@@ -1,7 +1,8 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import AnimaticEditor from '$lib/components/animatic/AnimaticEditor.svelte';
-	import { getScript } from '$lib/data/repositories/index';
+	import { getLocalizedScript } from '$lib/data/repositories/index';
+	import { getLanguageState } from '$lib/state/language.svelte';
 	import { getShotMedia } from '$lib/data/repositories/lookups';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import { withLocale } from '$lib/utils/paths';
@@ -10,9 +11,11 @@
 	import { onMount } from 'svelte';
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
 	import * as m from '$lib/paraglide/messages.js';
+	import { scriptKindLabel } from '$lib/data/selectors/scriptPresentation';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
-	const script = $derived(getScript(scriptId));
+	const language = $derived(getLanguageState());
+	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
 	const encoded = $derived(encodeScriptId(scriptId));
 
 	const groups = $derived.by(() => {
@@ -69,7 +72,7 @@
 		meta={[
 			`${script.shots.length} ${m.animatic_shots()}`,
 			`${script.scenes.length} ${m.script_scenes()}`,
-			script.script.kind
+			scriptKindLabel(script.script.kind)
 		]}
 	/>
 	<StoryLanguageNotice />

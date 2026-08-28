@@ -4,6 +4,7 @@ export * from './comparison.ts';
 export * from './i18n.ts';
 export * from './project.ts';
 export * from './script.ts';
+export * from './translations.ts';
 export * from './entities.ts';
 export * from './assets.ts';
 export * from './document.ts';

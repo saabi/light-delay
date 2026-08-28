@@ -5,7 +5,7 @@
 
 {#if getLocale() === 'en'}
 	<aside class="story-language-notice" role="note">
-		<span aria-hidden="true">ES</span>
+		<span aria-hidden="true">EN</span>
 		<p>{m.language_story_notice()}</p>
 	</aside>
 {/if}

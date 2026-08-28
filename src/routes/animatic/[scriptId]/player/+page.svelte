@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import AnimaticPlayer from '$lib/components/animatic/AnimaticPlayer.svelte';
-	import { getScript } from '$lib/data/repositories/index';
+	import { getLocalizedScript } from '$lib/data/repositories/index';
+	import { getLanguageState } from '$lib/state/language.svelte';
 	import { getCueById, getShotMedia } from '$lib/data/repositories/lookups';
 	import { setShotIndex } from '$lib/state/player.svelte';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
@@ -10,7 +11,8 @@
 	import { onMount } from 'svelte';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
-	const script = $derived(getScript(scriptId));
+	const language = $derived(getLanguageState());
+	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
 	const encoded = $derived(encodeScriptId(scriptId));
 
 	const orderedShots = $derived(

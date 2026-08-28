@@ -38,6 +38,9 @@ jobs:
       - name: Validate documentation
         run: npm run validate:docs
 
+      - name: Validate public translations
+        run: npm run validate:translations
+
       - name: Type-check SvelteKit
         run: npm run check
 

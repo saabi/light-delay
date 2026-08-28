@@ -2,15 +2,18 @@
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
 	import ScriptViewer from '$lib/components/script/ScriptViewer.svelte';
-	import { getScript } from '$lib/data/repositories/index';
+	import { getLocalizedScript } from '$lib/data/repositories/index';
+	import { getLanguageState } from '$lib/state/language.svelte';
 	import { decodeScriptId } from '$lib/utils/scriptId';
 	import type { Beat, Cue, Scene } from '$lib/types/script';
 	import { page } from '$app/state';
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
 	import * as m from '$lib/paraglide/messages.js';
+	import { scriptKindLabel, scriptStatusLabel } from '$lib/data/selectors/scriptPresentation';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
-	const script = $derived(getScript(scriptId));
+	const language = $derived(getLanguageState());
+	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
 
 	const scenesById = $derived(
 		Object.fromEntries(script.scenes.map((s) => [s.id, s])) as Record<string, Scene>
@@ -48,8 +51,8 @@
 			meta={[
 				`v${script.script.version}`,
 				`${script.scenes.length} ${m.script_scenes()}`,
-				script.script.status,
-				script.script.kind
+				scriptStatusLabel(script.script.status),
+				scriptKindLabel(script.script.kind)
 			]}
 		/>
 		<LanguageControls />

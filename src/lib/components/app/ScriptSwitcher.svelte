@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
-	import { listScripts } from '$lib/data/repositories/index';
+	import { listLocalizedScripts } from '$lib/data/repositories/index';
 	import { activeScriptIdFromParam, setActiveScriptId } from '$lib/state/active-script.svelte';
 	import { decodeScriptId } from '$lib/utils/scriptId';
 	import { hrefAfterScriptSwitch } from '$lib/utils/scriptRouting';
 	import * as m from '$lib/paraglide/messages.js';
 	import { scriptKindLabel, scriptLabel } from '$lib/data/selectors/scriptPresentation';
+	import { getLocale } from '$lib/paraglide/runtime.js';
 
-	const scripts = listScripts();
+	const scripts = listLocalizedScripts(getLocale());
 
 	const activeScriptId = $derived(activeScriptIdFromParam(page.params.scriptId));
 

@@ -5,28 +5,32 @@
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import {
 		getCharacters,
-		getComparisonTaxonomy,
-		getEntityVariants,
-		getNarrativeFunctions,
-		getScript,
-		listScripts
+		getLocalizedComparisonTaxonomy,
+		getLocalizedEntityVariants,
+		getLocalizedNarrativeFunctions,
+		getLocalizedScript,
+		listLocalizedScripts
 	} from '$lib/data/repositories/index';
+	import { getCharacterById } from '$lib/data/repositories/lookups';
 	import { compareScripts } from '$lib/data/selectors/comparison';
 	import { getFoundationalConflictWarnings } from '$lib/data/validation/validateComparison';
 	import { withLocale } from '$lib/utils/paths';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import { onMount } from 'svelte';
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
-	import { scriptLabel } from '$lib/data/selectors/scriptPresentation';
+	import { scriptLabel, scriptStatusLabel } from '$lib/data/selectors/scriptPresentation';
 	import * as m from '$lib/paraglide/messages.js';
+	import { getLocale } from '$lib/paraglide/runtime.js';
+	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
 
-	const registry = listScripts();
-	const taxonomy = getComparisonTaxonomy();
-	const characters = getCharacters().characters;
-	const variants = getEntityVariants().variants;
+	const locale = getLocale();
+	const registry = listLocalizedScripts(locale);
+	const taxonomy = getLocalizedComparisonTaxonomy(locale);
+	const characters = getCharacters().characters.map((character) => getCharacterById(character.id)!);
+	const variants = getLocalizedEntityVariants(locale).variants;
 	let interactive = $state(false);
 	const functionLabels = new Map(
-		getNarrativeFunctions().functions.map((item) => [item.id, item.label])
+		getLocalizedNarrativeFunctions(locale).functions.map((item) => [item.id, item.label])
 	);
 
 	const primaryId = $derived(decodeScriptId(page.params.scriptId ?? ''));
@@ -39,8 +43,8 @@
 			? requestedAgainst
 			: validAgainstIds[0]
 	);
-	const primary = $derived(getScript(primaryId));
-	const against = $derived(getScript(againstId));
+	const primary = $derived(getLocalizedScript(primaryId, locale));
+	const against = $derived(getLocalizedScript(againstId, locale));
 	const result = $derived(
 		compareScripts({
 			primary,
@@ -110,7 +114,11 @@
 		eyebrow={m.compare_eyebrow()}
 		title={`${primaryEntry ? scriptLabel(primaryEntry) : primary.script.title} ↔ ${againstEntry ? scriptLabel(againstEntry) : against.script.title}`}
 		lede={m.compare_lede()}
-		meta={[primary.script.status, against.script.status, primary.script.continuityId]}
+		meta={[
+			scriptStatusLabel(primary.script.status),
+			scriptStatusLabel(against.script.status),
+			primary.script.continuityId
+		]}
 	/>
 
 	<label class="against-picker">
@@ -153,12 +161,16 @@
 							<th>{row.definition.label}</th>
 							<td
 								>{row.primary?.statement ?? m.compare_unspecified()}<small
-									>{row.primary?.status ?? ''}</small
+									>{row.primary?.status
+										? editorialValueLabel(row.primary.status, locale)
+										: ''}</small
 								></td
 							>
 							<td
 								>{row.against?.statement ?? m.compare_unspecified()}<small
-									>{row.against?.status ?? ''}</small
+									>{row.against?.status
+										? editorialValueLabel(row.against.status, locale)
+										: ''}</small
 								></td
 							>
 							<td
@@ -190,14 +202,18 @@
 						<tr>
 							<th>{row.definition.label}</th>
 							<td
-								>{row.primary?.status ?? m.compare_unspecified()}{#if row.primary?.sceneIds?.[0]}<a
+								>{row.primary?.status
+									? editorialValueLabel(row.primary.status, locale)
+									: m.compare_unspecified()}{#if row.primary?.sceneIds?.[0]}<a
 										href={withLocale(
 											`/script/${encodeScriptId(primaryId)}#${row.primary.sceneIds[0]}`
 										)}>{m.compare_view_scene()}</a
 									>{/if}</td
 							>
 							<td
-								>{row.against?.status ?? m.compare_unspecified()}{#if row.against?.sceneIds?.[0]}<a
+								>{row.against?.status
+									? editorialValueLabel(row.against.status, locale)
+									: m.compare_unspecified()}{#if row.against?.sceneIds?.[0]}<a
 										href={withLocale(
 											`/script/${encodeScriptId(againstId)}#${row.against.sceneIds[0]}`
 										)}>{m.compare_view_scene()}</a

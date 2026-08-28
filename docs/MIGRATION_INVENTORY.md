@@ -14,11 +14,13 @@ Todas las páginas enlazadas por el índice legacy tienen un destino actual. El 
 | `reporte-comprensivo.html` | `/documents/reporte-comprensivo` | ES reconciliado + EN draft |
 | `momentos-clave.html` | `/documents/momentos-clave` | ES reconciliado + EN draft |
 | `version-acotada-30-min.html` | `/documents/estructura-30-minutos` | ES reconciliado + EN draft |
-| `guion-30-minutos.html` | `/script/[scriptId]` | estructura portada; traducción narrativa diferida |
-| `animatic-textual.html` | `/animatic/[scriptId]` | estructura portada; traducción narrativa diferida |
+| `guion-30-minutos.html` | `/script/[scriptId]` | estructura portada; ES fuente + EN draft |
+| `animatic-textual.html` | `/animatic/[scriptId]` | estructura portada; ES fuente + EN draft |
 | índices de arte/personajes | `/art` y `/entities/*` | ES/EN completo |
 
 `npm run port:legacy-text` vuelve a extraer los cinco documentos prose de forma determinista. No modifica `legacy-site/`: aplica reconciliaciones explícitas de canon a la copia española estructurada y exige que la traducción inglesa conserve la misma topología de bloques.
+
+El guion y animatic actuales ya no se traducen desde HTML: comparten `ScriptFile` por cut y aplican el overlay `data/translations/public.en.json`, cuya cobertura se controla con `npm run validate:translations`.
 
 ## Páginas HTML
 

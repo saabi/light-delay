@@ -2698,7 +2698,8 @@
       "title": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Decisiones de canon"
+          "es": "Decisiones de canon",
+          "en": "Canon decisions"
         }
       },
       "status": "stub",
@@ -2707,7 +2708,8 @@
       "summary": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Puntero a las decisiones de canon vigentes en docs/."
+          "es": "Puntero a las decisiones de canon vigentes en docs/.",
+          "en": "Pointer to the current canon decisions in docs/."
         }
       },
       "blocks": [
@@ -2755,11 +2757,33 @@
               "type": "paragraph",
               "text": "Pendiente: importar bloques desde el markdown de decisiones en una fase editorial."
             }
+          ],
+          "en": [
+            {
+              "type": "heading",
+              "level": 2,
+              "text": "Canonical source",
+              "id": "fuente-canonica"
+            },
+            {
+              "type": "paragraph",
+              "text": "Current decisions live in docs/CANON_DECISIONS.md. This page is a minimal mirror for navigation from the app."
+            },
+            {
+              "type": "callout",
+              "kind": "warning",
+              "text": "Do not rewrite canon to solve implementation difficulties. Record conflicts in docs/PROJECT_STATUS.md."
+            },
+            {
+              "type": "paragraph",
+              "text": "Pending: import blocks from the decisions Markdown in a later editorial phase."
+            }
           ]
         }
       },
       "translationStatus": {
-        "es": "source"
+        "es": "source",
+        "en": "draft"
       }
     },
     {
@@ -2768,7 +2792,8 @@
       "title": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Informe histórico del largometraje"
+          "es": "Informe histórico del largometraje",
+          "en": "Historical feature-film report"
         }
       },
       "status": "review",
@@ -2777,7 +2802,8 @@
       "summary": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Fuente histórica en inglés; no autoritativa frente a la revisión española."
+          "es": "Fuente histórica en inglés; no autoritativa frente a la revisión española.",
+          "en": "Historical English-language source; not authoritative over the Spanish review."
         }
       },
       "blocks": [
@@ -2797,11 +2823,19 @@
               "kind": "warning",
               "text": "Documento histórico. Consultar docs/REVISION_LARGOMETRAJE_RECUPERADO.md para decisiones vigentes."
             }
+          ],
+          "en": [
+            {
+              "type": "callout",
+              "kind": "warning",
+              "text": "Historical document. See docs/REVISION_LARGOMETRAJE_RECUPERADO.md for current decisions."
+            }
           ]
         }
       },
       "translationStatus": {
-        "es": "source"
+        "es": "source",
+        "en": "draft"
       }
     },
     {
@@ -2810,7 +2844,8 @@
       "title": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Momentos históricos del largometraje"
+          "es": "Momentos históricos del largometraje",
+          "en": "Historical feature-film beats"
         }
       },
       "status": "review",
@@ -2819,7 +2854,8 @@
       "summary": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Lista histórica de 28 momentos; contiene mecánicas descartadas."
+          "es": "Lista histórica de 28 momentos; contiene mecánicas descartadas.",
+          "en": "Historical list of 28 beats; includes discarded mechanics."
         }
       },
       "blocks": [
@@ -2839,11 +2875,19 @@
               "kind": "warning",
               "text": "Fuente de recuperación, no canon vigente por sí sola."
             }
+          ],
+          "en": [
+            {
+              "type": "callout",
+              "kind": "warning",
+              "text": "Recovery source; it is not current canon on its own."
+            }
           ]
         }
       },
       "translationStatus": {
-        "es": "source"
+        "es": "source",
+        "en": "draft"
       }
     },
     {
@@ -2852,7 +2896,8 @@
       "title": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Revisión del largometraje recuperado"
+          "es": "Revisión del largometraje recuperado",
+          "en": "Recovered feature-film review"
         }
       },
       "status": "review",
@@ -2861,7 +2906,8 @@
       "summary": {
         "sourceLanguage": "es",
         "variants": {
-          "es": "Decisiones editoriales sobre canon, reparto y material recuperado."
+          "es": "Decisiones editoriales sobre canon, reparto y material recuperado.",
+          "en": "Editorial decisions about canon, cast, and recovered material."
         }
       },
       "blocks": [
@@ -2879,11 +2925,18 @@
               "type": "paragraph",
               "text": "Esta página apunta a la revisión española autoritativa del material histórico."
             }
+          ],
+          "en": [
+            {
+              "type": "paragraph",
+              "text": "This page points to the authoritative Spanish review of the historical material."
+            }
           ]
         }
       },
       "translationStatus": {
-        "es": "source"
+        "es": "source",
+        "en": "draft"
       }
     }
   ]

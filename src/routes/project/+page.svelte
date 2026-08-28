@@ -4,7 +4,7 @@
 		getCanonicalScript,
 		getDocuments,
 		getProject,
-		listScripts
+		listLocalizedScripts
 	} from '$lib/data/repositories/index';
 	import { resolveDocument } from '$lib/data/selectors/localized';
 	import {
@@ -16,9 +16,10 @@
 	import * as m from '$lib/paraglide/messages.js';
 	import { encodeScriptId } from '$lib/utils/scriptId';
 	import { withLocale } from '$lib/utils/paths';
+	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
 
 	const project = getProject().project;
-	const scripts = listScripts();
+	const scripts = listLocalizedScripts(getLocale());
 	const canonical = getCanonicalScript();
 	const documents = $derived(
 		getDocuments().documents.map((document) => resolveDocument(document, getLocale()))
@@ -81,7 +82,7 @@
 				{#each documents as doc (doc.id)}<li>
 						<div>
 							<a href={withLocale(`/documents/${doc.slug}`)}>{doc.title}</a><small
-								>{doc.status}</small
+								>{editorialValueLabel(doc.status, getLocale())}</small
 							>
 						</div>
 					</li>{/each}

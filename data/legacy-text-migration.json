@@ -42,13 +42,13 @@
       "source": "legacy-site/guion-30-minutos.html",
       "destination": "/script/[scriptId]",
       "disposition": "ported",
-      "translation": "deferred-story"
+      "translation": "complete"
     },
     {
       "source": "legacy-site/animatic-textual.html",
       "destination": "/animatic/[scriptId]",
       "disposition": "ported",
-      "translation": "deferred-story"
+      "translation": "complete"
     },
     {
       "source": "legacy-site/assets/art-bible/index.html",

@@ -30,6 +30,13 @@ import type { DocumentsFile } from '$lib/types/document';
 import type { ScriptId } from '$lib/types/ids';
 import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import { assertJsonModule } from '../loaders/loadJson.ts';
+import {
+	localizeComparisonTaxonomy,
+	localizeEntityVariants,
+	localizeNarrativeFunctions,
+	localizeScript,
+	localizeScriptRegistryEntries
+} from '../selectors/publicTranslations.ts';
 
 const SCRIPT_MODULES: Record<string, ScriptFile> = {
 	'script:light-delay-main-short': assertJsonModule(
@@ -63,6 +70,10 @@ export function listScripts(): ScriptRegistryEntry[] {
 	return getProject().project.scripts ?? [];
 }
 
+export function listLocalizedScripts(language: string): ScriptRegistryEntry[] {
+	return localizeScriptRegistryEntries(listScripts(), language);
+}
+
 export function getCanonicalScript(): ScriptFile {
 	const id = getProject().project.canonicalScriptId;
 	return getScript(id);
@@ -87,16 +98,33 @@ export function getScript(scriptId: ScriptId): ScriptFile {
 	);
 }
 
+export function getLocalizedScript(scriptId: ScriptId, language: string): ScriptFile {
+	return localizeScript(getScript(scriptId), language);
+}
+
 export function getNarrativeFunctions(): NarrativeFunctionsFile {
 	return assertJsonModule(narrativeFunctionsJson as NarrativeFunctionsFile, 'narrative-functions');
+}
+
+export function getLocalizedNarrativeFunctions(language: string): NarrativeFunctionsFile {
+	return localizeNarrativeFunctions(getNarrativeFunctions(), language);
 }
 
 export function getEntityVariants(): EntityVariantsFile {
 	return assertJsonModule(entityVariantsJson as EntityVariantsFile, 'entity-variants');
 }
 
+export function getLocalizedEntityVariants(language: string): EntityVariantsFile {
+	const source = getEntityVariants();
+	return { ...source, variants: localizeEntityVariants(source.variants, language) };
+}
+
 export function getComparisonTaxonomy(): ComparisonTaxonomyFile {
 	return assertJsonModule(comparisonTaxonomyJson as ComparisonTaxonomyFile, 'comparison-taxonomy');
+}
+
+export function getLocalizedComparisonTaxonomy(language: string): ComparisonTaxonomyFile {
+	return localizeComparisonTaxonomy(getComparisonTaxonomy(), language);
 }
 
 export function getAssets(): AssetsFile {

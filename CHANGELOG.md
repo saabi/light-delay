@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-28 — Traducción estructurada de contenido público
+
+- Añadido `data/translations/public.en.json` como overlay inglés `draft` para los cuatro scripts, diálogo, subtítulos derivados, escenas, beats, tomas, assets y datos del comparador; el español permanece intacto y autoritativo.
+- Las rutas inglesas eligen contenido/subtítulos EN en la primera visita y las españolas ES; las selecciones manuales se conservan. El lector, animatic, player, selector y comparador consumen datos localizados sin duplicar `ScriptFile`.
+- Traducidas las cuatro referencias documentales públicas que sólo tenían español y actualizado el ledger legacy; los nueve documentos registrados ofrecen ahora variantes ES/EN.
+- Incorporado `npm run validate:translations` al gate de Pages: exige cobertura exacta de 1031 cadenas y detecta fuentes nuevas/cambiadas y claves huérfanas. Añadidas pruebas unitarias y regresiones browser para idioma por defecto, persistencia y documentos.
+- Corregido el prerender multilingüe para no confundir el `localStorage` experimental de Node con un navegador: `/es/` conserva relato ES y las rutas sin prefijo relato EN también en el HTML estático.
+
 ## 2026-08-28 — Saneamiento y validación documental
 
 - Reconciliados los documentos activos con el estado estructurado vigente: 17 escenas, 112 tomas/takes, 100 frames legacy y 132 imágenes registradas.

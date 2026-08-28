@@ -1,3 +1,6 @@
+import { browser } from '$app/environment';
+import { getLocale } from '$lib/paraglide/runtime.js';
+
 const STORAGE_KEY = 'light-delay.language';
 
 export type LanguageState = {
@@ -7,27 +10,41 @@ export type LanguageState = {
 };
 
 function load(): LanguageState {
-	if (typeof localStorage === 'undefined') {
-		return { interfaceLanguage: getLocale(), dialogueLanguage: 'es', subtitleLanguage: 'es' };
+	const routeLanguage = getLocale();
+	if (!browser) {
+		return {
+			interfaceLanguage: routeLanguage,
+			dialogueLanguage: routeLanguage,
+			subtitleLanguage: routeLanguage
+		};
 	}
 	try {
 		const raw = localStorage.getItem(STORAGE_KEY);
 		if (!raw) {
-			return { interfaceLanguage: getLocale(), dialogueLanguage: 'es', subtitleLanguage: 'es' };
+			return {
+				interfaceLanguage: routeLanguage,
+				dialogueLanguage: routeLanguage,
+				subtitleLanguage: routeLanguage
+			};
 		}
 		const parsed = JSON.parse(raw) as Partial<LanguageState>;
 		return {
 			interfaceLanguage: getLocale(),
-			dialogueLanguage: parsed.dialogueLanguage ?? 'es',
-			subtitleLanguage: parsed.subtitleLanguage === undefined ? 'es' : parsed.subtitleLanguage
+			dialogueLanguage: parsed.dialogueLanguage ?? routeLanguage,
+			subtitleLanguage:
+				parsed.subtitleLanguage === undefined ? routeLanguage : parsed.subtitleLanguage
 		};
 	} catch {
-		return { interfaceLanguage: getLocale(), dialogueLanguage: 'es', subtitleLanguage: 'es' };
+		return {
+			interfaceLanguage: routeLanguage,
+			dialogueLanguage: routeLanguage,
+			subtitleLanguage: routeLanguage
+		};
 	}
 }
 
 function persist(state: LanguageState) {
-	if (typeof localStorage === 'undefined') return;
+	if (!browser) return;
 	localStorage.setItem(
 		STORAGE_KEY,
 		JSON.stringify({
@@ -40,6 +57,14 @@ function persist(state: LanguageState) {
 let language = $state<LanguageState>(load());
 
 export function getLanguageState(): LanguageState {
+	if (!browser) {
+		const routeLanguage = getLocale();
+		return {
+			interfaceLanguage: routeLanguage,
+			dialogueLanguage: routeLanguage,
+			subtitleLanguage: routeLanguage
+		};
+	}
 	return { ...language, interfaceLanguage: getLocale() };
 }
 
@@ -52,4 +77,3 @@ export function setSubtitleLanguage(tag: string | null) {
 	language = { ...language, subtitleLanguage: tag };
 	persist(language);
 }
-import { getLocale } from '$lib/paraglide/runtime.js';

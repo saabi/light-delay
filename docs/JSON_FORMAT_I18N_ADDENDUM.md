@@ -37,9 +37,11 @@ export interface DocumentRecord {
 }
 ```
 
-Entity galleries currently keep Spanish records canonical and apply a complete English translation overlay at read time. The overlay may translate human-facing names, roles, and descriptions, but never IDs, asset links, or canon relationships.
+Entity galleries keep Spanish records canonical and apply an English translation overlay at read time. The overlay may translate human-facing names, roles, and descriptions, but never IDs, asset links, or canon relationships.
 
-The screenplay, dialogue, derived subtitles, scene/beat prose, and shot descriptions are intentionally outside the completed website-copy migration. Until their English variants are authored and reviewed, English pages display a visible notice and render those narrative fields from Spanish.
+The four registered scripts, dialogue, derived subtitles, scene/beat prose, shot/take metadata, assets, comparison taxonomy, narrative functions, and entity variants now use `data/translations/public.en.json`. Its keys are exact Spanish source strings: `npm run validate:translations` reports a changed or new Spanish string as missing and a superseded key as orphaned. This provides staleness detection without duplicating acts, scenes, beats, shots, or takes.
+
+At read time, English dialogue and text-cue variants are injected with `status: "draft"`; no audio or voice asset is inferred. Subtitles continue to derive from the selected dialogue variant. Unprefixed English routes default story and subtitle selection to English on first visit, while `/es/` defaults them to Spanish; a later manual choice persists locally. English pages identify the translation as a draft, and Spanish remains authoritative.
 
 ## 2. Language Definitions
 

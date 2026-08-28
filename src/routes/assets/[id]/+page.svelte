@@ -2,6 +2,8 @@
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import { withBase } from '$lib/utils/paths';
 	import * as m from '$lib/paraglide/messages.js';
+	import { getLocale } from '$lib/paraglide/runtime.js';
+	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
 
 	let { data } = $props();
 	const asset = $derived(data.asset);
@@ -9,10 +11,14 @@
 
 <main class="page">
 	<PageHeader
-		eyebrow="Asset"
+		eyebrow={m.asset_label()}
 		title={asset.title ?? asset.id}
 		lede={asset.description}
-		meta={[asset.kind, asset.role, asset.path]}
+		meta={[
+			editorialValueLabel(asset.kind, getLocale()),
+			editorialValueLabel(asset.role, getLocale()),
+			asset.path
+		]}
 	/>
 
 	{#if asset.kind === 'image'}
@@ -31,11 +37,11 @@
 		</div>
 		<div>
 			<dt>{m.asset_type()}</dt>
-			<dd>{asset.kind}</dd>
+			<dd>{editorialValueLabel(asset.kind, getLocale())}</dd>
 		</div>
 		<div>
 			<dt>{m.asset_role()}</dt>
-			<dd>{asset.role}</dd>
+			<dd>{editorialValueLabel(asset.role, getLocale())}</dd>
 		</div>
 		{#if asset.width && asset.height}
 			<div>

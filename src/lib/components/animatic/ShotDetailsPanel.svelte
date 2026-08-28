@@ -9,6 +9,7 @@
 		type ShotMedia
 	} from '$lib/data/repositories/lookups';
 	import { resolveLocalized } from '$lib/data/selectors/index';
+	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import type { EntityRef, Note } from '$lib/types/common';
 	import type { Cue, CuePlacement, ScriptFile, Shot, SourceReference } from '$lib/types/script';
@@ -48,8 +49,7 @@
 	const imageStatus = $derived(media.take?.imageStatus ?? media.asset?.imageStatus);
 
 	function present(value: unknown): string {
-		if (value === undefined || value === null || value === '') return '—';
-		return String(value);
+		return editorialValueLabel(value, lang.interfaceLanguage);
 	}
 
 	function ms(value: number | undefined): string {
@@ -73,7 +73,7 @@
 	}
 
 	function noteLabel(note: Note): string {
-		return `${note.type}${note.resolved ? ` · ${m.details_resolved()}` : ''}: ${note.text}`;
+		return `${present(note.type)}${note.resolved ? ` · ${m.details_resolved()}` : ''}: ${note.text}`;
 	}
 
 	function sourceLabel(source: SourceReference): string {
@@ -94,7 +94,7 @@
 			parts.push(`${m.details_offset()} ${ms(placement.sourceOffsetMs)}`);
 		if (placement.gainDb !== undefined) parts.push(`${m.details_gain()} ${placement.gainDb} dB`);
 		if (placement.presentationOverride)
-			parts.push(`${m.details_presentation()} ${placement.presentationOverride}`);
+			parts.push(`${m.details_presentation()} ${present(placement.presentationOverride)}`);
 		const localized = placement.timingByLanguage?.[lang.dialogueLanguage];
 		if (localized) parts.push(m.details_timing_available({ language: lang.dialogueLanguage }));
 		return parts.join(' · ');
@@ -111,7 +111,7 @@
 			</div>
 			<div>
 				<dt>{m.details_position()}</dt>
-				<dd>{shotIndex + 1} de {totalShots}</dd>
+				<dd>{shotIndex + 1} {m.details_of()} {totalShots}</dd>
 			</div>
 			<div>
 				<dt>{m.details_shot_id()}</dt>
@@ -169,7 +169,7 @@
 			</dl>
 			{#each beats as beat (beat.id)}
 				<div class="beat">
-					<b>{beat.title ?? `Beat ${beat.order}`}</b>
+					<b>{beat.title ?? `${m.details_beat()} ${beat.order}`}</b>
 					<p>{beat.summary}</p>
 					<p>
 						<span>{m.details_function()}:</span>
@@ -286,7 +286,9 @@
 				{#each cues as cue (cue.id)}
 					{@const placement = placementByCueId.get(cue.id)}
 					<li>
-						<div class="cue-heading"><b>{cue.type}</b><span>{timingLabel(placement)}</span></div>
+						<div class="cue-heading">
+							<b>{present(cue.type)}</b><span>{timingLabel(placement)}</span>
+						</div>
 						{#if cue.type === 'action'}
 							<p>{cue.text}</p>
 						{:else if cue.type === 'dialogue'}
@@ -294,12 +296,12 @@
 							<p>
 								<b>{characterName(cue.speakerId)}</b>{cue.addresseeIds?.length
 									? ` ${m.details_to()} ${cue.addresseeIds.map(characterName).join(', ')}`
-									: ''} · {placement?.presentationOverride ?? cue.presentation}
+									: ''} · {present(placement?.presentationOverride ?? cue.presentation)}
 							</p>
 							<p class="quote">“{resolved?.value.spokenText ?? m.details_no_variant()}”</p>
 							{#if cue.performance}<p>
 									{m.details_performance()}: {Object.entries(cue.performance)
-										.map(([key, value]) => `${key} ${value}`)
+										.map(([key, value]) => `${present(key)} ${value}`)
 										.join(' · ')}
 								</p>{/if}
 							{#if resolved?.value.delivery}<p>
@@ -330,7 +332,7 @@
 							<p>{cue.transition}{cue.description ? ` · ${cue.description}` : ''}</p>
 						{:else if cue.type === 'text'}
 							{@const resolved = resolveLocalized(cue.content, lang.dialogueLanguage, 'es')}
-							<p>{cue.presentation} · {resolved?.value.text ?? m.details_no_variant()}</p>
+							<p>{present(cue.presentation)} · {resolved?.value.text ?? m.details_no_variant()}</p>
 						{/if}
 						{#if cue.notes?.length}<ul>
 								{#each cue.notes as note (note)}<li>{noteLabel(note)}</li>{/each}
@@ -347,7 +349,9 @@
 			<div>
 				<dt>{m.details_selected_take()}</dt>
 				<dd>
-					{media.take ? `${media.take.number} · ${media.take.status}` : m.details_unavailable()}
+					{media.take
+						? `${media.take.number} · ${present(media.take.status)}`
+						: m.details_unavailable()}
 				</dd>
 			</div>
 			<div>
@@ -373,14 +377,16 @@
 			<div>
 				<dt>{m.details_visual_status()}</dt>
 				<dd>
-					{media.take?.imageStatus?.status ??
-						media.asset?.imageStatus?.status ??
-						(media.state === 'missing' ? 'missing' : 'current')}
+					{present(
+						media.take?.imageStatus?.status ??
+							media.asset?.imageStatus?.status ??
+							(media.state === 'missing' ? 'missing' : 'current')
+					)}
 				</dd>
 			</div>
 		</dl>
 		{#if imageStatus}
-			<p><b>{m.details_reasons()}</b><br />{imageStatus.reasons.join(', ')}</p>
+			<p><b>{m.details_reasons()}</b><br />{imageStatus.reasons.map(present).join(', ')}</p>
 			{#if imageStatus.explanation}<p>
 					<b>{m.details_explanation()}</b><br />{imageStatus.explanation}
 				</p>{/if}

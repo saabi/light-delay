@@ -5,6 +5,7 @@ import type { Cue, Scene, ScriptFile, Shot, Take } from '$lib/types/script';
 import type { ScriptId } from '$lib/types/ids';
 import entityTranslations from '../../../../data/translations/entities.en.json';
 import { getLocale } from '$lib/paraglide/runtime.js';
+import { localizeAsset } from '$lib/data/selectors/publicTranslations';
 import { thumbnailPathForAsset } from '$lib/utils/thumbnailPath';
 import {
 	getAssets,
@@ -35,7 +36,8 @@ export function getDocumentBySlug(slug: string): DocumentRecord | undefined {
 }
 
 export function getAssetById(id: string): Asset | undefined {
-	return getAssets().assets.find((a) => a.id === id);
+	const asset = getAssets().assets.find((a) => a.id === id);
+	return asset ? localizeAsset(asset, getLocale()) : undefined;
 }
 
 export function getCharacterById(id: string): Character | undefined {
@@ -200,9 +202,7 @@ export function getEntityPrimaryImagePath(referenceAssetIds: string[]): string |
 }
 
 /** Derived WebP thumb under `/assets/_thumbs/` for the primary reference image. */
-export function getEntityPrimaryThumbnailPath(
-	referenceAssetIds: string[]
-): string | undefined {
+export function getEntityPrimaryThumbnailPath(referenceAssetIds: string[]): string | undefined {
 	const paths = getEntityThumbnailPaths(referenceAssetIds);
 	return paths[0];
 }

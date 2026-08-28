@@ -35,7 +35,7 @@ test('public landing is English-first and has crawlable project links', async ({
 test('Spanish landing is prerendered and localized', async ({ page }) => {
 	await page.goto('/es/');
 	await expect(
-		page.getByRole('heading', { name: 'Un mensaje dirigido al lugar donde estará la nave.' })
+		page.getByRole('heading', { name: 'Un mensaje dirigido a donde la nave todavía no llegó.' })
 	).toBeVisible();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'es');
 	await expect(
@@ -63,6 +63,35 @@ test('festival script exposes localized editorial labels', async ({ page }) => {
 	await page.goto('/script/script~light-delay-festival');
 	await expect(page.getByRole('heading', { name: /Festival Cut/i }).first()).toBeVisible();
 	await expect(page.getByRole('heading', { name: 'Narrative functions' })).toBeVisible();
+});
+
+test('screenplay content defaults to the route language and preserves a manual choice', async ({
+	page
+}) => {
+	await page.goto('/script/script~light-delay-main-short');
+	await expect(
+		page.getByRole('heading', { name: 'Light Delay — Short Film Screenplay' }).first()
+	).toBeVisible();
+	await expect(page.getByText('Boarding and transit', { exact: true })).toBeVisible();
+	await expect(
+		page.getByText('The signature looks forged. The physical relay points to—', { exact: true })
+	).toBeVisible();
+
+	await page.getByLabel('Story and dialogue').selectOption('es');
+	await expect(page.getByText('Embarque y tránsito', { exact: true })).toBeVisible();
+	await page.reload();
+	await expect(page.getByText('Embarque y tránsito', { exact: true })).toBeVisible();
+
+	await page.evaluate(() => localStorage.removeItem('light-delay.language'));
+	await page.goto('/es/script/script~light-delay-main-short');
+	await expect(page.getByText('Embarque y tránsito', { exact: true })).toBeVisible();
+});
+
+test('English public document stubs expose their draft variants', async ({ page }) => {
+	await page.goto('/documents/canon-decisions');
+	await expect(page.getByRole('heading', { name: 'Canon decisions' })).toBeVisible();
+	await expect(page.getByText('Canonical source', { exact: true })).toBeVisible();
+	await expect(page.getByText('English translation under review', { exact: true })).toBeVisible();
 });
 
 test('/animatic redirects and is scoped by script ID', async ({ page }) => {

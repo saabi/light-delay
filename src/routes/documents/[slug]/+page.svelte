@@ -4,6 +4,7 @@
 	import { resolveDocument } from '$lib/data/selectors/localized';
 	import { getLocale } from '$lib/paraglide/runtime.js';
 	import * as m from '$lib/paraglide/messages.js';
+	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
 
 	let { data } = $props();
 	const doc = $derived(resolveDocument(data.document, getLocale()));
@@ -15,7 +16,7 @@
 		title={doc.title}
 		lede={doc.summary}
 		meta={[
-			doc.status,
+			editorialValueLabel(doc.status, getLocale()),
 			doc.resolvedLanguage.toUpperCase(),
 			...(doc.translationStatus?.en === 'draft' && getLocale() === 'en'
 				? [m.documents_translation_draft()]

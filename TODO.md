@@ -22,8 +22,8 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 
 ### Gate de CI, formato y runtime soportado
 
-- **Archivos afectados:** `.nvmrc`, `.github/workflows/pages.yml`, configuración de Playwright/Prettier y los 16 archivos señalados por `npm run lint`.
-- **Problema:** Node 25 está fuera de soporte; CI no ejecuta lint ni E2E; `npm run lint` falla actualmente en Prettier aunque ESLint por separado pasa. Las 12 pruebas browser pasan localmente, pero no protegen el despliegue.
+- **Archivos afectados:** `.nvmrc`, `.github/workflows/pages.yml`, configuración de Playwright/Prettier y los 18 archivos señalados por `npm run lint`.
+- **Problema:** Node 25 está fuera de soporte; CI no ejecuta lint ni E2E; `npm run lint` informa 18 archivos fuera de formato pero hoy termina con código 0, por lo que no funciona como gate estricto. Las 14 pruebas browser pasan localmente, pero no protegen el despliegue.
 - **Trabajo:** migrar a una línea LTS soportada, formatear el árbol, ejecutar lint y Playwright en PR/push, y conservar descarga LFS + build con `BASE_PATH`.
 - **Cierre:** instalación limpia, validación, check, lint, unit, E2E y build Pages pasan en CI sobre Node LTS.
 
@@ -72,20 +72,12 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 - **Fuente:** `docs/technical/CELESTIAL_ARDOR.md` y `docs/technical/PROXIMA_STATION.md`.
 - **Cierre:** no quedan descripciones activas de la nave dentro de un hangar gigante.
 
-### Traducción narrativa al inglés
-
-- **Archivos afectados:** cues de diálogo, subtítulos derivados, texto de escenas/beats/tomas en `data/scripts/*.json` y contratos i18n.
-- **Estado ya resuelto:** interfaz, landing, documentos prose y galerías tienen versiones inglesas; no deben volver a incluirse en esta deuda.
-- **Problema pendiente:** el guion, el diálogo, los subtítulos y las descripciones narrativas de toma permanecen en español.
-- **Trabajo:** añadir variantes inglesas desde la fuente española, con estado editorial revisable y sin convertir el inglés en autoría paralela del canon. Los subtítulos deben seguir derivándose del diálogo.
-- **Cierre:** un visitante puede leer o reproducir cada script en ES/EN; la validación detecta variantes ausentes o desactualizadas y ante conflicto prevalece el español (`AGENTS.md`).
-
 ### Madurez editorial de documentos, scripts y medios
 
-- **Estado medido:** los cuatro scripts están en `draft`; las cinco traducciones inglesas de documentos prose están en `draft` y ninguna en `reviewed`; el documento de canon sigue como `stub` y tres documentos históricos/revisión sólo tienen un bloque español de referencia.
+- **Estado medido:** los cuatro scripts están en `draft`; las traducciones inglesas de los nueve documentos públicos y el catálogo estructurado de guiones/assets/comparación están en `draft`, ninguna en `reviewed`; el documento de canon sigue como `stub`.
 - **Medios:** los 132 assets registrados son imágenes. No hay audio ni video; los diez perfiles de voz no tienen muestras.
 - **Cobertura visual:** 10 de los 21 personajes catalogados no tienen asset de referencia. No todos necesitan model sheet; priorizar según el cut que entre en producción y no generar arte sin autorización.
-- **Trabajo:** definir qué estados deben alcanzar antes de una publicación/festival, revisar las traducciones prose, completar la proyección estructurada del canon y planificar audio/video sin confundir material de referencia con producción final.
+- **Trabajo:** definir qué estados deben alcanzar antes de una publicación/festival, revisar las traducciones prose y narrativas —incluido el borrador asistido que cubre 1031 cadenas—, completar la proyección estructurada del canon y planificar audio/video sin confundir material de referencia con producción final.
 - **Cierre:** los estados editoriales describen una revisión real, el sitio no presenta borradores como aprobados y cada medio final tiene procedencia y elegibilidad verificadas.
 
 ### Cobertura de regresión del modo Película
@@ -95,6 +87,12 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 - **Cierre:** las funciones obligatorias de `AGENTS.md` cuentan con pruebas estables y ejecutadas en el gate de publicación.
 
 ## Prioridad baja
+
+### Carga diferida del catálogo inglés
+
+- **Problema medido:** el overlay completo se importa hoy junto con los repositorios; Vite informa un chunk cliente minificado de ~551 kB y un chunk SSR de repositorios de ~681 kB.
+- **Trabajo:** dividir el catálogo por dominio o script y cargar sólo el idioma/cut solicitado, sin introducir recursos remotos obligatorios ni perder prerender.
+- **Cierre:** el build deja de superar el umbral de 500 kB por esta causa y las rutas ES no descargan traducciones inglesas que no utilizan.
 
 ### Limpieza de duplicados binarios tras paridad
 
