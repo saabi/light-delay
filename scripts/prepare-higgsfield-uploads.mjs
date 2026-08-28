@@ -153,6 +153,12 @@ const ENTRIES = [
 	},
 	{
 		kind: 'brief',
+		slug: 'celestial-ardor-with-jupiter',
+		label: 'Celestial Ardor con Júpiter (bloqueo 3D)',
+		sourceRel: 'vehicles/celestial-ardor/celestial-ardor-with-jupiter.png'
+	},
+	{
+		kind: 'brief',
 		slug: 'proxima-station-proportional-reference',
 		label: 'Proxima Station — referencia proporcional (diagrama)',
 		sourceRel: 'locations/proxima-station/proportional-reference.png'
