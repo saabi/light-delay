@@ -331,6 +331,13 @@ Estos parámetros pueden refinarse sin alterar el principio arquitectónico cent
 - [x] Conjunto de motor: tambor de reactor, 3 bobinas de confinamiento, tobera magnética (§6 "Motor").
 - [x] 6 aletas radiadoras, 3 a cada banda del casco (§8).
 - [x] Orientación de atraque corregida: proa hacia la estación, motor en dirección contraria (§7, §6 "Motor" — "debe quedar orientado lejos de Proxima").
+- [x] Líneas de panel/costuras del casco: 12 anillos en cada límite de sector más 4 costuras longitudinales en el tramo central de radio constante — legible sin ser ornamental (§8 "módulos y paneles de mantenimiento legibles").
+- [x] 22 paneles de mantenimiento rectangulares distribuidos en misión/hábitat/soporte/ingeniería/carga (§8).
+- [x] Marca de identificación del casco ("CA-07 · CELESTIAL ARDOR") en ambas bandas, cubierta de misión — código de cola inventado durante el modelado, no viene del documento ni del guion.
+- [x] Corrección: la marca de identificación estaba plana (una placa recta apoyada sobre el casco); se corrigió doblando la malla del texto sobre la curvatura real del cilindro (radio de casco muestreado en la posición Y de la etiqueta) para que la marca quede genuinamente envuelta alrededor del casco en vez de ser una calcomanía plana.
+- [x] Luces de navegación (estrobos rojo/verde, babor/estribor) junto a la corona de sensores de proa.
+- [x] Detalle industrial adicional hacia popa: 4 paneles radiadores extra y 2 líneas de tubería exterior en la zona de ingeniería/carga/tanques (§8 "sección de tanques/potencia más industrial hacia popa").
+- [x] Desgaste técnico moderado: 10 manchas/parches oscuros irregulares, concentrados en ingeniería/tanques/reactor (§8 "detalles de identificación y desgaste técnico moderado").
 
 ### Pendiente según el documento
 
@@ -343,12 +350,14 @@ Estos parámetros pueden refinarse sin alterar el principio arquitectónico cent
 - [ ] Carga y consumibles (§6).
 - [ ] Sección de tanques y potencia más allá del tambor del reactor: blindaje, acumuladores térmicos, acondicionamiento de potencia (§6 "Tanques y sección de potencia").
 - [ ] Detalle interior de los tres troncos axiales: pasamanos, compuertas de sectorización, descansos (§5).
-- [ ] Paneles de mantenimiento, marcas de identificación y desgaste técnico visible en el casco (§8).
+- [x] ~~Paneles de mantenimiento, marcas de identificación y desgaste técnico visible en el casco (§8).~~ Hecho — ver arriba.
 - [ ] Puerto/ventana de observación prograde en el techo del puente (§6 "Cubierta de mando").
 
 ### Detalle añadido durante el modelado, no descrito explícitamente en el documento
 
 - Bandas de color por sector sobre el casco — ayuda visual de producción/continuidad, no una característica narrativa del diseño.
+- Código de cola "CA-07" — número de registro inventado; no aparece en ningún documento ni guion. Revisar/reemplazar si hay un identificador canónico.
+- Recuento y distribución exactos de líneas de panel, paneles de mantenimiento y manchas de desgaste — el documento pide el efecto general ("legibles", "desgaste técnico moderado"), no un mapa de coordenadas.
 - Constantes de acople de atraque concretas (collar: radio mayor 1.6 m; puerto: radio 1.2 m) — cifra de ingeniería fijada durante el modelado para garantizar compatibilidad geométrica con Proxima; el documento no fijaba un valor.
 - Geometría específica de la tobera magnética (radios de expansión bow/stern) y disposición exacta de las 3 bobinas de confinamiento.
 
