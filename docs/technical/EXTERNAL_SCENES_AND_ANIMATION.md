@@ -10,23 +10,23 @@ Este documento no implica trabajo de modelado o animación inmediato. Es un mapa
 |---|---|---|---|
 | Celestial Ardor | ✅ modelo 3D (bloqueo + detalle exterior) | Protagonista de toda toma exterior | — |
 | Estación Proxima | ✅ modelo 3D (bloqueo + detalle exterior) | Ubicación de partida | — |
-| Júpiter | ❌ no existe | Fondo explícito en `main:shot-01-01`/`trailer:shot-a-01` ("Júpiter pequeño al fondo") y en el sobrevuelo de `main:scene-03` ("La nave bordea Júpiter con amplio desplazamiento lateral") | Ver §4 para tamaño angular aproximado desde L1. |
-| Sol | ❌ no existe | Fuente de luz principal de toda la secuencia; nunca se menciona en cuadro pero condiciona todas las sombras/exposición | Dirección de luz fija por escena; no hace falta el disco solar en cuadro salvo que se pida un contraluz. |
-| Campo de estrellas | ❌ no existe | Fondo de cualquier toma exterior fuera de la silueta de Júpiter/Proxima (`celestial-ardor-bridge` shot "rack focus archivo/estrellas", tomas de crucero) | Starfield estático (skybox), no requiere animación propia. |
+| Júpiter | ✅ bloqueo 3D | Fondo explícito en `main:shot-01-01`/`trailer:shot-a-01` ("Júpiter pequeño al fondo") y en el sobrevuelo de `main:scene-03` ("La nave bordea Júpiter con amplio desplazamiento lateral") | `Env_Jupiter` usa escala física de referencia; las tomas finales pueden requerir una ampliación artística documentada para leer el disco. |
+| Sol | ✅ luz de entorno | Fuente de luz principal de toda la secuencia; nunca se menciona en cuadro pero condiciona todas las sombras/exposición | `Env_Sun`; no incluye disco solar visible. |
+| Campo de estrellas | ✅ shader de mundo | Fondo de cualquier toma exterior fuera de la silueta de Júpiter/Proxima (`celestial-ardor-bridge` shot "rack focus archivo/estrellas", tomas de crucero) | Fondo procedural estático; verificar en modo Material/Rendered. |
 | Boca Velari (campo de nodos) | ❌ no existe | `location:velari-wormhole-mouth` — `main:shot-07-08`, `main:shot-07-10`, `trailer:shot-f-01/02` | Explícitamente **no es un aro**: campo distribuido de nodos negros separados por kilómetros; apertura de 150–200 m solo durante el pulso energético (§ doc de ubicación). Nuevo asset, no cubierto por ningún documento técnico existente. |
 | Estación Velari | ❌ no existe | `location:velari-station` — escenas de reconocimiento/contacto (`long:scene-26/27`, `festival:scene-07`, `trailer:scene-09`) | Hábitat orgánico continuo de varios km, piel viva. Nuevo asset — candidato a su propio documento técnico tipo `CELESTIAL_ARDOR.md`/`PROXIMA_STATION.md` cuando se aborde. |
 | Nave emisaria Velari | ❌ no existe | `long:scene-27` ("Una nave emisaria distinta de la estación se aproxima") | Objeto adicional, no descrito aún en ningún documento — falta hasta una referencia mínima de diseño. |
 
 ## 2. Jerarquía de animación necesaria (rig)
 
-Ninguna de estas animaciones está construida todavía; esto es la lista de lo que habrá que riggear cuando se aborde la fase de animación.
+La jerarquía básica ya está construida: los dos hábitats tienen pivotes propios y toda la Ardor depende de `Ardor_Root`. Esto habilita las animaciones, pero no significa que sus curvas, cámaras o renders finales estén producidos.
 
 | Elemento | Comportamiento requerido | Notas de implementación |
 |---|---|---|
-| Hábitats de Proxima (rueda A y B) | Rotación continua independiente, sentidos opuestos, ~1,73 rpm nominal (§3 de `PROXIMA_STATION.md`) | Cada hábitat necesita un **empty pivote** en el centro de su cubo (hub), con el aro/rayos/costillas parentados a ese empty — hoy son mallas sueltas sin jerarquía de animación. La espina no rota. |
+| Hábitats de Proxima (rueda A y B) | Rotación continua independiente, sentidos opuestos, ~1,73 rpm nominal (§3 de `PROXIMA_STATION.md`) | `Proxima_Habitat_A_Pivot` y `Proxima_Habitat_B_Pivot` ya agrupan cada hábitat conservando su posición mundial. Falta autorar la rotación final. La espina no rota. |
 | Estación Proxima (conjunto) | Permanece fija/no rotante como referencia de cámara | Ya es coherente con el modelo actual (espina como raíz implícita). |
 | Celestial Ardor — desatraque | Traslación de separación del muelle 1 + retracción de brazos de servicio/umbilicales | Hoy la nave está estáticamente "ya atracada"; falta una animación de separación (posición inicial atracada → posición final alejándose) y, opcionalmente, apertura del collar de captura de Proxima. |
-| Celestial Ardor (conjunto completo) | Necesita un **empty raíz** para poder animar posición + rotación de toda la nave como una unidad | Hoy la colección se mueve reposicionando `.location` de cada objeto individualmente (ver notas de `blender-modeling-reference.md`) — funciona para bloqueo estático pero no es animable directamente; conviene parentear todo a un único empty antes de animar. |
+| Celestial Ardor (conjunto completo) | Traslación y rotación de toda la nave como unidad | `Ardor_Root` ya agrupa el conjunto sin desplazar las piezas. Falta autorar movimientos y cámaras de cada toma. |
 | Maniobra de inversión de mitad de trayecto | Rotación de ~180° de toda la nave en microgravedad, luego reanudación del empuje (§3 de `CELESTIAL_ARDOR.md`; confirmado en guion, `main:scene-XX` ingeniería: "Zao asegurada en caída libre mientras la nave rota; 1 g retorna hacia el mismo piso al reanudar el frenado") | Requiere el mismo empty raíz de arriba. Es una rotación de la nave completa, no solo de cámara — el guion es explícito en que los objetos sueltos flotan y se re-asientan cuando el empuje regresa. |
 | Radiadores de la Ardor | Plegado/repliegue antes de maniobras (guion: "radiadores recogidos antes del giro", sobrevuelo de Júpiter) | Hoy las 6 aletas son mallas estáticas fijas al casco — hace falta articularlas (bisagra/pivote por aleta) si se quiere animar el repliegue. |
 | Sobrevuelo de Júpiter | Desplazamiento lateral amplio de cámara/nave, planeta fuera del eje de trayectoria (`main:scene-03`, cámara "24 mm exterior · planeta fuera del eje de trayectoria") | Depende de tener a Júpiter modelado (§1) y de la posición Proxima/Júpiter/L1 acordada (§4). |
@@ -39,9 +39,9 @@ Extraído de `scenes`/`shots` en los 4 archivos de `data/scripts/` cuyo `locatio
 
 | Guion | Escena/toma | Ubicación | Qué se ve | Elementos exteriores requeridos |
 |---|---|---|---|---|
-| main-short | `shot-01-01` / trailer `shot-a-01` | `proxima-dock` | Exterior de Proxima, eje 500–800 m, hábitats contrarrotando, Ardor atracada, Júpiter pequeño al fondo | Proxima ✅, Ardor ✅ (atracada), Júpiter ❌, rotación de hábitats ❌ (rig) |
+| main-short | `shot-01-01` / trailer `shot-a-01` | `proxima-dock` | Exterior de Proxima, eje 500–800 m, hábitats contrarrotando, Ardor atracada, Júpiter pequeño al fondo | Proxima ✅, Ardor ✅, Júpiter ✅, pivotes ✅; falta animación/render final de rotación. |
 | main-short | `shot-01-02` a `shot-01-08` | `proxima-dock` | Preparativos de embarque (mayormente interior/pantallas, con Proxima de fondo) | Sin requisitos exteriores nuevos más allá de lo anterior |
-| main-short | escena de puente, "Mano de Cael confirma separación y empuje" | `celestial-ardor-bridge` (interior, implica exterior) | Momento de desatraque/separación de Proxima | Animación de desatraque ❌ (rig) |
+| main-short | escena de puente, "Mano de Cael confirma separación y empuje" | `celestial-ardor-bridge` (interior, implica exterior) | Momento de desatraque/separación de Proxima | `Ardor_Root` ✅; falta animación de desatraque y umbilicales. |
 | main-short | `scene-03` / sobrevuelo | `celestial-ardor-engineering` (interior, referencia exterior) | "La nave bordea Júpiter con amplio desplazamiento lateral; radiadores recogidos antes del giro" | Júpiter ❌, radiadores articulados ❌ (rig), maniobra de giro/inversión ❌ (rig) |
 | main-short | toma de inversión de mitad de trayecto | `celestial-ardor-engineering` | "Zao asegurada en caída libre mientras la nave rota; 1 g retorna... al reanudar el frenado" | Maniobra de inversión ❌ (rig) — ver §2 |
 | main-short | `shot-07-08` | `velari-wormhole-mouth` | "Los nodos forman la garganta" — campo instrumental de nodos separados por km | Boca Velari (campo de nodos) ❌ |

@@ -17,7 +17,7 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 - **Archivos afectados:** `docs/JSON_FORMAT*.md`, `src/lib/types/`, `src/lib/data/validation/`, `scripts/validate-data.mjs` y repositorios de datos.
 - **Problema:** los contratos se mantienen en Markdown, TypeScript y un validador JavaScript separado; los JSON se fuerzan mediante casts y `assertJsonModule` sólo comprueba que exista un objeto. Ya hay deriva observable: el tráiler contiene 29 notas `type: "editorial"`, valor ausente del contrato `Note`.
 - **Trabajo:** elegir una autoridad ejecutable —JSON Schema o esquema runtime TypeScript— y derivar o sincronizar tipos y validación. Cubrir tipos de nota, foreign keys, relaciones padre/hijo, orden, pertenencia de takes, límites de cue placements y existencia real de archivos bajo `static/`.
-- **Estado comprobado:** el grafo y los 130 paths actuales pasaron una auditoría puntual; la deuda es que el gate automático no evita futuras regresiones.
+- **Estado comprobado:** el grafo y los 132 paths actuales pasaron una auditoría puntual; la deuda es que el gate automático no evita futuras regresiones.
 - **Cierre:** datos inválidos fallan en desarrollo y CI sin depender de casts; los validadores duplicados dejan de divergir.
 
 ### Gate de CI, formato y runtime soportado
@@ -83,7 +83,7 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 ### Madurez editorial de documentos, scripts y medios
 
 - **Estado medido:** los cuatro scripts están en `draft`; las cinco traducciones inglesas de documentos prose están en `draft` y ninguna en `reviewed`; el documento de canon sigue como `stub` y tres documentos históricos/revisión sólo tienen un bloque español de referencia.
-- **Medios:** los 130 assets registrados son imágenes. No hay audio ni video; los diez perfiles de voz no tienen muestras.
+- **Medios:** los 132 assets registrados son imágenes. No hay audio ni video; los diez perfiles de voz no tienen muestras.
 - **Cobertura visual:** 10 de los 21 personajes catalogados no tienen asset de referencia. No todos necesitan model sheet; priorizar según el cut que entre en producción y no generar arte sin autorización.
 - **Trabajo:** definir qué estados deben alcanzar antes de una publicación/festival, revisar las traducciones prose, completar la proyección estructurada del canon y planificar audio/video sin confundir material de referencia con producción final.
 - **Cierre:** los estados editoriales describen una revisión real, el sitio no presenta borradores como aprobados y cada medio final tiene procedencia y elegibilidad verificadas.
@@ -95,13 +95,6 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 - **Cierre:** las funciones obligatorias de `AGENTS.md` cuentan con pruebas estables y ejecutadas en el gate de publicación.
 
 ## Prioridad baja
-
-### Sincronización de documentos heredados no esenciales
-
-- **Archivos afectados:** reportes, inventarios, biblias y mirrors fuera de la cadena autoritativa inmediata.
-- **Problema:** todavía pueden conservar terminología o geometría anterior de nave, comunicaciones y partición. Quedan ejemplos concretos en descripciones heredadas de assets y mirrors prose; deben distinguirse de las fuentes históricas que se preservan deliberadamente.
-- **Estado parcial:** `README.md`, `data/README.md`, `docs/PRODUCTION_PLAN.md`, `docs/SVELTEKIT_SETUP.md`, `docs/MIGRATION_PLAN.md`, el brief del tráiler y las dos fuentes antiguas de largometraje ya fueron corregidos o marcados como históricos en la auditoría de 2026-08-26.
-- **Cierre:** auditoría completa, actualización desde las fuentes españolas y registro de cualquier traducción pospuesta en `docs/PROJECT_STATUS.md`.
 
 ### Limpieza de duplicados binarios tras paridad
 

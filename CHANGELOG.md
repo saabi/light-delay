@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-28 — Saneamiento y validación documental
+
+- Reconciliados los documentos activos con el estado estructurado vigente: 17 escenas, 112 tomas/takes, 100 frames legacy y 132 imágenes registradas.
+- Actualizados el flujo de trabajo, el ADR multi-script, la procedencia de assets y el mapa de animación exterior; las cifras de 100 tomas se conservan únicamente como baseline histórico explícito.
+- Añadido `npm run validate:docs` al gate de Pages para comprobar cifras derivadas, enlaces locales y avisos históricos; retirados el snapshot temporal de deuda y el brief ya ejecutado de portada.
+
 ## 2026-08-28 — Carrusel automático en tarjetas
 
 - Las tarjetas de arte/entidades con varias miniaturas usan `ImageCarousel` en modo `auto` (sin controles, rotación periódica, pausa al hover y con `prefers-reduced-motion`).

@@ -25,7 +25,8 @@
 		"prepare:higgsfield": "node scripts/prepare-higgsfield-uploads.mjs",
 		"thumbs:generate": "node scripts/generate-asset-thumbnails.mjs generate",
 		"thumbs:sync": "node scripts/generate-asset-thumbnails.mjs sync",
-		"validate:data": "node scripts/validate-data.mjs"
+		"validate:data": "node scripts/validate-data.mjs",
+		"validate:docs": "node scripts/validate-docs.mjs"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",

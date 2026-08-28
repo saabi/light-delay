@@ -632,7 +632,7 @@ With these decisions, the data model can fully describe the previously discussed
 - Rao handling the digital containment from a protected terminal;
 - Voss and Sorell handling the physical intervention;
 - Sorell supplying the clean read-only greeting;
-- its own acts, 17 scenes, beats, cues, 100 shots, takes and approximately 30-minute target;
+- its own acts, 17 scenes, beats, cues, 112 shots/takes and approximately 30-minute target;
 - reused or unique images and other assets;
 - continuity-specific entity variants;
 - multilingual dialogue, subtitles and voice assets;

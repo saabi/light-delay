@@ -2,9 +2,9 @@
 
 ## Inventario actual
 
-- **130 imágenes registradas** en `data/assets.json`.
+- **132 imágenes registradas** en `data/assets.json`.
 - 100 fotogramas legacy del animatic en 17 escenas.
-- 29 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala y presentación.
+- 31 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
 - 1 placeholder técnico para frames faltantes o fallidos.
 - No hay todavía assets de audio ni video registrados.
 
@@ -23,10 +23,10 @@ Los assets fueron generados con herramientas de generación de imágenes asistid
 - historial de ediciones;
 - identificador de generación o comprobante de plataforma.
 
-Auditoría de corte 2026-08-26:
+Auditoría de corte 2026-08-28:
 
-- 129 de 130 assets no tienen objeto `source`;
-- los 130 carecen de modelo/versionado exacto;
+- 131 de 132 assets no tienen objeto `source`;
+- los 132 carecen de modelo/versionado exacto;
 - sólo el placeholder técnico registra proveedor y fecha de generación;
 - ningún asset registra todavía una decisión verificable de elegibilidad para concurso.
 
