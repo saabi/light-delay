@@ -1,0 +1,34 @@
+# Hoja de ruta de producción 3D (Blender)
+
+> Estado: plan de trabajo acordado con Sebastián el 28/08/2026, para no tener que re-derivarlo de la conversación. Se actualiza al cerrar cada paso o si el orden cambia. Ver también `EXTERNAL_SCENES_AND_ANIMATION.md` (qué falta y por qué) y las checklists de `CELESTIAL_ARDOR.md` §12 / `PROXIMA_STATION.md` §14 (qué está construido).
+
+## Orden acordado
+
+1. **Rig de animación (fundacional, antes de más detalle)**
+   - Empty pivote centrado en el cubo de cada hábitat de Proxima (A y B), con el aro/rayos/costillas/banda de ventanas parentados a ese empty — hoy son mallas sueltas sin punto de rotación común.
+   - Empty raíz único para toda la colección de la Celestial Ardor — hoy la nave se reposiciona moviendo `.location` de cada objeto por separado, lo cual sirve para bloqueo estático pero no es animable.
+   - Razón de prioridad: nada es animable todavía (ni siquiera un giro de prueba) sin esto, y es mucho más barato hacerlo ahora que después de agregar más geometría para reparentar.
+
+2. **Júpiter + campo de estrellas (barato, desbloquea la toma más reutilizada)**
+   - Esfera con textura razonable para Júpiter; starfield/skybox procedural de fondo.
+   - Razón de prioridad: `shot-01-01` (establishing de Proxima) se reutiliza tanto en `main-short` como en el `trailer` — es probablemente la primera toma que se querrá ver renderizada, y depende de tener Júpiter y los hábitats girando en cuadro.
+
+3. **Detalle exterior de la Ardor, a la par de Proxima**
+   - Paneles de casco, líneas de mantenimiento, marcas de identificación, desgaste técnico visible (§8 de `CELESTIAL_ARDOR.md`, y §12 "detalle añadido" para lo ya hecho en Proxima como referencia de nivel).
+   - Razón de prioridad: no desbloquea nada nuevo por sí solo, es pulido sobre una nave ya presentable — va después del rig/Júpiter.
+
+4. **Bloqueo de interiores, empezando por puente y sala del núcleo diplomático**
+   - Puente (`location:celestial-ardor-bridge`, 114 apariciones en guion) y sala del núcleo diplomático (`location:diplomatic-core-room`, 47) — con enorme diferencia sobre cualquier otra ubicación.
+   - Razón de prioridad/orden: es donde ocurre la mayor parte de la película, pero es el mayor esfuerzo (geometría de sala real, no greebles) — conviene esperar a que el exterior "hero" esté sólido antes de invertir ahí.
+
+5. **Boca Velari, Estación Velari, nave emisaria**
+   - Assets de la parte final de la historia; la boca Velari es barata una vez que se aborde (campo de nodos dispersos + animación de pulso, no un modelo hero).
+   - Razón de prioridad: última fase de la historia, menor urgencia.
+
+## Estado de cada paso
+
+- [x] Paso 1 — rig de animación: `Proxima_Habitat_A_Pivot` / `Proxima_Habitat_B_Pivot` (empties en el centro de cada cubo, con todo lo demás de cada hábitat parentado) y `Ardor_Root` (empty raíz para toda la colección de la Ardor, ubicado en el puerto de atraque de proa). **Bug encontrado y corregido**: el primer intento de emparentar "preservando la transformada mundial" (copiar `matrix_world`, asignar `.parent`, reasignar `matrix_world`) no funcionó como se esperaba — Blender no recalculó `matrix_parent_inverse`, así que la posición local original se sumó a la del nuevo padre, duplicando el desplazamiento desde el origen (la espina/eje de la Ardor y ambos hábitats de Proxima aparecían desplazados, Sebastián lo notó como "el eje descentrado"). Corregido dejando `.location` intacto y en cambio fijando `object.matrix_parent_inverse = padre.matrix_world.inverted()` en cada hijo — el patrón correcto para "parentar conservando la posición" cuando se hace por script en vez de con el operador de Blender (`Ctrl+P` → *Keep Transform*). Verificado numéricamente (posiciones mundiales vueltas a sus valores originales) y con una rotación de prueba (el hub se queda quieto en su lugar mientras el aro gira alrededor).
+- [x] Paso 2 — Júpiter + starfield: nueva colección `Environment`. `Env_Jupiter` (esfera con shader de bandas procedural) colocado a 20.000 m de Proxima a lo largo del eje de muelle, dimensionado para el tamaño angular aproximado de §4 de `EXTERNAL_SCENES_AND_ANIMATION.md` (~9' de arco) — a esa distancia y con lente de 24 mm se ve como un punto de 2–3 px; para que se lea como disco en cuadro, cualquier toma real probablemente necesite agrandarlo artísticamente (práctica común de VFX), anotado como decisión pendiente de dirección, no un error de escala. `Env_Sun` (luz tipo Sol) y un shader de mundo con estrellas dispersas (Noise Texture + Color Ramp) para el fondo. Sin estos, el viewport en modo Solid no mostraba nada de esto — verificar siempre en shading MATERIAL/RENDERED con `use_scene_world`/`use_scene_lights` activados.
+- [ ] Paso 3 — detalle exterior de la Ardor
+- [ ] Paso 4 — interiores (puente, núcleo diplomático)
+- [ ] Paso 5 — assets Velari

@@ -40,3 +40,7 @@ project.inlang/README.md
 # Temporary exports
 *.tmp
 *.bak
+
+# Blender autosave / backup
+*.blend1
+*.blend2

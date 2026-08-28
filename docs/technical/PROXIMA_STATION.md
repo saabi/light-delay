@@ -264,7 +264,7 @@ Proxima cumple varias funciones narrativas simultáneas:
 
 ## 12. Parámetros pendientes / revisables
 
-- Longitud axial exacta de cada hábitat; **110 m** es actualmente valor de trabajo.
+- Longitud axial exacta de cada hábitat; **110 m** era el valor de trabajo para el antiguo concepto de tambor sólido. Con el rediseño a rueda radial (ver §13), este valor ya no aplica directamente: el habitáculo ahora es un tubo toroidal de ~22 m de diámetro, no un tambor de pared completa.
 - Número final de cabezales de atraque externos.
 - Masa total de la estación.
 - Población nominal exacta.
@@ -273,3 +273,99 @@ Proxima cumple varias funciones narrativas simultáneas:
 - Geometría detallada de radiadores y brazos externos.
 
 Estos valores pueden evolucionar sin alterar la arquitectura básica ya fijada: espina de 650 m, dos hábitats de 150 m de radio y atraque externo.
+
+## 13. Notas de modelado 3D (bloqueo Blender, revisado)
+
+> Registrado tras la primera pasada de detallado 3D en `blender/light-delay-blockout.blend`. Estos valores son de trabajo y están abiertos a revisión, pero documentan las decisiones tomadas para mantener continuidad entre sesiones de modelado.
+
+### Hábitats como rueda radial (no tambor sólido)
+
+Por pedido de diseño, los hábitats rotatorios se modelan como **rueda con rayos**, no como tambor de pared cilíndrica cerrada:
+
+- **Cubo/hub central:** radio 15 m, longitud 34 m — cámara de transferencia (esclusas, elevadores, transición entre microgravedad y gravedad rotacional).
+- **Rodamiento:** anillo de acople hub↔rayos, radio ~17,25 m.
+- **Rayos (spokes):** 8 por hábitat, radio de sección 2,6 m (~5,2 m de diámetro) — suficiente para un vagón de tránsito de personal/carga más conductos de servicio.
+- **Aro exterior (rim):** toroide estructural de radio mayor 150 m (fijo, según canon), radio de sección (tubo habitable) **11 m** (~22 m de diámetro).
+- **Banda de ventanas:** toroide interior más delgado, material emisivo, para lectura de actividad humana/iluminación de cubiertas sin modelar cada ventana individualmente.
+- **Costillas exteriores:** 16 nervios estructurales radiales sobre el aro, para lectura de escala.
+- **Riostra cruzada (cross-brace):** toroide interno adicional entre el hub y el aro, refuerzo visual/estructural.
+
+**Justificación dimensional:** el diámetro de tubo de 22 m se deriva escalando proporcionalmente la referencia de un Toroide de Stanford (radio mayor 900 m, diámetro de tubo 130 m) a nuestro radio de 150 m: 130 × (150/900) ≈ 21,7 m → redondeado a 22 m. Esto permite ~4-5 cubiertas apilada de ~4-4,5 m de altura (estructura + techo), razonable para un hábitat de larga estancia sin exagerar el volumen presurizado.
+
+### Estratificación de la espina (lectura "acumulativa")
+
+La espina de 650 m ahora muestra zonas de material diferenciadas por época, en vez de ser un cilindro liso uniforme, para reflejar el crecimiento por décadas que pide el documento de diseño:
+
+- **Núcleo científico original** (zona central, ambos lados del eje de hábitats): manguitos de color blanco envejecido, más módulos geométricos simples adosados — laboratorios de física/gravitación originales.
+- **Laboratorios y ampliaciones** (xenofísica, navegación de contacto): manguitos gris-azulado medio, entre el núcleo y los extremos.
+- **Industria/talleres/logística:** manguitos y módulos gris grafito oscuro, con leve tinte metálico.
+- **Zona de energía:** cerca del brazo aislado del reactor (extremo +Y), comparte tono industrial oscuro; incluye dos arreglos de radiadores desplegables adicionales (más allá de las aletas propias del reactor aislado).
+- **Antenas:** un plato de largo alcance junto al núcleo original (misión científica primigenia) y un plato más pequeño y moderno cerca de la zona de muelles (comunicaciones de contacto), más varias antenas tipo látigo dispersas.
+
+Estos manguitos y módulos son geometría adicional superpuesta a la espina base (`Proxima_Spine`), no un reemplazo de su malla.
+
+### Muelles: estructura de aproximación (ya no flotante)
+
+Los cuatro cabezales de atraque ahora están unidos físicamente a la espina mediante una **armadura de aproximación** (`Prox_DockGantry_N_*`) por cada muelle, en vez de aparecer como piezas sueltas en el espacio:
+
+- un anillo interior sobre la superficie de la espina y un anillo exterior en la base del mástil de atraque,
+- 4 largueros longitudinales agrupados alrededor del eje radial de cada muelle, más 2 riostras diagonales, uniendo ambos anillos,
+- un **tubo/vestíbulo de transferencia presurizado** (`Prox_TransferTube_N`) corriendo en paralelo a la armadura, de la piel de la espina al cabezal — el pasadizo que un tripulante recorrería para llegar de la estación a la nave atracada, según §7 del documento original.
+
+### Reactores: dos unidades, dispuestas simétricamente
+
+Siguiendo la nota de §5 sobre "respaldo independiente cuando corresponda", hay **dos módulos de reactor aislado del mismo tamaño**, montados en brazos/truss espejados a ambos lados de la espina (mismo eje Y, mismo radio, ángulos opuestos 45°/225°) — no un principal y un respaldo menor en posiciones arbitrarias como en la primera pasada. Cada uno lleva sus propias tres aletas radiadoras, orientadas radialmente desde la esfera del reactor (antes estaban mal orientadas, "pegadas" de forma poco natural; ahora salen correctamente desde la superficie de la esfera). Ya no hay un único punto de falla energético visible, y la disposición espejada se lee como intencional en vez de accidental.
+
+### Compatibilidad de atraque con la Celestial Ardor
+
+Las cuatro cabezas de atraque (`Proxima_DockCollar_N` / `Proxima_DockFunnel_N`) usan las mismas constantes que el collar/puerto de proa de la Ardor (`DOCK_COLLAR_MAJOR_R = 1.6 m`, `DOCK_PORT_R = 1.2 m`), sobredimensionadas ligeramente en el lado de la estación para recibir el hardware de la nave. La Ardor se posiciona en el muelle 1 mediante traslación rígida de toda su colección, verificada numéricamente (coincidencia de X/Z, acople de Y) y visualmente. La nave se orienta con la proa (collar/puerto de atraque) hacia la estación — se corrigió una orientación invertida (proa apuntando en sentido contrario al muelle) mediante una rotación de 180° sobre el eje Z, con pivote en el punto de acople de proa, para que el atraque sea seguro (motor no queda encarado al muelle).
+
+### Tubos de tránsito hub↔aro ("los rayos como tubos")
+
+De los 8 rayos por hábitat, **2 (opuestos entre sí)** ahora son tubos de tránsito presurizados en vez de simples puntales estructurales: mayor diámetro, con bridas/collares en ambos extremos (hub y aro) y tres nervaduras/anillos de segmentación a lo largo del tramo — la lectura visual de un pasadizo transitable para tripulación/carga entre el eje no rotatorio y el aro habitable, tal como pide §6 del documento ("pasos de transferencia apropiados"). Los otros 6 rayos siguen siendo puntales estructurales simples.
+
+### Módulos de la espina: ya no flotan
+
+Los módulos adosados a la espina (`Prox_Mod_*`) se recalculan contra el radio real de la superficie en cada posición Y — el manguito de época correspondiente si existe, o el radio desnudo de la espina (6 m) si esa zona no tiene manguito — en vez de un radio fijo. Esto corrigió varios módulos que quedaban suspendidos junto al eje sin tocarlo, sobre todo en el tramo desnudo entre los dos hábitats.
+
+### Textura adicional de la espina
+
+Se añadieron tres líneas de conducto/tubería longitudinal a lo largo de toda la espina (utilidad genérica: energía/datos/fluidos), varias burbujas de instrumentación pequeñas sobre el núcleo científico antiguo, y tres tanques de consumibles/propelente cerca de las zonas industriales — todo detalle de piel exterior, sin tocar el interior.
+
+## 14. Checklist de modelado 3D (bloqueo Blender)
+
+> Ver también `EXTERNAL_SCENES_AND_ANIMATION.md` para las tomas exteriores identificadas en el guion y la jerarquía de animación (rotación de hábitats, desatraque, maniobra de inversión, etc.) que involucran a esta nave/estación.
+
+
+> Registrado tras las pasadas de bloqueo y detallado exterior en `blender/light-delay-blockout.blend`. Se actualizará con cada pasada de detallado. El detalle interior queda fuera de alcance por ahora (pocas escenas previstas dentro de Proxima) — no forma parte de esta checklist todavía.
+
+### Construido
+
+- [x] Espina no rotatoria de 650 m (§3, §5).
+- [x] Dos hábitats contrarrotatorios a 150 m de radio (§3, §4, §6) — modelados como rueda radial (aro + rayos + cubo), no como tambor de pared sólida; ver §13 para la justificación de este cambio de diseño.
+- [x] Interfaz hub↔espina de cada hábitat: cubo de transferencia, anillo de rodamiento (§6 "La estructura central de cada tambor se conecta con la espina mediante rodamientos/acoplamientos").
+- [x] Pasos de transferencia hub↔aro visiblemente detallados: 2 de los 8 rayos por hábitat son tubos de tránsito con bridas y nervaduras, no puntales simples (§6, mismo requisito que el punto anterior aplicado al tramo rotatorio).
+- [x] Muelles externos axiales — 4 cabezales completos (mástil, cabezal, collar, embudo), dentro del rango 3–6 de §7.
+- [x] Estructura de aproximación/captura y túnel/vestíbulo de transferencia por cada muelle (§7, lista de elementos del conjunto de atraque).
+- [x] Sistemas aislados/peligrosos montados en brazos fuera del volumen habitado: dos reactores en trusses simétricos, cada uno con sus propias aletas radiadoras (§5 "Áreas peligrosas o aisladas").
+- [x] Lenguaje visual estratificado por época en la espina: núcleo antiguo (pálido/envejecido), ampliaciones (gris-azulado), industria/talleres (grafito oscuro) (§9).
+- [x] Comunicaciones y sensores: plato de largo alcance (núcleo antiguo), plato moderno (zona de contacto/muelle), antenas tipo látigo (§5 "Comunicaciones y sensores", §9).
+- [x] Infraestructura externa genérica: radiadores adicionales, conductos/tuberías longitudinales, tanques de consumibles (§9 "Infraestructura externa").
+- [x] Escala conjunta con la Celestial Ardor verificada numéricamente — nave atracada en el muelle 1 con orientación correcta (§8, §10 regla 10).
+
+### Pendiente según el documento
+
+- [ ] Distribución precisa de laboratorios/xenofísica, industria/talleres y depósitos a lo largo de la espina — hoy son manguitos de material y módulos genéricos, no volúmenes funcionales identificados uno a uno (§5, §12 "Distribución precisa... pendiente").
+- [ ] Diferenciación visual más marcada entre los dos hábitats por antigüedad/uso, más allá de compartir el mismo radio (§6 "No hace falta que ambos sean visualmente idénticos en detalle").
+- [ ] Geometría fina de radiadores desplegables (forma/mecanismo articulado, no solo paneles planos) (§12 "Geometría detallada de radiadores... pendiente").
+- [ ] Número final de cabezales de atraque — se modelaron 4 (coincide con el diagrama), pero el documento deja el rango 3–6 abierto a decisión definitiva (§7, §12).
+- [ ] Longitud axial exacta del tramo habitable del aro (equivalente al viejo valor de trabajo de 110 m) — ver nota en §13, sigue sin fijarse un valor definitivo más allá del diámetro de tubo adoptado.
+- [ ] Interior de cualquier volumen (núcleo científico, hábitats, muelles) — explícitamente fuera de alcance por ahora.
+
+### Detalle añadido durante el modelado, no descrito explícitamente en el documento
+
+- Cifras concretas de la rueda radial (radio de cubo 15 m, radio de rayo 2.6 m, radio de tubo del aro 11 m, 8 rayos, 16 costillas externas) — el documento solo pedía "grandes cilindros rotatorios... no reducir a pequeños anillos"; las cifras y la lógica de escalado (referencia del Toroide de Stanford) son una decisión de modelado, documentada en §13.
+- Banda de ventanas interior emisiva en el aro, como lectura de "actividad humana" sin modelar ventanas individuales (el documento pide esto en general en §9 pero no especifica el mecanismo).
+- Zonas y rangos Y exactos de la estratificación de época en la espina (qué tramo es núcleo/labs/industria/potencia) — el documento pide el efecto general, no un mapa de coordenadas.
+- Constantes de acople de atraque compartidas con la Ardor (collar 1.6 m, puerto/embudo 1.2 m) y la armadura de aproximación de 4 largueros + 2 riostras por muelle — el documento describe los componentes cualitativamente, no sus dimensiones ni su armazón estructural.
+- Disposición simétrica específica de los dos reactores (mismo tamaño, ángulos 45°/225°, mismo Y) y su construcción de aletas en trípode — el documento solo menciona "reactores... pueden montarse en brazos o módulos aislados".

@@ -313,3 +313,56 @@ La existencia simultánea de cilindro central, ascensor y cilindro de servicio p
 - Geometría fina de radiadores y tanques.
 
 Estos parámetros pueden refinarse sin alterar el principio arquitectónico central.
+
+## 12. Checklist de modelado 3D (bloqueo Blender)
+
+> Ver también `EXTERNAL_SCENES_AND_ANIMATION.md` para las tomas exteriores identificadas en el guion y la jerarquía de animación (rotación de hábitats, desatraque, maniobra de inversión, etc.) que involucran a esta nave/estación.
+
+
+> Registrado tras la primera pasada de bloqueo en `blender/light-delay-blockout.blend`. Se actualizará con cada pasada de detallado.
+
+### Construido
+
+- [x] Casco exterior con silueta exacta derivada del SVG de referencia (90 m × 18 m), con bandas de color por sector a lo largo de los 11 sectores de §6.
+- [x] Collar y puerto de atraque de proa (§7, §6 "Proa").
+- [x] Corona de sensores alrededor del collar de proa (§6 "Proa").
+- [x] Tres troncos axiales bloqueados como volúmenes de referencia — cilindro central de acceso, pozo de ascensor, cilindro de servicio (§5) — sin detalle interior todavía.
+- [x] Núcleo diplomático: volumen exterior fuera de eje + nodo de retrofit visualmente distinguible (§6 "Sistemas diplomáticos").
+- [x] Conjunto de motor: tambor de reactor, 3 bobinas de confinamiento, tobera magnética (§6 "Motor").
+- [x] 6 aletas radiadoras, 3 a cada banda del casco (§8).
+- [x] Orientación de atraque corregida: proa hacia la estación, motor en dirección contraria (§7, §6 "Motor" — "debe quedar orientado lejos de Proxima").
+
+### Pendiente según el documento
+
+- [ ] Cubierta de mando: puente compacto de 6 puestos, vestíbulo axial de mando, distribuidor cableado COM A/B (§6 "Cubierta de mando").
+- [ ] Cubierta(s) de misión: briefing, puestos científicos, comunicaciones de misión (§6).
+- [ ] Hábitat: camarotes, comedor/cocina, higiene, recreación, ejercicio (§6).
+- [ ] Soporte/refugio: enfermería, soporte vital, refugio de emergencia, consumibles críticos (§6).
+- [ ] Interior de la sala del núcleo diplomático: cámara del núcleo, consolas de IA/mediación, consola local del láser (§6 "Sistemas diplomáticos") — hoy solo existe el volumen exterior/housing.
+- [ ] Ingeniería como espacio habitable: estaciones de diagnóstico/fabricación, controles de potencia, puesto de trabajo de Zao (§6 "Ingeniería") — hoy solo existen el tambor del reactor y las bobinas, no el volumen de trabajo.
+- [ ] Carga y consumibles (§6).
+- [ ] Sección de tanques y potencia más allá del tambor del reactor: blindaje, acumuladores térmicos, acondicionamiento de potencia (§6 "Tanques y sección de potencia").
+- [ ] Detalle interior de los tres troncos axiales: pasamanos, compuertas de sectorización, descansos (§5).
+- [ ] Paneles de mantenimiento, marcas de identificación y desgaste técnico visible en el casco (§8).
+- [ ] Puerto/ventana de observación prograde en el techo del puente (§6 "Cubierta de mando").
+
+### Detalle añadido durante el modelado, no descrito explícitamente en el documento
+
+- Bandas de color por sector sobre el casco — ayuda visual de producción/continuidad, no una característica narrativa del diseño.
+- Constantes de acople de atraque concretas (collar: radio mayor 1.6 m; puerto: radio 1.2 m) — cifra de ingeniería fijada durante el modelado para garantizar compatibilidad geométrica con Proxima; el documento no fijaba un valor.
+- Geometría específica de la tobera magnética (radios de expansión bow/stern) y disposición exacta de las 3 bobinas de confinamiento.
+
+### Áreas requeridas por guion (`data/scripts/*.json`) — priorizar su detallado
+
+Recuento de referencias a `locationId` en `scenes`/`shots` de los 4 guiones (`light-delay-festival.json`, `light-delay-long.json`, `light-delay-main-short.json`, `light-delay-trailer.json`). Estas ubicaciones aparecen efectivamente en tomas y necesitan diseño 3D más allá del bloqueo actual:
+
+| Ubicación | `locationId` | Apariciones en escenas/tomas |
+|---|---|---|
+| Puente del Celestial Ardor | `location:celestial-ardor-bridge` | **114** — la ubicación más usada de toda la historia; máxima prioridad |
+| Sala del núcleo diplomático | `location:diplomatic-core-room` | **47** — escenario del sabotaje; segunda prioridad |
+| Ingeniería del Celestial Ardor | `location:celestial-ardor-engineering` | 8 |
+| Vestíbulo axial de mando | `location:celestial-ardor-command-vestibule` | 4 |
+| Cilindro de servicio | `location:celestial-ardor-service-cylinder` | 4 |
+| Cilindro central de acceso | `location:celestial-ardor-central-access` | 2 |
+
+Nota: `data/locations.json` ya trae una descripción corta por cada una de estas ubicaciones (útil como punto de partida al modelarlas). También aparecen `location:proxima-dock` (14, ya cubierto por el exterior de Proxima) y dos ubicaciones fuera del alcance de este documento — `location:velari-station` (4) y `location:velari-wormhole-mouth` (5) — que no corresponden ni a la Ardor ni a Proxima y no tienen modelo 3D todavía.

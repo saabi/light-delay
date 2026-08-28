@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-28 — Bloqueo 3D y plan de exteriores
+
+- Añadidos checklists de modelado Blender a `CELESTIAL_ARDOR.md` y `PROXIMA_STATION.md` (hábitats como rueda radial, espina estratificada, casco/motor/radiadores de la Ardor).
+- Nuevos documentos de planificación: `EXTERNAL_SCENES_AND_ANIMATION.md` y `PRODUCTION_ROADMAP.md`.
+- Archivo de bloqueo `blender/light-delay-blockout.blend` y still de referencia `proxima-with-ardor-berthed.png`.
+
 ## 2026-08-26 — Ajustes de copy de portada
 
 - Revisados en español e inglés el eyebrow, la síntesis de la historia, el conteo/nombre del corto y el CTA del archivo; el inglés adopta además `traveling` según el locale `en_US`.

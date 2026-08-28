@@ -1,0 +1,60 @@
+# Escenas exteriores y necesidades de animación
+
+> Estado: documento de planificación de producción, derivado de `data/scripts/*.json` y `data/locations.json`. No reemplaza a `CELESTIAL_ARDOR.md` ni a `PROXIMA_STATION.md` — los complementa con la vista "qué se ve desde afuera y qué se mueve". Idioma fuente: español.
+
+Este documento no implica trabajo de modelado o animación inmediato. Es un mapa de lo que hará falta cuando se aborde la fase de tomas exteriores y animación, para no tener que rederivarlo del guion cada vez.
+
+## 1. Objetos del sistema solar y entorno necesarios
+
+| Objeto | ¿Ya existe? | Por qué hace falta | Notas |
+|---|---|---|---|
+| Celestial Ardor | ✅ modelo 3D (bloqueo + detalle exterior) | Protagonista de toda toma exterior | — |
+| Estación Proxima | ✅ modelo 3D (bloqueo + detalle exterior) | Ubicación de partida | — |
+| Júpiter | ❌ no existe | Fondo explícito en `main:shot-01-01`/`trailer:shot-a-01` ("Júpiter pequeño al fondo") y en el sobrevuelo de `main:scene-03` ("La nave bordea Júpiter con amplio desplazamiento lateral") | Ver §4 para tamaño angular aproximado desde L1. |
+| Sol | ❌ no existe | Fuente de luz principal de toda la secuencia; nunca se menciona en cuadro pero condiciona todas las sombras/exposición | Dirección de luz fija por escena; no hace falta el disco solar en cuadro salvo que se pida un contraluz. |
+| Campo de estrellas | ❌ no existe | Fondo de cualquier toma exterior fuera de la silueta de Júpiter/Proxima (`celestial-ardor-bridge` shot "rack focus archivo/estrellas", tomas de crucero) | Starfield estático (skybox), no requiere animación propia. |
+| Boca Velari (campo de nodos) | ❌ no existe | `location:velari-wormhole-mouth` — `main:shot-07-08`, `main:shot-07-10`, `trailer:shot-f-01/02` | Explícitamente **no es un aro**: campo distribuido de nodos negros separados por kilómetros; apertura de 150–200 m solo durante el pulso energético (§ doc de ubicación). Nuevo asset, no cubierto por ningún documento técnico existente. |
+| Estación Velari | ❌ no existe | `location:velari-station` — escenas de reconocimiento/contacto (`long:scene-26/27`, `festival:scene-07`, `trailer:scene-09`) | Hábitat orgánico continuo de varios km, piel viva. Nuevo asset — candidato a su propio documento técnico tipo `CELESTIAL_ARDOR.md`/`PROXIMA_STATION.md` cuando se aborde. |
+| Nave emisaria Velari | ❌ no existe | `long:scene-27` ("Una nave emisaria distinta de la estación se aproxima") | Objeto adicional, no descrito aún en ningún documento — falta hasta una referencia mínima de diseño. |
+
+## 2. Jerarquía de animación necesaria (rig)
+
+Ninguna de estas animaciones está construida todavía; esto es la lista de lo que habrá que riggear cuando se aborde la fase de animación.
+
+| Elemento | Comportamiento requerido | Notas de implementación |
+|---|---|---|
+| Hábitats de Proxima (rueda A y B) | Rotación continua independiente, sentidos opuestos, ~1,73 rpm nominal (§3 de `PROXIMA_STATION.md`) | Cada hábitat necesita un **empty pivote** en el centro de su cubo (hub), con el aro/rayos/costillas parentados a ese empty — hoy son mallas sueltas sin jerarquía de animación. La espina no rota. |
+| Estación Proxima (conjunto) | Permanece fija/no rotante como referencia de cámara | Ya es coherente con el modelo actual (espina como raíz implícita). |
+| Celestial Ardor — desatraque | Traslación de separación del muelle 1 + retracción de brazos de servicio/umbilicales | Hoy la nave está estáticamente "ya atracada"; falta una animación de separación (posición inicial atracada → posición final alejándose) y, opcionalmente, apertura del collar de captura de Proxima. |
+| Celestial Ardor (conjunto completo) | Necesita un **empty raíz** para poder animar posición + rotación de toda la nave como una unidad | Hoy la colección se mueve reposicionando `.location` de cada objeto individualmente (ver notas de `blender-modeling-reference.md`) — funciona para bloqueo estático pero no es animable directamente; conviene parentear todo a un único empty antes de animar. |
+| Maniobra de inversión de mitad de trayecto | Rotación de ~180° de toda la nave en microgravedad, luego reanudación del empuje (§3 de `CELESTIAL_ARDOR.md`; confirmado en guion, `main:scene-XX` ingeniería: "Zao asegurada en caída libre mientras la nave rota; 1 g retorna hacia el mismo piso al reanudar el frenado") | Requiere el mismo empty raíz de arriba. Es una rotación de la nave completa, no solo de cámara — el guion es explícito en que los objetos sueltos flotan y se re-asientan cuando el empuje regresa. |
+| Radiadores de la Ardor | Plegado/repliegue antes de maniobras (guion: "radiadores recogidos antes del giro", sobrevuelo de Júpiter) | Hoy las 6 aletas son mallas estáticas fijas al casco — hace falta articularlas (bisagra/pivote por aleta) si se quiere animar el repliegue. |
+| Sobrevuelo de Júpiter | Desplazamiento lateral amplio de cámara/nave, planeta fuera del eje de trayectoria (`main:scene-03`, cámara "24 mm exterior · planeta fuera del eje de trayectoria") | Depende de tener a Júpiter modelado (§1) y de la posición Proxima/Júpiter/L1 acordada (§4). |
+| Boca Velari — apertura | Campo de nodos que se activa y forma una región navegable durante una ventana limitada; el hueco de 150–200 m solo existe durante el pulso | Animación de aparición/pulso de los nodos + una "ventana" que se abre y se colapsa detrás de la nave al cruzar (`main:shot-07-10`: "distorsión total y colapso detrás"). |
+| Posición orbital Proxima @ L1 Sol–Júpiter | Actualmente una posición fija en la escena; el movimiento orbital real (Proxima/Júpiter alrededor del Sol) probablemente no sea necesario para tomas puntuales de duración corta | Marcar como **a confirmar con dirección** antes de invertir tiempo en un rig orbital completo — es plausible que baste con una posición congelada por toma. |
+
+## 3. Tomas y escenas exteriores identificadas en el guion
+
+Extraído de `scenes`/`shots` en los 4 archivos de `data/scripts/` cuyo `locationId` es una ubicación exterior (`proxima-dock`, `proxima-station`, `velari-wormhole-mouth`, `velari-station`), más las referencias a Júpiter/maniobras de vuelo encontradas en descripciones y notas de cámara aunque su `locationId` sea una ubicación interior (la cámara mira hacia afuera o el guion describe la nave desde fuera).
+
+| Guion | Escena/toma | Ubicación | Qué se ve | Elementos exteriores requeridos |
+|---|---|---|---|---|
+| main-short | `shot-01-01` / trailer `shot-a-01` | `proxima-dock` | Exterior de Proxima, eje 500–800 m, hábitats contrarrotando, Ardor atracada, Júpiter pequeño al fondo | Proxima ✅, Ardor ✅ (atracada), Júpiter ❌, rotación de hábitats ❌ (rig) |
+| main-short | `shot-01-02` a `shot-01-08` | `proxima-dock` | Preparativos de embarque (mayormente interior/pantallas, con Proxima de fondo) | Sin requisitos exteriores nuevos más allá de lo anterior |
+| main-short | escena de puente, "Mano de Cael confirma separación y empuje" | `celestial-ardor-bridge` (interior, implica exterior) | Momento de desatraque/separación de Proxima | Animación de desatraque ❌ (rig) |
+| main-short | `scene-03` / sobrevuelo | `celestial-ardor-engineering` (interior, referencia exterior) | "La nave bordea Júpiter con amplio desplazamiento lateral; radiadores recogidos antes del giro" | Júpiter ❌, radiadores articulados ❌ (rig), maniobra de giro/inversión ❌ (rig) |
+| main-short | toma de inversión de mitad de trayecto | `celestial-ardor-engineering` | "Zao asegurada en caída libre mientras la nave rota; 1 g retorna... al reanudar el frenado" | Maniobra de inversión ❌ (rig) — ver §2 |
+| main-short | `shot-07-08` | `velari-wormhole-mouth` | "Los nodos forman la garganta" — campo instrumental de nodos separados por km | Boca Velari (campo de nodos) ❌ |
+| main-short | `shot-07-10` | `velari-wormhole-mouth` | "Cruce por inercia y colapso" — la Ardor cruza, distorsión total, colapso detrás | Boca Velari ❌, animación de apertura/colapso ❌ (rig) |
+| trailer | `shot-f-01` / `shot-f-02` | `velari-wormhole-mouth` | Mismas tomas que `main-short` `shot-07-08`/`07-10`, versión trailer | Igual que arriba |
+| long | `scene-10` "Expansión y cruce" | `velari-wormhole-mouth` | Cruce sin poder cancelar la expansión con seguridad | Igual que arriba |
+| long | `scene-26` "Reconocimiento limitado" | `velari-station` | La estación Velari responde con un patrón que autoriza aproximación | Estación Velari ❌ |
+| long | `scene-27` "Emisaria" | `velari-station` | Una nave emisaria se aproxima; escala humana subordinada al encuentro | Estación Velari ❌, nave emisaria Velari ❌ |
+| festival | `scene-07` "Contacto / cierre" | `velari-station` | Envío, contacto y «Llegaste a tiempo» | Estación Velari ❌ |
+| trailer | `scene-09` "Título" | `velari-station` | Tarjeta de título; pulso Velari | Estación Velari ❌, pulso/apertura ❌ (rig, si se reutiliza el de la boca) |
+
+## 4. Notas de escala y posición (para verificar, no canónico todavía)
+
+- **Proxima en L1 Sol–Júpiter** (§2 de `PROXIMA_STATION.md`): la distancia del punto L1 a Júpiter es aproximadamente `d_Júpiter × (m_Júpiter / 3·m_Sol)^(1/3)`. Con `d_Júpiter–Sol ≈ 778,5 millones de km` y la relación de masas Júpiter/Sol ≈ 1/1047, da **L1 a ≈ 52,7 millones de km de Júpiter** (del lado del Sol). Es una cifra derivada de mecánica orbital estándar, no un valor fijado en los documentos existentes — verificar antes de usarla como canon.
+- **Tamaño angular de Júpiter visto desde Proxima**, con esa distancia y el radio real de Júpiter (~69.911 km): diámetro angular ≈ **9 minutos de arco** — unas 13 veces más grande que el Júpiter visto desde la Tierra (~40 segundos de arco), pero aun así un disco pequeño en el encuadre, consistente con la acotación del guion "Júpiter pequeño al fondo".
+- Ninguna de estas cifras está en `PROXIMA_STATION.md` ni en `CELESTIAL_ARDOR.md` todavía — si se confirman, deberían promoverse a esos documentos (o a uno nuevo de referencia astronómica) en vez de vivir solo aquí.
