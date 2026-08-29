@@ -1,6 +1,6 @@
 # Plan: sincronizar guiones con sus animatics (29/08/2026)
 
-**Estado:** diagnóstico vigente; el Festival Cut ya tiene shot list parcial (secuencias A–D: 35 tomas). E–G y la limpieza de cues huérfanos del corto siguen pendientes.
+**Estado:** ejecución parcial completada. Festival Cut tiene A–D (35 tomas) y mantiene E–G pendientes. Los 57 cues huérfanos del corto fueron retirados del grafo activo y archivados con cobertura/procedencia en `data/archive/main-short-unplaced-action-cues.json`. La regresión de diálogo del tráiler quedó corregida en su generador.
 
 ## Resumen del diagnóstico
 
@@ -16,7 +16,7 @@ Medido por script, el problema tiene **dos causas completamente distintas** disf
 
 **Propuesta restante:** cerrar E–G secuencia por secuencia con la misma rigurosidad; verificar con `validate:data`, `report:dialogue-timing` / `report:cue-coverage` y `report:outline-gaps` al cerrar cada una.
 
-## 2. `light-delay-main-short` — los 57 cues de acción "sin colocar" son prosa heredada/duplicada, no cobertura faltante
+## 2. `light-delay-main-short` — archivo completado
 
 Revisé el contenido de estos cues contra las tomas ya existentes en las **13 escenas afectadas** (01, 02, 03, 04, 09, 10, 11, 12, 13, 14, 15, 16, 17 — es decir, prácticamente todo el corto). En cada caso el cue de acción "sin colocar" es un párrafo largo que describe en prosa el mismo contenido que ya está desglosado toma por toma en la misma escena. Ejemplos verificados línea por línea:
 
@@ -27,26 +27,20 @@ Revisé el contenido de estos cues contra las tomas ya existentes en las **13 es
 
 Mi lectura: son borradores previos al desglose toma-por-toma que quedaron huérfanos en el arreglo `cues` en vez de limpiarse cuando se escribieron las tomas definitivas. No representan diálogo o acción que falte en el animatic — el contenido *ya está* ahí, sólo que como texto de toma en vez de como cue independiente.
 
-**Esto no es un fix mecánico de "colocar el cue que falta"** — sería duplicar contenido, no sincronizar. Necesita una decisión de limpieza de datos:
+**Decisión ejecutada:** no se colocaron ni se borraron sin rastro. Se retiraron los 57 cues duplicados del guion activo y se conservaron completos en un archivo histórico validado, junto con escena y tomas que cubren su contenido. `archive:orphan-actions:check` evita que el resultado generado derive.
 
-- **Opción A (recomendada): eliminar estos 57 cues.** Su contenido ya vive en las descripciones de toma; no aportan nada nuevo al guion ni al animatic, y dejan ruido en `report:cue-placement`/`entity-binding`.
-- **Opción B: archivarlos** (mover a un campo tipo `legacyNotes` fuera de `cues[]`) por si sirven de referencia histórica del proceso de escritura.
-- **Opción C: dejarlos y no tocarlos** — están fuera del animatic pero visibles en el guion; si eso ya no molesta, no hay urgencia real.
-
-No voy a borrar contenido creativo sin tu aprobación explícita — decime cuál opción preferís (o si querés revisar caso por caso antes) y sigo desde ahí.
+La deuda restante del corto es editorial/visual (bindings, propósito y framing), no esos cues históricos.
 
 ## `light-delay-trailer` y `light-delay-long` — no requieren acción para este objetivo
 
-- **Tráiler:** 0 cues sin colocar — ya está sincronizado con su animatic. (Nota aparte, ya reportada en `docs/REVISION_TRABAJO_OTRO_AGENTE.md`: volvió a tener 5 tomas con sobra de diálogo por una regresión del generador `build-trailer-script.mjs`; eso es un problema distinto de sincronización de sobra de tiempo, no de cues invisibles. Sigue sin corregir, a la espera de que confirmes si lo arreglo.)
+- **Tráiler:** 0 cues sin colocar y 0 tomas con sobra de diálogo. La corrección vive en `build-trailer-script.mjs`; el montaje reproducible dura 92,5 s.
 - **Largo:** 0 cues sin colocar, pero es un poco engañoso — casi no tiene tomas todavía en general (la broma de la nave, por ejemplo, sólo existe como prosa en `summary`/`dramaticPurpose`, no como cues reales). No hay nada que sincronizar porque casi no hay nada construido aún; es guionizado pendiente, no un bug de animatic.
 
-## Resumen de lo que pediría aprobar
+## Próximas acciones
 
-| Script | Diagnóstico | Acción propuesta | ¿Necesita tu aprobación de enfoque? |
-|---|---|---|---|
-| festival | Sin shot list real | Construir tomas/cues secuencia por secuencia según la guía de adaptación, mostrando cada secuencia antes de seguir | Sí — confirmar que empiece por la Secuencia A |
-| main-short | 57 cues de acción huérfanos/duplicados | Eliminar (o archivar) tras tu decisión | Sí — elegir opción A/B/C arriba |
-| trailer | Sincronizado; regresión de sobra de diálogo aparte | Arreglar el generador (`addCue()` + duraciones) si querés que lo retome | Sí — confirmar si procedo |
-| long | Sin suficientes tomas aún para evaluar | Ninguna acción por ahora | No |
-
-Quedo a la espera de tu feedback antes de tocar cualquier archivo de datos.
+| Script | Estado | Próxima acción |
+|---|---|---|
+| festival | A–D construidas; E–G planificadas | Resolver los 14 pasos `required` aún no cubiertos antes de ampliar tomas. |
+| main-short | Cues duplicados archivados; shot list completa | Resolver sólo bindings, propósito y framing con valor editorial/visual. |
+| trailer | Generador durable; 29 tomas / 92,5 s | Auditoría causal y aprobación de montaje antes del freeze de prompts. |
+| long | Tratamiento con outline; sin tomas | Mantener producción como N/A hasta aprobar desarrollo narrativo. |

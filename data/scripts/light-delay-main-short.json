@@ -1183,17 +1183,6 @@
         "main:cue-01-17",
         "main:cue-01-18",
         "main:cue-01-19",
-        "main:cue-01-20",
-        "main:cue-01-21",
-        "main:cue-01-22",
-        "main:cue-01-23",
-        "main:cue-01-24",
-        "main:cue-01-25",
-        "main:cue-01-26",
-        "main:cue-01-27",
-        "main:cue-01-28",
-        "main:cue-01-29",
-        "main:cue-01-30",
         "main:cue-01-31",
         "main:cue-01-32",
         "main:cue-01-33"
@@ -1217,9 +1206,7 @@
       },
       "cueIds": [
         "main:cue-02-01",
-        "main:cue-02-02",
-        "main:cue-02-03",
-        "main:cue-02-04"
+        "main:cue-02-02"
       ]
     },
     {
@@ -1241,10 +1228,7 @@
       "cueIds": [
         "main:cue-03-01",
         "main:cue-03-02",
-        "main:cue-03-03",
-        "main:cue-03-04",
-        "main:cue-03-05",
-        "main:cue-03-06"
+        "main:cue-03-03"
       ]
     },
     {
@@ -1268,12 +1252,7 @@
         "main:cue-04-02",
         "main:cue-04-03",
         "main:cue-04-04",
-        "main:cue-04-05",
-        "main:cue-04-06",
-        "main:cue-04-07",
-        "main:cue-04-08",
-        "main:cue-04-09",
-        "main:cue-04-10"
+        "main:cue-04-05"
       ]
     },
     {
@@ -1430,10 +1409,7 @@
         "main:cue-09-02",
         "main:cue-09-03",
         "main:cue-09-04",
-        "main:cue-09-05",
-        "main:cue-09-06",
-        "main:cue-09-07",
-        "main:cue-09-08"
+        "main:cue-09-05"
       ]
     },
     {
@@ -1458,11 +1434,7 @@
         "main:cue-10-03",
         "main:cue-10-04",
         "main:cue-10-05",
-        "main:cue-10-06",
-        "main:cue-10-07",
-        "main:cue-10-08",
-        "main:cue-10-09",
-        "main:cue-10-10"
+        "main:cue-10-06"
       ]
     },
     {
@@ -1489,10 +1461,7 @@
         "main:cue-11-05",
         "main:cue-11-06",
         "main:cue-11-07",
-        "main:cue-11-08",
-        "main:cue-11-09",
-        "main:cue-11-10",
-        "main:cue-11-11"
+        "main:cue-11-08"
       ]
     },
     {
@@ -1519,14 +1488,7 @@
         "main:cue-12-05",
         "main:cue-12-06",
         "main:cue-12-07",
-        "main:cue-12-08",
-        "main:cue-12-09",
-        "main:cue-12-10",
-        "main:cue-12-11",
-        "main:cue-12-12",
-        "main:cue-12-13",
-        "main:cue-12-14",
-        "main:cue-12-15"
+        "main:cue-12-08"
       ]
     },
     {
@@ -1548,9 +1510,7 @@
       "cueIds": [
         "main:cue-13-01",
         "main:cue-13-02",
-        "main:cue-13-03",
-        "main:cue-13-04",
-        "main:cue-13-05"
+        "main:cue-13-03"
       ]
     },
     {
@@ -1581,17 +1541,7 @@
         "main:cue-14-09",
         "main:cue-14-10",
         "main:cue-14-11",
-        "main:cue-14-12",
-        "main:cue-14-13",
-        "main:cue-14-14",
-        "main:cue-14-15",
-        "main:cue-14-16",
-        "main:cue-14-17",
-        "main:cue-14-18",
-        "main:cue-14-19",
-        "main:cue-14-20",
-        "main:cue-14-21",
-        "main:cue-14-22"
+        "main:cue-14-12"
       ]
     },
     {
@@ -1616,9 +1566,7 @@
         "main:cue-15-03",
         "main:cue-15-04",
         "main:cue-15-05",
-        "main:cue-15-06",
-        "main:cue-15-07",
-        "main:cue-15-08"
+        "main:cue-15-06"
       ]
     },
     {
@@ -1637,9 +1585,7 @@
         "es": "Región de encuentro",
         "en": "Meeting Region"
       },
-      "cueIds": [
-        "main:cue-16-01"
-      ]
+      "cueIds": []
     },
     {
       "id": "main:beat-17-01",
@@ -1660,11 +1606,7 @@
       "cueIds": [
         "main:cue-17-01",
         "main:cue-17-02",
-        "main:cue-17-03",
-        "main:cue-17-04",
-        "main:cue-17-05",
-        "main:cue-17-06",
-        "main:cue-17-07"
+        "main:cue-17-03"
       ]
     }
   ],
@@ -2082,116 +2024,6 @@
       }
     },
     {
-      "id": "main:cue-01-20",
-      "beatId": "main:beat-01-01",
-      "order": 20,
-      "type": "action",
-      "text": {
-        "es": "Proxima parece observatorio, refinería y astillero a la vez: celosía antigua descolorida, laboratorios más nuevos, radiadores negros y dos hábitats que giran en sentidos opuestos. La CELESTIAL ARDOR —casco blanco mate, detalles dorados y cicatrices de servicio— espera en el eje de atraque. Interior: muelle industrial frío, iluminación azulada. Júpiter cuelga como un disco ocre nítido y pequeño. La tripulación aborda en fila.",
-        "en": "Proxima looks like an observatory, refinery and shipyard at the same time: old faded latticework, newer laboratories, black radiators and two habitats that rotate in opposite directions. The CELESTIAL ARDOR—matte white hull, gold details, and service scars—waits at the docking shaft. Interior: cold industrial dock, bluish lighting. Jupiter hangs like a small, sharp ocher disk. The crew boards in line."
-      }
-    },
-    {
-      "id": "main:cue-01-21",
-      "beatId": "main:beat-01-01",
-      "order": 21,
-      "type": "action",
-      "text": {
-        "es": "Varias pantallas del muelle reproducen noticias. Overlay: \"SEÑAL TIERRA — RETRASO: 43 MIN 18 S.\"",
-        "en": "Several screens on the dock play news. Overlay: \"EARTH SIGNAL — DELAY: 43 MIN 18 S.\""
-      }
-    },
-    {
-      "id": "main:cue-01-22",
-      "beatId": "main:beat-01-01",
-      "order": 22,
-      "type": "action",
-      "text": {
-        "es": "Miles de manifestantes frente a edificios gubernamentales. Carteles: \"NO ABRAN LA PUERTA.\" \"NINGÚN CONTACTO SIN DEFENSA.\" En otra ciudad, una multitud celebra bajo una réplica luminosa del túnel: \"RESPONDAMOS.\" \"NO ESTAMOS SOLOS.\"",
-        "en": "Thousands of protesters in front of government buildings. Signs: \"DO NOT OPEN THE DOOR.\" \"NO CONTACT WITHOUT DEFENSE.\" In another city, a crowd celebrates under a luminous replica of the tunnel: \"LET'S RESPOND.\" \"WE ARE NOT ALONE.\""
-      }
-    },
-    {
-      "id": "main:cue-01-23",
-      "beatId": "main:beat-01-01",
-      "order": 23,
-      "type": "action",
-      "text": {
-        "es": "PM HARLAN (40s) observa la pantalla mientras la tripulación continúa embarcando. VOSS (50s) se acerca con un tablet.",
-        "en": "PM HARLAN (40s) watches the screen as the crew continues boarding. VOSS (50s) approaches with a tablet."
-      }
-    },
-    {
-      "id": "main:cue-01-24",
-      "beatId": "main:beat-01-01",
-      "order": 24,
-      "type": "action",
-      "text": {
-        "es": "Voss apaga la pantalla y continúa hacia la nave.",
-        "en": "Voss turns off the screen and continues towards the ship."
-      }
-    },
-    {
-      "id": "main:cue-01-25",
-      "beatId": "main:beat-01-01",
-      "order": 25,
-      "type": "action",
-      "text": {
-        "es": "CAEL (30s, piloto) pasa junto a ellos, se detiene.",
-        "en": "CAEL (30s, pilot) passes by them, stops."
-      }
-    },
-    {
-      "id": "main:cue-01-26",
-      "beatId": "main:beat-01-01",
-      "order": 26,
-      "type": "action",
-      "text": {
-        "es": "Cael continúa hacia la nave. Al pasar, cruza mirada con SORELL (30s, bata sobre uniforme), que sube por la rampa cargando una caja de equipo lingüístico.",
-        "en": "Cael continues towards the ship. As he passes, he locks eyes with SORELL (30s, gown over uniform), who is walking up the ramp carrying a box of linguistic equipment."
-      }
-    },
-    {
-      "id": "main:cue-01-27",
-      "beatId": "main:beat-01-01",
-      "order": 27,
-      "type": "action",
-      "text": {
-        "es": "Corte a ZAO (40s, mono de ingeniería) frente al núcleo diplomático, una esfera de cristal pulsante. ELIN (30s) está a su lado con un tablet. En la consola técnica contigua, un control lleva el rótulo CONTROL LOCAL / LÁSER EXTERIOR.",
-        "en": "Cut to ZAO (40s, engineering overalls) in front of the diplomatic core, a pulsating crystal sphere. ELIN (30s) is beside her with a tablet. On the adjacent technical console, a control is labeled LOCAL CONTROL / EXTERNAL LASER."
-      }
-    },
-    {
-      "id": "main:cue-01-28",
-      "beatId": "main:beat-01-01",
-      "order": 28,
-      "type": "action",
-      "text": {
-        "es": "Zao confirma el enlace físico del control; la prueba de la malla sigue caída.",
-        "en": "Zao confirms the physical link of the control; the mesh test is still down."
-      }
-    },
-    {
-      "id": "main:cue-01-29",
-      "beatId": "main:beat-01-01",
-      "order": 29,
-      "type": "action",
-      "text": {
-        "es": "Sorell se detiene junto a Zao un instante, le entrega una carpeta.",
-        "en": "Sorell stops next to Zao for a moment, hands him a folder."
-      }
-    },
-    {
-      "id": "main:cue-01-30",
-      "beatId": "main:beat-01-01",
-      "order": 30,
-      "type": "action",
-      "text": {
-        "es": "Sorell sonríe, sigue camino. Un TÉCNICO se acerca a Zao.",
-        "en": "Sorell smiles and continues on her way. A TECHNICIAN approaches Zao."
-      }
-    },
-    {
       "id": "main:cue-02-01",
       "beatId": "main:beat-02-01",
       "order": 1,
@@ -2231,26 +2063,6 @@
             "status": "draft"
           }
         }
-      }
-    },
-    {
-      "id": "main:cue-02-03",
-      "beatId": "main:beat-02-01",
-      "order": 3,
-      "type": "action",
-      "text": {
-        "es": "Puente reducido, dispuesto perpendicularmente al eje de empuje; pantallas curvas azul cian. Cael en su estación. Voss se sienta en el asiento de mando.",
-        "en": "Compact bridge, arranged perpendicular to the thrust axis; curved cyan-blue displays. Cael is at her station. Voss sits in the command chair."
-      }
-    },
-    {
-      "id": "main:cue-02-04",
-      "beatId": "main:beat-02-01",
-      "order": 4,
-      "type": "action",
-      "text": {
-        "es": "PG exterior La nave se desprende del muelle axial. Ya libre de Proxima, despliega velos oscuros de radiación térmica y orienta su tobera magnética hacia el arco de salida. Overlay: \"TRÁNSITO A LA BOCA: 57H 48MIN.\"",
-        "en": "External PG The ship detaches from the axial spring. Now free of Proxima, it deploys dark veils of thermal radiation and directs its magnetic nozzle toward the exit arc. Overlay: \"TRANSIT TO THE MOUTH: 57H 48MIN.\""
       }
     },
     {
@@ -2326,36 +2138,6 @@
             "status": "draft"
           }
         }
-      }
-    },
-    {
-      "id": "main:cue-03-04",
-      "beatId": "main:beat-03-01",
-      "order": 4,
-      "type": "action",
-      "text": {
-        "es": "Overlay: \"T+29H — ARCO DE PASO POR JÚPITER / INVERSIÓN.\" Lejos del disco planetario, los radiadores se repliegan. Una alarma ordena asegurar posiciones; el empuje cae y todo queda en caída libre. La nave rota ciento ochenta grados, vuelve a desplegar los radiadores y reanuda 1 g para frenar. Zao permanece sujeta mientras revisa un panel.",
-        "en": "Overlay: \"T+29H — JUPITER PASSAGE ARC / INVERSION.\" Away from the planetary disk, the radiators retract. An alarm orders securing positions; the thrust falls and everything is in free fall. The ship rotates one hundred and eighty degrees, redeploys the radiators, and resumes 1 g to brake. Zao remains restrained while checking a panel."
-      }
-    },
-    {
-      "id": "main:cue-03-05",
-      "beatId": "main:beat-03-01",
-      "order": 5,
-      "type": "action",
-      "text": {
-        "es": "Toca la lectura. Se expande: un gráfico de energía con un pico anómalo, recurrente.",
-        "en": "Play the reading. Expands: an energy graph with an anomalous, recurring spike."
-      }
-    },
-    {
-      "id": "main:cue-03-06",
-      "beatId": "main:beat-03-01",
-      "order": 6,
-      "type": "action",
-      "text": {
-        "es": "Abre el registro de mantenimiento. Una entrada resalta: acceso fuera de horario.",
-        "en": "Open the maintenance log. One entry stands out: access after hours."
       }
     },
     {
@@ -2445,56 +2227,6 @@
       "text": {
         "es": "Copia el estado para Elin y deja el registro de Sorell marcado como NO VERIFICADO.",
         "en": "Copy the status for Elin and leave Sorell's record marked UNVERIFIED."
-      }
-    },
-    {
-      "id": "main:cue-04-06",
-      "beatId": "main:beat-04-01",
-      "order": 6,
-      "type": "action",
-      "text": {
-        "es": "Overlay: \"T+40H.\" Zao conecta su tablet a un puerto. Líneas de código. Encuentra un bloque marcado, alterado.",
-        "en": "Overlay: \"T+40H.\" Zao plugs her tablet into a port. Lines of code. She finds a marked, altered block."
-      }
-    },
-    {
-      "id": "main:cue-04-07",
-      "beatId": "main:beat-04-01",
-      "order": 7,
-      "type": "action",
-      "text": {
-        "es": "Profundiza. El código se traduce en un patrón visual incompleto: una estructura que puede ser un sistema de verificación agresivo o una rutina de compatibilidad desconocida.",
-        "en": "Go deeper. The code results in an incomplete visual pattern: a structure that may be an aggressive verification system or a routine of unknown compatibility."
-      }
-    },
-    {
-      "id": "main:cue-04-08",
-      "beatId": "main:beat-04-01",
-      "order": 8,
-      "type": "action",
-      "text": {
-        "es": "Cruza el registro superficial de accesos. Un nombre aparece: \"SORELL — ACCESO NIVEL 3.\"",
-        "en": "Cross the surface access log. A name appears: \"SORELL — ACCESS LEVEL 3.\""
-      }
-    },
-    {
-      "id": "main:cue-04-09",
-      "beatId": "main:beat-04-01",
-      "order": 9,
-      "type": "action",
-      "text": {
-        "es": "Zao mantiene la investigación local; no informa al puente hasta contar con la prueba física.",
-        "en": "Zao keeps the investigation local; she does not alert the bridge until she has physical proof."
-      }
-    },
-    {
-      "id": "main:cue-04-10",
-      "beatId": "main:beat-04-01",
-      "order": 10,
-      "type": "action",
-      "text": {
-        "es": "Zao mira otra vez el nombre de Sorell. Marca el registro superficial como NO VERIFICADO.",
-        "en": "Zao looks at Sorell's name again. Mark the surface record as UNVERIFIED."
       }
     },
     {
@@ -3349,36 +3081,6 @@
       }
     },
     {
-      "id": "main:cue-09-06",
-      "beatId": "main:beat-09-01",
-      "order": 6,
-      "type": "action",
-      "text": {
-        "es": "Montaje de investigación. Overlay: \"ENCUENTRO VELARI — 22H 55MIN.\"",
-        "en": "Research setup. Overlay: \"VELARI MEETING — 22H 55MIN.\""
-      }
-    },
-    {
-      "id": "main:cue-09-07",
-      "beatId": "main:beat-09-01",
-      "order": 7,
-      "type": "action",
-      "text": {
-        "es": "PD Keene registra lesiones incompatibles con una caída. PD Cámaras y malla muestran un vacío durante la interferencia. PD El distribuidor COM A/B conserva marcas de manipulación. OTS Cael confirma que Sorell estaba en el puente cuando Voss la envió.",
-        "en": "PD Keene records injuries inconsistent with a fall. PS Chambers and mesh show a void during interference. PS The COM A/B distributor retains signs of handling. OTS Cael confirms that Sorell was on the bridge when Voss sent her."
-      }
-    },
-    {
-      "id": "main:cue-09-08",
-      "beatId": "main:beat-09-01",
-      "order": 8,
-      "type": "action",
-      "text": {
-        "es": "Sorell entrega la credencial comprometida para análisis y se coloca junto a Elin.",
-        "en": "Sorell hands over the compromised credential for analysis and stands next to Elin."
-      }
-    },
-    {
       "id": "main:cue-10-01",
       "beatId": "main:beat-10-01",
       "order": 1,
@@ -3508,46 +3210,6 @@
             "status": "draft"
           }
         }
-      }
-    },
-    {
-      "id": "main:cue-10-07",
-      "beatId": "main:beat-10-01",
-      "order": 7,
-      "type": "action",
-      "text": {
-        "es": "Elin trabaja en un terminal físicamente protegido. Overlay: \"PAYLOAD DESPLEGADO: 31%.\"",
-        "en": "Elin works in a physically protected terminal. Overlay: \"PAYLOAD DEPLOYED: 31%.\""
-      }
-    },
-    {
-      "id": "main:cue-10-08",
-      "beatId": "main:beat-10-01",
-      "order": 8,
-      "type": "action",
-      "text": {
-        "es": "Reconstruye la envoltura. El indicador sube a 38%. Aparece una ruta de ejecución asociada a la futura apertura del canal Velari.",
-        "en": "Rebuild the envelope. The indicator rises to 38%. An execution route appears associated with the future opening of the Velari canal."
-      }
-    },
-    {
-      "id": "main:cue-10-09",
-      "beatId": "main:beat-10-01",
-      "order": 9,
-      "type": "action",
-      "text": {
-        "es": "Traza un perímetro de cuarentena. El despliegue se detiene en 41%, pero el payload permanece activo dentro.",
-        "en": "Draw a quarantine perimeter. The deployment stops at 41%, but the payload remains active inside."
-      }
-    },
-    {
-      "id": "main:cue-10-10",
-      "beatId": "main:beat-10-01",
-      "order": 10,
-      "type": "action",
-      "text": {
-        "es": "Encuentra una firma recurrente: \"OVR-7C41 — CREDENCIAL DE MANDO / TITULAR CIFRADO.\"",
-        "en": "She finds a recurring signature: \"OVR-7C41 — COMMAND CREDENTIAL / ENCRYPTED HOLDER.\""
       }
     },
     {
@@ -3719,36 +3381,6 @@
       }
     },
     {
-      "id": "main:cue-11-09",
-      "beatId": "main:beat-11-01",
-      "order": 9,
-      "type": "action",
-      "text": {
-        "es": "Harlan, de pie frente a Voss. Cael mantiene la navegación; el reloj de encuentro desciende.",
-        "en": "Harlan, standing in front of Voss. Cael maintains navigation; the match clock goes down."
-      }
-    },
-    {
-      "id": "main:cue-11-10",
-      "beatId": "main:beat-11-01",
-      "order": 10,
-      "type": "action",
-      "text": {
-        "es": "Cael recibe un pulso débil.",
-        "en": "Cael receives a weak pulse."
-      }
-    },
-    {
-      "id": "main:cue-11-11",
-      "beatId": "main:beat-11-01",
-      "order": 11,
-      "type": "action",
-      "text": {
-        "es": "Harlan contiene la reacción; mira el reloj.",
-        "en": "Harlan holds back the reaction; look at the clock."
-      }
-    },
-    {
       "id": "main:cue-12-01",
       "beatId": "main:beat-12-01",
       "order": 1,
@@ -3917,76 +3549,6 @@
       }
     },
     {
-      "id": "main:cue-12-09",
-      "beatId": "main:beat-12-01",
-      "order": 9,
-      "type": "action",
-      "text": {
-        "es": "Cael reconstruye el paquete. Toda la tripulación permanece en sus puestos; Sorell escucha desde el puesto de investigación por comunicador.",
-        "en": "Cael rebuilds the pack. The entire crew remains at their posts; Sorell listens from the research station via communicator."
-      }
-    },
-    {
-      "id": "main:cue-12-10",
-      "beatId": "main:beat-12-01",
-      "order": 10,
-      "type": "action",
-      "text": {
-        "es": "Estática. La voz de Zao aparece fragmentada pero inteligible.",
-        "en": "Static. Zao's voice appears fragmented but intelligible."
-      }
-    },
-    {
-      "id": "main:cue-12-11",
-      "beatId": "main:beat-12-01",
-      "order": 11,
-      "type": "action",
-      "text": {
-        "es": "Voss mira a Harlan, pero no actúa todavía.",
-        "en": "Voss looks at Harlan, but doesn't act yet."
-      }
-    },
-    {
-      "id": "main:cue-12-12",
-      "beatId": "main:beat-12-01",
-      "order": 12,
-      "type": "action",
-      "text": {
-        "es": "Elin superpone la firma OVR-7C41 hallada en el payload con el registro físico indicado por Zao. Una tercera capa, preservada en el hardware de mando, resuelve el titular.",
-        "en": "Elin superimposes the OVR-7C41 signature found in the payload with the physical record indicated by Zao. A third layer, preserved in the control hardware, resolves the headline."
-      }
-    },
-    {
-      "id": "main:cue-12-13",
-      "beatId": "main:beat-12-01",
-      "order": 13,
-      "type": "action",
-      "text": {
-        "es": "En pantalla: \"COINCIDENCIA TRIPLE — CREDENCIAL: R. HARLAN — INTEGRIDAD VERIFICADA.\"",
-        "en": "On screen: \"TRIPLE MATCH — CREDENTIAL: R. HARLAN — INTEGRITY VERIFIED.\""
-      }
-    },
-    {
-      "id": "main:cue-12-14",
-      "beatId": "main:beat-12-01",
-      "order": 14,
-      "type": "action",
-      "text": {
-        "es": "Harlan no corre de inmediato. Toca discretamente un control en su muñeca. En el panel de Elin: \"SOLICITUD MANUAL DE EJECUCIÓN — ACEPTADA ANTES DE REVOCACIÓN.\"",
-        "en": "Harlan doesn't run right away. He discreetly touches a control on his wrist. On Elin's panel: \"MANUAL REQUEST FOR EXECUTION — ACCEPTED BEFORE REVOCATION.\""
-      }
-    },
-    {
-      "id": "main:cue-12-15",
-      "beatId": "main:beat-12-01",
-      "order": 15,
-      "type": "action",
-      "text": {
-        "es": "Harlan golpea al tripulante que intenta sujetarlo y sale hacia el núcleo.",
-        "en": "Harlan hits the crewman who tries to restrain him and leaves for the core."
-      }
-    },
-    {
       "id": "main:cue-13-01",
       "beatId": "main:beat-13-01",
       "order": 1,
@@ -4047,26 +3609,6 @@
             "status": "draft"
           }
         }
-      }
-    },
-    {
-      "id": "main:cue-13-04",
-      "beatId": "main:beat-13-01",
-      "order": 4,
-      "type": "action",
-      "text": {
-        "es": "Bajo 1 g, Harlan cruza la cubierta de mando, toma el ascensor central y desciende al ramal del núcleo mientras la credencial se extingue módulo por módulo. Llega antes de que la revocación alcance el bus físico, entra y sella el mamparo.",
-        "en": "Under 1 g, Harlan crosses the command deck, takes the central lift, and descends to the core branch while his credential dies module by module. He arrives before revocation reaches the physical bus, enters, and seals the bulkhead."
-      }
-    },
-    {
-      "id": "main:cue-13-05",
-      "beatId": "main:beat-13-01",
-      "order": 5,
-      "type": "action",
-      "text": {
-        "es": "Voss y Okoye llegan al mamparo. En el puente, Sorell ocupa el puesto junto a Elin.",
-        "en": "Voss and Okoye reach the bulkhead. On the bridge, Sorell takes the position next to Elin."
       }
     },
     {
@@ -4328,106 +3870,6 @@
       }
     },
     {
-      "id": "main:cue-14-13",
-      "beatId": "main:beat-14-01",
-      "order": 13,
-      "type": "action",
-      "text": {
-        "es": "En el núcleo, Harlan conecta un mando físico. En pantalla: \"CANAL VELARI — APERTURA EN 01:32 / PAYLOAD ARMADO.\"",
-        "en": "At the core, Harlan connects a physical controller. On screen: \"CANAL VELARI — OPENING AT 01:32 / PAYLOAD ARMED.\""
-      }
-    },
-    {
-      "id": "main:cue-14-14",
-      "beatId": "main:beat-14-01",
-      "order": 14,
-      "type": "action",
-      "text": {
-        "es": "En el puente, Elin abre el mapa de cuarentena preparado horas antes.",
-        "en": "On the bridge, Elin opens the quarantine map prepared hours before."
-      }
-    },
-    {
-      "id": "main:cue-14-15",
-      "beatId": "main:beat-14-01",
-      "order": 15,
-      "type": "action",
-      "text": {
-        "es": "Sorell inserta el soporte pasivo presentado al inicio. En pantalla: \"SALUDO SORELL-ZAO / SÓLO LECTURA / SIN EJECUTABLES.\"",
-        "en": "Sorell inserts the passive support presented at the beginning. On screen: \"GREETING SORELL-ZAO / READ ONLY / NO EXECUTABLES.\""
-      }
-    },
-    {
-      "id": "main:cue-14-16",
-      "beatId": "main:beat-14-01",
-      "order": 16,
-      "type": "action",
-      "text": {
-        "es": "Cael mantiene la desaceleración y trabaja en paralelo sobre el mamparo.",
-        "en": "Cael maintains the deceleration and works in parallel on the bulkhead."
-      }
-    },
-    {
-      "id": "main:cue-14-17",
-      "beatId": "main:beat-14-01",
-      "order": 17,
-      "type": "action",
-      "text": {
-        "es": "Harlan intenta liberar el payload de la cuarentena desde el bus físico. Elin bloquea dos rutas; una tercera permanece abierta.",
-        "en": "Harlan attempts to release the quarantine payload from the physical bus. Elin blocks two routes; a third remains open."
-      }
-    },
-    {
-      "id": "main:cue-14-18",
-      "beatId": "main:beat-14-01",
-      "order": 18,
-      "type": "action",
-      "text": {
-        "es": "El mamparo cede. Voss y el tripulante entran. Harlan se resiste mientras intenta alcanzar el panel.",
-        "en": "The bulkhead gives way. Voss and the crewman enter. Harlan resists as he tries to reach the panel."
-      }
-    },
-    {
-      "id": "main:cue-14-19",
-      "beatId": "main:beat-14-01",
-      "order": 19,
-      "type": "action",
-      "text": {
-        "es": "Forcejean. El reloj: \"CANAL VELARI — 00:18.\" Harlan alcanza INICIAR. La rama abierta comienza a transmitir hacia el buffer de salida, todavía cerrado.",
-        "en": "They struggle. The clock: \"CANAL VELARI — 00:18.\" Harlan reaches START. The open branch begins transmitting to the still closed output buffer."
-      }
-    },
-    {
-      "id": "main:cue-14-20",
-      "beatId": "main:beat-14-01",
-      "order": 20,
-      "type": "action",
-      "text": {
-        "es": "Elin aplica la cuarentena preparada. El reloj llega a 00:07*.*",
-        "en": "Elin applies the prepared quarantine. The clock reaches 00:07*.*"
-      }
-    },
-    {
-      "id": "main:cue-14-21",
-      "beatId": "main:beat-14-01",
-      "order": 21,
-      "type": "action",
-      "text": {
-        "es": "Pantalla: \"PAYLOAD EN CUARENTENA — CANAL SALIENTE LIMPIO — MEDIACIÓN ACTIVA.\"",
-        "en": "Screen: \"PAYLOAD IN QUARANTINE — CLEAN OUTGOING CHANNEL — ACTIVE MEDIATION.\""
-      }
-    },
-    {
-      "id": "main:cue-14-22",
-      "beatId": "main:beat-14-01",
-      "order": 22,
-      "type": "action",
-      "text": {
-        "es": "Voss y el tripulante reducen a Harlan. Él mira el payload aún visible, pero aislado.",
-        "en": "Voss and the crewman subdue Harlan. He looks at the payload still visible, but isolated."
-      }
-    },
-    {
       "id": "main:cue-15-01",
       "beatId": "main:beat-15-01",
       "order": 1,
@@ -4554,36 +3996,6 @@
       }
     },
     {
-      "id": "main:cue-15-07",
-      "beatId": "main:beat-15-01",
-      "order": 7,
-      "type": "action",
-      "text": {
-        "es": "El reloj llega a cero. Una portadora Velari aparece. Elin mantiene el canal técnico; Sorell controla el contenido.",
-        "en": "The clock reaches zero. A Velari bearer appears. Elin maintains the technical channel; Sorell controls the content."
-      }
-    },
-    {
-      "id": "main:cue-15-08",
-      "beatId": "main:beat-15-01",
-      "order": 8,
-      "type": "action",
-      "text": {
-        "es": "Sorell confirma la secuencia. Elin abre el conducto y transmite. La respuesta llega casi de inmediato como un patrón orgánico de luz.",
-        "en": "Sorell confirms the sequence. Elin opens the conduit and transmits. The answer comes almost immediately as an organic pattern of light."
-      }
-    },
-    {
-      "id": "main:cue-16-01",
-      "beatId": "main:beat-16-01",
-      "order": 1,
-      "type": "action",
-      "text": {
-        "es": "La Estación Velari ocupa el fondo: varios kilómetros de lóbulos, arcos y cavidades cuya piel cambia de transparencia y emisividad. Desde ella se separa una nave emisaria de 300–600 m, enorme frente a la pequeña Celestial Ardor.",
-        "en": "The Velari Station occupies the background: several kilometers of lobes, arches and cavities whose skin changes transparency and emissivity. An emissary ship of 300–600 m is separated from it, huge compared to the small Celestial Ardor."
-      }
-    },
-    {
       "id": "main:cue-17-01",
       "beatId": "main:beat-17-01",
       "order": 1,
@@ -4650,46 +4062,6 @@
             "status": "draft"
           }
         }
-      }
-    },
-    {
-      "id": "main:cue-17-04",
-      "beatId": "main:beat-17-01",
-      "order": 4,
-      "type": "action",
-      "text": {
-        "es": "La tripulación observa en silencio. La luz de la nave emisaria y de la estación orgánica entra por el ventanal. Voss se acerca a un terminal donde el mensaje de Zao sigue en loop, ahora archivado: \"REGISTRO: ZAO, INGENIERA JEFE — TRANSMISIÓN DE EMERGENCIA — ARCHIVADO.\"",
-        "en": "The crew watches in silence. The light from the emissary ship and the organic station enters through the window. Voss approaches a terminal where Zao's message continues on a loop, now archived: \"LOG: ZAO, CHIEF ENGINEER — EMERGENCY TRANSMISSION — ARCHIVED.\""
-      }
-    },
-    {
-      "id": "main:cue-17-05",
-      "beatId": "main:beat-17-01",
-      "order": 5,
-      "type": "action",
-      "text": {
-        "es": "Sorell se coloca junto a Elin.",
-        "en": "Sorell stands next to Elin."
-      }
-    },
-    {
-      "id": "main:cue-17-06",
-      "beatId": "main:beat-17-01",
-      "order": 6,
-      "type": "action",
-      "text": {
-        "es": "Voss mira hacia el ventanal: la emisaria Velari en primer término y, detrás, la estación que parece respirar.",
-        "en": "Voss looks out the window: the Velari emissary in the foreground and, behind, the station that seems to breathe."
-      }
-    },
-    {
-      "id": "main:cue-17-07",
-      "beatId": "main:beat-17-01",
-      "order": 7,
-      "type": "action",
-      "text": {
-        "es": "Sostiene la mirada en las estrellas.",
-        "en": "He keeps his gaze on the stars."
       }
     },
     {
