@@ -25,7 +25,7 @@ data/outlines/<script-slug>.json
 
 Ejemplo: `script:light-delay-main-short` → `data/outlines/light-delay-main-short.json`.
 
-Los archivos **pueden faltar** en validación/UI vacía. Cuando existen, se validan forma y FKs. Textos ES; inglés vía `data/translations/public.en.json`.
+Los archivos **pueden faltar** en validación/UI vacía. Cuando existen, se validan forma y FKs. Textos como `LocalizedString` (`es` + `en` en el mismo JSON); ver `docs/JSON_FORMAT_I18N_ADDENDUM.md`.
 
 Tipos: `src/lib/types/outline.ts`. Contrato: `docs/JSON_FORMAT.md`.
 

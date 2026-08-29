@@ -53,13 +53,13 @@ No marcar `covered` sin evidencia en datos.
 
 - Hallazgos de integridad a nivel de paso → `notes` (`type: continuity`, `resolved`).
 - Análisis largo en prosa → MD compañero opcional; no sustituye al JSON.
-- Tras un pase material en ES, actualizar el overlay EN en el mismo pase (sección 6).
+- Tras un pase material en ES, actualizar el mapa `en` hermano en el mismo JSON (sección 6).
 
 ## 6. Idiomas
 
-- Español autoritativo en `data/outlines/*.json`.
-- Inglés vía `data/translations/public.en.json` (clave = texto ES exacto), igual que guiones.
-- Tras cambiar `title` / `summary` / `notes[].text` en ES: actualizar o marcar stale las claves EN; `npm run validate:translations` debe pasar.
+- Español autoritativo en `data/outlines/*.json` como campo `es` de cada `LocalizedString`.
+- Inglés en el mismo archivo (`"en": "…"`); no usar `public.en.json` para outlines.
+- Tras cambiar `title` / `summary` / `notes[].text` en ES: actualizar `en` en el mismo objeto; `npm run validate:translations` debe pasar.
 - La UI `/outline/[scriptId]` usa el idioma de diálogo (`dialogueLanguage`).
 
 ## 7. Dependencias

@@ -1,65 +1,137 @@
 {
-	"schemaVersion": "1.0.0",
-	"functions": [
-		{
-			"id": "function:piloting",
-			"label": "Piloto / navegación",
-			"description": "Detección de señal, estado de navegación y operaciones de puente asociadas."
-		},
-		{
-			"id": "function:communications",
-			"label": "Comunicaciones",
-			"description": "Detección y anuncio de señales; interfaz de comunicaciones."
-		},
-		{
-			"id": "function:command",
-			"label": "Mando",
-			"description": "Autoridad de decisión y revocación de credenciales."
-		},
-		{
-			"id": "function:investigation_payload",
-			"label": "Investigación del payload",
-			"description": "Análisis técnico del payload, disparador y cuarentena."
-		},
-		{
-			"id": "function:diplomatic_greeting_authorship",
-			"label": "Autoría del saludo diplomático",
-			"description": "Autoría del saludo pasivo limpio / read-only."
-		},
-		{
-			"id": "function:override_antagonist",
-			"label": "Override antagonista",
-			"description": "Titular del override hostil y antagonista operativo."
-		},
-		{
-			"id": "function:medical",
-			"label": "Medicina y peritaje",
-			"description": "Atención clínica y constatación forense."
-		},
-		{
-			"id": "function:systems",
-			"label": "Sistemas de a bordo",
-			"description": "Diagnóstico y mantenimiento general de sistemas."
-		},
-		{
-			"id": "function:physics-corroboration",
-			"label": "Corroboración física",
-			"description": "Verificación independiente de anomalías físicas y energéticas."
-		},
-		{
-			"id": "function:linguistic-continuity",
-			"label": "Continuidad lingüística",
-			"description": "Continuación controlada del análisis de lenguaje."
-		},
-		{
-			"id": "function:security",
-			"label": "Seguridad",
-			"description": "Custodia y respuesta física bajo autoridad de mando."
-		},
-		{
-			"id": "function:manual-controls",
-			"label": "Controles manuales",
-			"description": "Acceso físico a controles no disponibles por red."
-		}
-	]
+  "schemaVersion": "1.0.0",
+  "functions": [
+    {
+      "id": "function:piloting",
+      "label": {
+        "es": "Piloto / navegación",
+        "en": "Pilot / navigation"
+      },
+      "description": {
+        "es": "Detección de señal, estado de navegación y operaciones de puente asociadas.",
+        "en": "Signal detection, navigation status and associated bridge operations."
+      }
+    },
+    {
+      "id": "function:communications",
+      "label": {
+        "es": "Comunicaciones",
+        "en": "Communications"
+      },
+      "description": {
+        "es": "Detección y anuncio de señales; interfaz de comunicaciones.",
+        "en": "Signal detection and announcement; communications interface."
+      }
+    },
+    {
+      "id": "function:command",
+      "label": {
+        "es": "Mando",
+        "en": "Command"
+      },
+      "description": {
+        "es": "Autoridad de decisión y revocación de credenciales.",
+        "en": "Decision authority and revocation of credentials."
+      }
+    },
+    {
+      "id": "function:investigation_payload",
+      "label": {
+        "es": "Investigación del payload",
+        "en": "Payload investigation"
+      },
+      "description": {
+        "es": "Análisis técnico del payload, disparador y cuarentena.",
+        "en": "Technical analysis of the payload, trigger and quarantine."
+      }
+    },
+    {
+      "id": "function:diplomatic_greeting_authorship",
+      "label": {
+        "es": "Autoría del saludo diplomático",
+        "en": "Authorship of the diplomatic greeting"
+      },
+      "description": {
+        "es": "Autoría del saludo pasivo limpio / read-only.",
+        "en": "Authoring the clean/read-only passive greeting."
+      }
+    },
+    {
+      "id": "function:override_antagonist",
+      "label": {
+        "es": "Override antagonista",
+        "en": "Antagonist Override"
+      },
+      "description": {
+        "es": "Titular del override hostil y antagonista operativo.",
+        "en": "Hostile override holder and operational antagonist."
+      }
+    },
+    {
+      "id": "function:medical",
+      "label": {
+        "es": "Medicina y peritaje",
+        "en": "Medicine and expertise"
+      },
+      "description": {
+        "es": "Atención clínica y constatación forense.",
+        "en": "Clinical care and forensic verification."
+      }
+    },
+    {
+      "id": "function:systems",
+      "label": {
+        "es": "Sistemas de a bordo",
+        "en": "On-board systems"
+      },
+      "description": {
+        "es": "Diagnóstico y mantenimiento general de sistemas.",
+        "en": "Diagnosis and general maintenance of systems."
+      }
+    },
+    {
+      "id": "function:physics-corroboration",
+      "label": {
+        "es": "Corroboración física",
+        "en": "Physical corroboration"
+      },
+      "description": {
+        "es": "Verificación independiente de anomalías físicas y energéticas.",
+        "en": "Independent verification of physical and energy anomalies."
+      }
+    },
+    {
+      "id": "function:linguistic-continuity",
+      "label": {
+        "es": "Continuidad lingüística",
+        "en": "Linguistic continuity"
+      },
+      "description": {
+        "es": "Continuación controlada del análisis de lenguaje.",
+        "en": "Controlled continuation of language analysis."
+      }
+    },
+    {
+      "id": "function:security",
+      "label": {
+        "es": "Seguridad",
+        "en": "Security"
+      },
+      "description": {
+        "es": "Custodia y respuesta física bajo autoridad de mando.",
+        "en": "Custody and physical response under command authority."
+      }
+    },
+    {
+      "id": "function:manual-controls",
+      "label": {
+        "es": "Controles manuales",
+        "en": "Manual Controls"
+      },
+      "description": {
+        "es": "Acceso físico a controles no disponibles por red.",
+        "en": "Physical access to controls not available over the network."
+      }
+    }
+  ]
 }

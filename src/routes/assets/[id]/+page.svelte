@@ -4,16 +4,20 @@
 	import * as m from '$lib/paraglide/messages.js';
 	import { getLocale } from '$lib/paraglide/runtime.js';
 	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
+	import { storyText } from '$lib/data/selectors/localized';
 
 	let { data } = $props();
 	const asset = $derived(data.asset);
+	const locale = getLocale();
+	const title = $derived(storyText(asset.title, locale) || asset.id);
+	const description = $derived(storyText(asset.description, locale) || undefined);
 </script>
 
 <main class="page">
 	<PageHeader
 		eyebrow={m.asset_label()}
-		title={asset.title ?? asset.id}
-		lede={asset.description}
+		title={title}
+		lede={description}
 		meta={[
 			editorialValueLabel(asset.kind, getLocale()),
 			editorialValueLabel(asset.role, getLocale()),
@@ -23,7 +27,7 @@
 
 	{#if asset.kind === 'image'}
 		<figure>
-			<img src={withBase(asset.path)} alt={asset.title ?? asset.id} />
+			<img src={withBase(asset.path)} alt={title} />
 			<figcaption>{asset.path}</figcaption>
 		</figure>
 	{:else}

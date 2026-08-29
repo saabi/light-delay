@@ -1,10 +1,13 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "script": {
     "id": "script:light-delay-festival",
     "projectId": "project:light-delay",
     "continuityId": "continuity:light-delay-primary",
-    "title": "Light Delay — Festival Cut",
+    "title": {
+      "es": "Light Delay — Festival Cut",
+      "en": "Light Delay — Festival Cut"
+    },
     "version": "0.2.0-draft",
     "status": "draft",
     "kind": "festival_cut",
@@ -13,7 +16,10 @@
       "sourceScriptId": "script:light-delay-main-short",
       "relationship": "adaptation",
       "sourceVersion": "1.1.0-draft",
-      "notes": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes."
+      "notes": {
+        "es": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes.",
+        "en": "Condensed ~4:50 adaptation based on docs/light-delay-festival-cut-adaptation.md. Shots/takes pending."
+      }
     },
     "declaredEntityRefs": [
       {
@@ -47,79 +53,118 @@
         {
           "dimensionId": "canon:proxima-origin",
           "valueId": "scientific-before-contact",
-          "statement": "Proxima fue una estación científica joviana anterior al contacto.",
+          "statement": {
+            "es": "Proxima fue una estación científica joviana anterior al contacto.",
+            "en": "Proxima was a Jovian science station before contact."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:ardor-deployment",
           "valueId": "earth-built-prepositioned",
-          "statement": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
+          "statement": {
+            "es": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
+            "en": "Celestial Ardor was built on Earth and was already assigned to Proxima."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:tunnel-geometry",
           "valueId": "distributed-nodes",
-          "statement": "La boca es un campo distribuido de nodos, no un aro.",
+          "statement": {
+            "es": "La boca es un campo distribuido de nodos, no un aro.",
+            "en": "The mouth is a distributed field of nodes, not a ring."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:tunnel-location",
           "valueId": "sol-jupiter-l2",
-          "statement": "La boca local está en una órbita halo controlada cerca de L2.",
+          "statement": {
+            "es": "La boca local está en una órbita halo controlada cerca de L2.",
+            "en": "The local mouth is in a controlled halo orbit near L2."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:trajectory",
           "valueId": "conventional-to-wormhole",
-          "statement": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
+          "statement": {
+            "es": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
+            "en": "The ship uses conventional propulsion to reach the mouth and crosses the Velari tunnel."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:mission-timeline",
           "valueId": "57h48-signal23h15-encounter24h",
-          "statement": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
+          "statement": {
+            "es": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
+            "en": "The local leg lasts 57 h 48 min; the signal takes about 23 h 15 min, and the remote encounter occurs at T+24 h."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:ardor-gravity-operations",
           "valueId": "thrust-gravity-coast-microgravity",
-          "statement": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce.",
+          "statement": {
+            "es": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce.",
+            "en": "Ardor has apparent gravity under thrust and microgravity during final approach and the crossing."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:velari-objects",
           "valueId": "station-and-emissary",
-          "statement": "La estación Velari y la nave emisaria son objetos distintos.",
+          "statement": {
+            "es": "La estación Velari y la nave emisaria son objetos distintos.",
+            "en": "The Velari station and the emissary ship are separate objects."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:evidence-chain",
           "valueId": "relay-optical-readonly",
-          "statement": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
+          "statement": {
+            "es": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
+            "en": "The physical relay, optical message, and passive greeting form complementary evidence."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:sorell-status",
           "valueId": "false-log-not-conclusive",
-          "statement": "Sorell no queda culpabilizada por un único registro falsificable.",
+          "statement": {
+            "es": "Sorell no queda culpabilizada por un único registro falsificable.",
+            "en": "Sorell is not incriminated by a single falsifiable record."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:rao-containment",
           "valueId": "bounded-quarantine",
-          "statement": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+          "statement": {
+            "es": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+            "en": "Elin contains the hostile branch through prepared isolation, without a magical resolution."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:ending",
           "valueId": "limited-acknowledgement",
-          "statement": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
+          "statement": {
+            "es": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
+            "en": "The Velari response is limited recognition, not established trust."
+          },
           "status": "established"
         },
         {
           "dimensionId": "canon:zao-transmission-mechanics",
           "valueId": "jam-wired-cut-dedicated-laser",
-          "statement": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
+          "statement": {
+            "es": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
+            "en": "Harlan cuts the wireless mesh and wired backup; Zao uses the external laser through its dedicated physical control and aims at the ship's future corridor."
+          },
           "status": "established"
         }
       ],
@@ -214,7 +259,10 @@
           "character:cael"
         ],
         "relationship": "merged",
-        "notes": "Cael omitido; detección/navegación absorbidas por Elin/UI."
+        "notes": {
+          "es": "Cael omitido; detección/navegación absorbidas por Elin/UI.",
+          "en": "Cael omitted; detection/navigation absorbed by Elin/UI."
+        }
       },
       {
         "functionId": "function:communications",
@@ -223,7 +271,10 @@
           "character:cael"
         ],
         "relationship": "merged",
-        "notes": "Elin asume detección/comunicaciones de Cael."
+        "notes": {
+          "es": "Elin asume detección/comunicaciones de Cael.",
+          "en": "Elin takes over Cael's detection/communications function."
+        }
       },
       {
         "functionId": "function:command",
@@ -239,7 +290,10 @@
         "functionId": "function:diplomatic_greeting_authorship",
         "characterId": "character:sorell",
         "relationship": "unchanged",
-        "notes": "Aparece brevemente en el puente y en el hallazgo; conserva la autoría del saludo pasivo como asset/UI."
+        "notes": {
+          "es": "Aparece brevemente en el puente y en el hallazgo; conserva la autoría del saludo pasivo como asset/UI.",
+          "en": "Appears briefly on the bridge and at the discovery; retains authorship of the passive greeting as an asset/UI element."
+        }
       },
       {
         "functionId": "function:override_antagonist",
@@ -260,8 +314,14 @@
     {
       "id": "festival:act-1",
       "number": 1,
-      "title": "Festival Cut",
-      "dramaticPurpose": "Cadena causal condensada de ~4:50.",
+      "title": {
+        "es": "Festival Cut",
+        "en": "Festival Cut"
+      },
+      "dramaticPurpose": {
+        "es": "Cadena causal condensada de ~4:50.",
+        "en": "Condensed ~4:50 causal chain."
+      },
       "sceneIds": [
         "festival:scene-a",
         "festival:scene-b",
@@ -280,14 +340,26 @@
       "actId": "festival:act-1",
       "number": 1,
       "order": 1,
-      "title": "La misión y la anomalía",
+      "title": {
+        "es": "La misión y la anomalía",
+        "en": "The Mission and the Anomaly"
+      },
       "locationId": "location:proxima-dock",
       "setting": {
         "interiorExterior": "INT_EXT",
-        "timeOfDay": "DÍA"
+        "timeOfDay": {
+          "es": "DÍA",
+          "en": "DAY"
+        }
       },
-      "summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
-      "dramaticPurpose": "Establecer espacio, misión y peligro sin exposición.",
+      "summary": {
+        "es": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
+        "en": "Proxima, Celestial Ardor, and the first anomaly in the diplomatic system."
+      },
+      "dramaticPurpose": {
+        "es": "Establecer espacio, misión y peligro sin exposición.",
+        "en": "Establish setting, mission, and danger without exposition."
+      },
       "characterIds": [
         "character:zao",
         "character:rao",
@@ -310,14 +382,26 @@
       "actId": "festival:act-1",
       "number": 2,
       "order": 2,
-      "title": "Zao descubre y transmite",
+      "title": {
+        "es": "Zao descubre y transmite",
+        "en": "Zao Discovers and Transmits"
+      },
       "locationId": "location:diplomatic-core-room",
       "setting": {
         "interiorExterior": "INT",
-        "timeOfDay": "DÍA"
+        "timeOfDay": {
+          "es": "DÍA",
+          "en": "DAY"
+        }
       },
-      "summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
-      "dramaticPurpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
+      "summary": {
+        "es": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
+        "en": "Zao reveals the forged signature; Harlan cuts wireless and COM A/B; she aims the external laser at the future corridor."
+      },
+      "dramaticPurpose": {
+        "es": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
+        "en": "Compress the communications block, choice of destination, and transmission without losing causality."
+      },
       "characterIds": [
         "character:zao",
         "character:harlan",
@@ -355,14 +439,26 @@
       "actId": "festival:act-1",
       "number": 3,
       "order": 3,
-      "title": "Harlan / muerte de Zao / salto temporal",
+      "title": {
+        "es": "Harlan / muerte de Zao / salto temporal",
+        "en": "Harlan / Zao's Death / Time Jump"
+      },
       "locationId": "location:diplomatic-core-room",
       "setting": {
         "interiorExterior": "INT",
-        "timeOfDay": "DÍA"
+        "timeOfDay": {
+          "es": "DÍA",
+          "en": "DAY"
+        }
       },
-      "summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
-      "dramaticPurpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
+      "summary": {
+        "es": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
+        "en": "Death elided; Harlan cleans up and returns through service while Sorell finds Zao alone."
+      },
+      "dramaticPurpose": {
+        "es": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
+        "en": "Complete the alibi and preserve the fact that Sorell does not witness Harlan's route."
+      },
       "characterIds": [
         "character:zao",
         "character:harlan",
@@ -397,14 +493,26 @@
       "actId": "festival:act-1",
       "number": 4,
       "order": 4,
-      "title": "La mitad técnica",
+      "title": {
+        "es": "La mitad técnica",
+        "en": "The Technical Half"
+      },
       "locationId": "location:celestial-ardor-bridge",
       "setting": {
         "interiorExterior": "INT",
-        "timeOfDay": "DÍA"
+        "timeOfDay": {
+          "es": "DÍA",
+          "en": "DAY"
+        }
       },
-      "summary": "Investigación de Elin contra reloj; detección de señal humana.",
-      "dramaticPurpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+      "summary": {
+        "es": "Investigación de Elin contra reloj; detección de señal humana.",
+        "en": "Elin's race-against-time investigation; detection of a human signal."
+      },
+      "dramaticPurpose": {
+        "es": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+        "en": "Elin shows what she knows about the payload and what she still lacks; she detects the signal."
+      },
       "characterIds": [
         "character:rao",
         "character:voss",
@@ -433,14 +541,26 @@
       "actId": "festival:act-1",
       "number": 5,
       "order": 5,
-      "title": "La señal y la doble llave",
+      "title": {
+        "es": "La señal y la doble llave",
+        "en": "The Signal and the Double Key"
+      },
       "locationId": "location:celestial-ardor-bridge",
       "setting": {
         "interiorExterior": "INT",
-        "timeOfDay": "DÍA"
+        "timeOfDay": {
+          "es": "DÍA",
+          "en": "DAY"
+        }
       },
-      "summary": "Doble llave causal; revocación; Harlan activa el override.",
-      "dramaticPurpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
+      "summary": {
+        "es": "Doble llave causal; revocación; Harlan activa el override.",
+        "en": "Causal double key; revocation; Harlan activates the override."
+      },
+      "dramaticPurpose": {
+        "es": "Mensaje de Zao + verificación técnica identifica a Harlan.",
+        "en": "Zao's message plus technical verification identifies Harlan."
+      },
       "characterIds": [
         "character:rao",
         "character:voss",
@@ -458,14 +578,26 @@
       "actId": "festival:act-1",
       "number": 6,
       "order": 6,
-      "title": "Override y cuarentena",
+      "title": {
+        "es": "Override y cuarentena",
+        "en": "Override and Quarantine"
+      },
       "locationId": "location:celestial-ardor-bridge",
       "setting": {
         "interiorExterior": "INT",
-        "timeOfDay": "DÍA"
+        "timeOfDay": {
+          "es": "DÍA",
+          "en": "DAY"
+        }
       },
-      "summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
-      "dramaticPurpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
+      "summary": {
+        "es": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
+        "en": "Quarantine climax with Sorell's passive greeting as an asset."
+      },
+      "dramaticPurpose": {
+        "es": "Carrera física/digital; Elin aísla el payload; canal limpio.",
+        "en": "Physical/digital race; Elin isolates the payload; clean channel."
+      },
       "characterIds": [
         "character:rao",
         "character:voss",
@@ -482,14 +614,26 @@
       "actId": "festival:act-1",
       "number": 7,
       "order": 7,
-      "title": "Contacto / cierre",
+      "title": {
+        "es": "Contacto / cierre",
+        "en": "Contact / Closing"
+      },
       "locationId": "location:velari-station",
       "setting": {
         "interiorExterior": "INT_EXT",
-        "timeOfDay": "DÍA"
+        "timeOfDay": {
+          "es": "DÍA",
+          "en": "DAY"
+        }
       },
-      "summary": "Envío, contacto y «Llegaste a tiempo».",
-      "dramaticPurpose": "Canal limpio, respuesta Velari y cierre emocional.",
+      "summary": {
+        "es": "Envío, contacto y «Llegaste a tiempo».",
+        "en": "Transmission, contact, and ‘You made it in time.’"
+      },
+      "dramaticPurpose": {
+        "es": "Canal limpio, respuesta Velari y cierre emocional.",
+        "en": "Clean channel, Velari response, and emotional closure."
+      },
       "characterIds": [
         "character:rao",
         "character:voss"
@@ -506,9 +650,18 @@
       "id": "festival:beat-a-01",
       "sceneId": "festival:scene-a",
       "order": 1,
-      "title": "La misión y la anomalía",
-      "purpose": "Establecer espacio, misión y peligro sin exposición.",
-      "summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
+      "title": {
+        "es": "La misión y la anomalía",
+        "en": "The Mission and the Anomaly"
+      },
+      "purpose": {
+        "es": "Establecer espacio, misión y peligro sin exposición.",
+        "en": "Establish setting, mission, and danger without exposition."
+      },
+      "summary": {
+        "es": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
+        "en": "Proxima, Celestial Ardor, and the first anomaly in the diplomatic system."
+      },
       "cueIds": [
         "festival:cue-a-01"
       ],
@@ -518,9 +671,18 @@
       "id": "festival:beat-b-01",
       "sceneId": "festival:scene-b",
       "order": 1,
-      "title": "Zao descubre y transmite",
-      "purpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
-      "summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
+      "title": {
+        "es": "Zao descubre y transmite",
+        "en": "Zao Discovers and Transmits"
+      },
+      "purpose": {
+        "es": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
+        "en": "Compress the communications block, choice of destination, and transmission without losing causality."
+      },
+      "summary": {
+        "es": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
+        "en": "Zao reveals the forged signature; Harlan cuts wireless and COM A/B; she aims the external laser at the future corridor."
+      },
       "cueIds": [
         "festival:cue-b-02",
         "festival:cue-b-03",
@@ -541,9 +703,18 @@
       "id": "festival:beat-c-01",
       "sceneId": "festival:scene-c",
       "order": 1,
-      "title": "Harlan / muerte de Zao / salto temporal",
-      "purpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
-      "summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
+      "title": {
+        "es": "Harlan / muerte de Zao / salto temporal",
+        "en": "Harlan / Zao's Death / Time Jump"
+      },
+      "purpose": {
+        "es": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
+        "en": "Complete the alibi and preserve the fact that Sorell does not witness Harlan's route."
+      },
+      "summary": {
+        "es": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
+        "en": "Death elided; Harlan cleans up and returns through service while Sorell finds Zao alone."
+      },
       "cueIds": [
         "festival:cue-c-04",
         "festival:cue-c-06",
@@ -562,9 +733,18 @@
       "id": "festival:beat-d-01",
       "sceneId": "festival:scene-d",
       "order": 1,
-      "title": "La mitad técnica",
-      "purpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
-      "summary": "Investigación de Elin contra reloj; detección de señal humana.",
+      "title": {
+        "es": "La mitad técnica",
+        "en": "The Technical Half"
+      },
+      "purpose": {
+        "es": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+        "en": "Elin shows what she knows about the payload and what she still lacks; she detects the signal."
+      },
+      "summary": {
+        "es": "Investigación de Elin contra reloj; detección de señal humana.",
+        "en": "Elin's race-against-time investigation; detection of a human signal."
+      },
       "cueIds": [
         "festival:cue-d-11",
         "festival:cue-d-03",
@@ -586,9 +766,18 @@
       "id": "festival:beat-e-01",
       "sceneId": "festival:scene-e",
       "order": 1,
-      "title": "La señal y la doble llave",
-      "purpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
-      "summary": "Doble llave causal; revocación; Harlan activa el override.",
+      "title": {
+        "es": "La señal y la doble llave",
+        "en": "The Signal and the Double Key"
+      },
+      "purpose": {
+        "es": "Mensaje de Zao + verificación técnica identifica a Harlan.",
+        "en": "Zao's message plus technical verification identifies Harlan."
+      },
+      "summary": {
+        "es": "Doble llave causal; revocación; Harlan activa el override.",
+        "en": "Causal double key; revocation; Harlan activates the override."
+      },
       "cueIds": [],
       "targetDurationMs": 45000
     },
@@ -596,9 +785,18 @@
       "id": "festival:beat-f-01",
       "sceneId": "festival:scene-f",
       "order": 1,
-      "title": "Override y cuarentena",
-      "purpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
-      "summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
+      "title": {
+        "es": "Override y cuarentena",
+        "en": "Override and Quarantine"
+      },
+      "purpose": {
+        "es": "Carrera física/digital; Elin aísla el payload; canal limpio.",
+        "en": "Physical/digital race; Elin isolates the payload; clean channel."
+      },
+      "summary": {
+        "es": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
+        "en": "Quarantine climax with Sorell's passive greeting as an asset."
+      },
       "cueIds": [
         "festival:cue-f-01"
       ],
@@ -608,9 +806,18 @@
       "id": "festival:beat-g-01",
       "sceneId": "festival:scene-g",
       "order": 1,
-      "title": "Contacto / cierre",
-      "purpose": "Canal limpio, respuesta Velari y cierre emocional.",
-      "summary": "Envío, contacto y «Llegaste a tiempo».",
+      "title": {
+        "es": "Contacto / cierre",
+        "en": "Contact / Closing"
+      },
+      "purpose": {
+        "es": "Canal limpio, respuesta Velari y cierre emocional.",
+        "en": "Clean channel, Velari response, and emotional closure."
+      },
+      "summary": {
+        "es": "Envío, contacto y «Llegaste a tiempo».",
+        "en": "Transmission, contact, and ‘You made it in time.’"
+      },
       "cueIds": [
         "festival:cue-g-01",
         "festival:cue-g-02"
@@ -624,7 +831,10 @@
       "beatId": "festival:beat-b-01",
       "order": 1,
       "type": "action",
-      "text": "En microgravedad, Harlan llega al acceso axial del puente sin ser visto mientras Zao abre canal."
+      "text": {
+        "es": "En microgravedad, Harlan llega al acceso axial del puente sin ser visto mientras Zao abre canal.",
+        "en": "In microgravity, Harlan reaches the bridge's axial access unseen as Zao opens a channel."
+      }
     },
     {
       "id": "festival:cue-b-03",
@@ -639,6 +849,10 @@
           "es": {
             "spokenText": "Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. El relé físico apunta a—",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Captain, there's an autonomous payload signed by Sorell. The signature looks forged. The physical relay points to—",
+            "status": "draft"
           }
         }
       }
@@ -648,14 +862,20 @@
       "beatId": "festival:beat-b-01",
       "order": 3,
       "type": "action",
-      "text": "Harlan activa el jammer, se oculta y desconecta COM A/B en el distribuidor del cilindro de servicio."
+      "text": {
+        "es": "Harlan activa el jammer, se oculta y desconecta COM A/B en el distribuidor del cilindro de servicio.",
+        "en": "Harlan activates the jammer, hides, and disconnects COM A/B at the service-cylinder distributor."
+      }
     },
     {
       "id": "festival:cue-b-05",
       "beatId": "festival:beat-b-01",
       "order": 4,
       "type": "action",
-      "text": "Zao comprueba la malla inalámbrica y ambos enlaces cableados: los tres caen a la vez. La simultaneidad descarta un fallo técnico — alguien cortó las tres vías."
+      "text": {
+        "es": "Zao comprueba la malla inalámbrica y ambos enlaces cableados: los tres caen a la vez. La simultaneidad descarta un fallo técnico — alguien cortó las tres vías.",
+        "en": "Zao checks the wireless mesh and both hardwired links: all three go dark at once. The simultaneity rules out a technical fault — someone cut all three at the same time."
+      }
     },
     {
       "id": "festival:cue-b-01",
@@ -670,6 +890,10 @@
           "es": {
             "spokenText": "Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "If this gets through... Acheron is inside. Harlan altered the core. The surface log is false. Cross-check the routine against the physical relay. Don't shut down mediation.",
+            "status": "draft"
           }
         }
       }
@@ -679,28 +903,40 @@
       "beatId": "festival:beat-b-01",
       "order": 12,
       "type": "action",
-      "text": "El envío completa el barrido cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino."
+      "text": {
+        "es": "El envío completa el barrido cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino.",
+        "en": "The transmission completes its sweep as Harlan enters through the technical branch; he sees only TRANSMITTED, not the destination."
+      }
     },
     {
       "id": "festival:cue-c-01",
       "beatId": "festival:beat-c-01",
       "order": 4,
       "type": "action",
-      "text": "Harlan mata a Zao fuera de campo, borra cámaras y archivo local y regresa por el cilindro de servicio."
+      "text": {
+        "es": "Harlan mata a Zao fuera de campo, borra cámaras y archivo local y regresa por el cilindro de servicio.",
+        "en": "Harlan kills Zao offscreen, erases the cameras and local file, and returns through the service cylinder."
+      }
     },
     {
       "id": "festival:cue-c-02",
       "beatId": "festival:beat-c-01",
       "order": 5,
       "type": "action",
-      "text": "Sorell llega sola por el cilindro central, intenta reanimar a Zao y no logra comunicarse mientras el jammer sigue activo."
+      "text": {
+        "es": "Sorell llega sola por el cilindro central, intenta reanimar a Zao y no logra comunicarse mientras el jammer sigue activo.",
+        "en": "Sorell arrives alone through the central cylinder, tries to revive Zao, and cannot communicate while the jammer remains active."
+      }
     },
     {
       "id": "festival:cue-c-03",
       "beatId": "festival:beat-c-01",
       "order": 8,
       "type": "action",
-      "text": "Harlan restaura COM A/B y regresa al puente."
+      "text": {
+        "es": "Harlan restaura COM A/B y regresa al puente.",
+        "en": "Harlan restores COM A/B and returns to the bridge."
+      }
     },
     {
       "id": "festival:cue-d-01",
@@ -715,6 +951,10 @@
           "es": {
             "spokenText": "Puedo aislarlo. No puedo revocar a quien lo controla.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "I can isolate it. I can't revoke whoever controls it.",
+            "status": "draft"
           }
         }
       }
@@ -724,7 +964,10 @@
       "beatId": "festival:beat-d-01",
       "order": 6,
       "type": "action",
-      "text": "Antes de autenticar la señal, Elin cartografía el payload, separa sus rutas y deja preparada una cuarentena limitada; todavía no puede atribuir el override."
+      "text": {
+        "es": "Antes de autenticar la señal, Elin cartografía el payload, separa sus rutas y deja preparada una cuarentena limitada; todavía no puede atribuir el override.",
+        "en": "Before authenticating the signal, Elin maps the payload, separates its routes, and prepares a limited quarantine; she still cannot attribute the override."
+      }
     },
     {
       "id": "festival:cue-f-01",
@@ -739,6 +982,10 @@
           "es": {
             "spokenText": "No voy a entregar nuestra especie a algo que no entendemos.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "I won't hand our species over to something we don't understand.",
+            "status": "draft"
           }
         }
       }
@@ -756,6 +1003,10 @@
           "es": {
             "spokenText": "Envíen.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Send it.",
+            "status": "draft"
           }
         }
       }
@@ -773,6 +1024,10 @@
           "es": {
             "spokenText": "Llegaste a tiempo.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "You made it in time.",
+            "status": "draft"
           }
         }
       }
@@ -789,6 +1044,10 @@
           "es": {
             "text": "PRIMER CONTACTO — MISIÓN VELARI",
             "status": "source"
+          },
+          "en": {
+            "text": "FIRST CONTACT — VELARI MISSION",
+            "status": "draft"
           }
         }
       }
@@ -806,6 +1065,10 @@
           "es": {
             "spokenText": "¿A quién enviaste eso?",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Who did you send that to?",
+            "status": "draft"
           }
         }
       }
@@ -822,6 +1085,10 @@
           "es": {
             "text": "23 H DESPUÉS · CANAL VELARI EN 03:00",
             "status": "source"
+          },
+          "en": {
+            "text": "23 HOURS LATER · VELARI CHANNEL IN 03:00",
+            "status": "draft"
           }
         }
       }
@@ -839,6 +1106,10 @@
           "es": {
             "spokenText": "Da igual. Para cuando lo reciban, para cuando la Tierra se entere y alcance a advertirles, ya será tarde.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Doesn't matter. By the time they get it, by the time Earth finds out and manages to warn them, it'll already be too late.",
+            "status": "draft"
           }
         }
       }
@@ -848,7 +1119,10 @@
       "beatId": "festival:beat-c-01",
       "order": 3,
       "type": "action",
-      "text": "Suspira — quizás el único gesto de que matarla no le resulta fácil — antes de cerrar la distancia."
+      "text": {
+        "es": "Suspira — quizás el único gesto de que matarla no le resulta fácil — antes de cerrar la distancia.",
+        "en": "He sighs — perhaps the only sign that killing her isn't easy for him — before closing the distance."
+      }
     },
     {
       "id": "festival:cue-c-08",
@@ -863,6 +1137,10 @@
           "es": {
             "spokenText": "¿Lo encontró Sorell?",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Did Sorell find you?",
+            "status": "draft"
           }
         }
       }
@@ -880,6 +1158,10 @@
           "es": {
             "spokenText": "No la vi.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "I didn't see her.",
+            "status": "draft"
           }
         }
       }
@@ -897,6 +1179,10 @@
           "es": {
             "spokenText": "Okoye, vaya con Harlan. Búsquenla en el puesto de Zao.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Okoye, go with Harlan. Look for her at Zao's station.",
+            "status": "draft"
           }
         }
       }
@@ -913,6 +1199,10 @@
           "es": {
             "text": "PAYLOAD DESPLEGADO",
             "status": "source"
+          },
+          "en": {
+            "text": "PAYLOAD DEPLOYED",
+            "status": "draft"
           }
         }
       }
@@ -929,6 +1219,10 @@
           "es": {
             "text": "DISPARADOR: APERTURA CANAL VELARI",
             "status": "source"
+          },
+          "en": {
+            "text": "TRIGGER: VELARI CHANNEL OPENING",
+            "status": "draft"
           }
         }
       }
@@ -945,6 +1239,10 @@
           "es": {
             "text": "OVERRIDE: FIRMA NO IDENTIFICADA",
             "status": "source"
+          },
+          "en": {
+            "text": "OVERRIDE: SIGNATURE UNIDENTIFIED",
+            "status": "draft"
           }
         }
       }
@@ -961,6 +1259,10 @@
           "es": {
             "text": "CUARENTENA PREPARADA",
             "status": "source"
+          },
+          "en": {
+            "text": "QUARANTINE PREPARED",
+            "status": "draft"
           }
         }
       }
@@ -978,6 +1280,10 @@
           "es": {
             "spokenText": "¿Puede detenerlo?",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Can you stop it?",
+            "status": "draft"
           }
         }
       }
@@ -995,6 +1301,10 @@
           "es": {
             "spokenText": "La mediación contiene un proceso autónomo. Recomiendo apagarla y aislar los receptores.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Mediation contains an autonomous process. I recommend shutting it down and isolating the receivers.",
+            "status": "draft"
           }
         }
       }
@@ -1012,6 +1322,10 @@
           "es": {
             "spokenText": "Apagarla destruye el único intérprete que tenemos.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Shutting it down destroys the only interpreter we have.",
+            "status": "draft"
           }
         }
       }
@@ -1029,6 +1343,10 @@
           "es": {
             "spokenText": "No vamos a apagar el único canal que tenemos.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "We are not shutting down the only channel we have.",
+            "status": "draft"
           }
         }
       }
@@ -1046,6 +1364,10 @@
           "es": {
             "spokenText": "Señal entrante. Humana. Viene exactamente por nuestro corredor de vuelo.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Incoming signal. Human. It's coming exactly along our flight corridor.",
+            "status": "draft"
           }
         }
       }
@@ -1062,6 +1384,10 @@
           "es": {
             "spokenText": "Tierra no... para cuando lo reciban y logren advertir algo, todo esto ya habrá pasado. Proxima tampoco — Júpiter la tapa desde aquí, no hay línea de vista.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "Earth, no... by the time they receive it and manage to warn anyone, this will already be over. Proxima either — Jupiter blocks it from here, there's no line of sight.",
+            "status": "draft"
           }
         }
       }
@@ -1078,6 +1404,10 @@
           "es": {
             "text": "TIERRA — DESCARTADA: RECEPCIÓN POSTERIOR AL ENCUENTRO",
             "status": "source"
+          },
+          "en": {
+            "text": "EARTH — DISCARDED: RECEPTION AFTER THE ENCOUNTER",
+            "status": "draft"
           }
         }
       }
@@ -1094,6 +1424,10 @@
           "es": {
             "text": "PROXIMA — DESCARTADA: OCLUIDA POR JÚPITER (SIN LÍNEA DE VISTA)",
             "status": "source"
+          },
+          "en": {
+            "text": "PROXIMA — DISCARDED: OCCLUDED BY JUPITER (NO LINE OF SIGHT)",
+            "status": "draft"
           }
         }
       }
@@ -1110,6 +1444,10 @@
           "es": {
             "text": "PLAN DE VUELO — CARGADO",
             "status": "source"
+          },
+          "en": {
+            "text": "FLIGHT PLAN — LOADED",
+            "status": "draft"
           }
         }
       }
@@ -1126,6 +1464,10 @@
           "es": {
             "text": "INTERCEPCIÓN POR TIEMPO LUMÍNICO — CALCULANDO",
             "status": "source"
+          },
+          "en": {
+            "text": "LIGHT-TIME INTERCEPT — CALCULATING",
+            "status": "draft"
           }
         }
       }
@@ -1142,6 +1484,10 @@
           "es": {
             "text": "ELIPSE DE INCERTIDUMBRE — LISTA",
             "status": "source"
+          },
+          "en": {
+            "text": "UNCERTAINTY ELLIPSE — READY",
+            "status": "draft"
           }
         }
       }
@@ -1158,6 +1504,10 @@
           "es": {
             "text": "ORDEN DE VOSS · AUDITORÍA DE NÚCLEO TRAS INCIDENTE EN RAMAL TÉCNICO",
             "status": "source"
+          },
+          "en": {
+            "text": "VOSS'S ORDER · CORE AUDIT AFTER INCIDENT IN TECHNICAL BRANCH",
+            "status": "draft"
           }
         }
       }
@@ -1174,6 +1524,10 @@
           "es": {
             "spokenText": "Si esto se dispara cuando abramos el canal... no va a parecer un accidente. Va a parecer que les disparamos primero.",
             "status": "source"
+          },
+          "en": {
+            "spokenText": "If this fires when we open the channel... it won't look like an accident. It'll look like we shot first.",
+            "status": "draft"
           }
         }
       }
@@ -1188,15 +1542,24 @@
       ],
       "number": 1,
       "order": 1,
-      "description": "PG exterior: Proxima, Júpiter al fondo y la Celestial Ardor atracada, nombre y silueta legibles. Overlay de misión sobre el plano.",
+      "description": {
+        "es": "PG exterior: Proxima, Júpiter al fondo y la Celestial Ardor atracada, nombre y silueta legibles. Overlay de misión sobre el plano.",
+        "en": "Wide exterior: Proxima, Jupiter in the background and the Celestial Ardor docked, name and silhouette legible. Mission overlay on the shot."
+      },
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "LS",
-        "framing": "PG",
+        "framing": {
+          "es": "PG",
+          "en": "PG"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Avance muy lento, composición axial — mismo lenguaje que la apertura del corto."
+        "movementDescription": {
+          "es": "Avance muy lento, composición axial — mismo lenguaje que la apertura del corto.",
+          "en": "Very slow push-in, axial composition — same visual language as the short's opening."
+        }
       },
       "durationMs": 7500,
       "cuePlacements": [
@@ -1220,7 +1583,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).",
+            "en": "Reuse frame from main:shot-01-01 (asset asset:animatic-01-01)."
+          }
         }
       ]
     },
@@ -1232,15 +1598,24 @@
       ],
       "number": 2,
       "order": 2,
-      "description": "Interior, núcleo diplomático: Zao y Elin verifican juntas el sistema, tono rutinario. Elin termina su parte y se retira hacia su puesto para preparar la cuarentena; Zao se queda sola continuando el diagnóstico. La voz de Harlan llega por el canal desde el puente, visible en una pantalla de mando cercana — no está físicamente en la sala.",
+      "description": {
+        "es": "Interior, núcleo diplomático: Zao y Elin verifican juntas el sistema, tono rutinario. Elin termina su parte y se retira hacia su puesto para preparar la cuarentena; Zao se queda sola continuando el diagnóstico. La voz de Harlan llega por el canal desde el puente, visible en una pantalla de mando cercana — no está físicamente en la sala.",
+        "en": "Interior, diplomatic core: Zao and Elin check the system together, routine tone. Elin finishes her part and heads to her own station to prepare the quarantine; Zao is left alone continuing the diagnostic. Harlan's voice comes over the channel from the bridge, visible on a nearby command screen — he is not physically in the room."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre estable, sin movimiento — introduce el espacio de trabajo antes de la anomalía."
+        "movementDescription": {
+          "es": "Encuadre estable, sin movimiento — introduce el espacio de trabajo antes de la anomalía.",
+          "en": "Stable frame, no movement — introduces the workspace before the anomaly."
+        }
       },
       "durationMs": 7000,
       "cuePlacements": [],
@@ -1258,7 +1633,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02."
+          "text": {
+            "es": "Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02.",
+            "en": "Placeholder from main:shot-04-01 (asset asset:animatic-04-01); that still only shows Zao — Elin leaving and Harlan's screen are missing, a new take is needed for the Festival Cut. Elin's exit within this same shot establishes that Zao is left alone before the murder (no witnesses); Harlan appears only via screen/channel, never physically present, so as not to contradict him reaching the axial access unseen in festival:shot-b-02."
+          }
         }
       ]
     },
@@ -1270,15 +1648,24 @@
       ],
       "number": 3,
       "order": 3,
-      "description": "PD (insert): en la consola de diagnóstico, la lista de procesos declarados del protocolo diplomático se compara contra el manifiesto de carga; un bloque no tiene entrada correspondiente y el sistema lo resalta en rojo como “PROCESO NO DECLARADO”.",
+      "description": {
+        "es": "PD (insert): en la consola de diagnóstico, la lista de procesos declarados del protocolo diplomático se compara contra el manifiesto de carga; un bloque no tiene entrada correspondiente y el sistema lo resalta en rojo como “PROCESO NO DECLARADO”.",
+        "en": "Insert: on the diagnostic console, the list of declared processes for the diplomatic protocol is checked against the cargo manifest; one block has no matching entry, and the system highlights it in red as “UNDECLARED PROCESS.”"
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "INSERT",
-        "framing": "PD",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Insert fijo, legible en menos de dos segundos."
+        "movementDescription": {
+          "es": "Insert fijo, legible en menos de dos segundos.",
+          "en": "Fixed insert, legible in under two seconds."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [],
@@ -1296,7 +1683,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02).",
+            "en": "Reuse frame from main:shot-04-02 (asset asset:animatic-04-02)."
+          }
         }
       ]
     },
@@ -1308,15 +1698,24 @@
       ],
       "number": 4,
       "order": 4,
-      "description": "PP Zao: entiende que no es ruido — primer registro de alarma.",
+      "description": {
+        "es": "PP Zao: entiende que no es ruido — primer registro de alarma.",
+        "en": "Close-up on Zao: she realizes it isn't noise — first register of alarm."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "CU",
-        "framing": "PP",
+        "framing": {
+          "es": "PP",
+          "en": "PP"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Primer plano fijo o dolly-in muy leve."
+        "movementDescription": {
+          "es": "Primer plano fijo o dolly-in muy leve.",
+          "en": "Fixed close-up or very slight dolly-in."
+        }
       },
       "durationMs": 6500,
       "cuePlacements": [],
@@ -1334,7 +1733,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-03-04 (asset asset:animatic-03-04)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-03-04 (asset asset:animatic-03-04).",
+            "en": "Reuses the frame from main:shot-03-04 (asset asset:animatic-03-04)."
+          }
         }
       ]
     },
@@ -1346,15 +1748,24 @@
       ],
       "number": 1,
       "order": 1,
-      "description": "Harlan llega al acceso axial del puente sin ser visto, justo cuando Zao abre el canal con el puente.",
+      "description": {
+        "es": "Harlan llega al acceso axial del puente sin ser visto, justo cuando Zao abre el canal con el puente.",
+        "en": "Harlan reaches the bridge's axial access unseen, just as Zao opens the channel to the bridge."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre estable — Harlan entra por el borde del cuadro."
+        "movementDescription": {
+          "es": "Encuadre estable — Harlan entra por el borde del cuadro.",
+          "en": "Stable frame — Harlan enters from the edge of the shot."
+        }
       },
       "durationMs": 6000,
       "cuePlacements": [
@@ -1378,7 +1789,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03).",
+            "en": "Reuses the frame from main:shot-05-03 (asset asset:animatic-05-03)."
+          }
         }
       ]
     },
@@ -1390,15 +1804,24 @@
       ],
       "number": 2,
       "order": 2,
-      "description": "Zao, sola en el núcleo diplomático, con la voz controlada pero la mano tensa sobre la consola, confirma que el payload autónomo está asociado al protocolo y abre canal con el puente.",
+      "description": {
+        "es": "Zao, sola en el núcleo diplomático, con la voz controlada pero la mano tensa sobre la consola, confirma que el payload autónomo está asociado al protocolo y abre canal con el puente.",
+        "en": "Zao, alone in the diplomatic core, her voice controlled but her hand tense on the console, confirms the autonomous payload is tied to the protocol and opens a channel to the bridge."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado, sin movimiento — urgencia contenida."
+        "movementDescription": {
+          "es": "Encuadre cerrado, sin movimiento — urgencia contenida.",
+          "en": "Tight frame, no movement — contained urgency."
+        }
       },
       "durationMs": 7200,
       "cuePlacements": [
@@ -1422,7 +1845,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01).",
+            "en": "Reuse frame from main:shot-05-01 (asset asset:animatic-05-01)."
+          }
         }
       ]
     },
@@ -1434,15 +1860,24 @@
       ],
       "number": 3,
       "order": 3,
-      "description": "Con gesto metódico, sin dudar, Harlan activa el jammer y desconecta COM A/B en el distribuidor del cilindro de servicio; la transmisión de Zao se corta a media frase.",
+      "description": {
+        "es": "Con gesto metódico, sin dudar, Harlan activa el jammer y desconecta COM A/B en el distribuidor del cilindro de servicio; la transmisión de Zao se corta a media frase.",
+        "en": "With a methodical, unhesitating gesture, Harlan activates the jammer and disconnects COM A/B at the service cylinder's distributor; Zao's transmission cuts off mid-sentence."
+      },
       "locationId": "location:celestial-ardor-service-cylinder",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Corte seco al gesto de Harlan sobre el panel."
+        "movementDescription": {
+          "es": "Corte seco al gesto de Harlan sobre el panel.",
+          "en": "Hard cut to Harlan's hand on the panel."
+        }
       },
       "durationMs": 6000,
       "cuePlacements": [
@@ -1466,7 +1901,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara (\"en el distribuidor del cilindro de servicio\")."
+          "text": {
+            "es": "Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara (\"en el distribuidor del cilindro de servicio\").",
+            "en": "Reuses the frame from main:shot-05-07 (asset asset:animatic-12-08); corrected from celestial-ardor-command-vestibule to celestial-ardor-service-cylinder to match the location festival:cue-b-04 itself states (\"at the service cylinder's distributor\")."
+          }
         }
       ]
     },
@@ -1478,15 +1916,24 @@
       ],
       "number": 4,
       "order": 4,
-      "description": "Zao golpea la malla inalámbrica: silencio. Prueba ambos enlaces cableados, uno tras otro: silencio en los tres. Que las tres vías caigan a la vez no es un fallo técnico — es una mano.",
+      "description": {
+        "es": "Zao golpea la malla inalámbrica: silencio. Prueba ambos enlaces cableados, uno tras otro: silencio en los tres. Que las tres vías caigan a la vez no es un fallo técnico — es una mano.",
+        "en": "Zao hits the wireless mesh: silence. She tries both hardwired links, one after the other: silence on all three. All three going down at once isn't a technical fault — it's a hand."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Ligero acercamiento sobre la consola."
+        "movementDescription": {
+          "es": "Ligero acercamiento sobre la consola.",
+          "en": "Slight push-in on the console."
+        }
       },
       "durationMs": 6000,
       "cuePlacements": [
@@ -1510,7 +1957,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01).",
+            "en": "Reuses the frame from main:shot-06-01 (asset asset:animatic-06-01)."
+          }
         }
       ]
     },
@@ -1522,15 +1972,24 @@
       ],
       "number": 8,
       "order": 8,
-      "description": "Un alivio breve, casi físico, cruza el rostro de Zao: la solución está lista y el barrido comienza. Todavía tiene una salida.",
+      "description": {
+        "es": "Un alivio breve, casi físico, cruza el rostro de Zao: la solución está lista y el barrido comienza. Todavía tiene una salida.",
+        "en": "A brief, almost physical relief crosses Zao's face: the solution is ready and the sweep begins. She still has a way out."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "INSERT",
-        "framing": "PD",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Insert de consola — continuación visual del gesto anterior."
+        "movementDescription": {
+          "es": "Insert de consola — continuación visual del gesto anterior.",
+          "en": "Console insert — visual continuation of the previous gesture."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [],
@@ -1548,7 +2007,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03); continúa visualmente la acción de festival:cue-b-05 sin cue propio."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03); continúa visualmente la acción de festival:cue-b-05 sin cue propio.",
+            "en": "Reuses the frame from main:shot-06-03 (asset asset:animatic-06-03); visually continues festival:cue-b-05's action without its own cue."
+          }
         }
       ]
     },
@@ -1560,15 +2022,24 @@
       ],
       "number": 9,
       "order": 9,
-      "description": "Zao graba el mensaje con la voz firme pero apresurada — sabe que puede ser la última vez que hable con alguien — y lo repite mientras el barrido avanza.",
+      "description": {
+        "es": "Zao graba el mensaje con la voz firme pero apresurada — sabe que puede ser la última vez que hable con alguien — y lo repite mientras el barrido avanza.",
+        "en": "Zao records the message with a firm but hurried voice — she knows this may be the last time she speaks to anyone — and repeats it as the sweep advances."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado y estable — sostiene la actuación sin cortes."
+        "movementDescription": {
+          "es": "Encuadre cerrado y estable — sostiene la actuación sin cortes.",
+          "en": "Tight, stable frame — holds the performance without cuts."
+        }
       },
       "durationMs": 11500,
       "cuePlacements": [
@@ -1592,7 +2063,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06).",
+            "en": "Reuses the frame from main:shot-06-06 (asset asset:animatic-06-06)."
+          }
         }
       ]
     },
@@ -1604,15 +2078,24 @@
       ],
       "number": 10,
       "order": 10,
-      "description": "El barrido llega a cien cuando Harlan entra por el ramal técnico. Se detiene en seco al ver “TRANSMITIDO” en pantalla — no alcanza a ver el destino, sólo que algo salió.",
+      "description": {
+        "es": "El barrido llega a cien cuando Harlan entra por el ramal técnico. Se detiene en seco al ver “TRANSMITIDO” en pantalla — no alcanza a ver el destino, sólo que algo salió.",
+        "en": "The sweep reaches one hundred percent as Harlan enters through the technical branch. He stops short at seeing “TRANSMITTED” on screen — he can't make out the destination, only that something went out."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Panorámica corta de la pantalla al rostro de Harlan en el umbral."
+        "movementDescription": {
+          "es": "Panorámica corta de la pantalla al rostro de Harlan en el umbral.",
+          "en": "Short pan from the screen to Harlan's face in the doorway."
+        }
       },
       "durationMs": 7500,
       "cuePlacements": [
@@ -1636,7 +2119,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04).",
+            "en": "Reuse frame from main:shot-06-07 (asset asset:animatic-06-04)."
+          }
         }
       ]
     },
@@ -1648,15 +2134,24 @@
       ],
       "number": 1,
       "order": 1,
-      "description": "Harlan, alarmado, ve “TRANSMITIDO” en la pantalla de Zao. Ella no responde a su pregunta — lo mira, desafiante, sin bajar la vista.",
+      "description": {
+        "es": "Harlan, alarmado, ve “TRANSMITIDO” en la pantalla de Zao. Ella no responde a su pregunta — lo mira, desafiante, sin bajar la vista.",
+        "en": "Alarmed, Harlan sees “TRANSMITTED” on Zao's screen. She doesn't answer his question — she looks at him, defiant, not looking away."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado, corte seco entre los dos rostros."
+        "movementDescription": {
+          "es": "Encuadre cerrado, corte seco entre los dos rostros.",
+          "en": "Tight frame, hard cut between the two faces."
+        }
       },
       "durationMs": 3000,
       "cuePlacements": [
@@ -1680,7 +2175,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01).",
+            "en": "Reuses the frame from main:shot-07-01 (asset asset:animatic-07-01)."
+          }
         }
       ]
     },
@@ -1692,15 +2190,24 @@
       ],
       "number": 3,
       "order": 3,
-      "description": "Harlan mata a Zao fuera de campo. Corte antes de mostrar el acto.",
+      "description": {
+        "es": "Harlan mata a Zao fuera de campo. Corte antes de mostrar el acto.",
+        "en": "Harlan kills Zao off-camera. Cut before showing the act."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre que evita el acto; sonido breve de forcejeo."
+        "movementDescription": {
+          "es": "Encuadre que evita el acto; sonido breve de forcejeo.",
+          "en": "Frame avoids the act; a brief sound of struggle."
+        }
       },
       "durationMs": 3000,
       "cuePlacements": [
@@ -1724,7 +2231,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02).",
+            "en": "Reuses the frame from main:shot-07-02 (asset asset:animatic-07-02)."
+          }
         }
       ]
     },
@@ -1736,15 +2246,24 @@
       ],
       "number": 4,
       "order": 4,
-      "description": "Con manos firmes pero movimientos apresurados, Harlan borra cámaras y archivo local del núcleo antes de retirarse.",
+      "description": {
+        "es": "Con manos firmes pero movimientos apresurados, Harlan borra cámaras y archivo local del núcleo antes de retirarse.",
+        "en": "With steady hands but hurried movements, Harlan wipes the cameras and the core's local archive before leaving."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Continuación visual del gesto anterior — sin cue propio."
+        "movementDescription": {
+          "es": "Continuación visual del gesto anterior — sin cue propio.",
+          "en": "Visual continuation of the previous gesture — no cue of its own."
+        }
       },
       "durationMs": 2500,
       "cuePlacements": [],
@@ -1762,7 +2281,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Continúa visualmente festival:cue-c-01 (borrado de cámaras/archivo) sin cue propio."
+          "text": {
+            "es": "Continúa visualmente festival:cue-c-01 (borrado de cámaras/archivo) sin cue propio.",
+            "en": "Visually continues festival:cue-c-01 (wiping cameras/archive) without its own cue."
+          }
         }
       ]
     },
@@ -1774,15 +2296,24 @@
       ],
       "number": 5,
       "order": 5,
-      "description": "Sorell avanza sola por el cilindro central, ajena a lo ocurrido, con la calma de quien cumple un encargo rutinario.",
+      "description": {
+        "es": "Sorell avanza sola por el cilindro central, ajena a lo ocurrido, con la calma de quien cumple un encargo rutinario.",
+        "en": "Sorell moves alone through the central access cylinder, unaware of what happened, with the calm of someone running a routine errand."
+      },
       "locationId": "location:celestial-ardor-central-access",
       "composition": {
         "size": "MLS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Avance sostenido por el corredor."
+        "movementDescription": {
+          "es": "Avance sostenido por el corredor.",
+          "en": "Sustained push down the corridor."
+        }
       },
       "durationMs": 2500,
       "cuePlacements": [
@@ -1806,7 +2337,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05).",
+            "en": "Reuses the frame from main:shot-06-05 (asset asset:animatic-06-05)."
+          }
         }
       ]
     },
@@ -1818,15 +2352,24 @@
       ],
       "number": 6,
       "order": 6,
-      "description": "El rostro de Sorell se quiebra al encontrar a Zao. Intenta reanimarla, llama al puente sin respuesta — el jammer sigue activo — y comprende, con espanto creciente, que está sola con esto.",
+      "description": {
+        "es": "El rostro de Sorell se quiebra al encontrar a Zao. Intenta reanimarla, llama al puente sin respuesta — el jammer sigue activo — y comprende, con espanto creciente, que está sola con esto.",
+        "en": "Sorell's face breaks when she finds Zao. She tries to revive her, calls the bridge with no answer — the jammer is still active — and realizes, with growing horror, that she's alone with this."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Continuación visual de festival:cue-c-02 — sin cue propio."
+        "movementDescription": {
+          "es": "Continuación visual de festival:cue-c-02 — sin cue propio.",
+          "en": "Visual continuation of festival:cue-c-02 — no cue of its own."
+        }
       },
       "durationMs": 2500,
       "cuePlacements": [],
@@ -1844,7 +2387,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Continúa visualmente festival:cue-c-02 (reanimación fallida) sin cue propio."
+          "text": {
+            "es": "Continúa visualmente festival:cue-c-02 (reanimación fallida) sin cue propio.",
+            "en": "Visually continues festival:cue-c-02 (failed resuscitation) without its own cue."
+          }
         }
       ]
     },
@@ -1856,15 +2402,24 @@
       ],
       "number": 7,
       "order": 7,
-      "description": "Ya compuesto, sin rastro del apuro anterior, Harlan regresa por el cilindro de servicio y restaura COM A/B antes de reaparecer en el puente.",
+      "description": {
+        "es": "Ya compuesto, sin rastro del apuro anterior, Harlan regresa por el cilindro de servicio y restaura COM A/B antes de reaparecer en el puente.",
+        "en": "Composed now, no trace of his earlier haste, Harlan returns through the service cylinder and restores COM A/B before reappearing on the bridge."
+      },
       "locationId": "location:celestial-ardor-service-cylinder",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Travesía rápida por el corredor."
+        "movementDescription": {
+          "es": "Travesía rápida por el corredor.",
+          "en": "Quick transit through the corridor."
+        }
       },
       "durationMs": 2000,
       "cuePlacements": [
@@ -1888,7 +2443,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-07-04 (asset asset:animatic-07-04)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-07-04 (asset asset:animatic-07-04).",
+            "en": "Reuses the frame from main:shot-07-04 (asset asset:animatic-07-04)."
+          }
         }
       ]
     },
@@ -1900,15 +2458,24 @@
       ],
       "number": 8,
       "order": 8,
-      "description": "De vuelta en el puente, Voss le pregunta directamente por Sorell. Harlan responde sin dudar, el rostro compuesto — ninguna señal de lo ocurrido.",
+      "description": {
+        "es": "De vuelta en el puente, Voss le pregunta directamente por Sorell. Harlan responde sin dudar, el rostro compuesto — ninguna señal de lo ocurrido.",
+        "en": "Back on the bridge, Voss asks him directly about Sorell. Harlan answers without hesitation, his face composed — no sign of what happened."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Continuación visual de festival:cue-c-03 — sin cue propio."
+        "movementDescription": {
+          "es": "Continuación visual de festival:cue-c-03 — sin cue propio.",
+          "en": "Visual continuation of festival:cue-c-03 — no cue of its own."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [
@@ -1937,7 +2504,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Continúa visualmente festival:cue-c-03 (niega haber visto a Sorell) sin cue propio."
+          "text": {
+            "es": "Continúa visualmente festival:cue-c-03 (niega haber visto a Sorell) sin cue propio.",
+            "en": "Visually continues festival:cue-c-03 (denies having seen Sorell) without its own cue."
+          }
         }
       ]
     },
@@ -1949,15 +2519,24 @@
       ],
       "number": 9,
       "order": 9,
-      "description": "Voss ordena, con la misma calma con que dirige cualquier maniobra.",
+      "description": {
+        "es": "Voss ordena, con la misma calma con que dirige cualquier maniobra.",
+        "en": "Voss gives the order with the same calm she uses for any maneuver."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Continuación visual de festival:cue-c-03 — sin cue propio."
+        "movementDescription": {
+          "es": "Continuación visual de festival:cue-c-03 — sin cue propio.",
+          "en": "Visual continuation of festival:cue-c-03 — no cue of its own."
+        }
       },
       "durationMs": 4000,
       "cuePlacements": [
@@ -1981,7 +2560,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Continúa visualmente festival:cue-c-03 (Voss envía a Harlan con Okoye) sin cue propio."
+          "text": {
+            "es": "Continúa visualmente festival:cue-c-03 (Voss envía a Harlan con Okoye) sin cue propio.",
+            "en": "Visually continues festival:cue-c-03 (Voss sends Harlan with Okoye) without its own cue."
+          }
         }
       ]
     },
@@ -1993,15 +2575,24 @@
       ],
       "number": 10,
       "order": 10,
-      "description": "Exterior de la nave. Overlay de salto temporal sobre el plano.",
+      "description": {
+        "es": "Exterior de la nave. Overlay de salto temporal sobre el plano.",
+        "en": "Exterior of the ship. Time-skip overlay over the shot."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "LS",
-        "framing": "PG",
+        "framing": {
+          "es": "PG",
+          "en": "PG"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Plano fijo, transición — cierra la secuencia."
+        "movementDescription": {
+          "es": "Plano fijo, transición — cierra la secuencia.",
+          "en": "Fixed shot, transition — closes the sequence."
+        }
       },
       "durationMs": 2500,
       "cuePlacements": [
@@ -2025,7 +2616,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04).",
+            "en": "Reuse frame from main:shot-02-04 (asset asset:animatic-02-04)."
+          }
         }
       ]
     },
@@ -2037,15 +2631,24 @@
       ],
       "number": 2,
       "order": 2,
-      "description": "Harlan asume que el mensaje fue a la Tierra y se lo dice, casi para tranquilizarse. Suspira antes de cerrar la distancia — el único indicio de que esto no le resulta fácil.",
+      "description": {
+        "es": "Harlan asume que el mensaje fue a la Tierra y se lo dice, casi para tranquilizarse. Suspira antes de cerrar la distancia — el único indicio de que esto no le resulta fácil.",
+        "en": "Harlan assumes the message went to Earth and says so, almost to reassure himself. He sighs before closing the distance — the only sign that this isn't easy for him."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado y estable, sostiene el silencio antes del corte."
+        "movementDescription": {
+          "es": "Encuadre cerrado y estable, sostiene el silencio antes del corte.",
+          "en": "Tight, stable frame, holds the silence before the cut."
+        }
       },
       "durationMs": 7600,
       "cuePlacements": [
@@ -2074,7 +2677,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01), mismo still que festival:shot-c-01, como marcador de posición — necesita una toma propia para el Festival Cut (la asunción y el suspiro de Harlan no existen como beat separado en el corto canónico)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01), mismo still que festival:shot-c-01, como marcador de posición — necesita una toma propia para el Festival Cut (la asunción y el suspiro de Harlan no existen como beat separado en el corto canónico).",
+            "en": "Reuses the frame from main:shot-07-01 (asset asset:animatic-07-01), the same still as festival:shot-c-01, as a placeholder — needs its own take for the Festival Cut (Harlan's assumption and sigh don't exist as a separate beat in the canonical short)."
+          }
         }
       ]
     },
@@ -2086,15 +2692,24 @@
       ],
       "number": 2,
       "order": 2,
-      "description": "Elin, sola en el puesto técnico del puente, trabaja contra reloj; el contador del encuentro Velari sigue bajando al fondo.",
+      "description": {
+        "es": "Elin, sola en el puesto técnico del puente, trabaja contra reloj; el contador del encuentro Velari sigue bajando al fondo.",
+        "en": "Elin, alone at the bridge's technical station, works against the clock; the Velari encounter countdown keeps ticking down in the background."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre estable, ligera vibración de la nave."
+        "movementDescription": {
+          "es": "Encuadre estable, ligera vibración de la nave.",
+          "en": "Stable frame, slight vibration from the ship."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [],
@@ -2112,7 +2727,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).",
+            "en": "Reuse frame from main:shot-10-01 (asset asset:animatic-10-01)."
+          }
         }
       ]
     },
@@ -2124,15 +2742,24 @@
       ],
       "number": 3,
       "order": 3,
-      "description": "Insert de consola: el payload aparece desplegado; el disparador se identifica como la apertura del canal Velari.",
+      "description": {
+        "es": "Insert de consola: el payload aparece desplegado; el disparador se identifica como la apertura del canal Velari.",
+        "en": "Console insert: the payload appears deployed; the trigger is identified as the Velari channel opening."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "INSERT",
-        "framing": "PD",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Insert fijo, legible en menos de dos segundos por overlay."
+        "movementDescription": {
+          "es": "Insert fijo, legible en menos de dos segundos por overlay.",
+          "en": "Fixed insert, legible in under two seconds via overlay."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [
@@ -2161,7 +2788,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03).",
+            "en": "Reuses the frame from main:shot-10-03 (asset asset:animatic-10-03)."
+          }
         }
       ]
     },
@@ -2173,15 +2803,24 @@
       ],
       "number": 4,
       "order": 4,
-      "description": "Insert de consola: el override aparece con firma no identificada; la cuarentena queda preparada, en espera.",
+      "description": {
+        "es": "Insert de consola: el override aparece con firma no identificada; la cuarentena queda preparada, en espera.",
+        "en": "Console insert: the override appears with an unidentified signature; the quarantine is left prepared, waiting."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "INSERT",
-        "framing": "PD",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Insert fijo, legible en menos de dos segundos por overlay."
+        "movementDescription": {
+          "es": "Insert fijo, legible en menos de dos segundos por overlay.",
+          "en": "Fixed insert, legible in under two seconds via overlay."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [
@@ -2210,7 +2849,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04).",
+            "en": "Reuses the frame from main:shot-10-04 (asset asset:animatic-10-04)."
+          }
         }
       ]
     },
@@ -2222,15 +2864,24 @@
       ],
       "number": 5,
       "order": 5,
-      "description": "Elin cartografía el payload, separa sus rutas y deja lista una cuarentena limitada — metódica, pero cada vez más tensa: todavía no puede atribuir el override a nadie.",
+      "description": {
+        "es": "Elin cartografía el payload, separa sus rutas y deja lista una cuarentena limitada — metódica, pero cada vez más tensa: todavía no puede atribuir el override a nadie.",
+        "en": "Elin maps the payload, separates its routes, and leaves a limited quarantine ready — methodical, but growing tenser: she still can't attribute the override to anyone."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Ligero acercamiento sobre sus manos y la consola."
+        "movementDescription": {
+          "es": "Ligero acercamiento sobre sus manos y la consola.",
+          "en": "Slight push-in on her hands and the console."
+        }
       },
       "durationMs": 7000,
       "cuePlacements": [
@@ -2254,7 +2905,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02).",
+            "en": "Reuses the frame from main:shot-10-02 (asset asset:animatic-10-02)."
+          }
         }
       ]
     },
@@ -2266,15 +2920,24 @@
       ],
       "number": 7,
       "order": 7,
-      "description": "Voss se acerca y pregunta directamente, sin rodeos.",
+      "description": {
+        "es": "Voss se acerca y pregunta directamente, sin rodeos.",
+        "en": "Voss approaches and asks directly, no preamble."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado sobre Voss."
+        "movementDescription": {
+          "es": "Encuadre cerrado sobre Voss.",
+          "en": "Tight frame on Voss."
+        }
       },
       "durationMs": 3500,
       "cuePlacements": [
@@ -2298,7 +2961,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-09-02 (asset asset:animatic-09-02)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-09-02 (asset asset:animatic-09-02).",
+            "en": "Reuses the frame from main:shot-09-02 (asset asset:animatic-09-02)."
+          }
         }
       ]
     },
@@ -2310,15 +2976,24 @@
       ],
       "number": 8,
       "order": 8,
-      "description": "Elin responde sin suavizar la verdad — honesta sobre el límite exacto de lo que puede hacer.",
+      "description": {
+        "es": "Elin responde sin suavizar la verdad — honesta sobre el límite exacto de lo que puede hacer.",
+        "en": "Elin answers without softening the truth — honest about the exact limit of what she can do."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado sobre Elin."
+        "movementDescription": {
+          "es": "Encuadre cerrado sobre Elin.",
+          "en": "Tight frame on Elin."
+        }
       },
       "durationMs": 5500,
       "cuePlacements": [
@@ -2342,7 +3017,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-10-07 (asset asset:animatic-10-07)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-10-07 (asset asset:animatic-10-07).",
+            "en": "Reuses the frame from main:shot-10-07 (asset asset:animatic-10-07)."
+          }
         }
       ]
     },
@@ -2354,15 +3032,24 @@
       ],
       "number": 9,
       "order": 9,
-      "description": "Harlan interviene con aparente sensatez — urgente, razonable en la superficie. Elin lo contradice de inmediato.",
+      "description": {
+        "es": "Harlan interviene con aparente sensatez — urgente, razonable en la superficie. Elin lo contradice de inmediato.",
+        "en": "Harlan intervenes with apparent good sense — urgent, reasonable on the surface. Elin contradicts him immediately."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Plano de conjunto de los tres; corte a Voss en su línea final."
+        "movementDescription": {
+          "es": "Plano de conjunto de los tres; corte a Voss en su línea final.",
+          "en": "Wide shot of the three of them; cut to Voss on her final line."
+        }
       },
       "durationMs": 7900,
       "cuePlacements": [
@@ -2391,7 +3078,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-11-01 (asset asset:animatic-11-01)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-11-01 (asset asset:animatic-11-01).",
+            "en": "Reuses the frame from main:shot-11-01 (asset asset:animatic-11-01)."
+          }
         }
       ]
     },
@@ -2403,15 +3093,24 @@
       ],
       "number": 11,
       "order": 11,
-      "description": "Elin se detiene en seco — algo nuevo en la pantalla. Voss se acerca; Harlan observa con una atención que no delata nada.",
+      "description": {
+        "es": "Elin se detiene en seco — algo nuevo en la pantalla. Voss se acerca; Harlan observa con una atención que no delata nada.",
+        "en": "Elin stops short — something new on the screen. Voss steps closer; Harlan watches with an attention that gives nothing away."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado sobre Elin, ligero dolly-in."
+        "movementDescription": {
+          "es": "Encuadre cerrado sobre Elin, ligero dolly-in.",
+          "en": "Tight frame on Elin, slight dolly-in."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [
@@ -2435,7 +3134,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).",
+            "en": "Reuse frame from main:shot-11-05 (asset asset:animatic-11-05)."
+          }
         }
       ]
     },
@@ -2447,15 +3149,24 @@
       ],
       "number": 10,
       "order": 10,
-      "description": "Voss corta la discusión sin ceder terreno.",
+      "description": {
+        "es": "Voss corta la discusión sin ceder terreno.",
+        "en": "Voss cuts off the discussion without giving ground."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Corte a Voss en su línea final."
+        "movementDescription": {
+          "es": "Corte a Voss en su línea final.",
+          "en": "Cut to Voss on her final line."
+        }
       },
       "durationMs": 3600,
       "cuePlacements": [
@@ -2479,7 +3190,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-11-02 (asset asset:animatic-11-02)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-11-02 (asset asset:animatic-11-02).",
+            "en": "Reuses the frame from main:shot-11-02 (asset asset:animatic-11-02)."
+          }
         }
       ]
     },
@@ -2491,15 +3205,24 @@
       ],
       "number": 5,
       "order": 5,
-      "description": "El rostro de Zao se endurece; sin apartar la vista de la consola, dice en voz baja lo que ya sabe.",
+      "description": {
+        "es": "El rostro de Zao se endurece; sin apartar la vista de la consola, dice en voz baja lo que ya sabe.",
+        "en": "Zao's face hardens; without looking away from the console, she says quietly what she already knows."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre fijo, cerrado sobre el rostro."
+        "movementDescription": {
+          "es": "Encuadre fijo, cerrado sobre el rostro.",
+          "en": "Fixed frame, close on the face."
+        }
       },
       "durationMs": 12500,
       "cuePlacements": [
@@ -2523,7 +3246,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).",
+            "en": "Reuse frame from main:shot-06-02 (asset asset:animatic-06-02)."
+          }
         }
       ]
     },
@@ -2535,15 +3261,24 @@
       ],
       "number": 6,
       "order": 6,
-      "description": "PD (insert): en la consola dedicada del láser exterior, TIERRA se marca en rojo por el retraso y PROXIMA por la oclusión de Júpiter — un diagrama muestra el disco del planeta cortando la línea de vista entre Celestial Ardor y la estación.",
+      "description": {
+        "es": "PD (insert): en la consola dedicada del láser exterior, TIERRA se marca en rojo por el retraso y PROXIMA por la oclusión de Júpiter — un diagrama muestra el disco del planeta cortando la línea de vista entre Celestial Ardor y la estación.",
+        "en": "PD (insert): on the exterior laser's dedicated console, EARTH is flagged in red for delay and PROXIMA for Jupiter's occlusion — a diagram shows the planet's disk cutting the line of sight between Celestial Ardor and the station."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "INSERT",
-        "framing": "PD",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Insert fijo, legible en menos de dos segundos."
+        "movementDescription": {
+          "es": "Insert fijo, legible en menos de dos segundos.",
+          "en": "Fixed insert, legible in under two seconds."
+        }
       },
       "durationMs": 5000,
       "cuePlacements": [
@@ -2572,7 +3307,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).",
+            "en": "Reuse frame from main:shot-06-02 (asset asset:animatic-06-02)."
+          }
         }
       ]
     },
@@ -2584,15 +3322,24 @@
       ],
       "number": 7,
       "order": 7,
-      "description": "PD (insert): el sistema superpone el plan de vuelo, el tiempo lumínico y la posición futura de Celestial Ardor sobre el corredor de intercepción; la ventana se dibuja en verde y el barrido del láser se ajusta solo para cubrirla.",
+      "description": {
+        "es": "PD (insert): el sistema superpone el plan de vuelo, el tiempo lumínico y la posición futura de Celestial Ardor sobre el corredor de intercepción; la ventana se dibuja en verde y el barrido del láser se ajusta solo para cubrirla.",
+        "en": "PD (insert): the system overlays the flight plan, light-time, and Celestial Ardor's future position onto the intercept corridor; the window is drawn in green and the laser's sweep narrows on its own to cover it."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "INSERT",
-        "framing": "PD",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Insert fijo, continúa la lectura de la consola."
+        "movementDescription": {
+          "es": "Insert fijo, continúa la lectura de la consola.",
+          "en": "Fixed insert, continues reading the console."
+        }
       },
       "durationMs": 6000,
       "cuePlacements": [
@@ -2626,7 +3373,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03).",
+            "en": "Reuse frame from main:shot-06-03 (asset asset:animatic-06-03)."
+          }
         }
       ]
     },
@@ -2638,15 +3388,24 @@
       ],
       "number": 1,
       "order": 1,
-      "description": "PD (insert): bitácora del sistema muestra la orden de Voss — auditoría del núcleo diplomático tras el incidente en el ramal técnico. Ninguna otra información: ni sospechosos, ni ubicación del cuerpo. Es la orden que pone a Elin a trabajar.",
+      "description": {
+        "es": "PD (insert): bitácora del sistema muestra la orden de Voss — auditoría del núcleo diplomático tras el incidente en el ramal técnico. Ninguna otra información: ni sospechosos, ni ubicación del cuerpo. Es la orden que pone a Elin a trabajar.",
+        "en": "PD (insert): the system log shows Voss's order — an audit of the diplomatic core after the incident in the technical branch. No other information: no suspects, no location of the body. It's the order that sets Elin to work."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "INSERT",
-        "framing": "PD",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Insert fijo, legible en menos de dos segundos."
+        "movementDescription": {
+          "es": "Insert fijo, legible en menos de dos segundos.",
+          "en": "Fixed insert, legible in under two seconds."
+        }
       },
       "durationMs": 3800,
       "cuePlacements": [
@@ -2670,7 +3429,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).",
+            "en": "Reuse frame from main:shot-10-01 (asset asset:animatic-10-01)."
+          }
         }
       ]
     },
@@ -2682,15 +3444,24 @@
       ],
       "number": 6,
       "order": 6,
-      "description": "Elin se detiene un instante frente al disparador — la tensión ya no es sólo técnica. Lo dice en voz baja, casi para sí misma.",
+      "description": {
+        "es": "Elin se detiene un instante frente al disparador — la tensión ya no es sólo técnica. Lo dice en voz baja, casi para sí misma.",
+        "en": "Elin pauses for a moment in front of the trigger — the tension is no longer just technical. She says it quietly, almost to herself."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MCU",
-        "framing": "PM",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "Encuadre cerrado sobre Elin, sin movimiento."
+        "movementDescription": {
+          "es": "Encuadre cerrado sobre Elin, sin movimiento.",
+          "en": "Close frame on Elin, no movement."
+        }
       },
       "durationMs": 8600,
       "cuePlacements": [
@@ -2714,7 +3485,10 @@
       "notes": [
         {
           "type": "production",
-          "text": "Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05)."
+          "text": {
+            "es": "Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).",
+            "en": "Reuses frame from main:shot-10-05 (asset asset:animatic-10-05)."
+          }
         }
       ]
     }
@@ -2731,8 +3505,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-01-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "PG exterior: Proxima, Júpiter al fondo y la Celestial Ardor atracada, nombre y silueta legibles. Overlay de misión sobre el plano."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-01-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-01-01) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "PG exterior: Proxima, Júpiter al fondo y la Celestial Ardor atracada, nombre y silueta legibles. Overlay de misión sobre el plano.",
+          "en": "Wide exterior: Proxima, Jupiter in the background and the Celestial Ardor docked, name and silhouette legible. Mission overlay on the shot."
+        }
       }
     },
     {
@@ -2746,8 +3526,14 @@
         "reasons": [
           "missing_subject"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-04-01) sólo muestra a Zao; esta toma del Festival Cut necesita a Elin retirándose y la pantalla de comunicación con Harlan (no presente físicamente).",
-        "replacementBrief": "Interior, núcleo diplomático: Zao y Elin verifican juntas el sistema. Elin termina su parte y se retira hacia su puesto para preparar la cuarentena; Zao se queda sola continuando el diagnóstico. La voz de Harlan llega por el canal desde el puente, visible en una pantalla de mando cercana — no está físicamente en la sala."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-04-01) sólo muestra a Zao; esta toma del Festival Cut necesita a Elin retirándose y la pantalla de comunicación con Harlan (no presente físicamente).",
+          "en": "Still reused from the canonical short (main:shot-04-01) only shows Zao; this Festival Cut shot needs Elin leaving and Harlan's comm screen (not physically present)."
+        },
+        "replacementBrief": {
+          "es": "Interior, núcleo diplomático: Zao y Elin verifican juntas el sistema. Elin termina su parte y se retira hacia su puesto para preparar la cuarentena; Zao se queda sola continuando el diagnóstico. La voz de Harlan llega por el canal desde el puente, visible en una pantalla de mando cercana — no está físicamente en la sala.",
+          "en": "Interior, diplomatic core: Zao and Elin check the system together. Elin finishes her part and heads to her own station to prepare the quarantine; Zao is left alone continuing the diagnostic. Harlan's voice comes over the channel from the bridge, visible on a nearby command screen — he is not physically in the room."
+        }
       }
     },
     {
@@ -2761,8 +3547,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-04-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "PD (insert): una envoltura/proceso no declarado aparece en el diagnóstico del núcleo."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-04-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-04-02) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "PD (insert): una envoltura/proceso no declarado aparece en el diagnóstico del núcleo.",
+          "en": "Insert: an undeclared wrapper/process appears in the core's diagnostic readout."
+        }
       }
     },
     {
@@ -2776,8 +3568,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-03-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "PP Zao: entiende que no es ruido — primer registro de alarma."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-03-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-03-04) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "PP Zao: entiende que no es ruido — primer registro de alarma.",
+          "en": "Close-up on Zao: she realizes it isn't noise — first register of alarm."
+        }
       }
     },
     {
@@ -2791,8 +3589,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-05-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Zao, sola en el núcleo diplomático, confirma que el payload autónomo está asociado al protocolo y abre canal con el puente."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-05-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-05-01) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Zao, sola en el núcleo diplomático, confirma que el payload autónomo está asociado al protocolo y abre canal con el puente.",
+          "en": "Zao, alone in the diplomatic core, confirms the autonomous payload is tied to the protocol and opens a channel to the bridge."
+        }
       }
     },
     {
@@ -2806,8 +3610,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-05-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Harlan llega al acceso axial del puente sin ser visto mientras Zao sigue transmitiendo."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-05-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-05-03) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Harlan llega al acceso axial del puente sin ser visto mientras Zao sigue transmitiendo.",
+          "en": "Harlan reaches the bridge's axial access unseen while Zao keeps transmitting."
+        }
       }
     },
     {
@@ -2821,8 +3631,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-05-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Harlan activa el jammer y desconecta COM A/B en el distribuidor; la transmisión de Zao se corta a media frase."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-05-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-05-07) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Harlan activa el jammer y desconecta COM A/B en el distribuidor; la transmisión de Zao se corta a media frase.",
+          "en": "Harlan activates the jammer and disconnects COM A/B at the distributor; Zao's transmission cuts off mid-sentence."
+        }
       }
     },
     {
@@ -2836,8 +3652,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Zao comprueba que fallan ambos respaldos cableados; descarta Tierra por demora y Proxima por falta de adquisición útil."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-01) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Zao comprueba que fallan ambos respaldos cableados; descarta Tierra por demora y Proxima por falta de adquisición útil.",
+          "en": "Zao confirms both hardwired backups have failed; she rules out Earth for the delay and Proxima for lack of a usable acquisition."
+        }
       }
     },
     {
@@ -2851,8 +3673,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "El control físico dedicado del láser exterior sigue activo; Zao calcula la intercepción y ajusta el barrido sobre la elipse de incertidumbre."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-03) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "El control físico dedicado del láser exterior sigue activo; Zao calcula la intercepción y ajusta el barrido sobre la elipse de incertidumbre.",
+          "en": "The dedicated hardwired control for the exterior laser is still active; Zao calculates the intercept and adjusts the sweep over the uncertainty ellipse."
+        }
       }
     },
     {
@@ -2866,8 +3694,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-06) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Zao graba y repite el mensaje de emergencia durante el barrido."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-06) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-06) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Zao graba y repite el mensaje de emergencia durante el barrido.",
+          "en": "Zao records and repeats the emergency message during the sweep."
+        }
       }
     },
     {
@@ -2881,8 +3715,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "El barrido llega a cien cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-07) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "El barrido llega a cien cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino.",
+          "en": "The sweep reaches one hundred percent as Harlan enters through the technical branch; he only manages to see TRANSMITTED, not the destination."
+        }
       }
     },
     {
@@ -2896,8 +3736,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-07-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Última mirada entre Zao y Harlan: ella ve TRANSMITIDO en pantalla justo cuando él, ya en el umbral, pregunta a quién lo envió."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-07-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-07-01) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Última mirada entre Zao y Harlan: ella ve TRANSMITIDO en pantalla justo cuando él, ya en el umbral, pregunta a quién lo envió.",
+          "en": "Last look between Zao and Harlan: she sees TRANSMITTED on screen just as he, already in the doorway, asks who she sent it to."
+        }
       }
     },
     {
@@ -2911,8 +3757,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-07-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Harlan mata a Zao fuera de campo. Corte antes de mostrar el acto."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-07-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-07-02) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Harlan mata a Zao fuera de campo. Corte antes de mostrar el acto.",
+          "en": "Harlan kills Zao off-camera. Cut before showing the act."
+        }
       }
     },
     {
@@ -2926,8 +3778,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-07-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Harlan borra cámaras y archivo local del núcleo antes de retirarse."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-07-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-07-03) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Harlan borra cámaras y archivo local del núcleo antes de retirarse.",
+          "en": "Harlan wipes the cameras and local archive of the core before leaving."
+        }
       }
     },
     {
@@ -2941,8 +3799,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Sorell avanza sola por el cilindro central, sin saber lo ocurrido, enviada a buscar a Harlan."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-05) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Sorell avanza sola por el cilindro central, sin saber lo ocurrido, enviada a buscar a Harlan.",
+          "en": "Sorell moves alone through the central access cylinder, unaware of what happened, sent to find Harlan."
+        }
       }
     },
     {
@@ -2956,8 +3820,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-07-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Sorell encuentra a Zao y trata de reanimarla; no logra comunicarse con el puente — el jammer sigue activo."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-07-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-07-05) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Sorell encuentra a Zao y trata de reanimarla; no logra comunicarse con el puente — el jammer sigue activo.",
+          "en": "Sorell finds Zao and tries to revive her; she can't reach the bridge — the jammer is still active."
+        }
       }
     },
     {
@@ -2971,8 +3841,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-07-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Harlan regresa por el cilindro de servicio y restaura COM A/B antes de reaparecer en el puente."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-07-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-07-04) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Harlan regresa por el cilindro de servicio y restaura COM A/B antes de reaparecer en el puente.",
+          "en": "Harlan returns through the service cylinder and restores COM A/B before reappearing on the bridge."
+        }
       }
     },
     {
@@ -2986,8 +3862,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-08-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "De vuelta en el puente, Harlan niega haber visto a Sorell."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-08-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-08-03) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "De vuelta en el puente, Harlan niega haber visto a Sorell.",
+          "en": "Back on the bridge, Harlan denies having seen Sorell."
+        }
       }
     },
     {
@@ -3001,8 +3883,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-08-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Voss envía a Harlan con Okoye a buscarla en el puesto de Zao."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-08-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-08-04) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Voss envía a Harlan con Okoye a buscarla en el puesto de Zao.",
+          "en": "Voss sends Harlan with Okoye to look for her at Zao's post."
+        }
       }
     },
     {
@@ -3016,8 +3904,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-02-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Exterior de la nave. Overlay de salto temporal sobre el plano."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-02-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-02-04) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Exterior de la nave. Overlay de salto temporal sobre el plano.",
+          "en": "Exterior of the ship. Time-skip overlay over the shot."
+        }
       }
     },
     {
@@ -3031,8 +3925,14 @@
         "reasons": [
           "missing_subject"
         ],
-        "explanation": "Still reutilizado de main:shot-07-01 (mismo que festival:shot-c-01); este beat (la asunción sobre la Tierra + el suspiro de Harlan) no existe como toma separada en el corto canónico y necesita una imagen propia para el Festival Cut.",
-        "replacementBrief": "Harlan asume que el mensaje fue a la Tierra y se lo dice, casi para tranquilizarse. Suspira antes de cerrar la distancia — el único indicio de que esto no le resulta fácil."
+        "explanation": {
+          "es": "Still reutilizado de main:shot-07-01 (mismo que festival:shot-c-01); este beat (la asunción sobre la Tierra + el suspiro de Harlan) no existe como toma separada en el corto canónico y necesita una imagen propia para el Festival Cut.",
+          "en": "Still reused from main:shot-07-01 (same as festival:shot-c-01); this beat (Harlan's assumption about Earth + his sigh) doesn't exist as a separate shot in the canonical short and needs its own image for the Festival Cut."
+        },
+        "replacementBrief": {
+          "es": "Harlan asume que el mensaje fue a la Tierra y se lo dice, casi para tranquilizarse. Suspira antes de cerrar la distancia — el único indicio de que esto no le resulta fácil.",
+          "en": "Harlan assumes the message went to Earth and says so, almost to reassure himself. He sighs before closing the distance — the only sign that this isn't easy for him."
+        }
       }
     },
     {
@@ -3046,8 +3946,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-10-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Elin, sola en el puesto técnico del puente, trabaja contra reloj; el contador del encuentro Velari sigue bajando al fondo."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-10-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-10-01) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Elin, sola en el puesto técnico del puente, trabaja contra reloj; el contador del encuentro Velari sigue bajando al fondo.",
+          "en": "Elin, alone at the bridge's technical station, works against the clock; the Velari encounter countdown keeps ticking down in the background."
+        }
       }
     },
     {
@@ -3061,8 +3967,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-10-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Insert de consola: el payload aparece desplegado; el disparador se identifica como la apertura del canal Velari."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-10-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-10-03) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Insert de consola: el payload aparece desplegado; el disparador se identifica como la apertura del canal Velari.",
+          "en": "Console insert: the payload appears deployed; the trigger is identified as the Velari channel opening."
+        }
       }
     },
     {
@@ -3076,8 +3988,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-10-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Insert de consola: el override aparece con firma no identificada; la cuarentena queda preparada, en espera."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-10-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-10-04) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Insert de consola: el override aparece con firma no identificada; la cuarentena queda preparada, en espera.",
+          "en": "Console insert: the override appears with an unidentified signature; the quarantine is left prepared, waiting."
+        }
       }
     },
     {
@@ -3091,8 +4009,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-10-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Elin cartografía el payload, separa sus rutas y deja lista una cuarentena limitada — metódica, pero cada vez más tensa: todavía no puede atribuir el override a nadie."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-10-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-10-02) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Elin cartografía el payload, separa sus rutas y deja lista una cuarentena limitada — metódica, pero cada vez más tensa: todavía no puede atribuir el override a nadie.",
+          "en": "Elin maps the payload, separates its routes, and leaves a limited quarantine ready — methodical, but growing tenser: she still can't attribute the override to anyone."
+        }
       }
     },
     {
@@ -3106,8 +4030,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-09-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Voss se acerca y pregunta directamente, sin rodeos."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-09-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-09-02) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Voss se acerca y pregunta directamente, sin rodeos.",
+          "en": "Voss approaches and asks directly, no preamble."
+        }
       }
     },
     {
@@ -3121,8 +4051,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-10-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Elin responde sin suavizar la verdad — honesta sobre el límite exacto de lo que puede hacer."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-10-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-10-07) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Elin responde sin suavizar la verdad — honesta sobre el límite exacto de lo que puede hacer.",
+          "en": "Elin answers without softening the truth — honest about the exact limit of what she can do."
+        }
       }
     },
     {
@@ -3136,8 +4072,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-11-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Harlan interviene con aparente sensatez — urgente, razonable en la superficie. Elin lo contradice de inmediato; Voss corta la discusión sin ceder terreno."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-11-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-11-01) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Harlan interviene con aparente sensatez — urgente, razonable en la superficie. Elin lo contradice de inmediato; Voss corta la discusión sin ceder terreno.",
+          "en": "Harlan intervenes with apparent good sense — urgent, reasonable on the surface. Elin contradicts him immediately; Voss cuts off the discussion without giving ground."
+        }
       }
     },
     {
@@ -3151,8 +4093,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-11-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Elin se detiene en seco — algo nuevo en la pantalla. Voss se acerca; Harlan observa con una atención que no delata nada."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-11-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-11-05) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Elin se detiene en seco — algo nuevo en la pantalla. Voss se acerca; Harlan observa con una atención que no delata nada.",
+          "en": "Elin stops short — something new on the screen. Voss steps closer; Harlan watches with an attention that gives nothing away."
+        }
       }
     },
     {
@@ -3166,8 +4114,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-11-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Voss corta la discusión sin ceder terreno."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-11-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-11-02) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Voss corta la discusión sin ceder terreno.",
+          "en": "Voss cuts off the discussion without giving ground."
+        }
       }
     },
     {
@@ -3181,8 +4135,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "MCU del rostro de Zao endureciéndose mientras descarta Tierra por demora y Proxima porque Júpiter le tapa la línea de vista."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-02) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "MCU del rostro de Zao endureciéndose mientras descarta Tierra por demora y Proxima porque Júpiter le tapa la línea de vista.",
+          "en": "MCU of Zao's face hardening as she rules out Earth for delay and Proxima because Jupiter blocks her line of sight."
+        }
       }
     },
     {
@@ -3196,8 +4156,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Insert de consola: TIERRA marcada en rojo por retraso; PROXIMA marcada en rojo con el disco de Júpiter cortando la línea de vista hacia la estación."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-02) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Insert de consola: TIERRA marcada en rojo por retraso; PROXIMA marcada en rojo con el disco de Júpiter cortando la línea de vista hacia la estación.",
+          "en": "Console insert: EARTH flagged in red for delay; PROXIMA flagged in red with Jupiter's disk cutting the line of sight to the station."
+        }
       }
     },
     {
@@ -3211,8 +4177,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-06-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Insert de consola: plan de vuelo, tiempo lumínico y elipse de incertidumbre calculándose sobre el corredor de intercepción."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-06-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-06-03) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Insert de consola: plan de vuelo, tiempo lumínico y elipse de incertidumbre calculándose sobre el corredor de intercepción.",
+          "en": "Console insert: flight plan, light-time, and uncertainty ellipse being computed over the intercept corridor."
+        }
       }
     },
     {
@@ -3226,8 +4198,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-10-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "Insert de bitácora: orden de auditoría de Voss tras el incidente, sin sospechosos ni cuerpo."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-10-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-10-01) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "Insert de bitácora: orden de auditoría de Voss tras el incidente, sin sospechosos ni cuerpo.",
+          "en": "Log insert: Voss's audit order after the incident, no suspects or body."
+        }
       }
     },
     {
@@ -3241,8 +4219,14 @@
         "reasons": [
           "canon_mismatch"
         ],
-        "explanation": "Still reutilizado del corto canónico (main:shot-10-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-        "replacementBrief": "MCU de Elin nombrando en voz baja el riesgo real: que el disparo del payload al abrir el canal parezca un ataque humano."
+        "explanation": {
+          "es": "Still reutilizado del corto canónico (main:shot-10-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+          "en": "Still reused from the canonical short (main:shot-10-05) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
+        },
+        "replacementBrief": {
+          "es": "MCU de Elin nombrando en voz baja el riesgo real: que el disparo del payload al abrir el canal parezca un ataque humano.",
+          "en": "MCU of Elin naming, under her breath, the real risk: that the payload firing when the channel opens will look like a human attack."
+        }
       }
     }
   ]

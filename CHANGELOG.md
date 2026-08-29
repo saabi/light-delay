@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-29 — Traducciones de historia inline (LocalizedString)
+
+- El copy de guiones, outlines, assets, taxonomía, funciones, variantes y etiquetas de `project.scripts` pasa de overlay `public.en.json` (clave = texto ES) a mapas co-localizados `{ "es", "en" }` y diálogo/texto en `content.variants.en`.
+- Tipos `LocalizedString` / `StoryText`, resolvers en selectores y CLI; `validate:translations` comprueba cobertura inline; `public.en.json` queda vacío (retirado para historia). Galería de entidades sigue en `entities.en.json` (deuda).
+- Migrador idempotente: `node scripts/migrate-inline-i18n.mjs` (`--apply`, `--prune-overlay`). Schema de scripts/outlines en `1.1.0`.
+
 ## 2026-08-29 — Escaleta festival migrada a JSON; Markdown jubilado
 
 - `data/outlines/light-delay-festival.json`: 44 pasos completos (A–D `covered`, E–G `planned`, dos beats de Secuencia D `missing`), `dependsOnStepIds` rellenado en 30 pasos con dependencias causales reales (no mera adyacencia de escena). Reordenado `festival:outline-24` ("se nombra el riesgo real") para que siga a los overlays del payload que necesita, en vez de precederlos.

@@ -713,12 +713,7 @@ export function buildDialogueI18nReport(script, ctx, projectCtx) {
 
 	for (const cue of script.cues) {
 		if (cue.type !== 'dialogue') continue;
-		const sourceVariant = cue.content.variants[cue.content.sourceLanguage];
-		const sourceText = sourceVariant?.spokenText;
-		const missing = targets.filter((lang) => {
-			if (cue.content.variants[lang]) return false;
-			return !sourceText || !projectCtx.translationCatalogs?.[lang]?.[sourceText];
-		});
+		const missing = targets.filter((lang) => !cue.content.variants[lang]);
 		if (missing.length) {
 			missingVariants.push({ cueId: cue.id, missing });
 		}
@@ -732,7 +727,7 @@ export function buildDialogueI18nReport(script, ctx, projectCtx) {
 			dialogueCount: script.cues.filter((c) => c.type === 'dialogue').length,
 			missingVariantCount: missingVariants.length,
 			targets,
-			consoleLine: `dialogue without localized variant or overlay entry: ${missingVariants.length}`
+			consoleLine: `dialogue without localized variant: ${missingVariants.length}`
 		},
 		missingVariants
 	};
@@ -747,7 +742,7 @@ export function formatDialogueI18nMarkdown(report) {
 	);
 	lines.push('## Resumen', '');
 	lines.push(
-		`- Diálogos sin variante embebida ni entrada en el overlay (${report.summary.targets.join(', ')}): **${report.summary.missingVariantCount}**`,
+		`- Diálogos sin variante embebida (${report.summary.targets.join(', ')}): **${report.summary.missingVariantCount}**`,
 		''
 	);
 	appendList(

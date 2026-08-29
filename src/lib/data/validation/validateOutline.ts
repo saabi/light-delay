@@ -3,6 +3,7 @@ import type { OutlineFile } from '$lib/types/outline';
 import type { ScriptFile } from '$lib/types/script';
 import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import type { ScriptId } from '$lib/types/ids';
+import { sourceStoryText } from './localizedString.ts';
 
 const IMPORTANCE = new Set(['required', 'optional']);
 const STEP_STATUS = new Set(['planned', 'covered', 'missing', 'deferred']);
@@ -33,7 +34,7 @@ export function validateOutline(
 	else if (!options.registeredScriptIds.has(meta.scriptId)) {
 		errors.push(`${label}: unknown scriptId ${meta.scriptId}`);
 	}
-	if (!meta.title?.trim()) errors.push(`${label}: missing title`);
+	if (!sourceStoryText(meta.title)?.trim()) errors.push(`${label}: missing title`);
 	if (!meta.version) errors.push(`${label}: missing version`);
 	if (!FILE_STATUS.has(meta.status)) errors.push(`${label}: invalid status ${meta.status}`);
 
@@ -63,8 +64,8 @@ export function validateOutline(
 		} else {
 			previousOrder = step.order;
 		}
-		if (!step.title?.trim()) errors.push(`${stepLabel}: missing title`);
-		if (!step.summary?.trim()) errors.push(`${stepLabel}: missing summary`);
+		if (!sourceStoryText(step.title)?.trim()) errors.push(`${stepLabel}: missing title`);
+		if (!sourceStoryText(step.summary)?.trim()) errors.push(`${stepLabel}: missing summary`);
 		if (!IMPORTANCE.has(step.importance)) {
 			errors.push(`${stepLabel}: invalid importance ${step.importance}`);
 		}

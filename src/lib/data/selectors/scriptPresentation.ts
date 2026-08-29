@@ -1,5 +1,6 @@
 import type { ScriptRegistryEntry } from '$lib/types/project';
 import * as m from '$lib/paraglide/messages.js';
+import { resolveLocalizedString } from './localized.ts';
 
 export function scriptLabel(entry: ScriptRegistryEntry): string {
 	switch (entry.id) {
@@ -12,7 +13,10 @@ export function scriptLabel(entry: ScriptRegistryEntry): string {
 		case 'script:light-delay-long':
 			return m.script_long_name();
 		default:
-			return entry.label;
+			return (
+				resolveLocalizedString(entry.label, 'es', { sourceLanguage: 'es' }) ??
+				(typeof entry.label === 'string' ? entry.label : entry.id)
+			);
 	}
 }
 

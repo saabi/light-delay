@@ -1,88 +1,105 @@
 {
-	"schemaVersion": "1.0.0",
-	"project": {
-		"id": "project:light-delay",
-		"title": "Light Delay",
-		"alternateTitles": ["Luz Tardía"],
-		"description": "Cortometraje de ciencia ficción de primer contacto; guion canónico de 17 escenas.",
-		"languages": {
-			"sourceLanguage": "es",
-			"defaultDialogueLanguage": "es",
-			"defaultSubtitleLanguage": "es",
-			"fallbackLanguage": "es",
-			"supported": [
-				{
-					"tag": "es",
-					"label": "Spanish",
-					"nativeLabel": "Español"
-				},
-				{
-					"tag": "en",
-					"label": "English",
-					"nativeLabel": "English"
-				}
-			]
-		},
-		"canonicalScriptId": "script:light-delay-main-short",
-		"targetDurationMs": 1800000,
-		"createdAt": "2026-08-25",
-		"updatedAt": "2026-08-25",
-		"continuities": [
-			{
-				"id": "continuity:light-delay-primary",
-				"name": "Light Delay — continuidad primaria",
-				"description": "Continuidad narrativa del cortometraje canónico, su tratamiento largo y los cuts derivados."
-			}
-		],
-		"scripts": [
-			{
-				"id": "script:light-delay-main-short",
-				"continuityId": "continuity:light-delay-primary",
-				"label": "Guion corto (~30 min)",
-				"kind": "main_short",
-				"status": "draft",
-				"targetDurationMs": 1800000
-			},
-			{
-				"id": "script:light-delay-festival",
-				"continuityId": "continuity:light-delay-primary",
-				"label": "Festival Cut (~4:50)",
-				"kind": "festival_cut",
-				"status": "draft",
-				"targetDurationMs": 290000,
-				"lineage": {
-					"sourceScriptId": "script:light-delay-main-short",
-					"relationship": "adaptation",
-					"sourceVersion": "1.1.0-draft"
-				}
-			},
-			{
-				"id": "script:light-delay-trailer",
-				"continuityId": "continuity:light-delay-primary",
-				"label": "Tráiler (~1:30)",
-				"kind": "trailer",
-				"status": "draft",
-				"targetDurationMs": 90000,
-				"lineage": {
-					"sourceScriptId": "script:light-delay-main-short",
-					"relationship": "trailer",
-					"sourceVersion": "1.1.0-draft"
-				}
-			},
-			{
-				"id": "script:light-delay-long",
-				"continuityId": "continuity:light-delay-primary",
-				"label": "Tratamiento de largometraje (~100 min)",
-				"kind": "long_version",
-				"status": "draft",
-				"targetDurationMs": 6000000,
-				"lineage": {
-					"sourceScriptId": "script:light-delay-main-short",
-					"relationship": "rewrite",
-					"sourceVersion": "1.1.0-draft",
-					"notes": "Recuperación revisada contra el canon corto vigente."
-				}
-			}
-		]
-	}
+  "schemaVersion": "1.0.0",
+  "project": {
+    "id": "project:light-delay",
+    "title": "Light Delay",
+    "alternateTitles": [
+      "Luz Tardía"
+    ],
+    "description": "Cortometraje de ciencia ficción de primer contacto; guion canónico de 17 escenas.",
+    "languages": {
+      "sourceLanguage": "es",
+      "defaultDialogueLanguage": "es",
+      "defaultSubtitleLanguage": "es",
+      "fallbackLanguage": "es",
+      "supported": [
+        {
+          "tag": "es",
+          "label": "Spanish",
+          "nativeLabel": "Español"
+        },
+        {
+          "tag": "en",
+          "label": "English",
+          "nativeLabel": "English"
+        }
+      ]
+    },
+    "canonicalScriptId": "script:light-delay-main-short",
+    "targetDurationMs": 1800000,
+    "createdAt": "2026-08-25",
+    "updatedAt": "2026-08-25",
+    "continuities": [
+      {
+        "id": "continuity:light-delay-primary",
+        "name": "Light Delay — continuidad primaria",
+        "description": "Continuidad narrativa del cortometraje canónico, su tratamiento largo y los cuts derivados."
+      }
+    ],
+    "scripts": [
+      {
+        "id": "script:light-delay-main-short",
+        "continuityId": "continuity:light-delay-primary",
+        "label": {
+          "es": "Guion corto (~30 min)",
+          "en": "Short screenplay (~30 min)"
+        },
+        "kind": "main_short",
+        "status": "draft",
+        "targetDurationMs": 1800000
+      },
+      {
+        "id": "script:light-delay-festival",
+        "continuityId": "continuity:light-delay-primary",
+        "label": {
+          "es": "Festival Cut (~4:50)",
+          "en": "Festival cut (~4:50)"
+        },
+        "kind": "festival_cut",
+        "status": "draft",
+        "targetDurationMs": 290000,
+        "lineage": {
+          "sourceScriptId": "script:light-delay-main-short",
+          "relationship": "adaptation",
+          "sourceVersion": "1.1.0-draft"
+        }
+      },
+      {
+        "id": "script:light-delay-trailer",
+        "continuityId": "continuity:light-delay-primary",
+        "label": {
+          "es": "Tráiler (~1:30)",
+          "en": "Trailer (~1:30)"
+        },
+        "kind": "trailer",
+        "status": "draft",
+        "targetDurationMs": 90000,
+        "lineage": {
+          "sourceScriptId": "script:light-delay-main-short",
+          "relationship": "trailer",
+          "sourceVersion": "1.1.0-draft"
+        }
+      },
+      {
+        "id": "script:light-delay-long",
+        "continuityId": "continuity:light-delay-primary",
+        "label": {
+          "es": "Tratamiento de largometraje (~100 min)",
+          "en": "Feature treatment (~100 min)"
+        },
+        "kind": "long_version",
+        "status": "draft",
+        "targetDurationMs": 6000000,
+        "lineage": {
+          "sourceScriptId": "script:light-delay-main-short",
+          "relationship": "rewrite",
+          "sourceVersion": "1.1.0-draft",
+          "notes": {
+            "es": "Recuperación revisada contra el canon corto vigente.",
+            "en": "Recovered material reviewed against the current short-film canon."
+          }
+        }
+      }
+    ]
+  }
 }

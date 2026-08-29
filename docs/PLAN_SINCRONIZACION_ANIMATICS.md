@@ -1,6 +1,6 @@
 # Plan: sincronizar guiones con sus animatics (29/08/2026)
 
-**Estado:** diagnóstico vigente; el Festival Cut ya tiene shot list parcial (secuencias A–D: 33 tomas). E–G y la limpieza de cues huérfanos del corto siguen pendientes.
+**Estado:** diagnóstico vigente; el Festival Cut ya tiene shot list parcial (secuencias A–D: 35 tomas). E–G y la limpieza de cues huérfanos del corto siguen pendientes.
 
 ## Resumen del diagnóstico
 
@@ -10,7 +10,7 @@ Medido por script, el problema tiene **dos causas completamente distintas** disf
 
 ## 1. `light-delay-festival` — shot list parcial (A–D hechas; E–G pendientes)
 
-- 7 escenas, **33 tomas / 33 takes** en secuencias A–D; cues ampliados respecto al borrador inicial.
+- 7 escenas, **35 tomas / 35 takes** en secuencias A–D; cues ampliados respecto al borrador inicial.
 - Secuencias E–G siguen sin tomas (plan en la escaleta / adaptación).
 - Guía de construcción: `docs/light-delay-festival-cut-adaptation.md` + `data/outlines/light-delay-festival.json` (escaleta estructurada, checklist autoritativa; el Markdown compañero `docs/ESCALETA_FESTIVAL.md` se retiró el 29/08/2026 tras la migración completa). Cuidados al escribir: `docs/CUIDADOS_NARRATIVOS.md`.
 

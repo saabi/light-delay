@@ -40,21 +40,24 @@ describe('outlines (optional)', () => {
 		expect(coverage.filter((row) => !row.present)).toHaveLength(3);
 	});
 
-	it('localizes festival outline titles via public.en overlay', () => {
+	it('localizes festival outline titles from inline LocalizedString maps', () => {
 		const source = getOutline(festivalId)!;
 		const localized = localizeOutline(source, 'en');
-		expect(getLocalizedOutline(festivalId, 'es')).toBe(source);
+		const es = getLocalizedOutline(festivalId, 'es')!;
+		expect(typeof source.outline.title).toBe('object');
+		expect(es.outline.title).toBe('Escaleta — Light Delay: Festival Cut');
 		expect(localized.outline.title).toBe('Outline — Light Delay: Festival Cut');
 		expect(localized.steps[0]?.title).not.toBe(source.steps[0]?.title);
+		expect(typeof localized.steps[0]?.title).toBe('string');
 	});
 
 	it('validateOutline accepts dependsOnStepIds within the file', () => {
 		const file: OutlineFile = {
-			schemaVersion: '1.0.0',
+			schemaVersion: '1.1.0',
 			outline: {
 				id: 'outline:light-delay-main-short',
 				scriptId: 'script:light-delay-main-short',
-				title: 'Test',
+				title: { es: 'Test', en: 'Test' },
 				status: 'draft',
 				version: '0.0.1'
 			},
@@ -62,16 +65,16 @@ describe('outlines (optional)', () => {
 				{
 					id: 'main:outline-01',
 					order: 1,
-					title: 'Arrival',
-					summary: 'Crew arrives',
+					title: { es: 'Arrival', en: 'Arrival' },
+					summary: { es: 'Crew arrives', en: 'Crew arrives' },
 					importance: 'required',
 					status: 'planned'
 				},
 				{
 					id: 'main:outline-02',
 					order: 2,
-					title: 'Payoff',
-					summary: 'Depends on arrival',
+					title: { es: 'Payoff', en: 'Payoff' },
+					summary: { es: 'Depends on arrival', en: 'Depends on arrival' },
 					importance: 'required',
 					status: 'planned',
 					dependsOnStepIds: ['main:outline-01']

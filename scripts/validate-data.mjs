@@ -5,6 +5,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { sourceLocalizedString } from './lib/localized-string.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
@@ -38,7 +39,7 @@ function validateImageStatus(status, label, errors) {
 			if (!IMAGE_REASONS.has(reason)) errors.push(`${label}: invalid image reason ${reason}`);
 		}
 	}
-	if (status.status !== 'current' && !status.explanation?.trim()) {
+	if (status.status !== 'current' && !sourceLocalizedString(status.explanation)?.trim()) {
 		errors.push(`${label}: non-current image status requires explanation`);
 	}
 }
@@ -189,7 +190,7 @@ function validateScriptFile(
 		for (const claim of profile.canonClaims) {
 			if (!dimensionIds.has(claim.dimensionId))
 				errors.push(`${label}: unknown canon dimension ${claim.dimensionId}`);
-			if (!claim.statement?.trim())
+			if (!sourceLocalizedString(claim.statement)?.trim())
 				errors.push(`${label}: empty canon statement ${claim.dimensionId}`);
 		}
 		for (const coverage of profile.eventCoverage) {
@@ -458,7 +459,8 @@ function main() {
 			else if (!registryIds.has(outline.outline.scriptId)) {
 				errors.push(`${label}: unknown scriptId ${outline.outline.scriptId}`);
 			}
-			if (!outline.outline?.title?.trim()) errors.push(`${label}: missing title`);
+			if (!sourceLocalizedString(outline.outline?.title)?.trim())
+				errors.push(`${label}: missing title`);
 			if (!outline.outline?.version) errors.push(`${label}: missing version`);
 			if (!OUTLINE_FILE_STATUS.has(outline.outline?.status)) {
 				errors.push(`${label}: invalid status ${outline.outline?.status}`);
@@ -480,8 +482,9 @@ function main() {
 				else if (step.order <= previousOrder) {
 					errors.push(`${stepLabel}: order must be strictly increasing`);
 				} else previousOrder = step.order;
-				if (!step.title?.trim()) errors.push(`${stepLabel}: missing title`);
-				if (!step.summary?.trim()) errors.push(`${stepLabel}: missing summary`);
+				if (!sourceLocalizedString(step.title)?.trim()) errors.push(`${stepLabel}: missing title`);
+				if (!sourceLocalizedString(step.summary)?.trim())
+					errors.push(`${stepLabel}: missing summary`);
 				if (!OUTLINE_IMPORTANCE.has(step.importance)) {
 					errors.push(`${stepLabel}: invalid importance ${step.importance}`);
 				}

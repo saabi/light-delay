@@ -2,6 +2,7 @@ import type { ValidationResult } from '$lib/types/common';
 import type { Cue, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
 import type { AssetId, CharacterId } from '$lib/types/ids';
 import { validateImageEditorialStatus } from './validateAssets.ts';
+import { assertLocalizedString } from './localizedString.ts';
 
 function uniqueIds(label: string, ids: string[], errors: string[]) {
 	const seen = new Set<string>();
@@ -65,6 +66,11 @@ export function validateScript(
 	if (!file?.script?.id) errors.push('script: missing script.id');
 	if (!file?.script?.kind) errors.push('script: missing script.kind');
 	if (!file?.script?.continuityId) errors.push('script: missing script.continuityId');
+	if (file?.script?.title != null) {
+		assertLocalizedString(file.script.title, 'script.title', errors, sourceLanguage);
+	} else {
+		errors.push('script: missing script.title');
+	}
 	if (!Array.isArray(file?.acts)) errors.push('script: missing acts');
 	if (!Array.isArray(file?.scenes)) errors.push('script: missing scenes');
 	if (!Array.isArray(file?.beats)) errors.push('script: missing beats');

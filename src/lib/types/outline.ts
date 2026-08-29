@@ -1,5 +1,6 @@
 import type { BeatId, SceneId, ScriptId } from './ids.ts';
 import type { Note } from './common.ts';
+import type { StoryText } from './i18n.ts';
 import type { SourceReference } from './script.ts';
 
 export type OutlineImportance = 'required' | 'optional';
@@ -9,7 +10,7 @@ export type OutlineFileStatus = 'draft' | 'reviewed' | 'locked';
 export interface OutlineMeta {
 	id: string;
 	scriptId: ScriptId;
-	title: string;
+	title: StoryText;
 	status: OutlineFileStatus;
 	version: string;
 }
@@ -17,8 +18,8 @@ export interface OutlineMeta {
 export interface OutlineStep {
 	id: string;
 	order: number;
-	title: string;
-	summary: string;
+	title: StoryText;
+	summary: StoryText;
 	importance: OutlineImportance;
 	status: OutlineStepStatus;
 	/** Optional link to comparison-taxonomy majorEvents */

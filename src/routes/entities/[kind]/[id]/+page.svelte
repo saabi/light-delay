@@ -4,9 +4,12 @@
 	import { withLocale } from '$lib/utils/paths';
 	import { encodeRouteId } from '$lib/utils/routeId';
 	import * as m from '$lib/paraglide/messages.js';
+	import { getLocale } from '$lib/paraglide/runtime.js';
+	import { storyText } from '$lib/data/selectors/localized';
 
 	let { data } = $props();
 	const entity = $derived(data.entity);
+	const locale = getLocale();
 	const labels = {
 		characters: m.entities_characters(),
 		locations: m.entities_locations(),
@@ -22,13 +25,16 @@
 				(asset) =>
 					asset.kind === 'image' && !asset.path.toLowerCase().endsWith('.svg')
 			)
-			.map((asset) => ({
-				id: asset.id,
-				src: asset.path,
-				alt: asset.title ?? asset.id,
-				caption: asset.title ?? asset.id,
-				href: withLocale(`/assets/${encodeRouteId(asset.id)}`)
-			}))
+			.map((asset) => {
+				const caption = storyText(asset.title, locale) || asset.id;
+				return {
+					id: asset.id,
+					src: asset.path,
+					alt: caption,
+					caption,
+					href: withLocale(`/assets/${encodeRouteId(asset.id)}`)
+				};
+			})
 	);
 </script>
 

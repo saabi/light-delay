@@ -21,7 +21,7 @@ import type {
 	VoiceProfileId
 } from './ids.ts';
 import type { EntityRef, Note } from './common.ts';
-import type { LanguageTag, LocalizedValue, TranslationStatus } from './i18n.ts';
+import type { LanguageTag, LocalizedValue, StoryText, TranslationStatus } from './i18n.ts';
 import type { ScriptLineage } from './project.ts';
 import type { ComparisonProfile } from './comparison.ts';
 import type { ImageEditorialStatus } from './assets.ts';
@@ -49,8 +49,8 @@ export interface SourceTraceable {
 
 export interface NarrativeFunction {
 	id: NarrativeFunctionId;
-	label: string;
-	description?: string;
+	label: StoryText;
+	description?: StoryText;
 }
 
 export interface NarrativeFunctionsFile {
@@ -63,7 +63,7 @@ export interface CharacterFunctionAssignment {
 	characterId: CharacterId;
 	sourceCharacterIds?: CharacterId[];
 	relationship: 'unchanged' | 'merged' | 'reassigned' | 'split' | 'new';
-	notes?: string;
+	notes?: StoryText;
 }
 
 export interface EntityVariant {
@@ -71,13 +71,13 @@ export interface EntityVariant {
 	entity: EntityRef;
 	continuityId?: ContinuityId;
 	scriptIds?: ScriptId[];
-	label: string;
-	roleOverride?: string;
-	traitsOverride?: string[];
-	biographyOverride?: string;
-	descriptionOverride?: string;
-	appearanceOverride?: string;
-	costumeOverride?: string;
+	label: StoryText;
+	roleOverride?: StoryText;
+	traitsOverride?: StoryText[];
+	biographyOverride?: StoryText;
+	descriptionOverride?: StoryText;
+	appearanceOverride?: StoryText;
+	costumeOverride?: StoryText;
 	referenceAssetIds: AssetId[];
 	notes?: Note[];
 }
@@ -101,7 +101,7 @@ export interface ScriptFile {
 		id: ScriptId;
 		projectId: ProjectId;
 		continuityId: ContinuityId;
-		title: string;
+		title: StoryText;
 		version: string;
 		status: 'draft' | 'review' | 'locked' | 'deprecated';
 		kind: ScriptKind;
@@ -125,8 +125,8 @@ export interface ScriptFile {
 export interface Act {
 	id: ActId;
 	number: number;
-	title?: string;
-	dramaticPurpose?: string;
+	title?: StoryText;
+	dramaticPurpose?: StoryText;
 	sequenceIds?: SequenceId[];
 	sceneIds: SceneId[];
 }
@@ -135,8 +135,8 @@ export interface Sequence {
 	id: SequenceId;
 	actId: ActId;
 	order: number;
-	title: string;
-	summary?: string;
+	title: StoryText;
+	summary?: StoryText;
 	sceneIds: SceneId[];
 }
 
@@ -146,17 +146,17 @@ export interface Scene extends SourceTraceable {
 	sequenceId?: SequenceId;
 	number: number;
 	order: number;
-	title: string;
+	title: StoryText;
 	locationId: LocationId;
 	secondaryLocationIds?: LocationId[];
 	setting: {
 		interiorExterior?: 'INT' | 'EXT' | 'INT_EXT';
-		timeOfDay?: string;
-		storyTime?: string;
-		continuity?: string;
+		timeOfDay?: StoryText;
+		storyTime?: StoryText;
+		continuity?: StoryText;
 	};
-	summary: string;
-	dramaticPurpose?: string;
+	summary: StoryText;
+	dramaticPurpose?: StoryText;
 	characterIds: CharacterId[];
 	objectIds?: ObjectId[];
 	vehicleIds?: VehicleId[];
@@ -171,9 +171,9 @@ export interface Beat extends SourceTraceable {
 	id: BeatId;
 	sceneId: SceneId;
 	order: number;
-	title?: string;
-	purpose: string;
-	summary: string;
+	title?: StoryText;
+	purpose: StoryText;
+	summary: StoryText;
 	participantRefs?: EntityRef[];
 	cueIds: CueId[];
 	targetDurationMs?: number;
@@ -193,7 +193,7 @@ export interface CueBase extends SourceTraceable {
 
 export interface ActionCue extends CueBase {
 	type: 'action';
-	text: string;
+	text: StoryText;
 	participantRefs?: EntityRef[];
 	objectRefs?: EntityRef[];
 }
@@ -224,8 +224,8 @@ export interface DialogueCue extends CueBase {
 		| 'synthetic'
 		| 'telepathic';
 	performance?: {
-		emotion?: string;
-		intention?: string;
+		emotion?: StoryText;
+		intention?: StoryText;
 		pace?: 'slow' | 'measured' | 'normal' | 'fast';
 	};
 	content: LocalizedValue<DialogueVariant>;
@@ -233,7 +233,7 @@ export interface DialogueCue extends CueBase {
 
 export interface SoundCue extends CueBase {
 	type: 'sound';
-	description: string;
+	description: StoryText;
 	soundId?: string;
 	sourceRef?: EntityRef;
 	audioAssetId?: AssetId;
@@ -244,7 +244,7 @@ export interface SoundCue extends CueBase {
 
 export interface MusicCue extends CueBase {
 	type: 'music';
-	description: string;
+	description: StoryText;
 	trackAssetId?: AssetId;
 	operation: 'start' | 'continue' | 'change' | 'duck' | 'swell' | 'fade_out' | 'stop';
 	gainDb?: number;
@@ -252,14 +252,14 @@ export interface MusicCue extends CueBase {
 
 export interface SilenceCue extends CueBase {
 	type: 'silence';
-	purpose?: string;
+	purpose?: StoryText;
 	estimatedDurationMs?: number;
 }
 
 export interface TransitionCue extends CueBase {
 	type: 'transition';
 	transition: 'cut' | 'match_cut' | 'crossfade' | 'fade_in' | 'fade_out' | 'cut_to_black';
-	description?: string;
+	description?: StoryText;
 }
 
 export interface TextVariant {
@@ -279,8 +279,8 @@ export interface Shot extends SourceTraceable {
 	beatIds: BeatId[];
 	number: number;
 	order: number;
-	purpose?: string;
-	description: string;
+	purpose?: StoryText;
+	description: StoryText;
 	locationId?: LocationId;
 	visibleRefs?: EntityRef[];
 	offScreenCharacterIds?: CharacterId[];
@@ -309,11 +309,11 @@ export interface ShotComposition {
 		| 'INSERT'
 		| 'AERIAL'
 		| 'OTHER';
-	angle?: string;
-	framing?: string;
-	focus?: string;
-	foreground?: string;
-	background?: string;
+	angle?: StoryText;
+	framing?: StoryText;
+	focus?: StoryText;
+	foreground?: StoryText;
+	background?: StoryText;
 	aspectRatio?: string;
 }
 
@@ -330,9 +330,9 @@ export interface CameraDirection {
 		| 'zoom'
 		| 'orbit'
 		| 'other';
-	movementDescription?: string;
-	startFrame?: string;
-	endFrame?: string;
+	movementDescription?: StoryText;
+	startFrame?: StoryText;
+	endFrame?: StoryText;
 }
 
 export interface CuePlacementTiming {
@@ -355,7 +355,7 @@ export interface CuePlacement {
 export interface ShotTransition {
 	type: 'cut' | 'match_cut' | 'crossfade' | 'fade' | 'wipe' | 'cut_to_black';
 	durationMs?: number;
-	description?: string;
+	description?: StoryText;
 }
 
 export interface Take {
@@ -381,6 +381,6 @@ export interface Take {
 		continuityScore?: number;
 		compositionScore?: number;
 		characterConsistencyScore?: number;
-		notes?: string;
+		notes?: StoryText;
 	};
 }

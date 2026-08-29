@@ -9,7 +9,10 @@ describe('image editorial status', () => {
 			{
 				status: 'needs_replacement',
 				reasons: ['placeholder'],
-				explanation: 'Frame reutilizado mientras se produce el still definitivo.'
+				explanation: {
+					es: 'Frame reutilizado mientras se produce el still definitivo.',
+					en: 'Frame reused while the definitive still is produced.'
+				}
 			},
 			'take:test',
 			errors

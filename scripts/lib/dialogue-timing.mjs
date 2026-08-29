@@ -50,46 +50,12 @@ export function resolveLocalized(content, requestedLanguage, projectFallback = '
 }
 
 /**
- * @param {Record<string, string>} translations
- * @param {string | undefined} value
- * @param {string} language
- * @returns {string | undefined}
- */
-function translatePublicText(translations, value, language) {
-	if (!value || language !== 'en') return value;
-	return translations[value] ?? value;
-}
-
-/**
- * Clone script and apply English public translations to dialogue (report parity with app).
+ * Dialogue variants are co-located on disk; reports no longer inject from overlay.
  * @param {import('../../src/lib/types/script.ts').ScriptFile} source
- * @param {Record<string, string>} translations
- * @param {string} language
+ * @param {string} _language
  */
-export function localizeScriptDialogue(source, translations, language) {
-	if (language !== 'en') return source;
-	const script = structuredClone(source);
-	const t = (/** @type {string | undefined} */ value) =>
-		translatePublicText(translations, value, language);
-
-	for (const cue of script.cues) {
-		if (cue.type !== 'dialogue') continue;
-		const sourceVariant = cue.content.variants[cue.content.sourceLanguage];
-		if (sourceVariant && !cue.content.variants[language]) {
-			cue.content.variants[language] = {
-				...sourceVariant,
-				spokenText: t(sourceVariant.spokenText) ?? sourceVariant.spokenText,
-				subtitleText: t(sourceVariant.subtitleText),
-				translatorNote: undefined,
-				pronunciationNote: t(sourceVariant.pronunciationNote),
-				delivery: t(sourceVariant.delivery),
-				voiceProfileId: undefined,
-				audioAssetId: undefined,
-				status: 'draft'
-			};
-		}
-	}
-	return script;
+export function localizeScriptDialogue(source, _language) {
+	return source;
 }
 
 /**

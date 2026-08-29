@@ -9,7 +9,6 @@ import locationsFile from '../../data/locations.json' with { type: 'json' };
 import objectsFile from '../../data/objects.json' with { type: 'json' };
 import vehiclesFile from '../../data/vehicles.json' with { type: 'json' };
 import factionsFile from '../../data/factions.json' with { type: 'json' };
-import englishTranslations from '../../data/translations/public.en.json' with { type: 'json' };
 
 /**
  * @param {{ checkDisk?: (publicPath: string) => boolean }} [options]
@@ -42,9 +41,6 @@ export function createProjectContext(options = {}) {
 		sourceLanguage: project.languages?.sourceLanguage ?? 'es',
 		allScripts: project.scripts.map((s) => s.id),
 		locationById,
-		translationCatalogs: {
-			en: englishTranslations.translations ?? {}
-		},
 		checkDisk: options.checkDisk,
 		diskAuditEnabled: Boolean(options.checkDisk)
 	};

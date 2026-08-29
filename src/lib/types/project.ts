@@ -1,11 +1,11 @@
 import type { ContinuityId, ProjectId, ScriptId, ScriptKind } from './ids.ts';
-import type { ProjectLanguages } from './i18n.ts';
+import type { ProjectLanguages, StoryText } from './i18n.ts';
 
 export interface ScriptLineage {
 	sourceScriptId: ScriptId;
 	relationship: 'cut' | 'trailer' | 'teaser' | 'adaptation' | 'rewrite' | 'alternate_continuity';
 	sourceVersion?: string;
-	notes?: string;
+	notes?: StoryText;
 }
 
 export interface Continuity {
@@ -18,7 +18,7 @@ export interface Continuity {
 export interface ScriptRegistryEntry {
 	id: ScriptId;
 	continuityId: ContinuityId;
-	label: string;
+	label: StoryText;
 	kind: ScriptKind;
 	status: 'draft' | 'review' | 'locked' | 'deprecated';
 	targetDurationMs?: number;

@@ -14,7 +14,6 @@ export { createScriptContext, createProjectContext };
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const PROJECT_JSON = join(ROOT, 'data', 'project.json');
-const PUBLIC_EN = join(ROOT, 'data', 'translations', 'public.en.json');
 
 /**
  * @param {string[]} argv
@@ -62,17 +61,12 @@ export function getScriptIds(project, options) {
 	return [options.scriptId ?? project.project.canonicalScriptId];
 }
 
-function loadTranslations() {
-	return JSON.parse(readFileSync(PUBLIC_EN, 'utf8')).translations ?? {};
-}
-
 /**
  * @param {unknown} script
  * @param {string} language
- * @param {Record<string, string>} translations
  */
-export function prepareScriptForReport(script, language, translations) {
-	return localizeScriptDialogue(script, translations, language);
+export function prepareScriptForReport(script, language) {
+	return localizeScriptDialogue(script, language);
 }
 
 export function createCliProjectContext() {
@@ -121,12 +115,11 @@ export function runReportFromRegistry(reportId, argv = process.argv.slice(2)) {
 	const options = parseReportArgs(argv);
 	const project = loadProject();
 	const projectCtx = createCliProjectContext();
-	const translations = loadTranslations();
 	const scriptIds = getScriptIds(project, options);
 
 	for (const scriptId of scriptIds) {
 		const raw = loadScript(scriptId);
-		const script = prepareScriptForReport(raw, options.language, translations);
+		const script = prepareScriptForReport(raw, options.language);
 		const report = buildReport(reportId, script, options.language, projectCtx);
 		const line = writeReport(
 			reportId,

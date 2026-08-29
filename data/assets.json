@@ -1,1429 +1,2128 @@
 {
-	"schemaVersion": "1.0.0",
-	"assets": [
-		{
-			"id": "asset:character-zao-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/zao/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Zao model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-voss-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/voss/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Elias Voss model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-harlan-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/harlan/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Rylen Harlan model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-rao-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/rao/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Elin Rao model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-sorell-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/sorell/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Lian Sorell model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-cael-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/cael/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Juno Cael model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-proxima-technician-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/proxima-technician/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Técnico de Proxima model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-medical-officer-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/medical-officer/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Oficial médico model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-security-crew-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/security-crew/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Tripulante de seguridad model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:character-earth-protesters-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/characters/earth-protesters/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Manifestantes terrestres model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:location-proxima-station-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/proxima-station/concept-sheet.png",
-			"mimeType": "image/png",
-			"title": "Estación Proxima concept sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:location-proxima-station-proportional",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/proxima-station/proportional-reference.png",
-			"mimeType": "image/png",
-			"title": "Estación Proxima proportional reference",
-			"width": 1900,
-			"height": 1250
-		},
-		{
-			"id": "asset:location-proxima-station-proportional-svg",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/proxima-station/proportional-reference.svg",
-			"mimeType": "image/svg+xml",
-			"title": "Estación Proxima proportional reference (SVG)"
-		},
-		{
-			"id": "asset:location-proxima-station-berthed",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
-			"mimeType": "image/png",
-			"title": "Proxima con Celestial Ardor atracada",
-			"width": 1486,
-			"height": 1058
-		},
-		{
-			"id": "asset:location-proxima-dock-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/proxima-dock/concept-sheet.png",
-			"mimeType": "image/png",
-			"title": "Muelle axial de Proxima concept sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:location-celestial-ardor-bridge-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/celestial-ardor-bridge/concept-sheet.png",
-			"mimeType": "image/png",
-			"title": "Puente del Celestial Ardor concept sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:location-celestial-ardor-engineering-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/celestial-ardor-engineering/concept-sheet.png",
-			"mimeType": "image/png",
-			"title": "Ingeniería del Celestial Ardor concept sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:location-diplomatic-core-room-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
-			"mimeType": "image/png",
-			"title": "Sala del núcleo diplomático concept sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:location-velari-wormhole-mouth-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
-			"mimeType": "image/png",
-			"title": "Boca Velari del túnel concept sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:location-velari-station-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/locations/velari-station/concept-sheet.png",
-			"mimeType": "image/png",
-			"title": "Estación Velari concept sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:object-diplomatic-quantum-core-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-			"mimeType": "image/png",
-			"title": "Núcleo cuántico diplomático prop sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:object-optical-contingency-transmitter-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
-			"mimeType": "image/png",
-			"title": "Transmisor óptico de contingencia prop sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:object-physical-override-relay-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/props/physical-override-relay/prop-sheet.png",
-			"mimeType": "image/png",
-			"title": "Relé físico del override prop sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:object-read-only-greeting-medium-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
-			"mimeType": "image/png",
-			"title": "Soporte de saludo de Sorell prop sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:vehicle-celestial-ardor-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Celestial Ardor model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:vehicle-celestial-ardor-proportional",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/vehicles/celestial-ardor/proportional-reference.png",
-			"mimeType": "image/png",
-			"title": "Celestial Ardor proportional reference",
-			"width": 1700,
-			"height": 1050
-		},
-		{
-			"id": "asset:vehicle-celestial-ardor-proportional-svg",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/vehicles/celestial-ardor/proportional-reference.svg",
-			"mimeType": "image/svg+xml",
-			"title": "Celestial Ardor proportional reference (SVG)"
-		},
-		{
-			"id": "asset:vehicle-celestial-ardor-jupiter",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
-			"mimeType": "image/png",
-			"title": "Celestial Ardor con Júpiter",
-			"width": 1409,
-			"height": 1117
-		},
-		{
-			"id": "asset:scale-reference-proxima-ardor",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.png",
-			"mimeType": "image/png",
-			"title": "Proxima + Celestial Ardor common scale reference",
-			"width": 1800,
-			"height": 820
-		},
-		{
-			"id": "asset:scale-reference-proxima-ardor-svg",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.svg",
-			"mimeType": "image/svg+xml",
-			"title": "Proxima + Celestial Ardor common scale reference (SVG)"
-		},
-		{
-			"id": "asset:vehicle-velari-emissary-sheet",
-			"kind": "image",
-			"role": "reference",
-			"path": "/assets/vehicles/velari-emissary/model-sheet.png",
-			"mimeType": "image/png",
-			"title": "Nave emisaria Velari model sheet",
-			"width": 1536,
-			"height": 1024
-		},
-		{
-			"id": "asset:animatic-01-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, Júpiter pequeño al fondo."
-		},
-		{
-			"id": "asset:animatic-01-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Pantallas del muelle: retraso Tierra 43:18 y cuenta de apertura."
-		},
-		{
-			"id": "asset:animatic-01-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Protesta terrestre contra el contacto, comprimida en mosaico de pantallas."
-		},
-		{
-			"id": "asset:animatic-01-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Celebración optimista en otra ciudad; réplica luminosa de la puerta."
-		},
-		{
-			"id": "asset:animatic-01-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan observa las noticias; Voss entra en cuadro."
-		},
-		{
-			"id": "asset:animatic-01-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Cael marca la ventana de salida; Sorell cruza con su equipo."
-		},
-		{
-			"id": "asset:animatic-01-07",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-07.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 7",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao y Elin verifican núcleo y transmisor óptico independiente."
-		},
-		{
-			"id": "asset:animatic-01-08",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-01/shot-08.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-01 shot 8",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell entrega el saludo pasivo; Voss ordena puestos."
-		},
-		{
-			"id": "asset:animatic-02-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-02/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-02 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Puente reducido; reloj de tránsito ocupa el fondo."
-		},
-		{
-			"id": "asset:animatic-02-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-02/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-02 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss asume el mando."
-		},
-		{
-			"id": "asset:animatic-02-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-02/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-02 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Mano de Cael confirma separación y empuje."
-		},
-		{
-			"id": "asset:animatic-02-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-02/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-02 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Celestial Ardor se desprende del muelle, despliega velos radiadores oscuros y orienta la tobera magnética hacia el arco joviano."
-		},
-		{
-			"id": "asset:animatic-03-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-03/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-03 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "La nave bordea Júpiter con amplio desplazamiento lateral; radiadores recogidos antes del giro."
-		},
-		{
-			"id": "asset:animatic-03-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-03/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-03 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao asegurada en caída libre mientras la nave rota; 1 g retorna hacia el mismo piso al reanudar el frenado."
-		},
-		{
-			"id": "asset:animatic-03-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-03/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-03 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Tres picos idénticos aparecen en energía."
-		},
-		{
-			"id": "asset:animatic-03-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-03/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-03 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Un acceso fuera de horario se refleja en los ojos de Zao."
-		},
-		{
-			"id": "asset:animatic-04-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-04/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-04 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao sola frente al núcleo azul; rojo casi imperceptible."
-		},
-		{
-			"id": "asset:animatic-04-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-04/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-04 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Código se abre como envoltura dormida de función ambigua."
-		},
-		{
-			"id": "asset:animatic-04-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-04/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-04 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Registro superficial muestra SORELL — ACCESO NIVEL 3."
-		},
-		{
-			"id": "asset:animatic-04-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-04/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-04 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao informa a Voss sin formular una acusación."
-		},
-		{
-			"id": "asset:animatic-04-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-04/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-04 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao marca el registro como NO VERIFICADO y copia datos para Elin."
-		},
-		{
-			"id": "asset:animatic-05-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-05/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-05 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "El núcleo entra en precarga; la envoltura empieza a desplegarse."
-		},
-		{
-			"id": "asset:animatic-05-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-05/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-05 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Interfaz revela ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA."
-		},
-		{
-			"id": "asset:animatic-05-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-05/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-05 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Registro superficial Sorell frente a firma física OVR-7C41."
-		},
-		{
-			"id": "asset:animatic-05-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-05/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-05 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao conecta sesión, recorrido de mantenimiento y firma."
-		},
-		{
-			"id": "asset:animatic-05-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-05/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-05 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Mamparos se sellan al entrar en expansión crítica."
-		},
-		{
-			"id": "asset:animatic-05-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-05/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-05 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Canal al puente falla; Zao mira el transmisor independiente."
-		},
-		{
-			"id": "asset:animatic-06-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-06/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-06 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao corre a la consola óptica establecida al inicio."
-		},
-		{
-			"id": "asset:animatic-06-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-06/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-06 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Plan remoto y corredor de intercepción se superponen."
-		},
-		{
-			"id": "asset:animatic-06-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-06/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-06 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Zao graba mirando directamente al sensor."
-		},
-		{
-			"id": "asset:animatic-06-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-06/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-06 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Barra de transmisión y firma de dispositivo."
-		},
-		{
-			"id": "asset:animatic-06-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-06/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-06 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan aparece desenfocado tras Zao."
-		},
-		{
-			"id": "asset:animatic-06-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-06/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-06 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan comprende que hubo un envío, pero no su destino."
-		},
-		{
-			"id": "asset:animatic-07-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-07/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-07 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Ojos de Zao sostienen a Harlan."
-		},
-		{
-			"id": "asset:animatic-07-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-07/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-07 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "El forcejeo ocurre fuera de campo."
-		},
-		{
-			"id": "asset:animatic-07-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-07/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-07 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Nodos negros dispersos alrededor del vacío se conectan; aparece una región navegable de 150–200 m. La nave espera con motor y radiadores recogidos."
-		},
-		{
-			"id": "asset:animatic-07-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-07/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-07 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Reloj local: T+57:47:30; apertura navegable 00:90."
-		},
-		{
-			"id": "asset:animatic-07-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-07/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-07 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "La nave atraviesa en T+57:48; la garganta colapsa después."
-		},
-		{
-			"id": "asset:animatic-08-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-08/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-08 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Puente al otro lado; estrellas sin distorsión. Indicadores muestran acumuladores térmicos altos y radiadores desplegándose."
-		},
-		{
-			"id": "asset:animatic-08-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-08/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-08 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Chequeo de tripulación: ZAO — SIN RESPUESTA."
-		},
-		{
-			"id": "asset:animatic-08-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-08/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-08 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss percibe un grito por intercomunicador."
-		},
-		{
-			"id": "asset:animatic-08-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-08/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-08 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss se pone de pie y toma control del puente."
-		},
-		{
-			"id": "asset:animatic-09-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-09/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-09 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Lesiones, cámaras vacías y registros se suceden."
-		},
-		{
-			"id": "asset:animatic-09-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-09/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-09 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss contempla tres evidencias que no encajan."
-		},
-		{
-			"id": "asset:animatic-09-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-09/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-09 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell enfrenta el registro que lleva su nombre."
-		},
-		{
-			"id": "asset:animatic-09-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-09/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-09 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan propone apartarla con aparente prudencia."
-		},
-		{
-			"id": "asset:animatic-09-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-09/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-09 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss retira temporalmente la credencial de Sorell."
-		},
-		{
-			"id": "asset:animatic-09-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-09/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-09 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell deja a Elin la información sobre el saludo pasivo."
-		},
-		{
-			"id": "asset:animatic-10-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-10/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-10 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Elin trabaja en puesto protegido; reloj Velari sigue bajando."
-		},
-		{
-			"id": "asset:animatic-10-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-10/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-10 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "La envoltura se reconstruye como ruta hacia el saludo."
-		},
-		{
-			"id": "asset:animatic-10-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-10/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-10 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Disparador: APERTURA DE CANAL VELARI."
-		},
-		{
-			"id": "asset:animatic-10-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-10/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-10 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Elin crea un perímetro de cuarentena."
-		},
-		{
-			"id": "asset:animatic-10-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-10/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-10 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "El despliegue se detiene en 41%, pero no desaparece."
-		},
-		{
-			"id": "asset:animatic-10-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-10/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-10 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Aparece OVR-7C41 sin titular."
-		},
-		{
-			"id": "asset:animatic-10-07",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-10/shot-07.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-10 shot 7",
-			"width": 1536,
-			"height": 864,
-			"description": "Elin explica a Voss por qué Sorell no está probada culpable."
-		},
-		{
-			"id": "asset:animatic-11-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-11/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-11 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan recomienda apagar mediación y receptores."
-		},
-		{
-			"id": "asset:animatic-11-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-11/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-11 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss rechaza una solución irreversible."
-		},
-		{
-			"id": "asset:animatic-11-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-11/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-11 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Cael mantiene trayectoria y señala la baliza ausente."
-		},
-		{
-			"id": "asset:animatic-11-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-11/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-11 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan propone abortar el contacto."
-		},
-		{
-			"id": "asset:animatic-11-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-11/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-11 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Una portadora humana aparece en el corredor previsto."
-		},
-		{
-			"id": "asset:animatic-11-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-11/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-11 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan intenta convertir la señal en amenaza."
-		},
-		{
-			"id": "asset:animatic-12-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Cael autentica dispositivo y hora, no contenido."
-		},
-		{
-			"id": "asset:animatic-12-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "La voz fragmentada de Zao llena el puente."
-		},
-		{
-			"id": "asset:animatic-12-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss mira a Harlan pero todavía no ordena arresto."
-		},
-		{
-			"id": "asset:animatic-12-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Elin recibe la orden de cruzar rutina y relé."
-		},
-		{
-			"id": "asset:animatic-12-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Tres capas convergen: payload, relé físico, credencial."
-		},
-		{
-			"id": "asset:animatic-12-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Resultado: R. HARLAN — INTEGRIDAD VERIFICADA."
-		},
-		{
-			"id": "asset:animatic-12-07",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-07.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 7",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss revoca credencial y ordena detención."
-		},
-		{
-			"id": "asset:animatic-12-08",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-12/shot-08.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-12 shot 8",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan activa desde muñeca antes de completarse la revocación."
-		},
-		{
-			"id": "asset:animatic-13-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-13/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-13 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan rompe la contención humana y sale del puente."
-		},
-		{
-			"id": "asset:animatic-13-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-13/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-13 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Corre mientras módulos revocan su credencial en cascada."
-		},
-		{
-			"id": "asset:animatic-13-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-13/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-13 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "El núcleo acepta el último pulso físico y sella el mamparo."
-		},
-		{
-			"id": "asset:animatic-13-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-13/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-13 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss y seguridad llegan; Cael permanece al mando a distancia."
-		},
-		{
-			"id": "asset:animatic-13-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-13/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-13 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell entra al puente junto a Elin."
-		},
-		{
-			"id": "asset:animatic-14-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Núcleo y puente se presentan como espacios paralelos."
-		},
-		{
-			"id": "asset:animatic-14-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Reloj único: CANAL VELARI — 01:32 / PAYLOAD ARMADO."
-		},
-		{
-			"id": "asset:animatic-14-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan conecta el mando físico."
-		},
-		{
-			"id": "asset:animatic-14-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Elin abre el mapa de cuarentena preparado antes."
-		},
-		{
-			"id": "asset:animatic-14-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA."
-		},
-		{
-			"id": "asset:animatic-14-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "Cael pilota y fuerza el mamparo simultáneamente."
-		},
-		{
-			"id": "asset:animatic-14-07",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-07.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 7",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan abre una tercera ruta física que Elin no puede cerrar por red."
-		},
-		{
-			"id": "asset:animatic-14-08",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-08.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 8",
-			"width": 1536,
-			"height": 864,
-			"description": "El mamparo cede; Voss y seguridad entran."
-		},
-		{
-			"id": "asset:animatic-14-09",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-09.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 9",
-			"width": 1536,
-			"height": 864,
-			"description": "Harlan pulsa INICIAR; buffer cerrado recibe el payload."
-		},
-		{
-			"id": "asset:animatic-14-10",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-14/shot-10.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-14 shot 10",
-			"width": 1536,
-			"height": 864,
-			"description": "Elin confina la rama a 00:07; Harlan es reducido."
-		},
-		{
-			"id": "asset:animatic-15-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-15/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-15 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "El puente recupera simetría; portadora Velari presente."
-		},
-		{
-			"id": "asset:animatic-15-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-15/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-15 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Elin muestra payload visible pero sin acceso a salida."
-		},
-		{
-			"id": "asset:animatic-15-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-15/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-15 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell verifica contenido del saludo pasivo."
-		},
-		{
-			"id": "asset:animatic-15-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-15/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-15 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss autoriza sin grandilocuencia."
-		},
-		{
-			"id": "asset:animatic-15-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-15/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-15 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell confirma; Elin abre conducto de sólo lectura."
-		},
-		{
-			"id": "asset:animatic-15-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-15/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-15 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "A enorme distancia, la piel de la Estación Velari responde con un patrón orgánico de luz."
-		},
-		{
-			"id": "asset:animatic-15-07",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-15/shot-07.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-15 shot 7",
-			"width": 1536,
-			"height": 864,
-			"description": "Cael y Voss aceptan el resultado limitado."
-		},
-		{
-			"id": "asset:animatic-16-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-16/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-16 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Celestial Ardor avanza diminuta ante la Estación Velari: varios kilómetros de lóbulos, arcos, cavidades y piel-radiador cambiante."
-		},
-		{
-			"id": "asset:animatic-16-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-16/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-16 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Una nave emisaria orgánica de 300–600 m se separa de la estación sin escape visible."
-		},
-		{
-			"id": "asset:animatic-16-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-16/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-16 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Luces de la Celestial Ardor, la emisaria y la estación sincronizan un pulso de reconocimiento."
-		},
-		{
-			"id": "asset:animatic-17-01",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-17/shot-01.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-17 shot 1",
-			"width": 1536,
-			"height": 864,
-			"description": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra por el ventanal."
-		},
-		{
-			"id": "asset:animatic-17-02",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-17/shot-02.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-17 shot 2",
-			"width": 1536,
-			"height": 864,
-			"description": "Mensaje de Zao archivado y detenido en su último cuadro."
-		},
-		{
-			"id": "asset:animatic-17-03",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-17/shot-03.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-17 shot 3",
-			"width": 1536,
-			"height": 864,
-			"description": "Sorell se coloca junto a Elin."
-		},
-		{
-			"id": "asset:animatic-17-04",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-17/shot-04.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-17 shot 4",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss mira el archivo de Zao y luego el ventanal."
-		},
-		{
-			"id": "asset:animatic-17-05",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-17/shot-05.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-17 shot 5",
-			"width": 1536,
-			"height": 864,
-			"description": "Voss completa la frase casi para sí."
-		},
-		{
-			"id": "asset:animatic-17-06",
-			"kind": "image",
-			"role": "animatic",
-			"path": "/assets/animatic/frames/scene-17/shot-06.png",
-			"mimeType": "image/png",
-			"title": "Animatic scene-17 shot 6",
-			"width": 1536,
-			"height": 864,
-			"description": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento."
-		},
-		{
-			"id": "asset:animatic-placeholder-missing-frame",
-			"kind": "image",
-			"role": "animatic_placeholder",
-			"path": "/assets/animatic/placeholder-missing-frame.png",
-			"mimeType": "image/png",
-			"title": "Placeholder técnico para frame faltante",
-			"description": "Claqueta editorial neutral usada cuando una toma no tiene una imagen resoluble.",
-			"width": 1680,
-			"height": 945,
-			"source": {
-				"provider": "OpenAI",
-				"generatedAt": "2026-08-26"
-			},
-			"metadata": {
-				"useCase": "stylized-concept",
-				"containsNarrativeContent": false,
-				"containsText": false
-			}
-		}
-	]
+  "schemaVersion": "1.0.0",
+  "assets": [
+    {
+      "id": "asset:character-zao-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/zao/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Zao model sheet",
+        "en": "Zao model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-voss-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/voss/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Elias Voss model sheet",
+        "en": "Elias Voss model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-harlan-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/harlan/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Rylen Harlan model sheet",
+        "en": "Rylen Harlan model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-rao-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/rao/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Elin Rao model sheet",
+        "en": "Elin Rao model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-sorell-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/sorell/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Lian Sorell model sheet",
+        "en": "Lian Sorell model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-cael-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/cael/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Juno Cael model sheet",
+        "en": "Juno Cael model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-proxima-technician-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/proxima-technician/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Técnico de Proxima model sheet",
+        "en": "Proxima model sheet technician"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-medical-officer-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/medical-officer/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Oficial médico model sheet",
+        "en": "Medical officer model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-security-crew-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/security-crew/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Tripulante de seguridad model sheet",
+        "en": "Security crew member model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:character-earth-protesters-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/earth-protesters/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Manifestantes terrestres model sheet",
+        "en": "Land protesters model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:location-proxima-station-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/proxima-station/concept-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Estación Proxima concept sheet",
+        "en": "Proxima Station concept sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:location-proxima-station-proportional",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/proxima-station/proportional-reference.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Estación Proxima proportional reference",
+        "en": "Proxima Station proportional reference"
+      },
+      "width": 1900,
+      "height": 1250
+    },
+    {
+      "id": "asset:location-proxima-station-proportional-svg",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/proxima-station/proportional-reference.svg",
+      "mimeType": "image/svg+xml",
+      "title": {
+        "es": "Estación Proxima proportional reference (SVG)",
+        "en": "Proxima Station proportional reference (SVG)"
+      }
+    },
+    {
+      "id": "asset:location-proxima-station-berthed",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Proxima con Celestial Ardor atracada",
+        "en": "Proxima with Celestial Ardor docked"
+      },
+      "width": 1486,
+      "height": 1058
+    },
+    {
+      "id": "asset:location-proxima-dock-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/proxima-dock/concept-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Muelle axial de Proxima concept sheet",
+        "en": "Proxima axial spring concept sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:location-celestial-ardor-bridge-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-bridge/concept-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Puente del Celestial Ardor concept sheet",
+        "en": "Bridge of Celestial Ardor concept sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:location-celestial-ardor-engineering-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-engineering/concept-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Ingeniería del Celestial Ardor concept sheet",
+        "en": "Engineering of the Celestial Ardor concept sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:location-diplomatic-core-room-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Sala del núcleo diplomático concept sheet",
+        "en": "Diplomatic core room concept sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:location-velari-wormhole-mouth-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Boca Velari del túnel concept sheet",
+        "en": "Velari mouth of the tunnel concept sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:location-velari-station-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/velari-station/concept-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Estación Velari concept sheet",
+        "en": "Velari Station concept sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:object-diplomatic-quantum-core-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Núcleo cuántico diplomático prop sheet",
+        "en": "Diplomatic Quantum Core prop sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:object-optical-contingency-transmitter-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Transmisor óptico de contingencia prop sheet",
+        "en": "Optical contingency transmitter prop sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:object-physical-override-relay-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/props/physical-override-relay/prop-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Relé físico del override prop sheet",
+        "en": "Override prop sheet physical relay"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:object-read-only-greeting-medium-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Soporte de saludo de Sorell prop sheet",
+        "en": "Sorell greeting support prop sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:vehicle-celestial-ardor-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Celestial Ardor model sheet",
+        "en": "Celestial Ardor model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:vehicle-celestial-ardor-proportional",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/vehicles/celestial-ardor/proportional-reference.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Celestial Ardor proportional reference",
+        "en": "Celestial Ardor proportional reference"
+      },
+      "width": 1700,
+      "height": 1050
+    },
+    {
+      "id": "asset:vehicle-celestial-ardor-proportional-svg",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/vehicles/celestial-ardor/proportional-reference.svg",
+      "mimeType": "image/svg+xml",
+      "title": {
+        "es": "Celestial Ardor proportional reference (SVG)",
+        "en": "Celestial Ardor proportional reference (SVG)"
+      }
+    },
+    {
+      "id": "asset:vehicle-celestial-ardor-jupiter",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Celestial Ardor con Júpiter",
+        "en": "Celestial Burning with Jupiter"
+      },
+      "width": 1409,
+      "height": 1117
+    },
+    {
+      "id": "asset:scale-reference-proxima-ardor",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Proxima + Celestial Ardor common scale reference",
+        "en": "Proxima + Celestial Ardor common scale reference"
+      },
+      "width": 1800,
+      "height": 820
+    },
+    {
+      "id": "asset:scale-reference-proxima-ardor-svg",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.svg",
+      "mimeType": "image/svg+xml",
+      "title": {
+        "es": "Proxima + Celestial Ardor common scale reference (SVG)",
+        "en": "Proxima + Celestial Ardor common scale reference (SVG)"
+      }
+    },
+    {
+      "id": "asset:vehicle-velari-emissary-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/vehicles/velari-emissary/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Nave emisaria Velari model sheet",
+        "en": "Emissary ship Velari model sheet"
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "asset:animatic-01-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 1",
+        "en": "Animatic scene-01 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, Júpiter pequeño al fondo.",
+        "en": "Exterior of Proxima: ancient axis of 500–800 m, two counter-rotating habitats and extensions from different periods; Celestial Ardor docked axially, small Jupiter in the background."
+      }
+    },
+    {
+      "id": "asset:animatic-01-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 2",
+        "en": "Animatic scene-01 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Pantallas del muelle: retraso Tierra 43:18 y cuenta de apertura.",
+        "en": "Dock screens: Earth delay 43:18 and opening count."
+      }
+    },
+    {
+      "id": "asset:animatic-01-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 3",
+        "en": "Animatic scene-01 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Protesta terrestre contra el contacto, comprimida en mosaico de pantallas.",
+        "en": "Terrestrial protest against contact, compressed into a mosaic of screens."
+      }
+    },
+    {
+      "id": "asset:animatic-01-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 4",
+        "en": "Animatic scene-01 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Celebración optimista en otra ciudad; réplica luminosa de la puerta.",
+        "en": "Optimistic celebration in another city; luminous replica of the door."
+      }
+    },
+    {
+      "id": "asset:animatic-01-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 5",
+        "en": "Animatic scene-01 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan observa las noticias; Voss entra en cuadro.",
+        "en": "Harlan watches the news; Voss enters the frame."
+      }
+    },
+    {
+      "id": "asset:animatic-01-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 6",
+        "en": "Animatic scene-01 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cael marca la ventana de salida; Sorell cruza con su equipo.",
+        "en": "Cael marks the exit window; Sorell crosses with his team."
+      }
+    },
+    {
+      "id": "asset:animatic-01-07",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-07.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 7",
+        "en": "Animatic scene-01 shot 7"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao y Elin verifican núcleo y transmisor óptico independiente.",
+        "en": "Zao and Elin verify core and independent optical transmitter."
+      }
+    },
+    {
+      "id": "asset:animatic-01-08",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-01/shot-08.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-01 shot 8",
+        "en": "Animatic scene-01 shot 8"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell entrega el saludo pasivo; Voss ordena puestos.",
+        "en": "Sorell delivers the passive greeting; Voss orders positions."
+      }
+    },
+    {
+      "id": "asset:animatic-02-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-02/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-02 shot 1",
+        "en": "Animatic scene-02 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Puente reducido; reloj de tránsito ocupa el fondo.",
+        "en": "Reduced bridge; transit clock occupies the background."
+      }
+    },
+    {
+      "id": "asset:animatic-02-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-02/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-02 shot 2",
+        "en": "Animatic scene-02 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss asume el mando.",
+        "en": "Voss takes over."
+      }
+    },
+    {
+      "id": "asset:animatic-02-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-02/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-02 shot 3",
+        "en": "Animatic scene-02 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Mano de Cael confirma separación y empuje.",
+        "en": "Cael's hand confirms separation and push."
+      }
+    },
+    {
+      "id": "asset:animatic-02-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-02/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-02 shot 4",
+        "en": "Animatic scene-02 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Celestial Ardor se desprende del muelle, despliega velos radiadores oscuros y orienta la tobera magnética hacia el arco joviano.",
+        "en": "Celestial Ardor detaches itself from the spring, unfolds dark radiating veils and directs the magnetic nozzle towards the Jovian arc."
+      }
+    },
+    {
+      "id": "asset:animatic-03-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-03/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-03 shot 1",
+        "en": "Animatic scene-03 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "La nave bordea Júpiter con amplio desplazamiento lateral; radiadores recogidos antes del giro.",
+        "en": "The ship skirts Jupiter with a wide lateral movement; radiators collected before turning."
+      }
+    },
+    {
+      "id": "asset:animatic-03-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-03/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-03 shot 2",
+        "en": "Animatic scene-03 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao asegurada en caída libre mientras la nave rota; 1 g retorna hacia el mismo piso al reanudar el frenado.",
+        "en": "Zao secured in free fall as the ship rotates; 1 g returns to the same floor when braking is resumed."
+      }
+    },
+    {
+      "id": "asset:animatic-03-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-03/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-03 shot 3",
+        "en": "Animatic scene-03 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Tres picos idénticos aparecen en energía.",
+        "en": "Three identical peaks appear in energy."
+      }
+    },
+    {
+      "id": "asset:animatic-03-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-03/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-03 shot 4",
+        "en": "Animatic scene-03 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Un acceso fuera de horario se refleja en los ojos de Zao.",
+        "en": "An after-hours access is reflected in Zao's eyes."
+      }
+    },
+    {
+      "id": "asset:animatic-04-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-04/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-04 shot 1",
+        "en": "Animatic scene-04 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao sola frente al núcleo azul; rojo casi imperceptible.",
+        "en": "Zao alone in front of the blue core; almost imperceptible red."
+      }
+    },
+    {
+      "id": "asset:animatic-04-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-04/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-04 shot 2",
+        "en": "Animatic scene-04 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Código se abre como envoltura dormida de función ambigua.",
+        "en": "Code opens as dormant wrapper of ambiguous function."
+      }
+    },
+    {
+      "id": "asset:animatic-04-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-04/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-04 shot 3",
+        "en": "Animatic scene-04 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Registro superficial muestra SORELL — ACCESO NIVEL 3.",
+        "en": "Surface search shows SORELL — ACCESS LEVEL 3."
+      }
+    },
+    {
+      "id": "asset:animatic-04-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-04/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-04 shot 4",
+        "en": "Animatic scene-04 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao informa a Voss sin formular una acusación.",
+        "en": "Zao informs Voss without making an accusation."
+      }
+    },
+    {
+      "id": "asset:animatic-04-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-04/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-04 shot 5",
+        "en": "Animatic scene-04 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao marca el registro como NO VERIFICADO y copia datos para Elin.",
+        "en": "Zao marks the record as UNVERIFIED and copies data to Elin."
+      }
+    },
+    {
+      "id": "asset:animatic-05-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-05/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-05 shot 1",
+        "en": "Animatic scene-05 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "El núcleo entra en precarga; la envoltura empieza a desplegarse.",
+        "en": "The core goes into preload; the envelope begins to unfold."
+      }
+    },
+    {
+      "id": "asset:animatic-05-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-05/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-05 shot 2",
+        "en": "Animatic scene-05 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Interfaz revela ESCANEO INTRUSIVO / EJECUCIÓN AUTÓNOMA.",
+        "en": "Interface reveals INTRUSIVE SCANNING / AUTONOMOUS EXECUTION."
+      }
+    },
+    {
+      "id": "asset:animatic-05-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-05/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-05 shot 3",
+        "en": "Animatic scene-05 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Registro superficial Sorell frente a firma física OVR-7C41.",
+        "en": "Sorell surface registration versus physical signature OVR-7C41."
+      }
+    },
+    {
+      "id": "asset:animatic-05-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-05/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-05 shot 4",
+        "en": "Animatic scene-05 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao conecta sesión, recorrido de mantenimiento y firma.",
+        "en": "Zao connects session, maintenance tour and signature."
+      }
+    },
+    {
+      "id": "asset:animatic-05-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-05/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-05 shot 5",
+        "en": "Animatic scene-05 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Mamparos se sellan al entrar en expansión crítica.",
+        "en": "Bulkheads seal upon entering critical expansion."
+      }
+    },
+    {
+      "id": "asset:animatic-05-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-05/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-05 shot 6",
+        "en": "Animatic scene-05 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Canal al puente falla; Zao mira el transmisor independiente.",
+        "en": "Canal to bridge fails; Zao looks at the independent transmitter."
+      }
+    },
+    {
+      "id": "asset:animatic-06-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-06/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-06 shot 1",
+        "en": "Animatic scene-06 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao corre a la consola óptica establecida al inicio.",
+        "en": "Zao runs to the optical console set at the start."
+      }
+    },
+    {
+      "id": "asset:animatic-06-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-06/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-06 shot 2",
+        "en": "Animatic scene-06 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Plan remoto y corredor de intercepción se superponen.",
+        "en": "Remote plan and interception corridor overlap."
+      }
+    },
+    {
+      "id": "asset:animatic-06-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-06/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-06 shot 3",
+        "en": "Animatic scene-06 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Zao graba mirando directamente al sensor.",
+        "en": "Zao records looking directly at the sensor."
+      }
+    },
+    {
+      "id": "asset:animatic-06-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-06/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-06 shot 4",
+        "en": "Animatic scene-06 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Barra de transmisión y firma de dispositivo.",
+        "en": "Transmission bar and device signature."
+      }
+    },
+    {
+      "id": "asset:animatic-06-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-06/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-06 shot 5",
+        "en": "Animatic scene-06 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan aparece desenfocado tras Zao.",
+        "en": "Harlan appears out of focus behind Zao."
+      }
+    },
+    {
+      "id": "asset:animatic-06-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-06/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-06 shot 6",
+        "en": "Animatic scene-06 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan comprende que hubo un envío, pero no su destino.",
+        "en": "Harlan understands that there was a shipment, but not its destination."
+      }
+    },
+    {
+      "id": "asset:animatic-07-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-07/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-07 shot 1",
+        "en": "Animatic scene-07 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Ojos de Zao sostienen a Harlan.",
+        "en": "Zao's eyes hold Harlan."
+      }
+    },
+    {
+      "id": "asset:animatic-07-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-07/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-07 shot 2",
+        "en": "Animatic scene-07 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "El forcejeo ocurre fuera de campo.",
+        "en": "The struggle occurs off-screen."
+      }
+    },
+    {
+      "id": "asset:animatic-07-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-07/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-07 shot 3",
+        "en": "Animatic scene-07 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Nodos negros dispersos alrededor del vacío se conectan; aparece una región navegable de 150–200 m. La nave espera con motor y radiadores recogidos.",
+        "en": "Black nodes scattered around the void connect; a navigable region of 150–200 m appears. The ship waits with the engine and radiators removed."
+      }
+    },
+    {
+      "id": "asset:animatic-07-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-07/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-07 shot 4",
+        "en": "Animatic scene-07 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Reloj local: T+57:47:30; apertura navegable 00:90.",
+        "en": "Local clock: T+57:47:30; navigable opening 00:90."
+      }
+    },
+    {
+      "id": "asset:animatic-07-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-07/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-07 shot 5",
+        "en": "Animatic scene-07 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "La nave atraviesa en T+57:48; la garganta colapsa después.",
+        "en": "The ship passes through at T+57:48; the throat collapses afterwards."
+      }
+    },
+    {
+      "id": "asset:animatic-08-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-08/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-08 shot 1",
+        "en": "Animatic scene-08 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Puente al otro lado; estrellas sin distorsión. Indicadores muestran acumuladores térmicos altos y radiadores desplegándose.",
+        "en": "Bridge to the other side; stars without distortion. Indicators show high thermal accumulators and radiators deploying."
+      }
+    },
+    {
+      "id": "asset:animatic-08-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-08/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-08 shot 2",
+        "en": "Animatic scene-08 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Chequeo de tripulación: ZAO — SIN RESPUESTA.",
+        "en": "Crew check: ZAO — NO RESPONSE."
+      }
+    },
+    {
+      "id": "asset:animatic-08-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-08/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-08 shot 3",
+        "en": "Animatic scene-08 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss percibe un grito por intercomunicador.",
+        "en": "Voss hears a scream over the intercom."
+      }
+    },
+    {
+      "id": "asset:animatic-08-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-08/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-08 shot 4",
+        "en": "Animatic scene-08 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss se pone de pie y toma control del puente.",
+        "en": "Voss stands up and takes control of the bridge."
+      }
+    },
+    {
+      "id": "asset:animatic-09-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-09/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-09 shot 1",
+        "en": "Animatic scene-09 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Lesiones, cámaras vacías y registros se suceden.",
+        "en": "Injuries, empty chambers and searches happen."
+      }
+    },
+    {
+      "id": "asset:animatic-09-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-09/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-09 shot 2",
+        "en": "Animatic scene-09 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss contempla tres evidencias que no encajan.",
+        "en": "Voss contemplates three pieces of evidence that don't add up."
+      }
+    },
+    {
+      "id": "asset:animatic-09-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-09/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-09 shot 3",
+        "en": "Animatic scene-09 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell enfrenta el registro que lleva su nombre.",
+        "en": "Sorell confronts the record bearing her name."
+      }
+    },
+    {
+      "id": "asset:animatic-09-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-09/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-09 shot 4",
+        "en": "Animatic scene-09 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan propone apartarla con aparente prudencia.",
+        "en": "Harlan proposes removing her with apparent caution."
+      }
+    },
+    {
+      "id": "asset:animatic-09-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-09/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-09 shot 5",
+        "en": "Animatic scene-09 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss retira temporalmente la credencial de Sorell.",
+        "en": "Voss temporarily withdraws Sorell's credential."
+      }
+    },
+    {
+      "id": "asset:animatic-09-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-09/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-09 shot 6",
+        "en": "Animatic scene-09 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell deja a Elin la información sobre el saludo pasivo.",
+        "en": "Sorell leaves the information about the passive greeting to Elin."
+      }
+    },
+    {
+      "id": "asset:animatic-10-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-10/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-10 shot 1",
+        "en": "Animatic scene-10 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Elin trabaja en puesto protegido; reloj Velari sigue bajando.",
+        "en": "Elin works in a protected position; Velari clock continues to fall."
+      }
+    },
+    {
+      "id": "asset:animatic-10-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-10/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-10 shot 2",
+        "en": "Animatic scene-10 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "La envoltura se reconstruye como ruta hacia el saludo.",
+        "en": "The envelope is reconstructed as a route to the greeting."
+      }
+    },
+    {
+      "id": "asset:animatic-10-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-10/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-10 shot 3",
+        "en": "Animatic scene-10 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Disparador: APERTURA DE CANAL VELARI.",
+        "en": "Trigger: VELARI CHANNEL OPENING."
+      }
+    },
+    {
+      "id": "asset:animatic-10-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-10/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-10 shot 4",
+        "en": "Animatic scene-10 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Elin crea un perímetro de cuarentena.",
+        "en": "Elin creates a quarantine perimeter."
+      }
+    },
+    {
+      "id": "asset:animatic-10-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-10/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-10 shot 5",
+        "en": "Animatic scene-10 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "El despliegue se detiene en 41%, pero no desaparece.",
+        "en": "The deployment stops at 41%, but does not disappear."
+      }
+    },
+    {
+      "id": "asset:animatic-10-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-10/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-10 shot 6",
+        "en": "Animatic scene-10 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Aparece OVR-7C41 sin titular.",
+        "en": "OVR-7C41 appears without a title."
+      }
+    },
+    {
+      "id": "asset:animatic-10-07",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-10/shot-07.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-10 shot 7",
+        "en": "Animatic scene-10 shot 7"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Elin explica a Voss por qué Sorell no está probada culpable.",
+        "en": "Elin explains to Voss why Sorell is not proven guilty."
+      }
+    },
+    {
+      "id": "asset:animatic-11-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-11/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-11 shot 1",
+        "en": "Animatic scene-11 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan recomienda apagar mediación y receptores.",
+        "en": "Harlan recommends turning off mediation and receivers."
+      }
+    },
+    {
+      "id": "asset:animatic-11-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-11/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-11 shot 2",
+        "en": "Animatic scene-11 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss rechaza una solución irreversible.",
+        "en": "Voss rejects an irreversible solution."
+      }
+    },
+    {
+      "id": "asset:animatic-11-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-11/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-11 shot 3",
+        "en": "Animatic scene-11 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cael mantiene trayectoria y señala la baliza ausente.",
+        "en": "Cael maintains his trajectory and signals the missing beacon."
+      }
+    },
+    {
+      "id": "asset:animatic-11-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-11/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-11 shot 4",
+        "en": "Animatic scene-11 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan propone abortar el contacto.",
+        "en": "Harlan proposes aborting contact."
+      }
+    },
+    {
+      "id": "asset:animatic-11-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-11/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-11 shot 5",
+        "en": "Animatic scene-11 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Una portadora humana aparece en el corredor previsto.",
+        "en": "A human carrier appears in the intended corridor."
+      }
+    },
+    {
+      "id": "asset:animatic-11-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-11/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-11 shot 6",
+        "en": "Animatic scene-11 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan intenta convertir la señal en amenaza.",
+        "en": "Harlan tries to turn the signal into a threat."
+      }
+    },
+    {
+      "id": "asset:animatic-12-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 1",
+        "en": "Animatic scene-12 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cael autentica dispositivo y hora, no contenido.",
+        "en": "Cael authenticates device and time, not content."
+      }
+    },
+    {
+      "id": "asset:animatic-12-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 2",
+        "en": "Animatic scene-12 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "La voz fragmentada de Zao llena el puente.",
+        "en": "Zao's fragmented voice fills the bridge."
+      }
+    },
+    {
+      "id": "asset:animatic-12-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 3",
+        "en": "Animatic scene-12 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss mira a Harlan pero todavía no ordena arresto.",
+        "en": "Voss looks at Harlan but still doesn't order an arrest."
+      }
+    },
+    {
+      "id": "asset:animatic-12-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 4",
+        "en": "Animatic scene-12 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Elin recibe la orden de cruzar rutina y relé.",
+        "en": "Elin receives the order to cross routine and relay."
+      }
+    },
+    {
+      "id": "asset:animatic-12-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 5",
+        "en": "Animatic scene-12 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Tres capas convergen: payload, relé físico, credencial.",
+        "en": "Three layers converge: payload, physical relay, credential."
+      }
+    },
+    {
+      "id": "asset:animatic-12-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 6",
+        "en": "Animatic scene-12 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Resultado: R. HARLAN — INTEGRIDAD VERIFICADA.",
+        "en": "Result: R. HARLAN — INTEGRITY VERIFIED."
+      }
+    },
+    {
+      "id": "asset:animatic-12-07",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-07.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 7",
+        "en": "Animatic scene-12 shot 7"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss revoca credencial y ordena detención.",
+        "en": "Voss revokes credential and orders arrest."
+      }
+    },
+    {
+      "id": "asset:animatic-12-08",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-12/shot-08.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-12 shot 8",
+        "en": "Animatic scene-12 shot 8"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan activa desde muñeca antes de completarse la revocación.",
+        "en": "Harlan activates from the wrist before the reversal is completed."
+      }
+    },
+    {
+      "id": "asset:animatic-13-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-13/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-13 shot 1",
+        "en": "Animatic scene-13 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan rompe la contención humana y sale del puente.",
+        "en": "Harlan breaks human containment and leaves the bridge."
+      }
+    },
+    {
+      "id": "asset:animatic-13-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-13/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-13 shot 2",
+        "en": "Animatic scene-13 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Corre mientras módulos revocan su credencial en cascada.",
+        "en": "He races ahead as the modules revoke his credential in a cascade."
+      }
+    },
+    {
+      "id": "asset:animatic-13-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-13/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-13 shot 3",
+        "en": "Animatic scene-13 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "El núcleo acepta el último pulso físico y sella el mamparo.",
+        "en": "The core accepts the last physical pulse and seals the bulkhead."
+      }
+    },
+    {
+      "id": "asset:animatic-13-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-13/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-13 shot 4",
+        "en": "Animatic scene-13 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss y seguridad llegan; Cael permanece al mando a distancia.",
+        "en": "Voss and security arrive; Cael remains in remote control."
+      }
+    },
+    {
+      "id": "asset:animatic-13-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-13/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-13 shot 5",
+        "en": "Animatic scene-13 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell entra al puente junto a Elin.",
+        "en": "Sorell enters the bridge with Elin."
+      }
+    },
+    {
+      "id": "asset:animatic-14-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 1",
+        "en": "Animatic scene-14 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Núcleo y puente se presentan como espacios paralelos.",
+        "en": "Core and bridge appear as parallel spaces."
+      }
+    },
+    {
+      "id": "asset:animatic-14-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 2",
+        "en": "Animatic scene-14 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Reloj único: CANAL VELARI — 01:32 / PAYLOAD ARMADO.",
+        "en": "Unique clock: CANAL VELARI — 01:32 / ARMED PAYLOAD."
+      }
+    },
+    {
+      "id": "asset:animatic-14-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 3",
+        "en": "Animatic scene-14 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan conecta el mando físico.",
+        "en": "Harlan connects the physical controller."
+      }
+    },
+    {
+      "id": "asset:animatic-14-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 4",
+        "en": "Animatic scene-14 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Elin abre el mapa de cuarentena preparado antes.",
+        "en": "Elin opens the quarantine map prepared earlier."
+      }
+    },
+    {
+      "id": "asset:animatic-14-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 5",
+        "en": "Animatic scene-14 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
+        "en": "Sorell inserts GREETING SORELL-ZAO / READ ONLY."
+      }
+    },
+    {
+      "id": "asset:animatic-14-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 6",
+        "en": "Animatic scene-14 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cael pilota y fuerza el mamparo simultáneamente.",
+        "en": "Cael pilots and forces the bulkhead simultaneously."
+      }
+    },
+    {
+      "id": "asset:animatic-14-07",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-07.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 7",
+        "en": "Animatic scene-14 shot 7"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan abre una tercera ruta física que Elin no puede cerrar por red.",
+        "en": "Harlan opens a third physical route that Elin can't close on net."
+      }
+    },
+    {
+      "id": "asset:animatic-14-08",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-08.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 8",
+        "en": "Animatic scene-14 shot 8"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "El mamparo cede; Voss y seguridad entran.",
+        "en": "The bulkhead gives way; Voss and security enter."
+      }
+    },
+    {
+      "id": "asset:animatic-14-09",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-09.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 9",
+        "en": "Animatic scene-14 shot 9"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan pulsa INICIAR; buffer cerrado recibe el payload.",
+        "en": "Harlan presses START; closed buffer receives the payload."
+      }
+    },
+    {
+      "id": "asset:animatic-14-10",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-14/shot-10.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-14 shot 10",
+        "en": "Animatic scene-14 shot 10"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Elin confina la rama a 00:07; Harlan es reducido.",
+        "en": "Elin confines the branch to 00:07; Harlan is reduced."
+      }
+    },
+    {
+      "id": "asset:animatic-15-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-15/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-15 shot 1",
+        "en": "Animatic scene-15 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "El puente recupera simetría; portadora Velari presente.",
+        "en": "The bridge recovers symmetry; Velari bearer present."
+      }
+    },
+    {
+      "id": "asset:animatic-15-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-15/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-15 shot 2",
+        "en": "Animatic scene-15 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Elin muestra payload visible pero sin acceso a salida.",
+        "en": "Elin shows payload visible but without access to output."
+      }
+    },
+    {
+      "id": "asset:animatic-15-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-15/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-15 shot 3",
+        "en": "Animatic scene-15 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell verifica contenido del saludo pasivo.",
+        "en": "Sorell verifies content of the passive greeting."
+      }
+    },
+    {
+      "id": "asset:animatic-15-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-15/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-15 shot 4",
+        "en": "Animatic scene-15 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss autoriza sin grandilocuencia.",
+        "en": "Voss authorizes without grandiloquence."
+      }
+    },
+    {
+      "id": "asset:animatic-15-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-15/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-15 shot 5",
+        "en": "Animatic scene-15 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell confirma; Elin abre conducto de sólo lectura.",
+        "en": "Sorell confirms; Elin opens read-only conduit."
+      }
+    },
+    {
+      "id": "asset:animatic-15-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-15/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-15 shot 6",
+        "en": "Animatic scene-15 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "A enorme distancia, la piel de la Estación Velari responde con un patrón orgánico de luz.",
+        "en": "At great distances, the skin of Velari Station responds with an organic pattern of light."
+      }
+    },
+    {
+      "id": "asset:animatic-15-07",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-15/shot-07.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-15 shot 7",
+        "en": "Animatic scene-15 shot 7"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cael y Voss aceptan el resultado limitado.",
+        "en": "Cael and Voss accept the limited result."
+      }
+    },
+    {
+      "id": "asset:animatic-16-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-16/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-16 shot 1",
+        "en": "Animatic scene-16 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Celestial Ardor avanza diminuta ante la Estación Velari: varios kilómetros de lóbulos, arcos, cavidades y piel-radiador cambiante.",
+        "en": "Celestial Ardor advances tiny before Velari Station: several kilometers of lobes, arcs, cavities and changing skin-radiator."
+      }
+    },
+    {
+      "id": "asset:animatic-16-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-16/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-16 shot 2",
+        "en": "Animatic scene-16 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Una nave emisaria orgánica de 300–600 m se separa de la estación sin escape visible.",
+        "en": "A 300–600 m organic emissary ship separates from the station with no visible escape."
+      }
+    },
+    {
+      "id": "asset:animatic-16-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-16/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-16 shot 3",
+        "en": "Animatic scene-16 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Luces de la Celestial Ardor, la emisaria y la estación sincronizan un pulso de reconocimiento.",
+        "en": "Lights of the Celestial Ardor, the emissary and the station synchronize a pulse of recognition."
+      }
+    },
+    {
+      "id": "asset:animatic-17-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-17/shot-01.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-17 shot 1",
+        "en": "Animatic scene-17 shot 1"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra por el ventanal.",
+        "en": "Silent bridge; The light from the emissary and the organic station enters through the window."
+      }
+    },
+    {
+      "id": "asset:animatic-17-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-17/shot-02.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-17 shot 2",
+        "en": "Animatic scene-17 shot 2"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Mensaje de Zao archivado y detenido en su último cuadro.",
+        "en": "Zao message archived and stopped at its last frame."
+      }
+    },
+    {
+      "id": "asset:animatic-17-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-17/shot-03.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-17 shot 3",
+        "en": "Animatic scene-17 shot 3"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Sorell se coloca junto a Elin.",
+        "en": "Sorell stands next to Elin."
+      }
+    },
+    {
+      "id": "asset:animatic-17-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-17/shot-04.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-17 shot 4",
+        "en": "Animatic scene-17 shot 4"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss mira el archivo de Zao y luego el ventanal.",
+        "en": "Voss looks at Zao's file and then at the window."
+      }
+    },
+    {
+      "id": "asset:animatic-17-05",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-17/shot-05.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-17 shot 5",
+        "en": "Animatic scene-17 shot 5"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Voss completa la frase casi para sí.",
+        "en": "Voss completes the sentence almost to himself."
+      }
+    },
+    {
+      "id": "asset:animatic-17-06",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-17/shot-06.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-17 shot 6",
+        "en": "Animatic scene-17 shot 6"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento.",
+        "en": "The human ship advances towards the emissary; behind, the Velari Station seems to breathe. Slow fade."
+      }
+    },
+    {
+      "id": "asset:animatic-placeholder-missing-frame",
+      "kind": "image",
+      "role": "animatic_placeholder",
+      "path": "/assets/animatic/placeholder-missing-frame.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Placeholder técnico para frame faltante",
+        "en": "Technical placeholder for missing frame"
+      },
+      "description": {
+        "es": "Claqueta editorial neutral usada cuando una toma no tiene una imagen resoluble.",
+        "en": "Neutral editorial clapperboard used when a shot does not have a resolvable image."
+      },
+      "width": 1680,
+      "height": 945,
+      "source": {
+        "provider": "OpenAI",
+        "generatedAt": "2026-08-26"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "containsText": false
+      }
+    }
+  ]
 }

@@ -39,6 +39,7 @@ import {
 	localizeScript,
 	localizeScriptRegistryEntries
 } from '../selectors/publicTranslations.ts';
+import { sourceLocalizedString } from '../selectors/localized.ts';
 
 const outlineGlob = import.meta.glob('../../../../data/outlines/*.json', {
 	eager: true,
@@ -143,7 +144,7 @@ export function listOutlineCoverage(): OutlineCoverageEntry[] {
 		const outline = getOutline(entry.id);
 		return {
 			scriptId: entry.id,
-			label: entry.label,
+			label: sourceLocalizedString(entry.label) ?? entry.id,
 			present: outline !== null,
 			stepCount: outline?.steps?.length ?? 0,
 			outlinePath: outlinePathForScript(entry.id)

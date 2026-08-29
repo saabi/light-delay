@@ -13,6 +13,7 @@
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
 	import * as m from '$lib/paraglide/messages.js';
 	import { scriptKindLabel } from '$lib/data/selectors/scriptPresentation';
+	import { storyText } from '$lib/data/selectors/localized';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const language = $derived(getLanguageState());
@@ -69,7 +70,7 @@
 <main class="page">
 	<PageHeader
 		eyebrow={m.animatic_label()}
-		title={script.script.title}
+		title={storyText(script.script.title, language.dialogueLanguage)}
 		lede={m.animatic_editor_lede()}
 		meta={[
 			`${script.shots.length} ${m.animatic_shots()}`,

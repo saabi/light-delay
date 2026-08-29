@@ -37,11 +37,23 @@ export interface DocumentRecord {
 }
 ```
 
-Entity galleries keep Spanish records canonical and apply an English translation overlay at read time. The overlay may translate human-facing names, roles, and descriptions, but never IDs, asset links, or canon relationships.
+Entity galleries keep Spanish records canonical and apply an English translation overlay at read time (`data/translations/entities.en.json`). The overlay may translate human-facing names, roles, and descriptions, but never IDs, asset links, or canon relationships. Migrating that gallery overlay to inline maps is deferred debt.
 
-The four registered scripts, dialogue, derived subtitles, scene/beat prose, shot/take metadata, assets, comparison taxonomy, narrative functions, entity variants, and **optional per-script outlines** (`data/outlines/*.json`) now use `data/translations/public.en.json`. Its keys are exact Spanish source strings: `npm run validate:translations` reports a changed or new Spanish string as missing and a superseded key as orphaned. This provides staleness detection without duplicating acts, scenes, beats, shots, takes, or outline steps. Outline fields in the overlay are `outline.title`, each step `title`/`summary`, and `notes[].text`.
+Story copy for the four registered scripts, optional outlines, assets, comparison taxonomy, narrative functions, entity variants, and project script labels uses **co-located** language maps on disk:
 
-At read time, English dialogue and text-cue variants are injected with `status: "draft"`; no audio or voice asset is inferred. Subtitles continue to derive from the selected dialogue variant. Unprefixed English routes default story and subtitle selection to English on first visit, while `/es/` defaults them to Spanish; a later manual choice persists locally. English pages identify the translation as a draft, and Spanish remains authoritative.
+```ts
+/** At least project sourceLanguage (es) required; other tags optional until translated. */
+export type LocalizedString = { [tag: LanguageTag]: string | undefined };
+// Example: "title": { "es": "…", "en": "…" }
+```
+
+Dialogue and text cues keep `LocalizedValue<DialogueVariant | TextVariant>` with per-language variants (`content.variants.es`, `content.variants.en`, …). Do not flatten `spokenText` into a bare language map because each variant carries status, audio, delivery, etc.
+
+Presentation selectors (`localizeScript`, `localizeOutline`, …) resolve `LocalizedString` → flat string for the UI. Paraglide (`messages/*.json`) remains the application chrome only. `data/translations/public.en.json` is retired for story strings (empty map; do not reintroduce Spanish-keyed overlays).
+
+`npm run validate:translations` checks inline coverage: every harvested field has non-empty `es` and `en` (dialogue/text via `variants.en`). After editing Spanish story text, update the sibling `en` (or `variants.en`) in the same file and pass.
+
+At read time, English dialogue variants already live on disk with `status: "draft"`; no audio or voice asset is inferred. Subtitles continue to derive from the selected dialogue variant. Unprefixed English routes default story and subtitle selection to English on first visit, while `/es/` defaults them to Spanish; a later manual choice persists locally. English pages identify the translation as a draft, and Spanish remains authoritative.
 
 ## 2. Language Definitions
 

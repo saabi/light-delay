@@ -1,4 +1,5 @@
 import type { AssetId } from './ids.ts';
+import type { StoryText } from './i18n.ts';
 
 export type ImageEditorialState =
 	'current' | 'needs_review' | 'needs_replacement' | 'needs_regeneration';
@@ -14,8 +15,8 @@ export type ImageEditorialReason =
 export interface ImageEditorialStatus {
 	status: ImageEditorialState;
 	reasons: ImageEditorialReason[];
-	explanation?: string;
-	replacementBrief?: string;
+	explanation?: StoryText;
+	replacementBrief?: StoryText;
 }
 
 export interface AssetsFile {
@@ -46,8 +47,8 @@ export interface Asset {
 		| 'other';
 	path: string;
 	mimeType?: string;
-	title?: string;
-	description?: string;
+	title?: StoryText;
+	description?: StoryText;
 	width?: number;
 	height?: number;
 	durationMs?: number;

@@ -11,6 +11,7 @@
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
 	import * as m from '$lib/paraglide/messages.js';
 	import { scriptKindLabel, scriptStatusLabel } from '$lib/data/selectors/scriptPresentation';
+	import { storyText } from '$lib/data/selectors/localized';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const language = $derived(getLanguageState());
@@ -48,7 +49,7 @@
 <main class="page">
 	<PageHeader
 		eyebrow={script.script.kind === 'festival_cut' ? 'Festival Cut' : m.script_label()}
-		title={script.script.title}
+		title={storyText(script.script.title, language.dialogueLanguage)}
 		lede={m.script_structured_lede()}
 		meta={[
 			`v${script.script.version}`,

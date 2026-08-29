@@ -12,8 +12,9 @@ JSON canónicos derivados inicialmente del sitio legacy y desarrollados después
 | `documents.json` | Cinco documentos prose ES/EN extraídos, canon estructurado aún como stub y tres referencias históricas/editoriales en revisión |
 | `narrative-functions.json` / `entity-variants.json` | Funciones dramáticas compartidas y perfiles específicos por guion |
 | `comparison-taxonomy.json` | Dimensiones de canon y eventos principales comparables entre scripts |
-| `translations/public.en.json` | Overlay inglés `draft` para los cuatro scripts, assets y datos de comparación; claveado por texto fuente español para detectar desfases |
+| `translations/entities.en.json` | Overlay inglés por id para galerías de entidades (deuda: migrar a inline) |
+| `translations/public.en.json` | Retirado para copy de historia (mapa vacío); no reintroducir overlays por texto ES |
 
-`npm run validate:translations` exige cobertura exacta del texto humano estructurado: una cadena española nueva queda como faltante y una clave que ya no existe queda huérfana. En lectura, el overlay inyecta variantes inglesas de diálogo/texto sin duplicar la estructura ni mantener subtítulos independientes.
+El copy de guiones, outlines, assets, taxonomía, funciones y variantes lleva idiomas **inline** (`LocalizedString` / `variants.en`). `npm run validate:translations` exige `es` y `en` no vacíos en esos campos. Paraglide cubre el chrome de UI.
 
 Autoridad de esquema: `docs/JSON_FORMAT.md` + `docs/JSON_FORMAT_I18N_ADDENDUM.md`. El guion es la fuente narrativa; ver `docs/SCRIPT_ANIMATIC_SYNC.md`. La comparación es declarativa: una ausencia de datos se muestra como no especificada y no activa inferencias de fusiones, divisiones o herencia de diálogo.

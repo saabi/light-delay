@@ -1,96 +1,208 @@
 {
-	"schemaVersion": "1.0.0",
-	"profileVersion": "1.1.0",
-	"canonDimensions": [
-		{
-			"id": "canon:proxima-origin",
-			"category": "mission",
-			"label": "Origen de Proxima",
-			"foundational": true
-		},
-		{
-			"id": "canon:ardor-deployment",
-			"category": "mission",
-			"label": "Origen y despliegue de Celestial Ardor",
-			"foundational": true
-		},
-		{
-			"id": "canon:tunnel-geometry",
-			"category": "technology",
-			"label": "Geometría del túnel",
-			"foundational": true
-		},
-		{
-			"id": "canon:tunnel-location",
-			"category": "technology",
-			"label": "Ubicación de la boca local",
-			"foundational": true
-		},
-		{
-			"id": "canon:trajectory",
-			"category": "technology",
-			"label": "Propulsión y trayecto",
-			"foundational": true
-		},
-		{
-			"id": "canon:mission-timeline",
-			"category": "mission",
-			"label": "Cronología de tránsito, señal y encuentro",
-			"foundational": true
-		},
-		{
-			"id": "canon:ardor-gravity-operations",
-			"category": "technology",
-			"label": "Gravedad y circulación de la Ardor",
-			"foundational": true
-		},
-		{
-			"id": "canon:velari-objects",
-			"category": "contact",
-			"label": "Estación y emisaria Velari",
-			"foundational": true
-		},
-		{ "id": "canon:evidence-chain", "category": "conflict", "label": "Cadena de evidencia" },
-		{
-			"id": "canon:sorell-status",
-			"category": "conflict",
-			"label": "Acusación y vindicación de Sorell"
-		},
-		{
-			"id": "canon:zao-transmission-mechanics",
-			"category": "technology",
-			"label": "Bloqueo de comunicaciones y transmisión de Zao"
-		},
-		{ "id": "canon:rao-containment", "category": "conflict", "label": "Contención de Elin" },
-		{ "id": "canon:ending", "category": "contact", "label": "Alcance del contacto final" }
-	],
-	"majorEvents": [
-		{ "id": "event:embarkation", "category": "setup", "label": "Embarque y salida" },
-		{
-			"id": "event:anomaly-discovery",
-			"category": "mystery",
-			"label": "Descubrimiento de la anomalía"
-		},
-		{
-			"id": "event:zao-warning-death",
-			"category": "mystery",
-			"label": "Advertencia y muerte de Zao"
-		},
-		{ "id": "event:tunnel-crossing", "category": "mission", "label": "Cruce del túnel" },
-		{
-			"id": "event:investigation",
-			"category": "mystery",
-			"label": "Investigación y fractura de confianza"
-		},
-		{
-			"id": "event:message-reception",
-			"category": "revelation",
-			"label": "Recepción del mensaje de Zao"
-		},
-		{ "id": "event:harlan-exposed", "category": "revelation", "label": "Exposición de Harlan" },
-		{ "id": "event:quarantine", "category": "climax", "label": "Cuarentena del payload" },
-		{ "id": "event:clean-greeting", "category": "climax", "label": "Envío del saludo limpio" },
-		{ "id": "event:first-contact", "category": "resolution", "label": "Primer contacto limitado" },
-		{ "id": "event:aftermath", "category": "resolution", "label": "Consecuencias y memoria de Zao" }
-	]
+  "schemaVersion": "1.0.0",
+  "profileVersion": "1.1.0",
+  "canonDimensions": [
+    {
+      "id": "canon:proxima-origin",
+      "category": "mission",
+      "label": {
+        "es": "Origen de Proxima",
+        "en": "Origin of Proxima"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:ardor-deployment",
+      "category": "mission",
+      "label": {
+        "es": "Origen y despliegue de Celestial Ardor",
+        "en": "Origin and deployment of Celestial Ardor"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:tunnel-geometry",
+      "category": "technology",
+      "label": {
+        "es": "Geometría del túnel",
+        "en": "Tunnel geometry"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:tunnel-location",
+      "category": "technology",
+      "label": {
+        "es": "Ubicación de la boca local",
+        "en": "Local mouth location"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:trajectory",
+      "category": "technology",
+      "label": {
+        "es": "Propulsión y trayecto",
+        "en": "Propulsion and trajectory"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:mission-timeline",
+      "category": "mission",
+      "label": {
+        "es": "Cronología de tránsito, señal y encuentro",
+        "en": "Transit, Signal, and Encounter Timeline"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:ardor-gravity-operations",
+      "category": "technology",
+      "label": {
+        "es": "Gravedad y circulación de la Ardor",
+        "en": "Ardor Gravity and Circulation"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:velari-objects",
+      "category": "contact",
+      "label": {
+        "es": "Estación y emisaria Velari",
+        "en": "Velari Station and Emissary"
+      },
+      "foundational": true
+    },
+    {
+      "id": "canon:evidence-chain",
+      "category": "conflict",
+      "label": {
+        "es": "Cadena de evidencia",
+        "en": "Chain of evidence"
+      }
+    },
+    {
+      "id": "canon:sorell-status",
+      "category": "conflict",
+      "label": {
+        "es": "Acusación y vindicación de Sorell",
+        "en": "Accusation and vindication of Sorell"
+      }
+    },
+    {
+      "id": "canon:zao-transmission-mechanics",
+      "category": "technology",
+      "label": {
+        "es": "Bloqueo de comunicaciones y transmisión de Zao",
+        "en": "Zao Communications and Transmission Blocking"
+      }
+    },
+    {
+      "id": "canon:rao-containment",
+      "category": "conflict",
+      "label": {
+        "es": "Contención de Elin",
+        "en": "Elin Containment"
+      }
+    },
+    {
+      "id": "canon:ending",
+      "category": "contact",
+      "label": {
+        "es": "Alcance del contacto final",
+        "en": "Final Contact Scope"
+      }
+    }
+  ],
+  "majorEvents": [
+    {
+      "id": "event:embarkation",
+      "category": "setup",
+      "label": {
+        "es": "Embarque y salida",
+        "en": "Boarding and departure"
+      }
+    },
+    {
+      "id": "event:anomaly-discovery",
+      "category": "mystery",
+      "label": {
+        "es": "Descubrimiento de la anomalía",
+        "en": "Anomaly discovery"
+      }
+    },
+    {
+      "id": "event:zao-warning-death",
+      "category": "mystery",
+      "label": {
+        "es": "Advertencia y muerte de Zao",
+        "en": "Zao's Warning and Death"
+      }
+    },
+    {
+      "id": "event:tunnel-crossing",
+      "category": "mission",
+      "label": {
+        "es": "Cruce del túnel",
+        "en": "Tunnel crossing"
+      }
+    },
+    {
+      "id": "event:investigation",
+      "category": "mystery",
+      "label": {
+        "es": "Investigación y fractura de confianza",
+        "en": "Investigation and breach of trust"
+      }
+    },
+    {
+      "id": "event:message-reception",
+      "category": "revelation",
+      "label": {
+        "es": "Recepción del mensaje de Zao",
+        "en": "Receiving Zao's message"
+      }
+    },
+    {
+      "id": "event:harlan-exposed",
+      "category": "revelation",
+      "label": {
+        "es": "Exposición de Harlan",
+        "en": "Harlan Exposition"
+      }
+    },
+    {
+      "id": "event:quarantine",
+      "category": "climax",
+      "label": {
+        "es": "Cuarentena del payload",
+        "en": "Payload Quarantine"
+      }
+    },
+    {
+      "id": "event:clean-greeting",
+      "category": "climax",
+      "label": {
+        "es": "Envío del saludo limpio",
+        "en": "Sending the clean greeting"
+      }
+    },
+    {
+      "id": "event:first-contact",
+      "category": "resolution",
+      "label": {
+        "es": "Primer contacto limitado",
+        "en": "Limited first contact"
+      }
+    },
+    {
+      "id": "event:aftermath",
+      "category": "resolution",
+      "label": {
+        "es": "Consecuencias y memoria de Zao",
+        "en": "Consequences and memory of Zao"
+      }
+    }
+  ]
 }

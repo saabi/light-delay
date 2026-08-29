@@ -1,14 +1,30 @@
 {
-	"schemaVersion": "1.0.0",
-	"variants": [
-		{
-			"id": "variant:cael-long-pilot",
-			"entity": { "kind": "character", "id": "character:cael" },
-			"scriptIds": ["script:light-delay-long"],
-			"label": "Cael — piloto del largometraje",
-			"roleOverride": "Piloto",
-			"descriptionOverride": "En el largometraje, Wei conserva la función separada de comunicaciones.",
-			"referenceAssetIds": ["asset:character-cael-sheet"]
-		}
-	]
+  "schemaVersion": "1.0.0",
+  "variants": [
+    {
+      "id": "variant:cael-long-pilot",
+      "entity": {
+        "kind": "character",
+        "id": "character:cael"
+      },
+      "scriptIds": [
+        "script:light-delay-long"
+      ],
+      "label": {
+        "es": "Cael — piloto del largometraje",
+        "en": "Cael — pilot of the feature film"
+      },
+      "roleOverride": {
+        "es": "Piloto",
+        "en": "Pilot"
+      },
+      "descriptionOverride": {
+        "es": "En el largometraje, Wei conserva la función separada de comunicaciones.",
+        "en": "In the feature film, Wei retains the separate communications function."
+      },
+      "referenceAssetIds": [
+        "asset:character-cael-sheet"
+      ]
+    }
+  ]
 }

@@ -27,6 +27,7 @@
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
 	import { onDestroy, onMount } from 'svelte';
 	import * as m from '$lib/paraglide/messages.js';
+	import { storyText } from '$lib/data/selectors/localized';
 
 	type ShotView = {
 		shot: Shot;
@@ -108,7 +109,8 @@
 	let rootEl: HTMLElement | undefined = $state();
 
 	function framingCode(shot: Shot): string {
-		if (shot.composition?.framing) return shot.composition.framing;
+		const framing = storyText(shot.composition?.framing);
+		if (framing) return framing;
 		const size = shot.composition?.size;
 		const map: Record<string, string> = {
 			WS: 'PG',

@@ -20,7 +20,7 @@ Todas las páginas enlazadas por el índice legacy tienen un destino actual. El 
 
 `npm run port:legacy-text` vuelve a extraer los cinco documentos prose de forma determinista. No modifica `legacy-site/`: aplica reconciliaciones explícitas de canon a la copia española estructurada y exige que la traducción inglesa conserve la misma topología de bloques.
 
-El guion y animatic actuales ya no se traducen desde HTML: comparten `ScriptFile` por cut y aplican el overlay `data/translations/public.en.json`, cuya cobertura se controla con `npm run validate:translations`.
+El guion y animatic actuales ya no se traducen desde HTML: comparten `ScriptFile` por cut con copy bilingüe inline (`LocalizedString` / `variants.en`), cuya cobertura se controla con `npm run validate:translations`.
 
 ## Páginas HTML
 

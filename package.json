@@ -42,6 +42,7 @@
 		"report:outline-gaps": "node scripts/report-outline-gaps.mjs",
 		"report:all": "node scripts/report-dialogue-timing.mjs --all && node scripts/report-editorial.mjs --all && node scripts/report-outline-missing.mjs && node scripts/report-outline-gaps.mjs",
 		"mark:takes-regen": "node scripts/mark-takes-needs-regeneration.mjs",
+		"migrate:inline-i18n": "node scripts/migrate-inline-i18n.mjs",
 		"validate:data": "node scripts/validate-data.mjs",
 		"validate:docs": "node scripts/validate-docs.mjs",
 		"validate:translations": "node scripts/validate-translations.mjs"

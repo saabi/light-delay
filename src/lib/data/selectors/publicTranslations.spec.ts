@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { getScript } from '$lib/data/repositories';
 import { localizeScript, translatePublicText } from './publicTranslations';
 
-describe('public structured translations', () => {
-	it('translates screenplay structure and injects draft English dialogue variants', () => {
+describe('public structured translations (inline LocalizedString)', () => {
+	it('resolves screenplay prose and keeps co-located English dialogue variants', () => {
 		const source = getScript('script:light-delay-main-short');
 		const localized = localizeScript(source, 'en');
 		const sourceDialogue = source.cues.find(
@@ -15,6 +15,7 @@ describe('public structured translations', () => {
 
 		expect(localized).not.toBe(source);
 		expect(localized.script.title).toBe('Light Delay — Short Film Screenplay');
+		expect(typeof source.script.title).toBe('object');
 		expect(dialogue?.type).toBe('dialogue');
 		if (dialogue?.type !== 'dialogue') throw new Error('dialogue fixture not found');
 		expect(dialogue.content.variants.en?.spokenText).toBe(
@@ -24,13 +25,21 @@ describe('public structured translations', () => {
 		expect(dialogue.content.variants.en?.audioAssetId).toBeUndefined();
 		expect(sourceDialogue?.type).toBe('dialogue');
 		if (sourceDialogue?.type !== 'dialogue') throw new Error('source dialogue fixture not found');
-		expect(sourceDialogue.content.variants.en).toBeUndefined();
+		expect(sourceDialogue.content.variants.en?.spokenText).toBe(
+			'The signature looks forged. The physical relay points to—'
+		);
 	});
 
-	it('leaves Spanish source data untouched and falls back for unknown text', () => {
+	it('resolves Spanish LocalizedString maps to flat strings for presentation', () => {
 		const source = getScript('script:light-delay-main-short');
+		const localized = localizeScript(source, 'es');
 
-		expect(localizeScript(source, 'es')).toBe(source);
-		expect(translatePublicText('Texto nuevo sin catálogo', 'en')).toBe('Texto nuevo sin catálogo');
+		expect(localized).not.toBe(source);
+		expect(typeof localized.script.title).toBe('string');
+		expect(localized.script.title).toContain('Light Delay');
+		expect(
+			translatePublicText({ es: 'Hola', en: 'Hello' }, 'en')
+		).toBe('Hello');
+		expect(translatePublicText({ es: 'Solo español' }, 'en')).toBe('Solo español');
 	});
 });

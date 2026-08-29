@@ -6,6 +6,7 @@ import type {
 } from '$lib/types/comparison';
 import type { CanonClaim, EventCoverage } from '$lib/types/comparison';
 import type { CharacterFunctionAssignment, EntityVariant, ScriptFile } from '$lib/types/script';
+import { sourceLocalizedString } from './localized.ts';
 
 function compareDeclared<T extends { status: string }>(a?: T, b?: T, value?: (item: T) => string) {
 	if (!a || !b) return 'unspecified' satisfies PairwiseComparison;
@@ -86,7 +87,8 @@ export function compareScripts(options: {
 			comparison: compareDeclared(
 				left,
 				right,
-				(item) => `${item.status}|${item.valueId ?? item.statement}`
+				(item) =>
+					`${item.status}|${item.valueId ?? sourceLocalizedString(item.statement) ?? ''}`
 			)
 		};
 	});

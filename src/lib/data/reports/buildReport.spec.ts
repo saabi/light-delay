@@ -31,7 +31,7 @@ describe('report-runner', () => {
 		expect(report.summary.status).toBe('debt');
 	});
 
-	it('uses the public translation overlay and marks absent production units not applicable', () => {
+	it('uses inline dialogue variants and marks absent production units not applicable', () => {
 		const main = getLocalizedScript(canonical, 'es');
 		const long = getLocalizedScript('script:light-delay-long', 'es');
 		const projectCtx = createProjectContext();

@@ -15,6 +15,7 @@
 	import { getLocale } from '$lib/paraglide/runtime.js';
 	import type { OutlineStep } from '$lib/types/outline';
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
+	import { storyText } from '$lib/data/selectors/localized';
 
 	const locale = getLocale();
 	const registry = listLocalizedScripts(locale);
@@ -71,7 +72,7 @@
 	{#if outline}
 		<PageHeader
 			eyebrow={m.outline_eyebrow()}
-			title={outline.outline.title}
+			title={storyText(outline.outline.title, language.dialogueLanguage)}
 			lede={m.outline_lede()}
 			meta={[
 				`v${outline.outline.version}`,

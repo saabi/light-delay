@@ -55,7 +55,7 @@ https://saabi.github.io/light-delay/
 
 La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
 
-El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. Los cuatro scripts, sus diálogos, subtítulos derivados, escenas, beats, tomas, assets y datos de comparación cuentan con un overlay inglés en estado `draft`; el español permanece como fuente de verdad y una elección manual de idioma narrativo se conserva localmente.
+El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. Los cuatro scripts y el resto del copy de historia llevan inglés **inline** en los JSON (`LocalizedString` / `variants.en`, estado `draft`); el español permanece como fuente de verdad y una elección manual de idioma narrativo se conserva localmente.
 
 GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
 

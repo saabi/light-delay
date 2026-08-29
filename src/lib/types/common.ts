@@ -1,4 +1,5 @@
 import type { CharacterId, FactionId, LocationId, ObjectId, VehicleId } from './ids.ts';
+import type { StoryText } from './i18n.ts';
 
 export type LanguageTag = string;
 
@@ -12,7 +13,7 @@ export interface EntityRef {
 
 export interface Note {
 	type: 'story' | 'continuity' | 'performance' | 'camera' | 'sound' | 'vfx' | 'production' | 'todo';
-	text: string;
+	text: StoryText;
 	resolved?: boolean;
 }
 

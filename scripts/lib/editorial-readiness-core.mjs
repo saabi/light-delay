@@ -2,28 +2,41 @@
  * Browser-safe editorial readiness classifiers (no Node APIs).
  * Shared by the SvelteKit app and Node report scripts.
  */
+import { sourceLocalizedString } from './localized-string.mjs';
 
 export const REGEN_IMAGE_STATUS = {
 	status: 'needs_regeneration',
 	reasons: ['canon_mismatch'],
-	explanation:
-		'Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.',
-	replacementBrief:
-		'Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic.'
+	explanation: {
+		es: 'Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.',
+		en: 'Still outdated after the Ardor orientation change (decks perpendicular to prograde) and exterior visual review; regenerate the take.'
+	},
+	replacementBrief: {
+		es: 'Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic.',
+		en: 'Regenerate consistent with current architecture (thrust = up), framing, and shot description; do not reuse prior animatic frames.'
+	}
 };
 
 export const BEAT_PLACEHOLDER_RE = /1 beat por escena/i;
 export const ANIMATIC_PLACEHOLDER_ASSET_ID = 'asset:animatic-placeholder-missing-frame';
 
+/** @param {unknown} value */
+function text(value) {
+	return sourceLocalizedString(value) ?? (typeof value === 'string' ? value : '');
+}
+
 /** @param {import('../../src/lib/types/script.ts').Shot} shot */
 export function shotCompletenessFlags(shot) {
 	const flags = [];
-	if (!shot.purpose?.trim()) flags.push('missing_purpose');
-	const cameraMissing =
-		!shot.camera || (!shot.camera.movement && !shot.camera.movementDescription?.trim());
+	const purpose = text(shot.purpose);
+	const description = text(shot.description);
+	const framing = text(shot.composition?.framing);
+	const movementDescription = text(shot.camera?.movementDescription);
+	if (!purpose.trim()) flags.push('missing_purpose');
+	const cameraMissing = !shot.camera || (!shot.camera.movement && !movementDescription.trim());
 	if (cameraMissing) flags.push('missing_camera');
-	if (!shot.description?.trim() || shot.description.trim().length < 20) flags.push('thin_description');
-	if (!shot.composition?.framing?.trim()) flags.push('missing_framing');
+	if (!description.trim() || description.trim().length < 20) flags.push('thin_description');
+	if (!framing.trim()) flags.push('missing_framing');
 	return flags;
 }
 

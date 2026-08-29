@@ -61,7 +61,7 @@ _Ninguno._
 
 - Matching por similitud de texto (normalizado); no es alineación editorial humana.
 - Un beat por escena (placeholder); beats más finos quedan para Fase 7.
-- En la extracción mecánica inicial no se generaron traducciones: sólo se creó la variante `es` con `status: "source"`. El estado actual añade variantes inglesas `draft` en lectura desde `data/translations/public.en.json`, sin modificar aquel baseline ni duplicar subtítulos.
+- En la extracción mecánica inicial no se generaron traducciones: sólo se creó la variante `es` con `status: "source"`. El estado actual guarda variantes inglesas `draft` en `content.variants.en` dentro del mismo cue (sin subtítulos duplicados independientes).
 
 ## Estado en la app SvelteKit (Fases 2–6)
 

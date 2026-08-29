@@ -2,6 +2,7 @@ import type { ValidationResult } from '$lib/types/common';
 import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import type { DocumentsFile } from '$lib/types/document';
 import type { EntityVariantsFile, ScriptFile, SourceReference } from '$lib/types/script';
+import { sourceStoryText } from './localizedString.ts';
 
 function unique(label: string, ids: string[], errors: string[]) {
 	const seen = new Set<string>();
@@ -86,7 +87,7 @@ export function validateScriptComparison(options: {
 	for (const claim of profile.canonClaims) {
 		if (!dimensions.has(claim.dimensionId))
 			errors.push(`script(${script.script.id}): unknown canon dimension ${claim.dimensionId}`);
-		if (!claim.statement.trim())
+		if (!sourceStoryText(claim.statement)?.trim())
 			errors.push(`script(${script.script.id}): empty canon statement ${claim.dimensionId}`);
 	}
 	const sceneIds = new Set(script.scenes.map((scene) => scene.id));
@@ -200,8 +201,8 @@ export function getFoundationalConflictWarnings(
 		if (!foundational.has(claim.dimensionId) || claim.status !== 'established') continue;
 		const other = rightById.get(claim.dimensionId);
 		if (!other || other.status !== 'established') continue;
-		const a = claim.valueId ?? claim.statement;
-		const b = other.valueId ?? other.statement;
+		const a = claim.valueId ?? sourceStoryText(claim.statement);
+		const b = other.valueId ?? sourceStoryText(other.statement);
 		if (a !== b)
 			warnings.push(
 				`${left.script.id} / ${right.script.id}: foundational conflict ${claim.dimensionId}`

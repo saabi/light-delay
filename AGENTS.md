@@ -12,6 +12,7 @@ El español es la fuente de verdad de la documentación del repositorio.
 - Si **no hay copia en español**, el inglés es el idioma secundario de trabajo hasta que exista versión española (o se decida explícitamente dejarlo solo en inglés).
 - Tras cualquier cambio material, **actualizar las copias en otros idiomas en la misma tarea** (o dejar marcado y visible el desfase en `docs/PROJECT_STATUS.md` si la sincronización debe posponerse).
 - No introducir divergencias de canon, procedimiento o estado entre idiomas. Ante conflicto, prevalece la versión española.
+- El copy de historia en JSON (guiones, outlines, assets, taxonomía, funciones, variantes, etiquetas de script) vive **en el mismo archivo** como mapas por idioma (`{ "es": "…", "en": "…" }`) o, en diálogo/texto, como `content.variants.<lang>`. Tras editar el español, actualizar el inglés hermano en el mismo pase. La UI chrome sigue en Paraglide (`messages/*.json`). La galería de entidades aún usa overlay por id (`entities.en.json`) hasta un pase posterior.
 - Convención de nombres cuando haya pares: `nombre.md` o `nombre.es.md` para español; `nombre.en.md` (u otro sufijo de idioma) para el resto. Si solo hay un archivo sin sufijo, su idioma debe inferirse del contenido; al crear la segunda lengua, renombrar o añadir sufijos de forma explícita.
 - `AGENTS.md` es el único lugar canónico de instrucciones para agentes (cualquier modelo o plataforma). Otras guías de herramienta deben **referenciar** este archivo, no duplicar reglas.
 

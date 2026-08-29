@@ -1,6 +1,7 @@
 import type { ValidationResult } from '$lib/types/common';
 import type { AssetsFile } from '$lib/types/assets';
 import type { ImageEditorialStatus } from '$lib/types/assets';
+import { sourceStoryText } from './localizedString.ts';
 
 const IMAGE_STATES = new Set([
 	'current',
@@ -31,7 +32,7 @@ export function validateImageEditorialStatus(
 			if (!IMAGE_REASONS.has(reason)) errors.push(`${label}: invalid image reason ${reason}`);
 		}
 	}
-	if (status.status !== 'current' && !status.explanation?.trim()) {
+	if (status.status !== 'current' && !sourceStoryText(status.explanation)?.trim()) {
 		errors.push(`${label}: non-current image status requires an explanation`);
 	}
 }
