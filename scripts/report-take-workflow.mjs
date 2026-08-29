@@ -1,4 +1,3 @@
-import { runSingleReport } from './lib/report-cli.mjs';
-import { buildTakeWorkflowReport, formatTakeWorkflowMarkdown } from './lib/editorial-reports.mjs';
+import { runReportFromRegistry } from './lib/report-cli.mjs';
 
-runSingleReport('take-workflow', buildTakeWorkflowReport, formatTakeWorkflowMarkdown);
+runReportFromRegistry('take-workflow');

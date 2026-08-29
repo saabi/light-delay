@@ -1,9 +1,7 @@
 /**
- * Editorial report builders (Node). Classifiers live in editorial-readiness-core.mjs.
+ * Editorial report builders. Classifiers live in editorial-readiness-core.mjs.
  */
 // @ts-nocheck
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
 import { thumbnailPathForAsset } from './thumbnail-path.mjs';
 import {
 	BEAT_PLACEHOLDER_RE,
@@ -25,9 +23,10 @@ export {
 
 export { ANIMATIC_PLACEHOLDER_ASSET_ID } from './editorial-readiness-core.mjs';
 
-function assetPathOnDisk(staticRoot, publicPath) {
+function assetPathOnDisk(projectCtx, publicPath) {
 	if (!publicPath?.startsWith('/')) return false;
-	return existsSync(join(staticRoot, publicPath));
+	if (!projectCtx.checkDisk) return true;
+	return projectCtx.checkDisk(publicPath);
 }
 
 function shotMediaState(shot, take, asset) {
@@ -49,7 +48,7 @@ function reportHeader(title, scriptId, language, generatedAt) {
 // --- Visual art ---
 
 export function buildVisualArtReport(script, ctx, projectCtx) {
-	const { assetById, entities, staticRoot, assets } = projectCtx;
+	const { assetById, entities, assets } = projectCtx;
 	const missingFiles = [];
 	const unknownAssetRefs = [];
 	const shotsWithoutMedia = [];
@@ -57,7 +56,7 @@ export function buildVisualArtReport(script, ctx, projectCtx) {
 
 	for (const asset of assets) {
 		if (asset.kind !== 'image' || !asset.path) continue;
-		if (!assetPathOnDisk(staticRoot, asset.path)) {
+		if (!assetPathOnDisk(projectCtx, asset.path)) {
 			missingFiles.push({ assetId: asset.id, path: asset.path });
 		}
 	}
@@ -113,7 +112,7 @@ export function buildVisualArtReport(script, ctx, projectCtx) {
 		.filter((a) => !a.path.toLowerCase().endsWith('.svg'))
 		.filter((a) => {
 			const thumb = thumbnailPathForAsset(a.path);
-			return thumb && !assetPathOnDisk(staticRoot, thumb);
+			return thumb && !assetPathOnDisk(projectCtx, thumb);
 		})
 		.map((a) => ({ assetId: a.id, path: a.path }));
 

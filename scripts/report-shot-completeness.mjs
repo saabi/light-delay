@@ -1,4 +1,3 @@
-import { runSingleReport } from './lib/report-cli.mjs';
-import { buildShotCompletenessReport, formatShotCompletenessMarkdown } from './lib/editorial-reports.mjs';
+import { runReportFromRegistry } from './lib/report-cli.mjs';
 
-runSingleReport('shot-completeness', buildShotCompletenessReport, formatShotCompletenessMarkdown);
+runReportFromRegistry('shot-completeness');

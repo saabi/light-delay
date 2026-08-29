@@ -1,4 +1,3 @@
-import { runSingleReport } from './lib/report-cli.mjs';
-import { buildScenePolishReport, formatScenePolishMarkdown } from './lib/editorial-reports.mjs';
+import { runReportFromRegistry } from './lib/report-cli.mjs';
 
-runSingleReport('scene-polish', buildScenePolishReport, formatScenePolishMarkdown);
+runReportFromRegistry('scene-polish');

@@ -1,4 +1,3 @@
-import { runSingleReport } from './lib/report-cli.mjs';
-import { buildVisualArtReport, formatVisualArtMarkdown } from './lib/editorial-reports.mjs';
+import { runReportFromRegistry } from './lib/report-cli.mjs';
 
-runSingleReport('visual-art', buildVisualArtReport, formatVisualArtMarkdown);
+runReportFromRegistry('visual-art');

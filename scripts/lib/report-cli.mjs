@@ -5,9 +5,16 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { localizeScriptDialogue } from './dialogue-timing.mjs';
+import { createProjectContext } from './project-context.mjs';
+import { buildReport, formatReportMarkdown } from './report-runner.mjs';
+import { createScriptContext } from './script-context.mjs';
+
+export { createScriptContext, createProjectContext };
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 export const PROJECT_JSON = join(ROOT, 'data', 'project.json');
+const PUBLIC_EN = join(ROOT, 'data', 'translations', 'public.en.json');
 
 /**
  * @param {string[]} argv
@@ -55,6 +62,29 @@ export function getScriptIds(project, options) {
 	return [options.scriptId ?? project.project.canonicalScriptId];
 }
 
+function loadTranslations() {
+	return JSON.parse(readFileSync(PUBLIC_EN, 'utf8')).translations ?? {};
+}
+
+/**
+ * @param {unknown} script
+ * @param {string} language
+ * @param {Record<string, string>} translations
+ */
+export function prepareScriptForReport(script, language, translations) {
+	return localizeScriptDialogue(script, translations, language);
+}
+
+export function createCliProjectContext() {
+	const staticRoot = join(ROOT, 'static');
+	return createProjectContext({
+		checkDisk: (publicPath) => {
+			if (!publicPath?.startsWith('/')) return false;
+			return existsSync(join(staticRoot, publicPath));
+		}
+	});
+}
+
 /**
  * @param {string} reportName
  * @param {string} scriptId
@@ -84,119 +114,37 @@ export function writeReport(reportName, scriptId, language, report, formatMarkdo
 }
 
 /**
- * @param {string} reportName
- * @param {(script: unknown, ctx: unknown, projectCtx: unknown) => unknown} buildReport
- * @param {(report: unknown) => string} formatMarkdown
+ * @param {string} reportId
  * @param {string[]} [argv]
  */
-export function runSingleReport(reportName, buildReport, formatMarkdown, argv = process.argv.slice(2)) {
+export function runReportFromRegistry(reportId, argv = process.argv.slice(2)) {
 	const options = parseReportArgs(argv);
 	const project = loadProject();
-	const projectCtx = loadProjectContext();
+	const projectCtx = createCliProjectContext();
+	const translations = loadTranslations();
 	const scriptIds = getScriptIds(project, options);
 
 	for (const scriptId of scriptIds) {
-		const script = loadScript(scriptId);
-		if (!script.shots?.length && reportName !== 'visual-art') {
-			console.log(`${scriptId}: no shots, skipping`);
-			continue;
-		}
-		const ctx = createScriptContext(script);
-		const report = buildReport(script, ctx, projectCtx, options.language);
-		const line = writeReport(reportName, scriptId, options.language, report, formatMarkdown, options);
+		const raw = loadScript(scriptId);
+		const script = prepareScriptForReport(raw, options.language, translations);
+		const report = buildReport(reportId, script, options.language, projectCtx);
+		const line = writeReport(
+			reportId,
+			scriptId,
+			options.language,
+			report,
+			(r) => formatReportMarkdown(reportId, r),
+			options
+		);
 		if (line) console.log(`  ${line}`);
 	}
 }
 
-export function loadProjectContext() {
-	const readJson = (/** @type {string} */ path) =>
-		JSON.parse(readFileSync(join(ROOT, 'data', path), 'utf8'));
-	const assetsFile = readJson('assets.json');
-	const assets = assetsFile.assets ?? [];
-	const assetById = new Map(assets.map((/** @type {{ id: string }} */ a) => [a.id, a]));
-	const entities = [];
-	for (const [file, key, kind] of [
-		['characters.json', 'characters', 'character'],
-		['locations.json', 'locations', 'location'],
-		['objects.json', 'objects', 'object'],
-		['vehicles.json', 'vehicles', 'vehicle'],
-		['factions.json', 'factions', 'faction']
-	]) {
-		for (const entity of readJson(file)[key] ?? []) {
-			entities.push({ kind, ...entity });
-		}
-	}
-	const project = loadProject();
-	const supportedLangs =
-		project.project.languages?.supported?.map((/** @type {{ tag: string }} */ l) => l.tag) ??
-		['es', 'en'];
-	const locations = readJson('locations.json').locations ?? [];
-	const locationById = new Map(locations.map((l) => [l.id, l]));
-	return {
-		assets,
-		assetById,
-		entities,
-		staticRoot: join(ROOT, 'static'),
-		supportedLangs,
-		sourceLanguage: project.project.languages?.sourceLanguage ?? 'es',
-		allScripts: project.project.scripts.map((/** @type {{ id: string }} */ s) => s.id),
-		locationById
-	};
+/** @deprecated Use runReportFromRegistry */
+export function runSingleReport(reportName, buildReportFn, formatMarkdown, argv = process.argv.slice(2)) {
+	runReportFromRegistry(reportName, argv);
 }
 
-/**
- * @param {import('../../src/lib/types/script.ts').ScriptFile} script
- */
-export function createScriptContext(script) {
-	const sceneById = new Map(script.scenes.map((s) => [s.id, s]));
-	const shotById = new Map(script.shots.map((s) => [s.id, s]));
-	const takeById = new Map(script.takes.map((t) => [t.id, t]));
-	const cueById = new Map(script.cues.map((c) => [c.id, c]));
-	const beatById = new Map(script.beats.map((b) => [b.id, b]));
-	const beatSceneId = new Map(script.beats.map((b) => [b.id, b.sceneId]));
-
-	/** @param {import('../../src/lib/types/script.ts').Shot} shot */
-	const shotScene = (shot) => sceneById.get(shot.sceneId);
-
-	/** @param {import('../../src/lib/types/script.ts').Shot} shot */
-	const selectedTake = (shot) =>
-		shot.selectedTakeId ? takeById.get(shot.selectedTakeId) : undefined;
-
-	const shotsByScene = new Map();
-	for (const shot of script.shots) {
-		const list = shotsByScene.get(shot.sceneId) ?? [];
-		list.push(shot);
-		shotsByScene.set(shot.sceneId, list);
-	}
-	for (const list of shotsByScene.values()) list.sort((a, b) => a.order - b.order);
-
-	const dialogueCueIdsInScene = new Map();
-	for (const cue of script.cues) {
-		if (cue.type !== 'dialogue') continue;
-		const sceneId = beatSceneId.get(cue.beatId);
-		if (!sceneId) continue;
-		const set = dialogueCueIdsInScene.get(sceneId) ?? new Set();
-		set.add(cue.id);
-		dialogueCueIdsInScene.set(sceneId, set);
-	}
-
-	const placedCueIds = new Set();
-	for (const shot of script.shots) {
-		for (const p of shot.cuePlacements) placedCueIds.add(p.cueId);
-	}
-
-	return {
-		script,
-		sceneById,
-		shotById,
-		takeById,
-		cueById,
-		beatById,
-		beatSceneId,
-		shotScene,
-		selectedTake,
-		shotsByScene,
-		dialogueCueIdsInScene,
-		placedCueIds
-	};
+export function loadProjectContext() {
+	return createCliProjectContext();
 }

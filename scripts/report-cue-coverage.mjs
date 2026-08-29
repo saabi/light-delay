@@ -1,4 +1,3 @@
-import { runSingleReport } from './lib/report-cli.mjs';
-import { buildCueCoverageReport, formatCueCoverageMarkdown } from './lib/editorial-reports.mjs';
+import { runReportFromRegistry } from './lib/report-cli.mjs';
 
-runSingleReport('cue-coverage', buildCueCoverageReport, formatCueCoverageMarkdown);
+runReportFromRegistry('cue-coverage');

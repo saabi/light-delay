@@ -1,4 +1,3 @@
-import { runSingleReport } from './lib/report-cli.mjs';
-import { buildEntityBindingReport, formatEntityBindingMarkdown } from './lib/editorial-reports.mjs';
+import { runReportFromRegistry } from './lib/report-cli.mjs';
 
-runSingleReport('entity-binding', buildEntityBindingReport, formatEntityBindingMarkdown);
+runReportFromRegistry('entity-binding');

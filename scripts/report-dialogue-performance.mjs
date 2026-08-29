@@ -1,7 +1,3 @@
-import { runSingleReport } from './lib/report-cli.mjs';
-import {
-	buildDialoguePerformanceReport,
-	formatDialoguePerformanceMarkdown
-} from './lib/editorial-reports.mjs';
+import { runReportFromRegistry } from './lib/report-cli.mjs';
 
-runSingleReport('dialogue-performance', buildDialoguePerformanceReport, formatDialoguePerformanceMarkdown);
+runReportFromRegistry('dialogue-performance');

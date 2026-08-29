@@ -381,7 +381,8 @@ export function buildDialogueTimingReport(script, language, options = {}) {
 			offCameraShotCount: offCameraShots.length,
 			spokenSurplusShotCount: spokenSurplusShots.length,
 			montageSurplusSceneCount: montageSurplusScenes.length,
-			silentLongShotCount: silentLongShots.length
+			silentLongShotCount: silentLongShots.length,
+			consoleLine: `surplus shots: ${spokenSurplusShots.length}, multi-speaker: ${multiSpeakerShots.length}, off-camera: ${offCameraShots.length}, loose scenes: ${montageSurplusScenes.length}, silent long: ${silentLongShots.length}`
 		},
 		scenes: sceneReports,
 		flags: {
