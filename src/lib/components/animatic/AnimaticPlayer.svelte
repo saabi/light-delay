@@ -303,9 +303,14 @@
 						</div>
 					{/if}
 				</div>
-				<div class="movie-counter-col">
-					<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
-					<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
+				<div class="movie-top-actions">
+					<div class="movie-lang">
+						<LanguageControls compact />
+					</div>
+					<div class="movie-counter-col">
+						<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
+						<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
+					</div>
 				</div>
 			</div>
 
@@ -342,8 +347,6 @@
 							shotIndex={player.shotIndex}
 							totalShots={shots.length}
 						/>
-					{:else}
-						<LanguageControls />
 					{/if}
 				</div>
 			{/if}
@@ -456,6 +459,28 @@
 
 	.movie-timing {
 		margin-top: 0.35rem;
+	}
+
+	.movie-top-actions {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.65rem;
+		pointer-events: auto;
+	}
+
+	.movie-lang {
+		padding: 0.55rem 0.7rem;
+		border: 1px solid #ffffff2b;
+		border-radius: 10px;
+		background: #06101bed;
+		backdrop-filter: blur(14px);
+		text-shadow: none;
+		min-width: min(220px, 42vw);
+	}
+
+	.movie-lang :global(.lang-controls.compact) {
+		margin-bottom: 0;
 	}
 
 	.movie-counter-col {

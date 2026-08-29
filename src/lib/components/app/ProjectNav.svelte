@@ -6,6 +6,7 @@
 	import { canonicalPathname, withLocale } from '$lib/utils/paths';
 	import * as m from '$lib/paraglide/messages.js';
 	import ScriptSwitcher from './ScriptSwitcher.svelte';
+	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
 
 	const activeScriptId = $derived(activeScriptIdFromParam(page.params.scriptId));
 
@@ -46,6 +47,7 @@
 </script>
 
 <ScriptSwitcher />
+<LanguageControls compact />
 
 <nav class="nav" aria-label={m.nav_primary()}>
 	{#each links as link (link.label)}

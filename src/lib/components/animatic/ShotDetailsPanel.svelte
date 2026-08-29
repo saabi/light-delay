@@ -1,5 +1,4 @@
 <script lang="ts">
-	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import {
 		getCharacterById,
@@ -485,10 +484,6 @@
 		</section>
 	{/if}
 
-	<section class="language-section">
-		<h3>{m.language_label()}</h3>
-		<LanguageControls />
-	</section>
 </div>
 
 <style>
@@ -610,10 +605,6 @@
 		color: var(--cyan);
 		font: 600 0.68rem var(--font-mono);
 		text-transform: uppercase;
-	}
-
-	.language-section {
-		padding-bottom: 0;
 	}
 
 	@media (max-width: 480px) {

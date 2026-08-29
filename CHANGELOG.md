@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-29 — Controles de idioma en la navegación del proyecto
+
+- Selectores de diálogo y subtítulos en el rail (`ProjectNav`, bajo el switcher de guion) y siempre visibles en el chrome del player a pantalla completa; eliminados duplicados de la página de guion y del panel de detalles.
+
 ## 2026-08-29 — Detalles colapsables en el editor de animatic
 
 - Panel de detalles de toma (mismo `ShotDetailsPanel` que el player) como barra lateral sticky a la derecha en escritorio y hoja inferior en móvil; selección por tarjeta, `?shot=` y tecla `D`.
