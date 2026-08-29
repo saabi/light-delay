@@ -148,7 +148,11 @@ if (process.argv.includes('--all')) {
 	);
 	for (const [source, contexts] of selected.slice(offset, offset + limit))
 		console.log(JSON.stringify({ source, contexts }, null, 0));
-	console.log(`selected=${selected.length} offset=${offset} limit=${limit}`);
+	for (const source of orphaned.slice(offset, offset + limit))
+		console.log(JSON.stringify({ orphaned: source }, null, 0));
+	console.log(
+		`selected=${selected.length} orphaned=${orphaned.length} offset=${offset} limit=${limit}`
+	);
 }
 if (missing.length || orphaned.length) {
 	console.error(

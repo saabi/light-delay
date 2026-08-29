@@ -12,7 +12,7 @@ Este documento define **cómo transformar la versión canónica de 30 minutos de
 
 La versión reducida debe tratarse como un **cut alternativo derivado del mismo canon**, no como un reemplazo del guion de 30 minutos. Su objetivo es conservar la premisa, el mecanismo del retraso de la luz, el sacrificio de Zao, la doble llave causal que identifica a Harlan y el primer contacto Velari, eliminando casi todo lo que no participe directamente en esa cadena.
 
-La compresión buscada es extrema: pasar de **17 escenas / 30:00 / 112 tomas** a aproximadamente **7 secuencias / 4:45–5:00 / ~35–50 tomas**.
+La compresión buscada es extrema: pasar de **17 escenas / 30:39,5 de montaje actual / 124 tomas** a aproximadamente **7 secuencias / 4:45–5:00 / ~35–50 tomas**.
 
 ---
 
@@ -26,11 +26,11 @@ La cadena irreductible es:
 2. Zao descubre que el sistema diplomático contiene un payload hostil no autorizado.
 3. Zao comprende que Harlan está vinculado al sabotaje y envía un mensaje hacia la posición futura de la nave.
 4. Harlan corta la malla inalámbrica y COM A/B; Zao recurre al control dedicado del láser exterior y logra transmitir antes de morir.
-5. Horas después, Rao descubre la mitad técnica del sabotaje: qué hace el payload y cómo aislarlo, pero no quién controla el override.
+5. Horas después, Elin descubre la mitad técnica del sabotaje: qué hace el payload y cómo aislarlo, pero no quién controla el override.
 6. El mensaje retrasado de Zao llega cuando todavía puede modificar el desenlace.
-7. La investigación de Rao y el mensaje de Zao se combinan para identificar a Harlan de manera verificable.
+7. La investigación de Elin y el mensaje de Zao se combinan para identificar a Harlan de manera verificable.
 8. Harlan activa el payload antes de perder definitivamente el control.
-9. Rao aplica la cuarentena ya preparada y mantiene un canal diplomático limpio.
+9. Elin aplica la cuarentena ya preparada y mantiene un canal diplomático limpio.
 10. Los Velari responden sin hostilidad.
 11. Zao, aunque muerta muchas horas antes, “llega a tiempo”.
 
@@ -60,17 +60,17 @@ No es necesario explicar la geometría completa del viaje dentro del diálogo.
 
 La versión revisada de 30 minutos evita que el mensaje de Zao funcione como deus ex machina. Este principio debe conservarse.
 
-- **Rao** descubre el payload, su disparador y la cuarentena.
+- **Elin** descubre el payload, su disparador y la cuarentena.
 - **Zao** identifica a Harlan y señala el relé físico/registro que falta.
 - **La combinación** entre payload + relé + credencial de mando identifica al titular del override.
 
-Por lo tanto, el mensaje no debe hacer que todos simplemente crean a Zao y arresten a Harlan. Debe proporcionar **la pieza que permite corroborar técnicamente lo que Rao ya había descubierto**.
+Por lo tanto, el mensaje no debe hacer que todos simplemente crean a Zao y arresten a Harlan. Debe proporcionar **la pieza que permite corroborar técnicamente lo que Elin ya había descubierto**.
 
-### 3.3. Rao debe haber avanzado antes de recibir el mensaje
+### 3.3. Elin debe haber avanzado antes de recibir el mensaje
 
-Si Rao empieza a investigar sólo después de escuchar a Zao, desaparece la doble llave y el clímax se vuelve trivial.
+Si Elin empieza a investigar sólo después de escuchar a Zao, desaparece la doble llave y el clímax se vuelve trivial.
 
-Antes de que llegue la señal debe verse, al menos mediante inserts y una línea breve, que Rao ya tiene:
+Antes de que llegue la señal debe verse, al menos mediante inserts y una línea breve, que Elin ya tiene:
 
 - el payload identificado;
 - un disparador asociado a la apertura del canal Velari;
@@ -94,7 +94,7 @@ O una variante equivalente que mantenga el motivo de **defensa preventiva por de
 La solución sigue siendo humana:
 
 - Zao detecta y advierte;
-- Rao comprende y aísla;
+- Elin comprende y aísla;
 - Voss toma la decisión de mando;
 - el saludo limpio ya existe como contenido pasivo;
 - los Velari sólo responden una vez que la amenaza humana ha sido neutralizada.
@@ -103,16 +103,16 @@ La solución sigue siendo humana:
 
 ## 4. Reducción del elenco visible
 
-La versión de 30 minutos utiliza seis personajes principales visibles: Zao, Voss, Harlan, Rao, Sorell y Cael. La versión de cinco minutos mantiene **cuatro personajes focales**, con Sorell y Okoye como apariciones funcionales breves para no romper la causalidad del hallazgo y la coartada.
+La misión del corto canónico tiene ocho tripulantes: Zao, Voss, Harlan, Elin, Sorell, Cael, Okoye y Keene. Seis concentran la mayor parte del tiempo visible; Okoye y Keene cumplen funciones de seguridad y medicina. La versión de cinco minutos conserva seis tripulantes declarados —Zao, Voss, Harlan, Elin, Sorell y Okoye— y mantiene **cuatro personajes focales**, con Sorell y Okoye como apariciones funcionales breves para no romper la causalidad del hallazgo y la coartada.
 
 | Personaje | Festival Cut | Tratamiento |
 |---|---|---|
 | **Zao** | Mantener | Protagonista del primer acto y origen del mensaje. |
 | **Harlan** | Mantener | Antagonista y titular del override. |
-| **Rao** | Mantener | Protagonista técnica del segundo acto y ejecutora de la cuarentena. |
+| **Elin** | Mantener | Protagonista técnica del segundo acto y ejecutora de la cuarentena. |
 | **Voss** | Mantener | Autoridad que debe decidir y revocar el override. |
 | **Sorell** | Aparición funcional breve | Escucha el aviso en el puente, recibe la orden de buscar a Harlan y encuentra a Zao sola; su saludo pasivo sigue identificado en UI. |
-| **Cael** | Función absorbida | La detección de la señal y estado de navegación pueden ser comunicados por la computadora del puente o por Rao. No hace falta un quinto rostro estable. |
+| **Cael** | Función absorbida | La detección de la señal y estado de navegación pueden ser comunicados por la computadora del puente o por Elin. No hace falta un quinto rostro estable. |
 | **Okoye** | Aparición funcional breve | Acompaña a Harlan sólo después de que éste regresa al puente; confirma que Sorell ya estaba sola con Zao. |
 
 ### Razón de esta reducción
@@ -137,9 +137,9 @@ La versión canónica revisada contiene 17 escenas. No deben recortarse proporci
 | 6 | Mensaje hacia el futuro | **Secuencia esencial** | Mantener y comprimir a ~30–35 s. |
 | 7 | Asesinato, coartada y cruce | **Secuencia esencial** | Transmisión completa; muerte elidida; regreso de Harlan y hallazgo de Sorell en montaje comprimido. |
 | 8 | El cuerpo | Fusionar con Esc. 7 | Conservar sólo reanimación fallida, comunicaciones bloqueadas y orden final a Harlan + Okoye. |
-| 9 | Investigación y sospecha | Eliminar casi por completo | No desarrollar falsa acusación ni interrogatorio. |
-| 10 | Mitad técnica del misterio | **Secuencia esencial** | Rao ya trabaja contra reloj; se muestra lo que sabe y lo que le falta. |
-| 11 | Harlan intenta cegar la nave | Fusionar | Su presión para apagar el sistema ocurre dentro de la secuencia de Rao/señal. |
+| 9 | Investigación y credencial comprometida | Eliminar casi por completo | No desarrollar una falsa acusación ni un interrogatorio: Sorell es testigo y su credencial fue comprometida. |
+| 10 | Mitad técnica del misterio | **Secuencia esencial** | Elin ya trabaja contra reloj; se muestra lo que sabe y lo que le falta. |
+| 11 | Harlan intenta cegar la nave | Fusionar | Su presión para apagar el sistema ocurre dentro de la secuencia de Elin/señal. |
 | 12 | La doble llave | **Secuencia esencial** | Debe conservarse casi completa en forma condensada. |
 | 13 | Última ventana del override | Fusionar | Harlan activa y busca control físico inmediatamente. No hace falta persecución extensa. |
 | 14 | Cuarentena antes del contacto | **Clímax esencial** | Reducir de 3:30 a ~50–60 s sin cambiar la lógica. |
@@ -160,7 +160,7 @@ La siguiente distribución es el objetivo inicial para el nuevo animatic. Debe t
 Tomas sugeridas:
 
 1. **PG exterior** — Proxima, Júpiter y Celestial Ardor. Texto breve: `PRIMER CONTACTO — MISIÓN VELARI`.
-2. **Interior / núcleo** — Zao y Rao verifican el sistema diplomático; Harlan pasa al fondo o aparece en una pantalla de mando.
+2. **Interior / núcleo** — Zao y Elin verifican el sistema diplomático; Harlan pasa al fondo o aparece en una pantalla de mando.
 3. **PD** — una envoltura/proceso no declarado aparece en el diagnóstico.
 4. **PP Zao** — entiende que no es ruido.
 
@@ -212,7 +212,7 @@ Esta transición sustituye completamente:
 
 ### Secuencia D — La mitad técnica — `1:45–2:35` (50 s)
 
-Rao trabaja en el puente o puesto técnico mientras el encuentro Velari se acerca.
+Elin trabaja en el puente o puesto técnico mientras el encuentro Velari se acerca.
 
 Debe quedar claro visualmente:
 
@@ -223,13 +223,13 @@ Debe quedar claro visualmente:
 
 Voss pregunta si puede detenerlo.
 
-Rao responde, en esencia:
+Elin responde, en esencia:
 
 > “Puedo aislarlo. No puedo revocar a quien lo controla.”
 
 Harlan interviene y recomienda apagar mediación/receptores. En el mismo momento aparece una señal humana débil.
 
-En esta versión **Rao puede asumir funcionalmente la detección de la señal**, evitando introducir a Cael.
+En esta versión **Elin puede asumir funcionalmente la detección de la señal**, evitando introducir a Cael.
 
 ### Secuencia E — La señal y la doble llave — `2:35–3:20` (45 s)
 
@@ -238,7 +238,7 @@ En esta versión **Rao puede asumir funcionalmente la detección de la señal**,
 1. La señal se autentica como salida del transmisor físico de Zao.
 2. Se reproduce el mensaje.
 3. Harlan intenta invalidarlo: una voz puede falsificarse.
-4. Rao no pide que le crean; ejecuta la instrucción de Zao.
+4. Elin no pide que le crean; ejecuta la instrucción de Zao.
 5. Overlay / montaje de tres capas:
    - payload;
    - relé físico;
@@ -259,11 +259,11 @@ Usar un único reloj narrativo:
 
 Harlan obtiene acceso físico al control del núcleo o activa la rama hostil desde el último punto donde su override continúa válido.
 
-Voss lo contiene físicamente o bloquea el acceso mientras Rao ejecuta la operación digital.
+Voss lo contiene físicamente o bloquea el acceso mientras Elin ejecuta la operación digital.
 
 La lógica debe mantenerse:
 
-1. Rao **no borra mágicamente el payload**.
+1. Elin **no borra mágicamente el payload**.
 2. Aplica la cuarentena que ya había preparado.
 3. Separa el buffer/canal saliente de la rama hostil.
 4. Mantiene la mediación necesaria para el saludo legítimo.
@@ -284,7 +284,7 @@ De este modo Sorell conserva su aporte causal canónico sin requerir presencia f
 ### Secuencia G — Contacto / cierre — `4:20–4:50` (30 s)
 
 1. El reloj llega a cero.
-2. Rao abre únicamente el canal limpio.
+2. Elin abre únicamente el canal limpio.
 3. Voss: “Envíen.”
 4. Silencio.
 5. Respuesta Velari orgánica/bioluminiscente.
@@ -359,7 +359,7 @@ Una UI debe mostrar **una sola idea dramática por plano**. No llenar pantallas 
 ### Conservar
 
 - mensaje de Zao;
-- una frase que explique la limitación de Rao;
+- una frase que explique la limitación de Elin;
 - una objeción de Harlan;
 - orden de revocación de Voss;
 - una línea ideológica de Harlan en el clímax;
@@ -393,7 +393,7 @@ La reducción debe sentirse diseñada como película corta, no como trailer del 
 - urgencia creciente sólo al comenzar la transmisión;
 - muerte sugerida, no mostrada.
 
-### Segundo tercio — Rao / señal
+### Segundo tercio — Elin / señal
 
 - encuadres cerrados y geometría controlada;
 - dos relojes máximos, pero nunca simultáneos: primero estado del payload, después canal Velari;
@@ -419,7 +419,7 @@ Limitar a cuatro:
 
 - Zao;
 - Harlan;
-- Rao;
+- Elin;
 - Voss.
 
 ### Sets recurrentes
@@ -475,7 +475,7 @@ La garganta piloto no transporta el mensaje de Zao ni telemetría de misión. El
 
 ### No destruir el núcleo/payload como solución
 
-La solución es **aislar**, no borrar. Esto debe mantenerse porque Zao prepara conceptualmente a Rao para esa estrategia y porque evita un “botón mágico” en el clímax.
+La solución es **aislar**, no borrar. Esto debe mantenerse porque Zao prepara conceptualmente a Elin para esa estrategia y porque evita un “botón mágico” en el clímax.
 
 ---
 
@@ -488,13 +488,13 @@ Para que el repositorio pueda representar correctamente ambos cortes, las fusion
 ```text
 Zao      -> Zao
 Harlan   -> Harlan
-Rao      -> Rao + funciones de detección/comunicaciones de Cael
+Elin      -> Elin + funciones de detección/comunicaciones de Cael
 Voss     -> Voss
 Sorell   -> personaje off-screen; conserva autoría del saludo pasivo
-Cael     -> no aparece; funciones necesarias absorbidas por Rao/UI
+Cael     -> no aparece; funciones necesarias absorbidas por Elin/UI
 ```
 
-Esto no significa que Rao “sea” Cael o que Sorell haya dejado de existir en el universo. Es una **reasignación de beats dramáticos específica del cut**.
+Esto no significa que Elin “sea” Cael o que Sorell haya dejado de existir en el universo. Es una **reasignación de beats dramáticos específica del cut**.
 
 ---
 
@@ -519,7 +519,7 @@ La versión de 30 minutos no debe modificarse para reflejar estas fusiones.
 ## 15. Orden recomendado de implementación
 
 1. **Duplicar el script de 30 minutos como cut derivado**, sin modificar el original.
-2. Reducir el elenco visible a Zao, Harlan, Rao y Voss.
+2. Reducir el elenco visible a Zao, Harlan, Elin y Voss.
 3. Crear las siete secuencias descritas en este documento.
 4. Migrar sólo los beats imprescindibles desde las 17 escenas originales.
 5. Reescribir diálogo según el límite de 350–500 palabras.
@@ -540,12 +540,12 @@ La versión reducida está lista para producción sólo si un espectador que no 
 - ¿Por qué no pudo simplemente avisar al resto de la tripulación?
 - ¿Qué hizo con la advertencia?
 - ¿Por qué el mensaje llega mucho después?
-- ¿Qué había descubierto Rao por su cuenta?
-- ¿Qué información aporta el mensaje que Rao no tenía?
+- ¿Qué había descubierto Elin por su cuenta?
+- ¿Qué información aporta el mensaje que Elin no tenía?
 - ¿Por qué la voz de Zao no basta por sí sola como prueba?
 - ¿Cómo se demuestra que Harlan controla el override?
 - ¿Qué intenta hacer Harlan?
-- ¿Qué hace Rao para impedirlo?
+- ¿Qué hace Elin para impedirlo?
 - ¿Por qué sigue siendo posible enviar un saludo limpio?
 - ¿Qué significa dramáticamente “Llegaste a tiempo”?
 

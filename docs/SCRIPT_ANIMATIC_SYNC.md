@@ -2,16 +2,16 @@
 
 El **guion estructurado** (`data/scripts/light-delay-main-short.json`) es la fuente de verdad narrativa vigente y alimenta también el animatic. `legacy-site/guion-30-minutos.html` documenta la procedencia y permanece como referencia de regresión; ya no debe editarse como autoridad paralela. Los desajustes se registran aquí sin duplicar diálogo ni subtítulos.
 
-## Conteos vigentes (reescritura 2026-08-26)
+## Conteos vigentes (revisión 2026-08-29)
 
 | Métrica | Guion / cues | Animatic legacy | JSON |
 | --- | ---: | ---: | ---: |
 | Escenas | 17 | 17 | 17 escenas |
-| Tomas / takes | — | 112 tomas | 112 shots / 112 takes |
-| Diálogos / subtítulos | 97 cues | 97 subs | 97 placements únicos |
+| Tomas / takes | — | 124 tomas | 124 shots / 124 takes |
+| Diálogos / subtítulos | 99 cues | 99 subs | 99 placements únicos |
 | Imágenes únicas disponibles | — | 100 PNG | 100 frames + 1 placeholder técnico |
 
-Todas las tomas del main short y del tráiler están marcadas `needs_regeneration` (canon_mismatch) tras la revisión de orientación de cubiertas y exteriores. Los frames legacy siguen en disco como referencia hasta regenerar. No hay cue de diálogo sin placement.
+En el main short, 112 takes reutilizados son candidatos `needs_regeneration` y 12 tomas nuevas usan placeholder con estado `needs_replacement`. El tráiler contiene 29 candidatos `needs_regeneration`. Son marcas provisionales: la producción visual no se habilita hasta cerrar texto, causalidad y cobertura del guion consumidor. Los frames legacy siguen en disco como referencia. No hay cue de diálogo sin placement.
 
 ## Resumen del matching automático inicial (histórico)
 
@@ -42,7 +42,7 @@ _Ninguno._
 - ESC. 6: animatic «Mensaje hacia el futuro» vs guion «INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO / LÁSER EXTERIOR — CONTINUO»
 - ESC. 7: animatic «Asesinato, coartada y cruce» vs guion «INT./EXT. CELESTIAL ARDOR — NÚCLEO / CILINDROS AXIALES / LA BOCA — CONTINUO»
 - ESC. 8: animatic «El cuerpo» vs guion «INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO»
-- ESC. 9: animatic «Investigación y sospecha» vs guion «INT. CELESTIAL ARDOR — PUENTE / NÚCLEO / ENFERMERÍA — MÁS TARDE»
+- ESC. 9: animatic «Investigación y credencial comprometida» vs guion «INT. CELESTIAL ARDOR — PUENTE / NÚCLEO / ENFERMERÍA — MÁS TARDE»
 - ESC. 10: animatic «La mitad técnica del misterio» vs guion «INT. CELESTIAL ARDOR — PUESTO TÉCNICO DEL PUENTE — MÁS TARDE»
 - ESC. 11: animatic «Harlan intenta cegar la nave» vs guion «INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO»
 - ESC. 12: animatic «La doble llave» vs guion «INT. CELESTIAL ARDOR — PUENTE DE MANDO — MINUTOS DESPUÉS»
@@ -54,8 +54,8 @@ _Ninguno._
 
 ### Duraciones / objetivos
 
-- Animatic: suma de `target` por escena = 1800 s.
-- Guion: objetivo declarado 30:00. Coherente a nivel meta.
+- Animatic: suma vigente de duraciones de toma = 1839,5 s (30:39,5).
+- Guion: objetivo declarado = 1800 s (30:00). La diferencia de 39,5 s es deuda de montaje, no un conteo alternativo.
 
 ### Limitaciones de la extracción
 

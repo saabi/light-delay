@@ -1,8 +1,18 @@
 # Changelog
 
+## 2026-08-29 — Sincronización causal y canon multi-script
+
+- Fijadas la cronología maestra (57 h 48 min local, ~23 h 15 min de señal, encuentro remoto T+24 h), la terminología del sistema diplomático y la matriz de conocimiento/causa-efecto en `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
+- El corto declara su tripulación completa de ocho; festival conserva seis, tráiler seis y largo catorce. `character:rao` y los paths siguen estables, pero el nombre operativo pasa a **Elin** para evitar confusión con Zao.
+- Integrada en corto y largo la broma seca de Cael sobre el nombre/forma de la Ardor, reutilizando cobertura en el corto sin alterar los 124 IDs de toma; festival y tráiler la omiten.
+- Corregida la continuidad bajo 1 g del clímax mediante cubierta de mando, ascensor central y ramal del núcleo; festival deja preparada la cuarentena antes de autenticar el mensaje.
+- Taxonomía de comparación ampliada de 11 a 13 dimensiones. Informes i18n alineados con el overlay real, arte acotado a entidades del guion y estados `complete` / `debt` / `not_applicable` en resúmenes.
+- Reparado `build:trailer` para preservar 29 estados `needs_regeneration`; inventario visual aclarado como 141 candidatos de regeneración + 12 placeholders de reemplazo, todos deferidos hasta el cierre causal y de cobertura por guion.
+- Documentación y validadores sincronizados a 17 escenas, 124 tomas/takes, 30:39,5 de montaje derivado y 1070 cadenas inglesas. No se regeneraron imágenes.
+
 ## 2026-08-29 — Ritmo de diálogo y escena del láser (124 tomas)
 
-- `light-delay-main-short`: 112→**124** tomas — reparto de diálogo en escena 1 (0 multi-speaker), INSERT de consola en escena 6 (`shot-06-09`), división de `shot-12-01`/`shot-12-09`; montaje ~30:35. Documentado en `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md`.
+- `light-delay-main-short`: 112→**124** tomas — reparto de diálogo en escena 1 (0 multi-speaker), INSERT de consola en escena 6 (`shot-06-09`), división de `shot-12-01`/`shot-12-09`; montaje derivado 30:39,5. Documentado en `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md`.
 - `validate:data` espera 124 tomas canónicas; assets Velari diferidos; bloqueo Blender y briefs Higgsfield Proxima/Ardor acoplados.
 
 ## 2026-08-28 — Rutas de informes editoriales

@@ -4,14 +4,15 @@
 
 ### Cortometraje completo
 
-- Duración objetivo actual: 30:00.
-- Base: guion canónico de 17 escenas y animatic de 112 tomas que reutilizan 100 frames; 33 takes requieren stills definitivos.
+- Duración objetivo: 30:00; montaje de datos vigente: 30:39,5.
+- Base: guion canónico de 17 escenas y animatic de 124 tomas que reutiliza 100 frames; 112 reutilizaciones son candidatas a regeneración y 12 tomas nuevas usan placeholder.
 - El objetivo de duración debe validarse con lectura y montaje reales.
+- La producción visual está bloqueada por guion hasta cerrar continuidad causal, placements y cobertura. No se regeneran imágenes como parte de la sincronización narrativa.
 
 ### Festival Cut
 
 - Duración propuesta: 4:30–5:00.
-- Núcleo narrativo previsto: sabotaje de Zao → mensaje tardío → revelación sobre Harlan → Rao evita la transmisión → contacto Velari.
+- Núcleo narrativo previsto: sabotaje de Zao → mensaje tardío → revelación sobre Harlan → Elin evita la transmisión → contacto Velari.
 - Existe un borrador estructurado de siete escenas con causalidad revisada, pero todavía no tiene shot list, takes ni imágenes canónicas. No debe confundirse con un simple recorte automático.
 
 ## Higgsfield

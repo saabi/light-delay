@@ -4,6 +4,20 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 
 ## Prioridad alta
 
+### Cierre causal y de cobertura antes de producir imágenes
+
+- **Fuente:** `docs/CONTINUIDAD_CAUSAL_GUIONES.md` y los informes `report:*`.
+- **Problema:** los informes detectan 57 cues de acción sin placement, 121/124 tomas del corto sin binding de personajes, 68 tomas sin propósito y 12 sin framing; festival y largo no tienen shot list. Algunos reportes muestran un cero engañoso cuando una dimensión no aplica o todavía no existe.
+- **Orden:** cerrar por guion texto y causalidad → placements/cobertura → bindings/performance necesarios → bloqueo de tomas → habilitación visual. No rellenar campos por volumen si no mejoran continuidad o producción.
+- **Compuerta:** corto, festival, tráiler y largo se habilitan de forma independiente. Un recurso compartido espera a todos sus consumidores o recibe una variante explícita.
+- **Cierre:** cada acción depende de información disponible para el personaje; los beats imprescindibles tienen cobertura; los informes distinguen `complete`, deuda y `not_applicable`; ninguna regeneración empieza antes del cierre del guion correspondiente.
+
+### Validez de los informes editoriales
+
+- **Problema:** `dialogue-i18n` busca variantes embebidas aunque el proyecto usa `data/translations/public.en.json`; `visual-art` repite el catálogo global por guion; festival/largo pueden parecer completos pese a carecer de tomas.
+- **Trabajo:** hacer que i18n use la misma autoridad que `validate:translations`, acotar arte a entidades declaradas/empleadas y declarar aplicabilidad en todos los informes. Mantener los snapshots generados fuera de la autoridad documental.
+- **Cierre:** los informes no producen falsos verdes ni duplican una arquitectura de traducción descartada.
+
 ### Autoridad de datos y extractor legacy seguro
 
 - **Archivos afectados:** `package.json`, `scripts/extract-legacy.mjs`, `scripts/migrate-multi-script.mjs`, `README.md` y documentación de migración.
@@ -22,8 +36,8 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 
 ### Gate de CI, formato y runtime soportado
 
-- **Archivos afectados:** `.nvmrc`, `.github/workflows/pages.yml`, configuración de Playwright/Prettier y los 18 archivos señalados por `npm run lint`.
-- **Problema:** Node 25 está fuera de soporte; CI no ejecuta lint ni E2E; `npm run lint` informa 18 archivos fuera de formato pero hoy termina con código 0, por lo que no funciona como gate estricto. Las 14 pruebas browser pasan localmente, pero no protegen el despliegue.
+- **Archivos afectados:** `.nvmrc`, `.github/workflows/pages.yml`, configuración de Playwright/Prettier y los archivos señalados por `npm run lint`.
+- **Problema:** Node 25 está fuera de soporte; CI no ejecuta lint ni E2E; `npm run lint` informa actualmente 34 archivos fuera de formato pero termina con código 0, por lo que no funciona como gate estricto. Las regresiones browser no protegen el despliegue mientras queden fuera de CI.
 - **Trabajo:** migrar a una línea LTS soportada, formatear el árbol, ejecutar lint y Playwright en PR/push, y conservar descarga LFS + build con `BASE_PATH`.
 - **Cierre:** instalación limpia, validación, check, lint, unit, E2E y build Pages pasan en CI sobre Node LTS.
 
@@ -39,17 +53,14 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 
 ## Prioridad media
 
-### Regeneración de stills del animatic (141 tomas)
+### Regeneración y reemplazo de stills del animatic (deferida)
 
-- **Archivos afectados:** todos los takes de `light-delay-main-short.json` (112) y `light-delay-trailer.json` (29).
+- **Inventario provisional:** 141 candidatos `needs_regeneration` (112 reutilizaciones del corto + 29 del tráiler) y 12 placeholders `needs_replacement` exclusivos del corto. El corto tiene 124 tomas en total; no son 124 regeneraciones existentes.
 - **Problema:** los stills del animatic —interiores y exteriores— no reflejan la orientación actual de la Ardor (cubiertas perpendiculares al progrado) ni la revisión visual de exteriores.
-- **Estado:** cada take tiene `imageStatus.status = needs_regeneration` y `reasons: [canon_mismatch]` con brief de reemplazo.
+- **Estado:** los estados actuales son candidatos editoriales, no una cola de producción autorizada. Las 12 tomas sin imagen propia conservan placeholder y requieren reemplazo, no «regeneración».
 - **Informes:** `npm run report:editorial` (cola, completitud, arte faltante, briefs de regeneración).
-- **Cierre:** cada take marcado se sustituye por un still coherente sin cambiar su `shotId`.
-
-### Stills definitivos para la secuencia de Zao (histórico)
-
-- **Nota:** las 33 tomas reescritas de escenas 5–8 ya no usan marca `placeholder`; forman parte de la cola global de 112 tomas del main short.
+- **Bloqueo:** deferir hasta que el guion consumidor supere el cierre causal y de cobertura. No generar imágenes sin autorización expresa.
+- **Cierre:** cada take realmente marcado se sustituye por un still coherente sin cambiar su `shotId`; placeholders y reutilizaciones quedan identificados por separado.
 
 ### Presupuesto físico del enlace láser
 
@@ -63,12 +74,6 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 - **Archivos afectados:** hojas del puente/nave, frames con ventanal frontal, cubiertas longitudinales o núcleo axial, biblia visual y metadatos asociados.
 - **Problema:** parte del arte antecede a las cubiertas transversales, los tres troncos y el núcleo excéntrico.
 - **Cierre:** arte y metadatos respetan la referencia técnica sin regenerar imágenes hasta recibir autorización expresa.
-
-### Persecución posterior bajo 1 g
-
-- **Archivos afectados:** escenas 13–14 del corto y equivalentes derivados.
-- **Problema:** algunos desplazamientos se describen como carreras horizontales incompatibles con cubiertas transversales bajo desaceleración.
-- **Cierre:** revisar el uso del ascensor, cilindro central y ramal del núcleo sin alterar el resultado del clímax.
 
 ### Atraque y escala de Proxima
 

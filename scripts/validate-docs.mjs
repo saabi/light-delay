@@ -51,10 +51,10 @@ const withExactModel = assets.filter(
 
 if (main.scenes.length !== 17)
 	errors.push(`main script: expected 17 scenes, got ${main.scenes.length}`);
-if (main.shots.length !== 112)
-	errors.push(`main script: expected 112 shots, got ${main.shots.length}`);
-if (main.takes.length !== 112)
-	errors.push(`main script: expected 112 takes, got ${main.takes.length}`);
+if (main.shots.length !== 124)
+	errors.push(`main script: expected 124 shots, got ${main.shots.length}`);
+if (main.takes.length !== 124)
+	errors.push(`main script: expected 124 takes, got ${main.takes.length}`);
 if (animaticAssets !== 100)
 	errors.push(`assets: expected 100 legacy animatic frames, got ${animaticAssets}`);
 if (referenceAssets !== 31)
@@ -66,16 +66,16 @@ if (withoutSource !== 131)
 if (withExactModel !== 0)
 	errors.push(`assets: expected exact model metadata to remain unknown, got ${withExactModel}`);
 
-requireText('AGENTS.md', '17 escenas y el animatic principal 112 tomas');
-requireText('README.md', 'animatic textual de 112 tomas');
+requireText('AGENTS.md', '17 escenas y el animatic principal 124 tomas');
+requireText('README.md', 'animatic textual de 124 tomas');
 requireText('docs/ASSET_PROVENANCE.md', '**132 imágenes registradas**');
 requireText('docs/ASSET_PROVENANCE.md', '31 imágenes de referencia');
-requireText('docs/PROJECT_STATUS.md', '17 escenas, 112 tomas y 30:00');
+requireText('docs/PROJECT_STATUS.md', '17 escenas, 124 tomas y 30:39,5');
 requireText(
 	'docs/SCRIPT_ANIMATIC_SYNC.md',
-	'| Tomas / takes | — | 112 tomas | 112 shots / 112 takes |'
+	'| Tomas / takes | — | 124 tomas | 124 shots / 124 takes |'
 );
-requireText('docs/PRODUCTION_PLAN.md', 'animatic de 112 tomas que reutilizan 100 frames');
+requireText('docs/PRODUCTION_PLAN.md', 'animatic de 124 tomas que reutiliza 100 frames');
 requireText('docs/technical/EXTERNAL_SCENES_AND_ANIMATION.md', '| Júpiter | ✅ bloqueo 3D |');
 
 forbidText('docs/WORKFLOW.md', '`data/canon.json`');

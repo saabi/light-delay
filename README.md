@@ -7,11 +7,11 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 - Sitio público bilingüe: inglés en `/` y español en `/es/`, con selector de idioma, metadatos SEO, sitemap, identidad visual y landing de presentación. El español continúa siendo la fuente editorial.
 - Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
 - Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
-- Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
+- Guion corto canónico: 17 escenas, objetivo inicial de 30:00 y montaje de datos actual de 30:39,5.
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
-- Animatic: 124 tomas con image take, encuadre, audio, subtítulos y duración editable (~30:35); todas las tomas del main short y del tráiler están marcadas para regeneración (`needs_regeneration`). Un placeholder técnico cubre imágenes ausentes o fallidas.
+- Animatic textual de 124 tomas con image take, encuadre, audio, subtítulos y duración editable (30:39,5). En el corto hay 112 reutilizaciones candidatas a regeneración y 12 tomas nuevas que usan el placeholder técnico y necesitan reemplazo; el tráiler suma 29 candidatas. La producción visual está deferida hasta cerrar causalidad y cobertura por guion.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.

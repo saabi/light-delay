@@ -11,7 +11,7 @@ El futuro largometraje comparte `continuity:light-delay-primary` y adopta como b
 - Investigación en tres actos con turnos de guardia y fractura gradual de confianza.
 - Ansel Vega como peón involuntario y pista falsa acotada, sin absolver a Harlan.
 - Wei como responsable de comunicaciones y detección de la señal.
-- Hassan como corroboración física independiente del análisis de Rao.
+- Hassan como corroboración física independiente del análisis de Elin.
 - Carvalho como continuidad del trabajo lingüístico de Sorell durante su confinamiento.
 - Okoye ante una decisión de seguridad que hace visible la dimensión humana de la crisis.
 - Volkov vinculado a controles manuales sólo hasta donde lo respalda la fuente.
@@ -26,7 +26,7 @@ El futuro largometraje comparte `continuity:light-delay-primary` y adopta como b
 - La estación Velari y la nave emisaria son objetos distintos.
 - El relé físico, el mensaje óptico y el saludo pasivo de sólo lectura forman la cadena de evidencia.
 - Sorell no puede quedar condenada por un único registro falsificable.
-- Rao contiene una rama preparada y acotada; la solución no es mágica.
+- Elin contiene una rama preparada y acotada; la solución no es mágica.
 - La respuesta Velari es un reconocimiento limitado, no una paz o confianza completas.
 
 ## Material rechazado o reescrito
@@ -39,7 +39,7 @@ El futuro largometraje comparte `continuity:light-delay-primary` y adopta como b
 
 ## Reparto recuperado
 
-La documentación contiene catorce nombres: Zao, Voss, Harlan, Sorell, Rao, Cael, Marcus Keene, Ansel Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La afirmación anterior de doce personajes queda superada. Volkov tiene una acción técnica parcial en la fuente; la función de Tanaka no está documentada y permanece pendiente.
+La documentación contiene catorce nombres: Zao, Voss, Harlan, Sorell, Elin, Cael, Marcus Keene, Ansel Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La afirmación anterior de doce personajes queda superada. Volkov tiene una acción técnica parcial en la fuente; la función de Tanaka no está documentada y permanece pendiente.
 
 ## Candidatos para retropropagación
 

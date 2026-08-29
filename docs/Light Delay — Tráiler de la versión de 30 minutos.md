@@ -65,9 +65,9 @@ Expansión de la garganta. Celestial Ardor atraviesa.
 `23 HORAS DESPUÉS`  
 `CONTACTO VELARI — APROXIMACIÓN FINAL`
 
-Rao trabaja contra reloj.
+Elin trabaja contra reloj.
 
-**RAO**  
+**ELIN**<br>
 Sé qué hace.
 
 Beat.
@@ -90,7 +90,7 @@ Forma de onda débil.
 
 `ORIGEN: TRANSMISOR DE CONTINGENCIA`
 
-Montaje: Rao — `OVR-7C41 / TITULAR CIFRADO`; Sorell con el soporte pasivo; núcleo; reloj de contacto.
+Montaje: Elin — `OVR-7C41 / TITULAR CIFRADO`; Sorell con el soporte pasivo; núcleo; reloj de contacto.
 
 Entre estática aparece la voz de Zao:
 
@@ -102,7 +102,7 @@ Montaje cada vez más rápido:
 
 `CANAL VELARI — 01:32`
 
-Rao aislando rutas.
+Elin aislando rutas.
 
 Voss girándose bruscamente.
 
@@ -114,9 +114,9 @@ Cael en navegación.
 
 Un fragmento gigantesco y orgánico de la estación Velari emerge en la oscuridad.
 
-Primer plano de Rao.
+Primer plano de Elin.
 
-**RAO**  
+**ELIN**<br>
 Si me equivoco, hablamos por él.
 
 Negro.

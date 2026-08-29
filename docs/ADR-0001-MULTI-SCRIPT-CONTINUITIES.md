@@ -32,7 +32,7 @@ These versions may:
 - have independent animatic timing and selected takes;
 - support different dialogue and subtitle languages.
 
-The condensed version already demonstrates this requirement. Its cast was reduced from the fourteen names recovered from the older feature documents to six principal characters: Zao, Voss, Harlan, Rao, Sorell and Cael. Wei's communications function was merged into Cael. Other long-version characters were removed, reduced to mentions or reserved for the longer version. This is not adequately described as a visual character variant or as a runtime filter over the longer script.
+The condensed version already demonstrates this requirement. Its cast was reduced from the fourteen names recovered from the older feature documents to six principal characters: Zao, Voss, Harlan, Elin, Sorell and Cael. Wei's communications function was merged into Cael. Other long-version characters were removed, reduced to mentions or reserved for the longer version. This is not adequately described as a visual character variant or as a runtime filter over the longer script.
 
 The data model therefore needs to represent complete independent scripts while preserving shared project entities and traceable relationships between versions.
 
@@ -624,15 +624,15 @@ Missing data is reported as unspecified. Version 1 does not infer character merg
 
 With these decisions, the data model can fully describe the previously discussed condensed version:
 
-- a six-character principal cast: Zao, Voss, Harlan, Rao, Sorell and Cael;
+- a six-character principal cast: Zao, Voss, Harlan, Elin, Sorell and Cael;
 - Wei's communications function merged into Cael;
 - Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov and Tanaka omitted, reduced to mentions or retained only in the long version;
 - a simplified Sorell subplot;
 - Sorell accused through planted evidence;
-- Rao handling the digital containment from a protected terminal;
+- Elin handling the digital containment from a protected terminal;
 - Voss and Sorell handling the physical intervention;
 - Sorell supplying the clean read-only greeting;
-- its own acts, 17 scenes, beats, cues, 112 shots/takes and approximately 30-minute target;
+- its own acts, 17 scenes, beats, cues, 124 shots/takes and approximately 30-minute target;
 - reused or unique images and other assets;
 - continuity-specific entity variants;
 - multilingual dialogue, subtitles and voice assets;
