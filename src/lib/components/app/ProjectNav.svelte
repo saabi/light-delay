@@ -23,6 +23,11 @@
 			label: m.nav_compare(),
 			match: '/compare'
 		},
+		{
+			href: withLocale('/reports'),
+			label: m.nav_reports(),
+			match: '/reports'
+		},
 		{ href: withLocale('/art'), label: m.nav_art(), match: '/art' },
 		{ href: withLocale('/entities/characters'), label: m.nav_entities(), match: '/entities' },
 		{

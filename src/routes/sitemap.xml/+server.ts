@@ -9,7 +9,7 @@ const escapeXml = (value: string) =>
 	value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
 export const GET = () => {
-	const paths = new Set<string>(['/', '/project/', '/art/']);
+	const paths = new Set<string>(['/', '/project/', '/art/', '/reports/']);
 	for (const script of listScripts()) {
 		const id = encodeScriptId(script.id);
 		paths.add(`/script/${id}/`);

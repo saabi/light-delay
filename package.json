@@ -38,6 +38,7 @@
 		"report:dialogue-i18n": "node scripts/report-dialogue-i18n.mjs",
 		"report:regen-briefs": "node scripts/report-regen-briefs.mjs",
 		"report:editorial": "node scripts/report-editorial.mjs",
+		"report:all": "node scripts/report-dialogue-timing.mjs --all && node scripts/report-editorial.mjs --all",
 		"mark:takes-regen": "node scripts/mark-takes-needs-regeneration.mjs",
 		"validate:data": "node scripts/validate-data.mjs",
 		"validate:docs": "node scripts/validate-docs.mjs",

@@ -56,8 +56,14 @@
 			<p>{m.landing_card_art_body()}</p>
 			<b>{m.action_open()} →</b></a
 		>
-		<a class="card" href={withLocale('/entities/characters')}
+		<a class="card" href={withLocale('/reports')}
 			><span>04</span>
+			<h2>{m.nav_reports()}</h2>
+			<p>{m.reports_lede()}</p>
+			<b>{m.action_open()} →</b></a
+		>
+		<a class="card" href={withLocale('/entities/characters')}
+			><span>05</span>
 			<h2>{m.nav_entities()}</h2>
 			<p>{m.landing_card_archive_body()}</p>
 			<b>{m.action_open()} →</b></a
