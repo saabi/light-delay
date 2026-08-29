@@ -40,7 +40,11 @@ npm run report:outline-gaps -- --target treatment
 npm run report:outline-gaps -- --target script
 npm run report:outline-gaps -- --target animatic
 npm run report:outline-readability
+npm run report:outline-story
+npm run check:trailer-spoilers
 ```
+
+`report:outline-story` exporta sólo sinopsis e hitos `story`: es la lectura de continuidad que debe funcionar sin abrir implementación. `check:trailer-spoilers` falla si el guion o la escaleta del avance identifican al culpable, confirman el envío/recepción o asientan positivamente la muerte de Zao.
 
 `npm run seed:outline -- --script <slug> --output <ruta-de-borrador>` sólo crea una plantilla fuera de `data/outlines/`, nunca sobrescribe una escaleta canónica y deja marcadores explícitos para autoría humana.
 

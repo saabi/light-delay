@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — Columna vertebral causal y suspenso del tráiler
+
+- Reescritas las capas `story` de main y festival para que cuenten causa, decisión y consecuencia sin abrir detalles; Festival establece desde su tercer hito quién advierte al puente, qué alcanza a decir y por qué Harlan actúa.
+- Main, festival y largo asientan la muerte fuera de campo mediante impacto diegético, cese del forcejeo/respiración y negro sostenido. El tráiler corta antes del ataque pero mantiene música y negro breve, sin confirmar fatalidad.
+- El tráiler ya no nombra ni encuadra a Harlan, no llega a 100 % de transmisión y sustituye la recepción por la auditoría de la carga y un override anónimo; escaleta, metadatos y traducciones respetan la misma omisión.
+- Añadidos `report:outline-story` para leer las escaletas sin implementación y `check:trailer-spoilers` con prueba unitaria; la ausencia de enlace causal en un hito `story` pasa a ser error.
+
 ## 2026-08-29 — Escaleta en `/project/`
 
 - Tarjeta Outline (01) antes que Guion en la cuadrícula del archivo, y enlace Escaleta junto a Animatic en la lista por cut.

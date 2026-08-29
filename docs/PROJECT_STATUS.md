@@ -4,7 +4,9 @@ Fecha de corte: 2026-08-29.
 
 ## Completado
 
-- **Escaletas causales por cut:** los cuatro scripts tienen sinopsis y una capa `story` legible (12 main, 5 tráiler, 12 largo, 12 festival) sobre el detalle editorial existente (17/9/28/44). Los hitos explican decisiones y consecuencias; el detalle conserva IDs históricos y cobertura separada para tratamiento, guion y animatic. Ya no se regeneran desde resúmenes de escena.
+- **Escaletas causales por cut:** los cuatro scripts tienen sinopsis y una capa `story` legible (12 main, 7 tráiler, 12 largo, 15 festival) sobre el detalle editorial existente (17/9/28/44). Los hitos cuentan una historia continua con los detalles cerrados; el detalle conserva IDs históricos y cobertura separada para tratamiento, guion y animatic. Ya no se regeneran desde resúmenes de escena.
+- **Lectura aislada y protección del tráiler:** `report:outline-story` exporta sólo la columna vertebral narrativa para revisión humana; la falta de enlaces causales en `story` es error. `check:trailer-spoilers` y su prueba de regresión impiden identificar al culpable o confirmar envío, recepción y muerte en el avance.
+- **Fatalidad fuera de campo diferenciada:** main, festival y largo confirman la muerte de Zao mediante golpe seco, cese de forcejeo/respiración y negro sostenido. El tráiler conserva el mismo corte previo al ataque, pero sale pronto del negro con música continua y deja inciertos tanto la muerte como el envío.
 - **Razonamiento crítico restaurado:** main, festival y largo explican en escaleta por qué Zao descarta Tierra (doble retardo hasta la Ardor) y Proxima (oclusión de Júpiter L2–L1), y por qué sólo sirve apuntar al corredor futuro. También conservan que Harlan supone erróneamente un envío a la Tierra, se tranquiliza, lamenta la suerte de Zao y suspira antes de matarla.
 - **Guion corto — ritmo, causalidad y láser:** 17 escenas, 124 tomas y 30:39,5 de montaje derivado; ocho tripulantes de misión declarados. Ver `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md` y `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
 - **Informes editoriales en web y CLI:** rutas dinámicas `/reports/` y exportación `npm run report:all` (12 informes × 4 guiones) desde un único `report-runner.mjs` compartido.
@@ -61,7 +63,7 @@ Fecha de corte: 2026-08-29.
 
 1. **Duración real.** Los 30:00 son el objetivo; el montaje de datos suma 30:39,5. Debe validarse mediante lectura cronometrada y luego con animación/video.
 2. **Festival Cut.** Datos con 7 escenas y **35 tomas** (A–D construidas); faltan E–G, imágenes canónicas y el array `sequences` sigue vacío. Ver escaleta y `docs/CUIDADOS_NARRATIVOS.md`.
-3. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta auditoría causal final, afinado de ritmo, posibles stills exclusivos de título y audio.
+3. **Tráiler.** Versión animatic operativa de 29 tomas: ya oculta identidad del culpable, éxito del envío/recepción y destino de Zao en datos, escaleta y descripciones. Falta afinado de ritmo, reemplazo de frames heredados por visuales que respeten ese encuadre, posibles stills exclusivos de título y audio.
 4. **Cobertura estructural.** Antes de habilitar imágenes deben resolverse por prioridad los placements, propósitos, framing y bindings que afecten continuidad o producción. Festival y largo no pueden figurar como completos mientras no tengan tomas.
 5. **Cobertura de Festival y largo.** El largo tiene tratamiento pero todavía no guion ni animatic; Festival conserva dos detalles parciales en D y E–G sin implementar en guion. La cobertura visual permanece abierta donde no existen `shotIds` y debe completarse sólo después de cerrar las tomas.
 6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
@@ -80,7 +82,7 @@ Fecha de corte: 2026-08-29.
 - Assets: 132 imágenes registradas en `static/assets/` (100 frames legacy, 31 referencias y 1 placeholder técnico). `legacy-site/assets/` permanece intacto como referencia.
 - Documentos prose: cinco páginas legacy extraídas y traducidas en `data/documents.json`; canon y tres referencias históricas/editoriales también exponen variante inglesa; validación exige paridad de bloques ES/EN y cobertura del ledger de migración.
 - Estado editorial: las traducciones inglesas permanecen en `draft`; el canon estructurado es todavía un `stub`; los cuatro scripts registrados continúan en `draft`.
-- Calidad de este pase: `validate:data` (incluido JSON Schema), `validate:docs`, `validate:translations`, `generated:check`, ledger causal, `svelte-check`, 74 pruebas unitarias y build estático pasan. E2E y lint estricto continúan fuera de CI; Vite mantiene el warning conocido del chunk de repositorios >500 kB.
+- Calidad de este pase: `validate:data` (incluido JSON Schema), `validate:docs`, `validate:translations`, `generated:check`, ledger causal, `svelte-check`, 77 pruebas unitarias y build estático pasan. E2E y lint estricto continúan fuera de CI; Vite mantiene el warning conocido del chunk de repositorios >500 kB.
 - Validación pendiente: los 132 assets registrados existen y el grafo actual no mostró referencias rotas en la auditoría puntual, pero el validador de CI no comprueba todavía paths físicos ni toda la integridad padre/hijo.
 
 ## Próxima fase técnica

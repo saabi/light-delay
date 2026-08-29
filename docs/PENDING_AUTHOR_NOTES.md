@@ -10,8 +10,8 @@ Pendientes: **151**
   - Origen: `data/characters.json` · `$.characters[19].notes[0]`
 - **data/characters.json:$.characters[20].notes[0]** [todo · open] — Recuperar o decidir función antes de escribir diálogo.
   - Origen: `data/characters.json` · `$.characters[20].notes[0]`
-- **data/outlines/light-delay-festival.json:$.steps[24].notes[0]** [continuity · open] — Observación 29/08/2026: el vínculo "relé físico → Harlan" no se dramatiza, sólo se afirma. En festival:outline-06 Zao dice en vivo "el relé físico apunta a—" sin completar la frase (cortada por el jamming); el nombre de Harlan sólo aparece aquí, en el mensaje grabado. Ninguna toma muestra cómo llega a esa conclusión específica. Defendible como compresión intencional (el documento de adaptación pide absorber exposición en overlays), pero a vigilar: si la Secuencia E resuelve la credencial de mando puramente desde el lado técnico de Elin, la omisión es inofensiva; si el guion necesita que el público siga el razonamiento de Zao paso a paso, faltaría un beat.
-  - Origen: `data/outlines/light-delay-festival.json` · `$.steps[24].notes[0]`
+- **data/outlines/light-delay-festival.json:$.steps[27].notes[0]** [continuity · open] — Observación 29/08/2026: el vínculo "relé físico → Harlan" no se dramatiza, sólo se afirma. En festival:outline-06 Zao dice en vivo "el relé físico apunta a—" sin completar la frase (cortada por el jamming); el nombre de Harlan sólo aparece aquí, en el mensaje grabado. Ninguna toma muestra cómo llega a esa conclusión específica. Defendible como compresión intencional (el documento de adaptación pide absorber exposición en overlays), pero a vigilar: si la Secuencia E resuelve la credencial de mando puramente desde el lado técnico de Elin, la omisión es inofensiva; si el guion necesita que el público siga el razonamiento de Zao paso a paso, faltaría un beat.
+  - Origen: `data/outlines/light-delay-festival.json` · `$.steps[27].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[0].notes[0]** [production · open] — Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[0].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[1].notes[0]** [production · open] — Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02.
@@ -254,31 +254,31 @@ Pendientes: **151**
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[0].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[1].notes[0]** [editorial · open] — Reutiliza frame de main:shot-01-08 (asset asset:animatic-01-08).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[1].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[10].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).
+- **data/scripts/light-delay-trailer.json:$.shots[10].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[10].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[11].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[11].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[12].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04).
+- **data/scripts/light-delay-trailer.json:$.shots[12].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-09 (asset asset:animatic-placeholder-missing-frame).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[12].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[13].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-08 (asset asset:animatic-06-06).
+- **data/scripts/light-delay-trailer.json:$.shots[13].notes[0]** [editorial · open] — Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[13].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[14].notes[0]** [editorial · open] — Reutiliza frame de main:shot-07-08 (asset asset:animatic-07-03).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[14].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[15].notes[0]** [editorial · open] — Reutiliza frame de main:shot-07-10 (asset asset:animatic-07-05).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[15].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[16].notes[0]** [editorial · open] — Reutiliza frame de main:shot-08-01 (asset asset:animatic-08-01).
+- **data/scripts/light-delay-trailer.json:$.shots[16].notes[0]** [editorial · open] — Reutiliza frame de main:shot-08-02 (asset asset:animatic-08-02).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[16].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[17].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[17].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[18].notes[0]** [editorial · open] — Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).
+- **data/scripts/light-delay-trailer.json:$.shots[18].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[18].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[19].notes[0]** [editorial · open] — Reutiliza frame de main:shot-12-01 (asset asset:animatic-12-01).
+- **data/scripts/light-delay-trailer.json:$.shots[19].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[19].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[2].notes[0]** [editorial · open] — Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[2].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[20].notes[0]** [editorial · open] — Reutiliza frame de main:shot-12-02 (asset asset:animatic-12-02).
+- **data/scripts/light-delay-trailer.json:$.shots[20].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[20].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[21].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-06 (asset asset:animatic-10-06).
+- **data/scripts/light-delay-trailer.json:$.shots[21].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[21].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[22].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-02 (asset asset:animatic-14-02).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[22].notes[0]`
@@ -300,12 +300,12 @@ Pendientes: **151**
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[4].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[5].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[5].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[6].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-02 (asset asset:animatic-05-02).
+- **data/scripts/light-delay-trailer.json:$.shots[6].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-03 (asset asset:animatic-04-03).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[6].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[7].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[7].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[8].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-04 (asset asset:animatic-05-04).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[8].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[9].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08).
+- **data/scripts/light-delay-trailer.json:$.shots[9].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-06 (asset asset:animatic-05-06).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[9].notes[0]`
 

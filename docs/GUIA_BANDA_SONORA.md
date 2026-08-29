@@ -15,6 +15,12 @@
 3. **Pocos registros, claros.** Tres texturas de entorno + un motivo humano mínimo bastan para unir el arco; no hace falta un tema por personaje.
 4. **Referencias de vena, no de pastiche.** Las menciones a bandas sonoras existentes indican clima y método, no citas a copiar.
 
+## Muerte de Zao: película y tráiler
+
+- En main, festival y largo, el encuadre abandona la violencia antes del acto. Durante un negro sostenido se oyen un forcejeo breve y un golpe corporal seco; después cesan el forcejeo y la respiración, y el negro permanece lo suficiente para confirmar la fatalidad sin mostrarla.
+- En el tráiler se reutiliza el corte previo al ataque, pero el negro es breve: no hay golpe resolutivo ni silencio mortuorio, la música mantiene el pulso y la imagen siguiente llega pronto. Deben quedar abiertos tanto el destino de Zao como el éxito de su transmisión.
+- La partitura no sustituye estos hechos. En la película deja espacio al sonido diegético y al silencio; en el tráiler preserva la pregunta sin fingir una respuesta.
+
 ---
 
 ## Registros
