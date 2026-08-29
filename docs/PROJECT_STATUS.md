@@ -32,7 +32,7 @@ Fecha de corte: 2026-08-29.
 - **Comparación entre guiones (V1.1):** taxonomía versionada de 13 dimensiones de canon —incluidas cronología y operaciones/gravedad de la Ardor— y 11 eventos, perfiles declarativos en los cuatro scripts y ruta `/compare/[scriptId]?against=<ScriptId>` para canon, eventos, reparto, variantes y funciones. La herramienta no infiere herencia de diálogo ni fusiones/divisiones.
 - **Largometraje recuperado:** `script:light-delay-long` registrado como tratamiento de 100 min, 4 actos, 28 escenas y 28 beats, sin cues/shots/takes inventados. Incorpora el canon vigente y conserva procedencia hacia documentos o escenas del corto.
 - **Reparto largo:** catorce nombres recuperados y catalogados: Zao, Voss, Harlan, Sorell, Elin, Cael, Keene, Vega, Wei, Hassan, Carvalho, Okoye, Volkov y Tanaka. La revisión autorizada está en `docs/REVISION_LARGOMETRAJE_RECUPERADO.md`.
-- **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, borrador festival (7 escenas, shots vacíos), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
+- **Multi-script / Festival Cut (ADR-0001 Accepted):** registro en `project.json`, IDs `character:…` / `main:…` / `festival:…`, scripts en `data/scripts/`, funciones narrativas, festival con 7 escenas y **33 tomas** (A–D; E–G pendientes), rutas `/script/[scriptId]` y `/animatic/[scriptId]`, overlay de animatic acotado por script+versión.
 - **Selector de guion adaptable:** `ScriptSwitcher` permanece visible en el rail de escritorio y dentro de la hoja móvil de `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
 - **Tráiler (~1:30):** `data/scripts/light-delay-trailer.json` — 9 secuencias del brief, 29 tomas reutilizando frames del main short; regenerable con `npm run build:trailer`.
 - **Modo película:** chrome alineado al legacy en landscape (`AnimaticPlayer` fullscreen con meta, detalles flotantes y barra inferior) y flujo frame → detalles → controles en portrait.
@@ -56,7 +56,7 @@ Fecha de corte: 2026-08-29.
 ## Decisiones abiertas
 
 1. **Duración real.** Los 30:00 son el objetivo; el montaje de datos suma 30:39,5. Debe validarse mediante lectura cronometrada y luego con animación/video.
-2. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 escenas y causalidad sincronizada; faltan shot list, takes e imágenes canónicas. El array `sequences` está vacío.
+2. **Festival Cut.** Datos con 7 escenas y **33 tomas** (A–D construidas); faltan E–G, imágenes canónicas y el array `sequences` sigue vacío. Ver escaleta y `docs/CUIDADOS_NARRATIVOS.md`.
 3. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta auditoría causal final, afinado de ritmo, posibles stills exclusivos de título y audio.
 4. **Cobertura estructural.** Antes de habilitar imágenes deben resolverse por prioridad los placements, propósitos, framing y bindings que afecten continuidad o producción. Festival y largo no pueden figurar como completos mientras no tengan tomas.
 5. **Escaletas por cut.** Festival tiene JSON + overlay EN; faltan main/trailer/long (`report:outline-missing`). Sembrar desde continuidad causal y `eventCoverage` sin inventar cobertura ausente; seguir `docs/GUIA_ESCALETA.md`.

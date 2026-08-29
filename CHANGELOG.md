@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-29 — Festival Cut: shot list A–D
+
+- `light-delay-festival`: 33 tomas/takes para secuencias A–D (E–G siguen planificadas). Docs de cuidados narrativos y plan de sync actualizados.
+
 ## 2026-08-29 — Guía de escaleta, i18n y gaps
 
 - Guía operativa `docs/GUIA_ESCALETA.md` y regla en `AGENTS.md`: crear/auditar escaleta antes de ampliar guion o animatic.

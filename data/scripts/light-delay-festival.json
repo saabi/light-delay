@@ -1,717 +1,3095 @@
 {
-	"schemaVersion": "1.0.0",
-	"script": {
-		"id": "script:light-delay-festival",
-		"projectId": "project:light-delay",
-		"continuityId": "continuity:light-delay-primary",
-		"title": "Light Delay — Festival Cut",
-		"version": "0.2.0-draft",
-		"status": "draft",
-		"kind": "festival_cut",
-		"targetDurationMs": 290000,
-		"lineage": {
-			"sourceScriptId": "script:light-delay-main-short",
-			"relationship": "adaptation",
-			"sourceVersion": "1.1.0-draft",
-			"notes": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes."
-		},
-		"declaredEntityRefs": [
-			{
-				"kind": "character",
-				"id": "character:zao"
-			},
-			{
-				"kind": "character",
-				"id": "character:voss"
-			},
-			{
-				"kind": "character",
-				"id": "character:harlan"
-			},
-			{
-				"kind": "character",
-				"id": "character:rao"
-			},
-			{
-				"kind": "character",
-				"id": "character:sorell"
-			},
-			{
-				"kind": "character",
-				"id": "character:okoye"
-			}
-		],
-		"comparisonProfile": {
-			"version": "1.1.0",
-			"canonClaims": [
-				{
-					"dimensionId": "canon:proxima-origin",
-					"valueId": "scientific-before-contact",
-					"statement": "Proxima fue una estación científica joviana anterior al contacto.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:ardor-deployment",
-					"valueId": "earth-built-prepositioned",
-					"statement": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:tunnel-geometry",
-					"valueId": "distributed-nodes",
-					"statement": "La boca es un campo distribuido de nodos, no un aro.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:tunnel-location",
-					"valueId": "sol-jupiter-l2",
-					"statement": "La boca local está en una órbita halo controlada cerca de L2.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:trajectory",
-					"valueId": "conventional-to-wormhole",
-					"statement": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:mission-timeline",
-					"valueId": "57h48-signal23h15-encounter24h",
-					"statement": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:ardor-gravity-operations",
-					"valueId": "thrust-gravity-coast-microgravity",
-					"statement": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:velari-objects",
-					"valueId": "station-and-emissary",
-					"statement": "La estación Velari y la nave emisaria son objetos distintos.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:evidence-chain",
-					"valueId": "relay-optical-readonly",
-					"statement": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:sorell-status",
-					"valueId": "false-log-not-conclusive",
-					"statement": "Sorell no queda culpabilizada por un único registro falsificable.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:rao-containment",
-					"valueId": "bounded-quarantine",
-					"statement": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:ending",
-					"valueId": "limited-acknowledgement",
-					"statement": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
-					"status": "established"
-				},
-				{
-					"dimensionId": "canon:zao-transmission-mechanics",
-					"valueId": "jam-wired-cut-dedicated-laser",
-					"statement": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
-					"status": "established"
-				}
-			],
-			"eventCoverage": [
-				{
-					"eventId": "event:embarkation",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-a"
-					]
-				},
-				{
-					"eventId": "event:anomaly-discovery",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-a",
-						"festival:scene-b"
-					]
-				},
-				{
-					"eventId": "event:zao-warning-death",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-b",
-						"festival:scene-c"
-					]
-				},
-				{
-					"eventId": "event:tunnel-crossing",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-c"
-					]
-				},
-				{
-					"eventId": "event:investigation",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-d"
-					]
-				},
-				{
-					"eventId": "event:message-reception",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-e"
-					]
-				},
-				{
-					"eventId": "event:harlan-exposed",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-e"
-					]
-				},
-				{
-					"eventId": "event:quarantine",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-f"
-					]
-				},
-				{
-					"eventId": "event:clean-greeting",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-f",
-						"festival:scene-g"
-					]
-				},
-				{
-					"eventId": "event:first-contact",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-g"
-					]
-				},
-				{
-					"eventId": "event:aftermath",
-					"status": "reworked",
-					"sceneIds": [
-						"festival:scene-g"
-					]
-				}
-			]
-		},
-		"characterFunctionAssignments": [
-			{
-				"functionId": "function:piloting",
-				"characterId": "character:rao",
-				"sourceCharacterIds": [
-					"character:cael"
-				],
-				"relationship": "merged",
-				"notes": "Cael omitido; detección/navegación absorbidas por Elin/UI."
-			},
-			{
-				"functionId": "function:communications",
-				"characterId": "character:rao",
-				"sourceCharacterIds": [
-					"character:cael"
-				],
-				"relationship": "merged",
-				"notes": "Elin asume detección/comunicaciones de Cael."
-			},
-			{
-				"functionId": "function:command",
-				"characterId": "character:voss",
-				"relationship": "unchanged"
-			},
-			{
-				"functionId": "function:investigation_payload",
-				"characterId": "character:rao",
-				"relationship": "unchanged"
-			},
-			{
-				"functionId": "function:diplomatic_greeting_authorship",
-				"characterId": "character:sorell",
-				"relationship": "unchanged",
-				"notes": "Aparece brevemente en el puente y en el hallazgo; conserva la autoría del saludo pasivo como asset/UI."
-			},
-			{
-				"functionId": "function:override_antagonist",
-				"characterId": "character:harlan",
-				"relationship": "unchanged"
-			},
-			{
-				"functionId": "function:security",
-				"characterId": "character:okoye",
-				"relationship": "unchanged"
-			}
-		],
-		"actIds": [
-			"festival:act-1"
-		]
-	},
-	"acts": [
-		{
-			"id": "festival:act-1",
-			"number": 1,
-			"title": "Festival Cut",
-			"dramaticPurpose": "Cadena causal condensada de ~4:50.",
-			"sceneIds": [
-				"festival:scene-a",
-				"festival:scene-b",
-				"festival:scene-c",
-				"festival:scene-d",
-				"festival:scene-e",
-				"festival:scene-f",
-				"festival:scene-g"
-			]
-		}
-	],
-	"sequences": [],
-	"scenes": [
-		{
-			"id": "festival:scene-a",
-			"actId": "festival:act-1",
-			"number": 1,
-			"order": 1,
-			"title": "La misión y la anomalía",
-			"locationId": "location:proxima-dock",
-			"setting": {
-				"interiorExterior": "INT_EXT",
-				"timeOfDay": "DÍA"
-			},
-			"summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
-			"dramaticPurpose": "Establecer espacio, misión y peligro sin exposición.",
-			"characterIds": [
-				"character:zao",
-				"character:rao",
-				"character:harlan",
-				"character:voss"
-			],
-			"beatIds": [
-				"festival:beat-a-01"
-			],
-			"shotIds": [],
-			"targetDurationMs": 25000
-		},
-		{
-			"id": "festival:scene-b",
-			"actId": "festival:act-1",
-			"number": 2,
-			"order": 2,
-			"title": "Zao descubre y transmite",
-			"locationId": "location:diplomatic-core-room",
-			"setting": {
-				"interiorExterior": "INT",
-				"timeOfDay": "DÍA"
-			},
-			"summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
-			"dramaticPurpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
-			"characterIds": [
-				"character:zao",
-				"character:harlan",
-				"character:voss",
-				"character:sorell"
-			],
-			"beatIds": [
-				"festival:beat-b-01"
-			],
-			"shotIds": [],
-			"targetDurationMs": 60000,
-			"secondaryLocationIds": [
-				"location:celestial-ardor-bridge",
-				"location:celestial-ardor-command-vestibule",
-				"location:celestial-ardor-service-cylinder"
-			],
-			"objectIds": [
-				"object:wired-comms-deck-patch-panel",
-				"object:optical-contingency-transmitter"
-			]
-		},
-		{
-			"id": "festival:scene-c",
-			"actId": "festival:act-1",
-			"number": 3,
-			"order": 3,
-			"title": "Harlan / muerte de Zao / salto temporal",
-			"locationId": "location:diplomatic-core-room",
-			"setting": {
-				"interiorExterior": "INT",
-				"timeOfDay": "DÍA"
-			},
-			"summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
-			"dramaticPurpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
-			"characterIds": [
-				"character:zao",
-				"character:harlan",
-				"character:sorell",
-				"character:voss",
-				"character:okoye"
-			],
-			"beatIds": [
-				"festival:beat-c-01"
-			],
-			"shotIds": [],
-			"targetDurationMs": 20000,
-			"secondaryLocationIds": [
-				"location:celestial-ardor-service-cylinder",
-				"location:celestial-ardor-bridge"
-			]
-		},
-		{
-			"id": "festival:scene-d",
-			"actId": "festival:act-1",
-			"number": 4,
-			"order": 4,
-			"title": "La mitad técnica",
-			"locationId": "location:celestial-ardor-bridge",
-			"setting": {
-				"interiorExterior": "INT",
-				"timeOfDay": "DÍA"
-			},
-			"summary": "Investigación de Elin contra reloj; detección de señal humana.",
-			"dramaticPurpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
-			"characterIds": [
-				"character:rao",
-				"character:voss",
-				"character:harlan"
-			],
-			"beatIds": [
-				"festival:beat-d-01"
-			],
-			"shotIds": [],
-			"targetDurationMs": 50000
-		},
-		{
-			"id": "festival:scene-e",
-			"actId": "festival:act-1",
-			"number": 5,
-			"order": 5,
-			"title": "La señal y la doble llave",
-			"locationId": "location:celestial-ardor-bridge",
-			"setting": {
-				"interiorExterior": "INT",
-				"timeOfDay": "DÍA"
-			},
-			"summary": "Doble llave causal; revocación; Harlan activa el override.",
-			"dramaticPurpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
-			"characterIds": [
-				"character:rao",
-				"character:voss",
-				"character:harlan",
-				"character:zao"
-			],
-			"beatIds": [
-				"festival:beat-e-01"
-			],
-			"shotIds": [],
-			"targetDurationMs": 45000
-		},
-		{
-			"id": "festival:scene-f",
-			"actId": "festival:act-1",
-			"number": 6,
-			"order": 6,
-			"title": "Override y cuarentena",
-			"locationId": "location:celestial-ardor-bridge",
-			"setting": {
-				"interiorExterior": "INT",
-				"timeOfDay": "DÍA"
-			},
-			"summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
-			"dramaticPurpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
-			"characterIds": [
-				"character:rao",
-				"character:voss",
-				"character:harlan"
-			],
-			"beatIds": [
-				"festival:beat-f-01"
-			],
-			"shotIds": [],
-			"targetDurationMs": 60000
-		},
-		{
-			"id": "festival:scene-g",
-			"actId": "festival:act-1",
-			"number": 7,
-			"order": 7,
-			"title": "Contacto / cierre",
-			"locationId": "location:velari-station",
-			"setting": {
-				"interiorExterior": "INT_EXT",
-				"timeOfDay": "DÍA"
-			},
-			"summary": "Envío, contacto y «Llegaste a tiempo».",
-			"dramaticPurpose": "Canal limpio, respuesta Velari y cierre emocional.",
-			"characterIds": [
-				"character:rao",
-				"character:voss"
-			],
-			"beatIds": [
-				"festival:beat-g-01"
-			],
-			"shotIds": [],
-			"targetDurationMs": 30000
-		}
-	],
-	"beats": [
-		{
-			"id": "festival:beat-a-01",
-			"sceneId": "festival:scene-a",
-			"order": 1,
-			"title": "La misión y la anomalía",
-			"purpose": "Establecer espacio, misión y peligro sin exposición.",
-			"summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
-			"cueIds": [],
-			"targetDurationMs": 25000
-		},
-		{
-			"id": "festival:beat-b-01",
-			"sceneId": "festival:scene-b",
-			"order": 1,
-			"title": "Zao descubre y transmite",
-			"purpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
-			"summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
-			"cueIds": [
-				"festival:cue-b-02",
-				"festival:cue-b-03",
-				"festival:cue-b-04",
-				"festival:cue-b-05",
-				"festival:cue-b-01",
-				"festival:cue-b-06"
-			],
-			"targetDurationMs": 60000
-		},
-		{
-			"id": "festival:beat-c-01",
-			"sceneId": "festival:scene-c",
-			"order": 1,
-			"title": "Harlan / muerte de Zao / salto temporal",
-			"purpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
-			"summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
-			"cueIds": [
-				"festival:cue-c-01",
-				"festival:cue-c-02",
-				"festival:cue-c-03"
-			],
-			"targetDurationMs": 20000
-		},
-		{
-			"id": "festival:beat-d-01",
-			"sceneId": "festival:scene-d",
-			"order": 1,
-			"title": "La mitad técnica",
-			"purpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
-			"summary": "Investigación de Elin contra reloj; detección de señal humana.",
-			"cueIds": [
-				"festival:cue-d-01",
-				"festival:cue-d-02"
-			],
-			"targetDurationMs": 50000
-		},
-		{
-			"id": "festival:beat-e-01",
-			"sceneId": "festival:scene-e",
-			"order": 1,
-			"title": "La señal y la doble llave",
-			"purpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
-			"summary": "Doble llave causal; revocación; Harlan activa el override.",
-			"cueIds": [],
-			"targetDurationMs": 45000
-		},
-		{
-			"id": "festival:beat-f-01",
-			"sceneId": "festival:scene-f",
-			"order": 1,
-			"title": "Override y cuarentena",
-			"purpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
-			"summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
-			"cueIds": [
-				"festival:cue-f-01"
-			],
-			"targetDurationMs": 60000
-		},
-		{
-			"id": "festival:beat-g-01",
-			"sceneId": "festival:scene-g",
-			"order": 1,
-			"title": "Contacto / cierre",
-			"purpose": "Canal limpio, respuesta Velari y cierre emocional.",
-			"summary": "Envío, contacto y «Llegaste a tiempo».",
-			"cueIds": [
-				"festival:cue-g-01",
-				"festival:cue-g-02"
-			],
-			"targetDurationMs": 30000
-		}
-	],
-	"cues": [
-		{
-			"id": "festival:cue-b-02",
-			"beatId": "festival:beat-b-01",
-			"order": 1,
-			"type": "action",
-			"text": "En microgravedad, Harlan llega al acceso axial del puente sin ser visto mientras Zao abre canal."
-		},
-		{
-			"id": "festival:cue-b-03",
-			"beatId": "festival:beat-b-01",
-			"order": 2,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "radio",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. El relé físico apunta a—",
-						"status": "source"
-					}
-				}
-			}
-		},
-		{
-			"id": "festival:cue-b-04",
-			"beatId": "festival:beat-b-01",
-			"order": 3,
-			"type": "action",
-			"text": "Harlan activa el jammer, se oculta y desconecta COM A/B en el distribuidor del cilindro de servicio."
-		},
-		{
-			"id": "festival:cue-b-05",
-			"beatId": "festival:beat-b-01",
-			"order": 4,
-			"type": "action",
-			"text": "Zao comprueba wireless y ambos enlaces cableados. El control dedicado del láser exterior sigue activo; descarta Tierra y Proxima y ajusta un barrido sobre la posición futura de la nave."
-		},
-		{
-			"id": "festival:cue-b-01",
-			"beatId": "festival:beat-b-01",
-			"order": 5,
-			"type": "dialogue",
-			"speakerId": "character:zao",
-			"presentation": "recording",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación.",
-						"status": "source"
-					}
-				}
-			}
-		},
-		{
-			"id": "festival:cue-b-06",
-			"beatId": "festival:beat-b-01",
-			"order": 6,
-			"type": "action",
-			"text": "El envío completa el barrido cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino."
-		},
-		{
-			"id": "festival:cue-c-01",
-			"beatId": "festival:beat-c-01",
-			"order": 1,
-			"type": "action",
-			"text": "Harlan mata a Zao fuera de campo, borra cámaras y archivo local y regresa por el cilindro de servicio."
-		},
-		{
-			"id": "festival:cue-c-02",
-			"beatId": "festival:beat-c-01",
-			"order": 2,
-			"type": "action",
-			"text": "Sorell llega sola por el cilindro central, intenta reanimar a Zao y no logra comunicarse mientras el jammer sigue activo."
-		},
-		{
-			"id": "festival:cue-c-03",
-			"beatId": "festival:beat-c-01",
-			"order": 3,
-			"type": "action",
-			"text": "Harlan restaura COM A/B, vuelve al puente y niega haber visto a Sorell; Voss lo envía con Okoye al núcleo."
-		},
-		{
-			"id": "festival:cue-d-01",
-			"beatId": "festival:beat-d-01",
-			"order": 1,
-			"type": "dialogue",
-			"speakerId": "character:rao",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Puedo aislarlo. No puedo revocar a quien lo controla.",
-						"status": "source"
-					}
-				}
-			}
-		},
-		{
-			"id": "festival:cue-d-02",
-			"beatId": "festival:beat-d-01",
-			"order": 2,
-			"type": "action",
-			"text": "Antes de autenticar la señal, Elin cartografía el payload, separa sus rutas y deja preparada una cuarentena limitada; todavía no puede atribuir el override."
-		},
-		{
-			"id": "festival:cue-f-01",
-			"beatId": "festival:beat-f-01",
-			"order": 1,
-			"type": "dialogue",
-			"speakerId": "character:harlan",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "No voy a entregar nuestra especie a algo que no entendemos.",
-						"status": "source"
-					}
-				}
-			}
-		},
-		{
-			"id": "festival:cue-g-01",
-			"beatId": "festival:beat-g-01",
-			"order": 1,
-			"type": "dialogue",
-			"speakerId": "character:voss",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Envíen.",
-						"status": "source"
-					}
-				}
-			}
-		},
-		{
-			"id": "festival:cue-g-02",
-			"beatId": "festival:beat-g-01",
-			"order": 2,
-			"type": "dialogue",
-			"speakerId": "character:voss",
-			"presentation": "on_screen",
-			"content": {
-				"sourceLanguage": "es",
-				"variants": {
-					"es": {
-						"spokenText": "Llegaste a tiempo.",
-						"status": "source"
-					}
-				}
-			}
-		}
-	],
-	"shots": [],
-	"takes": []
+  "schemaVersion": "1.0.0",
+  "script": {
+    "id": "script:light-delay-festival",
+    "projectId": "project:light-delay",
+    "continuityId": "continuity:light-delay-primary",
+    "title": "Light Delay — Festival Cut",
+    "version": "0.2.0-draft",
+    "status": "draft",
+    "kind": "festival_cut",
+    "targetDurationMs": 290000,
+    "lineage": {
+      "sourceScriptId": "script:light-delay-main-short",
+      "relationship": "adaptation",
+      "sourceVersion": "1.1.0-draft",
+      "notes": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes."
+    },
+    "declaredEntityRefs": [
+      {
+        "kind": "character",
+        "id": "character:zao"
+      },
+      {
+        "kind": "character",
+        "id": "character:voss"
+      },
+      {
+        "kind": "character",
+        "id": "character:harlan"
+      },
+      {
+        "kind": "character",
+        "id": "character:rao"
+      },
+      {
+        "kind": "character",
+        "id": "character:sorell"
+      },
+      {
+        "kind": "character",
+        "id": "character:okoye"
+      }
+    ],
+    "comparisonProfile": {
+      "version": "1.1.0",
+      "canonClaims": [
+        {
+          "dimensionId": "canon:proxima-origin",
+          "valueId": "scientific-before-contact",
+          "statement": "Proxima fue una estación científica joviana anterior al contacto.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:ardor-deployment",
+          "valueId": "earth-built-prepositioned",
+          "statement": "Celestial Ardor fue construida en la Tierra y ya estaba destinada en Proxima.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:tunnel-geometry",
+          "valueId": "distributed-nodes",
+          "statement": "La boca es un campo distribuido de nodos, no un aro.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:tunnel-location",
+          "valueId": "sol-jupiter-l2",
+          "statement": "La boca local está en una órbita halo controlada cerca de L2.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:trajectory",
+          "valueId": "conventional-to-wormhole",
+          "statement": "La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:mission-timeline",
+          "valueId": "57h48-signal23h15-encounter24h",
+          "statement": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:ardor-gravity-operations",
+          "valueId": "thrust-gravity-coast-microgravity",
+          "statement": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:velari-objects",
+          "valueId": "station-and-emissary",
+          "statement": "La estación Velari y la nave emisaria son objetos distintos.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:evidence-chain",
+          "valueId": "relay-optical-readonly",
+          "statement": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:sorell-status",
+          "valueId": "false-log-not-conclusive",
+          "statement": "Sorell no queda culpabilizada por un único registro falsificable.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:rao-containment",
+          "valueId": "bounded-quarantine",
+          "statement": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:ending",
+          "valueId": "limited-acknowledgement",
+          "statement": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:zao-transmission-mechanics",
+          "valueId": "jam-wired-cut-dedicated-laser",
+          "statement": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
+          "status": "established"
+        }
+      ],
+      "eventCoverage": [
+        {
+          "eventId": "event:embarkation",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-a"
+          ]
+        },
+        {
+          "eventId": "event:anomaly-discovery",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-a",
+            "festival:scene-b"
+          ]
+        },
+        {
+          "eventId": "event:zao-warning-death",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-b",
+            "festival:scene-c"
+          ]
+        },
+        {
+          "eventId": "event:tunnel-crossing",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-c"
+          ]
+        },
+        {
+          "eventId": "event:investigation",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-d"
+          ]
+        },
+        {
+          "eventId": "event:message-reception",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-e"
+          ]
+        },
+        {
+          "eventId": "event:harlan-exposed",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-e"
+          ]
+        },
+        {
+          "eventId": "event:quarantine",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-f"
+          ]
+        },
+        {
+          "eventId": "event:clean-greeting",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-f",
+            "festival:scene-g"
+          ]
+        },
+        {
+          "eventId": "event:first-contact",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-g"
+          ]
+        },
+        {
+          "eventId": "event:aftermath",
+          "status": "reworked",
+          "sceneIds": [
+            "festival:scene-g"
+          ]
+        }
+      ]
+    },
+    "characterFunctionAssignments": [
+      {
+        "functionId": "function:piloting",
+        "characterId": "character:rao",
+        "sourceCharacterIds": [
+          "character:cael"
+        ],
+        "relationship": "merged",
+        "notes": "Cael omitido; detección/navegación absorbidas por Elin/UI."
+      },
+      {
+        "functionId": "function:communications",
+        "characterId": "character:rao",
+        "sourceCharacterIds": [
+          "character:cael"
+        ],
+        "relationship": "merged",
+        "notes": "Elin asume detección/comunicaciones de Cael."
+      },
+      {
+        "functionId": "function:command",
+        "characterId": "character:voss",
+        "relationship": "unchanged"
+      },
+      {
+        "functionId": "function:investigation_payload",
+        "characterId": "character:rao",
+        "relationship": "unchanged"
+      },
+      {
+        "functionId": "function:diplomatic_greeting_authorship",
+        "characterId": "character:sorell",
+        "relationship": "unchanged",
+        "notes": "Aparece brevemente en el puente y en el hallazgo; conserva la autoría del saludo pasivo como asset/UI."
+      },
+      {
+        "functionId": "function:override_antagonist",
+        "characterId": "character:harlan",
+        "relationship": "unchanged"
+      },
+      {
+        "functionId": "function:security",
+        "characterId": "character:okoye",
+        "relationship": "unchanged"
+      }
+    ],
+    "actIds": [
+      "festival:act-1"
+    ]
+  },
+  "acts": [
+    {
+      "id": "festival:act-1",
+      "number": 1,
+      "title": "Festival Cut",
+      "dramaticPurpose": "Cadena causal condensada de ~4:50.",
+      "sceneIds": [
+        "festival:scene-a",
+        "festival:scene-b",
+        "festival:scene-c",
+        "festival:scene-d",
+        "festival:scene-e",
+        "festival:scene-f",
+        "festival:scene-g"
+      ]
+    }
+  ],
+  "sequences": [],
+  "scenes": [
+    {
+      "id": "festival:scene-a",
+      "actId": "festival:act-1",
+      "number": 1,
+      "order": 1,
+      "title": "La misión y la anomalía",
+      "locationId": "location:proxima-dock",
+      "setting": {
+        "interiorExterior": "INT_EXT",
+        "timeOfDay": "DÍA"
+      },
+      "summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
+      "dramaticPurpose": "Establecer espacio, misión y peligro sin exposición.",
+      "characterIds": [
+        "character:zao",
+        "character:rao",
+        "character:harlan",
+        "character:voss"
+      ],
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "shotIds": [
+        "festival:shot-a-01",
+        "festival:shot-a-02",
+        "festival:shot-a-03",
+        "festival:shot-a-04"
+      ],
+      "targetDurationMs": 25000
+    },
+    {
+      "id": "festival:scene-b",
+      "actId": "festival:act-1",
+      "number": 2,
+      "order": 2,
+      "title": "Zao descubre y transmite",
+      "locationId": "location:diplomatic-core-room",
+      "setting": {
+        "interiorExterior": "INT",
+        "timeOfDay": "DÍA"
+      },
+      "summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
+      "dramaticPurpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
+      "characterIds": [
+        "character:zao",
+        "character:harlan",
+        "character:voss",
+        "character:sorell"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "shotIds": [
+        "festival:shot-b-02",
+        "festival:shot-b-01",
+        "festival:shot-b-03",
+        "festival:shot-b-04",
+        "festival:shot-b-04a",
+        "festival:shot-b-04b",
+        "festival:shot-b-04c",
+        "festival:shot-b-05",
+        "festival:shot-b-06",
+        "festival:shot-b-07"
+      ],
+      "targetDurationMs": 60000,
+      "secondaryLocationIds": [
+        "location:celestial-ardor-bridge",
+        "location:celestial-ardor-command-vestibule",
+        "location:celestial-ardor-service-cylinder"
+      ],
+      "objectIds": [
+        "object:wired-comms-deck-patch-panel",
+        "object:optical-contingency-transmitter"
+      ]
+    },
+    {
+      "id": "festival:scene-c",
+      "actId": "festival:act-1",
+      "number": 3,
+      "order": 3,
+      "title": "Harlan / muerte de Zao / salto temporal",
+      "locationId": "location:diplomatic-core-room",
+      "setting": {
+        "interiorExterior": "INT",
+        "timeOfDay": "DÍA"
+      },
+      "summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
+      "dramaticPurpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
+      "characterIds": [
+        "character:zao",
+        "character:harlan",
+        "character:sorell",
+        "character:voss",
+        "character:okoye"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "shotIds": [
+        "festival:shot-c-01",
+        "festival:shot-c-10",
+        "festival:shot-c-02",
+        "festival:shot-c-03",
+        "festival:shot-c-04",
+        "festival:shot-c-05",
+        "festival:shot-c-06",
+        "festival:shot-c-07",
+        "festival:shot-c-08",
+        "festival:shot-c-09"
+      ],
+      "targetDurationMs": 20000,
+      "secondaryLocationIds": [
+        "location:celestial-ardor-bridge",
+        "location:celestial-ardor-central-access",
+        "location:celestial-ardor-service-cylinder"
+      ]
+    },
+    {
+      "id": "festival:scene-d",
+      "actId": "festival:act-1",
+      "number": 4,
+      "order": 4,
+      "title": "La mitad técnica",
+      "locationId": "location:celestial-ardor-bridge",
+      "setting": {
+        "interiorExterior": "INT",
+        "timeOfDay": "DÍA"
+      },
+      "summary": "Investigación de Elin contra reloj; detección de señal humana.",
+      "dramaticPurpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+      "characterIds": [
+        "character:rao",
+        "character:voss",
+        "character:harlan"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "shotIds": [
+        "festival:shot-d-01",
+        "festival:shot-d-02",
+        "festival:shot-d-03",
+        "festival:shot-d-04",
+        "festival:shot-d-05",
+        "festival:shot-d-06",
+        "festival:shot-d-07",
+        "festival:shot-d-09",
+        "festival:shot-d-08"
+      ],
+      "targetDurationMs": 50000
+    },
+    {
+      "id": "festival:scene-e",
+      "actId": "festival:act-1",
+      "number": 5,
+      "order": 5,
+      "title": "La señal y la doble llave",
+      "locationId": "location:celestial-ardor-bridge",
+      "setting": {
+        "interiorExterior": "INT",
+        "timeOfDay": "DÍA"
+      },
+      "summary": "Doble llave causal; revocación; Harlan activa el override.",
+      "dramaticPurpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
+      "characterIds": [
+        "character:rao",
+        "character:voss",
+        "character:harlan",
+        "character:zao"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 45000
+    },
+    {
+      "id": "festival:scene-f",
+      "actId": "festival:act-1",
+      "number": 6,
+      "order": 6,
+      "title": "Override y cuarentena",
+      "locationId": "location:celestial-ardor-bridge",
+      "setting": {
+        "interiorExterior": "INT",
+        "timeOfDay": "DÍA"
+      },
+      "summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
+      "dramaticPurpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
+      "characterIds": [
+        "character:rao",
+        "character:voss",
+        "character:harlan"
+      ],
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 60000
+    },
+    {
+      "id": "festival:scene-g",
+      "actId": "festival:act-1",
+      "number": 7,
+      "order": 7,
+      "title": "Contacto / cierre",
+      "locationId": "location:velari-station",
+      "setting": {
+        "interiorExterior": "INT_EXT",
+        "timeOfDay": "DÍA"
+      },
+      "summary": "Envío, contacto y «Llegaste a tiempo».",
+      "dramaticPurpose": "Canal limpio, respuesta Velari y cierre emocional.",
+      "characterIds": [
+        "character:rao",
+        "character:voss"
+      ],
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 30000
+    }
+  ],
+  "beats": [
+    {
+      "id": "festival:beat-a-01",
+      "sceneId": "festival:scene-a",
+      "order": 1,
+      "title": "La misión y la anomalía",
+      "purpose": "Establecer espacio, misión y peligro sin exposición.",
+      "summary": "Proxima, Celestial Ardor y primera anomalía en el sistema diplomático.",
+      "cueIds": [
+        "festival:cue-a-01"
+      ],
+      "targetDurationMs": 25000
+    },
+    {
+      "id": "festival:beat-b-01",
+      "sceneId": "festival:scene-b",
+      "order": 1,
+      "title": "Zao descubre y transmite",
+      "purpose": "Comprimir bloqueo, elección de destino y transmisión sin perder la causalidad.",
+      "summary": "Zao revela la firma falsa; Harlan corta wireless y COM A/B; ella apunta el láser exterior al corredor futuro.",
+      "cueIds": [
+        "festival:cue-b-02",
+        "festival:cue-b-03",
+        "festival:cue-b-04",
+        "festival:cue-b-05",
+        "festival:cue-b-05b",
+        "festival:cue-b-05c",
+        "festival:cue-b-05d",
+        "festival:cue-b-05f",
+        "festival:cue-b-05g",
+        "festival:cue-b-05h",
+        "festival:cue-b-01",
+        "festival:cue-b-06"
+      ],
+      "targetDurationMs": 60000
+    },
+    {
+      "id": "festival:beat-c-01",
+      "sceneId": "festival:scene-c",
+      "order": 1,
+      "title": "Harlan / muerte de Zao / salto temporal",
+      "purpose": "Cerrar la coartada y preservar que Sorell no sea testigo del trayecto de Harlan.",
+      "summary": "Muerte elidida; Harlan limpia y regresa por servicio mientras Sorell encuentra a Zao sola.",
+      "cueIds": [
+        "festival:cue-c-04",
+        "festival:cue-c-06",
+        "festival:cue-c-07",
+        "festival:cue-c-01",
+        "festival:cue-c-02",
+        "festival:cue-c-08",
+        "festival:cue-c-09",
+        "festival:cue-c-03",
+        "festival:cue-c-10",
+        "festival:cue-c-05"
+      ],
+      "targetDurationMs": 20000
+    },
+    {
+      "id": "festival:beat-d-01",
+      "sceneId": "festival:scene-d",
+      "order": 1,
+      "title": "La mitad técnica",
+      "purpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+      "summary": "Investigación de Elin contra reloj; detección de señal humana.",
+      "cueIds": [
+        "festival:cue-d-03",
+        "festival:cue-d-04",
+        "festival:cue-d-05",
+        "festival:cue-d-06",
+        "festival:cue-d-02",
+        "festival:cue-d-07",
+        "festival:cue-d-01",
+        "festival:cue-d-08",
+        "festival:cue-d-08b",
+        "festival:cue-d-09",
+        "festival:cue-d-10"
+      ],
+      "targetDurationMs": 50000
+    },
+    {
+      "id": "festival:beat-e-01",
+      "sceneId": "festival:scene-e",
+      "order": 1,
+      "title": "La señal y la doble llave",
+      "purpose": "Mensaje de Zao + verificación técnica identifica a Harlan.",
+      "summary": "Doble llave causal; revocación; Harlan activa el override.",
+      "cueIds": [],
+      "targetDurationMs": 45000
+    },
+    {
+      "id": "festival:beat-f-01",
+      "sceneId": "festival:scene-f",
+      "order": 1,
+      "title": "Override y cuarentena",
+      "purpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
+      "summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
+      "cueIds": [
+        "festival:cue-f-01"
+      ],
+      "targetDurationMs": 60000
+    },
+    {
+      "id": "festival:beat-g-01",
+      "sceneId": "festival:scene-g",
+      "order": 1,
+      "title": "Contacto / cierre",
+      "purpose": "Canal limpio, respuesta Velari y cierre emocional.",
+      "summary": "Envío, contacto y «Llegaste a tiempo».",
+      "cueIds": [
+        "festival:cue-g-01",
+        "festival:cue-g-02"
+      ],
+      "targetDurationMs": 30000
+    }
+  ],
+  "cues": [
+    {
+      "id": "festival:cue-b-02",
+      "beatId": "festival:beat-b-01",
+      "order": 1,
+      "type": "action",
+      "text": "En microgravedad, Harlan llega al acceso axial del puente sin ser visto mientras Zao abre canal."
+    },
+    {
+      "id": "festival:cue-b-03",
+      "beatId": "festival:beat-b-01",
+      "order": 2,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "radio",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. El relé físico apunta a—",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-04",
+      "beatId": "festival:beat-b-01",
+      "order": 3,
+      "type": "action",
+      "text": "Harlan activa el jammer, se oculta y desconecta COM A/B en el distribuidor del cilindro de servicio."
+    },
+    {
+      "id": "festival:cue-b-05",
+      "beatId": "festival:beat-b-01",
+      "order": 4,
+      "type": "action",
+      "text": "Zao comprueba la malla inalámbrica y ambos enlaces cableados: los tres caen a la vez. La simultaneidad descarta un fallo técnico — alguien cortó las tres vías."
+    },
+    {
+      "id": "festival:cue-b-01",
+      "beatId": "festival:beat-b-01",
+      "order": 11,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "recording",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-06",
+      "beatId": "festival:beat-b-01",
+      "order": 12,
+      "type": "action",
+      "text": "El envío completa el barrido cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino."
+    },
+    {
+      "id": "festival:cue-c-01",
+      "beatId": "festival:beat-c-01",
+      "order": 4,
+      "type": "action",
+      "text": "Harlan mata a Zao fuera de campo, borra cámaras y archivo local y regresa por el cilindro de servicio."
+    },
+    {
+      "id": "festival:cue-c-02",
+      "beatId": "festival:beat-c-01",
+      "order": 5,
+      "type": "action",
+      "text": "Sorell llega sola por el cilindro central, intenta reanimar a Zao y no logra comunicarse mientras el jammer sigue activo."
+    },
+    {
+      "id": "festival:cue-c-03",
+      "beatId": "festival:beat-c-01",
+      "order": 8,
+      "type": "action",
+      "text": "Harlan restaura COM A/B y regresa al puente."
+    },
+    {
+      "id": "festival:cue-d-01",
+      "beatId": "festival:beat-d-01",
+      "order": 7,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Puedo aislarlo. No puedo revocar a quien lo controla.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-02",
+      "beatId": "festival:beat-d-01",
+      "order": 5,
+      "type": "action",
+      "text": "Antes de autenticar la señal, Elin cartografía el payload, separa sus rutas y deja preparada una cuarentena limitada; todavía no puede atribuir el override."
+    },
+    {
+      "id": "festival:cue-f-01",
+      "beatId": "festival:beat-f-01",
+      "order": 1,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "No voy a entregar nuestra especie a algo que no entendemos.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-g-01",
+      "beatId": "festival:beat-g-01",
+      "order": 1,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Envíen.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-g-02",
+      "beatId": "festival:beat-g-01",
+      "order": 2,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Llegaste a tiempo.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-a-01",
+      "beatId": "festival:beat-a-01",
+      "order": 1,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "PRIMER CONTACTO — MISIÓN VELARI",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-c-04",
+      "beatId": "festival:beat-c-01",
+      "order": 1,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "¿A quién enviaste eso?",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-c-05",
+      "beatId": "festival:beat-c-01",
+      "order": 10,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "23 H DESPUÉS · CANAL VELARI EN 03:00",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-c-06",
+      "beatId": "festival:beat-c-01",
+      "order": 2,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Da igual. Para cuando lo reciban, para cuando la Tierra se entere y alcance a advertirles, ya será tarde.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-c-07",
+      "beatId": "festival:beat-c-01",
+      "order": 3,
+      "type": "action",
+      "text": "Suspira — quizás el único gesto de que matarla no le resulta fácil — antes de cerrar la distancia."
+    },
+    {
+      "id": "festival:cue-c-08",
+      "beatId": "festival:beat-c-01",
+      "order": 6,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "¿Lo encontró Sorell?",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-c-09",
+      "beatId": "festival:beat-c-01",
+      "order": 7,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "No la vi.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-c-10",
+      "beatId": "festival:beat-c-01",
+      "order": 9,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Okoye, vaya con Harlan. Búsquenla en el puesto de Zao.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-03",
+      "beatId": "festival:beat-d-01",
+      "order": 1,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "PAYLOAD DESPLEGADO",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-04",
+      "beatId": "festival:beat-d-01",
+      "order": 2,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "DISPARADOR: APERTURA CANAL VELARI",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-05",
+      "beatId": "festival:beat-d-01",
+      "order": 3,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "OVERRIDE: FIRMA NO IDENTIFICADA",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-06",
+      "beatId": "festival:beat-d-01",
+      "order": 4,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "CUARENTENA PREPARADA",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-07",
+      "beatId": "festival:beat-d-01",
+      "order": 6,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "¿Puede detenerlo?",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-08",
+      "beatId": "festival:beat-d-01",
+      "order": 8,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "La mediación contiene un proceso autónomo. Recomiendo apagarla y aislar los receptores.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-08b",
+      "beatId": "festival:beat-d-01",
+      "order": 9,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Apagarla destruye el único intérprete que tenemos.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-09",
+      "beatId": "festival:beat-d-01",
+      "order": 10,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "No vamos a apagar el único canal que tenemos.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-10",
+      "beatId": "festival:beat-d-01",
+      "order": 11,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Señal entrante. Humana. Viene exactamente por nuestro corredor de vuelo.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-05b",
+      "beatId": "festival:beat-b-01",
+      "order": 5,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Tierra no... para cuando lo reciban y logren advertir algo, todo esto ya habrá pasado. Proxima tampoco — Júpiter la tapa desde aquí, no hay línea de vista.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-05c",
+      "beatId": "festival:beat-b-01",
+      "order": 6,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "TIERRA — DESCARTADA: RECEPCIÓN POSTERIOR AL ENCUENTRO",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-05d",
+      "beatId": "festival:beat-b-01",
+      "order": 7,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "PROXIMA — DESCARTADA: OCLUIDA POR JÚPITER (SIN LÍNEA DE VISTA)",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-05f",
+      "beatId": "festival:beat-b-01",
+      "order": 8,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "PLAN DE VUELO — CARGADO",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-05g",
+      "beatId": "festival:beat-b-01",
+      "order": 9,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "INTERCEPCIÓN POR TIEMPO LUMÍNICO — CALCULANDO",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-05h",
+      "beatId": "festival:beat-b-01",
+      "order": 10,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "ELIPSE DE INCERTIDUMBRE — LISTA",
+            "status": "source"
+          }
+        }
+      }
+    }
+  ],
+  "shots": [
+    {
+      "id": "festival:shot-a-01",
+      "sceneId": "festival:scene-a",
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": "PG exterior: Proxima, Júpiter al fondo y la Celestial Ardor atracada, nombre y silueta legibles. Overlay de misión sobre el plano.",
+      "locationId": "location:proxima-dock",
+      "composition": {
+        "size": "LS",
+        "framing": "PG",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Avance muy lento, composición axial — mismo lenguaje que la apertura del corto."
+      },
+      "durationMs": 7500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-a-01",
+          "atMs": 1000,
+          "durationMs": 5000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-a-01-take-01"
+      ],
+      "selectedTakeId": "festival:shot-a-01-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-01-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-a-02",
+      "sceneId": "festival:scene-a",
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "description": "Interior, núcleo diplomático: Zao y Elin verifican juntas el sistema, tono rutinario. Elin termina su parte y se retira hacia su puesto para preparar la cuarentena; Zao se queda sola continuando el diagnóstico. La voz de Harlan llega por el canal desde el puente, visible en una pantalla de mando cercana — no está físicamente en la sala.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre estable, sin movimiento — introduce el espacio de trabajo antes de la anomalía."
+      },
+      "durationMs": 7000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-a-02-take-01"
+      ],
+      "selectedTakeId": "festival:shot-a-02-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-04-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-a-03",
+      "sceneId": "festival:scene-a",
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "description": "PD (insert): en la consola de diagnóstico, la lista de procesos declarados del protocolo diplomático se compara contra el manifiesto de carga; un bloque no tiene entrada correspondiente y el sistema lo resalta en rojo como “PROCESO NO DECLARADO”.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "INSERT",
+        "framing": "PD",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Insert fijo, legible en menos de dos segundos."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-a-03-take-01"
+      ],
+      "selectedTakeId": "festival:shot-a-03-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-04-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-a-04",
+      "sceneId": "festival:scene-a",
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "description": "PP Zao: entiende que no es ruido — primer registro de alarma.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "CU",
+        "framing": "PP",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Primer plano fijo o dolly-in muy leve."
+      },
+      "durationMs": 6500,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-a-04-take-01"
+      ],
+      "selectedTakeId": "festival:shot-a-04-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-03-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-03-04 (asset asset:animatic-03-04)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-02",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": "Harlan llega al acceso axial del puente sin ser visto, justo cuando Zao abre el canal con el puente.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre estable — Harlan entra por el borde del cuadro."
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-02",
+          "atMs": 0,
+          "durationMs": 6000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-02-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-02-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-05-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-01",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "description": "Zao, sola en el núcleo diplomático, con la voz controlada pero la mano tensa sobre la consola, confirma que el payload autónomo está asociado al protocolo y abre canal con el puente.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado, sin movimiento — urgencia contenida."
+      },
+      "durationMs": 7200,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-03",
+          "atMs": 500,
+          "durationMs": 5800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-01-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-01-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-05-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-03",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "description": "Con gesto metódico, sin dudar, Harlan activa el jammer y desconecta COM A/B en el distribuidor del cilindro de servicio; la transmisión de Zao se corta a media frase.",
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Corte seco al gesto de Harlan sobre el panel."
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-04",
+          "atMs": 0,
+          "durationMs": 6000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-03-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-03-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-05-07"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara (\"en el distribuidor del cilindro de servicio\")."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-04",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "description": "Zao golpea la malla inalámbrica: silencio. Prueba ambos enlaces cableados, uno tras otro: silencio en los tres. Que las tres vías caigan a la vez no es un fallo técnico — es una mano.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Ligero acercamiento sobre la consola."
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-05",
+          "atMs": 0,
+          "durationMs": 6000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-04-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-04-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-05",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 8,
+      "order": 8,
+      "description": "Un alivio breve, casi físico, cruza el rostro de Zao: la solución está lista y el barrido comienza. Todavía tiene una salida.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "INSERT",
+        "framing": "PD",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Insert de consola — continuación visual del gesto anterior."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-b-05-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-05-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03); continúa visualmente la acción de festival:cue-b-05 sin cue propio."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-06",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 9,
+      "order": 9,
+      "description": "Zao graba el mensaje con la voz firme pero apresurada — sabe que puede ser la última vez que hable con alguien — y lo repite mientras el barrido avanza.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado y estable — sostiene la actuación sin cortes."
+      },
+      "durationMs": 11500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-01",
+          "atMs": 500,
+          "durationMs": 10500
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-06-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-06-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-06"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-07",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 10,
+      "order": 10,
+      "description": "El barrido llega a cien cuando Harlan entra por el ramal técnico. Se detiene en seco al ver “TRANSMITIDO” en pantalla — no alcanza a ver el destino, sólo que algo salió.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Panorámica corta de la pantalla al rostro de Harlan en el umbral."
+      },
+      "durationMs": 7500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-06",
+          "atMs": 0,
+          "durationMs": 7500
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-07-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-07-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-07"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-01",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": "Harlan, alarmado, ve “TRANSMITIDO” en la pantalla de Zao. Ella no responde a su pregunta — lo mira, desafiante, sin bajar la vista.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado, corte seco entre los dos rostros."
+      },
+      "durationMs": 3000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-04",
+          "atMs": 300,
+          "durationMs": 2200
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-01-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-01-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-07-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-02",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "description": "Harlan mata a Zao fuera de campo. Corte antes de mostrar el acto.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre que evita el acto; sonido breve de forcejeo."
+      },
+      "durationMs": 3000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-01",
+          "atMs": 0,
+          "durationMs": 3000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-02-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-02-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-07-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-03",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "description": "Con manos firmes pero movimientos apresurados, Harlan borra cámaras y archivo local del núcleo antes de retirarse.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Continuación visual del gesto anterior — sin cue propio."
+      },
+      "durationMs": 2500,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-c-03-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-03-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-07-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Continúa visualmente festival:cue-c-01 (borrado de cámaras/archivo) sin cue propio."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-04",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "description": "Sorell avanza sola por el cilindro central, ajena a lo ocurrido, con la calma de quien cumple un encargo rutinario.",
+      "locationId": "location:celestial-ardor-central-access",
+      "composition": {
+        "size": "MLS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Avance sostenido por el corredor."
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-02",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-04-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-04-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-05",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "description": "El rostro de Sorell se quiebra al encontrar a Zao. Intenta reanimarla, llama al puente sin respuesta — el jammer sigue activo — y comprende, con espanto creciente, que está sola con esto.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Continuación visual de festival:cue-c-02 — sin cue propio."
+      },
+      "durationMs": 2500,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-c-05-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-05-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-07-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Continúa visualmente festival:cue-c-02 (reanimación fallida) sin cue propio."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-06",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "description": "Ya compuesto, sin rastro del apuro anterior, Harlan regresa por el cilindro de servicio y restaura COM A/B antes de reaparecer en el puente.",
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Travesía rápida por el corredor."
+      },
+      "durationMs": 2000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-03",
+          "atMs": 0,
+          "durationMs": 2000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-06-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-06-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-07-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-07-04 (asset asset:animatic-07-04)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-07",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 8,
+      "order": 8,
+      "description": "De vuelta en el puente, Voss le pregunta directamente por Sorell. Harlan responde sin dudar, el rostro compuesto — ninguna señal de lo ocurrido.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Continuación visual de festival:cue-c-03 — sin cue propio."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-08",
+          "atMs": 200,
+          "durationMs": 2000
+        },
+        {
+          "cueId": "festival:cue-c-09",
+          "atMs": 2600,
+          "durationMs": 1800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-07-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-07-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-08-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Continúa visualmente festival:cue-c-03 (niega haber visto a Sorell) sin cue propio."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-08",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 9,
+      "order": 9,
+      "description": "Voss ordena, con la misma calma con que dirige cualquier maniobra.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Continuación visual de festival:cue-c-03 — sin cue propio."
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-10",
+          "atMs": 200,
+          "durationMs": 3000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-08-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-08-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-08-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Continúa visualmente festival:cue-c-03 (Voss envía a Harlan con Okoye) sin cue propio."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-09",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 10,
+      "order": 10,
+      "description": "Exterior de la nave. Overlay de salto temporal sobre el plano.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "LS",
+        "framing": "PG",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Plano fijo, transición — cierra la secuencia."
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-05",
+          "atMs": 500,
+          "durationMs": 1800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-09-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-09-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-02-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-c-10",
+      "sceneId": "festival:scene-c",
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "description": "Harlan asume que el mensaje fue a la Tierra y se lo dice, casi para tranquilizarse. Suspira antes de cerrar la distancia — el único indicio de que esto no le resulta fácil.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado y estable, sostiene el silencio antes del corte."
+      },
+      "durationMs": 7600,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-c-06",
+          "atMs": 200,
+          "durationMs": 3800
+        },
+        {
+          "cueId": "festival:cue-c-07",
+          "atMs": 5600,
+          "durationMs": 1600
+        }
+      ],
+      "takeIds": [
+        "festival:shot-c-10-take-01"
+      ],
+      "selectedTakeId": "festival:shot-c-10-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-07-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01), mismo still que festival:shot-c-01, como marcador de posición — necesita una toma propia para el Festival Cut (la asunción y el suspiro de Harlan no existen como beat separado en el corto canónico)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-01",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": "Elin, sola en el puesto técnico del puente, trabaja contra reloj; el contador del encuentro Velari sigue bajando al fondo.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre estable, ligera vibración de la nave."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-d-01-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-01-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-10-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-02",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "description": "Insert de consola: el payload aparece desplegado; el disparador se identifica como la apertura del canal Velari.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "INSERT",
+        "framing": "PD",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Insert fijo, legible en menos de dos segundos por overlay."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-03",
+          "atMs": 200,
+          "durationMs": 2000
+        },
+        {
+          "cueId": "festival:cue-d-04",
+          "atMs": 2600,
+          "durationMs": 2200
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-02-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-02-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-10-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-03",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "description": "Insert de consola: el override aparece con firma no identificada; la cuarentena queda preparada, en espera.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "INSERT",
+        "framing": "PD",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Insert fijo, legible en menos de dos segundos por overlay."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-05",
+          "atMs": 200,
+          "durationMs": 2000
+        },
+        {
+          "cueId": "festival:cue-d-06",
+          "atMs": 2600,
+          "durationMs": 2200
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-03-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-03-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-10-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-04",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "description": "Elin cartografía el payload, separa sus rutas y deja lista una cuarentena limitada — metódica, pero cada vez más tensa: todavía no puede atribuir el override a nadie.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Ligero acercamiento sobre sus manos y la consola."
+      },
+      "durationMs": 7000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-02",
+          "atMs": 0,
+          "durationMs": 7000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-04-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-04-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-10-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-05",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "description": "Voss se acerca y pregunta directamente, sin rodeos.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado sobre Voss."
+      },
+      "durationMs": 3500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-07",
+          "atMs": 300,
+          "durationMs": 2800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-05-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-05-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-09-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-09-02 (asset asset:animatic-09-02)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-06",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "description": "Elin responde sin suavizar la verdad — honesta sobre el límite exacto de lo que puede hacer.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado sobre Elin."
+      },
+      "durationMs": 5500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-01",
+          "atMs": 300,
+          "durationMs": 4800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-06-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-06-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-10-07"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-10-07 (asset asset:animatic-10-07)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-07",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "description": "Harlan interviene con aparente sensatez — urgente, razonable en la superficie. Elin lo contradice de inmediato.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MS",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Plano de conjunto de los tres; corte a Voss en su línea final."
+      },
+      "durationMs": 7900,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-08",
+          "atMs": 200,
+          "durationMs": 3600
+        },
+        {
+          "cueId": "festival:cue-d-08b",
+          "atMs": 4200,
+          "durationMs": 2300
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-07-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-07-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-11-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-11-01 (asset asset:animatic-11-01)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-08",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 9,
+      "order": 9,
+      "description": "Elin se detiene en seco — algo nuevo en la pantalla. Voss se acerca; Harlan observa con una atención que no delata nada.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado sobre Elin, ligero dolly-in."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-10",
+          "atMs": 300,
+          "durationMs": 4200
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-08-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-08-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-11-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-09",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 8,
+      "order": 8,
+      "description": "Voss corta la discusión sin ceder terreno.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Corte a Voss en su línea final."
+      },
+      "durationMs": 3600,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-09",
+          "atMs": 200,
+          "durationMs": 3000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-09-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-09-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-11-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-11-02 (asset asset:animatic-11-02)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-04a",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "description": "El rostro de Zao se endurece; sin apartar la vista de la consola, dice en voz baja lo que ya sabe.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre fijo, cerrado sobre el rostro."
+      },
+      "durationMs": 12500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-05b",
+          "atMs": 300,
+          "durationMs": 12000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-04a-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-04a-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-04b",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "description": "PD (insert): en la consola dedicada del láser exterior, TIERRA se marca en rojo por el retraso y PROXIMA por la oclusión de Júpiter — un diagrama muestra el disco del planeta cortando la línea de vista entre Celestial Ardor y la estación.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "INSERT",
+        "framing": "PD",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Insert fijo, legible en menos de dos segundos."
+      },
+      "durationMs": 5000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-05c",
+          "atMs": 200,
+          "durationMs": 2000
+        },
+        {
+          "cueId": "festival:cue-b-05d",
+          "atMs": 2600,
+          "durationMs": 2200
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-04b-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-04b-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-04c",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "description": "PD (insert): el sistema superpone el plan de vuelo, el tiempo lumínico y la posición futura de Celestial Ardor sobre el corredor de intercepción; la ventana se dibuja en verde y el barrido del láser se ajusta solo para cubrirla.",
+      "locationId": "location:diplomatic-core-room",
+      "composition": {
+        "size": "INSERT",
+        "framing": "PD",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Insert fijo, continúa la lectura de la consola."
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-05f",
+          "atMs": 200,
+          "durationMs": 1600
+        },
+        {
+          "cueId": "festival:cue-b-05g",
+          "atMs": 2000,
+          "durationMs": 2200
+        },
+        {
+          "cueId": "festival:cue-b-05h",
+          "atMs": 4400,
+          "durationMs": 1400
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-04c-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-04c-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03)."
+        }
+      ]
+    }
+  ],
+  "takes": [
+    {
+      "id": "festival:shot-a-01-take-01",
+      "shotId": "festival:shot-a-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-01-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-01-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "PG exterior: Proxima, Júpiter al fondo y la Celestial Ardor atracada, nombre y silueta legibles. Overlay de misión sobre el plano."
+      }
+    },
+    {
+      "id": "festival:shot-a-02-take-01",
+      "shotId": "festival:shot-a-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-04-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "missing_subject"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-04-01) sólo muestra a Zao; esta toma del Festival Cut necesita a Elin retirándose y la pantalla de comunicación con Harlan (no presente físicamente).",
+        "replacementBrief": "Interior, núcleo diplomático: Zao y Elin verifican juntas el sistema. Elin termina su parte y se retira hacia su puesto para preparar la cuarentena; Zao se queda sola continuando el diagnóstico. La voz de Harlan llega por el canal desde el puente, visible en una pantalla de mando cercana — no está físicamente en la sala."
+      }
+    },
+    {
+      "id": "festival:shot-a-03-take-01",
+      "shotId": "festival:shot-a-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-04-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-04-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "PD (insert): una envoltura/proceso no declarado aparece en el diagnóstico del núcleo."
+      }
+    },
+    {
+      "id": "festival:shot-a-04-take-01",
+      "shotId": "festival:shot-a-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-03-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-03-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "PP Zao: entiende que no es ruido — primer registro de alarma."
+      }
+    },
+    {
+      "id": "festival:shot-b-01-take-01",
+      "shotId": "festival:shot-b-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-05-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-05-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Zao, sola en el núcleo diplomático, confirma que el payload autónomo está asociado al protocolo y abre canal con el puente."
+      }
+    },
+    {
+      "id": "festival:shot-b-02-take-01",
+      "shotId": "festival:shot-b-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-05-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-05-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Harlan llega al acceso axial del puente sin ser visto mientras Zao sigue transmitiendo."
+      }
+    },
+    {
+      "id": "festival:shot-b-03-take-01",
+      "shotId": "festival:shot-b-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-08",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-05-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Harlan activa el jammer y desconecta COM A/B en el distribuidor; la transmisión de Zao se corta a media frase."
+      }
+    },
+    {
+      "id": "festival:shot-b-04-take-01",
+      "shotId": "festival:shot-b-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Zao comprueba que fallan ambos respaldos cableados; descarta Tierra por demora y Proxima por falta de adquisición útil."
+      }
+    },
+    {
+      "id": "festival:shot-b-05-take-01",
+      "shotId": "festival:shot-b-05",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "El control físico dedicado del láser exterior sigue activo; Zao calcula la intercepción y ajusta el barrido sobre la elipse de incertidumbre."
+      }
+    },
+    {
+      "id": "festival:shot-b-06-take-01",
+      "shotId": "festival:shot-b-06",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-06",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-06) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Zao graba y repite el mensaje de emergencia durante el barrido."
+      }
+    },
+    {
+      "id": "festival:shot-b-07-take-01",
+      "shotId": "festival:shot-b-07",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "El barrido llega a cien cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino."
+      }
+    },
+    {
+      "id": "festival:shot-c-01-take-01",
+      "shotId": "festival:shot-c-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-07-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-07-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Última mirada entre Zao y Harlan: ella ve TRANSMITIDO en pantalla justo cuando él, ya en el umbral, pregunta a quién lo envió."
+      }
+    },
+    {
+      "id": "festival:shot-c-02-take-01",
+      "shotId": "festival:shot-c-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-07-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-07-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Harlan mata a Zao fuera de campo. Corte antes de mostrar el acto."
+      }
+    },
+    {
+      "id": "festival:shot-c-03-take-01",
+      "shotId": "festival:shot-c-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-07-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-07-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Harlan borra cámaras y archivo local del núcleo antes de retirarse."
+      }
+    },
+    {
+      "id": "festival:shot-c-04-take-01",
+      "shotId": "festival:shot-c-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Sorell avanza sola por el cilindro central, sin saber lo ocurrido, enviada a buscar a Harlan."
+      }
+    },
+    {
+      "id": "festival:shot-c-05-take-01",
+      "shotId": "festival:shot-c-05",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-07-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-07-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Sorell encuentra a Zao y trata de reanimarla; no logra comunicarse con el puente — el jammer sigue activo."
+      }
+    },
+    {
+      "id": "festival:shot-c-06-take-01",
+      "shotId": "festival:shot-c-06",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-07-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-07-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Harlan regresa por el cilindro de servicio y restaura COM A/B antes de reaparecer en el puente."
+      }
+    },
+    {
+      "id": "festival:shot-c-07-take-01",
+      "shotId": "festival:shot-c-07",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-08-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-08-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "De vuelta en el puente, Harlan niega haber visto a Sorell."
+      }
+    },
+    {
+      "id": "festival:shot-c-08-take-01",
+      "shotId": "festival:shot-c-08",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-08-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-08-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Voss envía a Harlan con Okoye a buscarla en el puesto de Zao."
+      }
+    },
+    {
+      "id": "festival:shot-c-09-take-01",
+      "shotId": "festival:shot-c-09",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-02-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-02-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Exterior de la nave. Overlay de salto temporal sobre el plano."
+      }
+    },
+    {
+      "id": "festival:shot-c-10-take-01",
+      "shotId": "festival:shot-c-10",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-07-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "missing_subject"
+        ],
+        "explanation": "Still reutilizado de main:shot-07-01 (mismo que festival:shot-c-01); este beat (la asunción sobre la Tierra + el suspiro de Harlan) no existe como toma separada en el corto canónico y necesita una imagen propia para el Festival Cut.",
+        "replacementBrief": "Harlan asume que el mensaje fue a la Tierra y se lo dice, casi para tranquilizarse. Suspira antes de cerrar la distancia — el único indicio de que esto no le resulta fácil."
+      }
+    },
+    {
+      "id": "festival:shot-d-01-take-01",
+      "shotId": "festival:shot-d-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-10-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-10-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Elin, sola en el puesto técnico del puente, trabaja contra reloj; el contador del encuentro Velari sigue bajando al fondo."
+      }
+    },
+    {
+      "id": "festival:shot-d-02-take-01",
+      "shotId": "festival:shot-d-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-10-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-10-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Insert de consola: el payload aparece desplegado; el disparador se identifica como la apertura del canal Velari."
+      }
+    },
+    {
+      "id": "festival:shot-d-03-take-01",
+      "shotId": "festival:shot-d-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-10-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-10-04) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Insert de consola: el override aparece con firma no identificada; la cuarentena queda preparada, en espera."
+      }
+    },
+    {
+      "id": "festival:shot-d-04-take-01",
+      "shotId": "festival:shot-d-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-10-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-10-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Elin cartografía el payload, separa sus rutas y deja lista una cuarentena limitada — metódica, pero cada vez más tensa: todavía no puede atribuir el override a nadie."
+      }
+    },
+    {
+      "id": "festival:shot-d-05-take-01",
+      "shotId": "festival:shot-d-05",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-09-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-09-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Voss se acerca y pregunta directamente, sin rodeos."
+      }
+    },
+    {
+      "id": "festival:shot-d-06-take-01",
+      "shotId": "festival:shot-d-06",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-10-07",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-10-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Elin responde sin suavizar la verdad — honesta sobre el límite exacto de lo que puede hacer."
+      }
+    },
+    {
+      "id": "festival:shot-d-07-take-01",
+      "shotId": "festival:shot-d-07",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-11-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-11-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Harlan interviene con aparente sensatez — urgente, razonable en la superficie. Elin lo contradice de inmediato; Voss corta la discusión sin ceder terreno."
+      }
+    },
+    {
+      "id": "festival:shot-d-08-take-01",
+      "shotId": "festival:shot-d-08",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-11-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-11-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Elin se detiene en seco — algo nuevo en la pantalla. Voss se acerca; Harlan observa con una atención que no delata nada."
+      }
+    },
+    {
+      "id": "festival:shot-d-09-take-01",
+      "shotId": "festival:shot-d-09",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-11-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-11-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Voss corta la discusión sin ceder terreno."
+      }
+    },
+    {
+      "id": "festival:shot-b-04a-take-01",
+      "shotId": "festival:shot-b-04a",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "MCU del rostro de Zao endureciéndose mientras descarta Tierra por demora y Proxima porque Júpiter le tapa la línea de vista."
+      }
+    },
+    {
+      "id": "festival:shot-b-04b-take-01",
+      "shotId": "festival:shot-b-04b",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-02) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Insert de consola: TIERRA marcada en rojo por retraso; PROXIMA marcada en rojo con el disco de Júpiter cortando la línea de vista hacia la estación."
+      }
+    },
+    {
+      "id": "festival:shot-b-04c-take-01",
+      "shotId": "festival:shot-b-04c",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-06-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Insert de consola: plan de vuelo, tiempo lumínico y elipse de incertidumbre calculándose sobre el corredor de intercepción."
+      }
+    }
+  ]
 }
