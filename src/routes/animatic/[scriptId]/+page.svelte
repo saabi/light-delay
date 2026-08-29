@@ -8,6 +8,7 @@
 	import { withLocale } from '$lib/utils/paths';
 	import type { Scene, Shot } from '$lib/types/script';
 	import { page } from '$app/state';
+	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
 	import * as m from '$lib/paraglide/messages.js';
@@ -17,7 +18,9 @@
 	const language = $derived(getLanguageState());
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
 	const encoded = $derived(encodeScriptId(scriptId));
-
+	const initialShotId = $derived(
+		browser ? (page.url.searchParams.get('shot') ?? undefined) : undefined
+	);
 	const groups = $derived.by(() => {
 		const scenes = [...script.scenes].sort((a, b) => a.order - b.order);
 		const shotsByScene: Record<string, Shot[]> = {};
@@ -53,17 +56,14 @@
 	});
 
 	onMount(() => {
-		const shotId = page.url.searchParams.get('shot');
-		if (!shotId) return;
+		if (!initialShotId) return;
 		requestAnimationFrame(() => {
-			const card = document.getElementById(shotId);
+			const card = document.getElementById(initialShotId);
 			if (!card) return;
 			card.scrollIntoView({ block: 'center' });
 			card.focus({ preventScroll: true });
 		});
 	});
-
-	const initialShotId = $derived(page.url.searchParams.get('shot') ?? undefined);
 </script>
 
 <main class="page">
