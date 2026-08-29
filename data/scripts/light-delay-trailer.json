@@ -1086,11 +1086,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "La firma parece falsa. El relé físico apunta a—",
+            "spokenText": "La firma parece falsa. La verdadera firma apunta a—",
             "status": "source"
           },
           "en": {
-            "spokenText": "The signature looks forged. The physical relay points to—",
+            "spokenText": "The signature looks forged. The real signature points to—",
             "status": "draft"
           }
         }
@@ -2053,8 +2053,8 @@
       "number": 4,
       "order": 12,
       "description": {
-        "es": "Zao carga la solución en la consola local del láser.",
-        "en": "Zao loads the solution into the laser’s local console."
+        "es": "Zao preserva el manifiesto físico, adjunta su snapshot, firma el paquete con su token personal y carga la solución en el láser.",
+        "en": "Zao preserves the physical manifest, attaches its snapshot, signs the packet with her personal token, and loads the laser solution."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {

@@ -130,8 +130,8 @@
           "dimensionId": "canon:evidence-chain",
           "valueId": "relay-optical-readonly",
           "statement": {
-            "es": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
-            "en": "The physical relay, optical message, and passive greeting form complementary evidence."
+            "es": "El dispositivo y la hora, la firma del token personal de Zao, el snapshot firmado por el hardware del relé, la auditoría independiente y el saludo pasivo forman evidencia complementaria.",
+            "en": "Device and time, Zao’s personal-token signature, the relay hardware-signed snapshot, the independent audit, and the passive greeting form complementary evidence."
           },
           "status": "established"
         },
@@ -634,12 +634,12 @@
         "main:shot-06-01",
         "main:shot-06-02",
         "main:shot-06-03",
+        "main:shot-06-09",
         "main:shot-06-04",
         "main:shot-06-05",
         "main:shot-06-06",
         "main:shot-06-07",
-        "main:shot-06-08",
-        "main:shot-06-09"
+        "main:shot-06-08"
       ],
       "targetDurationMs": 95000,
       "objectIds": [
@@ -923,14 +923,14 @@
       ],
       "shotIds": [
         "main:shot-12-01",
+        "main:shot-12-09",
         "main:shot-12-02",
         "main:shot-12-03",
         "main:shot-12-04",
         "main:shot-12-05",
         "main:shot-12-06",
         "main:shot-12-07",
-        "main:shot-12-08",
-        "main:shot-12-09"
+        "main:shot-12-08"
       ],
       "targetDurationMs": 128000
     },
@@ -1284,6 +1284,7 @@
         "main:cue-05-10",
         "main:cue-05-11",
         "main:cue-05-12",
+        "main:cue-05-16",
         "main:cue-05-13",
         "main:cue-05-14",
         "main:cue-05-15"
@@ -1318,6 +1319,9 @@
         "main:cue-06-21",
         "main:cue-06-06",
         "main:cue-06-07",
+        "main:cue-06-22",
+        "main:cue-06-23",
+        "main:cue-06-24",
         "main:cue-06-08",
         "main:cue-06-09",
         "main:cue-06-10",
@@ -1487,6 +1491,9 @@
         "main:cue-12-02",
         "main:cue-12-03",
         "main:cue-12-04",
+        "main:cue-12-authorship-ui",
+        "main:cue-12-relay-snapshot-ui",
+        "main:cue-12-attribution-ui",
         "main:cue-12-05",
         "main:cue-12-06",
         "main:cue-12-07",
@@ -1543,7 +1550,9 @@
         "main:cue-14-09",
         "main:cue-14-10",
         "main:cue-14-11",
-        "main:cue-14-12"
+        "main:cue-14-12",
+        "main:cue-14-okoye-containment",
+        "main:cue-14-clean-channel-ui"
       ]
     },
     {
@@ -1608,7 +1617,9 @@
       "cueIds": [
         "main:cue-17-01",
         "main:cue-17-02",
-        "main:cue-17-03"
+        "main:cue-17-earth-report",
+        "main:cue-17-03",
+        "main:cue-17-earth-send"
       ]
     }
   ],
@@ -2278,8 +2289,8 @@
       "order": 4,
       "type": "action",
       "text": {
-        "es": "Desde las consolas del puente, Voss queda en primer término; detrás, la tripulación sujeta a sus puestos y Sorell escuchan. Al fondo, Harlan emerge del cilindro central y se afirma fuera del umbral sin que nadie lo vea.",
-        "en": "From the bridge consoles, Voss is in the foreground; Behind, the crew holds their positions and Sorell listens. In the background, Harlan emerges from the central cylinder and stands outside the threshold without anyone seeing him."
+        "es": "Harlan termina una tarea legítima en otra cubierta y llega al vestíbulo axial con postura rutinaria y relajada, sin buscar a Zao. Desde las consolas, Voss queda en primer término; detrás, parte de la tripulación sigue sus monitores y otra parte —incluida Sorell— mira a Voss para escuchar el aviso. Nadie ve a Harlan en la puerta. Sólo cuando Zao dice que la firma real apunta a alguien, una microreacción rompe su calma.",
+        "en": "Harlan finishes a legitimate duty on another deck and reaches the axial vestibule with an ordinary, relaxed posture, not looking for Zao. From the consoles, Voss is in the foreground; behind him, some crew keep watching their displays while others—including Sorell—look toward Voss to hear the warning. No one sees Harlan in the doorway. Only when Zao says the real signature points to someone does a microreaction break his calm."
       }
     },
     {
@@ -2314,11 +2325,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "La firma parece falsa. El relé físico apunta a—",
+            "spokenText": "La firma parece falsa. La verdadera firma apunta a—",
             "status": "source"
           },
           "en": {
-            "spokenText": "The signature looks forged. The physical relay points to—",
+            "spokenText": "The signature looks forged. The real signature points to—",
             "status": "draft"
           }
         }
@@ -2418,9 +2429,19 @@
       }
     },
     {
-      "id": "main:cue-05-13",
+      "id": "main:cue-05-16",
       "beatId": "main:beat-05-01",
       "order": 13,
+      "type": "action",
+      "text": {
+        "es": "Voss se toma un instante: la identidad de Sorell fue falsificada, pero eso también la deja implicada. Decide que ella debe verificarlo y, por cautela, que no debe entrar sola.",
+        "en": "Voss takes a moment: Sorell’s identity was forged, but that also leaves her implicated. He decides she must verify it and, as a precaution, that she must not enter alone."
+      }
+    },
+    {
+      "id": "main:cue-05-13",
+      "beatId": "main:beat-05-01",
+      "order": 14,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -2441,7 +2462,7 @@
     {
       "id": "main:cue-05-14",
       "beatId": "main:beat-05-01",
-      "order": 14,
+      "order": 15,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -2449,11 +2470,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Espere. No vaya sola. Busque a Harlan y entren juntos.",
+            "spokenText": "Sorell. Busque a Harlan. No entre sola.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Wait. Don't go alone. Find Harlan and go in together.",
+            "spokenText": "Sorell. Find Harlan. Do not go in alone.",
             "status": "draft"
           }
         }
@@ -2462,11 +2483,11 @@
     {
       "id": "main:cue-05-15",
       "beatId": "main:beat-05-01",
-      "order": 15,
+      "order": 16,
       "type": "action",
       "text": {
-        "es": "Sorell libera sus correas y sale por el vestíbulo. Harlan ya se impulsa por el cilindro de servicio con el acoplador asegurado al traje.",
-        "en": "Sorell releases her restraints and exits through the vestibule. Harlan is already propelling himself through the service cylinder with the coupler secured to his suit."
+        "es": "Sorell, ya impulsada hacia la salida, se detiene para recibir la segunda orden. Esa cautela le cuesta segundos: busca a Harlan sin encontrarlo y sólo entonces sigue hacia Zao. Harlan ya entra al cilindro de servicio.",
+        "en": "Already pushing toward the exit, Sorell stops to receive the second order. That caution costs her seconds: she looks for Harlan without finding him and only then continues toward Zao. Harlan is already entering the service cylinder."
       }
     },
     {
@@ -2525,8 +2546,8 @@
       "order": 11,
       "type": "action",
       "text": {
-        "es": "Harlan se lanza por un tramo libre del cilindro de servicio, corrige entre bandejas periféricas y frena en la compuerta del ramal técnico.",
-        "en": "Harlan launches himself along a free section of the service cylinder, corrects between peripheral trays and brakes at the gate of the technical branch."
+        "es": "Ágil en microgravedad, Harlan se lanza balísticamente por el tramo directo del cilindro de servicio, corrige apenas entre bandejas y frena en el ramal técnico.",
+        "en": "Agile in microgravity, Harlan launches ballistically through the direct service cylinder, makes only slight corrections between trays, and brakes at the technical branch."
       }
     },
     {
@@ -2535,14 +2556,54 @@
       "order": 12,
       "type": "action",
       "text": {
-        "es": "Sorell busca el puesto de Harlan, no lo encuentra y avanza sola por el cilindro central, mano sobre mano entre descansos y compuertas.",
-        "en": "Sorell looks for Harlan's position, does not find it and advances alone through the central cylinder, hand over hand between breaks and gates."
+        "es": "Sorell busca a Harlan donde Voss indicó y no lo encuentra. Avanza sola por el cilindro central de uso cotidiano, mano sobre mano entre barras, descansos y compuertas; la ruta y la cautela la hacen más lenta, no una falta de destreza.",
+        "en": "Sorell looks for Harlan where Voss directed and cannot find him. She proceeds alone through the everyday central cylinder, hand over hand across rails, landings, and hatches; the route and her caution make her slower, not a lack of skill."
+      }
+    },
+    {
+      "id": "main:cue-06-22",
+      "beatId": "main:beat-06-01",
+      "order": 13,
+      "type": "action",
+      "text": {
+        "es": "Antes de grabar, Zao abre el manifiesto firmado por el propio hardware del relé: la asignación física todavía corresponde a R. Harlan. Captura una instantánea firmada y la adjunta al paquete.",
+        "en": "Before recording, Zao opens the manifest signed by the relay hardware itself: the physical assignment still belongs to R. Harlan. She captures a signed snapshot and attaches it to the packet."
+      }
+    },
+    {
+      "id": "main:cue-06-23",
+      "beatId": "main:beat-06-01",
+      "order": 14,
+      "type": "action",
+      "text": {
+        "es": "Zao presenta su token criptográfico personal al control local. La clave privada nunca sale del token y exige presencia física; firma el mensaje y la instantánea antes del barrido.",
+        "en": "Zao presents her personal cryptographic token to the local control. The private key never leaves the token and requires physical presence; she signs the message and snapshot before the sweep."
+      }
+    },
+    {
+      "id": "main:cue-06-24",
+      "beatId": "main:beat-06-01",
+      "order": 15,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "AUTORA: J. ZAO · TOKEN PERSONAL · FIRMA DIGITAL APLICADA\nADJUNTO: SNAPSHOT DE RELÉ · FIRMA DE HARDWARE VÁLIDA",
+            "status": "source"
+          },
+          "en": {
+            "text": "AUTHOR: J. ZAO · PERSONAL TOKEN · DIGITAL SIGNATURE APPLIED\nATTACHMENT: RELAY SNAPSHOT · HARDWARE SIGNATURE VALID",
+            "status": "draft"
+          }
+        }
       }
     },
     {
       "id": "main:cue-06-08",
       "beatId": "main:beat-06-01",
-      "order": 13,
+      "order": 16,
       "type": "action",
       "text": {
         "es": "Zao graba mirando al sensor; el paquete se repetirá a lo largo del barrido.",
@@ -2552,7 +2613,7 @@
     {
       "id": "main:cue-06-09",
       "beatId": "main:beat-06-01",
-      "order": 14,
+      "order": 17,
       "type": "dialogue",
       "speakerId": "character:zao",
       "presentation": "recording",
@@ -2573,7 +2634,7 @@
     {
       "id": "main:cue-06-10",
       "beatId": "main:beat-06-01",
-      "order": 15,
+      "order": 18,
       "type": "action",
       "text": {
         "es": "Presiona TRANSMITIR. La portadora recorre el barrido: 40%… 70%… 100%. TRANSMITIDO.",
@@ -2583,7 +2644,7 @@
     {
       "id": "main:cue-06-11",
       "beatId": "main:beat-06-01",
-      "order": 16,
+      "order": 19,
       "type": "action",
       "text": {
         "es": "Harlan entra por el ramal técnico cuando la solución de puntería ya se ha cerrado. Ve el envío completado, no su destino.",
@@ -2593,7 +2654,7 @@
     {
       "id": "main:cue-06-12",
       "beatId": "main:beat-06-01",
-      "order": 17,
+      "order": 20,
       "type": "dialogue",
       "speakerId": "character:harlan",
       "presentation": "on_screen",
@@ -2614,7 +2675,7 @@
     {
       "id": "main:cue-06-13",
       "beatId": "main:beat-06-01",
-      "order": 18,
+      "order": 21,
       "type": "dialogue",
       "speakerId": "character:zao",
       "presentation": "on_screen",
@@ -2635,7 +2696,7 @@
     {
       "id": "main:cue-06-14",
       "beatId": "main:beat-06-01",
-      "order": 19,
+      "order": 22,
       "type": "dialogue",
       "speakerId": "character:harlan",
       "presentation": "on_screen",
@@ -2656,7 +2717,7 @@
     {
       "id": "main:cue-06-15",
       "beatId": "main:beat-06-01",
-      "order": 20,
+      "order": 23,
       "type": "dialogue",
       "speakerId": "character:harlan",
       "presentation": "on_screen",
@@ -2677,7 +2738,7 @@
     {
       "id": "main:cue-06-16",
       "beatId": "main:beat-06-01",
-      "order": 21,
+      "order": 24,
       "type": "action",
       "text": {
         "es": "Harlan suspira —el único indicio de que matarla no le resulta fácil— y cierra la distancia.",
@@ -2707,17 +2768,17 @@
     {
       "id": "main:cue-07-03",
       "beatId": "main:beat-07-01",
-      "order": 3,
+      "order": 5,
       "type": "action",
       "text": {
-        "es": "Harlan asegura temporalmente el cuerpo, borra su acceso, cámaras y el archivo local, y limpia las superficies que tocó. Conserva el jammer activo.",
-        "en": "Harlan temporarily secures the body, wipes his access trail, the camera records, and the local file, then cleans every surface he touched. He keeps the jammer active."
+        "es": "Harlan borra cámaras, el archivo local y el índice operativo del manifiesto del relé. Bajo presión cree haber eliminado la atribución, sin saber que la instantánea firmada ya viaja con el mensaje.",
+        "en": "Harlan wipes the cameras, local archive, and operational relay-manifest index. Under pressure, he believes he has erased the attribution, unaware that the signed snapshot is already traveling with the message."
       }
     },
     {
       "id": "main:cue-07-04",
       "beatId": "main:beat-07-01",
-      "order": 4,
+      "order": 6,
       "type": "action",
       "text": {
         "es": "Harlan abandona el núcleo por el ramal técnico y se impulsa de regreso por el cilindro de servicio.",
@@ -2727,7 +2788,7 @@
     {
       "id": "main:cue-07-05",
       "beatId": "main:beat-07-01",
-      "order": 5,
+      "order": 7,
       "type": "action",
       "text": {
         "es": "Sorell entra por el acceso operativo y encuentra a Zao. Se asegura, contiene el cuerpo y comprueba respiración y pulso.",
@@ -2737,7 +2798,7 @@
     {
       "id": "main:cue-07-06",
       "beatId": "main:beat-07-01",
-      "order": 6,
+      "order": 8,
       "type": "action",
       "text": {
         "es": "Sorell fija a Zao contra una superficie de sujeción e intenta reanimarla, alterando involuntariamente la escena.",
@@ -2747,7 +2808,7 @@
     {
       "id": "main:cue-07-07",
       "beatId": "main:beat-07-01",
-      "order": 7,
+      "order": 9,
       "type": "dialogue",
       "speakerId": "character:sorell",
       "presentation": "radio",
@@ -2768,7 +2829,7 @@
     {
       "id": "main:cue-07-08",
       "beatId": "main:beat-07-01",
-      "order": 8,
+      "order": 10,
       "type": "action",
       "text": {
         "es": "El jammer bloquea el comunicador de Sorell. En el intercomunicador de pared, COM A y COM B siguen sin portadora. La voz no queda en cola.",
@@ -2778,7 +2839,7 @@
     {
       "id": "main:cue-07-09",
       "beatId": "main:beat-07-01",
-      "order": 9,
+      "order": 11,
       "type": "action",
       "text": {
         "es": "En el distribuidor junto a mando, Harlan reinserta el acoplador COM A/B, confirma ambas portadoras, limpia el tablero y cierra el panel.",
@@ -2788,7 +2849,7 @@
     {
       "id": "main:cue-07-10",
       "beatId": "main:beat-07-01",
-      "order": 10,
+      "order": 12,
       "type": "action",
       "text": {
         "es": "Harlan reaparece en el vestíbulo y se sujeta en el puente como si regresara de sus tareas. Sorell, ansiosa, permanece junto a Zao y ya no vuelve a llamar.",
@@ -2798,7 +2859,7 @@
     {
       "id": "main:cue-07-11",
       "beatId": "main:beat-07-01",
-      "order": 11,
+      "order": 13,
       "type": "action",
       "text": {
         "es": "Los nodos negros separados por kilómetros se conectan. La región navegable alcanza 150–200 m; Celestial Ardor deriva con motor apagado y radiadores recogidos.",
@@ -2808,7 +2869,7 @@
     {
       "id": "main:cue-07-12",
       "beatId": "main:beat-07-01",
-      "order": 12,
+      "order": 14,
       "type": "dialogue",
       "speakerId": "character:cael",
       "presentation": "on_screen",
@@ -2829,7 +2890,7 @@
     {
       "id": "main:cue-07-13",
       "beatId": "main:beat-07-01",
-      "order": 13,
+      "order": 15,
       "type": "action",
       "text": {
         "es": "La nave atraviesa por inercia. Distorsión total, silencio y colapso de la garganta detrás de ella.",
@@ -3382,11 +3443,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "La firma y la hora corresponden al control local del láser exterior. Eso prueba desde qué consola salió, no que cada palabra sea auténtica.",
+            "spokenText": "La firma y la hora corresponden al control local del láser exterior. Prueban el dispositivo y el momento del envío.",
             "status": "source"
           },
           "en": {
-            "spokenText": "The signature and time correspond to the local control of the external laser. That proves which console it came from, not that every word is authentic.",
+            "spokenText": "The signature and timestamp match the exterior laser’s local control. They prove the device and the time of transmission.",
             "status": "draft"
           }
         }
@@ -3424,11 +3485,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "El núcleo podía sintetizar su voz. Esto es exactamente lo que advertí.",
+            "spokenText": "Una voz puede falsificarse.",
             "status": "source"
           },
           "en": {
-            "spokenText": "The core could synthesize her voice. This is exactly what I warned about.",
+            "spokenText": "A voice can be forged.",
             "status": "draft"
           }
         }
@@ -3445,11 +3506,71 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Elin. Cruce la rutina con el relé.",
+            "spokenText": "No estoy verificando su voz. Estoy verificando su firma.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Elin. Cross routine with relay.",
+            "spokenText": "I’m not verifying her voice. I’m verifying her signature.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "main:cue-12-authorship-ui",
+      "beatId": "main:beat-12-01",
+      "order": 5,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "AUTORA: J. ZAO · FIRMA DIGITAL VÁLIDA · TOKEN PERSONAL",
+            "status": "source"
+          },
+          "en": {
+            "text": "AUTHOR: J. ZAO · DIGITAL SIGNATURE VALID · PERSONAL TOKEN",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "main:cue-12-relay-snapshot-ui",
+      "beatId": "main:beat-12-01",
+      "order": 6,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "MANIFIESTO FÍSICO · SNAPSHOT ÍNTEGRO · FIRMA DE HARDWARE VÁLIDA\nRELÉ ASIGNADO: R. HARLAN",
+            "status": "source"
+          },
+          "en": {
+            "text": "PHYSICAL MANIFEST · SNAPSHOT INTACT · HARDWARE SIGNATURE VALID\nRELAY ASSIGNED: R. HARLAN",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "main:cue-12-attribution-ui",
+      "beatId": "main:beat-12-01",
+      "order": 7,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "OVERRIDE ATRIBUIDO · R. HARLAN · EVIDENCIA CONVERGENTE",
+            "status": "source"
+          },
+          "en": {
+            "text": "OVERRIDE ATTRIBUTED · R. HARLAN · CONVERGENT EVIDENCE",
             "status": "draft"
           }
         }
@@ -3458,7 +3579,7 @@
     {
       "id": "main:cue-12-05",
       "beatId": "main:beat-12-01",
-      "order": 5,
+      "order": 8,
       "type": "dialogue",
       "speakerId": "character:rao",
       "presentation": "on_screen",
@@ -3466,11 +3587,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "La investigación prueba el payload. El mensaje nos dijo qué registro faltaba. Juntos identifican su override.",
+          "spokenText": "El token autentica a Zao y mantiene íntegros el mensaje y el adjunto. El snapshot del relé está firmado por hardware y aún asigna el circuito a Harlan. Mi auditoría conecta ese relé con el payload y su override.",
             "status": "source"
           },
           "en": {
-            "spokenText": "The investigation proves the payload exists. The message told us which log was missing. Together they identify his override.",
+          "spokenText": "The token authenticates Zao and keeps the message and attachment intact. The relay snapshot is hardware-signed and still assigns the circuit to Harlan. My audit connects that relay to the payload and its override.",
             "status": "draft"
           }
         }
@@ -3479,7 +3600,7 @@
     {
       "id": "main:cue-12-06",
       "beatId": "main:beat-12-01",
-      "order": 6,
+      "order": 9,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -3500,7 +3621,7 @@
     {
       "id": "main:cue-12-07",
       "beatId": "main:beat-12-01",
-      "order": 7,
+      "order": 10,
       "type": "dialogue",
       "speakerId": "character:rao",
       "presentation": "on_screen",
@@ -3521,7 +3642,7 @@
     {
       "id": "main:cue-12-08",
       "beatId": "main:beat-12-01",
-      "order": 8,
+      "order": 11,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -3529,11 +3650,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "¡Cael, permanezca en navegación! ¡Sorell, al puente!",
+            "spokenText": "Okoye, intercepte a Harlan. Cael, permanezca en navegación. Yo mantengo el puente.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Cael, stay on navigation! Sorell, report to the bridge!",
+            "spokenText": "Okoye, intercept Harlan. Cael, stay on navigation. I’m holding the bridge.",
             "status": "draft"
           }
         }
@@ -3861,6 +3982,36 @@
       }
     },
     {
+      "id": "main:cue-14-okoye-containment",
+      "beatId": "main:beat-14-01",
+      "order": 13,
+      "type": "action",
+      "text": {
+        "es": "Voss permanece en el puente coordinando navegación y contacto. Okoye llega al ramal físico, intercepta a Harlan y lo inmoviliza sin intercambio armado, impidiéndole recuperar el control.",
+        "en": "Voss remains on the bridge coordinating navigation and contact. Okoye reaches the physical branch, intercepts Harlan, and restrains him without an armed exchange, preventing him from regaining control."
+      }
+    },
+    {
+      "id": "main:cue-14-clean-channel-ui",
+      "beatId": "main:beat-14-01",
+      "order": 14,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "PAYLOAD EN CUARENTENA · CANAL SALIENTE LIMPIO · MEDIACIÓN ACTIVA",
+            "status": "source"
+          },
+          "en": {
+            "text": "PAYLOAD QUARANTINED · OUTBOUND CHANNEL CLEAN · MEDIATION ACTIVE",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
       "id": "main:cue-15-01",
       "beatId": "main:beat-15-01",
       "order": 1,
@@ -4029,9 +4180,19 @@
       }
     },
     {
-      "id": "main:cue-17-03",
+      "id": "main:cue-17-earth-report",
       "beatId": "main:beat-17-01",
       "order": 3,
+      "type": "action",
+      "text": {
+        "es": "Con la estación orgánica y la nave emisaria visibles como cuerpos distintos, Voss prepara el informe a la Tierra. Adjunta la evidencia convergente y el legajo de Zao; su retrato lo detiene antes del envío.",
+        "en": "With the organic station and emissary ship visible as separate bodies, Voss prepares the report to Earth. He attaches the convergent evidence and Zao’s personnel file; her portrait stops him before he sends it."
+      }
+    },
+    {
+      "id": "main:cue-17-03",
+      "beatId": "main:beat-17-01",
+      "order": 4,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -4045,14 +4206,24 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Llegaste a tiempo. Para todos nosotros. Para todos los que vengan después.",
+            "spokenText": "Llegaste a tiempo.",
             "status": "source"
           },
           "en": {
-            "spokenText": "You arrived on time. For all of us. For all who come after.",
+            "spokenText": "You made it in time.",
             "status": "draft"
           }
         }
+      }
+    },
+    {
+      "id": "main:cue-17-earth-send",
+      "beatId": "main:beat-17-01",
+      "order": 5,
+      "type": "action",
+      "text": {
+        "es": "Tras decirlo apenas para sí, Voss pulsa ENVIAR. El informe parte; no llega respuesta de la Tierra.",
+        "en": "After saying it softly to himself, Voss presses SEND. The report leaves; no reply arrives from Earth."
       }
     },
     {
@@ -4118,7 +4289,7 @@
     {
       "id": "main:cue-06-20",
       "beatId": "main:beat-06-01",
-      "order": 10,
+      "order": 9,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -4138,7 +4309,7 @@
     {
       "id": "main:cue-06-21",
       "beatId": "main:beat-06-01",
-      "order": 11,
+      "order": 10,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -4158,7 +4329,7 @@
     {
       "id": "main:cue-01-31",
       "beatId": "main:beat-01-01",
-      "order": 31,
+      "order": 20,
       "type": "dialogue",
       "speakerId": "character:periodista",
       "presentation": "voice_over",
@@ -4179,7 +4350,7 @@
     {
       "id": "main:cue-01-32",
       "beatId": "main:beat-01-01",
-      "order": 32,
+      "order": 21,
       "type": "dialogue",
       "speakerId": "character:cael",
       "presentation": "off_screen",
@@ -4200,7 +4371,7 @@
     {
       "id": "main:cue-01-33",
       "beatId": "main:beat-01-01",
-      "order": 33,
+      "order": 22,
       "type": "action",
       "text": {
         "es": "Voss mira a Cael un instante. No responde; Cael vuelve a la cuenta de salida.",
@@ -4210,7 +4381,7 @@
     {
       "id": "main:cue-07-14",
       "beatId": "main:beat-07-01",
-      "order": 14,
+      "order": 3,
       "type": "sound",
       "description": {
         "es": "Golpe corporal seco y no gráfico, inequívocamente distinto de un movimiento incidental; confirma la fatalidad sin mostrarla.",
@@ -4221,7 +4392,7 @@
     {
       "id": "main:cue-07-15",
       "beatId": "main:beat-07-01",
-      "order": 15,
+      "order": 4,
       "type": "silence",
       "purpose": {
         "es": "Tras el impacto cesan forcejeo y respiración; sólo queda el ambiente mínimo de la nave durante el negro sostenido.",
@@ -5802,8 +5973,8 @@
       "number": 3,
       "order": 34,
       "description": {
-        "es": "Voss, tripulación y Harlan en el acceso axial",
-        "en": "Voss, crew and Harlan on axial access"
+        "es": "Voss y la tripulación escuchan a Zao; Harlan llega relajado al acceso axial y sólo se delata con una microreacción que nadie ve.",
+        "en": "Voss and the crew listen to Zao; Harlan arrives casually at the axial access and betrays himself only through a microreaction no one sees."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -5816,8 +5987,8 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "Frontal de Voss; tripulación en segundo término y umbral axial profundo con Harlan al fondo.",
-          "en": "Voss front; crew in the background and deep axial threshold with Harlan in the background."
+          "es": "Cámara frente a Voss, monitores o ventanal; tripulantes y Sorell ocupan el plano medio, y la puerta axial queda visible al fondo para registrar la llegada inadvertida de Harlan.",
+          "en": "Camera faces Voss, the displays, or the forward window; crew and Sorell fill the middle ground, with the axial doorway visible behind them to register Harlan’s unnoticed arrival."
         },
         "movement": "locked"
       },
@@ -6034,12 +6205,12 @@
       "number": 8,
       "order": 39,
       "purpose": {
-        "es": "Voss envía a Sorell y luego exige escolta",
-        "en": "Voss sends Sorell and then demands escort"
+        "es": "Voss sopesa la implicación de Sorell, la envía a verificar y luego la retiene para exigir que busque a Harlan y no entre sola.",
+        "en": "Voss weighs Sorell’s implication, sends her to verify, then calls her back to require that she find Harlan and not enter alone."
       },
       "description": {
-        "es": "Voss envía a Sorell y luego exige escolta",
-        "en": "Voss sends Sorell and then demands escort"
+        "es": "Voss sopesa la implicación de Sorell, la envía a verificar y luego la retiene para exigir que busque a Harlan y no entre sola.",
+        "en": "Voss weighs Sorell’s implication, sends her to verify, then calls her back to require that she find Harlan and not enter alone."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -6056,16 +6227,21 @@
       "durationMs": 18000,
       "cuePlacements": [
         {
+          "cueId": "main:cue-05-16",
+          "atMs": 0,
+          "durationMs": 2600
+        },
+        {
           "cueId": "main:cue-05-13",
-          "atMs": 0
+          "atMs": 2800
         },
         {
           "cueId": "main:cue-05-14",
-          "atMs": 6000
+          "atMs": 8500
         },
         {
           "cueId": "main:cue-05-15",
-          "atMs": 12000
+          "atMs": 12500
         }
       ],
       "takeIds": [
@@ -6174,8 +6350,8 @@
       "number": 3,
       "order": 42,
       "description": {
-        "es": "Zao carga la solución en la consola local del láser.",
-        "en": "Zao loads the solution into the laser’s local console."
+        "es": "Zao preserva el manifiesto físico, adjunta su snapshot, firma el paquete con su token personal y carga la solución en el láser.",
+        "en": "Zao preserves the physical manifest, attaches its snapshot, signs the packet with her personal token, and loads the laser solution."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -6198,6 +6374,21 @@
         {
           "cueId": "main:cue-06-04",
           "atMs": 0
+        },
+        {
+          "cueId": "main:cue-06-22",
+          "atMs": 200,
+          "durationMs": 2200
+        },
+        {
+          "cueId": "main:cue-06-23",
+          "atMs": 2400,
+          "durationMs": 2200
+        },
+        {
+          "cueId": "main:cue-06-24",
+          "atMs": 4700,
+          "durationMs": 2100
         }
       ],
       "takeIds": [
@@ -6215,8 +6406,8 @@
       "beatIds": [
         "main:beat-06-01"
       ],
-      "number": 4,
-      "order": 43,
+      "number": 5,
+      "order": 44,
       "description": {
         "es": "Harlan cruza el cilindro de servicio",
         "en": "Harlan crosses the service cylinder"
@@ -6259,8 +6450,8 @@
       "beatIds": [
         "main:beat-06-01"
       ],
-      "number": 5,
-      "order": 44,
+      "number": 6,
+      "order": 45,
       "description": {
         "es": "Sorell busca y avanza por el cilindro central",
         "en": "Sorell searches and advances through the central cylinder"
@@ -6303,11 +6494,11 @@
       "beatIds": [
         "main:beat-06-01"
       ],
-      "number": 6,
-      "order": 45,
+      "number": 7,
+      "order": 46,
       "description": {
-        "es": "Zao graba el mensaje",
-        "en": "Zao records the message"
+        "es": "Con el paquete ya firmado y adjunto, Zao graba el mensaje mientras el barrido se prepara.",
+        "en": "With the packet already signed and attached, Zao records the message as the sweep prepares."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -6333,7 +6524,7 @@
         },
         {
           "cueId": "main:cue-06-09",
-          "atMs": 6000
+          "atMs": 400
         }
       ],
       "takeIds": [
@@ -6351,8 +6542,8 @@
       "beatIds": [
         "main:beat-06-01"
       ],
-      "number": 7,
-      "order": 46,
+      "number": 8,
+      "order": 47,
       "purpose": {
         "es": "El barrido llega a cien; Harlan entra",
         "en": "The sweep reaches a hundred; Harlan enters"
@@ -6399,8 +6590,8 @@
       "beatIds": [
         "main:beat-06-01"
       ],
-      "number": 8,
-      "order": 47,
+      "number": 9,
+      "order": 48,
       "purpose": {
         "es": "La suposición errónea de Harlan revela su cálculo y su pesar antes del asesinato.",
         "en": "Harlan’s mistaken assumption reveals his calculation and regret before the murder."
@@ -6451,8 +6642,8 @@
       "beatIds": [
         "main:beat-06-01"
       ],
-      "number": 9,
-      "order": 48,
+      "number": 4,
+      "order": 43,
       "description": {
         "es": "Inserto de la pantalla del control local: el sistema propone plan de vuelo, tiempo lumínico y elipse; Zao angosta el barrido a mano sobre la región restante.",
         "en": "Insert of the local-control display: the system proposes the flight plan, light time, and ellipse; Zao manually narrows the sweep over the remaining region."
@@ -8219,8 +8410,8 @@
       "number": 1,
       "order": 85,
       "description": {
-        "es": "Cael autentica el control local del láser y la hora, no el contenido.",
-        "en": "Cael authenticates local control of the laser and time, not the content."
+        "es": "Cael autentica el dispositivo emisor y la hora del envío, una primera capa que no depende del audio.",
+        "en": "Cael authenticates the transmitting device and time of transmission, a first layer independent of the audio."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8253,8 +8444,8 @@
         {
           "type": "sound",
           "text": {
-            "es": "Corrección de errores.",
-            "en": "Bug fixes."
+            "es": "Pulsos breves de corrección de errores de transmisión.",
+            "en": "Brief transmission error-correction pulses."
           }
         }
       ],
@@ -8269,11 +8460,11 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 2,
-      "order": 86,
+      "number": 3,
+      "order": 87,
       "description": {
-        "es": "La voz fragmentada de Zao llena el puente.",
-        "en": "Zao's fragmented voice fills the bridge."
+        "es": "Tras oír el mensaje, Harlan intenta reducir la evidencia a una voz falsificable.",
+        "en": "After hearing the message, Harlan tries to reduce the evidence to a forgeable voice."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8318,11 +8509,11 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 3,
-      "order": 87,
+      "number": 4,
+      "order": 88,
       "description": {
-        "es": "Voss mira a Harlan pero todavía no ordena arresto.",
-        "en": "Voss looks at Harlan but still doesn't order an arrest."
+        "es": "Elin distingue voz de firma y verifica el token personal de Zao.",
+        "en": "Elin distinguishes voice from signature and verifies Zao’s personal token."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8367,11 +8558,11 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 4,
-      "order": 88,
+      "number": 5,
+      "order": 89,
       "description": {
-        "es": "Elin recibe la orden de cruzar rutina y relé.",
-        "en": "Elin receives the order to cross routine and relay."
+        "es": "La interfaz confirma autora e integridad del mensaje y del adjunto, sin depender del audio.",
+        "en": "The interface confirms the author and integrity of the message and attachment without depending on audio."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8391,9 +8582,9 @@
       "durationMs": 14000,
       "cuePlacements": [
         {
-          "cueId": "main:cue-12-05",
-          "atMs": 0,
-          "durationMs": 8000
+          "cueId": "main:cue-12-authorship-ui",
+          "atMs": 500,
+          "durationMs": 3000
         }
       ],
       "takeIds": [
@@ -8416,11 +8607,11 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 5,
-      "order": 89,
+      "number": 6,
+      "order": 90,
       "description": {
-        "es": "Tres capas convergen: payload, relé físico, credencial.",
-        "en": "Three layers converge: payload, physical relay, credential."
+        "es": "Cuatro capas convergen: dispositivo y hora, autoría de Zao, snapshot físico del relé y auditoría independiente de Elin.",
+        "en": "Four layers converge: device and time, Zao’s authorship, the physical relay snapshot, and Elin’s independent audit."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8438,7 +8629,18 @@
         }
       },
       "durationMs": 16000,
-      "cuePlacements": [],
+      "cuePlacements": [
+        {
+          "cueId": "main:cue-12-05",
+          "atMs": 0,
+          "durationMs": 15500
+        },
+        {
+          "cueId": "main:cue-12-relay-snapshot-ui",
+          "atMs": 500,
+          "durationMs": 3000
+        }
+      ],
       "takeIds": [
         "main:take-12-05-01"
       ],
@@ -8447,8 +8649,8 @@
         {
           "type": "sound",
           "text": {
-            "es": "Tres tonos se unifican.",
-            "en": "Three tones are unified."
+            "es": "Cuatro confirmaciones discretas convergen en un único tono estable.",
+            "en": "Four discreet confirmations converge into one steady tone."
           }
         }
       ]
@@ -8459,11 +8661,11 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 6,
-      "order": 90,
+      "number": 7,
+      "order": 91,
       "description": {
-        "es": "Resultado: R. HARLAN — INTEGRIDAD VERIFICADA.",
-        "en": "Result: R. HARLAN — INTEGRITY VERIFIED."
+        "es": "La atribución convergente señala a Harlan; Voss revoca su credencial.",
+        "en": "The convergent attribution points to Harlan; Voss revokes his credential."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8483,8 +8685,13 @@
       "durationMs": 16000,
       "cuePlacements": [
         {
-          "cueId": "main:cue-12-06",
+          "cueId": "main:cue-12-attribution-ui",
           "atMs": 0,
+          "durationMs": 3200
+        },
+        {
+          "cueId": "main:cue-12-06",
+          "atMs": 3500,
           "durationMs": 8000
         }
       ],
@@ -8508,11 +8715,11 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 7,
-      "order": 91,
+      "number": 8,
+      "order": 92,
       "description": {
-        "es": "Voss revoca credencial y ordena detención.",
-        "en": "Voss revokes credential and orders arrest."
+        "es": "Antes de que la revocación termine de propagarse, Harlan activa la última ventana del override.",
+        "en": "Before revocation finishes propagating, Harlan activates the override’s last window."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8525,8 +8732,8 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "50 mm · autoridad recuperada.",
-          "en": "50 mm · authority recovered."
+          "es": "50 mm · Harlan en segundo término; su mano alcanza el control antes de que desaparezca la autorización.",
+          "en": "50 mm · Harlan in the middle ground; his hand reaches the control before authorization disappears."
         }
       },
       "durationMs": 14000,
@@ -8557,25 +8764,25 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 8,
-      "order": 92,
+      "number": 9,
+      "order": 93,
       "description": {
-        "es": "Harlan activa desde muñeca; Voss llama a Sorell al puente.",
-        "en": "Harlan activates from the wrist; Voss calls Sorell to the bridge."
+        "es": "Voss ordena a Okoye interceptar a Harlan, mantiene a Cael en navegación y permanece al mando en el puente.",
+        "en": "Voss orders Okoye to intercept Harlan, keeps Cael on navigation, and remains in command on the bridge."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
-        "size": "INSERT",
+        "size": "MS",
         "framing": {
-          "es": "PD",
-          "en": "PS"
+          "es": "PM",
+          "en": "MS"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "85 mm · gesto casi oculto.",
-          "en": "85 mm · almost hidden gesture."
+          "es": "50 mm · Voss sostiene el centro del cuadro mientras distribuye funciones sin abandonar el puente.",
+          "en": "50 mm · Voss holds the center of frame while assigning roles without leaving the bridge."
         }
       },
       "durationMs": 14000,
@@ -8594,14 +8801,14 @@
         {
           "type": "sound",
           "text": {
-            "es": "Tono de ejecución.",
-            "en": "Execution tone."
+            "es": "La alarma continúa bajo la orden clara de Voss.",
+            "en": "The alarm continues beneath Voss’s clear order."
           }
         }
       ],
       "purpose": {
-        "es": "Harlan activa desde muñeca; Voss llama a Sorell al puente.",
-        "en": "Harlan activates from the wrist; Voss calls Sorell to the bridge."
+        "es": "Voss conserva el mando del puente y envía a Okoye a la intercepción física.",
+        "en": "Voss retains bridge command and sends Okoye to the physical interception."
       }
     },
     {
@@ -8610,8 +8817,8 @@
       "beatIds": [
         "main:beat-12-01"
       ],
-      "number": 9,
-      "order": 93,
+      "number": 2,
+      "order": 86,
       "description": {
         "es": "Se reproduce el registro grabado de Zao para el puente; la misma voz que ya se escuchó en el núcleo diplomático.",
         "en": "Zao’s recorded message plays for the bridge—the same voice already heard in the diplomatic core."
@@ -8651,8 +8858,8 @@
         {
           "type": "sound",
           "text": {
-            "es": "Corrección de errores.",
-            "en": "Bug fixes."
+            "es": "La voz grabada de Zao conserva leves artefactos de corrección de transmisión.",
+            "en": "Zao’s recorded voice retains faint transmission-correction artifacts."
           }
         }
       ]
@@ -9244,8 +9451,8 @@
       "number": 8,
       "order": 106,
       "description": {
-        "es": "El mamparo cede; Voss y Okoye entran.",
-        "en": "The bulkhead gives way; Voss and Okoye enter."
+        "es": "Okoye fuerza el acceso e intercepta a Harlan; Voss sigue al mando desde el puente.",
+        "en": "Okoye forces access and intercepts Harlan; Voss remains in command from the bridge."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9268,6 +9475,11 @@
           "cueId": "main:cue-14-09",
           "atMs": 0,
           "durationMs": 8000
+        },
+        {
+          "cueId": "main:cue-14-okoye-containment",
+          "atMs": 500,
+          "durationMs": 3000
         }
       ],
       "takeIds": [
@@ -9347,8 +9559,8 @@
       "number": 10,
       "order": 108,
       "description": {
-        "es": "Elin confina la rama a 00:07; Harlan es reducido.",
-        "en": "Elin confines the branch to 00:07; Harlan is reduced."
+        "es": "Elin confina la rama con el saludo pasivo de Sorell; el canal saliente queda limpio y la mediación permanece activa.",
+        "en": "Elin confines the branch with Sorell’s passive greeting; the outbound channel is clean and mediation remains active."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9371,6 +9583,11 @@
           "cueId": "main:cue-14-12",
           "atMs": 0,
           "durationMs": 8000
+        },
+        {
+          "cueId": "main:cue-14-clean-channel-ui",
+          "atMs": 3600,
+          "durationMs": 2500
         }
       ],
       "takeIds": [
@@ -9904,8 +10121,8 @@
       "number": 2,
       "order": 120,
       "description": {
-        "es": "Mensaje de Zao archivado y detenido en su último cuadro.",
-        "en": "Zao message archived and stopped at its last frame."
+        "es": "Voss prepara el informe a la Tierra y adjunta la evidencia; el legajo y retrato de Zao ocupan la pantalla antes del envío.",
+        "en": "Voss prepares the report to Earth and attaches the evidence; Zao’s personnel file and portrait fill the display before transmission."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9923,7 +10140,13 @@
         }
       },
       "durationMs": 24000,
-      "cuePlacements": [],
+      "cuePlacements": [
+        {
+          "cueId": "main:cue-17-earth-report",
+          "atMs": 500,
+          "durationMs": 3800
+        }
+      ],
       "takeIds": [
         "main:take-17-02-01"
       ],
@@ -9996,8 +10219,8 @@
       "number": 4,
       "order": 122,
       "description": {
-        "es": "Voss mira el archivo de Zao y luego el ventanal.",
-        "en": "Voss looks at Zao's file and then at the window."
+        "es": "El retrato de Zao detiene a Voss; él alza la vista hacia la emisaria y la estación, separadas más allá del ventanal.",
+        "en": "Zao’s portrait stops Voss; he looks up toward the emissary and the station, separate beyond the window."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -10045,8 +10268,8 @@
       "number": 5,
       "order": 123,
       "description": {
-        "es": "Voss completa la frase casi para sí.",
-        "en": "Voss completes the sentence almost to himself."
+        "es": "Voss dice «Llegaste a tiempo» apenas para sí y pulsa ENVIAR; no espera una respuesta imposible de la Tierra.",
+        "en": "Voss says “You made it in time” softly to himself and presses SEND; he does not wait for an impossible reply from Earth."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -10069,6 +10292,11 @@
           "cueId": "main:cue-17-03",
           "atMs": 0,
           "durationMs": 8000
+        },
+        {
+          "cueId": "main:cue-17-earth-send",
+          "atMs": 3300,
+          "durationMs": 1800
         }
       ],
       "takeIds": [

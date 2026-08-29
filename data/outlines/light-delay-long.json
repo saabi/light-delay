@@ -62,8 +62,8 @@
         "en": "The forged signature forces an extreme warning"
       },
       "summary": {
-        "es": "Zao comprueba que la credencial de Sorell es falsificable y alerta al puente. Harlan corta las comunicaciones, por lo que ella descarta Tierra porque recibir allí y retransmitir a la Ardor llegaría después del encuentro, y Proxima porque Júpiter bloquea la línea de vista L2–L1. Sólo el corredor futuro de la nave puede interceptarla a tiempo.",
-        "en": "Zao proves Sorell’s credential can be forged and alerts the bridge. Harlan cuts communications, so she rejects Earth because reception there and retransmission to the Ardor would arrive after the encounter, and Proxima because Jupiter blocks the L2–L1 line of sight. Only the ship’s future corridor can intercept it in time."
+        "es": "Zao comprueba que la credencial de Sorell fue falsificada y alerta al puente. Harlan llega por coincidencia tras una tarea legítima, reacciona sólo cuando ella dice que la firma real está por señalar a alguien y corta las comunicaciones. Voss sopesa la implicación de Sorell, la envía a verificar y le exige buscar a Harlan; él gana tiempo por servicio mientras ella avanza por el acceso común. Zao descarta Tierra por el doble retardo y Proxima por la oclusión de Júpiter, apunta al corredor futuro, adjunta un snapshot firmado del relé y firma todo con su token personal.",
+        "en": "Zao confirms Sorell’s credential was forged and warns the bridge. Harlan arrives coincidentally after a legitimate duty, reacts only when she says the real signature is about to point to someone, and cuts communications. Voss weighs Sorell’s implication, sends her to verify, and requires her to find Harlan; he gains time through service while she moves through common access. Zao rejects Earth because of the two-leg delay and Proxima because Jupiter occludes it, aims at the future corridor, attaches a signed relay snapshot, and signs everything with her personal token."
       },
       "importance": "required",
       "causalLinks": [
@@ -86,8 +86,8 @@
         "en": "Harlan kills; the ship crosses"
       },
       "summary": {
-        "es": "Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao y suspira antes de atacarla fuera de campo; un golpe seco, el fin del forcejeo y el negro sostenido confirman su muerte. La Ardor cruza y Sorell encuentra el cuerpo.",
-        "en": "Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck and sighs before attacking her offscreen; a dry impact, the end of the struggle, and sustained black confirm her death. The Ardor crosses and Sorell finds the body."
+        "es": "Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao y suspira antes de atacarla; el golpe seco y el negro sostenido confirman su muerte. Borra cámaras, archivo local e índice del manifiesto, sin saber que el snapshot ya salió. La Ardor cruza y Sorell encuentra el cuerpo.",
+        "en": "Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck and sighs before attacking her; the dry impact and sustained black confirm her death. He wipes cameras, the local archive, and the manifest index, unaware the snapshot already left. The Ardor crosses and Sorell finds the body."
       },
       "importance": "required",
       "causalLinks": [
@@ -182,8 +182,8 @@
         "en": "The double key exposes Harlan"
       },
       "summary": {
-        "es": "La firma de Zao y una verificación independiente autentican el mensaje. Harlan actúa al quedar expuesto y la decisión de Okoye impide que conserve el control del relato.",
-        "en": "Zao’s signature and an independent check authenticate the message. Harlan acts when exposed, and Okoye’s decision prevents him from retaining control of the story."
+        "es": "La firma del transmisor prueba dispositivo y hora; el token personal autentica a Zao y la integridad del mensaje y snapshot. El manifiesto firmado por hardware aún asigna el relé a Harlan y la auditoría independiente de Elin conecta relé, payload y override. Expuesto, Harlan usa su última ventana; Okoye lo intercepta mientras Voss permanece en el puente.",
+        "en": "The transmitter signature proves device and time; the personal token authenticates Zao and the integrity of the message and snapshot. The hardware-signed manifest still assigns the relay to Harlan, and Elin’s independent audit connects relay, payload, and override. Exposed, Harlan uses his last window; Okoye intercepts him while Voss remains on the bridge."
       },
       "importance": "required",
       "causalLinks": [
@@ -206,8 +206,8 @@
         "en": "Manual controls and quarantine"
       },
       "summary": {
-        "es": "Con Harlan contenido, la tripulación usa controles manuales para revocar accesos y aislar la carga sin destruir el sistema de mediación.",
-        "en": "With Harlan contained, the crew uses manual controls to revoke access and isolate the payload without destroying the mediation system."
+        "es": "Con Harlan contenido sin combate armado, Elin aplica la cuarentena preparada y Sorell aporta el saludo pasivo de sólo lectura. El payload queda aislado, el canal saliente limpio y la mediación activa.",
+        "en": "With Harlan restrained without an armed fight, Elin applies the prepared quarantine and Sorell supplies the passive read-only greeting. The payload is isolated, the outbound channel clean, and mediation active."
       },
       "importance": "required",
       "causalLinks": [
@@ -278,8 +278,8 @@
         "en": "The truth keeps traveling"
       },
       "summary": {
-        "es": "El archivo de Zao queda preservado y el informe parte hacia la Tierra: la misión se salva, pero sus consecuencias políticas aún deben recorrer la distancia.",
-        "en": "Zao’s archive is preserved and the report leaves for Earth: the mission is saved, but its political consequences must still cross the distance."
+        "es": "Voss prepara el informe a la Tierra, adjunta la evidencia y el legajo de Zao. Su retrato lo detiene; murmura «Llegaste a tiempo» y pulsa ENVIAR. La verdad parte, pero no llega respuesta y sus consecuencias políticas aún deben recorrer la distancia.",
+        "en": "Voss prepares the report to Earth, attaching the evidence and Zao’s personnel file. Her portrait stops him; he murmurs “You made it in time” and presses SEND. The truth departs, but no reply arrives and its political consequences must still cross the distance."
       },
       "importance": "required",
       "causalLinks": [
@@ -464,8 +464,8 @@
         "en": "Hostile Deployment"
       },
       "summary": {
-        "es": "La envoltura revela un escaneo intrusivo. Zao avisa al puente que la firma de Sorell parece falsa; Harlan oye “relé físico” desde el acceso, activa el jammer sin ser visto y corta COM A/B en el distribuidor del cilindro de servicio.",
-        "en": "The wrapper reveals an intrusive scan. Zao warns the bridge that Sorell's signature appears forged; Harlan hears ‘physical relay’ from the access, activates the jammer unseen, and cuts COM A/B at the service-cylinder distributor."
+        "es": "Zao avisa: «Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. La verdadera firma apunta a—». Harlan llega por coincidencia tras una tarea legítima, relajado hasta esa última frase; activa el jammer sin ser visto y corta COM A/B. Voss piensa porque Sorell está implicada, la envía a verificar y luego exige que busque a Harlan y no entre sola.",
+        "en": "Zao warns: “Captain, there’s an autonomous payload signed by Sorell. The signature looks forged. The real signature points to—.” Harlan arrives coincidentally after a legitimate duty, relaxed until that last phrase; he activates the jammer unseen and cuts COM A/B. Voss thinks because Sorell is implicated, sends her to verify, then requires her to find Harlan and not enter alone."
       },
       "importance": "required",
       "coverage": {
@@ -491,8 +491,8 @@
         "en": "Message to the Corridor"
       },
       "summary": {
-        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro; descarta Proxima porque Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo puede calcular la intercepción con la posición futura de la nave y barrer allí la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
-        "en": "With wireless and COM A/B down, Zao uses the external laser’s dedicated wired control. She rejects Earth because reception there and retransmission to the Ardor would take until after the encounter; she rejects Proxima because Jupiter occults the line of sight between the local mouth at L2 and the station at L1. Her only option is to calculate an intercept with the ship’s future position and sweep the uncertainty ellipse there while Harlan approaches through service and Sorell through the central cylinder."
+        "es": "Con wireless y COM A/B caídos, Zao descarta Tierra porque recibir y retransmitir llegaría después del encuentro y Proxima porque Júpiter ocluye L2–L1. Harlan avanza balísticamente por servicio; Sorell pierde tiempo buscándolo y progresa mano sobre mano por el acceso común. Zao calcula el corredor futuro, adjunta el snapshot del manifiesto de relé firmado por hardware y firma mensaje y adjunto con su token personal antes del barrido.",
+        "en": "With wireless and COM A/B down, Zao rejects Earth because reception and retransmission would arrive after the meeting and Proxima because Jupiter occludes L2–L1. Harlan advances ballistically through service; Sorell loses time looking for him and proceeds hand over hand through common access. Zao calculates the future corridor, attaches the hardware-signed relay-manifest snapshot, and signs message and attachment with her personal token before the sweep."
       },
       "importance": "required",
       "coverage": {
@@ -518,8 +518,8 @@
         "en": "Death Offscreen"
       },
       "summary": {
-        "es": "Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
-        "en": "Harlan enters after the send and sees only TRANSMITTED. He says aloud that Zao must have aimed at Earth and reassures himself that the two-leg delay would prevent warning Voss before the encounter. He laments that she found the evidence, sighs, and kills her offscreen; then he cleans the compartment and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and building his alibi."
+        "es": "Harlan entra después del envío y sólo ve TRANSMITIDO. Supone que Zao apuntó a la Tierra, se tranquiliza por el doble retardo, lamenta que encontrara la evidencia y suspira antes de matarla fuera de campo. Borra cámaras, archivo local e índice operativo del manifiesto, ignorando que el snapshot ya salió; luego vuelve por servicio. Sorell encuentra el cuerpo, intenta reanimarla y no puede comunicarse.",
+        "en": "Harlan enters after the send and sees only TRANSMITTED. He assumes Zao aimed at Earth, reassures himself with the two-leg delay, laments that she found the evidence, and sighs before killing her offscreen. He wipes cameras, the local archive, and the operational manifest index, unaware the snapshot already left; then he returns through service. Sorell finds the body, attempts resuscitation, and cannot communicate."
       },
       "importance": "required",
       "coverage": {
@@ -788,8 +788,8 @@
         "en": "Zao's Message"
       },
       "summary": {
-        "es": "La tripulación escucha fragmentos del mensaje. La firma prueba origen y hora del dispositivo, no todavía la verdad de cada palabra.",
-        "en": "The crew hears fragments of the message. The signature proves the device's origin and time, but not yet the truth of every word."
+        "es": "Cael verifica dispositivo y hora del transmisor. Harlan objeta que una voz puede falsificarse; Elin responde que verifica la firma del token personal de Zao, que autentica autora e integridad del mensaje y adjunto.",
+        "en": "Cael verifies the transmitter device and time. Harlan objects that a voice can be forged; Elin answers that she is verifying Zao’s personal-token signature, which authenticates the author and integrity of the message and attachment."
       },
       "importance": "required",
       "coverage": {
@@ -815,8 +815,8 @@
         "en": "The Double Key"
       },
       "summary": {
-        "es": "Elin cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
-        "en": "Elin cross-checks the message against the physical relay and passive greeting. The evidence converges without depending on a single digital record."
+        "es": "El snapshot del manifiesto conserva la firma del hardware y aún asigna el relé a Harlan. La auditoría independiente de Elin conecta ese relé con el payload y el override: evidencia convergente, no un único registro digital.",
+        "en": "The manifest snapshot preserves the hardware signature and still assigns the relay to Harlan. Elin’s independent audit connects that relay to the payload and override: convergent evidence, not a single digital record."
       },
       "importance": "required",
       "coverage": {
@@ -869,8 +869,8 @@
         "en": "Okoye's Decision"
       },
       "summary": {
-        "es": "Okoye elige ejecutar la orden de Voss bajo evidencia incompleta mientras seguridad contiene a Harlan sin convertir la escena en combate armado.",
-        "en": "Okoye chooses to carry out Voss's order on incomplete evidence while security restrains Harlan without turning the scene into an armed fight."
+        "es": "Voss permanece en el puente. Okoye ejecuta la orden, intercepta a Harlan en el ramal físico y lo contiene sin combate armado.",
+        "en": "Voss remains on the bridge. Okoye carries out the order, intercepts Harlan at the physical branch, and restrains him without an armed fight."
       },
       "importance": "required",
       "coverage": {
@@ -923,8 +923,8 @@
         "en": "Quarantine"
       },
       "summary": {
-        "es": "Elin confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
-        "en": "Elin confines the hostile branch to the prepared buffer. Sorell supplies the passive greeting and separates language from intrusion."
+        "es": "Elin confina la rama hostil al buffer preparado y Sorell aporta el saludo pasivo de sólo lectura: PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA.",
+        "en": "Elin confines the hostile branch to the prepared buffer and Sorell supplies the passive read-only greeting: PAYLOAD QUARANTINED / OUTBOUND CHANNEL CLEAN / MEDIATION ACTIVE."
       },
       "importance": "required",
       "coverage": {
@@ -1031,8 +1031,8 @@
         "en": "The Truth Keeps Traveling"
       },
       "summary": {
-        "es": "El archivo de Zao queda preservado y Harlan bajo custodia. La transmisión hacia la Tierra parte, pero sus consecuencias permanecen fuera de campo.",
-        "en": "Zao's archive is preserved and Harlan remains in custody. The transmission to Earth departs, but its consequences remain offscreen."
+        "es": "Con Harlan bajo custodia, Voss prepara el informe a la Tierra, adjunta evidencia y el legajo de Zao. Su retrato lo detiene; dice «Llegaste a tiempo» apenas para sí y pulsa ENVIAR. No llega respuesta.",
+        "en": "With Harlan in custody, Voss prepares the report to Earth, attaches evidence and Zao’s personnel file. Her portrait stops him; he says “You made it in time” softly to himself and presses SEND. No reply arrives."
       },
       "importance": "required",
       "coverage": {

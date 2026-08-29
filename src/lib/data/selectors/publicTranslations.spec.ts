@@ -19,14 +19,14 @@ describe('public structured translations (inline LocalizedString)', () => {
 		expect(dialogue?.type).toBe('dialogue');
 		if (dialogue?.type !== 'dialogue') throw new Error('dialogue fixture not found');
 		expect(dialogue.content.variants.en?.spokenText).toBe(
-			'The signature looks forged. The physical relay points to—'
+			'The signature looks forged. The real signature points to—'
 		);
 		expect(dialogue.content.variants.en?.status).toBe('draft');
 		expect(dialogue.content.variants.en?.audioAssetId).toBeUndefined();
 		expect(sourceDialogue?.type).toBe('dialogue');
 		if (sourceDialogue?.type !== 'dialogue') throw new Error('source dialogue fixture not found');
 		expect(sourceDialogue.content.variants.en?.spokenText).toBe(
-			'The signature looks forged. The physical relay points to—'
+			'The signature looks forged. The real signature points to—'
 		);
 	});
 

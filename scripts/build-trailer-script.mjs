@@ -402,9 +402,10 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				beatId,
 				1,
 				'character:zao',
-				'La firma parece falsa. El relé físico apunta a—',
+				'La firma parece falsa. La verdadera firma apunta a—',
 				'on_screen',
-				'main:cue-05-06'
+				'main:cue-05-06',
+				'The signature looks forged. The real signature points to—'
 			),
 			0
 		);

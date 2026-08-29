@@ -74,7 +74,7 @@ test('screenplay content defaults to the route language and preserves a manual c
 	).toBeVisible();
 	await expect(page.getByText('Boarding and transit', { exact: true })).toBeVisible();
 	await expect(
-		page.getByText('The signature looks forged. The physical relay points to—', { exact: true })
+		page.getByText('The signature looks forged. The real signature points to—', { exact: true })
 	).toBeVisible();
 
 	await page.getByLabel('Story and dialogue').selectOption('es');

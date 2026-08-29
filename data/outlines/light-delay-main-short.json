@@ -86,8 +86,8 @@
         "en": "The warning triggers sabotage"
       },
       "summary": {
-        "es": "Zao llama al puente y alcanza a revelar la carga y la firma aparentemente falsa. Harlan llega sin ser visto, oye que ella está cerca de exponerlo, activa el jammer y corta COM A/B. Voss envía a Sorell a investigar y le ordena buscar a Harlan, que ya tomó la ruta de servicio hacia Zao.",
-        "en": "Zao calls the bridge and manages to reveal the payload and apparently forged signature. Harlan arrives unseen, hears that she is close to exposing him, activates the jammer, and cuts COM A/B. Voss sends Sorell to investigate and tells her to find Harlan, who has already taken the service route toward Zao."
+        "es": "Zao llama al puente. Harlan, que acaba una tarea legítima y llega por coincidencia con actitud rutinaria, pasa inadvertido porque la tripulación escucha a Voss. Sólo reacciona cuando Zao dice que la firma real está por señalar a alguien; corta wireless y COM A/B. Voss sopesa que la identidad de Sorell fue falsificada pero que ella sigue implicada: la envía a verificar, la retiene para ordenarle buscar a Harlan y no entrar sola, y esa cautela da ventaja al saboteador.",
+        "en": "Zao calls the bridge. Harlan, finishing a legitimate duty and arriving coincidentally with an ordinary manner, goes unnoticed because the crew is listening to Voss. He reacts only when Zao says the real signature is about to point to someone; he cuts wireless and COM A/B. Voss weighs that Sorell’s identity was forged but she remains implicated: he sends her to verify, calls her back to order her to find Harlan and not enter alone, and that caution gives the saboteur a head start."
       },
       "importance": "required",
       "causalLinks": [
@@ -110,8 +110,8 @@
         "en": "Zao sends a message into the future"
       },
       "summary": {
-        "es": "El fallo simultáneo confirma a Zao que fue aislada. Tierra no sirve porque recibir y retransmitir llegaría después del encuentro; Júpiter bloquea la línea de vista hacia Proxima. Zao calcula la posición futura de la Ardor y completa un barrido óptico antes de que Harlan llegue.",
-        "en": "The simultaneous failure confirms to Zao that she was isolated. Earth cannot work because reception and retransmission would arrive after the encounter; Jupiter blocks the line of sight to Proxima. Zao calculates the Ardor’s future position and completes an optical sweep before Harlan arrives."
+        "es": "El fallo simultáneo confirma a Zao que fue aislada. Tierra no sirve porque recibir y retransmitir llegaría después del encuentro; Júpiter bloquea la línea de vista hacia Proxima. Mientras Harlan avanza balísticamente por servicio y Sorell pierde tiempo buscándolo antes de ir mano sobre mano por el acceso común, Zao calcula la posición futura de la Ardor, adjunta un snapshot firmado del relé que aún señala a Harlan, firma todo con su token personal y completa el barrido óptico.",
+        "en": "The simultaneous failure confirms to Zao that she was isolated. Earth is useless because reception and retransmission would arrive after the encounter; Jupiter blocks line of sight to Proxima. While Harlan advances ballistically through service and Sorell loses time looking for him before moving hand over hand through common access, Zao calculates the Ardor’s future position, attaches a signed relay snapshot that still points to Harlan, signs everything with her personal token, and completes the optical sweep."
       },
       "importance": "required",
       "causalLinks": [
@@ -134,8 +134,8 @@
         "en": "Harlan kills Zao and the ship crosses"
       },
       "summary": {
-        "es": "Harlan ve TRANSMITIDO pero no el destino, supone que fue a la Tierra y confía en el doble retardo. Lamenta la suerte de Zao y suspira antes de atacarla; un golpe seco, el fin del forcejeo y el negro sostenido confirman su muerte. Harlan limpia el puesto mientras la Ardor cruza la garganta.",
-        "en": "Harlan sees TRANSMITTED but not the destination, assumes it went to Earth, and trusts the two-leg delay. He laments Zao’s luck and sighs before attacking her; a dry impact, the end of the struggle, and sustained black confirm her death. Harlan cleans the station as the Ardor crosses the throat."
+        "es": "Harlan ve TRANSMITIDO pero no el destino, supone que fue a la Tierra y confía en el doble retardo. Lamenta la suerte de Zao y suspira antes de atacarla; un golpe seco, el fin del forcejeo y el negro sostenido confirman su muerte. Borra cámaras, archivo local e índice operativo del manifiesto, creyendo eliminada una evidencia que ya viaja en el snapshot.",
+        "en": "Harlan sees TRANSMITTED but not the destination, assumes it went to Earth, and trusts the two-leg delay. He laments Zao’s luck and sighs before attacking her; a dry impact, the end of the struggle, and sustained black confirm her death. He wipes cameras, the local archive, and the operational manifest index, believing he has erased evidence already traveling in the snapshot."
       },
       "importance": "required",
       "causalLinks": [
@@ -206,8 +206,8 @@
         "en": "The warning catches the ship"
       },
       "summary": {
-        "es": "Cuando Harlan intenta borrar la última evidencia, la señal de Zao intercepta la Ardor. Su firma temporal y el trabajo independiente de Elin prueban que es auténtica y compatible con la carga investigada.",
-        "en": "When Harlan tries to erase the last evidence, Zao’s signal intercepts the Ardor. Its time signature and Elin’s independent work prove it authentic and consistent with the investigated payload."
+        "es": "La señal intercepta la Ardor antes del encuentro. La firma temporal autentica dispositivo y hora; la firma del token personal de Zao autentica autoría e integridad del mensaje y su snapshot. La objeción de Harlan sobre una voz falsa ya no puede explicar esas capas.",
+        "en": "The signal intercepts the Ardor before the meeting. Its time signature authenticates device and time; Zao’s personal-token signature authenticates authorship and the integrity of the message and snapshot. Harlan’s objection about a forged voice cannot explain those layers."
       },
       "importance": "required",
       "causalLinks": [
@@ -230,8 +230,8 @@
         "en": "The double proof exposes Harlan"
       },
       "summary": {
-        "es": "El mensaje nombra a Harlan y el relé; la auditoría aporta la función de la carga y la firma física. Voss puede atribuir el sabotaje y revocar sus permisos, por lo que Harlan intenta su último override.",
-        "en": "The message names Harlan and the relay; the audit supplies the payload’s function and physical signature. Voss can attribute the sabotage and revoke his access, so Harlan attempts his last override."
+        "es": "El snapshot firmado por el hardware todavía asigna el relé a Harlan y la auditoría independiente de Elin conecta ese circuito con el payload y el override. La evidencia convergente permite a Voss revocar sus permisos; Harlan usa la última ventana y corre bajo 1 g hacia el control físico.",
+        "en": "The hardware-signed snapshot still assigns the relay to Harlan, and Elin’s independent audit connects that circuit to the payload and override. The convergent evidence lets Voss revoke his access; Harlan uses the last window and runs under 1 g toward physical control."
       },
       "importance": "required",
       "causalLinks": [
@@ -254,8 +254,8 @@
         "en": "The crew cleans the channel"
       },
       "summary": {
-        "es": "Con Harlan contenido, Elin aplica la cuarentena preparada y Sorell reconstruye el saludo pasivo. La carga queda aislada sin destruir la mediación.",
-        "en": "With Harlan contained, Elin applies the prepared quarantine and Sorell rebuilds the passive greeting. The payload is isolated without destroying mediation."
+        "es": "Voss permanece en el puente; Okoye intercepta y contiene a Harlan sin combate armado. Elin aplica la cuarentena preparada y Sorell aporta el saludo pasivo de sólo lectura: el payload queda aislado, el canal saliente limpio y la mediación activa.",
+        "en": "Voss remains on the bridge; Okoye intercepts and restrains Harlan without an armed fight. Elin applies the prepared quarantine and Sorell supplies the passive read-only greeting: the payload is isolated, the outbound channel clean, and mediation active."
       },
       "importance": "required",
       "causalLinks": [
@@ -278,8 +278,8 @@
         "en": "Contact and cost"
       },
       "summary": {
-        "es": "La Ardor llega con un canal limpio, los Velari autorizan la aproximación y la misión sobrevive. El éxito confirma que la voz tardía de Zao llegó a tiempo, aunque ella no pudo verlo.",
-        "en": "The Ardor arrives with a clean channel, the Velari authorize approach, and the mission survives. The success confirms that Zao’s delayed voice arrived in time, although she could not see it."
+        "es": "La Ardor envía un saludo limpio y los Velari autorizan una aproximación limitada; la estación y la nave emisaria siguen siendo objetos distintos. Voss prepara el informe a la Tierra, adjunta evidencia y el legajo de Zao, se detiene ante su retrato, murmura «Llegaste a tiempo» y pulsa ENVIAR. No recibe respuesta.",
+        "en": "The Ardor sends a clean greeting and the Velari authorize a limited approach; the station and emissary ship remain distinct objects. Voss prepares the report to Earth, attaches evidence and Zao’s personnel file, pauses at her portrait, murmurs “You made it in time,” and presses SEND. No reply arrives."
       },
       "importance": "required",
       "causalLinks": [
@@ -538,8 +538,8 @@
         "en": "Confirmation and silence"
       },
       "summary": {
-        "es": "Zao alcanza a advertir al puente sobre la carga y la firma sospechosa; Harlan la oye y corta radio y enlace cableado.",
-        "en": "Zao warns the bridge about the payload and suspect signature; Harlan hears her and cuts radio and wired links."
+        "es": "Zao advierte que hay un payload firmado por Sorell, que esa firma parece falsa y que la verdadera apunta a alguien, pero el corte impide nombrarlo. Harlan había llegado de una tarea legítima con actitud rutinaria; sólo esa última frase lo alarma. Voss sopesa la implicación de Sorell, la envía a verificar y luego exige que busque a Harlan y no entre sola.",
+        "en": "Zao warns that there is a payload signed by Sorell, that the signature appears forged, and that the real one points to someone, but the cutoff prevents her from naming them. Harlan had arrived from a legitimate duty with an ordinary manner; only that last phrase alarms him. Voss weighs Sorell’s implication, sends her to verify, then requires her to find Harlan and not enter alone."
       },
       "importance": "required",
       "coverage": {
@@ -604,8 +604,8 @@
         "en": "INT. CELESTIAL ARDOR — DIPLOMATIC CORE — EXTERNAL TRANSMITTER — CONTINUOUS"
       },
       "summary": {
-        "es": "Tierra no sirve: recibir el aviso y reenviarlo a la Ardor llevaría la advertencia hasta después del encuentro. Proxima tampoco: Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo un haz a la posición futura de la Ardor puede interceptarla antes del contacto.",
-        "en": "Earth cannot work: receiving the warning and relaying it to the Ardor would deliver it after the encounter. Proxima cannot work either: Jupiter occults the line of sight between the local mouth at L2 and the station at L1. Only a beam to the Ardor’s future position can intercept it before contact."
+        "es": "Tierra no sirve porque recibir y retransmitir llegaría después del encuentro; Proxima tampoco porque Júpiter ocluye L2–L1. Zao calcula el corredor futuro, captura el manifiesto firmado por el hardware del relé aún asignado a Harlan, adjunta el snapshot y firma mensaje y adjunto con su token personal antes de barrer la incertidumbre.",
+        "en": "Earth is useless because reception and retransmission would arrive after the meeting; Proxima is also unavailable because Jupiter occludes L2–L1. Zao calculates the future corridor, captures the relay hardware-signed manifest still assigned to Harlan, attaches the snapshot, and signs message and attachment with her personal token before sweeping the uncertainty."
       },
       "importance": "required",
       "coverage": {

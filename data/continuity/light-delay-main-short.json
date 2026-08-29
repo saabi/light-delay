@@ -5,63 +5,810 @@
     "scriptId": "script:light-delay-main-short",
     "status": "draft",
     "sourceDocument": "docs/CONTINUIDAD_CAUSAL_GUIONES.md",
-    "notes": { "es": "Transcripción ejecutable de la cadena causal obligatoria; requiere revisión humana antes de bloquearse.", "en": "Executable transcription of the required causal chain; requires human review before it can be locked." }
+    "notes": {
+      "es": "Cadena causal revisada hasta contacto y cierre; pendiente aprobación humana antes de bloquearla.",
+      "en": "Causal chain reviewed through contact and closing; pending human approval before locking."
+    }
   },
   "facts": [
-    { "id": "fact:payload-and-forged-sorell-signature", "description": { "es": "Zao detectó el payload y que la firma superficial de Sorell parece falsa.", "en": "Zao detected the payload and that Sorell's surface signature appears forged." } },
-    { "id": "fact:bridge-heard-limited-warning", "description": { "es": "El puente oyó payload, firma de Sorell y apariencia de falsificación, pero no la atribución a Harlan.", "en": "The bridge heard payload, Sorell's signature, and apparent forgery, but not the attribution to Harlan." } },
-    { "id": "fact:harlan-cover-at-risk", "description": { "es": "Harlan sabe que su encubrimiento está en riesgo.", "en": "Harlan knows his cover-up is at risk." } },
-    { "id": "fact:communications-deliberately-cut", "description": { "es": "Zao comprende que el corte de comunicaciones es deliberado.", "en": "Zao understands that communications were deliberately cut." } },
-    { "id": "fact:wired-backup-isolated", "description": { "es": "COM A/B de la cubierta diplomática fue aislado físicamente.", "en": "Diplomatic-deck COM A/B was physically isolated." } },
-    { "id": "fact:sorell-cannot-find-harlan", "description": { "es": "Sorell no encuentra a Harlan antes de dirigirse al puesto de Zao.", "en": "Sorell cannot find Harlan before heading to Zao's station." } },
-    { "id": "fact:optical-message-sent", "description": { "es": "Zao transmitió al corredor futuro de la Ardor sin revelar el destino a Harlan.", "en": "Zao transmitted to the Ardor's future corridor without revealing the destination to Harlan." } },
-    { "id": "fact:zao-dead-and-scene-disturbed", "description": { "es": "Zao está muerta y Sorell alteró involuntariamente la escena al intentar reanimarla.", "en": "Zao is dead and Sorell inadvertently disturbed the scene while attempting resuscitation." } },
-    { "id": "fact:hostile-function-known-not-attributed", "description": { "es": "El equipo conoce la función hostil, pero aún no puede atribuirla suficientemente a Harlan.", "en": "The team knows the hostile function but cannot yet sufficiently attribute it to Harlan." } },
-    { "id": "fact:message-crosschecked-with-physical-evidence", "description": { "es": "El mensaje se cruzó con el relé y el registro físico.", "en": "The message was cross-checked with the relay and physical record." } },
-    { "id": "fact:passive-greeting-available", "description": { "es": "Sorell aporta un saludo pasivo de sólo lectura.", "en": "Sorell provides a passive read-only greeting." } },
-    { "id": "fact:sorell-overdue-and-harlan-denies-contact", "description": { "es": "Sorell está demorada y Harlan afirma no haberla visto.", "en": "Sorell is overdue and Harlan says he has not seen her." } }
+    {
+      "id": "fact:payload-and-forged-sorell-signature",
+      "description": {
+        "es": "Zao detectó el payload y que la firma superficial de Sorell parece falsa.",
+        "en": "Zao detected the payload and that Sorell’s surface signature appears forged."
+      }
+    },
+    {
+      "id": "fact:bridge-heard-limited-warning",
+      "description": {
+        "es": "El puente oyó payload, firma falsa y que la firma real apuntaba a alguien, pero no oyó un nombre.",
+        "en": "The bridge heard payload, forged signature, and that the real signature pointed to someone, but heard no name."
+      }
+    },
+    {
+      "id": "fact:harlan-cover-at-risk",
+      "description": {
+        "es": "Harlan comprende que Zao está a punto de exponerlo.",
+        "en": "Harlan understands that Zao is about to expose him."
+      }
+    },
+    {
+      "id": "fact:communications-deliberately-cut",
+      "description": {
+        "es": "Wireless y COM A/B fueron cortados deliberadamente.",
+        "en": "Wireless and COM A/B were deliberately cut."
+      }
+    },
+    {
+      "id": "fact:voss-cautious-sorell-order",
+      "description": {
+        "es": "Voss envió a Sorell a verificar porque su identidad fue falsificada pero seguía implicada, y le ordenó buscar a Harlan y no entrar sola.",
+        "en": "Voss sent Sorell to verify because her identity was forged but she remained implicated, and ordered her to find Harlan and not enter alone."
+      }
+    },
+    {
+      "id": "fact:sorell-cannot-find-harlan",
+      "description": {
+        "es": "Sorell no encuentra a Harlan y debe avanzar sola por el acceso común.",
+        "en": "Sorell cannot find Harlan and must proceed alone through common access."
+      }
+    },
+    {
+      "id": "fact:optical-message-sent",
+      "description": {
+        "es": "Zao transmitió al corredor futuro; Harlan vio el envío completo pero no su destino.",
+        "en": "Zao transmitted toward the future corridor; Harlan saw the completed send but not its destination."
+      }
+    },
+    {
+      "id": "fact:zao-signed-relay-snapshot",
+      "description": {
+        "es": "Zao adjuntó el snapshot firmado por hardware del relé, aún asignado a Harlan, y firmó mensaje y adjunto con su token personal.",
+        "en": "Zao attached the relay hardware-signed snapshot, still assigned to Harlan, and signed message and attachment with her personal token."
+      }
+    },
+    {
+      "id": "fact:sorell-overdue-and-harlan-denies-contact",
+      "description": {
+        "es": "Sorell está demorada y Harlan afirma no haberla visto.",
+        "en": "Sorell is overdue and Harlan says he did not see her."
+      }
+    },
+    {
+      "id": "fact:zao-dead-and-scene-disturbed",
+      "description": {
+        "es": "Zao está muerta y Sorell alteró involuntariamente la escena al intentar reanimarla.",
+        "en": "Zao is dead and Sorell inadvertently disturbed the scene while attempting resuscitation."
+      }
+    },
+    {
+      "id": "fact:hostile-function-known-not-attributed",
+      "description": {
+        "es": "Elin conoce la función hostil y preparó la cuarentena, pero todavía no puede atribuir el override.",
+        "en": "Elin knows the hostile function and prepared quarantine but cannot yet attribute the override."
+      }
+    },
+    {
+      "id": "fact:zao-authorship-verified",
+      "description": {
+        "es": "El token personal autentica la autoría de Zao y la integridad del mensaje y snapshot.",
+        "en": "The personal token authenticates Zao’s authorship and the integrity of the message and snapshot."
+      }
+    },
+    {
+      "id": "fact:harlan-attribution-converged",
+      "description": {
+        "es": "El snapshot físico y la auditoría independiente conectan a Harlan con relé, payload y override.",
+        "en": "The physical snapshot and independent audit connect Harlan to relay, payload, and override."
+      }
+    },
+    {
+      "id": "fact:harlan-contained",
+      "description": {
+        "es": "Okoye interceptó y contuvo a Harlan sin combate armado mientras Voss permaneció en el puente.",
+        "en": "Okoye intercepted and restrained Harlan without an armed fight while Voss remained on the bridge."
+      }
+    },
+    {
+      "id": "fact:clean-channel-ready",
+      "description": {
+        "es": "El payload está en cuarentena, el canal saliente está limpio y la mediación permanece activa.",
+        "en": "The payload is quarantined, the outbound channel is clean, and mediation remains active."
+      }
+    },
+    {
+      "id": "fact:earth-report-sent-no-reply",
+      "description": {
+        "es": "Voss envió a la Tierra la evidencia y el legajo de Zao; no recibió respuesta.",
+        "en": "Voss sent the evidence and Zao’s personnel file to Earth; no reply arrived."
+      }
+    }
   ],
   "steps": [
-    { "id": "main:causal-01", "order": 1, "description": { "es": "Zao detecta el payload, la falsificación y el indicio de relé.", "en": "Zao detects the payload, forgery, and relay indication." }, "knowers": ["character:zao"], "requiresFactIds": [], "revealsFactIds": ["fact:payload-and-forged-sorell-signature"], "enables": { "es": "Zao puede llamar al puente sin acusar aún a nadie.", "en": "Zao can call the bridge without accusing anyone yet." }, "outlineStepIds": ["main:outline-04"], "shotIds": ["main:shot-04-01", "main:shot-04-02", "main:shot-04-03", "main:shot-04-04", "main:shot-04-05"] },
-    { "id": "main:causal-02", "order": 2, "description": { "es": "El puente recibe la advertencia limitada y Harlan la oye sin ser visto.", "en": "The bridge receives the limited warning and Harlan hears it unseen." }, "knowers": ["character:zao", "character:voss", "character:sorell", "character:harlan"], "requiresFactIds": ["fact:payload-and-forged-sorell-signature"], "revealsFactIds": ["fact:bridge-heard-limited-warning", "fact:harlan-cover-at-risk"], "enables": { "es": "Harlan puede decidir activar el jammer; Voss puede enviar a Sorell a verificar su credencial.", "en": "Harlan can decide to activate the jammer; Voss can send Sorell to verify her credential." }, "outlineStepIds": ["main:outline-05"], "shotIds": ["main:shot-05-01", "main:shot-05-02"] },
-    { "id": "main:causal-03", "order": 3, "description": { "es": "La voz se corta antes de que el puente oiga la atribución a Harlan.", "en": "The voice cuts out before the bridge hears the attribution to Harlan." }, "knowers": ["character:zao", "character:harlan"], "requiresFactIds": ["fact:harlan-cover-at-risk"], "revealsFactIds": ["fact:communications-deliberately-cut"], "enables": { "es": "Zao busca una ruta de comunicación independiente.", "en": "Zao seeks an independent communications route." }, "outlineStepIds": ["main:outline-05"], "shotIds": ["main:shot-05-03", "main:shot-05-04"] },
-    { "id": "main:causal-04", "order": 4, "description": { "es": "Harlan desconecta COM A/B desde servicio.", "en": "Harlan disconnects COM A/B from the service route." }, "knowers": ["character:harlan"], "requiresFactIds": ["fact:harlan-cover-at-risk"], "revealsFactIds": ["fact:wired-backup-isolated"], "enables": { "es": "Falla también el respaldo cableado, mientras el control dedicado del láser permanece disponible.", "en": "The wired backup also fails while the laser's dedicated control remains available." }, "outlineStepIds": ["main:outline-05"], "shotIds": ["main:shot-05-05", "main:shot-05-06"] },
-    { "id": "main:causal-05", "order": 5, "description": { "es": "Sorell no encuentra a Harlan; él toma la ruta balística de servicio.", "en": "Sorell cannot find Harlan; he takes the ballistic service route." }, "knowers": ["character:sorell", "character:harlan"], "requiresFactIds": ["fact:bridge-heard-limited-warning"], "revealsFactIds": ["fact:sorell-cannot-find-harlan"], "enables": { "es": "Harlan llega antes al núcleo sin una diferencia arbitraria de tiempos.", "en": "Harlan reaches the core first without an arbitrary timing difference." }, "outlineStepIds": ["main:outline-05"], "shotIds": ["main:shot-05-07", "main:shot-05-08"] },
-    { "id": "main:causal-06", "order": 6, "description": { "es": "Zao calcula el corredor futuro y transmite con el láser exterior.", "en": "Zao calculates the future corridor and transmits with the exterior laser." }, "knowers": ["character:zao", "character:harlan"], "requiresFactIds": ["fact:communications-deliberately-cut", "fact:wired-backup-isolated"], "revealsFactIds": ["fact:optical-message-sent"], "enables": { "es": "El mensaje puede alcanzar a la tripulación antes del encuentro sin que Harlan conozca con certeza el destino.", "en": "The message can reach the crew before the meeting without Harlan knowing the destination for certain." }, "outlineStepIds": ["main:outline-06"], "shotIds": ["main:shot-06-01", "main:shot-06-02", "main:shot-06-03", "main:shot-06-04", "main:shot-06-05", "main:shot-06-06", "main:shot-06-07", "main:shot-06-08", "main:shot-06-09"] },
-    { "id": "main:causal-07", "order": 7, "description": { "es": "Harlan mata a Zao y vuelve; Sorell encuentra el cuerpo e intenta reanimarla.", "en": "Harlan kills Zao and returns; Sorell finds the body and attempts resuscitation." }, "knowers": ["character:harlan", "character:sorell"], "requiresFactIds": ["fact:optical-message-sent", "fact:sorell-cannot-find-harlan"], "revealsFactIds": ["fact:zao-dead-and-scene-disturbed"], "enables": { "es": "Harlan puede reaparecer antes que Sorell y ella queda como testigo con credencial comprometida.", "en": "Harlan can reappear before Sorell and she remains a witness with a compromised credential." }, "outlineStepIds": ["main:outline-07", "main:outline-08"], "shotIds": ["main:shot-07-01", "main:shot-07-10", "main:shot-08-01", "main:shot-08-07"] },
-    { "id": "main:causal-08", "order": 8, "description": { "es": "Harlan niega haber visto a Sorell y Voss lo envía con Okoye.", "en": "Harlan denies seeing Sorell and Voss sends him with Okoye." }, "knowers": ["character:voss", "character:harlan", "character:okoye"], "requiresFactIds": ["fact:zao-dead-and-scene-disturbed"], "revealsFactIds": [], "enables": { "es": "Okoye asegura la escena sin conocer todavía la autoría del sabotaje.", "en": "Okoye secures the scene without yet knowing who committed the sabotage." }, "outlineStepIds": ["main:outline-08"], "shotIds": ["main:shot-08-01", "main:shot-08-02", "main:shot-08-03"] },
-    { "id": "main:causal-09", "order": 9, "description": { "es": "La investigación identifica la función hostil y Elin prepara la cuarentena.", "en": "The investigation identifies the hostile function and Elin prepares quarantine." }, "knowers": ["character:rao", "character:voss", "character:sorell", "character:okoye"], "requiresFactIds": ["fact:zao-dead-and-scene-disturbed"], "revealsFactIds": ["fact:hostile-function-known-not-attributed"], "enables": { "es": "El mensaje podrá completar atribución y verificación, no inventar la solución técnica.", "en": "The message can complete attribution and verification rather than inventing the technical solution." }, "outlineStepIds": ["main:outline-09", "main:outline-10"], "shotIds": ["main:shot-09-01", "main:shot-10-07"] },
-    { "id": "main:causal-10", "order": 10, "description": { "es": "El mensaje llega y se cruza con la evidencia física.", "en": "The message arrives and is cross-checked against physical evidence." }, "knowers": ["character:voss", "character:rao", "character:sorell", "character:okoye", "character:harlan"], "requiresFactIds": ["fact:hostile-function-known-not-attributed", "fact:optical-message-sent"], "revealsFactIds": ["fact:message-crosschecked-with-physical-evidence"], "enables": { "es": "Voss puede revocar a Harlan y Elin aplicar la cuarentena ya preparada.", "en": "Voss can revoke Harlan and Elin can apply the already prepared quarantine." }, "outlineStepIds": ["main:outline-11", "main:outline-12", "main:outline-13", "main:outline-14"], "shotIds": ["main:shot-11-01", "main:shot-14-10"] },
-    { "id": "main:causal-11", "order": 11, "description": { "es": "Sorell aporta el saludo pasivo y Elin mantiene aislada la rama hostil.", "en": "Sorell provides the passive greeting and Elin keeps the hostile branch isolated." }, "knowers": ["character:voss", "character:rao", "character:sorell"], "requiresFactIds": ["fact:message-crosschecked-with-physical-evidence"], "revealsFactIds": ["fact:passive-greeting-available"], "enables": { "es": "El contacto procede sin presentar el sabotaje como saludo humano legítimo.", "en": "Contact proceeds without presenting the sabotage as a legitimate human greeting." }, "outlineStepIds": ["main:outline-15", "main:outline-16", "main:outline-17"], "shotIds": ["main:shot-15-01", "main:shot-17-06"] }
+    {
+      "id": "main:causal-01",
+      "order": 1,
+      "description": {
+        "es": "Zao detecta el payload y la firma superficial falsificada de Sorell.",
+        "en": "Zao detects the payload and Sorell’s forged surface signature."
+      },
+      "knowers": [
+        "character:zao"
+      ],
+      "requiresFactIds": [],
+      "revealsFactIds": [
+        "fact:payload-and-forged-sorell-signature"
+      ],
+      "enables": {
+        "es": "Puede advertir al puente sin acusar todavía a una persona.",
+        "en": "She can warn the bridge without yet accusing a person."
+      },
+      "outlineStepIds": [
+        "main:outline-04"
+      ],
+      "shotIds": [
+        "main:shot-04-01",
+        "main:shot-04-05"
+      ]
+    },
+    {
+      "id": "main:causal-02",
+      "order": 2,
+      "description": {
+        "es": "Harlan llega casualmente tras una tarea legítima y sólo reacciona cuando Zao dice que la firma real está por señalar a alguien.",
+        "en": "Harlan arrives coincidentally after a legitimate duty and reacts only when Zao says the real signature is about to point to someone."
+      },
+      "knowers": [
+        "character:zao",
+        "character:voss",
+        "character:sorell",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "fact:payload-and-forged-sorell-signature"
+      ],
+      "revealsFactIds": [
+        "fact:bridge-heard-limited-warning",
+        "fact:harlan-cover-at-risk"
+      ],
+      "enables": {
+        "es": "Harlan tiene motivo para cortar el aviso; Voss sólo sabe que Sorell está implicada por una falsificación.",
+        "en": "Harlan has motive to cut the warning; Voss only knows Sorell is implicated through a forgery."
+      },
+      "outlineStepIds": [
+        "main:outline-05"
+      ],
+      "shotIds": [
+        "main:shot-05-01",
+        "main:shot-05-03"
+      ]
+    },
+    {
+      "id": "main:causal-03",
+      "order": 3,
+      "description": {
+        "es": "Harlan corta wireless y COM A/B; Voss piensa, envía a Sorell a verificar y luego le exige buscar a Harlan y no entrar sola.",
+        "en": "Harlan cuts wireless and COM A/B; Voss thinks, sends Sorell to verify, then requires her to find Harlan and not enter alone."
+      },
+      "knowers": [
+        "character:harlan",
+        "character:zao",
+        "character:voss",
+        "character:sorell"
+      ],
+      "requiresFactIds": [
+        "fact:harlan-cover-at-risk",
+        "fact:bridge-heard-limited-warning"
+      ],
+      "revealsFactIds": [
+        "fact:communications-deliberately-cut",
+        "fact:voss-cautious-sorell-order"
+      ],
+      "enables": {
+        "es": "Zao necesita una vía independiente y la cautela de Voss demora a Sorell.",
+        "en": "Zao needs an independent route and Voss’s caution delays Sorell."
+      },
+      "outlineStepIds": [
+        "main:outline-05"
+      ],
+      "shotIds": [
+        "main:shot-05-04",
+        "main:shot-05-08"
+      ]
+    },
+    {
+      "id": "main:causal-04",
+      "order": 4,
+      "description": {
+        "es": "Harlan toma la ruta balística de servicio; Sorell pierde tiempo buscándolo y avanza mano sobre mano por el acceso común.",
+        "en": "Harlan takes the ballistic service route; Sorell loses time looking for him and proceeds hand over hand through common access."
+      },
+      "knowers": [
+        "character:harlan",
+        "character:sorell"
+      ],
+      "requiresFactIds": [
+        "fact:voss-cautious-sorell-order"
+      ],
+      "revealsFactIds": [
+        "fact:sorell-cannot-find-harlan"
+      ],
+      "enables": {
+        "es": "Harlan puede alcanzar a Zao antes sin arbitrariedad temporal.",
+        "en": "Harlan can reach Zao first without arbitrary timing."
+      },
+      "outlineStepIds": [
+        "main:outline-05",
+        "main:outline-06"
+      ],
+      "shotIds": [
+        "main:shot-06-04",
+        "main:shot-06-05"
+      ]
+    },
+    {
+      "id": "main:causal-05",
+      "order": 5,
+      "description": {
+        "es": "Zao descarta Tierra por el doble retardo y Proxima por la oclusión, apunta al corredor futuro, preserva el snapshot del relé, firma el paquete y transmite.",
+        "en": "Zao rejects Earth because of the two-leg delay and Proxima because of occlusion, aims at the future corridor, preserves the relay snapshot, signs the packet, and transmits."
+      },
+      "knowers": [
+        "character:zao",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "fact:communications-deliberately-cut"
+      ],
+      "revealsFactIds": [
+        "fact:optical-message-sent",
+        "fact:zao-signed-relay-snapshot"
+      ],
+      "enables": {
+        "es": "La advertencia puede volver antes del encuentro sin que Harlan conozca su destino.",
+        "en": "The warning can return before the meeting without Harlan knowing its destination."
+      },
+      "outlineStepIds": [
+        "main:outline-06"
+      ],
+      "shotIds": [
+        "main:shot-06-01",
+        "main:shot-06-09"
+      ]
+    },
+    {
+      "id": "main:causal-06",
+      "order": 6,
+      "description": {
+        "es": "Harlan supone erróneamente un envío a la Tierra, mata a Zao y borra registros locales, ignorando que el snapshot ya viaja.",
+        "en": "Harlan wrongly assumes an Earth-bound send, kills Zao, and wipes local records, unaware the snapshot is already traveling."
+      },
+      "knowers": [
+        "character:harlan",
+        "character:zao"
+      ],
+      "requiresFactIds": [
+        "fact:optical-message-sent"
+      ],
+      "revealsFactIds": [],
+      "enables": {
+        "es": "Su error explica por qué no busca interceptar el haz y por qué cree suficiente la limpieza local.",
+        "en": "His mistake explains why he does not try to intercept the beam and why he thinks local cleanup is enough."
+      },
+      "outlineStepIds": [
+        "main:outline-07"
+      ],
+      "shotIds": [
+        "main:shot-06-08",
+        "main:shot-07-03"
+      ]
+    },
+    {
+      "id": "main:causal-07",
+      "order": 7,
+      "description": {
+        "es": "Sorell llega tarde; Harlan restaura COM, vuelve primero al puente y niega haberla visto.",
+        "en": "Sorell arrives late; Harlan restores COM, returns to the bridge first, and denies seeing her."
+      },
+      "knowers": [
+        "character:sorell",
+        "character:harlan",
+        "character:voss"
+      ],
+      "requiresFactIds": [
+        "fact:sorell-cannot-find-harlan"
+      ],
+      "revealsFactIds": [
+        "fact:sorell-overdue-and-harlan-denies-contact"
+      ],
+      "enables": {
+        "es": "La demora y la negación dan a Voss motivo para enviar una búsqueda, sin que conozca aún la muerte.",
+        "en": "The delay and denial give Voss reason to send a search without yet knowing of the death."
+      },
+      "outlineStepIds": [
+        "main:outline-08"
+      ],
+      "shotIds": [
+        "main:shot-08-01",
+        "main:shot-08-04"
+      ]
+    },
+    {
+      "id": "main:causal-08",
+      "order": 8,
+      "description": {
+        "es": "La búsqueda encuentra a Sorell intentando reanimar a Zao; Okoye preserva lo que queda de la escena.",
+        "en": "The search finds Sorell attempting to resuscitate Zao; Okoye preserves what remains of the scene."
+      },
+      "knowers": [
+        "character:sorell",
+        "character:okoye",
+        "character:harlan",
+        "character:voss"
+      ],
+      "requiresFactIds": [
+        "fact:sorell-overdue-and-harlan-denies-contact"
+      ],
+      "revealsFactIds": [
+        "fact:zao-dead-and-scene-disturbed"
+      ],
+      "enables": {
+        "es": "La muerte y los fallos coordinados justifican una auditoría amplia.",
+        "en": "The death and coordinated failures justify a broad audit."
+      },
+      "outlineStepIds": [
+        "main:outline-08"
+      ],
+      "shotIds": [
+        "main:shot-08-05",
+        "main:shot-08-07"
+      ]
+    },
+    {
+      "id": "main:causal-09",
+      "order": 9,
+      "description": {
+        "es": "Elin identifica la función hostil y prepara una cuarentena antes de conocer al dueño del override.",
+        "en": "Elin identifies the hostile function and prepares quarantine before knowing the override owner."
+      },
+      "knowers": [
+        "character:rao",
+        "character:voss",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "fact:zao-dead-and-scene-disturbed"
+      ],
+      "revealsFactIds": [
+        "fact:hostile-function-known-not-attributed"
+      ],
+      "enables": {
+        "es": "La recepción futura completará atribución, no inventará la solución técnica.",
+        "en": "Future reception will complete attribution rather than invent the technical solution."
+      },
+      "outlineStepIds": [
+        "main:outline-09",
+        "main:outline-10"
+      ],
+      "shotIds": [
+        "main:shot-09-01",
+        "main:shot-10-07"
+      ]
+    },
+    {
+      "id": "main:causal-10",
+      "order": 10,
+      "description": {
+        "es": "La señal llega: dispositivo y hora se verifican; Elin valida la firma personal de Zao y la integridad del mensaje y snapshot.",
+        "en": "The signal arrives: device and time are verified; Elin validates Zao’s personal signature and the integrity of the message and snapshot."
+      },
+      "knowers": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "fact:optical-message-sent",
+        "fact:hostile-function-known-not-attributed"
+      ],
+      "revealsFactIds": [
+        "fact:zao-authorship-verified"
+      ],
+      "enables": {
+        "es": "La objeción de una voz falsificable deja de explicar la evidencia.",
+        "en": "The forged-voice objection no longer explains the evidence."
+      },
+      "outlineStepIds": [
+        "main:outline-11",
+        "main:outline-12"
+      ],
+      "shotIds": [
+        "main:shot-11-01",
+        "main:shot-12-04"
+      ]
+    },
+    {
+      "id": "main:causal-11",
+      "order": 11,
+      "description": {
+        "es": "El snapshot firmado por hardware aún asigna el relé a Harlan y la auditoría independiente conecta relé, payload y override.",
+        "en": "The hardware-signed snapshot still assigns the relay to Harlan and the independent audit connects relay, payload, and override."
+      },
+      "knowers": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "fact:zao-authorship-verified",
+        "fact:hostile-function-known-not-attributed"
+      ],
+      "revealsFactIds": [
+        "fact:harlan-attribution-converged"
+      ],
+      "enables": {
+        "es": "Voss puede revocar a Harlan sobre evidencia convergente.",
+        "en": "Voss can revoke Harlan on convergent evidence."
+      },
+      "outlineStepIds": [
+        "main:outline-12",
+        "main:outline-13"
+      ],
+      "shotIds": [
+        "main:shot-12-05",
+        "main:shot-12-08"
+      ]
+    },
+    {
+      "id": "main:causal-12",
+      "order": 12,
+      "description": {
+        "es": "Harlan usa la última ventana y corre al ramal físico; Voss permanece en el puente y Okoye lo intercepta sin combate armado.",
+        "en": "Harlan uses the last window and runs to the physical branch; Voss remains on the bridge and Okoye intercepts him without an armed fight."
+      },
+      "knowers": [
+        "character:voss",
+        "character:okoye",
+        "character:harlan",
+        "character:rao"
+      ],
+      "requiresFactIds": [
+        "fact:harlan-attribution-converged"
+      ],
+      "revealsFactIds": [
+        "fact:harlan-contained"
+      ],
+      "enables": {
+        "es": "Elin puede ejecutar la cuarentena preparada sin que Harlan recupere control físico.",
+        "en": "Elin can run the prepared quarantine without Harlan regaining physical control."
+      },
+      "outlineStepIds": [
+        "main:outline-13",
+        "main:outline-14"
+      ],
+      "shotIds": [
+        "main:shot-13-01",
+        "main:shot-14-08"
+      ]
+    },
+    {
+      "id": "main:causal-13",
+      "order": 13,
+      "description": {
+        "es": "Elin aplica la cuarentena, Sorell aporta el saludo pasivo, el contacto procede y Voss envía a la Tierra evidencia y legajo de Zao.",
+        "en": "Elin applies quarantine, Sorell supplies the passive greeting, contact proceeds, and Voss sends Earth the evidence and Zao’s personnel file."
+      },
+      "knowers": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "fact:harlan-contained",
+        "fact:hostile-function-known-not-attributed"
+      ],
+      "revealsFactIds": [
+        "fact:clean-channel-ready",
+        "fact:earth-report-sent-no-reply"
+      ],
+      "enables": {
+        "es": "El contacto representa a la tripulación y el costo queda preservado sin una respuesta terrestre inmediata.",
+        "en": "Contact represents the crew and the cost is preserved without an immediate Earth reply."
+      },
+      "outlineStepIds": [
+        "main:outline-14",
+        "main:outline-15",
+        "main:outline-16",
+        "main:outline-17"
+      ],
+      "shotIds": [
+        "main:shot-14-10",
+        "main:shot-17-06"
+      ]
+    }
   ],
   "knowledgeEvents": [
-    { "stepId": "main:causal-01", "factId": "fact:payload-and-forged-sorell-signature", "characterIds": ["character:zao"] },
-    { "stepId": "main:causal-02", "factId": "fact:bridge-heard-limited-warning", "characterIds": ["character:zao", "character:voss", "character:sorell", "character:harlan"] },
-    { "stepId": "main:causal-02", "factId": "fact:harlan-cover-at-risk", "characterIds": ["character:harlan"] },
-    { "stepId": "main:causal-03", "factId": "fact:communications-deliberately-cut", "characterIds": ["character:zao", "character:harlan"] },
-    { "stepId": "main:causal-04", "factId": "fact:wired-backup-isolated", "characterIds": ["character:harlan"] },
-    { "stepId": "main:causal-05", "factId": "fact:sorell-cannot-find-harlan", "characterIds": ["character:sorell"] },
-    { "stepId": "main:causal-06", "factId": "fact:optical-message-sent", "characterIds": ["character:zao", "character:harlan"] },
-    { "stepId": "main:causal-07", "factId": "fact:zao-dead-and-scene-disturbed", "characterIds": ["character:harlan", "character:sorell"] },
-    { "stepId": "main:causal-08", "factId": "fact:sorell-overdue-and-harlan-denies-contact", "characterIds": ["character:voss", "character:harlan", "character:okoye"] },
-    { "stepId": "main:causal-09", "factId": "fact:zao-dead-and-scene-disturbed", "characterIds": ["character:voss", "character:rao", "character:okoye"] },
-    { "stepId": "main:causal-09", "factId": "fact:hostile-function-known-not-attributed", "characterIds": ["character:voss", "character:rao", "character:sorell", "character:okoye"] },
-    { "stepId": "main:causal-10", "factId": "fact:message-crosschecked-with-physical-evidence", "characterIds": ["character:voss", "character:rao", "character:sorell", "character:harlan"] },
-    { "stepId": "main:causal-11", "factId": "fact:passive-greeting-available", "characterIds": ["character:voss", "character:rao", "character:sorell"] }
+    {
+      "stepId": "main:causal-01",
+      "factId": "fact:payload-and-forged-sorell-signature",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "main:causal-02",
+      "factId": "fact:bridge-heard-limited-warning",
+      "characterIds": [
+        "character:zao",
+        "character:voss",
+        "character:sorell",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-02",
+      "factId": "fact:harlan-cover-at-risk",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-03",
+      "factId": "fact:communications-deliberately-cut",
+      "characterIds": [
+        "character:zao",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-03",
+      "factId": "fact:voss-cautious-sorell-order",
+      "characterIds": [
+        "character:voss",
+        "character:sorell",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-04",
+      "factId": "fact:sorell-cannot-find-harlan",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "main:causal-05",
+      "factId": "fact:optical-message-sent",
+      "characterIds": [
+        "character:zao",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-05",
+      "factId": "fact:zao-signed-relay-snapshot",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "main:causal-07",
+      "factId": "fact:sorell-overdue-and-harlan-denies-contact",
+      "characterIds": [
+        "character:voss",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-08",
+      "factId": "fact:zao-dead-and-scene-disturbed",
+      "characterIds": [
+        "character:sorell",
+        "character:okoye",
+        "character:harlan",
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "main:causal-09",
+      "factId": "fact:hostile-function-known-not-attributed",
+      "characterIds": [
+        "character:rao",
+        "character:voss",
+        "character:sorell",
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "main:causal-10",
+      "factId": "fact:zao-authorship-verified",
+      "characterIds": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-11",
+      "factId": "fact:harlan-attribution-converged",
+      "characterIds": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-12",
+      "factId": "fact:harlan-contained",
+      "characterIds": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye",
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "main:causal-13",
+      "factId": "fact:clean-channel-ready",
+      "characterIds": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "main:causal-13",
+      "factId": "fact:earth-report-sent-no-reply",
+      "characterIds": [
+        "character:voss"
+      ]
+    }
   ],
   "actionRequirements": [
-    { "stepId": "main:causal-02", "actorId": "character:harlan", "action": { "es": "Activa el jammer.", "en": "Activates the jammer." }, "requiresKnownFactIds": ["fact:harlan-cover-at-risk"] },
-    { "stepId": "main:causal-02", "actorId": "character:voss", "action": { "es": "Envía a Sorell a verificar su credencial.", "en": "Sends Sorell to verify her credential." }, "requiresKnownFactIds": ["fact:bridge-heard-limited-warning"] },
-    { "stepId": "main:causal-04", "actorId": "character:harlan", "action": { "es": "Aísla COM A/B.", "en": "Isolates COM A/B." }, "requiresKnownFactIds": ["fact:harlan-cover-at-risk"] },
-    { "stepId": "main:causal-05", "actorId": "character:harlan", "action": { "es": "Toma el cilindro de servicio.", "en": "Takes the service cylinder." }, "requiresKnownFactIds": ["fact:harlan-cover-at-risk"] },
-    { "stepId": "main:causal-05", "actorId": "character:sorell", "action": { "es": "Va sola al puesto de Zao tras no encontrar a Harlan.", "en": "Goes alone to Zao's station after failing to find Harlan." }, "requiresKnownFactIds": ["fact:bridge-heard-limited-warning", "fact:sorell-cannot-find-harlan"] },
-    { "stepId": "main:causal-06", "actorId": "character:zao", "action": { "es": "Calcula el corredor futuro y transmite ópticamente.", "en": "Calculates the future corridor and transmits optically." }, "requiresKnownFactIds": ["fact:communications-deliberately-cut"] },
-    { "stepId": "main:causal-07", "actorId": "character:harlan", "action": { "es": "Mata a Zao y limpia la escena.", "en": "Kills Zao and cleans the scene." }, "requiresKnownFactIds": ["fact:optical-message-sent"] },
-    { "stepId": "main:causal-07", "actorId": "character:sorell", "action": { "es": "Intenta reanimar a Zao.", "en": "Attempts to resuscitate Zao." }, "requiresKnownFactIds": ["fact:zao-dead-and-scene-disturbed"] },
-    { "stepId": "main:causal-08", "actorId": "character:voss", "action": { "es": "Envía a Harlan y Okoye a buscar a Sorell.", "en": "Sends Harlan and Okoye to look for Sorell." }, "requiresKnownFactIds": ["fact:sorell-overdue-and-harlan-denies-contact"] },
-    { "stepId": "main:causal-09", "actorId": "character:rao", "action": { "es": "Prepara la cuarentena.", "en": "Prepares quarantine." }, "requiresKnownFactIds": ["fact:hostile-function-known-not-attributed"] },
-    { "stepId": "main:causal-10", "actorId": "character:voss", "action": { "es": "Revoca la credencial de Harlan.", "en": "Revokes Harlan's credential." }, "requiresKnownFactIds": ["fact:message-crosschecked-with-physical-evidence"] },
-    { "stepId": "main:causal-10", "actorId": "character:rao", "action": { "es": "Aplica la cuarentena ya preparada.", "en": "Applies the already prepared quarantine." }, "requiresKnownFactIds": ["fact:hostile-function-known-not-attributed", "fact:message-crosschecked-with-physical-evidence"] },
-    { "stepId": "main:causal-11", "actorId": "character:sorell", "action": { "es": "Aporta el saludo pasivo.", "en": "Provides the passive greeting." }, "requiresKnownFactIds": ["fact:message-crosschecked-with-physical-evidence"] }
+    {
+      "stepId": "main:causal-03",
+      "actorId": "character:harlan",
+      "action": {
+        "es": "Corta wireless y COM A/B.",
+        "en": "Cuts wireless and COM A/B."
+      },
+      "requiresKnownFactIds": [
+        "fact:harlan-cover-at-risk"
+      ]
+    },
+    {
+      "stepId": "main:causal-03",
+      "actorId": "character:voss",
+      "action": {
+        "es": "Envía a Sorell a verificar y exige que busque a Harlan.",
+        "en": "Sends Sorell to verify and requires her to find Harlan."
+      },
+      "requiresKnownFactIds": [
+        "fact:bridge-heard-limited-warning"
+      ]
+    },
+    {
+      "stepId": "main:causal-04",
+      "actorId": "character:sorell",
+      "action": {
+        "es": "Busca a Harlan y luego avanza sola.",
+        "en": "Looks for Harlan and then proceeds alone."
+      },
+      "requiresKnownFactIds": [
+        "fact:voss-cautious-sorell-order"
+      ]
+    },
+    {
+      "stepId": "main:causal-05",
+      "actorId": "character:zao",
+      "action": {
+        "es": "Descarta destinos inviables, firma el paquete y transmite al corredor futuro.",
+        "en": "Rejects unworkable destinations, signs the packet, and transmits toward the future corridor."
+      },
+      "requiresKnownFactIds": [
+        "fact:communications-deliberately-cut"
+      ]
+    },
+    {
+      "stepId": "main:causal-06",
+      "actorId": "character:harlan",
+      "action": {
+        "es": "Mata a Zao y limpia los registros locales.",
+        "en": "Kills Zao and wipes local records."
+      },
+      "requiresKnownFactIds": [
+        "fact:optical-message-sent"
+      ]
+    },
+    {
+      "stepId": "main:causal-08",
+      "actorId": "character:voss",
+      "action": {
+        "es": "Envía la búsqueda de Sorell.",
+        "en": "Sends the search for Sorell."
+      },
+      "requiresKnownFactIds": [
+        "fact:sorell-overdue-and-harlan-denies-contact"
+      ]
+    },
+    {
+      "stepId": "main:causal-09",
+      "actorId": "character:rao",
+      "action": {
+        "es": "Prepara la cuarentena.",
+        "en": "Prepares quarantine."
+      },
+      "requiresKnownFactIds": [
+        "fact:hostile-function-known-not-attributed"
+      ]
+    },
+    {
+      "stepId": "main:causal-11",
+      "actorId": "character:voss",
+      "action": {
+        "es": "Revoca la credencial de Harlan.",
+        "en": "Revokes Harlan’s credential."
+      },
+      "requiresKnownFactIds": [
+        "fact:harlan-attribution-converged"
+      ]
+    },
+    {
+      "stepId": "main:causal-12",
+      "actorId": "character:okoye",
+      "action": {
+        "es": "Intercepta y contiene a Harlan.",
+        "en": "Intercepts and restrains Harlan."
+      },
+      "requiresKnownFactIds": [
+        "fact:harlan-attribution-converged"
+      ]
+    },
+    {
+      "stepId": "main:causal-13",
+      "actorId": "character:rao",
+      "action": {
+        "es": "Aplica la cuarentena preparada.",
+        "en": "Applies the prepared quarantine."
+      },
+      "requiresKnownFactIds": [
+        "fact:hostile-function-known-not-attributed",
+        "fact:harlan-contained"
+      ]
+    },
+    {
+      "stepId": "main:causal-13",
+      "actorId": "character:sorell",
+      "action": {
+        "es": "Aporta el saludo pasivo de sólo lectura.",
+        "en": "Supplies the passive read-only greeting."
+      },
+      "requiresKnownFactIds": [
+        "fact:harlan-contained"
+      ]
+    },
+    {
+      "stepId": "main:causal-13",
+      "actorId": "character:voss",
+      "action": {
+        "es": "Envía a la Tierra evidencia y legajo de Zao.",
+        "en": "Sends Earth the evidence and Zao’s personnel file."
+      },
+      "requiresKnownFactIds": [
+        "fact:clean-channel-ready"
+      ]
+    }
   ]
 }
