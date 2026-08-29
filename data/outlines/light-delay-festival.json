@@ -8,10 +8,10 @@
       "en": "Outline — Light Delay: Festival Cut"
     },
     "status": "draft",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "synopsis": {
-      "es": "El corte festival concentra el descubrimiento de Zao, el sabotaje de Harlan y la carrera causal entre una advertencia óptica y una carga capaz de falsificar el primer contacto.",
-      "en": "The festival cut concentrates Zao’s discovery, Harlan’s sabotage, and the causal race between an optical warning and a payload capable of falsifying first contact."
+      "es": "Durante la misión de primer contacto, Zao descubre una carga autónoma oculta y alcanza a advertir al puente que la firma de Sorell parece falsa. Harlan oye la revelación, la aísla y la mata después de que ella envía una advertencia óptica al futuro de la nave. El mensaje llega antes del encuentro, completa la investigación y permite detener el sabotaje.",
+      "en": "During the first-contact mission, Zao discovers a hidden autonomous payload and manages to warn the bridge that Sorell’s signature appears forged. Harlan hears the revelation, isolates her, and kills her after she sends an optical warning toward the ship’s future. The message arrives before the encounter, completes the investigation, and allows the crew to stop the sabotage."
     }
   },
   "steps": [
@@ -24,8 +24,8 @@
         "en": "Mission and control"
       },
       "summary": {
-        "es": "La tripulación verifica el sistema diplomático porque su integridad condiciona el encuentro.",
-        "en": "The crew checks the diplomatic system because its integrity conditions the encounter."
+        "es": "La Ardor se dirige al primer encuentro con los Velari. Como una transmisión contaminada podría hablar en nombre de la humanidad, la tripulación verifica el sistema diplomático antes de abrir el canal.",
+        "en": "The Ardor is heading toward first contact with the Velari. Because a contaminated transmission could speak for humanity, the crew checks the diplomatic system before opening the channel."
       },
       "importance": "required"
     },
@@ -34,21 +34,21 @@
       "level": "story",
       "order": 2,
       "title": {
-        "es": "Descubrimiento de la carga",
-        "en": "Payload discovered"
+        "es": "Zao descubre la carga",
+        "en": "Zao discovers the payload"
       },
       "summary": {
-        "es": "Una anomalía conduce a Zao hasta un proceso autónomo oculto bajo una firma dudosa.",
-        "en": "An anomaly leads Zao to an autonomous process hidden behind a dubious signature."
+        "es": "Una anomalía conduce a Zao hasta un proceso autónomo no declarado, oculto dentro del sistema diplomático bajo una credencial de Sorell que parece falsificada.",
+        "en": "An anomaly leads Zao to an undeclared autonomous process hidden inside the diplomatic system under a Sorell credential that appears forged."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-01",
-          "relation": "enables",
+          "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —La tripulación verifica el sistema diplomático porque su integridad condiciona el encuentro— provoca o habilita esta consecuencia: Una anomalía conduce a Zao hasta un proceso autónomo oculto bajo una firma dudosa.",
-            "en": "The prior change—The crew checks the diplomatic system because its integrity conditions the encounter—causes or enables this consequence: An anomaly leads Zao to an autonomous process hidden behind a dubious signature."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Una anomalía conduce a Zao hasta un proceso autónomo no declarado, oculto dentro del sistema diplomático bajo una credencial de Sorell que parece falsificada.",
+            "en": "The outcome of the previous beat causes or enables this consequence: An anomaly leads Zao to an undeclared autonomous process hidden inside the diplomatic system under a Sorell credential that appears forged."
           }
         }
       ]
@@ -58,12 +58,12 @@
       "level": "story",
       "order": 3,
       "title": {
-        "es": "La alerta provoca el aislamiento",
-        "en": "The alert triggers isolation"
+        "es": "La advertencia amenaza a Harlan",
+        "en": "The warning threatens Harlan"
       },
       "summary": {
-        "es": "La advertencia incompleta llega al puente y Harlan corta radio y cable antes de ir por Zao.",
-        "en": "The incomplete warning reaches the bridge and Harlan cuts radio and cable before going after Zao."
+        "es": "Zao llama al puente y alcanza a decirle a Voss que existe una carga autónoma y que la firma de Sorell parece falsa. Harlan llega a la entrada sin ser visto, oye la revelación y comprende que Zao puede exponerlo.",
+        "en": "Zao calls the bridge and manages to tell Voss that an autonomous payload exists and Sorell’s signature appears forged. Harlan reaches the entrance unseen, hears the revelation, and realizes Zao can expose him."
       },
       "importance": "required",
       "causalLinks": [
@@ -71,8 +71,8 @@
           "sourceStepId": "festival:story-02",
           "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —Una anomalía conduce a Zao hasta un proceso autónomo oculto bajo una firma dudosa— provoca o habilita esta consecuencia: La advertencia incompleta llega al puente y Harlan corta radio y cable antes de ir por Zao.",
-            "en": "The prior change—An anomaly leads Zao to an autonomous process hidden behind a dubious signature—causes or enables this consequence: The incomplete warning reaches the bridge and Harlan cuts radio and cable before going after Zao."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Zao llama al puente y alcanza a decirle a Voss que existe una carga autónoma y que la firma de Sorell parece falsa. Harlan llega a la entrada sin ser visto, oye la revelación y comprende que Zao puede exponerlo.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Zao calls the bridge and manages to tell Voss that an autonomous payload exists and Sorell’s signature appears forged. Harlan reaches the entrance unseen, hears the revelation, and realizes Zao can expose him."
           }
         }
       ]
@@ -82,12 +82,12 @@
       "level": "story",
       "order": 4,
       "title": {
-        "es": "Zao apunta al futuro",
-        "en": "Zao aims at the future"
+        "es": "Harlan aísla a Zao",
+        "en": "Harlan isolates Zao"
       },
       "summary": {
-        "es": "Zao descarta la Tierra porque el aviso no podría volver a la Ardor antes del encuentro y Proxima porque Júpiter ocluye la línea de vista. La única opción útil es calcular la posición futura de la nave y barrer allí el haz bajo presión.",
-        "en": "Zao rejects Earth because the warning could not return to the Ardor before the encounter and Proxima because Jupiter occults the line of sight. The only useful option is to calculate the ship’s future position and sweep the beam there under pressure."
+        "es": "Para impedir que Zao complete la acusación, Harlan activa el jammer, corta COM A/B desde el distribuidor de servicio y toma la ruta rápida hacia el núcleo. Voss envía a Sorell a investigar y le ordena buscar a Harlan, pero ella debe avanzar sola por el acceso común.",
+        "en": "To prevent Zao from completing the accusation, Harlan activates the jammer, cuts COM A/B at the service distributor, and takes the fast route to the core. Voss sends Sorell to investigate and tells her to find Harlan, but she must proceed alone through the common access."
       },
       "importance": "required",
       "causalLinks": [
@@ -95,8 +95,8 @@
           "sourceStepId": "festival:story-03",
           "relation": "forces",
           "explanation": {
-            "es": "El cambio anterior —La advertencia incompleta llega al puente y Harlan corta radio y cable antes de ir por Zao— provoca o habilita esta consecuencia: Zao descarta la Tierra porque el aviso no podría volver a la Ardor antes del encuentro y Proxima porque Júpiter ocluye la línea de vista. La única opción útil es calcular la posición futura de la nave y barrer allí el haz bajo presión.",
-            "en": "The prior change—The incomplete warning reaches the bridge and Harlan cuts radio and cable before going after Zao—causes or enables this consequence: Zao rejects Earth because the warning could not return to the Ardor before the encounter and Proxima because Jupiter occults the line of sight. The only useful option is to calculate the ship’s future position and sweep the beam there under pressure."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Para impedir que Zao complete la acusación, Harlan activa el jammer, corta COM A/B desde el distribuidor de servicio y toma la ruta rápida hacia el núcleo. Voss envía a Sorell a investigar y le ordena buscar a Harlan, pero ella debe avanzar sola por el acceso común.",
+            "en": "The outcome of the previous beat causes or enables this consequence: To prevent Zao from completing the accusation, Harlan activates the jammer, cuts COM A/B at the service distributor, and takes the fast route to the core. Voss sends Sorell to investigate and tells her to find Harlan, but she must proceed alone through the common access."
           }
         }
       ]
@@ -106,12 +106,12 @@
       "level": "story",
       "order": 5,
       "title": {
-        "es": "Harlan borra a la testigo",
-        "en": "Harlan erases the witness"
+        "es": "Zao apunta al futuro",
+        "en": "Zao aims at the future"
       },
       "summary": {
-        "es": "Harlan ve TRANSMITIDO pero no el destino, supone que fue a la Tierra y se tranquiliza con el doble retardo. Lamenta que Zao encontrara la evidencia, suspira, la mata y borra sus rastros.",
-        "en": "Harlan sees TRANSMITTED but not the destination, assumes it went to Earth, and reassures himself with the two-leg delay. He laments that Zao found the evidence, sighs, kills her, and erases his traces."
+        "es": "El fallo simultáneo de radio y cable confirma a Zao que alguien la aisló. Descarta Tierra porque recibir allí y retransmitir a la Ardor llegaría después del encuentro, y Proxima porque Júpiter bloquea la línea de vista L2–L1. Sólo puede calcular la posición futura de la nave, barrer la incertidumbre y completar el envío antes de que Harlan llegue.",
+        "en": "The simultaneous radio and wired failure confirms to Zao that someone isolated her. She rejects Earth because reception there and retransmission to the Ardor would arrive after the encounter, and Proxima because Jupiter blocks the L2–L1 line of sight. Her only option is to calculate the ship’s future position, sweep the uncertainty, and complete the send before Harlan arrives."
       },
       "importance": "required",
       "causalLinks": [
@@ -119,8 +119,8 @@
           "sourceStepId": "festival:story-04",
           "relation": "forces",
           "explanation": {
-            "es": "El cambio anterior —Zao descarta la Tierra porque el aviso no podría volver a la Ardor antes del encuentro y Proxima porque Júpiter ocluye la línea de vista. La única opción útil es calcular la posición futura de la nave y barrer allí el haz bajo presión— provoca o habilita esta consecuencia: Harlan ve TRANSMITIDO pero no el destino, supone que fue a la Tierra y se tranquiliza con el doble retardo. Lamenta que Zao encontrara la evidencia, suspira, la mata y borra sus rastros.",
-            "en": "The prior change—Zao rejects Earth because the warning could not return to the Ardor before the encounter and Proxima because Jupiter occults the line of sight. The only useful option is to calculate the ship’s future position and sweep the beam there under pressure—causes or enables this consequence: Harlan sees TRANSMITTED but not the destination, assumes it went to Earth, and reassures himself with the two-leg delay. He laments that Zao found the evidence, sighs, kills her, and erases his traces."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: El fallo simultáneo de radio y cable confirma a Zao que alguien la aisló. Descarta Tierra porque recibir allí y retransmitir a la Ardor llegaría después del encuentro, y Proxima porque Júpiter bloquea la línea de vista L2–L1. Sólo puede calcular la posición futura de la nave, barrer la incertidumbre y completar el envío antes de que Harlan llegue.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The simultaneous radio and wired failure confirms to Zao that someone isolated her. She rejects Earth because reception there and retransmission to the Ardor would arrive after the encounter, and Proxima because Jupiter blocks the L2–L1 line of sight. Her only option is to calculate the ship’s future position, sweep the uncertainty, and complete the send before Harlan arrives."
           }
         }
       ]
@@ -130,21 +130,21 @@
       "level": "story",
       "order": 6,
       "title": {
-        "es": "El cuerpo y la coartada",
-        "en": "The body and the alibi"
+        "es": "Harlan mata a Zao",
+        "en": "Harlan kills Zao"
       },
       "summary": {
-        "es": "Sorell encuentra el cuerpo mientras Harlan vuelve al puente y usa el corte para sostener que no estuvo allí.",
-        "en": "Sorell finds the body while Harlan returns to the bridge and uses the outage to support his absence."
+        "es": "Harlan sólo ve TRANSMITIDO y supone que Zao apuntó a la Tierra. Se tranquiliza porque el doble retardo impediría advertir a Voss, lamenta que Zao encontrara la evidencia y suspira antes de atacarla. Un golpe seco, el cese del forcejeo y el negro sostenido confirman su muerte; luego Harlan borra sus rastros.",
+        "en": "Harlan sees only TRANSMITTED and assumes Zao aimed at Earth. He reassures himself that the two-leg delay would prevent warning Voss, laments that Zao found the evidence, and sighs before attacking her. A dry impact, the end of the struggle, and sustained black confirm her death; Harlan then erases his traces."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-05",
-          "relation": "enables",
+          "relation": "forces",
           "explanation": {
-            "es": "El cambio anterior —Harlan ve TRANSMITIDO pero no el destino, supone que fue a la Tierra y se tranquiliza con el doble retardo. Lamenta que Zao encontrara la evidencia, suspira, la mata y borra sus rastros— provoca o habilita esta consecuencia: Sorell encuentra el cuerpo mientras Harlan vuelve al puente y usa el corte para sostener que no estuvo allí.",
-            "en": "The prior change—Harlan sees TRANSMITTED but not the destination, assumes it went to Earth, and reassures himself with the two-leg delay. He laments that Zao found the evidence, sighs, kills her, and erases his traces—causes or enables this consequence: Sorell finds the body while Harlan returns to the bridge and uses the outage to support his absence."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Harlan sólo ve TRANSMITIDO y supone que Zao apuntó a la Tierra. Se tranquiliza porque el doble retardo impediría advertir a Voss, lamenta que Zao encontrara la evidencia y suspira antes de atacarla. Un golpe seco, el cese del forcejeo y el negro sostenido confirman su muerte; luego Harlan borra sus rastros.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Harlan sees only TRANSMITTED and assumes Zao aimed at Earth. He reassures himself that the two-leg delay would prevent warning Voss, laments that Zao found the evidence, and sighs before attacking her. A dry impact, the end of the struggle, and sustained black confirm her death; Harlan then erases his traces."
           }
         }
       ]
@@ -154,21 +154,21 @@
       "level": "story",
       "order": 7,
       "title": {
-        "es": "La investigación prepara la defensa",
-        "en": "The investigation prepares the defense"
+        "es": "El cuerpo y la coartada",
+        "en": "The body and the alibi"
       },
       "summary": {
-        "es": "Los rastros descartan una lectura simple de la credencial y justifican preparar la cuarentena antes de conocer al culpable.",
-        "en": "The traces rule out a simple reading of the credential and justify preparing quarantine before knowing the culprit."
+        "es": "Sorell llega tarde, encuentra el cuerpo e intenta reanimar a Zao, pero el jammer todavía impide pedir ayuda. Harlan restaura las comunicaciones, vuelve al puente y afirma no haber visto a Sorell, usando el corte que él provocó para sostener su coartada.",
+        "en": "Sorell arrives too late, finds the body, and tries to revive Zao, but the jammer still prevents her from calling for help. Harlan restores communications, returns to the bridge, and claims not to have seen Sorell, using the outage he caused to support his alibi."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-06",
-          "relation": "motivates",
+          "relation": "pays_off",
           "explanation": {
-            "es": "El cambio anterior —Sorell encuentra el cuerpo mientras Harlan vuelve al puente y usa el corte para sostener que no estuvo allí— provoca o habilita esta consecuencia: Los rastros descartan una lectura simple de la credencial y justifican preparar la cuarentena antes de conocer al culpable.",
-            "en": "The prior change—Sorell finds the body while Harlan returns to the bridge and uses the outage to support his absence—causes or enables this consequence: The traces rule out a simple reading of the credential and justify preparing quarantine before knowing the culprit."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Sorell llega tarde, encuentra el cuerpo e intenta reanimar a Zao, pero el jammer todavía impide pedir ayuda. Harlan restaura las comunicaciones, vuelve al puente y afirma no haber visto a Sorell, usando el corte que él provocó para sostener su coartada.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Sorell arrives too late, finds the body, and tries to revive Zao, but the jammer still prevents her from calling for help. Harlan restores communications, returns to the bridge, and claims not to have seen Sorell, using the outage he caused to support his alibi."
           }
         }
       ]
@@ -178,21 +178,21 @@
       "level": "story",
       "order": 8,
       "title": {
-        "es": "La advertencia es autenticada",
-        "en": "The warning is authenticated"
+        "es": "Voss ordena la auditoría",
+        "en": "Voss orders the audit"
       },
       "summary": {
-        "es": "La señal llega y dos fuentes independientes prueban que pertenece a Zao y que precede a su muerte.",
-        "en": "The signal arrives and two independent sources prove it belongs to Zao and predates her death."
+        "es": "La muerte de Zao, la demora de Sorell y el corte simultáneo de comunicaciones llevan a Voss a ordenar una auditoría. Esa orden da a Elin una causa concreta para investigar el sistema.",
+        "en": "Zao’s death, Sorell’s delay, and the simultaneous communications outage lead Voss to order an audit. That order gives Elin a concrete reason to investigate the system."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-07",
-          "relation": "reveals",
+          "relation": "motivates",
           "explanation": {
-            "es": "El cambio anterior —Los rastros descartan una lectura simple de la credencial y justifican preparar la cuarentena antes de conocer al culpable— provoca o habilita esta consecuencia: La señal llega y dos fuentes independientes prueban que pertenece a Zao y que precede a su muerte.",
-            "en": "The prior change—The traces rule out a simple reading of the credential and justify preparing quarantine before knowing the culprit—causes or enables this consequence: The signal arrives and two independent sources prove it belongs to Zao and predates her death."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: La muerte de Zao, la demora de Sorell y el corte simultáneo de comunicaciones llevan a Voss a ordenar una auditoría. Esa orden da a Elin una causa concreta para investigar el sistema.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Zao’s death, Sorell’s delay, and the simultaneous communications outage lead Voss to order an audit. That order gives Elin a concrete reason to investigate the system."
           }
         }
       ]
@@ -202,21 +202,21 @@
       "level": "story",
       "order": 9,
       "title": {
-        "es": "La evidencia converge en Harlan",
-        "en": "The evidence converges on Harlan"
+        "es": "La auditoría prepara la defensa",
+        "en": "The audit prepares the defense"
       },
       "summary": {
-        "es": "El contenido del mensaje enlaza la carga, el corte y el acceso de Harlan, convirtiendo la sospecha en atribución.",
-        "en": "The message links the payload, outage, and Harlan’s access, turning suspicion into attribution."
+        "es": "La auditoría demuestra que la credencial de Sorell fue comprometida y que el proceso espera la apertura del canal para sustituir el saludo. Elin no puede identificar todavía al dueño del override, pero prepara una cuarentena capaz de aislar la carga sin destruir la mediación.",
+        "en": "The audit shows that Sorell’s credential was compromised and that the process is waiting for the channel to open so it can replace the greeting. Elin still cannot identify the override owner, but she prepares a quarantine that can isolate the payload without destroying mediation."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-08",
-          "relation": "pays_off",
+          "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —La señal llega y dos fuentes independientes prueban que pertenece a Zao y que precede a su muerte— provoca o habilita esta consecuencia: El contenido del mensaje enlaza la carga, el corte y el acceso de Harlan, convirtiendo la sospecha en atribución.",
-            "en": "The prior change—The signal arrives and two independent sources prove it belongs to Zao and predates her death—causes or enables this consequence: The message links the payload, outage, and Harlan’s access, turning suspicion into attribution."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: La auditoría demuestra que la credencial de Sorell fue comprometida y que el proceso espera la apertura del canal para sustituir el saludo. Elin no puede identificar todavía al dueño del override, pero prepara una cuarentena capaz de aislar la carga sin destruir la mediación.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The audit shows that Sorell’s credential was compromised and that the process is waiting for the channel to open so it can replace the greeting. Elin still cannot identify the override owner, but she prepares a quarantine that can isolate the payload without destroying mediation."
           }
         }
       ]
@@ -226,21 +226,21 @@
       "level": "story",
       "order": 10,
       "title": {
-        "es": "Último intento de override",
-        "en": "Last override attempt"
+        "es": "La advertencia alcanza a la nave",
+        "en": "The warning catches the ship"
       },
       "summary": {
-        "es": "Expuesto y a punto de perder permisos, Harlan intenta activar la carga y fuerza una intervención física.",
-        "en": "Exposed and about to lose access, Harlan tries to activate the payload and forces a physical intervention."
+        "es": "La señal enviada por Zao intercepta la Ardor antes del encuentro. Su firma temporal y el trabajo independiente de Elin demuestran que el mensaje es auténtico, anterior al asesinato y compatible con la carga que ya investigaban.",
+        "en": "The signal Zao sent intercepts the Ardor before the encounter. Its time signature and Elin’s independent work show that the message is authentic, predates the murder, and matches the payload they were already investigating."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-09",
-          "relation": "forces",
+          "relation": "pays_off",
           "explanation": {
-            "es": "El cambio anterior —El contenido del mensaje enlaza la carga, el corte y el acceso de Harlan, convirtiendo la sospecha en atribución— provoca o habilita esta consecuencia: Expuesto y a punto de perder permisos, Harlan intenta activar la carga y fuerza una intervención física.",
-            "en": "The prior change—The message links the payload, outage, and Harlan’s access, turning suspicion into attribution—causes or enables this consequence: Exposed and about to lose access, Harlan tries to activate the payload and forces a physical intervention."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: La señal enviada por Zao intercepta la Ardor antes del encuentro. Su firma temporal y el trabajo independiente de Elin demuestran que el mensaje es auténtico, anterior al asesinato y compatible con la carga que ya investigaban.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The signal Zao sent intercepts the Ardor before the encounter. Its time signature and Elin’s independent work show that the message is authentic, predates the murder, and matches the payload they were already investigating."
           }
         }
       ]
@@ -250,21 +250,21 @@
       "level": "story",
       "order": 11,
       "title": {
-        "es": "Canal limpio antes del encuentro",
-        "en": "Clean channel before the encounter"
+        "es": "La evidencia converge en Harlan",
+        "en": "The evidence converges on Harlan"
       },
       "summary": {
-        "es": "La tripulación aísla la carga, verifica el saludo y llega a contacto sin transmitir el engaño.",
-        "en": "The crew isolates the payload, verifies the greeting, and reaches contact without transmitting the deception."
+        "es": "El mensaje nombra a Harlan y señala el relé físico; la auditoría aporta la función de la carga y la firma anónima. Juntas, ambas mitades convierten la sospecha en atribución verificable.",
+        "en": "The message names Harlan and points to the physical relay; the audit supplies the payload’s function and anonymous signature. Together, both halves turn suspicion into verifiable attribution."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-10",
-          "relation": "forces",
+          "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —Expuesto y a punto de perder permisos, Harlan intenta activar la carga y fuerza una intervención física— provoca o habilita esta consecuencia: La tripulación aísla la carga, verifica el saludo y llega a contacto sin transmitir el engaño.",
-            "en": "The prior change—Exposed and about to lose access, Harlan tries to activate the payload and forces a physical intervention—causes or enables this consequence: The crew isolates the payload, verifies the greeting, and reaches contact without transmitting the deception."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: El mensaje nombra a Harlan y señala el relé físico; la auditoría aporta la función de la carga y la firma anónima. Juntas, ambas mitades convierten la sospecha en atribución verificable.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The message names Harlan and points to the physical relay; the audit supplies the payload’s function and anonymous signature. Together, both halves turn suspicion into verifiable attribution."
           }
         }
       ]
@@ -274,21 +274,93 @@
       "level": "story",
       "order": 12,
       "title": {
-        "es": "Consecuencia",
-        "en": "Consequence"
+        "es": "Harlan intenta el override",
+        "en": "Harlan attempts the override"
       },
       "summary": {
-        "es": "El éxito del contacto confirma el valor y el costo de la decisión de Zao.",
-        "en": "The successful contact confirms the value and cost of Zao’s decision."
+        "es": "Voss revoca la credencial de Harlan. Al quedar expuesto y perder su última ventana de acceso, Harlan intenta activar la carga desde el control físico y obliga a Voss a contenerlo.",
+        "en": "Voss revokes Harlan’s credential. Exposed and losing his last access window, Harlan tries to activate the payload from the physical control and forces Voss to restrain him."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "festival:story-11",
+          "relation": "forces",
+          "explanation": {
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Voss revoca la credencial de Harlan. Al quedar expuesto y perder su última ventana de acceso, Harlan intenta activar la carga desde el control físico y obliga a Voss a contenerlo.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Voss revokes Harlan’s credential. Exposed and losing his last access window, Harlan tries to activate the payload from the physical control and forces Voss to restrain him."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:story-13",
+      "level": "story",
+      "order": 13,
+      "title": {
+        "es": "La tripulación limpia el canal",
+        "en": "The crew cleans the channel"
+      },
+      "summary": {
+        "es": "Con Harlan contenido, Elin aplica la cuarentena que ya había preparado y Sorell aporta el saludo pasivo. La carga queda aislada y el canal vuelve a representar sólo a la tripulación.",
+        "en": "With Harlan contained, Elin applies the quarantine she already prepared and Sorell supplies the passive greeting. The payload is isolated and the channel once again represents only the crew."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "festival:story-12",
           "relation": "pays_off",
           "explanation": {
-            "es": "El cambio anterior —La tripulación aísla la carga, verifica el saludo y llega a contacto sin transmitir el engaño— provoca o habilita esta consecuencia: El éxito del contacto confirma el valor y el costo de la decisión de Zao.",
-            "en": "The prior change—The crew isolates the payload, verifies the greeting, and reaches contact without transmitting the deception—causes or enables this consequence: The successful contact confirms the value and cost of Zao’s decision."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Con Harlan contenido, Elin aplica la cuarentena que ya había preparado y Sorell aporta el saludo pasivo. La carga queda aislada y el canal vuelve a representar sólo a la tripulación.",
+            "en": "The outcome of the previous beat causes or enables this consequence: With Harlan contained, Elin applies the quarantine she already prepared and Sorell supplies the passive greeting. The payload is isolated and the channel once again represents only the crew."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:story-14",
+      "level": "story",
+      "order": 14,
+      "title": {
+        "es": "Primer contacto",
+        "en": "First contact"
+      },
+      "summary": {
+        "es": "La cuenta llega a cero con un saludo verificable. Los Velari responden y autorizan la aproximación sin que la carga convierta el contacto en una agresión.",
+        "en": "The countdown reaches zero with a verifiable greeting. The Velari respond and authorize approach without the payload turning contact into aggression."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "festival:story-13",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: La cuenta llega a cero con un saludo verificable. Los Velari responden y autorizan la aproximación sin que la carga convierta el contacto en una agresión.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The countdown reaches zero with a verifiable greeting. The Velari respond and authorize approach without the payload turning contact into aggression."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:story-15",
+      "level": "story",
+      "order": 15,
+      "title": {
+        "es": "Consecuencia",
+        "en": "Consequence"
+      },
+      "summary": {
+        "es": "El éxito del contacto demuestra que la decisión de Zao llegó a tiempo, aunque ella no pudo sobrevivir para verlo.",
+        "en": "The successful contact proves that Zao’s decision arrived in time, although she did not survive to see it."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "festival:story-14",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: El éxito del contacto demuestra que la decisión de Zao llegó a tiempo, aunque ella no pudo sobrevivir para verlo.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The successful contact proves that Zao’s decision arrived in time, although she did not survive to see it."
           }
         }
       ]
@@ -512,7 +584,7 @@
     {
       "id": "festival:outline-07",
       "level": "detail",
-      "parentStepId": "festival:story-03",
+      "parentStepId": "festival:story-04",
       "order": 7,
       "title": {
         "es": "Harlan sabotea las comunicaciones",
@@ -548,7 +620,7 @@
     {
       "id": "festival:outline-08",
       "level": "detail",
-      "parentStepId": "festival:story-03",
+      "parentStepId": "festival:story-04",
       "order": 8,
       "title": {
         "es": "Los tres enlaces caen a la vez",
@@ -584,7 +656,7 @@
     {
       "id": "festival:outline-09",
       "level": "detail",
-      "parentStepId": "festival:story-04",
+      "parentStepId": "festival:story-05",
       "order": 9,
       "title": {
         "es": "Zao descarta Tierra y Proxima",
@@ -630,7 +702,7 @@
     {
       "id": "festival:outline-10",
       "level": "detail",
-      "parentStepId": "festival:story-04",
+      "parentStepId": "festival:story-05",
       "order": 10,
       "title": {
         "es": "Insert: Tierra/Proxima marcadas en consola",
@@ -665,7 +737,7 @@
     {
       "id": "festival:outline-11",
       "level": "detail",
-      "parentStepId": "festival:story-04",
+      "parentStepId": "festival:story-05",
       "order": 11,
       "title": {
         "es": "Insert: mecanismo de puntería",
@@ -700,7 +772,7 @@
     {
       "id": "festival:outline-12",
       "level": "detail",
-      "parentStepId": "festival:story-04",
+      "parentStepId": "festival:story-05",
       "order": 12,
       "title": {
         "es": "Alivio de Zao",
@@ -735,7 +807,7 @@
     {
       "id": "festival:outline-13",
       "level": "detail",
-      "parentStepId": "festival:story-04",
+      "parentStepId": "festival:story-05",
       "order": 13,
       "title": {
         "es": "Zao graba el mensaje",
@@ -781,7 +853,7 @@
     {
       "id": "festival:outline-14",
       "level": "detail",
-      "parentStepId": "festival:story-04",
+      "parentStepId": "festival:story-05",
       "order": 14,
       "title": {
         "es": "Transmitido; Harlan entra",
@@ -817,7 +889,7 @@
     {
       "id": "festival:outline-15",
       "level": "detail",
-      "parentStepId": "festival:story-05",
+      "parentStepId": "festival:story-06",
       "order": 15,
       "title": {
         "es": "Harlan confronta a Zao",
@@ -853,7 +925,7 @@
     {
       "id": "festival:outline-16",
       "level": "detail",
-      "parentStepId": "festival:story-05",
+      "parentStepId": "festival:story-06",
       "order": 16,
       "title": {
         "es": "Harlan no conoce el destino del haz",
@@ -889,15 +961,15 @@
     {
       "id": "festival:outline-17",
       "level": "detail",
-      "parentStepId": "festival:story-05",
+      "parentStepId": "festival:story-06",
       "order": 17,
       "title": {
         "es": "Asesinato fuera de campo",
         "en": "Offscreen Murder"
       },
       "summary": {
-        "es": "Harlan lamenta que Zao haya tenido la mala suerte de encontrar la evidencia y suspira —la única señal de que matarla no le resulta fácil— antes de cerrar la distancia y matarla fuera de campo.",
-        "en": "Harlan laments Zao’s bad luck in finding the evidence and sighs—the only sign that killing her is not easy—before closing the distance and killing her offscreen."
+        "es": "Harlan ataca fuera de campo. Durante el negro se oye un golpe corporal seco; cesan el forcejeo y la respiración de Zao, y el negro sostenido confirma la fatalidad antes de mostrar la limpieza del puesto.",
+        "en": "Harlan attacks offscreen. During black, a dry bodily impact is heard; Zao’s struggle and breathing cease, and sustained black confirms the fatal outcome before the station cleanup is shown."
       },
       "importance": "required",
       "coverage": {
@@ -925,7 +997,7 @@
     {
       "id": "festival:outline-18",
       "level": "detail",
-      "parentStepId": "festival:story-05",
+      "parentStepId": "festival:story-06",
       "order": 18,
       "title": {
         "es": "Harlan borra evidencia",
@@ -961,7 +1033,7 @@
     {
       "id": "festival:outline-19",
       "level": "detail",
-      "parentStepId": "festival:story-05",
+      "parentStepId": "festival:story-07",
       "order": 19,
       "title": {
         "es": "Sorell encuentra a Zao",
@@ -997,7 +1069,7 @@
     {
       "id": "festival:outline-20",
       "level": "detail",
-      "parentStepId": "festival:story-05",
+      "parentStepId": "festival:story-07",
       "order": 20,
       "title": {
         "es": "Harlan restaura comunicaciones",
@@ -1033,7 +1105,7 @@
     {
       "id": "festival:outline-21",
       "level": "detail",
-      "parentStepId": "festival:story-06",
+      "parentStepId": "festival:story-07",
       "order": 21,
       "title": {
         "es": "Coartada de Harlan",
@@ -1069,7 +1141,7 @@
     {
       "id": "festival:outline-22",
       "level": "detail",
-      "parentStepId": "festival:story-06",
+      "parentStepId": "festival:story-07",
       "order": 22,
       "title": {
         "es": "Salto temporal",
@@ -1105,7 +1177,7 @@
     {
       "id": "festival:outline-23",
       "level": "detail",
-      "parentStepId": "festival:story-06",
+      "parentStepId": "festival:story-08",
       "order": 23,
       "title": {
         "es": "Voss ordena la auditoría",
@@ -1148,7 +1220,7 @@
     {
       "id": "festival:outline-25",
       "level": "detail",
-      "parentStepId": "festival:story-07",
+      "parentStepId": "festival:story-09",
       "order": 24,
       "title": {
         "es": "Overlays del payload",
@@ -1181,7 +1253,7 @@
     {
       "id": "festival:outline-26",
       "level": "detail",
-      "parentStepId": "festival:story-07",
+      "parentStepId": "festival:story-09",
       "order": 25,
       "title": {
         "es": "Elin cartografía el payload",
@@ -1217,7 +1289,7 @@
     {
       "id": "festival:outline-24",
       "level": "detail",
-      "parentStepId": "festival:story-07",
+      "parentStepId": "festival:story-09",
       "order": 26,
       "title": {
         "es": "La auditoría establece el riesgo real",
@@ -1271,7 +1343,7 @@
     {
       "id": "festival:outline-27",
       "level": "detail",
-      "parentStepId": "festival:story-07",
+      "parentStepId": "festival:story-09",
       "order": 27,
       "title": {
         "es": "Límite de Elin",
@@ -1307,7 +1379,7 @@
     {
       "id": "festival:outline-28",
       "level": "detail",
-      "parentStepId": "festival:story-07",
+      "parentStepId": "festival:story-09",
       "order": 28,
       "title": {
         "es": "Harlan interviene sin delatarse",
@@ -1343,7 +1415,7 @@
     {
       "id": "festival:outline-29",
       "level": "detail",
-      "parentStepId": "festival:story-07",
+      "parentStepId": "festival:story-09",
       "order": 29,
       "title": {
         "es": "Señal entrante detectada",
@@ -1379,7 +1451,7 @@
     {
       "id": "festival:outline-30",
       "level": "detail",
-      "parentStepId": "festival:story-08",
+      "parentStepId": "festival:story-10",
       "order": 30,
       "title": {
         "es": "Autenticación de la señal",
@@ -1409,7 +1481,7 @@
     {
       "id": "festival:outline-31",
       "level": "detail",
-      "parentStepId": "festival:story-08",
+      "parentStepId": "festival:story-10",
       "order": 31,
       "title": {
         "es": "Reproducción del mensaje",
@@ -1439,7 +1511,7 @@
     {
       "id": "festival:outline-32",
       "level": "detail",
-      "parentStepId": "festival:story-08",
+      "parentStepId": "festival:story-10",
       "order": 32,
       "title": {
         "es": "Harlan intenta invalidarlo",
@@ -1469,7 +1541,7 @@
     {
       "id": "festival:outline-33",
       "level": "detail",
-      "parentStepId": "festival:story-09",
+      "parentStepId": "festival:story-11",
       "order": 33,
       "title": {
         "es": "Elin ejecuta, no pide fe",
@@ -1499,7 +1571,7 @@
     {
       "id": "festival:outline-34",
       "level": "detail",
-      "parentStepId": "festival:story-09",
+      "parentStepId": "festival:story-11",
       "order": 34,
       "title": {
         "es": "Triple coincidencia",
@@ -1539,7 +1611,7 @@
     {
       "id": "festival:outline-35",
       "level": "detail",
-      "parentStepId": "festival:story-09",
+      "parentStepId": "festival:story-11",
       "order": 35,
       "title": {
         "es": "Integridad verificada",
@@ -1569,7 +1641,7 @@
     {
       "id": "festival:outline-36",
       "level": "detail",
-      "parentStepId": "festival:story-10",
+      "parentStepId": "festival:story-12",
       "order": 36,
       "title": {
         "es": "Voss revoca la credencial",
@@ -1599,7 +1671,7 @@
     {
       "id": "festival:outline-37",
       "level": "detail",
-      "parentStepId": "festival:story-10",
+      "parentStepId": "festival:story-12",
       "order": 37,
       "title": {
         "es": "Harlan activa el override",
@@ -1629,7 +1701,7 @@
     {
       "id": "festival:outline-38",
       "level": "detail",
-      "parentStepId": "festival:story-10",
+      "parentStepId": "festival:story-12",
       "order": 38,
       "title": {
         "es": "Harlan alcanza el control físico",
@@ -1659,7 +1731,7 @@
     {
       "id": "festival:outline-39",
       "level": "detail",
-      "parentStepId": "festival:story-10",
+      "parentStepId": "festival:story-12",
       "order": 39,
       "title": {
         "es": "Voss lo contiene",
@@ -1689,7 +1761,7 @@
     {
       "id": "festival:outline-40",
       "level": "detail",
-      "parentStepId": "festival:story-11",
+      "parentStepId": "festival:story-13",
       "order": 40,
       "title": {
         "es": "Elin aplica la cuarentena",
@@ -1719,7 +1791,7 @@
     {
       "id": "festival:outline-41",
       "level": "detail",
-      "parentStepId": "festival:story-11",
+      "parentStepId": "festival:story-13",
       "order": 41,
       "title": {
         "es": "UI final de cuarentena",
@@ -1749,7 +1821,7 @@
     {
       "id": "festival:outline-42",
       "level": "detail",
-      "parentStepId": "festival:story-11",
+      "parentStepId": "festival:story-14",
       "order": 42,
       "title": {
         "es": "El reloj llega a cero",
@@ -1779,7 +1851,7 @@
     {
       "id": "festival:outline-43",
       "level": "detail",
-      "parentStepId": "festival:story-11",
+      "parentStepId": "festival:story-14",
       "order": 43,
       "title": {
         "es": "Respuesta Velari",
@@ -1809,7 +1881,7 @@
     {
       "id": "festival:outline-44",
       "level": "detail",
-      "parentStepId": "festival:story-12",
+      "parentStepId": "festival:story-15",
       "order": 44,
       "title": {
         "es": "Cierre: llegaste a tiempo",

@@ -725,7 +725,9 @@
         "festival:cue-c-09",
         "festival:cue-c-03",
         "festival:cue-c-10",
-        "festival:cue-c-05"
+        "festival:cue-c-05",
+        "festival:cue-c-11",
+        "festival:cue-c-12"
       ],
       "targetDurationMs": 20000
     },
@@ -1531,6 +1533,28 @@
           }
         }
       }
+    },
+    {
+      "id": "festival:cue-c-11",
+      "beatId": "festival:beat-c-01",
+      "order": 11,
+      "type": "sound",
+      "description": {
+        "es": "Golpe corporal seco y no gráfico durante el negro; confirma la fatalidad sin mostrar el acto.",
+        "en": "A dry, non-graphic bodily impact during black; it confirms the fatal outcome without showing the act."
+      },
+      "mode": "diegetic"
+    },
+    {
+      "id": "festival:cue-c-12",
+      "beatId": "festival:beat-c-01",
+      "order": 12,
+      "type": "silence",
+      "purpose": {
+        "es": "Cesan forcejeo y respiración; negro sostenido con ambiente mínimo antes de la limpieza.",
+        "en": "Struggle and breathing cease; sustained black with minimal ambience before the cleanup."
+      },
+      "estimatedDurationMs": 2800
     }
   ],
   "shots": [
@@ -2191,30 +2215,40 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "Harlan mata a Zao fuera de campo. Corte antes de mostrar el acto.",
-        "en": "Harlan kills Zao off-camera. Cut before showing the act."
+        "es": "Negro sostenido: forcejeo breve, golpe corporal seco y silencio respiratorio confirman la muerte de Zao sin mostrarla.",
+        "en": "Sustained black: a brief struggle, dry bodily impact, and respiratory silence confirm Zao’s death without showing it."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
-        "size": "MS",
+        "size": "OTHER",
         "framing": {
-          "es": "PM",
-          "en": "PM"
+          "es": "NEGRO",
+          "en": "BLACK"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "Encuadre que evita el acto; sonido breve de forcejeo.",
-          "en": "Frame avoids the act; a brief sound of struggle."
+          "es": "Corte antes del acto; golpe durante el negro y pausa mortuoria antes de mostrar la limpieza.",
+          "en": "Cut before the act; impact during black and a fatal pause before showing the cleanup."
         }
       },
-      "durationMs": 3000,
+      "durationMs": 5000,
       "cuePlacements": [
         {
           "cueId": "festival:cue-c-01",
           "atMs": 0,
-          "durationMs": 3000
+          "durationMs": 5000
+        },
+        {
+          "cueId": "festival:cue-c-11",
+          "atMs": 1100,
+          "durationMs": 500
+        },
+        {
+          "cueId": "festival:cue-c-12",
+          "atMs": 1600,
+          "durationMs": 3400
         }
       ],
       "takeIds": [

@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival",
     "scriptId": "script:light-delay-festival",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "03c054c0c8463377b43dbdf74cdabce61f8b0944802179b698e9e730f8928c42",
+    "sourceDigest": "aebcf2f534830d0c81ea31763253645166dfd9d54bccbf4252a394ee7550fbc4",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -522,7 +522,7 @@
         {
           "id": "festival:shot-c-02:segment-01",
           "startMs": 0,
-          "endMs": 3000,
+          "endMs": 5000,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null

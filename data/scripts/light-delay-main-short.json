@@ -1348,6 +1348,8 @@
       "cueIds": [
         "main:cue-07-01",
         "main:cue-07-02",
+        "main:cue-07-14",
+        "main:cue-07-15",
         "main:cue-07-03",
         "main:cue-07-04",
         "main:cue-07-05",
@@ -2698,8 +2700,8 @@
       "order": 2,
       "type": "action",
       "text": {
-        "es": "CORTE A NEGRO. Forcejeo breve. Silencio.",
-        "en": "CUT TO BLACK. Brief struggle. Silence."
+        "es": "CORTE A NEGRO. Forcejeo breve. Un golpe corporal seco contra una superficie de sujeción. Cesan el forcejeo y la respiración de Zao; el negro permanece antes de volver al puesto.",
+        "en": "CUT TO BLACK. Brief struggle. A dry bodily impact against a restraint surface. Zao’s struggle and breathing cease; black holds before returning to the station."
       }
     },
     {
@@ -4204,6 +4206,28 @@
         "es": "Voss mira a Cael un instante. No responde; Cael vuelve a la cuenta de salida.",
         "en": "Voss looks at Cael for a moment. He does not answer; Cael returns to the departure count."
       }
+    },
+    {
+      "id": "main:cue-07-14",
+      "beatId": "main:beat-07-01",
+      "order": 14,
+      "type": "sound",
+      "description": {
+        "es": "Golpe corporal seco y no gráfico, inequívocamente distinto de un movimiento incidental; confirma la fatalidad sin mostrarla.",
+        "en": "A dry, non-graphic bodily impact, unmistakably different from incidental movement; it confirms the fatal outcome without showing it."
+      },
+      "mode": "diegetic"
+    },
+    {
+      "id": "main:cue-07-15",
+      "beatId": "main:beat-07-01",
+      "order": 15,
+      "type": "silence",
+      "purpose": {
+        "es": "Tras el impacto cesan forcejeo y respiración; sólo queda el ambiente mínimo de la nave durante el negro sostenido.",
+        "en": "After the impact, struggle and breathing cease; only minimal ship ambience remains during sustained black."
+      },
+      "estimatedDurationMs": 3300
     }
   ],
   "shots": [
@@ -6554,8 +6578,8 @@
       "number": 2,
       "order": 50,
       "description": {
-        "es": "Asesinato fuera de campo",
-        "en": "Offscreen Murder"
+        "es": "Negro sostenido: forcejeo breve, golpe corporal seco y silencio respiratorio confirman la muerte de Zao sin mostrar el acto.",
+        "en": "Sustained black: a brief struggle, dry bodily impact, and respiratory silence confirm Zao’s death without showing the act."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -6568,8 +6592,8 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "Corte a negro; el forcejeo se narra sólo por sonido.",
-          "en": "Cut to black; the struggle is narrated only by sound."
+          "es": "Corte a negro antes de la violencia; el impacto ocurre durante el negro y quedan al menos tres segundos de silencio posterior.",
+          "en": "Cut to black before violence; the impact occurs during black and at least three seconds of silence follow."
         },
         "movement": "locked"
       },
@@ -6578,6 +6602,16 @@
         {
           "cueId": "main:cue-07-02",
           "atMs": 0
+        },
+        {
+          "cueId": "main:cue-07-14",
+          "atMs": 1200,
+          "durationMs": 500
+        },
+        {
+          "cueId": "main:cue-07-15",
+          "atMs": 1700,
+          "durationMs": 4300
         }
       ],
       "takeIds": [

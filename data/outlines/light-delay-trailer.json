@@ -8,10 +8,10 @@
       "en": "Outline — Light Delay: trailer"
     },
     "status": "draft",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "synopsis": {
-      "es": "Un avance condensado presenta la misión de primer contacto, el sabotaje que la amenaza y la advertencia que debe atravesar el espacio para alcanzar a la nave antes del encuentro.",
-      "en": "A condensed preview introduces the first-contact mission, the sabotage threatening it, and the warning that must cross space to catch the ship before the encounter."
+      "es": "Un avance condensado presenta la misión de primer contacto, una amenaza oculta y el intento de Zao por advertir a la nave. La identidad del culpable, el éxito del envío, el destino de Zao y el desenlace del encuentro permanecen deliberadamente sin resolver.",
+      "en": "A condensed preview introduces the first-contact mission, a hidden threat, and Zao’s attempt to warn the ship. The culprit’s identity, the success of the send, Zao’s fate, and the outcome of the encounter deliberately remain unresolved."
     }
   },
   "steps": [
@@ -24,8 +24,8 @@
         "en": "A mission without margin"
       },
       "summary": {
-        "es": "La escala del viaje y la ventana de encuentro convierten cualquier falla del canal diplomático en un riesgo irreversible.",
-        "en": "The scale of the journey and encounter window make any diplomatic-channel failure an irreversible risk."
+        "es": "La Ardor parte hacia el primer contacto con una ventana de llegada irrepetible: si el canal diplomático está comprometido, la nave podría hablar por toda la humanidad sin margen para corregirlo.",
+        "en": "The Ardor departs for first contact with an unrepeatable arrival window: if the diplomatic channel is compromised, the ship could speak for all humanity with no margin to correct it."
       },
       "importance": "required"
     },
@@ -34,21 +34,21 @@
       "level": "story",
       "order": 2,
       "title": {
-        "es": "La anomalía",
-        "en": "The anomaly"
+        "es": "Zao encuentra una amenaza",
+        "en": "Zao finds a threat"
       },
       "summary": {
-        "es": "Zao descubre una presencia no declarada dentro del sistema que debía garantizar un contacto limpio.",
-        "en": "Zao discovers an undeclared presence inside the system meant to guarantee clean contact."
+        "es": "Una anomalía lleva a Zao hasta una rama ejecutable no declarada dentro del sistema que debía garantizar un saludo limpio.",
+        "en": "An anomaly leads Zao to an undeclared executable branch inside the system meant to guarantee a clean greeting."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "trailer:story-01",
-          "relation": "enables",
+          "relation": "reveals",
           "explanation": {
-            "es": "El resultado anterior —La escala del viaje y la ventana de encuentro convierten cualquier falla del canal diplomático en un riesgo irreversible— crea la causa inmediata de lo siguiente: Zao descubre una presencia no declarada dentro del sistema que debía garantizar un contacto limpio.",
-            "en": "The prior outcome—The scale of the journey and encounter window make any diplomatic-channel failure an irreversible risk—creates the immediate cause for what follows: Zao discovers an undeclared presence inside the system meant to guarantee clean contact."
+            "es": "El hito anterior provoca o habilita esta consecuencia sin resolver el suspenso: Una anomalía lleva a Zao hasta una rama ejecutable no declarada dentro del sistema que debía garantizar un saludo limpio.",
+            "en": "The previous beat causes or enables this consequence without resolving the suspense: An anomaly leads Zao to an undeclared executable branch inside the system meant to guarantee a clean greeting."
           }
         }
       ]
@@ -58,21 +58,21 @@
       "level": "story",
       "order": 3,
       "title": {
-        "es": "Sabotaje y advertencia",
-        "en": "Sabotage and warning"
+        "es": "Alguien intenta silenciarla",
+        "en": "Someone tries to silence her"
       },
       "summary": {
-        "es": "Cuando intentan silenciarla, Zao recurre a una transmisión óptica dirigida hacia el futuro de la nave.",
-        "en": "When they try to silence her, Zao turns to an optical transmission aimed at the ship’s future."
+        "es": "Zao alcanza a advertir que la firma parece falsa. En ese momento alguien corta tanto wireless como COM A/B, señal de que la amenaza incluye a una persona a bordo, aunque el tráiler no revela su identidad.",
+        "en": "Zao manages to warn that the signature appears forged. At that moment someone cuts both wireless and COM A/B, showing that the threat includes someone aboard, although the trailer does not reveal their identity."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "trailer:story-02",
-          "relation": "reveals",
+          "relation": "forces",
           "explanation": {
-            "es": "El resultado anterior —Zao descubre una presencia no declarada dentro del sistema que debía garantizar un contacto limpio— crea la causa inmediata de lo siguiente: Cuando intentan silenciarla, Zao recurre a una transmisión óptica dirigida hacia el futuro de la nave.",
-            "en": "The prior outcome—Zao discovers an undeclared presence inside the system meant to guarantee clean contact—creates the immediate cause for what follows: When they try to silence her, Zao turns to an optical transmission aimed at the ship’s future."
+            "es": "El hito anterior provoca o habilita esta consecuencia sin resolver el suspenso: Zao alcanza a advertir que la firma parece falsa. En ese momento alguien corta tanto wireless como COM A/B, señal de que la amenaza incluye a una persona a bordo, aunque el tráiler no revela su identidad.",
+            "en": "The previous beat causes or enables this consequence without resolving the suspense: Zao manages to warn that the signature appears forged. At that moment someone cuts both wireless and COM A/B, showing that the threat includes someone aboard, although the trailer does not reveal their identity."
           }
         }
       ]
@@ -82,12 +82,12 @@
       "level": "story",
       "order": 4,
       "title": {
-        "es": "El mensaje llega tarde, pero a tiempo",
-        "en": "The message arrives late, but in time"
+        "es": "Una salida incierta",
+        "en": "An uncertain way out"
       },
       "summary": {
-        "es": "Tras el cruce y la muerte de Zao, su señal alcanza a la tripulación y transforma el misterio en una acusación verificable.",
-        "en": "After the crossing and Zao’s death, her signal reaches the crew and turns the mystery into a verifiable accusation."
+        "es": "Aislada y bajo presión, Zao apunta el láser hacia el futuro de la nave. El progreso avanza, una presencia irrumpe y el corte breve a negro no confirma ni que el mensaje haya salido ni que Zao haya muerto.",
+        "en": "Isolated and under pressure, Zao aims the laser toward the ship’s future. Progress advances, a presence intrudes, and the brief cut to black confirms neither that the message was sent nor that Zao died."
       },
       "importance": "required",
       "causalLinks": [
@@ -95,8 +95,8 @@
           "sourceStepId": "trailer:story-03",
           "relation": "forces",
           "explanation": {
-            "es": "El resultado anterior —Cuando intentan silenciarla, Zao recurre a una transmisión óptica dirigida hacia el futuro de la nave— crea la causa inmediata de lo siguiente: Tras el cruce y la muerte de Zao, su señal alcanza a la tripulación y transforma el misterio en una acusación verificable.",
-            "en": "The prior outcome—When they try to silence her, Zao turns to an optical transmission aimed at the ship’s future—creates the immediate cause for what follows: After the crossing and Zao’s death, her signal reaches the crew and turns the mystery into a verifiable accusation."
+            "es": "El hito anterior provoca o habilita esta consecuencia sin resolver el suspenso: Aislada y bajo presión, Zao apunta el láser hacia el futuro de la nave. El progreso avanza, una presencia irrumpe y el corte breve a negro no confirma ni que el mensaje haya salido ni que Zao haya muerto.",
+            "en": "The previous beat causes or enables this consequence without resolving the suspense: Isolated and under pressure, Zao aims the laser toward the ship’s future. Progress advances, a presence intrudes, and the brief cut to black confirms neither that the message was sent nor that Zao died."
           }
         }
       ]
@@ -106,21 +106,69 @@
       "level": "story",
       "order": 5,
       "title": {
-        "es": "Cuenta regresiva al contacto",
-        "en": "Countdown to contact"
+        "es": "La nave llega primero",
+        "en": "The ship arrives first"
       },
       "summary": {
-        "es": "La tripulación debe actuar sobre la advertencia antes de que el canal comprometido hable por la humanidad.",
-        "en": "The crew must act on the warning before the compromised channel speaks for humanity."
+        "es": "La Ardor cruza la garganta y queda a pocas horas del encuentro. Sin saber qué ocurrió con Zao ni con su intento, la tripulación investiga contra reloj la anomalía ya detectada.",
+        "en": "The Ardor crosses the throat and comes within hours of the encounter. Without knowing what happened to Zao or her attempt, the crew races to investigate the anomaly already detected."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "trailer:story-04",
-          "relation": "pays_off",
+          "relation": "enables",
           "explanation": {
-            "es": "El resultado anterior —Tras el cruce y la muerte de Zao, su señal alcanza a la tripulación y transforma el misterio en una acusación verificable— crea la causa inmediata de lo siguiente: La tripulación debe actuar sobre la advertencia antes de que el canal comprometido hable por la humanidad.",
-            "en": "The prior outcome—After the crossing and Zao’s death, her signal reaches the crew and turns the mystery into a verifiable accusation—creates the immediate cause for what follows: The crew must act on the warning before the compromised channel speaks for humanity."
+            "es": "El hito anterior provoca o habilita esta consecuencia sin resolver el suspenso: La Ardor cruza la garganta y queda a pocas horas del encuentro. Sin saber qué ocurrió con Zao ni con su intento, la tripulación investiga contra reloj la anomalía ya detectada.",
+            "en": "The previous beat causes or enables this consequence without resolving the suspense: The Ardor crosses the throat and comes within hours of the encounter. Without knowing what happened to Zao or her attempt, the crew races to investigate the anomaly already detected."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:story-06",
+      "level": "story",
+      "order": 6,
+      "title": {
+        "es": "La amenaza espera el contacto",
+        "en": "The threat waits for contact"
+      },
+      "summary": {
+        "es": "La auditoría revela que la carga autónoma espera que se abra el canal y conserva un override de titular cifrado. La cuenta regresiva obliga a decidir antes de que esa voz desconocida hable por la humanidad.",
+        "en": "The audit reveals that the autonomous payload is waiting for the channel to open and retains an override with an encrypted owner. The countdown forces a decision before that unknown voice speaks for humanity."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer:story-05",
+          "relation": "reveals",
+          "explanation": {
+            "es": "El hito anterior provoca o habilita esta consecuencia sin resolver el suspenso: La auditoría revela que la carga autónoma espera que se abra el canal y conserva un override de titular cifrado. La cuenta regresiva obliga a decidir antes de que esa voz desconocida hable por la humanidad.",
+            "en": "The previous beat causes or enables this consequence without resolving the suspense: The audit reveals that the autonomous payload is waiting for the channel to open and retains an override with an encrypted owner. The countdown forces a decision before that unknown voice speaks for humanity."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:story-07",
+      "level": "story",
+      "order": 7,
+      "title": {
+        "es": "El umbral queda abierto",
+        "en": "The threshold remains open"
+      },
+      "summary": {
+        "es": "El tráiler termina antes de revelar quién saboteó la misión, si Zao sobrevivió, si su mensaje salió o cómo responderán los Velari.",
+        "en": "The trailer ends before revealing who sabotaged the mission, whether Zao survived, whether her message was sent, or how the Velari will respond."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer:story-06",
+          "relation": "forces",
+          "explanation": {
+            "es": "El hito anterior provoca o habilita esta consecuencia sin resolver el suspenso: El tráiler termina antes de revelar quién saboteó la misión, si Zao sobrevivió, si su mensaje salió o cómo responderán los Velari.",
+            "en": "The previous beat causes or enables this consequence without resolving the suspense: The trailer ends before revealing who sabotaged the mission, whether Zao survived, whether her message was sent, or how the Velari will respond."
           }
         }
       ]
@@ -278,8 +326,8 @@
         "en": "The warning"
       },
       "summary": {
-        "es": "Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.",
-        "en": "Harlan cuts wireless and COM A/B; Zao finds a way out through the outside laser."
+        "es": "Alguien corta wireless y COM A/B; Zao busca una salida por el láser exterior.",
+        "en": "Someone cuts wireless and COM A/B; Zao seeks a way out through the external laser."
       },
       "importance": "required",
       "coverage": {
@@ -314,21 +362,20 @@
             "trailer:shot-d-04"
           ]
         }
-      },
-      "majorEventId": "event:zao-warning-death"
+      }
     },
     {
       "id": "trailer:outline-05",
       "level": "detail",
-      "parentStepId": "trailer:story-03",
+      "parentStepId": "trailer:story-04",
       "order": 5,
       "title": {
         "es": "Punto de no retorno",
         "en": "Point of no return"
       },
       "summary": {
-        "es": "Transmisión completa; silueta O.S.; golpe a negro.",
-        "en": "Complete transmission; silhouette O.S.; hit black."
+        "es": "El progreso no alcanza una confirmación visible; una presencia irrumpe y el negro breve mantiene inciertos el envío y el destino de Zao.",
+        "en": "Progress never reaches visible confirmation; a presence intrudes and brief black leaves both the send and Zao’s fate uncertain."
       },
       "importance": "required",
       "coverage": {
@@ -363,13 +410,12 @@
             "trailer:shot-e-02"
           ]
         }
-      },
-      "majorEventId": "event:zao-warning-death"
+      }
     },
     {
       "id": "trailer:outline-06",
       "level": "detail",
-      "parentStepId": "trailer:story-04",
+      "parentStepId": "trailer:story-05",
       "order": 6,
       "title": {
         "es": "La nave llega primero",
@@ -420,15 +466,15 @@
     {
       "id": "trailer:outline-07",
       "level": "detail",
-      "parentStepId": "trailer:story-04",
+      "parentStepId": "trailer:story-06",
       "order": 7,
       "title": {
-        "es": "La señal",
-        "en": "The signal"
+        "es": "La amenaza",
+        "en": "The threat"
       },
       "summary": {
-        "es": "Portadora humana; OVR; fragmento de Zao.",
-        "en": "Human carrier; OVR; Zao fragment."
+        "es": "Carga a la espera del canal; override de titular cifrado; ninguna confirmación sobre el mensaje de Zao.",
+        "en": "Payload waiting for the channel; override with encrypted owner; no confirmation about Zao’s message."
       },
       "importance": "required",
       "coverage": {
@@ -473,7 +519,7 @@
     {
       "id": "trailer:outline-08",
       "level": "detail",
-      "parentStepId": "trailer:story-05",
+      "parentStepId": "trailer:story-06",
       "order": 8,
       "title": {
         "es": "El reloj",
@@ -524,7 +570,7 @@
     {
       "id": "trailer:outline-09",
       "level": "detail",
-      "parentStepId": "trailer:story-05",
+      "parentStepId": "trailer:story-07",
       "order": 9,
       "title": {
         "es": "Título",

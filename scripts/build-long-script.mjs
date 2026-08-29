@@ -113,7 +113,7 @@ const rows = [
 		9,
 		1,
 		'Muerte fuera de campo',
-		'Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.',
+		'Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia y suspira antes de atacarla fuera de campo. Durante un negro sostenido se oyen un golpe corporal seco y el fin del forcejeo; la respiración de Zao cesa y confirma su muerte sin mostrar el acto. Luego Harlan limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.',
 		'location:diplomatic-core-room',
 		['character:zao', 'character:harlan', 'character:sorell'],
 		'T+57H46M',

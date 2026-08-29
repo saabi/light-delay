@@ -8,15 +8,13 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import {
-	assertGeneratedCheck,
-	mergeGeneratedInlineI18n
-} from './lib/generated-inline-i18n.mjs';
+import { assertGeneratedCheck, mergeGeneratedInlineI18n } from './lib/generated-inline-i18n.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const out = join(ROOT, 'data/scripts/light-delay-trailer.json');
 const previous = JSON.parse(readFileSync(out, 'utf8'));
 const checkOnly = process.argv.includes('--check');
+const L = (es, en) => ({ es, en });
 const main = JSON.parse(
 	readFileSync(join(ROOT, 'data/scripts/light-delay-main-short.json'), 'utf8')
 );
@@ -32,7 +30,16 @@ function mainTake(shotId) {
 	return { shot, take };
 }
 
-function dialogue(id, beatId, order, speakerId, spokenText, presentation, sourceCueId) {
+function dialogue(
+	id,
+	beatId,
+	order,
+	speakerId,
+	spokenText,
+	presentation,
+	sourceCueId,
+	spokenTextEn
+) {
 	const cue = {
 		id,
 		beatId,
@@ -43,7 +50,8 @@ function dialogue(id, beatId, order, speakerId, spokenText, presentation, source
 		content: {
 			sourceLanguage: 'es',
 			variants: {
-				es: { spokenText, status: 'source' }
+				es: { spokenText, status: 'source' },
+				...(spokenTextEn ? { en: { spokenText: spokenTextEn, status: 'draft' } } : {})
 			}
 		}
 	};
@@ -53,7 +61,7 @@ function dialogue(id, beatId, order, speakerId, spokenText, presentation, source
 	return cue;
 }
 
-function textCue(id, beatId, order, text, presentation = 'interface') {
+function textCue(id, beatId, order, text, presentation = 'interface', textEn) {
 	return {
 		id,
 		beatId,
@@ -63,7 +71,8 @@ function textCue(id, beatId, order, text, presentation = 'interface') {
 		content: {
 			sourceLanguage: 'es',
 			variants: {
-				es: { text, status: 'source' }
+				es: { text, status: 'source' },
+				...(textEn ? { en: { text: textEn, status: 'draft' } } : {})
 			}
 		}
 	};
@@ -108,36 +117,76 @@ const SEGMENTS = [
 		characterIds: ['character:zao'],
 		shots: [
 			{ mainShotId: 'main:shot-04-02', durationMs: 4000 },
-			{ mainShotId: 'main:shot-05-02', durationMs: 4500 },
+			{ mainShotId: 'main:shot-04-03', durationMs: 4500 },
 			{ mainShotId: 'main:shot-05-01', durationMs: 4500 }
 		]
 	},
 	{
 		key: 'd',
 		title: 'La advertencia',
-		summary: 'Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.',
+		titleEn: 'The warning',
+		summary: 'Alguien corta wireless y COM A/B; Zao busca una salida por el láser exterior.',
+		summaryEn: 'Someone cuts wireless and COM A/B; Zao seeks a way out through the external laser.',
 		dramaticPurpose: 'Convertir la transmisión en una decisión bajo presión.',
+		dramaticPurposeEn: 'Turn the transmission into a decision under pressure.',
 		locationId: 'location:diplomatic-core-room',
 		targetDurationMs: 13000,
-		characterIds: ['character:zao', 'character:harlan'],
+		characterIds: ['character:zao'],
 		shots: [
-			{ mainShotId: 'main:shot-05-04', durationMs: 3600 },
-			{ mainShotId: 'main:shot-05-07', durationMs: 3500 },
-			{ mainShotId: 'main:shot-06-02', durationMs: 3500 },
+			{
+				mainShotId: 'main:shot-05-04',
+				durationMs: 3600,
+				description: 'Una mano no identificable activa el jammer y la voz de Zao se corta.',
+				descriptionEn: 'An unidentifiable hand activates the jammer and Zao’s voice cuts out.',
+				cameraDescription:
+					'Detalle cerrado que excluye rostro, uniforme e insignias; no identifica al culpable.',
+				cameraDescriptionEn:
+					'Tight detail excluding face, uniform, and insignia; it does not identify the culprit.'
+			},
+			{ mainShotId: 'main:shot-05-06', durationMs: 3500 },
+			{ mainShotId: 'main:shot-06-01', durationMs: 3500 },
 			{ mainShotId: 'main:shot-06-03', durationMs: 3000 }
 		]
 	},
 	{
 		key: 'e',
 		title: 'Punto de no retorno',
-		summary: 'Transmisión completa; silueta O.S.; golpe a negro.',
-		dramaticPurpose: 'Cierre del acto en Proxima.',
+		titleEn: 'Point of no return',
+		summary:
+			'La transmisión avanza bajo presión; una presencia irrumpe y un corte breve a negro deja inciertos tanto el envío como el destino de Zao.',
+		summaryEn:
+			'The transmission advances under pressure; a presence intrudes and a brief cut to black leaves both the send and Zao’s fate uncertain.',
+		dramaticPurpose: 'Cerrar el acto en Proxima sin confirmar si el mensaje salió ni si Zao murió.',
+		dramaticPurposeEn:
+			'Close the act at Proxima without confirming whether the message was sent or Zao died.',
 		locationId: 'location:diplomatic-core-room',
 		targetDurationMs: 7000,
-		characterIds: ['character:zao', 'character:harlan'],
+		characterIds: ['character:zao'],
 		shots: [
-			{ mainShotId: 'main:shot-06-07', durationMs: 3500 },
-			{ mainShotId: 'main:shot-06-08', durationMs: 3500 }
+			{
+				mainShotId: 'main:shot-06-09',
+				durationMs: 4500,
+				description:
+					'El progreso del envío sube sin alcanzar una confirmación visible mientras una presencia entra fuera de foco.',
+				descriptionEn:
+					'Send progress rises without reaching visible confirmation while a presence enters out of focus.',
+				cameraDescription:
+					'Primer plano de Zao y del progreso todavía incompleto; la identidad de la figura permanece oculta.',
+				cameraDescriptionEn:
+					'Close-up on Zao and still-incomplete progress; the figure’s identity remains hidden.'
+			},
+			{
+				mainShotId: 'main:shot-07-02',
+				durationMs: 2500,
+				description:
+					'Corte breve a negro antes del ataque; la música conserva el pulso y el montaje sale del negro sin confirmar la muerte.',
+				descriptionEn:
+					'Brief cut to black before the attack; the score keeps its pulse and the edit leaves black without confirming death.',
+				cameraDescription:
+					'Negro breve; la música conserva el pulso y la imagen siguiente llega antes de que el silencio resuelva lo ocurrido.',
+				cameraDescriptionEn:
+					'Brief black; the score keeps its pulse and the next image arrives before silence can resolve what happened.'
+			}
 		]
 	},
 	{
@@ -151,29 +200,28 @@ const SEGMENTS = [
 		shots: [
 			{ mainShotId: 'main:shot-07-08', durationMs: 3000 },
 			{ mainShotId: 'main:shot-07-10', durationMs: 3000 },
-			{ mainShotId: 'main:shot-08-01', durationMs: 2000 },
+			{ mainShotId: 'main:shot-08-02', durationMs: 2000 },
 			{ mainShotId: 'main:shot-10-01', durationMs: 3200 }
 		]
 	},
 	{
 		key: 'g',
-		title: 'La señal',
-		summary: 'Portadora humana; OVR; fragmento de Zao.',
-		dramaticPurpose: 'La advertencia alcanza a la nave.',
+		title: 'La amenaza',
+		titleEn: 'The threat',
+		summary:
+			'La auditoría revela que la carga espera la apertura del canal y que alguien conserva un override anónimo.',
+		summaryEn:
+			'The audit reveals that the payload is waiting for the channel to open and that someone retains an anonymous override.',
+		dramaticPurpose: 'Mostrar el peligro inmediato sin revelar si la advertencia de Zao llegó.',
+		dramaticPurposeEn: 'Show the immediate danger without revealing whether Zao’s warning arrived.',
 		locationId: 'location:celestial-ardor-bridge',
 		targetDurationMs: 11600,
-		characterIds: [
-			'character:cael',
-			'character:voss',
-			'character:rao',
-			'character:sorell',
-			'character:zao'
-		],
+		characterIds: ['character:voss', 'character:rao', 'character:sorell'],
 		shots: [
-			{ mainShotId: 'main:shot-11-05', durationMs: 3600 },
-			{ mainShotId: 'main:shot-12-01', durationMs: 2500 },
-			{ mainShotId: 'main:shot-12-02', durationMs: 3000 },
-			{ mainShotId: 'main:shot-10-06', durationMs: 2500 }
+			{ mainShotId: 'main:shot-10-02', durationMs: 2800 },
+			{ mainShotId: 'main:shot-10-03', durationMs: 3000 },
+			{ mainShotId: 'main:shot-10-04', durationMs: 2800 },
+			{ mainShotId: 'main:shot-10-05', durationMs: 3000 }
 		]
 	},
 	{
@@ -249,11 +297,13 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		actId: 'trailer:act-1',
 		number: si + 1,
 		order: si + 1,
-		title: seg.title,
+		title: seg.titleEn ? L(seg.title, seg.titleEn) : seg.title,
 		locationId,
 		setting: { interiorExterior: 'INT_EXT', timeOfDay: 'CONTINUO' },
-		summary: seg.summary,
-		dramaticPurpose: seg.dramaticPurpose,
+		summary: seg.summaryEn ? L(seg.summary, seg.summaryEn) : seg.summary,
+		dramaticPurpose: seg.dramaticPurposeEn
+			? L(seg.dramaticPurpose, seg.dramaticPurposeEn)
+			: seg.dramaticPurpose,
 		characterIds: seg.characterIds,
 		beatIds: [beatId],
 		shotIds: sceneShotIds,
@@ -268,9 +318,11 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		id: beatId,
 		sceneId,
 		order: 1,
-		title: seg.title,
-		purpose: seg.dramaticPurpose,
-		summary: seg.summary,
+		title: seg.titleEn ? L(seg.title, seg.titleEn) : seg.title,
+		purpose: seg.dramaticPurposeEn
+			? L(seg.dramaticPurpose, seg.dramaticPurposeEn)
+			: seg.dramaticPurpose,
+		summary: seg.summaryEn ? L(seg.summary, seg.summaryEn) : seg.summary,
 		cueIds: sceneCueIds
 	});
 
@@ -362,31 +414,16 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		);
 	}
 	if (seg.key === 'e') {
-		addCue(textCue('trailer:cue-e-01', beatId, 1, 'TRANSMISIÓN 70%… 92%…', 'interface'), 0);
 		addCue(
-			dialogue(
-				'trailer:cue-e-02',
+			textCue(
+				'trailer:cue-e-01',
 				beatId,
-				2,
-				'character:harlan',
-				'¿A quién le escribís?',
-				'off_screen',
-				'main:cue-06-04'
+				1,
+				'TRANSMISIÓN 70%… 92%…',
+				'interface',
+				'TRANSMISSION 70%… 92%…'
 			),
 			0
-		);
-		addCue(textCue('trailer:cue-e-03', beatId, 3, '100% — TRANSMITIDO', 'interface'), 1);
-		addCue(
-			dialogue(
-				'trailer:cue-e-04',
-				beatId,
-				4,
-				'character:zao',
-				'Ya está hecho.',
-				'on_screen',
-				'main:cue-06-05'
-			),
-			1
 		);
 	}
 	if (seg.key === 'f') {
@@ -428,48 +465,36 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'trailer:cue-g-01',
 				beatId,
 				1,
-				'character:cael',
-				'Señal humana.',
+				'character:rao',
+				'Está esperando que abramos el canal.',
 				'on_screen',
-				'main:cue-11-06'
+				'main:cue-10-04',
+				'It is waiting for us to open the channel.'
 			),
 			0,
-			{ atMs: 0, durationMs: 1000 }
+			{ atMs: 0, durationMs: 2400 }
 		);
 		addCue(
-			dialogue('trailer:cue-g-02', beatId, 2, 'character:voss', '¿De dónde?', 'on_screen', null),
-			0,
-			{ atMs: 1000, durationMs: 900 }
+			textCue(
+				'trailer:cue-g-02',
+				beatId,
+				2,
+				'CARGA AUTÓNOMA / DISPARO: CANAL ABIERTO',
+				'interface',
+				'AUTONOMOUS PAYLOAD / TRIGGER: CHANNEL OPEN'
+			),
+			1
 		);
 		addCue(
-			dialogue(
+			textCue(
 				'trailer:cue-g-03',
 				beatId,
 				3,
-				'character:cael',
-				'De nuestro corredor de vuelo.',
-				'on_screen',
-				'main:cue-11-06'
+				'OVERRIDE / TITULAR CIFRADO',
+				'interface',
+				'OVERRIDE / ENCRYPTED OWNER'
 			),
-			0,
-			{ atMs: 1900, durationMs: 1700 }
-		);
-		addCue(
-			textCue('trailer:cue-g-04', beatId, 4, 'ORIGEN: LÁSER EXTERIOR / CONTROL LOCAL', 'interface'),
-			1
-		);
-		addCue(textCue('trailer:cue-g-05', beatId, 5, 'OVR-7C41 / TITULAR CIFRADO', 'interface'), 3);
-		addCue(
-			dialogue(
-				'trailer:cue-g-06',
-				beatId,
-				6,
-				'character:zao',
-				'…no apaguen la mediación…',
-				'voice_over',
-				'main:cue-12-02'
-			),
-			2
+			3
 		);
 	}
 	if (seg.key === 'h') {
@@ -532,10 +557,17 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			beatIds: [beatId],
 			number: oi + 1,
 			order: globalShotOrder,
-			description: mainShot.description,
+			description: spec.description
+				? L(spec.description, spec.descriptionEn)
+				: mainShot.description,
 			locationId: mainShot.locationId || locationId,
 			composition: mainShot.composition,
-			camera: mainShot.camera,
+			camera: spec.cameraDescription
+				? {
+						...mainShot.camera,
+						movementDescription: L(spec.cameraDescription, spec.cameraDescriptionEn)
+					}
+				: mainShot.camera,
 			durationMs: spec.durationMs,
 			cuePlacements: spec._placements || [],
 			takeIds: [takeId],
@@ -598,30 +630,42 @@ const file = {
 			notes:
 				'Tráiler según docs/Light Delay — Tráiler de la versión de 30 minutos.md. Frames reutilizados del animatic principal vía imageAssetId; diálogos condensados del brief.'
 		},
-		declaredEntityRefs: ['zao', 'voss', 'harlan', 'rao', 'sorell', 'cael'].map((id) => ({
+		declaredEntityRefs: ['zao', 'voss', 'rao', 'sorell', 'cael'].map((id) => ({
 			kind: 'character',
 			id: `character:${id}`
 		})),
 		comparisonProfile: {
 			version: '1.1.0',
-			canonClaims: main.script.comparisonProfile.canonClaims,
+			canonClaims: main.script.comparisonProfile.canonClaims.filter((claim) =>
+				[
+					'canon:proxima-origin',
+					'canon:ardor-deployment',
+					'canon:tunnel-geometry',
+					'canon:tunnel-location',
+					'canon:trajectory',
+					'canon:ardor-gravity-operations',
+					'canon:velari-objects',
+					'canon:sorell-status'
+				].includes(claim.dimensionId)
+			),
 			eventCoverage: [
 				['event:embarkation', 'reworked', ['trailer:scene-a', 'trailer:scene-b']],
 				['event:anomaly-discovery', 'reworked', ['trailer:scene-c']],
-				['event:zao-warning-death', 'reworked', ['trailer:scene-d', 'trailer:scene-e']],
 				['event:tunnel-crossing', 'present', ['trailer:scene-f']],
 				['event:investigation', 'reworked', ['trailer:scene-f']],
-				['event:message-reception', 'present', ['trailer:scene-g']],
-				['event:harlan-exposed', 'reworked', ['trailer:scene-g']],
-				['event:quarantine', 'present', ['trailer:scene-h']],
+				['event:message-reception', 'omitted', []],
+				['event:quarantine', 'reworked', ['trailer:scene-h']],
 				['event:clean-greeting', 'reworked', ['trailer:scene-h']],
-				['event:first-contact', 'present', ['trailer:scene-h', 'trailer:scene-i']]
+				['event:first-contact', 'reworked', ['trailer:scene-h', 'trailer:scene-i']]
 			]
 				.map(([eventId, status, sceneIds]) => ({ eventId, status, sceneIds }))
 				.concat({
 					eventId: 'event:aftermath',
 					status: 'omitted',
-					note: 'El tráiler termina en el umbral del contacto.'
+					note: L(
+						'El tráiler termina en el umbral del contacto.',
+						'The trailer ends at the threshold of contact.'
+					)
 				})
 		},
 		characterFunctionAssignments: [
@@ -640,12 +684,6 @@ const file = {
 				functionId: 'function:diplomatic_greeting_authorship',
 				characterId: 'character:sorell',
 				relationship: 'unchanged'
-			},
-			{
-				functionId: 'function:override_antagonist',
-				characterId: 'character:harlan',
-				relationship: 'unchanged',
-				notes: 'En el tráiler la voz O.S. permanece deliberadamente no identificable en pantalla.'
 			},
 			{ functionId: 'function:piloting', characterId: 'character:cael', relationship: 'unchanged' }
 		],

@@ -8,7 +8,7 @@
       "en": "Outline — Light Delay: feature treatment"
     },
     "status": "draft",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "synopsis": {
       "es": "La versión extensa sigue la preparación del encuentro, la infiltración de Harlan, el descubrimiento y asesinato de Zao, y la investigación que permite que su advertencia óptica alcance a la Ardor y preserve el primer contacto.",
       "en": "The long version follows preparations for the encounter, Harlan’s infiltration, Zao’s discovery and murder, and the investigation that lets her optical warning catch the Ardor and preserve first contact."
@@ -62,8 +62,8 @@
         "en": "The forged signature forces an extreme warning"
       },
       "summary": {
-        "es": "Zao comprueba que la credencial de Sorell es falsificable y alerta al puente. Harlan corta las comunicaciones, por lo que ella descarta Tierra por el doble retardo y Proxima por la oclusión de Júpiter, y apunta el láser a la posición futura de la Ardor.",
-        "en": "Zao proves Sorell’s credential can be forged and alerts the bridge. Harlan cuts communications, so she rejects Earth because of the two-leg delay and Proxima because of Jupiter’s occultation, then aims the laser at the Ardor’s future position."
+        "es": "Zao comprueba que la credencial de Sorell es falsificable y alerta al puente. Harlan corta las comunicaciones, por lo que ella descarta Tierra porque recibir allí y retransmitir a la Ardor llegaría después del encuentro, y Proxima porque Júpiter bloquea la línea de vista L2–L1. Sólo el corredor futuro de la nave puede interceptarla a tiempo.",
+        "en": "Zao proves Sorell’s credential can be forged and alerts the bridge. Harlan cuts communications, so she rejects Earth because reception there and retransmission to the Ardor would arrive after the encounter, and Proxima because Jupiter blocks the L2–L1 line of sight. Only the ship’s future corridor can intercept it in time."
       },
       "importance": "required",
       "causalLinks": [
@@ -86,8 +86,8 @@
         "en": "Harlan kills; the ship crosses"
       },
       "summary": {
-        "es": "Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao, suspira y la mata; la Ardor cruza y Sorell encuentra el cuerpo.",
-        "en": "Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck, sighs, and kills her; the Ardor crosses and Sorell finds the body."
+        "es": "Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao y suspira antes de atacarla fuera de campo; un golpe seco, el fin del forcejeo y el negro sostenido confirman su muerte. La Ardor cruza y Sorell encuentra el cuerpo.",
+        "en": "Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck and sighs before attacking her offscreen; a dry impact, the end of the struggle, and sustained black confirm her death. The Ardor crosses and Sorell finds the body."
       },
       "importance": "required",
       "causalLinks": [
@@ -95,8 +95,8 @@
           "sourceStepId": "long:story-03",
           "relation": "enables",
           "explanation": {
-            "es": "El cambio anterior —Zao comprueba que la credencial de Sorell es falsificable y alerta al puente. Harlan corta las comunicaciones, por lo que ella descarta Tierra por el doble retardo y Proxima por la oclusión de Júpiter, y apunta el láser a la posición futura de la Ardor— provoca o habilita esta consecuencia: Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao, suspira y la mata; la Ardor cruza y Sorell encuentra el cuerpo.",
-            "en": "The prior change—Zao proves Sorell’s credential can be forged and alerts the bridge. Harlan cuts communications, so she rejects Earth because of the two-leg delay and Proxima because of Jupiter’s occultation, then aims the laser at the Ardor’s future position—causes or enables this consequence: Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck, sighs, and kills her; the Ardor crosses and Sorell finds the body."
+            "es": "Como Zao completa el envío antes de que Harlan llegue, él sólo puede ver TRANSMITIDO y suponer el destino; esa suposición errónea le permite creer que el asesinato todavía protegerá la misión de su advertencia.",
+            "en": "Because Zao completes the send before Harlan arrives, he can see only TRANSMITTED and infer the destination; that false assumption lets him believe murder will still protect the mission from her warning."
           }
         }
       ]
@@ -119,8 +119,8 @@
           "sourceStepId": "long:story-04",
           "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao, suspira y la mata; la Ardor cruza y Sorell encuentra el cuerpo— provoca o habilita esta consecuencia: La muerte y los fallos coordinados provocan una investigación distribuida: la credencial comprometida deja de incriminar por sí sola a Sorell y el sabotaje ambiental amplía el patrón.",
-            "en": "The prior change—Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck, sighs, and kills her; the Ardor crosses and Sorell finds the body—causes or enables this consequence: The death and coordinated failures trigger a distributed investigation: the compromised credential no longer incriminates Sorell by itself, and environmental sabotage broadens the pattern."
+            "es": "La muerte confirmada, el cuerpo encontrado y los fallos coordinados convierten una anomalía técnica en una investigación de sabotaje y homicidio.",
+            "en": "The confirmed death, discovered body, and coordinated failures turn a technical anomaly into a sabotage and murder investigation."
           }
         }
       ]

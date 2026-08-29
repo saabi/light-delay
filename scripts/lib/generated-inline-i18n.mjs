@@ -44,7 +44,7 @@ export function mergeGeneratedInlineI18n(value, previous, path = '$') {
 	for (const [key, child] of Object.entries(value)) {
 		const oldChild = previousChild(previous, key, child);
 		if (key === 'variants' && value.sourceLanguage !== undefined) {
-			const english = previous?.variants?.en;
+			const english = child.en ?? previous?.variants?.en;
 			if (!english) throw new Error(`Missing existing English content variant for ${path}`);
 			output[key] = { ...child, en: english };
 			continue;

@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "954c32be78f71e680e058b5cccae338f2c5c8718e42bb6f4d4a0d29c75d5d115",
+    "sourceDigest": "908972ef72d1bced7a8be0f5c01a2dd6293d9167863b9b544401dfbc56489d27",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -373,7 +373,6 @@
       "blockers": [
         "missing_production_context",
         "missing_purpose",
-        "missing_framing",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -489,10 +488,8 @@
       "shotId": "trailer:shot-e-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:harlan",
         "missing_production_context",
         "missing_purpose",
-        "missing_framing",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -510,7 +507,7 @@
           "status": "missing"
         },
         "finalAudio": {
-          "required": true,
+          "required": false,
           "status": "missing"
         }
       },
@@ -519,7 +516,7 @@
         {
           "id": "trailer:shot-e-01:segment-01",
           "startMs": 0,
-          "endMs": 3500,
+          "endMs": 4500,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -530,10 +527,8 @@
       "shotId": "trailer:shot-e-02",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "missing_production_context",
         "missing_purpose",
-        "missing_framing",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -551,7 +546,7 @@
           "status": "missing"
         },
         "finalAudio": {
-          "required": true,
+          "required": false,
           "status": "missing"
         }
       },
@@ -560,7 +555,7 @@
         {
           "id": "trailer:shot-e-02:segment-01",
           "startMs": 0,
-          "endMs": 3500,
+          "endMs": 2500,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -730,8 +725,7 @@
       "shotId": "trailer:shot-g-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:cael",
-        "missing_voice_sample:character:voss",
+        "missing_voice_sample:character:rao",
         "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
@@ -760,7 +754,7 @@
         {
           "id": "trailer:shot-g-01:segment-01",
           "startMs": 0,
-          "endMs": 3600,
+          "endMs": 2800,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -799,7 +793,7 @@
         {
           "id": "trailer:shot-g-02:segment-01",
           "startMs": 0,
-          "endMs": 2500,
+          "endMs": 3000,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -810,7 +804,6 @@
       "shotId": "trailer:shot-g-03",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
@@ -830,7 +823,7 @@
           "status": "missing"
         },
         "finalAudio": {
-          "required": true,
+          "required": false,
           "status": "missing"
         }
       },
@@ -839,7 +832,7 @@
         {
           "id": "trailer:shot-g-03:segment-01",
           "startMs": 0,
-          "endMs": 3000,
+          "endMs": 2800,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -878,7 +871,7 @@
         {
           "id": "trailer:shot-g-04:segment-01",
           "startMs": 0,
-          "endMs": 2500,
+          "endMs": 3000,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null

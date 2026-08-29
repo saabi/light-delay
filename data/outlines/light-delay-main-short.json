@@ -8,10 +8,10 @@
       "en": "Outline — Light Delay: canonical short"
     },
     "status": "draft",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "synopsis": {
-      "es": "Durante la primera misión humana hacia los Velari, Zao descubre una carga autónoma oculta bajo una firma falsificada. Harlan corta las comunicaciones y la mata, pero ella alcanza a enviar una advertencia óptica hacia la posición futura de la nave. Cuando el mensaje los alcanza, la tripulación puede demostrar el sabotaje, detener a Harlan y aislar el sistema antes del primer contacto.",
-      "en": "During humanity’s first mission to meet the Velari, Zao discovers an autonomous payload hidden behind a forged signature. Harlan cuts communications and kills her, but she sends an optical warning toward the ship’s future position. When the message catches them, the crew can prove the sabotage, stop Harlan, and isolate the system before first contact."
+      "es": "Durante la primera misión humana hacia los Velari, Zao descubre una carga autónoma oculta bajo una firma falsificada. Su advertencia provoca que Harlan la aísle, pero ella logra enviar un mensaje óptico a la posición futura de la nave antes de que él la mate. El cuerpo y el corte coordinado abren una investigación; cuando el mensaje alcanza a la Ardor, ambas mitades de la evidencia permiten detener el sabotaje antes del contacto.",
+      "en": "During humanity’s first mission to meet the Velari, Zao discovers an autonomous payload hidden behind a forged signature. Her warning causes Harlan to isolate her, but she sends an optical message to the ship’s future position before he kills her. The body and coordinated outage open an investigation; when the message catches the Ardor, both halves of the evidence allow the crew to stop the sabotage before contact."
     }
   },
   "steps": [
@@ -24,8 +24,8 @@
         "en": "Mission and contact rules"
       },
       "summary": {
-        "es": "La tripulación parte de Proxima con un protocolo que exige llegar sin contaminar el canal diplomático.",
-        "en": "The crew leaves Proxima under a protocol that requires reaching the meeting with an uncontaminated diplomatic channel."
+        "es": "La tripulación embarca en Proxima para el primer encuentro con los Velari. El protocolo exige que el canal diplomático llegue limpio porque cualquier transmisión hablará en nombre de la humanidad.",
+        "en": "The crew boards at Proxima for first contact with the Velari. Protocol requires the diplomatic channel to arrive clean because any transmission will speak for humanity."
       },
       "importance": "required"
     },
@@ -38,8 +38,8 @@
         "en": "Course committed"
       },
       "summary": {
-        "es": "La Ardor fija su trayectoria y sus guardias; desde entonces, cambiar el plan amenaza la ventana de encuentro.",
-        "en": "The Ardor locks its trajectory and watches; from then on, changing the plan threatens the encounter window."
+        "es": "La Ardor parte y fija una trayectoria ligada a la breve apertura de la garganta; abandonar el plan pondría en riesgo una oportunidad que podría no repetirse.",
+        "en": "The Ardor departs and locks a trajectory tied to the throat’s brief opening; abandoning the plan would endanger an opportunity that may not recur."
       },
       "importance": "required",
       "causalLinks": [
@@ -47,8 +47,8 @@
           "sourceStepId": "main:story-01",
           "relation": "enables",
           "explanation": {
-            "es": "El cambio anterior —La tripulación parte de Proxima con un protocolo que exige llegar sin contaminar el canal diplomático— provoca o habilita esta consecuencia: La Ardor fija su trayectoria y sus guardias; desde entonces, cambiar el plan amenaza la ventana de encuentro.",
-            "en": "The prior change—The crew leaves Proxima under a protocol that requires reaching the meeting with an uncontaminated diplomatic channel—causes or enables this consequence: The Ardor locks its trajectory and watches; from then on, changing the plan threatens the encounter window."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: La Ardor parte y fija una trayectoria ligada a la breve apertura de la garganta; abandonar el plan pondría en riesgo una oportunidad que podría no repetirse.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The Ardor departs and locks a trajectory tied to the throat’s brief opening; abandoning the plan would endanger an opportunity that may not recur."
           }
         }
       ]
@@ -58,12 +58,12 @@
       "level": "story",
       "order": 3,
       "title": {
-        "es": "Una anomalía revela la carga",
-        "en": "An anomaly reveals the payload"
+        "es": "Zao descubre la carga",
+        "en": "Zao discovers the payload"
       },
       "summary": {
-        "es": "Un indicio técnico lleva a Zao al núcleo, donde confirma un proceso autónomo no declarado oculto dentro del sistema diplomático.",
-        "en": "A technical clue leads Zao to the core, where she confirms an undeclared autonomous process hidden inside the diplomatic system."
+        "es": "Una anomalía técnica lleva a Zao al núcleo diplomático. Allí confirma un proceso autónomo no declarado y descubre que la credencial superficial de Sorell parece falsificada.",
+        "en": "A technical anomaly leads Zao to the diplomatic core. There she confirms an undeclared autonomous process and discovers that Sorell’s surface credential appears forged."
       },
       "importance": "required",
       "causalLinks": [
@@ -71,8 +71,8 @@
           "sourceStepId": "main:story-02",
           "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —La Ardor fija su trayectoria y sus guardias; desde entonces, cambiar el plan amenaza la ventana de encuentro— provoca o habilita esta consecuencia: Un indicio técnico lleva a Zao al núcleo, donde confirma un proceso autónomo no declarado oculto dentro del sistema diplomático.",
-            "en": "The prior change—The Ardor locks its trajectory and watches; from then on, changing the plan threatens the encounter window—causes or enables this consequence: A technical clue leads Zao to the core, where she confirms an undeclared autonomous process hidden inside the diplomatic system."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Una anomalía técnica lleva a Zao al núcleo diplomático. Allí confirma un proceso autónomo no declarado y descubre que la credencial superficial de Sorell parece falsificada.",
+            "en": "The outcome of the previous beat causes or enables this consequence: A technical anomaly leads Zao to the diplomatic core. There she confirms an undeclared autonomous process and discovers that Sorell’s surface credential appears forged."
           }
         }
       ]
@@ -86,17 +86,17 @@
         "en": "The warning triggers sabotage"
       },
       "summary": {
-        "es": "Zao avisa que la firma de Sorell parece falsa; Harlan oye lo suficiente para sentirse amenazado y corta las comunicaciones antes de ser visto.",
-        "en": "Zao reports that Sorell’s signature appears forged; Harlan hears enough to feel threatened and cuts communications before he is seen."
+        "es": "Zao llama al puente y alcanza a revelar la carga y la firma aparentemente falsa. Harlan llega sin ser visto, oye que ella está cerca de exponerlo, activa el jammer y corta COM A/B. Voss envía a Sorell a investigar y le ordena buscar a Harlan, que ya tomó la ruta de servicio hacia Zao.",
+        "en": "Zao calls the bridge and manages to reveal the payload and apparently forged signature. Harlan arrives unseen, hears that she is close to exposing him, activates the jammer, and cuts COM A/B. Voss sends Sorell to investigate and tells her to find Harlan, who has already taken the service route toward Zao."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "main:story-03",
-          "relation": "motivates",
+          "relation": "forces",
           "explanation": {
-            "es": "El cambio anterior —Un indicio técnico lleva a Zao al núcleo, donde confirma un proceso autónomo no declarado oculto dentro del sistema diplomático— provoca o habilita esta consecuencia: Zao avisa que la firma de Sorell parece falsa; Harlan oye lo suficiente para sentirse amenazado y corta las comunicaciones antes de ser visto.",
-            "en": "The prior change—A technical clue leads Zao to the core, where she confirms an undeclared autonomous process hidden inside the diplomatic system—causes or enables this consequence: Zao reports that Sorell’s signature appears forged; Harlan hears enough to feel threatened and cuts communications before he is seen."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Zao llama al puente y alcanza a revelar la carga y la firma aparentemente falsa. Harlan llega sin ser visto, oye que ella está cerca de exponerlo, activa el jammer y corta COM A/B. Voss envía a Sorell a investigar y le ordena buscar a Harlan, que ya tomó la ruta de servicio hacia Zao.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Zao calls the bridge and manages to reveal the payload and apparently forged signature. Harlan arrives unseen, hears that she is close to exposing him, activates the jammer, and cuts COM A/B. Voss sends Sorell to investigate and tells her to find Harlan, who has already taken the service route toward Zao."
           }
         }
       ]
@@ -110,8 +110,8 @@
         "en": "Zao sends a message into the future"
       },
       "summary": {
-        "es": "Zao descarta la Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro, y descarta Proxima porque Júpiter bloquea la línea de vista entre L2 y L1. Por eso calcula la posición futura de la nave y apunta allí el haz antes de que sea tarde.",
-        "en": "Zao rejects Earth because reception there and retransmission to the Ardor would take until after the encounter, and rejects Proxima because Jupiter blocks the L2-to-L1 line of sight. She therefore calculates the ship’s future position and aims the beam there before it is too late."
+        "es": "El fallo simultáneo confirma a Zao que fue aislada. Tierra no sirve porque recibir y retransmitir llegaría después del encuentro; Júpiter bloquea la línea de vista hacia Proxima. Zao calcula la posición futura de la Ardor y completa un barrido óptico antes de que Harlan llegue.",
+        "en": "The simultaneous failure confirms to Zao that she was isolated. Earth cannot work because reception and retransmission would arrive after the encounter; Jupiter blocks the line of sight to Proxima. Zao calculates the Ardor’s future position and completes an optical sweep before Harlan arrives."
       },
       "importance": "required",
       "causalLinks": [
@@ -119,8 +119,8 @@
           "sourceStepId": "main:story-04",
           "relation": "forces",
           "explanation": {
-            "es": "El cambio anterior —Zao avisa que la firma de Sorell parece falsa; Harlan oye lo suficiente para sentirse amenazado y corta las comunicaciones antes de ser visto— provoca o habilita esta consecuencia: Zao descarta la Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro, y descarta Proxima porque Júpiter bloquea la línea de vista entre L2 y L1. Por eso calcula la posición futura de la nave y apunta allí el haz antes de que sea tarde.",
-            "en": "The prior change—Zao reports that Sorell’s signature appears forged; Harlan hears enough to feel threatened and cuts communications before he is seen—causes or enables this consequence: Zao rejects Earth because reception there and retransmission to the Ardor would take until after the encounter, and rejects Proxima because Jupiter blocks the L2-to-L1 line of sight. She therefore calculates the ship’s future position and aims the beam there before it is too late."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: El fallo simultáneo confirma a Zao que fue aislada. Tierra no sirve porque recibir y retransmitir llegaría después del encuentro; Júpiter bloquea la línea de vista hacia Proxima. Zao calcula la posición futura de la Ardor y completa un barrido óptico antes de que Harlan llegue.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The simultaneous failure confirms to Zao that she was isolated. Earth cannot work because reception and retransmission would arrive after the encounter; Jupiter blocks the line of sight to Proxima. Zao calculates the Ardor’s future position and completes an optical sweep before Harlan arrives."
           }
         }
       ]
@@ -130,12 +130,12 @@
       "level": "story",
       "order": 6,
       "title": {
-        "es": "Harlan silencia a Zao",
-        "en": "Harlan silences Zao"
+        "es": "Harlan mata a Zao y la nave cruza",
+        "en": "Harlan kills Zao and the ship crosses"
       },
       "summary": {
-        "es": "Harlan ve TRANSMITIDO pero no el destino. Supone que fue a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss a tiempo; luego lamenta la mala suerte de Zao, suspira, la mata y limpia sus rastros.",
-        "en": "Harlan sees TRANSMITTED but not the destination. He assumes it went to Earth and reassures himself that the two-leg delay would prevent warning Voss in time; then he laments Zao’s bad luck, sighs, kills her, and cleans his traces."
+        "es": "Harlan ve TRANSMITIDO pero no el destino, supone que fue a la Tierra y confía en el doble retardo. Lamenta la suerte de Zao y suspira antes de atacarla; un golpe seco, el fin del forcejeo y el negro sostenido confirman su muerte. Harlan limpia el puesto mientras la Ardor cruza la garganta.",
+        "en": "Harlan sees TRANSMITTED but not the destination, assumes it went to Earth, and trusts the two-leg delay. He laments Zao’s luck and sighs before attacking her; a dry impact, the end of the struggle, and sustained black confirm her death. Harlan cleans the station as the Ardor crosses the throat."
       },
       "importance": "required",
       "causalLinks": [
@@ -143,8 +143,8 @@
           "sourceStepId": "main:story-05",
           "relation": "forces",
           "explanation": {
-            "es": "El cambio anterior —Zao descarta la Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro, y descarta Proxima porque Júpiter bloquea la línea de vista entre L2 y L1. Por eso calcula la posición futura de la nave y apunta allí el haz antes de que sea tarde— provoca o habilita esta consecuencia: Harlan ve TRANSMITIDO pero no el destino. Supone que fue a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss a tiempo; luego lamenta la mala suerte de Zao, suspira, la mata y limpia sus rastros.",
-            "en": "The prior change—Zao rejects Earth because reception there and retransmission to the Ardor would take until after the encounter, and rejects Proxima because Jupiter blocks the L2-to-L1 line of sight. She therefore calculates the ship’s future position and aims the beam there before it is too late—causes or enables this consequence: Harlan sees TRANSMITTED but not the destination. He assumes it went to Earth and reassures himself that the two-leg delay would prevent warning Voss in time; then he laments Zao’s bad luck, sighs, kills her, and cleans his traces."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Harlan ve TRANSMITIDO pero no el destino, supone que fue a la Tierra y confía en el doble retardo. Lamenta la suerte de Zao y suspira antes de atacarla; un golpe seco, el fin del forcejeo y el negro sostenido confirman su muerte. Harlan limpia el puesto mientras la Ardor cruza la garganta.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Harlan sees TRANSMITTED but not the destination, assumes it went to Earth, and trusts the two-leg delay. He laments Zao’s luck and sighs before attacking her; a dry impact, the end of the struggle, and sustained black confirm her death. Harlan cleans the station as the Ardor crosses the throat."
           }
         }
       ]
@@ -154,21 +154,21 @@
       "level": "story",
       "order": 7,
       "title": {
-        "es": "El cuerpo abre una investigación",
-        "en": "The body opens an investigation"
+        "es": "El cuerpo abre la investigación",
+        "en": "The body opens the investigation"
       },
       "summary": {
-        "es": "Sorell encuentra a Zao y no puede pedir ayuda; la evidencia posterior demuestra que su credencial fue usada, pero no que ella sea la autora.",
-        "en": "Sorell finds Zao and cannot call for help; later evidence shows that her credential was used, but not that she authored the intrusion."
+        "es": "Sorell llega sola, intenta reanimar a Zao y no puede pedir ayuda mientras el jammer sigue activo. Harlan restaura comunicaciones, vuelve al puente y niega haberla visto; la demora de Sorell y el corte coordinado llevan a Voss a enviar una búsqueda y ordenar la investigación.",
+        "en": "Sorell arrives alone, tries to revive Zao, and cannot call for help while the jammer remains active. Harlan restores communications, returns to the bridge, and denies seeing her; Sorell’s delay and the coordinated outage lead Voss to send a search party and order the investigation."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "main:story-06",
-          "relation": "enables",
+          "relation": "motivates",
           "explanation": {
-            "es": "El cambio anterior —Harlan ve TRANSMITIDO pero no el destino. Supone que fue a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss a tiempo; luego lamenta la mala suerte de Zao, suspira, la mata y limpia sus rastros— provoca o habilita esta consecuencia: Sorell encuentra a Zao y no puede pedir ayuda; la evidencia posterior demuestra que su credencial fue usada, pero no que ella sea la autora.",
-            "en": "The prior change—Harlan sees TRANSMITTED but not the destination. He assumes it went to Earth and reassures himself that the two-leg delay would prevent warning Voss in time; then he laments Zao’s bad luck, sighs, kills her, and cleans his traces—causes or enables this consequence: Sorell finds Zao and cannot call for help; later evidence shows that her credential was used, but not that she authored the intrusion."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Sorell llega sola, intenta reanimar a Zao y no puede pedir ayuda mientras el jammer sigue activo. Harlan restaura comunicaciones, vuelve al puente y niega haberla visto; la demora de Sorell y el corte coordinado llevan a Voss a enviar una búsqueda y ordenar la investigación.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Sorell arrives alone, tries to revive Zao, and cannot call for help while the jammer remains active. Harlan restores communications, returns to the bridge, and denies seeing her; Sorell’s delay and the coordinated outage lead Voss to send a search party and order the investigation."
           }
         }
       ]
@@ -178,21 +178,21 @@
       "level": "story",
       "order": 8,
       "title": {
-        "es": "La carga amenaza el contacto",
-        "en": "The payload threatens contact"
+        "es": "La auditoría prepara la defensa",
+        "en": "The audit prepares the defense"
       },
       "summary": {
-        "es": "La auditoría revela que el proceso oculto puede actuar sobre el canal diplomático, por lo que la tripulación prepara una cuarentena sin saber aún quién lo controla.",
-        "en": "The audit shows that the hidden process can act on the diplomatic channel, so the crew prepares quarantine without yet knowing who controls it."
+        "es": "Los tiempos físicos separan a Sorell del uso de su credencial y demuestran que alguien la comprometió. Elin descubre que la carga puede sustituir el saludo y prepara una cuarentena, aunque todavía no puede identificar al dueño del override.",
+        "en": "Physical timing separates Sorell from the use of her credential and shows that someone compromised it. Elin discovers that the payload can replace the greeting and prepares a quarantine, although she still cannot identify the override owner."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "main:story-07",
-          "relation": "motivates",
+          "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —Sorell encuentra a Zao y no puede pedir ayuda; la evidencia posterior demuestra que su credencial fue usada, pero no que ella sea la autora— provoca o habilita esta consecuencia: La auditoría revela que el proceso oculto puede actuar sobre el canal diplomático, por lo que la tripulación prepara una cuarentena sin saber aún quién lo controla.",
-            "en": "The prior change—Sorell finds Zao and cannot call for help; later evidence shows that her credential was used, but not that she authored the intrusion—causes or enables this consequence: The audit shows that the hidden process can act on the diplomatic channel, so the crew prepares quarantine without yet knowing who controls it."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Los tiempos físicos separan a Sorell del uso de su credencial y demuestran que alguien la comprometió. Elin descubre que la carga puede sustituir el saludo y prepara una cuarentena, aunque todavía no puede identificar al dueño del override.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Physical timing separates Sorell from the use of her credential and shows that someone compromised it. Elin discovers that the payload can replace the greeting and prepares a quarantine, although she still cannot identify the override owner."
           }
         }
       ]
@@ -206,17 +206,17 @@
         "en": "The warning catches the ship"
       },
       "summary": {
-        "es": "Cuando Harlan intenta borrar la última evidencia, llega el mensaje de Zao; su firma y la investigación independiente de Rao lo autentican.",
-        "en": "When Harlan tries to erase the last evidence, Zao’s message arrives; her signature and Rao’s independent work authenticate it."
+        "es": "Cuando Harlan intenta borrar la última evidencia, la señal de Zao intercepta la Ardor. Su firma temporal y el trabajo independiente de Elin prueban que es auténtica y compatible con la carga investigada.",
+        "en": "When Harlan tries to erase the last evidence, Zao’s signal intercepts the Ardor. Its time signature and Elin’s independent work prove it authentic and consistent with the investigated payload."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "main:story-08",
-          "relation": "reveals",
+          "relation": "pays_off",
           "explanation": {
-            "es": "El cambio anterior —La auditoría revela que el proceso oculto puede actuar sobre el canal diplomático, por lo que la tripulación prepara una cuarentena sin saber aún quién lo controla— provoca o habilita esta consecuencia: Cuando Harlan intenta borrar la última evidencia, llega el mensaje de Zao; su firma y la investigación independiente de Rao lo autentican.",
-            "en": "The prior change—The audit shows that the hidden process can act on the diplomatic channel, so the crew prepares quarantine without yet knowing who controls it—causes or enables this consequence: When Harlan tries to erase the last evidence, Zao’s message arrives; her signature and Rao’s independent work authenticate it."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Cuando Harlan intenta borrar la última evidencia, la señal de Zao intercepta la Ardor. Su firma temporal y el trabajo independiente de Elin prueban que es auténtica y compatible con la carga investigada.",
+            "en": "The outcome of the previous beat causes or enables this consequence: When Harlan tries to erase the last evidence, Zao’s signal intercepts the Ardor. Its time signature and Elin’s independent work prove it authentic and consistent with the investigated payload."
           }
         }
       ]
@@ -226,21 +226,21 @@
       "level": "story",
       "order": 10,
       "title": {
-        "es": "La prueba fuerza la confrontación",
-        "en": "The proof forces confrontation"
+        "es": "La doble prueba expone a Harlan",
+        "en": "The double proof exposes Harlan"
       },
       "summary": {
-        "es": "La advertencia identifica a Harlan y explica el ataque; al quedar expuesto, él intenta usar su última ventana de acceso.",
-        "en": "The warning identifies Harlan and explains the attack; exposed, he tries to use his last access window."
+        "es": "El mensaje nombra a Harlan y el relé; la auditoría aporta la función de la carga y la firma física. Voss puede atribuir el sabotaje y revocar sus permisos, por lo que Harlan intenta su último override.",
+        "en": "The message names Harlan and the relay; the audit supplies the payload’s function and physical signature. Voss can attribute the sabotage and revoke his access, so Harlan attempts his last override."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "main:story-09",
-          "relation": "forces",
+          "relation": "reveals",
           "explanation": {
-            "es": "El cambio anterior —Cuando Harlan intenta borrar la última evidencia, llega el mensaje de Zao; su firma y la investigación independiente de Rao lo autentican— provoca o habilita esta consecuencia: La advertencia identifica a Harlan y explica el ataque; al quedar expuesto, él intenta usar su última ventana de acceso.",
-            "en": "The prior change—When Harlan tries to erase the last evidence, Zao’s message arrives; her signature and Rao’s independent work authenticate it—causes or enables this consequence: The warning identifies Harlan and explains the attack; exposed, he tries to use his last access window."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: El mensaje nombra a Harlan y el relé; la auditoría aporta la función de la carga y la firma física. Voss puede atribuir el sabotaje y revocar sus permisos, por lo que Harlan intenta su último override.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The message names Harlan and the relay; the audit supplies the payload’s function and physical signature. Voss can attribute the sabotage and revoke his access, so Harlan attempts his last override."
           }
         }
       ]
@@ -254,17 +254,17 @@
         "en": "The crew cleans the channel"
       },
       "summary": {
-        "es": "Con Harlan contenido, la tripulación revoca sus permisos, aísla la carga y recompone un saludo verificable antes del encuentro.",
-        "en": "With Harlan contained, the crew revokes his access, isolates the payload, and rebuilds a verifiable greeting before the encounter."
+        "es": "Con Harlan contenido, Elin aplica la cuarentena preparada y Sorell reconstruye el saludo pasivo. La carga queda aislada sin destruir la mediación.",
+        "en": "With Harlan contained, Elin applies the prepared quarantine and Sorell rebuilds the passive greeting. The payload is isolated without destroying mediation."
       },
       "importance": "required",
       "causalLinks": [
         {
           "sourceStepId": "main:story-10",
-          "relation": "reveals",
+          "relation": "pays_off",
           "explanation": {
-            "es": "El cambio anterior —La advertencia identifica a Harlan y explica el ataque; al quedar expuesto, él intenta usar su última ventana de acceso— provoca o habilita esta consecuencia: Con Harlan contenido, la tripulación revoca sus permisos, aísla la carga y recompone un saludo verificable antes del encuentro.",
-            "en": "The prior change—The warning identifies Harlan and explains the attack; exposed, he tries to use his last access window—causes or enables this consequence: With Harlan contained, the crew revokes his access, isolates the payload, and rebuilds a verifiable greeting before the encounter."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Con Harlan contenido, Elin aplica la cuarentena preparada y Sorell reconstruye el saludo pasivo. La carga queda aislada sin destruir la mediación.",
+            "en": "The outcome of the previous beat causes or enables this consequence: With Harlan contained, Elin applies the prepared quarantine and Sorell rebuilds the passive greeting. The payload is isolated without destroying mediation."
           }
         }
       ]
@@ -278,8 +278,8 @@
         "en": "Contact and cost"
       },
       "summary": {
-        "es": "La Ardor llega con un canal limpio y completa el contacto, pero el éxito confirma también el sacrificio que hizo posible evitar el engaño.",
-        "en": "The Ardor arrives with a clean channel and completes contact, while the success confirms the sacrifice that made avoiding deception possible."
+        "es": "La Ardor llega con un canal limpio, los Velari autorizan la aproximación y la misión sobrevive. El éxito confirma que la voz tardía de Zao llegó a tiempo, aunque ella no pudo verlo.",
+        "en": "The Ardor arrives with a clean channel, the Velari authorize approach, and the mission survives. The success confirms that Zao’s delayed voice arrived in time, although she could not see it."
       },
       "importance": "required",
       "causalLinks": [
@@ -287,8 +287,8 @@
           "sourceStepId": "main:story-11",
           "relation": "pays_off",
           "explanation": {
-            "es": "El cambio anterior —Con Harlan contenido, la tripulación revoca sus permisos, aísla la carga y recompone un saludo verificable antes del encuentro— provoca o habilita esta consecuencia: La Ardor llega con un canal limpio y completa el contacto, pero el éxito confirma también el sacrificio que hizo posible evitar el engaño.",
-            "en": "The prior change—With Harlan contained, the crew revokes his access, isolates the payload, and rebuilds a verifiable greeting before the encounter—causes or enables this consequence: The Ardor arrives with a clean channel and completes contact, while the success confirms the sacrifice that made avoiding deception possible."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: La Ardor llega con un canal limpio, los Velari autorizan la aproximación y la misión sobrevive. El éxito confirma que la voz tardía de Zao llegó a tiempo, aunque ella no pudo verlo.",
+            "en": "The outcome of the previous beat causes or enables this consequence: The Ardor arrives with a clean channel, the Velari authorize approach, and the mission survives. The success confirms that Zao’s delayed voice arrived in time, although she could not see it."
           }
         }
       ]
@@ -794,7 +794,7 @@
     {
       "id": "main:outline-09",
       "level": "detail",
-      "parentStepId": "main:story-07",
+      "parentStepId": "main:story-08",
       "order": 9,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE / NÚCLEO / ENFERMERÍA — MÁS TARDE",

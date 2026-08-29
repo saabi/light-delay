@@ -32,10 +32,6 @@
       },
       {
         "kind": "character",
-        "id": "character:harlan"
-      },
-      {
-        "kind": "character",
         "id": "character:rao"
       },
       {
@@ -96,15 +92,6 @@
           "status": "established"
         },
         {
-          "dimensionId": "canon:mission-timeline",
-          "valueId": "57h48-signal23h15-encounter24h",
-          "statement": {
-            "es": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
-            "en": "The local leg lasts 57 h 48 min; the signal takes about 23 h 15 min, and the remote encounter occurs at T+24 h."
-          },
-          "status": "established"
-        },
-        {
           "dimensionId": "canon:ardor-gravity-operations",
           "valueId": "thrust-gravity-coast-microgravity",
           "statement": {
@@ -123,47 +110,11 @@
           "status": "established"
         },
         {
-          "dimensionId": "canon:evidence-chain",
-          "valueId": "relay-optical-readonly",
-          "statement": {
-            "es": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
-            "en": "The physical relay, optical message, and passive greeting form complementary evidence."
-          },
-          "status": "established"
-        },
-        {
           "dimensionId": "canon:sorell-status",
           "valueId": "false-log-not-conclusive",
           "statement": {
             "es": "Sorell no queda culpabilizada por un único registro falsificable.",
             "en": "Sorell is not incriminated by a single falsifiable record."
-          },
-          "status": "established"
-        },
-        {
-          "dimensionId": "canon:rao-containment",
-          "valueId": "bounded-quarantine",
-          "statement": {
-            "es": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
-            "en": "Elin contains the hostile branch through prepared isolation, without a magical resolution."
-          },
-          "status": "established"
-        },
-        {
-          "dimensionId": "canon:ending",
-          "valueId": "limited-acknowledgement",
-          "statement": {
-            "es": "La respuesta Velari es un reconocimiento limitado, no una confianza resuelta.",
-            "en": "The Velari response is limited recognition, not established trust."
-          },
-          "status": "established"
-        },
-        {
-          "dimensionId": "canon:zao-transmission-mechanics",
-          "valueId": "jam-wired-cut-dedicated-laser",
-          "statement": {
-            "es": "Harlan corta la malla inalámbrica y el respaldo cableado; Zao usa el láser exterior por su control físico dedicado y apunta al corredor futuro de la nave.",
-            "en": "Harlan cuts the wireless mesh and wired backup; Zao uses the external laser through its dedicated physical control and aims at the ship's future corridor."
           },
           "status": "established"
         }
@@ -185,14 +136,6 @@
           ]
         },
         {
-          "eventId": "event:zao-warning-death",
-          "status": "reworked",
-          "sceneIds": [
-            "trailer:scene-d",
-            "trailer:scene-e"
-          ]
-        },
-        {
           "eventId": "event:tunnel-crossing",
           "status": "present",
           "sceneIds": [
@@ -208,21 +151,12 @@
         },
         {
           "eventId": "event:message-reception",
-          "status": "present",
-          "sceneIds": [
-            "trailer:scene-g"
-          ]
-        },
-        {
-          "eventId": "event:harlan-exposed",
-          "status": "reworked",
-          "sceneIds": [
-            "trailer:scene-g"
-          ]
+          "status": "omitted",
+          "sceneIds": []
         },
         {
           "eventId": "event:quarantine",
-          "status": "present",
+          "status": "reworked",
           "sceneIds": [
             "trailer:scene-h"
           ]
@@ -236,7 +170,7 @@
         },
         {
           "eventId": "event:first-contact",
-          "status": "present",
+          "status": "reworked",
           "sceneIds": [
             "trailer:scene-h",
             "trailer:scene-i"
@@ -272,15 +206,6 @@
         "functionId": "function:diplomatic_greeting_authorship",
         "characterId": "character:sorell",
         "relationship": "unchanged"
-      },
-      {
-        "functionId": "function:override_antagonist",
-        "characterId": "character:harlan",
-        "relationship": "unchanged",
-        "notes": {
-          "es": "En el tráiler la voz O.S. permanece deliberadamente no identificable en pantalla.",
-          "en": "In the trailer the voice O.S. remains deliberately unidentifiable on screen."
-        }
       },
       {
         "functionId": "function:piloting",
@@ -468,7 +393,7 @@
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-05-02"
+          "shotId": "main:shot-04-03"
         },
         {
           "scriptId": "script:light-delay-main-short",
@@ -494,16 +419,15 @@
         }
       },
       "summary": {
-        "es": "Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.",
-        "en": "Harlan cuts wireless and COM A/B; Zao finds a way out through the outside laser."
+        "es": "Alguien corta wireless y COM A/B; Zao busca una salida por el láser exterior.",
+        "en": "Someone cuts wireless and COM A/B; Zao seeks a way out through the external laser."
       },
       "dramaticPurpose": {
         "es": "Convertir la transmisión en una decisión bajo presión.",
-        "en": "Turn streaming into a decision under pressure."
+        "en": "Turn the transmission into a decision under pressure."
       },
       "characterIds": [
-        "character:zao",
-        "character:harlan"
+        "character:zao"
       ],
       "beatIds": [
         "trailer:beat-d-01"
@@ -522,11 +446,11 @@
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-05-07"
+          "shotId": "main:shot-05-06"
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-06-02"
+          "shotId": "main:shot-06-01"
         },
         {
           "scriptId": "script:light-delay-main-short",
@@ -552,16 +476,15 @@
         }
       },
       "summary": {
-        "es": "Transmisión completa; silueta O.S.; golpe a negro.",
-        "en": "Complete transmission; silhouette O.S.; hit black."
+        "es": "La transmisión avanza bajo presión; una presencia irrumpe y un corte breve a negro deja inciertos tanto el envío como el destino de Zao.",
+        "en": "The transmission advances under pressure; a presence intrudes and a brief cut to black leaves both the send and Zao’s fate uncertain."
       },
       "dramaticPurpose": {
-        "es": "Cierre del acto en Proxima.",
-        "en": "Closing of the event in Proxima."
+        "es": "Cerrar el acto en Proxima sin confirmar si el mensaje salió ni si Zao murió.",
+        "en": "Close the act at Proxima without confirming whether the message was sent or Zao died."
       },
       "characterIds": [
-        "character:zao",
-        "character:harlan"
+        "character:zao"
       ],
       "beatIds": [
         "trailer:beat-e-01"
@@ -574,11 +497,11 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-06-07"
+          "shotId": "main:shot-06-09"
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-06-08"
+          "shotId": "main:shot-07-02"
         }
       ]
     },
@@ -633,7 +556,7 @@
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-08-01"
+          "shotId": "main:shot-08-02"
         },
         {
           "scriptId": "script:light-delay-main-short",
@@ -647,8 +570,8 @@
       "number": 7,
       "order": 7,
       "title": {
-        "es": "La señal",
-        "en": "The signal"
+        "es": "La amenaza",
+        "en": "The threat"
       },
       "locationId": "location:celestial-ardor-bridge",
       "setting": {
@@ -659,19 +582,17 @@
         }
       },
       "summary": {
-        "es": "Portadora humana; OVR; fragmento de Zao.",
-        "en": "Human carrier; OVR; Zao fragment."
+        "es": "La auditoría revela que la carga espera la apertura del canal y que alguien conserva un override anónimo.",
+        "en": "The audit reveals that the payload is waiting for the channel to open and that someone retains an anonymous override."
       },
       "dramaticPurpose": {
-        "es": "La advertencia alcanza a la nave.",
-        "en": "The warning reaches the ship."
+        "es": "Mostrar el peligro inmediato sin revelar si la advertencia de Zao llegó.",
+        "en": "Show the immediate danger without revealing whether Zao’s warning arrived."
       },
       "characterIds": [
-        "character:cael",
         "character:voss",
         "character:rao",
-        "character:sorell",
-        "character:zao"
+        "character:sorell"
       ],
       "beatIds": [
         "trailer:beat-g-01"
@@ -686,19 +607,19 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-11-05"
+          "shotId": "main:shot-10-02"
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-12-01"
+          "shotId": "main:shot-10-03"
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-12-02"
+          "shotId": "main:shot-10-04"
         },
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-10-06"
+          "shotId": "main:shot-10-05"
         }
       ]
     },
@@ -889,11 +810,11 @@
       },
       "purpose": {
         "es": "Convertir la transmisión en una decisión bajo presión.",
-        "en": "Turn streaming into a decision under pressure."
+        "en": "Turn the transmission into a decision under pressure."
       },
       "summary": {
-        "es": "Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.",
-        "en": "Harlan cuts wireless and COM A/B; Zao finds a way out through the outside laser."
+        "es": "Alguien corta wireless y COM A/B; Zao busca una salida por el láser exterior.",
+        "en": "Someone cuts wireless and COM A/B; Zao seeks a way out through the external laser."
       },
       "cueIds": [
         "trailer:cue-d-01",
@@ -909,18 +830,15 @@
         "en": "Point of no return"
       },
       "purpose": {
-        "es": "Cierre del acto en Proxima.",
-        "en": "Closing of the event in Proxima."
+        "es": "Cerrar el acto en Proxima sin confirmar si el mensaje salió ni si Zao murió.",
+        "en": "Close the act at Proxima without confirming whether the message was sent or Zao died."
       },
       "summary": {
-        "es": "Transmisión completa; silueta O.S.; golpe a negro.",
-        "en": "Complete transmission; silhouette O.S.; hit black."
+        "es": "La transmisión avanza bajo presión; una presencia irrumpe y un corte breve a negro deja inciertos tanto el envío como el destino de Zao.",
+        "en": "The transmission advances under pressure; a presence intrudes and a brief cut to black leaves both the send and Zao’s fate uncertain."
       },
       "cueIds": [
-        "trailer:cue-e-01",
-        "trailer:cue-e-02",
-        "trailer:cue-e-03",
-        "trailer:cue-e-04"
+        "trailer:cue-e-01"
       ]
     },
     {
@@ -951,24 +869,21 @@
       "sceneId": "trailer:scene-g",
       "order": 1,
       "title": {
-        "es": "La señal",
-        "en": "The signal"
+        "es": "La amenaza",
+        "en": "The threat"
       },
       "purpose": {
-        "es": "La advertencia alcanza a la nave.",
-        "en": "The warning reaches the ship."
+        "es": "Mostrar el peligro inmediato sin revelar si la advertencia de Zao llegó.",
+        "en": "Show the immediate danger without revealing whether Zao’s warning arrived."
       },
       "summary": {
-        "es": "Portadora humana; OVR; fragmento de Zao.",
-        "en": "Human carrier; OVR; Zao fragment."
+        "es": "La auditoría revela que la carga espera la apertura del canal y que alguien conserva un override anónimo.",
+        "en": "The audit reveals that the payload is waiting for the channel to open and that someone retains an anonymous override."
       },
       "cueIds": [
         "trailer:cue-g-01",
         "trailer:cue-g-02",
-        "trailer:cue-g-03",
-        "trailer:cue-g-04",
-        "trailer:cue-g-05",
-        "trailer:cue-g-06"
+        "trailer:cue-g-03"
       ]
     },
     {
@@ -1228,80 +1143,6 @@
       }
     },
     {
-      "id": "trailer:cue-e-02",
-      "beatId": "trailer:beat-e-01",
-      "order": 2,
-      "type": "dialogue",
-      "speakerId": "character:harlan",
-      "presentation": "off_screen",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "spokenText": "¿A quién le escribís?",
-            "status": "source"
-          },
-          "en": {
-            "spokenText": "Who are you sending that to?",
-            "status": "draft"
-          }
-        }
-      },
-      "sourceRefs": [
-        {
-          "scriptId": "script:light-delay-main-short",
-          "cueId": "main:cue-06-04"
-        }
-      ]
-    },
-    {
-      "id": "trailer:cue-e-03",
-      "beatId": "trailer:beat-e-01",
-      "order": 3,
-      "type": "text",
-      "presentation": "interface",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "text": "100% — TRANSMITIDO",
-            "status": "source"
-          },
-          "en": {
-            "text": "100% — TRANSMITTED",
-            "status": "draft"
-          }
-        }
-      }
-    },
-    {
-      "id": "trailer:cue-e-04",
-      "beatId": "trailer:beat-e-01",
-      "order": 4,
-      "type": "dialogue",
-      "speakerId": "character:zao",
-      "presentation": "on_screen",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "spokenText": "Ya está hecho.",
-            "status": "source"
-          },
-          "en": {
-            "spokenText": "It's already done.",
-            "status": "draft"
-          }
-        }
-      },
-      "sourceRefs": [
-        {
-          "scriptId": "script:light-delay-main-short",
-          "cueId": "main:cue-06-05"
-        }
-      ]
-    },
-    {
       "id": "trailer:cue-f-01",
       "beatId": "trailer:beat-f-01",
       "order": 1,
@@ -1400,17 +1241,17 @@
       "beatId": "trailer:beat-g-01",
       "order": 1,
       "type": "dialogue",
-      "speakerId": "character:cael",
+      "speakerId": "character:rao",
       "presentation": "on_screen",
       "content": {
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Señal humana.",
+            "spokenText": "Está esperando que abramos el canal.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Human sign.",
+            "spokenText": "It is waiting for us to open the channel.",
             "status": "draft"
           }
         }
@@ -1418,7 +1259,7 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "cueId": "main:cue-11-06"
+          "cueId": "main:cue-10-04"
         }
       ]
     },
@@ -1426,18 +1267,17 @@
       "id": "trailer:cue-g-02",
       "beatId": "trailer:beat-g-01",
       "order": 2,
-      "type": "dialogue",
-      "speakerId": "character:voss",
-      "presentation": "on_screen",
+      "type": "text",
+      "presentation": "interface",
       "content": {
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "¿De dónde?",
+            "text": "CARGA AUTÓNOMA / DISPARO: CANAL ABIERTO",
             "status": "source"
           },
           "en": {
-            "spokenText": "Where from?",
+            "text": "AUTONOMOUS PAYLOAD / TRIGGER: CHANNEL OPEN",
             "status": "draft"
           }
         }
@@ -1447,95 +1287,21 @@
       "id": "trailer:cue-g-03",
       "beatId": "trailer:beat-g-01",
       "order": 3,
-      "type": "dialogue",
-      "speakerId": "character:cael",
-      "presentation": "on_screen",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "spokenText": "De nuestro corredor de vuelo.",
-            "status": "source"
-          },
-          "en": {
-            "spokenText": "From our flight corridor.",
-            "status": "draft"
-          }
-        }
-      },
-      "sourceRefs": [
-        {
-          "scriptId": "script:light-delay-main-short",
-          "cueId": "main:cue-11-06"
-        }
-      ]
-    },
-    {
-      "id": "trailer:cue-g-04",
-      "beatId": "trailer:beat-g-01",
-      "order": 4,
       "type": "text",
       "presentation": "interface",
       "content": {
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "text": "ORIGEN: LÁSER EXTERIOR / CONTROL LOCAL",
+            "text": "OVERRIDE / TITULAR CIFRADO",
             "status": "source"
           },
           "en": {
-            "text": "ORIGIN: OUTDOOR LASER / LOCAL CONTROL",
+            "text": "OVERRIDE / ENCRYPTED OWNER",
             "status": "draft"
           }
         }
       }
-    },
-    {
-      "id": "trailer:cue-g-05",
-      "beatId": "trailer:beat-g-01",
-      "order": 5,
-      "type": "text",
-      "presentation": "interface",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "text": "OVR-7C41 / TITULAR CIFRADO",
-            "status": "source"
-          },
-          "en": {
-            "text": "OVR-7C41 / ENCRYPTION HOLDER",
-            "status": "draft"
-          }
-        }
-      }
-    },
-    {
-      "id": "trailer:cue-g-06",
-      "beatId": "trailer:beat-g-01",
-      "order": 6,
-      "type": "dialogue",
-      "speakerId": "character:zao",
-      "presentation": "voice_over",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "spokenText": "…no apaguen la mediación…",
-            "status": "source"
-          },
-          "en": {
-            "spokenText": "…don't turn off mediation…",
-            "status": "draft"
-          }
-        }
-      },
-      "sourceRefs": [
-        {
-          "scriptId": "script:light-delay-main-short",
-          "cueId": "main:cue-12-02"
-        }
-      ]
     },
     {
       "id": "trailer:cue-h-01",
@@ -2014,24 +1780,23 @@
       "number": 2,
       "order": 7,
       "description": {
-        "es": "Zao identifica la firma de Harlan",
-        "en": "Zao identifies Harlan's signature"
+        "es": "Zao contrasta la firma superficial con el bloque autónomo.",
+        "en": "Zao contrasts the surface signature with the autonomous block."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
-        "size": "CU",
+        "size": "INSERT",
         "framing": {
-          "es": "OTS",
-          "en": "OTS"
+          "es": "PD",
+          "en": "PS"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "Rack focus de la firma de Harlan al rostro de Zao; sin diálogo explicativo.",
-          "en": "Rack focus from Harlan's signature to Zao's face; without explanatory dialogue."
-        },
-        "movement": "locked"
+          "es": "85 mm · sello visual falsificable.",
+          "en": "85 mm · forgeable visual seal."
+        }
       },
       "durationMs": 4500,
       "cuePlacements": [
@@ -2048,14 +1813,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-05-02"
+          "shotId": "main:shot-04-03"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-05-02 (asset asset:animatic-05-02).",
+            "es": "Reutiliza frame de main:shot-04-03 (asset asset:animatic-04-03).",
             "en": "Reuse frame from main:shot-05-02 (asset asset:animatic-05-02)."
           }
         }
@@ -2126,8 +1891,8 @@
       "number": 1,
       "order": 9,
       "description": {
-        "es": "Harlan activa el jammer; la voz se corta",
-        "en": "Harlan activates the jammer; the voice cuts off"
+        "es": "Una mano no identificable activa el jammer y la voz de Zao se corta.",
+        "en": "An unidentifiable hand activates the jammer and Zao’s voice cuts out."
       },
       "locationId": "location:celestial-ardor-command-vestibule",
       "composition": {
@@ -2140,8 +1905,8 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "Detalle de la mano de Harlan activando el jammer; el puente queda desenfocado detrás.",
-          "en": "Detail of Harlan's hand activating the jammer; the bridge is out of focus behind."
+          "es": "Detalle cerrado que excluye rostro, uniforme e insignias; no identifica al culpable.",
+          "en": "Tight detail excluding face, uniform, and insignia; it does not identify the culprit."
         },
         "movement": "locked"
       },
@@ -2182,20 +1947,24 @@
       "number": 2,
       "order": 10,
       "description": {
-        "es": "Harlan se retira del acceso y desconecta COM A/B",
-        "en": "Harlan withdraws from access and disconnects COM A/B"
+        "es": "Wireless sin enlace y mensaje en cola",
+        "en": "Wireless without link and message in queue"
       },
-      "locationId": "location:celestial-ardor-service-cylinder",
+      "locationId": "location:diplomatic-core-room",
       "composition": {
-        "size": "MS",
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movement": "tracking",
         "movementDescription": {
-          "es": "Desde el umbral, acompaña el retiro furtivo de Harlan hasta el receso; termina en el acoplador COM A/B.",
-          "en": "From the threshold, he accompanies Harlan's furtive retreat to recess; terminates at the COM A/B coupler."
-        }
+          "es": "Íconos SIN ENLACE y MENSAJE EN COLA; foco pasa a la reacción de Zao.",
+          "en": "UNLINKED and MESSAGE IN QUEUE icons; Focus shifts to Zao's reaction."
+        },
+        "movement": "locked"
       },
       "durationMs": 3500,
       "cuePlacements": [
@@ -2212,14 +1981,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-05-07"
+          "shotId": "main:shot-05-06"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08).",
+            "es": "Reutiliza frame de main:shot-05-06 (asset asset:animatic-05-06).",
             "en": "Reuse frame from main:shot-05-07 (asset asset:animatic-12-08)."
           }
         }
@@ -2234,24 +2003,24 @@
       "number": 3,
       "order": 11,
       "description": {
-        "es": "Tierra y Proxima quedan descartadas",
-        "en": "Tierra and Proxima are ruled out"
+        "es": "Fracasan ambos respaldos cableados",
+        "en": "Both wired backups fail"
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
-        "size": "OTS",
+        "size": "INSERT",
         "framing": {
-          "es": "OTS",
-          "en": "OTS"
+          "es": "PM",
+          "en": "PM"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "Interfaz de puntería descarta Tierra y después Proxima sin abandonar las manos de Zao.",
-          "en": "Aiming interface discards Earth and then Proxima without leaving Zao's hands."
+          "es": "Intercomunicador de pared: COM A y luego COM B pierden portadora; indicador del láser permanece verde.",
+          "en": "Wall intercom: COM A then COM B lose carrier; laser indicator remains green."
         },
-        "movement": "pan"
+        "movement": "locked"
       },
       "durationMs": 3500,
       "cuePlacements": [],
@@ -2262,14 +2031,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-06-02"
+          "shotId": "main:shot-06-01"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).",
+            "es": "Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01).",
             "en": "Reuse frame from main:shot-06-02 (asset asset:animatic-06-02)."
           }
         }
@@ -2334,32 +2103,31 @@
       "number": 1,
       "order": 13,
       "description": {
-        "es": "El barrido llega a cien; Harlan entra",
-        "en": "The sweep reaches a hundred; Harlan enters"
+        "es": "El progreso del envío sube sin alcanzar una confirmación visible mientras una presencia entra fuera de foco.",
+        "en": "Send progress rises without reaching visible confirmation while a presence enters out of focus."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
-        "size": "OTS",
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movement": "handheld",
+        "movement": "locked",
         "movementDescription": {
-          "es": "Barra 40–100; la puerta técnica se abre sólo después de cerrarse la solución de puntería.",
-          "en": "Bar 40–100; The technical door opens only after the aiming solution is closed."
+          "es": "Primer plano de Zao y del progreso todavía incompleto; la identidad de la figura permanece oculta.",
+          "en": "Close-up on Zao and still-incomplete progress; the figure’s identity remains hidden."
         }
       },
-      "durationMs": 3500,
+      "durationMs": 4500,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-e-01",
           "atMs": 0,
-          "durationMs": 3500
-        },
-        {
-          "cueId": "trailer:cue-e-02",
-          "atMs": 0,
-          "durationMs": 3500
+          "durationMs": 4000
         }
       ],
       "takeIds": [
@@ -2369,14 +2137,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-06-07"
+          "shotId": "main:shot-06-09"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04).",
+            "es": "Reutiliza frame de main:shot-06-09 (asset asset:animatic-placeholder-missing-frame).",
             "en": "Reuse frame from main:shot-06-07 (asset asset:animatic-06-04)."
           }
         }
@@ -2391,34 +2159,27 @@
       "number": 2,
       "order": 14,
       "description": {
-        "es": "Harlan supone que Zao transmitió a la Tierra, se tranquiliza con el doble retardo, lamenta que ella haya encontrado la evidencia y suspira antes de acercarse.",
-        "en": "Harlan assumes Zao transmitted to Earth, reassures himself with the two-leg delay, laments that she found the evidence, and sighs before approaching."
+        "es": "Corte breve a negro antes del ataque; la música conserva el pulso y el montaje sale del negro sin confirmar la muerte.",
+        "en": "Brief cut to black before the attack; the score keeps its pulse and the edit leaves black without confirming death."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
-        "size": "MS",
+        "size": "OTHER",
+        "framing": {
+          "es": "NEGRO",
+          "en": "BLACK"
+        },
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movement": "handheld",
         "movementDescription": {
-          "es": "Dos cuerpos sujetos en microgravedad; eje cerrado entre Zao y Harlan.",
-          "en": "Two bodies held in microgravity; closed axis between Zao and Harlan."
-        }
-      },
-      "durationMs": 3500,
-      "cuePlacements": [
-        {
-          "cueId": "trailer:cue-e-03",
-          "atMs": 0,
-          "durationMs": 3500
+          "es": "Negro breve; la música conserva el pulso y la imagen siguiente llega antes de que el silencio resuelva lo ocurrido.",
+          "en": "Brief black; the score keeps its pulse and the next image arrives before silence can resolve what happened."
         },
-        {
-          "cueId": "trailer:cue-e-04",
-          "atMs": 0,
-          "durationMs": 3500
-        }
-      ],
+        "movement": "locked"
+      },
+      "durationMs": 2500,
+      "cuePlacements": [],
       "takeIds": [
         "trailer:take-e-02-01"
       ],
@@ -2426,14 +2187,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-06-08"
+          "shotId": "main:shot-07-02"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-06-08 (asset asset:animatic-06-06).",
+            "es": "Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02).",
             "en": "Reuse frame from main:shot-06-08 (asset asset:animatic-06-06)."
           }
         }
@@ -2540,22 +2301,22 @@
       "number": 3,
       "order": 17,
       "description": {
-        "es": "Cruce confirmado en microgravedad",
-        "en": "Confirmed crossing in microgravity"
+        "es": "Voss pregunta por Sorell",
+        "en": "Voss asks about Sorell"
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
-        "size": "MS",
+        "size": "CU",
         "framing": {
-          "es": "PG",
-          "en": "PG"
+          "es": "PD",
+          "en": "PS"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "Puente tras el cruce; Harlan queda inequívocamente visible en su puesto.",
-          "en": "Bridge after the crossing; Harlan remains unmistakably visible in his position."
+          "es": "Voss mira el puesto vacío de Sorell antes de preguntar.",
+          "en": "Voss looks at Sorell's empty booth before asking."
         },
         "movement": "locked"
       },
@@ -2579,14 +2340,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-08-01"
+          "shotId": "main:shot-08-02"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-08-01 (asset asset:animatic-08-01).",
+            "es": "Reutiliza frame de main:shot-08-02 (asset asset:animatic-08-02).",
             "en": "Reuse frame from main:shot-08-01 (asset asset:animatic-08-01)."
           }
         }
@@ -2661,40 +2422,30 @@
       "number": 1,
       "order": 19,
       "description": {
-        "es": "Una portadora humana aparece en el corredor previsto.",
-        "en": "A human carrier appears in the intended corridor."
+        "es": "La envoltura se reconstruye como ruta hacia el saludo.",
+        "en": "The envelope is reconstructed as a route to the greeting."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
-        "size": "INSERT",
+        "size": "OTS",
         "framing": {
-          "es": "PD",
-          "en": "PS"
+          "es": "OTS",
+          "en": "OTS"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "85 mm · onda apenas sobre ruido.",
-          "en": "85 mm · wave barely above noise."
+          "es": "50 mm · mapa causal legible.",
+          "en": "50 mm · legible causal map."
         }
       },
-      "durationMs": 3600,
+      "durationMs": 2800,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-g-01",
           "atMs": 0,
-          "durationMs": 1000
-        },
-        {
-          "cueId": "trailer:cue-g-02",
-          "atMs": 1000,
-          "durationMs": 900
-        },
-        {
-          "cueId": "trailer:cue-g-03",
-          "atMs": 1900,
-          "durationMs": 1700
+          "durationMs": 2400
         }
       ],
       "takeIds": [
@@ -2704,14 +2455,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-11-05"
+          "shotId": "main:shot-10-02"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).",
+            "es": "Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02).",
             "en": "Reuse frame from main:shot-11-05 (asset asset:animatic-11-05)."
           }
         }
@@ -2726,8 +2477,8 @@
       "number": 2,
       "order": 20,
       "description": {
-        "es": "Cael autentica el control local del láser y la hora, no el contenido.",
-        "en": "Cael authenticates local control of the laser and time, not the content."
+        "es": "Disparador: APERTURA DE CANAL VELARI.",
+        "en": "Trigger: VELARI CHANNEL OPENING."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2740,16 +2491,16 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "85 mm · metadatos en verde, voz en ámbar.",
-          "en": "85 mm · metadata in green, voice in amber."
+          "es": "85 mm · texto y flecha roja.",
+          "en": "85 mm · text and red arrow."
         }
       },
-      "durationMs": 2500,
+      "durationMs": 3000,
       "cuePlacements": [
         {
-          "cueId": "trailer:cue-g-04",
+          "cueId": "trailer:cue-g-02",
           "atMs": 0,
-          "durationMs": 2500
+          "durationMs": 3000
         }
       ],
       "takeIds": [
@@ -2759,14 +2510,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-12-01"
+          "shotId": "main:shot-10-03"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-12-01 (asset asset:animatic-12-01).",
+            "es": "Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03).",
             "en": "Reuse frame from main:shot-12-01 (asset asset:animatic-12-01)."
           }
         }
@@ -2781,32 +2532,26 @@
       "number": 3,
       "order": 21,
       "description": {
-        "es": "La voz fragmentada de Zao llena el puente.",
-        "en": "Zao's fragmented voice fills the bridge."
+        "es": "Elin crea un perímetro de cuarentena.",
+        "en": "Elin creates a quarantine perimeter."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
-        "size": "CU",
+        "size": "MS",
         "framing": {
-          "es": "PP",
-          "en": "PP"
+          "es": "PM",
+          "en": "PM"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "75 mm · reacciones contenidas.",
-          "en": "75 mm · contained reactions."
+          "es": "50 mm · manos y mapa en profundidad.",
+          "en": "50 mm · hands and depth map."
         }
       },
-      "durationMs": 3000,
-      "cuePlacements": [
-        {
-          "cueId": "trailer:cue-g-06",
-          "atMs": 0,
-          "durationMs": 3000
-        }
-      ],
+      "durationMs": 2800,
+      "cuePlacements": [],
       "takeIds": [
         "trailer:take-g-03-01"
       ],
@@ -2814,14 +2559,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-12-02"
+          "shotId": "main:shot-10-04"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-12-02 (asset asset:animatic-12-02).",
+            "es": "Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04).",
             "en": "Reuse frame from main:shot-12-02 (asset asset:animatic-12-02)."
           }
         }
@@ -2836,30 +2581,30 @@
       "number": 4,
       "order": 22,
       "description": {
-        "es": "Aparece OVR-7C41 sin titular.",
-        "en": "OVR-7C41 appears without a title."
+        "es": "El despliegue se detiene en 41%, pero no desaparece.",
+        "en": "The deployment stops at 41%, but does not disappear."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
-        "size": "OTS",
+        "size": "INSERT",
         "framing": {
-          "es": "OTS",
-          "en": "OTS"
+          "es": "PD",
+          "en": "PS"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
         "movementDescription": {
-          "es": "65 mm · firma aislada contra fondo oscuro.",
-          "en": "65 mm · signature isolated against dark background."
+          "es": "85 mm · estado CONTENIDO.",
+          "en": "85 mm · CONTENT condition."
         }
       },
-      "durationMs": 2500,
+      "durationMs": 3000,
       "cuePlacements": [
         {
-          "cueId": "trailer:cue-g-05",
+          "cueId": "trailer:cue-g-03",
           "atMs": 0,
-          "durationMs": 2500
+          "durationMs": 3000
         }
       ],
       "takeIds": [
@@ -2869,14 +2614,14 @@
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-10-06"
+          "shotId": "main:shot-10-05"
         }
       ],
       "notes": [
         {
           "type": "editorial",
           "text": {
-            "es": "Reutiliza frame de main:shot-10-06 (asset asset:animatic-10-06).",
+            "es": "Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).",
             "en": "Reuse frame from main:shot-10-06 (asset asset:animatic-10-06)."
           }
         }
@@ -3398,7 +3143,7 @@
       "shotId": "trailer:shot-c-02",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-05-02",
+      "imageAssetId": "asset:animatic-04-03",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3461,7 +3206,7 @@
       "shotId": "trailer:shot-d-02",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-12-08",
+      "imageAssetId": "asset:animatic-05-06",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3482,7 +3227,7 @@
       "shotId": "trailer:shot-d-03",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-06-02",
+      "imageAssetId": "asset:animatic-06-01",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3524,7 +3269,7 @@
       "shotId": "trailer:shot-e-01",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-06-04",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3545,7 +3290,7 @@
       "shotId": "trailer:shot-e-02",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-06-06",
+      "imageAssetId": "asset:animatic-07-02",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3608,7 +3353,7 @@
       "shotId": "trailer:shot-f-03",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-08-01",
+      "imageAssetId": "asset:animatic-08-02",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3650,7 +3395,7 @@
       "shotId": "trailer:shot-g-01",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-11-05",
+      "imageAssetId": "asset:animatic-10-02",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3671,7 +3416,7 @@
       "shotId": "trailer:shot-g-02",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-12-01",
+      "imageAssetId": "asset:animatic-10-03",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3692,7 +3437,7 @@
       "shotId": "trailer:shot-g-03",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-12-02",
+      "imageAssetId": "asset:animatic-10-04",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
@@ -3713,7 +3458,7 @@
       "shotId": "trailer:shot-g-04",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-10-06",
+      "imageAssetId": "asset:animatic-10-05",
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
