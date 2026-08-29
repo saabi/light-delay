@@ -39,7 +39,7 @@ for (const name of readdirSync(join(root, 'data', 'outlines')).filter((n) => n.e
 			issues.push({
 				file: name,
 				stepId: step.id,
-				severity: 'warning',
+				severity: 'error',
 				issue: 'story beat has no explicit causal link'
 			});
 		if (/\b(propuesto|pendiente|to be proposed|pending)\b/i.test(`${title} ${summary}`))
