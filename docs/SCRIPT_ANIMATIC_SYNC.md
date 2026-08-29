@@ -71,4 +71,4 @@ _Ninguno._
 - Las imágenes provisionales conservan el frame y muestran su toma de origen; las referencias faltantes o fallidas usan el asset `asset:animatic-placeholder-missing-frame`.
 - El panel controlado «Detalles de la toma» expone contexto narrativo, cámara, cues, takes, estado visual, revisión y procedencia; se abre por clic o con `D`.
 - **Festival Cut:** scaffold sin shots (autoría pendiente).
-- **Tráiler:** 29 shots / 90 s; reutiliza `imageAssetId` del main short; brief en `docs/Light Delay — Tráiler de la versión de 30 minutos.md`.
+- **Tráiler:** 29 shots / 92,5 s; reutiliza `imageAssetId` del main short; brief inicial en `docs/Light Delay — Tráiler de la versión de 30 minutos.md` y montaje autoritativo reproducible en `build-trailer-script.mjs`.

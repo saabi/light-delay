@@ -35,6 +35,12 @@ jobs:
       - name: Validate structured data
         run: npm run validate:data
 
+      - name: Verify generated editorial artifacts
+        run: npm run generated:check
+
+      - name: Validate causal ledger
+        run: npm run report:causal-validity
+
       - name: Validate documentation
         run: npm run validate:docs
 

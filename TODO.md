@@ -7,16 +7,10 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 ### Cierre causal y de cobertura antes de producir imágenes
 
 - **Fuente:** `docs/CONTINUIDAD_CAUSAL_GUIONES.md` y los informes `report:*`.
-- **Problema:** los informes detectan 57 cues de acción sin placement, 121/124 tomas del corto sin binding de personajes, 68 tomas sin propósito y 12 sin framing; festival y largo no tienen shot list. Algunos reportes muestran un cero engañoso cuando una dimensión no aplica o todavía no existe.
+- **Problema vigente:** los 57 cues de acción duplicados ya fueron archivados fuera del guion y el informe quedó en cero. El corto aún tiene 124/124 tomas sin binding explícito, 68 sin propósito y 12 sin framing; Festival tiene 35 tomas A–D pero E–G siguen sin construir; el largo sigue sin shot list.
 - **Orden:** cerrar por guion texto y causalidad → placements/cobertura → bindings/performance necesarios → bloqueo de tomas → habilitación visual. No rellenar campos por volumen si no mejoran continuidad o producción.
 - **Compuerta:** corto, festival, tráiler y largo se habilitan de forma independiente. Un recurso compartido espera a todos sus consumidores o recibe una variante explícita.
 - **Cierre:** cada acción depende de información disponible para el personaje; los beats imprescindibles tienen cobertura; los informes distinguen `complete`, deuda y `not_applicable`; ninguna regeneración empieza antes del cierre del guion correspondiente.
-
-### Validez de los informes editoriales
-
-- **Problema:** `dialogue-i18n` busca variantes embebidas aunque el proyecto usa `data/translations/public.en.json`; `visual-art` repite el catálogo global por guion; festival/largo pueden parecer completos pese a carecer de tomas.
-- **Trabajo:** hacer que i18n use la misma autoridad que `validate:translations`, acotar arte a entidades declaradas/empleadas y declarar aplicabilidad en todos los informes. Mantener los snapshots generados fuera de la autoridad documental.
-- **Cierre:** los informes no producen falsos verdes ni duplican una arquitectura de traducción descartada.
 
 ### Autoridad de datos y extractor legacy seguro
 
@@ -29,27 +23,34 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 ### Esquema único y validación efectiva
 
 - **Archivos afectados:** `docs/JSON_FORMAT*.md`, `src/lib/types/`, `src/lib/data/validation/`, `scripts/validate-data.mjs` y repositorios de datos.
-- **Problema:** los contratos se mantienen en Markdown, TypeScript y un validador JavaScript separado; los JSON se fuerzan mediante casts y `assertJsonModule` sólo comprueba que exista un objeto. Ya hay deriva observable: el tráiler contiene 29 notas `type: "editorial"`, valor ausente del contrato `Note`.
-- **Trabajo:** elegir una autoridad ejecutable —JSON Schema o esquema runtime TypeScript— y derivar o sincronizar tipos y validación. Cubrir tipos de nota, foreign keys, relaciones padre/hijo, orden, pertenencia de takes, límites de cue placements y existencia real de archivos bajo `static/`.
-- **Estado comprobado:** el grafo y los 132 paths actuales pasaron una auditoría puntual; la deuda es que el gate automático no evita futuras regresiones.
+- **Estado parcial:** JSON Schema 2020-12 ya es autoridad ejecutable para outlines, archivo histórico, contextos de producción, snapshots de proveedor, planes de generación y ledgers causales. `validate:schemas` corre dentro de `validate:data`, y los tipos de producción se generan con `schema:types`. `Note` ya incluye tipos editoriales/técnicos/visuales y flujo de estado.
+- **Trabajo restante:** extender la misma autoridad a los roots centrales de scripts, proyecto, entidades, assets y documentos; eliminar casts y validación manual duplicada; cubrir todas las foreign keys, relaciones padre/hijo, orden, pertenencia de takes, límites de placements y existencia física bajo `static/`.
 - **Cierre:** datos inválidos fallan en desarrollo y CI sin depender de casts; los validadores duplicados dejan de divergir.
 
 ### Gate de CI, formato y runtime soportado
 
 - **Archivos afectados:** `.nvmrc`, `.github/workflows/pages.yml`, configuración de Playwright/Prettier y los archivos señalados por `npm run lint`.
-- **Problema:** Node 25 está fuera de soporte; CI no ejecuta lint ni E2E; `npm run lint` informa actualmente 34 archivos fuera de formato pero termina con código 0, por lo que no funciona como gate estricto. Las regresiones browser no protegen el despliegue mientras queden fuera de CI.
-- **Trabajo:** migrar a una línea LTS soportada, formatear el árbol, ejecutar lint y Playwright en PR/push, y conservar descarga LFS + build con `BASE_PATH`.
+- **Estado parcial:** `.nvmrc` fija Node 24 LTS; CI valida esquemas, artefactos generados y ledger causal, además de los gates existentes.
+- **Trabajo restante:** normalizar formato, ejecutar lint estricto y Playwright en PR/push, y conservar descarga LFS + build con `BASE_PATH`.
 - **Cierre:** instalación limpia, validación, check, lint, unit, E2E y build Pages pasan en CI sobre Node LTS.
 
 ### Notas editoriales estructuradas en JSON
 
 - **Archivos afectados:** `src/lib/types/`, `data/`, `scripts/`, `package.json`.
-- **Problema:** las notas actuales no ofrecen un flujo uniforme para observaciones humanas accionables ni para deuda visual.
+- **Estado parcial:** `Note` admite identidad, estado, prioridad, acción, criterio de aceptación, rutas, autor y fechas; `npm run notes:build` genera `docs/PENDING_AUTHOR_NOTES.md` y `notes:check` detecta deriva en CI.
 - **Fuente:** separación obligatoria entre narrativa, presentación y estado editorial en `AGENTS.md`.
-- **Trabajo:** ampliar `Note` con `id`, tipos editoriales/técnicos/visuales, `status`, `priority`, acción sugerida, criterio de aceptación, rutas objetivo, autor y fechas opcionales. Habilitar notas en proyecto, scripts, actos, secuencias, escenas, beats, cues, tomas, takes, entidades, assets, documentos y declaraciones de canon cuando aporte valor.
+- **Trabajo restante:** habilitar y validar arrays `notes` en todos los roots donde aporten valor, migrar notas legacy gradualmente y exponer una vista editorial si se decide necesaria.
 - **Compatibilidad:** migrar gradualmente `resolved?: boolean`; las notas sin estado siguen siendo informativas.
 - **Informe:** añadir `npm run notes:build` para generar de forma determinista `docs/PENDING_AUTHOR_NOTES.md`, agrupado por prioridad y entidad, con archivo y JSON path exactos. Excluir notas resueltas y advertir que el archivo generado no se edita directamente.
 - **Cierre:** tipos, validador, migración, pruebas y script funcionan; una nota eliminada del JSON desaparece del informe al regenerarlo.
+
+### Cierre editorial y freeze de prompts por cut
+
+- **Estado:** `data/production/plans/` contiene planes provider-neutral bloqueados, segmentados a un máximo de 8 s para la campaña de prueba. No contienen prompts compilados ni autorizan generaciones. Cada toma exige un still representativo; first/last frame son artefactos separados y el audio final queda bajo control editorial.
+- **Bloqueos medidos:** `npm run report:prompt-readiness` enumera propósito, framing, bindings, referencias, presupuesto de adjuntos y aprobación de freeze. El largo produce cero tomas, no un falso verde; Festival conserva el bloqueo E–G en escaleta/ledger.
+- **Trabajo:** cerrar cada guion y su ledger causal; aprobar brief ES por toma; resolver referencias visuales y muestras de voz; congelar un digest por cut; recién entonces compilar el prompt EN y habilitar un adapter de proveedor.
+- **Proveedor:** los límites documentales están versionados en `data/production/provider-capabilities.json`. Seedance 2.5 permanece provisional y no ejecutable hasta aparecer en el catálogo operativo. Antes de usar la cuenta de prueba se debe verificar entitlement, costo/créditos, concurrencia y límites vivos mediante preflight.
+- **Cierre:** no existen bloqueos editoriales, cada segmento respeta duración y adjuntos, el digest coincide con el guion aprobado, costo y destino fueron autorizados y la ejecución puede auditarse sin leer Markdown en runtime.
 
 ## Prioridad media
 

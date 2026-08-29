@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-08-29 — Gates editoriales, causalidad y arquitectura de prompts
+
+- Corregido de forma durable el generador del tráiler: 29 tomas, 92,5 s y cero sobras de diálogo; `--check` evita que el JSON derivado vuelva a divergir.
+- Archivados 57 cues de acción duplicados del corto con contenido y cobertura completos en `data/archive/`; el guion activo conserva 17 escenas / 124 tomas.
+- Añadidos outlines reproducibles para main, tráiler y largo; los cuatro cuts tienen escaleta y Festival informa 14 pasos `required` aún no cubiertos.
+- Entidades migradas a i18n inline; `entities.en.json` queda retirado/vacío y los selectores/validadores ya no dependen del overlay.
+- JSON Schema 2020-12 + tipos generados para archivo, outlines, contextos, proveedor, planes y ledgers. Notas humanas ampliadas y `PENDING_AUTHOR_NOTES.md` reproducible.
+- Ledger ejecutable de 11 pasos y 13 acciones para el corto: el gate comprueba hechos previos y que cada actor conozca aquello en lo que basa su acción. Festival, tráiler y largo declaran `incomplete` sin falso verde.
+- Arquitectura provider-neutral de producción: planes bloqueados por toma, still representativo, first/last frame, audio final, segmentación semántica a ≤8 s, presupuesto de adjuntos y snapshots Seedance/Higgsfield. No se compilaron prompts reales ni se generaron medios.
+- CI migra a Node 24 LTS y comprueba esquemas, causalidad y artefactos generados.
+
 ## 2026-08-29 — Traducciones de historia inline (LocalizedString)
 
 - El copy de guiones, outlines, assets, taxonomía, funciones, variantes y etiquetas de `project.scripts` pasa de overlay `public.en.json` (clave = texto ES) a mapas co-localizados `{ "es", "en" }` y diálogo/texto en `content.variants.en`.

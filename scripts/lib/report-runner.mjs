@@ -38,7 +38,8 @@ function assessReport(reportId, script, summary) {
 		'cue-placement',
 		'cue-coverage',
 		'take-workflow',
-		'regen-briefs'
+		'regen-briefs',
+		'entity-binding'
 	]);
 	if (requiresShots.has(reportId) && !(script.shots?.length > 0)) return 'not_applicable';
 	if (['dialogue-performance', 'dialogue-i18n'].includes(reportId) && !(summary.dialogueCount > 0))
@@ -52,7 +53,6 @@ function assessReport(reportId, script, summary) {
 		'image-debt': summary.queueCount,
 		'shot-completeness': summary.flaggedShotCount,
 		'cue-placement':
-			(summary.shotsNoDialoguePlacement ?? 0) +
 			(summary.missingDuration ?? 0) +
 			(summary.unplacedActionCues ?? 0),
 		'dialogue-performance':

@@ -39,7 +39,7 @@ describe('extracted canonical data', () => {
 		expect(trailer.scenes).toHaveLength(9);
 		expect(trailer.shots).toHaveLength(29);
 		expect(trailer.takes.every((t) => Boolean(t.imageAssetId))).toBe(true);
-		expect(getEffectiveDuration(trailer)).toBe(90_000);
+		expect(getEffectiveDuration(trailer)).toBe(92_500);
 		expect(trailer.takes.every((t) => t.imageStatus?.status === 'needs_regeneration')).toBe(true);
 	});
 
