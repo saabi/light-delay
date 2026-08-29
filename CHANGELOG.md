@@ -3,6 +3,7 @@
 ## 2026-08-29 — Controles de idioma en la navegación del proyecto
 
 - Selectores de diálogo y subtítulos en el rail (`ProjectNav`, bajo el switcher de guion) y siempre visibles en el chrome del player a pantalla completa; eliminados duplicados de la página de guion y del panel de detalles.
+- El animatic deja de leer `url.searchParams` durante el prerender (sólo en cliente), para que el build estático no falle.
 
 ## 2026-08-29 — Detalles colapsables en el editor de animatic
 
