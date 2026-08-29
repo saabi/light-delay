@@ -1,4 +1,4 @@
-import type { BeatId, SceneId, ScriptId } from './ids.ts';
+import type { BeatId, CueId, SceneId, ScriptId, ShotId } from './ids.ts';
 import type { Note } from './common.ts';
 import type { StoryText } from './i18n.ts';
 import type { SourceReference } from './script.ts';
@@ -26,6 +26,8 @@ export interface OutlineStep {
 	majorEventId?: string;
 	sceneIds?: SceneId[];
 	beatIds?: BeatId[];
+	cueIds?: CueId[];
+	shotIds?: ShotId[];
 	/** Other steps in this outline that this step causally depends on */
 	dependsOnStepIds?: string[];
 	sourceRefs?: SourceReference[];

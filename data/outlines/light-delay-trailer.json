@@ -1,0 +1,322 @@
+{
+  "schemaVersion": "1.1.0",
+  "outline": {
+    "id": "outline:light-delay-trailer",
+    "scriptId": "script:light-delay-trailer",
+    "title": {
+      "es": "Escaleta — Light Delay: tráiler",
+      "en": "Outline — Light Delay: trailer"
+    },
+    "status": "draft",
+    "version": "0.1.0"
+  },
+  "steps": [
+    {
+      "id": "trailer:outline-01",
+      "order": 1,
+      "title": {
+        "es": "Escala",
+        "en": "Scale"
+      },
+      "summary": {
+        "es": "Negro a Proxima / Celestial Ardor; misión en V.O.",
+        "en": "Black to Proxima/Celestial Burning; mission in V.O."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-a"
+      ],
+      "beatIds": [
+        "trailer:beat-a-01"
+      ],
+      "cueIds": [
+        "trailer:cue-a-01"
+      ],
+      "shotIds": [
+        "trailer:shot-a-01",
+        "trailer:shot-a-02"
+      ],
+      "majorEventId": "event:embarkation"
+    },
+    {
+      "id": "trailer:outline-02",
+      "order": 2,
+      "title": {
+        "es": "La misión",
+        "en": "The mission"
+      },
+      "summary": {
+        "es": "Separación, núcleo y saludo; tarjeta PRIMER CONTACTO.",
+        "en": "Separation, core and greeting; FIRST CONTACT card."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-b"
+      ],
+      "beatIds": [
+        "trailer:beat-b-01"
+      ],
+      "cueIds": [
+        "trailer:cue-b-01",
+        "trailer:cue-b-02"
+      ],
+      "shotIds": [
+        "trailer:shot-b-01",
+        "trailer:shot-b-02",
+        "trailer:shot-b-03"
+      ],
+      "majorEventId": "event:embarkation",
+      "dependsOnStepIds": [
+        "trailer:outline-01"
+      ]
+    },
+    {
+      "id": "trailer:outline-03",
+      "order": 3,
+      "title": {
+        "es": "La anomalía",
+        "en": "The anomaly"
+      },
+      "summary": {
+        "es": "Zao detecta la rama ejecutable no declarada.",
+        "en": "Zao detects undeclared executable branch."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-c"
+      ],
+      "beatIds": [
+        "trailer:beat-c-01"
+      ],
+      "cueIds": [
+        "trailer:cue-c-01",
+        "trailer:cue-c-02",
+        "trailer:cue-c-03"
+      ],
+      "shotIds": [
+        "trailer:shot-c-01",
+        "trailer:shot-c-02",
+        "trailer:shot-c-03"
+      ],
+      "majorEventId": "event:anomaly-discovery",
+      "dependsOnStepIds": [
+        "trailer:outline-02"
+      ]
+    },
+    {
+      "id": "trailer:outline-04",
+      "order": 4,
+      "title": {
+        "es": "La advertencia",
+        "en": "The warning"
+      },
+      "summary": {
+        "es": "Harlan corta wireless y COM A/B; Zao encuentra una salida por el láser exterior.",
+        "en": "Harlan cuts wireless and COM A/B; Zao finds a way out through the outside laser."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-d"
+      ],
+      "beatIds": [
+        "trailer:beat-d-01"
+      ],
+      "cueIds": [
+        "trailer:cue-d-01",
+        "trailer:cue-d-02"
+      ],
+      "shotIds": [
+        "trailer:shot-d-01",
+        "trailer:shot-d-02",
+        "trailer:shot-d-03",
+        "trailer:shot-d-04"
+      ],
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "trailer:outline-03"
+      ]
+    },
+    {
+      "id": "trailer:outline-05",
+      "order": 5,
+      "title": {
+        "es": "Punto de no retorno",
+        "en": "Point of no return"
+      },
+      "summary": {
+        "es": "Transmisión completa; silueta O.S.; golpe a negro.",
+        "en": "Complete transmission; silhouette O.S.; hit black."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-e"
+      ],
+      "beatIds": [
+        "trailer:beat-e-01"
+      ],
+      "cueIds": [
+        "trailer:cue-e-01",
+        "trailer:cue-e-02",
+        "trailer:cue-e-03",
+        "trailer:cue-e-04"
+      ],
+      "shotIds": [
+        "trailer:shot-e-01",
+        "trailer:shot-e-02"
+      ],
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "trailer:outline-04"
+      ]
+    },
+    {
+      "id": "trailer:outline-06",
+      "order": 6,
+      "title": {
+        "es": "La nave llega primero",
+        "en": "The ship arrives first"
+      },
+      "summary": {
+        "es": "Cruce de la garganta; T+23 h; Elin contra reloj.",
+        "en": "Crossing of the throat; T+23h; Elin against the clock."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-f"
+      ],
+      "beatIds": [
+        "trailer:beat-f-01"
+      ],
+      "cueIds": [
+        "trailer:cue-f-01",
+        "trailer:cue-f-02",
+        "trailer:cue-f-03",
+        "trailer:cue-f-04"
+      ],
+      "shotIds": [
+        "trailer:shot-f-01",
+        "trailer:shot-f-02",
+        "trailer:shot-f-03",
+        "trailer:shot-f-04"
+      ],
+      "majorEventId": "event:tunnel-crossing",
+      "dependsOnStepIds": [
+        "trailer:outline-05"
+      ]
+    },
+    {
+      "id": "trailer:outline-07",
+      "order": 7,
+      "title": {
+        "es": "La señal",
+        "en": "The signal"
+      },
+      "summary": {
+        "es": "Portadora humana; OVR; fragmento de Zao.",
+        "en": "Human carrier; OVR; Zao fragment."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-g"
+      ],
+      "beatIds": [
+        "trailer:beat-g-01"
+      ],
+      "cueIds": [
+        "trailer:cue-g-01",
+        "trailer:cue-g-02",
+        "trailer:cue-g-03",
+        "trailer:cue-g-04",
+        "trailer:cue-g-05",
+        "trailer:cue-g-06"
+      ],
+      "shotIds": [
+        "trailer:shot-g-01",
+        "trailer:shot-g-02",
+        "trailer:shot-g-03",
+        "trailer:shot-g-04"
+      ],
+      "majorEventId": "event:message-reception",
+      "dependsOnStepIds": [
+        "trailer:outline-06"
+      ]
+    },
+    {
+      "id": "trailer:outline-08",
+      "order": 8,
+      "title": {
+        "es": "El reloj",
+        "en": "The clock"
+      },
+      "summary": {
+        "es": "Montaje acelerado hacia el umbral Velari.",
+        "en": "Accelerated assembly towards the Velari threshold."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-h"
+      ],
+      "beatIds": [
+        "trailer:beat-h-01"
+      ],
+      "cueIds": [
+        "trailer:cue-h-01",
+        "trailer:cue-h-02",
+        "trailer:cue-h-03"
+      ],
+      "shotIds": [
+        "trailer:shot-h-01",
+        "trailer:shot-h-02",
+        "trailer:shot-h-03",
+        "trailer:shot-h-04",
+        "trailer:shot-h-05"
+      ],
+      "majorEventId": "event:quarantine",
+      "dependsOnStepIds": [
+        "trailer:outline-07"
+      ]
+    },
+    {
+      "id": "trailer:outline-09",
+      "order": 9,
+      "title": {
+        "es": "Título",
+        "en": "Title"
+      },
+      "summary": {
+        "es": "LIGHT DELAY / LUZ TARDÍA y lema; pulso Velari.",
+        "en": "LIGHT DELAY / LIGHT LATE and motto; Velari pulse."
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "trailer:scene-i"
+      ],
+      "beatIds": [
+        "trailer:beat-i-01"
+      ],
+      "cueIds": [
+        "trailer:cue-i-01",
+        "trailer:cue-i-02",
+        "trailer:cue-i-03",
+        "trailer:cue-i-04"
+      ],
+      "shotIds": [
+        "trailer:shot-i-01",
+        "trailer:shot-i-02"
+      ],
+      "majorEventId": "event:first-contact",
+      "dependsOnStepIds": [
+        "trailer:outline-08"
+      ]
+    }
+  ]
+}

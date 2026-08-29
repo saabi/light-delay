@@ -6,6 +6,11 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
+function storyText(value) {
+	if (typeof value === 'string') return value;
+	return value?.es ?? value?.en ?? '';
+}
+
 /**
  * @param {string} root
  * @param {{ project?: unknown }} [options]
@@ -36,13 +41,16 @@ export function buildOutlineGapsReport(root, options = {}) {
 		const outline = JSON.parse(readFileSync(abs, 'utf8'));
 		const byId = new Map((outline.steps || []).map((step) => [step.id, step]));
 		for (const step of outline.steps || []) {
-			if (step.importance === 'required' && (step.status === 'missing' || step.status === 'deferred')) {
+			if (
+				step.importance === 'required' &&
+				(step.status === 'planned' || step.status === 'missing' || step.status === 'deferred')
+			) {
 				gaps.push({
 					scriptId: entry.id,
-					label: entry.label,
+					label: storyText(entry.label),
 					outlinePath,
 					stepId: step.id,
-					title: step.title,
+					title: storyText(step.title),
 					status: step.status,
 					importance: step.importance
 				});
@@ -55,10 +63,10 @@ export function buildOutlineGapsReport(root, options = {}) {
 				if (unmet.length) {
 					unmetDeps.push({
 						scriptId: entry.id,
-						label: entry.label,
+						label: storyText(entry.label),
 						outlinePath,
 						stepId: step.id,
-						title: step.title,
+						title: storyText(step.title),
 						unmetDependsOn: unmet
 					});
 				}
@@ -100,7 +108,7 @@ export function formatOutlineGapsMarkdown(report) {
 		'',
 		`Scripts: **${report.summary.scripts}** · outlines present: **${report.summary.outlinesPresent}** · without file: **${report.summary.withoutOutline}** · required gaps: **${report.summary.requiredGaps}** · unmet deps on covered steps: **${report.summary.unmetDependencies}**`,
 		'',
-		'## Required steps missing or deferred',
+		'## Required steps not covered',
 		''
 	];
 

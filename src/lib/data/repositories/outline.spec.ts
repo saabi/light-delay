@@ -18,16 +18,13 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../../../..');
 const festivalId = 'script:light-delay-festival';
 
 describe('outlines (optional)', () => {
-	it('returns festival outline when present and null for others without files', () => {
-		expect(hasOutline(festivalId)).toBe(true);
-		expect(getOutline(festivalId)?.steps.length).toBeGreaterThan(0);
+	it('returns an outline for every registered script', () => {
 		for (const entry of listScripts()) {
 			expect(outlinePathForScript(entry.id)).toBe(
 				`data/outlines/${entry.id.replace(/^script:/, '')}.json`
 			);
-			if (entry.id === festivalId) continue;
-			expect(getOutline(entry.id)).toBeNull();
-			expect(hasOutline(entry.id)).toBe(false);
+			expect(getOutline(entry.id)?.steps.length).toBeGreaterThan(0);
+			expect(hasOutline(entry.id)).toBe(true);
 		}
 	});
 
@@ -37,7 +34,7 @@ describe('outlines (optional)', () => {
 		const festival = coverage.find((row) => row.scriptId === festivalId);
 		expect(festival?.present).toBe(true);
 		expect(festival?.stepCount).toBeGreaterThan(0);
-		expect(coverage.filter((row) => !row.present)).toHaveLength(3);
+		expect(coverage.filter((row) => !row.present)).toHaveLength(0);
 	});
 
 	it('localizes festival outline titles from inline LocalizedString maps', () => {
@@ -89,15 +86,10 @@ describe('outlines (optional)', () => {
 });
 
 describe('report:outline-missing', () => {
-	it('flags scripts that still lack outline files', () => {
+	it('reports complete outline coverage', () => {
 		const report = buildOutlineMissingReport(ROOT);
 		expect(report.summary.scripts).toBe(4);
-		expect(report.summary.missing).toBe(3);
-		expect(report.missing.map((row) => row.scriptId).sort()).toEqual(
-			listScripts()
-				.map((s) => s.id)
-				.filter((id) => id !== festivalId)
-				.sort()
-		);
+		expect(report.summary.missing).toBe(0);
+		expect(report.missing).toEqual([]);
 	});
 });

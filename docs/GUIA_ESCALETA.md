@@ -42,7 +42,7 @@ Reglas:
 
 | Status | Uso |
 | --- | --- |
-| `covered` | Hay evidencia en el `ScriptFile` / animatic (escenas, cues, tomas). Enlazar `sceneIds` / `beatIds`. |
+| `covered` | Hay evidencia en el `ScriptFile` / animatic. Enlazar `sceneIds` / `beatIds` y, cuando exista cobertura concreta, `cueIds` / `shotIds`. |
 | `missing` | Beat identificado y aún no escrito (p. ej. d-00). |
 | `planned` | Plan de secuencia sin construir (p. ej. E–G del festival). |
 | `deferred` | Omitido a propósito en este cut, documentado. |
@@ -64,14 +64,14 @@ No marcar `covered` sin evidencia en datos.
 
 ## 7. Dependencias
 
-`dependsOnStepIds` referencia otros `OutlineStep.id` del mismo archivo. Validado por `validate:data`. Útil para que `report:outline-gaps` avise si un paso `covered` depende de otro aún no cubierto.
+`dependsOnStepIds` referencia otros `OutlineStep.id` del mismo archivo. Validado por `validate:data`. `report:outline-gaps` considera deuda todo paso `required` que no esté `covered`, incluido `planned`, y también avisa si un paso cubierto depende de otro aún no cubierto.
 
 ## 8. Auditoría contra guion y animatic
 
 Checklist:
 
 1. Cada `required` está `covered`, o queda `missing`/`deferred` consciente.
-2. `sceneIds` / `beatIds` resuelven cuando se declaran.
+2. `sceneIds` / `beatIds` / `cueIds` / `shotIds` resuelven cuando se declaran.
 3. Tras cambios materiales, reauditar (también hacia atrás: `CUIDADOS_NARRATIVOS` §5).
 4. Correr `npm run report:outline-missing` y `npm run report:outline-gaps`.
 

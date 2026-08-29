@@ -1,0 +1,751 @@
+{
+  "schemaVersion": "1.1.0",
+  "outline": {
+    "id": "outline:light-delay-main-short",
+    "scriptId": "script:light-delay-main-short",
+    "title": {
+      "es": "Escaleta — Light Delay: corto canónico",
+      "en": "Outline — Light Delay: canonical short"
+    },
+    "status": "draft",
+    "version": "0.1.0"
+  },
+  "steps": [
+    {
+      "id": "main:outline-01",
+      "order": 1,
+      "title": {
+        "es": "EXT./INT. ESTACIÓN PROXIMA — MUELLE DE ATRAQUE — DÍA",
+        "en": "EXT./INT. PROXIMA STATION — DOCKING BERTH — DAY"
+      },
+      "summary": {
+        "es": "Estación Proxima — embarque",
+        "en": "Proxima Station — boarding"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-01"
+      ],
+      "beatIds": [
+        "main:beat-01-01"
+      ],
+      "cueIds": [
+        "main:cue-01-01",
+        "main:cue-01-02",
+        "main:cue-01-03",
+        "main:cue-01-04",
+        "main:cue-01-05",
+        "main:cue-01-06",
+        "main:cue-01-07",
+        "main:cue-01-08",
+        "main:cue-01-09",
+        "main:cue-01-10",
+        "main:cue-01-11",
+        "main:cue-01-12",
+        "main:cue-01-13",
+        "main:cue-01-14",
+        "main:cue-01-15",
+        "main:cue-01-16",
+        "main:cue-01-17",
+        "main:cue-01-18",
+        "main:cue-01-19",
+        "main:cue-01-31",
+        "main:cue-01-32",
+        "main:cue-01-33"
+      ],
+      "shotIds": [
+        "main:shot-01-01",
+        "main:shot-01-02",
+        "main:shot-01-03",
+        "main:shot-01-04",
+        "main:shot-01-05",
+        "main:shot-01-06",
+        "main:shot-01-07",
+        "main:shot-01-08",
+        "main:shot-01-09",
+        "main:shot-01-10",
+        "main:shot-01-11",
+        "main:shot-01-12",
+        "main:shot-01-13",
+        "main:shot-01-14",
+        "main:shot-01-15",
+        "main:shot-01-16",
+        "main:shot-01-17",
+        "main:shot-01-18"
+      ],
+      "majorEventId": "event:embarkation"
+    },
+    {
+      "id": "main:outline-02",
+      "order": 2,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
+      },
+      "summary": {
+        "es": "Salida de Proxima",
+        "en": "Proxima Departure"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-02"
+      ],
+      "beatIds": [
+        "main:beat-02-01"
+      ],
+      "cueIds": [
+        "main:cue-02-01",
+        "main:cue-02-02"
+      ],
+      "shotIds": [
+        "main:shot-02-01",
+        "main:shot-02-02",
+        "main:shot-02-03",
+        "main:shot-02-04"
+      ],
+      "majorEventId": "event:embarkation",
+      "dependsOnStepIds": [
+        "main:outline-01"
+      ]
+    },
+    {
+      "id": "main:outline-03",
+      "order": 3,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — SALA DE MÁQUINAS — TRÁNSITO, T+29H",
+        "en": "INT. CELESTIAL ARDOR — ENGINE ROOM — TRANSIT, T+29H"
+      },
+      "summary": {
+        "es": "Arco de Júpiter e indicio",
+        "en": "Arc of Jupiter and indication"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-03"
+      ],
+      "beatIds": [
+        "main:beat-03-01"
+      ],
+      "cueIds": [
+        "main:cue-03-01",
+        "main:cue-03-02",
+        "main:cue-03-03"
+      ],
+      "shotIds": [
+        "main:shot-03-01",
+        "main:shot-03-02",
+        "main:shot-03-03",
+        "main:shot-03-04"
+      ],
+      "majorEventId": "event:anomaly-discovery",
+      "dependsOnStepIds": [
+        "main:outline-02"
+      ]
+    },
+    {
+      "id": "main:outline-04",
+      "order": 4,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRÁNSITO, T+40H",
+        "en": "INT. CELESTIAL ARDOR — DIPLOMATIC CORE — TRANSIT, T+40H"
+      },
+      "summary": {
+        "es": "Envoltura no declarada",
+        "en": "Undeclared wrapper"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-04"
+      ],
+      "beatIds": [
+        "main:beat-04-01"
+      ],
+      "cueIds": [
+        "main:cue-04-01",
+        "main:cue-04-02",
+        "main:cue-04-03",
+        "main:cue-04-04",
+        "main:cue-04-05"
+      ],
+      "shotIds": [
+        "main:shot-04-01",
+        "main:shot-04-02",
+        "main:shot-04-03",
+        "main:shot-04-04",
+        "main:shot-04-05"
+      ],
+      "majorEventId": "event:anomaly-discovery",
+      "dependsOnStepIds": [
+        "main:outline-03"
+      ]
+    },
+    {
+      "id": "main:outline-05",
+      "order": 5,
+      "title": {
+        "es": "Confirmación y silencio",
+        "en": "Confirmation and silence"
+      },
+      "summary": {
+        "es": "Confirmación y silencio",
+        "en": "Confirmation and silence"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-05"
+      ],
+      "beatIds": [
+        "main:beat-05-01"
+      ],
+      "cueIds": [
+        "main:cue-05-01",
+        "main:cue-05-02",
+        "main:cue-05-03",
+        "main:cue-05-04",
+        "main:cue-05-05",
+        "main:cue-05-06",
+        "main:cue-05-07",
+        "main:cue-05-08",
+        "main:cue-05-09",
+        "main:cue-05-10",
+        "main:cue-05-11",
+        "main:cue-05-12",
+        "main:cue-05-13",
+        "main:cue-05-14",
+        "main:cue-05-15"
+      ],
+      "shotIds": [
+        "main:shot-05-01",
+        "main:shot-05-02",
+        "main:shot-05-03",
+        "main:shot-05-04",
+        "main:shot-05-05",
+        "main:shot-05-06",
+        "main:shot-05-07",
+        "main:shot-05-08"
+      ],
+      "majorEventId": "event:anomaly-discovery",
+      "dependsOnStepIds": [
+        "main:outline-04"
+      ]
+    },
+    {
+      "id": "main:outline-06",
+      "order": 6,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRANSMISOR EXTERNO — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — DIPLOMATIC CORE — EXTERNAL TRANSMITTER — CONTINUOUS"
+      },
+      "summary": {
+        "es": "Mensaje hacia el futuro",
+        "en": "Message to the future"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-06"
+      ],
+      "beatIds": [
+        "main:beat-06-01"
+      ],
+      "cueIds": [
+        "main:cue-06-01",
+        "main:cue-06-02",
+        "main:cue-06-03",
+        "main:cue-06-04",
+        "main:cue-06-05",
+        "main:cue-06-06",
+        "main:cue-06-07",
+        "main:cue-06-08",
+        "main:cue-06-09",
+        "main:cue-06-10",
+        "main:cue-06-11",
+        "main:cue-06-12",
+        "main:cue-06-13",
+        "main:cue-06-14",
+        "main:cue-06-15",
+        "main:cue-06-16",
+        "main:cue-06-17",
+        "main:cue-06-18",
+        "main:cue-06-19",
+        "main:cue-06-20",
+        "main:cue-06-21"
+      ],
+      "shotIds": [
+        "main:shot-06-01",
+        "main:shot-06-02",
+        "main:shot-06-03",
+        "main:shot-06-04",
+        "main:shot-06-05",
+        "main:shot-06-06",
+        "main:shot-06-07",
+        "main:shot-06-08",
+        "main:shot-06-09"
+      ],
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "main:outline-05"
+      ]
+    },
+    {
+      "id": "main:outline-07",
+      "order": 7,
+      "title": {
+        "es": "INT./EXT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO / LA BOCA — CONTINUO",
+        "en": "INT./EXT. CELESTIAL ARDOR — DIPLOMATIC CORE / THE MOUTH — CONTINUOUS"
+      },
+      "summary": {
+        "es": "Asesinato y cruce",
+        "en": "Murder and crossing"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-07"
+      ],
+      "beatIds": [
+        "main:beat-07-01"
+      ],
+      "cueIds": [
+        "main:cue-07-01",
+        "main:cue-07-02",
+        "main:cue-07-03",
+        "main:cue-07-04",
+        "main:cue-07-05",
+        "main:cue-07-06",
+        "main:cue-07-07",
+        "main:cue-07-08",
+        "main:cue-07-09",
+        "main:cue-07-10",
+        "main:cue-07-11",
+        "main:cue-07-12",
+        "main:cue-07-13"
+      ],
+      "shotIds": [
+        "main:shot-07-01",
+        "main:shot-07-02",
+        "main:shot-07-03",
+        "main:shot-07-04",
+        "main:shot-07-05",
+        "main:shot-07-06",
+        "main:shot-07-07",
+        "main:shot-07-08",
+        "main:shot-07-09",
+        "main:shot-07-10"
+      ],
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "main:outline-06"
+      ]
+    },
+    {
+      "id": "main:outline-08",
+      "order": 8,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
+      },
+      "summary": {
+        "es": "El cuerpo",
+        "en": "The Body"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-08"
+      ],
+      "beatIds": [
+        "main:beat-08-01"
+      ],
+      "cueIds": [
+        "main:cue-08-01",
+        "main:cue-08-02",
+        "main:cue-08-03",
+        "main:cue-08-04",
+        "main:cue-08-05",
+        "main:cue-08-06",
+        "main:cue-08-07",
+        "main:cue-08-08"
+      ],
+      "shotIds": [
+        "main:shot-08-01",
+        "main:shot-08-02",
+        "main:shot-08-03",
+        "main:shot-08-04",
+        "main:shot-08-05",
+        "main:shot-08-06",
+        "main:shot-08-07"
+      ],
+      "majorEventId": "event:investigation",
+      "dependsOnStepIds": [
+        "main:outline-07"
+      ]
+    },
+    {
+      "id": "main:outline-09",
+      "order": 9,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUENTE / NÚCLEO / ENFERMERÍA — MÁS TARDE",
+        "en": "INT. CELESTIAL ARDOR — BRIDGE / CORE / INFIRMARY — LATER"
+      },
+      "summary": {
+        "es": "Investigación y credencial comprometida",
+        "en": "Investigation and Compromised Credential"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-09"
+      ],
+      "beatIds": [
+        "main:beat-09-01"
+      ],
+      "cueIds": [
+        "main:cue-09-01",
+        "main:cue-09-02",
+        "main:cue-09-03",
+        "main:cue-09-04",
+        "main:cue-09-05"
+      ],
+      "shotIds": [
+        "main:shot-09-01",
+        "main:shot-09-02",
+        "main:shot-09-03",
+        "main:shot-09-04",
+        "main:shot-09-05",
+        "main:shot-09-06"
+      ],
+      "majorEventId": "event:investigation",
+      "dependsOnStepIds": [
+        "main:outline-08"
+      ]
+    },
+    {
+      "id": "main:outline-10",
+      "order": 10,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUESTO TÉCNICO DEL PUENTE — MÁS TARDE",
+        "en": "INT. CELESTIAL ARDOR — BRIDGE TECHNICAL STATION — LATER"
+      },
+      "summary": {
+        "es": "La mitad técnica del misterio",
+        "en": "The technical half of the mystery"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-10"
+      ],
+      "beatIds": [
+        "main:beat-10-01"
+      ],
+      "cueIds": [
+        "main:cue-10-01",
+        "main:cue-10-02",
+        "main:cue-10-03",
+        "main:cue-10-04",
+        "main:cue-10-05",
+        "main:cue-10-06"
+      ],
+      "shotIds": [
+        "main:shot-10-01",
+        "main:shot-10-02",
+        "main:shot-10-03",
+        "main:shot-10-04",
+        "main:shot-10-05",
+        "main:shot-10-06",
+        "main:shot-10-07"
+      ],
+      "majorEventId": "event:investigation",
+      "dependsOnStepIds": [
+        "main:outline-09"
+      ]
+    },
+    {
+      "id": "main:outline-11",
+      "order": 11,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
+      },
+      "summary": {
+        "es": "Harlan intenta cegar la nave",
+        "en": "Harlan tries to blind the ship"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-11"
+      ],
+      "beatIds": [
+        "main:beat-11-01"
+      ],
+      "cueIds": [
+        "main:cue-11-01",
+        "main:cue-11-02",
+        "main:cue-11-03",
+        "main:cue-11-04",
+        "main:cue-11-05",
+        "main:cue-11-06",
+        "main:cue-11-07",
+        "main:cue-11-08"
+      ],
+      "shotIds": [
+        "main:shot-11-01",
+        "main:shot-11-02",
+        "main:shot-11-03",
+        "main:shot-11-04",
+        "main:shot-11-05",
+        "main:shot-11-06"
+      ],
+      "majorEventId": "event:message-reception",
+      "dependsOnStepIds": [
+        "main:outline-10"
+      ]
+    },
+    {
+      "id": "main:outline-12",
+      "order": 12,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — MINUTOS DESPUÉS",
+        "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — MINUTES LATER"
+      },
+      "summary": {
+        "es": "La doble llave",
+        "en": "The Double Key"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-12"
+      ],
+      "beatIds": [
+        "main:beat-12-01"
+      ],
+      "cueIds": [
+        "main:cue-12-01",
+        "main:cue-12-02",
+        "main:cue-12-03",
+        "main:cue-12-04",
+        "main:cue-12-05",
+        "main:cue-12-06",
+        "main:cue-12-07",
+        "main:cue-12-08"
+      ],
+      "shotIds": [
+        "main:shot-12-01",
+        "main:shot-12-02",
+        "main:shot-12-03",
+        "main:shot-12-04",
+        "main:shot-12-05",
+        "main:shot-12-06",
+        "main:shot-12-07",
+        "main:shot-12-08",
+        "main:shot-12-09"
+      ],
+      "majorEventId": "event:message-reception",
+      "dependsOnStepIds": [
+        "main:outline-11"
+      ]
+    },
+    {
+      "id": "main:outline-13",
+      "order": 13,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PASILLO / PUENTE — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — CORRIDOR / BRIDGE — CONTINUOUS"
+      },
+      "summary": {
+        "es": "Última ventana del override",
+        "en": "Last override window"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-13"
+      ],
+      "beatIds": [
+        "main:beat-13-01"
+      ],
+      "cueIds": [
+        "main:cue-13-01",
+        "main:cue-13-02",
+        "main:cue-13-03"
+      ],
+      "shotIds": [
+        "main:shot-13-01",
+        "main:shot-13-02",
+        "main:shot-13-03",
+        "main:shot-13-04",
+        "main:shot-13-05"
+      ],
+      "majorEventId": "event:harlan-exposed",
+      "dependsOnStepIds": [
+        "main:outline-12"
+      ]
+    },
+    {
+      "id": "main:outline-14",
+      "order": 14,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — NÚCLEO / PUENTE — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — CORE / BRIDGE — CONTINUOUS"
+      },
+      "summary": {
+        "es": "Cuarentena antes del contacto",
+        "en": "Quarantine before contact"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-14"
+      ],
+      "beatIds": [
+        "main:beat-14-01"
+      ],
+      "cueIds": [
+        "main:cue-14-01",
+        "main:cue-14-02",
+        "main:cue-14-03",
+        "main:cue-14-04",
+        "main:cue-14-05",
+        "main:cue-14-06",
+        "main:cue-14-07",
+        "main:cue-14-08",
+        "main:cue-14-09",
+        "main:cue-14-10",
+        "main:cue-14-11",
+        "main:cue-14-12"
+      ],
+      "shotIds": [
+        "main:shot-14-01",
+        "main:shot-14-02",
+        "main:shot-14-03",
+        "main:shot-14-04",
+        "main:shot-14-05",
+        "main:shot-14-06",
+        "main:shot-14-07",
+        "main:shot-14-08",
+        "main:shot-14-09",
+        "main:shot-14-10"
+      ],
+      "majorEventId": "event:quarantine",
+      "dependsOnStepIds": [
+        "main:outline-13"
+      ]
+    },
+    {
+      "id": "main:outline-15",
+      "order": 15,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
+      },
+      "summary": {
+        "es": "Saludo limpio",
+        "en": "Clean Greeting"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-15"
+      ],
+      "beatIds": [
+        "main:beat-15-01"
+      ],
+      "cueIds": [
+        "main:cue-15-01",
+        "main:cue-15-02",
+        "main:cue-15-03",
+        "main:cue-15-04",
+        "main:cue-15-05",
+        "main:cue-15-06"
+      ],
+      "shotIds": [
+        "main:shot-15-01",
+        "main:shot-15-02",
+        "main:shot-15-03",
+        "main:shot-15-04",
+        "main:shot-15-05",
+        "main:shot-15-06",
+        "main:shot-15-07"
+      ],
+      "majorEventId": "event:clean-greeting",
+      "dependsOnStepIds": [
+        "main:outline-14"
+      ]
+    },
+    {
+      "id": "main:outline-16",
+      "order": 16,
+      "title": {
+        "es": "EXT. ESPACIO — REGIÓN DE ENCUENTRO — MINUTOS DESPUÉS",
+        "en": "EXT. SPACE — ENCOUNTER REGION — MINUTES LATER"
+      },
+      "summary": {
+        "es": "Región de encuentro",
+        "en": "Meeting Region"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-16"
+      ],
+      "beatIds": [
+        "main:beat-16-01"
+      ],
+      "cueIds": [],
+      "shotIds": [
+        "main:shot-16-01",
+        "main:shot-16-02",
+        "main:shot-16-03"
+      ],
+      "majorEventId": "event:first-contact",
+      "dependsOnStepIds": [
+        "main:outline-15"
+      ]
+    },
+    {
+      "id": "main:outline-17",
+      "order": 17,
+      "title": {
+        "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
+        "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
+      },
+      "summary": {
+        "es": "La verdad llega",
+        "en": "The truth comes"
+      },
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "main:scene-17"
+      ],
+      "beatIds": [
+        "main:beat-17-01"
+      ],
+      "cueIds": [
+        "main:cue-17-01",
+        "main:cue-17-02",
+        "main:cue-17-03"
+      ],
+      "shotIds": [
+        "main:shot-17-01",
+        "main:shot-17-02",
+        "main:shot-17-03",
+        "main:shot-17-04",
+        "main:shot-17-05",
+        "main:shot-17-06"
+      ],
+      "majorEventId": "event:aftermath",
+      "dependsOnStepIds": [
+        "main:outline-16"
+      ]
+    }
+  ]
+}

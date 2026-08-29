@@ -47,6 +47,8 @@ export function validateOutline(
 	let previousOrder = -Infinity;
 	const sceneIds = new Set(options.script?.scenes.map((s) => s.id) ?? []);
 	const beatIds = new Set(options.script?.beats.map((b) => b.id) ?? []);
+	const cueIds = new Set(options.script?.cues.map((c) => c.id) ?? []);
+	const shotIds = new Set(options.script?.shots.map((s) => s.id) ?? []);
 	const eventIds = new Set(options.taxonomy?.majorEvents.map((e) => e.id) ?? []);
 
 	for (const step of file.steps) {
@@ -81,6 +83,12 @@ export function validateOutline(
 			}
 			for (const beatId of step.beatIds ?? []) {
 				if (!beatIds.has(beatId)) errors.push(`${stepLabel}: unknown beatId ${beatId}`);
+			}
+			for (const cueId of step.cueIds ?? []) {
+				if (!cueIds.has(cueId)) errors.push(`${stepLabel}: unknown cueId ${cueId}`);
+			}
+			for (const shotId of step.shotIds ?? []) {
+				if (!shotIds.has(shotId)) errors.push(`${stepLabel}: unknown shotId ${shotId}`);
 			}
 		}
 	}
