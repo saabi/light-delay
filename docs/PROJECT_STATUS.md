@@ -4,6 +4,7 @@ Fecha de corte: 2026-08-29.
 
 ## Completado
 
+- **Escaleta (outline) opcional:** contrato y UI `/outline/[scriptId]` tolerante a JSON ausente; `npm run report:outline-missing` lista cortes sin archivo. Ver `docs/ESCALETA.md`.
 - **Guion corto — ritmo, causalidad y láser:** 17 escenas, 124 tomas y 30:39,5 de montaje derivado; ocho tripulantes de misión declarados. Ver `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md` y `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
 - **Informes editoriales en web y CLI:** rutas dinámicas `/reports/` y exportación `npm run report:all` (12 informes × 4 guiones) desde un único `report-runner.mjs` compartido.
 - **Deuda visual del animatic:** inventario provisional de 141 candidatos `needs_regeneration` (112 main + 29 tráiler) y 12 placeholders main `needs_replacement`. La producción visual queda bloqueada por guion hasta cerrar causalidad y cobertura; informes en `npm run report:editorial`.
@@ -58,9 +59,10 @@ Fecha de corte: 2026-08-29.
 2. **Festival Cut.** Hay borrador de datos (`data/scripts/light-delay-festival.json`) con 7 escenas y causalidad sincronizada; faltan shot list, takes e imágenes canónicas. El array `sequences` está vacío.
 3. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta auditoría causal final, afinado de ritmo, posibles stills exclusivos de título y audio.
 4. **Cobertura estructural.** Antes de habilitar imágenes deben resolverse por prioridad los placements, propósitos, framing y bindings que afecten continuidad o producción. Festival y largo no pueden figurar como completos mientras no tengan tomas.
-5. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
-6. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
-7. **Retropropagación al corto.** Vega como pista falsa acotada y mayor textura de especialistas son candidatos; requieren decisión narrativa independiente. No retropropagar automáticamente el reparto largo.
+5. **Escaletas por cut.** El contrato y la UI existen; faltan los JSON en `data/outlines/` (informe: `npm run report:outline-missing`). Sembrar desde continuidad causal y `eventCoverage` sin inventar cobertura ausente.
+6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
+7. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
+8. **Retropropagación al corto.** Vega como pista falsa acotada y mayor textura de especialistas son candidatos; requieren decisión narrativa independiente. No retropropagar automáticamente el reparto largo.
 
 ## Notas técnicas recientes
 

@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 
-Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`, `npm run report:editorial`, `npm run report:all`.
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`, `npm run report:editorial`, `npm run report:outline-missing`, `npm run report:all`.
 
 > `npm run extract:legacy` es una herramienta histórica anterior a la arquitectura multi-script. No debe ejecutarse sobre el árbol canónico actual: todavía sobrescribe varios archivos de `data/` con el formato previo. Su aislamiento o retiro está registrado en [`TODO.md`](TODO.md).
 

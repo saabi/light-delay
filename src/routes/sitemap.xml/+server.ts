@@ -13,6 +13,7 @@ export const GET = () => {
 	for (const script of listScripts()) {
 		const id = encodeScriptId(script.id);
 		paths.add(`/script/${id}/`);
+		paths.add(`/outline/${id}/`);
 		paths.add(`/animatic/${id}/`);
 		paths.add(`/compare/${id}/`);
 	}

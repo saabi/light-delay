@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
 const SCRIPTS_DIR = join(DATA, 'scripts');
+const OUTLINES_DIR = join(DATA, 'outlines');
 const IMAGE_STATES = new Set([
 	'current',
 	'needs_review',
@@ -23,6 +24,9 @@ const IMAGE_REASONS = new Set([
 	'quality',
 	'missing_subject'
 ]);
+const OUTLINE_IMPORTANCE = new Set(['required', 'optional']);
+const OUTLINE_STEP_STATUS = new Set(['planned', 'covered', 'missing', 'deferred']);
+const OUTLINE_FILE_STATUS = new Set(['draft', 'reviewed', 'locked']);
 
 function validateImageStatus(status, label, errors) {
 	if (!IMAGE_STATES.has(status.status))
@@ -440,6 +444,69 @@ function main() {
 		}
 	}
 
+	let outlineCount = 0;
+	try {
+		const outlineFiles = readdirSync(OUTLINES_DIR).filter((name) => name.endsWith('.json'));
+		const eventIds = new Set(taxonomy.majorEvents.map((event) => event.id));
+		for (const filename of outlineFiles) {
+			outlineCount += 1;
+			const outline = JSON.parse(readFileSync(join(OUTLINES_DIR, filename), 'utf8'));
+			const label = `outline(${filename})`;
+			if (!outline.schemaVersion) errors.push(`${label}: missing schemaVersion`);
+			if (!outline.outline?.id) errors.push(`${label}: missing outline.id`);
+			if (!outline.outline?.scriptId) errors.push(`${label}: missing outline.scriptId`);
+			else if (!registryIds.has(outline.outline.scriptId)) {
+				errors.push(`${label}: unknown scriptId ${outline.outline.scriptId}`);
+			}
+			if (!outline.outline?.title?.trim()) errors.push(`${label}: missing title`);
+			if (!outline.outline?.version) errors.push(`${label}: missing version`);
+			if (!OUTLINE_FILE_STATUS.has(outline.outline?.status)) {
+				errors.push(`${label}: invalid status ${outline.outline?.status}`);
+			}
+			const script = scriptsById.get(outline.outline?.scriptId);
+			const sceneIds = new Set((script?.scenes || []).map((scene) => scene.id));
+			const beatIds = new Set((script?.beats || []).map((beat) => beat.id));
+			const stepIds = new Set();
+			let previousOrder = -Infinity;
+			for (const step of outline.steps || []) {
+				const stepLabel = `${label}.step(${step?.id || '?'})`;
+				if (!step?.id) {
+					errors.push(`${stepLabel}: missing id`);
+					continue;
+				}
+				if (stepIds.has(step.id)) errors.push(`${label}: duplicate step id ${step.id}`);
+				stepIds.add(step.id);
+				if (typeof step.order !== 'number') errors.push(`${stepLabel}: order must be a number`);
+				else if (step.order <= previousOrder) {
+					errors.push(`${stepLabel}: order must be strictly increasing`);
+				} else previousOrder = step.order;
+				if (!step.title?.trim()) errors.push(`${stepLabel}: missing title`);
+				if (!step.summary?.trim()) errors.push(`${stepLabel}: missing summary`);
+				if (!OUTLINE_IMPORTANCE.has(step.importance)) {
+					errors.push(`${stepLabel}: invalid importance ${step.importance}`);
+				}
+				if (!OUTLINE_STEP_STATUS.has(step.status)) {
+					errors.push(`${stepLabel}: invalid status ${step.status}`);
+				}
+				if (step.majorEventId && !eventIds.has(step.majorEventId)) {
+					errors.push(`${stepLabel}: unknown majorEventId ${step.majorEventId}`);
+				}
+				if (script) {
+					for (const sceneId of step.sceneIds || []) {
+						if (!sceneIds.has(sceneId)) errors.push(`${stepLabel}: unknown sceneId ${sceneId}`);
+					}
+					for (const beatId of step.beatIds || []) {
+						if (!beatIds.has(beatId)) errors.push(`${stepLabel}: unknown beatId ${beatId}`);
+					}
+				}
+			}
+		}
+	} catch (error) {
+		if (error && typeof error === 'object' && 'code' in error && error.code !== 'ENOENT') {
+			errors.push(`outlines: failed to read directory (${String(error)})`);
+		}
+	}
+
 	for (const variant of entityVariants.variants) {
 		if (variant.entity?.kind === 'character' && !characterIds.has(variant.entity.id)) {
 			errors.push(`entityVariant ${variant.id}: unknown character ${variant.entity.id}`);
@@ -515,7 +582,7 @@ function main() {
 	for (const warning of warnings) console.warn(' warning:', warning);
 	const main = scriptsById.get(project.project.canonicalScriptId);
 	console.log(
-		`scripts=${scriptsById.size} scenes(main)=${main?.scenes?.length} shots(main)=${main?.shots?.length} assets=${assets.assets.length}`
+		`scripts=${scriptsById.size} scenes(main)=${main?.scenes?.length} shots(main)=${main?.shots?.length} assets=${assets.assets.length} outlines=${outlineCount}`
 	);
 }
 

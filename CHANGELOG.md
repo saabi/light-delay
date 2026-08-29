@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-29 — Escaleta opcional por guion
+
+- Contrato `OutlineFile` / `data/outlines/` (archivos opcionales), ruta `/outline/[scriptId]` con empty state si falta el JSON, enlace en la navegación y sitemap.
+- Informe offline `npm run report:outline-missing` (también en `report:all`) lista scripts del registry sin escaleta. Documentado en `docs/ESCALETA.md`.
+
 ## 2026-08-29 — Controles de idioma en la navegación del proyecto
 
 - Selectores de diálogo y subtítulos en el rail (`ProjectNav`, bajo el switcher de guion) y siempre visibles en el chrome del player a pantalla completa; eliminados duplicados de la página de guion y del panel de detalles.

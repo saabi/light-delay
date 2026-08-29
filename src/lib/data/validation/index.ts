@@ -1,6 +1,7 @@
 export { validateProject } from './validateProject.ts';
 export { validateScript } from './validateScript.ts';
 export { validateAssets } from './validateAssets.ts';
+export { validateOutline } from './validateOutline.ts';
 export {
 	validateComparisonTaxonomy,
 	validateScriptComparison,
@@ -20,6 +21,7 @@ export {
 import type { ValidationResult } from '$lib/types/common';
 import type { ProjectFile } from '$lib/types/project';
 import type { EntityVariantsFile, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
+import type { OutlineFile } from '$lib/types/outline';
 import type { AssetsFile } from '$lib/types/assets';
 import type {
 	CharactersFile,
@@ -34,6 +36,7 @@ import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import { validateProject } from './validateProject.ts';
 import { validateScript } from './validateScript.ts';
 import { validateAssets } from './validateAssets.ts';
+import { validateOutline } from './validateOutline.ts';
 import {
 	validateCharacters,
 	validateLocations,
@@ -65,6 +68,8 @@ export interface CanonicalDataBundle {
 	narrativeFunctions?: NarrativeFunctionsFile;
 	entityVariants?: EntityVariantsFile;
 	comparisonTaxonomy?: ComparisonTaxonomyFile;
+	/** Optional outlines keyed by scriptId; absent entries are fine. */
+	outlines?: Record<string, OutlineFile>;
 }
 
 export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
@@ -72,6 +77,8 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 	const characterIds = new Set(bundle.characters.characters.map((c) => c.id));
 	const assetIds = new Set(bundle.assets.assets.map((asset) => asset.id));
 	const sourceLanguage = bundle.project.project.languages.sourceLanguage;
+	const registeredScriptIds = new Set(bundle.project.project.scripts.map((s) => s.id));
+	const scriptsById = new Map(scripts.map((s) => [s.script.id, s]));
 
 	const results: ValidationResult[] = [
 		validateProject(bundle.project, { scripts }),
@@ -128,6 +135,18 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 				assetIds
 			})
 		);
+	}
+
+	if (bundle.outlines) {
+		for (const outline of Object.values(bundle.outlines)) {
+			results.push(
+				validateOutline(outline, {
+					registeredScriptIds,
+					script: scriptsById.get(outline.outline.scriptId),
+					taxonomy: bundle.comparisonTaxonomy
+				})
+			);
+		}
 	}
 
 	const ownedIds = new Set<string>();

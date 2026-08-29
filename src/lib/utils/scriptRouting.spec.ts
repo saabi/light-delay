@@ -42,7 +42,7 @@ describe('resolveActiveScriptId', () => {
 });
 
 describe('hrefAfterScriptSwitch', () => {
-	it('keeps script / animatic / player section', () => {
+	it('keeps script / animatic / player / outline section', () => {
 		expect(
 			hrefAfterScriptSwitch('/script/script~light-delay-main-short', festival, { locale: 'en' })
 		).toBe('/script/script~light-delay-festival/');
@@ -54,6 +54,9 @@ describe('hrefAfterScriptSwitch', () => {
 				locale: 'en'
 			})
 		).toBe('/animatic/script~light-delay-festival/player/');
+		expect(
+			hrefAfterScriptSwitch('/outline/script~light-delay-main-short', festival, { locale: 'en' })
+		).toBe('/outline/script~light-delay-festival/');
 	});
 
 	it('defaults to script page on other routes', () => {
@@ -72,5 +75,6 @@ describe('scriptSectionHref', () => {
 		expect(scriptSectionHref('animatic', festival, 'en')).toBe(
 			'/animatic/script~light-delay-festival/'
 		);
+		expect(scriptSectionHref('outline', main, 'en')).toBe('/outline/script~light-delay-main-short/');
 	});
 });

@@ -29,6 +29,7 @@ import type {
 import type { DocumentsFile } from '$lib/types/document';
 import type { ScriptId } from '$lib/types/ids';
 import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
+import type { OutlineCoverageEntry, OutlineFile } from '$lib/types/outline';
 import { assertJsonModule } from '../loaders/loadJson.ts';
 import {
 	localizeComparisonTaxonomy,
@@ -37,6 +38,19 @@ import {
 	localizeScript,
 	localizeScriptRegistryEntries
 } from '../selectors/publicTranslations.ts';
+
+const outlineGlob = import.meta.glob('../../../../data/outlines/*.json', {
+	eager: true,
+	import: 'default'
+}) as Record<string, OutlineFile>;
+
+const OUTLINE_MODULES: Record<string, OutlineFile> = {};
+for (const [path, mod] of Object.entries(outlineGlob)) {
+	const match = path.match(/([^/\\]+)\.json$/);
+	if (!match) continue;
+	const slug = match[1];
+	OUTLINE_MODULES[`script:${slug}`] = assertJsonModule(mod, `outlines/${slug}`);
+}
 
 const SCRIPT_MODULES: Record<string, ScriptFile> = {
 	'script:light-delay-main-short': assertJsonModule(
@@ -100,6 +114,34 @@ export function getScript(scriptId: ScriptId): ScriptFile {
 
 export function getLocalizedScript(scriptId: ScriptId, language: string): ScriptFile {
 	return localizeScript(getScript(scriptId), language);
+}
+
+/** Relative path convention for an outline JSON file (may not exist on disk). */
+export function outlinePathForScript(scriptId: ScriptId): string {
+	return `data/outlines/${slugFromScriptId(scriptId)}.json`;
+}
+
+/** Load outline for a script, or null when the optional JSON is absent. */
+export function getOutline(scriptId: ScriptId): OutlineFile | null {
+	if (!scriptId) return null;
+	return OUTLINE_MODULES[scriptId] ?? null;
+}
+
+export function hasOutline(scriptId: ScriptId): boolean {
+	return getOutline(scriptId) !== null;
+}
+
+export function listOutlineCoverage(): OutlineCoverageEntry[] {
+	return listScripts().map((entry) => {
+		const outline = getOutline(entry.id);
+		return {
+			scriptId: entry.id,
+			label: entry.label,
+			present: outline !== null,
+			stepCount: outline?.steps?.length ?? 0,
+			outlinePath: outlinePathForScript(entry.id)
+		};
+	});
 }
 
 export function getNarrativeFunctions(): NarrativeFunctionsFile {

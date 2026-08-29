@@ -18,6 +18,8 @@ data/
 |   |-- light-delay-long.json
 |   |-- light-delay-festival.json
 |   `-- light-delay-trailer.json
+|-- outlines/                         # optional; one JSON per script when authored
+|   `-- light-delay-<cut>.json
 |-- characters.json
 |-- locations.json
 |-- objects.json
@@ -30,7 +32,7 @@ data/
 `-- comparison-taxonomy.json
 ```
 
-Multi-script architecture (registry, continuities, lineage, character-function reassignment, entity variants, sourceRefs) is defined in `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`. Each cut is an independent `ScriptFile`; shared entities/assets remain project-level.
+Multi-script architecture (registry, continuities, lineage, character-function reassignment, entity variants, sourceRefs) is defined in `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`. Each cut is an independent `ScriptFile`; shared entities/assets remain project-level. Outlines (`OutlineFile`) are optional per script; see `docs/ESCALETA.md`.
 
 ## TypeScript definitions
 
@@ -221,6 +223,42 @@ export interface ProjectFile {
     createdAt?: string;
     updatedAt?: string;
   };
+}
+```
+
+### Outline / escaleta (optional)
+
+Path convention: `data/outlines/<script-slug>.json` where `<script-slug>` is the script id without the `script:` prefix. Missing files are valid; the UI and `validate:data` tolerate absence. When present, the file is validated.
+
+```ts
+export type OutlineImportance = "required" | "optional";
+export type OutlineStepStatus = "planned" | "covered" | "missing" | "deferred";
+export type OutlineFileStatus = "draft" | "reviewed" | "locked";
+
+export interface OutlineStep {
+  id: string; // namespaced to the cut, e.g. main:outline-01
+  order: number; // strict ascending order
+  title: string;
+  summary: string; // what must be made visible / understood
+  importance: OutlineImportance;
+  status: OutlineStepStatus;
+  majorEventId?: string; // → comparison-taxonomy majorEvents
+  sceneIds?: SceneId[];
+  beatIds?: BeatId[];
+  sourceRefs?: SourceReference[];
+  notes?: Note[];
+}
+
+export interface OutlineFile {
+  schemaVersion: string;
+  outline: {
+    id: string; // e.g. outline:light-delay-main-short
+    scriptId: ScriptId;
+    title: string;
+    status: OutlineFileStatus;
+    version: string;
+  };
+  steps: OutlineStep[];
 }
 ```
 

@@ -67,6 +67,9 @@ export function hrefAfterScriptSwitch(
 	if (/^\/animatic(\/[^/]+)?\/?$/.test(localPathname)) {
 		return withLocale(`/animatic/${encoded}`, options.locale);
 	}
+	if (/^\/outline(\/[^/]+)?\/?$/.test(localPathname)) {
+		return withLocale(`/outline/${encoded}`, options.locale);
+	}
 	if (/^\/script(\/[^/]+)?\/?$/.test(localPathname)) {
 		return withLocale(`/script/${encoded}`, options.locale);
 	}
@@ -74,7 +77,7 @@ export function hrefAfterScriptSwitch(
 }
 
 export function scriptSectionHref(
-	section: 'script' | 'animatic',
+	section: 'script' | 'animatic' | 'outline',
 	scriptId: string,
 	locale?: Locale
 ): string {

@@ -15,6 +15,11 @@
 		{ href: withLocale('/project'), label: m.nav_project(), match: '/project' },
 		{ href: scriptSectionHref('script', activeScriptId), label: m.nav_script(), match: '/script' },
 		{
+			href: scriptSectionHref('outline', activeScriptId),
+			label: m.nav_outline(),
+			match: '/outline'
+		},
+		{
 			href: scriptSectionHref('animatic', activeScriptId),
 			label: m.nav_animatic(),
 			match: '/animatic'
