@@ -2,6 +2,7 @@
 	import AnimaticFrame from './AnimaticFrame.svelte';
 	import DurationInput from './DurationInput.svelte';
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
+	import type { ShotReadinessChip } from '$lib/data/selectors/editorialReadiness';
 	import type { ShotDialogueAnalysis } from '$lib/data/selectors/dialogueTiming';
 	import type { Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
@@ -13,6 +14,7 @@
 		durationMs,
 		spokenMs,
 		dialogueFlags,
+		readinessChips = [],
 		playerHref,
 		onduration
 	}: {
@@ -24,6 +26,7 @@
 			ShotDialogueAnalysis,
 			'multiSpeaker' | 'offCameraDialogue' | 'speakerCount'
 		>;
+		readinessChips?: ShotReadinessChip[];
 		playerHref: string;
 		onduration: (ms: number) => void;
 	} = $props();
@@ -49,6 +52,15 @@
 			<DurationInput valueMs={durationMs} onchange={onduration} />
 			<div class="timing">
 				<DurationPair montageMs={durationMs} spokenMs={spokenMs} compact />
+				{#if readinessChips.includes('regenerate')}
+					<span class="flag regen" title={m.readiness_regenerate()}>{m.readiness_regenerate()}</span>
+				{/if}
+				{#if readinessChips.includes('missing_purpose')}
+					<span class="flag" title={m.readiness_missing_purpose()}>{m.readiness_missing_purpose()}</span>
+				{/if}
+				{#if readinessChips.includes('missing_camera')}
+					<span class="flag" title={m.readiness_missing_camera()}>{m.readiness_missing_camera()}</span>
+				{/if}
 				{#if dialogueFlags?.multiSpeaker}
 					<span class="flag" title={m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}>
 						{m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}
@@ -141,6 +153,11 @@
 
 	.flag.off {
 		color: #e8a87c;
+	}
+
+	.flag.regen {
+		color: #f0a060;
+		border-color: #f0a06055;
 	}
 
 	@media (max-width: 620px) {

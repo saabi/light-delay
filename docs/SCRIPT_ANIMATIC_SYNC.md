@@ -11,7 +11,7 @@ El **guion estructurado** (`data/scripts/light-delay-main-short.json`) es la fue
 | Diálogos / subtítulos | 97 cues | 97 subs | 97 placements únicos |
 | Imágenes únicas disponibles | — | 100 PNG | 100 frames + 1 placeholder técnico |
 
-Las escenas 5–8 pasaron de 21 a 33 tomas sin cambiar la duración total. Sus 33 takes conservan frames provisionales marcados en `Take.imageStatus`; hay doce reutilizaciones directas adicionales de assets. El tráiler conserva sus reusos intencionales sin marca de placeholder. No hay cue de diálogo sin placement.
+Todas las tomas del main short y del tráiler están marcadas `needs_regeneration` (canon_mismatch) tras la revisión de orientación de cubiertas y exteriores. Los frames legacy siguen en disco como referencia hasta regenerar. No hay cue de diálogo sin placement.
 
 ## Resumen del matching automático inicial (histórico)
 

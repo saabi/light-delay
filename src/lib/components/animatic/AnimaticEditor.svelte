@@ -10,6 +10,10 @@
 		montageScriptMs
 	} from '$lib/data/selectors/dialogueTiming';
 	import {
+		countScriptTakesNeedingRegeneration,
+		getShotReadinessChips
+	} from '$lib/data/selectors/editorialReadiness';
+	import {
 		durationFromEdits,
 		effectiveTotalMs,
 		loadAnimaticEdits,
@@ -62,6 +66,7 @@
 	const totalMs = $derived(effectiveTotalMs(edits, allShots));
 	const scriptMontageMs = $derived(montageScriptMs(script, edits));
 	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, lang.dialogueLanguage));
+	const regenCount = $derived(countScriptTakesNeedingRegeneration(script));
 
 	function setDuration(shotId: string, ms: number) {
 		const nextLocal = {
@@ -82,7 +87,8 @@
 		<div>
 			<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} />
 			<small>
-				{m.animatic_effective()} {formatClock(totalMs)}
+				{m.animatic_regen_count({ count: regenCount })}
+				· {m.animatic_effective()} {formatClock(totalMs)}
 				{#if targetDurationMs !== undefined}
 					/ {m.animatic_target().toLowerCase()} {formatClock(targetDurationMs)}
 				{/if}
@@ -115,12 +121,14 @@
 				{#each group.shots as shot (shot.id)}
 					{@const shotMontageMs = durationFromEdits(edits, shot.id, shot.durationMs)}
 					{@const shotAnalysis = analyzeShotDialogue(script, shot, lang.dialogueLanguage)}
+					{@const readinessChips = getShotReadinessChips(script, shot)}
 					<ShotCard
 						{shot}
 						media={group.mediaByShotId[shot.id]}
 						durationMs={shotMontageMs}
 						spokenMs={shotAnalysis.spokenMs}
 						dialogueFlags={shotAnalysis}
+						{readinessChips}
 						playerHref={`${playerHref}?shot=${encodeURIComponent(shot.id)}`}
 						onduration={(ms) => setDuration(shot.id, ms)}
 					/>

@@ -178,6 +178,7 @@ export function getShotMedia(scriptOrId: ScriptFile | ScriptId, shot: Shot): Sho
 			? fallback.path
 			: undefined;
 	const provisional =
+		(take?.imageStatus && take.imageStatus.status !== 'current') ||
 		take?.imageStatus?.reasons.includes('placeholder') ||
 		asset?.imageStatus?.reasons.includes('placeholder');
 

@@ -39,12 +39,17 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 
 ## Prioridad media
 
-### Stills definitivos para la secuencia de Zao
+### Regeneración de stills del animatic (141 tomas)
 
-- **Archivos afectados:** los 33 takes con `imageStatus.status = needs_replacement` de las escenas 5–8.
-- **Problema:** las 33 tomas reescritas de las escenas 5–8 —incluidas doce tomas añadidas— reutilizan 21 frames heredados que no representan exactamente vestíbulo, cilindros, tablero cableado, microgravedad o reanimación.
-- **Fuente:** `docs/technical/CELESTIAL_ARDOR.md` y guion principal revisado.
-- **Cierre:** cada take provisional se reemplaza por un still coherente sin cambiar su `shotId`.
+- **Archivos afectados:** todos los takes de `light-delay-main-short.json` (112) y `light-delay-trailer.json` (29).
+- **Problema:** los stills del animatic —interiores y exteriores— no reflejan la orientación actual de la Ardor (cubiertas perpendiculares al progrado) ni la revisión visual de exteriores.
+- **Estado:** cada take tiene `imageStatus.status = needs_regeneration` y `reasons: [canon_mismatch]` con brief de reemplazo.
+- **Informes:** `npm run report:editorial` (cola, completitud, arte faltante, briefs de regeneración).
+- **Cierre:** cada take marcado se sustituye por un still coherente sin cambiar su `shotId`.
+
+### Stills definitivos para la secuencia de Zao (histórico)
+
+- **Nota:** las 33 tomas reescritas de escenas 5–8 ya no usan marca `placeholder`; forman parte de la cola global de 112 tomas del main short.
 
 ### Presupuesto físico del enlace láser
 

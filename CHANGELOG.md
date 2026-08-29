@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-28 — Deuda visual y informes editoriales
+
+- Las 141 tomas del corto principal y del tráiler quedan marcadas en `Take.imageStatus` como `needs_regeneration` / `canon_mismatch` (orientación de cubiertas y revisión visual).
+- Suite de informes editoriales: `report:visual-art`, `report:image-debt`, `report:shot-completeness`, `report:cue-placement`, `report:dialogue-performance`, `report:entity-binding`, `report:scene-polish`, `report:cue-coverage`, `report:take-workflow`, `report:dialogue-i18n`, `report:regen-briefs`; atajo `report:editorial`.
+- Chips de preparación editorial en tarjetas de toma y panel de detalles (regenerar, propósito, cámara).
+
 ## 2026-08-28 — Estimación de diálogo hablado
 
 - Nuevo modelo WPM (ES 150 / EN 160) con multiplicadores de ritmo, suelo de 400 ms y preferencia por `estimatedDurationMs` cuando existe.

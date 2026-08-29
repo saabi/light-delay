@@ -15,6 +15,7 @@
 		analyzeShotDialogue,
 		estimateShotSpokenMs
 	} from '$lib/data/selectors/dialogueTiming';
+	import { getShotReadinessChips } from '$lib/data/selectors/editorialReadiness';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import type { EntityRef, Note } from '$lib/types/common';
 	import type { Cue, CuePlacement, ScriptFile, Shot, SourceReference } from '$lib/types/script';
@@ -54,6 +55,7 @@
 	const imageStatus = $derived(media.take?.imageStatus ?? media.asset?.imageStatus);
 	const shotSpokenMs = $derived(estimateShotSpokenMs(script, shot, lang.dialogueLanguage));
 	const dialogueFlags = $derived(analyzeShotDialogue(script, shot, lang.dialogueLanguage));
+	const readinessChips = $derived(getShotReadinessChips(script, shot));
 
 	function present(value: unknown): string {
 		return editorialValueLabel(value, lang.interfaceLanguage);
@@ -130,10 +132,19 @@
 					<DurationPair montageMs={effectiveDurationMs} spokenMs={shotSpokenMs} />
 				</dd>
 			</div>
-			{#if dialogueFlags.multiSpeaker || dialogueFlags.offCameraDialogue}
+			{#if readinessChips.length || dialogueFlags.multiSpeaker || dialogueFlags.offCameraDialogue}
 				<div>
-					<dt>{m.timing_spoken_short()}</dt>
+					<dt>{m.readiness_label()}</dt>
 					<dd class="flags">
+						{#if readinessChips.includes('regenerate')}
+							<span class="flag">{m.readiness_regenerate()}</span>
+						{/if}
+						{#if readinessChips.includes('missing_purpose')}
+							<span class="flag">{m.readiness_missing_purpose()}</span>
+						{/if}
+						{#if readinessChips.includes('missing_camera')}
+							<span class="flag">{m.readiness_missing_camera()}</span>
+						{/if}
 						{#if dialogueFlags.multiSpeaker}
 							<span class="flag">{m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}</span>
 						{/if}

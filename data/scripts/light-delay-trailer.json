@@ -2565,203 +2565,435 @@
 			"shotId": "trailer:shot-a-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-01-01"
+			"imageAssetId": "asset:animatic-01-01",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-a-02-01",
 			"shotId": "trailer:shot-a-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-01-08"
+			"imageAssetId": "asset:animatic-01-08",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-b-01-01",
 			"shotId": "trailer:shot-b-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-02-04"
+			"imageAssetId": "asset:animatic-02-04",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-b-02-01",
 			"shotId": "trailer:shot-b-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-04-01"
+			"imageAssetId": "asset:animatic-04-01",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-b-03-01",
 			"shotId": "trailer:shot-b-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-14-05"
+			"imageAssetId": "asset:animatic-14-05",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-c-01-01",
 			"shotId": "trailer:shot-c-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-04-02"
+			"imageAssetId": "asset:animatic-04-02",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-c-02-01",
 			"shotId": "trailer:shot-c-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-02"
+			"imageAssetId": "asset:animatic-05-02",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-c-03-01",
 			"shotId": "trailer:shot-c-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-01"
+			"imageAssetId": "asset:animatic-05-01",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-d-01-01",
 			"shotId": "trailer:shot-d-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-05-04"
+			"imageAssetId": "asset:animatic-05-04",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-d-02-01",
 			"shotId": "trailer:shot-d-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-12-08"
+			"imageAssetId": "asset:animatic-12-08",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-d-03-01",
 			"shotId": "trailer:shot-d-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-02"
+			"imageAssetId": "asset:animatic-06-02",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-d-04-01",
 			"shotId": "trailer:shot-d-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-03"
+			"imageAssetId": "asset:animatic-06-03",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-e-01-01",
 			"shotId": "trailer:shot-e-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-04"
+			"imageAssetId": "asset:animatic-06-04",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-e-02-01",
 			"shotId": "trailer:shot-e-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-06-06"
+			"imageAssetId": "asset:animatic-06-06",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-f-01-01",
 			"shotId": "trailer:shot-f-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-03"
+			"imageAssetId": "asset:animatic-07-03",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-f-02-01",
 			"shotId": "trailer:shot-f-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-07-05"
+			"imageAssetId": "asset:animatic-07-05",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-f-03-01",
 			"shotId": "trailer:shot-f-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-08-01"
+			"imageAssetId": "asset:animatic-08-01",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-f-04-01",
 			"shotId": "trailer:shot-f-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-10-01"
+			"imageAssetId": "asset:animatic-10-01",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-g-01-01",
 			"shotId": "trailer:shot-g-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-11-05"
+			"imageAssetId": "asset:animatic-11-05",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-g-02-01",
 			"shotId": "trailer:shot-g-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-12-01"
+			"imageAssetId": "asset:animatic-12-01",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-g-03-01",
 			"shotId": "trailer:shot-g-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-12-02"
+			"imageAssetId": "asset:animatic-12-02",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-g-04-01",
 			"shotId": "trailer:shot-g-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-10-06"
+			"imageAssetId": "asset:animatic-10-06",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-h-01-01",
 			"shotId": "trailer:shot-h-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-14-02"
+			"imageAssetId": "asset:animatic-14-02",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-h-02-01",
 			"shotId": "trailer:shot-h-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-14-04"
+			"imageAssetId": "asset:animatic-14-04",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-h-03-01",
 			"shotId": "trailer:shot-h-03",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-14-06"
+			"imageAssetId": "asset:animatic-14-06",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-h-04-01",
 			"shotId": "trailer:shot-h-04",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-14-05"
+			"imageAssetId": "asset:animatic-14-05",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-h-05-01",
 			"shotId": "trailer:shot-h-05",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-16-01"
+			"imageAssetId": "asset:animatic-16-01",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-i-01-01",
 			"shotId": "trailer:shot-i-01",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-16-03"
+			"imageAssetId": "asset:animatic-16-03",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		},
 		{
 			"id": "trailer:take-i-02-01",
 			"shotId": "trailer:shot-i-02",
 			"number": 1,
 			"status": "selected",
-			"imageAssetId": "asset:animatic-17-06"
+			"imageAssetId": "asset:animatic-17-06",
+			"imageStatus": {
+				"status": "needs_regeneration",
+				"reasons": [
+					"canon_mismatch"
+				],
+				"explanation": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
+				"replacementBrief": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic."
+			}
 		}
 	]
 }

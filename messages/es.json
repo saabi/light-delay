@@ -254,5 +254,10 @@
 	"timing_compare_lede": "Duración de montaje frente a tiempo de diálogo hablado estimado (WPM).",
 	"timing_flag_multi_speaker": "{count} hablantes",
 	"timing_flag_off_camera": "Fuera de cámara",
-	"timing_spoken_over_montage": "El diálogo estimado supera la duración de montaje de esta toma"
+	"timing_spoken_over_montage": "El diálogo estimado supera la duración de montaje de esta toma",
+	"readiness_label": "Preparación editorial",
+	"readiness_regenerate": "Regenerar",
+	"readiness_missing_purpose": "Sin propósito",
+	"readiness_missing_camera": "Sin cámara",
+	"animatic_regen_count": "{count} tomas por regenerar"
 }

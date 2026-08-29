@@ -254,5 +254,10 @@
 	"timing_compare_lede": "Montage length vs estimated spoken dialogue time (WPM).",
 	"timing_flag_multi_speaker": "{count} speakers",
 	"timing_flag_off_camera": "Off camera",
-	"timing_spoken_over_montage": "Estimated dialogue exceeds this shot's montage duration"
+	"timing_spoken_over_montage": "Estimated dialogue exceeds this shot's montage duration",
+	"readiness_label": "Editorial readiness",
+	"readiness_regenerate": "Regenerate",
+	"readiness_missing_purpose": "No purpose",
+	"readiness_missing_camera": "No camera",
+	"animatic_regen_count": "{count} shots to regenerate"
 }
