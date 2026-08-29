@@ -11,7 +11,7 @@
     "version": "0.2.0-draft",
     "status": "draft",
     "kind": "trailer",
-    "targetDurationMs": 90000,
+    "targetDurationMs": 92500,
     "lineage": {
       "sourceScriptId": "script:light-delay-main-short",
       "relationship": "trailer",
@@ -408,7 +408,7 @@
         "trailer:shot-b-02",
         "trailer:shot-b-03"
       ],
-      "targetDurationMs": 10000,
+      "targetDurationMs": 10100,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -460,7 +460,7 @@
         "trailer:shot-c-02",
         "trailer:shot-c-03"
       ],
-      "targetDurationMs": 13000,
+      "targetDurationMs": 13600,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -621,7 +621,7 @@
         "trailer:shot-f-03",
         "trailer:shot-f-04"
       ],
-      "targetDurationMs": 11000,
+      "targetDurationMs": 11200,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -682,7 +682,7 @@
         "trailer:shot-g-03",
         "trailer:shot-g-04"
       ],
-      "targetDurationMs": 11000,
+      "targetDurationMs": 11600,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -743,7 +743,7 @@
         "trailer:shot-h-04",
         "trailer:shot-h-05"
       ],
-      "targetDurationMs": 9000,
+      "targetDurationMs": 10000,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -1922,12 +1922,12 @@
           "en": "85 mm · clear physical support."
         }
       },
-      "durationMs": 3500,
+      "durationMs": 3600,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-b-02",
           "atMs": 0,
-          "durationMs": 3500
+          "durationMs": 3600
         }
       ],
       "takeIds": [
@@ -2145,12 +2145,12 @@
         },
         "movement": "locked"
       },
-      "durationMs": 3000,
+      "durationMs": 3600,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-d-01",
           "atMs": 0,
-          "durationMs": 3000
+          "durationMs": 3600
         }
       ],
       "takeIds": [
@@ -2619,17 +2619,17 @@
           "en": "28 mm · bridge lines isolate your station."
         }
       },
-      "durationMs": 3000,
+      "durationMs": 3200,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-f-03",
           "atMs": 0,
-          "durationMs": 3000
+          "durationMs": 1400
         },
         {
           "cueId": "trailer:cue-f-04",
-          "atMs": 0,
-          "durationMs": 3000
+          "atMs": 1400,
+          "durationMs": 1800
         }
       ],
       "takeIds": [
@@ -2679,22 +2679,22 @@
           "en": "85 mm · wave barely above noise."
         }
       },
-      "durationMs": 3000,
+      "durationMs": 3600,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-g-01",
           "atMs": 0,
-          "durationMs": 3000
+          "durationMs": 1000
         },
         {
           "cueId": "trailer:cue-g-02",
-          "atMs": 0,
-          "durationMs": 3000
+          "atMs": 1000,
+          "durationMs": 900
         },
         {
           "cueId": "trailer:cue-g-03",
-          "atMs": 0,
-          "durationMs": 3000
+          "atMs": 1900,
+          "durationMs": 1700
         }
       ],
       "takeIds": [
@@ -2964,12 +2964,12 @@
           "en": "50 mm · routes already labeled."
         }
       },
-      "durationMs": 1500,
+      "durationMs": 2500,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-h-03",
           "atMs": 0,
-          "durationMs": 1500
+          "durationMs": 2500
         }
       ],
       "takeIds": [

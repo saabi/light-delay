@@ -1,5 +1,7 @@
 # Revisión del trabajo de otro agente (29/08/2026)
 
+> Revisión histórica. La regresión del tráiler, los 57 cues duplicados y los outlines faltantes descritos abajo fueron resueltos después: el generador produce 29 tomas / 92,5 s sin sobra de diálogo, los cues están archivados en `data/archive/` y existen outlines para los cuatro cuts.
+
 Revisión de los commits más recientes en el repositorio (`cd50d01`, `e305369`, `48fc044`, `98bfad4`, `7b49646`, `b3aaaf7`, `2fe9baa`, `f5bfeec`), sin modificar nada — solo lectura, `validate:data`, `validate:docs`, `validate:translations` y los `report:*` para verificar. Resultado general: **trabajo sólido y en su mayoría bien dirigido, con una regresión real que vale la pena corregir.**
 
 ## Lo que funciona bien

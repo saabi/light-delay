@@ -55,7 +55,20 @@ export function resolveLocalized(content, requestedLanguage, projectFallback = '
  * @param {string} _language
  */
 export function localizeScriptDialogue(source, _language) {
-	return source;
+	const language = _language || 'es';
+	const visit = (value) => {
+		if (Array.isArray(value)) return value.map(visit);
+		if (!value || typeof value !== 'object') return value;
+		if (typeof value.es === 'string') {
+			return (
+				value[language] ??
+				value[baseLanguage(language)] ??
+				value.es
+			);
+		}
+		return Object.fromEntries(Object.entries(value).map(([key, child]) => [key, visit(child)]));
+	};
+	return visit(source);
 }
 
 /**

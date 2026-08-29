@@ -8,8 +8,15 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+	assertGeneratedCheck,
+	mergeGeneratedInlineI18n
+} from './lib/generated-inline-i18n.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const out = join(ROOT, 'data/scripts/light-delay-trailer.json');
+const previous = JSON.parse(readFileSync(out, 'utf8'));
+const checkOnly = process.argv.includes('--check');
 const main = JSON.parse(
 	readFileSync(join(ROOT, 'data/scripts/light-delay-main-short.json'), 'utf8')
 );
@@ -83,12 +90,12 @@ const SEGMENTS = [
 		summary: 'Separación, núcleo y saludo; tarjeta PRIMER CONTACTO.',
 		dramaticPurpose: 'Promesa de la misión diplomática.',
 		locationId: 'location:celestial-ardor-bridge',
-		targetDurationMs: 10000,
+		targetDurationMs: 10100,
 		characterIds: ['character:sorell', 'character:voss', 'character:cael', 'character:zao'],
 		shots: [
 			{ mainShotId: 'main:shot-02-04', durationMs: 3000 },
 			{ mainShotId: 'main:shot-04-01', durationMs: 3500 },
-			{ mainShotId: 'main:shot-14-05', durationMs: 3500 }
+			{ mainShotId: 'main:shot-14-05', durationMs: 3600 }
 		]
 	},
 	{
@@ -97,7 +104,7 @@ const SEGMENTS = [
 		summary: 'Zao detecta la rama ejecutable no declarada.',
 		dramaticPurpose: 'Introducir el peligro técnico.',
 		locationId: 'location:diplomatic-core-room',
-		targetDurationMs: 13000,
+		targetDurationMs: 13600,
 		characterIds: ['character:zao'],
 		shots: [
 			{ mainShotId: 'main:shot-04-02', durationMs: 4000 },
@@ -114,7 +121,7 @@ const SEGMENTS = [
 		targetDurationMs: 13000,
 		characterIds: ['character:zao', 'character:harlan'],
 		shots: [
-			{ mainShotId: 'main:shot-05-04', durationMs: 3000 },
+			{ mainShotId: 'main:shot-05-04', durationMs: 3600 },
 			{ mainShotId: 'main:shot-05-07', durationMs: 3500 },
 			{ mainShotId: 'main:shot-06-02', durationMs: 3500 },
 			{ mainShotId: 'main:shot-06-03', durationMs: 3000 }
@@ -139,13 +146,13 @@ const SEGMENTS = [
 		summary: 'Cruce de la garganta; T+23 h; Elin contra reloj.',
 		dramaticPurpose: 'Salto temporal y presión técnica.',
 		locationId: 'location:celestial-ardor-bridge',
-		targetDurationMs: 11000,
+		targetDurationMs: 11200,
 		characterIds: ['character:rao', 'character:voss', 'character:cael'],
 		shots: [
 			{ mainShotId: 'main:shot-07-08', durationMs: 3000 },
 			{ mainShotId: 'main:shot-07-10', durationMs: 3000 },
 			{ mainShotId: 'main:shot-08-01', durationMs: 2000 },
-			{ mainShotId: 'main:shot-10-01', durationMs: 3000 }
+			{ mainShotId: 'main:shot-10-01', durationMs: 3200 }
 		]
 	},
 	{
@@ -154,7 +161,7 @@ const SEGMENTS = [
 		summary: 'Portadora humana; OVR; fragmento de Zao.',
 		dramaticPurpose: 'La advertencia alcanza a la nave.',
 		locationId: 'location:celestial-ardor-bridge',
-		targetDurationMs: 11000,
+		targetDurationMs: 11600,
 		characterIds: [
 			'character:cael',
 			'character:voss',
@@ -163,7 +170,7 @@ const SEGMENTS = [
 			'character:zao'
 		],
 		shots: [
-			{ mainShotId: 'main:shot-11-05', durationMs: 3000 },
+			{ mainShotId: 'main:shot-11-05', durationMs: 3600 },
 			{ mainShotId: 'main:shot-12-01', durationMs: 2500 },
 			{ mainShotId: 'main:shot-12-02', durationMs: 3000 },
 			{ mainShotId: 'main:shot-10-06', durationMs: 2500 }
@@ -175,11 +182,11 @@ const SEGMENTS = [
 		summary: 'Montaje acelerado hacia el umbral Velari.',
 		dramaticPurpose: 'Clímax sin revelar el desenlace.',
 		locationId: 'location:celestial-ardor-bridge',
-		targetDurationMs: 9000,
+		targetDurationMs: 10000,
 		characterIds: ['character:rao', 'character:voss', 'character:cael', 'character:sorell'],
 		shots: [
 			{ mainShotId: 'main:shot-14-02', durationMs: 2000 },
-			{ mainShotId: 'main:shot-14-04', durationMs: 1500 },
+			{ mainShotId: 'main:shot-14-04', durationMs: 2500 },
 			{ mainShotId: 'main:shot-14-06', durationMs: 1500 },
 			{ mainShotId: 'main:shot-14-05', durationMs: 1500 },
 			{ mainShotId: 'main:shot-16-01', durationMs: 2500 }
@@ -268,15 +275,15 @@ for (const [si, seg] of SEGMENTS.entries()) {
 	});
 
 	// Segment-specific cues (trailer brief copy)
-	const addCue = (cue, attachShotIndex = 0) => {
+	const addCue = (cue, attachShotIndex = 0, timing = undefined) => {
 		cues.push(cue);
 		sceneCueIds.push(cue.id);
 		const shotRef = seg.shots[Math.min(attachShotIndex, seg.shots.length - 1)];
 		shotRef._placements = shotRef._placements || [];
 		shotRef._placements.push({
 			cueId: cue.id,
-			atMs: 0,
-			durationMs: Math.min(shotRef.durationMs, 4000)
+			atMs: timing?.atMs ?? 0,
+			durationMs: timing?.durationMs ?? Math.min(shotRef.durationMs, 4000)
 		});
 	};
 
@@ -398,7 +405,8 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'on_screen',
 				'main:cue-10-04'
 			),
-			3
+			3,
+			{ atMs: 0, durationMs: 1400 }
 		);
 		addCue(
 			dialogue(
@@ -410,7 +418,8 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'on_screen',
 				'main:cue-10-04'
 			),
-			3
+			3,
+			{ atMs: 1400, durationMs: 1800 }
 		);
 	}
 	if (seg.key === 'g') {
@@ -424,11 +433,13 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'on_screen',
 				'main:cue-11-06'
 			),
-			0
+			0,
+			{ atMs: 0, durationMs: 1000 }
 		);
 		addCue(
 			dialogue('trailer:cue-g-02', beatId, 2, 'character:voss', '¿De dónde?', 'on_screen', null),
-			0
+			0,
+			{ atMs: 1000, durationMs: 900 }
 		);
 		addCue(
 			dialogue(
@@ -440,7 +451,8 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'on_screen',
 				'main:cue-11-06'
 			),
-			0
+			0,
+			{ atMs: 1900, durationMs: 1700 }
 		);
 		addCue(
 			textCue('trailer:cue-g-04', beatId, 4, 'ORIGEN: LÁSER EXTERIOR / CONTROL LOCAL', 'interface'),
@@ -564,12 +576,12 @@ for (const [si, seg] of SEGMENTS.entries()) {
 	scenes[scenes.length - 1].shotIds = sceneShotIds;
 }
 
-if (totalMs !== 90000) {
-	console.warn(`Warning: total duration ${totalMs}ms (expected 90000)`);
+if (totalMs !== 92500) {
+	throw new Error(`Unexpected total duration ${totalMs}ms (expected 92500)`);
 }
 
 const file = {
-	schemaVersion: '1.0.0',
+	schemaVersion: '1.1.0',
 	script: {
 		id: 'script:light-delay-trailer',
 		projectId: 'project:light-delay',
@@ -578,7 +590,7 @@ const file = {
 		version: '0.2.0-draft',
 		status: 'draft',
 		kind: 'trailer',
-		targetDurationMs: 90000,
+		targetDurationMs: 92500,
 		lineage: {
 			sourceScriptId: 'script:light-delay-main-short',
 			relationship: 'trailer',
@@ -648,8 +660,10 @@ const file = {
 	takes
 };
 
-const out = join(ROOT, 'data/scripts/light-delay-trailer.json');
-writeFileSync(out, JSON.stringify(file, null, 2) + '\n', 'utf8');
+const localizedFile = mergeGeneratedInlineI18n(file, previous);
+const serialized = JSON.stringify(localizedFile, null, 2) + '\n';
+if (checkOnly) assertGeneratedCheck(readFileSync(out, 'utf8'), serialized, 'Trailer JSON');
+else writeFileSync(out, serialized, 'utf8');
 console.log(
-	`Wrote ${out} scenes=${scenes.length} shots=${shots.length} takes=${takes.length} cues=${cues.length} durationMs=${totalMs}`
+	`${checkOnly ? 'Checked' : 'Wrote'} ${out} scenes=${scenes.length} shots=${shots.length} takes=${takes.length} cues=${cues.length} durationMs=${totalMs}`
 );

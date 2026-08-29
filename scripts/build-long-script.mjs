@@ -1,8 +1,15 @@
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {
+	assertGeneratedCheck,
+	mergeGeneratedInlineI18n
+} from './lib/generated-inline-i18n.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const outputPath = join(ROOT, 'data', 'scripts', 'light-delay-long.json');
+const previous = JSON.parse(readFileSync(outputPath, 'utf8'));
+const checkOnly = process.argv.includes('--check');
 const SCRIPT_ID = 'script:light-delay-long';
 const PREFIX = 'long';
 const docRef = () => ({
@@ -486,7 +493,7 @@ const characterIds = [
 ].map((id) => `character:${id}`);
 
 const script = {
-	schemaVersion: '1.0.0',
+	schemaVersion: '1.1.0',
 	script: {
 		id: SCRIPT_ID,
 		projectId: 'project:light-delay',
@@ -535,11 +542,10 @@ const script = {
 	takes: []
 };
 
-writeFileSync(
-	join(ROOT, 'data', 'scripts', 'light-delay-long.json'),
-	`${JSON.stringify(script, null, '\t')}\n`,
-	'utf8'
-);
+const localizedScript = mergeGeneratedInlineI18n(script, previous);
+const serialized = `${JSON.stringify(localizedScript, null, 2)}\n`;
+if (checkOnly) assertGeneratedCheck(readFileSync(outputPath, 'utf8'), serialized, 'Long JSON');
+else writeFileSync(outputPath, serialized, 'utf8');
 console.log(
-	`build:long OK scenes=${scenes.length} beats=${beats.length} crew=${characterIds.length}`
+	`build:long ${checkOnly ? 'check' : 'write'} OK scenes=${scenes.length} beats=${beats.length} crew=${characterIds.length}`
 );
