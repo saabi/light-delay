@@ -21,10 +21,10 @@
 		type AnimaticEdits
 	} from '$lib/state/animatic-overlay';
 	import { getLanguageState } from '$lib/state/language.svelte';
+	import { getCueById, type ShotMedia } from '$lib/data/repositories/lookups';
 	import { formatClock } from '$lib/utils/duration';
 	import type { ScriptId } from '$lib/types/ids';
-	import type { Scene, ScriptFile, Shot } from '$lib/types/script';
-	import type { ShotMedia } from '$lib/data/repositories/lookups';
+	import type { Cue, Scene, ScriptFile, Shot } from '$lib/types/script';
 	import * as m from '$lib/paraglide/messages.js';
 
 	type SceneGroup = {
@@ -122,12 +122,16 @@
 					{@const shotMontageMs = durationFromEdits(edits, shot.id, shot.durationMs)}
 					{@const shotAnalysis = analyzeShotDialogue(script, shot, lang.dialogueLanguage)}
 					{@const readinessChips = getShotReadinessChips(script, shot)}
+					{@const cues: Cue[] = shot.cuePlacements
+						.map((placement) => getCueById(script, placement.cueId))
+						.filter((cue): cue is Cue => cue != null)}
 					<ShotCard
 						{shot}
 						media={group.mediaByShotId[shot.id]}
 						durationMs={shotMontageMs}
 						spokenMs={shotAnalysis.spokenMs}
 						dialogueFlags={shotAnalysis}
+						{cues}
 						{readinessChips}
 						playerHref={`${playerHref}?shot=${encodeURIComponent(shot.id)}`}
 						onduration={(ms) => setDuration(shot.id, ms)}

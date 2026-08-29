@@ -4,7 +4,10 @@
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import type { ShotReadinessChip } from '$lib/data/selectors/editorialReadiness';
 	import type { ShotDialogueAnalysis } from '$lib/data/selectors/dialogueTiming';
-	import type { Shot } from '$lib/types/script';
+	import { getCharacterById } from '$lib/data/repositories/lookups';
+	import { resolveLocalized } from '$lib/data/selectors/index';
+	import { getLanguageState } from '$lib/state/language.svelte';
+	import type { Cue, Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
 	import * as m from '$lib/paraglide/messages.js';
 
@@ -14,6 +17,7 @@
 		durationMs,
 		spokenMs,
 		dialogueFlags,
+		cues = [],
 		readinessChips = [],
 		playerHref,
 		onduration
@@ -26,10 +30,16 @@
 			ShotDialogueAnalysis,
 			'multiSpeaker' | 'offCameraDialogue' | 'speakerCount'
 		>;
+		cues?: Cue[];
 		readinessChips?: ShotReadinessChip[];
 		playerHref: string;
 		onduration: (ms: number) => void;
 	} = $props();
+
+	const lang = $derived(getLanguageState());
+	const dialogueCues = $derived(
+		cues.filter((cue): cue is Extract<Cue, { type: 'dialogue' }> => cue.type === 'dialogue')
+	);
 </script>
 
 <article class="shot-card" id={shot.id} tabindex="-1">
@@ -48,6 +58,28 @@
 			<span class="size">{shot.composition.size}</span>
 		</header>
 		<p class="desc">{shot.description}</p>
+		{#if dialogueCues.length}
+			<section class="dialogue" aria-label={m.animatic_dialogue()}>
+				<h3 class="dialogue-heading">{m.animatic_dialogue()}</h3>
+				<ul class="dialogue-list">
+					{#each dialogueCues as cue (cue.id)}
+						{@const speaker = getCharacterById(cue.speakerId)}
+						{@const resolved = resolveLocalized(cue.content, lang.dialogueLanguage, 'es')}
+						<li>
+							<span class="speaker">
+								{speaker?.shortName ?? speaker?.name ?? cue.speakerId}
+								{#if cue.presentation !== 'on_screen'}
+									<span class="presentation">({cue.presentation})</span>
+								{/if}
+							</span>
+							<span class="line"
+								>{resolved?.value.spokenText ?? m.details_no_variant()}</span
+							>
+						</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
 		<div class="row">
 			<DurationInput valueMs={durationMs} onchange={onduration} />
 			<div class="timing">
@@ -122,6 +154,53 @@
 		margin: 0;
 		color: var(--muted);
 		font-size: 0.9rem;
+	}
+
+	.dialogue {
+		margin: 0;
+	}
+
+	.dialogue-heading {
+		margin: 0 0 0.35rem;
+		color: var(--gold);
+		font: 700 0.68rem var(--font-mono);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.dialogue-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.dialogue-list li {
+		display: flex;
+		flex-direction: column;
+		gap: 0.1rem;
+		min-width: 0;
+	}
+
+	.speaker {
+		color: var(--gold);
+		font: 700 0.72rem var(--font-mono);
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+	}
+
+	.presentation {
+		color: var(--muted);
+		font-weight: 600;
+		text-transform: none;
+	}
+
+	.line {
+		color: var(--ink);
+		font-size: 0.88rem;
+		line-height: 1.35;
 	}
 
 	.row {

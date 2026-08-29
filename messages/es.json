@@ -107,6 +107,7 @@
 	"animatic_source": "Procedencia",
 	"animatic_continuity": "Continuidad",
 	"animatic_take": "Toma",
+	"animatic_dialogue": "Diálogo",
 	"animatic_effective": "efectivo",
 	"animatic_duration_seconds": "Duración (s)",
 	"animatic_player": "Reproductor del animatic",

@@ -107,6 +107,7 @@
 	"animatic_source": "Source",
 	"animatic_continuity": "Continuity",
 	"animatic_take": "Take",
+	"animatic_dialogue": "Dialogue",
 	"animatic_effective": "effective",
 	"animatic_duration_seconds": "Duration (s)",
 	"animatic_player": "Animatic player",

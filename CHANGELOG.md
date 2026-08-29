@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-29 — Diálogo en tarjetas del editor de animatic
+
+- Las tarjetas de toma en `/animatic/[scriptId]` muestran el diálogo localizado (hablante + texto) derivado de los cues colocados; el player no cambia.
+
 ## 2026-08-29 — Sincronización causal y canon multi-script
 
 - Fijadas la cronología maestra (57 h 48 min local, ~23 h 15 min de señal, encuentro remoto T+24 h), la terminología del sistema diplomático y la matriz de conocimiento/causa-efecto en `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
