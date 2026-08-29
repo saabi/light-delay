@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/generation-plan.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "plan", "shots"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "plan": {
+      "type": "object",
+      "required": ["id", "scriptId", "scriptVersion", "sourceDigest", "campaignId", "status", "promptLanguage"],
+      "properties": {
+        "id": { "type": "string" }, "scriptId": { "type": "string" }, "scriptVersion": { "type": "string" },
+        "sourceDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "campaignId": { "type": "string" },
+        "status": { "enum": ["blocked", "draft", "ready", "frozen", "executed"] },
+        "promptLanguage": { "const": "en" },
+        "briefLanguage": { "const": "es" },
+        "generatedAt": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "shots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["shotId", "status", "blockers", "artifacts", "requiredReferences", "segments"],
+        "properties": {
+          "shotId": { "type": "string" }, "status": { "enum": ["blocked", "draft", "ready", "frozen", "generated", "accepted"] },
+          "blockers": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "artifacts": {
+            "type": "object",
+            "required": ["animaticStill"],
+            "properties": {
+              "animaticStill": { "$ref": "#/$defs/artifact" },
+              "firstFrame": { "$ref": "#/$defs/artifact" },
+              "lastFrame": { "$ref": "#/$defs/artifact" },
+              "finalAudio": { "$ref": "#/$defs/artifact" }
+            },
+            "additionalProperties": false
+          },
+          "requiredReferences": { "type": "array", "items": { "$ref": "#/$defs/reference" } },
+          "segments": {
+            "type": "array", "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["id", "startMs", "endMs", "continuation", "promptStatus", "compiledPrompt"],
+              "properties": {
+                "id": { "type": "string" }, "startMs": { "type": "integer", "minimum": 0 }, "endMs": { "type": "integer", "minimum": 1 },
+                "continuation": { "enum": ["none", "accepted_video_and_last_frame", "last_frame_as_next_first"] },
+                "promptStatus": { "enum": ["blocked", "draft", "ready", "frozen"] },
+                "compiledPrompt": { "type": ["string", "null"] }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": ["required", "status"],
+      "properties": { "required": { "type": "boolean" }, "status": { "enum": ["missing", "planned", "generated", "accepted", "rejected"] }, "assetId": { "type": "string" } },
+      "additionalProperties": false
+    },
+    "reference": {
+      "type": "object",
+      "required": ["kind", "id", "required"],
+      "properties": { "kind": { "enum": ["image", "video", "audio"] }, "id": { "type": "string" }, "required": { "type": "boolean" }, "role": { "type": "string" } },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

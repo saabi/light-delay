@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "bindings": [
+    { "schema": "archive.schema.json", "files": ["archive/main-short-unplaced-action-cues.json"] },
+    { "schema": "outline.schema.json", "directories": ["outlines"] },
+    { "schema": "production-contexts.schema.json", "files": ["production/contexts.json"] },
+    { "schema": "provider-capabilities.schema.json", "files": ["production/provider-capabilities.json"] },
+    { "schema": "continuity-ledger.schema.json", "directories": ["continuity"] },
+    { "schema": "generation-plan.schema.json", "directories": ["production/plans"] }
+  ]
+}

@@ -12,8 +12,29 @@ export interface EntityRef {
 }
 
 export interface Note {
-	type: 'story' | 'continuity' | 'performance' | 'camera' | 'sound' | 'vfx' | 'production' | 'todo';
+	id?: string;
+	type:
+		| 'story'
+		| 'continuity'
+		| 'performance'
+		| 'camera'
+		| 'sound'
+		| 'vfx'
+		| 'production'
+		| 'editorial'
+		| 'technical'
+		| 'visual'
+		| 'todo';
 	text: StoryText;
+	status?: 'open' | 'in_progress' | 'resolved' | 'wont_fix';
+	priority?: 'critical' | 'high' | 'medium' | 'low';
+	suggestedAction?: StoryText;
+	acceptanceCriteria?: StoryText;
+	targetPaths?: string[];
+	author?: string;
+	createdAt?: string;
+	updatedAt?: string;
+	/** @deprecated Use status; retained while existing notes migrate gradually. */
 	resolved?: boolean;
 }
 

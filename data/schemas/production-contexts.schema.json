@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/production-contexts.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "contexts", "assignments"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "contexts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "physics", "sourceRefs", "status"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "$ref": "common.schema.json#/$defs/localizedString" },
+          "physics": { "$ref": "common.schema.json#/$defs/localizedString" },
+          "visualRules": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/localizedString" } },
+          "soundRules": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/localizedString" } },
+          "sourceRefs": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/sourceRef" } },
+          "status": { "enum": ["draft", "reviewed", "locked"] },
+          "notes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/note" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["contextId", "scriptId"],
+        "properties": {
+          "contextId": { "type": "string" }, "scriptId": { "type": "string" },
+          "sceneIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "shotIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

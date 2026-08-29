@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/continuity-ledger.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "ledger", "facts", "steps", "knowledgeEvents", "actionRequirements"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "ledger": {
+      "type": "object",
+      "required": ["id", "scriptId", "status", "sourceDocument"],
+      "properties": {
+        "id": { "type": "string" }, "scriptId": { "type": "string" },
+        "status": { "enum": ["draft", "reviewed", "locked", "incomplete"] },
+        "sourceDocument": { "type": "string" },
+        "notes": { "$ref": "common.schema.json#/$defs/localizedString" }
+      },
+      "additionalProperties": false
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "description"],
+        "properties": {
+          "id": { "type": "string" }, "description": { "$ref": "common.schema.json#/$defs/localizedString" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "order", "description", "knowers", "requiresFactIds", "revealsFactIds", "enables", "outlineStepIds"],
+        "properties": {
+          "id": { "type": "string" }, "order": { "type": "integer", "minimum": 1 },
+          "description": { "$ref": "common.schema.json#/$defs/localizedString" },
+          "knowers": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "requiresFactIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "revealsFactIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "enables": { "$ref": "common.schema.json#/$defs/localizedString" },
+          "outlineStepIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "shotIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    },
+    "knowledgeEvents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stepId", "factId", "characterIds"],
+        "properties": {
+          "stepId": { "type": "string" }, "factId": { "type": "string" },
+          "characterIds": { "type": "array", "minItems": 1, "items": { "type": "string" }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    },
+    "actionRequirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stepId", "actorId", "action", "requiresKnownFactIds"],
+        "properties": {
+          "stepId": { "type": "string" }, "actorId": { "type": "string" },
+          "action": { "$ref": "common.schema.json#/$defs/localizedString" },
+          "requiresKnownFactIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

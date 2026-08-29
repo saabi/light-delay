@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/provider-capabilities.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "snapshots", "campaigns"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "snapshots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "provider", "model", "capturedAt", "confidence", "executable", "limits", "source"],
+        "properties": {
+          "id": { "type": "string" }, "provider": { "type": "string" }, "model": { "type": "string" },
+          "capturedAt": { "type": "string", "format": "date" },
+          "confidence": { "enum": ["verified", "provisional", "unknown"] },
+          "executable": { "type": "boolean" },
+          "limits": {
+            "type": "object",
+            "required": ["maxImages", "maxVideos", "maxAudios", "maxTotalReferences"],
+            "properties": {
+              "maxImages": { "type": ["integer", "null"], "minimum": 0 },
+              "maxVideos": { "type": ["integer", "null"], "minimum": 0 },
+              "maxAudios": { "type": ["integer", "null"], "minimum": 0 },
+              "maxTotalReferences": { "type": ["integer", "null"], "minimum": 0 },
+              "maxDurationMs": { "type": ["integer", "null"], "minimum": 1 }
+            },
+            "additionalProperties": false
+          },
+          "source": { "type": "string" }, "notes": { "$ref": "common.schema.json#/$defs/localizedString" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "campaigns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "providerSnapshotId", "maxSegmentMs", "requiresEntitlementPreflight", "noCreditsAllowed"],
+        "properties": {
+          "id": { "type": "string" }, "providerSnapshotId": { "type": "string" },
+          "maxSegmentMs": { "type": "integer", "minimum": 1 },
+          "requiresEntitlementPreflight": { "type": "boolean" }, "noCreditsAllowed": { "type": "boolean" },
+          "concurrency": { "type": ["integer", "null"], "minimum": 1 },
+          "notes": { "$ref": "common.schema.json#/$defs/localizedString" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

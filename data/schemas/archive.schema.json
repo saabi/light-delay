@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/archive.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "archive", "entries"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "archive": {
+      "type": "object",
+      "required": ["id", "sourceScriptId", "sourceScriptVersion", "reason"],
+      "properties": {
+        "id": { "type": "string" },
+        "sourceScriptId": { "type": "string" },
+        "sourceScriptVersion": { "type": "string" },
+        "reason": { "$ref": "common.schema.json#/$defs/localizedString" }
+      },
+      "additionalProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["cueId", "sceneId", "reason", "coveredByShotIds", "originalCue"],
+        "properties": {
+          "cueId": { "type": "string" },
+          "sceneId": { "type": "string" },
+          "reason": { "const": "duplicated_by_shot_descriptions" },
+          "coveredByShotIds": { "type": "array", "minItems": 1, "items": { "type": "string" }, "uniqueItems": true },
+          "originalCue": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

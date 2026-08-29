@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/outline.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "outline", "steps"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "outline": {
+      "type": "object",
+      "required": ["id", "scriptId", "title", "status", "version"],
+      "properties": {
+        "id": { "type": "string" }, "scriptId": { "type": "string" },
+        "title": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "status": { "enum": ["draft", "reviewed", "locked"] }, "version": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "order", "title", "summary", "importance", "status"],
+        "properties": {
+          "id": { "type": "string" }, "order": { "type": "integer", "minimum": 1 },
+          "title": { "$ref": "common.schema.json#/$defs/localizedString" },
+          "summary": { "$ref": "common.schema.json#/$defs/localizedString" },
+          "importance": { "enum": ["required", "optional"] },
+          "status": { "enum": ["planned", "covered", "missing", "deferred"] },
+          "majorEventId": { "type": "string" },
+          "sceneIds": { "$ref": "#/$defs/idList" }, "beatIds": { "$ref": "#/$defs/idList" },
+          "cueIds": { "$ref": "#/$defs/idList" }, "shotIds": { "$ref": "#/$defs/idList" },
+          "dependsOnStepIds": { "$ref": "#/$defs/idList" },
+          "sourceRefs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/sourceRef" } },
+          "notes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/note" } }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": { "idList": { "type": "array", "items": { "type": "string" }, "uniqueItems": true } },
+  "additionalProperties": false
+}

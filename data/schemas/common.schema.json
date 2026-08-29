@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/common.schema.json",
+  "$defs": {
+    "localizedString": {
+      "type": "object",
+      "required": ["es", "en"],
+      "properties": {
+        "es": { "type": "string", "minLength": 1 },
+        "en": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": { "type": "string" }
+    },
+    "sourceRef": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["scriptId"],
+          "properties": {
+            "kind": { "const": "script" },
+            "scriptId": { "type": "string" },
+            "sceneId": { "type": "string" },
+            "beatId": { "type": "string" },
+            "cueId": { "type": "string" },
+            "shotId": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["kind", "documentId"],
+          "properties": {
+            "kind": { "const": "document" },
+            "documentId": { "type": "string" },
+            "anchor": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "note": {
+      "type": "object",
+      "required": ["type", "text"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "type": {
+          "enum": ["story", "continuity", "performance", "camera", "sound", "vfx", "production", "editorial", "technical", "visual", "todo"]
+        },
+        "text": { "$ref": "#/$defs/localizedString" },
+        "status": { "enum": ["open", "in_progress", "resolved", "wont_fix"] },
+        "priority": { "enum": ["critical", "high", "medium", "low"] },
+        "suggestedAction": { "$ref": "#/$defs/localizedString" },
+        "acceptanceCriteria": { "$ref": "#/$defs/localizedString" },
+        "targetPaths": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "author": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" },
+        "resolved": { "type": "boolean", "deprecated": true }
+      },
+      "additionalProperties": false
+    }
+  }
+}
