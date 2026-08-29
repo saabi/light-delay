@@ -9,6 +9,7 @@ import locationsFile from '../../data/locations.json' with { type: 'json' };
 import objectsFile from '../../data/objects.json' with { type: 'json' };
 import vehiclesFile from '../../data/vehicles.json' with { type: 'json' };
 import factionsFile from '../../data/factions.json' with { type: 'json' };
+import englishTranslations from '../../data/translations/public.en.json' with { type: 'json' };
 
 /**
  * @param {{ checkDisk?: (publicPath: string) => boolean }} [options]
@@ -29,8 +30,7 @@ export function createProjectContext(options = {}) {
 		}
 	}
 	const project = projectFile.project;
-	const supportedLangs =
-		project.languages?.supported?.map((l) => l.tag) ?? ['es', 'en'];
+	const supportedLangs = project.languages?.supported?.map((l) => l.tag) ?? ['es', 'en'];
 	const locations = locationsFile.locations ?? [];
 	const locationById = new Map(locations.map((l) => [l.id, l]));
 
@@ -42,6 +42,9 @@ export function createProjectContext(options = {}) {
 		sourceLanguage: project.languages?.sourceLanguage ?? 'es',
 		allScripts: project.scripts.map((s) => s.id),
 		locationById,
+		translationCatalogs: {
+			en: englishTranslations.translations ?? {}
+		},
 		checkDisk: options.checkDisk,
 		diskAuditEnabled: Boolean(options.checkDisk)
 	};

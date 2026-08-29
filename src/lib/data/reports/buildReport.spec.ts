@@ -28,6 +28,23 @@ describe('report-runner', () => {
 		const script = getLocalizedScript(canonical, 'es');
 		const report = buildReport('image-debt', script, 'es', createProjectContext());
 		expect(report.summary.queueCount).toBeGreaterThan(0);
+		expect(report.summary.status).toBe('debt');
+	});
+
+	it('uses the public translation overlay and marks absent production units not applicable', () => {
+		const main = getLocalizedScript(canonical, 'es');
+		const long = getLocalizedScript('script:light-delay-long', 'es');
+		const projectCtx = createProjectContext();
+		expect(buildReport('dialogue-i18n', main, 'es', projectCtx).summary).toMatchObject({
+			status: 'complete',
+			missingVariantCount: 0
+		});
+		expect(buildReport('shot-completeness', long, 'es', projectCtx).summary.status).toBe(
+			'not_applicable'
+		);
+		expect(buildReport('dialogue-i18n', long, 'es', projectCtx).summary.status).toBe(
+			'not_applicable'
+		);
 	});
 
 	it('formats markdown for each report id', () => {

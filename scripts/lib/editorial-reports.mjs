@@ -37,12 +37,7 @@ function shotMediaState(shot, take, asset) {
 }
 
 function reportHeader(title, scriptId, language, generatedAt) {
-	return [
-		`# ${title} — ${scriptId}`,
-		'',
-		`Idioma: **${language}** · Generado: ${generatedAt}`,
-		''
-	];
+	return [`# ${title} — ${scriptId}`, '', `Idioma: **${language}** · Generado: ${generatedAt}`, ''];
 }
 
 // --- Visual art ---
@@ -54,7 +49,30 @@ export function buildVisualArtReport(script, ctx, projectCtx) {
 	const shotsWithoutMedia = [];
 	const entitiesWithoutRaster = [];
 
-	for (const asset of assets) {
+	const usedEntityIds = new Set((script.script.declaredEntityRefs ?? []).map((ref) => ref.id));
+	for (const scene of script.scenes ?? []) {
+		for (const id of scene.characterIds ?? []) usedEntityIds.add(id);
+		if (scene.locationId) usedEntityIds.add(scene.locationId);
+	}
+	for (const shot of script.shots ?? []) {
+		if (shot.locationId) usedEntityIds.add(shot.locationId);
+		for (const ref of [...(shot.visibleRefs ?? []), ...(shot.offScreenCharacterIds ?? [])])
+			usedEntityIds.add(typeof ref === 'string' ? ref : ref.id);
+	}
+	for (const cue of script.cues ?? []) {
+		if (cue.speakerId) usedEntityIds.add(cue.speakerId);
+		for (const ref of [...(cue.participantRefs ?? []), ...(cue.objectRefs ?? [])])
+			usedEntityIds.add(typeof ref === 'string' ? ref : ref.id);
+	}
+	const scopedEntities = entities.filter((entity) => usedEntityIds.has(entity.id));
+	const relevantAssetIds = new Set();
+	for (const entity of scopedEntities)
+		for (const assetId of entity.referenceAssetIds ?? []) relevantAssetIds.add(assetId);
+	for (const take of script.takes ?? [])
+		if (take.imageAssetId) relevantAssetIds.add(take.imageAssetId);
+	const scopedAssets = assets.filter((asset) => relevantAssetIds.has(asset.id));
+
+	for (const asset of scopedAssets) {
 		if (asset.kind !== 'image' || !asset.path) continue;
 		if (!assetPathOnDisk(projectCtx, asset.path)) {
 			missingFiles.push({ assetId: asset.id, path: asset.path });
@@ -92,7 +110,7 @@ export function buildVisualArtReport(script, ctx, projectCtx) {
 		}
 	}
 
-	for (const entity of entities) {
+	for (const entity of scopedEntities) {
 		const refs = entity.referenceAssetIds ?? [];
 		if (!refs.length) {
 			entitiesWithoutRaster.push({ kind: entity.kind, id: entity.id, name: entity.name });
@@ -107,7 +125,7 @@ export function buildVisualArtReport(script, ctx, projectCtx) {
 		}
 	}
 
-	const missingThumbs = assets
+	const missingThumbs = scopedAssets
 		.filter((a) => a.kind === 'image' && a.path?.startsWith('/assets/'))
 		.filter((a) => !a.path.toLowerCase().endsWith('.svg'))
 		.filter((a) => {
@@ -152,10 +170,30 @@ export function formatVisualArtMarkdown(report) {
 		`- Miniaturas faltantes (aviso): **${report.summary.missingThumbCount}**`,
 		''
 	);
-	appendList(lines, 'Archivos ausentes', report.missingFiles, (r) => `\`${r.assetId}\` → ${r.path}`);
-	appendList(lines, 'Referencias desconocidas', report.unknownAssetRefs, (r) => `${r.kind} \`${r.id}\` → ${r.assetId}`);
-	appendList(lines, 'Tomas sin medio', report.shotsWithoutMedia, (r) => `\`${r.shotId}\` (${r.reason})`);
-	appendList(lines, 'Entidades sin raster', report.entitiesWithoutRaster, (r) => `${r.kind} \`${r.id}\` (${r.name})`);
+	appendList(
+		lines,
+		'Archivos ausentes',
+		report.missingFiles,
+		(r) => `\`${r.assetId}\` → ${r.path}`
+	);
+	appendList(
+		lines,
+		'Referencias desconocidas',
+		report.unknownAssetRefs,
+		(r) => `${r.kind} \`${r.id}\` → ${r.assetId}`
+	);
+	appendList(
+		lines,
+		'Tomas sin medio',
+		report.shotsWithoutMedia,
+		(r) => `\`${r.shotId}\` (${r.reason})`
+	);
+	appendList(
+		lines,
+		'Entidades sin raster',
+		report.entitiesWithoutRaster,
+		(r) => `${r.kind} \`${r.id}\` (${r.name})`
+	);
 	return lines.join('\n');
 }
 
@@ -208,7 +246,12 @@ export function buildImageDebtReport(script, ctx, projectCtx) {
 }
 
 export function formatImageDebtMarkdown(report) {
-	const lines = reportHeader('Cola de deuda de imagen', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Cola de deuda de imagen',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
 	lines.push(`- Tomas totales: **${report.summary.takeCount}**`);
 	lines.push(`- En cola (no current): **${report.summary.queueCount}**`);
@@ -216,8 +259,12 @@ export function formatImageDebtMarkdown(report) {
 		lines.push(`- \`${status}\`: ${count}`);
 	}
 	lines.push('');
-	appendList(lines, 'Cola de regeneración / reemplazo', report.queue, (r) =>
-		`**Toma ${r.shotNumber}** (\`${r.takeId}\`) escena ${r.sceneNumber} — ${r.status} [${r.reasons?.join(', ')}]`
+	appendList(
+		lines,
+		'Cola de regeneración / reemplazo',
+		report.queue,
+		(r) =>
+			`**Toma ${r.shotNumber}** (\`${r.takeId}\`) escena ${r.sceneNumber} — ${r.status} [${r.reasons?.join(', ')}]`
 	);
 	return lines.join('\n');
 }
@@ -264,9 +311,16 @@ export function buildShotCompletenessReport(script, ctx) {
 }
 
 export function formatShotCompletenessMarkdown(report) {
-	const lines = reportHeader('Completitud de tomas', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Completitud de tomas',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
-	lines.push(`- Tomas con deuda de metadatos: **${report.summary.flaggedShotCount}** / ${report.summary.shotCount}`);
+	lines.push(
+		`- Tomas con deuda de metadatos: **${report.summary.flaggedShotCount}** / ${report.summary.shotCount}`
+	);
 	for (const [flag, count] of Object.entries(report.summary.flagCounts)) {
 		lines.push(`- \`${flag}\`: ${count}`);
 	}
@@ -336,7 +390,12 @@ export function buildCuePlacementReport(script, ctx) {
 }
 
 export function formatCuePlacementMarkdown(report) {
-	const lines = reportHeader('Colocación de cues', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Colocación de cues',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
 	lines.push(
 		`- Tomas en escena con diálogo pero sin placements de diálogo: **${report.summary.shotsNoDialoguePlacement}**`,
@@ -345,7 +404,12 @@ export function formatCuePlacementMarkdown(report) {
 		`- Cues de acción sin colocar: **${report.summary.unplacedActionCues}**`,
 		''
 	);
-	appendList(lines, 'Acción sin colocar', report.unplacedActionCues, (r) => `\`${r.cueId}\` (escena ${r.sceneId})`);
+	appendList(
+		lines,
+		'Acción sin colocar',
+		report.unplacedActionCues,
+		(r) => `\`${r.cueId}\` (escena ${r.sceneId})`
+	);
 	return lines.join('\n');
 }
 
@@ -402,7 +466,12 @@ export function buildDialoguePerformanceReport(script) {
 }
 
 export function formatDialoguePerformanceMarkdown(report) {
-	const lines = reportHeader('Interpretación y VO', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Interpretación y VO',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
 	lines.push(`- Diálogos sin performance: **${report.summary.missingPerformance}**`);
 	lines.push(`- Performance parcial: **${report.summary.partialPerformance}**`);
@@ -449,10 +518,20 @@ export function buildEntityBindingReport(script, ctx) {
 }
 
 export function formatEntityBindingMarkdown(report) {
-	const lines = reportHeader('Vinculación de entidades', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Vinculación de entidades',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
-	lines.push(`- Tomas sin visibleRefs/offScreen con personajes en escena: **${report.summary.shotsMissingBinding}**`);
-	lines.push(`- Cues de acción sin participantRefs/objectRefs: **${report.summary.actionWithoutRefs}**`, '');
+	lines.push(
+		`- Tomas sin visibleRefs/offScreen con personajes en escena: **${report.summary.shotsMissingBinding}**`
+	);
+	lines.push(
+		`- Cues de acción sin participantRefs/objectRefs: **${report.summary.actionWithoutRefs}**`,
+		''
+	);
 	return lines.join('\n');
 }
 
@@ -466,9 +545,12 @@ export function buildScenePolishReport(script) {
 	const emptyCharacterIds = [];
 
 	for (const scene of script.scenes) {
-		if (!scene.dramaticPurpose?.trim()) missingDramaticPurpose.push({ sceneId: scene.id, number: scene.number });
-		if (!scene.setting?.timeOfDay) missingTimeOfDay.push({ sceneId: scene.id, number: scene.number });
-		if (!scene.setting?.continuity) missingContinuity.push({ sceneId: scene.id, number: scene.number });
+		if (!scene.dramaticPurpose?.trim())
+			missingDramaticPurpose.push({ sceneId: scene.id, number: scene.number });
+		if (!scene.setting?.timeOfDay)
+			missingTimeOfDay.push({ sceneId: scene.id, number: scene.number });
+		if (!scene.setting?.continuity)
+			missingContinuity.push({ sceneId: scene.id, number: scene.number });
 		if (!scene.characterIds?.length && scene.setting?.interiorExterior !== 'EXT') {
 			emptyCharacterIds.push({ sceneId: scene.id, number: scene.number });
 		}
@@ -500,7 +582,12 @@ export function buildScenePolishReport(script) {
 }
 
 export function formatScenePolishMarkdown(report) {
-	const lines = reportHeader('Pulido de escena/beat', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Pulido de escena/beat',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
 	lines.push(`- Escenas sin dramaticPurpose: **${report.summary.missingDramaticPurpose}**`);
 	lines.push(`- Escenas sin timeOfDay: **${report.summary.missingTimeOfDay}**`);
@@ -534,7 +621,9 @@ export function buildCueCoverageReport(script) {
 			byType,
 			soundNotes: soundNotes.length,
 			unusedCueTypes: unusedTypes,
-			consoleLine: `cue types: ${Object.entries(byType).map(([k, v]) => `${k}=${v}`).join(', ')}`
+			consoleLine: `cue types: ${Object.entries(byType)
+				.map(([k, v]) => `${k}=${v}`)
+				.join(', ')}`
 		},
 		byType,
 		soundNotes,
@@ -543,14 +632,21 @@ export function buildCueCoverageReport(script) {
 }
 
 export function formatCueCoverageMarkdown(report) {
-	const lines = reportHeader('Cobertura de cues', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Cobertura de cues',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
 	for (const [type, count] of Object.entries(report.byType)) {
 		lines.push(`- \`${type}\`: ${count}`);
 	}
 	lines.push(`- Notas sound/music en tomas (sin SoundCue): **${report.summary.soundNotes}**`);
 	if (report.unusedCueTypes.length) {
-		lines.push(`- Tipos de cue sin uso: ${report.unusedCueTypes.map((t) => `\`${t}\``).join(', ')}`);
+		lines.push(
+			`- Tipos de cue sin uso: ${report.unusedCueTypes.map((t) => `\`${t}\``).join(', ')}`
+		);
 	}
 	lines.push('');
 	return lines.join('\n');
@@ -594,7 +690,12 @@ export function buildTakeWorkflowReport(script) {
 }
 
 export function formatTakeWorkflowMarkdown(report) {
-	const lines = reportHeader('Flujo de takes', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Flujo de takes',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
 	lines.push(`- Sin generation: **${report.summary.missingGeneration}**`);
 	lines.push(`- Sin review: **${report.summary.missingReview}**`);
@@ -612,7 +713,12 @@ export function buildDialogueI18nReport(script, ctx, projectCtx) {
 
 	for (const cue of script.cues) {
 		if (cue.type !== 'dialogue') continue;
-		const missing = targets.filter((lang) => !cue.content.variants[lang]);
+		const sourceVariant = cue.content.variants[cue.content.sourceLanguage];
+		const sourceText = sourceVariant?.spokenText;
+		const missing = targets.filter((lang) => {
+			if (cue.content.variants[lang]) return false;
+			return !sourceText || !projectCtx.translationCatalogs?.[lang]?.[sourceText];
+		});
 		if (missing.length) {
 			missingVariants.push({ cueId: cue.id, missing });
 		}
@@ -626,18 +732,32 @@ export function buildDialogueI18nReport(script, ctx, projectCtx) {
 			dialogueCount: script.cues.filter((c) => c.type === 'dialogue').length,
 			missingVariantCount: missingVariants.length,
 			targets,
-			consoleLine: `dialogue w/o in-script variants: ${missingVariants.length}`
+			consoleLine: `dialogue without localized variant or overlay entry: ${missingVariants.length}`
 		},
 		missingVariants
 	};
 }
 
 export function formatDialogueI18nMarkdown(report) {
-	const lines = reportHeader('Variantes de diálogo en guion', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Cobertura localizada de diálogo',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
-	lines.push(`- Diálogos sin variantes locales (${report.summary.targets.join(', ')}): **${report.summary.missingVariantCount}**`, '');
-	appendList(lines, 'Detalle', report.missingVariants.slice(0, 40), (r) => `\`${r.cueId}\` falta: ${r.missing.join(', ')}`);
-	if (report.missingVariants.length > 40) lines.push(`_… y ${report.missingVariants.length - 40} más_`, '');
+	lines.push(
+		`- Diálogos sin variante embebida ni entrada en el overlay (${report.summary.targets.join(', ')}): **${report.summary.missingVariantCount}**`,
+		''
+	);
+	appendList(
+		lines,
+		'Detalle',
+		report.missingVariants.slice(0, 40),
+		(r) => `\`${r.cueId}\` falta: ${r.missing.join(', ')}`
+	);
+	if (report.missingVariants.length > 40)
+		lines.push(`_… y ${report.missingVariants.length - 40} más_`, '');
 	return lines.join('\n');
 }
 
@@ -690,7 +810,12 @@ export function buildRegenBriefsReport(script, ctx, projectCtx) {
 }
 
 export function formatRegenBriefsMarkdown(report) {
-	const lines = reportHeader('Briefs de regeneración', report.scriptId, report.language, report.generatedAt);
+	const lines = reportHeader(
+		'Briefs de regeneración',
+		report.scriptId,
+		report.language,
+		report.generatedAt
+	);
 	lines.push('## Resumen', '');
 	lines.push(`- Entradas en cola: **${report.summary.briefCount}**`, '');
 	for (const b of report.briefs) {
@@ -699,7 +824,8 @@ export function formatRegenBriefsMarkdown(report) {
 		lines.push(`- Descripción: ${b.description}`);
 		if (b.purpose) lines.push(`- Propósito: ${b.purpose}`);
 		if (b.replacementBrief) lines.push(`- Brief: ${b.replacementBrief}`);
-		if (b.completenessFlags.length) lines.push(`- Deuda de metadatos: ${b.completenessFlags.join(', ')}`);
+		if (b.completenessFlags.length)
+			lines.push(`- Deuda de metadatos: ${b.completenessFlags.join(', ')}`);
 		if (b.dialogueLines.length) {
 			lines.push('- Diálogo en toma:');
 			for (const d of b.dialogueLines) lines.push(`  - ${d.text}`);
