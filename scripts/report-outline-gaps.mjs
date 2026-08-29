@@ -1,5 +1,5 @@
 /**
- * CLI: required outline steps that are missing/deferred.
+ * CLI: required outline detail steps without coverage for a selected target.
  * Usage: node scripts/report-outline-gaps.mjs [--format md|json|both]
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -21,7 +21,12 @@ function parseFormat(argv) {
 }
 
 const format = parseFormat(process.argv.slice(2));
-const report = buildOutlineGapsReport(ROOT);
+const targetIndex = process.argv.indexOf('--target');
+const inlineTarget = process.argv.find((arg) => arg.startsWith('--target='))?.split('=')[1];
+const target = inlineTarget ?? (targetIndex >= 0 ? process.argv[targetIndex + 1] : 'script');
+if (!['treatment', 'script', 'animatic'].includes(target))
+	throw new Error(`Invalid --target ${target}`);
+const report = buildOutlineGapsReport(ROOT, { target });
 const outDir = join(ROOT, 'reports', 'outline-gaps');
 mkdirSync(outDir, { recursive: true });
 
@@ -37,7 +42,7 @@ if (format === 'md' || format === 'both') {
 }
 
 console.log(
-	`outline-gaps: ${report.summary.requiredGaps} required gaps; ${report.summary.unmetDependencies} unmet deps`
+	`outline-gaps(${target}): ${report.summary.requiredGaps} required gaps; ${report.summary.unmetDependencies} unmet deps`
 );
 for (const row of report.gaps) {
 	console.log(` - ${row.scriptId} ${row.stepId} [${row.status}] ${row.title}`);

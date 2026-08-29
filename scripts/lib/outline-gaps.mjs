@@ -1,92 +1,67 @@
-/**
- * Report required outline steps that are still missing/deferred,
- * and covered steps whose dependencies are not yet covered.
- */
 // @ts-nocheck
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-
-function storyText(value) {
-	if (typeof value === 'string') return value;
-	return value?.es ?? value?.en ?? '';
-}
-
-/**
- * @param {string} root
- * @param {{ project?: unknown }} [options]
- */
+const text = (value) => (typeof value === 'string' ? value : (value?.es ?? value?.en ?? ''));
 export function buildOutlineGapsReport(root, options = {}) {
+	const target = options.target ?? 'script';
 	const project =
-		options.project ??
-		JSON.parse(readFileSync(join(root, 'data', 'project.json'), 'utf8'));
-	const scripts = project.project?.scripts ?? [];
-	const generatedAt = new Date().toISOString();
-	const outlinesDir = join(root, 'data', 'outlines');
-
-	/** @type {Array<{ scriptId: string; label: string; outlinePath: string; stepId: string; title: string; status: string; importance: string }>} */
-	const gaps = [];
-	/** @type {Array<{ scriptId: string; label: string; outlinePath: string; stepId: string; title: string; unmetDependsOn: string[] }>} */
-	const unmetDeps = [];
-	/** @type {string[]} */
-	const withoutOutline = [];
-
-	for (const entry of scripts) {
-		const slug = String(entry.id).replace(/^script:/, '');
-		const outlinePath = `data/outlines/${slug}.json`;
-		const abs = join(root, outlinePath);
+		options.project ?? JSON.parse(readFileSync(join(root, 'data', 'project.json'), 'utf8'));
+	const gaps = [],
+		unmetDeps = [],
+		withoutOutline = [];
+	const dir = join(root, 'data', 'outlines');
+	for (const entry of project.project?.scripts ?? []) {
+		const outlinePath = `data/outlines/${String(entry.id).replace(/^script:/, '')}.json`,
+			abs = join(root, outlinePath);
 		if (!existsSync(abs)) {
 			withoutOutline.push(entry.id);
 			continue;
 		}
-		const outline = JSON.parse(readFileSync(abs, 'utf8'));
-		const byId = new Map((outline.steps || []).map((step) => [step.id, step]));
-		for (const step of outline.steps || []) {
-			if (
-				step.importance === 'required' &&
-				(step.status === 'planned' || step.status === 'missing' || step.status === 'deferred')
-			) {
+		const outline = JSON.parse(readFileSync(abs, 'utf8')),
+			byId = new Map(outline.steps.map((s) => [s.id, s]));
+		for (const step of outline.steps.filter((s) => s.level === 'detail')) {
+			const state = step.coverage?.[target]?.status ?? 'not_started';
+			if (step.importance === 'required' && !['covered', 'not_applicable'].includes(state))
 				gaps.push({
 					scriptId: entry.id,
-					label: storyText(entry.label),
+					label: text(entry.label),
 					outlinePath,
 					stepId: step.id,
-					title: storyText(step.title),
-					status: step.status,
+					parentStepId: step.parentStepId,
+					title: text(step.title),
+					status: state,
 					importance: step.importance
 				});
-			}
-			if (step.status === 'covered' && Array.isArray(step.dependsOnStepIds)) {
-				const unmet = step.dependsOnStepIds.filter((id) => {
-					const dep = byId.get(id);
-					return !dep || dep.status !== 'covered';
-				});
-				if (unmet.length) {
+			if (state === 'covered') {
+				const unmet = (step.causalLinks ?? [])
+					.map((l) => l.sourceStepId)
+					.filter(
+						(id) =>
+							!['covered', 'not_applicable'].includes(byId.get(id)?.coverage?.[target]?.status)
+					);
+				if (unmet.length)
 					unmetDeps.push({
 						scriptId: entry.id,
-						label: storyText(entry.label),
+						label: text(entry.label),
 						outlinePath,
 						stepId: step.id,
-						title: storyText(step.title),
+						title: text(step.title),
 						unmetDependsOn: unmet
 					});
-				}
 			}
 		}
 	}
-
-	let outlineFileCount = 0;
+	let count = 0;
 	try {
-		outlineFileCount = readdirSync(outlinesDir).filter((name) => name.endsWith('.json')).length;
-	} catch {
-		outlineFileCount = 0;
-	}
-
+		count = readdirSync(dir).filter((n) => n.endsWith('.json')).length;
+	} catch {}
 	return {
 		reportId: 'outline-gaps',
-		generatedAt,
+		generatedAt: new Date().toISOString(),
+		target,
 		summary: {
-			scripts: scripts.length,
-			outlinesPresent: outlineFileCount,
+			scripts: project.project?.scripts?.length ?? 0,
+			outlinesPresent: count,
 			withoutOutline: withoutOutline.length,
 			requiredGaps: gaps.length,
 			unmetDependencies: unmetDeps.length
@@ -96,52 +71,43 @@ export function buildOutlineGapsReport(root, options = {}) {
 		unmetDeps
 	};
 }
-
-/**
- * @param {ReturnType<typeof buildOutlineGapsReport>} report
- */
 export function formatOutlineGapsMarkdown(report) {
 	const lines = [
 		'# Outline gaps',
 		'',
 		`Generated: ${report.generatedAt}`,
+		`Target: **${report.target}**`,
 		'',
-		`Scripts: **${report.summary.scripts}** · outlines present: **${report.summary.outlinesPresent}** · without file: **${report.summary.withoutOutline}** · required gaps: **${report.summary.requiredGaps}** · unmet deps on covered steps: **${report.summary.unmetDependencies}**`,
+		`Scripts: **${report.summary.scripts}** · outlines present: **${report.summary.outlinesPresent}** · without file: **${report.summary.withoutOutline}** · required gaps: **${report.summary.requiredGaps}** · unmet causal prerequisites: **${report.summary.unmetDependencies}**`,
 		'',
-		'## Required steps not covered',
+		'## Required detail steps not covered',
 		''
 	];
-
-	if (report.gaps.length === 0) {
-		lines.push('_None._', '');
-	} else {
-		lines.push('| Script | Step | Status | Title |', '| --- | --- | --- | --- |');
-		for (const row of report.gaps) {
+	if (!report.gaps.length) lines.push('_None._', '');
+	else {
+		lines.push(
+			'| Script | Story parent | Detail | Status | Title |',
+			'| --- | --- | --- | --- | --- |'
+		);
+		for (const r of report.gaps)
 			lines.push(
-				`| \`${row.scriptId}\` | \`${row.stepId}\` | ${row.status} | ${row.title.replace(/\|/g, '\\|')} |`
+				`| \`${r.scriptId}\` | \`${r.parentStepId ?? ''}\` | \`${r.stepId}\` | ${r.status} | ${r.title.replace(/\|/g, '\\|')} |`
 			);
-		}
 		lines.push('');
 	}
-
-	lines.push('## Covered steps with unmet dependsOnStepIds', '');
-	if (report.unmetDeps.length === 0) {
-		lines.push('_None._', '');
-	} else {
-		lines.push('| Script | Step | Unmet deps |', '| --- | --- | --- |');
-		for (const row of report.unmetDeps) {
-			lines.push(
-				`| \`${row.scriptId}\` | \`${row.stepId}\` | ${row.unmetDependsOn.map((id) => `\`${id}\``).join(', ')} |`
-			);
-		}
-		lines.push('');
-	}
-
+	lines.push('## Covered details with unmet causal prerequisites', '');
+	if (!report.unmetDeps.length) lines.push('_None._', '');
+	else
+		for (const r of report.unmetDeps)
+			lines.push(`- \`${r.stepId}\`: ${r.unmetDependsOn.map((id) => `\`${id}\``).join(', ')}`);
 	if (report.withoutOutline.length) {
-		lines.push('## Scripts without outline file', '');
-		for (const id of report.withoutOutline) lines.push(`- \`${id}\``);
-		lines.push('');
+		lines.push(
+			'',
+			'## Scripts without outline',
+			'',
+			...report.withoutOutline.map((id) => `- \`${id}\``),
+			''
+		);
 	}
-
 	return lines.join('\n');
 }

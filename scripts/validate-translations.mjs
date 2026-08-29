@@ -67,10 +67,7 @@ function checkScript(file, filename) {
 	}
 	for (const [index, event] of (file.script?.comparisonProfile?.eventCoverage ?? []).entries()) {
 		if (event.note != null)
-			checkLocalized(
-				event.note,
-				`${root}.script.comparisonProfile.eventCoverage[${index}].note`
-			);
+			checkLocalized(event.note, `${root}.script.comparisonProfile.eventCoverage[${index}].note`);
 	}
 	for (const item of file.acts ?? []) {
 		if (item.title != null) checkLocalized(item.title, `${root}.${item.id}.title`);
@@ -135,10 +132,7 @@ function checkScript(file, filename) {
 				checkLocalized(item.camera[key], `${root}.${item.id}.camera.${key}`);
 		}
 		if (item.transitionIn?.description != null)
-			checkLocalized(
-				item.transitionIn.description,
-				`${root}.${item.id}.transitionIn.description`
-			);
+			checkLocalized(item.transitionIn.description, `${root}.${item.id}.transitionIn.description`);
 		if (item.transitionOut?.description != null)
 			checkLocalized(
 				item.transitionOut.description,
@@ -162,9 +156,12 @@ function checkScript(file, filename) {
 function checkOutline(file, filename) {
 	const root = `outlines/${filename}`;
 	checkLocalized(file.outline?.title, `${root}.outline.title`);
+	checkLocalized(file.outline?.synopsis, `${root}.outline.synopsis`);
 	for (const step of file.steps ?? []) {
 		checkLocalized(step.title, `${root}.${step.id}.title`);
 		checkLocalized(step.summary, `${root}.${step.id}.summary`);
+		for (const link of step.causalLinks ?? [])
+			checkLocalized(link.explanation, `${root}.${step.id}.causalLinks.explanation`);
 		checkNotes(step.notes, `${root}.${step.id}`);
 	}
 }
@@ -207,7 +204,9 @@ for (const item of [...taxonomy.canonDimensions, ...taxonomy.majorEvents]) {
 		checkLocalized(item.description, `comparison.${item.id}.description`);
 }
 
-const functions = JSON.parse(readFileSync(join(DATA, 'narrative-functions.json'), 'utf8')).functions;
+const functions = JSON.parse(
+	readFileSync(join(DATA, 'narrative-functions.json'), 'utf8')
+).functions;
 for (const item of functions) {
 	checkLocalized(item.label, `functions.${item.id}.label`);
 	if (item.description != null)
@@ -257,8 +256,7 @@ if (!sourceLocalizedString(sampleTitle, SOURCE)) {
 	invalidShape.push('project.scripts[0].label: unreadable LocalizedString');
 }
 
-const failed =
-	missingSource.length > 0 || missingTarget.length > 0 || invalidShape.length > 0;
+const failed = missingSource.length > 0 || missingTarget.length > 0 || invalidShape.length > 0;
 
 console.log(
 	JSON.stringify(

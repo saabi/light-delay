@@ -7,10 +7,11 @@
     "schemaVersion": { "type": "string" },
     "outline": {
       "type": "object",
-      "required": ["id", "scriptId", "title", "status", "version"],
+      "required": ["id", "scriptId", "title", "synopsis", "status", "version"],
       "properties": {
         "id": { "type": "string" }, "scriptId": { "type": "string" },
         "title": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "synopsis": { "$ref": "common.schema.json#/$defs/localizedString" },
         "status": { "enum": ["draft", "reviewed", "locked"] }, "version": { "type": "string" }
       },
       "additionalProperties": false
@@ -19,13 +20,37 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "order", "title", "summary", "importance", "status"],
+        "required": ["id", "level", "order", "title", "summary", "importance"],
         "properties": {
           "id": { "type": "string" }, "order": { "type": "integer", "minimum": 1 },
+          "level": { "enum": ["story", "detail"] },
+          "parentStepId": { "type": "string" },
           "title": { "$ref": "common.schema.json#/$defs/localizedString" },
           "summary": { "$ref": "common.schema.json#/$defs/localizedString" },
           "importance": { "enum": ["required", "optional"] },
           "status": { "enum": ["planned", "covered", "missing", "deferred"] },
+          "causalLinks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["sourceStepId", "relation", "explanation"],
+              "properties": {
+                "sourceStepId": { "type": "string" },
+                "relation": { "enum": ["enables", "motivates", "reveals", "forces", "prevents", "pays_off"] },
+                "explanation": { "$ref": "common.schema.json#/$defs/localizedString" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "coverage": {
+            "type": "object",
+            "properties": {
+              "treatment": { "$ref": "#/$defs/coverageEvidence" },
+              "script": { "$ref": "#/$defs/coverageEvidence" },
+              "animatic": { "$ref": "#/$defs/coverageEvidence" }
+            },
+            "additionalProperties": false
+          },
           "majorEventId": { "type": "string" },
           "sceneIds": { "$ref": "#/$defs/idList" }, "beatIds": { "$ref": "#/$defs/idList" },
           "cueIds": { "$ref": "#/$defs/idList" }, "shotIds": { "$ref": "#/$defs/idList" },
@@ -37,6 +62,21 @@
       }
     }
   },
-  "$defs": { "idList": { "type": "array", "items": { "type": "string" }, "uniqueItems": true } },
+  "$defs": {
+    "idList": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "coverageEvidence": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["not_started", "partial", "covered", "deferred", "not_applicable"] },
+        "sourceRefs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/sourceRef" } },
+        "sceneIds": { "$ref": "#/$defs/idList" },
+        "beatIds": { "$ref": "#/$defs/idList" },
+        "cueIds": { "$ref": "#/$defs/idList" },
+        "shotIds": { "$ref": "#/$defs/idList" }
+      },
+      "additionalProperties": false
+    }
+  },
   "additionalProperties": false
 }

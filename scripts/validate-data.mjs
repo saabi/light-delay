@@ -26,7 +26,22 @@ const IMAGE_REASONS = new Set([
 	'missing_subject'
 ]);
 const OUTLINE_IMPORTANCE = new Set(['required', 'optional']);
-const OUTLINE_STEP_STATUS = new Set(['planned', 'covered', 'missing', 'deferred']);
+const OUTLINE_LEVEL = new Set(['story', 'detail']);
+const OUTLINE_RELATION = new Set([
+	'enables',
+	'motivates',
+	'reveals',
+	'forces',
+	'prevents',
+	'pays_off'
+]);
+const OUTLINE_COVERAGE_STATUS = new Set([
+	'not_started',
+	'partial',
+	'covered',
+	'deferred',
+	'not_applicable'
+]);
 const OUTLINE_FILE_STATUS = new Set(['draft', 'reviewed', 'locked']);
 
 function validateImageStatus(status, label, errors) {
@@ -458,6 +473,8 @@ function main() {
 			}
 			if (!sourceLocalizedString(outline.outline?.title)?.trim())
 				errors.push(`${label}: missing title`);
+			if (!sourceLocalizedString(outline.outline?.synopsis)?.trim())
+				errors.push(`${label}: missing synopsis`);
 			if (!outline.outline?.version) errors.push(`${label}: missing version`);
 			if (!OUTLINE_FILE_STATUS.has(outline.outline?.status)) {
 				errors.push(`${label}: invalid status ${outline.outline?.status}`);
@@ -466,7 +483,7 @@ function main() {
 			const sceneIds = new Set((script?.scenes || []).map((scene) => scene.id));
 			const beatIds = new Set((script?.beats || []).map((beat) => beat.id));
 			const stepIds = new Set();
-			let previousOrder = -Infinity;
+			const ordersByLevel = new Map();
 			for (const step of outline.steps || []) {
 				const stepLabel = `${label}.step(${step?.id || '?'})`;
 				if (!step?.id) {
@@ -475,18 +492,25 @@ function main() {
 				}
 				if (stepIds.has(step.id)) errors.push(`${label}: duplicate step id ${step.id}`);
 				stepIds.add(step.id);
+				if (!OUTLINE_LEVEL.has(step.level))
+					errors.push(`${stepLabel}: invalid level ${step.level}`);
 				if (typeof step.order !== 'number') errors.push(`${stepLabel}: order must be a number`);
-				else if (step.order <= previousOrder) {
-					errors.push(`${stepLabel}: order must be strictly increasing`);
-				} else previousOrder = step.order;
+				else {
+					const orders = ordersByLevel.get(step.level) || new Set();
+					if (orders.has(step.order))
+						errors.push(`${stepLabel}: duplicate ${step.level} order ${step.order}`);
+					orders.add(step.order);
+					ordersByLevel.set(step.level, orders);
+				}
 				if (!sourceLocalizedString(step.title)?.trim()) errors.push(`${stepLabel}: missing title`);
 				if (!sourceLocalizedString(step.summary)?.trim())
 					errors.push(`${stepLabel}: missing summary`);
 				if (!OUTLINE_IMPORTANCE.has(step.importance)) {
 					errors.push(`${stepLabel}: invalid importance ${step.importance}`);
 				}
-				if (!OUTLINE_STEP_STATUS.has(step.status)) {
-					errors.push(`${stepLabel}: invalid status ${step.status}`);
+				for (const [target, evidence] of Object.entries(step.coverage || {})) {
+					if (!OUTLINE_COVERAGE_STATUS.has(evidence?.status))
+						errors.push(`${stepLabel}: invalid ${target} coverage ${evidence?.status}`);
 				}
 				if (step.majorEventId && !eventIds.has(step.majorEventId)) {
 					errors.push(`${stepLabel}: unknown majorEventId ${step.majorEventId}`);
@@ -503,6 +527,25 @@ function main() {
 			for (const step of outline.steps || []) {
 				if (!step?.id) continue;
 				const stepLabel = `${label}.step(${step.id})`;
+				if (step.level === 'detail' && !step.parentStepId)
+					errors.push(`${stepLabel}: detail requires parentStepId`);
+				if (step.level === 'story' && step.parentStepId)
+					errors.push(`${stepLabel}: story cannot have parentStepId`);
+				if (step.parentStepId) {
+					const parent = (outline.steps || []).find(
+						(candidate) => candidate.id === step.parentStepId
+					);
+					if (!parent || parent.level !== 'story')
+						errors.push(`${stepLabel}: invalid parentStepId ${step.parentStepId}`);
+				}
+				for (const link of step.causalLinks || []) {
+					if (!stepIds.has(link.sourceStepId))
+						errors.push(`${stepLabel}: unknown causal source ${link.sourceStepId}`);
+					if (!OUTLINE_RELATION.has(link.relation))
+						errors.push(`${stepLabel}: invalid causal relation ${link.relation}`);
+					if (!sourceLocalizedString(link.explanation)?.trim())
+						errors.push(`${stepLabel}: causal explanation required`);
+				}
 				for (const depId of step.dependsOnStepIds || []) {
 					if (depId === step.id) {
 						errors.push(`${stepLabel}: dependsOnStepIds cannot reference itself`);

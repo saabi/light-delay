@@ -32,11 +32,7 @@ function resolveText(
 	return translatePublicText(value, language, sourceLanguage);
 }
 
-function resolveRequired(
-	value: StoryText | undefined,
-	language: string,
-	fallback = ''
-): string {
+function resolveRequired(value: StoryText | undefined, language: string, fallback = ''): string {
 	return resolveText(value, language) ?? fallback;
 }
 
@@ -96,8 +92,7 @@ export function localizeScript(source: ScriptFile, language: string): ScriptFile
 		cue.notes = translateNotes(cue.notes, language);
 		if (cue.type === 'action') cue.text = resolveRequired(cue.text, language);
 		else if (cue.type === 'dialogue') {
-			if (cue.performance?.emotion != null)
-				cue.performance.emotion = t(cue.performance.emotion);
+			if (cue.performance?.emotion != null) cue.performance.emotion = t(cue.performance.emotion);
 			if (cue.performance?.intention != null)
 				cue.performance.intention = t(cue.performance.intention);
 		} else if (cue.type === 'sound' || cue.type === 'music') {
@@ -157,10 +152,7 @@ export function localizeAsset(source: Asset, language: string): Asset {
 	if (asset.imageStatus?.explanation != null)
 		asset.imageStatus.explanation = resolveText(asset.imageStatus.explanation, language);
 	if (asset.imageStatus?.replacementBrief != null)
-		asset.imageStatus.replacementBrief = resolveText(
-			asset.imageStatus.replacementBrief,
-			language
-		);
+		asset.imageStatus.replacementBrief = resolveText(asset.imageStatus.replacementBrief, language);
 	return asset;
 }
 
@@ -193,9 +185,7 @@ export function localizeEntityVariants(source: EntityVariant[], language: string
 		...variant,
 		label: resolveRequired(variant.label, language),
 		roleOverride: resolveText(variant.roleOverride, language),
-		traitsOverride: variant.traitsOverride?.map(
-			(value) => resolveRequired(value, language)
-		),
+		traitsOverride: variant.traitsOverride?.map((value) => resolveRequired(value, language)),
 		biographyOverride: resolveText(variant.biographyOverride, language),
 		descriptionOverride: resolveText(variant.descriptionOverride, language),
 		appearanceOverride: resolveText(variant.appearanceOverride, language),
@@ -207,9 +197,13 @@ export function localizeEntityVariants(source: EntityVariant[], language: string
 export function localizeOutline(source: OutlineFile, language: string): OutlineFile {
 	const file = structuredClone(source);
 	file.outline.title = resolveRequired(file.outline.title, language);
+	file.outline.synopsis = resolveRequired(file.outline.synopsis, language);
 	for (const step of file.steps) {
 		step.title = resolveRequired(step.title, language);
 		step.summary = resolveRequired(step.summary, language);
+		for (const link of step.causalLinks ?? []) {
+			link.explanation = resolveRequired(link.explanation, language);
+		}
 		step.notes = translateNotes(step.notes, language);
 	}
 	return file;

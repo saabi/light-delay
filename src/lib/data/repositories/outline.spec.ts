@@ -48,33 +48,61 @@ describe('outlines (optional)', () => {
 		expect(typeof localized.steps[0]?.title).toBe('string');
 	});
 
-	it('validateOutline accepts dependsOnStepIds within the file', () => {
+	it('validateOutline accepts hierarchy, causal explanations, and optional coverage', () => {
 		const file: OutlineFile = {
-			schemaVersion: '1.1.0',
+			schemaVersion: '1.2.0',
 			outline: {
 				id: 'outline:light-delay-main-short',
 				scriptId: 'script:light-delay-main-short',
 				title: { es: 'Test', en: 'Test' },
+				synopsis: { es: 'Una cadena causal verificable.', en: 'A verifiable causal chain.' },
 				status: 'draft',
 				version: '0.0.1'
 			},
 			steps: [
 				{
-					id: 'main:outline-01',
+					id: 'main:story-01',
+					level: 'story',
 					order: 1,
 					title: { es: 'Arrival', en: 'Arrival' },
 					summary: { es: 'Crew arrives', en: 'Crew arrives' },
-					importance: 'required',
-					status: 'planned'
+					importance: 'required'
 				},
 				{
-					id: 'main:outline-02',
+					id: 'main:story-02',
+					level: 'story',
 					order: 2,
 					title: { es: 'Payoff', en: 'Payoff' },
 					summary: { es: 'Depends on arrival', en: 'Depends on arrival' },
 					importance: 'required',
-					status: 'planned',
-					dependsOnStepIds: ['main:outline-01']
+					causalLinks: [
+						{
+							sourceStepId: 'main:story-01',
+							relation: 'enables',
+							explanation: {
+								es: 'La llegada habilita la acción.',
+								en: 'Arrival enables the action.'
+							}
+						}
+					]
+				},
+				{
+					id: 'main:outline-01',
+					level: 'detail',
+					parentStepId: 'main:story-01',
+					order: 1,
+					title: { es: 'Detalle', en: 'Detail' },
+					summary: { es: 'La tripulación desembarca.', en: 'The crew disembarks.' },
+					importance: 'required'
+				},
+				{
+					id: 'main:outline-02',
+					level: 'detail',
+					parentStepId: 'main:story-02',
+					order: 2,
+					title: { es: 'Evidencia', en: 'Evidence' },
+					summary: { es: 'La llegada deja evidencia.', en: 'Arrival leaves evidence.' },
+					importance: 'required'
 				}
 			]
 		};
@@ -82,6 +110,17 @@ describe('outlines (optional)', () => {
 			registeredScriptIds: new Set(listScripts().map((s) => s.id))
 		});
 		expect(result.ok).toBe(true);
+	});
+
+	it('rejects detail steps without a story parent', () => {
+		const source = structuredClone(getOutline(festivalId)!);
+		const detail = source.steps.find((step) => step.level === 'detail')!;
+		delete detail.parentStepId;
+		const result = validateOutline(source, {
+			registeredScriptIds: new Set(listScripts().map((s) => s.id))
+		});
+		expect(result.ok).toBe(false);
+		expect(result.errors.some((error) => error.includes('requires parentStepId'))).toBe(true);
 	});
 });
 
