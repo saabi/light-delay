@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "ledger": { "id": "ledger:light-delay-long", "scriptId": "script:light-delay-long", "status": "incomplete", "sourceDocument": "docs/CONTINUIDAD_CAUSAL_GUIONES.md", "notes": { "es": "Tratamiento sin cues, tomas ni placements; no se infiere cobertura desde la prosa.", "en": "Treatment without cues, shots, or placements; coverage is not inferred from prose." } },
+  "facts": [],
+  "steps": [],
+  "knowledgeEvents": [],
+  "actionRequirements": []
+}

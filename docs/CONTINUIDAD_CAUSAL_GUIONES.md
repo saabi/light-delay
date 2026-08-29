@@ -23,10 +23,12 @@ Estado de revisión: vigente desde 2026-08-29. Este documento registra qué info
 | Guion | Tripulación de misión | Obligaciones de continuidad | Estado visual |
 | --- | ---: | --- | --- |
 | Corto canónico | 8: Zao, Voss, Harlan, Elin, Sorell, Cael, Okoye y Keene | Conserva la cadena completa y los 124 IDs de toma. La broma de Cael aparece en escena 1. | Bloqueado hasta cerrar texto, placements, cobertura y auditoría causal del propio corto. |
-| Festival | 6: Zao, Voss, Harlan, Elin, Sorell y Okoye | Elin absorbe pilotaje/comunicaciones de Cael. La compresión no puede volver sospechosa a Sorell ni hacer que Elin improvise la cuarentena al oír el mensaje. Sin broma. | Bloqueado: no tiene shot list ni takes. |
+| Festival | 6: Zao, Voss, Harlan, Elin, Sorell y Okoye | Elin absorbe pilotaje/comunicaciones de Cael. La compresión no puede volver sospechosa a Sorell ni hacer que Elin improvise la cuarentena al oír el mensaje. Sin broma. | Bloqueado: A–D tienen 35 tomas/takes; E–G siguen planificadas y sin cobertura. |
 | Tráiler | 6: Zao, Voss, Harlan, Elin, Sorell y Cael | Puede omitir resoluciones, pero no invertir conocimiento ni presentar como prueba lo que sólo es acusación. Sin broma. | Bloqueado hasta revisar causalidad, montaje y 29 tomas. |
 | Largo | 14 personajes recuperados | Conserva funciones adicionales sin retropropagarlas automáticamente. Volkov sigue parcialmente definido y Tanaka sin función estable. Incluye la broma en la escena 1. | Bloqueado: es tratamiento sin cues, shots ni takes. |
 
 ## Criterio de cierre por guion
 
 Un guion habilita su producción visual sólo cuando: sus hechos y conocimientos no se contradicen; todas las acciones tienen causa disponible; su shot list cubre los beats necesarios; sus placements no dependen de diálogo inexistente; y los estados de imagen distinguen reutilización, placeholder y reemplazo real. Un asset compartido espera a que estén cerradas todas las versiones que lo consumen, o se divide en variantes explícitas.
+
+La proyección ejecutable de esta cadena vive en `data/continuity/`. `npm run report:causal-validity` comprueba orden, disponibilidad previa de hechos y referencias a escaleta/tomas. Un ledger `incomplete` produce `not_applicable`, nunca un falso verde.

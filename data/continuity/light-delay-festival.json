@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "ledger": { "id": "ledger:light-delay-festival", "scriptId": "script:light-delay-festival", "status": "incomplete", "sourceDocument": "docs/CONTINUIDAD_CAUSAL_GUIONES.md", "notes": { "es": "A–D tienen 35 tomas; E–G y su cobertura causal siguen pendientes.", "en": "A–D have 35 shots; E–G and their causal coverage remain pending." } },
+  "facts": [],
+  "steps": [],
+  "knowledgeEvents": [],
+  "actionRequirements": []
+}

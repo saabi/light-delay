@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "ledger": { "id": "ledger:light-delay-trailer", "scriptId": "script:light-delay-trailer", "status": "incomplete", "sourceDocument": "docs/CONTINUIDAD_CAUSAL_GUIONES.md", "notes": { "es": "El montaje de 92,5 s requiere auditoría causal editorial antes de modelar hechos omitidos.", "en": "The 92.5-second cut requires editorial causal review before modeling omitted facts." } },
+  "facts": [],
+  "steps": [],
+  "knowledgeEvents": [],
+  "actionRequirements": []
+}
