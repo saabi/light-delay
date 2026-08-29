@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "plan": {
+    "id": "generation-plan:light-delay-long",
+    "scriptId": "script:light-delay-long",
+    "scriptVersion": "0.2.0-draft",
+    "sourceDigest": "48e031ea6b681d464c9ab558bd6b31b2b9a1288351271cef9bdc81a65f2e97c5",
+    "campaignId": "campaign:higgsfield-trial-24h",
+    "status": "blocked",
+    "promptLanguage": "en",
+    "briefLanguage": "es"
+  },
+  "shots": []
+}

@@ -1,0 +1,1164 @@
+{
+  "schemaVersion": "1.0.0",
+  "plan": {
+    "id": "generation-plan:light-delay-trailer",
+    "scriptId": "script:light-delay-trailer",
+    "scriptVersion": "0.2.0-draft",
+    "sourceDigest": "72e2e8740f28f80f6db26fc03931766a4fbb09a5bd4a7c8c59d8ef226f89f20d",
+    "campaignId": "campaign:higgsfield-trial-24h",
+    "status": "blocked",
+    "promptLanguage": "en",
+    "briefLanguage": "es"
+  },
+  "shots": [
+    {
+      "shotId": "trailer:shot-a-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:voss",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-a-01:segment-01",
+          "startMs": 0,
+          "endMs": 3500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-a-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-a-02:segment-01",
+          "startMs": 0,
+          "endMs": 4500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-b-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-b-01:segment-01",
+          "startMs": 0,
+          "endMs": 3000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-b-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-b-02:segment-01",
+          "startMs": 0,
+          "endMs": 3500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-b-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:sorell",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-b-03:segment-01",
+          "startMs": 0,
+          "endMs": 3600,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-c-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:zao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-c-01:segment-01",
+          "startMs": 0,
+          "endMs": 4000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-c-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-c-02:segment-01",
+          "startMs": 0,
+          "endMs": 4500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-c-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:zao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-c-03:segment-01",
+          "startMs": 0,
+          "endMs": 4500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-d-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:zao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-d-01:segment-01",
+          "startMs": 0,
+          "endMs": 3600,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-d-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_framing",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-d-02:segment-01",
+          "startMs": 0,
+          "endMs": 3500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-d-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-d-03:segment-01",
+          "startMs": 0,
+          "endMs": 3500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-d-04",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-d-04:segment-01",
+          "startMs": 0,
+          "endMs": 3000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-e-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:harlan",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_framing",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-e-01:segment-01",
+          "startMs": 0,
+          "endMs": 3500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-e-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:zao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_framing",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-e-02:segment-01",
+          "startMs": 0,
+          "endMs": 3500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-f-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_framing",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-f-01:segment-01",
+          "startMs": 0,
+          "endMs": 3000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-f-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_framing",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-f-02:segment-01",
+          "startMs": 0,
+          "endMs": 3000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-f-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-f-03:segment-01",
+          "startMs": 0,
+          "endMs": 2000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-f-04",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:rao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-f-04:segment-01",
+          "startMs": 0,
+          "endMs": 3200,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-g-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:cael",
+        "missing_voice_sample:character:voss",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-g-01:segment-01",
+          "startMs": 0,
+          "endMs": 3600,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-g-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-g-02:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-g-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:zao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-g-03:segment-01",
+          "startMs": 0,
+          "endMs": 3000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-g-04",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-g-04:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-h-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-h-01:segment-01",
+          "startMs": 0,
+          "endMs": 2000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-h-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:rao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-h-02:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-h-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-h-03:segment-01",
+          "startMs": 0,
+          "endMs": 1500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-h-04",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-h-04:segment-01",
+          "startMs": 0,
+          "endMs": 1500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-h-05",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-h-05:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-i-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:zao",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-i-01:segment-01",
+          "startMs": 0,
+          "endMs": 4000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-i-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-i-02:segment-01",
+          "startMs": 0,
+          "endMs": 4000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    }
+  ]
+}

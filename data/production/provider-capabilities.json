@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshots": [
+    {
+      "id": "provider:higgsfield:seedance-2.0:2026-08-29",
+      "provider": "higgsfield",
+      "model": "seedance-2.0",
+      "capturedAt": "2026-08-29",
+      "confidence": "verified",
+      "executable": false,
+      "limits": {
+        "maxImages": 9,
+        "maxVideos": 3,
+        "maxAudios": 3,
+        "maxTotalReferences": 12,
+        "maxDurationMs": null
+      },
+      "source": "https://docs.higgsfield.ai/api-reference/cli/video/seedance-v2",
+      "notes": {
+        "es": "Snapshot documental. La ejecución queda deshabilitada hasta verificar catálogo, cuenta, costo y entitlement mediante preflight.",
+        "en": "Documentation snapshot. Execution remains disabled until catalog, account, cost, and entitlement are verified by preflight."
+      }
+    },
+    {
+      "id": "provider:higgsfield:seedance-2.5:2026-08-29",
+      "provider": "higgsfield",
+      "model": "seedance-2.5",
+      "capturedAt": "2026-08-29",
+      "confidence": "provisional",
+      "executable": false,
+      "limits": {
+        "maxImages": null,
+        "maxVideos": null,
+        "maxAudios": null,
+        "maxTotalReferences": 50,
+        "maxDurationMs": 30000
+      },
+      "source": "https://higgsfield.ai/seedance-2-5",
+      "notes": {
+        "es": "Perfil de marketing no confirmado en el catálogo CLI/MCP operativo; no usar para validar ni enviar pedidos.",
+        "en": "Marketing profile not confirmed in the operational CLI/MCP catalog; do not use it to validate or submit requests."
+      }
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "campaign:higgsfield-trial-24h",
+      "providerSnapshotId": "provider:higgsfield:seedance-2.0:2026-08-29",
+      "maxSegmentMs": 8000,
+      "requiresEntitlementPreflight": true,
+      "noCreditsAllowed": true,
+      "concurrency": null,
+      "notes": {
+        "es": "Restricción de la cuenta de prueba informada por el autor; no confundir con el límite intrínseco del modelo.",
+        "en": "Trial-account constraint reported by the author; do not confuse it with the model's intrinsic limit."
+      }
+    }
+  ]
+}
