@@ -1,6 +1,6 @@
 # Escenas exteriores y necesidades de animación
 
-> Estado: documento de planificación de producción, derivado de `data/scripts/*.json` y `data/locations.json`. No reemplaza a `CELESTIAL_ARDOR.md` ni a `PROXIMA_STATION.md` — los complementa con la vista "qué se ve desde afuera y qué se mueve". Idioma fuente: español.
+> Estado: documento de planificación de producción, derivado de `data/scripts/*.json` y `data/locations.json`. No reemplaza a `CELESTIAL_ARDOR.md` ni a `PROXIMA_STATION.md` — los complementa con la vista "qué se ve desde afuera y qué se mueve". Idioma fuente: español. Ver también `ANIMATION_WORKFLOW.md` — este documento dice *qué* hace falta animar; ese dice *cómo* organizar los archivos y el proceso para hacerlo.
 
 Este documento no implica trabajo de modelado o animación inmediato. Es un mapa de lo que hará falta cuando se aborde la fase de tomas exteriores y animación, para no tener que rederivarlo del guion cada vez.
 
@@ -13,9 +13,9 @@ Este documento no implica trabajo de modelado o animación inmediato. Es un mapa
 | Júpiter | ✅ bloqueo 3D | Fondo explícito en `main:shot-01-01`/`trailer:shot-a-01` ("Júpiter pequeño al fondo") y en el sobrevuelo de `main:scene-03` ("La nave bordea Júpiter con amplio desplazamiento lateral") | `Env_Jupiter` usa escala física de referencia; las tomas finales pueden requerir una ampliación artística documentada para leer el disco. |
 | Sol | ✅ luz de entorno | Fuente de luz principal de toda la secuencia; nunca se menciona en cuadro pero condiciona todas las sombras/exposición | `Env_Sun`; no incluye disco solar visible. |
 | Campo de estrellas | ✅ shader de mundo | Fondo de cualquier toma exterior fuera de la silueta de Júpiter/Proxima (`celestial-ardor-bridge` shot "rack focus archivo/estrellas", tomas de crucero) | Fondo procedural estático; verificar en modo Material/Rendered. |
-| Boca Velari (campo de nodos) | ❌ no existe | `location:velari-wormhole-mouth` — `main:shot-07-08`, `main:shot-07-10`, `trailer:shot-f-01/02` | Explícitamente **no es un aro**: campo distribuido de nodos negros separados por kilómetros; apertura de 150–200 m solo durante el pulso energético (§ doc de ubicación). Nuevo asset, no cubierto por ningún documento técnico existente. |
-| Estación Velari | ❌ no existe | `location:velari-station` — escenas de reconocimiento/contacto (`long:scene-26/27`, `festival:scene-07`, `trailer:scene-09`) | Hábitat orgánico continuo de varios km, piel viva. Nuevo asset — candidato a su propio documento técnico tipo `CELESTIAL_ARDOR.md`/`PROXIMA_STATION.md` cuando se aborde. |
-| Nave emisaria Velari | ❌ no existe | `long:scene-27` ("Una nave emisaria distinta de la estación se aproxima") | Objeto adicional, no descrito aún en ningún documento — falta hasta una referencia mínima de diseño. |
+| Boca Velari (campo de nodos) | 🟡 diferido | `location:velari-wormhole-mouth` — `main:shot-07-08`, `main:shot-07-10`, `trailer:shot-f-01/02` | **Decisión (29/08/2026): no se modela en Blender.** Es orgánica — campo distribuido de nodos negros separados por kilómetros, apertura de 150–200 m solo durante el pulso — y se deja en manos del pase de generación de video por IA en vez de bloqueo 3D. Ver `PRODUCTION_ROADMAP.md` paso 5. |
+| Estación Velari | 🟡 diferido | `location:velari-station` — escenas de reconocimiento/contacto (`long:scene-26/27`, `festival:scene-07`, `trailer:scene-09`) | **Decisión (29/08/2026): no se modela en Blender.** Hábitat orgánico continuo de varios km, piel viva — mismo criterio que la boca Velari, mejor resuelto por el pase de IA que por geometría explícita. |
+| Nave emisaria Velari | 🟡 diferido | `long:scene-27` ("Una nave emisaria distinta de la estación se aproxima") | **Decisión (29/08/2026): no se modela en Blender.** Mismo criterio — orgánica/no humana, se deja al pase de IA. |
 
 ## 2. Jerarquía de animación necesaria (rig)
 
@@ -44,14 +44,14 @@ Extraído de `scenes`/`shots` en los 4 archivos de `data/scripts/` cuyo `locatio
 | main-short | escena de puente, "Mano de Cael confirma separación y empuje" | `celestial-ardor-bridge` (interior, implica exterior) | Momento de desatraque/separación de Proxima | `Ardor_Root` ✅; falta animación de desatraque y umbilicales. |
 | main-short | `scene-03` / sobrevuelo | `celestial-ardor-engineering` (interior, referencia exterior) | "La nave bordea Júpiter con amplio desplazamiento lateral; radiadores recogidos antes del giro" | Júpiter ❌, radiadores articulados ❌ (rig), maniobra de giro/inversión ❌ (rig) |
 | main-short | toma de inversión de mitad de trayecto | `celestial-ardor-engineering` | "Zao asegurada en caída libre mientras la nave rota; 1 g retorna... al reanudar el frenado" | Maniobra de inversión ❌ (rig) — ver §2 |
-| main-short | `shot-07-08` | `velari-wormhole-mouth` | "Los nodos forman la garganta" — campo instrumental de nodos separados por km | Boca Velari (campo de nodos) ❌ |
-| main-short | `shot-07-10` | `velari-wormhole-mouth` | "Cruce por inercia y colapso" — la Ardor cruza, distorsión total, colapso detrás | Boca Velari ❌, animación de apertura/colapso ❌ (rig) |
+| main-short | `shot-07-08` | `velari-wormhole-mouth` | "Los nodos forman la garganta" — campo instrumental de nodos separados por km | Boca Velari — diferido, ver §1 |
+| main-short | `shot-07-10` | `velari-wormhole-mouth` | "Cruce por inercia y colapso" — la Ardor cruza, distorsión total, colapso detrás | Boca Velari — diferido, ver §1; animación de apertura/colapso ❌ (rig, sigue haciendo falta si se anima el cruce) |
 | trailer | `shot-f-01` / `shot-f-02` | `velari-wormhole-mouth` | Mismas tomas que `main-short` `shot-07-08`/`07-10`, versión trailer | Igual que arriba |
 | long | `scene-10` "Expansión y cruce" | `velari-wormhole-mouth` | Cruce sin poder cancelar la expansión con seguridad | Igual que arriba |
-| long | `scene-26` "Reconocimiento limitado" | `velari-station` | La estación Velari responde con un patrón que autoriza aproximación | Estación Velari ❌ |
-| long | `scene-27` "Emisaria" | `velari-station` | Una nave emisaria se aproxima; escala humana subordinada al encuentro | Estación Velari ❌, nave emisaria Velari ❌ |
-| festival | `scene-07` "Contacto / cierre" | `velari-station` | Envío, contacto y «Llegaste a tiempo» | Estación Velari ❌ |
-| trailer | `scene-09` "Título" | `velari-station` | Tarjeta de título; pulso Velari | Estación Velari ❌, pulso/apertura ❌ (rig, si se reutiliza el de la boca) |
+| long | `scene-26` "Reconocimiento limitado" | `velari-station` | La estación Velari responde con un patrón que autoriza aproximación | Estación Velari — diferido, ver §1 |
+| long | `scene-27` "Emisaria" | `velari-station` | Una nave emisaria se aproxima; escala humana subordinada al encuentro | Estación Velari — diferido, ver §1; nave emisaria Velari — diferido, ver §1 |
+| festival | `scene-07` "Contacto / cierre" | `velari-station` | Envío, contacto y «Llegaste a tiempo» | Estación Velari — diferido, ver §1 |
+| trailer | `scene-09` "Título" | `velari-station` | Tarjeta de título; pulso Velari | Estación Velari — diferido, ver §1; pulso/apertura ❌ (rig, si se reutiliza el de la boca) |
 
 ## 4. Notas de escala y posición (para verificar, no canónico todavía)
 

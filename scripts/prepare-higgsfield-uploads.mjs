@@ -153,6 +153,12 @@ const ENTRIES = [
 	},
 	{
 		kind: 'brief',
+		slug: 'blender-proxima-with-ardor-berthed',
+		label: 'Proxima con Celestial Ardor atracada (viewport Blender, bloqueo)',
+		sourceRel: 'locations/proxima-station/blender-proxima-with-ardor-berthed.png'
+	},
+	{
+		kind: 'brief',
 		slug: 'celestial-ardor-with-jupiter',
 		label: 'Celestial Ardor con Júpiter (bloqueo 3D)',
 		sourceRel: 'vehicles/celestial-ardor/celestial-ardor-with-jupiter.png'

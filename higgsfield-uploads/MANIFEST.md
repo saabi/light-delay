@@ -26,6 +26,7 @@ Copias renombradas para subir a Higgsfield. Origen canónico: `static/assets/`.
 | `brief/light-delay-brief-celestial-ardor-jupiter.png` | Celestial Ardor bordeando Júpiter (animatic esc. 3 / toma 1) | brief | `static/assets/animatic/frames/scene-03/shot-01.png` |
 | `brief/light-delay-brief-zao-optical-contingency-transmitter.png` | Zao ante el transmisor óptico de contingencia (animatic esc. 5 / toma 6) | brief | `static/assets/animatic/frames/scene-05/shot-06.png` |
 | `brief/light-delay-brief-proxima-ardor-berthed.png` | Proxima con Celestial Ardor atracada (bloqueo 3D, escala común) | brief | `static/assets/locations/proxima-station/proxima-with-ardor-berthed.png` |
+| `brief/light-delay-brief-blender-proxima-with-ardor-berthed.png` | Proxima con Celestial Ardor atracada (viewport Blender, bloqueo) | brief | `static/assets/locations/proxima-station/blender-proxima-with-ardor-berthed.png` |
 | `brief/light-delay-brief-celestial-ardor-with-jupiter.png` | Celestial Ardor con Júpiter (bloqueo 3D) | brief | `static/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png` |
 | `brief/light-delay-brief-proxima-station-proportional-reference.png` | Proxima Station — referencia proporcional (diagrama) | brief | `static/assets/locations/proxima-station/proportional-reference.png` |
 | `brief/light-delay-brief-celestial-ardor-proportional-reference.png` | Celestial Ardor — referencia proporcional (diagrama) | brief | `static/assets/vehicles/celestial-ardor/proportional-reference.png` |
