@@ -66,7 +66,10 @@
       "beatIds": [
         "festival:beat-a-01"
       ],
-      "majorEventId": "event:anomaly-discovery"
+      "majorEventId": "event:anomaly-discovery",
+      "dependsOnStepIds": [
+        "festival:outline-03"
+      ]
     },
     {
       "id": "festival:outline-05",
@@ -96,7 +99,10 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-04"
+      ]
     },
     {
       "id": "festival:outline-07",
@@ -111,7 +117,11 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-05",
+        "festival:outline-06"
+      ]
     },
     {
       "id": "festival:outline-08",
@@ -126,7 +136,10 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-07"
+      ]
     },
     {
       "id": "festival:outline-09",
@@ -148,6 +161,9 @@
           "text": "Corregido 29/08/2026: Proxima se descarta por oclusión geométrica de Júpiter (Proxima en L1 del sistema Sol–Júpiter, boca local en L2 — Júpiter queda literalmente entre ambos), reemplazando la razón vaga anterior (\"sin adquisición óptica útil\"). No contradice la advertencia del documento de adaptación de no restaurar a Júpiter como bloqueo central de la trama: aquí sólo descarta una alternativa secundaria, no explica el silencio general de Zao (que sigue siendo el sabotaje de Harlan).",
           "resolved": true
         }
+      ],
+      "dependsOnStepIds": [
+        "festival:outline-08"
       ]
     },
     {
@@ -162,6 +178,9 @@
       ],
       "beatIds": [
         "festival:beat-b-01"
+      ],
+      "dependsOnStepIds": [
+        "festival:outline-09"
       ]
     },
     {
@@ -176,6 +195,9 @@
       ],
       "beatIds": [
         "festival:beat-b-01"
+      ],
+      "dependsOnStepIds": [
+        "festival:outline-09"
       ]
     },
     {
@@ -190,6 +212,9 @@
       ],
       "beatIds": [
         "festival:beat-b-01"
+      ],
+      "dependsOnStepIds": [
+        "festival:outline-11"
       ]
     },
     {
@@ -205,7 +230,11 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-12",
+        "festival:outline-06"
+      ]
     },
     {
       "id": "festival:outline-14",
@@ -220,7 +249,10 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-13"
+      ]
     },
     {
       "id": "festival:outline-15",
@@ -235,7 +267,10 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-14"
+      ]
     },
     {
       "id": "festival:outline-16",
@@ -250,7 +285,11 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-14",
+        "festival:outline-15"
+      ]
     },
     {
       "id": "festival:outline-17",
@@ -265,7 +304,10 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-16"
+      ]
     },
     {
       "id": "festival:outline-18",
@@ -280,7 +322,10 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-17"
+      ]
     },
     {
       "id": "festival:outline-19",
@@ -295,7 +340,11 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-17",
+        "festival:outline-07"
+      ]
     },
     {
       "id": "festival:outline-20",
@@ -310,7 +359,10 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-18"
+      ]
     },
     {
       "id": "festival:outline-21",
@@ -325,7 +377,11 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-20",
+        "festival:outline-19"
+      ]
     },
     {
       "id": "festival:outline-22",
@@ -340,7 +396,10 @@
       "beatIds": [
         "festival:beat-c-01"
       ],
-      "majorEventId": "event:zao-warning-death"
+      "majorEventId": "event:zao-warning-death",
+      "dependsOnStepIds": [
+        "festival:outline-21"
+      ]
     },
     {
       "id": "festival:outline-23",
@@ -362,11 +421,51 @@
           "text": "Gap identificado 29/08/2026: sin este beat, Elin \"simplemente aparece\" investigando 23 horas después, sin que se muestre por qué. No es una investigación policial del asesinato (descartada a propósito por el documento de adaptación, sección 7.2) sino la causa mínima mostrada para el trabajo técnico de Elin.",
           "resolved": false
         }
+      ],
+      "dependsOnStepIds": [
+        "festival:outline-22",
+        "festival:outline-19"
+      ]
+    },
+    {
+      "id": "festival:outline-25",
+      "order": 24,
+      "title": "Overlays del payload",
+      "summary": "PAYLOAD DESPLEGADO / DISPARADOR: APERTURA CANAL VELARI / OVERRIDE: FIRMA NO IDENTIFICADA / CUARENTENA PREPARADA.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation",
+      "dependsOnStepIds": [
+        "festival:outline-23"
+      ]
+    },
+    {
+      "id": "festival:outline-26",
+      "order": 25,
+      "title": "Elin cartografía el payload",
+      "summary": "Elin separa rutas del payload y deja lista una cuarentena limitada; todavía no puede atribuir el override.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation",
+      "dependsOnStepIds": [
+        "festival:outline-25"
       ]
     },
     {
       "id": "festival:outline-24",
-      "order": 24,
+      "order": 26,
       "title": "Se nombra el riesgo real (pendiente)",
       "summary": "Propuesto 29/08/2026: Elin o Voss nombran en voz alta qué podría pasar si el payload se dispara al abrir el canal Velari — riesgo de ataque, de que los Velari lo interpreten como agresión, de arruinar el primer contacto. Reemplaza el tono puramente clínico actual (\"puedo aislarlo, no revocar\") por angustia real y consecuencias concretas antes de que llegue el mensaje de Zao.",
       "importance": "required",
@@ -383,38 +482,17 @@
           "type": "continuity",
           "text": "Decisión 29/08/2026 (conversación con Sebastián): mantener la doble llave (no eliminarla) — el mensaje de Zao no debe resolver todo por sí solo, según el principio anti–deus ex machina de la sección 3.2 del documento de adaptación — pero enriquecer la Secuencia D con tensión y motivo, no sólo procedimiento técnico. Estructuralmente la doble llave no depende de este beat (Elin podría llegar al payload por auditoría rutinaria), pero la angustia del segundo acto sí lo necesita.",
           "resolved": false
+        },
+        {
+          "type": "continuity",
+          "text": "Reordenado 29/08/2026: este paso pasó de order 24 a order 26 (después de los overlays del payload y la cartografía de Elin) porque necesita el disparador (\"apertura canal Velari\") ya visible en pantalla para que el riesgo nombrado (\"si esto se dispara al abrir el canal...\") tenga con qué engancharse. Antes precedía a la información que necesitaba.",
+          "resolved": true
         }
+      ],
+      "dependsOnStepIds": [
+        "festival:outline-25",
+        "festival:outline-26"
       ]
-    },
-    {
-      "id": "festival:outline-25",
-      "order": 25,
-      "title": "Overlays del payload",
-      "summary": "PAYLOAD DESPLEGADO / DISPARADOR: APERTURA CANAL VELARI / OVERRIDE: FIRMA NO IDENTIFICADA / CUARENTENA PREPARADA.",
-      "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "festival:scene-d"
-      ],
-      "beatIds": [
-        "festival:beat-d-01"
-      ],
-      "majorEventId": "event:investigation"
-    },
-    {
-      "id": "festival:outline-26",
-      "order": 26,
-      "title": "Elin cartografía el payload",
-      "summary": "Elin separa rutas del payload y deja lista una cuarentena limitada; todavía no puede atribuir el override.",
-      "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "festival:scene-d"
-      ],
-      "beatIds": [
-        "festival:beat-d-01"
-      ],
-      "majorEventId": "event:investigation"
     },
     {
       "id": "festival:outline-27",
@@ -429,7 +507,10 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "majorEventId": "event:investigation"
+      "majorEventId": "event:investigation",
+      "dependsOnStepIds": [
+        "festival:outline-26"
+      ]
     },
     {
       "id": "festival:outline-28",
@@ -474,7 +555,11 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "majorEventId": "event:message-reception"
+      "majorEventId": "event:message-reception",
+      "dependsOnStepIds": [
+        "festival:outline-29",
+        "festival:outline-14"
+      ]
     },
     {
       "id": "festival:outline-31",
@@ -489,7 +574,10 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "majorEventId": "event:message-reception"
+      "majorEventId": "event:message-reception",
+      "dependsOnStepIds": [
+        "festival:outline-30"
+      ]
     },
     {
       "id": "festival:outline-32",
@@ -504,7 +592,10 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "majorEventId": "event:harlan-exposed"
+      "majorEventId": "event:harlan-exposed",
+      "dependsOnStepIds": [
+        "festival:outline-31"
+      ]
     },
     {
       "id": "festival:outline-33",
@@ -519,7 +610,11 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "majorEventId": "event:harlan-exposed"
+      "majorEventId": "event:harlan-exposed",
+      "dependsOnStepIds": [
+        "festival:outline-32",
+        "festival:outline-26"
+      ]
     },
     {
       "id": "festival:outline-34",
@@ -537,7 +632,8 @@
       "majorEventId": "event:harlan-exposed",
       "dependsOnStepIds": [
         "festival:outline-13",
-        "festival:outline-26"
+        "festival:outline-26",
+        "festival:outline-33"
       ],
       "notes": [
         {
@@ -560,7 +656,10 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "majorEventId": "event:harlan-exposed"
+      "majorEventId": "event:harlan-exposed",
+      "dependsOnStepIds": [
+        "festival:outline-34"
+      ]
     },
     {
       "id": "festival:outline-36",
@@ -575,7 +674,10 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "majorEventId": "event:harlan-exposed"
+      "majorEventId": "event:harlan-exposed",
+      "dependsOnStepIds": [
+        "festival:outline-35"
+      ]
     },
     {
       "id": "festival:outline-37",
@@ -590,7 +692,10 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "majorEventId": "event:harlan-exposed"
+      "majorEventId": "event:harlan-exposed",
+      "dependsOnStepIds": [
+        "festival:outline-36"
+      ]
     },
     {
       "id": "festival:outline-38",
@@ -605,7 +710,10 @@
       "beatIds": [
         "festival:beat-f-01"
       ],
-      "majorEventId": "event:quarantine"
+      "majorEventId": "event:quarantine",
+      "dependsOnStepIds": [
+        "festival:outline-37"
+      ]
     },
     {
       "id": "festival:outline-39",
@@ -620,7 +728,10 @@
       "beatIds": [
         "festival:beat-f-01"
       ],
-      "majorEventId": "event:quarantine"
+      "majorEventId": "event:quarantine",
+      "dependsOnStepIds": [
+        "festival:outline-38"
+      ]
     },
     {
       "id": "festival:outline-40",
@@ -635,7 +746,11 @@
       "beatIds": [
         "festival:beat-f-01"
       ],
-      "majorEventId": "event:quarantine"
+      "majorEventId": "event:quarantine",
+      "dependsOnStepIds": [
+        "festival:outline-26",
+        "festival:outline-39"
+      ]
     },
     {
       "id": "festival:outline-41",
@@ -650,7 +765,10 @@
       "beatIds": [
         "festival:beat-f-01"
       ],
-      "majorEventId": "event:quarantine"
+      "majorEventId": "event:quarantine",
+      "dependsOnStepIds": [
+        "festival:outline-40"
+      ]
     },
     {
       "id": "festival:outline-42",
@@ -665,7 +783,10 @@
       "beatIds": [
         "festival:beat-g-01"
       ],
-      "majorEventId": "event:clean-greeting"
+      "majorEventId": "event:clean-greeting",
+      "dependsOnStepIds": [
+        "festival:outline-41"
+      ]
     },
     {
       "id": "festival:outline-43",
@@ -680,7 +801,10 @@
       "beatIds": [
         "festival:beat-g-01"
       ],
-      "majorEventId": "event:first-contact"
+      "majorEventId": "event:first-contact",
+      "dependsOnStepIds": [
+        "festival:outline-42"
+      ]
     },
     {
       "id": "festival:outline-44",
@@ -695,7 +819,11 @@
       "beatIds": [
         "festival:beat-g-01"
       ],
-      "majorEventId": "event:aftermath"
+      "majorEventId": "event:aftermath",
+      "dependsOnStepIds": [
+        "festival:outline-43",
+        "festival:outline-13"
+      ]
     }
   ]
 }
