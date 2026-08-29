@@ -269,6 +269,8 @@
 	"outline_steps": "steps",
 	"outline_scenes": "Scenes",
 	"outline_empty_steps": "This outline exists but has no steps yet.",
+	"outline_group_no_scene": "No scene",
+	"outline_depends_on": "Depends on",
 	"outline_missing_title": "No outline",
 	"outline_missing_lede": "This script does not have an outline file yet. The UI tolerates the gap; the CLI report lists cuts still missing one.",
 	"outline_missing_body": "No file at {path}. When it exists, this page will list the ordered steps.",

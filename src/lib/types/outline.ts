@@ -25,6 +25,8 @@ export interface OutlineStep {
 	majorEventId?: string;
 	sceneIds?: SceneId[];
 	beatIds?: BeatId[];
+	/** Other steps in this outline that this step causally depends on */
+	dependsOnStepIds?: string[];
 	sourceRefs?: SourceReference[];
 	notes?: Note[];
 }

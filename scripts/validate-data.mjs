@@ -500,6 +500,17 @@ function main() {
 					}
 				}
 			}
+			for (const step of outline.steps || []) {
+				if (!step?.id) continue;
+				const stepLabel = `${label}.step(${step.id})`;
+				for (const depId of step.dependsOnStepIds || []) {
+					if (depId === step.id) {
+						errors.push(`${stepLabel}: dependsOnStepIds cannot reference itself`);
+					} else if (!stepIds.has(depId)) {
+						errors.push(`${stepLabel}: unknown dependsOnStepId ${depId}`);
+					}
+				}
+			}
 		}
 	} catch (error) {
 		if (error && typeof error === 'object' && 'code' in error && error.code !== 'ENOENT') {

@@ -269,6 +269,8 @@
 	"outline_steps": "pasos",
 	"outline_scenes": "Escenas",
 	"outline_empty_steps": "Esta escaleta existe pero aún no tiene pasos.",
+	"outline_group_no_scene": "Sin escena",
+	"outline_depends_on": "Depende de",
 	"outline_missing_title": "Sin escaleta",
 	"outline_missing_lede": "Este guion todavía no tiene un archivo de escaleta. La UI tolera la ausencia; el informe CLI lista los cortes pendientes.",
 	"outline_missing_body": "No se encontró {path}. Cuando exista, esta página listará los pasos ordenados.",

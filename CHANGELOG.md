@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-29 — Guía de escaleta, i18n y gaps
+
+- Guía operativa `docs/GUIA_ESCALETA.md` y regla en `AGENTS.md`: crear/auditar escaleta antes de ampliar guion o animatic.
+- `dependsOnStepIds` en pasos; UI agrupada por escena con destaque de `required`+`missing`; `report:outline-gaps`.
+- Escaletas en el overlay `public.en.json`; traducción EN de la escaleta festival (1311 cadenas públicas).
+
 ## 2026-08-29 — Escaleta opcional por guion
 
 - Contrato `OutlineFile` / `data/outlines/` (archivos opcionales), ruta `/outline/[scriptId]` con empty state si falta el JSON, enlace en la navegación y sitemap.

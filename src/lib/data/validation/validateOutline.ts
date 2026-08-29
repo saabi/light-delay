@@ -84,5 +84,17 @@ export function validateOutline(
 		}
 	}
 
+	for (const step of file.steps) {
+		if (!step?.id) continue;
+		const stepLabel = `${label}.step(${step.id})`;
+		for (const depId of step.dependsOnStepIds ?? []) {
+			if (depId === step.id) {
+				errors.push(`${stepLabel}: dependsOnStepIds cannot reference itself`);
+			} else if (!stepIds.has(depId)) {
+				errors.push(`${stepLabel}: unknown dependsOnStepId ${depId}`);
+			}
+		}
+	}
+
 	return { ok: errors.length === 0, errors };
 }

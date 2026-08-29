@@ -18,7 +18,8 @@ El español es la fuente de verdad de la documentación del repositorio.
 ## Reglas obligatorias
 
 - Leer este archivo completo al inicio de cada sesión de trabajo en el repositorio.
-- Leer `README.md`, `docs/CANON_DECISIONS.md` y `docs/PROJECT_STATUS.md` antes de modificar narrativa o estructura.
+- Leer `README.md`, `docs/CANON_DECISIONS.md` y `docs/PROJECT_STATUS.md` antes de modificar narrativa o estructura. Si el trabajo toca guion o animatic de un cut, leer también `docs/GUIA_ESCALETA.md` (contrato en `docs/ESCALETA.md`).
+- Antes de crear o ampliar guion/animatic de un cut, asegurar escaleta en `data/outlines/` (crear si falta, respetando causalidad) y verificar que el guion/animatic existentes la respetan; procedimiento en `docs/GUIA_ESCALETA.md`.
 - Tratar `legacy-site/` como referencia de regresión hasta completar la migración.
 - No reescribir el canon para resolver una dificultad de implementación.
 - No inventar datos ausentes. Marcar incertidumbres y decisiones pendientes.

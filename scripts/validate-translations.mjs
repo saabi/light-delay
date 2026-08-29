@@ -137,6 +137,23 @@ for (const item of variants) {
 	notes(item.notes, `variants.${item.id}`);
 }
 
+try {
+	for (const filename of readdirSync(join(DATA, 'outlines')).filter((name) =>
+		name.endsWith('.json')
+	)) {
+		const file = JSON.parse(readFileSync(join(DATA, 'outlines', filename), 'utf8'));
+		const root = `outlines/${filename}`;
+		add(file.outline?.title, `${root}.outline.title`);
+		for (const step of file.steps ?? []) {
+			add(step.title, `${root}.${step.id}.title`);
+			add(step.summary, `${root}.${step.id}.summary`);
+			notes(step.notes, `${root}.${step.id}`);
+		}
+	}
+} catch (error) {
+	if (!(error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT')) throw error;
+}
+
 const contextFilter = process.argv.find((arg) => arg.startsWith('--context='))?.slice(10);
 const offset = Number(process.argv.find((arg) => arg.startsWith('--offset='))?.slice(9) ?? 0);
 const limit = Number(process.argv.find((arg) => arg.startsWith('--limit='))?.slice(8) ?? 100);

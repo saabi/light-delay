@@ -2,6 +2,8 @@
 
 La escaleta es la **espina narrativa ordenada** de cada cut: qué eventos deben hacerse visibles o comprensibles al escribir el guion o montar el animatic. No sustituye el `ScriptFile` (beats/cues/shots) ni la matriz de comparación.
 
+**Procedimiento para agentes:** [`docs/GUIA_ESCALETA.md`](GUIA_ESCALETA.md).
+
 ## Relación con otros artefactos
 
 | Artefacto | Rol |
@@ -11,11 +13,11 @@ La escaleta es la **espina narrativa ordenada** de cada cut: qué eventos deben 
 | `ScriptFile.beats` | Beats del guion escrito |
 | **Outline / escaleta** | Checklist ordenada de generación por `scriptId` |
 
-Los pasos pueden referenciar `majorEventId` de la taxonomía y, cuando ya hay cobertura, `sceneIds` / `beatIds`.
+Los pasos pueden referenciar `majorEventId` de la taxonomía y, cuando ya hay cobertura, `sceneIds` / `beatIds`. Opcionalmente `dependsOnStepIds` declara dependencias causales entre pasos del mismo archivo.
 
 ## Archivos
 
-Convención (opcional):
+Convención (opcional al inicio; **obligatoria antes de ampliar** guion/animatic — ver guía):
 
 ```text
 data/outlines/<script-slug>.json
@@ -23,23 +25,25 @@ data/outlines/<script-slug>.json
 
 Ejemplo: `script:light-delay-main-short` → `data/outlines/light-delay-main-short.json`.
 
-Los archivos **pueden faltar**. La UI (`/outline/[scriptId]`) muestra un estado vacío; `validate:data` no exige outlines. Cuando existen, se validan forma y FKs.
+Los archivos **pueden faltar** en validación/UI vacía. Cuando existen, se validan forma y FKs. Textos ES; inglés vía `data/translations/public.en.json`.
 
 Tipos: `src/lib/types/outline.ts`. Contrato: `docs/JSON_FORMAT.md`.
 
 ## UI
 
 - `/outline` redirige al outline del `canonicalScriptId`
-- `/outline/[scriptId]` lista pasos o empty state
+- `/outline/[scriptId]` lista pasos agrupados por escena (idioma de diálogo) o empty state
+- Destaca visualmente pasos `required` + `missing`
 - Enlace «Escaleta» / «Outline» en la navegación del proyecto
 
-## Informe offline
+## Informes offline
 
 ```bash
-npm run report:outline-missing
+npm run report:outline-missing   # scripts sin archivo de escaleta
+npm run report:outline-gaps      # required missing/deferred + deps incumplidas
 ```
 
-Escribe `reports/outline-missing/project.md` y `.json` (ignorados en git) con los scripts del registry que aún no tienen archivo de escaleta. También se ejecuta como parte de `npm run report:all`.
+Salidas bajo `reports/outline-missing/` y `reports/outline-gaps/` (ignoradas en git). Ambos se ejecutan en `npm run report:all`.
 
 ## Criterio de cierre (cuando existan pasos)
 

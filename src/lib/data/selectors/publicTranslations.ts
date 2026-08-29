@@ -1,6 +1,7 @@
 import publicEnglishJson from '../../../../data/translations/public.en.json';
 import type { Asset } from '$lib/types/assets';
 import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
+import type { OutlineFile } from '$lib/types/outline';
 import type { EntityVariant, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
 import type { StringTranslationFile } from '$lib/types/translations';
 import type { ScriptRegistryEntry } from '$lib/types/project';
@@ -197,6 +198,19 @@ export function localizeEntityVariants(source: EntityVariant[], language: string
 		costumeOverride: translatePublicText(variant.costumeOverride, language),
 		notes: translateNotes(variant.notes, language)
 	}));
+}
+
+export function localizeOutline(source: OutlineFile, language: string): OutlineFile {
+	if (language !== english.language) return source;
+	const file = structuredClone(source);
+	const t = (value: string | undefined) => translatePublicText(value, language);
+	file.outline.title = t(file.outline.title) ?? file.outline.title;
+	for (const step of file.steps) {
+		step.title = t(step.title) ?? step.title;
+		step.summary = t(step.summary) ?? step.summary;
+		step.notes = translateNotes(step.notes, language);
+	}
+	return file;
 }
 
 export function publicTranslationStatus() {

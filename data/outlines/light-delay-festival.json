@@ -1,0 +1,701 @@
+{
+  "schemaVersion": "1.0.0",
+  "outline": {
+    "id": "outline:light-delay-festival",
+    "scriptId": "script:light-delay-festival",
+    "title": "Escaleta — Light Delay: Festival Cut",
+    "status": "draft",
+    "version": "0.2.0"
+  },
+  "steps": [
+    {
+      "id": "festival:outline-01",
+      "order": 1,
+      "title": "Apertura de misión",
+      "summary": "PG exterior: Proxima, Júpiter y Celestial Ardor atracada; overlay de misión Velari.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-a"
+      ],
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "majorEventId": "event:embarkation"
+    },
+    {
+      "id": "festival:outline-02",
+      "order": 2,
+      "title": "Zao y Elin verifican el sistema",
+      "summary": "Zao y Elin revisan juntas el núcleo diplomático; Elin se retira a su puesto para preparar la cuarentena antes de que Zao quede sola (fix de continuidad: Harlan sólo aparece por pantalla, nunca físicamente).",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-a"
+      ],
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "majorEventId": "event:embarkation"
+    },
+    {
+      "id": "festival:outline-03",
+      "order": 3,
+      "title": "Hallazgo del proceso no declarado",
+      "summary": "Insert: la consola compara procesos declarados contra el manifiesto; un bloque sin entrada se resalta como PROCESO NO DECLARADO.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-a"
+      ],
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "majorEventId": "event:anomaly-discovery"
+    },
+    {
+      "id": "festival:outline-04",
+      "order": 4,
+      "title": "Zao entiende que es real",
+      "summary": "PP de Zao: no es ruido, es el primer registro de alarma.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-a"
+      ],
+      "beatIds": [
+        "festival:beat-a-01"
+      ],
+      "majorEventId": "event:anomaly-discovery"
+    },
+    {
+      "id": "festival:outline-05",
+      "order": 5,
+      "title": "Harlan llega sin ser visto",
+      "summary": "Harlan llega al acceso axial del puente justo cuando Zao abre canal.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "majorEventId": "event:anomaly-discovery"
+    },
+    {
+      "id": "festival:outline-06",
+      "order": 6,
+      "title": "Zao reporta en vivo (cortada)",
+      "summary": "Zao reporta un payload autónomo firmado por Sorell, firma falsa, \"el relé físico apunta a—\"; el canal se corta antes de nombrar a Harlan en abierto.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-07",
+      "order": 7,
+      "title": "Harlan sabotea las comunicaciones",
+      "summary": "Harlan activa el jammer y desconecta COM A/B en el distribuidor del cilindro de servicio.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-08",
+      "order": 8,
+      "title": "Los tres enlaces caen a la vez",
+      "summary": "Zao comprueba la malla inalámbrica y ambos enlaces cableados: caen simultáneamente, confirmando sabotaje deliberado.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-09",
+      "order": 9,
+      "title": "Zao descarta Tierra y Proxima",
+      "summary": "Zao dice en voz alta por qué descarta Tierra (demora) y Proxima (ocluida por Júpiter, sin línea de vista).",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "majorEventId": "event:zao-warning-death",
+      "notes": [
+        {
+          "type": "continuity",
+          "text": "Corregido 29/08/2026: Proxima se descarta por oclusión geométrica de Júpiter (Proxima en L1 del sistema Sol–Júpiter, boca local en L2 — Júpiter queda literalmente entre ambos), reemplazando la razón vaga anterior (\"sin adquisición óptica útil\"). No contradice la advertencia del documento de adaptación de no restaurar a Júpiter como bloqueo central de la trama: aquí sólo descarta una alternativa secundaria, no explica el silencio general de Zao (que sigue siendo el sabotaje de Harlan).",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "festival:outline-10",
+      "order": 10,
+      "title": "Insert: Tierra/Proxima marcadas en consola",
+      "summary": "TIERRA y PROXIMA se marcan en rojo con su motivo, reforzando visualmente lo dicho.",
+      "importance": "optional",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ]
+    },
+    {
+      "id": "festival:outline-11",
+      "order": 11,
+      "title": "Insert: mecanismo de puntería",
+      "summary": "El sistema superpone plan de vuelo, tiempo lumínico y elipse de incertidumbre sobre el corredor de intercepción.",
+      "importance": "optional",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ]
+    },
+    {
+      "id": "festival:outline-12",
+      "order": 12,
+      "title": "Alivio de Zao",
+      "summary": "Alivio breve: la solución está lista y el barrido comienza.",
+      "importance": "optional",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ]
+    },
+    {
+      "id": "festival:outline-13",
+      "order": 13,
+      "title": "Zao graba el mensaje",
+      "summary": "Zao graba el mensaje completo, nombrando a Harlan y el relé físico, mientras el barrido avanza.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-14",
+      "order": 14,
+      "title": "Transmitido; Harlan entra",
+      "summary": "El barrido llega a 100%; Harlan entra y ve TRANSMITIDO, no el destino.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-b"
+      ],
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-15",
+      "order": 15,
+      "title": "Harlan confronta a Zao",
+      "summary": "\"¿A quién enviaste eso?\"; Zao no responde, lo mira desafiante.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-16",
+      "order": 16,
+      "title": "Harlan asume Tierra y suspira",
+      "summary": "Harlan asume que el mensaje fue a la Tierra, lo dice casi para tranquilizarse, y suspira antes de cerrar la distancia — el motor dramático de la ironía final.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-17",
+      "order": 17,
+      "title": "Asesinato fuera de campo",
+      "summary": "Harlan mata a Zao fuera de campo.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-18",
+      "order": 18,
+      "title": "Harlan borra evidencia",
+      "summary": "Harlan borra cámaras y archivo local del núcleo antes de retirarse.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-19",
+      "order": 19,
+      "title": "Sorell encuentra a Zao",
+      "summary": "Sorell llega sola, intenta reanimar a Zao, no logra comunicarse mientras el jammer sigue activo.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-20",
+      "order": 20,
+      "title": "Harlan restaura comunicaciones",
+      "summary": "Harlan restaura COM A/B y regresa al puente compuesto.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-21",
+      "order": 21,
+      "title": "Coartada de Harlan",
+      "summary": "Voss pregunta por Sorell; Harlan miente (\"No la vi\"); Voss lo envía con Okoye a buscarla — establece la coartada espacial.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-22",
+      "order": 22,
+      "title": "Salto temporal",
+      "summary": "Overlay: 23 H DESPUÉS · CANAL VELARI EN 03:00.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-c"
+      ],
+      "beatIds": [
+        "festival:beat-c-01"
+      ],
+      "majorEventId": "event:zao-warning-death"
+    },
+    {
+      "id": "festival:outline-23",
+      "order": 23,
+      "title": "Beat de conexión (pendiente)",
+      "summary": "Propuesto 29/08/2026: un beat breve — overlay tipo INCIDENTE REGISTRADO o una línea de bitácora/orden de Voss — que establezca que se ordenó una auditoría de sistemas tras \"el incidente\", sin mostrar sospechosos ni forense. Cierra el vacío causal entre el hallazgo de Zao (Secuencia C) y la apertura de la investigación de Elin (Secuencia D), que hasta ahora aparece sin ninguna causa mostrada.",
+      "importance": "required",
+      "status": "missing",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation",
+      "notes": [
+        {
+          "type": "continuity",
+          "text": "Gap identificado 29/08/2026: sin este beat, Elin \"simplemente aparece\" investigando 23 horas después, sin que se muestre por qué. No es una investigación policial del asesinato (descartada a propósito por el documento de adaptación, sección 7.2) sino la causa mínima mostrada para el trabajo técnico de Elin.",
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "id": "festival:outline-24",
+      "order": 24,
+      "title": "Se nombra el riesgo real (pendiente)",
+      "summary": "Propuesto 29/08/2026: Elin o Voss nombran en voz alta qué podría pasar si el payload se dispara al abrir el canal Velari — riesgo de ataque, de que los Velari lo interpreten como agresión, de arruinar el primer contacto. Reemplaza el tono puramente clínico actual (\"puedo aislarlo, no revocar\") por angustia real y consecuencias concretas antes de que llegue el mensaje de Zao.",
+      "importance": "required",
+      "status": "missing",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation",
+      "notes": [
+        {
+          "type": "continuity",
+          "text": "Decisión 29/08/2026 (conversación con Sebastián): mantener la doble llave (no eliminarla) — el mensaje de Zao no debe resolver todo por sí solo, según el principio anti–deus ex machina de la sección 3.2 del documento de adaptación — pero enriquecer la Secuencia D con tensión y motivo, no sólo procedimiento técnico. Estructuralmente la doble llave no depende de este beat (Elin podría llegar al payload por auditoría rutinaria), pero la angustia del segundo acto sí lo necesita.",
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "id": "festival:outline-25",
+      "order": 25,
+      "title": "Overlays del payload",
+      "summary": "PAYLOAD DESPLEGADO / DISPARADOR: APERTURA CANAL VELARI / OVERRIDE: FIRMA NO IDENTIFICADA / CUARENTENA PREPARADA.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation"
+    },
+    {
+      "id": "festival:outline-26",
+      "order": 26,
+      "title": "Elin cartografía el payload",
+      "summary": "Elin separa rutas del payload y deja lista una cuarentena limitada; todavía no puede atribuir el override.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation"
+    },
+    {
+      "id": "festival:outline-27",
+      "order": 27,
+      "title": "Límite de Elin",
+      "summary": "Voss: \"¿Puede detenerlo?\" — Elin: \"Puedo aislarlo. No puedo revocar a quien lo controla.\"",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation"
+    },
+    {
+      "id": "festival:outline-28",
+      "order": 28,
+      "title": "Harlan interviene sin delatarse",
+      "summary": "Harlan recomienda apagar la mediación; Elin lo contradice; Voss corta la discusión.",
+      "importance": "optional",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:investigation"
+    },
+    {
+      "id": "festival:outline-29",
+      "order": 29,
+      "title": "Señal entrante detectada",
+      "summary": "Elin detecta una señal humana entrante que viene exactamente por el corredor de vuelo de la nave.",
+      "importance": "required",
+      "status": "covered",
+      "sceneIds": [
+        "festival:scene-d"
+      ],
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "majorEventId": "event:message-reception"
+    },
+    {
+      "id": "festival:outline-30",
+      "order": 30,
+      "title": "Autenticación de la señal",
+      "summary": "La señal se autentica como salida del transmisor físico de Zao.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:message-reception"
+    },
+    {
+      "id": "festival:outline-31",
+      "order": 31,
+      "title": "Reproducción del mensaje",
+      "summary": "Se reproduce el mensaje grabado de Zao.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:message-reception"
+    },
+    {
+      "id": "festival:outline-32",
+      "order": 32,
+      "title": "Harlan intenta invalidarlo",
+      "summary": "Harlan objeta: una voz puede falsificarse.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:harlan-exposed"
+    },
+    {
+      "id": "festival:outline-33",
+      "order": 33,
+      "title": "Elin ejecuta, no pide fe",
+      "summary": "Elin no pide que le crean; ejecuta directamente la instrucción de Zao.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:harlan-exposed"
+    },
+    {
+      "id": "festival:outline-34",
+      "order": 34,
+      "title": "Triple coincidencia",
+      "summary": "Overlay/montaje de tres capas: payload + relé físico + credencial de mando.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:harlan-exposed",
+      "dependsOnStepIds": [
+        "festival:outline-13",
+        "festival:outline-26"
+      ],
+      "notes": [
+        {
+          "type": "continuity",
+          "text": "Verificado 29/08/2026: las tres capas ya tienen fuente escrita — el relé físico está en el mensaje grabado de Zao (festival:cue-b-01, \"Crucen la rutina con el relé físico\") y el payload/posible rastro de credencial está en el trabajo de Elin (Secuencia D). Esta convergencia no depende del gap señalado en d-00/d-00b: es un problema de motivación de apertura de escena, no una fractura de la doble llave.",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "festival:outline-35",
+      "order": 35,
+      "title": "Integridad verificada",
+      "summary": "Resultado: R. HARLAN — INTEGRIDAD VERIFICADA.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:harlan-exposed"
+    },
+    {
+      "id": "festival:outline-36",
+      "order": 36,
+      "title": "Voss revoca la credencial",
+      "summary": "Voss revoca la credencial de Harlan.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:harlan-exposed"
+    },
+    {
+      "id": "festival:outline-37",
+      "order": 37,
+      "title": "Harlan activa el override",
+      "summary": "Harlan activa el override antes de que la revocación se propague.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-e"
+      ],
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "majorEventId": "event:harlan-exposed"
+    },
+    {
+      "id": "festival:outline-38",
+      "order": 38,
+      "title": "Harlan alcanza el control físico",
+      "summary": "Harlan obtiene acceso físico al núcleo o activa la rama hostil desde el último punto donde su override sigue siendo válido.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-f"
+      ],
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "majorEventId": "event:quarantine"
+    },
+    {
+      "id": "festival:outline-39",
+      "order": 39,
+      "title": "Voss lo contiene",
+      "summary": "Voss contiene a Harlan físicamente o bloquea el acceso mientras Elin ejecuta la operación digital.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-f"
+      ],
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "majorEventId": "event:quarantine"
+    },
+    {
+      "id": "festival:outline-40",
+      "order": 40,
+      "title": "Elin aplica la cuarentena",
+      "summary": "Elin aplica la cuarentena ya preparada: aísla el payload, no lo borra; mantiene la mediación necesaria para el saludo legítimo.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-f"
+      ],
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "majorEventId": "event:quarantine"
+    },
+    {
+      "id": "festival:outline-41",
+      "order": 41,
+      "title": "UI final de cuarentena",
+      "summary": "PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA.",
+      "importance": "optional",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-f"
+      ],
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "majorEventId": "event:quarantine"
+    },
+    {
+      "id": "festival:outline-42",
+      "order": 42,
+      "title": "El reloj llega a cero",
+      "summary": "Elin abre únicamente el canal limpio; Voss: \"Envíen.\"",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-g"
+      ],
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "majorEventId": "event:clean-greeting"
+    },
+    {
+      "id": "festival:outline-43",
+      "order": 43,
+      "title": "Respuesta Velari",
+      "summary": "Silencio, luego respuesta Velari orgánica/bioluminiscente; hero shot de Celestial Ardor frente a la nave emisaria.",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-g"
+      ],
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "majorEventId": "event:first-contact"
+    },
+    {
+      "id": "festival:outline-44",
+      "order": 44,
+      "title": "Cierre: llegaste a tiempo",
+      "summary": "Interior: el mensaje de Zao queda archivado; última línea de Voss: \"Llegaste a tiempo.\"",
+      "importance": "required",
+      "status": "planned",
+      "sceneIds": [
+        "festival:scene-g"
+      ],
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "majorEventId": "event:aftermath"
+    }
+  ]
+}

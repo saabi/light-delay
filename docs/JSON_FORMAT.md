@@ -245,6 +245,7 @@ export interface OutlineStep {
   majorEventId?: string; // → comparison-taxonomy majorEvents
   sceneIds?: SceneId[];
   beatIds?: BeatId[];
+  dependsOnStepIds?: string[]; // other OutlineStep ids in the same file
   sourceRefs?: SourceReference[];
   notes?: Note[];
 }

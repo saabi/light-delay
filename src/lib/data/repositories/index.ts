@@ -35,6 +35,7 @@ import {
 	localizeComparisonTaxonomy,
 	localizeEntityVariants,
 	localizeNarrativeFunctions,
+	localizeOutline,
 	localizeScript,
 	localizeScriptRegistryEntries
 } from '../selectors/publicTranslations.ts';
@@ -125,6 +126,12 @@ export function outlinePathForScript(scriptId: ScriptId): string {
 export function getOutline(scriptId: ScriptId): OutlineFile | null {
 	if (!scriptId) return null;
 	return OUTLINE_MODULES[scriptId] ?? null;
+}
+
+export function getLocalizedOutline(scriptId: ScriptId, language: string): OutlineFile | null {
+	const outline = getOutline(scriptId);
+	if (!outline) return null;
+	return localizeOutline(outline, language);
 }
 
 export function hasOutline(scriptId: ScriptId): boolean {
