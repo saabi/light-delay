@@ -136,7 +136,7 @@ const SEGMENTS = [
 	{
 		key: 'f',
 		title: 'La nave llega primero',
-		summary: 'Cruce de la garganta; T+23 h; Rao contra reloj.',
+		summary: 'Cruce de la garganta; T+23 h; Elin contra reloj.',
 		dramaticPurpose: 'Salto temporal y presión técnica.',
 		locationId: 'location:celestial-ardor-bridge',
 		targetDurationMs: 11000,
@@ -349,7 +349,10 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			),
 			0
 		);
-		addCue(textCue('trailer:cue-d-02', beatId, 2, 'SIN ENLACE / COM A-B SIN PORTADORA', 'interface'), 1);
+		addCue(
+			textCue('trailer:cue-d-02', beatId, 2, 'SIN ENLACE / COM A-B SIN PORTADORA', 'interface'),
+			1
+		);
 	}
 	if (seg.key === 'e') {
 		addCue(textCue('trailer:cue-e-01', beatId, 1, 'TRANSMISIÓN 70%… 92%…', 'interface'), 0);
@@ -544,7 +547,15 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			shotId,
 			number: 1,
 			status: 'selected',
-			imageAssetId: mainTakeRec.imageAssetId
+			imageAssetId: mainTakeRec.imageAssetId,
+			imageStatus: {
+				status: 'needs_regeneration',
+				reasons: ['canon_mismatch'],
+				explanation:
+					'Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.',
+				replacementBrief:
+					'Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic.'
+			}
 		});
 	}
 
@@ -564,14 +575,14 @@ const file = {
 		projectId: 'project:light-delay',
 		continuityId: 'continuity:light-delay-primary',
 		title: 'Light Delay — Tráiler (~1:30)',
-		version: '0.1.0-draft',
+		version: '0.2.0-draft',
 		status: 'draft',
 		kind: 'trailer',
 		targetDurationMs: 90000,
 		lineage: {
 			sourceScriptId: 'script:light-delay-main-short',
 			relationship: 'trailer',
-			sourceVersion: '1.0.0-extract',
+			sourceVersion: '1.1.0-draft',
 			notes:
 				'Tráiler según docs/Light Delay — Tráiler de la versión de 30 minutos.md. Frames reutilizados del animatic principal vía imageAssetId; diálogos condensados del brief.'
 		},
@@ -580,7 +591,7 @@ const file = {
 			id: `character:${id}`
 		})),
 		comparisonProfile: {
-			version: '1.0.0',
+			version: '1.1.0',
 			canonClaims: main.script.comparisonProfile.canonClaims,
 			eventCoverage: [
 				['event:embarkation', 'reworked', ['trailer:scene-a', 'trailer:scene-b']],
@@ -593,11 +604,13 @@ const file = {
 				['event:quarantine', 'present', ['trailer:scene-h']],
 				['event:clean-greeting', 'reworked', ['trailer:scene-h']],
 				['event:first-contact', 'present', ['trailer:scene-h', 'trailer:scene-i']]
-			].map(([eventId, status, sceneIds]) => ({ eventId, status, sceneIds })).concat({
-				eventId: 'event:aftermath',
-				status: 'omitted',
-				note: 'El tráiler termina en el umbral del contacto.'
-			})
+			]
+				.map(([eventId, status, sceneIds]) => ({ eventId, status, sceneIds }))
+				.concat({
+					eventId: 'event:aftermath',
+					status: 'omitted',
+					note: 'El tráiler termina en el umbral del contacto.'
+				})
 		},
 		characterFunctionAssignments: [
 			{ functionId: 'function:command', characterId: 'character:voss', relationship: 'unchanged' },
@@ -636,7 +649,7 @@ const file = {
 };
 
 const out = join(ROOT, 'data/scripts/light-delay-trailer.json');
-writeFileSync(out, JSON.stringify(file, null, '\t') + '\n', 'utf8');
+writeFileSync(out, JSON.stringify(file, null, 2) + '\n', 'utf8');
 console.log(
 	`Wrote ${out} scenes=${scenes.length} shots=${shots.length} takes=${takes.length} cues=${cues.length} durationMs=${totalMs}`
 );

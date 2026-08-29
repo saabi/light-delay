@@ -4,7 +4,7 @@
     "id": "script:light-delay-main-short",
     "projectId": "project:light-delay",
     "title": "Light Delay — Guion de cortometraje",
-    "version": "1.0.0-extract",
+    "version": "1.1.0-draft",
     "status": "draft",
     "actIds": [
       "main:act-1",
@@ -42,10 +42,14 @@
       {
         "kind": "character",
         "id": "character:okoye"
+      },
+      {
+        "kind": "character",
+        "id": "character:keene"
       }
     ],
     "comparisonProfile": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "canonClaims": [
         {
           "dimensionId": "canon:proxima-origin",
@@ -78,6 +82,18 @@
           "status": "established"
         },
         {
+          "dimensionId": "canon:mission-timeline",
+          "valueId": "57h48-signal23h15-encounter24h",
+          "statement": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:ardor-gravity-operations",
+          "valueId": "thrust-gravity-coast-microgravity",
+          "statement": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce; las rutas central y de servicio explican los tiempos de desplazamiento.",
+          "status": "established"
+        },
+        {
           "dimensionId": "canon:velari-objects",
           "valueId": "station-and-emissary",
           "statement": "La estación Velari y la nave emisaria son objetos distintos.",
@@ -98,7 +114,7 @@
         {
           "dimensionId": "canon:rao-containment",
           "valueId": "bounded-quarantine",
-          "statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+          "statement": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
           "status": "established"
         },
         {
@@ -235,6 +251,16 @@
       {
         "functionId": "function:override_antagonist",
         "characterId": "character:harlan",
+        "relationship": "unchanged"
+      },
+      {
+        "functionId": "function:security",
+        "characterId": "character:okoye",
+        "relationship": "unchanged"
+      },
+      {
+        "functionId": "function:medical",
+        "characterId": "character:keene",
         "relationship": "unchanged"
       }
     ]
@@ -597,7 +623,7 @@
         "continuity": "MÁS TARDE",
         "storyTime": "T."
       },
-      "summary": "Investigación y sospecha",
+      "summary": "Investigación y credencial comprometida",
       "characterIds": [
         "character:voss",
         "character:sorell",
@@ -907,7 +933,9 @@
         "main:cue-01-28",
         "main:cue-01-29",
         "main:cue-01-30",
-        "main:cue-01-31"
+        "main:cue-01-31",
+        "main:cue-01-32",
+        "main:cue-01-33"
       ]
     },
     {
@@ -1451,7 +1479,7 @@
       "beatId": "main:beat-01-01",
       "order": 13,
       "type": "action",
-      "text": "Rao corta la malla de prueba. La consola principal queda sin enlace; el control cableado del láser exterior conserva su indicador verde: “CONTROL LOCAL / LÁSER EXTERIOR”. Zao lo verifica de un vistazo."
+      "text": "Elin corta la malla de prueba. La consola principal queda sin enlace; el control cableado del láser exterior conserva su indicador verde: “CONTROL LOCAL / LÁSER EXTERIOR”. Zao lo verifica de un vistazo."
     },
     {
       "id": "main:cue-01-14",
@@ -1615,7 +1643,7 @@
       "beatId": "main:beat-01-01",
       "order": 27,
       "type": "action",
-      "text": "Corte a ZAO (40s, mono de ingeniería) frente al núcleo diplomático, una esfera de cristal pulsante. RAO (30s) está a su lado con un tablet. En la consola técnica contigua, un control lleva el rótulo CONTROL LOCAL / LÁSER EXTERIOR."
+      "text": "Corte a ZAO (40s, mono de ingeniería) frente al núcleo diplomático, una esfera de cristal pulsante. ELIN (30s) está a su lado con un tablet. En la consola técnica contigua, un control lleva el rótulo CONTROL LOCAL / LÁSER EXTERIOR."
     },
     {
       "id": "main:cue-01-28",
@@ -1830,7 +1858,7 @@
       "beatId": "main:beat-04-01",
       "order": 5,
       "type": "action",
-      "text": "Copia el estado para Rao y deja el registro de Sorell marcado como NO VERIFICADO."
+      "text": "Copia el estado para Elin y deja el registro de Sorell marcado como NO VERIFICADO."
     },
     {
       "id": "main:cue-04-06",
@@ -2538,7 +2566,7 @@
       "beatId": "main:beat-09-01",
       "order": 8,
       "type": "action",
-      "text": "Sorell entrega la credencial comprometida para análisis y se coloca junto a Rao."
+      "text": "Sorell entrega la credencial comprometida para análisis y se coloca junto a Elin."
     },
     {
       "id": "main:cue-10-01",
@@ -2650,7 +2678,7 @@
       "beatId": "main:beat-10-01",
       "order": 7,
       "type": "action",
-      "text": "Rao trabaja en un terminal físicamente protegido. Overlay: \"PAYLOAD DESPLEGADO: 31%.\""
+      "text": "Elin trabaja en un terminal físicamente protegido. Overlay: \"PAYLOAD DESPLEGADO: 31%.\""
     },
     {
       "id": "main:cue-10-08",
@@ -2701,7 +2729,7 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Rao dice que apagarla destruiría también el único intérprete que tenemos.",
+            "spokenText": "Elin dice que apagarla destruiría también el único intérprete que tenemos.",
             "status": "source"
           }
         }
@@ -2892,7 +2920,7 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Rao. Cruce la rutina con el relé.",
+            "spokenText": "Elin. Cruce la rutina con el relé.",
             "status": "source"
           }
         }
@@ -2992,7 +3020,7 @@
       "beatId": "main:beat-12-01",
       "order": 12,
       "type": "action",
-      "text": "Rao superpone la firma OVR-7C41 hallada en el payload con el registro físico indicado por Zao. Una tercera capa, preservada en el hardware de mando, resuelve el titular."
+      "text": "Elin superpone la firma OVR-7C41 hallada en el payload con el registro físico indicado por Zao. Una tercera capa, preservada en el hardware de mando, resuelve el titular."
     },
     {
       "id": "main:cue-12-13",
@@ -3006,7 +3034,7 @@
       "beatId": "main:beat-12-01",
       "order": 14,
       "type": "action",
-      "text": "Harlan no corre de inmediato. Toca discretamente un control en su muñeca. En el panel de Rao: \"SOLICITUD MANUAL DE EJECUCIÓN — ACEPTADA ANTES DE REVOCACIÓN.\""
+      "text": "Harlan no corre de inmediato. Toca discretamente un control en su muñeca. En el panel de Elin: \"SOLICITUD MANUAL DE EJECUCIÓN — ACEPTADA ANTES DE REVOCACIÓN.\""
     },
     {
       "id": "main:cue-12-15",
@@ -3071,14 +3099,14 @@
       "beatId": "main:beat-13-01",
       "order": 4,
       "type": "action",
-      "text": "Harlan atraviesa el pasillo mientras la credencial se extingue módulo por módulo. Llega al núcleo antes de que la revocación alcance el bus físico, entra y sella el mamparo."
+      "text": "Bajo 1 g, Harlan cruza la cubierta de mando, toma el ascensor central y desciende al ramal del núcleo mientras la credencial se extingue módulo por módulo. Llega antes de que la revocación alcance el bus físico, entra y sella el mamparo."
     },
     {
       "id": "main:cue-13-05",
       "beatId": "main:beat-13-01",
       "order": 5,
       "type": "action",
-      "text": "Voss y Okoye llegan al mamparo. En el puente, Sorell ocupa el puesto junto a Rao."
+      "text": "Voss y Okoye llegan al mamparo. En el puente, Sorell ocupa el puesto junto a Elin."
     },
     {
       "id": "main:cue-14-01",
@@ -3299,7 +3327,7 @@
       "beatId": "main:beat-14-01",
       "order": 14,
       "type": "action",
-      "text": "En el puente, Rao abre el mapa de cuarentena preparado horas antes."
+      "text": "En el puente, Elin abre el mapa de cuarentena preparado horas antes."
     },
     {
       "id": "main:cue-14-15",
@@ -3320,7 +3348,7 @@
       "beatId": "main:beat-14-01",
       "order": 17,
       "type": "action",
-      "text": "Harlan intenta liberar el payload de la cuarentena desde el bus físico. Rao bloquea dos rutas; una tercera permanece abierta."
+      "text": "Harlan intenta liberar el payload de la cuarentena desde el bus físico. Elin bloquea dos rutas; una tercera permanece abierta."
     },
     {
       "id": "main:cue-14-18",
@@ -3341,7 +3369,7 @@
       "beatId": "main:beat-14-01",
       "order": 20,
       "type": "action",
-      "text": "Rao aplica la cuarentena preparada. El reloj llega a 00:07*.*"
+      "text": "Elin aplica la cuarentena preparada. El reloj llega a 00:07*.*"
     },
     {
       "id": "main:cue-14-21",
@@ -3464,14 +3492,14 @@
       "beatId": "main:beat-15-01",
       "order": 7,
       "type": "action",
-      "text": "El reloj llega a cero. Una portadora Velari aparece. Rao mantiene el canal técnico; Sorell controla el contenido."
+      "text": "El reloj llega a cero. Una portadora Velari aparece. Elin mantiene el canal técnico; Sorell controla el contenido."
     },
     {
       "id": "main:cue-15-08",
       "beatId": "main:beat-15-01",
       "order": 8,
       "type": "action",
-      "text": "Sorell confirma la secuencia. Rao abre el conducto y transmite. La respuesta llega casi de inmediato como un patrón orgánico de luz."
+      "text": "Sorell confirma la secuencia. Elin abre el conducto y transmite. La respuesta llega casi de inmediato como un patrón orgánico de luz."
     },
     {
       "id": "main:cue-16-01",
@@ -3546,7 +3574,7 @@
       "beatId": "main:beat-17-01",
       "order": 5,
       "type": "action",
-      "text": "Sorell se coloca junto a Rao."
+      "text": "Sorell se coloca junto a Elin."
     },
     {
       "id": "main:cue-17-06",
@@ -3658,6 +3686,30 @@
           }
         }
       }
+    },
+    {
+      "id": "main:cue-01-32",
+      "beatId": "main:beat-01-01",
+      "order": 32,
+      "type": "dialogue",
+      "speakerId": "character:cael",
+      "presentation": "off_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Le pusieron “Ardor”. Con esa forma. Alguien en Diseño tenía sentido del humor.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "main:cue-01-33",
+      "beatId": "main:beat-01-01",
+      "order": 33,
+      "type": "action",
+      "text": "Voss mira a Cael un instante. No responde; Cael vuelve a la cuenta de salida."
     }
   ],
   "shots": [
@@ -3669,7 +3721,7 @@
       ],
       "number": 1,
       "order": 1,
-      "description": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, Júpiter pequeño al fondo.",
+      "description": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, con nombre y silueta legibles, Júpiter pequeño al fondo. Cael comenta por el canal de preparación.",
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "LS",
@@ -3680,7 +3732,13 @@
         "movementDescription": "24 mm · composición axial · avance muy lento que revele generaciones constructivas."
       },
       "durationMs": 18000,
-      "cuePlacements": [],
+      "cuePlacements": [
+        {
+          "cueId": "main:cue-01-32",
+          "atMs": 3500,
+          "durationMs": 8500
+        }
+      ],
       "takeIds": [
         "main:take-01-01-01"
       ],
@@ -3849,7 +3907,7 @@
       ],
       "number": 6,
       "order": 6,
-      "description": "Cael marca la ventana de salida; Sorell cruza con su equipo.",
+      "description": "Zao instruye a Elin sobre la cuarentena; Elin prueba el aislamiento y confirma que el control cableado del láser exterior permanece disponible.",
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "MS",
@@ -3868,12 +3926,12 @@
         },
         {
           "cueId": "main:cue-01-12",
-          "atMs": 0,
+          "atMs": 8000,
           "durationMs": 8000
         },
         {
           "cueId": "main:cue-01-13",
-          "atMs": 0,
+          "atMs": 16000,
           "durationMs": 8000
         }
       ],
@@ -3896,7 +3954,7 @@
       ],
       "number": 7,
       "order": 7,
-      "description": "Zao y Rao verifican núcleo y control local del láser exterior.",
+      "description": "Zao tranquiliza a Elin; Sorell entrega a Zao el saludo pasivo de sólo lectura y ambas confirman su confianza antes del cierre de rampa.",
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "INSERT",
@@ -3915,12 +3973,12 @@
         },
         {
           "cueId": "main:cue-01-15",
-          "atMs": 0,
+          "atMs": 8000,
           "durationMs": 8000
         },
         {
           "cueId": "main:cue-01-16",
-          "atMs": 0,
+          "atMs": 16000,
           "durationMs": 8000
         }
       ],
@@ -3939,7 +3997,7 @@
           "resolved": false
         }
       ],
-      "purpose": "Zao y Rao verifican núcleo y control local del láser exterior."
+      "purpose": "Establecer el vínculo Zao–Elin, la autoría de Sorell y el saludo pasivo que completará la contención."
     },
     {
       "id": "main:shot-01-08",
@@ -3957,7 +4015,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "50 mm · triángulo Zao–Sorell–Rao, cierre en rampa."
+        "movementDescription": "50 mm · triángulo Zao–Sorell–Elin, cierre en rampa."
       },
       "durationMs": 8000,
       "cuePlacements": [
@@ -4121,8 +4179,8 @@
       ],
       "number": 13,
       "order": 13,
-      "description": "Cael interviene con la cuenta regresiva antes de la apertura.",
-      "purpose": "Cael marca la presión de tiempo que estructura el resto de la escena.",
+      "description": "Voss responde a la broma sólo con una mirada; Cael recupera el tono operativo y marca la cuenta regresiva antes de la apertura.",
+      "purpose": "Cerrar el beat humano sobre el nombre de la nave y convertirlo de inmediato en presión de tiempo.",
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "MCU",
@@ -4135,9 +4193,14 @@
       "durationMs": 9000,
       "cuePlacements": [
         {
-          "cueId": "main:cue-01-07",
+          "cueId": "main:cue-01-33",
           "atMs": 0,
-          "durationMs": 9000
+          "durationMs": 1000
+        },
+        {
+          "cueId": "main:cue-01-07",
+          "atMs": 1000,
+          "durationMs": 8000
         }
       ],
       "takeIds": [
@@ -4226,7 +4289,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "50 mm · triángulo Zao–Sorell–Rao, cierre en rampa."
+        "movementDescription": "50 mm · triángulo Zao–Sorell–Elin, cierre en rampa."
       },
       "durationMs": 8000,
       "cuePlacements": [
@@ -4258,7 +4321,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "50 mm · triángulo Zao–Sorell–Rao, cierre en rampa."
+        "movementDescription": "50 mm · triángulo Zao–Sorell–Elin, cierre en rampa."
       },
       "durationMs": 8000,
       "cuePlacements": [
@@ -4713,7 +4776,7 @@
       ],
       "number": 5,
       "order": 31,
-      "description": "Zao marca el registro como NO VERIFICADO y copia datos para Rao.",
+      "description": "Zao marca el registro como NO VERIFICADO y copia datos para Elin.",
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "INSERT",
@@ -6107,7 +6170,7 @@
       ],
       "number": 6,
       "order": 71,
-      "description": "Sorell deja a Rao la información sobre el saludo pasivo.",
+      "description": "Sorell deja a Elin la información sobre el saludo pasivo.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTS",
@@ -6115,7 +6178,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "50 mm · salida al fondo, Rao en primer término."
+        "movementDescription": "50 mm · salida al fondo, Elin en primer término."
       },
       "durationMs": 24000,
       "cuePlacements": [
@@ -6144,7 +6207,7 @@
       ],
       "number": 1,
       "order": 72,
-      "description": "Rao trabaja en puesto protegido; reloj Velari sigue bajando.",
+      "description": "Elin trabaja en puesto protegido; reloj Velari sigue bajando.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "LS",
@@ -6254,7 +6317,7 @@
       ],
       "number": 4,
       "order": 75,
-      "description": "Rao crea un perímetro de cuarentena.",
+      "description": "Elin crea un perímetro de cuarentena.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
@@ -6359,7 +6422,7 @@
       ],
       "number": 7,
       "order": 78,
-      "description": "Rao explica a Voss por qué Sorell no está probada culpable.",
+      "description": "Elin explica a Voss por qué Sorell no está probada culpable.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
@@ -6740,7 +6803,7 @@
       ],
       "number": 4,
       "order": 88,
-      "description": "Rao recibe la orden de cruzar rutina y relé.",
+      "description": "Elin recibe la orden de cruzar rutina y relé.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTS",
@@ -6816,7 +6879,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "85 mm · reflejo sobre Rao."
+        "movementDescription": "85 mm · reflejo sobre Elin."
       },
       "durationMs": 16000,
       "cuePlacements": [
@@ -6989,7 +7052,7 @@
       ],
       "number": 2,
       "order": 95,
-      "description": "Corre mientras módulos revocan su credencial en cascada.",
+      "description": "Bajo 1 g, Harlan alcanza el ascensor central y desciende al ramal del núcleo mientras los módulos revocan su credencial en cascada.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTHER",
@@ -6997,7 +7060,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "35 mm · seguimiento lateral."
+        "movementDescription": "35 mm · seguimiento desde la cubierta de mando al ascensor; corte por eje al desembarco inferior."
       },
       "durationMs": 12000,
       "cuePlacements": [],
@@ -7062,7 +7125,7 @@
       ],
       "number": 4,
       "order": 97,
-      "description": "Voss y Okoye llegan; Cael permanece al mando a distancia.",
+      "description": "Voss y Okoye llegan por ascensor al acceso del núcleo; Cael permanece al mando a distancia.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
@@ -7070,7 +7133,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "50 mm · pantalla dividida puente/pasillo."
+        "movementDescription": "50 mm · pantalla dividida puente/acceso del núcleo."
       },
       "durationMs": 12000,
       "cuePlacements": [],
@@ -7093,7 +7156,7 @@
       ],
       "number": 5,
       "order": 98,
-      "description": "Sorell entra al puente junto a Rao.",
+      "description": "Sorell entra al puente junto a Elin.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
@@ -7234,7 +7297,7 @@
       ],
       "number": 4,
       "order": 102,
-      "description": "Rao abre el mapa de cuarentena preparado antes.",
+      "description": "Elin abre el mapa de cuarentena preparado antes.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTS",
@@ -7350,7 +7413,7 @@
       ],
       "number": 7,
       "order": 105,
-      "description": "Harlan abre una tercera ruta física que Rao no puede cerrar por red.",
+      "description": "Harlan abre una tercera ruta física que Elin no puede cerrar por red.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTS",
@@ -7471,7 +7534,7 @@
       ],
       "number": 10,
       "order": 108,
-      "description": "Rao confina la rama a 00:07; Harlan es reducido.",
+      "description": "Elin confina la rama a 00:07; Harlan es reducido.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "CU",
@@ -7539,7 +7602,7 @@
       ],
       "number": 2,
       "order": 110,
-      "description": "Rao muestra payload visible pero sin acceso a salida.",
+      "description": "Elin muestra payload visible pero sin acceso a salida.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTS",
@@ -7589,7 +7652,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "50 mm · Rao y Sorell comparten encuadre."
+        "movementDescription": "50 mm · Elin y Sorell comparten encuadre."
       },
       "durationMs": 18000,
       "cuePlacements": [
@@ -7655,7 +7718,7 @@
       ],
       "number": 5,
       "order": 113,
-      "description": "Sorell confirma; Rao abre conducto de sólo lectura.",
+      "description": "Sorell confirma; Elin abre conducto de sólo lectura.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "INSERT",
@@ -7915,7 +7978,7 @@
       ],
       "number": 3,
       "order": 121,
-      "description": "Sorell se coloca junto a Rao.",
+      "description": "Sorell se coloca junto a Elin.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",

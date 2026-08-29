@@ -11,11 +11,11 @@ import { getShotMedia } from '../repositories/lookups.ts';
 import { getAssets } from '../repositories/index.ts';
 
 describe('extracted canonical data', () => {
-	it('has 17 scenes and 112 shots on the main short', () => {
+	it('has 17 scenes and 124 shots on the main short', () => {
 		const script = getCanonicalScript();
 		expect(script.scenes).toHaveLength(17);
-		expect(script.shots).toHaveLength(112);
-		expect(script.takes).toHaveLength(112);
+		expect(script.shots).toHaveLength(124);
+		expect(script.takes).toHaveLength(124);
 		expect(script.script.id).toBe('script:light-delay-main-short');
 		expect(script.scenes[0]?.id).toMatch(/^main:/);
 	});
@@ -42,13 +42,18 @@ describe('extracted canonical data', () => {
 		expect(trailer.takes.every((t) => t.imageStatus?.status === 'needs_regeneration')).toBe(true);
 	});
 
-	it('marks all main takes for regeneration after layout refresh', () => {
+	it('separates main regeneration candidates from placeholder replacements', () => {
 		const script = getCanonicalScript();
 		const regen = script.takes.filter((take) => take.imageStatus?.status === 'needs_regeneration');
 		expect(regen).toHaveLength(112);
 		expect(regen.every((take) => take.imageStatus?.reasons.includes('canon_mismatch'))).toBe(true);
-		const usedAssetIds = script.takes.map((take) => take.imageAssetId).filter(Boolean);
-		expect(usedAssetIds.length - new Set(usedAssetIds).size).toBe(12);
+		const replacements = script.takes.filter(
+			(take) => take.imageStatus?.status === 'needs_replacement'
+		);
+		expect(replacements).toHaveLength(12);
+		expect(replacements.every((take) => take.imageStatus?.reasons.includes('placeholder'))).toBe(
+			true
+		);
 		expect(
 			getAssets().assets.filter((asset) => asset.imageStatus?.reasons.includes('placeholder'))
 		).toHaveLength(0);
@@ -78,8 +83,9 @@ describe('extracted canonical data', () => {
 		expect(long.script.declaredEntityRefs).toHaveLength(14);
 	});
 
-	it('sums animatic duration to 30 minutes', () => {
-		expect(getEffectiveDuration(getCanonicalScript())).toBe(30 * 60 * 1000);
+	it('sums the current animatic duration independently from the 30-minute target', () => {
+		expect(getCanonicalScript().script.targetDurationMs).toBe(30 * 60 * 1000);
+		expect(getEffectiveDuration(getCanonicalScript())).toBe(1_839_500);
 	});
 
 	it('derives subtitle segments from cue placements', () => {

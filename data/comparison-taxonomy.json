@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0.0",
-	"profileVersion": "1.0.0",
+	"profileVersion": "1.1.0",
 	"canonDimensions": [
 		{
 			"id": "canon:proxima-origin",
@@ -33,6 +33,18 @@
 			"foundational": true
 		},
 		{
+			"id": "canon:mission-timeline",
+			"category": "mission",
+			"label": "Cronología de tránsito, señal y encuentro",
+			"foundational": true
+		},
+		{
+			"id": "canon:ardor-gravity-operations",
+			"category": "technology",
+			"label": "Gravedad y circulación de la Ardor",
+			"foundational": true
+		},
+		{
 			"id": "canon:velari-objects",
 			"category": "contact",
 			"label": "Estación y emisaria Velari",
@@ -49,7 +61,7 @@
 			"category": "technology",
 			"label": "Bloqueo de comunicaciones y transmisión de Zao"
 		},
-		{ "id": "canon:rao-containment", "category": "conflict", "label": "Contención de Rao" },
+		{ "id": "canon:rao-containment", "category": "conflict", "label": "Contención de Elin" },
 		{ "id": "canon:ending", "category": "contact", "label": "Alcance del contacto final" }
 	],
 	"majorEvents": [

@@ -380,7 +380,7 @@
 			"title": "Animatic scene-01 shot 7",
 			"width": 1536,
 			"height": 864,
-			"description": "Zao y Rao verifican núcleo y transmisor óptico independiente."
+			"description": "Zao y Elin verifican núcleo y transmisor óptico independiente."
 		},
 		{
 			"id": "asset:animatic-01-08",
@@ -534,7 +534,7 @@
 			"title": "Animatic scene-04 shot 5",
 			"width": 1536,
 			"height": 864,
-			"description": "Zao marca el registro como NO VERIFICADO y copia datos para Rao."
+			"description": "Zao marca el registro como NO VERIFICADO y copia datos para Elin."
 		},
 		{
 			"id": "asset:animatic-05-01",
@@ -831,7 +831,7 @@
 			"title": "Animatic scene-09 shot 6",
 			"width": 1536,
 			"height": 864,
-			"description": "Sorell deja a Rao la información sobre el saludo pasivo."
+			"description": "Sorell deja a Elin la información sobre el saludo pasivo."
 		},
 		{
 			"id": "asset:animatic-10-01",
@@ -842,7 +842,7 @@
 			"title": "Animatic scene-10 shot 1",
 			"width": 1536,
 			"height": 864,
-			"description": "Rao trabaja en puesto protegido; reloj Velari sigue bajando."
+			"description": "Elin trabaja en puesto protegido; reloj Velari sigue bajando."
 		},
 		{
 			"id": "asset:animatic-10-02",
@@ -875,7 +875,7 @@
 			"title": "Animatic scene-10 shot 4",
 			"width": 1536,
 			"height": 864,
-			"description": "Rao crea un perímetro de cuarentena."
+			"description": "Elin crea un perímetro de cuarentena."
 		},
 		{
 			"id": "asset:animatic-10-05",
@@ -908,7 +908,7 @@
 			"title": "Animatic scene-10 shot 7",
 			"width": 1536,
 			"height": 864,
-			"description": "Rao explica a Voss por qué Sorell no está probada culpable."
+			"description": "Elin explica a Voss por qué Sorell no está probada culpable."
 		},
 		{
 			"id": "asset:animatic-11-01",
@@ -1018,7 +1018,7 @@
 			"title": "Animatic scene-12 shot 4",
 			"width": 1536,
 			"height": 864,
-			"description": "Rao recibe la orden de cruzar rutina y relé."
+			"description": "Elin recibe la orden de cruzar rutina y relé."
 		},
 		{
 			"id": "asset:animatic-12-05",
@@ -1117,7 +1117,7 @@
 			"title": "Animatic scene-13 shot 5",
 			"width": 1536,
 			"height": 864,
-			"description": "Sorell entra al puente junto a Rao."
+			"description": "Sorell entra al puente junto a Elin."
 		},
 		{
 			"id": "asset:animatic-14-01",
@@ -1161,7 +1161,7 @@
 			"title": "Animatic scene-14 shot 4",
 			"width": 1536,
 			"height": 864,
-			"description": "Rao abre el mapa de cuarentena preparado antes."
+			"description": "Elin abre el mapa de cuarentena preparado antes."
 		},
 		{
 			"id": "asset:animatic-14-05",
@@ -1194,7 +1194,7 @@
 			"title": "Animatic scene-14 shot 7",
 			"width": 1536,
 			"height": 864,
-			"description": "Harlan abre una tercera ruta física que Rao no puede cerrar por red."
+			"description": "Harlan abre una tercera ruta física que Elin no puede cerrar por red."
 		},
 		{
 			"id": "asset:animatic-14-08",
@@ -1227,7 +1227,7 @@
 			"title": "Animatic scene-14 shot 10",
 			"width": 1536,
 			"height": 864,
-			"description": "Rao confina la rama a 00:07; Harlan es reducido."
+			"description": "Elin confina la rama a 00:07; Harlan es reducido."
 		},
 		{
 			"id": "asset:animatic-15-01",
@@ -1249,7 +1249,7 @@
 			"title": "Animatic scene-15 shot 2",
 			"width": 1536,
 			"height": 864,
-			"description": "Rao muestra payload visible pero sin acceso a salida."
+			"description": "Elin muestra payload visible pero sin acceso a salida."
 		},
 		{
 			"id": "asset:animatic-15-03",
@@ -1282,7 +1282,7 @@
 			"title": "Animatic scene-15 shot 5",
 			"width": 1536,
 			"height": 864,
-			"description": "Sorell confirma; Rao abre conducto de sólo lectura."
+			"description": "Sorell confirma; Elin abre conducto de sólo lectura."
 		},
 		{
 			"id": "asset:animatic-15-06",
@@ -1370,7 +1370,7 @@
 			"title": "Animatic scene-17 shot 3",
 			"width": 1536,
 			"height": 864,
-			"description": "Sorell se coloca junto a Rao."
+			"description": "Sorell se coloca junto a Elin."
 		},
 		{
 			"id": "asset:animatic-17-04",

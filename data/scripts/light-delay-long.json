@@ -5,14 +5,14 @@
 		"projectId": "project:light-delay",
 		"continuityId": "continuity:light-delay-primary",
 		"title": "Light Delay — Tratamiento de largometraje",
-		"version": "0.1.0-draft",
+		"version": "0.2.0-draft",
 		"status": "draft",
 		"kind": "long_version",
 		"targetDurationMs": 6000000,
 		"lineage": {
 			"sourceScriptId": "script:light-delay-main-short",
 			"relationship": "rewrite",
-			"sourceVersion": "1.0.0-extract",
+			"sourceVersion": "1.1.0-draft",
 			"notes": "Recuperación revisada mediante docs/REVISION_LARGOMETRAJE_RECUPERADO.md."
 		},
 		"declaredEntityRefs": [
@@ -144,7 +144,7 @@
 			}
 		],
 		"comparisonProfile": {
-			"version": "1.0.0",
+			"version": "1.1.0",
 			"canonClaims": [
 				{
 					"dimensionId": "canon:proxima-origin",
@@ -177,6 +177,18 @@
 					"status": "established"
 				},
 				{
+					"dimensionId": "canon:mission-timeline",
+					"valueId": "57h48-signal23h15-encounter24h",
+					"statement": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ardor-gravity-operations",
+					"valueId": "thrust-gravity-coast-microgravity",
+					"statement": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce.",
+					"status": "established"
+				},
+				{
 					"dimensionId": "canon:velari-objects",
 					"valueId": "station-and-emissary",
 					"statement": "La estación Velari y la nave emisaria son objetos distintos.",
@@ -203,7 +215,7 @@
 				{
 					"dimensionId": "canon:rao-containment",
 					"valueId": "bounded-quarantine",
-					"statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+					"statement": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
 					"status": "established"
 				},
 				{
@@ -390,8 +402,8 @@
 			"setting": {
 				"storyTime": "T-2H"
 			},
-			"summary": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
-			"dramaticPurpose": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
+			"summary": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Ante el nombre y la silueta visibles, Cael comenta: «Le pusieron “Ardor”. Con esa forma. Alguien en Diseño tenía sentido del humor.» Voss responde con una mirada y Harlan apenas registra el intercambio. Zao, Sorell y Elin verifican el núcleo, el relé físico y el saludo pasivo.",
+			"dramaticPurpose": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Ante el nombre y la silueta visibles, Cael comenta: «Le pusieron “Ardor”. Con esa forma. Alguien en Diseño tenía sentido del humor.» Voss responde con una mirada y Harlan apenas registra el intercambio. Zao, Sorell y Elin verifican el núcleo, el relé físico y el saludo pasivo.",
 			"characterIds": [
 				"character:zao",
 				"character:voss",
@@ -529,8 +541,8 @@
 			"setting": {
 				"storyTime": "T+40H"
 			},
-			"summary": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
-			"dramaticPurpose": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"summary": "Zao y Elin encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"dramaticPurpose": "Zao y Elin encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
 			"characterIds": [
 				"character:zao",
 				"character:rao",
@@ -761,8 +773,8 @@
 			"setting": {
 				"storyTime": "MÁS TARDE"
 			},
-			"summary": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
-			"dramaticPurpose": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"summary": "Voss asigna tareas separadas: Elin analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"dramaticPurpose": "Voss asigna tareas separadas: Elin analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
 			"characterIds": [
 				"character:voss",
 				"character:rao",
@@ -854,13 +866,13 @@
 			"actId": "long:act-2",
 			"number": 15,
 			"order": 15,
-			"title": "Rao aísla el recorrido",
+			"title": "Elin aísla el recorrido",
 			"locationId": "location:celestial-ardor-bridge",
 			"setting": {
 				"storyTime": "CONTINUO"
 			},
-			"summary": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
-			"dramaticPurpose": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"summary": "Elin no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"dramaticPurpose": "Elin no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
 			"characterIds": [
 				"character:rao",
 				"character:hassan"
@@ -891,8 +903,8 @@
 			"setting": {
 				"storyTime": "MÁS TARDE"
 			},
-			"summary": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
-			"dramaticPurpose": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"summary": "Harlan exige apagar toda mediación; Elin explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"dramaticPurpose": "Harlan exige apagar toda mediación; Elin explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
 			"characterIds": [
 				"character:voss",
 				"character:harlan",
@@ -920,8 +932,8 @@
 			"setting": {
 				"storyTime": "MÁS TARDE"
 			},
-			"summary": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
-			"dramaticPurpose": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
+			"summary": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Elin mantiene separados lenguaje y payload.",
+			"dramaticPurpose": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Elin mantiene separados lenguaje y payload.",
 			"characterIds": [
 				"character:carvalho",
 				"character:sorell",
@@ -1016,8 +1028,8 @@
 			"setting": {
 				"storyTime": "MINUTOS DESPUÉS"
 			},
-			"summary": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
-			"dramaticPurpose": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"summary": "Elin cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"dramaticPurpose": "Elin cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
 			"characterIds": [
 				"character:rao",
 				"character:sorell",
@@ -1050,8 +1062,8 @@
 			"setting": {
 				"storyTime": "CONTINUO"
 			},
-			"summary": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
-			"dramaticPurpose": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
+			"summary": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y, bajo 1 g, baja por el ascensor central hasta el ramal del núcleo.",
+			"dramaticPurpose": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y, bajo 1 g, baja por el ascensor central hasta el ramal del núcleo.",
 			"characterIds": [
 				"character:voss",
 				"character:harlan",
@@ -1145,8 +1157,8 @@
 			"setting": {
 				"storyTime": "CUENTA REGRESIVA"
 			},
-			"summary": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
-			"dramaticPurpose": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"summary": "Elin confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"dramaticPurpose": "Elin confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
 			"characterIds": [
 				"character:rao",
 				"character:sorell",
@@ -1311,8 +1323,8 @@
 			"sceneId": "long:scene-01",
 			"order": 1,
 			"title": "Preparativos en Proxima",
-			"purpose": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
-			"summary": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.",
+			"purpose": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Ante el nombre y la silueta visibles, Cael comenta: «Le pusieron “Ardor”. Con esa forma. Alguien en Diseño tenía sentido del humor.» Voss responde con una mirada y Harlan apenas registra el intercambio. Zao, Sorell y Elin verifican el núcleo, el relé físico y el saludo pasivo.",
+			"summary": "La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Ante el nombre y la silueta visibles, Cael comenta: «Le pusieron “Ardor”. Con esa forma. Alguien en Diseño tenía sentido del humor.» Voss responde con una mirada y Harlan apenas registra el intercambio. Zao, Sorell y Elin verifican el núcleo, el relé físico y el saludo pasivo.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1487,8 +1499,8 @@
 			"sceneId": "long:scene-05",
 			"order": 1,
 			"title": "La envoltura dormida",
-			"purpose": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
-			"summary": "Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"purpose": "Zao y Elin encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
+			"summary": "Zao y Elin encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1729,8 +1741,8 @@
 			"sceneId": "long:scene-12",
 			"order": 1,
 			"title": "Investigación distribuida",
-			"purpose": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
-			"summary": "Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"purpose": "Voss asigna tareas separadas: Elin analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
+			"summary": "Voss asigna tareas separadas: Elin analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1838,9 +1850,9 @@
 			"id": "long:beat-15",
 			"sceneId": "long:scene-15",
 			"order": 1,
-			"title": "Rao aísla el recorrido",
-			"purpose": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
-			"summary": "Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"title": "Elin aísla el recorrido",
+			"purpose": "Elin no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
+			"summary": "Elin no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1869,8 +1881,8 @@
 			"sceneId": "long:scene-16",
 			"order": 1,
 			"title": "Conflicto de estrategia",
-			"purpose": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
-			"summary": "Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"purpose": "Harlan exige apagar toda mediación; Elin explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
+			"summary": "Harlan exige apagar toda mediación; Elin explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -1899,8 +1911,8 @@
 			"sceneId": "long:scene-17",
 			"order": 1,
 			"title": "Carvalho continúa el lenguaje",
-			"purpose": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
-			"summary": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.",
+			"purpose": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Elin mantiene separados lenguaje y payload.",
+			"summary": "Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Elin mantiene separados lenguaje y payload.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -2001,8 +2013,8 @@
 			"sceneId": "long:scene-20",
 			"order": 1,
 			"title": "La doble llave",
-			"purpose": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
-			"summary": "Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"purpose": "Elin cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
+			"summary": "Elin cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -2039,8 +2051,8 @@
 			"sceneId": "long:scene-21",
 			"order": 1,
 			"title": "Harlan actúa",
-			"purpose": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
-			"summary": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.",
+			"purpose": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y, bajo 1 g, baja por el ascensor central hasta el ramal del núcleo.",
+			"summary": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y, bajo 1 g, baja por el ascensor central hasta el ramal del núcleo.",
 			"participantRefs": [
 				{
 					"kind": "character",
@@ -2137,8 +2149,8 @@
 			"sceneId": "long:scene-24",
 			"order": 1,
 			"title": "Cuarentena",
-			"purpose": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
-			"summary": "Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"purpose": "Elin confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
+			"summary": "Elin confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.",
 			"participantRefs": [
 				{
 					"kind": "character",

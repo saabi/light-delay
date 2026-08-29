@@ -5,14 +5,14 @@
     "projectId": "project:light-delay",
     "continuityId": "continuity:light-delay-primary",
     "title": "Light Delay — Tráiler (~1:30)",
-    "version": "0.1.0-draft",
+    "version": "0.2.0-draft",
     "status": "draft",
     "kind": "trailer",
     "targetDurationMs": 90000,
     "lineage": {
       "sourceScriptId": "script:light-delay-main-short",
       "relationship": "trailer",
-      "sourceVersion": "1.0.0-extract",
+      "sourceVersion": "1.1.0-draft",
       "notes": "Tráiler según docs/Light Delay — Tráiler de la versión de 30 minutos.md. Frames reutilizados del animatic principal vía imageAssetId; diálogos condensados del brief."
     },
     "declaredEntityRefs": [
@@ -42,7 +42,7 @@
       }
     ],
     "comparisonProfile": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "canonClaims": [
         {
           "dimensionId": "canon:proxima-origin",
@@ -75,6 +75,18 @@
           "status": "established"
         },
         {
+          "dimensionId": "canon:mission-timeline",
+          "valueId": "57h48-signal23h15-encounter24h",
+          "statement": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
+          "status": "established"
+        },
+        {
+          "dimensionId": "canon:ardor-gravity-operations",
+          "valueId": "thrust-gravity-coast-microgravity",
+          "statement": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce; las rutas central y de servicio explican los tiempos de desplazamiento.",
+          "status": "established"
+        },
+        {
           "dimensionId": "canon:velari-objects",
           "valueId": "station-and-emissary",
           "statement": "La estación Velari y la nave emisaria son objetos distintos.",
@@ -95,7 +107,7 @@
         {
           "dimensionId": "canon:rao-containment",
           "valueId": "bounded-quarantine",
-          "statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+          "statement": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
           "status": "established"
         },
         {
@@ -315,7 +327,7 @@
         "trailer:shot-b-02",
         "trailer:shot-b-03"
       ],
-      "targetDurationMs": 10100,
+      "targetDurationMs": 10000,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -397,7 +409,7 @@
         "trailer:shot-d-03",
         "trailer:shot-d-04"
       ],
-      "targetDurationMs": 13600,
+      "targetDurationMs": 13000,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -464,7 +476,7 @@
         "interiorExterior": "INT_EXT",
         "timeOfDay": "CONTINUO"
       },
-      "summary": "Cruce de la garganta; T+23 h; Rao contra reloj.",
+      "summary": "Cruce de la garganta; T+23 h; Elin contra reloj.",
       "dramaticPurpose": "Salto temporal y presión técnica.",
       "characterIds": [
         "character:rao",
@@ -480,7 +492,7 @@
         "trailer:shot-f-03",
         "trailer:shot-f-04"
       ],
-      "targetDurationMs": 11200,
+      "targetDurationMs": 11000,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -529,7 +541,7 @@
         "trailer:shot-g-03",
         "trailer:shot-g-04"
       ],
-      "targetDurationMs": 11600,
+      "targetDurationMs": 11000,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -578,7 +590,7 @@
         "trailer:shot-h-04",
         "trailer:shot-h-05"
       ],
-      "targetDurationMs": 10000,
+      "targetDurationMs": 9000,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -707,7 +719,7 @@
       "order": 1,
       "title": "La nave llega primero",
       "purpose": "Salto temporal y presión técnica.",
-      "summary": "Cruce de la garganta; T+23 h; Rao contra reloj.",
+      "summary": "Cruce de la garganta; T+23 h; Elin contra reloj.",
       "cueIds": [
         "trailer:cue-f-01",
         "trailer:cue-f-02",
@@ -1321,7 +1333,7 @@
       ],
       "number": 1,
       "order": 1,
-      "description": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, Júpiter pequeño al fondo.",
+      "description": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, con nombre y silueta legibles, Júpiter pequeño al fondo. Cael comenta por el canal de preparación.",
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "LS",
@@ -1372,7 +1384,7 @@
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movementDescription": "50 mm · triángulo Zao–Sorell–Rao, cierre en rampa."
+        "movementDescription": "50 mm · triángulo Zao–Sorell–Elin, cierre en rampa."
       },
       "durationMs": 4500,
       "cuePlacements": [],
@@ -1491,12 +1503,12 @@
       "camera": {
         "movementDescription": "85 mm · soporte físico claro."
       },
-      "durationMs": 3600,
+      "durationMs": 3500,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-b-02",
           "atMs": 0,
-          "durationMs": 3600
+          "durationMs": 3500
         }
       ],
       "takeIds": [
@@ -1666,12 +1678,12 @@
         "movementDescription": "Detalle de la mano de Harlan activando el jammer; el puente queda desenfocado detrás.",
         "movement": "locked"
       },
-      "durationMs": 3600,
+      "durationMs": 3000,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-d-01",
           "atMs": 0,
-          "durationMs": 3600
+          "durationMs": 3000
         }
       ],
       "takeIds": [
@@ -1780,7 +1792,7 @@
       ],
       "number": 4,
       "order": 12,
-      "description": "Solución de intercepción futura",
+      "description": "Zao carga la solución en la consola local del láser.",
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "OTS",
@@ -2037,7 +2049,7 @@
       ],
       "number": 4,
       "order": 18,
-      "description": "Rao trabaja en puesto protegido; reloj Velari sigue bajando.",
+      "description": "Elin trabaja en puesto protegido; reloj Velari sigue bajando.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "LS",
@@ -2047,17 +2059,17 @@
       "camera": {
         "movementDescription": "28 mm · líneas del puente aíslan su estación."
       },
-      "durationMs": 3200,
+      "durationMs": 3000,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-f-03",
           "atMs": 0,
-          "durationMs": 1400
+          "durationMs": 3000
         },
         {
           "cueId": "trailer:cue-f-04",
-          "atMs": 1400,
-          "durationMs": 1800
+          "atMs": 0,
+          "durationMs": 3000
         }
       ],
       "takeIds": [
@@ -2074,10 +2086,6 @@
         {
           "type": "editorial",
           "text": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01)."
-        },
-        {
-          "type": "editorial",
-          "text": "Las 2 líneas estaban apiladas en atMs:0 (bug de secuenciación); se reordenaron en el tiempo dentro de la misma toma."
         }
       ]
     },
@@ -2099,22 +2107,22 @@
       "camera": {
         "movementDescription": "85 mm · onda apenas sobre ruido."
       },
-      "durationMs": 3600,
+      "durationMs": 3000,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-g-01",
           "atMs": 0,
-          "durationMs": 1000
+          "durationMs": 3000
         },
         {
           "cueId": "trailer:cue-g-02",
-          "atMs": 1000,
-          "durationMs": 900
+          "atMs": 0,
+          "durationMs": 3000
         },
         {
           "cueId": "trailer:cue-g-03",
-          "atMs": 1900,
-          "durationMs": 1700
+          "atMs": 0,
+          "durationMs": 3000
         }
       ],
       "takeIds": [
@@ -2131,10 +2139,6 @@
         {
           "type": "editorial",
           "text": "Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05)."
-        },
-        {
-          "type": "editorial",
-          "text": "Las 3 líneas estaban apiladas en atMs:0 (bug de secuenciación); se reordenaron en el tiempo dentro de la misma toma."
         }
       ]
     },
@@ -2318,7 +2322,7 @@
       ],
       "number": 2,
       "order": 24,
-      "description": "Rao abre el mapa de cuarentena preparado antes.",
+      "description": "Elin abre el mapa de cuarentena preparado antes.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTS",
@@ -2328,12 +2332,12 @@
       "camera": {
         "movementDescription": "50 mm · rutas ya etiquetadas."
       },
-      "durationMs": 2500,
+      "durationMs": 1500,
       "cuePlacements": [
         {
           "cueId": "trailer:cue-h-03",
           "atMs": 0,
-          "durationMs": 2500
+          "durationMs": 1500
         }
       ],
       "takeIds": [

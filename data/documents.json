@@ -372,9 +372,9 @@
               "id": "notas-tecnicas-continuidad:block-029",
               "ordered": false,
               "items": [
-                "Investigación sin mensaje: Rao identifica el\npayload autónomo, su disparador y la cuarentena necesaria, pero sólo\nobtiene la firma anónima OVR-7C41. No puede probar quién posee el\noverride ni impedir que su titular libere el payload.",
+                "Investigación sin mensaje: Elin identifica el\npayload autónomo, su disparador y la cuarentena necesaria, pero sólo\nobtiene la firma anónima OVR-7C41. No puede probar quién posee el\noverride ni impedir que su titular libere el payload.",
                 "Mensaje sin investigación: acusa a Harlan y señala\nel relé, pero no prueba por sí solo que la voz no fue sintetizada ni\ncontiene el mapa técnico para detener un proceso que seguirá activo\naunque Harlan sea arrestado.",
-                "Combinación: el cruce entre payload, relé físico y\ncredencial de mando identifica a Harlan; Voss revoca su autoridad y Rao\naplica la cuarentena ya preparada. Sorell aporta el saludo pasivo\nlimpio."
+                "Combinación: el cruce entre payload, relé físico y\ncredencial de mando identifica a Harlan; Voss revoca su autoridad y Elin\naplica la cuarentena ya preparada. Sorell aporta el saludo pasivo\nlimpio."
               ]
             },
             {
@@ -457,15 +457,15 @@
                 ],
                 [
                   "Mensaje que resuelve todo por sí solo",
-                  "Acusación y orientación que sólo se vuelven prueba y solución al\ncombinarse con la investigación de Rao"
+                  "Acusación y orientación que sólo se vuelven prueba y solución al\ncombinarse con la investigación de Elin"
                 ],
                 [
-                  "Rao apareciendo recién avanzada la trama",
+                  "Elin apareciendo recién avanzada la trama",
                   "Establecida desde el lanzamiento (Escena 1, línea del 30%)"
                 ],
                 [
-                  "Rao \"ya adentro\" del núcleo antes de que Harlan sellara la puerta\nsin explicación",
-                  "Rao permanece en un terminal protegido del puente y combate el\npayload a distancia"
+                  "Elin \"ya adentro\" del núcleo antes de que Harlan sellara la puerta\nsin explicación",
+                  "Elin permanece en un terminal protegido del puente y combate el\npayload a distancia"
                 ],
                 [
                   "Sorell reducida a sospechosa y apoyo físico",
@@ -883,9 +883,9 @@
               "id": "notas-tecnicas-continuidad:block-029",
               "ordered": false,
               "items": [
-                "Investigation without message: Rao identifies the autonomous payload, trigger, and required quarantine, but obtains only anonymous signature OVR-7C41. She cannot prove who owns the override or stop that owner from releasing it.",
+                "Investigation without message: Elin identifies the autonomous payload, trigger, and required quarantine, but obtains only anonymous signature OVR-7C41. She cannot prove who owns the override or stop that owner from releasing it.",
                 "Message without investigation: it accuses Harlan and names the relay, but cannot prove the voice is genuine or supply the technical map needed to stop a process that remains active after arrest.",
-                "Together: payload, physical relay, and command credential identify Harlan; Voss revokes his authority and Rao applies her prepared quarantine. Sorell supplies the clean passive greeting."
+                "Together: payload, physical relay, and command credential identify Harlan; Voss revokes his authority and Elin applies her prepared quarantine. Sorell supplies the clean passive greeting."
               ]
             },
             {
@@ -968,15 +968,15 @@
                 ],
                 [
                   "Message solves everything alone",
-                  "Accusation and direction become proof and a solution only with Rao’s investigation"
+                  "Accusation and direction become proof and a solution only with Elin’s investigation"
                 ],
                 [
-                  "Rao introduced late",
+                  "Elin introduced late",
                   "Established from launch"
                 ],
                 [
-                  "Rao inexplicably inside the core",
-                  "Rao works remotely from a protected bridge terminal"
+                  "Elin inexplicably inside the core",
+                  "Elin works remotely from a protected bridge terminal"
                 ],
                 [
                   "Sorell reduced to suspect and physical support",
@@ -1091,7 +1091,7 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-002",
-              "text": "ZAO — Ingeniera Jefe Rol: descubre el sabotaje a lo\nlargo del tránsito, transmite el mensaje de emergencia, es asesinada\nminutos antes del cruce. Motor emocional de la historia. Apariencia:\n40-50 años, complexión práctica. Mono de ingeniería gris oscuro o azul\nmarino, herramientas al cinturón. Vínculos establecidos: mentora\ninformal de Rao (la instruye antes del lanzamiento sobre cómo manejar\nuna corrupción de código si supera cierto umbral); confía en el trabajo\nlingüístico de Sorell."
+              "text": "ZAO — Ingeniera Jefe Rol: descubre el sabotaje a lo\nlargo del tránsito, transmite el mensaje de emergencia, es asesinada\nminutos antes del cruce. Motor emocional de la historia. Apariencia:\n40-50 años, complexión práctica. Mono de ingeniería gris oscuro o azul\nmarino, herramientas al cinturón. Vínculos establecidos: mentora\ninformal de Elin (la instruye antes del lanzamiento sobre cómo manejar\nuna corrupción de código si supera cierto umbral); confía en el trabajo\nlingüístico de Sorell."
             },
             {
               "type": "paragraph",
@@ -1106,7 +1106,7 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-005",
-              "text": "ELIN RAO — Especialista en IA Rol: descubre el\ncomportamiento autónomo del payload, obtiene su firma técnica y prepara\nla cuarentena que permite detenerlo en el clímax sin destruir la\nmediación. Apariencia: 30s, postura introvertida, encorvada frente a\npantallas. Vínculo establecido: Zao la involucra activamente desde el\nlanzamiento —no aparece por primera vez recién avanzada la historia—,\ndejándole una instrucción que resultará decisiva: no intentar reparar\nuna corrupción avanzada, sino aislarla. Nota de continuidad: en el\nclímax, Rao trabaja desde un terminal protegido del puente. La\ninvestigación sola no identifica al titular de la firma; el mensaje solo\nacusa. Al cruzar ambas evidencias obtiene la prueba y el método técnico\nindispensable."
+              "text": "ELIN RAO — Especialista en IA Rol: descubre el\ncomportamiento autónomo del payload, obtiene su firma técnica y prepara\nla cuarentena que permite detenerlo en el clímax sin destruir la\nmediación. Apariencia: 30s, postura introvertida, encorvada frente a\npantallas. Vínculo establecido: Zao la involucra activamente desde el\nlanzamiento —no aparece por primera vez recién avanzada la historia—,\ndejándole una instrucción que resultará decisiva: no intentar reparar\nuna corrupción avanzada, sino aislarla. Nota de continuidad: en el\nclímax, Elin trabaja desde un terminal protegido del puente. La\ninvestigación sola no identifica al titular de la firma; el mensaje solo\nacusa. Al cruzar ambas evidencias obtiene la prueba y el método técnico\nindispensable."
             },
             {
               "type": "paragraph",
@@ -1226,12 +1226,12 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-028",
-              "text": "REGISTRO FÍSICO DEL RELÉ — huella técnica anónima\nque todo override graba en hardware y que no puede alterarse sin\ninutilizar el núcleo. Es distinta del registro superficial falsificable\nque incrimina a Sorell. Sólo al cruzarla con la rutina aislada por Rao y\nla indicación del mensaje puede asociarse de manera concluyente con la\ncredencial de Harlan."
+              "text": "REGISTRO FÍSICO DEL RELÉ — huella técnica anónima\nque todo override graba en hardware y que no puede alterarse sin\ninutilizar el núcleo. Es distinta del registro superficial falsificable\nque incrimina a Sorell. Sólo al cruzarla con la rutina aislada por Elin y\nla indicación del mensaje puede asociarse de manera concluyente con la\ncredencial de Harlan."
             },
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-029",
-              "text": "PAQUETE DE SALUDO DE SORELL — secuencia pasiva, sin\ncódigo ejecutable, almacenada en soporte de sólo lectura desde antes del\nlanzamiento. Rao puede transmitirla por un canal limpio una vez aislado\nel payload; evita que la solución final aparezca de improviso."
+              "text": "PAQUETE DE SALUDO DE SORELL — secuencia pasiva, sin\ncódigo ejecutable, almacenada en soporte de sólo lectura desde antes del\nlanzamiento. Elin puede transmitirla por un canal limpio una vez aislado\nel payload; evita que la solución final aparezca de improviso."
             },
             {
               "type": "paragraph",
@@ -1254,7 +1254,7 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-002",
-              "text": "ZAO — Chief Engineer. She uncovers the sabotage during transit, sends the emergency message, and is murdered minutes before the crossing. She is the story’s emotional engine. In her forties or fifties, practical build, dark gray or navy engineering coveralls, tools at her belt. She informally mentors Rao and trusts Sorell’s linguistic work."
+              "text": "ZAO — Chief Engineer. She uncovers the sabotage during transit, sends the emergency message, and is murdered minutes before the crossing. She is the story’s emotional engine. In her forties or fifties, practical build, dark gray or navy engineering coveralls, tools at her belt. She informally mentors Elin and trusts Sorell’s linguistic work."
             },
             {
               "type": "paragraph",
@@ -1269,7 +1269,7 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-005",
-              "text": "ELIN RAO — AI specialist. She discovers the payload’s autonomous behavior, extracts its technical signature, and prepares the quarantine that stops it without destroying mediation. Zao involves her from launch and teaches her to isolate advanced corruption instead of repairing it. Rao works from a protected bridge terminal; investigation and message are both required."
+              "text": "ELIN RAO — AI specialist. She discovers the payload’s autonomous behavior, extracts its technical signature, and prepares the quarantine that stops it without destroying mediation. Zao involves her from launch and teaches her to isolate advanced corruption instead of repairing it. Elin works from a protected bridge terminal; investigation and message are both required."
             },
             {
               "type": "paragraph",
@@ -1389,12 +1389,12 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-028",
-              "text": "PHYSICAL RELAY RECORD — anonymous hardware trace burned by every override and impossible to alter without disabling the core. It differs from the falsifiable surface log implicating Sorell and becomes conclusive only when combined with Rao’s isolated routine and Zao’s message."
+              "text": "PHYSICAL RELAY RECORD — anonymous hardware trace burned by every override and impossible to alter without disabling the core. It differs from the falsifiable surface log implicating Sorell and becomes conclusive only when combined with Elin’s isolated routine and Zao’s message."
             },
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-029",
-              "text": "SORELL’S GREETING PACKAGE — passive, non-executable, read-only sequence stored before launch. Rao can transmit it over a clean channel after isolating the payload."
+              "text": "SORELL’S GREETING PACKAGE — passive, non-executable, read-only sequence stored before launch. Elin can transmit it over a clean channel after isolating the payload."
             },
             {
               "type": "paragraph",
@@ -1484,7 +1484,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-008",
-              "text": "El descubrimiento transformó una infraestructura ya existente.\nProxima añadió xenofísica, comunicaciones y navegación de contacto; la\nCelestial Ardor, una nave terrestre de exploración y transporte\ncientífico ya destinada allí con su tripulación, fue adaptada con el\nNúcleo Diplomático. Avances recientes en interpretación matemática —obra\nen parte de Rao y Zao— permitieron responder correctamente al protocolo.\nUna autorización humana consciente completó el desafío y activó la\nsecuencia: la garganta anunció una apertura navegable exactamente 60\nhoras después, por un intervalo de apenas 60 a 90 segundos."
+              "text": "El descubrimiento transformó una infraestructura ya existente.\nProxima añadió xenofísica, comunicaciones y navegación de contacto; la\nCelestial Ardor, una nave terrestre de exploración y transporte\ncientífico ya destinada allí con su tripulación, fue adaptada con el\nNúcleo Diplomático. Avances recientes en interpretación matemática —obra\nen parte de Elin y Zao— permitieron responder correctamente al protocolo.\nUna autorización humana consciente completó el desafío y activó la\nsecuencia: la garganta anunció una apertura navegable exactamente 60\nhoras después, por un intervalo de apenas 60 a 90 segundos."
             },
             {
               "type": "paragraph",
@@ -1618,7 +1618,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-033",
-              "text": "A lo largo de las 57h48min de tránsito, Zao acumula indicios\ndispersos: fluctuaciones de consumo energético, un acceso fuera de\nhorario y fragmentos de código camuflados en lo que debería ser\nprotocolo lingüístico estándar. A T+40h sólo puede demostrar que existe\nuna envoltura anómala potencialmente peligrosa; informa a Voss y trabaja\ncon Rao sin acusar a Sorell, porque el registro superficial puede haber\nsido falsificado. En los minutos finales, ya con la garganta en\nexpansión crítica, el despliegue programado revela que la rutina es un\nescaneo intrusivo autónomo. Zao cruza entonces los datos con el\nregistro físico del relé : una firma criptográfica\ngrabada de manera irreversible por el override, pero expresada como una\nhuella técnica que por sí sola no identifica a una persona ante el resto\nde la tripulación."
+              "text": "A lo largo de las 57h48min de tránsito, Zao acumula indicios\ndispersos: fluctuaciones de consumo energético, un acceso fuera de\nhorario y fragmentos de código camuflados en lo que debería ser\nprotocolo lingüístico estándar. A T+40h sólo puede demostrar que existe\nuna envoltura anómala potencialmente peligrosa; informa a Voss y trabaja\ncon Elin sin acusar a Sorell, porque el registro superficial puede haber\nsido falsificado. En los minutos finales, ya con la garganta en\nexpansión crítica, el despliegue programado revela que la rutina es un\nescaneo intrusivo autónomo. Zao cruza entonces los datos con el\nregistro físico del relé : una firma criptográfica\ngrabada de manera irreversible por el override, pero expresada como una\nhuella técnica que por sí sola no identifica a una persona ante el resto\nde la tripulación."
             },
             {
               "type": "paragraph",
@@ -1660,7 +1660,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-041",
-              "text": "El mensaje y la investigación funcionan como una doble\nllave . Rao descubre qué hace el payload, cuándo se ejecutará y\ncómo contenerlo, pero no puede vincular por sí sola la huella anónima\ndel override con Harlan. El mensaje señala al sospechoso y el registro\ncorrecto, pero por sí solo sigue siendo una acusación y no contiene el\nmétodo para neutralizar un payload que continuará activo aunque Harlan\nsea detenido. Al cruzar la firma técnica encontrada por Rao con el relé\nindicado por Zao, Voss obtiene prueba suficiente para revocar el\noverride de Harlan; al mismo tiempo, el aislamiento preparado por Rao\npermite impedir la transmisión hostil sin apagar la mediación."
+              "text": "El mensaje y la investigación funcionan como una doble\nllave . Elin descubre qué hace el payload, cuándo se ejecutará y\ncómo contenerlo, pero no puede vincular por sí sola la huella anónima\ndel override con Harlan. El mensaje señala al sospechoso y el registro\ncorrecto, pero por sí solo sigue siendo una acusación y no contiene el\nmétodo para neutralizar un payload que continuará activo aunque Harlan\nsea detenido. Al cruzar la firma técnica encontrada por Elin con el relé\nindicado por Zao, Voss obtiene prueba suficiente para revocar el\noverride de Harlan; al mismo tiempo, el aislamiento preparado por Elin\npermite impedir la transmisión hostil sin apagar la mediación."
             },
             {
               "type": "paragraph",
@@ -1692,17 +1692,17 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-047",
-              "text": "ACTO I — El tránsito y la garganta. Activación con\n60 horas hasta la apertura; 2h12min de alistamiento final; 57h48min de\nviaje, con indicios crecientes que Zao y Rao investigan; descubrimiento\nfinal y transmisión de emergencia; asesinato; cruce."
+              "text": "ACTO I — El tránsito y la garganta. Activación con\n60 horas hasta la apertura; 2h12min de alistamiento final; 57h48min de\nviaje, con indicios crecientes que Zao y Elin investigan; descubrimiento\nfinal y transmisión de emergencia; asesinato; cruce."
             },
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-048",
-              "text": "ACTO II — Investigación en tierra extraña. Hallazgo\ndel cuerpo del otro lado del túnel; revisión médica, fallas de cámaras y\nauditoría de accesos; Sorell apartada por evidencia superficial\nplantada; Rao descubre que el payload es autónomo y prepara una\ncuarentena, pero sólo obtiene una firma de override anónima; Harlan\npresiona para apagar la mediación y aislar los receptores; detección de\nuna señal débil entrante."
+              "text": "ACTO II — Investigación en tierra extraña. Hallazgo\ndel cuerpo del otro lado del túnel; revisión médica, fallas de cámaras y\nauditoría de accesos; Sorell apartada por evidencia superficial\nplantada; Elin descubre que el payload es autónomo y prepara una\ncuarentena, pero sólo obtiene una firma de override anónima; Harlan\npresiona para apagar la mediación y aislar los receptores; detección de\nuna señal débil entrante."
             },
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-049",
-              "text": "ACTO III — Señal y supervivencia. Llegada del\nmensaje de Zao, apenas ~40-45 minutos antes del encuentro; cruce de sus\nmetadatos con la investigación de Rao; prueba conjunta contra Harlan;\nintento de activar anticipadamente el payload; revocación de su override\ny confrontación física/digital; cuarentena del sabotaje antes de la\napertura del canal; saludo limpio de Sorell transmitido por Rao;\nrespuesta Velari de autorización de aproximación; encuentro orbital."
+              "text": "ACTO III — Señal y supervivencia. Llegada del\nmensaje de Zao, apenas ~40-45 minutos antes del encuentro; cruce de sus\nmetadatos con la investigación de Elin; prueba conjunta contra Harlan;\nintento de activar anticipadamente el payload; revocación de su override\ny confrontación física/digital; cuarentena del sabotaje antes de la\napertura del canal; saludo limpio de Sorell transmitido por Elin;\nrespuesta Velari de autorización de aproximación; encuentro orbital."
             },
             {
               "type": "heading",
@@ -1859,7 +1859,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-008",
-              "text": "The discovery transforms existing infrastructure. Proxima adds xenophysics and contact systems; the already-stationed Celestial Ardor receives a diplomatic core. Rao and Zao help interpret the protocol, and conscious human authorization starts a 60-hour countdown to a 60–90-second navigable opening."
+              "text": "The discovery transforms existing infrastructure. Proxima adds xenophysics and contact systems; the already-stationed Celestial Ardor receives a diplomatic core. Elin and Zao help interpret the protocol, and conscious human authorization starts a 60-hour countdown to a 60–90-second navigable opening."
             },
             {
               "type": "paragraph",
@@ -1993,7 +1993,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-033",
-              "text": "Across the 57 h 48 min transit, Zao gathers power anomalies, an off-hours access, and code hidden in linguistic protocol. By T+40 h she can prove only a dangerous wrapper and works with Rao without accusing Sorell. Critical expansion reveals an autonomous intrusion scan and an indelible but anonymous hardware signature."
+              "text": "Across the 57 h 48 min transit, Zao gathers power anomalies, an off-hours access, and code hidden in linguistic protocol. By T+40 h she can prove only a dangerous wrapper and works with Elin without accusing Sorell. Critical expansion reveals an autonomous intrusion scan and an indelible but anonymous hardware signature."
             },
             {
               "type": "paragraph",
@@ -2035,7 +2035,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-041",
-              "text": "Message and investigation form a double key. Rao knows what the payload does and how to contain it but cannot identify the override owner; Zao names Harlan and the relay but supplies neither proof nor the neutralization method. Together they let Voss revoke Harlan and Rao quarantine the attack without disabling mediation."
+              "text": "Message and investigation form a double key. Elin knows what the payload does and how to contain it but cannot identify the override owner; Zao names Harlan and the relay but supplies neither proof nor the neutralization method. Together they let Voss revoke Harlan and Elin quarantine the attack without disabling mediation."
             },
             {
               "type": "paragraph",
@@ -2072,12 +2072,12 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-048",
-              "text": "ACT II — Investigation in strange space. The body, medical review, missing cameras, planted evidence against Sorell, Rao’s autonomous-payload discovery and incomplete anonymous signature, Harlan’s pressure to disable mediation, and detection of a weak incoming signal."
+              "text": "ACT II — Investigation in strange space. The body, medical review, missing cameras, planted evidence against Sorell, Elin’s autonomous-payload discovery and incomplete anonymous signature, Harlan’s pressure to disable mediation, and detection of a weak incoming signal."
             },
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-049",
-              "text": "ACT III — Signal and survival. Zao’s message arrives 40–45 minutes before contact; evidence converges; Harlan triggers early; his override is revoked; Rao quarantines the sabotage; Sorell’s clean greeting is sent; the Velari authorize approach."
+              "text": "ACT III — Signal and survival. Zao’s message arrives 40–45 minutes before contact; evidence converges; Harlan triggers early; his override is revoked; Elin quarantines the sabotage; Sorell’s clean greeting is sent; the Velari authorize approach."
             },
             {
               "type": "heading",
@@ -2256,7 +2256,7 @@
               "type": "beat",
               "id": "momentos-clave:block-005",
               "title": "4 · La mitad técnica",
-              "text": "Rao descubre disparador, firma anónima y método de cuarentena. No puede identificar al titular."
+              "text": "Elin descubre disparador, firma anónima y método de cuarentena. No puede identificar al titular."
             },
             {
               "type": "beat",
@@ -2268,13 +2268,13 @@
               "type": "beat",
               "id": "momentos-clave:block-007",
               "title": "6 · La doble llave",
-              "text": "Payload, relé y credencial convergen. Voss revoca el override; Rao usa el trabajo ya preparado."
+              "text": "Payload, relé y credencial convergen. Voss revoca el override; Elin usa el trabajo ya preparado."
             },
             {
               "type": "beat",
               "id": "momentos-clave:block-008",
               "title": "7 · El saludo",
-              "text": "Sorell aporta la secuencia pasiva; Rao abre un conducto limpio. Los Velari autorizan la aproximación, sin conceder todavía confianza."
+              "text": "Sorell aporta la secuencia pasiva; Elin abre un conducto limpio. Los Velari autorizan la aproximación, sin conceder todavía confianza."
             }
           ],
           "en": [
@@ -2306,7 +2306,7 @@
               "type": "beat",
               "id": "momentos-clave:block-005",
               "title": "4 · The technical half",
-              "text": "Rao finds the trigger, anonymous signature, and quarantine method, but cannot identify the credential holder."
+              "text": "Elin finds the trigger, anonymous signature, and quarantine method, but cannot identify the credential holder."
             },
             {
               "type": "beat",
@@ -2318,13 +2318,13 @@
               "type": "beat",
               "id": "momentos-clave:block-007",
               "title": "6 · The double key",
-              "text": "Payload, relay, and credential converge. Voss revokes the override; Rao uses the work already prepared."
+              "text": "Payload, relay, and credential converge. Voss revokes the override; Elin uses the work already prepared."
             },
             {
               "type": "beat",
               "id": "momentos-clave:block-008",
               "title": "7 · The greeting",
-              "text": "Sorell supplies the passive sequence and Rao opens a clean conduit. The Velari authorize approach without yet granting trust."
+              "text": "Sorell supplies the passive sequence and Elin opens a clean conduit. The Velari authorize approach without yet granting trust."
             }
           ]
         }
@@ -2499,7 +2499,7 @@
               ],
               "rows": [
                 [
-                  "Investigación de Rao",
+                  "Investigación de Elin",
                   "Descubre el payload autónomo, el disparador y la cuarentena",
                   "No identifica al titular del override ni impide que lo libere"
                 ],
@@ -2658,7 +2658,7 @@
               ],
               "rows": [
                 [
-                  "Rao’s investigation",
+                  "Elin’s investigation",
                   "Finds the autonomous payload, trigger, and quarantine",
                   "Cannot identify the override holder or prevent release"
                 ],

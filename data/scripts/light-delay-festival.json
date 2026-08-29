@@ -5,14 +5,14 @@
 		"projectId": "project:light-delay",
 		"continuityId": "continuity:light-delay-primary",
 		"title": "Light Delay — Festival Cut",
-		"version": "0.1.0-draft",
+		"version": "0.2.0-draft",
 		"status": "draft",
 		"kind": "festival_cut",
 		"targetDurationMs": 290000,
 		"lineage": {
 			"sourceScriptId": "script:light-delay-main-short",
 			"relationship": "adaptation",
-			"sourceVersion": "1.0.0-extract",
+			"sourceVersion": "1.1.0-draft",
 			"notes": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes."
 		},
 		"declaredEntityRefs": [
@@ -42,7 +42,7 @@
 			}
 		],
 		"comparisonProfile": {
-			"version": "1.0.0",
+			"version": "1.1.0",
 			"canonClaims": [
 				{
 					"dimensionId": "canon:proxima-origin",
@@ -75,6 +75,18 @@
 					"status": "established"
 				},
 				{
+					"dimensionId": "canon:mission-timeline",
+					"valueId": "57h48-signal23h15-encounter24h",
+					"statement": "El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.",
+					"status": "established"
+				},
+				{
+					"dimensionId": "canon:ardor-gravity-operations",
+					"valueId": "thrust-gravity-coast-microgravity",
+					"statement": "La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce.",
+					"status": "established"
+				},
+				{
 					"dimensionId": "canon:velari-objects",
 					"valueId": "station-and-emissary",
 					"statement": "La estación Velari y la nave emisaria son objetos distintos.",
@@ -95,7 +107,7 @@
 				{
 					"dimensionId": "canon:rao-containment",
 					"valueId": "bounded-quarantine",
-					"statement": "Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
+					"statement": "Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.",
 					"status": "established"
 				},
 				{
@@ -202,7 +214,7 @@
 					"character:cael"
 				],
 				"relationship": "merged",
-				"notes": "Cael omitido; detección/navegación absorbidas por Rao/UI."
+				"notes": "Cael omitido; detección/navegación absorbidas por Elin/UI."
 			},
 			{
 				"functionId": "function:communications",
@@ -211,7 +223,7 @@
 					"character:cael"
 				],
 				"relationship": "merged",
-				"notes": "Rao asume detección/comunicaciones de Cael."
+				"notes": "Elin asume detección/comunicaciones de Cael."
 			},
 			{
 				"functionId": "function:command",
@@ -232,6 +244,11 @@
 			{
 				"functionId": "function:override_antagonist",
 				"characterId": "character:harlan",
+				"relationship": "unchanged"
+			},
+			{
+				"functionId": "function:security",
+				"characterId": "character:okoye",
 				"relationship": "unchanged"
 			}
 		],
@@ -358,8 +375,8 @@
 				"interiorExterior": "INT",
 				"timeOfDay": "DÍA"
 			},
-			"summary": "Investigación de Rao contra reloj; detección de señal humana.",
-			"dramaticPurpose": "Rao muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+			"summary": "Investigación de Elin contra reloj; detección de señal humana.",
+			"dramaticPurpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
 			"characterIds": [
 				"character:rao",
 				"character:voss",
@@ -408,7 +425,7 @@
 				"timeOfDay": "DÍA"
 			},
 			"summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
-			"dramaticPurpose": "Carrera física/digital; Rao aísla el payload; canal limpio.",
+			"dramaticPurpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
 			"characterIds": [
 				"character:rao",
 				"character:voss",
@@ -491,10 +508,11 @@
 			"sceneId": "festival:scene-d",
 			"order": 1,
 			"title": "La mitad técnica",
-			"purpose": "Rao muestra lo que sabe del payload y lo que le falta; detecta la señal.",
-			"summary": "Investigación de Rao contra reloj; detección de señal humana.",
+			"purpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
+			"summary": "Investigación de Elin contra reloj; detección de señal humana.",
 			"cueIds": [
-				"festival:cue-d-01"
+				"festival:cue-d-01",
+				"festival:cue-d-02"
 			],
 			"targetDurationMs": 50000
 		},
@@ -513,7 +531,7 @@
 			"sceneId": "festival:scene-f",
 			"order": 1,
 			"title": "Override y cuarentena",
-			"purpose": "Carrera física/digital; Rao aísla el payload; canal limpio.",
+			"purpose": "Carrera física/digital; Elin aísla el payload; canal limpio.",
 			"summary": "Clímax de cuarentena con saludo pasivo de Sorell como asset.",
 			"cueIds": [
 				"festival:cue-f-01"
@@ -634,6 +652,13 @@
 					}
 				}
 			}
+		},
+		{
+			"id": "festival:cue-d-02",
+			"beatId": "festival:beat-d-01",
+			"order": 2,
+			"type": "action",
+			"text": "Antes de autenticar la señal, Elin cartografía el payload, separa sus rutas y deja preparada una cuarentena limitada; todavía no puede atribuir el override."
 		},
 		{
 			"id": "festival:cue-f-01",

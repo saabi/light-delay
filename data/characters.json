@@ -37,13 +37,13 @@
 		{
 			"id": "character:rao",
 			"name": "Elin Rao",
-			"shortName": "Rao",
+			"shortName": "Elin",
 			"role": "Especialista en IA",
 			"description": "Concentración analítica, alarma y determinación.",
 			"factionIds": ["faction:human"],
 			"referenceAssetIds": ["asset:character-rao-sheet"],
 			"defaultVoiceProfileId": "voice:rao-es",
-			"aliases": ["ELIN RAO", "RAO"]
+			"aliases": ["ELIN RAO", "ELIN", "RAO"]
 		},
 		{
 			"id": "character:sorell",

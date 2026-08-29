@@ -18,7 +18,7 @@ describe('cross-script comparison', () => {
 			variants: getEntityVariants().variants
 		});
 
-		expect(result.canon).toHaveLength(11);
+		expect(result.canon).toHaveLength(13);
 		expect(result.canon.every((row) => row.comparison === 'same')).toBe(true);
 		expect(result.events.find((row) => row.definition.id === 'event:embarkation')?.comparison).toBe(
 			'different'

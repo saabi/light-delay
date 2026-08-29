@@ -37,7 +37,24 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 
 - Se abandonó el impulsor Alcubierre como solución operativa.
 - También se abandonó la interpretación literal de un traslado L1–L2 en tres horas mediante propulsión convencional: requeriría velocidades y energía incompatibles con la escala planteada.
-- La cronología y la corrección de rumbo definitiva aún requieren unificación, registrada en `PROJECT_STATUS.md`.
+- El tramo local usa un arco propulsado convencional alrededor de Júpiter, sin atravesarlo ni depender de una asistencia gravitatoria principal: 1 g / 1 g durante 57 h 48 min, con inversión a T+28 h 54 min.
+- La expansión crítica comienza cerca de T+57 h 43 min; Zao transmite aproximadamente a T+57 h 45 min y la nave cruza a T+57 h 48 min.
+- Desde la salida remota, el encuentro Velari ocurre a T+24 h. El mensaje óptico tarda aproximadamente 23 h 15 min y llega 40–45 minutos antes del encuentro.
+- Las cifras son la cronología dramática maestra. El presupuesto físico fino del enlace láser sigue siendo una tarea técnica, no una licencia para alterar el orden causal.
+
+## Terminología del sistema diplomático
+
+- **Núcleo diplomático** designa el sistema y el recinto físico incorporados a la Ardor.
+- **Mediación** designa la capa legítima de traducción y contacto que debe permanecer operativa.
+- **Envoltura** o **payload** designan la carga autónoma hostil escondida dentro del intercambio. Cuando importa distinguirlos, la envoltura oculta y despliega el payload.
+- `IA` puede describir la especialidad de Elin o procesos concretos, pero no reemplaza el nombre del núcleo ni el de la mediación.
+- **Núcleo cuántico** no es sinónimo válido del núcleo diplomático en la continuidad vigente.
+
+## Identidad de Elin Rao
+
+- El nombre legal y el ID global permanecen `Elin Rao` y `character:rao` para conservar referencias estables.
+- En diálogo, cartelas y menciones operativas se usa **Elin**, evitando la confusión sonora entre Rao y Zao.
+- Los documentos históricos pueden conservar «Rao» cuando citan una fuente anterior; esa mención corresponde al mismo personaje.
 
 ## Tecnología Velari
 
@@ -51,5 +68,11 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 - El sabotaje no debe depender de una única prueba digital falsificable.
 - El relé físico, el mensaje óptico de Zao y el soporte pasivo de sólo lectura forman evidencias complementarias.
 - Sorell no debe quedar culpabilizada sólo por un registro superficial falsificado.
-- Rao contiene el proceso, pero la resolución no debe ser técnicamente mágica ni completamente inequívoca.
+- Elin contiene el proceso, pero la resolución no debe ser técnicamente mágica ni completamente inequívoca.
 - El contacto Velari se mantiene como horizonte dramático mientras la amenaza principal surge dentro de la misión humana.
+
+## Broma sobre el nombre de la nave
+
+- En el corto canónico y en el tratamiento largo, Cael observa al inicio: «Le pusieron “Ardor”. Con esa forma. Alguien en Diseño tenía sentido del humor.»
+- Voss responde sólo con una mirada; en el largo Harlan apenas registra el intercambio.
+- El beat queda fuera del festival cut y del tráiler, donde la compresión y el tono no lo sostienen.

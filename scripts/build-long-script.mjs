@@ -15,7 +15,7 @@ const rows = [
 		1,
 		1,
 		'Preparativos en Proxima',
-		'La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Zao, Sorell y Rao verifican el núcleo, el relé físico y el saludo pasivo.',
+		'La tripulación completa aborda una Celestial Ardor ya destinada en Proxima. Ante el nombre y la silueta visibles, Cael comenta: «Le pusieron “Ardor”. Con esa forma. Alguien en Diseño tenía sentido del humor.» Voss responde con una mirada y Harlan apenas registra el intercambio. Zao, Sorell y Elin verifican el núcleo, el relé físico y el saludo pasivo.',
 		'location:proxima-dock',
 		[
 			'character:zao',
@@ -69,7 +69,7 @@ const rows = [
 		5,
 		1,
 		'La envoltura dormida',
-		'Zao y Rao encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.',
+		'Zao y Elin encuentran una envoltura no declarada. Hassan confirma que la anomalía energética es física y no sólo un artefacto de software.',
 		'location:diplomatic-core-room',
 		['character:zao', 'character:rao', 'character:hassan'],
 		'T+40H',
@@ -139,7 +139,7 @@ const rows = [
 		12,
 		2,
 		'Investigación distribuida',
-		'Voss asigna tareas separadas: Rao analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.',
+		'Voss asigna tareas separadas: Elin analiza payload, Keene examina evidencia clínica, Okoye controla accesos y Wei conserva registros de comunicación.',
 		'location:celestial-ardor-bridge',
 		['character:voss', 'character:rao', 'character:keene', 'character:okoye', 'character:wei'],
 		'MÁS TARDE',
@@ -167,8 +167,8 @@ const rows = [
 	[
 		15,
 		2,
-		'Rao aísla el recorrido',
-		'Rao no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.',
+		'Elin aísla el recorrido',
+		'Elin no repara el código corrupto: cartografía su recorrido y prepara una cuarentena limitada para el momento de activación.',
 		'location:celestial-ardor-bridge',
 		['character:rao', 'character:hassan'],
 		'CONTINUO',
@@ -178,7 +178,7 @@ const rows = [
 		16,
 		2,
 		'Conflicto de estrategia',
-		'Harlan exige apagar toda mediación; Rao explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.',
+		'Harlan exige apagar toda mediación; Elin explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.',
 		'location:celestial-ardor-bridge',
 		['character:voss', 'character:harlan', 'character:rao'],
 		'MÁS TARDE'
@@ -187,7 +187,7 @@ const rows = [
 		17,
 		2,
 		'Carvalho continúa el lenguaje',
-		'Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Rao mantiene separados lenguaje y payload.',
+		'Sorell y Carvalho verifican patrones mínimos del saludo sin alterar el soporte pasivo de sólo lectura, mientras Elin mantiene separados lenguaje y payload.',
 		'location:celestial-ardor-bridge',
 		['character:carvalho', 'character:sorell', 'character:rao'],
 		'MÁS TARDE'
@@ -216,7 +216,7 @@ const rows = [
 		20,
 		3,
 		'La doble llave',
-		'Rao cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.',
+		'Elin cruza el mensaje con el relé físico y el saludo pasivo. Las evidencias convergen sin depender de un único registro digital.',
 		'location:celestial-ardor-bridge',
 		['character:rao', 'character:sorell', 'character:hassan', 'character:voss'],
 		'MINUTOS DESPUÉS',
@@ -226,7 +226,7 @@ const rows = [
 		21,
 		3,
 		'Harlan actúa',
-		'Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y corre al núcleo.',
+		'Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y, bajo 1 g, baja por el ascensor central hasta el ramal del núcleo.',
 		'location:celestial-ardor-bridge',
 		['character:voss', 'character:harlan', 'character:okoye'],
 		'CONTINUO',
@@ -255,7 +255,7 @@ const rows = [
 		24,
 		3,
 		'Cuarentena',
-		'Rao confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.',
+		'Elin confina la rama hostil al buffer preparado. Sorell aporta el saludo pasivo y separa lenguaje de intrusión.',
 		'location:diplomatic-core-room',
 		['character:rao', 'character:sorell', 'character:harlan'],
 		'CUENTA REGRESIVA',
@@ -404,6 +404,16 @@ const canonClaims = [
 		'La nave usa propulsión convencional hasta la boca y cruza el túnel Velari.'
 	],
 	[
+		'canon:mission-timeline',
+		'57h48-signal23h15-encounter24h',
+		'El tramo local dura 57 h 48 min; la señal tarda unos 23 h 15 min y el encuentro remoto ocurre a T+24 h.'
+	],
+	[
+		'canon:ardor-gravity-operations',
+		'thrust-gravity-coast-microgravity',
+		'La Ardor tiene gravedad aparente bajo empuje y microgravedad durante la aproximación final y el cruce.'
+	],
+	[
 		'canon:velari-objects',
 		'station-and-emissary',
 		'La estación Velari y la nave emisaria son objetos distintos.'
@@ -426,7 +436,7 @@ const canonClaims = [
 	[
 		'canon:rao-containment',
 		'bounded-quarantine',
-		'Rao contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.'
+		'Elin contiene la rama hostil mediante aislamiento preparado, sin resolución mágica.'
 	],
 	[
 		'canon:ending',
@@ -482,14 +492,14 @@ const script = {
 		projectId: 'project:light-delay',
 		continuityId: 'continuity:light-delay-primary',
 		title: 'Light Delay — Tratamiento de largometraje',
-		version: '0.1.0-draft',
+		version: '0.2.0-draft',
 		status: 'draft',
 		kind: 'long_version',
 		targetDurationMs: 6000000,
 		lineage: {
 			sourceScriptId: 'script:light-delay-main-short',
 			relationship: 'rewrite',
-			sourceVersion: '1.0.0-extract',
+			sourceVersion: '1.1.0-draft',
 			notes: 'Recuperación revisada mediante docs/REVISION_LARGOMETRAJE_RECUPERADO.md.'
 		},
 		declaredEntityRefs: characterIds.map((id) => ({ kind: 'character', id })),
@@ -513,7 +523,7 @@ const script = {
 			relationship,
 			...(sourceCharacterIds ? { sourceCharacterIds } : {})
 		})),
-		comparisonProfile: { version: '1.0.0', canonClaims, eventCoverage },
+		comparisonProfile: { version: '1.1.0', canonClaims, eventCoverage },
 		actIds: acts.map((act) => act.id)
 	},
 	acts,
