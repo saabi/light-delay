@@ -47,7 +47,7 @@ No mover los assets a `static/` hasta actualizar y verificar todas las referenci
 
 ## Validación mínima futura
 
-- El guion corto canónico debe conservar 17 escenas y el animatic principal 112 tomas, salvo cambio narrativo documentado. Los 100 PNG legacy son recursos reutilizados, no el recuento vigente de tomas.
+- El guion corto canónico debe conservar 17 escenas y el animatic principal 124 tomas (desde la pasada editorial de ritmo/diálogo de agosto 2026), salvo cambio narrativo documentado. Los 100 PNG legacy son recursos reutilizados, no el recuento vigente de tomas.
 - Todas las rutas de imágenes deben existir.
 - La duración total debe recalcularse desde las tomas.
 - El sitio debe funcionar sin JavaScript externo ni recursos remotos obligatorios.

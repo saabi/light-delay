@@ -1,6 +1,6 @@
 # Light Delay / Luz Tardía
 
-Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas y el animatic textual de 112 tomas con imágenes de referencia reutilizadas donde aún faltan stills definitivos.
+Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas y el animatic textual de 124 tomas con imágenes de referencia reutilizadas donde aún faltan stills definitivos.
 
 ## Estado actual
 
@@ -10,7 +10,8 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 - Guion corto canónico: 17 escenas, objetivo inicial de 30:00.
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
-- Animatic: 112 tomas con image take, encuadre, audio, subtítulos y duración editable; todas las tomas del main short y del tráiler están marcadas para regeneración (`needs_regeneration`). Un placeholder técnico cubre imágenes ausentes o fallidas.
+- Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
+- Animatic: 124 tomas con image take, encuadre, audio, subtítulos y duración editable (~30:35); todas las tomas del main short y del tráiler están marcadas para regeneración (`needs_regeneration`). Un placeholder técnico cubre imágenes ausentes o fallidas.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
@@ -38,7 +39,7 @@ npm install
 npm run dev
 ```
 
-Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand` y `npm run validate:data`.
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`, `npm run report:editorial`, `npm run report:all`.
 
 > `npm run extract:legacy` es una herramienta histórica anterior a la arquitectura multi-script. No debe ejecutarse sobre el árbol canónico actual: todavía sobrescribe varios archivos de `data/` con el formato previo. Su aislamiento o retiro está registrado en [`TODO.md`](TODO.md).
 

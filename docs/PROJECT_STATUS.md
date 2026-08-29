@@ -4,13 +4,15 @@ Fecha de corte: 2026-08-28.
 
 ## Completado
 
-- **Deuda visual del animatic:** las 141 tomas con shots (112 main + 29 tráiler) están marcadas `needs_regeneration` por el cambio de orientación de la Ardor y la revisión de exteriores; informes en `npm run report:editorial`.
+- **Guion corto — ritmo y láser:** 124 tomas (12 nuevas), montaje ~30:35; reparto de diálogo escena 1, INSERT consola escena 6, división escena 12. Ver `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md`.
+- **Informes editoriales en web y CLI:** rutas dinámicas `/reports/` y exportación `npm run report:all` (12 informes × 4 guiones) desde un único `report-runner.mjs` compartido.
+- **Deuda visual del animatic:** las 153 tomas con shots (124 main + 29 tráiler) están marcadas `needs_regeneration` por el cambio de orientación de la Ardor y la revisión de exteriores; informes en `npm run report:editorial`.
 - **Estimación de diálogo hablado:** montaje vs tiempo de diálogo estimado (WPM) en guion, animatic y player; flags editoriales por toma (>2 hablantes, fuera de cámara); `npm run report:dialogue-timing` genera MD+JSON en `reports/dialogue-timing/`.
 - **Bloqueo 3D Proxima/Ardor:** `blender/light-delay-blockout.blend` con siluetas exteriores; hábitats de Proxima como rueda radial; checklist y deuda de detalle en docs técnicos; hoja de ruta de producción y mapa de tomas exteriores/animación.
 - **Carrusel de assets en entidades:** detalle de personaje/lugar/vehículo/objeto muestra las imágenes raster de `referenceAssetIds` en un carrusel; Proxima y Celestial Ardor incluyen sheet, proportional, stills de bloqueo y escala común.
 - **Miniaturas de catálogo:** WebP derivados en `static/assets/_thumbs/` (`thumbs:generate` / `thumbs:sync`); las tarjetas de arte/entidades usan la miniatura; el detalle sigue con el original.
 - **Carrusel automático en tarjetas:** si una entidad tiene varias referencias raster, la tarjeta rota miniaturas sin controles; el detalle mantiene navegación manual.
-- **Documentación reconciliada:** fuentes activas saneadas contra los JSON y el estado 3D vigente; 17 escenas, 112 tomas/takes, 100 frames legacy y 132 imágenes quedan diferenciados. `validate:docs` comprueba cifras, enlaces y avisos históricos en CI; snapshots y briefs consumidos se retiraron tras trasladar sus resultados.
+- **Documentación reconciliada:** fuentes activas saneadas contra los JSON y el estado 3D vigente; 17 escenas, 124 tomas/takes, 100 frames legacy y 132 imágenes quedan diferenciados.
 - **Sitio público bilingüe y presentación:** inglés por defecto en `/`, español en `/es/`, landing pública, archivo editorial en `/project`, selector de idioma con rutas recargables, Paraglide JS, SEO canónico con `hreflang`, Open Graph, sitemap, manifest, favicon y marca propia. Las rutas EN/ES se prerenderizan también con `BASE_PATH=/light-delay`.
 - **Copy de portada revisado:** la landing identifica la obra como ciencia ficción dura, simplifica la premisa de Zao sin cambiar el canon, usa inglés estadounidense coherente con `en_US` y alinea numerales, nombre del corto y CTA del archivo en EN/ES.
 - **Generación i18n reproducible:** `npm run check` genera los módulos tipados de Paraglide antes de `svelte-check`; el compilador directo y el plugin de Vite comparten opciones, incluido el base path de Pages. Una instalación limpia ya no depende de artefactos ignorados del entorno local.
@@ -19,7 +21,7 @@ Fecha de corte: 2026-08-28.
 - **Navegación responsive:** todas las rutas salvo Modo película usan header global compacto + rail persistente en escritorio y barra inferior + hoja modal en móvil. El umbral `calc(26.88em + 52.8ch)` responde a capacidad tipográfica; ambos modos enlazan el repositorio de GitHub.
 - **Player adaptable:** landscape conserva la composición inmersiva; portrait ordena frame, detalles desplegables y controles persistentes, con continuidad de toma, progreso y panel al cambiar orientación.
 - **Auditoría móvil:** inicio, guion, animatic, arte, comparación, documentos, entidades y assets adaptan grillas, tablas, metadatos y controles sin desborde horizontal a 320 px.
-- **Deuda visual del animatic:** las 141 tomas (main + tráiler) están marcadas `needs_regeneration` tras la revisión de orientación de cubiertas y exteriores; `npm run report:editorial` genera la cola y briefs.
+- **Deuda visual del animatic:** las 153 tomas (main + tráiler) están marcadas `needs_regeneration` tras la revisión de orientación de cubiertas y exteriores; `npm run report:editorial` genera la cola y briefs.
 - **Fallback y detalle de toma:** claqueta técnica neutral registrada para imágenes faltantes/fallidas; editor y player señalizan placeholders. «Detalles de la toma» funciona por clic/tecla `D` y presenta contexto, cámara, cues, takes, revisión y procedencia.
 - **GitHub Pages:** repositorio público y Pages habilitado para `https://saabi.github.io/light-delay/`; build con `@sveltejs/adapter-static`, prerender global, fallback `404.html`, `BASE_PATH=/light-delay` y workflow que descarga Git LFS y valida datos, documentación, tipos y pruebas antes de publicar pushes a `master`.
 - **Secuencia Zao/Harlan antes del cruce:** escenas 5–8 reescritas con cámara y diálogo coherentes: aviso parcial, jammer visible, corte físico de COM A/B, puntería del láser exterior al corredor futuro, rutas distintas en microgravedad, asesinato/limpieza, hallazgo de Sorell y coartada de Harlan. Sorell queda establecida como testigo con credencial comprometida, no como sospechosa.
@@ -41,8 +43,8 @@ Fecha de corte: 2026-08-28.
 - Biblia de producción y reporte comprensivo actualizados al canon reciente.
 - Notas técnicas de continuidad revisadas.
 - Biblia visual con personajes, localizaciones, naves y objetos clave.
-- Animatic textual de 112 tomas.
-- 100 imágenes 1536 × 864 reutilizadas por 112 takes; los reemplazos pendientes están registrados en `TODO.md` y en notas de toma.
+- Animatic textual de 124 tomas (~30:35 de montaje).
+- 100 imágenes 1536 × 864 reutilizadas; 12 tomas nuevas con placeholder; los reemplazos pendientes están registrados en `TODO.md` y en notas de toma.
 - Modo Película con subtítulos, controles, timeline y panel de detalles.
 - Edición de duraciones con persistencia local y recálculo del total.
 - Bootstrap SvelteKit 2 / Svelte 5 en la raíz (TypeScript, lint, Vitest, Playwright).

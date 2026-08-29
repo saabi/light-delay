@@ -416,7 +416,7 @@ function main() {
 		validateScriptFile(script, {
 			sourceLang,
 			expectScenes: isCanonical ? 17 : undefined,
-			expectShots: isCanonical ? 112 : undefined,
+			expectShots: isCanonical ? 124 : undefined,
 			functionIds,
 			characterIds,
 			taxonomy,

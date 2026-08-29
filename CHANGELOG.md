@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-08-29 — Ritmo de diálogo y escena del láser (124 tomas)
+
+- `light-delay-main-short`: 112→**124** tomas — reparto de diálogo en escena 1 (0 multi-speaker), INSERT de consola en escena 6 (`shot-06-09`), división de `shot-12-01`/`shot-12-09`; montaje ~30:35. Documentado en `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md`.
+- `validate:data` espera 124 tomas canónicas; assets Velari diferidos; bloqueo Blender y briefs Higgsfield Proxima/Ardor acoplados.
+
+## 2026-08-28 — Rutas de informes editoriales
+
+- Informes dinámicos en `/reports/` (mismo pipeline que CLI): 12 tipos × todos los guiones registrados; `scripts/lib/report-registry.mjs` + `report-runner.mjs` compartidos entre web y `npm run report:*`.
+- Atajo `npm run report:all` exporta diálogo + suite editorial para los cuatro guiones (`--all`).
+
 ## 2026-08-28 — Deuda visual y informes editoriales
 
 - Las 141 tomas del corto principal y del tráiler quedan marcadas en `Take.imageStatus` como `needs_regeneration` / `canon_mismatch` (orientación de cubiertas y revisión visual).
