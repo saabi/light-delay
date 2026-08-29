@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival",
     "scriptId": "script:light-delay-festival",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "aebcf2f534830d0c81ea31763253645166dfd9d54bccbf4252a394ee7550fbc4",
+    "sourceDigest": "2166a80c8b9cee4078e3370bc9839f91a5ba6059c979df95abea82f4e23b7e41",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -171,45 +171,6 @@
       "shotId": "festival:shot-b-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
-      ],
-      "artifacts": {
-        "animaticStill": {
-          "required": true,
-          "status": "missing"
-        },
-        "firstFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "lastFrame": {
-          "required": false,
-          "status": "missing"
-        },
-        "finalAudio": {
-          "required": false,
-          "status": "missing"
-        }
-      },
-      "requiredReferences": [],
-      "segments": [
-        {
-          "id": "festival:shot-b-02:segment-01",
-          "startMs": 0,
-          "endMs": 6000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        }
-      ]
-    },
-    {
-      "shotId": "festival:shot-b-01",
-      "status": "blocked",
-      "blockers": [
         "missing_voice_sample:character:zao",
         "missing_production_context",
         "missing_purpose",
@@ -231,6 +192,45 @@
         },
         "finalAudio": {
           "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-b-02:segment-01",
+          "startMs": 0,
+          "endMs": 7000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-b-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
           "status": "missing"
         }
       },
@@ -1410,6 +1410,132 @@
           "startMs": 8000,
           "endMs": 8600,
           "continuation": "accepted_video_and_last_frame",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-b-08",
+      "status": "blocked",
+      "blockers": [
+        "missing_voice_sample:character:voss",
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": true,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": true,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-b-08:segment-01",
+          "startMs": 0,
+          "endMs": 5600,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        },
+        {
+          "id": "festival:shot-b-08:segment-02",
+          "startMs": 5600,
+          "endMs": 9000,
+          "continuation": "accepted_video_and_last_frame",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-b-09",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-b-09:segment-01",
+          "startMs": 0,
+          "endMs": 6500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-b-10",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_purpose",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-b-10:segment-01",
+          "startMs": 0,
+          "endMs": 6500,
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }

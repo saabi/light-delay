@@ -62,8 +62,8 @@
         "en": "The warning threatens Harlan"
       },
       "summary": {
-        "es": "Zao llama al puente y alcanza a decirle a Voss que existe una carga autónoma y que la firma de Sorell parece falsa. Harlan llega a la entrada sin ser visto, oye la revelación y comprende que Zao puede exponerlo.",
-        "en": "Zao calls the bridge and manages to tell Voss that an autonomous payload exists and Sorell’s signature appears forged. Harlan reaches the entrance unseen, hears the revelation, and realizes Zao can expose him."
+        "es": "Zao llama al puente. Harlan, que acaba una tarea legítima y llega por coincidencia con actitud rutinaria, queda inadvertido detrás de la tripulación concentrada en Voss. Sólo cuando Zao dice que la firma real está por señalar a alguien cambia su expresión: comprende que puede exponerlo.",
+        "en": "Zao calls the bridge. Harlan, finishing a legitimate duty and arriving coincidentally with an ordinary manner, goes unnoticed behind the crew focused on Voss. Only when Zao says the real signature is about to point to someone does his expression change: he realizes she can expose him."
       },
       "importance": "required",
       "causalLinks": [
@@ -86,8 +86,8 @@
         "en": "Harlan isolates Zao"
       },
       "summary": {
-        "es": "Para impedir que Zao complete la acusación, Harlan activa el jammer, corta COM A/B desde el distribuidor de servicio y toma la ruta rápida hacia el núcleo. Voss envía a Sorell a investigar y le ordena buscar a Harlan, pero ella debe avanzar sola por el acceso común.",
-        "en": "To prevent Zao from completing the accusation, Harlan activates the jammer, cuts COM A/B at the service distributor, and takes the fast route to the core. Voss sends Sorell to investigate and tells her to find Harlan, but she must proceed alone through the common access."
+        "es": "Harlan activa el jammer, corta COM A/B y toma el cilindro de servicio. Voss piensa antes de enviar a Sorell: su identidad fue falsificada, pero sigue implicada; la retiene para ordenarle buscar a Harlan y no entrar sola. La cautela le cuesta tiempo: ella no lo encuentra y avanza mano sobre mano por el acceso común, mientras Harlan, más ágil, se lanza balísticamente por la ruta directa hacia Zao.",
+        "en": "Harlan activates the jammer, cuts COM A/B, and takes the service cylinder. Voss thinks before sending Sorell: her identity was forged, but she remains implicated; he calls her back to order her to find Harlan and not enter alone. The precaution costs her time: she cannot find him and moves hand over hand through common access while the more agile Harlan launches ballistically along the direct route toward Zao."
       },
       "importance": "required",
       "causalLinks": [
@@ -110,8 +110,8 @@
         "en": "Zao aims at the future"
       },
       "summary": {
-        "es": "El fallo simultáneo de radio y cable confirma a Zao que alguien la aisló. Descarta Tierra porque recibir allí y retransmitir a la Ardor llegaría después del encuentro, y Proxima porque Júpiter bloquea la línea de vista L2–L1. Sólo puede calcular la posición futura de la nave, barrer la incertidumbre y completar el envío antes de que Harlan llegue.",
-        "en": "The simultaneous radio and wired failure confirms to Zao that someone isolated her. She rejects Earth because reception there and retransmission to the Ardor would arrive after the encounter, and Proxima because Jupiter blocks the L2–L1 line of sight. Her only option is to calculate the ship’s future position, sweep the uncertainty, and complete the send before Harlan arrives."
+        "es": "Al comprobar que wireless y cable cayeron juntos, Zao sabe que fue aislada. Descarta Tierra porque el doble trayecto demoraría el aviso hasta después del encuentro y Proxima porque Júpiter bloquea la línea L2–L1. Apunta al corredor futuro, adjunta un snapshot firmado del relé aún asignado a Harlan, firma todo con su token personal y completa el barrido antes de que él llegue.",
+        "en": "When wireless and wired links fail together, Zao knows she was isolated. She rejects Earth because the two-leg path would delay the warning until after the meeting and Proxima because Jupiter blocks the L2–L1 line. She aims at the future corridor, attaches a signed relay snapshot still assigned to Harlan, signs everything with her personal token, and completes the sweep before he arrives."
       },
       "importance": "required",
       "causalLinks": [
@@ -134,8 +134,8 @@
         "en": "Harlan kills Zao"
       },
       "summary": {
-        "es": "Harlan sólo ve TRANSMITIDO y supone que Zao apuntó a la Tierra. Se tranquiliza porque el doble retardo impediría advertir a Voss, lamenta que Zao encontrara la evidencia y suspira antes de atacarla. Un golpe seco, el cese del forcejeo y el negro sostenido confirman su muerte; luego Harlan borra sus rastros.",
-        "en": "Harlan sees only TRANSMITTED and assumes Zao aimed at Earth. He reassures himself that the two-leg delay would prevent warning Voss, laments that Zao found the evidence, and sighs before attacking her. A dry impact, the end of the struggle, and sustained black confirm her death; Harlan then erases his traces."
+        "es": "Harlan sólo ve TRANSMITIDO y supone que Zao apuntó a la Tierra. Se tranquiliza por el doble retardo, lamenta que ella encontrara la evidencia y suspira antes de atacarla. El golpe seco, el fin del forcejeo y el negro sostenido confirman la muerte; después borra cámaras, archivo local e índice del manifiesto, sin saber que el snapshot ya salió.",
+        "en": "Harlan sees only TRANSMITTED and assumes Zao aimed at Earth. Reassured by the two-leg delay, he laments that she found the evidence and sighs before attacking her. The dry impact, the end of the struggle, and sustained black confirm her death; afterward he wipes cameras, the local archive, and the manifest index, unaware the snapshot already left."
       },
       "importance": "required",
       "causalLinks": [
@@ -230,8 +230,8 @@
         "en": "The warning catches the ship"
       },
       "summary": {
-        "es": "La señal enviada por Zao intercepta la Ardor antes del encuentro. Su firma temporal y el trabajo independiente de Elin demuestran que el mensaje es auténtico, anterior al asesinato y compatible con la carga que ya investigaban.",
-        "en": "The signal Zao sent intercepts the Ardor before the encounter. Its time signature and Elin’s independent work show that the message is authentic, predates the murder, and matches the payload they were already investigating."
+        "es": "La señal intercepta la Ardor antes del encuentro. La firma del transmisor prueba dispositivo y hora; el token personal de Zao autentica autora e integridad del mensaje y del snapshot. Por eso la objeción de Harlan —una voz puede falsificarse— no destruye la evidencia.",
+        "en": "The signal intercepts the Ardor before the meeting. The transmitter signature proves device and time; Zao’s personal token authenticates the author and integrity of the message and snapshot. That is why Harlan’s objection—a voice can be forged—does not destroy the evidence."
       },
       "importance": "required",
       "causalLinks": [
@@ -254,8 +254,8 @@
         "en": "The evidence converges on Harlan"
       },
       "summary": {
-        "es": "El mensaje nombra a Harlan y señala el relé físico; la auditoría aporta la función de la carga y la firma anónima. Juntas, ambas mitades convierten la sospecha en atribución verificable.",
-        "en": "The message names Harlan and points to the physical relay; the audit supplies the payload’s function and anonymous signature. Together, both halves turn suspicion into verifiable attribution."
+        "es": "El snapshot firmado por el hardware todavía asigna el relé a Harlan; la auditoría independiente de Elin conecta ese circuito con el payload y el override. Las capas convergen en una atribución verificable que permite a Voss revocar su credencial.",
+        "en": "The hardware-signed snapshot still assigns the relay to Harlan; Elin’s independent audit connects that circuit to the payload and override. The layers converge into a verifiable attribution that lets Voss revoke his credential."
       },
       "importance": "required",
       "causalLinks": [
@@ -278,8 +278,8 @@
         "en": "Harlan attempts the override"
       },
       "summary": {
-        "es": "Voss revoca la credencial de Harlan. Al quedar expuesto y perder su última ventana de acceso, Harlan intenta activar la carga desde el control físico y obliga a Voss a contenerlo.",
-        "en": "Voss revokes Harlan’s credential. Exposed and losing his last access window, Harlan tries to activate the payload from the physical control and forces Voss to restrain him."
+        "es": "Antes de que la revocación se propague, Harlan usa la última ventana del override y corre bajo 1 g por el ascensor central hacia el control físico. Voss permanece en el puente y envía a Okoye, que lo intercepta y contiene sin combate armado.",
+        "en": "Before revocation propagates, Harlan uses the override’s last window and runs under 1 g through the central lift toward physical control. Voss remains on the bridge and sends Okoye, who intercepts and restrains him without an armed fight."
       },
       "importance": "required",
       "causalLinks": [
@@ -302,8 +302,8 @@
         "en": "The crew cleans the channel"
       },
       "summary": {
-        "es": "Con Harlan contenido, Elin aplica la cuarentena que ya había preparado y Sorell aporta el saludo pasivo. La carga queda aislada y el canal vuelve a representar sólo a la tripulación.",
-        "en": "With Harlan contained, Elin applies the quarantine she already prepared and Sorell supplies the passive greeting. The payload is isolated and the channel once again represents only the crew."
+        "es": "Con Harlan contenido, Elin aplica la cuarentena que ya había preparado y Sorell aporta el saludo pasivo de sólo lectura. El payload queda aislado, el canal saliente limpio y la mediación activa.",
+        "en": "With Harlan restrained, Elin applies the quarantine she already prepared and Sorell supplies the passive read-only greeting. The payload is isolated, the outbound channel clean, and mediation active."
       },
       "importance": "required",
       "causalLinks": [
@@ -326,8 +326,8 @@
         "en": "First contact"
       },
       "summary": {
-        "es": "La cuenta llega a cero con un saludo verificable. Los Velari responden y autorizan la aproximación sin que la carga convierta el contacto en una agresión.",
-        "en": "The countdown reaches zero with a verifiable greeting. The Velari respond and authorize approach without the payload turning contact into aggression."
+        "es": "La Ardor envía el saludo limpio. Tras un silencio, los Velari responden con reconocimiento limitado y autorizan la aproximación; la estación orgánica y la nave emisaria permanecen como objetos distintos.",
+        "en": "The Ardor sends the clean greeting. After a silence, the Velari answer with limited recognition and authorize approach; the organic station and emissary ship remain distinct objects."
       },
       "importance": "required",
       "causalLinks": [
@@ -350,8 +350,8 @@
         "en": "Consequence"
       },
       "summary": {
-        "es": "El éxito del contacto demuestra que la decisión de Zao llegó a tiempo, aunque ella no pudo sobrevivir para verlo.",
-        "en": "The successful contact proves that Zao’s decision arrived in time, although she did not survive to see it."
+        "es": "Voss prepara el informe a la Tierra, adjunta evidencia y el legajo de Zao. Su retrato lo detiene; murmura «Llegaste a tiempo», pulsa ENVIAR y no recibe respuesta.",
+        "en": "Voss prepares the report to Earth, attaches evidence and Zao’s personnel file. Her portrait stops him; he murmurs “You made it in time,” presses SEND, and receives no reply."
       },
       "importance": "required",
       "causalLinks": [
@@ -519,8 +519,8 @@
         "en": "Harlan arrives unseen"
       },
       "summary": {
-        "es": "Harlan llega al acceso axial del puente justo cuando Zao abre canal.",
-        "en": "Harlan reaches the axial bridge access just as Zao opens a channel."
+        "es": "Harlan termina una tarea legítima y llega por coincidencia al acceso axial justo cuando Zao abre canal. Su actitud es rutinaria y relajada; nadie lo ve detrás de la tripulación concentrada en Voss.",
+        "en": "Harlan finishes a legitimate duty and coincidentally reaches the axial access just as Zao opens a channel. His manner is ordinary and relaxed; no one sees him behind the crew focused on Voss."
       },
       "importance": "required",
       "coverage": {
@@ -540,6 +540,18 @@
           ],
           "beatIds": [
             "festival:beat-b-01"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-b"
+          ],
+          "beatIds": [
+            "festival:beat-b-01"
+          ],
+          "shotIds": [
+            "festival:shot-b-02"
           ]
         }
       },
@@ -555,8 +567,8 @@
         "en": "Zao reports live (cut off)"
       },
       "summary": {
-        "es": "Zao reporta un payload autónomo firmado por Sorell, firma falsa, \"el relé físico apunta a—\"; el canal se corta antes de nombrar a Harlan en abierto.",
-        "en": "Zao reports an autonomous payload signed by Sorell, forged signature, \"the physical relay points to—\"; the channel cuts before she names Harlan in the clear."
+        "es": "Zao reporta un payload autónomo firmado por Sorell y dice que la firma parece falsa. «La verdadera firma apunta a—» provoca la microreacción de Harlan, pero el canal se corta antes del nombre.",
+        "en": "Zao reports an autonomous payload signed by Sorell and says the signature looks forged. “The real signature points to—” triggers Harlan’s microreaction, but the channel cuts before the name."
       },
       "importance": "required",
       "coverage": {
@@ -576,6 +588,18 @@
           ],
           "beatIds": [
             "festival:beat-b-01"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-b"
+          ],
+          "beatIds": [
+            "festival:beat-b-01"
+          ],
+          "shotIds": [
+            "festival:shot-b-02"
           ]
         }
       },
@@ -587,12 +611,12 @@
       "parentStepId": "festival:story-04",
       "order": 7,
       "title": {
-        "es": "Harlan sabotea las comunicaciones",
-        "en": "Harlan sabotages communications"
+        "es": "Sabotaje, cautela y carrera por dos rutas",
+        "en": "Sabotage, caution, and a race along two routes"
       },
       "summary": {
-        "es": "Harlan activa el jammer y desconecta COM A/B en el distribuidor del cilindro de servicio.",
-        "en": "Harlan activates the jammer and disconnects COM A/B at the service-cylinder distributor."
+        "es": "Harlan activa el jammer y desconecta COM A/B. Voss sopesa que Sorell sigue implicada pese a la falsificación, la envía a verificar y luego exige que busque a Harlan y no entre sola. Mientras ella pierde tiempo y avanza mano sobre mano por el cilindro central, Harlan se lanza balísticamente por servicio.",
+        "en": "Harlan activates the jammer and disconnects COM A/B. Voss weighs that Sorell remains implicated despite the forgery, sends her to verify, then requires her to find Harlan and not enter alone. While she loses time and moves hand over hand through the central cylinder, Harlan launches ballistically through service."
       },
       "importance": "required",
       "coverage": {
@@ -612,6 +636,21 @@
           ],
           "beatIds": [
             "festival:beat-b-01"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-b"
+          ],
+          "beatIds": [
+            "festival:beat-b-01"
+          ],
+          "shotIds": [
+            "festival:shot-b-03",
+            "festival:shot-b-08",
+            "festival:shot-b-09",
+            "festival:shot-b-10"
           ]
         }
       },
@@ -648,6 +687,18 @@
           ],
           "beatIds": [
             "festival:beat-b-01"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-b"
+          ],
+          "beatIds": [
+            "festival:beat-b-01"
+          ],
+          "shotIds": [
+            "festival:shot-b-04"
           ]
         }
       },
@@ -779,8 +830,8 @@
         "en": "Zao's relief"
       },
       "summary": {
-        "es": "Alivio breve: la solución está lista y el barrido comienza.",
-        "en": "Brief relief: the solution is ready and the sweep begins."
+        "es": "La solución de intercepción queda lista; Zao siente un alivio breve y comienza el barrido mientras Harlan se aproxima.",
+        "en": "The intercept solution becomes ready; Zao feels brief relief and begins the sweep while Harlan approaches."
       },
       "importance": "optional",
       "coverage": {
@@ -836,19 +887,21 @@
           "beatIds": [
             "festival:beat-b-01"
           ]
+        },
+        "animatic": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-b"
+          ],
+          "beatIds": [
+            "festival:beat-b-01"
+          ],
+          "shotIds": [
+            "festival:shot-b-06"
+          ]
         }
       },
-      "majorEventId": "event:zao-warning-death",
-      "notes": [
-        {
-          "type": "continuity",
-          "text": {
-            "es": "Observación 29/08/2026: el vínculo \"relé físico → Harlan\" no se dramatiza, sólo se afirma. En festival:outline-06 Zao dice en vivo \"el relé físico apunta a—\" sin completar la frase (cortada por el jamming); el nombre de Harlan sólo aparece aquí, en el mensaje grabado. Ninguna toma muestra cómo llega a esa conclusión específica. Defendible como compresión intencional (el documento de adaptación pide absorber exposición en overlays), pero a vigilar: si la Secuencia E resuelve la credencial de mando puramente desde el lado técnico de Elin, la omisión es inofensiva; si el guion necesita que el público siga el razonamiento de Zao paso a paso, faltaría un beat.",
-            "en": "Observation 29/08/2026: the \"physical relay → Harlan\" link is asserted, not dramatized. In festival:outline-06 Zao says live \"the physical relay points to—\" without finishing the sentence (cut off by the jamming); Harlan's name only appears here, in the recorded message. No shot shows how she reaches that specific conclusion. Defensible as intentional compression (the adaptation doc asks for exposition to move into overlays), but worth watching: if Sequence E resolves the command credential purely from Elin's technical side, the omission is harmless; if the script ever needs the audience to follow Zao's reasoning step by step, a beat would be missing."
-          },
-          "resolved": false
-        }
-      ]
+      "majorEventId": "event:zao-warning-death"
     },
     {
       "id": "festival:outline-14",
@@ -882,6 +935,18 @@
           "beatIds": [
             "festival:beat-b-01"
           ]
+        },
+        "animatic": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-b"
+          ],
+          "beatIds": [
+            "festival:beat-b-01"
+          ],
+          "shotIds": [
+            "festival:shot-b-07"
+          ]
         }
       },
       "majorEventId": "event:zao-warning-death"
@@ -896,8 +961,8 @@
         "en": "Harlan confronts Zao"
       },
       "summary": {
-        "es": "\"¿A quién enviaste eso?\"; Zao no responde, lo mira desafiante.",
-        "en": "\"Who did you send that to?\"; Zao does not answer; she looks at him defiantly."
+        "es": "Harlan pregunta a quién envió el mensaje porque desconoce el destino; Zao no responde y sostiene su mirada.",
+        "en": "Harlan asks whom she sent the message to because he does not know the destination; Zao does not answer and holds his gaze."
       },
       "importance": "required",
       "coverage": {
@@ -1004,8 +1069,8 @@
         "en": "Harlan erases evidence"
       },
       "summary": {
-        "es": "Harlan borra cámaras y archivo local del núcleo antes de retirarse.",
-        "en": "Harlan wipes the cameras and local archive of the core before leaving."
+        "es": "Harlan borra cámaras, archivo local e índice operativo del manifiesto del relé. Bajo presión deja el loose end del snapshot firmado, que ya viaja fuera de su alcance.",
+        "en": "Harlan wipes the cameras, local archive, and operational relay-manifest index. Under pressure, he leaves the signed snapshot as a loose end already traveling beyond his reach."
       },
       "importance": "required",
       "coverage": {
@@ -1076,8 +1141,8 @@
         "en": "Harlan restores communications"
       },
       "summary": {
-        "es": "Harlan restaura COM A/B y regresa al puente compuesto.",
-        "en": "Harlan restores COM A/B and returns to the composite bridge."
+        "es": "Harlan restaura COM A/B antes de volver al puente, de modo que su regreso parezca ajeno al sabotaje.",
+        "en": "Harlan restores COM A/B before returning to the bridge so his return appears unrelated to the sabotage."
       },
       "importance": "required",
       "coverage": {
@@ -1148,8 +1213,8 @@
         "en": "Time jump"
       },
       "summary": {
-        "es": "Overlay: 23 H DESPUÉS · CANAL VELARI EN 03:00.",
-        "en": "Overlay: 23 H LATER · VELARI CHANNEL IN 03:00."
+        "es": "Veintitrés horas después, la Ardor se acerca al encuentro y el canal Velari abrirá en sólo tres minutos.",
+        "en": "Twenty-three hours later, the Ardor approaches the meeting and the Velari channel will open in only three minutes."
       },
       "importance": "required",
       "coverage": {
@@ -1199,10 +1264,16 @@
           ]
         },
         "script": {
-          "status": "partial",
+          "status": "covered",
           "sceneIds": [
             "festival:scene-d"
+          ],
+          "beatIds": [
+            "festival:beat-d-01"
           ]
+        },
+        "animatic": {
+          "status": "not_started"
         }
       },
       "majorEventId": "event:investigation",
@@ -1242,10 +1313,16 @@
           ]
         },
         "script": {
-          "status": "partial",
+          "status": "covered",
           "sceneIds": [
             "festival:scene-d"
+          ],
+          "beatIds": [
+            "festival:beat-d-01"
           ]
+        },
+        "animatic": {
+          "status": "not_started"
         }
       },
       "majorEventId": "event:investigation"
@@ -1458,8 +1535,8 @@
         "en": "Signal authentication"
       },
       "summary": {
-        "es": "La señal se autentica como salida del transmisor físico de Zao.",
-        "en": "The signal authenticates as output from Zao's physical transmitter."
+        "es": "Elin autentica la firma y la hora del transmisor físico: prueban qué dispositivo emitió y que lo hizo antes del asesinato.",
+        "en": "Elin authenticates the physical transmitter signature and timestamp: they prove which device transmitted and that it did so before the murder."
       },
       "importance": "required",
       "coverage": {
@@ -1473,6 +1550,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1488,8 +1574,8 @@
         "en": "Message playback"
       },
       "summary": {
-        "es": "Se reproduce el mensaje grabado de Zao.",
-        "en": "Zao's recorded message plays."
+        "es": "El puente reproduce el mensaje completo: Zao nombra a Harlan, señala el relé y pide preservar la mediación.",
+        "en": "The bridge plays the complete message: Zao names Harlan, points to the relay, and asks them to preserve mediation."
       },
       "importance": "required",
       "coverage": {
@@ -1503,6 +1589,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1518,8 +1613,8 @@
         "en": "Harlan tries to invalidate it"
       },
       "summary": {
-        "es": "Harlan objeta: una voz puede falsificarse.",
-        "en": "Harlan objects: a voice can be forged."
+        "es": "Harlan intenta reducir toda la prueba al audio falsificable para conservar una explicación alternativa ante Voss.",
+        "en": "Harlan tries to reduce all the evidence to forgeable audio so he can preserve an alternative explanation before Voss."
       },
       "importance": "required",
       "coverage": {
@@ -1533,6 +1628,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1548,8 +1652,8 @@
         "en": "Elin executes; she does not ask for faith"
       },
       "summary": {
-        "es": "Elin no pide que le crean; ejecuta directamente la instrucción de Zao.",
-        "en": "Elin does not ask to be believed; she executes Zao's instruction directly."
+        "es": "Elin responde: «No estoy verificando su voz. Estoy verificando su firma». El token personal autentica a Zao y preserva íntegros mensaje y adjunto.",
+        "en": "Elin answers: “I’m not verifying her voice. I’m verifying her signature.” The personal token authenticates Zao and preserves message and attachment intact."
       },
       "importance": "required",
       "coverage": {
@@ -1563,6 +1667,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1578,8 +1691,8 @@
         "en": "Triple coincidence"
       },
       "summary": {
-        "es": "Overlay/montaje de tres capas: payload + relé físico + credencial de mando.",
-        "en": "Three-layer overlay/montage: payload + physical relay + command credential."
+        "es": "Convergen cuatro capas: dispositivo y hora; firma personal de Zao; snapshot del manifiesto firmado por el hardware y aún asignado a Harlan; auditoría independiente que conecta relé, payload y override.",
+        "en": "Four layers converge: device and time; Zao’s personal signature; the hardware-signed manifest snapshot still assigned to Harlan; and an independent audit connecting relay, payload, and override."
       },
       "importance": "required",
       "coverage": {
@@ -1593,6 +1706,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1601,8 +1723,8 @@
         {
           "type": "continuity",
           "text": {
-            "es": "Verificado 29/08/2026: las tres capas ya tienen fuente escrita — el relé físico está en el mensaje grabado de Zao (festival:cue-b-01, \"Crucen la rutina con el relé físico\") y el payload/posible rastro de credencial está en el trabajo de Elin (Secuencia D). Esta convergencia no depende del gap señalado en d-00/d-00b: es un problema de motivación de apertura de escena, no una fractura de la doble llave.",
-            "en": "Verified 29/08/2026: all three layers already have written sources — the physical relay is in Zao's recorded message (festival:cue-b-01, \"Cross-check the routine against the physical relay\") and the payload/possible credential trail is in Elin's work (Sequence D). This convergence does not depend on the d-00/d-00b gap: it is a scene-opening motivation problem, not a fracture of the double key."
+            "es": "Verificado 29/08/2026: las capas tienen fuentes independientes — dispositivo/hora del transmisor, firma del token personal de Zao, snapshot del manifiesto firmado por hardware y auditoría previa de Elin. La convergencia no depende de una voz ni de un único registro.",
+            "en": "Verified 29/08/2026: the layers have independent sources—the transmitter device/time, Zao’s personal-token signature, the hardware-signed manifest snapshot, and Elin’s prior audit. The convergence depends on neither a voice nor a single record."
           },
           "resolved": true
         }
@@ -1618,8 +1740,8 @@
         "en": "Integrity verified"
       },
       "summary": {
-        "es": "Resultado: R. HARLAN — INTEGRIDAD VERIFICADA.",
-        "en": "Result: R. HARLAN — INTEGRITY VERIFIED."
+        "es": "La interfaz resume la convergencia y atribuye el override a R. Harlan con integridad verificada.",
+        "en": "The interface summarizes the convergence and attributes the override to R. Harlan with verified integrity."
       },
       "importance": "required",
       "coverage": {
@@ -1633,6 +1755,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1648,8 +1779,8 @@
         "en": "Voss revokes the credential"
       },
       "summary": {
-        "es": "Voss revoca la credencial de Harlan.",
-        "en": "Voss revokes Harlan's credential."
+        "es": "Como la atribución ya no depende de una voz ni de un registro único, Voss revoca la credencial de Harlan.",
+        "en": "Because attribution no longer depends on a voice or a single record, Voss revokes Harlan’s credential."
       },
       "importance": "required",
       "coverage": {
@@ -1663,6 +1794,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1678,8 +1818,8 @@
         "en": "Harlan triggers the override"
       },
       "summary": {
-        "es": "Harlan activa el override antes de que la revocación se propague.",
-        "en": "Harlan triggers the override before the revocation propagates."
+        "es": "Harlan aprovecha la última ventana antes de que la revocación se propague y activa su override físico.",
+        "en": "Harlan exploits the last window before revocation propagates and activates his physical override."
       },
       "importance": "required",
       "coverage": {
@@ -1693,6 +1833,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-e"
+          ],
+          "beatIds": [
+            "festival:beat-e-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1708,8 +1857,8 @@
         "en": "Harlan reaches physical control"
       },
       "summary": {
-        "es": "Harlan obtiene acceso físico al núcleo o activa la rama hostil desde el último punto donde su override sigue siendo válido.",
-        "en": "Harlan gains physical access to the core or activates the hostile branch from the last point where his override remains valid."
+        "es": "Harlan usa la última ventana del override y, bajo 1 g, corre por el ascensor central hacia el ramal físico del núcleo.",
+        "en": "Harlan uses the override’s last window and, under 1 g, runs through the central lift toward the core’s physical branch."
       },
       "importance": "required",
       "coverage": {
@@ -1723,6 +1872,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-f"
+          ],
+          "beatIds": [
+            "festival:beat-f-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1734,12 +1892,12 @@
       "parentStepId": "festival:story-12",
       "order": 39,
       "title": {
-        "es": "Voss lo contiene",
-        "en": "Voss contains him"
+        "es": "Okoye lo contiene",
+        "en": "Okoye contains him"
       },
       "summary": {
-        "es": "Voss contiene a Harlan físicamente o bloquea el acceso mientras Elin ejecuta la operación digital.",
-        "en": "Voss physically contains Harlan or blocks access while Elin runs the digital operation."
+        "es": "Voss permanece en el puente. Okoye intercepta y contiene a Harlan sin combate armado mientras Elin ejecuta la operación digital.",
+        "en": "Voss remains on the bridge. Okoye intercepts and restrains Harlan without an armed fight while Elin runs the digital operation."
       },
       "importance": "required",
       "coverage": {
@@ -1753,6 +1911,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-f"
+          ],
+          "beatIds": [
+            "festival:beat-f-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1783,6 +1950,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-f"
+          ],
+          "beatIds": [
+            "festival:beat-f-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1798,8 +1974,8 @@
         "en": "Final quarantine UI"
       },
       "summary": {
-        "es": "PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA.",
-        "en": "PAYLOAD QUARANTINED / OUTBOUND CHANNEL CLEAN / MEDIATION ACTIVE."
+        "es": "La interfaz confirma el resultado operativo: payload en cuarentena, canal saliente limpio y mediación legítima todavía activa.",
+        "en": "The interface confirms the operational result: payload quarantined, outbound channel clean, and legitimate mediation still active."
       },
       "importance": "optional",
       "coverage": {
@@ -1813,6 +1989,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-f"
+          ],
+          "beatIds": [
+            "festival:beat-f-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1828,8 +2013,8 @@
         "en": "The clock hits zero"
       },
       "summary": {
-        "es": "Elin abre únicamente el canal limpio; Voss: \"Envíen.\"",
-        "en": "Elin opens only the clean channel; Voss: \"Send.\""
+        "es": "Con el reloj en cero y sólo el canal limpio disponible, Elin lo abre y Voss ordena enviar el saludo.",
+        "en": "With the clock at zero and only the clean channel available, Elin opens it and Voss orders the greeting sent."
       },
       "importance": "required",
       "coverage": {
@@ -1843,6 +2028,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-g"
+          ],
+          "beatIds": [
+            "festival:beat-g-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1873,6 +2067,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-g"
+          ],
+          "beatIds": [
+            "festival:beat-g-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },
@@ -1888,8 +2091,8 @@
         "en": "Close: you arrived in time"
       },
       "summary": {
-        "es": "Interior: el mensaje de Zao queda archivado; última línea de Voss: \"Llegaste a tiempo.\"",
-        "en": "Interior: Zao's message is archived; Voss's last line: \"You arrived in time.\""
+        "es": "Voss prepara el informe a la Tierra, adjunta evidencia y el legajo de Zao; su retrato lo detiene. Dice «Llegaste a tiempo» apenas para sí, pulsa ENVIAR y no recibe respuesta.",
+        "en": "Voss prepares the report to Earth, attaches evidence and Zao’s personnel file; her portrait stops him. He says “You made it in time” softly to himself, presses SEND, and receives no reply."
       },
       "importance": "required",
       "coverage": {
@@ -1903,6 +2106,15 @@
           ]
         },
         "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival:scene-g"
+          ],
+          "beatIds": [
+            "festival:beat-g-01"
+          ]
+        },
+        "animatic": {
           "status": "not_started"
         }
       },

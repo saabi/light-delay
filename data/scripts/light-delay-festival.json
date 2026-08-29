@@ -126,8 +126,8 @@
           "dimensionId": "canon:evidence-chain",
           "valueId": "relay-optical-readonly",
           "statement": {
-            "es": "El relé físico, el mensaje óptico y el saludo pasivo forman evidencia complementaria.",
-            "en": "The physical relay, optical message, and passive greeting form complementary evidence."
+            "es": "El dispositivo y la hora, la firma del token personal de Zao, el snapshot firmado por el hardware del relé, la auditoría independiente y el saludo pasivo forman evidencia complementaria.",
+            "en": "Device and time, Zao’s personal-token signature, the relay hardware-signed snapshot, the independent audit, and the passive greeting form complementary evidence."
           },
           "status": "established"
         },
@@ -412,10 +412,13 @@
         "festival:beat-b-01"
       ],
       "shotIds": [
-        "festival:shot-b-02",
         "festival:shot-b-01",
+        "festival:shot-b-02",
         "festival:shot-b-03",
         "festival:shot-b-04",
+        "festival:shot-b-08",
+        "festival:shot-b-09",
+        "festival:shot-b-10",
         "festival:shot-b-04a",
         "festival:shot-b-04b",
         "festival:shot-b-04c",
@@ -684,16 +687,25 @@
         "en": "Zao reveals the forged signature; Harlan cuts wireless and COM A/B; she aims the external laser at the future corridor."
       },
       "cueIds": [
+        "festival:cue-b-12",
         "festival:cue-b-02",
         "festival:cue-b-03",
         "festival:cue-b-04",
         "festival:cue-b-05",
+        "festival:cue-b-07",
+        "festival:cue-b-08",
+        "festival:cue-b-09",
+        "festival:cue-b-10",
+        "festival:cue-b-11",
         "festival:cue-b-05b",
         "festival:cue-b-05c",
         "festival:cue-b-05d",
         "festival:cue-b-05f",
         "festival:cue-b-05g",
         "festival:cue-b-05h",
+        "festival:cue-b-13",
+        "festival:cue-b-14",
+        "festival:cue-b-15",
         "festival:cue-b-01",
         "festival:cue-b-06"
       ],
@@ -780,7 +792,19 @@
         "es": "Doble llave causal; revocación; Harlan activa el override.",
         "en": "Causal double key; revocation; Harlan activates the override."
       },
-      "cueIds": [],
+      "cueIds": [
+        "festival:cue-e-01",
+        "festival:cue-e-02",
+        "festival:cue-e-03",
+        "festival:cue-e-04",
+        "festival:cue-e-05",
+        "festival:cue-e-06",
+        "festival:cue-e-07",
+        "festival:cue-e-08",
+        "festival:cue-e-09",
+        "festival:cue-e-10",
+        "festival:cue-e-11"
+      ],
       "targetDurationMs": 45000
     },
     {
@@ -800,7 +824,10 @@
         "en": "Quarantine climax with Sorell's passive greeting as an asset."
       },
       "cueIds": [
-        "festival:cue-f-01"
+        "festival:cue-f-01",
+        "festival:cue-f-02",
+        "festival:cue-f-03",
+        "festival:cue-f-04"
       ],
       "targetDurationMs": 60000
     },
@@ -822,7 +849,10 @@
       },
       "cueIds": [
         "festival:cue-g-01",
-        "festival:cue-g-02"
+        "festival:cue-g-03",
+        "festival:cue-g-04",
+        "festival:cue-g-02",
+        "festival:cue-g-05"
       ],
       "targetDurationMs": 30000
     }
@@ -831,17 +861,17 @@
     {
       "id": "festival:cue-b-02",
       "beatId": "festival:beat-b-01",
-      "order": 1,
+      "order": 2,
       "type": "action",
       "text": {
-        "es": "En microgravedad, Harlan llega al acceso axial del puente sin ser visto mientras Zao abre canal.",
-        "en": "In microgravity, Harlan reaches the bridge's axial access unseen as Zao opens a channel."
+        "es": "Harlan termina una tarea legítima en otra cubierta y llega al acceso axial con actitud rutinaria y relajada, por coincidencia cuando Zao abre canal. Voss está en primer término; tripulantes y Sorell miran a Voss o siguen sus monitores, de modo que nadie ve a Harlan. Sólo «la verdadera firma apunta a—» le provoca una microreacción.",
+        "en": "Harlan finishes a legitimate duty on another deck and reaches the axial access with an ordinary, relaxed manner, coincidentally as Zao opens a channel. Voss is in the foreground; crew and Sorell look toward Voss or remain on their displays, so no one sees Harlan. Only “the real signature points to—” triggers a microreaction."
       }
     },
     {
       "id": "festival:cue-b-03",
       "beatId": "festival:beat-b-01",
-      "order": 2,
+      "order": 3,
       "type": "dialogue",
       "speakerId": "character:zao",
       "presentation": "radio",
@@ -849,11 +879,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. El relé físico apunta a—",
+            "spokenText": "Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. La verdadera firma apunta a—",
             "status": "source"
           },
           "en": {
-            "spokenText": "Captain, there's an autonomous payload signed by Sorell. The signature looks forged. The physical relay points to—",
+            "spokenText": "Captain, there’s an autonomous payload signed by Sorell. The signature looks forged. The real signature points to—",
             "status": "draft"
           }
         }
@@ -862,7 +892,7 @@
     {
       "id": "festival:cue-b-04",
       "beatId": "festival:beat-b-01",
-      "order": 3,
+      "order": 4,
       "type": "action",
       "text": {
         "es": "Harlan activa el jammer, se oculta y desconecta COM A/B en el distribuidor del cilindro de servicio.",
@@ -872,7 +902,7 @@
     {
       "id": "festival:cue-b-05",
       "beatId": "festival:beat-b-01",
-      "order": 4,
+      "order": 5,
       "type": "action",
       "text": {
         "es": "Zao comprueba la malla inalámbrica y ambos enlaces cableados: los tres caen a la vez. La simultaneidad descarta un fallo técnico — alguien cortó las tres vías.",
@@ -882,7 +912,7 @@
     {
       "id": "festival:cue-b-01",
       "beatId": "festival:beat-b-01",
-      "order": 11,
+      "order": 20,
       "type": "dialogue",
       "speakerId": "character:zao",
       "presentation": "recording",
@@ -903,11 +933,133 @@
     {
       "id": "festival:cue-b-06",
       "beatId": "festival:beat-b-01",
-      "order": 12,
+      "order": 21,
       "type": "action",
       "text": {
         "es": "El envío completa el barrido cuando Harlan entra por el ramal técnico; sólo alcanza a ver TRANSMITIDO, no el destino.",
         "en": "The transmission completes its sweep as Harlan enters through the technical branch; he sees only TRANSMITTED, not the destination."
+      }
+    },
+    {
+      "id": "festival:cue-b-07",
+      "beatId": "festival:beat-b-01",
+      "order": 6,
+      "type": "action",
+      "text": {
+        "es": "Voss sopesa la situación: la identidad de Sorell fue falsificada, pero por eso mismo ella está implicada. Decide enviarla a verificar y luego, por cautela, impedir que entre sola.",
+        "en": "Voss weighs the situation: Sorell’s identity was forged, but that also implicates her. He decides to send her to verify it and then, as a precaution, prevents her from entering alone."
+      }
+    },
+    {
+      "id": "festival:cue-b-08",
+      "beatId": "festival:beat-b-01",
+      "order": 7,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Sorell, vaya al núcleo. Averigüe qué falsificaron y qué encontró Zao.",
+            "status": "source"
+          },
+          "en": {
+            "spokenText": "Sorell, go to the core. Find out what they forged and what Zao found.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-09",
+      "beatId": "festival:beat-b-01",
+      "order": 8,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Sorell. Busque a Harlan. No entre sola.",
+            "status": "source"
+          },
+          "en": {
+            "spokenText": "Sorell. Find Harlan. Do not go in alone.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-b-10",
+      "beatId": "festival:beat-b-01",
+      "order": 9,
+      "type": "action",
+      "text": {
+        "es": "Ágil en microgravedad, Harlan se lanza balísticamente por el cilindro de servicio directo y gana distancia con muy pocas correcciones.",
+        "en": "Agile in microgravity, Harlan launches ballistically through the direct service cylinder and gains distance with very few corrections."
+      }
+    },
+    {
+      "id": "festival:cue-b-11",
+      "beatId": "festival:beat-b-01",
+      "order": 10,
+      "type": "action",
+      "text": {
+        "es": "Sorell pierde segundos buscando a Harlan. Al no encontrarlo, avanza sola por el cilindro central de uso cotidiano, mano sobre mano entre barras y cubiertas; la ruta y la cautela la retrasan.",
+        "en": "Sorell loses seconds looking for Harlan. Unable to find him, she proceeds alone through the everyday central cylinder, hand over hand across rails and decks; the route and caution delay her."
+      }
+    },
+    {
+      "id": "festival:cue-b-12",
+      "beatId": "festival:beat-b-01",
+      "order": 1,
+      "type": "action",
+      "text": {
+        "es": "Zao confirma el payload y abre el canal con el puente.",
+        "en": "Zao confirms the payload and opens a channel to the bridge."
+      }
+    },
+    {
+      "id": "festival:cue-b-13",
+      "beatId": "festival:beat-b-01",
+      "order": 17,
+      "type": "action",
+      "text": {
+        "es": "Zao captura el manifiesto firmado por el hardware del relé, que todavía asigna el circuito a R. Harlan, y adjunta esa instantánea al mensaje.",
+        "en": "Zao captures the relay hardware-signed manifest, which still assigns the circuit to R. Harlan, and attaches that snapshot to the message."
+      }
+    },
+    {
+      "id": "festival:cue-b-14",
+      "beatId": "festival:beat-b-01",
+      "order": 18,
+      "type": "action",
+      "text": {
+        "es": "Con su token criptográfico personal presente, Zao firma digitalmente el mensaje y el adjunto antes de transmitir.",
+        "en": "With her personal cryptographic token physically present, Zao digitally signs the message and attachment before transmitting."
+      }
+    },
+    {
+      "id": "festival:cue-b-15",
+      "beatId": "festival:beat-b-01",
+      "order": 19,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "AUTORA: J. ZAO · TOKEN PERSONAL · FIRMA DIGITAL APLICADA\nSNAPSHOT DE RELÉ ADJUNTO · FIRMA DE HARDWARE VÁLIDA",
+            "status": "source"
+          },
+          "en": {
+            "text": "AUTHOR: J. ZAO · PERSONAL TOKEN · DIGITAL SIGNATURE APPLIED\nRELAY SNAPSHOT ATTACHED · HARDWARE SIGNATURE VALID",
+            "status": "draft"
+          }
+        }
       }
     },
     {
@@ -916,8 +1068,8 @@
       "order": 4,
       "type": "action",
       "text": {
-        "es": "Harlan mata a Zao fuera de campo, borra cámaras y archivo local y regresa por el cilindro de servicio.",
-        "en": "Harlan kills Zao offscreen, erases the cameras and local file, and returns through the service cylinder."
+        "es": "Harlan mata a Zao fuera de campo, borra cámaras, archivo local e índice operativo del manifiesto del relé, y regresa por el cilindro de servicio. Cree haber eliminado la atribución porque ignora que el snapshot firmado ya fue transmitido.",
+        "en": "Harlan kills Zao offscreen, wipes the cameras, local archive, and operational relay-manifest index, and returns through the service cylinder. He believes he erased attribution because he does not know the signed snapshot was already transmitted."
       }
     },
     {
@@ -1016,7 +1168,7 @@
     {
       "id": "festival:cue-g-02",
       "beatId": "festival:beat-g-01",
-      "order": 2,
+      "order": 4,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -1377,7 +1529,7 @@
     {
       "id": "festival:cue-b-05b",
       "beatId": "festival:beat-b-01",
-      "order": 5,
+      "order": 11,
       "type": "dialogue",
       "speakerId": "character:zao",
       "content": {
@@ -1397,7 +1549,7 @@
     {
       "id": "festival:cue-b-05c",
       "beatId": "festival:beat-b-01",
-      "order": 6,
+      "order": 12,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -1417,7 +1569,7 @@
     {
       "id": "festival:cue-b-05d",
       "beatId": "festival:beat-b-01",
-      "order": 7,
+      "order": 13,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -1437,7 +1589,7 @@
     {
       "id": "festival:cue-b-05f",
       "beatId": "festival:beat-b-01",
-      "order": 8,
+      "order": 14,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -1457,7 +1609,7 @@
     {
       "id": "festival:cue-b-05g",
       "beatId": "festival:beat-b-01",
-      "order": 9,
+      "order": 15,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -1477,7 +1629,7 @@
     {
       "id": "festival:cue-b-05h",
       "beatId": "festival:beat-b-01",
-      "order": 10,
+      "order": 16,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -1555,6 +1707,270 @@
         "en": "Struggle and breathing cease; sustained black with minimal ambience before the cleanup."
       },
       "estimatedDurationMs": 2800
+    },
+    {
+      "id": "festival:cue-e-01",
+      "beatId": "festival:beat-e-01",
+      "order": 1,
+      "type": "action",
+      "text": {
+        "es": "La portadora humana intercepta la Ardor antes del encuentro. Elin verifica la firma y la hora del transmisor físico: identifica el dispositivo y prueba que el envío ocurrió antes del asesinato.",
+        "en": "The human carrier intercepts the Ardor before the encounter. Elin verifies the physical transmitter’s signature and timestamp: it identifies the device and proves the transmission predates the murder."
+      }
+    },
+    {
+      "id": "festival:cue-e-02",
+      "beatId": "festival:beat-e-01",
+      "order": 2,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "TRANSMISOR EXTERIOR · FIRMA VÁLIDA · ENVÍO ANTERIOR AL INCIDENTE",
+            "status": "source"
+          },
+          "en": {
+            "text": "EXTERIOR TRANSMITTER · SIGNATURE VALID · TRANSMISSION PREDATES INCIDENT",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-03",
+      "beatId": "festival:beat-e-01",
+      "order": 3,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "recording",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación.",
+            "status": "source"
+          },
+          "en": {
+            "spokenText": "If this gets through... Acheron is inside. Harlan altered the core. The surface log is false. Cross-check the routine against the physical relay. Don’t shut down mediation.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-04",
+      "beatId": "festival:beat-e-01",
+      "order": 4,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Una voz puede falsificarse.",
+            "status": "source"
+          },
+          "en": {
+            "spokenText": "A voice can be forged.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-05",
+      "beatId": "festival:beat-e-01",
+      "order": 5,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "No estoy verificando su voz. Estoy verificando su firma.",
+            "status": "source"
+          },
+          "en": {
+            "spokenText": "I’m not verifying her voice. I’m verifying her signature.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-06",
+      "beatId": "festival:beat-e-01",
+      "order": 6,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "AUTORA: J. ZAO · FIRMA DIGITAL VÁLIDA · TOKEN PERSONAL",
+            "status": "source"
+          },
+          "en": {
+            "text": "AUTHOR: J. ZAO · DIGITAL SIGNATURE VALID · PERSONAL TOKEN",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-07",
+      "beatId": "festival:beat-e-01",
+      "order": 7,
+      "type": "action",
+      "text": {
+        "es": "Elin comprueba que la firma del token preserva íntegros mensaje y adjunto. El snapshot está firmado por el hardware del relé y aún asigna el circuito a Harlan; su auditoría independiente conecta ese circuito con el payload y el override.",
+        "en": "Elin confirms that the token signature preserves the message and attachment intact. The snapshot is signed by the relay hardware and still assigns the circuit to Harlan; her independent audit connects that circuit to the payload and override."
+      }
+    },
+    {
+      "id": "festival:cue-e-08",
+      "beatId": "festival:beat-e-01",
+      "order": 8,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "MANIFIESTO FÍSICO · SNAPSHOT ÍNTEGRO · RELÉ ASIGNADO: R. HARLAN",
+            "status": "source"
+          },
+          "en": {
+            "text": "PHYSICAL MANIFEST · SNAPSHOT INTACT · RELAY ASSIGNED: R. HARLAN",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-09",
+      "beatId": "festival:beat-e-01",
+      "order": 9,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "OVERRIDE ATRIBUIDO · R. HARLAN · EVIDENCIA CONVERGENTE",
+            "status": "source"
+          },
+          "en": {
+            "text": "OVERRIDE ATTRIBUTED · R. HARLAN · CONVERGENT EVIDENCE",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-10",
+      "beatId": "festival:beat-e-01",
+      "order": 10,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Revoco la credencial de Harlan. Okoye, intercepte. Yo mantengo el puente.",
+            "status": "source"
+          },
+          "en": {
+            "spokenText": "I revoke Harlan’s credential. Okoye, intercept him. I’m holding the bridge.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-e-11",
+      "beatId": "festival:beat-e-01",
+      "order": 11,
+      "type": "action",
+      "text": {
+        "es": "Antes de que la revocación termine de propagarse, Harlan usa la última ventana del override y corre bajo 1 g hacia el ascensor central y el ramal físico del núcleo.",
+        "en": "Before revocation finishes propagating, Harlan uses the override’s last window and runs under 1 g toward the central lift and the core’s physical branch."
+      }
+    },
+    {
+      "id": "festival:cue-f-02",
+      "beatId": "festival:beat-f-01",
+      "order": 2,
+      "type": "action",
+      "text": {
+        "es": "Voss permanece en el puente. Okoye intercepta a Harlan en el ramal físico y lo inmoviliza sin combate armado, mientras Elin ejecuta la operación ya preparada.",
+        "en": "Voss remains on the bridge. Okoye intercepts Harlan at the physical branch and restrains him without an armed fight while Elin runs the operation she already prepared."
+      }
+    },
+    {
+      "id": "festival:cue-f-03",
+      "beatId": "festival:beat-f-01",
+      "order": 3,
+      "type": "action",
+      "text": {
+        "es": "Elin aplica la cuarentena limitada y Sorell aporta el saludo pasivo de sólo lectura. El payload queda aislado sin borrar la mediación legítima.",
+        "en": "Elin applies the limited quarantine and Sorell supplies the passive read-only greeting. The payload is isolated without erasing legitimate mediation."
+      }
+    },
+    {
+      "id": "festival:cue-f-04",
+      "beatId": "festival:beat-f-01",
+      "order": 4,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "PAYLOAD EN CUARENTENA · CANAL SALIENTE LIMPIO · MEDIACIÓN ACTIVA",
+            "status": "source"
+          },
+          "en": {
+            "text": "PAYLOAD QUARANTINED · OUTBOUND CHANNEL CLEAN · MEDIATION ACTIVE",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-g-03",
+      "beatId": "festival:beat-g-01",
+      "order": 2,
+      "type": "action",
+      "text": {
+        "es": "El saludo limpio sale. Tras el silencio, los Velari responden con reconocimiento limitado y autorizan la aproximación; la estación orgánica y la nave emisaria permanecen visualmente separadas.",
+        "en": "The clean greeting goes out. After silence, the Velari answer with limited recognition and authorize approach; the organic station and emissary ship remain visually distinct."
+      }
+    },
+    {
+      "id": "festival:cue-g-04",
+      "beatId": "festival:beat-g-01",
+      "order": 3,
+      "type": "action",
+      "text": {
+        "es": "Voss prepara el informe a la Tierra, adjunta la evidencia convergente y el legajo de Zao. Su retrato lo detiene antes de enviarlo.",
+        "en": "Voss prepares the report to Earth, attaches the convergent evidence and Zao’s personnel file. Her portrait stops him before transmission."
+      }
+    },
+    {
+      "id": "festival:cue-g-05",
+      "beatId": "festival:beat-g-01",
+      "order": 5,
+      "type": "action",
+      "text": {
+        "es": "Voss dice la frase apenas para sí, pulsa ENVIAR y deja partir el informe. No llega respuesta de la Tierra.",
+        "en": "Voss says the line softly to himself, presses SEND, and lets the report leave. No reply arrives from Earth."
+      }
     }
   ],
   "shots": [
@@ -1770,11 +2186,11 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 1,
-      "order": 1,
+      "number": 2,
+      "order": 2,
       "description": {
-        "es": "Harlan llega al acceso axial del puente sin ser visto, justo cuando Zao abre el canal con el puente.",
-        "en": "Harlan reaches the bridge's axial access unseen, just as Zao opens the channel to the bridge."
+        "es": "Frente a Voss, el puente escucha a Zao. La tripulación y Sorell miran a Voss o a sus monitores; al fondo Harlan llega relajado, inadvertido, y sólo reacciona cuando la firma real está por señalarlo.",
+        "en": "Facing Voss, the bridge listens to Zao. Crew and Sorell look at Voss or their displays; in the background Harlan arrives casually, unnoticed, and reacts only when the real signature is about to point to him."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -1787,16 +2203,21 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "Encuadre estable — Harlan entra por el borde del cuadro.",
-          "en": "Stable frame — Harlan enters from the edge of the shot."
+          "es": "Plano con Voss en primer término, tripulación en plano medio y puerta axial visible al fondo; la profundidad cuenta por qué nadie advierte a Harlan.",
+          "en": "Frame with Voss in the foreground, crew in the middle ground, and the axial doorway visible behind them; depth tells why no one notices Harlan."
         }
       },
-      "durationMs": 6000,
+      "durationMs": 7000,
       "cuePlacements": [
         {
           "cueId": "festival:cue-b-02",
           "atMs": 0,
-          "durationMs": 6000
+          "durationMs": 1800
+        },
+        {
+          "cueId": "festival:cue-b-03",
+          "atMs": 1200,
+          "durationMs": 5600
         }
       ],
       "takeIds": [
@@ -1826,8 +2247,8 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 2,
-      "order": 2,
+      "number": 1,
+      "order": 1,
       "description": {
         "es": "Zao, sola en el núcleo diplomático, con la voz controlada pero la mano tensa sobre la consola, confirma que el payload autónomo está asociado al protocolo y abre canal con el puente.",
         "en": "Zao, alone in the diplomatic core, her voice controlled but her hand tense on the console, confirms the autonomous payload is tied to the protocol and opens a channel to the bridge."
@@ -1850,9 +2271,9 @@
       "durationMs": 7200,
       "cuePlacements": [
         {
-          "cueId": "festival:cue-b-03",
-          "atMs": 500,
-          "durationMs": 5800
+          "cueId": "festival:cue-b-12",
+          "atMs": 300,
+          "durationMs": 3600
         }
       ],
       "takeIds": [
@@ -1994,11 +2415,11 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 8,
-      "order": 8,
+      "number": 11,
+      "order": 11,
       "description": {
-        "es": "Un alivio breve, casi físico, cruza el rostro de Zao: la solución está lista y el barrido comienza. Todavía tiene una salida.",
-        "en": "A brief, almost physical relief crosses Zao's face: the solution is ready and the sweep begins. She still has a way out."
+        "es": "La solución está lista. Con alivio breve, Zao captura el manifiesto del relé, adjunta el snapshot y firma el paquete con su token personal antes de iniciar el barrido.",
+        "en": "The solution is ready. With brief relief, Zao captures the relay manifest, attaches the snapshot, and signs the packet with her personal token before beginning the sweep."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -2016,7 +2437,23 @@
         }
       },
       "durationMs": 5000,
-      "cuePlacements": [],
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-13",
+          "atMs": 0,
+          "durationMs": 1800
+        },
+        {
+          "cueId": "festival:cue-b-14",
+          "atMs": 1800,
+          "durationMs": 1600
+        },
+        {
+          "cueId": "festival:cue-b-15",
+          "atMs": 3400,
+          "durationMs": 1500
+        }
+      ],
       "takeIds": [
         "festival:shot-b-05-take-01"
       ],
@@ -2044,11 +2481,11 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 9,
-      "order": 9,
+      "number": 12,
+      "order": 12,
       "description": {
-        "es": "Zao graba el mensaje con la voz firme pero apresurada — sabe que puede ser la última vez que hable con alguien — y lo repite mientras el barrido avanza.",
-        "en": "Zao records the message with a firm but hurried voice — she knows this may be the last time she speaks to anyone — and repeats it as the sweep advances."
+        "es": "Zao preserva el manifiesto físico, adjunta el snapshot, firma todo con su token personal y graba el mensaje mientras el barrido avanza.",
+        "en": "Zao preserves the physical manifest, attaches the snapshot, signs everything with her personal token, and records the message as the sweep advances."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -2069,8 +2506,8 @@
       "cuePlacements": [
         {
           "cueId": "festival:cue-b-01",
-          "atMs": 500,
-          "durationMs": 10500
+          "atMs": 200,
+          "durationMs": 11000
         }
       ],
       "takeIds": [
@@ -2100,8 +2537,8 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 10,
-      "order": 10,
+      "number": 13,
+      "order": 13,
       "description": {
         "es": "El barrido llega a cien cuando Harlan entra por el ramal técnico. Se detiene en seco al ver “TRANSMITIDO” en pantalla — no alcanza a ver el destino, sólo que algo salió.",
         "en": "The sweep reaches one hundred percent as Harlan enters through the technical branch. He stops short at seeing “TRANSMITTED” on screen — he can't make out the destination, only that something went out."
@@ -3237,8 +3674,8 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 5,
-      "order": 5,
+      "number": 8,
+      "order": 8,
       "description": {
         "es": "El rostro de Zao se endurece; sin apartar la vista de la consola, dice en voz baja lo que ya sabe.",
         "en": "Zao's face hardens; without looking away from the console, she says quietly what she already knows."
@@ -3293,8 +3730,8 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 6,
-      "order": 6,
+      "number": 9,
+      "order": 9,
       "description": {
         "es": "PD (insert): en la consola dedicada del láser exterior, TIERRA se marca en rojo por el retraso y PROXIMA por la oclusión de Júpiter — un diagrama muestra el disco del planeta cortando la línea de vista entre Celestial Ardor y la estación.",
         "en": "PD (insert): on the exterior laser's dedicated console, EARTH is flagged in red for delay and PROXIMA for Jupiter's occlusion — a diagram shows the planet's disk cutting the line of sight between Celestial Ardor and the station."
@@ -3354,8 +3791,8 @@
       "beatIds": [
         "festival:beat-b-01"
       ],
-      "number": 7,
-      "order": 7,
+      "number": 10,
+      "order": 10,
       "description": {
         "es": "PD (insert): el sistema superpone el plan de vuelo, el tiempo lumínico y la posición futura de Celestial Ardor sobre el corredor de intercepción; la ventana se dibuja en verde y el barrido del láser se ajusta solo para cubrirla.",
         "en": "PD (insert): the system overlays the flight plan, light-time, and Celestial Ardor's future position onto the intercept corridor; the window is drawn in green and the laser's sweep narrows on its own to cover it."
@@ -3522,6 +3959,184 @@
           "text": {
             "es": "Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).",
             "en": "Reuses frame from main:shot-10-05 (asset asset:animatic-10-05)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-08",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "description": {
+        "es": "Voss piensa antes de implicar a Sorell en la verificación; ella comienza a salir y él la retiene para exigir que busque a Harlan y no entre sola.",
+        "en": "Voss thinks before involving Sorell in the verification; she starts to leave and he calls her back to require that she find Harlan and not enter alone."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MS",
+        "framing": {
+          "es": "PM",
+          "en": "PM"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "Voss conserva el cuadro; Sorell cruza hacia la salida, se detiene y vuelve la mirada al oír su nombre.",
+          "en": "Hold on Voss; Sorell crosses toward the exit, stops, and looks back when she hears her name."
+        }
+      },
+      "durationMs": 9000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-07",
+          "atMs": 0,
+          "durationMs": 2200
+        },
+        {
+          "cueId": "festival:cue-b-08",
+          "atMs": 2400,
+          "durationMs": 2800
+        },
+        {
+          "cueId": "festival:cue-b-09",
+          "atMs": 5600,
+          "durationMs": 2800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-08-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-08-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-05-08"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza provisoriamente main:shot-05-08; requiere imagen propia coherente con esta toma.",
+            "en": "Provisionally reuses main:shot-05-08; requires its own image matching this shot."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-09",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "description": {
+        "es": "Harlan se impulsa balísticamente por el cilindro de servicio directo y llega rápido al ramal del núcleo.",
+        "en": "Harlan propels himself ballistically through the direct service cylinder and quickly reaches the core branch."
+      },
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "composition": {
+        "size": "LS",
+        "framing": {
+          "es": "PD",
+          "en": "PS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "Eje largo: Harlan cruza casi sin tocar las paredes y frena con precisión.",
+          "en": "Long axis: Harlan crosses with almost no contact and brakes precisely."
+        }
+      },
+      "durationMs": 6500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-10",
+          "atMs": 0,
+          "durationMs": 6000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-09-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-09-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza provisoriamente main:shot-06-04; requiere imagen propia coherente con esta toma.",
+            "en": "Provisionally reuses main:shot-06-04; requires its own image matching this shot."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-b-10",
+      "sceneId": "festival:scene-b",
+      "beatIds": [
+        "festival:beat-b-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "description": {
+        "es": "Sorell no encuentra a Harlan y toma el cilindro central; avanza mano sobre mano entre barras y cubiertas, más despacio por ruta y cautela.",
+        "en": "Sorell cannot find Harlan and takes the central cylinder; she moves hand over hand across rails and decks, slower because of route and caution."
+      },
+      "locationId": "location:celestial-ardor-central-access",
+      "composition": {
+        "size": "LS",
+        "framing": {
+          "es": "OTS",
+          "en": "OTS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "Seguimiento por el acceso cotidiano, con cada agarre y cada compuerta marcando la diferencia de tiempo.",
+          "en": "Tracking through the everyday access, with every handhold and hatch marking the time difference."
+        }
+      },
+      "durationMs": 6500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-b-11",
+          "atMs": 0,
+          "durationMs": 6000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-b-10-take-01"
+      ],
+      "selectedTakeId": "festival:shot-b-10-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza provisoriamente main:shot-06-05; requiere imagen propia coherente con esta toma.",
+            "en": "Provisionally reuses main:shot-06-05; requires its own image matching this shot."
           }
         }
       ]
@@ -4260,6 +4875,69 @@
         "replacementBrief": {
           "es": "MCU de Elin nombrando en voz baja el riesgo real: que el disparo del payload al abrir el canal parezca un ataque humano.",
           "en": "MCU of Elin naming, under her breath, the real risk: that the payload firing when the channel opens will look like a human attack."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-b-08-take-01",
+      "shotId": "festival:shot-b-08",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-08-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still de main:shot-05-08 usado como marcador de posición; no representa todos los detalles de esta toma.",
+          "en": "Still from main:shot-05-08 used as a placeholder; it does not represent every detail of this shot."
+        },
+        "replacementBrief": {
+          "es": "Voss piensa antes de implicar a Sorell en la verificación; ella comienza a salir y él la retiene para exigir que busque a Harlan y no entre sola.",
+          "en": "Voss thinks before involving Sorell in the verification; she starts to leave and he calls her back to require that she find Harlan and not enter alone."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-b-09-take-01",
+      "shotId": "festival:shot-b-09",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still de main:shot-06-04 usado como marcador de posición; no representa todos los detalles de esta toma.",
+          "en": "Still from main:shot-06-04 used as a placeholder; it does not represent every detail of this shot."
+        },
+        "replacementBrief": {
+          "es": "Harlan se impulsa balísticamente por el cilindro de servicio directo y llega rápido al ramal del núcleo.",
+          "en": "Harlan propels himself ballistically through the direct service cylinder and quickly reaches the core branch."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-b-10-take-01",
+      "shotId": "festival:shot-b-10",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still de main:shot-06-05 usado como marcador de posición; no representa todos los detalles de esta toma.",
+          "en": "Still from main:shot-06-05 used as a placeholder; it does not represent every detail of this shot."
+        },
+        "replacementBrief": {
+          "es": "Sorell no encuentra a Harlan y toma el cilindro central; avanza mano sobre mano entre barras y cubiertas, más despacio por ruta y cautela.",
+          "en": "Sorell cannot find Harlan and takes the central cylinder; she moves hand over hand across rails and decks, slower because of route and caution."
         }
       }
     }
