@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-29 — Escaleta en `/project/`
+
+- Tarjeta Outline (01) antes que Guion en la cuadrícula del archivo, y enlace Escaleta junto a Animatic en la lista por cut.
+
 ## 2026-08-29 — Escaleta antes que guion en la navegación
 
 - En el rail y el menú móvil, Outline aparece encima de Script: el guion depende de la escaleta.

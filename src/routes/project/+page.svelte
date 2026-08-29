@@ -38,32 +38,38 @@
 		]}
 	/>
 	<section class="grid" aria-label={m.nav_primary()}>
-		<a class="card" href={withLocale(`/script/${encodeScriptId(project.canonicalScriptId)}`)}
+		<a class="card" href={withLocale(`/outline/${encodeScriptId(project.canonicalScriptId)}`)}
 			><span>01</span>
+			<h2>{m.nav_outline()}</h2>
+			<p>{m.landing_card_outline_body()}</p>
+			<b>{m.action_open()} →</b></a
+		>
+		<a class="card" href={withLocale(`/script/${encodeScriptId(project.canonicalScriptId)}`)}
+			><span>02</span>
 			<h2>{m.nav_script()}</h2>
 			<p>{m.landing_card_script_body()}</p>
 			<b>{m.action_open()} →</b></a
 		>
 		<a class="card" href={withLocale(`/animatic/${encodeScriptId(project.canonicalScriptId)}`)}
-			><span>02</span>
+			><span>03</span>
 			<h2>{m.nav_animatic()}</h2>
 			<p>{m.landing_card_animatic_body()}</p>
 			<b>{m.action_open()} →</b></a
 		>
 		<a class="card" href={withLocale('/art')}
-			><span>03</span>
+			><span>04</span>
 			<h2>{m.nav_art()}</h2>
 			<p>{m.landing_card_art_body()}</p>
 			<b>{m.action_open()} →</b></a
 		>
 		<a class="card" href={withLocale('/reports')}
-			><span>04</span>
+			><span>05</span>
 			<h2>{m.nav_reports()}</h2>
 			<p>{m.reports_lede()}</p>
 			<b>{m.action_open()} →</b></a
 		>
 		<a class="card" href={withLocale('/entities/characters')}
-			><span>05</span>
+			><span>06</span>
 			<h2>{m.nav_entities()}</h2>
 			<p>{m.landing_card_archive_body()}</p>
 			<b>{m.action_open()} →</b></a
@@ -78,7 +84,10 @@
 							<a href={withLocale(`/script/${encodeScriptId(entry.id)}`)}>{scriptLabel(entry)}</a
 							><small>{scriptKindLabel(entry.kind)} · {scriptStatusLabel(entry.status)}</small>
 						</div>
-						<a href={withLocale(`/animatic/${encodeScriptId(entry.id)}`)}>{m.nav_animatic()}</a>
+						<div class="cut-links">
+							<a href={withLocale(`/outline/${encodeScriptId(entry.id)}`)}>{m.nav_outline()}</a>
+							<a href={withLocale(`/animatic/${encodeScriptId(entry.id)}`)}>{m.nav_animatic()}</a>
+						</div>
 					</li>{/each}
 			</ul>
 		</div>
@@ -169,8 +178,15 @@
 		color: var(--ink);
 		text-decoration: none;
 	}
-	li > a {
+	.cut-links {
+		display: flex;
+		gap: 0.75rem;
+		flex-shrink: 0;
+		align-items: center;
+	}
+	.cut-links a {
 		color: var(--gold);
+		font-size: 0.85rem;
 	}
 	small {
 		display: block;
