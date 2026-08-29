@@ -1,43 +1,61 @@
 {
-	"schemaVersion": "1.0.0",
-	"factions": [
-		{
-			"id": "faction:human",
-			"name": "Humanidad / misión Proxima",
-			"description": "Tripulación humana y autoridades terrestres.",
-			"memberCharacterIds": [
-				"character:zao",
-				"character:voss",
-				"character:harlan",
-				"character:rao",
-				"character:sorell",
-				"character:cael",
-				"character:proxima-technician",
-				"character:medical-officer",
-				"character:security-crew",
-				"character:earth-protesters",
-				"character:periodista",
-				"character:manifestante-acheron",
-				"character:joven-contacto",
-				"character:keene",
-				"character:vega",
-				"character:wei",
-				"character:hassan",
-				"character:carvalho",
-				"character:okoye",
-				"character:volkov",
-				"character:tanaka"
-			]
-		},
-		{
-			"id": "faction:velari",
-			"name": "Velari",
-			"description": "Civilización alienígena del túnel y la estación remota."
-		},
-		{
-			"id": "faction:acheron",
-			"name": "Directiva Aqueronte",
-			"description": "Facción terrestre opuesta al contacto."
-		}
-	]
+  "schemaVersion": "1.1.0",
+  "factions": [
+    {
+      "id": "faction:human",
+      "name": {
+        "es": "Humanidad / misión Proxima",
+        "en": "Humanity / Proxima Mission"
+      },
+      "description": {
+        "es": "Tripulación humana y autoridades terrestres.",
+        "en": "Human crew and Earth authorities."
+      },
+      "memberCharacterIds": [
+        "character:zao",
+        "character:voss",
+        "character:harlan",
+        "character:rao",
+        "character:sorell",
+        "character:cael",
+        "character:proxima-technician",
+        "character:medical-officer",
+        "character:security-crew",
+        "character:earth-protesters",
+        "character:periodista",
+        "character:manifestante-acheron",
+        "character:joven-contacto",
+        "character:keene",
+        "character:vega",
+        "character:wei",
+        "character:hassan",
+        "character:carvalho",
+        "character:okoye",
+        "character:volkov",
+        "character:tanaka"
+      ]
+    },
+    {
+      "id": "faction:velari",
+      "name": {
+        "es": "Velari",
+        "en": "Velari"
+      },
+      "description": {
+        "es": "Civilización alienígena del túnel y la estación remota.",
+        "en": "Alien civilization associated with the tunnel and remote station."
+      }
+    },
+    {
+      "id": "faction:acheron",
+      "name": {
+        "es": "Directiva Aqueronte",
+        "en": "Acheron Directive"
+      },
+      "description": {
+        "es": "Facción terrestre opuesta al contacto.",
+        "en": "Earth faction opposed to contact."
+      }
+    }
+  ]
 }

@@ -1,48 +1,93 @@
 {
-	"schemaVersion": "1.0.0",
-	"objects": [
-		{
-			"id": "object:diplomatic-quantum-core",
-			"name": "Núcleo cuántico diplomático",
-			"description": "Esfera humana fija de aproximadamente un metro. Sus estados cian, rojo y apagado permiten leer nominalidad, corrupción y aislamiento.",
-			"dramaticFunction": "Sistema contaminado",
-			"referenceAssetIds": [
-				"asset:object-diplomatic-quantum-core-sheet"
-			]
-		},
-		{
-			"id": "object:optical-contingency-transmitter",
-			"name": "Control local de contingencia del láser exterior",
-			"description": "Consola local con energía y canalización física dedicadas hacia el láser exterior estándar de comunicaciones. Puede orientar y emitir aun cuando fallen la malla inalámbrica y el distribuidor cableado ordinario.",
-			"dramaticFunction": "Canal físico independiente usado por Zao",
-			"referenceAssetIds": [
-				"asset:object-optical-contingency-transmitter-sheet"
-			]
-		},
-		{
-			"id": "object:wired-comms-deck-patch-panel",
-			"name": "Distribuidor cableado de comunicaciones",
-			"description": "Bastidor de mantenimiento en el cilindro de servicio con troncos COM A/B y acopladores dobles rotulados por zona. Permite aislar físicamente voz y datos operativos de una cubierta sin cortar sus sistemas locales.",
-			"dramaticFunction": "Harlan corta y restaura el respaldo cableado de la cubierta diplomática",
-			"referenceAssetIds": []
-		},
-		{
-			"id": "object:physical-override-relay",
-			"name": "Relé físico del override",
-			"description": "Módulo removible con sellos, llave mecánica y fusible irreversible. Su estado quemado prueba un evento que el software no puede falsificar ni restaurar.",
-			"dramaticFunction": "Prueba material y doble llave",
-			"referenceAssetIds": [
-				"asset:object-physical-override-relay-sheet"
-			]
-		},
-		{
-			"id": "object:read-only-greeting-medium",
-			"name": "Soporte de saludo de Sorell",
-			"description": "Cartucho óptico sellado de sólo lectura: puede almacenar lenguaje diplomático, pero no ejecutar código. Es la tercera pieza del clímax.",
-			"dramaticFunction": "Contenido limpio y pasivo",
-			"referenceAssetIds": [
-				"asset:object-read-only-greeting-medium-sheet"
-			]
-		}
-	]
+  "schemaVersion": "1.1.0",
+  "objects": [
+    {
+      "id": "object:diplomatic-quantum-core",
+      "name": {
+        "es": "Núcleo cuántico diplomático",
+        "en": "Diplomatic Quantum Core"
+      },
+      "description": {
+        "es": "Esfera humana fija de aproximadamente un metro. Sus estados cian, rojo y apagado permiten leer nominalidad, corrupción y aislamiento.",
+        "en": "Fixed human sphere about one metre wide. Cyan, red, and dark states communicate nominal operation, corruption, and isolation."
+      },
+      "dramaticFunction": {
+        "es": "Sistema contaminado",
+        "en": "Compromised system"
+      },
+      "referenceAssetIds": [
+        "asset:object-diplomatic-quantum-core-sheet"
+      ]
+    },
+    {
+      "id": "object:optical-contingency-transmitter",
+      "name": {
+        "es": "Control local de contingencia del láser exterior",
+        "en": "External Laser Local Control"
+      },
+      "description": {
+        "es": "Consola local con energía y canalización física dedicadas hacia el láser exterior estándar de comunicaciones. Puede orientar y emitir aun cuando fallen la malla inalámbrica y el distribuidor cableado ordinario.",
+        "en": "Local console with dedicated power and physical routing to the standard external communications laser. It can aim and transmit after wireless and the ordinary wired distributor fail."
+      },
+      "dramaticFunction": {
+        "es": "Canal físico independiente usado por Zao",
+        "en": "Independent physical channel used by Zao"
+      },
+      "referenceAssetIds": [
+        "asset:object-optical-contingency-transmitter-sheet"
+      ]
+    },
+    {
+      "id": "object:wired-comms-deck-patch-panel",
+      "name": {
+        "es": "Distribuidor cableado de comunicaciones",
+        "en": "Wired Communications Distributor"
+      },
+      "description": {
+        "es": "Bastidor de mantenimiento en el cilindro de servicio con troncos COM A/B y acopladores dobles rotulados por zona. Permite aislar físicamente voz y datos operativos de una cubierta sin cortar sus sistemas locales.",
+        "en": "Maintenance rack in the service cylinder with COM A/B trunks and double couplers labelled by zone. It can physically isolate a deck’s operational voice and data without cutting local systems."
+      },
+      "dramaticFunction": {
+        "es": "Harlan corta y restaura el respaldo cableado de la cubierta diplomática",
+        "en": "Harlan cuts and restores the diplomatic deck wired backup"
+      },
+      "referenceAssetIds": []
+    },
+    {
+      "id": "object:physical-override-relay",
+      "name": {
+        "es": "Relé físico del override",
+        "en": "Physical Override Relay"
+      },
+      "description": {
+        "es": "Módulo removible con sellos, llave mecánica y fusible irreversible. Su estado quemado prueba un evento que el software no puede falsificar ni restaurar.",
+        "en": "Removable module with seals, mechanical key, and irreversible fuse. Its burned state proves an event software cannot forge or restore."
+      },
+      "dramaticFunction": {
+        "es": "Prueba material y doble llave",
+        "en": "Material evidence and double key"
+      },
+      "referenceAssetIds": [
+        "asset:object-physical-override-relay-sheet"
+      ]
+    },
+    {
+      "id": "object:read-only-greeting-medium",
+      "name": {
+        "es": "Soporte de saludo de Sorell",
+        "en": "Sorell’s Read-only Greeting Medium"
+      },
+      "description": {
+        "es": "Cartucho óptico sellado de sólo lectura: puede almacenar lenguaje diplomático, pero no ejecutar código. Es la tercera pieza del clímax.",
+        "en": "Sealed optical cartridge that can store diplomatic language but cannot execute code. It is the climax’s third piece."
+      },
+      "dramaticFunction": {
+        "es": "Contenido limpio y pasivo",
+        "en": "Clean passive content"
+      },
+      "referenceAssetIds": [
+        "asset:object-read-only-greeting-medium-sheet"
+      ]
+    }
+  ]
 }

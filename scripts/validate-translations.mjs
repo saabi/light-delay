@@ -1,6 +1,6 @@
 /**
  * Validate inline story i18n coverage (LocalizedString + dialogue/text variants).
- * Entity gallery overlay (entities.en.json) is out of scope for this checker.
+ * Entity gallery strings are co-located with the rest of story data.
  */
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -232,6 +232,25 @@ for (const item of variants) {
 	checkNotes(item.notes, `variants.${item.id}`);
 }
 
+for (const [filename, collection, fields] of [
+	['characters.json', 'characters', ['name', 'role', 'description', 'appearance', 'costume']],
+	['locations.json', 'locations', ['name', 'description', 'atmosphere', 'lighting', 'scale']],
+	['objects.json', 'objects', ['name', 'description', 'dramaticFunction']],
+	['vehicles.json', 'vehicles', ['name', 'description']],
+	['factions.json', 'factions', ['name', 'description']]
+]) {
+	const file = JSON.parse(readFileSync(join(DATA, filename), 'utf8'));
+	for (const entity of file[collection] ?? []) {
+		for (const field of fields) {
+			if (entity[field] != null) checkLocalized(entity[field], `${filename}.${entity.id}.${field}`);
+		}
+		for (const [index, trait] of (entity.traits ?? []).entries()) {
+			checkLocalized(trait, `${filename}.${entity.id}.traits[${index}]`);
+		}
+		checkNotes(entity.notes, `${filename}.${entity.id}`);
+	}
+}
+
 // Sanity: sourceLocalizedString still works on a known field
 const sampleTitle = project.scripts?.[0]?.label;
 if (!sourceLocalizedString(sampleTitle, SOURCE)) {
@@ -251,7 +270,7 @@ console.log(
 			missingSourceSample: missingSource.slice(0, 20),
 			missingTargetSample: missingTarget.slice(0, 20),
 			invalidShapeSample: invalidShape.slice(0, 20),
-			note: 'Entity gallery overlay (entities.en.json) is validated separately / later.'
+			note: 'Story and entity copy use co-located inline localization.'
 		},
 		null,
 		2

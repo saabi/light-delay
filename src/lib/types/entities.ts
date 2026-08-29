@@ -9,6 +9,7 @@ import type {
 } from './ids.ts';
 import type { LanguageTag } from './common.ts';
 import type { Note } from './common.ts';
+import type { StoryText } from './i18n.ts';
 
 export interface CharactersFile {
 	schemaVersion: string;
@@ -17,13 +18,13 @@ export interface CharactersFile {
 
 export interface Character {
 	id: CharacterId;
-	name: string;
+	name: StoryText;
 	shortName?: string;
-	role: string;
-	description: string;
-	traits?: string[];
-	appearance?: string;
-	costume?: string;
+	role: StoryText;
+	description: StoryText;
+	traits?: StoryText[];
+	appearance?: StoryText;
+	costume?: StoryText;
 	factionIds?: FactionId[];
 	referenceAssetIds: AssetId[];
 	defaultVoiceProfileId?: VoiceProfileId;
@@ -62,13 +63,13 @@ export interface LocationsFile {
 
 export interface Location {
 	id: LocationId;
-	name: string;
-	description: string;
+	name: StoryText;
+	description: StoryText;
 	parentLocationId?: LocationId;
 	referenceAssetIds: AssetId[];
-	atmosphere?: string;
-	lighting?: string;
-	scale?: string;
+	atmosphere?: StoryText;
+	lighting?: StoryText;
+	scale?: StoryText;
 	notes?: Note[];
 }
 
@@ -79,9 +80,9 @@ export interface ObjectsFile {
 
 export interface StoryObject {
 	id: ObjectId;
-	name: string;
-	description: string;
-	dramaticFunction?: string;
+	name: StoryText;
+	description: StoryText;
+	dramaticFunction?: StoryText;
 	ownerCharacterId?: CharacterId;
 	locationId?: LocationId;
 	referenceAssetIds: AssetId[];
@@ -95,8 +96,8 @@ export interface VehiclesFile {
 
 export interface Vehicle {
 	id: VehicleId;
-	name: string;
-	description: string;
+	name: StoryText;
+	description: StoryText;
 	factionId?: FactionId;
 	homeLocationId?: LocationId;
 	referenceAssetIds: AssetId[];
@@ -110,8 +111,8 @@ export interface FactionsFile {
 
 export interface Faction {
 	id: FactionId;
-	name: string;
-	description: string;
+	name: StoryText;
+	description: StoryText;
 	memberCharacterIds?: CharacterId[];
 	referenceAssetIds?: AssetId[];
 }

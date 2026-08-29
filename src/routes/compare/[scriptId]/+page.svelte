@@ -22,6 +22,8 @@
 	import * as m from '$lib/paraglide/messages.js';
 	import { getLocale } from '$lib/paraglide/runtime.js';
 	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
+	import { storyText } from '$lib/data/selectors/localized';
+	import type { StoryText } from '$lib/types/i18n';
 
 	const locale = getLocale();
 	const registry = listLocalizedScripts(locale);
@@ -86,10 +88,10 @@
 	}
 
 	function roleText(
-		character: (typeof characters)[number] | undefined,
-		variant: (typeof variants)[number] | undefined
+		character: { role?: StoryText } | undefined,
+		variant: { roleOverride?: StoryText } | undefined
 	) {
-		return variant?.roleOverride ?? character?.role ?? m.compare_profile_missing();
+		return storyText(variant?.roleOverride ?? character?.role, locale) || m.compare_profile_missing();
 	}
 
 	function changeAgainst(event: Event) {

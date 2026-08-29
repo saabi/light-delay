@@ -1,232 +1,547 @@
 {
-	"schemaVersion": "1.0.0",
-	"characters": [
-		{
-			"id": "character:zao",
-			"name": "Zao",
-			"shortName": "Zao",
-			"role": "Ingeniera jefe",
-			"description": "Practicidad, observación y resolución bajo presión.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-zao-sheet"],
-			"defaultVoiceProfileId": "voice:zao-es",
-			"aliases": ["ZAO", "ZAO"]
-		},
-		{
-			"id": "character:voss",
-			"name": "Elias Voss",
-			"shortName": "Voss",
-			"role": "Capitán",
-			"description": "Autoridad contenida, responsabilidad y duelo.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-voss-sheet"],
-			"defaultVoiceProfileId": "voice:voss-es",
-			"aliases": ["ELIAS VOSS", "VOSS"]
-		},
-		{
-			"id": "character:harlan",
-			"name": "Rylen Harlan",
-			"shortName": "Harlan",
-			"role": "Comandante",
-			"description": "Competencia creíble, convicción ideológica y quiebre.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-harlan-sheet"],
-			"defaultVoiceProfileId": "voice:harlan-es",
-			"aliases": ["RYLEN HARLAN", "HARLAN"]
-		},
-		{
-			"id": "character:rao",
-			"name": "Elin Rao",
-			"shortName": "Elin",
-			"role": "Especialista en IA",
-			"description": "Concentración analítica, alarma y determinación.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-rao-sheet"],
-			"defaultVoiceProfileId": "voice:rao-es",
-			"aliases": ["ELIN RAO", "ELIN", "RAO"]
-		},
-		{
-			"id": "character:sorell",
-			"name": "Lian Sorell",
-			"shortName": "Sorell",
-			"role": "Xenolingüista",
-			"description": "Curiosidad, indignación, empatía y esperanza cauta.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-sorell-sheet"],
-			"defaultVoiceProfileId": "voice:sorell-es",
-			"aliases": ["LIAN SORELL", "SORELL"]
-		},
-		{
-			"id": "character:cael",
-			"name": "Juno Cael",
-			"shortName": "Cael",
-			"role": "Piloto / Comunicaciones",
-			"description": "Pragmatismo, concentración, humor seco y asombro.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-cael-sheet"],
-			"defaultVoiceProfileId": "voice:cael-es",
-			"aliases": ["JUNO CAEL", "CAEL"]
-		},
-		{
-			"id": "character:proxima-technician",
-			"name": "Técnico de Proxima",
-			"shortName": "Proxima",
-			"role": "Operaciones de estación",
-			"description": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-proxima-technician-sheet"],
-			"defaultVoiceProfileId": "voice:proxima-technician-es",
-			"aliases": ["TÉCNICO DE PROXIMA", "PROXIMA"]
-		},
-		{
-			"id": "character:medical-officer",
-			"name": "Oficial médico",
-			"shortName": "médico",
-			"role": "Medicina de vuelo",
-			"description": "Examen forense inicial, gravedad clínica y urgencia contenida.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-medical-officer-sheet"],
-			"defaultVoiceProfileId": "voice:medical-officer-es",
-			"aliases": ["OFICIAL MÉDICO", "MÉDICO"]
-		},
-		{
-			"id": "character:security-crew",
-			"name": "Tripulante de seguridad",
-			"shortName": "seguridad",
-			"role": "Seguridad de a bordo",
-			"description": "Autoridad física sin militarización ni armamento visible.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-security-crew-sheet"],
-			"defaultVoiceProfileId": "voice:security-crew-es",
-			"aliases": ["TRIPULANTE DE SEGURIDAD", "SEGURIDAD"]
-		},
-		{
-			"id": "character:earth-protesters",
-			"name": "Manifestantes terrestres",
-			"shortName": "terrestres",
-			"role": "Aqueronte / partidarios del contacto",
-			"description": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
-			"factionIds": ["faction:acheron", "faction:human"],
-			"referenceAssetIds": ["asset:character-earth-protesters-sheet"],
-			"defaultVoiceProfileId": "voice:earth-protesters-es",
-			"aliases": ["MANIFESTANTES TERRESTRES", "TERRESTRES"]
-		},
-		{
-			"id": "character:periodista",
-			"name": "Periodista",
-			"role": "Voz en off de noticias",
-			"description": "Narración de transmisión terrestre.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["PERIODISTA"]
-		},
-		{
-			"id": "character:manifestante-acheron",
-			"name": "Manifestante Aqueronte",
-			"role": "Manifestante",
-			"description": "Voz de la Directiva Aqueronte en transmisión.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["MANIFESTANTE AQUERONTE"]
-		},
-		{
-			"id": "character:joven-contacto",
-			"name": "Joven partidaria del contacto",
-			"role": "Manifestante",
-			"description": "Voz partidaria del contacto en transmisión.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["JOVEN PARTIDARIA DEL CONTACTO"]
-		},
-		{
-			"id": "character:keene",
-			"name": "Marcus Keene",
-			"shortName": "Keene",
-			"role": "Médico",
-			"description": "Médico de la misión, atrapado entre el deber clínico y la incertidumbre moral.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["MARCUS KEENE", "KEENE"]
-		},
-		{
-			"id": "character:vega",
-			"name": "Ansel Vega",
-			"shortName": "Vega",
-			"role": "Técnico de sistemas",
-			"description": "Técnico manipulable que participa sin saberlo en una distracción temprana.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["ANSEL VEGA", "VEGA"]
-		},
-		{
-			"id": "character:wei",
-			"name": "Wei",
-			"role": "Comunicaciones",
-			"description": "Responsable de detectar y autenticar inicialmente la señal entrante.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["WEI"]
-		},
-		{
-			"id": "character:hassan",
-			"name": "Hassan",
-			"role": "Física cuántica",
-			"description": "Especialista que aporta corroboración física independiente de la investigación informática.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["HASSAN"]
-		},
-		{
-			"id": "character:carvalho",
-			"name": "Carvalho",
-			"role": "Análisis lingüístico",
-			"description": "Continúa de forma limitada el trabajo lingüístico de Sorell durante su confinamiento.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["CARVALHO"]
-		},
-		{
-			"id": "character:okoye",
-			"name": "Okoye",
-			"shortName": "Okoye",
-			"role": "Seguridad",
-			"description": "Responsable de seguridad obligado a decidir bajo evidencia incompleta.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": ["asset:character-security-crew-sheet"],
-			"defaultVoiceProfileId": "voice:security-crew-es",
-			"aliases": ["OKOYE"]
-		},
-		{
-			"id": "character:volkov",
-			"name": "Volkov",
-			"role": "Función técnica por definir",
-			"description": "La fuente sólo lo vincula con controles manuales y conocimientos heredados de Zao.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["VOLKOV"],
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Precisar especialidad y arco sin inventar datos ausentes.",
-					"resolved": false
-				}
-			]
-		},
-		{
-			"id": "character:tanaka",
-			"name": "Tanaka",
-			"role": "Función de misión por definir",
-			"description": "Nombre recuperado de la documentación histórica; las fuentes disponibles no fijan una función dramática.",
-			"factionIds": ["faction:human"],
-			"referenceAssetIds": [],
-			"aliases": ["TANAKA"],
-			"notes": [
-				{
-					"type": "todo",
-					"text": "Recuperar o decidir función antes de escribir diálogo.",
-					"resolved": false
-				}
-			]
-		}
-	]
+  "schemaVersion": "1.1.0",
+  "characters": [
+    {
+      "id": "character:zao",
+      "name": {
+        "es": "Zao",
+        "en": "Zao"
+      },
+      "shortName": "Zao",
+      "role": {
+        "es": "Ingeniera jefe",
+        "en": "Chief Engineer"
+      },
+      "description": {
+        "es": "Practicidad, observación y resolución bajo presión.",
+        "en": "Practicality, observation, and decisive action under pressure."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-zao-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:zao-es",
+      "aliases": [
+        "ZAO",
+        "ZAO"
+      ]
+    },
+    {
+      "id": "character:voss",
+      "name": {
+        "es": "Elias Voss",
+        "en": "Elias Voss"
+      },
+      "shortName": "Voss",
+      "role": {
+        "es": "Capitán",
+        "en": "Captain"
+      },
+      "description": {
+        "es": "Autoridad contenida, responsabilidad y duelo.",
+        "en": "Restrained authority, responsibility, and grief."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-voss-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:voss-es",
+      "aliases": [
+        "ELIAS VOSS",
+        "VOSS"
+      ]
+    },
+    {
+      "id": "character:harlan",
+      "name": {
+        "es": "Rylen Harlan",
+        "en": "Rylen Harlan"
+      },
+      "shortName": "Harlan",
+      "role": {
+        "es": "Comandante",
+        "en": "Commander"
+      },
+      "description": {
+        "es": "Competencia creíble, convicción ideológica y quiebre.",
+        "en": "Credible competence, ideological conviction, and fracture."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-harlan-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:harlan-es",
+      "aliases": [
+        "RYLEN HARLAN",
+        "HARLAN"
+      ]
+    },
+    {
+      "id": "character:rao",
+      "name": {
+        "es": "Elin Rao",
+        "en": "Elin Rao"
+      },
+      "shortName": "Elin",
+      "role": {
+        "es": "Especialista en IA",
+        "en": "AI Specialist"
+      },
+      "description": {
+        "es": "Concentración analítica, alarma y determinación.",
+        "en": "Analytical focus, alarm, and determination."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-rao-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:rao-es",
+      "aliases": [
+        "ELIN RAO",
+        "ELIN",
+        "RAO"
+      ]
+    },
+    {
+      "id": "character:sorell",
+      "name": {
+        "es": "Lian Sorell",
+        "en": "Lian Sorell"
+      },
+      "shortName": "Sorell",
+      "role": {
+        "es": "Xenolingüista",
+        "en": "Xenolinguist"
+      },
+      "description": {
+        "es": "Curiosidad, indignación, empatía y esperanza cauta.",
+        "en": "Curiosity, indignation, empathy, and cautious hope."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-sorell-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:sorell-es",
+      "aliases": [
+        "LIAN SORELL",
+        "SORELL"
+      ]
+    },
+    {
+      "id": "character:cael",
+      "name": {
+        "es": "Juno Cael",
+        "en": "Juno Cael"
+      },
+      "shortName": "Cael",
+      "role": {
+        "es": "Piloto / Comunicaciones",
+        "en": "Pilot / Communications"
+      },
+      "description": {
+        "es": "Pragmatismo, concentración, humor seco y asombro.",
+        "en": "Pragmatism, concentration, dry humor, and wonder."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-cael-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:cael-es",
+      "aliases": [
+        "JUNO CAEL",
+        "CAEL"
+      ]
+    },
+    {
+      "id": "character:proxima-technician",
+      "name": {
+        "es": "Técnico de Proxima",
+        "en": "Proxima Technician"
+      },
+      "shortName": "Proxima",
+      "role": {
+        "es": "Operaciones de estación",
+        "en": "Station Operations"
+      },
+      "description": {
+        "es": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
+        "en": "Dock maintenance, schedule pressure, and operational discipline."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-proxima-technician-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:proxima-technician-es",
+      "aliases": [
+        "TÉCNICO DE PROXIMA",
+        "PROXIMA"
+      ]
+    },
+    {
+      "id": "character:medical-officer",
+      "name": {
+        "es": "Oficial médico",
+        "en": "Medical Officer"
+      },
+      "shortName": "médico",
+      "role": {
+        "es": "Medicina de vuelo",
+        "en": "Flight Medicine"
+      },
+      "description": {
+        "es": "Examen forense inicial, gravedad clínica y urgencia contenida.",
+        "en": "Initial forensic examination, clinical gravity, and restrained urgency."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-medical-officer-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:medical-officer-es",
+      "aliases": [
+        "OFICIAL MÉDICO",
+        "MÉDICO"
+      ]
+    },
+    {
+      "id": "character:security-crew",
+      "name": {
+        "es": "Tripulante de seguridad",
+        "en": "Security Crewmember"
+      },
+      "shortName": "seguridad",
+      "role": {
+        "es": "Seguridad de a bordo",
+        "en": "Shipboard Security"
+      },
+      "description": {
+        "es": "Autoridad física sin militarización ni armamento visible.",
+        "en": "Physical authority without militarization or visible weapons."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-security-crew-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:security-crew-es",
+      "aliases": [
+        "TRIPULANTE DE SEGURIDAD",
+        "SEGURIDAD"
+      ]
+    },
+    {
+      "id": "character:earth-protesters",
+      "name": {
+        "es": "Manifestantes terrestres",
+        "en": "Earth Protesters"
+      },
+      "shortName": "terrestres",
+      "role": {
+        "es": "Aqueronte / partidarios del contacto",
+        "en": "Acheron / contact supporters"
+      },
+      "description": {
+        "es": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
+        "en": "Defensive fear and cautious hope, treated with equal humanity."
+      },
+      "factionIds": [
+        "faction:acheron",
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-earth-protesters-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:earth-protesters-es",
+      "aliases": [
+        "MANIFESTANTES TERRESTRES",
+        "TERRESTRES"
+      ]
+    },
+    {
+      "id": "character:periodista",
+      "name": {
+        "es": "Periodista",
+        "en": "Journalist"
+      },
+      "role": {
+        "es": "Voz en off de noticias",
+        "en": "News voice-over"
+      },
+      "description": {
+        "es": "Narración de transmisión terrestre.",
+        "en": "Narration from an Earth transmission."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "PERIODISTA"
+      ]
+    },
+    {
+      "id": "character:manifestante-acheron",
+      "name": {
+        "es": "Manifestante Aqueronte",
+        "en": "Acheron Protester"
+      },
+      "role": {
+        "es": "Manifestante",
+        "en": "Protester"
+      },
+      "description": {
+        "es": "Voz de la Directiva Aqueronte en transmisión.",
+        "en": "Voice of the Acheron Directive in a broadcast."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "MANIFESTANTE AQUERONTE"
+      ]
+    },
+    {
+      "id": "character:joven-contacto",
+      "name": {
+        "es": "Joven partidaria del contacto",
+        "en": "Young Contact Supporter"
+      },
+      "role": {
+        "es": "Manifestante",
+        "en": "Protester"
+      },
+      "description": {
+        "es": "Voz partidaria del contacto en transmisión.",
+        "en": "Pro-contact voice in a broadcast."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "JOVEN PARTIDARIA DEL CONTACTO"
+      ]
+    },
+    {
+      "id": "character:keene",
+      "name": {
+        "es": "Marcus Keene",
+        "en": "Marcus Keene"
+      },
+      "shortName": "Keene",
+      "role": {
+        "es": "Médico",
+        "en": "Physician"
+      },
+      "description": {
+        "es": "Médico de la misión, atrapado entre el deber clínico y la incertidumbre moral.",
+        "en": "Mission physician caught between clinical duty and moral uncertainty."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "MARCUS KEENE",
+        "KEENE"
+      ]
+    },
+    {
+      "id": "character:vega",
+      "name": {
+        "es": "Ansel Vega",
+        "en": "Ansel Vega"
+      },
+      "shortName": "Vega",
+      "role": {
+        "es": "Técnico de sistemas",
+        "en": "Systems Technician"
+      },
+      "description": {
+        "es": "Técnico manipulable que participa sin saberlo en una distracción temprana.",
+        "en": "A manipulable technician unknowingly involved in an early diversion."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "ANSEL VEGA",
+        "VEGA"
+      ]
+    },
+    {
+      "id": "character:wei",
+      "name": {
+        "es": "Wei",
+        "en": "Wei"
+      },
+      "role": {
+        "es": "Comunicaciones",
+        "en": "Communications"
+      },
+      "description": {
+        "es": "Responsable de detectar y autenticar inicialmente la señal entrante.",
+        "en": "Responsible for the initial detection and authentication of the incoming signal."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "WEI"
+      ]
+    },
+    {
+      "id": "character:hassan",
+      "name": {
+        "es": "Hassan",
+        "en": "Hassan"
+      },
+      "role": {
+        "es": "Física cuántica",
+        "en": "Quantum Physics"
+      },
+      "description": {
+        "es": "Especialista que aporta corroboración física independiente de la investigación informática.",
+        "en": "Specialist providing physical corroboration independent of the computer investigation."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "HASSAN"
+      ]
+    },
+    {
+      "id": "character:carvalho",
+      "name": {
+        "es": "Carvalho",
+        "en": "Carvalho"
+      },
+      "role": {
+        "es": "Análisis lingüístico",
+        "en": "Linguistic Analysis"
+      },
+      "description": {
+        "es": "Continúa de forma limitada el trabajo lingüístico de Sorell durante su confinamiento.",
+        "en": "Continues a limited part of Sorell’s linguistic work during her confinement."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "CARVALHO"
+      ]
+    },
+    {
+      "id": "character:okoye",
+      "name": {
+        "es": "Okoye",
+        "en": "Okoye"
+      },
+      "shortName": "Okoye",
+      "role": {
+        "es": "Seguridad",
+        "en": "Security"
+      },
+      "description": {
+        "es": "Responsable de seguridad obligado a decidir bajo evidencia incompleta.",
+        "en": "Security lead forced to decide with incomplete evidence."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [
+        "asset:character-security-crew-sheet"
+      ],
+      "defaultVoiceProfileId": "voice:security-crew-es",
+      "aliases": [
+        "OKOYE"
+      ]
+    },
+    {
+      "id": "character:volkov",
+      "name": {
+        "es": "Volkov",
+        "en": "Volkov"
+      },
+      "role": {
+        "es": "Función técnica por definir",
+        "en": "Technical function unresolved"
+      },
+      "description": {
+        "es": "La fuente sólo lo vincula con controles manuales y conocimientos heredados de Zao.",
+        "en": "The source connects Volkov only to manual controls and knowledge inherited from Zao."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "VOLKOV"
+      ],
+      "notes": [
+        {
+          "type": "todo",
+          "text": {
+            "es": "Precisar especialidad y arco sin inventar datos ausentes.",
+            "en": "Define the specialty and arc without inventing missing facts."
+          },
+          "resolved": false
+        }
+      ]
+    },
+    {
+      "id": "character:tanaka",
+      "name": {
+        "es": "Tanaka",
+        "en": "Tanaka"
+      },
+      "role": {
+        "es": "Función de misión por definir",
+        "en": "Mission function unresolved"
+      },
+      "description": {
+        "es": "Nombre recuperado de la documentación histórica; las fuentes disponibles no fijan una función dramática.",
+        "en": "Name recovered from historical documentation; available sources do not establish a dramatic function."
+      },
+      "factionIds": [
+        "faction:human"
+      ],
+      "referenceAssetIds": [],
+      "aliases": [
+        "TANAKA"
+      ],
+      "notes": [
+        {
+          "type": "todo",
+          "text": {
+            "es": "Recuperar o decidir función antes de escribir diálogo.",
+            "en": "Recover or decide the function before writing dialogue."
+          },
+          "resolved": false
+        }
+      ]
+    }
+  ]
 }

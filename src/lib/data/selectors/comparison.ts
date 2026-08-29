@@ -117,7 +117,9 @@ export function compareScripts(options: {
 			againstVariant: selectedVariant(against, characterId, variants)
 		}))
 		.sort((a, b) =>
-			(a.character?.name ?? a.characterId).localeCompare(b.character?.name ?? b.characterId)
+			(sourceLocalizedString(a.character?.name) ?? a.characterId).localeCompare(
+				sourceLocalizedString(b.character?.name) ?? b.characterId
+			)
 		);
 
 	const functions = new Map<

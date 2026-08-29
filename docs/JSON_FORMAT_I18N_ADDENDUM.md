@@ -37,7 +37,7 @@ export interface DocumentRecord {
 }
 ```
 
-Entity galleries keep Spanish records canonical and apply an English translation overlay at read time (`data/translations/entities.en.json`). The overlay may translate human-facing names, roles, and descriptions, but never IDs, asset links, or canon relationships. Migrating that gallery overlay to inline maps is deferred debt.
+Entity galleries use the same co-located language maps as other story data. `data/translations/entities.en.json` is retired and empty; do not restore an overlay by id. IDs, asset links and canon relationships remain language-independent.
 
 Story copy for the four registered scripts, optional outlines, assets, comparison taxonomy, narrative functions, entity variants, and project script labels uses **co-located** language maps on disk:
 

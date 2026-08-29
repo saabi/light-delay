@@ -81,7 +81,7 @@
 	}
 
 	function noteLabel(note: Note): string {
-		return `${present(note.type)}${note.resolved ? ` · ${m.details_resolved()}` : ''}: ${note.text}`;
+		return `${present(note.type)}${note.status === 'resolved' || note.resolved ? ` · ${m.details_resolved()}` : ''}: ${present(note.text)}`;
 	}
 
 	function sourceLabel(source: SourceReference): string {

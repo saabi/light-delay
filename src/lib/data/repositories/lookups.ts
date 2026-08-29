@@ -3,9 +3,9 @@ import type { DocumentRecord } from '$lib/types/document';
 import type { Character, Faction, Location, StoryObject, Vehicle } from '$lib/types/entities';
 import type { Cue, Scene, ScriptFile, Shot, Take } from '$lib/types/script';
 import type { ScriptId } from '$lib/types/ids';
-import entityTranslations from '../../../../data/translations/entities.en.json';
+import type { StoryText } from '$lib/types/i18n';
 import { getLocale } from '$lib/paraglide/runtime.js';
-import { localizeAsset } from '$lib/data/selectors/publicTranslations';
+import { localizeAsset, translatePublicText } from '$lib/data/selectors/publicTranslations';
 import { thumbnailPathForAsset } from '$lib/utils/thumbnailPath';
 import {
 	getAssets,
@@ -20,10 +20,64 @@ import {
 
 export type EntityKind = 'characters' | 'locations' | 'objects' | 'vehicles' | 'factions';
 
+export type LocalizedCharacter = Omit<
+	Character,
+	'name' | 'role' | 'description' | 'traits' | 'appearance' | 'costume'
+> & {
+	name: string;
+	role: string;
+	description: string;
+	traits?: string[];
+	appearance?: string;
+	costume?: string;
+};
+export type LocalizedLocation = Omit<
+	Location,
+	'name' | 'description' | 'atmosphere' | 'lighting' | 'scale'
+> & {
+	name: string;
+	description: string;
+	atmosphere?: string;
+	lighting?: string;
+	scale?: string;
+};
+export type LocalizedObject = Omit<StoryObject, 'name' | 'description' | 'dramaticFunction'> & {
+	name: string;
+	description: string;
+	dramaticFunction?: string;
+};
+export type LocalizedVehicle = Omit<Vehicle, 'name' | 'description'> & {
+	name: string;
+	description: string;
+};
+export type LocalizedFaction = Omit<Faction, 'name' | 'description'> & {
+	name: string;
+	description: string;
+};
+
 function translatedEntity<T extends { id: string }>(entity: T | undefined): T | undefined {
-	if (!entity || getLocale() !== 'en') return entity;
-	const variant = (entityTranslations as Record<string, Record<string, string>>)[entity.id];
-	return variant ? ({ ...entity, ...variant } as T) : entity;
+	if (!entity) return entity;
+	const localized = structuredClone(entity) as Record<string, unknown>;
+	for (const key of [
+		'name',
+		'role',
+		'description',
+		'appearance',
+		'costume',
+		'atmosphere',
+		'lighting',
+		'scale',
+		'dramaticFunction'
+	]) {
+		if (localized[key] != null)
+			localized[key] = translatePublicText(localized[key] as StoryText, getLocale());
+	}
+	if (Array.isArray(localized.traits)) {
+		localized.traits = localized.traits.map((value) =>
+			translatePublicText(value as StoryText, getLocale())
+		);
+	}
+	return localized as T;
 }
 
 function resolveScript(scriptOrId: ScriptFile | ScriptId): ScriptFile {
@@ -40,31 +94,41 @@ export function getAssetById(id: string): Asset | undefined {
 	return asset ? localizeAsset(asset, getLocale()) : undefined;
 }
 
-export function getCharacterById(id: string): Character | undefined {
-	return translatedEntity(getCharacters().characters.find((c) => c.id === id));
+export function getCharacterById(id: string): LocalizedCharacter | undefined {
+	return translatedEntity(getCharacters().characters.find((c) => c.id === id)) as
+		| LocalizedCharacter
+		| undefined;
 }
 
-export function getLocationById(id: string): Location | undefined {
-	return translatedEntity(getLocations().locations.find((l) => l.id === id));
+export function getLocationById(id: string): LocalizedLocation | undefined {
+	return translatedEntity(getLocations().locations.find((l) => l.id === id)) as
+		| LocalizedLocation
+		| undefined;
 }
 
-export function getObjectById(id: string): StoryObject | undefined {
-	return translatedEntity(getObjects().objects.find((o) => o.id === id));
+export function getObjectById(id: string): LocalizedObject | undefined {
+	return translatedEntity(getObjects().objects.find((o) => o.id === id)) as
+		| LocalizedObject
+		| undefined;
 }
 
-export function getVehicleById(id: string): Vehicle | undefined {
-	return translatedEntity(getVehicles().vehicles.find((v) => v.id === id));
+export function getVehicleById(id: string): LocalizedVehicle | undefined {
+	return translatedEntity(getVehicles().vehicles.find((v) => v.id === id)) as
+		| LocalizedVehicle
+		| undefined;
 }
 
-export function getFactionById(id: string): Faction | undefined {
-	return translatedEntity(getFactions().factions.find((f) => f.id === id));
+export function getFactionById(id: string): LocalizedFaction | undefined {
+	return translatedEntity(getFactions().factions.find((f) => f.id === id)) as
+		| LocalizedFaction
+		| undefined;
 }
 
 export function listEntities(kind: EntityKind) {
 	switch (kind) {
 		case 'characters':
 			return getCharacters().characters.map((source) => {
-				const e = translatedEntity(source)!;
+				const e = getCharacterById(source.id)!;
 				return {
 					kind,
 					id: e.id,
@@ -75,7 +139,7 @@ export function listEntities(kind: EntityKind) {
 			});
 		case 'locations':
 			return getLocations().locations.map((source) => {
-				const e = translatedEntity(source)!;
+				const e = getLocationById(source.id)!;
 				return {
 					kind,
 					id: e.id,
@@ -86,7 +150,7 @@ export function listEntities(kind: EntityKind) {
 			});
 		case 'objects':
 			return getObjects().objects.map((source) => {
-				const e = translatedEntity(source)!;
+				const e = getObjectById(source.id)!;
 				return {
 					kind,
 					id: e.id,
@@ -97,7 +161,7 @@ export function listEntities(kind: EntityKind) {
 			});
 		case 'vehicles':
 			return getVehicles().vehicles.map((source) => {
-				const e = translatedEntity(source)!;
+				const e = getVehicleById(source.id)!;
 				return {
 					kind,
 					id: e.id,
@@ -108,7 +172,7 @@ export function listEntities(kind: EntityKind) {
 			});
 		case 'factions':
 			return getFactions().factions.map((source) => {
-				const e = translatedEntity(source)!;
+				const e = getFactionById(source.id)!;
 				return {
 					kind,
 					id: e.id,

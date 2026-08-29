@@ -10,6 +10,11 @@ import objectsFile from '../../data/objects.json' with { type: 'json' };
 import vehiclesFile from '../../data/vehicles.json' with { type: 'json' };
 import factionsFile from '../../data/factions.json' with { type: 'json' };
 
+function sourceText(value) {
+	if (typeof value === 'string') return value;
+	return value?.es ?? value?.en ?? '';
+}
+
 /**
  * @param {{ checkDisk?: (publicPath: string) => boolean }} [options]
  */
@@ -25,13 +30,15 @@ export function createProjectContext(options = {}) {
 		[factionsFile, 'factions', 'faction']
 	]) {
 		for (const entity of file[key] ?? []) {
-			entities.push({ kind, ...entity });
+			entities.push({ kind, ...entity, name: sourceText(entity.name) });
 		}
 	}
 	const project = projectFile.project;
 	const supportedLangs = project.languages?.supported?.map((l) => l.tag) ?? ['es', 'en'];
 	const locations = locationsFile.locations ?? [];
-	const locationById = new Map(locations.map((l) => [l.id, l]));
+	const locationById = new Map(
+		locations.map((location) => [location.id, { ...location, name: sourceText(location.name) }])
+	);
 
 	return {
 		assets,

@@ -241,7 +241,6 @@ function main() {
 	const voiceProfiles = load('voice-profiles.json');
 	const documents = load('documents.json');
 	const legacyMigration = load('legacy-text-migration.json');
-	const entityTranslations = load('translations/entities.en.json');
 	const narrativeFunctions = load('narrative-functions.json');
 	const entityVariants = load('entity-variants.json');
 	const taxonomy = load('comparison-taxonomy.json');
@@ -335,18 +334,16 @@ function main() {
 		...vehicles.vehicles,
 		...factions.factions
 	];
-	const entityIds = new Set(entityCollections.map((entity) => entity.id));
 	for (const entity of entityCollections) {
-		const translation = entityTranslations[entity.id];
-		if (!translation?.description?.trim()) {
-			errors.push(`entity translations: ${entity.id} missing English description`);
+		if (!entity.description?.es?.trim() || !entity.description?.en?.trim()) {
+			errors.push(`entities: ${entity.id} requires inline ES/EN description`);
 		}
-		if ('role' in entity && !translation?.role?.trim()) {
-			errors.push(`entity translations: ${entity.id} missing English role`);
+		if (!entity.name?.es?.trim() || !entity.name?.en?.trim()) {
+			errors.push(`entities: ${entity.id} requires inline ES/EN name`);
 		}
-	}
-	for (const id of Object.keys(entityTranslations)) {
-		if (!entityIds.has(id)) errors.push(`entity translations: unknown entity ${id}`);
+		if ('role' in entity && (!entity.role?.es?.trim() || !entity.role?.en?.trim())) {
+			errors.push(`entities: ${entity.id} requires inline ES/EN role`);
+		}
 	}
 	for (const document of documents.documents) {
 		const source = document.content?.variants?.[document.sourceLanguage];
