@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "72e2e8740f28f80f6db26fc03931766a4fbb09a5bd4a7c8c59d8ef226f89f20d",
+    "sourceDigest": "954c32be78f71e680e058b5cccae338f2c5c8718e42bb6f4d4a0d29c75d5d115",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",

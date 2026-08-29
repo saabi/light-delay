@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "outline": {
     "id": "outline:light-delay-long",
     "scriptId": "script:light-delay-long",
@@ -8,11 +8,295 @@
       "en": "Outline — Light Delay: feature treatment"
     },
     "status": "draft",
-    "version": "0.1.0"
+    "version": "0.2.0",
+    "synopsis": {
+      "es": "La versión extensa sigue la preparación del encuentro, la infiltración de Harlan, el descubrimiento y asesinato de Zao, y la investigación que permite que su advertencia óptica alcance a la Ardor y preserve el primer contacto.",
+      "en": "The long version follows preparations for the encounter, Harlan’s infiltration, Zao’s discovery and murder, and the investigation that lets her optical warning catch the Ardor and preserve first contact."
+    }
   },
   "steps": [
     {
+      "id": "long:story-01",
+      "level": "story",
+      "order": 1,
+      "title": {
+        "es": "Preparación y partida",
+        "en": "Preparation and departure"
+      },
+      "summary": {
+        "es": "La tripulación completa prepara el canal de contacto y parte con un rumbo sujeto a la breve ventana de la garganta.",
+        "en": "The full crew prepares the contact channel and departs on a course bound to the throat’s brief window."
+      },
+      "importance": "required"
+    },
+    {
+      "id": "long:story-02",
+      "level": "story",
+      "order": 2,
+      "title": {
+        "es": "El sabotaje produce una anomalía",
+        "en": "Sabotage produces an anomaly"
+      },
+      "summary": {
+        "es": "Harlan usa a Vega como peón para abrir una ventana; los consumos anómalos conducen a Zao y Elin hasta una envoltura no declarada.",
+        "en": "Harlan uses Vega as an unwitting pawn to open a window; anomalous consumption leads Zao and Elin to an undeclared wrapper."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-01",
+          "relation": "enables",
+          "explanation": {
+            "es": "El cambio anterior —La tripulación completa prepara el canal de contacto y parte con un rumbo sujeto a la breve ventana de la garganta— provoca o habilita esta consecuencia: Harlan usa a Vega como peón para abrir una ventana; los consumos anómalos conducen a Zao y Elin hasta una envoltura no declarada.",
+            "en": "The prior change—The full crew prepares the contact channel and departs on a course bound to the throat’s brief window—causes or enables this consequence: Harlan uses Vega as an unwitting pawn to open a window; anomalous consumption leads Zao and Elin to an undeclared wrapper."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-03",
+      "level": "story",
+      "order": 3,
+      "title": {
+        "es": "La firma falsa fuerza una advertencia extrema",
+        "en": "The forged signature forces an extreme warning"
+      },
+      "summary": {
+        "es": "Zao comprueba que la credencial de Sorell es falsificable y alerta al puente. Harlan corta las comunicaciones, por lo que ella descarta Tierra por el doble retardo y Proxima por la oclusión de Júpiter, y apunta el láser a la posición futura de la Ardor.",
+        "en": "Zao proves Sorell’s credential can be forged and alerts the bridge. Harlan cuts communications, so she rejects Earth because of the two-leg delay and Proxima because of Jupiter’s occultation, then aims the laser at the Ardor’s future position."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-02",
+          "relation": "reveals",
+          "explanation": {
+            "es": "El cambio anterior —Harlan usa a Vega como peón para abrir una ventana; los consumos anómalos conducen a Zao y Elin hasta una envoltura no declarada— provoca o habilita esta consecuencia: Zao comprueba que la credencial de Sorell es falsificable y alerta al puente. Harlan corta las comunicaciones, por lo que ella descarta Tierra por el doble retardo y Proxima por la oclusión de Júpiter, y apunta el láser a la posición futura de la Ardor.",
+            "en": "The prior change—Harlan uses Vega as an unwitting pawn to open a window; anomalous consumption leads Zao and Elin to an undeclared wrapper—causes or enables this consequence: Zao proves Sorell’s credential can be forged and alerts the bridge. Harlan cuts communications, so she rejects Earth because of the two-leg delay and Proxima because of Jupiter’s occultation, then aims the laser at the Ardor’s future position."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-04",
+      "level": "story",
+      "order": 4,
+      "title": {
+        "es": "Harlan mata; la nave cruza",
+        "en": "Harlan kills; the ship crosses"
+      },
+      "summary": {
+        "es": "Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao, suspira y la mata; la Ardor cruza y Sorell encuentra el cuerpo.",
+        "en": "Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck, sighs, and kills her; the Ardor crosses and Sorell finds the body."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-03",
+          "relation": "enables",
+          "explanation": {
+            "es": "El cambio anterior —Zao comprueba que la credencial de Sorell es falsificable y alerta al puente. Harlan corta las comunicaciones, por lo que ella descarta Tierra por el doble retardo y Proxima por la oclusión de Júpiter, y apunta el láser a la posición futura de la Ardor— provoca o habilita esta consecuencia: Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao, suspira y la mata; la Ardor cruza y Sorell encuentra el cuerpo.",
+            "en": "The prior change—Zao proves Sorell’s credential can be forged and alerts the bridge. Harlan cuts communications, so she rejects Earth because of the two-leg delay and Proxima because of Jupiter’s occultation, then aims the laser at the Ardor’s future position—causes or enables this consequence: Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck, sighs, and kills her; the Ardor crosses and Sorell finds the body."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-05",
+      "level": "story",
+      "order": 5,
+      "title": {
+        "es": "La investigación desarma la coartada fácil",
+        "en": "The investigation dismantles the easy alibi"
+      },
+      "summary": {
+        "es": "La muerte y los fallos coordinados provocan una investigación distribuida: la credencial comprometida deja de incriminar por sí sola a Sorell y el sabotaje ambiental amplía el patrón.",
+        "en": "The death and coordinated failures trigger a distributed investigation: the compromised credential no longer incriminates Sorell by itself, and environmental sabotage broadens the pattern."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-04",
+          "relation": "reveals",
+          "explanation": {
+            "es": "El cambio anterior —Harlan sólo ve TRANSMITIDO, supone que el mensaje fue a la Tierra y cree que llegará demasiado tarde. Lamenta la suerte de Zao, suspira y la mata; la Ardor cruza y Sorell encuentra el cuerpo— provoca o habilita esta consecuencia: La muerte y los fallos coordinados provocan una investigación distribuida: la credencial comprometida deja de incriminar por sí sola a Sorell y el sabotaje ambiental amplía el patrón.",
+            "en": "The prior change—Harlan sees only TRANSMITTED, assumes the message went to Earth, and believes it will arrive too late. He laments Zao’s luck, sighs, and kills her; the Ardor crosses and Sorell finds the body—causes or enables this consequence: The death and coordinated failures trigger a distributed investigation: the compromised credential no longer incriminates Sorell by itself, and environmental sabotage broadens the pattern."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-06",
+      "level": "story",
+      "order": 6,
+      "title": {
+        "es": "Elin localiza la amenaza",
+        "en": "Elin locates the threat"
+      },
+      "summary": {
+        "es": "Elin reconstruye el recorrido de la carga y demuestra que puede intervenir el contacto, aunque el equipo discrepa sobre cuánto aislar sin perder la misión.",
+        "en": "Elin reconstructs the payload’s path and shows it can interfere with contact, although the team disagrees about how much to isolate without losing the mission."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-05",
+          "relation": "forces",
+          "explanation": {
+            "es": "El cambio anterior —La muerte y los fallos coordinados provocan una investigación distribuida: la credencial comprometida deja de incriminar por sí sola a Sorell y el sabotaje ambiental amplía el patrón— provoca o habilita esta consecuencia: Elin reconstruye el recorrido de la carga y demuestra que puede intervenir el contacto, aunque el equipo discrepa sobre cuánto aislar sin perder la misión.",
+            "en": "The prior change—The death and coordinated failures trigger a distributed investigation: the compromised credential no longer incriminates Sorell by itself, and environmental sabotage broadens the pattern—causes or enables this consequence: Elin reconstructs the payload’s path and shows it can interfere with contact, although the team disagrees about how much to isolate without losing the mission."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-07",
+      "level": "story",
+      "order": 7,
+      "title": {
+        "es": "El trabajo preservado permite reconocer la señal",
+        "en": "Preserved work makes the signal recognizable"
+      },
+      "summary": {
+        "es": "Carvalho mantiene el lenguaje diplomático mientras aparece una portadora débil; el trabajo previo de Zao permite reconocerla como su mensaje y no como otra intrusión.",
+        "en": "Carvalho maintains the diplomatic language while a weak carrier appears; Zao’s prior work makes it recognizable as her message rather than another intrusion."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-06",
+          "relation": "forces",
+          "explanation": {
+            "es": "El cambio anterior —Elin reconstruye el recorrido de la carga y demuestra que puede intervenir el contacto, aunque el equipo discrepa sobre cuánto aislar sin perder la misión— provoca o habilita esta consecuencia: Carvalho mantiene el lenguaje diplomático mientras aparece una portadora débil; el trabajo previo de Zao permite reconocerla como su mensaje y no como otra intrusión.",
+            "en": "The prior change—Elin reconstructs the payload’s path and shows it can interfere with contact, although the team disagrees about how much to isolate without losing the mission—causes or enables this consequence: Carvalho maintains the diplomatic language while a weak carrier appears; Zao’s prior work makes it recognizable as her message rather than another intrusion."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-08",
+      "level": "story",
+      "order": 8,
+      "title": {
+        "es": "La doble llave expone a Harlan",
+        "en": "The double key exposes Harlan"
+      },
+      "summary": {
+        "es": "La firma de Zao y una verificación independiente autentican el mensaje. Harlan actúa al quedar expuesto y la decisión de Okoye impide que conserve el control del relato.",
+        "en": "Zao’s signature and an independent check authenticate the message. Harlan acts when exposed, and Okoye’s decision prevents him from retaining control of the story."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-07",
+          "relation": "motivates",
+          "explanation": {
+            "es": "El cambio anterior —Carvalho mantiene el lenguaje diplomático mientras aparece una portadora débil; el trabajo previo de Zao permite reconocerla como su mensaje y no como otra intrusión— provoca o habilita esta consecuencia: La firma de Zao y una verificación independiente autentican el mensaje. Harlan actúa al quedar expuesto y la decisión de Okoye impide que conserve el control del relato.",
+            "en": "The prior change—Carvalho maintains the diplomatic language while a weak carrier appears; Zao’s prior work makes it recognizable as her message rather than another intrusion—causes or enables this consequence: Zao’s signature and an independent check authenticate the message. Harlan acts when exposed, and Okoye’s decision prevents him from retaining control of the story."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-09",
+      "level": "story",
+      "order": 9,
+      "title": {
+        "es": "Controles manuales y cuarentena",
+        "en": "Manual controls and quarantine"
+      },
+      "summary": {
+        "es": "Con Harlan contenido, la tripulación usa controles manuales para revocar accesos y aislar la carga sin destruir el sistema de mediación.",
+        "en": "With Harlan contained, the crew uses manual controls to revoke access and isolate the payload without destroying the mediation system."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-08",
+          "relation": "reveals",
+          "explanation": {
+            "es": "El cambio anterior —La firma de Zao y una verificación independiente autentican el mensaje. Harlan actúa al quedar expuesto y la decisión de Okoye impide que conserve el control del relato— provoca o habilita esta consecuencia: Con Harlan contenido, la tripulación usa controles manuales para revocar accesos y aislar la carga sin destruir el sistema de mediación.",
+            "en": "The prior change—Zao’s signature and an independent check authenticate the message. Harlan acts when exposed, and Okoye’s decision prevents him from retaining control of the story—causes or enables this consequence: With Harlan contained, the crew uses manual controls to revoke access and isolate the payload without destroying the mediation system."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-10",
+      "level": "story",
+      "order": 10,
+      "title": {
+        "es": "Un saludo limpio obtiene respuesta",
+        "en": "A clean greeting earns a response"
+      },
+      "summary": {
+        "es": "La tripulación reconstruye un saludo verificable; la respuesta Velari autoriza una aproximación limitada, no una confianza automática.",
+        "en": "The crew rebuilds a verifiable greeting; the Velari response authorizes limited approach, not automatic trust."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-09",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "El cambio anterior —Con Harlan contenido, la tripulación usa controles manuales para revocar accesos y aislar la carga sin destruir el sistema de mediación— provoca o habilita esta consecuencia: La tripulación reconstruye un saludo verificable; la respuesta Velari autoriza una aproximación limitada, no una confianza automática.",
+            "en": "The prior change—With Harlan contained, the crew uses manual controls to revoke access and isolate the payload without destroying the mediation system—causes or enables this consequence: The crew rebuilds a verifiable greeting; the Velari response authorizes limited approach, not automatic trust."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-11",
+      "level": "story",
+      "order": 11,
+      "title": {
+        "es": "La emisaria se aproxima",
+        "en": "The emissary approaches"
+      },
+      "summary": {
+        "es": "La cuarentena permite que una nave emisaria se acerque sin que la carga sabotee el primer contacto.",
+        "en": "The quarantine allows an emissary vessel to approach without the payload sabotaging first contact."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-10",
+          "relation": "forces",
+          "explanation": {
+            "es": "El cambio anterior —La tripulación reconstruye un saludo verificable; la respuesta Velari autoriza una aproximación limitada, no una confianza automática— provoca o habilita esta consecuencia: La cuarentena permite que una nave emisaria se acerque sin que la carga sabotee el primer contacto.",
+            "en": "The prior change—The crew rebuilds a verifiable greeting; the Velari response authorizes limited approach, not automatic trust—causes or enables this consequence: The quarantine allows an emissary vessel to approach without the payload sabotaging first contact."
+          }
+        }
+      ]
+    },
+    {
+      "id": "long:story-12",
+      "level": "story",
+      "order": 12,
+      "title": {
+        "es": "La verdad continúa viajando",
+        "en": "The truth keeps traveling"
+      },
+      "summary": {
+        "es": "El archivo de Zao queda preservado y el informe parte hacia la Tierra: la misión se salva, pero sus consecuencias políticas aún deben recorrer la distancia.",
+        "en": "Zao’s archive is preserved and the report leaves for Earth: the mission is saved, but its political consequences must still cross the distance."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "long:story-11",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "El cambio anterior —La cuarentena permite que una nave emisaria se acerque sin que la carga sabotee el primer contacto— provoca o habilita esta consecuencia: El archivo de Zao queda preservado y el informe parte hacia la Tierra: la misión se salva, pero sus consecuencias políticas aún deben recorrer la distancia.",
+            "en": "The prior change—The quarantine allows an emissary vessel to approach without the payload sabotaging first contact—causes or enables this consequence: Zao’s archive is preserved and the report leaves for Earth: the mission is saved, but its political consequences must still cross the distance."
+          }
+        }
+      ]
+    },
+    {
       "id": "long:outline-01",
+      "level": "detail",
+      "parentStepId": "long:story-01",
       "order": 1,
       "title": {
         "es": "Preparativos en Proxima",
@@ -23,19 +307,23 @@
         "en": "The full crew boards a Celestial Ardor already stationed at Proxima. With its name and silhouette in view, Cael remarks, “They named it Ardor. With that shape. Someone in Design had a sense of humor.” Voss answers with a look, and Harlan barely registers the exchange. Zao, Sorell, and Elin verify the core, the physical relay, and the passive greeting."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-01"
-      ],
-      "beatIds": [
-        "long:beat-01"
-      ],
-      "cueIds": [],
-      "shotIds": [],
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-01"
+          ],
+          "beatIds": [
+            "long:beat-01"
+          ]
+        }
+      },
       "majorEventId": "event:embarkation"
     },
     {
       "id": "long:outline-02",
+      "level": "detail",
+      "parentStepId": "long:story-01",
       "order": 2,
       "title": {
         "es": "Salida y reparto de guardias",
@@ -46,22 +334,23 @@
         "en": "Voss establishes authority, Cael prepares navigation, Wei takes communications, and Harlan shows still-plausible friction with the mission."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-02"
-      ],
-      "beatIds": [
-        "long:beat-02"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:embarkation",
-      "dependsOnStepIds": [
-        "long:outline-01"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-02"
+          ],
+          "beatIds": [
+            "long:beat-02"
+          ]
+        }
+      },
+      "majorEventId": "event:embarkation"
     },
     {
       "id": "long:outline-03",
+      "level": "detail",
+      "parentStepId": "long:story-02",
       "order": 3,
       "title": {
         "es": "Vega como peón involuntario",
@@ -72,21 +361,22 @@
         "en": "Harlan induces Ansel Vega to silence an apparently redundant diagnostic alert; the action opens a window without making Vega an accomplice."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-03"
-      ],
-      "beatIds": [
-        "long:beat-03"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "dependsOnStepIds": [
-        "long:outline-02"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-03"
+          ],
+          "beatIds": [
+            "long:beat-03"
+          ]
+        }
+      }
     },
     {
       "id": "long:outline-04",
+      "level": "detail",
+      "parentStepId": "long:story-02",
       "order": 4,
       "title": {
         "es": "Primeros picos",
@@ -97,22 +387,23 @@
         "en": "Zao detects repeated power draws that do not match the core's profile and begins a discreet investigation."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-04"
-      ],
-      "beatIds": [
-        "long:beat-04"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:anomaly-discovery",
-      "dependsOnStepIds": [
-        "long:outline-03"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-04"
+          ],
+          "beatIds": [
+            "long:beat-04"
+          ]
+        }
+      },
+      "majorEventId": "event:anomaly-discovery"
     },
     {
       "id": "long:outline-05",
+      "level": "detail",
+      "parentStepId": "long:story-02",
       "order": 5,
       "title": {
         "es": "La envoltura dormida",
@@ -123,22 +414,23 @@
         "en": "Zao and Elin find an undeclared wrapper. Hassan confirms that the energy anomaly is physical, not merely a software artifact."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-05"
-      ],
-      "beatIds": [
-        "long:beat-05"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:anomaly-discovery",
-      "dependsOnStepIds": [
-        "long:outline-04"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-05"
+          ],
+          "beatIds": [
+            "long:beat-05"
+          ]
+        }
+      },
+      "majorEventId": "event:anomaly-discovery"
     },
     {
       "id": "long:outline-06",
+      "level": "detail",
+      "parentStepId": "long:story-03",
       "order": 6,
       "title": {
         "es": "Registro falsificable",
@@ -149,22 +441,23 @@
         "en": "The surface log points to Sorell, but Zao marks it unverified and preserves a copy to cross-check against the relay."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-06"
-      ],
-      "beatIds": [
-        "long:beat-06"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:anomaly-discovery",
-      "dependsOnStepIds": [
-        "long:outline-05"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-06"
+          ],
+          "beatIds": [
+            "long:beat-06"
+          ]
+        }
+      },
+      "majorEventId": "event:anomaly-discovery"
     },
     {
       "id": "long:outline-07",
+      "level": "detail",
+      "parentStepId": "long:story-03",
       "order": 7,
       "title": {
         "es": "Despliegue hostil",
@@ -175,74 +468,77 @@
         "en": "The wrapper reveals an intrusive scan. Zao warns the bridge that Sorell's signature appears forged; Harlan hears ‘physical relay’ from the access, activates the jammer unseen, and cuts COM A/B at the service-cylinder distributor."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-07"
-      ],
-      "beatIds": [
-        "long:beat-07"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:anomaly-discovery",
-      "dependsOnStepIds": [
-        "long:outline-06"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-07"
+          ],
+          "beatIds": [
+            "long:beat-07"
+          ]
+        }
+      },
+      "majorEventId": "event:anomaly-discovery"
     },
     {
       "id": "long:outline-08",
+      "level": "detail",
+      "parentStepId": "long:story-03",
       "order": 8,
       "title": {
         "es": "Mensaje hacia el corredor",
         "en": "Message to the Corridor"
       },
       "summary": {
-        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
-        "en": "With wireless and COM A/B down, Zao uses the external laser's dedicated wired control. She rules out Earth and Proxima, calculates an intercept with the ship's future position, and sweeps the uncertainty ellipse as Harlan approaches through service and Sorell through the central cylinder."
+        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro; descarta Proxima porque Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo puede calcular la intercepción con la posición futura de la nave y barrer allí la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
+        "en": "With wireless and COM A/B down, Zao uses the external laser’s dedicated wired control. She rejects Earth because reception there and retransmission to the Ardor would take until after the encounter; she rejects Proxima because Jupiter occults the line of sight between the local mouth at L2 and the station at L1. Her only option is to calculate an intercept with the ship’s future position and sweep the uncertainty ellipse there while Harlan approaches through service and Sorell through the central cylinder."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-08"
-      ],
-      "beatIds": [
-        "long:beat-08"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:zao-warning-death",
-      "dependsOnStepIds": [
-        "long:outline-07"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-08"
+          ],
+          "beatIds": [
+            "long:beat-08"
+          ]
+        }
+      },
+      "majorEventId": "event:zao-warning-death"
     },
     {
       "id": "long:outline-09",
+      "level": "detail",
+      "parentStepId": "long:story-04",
       "order": 9,
       "title": {
         "es": "Muerte fuera de campo",
         "en": "Death Offscreen"
       },
       "summary": {
-        "es": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
-        "en": "Harlan confronts and kills Zao offscreen, cleans the compartment, and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and constructing his alibi."
+        "es": "Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
+        "en": "Harlan enters after the send and sees only TRANSMITTED. He says aloud that Zao must have aimed at Earth and reassures himself that the two-leg delay would prevent warning Voss before the encounter. He laments that she found the evidence, sighs, and kills her offscreen; then he cleans the compartment and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and building his alibi."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-09"
-      ],
-      "beatIds": [
-        "long:beat-09"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:zao-warning-death",
-      "dependsOnStepIds": [
-        "long:outline-08"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-09"
+          ],
+          "beatIds": [
+            "long:beat-09"
+          ]
+        }
+      },
+      "majorEventId": "event:zao-warning-death"
     },
     {
       "id": "long:outline-10",
+      "level": "detail",
+      "parentStepId": "long:story-04",
       "order": 10,
       "title": {
         "es": "Expansión y cruce",
@@ -253,22 +549,23 @@
         "en": "The distributed nodes connect the navigable region for a limited window. The ship crosses after critical expansion can no longer be canceled safely."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-10"
-      ],
-      "beatIds": [
-        "long:beat-10"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:tunnel-crossing",
-      "dependsOnStepIds": [
-        "long:outline-09"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-10"
+          ],
+          "beatIds": [
+            "long:beat-10"
+          ]
+        }
+      },
+      "majorEventId": "event:tunnel-crossing"
     },
     {
       "id": "long:outline-11",
+      "level": "detail",
+      "parentStepId": "long:story-04",
       "order": 11,
       "title": {
         "es": "El cuerpo",
@@ -279,22 +576,23 @@
         "en": "After the crossing, Keene confirms Zao's death and Okoye secures the compartment. The crew realizes the killer is aboard."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-11"
-      ],
-      "beatIds": [
-        "long:beat-11"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:investigation",
-      "dependsOnStepIds": [
-        "long:outline-10"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-11"
+          ],
+          "beatIds": [
+            "long:beat-11"
+          ]
+        }
+      },
+      "majorEventId": "event:investigation"
     },
     {
       "id": "long:outline-12",
+      "level": "detail",
+      "parentStepId": "long:story-05",
       "order": 12,
       "title": {
         "es": "Investigación distribuida",
@@ -305,22 +603,23 @@
         "en": "Voss assigns separate tasks: Elin analyzes the payload, Keene examines clinical evidence, Okoye controls access, and Wei preserves communications records."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-12"
-      ],
-      "beatIds": [
-        "long:beat-12"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:investigation",
-      "dependsOnStepIds": [
-        "long:outline-11"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-12"
+          ],
+          "beatIds": [
+            "long:beat-12"
+          ]
+        }
+      },
+      "majorEventId": "event:investigation"
     },
     {
       "id": "long:outline-13",
+      "level": "detail",
+      "parentStepId": "long:story-05",
       "order": 13,
       "title": {
         "es": "Credencial de Sorell comprometida",
@@ -331,48 +630,50 @@
         "en": "The bridge and Voss's direct order corroborate Sorell's route. Her forged credential is blocked without treating her as a suspect; Harlan tries to exploit the technical uncertainty."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-13"
-      ],
-      "beatIds": [
-        "long:beat-13"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:investigation",
-      "dependsOnStepIds": [
-        "long:outline-12"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-13"
+          ],
+          "beatIds": [
+            "long:beat-13"
+          ]
+        }
+      },
+      "majorEventId": "event:investigation"
     },
     {
       "id": "long:outline-14",
+      "level": "detail",
+      "parentStepId": "long:story-05",
       "order": 14,
       "title": {
         "es": "Sabotaje ambiental acotado",
         "en": "Contained Environmental Sabotage"
       },
       "summary": {
-        "es": "Fluctuaciones de soporte vital y navegación fuerzan a Cael, Vega y Tanaka a trabajar bajo presión; la función exacta de Tanaka sigue pendiente de definición.",
-        "en": "Life-support and navigation fluctuations force Cael, Vega, and Tanaka to work under pressure; Tanaka's exact function remains undefined."
+        "es": "Fluctuaciones de soporte vital y navegación fuerzan a Cael, Vega y Tanaka a trabajar bajo presión; la fuente recuperada aún no define la función exacta de Tanaka.",
+        "en": "Life-support and navigation fluctuations force Cael, Vega, and Tanaka to work under pressure; the recovered source still does not define Tanaka's exact role."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-14"
-      ],
-      "beatIds": [
-        "long:beat-14"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:investigation",
-      "dependsOnStepIds": [
-        "long:outline-13"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-14"
+          ],
+          "beatIds": [
+            "long:beat-14"
+          ]
+        }
+      },
+      "majorEventId": "event:investigation"
     },
     {
       "id": "long:outline-15",
+      "level": "detail",
+      "parentStepId": "long:story-06",
       "order": 15,
       "title": {
         "es": "Elin aísla el recorrido",
@@ -383,22 +684,23 @@
         "en": "Elin does not repair the corrupted code: she maps its path and prepares a limited quarantine for the moment of activation."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-15"
-      ],
-      "beatIds": [
-        "long:beat-15"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:investigation",
-      "dependsOnStepIds": [
-        "long:outline-14"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-15"
+          ],
+          "beatIds": [
+            "long:beat-15"
+          ]
+        }
+      },
+      "majorEventId": "event:investigation"
     },
     {
       "id": "long:outline-16",
+      "level": "detail",
+      "parentStepId": "long:story-06",
       "order": 16,
       "title": {
         "es": "Conflicto de estrategia",
@@ -409,22 +711,23 @@
         "en": "Harlan demands that all mediation be shut down; Elin explains that doing so would erase evidence and the only diplomatic channel. Voss postpones an irreversible decision."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-16"
-      ],
-      "beatIds": [
-        "long:beat-16"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:investigation",
-      "dependsOnStepIds": [
-        "long:outline-15"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-16"
+          ],
+          "beatIds": [
+            "long:beat-16"
+          ]
+        }
+      },
+      "majorEventId": "event:investigation"
     },
     {
       "id": "long:outline-17",
+      "level": "detail",
+      "parentStepId": "long:story-07",
       "order": 17,
       "title": {
         "es": "Carvalho continúa el lenguaje",
@@ -435,22 +738,23 @@
         "en": "Sorell and Carvalho verify minimal greeting patterns without altering the passive read-only medium, while Elin keeps language and payload separate."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-17"
-      ],
-      "beatIds": [
-        "long:beat-17"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:investigation",
-      "dependsOnStepIds": [
-        "long:outline-16"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-17"
+          ],
+          "beatIds": [
+            "long:beat-17"
+          ]
+        }
+      },
+      "majorEventId": "event:investigation"
     },
     {
       "id": "long:outline-18",
+      "level": "detail",
+      "parentStepId": "long:story-07",
       "order": 18,
       "title": {
         "es": "La portadora débil",
@@ -461,22 +765,23 @@
         "en": "Wei detects a human signal in the projected corridor. Cael maintains navigation and Voss orders it preserved without assuming authenticity."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-18"
-      ],
-      "beatIds": [
-        "long:beat-18"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:message-reception",
-      "dependsOnStepIds": [
-        "long:outline-17"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-18"
+          ],
+          "beatIds": [
+            "long:beat-18"
+          ]
+        }
+      },
+      "majorEventId": "event:message-reception"
     },
     {
       "id": "long:outline-19",
+      "level": "detail",
+      "parentStepId": "long:story-07",
       "order": 19,
       "title": {
         "es": "El mensaje de Zao",
@@ -487,22 +792,23 @@
         "en": "The crew hears fragments of the message. The signature proves the device's origin and time, but not yet the truth of every word."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-19"
-      ],
-      "beatIds": [
-        "long:beat-19"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:message-reception",
-      "dependsOnStepIds": [
-        "long:outline-18"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-19"
+          ],
+          "beatIds": [
+            "long:beat-19"
+          ]
+        }
+      },
+      "majorEventId": "event:message-reception"
     },
     {
       "id": "long:outline-20",
+      "level": "detail",
+      "parentStepId": "long:story-08",
       "order": 20,
       "title": {
         "es": "La doble llave",
@@ -513,22 +819,23 @@
         "en": "Elin cross-checks the message against the physical relay and passive greeting. The evidence converges without depending on a single digital record."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-20"
-      ],
-      "beatIds": [
-        "long:beat-20"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:harlan-exposed",
-      "dependsOnStepIds": [
-        "long:outline-19"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-20"
+          ],
+          "beatIds": [
+            "long:beat-20"
+          ]
+        }
+      },
+      "majorEventId": "event:harlan-exposed"
     },
     {
       "id": "long:outline-21",
+      "level": "detail",
+      "parentStepId": "long:story-08",
       "order": 21,
       "title": {
         "es": "Harlan actúa",
@@ -539,22 +846,23 @@
         "en": "Voss revokes Harlan's credential. Before the cascade completes, he uses the last physical window and, under 1 g, takes the central lift down to the core branch."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-21"
-      ],
-      "beatIds": [
-        "long:beat-21"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:harlan-exposed",
-      "dependsOnStepIds": [
-        "long:outline-20"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-21"
+          ],
+          "beatIds": [
+            "long:beat-21"
+          ]
+        }
+      },
+      "majorEventId": "event:harlan-exposed"
     },
     {
       "id": "long:outline-22",
+      "level": "detail",
+      "parentStepId": "long:story-08",
       "order": 22,
       "title": {
         "es": "Decisión de Okoye",
@@ -565,22 +873,23 @@
         "en": "Okoye chooses to carry out Voss's order on incomplete evidence while security restrains Harlan without turning the scene into an armed fight."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-22"
-      ],
-      "beatIds": [
-        "long:beat-22"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:quarantine",
-      "dependsOnStepIds": [
-        "long:outline-21"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-22"
+          ],
+          "beatIds": [
+            "long:beat-22"
+          ]
+        }
+      },
+      "majorEventId": "event:quarantine"
     },
     {
       "id": "long:outline-23",
+      "level": "detail",
+      "parentStepId": "long:story-09",
       "order": 23,
       "title": {
         "es": "Controles manuales",
@@ -591,22 +900,23 @@
         "en": "Volkov accesses manual controls documented by Zao while Cael forces the bulkhead from the bridge. His definitive specialty remains open."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-23"
-      ],
-      "beatIds": [
-        "long:beat-23"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:quarantine",
-      "dependsOnStepIds": [
-        "long:outline-22"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-23"
+          ],
+          "beatIds": [
+            "long:beat-23"
+          ]
+        }
+      },
+      "majorEventId": "event:quarantine"
     },
     {
       "id": "long:outline-24",
+      "level": "detail",
+      "parentStepId": "long:story-09",
       "order": 24,
       "title": {
         "es": "Cuarentena",
@@ -617,22 +927,23 @@
         "en": "Elin confines the hostile branch to the prepared buffer. Sorell supplies the passive greeting and separates language from intrusion."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-24"
-      ],
-      "beatIds": [
-        "long:beat-24"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:quarantine",
-      "dependsOnStepIds": [
-        "long:outline-23"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-24"
+          ],
+          "beatIds": [
+            "long:beat-24"
+          ]
+        }
+      },
+      "majorEventId": "event:quarantine"
     },
     {
       "id": "long:outline-25",
+      "level": "detail",
+      "parentStepId": "long:story-10",
       "order": 25,
       "title": {
         "es": "Saludo limpio",
@@ -643,22 +954,23 @@
         "en": "The crew sends recognition mathematics, provenance, and an approach request through a read-only conduit."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-25"
-      ],
-      "beatIds": [
-        "long:beat-25"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:clean-greeting",
-      "dependsOnStepIds": [
-        "long:outline-24"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-25"
+          ],
+          "beatIds": [
+            "long:beat-25"
+          ]
+        }
+      },
+      "majorEventId": "event:clean-greeting"
     },
     {
       "id": "long:outline-26",
+      "level": "detail",
+      "parentStepId": "long:story-10",
       "order": 26,
       "title": {
         "es": "Reconocimiento limitado",
@@ -669,22 +981,23 @@
         "en": "The Velari station responds with a pattern that authorizes approach without amounting to trust, alliance, or complete explanation."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-26"
-      ],
-      "beatIds": [
-        "long:beat-26"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:first-contact",
-      "dependsOnStepIds": [
-        "long:outline-25"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-26"
+          ],
+          "beatIds": [
+            "long:beat-26"
+          ]
+        }
+      },
+      "majorEventId": "event:first-contact"
     },
     {
       "id": "long:outline-27",
+      "level": "detail",
+      "parentStepId": "long:story-11",
       "order": 27,
       "title": {
         "es": "Emisaria",
@@ -695,22 +1008,23 @@
         "en": "An emissary ship distinct from the station approaches. Human scale is subordinated to the encounter, and the immediate threat ends."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-27"
-      ],
-      "beatIds": [
-        "long:beat-27"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:first-contact",
-      "dependsOnStepIds": [
-        "long:outline-26"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-27"
+          ],
+          "beatIds": [
+            "long:beat-27"
+          ]
+        }
+      },
+      "majorEventId": "event:first-contact"
     },
     {
       "id": "long:outline-28",
+      "level": "detail",
+      "parentStepId": "long:story-12",
       "order": 28,
       "title": {
         "es": "La verdad sigue viajando",
@@ -721,19 +1035,18 @@
         "en": "Zao's archive is preserved and Harlan remains in custody. The transmission to Earth departs, but its consequences remain offscreen."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "long:scene-28"
-      ],
-      "beatIds": [
-        "long:beat-28"
-      ],
-      "cueIds": [],
-      "shotIds": [],
-      "majorEventId": "event:aftermath",
-      "dependsOnStepIds": [
-        "long:outline-27"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "long:scene-28"
+          ],
+          "beatIds": [
+            "long:beat-28"
+          ]
+        }
+      },
+      "majorEventId": "event:aftermath"
     }
   ]
 }

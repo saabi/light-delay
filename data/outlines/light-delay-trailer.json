@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.1.0",
+  "schemaVersion": "1.2.0",
   "outline": {
     "id": "outline:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
@@ -8,11 +8,127 @@
       "en": "Outline — Light Delay: trailer"
     },
     "status": "draft",
-    "version": "0.1.0"
+    "version": "0.2.0",
+    "synopsis": {
+      "es": "Un avance condensado presenta la misión de primer contacto, el sabotaje que la amenaza y la advertencia que debe atravesar el espacio para alcanzar a la nave antes del encuentro.",
+      "en": "A condensed preview introduces the first-contact mission, the sabotage threatening it, and the warning that must cross space to catch the ship before the encounter."
+    }
   },
   "steps": [
     {
+      "id": "trailer:story-01",
+      "level": "story",
+      "order": 1,
+      "title": {
+        "es": "Una misión sin margen",
+        "en": "A mission without margin"
+      },
+      "summary": {
+        "es": "La escala del viaje y la ventana de encuentro convierten cualquier falla del canal diplomático en un riesgo irreversible.",
+        "en": "The scale of the journey and encounter window make any diplomatic-channel failure an irreversible risk."
+      },
+      "importance": "required"
+    },
+    {
+      "id": "trailer:story-02",
+      "level": "story",
+      "order": 2,
+      "title": {
+        "es": "La anomalía",
+        "en": "The anomaly"
+      },
+      "summary": {
+        "es": "Zao descubre una presencia no declarada dentro del sistema que debía garantizar un contacto limpio.",
+        "en": "Zao discovers an undeclared presence inside the system meant to guarantee clean contact."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer:story-01",
+          "relation": "enables",
+          "explanation": {
+            "es": "El resultado anterior —La escala del viaje y la ventana de encuentro convierten cualquier falla del canal diplomático en un riesgo irreversible— crea la causa inmediata de lo siguiente: Zao descubre una presencia no declarada dentro del sistema que debía garantizar un contacto limpio.",
+            "en": "The prior outcome—The scale of the journey and encounter window make any diplomatic-channel failure an irreversible risk—creates the immediate cause for what follows: Zao discovers an undeclared presence inside the system meant to guarantee clean contact."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:story-03",
+      "level": "story",
+      "order": 3,
+      "title": {
+        "es": "Sabotaje y advertencia",
+        "en": "Sabotage and warning"
+      },
+      "summary": {
+        "es": "Cuando intentan silenciarla, Zao recurre a una transmisión óptica dirigida hacia el futuro de la nave.",
+        "en": "When they try to silence her, Zao turns to an optical transmission aimed at the ship’s future."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer:story-02",
+          "relation": "reveals",
+          "explanation": {
+            "es": "El resultado anterior —Zao descubre una presencia no declarada dentro del sistema que debía garantizar un contacto limpio— crea la causa inmediata de lo siguiente: Cuando intentan silenciarla, Zao recurre a una transmisión óptica dirigida hacia el futuro de la nave.",
+            "en": "The prior outcome—Zao discovers an undeclared presence inside the system meant to guarantee clean contact—creates the immediate cause for what follows: When they try to silence her, Zao turns to an optical transmission aimed at the ship’s future."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:story-04",
+      "level": "story",
+      "order": 4,
+      "title": {
+        "es": "El mensaje llega tarde, pero a tiempo",
+        "en": "The message arrives late, but in time"
+      },
+      "summary": {
+        "es": "Tras el cruce y la muerte de Zao, su señal alcanza a la tripulación y transforma el misterio en una acusación verificable.",
+        "en": "After the crossing and Zao’s death, her signal reaches the crew and turns the mystery into a verifiable accusation."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer:story-03",
+          "relation": "forces",
+          "explanation": {
+            "es": "El resultado anterior —Cuando intentan silenciarla, Zao recurre a una transmisión óptica dirigida hacia el futuro de la nave— crea la causa inmediata de lo siguiente: Tras el cruce y la muerte de Zao, su señal alcanza a la tripulación y transforma el misterio en una acusación verificable.",
+            "en": "The prior outcome—When they try to silence her, Zao turns to an optical transmission aimed at the ship’s future—creates the immediate cause for what follows: After the crossing and Zao’s death, her signal reaches the crew and turns the mystery into a verifiable accusation."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:story-05",
+      "level": "story",
+      "order": 5,
+      "title": {
+        "es": "Cuenta regresiva al contacto",
+        "en": "Countdown to contact"
+      },
+      "summary": {
+        "es": "La tripulación debe actuar sobre la advertencia antes de que el canal comprometido hable por la humanidad.",
+        "en": "The crew must act on the warning before the compromised channel speaks for humanity."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer:story-04",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "El resultado anterior —Tras el cruce y la muerte de Zao, su señal alcanza a la tripulación y transforma el misterio en una acusación verificable— crea la causa inmediata de lo siguiente: La tripulación debe actuar sobre la advertencia antes de que el canal comprometido hable por la humanidad.",
+            "en": "The prior outcome—After the crossing and Zao’s death, her signal reaches the crew and turns the mystery into a verifiable accusation—creates the immediate cause for what follows: The crew must act on the warning before the compromised channel speaks for humanity."
+          }
+        }
+      ]
+    },
+    {
       "id": "trailer:outline-01",
+      "level": "detail",
+      "parentStepId": "trailer:story-01",
       "order": 1,
       "title": {
         "es": "Escala",
@@ -23,24 +139,42 @@
         "en": "Black to Proxima/Celestial Burning; mission in V.O."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-a"
-      ],
-      "beatIds": [
-        "trailer:beat-a-01"
-      ],
-      "cueIds": [
-        "trailer:cue-a-01"
-      ],
-      "shotIds": [
-        "trailer:shot-a-01",
-        "trailer:shot-a-02"
-      ],
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-a"
+          ],
+          "beatIds": [
+            "trailer:beat-a-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-a"
+          ],
+          "beatIds": [
+            "trailer:beat-a-01"
+          ],
+          "cueIds": [
+            "trailer:cue-a-01"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-a-01",
+            "trailer:shot-a-02"
+          ]
+        }
+      },
       "majorEventId": "event:embarkation"
     },
     {
       "id": "trailer:outline-02",
+      "level": "detail",
+      "parentStepId": "trailer:story-01",
       "order": 2,
       "title": {
         "es": "La misión",
@@ -51,29 +185,44 @@
         "en": "Separation, core and greeting; FIRST CONTACT card."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-b"
-      ],
-      "beatIds": [
-        "trailer:beat-b-01"
-      ],
-      "cueIds": [
-        "trailer:cue-b-01",
-        "trailer:cue-b-02"
-      ],
-      "shotIds": [
-        "trailer:shot-b-01",
-        "trailer:shot-b-02",
-        "trailer:shot-b-03"
-      ],
-      "majorEventId": "event:embarkation",
-      "dependsOnStepIds": [
-        "trailer:outline-01"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-b"
+          ],
+          "beatIds": [
+            "trailer:beat-b-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-b"
+          ],
+          "beatIds": [
+            "trailer:beat-b-01"
+          ],
+          "cueIds": [
+            "trailer:cue-b-01",
+            "trailer:cue-b-02"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-b-01",
+            "trailer:shot-b-02",
+            "trailer:shot-b-03"
+          ]
+        }
+      },
+      "majorEventId": "event:embarkation"
     },
     {
       "id": "trailer:outline-03",
+      "level": "detail",
+      "parentStepId": "trailer:story-02",
       "order": 3,
       "title": {
         "es": "La anomalía",
@@ -84,30 +233,45 @@
         "en": "Zao detects undeclared executable branch."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-c"
-      ],
-      "beatIds": [
-        "trailer:beat-c-01"
-      ],
-      "cueIds": [
-        "trailer:cue-c-01",
-        "trailer:cue-c-02",
-        "trailer:cue-c-03"
-      ],
-      "shotIds": [
-        "trailer:shot-c-01",
-        "trailer:shot-c-02",
-        "trailer:shot-c-03"
-      ],
-      "majorEventId": "event:anomaly-discovery",
-      "dependsOnStepIds": [
-        "trailer:outline-02"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-c"
+          ],
+          "beatIds": [
+            "trailer:beat-c-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-c"
+          ],
+          "beatIds": [
+            "trailer:beat-c-01"
+          ],
+          "cueIds": [
+            "trailer:cue-c-01",
+            "trailer:cue-c-02",
+            "trailer:cue-c-03"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-c-01",
+            "trailer:shot-c-02",
+            "trailer:shot-c-03"
+          ]
+        }
+      },
+      "majorEventId": "event:anomaly-discovery"
     },
     {
       "id": "trailer:outline-04",
+      "level": "detail",
+      "parentStepId": "trailer:story-03",
       "order": 4,
       "title": {
         "es": "La advertencia",
@@ -118,30 +282,45 @@
         "en": "Harlan cuts wireless and COM A/B; Zao finds a way out through the outside laser."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-d"
-      ],
-      "beatIds": [
-        "trailer:beat-d-01"
-      ],
-      "cueIds": [
-        "trailer:cue-d-01",
-        "trailer:cue-d-02"
-      ],
-      "shotIds": [
-        "trailer:shot-d-01",
-        "trailer:shot-d-02",
-        "trailer:shot-d-03",
-        "trailer:shot-d-04"
-      ],
-      "majorEventId": "event:zao-warning-death",
-      "dependsOnStepIds": [
-        "trailer:outline-03"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-d"
+          ],
+          "beatIds": [
+            "trailer:beat-d-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-d"
+          ],
+          "beatIds": [
+            "trailer:beat-d-01"
+          ],
+          "cueIds": [
+            "trailer:cue-d-01",
+            "trailer:cue-d-02"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-d-01",
+            "trailer:shot-d-02",
+            "trailer:shot-d-03",
+            "trailer:shot-d-04"
+          ]
+        }
+      },
+      "majorEventId": "event:zao-warning-death"
     },
     {
       "id": "trailer:outline-05",
+      "level": "detail",
+      "parentStepId": "trailer:story-03",
       "order": 5,
       "title": {
         "es": "Punto de no retorno",
@@ -152,30 +331,45 @@
         "en": "Complete transmission; silhouette O.S.; hit black."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-e"
-      ],
-      "beatIds": [
-        "trailer:beat-e-01"
-      ],
-      "cueIds": [
-        "trailer:cue-e-01",
-        "trailer:cue-e-02",
-        "trailer:cue-e-03",
-        "trailer:cue-e-04"
-      ],
-      "shotIds": [
-        "trailer:shot-e-01",
-        "trailer:shot-e-02"
-      ],
-      "majorEventId": "event:zao-warning-death",
-      "dependsOnStepIds": [
-        "trailer:outline-04"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-e"
+          ],
+          "beatIds": [
+            "trailer:beat-e-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-e"
+          ],
+          "beatIds": [
+            "trailer:beat-e-01"
+          ],
+          "cueIds": [
+            "trailer:cue-e-01",
+            "trailer:cue-e-02",
+            "trailer:cue-e-03",
+            "trailer:cue-e-04"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-e-01",
+            "trailer:shot-e-02"
+          ]
+        }
+      },
+      "majorEventId": "event:zao-warning-death"
     },
     {
       "id": "trailer:outline-06",
+      "level": "detail",
+      "parentStepId": "trailer:story-04",
       "order": 6,
       "title": {
         "es": "La nave llega primero",
@@ -186,32 +380,47 @@
         "en": "Crossing of the throat; T+23h; Elin against the clock."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-f"
-      ],
-      "beatIds": [
-        "trailer:beat-f-01"
-      ],
-      "cueIds": [
-        "trailer:cue-f-01",
-        "trailer:cue-f-02",
-        "trailer:cue-f-03",
-        "trailer:cue-f-04"
-      ],
-      "shotIds": [
-        "trailer:shot-f-01",
-        "trailer:shot-f-02",
-        "trailer:shot-f-03",
-        "trailer:shot-f-04"
-      ],
-      "majorEventId": "event:tunnel-crossing",
-      "dependsOnStepIds": [
-        "trailer:outline-05"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-f"
+          ],
+          "beatIds": [
+            "trailer:beat-f-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-f"
+          ],
+          "beatIds": [
+            "trailer:beat-f-01"
+          ],
+          "cueIds": [
+            "trailer:cue-f-01",
+            "trailer:cue-f-02",
+            "trailer:cue-f-03",
+            "trailer:cue-f-04"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-f-01",
+            "trailer:shot-f-02",
+            "trailer:shot-f-03",
+            "trailer:shot-f-04"
+          ]
+        }
+      },
+      "majorEventId": "event:tunnel-crossing"
     },
     {
       "id": "trailer:outline-07",
+      "level": "detail",
+      "parentStepId": "trailer:story-04",
       "order": 7,
       "title": {
         "es": "La señal",
@@ -222,34 +431,49 @@
         "en": "Human carrier; OVR; Zao fragment."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-g"
-      ],
-      "beatIds": [
-        "trailer:beat-g-01"
-      ],
-      "cueIds": [
-        "trailer:cue-g-01",
-        "trailer:cue-g-02",
-        "trailer:cue-g-03",
-        "trailer:cue-g-04",
-        "trailer:cue-g-05",
-        "trailer:cue-g-06"
-      ],
-      "shotIds": [
-        "trailer:shot-g-01",
-        "trailer:shot-g-02",
-        "trailer:shot-g-03",
-        "trailer:shot-g-04"
-      ],
-      "majorEventId": "event:message-reception",
-      "dependsOnStepIds": [
-        "trailer:outline-06"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-g"
+          ],
+          "beatIds": [
+            "trailer:beat-g-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-g"
+          ],
+          "beatIds": [
+            "trailer:beat-g-01"
+          ],
+          "cueIds": [
+            "trailer:cue-g-01",
+            "trailer:cue-g-02",
+            "trailer:cue-g-03",
+            "trailer:cue-g-04",
+            "trailer:cue-g-05",
+            "trailer:cue-g-06"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-g-01",
+            "trailer:shot-g-02",
+            "trailer:shot-g-03",
+            "trailer:shot-g-04"
+          ]
+        }
+      },
+      "majorEventId": "event:message-reception"
     },
     {
       "id": "trailer:outline-08",
+      "level": "detail",
+      "parentStepId": "trailer:story-05",
       "order": 8,
       "title": {
         "es": "El reloj",
@@ -260,32 +484,47 @@
         "en": "Accelerated assembly towards the Velari threshold."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-h"
-      ],
-      "beatIds": [
-        "trailer:beat-h-01"
-      ],
-      "cueIds": [
-        "trailer:cue-h-01",
-        "trailer:cue-h-02",
-        "trailer:cue-h-03"
-      ],
-      "shotIds": [
-        "trailer:shot-h-01",
-        "trailer:shot-h-02",
-        "trailer:shot-h-03",
-        "trailer:shot-h-04",
-        "trailer:shot-h-05"
-      ],
-      "majorEventId": "event:quarantine",
-      "dependsOnStepIds": [
-        "trailer:outline-07"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-h"
+          ],
+          "beatIds": [
+            "trailer:beat-h-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-h"
+          ],
+          "beatIds": [
+            "trailer:beat-h-01"
+          ],
+          "cueIds": [
+            "trailer:cue-h-01",
+            "trailer:cue-h-02",
+            "trailer:cue-h-03"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-h-01",
+            "trailer:shot-h-02",
+            "trailer:shot-h-03",
+            "trailer:shot-h-04",
+            "trailer:shot-h-05"
+          ]
+        }
+      },
+      "majorEventId": "event:quarantine"
     },
     {
       "id": "trailer:outline-09",
+      "level": "detail",
+      "parentStepId": "trailer:story-05",
       "order": 9,
       "title": {
         "es": "Título",
@@ -296,27 +535,40 @@
         "en": "LIGHT DELAY / LIGHT LATE and motto; Velari pulse."
       },
       "importance": "required",
-      "status": "covered",
-      "sceneIds": [
-        "trailer:scene-i"
-      ],
-      "beatIds": [
-        "trailer:beat-i-01"
-      ],
-      "cueIds": [
-        "trailer:cue-i-01",
-        "trailer:cue-i-02",
-        "trailer:cue-i-03",
-        "trailer:cue-i-04"
-      ],
-      "shotIds": [
-        "trailer:shot-i-01",
-        "trailer:shot-i-02"
-      ],
-      "majorEventId": "event:first-contact",
-      "dependsOnStepIds": [
-        "trailer:outline-08"
-      ]
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-i"
+          ],
+          "beatIds": [
+            "trailer:beat-i-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "trailer:scene-i"
+          ],
+          "beatIds": [
+            "trailer:beat-i-01"
+          ],
+          "cueIds": [
+            "trailer:cue-i-01",
+            "trailer:cue-i-02",
+            "trailer:cue-i-03",
+            "trailer:cue-i-04"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "trailer:shot-i-01",
+            "trailer:shot-i-02"
+          ]
+        }
+      },
+      "majorEventId": "event:first-contact"
     }
   ]
 }

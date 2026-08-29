@@ -2493,8 +2493,8 @@
       "order": 3,
       "type": "action",
       "text": {
-        "es": "La solución Tierra queda en rojo: recepción posterior al encuentro. Proxima no ofrece adquisición óptica utilizable.",
-        "en": "The Earth solution remains in red: post-match reception. Proxima does not offer usable optical acquisition."
+        "es": "La solución Tierra queda en rojo: aun si recibe el aviso, el segundo tramo Tierra–Ardor llegaría después del encuentro. Proxima también queda en rojo: Júpiter bloquea la línea de vista desde la boca local en L2 hacia la estación en L1.",
+        "en": "The Earth solution turns red: even if it receives the warning, the second Earth-to-Ardor leg would arrive after the encounter. Proxima also turns red: Jupiter blocks the line of sight from the local mouth at L2 to the station at L1."
       }
     },
     {
@@ -2641,11 +2641,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "No tenías que encontrar esto.",
+            "spokenText": "Da igual. Fue a la Tierra. Cuando avisen a Voss, el encuentro ya habrá terminado.",
             "status": "source"
           },
           "en": {
-            "spokenText": "You didn't have to find this.",
+            "spokenText": "Doesn’t matter. It went to Earth. By the time they warn Voss, the encounter will already be over.",
             "status": "draft"
           }
         }
@@ -2656,17 +2656,17 @@
       "beatId": "main:beat-06-01",
       "order": 20,
       "type": "dialogue",
-      "speakerId": "character:zao",
+      "speakerId": "character:harlan",
       "presentation": "on_screen",
       "content": {
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Y vos no tenías que hacerlo. Todavía podés—",
+            "spokenText": "Tuviste mala suerte, Zao. No tendrías que haber visto esto.",
             "status": "source"
           },
           "en": {
-            "spokenText": "And you didn't have to do it. You can still—",
+            "spokenText": "You were unlucky, Zao. You shouldn’t have seen this.",
             "status": "draft"
           }
         }
@@ -2676,21 +2676,10 @@
       "id": "main:cue-06-16",
       "beatId": "main:beat-06-01",
       "order": 21,
-      "type": "dialogue",
-      "speakerId": "character:harlan",
-      "presentation": "on_screen",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "spokenText": "Ya no hay “todavía”. Y no vas a decirme dónde apuntaste.",
-            "status": "source"
-          },
-          "en": {
-            "spokenText": "There is no “yet” anymore. And you're not going to tell me where you pointed.",
-            "status": "draft"
-          }
-        }
+      "type": "action",
+      "text": {
+        "es": "Harlan suspira —el único indicio de que matarla no le resulta fácil— y cierra la distancia.",
+        "en": "Harlan sighs—the only sign that killing her is not easy for him—and closes the distance."
       }
     },
     {
@@ -6389,12 +6378,12 @@
       "number": 8,
       "order": 47,
       "purpose": {
-        "es": "Confrontación tras la transmisión",
-        "en": "Confrontation after the transmission"
+        "es": "La suposición errónea de Harlan revela su cálculo y su pesar antes del asesinato.",
+        "en": "Harlan’s mistaken assumption reveals his calculation and regret before the murder."
       },
       "description": {
-        "es": "Confrontación tras la transmisión",
-        "en": "Confrontation after the transmission"
+        "es": "Harlan supone que Zao transmitió a la Tierra, se tranquiliza con el doble retardo, lamenta que ella haya encontrado la evidencia y suspira antes de acercarse.",
+        "en": "Harlan assumes Zao transmitted to Earth, reassures himself with the two-leg delay, laments that she found the evidence, and sighs before approaching."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {

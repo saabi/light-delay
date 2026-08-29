@@ -801,12 +801,12 @@
         }
       },
       "summary": {
-        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
-        "en": "With wireless and COM A/B down, Zao uses the external laser's dedicated wired control. She rules out Earth and Proxima, calculates an intercept with the ship's future position, and sweeps the uncertainty ellipse as Harlan approaches through service and Sorell through the central cylinder."
+        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro; descarta Proxima porque Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo puede calcular la intercepción con la posición futura de la nave y barrer allí la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
+        "en": "With wireless and COM A/B down, Zao uses the external laser’s dedicated wired control. She rejects Earth because reception there and retransmission to the Ardor would take until after the encounter; she rejects Proxima because Jupiter occults the line of sight between the local mouth at L2 and the station at L1. Her only option is to calculate an intercept with the ship’s future position and sweep the uncertainty ellipse there while Harlan approaches through service and Sorell through the central cylinder."
       },
       "dramaticPurpose": {
-        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
-        "en": "With wireless and COM A/B down, Zao uses the external laser's dedicated wired control. She rules out Earth and Proxima, calculates an intercept with the ship's future position, and sweeps the uncertainty ellipse as Harlan approaches through service and Sorell through the central cylinder."
+        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro; descarta Proxima porque Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo puede calcular la intercepción con la posición futura de la nave y barrer allí la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
+        "en": "With wireless and COM A/B down, Zao uses the external laser’s dedicated wired control. She rejects Earth because reception there and retransmission to the Ardor would take until after the encounter; she rejects Proxima because Jupiter occults the line of sight between the local mouth at L2 and the station at L1. Her only option is to calculate an intercept with the ship’s future position and sweep the uncertainty ellipse there while Harlan approaches through service and Sorell through the central cylinder."
       },
       "characterIds": [
         "character:zao",
@@ -846,12 +846,12 @@
         }
       },
       "summary": {
-        "es": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
-        "en": "Harlan confronts and kills Zao offscreen, cleans the compartment, and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and constructing his alibi."
+        "es": "Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
+        "en": "Harlan enters after the send and sees only TRANSMITTED. He says aloud that Zao must have aimed at Earth and reassures himself that the two-leg delay would prevent warning Voss before the encounter. He laments that she found the evidence, sighs, and kills her offscreen; then he cleans the compartment and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and building his alibi."
       },
       "dramaticPurpose": {
-        "es": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
-        "en": "Harlan confronts and kills Zao offscreen, cleans the compartment, and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and constructing his alibi."
+        "es": "Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
+        "en": "Harlan enters after the send and sees only TRANSMITTED. He says aloud that Zao must have aimed at Earth and reassures himself that the two-leg delay would prevent warning Voss before the encounter. He laments that she found the evidence, sighs, and kills her offscreen; then he cleans the compartment and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and building his alibi."
       },
       "characterIds": [
         "character:zao",
@@ -2077,12 +2077,12 @@
         "en": "Message to the Corridor"
       },
       "purpose": {
-        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
-        "en": "With wireless and COM A/B down, Zao uses the external laser's dedicated wired control. She rules out Earth and Proxima, calculates an intercept with the ship's future position, and sweeps the uncertainty ellipse as Harlan approaches through service and Sorell through the central cylinder."
+        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro; descarta Proxima porque Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo puede calcular la intercepción con la posición futura de la nave y barrer allí la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
+        "en": "With wireless and COM A/B down, Zao uses the external laser’s dedicated wired control. She rejects Earth because reception there and retransmission to the Ardor would take until after the encounter; she rejects Proxima because Jupiter occults the line of sight between the local mouth at L2 and the station at L1. Her only option is to calculate an intercept with the ship’s future position and sweep the uncertainty ellipse there while Harlan approaches through service and Sorell through the central cylinder."
       },
       "summary": {
-        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
-        "en": "With wireless and COM A/B down, Zao uses the external laser's dedicated wired control. She rules out Earth and Proxima, calculates an intercept with the ship's future position, and sweeps the uncertainty ellipse as Harlan approaches through service and Sorell through the central cylinder."
+        "es": "Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro; descarta Proxima porque Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo puede calcular la intercepción con la posición futura de la nave y barrer allí la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.",
+        "en": "With wireless and COM A/B down, Zao uses the external laser’s dedicated wired control. She rejects Earth because reception there and retransmission to the Ardor would take until after the encounter; she rejects Proxima because Jupiter occults the line of sight between the local mouth at L2 and the station at L1. Her only option is to calculate an intercept with the ship’s future position and sweep the uncertainty ellipse there while Harlan approaches through service and Sorell through the central cylinder."
       },
       "participantRefs": [
         {
@@ -2120,12 +2120,12 @@
         "en": "Death Offscreen"
       },
       "purpose": {
-        "es": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
-        "en": "Harlan confronts and kills Zao offscreen, cleans the compartment, and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and constructing his alibi."
+        "es": "Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
+        "en": "Harlan enters after the send and sees only TRANSMITTED. He says aloud that Zao must have aimed at Earth and reassures himself that the two-leg delay would prevent warning Voss before the encounter. He laments that she found the evidence, sighs, and kills her offscreen; then he cleans the compartment and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and building his alibi."
       },
       "summary": {
-        "es": "Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
-        "en": "Harlan confronts and kills Zao offscreen, cleans the compartment, and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and constructing his alibi."
+        "es": "Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.",
+        "en": "Harlan enters after the send and sees only TRANSMITTED. He says aloud that Zao must have aimed at Earth and reassures himself that the two-leg delay would prevent warning Voss before the encounter. He laments that she found the evidence, sighs, and kills her offscreen; then he cleans the compartment and returns through service. Sorell finds the body alone, tries to revive her, and cannot communicate; Harlan restores COM A/B before returning to the bridge and building his alibi."
       },
       "participantRefs": [
         {

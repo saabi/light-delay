@@ -1,10 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import {
-	assertGeneratedCheck,
-	mergeGeneratedInlineI18n
-} from './lib/generated-inline-i18n.mjs';
+import { assertGeneratedCheck, mergeGeneratedInlineI18n } from './lib/generated-inline-i18n.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const outputPath = join(ROOT, 'data', 'scripts', 'light-delay-long.json');
@@ -106,7 +103,7 @@ const rows = [
 		8,
 		1,
 		'Mensaje hacia el corredor',
-		'Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra y Proxima, calcula la intercepción con la posición futura de la nave y barre la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.',
+		'Con wireless y COM A/B caídos, Zao usa el control cableado dedicado del láser exterior. Descarta Tierra porque recibir allí y retransmitir a la Ardor demoraría hasta después del encuentro; descarta Proxima porque Júpiter ocluye la línea de vista entre la boca local en L2 y la estación en L1. Sólo puede calcular la intercepción con la posición futura de la nave y barrer allí la elipse de incertidumbre mientras Harlan se aproxima por servicio y Sorell por el cilindro central.',
 		'location:diplomatic-core-room',
 		['character:zao', 'character:harlan', 'character:sorell'],
 		'T+57H45M',
@@ -116,7 +113,7 @@ const rows = [
 		9,
 		1,
 		'Muerte fuera de campo',
-		'Harlan confronta y mata a Zao fuera de campo, limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.',
+		'Harlan entra después del envío y sólo ve TRANSMITIDO. Supone en voz alta que Zao apuntó a la Tierra y se tranquiliza porque el doble retardo impediría advertir a Voss antes del encuentro. Lamenta que ella haya encontrado la evidencia, suspira y la mata fuera de campo; luego limpia el recinto y regresa por servicio. Sorell encuentra el cuerpo sola, intenta reanimarla y no logra comunicarse; Harlan restaura COM A/B antes de volver al puente y construir su coartada.',
 		'location:diplomatic-core-room',
 		['character:zao', 'character:harlan', 'character:sorell'],
 		'T+57H46M',
