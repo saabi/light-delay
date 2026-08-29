@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-29 — Escaleta antes que guion en la navegación
+
+- En el rail y el menú móvil, Outline aparece encima de Script: el guion depende de la escaleta.
+
 ## 2026-08-29 — Gates editoriales, causalidad y arquitectura de prompts
 
 - Corregido de forma durable el generador del tráiler: 29 tomas, 92,5 s y cero sobras de diálogo; `--check` evita que el JSON derivado vuelva a divergir.
