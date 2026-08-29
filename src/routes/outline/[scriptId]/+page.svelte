@@ -1,70 +1,77 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
 	import {
 		getLocalizedOutline,
 		getProject,
 		listLocalizedScripts,
 		outlinePathForScript
 	} from '$lib/data/repositories/index';
+	import {
+		scriptKindLabel,
+		scriptLabel,
+		scriptStatusLabel
+	} from '$lib/data/selectors/scriptPresentation';
+	import { storyText } from '$lib/data/selectors/localized';
 	import { getLanguageState } from '$lib/state/language.svelte';
-	import { scriptKindLabel, scriptLabel, scriptStatusLabel } from '$lib/data/selectors/scriptPresentation';
+	import type { OutlineCoverageEvidence, OutlineStep } from '$lib/types/outline';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 	import { withLocale } from '$lib/utils/paths';
 	import { page } from '$app/state';
 	import * as m from '$lib/paraglide/messages.js';
 	import { getLocale } from '$lib/paraglide/runtime.js';
-	import type { OutlineStep } from '$lib/types/outline';
-	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
-	import { storyText } from '$lib/data/selectors/localized';
 
 	const locale = getLocale();
-	const registry = listLocalizedScripts(locale);
 	const language = $derived(getLanguageState());
+	const registry = listLocalizedScripts(locale);
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const entry = $derived(registry.find((item) => item.id === scriptId));
 	const outline = $derived(getLocalizedOutline(scriptId, language.dialogueLanguage));
-	const steps = $derived(outline ? [...outline.steps].sort((a, b) => a.order - b.order) : []);
+	const storySteps = $derived(
+		outline
+			? outline.steps.filter((step) => step.level === 'story').sort((a, b) => a.order - b.order)
+			: []
+	);
+	const detailSteps = $derived(
+		outline
+			? outline.steps.filter((step) => step.level === 'detail').sort((a, b) => a.order - b.order)
+			: []
+	);
+	const byId = $derived(new Map(outline?.steps.map((step) => [step.id, step]) ?? []));
 	const expectedPath = $derived(outlinePathForScript(scriptId));
 	const scriptHref = $derived(withLocale(`/script/${encodeScriptId(scriptId)}`));
 	const canonicalId = getProject().project.canonicalScriptId;
 
-	const groups = $derived.by(() => {
-		const order: string[] = [];
-		const buckets: Record<string, OutlineStep[]> = {};
-		for (const step of steps) {
-			const key = step.sceneIds?.[0] ?? '';
-			if (!(key in buckets)) {
-				order.push(key);
-				buckets[key] = [];
-			}
-			buckets[key].push(step);
-		}
-		return order.map((sceneId) => ({ sceneId, steps: buckets[sceneId] }));
-	});
-
-	function importanceLabel(value: string) {
-		return value === 'required' ? m.outline_importance_required() : m.outline_importance_optional();
+	function children(parentId: string) {
+		return detailSteps.filter((step) => step.parentStepId === parentId);
 	}
-
-	function statusLabel(value: string) {
-		switch (value) {
-			case 'covered':
-				return m.outline_status_covered();
-			case 'missing':
-				return m.outline_status_missing();
-			case 'deferred':
-				return m.outline_status_deferred();
-			default:
-				return m.outline_status_planned();
-		}
+	function coverageLabel(value: string) {
+		const labels: Record<string, () => string> = {
+			not_started: m.outline_coverage_not_started,
+			partial: m.outline_coverage_partial,
+			covered: m.outline_coverage_covered,
+			deferred: m.outline_coverage_deferred,
+			not_applicable: m.outline_coverage_not_applicable
+		};
+		return (labels[value] ?? m.outline_coverage_not_started)();
 	}
-
-	function isCriticalGap(step: OutlineStep) {
-		return step.importance === 'required' && step.status === 'missing';
+	function targetLabel(value: string) {
+		return value === 'treatment'
+			? m.outline_coverage_treatment()
+			: value === 'script'
+				? m.outline_coverage_script()
+				: m.outline_coverage_animatic();
 	}
-
-	function groupHeading(sceneId: string) {
-		return sceneId ? sceneId : m.outline_group_no_scene();
+	function evidenceIds(evidence: OutlineCoverageEvidence) {
+		return [
+			...(evidence.sceneIds ?? []),
+			...(evidence.beatIds ?? []),
+			...(evidence.cueIds ?? []),
+			...(evidence.shotIds ?? [])
+		];
+	}
+	function text(value: OutlineStep['summary']) {
+		return storyText(value, language.dialogueLanguage);
 	}
 </script>
 
@@ -72,62 +79,64 @@
 	{#if outline}
 		<PageHeader
 			eyebrow={m.outline_eyebrow()}
-			title={storyText(outline.outline.title, language.dialogueLanguage)}
-			lede={m.outline_lede()}
+			title={text(outline.outline.title)}
+			lede={text(outline.outline.synopsis)}
 			meta={[
 				`v${outline.outline.version}`,
-				outline.outline.status,
 				entry ? scriptKindLabel(entry.kind) : scriptId,
-				`${steps.length} ${m.outline_steps()}`
+				`${storySteps.length} ${m.outline_story_beats()}`,
+				`${detailSteps.length} ${m.outline_detail_steps()}`
 			]}
 		/>
 		<StoryLanguageNotice />
-		{#each groups as group (group.sceneId || '__none')}
-			<section class="group">
-				<h2 class="group-title">{groupHeading(group.sceneId)}</h2>
-				<ol class="steps">
-					{#each group.steps as step (step.id)}
-						<li
-							class="step"
-							class:critical={isCriticalGap(step)}
-							data-importance={step.importance}
-							data-status={step.status}
-						>
-							<div class="step-head">
-								<span class="order">{step.order}</span>
-								<h3>{step.title}</h3>
-							</div>
-							<p class="summary">{step.summary}</p>
-							<ul class="badges">
-								<li>{importanceLabel(step.importance)}</li>
-								<li>{statusLabel(step.status)}</li>
-								{#if step.majorEventId}
-									<li>{step.majorEventId}</li>
-								{/if}
-							</ul>
-							{#if step.dependsOnStepIds?.length}
-								<p class="refs">
-									{m.outline_depends_on()}:
-									{step.dependsOnStepIds.join(', ')}
+		<ol class="story-list">
+			{#each storySteps as step (step.id)}
+				{@const detail = children(step.id)}
+				<li class="story-step" id={step.id}>
+					<header>
+						<span>{step.order}</span>
+						<h2>{text(step.title)}</h2>
+					</header>
+					<p class="summary">{text(step.summary)}</p>
+					{#if step.causalLinks?.length}
+						<div class="causes">
+							<strong>{m.outline_why()}</strong>
+							{#each step.causalLinks as link}
+								<p>
+									<a href={`#${link.sourceStepId}`}
+										>{text(byId.get(link.sourceStepId)?.title ?? link.sourceStepId)}</a
+									>: {text(link.explanation)}
 								</p>
-							{/if}
-							{#if step.sceneIds?.length}
-								<p class="refs">
-									{m.outline_scenes()}:
-									{#each step.sceneIds as sceneId, index (sceneId)}
-										{index > 0 ? ', ' : ''}
-										<a href={`${scriptHref}#${sceneId}`}>{sceneId}</a>
-									{/each}
-								</p>
-							{/if}
-						</li>
-					{/each}
-				</ol>
-			</section>
-		{/each}
-		{#if steps.length === 0}
-			<p class="empty-steps">{m.outline_empty_steps()}</p>
-		{/if}
+							{/each}
+						</div>
+					{/if}
+					{#if detail.length}
+						<details class="details">
+							<summary>{m.outline_details_show({ count: String(detail.length) })}</summary>
+							<ol>
+								{#each detail as item (item.id)}<li id={item.id}>
+										<h3><span>{item.order}</span> {text(item.title)}</h3>
+										<p>{text(item.summary)}</p>
+										{#if item.coverage}<div class="coverage" aria-label={m.outline_coverage()}>
+												{#each Object.entries(item.coverage) as [target, evidence]}<span
+														data-status={evidence.status}
+														>{targetLabel(target)}: {coverageLabel(evidence.status)}</span
+													>{/each}
+											</div>{/if}
+										{#each Object.entries(item.coverage ?? {}) as [target, evidence]}{@const ids =
+												evidenceIds(evidence)}{#if ids.length}<p class="refs">
+													<strong>{targetLabel(target)} · {m.outline_evidence()}:</strong>
+													{#each ids as id, index}{index ? ', ' : ''}{#if id.includes(':scene-')}<a
+																href={`${scriptHref}#${id}`}>{id}</a
+															>{:else}{id}{/if}{/each}
+												</p>{/if}{/each}
+									</li>{/each}
+							</ol>
+						</details>
+					{/if}
+				</li>
+			{/each}
+		</ol>
 	{:else}
 		<PageHeader
 			eyebrow={m.outline_eyebrow()}
@@ -139,9 +148,7 @@
 		/>
 		<div class="missing" role="status">
 			<p>{m.outline_missing_body({ path: expectedPath })}</p>
-			<p class="actions">
-				<a href={scriptHref}>{m.outline_open_script()}</a>
-			</p>
+			<a href={scriptHref}>{m.outline_open_script()}</a>
 		</div>
 	{/if}
 </main>
@@ -152,111 +159,123 @@
 		margin: 0 auto;
 		padding: 2.5rem var(--page-gutter) 4rem;
 	}
-
-	.group {
-		margin: 0 0 1.75rem;
-	}
-
-	.group-title {
-		margin: 0 0 0.75rem;
-		font: 700 0.78rem/1.2 var(--font-mono);
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--muted);
-	}
-
-	.steps {
-		margin: 0;
-		padding: 0;
+	.story-list {
 		list-style: none;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
+		margin: 1.5rem 0 0;
+		padding: 0;
+		display: grid;
+		gap: 1.25rem;
 	}
-
-	.step {
-		padding: 1rem 1.1rem;
+	.story-step {
+		scroll-margin-top: 2rem;
+		padding: 1.2rem 1.3rem;
 		border: 1px solid var(--line);
-		border-radius: 10px;
+		border-radius: 12px;
 		background: var(--panel);
 	}
-
-	.step.critical {
-		border-color: var(--gold);
-		box-shadow: inset 3px 0 0 var(--gold);
-	}
-
-	.step-head {
+	header {
 		display: flex;
+		gap: 0.8rem;
 		align-items: baseline;
-		gap: 0.75rem;
-		margin-bottom: 0.45rem;
 	}
-
-	.order {
+	header span,
+	h3 span {
 		font: 700 0.8rem/1 var(--font-mono);
 		color: var(--cyan);
-		min-width: 1.5rem;
 	}
-
-	.step h3 {
+	h2 {
 		margin: 0;
-		font: 650 1.1rem/1.25 var(--font-serif);
+		font: 650 1.28rem/1.25 var(--font-serif);
 	}
-
 	.summary {
-		margin: 0 0 0.65rem;
-		color: var(--muted);
-		max-width: 44rem;
+		max-width: 52rem;
+		color: var(--text);
+		font-size: 1.02rem;
 	}
-
-	.badges {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.4rem;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-	}
-
-	.badges li {
-		padding: 0.2rem 0.55rem;
-		border: 1px solid var(--line);
-		border-radius: 999px;
-		font-size: 0.75rem;
-		color: var(--gold);
-	}
-
-	.refs {
-		margin: 0.65rem 0 0;
-		font-size: 0.85rem;
+	.causes {
+		margin: 0.9rem 0;
+		padding: 0.75rem 0.9rem;
+		border-left: 3px solid var(--gold);
+		background: var(--panel2);
 		color: var(--muted);
 	}
-
-	.refs a {
+	.causes p {
+		margin: 0.35rem 0 0;
+	}
+	.causes a,
+	.refs a,
+	.missing a {
 		color: var(--cyan);
 	}
-
-	.empty-steps,
+	details {
+		margin-top: 1rem;
+		border-top: 1px solid var(--line);
+		padding-top: 0.8rem;
+	}
+	summary {
+		cursor: pointer;
+		color: var(--gold);
+		font-weight: 650;
+	}
+	details ol {
+		list-style: none;
+		padding: 0;
+		margin: 0.8rem 0 0;
+		display: grid;
+		gap: 0.7rem;
+	}
+	details li {
+		padding: 0.85rem;
+		border-radius: 8px;
+		background: var(--panel2);
+	}
+	h3 {
+		margin: 0;
+		font-size: 0.98rem;
+	}
+	details p {
+		margin: 0.4rem 0;
+		color: var(--muted);
+	}
+	.coverage {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		margin-top: 0.6rem;
+	}
+	.coverage span {
+		font-size: 0.72rem;
+		padding: 0.18rem 0.48rem;
+		border: 1px solid var(--line);
+		border-radius: 999px;
+	}
+	.coverage span[data-status='covered'] {
+		color: var(--cyan);
+	}
+	.coverage span[data-status='partial'],
+	.coverage span[data-status='deferred'] {
+		color: var(--gold);
+	}
+	.refs {
+		font: 0.75rem/1.45 var(--font-mono);
+		overflow-wrap: anywhere;
+	}
 	.missing {
 		margin-top: 1rem;
-		padding: 1.1rem 1.2rem;
+		padding: 1.1rem;
 		border: 1px dashed var(--line);
 		border-radius: 10px;
 		background: var(--panel2);
-		color: var(--muted);
-		max-width: 40rem;
 	}
-
-	.missing p {
-		margin: 0 0 0.75rem;
-	}
-
-	.actions {
-		margin: 0;
-	}
-
-	.actions a {
-		color: var(--cyan);
+	@media (max-width: 640px) {
+		.page {
+			padding-top: 1.2rem;
+		}
+		.story-step {
+			padding: 1rem;
+		}
+		.summary {
+			font-size: 0.95rem;
+		}
 	}
 </style>
