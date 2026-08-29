@@ -1,0 +1,311 @@
+# Notas de autor pendientes
+
+> Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
+
+Pendientes: **151**
+
+## medium
+
+- **data/characters.json:$.characters[19].notes[0]** [todo · open] — Precisar especialidad y arco sin inventar datos ausentes.
+  - Origen: `data/characters.json` · `$.characters[19].notes[0]`
+- **data/characters.json:$.characters[20].notes[0]** [todo · open] — Recuperar o decidir función antes de escribir diálogo.
+  - Origen: `data/characters.json` · `$.characters[20].notes[0]`
+- **data/outlines/light-delay-festival.json:$.steps[12].notes[0]** [continuity · open] — Observación 29/08/2026: el vínculo "relé físico → Harlan" no se dramatiza, sólo se afirma. En festival:outline-06 Zao dice en vivo "el relé físico apunta a—" sin completar la frase (cortada por el jamming); el nombre de Harlan sólo aparece aquí, en el mensaje grabado. Ninguna toma muestra cómo llega a esa conclusión específica. Defendible como compresión intencional (el documento de adaptación pide absorber exposición en overlays), pero a vigilar: si la Secuencia E resuelve la credencial de mando puramente desde el lado técnico de Elin, la omisión es inofensiva; si el guion necesita que el público siga el razonamiento de Zao paso a paso, faltaría un beat.
+  - Origen: `data/outlines/light-delay-festival.json` · `$.steps[12].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[0].notes[0]** [production · open] — Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[0].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[1].notes[0]** [production · open] — Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[1].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[10].notes[0]** [production · open] — Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[10].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[11].notes[0]** [production · open] — Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[11].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[12].notes[0]** [production · open] — Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[12].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[13].notes[0]** [production · open] — Continúa visualmente festival:cue-c-01 (borrado de cámaras/archivo) sin cue propio.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[13].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[14].notes[0]** [production · open] — Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[14].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[15].notes[0]** [production · open] — Continúa visualmente festival:cue-c-02 (reanimación fallida) sin cue propio.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[15].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[16].notes[0]** [production · open] — Reutiliza frame de main:shot-07-04 (asset asset:animatic-07-04).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[16].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[17].notes[0]** [production · open] — Continúa visualmente festival:cue-c-03 (niega haber visto a Sorell) sin cue propio.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[17].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[18].notes[0]** [production · open] — Continúa visualmente festival:cue-c-03 (Voss envía a Harlan con Okoye) sin cue propio.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[18].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[19].notes[0]** [production · open] — Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[19].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[2].notes[0]** [production · open] — Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[2].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[20].notes[0]** [production · open] — Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01), mismo still que festival:shot-c-01, como marcador de posición — necesita una toma propia para el Festival Cut (la asunción y el suspiro de Harlan no existen como beat separado en el corto canónico).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[20].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[21].notes[0]** [production · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[21].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[22].notes[0]** [production · open] — Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[22].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[23].notes[0]** [production · open] — Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[23].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[24].notes[0]** [production · open] — Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[24].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[25].notes[0]** [production · open] — Reutiliza frame de main:shot-09-02 (asset asset:animatic-09-02).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[25].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[26].notes[0]** [production · open] — Reutiliza frame de main:shot-10-07 (asset asset:animatic-10-07).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[26].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[27].notes[0]** [production · open] — Reutiliza frame de main:shot-11-01 (asset asset:animatic-11-01).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[27].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[28].notes[0]** [production · open] — Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[28].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[29].notes[0]** [production · open] — Reutiliza frame de main:shot-11-02 (asset asset:animatic-11-02).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[29].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[3].notes[0]** [production · open] — Reutiliza frame de main:shot-03-04 (asset asset:animatic-03-04).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[3].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[30].notes[0]** [production · open] — Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[30].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[31].notes[0]** [production · open] — Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[31].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[32].notes[0]** [production · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[32].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[33].notes[0]** [production · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[33].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[34].notes[0]** [production · open] — Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[34].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[4].notes[0]** [production · open] — Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[4].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[5].notes[0]** [production · open] — Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[5].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[6].notes[0]** [production · open] — Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara ("en el distribuidor del cilindro de servicio").
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[6].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[7].notes[0]** [production · open] — Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[7].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[8].notes[0]** [production · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03); continúa visualmente la acción de festival:cue-b-05 sin cue propio.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[8].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[9].notes[0]** [production · open] — Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06).
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[9].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[0].notes[0]** [sound · open] — Ambiente industrial, radio lejana, crujidos estructurales.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[0].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[1].notes[0]** [sound · open] — Noticias filtradas por altavoces.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[1].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[10].notes[0]** [editorial · open] — Antes formaba parte de la toma de mosaico; se separa porque la línea de Harlan es él reaccionando en vivo, no una voz de archivo — ver informe de guionización 2026-08-29.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[10].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[100].notes[0]** [sound · open] — Procesamiento.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[100].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[101].notes[0]** [sound · open] — Clic mecánico.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[101].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[102].notes[0]** [sound · open] — Motores y cerradura.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[102].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[103].notes[0]** [sound · open] — Alarma crece.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[103].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[104].notes[0]** [sound · open] — Metal, pasos.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[104].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[105].notes[0]** [sound · open] — Cuenta ya establecida.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[105].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[106].notes[0]** [sound · open] — Alarma cesa.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[106].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[107].notes[0]** [sound · open] — Tono orgánico lejano.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[107].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[108].notes[0]** [sound · open] — Sistema nominal.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[108].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[109].notes[0]** [sound · open] — Lectura matemática.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[109].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[110].notes[0]** [sound · open] — Pausa.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[110].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[111].notes[0]** [sound · open] — Portadora sale.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[111].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[112].notes[0]** [sound · open] — Respuesta Velari.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[112].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[113].notes[0]** [sound · open] — Música vuelve con cautela.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[113].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[114].notes[0]** [sound · open] — Motor casi imperceptible.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[114].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[115].notes[0]** [sound · open] — Armónicos orgánicos sin sonido de motor.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[115].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[116].notes[0]** [sound · open] — Un solo pulso común.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[116].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[117].notes[0]** [sound · open] — Ambiente sin diálogo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[117].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[118].notes[0]** [sound · open] — Eco mínimo de la transmisión.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[118].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[119].notes[0]** [sound · open] — Respiración.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[119].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[120].notes[0]** [sound · open] — Música asciende.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[120].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[121].notes[0]** [sound · open] — Silencio entre cláusulas.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[121].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[122].notes[0]** [sound · open] — Tema final, fade out.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[122].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[123].notes[0]** [editorial · open] — Toma 3 original excedía el montaje (0:08) frente al diálogo estimado (~0:18); se partió el VO de la periodista en dos tomas de mosaico.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[123].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[17].notes[0]** [sound · open] — Motores en espera.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[17].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[18].notes[0]** [sound · open] — Silencio previo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[18].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[19].notes[0]** [sound · open] — Cierres mecánicos, ignición.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[19].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[2].notes[0]** [sound · open] — Multitud, golpes de percusión.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[2].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[20].notes[0]** [sound · open] — Motor grave; música se abre.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[20].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[21].notes[0]** [sound · open] — Alarma de inversión.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[21].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[22].notes[0]** [sound · open] — Cese y regreso del zumbido.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[22].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[23].notes[0]** [sound · open] — Tres pulsos electrónicos.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[23].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[24].notes[0]** [sound · open] — Ambiente baja.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[24].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[25].notes[0]** [sound · open] — Pulso del núcleo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[25].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[26].notes[0]** [sound · open] — Textura digital tenue.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[26].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[27].notes[0]** [sound · open] — Golpe sonoro corto.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[27].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[28].notes[0]** [sound · open] — Confirmación seca de archivo local.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[28].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[29].notes[0]** [sound · open] — Cierre seco de archivo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[29].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[3].notes[0]** [sound · open] — Cánticos contrapuestos.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[3].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[4].notes[0]** [sound · open] — El muelle recupera presencia.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[4].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[46].notes[0]** [todo · open] — Diseño de interfaz ilustrativo, siguiendo docs/SIGNAL_BEAM_REQUIREMENTS.md §3 (predicted track, light-time intercept, uncertainty ellipse, divergent footprint, residual raster). Longitud de onda, apertura, energía de pulso y ganancia siguen sin fijar como canon — estos rótulos no deben leerse como especificación técnica final.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[46].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[5].notes[0]** [sound · open] — Avisos de cierre de rampa.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[5].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[6].notes[0]** [sound · open] — Pulso grave del núcleo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[6].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[6].notes[1]** [todo · open] — El frame heredado muestra el antiguo transmisor independiente; reemplazar por la consola cableada del láser exterior.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[6].notes[1]`
+- **data/scripts/light-delay-main-short.json:$.shots[64].notes[0]** [sound · open] — Golpes de reloj.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[64].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[65].notes[0]** [sound · open] — Ambiente bajo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[65].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[66].notes[0]** [sound · open] — Puente en silencio.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[66].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[67].notes[0]** [sound · open] — Tono administrativo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[67].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[68].notes[0]** [sound · open] — Credencial sobre metal.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[68].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[69].notes[0]** [sound · open] — Puerta de observación.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[69].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[7].notes[0]** [sound · open] — Música asciende hacia lanzamiento.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[7].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[70].notes[0]** [sound · open] — Tecleo y empuje constante.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[70].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[71].notes[0]** [sound · open] — Pulsos acompasados.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[71].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[72].notes[0]** [sound · open] — Alerta sutil.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[72].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[73].notes[0]** [sound · open] — Procesamiento crece.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[73].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[74].notes[0]** [sound · open] — Alarma se estabiliza.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[74].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[75].notes[0]** [sound · open] — Tono de hallazgo.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[75].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[76].notes[0]** [sound · open] — Reloj de encuentro persiste.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[76].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[77].notes[0]** [sound · open] — Motores graves.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[77].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[78].notes[0]** [sound · open] — Pausa.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[78].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[79].notes[0]** [sound · open] — Navegación activa.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[79].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[80].notes[0]** [sound · open] — Silencio.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[80].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[81].notes[0]** [sound · open] — Pulso débil.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[81].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[82].notes[0]** [sound · open] — Estática.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[82].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[83].notes[0]** [sound · open] — Corrección de errores.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[83].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[84].notes[0]** [sound · open] — Estática.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[84].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[85].notes[0]** [sound · open] — Silencio.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[85].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[86].notes[0]** [sound · open] — Tecleo inmediato.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[86].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[87].notes[0]** [sound · open] — Tres tonos se unifican.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[87].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[88].notes[0]** [sound · open] — Confirmación seca.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[88].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[89].notes[0]** [sound · open] — Alarma de seguridad.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[89].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[90].notes[0]** [sound · open] — Tono de ejecución.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[90].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[91].notes[0]** [sound · open] — Corrección de errores.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[91].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[92].notes[0]** [sound · open] — Impacto y alarma.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[92].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[93].notes[0]** [sound · open] — Pitidos se apagan detrás.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[93].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[94].notes[0]** [sound · open] — Golpe metálico.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[94].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[95].notes[0]** [sound · open] — Cael inicia apertura.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[95].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[96].notes[0]** [sound · open] — Reloj Velari.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[96].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[97].notes[0]** [sound · open] — Ritmos sonoros distintos.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[97].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[98].notes[0]** [sound · open] — Pulso regular.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[98].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[99].notes[0]** [sound · open] — Conector de potencia.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[99].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[0].notes[0]** [editorial · open] — Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[0].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[1].notes[0]** [editorial · open] — Reutiliza frame de main:shot-01-08 (asset asset:animatic-01-08).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[1].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[10].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[10].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[11].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[11].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[12].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[12].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[13].notes[0]** [editorial · open] — Reutiliza frame de main:shot-06-08 (asset asset:animatic-06-06).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[13].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[14].notes[0]** [editorial · open] — Reutiliza frame de main:shot-07-08 (asset asset:animatic-07-03).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[14].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[15].notes[0]** [editorial · open] — Reutiliza frame de main:shot-07-10 (asset asset:animatic-07-05).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[15].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[16].notes[0]** [editorial · open] — Reutiliza frame de main:shot-08-01 (asset asset:animatic-08-01).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[16].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[17].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[17].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[18].notes[0]** [editorial · open] — Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[18].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[19].notes[0]** [editorial · open] — Reutiliza frame de main:shot-12-01 (asset asset:animatic-12-01).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[19].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[2].notes[0]** [editorial · open] — Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[2].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[20].notes[0]** [editorial · open] — Reutiliza frame de main:shot-12-02 (asset asset:animatic-12-02).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[20].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[21].notes[0]** [editorial · open] — Reutiliza frame de main:shot-10-06 (asset asset:animatic-10-06).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[21].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[22].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-02 (asset asset:animatic-14-02).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[22].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[23].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-04 (asset asset:animatic-14-04).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[23].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[24].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-06 (asset asset:animatic-14-06).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[24].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[25].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-05 (asset asset:animatic-14-05).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[25].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[26].notes[0]** [editorial · open] — Reutiliza frame de main:shot-16-01 (asset asset:animatic-16-01).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[26].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[27].notes[0]** [editorial · open] — Reutiliza frame de main:shot-16-03 (asset asset:animatic-16-03).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[27].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[28].notes[0]** [editorial · open] — Reutiliza frame de main:shot-17-06 (asset asset:animatic-17-06).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[28].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[3].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-01 (asset asset:animatic-04-01).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[3].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[4].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-05 (asset asset:animatic-14-05).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[4].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[5].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[5].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[6].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-02 (asset asset:animatic-05-02).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[6].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[7].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[7].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[8].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-04 (asset asset:animatic-05-04).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[8].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[9].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08).
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[9].notes[0]`
+
