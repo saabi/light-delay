@@ -1,24 +1,25 @@
-import {
-	countTakesNeedingRegeneration,
-	shotCompletenessFlags,
-	shotReadinessChips,
-	takeNeedsRegeneration
-} from '../../../../scripts/lib/editorial-reports.mjs';
-import type { ScriptFile, Shot, Take } from '$lib/types/script';
-
+/**
+ * Re-export browser-safe editorial readiness classifiers for the app and Vitest.
+ * Node report scripts import the same module from scripts/lib/.
+ */
 export {
 	countTakesNeedingRegeneration,
 	shotCompletenessFlags,
 	shotReadinessChips,
 	takeNeedsRegeneration
-};
+} from '../../../../scripts/lib/editorial-readiness-core.mjs';
+
+import {
+	countTakesNeedingRegeneration,
+	shotCompletenessFlags,
+	shotReadinessChips,
+	takeNeedsRegeneration
+} from '../../../../scripts/lib/editorial-readiness-core.mjs';
+import type { ScriptFile, Shot, Take } from '$lib/types/script';
 
 export type ShotReadinessChip = 'regenerate' | 'missing_purpose' | 'missing_camera';
 
-export function getShotReadinessChips(
-	script: ScriptFile,
-	shot: Shot
-): ShotReadinessChip[] {
+export function getShotReadinessChips(script: ScriptFile, shot: Shot): ShotReadinessChip[] {
 	const take = shot.selectedTakeId
 		? script.takes.find((t) => t.id === shot.selectedTakeId)
 		: undefined;

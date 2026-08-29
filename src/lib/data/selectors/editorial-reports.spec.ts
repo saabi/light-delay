@@ -3,10 +3,12 @@ import {
 	buildImageDebtReport,
 	buildRegenBriefsReport,
 	buildShotCompletenessReport,
-	buildVisualArtReport,
+	buildVisualArtReport
+} from '../../../../scripts/lib/editorial-reports.mjs';
+import {
 	shotCompletenessFlags,
 	takeNeedsRegeneration
-} from '../../../../scripts/lib/editorial-reports.mjs';
+} from '../../../../scripts/lib/editorial-readiness-core.mjs';
 import { createScriptContext } from '../../../../scripts/lib/report-cli.mjs';
 import type { ScriptFile } from '$lib/types/script';
 
