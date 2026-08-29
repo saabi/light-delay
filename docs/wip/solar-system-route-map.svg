@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2026 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="2550px" height="3300px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2550 3300"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#FEFEFE;stroke-width:2.08;stroke-miterlimit:2.61313}
+    .str0 {stroke:#373435;stroke-width:2.08;stroke-miterlimit:2.61313}
+    .str2 {stroke:#EC268F;stroke-width:2.08;stroke-miterlimit:2.61313}
+    .fil2 {fill:none}
+    .fil0 {fill:#4B4B4D}
+    .fil3 {fill:#F58634}
+    .fil5 {fill:#EC268F}
+    .fil4 {fill:#ED3237}
+    .fil1 {fill:black}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0 str0" x="-11.32" y="-15.52" width="1317.75" height="1589.22"/>
+  <image x="22.54" y="18.52" width="1163.23" height="1113.56" xlink:href="solar-system-route-map_Images\solar-system-route-map_ImgID1.png"/>
+  <rect class="fil1" x="22.54" y="18.52" width="186.75" height="71.71"/>
+  <image x="32.17" y="32.47" width="176.55" height="213.89" xlink:href="solar-system-route-map_Images\solar-system-route-map_ImgID2.png"/>
+  <image x="414.86" y="865.48" width="647.72" height="465.3" xlink:href="solar-system-route-map_Images\solar-system-route-map_ImgID3.png"/>
+  <rect class="fil2 str1" x="552.37" y="546.04" width="95.97" height="97.45"/>
+  <line class="fil2 str1" x1="552.37" y1="546.04" x2="414.86" y2= "865.48" />
+  <line class="fil2 str1" x1="648.34" y1="546.04" x2="1062.58" y2= "865.48" />
+  <rect class="fil2 str1" x="414.86" y="865.48" width="647.72" height="465.3"/>
+  <image x="773.6" y="1253.6" width="462.24" height="257.28" xlink:href="solar-system-route-map_Images\solar-system-route-map_ImgID4.png"/>
+  <rect class="fil2 str1" x="794.17" y="1078.65" width="67.08" height="42.99"/>
+  <line class="fil2 str1" x1="794.17" y1="1078.65" x2="770.47" y2= "1253.6" />
+  <line class="fil2 str1" x1="861.25" y1="1078.65" x2="1235.85" y2= "1253.6" />
+  <rect class="fil2 str1" x="770.47" y="1253.6" width="465.37" height="257.28"/>
+  <circle class="fil3" cx="1005.59" cy="1377.81" r="1.66"/>
+  <circle class="fil4" cx="826.23" cy="1377.82" r="2.01"/>
+  <circle class="fil5" cx="1184.6" cy="1377.72" r="3.72"/>
+  <circle class="fil2 str2" cx="1184.6" cy="1377.72" r="7.26"/>
+ </g>
+</svg>
