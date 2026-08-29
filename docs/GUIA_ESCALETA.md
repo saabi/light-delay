@@ -1,83 +1,55 @@
 # Guía de escaleta para agentes
 
-Procedimiento obligatorio al crear o ampliar guion, diálogo, beats/cues, shots/takes o montaje de animatic de un `scriptId`. Contrato de datos: `docs/ESCALETA.md`. Cuidados narrativos: `docs/CUIDADOS_NARRATIVOS.md`. Causalidad entre cuts: `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
+Procedimiento obligatorio antes de crear o ampliar guion, diálogo, tomas o animatic de un `scriptId`. Contrato: `docs/ESCALETA.md`. Cuidados: `docs/CUIDADOS_NARRATIVOS.md`. Continuidad: `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
 
-## 1. Cuándo aplica
+## 1. Leer la historia antes de implementarla
 
-Cualquier tarea que:
+1. Abrir `data/outlines/<slug>.json` y leer `synopsis` más todos los pasos `story` sin consultar primero el guion.
+2. Comprobar que una persona puede contar premisa, conflicto, decisiones decisivas y resolución con esa capa.
+3. Para cada consecuencia directa, verificar que el resumen o `causalLinks.explanation` deja claro qué hecho previo la habilita, motiva, revela, fuerza, impide o resuelve.
+4. Sólo entonces desplegar los pasos `detail` y contrastarlos con canon y continuidad.
 
-- cree o modifique un `ScriptFile` (escenas, beats, cues, shots, takes);
-- monte o revise el animatic de un cut registrado;
-- declare cobertura de eventos o reescriba continuidad de un cut.
+Una causa crucial no puede quedar implícita sólo porque el autor o el agente ya la conoce. Si una decisión descarta alternativas —por ejemplo, Tierra por el doble tiempo de tránsito y Proxima por oclusión geométrica— la escaleta debe registrar esas razones y por qué la opción elegida sí funciona. Lo mismo vale para motivaciones, falsas suposiciones y gestos que revelan carácter.
 
-No aplica a cambios puramente de UI/chrome, assets visuales sin texto narrativo, o docs sin tocar datos de guion.
+Si la capa principal sólo repite encabezados o resúmenes de escena, todavía no es una escaleta útil.
 
-## 2. Puerta de entrada
+## 2. Autoría y grano
 
-Antes de continuar:
+- Escribir primero los hitos `story`; no generarlos desde `scene.summary`.
+- Cada hito debe describir un cambio narrativo, no una localización ni una toma.
+- Añadir detalle sólo cuando ayude a escribir o verificar la implementación.
+- Mantener los IDs existentes; nuevos IDs van namespaced por cut.
+- No enlazar por mera adyacencia. Una omisión deliberada de explicación es válida cuando el vínculo ya es inequívoco en el propio resumen.
+- Evitar exposición forzada: la escaleta puede declarar la lógica autoral, pero el guion debe revelarla mediante pensamiento en acción, elección y consecuencia visible.
+- Preservar la versión más reciente de cada beat. Antes de «simplificar» o eliminar una motivación, contrastar guion, escaleta, canon, historial y documentos de continuidad. Si las fuentes no permiten decidir, preguntar al autor.
+- No usar `notes` ni `TODO` para postergar una causa faltante salvo autorización explícita del autor. Sin esa autorización, una causa indispensable bloquea el trabajo narrativo que dependa de ella.
 
-1. Comprobar `data/outlines/<slug>.json` (slug = id del script sin `script:`), o `getOutline(scriptId)`, o `npm run report:outline-missing`.
-2. **Si falta el archivo:** crear la escaleta JSON **antes** de seguir ampliando guion/animatic de ese cut.
-3. **Si existe:** leerla y auditar (sección 8) antes de editar.
+Fuentes, en orden: canon y continuidad vigente; perfil de eventos del cut; documentos específicos aprobados. No inventar huecos.
 
-La UI tolera outlines ausentes; eso **no** autoriza a saltarse la escaleta al trabajar narrativa.
+## 3. Cobertura posterior
 
-## 3. Cómo construirla (causalidad, sin inventar)
+La cobertura no define la historia: verifica dónde fue implementada.
 
-Orden de fuentes:
+1. `treatment`: escena, beat o fuente que desarrolla el detalle.
+2. `script`: escenas, beats y cues que lo dramatizan.
+3. `animatic`: tomas que lo hacen visible o audible.
 
-1. `docs/CONTINUIDAD_CAUSAL_GUIONES.md` — cadena y obligaciones por versión.
-2. `comparisonProfile.eventCoverage` + `majorEvents` de `comparison-taxonomy.json`.
-3. Docs del cut (p. ej. adaptación festival). Una prosa compañera opcional puede auxiliar el análisis mientras se construye, pero una vez migrado el contenido narrativo al JSON se retira (ver `docs/ESCALETA_FESTIVAL.md` retirado en CHANGELOG, 29/08/2026) — el JSON es la checklist autoritativa, no un espejo temporal.
+Omitir un destino todavía no evaluado es válido. No marcar `covered` sin evidencia. Usar `partial` si una consecuencia existe pero falta su causa, claridad o remate; `deferred` sólo con una decisión editorial consciente; `not_applicable` cuando el cut no necesita ese destino.
 
-Reglas:
+## 4. Auditoría causal
 
-- Preferir `majorEventId` de la taxonomía frente a numeraciones ad hoc.
-- `required` = irreductible para ese cut; `optional` / `deferred` explícitos y justificados.
-- `order` = secuencia causal, no el índice de escena.
-- Grano: evento mayor **o** beat/toma cuando el cut lo necesite (el festival tiene ~1 paso por toma clave).
-- Declarar `dependsOnStepIds` cuando un cierre (doble llave, etc.) dependa de pasos previos del mismo archivo.
+Para cada acción, preguntar:
 
-## 4. Estados
+- ¿Qué sabe el personaje en ese momento y cómo lo aprendió?
+- ¿Qué alternativa acaba de perder o descartar?
+- ¿Qué hecho observable provoca la decisión?
+- ¿La consecuencia usa información que aún no llegó?
+- ¿Un paso posterior cobra una preparación anterior?
+- ¿La escaleta explica por qué se descartaron las alternativas obvias y por qué la opción compleja restante sí puede funcionar?
+- ¿Se conservaron las suposiciones erróneas y los gestos que explican tanto la acción como la profundidad del personaje?
 
-| Status | Uso |
-| --- | --- |
-| `covered` | Hay evidencia en el `ScriptFile` / animatic. Enlazar `sceneIds` / `beatIds` y, cuando exista cobertura concreta, `cueIds` / `shotIds`. |
-| `missing` | Beat identificado y aún no escrito (p. ej. d-00). |
-| `planned` | Plan de secuencia sin construir (p. ej. E–G del festival). |
-| `deferred` | Omitido a propósito en este cut, documentado. |
+La escaleta principal responde la cadena; el ledger causal verifica conocimiento y precondiciones finas; el guion y el animatic aportan evidencia.
 
-No marcar `covered` sin evidencia en datos.
+## 5. Cierre
 
-## 5. Notas vs Markdown compañero
-
-- Hallazgos de integridad a nivel de paso → `notes` (`type: continuity`, `resolved`).
-- Análisis largo en prosa → MD compañero opcional; no sustituye al JSON.
-- Tras un pase material en ES, actualizar el mapa `en` hermano en el mismo JSON (sección 6).
-
-## 6. Idiomas
-
-- Español autoritativo en `data/outlines/*.json` como campo `es` de cada `LocalizedString`.
-- Inglés en el mismo archivo (`"en": "…"`); no usar `public.en.json` para outlines.
-- Tras cambiar `title` / `summary` / `notes[].text` en ES: actualizar `en` en el mismo objeto; `npm run validate:translations` debe pasar.
-- La UI `/outline/[scriptId]` usa el idioma de diálogo (`dialogueLanguage`).
-
-## 7. Dependencias
-
-`dependsOnStepIds` referencia otros `OutlineStep.id` del mismo archivo. Validado por `validate:data`. `report:outline-gaps` considera deuda todo paso `required` que no esté `covered`, incluido `planned`, y también avisa si un paso cubierto depende de otro aún no cubierto.
-
-## 8. Auditoría contra guion y animatic
-
-Checklist:
-
-1. Cada `required` está `covered`, o queda `missing`/`deferred` consciente.
-2. `sceneIds` / `beatIds` / `cueIds` / `shotIds` resuelven cuando se declaran.
-3. Tras cambios materiales, reauditar (también hacia atrás: `CUIDADOS_NARRATIVOS` §5).
-4. Correr `npm run report:outline-missing` y `npm run report:outline-gaps`.
-
-## 9. Cierre
-
-- `npm run validate:data` (y `validate:translations` si hubo strings nuevas).
-- Revisar `/outline/[scriptId]` (agrupa por escena; destaca `required`+`missing`).
-- No regenerar imágenes salvo instrucción explícita.
-- Actualizar `CHANGELOG.md` / `docs/PROJECT_STATUS.md` si el cambio es material.
+Ejecutar `validate:data`, `validate:translations`, `report:outline-readability` y `report:outline-gaps` para el destino trabajado. Revisar `/outline/[scriptId]` con detalles cerrados y abiertos. Actualizar primero el español y luego el inglés inline. No regenerar imágenes salvo instrucción explícita. Registrar cambios materiales en `CHANGELOG.md` y `docs/PROJECT_STATUS.md`.

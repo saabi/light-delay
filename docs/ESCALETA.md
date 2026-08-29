@@ -1,50 +1,47 @@
-# Escaleta (outline) por guion
+# Escaleta por guion
 
-La escaleta es la **espina narrativa ordenada** de cada cut: qué eventos deben hacerse visibles o comprensibles al escribir el guion o montar el animatic. No sustituye el `ScriptFile` (beats/cues/shots) ni la matriz de comparación.
+La escaleta es la fuente autoral de la **historia y su cadena causal** para cada cut. Debe permitir comprender qué ocurre, por qué una decisión o consecuencia se vuelve posible y cómo se resuelve el conflicto sin depender de leer escenas, diálogos o tomas. El `ScriptFile` implementa esa intención; no debe usarse para regenerarla de forma circular.
 
-**Procedimiento para agentes:** [`docs/GUIA_ESCALETA.md`](GUIA_ESCALETA.md).
+## Dos niveles
 
-## Relación con otros artefactos
+- `story`: hitos legibles de principio a fin. Tienen título, resumen sustantivo y, cuando dependen directamente de otro hito, `causalLinks` con relación y explicación.
+- `detail`: desglose editorial dentro de un hito mediante `parentStepId`. Conserva los IDs históricos de escaleta y registra evidencia de implementación.
 
-| Artefacto | Rol |
+`outline.synopsis` resume conflicto, cadena principal y resolución. `order` se controla por nivel, no por posición en el array.
+
+## Causalidad
+
+`causalLinks` une pasos del mismo nivel y anteriores en el tiempo:
+
+| Relación | Sentido |
 | --- | --- |
-| `comparison-taxonomy.json` `majorEvents` | Taxonomía compartida de eventos mayores |
-| `comparisonProfile.eventCoverage` | Declaración presente/reworked/omitted por cut |
-| `ScriptFile.beats` | Beats del guion escrito |
-| **Outline / escaleta** | Checklist ordenada de generación por `scriptId` |
+| `enables` | crea una condición necesaria |
+| `motivates` | da al personaje una razón para actuar |
+| `reveals` | aporta información que cambia la lectura o decisión |
+| `forces` | elimina alternativas y obliga a responder |
+| `prevents` | bloquea una acción o resultado |
+| `pays_off` | resuelve o cobra una preparación anterior |
 
-Los pasos pueden referenciar `majorEventId` de la taxonomía y, cuando ya hay cobertura, `sceneIds` / `beatIds`. Opcionalmente `dependsOnStepIds` declara dependencias causales entre pasos del mismo archivo.
+La explicación debe nombrar el vínculo concreto. No basta con enlazar automáticamente cada paso con el anterior.
 
-## Archivos
+## Cobertura independiente
 
-Convención (opcional al inicio; **obligatoria antes de ampliar** guion/animatic — ver guía):
+`coverage` es opcional porque la escaleta puede preceder a toda implementación. Cada detalle puede declarar por separado `treatment`, `script` y `animatic`, con estados `not_started`, `partial`, `covered`, `deferred` o `not_applicable`. Un estado `covered` requiere evidencia: referencias narrativas para tratamiento/guion y `shotIds` para animatic.
 
-```text
-data/outlines/<script-slug>.json
-```
+Esto evita que «la historia está definida» signifique erróneamente «ya existen tomas».
 
-Ejemplo: `script:light-delay-main-short` → `data/outlines/light-delay-main-short.json`.
+## Archivos, UI e informes
 
-Los archivos **pueden faltar** en validación/UI vacía. Cuando existen, se validan forma y FKs. Textos como `LocalizedString` (`es` + `en` en el mismo JSON); ver `docs/JSON_FORMAT_I18N_ADDENDUM.md`.
-
-Tipos: `src/lib/types/outline.ts`. Contrato: `docs/JSON_FORMAT.md`.
-
-## UI
-
-- `/outline` redirige al outline del `canonicalScriptId`
-- `/outline/[scriptId]` lista pasos agrupados por escena (idioma de diálogo) o empty state
-- Destaca visualmente pasos `required` + `missing`
-- Enlace «Escaleta» / «Outline» en la navegación del proyecto
-
-## Informes offline
+Los archivos canónicos viven en `data/outlines/<script-slug>.json`; español e inglés están juntos como `LocalizedString`. La ruta `/outline/[scriptId]` muestra primero los hitos y permite desplegar detalle, evidencia y cobertura.
 
 ```bash
-npm run report:outline-missing   # scripts sin archivo de escaleta
-npm run report:outline-gaps      # required missing/deferred + deps incumplidas
+npm run report:outline-missing
+npm run report:outline-gaps -- --target treatment
+npm run report:outline-gaps -- --target script
+npm run report:outline-gaps -- --target animatic
+npm run report:outline-readability
 ```
 
-Salidas bajo `reports/outline-missing/` y `reports/outline-gaps/` (ignoradas en git). Ambos se ejecutan en `npm run report:all`.
+`npm run seed:outline -- --script <slug> --output <ruta-de-borrador>` sólo crea una plantilla fuera de `data/outlines/`, nunca sobrescribe una escaleta canónica y deja marcadores explícitos para autoría humana.
 
-## Criterio de cierre (cuando existan pasos)
-
-Antes de producción visual de un cut: todos los pasos `required` deberían estar en `covered` (con escenas/tomas enlazadas), salvo `deferred` documentado.
+Tipos: `src/lib/types/outline.ts`. Esquema: `data/schemas/outline.schema.json`. Procedimiento: [`GUIA_ESCALETA.md`](GUIA_ESCALETA.md).

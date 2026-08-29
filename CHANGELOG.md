@@ -4,6 +4,14 @@
 
 - Tarjeta Outline (01) antes que Guion en la cuadrícula del archivo, y enlace Escaleta junto a Animatic en la lista por cut.
 
+## 2026-08-29 — Escaletas jerárquicas y causalidad legible
+
+- Reautorizadas las cuatro escaletas con sinopsis y dos niveles: hitos `story` legibles de principio a fin y pasos `detail` que conservan los IDs históricos.
+- Las dependencias significativas usan relación y explicación bilingüe; la cobertura opcional se separa por tratamiento, guion y animatic con evidencia concreta.
+- La UI muestra primero la historia, permite desplegar detalle y señala por qué ocurre cada consecuencia; los gaps se consultan por destino y un informe adicional detecta problemas de legibilidad.
+- Retirado el generador circular basado en resúmenes de escena. `seed:outline` sólo crea borradores fuera del directorio canónico y se niega a sobrescribirlos.
+- Restaurado en main, Festival y largo el razonamiento completo de Zao (doble retardo terrestre, oclusión de Proxima y corredor futuro) y el beat de Harlan que supone Tierra, se tranquiliza, lamenta la suerte de Zao y suspira antes del asesinato. Las reglas de agente ahora prohíben sustituir versiones recientes o diferir causas faltantes sin autorización explícita.
+
 ## 2026-08-29 — Escaleta antes que guion en la navegación
 
 - En el rail y el menú móvil, Outline aparece encima de Script: el guion depende de la escaleta.

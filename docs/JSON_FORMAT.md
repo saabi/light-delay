@@ -232,21 +232,29 @@ Path convention: `data/outlines/<script-slug>.json` where `<script-slug>` is the
 
 ```ts
 export type OutlineImportance = "required" | "optional";
-export type OutlineStepStatus = "planned" | "covered" | "missing" | "deferred";
 export type OutlineFileStatus = "draft" | "reviewed" | "locked";
+export type OutlineStepLevel = "story" | "detail";
+export type OutlineCoverageStatus = "not_started" | "partial" | "covered" | "deferred" | "not_applicable";
 
 export interface OutlineStep {
   id: string; // namespaced to the cut, e.g. main:outline-01
-  order: number; // strict ascending order
-  title: string;
-  summary: string; // what must be made visible / understood
+  level: OutlineStepLevel;
+  parentStepId?: string; // required for detail; points to story
+  order: number; // unique inside its level
+  title: LocalizedString;
+  summary: LocalizedString; // change, decision, or consequence
   importance: OutlineImportance;
-  status: OutlineStepStatus;
+  causalLinks?: Array<{
+    sourceStepId: string; // earlier step at the same level
+    relation: "enables" | "motivates" | "reveals" | "forces" | "prevents" | "pays_off";
+    explanation: LocalizedString;
+  }>;
+  coverage?: Partial<Record<"treatment" | "script" | "animatic", {
+    status: OutlineCoverageStatus;
+    sceneIds?: SceneId[]; beatIds?: BeatId[]; cueIds?: CueId[]; shotIds?: ShotId[];
+    sourceRefs?: SourceReference[];
+  }>>;
   majorEventId?: string; // → comparison-taxonomy majorEvents
-  sceneIds?: SceneId[];
-  beatIds?: BeatId[];
-  dependsOnStepIds?: string[]; // other OutlineStep ids in the same file
-  sourceRefs?: SourceReference[];
   notes?: Note[];
 }
 
@@ -255,7 +263,8 @@ export interface OutlineFile {
   outline: {
     id: string; // e.g. outline:light-delay-main-short
     scriptId: ScriptId;
-    title: string;
+    title: LocalizedString;
+    synopsis: LocalizedString;
     status: OutlineFileStatus;
     version: string;
   };

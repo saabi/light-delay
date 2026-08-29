@@ -76,9 +76,10 @@ Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones d
 1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (español como fuente de verdad; inglés como secundario).
 2. `docs/CANON_DECISIONS.md` fija las decisiones de canon vigentes.
 3. `data/scripts/light-delay-main-short.json` es la fuente estructurada vigente del guion corto y del animatic; diálogo, cues, shots y takes se proyectan desde ese grafo.
-4. `docs/technical/` y los documentos prose reconciliados en `data/documents.json` fijan las reglas físicas y de continuidad complementarias.
-5. `legacy-site/guion-30-minutos.html`, `legacy-site/animatic-textual.html` y las demás páginas HTML se conservan como referencia de regresión y procedencia, no como una segunda autoridad editable.
-6. Los documentos históricos de largometraje sólo aportan procedencia; `docs/REVISION_LARGOMETRAJE_RECUPERADO.md` determina qué material fue aceptado, reescrito o rechazado.
+4. `data/outlines/*.json` fija por cut la intención narrativa y su cadena causal; el guion implementa la escaleta y no debe regenerarla desde sus propios resúmenes.
+5. `docs/technical/` y los documentos prose reconciliados en `data/documents.json` fijan las reglas físicas y de continuidad complementarias.
+6. `legacy-site/guion-30-minutos.html`, `legacy-site/animatic-textual.html` y las demás páginas HTML se conservan como referencia de regresión y procedencia, no como una segunda autoridad editable.
+7. Los documentos históricos de largometraje sólo aportan procedencia; `docs/REVISION_LARGOMETRAJE_RECUPERADO.md` determina qué material fue aceptado, reescrito o rechazado.
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
 

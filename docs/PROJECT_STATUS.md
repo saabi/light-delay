@@ -4,7 +4,8 @@ Fecha de corte: 2026-08-29.
 
 ## Completado
 
-- **Escaletas por cut:** los cuatro scripts tienen outline JSON con EN inline. Main (17 pasos), tráiler (9) y largo (28) se generan de forma reproducible; Festival conserva 44 pasos, con 14 `required` todavía no cubiertos en E–G. `report:outline-missing` da 0/4 y `report:outline-gaps` trata `required+planned` como deuda.
+- **Escaletas causales por cut:** los cuatro scripts tienen sinopsis y una capa `story` legible (12 main, 5 tráiler, 12 largo, 12 festival) sobre el detalle editorial existente (17/9/28/44). Los hitos explican decisiones y consecuencias; el detalle conserva IDs históricos y cobertura separada para tratamiento, guion y animatic. Ya no se regeneran desde resúmenes de escena.
+- **Razonamiento crítico restaurado:** main, festival y largo explican en escaleta por qué Zao descarta Tierra (doble retardo hasta la Ardor) y Proxima (oclusión de Júpiter L2–L1), y por qué sólo sirve apuntar al corredor futuro. También conservan que Harlan supone erróneamente un envío a la Tierra, se tranquiliza, lamenta la suerte de Zao y suspira antes de matarla.
 - **Guion corto — ritmo, causalidad y láser:** 17 escenas, 124 tomas y 30:39,5 de montaje derivado; ocho tripulantes de misión declarados. Ver `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md` y `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
 - **Informes editoriales en web y CLI:** rutas dinámicas `/reports/` y exportación `npm run report:all` (12 informes × 4 guiones) desde un único `report-runner.mjs` compartido.
 - **Deuda visual del animatic:** inventario provisional de 141 candidatos `needs_regeneration` (112 main + 29 tráiler) y 12 placeholders main `needs_replacement`. La producción visual queda bloqueada por guion hasta cerrar causalidad y cobertura; informes en `npm run report:editorial`.
@@ -62,7 +63,7 @@ Fecha de corte: 2026-08-29.
 2. **Festival Cut.** Datos con 7 escenas y **35 tomas** (A–D construidas); faltan E–G, imágenes canónicas y el array `sequences` sigue vacío. Ver escaleta y `docs/CUIDADOS_NARRATIVOS.md`.
 3. **Tráiler.** Versión animatic operativa reutilizando frames del main; falta auditoría causal final, afinado de ritmo, posibles stills exclusivos de título y audio.
 4. **Cobertura estructural.** Antes de habilitar imágenes deben resolverse por prioridad los placements, propósitos, framing y bindings que afecten continuidad o producción. Festival y largo no pueden figurar como completos mientras no tengan tomas.
-5. **Cobertura Festival.** Las cuatro escaletas existen; falta convertir los 14 pasos `required` planificados de E–G en cobertura real, sin marcar `covered` antes de tener evidencia.
+5. **Cobertura de Festival y largo.** El largo tiene tratamiento pero todavía no guion ni animatic; Festival conserva dos detalles parciales en D y E–G sin implementar en guion. La cobertura visual permanece abierta donde no existen `shotIds` y debe completarse sólo después de cerrar las tomas.
 6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 7. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
 8. **Retropropagación al corto.** Vega como pista falsa acotada y mayor textura de especialistas son candidatos; requieren decisión narrativa independiente. No retropropagar automáticamente el reparto largo.
