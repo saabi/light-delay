@@ -60,3 +60,12 @@ Todas las tomas nuevas (`shot-01-09` a `01-18`, `shot-06-09`, `shot-12-09` — 1
 - `light-delay-long.json` tiene `long:scene-08` (equivalente narrativo de esta escena) sin cues ni tomas (`cueIds: [], shotIds: []`), con `sourceRefs` hacia `main:scene-06`. Por el modelo de continuidades independientes (`docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`), esto no se hereda automáticamente — habría que decidir si se construye una versión ampliada de la escena de cálculo (con más presupuesto de tiempo: `targetDurationMs: 214286`) o si se deja así a propósito.
 - `light-delay-festival.json` y `light-delay-long.json` mencionan el láser en su propio texto, pero no se tocaron en esta pasada — sus propios informes de ritmo (`dialogue-timing`) no marcan problemas (0 tomas con sobra, 0 con más de dos hablantes).
 - `light-delay-trailer.json` mantiene 5 tomas con diálogo de sobra y 5 fuera de cámara según el informe actual; son preexistentes y no relacionadas con esta pasada — quedan para una revisión aparte si se decide tocar el tráiler.
+
+## 7. Seguimiento (29/08/2026) — surplus a cero en los 4 scripts
+
+Tras revisar el informe regenerado, quedaban 3 tomas en `light-delay-main-short` con sobra real (no solo redondeo: 0.8–1.6 s) y, al mirar `light-delay-trailer`, 5 tomas más con sobra — 2 de ellas por el mismo bug de cues apiladas en `atMs: 0` que ya se había corregido en el corto (`trailer:shot-g-01` con 3 líneas de diálogo simultáneas, `trailer:shot-f-04` con 2). Se corrigió todo:
+
+- **`light-delay-main-short`**: se alargaron `shot-12-01` (8000→10000 ms), `shot-01-03` (8500→10000 ms) y `shot-01-13` (8000→9000 ms), con el ajuste correspondiente en `targetDurationMs` de las escenas 12 y 1.
+- **`light-delay-trailer`**: se resecuenciaron los cues de `shot-g-01` y `shot-f-04` (antes apilados en `atMs: 0`, ahora uno tras otro dentro de la misma toma, con nota editorial documentando el bug). Además se dio un poco más de aire a las 4 tomas con sobra menor (`shot-d-01`, `shot-g-01`, `shot-f-04`, `shot-b-03`), incluida la línea interrumpida de Zao (`shot-d-01`, "La firma parece falsa... apunta a—") — el corte a media frase es intencional, así que solo se le dio margen de respiración, no se completó el diálogo.
+
+Resultado (`report:dialogue-timing --all`): **0 tomas con diálogo de sobra en los 4 scripts** (`main-short`, `festival`, `trailer`, `long`). `npm run validate:data` sigue en OK.
