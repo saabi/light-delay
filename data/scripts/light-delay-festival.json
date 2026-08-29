@@ -414,10 +414,12 @@
         "festival:beat-d-01"
       ],
       "shotIds": [
+        "festival:shot-d-00",
         "festival:shot-d-01",
         "festival:shot-d-02",
         "festival:shot-d-03",
         "festival:shot-d-04",
+        "festival:shot-d-04b",
         "festival:shot-d-05",
         "festival:shot-d-06",
         "festival:shot-d-07",
@@ -564,11 +566,13 @@
       "purpose": "Elin muestra lo que sabe del payload y lo que le falta; detecta la señal.",
       "summary": "Investigación de Elin contra reloj; detección de señal humana.",
       "cueIds": [
+        "festival:cue-d-11",
         "festival:cue-d-03",
         "festival:cue-d-04",
         "festival:cue-d-05",
         "festival:cue-d-06",
         "festival:cue-d-02",
+        "festival:cue-d-12",
         "festival:cue-d-07",
         "festival:cue-d-01",
         "festival:cue-d-08",
@@ -701,7 +705,7 @@
     {
       "id": "festival:cue-d-01",
       "beatId": "festival:beat-d-01",
-      "order": 7,
+      "order": 9,
       "type": "dialogue",
       "speakerId": "character:rao",
       "presentation": "on_screen",
@@ -718,7 +722,7 @@
     {
       "id": "festival:cue-d-02",
       "beatId": "festival:beat-d-01",
-      "order": 5,
+      "order": 6,
       "type": "action",
       "text": "Antes de autenticar la señal, Elin cartografía el payload, separa sus rutas y deja preparada una cuarentena limitada; todavía no puede atribuir el override."
     },
@@ -900,7 +904,7 @@
     {
       "id": "festival:cue-d-03",
       "beatId": "festival:beat-d-01",
-      "order": 1,
+      "order": 2,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -916,7 +920,7 @@
     {
       "id": "festival:cue-d-04",
       "beatId": "festival:beat-d-01",
-      "order": 2,
+      "order": 3,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -932,7 +936,7 @@
     {
       "id": "festival:cue-d-05",
       "beatId": "festival:beat-d-01",
-      "order": 3,
+      "order": 4,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -948,7 +952,7 @@
     {
       "id": "festival:cue-d-06",
       "beatId": "festival:beat-d-01",
-      "order": 4,
+      "order": 5,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -964,7 +968,7 @@
     {
       "id": "festival:cue-d-07",
       "beatId": "festival:beat-d-01",
-      "order": 6,
+      "order": 8,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -981,7 +985,7 @@
     {
       "id": "festival:cue-d-08",
       "beatId": "festival:beat-d-01",
-      "order": 8,
+      "order": 10,
       "type": "dialogue",
       "speakerId": "character:harlan",
       "presentation": "on_screen",
@@ -998,7 +1002,7 @@
     {
       "id": "festival:cue-d-08b",
       "beatId": "festival:beat-d-01",
-      "order": 9,
+      "order": 11,
       "type": "dialogue",
       "speakerId": "character:rao",
       "presentation": "on_screen",
@@ -1015,7 +1019,7 @@
     {
       "id": "festival:cue-d-09",
       "beatId": "festival:beat-d-01",
-      "order": 10,
+      "order": 12,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -1032,7 +1036,7 @@
     {
       "id": "festival:cue-d-10",
       "beatId": "festival:beat-d-01",
-      "order": 11,
+      "order": 13,
       "type": "dialogue",
       "speakerId": "character:rao",
       "presentation": "on_screen",
@@ -1137,6 +1141,38 @@
         "variants": {
           "es": {
             "text": "ELIPSE DE INCERTIDUMBRE — LISTA",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-11",
+      "beatId": "festival:beat-d-01",
+      "order": 1,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "ORDEN DE VOSS · AUDITORÍA DE NÚCLEO TRAS INCIDENTE EN RAMAL TÉCNICO",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-d-12",
+      "beatId": "festival:beat-d-01",
+      "order": 7,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "spokenText": "Si esto se dispara cuando abramos el canal... no va a parecer un accidente. Va a parecer que les disparamos primero.",
             "status": "source"
           }
         }
@@ -2048,8 +2084,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 1,
-      "order": 1,
+      "number": 2,
+      "order": 2,
       "description": "Elin, sola en el puesto técnico del puente, trabaja contra reloj; el contador del encuentro Velari sigue bajando al fondo.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2086,8 +2122,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 2,
-      "order": 2,
+      "number": 3,
+      "order": 3,
       "description": "Insert de consola: el payload aparece desplegado; el disparador se identifica como la apertura del canal Velari.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2135,8 +2171,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 3,
-      "order": 3,
+      "number": 4,
+      "order": 4,
       "description": "Insert de consola: el override aparece con firma no identificada; la cuarentena queda preparada, en espera.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2184,8 +2220,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 4,
-      "order": 4,
+      "number": 5,
+      "order": 5,
       "description": "Elin cartografía el payload, separa sus rutas y deja lista una cuarentena limitada — metódica, pero cada vez más tensa: todavía no puede atribuir el override a nadie.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2228,8 +2264,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 5,
-      "order": 5,
+      "number": 7,
+      "order": 7,
       "description": "Voss se acerca y pregunta directamente, sin rodeos.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2272,8 +2308,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 6,
-      "order": 6,
+      "number": 8,
+      "order": 8,
       "description": "Elin responde sin suavizar la verdad — honesta sobre el límite exacto de lo que puede hacer.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2316,8 +2352,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 7,
-      "order": 7,
+      "number": 9,
+      "order": 9,
       "description": "Harlan interviene con aparente sensatez — urgente, razonable en la superficie. Elin lo contradice de inmediato.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2365,8 +2401,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 9,
-      "order": 9,
+      "number": 11,
+      "order": 11,
       "description": "Elin se detiene en seco — algo nuevo en la pantalla. Voss se acerca; Harlan observa con una atención que no delata nada.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2409,8 +2445,8 @@
       "beatIds": [
         "festival:beat-d-01"
       ],
-      "number": 8,
-      "order": 8,
+      "number": 10,
+      "order": 10,
       "description": "Voss corta la discusión sin ceder terreno.",
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2591,6 +2627,94 @@
         {
           "type": "production",
           "text": "Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-00",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": "PD (insert): bitácora del sistema muestra la orden de Voss — auditoría del núcleo diplomático tras el incidente en el ramal técnico. Ninguna otra información: ni sospechosos, ni ubicación del cuerpo. Es la orden que pone a Elin a trabajar.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "INSERT",
+        "framing": "PD",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Insert fijo, legible en menos de dos segundos."
+      },
+      "durationMs": 3800,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-11",
+          "atMs": 300,
+          "durationMs": 3000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-00-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-00-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-10-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01)."
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-d-04b",
+      "sceneId": "festival:scene-d",
+      "beatIds": [
+        "festival:beat-d-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "description": "Elin se detiene un instante frente al disparador — la tensión ya no es sólo técnica. Lo dice en voz baja, casi para sí misma.",
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "MCU",
+        "framing": "PM",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": "Encuadre cerrado sobre Elin, sin movimiento."
+      },
+      "durationMs": 8600,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-d-12",
+          "atMs": 300,
+          "durationMs": 8000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-d-04b-take-01"
+      ],
+      "selectedTakeId": "festival:shot-d-04b-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-10-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "production",
+          "text": "Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05)."
         }
       ]
     }
@@ -3089,6 +3213,36 @@
         ],
         "explanation": "Still reutilizado del corto canónico (main:shot-06-03) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
         "replacementBrief": "Insert de consola: plan de vuelo, tiempo lumínico y elipse de incertidumbre calculándose sobre el corredor de intercepción."
+      }
+    },
+    {
+      "id": "festival:shot-d-00-take-01",
+      "shotId": "festival:shot-d-00",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-10-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-10-01) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "Insert de bitácora: orden de auditoría de Voss tras el incidente, sin sospechosos ni cuerpo."
+      }
+    },
+    {
+      "id": "festival:shot-d-04b-take-01",
+      "shotId": "festival:shot-d-04b",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-10-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": "Still reutilizado del corto canónico (main:shot-10-05) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
+        "replacementBrief": "MCU de Elin nombrando en voz baja el riesgo real: que el disparo del payload al abrir el canal parezca un ataque humano."
       }
     }
   ]

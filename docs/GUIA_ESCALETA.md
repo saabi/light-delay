@@ -28,7 +28,7 @@ Orden de fuentes:
 
 1. `docs/CONTINUIDAD_CAUSAL_GUIONES.md` — cadena y obligaciones por versión.
 2. `comparisonProfile.eventCoverage` + `majorEvents` de `comparison-taxonomy.json`.
-3. Docs del cut (p. ej. adaptación festival). Una prosa compañera (`docs/ESCALETA_FESTIVAL.md`) puede auxiliar el análisis; el JSON es la checklist autoritativa.
+3. Docs del cut (p. ej. adaptación festival). Una prosa compañera opcional puede auxiliar el análisis mientras se construye, pero una vez migrado el contenido narrativo al JSON se retira (ver `docs/ESCALETA_FESTIVAL.md` retirado en CHANGELOG, 29/08/2026) — el JSON es la checklist autoritativa, no un espejo temporal.
 
 Reglas:
 

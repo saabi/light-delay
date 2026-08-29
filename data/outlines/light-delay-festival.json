@@ -234,6 +234,13 @@
       "dependsOnStepIds": [
         "festival:outline-12",
         "festival:outline-06"
+      ],
+      "notes": [
+        {
+          "type": "continuity",
+          "text": "Observación 29/08/2026: el vínculo \"relé físico → Harlan\" no se dramatiza, sólo se afirma. En festival:outline-06 Zao dice en vivo \"el relé físico apunta a—\" sin completar la frase (cortada por el jamming); el nombre de Harlan sólo aparece aquí, en el mensaje grabado. Ninguna toma muestra cómo llega a esa conclusión específica. Defendible como compresión intencional (el documento de adaptación pide absorber exposición en overlays), pero a vigilar: si la Secuencia E resuelve la credencial de mando puramente desde el lado técnico de Elin, la omisión es inofensiva; si el guion necesita que el público siga el razonamiento de Zao paso a paso, faltaría un beat.",
+          "resolved": false
+        }
       ]
     },
     {
@@ -407,7 +414,7 @@
       "title": "Beat de conexión (pendiente)",
       "summary": "Propuesto 29/08/2026: un beat breve — overlay tipo INCIDENTE REGISTRADO o una línea de bitácora/orden de Voss — que establezca que se ordenó una auditoría de sistemas tras \"el incidente\", sin mostrar sospechosos ni forense. Cierra el vacío causal entre el hallazgo de Zao (Secuencia C) y la apertura de la investigación de Elin (Secuencia D), que hasta ahora aparece sin ninguna causa mostrada.",
       "importance": "required",
-      "status": "missing",
+      "status": "covered",
       "sceneIds": [
         "festival:scene-d"
       ],
@@ -418,8 +425,8 @@
       "notes": [
         {
           "type": "continuity",
-          "text": "Gap identificado 29/08/2026: sin este beat, Elin \"simplemente aparece\" investigando 23 horas después, sin que se muestre por qué. No es una investigación policial del asesinato (descartada a propósito por el documento de adaptación, sección 7.2) sino la causa mínima mostrada para el trabajo técnico de Elin.",
-          "resolved": false
+          "text": "Gap identificado 29/08/2026: sin este beat, Elin \"simplemente aparece\" investigando 23 horas después, sin que se muestre por qué. No es una investigación policial del asesinato (descartada a propósito por el documento de adaptación, sección 7.2) sino la causa mínima mostrada para el trabajo técnico de Elin. Implementado 29/08/2026: festival:shot-d-00 (insert de bitácora, cue-d-11) cierra este gap.",
+          "resolved": true
         }
       ],
       "dependsOnStepIds": [
@@ -469,7 +476,7 @@
       "title": "Se nombra el riesgo real (pendiente)",
       "summary": "Propuesto 29/08/2026: Elin o Voss nombran en voz alta qué podría pasar si el payload se dispara al abrir el canal Velari — riesgo de ataque, de que los Velari lo interpreten como agresión, de arruinar el primer contacto. Reemplaza el tono puramente clínico actual (\"puedo aislarlo, no revocar\") por angustia real y consecuencias concretas antes de que llegue el mensaje de Zao.",
       "importance": "required",
-      "status": "missing",
+      "status": "covered",
       "sceneIds": [
         "festival:scene-d"
       ],
@@ -480,8 +487,8 @@
       "notes": [
         {
           "type": "continuity",
-          "text": "Decisión 29/08/2026 (conversación con Sebastián): mantener la doble llave (no eliminarla) — el mensaje de Zao no debe resolver todo por sí solo, según el principio anti–deus ex machina de la sección 3.2 del documento de adaptación — pero enriquecer la Secuencia D con tensión y motivo, no sólo procedimiento técnico. Estructuralmente la doble llave no depende de este beat (Elin podría llegar al payload por auditoría rutinaria), pero la angustia del segundo acto sí lo necesita.",
-          "resolved": false
+          "text": "Decisión 29/08/2026 (conversación con Sebastián): mantener la doble llave (no eliminarla) — el mensaje de Zao no debe resolver todo por sí solo, según el principio anti–deus ex machina de la sección 3.2 del documento de adaptación — pero enriquecer la Secuencia D con tensión y motivo, no sólo procedimiento técnico. Estructuralmente la doble llave no depende de este beat (Elin podría llegar al payload por auditoría rutinaria), pero la angustia del segundo acto sí lo necesita. Implementado 29/08/2026: festival:shot-d-04b (Elin, cue-d-12) nombra el riesgo en voz alta.",
+          "resolved": true
         },
         {
           "type": "continuity",

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — Escaleta festival migrada a JSON; Markdown jubilado
+
+- `data/outlines/light-delay-festival.json`: 44 pasos completos (A–D `covered`, E–G `planned`, dos beats de Secuencia D `missing`), `dependsOnStepIds` rellenado en 30 pasos con dependencias causales reales (no mera adyacencia de escena). Reordenado `festival:outline-24` ("se nombra el riesgo real") para que siga a los overlays del payload que necesita, en vez de precederlos.
+- `npm run report:outline-gaps` confirma automáticamente el hallazgo central de la auditoría causal: `festival:outline-25` (ya `covered`) depende de `festival:outline-23` (todavía `missing`) — la Secuencia D construida se apoya en un beat de conexión que aún no existe en el guion/animatic.
+- Auditoría de migración: el contrato `OutlineFile`/`OutlineStep` (con `dependsOnStepIds`, `notes` tipadas y `majorEventId`) resultó suficiente para representar toda la escaleta narrativa — no se necesitaron cambios de esquema adicionales a los ya incorporados (ver entrada "Guía de escaleta, i18n y gaps"). El único contenido de `docs/ESCALETA_FESTIVAL.md` sin equivalente estructurado era meta-comentario sobre el propio esquema (evaluación de suficiencia + 4 mejoras sugeridas, ya implementadas), que no le corresponde a un `OutlineStep` — queda archivado aquí en vez de en la escaleta.
+- `docs/ESCALETA_FESTIVAL.md` retirado (contenido narrativo íntegramente migrado a `data/outlines/light-delay-festival.json`; `docs/GUIA_ESCALETA.md` ya establece el JSON como checklist autoritativa).
+
 ## 2026-08-29 — Festival Cut: shot list A–D
 
 - `light-delay-festival`: 33 tomas/takes para secuencias A–D (E–G siguen planificadas). Docs de cuidados narrativos y plan de sync actualizados.

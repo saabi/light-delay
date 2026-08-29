@@ -12,7 +12,7 @@ Medido por script, el problema tiene **dos causas completamente distintas** disf
 
 - 7 escenas, **33 tomas / 33 takes** en secuencias A–D; cues ampliados respecto al borrador inicial.
 - Secuencias E–G siguen sin tomas (plan en la escaleta / adaptación).
-- Guía de construcción: `docs/light-delay-festival-cut-adaptation.md` + `docs/ESCALETA_FESTIVAL.md` / `data/outlines/light-delay-festival.json`. Cuidados al escribir: `docs/CUIDADOS_NARRATIVOS.md`.
+- Guía de construcción: `docs/light-delay-festival-cut-adaptation.md` + `data/outlines/light-delay-festival.json` (escaleta estructurada, checklist autoritativa; el Markdown compañero `docs/ESCALETA_FESTIVAL.md` se retiró el 29/08/2026 tras la migración completa). Cuidados al escribir: `docs/CUIDADOS_NARRATIVOS.md`.
 
 **Propuesta restante:** cerrar E–G secuencia por secuencia con la misma rigurosidad; verificar con `validate:data`, `report:dialogue-timing` / `report:cue-coverage` y `report:outline-gaps` al cerrar cada una.
 
