@@ -94,6 +94,8 @@
 	"animatic_frames": "frames",
 	"animatic_shot_legend": "Shot legend",
 	"animatic_details": "Shot details",
+	"animatic_details_empty": "Select a take to view its details.",
+	"animatic_details_close": "Close details",
 	"animatic_previous": "Previous shot",
 	"animatic_play_pause": "Play or pause",
 	"animatic_stop": "Stop",

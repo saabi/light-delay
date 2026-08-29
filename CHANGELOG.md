@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-29 — Detalles colapsables en el editor de animatic
+
+- Panel de detalles de toma (mismo `ShotDetailsPanel` que el player) como barra lateral sticky a la derecha en escritorio y hoja inferior en móvil; selección por tarjeta, `?shot=` y tecla `D`.
+
 ## 2026-08-29 — Diálogo en tarjetas del editor de animatic
 
 - Las tarjetas de toma en `/animatic/[scriptId]` muestran el diálogo localizado (hablante + texto) derivado de los cues colocados; el player no cambia.

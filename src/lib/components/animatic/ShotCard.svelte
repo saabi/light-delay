@@ -20,6 +20,8 @@
 		cues = [],
 		readinessChips = [],
 		playerHref,
+		selected = false,
+		onselect,
 		onduration
 	}: {
 		shot: Shot;
@@ -33,6 +35,8 @@
 		cues?: Cue[];
 		readinessChips?: ShotReadinessChip[];
 		playerHref: string;
+		selected?: boolean;
+		onselect?: () => void;
 		onduration: (ms: number) => void;
 	} = $props();
 
@@ -40,9 +44,29 @@
 	const dialogueCues = $derived(
 		cues.filter((cue): cue is Extract<Cue, { type: 'dialogue' }> => cue.type === 'dialogue')
 	);
+
+	function onSelectClick(event: MouseEvent) {
+		const target = event.target as HTMLElement | null;
+		if (target?.closest('input, button, select, textarea, label')) return;
+		onselect?.();
+	}
+
+	function onSelectKeydown(event: KeyboardEvent) {
+		if (event.key !== 'Enter' && event.key !== ' ') return;
+		const target = event.target as HTMLElement | null;
+		if (target?.closest('input, button, select, textarea, label')) return;
+		event.preventDefault();
+		onselect?.();
+	}
 </script>
 
-<article class="shot-card" id={shot.id} tabindex="-1">
+<article
+	class="shot-card"
+	class:selected
+	id={shot.id}
+	tabindex="-1"
+	aria-current={selected ? 'true' : undefined}
+>
 	<a class="media" href={playerHref}>
 		<AnimaticFrame
 			{media}
@@ -52,7 +76,15 @@
 			fit="cover"
 		/>
 	</a>
-	<div class="body">
+	<div
+		class="body"
+		role="button"
+		tabindex="0"
+		aria-pressed={selected}
+		aria-label={`${m.animatic_details()}: ${m.animatic_take()} ${shot.number}`}
+		onclick={onSelectClick}
+		onkeydown={onSelectKeydown}
+	>
 		<header>
 			<span class="num">{m.animatic_take()} {shot.number}</span>
 			<span class="size">{shot.composition.size}</span>
@@ -117,6 +149,16 @@
 		background: var(--panel);
 	}
 
+	.shot-card.selected {
+		border-color: var(--cyan);
+		box-shadow: 0 0 0 1px var(--cyan);
+	}
+
+	.shot-card:focus-visible {
+		outline: 2px solid var(--cyan);
+		outline-offset: 2px;
+	}
+
 	.media {
 		display: block;
 		text-decoration: none;
@@ -131,6 +173,19 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
+		cursor: pointer;
+		text-align: left;
+		border: 0;
+		padding: 0;
+		background: transparent;
+		color: inherit;
+		font: inherit;
+	}
+
+	.body:focus-visible {
+		outline: 2px solid var(--cyan);
+		outline-offset: 2px;
+		border-radius: 6px;
 	}
 
 	header {

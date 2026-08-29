@@ -94,6 +94,8 @@
 	"animatic_frames": "fotogramas",
 	"animatic_shot_legend": "Leyenda de tomas",
 	"animatic_details": "Detalles de la toma",
+	"animatic_details_empty": "Selecciona una toma para ver sus detalles.",
+	"animatic_details_close": "Cerrar detalles",
 	"animatic_previous": "Toma anterior",
 	"animatic_play_pause": "Reproducir o pausar",
 	"animatic_stop": "Detener",

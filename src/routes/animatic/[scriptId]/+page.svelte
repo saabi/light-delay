@@ -62,6 +62,8 @@
 			card.focus({ preventScroll: true });
 		});
 	});
+
+	const initialShotId = $derived(page.url.searchParams.get('shot') ?? undefined);
 </script>
 
 <main class="page">
@@ -85,13 +87,14 @@
 			playerHref={withLocale(`/animatic/${encoded}/player`)}
 			targetDurationMs={script.script.targetDurationMs}
 			{warnings}
+			{initialShotId}
 		/>
 	{/key}
 </main>
 
 <style>
 	.page {
-		max-width: 1320px;
+		max-width: min(1600px, 100%);
 		margin: 0 auto;
 		padding: 2.5rem var(--page-gutter) 4rem;
 	}
