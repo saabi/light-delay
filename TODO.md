@@ -7,10 +7,16 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 ### Cierre causal y de cobertura antes de producir imágenes
 
 - **Fuente:** `docs/CONTINUIDAD_CAUSAL_GUIONES.md` y los informes `report:*`.
-- **Problema vigente:** los 57 cues de acción duplicados ya fueron archivados fuera del guion y el informe quedó en cero. El corto aún tiene 124/124 tomas sin binding explícito, 68 sin propósito y 12 sin framing; Festival tiene 35 tomas A–D pero E–G siguen sin construir; el largo sigue sin shot list.
+- **Problema vigente:** los 57 cues de acción duplicados ya fueron archivados. Main y Festival superan el ledger causal; Festival tiene 38 tomas A–D y guion E–G, pero esas tres secuencias siguen sin shot list. El largo continúa como tratamiento sin tomas. Los informes actuales todavía señalan deuda de binding, performance, propósito/framing y placements que debe revisarse por valor editorial, no rellenarse por volumen.
 - **Orden:** cerrar por guion texto y causalidad → placements/cobertura → bindings/performance necesarios → bloqueo de tomas → habilitación visual. No rellenar campos por volumen si no mejoran continuidad o producción.
 - **Compuerta:** corto, festival, tráiler y largo se habilitan de forma independiente. Un recurso compartido espera a todos sus consumidores o recibe una variante explícita.
 - **Cierre:** cada acción depende de información disponible para el personaje; los beats imprescindibles tienen cobertura; los informes distinguen `complete`, deuda y `not_applicable`; ninguna regeneración empieza antes del cierre del guion correspondiente.
+
+### Presupuesto de montaje del Festival Cut
+
+- **Estado medido:** las 38 tomas A–D suman 218,2 s. Un corte máximo de cinco minutos deja 81,8 s para E–G, frente a los 135 s de objetivo provisional que todavía declaran esas escenas.
+- **Trabajo:** al diseñar el shot list E–G, cronometrar lectura y acción; decidir qué acciones B–D pueden intercalarse, solaparse o comprimirse sin perder la llegada casual de Harlan, la deliberación de Voss, las rutas distintas ni la cadena probatoria.
+- **Cierre:** el montaje completo cabe en 4:30–5:00 con diálogo legible y sin eliminar causas necesarias. No resolverlo acortando silenciosamente cues antes de la lectura cronometrada.
 
 ### Autoridad de datos y extractor legacy seguro
 
@@ -47,7 +53,7 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 ### Cierre editorial y freeze de prompts por cut
 
 - **Estado:** `data/production/plans/` contiene planes provider-neutral bloqueados, segmentados a un máximo de 8 s para la campaña de prueba. No contienen prompts compilados ni autorizan generaciones. Cada toma exige un still representativo; first/last frame son artefactos separados y el audio final queda bajo control editorial.
-- **Bloqueos medidos:** `npm run report:prompt-readiness` enumera propósito, framing, bindings, referencias, presupuesto de adjuntos y aprobación de freeze. El largo produce cero tomas, no un falso verde; Festival conserva el bloqueo E–G en escaleta/ledger.
+- **Bloqueos medidos:** `npm run report:prompt-readiness` enumera propósito, framing, bindings, referencias, presupuesto de adjuntos y aprobación de freeze. El largo produce cero tomas, no un falso verde; Festival conserva el bloqueo visual de E–G pese a tener ya guion y ledger causal completos.
 - **Trabajo:** cerrar cada guion y su ledger causal; aprobar brief ES por toma; resolver referencias visuales y muestras de voz; congelar un digest por cut; recién entonces compilar el prompt EN y habilitar un adapter de proveedor.
 - **Proveedor:** los límites documentales están versionados en `data/production/provider-capabilities.json`. Seedance 2.5 permanece provisional y no ejecutable hasta aparecer en el catálogo operativo. Antes de usar la cuenta de prueba se debe verificar entitlement, costo/créditos, concurrencia y límites vivos mediante preflight.
 - **Cierre:** no existen bloqueos editoriales, cada segmento respeta duración y adjuntos, el digest coincide con el guion aprobado, costo y destino fueron autorizados y la ejecución puede auditarse sin leer Markdown en runtime.
@@ -56,7 +62,7 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 
 ### Regeneración y reemplazo de stills del animatic (deferida)
 
-- **Inventario provisional:** 141 candidatos `needs_regeneration` (112 reutilizaciones del corto + 29 del tráiler) y 12 placeholders `needs_replacement` exclusivos del corto. El corto tiene 124 tomas en total; no son 124 regeneraciones existentes.
+- **Inventario provisional:** 179 candidatos `needs_regeneration` (112 reutilizaciones del corto + 38 de Festival + 29 del tráiler) y 12 placeholders `needs_replacement` exclusivos del corto. El corto tiene 124 tomas en total; Festival 38 y tráiler 29.
 - **Problema:** los stills del animatic —interiores y exteriores— no reflejan la orientación actual de la Ardor (cubiertas perpendiculares al progrado) ni la revisión visual de exteriores.
 - **Estado:** los estados actuales son candidatos editoriales, no una cola de producción autorizada. Las 12 tomas sin imagen propia conservan placeholder y requieren reemplazo, no «regeneración».
 - **Informes:** `npm run report:editorial` (cola, completitud, arte faltante, briefs de regeneración).

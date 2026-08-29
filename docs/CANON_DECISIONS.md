@@ -66,10 +66,25 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 ## Conflicto y clímax
 
 - El sabotaje no debe depender de una única prueba digital falsificable.
-- El relé físico, el mensaje óptico de Zao y el soporte pasivo de sólo lectura forman evidencias complementarias.
+- Antes del aviso, Harlan termina tareas legítimas en otra cubierta y llega por coincidencia al acceso del puente con actitud rutinaria y relajada. Sólo cambia al oír que «la verdadera firma apunta a—»; no estaba siguiendo a Zao.
+- Zao alcanza a decir: «Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. La verdadera firma apunta a—». El jammer corta el nombre.
+- Voss sopesa que la identidad de Sorell fue falsificada pero que ella sigue implicada: la envía a verificar, luego la retiene para ordenarle buscar a Harlan y no entrar sola. Esa cautela da a Harlan una ventaja causal.
+- En microgravedad, Harlan aprovecha su agilidad y el cilindro de servicio directo; Sorell pierde tiempo buscándolo y avanza mano sobre mano por el acceso cotidiano. La diferencia de llegada no implica torpeza de Sorell.
+- El manifiesto del relé está firmado por su propio hardware y conserva la asignación física a R. Harlan. Zao captura un snapshot, lo adjunta al mensaje y firma ambos con su token criptográfico personal; la clave privada permanece en el token y requiere presencia local.
+- Harlan borra cámaras, archivo local e índice operativo del manifiesto, pero bajo presión deja ese cabo suelto: el snapshot firmado ya fue transmitido.
+- La cadena probatoria combina dispositivo y hora del transmisor, firma personal de Zao, snapshot físico firmado por hardware, auditoría independiente de Elin y saludo pasivo de sólo lectura. Ninguna capa aislada basta.
 - Sorell no debe quedar culpabilizada sólo por un registro superficial falsificado.
 - Elin contiene el proceso, pero la resolución no debe ser técnicamente mágica ni completamente inequívoca.
+- Al recibir la señal, Harlan objeta que una voz puede falsificarse. Elin responde que verifica la firma de Zao, no su voz, y conecta el snapshot del relé con payload y override mediante su investigación independiente.
+- Harlan usa la última ventana del override y corre bajo 1 g por el ascensor central hacia el ramal físico. Voss permanece en el puente; Okoye lo intercepta y contiene sin combate armado.
+- El resultado operativo es `PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA`: Elin aplica la cuarentena ya preparada y Sorell aporta el saludo pasivo de sólo lectura.
 - El contacto Velari se mantiene como horizonte dramático mientras la amenaza principal surge dentro de la misión humana.
+
+## Cierre
+
+- El saludo limpio obtiene un reconocimiento Velari limitado. La estación orgánica y la nave emisaria permanecen como objetos distintos.
+- Voss prepara el informe a la Tierra, adjunta la evidencia convergente y el legajo de Zao. Su retrato lo detiene; dice «Llegaste a tiempo» apenas para sí y pulsa `ENVIAR`.
+- No se muestra respuesta de la Tierra.
 
 ## Broma sobre el nombre de la nave
 

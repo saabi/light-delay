@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-29 — Carrera al núcleo, evidencia convergente y Festival A–G
+
+- Main, Festival y largo sincronizan la llegada casual de Harlan tras una tarea legítima, su microreacción ante «la verdadera firma apunta a—», la deliberación de Voss y la segunda orden que demora a Sorell.
+- Festival suma tres tomas A–D —38 en total— para la orden de Voss y las rutas contrastadas en microgravedad; no se generaron medios. E–G quedan escritos en cues y cubiertos a nivel de guion, pero continúan sin shot list.
+- Zao preserva el manifiesto del relé mediante snapshot firmado por hardware y firma mensaje/adjunto con su token personal. Elin verifica autora e integridad además de dispositivo/hora, y su auditoría independiente produce atribución convergente a Harlan.
+- Voss permanece en el puente durante el clímax; Okoye intercepta a Harlan sin combate armado. El cierre incorpora cuarentena/canal limpio/mediación activa, reconocimiento Velari limitado e informe terrestre con evidencia y legajo de Zao, enviado sin respuesta.
+- Los ledgers de main y Festival validan 13 pasos y 12 acciones; tráiler preserva identidad, envío, recepción y destino de Zao como incógnitas. El largo continúa como tratamiento y el generador durable fue actualizado.
+
 ## 2026-08-29 — Columna vertebral causal y suspenso del tráiler
 
 - Reescritas las capas `story` de main y festival para que cuenten causa, decisión y consecuencia sin abrir detalles; Festival establece desde su tercer hito quién advierte al puente, qué alcanza a decir y por qué Harlan actúa.

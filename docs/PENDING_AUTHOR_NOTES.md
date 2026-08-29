@@ -2,7 +2,7 @@
 
 > Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
 
-Pendientes: **151**
+Pendientes: **153**
 
 ## medium
 
@@ -10,8 +10,6 @@ Pendientes: **151**
   - Origen: `data/characters.json` · `$.characters[19].notes[0]`
 - **data/characters.json:$.characters[20].notes[0]** [todo · open] — Recuperar o decidir función antes de escribir diálogo.
   - Origen: `data/characters.json` · `$.characters[20].notes[0]`
-- **data/outlines/light-delay-festival.json:$.steps[27].notes[0]** [continuity · open] — Observación 29/08/2026: el vínculo "relé físico → Harlan" no se dramatiza, sólo se afirma. En festival:outline-06 Zao dice en vivo "el relé físico apunta a—" sin completar la frase (cortada por el jamming); el nombre de Harlan sólo aparece aquí, en el mensaje grabado. Ninguna toma muestra cómo llega a esa conclusión específica. Defendible como compresión intencional (el documento de adaptación pide absorber exposición en overlays), pero a vigilar: si la Secuencia E resuelve la credencial de mando puramente desde el lado técnico de Elin, la omisión es inofensiva; si el guion necesita que el público siga el razonamiento de Zao paso a paso, faltaría un beat.
-  - Origen: `data/outlines/light-delay-festival.json` · `$.steps[27].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[0].notes[0]** [production · open] — Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[0].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[1].notes[0]** [production · open] — Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02.
@@ -70,6 +68,12 @@ Pendientes: **151**
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[33].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[34].notes[0]** [production · open] — Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[34].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[35].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-05-08; requiere imagen propia coherente con esta toma.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[35].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[36].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-06-04; requiere imagen propia coherente con esta toma.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[36].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[37].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-06-05; requiere imagen propia coherente con esta toma.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[37].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[4].notes[0]** [production · open] — Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[4].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[5].notes[0]** [production · open] — Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01).
@@ -216,7 +220,7 @@ Pendientes: **151**
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[81].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[82].notes[0]** [sound · open] — Estática.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[82].notes[0]`
-- **data/scripts/light-delay-main-short.json:$.shots[83].notes[0]** [sound · open] — Corrección de errores.
+- **data/scripts/light-delay-main-short.json:$.shots[83].notes[0]** [sound · open] — Pulsos breves de corrección de errores de transmisión.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[83].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[84].notes[0]** [sound · open] — Estática.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[84].notes[0]`
@@ -224,15 +228,15 @@ Pendientes: **151**
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[85].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[86].notes[0]** [sound · open] — Tecleo inmediato.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[86].notes[0]`
-- **data/scripts/light-delay-main-short.json:$.shots[87].notes[0]** [sound · open] — Tres tonos se unifican.
+- **data/scripts/light-delay-main-short.json:$.shots[87].notes[0]** [sound · open] — Cuatro confirmaciones discretas convergen en un único tono estable.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[87].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[88].notes[0]** [sound · open] — Confirmación seca.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[88].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[89].notes[0]** [sound · open] — Alarma de seguridad.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[89].notes[0]`
-- **data/scripts/light-delay-main-short.json:$.shots[90].notes[0]** [sound · open] — Tono de ejecución.
+- **data/scripts/light-delay-main-short.json:$.shots[90].notes[0]** [sound · open] — La alarma continúa bajo la orden clara de Voss.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[90].notes[0]`
-- **data/scripts/light-delay-main-short.json:$.shots[91].notes[0]** [sound · open] — Corrección de errores.
+- **data/scripts/light-delay-main-short.json:$.shots[91].notes[0]** [sound · open] — La voz grabada de Zao conserva leves artefactos de corrección de transmisión.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[91].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[92].notes[0]** [sound · open] — Impacto y alarma.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[92].notes[0]`

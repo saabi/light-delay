@@ -61,8 +61,9 @@ No es necesario explicar la geometría completa del viaje dentro del diálogo.
 La versión revisada de 30 minutos evita que el mensaje de Zao funcione como deus ex machina. Este principio debe conservarse.
 
 - **Elin** descubre el payload, su disparador y la cuarentena.
-- **Zao** identifica a Harlan y señala el relé físico/registro que falta.
-- **La combinación** entre payload + relé + credencial de mando identifica al titular del override.
+- **Zao** preserva un snapshot del manifiesto firmado por el hardware del relé —todavía asignado a Harlan— y firma mensaje y adjunto con su token personal.
+- **Elin** verifica dispositivo/hora, autoría e integridad, y cruza el snapshot contra su auditoría independiente.
+- **La combinación** entre payload + relé físico + firma personal de Zao + auditoría identifica al titular del override.
 
 Por lo tanto, el mensaje no debe hacer que todos simplemente crean a Zao y arresten a Harlan. Debe proporcionar **la pieza que permite corroborar técnicamente lo que Elin ya había descubierto**.
 
@@ -174,14 +175,14 @@ Debe contener, en orden:
 
 1. Zao confirma que el payload está asociado al protocolo diplomático.
 2. Descubre que el registro lógico puede haber sido manipulado.
-3. Localiza la existencia del **relé físico/registro inmutable**.
-4. Encuentra el vínculo con una credencial de mando que apunta a Harlan.
-5. Alcanza a advertir que la firma parece falsa; Harlan activa el jammer desde el acceso al puente.
-6. Comprueba que también fallan COM A y COM B porque Harlan cortó el distribuidor del deck.
-7. Verifica que el control físico dedicado del láser exterior continúa activo.
-8. Descarta Tierra por demora y Proxima por falta de adquisición útil.
+3. Harlan termina una tarea legítima y llega al puente por coincidencia, relajado; la tripulación concentrada en Voss no lo ve.
+4. Zao alcanza a decir que la firma de Sorell parece falsa y «la verdadera firma apunta a—». Sólo esa frase provoca la microreacción de Harlan, que activa el jammer y corta COM A/B.
+5. Voss sopesa que Sorell sigue implicada pese a la falsificación, la envía a verificar y luego la retiene para exigir que busque a Harlan y no entre sola.
+6. Harlan se lanza balísticamente por servicio; Sorell pierde tiempo buscándolo y avanza mano sobre mano por el cilindro central.
+7. Zao comprueba que los tres enlaces cayeron, pero el control físico dedicado del láser exterior continúa activo.
+8. Descarta Tierra por el doble retardo y Proxima porque Júpiter ocluye la línea de vista L2–L1.
 9. Calcula la intercepción con la posición futura de la nave y ajusta un barrido sobre la elipse de incertidumbre.
-10. Graba y repite el mensaje durante el barrido.
+10. Captura el manifiesto firmado por el hardware del relé, adjunta el snapshot y firma todo con su token personal antes de grabar y repetir el mensaje.
 
 Mensaje condensado recomendado:
 
@@ -191,13 +192,13 @@ El mensaje debe transmitir **identidad + instrucción de verificación + adverte
 
 ### Secuencia C — Harlan / muerte de Zao / salto temporal — `1:25–1:45` (20 s)
 
-- Harlan llega por el cilindro de servicio; Sorell avanza más despacio por el cilindro central.
+- La llegada por rutas distintas ya quedó establecida en B; C paga esa ventaja cuando Harlan entra primero.
 - Barra de transmisión: 93% → 100%.
 - Harlan: “¿A quién enviaste eso?”
 - Zao ve `TRANSMITIDO`.
 - Corte antes de mostrar el asesinato.
 - Sonido breve de lucha.
-- Harlan limpia el recinto y regresa por servicio.
+- Harlan borra cámaras, archivo local e índice operativo del manifiesto y regresa por servicio; ignora que el snapshot ya viaja.
 - Sorell encuentra a Zao, intenta reanimarla y no logra llamar al puente.
 - Harlan restaura COM A/B, vuelve al puente y Voss lo envía con Okoye a buscar a Sorell.
 - Exterior de la nave / transición.
@@ -235,15 +236,16 @@ En esta versión **Elin puede asumir funcionalmente la detección de la señal**
 
 Éste es el corazón conceptual del cortometraje.
 
-1. La señal se autentica como salida del transmisor físico de Zao.
+1. Elin autentica dispositivo y hora del transmisor físico de Zao.
 2. Se reproduce el mensaje.
 3. Harlan intenta invalidarlo: una voz puede falsificarse.
-4. Elin no pide que le crean; ejecuta la instrucción de Zao.
-5. Overlay / montaje de tres capas:
-   - payload;
-   - relé físico;
-   - credencial de mando.
-6. Resultado: `R. HARLAN — INTEGRIDAD VERIFICADA`.
+4. Elin responde: «No estoy verificando su voz. Estoy verificando su firma»; el token personal autentica a Zao y la integridad de mensaje y adjunto.
+5. Overlay / montaje de evidencia convergente:
+   - dispositivo y hora;
+   - `AUTORA: J. ZAO · FIRMA DIGITAL VÁLIDA · TOKEN PERSONAL`;
+   - snapshot del manifiesto firmado por hardware y relé aún asignado a Harlan;
+   - auditoría independiente de payload y override.
+6. Resultado: `OVERRIDE ATRIBUIDO · R. HARLAN · EVIDENCIA CONVERGENTE`.
 7. Voss revoca su credencial.
 8. Harlan activa el override **antes de que la revocación se propague**.
 
@@ -257,9 +259,9 @@ Usar un único reloj narrativo:
 
 > `CANAL VELARI — APERTURA EN 00:48`
 
-Harlan obtiene acceso físico al control del núcleo o activa la rama hostil desde el último punto donde su override continúa válido.
+Harlan usa la última ventana del override y corre bajo 1 g por el ascensor central hacia el ramal físico.
 
-Voss lo contiene físicamente o bloquea el acceso mientras Elin ejecuta la operación digital.
+Voss permanece en el puente. Okoye intercepta y contiene a Harlan sin combate armado mientras Elin ejecuta la operación digital.
 
 La lógica debe mantenerse:
 
@@ -288,11 +290,13 @@ De este modo Sorell conserva su aporte causal canónico sin requerir presencia f
 3. Voss: “Envíen.”
 4. Silencio.
 5. Respuesta Velari orgánica/bioluminiscente.
-6. Hero shot: Celestial Ardor frente a la estación/nave emisaria Velari.
-7. Interior: mensaje de Zao archivado.
-8. Última línea de Voss:
+6. Hero shot: Celestial Ardor frente a la estación y la nave emisaria Velari, visualmente separadas.
+7. Voss prepara el informe a la Tierra y adjunta evidencia y legajo de Zao; su retrato lo detiene.
+8. Voss dice apenas para sí:
 
 > “Llegaste a tiempo.”
+
+9. Voss pulsa `ENVIAR`; no llega respuesta de la Tierra.
 
 FADE OUT.
 
@@ -340,9 +344,10 @@ La versión de cinco minutos sólo funcionará si la interfaz visual absorbe una
 - cuenta regresiva al canal Velari;
 - estado del payload;
 - firma anónima del override;
-- relé físico encontrado;
-- autenticación del transmisor de Zao;
-- coincidencia triple;
+- autenticación de dispositivo/hora;
+- firma personal de Zao;
+- snapshot del manifiesto físico firmado por hardware;
+- atribución por evidencia convergente;
 - revocación de credencial;
 - estado de cuarentena;
 - saludo pasivo de Sorell;
@@ -372,7 +377,7 @@ Una UI debe mostrar **una sola idea dramática por plano**. No llenar pantallas 
 - repetición verbal de información que ya está en pantalla;
 - interrogatorios;
 - explicación de sistemas en más de una frase;
-- discusión prolongada sobre si Harlan es culpable después de la coincidencia triple;
+- discusión prolongada sobre si Harlan es culpable después de que la evidencia convergente ya lo atribuye;
 - explicación verbal de por qué los Velari responden.
 
 ### Objetivo cuantitativo

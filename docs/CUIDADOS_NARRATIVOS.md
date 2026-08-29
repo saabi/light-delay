@@ -25,3 +25,15 @@ Cuando un personaje actúa sobre una suposición incorrecta, la puesta debe apor
 ## 5. Revisión retroactiva, no sólo hacia adelante
 
 Al construir una secuencia nueva, revisar también las tomas ya construidas de secuencias anteriores en busca de estos mismos huecos — no asumir que quedaron bien la primera vez. Estos cuatro cuidados se suman a los dos ya establecidos en `docs/PLAN_SINCRONIZACION_ANIMATICS.md` (causalidad temporal y consistencia de ubicaciones/terminología): antes de dar por cerrada una toma, revisar diálogo real, reacciones, legibilidad diegética y motivación inferible — y releer las tomas vecinas para confirmar que la secuencia entera sostiene la misma lógica interna.
+
+## 6. La acción sólo puede apoyarse en conocimiento disponible
+
+Antes de escribir una orden, decisión o deducción, registrar qué hecho conoce el personaje y cómo lo obtuvo. No adelantar conocimiento por conveniencia del montaje. Ejemplo: Voss envía una búsqueda porque Sorell está demorada y Harlan niega haberla visto; todavía no puede actuar basándose en la muerte de Zao, que la búsqueda aún no descubrió. El ledger de `data/continuity/` debe reflejar la misma secuencia.
+
+## 7. No reducir evidencia convergente a una sola frase o pantalla
+
+Cuando una atribución depende de varias capas, cada una debe conservar función propia. En la señal de Zao: firma/hora prueba dispositivo y momento; token personal prueba autora e integridad; snapshot firmado por hardware preserva el manifiesto físico; auditoría de Elin conecta relé, payload y override. «Una voz puede falsificarse» sólo discute el audio y no puede reemplazar la revisión de las otras capas.
+
+## 8. Comparar siempre con la versión narrativa más reciente
+
+Antes de reescribir un beat, buscar su formulación en canon, escaleta, guion y changelog. No restaurar por comodidad una versión anterior con menos motivación o causalidad. Si dos fuentes vigentes parecen incompatibles y la respuesta cambia la historia, detener esa parte y consultar; no ocultar el conflicto en un detalle de implementación.

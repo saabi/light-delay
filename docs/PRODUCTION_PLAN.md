@@ -13,7 +13,7 @@
 
 - Duración propuesta: 4:30–5:00.
 - Núcleo narrativo previsto: sabotaje de Zao → mensaje tardío → revelación sobre Harlan → Elin evita la transmisión → contacto Velari.
-- Existe un borrador estructurado de siete escenas. A–D tienen 35 tomas/takes; E–G siguen planificadas y sin imágenes canónicas. No debe confundirse con un simple recorte automático.
+- Existe un guion estructurado de siete escenas. A–D tienen 38 tomas/takes; E–G tienen cues y causalidad cubiertos, pero todavía no shot list ni imágenes canónicas. No debe confundirse con un simple recorte automático.
 
 ## Higgsfield
 
