@@ -21,6 +21,18 @@ const RULES = [
 		message: 'The trailer positively confirms Zao’s death.',
 		pattern:
 			/(?:golpe corporal seco|dry bodily impact|cesa(?:n)? (?:el forcejeo y )?la respiración|breathing ceases|cuerpo de zao|zao[’']s body|pausa mortuoria|fatal pause)/i
+	},
+	{
+		id: 'containment-confirmed',
+		message: 'The trailer confirms containment of the internal threat or a clean outbound path.',
+		pattern:
+			/(?:payload (?:en cuarentena|quarantined)|canal saliente limpio|outbound channel clean|mediaci[oó]n activa|mediation active|rama hostil (?:cerrada|confinada)|hostile branch (?:closed|confined)|ruta limpia preautorizada|preauthorized clean route)/i
+	},
+	{
+		id: 'contact-outcome-confirmed',
+		message: 'The trailer confirms release, acknowledgment, or a successful approach after the greeting.',
+		pattern:
+			/(?:libera autom[aá]ticamente (?:s[oó]lo )?el saludo|automatically releases (?:only )?the (?:clean )?greeting|pulso de reconocimiento|recognition pulse|limited acknowledgment|reconocimiento limitado|aproximaci[oó]n autorizada|authorized approach)/i
 	}
 ];
 

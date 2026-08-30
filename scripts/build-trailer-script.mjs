@@ -192,7 +192,8 @@ const SEGMENTS = [
 	{
 		key: 'f',
 		title: 'La nave llega primero',
-		summary: 'Cruce de la garganta; T+23 h; Elin contra reloj.',
+		summary: 'Cruce de la garganta; aproximación remota bajo desaceleración; Elin contra reloj.',
+		summaryEn: 'Throat crossing; remote approach under deceleration; Elin races the clock.',
 		dramaticPurpose: 'Salto temporal y presión técnica.',
 		locationId: 'location:celestial-ardor-bridge',
 		targetDurationMs: 11200,
@@ -227,30 +228,57 @@ const SEGMENTS = [
 	{
 		key: 'h',
 		title: 'El reloj',
-		summary: 'Montaje acelerado hacia el umbral Velari.',
+		summary: 'Montaje bajo desaceleración hacia el corte programado de motor y el umbral Velari.',
+		summaryEn: 'Montage under deceleration toward the scheduled engine cutoff and the Velari threshold.',
 		dramaticPurpose: 'Clímax sin revelar el desenlace.',
 		locationId: 'location:celestial-ardor-bridge',
 		targetDurationMs: 10000,
 		characterIds: ['character:rao', 'character:voss', 'character:cael', 'character:sorell'],
 		shots: [
-			{ mainShotId: 'main:shot-14-02', durationMs: 2000 },
+			{
+				mainShotId: 'main:shot-14-02',
+				durationMs: 2000,
+				description: 'Reloj inglés: VELARI CHANNEL · OPENS IN 00:48; la Ardor desacelera bajo 1 g.',
+				descriptionEn: 'English clock: VELARI CHANNEL · OPENS IN 00:48; the Ardor decelerates under 1 g.'
+			},
 			{ mainShotId: 'main:shot-14-04', durationMs: 2500 },
-			{ mainShotId: 'main:shot-14-06', durationMs: 1500 },
+			{
+				mainShotId: 'main:shot-14-06',
+				durationMs: 1500,
+				description: 'El corte programado inicia la microgravedad: correas y cables sujetos se elevan mientras una presencia anónima busca el control físico.',
+				descriptionEn: 'The scheduled cutoff begins microgravity: secured straps and cables rise as an anonymous presence seeks physical control.'
+			},
 			{ mainShotId: 'main:shot-14-05', durationMs: 1500 },
-			{ mainShotId: 'main:shot-16-01', durationMs: 2500 }
+			{
+				mainShotId: 'main:shot-16-01',
+				durationMs: 2500,
+				description: 'La Ardor queda diminuta ante la estación y la emisaria inmóviles; el montaje corta antes de resolver qué ocurrirá.',
+				descriptionEn: 'The Ardor hangs tiny before the motionless station and emissary; the edit cuts before resolving what will happen.'
+			}
 		]
 	},
 	{
 		key: 'i',
 		title: 'Título',
-		summary: 'LIGHT DELAY / LUZ TARDÍA y lema; pulso Velari.',
+		summary: 'Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.',
+		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY / LUZ TARDÍA and tagline.',
 		dramaticPurpose: 'Cierre de marca.',
 		locationId: 'location:velari-station',
 		targetDurationMs: 8000,
 		characterIds: ['character:zao'],
 		shots: [
-			{ mainShotId: 'main:shot-16-03', durationMs: 4000 },
-			{ mainShotId: 'main:shot-17-06', durationMs: 4000 }
+			{
+				mainShotId: 'main:shot-16-03',
+				durationMs: 4000,
+				description: 'Estación y emisaria conservan luces propias sin sincronizar con la Ardor; el plano no confirma respuesta.',
+				descriptionEn: 'Station and emissary retain their own lights without synchronizing with the Ardor; the shot does not confirm a response.'
+			},
+			{
+				mainShotId: 'main:shot-17-06',
+				durationMs: 4000,
+				description: 'Corte a negro y títulos antes de resolver el canal, la amenaza o la aproximación.',
+				descriptionEn: 'Cut to black and titles before resolving the channel, threat, or approach.'
+			}
 		]
 	}
 ];
@@ -499,7 +527,17 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		);
 	}
 	if (seg.key === 'h') {
-		addCue(textCue('trailer:cue-h-01', beatId, 1, 'CANAL VELARI — 01:32', 'interface'), 0);
+		addCue(
+			textCue(
+				'trailer:cue-h-01',
+				beatId,
+				1,
+				'CANAL VELARI — 00:48',
+				'interface',
+				'VELARI CHANNEL — 00:48'
+			),
+			0
+		);
 		addCue(
 			textCue('trailer:cue-h-02', beatId, 2, 'SALUDO SORELL-ZAO / SÓLO LECTURA', 'interface'),
 			3

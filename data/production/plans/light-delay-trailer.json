@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "33812cc4829efe87cd5447680f485d6e762b9258c1f027508951d5e264d4b47c",
+    "sourceDigest": "f4894103c82a3fd2c5b18c8d04eec57b58c127eef076380dc29948a8f22c35d2",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -915,13 +915,12 @@
       "shotId": "trailer:shot-h-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
-        "VELARI CHANNEL — 01:32"
+        "VELARI CHANNEL — 00:48"
       ],
       "artifacts": {
         "animaticStill": {
@@ -958,7 +957,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -998,7 +996,6 @@
       "shotId": "trailer:shot-h-03",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -1038,7 +1035,6 @@
       "shotId": "trailer:shot-h-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -1080,7 +1076,6 @@
       "shotId": "trailer:shot-h-05",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -1121,7 +1116,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:zao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -1161,7 +1155,6 @@
       "shotId": "trailer:shot-i-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"

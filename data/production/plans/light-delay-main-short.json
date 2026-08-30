@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-main-short",
     "scriptId": "script:light-delay-main-short",
     "scriptVersion": "1.1.0-draft",
-    "sourceDigest": "25d41752474bf60b8b81daed5674507e2bbdbaf506b05c5792c0da15a1d10a74",
+    "sourceDigest": "570bf693428c47ab27b234f263833175110088cf377dc954c09cec514b68a12d",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -2914,7 +2914,6 @@
       "shotId": "main:shot-09-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -2962,7 +2961,6 @@
       "shotId": "main:shot-09-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -3019,7 +3017,6 @@
       "blockers": [
         "missing_voice_sample:character:voss",
         "missing_voice_sample:character:sorell",
-        "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -3075,7 +3072,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -3131,7 +3127,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -3187,7 +3182,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:sorell",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3243,7 +3237,6 @@
       "shotId": "main:shot-10-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3300,7 +3293,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3357,7 +3349,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3413,7 +3404,6 @@
       "shotId": "main:shot-10-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3478,7 +3468,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3543,7 +3532,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3608,7 +3596,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3673,8 +3660,7 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_voice_sample:character:voss",
-        "missing_production_context",
+        "missing_voice_sample:character:rao",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3723,7 +3709,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3772,7 +3757,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:cael",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3822,7 +3806,6 @@
       "blockers": [
         "missing_voice_sample:character:harlan",
         "missing_voice_sample:character:cael",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3871,7 +3854,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3920,7 +3902,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:cael",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -3969,7 +3950,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:cael",
-        "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -4017,7 +3997,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4065,8 +4044,7 @@
       "shotId": "main:shot-12-03",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
-        "missing_production_context",
+        "missing_voice_sample:character:rao",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4114,7 +4092,6 @@
       "shotId": "main:shot-12-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4165,7 +4142,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4216,7 +4192,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4275,7 +4250,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4324,7 +4298,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -4372,7 +4345,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:zao",
-        "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -4419,7 +4391,6 @@
       "shotId": "main:shot-13-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4467,7 +4438,6 @@
       "shotId": "main:shot-13-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4517,7 +4487,6 @@
       "blockers": [
         "missing_voice_sample:character:cael",
         "missing_voice_sample:character:sorell",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4565,7 +4534,6 @@
       "shotId": "main:shot-13-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4614,7 +4582,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4662,7 +4629,6 @@
       "shotId": "main:shot-14-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4718,7 +4684,6 @@
       "shotId": "main:shot-14-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4776,7 +4741,6 @@
       "blockers": [
         "missing_voice_sample:character:harlan",
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4833,7 +4797,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:sorell",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4891,7 +4854,6 @@
       "blockers": [
         "missing_voice_sample:character:sorell",
         "missing_voice_sample:character:cael",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -4948,7 +4910,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5005,8 +4966,7 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_voice_sample:character:voss",
-        "missing_production_context",
+        "missing_voice_sample:character:okoye",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5063,7 +5023,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5121,7 +5080,6 @@
       "blockers": [
         "missing_voice_sample:character:sorell",
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5178,7 +5136,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5244,7 +5201,6 @@
       "shotId": "main:shot-15-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5294,7 +5250,6 @@
       "blockers": [
         "missing_voice_sample:character:rao",
         "missing_voice_sample:character:sorell",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5351,7 +5306,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5408,7 +5362,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:sorell",
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -5464,7 +5417,6 @@
       "shotId": "main:shot-15-05",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
         "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"

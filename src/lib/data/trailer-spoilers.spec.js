@@ -26,4 +26,18 @@ describe('trailer spoiler guard', () => {
 			'send-confirmed'
 		]);
 	});
+
+	it('rejects resolution and contact-outcome disclosures', () => {
+		const hits = findTrailerSpoilers({
+			containment: 'PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA',
+			release: 'At T=0, the protocol automatically releases only the clean greeting.',
+			acknowledgment: 'The station answers with a limited acknowledgment.'
+		});
+
+		expect(hits.map((hit) => hit.ruleId).sort()).toEqual([
+			'contact-outcome-confirmed',
+			'contact-outcome-confirmed',
+			'containment-confirmed'
+		]);
+	});
 });

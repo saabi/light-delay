@@ -46,6 +46,12 @@ Esto significa que la Ardor no debe representarse internamente como un avión o 
 
 Cuando la misión requiere invertir el empuje para desacelerar, la nave interrumpe el empuje, entra temporalmente en microgravedad, rota aproximadamente 180° y vuelve a acelerar. Las mismas superficies siguen funcionando como pisos una vez restablecido el empuje.
 
+### Corte al igualar velocidad en el encuentro remoto
+
+La aproximación remota a la estación Velari termina bajo desaceleración, con gravedad aparente cercana a 1 g. El corte de motor al igualar velocidad está programado y anunciado; en el clímax ocurre a T−12 s respecto de la apertura del canal. La tripulación no es sorprendida por el cambio, pero pierde apoyo en el instante del corte. No deben aparecer herramientas ni objetos peligrosos sin asegurar: el paso a microgravedad se expresa con correas, tethers, cables flexibles, cabello y elementos sujetos que se elevan.
+
+El relé físico del núcleo dispone de accionamientos principal y auxiliar alcanzables desde el ramal técnico. Bajo 1 g una persona puede usar la arquitectura estrecha para bloquear el principal; en microgravedad puede impulsarse hacia el auxiliar. Los pasamanos y puntos de tether permiten interceptar y redirigir ese movimiento sin aplicar una lógica de tackle terrestre.
+
 ## 4. Arquitectura interna axial
 
 La organización general se conserva, en lo posible, según la secuencia ya establecida:

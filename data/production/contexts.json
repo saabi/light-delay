@@ -53,8 +53,8 @@
         "en": "Ardor coasting in microgravity"
       },
       "physics": {
-        "es": "Durante la aproximación final y el cruce la nave no acelera: cuerpos y objetos obedecen microgravedad; el cilindro de servicio permite trayectorias balísticas rápidas.",
-        "en": "During final approach and transit the ship is not accelerating: bodies and objects obey microgravity; the service cylinder permits fast ballistic trajectories."
+        "es": "Durante la aproximación y el cruce de la garganta local la nave no acelera: cuerpos y objetos obedecen microgravedad; el cilindro de servicio permite trayectorias balísticas rápidas.",
+        "en": "During approach to and transit through the local throat, the ship is not accelerating: bodies and objects obey microgravity; the service cylinder permits fast ballistic trajectories."
       },
       "visualRules": [
         {
@@ -70,6 +70,40 @@
         }
       ],
       "status": "draft"
+    },
+    {
+      "id": "context:ardor-remote-cutoff-transition",
+      "label": {
+        "es": "Corte remoto de 1 g a microgravedad",
+        "en": "Remote 1 g to microgravity cutoff"
+      },
+      "physics": {
+        "es": "La aproximación remota termina bajo desaceleración. A T−12 s el corte programado de motor iguala velocidad e inicia microgravedad; la tripulación conoce la maniobra.",
+        "en": "The remote approach ends under deceleration. At T−12 s the scheduled engine cutoff matches velocity and begins microgravity; the crew knows the maneuver."
+      },
+      "visualRules": [
+        {
+          "es": "Antes del corte, Harlan puede bloquear el accionamiento principal usando apoyo y la arquitectura estrecha; después se impulsa hacia el auxiliar y Okoye redirige su momento con pasamanos y tether.",
+          "en": "Before cutoff, Harlan can block the primary actuator using footing and the narrow architecture; afterward he pushes toward the auxiliary and Okoye redirects his momentum with handrails and a tether."
+        },
+        {
+          "es": "No mostrar objetos peligrosos sueltos. Sólo se elevan correas, cables flexibles, cabello y elementos sujetos.",
+          "en": "Do not show unsecured hazardous objects. Only straps, flexible cables, hair, and secured items rise."
+        }
+      ],
+      "soundRules": [
+        {
+          "es": "El empuje y la vibración estructural cesan en el corte; permanecen ventilación, respiración, tethers y contacto con pasamanos.",
+          "en": "Thrust and structural vibration cease at cutoff; ventilation, breathing, tethers, and handrail contact remain."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/CELESTIAL_ARDOR.md"
+        }
+      ],
+      "status": "reviewed"
     },
     {
       "id": "context:ardor-exterior-vacuum",
@@ -195,6 +229,33 @@
       ]
     },
     {
+      "contextId": "context:ardor-thrust-gravity",
+      "scriptId": "script:light-delay-main-short",
+      "sceneIds": [
+        "main:scene-09",
+        "main:scene-10",
+        "main:scene-11",
+        "main:scene-12",
+        "main:scene-13",
+        "main:scene-14"
+      ]
+    },
+    {
+      "contextId": "context:ardor-remote-cutoff-transition",
+      "scriptId": "script:light-delay-main-short",
+      "shotIds": [
+        "main:shot-14-07",
+        "main:shot-14-08",
+        "main:shot-14-09",
+        "main:shot-14-10",
+        "main:shot-15-01",
+        "main:shot-15-02",
+        "main:shot-15-03",
+        "main:shot-15-04",
+        "main:shot-15-05"
+      ]
+    },
+    {
       "contextId": "context:proxima-dock",
       "scriptId": "script:light-delay-festival",
       "shotIds": [
@@ -256,6 +317,28 @@
         "festival:shot-g-06",
         "festival:shot-g-07",
         "festival:shot-g-11"
+      ]
+    },
+    {
+      "contextId": "context:ardor-remote-cutoff-transition",
+      "scriptId": "script:light-delay-festival",
+      "shotIds": [
+        "festival:shot-f-04",
+        "festival:shot-f-05",
+        "festival:shot-f-06",
+        "festival:shot-f-07",
+        "festival:shot-f-08",
+        "festival:shot-g-01",
+        "festival:shot-g-02",
+        "festival:shot-g-03"
+      ]
+    },
+    {
+      "contextId": "context:ardor-remote-cutoff-transition",
+      "scriptId": "script:light-delay-trailer",
+      "sceneIds": [
+        "trailer:scene-h",
+        "trailer:scene-i"
       ]
     },
     {

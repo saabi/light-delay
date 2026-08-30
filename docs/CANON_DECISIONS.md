@@ -17,7 +17,7 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 - La misión no requiere que llegue desde la Tierra a último momento.
 - El núcleo/complemento diplomático Velari fue añadido posteriormente mediante retrofit en Proxima.
 - Es una nave humana axial de aproximadamente 80–100 m y unas 300 t, funcional, reparable y sin estética de nave de lujo.
-- Sus cubiertas son transversales al eje de empuje. En los tramos propulsados, la aceleración produce gravedad aparente; durante la aproximación final y el cruce de la garganta, la nave viaja por inercia y queda en microgravedad.
+- Sus cubiertas son transversales al eje de empuje. En los tramos propulsados, la aceleración produce gravedad aparente. La aproximación y el cruce de la garganta local se realizan por inercia y en microgravedad; la aproximación remota al encuentro Velari termina con una desaceleración bajo 1 g y un corte de motor programado al igualar velocidad.
 - La circulación longitudinal se reparte entre un cilindro central de acceso, un pozo de ascensor y un cilindro de servicio más estrecho. El núcleo diplomático está fuera del eje y posee accesos operativo y técnico separados.
 - La cubierta de mando conecta con un vestíbulo axial: el puente ve la salida del cilindro central, mientras el acceso lateral al cilindro de servicio queda fuera de la línea visual de las consolas.
 - La voz y los datos operativos disponen de respaldo cableado redundante por cubierta. Un distribuidor A/B accesible desde el cilindro de servicio permite aislar físicamente una zona para mantenimiento.
@@ -75,10 +75,15 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 - Harlan borra cámaras, archivo local e índice operativo del manifiesto, pero bajo presión deja ese cabo suelto: el snapshot firmado ya fue transmitido.
 - La cadena probatoria combina dispositivo y hora del transmisor, firma personal de Zao, snapshot físico firmado por hardware, auditoría independiente de Elin y saludo pasivo de sólo lectura. Ninguna capa aislada basta.
 - Sorell no debe quedar culpabilizada sólo por un registro superficial falsificado.
+- La grabación posterior a la limpieza muestra que Sorell llegó cuando Zao ya estaba muerta. Voss no la detiene ni la trata como autora probable, pero suspende la credencial comprometida y restringe su acceso con escolta hasta cerrar la atribución. El saludo que preparó permanece disponible fuera de línea en soporte pasivo de sólo lectura.
 - Elin contiene el proceso, pero la resolución no debe ser técnicamente mágica ni completamente inequívoca.
 - Al recibir la señal, Harlan objeta que una voz puede falsificarse. Elin responde que verifica la firma de Zao, no su voz, y conecta el snapshot del relé con payload y override mediante su investigación independiente.
-- Harlan usa la última ventana del override y corre bajo 1 g por el ascensor central hacia el ramal físico. Voss permanece en el puente; Okoye lo intercepta y contiene sin combate armado.
-- El resultado operativo es `PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA`: Elin aplica la cuarentena ya preparada y Sorell aporta el saludo pasivo de sólo lectura.
+- El token de Zao autentica autora, mensaje y snapshot; no revoca credenciales ni purga la carga. La auditoría independiente de Elin completa la atribución y Voss ejerce la autoridad para revocar a Harlan.
+- Antes de quedar expuesto, Harlan defiende preservar intacto el canal automático y usa el procedimiento para retrasar cualquier intervención. No recomienda destruir la mediación que necesita para ejecutar el payload.
+- Harlan usa la última ventana del override y corre bajo 1 g por el ascensor central hacia el ramal físico. Bloquea el accionamiento principal y espera el corte de motor programado a T−12 s: al comenzar la microgravedad se impulsa hacia el auxiliar. La tripulación conoce la maniobra; no hay objetos sueltos, sólo correas, cables flexibles, cabello y elementos sujetos que se elevan.
+- Voss permanece en el puente. Harlan apela al pasado operativo que comparte con Okoye; ella vacila un instante, elige su deber y redirige su impulso con pasamanos y una sujeción de tether, sin combate armado.
+- El resultado operativo es `PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA`: Elin obtiene cinco segundos para cerrar físicamente la rama ya cartografiada; Sorell valida fuera de línea el saludo pasivo y Elin lo conecta a la ruta limpia.
+- Voss preautoriza únicamente el saludo limpio antes de T=0. El protocolo automático lo libera al abrirse el canal; la automatización no sustituye ninguna decisión de mando ni concede autoridad al token de Zao.
 - El contacto Velari se mantiene como horizonte dramático mientras la amenaza principal surge dentro de la misión humana.
 
 ## Cierre

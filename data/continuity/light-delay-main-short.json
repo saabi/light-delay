@@ -77,8 +77,8 @@
     {
       "id": "fact:zao-dead-and-scene-disturbed",
       "description": {
-        "es": "Zao está muerta y Sorell alteró involuntariamente la escena al intentar reanimarla.",
-        "en": "Zao is dead and Sorell inadvertently disturbed the scene while attempting resuscitation."
+        "es": "Zao está muerta; la grabación posterior al tramo borrado muestra que Sorell llegó después y alteró involuntariamente la escena al intentar reanimarla.",
+        "en": "Zao is dead; the recording after the erased segment shows that Sorell arrived afterward and inadvertently disturbed the scene while attempting resuscitation."
       }
     },
     {
@@ -105,15 +105,15 @@
     {
       "id": "fact:harlan-contained",
       "description": {
-        "es": "Okoye interceptó y contuvo a Harlan sin combate armado mientras Voss permaneció en el puente.",
-        "en": "Okoye intercepted and restrained Harlan without an armed fight while Voss remained on the bridge."
+        "es": "En el corte programado a T−12, Okoye superó una vacilación y redirigió con pasamanos y tether el impulso de Harlan hacia el auxiliar; Voss permaneció en el puente.",
+        "en": "At the scheduled T−12 cutoff, Okoye overcame a hesitation and used handrails and a tether to redirect Harlan’s push toward the auxiliary; Voss remained on the bridge."
       }
     },
     {
       "id": "fact:clean-channel-ready",
       "description": {
-        "es": "El payload está en cuarentena, el canal saliente está limpio y la mediación permanece activa.",
-        "en": "The payload is quarantined, the outbound channel is clean, and mediation remains active."
+        "es": "Sorell validó el saludo fuera de línea, Elin cerró la rama y conectó la ruta limpia, y Voss preautorizó sólo ese saludo antes de T=0.",
+        "en": "Sorell validated the greeting offline, Elin closed the branch and connected the clean route, and Voss preauthorized only that greeting before T=0."
       }
     },
     {
@@ -337,8 +337,8 @@
       "id": "main:causal-08",
       "order": 8,
       "description": {
-        "es": "La búsqueda encuentra a Sorell intentando reanimar a Zao; Okoye preserva lo que queda de la escena.",
-        "en": "The search finds Sorell attempting to resuscitate Zao; Okoye preserves what remains of the scene."
+        "es": "La búsqueda encuentra a Sorell intentando reanimar a Zao; la grabación posterior al tramo borrado prueba que llegó después de la muerte. Voss suspende su acceso y exige escolta, pero no la detiene.",
+        "en": "The search finds Sorell attempting to resuscitate Zao; the recording after the erased segment proves that she arrived after the death. Voss suspends her access and requires an escort but does not detain her."
       },
       "knowers": [
         "character:sorell",
@@ -361,15 +361,17 @@
       ],
       "shotIds": [
         "main:shot-08-05",
-        "main:shot-08-07"
+        "main:shot-08-07",
+        "main:shot-09-01",
+        "main:shot-09-05"
       ]
     },
     {
       "id": "main:causal-09",
       "order": 9,
       "description": {
-        "es": "Elin identifica la función hostil y prepara una cuarentena antes de conocer al dueño del override.",
-        "en": "Elin identifies the hostile function and prepares quarantine before knowing the override owner."
+        "es": "Elin identifica la función hostil y prepara una cuarentena antes de conocer al dueño del override; Harlan invoca el procedimiento para preservar el canal automático y retrasarla.",
+        "en": "Elin identifies the hostile function and prepares quarantine before knowing the override owner; Harlan invokes procedure to preserve the automatic channel and delay her."
       },
       "knowers": [
         "character:rao",
@@ -468,8 +470,8 @@
       "id": "main:causal-12",
       "order": 12,
       "description": {
-        "es": "Harlan usa la última ventana y corre al ramal físico; Voss permanece en el puente y Okoye lo intercepta sin combate armado.",
-        "en": "Harlan uses the last window and runs to the physical branch; Voss remains on the bridge and Okoye intercepts him without an armed fight."
+        "es": "Harlan corre bajo 1 g, bloquea el accionamiento principal y usa el corte programado a T−12 para impulsarse al auxiliar; apela a Okoye, que vacila un instante y redirige su impulso con pasamanos y tether. Voss permanece en el puente.",
+        "en": "Harlan runs under 1 g, blocks the primary actuator, and uses the scheduled T−12 cutoff to push toward the auxiliary; he appeals to Okoye, who hesitates for an instant and redirects his momentum with handrails and a tether. Voss remains on the bridge."
       },
       "knowers": [
         "character:voss",
@@ -500,8 +502,8 @@
       "id": "main:causal-13",
       "order": 13,
       "description": {
-        "es": "Elin aplica la cuarentena, Sorell aporta el saludo pasivo, el contacto procede y Voss envía a la Tierra evidencia y legajo de Zao.",
-        "en": "Elin applies quarantine, Sorell supplies the passive greeting, contact proceeds, and Voss sends Earth the evidence and Zao’s personnel file."
+        "es": "La contención concede cinco segundos: Elin cierra la rama, Sorell valida fuera de línea el saludo, Voss preautoriza sólo la ruta limpia y el protocolo la libera en T=0. Luego Voss envía a la Tierra evidencia y legajo de Zao.",
+        "en": "The restraint grants five seconds: Elin closes the branch, Sorell validates the greeting offline, Voss preauthorizes only the clean route, and the protocol releases it at T=0. Voss then sends Earth the evidence and Zao’s personnel file."
       },
       "knowers": [
         "character:voss",
@@ -769,8 +771,8 @@
       "stepId": "main:causal-12",
       "actorId": "character:okoye",
       "action": {
-        "es": "Intercepta y contiene a Harlan.",
-        "en": "Intercepts and restrains Harlan."
+        "es": "Supera una vacilación y contiene a Harlan en microgravedad con pasamanos y tether.",
+        "en": "Overcomes a hesitation and restrains Harlan in microgravity with handrails and a tether."
       },
       "requiresKnownFactIds": [
         "fact:harlan-attribution-converged"
@@ -792,11 +794,23 @@
       "stepId": "main:causal-13",
       "actorId": "character:sorell",
       "action": {
-        "es": "Aporta el saludo pasivo de sólo lectura.",
-        "en": "Supplies the passive read-only greeting."
+        "es": "Valida fuera de línea el saludo pasivo de sólo lectura.",
+        "en": "Validates the passive read-only greeting offline."
       },
       "requiresKnownFactIds": [
         "fact:harlan-contained"
+      ]
+    },
+    {
+      "stepId": "main:causal-13",
+      "actorId": "character:voss",
+      "action": {
+        "es": "Preautoriza únicamente el saludo limpio antes de T=0.",
+        "en": "Preauthorizes only the clean greeting before T=0."
+      },
+      "requiresKnownFactIds": [
+        "fact:harlan-contained",
+        "fact:hostile-function-known-not-attributed"
       ]
     },
     {

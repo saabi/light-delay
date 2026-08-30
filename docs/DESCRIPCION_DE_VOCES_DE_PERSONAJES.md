@@ -69,11 +69,11 @@
 ## ELENCO SECUNDARIO (historia completa / versión larga)
 
 ### LT. CMDR. DARA OKOYE — Jefa de Seguridad
-*Género: sin confirmar en el material previo — se asume femenino, ajustable.*
+*Género: femenino, fijado por la continuidad vigente.*
 
 - **Timbre:** contralto firme, resonancia de pecho marcada, ataque directo (voz entrenada para dar órdenes en situaciones de riesgo).
 - **Inglés:** inflexión nigeriana (igbo) sobre inglés — ritmo marcado por sílabas, consonantes muy definidas, entonación firme y descendente.
-- **Castellano (Colombia):** ritmo firme, dicción muy clara, tono que no admite ambigüedad — coherente con estar dividida entre lealtad a Voss y a Harlan sin que se le note en la superficie.
+- **Castellano (Colombia):** ritmo firme, dicción muy clara, tono que no admite ambigüedad. Ante la apelación de Harlan, una pausa mínima revela el pasado operativo compartido; la respuesta recupera de inmediato la firmeza porque elige su deber hacia Voss y la misión.
 
 ### ENSIGN PETRA VOLKOV — Ingeniera Junior, protégée de Zao
 *Género: femenino (confirmado, "Petra"). Probablemente 20s.*

@@ -110,8 +110,8 @@
         "en": "The investigation dismantles the easy alibi"
       },
       "summary": {
-        "es": "La muerte y los fallos coordinados provocan una investigación distribuida: la credencial comprometida deja de incriminar por sí sola a Sorell y el sabotaje ambiental amplía el patrón.",
-        "en": "The death and coordinated failures trigger a distributed investigation: the compromised credential no longer incriminates Sorell by itself, and environmental sabotage broadens the pattern."
+        "es": "La muerte y los fallos coordinados provocan una investigación distribuida. La grabación posterior al tramo borrado muestra que Sorell llegó cuando Zao ya estaba muerta: no queda detenida ni tratada como autora probable, aunque Voss suspende su credencial y exige escolta porque su identidad sigue comprometida. El sabotaje ambiental amplía el patrón.",
+        "en": "The death and coordinated failures trigger a distributed investigation. The recording after the erased segment shows that Sorell arrived when Zao was already dead: she is neither detained nor treated as the likely killer, although Voss suspends her credential and requires an escort because her identity remains compromised. Environmental sabotage broadens the pattern."
       },
       "importance": "required",
       "causalLinks": [
@@ -134,8 +134,8 @@
         "en": "Elin locates the threat"
       },
       "summary": {
-        "es": "Elin reconstruye el recorrido de la carga y demuestra que puede intervenir el contacto, aunque el equipo discrepa sobre cuánto aislar sin perder la misión.",
-        "en": "Elin reconstructs the payload’s path and shows it can interfere with contact, although the team disagrees about how much to isolate without losing the mission."
+        "es": "Elin reconstruye el recorrido de la carga, demuestra que puede intervenir el contacto y prepara una cuarentena. Sorell conserva el saludo fuera de línea en soporte pasivo. Harlan invoca el procedimiento para mantener intacto el canal automático que necesita y retrasar la intervención sin parecer imprudente.",
+        "en": "Elin reconstructs the payload’s path, shows it can interfere with contact, and prepares a quarantine. Sorell keeps the greeting offline on passive media. Harlan invokes procedure to keep the automatic channel he needs intact and delay intervention without appearing reckless."
       },
       "importance": "required",
       "causalLinks": [
@@ -182,8 +182,8 @@
         "en": "The double key exposes Harlan"
       },
       "summary": {
-        "es": "La firma del transmisor prueba dispositivo y hora; el token personal autentica a Zao y la integridad del mensaje y snapshot. El manifiesto firmado por hardware aún asigna el relé a Harlan y la auditoría independiente de Elin conecta relé, payload y override. Expuesto, Harlan usa su última ventana; Okoye lo intercepta mientras Voss permanece en el puente.",
-        "en": "The transmitter signature proves device and time; the personal token authenticates Zao and the integrity of the message and snapshot. The hardware-signed manifest still assigns the relay to Harlan, and Elin’s independent audit connects relay, payload, and override. Exposed, Harlan uses his last window; Okoye intercepts him while Voss remains on the bridge."
+        "es": "La firma del transmisor prueba dispositivo y hora; el token personal autentica a Zao y la integridad del mensaje y snapshot, pero no revoca ni purga. El manifiesto firmado por hardware aún asigna el relé a Harlan y la auditoría de Elin conecta relé, payload y override; Voss revoca su acceso. Harlan corre bajo 1 g, bloquea el accionamiento principal y espera el corte de motor de T−12. En microgravedad se impulsa al auxiliar y apela al pasado compartido con Okoye; ella vacila un instante, elige su deber y lo contiene con pasamanos y tether mientras Voss permanece en el puente.",
+        "en": "The transmitter signature proves device and time; the personal token authenticates Zao and the integrity of the message and snapshot, but neither revokes nor purges. The hardware-signed manifest still assigns the relay to Harlan, and Elin’s audit connects relay, payload, and override; Voss revokes his access. Harlan runs under 1 g, blocks the primary actuator, and waits for the T−12 engine cutoff. In microgravity he pushes toward the auxiliary and appeals to his shared past with Okoye; she hesitates for an instant, chooses her duty, and restrains him with handrails and a tether while Voss remains on the bridge."
       },
       "importance": "required",
       "causalLinks": [
@@ -206,8 +206,8 @@
         "en": "Manual controls and quarantine"
       },
       "summary": {
-        "es": "Con Harlan contenido sin combate armado, Elin aplica la cuarentena preparada y Sorell aporta el saludo pasivo de sólo lectura. El payload queda aislado, el canal saliente limpio y la mediación activa.",
-        "en": "With Harlan restrained without an armed fight, Elin applies the prepared quarantine and Sorell supplies the passive read-only greeting. The payload is isolated, the outbound channel clean, and mediation active."
+        "es": "La contención concede a Elin cinco segundos para cerrar la rama preparada. Sorell valida fuera de línea el saludo pasivo y Elin lo conecta a la ruta limpia: el payload queda aislado, el canal saliente limpio y la mediación activa.",
+        "en": "The restraint gives Elin five seconds to close the prepared branch. Sorell validates the passive greeting offline and Elin connects it to the clean route: the payload is isolated, the outbound channel clean, and mediation active."
       },
       "importance": "required",
       "causalLinks": [
@@ -230,8 +230,8 @@
         "en": "A clean greeting earns a response"
       },
       "summary": {
-        "es": "La tripulación reconstruye un saludo verificable; la respuesta Velari autoriza una aproximación limitada, no una confianza automática.",
-        "en": "The crew rebuilds a verifiable greeting; the Velari response authorizes limited approach, not automatic trust."
+        "es": "Antes de T=0, Voss preautoriza únicamente el saludo verificable. El protocolo lo libera automáticamente al abrirse el canal; la respuesta Velari autoriza una aproximación limitada, no una confianza automática.",
+        "en": "Before T=0, Voss preauthorizes only the verifiable greeting. The protocol releases it automatically when the channel opens; the Velari response authorizes limited approach, not automatic trust."
       },
       "importance": "required",
       "causalLinks": [
@@ -626,13 +626,13 @@
         "en": "Sorell's Compromised Credential"
       },
       "summary": {
-        "es": "El puente y la orden directa de Voss corroboran el trayecto de Sorell. Se bloquea su credencial falsificada sin apartarla como sospechosa; Harlan intenta explotar la incertidumbre técnica.",
-        "en": "The bridge and Voss's direct order corroborate Sorell's route. Her forged credential is blocked without treating her as a suspect; Harlan tries to exploit the technical uncertainty."
+        "es": "La grabación posterior al tramo borrado muestra que Sorell llegó cuando Zao ya estaba muerta. Voss no la detiene ni la trata como autora probable, pero suspende su credencial y exige escolta porque su identidad sigue comprometida; Harlan intenta explotar la incertidumbre técnica.",
+        "en": "The recording after the erased segment shows that Sorell arrived when Zao was already dead. Voss neither detains her nor treats her as the likely killer, but suspends her credential and requires an escort because her identity remains compromised; Harlan tries to exploit the technical uncertainty."
       },
       "importance": "required",
       "coverage": {
         "treatment": {
-          "status": "covered",
+          "status": "partial",
           "sceneIds": [
             "long:scene-13"
           ],
@@ -707,13 +707,13 @@
         "en": "Strategic Conflict"
       },
       "summary": {
-        "es": "Harlan exige apagar toda mediación; Elin explica que hacerlo borraría evidencia y el único canal diplomático. Voss posterga una decisión irreversible.",
-        "en": "Harlan demands that all mediation be shut down; Elin explains that doing so would erase evidence and the only diplomatic channel. Voss postpones an irreversible decision."
+        "es": "Harlan sostiene que el procedimiento exige conservar intacto el canal automático y presenta toda intervención como un riesgo para la misión. Elin demuestra que la firma fantasma ya alteró ese canal; Voss le ordena continuar sin abrir ninguna ruta sin autorización.",
+        "en": "Harlan argues that procedure requires preserving the automatic channel intact and frames intervention as a risk to the mission. Elin shows that the ghost signature has already altered that channel; Voss orders her to continue without opening any route without authorization."
       },
       "importance": "required",
       "coverage": {
         "treatment": {
-          "status": "covered",
+          "status": "partial",
           "sceneIds": [
             "long:scene-16"
           ],
@@ -842,13 +842,13 @@
         "en": "Harlan Acts"
       },
       "summary": {
-        "es": "Voss revoca la credencial de Harlan. Antes de completarse la cascada, él usa la última ventana física y, bajo 1 g, baja por el ascensor central hasta el ramal del núcleo.",
-        "en": "Voss revokes Harlan's credential. Before the cascade completes, he uses the last physical window and, under 1 g, takes the central lift down to the core branch."
+        "es": "La prueba autentica la evidencia, pero Voss ejerce la autoridad y revoca la credencial. Antes de completarse la cascada, Harlan usa la última ventana, baja bajo 1 g al ramal, bloquea el accionamiento principal y espera el corte programado de motor a T−12.",
+        "en": "The evidence is authenticated, but Voss exercises authority and revokes the credential. Before the cascade completes, Harlan uses the last window, descends under 1 g to the branch, blocks the primary actuator, and waits for the scheduled T−12 engine cutoff."
       },
       "importance": "required",
       "coverage": {
         "treatment": {
-          "status": "covered",
+          "status": "partial",
           "sceneIds": [
             "long:scene-21"
           ],
@@ -869,13 +869,13 @@
         "en": "Okoye's Decision"
       },
       "summary": {
-        "es": "Voss permanece en el puente. Okoye ejecuta la orden, intercepta a Harlan en el ramal físico y lo contiene sin combate armado.",
-        "en": "Voss remains on the bridge. Okoye carries out the order, intercepts Harlan at the physical branch, and restrains him without an armed fight."
+        "es": "Voss permanece en el puente. Al comenzar la microgravedad, Harlan se impulsa hacia el auxiliar y apela al pasado operativo compartido con Okoye; ella vacila un instante, elige su deber y redirige su impulso mediante pasamanos y tether.",
+        "en": "Voss remains on the bridge. As microgravity begins, Harlan pushes toward the auxiliary and appeals to his shared operational past with Okoye; she hesitates for an instant, chooses her duty, and redirects his momentum using handrails and a tether."
       },
       "importance": "required",
       "coverage": {
         "treatment": {
-          "status": "covered",
+          "status": "partial",
           "sceneIds": [
             "long:scene-22"
           ],
@@ -923,13 +923,13 @@
         "en": "Quarantine"
       },
       "summary": {
-        "es": "Elin confina la rama hostil al buffer preparado y Sorell aporta el saludo pasivo de sólo lectura: PAYLOAD EN CUARENTENA / CANAL SALIENTE LIMPIO / MEDIACIÓN ACTIVA.",
-        "en": "Elin confines the hostile branch to the prepared buffer and Sorell supplies the passive read-only greeting: PAYLOAD QUARANTINED / OUTBOUND CHANNEL CLEAN / MEDIATION ACTIVE."
+        "es": "La contención concede cinco segundos: Elin cierra la rama hostil en el buffer preparado; Sorell valida fuera de línea el saludo pasivo y Elin lo conecta a la ruta limpia. La automatización no sustituye la orden de Voss.",
+        "en": "The restraint grants five seconds: Elin closes the hostile branch in the prepared buffer; Sorell validates the passive greeting offline and Elin connects it to the clean route. Automation does not replace Voss’s order."
       },
       "importance": "required",
       "coverage": {
         "treatment": {
-          "status": "covered",
+          "status": "partial",
           "sceneIds": [
             "long:scene-24"
           ],
@@ -950,13 +950,13 @@
         "en": "Clean Greeting"
       },
       "summary": {
-        "es": "La tripulación envía matemática de reconocimiento, procedencia y solicitud de aproximación por un conducto de sólo lectura.",
-        "en": "The crew sends recognition mathematics, provenance, and an approach request through a read-only conduit."
+        "es": "Sorell valida la matemática de reconocimiento, procedencia y solicitud de aproximación en soporte de sólo lectura. Voss preautoriza sólo ese saludo antes de T=0 y el protocolo lo libera automáticamente al abrirse el canal.",
+        "en": "Sorell validates the recognition mathematics, provenance, and approach request on read-only media. Voss preauthorizes only that greeting before T=0, and the protocol releases it automatically when the channel opens."
       },
       "importance": "required",
       "coverage": {
         "treatment": {
-          "status": "covered",
+          "status": "partial",
           "sceneIds": [
             "long:scene-25"
           ],

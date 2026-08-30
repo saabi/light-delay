@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-30 — Clímax físico/digital y omisiones del tráiler
+
+- Main y Festival aclaran que la cámara descarta a Sorell como autora, aunque Voss suspende su credencial comprometida y exige escolta; Harlan usa el procedimiento para preservar el canal automático, no para apagarlo.
+- El token de Zao autentica mensaje y snapshot, la auditoría de Elin completa la atribución y Voss ejerce la revocación. Elin todavía necesita cinco segundos de intervención física; Sorell valida fuera de línea el saludo y Voss lo preautoriza antes de T=0.
+- La aproximación remota termina bajo 1 g: Harlan bloquea el accionamiento principal, el corte programado a T−12 s inicia microgravedad y su apelación al pasado compartido provoca una vacilación breve de Okoye antes de que ella lo redirija con pasamanos y tether.
+- El protocolo libera automáticamente sólo el saludo ya autorizado cuando abre el canal. La escala diferenciada de Ardor, emisaria y estación sostiene la dimensión cósmica sin sustituir la decisión humana.
+- El tráiler mantiene anónima la amenaza y deja sin resolver envío, recepción, destino de Zao, contención y resultado del saludo; el guard de spoilers cubre ahora también estas dos últimas categorías.
+- El largometraje sólo adopta esta lógica en su escaleta. Su tratamiento, generador, ledger, comparación y producción quedan como deuda explícita para una revisión posterior; no se generaron imágenes, video ni prompts.
+
 ## 2026-08-30 — Metadatos de producción Festival A–D
 
 - Las 38 tomas A–D del Festival Cut ahora declaran propósito bilingüe, personajes/objetos visibles u off-screen y contextos físicos verificables; no cambiaron diálogo, duración, orden ni imágenes.

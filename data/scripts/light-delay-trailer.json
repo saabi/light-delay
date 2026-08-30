@@ -523,8 +523,8 @@
         }
       },
       "summary": {
-        "es": "Cruce de la garganta; T+23 h; Elin contra reloj.",
-        "en": "Crossing of the throat; T+23h; Elin against the clock."
+        "es": "Cruce de la garganta; aproximación remota bajo desaceleración; Elin contra reloj.",
+        "en": "Throat crossing; remote approach under deceleration; Elin races the clock."
       },
       "dramaticPurpose": {
         "es": "Salto temporal y presión técnica.",
@@ -641,8 +641,8 @@
         }
       },
       "summary": {
-        "es": "Montaje acelerado hacia el umbral Velari.",
-        "en": "Accelerated assembly towards the Velari threshold."
+        "es": "Montaje bajo desaceleración hacia el corte programado de motor y el umbral Velari.",
+        "en": "Montage under deceleration toward the scheduled engine cutoff and the Velari threshold."
       },
       "dramaticPurpose": {
         "es": "Clímax sin revelar el desenlace.",
@@ -706,8 +706,8 @@
         }
       },
       "summary": {
-        "es": "LIGHT DELAY / LUZ TARDÍA y lema; pulso Velari.",
-        "en": "LIGHT DELAY / LIGHT LATE and motto; Velari pulse."
+        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.",
+        "en": "Velari scale with no confirmed response; LIGHT DELAY / LUZ TARDÍA and tagline."
       },
       "dramaticPurpose": {
         "es": "Cierre de marca.",
@@ -854,8 +854,8 @@
         "en": "Time jump and technical pressure."
       },
       "summary": {
-        "es": "Cruce de la garganta; T+23 h; Elin contra reloj.",
-        "en": "Crossing of the throat; T+23h; Elin against the clock."
+        "es": "Cruce de la garganta; aproximación remota bajo desaceleración; Elin contra reloj.",
+        "en": "Throat crossing; remote approach under deceleration; Elin races the clock."
       },
       "cueIds": [
         "trailer:cue-f-01",
@@ -899,8 +899,8 @@
         "en": "Climax without revealing the outcome."
       },
       "summary": {
-        "es": "Montaje acelerado hacia el umbral Velari.",
-        "en": "Accelerated assembly towards the Velari threshold."
+        "es": "Montaje bajo desaceleración hacia el corte programado de motor y el umbral Velari.",
+        "en": "Montage under deceleration toward the scheduled engine cutoff and the Velari threshold."
       },
       "cueIds": [
         "trailer:cue-h-01",
@@ -921,8 +921,8 @@
         "en": "Brand closure."
       },
       "summary": {
-        "es": "LIGHT DELAY / LUZ TARDÍA y lema; pulso Velari.",
-        "en": "LIGHT DELAY / LIGHT LATE and motto; Velari pulse."
+        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.",
+        "en": "Velari scale with no confirmed response; LIGHT DELAY / LUZ TARDÍA and tagline."
       },
       "cueIds": [
         "trailer:cue-i-01",
@@ -1313,11 +1313,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "text": "CANAL VELARI — 01:32",
+            "text": "CANAL VELARI — 00:48",
             "status": "source"
           },
           "en": {
-            "text": "VELARI CHANNEL — 01:32",
+            "text": "VELARI CHANNEL — 00:48",
             "status": "draft"
           }
         }
@@ -2636,8 +2636,8 @@
       "number": 1,
       "order": 23,
       "description": {
-        "es": "Reloj único: CANAL VELARI — 01:32 / PAYLOAD ARMADO.",
-        "en": "Unique clock: CANAL VELARI — 01:32 / ARMED PAYLOAD."
+        "es": "Reloj inglés: VELARI CHANNEL · OPENS IN 00:48; la Ardor desacelera bajo 1 g.",
+        "en": "English clock: VELARI CHANNEL · OPENS IN 00:48; the Ardor decelerates under 1 g."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2746,8 +2746,8 @@
       "number": 3,
       "order": 25,
       "description": {
-        "es": "Cael pilota y fuerza el mamparo simultáneamente.",
-        "en": "Cael pilots and forces the bulkhead simultaneously."
+        "es": "El corte programado inicia la microgravedad: correas y cables sujetos se elevan mientras una presencia anónima busca el control físico.",
+        "en": "The scheduled cutoff begins microgravity: secured straps and cables rise as an anonymous presence seeks physical control."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2850,8 +2850,8 @@
       "number": 5,
       "order": 27,
       "description": {
-        "es": "Celestial Ardor avanza diminuta ante la Estación Velari: varios kilómetros de lóbulos, arcos, cavidades y piel-radiador cambiante.",
-        "en": "Celestial Ardor advances tiny before Velari Station: several kilometers of lobes, arcs, cavities and changing skin-radiator."
+        "es": "La Ardor queda diminuta ante la estación y la emisaria inmóviles; el montaje corta antes de resolver qué ocurrirá.",
+        "en": "The Ardor hangs tiny before the motionless station and emissary; the edit cuts before resolving what will happen."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2899,8 +2899,8 @@
       "number": 1,
       "order": 28,
       "description": {
-        "es": "Luces de la Celestial Ardor, la emisaria y la estación sincronizan un pulso de reconocimiento.",
-        "en": "Lights of the Celestial Ardor, the emissary and the station synchronize a pulse of recognition."
+        "es": "Estación y emisaria conservan luces propias sin sincronizar con la Ardor; el plano no confirma respuesta.",
+        "en": "Station and emissary retain their own lights without synchronizing with the Ardor; the shot does not confirm a response."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2964,8 +2964,8 @@
       "number": 2,
       "order": 29,
       "description": {
-        "es": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento.",
-        "en": "The human ship advances towards the emissary; behind, the Velari Station seems to breathe. Slow fade."
+        "es": "Corte a negro y títulos antes de resolver el canal, la amenaza o la aproximación.",
+        "en": "Cut to black and titles before resolving the channel, threat, or approach."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {

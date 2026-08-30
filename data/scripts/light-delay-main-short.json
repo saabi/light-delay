@@ -1006,7 +1006,8 @@
         "character:rao",
         "character:sorell",
         "character:cael",
-        "character:voss"
+        "character:voss",
+        "character:okoye"
       ],
       "beatIds": [
         "main:beat-14-01"
@@ -3032,11 +3033,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Usted oyó el aviso y llegó por orden mía. La firma usada es la de su credencial; no la convierte en sospechosa.",
+            "spokenText": "La cámara la muestra llegando después. Zao ya estaba muerta. No está detenida, pero su identidad operativa sigue comprometida.",
             "status": "source"
           },
           "en": {
-            "spokenText": "You heard the warning and came on my orders. The signature used belongs to your credential; that does not make you a suspect.",
+            "spokenText": "The camera shows you arriving afterward. Zao was already dead. You are not detained, but your operational identity remains compromised.",
             "status": "draft"
           }
         }
@@ -3101,11 +3102,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Bloqueada. Sorell permanece en la investigación.",
+            "spokenText": "Credencial suspendida. Se moverá con Okoye hasta que cerremos la atribución.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Locked. Sorell remains in the investigation.",
+            "spokenText": "Credential suspended. You will move with Okoye until we close the attribution.",
             "status": "draft"
           }
         }
@@ -3275,11 +3276,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "La mediación contiene un proceso autónomo. Recomiendo apagarla y aislar los receptores antes de que los Velari puedan usar el mismo canal contra nosotros.",
+            "spokenText": "El procedimiento exige un canal automático intacto. Alterarlo ahora nos deja ciegos antes del encuentro.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Mediation contains an autonomous process. I recommend turning it off and isolating the receivers before the Velari can use the same channel against us.",
+            "spokenText": "Procedure requires an intact automatic channel. Altering it now blinds us before the encounter.",
             "status": "draft"
           }
         }
@@ -3290,17 +3291,17 @@
       "beatId": "main:beat-11-01",
       "order": 2,
       "type": "dialogue",
-      "speakerId": "character:voss",
+      "speakerId": "character:rao",
       "presentation": "on_screen",
       "content": {
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Elin dice que apagarla destruiría también el único intérprete que tenemos.",
+            "spokenText": "La firma fantasma ya alteró ese canal. Lo estoy cartografiando antes de que se abra.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Elin says turning it off would also destroy the only interpreter we have.",
+            "spokenText": "The ghost signature already altered that channel. I am mapping it before it opens.",
             "status": "draft"
           }
         }
@@ -3317,11 +3318,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "El silencio es preferible a entregarles la nave.",
+            "spokenText": "Empiece a arrancar particiones y perderemos la única mediación que podemos auditar.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Silence is preferable to handing over the ship to them.",
+            "spokenText": "Start tearing out partitions and we lose the only mediation we can audit.",
             "status": "draft"
           }
         }
@@ -3359,11 +3360,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Entonces abortamos el encuentro.",
+            "spokenText": "Mantenga el protocolo. No convierta una anomalía en una orden irreversible.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Then we abort the encounter.",
+            "spokenText": "Preserve protocol. Do not turn an anomaly into an irreversible order.",
             "status": "draft"
           }
         }
@@ -3422,11 +3423,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "No puedo autenticar el contenido todavía. Pero apagar el receptor ahora también borraría la prueba.",
+            "spokenText": "No puedo autenticar el contenido todavía. Mantengo la portadora aislada mientras Elin verifica.",
             "status": "source"
           },
           "en": {
-            "spokenText": "I can't authenticate the content yet. But turning off the receiver now would also erase the test.",
+            "spokenText": "I cannot authenticate the content yet. I am keeping the carrier isolated while Elin verifies it.",
             "status": "draft"
           }
         }
@@ -3500,7 +3501,7 @@
       "beatId": "main:beat-12-01",
       "order": 4,
       "type": "dialogue",
-      "speakerId": "character:voss",
+      "speakerId": "character:rao",
       "presentation": "on_screen",
       "content": {
         "sourceLanguage": "es",
@@ -3587,11 +3588,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-          "spokenText": "El token autentica a Zao y mantiene íntegros el mensaje y el adjunto. El snapshot del relé está firmado por hardware y aún asigna el circuito a Harlan. Mi auditoría conecta ese relé con el payload y su override.",
+          "spokenText": "El token autentica a Zao y mantiene íntegros mensaje y snapshot. No revoca nada. El manifiesto asigna el relé a Harlan y mi auditoría lo conecta con payload y override.",
             "status": "source"
           },
           "en": {
-          "spokenText": "The token authenticates Zao and keeps the message and attachment intact. The relay snapshot is hardware-signed and still assigns the circuit to Harlan. My audit connects that relay to the payload and its override.",
+          "spokenText": "The token authenticates Zao and keeps the message and snapshot intact. It revokes nothing. The manifest assigns the relay to Harlan, and my audit connects it to payload and override.",
             "status": "draft"
           }
         }
@@ -3818,11 +3819,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Trayectoria nominal. Acceso en doce segundos.",
+            "spokenText": "Velocidad igualada en doce segundos. Corte de motor programado.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Trajectory nominal. Access in twelve seconds.",
+            "spokenText": "Velocity match in twelve seconds. Scheduled engine cutoff.",
             "status": "draft"
           }
         }
@@ -3860,11 +3861,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "¡Si los dejamos examinarnos primero, nunca sabremos qué decidieron ocultar!",
+            "spokenText": "Dara. Sabés que no podemos entregarnos a algo que no entendemos.",
             "status": "source"
           },
           "en": {
-            "spokenText": "If we let them examine us first, we'll never know what they decided to hide!",
+            "spokenText": "Dara. You know we cannot surrender to something we do not understand.",
             "status": "draft"
           }
         }
@@ -3875,17 +3876,17 @@
       "beatId": "main:beat-14-01",
       "order": 8,
       "type": "dialogue",
-      "speakerId": "character:voss",
+      "speakerId": "character:okoye",
       "presentation": "on_screen",
       "content": {
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Entonces llegaremos con preguntas. No con un arma.",
+            "spokenText": "Lo sé. También sé cuál es mi deber.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Then we will come with questions. Not with a gun.",
+            "spokenText": "I know. I also know my duty.",
             "status": "draft"
           }
         }
@@ -3902,11 +3903,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "¡Necesito separar el buffer de la mediación!",
+            "spokenText": "Manténganlo fuera del relé. Necesito cinco segundos para cerrar la rama.",
             "status": "source"
           },
           "en": {
-            "spokenText": "I need to separate the mediation buffer!",
+            "spokenText": "Keep him away from the relay. I need five seconds to close the branch.",
             "status": "draft"
           }
         }
@@ -3923,11 +3924,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "El saludo pasivo no comparte esa firma. Córtela completa.",
+            "spokenText": "El saludo está intacto. La rama hostil nunca tocó el soporte de sólo lectura.",
             "status": "source"
           },
           "en": {
-            "spokenText": "The passive greeting does not share that signature. Cut the hostile branch completely.",
+            "spokenText": "The greeting is intact. The hostile branch never touched the read-only medium.",
             "status": "draft"
           }
         }
@@ -3987,8 +3988,8 @@
       "order": 13,
       "type": "action",
       "text": {
-        "es": "Voss permanece en el puente coordinando navegación y contacto. Okoye llega al ramal físico, intercepta a Harlan y lo inmoviliza sin intercambio armado, impidiéndole recuperar el control.",
-        "en": "Voss remains on the bridge coordinating navigation and contact. Okoye reaches the physical branch, intercepts Harlan, and restrains him without an armed exchange, preventing him from regaining control."
+        "es": "Voss permanece en el puente. A T−12 s el motor se apaga como estaba programado: correas y cables sujetos se elevan. Harlan se impulsa hacia el auxiliar; Okoye supera una vacilación, se ancla a un pasamanos y redirige su impulso con un tether.",
+        "en": "Voss remains on the bridge. At T−12 s the engine shuts down as scheduled: secured straps and cables rise. Harlan pushes toward the auxiliary; Okoye overcomes a hesitation, anchors herself to a handrail, and redirects his momentum with a tether."
       }
     },
     {
@@ -4064,11 +4065,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "spokenText": "Envíen.",
+            "spokenText": "Preautorizo únicamente el saludo limpio.",
             "status": "source"
           },
           "en": {
-            "spokenText": "Send it.",
+            "spokenText": "I preauthorize only the clean greeting.",
             "status": "draft"
           }
         }
@@ -7467,8 +7468,8 @@
       "number": 1,
       "order": 66,
       "description": {
-        "es": "Lesiones, cámaras vacías y registros se suceden.",
-        "en": "Injuries, empty chambers and searches happen."
+        "es": "El tramo borrado termina; la grabación posterior muestra a Sorell llegando cuando Zao ya está muerta.",
+        "en": "The erased segment ends; the later recording shows Sorell arriving when Zao is already dead."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -7668,8 +7669,8 @@
       "number": 5,
       "order": 70,
       "description": {
-        "es": "Voss bloquea la credencial sin apartar a Sorell.",
-        "en": "Voss blocks the credential without putting Sorell away."
+        "es": "Voss suspende la credencial y asigna a Okoye como escolta sin detener a Sorell.",
+        "en": "Voss suspends the credential and assigns Okoye as escort without detaining Sorell."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8106,8 +8107,8 @@
       "number": 1,
       "order": 79,
       "description": {
-        "es": "Harlan recomienda apagar mediación y receptores.",
-        "en": "Harlan recommends turning off mediation and receivers."
+        "es": "Harlan invoca el procedimiento para preservar intacto el canal automático.",
+        "en": "Harlan invokes procedure to preserve the automatic channel intact."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -8160,8 +8161,8 @@
       "number": 2,
       "order": 80,
       "description": {
-        "es": "Voss rechaza una solución irreversible.",
-        "en": "Voss rejects an irreversible solution."
+        "es": "Elin demuestra que la firma fantasma ya alteró el canal y Voss mantiene la auditoría.",
+        "en": "Elin shows that the ghost signature already altered the channel, and Voss keeps the audit running."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9148,8 +9149,8 @@
       "number": 2,
       "order": 100,
       "description": {
-        "es": "Reloj único: CANAL VELARI — 01:32 / PAYLOAD ARMADO.",
-        "en": "Unique clock: CANAL VELARI — 01:32 / ARMED PAYLOAD."
+        "es": "Reloj único en inglés: VELARI CHANNEL · OPENS IN 00:48; la Ardor desacelera bajo 1 g.",
+        "en": "Single English clock: VELARI CHANNEL · OPENS IN 00:48; the Ardor decelerates under 1 g."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9191,8 +9192,8 @@
       "number": 3,
       "order": 101,
       "description": {
-        "es": "Harlan conecta el mando físico.",
-        "en": "Harlan connects the physical controller."
+        "es": "Harlan bloquea el accionamiento principal del relé y conserva a la vista el auxiliar.",
+        "en": "Harlan blocks the relay’s primary actuator and keeps the auxiliary in sight."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9397,8 +9398,8 @@
       "number": 7,
       "order": 105,
       "description": {
-        "es": "Harlan abre una tercera ruta física que Elin no puede cerrar por red.",
-        "en": "Harlan opens a third physical route that Elin can't close on net."
+        "es": "A T−12 s el corte programado inicia la microgravedad; sólo se elevan correas, cables flexibles y elementos asegurados.",
+        "en": "At T−12 s the scheduled cutoff begins microgravity; only straps, flexible cables, and secured items rise."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9451,8 +9452,8 @@
       "number": 8,
       "order": 106,
       "description": {
-        "es": "Okoye fuerza el acceso e intercepta a Harlan; Voss sigue al mando desde el puente.",
-        "en": "Okoye forces access and intercepts Harlan; Voss remains in command from the bridge."
+        "es": "Harlan se impulsa al auxiliar y apela a Okoye; ella vacila un instante, elige su deber y redirige su impulso con pasamanos y tether.",
+        "en": "Harlan pushes toward the auxiliary and appeals to Okoye; she hesitates for an instant, chooses her duty, and redirects his momentum with handrails and a tether."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9505,8 +9506,8 @@
       "number": 9,
       "order": 107,
       "description": {
-        "es": "Harlan pulsa INICIAR; buffer cerrado recibe el payload.",
-        "en": "Harlan presses START; closed buffer receives the payload."
+        "es": "La contención física concede a Elin los cinco segundos necesarios para cerrar la rama hostil.",
+        "en": "Physical restraint gives Elin the five seconds needed to close the hostile branch."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9559,8 +9560,8 @@
       "number": 10,
       "order": 108,
       "description": {
-        "es": "Elin confina la rama con el saludo pasivo de Sorell; el canal saliente queda limpio y la mediación permanece activa.",
-        "en": "Elin confines the branch with Sorell’s passive greeting; the outbound channel is clean and mediation remains active."
+        "es": "Sorell valida el saludo fuera de línea y Elin conecta ese soporte a la ruta limpia; la mediación permanece activa.",
+        "en": "Sorell validates the greeting offline and Elin connects that medium to the clean route; mediation remains active."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9759,8 +9760,8 @@
       "number": 4,
       "order": 112,
       "description": {
-        "es": "Voss autoriza sin grandilocuencia.",
-        "en": "Voss authorizes without grandiloquence."
+        "es": "Antes de T=0, Voss preautoriza únicamente el saludo limpio.",
+        "en": "Before T=0, Voss preauthorizes only the clean greeting."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -9808,8 +9809,8 @@
       "number": 5,
       "order": 113,
       "description": {
-        "es": "Sorell confirma; Elin abre conducto de sólo lectura.",
-        "en": "Sorell confirms; Elin opens read-only conduit."
+        "es": "En T=0, el protocolo libera automáticamente sólo el saludo ya preautorizado por la ruta limpia.",
+        "en": "At T=0, the protocol automatically releases only the preauthorized greeting through the clean route."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {

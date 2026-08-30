@@ -456,17 +456,17 @@
     {
       "id": "character:okoye",
       "name": {
-        "es": "Okoye",
-        "en": "Okoye"
+        "es": "Dara Okoye",
+        "en": "Dara Okoye"
       },
       "shortName": "Okoye",
       "role": {
-        "es": "Seguridad",
-        "en": "Security"
+        "es": "Teniente comandante · Jefa de seguridad",
+        "en": "Lieutenant Commander · Chief of Security"
       },
       "description": {
-        "es": "Responsable de seguridad obligado a decidir bajo evidencia incompleta.",
-        "en": "Security lead forced to decide with incomplete evidence."
+        "es": "Jefa de seguridad táctica y contenida. Comparte un pasado operativo con Harlan, pero ante su apelación vacila sólo un instante y elige el deber hacia Voss y la misión.",
+        "en": "A tactical, guarded security chief. She shares an operational past with Harlan, but when he appeals to it she hesitates for only an instant and chooses her duty to Voss and the mission."
       },
       "factionIds": [
         "faction:human"

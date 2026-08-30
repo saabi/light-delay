@@ -18,6 +18,14 @@ Este archivo es el registro canónico de deuda editorial y técnica accionable q
 - **Trabajo:** realizar lectura y revisión de montaje de corrido; comprimir o solapar sólo donde mejore ritmo, sin perder llegada casual de Harlan, deliberación de Voss, rutas distintas, cadena probatoria, distinción estación/emisaria ni cierre emocional.
 - **Cierre:** la duración final surge de una revisión editorial cronometrada con causas y parlamentos legibles, no de acortar cues para alcanzar una cifra previa.
 
+### Implementar en el largometraje el clímax ya aprobado en escaleta
+
+- **Alcance autorizado en este pase:** `data/outlines/light-delay-long.json` ya adopta la lógica vigente: prueba de cámara que descarta a Sorell, suspensión operativa con escolta, token de Zao como autenticación —no revocación—, autoridad de Voss, cierre técnico de Elin, desaceleración bajo 1 g, corte programado a T−12 s, vacilación y decisión de Okoye, validación fuera de línea de Sorell, preautorización humana y liberación automática del saludo limpio.
+- **Deuda deliberadamente diferida:** el tratamiento/guion largo, su generador durable, ledger causal, perfil de comparación y planes de producción aún reflejan total o parcialmente la versión anterior. No sincronizarlos por inferencia ni usar la escaleta actualizada como prueba de cobertura implementada.
+- **Motivo:** decisión expresa de limitar el trabajo actual al corto canónico, Festival Cut y tráiler para no consumir créditos ni ampliar el pase editorial.
+- **Trabajo futuro:** revisar el tratamiento largo contra la escaleta de principio a fin; trasladar cada causa y consecuencia sin importar mecánicamente el reparto reducido de otros cuts; actualizar generador, ledger, comparación y producción sólo después de aprobar esa revisión.
+- **Cierre:** el detalle de escaleta deja de figurar `partial`, guion/tratamiento y datos derivados cuentan la misma cadena causal, y sus validaciones no presentan cobertura falsa.
+
 ### Autoridad de datos y extractor legacy seguro
 
 - **Archivos afectados:** `package.json`, `scripts/extract-legacy.mjs`, `scripts/migrate-multi-script.mjs`, `README.md` y documentación de migración.

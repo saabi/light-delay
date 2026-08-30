@@ -182,8 +182,8 @@
         "en": "The audit prepares the defense"
       },
       "summary": {
-        "es": "Los tiempos físicos separan a Sorell del uso de su credencial y demuestran que alguien la comprometió. Elin descubre que la carga puede sustituir el saludo y prepara una cuarentena, aunque todavía no puede identificar al dueño del override.",
-        "en": "Physical timing separates Sorell from the use of her credential and shows that someone compromised it. Elin discovers that the payload can replace the greeting and prepares a quarantine, although she still cannot identify the override owner."
+        "es": "La grabación posterior al tramo borrado muestra que Sorell llegó cuando Zao ya estaba muerta: no es detenida ni tratada como autora probable. Voss suspende su credencial y exige escolta porque su identidad sigue comprometida; su saludo permanece fuera de línea en soporte de sólo lectura. Elin descubre que la carga puede sustituirlo y prepara una cuarentena, mientras Harlan invoca el procedimiento para mantener intacto el canal automático y ganar tiempo.",
+        "en": "The recording after the erased segment shows that Sorell arrived when Zao was already dead: she is neither detained nor treated as the likely killer. Voss suspends her credential and requires an escort because her identity remains compromised; her greeting stays offline on read-only media. Elin discovers that the payload can replace it and prepares a quarantine, while Harlan invokes procedure to keep the automatic channel intact and buy time."
       },
       "importance": "required",
       "causalLinks": [
@@ -191,8 +191,8 @@
           "sourceStepId": "main:story-07",
           "relation": "reveals",
           "explanation": {
-            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Los tiempos físicos separan a Sorell del uso de su credencial y demuestran que alguien la comprometió. Elin descubre que la carga puede sustituir el saludo y prepara una cuarentena, aunque todavía no puede identificar al dueño del override.",
-            "en": "The outcome of the previous beat causes or enables this consequence: Physical timing separates Sorell from the use of her credential and shows that someone compromised it. Elin discovers that the payload can replace the greeting and prepares a quarantine, although she still cannot identify the override owner."
+            "es": "El resultado del hito anterior habilita esta consecuencia: la grabación exonera a Sorell del asesinato pero no vuelve segura su identidad comprometida; Voss suspende su acceso, Elin prepara la cuarentena y Harlan usa el procedimiento para retrasarla.",
+            "en": "The outcome of the previous beat enables this consequence: the recording clears Sorell of the murder but does not make her compromised identity safe; Voss suspends her access, Elin prepares quarantine, and Harlan uses procedure to delay it."
           }
         }
       ]
@@ -230,8 +230,8 @@
         "en": "The double proof exposes Harlan"
       },
       "summary": {
-        "es": "El snapshot firmado por el hardware todavía asigna el relé a Harlan y la auditoría independiente de Elin conecta ese circuito con el payload y el override. La evidencia convergente permite a Voss revocar sus permisos; Harlan usa la última ventana y corre bajo 1 g hacia el control físico.",
-        "en": "The hardware-signed snapshot still assigns the relay to Harlan, and Elin’s independent audit connects that circuit to the payload and override. The convergent evidence lets Voss revoke his access; Harlan uses the last window and runs under 1 g toward physical control."
+        "es": "El snapshot firmado por el hardware todavía asigna el relé a Harlan y la auditoría independiente de Elin conecta ese circuito con el payload y el override. El token autentica la prueba, pero Voss ejerce la autoridad y revoca los permisos. Harlan usa la última ventana, corre bajo 1 g al ramal físico y bloquea el accionamiento principal mientras espera el corte de motor programado.",
+        "en": "The hardware-signed snapshot still assigns the relay to Harlan, and Elin’s independent audit connects that circuit to the payload and override. The token authenticates the evidence, but Voss exercises authority and revokes the permissions. Harlan uses the last window, runs under 1 g to the physical branch, and blocks the primary actuator while waiting for the scheduled engine cutoff."
       },
       "importance": "required",
       "causalLinks": [
@@ -254,8 +254,8 @@
         "en": "The crew cleans the channel"
       },
       "summary": {
-        "es": "Voss permanece en el puente; Okoye intercepta y contiene a Harlan sin combate armado. Elin aplica la cuarentena preparada y Sorell aporta el saludo pasivo de sólo lectura: el payload queda aislado, el canal saliente limpio y la mediación activa.",
-        "en": "Voss remains on the bridge; Okoye intercepts and restrains Harlan without an armed fight. Elin applies the prepared quarantine and Sorell supplies the passive read-only greeting: the payload is isolated, the outbound channel clean, and mediation active."
+        "es": "A T−12 s el corte previsto de motor inicia la microgravedad. Harlan se impulsa hacia el accionamiento auxiliar y apela al pasado operativo compartido con Okoye; ella vacila un instante, elige su deber y redirige su impulso con pasamanos y tether. Esos cinco segundos permiten a Elin cerrar la rama preparada, mientras Sorell valida fuera de línea el saludo y Elin lo conecta a la ruta limpia.",
+        "en": "At T−12 s the scheduled engine cutoff begins microgravity. Harlan pushes toward the auxiliary actuator and appeals to his shared operational past with Okoye; she hesitates for an instant, chooses her duty, and redirects his momentum with handrails and a tether. Those five seconds let Elin close the prepared branch while Sorell validates the greeting offline and Elin connects it to the clean route."
       },
       "importance": "required",
       "causalLinks": [
@@ -263,8 +263,8 @@
           "sourceStepId": "main:story-10",
           "relation": "pays_off",
           "explanation": {
-            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Con Harlan contenido, Elin aplica la cuarentena preparada y Sorell reconstruye el saludo pasivo. La carga queda aislada sin destruir la mediación.",
-            "en": "The outcome of the previous beat causes or enables this consequence: With Harlan contained, Elin applies the prepared quarantine and Sorell rebuilds the passive greeting. The payload is isolated without destroying mediation."
+            "es": "El resultado del hito anterior habilita esta consecuencia: Okoye contiene a Harlan durante el cambio a microgravedad y concede a Elin cinco segundos para cerrar la rama; Sorell valida fuera de línea el saludo que Elin conecta a la ruta limpia.",
+            "en": "The outcome of the previous beat enables this consequence: Okoye restrains Harlan during the shift to microgravity and gives Elin five seconds to close the branch; Sorell validates offline the greeting Elin connects to the clean route."
           }
         }
       ]
@@ -278,8 +278,8 @@
         "en": "Contact and cost"
       },
       "summary": {
-        "es": "La Ardor envía un saludo limpio y los Velari autorizan una aproximación limitada; la estación y la nave emisaria siguen siendo objetos distintos. Voss prepara el informe a la Tierra, adjunta evidencia y el legajo de Zao, se detiene ante su retrato, murmura «Llegaste a tiempo» y pulsa ENVIAR. No recibe respuesta.",
-        "en": "The Ardor sends a clean greeting and the Velari authorize a limited approach; the station and emissary ship remain distinct objects. Voss prepares the report to Earth, attaches evidence and Zao’s personnel file, pauses at her portrait, murmurs “You made it in time,” and presses SEND. No reply arrives."
+        "es": "Antes de T=0, Voss preautoriza únicamente el saludo limpio. Al abrirse el canal, el protocolo lo libera automáticamente y los Velari autorizan una aproximación limitada; la Ardor diminuta, la estación orgánica y la nave emisaria permanecen como tres escalas y objetos distintos. Voss prepara el informe a la Tierra, adjunta evidencia y el legajo de Zao, se detiene ante su retrato, murmura «Llegaste a tiempo» y pulsa ENVIAR. No recibe respuesta.",
+        "en": "Before T=0, Voss preauthorizes only the clean greeting. When the channel opens, the protocol releases it automatically and the Velari authorize a limited approach; the tiny Ardor, the organic station, and the emissary ship remain three distinct scales and objects. Voss prepares the report to Earth, attaches evidence and Zao’s personnel file, pauses at her portrait, murmurs “You made it in time,” and presses SEND. No reply arrives."
       },
       "importance": "required",
       "causalLinks": [
@@ -801,8 +801,8 @@
         "en": "INT. CELESTIAL ARDOR — BRIDGE / CORE / INFIRMARY — LATER"
       },
       "summary": {
-        "es": "La investigación separa el uso de la credencial de Sorell de su presencia física y confirma que alguien la comprometió.",
-        "en": "The investigation separates use of Sorell’s credential from her physical presence and confirms that someone compromised it."
+        "es": "La grabación posterior al tramo borrado muestra que Sorell llegó después de la muerte. Voss no la detiene, pero suspende su credencial y exige escolta por el riesgo de acceso; el saludo permanece fuera de línea.",
+        "en": "The recording after the erased segment shows that Sorell arrived after the death. Voss does not detain her, but suspends her credential and requires an escort because of the access risk; the greeting remains offline."
       },
       "importance": "required",
       "coverage": {
@@ -1028,8 +1028,8 @@
         "en": "INT. CELESTIAL ARDOR — CORRIDOR / BRIDGE — CONTINUOUS"
       },
       "summary": {
-        "es": "El mensaje señala a Harlan; acorralado, intenta ejecutar el override antes de perder sus permisos.",
-        "en": "The message names Harlan; cornered, he tries to execute the override before losing access."
+        "es": "La evidencia autentica mensaje y snapshot; Voss revoca a Harlan. Acorralado, él corre bajo 1 g al ramal, bloquea el accionamiento principal y espera el corte programado para alcanzar el auxiliar.",
+        "en": "The evidence authenticates the message and snapshot; Voss revokes Harlan. Cornered, he runs under 1 g to the branch, blocks the primary actuator, and waits for the scheduled cutoff to reach the auxiliary."
       },
       "importance": "required",
       "coverage": {
@@ -1079,8 +1079,8 @@
         "en": "INT. CELESTIAL ARDOR — CORE / BRIDGE — CONTINUOUS"
       },
       "summary": {
-        "es": "La tripulación detiene el override, revoca accesos y aísla físicamente el proceso hostil.",
-        "en": "The crew stops the override, revokes access, and physically isolates the hostile process."
+        "es": "A T−12 comienza la microgravedad. Okoye supera una vacilación ante Harlan y redirige su impulso con tether; Elin usa los cinco segundos ganados para cerrar físicamente la rama hostil.",
+        "en": "At T−12 microgravity begins. Okoye overcomes a hesitation before Harlan and redirects his momentum with a tether; Elin uses the five seconds gained to physically close the hostile branch."
       },
       "importance": "required",
       "coverage": {
@@ -1144,8 +1144,8 @@
         "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
       },
       "summary": {
-        "es": "Con el canal limpio, reconstruyen y verifican el saludo que enviarán a los Velari.",
-        "en": "With the channel clean, they rebuild and verify the greeting they will send to the Velari."
+        "es": "Sorell valida fuera de línea el saludo intacto, Elin lo conecta a la ruta limpia y Voss preautoriza únicamente ese contenido antes de T=0.",
+        "en": "Sorell validates the intact greeting offline, Elin connects it to the clean route, and Voss preauthorizes only that content before T=0."
       },
       "importance": "required",
       "coverage": {

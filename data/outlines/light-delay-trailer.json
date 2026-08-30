@@ -110,8 +110,8 @@
         "en": "The ship arrives first"
       },
       "summary": {
-        "es": "La Ardor cruza la garganta y queda a pocas horas del encuentro. Sin saber qué ocurrió con Zao ni con su intento, la tripulación investiga contra reloj la anomalía ya detectada.",
-        "en": "The Ardor crosses the throat and comes within hours of the encounter. Without knowing what happened to Zao or her attempt, the crew races to investigate the anomaly already detected."
+        "es": "La Ardor cruza la garganta y entra en la aproximación remota bajo desaceleración. Sin saber qué ocurrió con Zao ni con su intento, la tripulación investiga contra reloj la anomalía ya detectada.",
+        "en": "The Ardor crosses the throat and enters the remote approach under deceleration. Without knowing what happened to Zao or her attempt, the crew races to investigate the anomaly already detected."
       },
       "importance": "required",
       "causalLinks": [
@@ -134,8 +134,8 @@
         "en": "The threat waits for contact"
       },
       "summary": {
-        "es": "La auditoría revela que la carga autónoma espera que se abra el canal y conserva un override de titular cifrado. La cuenta regresiva obliga a decidir antes de que esa voz desconocida hable por la humanidad.",
-        "en": "The audit reveals that the autonomous payload is waiting for the channel to open and retains an override with an encrypted owner. The countdown forces a decision before that unknown voice speaks for humanity."
+        "es": "La auditoría revela que la carga autónoma espera la apertura automática del canal y conserva un override de titular cifrado. Mientras la cuenta desciende y se aproxima el corte programado de motor, una presencia anónima busca el control físico: alguien debe decidir antes de que esa voz desconocida hable por la humanidad.",
+        "en": "The audit reveals that the autonomous payload is waiting for the automatic channel opening and retains an override with an encrypted owner. As the countdown falls and the scheduled engine cutoff approaches, an anonymous presence seeks physical control: someone must decide before that unknown voice speaks for humanity."
       },
       "importance": "required",
       "causalLinks": [
@@ -158,8 +158,8 @@
         "en": "The threshold remains open"
       },
       "summary": {
-        "es": "El tráiler termina antes de revelar quién saboteó la misión, si Zao sobrevivió, si su mensaje salió o cómo responderán los Velari.",
-        "en": "The trailer ends before revealing who sabotaged the mission, whether Zao survived, whether her message was sent, or how the Velari will respond."
+        "es": "El corte de motor inicia la microgravedad y la Ardor queda diminuta ante la estación y la emisaria, pero el tráiler termina antes de revelar quién saboteó la misión, si Zao sobrevivió, si su mensaje salió, si la amenaza fue contenida o cómo responderán los Velari.",
+        "en": "The engine cutoff begins microgravity and the Ardor hangs tiny before the station and emissary, but the trailer ends before revealing who sabotaged the mission, whether Zao survived, whether her message was sent, whether the threat was contained, or how the Velari will respond."
       },
       "importance": "required",
       "causalLinks": [
@@ -526,8 +526,8 @@
         "en": "The clock"
       },
       "summary": {
-        "es": "Montaje acelerado hacia el umbral Velari.",
-        "en": "Accelerated assembly towards the Velari threshold."
+        "es": "Montaje acelerado bajo desaceleración: reloj en inglés, override anónimo y corte de motor inminente, sin mostrar contención ni saludo autorizado.",
+        "en": "Accelerated montage under deceleration: English countdown, anonymous override, and imminent engine cutoff, without showing restraint or an authorized greeting."
       },
       "importance": "required",
       "coverage": {
@@ -577,8 +577,8 @@
         "en": "Title"
       },
       "summary": {
-        "es": "LIGHT DELAY / LUZ TARDÍA y lema; pulso Velari.",
-        "en": "LIGHT DELAY / LIGHT LATE and motto; Velari pulse."
+        "es": "La Ardor queda en microgravedad ante la estación y la emisaria inmóviles; el montaje corta a LIGHT DELAY / LUZ TARDÍA y al lema antes de resolver qué ocurrirá.",
+        "en": "The Ardor hangs in microgravity before the motionless station and emissary; the edit cuts to LIGHT DELAY / LUZ TARDÍA and the tagline before resolving what will happen."
       },
       "importance": "required",
       "coverage": {

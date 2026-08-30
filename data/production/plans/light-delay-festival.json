@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival",
     "scriptId": "script:light-delay-festival",
     "scriptVersion": "0.3.0-draft",
-    "sourceDigest": "6becbcd1c819f6d059f260dded4f5ac12e3748348109eb5f4240f3b6ff5155b8",
+    "sourceDigest": "9bfe39d8da24ae38f980502abe84d96aa22f2d89bd53c476bb1cb3a418260cc7",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -1735,7 +1735,7 @@
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
-        "VOSS'S ORDER · CORE AUDIT AFTER INCIDENT IN TECHNICAL BRANCH"
+        "POST-WIPE CAMERA · SORELL ARRIVED AFTER DEATH · CREDENTIAL SUSPENDED · ESCORT REQUIRED · CORE AUDIT"
       ],
       "artifacts": {
         "animaticStill": {
@@ -2639,6 +2639,7 @@
       "shotId": "festival:shot-f-04",
       "status": "blocked",
       "blockers": [
+        "missing_voice_sample:character:okoye",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2656,7 +2657,7 @@
           "status": "missing"
         },
         "finalAudio": {
-          "required": false,
+          "required": true,
           "status": "missing"
         }
       },
@@ -2884,7 +2885,7 @@
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
-        "VELARI CHANNEL · 00:00"
+        "VELARI CHANNEL · 00:03"
       ],
       "artifacts": {
         "animaticStill": {
