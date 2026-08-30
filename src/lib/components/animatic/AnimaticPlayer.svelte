@@ -318,7 +318,7 @@
 
 		<aside class="movie-sidebar" class:open={player.detailsOpen}>
 			<div class="movie-lang">
-				<LanguageControls compact />
+				<LanguageControls compact inline />
 			</div>
 			<div class="movie-counter-col">
 				<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
