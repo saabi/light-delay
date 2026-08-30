@@ -11,9 +11,10 @@
 
 ### Festival Cut
 
-- Duración propuesta: 4:30–5:00.
+- Primera asamblea completa: 6:03,2. Cinco minutos funciona como orden de magnitud, no como límite estricto; el corte puede extenderse si la claridad causal lo requiere.
 - Núcleo narrativo previsto: sabotaje de Zao → mensaje tardío → revelación sobre Harlan → Elin evita la transmisión → contacto Velari.
-- Existe un guion estructurado de siete escenas. A–D tienen 38 tomas/takes; E–G tienen cues y causalidad cubiertos, pero todavía no shot list ni imágenes canónicas. No debe confundirse con un simple recorte automático.
+- Existe un guion estructurado de siete escenas y un animatic A–G de 67 tomas/takes. Las 29 tomas E–G colocan el diálogo ya aprobado y completan revelación, cuarentena, contacto y cierre. Todos los stills son reutilizaciones provisionales marcadas para regeneración; no debe confundirse con un simple recorte automático.
+- El master de generación usa displays diegéticos únicamente en inglés. Las traducciones editoriales permanecen en los JSON, pero nunca se combinan dentro del frame; una edición española futura será una variante derivada.
 
 ## Higgsfield
 

@@ -234,6 +234,8 @@ En esta versión **Elin puede asumir funcionalmente la detección de la señal**
 
 ### Secuencia E — La señal y la doble llave — `2:35–3:20` (45 s)
 
+> **Primera asamblea vigente:** E comienza tras las 38 tomas A–D, en `3:38,2`, y dura 49,5 s. Los rangos históricos de esta propuesta eran objetivos de compresión, no límites obligatorios.
+
 Éste es el corazón conceptual del cortometraje.
 
 1. Elin autentica dispositivo y hora del transmisor físico de Zao.
@@ -252,6 +254,8 @@ En esta versión **Elin puede asumir funcionalmente la detección de la señal**
 La revelación debe ser una operación verificable, no un voto de confianza emocional en la voz de Zao.
 
 ### Secuencia F — Override y cuarentena — `3:20–4:20` (60 s)
+
+> **Primera asamblea vigente:** 8 tomas, 47 s. El reloj y todos los displays integrados en imagen se renderizan únicamente en inglés.
 
 El clímax de 3:30 de la versión larga se convierte en una carrera de aproximadamente un minuto.
 
@@ -284,6 +288,8 @@ El saludo limpio puede estar identificado como:
 De este modo Sorell conserva su aporte causal canónico sin requerir presencia física en el Festival Cut.
 
 ### Secuencia G — Contacto / cierre — `4:20–4:50` (30 s)
+
+> **Primera asamblea vigente:** 11 tomas, 48,5 s; el corte completo A–G suma 6:03,2. Cinco minutos es un orden de magnitud, no un máximo estricto.
 
 1. El reloj llega a cero.
 2. Elin abre únicamente el canal limpio.

@@ -22,6 +22,7 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 - La cubierta de mando conecta con un vestíbulo axial: el puente ve la salida del cilindro central, mientras el acceso lateral al cilindro de servicio queda fuera de la línea visual de las consolas.
 - La voz y los datos operativos disponen de respaldo cableado redundante por cubierta. Un distribuidor A/B accesible desde el cilindro de servicio permite aislar físicamente una zona para mantenimiento.
 - El control local de contingencia gobierna el láser exterior estándar de comunicaciones mediante una ruta física dedicada que no atraviesa la malla inalámbrica ni el distribuidor ordinario por cubiertas.
+- Los displays operativos, archivos, contadores y controles integrados en imagen usan inglés como idioma diegético maestro. No muestran español e inglés simultáneamente; una futura versión visual en español será un derivado de edición.
 
 ## Túnel Velari
 

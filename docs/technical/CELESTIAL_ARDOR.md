@@ -325,6 +325,13 @@ La existencia simultánea de cilindro central, ascensor y cilindro de servicio p
 9. No convertir la Ardor en un crucero militar ni de lujo.
 10. Cuando aparezca junto a Proxima, respetar la escala real: una Ardor de 90 m es pequeña frente a una espina de estación de 650 m y hábitats de 300 m de diámetro.
 
+### Idioma de los displays
+
+- El inglés es el idioma maestro del texto integrado en displays operativos, archivos, contadores y controles de la Ardor.
+- Una imagen o video generado no debe mostrar traducciones simultáneas ni interfaces bilingües. El texto visible se resuelve exclusivamente desde la variante inglesa del cue correspondiente.
+- El español continúa siendo la autoridad editorial del guion, las descripciones y la documentación; esa autoridad no obliga a traducir el arte diegético dentro del frame.
+- Una futura edición con displays en español debe producirse como variante derivada —por ejemplo mediante edición de video asistida por ML— sin sobrescribir el master inglés.
+
 ## 11. Parámetros pendientes / revisables
 
 - **Diámetro máximo 18 m:** valor de trabajo adoptado para referencias proporcionales; pendiente de canonización explícita si se desea fijarlo definitivamente.

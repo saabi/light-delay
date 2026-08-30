@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-30 — Festival Cut completo A–G y displays ingleses
+
+- Festival incorpora 29 tomas/takes para E–G y alcanza 67 tomas, 6:03,2 de primera asamblea y cobertura causal/animatic completa; los siete parlamentos existentes se colocaron sin reescritura ni sobra de diálogo.
+- Cada toma nueva reutiliza un still del corto como placeholder explícito `needs_regeneration/canon_mismatch`; no se generaron imágenes ni video.
+- Los planes de producción declaran `diegeticTextLanguage: en` y extraen sólo `variants.en` para texto integrado en displays. El master visual nunca combina idiomas; una eventual versión española será un derivado de edición.
+- Añadidos reloj único, saludo pasivo verificado, bindings, propósitos, cámara, sonido, procedencia y contextos de gravedad/vacío para E–G.
+
 ## 2026-08-29 — Carrera al núcleo, evidencia convergente y Festival A–G
 
 - Main, Festival y largo sincronizan la llegada casual de Harlan tras una tarea legítima, su microreacción ante «la verdadera firma apunta a—», la deliberación de Voss y la segunda orden que demora a Sorell.
