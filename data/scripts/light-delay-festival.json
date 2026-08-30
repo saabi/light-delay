@@ -8,17 +8,17 @@
       "es": "Light Delay — Festival Cut",
       "en": "Light Delay — Festival Cut"
     },
-    "version": "0.2.0-draft",
+    "version": "0.3.0-draft",
     "status": "draft",
     "kind": "festival_cut",
-    "targetDurationMs": 290000,
+    "targetDurationMs": 363200,
     "lineage": {
       "sourceScriptId": "script:light-delay-main-short",
       "relationship": "adaptation",
       "sourceVersion": "1.1.0-draft",
       "notes": {
-        "es": "Adaptación condensada ~4:50 según docs/light-delay-festival-cut-adaptation.md. Shots/takes pendientes.",
-        "en": "Condensed ~4:50 adaptation based on docs/light-delay-festival-cut-adaptation.md. Shots/takes pending."
+        "es": "Primera asamblea completa A–G. El orden de cinco minutos es orientativo; las 67 tomas actuales suman aproximadamente 6:03,2 y priorizan causalidad y respiración editorial.",
+        "en": "First complete A–G assembly. The five-minute scale is approximate; the current 67 shots total about 6:03.2 and prioritize causality and editorial breathing room."
       }
     },
     "declaredEntityRefs": [
@@ -375,7 +375,7 @@
         "festival:shot-a-03",
         "festival:shot-a-04"
       ],
-      "targetDurationMs": 25000
+      "targetDurationMs": 26000
     },
     {
       "id": "festival:scene-b",
@@ -426,7 +426,7 @@
         "festival:shot-b-06",
         "festival:shot-b-07"
       ],
-      "targetDurationMs": 60000,
+      "targetDurationMs": 95700,
       "secondaryLocationIds": [
         "location:celestial-ardor-bridge",
         "location:celestial-ardor-command-vestibule",
@@ -484,7 +484,7 @@
         "festival:shot-c-08",
         "festival:shot-c-09"
       ],
-      "targetDurationMs": 20000,
+      "targetDurationMs": 36600,
       "secondaryLocationIds": [
         "location:celestial-ardor-bridge",
         "location:celestial-ardor-central-access",
@@ -537,7 +537,7 @@
         "festival:shot-d-09",
         "festival:shot-d-08"
       ],
-      "targetDurationMs": 50000
+      "targetDurationMs": 59900
     },
     {
       "id": "festival:scene-e",
@@ -573,8 +573,19 @@
       "beatIds": [
         "festival:beat-e-01"
       ],
-      "shotIds": [],
-      "targetDurationMs": 45000
+      "shotIds": [
+        "festival:shot-e-01",
+        "festival:shot-e-02",
+        "festival:shot-e-03",
+        "festival:shot-e-04",
+        "festival:shot-e-05",
+        "festival:shot-e-06",
+        "festival:shot-e-07",
+        "festival:shot-e-08",
+        "festival:shot-e-09",
+        "festival:shot-e-10"
+      ],
+      "targetDurationMs": 49500
     },
     {
       "id": "festival:scene-f",
@@ -604,13 +615,23 @@
       "characterIds": [
         "character:rao",
         "character:voss",
-        "character:harlan"
+        "character:harlan",
+        "character:okoye"
       ],
       "beatIds": [
         "festival:beat-f-01"
       ],
-      "shotIds": [],
-      "targetDurationMs": 60000
+      "shotIds": [
+        "festival:shot-f-01",
+        "festival:shot-f-02",
+        "festival:shot-f-03",
+        "festival:shot-f-04",
+        "festival:shot-f-05",
+        "festival:shot-f-06",
+        "festival:shot-f-07",
+        "festival:shot-f-08"
+      ],
+      "targetDurationMs": 47000
     },
     {
       "id": "festival:scene-g",
@@ -644,8 +665,20 @@
       "beatIds": [
         "festival:beat-g-01"
       ],
-      "shotIds": [],
-      "targetDurationMs": 30000
+      "shotIds": [
+        "festival:shot-g-01",
+        "festival:shot-g-02",
+        "festival:shot-g-03",
+        "festival:shot-g-04",
+        "festival:shot-g-05",
+        "festival:shot-g-06",
+        "festival:shot-g-07",
+        "festival:shot-g-08",
+        "festival:shot-g-09",
+        "festival:shot-g-10",
+        "festival:shot-g-11"
+      ],
+      "targetDurationMs": 48500
     }
   ],
   "beats": [
@@ -668,7 +701,7 @@
       "cueIds": [
         "festival:cue-a-01"
       ],
-      "targetDurationMs": 25000
+      "targetDurationMs": 26000
     },
     {
       "id": "festival:beat-b-01",
@@ -709,7 +742,7 @@
         "festival:cue-b-01",
         "festival:cue-b-06"
       ],
-      "targetDurationMs": 60000
+      "targetDurationMs": 95700
     },
     {
       "id": "festival:beat-c-01",
@@ -741,7 +774,7 @@
         "festival:cue-c-11",
         "festival:cue-c-12"
       ],
-      "targetDurationMs": 20000
+      "targetDurationMs": 36600
     },
     {
       "id": "festival:beat-d-01",
@@ -774,7 +807,7 @@
         "festival:cue-d-09",
         "festival:cue-d-10"
       ],
-      "targetDurationMs": 50000
+      "targetDurationMs": 59900
     },
     {
       "id": "festival:beat-e-01",
@@ -805,7 +838,7 @@
         "festival:cue-e-10",
         "festival:cue-e-11"
       ],
-      "targetDurationMs": 45000
+      "targetDurationMs": 49500
     },
     {
       "id": "festival:beat-f-01",
@@ -824,12 +857,14 @@
         "en": "Quarantine climax with Sorell's passive greeting as an asset."
       },
       "cueIds": [
+        "festival:cue-f-countdown",
         "festival:cue-f-01",
         "festival:cue-f-02",
         "festival:cue-f-03",
+        "festival:cue-f-greeting-ui",
         "festival:cue-f-04"
       ],
-      "targetDurationMs": 60000
+      "targetDurationMs": 47000
     },
     {
       "id": "festival:beat-g-01",
@@ -848,13 +883,14 @@
         "en": "Transmission, contact, and ‘You made it in time.’"
       },
       "cueIds": [
+        "festival:cue-g-countdown",
         "festival:cue-g-01",
         "festival:cue-g-03",
         "festival:cue-g-04",
         "festival:cue-g-02",
         "festival:cue-g-05"
       ],
-      "targetDurationMs": 30000
+      "targetDurationMs": 48500
     }
   ],
   "cues": [
@@ -1126,7 +1162,7 @@
     {
       "id": "festival:cue-f-01",
       "beatId": "festival:beat-f-01",
-      "order": 1,
+      "order": 2,
       "type": "dialogue",
       "speakerId": "character:harlan",
       "presentation": "on_screen",
@@ -1147,7 +1183,7 @@
     {
       "id": "festival:cue-g-01",
       "beatId": "festival:beat-g-01",
-      "order": 1,
+      "order": 2,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -1168,7 +1204,7 @@
     {
       "id": "festival:cue-g-02",
       "beatId": "festival:beat-g-01",
-      "order": 4,
+      "order": 5,
       "type": "dialogue",
       "speakerId": "character:voss",
       "presentation": "on_screen",
@@ -1905,7 +1941,7 @@
     {
       "id": "festival:cue-f-02",
       "beatId": "festival:beat-f-01",
-      "order": 2,
+      "order": 3,
       "type": "action",
       "text": {
         "es": "Voss permanece en el puente. Okoye intercepta a Harlan en el ramal físico y lo inmoviliza sin combate armado, mientras Elin ejecuta la operación ya preparada.",
@@ -1915,7 +1951,7 @@
     {
       "id": "festival:cue-f-03",
       "beatId": "festival:beat-f-01",
-      "order": 3,
+      "order": 4,
       "type": "action",
       "text": {
         "es": "Elin aplica la cuarentena limitada y Sorell aporta el saludo pasivo de sólo lectura. El payload queda aislado sin borrar la mediación legítima.",
@@ -1925,7 +1961,7 @@
     {
       "id": "festival:cue-f-04",
       "beatId": "festival:beat-f-01",
-      "order": 4,
+      "order": 6,
       "type": "text",
       "presentation": "interface",
       "content": {
@@ -1945,7 +1981,7 @@
     {
       "id": "festival:cue-g-03",
       "beatId": "festival:beat-g-01",
-      "order": 2,
+      "order": 3,
       "type": "action",
       "text": {
         "es": "El saludo limpio sale. Tras el silencio, los Velari responden con reconocimiento limitado y autorizan la aproximación; la estación orgánica y la nave emisaria permanecen visualmente separadas.",
@@ -1955,7 +1991,7 @@
     {
       "id": "festival:cue-g-04",
       "beatId": "festival:beat-g-01",
-      "order": 3,
+      "order": 4,
       "type": "action",
       "text": {
         "es": "Voss prepara el informe a la Tierra, adjunta la evidencia convergente y el legajo de Zao. Su retrato lo detiene antes de enviarlo.",
@@ -1965,12 +2001,102 @@
     {
       "id": "festival:cue-g-05",
       "beatId": "festival:beat-g-01",
-      "order": 5,
+      "order": 6,
       "type": "action",
       "text": {
         "es": "Voss dice la frase apenas para sí, pulsa ENVIAR y deja partir el informe. No llega respuesta de la Tierra.",
         "en": "Voss says the line softly to himself, presses SEND, and lets the report leave. No reply arrives from Earth."
       }
+    },
+    {
+      "id": "festival:cue-f-countdown",
+      "beatId": "festival:beat-f-01",
+      "order": 1,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "CANAL VELARI · APERTURA EN 00:48",
+            "status": "source"
+          },
+          "en": {
+            "text": "VELARI CHANNEL · OPENS IN 00:48",
+            "status": "draft"
+          }
+        }
+      },
+      "notes": [
+        {
+          "type": "production",
+          "text": {
+            "es": "La variante española es editorial. Todo texto integrado en imagen o video se renderiza únicamente con la variante inglesa.",
+            "en": "The Spanish variant is editorial. Any text embedded in imagery or video renders from the English variant only."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:cue-f-greeting-ui",
+      "beatId": "festival:beat-f-01",
+      "order": 5,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "SORELL · SALUDO PASIVO · SÓLO LECTURA · VERIFICADO",
+            "status": "source"
+          },
+          "en": {
+            "text": "SORELL · PASSIVE GREETING · READ ONLY · VERIFIED",
+            "status": "draft"
+          }
+        }
+      },
+      "notes": [
+        {
+          "type": "production",
+          "text": {
+            "es": "La variante española es editorial. Todo texto integrado en imagen o video se renderiza únicamente con la variante inglesa.",
+            "en": "The Spanish variant is editorial. Any text embedded in imagery or video renders from the English variant only."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:cue-g-countdown",
+      "beatId": "festival:beat-g-01",
+      "order": 1,
+      "type": "text",
+      "presentation": "interface",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "CANAL VELARI · 00:00",
+            "status": "source"
+          },
+          "en": {
+            "text": "VELARI CHANNEL · 00:00",
+            "status": "draft"
+          }
+        }
+      },
+      "notes": [
+        {
+          "type": "production",
+          "text": {
+            "es": "La variante española es editorial. Todo texto integrado en imagen o video se renderiza únicamente con la variante inglesa.",
+            "en": "The Spanish variant is editorial. Any text embedded in imagery or video renders from the English variant only."
+          },
+          "status": "resolved"
+        }
+      ]
     }
   ],
   "shots": [
@@ -4140,6 +4266,2268 @@
           }
         }
       ]
+    },
+    {
+      "id": "festival:shot-e-01",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "purpose": {
+        "es": "Establecer que el cálculo de Zao funcionó antes de abrir el contenido.",
+        "en": "Establish that Zao’s calculation worked before revealing the content."
+      },
+      "description": {
+        "es": "La portadora humana aparece en el corredor previsto e intercepta a la Ardor antes del encuentro.",
+        "en": "The human carrier appears in the predicted corridor and intercepts Ardor before the encounter."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "signal recipient"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · onda débil que emerge del ruido; composición estable para que el hallazgo se lea de inmediato.",
+          "en": "85 mm · weak waveform emerging from noise; stable composition so the discovery reads immediately."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-01",
+          "atMs": 0,
+          "durationMs": 4000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-01-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-01-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-11-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Pulsos de adquisición y respiración contenida en el puente.",
+            "en": "Acquisition pulses and restrained breathing on the bridge."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-11-05 (asset:animatic-11-05) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-11-05 (asset:animatic-11-05) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-02",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "purpose": {
+        "es": "Separar la primera capa física de la posterior autenticación de autora.",
+        "en": "Separate the first physical layer from the later author authentication."
+      },
+      "description": {
+        "es": "Elin autentica dispositivo y hora; la interfaz inglesa confirma que el envío precede al asesinato.",
+        "en": "Elin authenticates device and time; the English interface confirms the transmission predates the murder."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:optical-contingency-transmitter",
+          "role": "authenticated device"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · metadatos convergen en verde; sólo texto diegético inglés.",
+          "en": "85 mm · metadata converges in green; English diegetic text only."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-02",
+          "atMs": 500,
+          "durationMs": 3000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-02-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-02-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Tono seco de firma válida.",
+            "en": "Dry valid-signature tone."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-01 (asset:animatic-12-01) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-01 (asset:animatic-12-01) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-03",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "purpose": {
+        "es": "Entregar la advertencia sin resumen y pagar la transmisión óptica.",
+        "en": "Deliver the warning without summary and pay off the optical transmission."
+      },
+      "description": {
+        "es": "El puente reproduce completo el mensaje grabado de Zao, que nombra a Harlan, señala el relé y pide preservar la mediación.",
+        "en": "The bridge plays Zao’s complete recorded message, naming Harlan, pointing to the relay, and asking them to preserve mediation."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "recorded image"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "framing": {
+          "es": "PP",
+          "en": "CU"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "75 mm · rostro grabado de Zao contra el sensor; artefactos leves de corrección óptica.",
+          "en": "75 mm · Zao’s recorded face against the sensor; faint optical-correction artifacts."
+        }
+      },
+      "durationMs": 11000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-03",
+          "atMs": 0,
+          "durationMs": 10500
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-03-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-03-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-06-06"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Voz de Zao con compresión ligera; el puente permanece en silencio.",
+            "en": "Zao’s voice with light compression; the bridge remains silent."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-06-06 (asset:animatic-06-06) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-06-06 (asset:animatic-06-06) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-04",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "purpose": {
+        "es": "Mostrar su última defensa antes de que Elin exponga las capas independientes.",
+        "en": "Show his final defense before Elin exposes the independent layers."
+      },
+      "description": {
+        "es": "Harlan intenta reducir toda la prueba a una voz falsificable.",
+        "en": "Harlan tries to reduce all the evidence to a forgeable voice."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "speaker"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "framing": {
+          "es": "PP",
+          "en": "CU"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "75 mm · reacción contenida; Harlan habla sin apartarse de Voss.",
+          "en": "75 mm · contained reaction; Harlan speaks without looking away from Voss."
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-04",
+          "atMs": 200,
+          "durationMs": 1800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-04-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-04-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "La estática cae antes de su objeción.",
+            "en": "Static drops before his objection."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-02 (asset:animatic-12-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-02 (asset:animatic-12-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-05",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "purpose": {
+        "es": "Convertir la réplica en método verificable, no en fe en Zao.",
+        "en": "Turn the reply into a verifiable method, not faith in Zao."
+      },
+      "description": {
+        "es": "Elin distingue la voz de la firma y responde sin pedir confianza emocional.",
+        "en": "Elin distinguishes the voice from the signature and answers without asking for emotional trust."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "speaker"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "opposing axis"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "framing": {
+          "es": "PM",
+          "en": "MS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "50 mm · Elin y Harlan en ejes opuestos, con Voss fuera de foco entre ambos.",
+          "en": "50 mm · Elin and Harlan on opposite axes, with Voss out of focus between them."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-05",
+          "atMs": 200,
+          "durationMs": 3200
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-05-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-05-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Silencio salvo ventilación y confirmaciones de consola.",
+            "en": "Silence except ventilation and console confirmations."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-03 (asset:animatic-12-03) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-03 (asset:animatic-12-03) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-06",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "purpose": {
+        "es": "Hacer visible que mensaje y adjunto están autenticados sin depender del audio.",
+        "en": "Make visible that message and attachment are authenticated independently of audio."
+      },
+      "description": {
+        "es": "La interfaz inglesa confirma autora, firma digital válida y token personal de Zao.",
+        "en": "The English interface confirms Zao as author, with a valid digital signature and personal token."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "operator"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "background"
+        }
+      ],
+      "composition": {
+        "size": "OTS",
+        "framing": {
+          "es": "OTS",
+          "en": "OTS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "50 mm · interfaz sobre hombro de Elin; Harlan permanece legible al fondo.",
+          "en": "50 mm · interface over Elin’s shoulder; Harlan remains readable in the background."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-06",
+          "atMs": 500,
+          "durationMs": 3000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-06-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-06-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Confirmación criptográfica breve.",
+            "en": "Brief cryptographic confirmation."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-04 (asset:animatic-12-04) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-04 (asset:animatic-12-04) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-07",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "purpose": {
+        "es": "Reunir las cuatro capas independientes sin convertir la interfaz en exposición hablada.",
+        "en": "Unite the four independent layers without turning the interface into spoken exposition."
+      },
+      "description": {
+        "es": "El snapshot firmado por hardware conserva el relé asignado a Harlan y la auditoría de Elin conecta circuito, payload y override.",
+        "en": "The hardware-signed snapshot preserves the relay assignment to Harlan, and Elin’s audit connects circuit, payload, and override."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:physical-override-relay",
+          "role": "evidence source"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · coincidencias aparecen por capas; todos los rótulos integrados se renderizan sólo en inglés.",
+          "en": "85 mm · matches appear in layers; all embedded labels render in English only."
+        }
+      },
+      "durationMs": 7000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-07",
+          "atMs": 0,
+          "durationMs": 7000
+        },
+        {
+          "cueId": "festival:cue-e-08",
+          "atMs": 1800,
+          "durationMs": 4500
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-07-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-07-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Cuatro confirmaciones discretas convergen en un tono estable.",
+            "en": "Four discreet confirmations converge into one steady tone."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-05 (asset:animatic-12-05) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-05 (asset:animatic-12-05) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-08",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 8,
+      "order": 8,
+      "purpose": {
+        "es": "Convertir la sospecha en atribución operativa antes de la revocación.",
+        "en": "Turn suspicion into operational attribution before revocation."
+      },
+      "description": {
+        "es": "La interfaz inglesa atribuye el override a R. Harlan mediante evidencia convergente.",
+        "en": "The English interface attributes the override to R. Harlan through convergent evidence."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "attributed operator"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · atribución firme reflejada sobre Elin.",
+          "en": "85 mm · firm attribution reflected on Elin."
+        }
+      },
+      "durationMs": 3000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-09",
+          "atMs": 0,
+          "durationMs": 2800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-08-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-08-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-06"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Confirmación seca, sin música triunfal.",
+            "en": "Dry confirmation, without triumphant music."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-06 (asset:animatic-12-06) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-06 (asset:animatic-12-06) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-09",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 9,
+      "order": 9,
+      "purpose": {
+        "es": "Mantener mando, navegación e intercepción física distribuidos de forma causal.",
+        "en": "Keep command, navigation, and physical interception causally distributed."
+      },
+      "description": {
+        "es": "Voss revoca la credencial de Harlan, ordena a Okoye interceptarlo y permanece al mando del puente.",
+        "en": "Voss revokes Harlan’s credential, orders Okoye to intercept him, and remains in command on the bridge."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "speaker"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "operator"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "subject"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "framing": {
+          "es": "PM",
+          "en": "MS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "50 mm · Voss sostiene el centro; Elin opera a un lado y Harlan queda en segundo término.",
+          "en": "50 mm · Voss holds center; Elin works to one side and Harlan remains in the middle ground."
+        }
+      },
+      "durationMs": 5500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-10",
+          "atMs": 200,
+          "durationMs": 5000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-09-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-09-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-08"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "La alarma de credencial comienza bajo la orden de Voss.",
+            "en": "Credential alarm begins beneath Voss’s order."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-08 (asset:animatic-12-08) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-08 (asset:animatic-12-08) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-e-10",
+      "sceneId": "festival:scene-e",
+      "beatIds": [
+        "festival:beat-e-01"
+      ],
+      "number": 10,
+      "order": 10,
+      "purpose": {
+        "es": "Forzar la carrera física sin hacer que Voss abandone el puente.",
+        "en": "Force the physical race without making Voss leave the bridge."
+      },
+      "description": {
+        "es": "Antes de que la revocación se propague, Harlan activa la última ventana del override y arranca hacia el ascensor central.",
+        "en": "Before revocation propagates, Harlan activates the override’s last window and breaks toward the central lift."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "override operator"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "framing": {
+          "es": "PM",
+          "en": "MS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "50 mm · la mano de Harlan alcanza el control; termina cuadro al salir hacia el acceso central.",
+          "en": "50 mm · Harlan’s hand reaches the control; end frame as he exits toward central access."
+        }
+      },
+      "durationMs": 4500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-e-11",
+          "atMs": 0,
+          "durationMs": 4500
+        }
+      ],
+      "takeIds": [
+        "festival:shot-e-10-take-01"
+      ],
+      "selectedTakeId": "festival:shot-e-10-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-12-07"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Alarma de revocación incompleta y pasos que se alejan.",
+            "en": "Incomplete-revocation alarm and retreating footsteps."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-12-07 (asset:animatic-12-07) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-12-07 (asset:animatic-12-07) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-01",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "purpose": {
+        "es": "Unificar la carrera física y digital bajo el mismo límite.",
+        "en": "Unify the physical and digital race under the same limit."
+      },
+      "description": {
+        "es": "Un único reloj inglés establece la urgencia: VELARI CHANNEL · OPENS IN 00:48.",
+        "en": "A single English clock establishes urgency: VELARI CHANNEL · OPENS IN 00:48."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "countdown system"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · contador grande y legible; nunca duplicar idiomas.",
+          "en": "85 mm · large, legible countdown; never duplicate languages."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-f-countdown",
+          "atMs": 300,
+          "durationMs": 3500
+        }
+      ],
+      "takeIds": [
+        "festival:shot-f-01-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-01-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-14-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Pulso regular del contador bajo la alarma.",
+            "en": "Regular countdown pulse beneath the alarm."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-14-02 (asset:animatic-14-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-14-02 (asset:animatic-14-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-02",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "purpose": {
+        "es": "Mostrar que su último recurso requiere presencia física y esfuerzo.",
+        "en": "Show that his last resort requires physical presence and effort."
+      },
+      "description": {
+        "es": "Bajo 1 g, Harlan corre por el acceso central y alcanza el ramal físico del núcleo.",
+        "en": "Under 1 g, Harlan runs through central access and reaches the core’s physical branch."
+      },
+      "locationId": "location:celestial-ardor-central-access",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "runner"
+        },
+        {
+          "kind": "object",
+          "id": "object:physical-override-relay",
+          "role": "destination"
+        }
+      ],
+      "composition": {
+        "size": "MLS",
+        "framing": {
+          "es": "PG",
+          "en": "MLS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "35 mm · tracking rápido desde el ascensor al ramal; movimiento sujeto a gravedad de empuje.",
+          "en": "35 mm · fast tracking from lift to branch; movement obeys thrust gravity."
+        }
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-f-01",
+          "atMs": 900,
+          "durationMs": 4600
+        }
+      ],
+      "takeIds": [
+        "festival:shot-f-02-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-02-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-13-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Respiración, pasos bajo 1 g y alarma estructural.",
+            "en": "Breathing, footsteps under 1 g, and structural alarm."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-13-02 (asset:animatic-13-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-13-02 (asset:animatic-13-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-03",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "purpose": {
+        "es": "Hacer simultáneas la contención física, el mando y la defensa digital.",
+        "en": "Make physical containment, command, and digital defense simultaneous."
+      },
+      "description": {
+        "es": "Okoye recorta distancia mientras Voss permanece en el puente y Elin continúa la operación preparada.",
+        "en": "Okoye closes the distance while Voss remains on the bridge and Elin continues the prepared operation."
+      },
+      "locationId": "location:celestial-ardor-central-access",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "interceptor"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "target"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "remote operator"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "remote command"
+        }
+      ],
+      "composition": {
+        "size": "MLS",
+        "framing": {
+          "es": "PG",
+          "en": "MLS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "40 mm · Okoye avanza por el eje; monitores laterales mantienen presente el trabajo remoto de Elin.",
+          "en": "40 mm · Okoye advances along the axis; side displays keep Elin’s remote work present."
+        }
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-f-02",
+          "atMs": 0,
+          "durationMs": 6000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-f-03-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-03-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-13-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Alarma y respiraciones distintas separan perseguidor y objetivo.",
+            "en": "Alarm and distinct breathing separate pursuer and target."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-13-04 (asset:animatic-13-04) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-13-04 (asset:animatic-13-04) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-04",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "purpose": {
+        "es": "Cerrar la amenaza física sin desplazar el clímax hacia una pelea.",
+        "en": "Close the physical threat without shifting the climax into a fight."
+      },
+      "description": {
+        "es": "Okoye intercepta e inmoviliza a Harlan en el ramal físico sin combate armado.",
+        "en": "Okoye intercepts and restrains Harlan at the physical branch without an armed fight."
+      },
+      "locationId": "location:celestial-ardor-central-access",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "interceptor"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "restrained"
+        }
+      ],
+      "composition": {
+        "size": "LS",
+        "framing": {
+          "es": "PG",
+          "en": "LS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "32 mm · cámara en mano controlada; un movimiento decisivo, breve y legible.",
+          "en": "32 mm · controlled handheld; one decisive, brief, readable movement."
+        }
+      },
+      "durationMs": 6000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-f-04-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-04-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-14-08"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Golpe corporal amortiguado y cierre mecánico de sujeción.",
+            "en": "Muffled body impact and mechanical restraint lock."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-14-08 (asset:animatic-14-08) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-14-08 (asset:animatic-14-08) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-05",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "purpose": {
+        "es": "Pagar la preparación anterior y evitar una solución técnica improvisada.",
+        "en": "Pay off the earlier preparation and avoid an improvised technical solution."
+      },
+      "description": {
+        "es": "Elin aplica la cuarentena ya preparada: aísla la rama hostil sin borrar la mediación.",
+        "en": "Elin applies the prepared quarantine, isolating the hostile branch without erasing mediation."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "operator"
+        },
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "quarantine target"
+        }
+      ],
+      "composition": {
+        "size": "OTS",
+        "framing": {
+          "es": "OTS",
+          "en": "OTS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "50 mm · mapa de ramas sobre hombro; ruta hostil en rojo y mediación legítima en azul.",
+          "en": "50 mm · branch map over shoulder; hostile route in red and legitimate mediation in blue."
+        }
+      },
+      "durationMs": 7000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-f-03",
+          "atMs": 0,
+          "durationMs": 7000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-f-05-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-05-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-14-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Secuencia rítmica de cierres parciales, no un único clic mágico.",
+            "en": "Rhythmic sequence of partial closures, not one magical click."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-14-04 (asset:animatic-14-04) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-14-04 (asset:animatic-14-04) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-06",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "purpose": {
+        "es": "Conservar el aporte causal de Sorell sin exigir su presencia física.",
+        "en": "Preserve Sorell’s causal contribution without requiring her physical presence."
+      },
+      "description": {
+        "es": "La interfaz inglesa verifica el saludo pasivo de Sorell como asset de sólo lectura.",
+        "en": "The English interface verifies Sorell’s passive greeting as a read-only asset."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:read-only-greeting-medium",
+          "role": "verified greeting"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · soporte de saludo y sellos de sólo lectura; texto integrado sólo en inglés.",
+          "en": "85 mm · greeting medium and read-only seals; embedded text in English only."
+        }
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-f-greeting-ui",
+          "atMs": 500,
+          "durationMs": 5000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-f-06-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-06-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-14-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Dos verificaciones breves y un bloqueo de escritura.",
+            "en": "Two brief verifications and a write lock."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-14-05 (asset:animatic-14-05) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-14-05 (asset:animatic-14-05) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-07",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "purpose": {
+        "es": "Mostrar separación, no desaparición, del payload.",
+        "en": "Show separation, not disappearance, of the payload."
+      },
+      "description": {
+        "es": "La rama hostil queda confinada en el buffer cerrado mientras el saludo legítimo conserva salida.",
+        "en": "The hostile branch is confined in the closed buffer while the legitimate greeting retains an outbound path."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "operator"
+        },
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "contained system"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "framing": {
+          "es": "PP",
+          "en": "CU"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "75 mm · Elin y el mapa reflejado comparten foco al estabilizarse las rutas.",
+          "en": "75 mm · Elin and the reflected map share focus as routes stabilize."
+        }
+      },
+      "durationMs": 7000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-f-07-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-07-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-14-10"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Los tonos caóticos se ordenan sin desaparecer por completo.",
+            "en": "Chaotic tones settle without vanishing completely."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-14-10 (asset:animatic-14-10) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-14-10 (asset:animatic-14-10) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-f-08",
+      "sceneId": "festival:scene-f",
+      "beatIds": [
+        "festival:beat-f-01"
+      ],
+      "number": 8,
+      "order": 8,
+      "purpose": {
+        "es": "Cerrar el conflicto operativo antes de abrir el contacto.",
+        "en": "Close the operational conflict before opening contact."
+      },
+      "description": {
+        "es": "La interfaz inglesa confirma payload en cuarentena, canal saliente limpio y mediación activa.",
+        "en": "The English interface confirms payload quarantined, outbound channel clean, and mediation active."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "quarantined system"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · tres estados alineados, únicamente en inglés, sin duplicación traducida.",
+          "en": "85 mm · three aligned states, English only, without duplicated translation."
+        }
+      },
+      "durationMs": 5000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-f-04",
+          "atMs": 500,
+          "durationMs": 4000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-f-08-take-01"
+      ],
+      "selectedTakeId": "festival:shot-f-08-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-15-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Un tono estable confirma el canal limpio.",
+            "en": "One steady tone confirms the clean channel."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-15-02 (asset:animatic-15-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-15-02 (asset:animatic-15-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-01",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "purpose": {
+        "es": "Pagar el reloj único y forzar la decisión de envío.",
+        "en": "Pay off the single clock and force the send decision."
+      },
+      "description": {
+        "es": "El reloj inglés llega a VELARI CHANNEL · 00:00 con sólo el canal limpio disponible.",
+        "en": "The English clock reaches VELARI CHANNEL · 00:00 with only the clean channel available."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "contact clock"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · cero sostenido; no aparece traducción simultánea.",
+          "en": "85 mm · held zero; no simultaneous translation appears."
+        }
+      },
+      "durationMs": 3000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-g-countdown",
+          "atMs": 0,
+          "durationMs": 2800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-g-01-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-01-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-14-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "El pulso del reloj cesa en cero.",
+            "en": "The countdown pulse stops at zero."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-14-02 (asset:animatic-14-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-14-02 (asset:animatic-14-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-02",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "purpose": {
+        "es": "Convertir el canal limpio en una decisión humana concreta.",
+        "en": "Turn the clean channel into a concrete human decision."
+      },
+      "description": {
+        "es": "Voss autoriza el envío sin grandilocuencia.",
+        "en": "Voss authorizes transmission without grandiosity."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "speaker"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "framing": {
+          "es": "PP",
+          "en": "CU"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "75 mm · frontal contenido; Voss no abandona su puesto.",
+          "en": "75 mm · restrained frontal; Voss does not leave his station."
+        }
+      },
+      "durationMs": 3000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-g-01",
+          "atMs": 300,
+          "durationMs": 1200
+        }
+      ],
+      "takeIds": [
+        "festival:shot-g-02-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-02-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-15-04"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Silencio previo y una única confirmación posterior.",
+            "en": "Silence before and a single confirmation after."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-15-04 (asset:animatic-15-04) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-15-04 (asset:animatic-15-04) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-03",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "purpose": {
+        "es": "Demostrar que el contacto ya no porta la carga hostil.",
+        "en": "Demonstrate that contact no longer carries the hostile payload."
+      },
+      "description": {
+        "es": "El saludo limpio sale por el conducto de sólo lectura.",
+        "en": "The clean greeting leaves through the read-only channel."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:read-only-greeting-medium",
+          "role": "outbound greeting"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · apertura del conducto y paquete verificado avanzando hacia salida.",
+          "en": "85 mm · conduit opens and verified packet advances outbound."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-g-03",
+          "atMs": 0,
+          "durationMs": 4000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-g-03-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-03-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-15-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Pulso de transmisión seguido por silencio real.",
+            "en": "Transmission pulse followed by genuine silence."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-15-05 (asset:animatic-15-05) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-15-05 (asset:animatic-15-05) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-04",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "purpose": {
+        "es": "Hacer visible una respuesta real pero prudente.",
+        "en": "Make a real but cautious response visible."
+      },
+      "description": {
+        "es": "Tras el silencio, la piel de la estación responde con un patrón orgánico de reconocimiento limitado.",
+        "en": "After silence, the station’s skin answers with an organic pattern of limited recognition."
+      },
+      "locationId": "location:velari-station",
+      "visibleRefs": [
+        {
+          "kind": "location",
+          "id": "location:velari-station",
+          "role": "responding station"
+        }
+      ],
+      "composition": {
+        "size": "LS",
+        "framing": {
+          "es": "PG",
+          "en": "LS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "24 mm exterior · teleobjetivo instrumental; el patrón nace pequeño y se propaga.",
+          "en": "24 mm exterior · instrumental telephoto; pattern starts small and propagates."
+        }
+      },
+      "durationMs": 4500,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-g-04-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-04-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-15-06"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Sin sonido diegético exterior; motivo musical mínimo al aparecer la luz.",
+            "en": "No exterior diegetic sound; minimal musical motif as light appears."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-15-06 (asset:animatic-15-06) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-15-06 (asset:animatic-15-06) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-05",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "purpose": {
+        "es": "Establecer escala y separar la nave humana del hábitat Velari.",
+        "en": "Establish scale and separate the human ship from the Velari habitat."
+      },
+      "description": {
+        "es": "La Ardor aparece diminuta frente a la estación orgánica de varios kilómetros.",
+        "en": "Ardor appears tiny before the multi-kilometre organic station."
+      },
+      "locationId": "location:velari-station",
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "human ship"
+        },
+        {
+          "kind": "location",
+          "id": "location:velari-station",
+          "role": "habitat"
+        }
+      ],
+      "composition": {
+        "size": "ELS",
+        "framing": {
+          "es": "GPG",
+          "en": "ELS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "24 mm exterior · gran profundidad; la Ardor nunca domina el cuadro.",
+          "en": "24 mm exterior · deep scale; Ardor never dominates the frame."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-g-05-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-05-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-16-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Diseño sonoro no diegético, tenue y sin triunfalismo.",
+            "en": "Quiet non-diegetic sound design without triumphalism."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-16-01 (asset:animatic-16-01) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-16-01 (asset:animatic-16-01) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-06",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "purpose": {
+        "es": "Evitar que estación y emisaria se lean como un único objeto.",
+        "en": "Prevent the station and emissary from reading as one object."
+      },
+      "description": {
+        "es": "La nave emisaria se separa visualmente de la estación sin escape ni motores visibles.",
+        "en": "The emissary ship separates visually from the station without exhaust or visible engines."
+      },
+      "locationId": "location:velari-station",
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:velari-emissary",
+          "role": "emissary"
+        },
+        {
+          "kind": "location",
+          "id": "location:velari-station",
+          "role": "background habitat"
+        }
+      ],
+      "composition": {
+        "size": "LS",
+        "framing": {
+          "es": "PG",
+          "en": "LS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "32 mm exterior · contraluz bioluminiscente; siluetas inequívocamente distintas.",
+          "en": "32 mm exterior · bioluminescent backlight; unmistakably distinct silhouettes."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-g-06-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-06-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-16-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Continuación del motivo no diegético; vacío sin propagación sonora.",
+            "en": "Non-diegetic motif continues; vacuum carries no sound."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-16-02 (asset:animatic-16-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-16-02 (asset:animatic-16-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-07",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "purpose": {
+        "es": "Cerrar el primer contacto sin convertirlo en comprensión total.",
+        "en": "Close first contact without turning it into total understanding."
+      },
+      "description": {
+        "es": "Ardor, emisaria y estación sincronizan un pulso de reconocimiento limitado.",
+        "en": "Ardor, emissary, and station synchronize a limited-recognition pulse."
+      },
+      "locationId": "location:velari-station",
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "human ship"
+        },
+        {
+          "kind": "vehicle",
+          "id": "vehicle:velari-emissary",
+          "role": "emissary"
+        },
+        {
+          "kind": "location",
+          "id": "location:velari-station",
+          "role": "habitat"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "65 mm exterior · tres escalas alineadas en un eje compartido.",
+          "en": "65 mm exterior · three scales aligned on one shared axis."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-g-07-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-07-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-16-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Tres pulsos visuales; la música sólo reconoce, no resuelve.",
+            "en": "Three visual pulses; music acknowledges but does not resolve."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-16-03 (asset:animatic-16-03) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-16-03 (asset:animatic-16-03) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-08",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 8,
+      "order": 8,
+      "purpose": {
+        "es": "Transformar el éxito operativo en memoria y responsabilidad.",
+        "en": "Turn operational success into memory and responsibility."
+      },
+      "description": {
+        "es": "Voss prepara el informe a la Tierra y adjunta evidencia convergente y el legajo de Zao; archivos y controles visibles están sólo en inglés.",
+        "en": "Voss prepares the Earth report and attaches convergent evidence and Zao’s personnel file; visible files and controls are English only."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "report author"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "archival portrait"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "75 mm · informe, adjuntos y retrato comparten pantalla; texto integrado exclusivamente en inglés.",
+          "en": "75 mm · report, attachments, and portrait share the screen; embedded text exclusively in English."
+        }
+      },
+      "durationMs": 7000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-g-04",
+          "atMs": 0,
+          "durationMs": 7000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-g-08-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-08-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-17-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Puente silencioso; cursor y respiración de Voss.",
+            "en": "Quiet bridge; cursor and Voss’s breathing."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-17-02 (asset:animatic-17-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-17-02 (asset:animatic-17-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-09",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 9,
+      "order": 9,
+      "purpose": {
+        "es": "Nombrar el resultado emocional sin recibir respuesta ni absolución.",
+        "en": "Name the emotional outcome without receiving an answer or absolution."
+      },
+      "description": {
+        "es": "El retrato detiene a Voss; él dice «Llegaste a tiempo» apenas para sí.",
+        "en": "The portrait stops Voss; he says “You made it in time” almost to himself."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "speaker"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "archival portrait"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "framing": {
+          "es": "PP",
+          "en": "CU"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · luz Velari sobre Voss; el retrato queda reflejado en el borde del cuadro.",
+          "en": "85 mm · Velari light on Voss; portrait reflected at the frame edge."
+        }
+      },
+      "durationMs": 6000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-g-02",
+          "atMs": 2200,
+          "durationMs": 1800
+        }
+      ],
+      "takeIds": [
+        "festival:shot-g-09-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-09-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-17-05"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "La música cede espacio a la frase en voz baja.",
+            "en": "Music yields to the softly spoken line."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-17-05 (asset:animatic-17-05) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-17-05 (asset:animatic-17-05) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-10",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 10,
+      "order": 10,
+      "purpose": {
+        "es": "Cerrar la acción humana sin prometer una consecuencia inmediata imposible.",
+        "en": "Close the human action without promising an impossible immediate consequence."
+      },
+      "description": {
+        "es": "Voss pulsa el control inglés SEND y deja partir el informe; no aparece respuesta terrestre.",
+        "en": "Voss presses the English SEND control and lets the report depart; no Earth response appears."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "sender"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "framing": {
+          "es": "PD",
+          "en": "INSERT"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "85 mm · SEND en inglés, confirmación única y luego interfaz quieta.",
+          "en": "85 mm · English SEND, one confirmation, then a still interface."
+        }
+      },
+      "durationMs": 4000,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-g-05",
+          "atMs": 0,
+          "durationMs": 4000
+        }
+      ],
+      "takeIds": [
+        "festival:shot-g-10-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-10-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-17-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Tono de envío y ausencia deliberada de respuesta.",
+            "en": "Send tone and deliberate absence of response."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-17-02 (asset:animatic-17-02) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-17-02 (asset:animatic-17-02) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-g-11",
+      "sceneId": "festival:scene-g",
+      "beatIds": [
+        "festival:beat-g-01"
+      ],
+      "number": 11,
+      "order": 11,
+      "purpose": {
+        "es": "Dejar contacto, costo y futuro abiertos en una única imagen final.",
+        "en": "Leave contact, cost, and future open in one final image."
+      },
+      "description": {
+        "es": "La Ardor avanza hacia la emisaria con la estación detrás; fundido lento sin cierre triunfalista.",
+        "en": "Ardor advances toward the emissary with the station behind it; slow fade without triumphalism."
+      },
+      "locationId": "location:velari-station",
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "human ship"
+        },
+        {
+          "kind": "vehicle",
+          "id": "vehicle:velari-emissary",
+          "role": "emissary"
+        },
+        {
+          "kind": "location",
+          "id": "location:velari-station",
+          "role": "habitat"
+        }
+      ],
+      "composition": {
+        "size": "ELS",
+        "framing": {
+          "es": "GPG",
+          "en": "ELS"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movementDescription": {
+          "es": "24 mm exterior · la nave humana permanece subordinada a las escalas Velari; fundido final.",
+          "en": "24 mm exterior · the human ship remains subordinate to Velari scales; final fade."
+        }
+      },
+      "durationMs": 5000,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival:shot-g-11-take-01"
+      ],
+      "selectedTakeId": "festival:shot-g-11-take-01",
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-main-short",
+          "shotId": "main:shot-17-06"
+        }
+      ],
+      "notes": [
+        {
+          "type": "sound",
+          "text": {
+            "es": "Motivo final no diegético y caída lenta a silencio.",
+            "en": "Final non-diegetic motif and slow fall to silence."
+          },
+          "status": "resolved"
+        },
+        {
+          "type": "production",
+          "text": {
+            "es": "Reutiliza main:shot-17-06 (asset:animatic-17-06) sólo como marcador de posición; todo display visible en el reemplazo debe renderizarse exclusivamente en inglés.",
+            "en": "Reuses main:shot-17-06 (asset:animatic-17-06) as a placeholder only; every visible display in the replacement must render exclusively in English."
+          },
+          "status": "resolved"
+        }
+      ]
     }
   ],
   "takes": [
@@ -4938,6 +7326,615 @@
         "replacementBrief": {
           "es": "Sorell no encuentra a Harlan y toma el cilindro central; avanza mano sobre mano entre barras y cubiertas, más despacio por ruta y cautela.",
           "en": "Sorell cannot find Harlan and takes the central cylinder; she moves hand over hand across rails and decks, slower because of route and caution."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-01-take-01",
+      "shotId": "festival:shot-e-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-11-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-11-05 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-11-05 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La portadora humana aparece en el corredor previsto e intercepta a la Ardor antes del encuentro. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The human carrier appears in the predicted corridor and intercepts Ardor before the encounter. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-02-take-01",
+      "shotId": "festival:shot-e-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-01 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-01 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Elin autentica dispositivo y hora; la interfaz inglesa confirma que el envío precede al asesinato. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Elin authenticates device and time; the English interface confirms the transmission predates the murder. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-03-take-01",
+      "shotId": "festival:shot-e-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-06-06",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-06-06 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-06-06 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "El puente reproduce completo el mensaje grabado de Zao, que nombra a Harlan, señala el relé y pide preservar la mediación. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The bridge plays Zao’s complete recorded message, naming Harlan, pointing to the relay, and asking them to preserve mediation. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-04-take-01",
+      "shotId": "festival:shot-e-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Harlan intenta reducir toda la prueba a una voz falsificable. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Harlan tries to reduce all the evidence to a forgeable voice. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-05-take-01",
+      "shotId": "festival:shot-e-05",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-03 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-03 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Elin distingue la voz de la firma y responde sin pedir confianza emocional. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Elin distinguishes the voice from the signature and answers without asking for emotional trust. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-06-take-01",
+      "shotId": "festival:shot-e-06",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-04 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-04 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La interfaz inglesa confirma autora, firma digital válida y token personal de Zao. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The English interface confirms Zao as author, with a valid digital signature and personal token. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-07-take-01",
+      "shotId": "festival:shot-e-07",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-05 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-05 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "El snapshot firmado por hardware conserva el relé asignado a Harlan y la auditoría de Elin conecta circuito, payload y override. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The hardware-signed snapshot preserves the relay assignment to Harlan, and Elin’s audit connects circuit, payload, and override. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-08-take-01",
+      "shotId": "festival:shot-e-08",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-06",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-06 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-06 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La interfaz inglesa atribuye el override a R. Harlan mediante evidencia convergente. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The English interface attributes the override to R. Harlan through convergent evidence. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-09-take-01",
+      "shotId": "festival:shot-e-09",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-08",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-08 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-08 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Voss revoca la credencial de Harlan, ordena a Okoye interceptarlo y permanece al mando del puente. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Voss revokes Harlan’s credential, orders Okoye to intercept him, and remains in command on the bridge. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-e-10-take-01",
+      "shotId": "festival:shot-e-10",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-12-07",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-12-07 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-12-07 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Antes de que la revocación se propague, Harlan activa la última ventana del override y arranca hacia el ascensor central. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Before revocation propagates, Harlan activates the override’s last window and breaks toward the central lift. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-01-take-01",
+      "shotId": "festival:shot-f-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-14-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-14-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-14-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Un único reloj inglés establece la urgencia: VELARI CHANNEL · OPENS IN 00:48. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "A single English clock establishes urgency: VELARI CHANNEL · OPENS IN 00:48. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-02-take-01",
+      "shotId": "festival:shot-f-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-13-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-13-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-13-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Bajo 1 g, Harlan corre por el acceso central y alcanza el ramal físico del núcleo. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Under 1 g, Harlan runs through central access and reaches the core’s physical branch. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-03-take-01",
+      "shotId": "festival:shot-f-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-13-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-13-04 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-13-04 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Okoye recorta distancia mientras Voss permanece en el puente y Elin continúa la operación preparada. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Okoye closes the distance while Voss remains on the bridge and Elin continues the prepared operation. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-04-take-01",
+      "shotId": "festival:shot-f-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-14-08",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-14-08 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-14-08 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Okoye intercepta e inmoviliza a Harlan en el ramal físico sin combate armado. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Okoye intercepts and restrains Harlan at the physical branch without an armed fight. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-05-take-01",
+      "shotId": "festival:shot-f-05",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-14-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-14-04 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-14-04 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Elin aplica la cuarentena ya preparada: aísla la rama hostil sin borrar la mediación. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Elin applies the prepared quarantine, isolating the hostile branch without erasing mediation. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-06-take-01",
+      "shotId": "festival:shot-f-06",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-14-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-14-05 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-14-05 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La interfaz inglesa verifica el saludo pasivo de Sorell como asset de sólo lectura. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The English interface verifies Sorell’s passive greeting as a read-only asset. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-07-take-01",
+      "shotId": "festival:shot-f-07",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-14-10",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-14-10 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-14-10 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La rama hostil queda confinada en el buffer cerrado mientras el saludo legítimo conserva salida. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The hostile branch is confined in the closed buffer while the legitimate greeting retains an outbound path. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-f-08-take-01",
+      "shotId": "festival:shot-f-08",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-15-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-15-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-15-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La interfaz inglesa confirma payload en cuarentena, canal saliente limpio y mediación activa. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The English interface confirms payload quarantined, outbound channel clean, and mediation active. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-01-take-01",
+      "shotId": "festival:shot-g-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-14-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-14-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-14-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "El reloj inglés llega a VELARI CHANNEL · 00:00 con sólo el canal limpio disponible. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The English clock reaches VELARI CHANNEL · 00:00 with only the clean channel available. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-02-take-01",
+      "shotId": "festival:shot-g-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-15-04",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-15-04 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-15-04 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Voss autoriza el envío sin grandilocuencia. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Voss authorizes transmission without grandiosity. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-03-take-01",
+      "shotId": "festival:shot-g-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-15-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-15-05 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-15-05 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "El saludo limpio sale por el conducto de sólo lectura. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The clean greeting leaves through the read-only channel. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-04-take-01",
+      "shotId": "festival:shot-g-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-15-06",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-15-06 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-15-06 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Tras el silencio, la piel de la estación responde con un patrón orgánico de reconocimiento limitado. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "After silence, the station’s skin answers with an organic pattern of limited recognition. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-05-take-01",
+      "shotId": "festival:shot-g-05",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-16-01",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-16-01 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-16-01 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La Ardor aparece diminuta frente a la estación orgánica de varios kilómetros. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Ardor appears tiny before the multi-kilometre organic station. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-06-take-01",
+      "shotId": "festival:shot-g-06",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-16-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-16-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-16-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La nave emisaria se separa visualmente de la estación sin escape ni motores visibles. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The emissary ship separates visually from the station without exhaust or visible engines. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-07-take-01",
+      "shotId": "festival:shot-g-07",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-16-03",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-16-03 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-16-03 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Ardor, emisaria y estación sincronizan un pulso de reconocimiento limitado. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Ardor, emissary, and station synchronize a limited-recognition pulse. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-08-take-01",
+      "shotId": "festival:shot-g-08",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-17-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-17-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-17-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Voss prepara el informe a la Tierra y adjunta evidencia convergente y el legajo de Zao; archivos y controles visibles están sólo en inglés. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Voss prepares the Earth report and attaches convergent evidence and Zao’s personnel file; visible files and controls are English only. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-09-take-01",
+      "shotId": "festival:shot-g-09",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-17-05",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-17-05 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-17-05 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "El retrato detiene a Voss; él dice «Llegaste a tiempo» apenas para sí. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "The portrait stops Voss; he says “You made it in time” almost to himself. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-10-take-01",
+      "shotId": "festival:shot-g-10",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-17-02",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-17-02 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-17-02 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "Voss pulsa el control inglés SEND y deja partir el informe; no aparece respuesta terrestre. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Voss presses the English SEND control and lets the report depart; no Earth response appears. If diegetic text appears, render only the specified English copy; never show both languages."
+        }
+      }
+    },
+    {
+      "id": "festival:shot-g-11-take-01",
+      "shotId": "festival:shot-g-11",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-17-06",
+      "imageStatus": {
+        "status": "needs_regeneration",
+        "reasons": [
+          "canon_mismatch"
+        ],
+        "explanation": {
+          "es": "Still reutilizado de main:shot-17-06 como marcador de posición del Festival Cut; no es la imagen canónica de esta toma.",
+          "en": "Still reused from main:shot-17-06 as a Festival Cut placeholder; it is not this shot’s canonical image."
+        },
+        "replacementBrief": {
+          "es": "La Ardor avanza hacia la emisaria con la estación detrás; fundido lento sin cierre triunfalista. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
+          "en": "Ardor advances toward the emissary with the station behind it; slow fade without triumphalism. If diegetic text appears, render only the specified English copy; never show both languages."
         }
       }
     }

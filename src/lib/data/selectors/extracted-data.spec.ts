@@ -27,8 +27,8 @@ describe('extracted canonical data', () => {
 		const festival = getScript('script:light-delay-festival');
 		expect(festival.script.kind).toBe('festival_cut');
 		expect(festival.scenes).toHaveLength(7);
-		expect(festival.shots).toHaveLength(38);
-		expect(festival.takes).toHaveLength(38);
+		expect(festival.shots).toHaveLength(67);
+		expect(festival.takes).toHaveLength(67);
 		expect(festival.script.lineage?.sourceScriptId).toBe('script:light-delay-main-short');
 	});
 

@@ -6,8 +6,8 @@
     "status": "draft",
     "sourceDocument": "docs/CONTINUIDAD_CAUSAL_GUIONES.md",
     "notes": {
-      "es": "Causalidad cubierta a nivel de guion A–G; animatic con 38 tomas A–D y E–G todavía sin tomas.",
-      "en": "Causality covered at script level A–G; animatic has 38 A–D shots while E–G still have no shots."
+      "es": "Causalidad y animatic cubiertos A–G con 67 tomas; los stills reutilizados permanecen como placeholders marcados para regeneración.",
+      "en": "Causality and animatic are covered A–G with 67 shots; reused stills remain marked placeholders pending regeneration."
     }
   },
   "facts": [
@@ -431,6 +431,14 @@
       "outlineStepIds": [
         "festival:outline-30",
         "festival:outline-33"
+      ],
+      "shotIds": [
+        "festival:shot-e-01",
+        "festival:shot-e-02",
+        "festival:shot-e-03",
+        "festival:shot-e-04",
+        "festival:shot-e-05",
+        "festival:shot-e-06"
       ]
     },
     {
@@ -461,6 +469,11 @@
       "outlineStepIds": [
         "festival:outline-34",
         "festival:outline-37"
+      ],
+      "shotIds": [
+        "festival:shot-e-07",
+        "festival:shot-e-08",
+        "festival:shot-e-09"
       ]
     },
     {
@@ -489,6 +502,12 @@
       "outlineStepIds": [
         "festival:outline-38",
         "festival:outline-39"
+      ],
+      "shotIds": [
+        "festival:shot-e-10",
+        "festival:shot-f-02",
+        "festival:shot-f-03",
+        "festival:shot-f-04"
       ]
     },
     {
@@ -519,6 +538,23 @@
       "outlineStepIds": [
         "festival:outline-40",
         "festival:outline-44"
+      ],
+      "shotIds": [
+        "festival:shot-f-05",
+        "festival:shot-f-06",
+        "festival:shot-f-07",
+        "festival:shot-f-08",
+        "festival:shot-g-01",
+        "festival:shot-g-02",
+        "festival:shot-g-03",
+        "festival:shot-g-04",
+        "festival:shot-g-05",
+        "festival:shot-g-06",
+        "festival:shot-g-07",
+        "festival:shot-g-08",
+        "festival:shot-g-09",
+        "festival:shot-g-10",
+        "festival:shot-g-11"
       ]
     }
   ],

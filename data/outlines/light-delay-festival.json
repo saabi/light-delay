@@ -1559,7 +1559,11 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-01",
+            "festival:shot-e-02"
+          ]
         }
       },
       "majorEventId": "event:message-reception"
@@ -1598,7 +1602,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-03"
+          ]
         }
       },
       "majorEventId": "event:message-reception"
@@ -1637,7 +1644,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-04"
+          ]
         }
       },
       "majorEventId": "event:harlan-exposed"
@@ -1676,7 +1686,11 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-05",
+            "festival:shot-e-06"
+          ]
         }
       },
       "majorEventId": "event:harlan-exposed"
@@ -1715,7 +1729,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-07"
+          ]
         }
       },
       "majorEventId": "event:harlan-exposed",
@@ -1764,7 +1781,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-08"
+          ]
         }
       },
       "majorEventId": "event:harlan-exposed"
@@ -1803,7 +1823,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-09"
+          ]
         }
       },
       "majorEventId": "event:harlan-exposed"
@@ -1842,7 +1865,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-e-10"
+          ]
         }
       },
       "majorEventId": "event:harlan-exposed"
@@ -1881,7 +1907,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-f-02"
+          ]
         }
       },
       "majorEventId": "event:quarantine"
@@ -1920,7 +1949,11 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-f-03",
+            "festival:shot-f-04"
+          ]
         }
       },
       "majorEventId": "event:quarantine"
@@ -1959,7 +1992,12 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-f-05",
+            "festival:shot-f-06",
+            "festival:shot-f-07"
+          ]
         }
       },
       "majorEventId": "event:quarantine"
@@ -1998,7 +2036,10 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-f-08"
+          ]
         }
       },
       "majorEventId": "event:quarantine"
@@ -2037,7 +2078,12 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-g-01",
+            "festival:shot-g-02",
+            "festival:shot-g-03"
+          ]
         }
       },
       "majorEventId": "event:clean-greeting"
@@ -2076,7 +2122,13 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-g-04",
+            "festival:shot-g-05",
+            "festival:shot-g-06",
+            "festival:shot-g-07"
+          ]
         }
       },
       "majorEventId": "event:first-contact"
@@ -2115,7 +2167,13 @@
           ]
         },
         "animatic": {
-          "status": "not_started"
+          "status": "covered",
+          "shotIds": [
+            "festival:shot-g-08",
+            "festival:shot-g-09",
+            "festival:shot-g-10",
+            "festival:shot-g-11"
+          ]
         }
       },
       "majorEventId": "event:aftermath"
