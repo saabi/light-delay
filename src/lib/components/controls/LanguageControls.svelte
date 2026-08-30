@@ -6,7 +6,13 @@
 	} from '$lib/state/language.svelte';
 	import * as m from '$lib/paraglide/messages.js';
 
-	let { compact = false, inline = false }: { compact?: boolean; inline?: boolean } = $props();
+	let {
+		compact = false,
+		inline = false,
+		playerBar = false
+	}: { compact?: boolean; inline?: boolean; playerBar?: boolean } = $props();
+
+	const isCompact = $derived(compact || playerBar);
 
 	const languages = [
 		{ tag: 'es', label: 'Español' },
@@ -16,7 +22,14 @@
 	const lang = $derived(getLanguageState());
 </script>
 
-<div class="lang-controls" class:compact class:inline role="group" aria-label={m.language_label()}>
+<div
+	class="lang-controls"
+	class:compact={isCompact}
+	class:inline={inline || playerBar}
+	class:playerBar
+	role="group"
+	aria-label={m.language_label()}
+>
 	<label>
 		{m.language_dialogue()}
 		<select
@@ -66,7 +79,13 @@
 		margin-bottom: 0;
 	}
 
-	.compact.inline label {
+	.lang-controls.playerBar {
+		display: contents;
+		margin-bottom: 0;
+	}
+
+	.compact.inline label,
+	.playerBar label {
 		flex: 1;
 		min-width: 0;
 	}

@@ -317,12 +317,15 @@
 		</div>
 
 		<aside class="movie-sidebar" class:open={player.detailsOpen}>
-			<div class="movie-lang">
-				<LanguageControls compact inline />
-			</div>
-			<div class="movie-counter-col">
-				<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
-				<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
+			<div class="movie-meta-bar">
+				<LanguageControls playerBar />
+				<div class="movie-meta-stats">
+					<span class="movie-meta-label">{m.animatic_shots()}</span>
+					<div class="movie-meta-stats-body">
+						<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
+						<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
+					</div>
+				</div>
 			</div>
 			<div class="movie-details" class:open={player.detailsOpen}>
 				<button
@@ -478,7 +481,11 @@
 		min-height: 0;
 	}
 
-	.movie-lang {
+	.movie-meta-bar {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.9fr);
+		gap: 0.65rem;
+		align-items: end;
 		padding: 0.55rem 0.7rem;
 		border: 1px solid #ffffff2b;
 		border-radius: 10px;
@@ -486,32 +493,46 @@
 		backdrop-filter: blur(14px);
 		text-shadow: none;
 		flex-shrink: 0;
+		width: 100%;
 	}
 
-	.movie-lang :global(.lang-controls.compact) {
+	.movie-meta-bar :global(.lang-controls.compact) {
 		margin-bottom: 0;
 	}
 
-	.movie-counter-col {
+	.movie-meta-stats {
+		display: flex;
+		flex-direction: column;
+		gap: 0.35rem;
+		min-width: 0;
+	}
+
+	.movie-meta-label {
+		font: 700 0.68rem/1.2 var(--font-mono);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--muted);
+	}
+
+	.movie-meta-stats-body {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
-		gap: 0.35rem;
-		padding: 0.45rem 0.7rem;
-		border: 1px solid #ffffff2b;
-		border-radius: 10px;
-		background: #06101bed;
-		backdrop-filter: blur(14px);
-		text-shadow: none;
-		flex-shrink: 0;
+		gap: 0.15rem;
+		min-width: 0;
 	}
 
 	.movie-counter {
 		font:
-			800 0.9rem var(--font-mono),
+			800 0.82rem var(--font-mono),
 			ui-monospace,
 			monospace;
 		white-space: nowrap;
+	}
+
+	.movie-meta-stats-body :global(.duration-pair.compact) {
+		font-size: 0.72rem;
+		justify-content: flex-end;
 	}
 
 	.movie-subs {
@@ -698,17 +719,12 @@
 			flex-direction: column;
 		}
 
-		.movie-lang,
-		.movie-counter-col {
+		.movie-meta-bar {
 			border-radius: 0;
 			border-right: 0;
 			border-left: 0;
 			background: #06101b;
 			backdrop-filter: none;
-		}
-
-		.movie-counter-col {
-			border-top: 0;
 		}
 
 		.movie-details {
