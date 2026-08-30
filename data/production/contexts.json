@@ -3,59 +3,214 @@
   "contexts": [
     {
       "id": "context:proxima-dock",
-      "label": { "es": "Muelle exterior de Proxima", "en": "Proxima exterior dock" },
-      "physics": { "es": "Atraque axial exterior; no representar a la Ardor dentro de un hangar gigante.", "en": "External axial docking; do not depict the Ardor inside a giant hangar." },
+      "label": {
+        "es": "Muelle exterior de Proxima",
+        "en": "Proxima exterior dock"
+      },
+      "physics": {
+        "es": "Atraque axial exterior; no representar a la Ardor dentro de un hangar gigante.",
+        "en": "External axial docking; do not depict the Ardor inside a giant hangar."
+      },
       "visualRules": [
-        { "es": "Proxima combina observatorio, refinería y astillero de distintas épocas.", "en": "Proxima combines observatory, refinery, and shipyard layers from different eras." }
+        {
+          "es": "Proxima combina observatorio, refinería y astillero de distintas épocas.",
+          "en": "Proxima combines observatory, refinery, and shipyard layers from different eras."
+        }
       ],
       "soundRules": [],
-      "sourceRefs": [{ "kind": "document", "documentId": "docs/technical/PROXIMA_STATION.md" }],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/PROXIMA_STATION.md"
+        }
+      ],
       "status": "draft"
     },
     {
       "id": "context:ardor-thrust-gravity",
-      "label": { "es": "Ardor bajo empuje", "en": "Ardor under thrust" },
-      "physics": { "es": "La aceleración produce gravedad aparente hacia la popa; las cubiertas son transversales al eje de empuje.", "en": "Acceleration produces apparent gravity toward the stern; decks are transverse to the thrust axis." },
+      "label": {
+        "es": "Ardor bajo empuje",
+        "en": "Ardor under thrust"
+      },
+      "physics": {
+        "es": "La aceleración produce gravedad aparente hacia la popa; las cubiertas son transversales al eje de empuje.",
+        "en": "Acceleration produces apparent gravity toward the stern; decks are transverse to the thrust axis."
+      },
       "visualRules": [],
       "soundRules": [],
-      "sourceRefs": [{ "kind": "document", "documentId": "docs/technical/CELESTIAL_ARDOR.md" }],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/CELESTIAL_ARDOR.md"
+        }
+      ],
       "status": "draft"
     },
     {
       "id": "context:ardor-coast-microgravity",
-      "label": { "es": "Ardor en inercia y microgravedad", "en": "Ardor coasting in microgravity" },
-      "physics": { "es": "Durante la aproximación final y el cruce la nave no acelera: cuerpos y objetos obedecen microgravedad; el cilindro de servicio permite trayectorias balísticas rápidas.", "en": "During final approach and transit the ship is not accelerating: bodies and objects obey microgravity; the service cylinder permits fast ballistic trajectories." },
+      "label": {
+        "es": "Ardor en inercia y microgravedad",
+        "en": "Ardor coasting in microgravity"
+      },
+      "physics": {
+        "es": "Durante la aproximación final y el cruce la nave no acelera: cuerpos y objetos obedecen microgravedad; el cilindro de servicio permite trayectorias balísticas rápidas.",
+        "en": "During final approach and transit the ship is not accelerating: bodies and objects obey microgravity; the service cylinder permits fast ballistic trajectories."
+      },
       "visualRules": [
-        { "es": "La ruta cotidiana usa barras de apoyo; el acceso lateral de servicio queda fuera de la línea visual del puente.", "en": "The everyday route uses handrails; the lateral service access remains outside the bridge's line of sight." }
+        {
+          "es": "La ruta cotidiana usa barras de apoyo; el acceso lateral de servicio queda fuera de la línea visual del puente.",
+          "en": "The everyday route uses handrails; the lateral service access remains outside the bridge's line of sight."
+        }
       ],
       "soundRules": [],
-      "sourceRefs": [{ "kind": "document", "documentId": "docs/technical/CELESTIAL_ARDOR.md" }],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/CELESTIAL_ARDOR.md"
+        }
+      ],
       "status": "draft"
     },
     {
       "id": "context:ardor-exterior-vacuum",
-      "label": { "es": "Exterior de la Ardor en vacío", "en": "Ardor exterior in vacuum" },
-      "physics": { "es": "No hay sonido diegético propagado por el vacío; cualquier diseño sonoro exterior es no diegético o transmitido por estructura/interfaz.", "en": "No diegetic sound propagates through vacuum; exterior sound design is non-diegetic or transmitted through structure/interface." },
+      "label": {
+        "es": "Exterior de la Ardor en vacío",
+        "en": "Ardor exterior in vacuum"
+      },
+      "physics": {
+        "es": "No hay sonido diegético propagado por el vacío; cualquier diseño sonoro exterior es no diegético o transmitido por estructura/interfaz.",
+        "en": "No diegetic sound propagates through vacuum; exterior sound design is non-diegetic or transmitted through structure/interface."
+      },
       "visualRules": [],
       "soundRules": [],
-      "sourceRefs": [{ "kind": "document", "documentId": "docs/technical/CELESTIAL_ARDOR.md" }],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/CELESTIAL_ARDOR.md"
+        }
+      ],
       "status": "draft"
     },
     {
       "id": "context:zao-optical-transmission",
-      "label": { "es": "Transmisión óptica de contingencia", "en": "Contingency optical transmission" },
-      "physics": { "es": "Zao usa el láser exterior por una ruta física dedicada y apunta al corredor futuro de la nave; el presupuesto fino del haz sigue pendiente.", "en": "Zao uses the exterior laser through a dedicated physical route and aims at the ship's future corridor; the detailed beam budget remains pending." },
+      "label": {
+        "es": "Transmisión óptica de contingencia",
+        "en": "Contingency optical transmission"
+      },
+      "physics": {
+        "es": "Zao usa el láser exterior por una ruta física dedicada y apunta al corredor futuro de la nave; el presupuesto fino del haz sigue pendiente.",
+        "en": "Zao uses the exterior laser through a dedicated physical route and aims at the ship's future corridor; the detailed beam budget remains pending."
+      },
       "visualRules": [
-        { "es": "La decisión debe leerse por cálculo, selección y consecuencia bajo presión, sin exposición explicativa forzada.", "en": "The decision must read through calculation, selection, and consequence under pressure, without forced explanatory exposition." }
+        {
+          "es": "La decisión debe leerse por cálculo, selección y consecuencia bajo presión, sin exposición explicativa forzada.",
+          "en": "The decision must read through calculation, selection, and consequence under pressure, without forced explanatory exposition."
+        }
       ],
       "soundRules": [],
-      "sourceRefs": [{ "kind": "document", "documentId": "docs/SIGNAL_BEAM_REQUIREMENTS.md" }],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/SIGNAL_BEAM_REQUIREMENTS.md"
+        }
+      ],
       "status": "draft"
+    },
+    {
+      "id": "context:ardor-operational-displays",
+      "label": {
+        "es": "Displays operativos de la Ardor",
+        "en": "Ardor operational displays"
+      },
+      "physics": {
+        "es": "El idioma del display es una propiedad del arte diegético y no depende del idioma editorial del sitio.",
+        "en": "Display language is a property of diegetic art and does not depend on the site’s editorial language."
+      },
+      "visualRules": [
+        {
+          "es": "Generar todo texto integrado en displays únicamente en inglés. No mostrar traducciones simultáneas ni rótulos bilingües; una versión española futura será un derivado de edición de video.",
+          "en": "Render all text embedded in displays in English only. Do not show simultaneous translations or bilingual labels; a future Spanish version will be a derived video edit."
+        }
+      ],
+      "soundRules": [],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/CELESTIAL_ARDOR.md",
+          "anchor": "idioma-de-los-displays"
+        }
+      ],
+      "status": "reviewed"
     }
   ],
   "assignments": [
-    { "contextId": "context:proxima-dock", "scriptId": "script:light-delay-main-short", "sceneIds": ["main:scene-01"] },
-    { "contextId": "context:ardor-coast-microgravity", "scriptId": "script:light-delay-main-short", "sceneIds": ["main:scene-04", "main:scene-05", "main:scene-06", "main:scene-07", "main:scene-08"] },
-    { "contextId": "context:zao-optical-transmission", "scriptId": "script:light-delay-main-short", "sceneIds": ["main:scene-06"] }
+    {
+      "contextId": "context:proxima-dock",
+      "scriptId": "script:light-delay-main-short",
+      "sceneIds": [
+        "main:scene-01"
+      ]
+    },
+    {
+      "contextId": "context:ardor-coast-microgravity",
+      "scriptId": "script:light-delay-main-short",
+      "sceneIds": [
+        "main:scene-04",
+        "main:scene-05",
+        "main:scene-06",
+        "main:scene-07",
+        "main:scene-08"
+      ]
+    },
+    {
+      "contextId": "context:zao-optical-transmission",
+      "scriptId": "script:light-delay-main-short",
+      "sceneIds": [
+        "main:scene-06"
+      ]
+    },
+    {
+      "contextId": "context:ardor-thrust-gravity",
+      "scriptId": "script:light-delay-festival",
+      "sceneIds": [
+        "festival:scene-e",
+        "festival:scene-f"
+      ],
+      "shotIds": [
+        "festival:shot-g-01",
+        "festival:shot-g-02",
+        "festival:shot-g-03",
+        "festival:shot-g-08",
+        "festival:shot-g-09",
+        "festival:shot-g-10"
+      ]
+    },
+    {
+      "contextId": "context:ardor-exterior-vacuum",
+      "scriptId": "script:light-delay-festival",
+      "shotIds": [
+        "festival:shot-g-04",
+        "festival:shot-g-05",
+        "festival:shot-g-06",
+        "festival:shot-g-07",
+        "festival:shot-g-11"
+      ]
+    },
+    {
+      "contextId": "context:ardor-operational-displays",
+      "scriptId": "script:light-delay-festival",
+      "shotIds": [
+        "festival:shot-e-02",
+        "festival:shot-e-06",
+        "festival:shot-e-07",
+        "festival:shot-e-08",
+        "festival:shot-f-01",
+        "festival:shot-f-06",
+        "festival:shot-f-08",
+        "festival:shot-g-01",
+        "festival:shot-g-08",
+        "festival:shot-g-10"
+      ]
+    }
   ]
 }

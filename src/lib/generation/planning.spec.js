@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { checkReferenceBudget, compilePrompt, planSegments } from '../../../scripts/lib/generation-planning.mjs';
+import {
+	checkReferenceBudget,
+	compilePrompt,
+	planSegments,
+	resolveDiegeticText
+} from '../../../scripts/lib/generation-planning.mjs';
 
 describe('generation planning', () => {
 	it('splits at useful cue boundaries without exceeding campaign duration', () => {
@@ -14,6 +19,21 @@ describe('generation planning', () => {
 		for (let i = 0; i < 10; i += 1) refs.push({ kind: 'image', id: `i${i}` });
 		refs.push({ kind: 'audio', id: 'a' }, { kind: 'video', id: 'v' });
 		expect(checkReferenceBudget(refs, { maxImages: 9, maxVideos: 3, maxAudios: 3, maxTotalReferences: 12 })).toMatchObject({ ok: false, violations: ['images:10>9'] });
+	});
+
+	it('selects only the English interface variant for diegetic display generation', () => {
+		const cue = {
+			type: 'text',
+			presentation: 'interface',
+			content: {
+				variants: {
+					es: { text: 'CANAL VELARI · APERTURA EN 00:48' },
+					en: { text: 'VELARI CHANNEL · OPENS IN 00:48' }
+				}
+			}
+		};
+		expect(resolveDiegeticText(cue)).toBe('VELARI CHANNEL · OPENS IN 00:48');
+		expect(resolveDiegeticText(cue)).not.toContain('CANAL VELARI');
 	});
 
 	it('refuses to compile blocked or incomplete prompts', () => {

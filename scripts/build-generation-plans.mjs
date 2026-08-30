@@ -1,7 +1,7 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { planSegments, sha256 } from './lib/generation-planning.mjs';
+import { planSegments, resolveDiegeticText, sha256 } from './lib/generation-planning.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const checkOnly = process.argv.includes('--check');
@@ -34,6 +34,7 @@ for (const slug of scripts) {
 		const blockers = [];
 		const shotCues = shot.cuePlacements.map((placement) => file.cues.find((cue) => cue.id === placement.cueId)).filter(Boolean);
 		const dialogueCues = shotCues.filter((cue) => cue.type === 'dialogue');
+		const diegeticText = shotCues.map((cue) => resolveDiegeticText(cue, 'en')).filter(Boolean);
 		for (const cue of dialogueCues) {
 			const profile = voiceProfiles.find((item) => item.characterId === cue.speakerId);
 			const samples = profile?.variants.flatMap((variant) => variant.sampleAssetIds ?? []) ?? [];
@@ -55,6 +56,7 @@ for (const slug of scripts) {
 			shotId: shot.id,
 			status: 'blocked',
 			blockers: [...new Set(blockers)],
+			diegeticText,
 			artifacts: {
 				animaticStill: { required: true, status: 'missing' },
 				firstFrame: { required: false, status: 'missing' },
@@ -73,9 +75,10 @@ for (const slug of scripts) {
 			scriptVersion: file.script.version,
 			sourceDigest: sha256(source),
 			campaignId,
-			status: 'blocked',
-			promptLanguage: 'en',
-			briefLanguage: 'es'
+		status: 'blocked',
+		promptLanguage: 'en',
+		diegeticTextLanguage: 'en',
+		briefLanguage: 'es'
 		},
 		shots
 	};

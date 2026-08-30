@@ -7,12 +7,13 @@
     "schemaVersion": { "type": "string" },
     "plan": {
       "type": "object",
-      "required": ["id", "scriptId", "scriptVersion", "sourceDigest", "campaignId", "status", "promptLanguage"],
+      "required": ["id", "scriptId", "scriptVersion", "sourceDigest", "campaignId", "status", "promptLanguage", "diegeticTextLanguage"],
       "properties": {
         "id": { "type": "string" }, "scriptId": { "type": "string" }, "scriptVersion": { "type": "string" },
         "sourceDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "campaignId": { "type": "string" },
         "status": { "enum": ["blocked", "draft", "ready", "frozen", "executed"] },
         "promptLanguage": { "const": "en" },
+        "diegeticTextLanguage": { "const": "en" },
         "briefLanguage": { "const": "es" },
         "generatedAt": { "type": "string", "format": "date-time" }
       },
@@ -22,10 +23,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["shotId", "status", "blockers", "artifacts", "requiredReferences", "segments"],
+        "required": ["shotId", "status", "blockers", "diegeticText", "artifacts", "requiredReferences", "segments"],
         "properties": {
           "shotId": { "type": "string" }, "status": { "enum": ["blocked", "draft", "ready", "frozen", "generated", "accepted"] },
           "blockers": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "diegeticText": { "type": "array", "items": { "type": "string", "minLength": 1 } },
           "artifacts": {
             "type": "object",
             "required": ["animaticStill"],

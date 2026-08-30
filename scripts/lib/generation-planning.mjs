@@ -48,6 +48,19 @@ export function checkReferenceBudget(references, limits) {
 }
 
 /**
+ * Resolve text physically rendered inside a generated frame. Editorial localization
+ * remains separate; Light Delay uses an English-only diegetic display master.
+ * @param {{ type?: string, presentation?: string, content?: { variants?: Record<string, { text?: string }> } }} cue
+ * @param {string} language
+ */
+export function resolveDiegeticText(cue, language = 'en') {
+	if (cue?.type !== 'text' || cue?.presentation !== 'interface') return null;
+	const value = cue.content?.variants?.[language]?.text;
+	if (!value?.trim()) throw new Error(`Interface cue is missing ${language} diegetic text`);
+	return value.trim();
+}
+
+/**
  * @param {Record<string, string>} sections
  * @param {string[]} blockers
  */
