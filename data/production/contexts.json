@@ -117,6 +117,31 @@
       "status": "draft"
     },
     {
+      "id": "context:ardor-docked-at-proxima",
+      "label": {
+        "es": "Ardor atracada en Proxima",
+        "en": "Ardor docked at Proxima"
+      },
+      "physics": {
+        "es": "La Ardor permanece atracada a Proxima durante el diagnóstico inicial; no representar el interior como una nave ya en tránsito hacia la garganta.",
+        "en": "Ardor remains docked at Proxima during the initial diagnostic; do not depict the interior as a ship already in transit toward the throat."
+      },
+      "visualRules": [
+        {
+          "es": "El núcleo diplomático conserva el aspecto de retrofit humano instalado y verificado en Proxima.",
+          "en": "The diplomatic core retains the look of a human retrofit installed and verified at Proxima."
+        }
+      ],
+      "soundRules": [],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/CELESTIAL_ARDOR.md"
+        }
+      ],
+      "status": "draft"
+    },
+    {
       "id": "context:ardor-operational-displays",
       "label": {
         "es": "Displays operativos de la Ardor",
@@ -170,9 +195,46 @@
       ]
     },
     {
+      "contextId": "context:proxima-dock",
+      "scriptId": "script:light-delay-festival",
+      "shotIds": [
+        "festival:shot-a-01"
+      ]
+    },
+    {
+      "contextId": "context:ardor-docked-at-proxima",
+      "scriptId": "script:light-delay-festival",
+      "shotIds": [
+        "festival:shot-a-02",
+        "festival:shot-a-03",
+        "festival:shot-a-04"
+      ]
+    },
+    {
+      "contextId": "context:ardor-coast-microgravity",
+      "scriptId": "script:light-delay-festival",
+      "sceneIds": [
+        "festival:scene-b",
+        "festival:scene-c"
+      ]
+    },
+    {
+      "contextId": "context:zao-optical-transmission",
+      "scriptId": "script:light-delay-festival",
+      "shotIds": [
+        "festival:shot-b-04a",
+        "festival:shot-b-04b",
+        "festival:shot-b-04c",
+        "festival:shot-b-05",
+        "festival:shot-b-06",
+        "festival:shot-b-07"
+      ]
+    },
+    {
       "contextId": "context:ardor-thrust-gravity",
       "scriptId": "script:light-delay-festival",
       "sceneIds": [
+        "festival:scene-d",
         "festival:scene-e",
         "festival:scene-f"
       ],
@@ -200,6 +262,20 @@
       "contextId": "context:ardor-operational-displays",
       "scriptId": "script:light-delay-festival",
       "shotIds": [
+        "festival:shot-a-03",
+        "festival:shot-b-04b",
+        "festival:shot-b-04c",
+        "festival:shot-b-05",
+        "festival:shot-b-06",
+        "festival:shot-b-07",
+        "festival:shot-c-01",
+        "festival:shot-c-03",
+        "festival:shot-d-00",
+        "festival:shot-d-01",
+        "festival:shot-d-02",
+        "festival:shot-d-03",
+        "festival:shot-d-04",
+        "festival:shot-d-08",
         "festival:shot-e-02",
         "festival:shot-e-06",
         "festival:shot-e-07",

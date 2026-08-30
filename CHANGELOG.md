@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-30 — Metadatos de producción Festival A–D
+
+- Las 38 tomas A–D del Festival Cut ahora declaran propósito bilingüe, personajes/objetos visibles u off-screen y contextos físicos verificables; no cambiaron diálogo, duración, orden ni imágenes.
+- Añadido el contexto de la Ardor atracada en Proxima y aplicados a A–D los contextos vigentes de microgravedad, empuje, transmisión óptica y displays operativos únicamente en inglés.
+- Los planes de generación del Festival ya no informan faltantes de propósito, binding o contexto. Continúan bloqueados correctamente por el freeze editorial de 67 tomas y por las muestras de voz todavía ausentes.
+
 ## 2026-08-30 — Reproductor: sidebar derecho unificado
 
 - En modo película, el selector de idioma, el contador de tomas y el panel de detalles comparten una columna derecha que fluye verticalmente, sin solaparse.

@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival",
     "scriptId": "script:light-delay-festival",
     "scriptVersion": "0.3.0-draft",
-    "sourceDigest": "daedd66e0f9827f71b24adee06625679ce4da1ba3a9e702ff87cd08af7b809cd",
+    "sourceDigest": "6becbcd1c819f6d059f260dded4f5ac12e3748348109eb5f4240f3b6ff5155b8",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -16,9 +16,6 @@
       "shotId": "festival:shot-a-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -42,7 +39,38 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-proxima-dock-sheet",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-sheet",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-proportional",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-jupiter",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:scale-reference-proxima-ardor",
+          "required": true,
+          "role": "vehicle"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-a-01:segment-01",
@@ -58,9 +86,6 @@
       "shotId": "festival:shot-a-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -82,7 +107,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-a-02:segment-01",
@@ -98,9 +136,6 @@
       "shotId": "festival:shot-a-03",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -122,7 +157,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-a-03:segment-01",
@@ -138,9 +180,6 @@
       "shotId": "festival:shot-a-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -162,7 +201,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-a-04:segment-01",
@@ -179,9 +225,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:zao",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -203,7 +246,26 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-sorell-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-02:segment-01",
@@ -219,9 +281,6 @@
       "shotId": "festival:shot-b-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -243,7 +302,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-01:segment-01",
@@ -259,9 +331,6 @@
       "shotId": "festival:shot-b-03",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -283,7 +352,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-03:segment-01",
@@ -299,9 +375,6 @@
       "shotId": "festival:shot-b-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -323,7 +396,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-04:segment-01",
@@ -339,9 +425,6 @@
       "shotId": "festival:shot-b-05",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -365,7 +448,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-05:segment-01",
@@ -382,9 +478,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:zao",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -406,7 +499,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-06:segment-01",
@@ -430,9 +536,6 @@
       "shotId": "festival:shot-b-07",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -454,7 +557,26 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-07:segment-01",
@@ -471,9 +593,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -495,7 +614,26 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-01:segment-01",
@@ -511,9 +649,6 @@
       "shotId": "festival:shot-c-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -551,9 +686,6 @@
       "shotId": "festival:shot-c-03",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -575,7 +707,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-03:segment-01",
@@ -591,9 +736,6 @@
       "shotId": "festival:shot-c-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -615,7 +757,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-sorell-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-04:segment-01",
@@ -631,9 +780,6 @@
       "shotId": "festival:shot-c-05",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -655,7 +801,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-sorell-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-05:segment-01",
@@ -671,9 +830,6 @@
       "shotId": "festival:shot-c-06",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -695,7 +851,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-06:segment-01",
@@ -713,9 +876,6 @@
       "blockers": [
         "missing_voice_sample:character:voss",
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -737,7 +897,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-07:segment-01",
@@ -754,9 +927,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -778,7 +948,26 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-security-crew-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-08:segment-01",
@@ -794,9 +983,6 @@
       "shotId": "festival:shot-c-09",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -820,7 +1006,32 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-sheet",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-proportional",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-jupiter",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:scale-reference-proxima-ardor",
+          "required": true,
+          "role": "vehicle"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-09:segment-01",
@@ -837,9 +1048,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:harlan",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -861,7 +1069,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-10:segment-01",
@@ -877,9 +1098,6 @@
       "shotId": "festival:shot-d-01",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -901,7 +1119,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-01:segment-01",
@@ -917,9 +1142,6 @@
       "shotId": "festival:shot-d-02",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -944,7 +1166,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-02:segment-01",
@@ -960,9 +1189,6 @@
       "shotId": "festival:shot-d-03",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -987,7 +1213,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:object-physical-override-relay-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-03:segment-01",
@@ -1003,9 +1236,6 @@
       "shotId": "festival:shot-d-04",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1027,7 +1257,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-04:segment-01",
@@ -1044,9 +1287,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1068,7 +1308,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-05:segment-01",
@@ -1085,9 +1338,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1109,7 +1359,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-06:segment-01",
@@ -1127,9 +1390,6 @@
       "blockers": [
         "missing_voice_sample:character:harlan",
         "missing_voice_sample:character:rao",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1151,7 +1411,26 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-07:segment-01",
@@ -1168,9 +1447,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1192,7 +1468,26 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-08:segment-01",
@@ -1209,9 +1504,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1233,7 +1525,26 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-09:segment-01",
@@ -1250,9 +1561,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:zao",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1274,7 +1582,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-zao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-04a:segment-01",
@@ -1298,9 +1613,6 @@
       "shotId": "festival:shot-b-04b",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -1325,7 +1637,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-04b:segment-01",
@@ -1341,9 +1660,6 @@
       "shotId": "festival:shot-b-04c",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -1369,7 +1685,38 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "required": true,
+          "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-sheet",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-proportional",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-jupiter",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:scale-reference-proxima-ardor",
+          "required": true,
+          "role": "vehicle"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-04c:segment-01",
@@ -1385,9 +1732,6 @@
       "shotId": "festival:shot-d-00",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [
@@ -1411,7 +1755,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "required": true,
+          "role": "object"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-00:segment-01",
@@ -1428,9 +1779,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1452,7 +1800,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-04b:segment-01",
@@ -1477,9 +1832,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:voss",
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1501,7 +1853,20 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-sorell-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-08:segment-01",
@@ -1525,9 +1890,6 @@
       "shotId": "festival:shot-b-09",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1549,7 +1911,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-09:segment-01",
@@ -1565,9 +1934,6 @@
       "shotId": "festival:shot-b-10",
       "status": "blocked",
       "blockers": [
-        "missing_production_context",
-        "missing_purpose",
-        "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1589,7 +1955,14 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:character-sorell-sheet",
+          "required": true,
+          "role": "character"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-10:segment-01",

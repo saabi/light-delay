@@ -2154,6 +2154,22 @@
             "en": "Reuse frame from main:shot-01-01 (asset asset:animatic-01-01)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Presentar la escala de la misión, Proxima y la Ardor antes de entrar al conflicto.",
+        "en": "Establish the mission scale, Proxima, and Ardor before entering the conflict."
+      },
+      "visibleRefs": [
+        {
+          "kind": "location",
+          "id": "location:proxima-dock",
+          "role": "setting"
+        },
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "docked ship"
+        }
       ]
     },
     {
@@ -2204,6 +2220,25 @@
             "en": "Placeholder from main:shot-04-01 (asset asset:animatic-04-01); that still only shows Zao — Elin leaving and Harlan's screen are missing, a new take is needed for the Festival Cut. Elin's exit within this same shot establishes that Zao is left alone before the murder (no witnesses); Harlan appears only via screen/channel, never physically present, so as not to contradict him reaching the axial access unseen in festival:shot-b-02."
           }
         }
+      ],
+      "purpose": {
+        "es": "Establecer la rutina compartida de Zao y Elin, y separar a Elin antes del hallazgo.",
+        "en": "Establish Zao and Elin’s shared routine, and move Elin away before the discovery."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "operator"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "departing specialist"
+        }
+      ],
+      "offScreenCharacterIds": [
+        "character:harlan"
       ]
     },
     {
@@ -2254,6 +2289,17 @@
             "en": "Reuse frame from main:shot-04-02 (asset asset:animatic-04-02)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Hacer visible la primera anomalía verificable: un proceso ausente del manifiesto.",
+        "en": "Make the first verifiable anomaly visible: a process missing from the manifest."
+      },
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "diagnostic subject"
+        }
       ]
     },
     {
@@ -2303,6 +2349,17 @@
             "es": "Reutiliza frame de main:shot-03-04 (asset asset:animatic-03-04).",
             "en": "Reuses the frame from main:shot-03-04 (asset asset:animatic-03-04)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Registrar el instante en que Zao deja de interpretar la anomalía como ruido.",
+        "en": "Register the instant Zao stops interpreting the anomaly as noise."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "discoverer"
         }
       ]
     },
@@ -2365,6 +2422,30 @@
             "en": "Reuses the frame from main:shot-05-03 (asset asset:animatic-05-03)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Mostrar por qué nadie ve llegar a Harlan y qué revelación concreta lo obliga a actuar.",
+        "en": "Show why nobody sees Harlan arrive and what specific revelation forces him to act."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "listener"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "implicated listener"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "unnoticed arrival"
+        }
+      ],
+      "offScreenCharacterIds": [
+        "character:zao"
       ]
     },
     {
@@ -2421,6 +2502,25 @@
             "en": "Reuse frame from main:shot-05-01 (asset asset:animatic-05-01)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Convertir el hallazgo en una advertencia urgente y abrir el canal que Harlan interceptará.",
+        "en": "Turn the discovery into an urgent warning and open the channel Harlan will intercept."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "caller"
+        },
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "evidence source"
+        }
+      ],
+      "offScreenCharacterIds": [
+        "character:voss"
       ]
     },
     {
@@ -2477,6 +2577,22 @@
             "en": "Reuses the frame from main:shot-05-07 (asset asset:animatic-12-08); corrected from celestial-ardor-command-vestibule to celestial-ardor-service-cylinder to match the location festival:cue-b-04 itself states (\"at the service cylinder's distributor\")."
           }
         }
+      ],
+      "purpose": {
+        "es": "Mostrar que el silencio es sabotaje deliberado: Harlan bloquea radio y respaldo cableado.",
+        "en": "Show that the silence is deliberate sabotage: Harlan blocks radio and the wired backup."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "saboteur"
+        },
+        {
+          "kind": "object",
+          "id": "object:wired-comms-deck-patch-panel",
+          "role": "isolated comms board"
+        }
       ]
     },
     {
@@ -2532,6 +2648,22 @@
             "es": "Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01).",
             "en": "Reuses the frame from main:shot-06-01 (asset asset:animatic-06-01)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Permitir que Zao descarte una avería casual al comprobar que fallaron tres rutas independientes.",
+        "en": "Let Zao rule out an accidental fault after confirming three independent routes have failed."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "isolated operator"
+        },
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "failed comms terminal"
         }
       ]
     },
@@ -2599,6 +2731,22 @@
             "en": "Reuses the frame from main:shot-06-03 (asset asset:animatic-06-03); visually continues festival:cue-b-05's action without its own cue."
           }
         }
+      ],
+      "purpose": {
+        "es": "Autenticar y preservar la evidencia antes de exponerla a la transmisión.",
+        "en": "Authenticate and preserve the evidence before exposing it to transmission."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "message author"
+        },
+        {
+          "kind": "object",
+          "id": "object:optical-contingency-transmitter",
+          "role": "transmission system"
+        }
       ]
     },
     {
@@ -2654,6 +2802,22 @@
             "es": "Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06).",
             "en": "Reuses the frame from main:shot-06-06 (asset asset:animatic-06-06)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Registrar la advertencia completa mientras el barrido cubre la incertidumbre del corredor.",
+        "en": "Record the complete warning while the sweep covers uncertainty in the corridor."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "message author"
+        },
+        {
+          "kind": "object",
+          "id": "object:optical-contingency-transmitter",
+          "role": "active transmitter"
         }
       ]
     },
@@ -2711,6 +2875,27 @@
             "en": "Reuse frame from main:shot-06-07 (asset asset:animatic-06-04)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Confirmar el envío para Zao, pero limitar a Harlan a saber sólo que algo salió.",
+        "en": "Confirm the send for Zao while limiting Harlan to knowing only that something went out."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "sender"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "late witness"
+        },
+        {
+          "kind": "object",
+          "id": "object:optical-contingency-transmitter",
+          "role": "completed transmission"
+        }
       ]
     },
     {
@@ -2766,6 +2951,27 @@
             "es": "Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01).",
             "en": "Reuses the frame from main:shot-07-01 (asset asset:animatic-07-01)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Enfrentar a Harlan con la consecuencia que no puede localizar ni recuperar.",
+        "en": "Confront Harlan with the consequence he can neither locate nor retrieve."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "interrogator"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "defiant witness"
+        },
+        {
+          "kind": "object",
+          "id": "object:optical-contingency-transmitter",
+          "role": "ambiguous evidence"
         }
       ]
     },
@@ -2833,6 +3039,14 @@
             "en": "Reuses the frame from main:shot-07-02 (asset asset:animatic-07-02)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Asentar la fatalidad del ataque sin explotar visualmente la muerte de Zao.",
+        "en": "Establish the fatal outcome of the attack without visually exploiting Zao’s death."
+      },
+      "offScreenCharacterIds": [
+        "character:harlan",
+        "character:zao"
       ]
     },
     {
@@ -2882,6 +3096,22 @@
             "es": "Continúa visualmente festival:cue-c-01 (borrado de cámaras/archivo) sin cue propio.",
             "en": "Visually continues festival:cue-c-01 (wiping cameras/archive) without its own cue."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Mostrar que Harlan elimina la evidencia local para sostener su coartada.",
+        "en": "Show Harlan removing local evidence to preserve his alibi."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "evidence cleaner"
+        },
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "wiped system"
         }
       ]
     },
@@ -2939,6 +3169,17 @@
             "en": "Reuses the frame from main:shot-06-05 (asset asset:animatic-06-05)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Mantener a Sorell ajena al crimen mientras la distancia entre ambas rutas se cobra.",
+        "en": "Keep Sorell unaware of the crime as the distance between both routes pays off."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "approaching investigator"
+        }
       ]
     },
     {
@@ -2988,6 +3229,22 @@
             "es": "Continúa visualmente festival:cue-c-02 (reanimación fallida) sin cue propio.",
             "en": "Visually continues festival:cue-c-02 (failed resuscitation) without its own cue."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Convertir a Sorell en testigo del cuerpo y mostrar que el jammer todavía la aísla.",
+        "en": "Make Sorell the witness to the body and show that the jammer still isolates her."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "discovering witness"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "unresponsive victim"
         }
       ]
     },
@@ -3044,6 +3301,22 @@
             "es": "Reutiliza frame de main:shot-07-04 (asset asset:animatic-07-04).",
             "en": "Reuses the frame from main:shot-07-04 (asset asset:animatic-07-04)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Mostrar cómo Harlan restaura comunicaciones y regresa antes de que Sorell pueda alertar al puente.",
+        "en": "Show Harlan restoring communications and returning before Sorell can alert the bridge."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "returning saboteur"
+        },
+        {
+          "kind": "object",
+          "id": "object:wired-comms-deck-patch-panel",
+          "role": "restored comms board"
         }
       ]
     },
@@ -3106,6 +3379,22 @@
             "en": "Visually continues festival:cue-c-03 (denies having seen Sorell) without its own cue."
           }
         }
+      ],
+      "purpose": {
+        "es": "Instalar la coartada inmediata de Harlan frente a una pregunta directa de Voss.",
+        "en": "Establish Harlan’s immediate alibi under Voss’s direct question."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "questioner"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "deceptive respondent"
+        }
       ]
     },
     {
@@ -3162,6 +3451,27 @@
             "en": "Visually continues festival:cue-c-03 (Voss sends Harlan with Okoye) without its own cue."
           }
         }
+      ],
+      "purpose": {
+        "es": "Enviar una búsqueda acompañada que vuelve a involucrar a Harlan sin convertir aún la orden en acusación.",
+        "en": "Send an accompanied search that involves Harlan again without yet turning the order into an accusation."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "commander"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "assigned searcher"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "assigned escort"
+        }
       ]
     },
     {
@@ -3217,6 +3527,17 @@
             "es": "Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04).",
             "en": "Reuse frame from main:shot-02-04 (asset asset:animatic-02-04)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Comprimir el viaje hasta la inminencia del contacto y trasladar el conflicto a la cuenta regresiva.",
+        "en": "Compress the journey to the imminent contact and move the conflict into the countdown."
+      },
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "ship in transit"
         }
       ]
     },
@@ -3279,6 +3600,22 @@
             "en": "Reuses the frame from main:shot-07-01 (asset asset:animatic-07-01), the same still as festival:shot-c-01, as a placeholder — needs its own take for the Festival Cut (Harlan's assumption and sigh don't exist as a separate beat in the canonical short)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Revelar la suposición errónea que tranquiliza a Harlan y su pesar antes de matar.",
+        "en": "Reveal the mistaken assumption that reassures Harlan and his regret before killing."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "reluctant killer"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "victim"
+        }
       ]
     },
     {
@@ -3328,6 +3665,17 @@
             "es": "Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).",
             "en": "Reuse frame from main:shot-10-01 (asset asset:animatic-10-01)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Establecer que Elin audita sola y con una ventana de decisión cada vez menor.",
+        "en": "Establish that Elin is auditing alone with a shrinking decision window."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "technical investigator"
         }
       ]
     },
@@ -3390,6 +3738,17 @@
             "en": "Reuses the frame from main:shot-10-03 (asset asset:animatic-10-03)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Precisar el peligro: el payload se activará al abrir el canal Velari.",
+        "en": "Define the danger: the payload will activate when the Velari channel opens."
+      },
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "payload host"
+        }
       ]
     },
     {
@@ -3451,6 +3810,17 @@
             "en": "Reuses the frame from main:shot-10-04 (asset asset:animatic-10-04)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Separar la cuarentena preparada de la atribución todavía desconocida del override.",
+        "en": "Separate the prepared quarantine from the still-unknown attribution of the override."
+      },
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:physical-override-relay",
+          "role": "unattributed override"
+        }
       ]
     },
     {
@@ -3506,6 +3876,22 @@
             "es": "Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02).",
             "en": "Reuses the frame from main:shot-10-02 (asset asset:animatic-10-02)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Mostrar que Elin puede contener técnicamente el payload, pero aún no probar quién lo controla.",
+        "en": "Show that Elin can technically contain the payload but cannot yet prove who controls it."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "quarantine operator"
+        },
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "mapped payload"
         }
       ]
     },
@@ -3563,6 +3949,22 @@
             "en": "Reuses the frame from main:shot-09-02 (asset asset:animatic-09-02)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Obligar a Elin a traducir el hallazgo técnico en una decisión operativa para Voss.",
+        "en": "Force Elin to translate the technical finding into an operational decision for Voss."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "commander"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "technical adviser"
+        }
       ]
     },
     {
@@ -3618,6 +4020,22 @@
             "es": "Reutiliza frame de main:shot-10-07 (asset asset:animatic-10-07).",
             "en": "Reuses the frame from main:shot-10-07 (asset asset:animatic-10-07)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Definir con honestidad el alcance y el límite de la cuarentena antes de decidir.",
+        "en": "Honestly define the quarantine’s scope and limit before a decision is made."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "technical adviser"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "decision maker"
         }
       ]
     },
@@ -3680,6 +4098,27 @@
             "en": "Reuses the frame from main:shot-11-01 (asset asset:animatic-11-01)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Oponer la presión plausible de Harlan al diagnóstico de Elin sin revelar todavía su culpa.",
+        "en": "Oppose Harlan’s plausible pressure to Elin’s diagnosis without yet revealing his guilt."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "advocate for opening"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "technical opposition"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "decision maker"
+        }
       ]
     },
     {
@@ -3735,6 +4174,27 @@
             "es": "Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).",
             "en": "Reuse frame from main:shot-11-05 (asset asset:animatic-11-05)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Introducir la señal que convierte el cálculo anterior de Zao en evidencia presente.",
+        "en": "Introduce the signal that turns Zao’s earlier calculation into present evidence."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "signal detector"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "approaching commander"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "watching suspect"
         }
       ]
     },
@@ -3792,6 +4252,27 @@
             "en": "Reuses the frame from main:shot-11-02 (asset asset:animatic-11-02)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Hacer que Voss preserve tiempo de análisis y rechace una apertura prematura.",
+        "en": "Have Voss preserve analysis time and reject a premature opening."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "commander"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "technical adviser"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "opposing adviser"
+        }
       ]
     },
     {
@@ -3847,6 +4328,17 @@
             "es": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).",
             "en": "Reuse frame from main:shot-06-02 (asset asset:animatic-06-02)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Exteriorizar la conclusión de Zao: el sabotaje prueba que alguien intenta detenerla.",
+        "en": "Externalize Zao’s conclusion: the sabotage proves someone is trying to stop her."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "reasoning under pressure"
         }
       ]
     },
@@ -3908,6 +4400,17 @@
             "es": "Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).",
             "en": "Reuse frame from main:shot-06-02 (asset asset:animatic-06-02)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Justificar por qué Tierra y Proxima no pueden hacer llegar la advertencia a tiempo.",
+        "en": "Justify why Earth and Proxima cannot deliver the warning in time."
+      },
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:optical-contingency-transmitter",
+          "role": "targeting console"
         }
       ]
     },
@@ -3975,6 +4478,22 @@
             "en": "Reuse frame from main:shot-06-03 (asset asset:animatic-06-03)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Hacer legible la única alternativa útil: interceptar la posición futura de la Ardor.",
+        "en": "Make the only useful alternative legible: intercept Ardor’s future position."
+      },
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:optical-contingency-transmitter",
+          "role": "targeting solution"
+        },
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "predicted recipient"
+        }
       ]
     },
     {
@@ -4031,6 +4550,17 @@
             "en": "Reuse frame from main:shot-10-01 (asset asset:animatic-10-01)."
           }
         }
+      ],
+      "purpose": {
+        "es": "Vincular la investigación de Elin con una orden explícita de Voss posterior al incidente.",
+        "en": "Link Elin’s investigation to Voss’s explicit order after the incident."
+      },
+      "visibleRefs": [
+        {
+          "kind": "object",
+          "id": "object:diplomatic-quantum-core",
+          "role": "audit subject"
+        }
       ]
     },
     {
@@ -4086,6 +4616,17 @@
             "es": "Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).",
             "en": "Reuses frame from main:shot-10-05 (asset asset:animatic-10-05)."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Dar peso personal al disparador del contacto sin convertir la reflexión en exposición didáctica.",
+        "en": "Give personal weight to the contact trigger without turning the reflection into didactic exposition."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "reflective investigator"
         }
       ]
     },
@@ -4153,6 +4694,22 @@
             "en": "Provisionally reuses main:shot-05-08; requires its own image matching this shot."
           }
         }
+      ],
+      "purpose": {
+        "es": "Hacer que la cautela de Voss retrase a Sorell y, sin saberlo, conceda ventaja a Harlan.",
+        "en": "Have Voss’s caution delay Sorell and unknowingly give Harlan an advantage."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "commander"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "assigned investigator"
+        }
       ]
     },
     {
@@ -4209,6 +4766,17 @@
             "en": "Provisionally reuses main:shot-06-04; requires its own image matching this shot."
           }
         }
+      ],
+      "purpose": {
+        "es": "Demostrar la ventaja física de Harlan al usar el conducto directo en microgravedad.",
+        "en": "Demonstrate Harlan’s physical advantage as he uses the direct shaft in microgravity."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "ballistic traveler"
+        }
       ]
     },
     {
@@ -4264,6 +4832,17 @@
             "es": "Reutiliza provisoriamente main:shot-06-05; requiere imagen propia coherente con esta toma.",
             "en": "Provisionally reuses main:shot-06-05; requires its own image matching this shot."
           }
+        }
+      ],
+      "purpose": {
+        "es": "Contrastar el avance prudente y más lento de Sorell por la ruta cotidiana.",
+        "en": "Contrast Sorell’s slower, cautious progress along the everyday route."
+      },
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "investigator"
         }
       ]
     },

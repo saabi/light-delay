@@ -1,6 +1,6 @@
 # Estado del proyecto
 
-Fecha de corte: 2026-08-29.
+Fecha de corte: 2026-08-30.
 
 ## Completado
 
@@ -25,6 +25,7 @@ Fecha de corte: 2026-08-29.
 - **Texto legacy portado y traducido:** las cinco páginas prose, los índices de arte/personajes y la portada legacy tienen equivalentes basados en datos. Notas, biblia, reporte, momentos y estructura de 30 minutos se migraron con jerarquía, listas, tablas y beats; la copia española se reconcilió con el canon vigente y la inglesa conserva la misma topología. `data/legacy-text-migration.json` funciona como ledger verificable.
 - **Contenido narrativo bilingüe:** guiones, diálogos, subtítulos derivados, escenas, beats, tomas, assets, entidades, taxonomía, funciones, variantes y outlines llevan inglés **inline** (`LocalizedString` / `variants.en`). Los overlays `public.en.json` y `entities.en.json` están retirados/vacíos. `validate:translations` exige `es`+`en`; el inglés sigue en `draft` y el español conserva autoridad. Paraglide cubre sólo el chrome de UI.
 - **Arquitectura de producción sin generación:** JSON Schema ejecutable, planes provider-neutral por cut, segmentación a 8 s, presupuesto de adjuntos, artefactos still/first/last/audio, snapshots Seedance/Higgsfield y compilador que rechaza prompts bloqueados. Los prompts reales permanecen nulos hasta aprobación editorial; no se generaron medios.
+- **Preparación de prompts del Festival:** las 67 tomas A–G declaran propósito, bindings de entidades y contexto físico. A–D quedó reconciliado con Ardor atracada, microgravedad, transmisión óptica, empuje posterior y displays en inglés. El informe ya sólo bloquea este cut por freeze editorial y muestras de voz ausentes.
 - **Ledger causal ejecutable:** main y Festival validan una cadena de 13 pasos y 12 acciones con hechos previos, conocimiento por actor y referencias a escaleta/tomas. Voss envía la búsqueda por demora y negación, no por conocer aún la muerte. Tráiler y largo permanecen `incomplete` sin falso verde. `report:causal-validity` corre en CI.
 - **Notas humanas:** contrato ampliado y `docs/PENDING_AUTHOR_NOTES.md` generado desde los JSON (`notes:build` / `notes:check`); el informe actual reúne 153 notas abiertas por prioridad y ruta exacta.
 - **Navegación responsive:** todas las rutas salvo Modo película usan header global compacto + rail persistente en escritorio y barra inferior + hoja modal en móvil. El umbral `calc(26.88em + 52.8ch)` responde a capacidad tipográfica; ambos modos enlazan el repositorio de GitHub.
@@ -67,7 +68,7 @@ Fecha de corte: 2026-08-29.
 1. **Duración real.** Los 30:00 son el objetivo; el montaje de datos suma 30:39,5. Debe validarse mediante lectura cronometrada y luego con animación/video.
 2. **Festival Cut.** Datos con 7 escenas, guion y animatic A–G y **67 tomas**. La primera asamblea suma 6:03,2; cinco minutos es sólo un orden de magnitud y no un máximo estricto. Faltan lectura/montaje editorial, imágenes canónicas y poblar el array `sequences`. Ver escaleta y `docs/CUIDADOS_NARRATIVOS.md`.
 3. **Tráiler.** Versión animatic operativa de 29 tomas: ya oculta identidad del culpable, éxito del envío/recepción y destino de Zao en datos, escaleta y descripciones. Falta afinado de ritmo, reemplazo de frames heredados por visuales que respeten ese encuadre, posibles stills exclusivos de título y audio.
-4. **Cobertura estructural.** Antes de habilitar imágenes deben resolverse por prioridad los placements, propósitos, framing y bindings que afecten continuidad o producción. Festival y largo no pueden figurar como completos mientras no tengan tomas.
+4. **Cobertura estructural.** Antes de habilitar imágenes deben resolverse por prioridad los placements, propósitos, framing y bindings que afecten continuidad o producción. Festival ya cerró esos campos en sus 67 tomas; la deuda medida restante se concentra en main y tráiler. El largo no puede figurar como animatic completo mientras no tenga tomas.
 5. **Cobertura de Festival y largo.** El largo tiene tratamiento pero todavía no guion dialogado ni animatic. Festival ya cubre A–G con tomas y placements, pero sus stills son provisionales y no autorizan generación hasta aprobar ritmo, performance y freeze visual.
 6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
 7. **Especialidades de Volkov y Tanaka.** La fuente recuperada sólo respalda parcialmente la vinculación de Volkov con controles manuales y no define una función estable para Tanaka. No deben completarse por invención.
