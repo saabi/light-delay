@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-30 — Reproductor: sidebar derecho unificado
+
+- En modo película, el selector de idioma, el contador de tomas y el panel de detalles comparten una columna derecha que fluye verticalmente, sin solaparse.
+
 ## 2026-08-30 — Festival Cut completo A–G y displays ingleses
 
 - Festival incorpora 29 tomas/takes para E–G y alcanza 67 tomas, 6:03,2 de primera asamblea y cobertura causal/animatic completa; los siete parlamentos existentes se colocaron sin reescritura ni sobra de diálogo.

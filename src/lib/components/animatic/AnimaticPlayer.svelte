@@ -305,15 +305,6 @@
 						</div>
 					{/if}
 				</div>
-				<div class="movie-top-actions">
-					<div class="movie-lang">
-						<LanguageControls compact />
-					</div>
-					<div class="movie-counter-col">
-						<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
-						<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
-					</div>
-				</div>
 			</div>
 
 			{#if activeSubtitles.length}
@@ -325,34 +316,43 @@
 			{/if}
 		</div>
 
-		<div class="movie-details" class:open={player.detailsOpen}>
-			<button
-				type="button"
-				class="details-toggle"
-				aria-expanded={player.detailsOpen}
-				aria-controls="shot-details-body"
-				onclick={toggleDetails}
-			>
-				<span aria-hidden="true">{player.detailsOpen ? '▾' : '▸'}</span>
-				{m.animatic_details()}
-			</button>
-			{#if player.detailsOpen}
-				<div class="movie-detail-body" id="shot-details-body">
-					{#if current}
-						<ShotDetailsPanel
-							{script}
-							shot={current.shot}
-							cues={current.cues}
-							media={current.media}
-							effectiveDurationMs={currentDuration}
-							absoluteInMs={currentAbsoluteInMs}
-							shotIndex={player.shotIndex}
-							totalShots={shots.length}
-						/>
-					{/if}
-				</div>
-			{/if}
-		</div>
+		<aside class="movie-sidebar" class:open={player.detailsOpen}>
+			<div class="movie-lang">
+				<LanguageControls compact />
+			</div>
+			<div class="movie-counter-col">
+				<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
+				<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
+			</div>
+			<div class="movie-details" class:open={player.detailsOpen}>
+				<button
+					type="button"
+					class="details-toggle"
+					aria-expanded={player.detailsOpen}
+					aria-controls="shot-details-body"
+					onclick={toggleDetails}
+				>
+					<span aria-hidden="true">{player.detailsOpen ? '▾' : '▸'}</span>
+					{m.animatic_details()}
+				</button>
+				{#if player.detailsOpen}
+					<div class="movie-detail-body" id="shot-details-body">
+						{#if current}
+							<ShotDetailsPanel
+								{script}
+								shot={current.shot}
+								cues={current.cues}
+								media={current.media}
+								effectiveDurationMs={currentDuration}
+								absoluteInMs={currentAbsoluteInMs}
+								shotIndex={player.shotIndex}
+								totalShots={shots.length}
+							/>
+						{/if}
+					</div>
+				{/if}
+			</div>
+		</aside>
 
 		<div class="movie-controls">
 			<button type="button" class="btn previous" onclick={goPrev} aria-label={m.animatic_previous()}
@@ -436,11 +436,8 @@
 	.movie-top {
 		position: absolute;
 		left: 24px;
-		right: 24px;
+		right: min(456px, calc(100vw - 12px));
 		top: 20px;
-		display: flex;
-		justify-content: space-between;
-		gap: 20px;
 		text-shadow: 0 2px 8px #000;
 		pointer-events: none;
 	}
@@ -463,12 +460,22 @@
 		margin-top: 0.35rem;
 	}
 
-	.movie-top-actions {
+	.movie-sidebar {
+		position: absolute;
+		right: 18px;
+		top: 20px;
+		z-index: 2;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-end;
+		align-items: stretch;
 		gap: 0.65rem;
+		width: min(420px, calc(100vw - 36px));
+		max-height: calc(100vh - 120px);
 		pointer-events: auto;
+	}
+
+	.movie-sidebar.open {
+		min-height: 0;
 	}
 
 	.movie-lang {
@@ -478,7 +485,7 @@
 		background: #06101bed;
 		backdrop-filter: blur(14px);
 		text-shadow: none;
-		min-width: min(220px, 42vw);
+		flex-shrink: 0;
 	}
 
 	.movie-lang :global(.lang-controls.compact) {
@@ -490,6 +497,13 @@
 		flex-direction: column;
 		align-items: flex-end;
 		gap: 0.35rem;
+		padding: 0.45rem 0.7rem;
+		border: 1px solid #ffffff2b;
+		border-radius: 10px;
+		background: #06101bed;
+		backdrop-filter: blur(14px);
+		text-shadow: none;
+		flex-shrink: 0;
 	}
 
 	.movie-counter {
@@ -523,16 +537,20 @@
 	}
 
 	.movie-details {
-		position: absolute;
-		right: 18px;
-		top: 58px;
-		width: min(420px, calc(100vw - 36px));
-		max-height: calc(100vh - 210px);
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
 		overflow: hidden;
 		border: 1px solid #ffffff2b;
 		border-radius: 10px;
 		background: #06101bed;
 		backdrop-filter: blur(14px);
+		flex-shrink: 0;
+	}
+
+	.movie-details.open {
+		flex: 1;
+		min-height: 0;
 	}
 
 	.details-toggle {
@@ -559,7 +577,8 @@
 
 	.movie-detail-body {
 		padding: 0 14px 14px;
-		max-height: calc(100vh - 270px);
+		flex: 1;
+		min-height: 0;
 		overflow: auto;
 		overscroll-behavior: contain;
 	}
@@ -661,13 +680,39 @@
 			min-height: 0;
 		}
 
-		.movie-details {
+		.movie-sidebar {
 			position: relative;
 			right: auto;
 			top: auto;
-			align-self: start;
 			width: 100%;
 			max-height: none;
+			gap: 0;
+			background: #06101b;
+		}
+
+		.movie-sidebar.open {
+			align-self: stretch;
+			display: flex;
+			flex: 1;
+			min-height: 0;
+			flex-direction: column;
+		}
+
+		.movie-lang,
+		.movie-counter-col {
+			border-radius: 0;
+			border-right: 0;
+			border-left: 0;
+			background: #06101b;
+			backdrop-filter: none;
+		}
+
+		.movie-counter-col {
+			border-top: 0;
+		}
+
+		.movie-details {
+			width: 100%;
 			border-right: 0;
 			border-left: 0;
 			border-radius: 0;
@@ -676,9 +721,9 @@
 		}
 
 		.movie-details.open {
-			align-self: stretch;
-			display: flex;
+			flex: 1;
 			min-height: 0;
+			display: flex;
 			flex-direction: column;
 		}
 
