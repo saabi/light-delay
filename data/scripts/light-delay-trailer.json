@@ -267,7 +267,7 @@
       },
       "dramaticPurpose": {
         "es": "Abrir con escala y doctrina de contacto.",
-        "en": "Open with scale and contact doctrine."
+        "en": "Open with scale and the contact doctrine."
       },
       "characterIds": [
         "character:voss",
@@ -317,7 +317,7 @@
       },
       "dramaticPurpose": {
         "es": "Promesa de la misión diplomática.",
-        "en": "Promise of the diplomatic mission."
+        "en": "Promise the diplomatic mission."
       },
       "characterIds": [
         "character:sorell",
@@ -372,7 +372,7 @@
       },
       "dramaticPurpose": {
         "es": "Introducir el peligro técnico.",
-        "en": "Introduce technical danger."
+        "en": "Introduce the technical danger."
       },
       "characterIds": [
         "character:zao"
@@ -528,7 +528,7 @@
       },
       "dramaticPurpose": {
         "es": "Salto temporal y presión técnica.",
-        "en": "Time jump and technical pressure."
+        "en": "Create a temporal jump and technical pressure."
       },
       "characterIds": [
         "character:rao",
@@ -646,7 +646,7 @@
       },
       "dramaticPurpose": {
         "es": "Clímax sin revelar el desenlace.",
-        "en": "Climax without revealing the outcome."
+        "en": "Build the climax without revealing its outcome."
       },
       "characterIds": [
         "character:rao",
@@ -711,7 +711,7 @@
       },
       "dramaticPurpose": {
         "es": "Cierre de marca.",
-        "en": "Brand closure."
+        "en": "Close on the brand."
       },
       "characterIds": [
         "character:zao"
@@ -747,7 +747,7 @@
       },
       "purpose": {
         "es": "Abrir con escala y doctrina de contacto.",
-        "en": "Open with scale and contact doctrine."
+        "en": "Open with scale and the contact doctrine."
       },
       "summary": {
         "es": "Negro a Proxima / Celestial Ardor; misión en V.O.",
@@ -767,7 +767,7 @@
       },
       "purpose": {
         "es": "Promesa de la misión diplomática.",
-        "en": "Promise of the diplomatic mission."
+        "en": "Promise the diplomatic mission."
       },
       "summary": {
         "es": "Separación, núcleo y saludo; tarjeta PRIMER CONTACTO.",
@@ -788,7 +788,7 @@
       },
       "purpose": {
         "es": "Introducir el peligro técnico.",
-        "en": "Introduce technical danger."
+        "en": "Introduce the technical danger."
       },
       "summary": {
         "es": "Zao detecta la rama ejecutable no declarada.",
@@ -851,7 +851,7 @@
       },
       "purpose": {
         "es": "Salto temporal y presión técnica.",
-        "en": "Time jump and technical pressure."
+        "en": "Create a temporal jump and technical pressure."
       },
       "summary": {
         "es": "Cruce de la garganta; aproximación remota bajo desaceleración; Elin contra reloj.",
@@ -896,7 +896,7 @@
       },
       "purpose": {
         "es": "Clímax sin revelar el desenlace.",
-        "en": "Climax without revealing the outcome."
+        "en": "Build the climax without revealing its outcome."
       },
       "summary": {
         "es": "Montaje bajo desaceleración hacia el corte programado de motor y el umbral Velari.",
@@ -918,7 +918,7 @@
       },
       "purpose": {
         "es": "Cierre de marca.",
-        "en": "Brand closure."
+        "en": "Close on the brand."
       },
       "summary": {
         "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.",
@@ -1465,6 +1465,10 @@
         "es": "Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, con nombre y silueta legibles, Júpiter pequeño al fondo. Cael comenta por el canal de preparación.",
         "en": "Proxima exterior: an old 500–800 m spine, two counterrotating habitats, and additions from different eras; Celestial Ardor docked axially, its name and silhouette readable, with small Jupiter behind it. Cael speaks over the preparation channel."
       },
+      "purpose": {
+        "es": "Abrir con escala y doctrina de contacto. La toma muestra: Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, con nombre y silueta legibles, Júpiter pequeño al fondo. Cael comenta por el canal de preparación.",
+        "en": "Open with scale and the contact doctrine. The shot shows: Proxima exterior: an old 500–800 m spine, two counterrotating habitats, and additions from different eras; Celestial Ardor docked axially, its name and silhouette readable, with small Jupiter behind it. Cael speaks over the preparation channel."
+      },
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "LS",
@@ -1520,6 +1524,10 @@
         "es": "Sorell entrega el saludo pasivo; Voss ordena puestos.",
         "en": "Sorell delivers the passive greeting; Voss orders positions."
       },
+      "purpose": {
+        "es": "Abrir con escala y doctrina de contacto. La toma muestra: Sorell entrega el saludo pasivo; Voss ordena puestos.",
+        "en": "Open with scale and the contact doctrine. The shot shows: Sorell delivers the passive greeting; Voss orders positions."
+      },
       "locationId": "location:proxima-dock",
       "composition": {
         "size": "MS",
@@ -1569,6 +1577,10 @@
         "es": "Celestial Ardor se desprende del muelle, despliega velos radiadores oscuros y orienta la tobera magnética hacia el arco joviano.",
         "en": "Celestial Ardor detaches itself from the spring, unfolds dark radiating veils and directs the magnetic nozzle towards the Jovian arc."
       },
+      "purpose": {
+        "es": "Promesa de la misión diplomática. La toma muestra: Celestial Ardor se desprende del muelle, despliega velos radiadores oscuros y orienta la tobera magnética hacia el arco joviano.",
+        "en": "Promise the diplomatic mission. The shot shows: Celestial Ardor detaches itself from the spring, unfolds dark radiating veils and directs the magnetic nozzle towards the Jovian arc."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "LS",
@@ -1617,6 +1629,10 @@
       "description": {
         "es": "Zao sola frente al núcleo azul; rojo casi imperceptible.",
         "en": "Zao alone in front of the blue core; almost imperceptible red."
+      },
+      "purpose": {
+        "es": "Promesa de la misión diplomática. La toma muestra: Zao sola frente al núcleo azul; rojo casi imperceptible.",
+        "en": "Promise the diplomatic mission. The shot shows: Zao alone in front of the blue core; almost imperceptible red."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -1673,6 +1689,10 @@
         "es": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
         "en": "Sorell inserts GREETING SORELL-ZAO / READ ONLY."
       },
+      "purpose": {
+        "es": "Promesa de la misión diplomática. La toma muestra: Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
+        "en": "Promise the diplomatic mission. The shot shows: Sorell inserts GREETING SORELL-ZAO / READ ONLY."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "INSERT",
@@ -1727,6 +1747,10 @@
       "description": {
         "es": "Código se abre como envoltura dormida de función ambigua.",
         "en": "Code opens as dormant wrapper of ambiguous function."
+      },
+      "purpose": {
+        "es": "Introducir el peligro técnico. La toma muestra: Código se abre como envoltura dormida de función ambigua.",
+        "en": "Introduce the technical danger. The shot shows: Code opens as dormant wrapper of ambiguous function."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -1783,6 +1807,10 @@
         "es": "Zao contrasta la firma superficial con el bloque autónomo.",
         "en": "Zao contrasts the surface signature with the autonomous block."
       },
+      "purpose": {
+        "es": "Introducir el peligro técnico. La toma muestra: Zao contrasta la firma superficial con el bloque autónomo.",
+        "en": "Introduce the technical danger. The shot shows: Zao contrasts the surface signature with the autonomous block."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "INSERT",
@@ -1837,6 +1865,10 @@
       "description": {
         "es": "Payload autónomo y relé físico",
         "en": "Autonomous payload and physical relay"
+      },
+      "purpose": {
+        "es": "Introducir el peligro técnico. La toma muestra: Payload autónomo y relé físico",
+        "en": "Introduce the technical danger. The shot shows: Autonomous payload and physical relay"
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -1894,6 +1926,10 @@
         "es": "Una mano no identificable activa el jammer y la voz de Zao se corta.",
         "en": "An unidentifiable hand activates the jammer and Zao’s voice cuts out."
       },
+      "purpose": {
+        "es": "Convertir la transmisión en una decisión bajo presión. La toma muestra: Una mano no identificable activa el jammer y la voz de Zao se corta.",
+        "en": "Turn the transmission into a decision under pressure. The shot shows: An unidentifiable hand activates the jammer and Zao’s voice cuts out."
+      },
       "locationId": "location:celestial-ardor-command-vestibule",
       "composition": {
         "size": "ECU",
@@ -1949,6 +1985,10 @@
       "description": {
         "es": "Wireless sin enlace y mensaje en cola",
         "en": "Wireless without link and message in queue"
+      },
+      "purpose": {
+        "es": "Convertir la transmisión en una decisión bajo presión. La toma muestra: Wireless sin enlace y mensaje en cola",
+        "en": "Turn the transmission into a decision under pressure. The shot shows: Wireless without link and message in queue"
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -2006,6 +2046,10 @@
         "es": "Fracasan ambos respaldos cableados",
         "en": "Both wired backups fail"
       },
+      "purpose": {
+        "es": "Convertir la transmisión en una decisión bajo presión. La toma muestra: Fracasan ambos respaldos cableados",
+        "en": "Turn the transmission into a decision under pressure. The shot shows: Both wired backups fail"
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "INSERT",
@@ -2056,6 +2100,10 @@
         "es": "Zao preserva el manifiesto físico, adjunta su snapshot, firma el paquete con su token personal y carga la solución en el láser.",
         "en": "Zao preserves the physical manifest, attaches its snapshot, signs the packet with her personal token, and loads the laser solution."
       },
+      "purpose": {
+        "es": "Convertir la transmisión en una decisión bajo presión. La toma muestra: Zao preserva el manifiesto físico, adjunta su snapshot, firma el paquete con su token personal y carga la solución en el láser.",
+        "en": "Turn the transmission into a decision under pressure. The shot shows: Zao preserves the physical manifest, attaches its snapshot, signs the packet with her personal token, and loads the laser solution."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "OTS",
@@ -2105,6 +2153,10 @@
       "description": {
         "es": "El progreso del envío sube sin alcanzar una confirmación visible mientras una presencia entra fuera de foco.",
         "en": "Send progress rises without reaching visible confirmation while a presence enters out of focus."
+      },
+      "purpose": {
+        "es": "Cerrar el acto en Proxima sin confirmar si el mensaje salió ni si Zao murió. La toma muestra: El progreso del envío sube sin alcanzar una confirmación visible mientras una presencia entra fuera de foco.",
+        "en": "Close the act at Proxima without confirming whether the message was sent or Zao died. The shot shows: Send progress rises without reaching visible confirmation while a presence enters out of focus."
       },
       "locationId": "location:diplomatic-core-room",
       "composition": {
@@ -2162,6 +2214,10 @@
         "es": "Corte breve a negro antes del ataque; la música conserva el pulso y el montaje sale del negro sin confirmar la muerte.",
         "en": "Brief cut to black before the attack; the score keeps its pulse and the edit leaves black without confirming death."
       },
+      "purpose": {
+        "es": "Cerrar el acto en Proxima sin confirmar si el mensaje salió ni si Zao murió. La toma muestra: Corte breve a negro antes del ataque; la música conserva el pulso y el montaje sale del negro sin confirmar la muerte.",
+        "en": "Close the act at Proxima without confirming whether the message was sent or Zao died. The shot shows: Brief cut to black before the attack; the score keeps its pulse and the edit leaves black without confirming death."
+      },
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "OTHER",
@@ -2212,10 +2268,18 @@
         "es": "Los nodos forman la garganta",
         "en": "The nodes form the throat"
       },
+      "purpose": {
+        "es": "Salto temporal y presión técnica. La toma muestra: Los nodos forman la garganta",
+        "en": "Create a temporal jump and technical pressure. The shot shows: The nodes form the throat"
+      },
       "locationId": "location:velari-wormhole-mouth",
       "composition": {
         "size": "ELS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "ELS",
+          "en": "ELS"
+        }
       },
       "camera": {
         "movement": "locked",
@@ -2258,10 +2322,18 @@
         "es": "Cruce por inercia y colapso",
         "en": "Inertia crossing and collapse"
       },
+      "purpose": {
+        "es": "Salto temporal y presión técnica. La toma muestra: Cruce por inercia y colapso",
+        "en": "Create a temporal jump and technical pressure. The shot shows: Inertia crossing and collapse"
+      },
       "locationId": "location:velari-wormhole-mouth",
       "composition": {
         "size": "ELS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "ELS",
+          "en": "ELS"
+        }
       },
       "camera": {
         "movement": "locked",
@@ -2303,6 +2375,10 @@
       "description": {
         "es": "Voss pregunta por Sorell",
         "en": "Voss asks about Sorell"
+      },
+      "purpose": {
+        "es": "Salto temporal y presión técnica. La toma muestra: Voss pregunta por Sorell",
+        "en": "Create a temporal jump and technical pressure. The shot shows: Voss asks about Sorell"
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2365,6 +2441,10 @@
         "es": "Elin trabaja en puesto protegido; reloj Velari sigue bajando.",
         "en": "Elin works in a protected position; Velari clock continues to fall."
       },
+      "purpose": {
+        "es": "Salto temporal y presión técnica. La toma muestra: Elin trabaja en puesto protegido; reloj Velari sigue bajando.",
+        "en": "Create a temporal jump and technical pressure. The shot shows: Elin works in a protected position; Velari clock continues to fall."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "LS",
@@ -2425,6 +2505,10 @@
         "es": "La envoltura se reconstruye como ruta hacia el saludo.",
         "en": "The envelope is reconstructed as a route to the greeting."
       },
+      "purpose": {
+        "es": "Mostrar el peligro inmediato sin revelar si la advertencia de Zao llegó. La toma muestra: La envoltura se reconstruye como ruta hacia el saludo.",
+        "en": "Show the immediate danger without revealing whether Zao’s warning arrived. The shot shows: The envelope is reconstructed as a route to the greeting."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "OTS",
@@ -2479,6 +2563,10 @@
       "description": {
         "es": "Disparador: APERTURA DE CANAL VELARI.",
         "en": "Trigger: VELARI CHANNEL OPENING."
+      },
+      "purpose": {
+        "es": "Mostrar el peligro inmediato sin revelar si la advertencia de Zao llegó. La toma muestra: Disparador: APERTURA DE CANAL VELARI.",
+        "en": "Show the immediate danger without revealing whether Zao’s warning arrived. The shot shows: Trigger: VELARI CHANNEL OPENING."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2535,6 +2623,10 @@
         "es": "Elin crea un perímetro de cuarentena.",
         "en": "Elin creates a quarantine perimeter."
       },
+      "purpose": {
+        "es": "Mostrar el peligro inmediato sin revelar si la advertencia de Zao llegó. La toma muestra: Elin crea un perímetro de cuarentena.",
+        "en": "Show the immediate danger without revealing whether Zao’s warning arrived. The shot shows: Elin creates a quarantine perimeter."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
@@ -2583,6 +2675,10 @@
       "description": {
         "es": "El despliegue se detiene en 41%, pero no desaparece.",
         "en": "The deployment stops at 41%, but does not disappear."
+      },
+      "purpose": {
+        "es": "Mostrar el peligro inmediato sin revelar si la advertencia de Zao llegó. La toma muestra: El despliegue se detiene en 41%, pero no desaparece.",
+        "en": "Show the immediate danger without revealing whether Zao’s warning arrived. The shot shows: The deployment stops at 41%, but does not disappear."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2639,6 +2735,10 @@
         "es": "Reloj inglés: VELARI CHANNEL · OPENS IN 00:48; la Ardor desacelera bajo 1 g.",
         "en": "English clock: VELARI CHANNEL · OPENS IN 00:48; the Ardor decelerates under 1 g."
       },
+      "purpose": {
+        "es": "Clímax sin revelar el desenlace. La toma muestra: Reloj inglés: VELARI CHANNEL · OPENS IN 00:48; la Ardor desacelera bajo 1 g.",
+        "en": "Build the climax without revealing its outcome. The shot shows: English clock: VELARI CHANNEL · OPENS IN 00:48; the Ardor decelerates under 1 g."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "INSERT",
@@ -2693,6 +2793,10 @@
       "description": {
         "es": "Elin abre el mapa de cuarentena preparado antes.",
         "en": "Elin opens the quarantine map prepared earlier."
+      },
+      "purpose": {
+        "es": "Clímax sin revelar el desenlace. La toma muestra: Elin abre el mapa de cuarentena preparado antes.",
+        "en": "Build the climax without revealing its outcome. The shot shows: Elin opens the quarantine map prepared earlier."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2749,6 +2853,10 @@
         "es": "El corte programado inicia la microgravedad: correas y cables sujetos se elevan mientras una presencia anónima busca el control físico.",
         "en": "The scheduled cutoff begins microgravity: secured straps and cables rise as an anonymous presence seeks physical control."
       },
+      "purpose": {
+        "es": "Clímax sin revelar el desenlace. La toma muestra: El corte programado inicia la microgravedad: correas y cables sujetos se elevan mientras una presencia anónima busca el control físico.",
+        "en": "Build the climax without revealing its outcome. The shot shows: The scheduled cutoff begins microgravity: secured straps and cables rise as an anonymous presence seeks physical control."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
@@ -2797,6 +2905,10 @@
       "description": {
         "es": "Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
         "en": "Sorell inserts GREETING SORELL-ZAO / READ ONLY."
+      },
+      "purpose": {
+        "es": "Clímax sin revelar el desenlace. La toma muestra: Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
+        "en": "Build the climax without revealing its outcome. The shot shows: Sorell inserts GREETING SORELL-ZAO / READ ONLY."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2853,6 +2965,10 @@
         "es": "La Ardor queda diminuta ante la estación y la emisaria inmóviles; el montaje corta antes de resolver qué ocurrirá.",
         "en": "The Ardor hangs tiny before the motionless station and emissary; the edit cuts before resolving what will happen."
       },
+      "purpose": {
+        "es": "Clímax sin revelar el desenlace. La toma muestra: La Ardor queda diminuta ante la estación y la emisaria inmóviles; el montaje corta antes de resolver qué ocurrirá.",
+        "en": "Build the climax without revealing its outcome. The shot shows: The Ardor hangs tiny before the motionless station and emissary; the edit cuts before resolving what will happen."
+      },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "LS",
@@ -2901,6 +3017,10 @@
       "description": {
         "es": "Estación y emisaria conservan luces propias sin sincronizar con la Ardor; el plano no confirma respuesta.",
         "en": "Station and emissary retain their own lights without synchronizing with the Ardor; the shot does not confirm a response."
+      },
+      "purpose": {
+        "es": "Cierre de marca. La toma muestra: Estación y emisaria conservan luces propias sin sincronizar con la Ardor; el plano no confirma respuesta.",
+        "en": "Close on the brand. The shot shows: Station and emissary retain their own lights without synchronizing with the Ardor; the shot does not confirm a response."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2966,6 +3086,10 @@
       "description": {
         "es": "Corte a negro y títulos antes de resolver el canal, la amenaza o la aproximación.",
         "en": "Cut to black and titles before resolving the channel, threat, or approach."
+      },
+      "purpose": {
+        "es": "Cierre de marca. La toma muestra: Corte a negro y títulos antes de resolver el canal, la amenaza o la aproximación.",
+        "en": "Close on the brand. The shot shows: Cut to black and titles before resolving the channel, threat, or approach."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {

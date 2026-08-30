@@ -85,6 +85,7 @@ const SEGMENTS = [
 		title: 'Escala',
 		summary: 'Negro a Proxima / Celestial Ardor; misión en V.O.',
 		dramaticPurpose: 'Abrir con escala y doctrina de contacto.',
+		dramaticPurposeEn: 'Open with scale and the contact doctrine.',
 		locationId: 'location:proxima-dock',
 		targetDurationMs: 8000,
 		characterIds: ['character:voss', 'character:zao', 'character:rao', 'character:sorell'],
@@ -98,6 +99,7 @@ const SEGMENTS = [
 		title: 'La misión',
 		summary: 'Separación, núcleo y saludo; tarjeta PRIMER CONTACTO.',
 		dramaticPurpose: 'Promesa de la misión diplomática.',
+		dramaticPurposeEn: 'Promise the diplomatic mission.',
 		locationId: 'location:celestial-ardor-bridge',
 		targetDurationMs: 10100,
 		characterIds: ['character:sorell', 'character:voss', 'character:cael', 'character:zao'],
@@ -112,6 +114,7 @@ const SEGMENTS = [
 		title: 'La anomalía',
 		summary: 'Zao detecta la rama ejecutable no declarada.',
 		dramaticPurpose: 'Introducir el peligro técnico.',
+		dramaticPurposeEn: 'Introduce the technical danger.',
 		locationId: 'location:diplomatic-core-room',
 		targetDurationMs: 13600,
 		characterIds: ['character:zao'],
@@ -195,6 +198,7 @@ const SEGMENTS = [
 		summary: 'Cruce de la garganta; aproximación remota bajo desaceleración; Elin contra reloj.',
 		summaryEn: 'Throat crossing; remote approach under deceleration; Elin races the clock.',
 		dramaticPurpose: 'Salto temporal y presión técnica.',
+		dramaticPurposeEn: 'Create a temporal jump and technical pressure.',
 		locationId: 'location:celestial-ardor-bridge',
 		targetDurationMs: 11200,
 		characterIds: ['character:rao', 'character:voss', 'character:cael'],
@@ -231,6 +235,7 @@ const SEGMENTS = [
 		summary: 'Montaje bajo desaceleración hacia el corte programado de motor y el umbral Velari.',
 		summaryEn: 'Montage under deceleration toward the scheduled engine cutoff and the Velari threshold.',
 		dramaticPurpose: 'Clímax sin revelar el desenlace.',
+		dramaticPurposeEn: 'Build the climax without revealing its outcome.',
 		locationId: 'location:celestial-ardor-bridge',
 		targetDurationMs: 10000,
 		characterIds: ['character:rao', 'character:voss', 'character:cael', 'character:sorell'],
@@ -263,6 +268,7 @@ const SEGMENTS = [
 		summary: 'Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.',
 		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY / LUZ TARDÍA and tagline.',
 		dramaticPurpose: 'Cierre de marca.',
+		dramaticPurposeEn: 'Close on the brand.',
 		locationId: 'location:velari-station',
 		targetDurationMs: 8000,
 		characterIds: ['character:zao'],
@@ -588,6 +594,9 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		const { shot: mainShot, take: mainTakeRec } = mainTake(spec.mainShotId);
 		const shotId = `trailer:shot-${seg.key}-${String(oi + 1).padStart(2, '0')}`;
 		const takeId = `trailer:take-${seg.key}-${String(oi + 1).padStart(2, '0')}-01`;
+		const shotDescription = spec.description
+			? { es: spec.description, en: spec.descriptionEn }
+			: mainShot.description;
 		sceneShotIds.push(shotId);
 
 		shots.push({
@@ -599,6 +608,10 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			description: spec.description
 				? L(spec.description, spec.descriptionEn)
 				: mainShot.description,
+			purpose: L(
+				spec.purpose || `${seg.dramaticPurpose} La toma muestra: ${shotDescription.es}`,
+				spec.purposeEn || `${seg.dramaticPurposeEn || seg.dramaticPurpose} The shot shows: ${shotDescription.en}`
+			),
 			locationId: mainShot.locationId || locationId,
 			composition: mainShot.composition,
 			camera: spec.cameraDescription

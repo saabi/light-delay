@@ -3588,11 +3588,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-          "spokenText": "El token autentica a Zao y mantiene íntegros mensaje y snapshot. No revoca nada. El manifiesto asigna el relé a Harlan y mi auditoría lo conecta con payload y override.",
+            "spokenText": "El token autentica a Zao y mantiene íntegros mensaje y snapshot. No revoca nada. El manifiesto asigna el relé a Harlan y mi auditoría lo conecta con payload y override.",
             "status": "source"
           },
           "en": {
-          "spokenText": "The token authenticates Zao and keeps the message and snapshot intact. It revokes nothing. The manifest assigns the relay to Harlan, and my audit connects it to payload and override.",
+            "spokenText": "The token authenticates Zao and keeps the message and snapshot intact. It revokes nothing. The manifest assigns the relay to Harlan, and my audit connects it to payload and override.",
             "status": "draft"
           }
         }
@@ -4450,7 +4450,11 @@
             "en": "Industrial atmosphere, distant radio, structural creaks."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Exterior de Proxima: eje antiguo de 500–800 m, dos hábitats contrarrotatorios y ampliaciones de distintas épocas; Celestial Ardor atracada axialmente, con nombre y silueta legibles, Júpiter pequeño al fondo. Cael comenta por el canal de preparación.",
+        "en": "Visually establish: Proxima exterior: an old 500–800 m spine, two counterrotating habitats, and additions from different eras; Celestial Ardor docked axially, its name and silhouette readable, with small Jupiter behind it. Cael speaks over the preparation channel."
+      }
     },
     {
       "id": "main:shot-01-02",
@@ -4493,7 +4497,11 @@
             "en": "News filtered through loudspeakers."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Pantallas del muelle: retraso Tierra 43:18 y cuenta de apertura.",
+        "en": "Visually establish: Dock screens: Earth delay 43:18 and opening count."
+      }
     },
     {
       "id": "main:shot-01-03",
@@ -4656,7 +4664,11 @@
             "en": "The dock regains presence."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Harlan observa las noticias; Voss entra en cuadro.",
+        "en": "Visually establish: Harlan watches the news; Voss enters the frame."
+      }
     },
     {
       "id": "main:shot-01-06",
@@ -4715,7 +4727,11 @@
             "en": "Ramp closure notices."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Zao instruye a Elin sobre la cuarentena; Elin prueba el aislamiento y confirma que el control cableado del láser exterior permanece disponible.",
+        "en": "Visually establish: Zao instructs Elin on quarantine; Elin tests isolation and confirms that the external laser’s wired control remains available."
+      }
     },
     {
       "id": "main:shot-01-07",
@@ -4835,7 +4851,11 @@
             "en": "Music ascends towards release."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Sorell entrega el saludo pasivo; Voss ordena puestos.",
+        "en": "Visually establish: Sorell delivers the passive greeting; Voss orders positions."
+      }
     },
     {
       "id": "main:shot-01-09",
@@ -5295,7 +5315,11 @@
             "en": "Engines on standby."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Puente reducido; reloj de tránsito ocupa el fondo.",
+        "en": "Visually establish: Reduced bridge; transit clock occupies the background."
+      }
     },
     {
       "id": "main:shot-02-02",
@@ -5344,7 +5368,11 @@
             "en": "Previous silence."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Voss asume el mando.",
+        "en": "Visually establish: Voss takes over."
+      }
     },
     {
       "id": "main:shot-02-03",
@@ -5387,7 +5415,11 @@
             "en": "Mechanical closures, ignition."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Mano de Cael confirma separación y empuje.",
+        "en": "Visually establish: Cael's hand confirms separation and push."
+      }
     },
     {
       "id": "main:shot-02-04",
@@ -5430,7 +5462,11 @@
             "en": "serious engine; music opens."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Celestial Ardor se desprende del muelle, despliega velos radiadores oscuros y orienta la tobera magnética hacia el arco joviano.",
+        "en": "Visually establish: Celestial Ardor detaches itself from the spring, unfolds dark radiating veils and directs the magnetic nozzle towards the Jovian arc."
+      }
     },
     {
       "id": "main:shot-03-01",
@@ -5473,7 +5509,11 @@
             "en": "Investment alarm."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: La nave bordea Júpiter con amplio desplazamiento lateral; radiadores recogidos antes del giro.",
+        "en": "Visually establish: The ship skirts Jupiter with a wide lateral movement; radiators collected before turning."
+      }
     },
     {
       "id": "main:shot-03-02",
@@ -5516,7 +5556,11 @@
             "en": "Cessation and return of the hum."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Zao asegurada en caída libre mientras la nave rota; 1 g retorna hacia el mismo piso al reanudar el frenado.",
+        "en": "Visually establish: Zao secured in free fall as the ship rotates; 1 g returns to the same floor when braking is resumed."
+      }
     },
     {
       "id": "main:shot-03-03",
@@ -5570,7 +5614,11 @@
             "en": "Three electronic pulses."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Tres picos idénticos aparecen en energía.",
+        "en": "Visually establish: Three identical peaks appear in energy."
+      }
     },
     {
       "id": "main:shot-03-04",
@@ -5619,7 +5667,11 @@
             "en": "Low atmosphere."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Un acceso fuera de horario se refleja en los ojos de Zao.",
+        "en": "Visually establish: An after-hours access is reflected in Zao's eyes."
+      }
     },
     {
       "id": "main:shot-04-01",
@@ -5673,7 +5725,11 @@
             "en": "Core pulse."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Zao sola frente al núcleo azul; rojo casi imperceptible.",
+        "en": "Visually establish: Zao alone in front of the blue core; almost imperceptible red."
+      }
     },
     {
       "id": "main:shot-04-02",
@@ -5722,7 +5778,11 @@
             "en": "Faint digital texture."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Código se abre como envoltura dormida de función ambigua.",
+        "en": "Visually establish: Code opens as dormant wrapper of ambiguous function."
+      }
     },
     {
       "id": "main:shot-04-03",
@@ -5871,7 +5931,11 @@
             "en": "File dry closure."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Zao marca el registro como NO VERIFICADO y copia datos para Elin.",
+        "en": "Visually establish: Zao marks the record as UNVERIFIED and copies data to Elin."
+      }
     },
     {
       "id": "main:shot-05-01",
@@ -6176,7 +6240,11 @@
       "locationId": "location:celestial-ardor-service-cylinder",
       "composition": {
         "size": "MS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "MS",
+          "en": "MS"
+        }
       },
       "camera": {
         "movement": "tracking",
@@ -6216,7 +6284,11 @@
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "MS",
+          "en": "MS"
+        }
       },
       "camera": {
         "movement": "locked",
@@ -6556,7 +6628,11 @@
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "OTS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "OTS",
+          "en": "OTS"
+        }
       },
       "camera": {
         "movement": "handheld",
@@ -6604,7 +6680,11 @@
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "MS",
+          "en": "MS"
+        }
       },
       "camera": {
         "movement": "handheld",
@@ -6966,7 +7046,11 @@
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "MS",
+          "en": "MS"
+        }
       },
       "camera": {
         "movement": "handheld",
@@ -7014,7 +7098,11 @@
       "locationId": "location:celestial-ardor-command-vestibule",
       "composition": {
         "size": "INSERT",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "PD",
+          "en": "PD"
+        }
       },
       "camera": {
         "movement": "tracking",
@@ -7058,7 +7146,11 @@
       "locationId": "location:velari-wormhole-mouth",
       "composition": {
         "size": "ELS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "ELS",
+          "en": "ELS"
+        }
       },
       "camera": {
         "movement": "locked",
@@ -7098,7 +7190,11 @@
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "MS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "MS",
+          "en": "MS"
+        }
       },
       "camera": {
         "movement": "locked",
@@ -7138,7 +7234,11 @@
       "locationId": "location:velari-wormhole-mouth",
       "composition": {
         "size": "ELS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "ELS",
+          "en": "ELS"
+        }
       },
       "camera": {
         "movement": "locked",
@@ -7358,7 +7458,11 @@
       "locationId": "location:celestial-ardor-command-vestibule",
       "composition": {
         "size": "ECU",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "ECU",
+          "en": "ECU"
+        }
       },
       "camera": {
         "movement": "locked",
@@ -7398,7 +7502,11 @@
       "locationId": "location:celestial-ardor-central-access",
       "composition": {
         "size": "LS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "LS",
+          "en": "LS"
+        }
       },
       "camera": {
         "movement": "tracking",
@@ -7438,7 +7546,11 @@
       "locationId": "location:diplomatic-core-room",
       "composition": {
         "size": "MS",
-        "aspectRatio": "16:9"
+        "aspectRatio": "16:9",
+        "framing": {
+          "es": "MS",
+          "en": "MS"
+        }
       },
       "camera": {
         "movement": "handheld",
@@ -7500,7 +7612,11 @@
             "en": "Clock strikes."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: El tramo borrado termina; la grabación posterior muestra a Sorell llegando cuando Zao ya está muerta.",
+        "en": "Visually establish: The erased segment ends; the later recording shows Sorell arriving when Zao is already dead."
+      }
     },
     {
       "id": "main:shot-09-02",
@@ -7760,7 +7876,11 @@
             "en": "Observation door."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Sorell deja a Elin la información sobre el saludo pasivo.",
+        "en": "Visually establish: Sorell leaves the information about the passive greeting to Elin."
+      }
     },
     {
       "id": "main:shot-10-01",
@@ -7803,7 +7923,11 @@
             "en": "Constant typing and pushing."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Elin trabaja en puesto protegido; reloj Velari sigue bajando.",
+        "en": "Visually establish: Elin works in a protected position; Velari clock continues to fall."
+      }
     },
     {
       "id": "main:shot-10-02",
@@ -7857,7 +7981,11 @@
             "en": "Paced pulses."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: La envoltura se reconstruye como ruta hacia el saludo.",
+        "en": "Visually establish: The envelope is reconstructed as a route to the greeting."
+      }
     },
     {
       "id": "main:shot-10-03",
@@ -7906,7 +8034,11 @@
             "en": "Subtle alert."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Disparador: APERTURA DE CANAL VELARI.",
+        "en": "Visually establish: Trigger: VELARI CHANNEL OPENING."
+      }
     },
     {
       "id": "main:shot-10-04",
@@ -7949,7 +8081,11 @@
             "en": "Processing grows."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Elin crea un perímetro de cuarentena.",
+        "en": "Visually establish: Elin creates a quarantine perimeter."
+      }
     },
     {
       "id": "main:shot-10-05",
@@ -7998,7 +8134,11 @@
             "en": "Alarm stabilizes."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: El despliegue se detiene en 41%, pero no desaparece.",
+        "en": "Visually establish: The deployment stops at 41%, but does not disappear."
+      }
     },
     {
       "id": "main:shot-10-06",
@@ -8047,7 +8187,11 @@
             "en": "Finding tone."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Aparece OVR-7C41 sin titular.",
+        "en": "Visually establish: OVR-7C41 appears without a title."
+      }
     },
     {
       "id": "main:shot-10-07",
@@ -8096,7 +8240,11 @@
             "en": "Meeting clock persists."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Elin explica a Voss por qué Sorell no está probada culpable.",
+        "en": "Visually establish: Elin explains to Voss why Sorell is not proven guilty."
+      }
     },
     {
       "id": "main:shot-11-01",
@@ -8150,7 +8298,11 @@
             "en": "Serious engines."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Harlan invoca el procedimiento para preservar intacto el canal automático.",
+        "en": "Visually establish: Harlan invokes procedure to preserve the automatic channel intact."
+      }
     },
     {
       "id": "main:shot-11-02",
@@ -8199,7 +8351,11 @@
             "en": "Pause."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Elin demuestra que la firma fantasma ya alteró el canal y Voss mantiene la auditoría.",
+        "en": "Visually establish: Elin shows that the ghost signature already altered the channel, and Voss keeps the audit running."
+      }
     },
     {
       "id": "main:shot-11-03",
@@ -8248,7 +8404,11 @@
             "en": "Active navigation."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Cael mantiene trayectoria y señala la baliza ausente.",
+        "en": "Visually establish: Cael maintains his trajectory and signals the missing beacon."
+      }
     },
     {
       "id": "main:shot-11-04",
@@ -8302,7 +8462,11 @@
             "en": "Silence."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Harlan propone abortar el contacto.",
+        "en": "Visually establish: Harlan proposes aborting contact."
+      }
     },
     {
       "id": "main:shot-11-05",
@@ -8351,7 +8515,11 @@
             "en": "Weak pulse."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Una portadora humana aparece en el corredor previsto.",
+        "en": "Visually establish: A human carrier appears in the intended corridor."
+      }
     },
     {
       "id": "main:shot-11-06",
@@ -8400,7 +8568,11 @@
             "en": "Static."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Harlan intenta convertir la señal en amenaza.",
+        "en": "Visually establish: Harlan tries to turn the signal into a threat."
+      }
     },
     {
       "id": "main:shot-12-01",
@@ -8502,7 +8674,11 @@
             "en": "Static."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Tras oír el mensaje, Harlan intenta reducir la evidencia a una voz falsificable.",
+        "en": "Visually establish: After hearing the message, Harlan tries to reduce the evidence to a forgeable voice."
+      }
     },
     {
       "id": "main:shot-12-03",
@@ -8551,7 +8727,11 @@
             "en": "Silence."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Elin distingue voz de firma y verifica el token personal de Zao.",
+        "en": "Visually establish: Elin distinguishes voice from signature and verifies Zao’s personal token."
+      }
     },
     {
       "id": "main:shot-12-04",
@@ -8600,7 +8780,11 @@
             "en": "Immediate click."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: La interfaz confirma autora e integridad del mensaje y del adjunto, sin depender del audio.",
+        "en": "Visually establish: The interface confirms the author and integrity of the message and attachment without depending on audio."
+      }
     },
     {
       "id": "main:shot-12-05",
@@ -8654,7 +8838,11 @@
             "en": "Four discreet confirmations converge into one steady tone."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Cuatro capas convergen: dispositivo y hora, autoría de Zao, snapshot físico del relé y auditoría independiente de Elin.",
+        "en": "Visually establish: Four layers converge: device and time, Zao’s authorship, the physical relay snapshot, and Elin’s independent audit."
+      }
     },
     {
       "id": "main:shot-12-06",
@@ -8708,7 +8896,11 @@
             "en": "Dry confirmation."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: La atribución convergente señala a Harlan; Voss revoca su credencial.",
+        "en": "Visually establish: The convergent attribution points to Harlan; Voss revokes his credential."
+      }
     },
     {
       "id": "main:shot-12-07",
@@ -8757,7 +8949,11 @@
             "en": "Security alarm."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Antes de que la revocación termine de propagarse, Harlan activa la última ventana del override.",
+        "en": "Visually establish: Before revocation finishes propagating, Harlan activates the override’s last window."
+      }
     },
     {
       "id": "main:shot-12-08",
@@ -8906,7 +9102,11 @@
             "en": "Impact and alarm."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Harlan rompe la contención humana y sale del puente.",
+        "en": "Visually establish: Harlan breaks human containment and leaves the bridge."
+      }
     },
     {
       "id": "main:shot-13-02",
@@ -8949,7 +9149,11 @@
             "en": "Beeps go off behind."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Bajo 1 g, Harlan alcanza el ascensor central y desciende al ramal del núcleo mientras los módulos revocan su credencial en cascada.",
+        "en": "Visually establish: Under 1 g, Harlan reaches the central lift and descends to the core branch while modules revoke his credential in cascade."
+      }
     },
     {
       "id": "main:shot-13-03",
@@ -9003,7 +9207,11 @@
             "en": "Metallic blow."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: El núcleo acepta el último pulso físico y sella el mamparo.",
+        "en": "Visually establish: The core accepts the last physical pulse and seals the bulkhead."
+      }
     },
     {
       "id": "main:shot-13-04",
@@ -9046,7 +9254,11 @@
             "en": "Cael starts opening."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Voss y Okoye llegan por ascensor al acceso del núcleo; Cael permanece al mando a distancia.",
+        "en": "Visually establish: Voss and Okoye reach the core access by lift; Cael remains in remote command."
+      }
     },
     {
       "id": "main:shot-13-05",
@@ -9095,7 +9307,11 @@
             "en": "Velari watch."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Sorell entra al puente junto a Elin.",
+        "en": "Visually establish: Sorell enters the bridge with Elin."
+      }
     },
     {
       "id": "main:shot-14-01",
@@ -9138,7 +9354,11 @@
             "en": "Different sound rhythms."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Núcleo y puente se presentan como espacios paralelos.",
+        "en": "Visually establish: Core and bridge appear as parallel spaces."
+      }
     },
     {
       "id": "main:shot-14-02",
@@ -9181,7 +9401,11 @@
             "en": "Regular pulse."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Reloj único en inglés: VELARI CHANNEL · OPENS IN 00:48; la Ardor desacelera bajo 1 g.",
+        "en": "Visually establish: Single English clock: VELARI CHANNEL · OPENS IN 00:48; the Ardor decelerates under 1 g."
+      }
     },
     {
       "id": "main:shot-14-03",
@@ -9235,7 +9459,11 @@
             "en": "Power connector."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Harlan bloquea el accionamiento principal del relé y conserva a la vista el auxiliar.",
+        "en": "Visually establish: Harlan blocks the relay’s primary actuator and keeps the auxiliary in sight."
+      }
     },
     {
       "id": "main:shot-14-04",
@@ -9284,7 +9512,11 @@
             "en": "Prosecution."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Elin abre el mapa de cuarentena preparado antes.",
+        "en": "Visually establish: Elin opens the quarantine map prepared earlier."
+      }
     },
     {
       "id": "main:shot-14-05",
@@ -9338,7 +9570,11 @@
             "en": "Mechanical click."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Sorell inserta SALUDO SORELL-ZAO / SÓLO LECTURA.",
+        "en": "Visually establish: Sorell inserts GREETING SORELL-ZAO / READ ONLY."
+      }
     },
     {
       "id": "main:shot-14-06",
@@ -9387,7 +9623,11 @@
             "en": "Motors and lock."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Cael pilota y fuerza el mamparo simultáneamente.",
+        "en": "Visually establish: Cael pilots and forces the bulkhead simultaneously."
+      }
     },
     {
       "id": "main:shot-14-07",
@@ -9441,7 +9681,11 @@
             "en": "Alarm grows."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: A T−12 s el corte programado inicia la microgravedad; sólo se elevan correas, cables flexibles y elementos asegurados.",
+        "en": "Visually establish: At T−12 s the scheduled cutoff begins microgravity; only straps, flexible cables, and secured items rise."
+      }
     },
     {
       "id": "main:shot-14-08",
@@ -9495,7 +9739,11 @@
             "en": "Metal, steps."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Harlan se impulsa al auxiliar y apela a Okoye; ella vacila un instante, elige su deber y redirige su impulso con pasamanos y tether.",
+        "en": "Visually establish: Harlan pushes toward the auxiliary and appeals to Okoye; she hesitates for an instant, chooses her duty, and redirects his momentum with handrails and a tether."
+      }
     },
     {
       "id": "main:shot-14-09",
@@ -9549,7 +9797,11 @@
             "en": "Account already established."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: La contención física concede a Elin los cinco segundos necesarios para cerrar la rama hostil.",
+        "en": "Visually establish: Physical restraint gives Elin the five seconds needed to close the hostile branch."
+      }
     },
     {
       "id": "main:shot-14-10",
@@ -9603,7 +9855,11 @@
             "en": "Alarm stops."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Sorell valida el saludo fuera de línea y Elin conecta ese soporte a la ruta limpia; la mediación permanece activa.",
+        "en": "Visually establish: Sorell validates the greeting offline and Elin connects that medium to the clean route; mediation remains active."
+      }
     },
     {
       "id": "main:shot-15-01",
@@ -9646,7 +9902,11 @@
             "en": "Far organic tone."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: El puente recupera simetría; portadora Velari presente.",
+        "en": "Visually establish: The bridge recovers symmetry; Velari bearer present."
+      }
     },
     {
       "id": "main:shot-15-02",
@@ -9700,7 +9960,11 @@
             "en": "Nominal system."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Elin muestra payload visible pero sin acceso a salida.",
+        "en": "Visually establish: Elin shows payload visible but without access to output."
+      }
     },
     {
       "id": "main:shot-15-03",
@@ -9749,7 +10013,11 @@
             "en": "Mathematical reading."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Sorell verifica contenido del saludo pasivo.",
+        "en": "Visually establish: Sorell verifies content of the passive greeting."
+      }
     },
     {
       "id": "main:shot-15-04",
@@ -9798,7 +10066,11 @@
             "en": "Pause."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Antes de T=0, Voss preautoriza únicamente el saludo limpio.",
+        "en": "Visually establish: Before T=0, Voss preauthorizes only the clean greeting."
+      }
     },
     {
       "id": "main:shot-15-05",
@@ -9841,7 +10113,11 @@
             "en": "Carrier leaves."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: En T=0, el protocolo libera automáticamente sólo el saludo ya preautorizado por la ruta limpia.",
+        "en": "Visually establish: At T=0, the protocol automatically releases only the preauthorized greeting through the clean route."
+      }
     },
     {
       "id": "main:shot-15-06",
@@ -9890,7 +10166,11 @@
             "en": "Velari response."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: A enorme distancia, la piel de la Estación Velari responde con un patrón orgánico de luz.",
+        "en": "Visually establish: At great distances, the skin of Velari Station responds with an organic pattern of light."
+      }
     },
     {
       "id": "main:shot-15-07",
@@ -9939,7 +10219,11 @@
             "en": "Music returns cautiously."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Cael y Voss aceptan el resultado limitado.",
+        "en": "Visually establish: Cael and Voss accept the limited result."
+      }
     },
     {
       "id": "main:shot-16-01",
@@ -9982,7 +10266,11 @@
             "en": "Almost imperceptible engine."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Celestial Ardor avanza diminuta ante la Estación Velari: varios kilómetros de lóbulos, arcos, cavidades y piel-radiador cambiante.",
+        "en": "Visually establish: Celestial Ardor advances tiny before Velari Station: several kilometers of lobes, arcs, cavities and changing skin-radiator."
+      }
     },
     {
       "id": "main:shot-16-02",
@@ -10025,7 +10313,11 @@
             "en": "Organic harmonics without engine sound."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Una nave emisaria orgánica de 300–600 m se separa de la estación sin escape visible.",
+        "en": "Visually establish: A 300–600 m organic emissary ship separates from the station with no visible escape."
+      }
     },
     {
       "id": "main:shot-16-03",
@@ -10068,7 +10360,11 @@
             "en": "A single common pulse."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Luces de la Celestial Ardor, la emisaria y la estación sincronizan un pulso de reconocimiento.",
+        "en": "Visually establish: Lights of the Celestial Ardor, the emissary and the station synchronize a pulse of recognition."
+      }
     },
     {
       "id": "main:shot-17-01",
@@ -10111,7 +10407,11 @@
             "en": "Environment without dialogue."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Puente silencioso; la luz de la emisaria y de la estación orgánica entra por el ventanal.",
+        "en": "Visually establish: Silent bridge; The light from the emissary and the organic station enters through the window."
+      }
     },
     {
       "id": "main:shot-17-02",
@@ -10160,7 +10460,11 @@
             "en": "Minimal transmission echo."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Voss prepara el informe a la Tierra y adjunta la evidencia; el legajo y retrato de Zao ocupan la pantalla antes del envío.",
+        "en": "Visually establish: Voss prepares the report to Earth and attaches the evidence; Zao’s personnel file and portrait fill the display before transmission."
+      }
     },
     {
       "id": "main:shot-17-03",
@@ -10209,7 +10513,11 @@
             "en": "Breathing."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Sorell se coloca junto a Elin.",
+        "en": "Visually establish: Sorell stands next to Elin."
+      }
     },
     {
       "id": "main:shot-17-04",
@@ -10258,7 +10566,11 @@
             "en": "Music ascends."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: El retrato de Zao detiene a Voss; él alza la vista hacia la emisaria y la estación, separadas más allá del ventanal.",
+        "en": "Visually establish: Zao’s portrait stops Voss; he looks up toward the emissary and the station, separate beyond the window."
+      }
     },
     {
       "id": "main:shot-17-05",
@@ -10312,7 +10624,11 @@
             "en": "Silence between clauses."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: Voss dice «Llegaste a tiempo» apenas para sí y pulsa ENVIAR; no espera una respuesta imposible de la Tierra.",
+        "en": "Visually establish: Voss says “You made it in time” softly to himself and presses SEND; he does not wait for an impossible reply from Earth."
+      }
     },
     {
       "id": "main:shot-17-06",
@@ -10355,7 +10671,11 @@
             "en": "Final theme, fade out."
           }
         }
-      ]
+      ],
+      "purpose": {
+        "es": "Hacer visible: La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento.",
+        "en": "Visually establish: The human ship advances towards the emissary; behind, the Velari Station seems to breathe. Slow fade."
+      }
     },
     {
       "id": "main:shot-01-18",

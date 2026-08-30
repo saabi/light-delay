@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-30 — Completitud de propósitos y encuadres
+
+- Main completa propósitos bilingües en sus 68 tomas pendientes y encuadres en las 12 tomas que carecían de `composition.framing`, conservando descripciones, movimientos, IDs y duración.
+- El generador del tráiler añade propósitos por toma desde la intención segura de cada segmento, sin heredar metadatos que puedan revelar culpable o desenlace; sus 29 tomas quedan completas en propósito y encuadre.
+- Festival fue auditado y permanece sin faltantes de estos campos. No se generaron imágenes, video ni prompts; bindings, placements y performance siguen siendo deuda separada.
+
 ## 2026-08-30 — Clímax físico/digital y omisiones del tráiler
 
 - Main y Festival aclaran que la cámara descarta a Sorell como autora, aunque Voss suspende su credencial comprometida y exige escolta; Harlan usa el procedimiento para preservar el canal automático, no para apagarlo.

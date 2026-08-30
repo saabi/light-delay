@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "f4894103c82a3fd2c5b18c8d04eec57b58c127eef076380dc29948a8f22c35d2",
+    "sourceDigest": "ec50d19f42a25f2e35f503561ad6e6f3a4de828839fe4887dcdd6f34d3f75eed",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -18,7 +18,6 @@
       "blockers": [
         "missing_voice_sample:character:voss",
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -58,7 +57,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -98,7 +96,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -138,7 +135,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -179,7 +175,6 @@
       "blockers": [
         "missing_voice_sample:character:sorell",
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -220,7 +215,6 @@
       "blockers": [
         "missing_voice_sample:character:zao",
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -260,7 +254,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -303,7 +296,6 @@
       "blockers": [
         "missing_voice_sample:character:zao",
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -344,7 +336,6 @@
       "blockers": [
         "missing_voice_sample:character:zao",
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -384,7 +375,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -426,7 +416,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -466,7 +455,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -506,7 +494,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -548,7 +535,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -588,8 +574,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
-        "missing_framing",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -629,8 +613,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
-        "missing_framing",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -670,7 +652,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -711,7 +692,6 @@
       "blockers": [
         "missing_voice_sample:character:rao",
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -752,7 +732,6 @@
       "blockers": [
         "missing_voice_sample:character:rao",
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -792,7 +771,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -834,7 +812,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -874,7 +851,6 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -915,7 +891,6 @@
       "shotId": "trailer:shot-h-01",
       "status": "blocked",
       "blockers": [
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -957,7 +932,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:rao",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -996,7 +970,6 @@
       "shotId": "trailer:shot-h-03",
       "status": "blocked",
       "blockers": [
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -1035,7 +1008,6 @@
       "shotId": "trailer:shot-h-04",
       "status": "blocked",
       "blockers": [
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -1076,7 +1048,6 @@
       "shotId": "trailer:shot-h-05",
       "status": "blocked",
       "blockers": [
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -1116,7 +1087,6 @@
       "status": "blocked",
       "blockers": [
         "missing_voice_sample:character:zao",
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -1155,7 +1125,6 @@
       "shotId": "trailer:shot-i-02",
       "status": "blocked",
       "blockers": [
-        "missing_purpose",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
