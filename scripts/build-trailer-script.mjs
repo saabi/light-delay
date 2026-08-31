@@ -264,13 +264,14 @@ const SEGMENTS = [
 	},
 	{
 		key: 'i',
-		title: 'Título',
-		summary: 'Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.',
-		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY / LUZ TARDÍA and tagline.',
-		dramaticPurpose: 'Cierre de marca.',
-		dramaticPurposeEn: 'Close on the brand.',
+		title: 'Título y créditos',
+		titleEn: 'Title and credits',
+		summary: 'Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA, lema y créditos.',
+		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT, tagline, and credits.',
+		dramaticPurpose: 'Cierre de marca y créditos.',
+		dramaticPurposeEn: 'Close on the brand and credits.',
 		locationId: 'location:velari-station',
-		targetDurationMs: 8000,
+		targetDurationMs: 18000,
 		characterIds: ['character:zao'],
 		shots: [
 			{
@@ -282,8 +283,43 @@ const SEGMENTS = [
 			{
 				mainShotId: 'main:shot-17-06',
 				durationMs: 4000,
-				description: 'Corte a negro y títulos antes de resolver el canal, la amenaza o la aproximación.',
-				descriptionEn: 'Cut to black and titles before resolving the channel, threat, or approach.'
+				description: 'Corte a negro y títulos LIGHT DELAY / LATE LIGHT.',
+				descriptionEn: 'Cut to black and LIGHT DELAY / LATE LIGHT titles.',
+				promptKey: 'B'
+			},
+			{
+				mainShotId: 'main:shot-17-06',
+				durationMs: 2500,
+				description: 'Lema en cartela tipográfica.',
+				descriptionEn: 'Tagline typographic card.',
+				promptKey: 'C'
+			},
+			{
+				mainShotId: 'main:shot-17-06',
+				durationMs: 2500,
+				description: 'Tarjeta de crédito: escrito y producido por.',
+				descriptionEn: 'Credit card: written and produced by.',
+				purpose: 'Acreditar autoría y producción.',
+				purposeEn: 'Credit authorship and production.',
+				promptKey: 'D1'
+			},
+			{
+				mainShotId: 'main:shot-17-06',
+				durationMs: 2500,
+				description: 'Tarjeta de crédito: asistencia de IA.',
+				descriptionEn: 'Credit card: AI assistance.',
+				purpose: 'Acreditar asistencia de modelos.',
+				purposeEn: 'Credit model assistance.',
+				promptKey: 'D2'
+			},
+			{
+				mainShotId: 'main:shot-17-06',
+				durationMs: 2500,
+				description: 'Tarjeta de crédito: herramientas de producción.',
+				descriptionEn: 'Credit card: production tools.',
+				purpose: 'Acreditar esquema y herramientas.',
+				purposeEn: 'Credit schema and tools.',
+				promptKey: 'D3'
 			}
 		]
 	}
@@ -342,10 +378,12 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		beatIds: [beatId],
 		shotIds: sceneShotIds,
 		targetDurationMs: seg.targetDurationMs,
-		sourceRefs: seg.shots.map((s) => ({
-			scriptId: 'script:light-delay-main-short',
-			shotId: s.mainShotId
-		}))
+		sourceRefs: seg.shots
+			.filter((s) => !s.promptKey)
+			.map((s) => ({
+				scriptId: 'script:light-delay-main-short',
+				shotId: s.mainShotId
+			}))
 	});
 
 	beats.push({
@@ -388,7 +426,7 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		);
 	}
 	if (seg.key === 'b') {
-		addCue(textCue('trailer:cue-b-01', beatId, 1, 'PRIMER CONTACTO', 'title'), 1);
+		addCue(textCue('trailer:cue-b-01', beatId, 1, 'PRIMER CONTACTO', 'title', 'FIRST CONTACT'), 1);
 		addCue(
 			dialogue(
 				'trailer:cue-b-02',
@@ -574,17 +612,51 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			),
 			0
 		);
-		addCue(textCue('trailer:cue-i-02', beatId, 2, 'LIGHT DELAY', 'title'), 0);
-		addCue(textCue('trailer:cue-i-03', beatId, 3, 'LUZ TARDÍA', 'title'), 0);
+		addCue(textCue('trailer:cue-i-02', beatId, 2, 'LIGHT DELAY', 'title', 'LIGHT DELAY'), 1);
+		addCue(textCue('trailer:cue-i-03', beatId, 3, 'LUZ TARDÍA', 'title', 'LATE LIGHT'), 1);
 		addCue(
 			textCue(
 				'trailer:cue-i-04',
 				beatId,
 				4,
 				'A VECES, LLEGAR TARDE ES LLEGAR A TIEMPO.',
-				'caption'
+				'caption',
+				'SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.'
 			),
-			1
+			2
+		);
+		addCue(
+			textCue(
+				'trailer:cue-i-05',
+				beatId,
+				5,
+				'ESCRITO Y PRODUCIDO POR\nAUTHOR_NAME_PLACEHOLDER',
+				'credits',
+				'WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER'
+			),
+			3
+		);
+		addCue(
+			textCue(
+				'trailer:cue-i-06',
+				beatId,
+				6,
+				'ASISTENCIA DE IA\nChatGPT · Claude · Gemini · Cursor Composer',
+				'credits',
+				'AI ASSISTANCE\nChatGPT · Claude · Gemini · Cursor Composer'
+			),
+			4
+		);
+		addCue(
+			textCue(
+				'trailer:cue-i-07',
+				beatId,
+				7,
+				'HERRAMIENTAS DE PRODUCCIÓN\nEsquema y herramientas de producción Light Delay',
+				'credits',
+				'PRODUCTION TOOLS\nLight Delay schema & production tools'
+			),
+			5
 		);
 	}
 
@@ -598,6 +670,45 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			? { es: spec.description, en: spec.descriptionEn }
 			: mainShot.description;
 		sceneShotIds.push(shotId);
+
+		const isTitleCreditCard = Boolean(spec.promptKey);
+		const shotNotes = [];
+		if (!isTitleCreditCard) {
+			shotNotes.push({
+				type: 'editorial',
+				text: `Reutiliza frame de ${spec.mainShotId} (asset ${mainTakeRec.imageAssetId}).`
+			});
+		}
+		if (spec.promptKey) {
+			const promptBlurb = {
+				B: 'Prompt B (EN on-image): trailer end brand LIGHT DELAY / LATE LIGHT. See docs/TITLE_AND_CREDITS.md.',
+				C: 'Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md.',
+				D1: 'Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.',
+				D2: 'Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.',
+				D3: 'Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md.',
+				E: 'Prompt E (alpha): FIRST CONTACT. See docs/TITLE_AND_CREDITS.md.'
+			};
+			shotNotes.push({
+				type: 'production',
+				status: 'open',
+				priority: 'medium',
+				text: L(
+					promptBlurb[spec.promptKey] || `Prompt ${spec.promptKey}`,
+					promptBlurb[spec.promptKey] || `Prompt ${spec.promptKey}`
+				)
+			});
+		}
+		if (seg.key === 'b' && oi === 1) {
+			shotNotes.push({
+				type: 'production',
+				status: 'open',
+				priority: 'low',
+				text: L(
+					'Prompt E (alpha): FIRST CONTACT overlay. Ver docs/TITLE_AND_CREDITS.md.',
+					'Prompt E (alpha): FIRST CONTACT overlay. See docs/TITLE_AND_CREDITS.md.'
+				)
+			});
+		}
 
 		shots.push({
 			id: shotId,
@@ -613,46 +724,73 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				spec.purposeEn || `${seg.dramaticPurposeEn || seg.dramaticPurpose} The shot shows: ${shotDescription.en}`
 			),
 			locationId: mainShot.locationId || locationId,
-			composition: mainShot.composition,
-			camera: spec.cameraDescription
+			composition: isTitleCreditCard
 				? {
-						...mainShot.camera,
-						movementDescription: L(spec.cameraDescription, spec.cameraDescriptionEn)
+						size: 'OTHER',
+						framing: L('Cartela tipográfica a pantalla completa', 'Full-frame typographic card'),
+						aspectRatio: '16:9'
 					}
-				: mainShot.camera,
+				: mainShot.composition,
+			camera: isTitleCreditCard
+				? {
+						movement: 'locked',
+						movementDescription: L('Negro / tipografía fija', 'Black field / locked typography')
+					}
+				: spec.cameraDescription
+					? {
+							...mainShot.camera,
+							movementDescription: L(spec.cameraDescription, spec.cameraDescriptionEn)
+						}
+					: mainShot.camera,
 			durationMs: spec.durationMs,
 			cuePlacements: spec._placements || [],
 			takeIds: [takeId],
 			selectedTakeId: takeId,
-			sourceRefs: [
-				{
-					scriptId: 'script:light-delay-main-short',
-					shotId: spec.mainShotId
-				}
-			],
-			notes: [
-				{
-					type: 'editorial',
-					text: `Reutiliza frame de ${spec.mainShotId} (asset ${mainTakeRec.imageAssetId}).`
-				}
-			]
+			sourceRefs: isTitleCreditCard
+				? undefined
+				: [
+						{
+							scriptId: 'script:light-delay-main-short',
+							shotId: spec.mainShotId
+						}
+					],
+			notes: shotNotes
 		});
 
-		takes.push({
-			id: takeId,
-			shotId,
-			number: 1,
-			status: 'selected',
-			imageAssetId: mainTakeRec.imageAssetId,
-			imageStatus: {
-				status: 'needs_regeneration',
-				reasons: ['canon_mismatch'],
-				explanation:
-					'Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.',
-				replacementBrief:
-					'Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic.'
-			}
-		});
+		takes.push(
+			isTitleCreditCard
+				? {
+						id: takeId,
+						shotId,
+						number: 1,
+						status: 'selected',
+						imageAssetId: 'asset:animatic-placeholder-missing-frame',
+						imageStatus: {
+							status: 'needs_replacement',
+							reasons: ['placeholder'],
+							explanation: L(
+								'Título/crédito; still pendiente de generación autorizada (prompt EN en notas).',
+								'Title/credit; still pending authorized generation (EN prompt in notes).'
+							),
+							sourceShotId: shotId
+						}
+					}
+				: {
+						id: takeId,
+						shotId,
+						number: 1,
+						status: 'selected',
+						imageAssetId: mainTakeRec.imageAssetId,
+						imageStatus: {
+							status: 'needs_regeneration',
+							reasons: ['canon_mismatch'],
+							explanation:
+								'Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.',
+							replacementBrief:
+								'Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic.'
+						}
+					}
+		);
 	}
 
 	// Fix beat cueIds order from sceneCueIds already populated
@@ -660,8 +798,8 @@ for (const [si, seg] of SEGMENTS.entries()) {
 	scenes[scenes.length - 1].shotIds = sceneShotIds;
 }
 
-if (totalMs !== 92500) {
-	throw new Error(`Unexpected total duration ${totalMs}ms (expected 92500)`);
+if (totalMs !== 102500) {
+	throw new Error(`Unexpected total duration ${totalMs}ms (expected 102500)`);
 }
 
 const file = {
@@ -674,7 +812,7 @@ const file = {
 		version: '0.2.0-draft',
 		status: 'draft',
 		kind: 'trailer',
-		targetDurationMs: 92500,
+		targetDurationMs: 102500,
 		lineage: {
 			sourceScriptId: 'script:light-delay-main-short',
 			relationship: 'trailer',
