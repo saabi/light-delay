@@ -432,8 +432,8 @@ function main() {
 		const isCanonical = id === project.project.canonicalScriptId;
 		validateScriptFile(script, {
 			sourceLang,
-			expectScenes: isCanonical ? 17 : undefined,
-			expectShots: isCanonical ? 124 : undefined,
+			expectScenes: isCanonical ? 19 : undefined,
+			expectShots: isCanonical ? 128 : undefined,
 			functionIds,
 			characterIds,
 			taxonomy,

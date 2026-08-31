@@ -11,11 +11,11 @@ import { getShotMedia } from '../repositories/lookups.ts';
 import { getAssets } from '../repositories/index.ts';
 
 describe('extracted canonical data', () => {
-	it('has 17 scenes and 124 shots on the main short', () => {
+	it('has 19 scenes and 128 shots on the main short (17 story + title/credits)', () => {
 		const script = getCanonicalScript();
-		expect(script.scenes).toHaveLength(17);
-		expect(script.shots).toHaveLength(124);
-		expect(script.takes).toHaveLength(124);
+		expect(script.scenes).toHaveLength(19);
+		expect(script.shots).toHaveLength(128);
+		expect(script.takes).toHaveLength(128);
 		expect(script.script.id).toBe('script:light-delay-main-short');
 		expect(script.scenes[0]?.id).toMatch(/^main:/);
 	});
@@ -26,21 +26,26 @@ describe('extracted canonical data', () => {
 		expect(ids).toContain('script:light-delay-festival');
 		const festival = getScript('script:light-delay-festival');
 		expect(festival.script.kind).toBe('festival_cut');
-		expect(festival.scenes).toHaveLength(7);
-		expect(festival.shots).toHaveLength(67);
-		expect(festival.takes).toHaveLength(67);
+		expect(festival.scenes).toHaveLength(9);
+		expect(festival.shots).toHaveLength(71);
+		expect(festival.takes).toHaveLength(71);
 		expect(festival.script.lineage?.sourceScriptId).toBe('script:light-delay-main-short');
 	});
 
-	it('registers trailer with reused animatic frames', () => {
+	it('registers trailer with reused animatic frames and title/credit cards', () => {
 		expect(listScripts().map((s) => s.id)).toContain('script:light-delay-trailer');
 		const trailer = getScript('script:light-delay-trailer');
 		expect(trailer.script.kind).toBe('trailer');
 		expect(trailer.scenes).toHaveLength(9);
-		expect(trailer.shots).toHaveLength(29);
+		expect(trailer.shots).toHaveLength(33);
 		expect(trailer.takes.every((t) => Boolean(t.imageAssetId))).toBe(true);
-		expect(getEffectiveDuration(trailer)).toBe(92_500);
-		expect(trailer.takes.every((t) => t.imageStatus?.status === 'needs_regeneration')).toBe(true);
+		expect(getEffectiveDuration(trailer)).toBe(102_500);
+		const storyTakes = trailer.takes.filter(
+			(t) => t.imageStatus?.status === 'needs_regeneration'
+		);
+		const cardTakes = trailer.takes.filter((t) => t.imageStatus?.status === 'needs_replacement');
+		expect(storyTakes.length).toBeGreaterThan(0);
+		expect(cardTakes.length).toBe(5);
 	});
 
 	it('separates main regeneration candidates from placeholder replacements', () => {
@@ -51,7 +56,7 @@ describe('extracted canonical data', () => {
 		const replacements = script.takes.filter(
 			(take) => take.imageStatus?.status === 'needs_replacement'
 		);
-		expect(replacements).toHaveLength(12);
+		expect(replacements).toHaveLength(16);
 		expect(replacements.every((take) => take.imageStatus?.reasons.includes('placeholder'))).toBe(
 			true
 		);
@@ -86,7 +91,7 @@ describe('extracted canonical data', () => {
 
 	it('sums the current animatic duration independently from the 30-minute target', () => {
 		expect(getCanonicalScript().script.targetDurationMs).toBe(30 * 60 * 1000);
-		expect(getEffectiveDuration(getCanonicalScript())).toBe(1_839_500);
+		expect(getEffectiveDuration(getCanonicalScript())).toBe(1_850_500);
 	});
 
 	it('derives subtitle segments from cue placements', () => {

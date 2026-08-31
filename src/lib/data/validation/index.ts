@@ -127,8 +127,8 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 		results.push(
 			validateScript(script, {
 				sourceLanguage,
-				expectSceneCount: isCanonical ? 17 : undefined,
-				expectShotCount: isCanonical ? 124 : undefined,
+				expectSceneCount: isCanonical ? 19 : undefined,
+				expectShotCount: isCanonical ? 128 : undefined,
 				requireSelectedTakes: script.shots.length > 0,
 				narrativeFunctions: bundle.narrativeFunctions,
 				characterIds,

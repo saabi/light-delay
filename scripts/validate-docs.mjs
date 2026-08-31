@@ -49,12 +49,12 @@ const withExactModel = assets.filter(
 	(asset) => asset.source?.model || asset.generation?.model
 ).length;
 
-if (main.scenes.length !== 17)
-	errors.push(`main script: expected 17 scenes, got ${main.scenes.length}`);
-if (main.shots.length !== 124)
-	errors.push(`main script: expected 124 shots, got ${main.shots.length}`);
-if (main.takes.length !== 124)
-	errors.push(`main script: expected 124 takes, got ${main.takes.length}`);
+if (main.scenes.length !== 19)
+	errors.push(`main script: expected 19 scenes, got ${main.scenes.length}`);
+if (main.shots.length !== 128)
+	errors.push(`main script: expected 128 shots, got ${main.shots.length}`);
+if (main.takes.length !== 128)
+	errors.push(`main script: expected 128 takes, got ${main.takes.length}`);
 if (animaticAssets !== 100)
 	errors.push(`assets: expected 100 legacy animatic frames, got ${animaticAssets}`);
 if (referenceAssets !== 31)
@@ -66,17 +66,18 @@ if (withoutSource !== 131)
 if (withExactModel !== 0)
 	errors.push(`assets: expected exact model metadata to remain unknown, got ${withExactModel}`);
 
-requireText('AGENTS.md', '17 escenas y el animatic principal 124 tomas');
-requireText('README.md', 'animatic textual de 124 tomas');
+requireText('AGENTS.md', 'animatic principal **128** tomas');
+requireText('README.md', 'animatic textual de 128 tomas');
 requireText('docs/ASSET_PROVENANCE.md', '**132 imágenes registradas**');
 requireText('docs/ASSET_PROVENANCE.md', '31 imágenes de referencia');
-requireText('docs/PROJECT_STATUS.md', '17 escenas, 124 tomas y 30:39,5');
+requireText('docs/PROJECT_STATUS.md', '**128** tomas y ~30:50,5');
 requireText(
 	'docs/SCRIPT_ANIMATIC_SYNC.md',
-	'| Tomas / takes | — | 124 tomas | 124 shots / 124 takes |'
+	'| Tomas / takes | — | 128 tomas | 128 shots / 128 takes |'
 );
-requireText('docs/PRODUCTION_PLAN.md', 'animatic de 124 tomas que reutiliza 100 frames');
+requireText('docs/PRODUCTION_PLAN.md', 'animatic de 128 tomas');
 requireText('docs/technical/EXTERNAL_SCENES_AND_ANIMATION.md', '| Júpiter | ✅ bloqueo 3D |');
+requireText('docs/TITLE_AND_CREDITS.md', 'LIGHT DELAY');
 
 forbidText('docs/WORKFLOW.md', '`data/canon.json`');
 forbidText('docs/WORKFLOW.md', '`data/props.json`');
