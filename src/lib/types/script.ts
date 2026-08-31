@@ -269,7 +269,7 @@ export interface TextVariant {
 
 export interface TextCue extends CueBase {
 	type: 'text';
-	presentation: 'title' | 'subtitle' | 'caption' | 'interface' | 'location_card' | 'time_card';
+	presentation: 'title' | 'subtitle' | 'caption' | 'interface' | 'location_card' | 'time_card' | 'credits';
 	content: LocalizedValue<TextVariant>;
 }
 

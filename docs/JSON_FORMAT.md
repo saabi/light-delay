@@ -510,7 +510,8 @@ export interface TextCue extends CueBase {
     | "caption"
     | "interface"
     | "location_card"
-    | "time_card";
+    | "time_card"
+    | "credits";
 }
 ```
 
