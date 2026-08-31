@@ -37,7 +37,7 @@
 
 **6. La Transmisión de Emergencia** *(T+2.8h)*
 - En microgravedad, Zao avisa al puente que el payload figura a nombre de Sorell y que la firma parece falsa
-- Harlan oye «relé físico» desde el acceso axial, activa el jammer sin ser visto y desconecta COM A/B en el distribuidor del cilindro de servicio
+- Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo durante la llamada; oculto por el cilindro, oye «relé físico», activa primero el jammer y luego abre la bandeja contigua para desenchufar COM A/B
 - Zao comprueba la caída de wireless y de ambos respaldos cableados; el control físico dedicado del láser exterior sigue operativo
 - Descarta Tierra por demora y Proxima por falta de adquisición óptica útil
 - Calcula la intercepción con la posición futura de la nave y ajusta un barrido estrecho sobre la elipse de incertidumbre
@@ -45,7 +45,7 @@
 - Sensación de carrera contra el tiempo
 
 **7. El Asesinato** *(T+3h)*
-- Harlan llega por el cilindro de servicio mientras Sorell, enviada por Voss para buscarlo y entrar con él, avanza por el cilindro central
+- Harlan vuelve a entrar por la escotilla, la cierra y desciende por el cilindro de servicio mientras Sorell, enviada por Voss para buscarlo y entrar con él, avanza por la circulación cotidiana
 - Harlan confronta a Zao después de que la transmisión termina; sólo ve que hubo un envío, no dónde fue apuntado
 - Zao es asesinada — escena puede ser elidida/sugerida, no explícita
 - Harlan borra cámaras, archivo local y huellas; regresa por servicio y restaura COM A/B antes de reaparecer en el puente

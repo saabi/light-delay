@@ -266,12 +266,12 @@ const SEGMENTS = [
 		key: 'i',
 		title: 'Título y créditos',
 		titleEn: 'Title and credits',
-		summary: 'Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y créditos.',
-		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT and credits.',
+		summary: 'Escala Velari sin respuesta confirmada; LUZ TARDÍA / LIGHT DELAY, lema y créditos.',
+		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY, tagline, and credits.',
 		dramaticPurpose: 'Cierre de marca y créditos.',
 		dramaticPurposeEn: 'Close on the brand and credits.',
 		locationId: 'location:velari-station',
-		targetDurationMs: 15500,
+		targetDurationMs: 18000,
 		characterIds: ['character:zao'],
 		shots: [
 			{
@@ -283,9 +283,16 @@ const SEGMENTS = [
 			{
 				mainShotId: 'main:shot-17-06',
 				durationMs: 4000,
-				description: 'Corte a negro y títulos LIGHT DELAY / LATE LIGHT.',
-				descriptionEn: 'Cut to black and LIGHT DELAY / LATE LIGHT titles.',
+				description: 'Corte a negro y título LIGHT DELAY.',
+				descriptionEn: 'Cut to black and LIGHT DELAY title.',
 				promptKey: 'B'
+			},
+			{
+				mainShotId: 'main:shot-17-06',
+				durationMs: 2500,
+				description: 'Lema en cartela tipográfica.',
+				descriptionEn: 'Tagline typographic card.',
+				promptKey: 'C'
 			},
 			{
 				mainShotId: 'main:shot-17-06',
@@ -605,8 +612,18 @@ for (const [si, seg] of SEGMENTS.entries()) {
 			),
 			0
 		);
-		addCue(textCue('trailer:cue-i-02', beatId, 2, 'LIGHT DELAY', 'title', 'LIGHT DELAY'), 1);
-		addCue(textCue('trailer:cue-i-03', beatId, 3, 'LUZ TARDÍA', 'title', 'LATE LIGHT'), 1);
+		addCue(textCue('trailer:cue-i-02', beatId, 2, 'LUZ TARDÍA', 'title', 'LIGHT DELAY'), 1);
+		addCue(
+			textCue(
+				'trailer:cue-i-03',
+				beatId,
+				3,
+				'A VECES, LLEGAR TARDE ES LLEGAR A TIEMPO.',
+				'caption',
+				'SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.'
+			),
+			2
+		);
 		addCue(
 			textCue(
 				'trailer:cue-i-04',
@@ -616,7 +633,7 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'credits',
 				'WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER'
 			),
-			2
+			3
 		);
 		addCue(
 			textCue(
@@ -627,7 +644,7 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'credits',
 				'AI ASSISTANCE\nChatGPT · Claude · Gemini · Cursor Composer'
 			),
-			3
+			4
 		);
 		addCue(
 			textCue(
@@ -638,7 +655,7 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'credits',
 				'PRODUCTION TOOLS\nLight Delay schema & production tools'
 			),
-			4
+			5
 		);
 	}
 
@@ -663,7 +680,8 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		}
 		if (spec.promptKey) {
 			const promptBlurb = {
-				B: 'Prompt B (EN on-image): trailer end brand LIGHT DELAY / LATE LIGHT. See docs/TITLE_AND_CREDITS.md.',
+				B: 'Prompt B (EN on-image): trailer end brand LIGHT DELAY. See docs/TITLE_AND_CREDITS.md.',
+				C: 'Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md.',
 				D1: 'Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.',
 				D2: 'Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.',
 				D3: 'Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md.',
@@ -740,22 +758,38 @@ for (const [si, seg] of SEGMENTS.entries()) {
 
 		takes.push(
 			isTitleCreditCard
-				? {
-						id: takeId,
-						shotId,
-						number: 1,
-						status: 'selected',
-						imageAssetId: 'asset:animatic-placeholder-missing-frame',
-						imageStatus: {
-							status: 'needs_replacement',
-							reasons: ['placeholder'],
-							explanation: L(
-								'Título/crédito; still pendiente de generación autorizada (prompt EN en notas).',
-								'Title/credit; still pending authorized generation (EN prompt in notes).'
-							),
-							sourceShotId: shotId
+				? (() => {
+						const titleCardAssets = {
+							B: 'asset:animatic-title-trailer-brand',
+							C: 'asset:animatic-title-trailer-tagline'
+						};
+						const wiredAssetId = titleCardAssets[spec.promptKey];
+						if (wiredAssetId) {
+							return {
+								id: takeId,
+								shotId,
+								number: 1,
+								status: 'selected',
+								imageAssetId: wiredAssetId
+							};
 						}
-					}
+						return {
+							id: takeId,
+							shotId,
+							number: 1,
+							status: 'selected',
+							imageAssetId: 'asset:animatic-placeholder-missing-frame',
+							imageStatus: {
+								status: 'needs_replacement',
+								reasons: ['placeholder'],
+								explanation: L(
+									'Título/crédito; still pendiente de generación autorizada (prompt EN en notas).',
+									'Title/credit; still pending authorized generation (EN prompt in notes).'
+								),
+								sourceShotId: shotId
+							}
+						};
+					})()
 				: {
 						id: takeId,
 						shotId,
@@ -779,8 +813,8 @@ for (const [si, seg] of SEGMENTS.entries()) {
 	scenes[scenes.length - 1].shotIds = sceneShotIds;
 }
 
-if (totalMs !== 100000) {
-	throw new Error(`Unexpected total duration ${totalMs}ms (expected 100000)`);
+if (totalMs !== 102500) {
+	throw new Error(`Unexpected total duration ${totalMs}ms (expected 102500)`);
 }
 
 const file = {
@@ -793,7 +827,7 @@ const file = {
 		version: '0.2.0-draft',
 		status: 'draft',
 		kind: 'trailer',
-		targetDurationMs: 100000,
+		targetDurationMs: 102500,
 		lineage: {
 			sourceScriptId: 'script:light-delay-main-short',
 			relationship: 'trailer',

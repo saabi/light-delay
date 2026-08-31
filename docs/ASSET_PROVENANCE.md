@@ -2,11 +2,15 @@
 
 ## Inventario actual
 
-- **132 imágenes registradas** en `data/assets.json`.
+- **139 imágenes registradas** en `data/assets.json`.
 - 100 fotogramas legacy del animatic en 17 escenas.
-- 31 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
+- 1 fotograma nuevo de escena 5 toma 7 (Harlan / COM A/B) en `static/assets/animatic/frames/scene-05/shot-07.png`.
+- 3 cartelas de título (main/Festival, marca y lema del tráiler) en `static/assets/animatic/titles/`.
+- 34 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
 - 1 placeholder técnico para frames faltantes o fallidos.
 - No hay todavía assets de audio ni video registrados.
+- Las tres referencias realistas del puente están registradas como assets independientes; conservan proveedor, fecha, referencias de entrada y elegibilidad no verificada.
+- La campaña de afiches V1 añade 16 imágenes de marketing —ocho piezas en español y sus ocho versiones inglesas— bajo `static/assets/marketing/posters/v1/`. Su manifiesto específico registra orientación, dimensiones, copy, pares localizados y referencias canónicas; todavía no forman parte de los 139 assets del grafo narrativo.
 
 Los manifests existentes se encuentran bajo `legacy-site/assets/` y documentan nombres, rutas, categorías y descripciones visuales.
 
@@ -25,10 +29,10 @@ Los assets fueron generados con herramientas de generación de imágenes asistid
 
 Auditoría de corte 2026-08-28:
 
-- 131 de 132 assets no tienen objeto `source`;
-- los 132 carecen de modelo/versionado exacto;
-- sólo el placeholder técnico registra proveedor y fecha de generación;
-- ningún asset registra todavía una decisión verificable de elegibilidad para concurso.
+- 135 de 139 assets no tienen objeto `source`;
+- los 139 carecen de modelo/versionado exacto verificable;
+- el placeholder técnico y las tres referencias realistas del puente registran proveedor y fecha de generación;
+- ningún asset registra todavía elegibilidad verificada para concurso.
 
 No debe inventarse esa información. Cuando no pueda recuperarse, registrar el campo como `unknown`.
 

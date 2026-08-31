@@ -37,26 +37,26 @@ describe('extracted canonical data', () => {
 		const trailer = getScript('script:light-delay-trailer');
 		expect(trailer.script.kind).toBe('trailer');
 		expect(trailer.scenes).toHaveLength(9);
-		expect(trailer.shots).toHaveLength(32);
+		expect(trailer.shots).toHaveLength(33);
 		expect(trailer.takes.every((t) => Boolean(t.imageAssetId))).toBe(true);
-		expect(getEffectiveDuration(trailer)).toBe(100_000);
+		expect(getEffectiveDuration(trailer)).toBe(102_500);
 		const storyTakes = trailer.takes.filter(
 			(t) => t.imageStatus?.status === 'needs_regeneration'
 		);
 		const cardTakes = trailer.takes.filter((t) => t.imageStatus?.status === 'needs_replacement');
 		expect(storyTakes.length).toBeGreaterThan(0);
-		expect(cardTakes.length).toBe(4);
+		expect(cardTakes.length).toBe(3);
 	});
 
 	it('separates main regeneration candidates from placeholder replacements', () => {
 		const script = getCanonicalScript();
 		const regen = script.takes.filter((take) => take.imageStatus?.status === 'needs_regeneration');
-		expect(regen).toHaveLength(112);
+		expect(regen).toHaveLength(111);
 		expect(regen.every((take) => take.imageStatus?.reasons.includes('canon_mismatch'))).toBe(true);
 		const replacements = script.takes.filter(
 			(take) => take.imageStatus?.status === 'needs_replacement'
 		);
-		expect(replacements).toHaveLength(16);
+		expect(replacements).toHaveLength(15);
 		expect(replacements.every((take) => take.imageStatus?.reasons.includes('placeholder'))).toBe(
 			true
 		);
@@ -67,11 +67,16 @@ describe('extracted canonical data', () => {
 
 	it('resolves editorial image state and a generic fallback', () => {
 		const script = getCanonicalScript();
-		const regenShot = script.shots.find((shot) => shot.id === 'main:shot-05-07')!;
+		const regenShot = script.shots.find((shot) => shot.id === 'main:shot-05-01')!;
 		const media = getShotMedia(script, regenShot);
 		expect(media.state).toBe('provisional');
-		expect(media.imagePath).toBe('/assets/animatic/frames/scene-12/shot-08.png');
+		expect(media.imagePath).toBe('/assets/animatic/frames/scene-05/shot-01.png');
 		expect(media.take?.imageStatus?.status).toBe('needs_regeneration');
+
+		const currentShot = script.shots.find((shot) => shot.id === 'main:shot-05-07')!;
+		const currentMedia = getShotMedia(script, currentShot);
+		expect(currentMedia.state).toBe('current');
+		expect(currentMedia.imagePath).toBe('/assets/animatic/frames/scene-05/shot-07.png');
 
 		const missing = getShotMedia(script, { ...regenShot, selectedTakeId: undefined });
 		expect(missing.state).toBe('missing');

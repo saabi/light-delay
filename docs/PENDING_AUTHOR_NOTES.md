@@ -2,7 +2,7 @@
 
 > Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
 
-Pendientes: **166**
+Pendientes: **167**
 
 ## medium
 
@@ -12,7 +12,7 @@ Pendientes: **166**
   - Origen: `data/characters.json` · `$.characters[20].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[0].notes[0]** [production · open] — Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[0].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[1].notes[0]** [production · open] — Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02.
+- **data/scripts/light-delay-festival.json:$.shots[1].notes[0]** [production · open] — Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que asciende por servicio y abre la escotilla al nivel del puente en festival:shot-b-02.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[1].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[10].notes[0]** [production · open] — Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[10].notes[0]`
@@ -76,7 +76,7 @@ Pendientes: **166**
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[37].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[38].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-06-05; requiere imagen propia coherente con esta toma.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[38].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[4].notes[0]** [production · open] — Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.
+- **data/scripts/light-delay-festival.json:$.shots[4].notes[0]** [production · open] — Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[4].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[5].notes[0]** [production · open] — Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[5].notes[0]`
@@ -148,7 +148,7 @@ Pendientes: **166**
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[122].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[123].notes[0]** [editorial · open] — Toma 3 original excedía el montaje (0:08) frente al diálogo estimado (~0:18); se partió el VO de la periodista en dos tomas de mosaico.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[123].notes[0]`
-- **data/scripts/light-delay-main-short.json:$.shots[124].notes[0]** [production · open] — Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.
+- **data/scripts/light-delay-main-short.json:$.shots[124].notes[0]** [production · open] — Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[124].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[125].notes[0]** [production · open] — Prompt D1 (EN on-image): credit card WRITTEN AND PRODUCED BY / AUTHOR_NAME_PLACEHOLDER. Full opaque black. Ver docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[125].notes[0]`
@@ -312,16 +312,18 @@ Pendientes: **166**
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[26].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[27].notes[0]** [editorial · open] — Reutiliza frame de main:shot-16-03 (asset asset:animatic-16-03).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[27].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[28].notes[0]** [production · open] — Prompt B (EN on-image): trailer end brand LIGHT DELAY / LATE LIGHT. See docs/TITLE_AND_CREDITS.md.
+- **data/scripts/light-delay-trailer.json:$.shots[28].notes[0]** [production · open] — Prompt B (EN on-image): trailer end brand LIGHT DELAY. See docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[28].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[29].notes[0]** [production · open] — Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.
+- **data/scripts/light-delay-trailer.json:$.shots[29].notes[0]** [production · open] — Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[29].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[3].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-01 (asset asset:animatic-04-01).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[3].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[30].notes[0]** [production · open] — Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.
+- **data/scripts/light-delay-trailer.json:$.shots[30].notes[0]** [production · open] — Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[30].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[31].notes[0]** [production · open] — Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md.
+- **data/scripts/light-delay-trailer.json:$.shots[31].notes[0]** [production · open] — Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[31].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[32].notes[0]** [production · open] — Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[32].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[4].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-05 (asset asset:animatic-14-05).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[4].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[5].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02).

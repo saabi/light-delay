@@ -2,7 +2,7 @@
   "project": "Light Delay",
   "asset_type": "location_concept_sheets",
   "style": "grounded cinematic hard science fiction",
-  "generated": "2026-08-24",
+  "generated": "2026-08-31",
   "dimensions": [
     1536,
     1024
@@ -28,6 +28,19 @@
       "role": "Centro de mando",
       "note": "Puente compacto para seis puestos, iluminación cian funcional, superficies reparables y encuadres que sostienen tensión sin grandilocuencia.",
       "file": "celestial-ardor-bridge/concept-sheet.png"
+    },
+    {
+      "slug": "celestial-ardor-bridge-realistic-reference",
+      "name": "Puente del Celestial Ardor — referencia realista",
+      "role": "Referencia interior canónica",
+      "note": "Derivada de los blockouts en perspectiva y planta. Conserva seis puestos, silla de capitán, mesa para seis, escotilla y bandeja de servicio. Paneles compuestos claros, acentos azul pizarra/verde azulado y tapicería hacen habitable la guardia larga sin lujo; todas las caras expuestas de las escaleras tienen barandas interiores y exteriores continuas. La pared es casco presurizado con ventanas pequeñas reforzadas; sólo los displays son azules.",
+      "file": "celestial-ardor-bridge/realistic-reference.png",
+      "dimensions": [
+        1536,
+        864
+      ],
+      "generator": "OpenAI built-in image generation",
+      "competition_eligibility": "unverified"
     },
     {
       "slug": "celestial-ardor-engineering",

@@ -577,8 +577,8 @@
         "en": "Title and credits"
       },
       "summary": {
-        "es": "La Ardor queda en microgravedad ante la estación y la emisaria inmóviles; el montaje corta a LIGHT DELAY / LUZ TARDÍA y a las tarjetas de créditos antes de resolver qué ocurrirá.",
-        "en": "The Ardor hangs in microgravity before the motionless station and emissary; the edit cuts to LIGHT DELAY / LUZ TARDÍA and credit cards before resolving what will happen."
+        "es": "La Ardor queda en microgravedad ante la estación y la emisaria inmóviles; el montaje corta a LUZ TARDÍA / LIGHT DELAY, al lema y a las tarjetas de créditos antes de resolver qué ocurrirá.",
+        "en": "The Ardor hangs in microgravity before the motionless station and emissary; the edit cuts to LUZ TARDÍA / LIGHT DELAY, the tagline, and credit cards before resolving what will happen."
       },
       "importance": "required",
       "coverage": {
@@ -615,7 +615,8 @@
             "trailer:shot-i-02",
             "trailer:shot-i-03",
             "trailer:shot-i-04",
-            "trailer:shot-i-05"
+            "trailer:shot-i-05",
+            "trailer:shot-i-06"
           ]
         }
       },

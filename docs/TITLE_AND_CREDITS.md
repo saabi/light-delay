@@ -8,7 +8,7 @@ Estado: especificación de presentación para main, Festival y tráiler. El espa
 |-----|-----------|-----------------|--------|
 | Main | Escena 01 | `main:scene-title` / `main:shot-title-01` | `main:scene-18` créditos |
 | Festival | Overlay diegético en `festival:shot-a-01` | `festival:scene-title` | `festival:scene-h` créditos |
-| Tráiler | VO inicial | Mid `FIRST CONTACT` (cue); marca al final | Créditos tras marca en `trailer:scene-i` |
+| Tráiler | VO inicial | Mid `FIRST CONTACT` (cue); marca al final | Créditos tras marca y lema en `trailer:scene-i` |
 
 ## Full frame vs alpha
 
@@ -16,6 +16,7 @@ Estado: especificación de presentación para main, Festival y tráiler. El espa
 |-------|---------|--------|
 | Título de obra (main/festival) | Full frame opaco 1536×864 | A |
 | Marca final tráiler | Full frame | B |
+| Lema tráiler | Full frame | C |
 | Créditos (3 tarjetas) | Full frame | D1–D3 |
 | Mid `FIRST CONTACT` tráiler | Alpha PNG | E |
 | HUD misión Festival | Alpha PNG | F |
@@ -24,7 +25,8 @@ Estado: especificación de presentación para main, Festival y tráiler. El espa
 
 ```text
 LIGHT DELAY
-LATE LIGHT
+
+SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.
 
 WRITTEN AND PRODUCED BY
 AUTHOR_NAME_PLACEHOLDER
@@ -49,10 +51,9 @@ Los cues JSON conservan español fuente + inglés draft. `AUTHOR_NAME_PLACEHOLDE
 Still frame for a hard science-fiction short film title card, 1536x864, 16:9.
 Full opaque image, NOT transparent, NOT an overlay plate.
 Absolute black void background (#000000), empty deep space with no stars or only the faintest dust.
-Centered English title stack only:
-  top line: LIGHT DELAY
-  second line, smaller: LATE LIGHT
-Clean geometric sans-serif, wide letter-spacing on the top line, precise kerning, cool neutral white to pale blue-white type.
+Centered English title only:
+  LIGHT DELAY
+Clean geometric sans-serif, wide letter-spacing, precise kerning, cool neutral white to pale blue-white type.
 Optional subtle motif: two or three extremely soft horizontal luminous layers behind the words, arriving with a slight optical delay feel (light lag), very low intensity, no bloom blowout.
 Mood: restrained, cold, documentary hard-SF, not fantasy, not trailer-explosion energy.
 No Spanish text, no ships, no planets, no people, no UI, no logos, no tagline, no extra words.
@@ -66,12 +67,21 @@ Still frame for the end title of a hard science-fiction trailer, 1536x864, 16:9.
 Full opaque image, NOT an alpha overlay.
 Near-black void. Centered English title only:
   LIGHT DELAY
-  LATE LIGHT
-Same typography rules as the main title card: geometric sans, wide tracking, cool white.
+Geometric sans, wide tracking, cool white.
 Add one quiet organic bioluminescent pulse in the deep background — a single soft teal-cyan Velari light bloom, distant and abstract, not a creature, not a spaceship, not a space station silhouette.
 Suggest delayed light: title glyphs feel like stacked light layers with a tiny temporal offset, elegant not flashy.
 No Spanish text, no tagline on this frame. No characters, no readable HUD, no studio logo.
 Cinematic, minimal, unresolved first-contact tension.
+```
+
+### C — Trailer tagline (full frame)
+
+```text
+Still frame title card, 1536x864, 16:9, full opaque black field.
+Single centered English caption in clean geometric sans, medium tracking, cool white:
+SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.
+No Spanish text. No other words. No title above. No ships, planets, people, UI, logos, or decorative flourishes.
+Hard science-fiction restraint, high legibility, flat design on pure black.
 ```
 
 ### D1 — Author/producer credit (full frame)

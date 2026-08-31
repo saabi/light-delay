@@ -44,8 +44,8 @@
         "en": "Wired Communications Distributor"
       },
       "description": {
-        "es": "Bastidor de mantenimiento en el cilindro de servicio con troncos COM A/B y acopladores dobles rotulados por zona. Permite aislar físicamente voz y datos operativos de una cubierta sin cortar sus sistemas locales.",
-        "en": "Maintenance rack in the service cylinder with COM A/B trunks and double couplers labelled by zone. It can physically isolate a deck’s operational voice and data without cutting local systems."
+        "es": "Bandeja abatible junto a la escotilla del cilindro de servicio, con troncos COM A/B y acopladores dobles rotulados por zona. Al abrirla se pueden desenchufar físicamente voz y datos operativos de una cubierta sin cortar sus sistemas locales.",
+        "en": "Hinged tray beside the service-cylinder hatch, with COM A/B trunks and double couplers labelled by zone. Opening it allows a deck’s operational voice and data to be physically unplugged without cutting its local systems."
       },
       "dramaticFunction": {
         "es": "Harlan corta y restaura el respaldo cableado de la cubierta diplomática",

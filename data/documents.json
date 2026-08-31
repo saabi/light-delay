@@ -136,9 +136,9 @@
               "ordered": false,
               "items": [
                 "Arquitectura interior: decks transversales al eje de empuje, tres cilindros axiales —central, servicio y logística— y núcleo diplomático retrofit fuera del eje.",
-                "Puente: el vestíbulo axial y la salida central quedan detrás de la tripulación en el encuadre frontal de Voss; el acceso de servicio está en un receso lateral fuera de la línea de visión de las consolas.",
+                "Puente: recinto circular habitable para guardias largas, con seis puestos en arco, silla de capitán y mesa para seis. Paneles compuestos claros, acentos apagados y tapicería reducen el metal expuesto; todas las caras abiertas de las escaleras llevan barandas interiores y exteriores. La pared curva es casco presurizado con pocas ventanas pequeñas reforzadas; sólo los displays son azules. La escotilla de servicio y su bandeja COM A/B contigua quedan fuera de la línea visual de los puestos.",
                 "Circulación sin empuje: barras y descansos en el cilindro central; trayectoria balística rápida entre bandejas y ramales en el cilindro de servicio.",
-                "Comunicaciones: malla inalámbrica más COM A/B cableados por deck. El distribuidor próximo a mando reúne acopladores rotulados por sector.",
+                "Comunicaciones: malla inalámbrica más COM A/B cableados por deck. Una bandeja abatible junto a la escotilla de servicio expone los acopladores rotulados por sector.",
                 "Láser exterior: sistema estándar de larga distancia con control local y puntería por canalización física dedicada."
               ]
             },
@@ -353,7 +353,7 @@
               "items": [
                 "Contenido final: “Si esto llega... Aqueronte está adentro. Harlan alteró el núcleo. El registro superficial es falso. Crucen la rutina con el relé físico. No apaguen la mediación. Por favor...”",
                 "Primer aviso: el puente oye que existe un payload autónomo firmado por Sorell y que la firma parece falsa. El corte impide que oigan el nombre de Harlan.",
-                "Bloqueo: Harlan activa un jammer desde el acceso al puente y desconecta SISTEMAS DIPLOMÁTICOS — COM A/B en el distribuidor del cilindro de servicio. Caen wireless, texto y ambos respaldos cableados.",
+                "Bloqueo: Harlan abre la escotilla de servicio al nivel del puente, activa primero el jammer y luego abre la bandeja contigua para desenchufar SISTEMAS DIPLOMÁTICOS — COM A/B. Caen wireless, texto y ambos respaldos cableados.",
                 "Salida disponible: el láser exterior es el sistema estándar de larga distancia; su control local conserva energía y mando por una canalización física dedicada.",
                 "Objetivo: Zao combina plan de vuelo, tiempo lumínico y posición futura de la nave. La divergencia cubre parte de la elipse de incertidumbre y un barrido estrecho cubre el resto.",
                 "Destinos descartados: Tierra haría llegar el aviso después del encuentro; Proxima no ofrece adquisición óptica útil; la garganta piloto no transporta datos de misión.",
@@ -647,9 +647,9 @@
               "ordered": false,
               "items": [
                 "Interior: decks transverse to thrust, three axial cylinders—central, service, and logistics—and an off-axis retrofit diplomatic core.",
-                "Bridge: the axial vestibule and central exit sit behind the crew in Voss’s frontal composition; the service access is recessed beyond the consoles’ sightline.",
+                "Bridge: habitable circular room for long watches, with six stations in an arc, a captain’s chair, and a six-seat table. Light composite panels, muted accents, and upholstery reduce exposed metal; every open stair edge has inner and outer railings. The curved wall is pressure hull with a few small reinforced windows; only the displays are blue. The service hatch and adjacent COM A/B tray remain outside the stations’ sightlines.",
                 "Engine-off circulation: bars and rests in the central cylinder; fast ballistic travel among trays and branches in the service cylinder.",
-                "Communications: wireless mesh plus wired COM A/B on every deck. A distributor near command gathers sector-labelled couplers.",
+                "Communications: wireless mesh plus wired COM A/B on every deck. A hinged tray beside the service hatch exposes sector-labelled couplers.",
                 "External laser: standard long-range equipment with local control and aiming on a dedicated physical route."
               ]
             },
@@ -864,7 +864,7 @@
               "items": [
                 "Final content: ‘If this arrives… Acheron is inside. Harlan altered the core. The surface log is false. Cross-check the routine against the physical relay. Don’t shut down mediation. Please…’",
                 "First warning: the bridge hears that an autonomous payload bears Sorell’s signature and that the signature appears false. The cutoff prevents them from hearing Harlan’s name.",
-                "Block: Harlan activates a jammer at the bridge access and disconnects DIPLOMATIC SYSTEMS — COM A/B in the service-cylinder distributor. Wireless, text, and both wired backups fail.",
+                "Block: Harlan opens the service hatch at bridge level, activates the jammer first, then opens the adjacent tray and unplugs DIPLOMATIC SYSTEMS — COM A/B. Wireless, text, and both wired backups fail.",
                 "Available path: the external laser is the standard long-range system; local control retains power and command through dedicated physical routing.",
                 "Aim: Zao combines the flight plan, light time, and the ship’s future position. Beam divergence covers part of the uncertainty ellipse and a narrow sweep covers the rest.",
                 "Rejected destinations: Earth would deliver the warning after the encounter; Proxima has no useful optical acquisition; the pilot throat cannot carry mission data.",
@@ -1174,7 +1174,7 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-018",
-              "text": "CELESTIAL ARDOR — Interior. Cubiertas transversales al eje de empuje y tres recorridos longitudinales: cilindro central de uso cotidiano, pozo de ascensor y cilindro de servicio estrecho para tránsito balístico y bandejas técnicas. El puente se abre a un vestíbulo axial visible detrás de Voss; el acceso al cilindro de servicio queda oculto en un receso lateral. El núcleo diplomático retrofit está fuera del eje y posee accesos operativo y técnico separados. Un distribuidor próximo a mando reúne los acopladores COM A/B de cada cubierta. Durante el empuje el piso recibe 1 g; en la aproximación final y el cruce hay microgravedad."
+              "text": "CELESTIAL ARDOR — Interior. Cubiertas transversales al eje de empuje y tres recorridos longitudinales: cilindro central de uso cotidiano, pozo de ascensor y cilindro de servicio estrecho para tránsito balístico y bandejas técnicas. El puente circular tiene seis puestos en arco, silla de capitán y mesa para seis; una abertura de escalera queda junto al servicio y la otra junto al ascensor. Su pared curva es casco presurizado gris, perforado sólo por ventanas pequeñas, profundas y reforzadas; el azul se limita a los displays. La escotilla de servicio y la bandeja abatible COM A/B contigua quedan ocultas desde los puestos. El núcleo diplomático retrofit está fuera del eje y posee accesos operativo y técnico separados. Durante el empuje el piso recibe 1 g; en la aproximación final y el cruce hay microgravedad."
             },
             {
               "type": "paragraph",
@@ -1337,7 +1337,7 @@
             {
               "type": "paragraph",
               "id": "biblia-de-produccion:block-018",
-              "text": "CELESTIAL ARDOR — INTERIOR. Transverse decks and three longitudinal routes: everyday central cylinder, lift shaft, and narrow service cylinder for ballistic travel and technical trays. The bridge opens to a visible axial vestibule while service access hides in a side recess. The off-axis retrofit diplomatic core has separate operational and technical access; a nearby distributor gathers deck COM A/B couplers. Thrust gives 1 g; final approach and crossing are in microgravity."
+              "text": "CELESTIAL ARDOR — INTERIOR. Transverse decks and three longitudinal routes: everyday central cylinder, lift shaft, and narrow service cylinder for ballistic travel and technical trays. The circular bridge has six stations in an arc, a captain’s chair, and a six-seat table; one stair opening lands beside service and the other beside the lift. Its curved wall is gray pressure hull, pierced only by small, deep, reinforced windows; blue is confined to the displays. The service hatch and adjacent hinged COM A/B tray remain hidden from the stations. The off-axis retrofit diplomatic core has separate operational and technical access. Thrust gives 1 g; final approach and crossing are in microgravity."
             },
             {
               "type": "paragraph",
@@ -1613,7 +1613,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-032",
-              "text": "Como Ingeniera Jefe, el puesto asignado de Zao durante el cruce es el monitoreo del Núcleo Diplomático. Está sola donde le corresponde. Harlan conoce esa ubicación porque llega sin ser visto a la puerta del puente justo cuando Zao informa por radio que existe un payload autónomo firmado por Sorell y que la firma parece falsa. Antes de que ella pueda nombrarlo, activa remotamente un jammer y se retira hacia el acceso lateral del cilindro de servicio."
+              "text": "Como Ingeniera Jefe, el puesto asignado de Zao durante el cruce es el monitoreo del Núcleo Diplomático. Está sola donde le corresponde. En microgravedad, Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao informa por radio que existe un payload autónomo firmado por Sorell y que la firma parece falsa. Oculto por el propio cilindro, comprende que ella va a nombrarlo y activa primero el jammer."
             },
             {
               "type": "paragraph",
@@ -1623,7 +1623,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-034",
-              "text": "El jammer derriba voz, texto y la malla inalámbrica. Desde el cilindro de servicio, Harlan desconecta además los acopladores SISTEMAS DIPLOMÁTICOS — COM A/B antes de que Zao pruebe el respaldo cableado. Se impulsa balísticamente por el tubo técnico y llega antes que Sorell, que avanza por el corredor cotidiano agarrándose de las barras en microgravedad. Zao reconoce que el silencio simultáneo, justo después de su aviso abierto, significa que alguien va hacia ella. El único enlace que conserva es el control local del láser exterior estándar, cuya ruta física dedicada no pasa por la malla ni por COM A/B."
+              "text": "El jammer derriba primero la malla inalámbrica. Harlan abre entonces la bandeja contigua a la escotilla y desenchufa SISTEMAS DIPLOMÁTICOS — COM A/B antes de que Zao pruebe el respaldo cableado. Vuelve a entrar, cierra la escotilla y se impulsa balísticamente hacia abajo por el tubo técnico; llega antes que Sorell, que avanza por la circulación cotidiana agarrándose de las barras en microgravedad. Zao reconoce que el silencio coordinado, justo después de su aviso abierto, significa que alguien va hacia ella. El único enlace que conserva es el control local del láser exterior estándar, cuya ruta física dedicada no pasa por la malla ni por COM A/B."
             },
             {
               "type": "heading",
@@ -1988,7 +1988,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-032",
-              "text": "Zao is correctly stationed at the diplomatic core. Harlan reaches the bridge entrance unseen as she reports an autonomous payload signed by Sorell and says the signature appears false. Before she can name him, he remotely activates a jammer and slips toward the service cylinder."
+              "text": "Zao is correctly stationed at the diplomatic core. In microgravity, Harlan comes up the service cylinder and opens the hatch at bridge level just as she reports an autonomous payload signed by Sorell and says the signature appears false. Hidden by the cylinder itself, he realizes she is about to name him and activates the jammer first."
             },
             {
               "type": "paragraph",
@@ -1998,7 +1998,7 @@
             {
               "type": "paragraph",
               "id": "reporte-comprensivo:block-034",
-              "text": "The jammer kills voice, text, and wireless. Harlan disconnects DIPLOMATIC SYSTEMS — COM A/B from the service distributor before Zao can use wired backup, then travels ballistically through the service tube. Sorell moves more slowly along handrails. The only surviving path is local control of Ardor’s standard external laser on dedicated physical routing."
+              "text": "The jammer kills wireless first. Harlan then opens the tray beside the hatch and unplugs DIPLOMATIC SYSTEMS — COM A/B before Zao can use wired backup. He re-enters, closes the hatch, and travels ballistically downward through the service tube. Sorell proceeds along handrails through everyday circulation. The only surviving path is local control of Ardor’s standard external laser on dedicated physical routing."
             },
             {
               "type": "heading",

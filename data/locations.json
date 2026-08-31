@@ -47,11 +47,12 @@
         "en": "Celestial Ardor Bridge"
       },
       "description": {
-        "es": "Puente compacto para seis puestos alrededor de consolas instrumentales. Su acceso permite ver la salida del cilindro central en el vestíbulo de mando; el acceso lateral al servicio queda oculto desde los puestos. Un puerto prograde superior puede aportar observación limitada, nunca una cabina frontal de aeronave.",
-        "en": "Compact bridge with six stations around instrument consoles. The central-cylinder exit is visible in the command vestibule, while recessed service access is hidden from the crew. A small upper prograde port may offer limited observation, never an aircraft-style windshield."
+        "es": "Puente circular compacto y habitable para guardias largas, con seis puestos en arco, silla de capitán independiente y mesa de reunión para seis. Paneles compuestos mate en gris claro, blanco cálido y acentos azul pizarra/verde azulado reducen el metal expuesto; tapicería, superficies de contacto y luz de trabajo neutra aportan confort sin convertirlo en un espacio lujoso. Una escalera helicoidal rodea el hueco central y todas sus caras expuestas llevan barandas exteriores continuas además de las interiores; se conservan las aberturas de acceso junto al servicio y al ascensor. La pared curva es casco presurizado con pocas ventanas pequeñas reforzadas; sólo los displays son azules. La escotilla oscura del servicio y la bandeja contigua quedan ocultas desde los puestos.",
+        "en": "Compact circular bridge designed to remain habitable through long watches, with six stations in an arc, a separate captain’s chair, and a six-seat meeting table. Matte composite panels in light gray, warm off-white, and muted slate-blue/teal reduce exposed metal; upholstery, soft-touch surfaces, and neutral work lighting add comfort without making the room luxurious. A helical stair wraps the central opening, and every exposed stair edge has continuous outer railings in addition to the inner rails; access gaps beside service and the lift remain clear. The curved wall is pressure hull with a few small reinforced windows; only the displays are blue. The dark service hatch and adjacent tray remain hidden from the stations."
       },
       "referenceAssetIds": [
-        "asset:location-celestial-ardor-bridge-sheet"
+        "asset:location-celestial-ardor-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
       "atmosphere": {
         "es": "Centro de mando",
@@ -65,8 +66,8 @@
         "en": "Command Axial Vestibule"
       },
       "description": {
-        "es": "Descanso de la cubierta de mando donde convergen cilindro central, ascensor y puente. La entrada al cilindro de servicio está próxima pero retranqueada fuera de la línea visual de las consolas.",
-        "en": "Command-deck landing where the central cylinder, lift, and bridge meet. The service-cylinder entrance is nearby but recessed beyond the consoles’ sightline."
+        "es": "Descanso de la cubierta de mando organizado alrededor de dos escaleras: la abertura de baranda de una queda junto al cilindro de servicio y la de la segunda junto al pozo de ascensor. La escotilla del servicio está retranqueada fuera de la línea visual normal de las consolas.",
+        "en": "Command-deck landing organized around two stairs: one railing opening lands beside the service cylinder and the second beside the lift shaft. The service hatch is recessed beyond the crew stations’ normal sightline."
       },
       "referenceAssetIds": [],
       "atmosphere": {
@@ -97,8 +98,8 @@
         "en": "Service Cylinder"
       },
       "description": {
-        "es": "Conducto axial restringido con bandejas técnicas periféricas, agarres de mantenimiento y tramos libres para desplazamiento por inercia. Aloja junto a mando el distribuidor cableado por cubiertas.",
-        "en": "Restricted axial conduit with peripheral technical trays, maintenance grips, and clear stretches for inertial travel. The deck communications distributor sits near command."
+        "es": "Conducto axial restringido con bandejas técnicas periféricas, agarres de mantenimiento y tramos libres para desplazamiento por inercia. En el puente abre mediante una escotilla oscura de esquinas redondeadas, junto a una bandeja abatible que expone los acopladores cableados de comunicaciones.",
+        "en": "Restricted axial conduit with peripheral technical trays, maintenance grips, and clear stretches for inertial travel. At bridge level it opens through a dark rounded-corner hatch beside a hinged tray that exposes the wired communications couplers."
       },
       "referenceAssetIds": [],
       "atmosphere": {

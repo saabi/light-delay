@@ -68,12 +68,12 @@
         "id": "script:light-delay-trailer",
         "continuityId": "continuity:light-delay-primary",
         "label": {
-          "es": "Tráiler (1:40)",
-          "en": "Trailer (1:40)"
+          "es": "Tráiler (1:42,5)",
+          "en": "Trailer (1:42.5)"
         },
         "kind": "trailer",
         "status": "draft",
-        "targetDurationMs": 100000,
+        "targetDurationMs": 102500,
         "lineage": {
           "sourceScriptId": "script:light-delay-main-short",
           "relationship": "trailer",

@@ -1702,12 +1702,11 @@
         "en": "Title card"
       },
       "summary": {
-        "es": "LIGHT DELAY / LUZ TARDÍA.",
-        "en": "LIGHT DELAY / LATE LIGHT."
+        "es": "LUZ TARDÍA.",
+        "en": "LIGHT DELAY."
       },
       "cueIds": [
-        "main:cue-title-01",
-        "main:cue-title-02"
+        "main:cue-title-01"
       ],
       "purpose": {
         "es": "Presentar el título de la obra tras el cold open.",
@@ -2403,8 +2402,8 @@
       "order": 4,
       "type": "action",
       "text": {
-        "es": "Harlan termina una tarea legítima en otra cubierta y llega al vestíbulo axial con postura rutinaria y relajada, sin buscar a Zao. Desde las consolas, Voss queda en primer término; detrás, parte de la tripulación sigue sus monitores y otra parte —incluida Sorell— mira a Voss para escuchar el aviso. Nadie ve a Harlan en la puerta. Sólo cuando Zao dice que la firma real apunta a alguien, una microreacción rompe su calma.",
-        "en": "Harlan finishes a legitimate duty on another deck and reaches the axial vestibule with an ordinary, relaxed posture, not looking for Zao. From the consoles, Voss is in the foreground; behind him, some crew keep watching their displays while others—including Sorell—look toward Voss to hear the warning. No one sees Harlan in the doorway. Only when Zao says the real signature points to someone does a microreaction break his calm."
+        "es": "Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao llama, sin estar buscándola. Desde las consolas, Voss queda en primer término; parte de la tripulación sigue sus monitores y otra parte —incluida Sorell— atiende el aviso. El propio cilindro oculta la escotilla y la bandeja contigua. Sólo cuando Zao dice que la firma real apunta a alguien, una microreacción rompe la calma de Harlan.",
+        "en": "Harlan comes up the service cylinder and opens the hatch at bridge level just as Zao calls, without having sought her out. From the consoles, Voss remains in the foreground; some crew keep watching their displays while others—including Sorell—attend to the warning. The cylinder itself hides the hatch and adjacent tray. Only when Zao says the real signature points to someone does a microreaction break Harlan’s calm."
       }
     },
     {
@@ -2455,8 +2454,8 @@
       "order": 7,
       "type": "action",
       "text": {
-        "es": "Harlan oye “relé físico” y activa discretamente el jammer desde su muñeca. La voz se corta de manera abrupta en el puente.",
-        "en": "Harlan hears “physical relay” and discreetly activates the jammer from his wrist. Zao's voice cuts off abruptly on the bridge."
+        "es": "Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao llama. Oculto por el propio cilindro, oye “relé físico” y activa discretamente el jammer desde su muñeca. La vía inalámbrica se corta de manera abrupta.",
+        "en": "Harlan comes up the service cylinder and opens the hatch at bridge level just as Zao calls. Hidden by the cylinder itself, he hears “physical relay” and discreetly activates the jammer from his wrist. The wireless path cuts out abruptly."
       }
     },
     {
@@ -2538,8 +2537,8 @@
       "order": 12,
       "type": "action",
       "text": {
-        "es": "Harlan se retira del acceso al puente, entra en el receso lateral del cilindro de servicio y abre el distribuidor cableado. Libera el seguro y extrae “SISTEMAS DIPLOMÁTICOS — COM A/B”. Ambas portadoras se apagan.",
-        "en": "Harlan backs away from the bridge access, enters the service cylinder's side recess, and opens the wired distribution board. He releases the lock and pulls “DIPLOMATIC SYSTEMS — COM A/B.” Both carriers go dark."
+        "es": "Sin abandonar el punto ciego junto a la escotilla abierta, Harlan abre la bandeja cableada contigua. Libera el seguro y desenchufa “SISTEMAS DIPLOMÁTICOS — COM A/B”. Ambas portadoras se apagan.",
+        "en": "Without leaving the blind spot beside the open hatch, Harlan opens the adjacent wired tray. He releases the lock and unplugs “DIPLOMATIC SYSTEMS — COM A/B.” Both carriers go dark."
       }
     },
     {
@@ -2600,8 +2599,8 @@
       "order": 16,
       "type": "action",
       "text": {
-        "es": "Sorell, ya impulsada hacia la salida, se detiene para recibir la segunda orden. Esa cautela le cuesta segundos: busca a Harlan sin encontrarlo y sólo entonces sigue hacia Zao. Harlan ya entra al cilindro de servicio.",
-        "en": "Already pushing toward the exit, Sorell stops to receive the second order. That caution costs her seconds: she looks for Harlan without finding him and only then continues toward Zao. Harlan is already entering the service cylinder."
+        "es": "Sorell, ya impulsada hacia la salida, se detiene para recibir la segunda orden. Esa cautela le cuesta segundos: busca a Harlan sin encontrarlo y sólo entonces sigue hacia Zao. Harlan ya volvió a entrar por la escotilla, la cerró y desciende por el cilindro de servicio.",
+        "en": "Already pushing toward the exit, Sorell stops to receive the second order. That caution costs her seconds: she looks for Harlan without finding him and only then continues toward Zao. Harlan has already re-entered through the hatch, closed it, and is descending the service cylinder."
       }
     },
     {
@@ -4524,31 +4523,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "text": "LIGHT DELAY",
-            "status": "source"
-          },
-          "en": {
-            "text": "LIGHT DELAY",
-            "status": "draft"
-          }
-        }
-      }
-    },
-    {
-      "id": "main:cue-title-02",
-      "beatId": "main:beat-title-01",
-      "order": 2,
-      "type": "text",
-      "presentation": "title",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
             "text": "LUZ TARDÍA",
             "status": "source"
           },
           "en": {
-            "text": "LATE LIGHT",
+            "text": "LIGHT DELAY",
             "status": "draft"
           }
         }
@@ -6251,8 +6230,8 @@
       "number": 3,
       "order": 35,
       "description": {
-        "es": "Voss y la tripulación escuchan a Zao; Harlan llega relajado al acceso axial y sólo se delata con una microreacción que nadie ve.",
-        "en": "Voss and the crew listen to Zao; Harlan arrives casually at the axial access and betrays himself only through a microreaction no one sees."
+        "es": "Voss y la tripulación escuchan a Zao; oculto por el cilindro de servicio, Harlan abre la escotilla al nivel del puente y sólo se delata con una microreacción que nadie ve.",
+        "en": "Voss and the crew listen to Zao; hidden by the service cylinder, Harlan opens the hatch at bridge level and betrays himself only through a microreaction no one sees."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -6265,8 +6244,8 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "Cámara frente a Voss, monitores o ventanal; tripulantes y Sorell ocupan el plano medio, y la puerta axial queda visible al fondo para registrar la llegada inadvertida de Harlan.",
-          "en": "Camera faces Voss, the displays, or the forward window; crew and Sorell fill the middle ground, with the axial doorway visible behind them to register Harlan’s unnoticed arrival."
+          "es": "Cámara frente a Voss y los displays; tripulantes y Sorell ocupan el plano medio. Al margen, el volumen del cilindro de servicio oculta su escotilla para registrar la llegada inadvertida de Harlan sin sugerir un acceso axial central.",
+          "en": "Camera faces Voss and the displays; crew and Sorell fill the middle ground. At the edge of frame, the service-cylinder volume hides its hatch, registering Harlan’s unnoticed arrival without implying a central axial entrance."
         },
         "movement": "locked"
       },
@@ -6290,8 +6269,8 @@
       ],
       "selectedTakeId": "main:take-05-03-01",
       "purpose": {
-        "es": "Voss, tripulación y Harlan en el acceso axial",
-        "en": "Voss, crew and Harlan on axial access"
+        "es": "Voss y tripulación; Harlan oculto junto a la escotilla de servicio",
+        "en": "Voss and crew; Harlan hidden beside the service hatch"
       }
     },
     {
@@ -6303,10 +6282,10 @@
       "number": 4,
       "order": 36,
       "description": {
-        "es": "Harlan activa el jammer; la voz se corta",
-        "en": "Harlan activates the jammer; the voice cuts off"
+        "es": "Harlan abre la escotilla de servicio y activa el jammer; cae wireless",
+        "en": "Harlan opens the service hatch and activates the jammer; wireless drops"
       },
-      "locationId": "location:celestial-ardor-command-vestibule",
+      "locationId": "location:celestial-ardor-bridge",
       "composition": {
         "size": "ECU",
         "framing": {
@@ -6317,8 +6296,8 @@
       },
       "camera": {
         "movementDescription": {
-          "es": "Detalle de la mano de Harlan activando el jammer; el puente queda desenfocado detrás.",
-          "en": "Detail of Harlan's hand activating the jammer; the bridge is out of focus behind."
+          "es": "Detalle desde el punto ciego: escotilla de servicio abierta y mano de Harlan activando el jammer; el puente queda desenfocado detrás.",
+          "en": "Close detail from the blind spot: open service hatch and Harlan’s hand activating the jammer; the bridge remains out of focus behind."
         },
         "movement": "locked"
       },
@@ -6334,8 +6313,8 @@
       ],
       "selectedTakeId": "main:take-05-04-01",
       "purpose": {
-        "es": "Harlan activa el jammer; la voz se corta",
-        "en": "Harlan activates the jammer; the voice cuts off"
+        "es": "Harlan abre la escotilla de servicio y activa el jammer; cae wireless",
+        "en": "Harlan opens the service hatch and activates the jammer; wireless drops"
       }
     },
     {
@@ -6443,12 +6422,12 @@
       "number": 7,
       "order": 39,
       "purpose": {
-        "es": "Harlan se retira del acceso y desconecta COM A/B",
-        "en": "Harlan withdraws from access and disconnects COM A/B"
+        "es": "Harlan abre la bandeja contigua y desenchufa COM A/B",
+        "en": "Harlan opens the adjacent tray and unplugs COM A/B"
       },
       "description": {
-        "es": "Harlan se retira del acceso y desconecta COM A/B",
-        "en": "Harlan withdraws from access and disconnects COM A/B"
+        "es": "Harlan abre la bandeja contigua y desenchufa COM A/B",
+        "en": "Harlan opens the adjacent tray and unplugs COM A/B"
       },
       "locationId": "location:celestial-ardor-service-cylinder",
       "composition": {
@@ -6462,8 +6441,8 @@
       "camera": {
         "movement": "tracking",
         "movementDescription": {
-          "es": "Desde el umbral, acompaña el retiro furtivo de Harlan hasta el receso; termina en el acoplador COM A/B.",
-          "en": "From the threshold, he accompanies Harlan's furtive retreat to recess; terminates at the COM A/B coupler."
+          "es": "Desde la escotilla abierta acompaña la mano de Harlan hasta la bandeja contigua; termina en los acopladores COM A/B al ser desenchufados.",
+          "en": "From the open hatch, follow Harlan’s hand to the adjacent tray; end on the COM A/B couplers being unplugged."
         }
       },
       "durationMs": 16000,
@@ -10588,8 +10567,8 @@
       "number": 1,
       "order": 120,
       "description": {
-        "es": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra por el ventanal.",
-        "en": "Silent bridge; The light from the emissary and the organic station enters through the window."
+        "es": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra en haces estrechos por las pequeñas ventanas reforzadas del casco.",
+        "en": "Silent bridge; light from the emissary and organic station enters in narrow beams through the hull’s small reinforced windows."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -10741,8 +10720,8 @@
       "number": 4,
       "order": 123,
       "description": {
-        "es": "El retrato de Zao detiene a Voss; él alza la vista hacia la emisaria y la estación, separadas más allá del ventanal.",
-        "en": "Zao’s portrait stops Voss; he looks up toward the emissary and the station, separate beyond the window."
+        "es": "El retrato de Zao detiene a Voss; él alza la vista hacia la emisaria y la estación, visibles por dos ventanas pequeñas y separadas del casco.",
+        "en": "Zao’s portrait stops Voss; he looks up toward the emissary and station, visible through two separate small hull windows."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -10952,8 +10931,8 @@
       "number": 1,
       "order": 19,
       "description": {
-        "es": "Cartela a negro: LIGHT DELAY sobre LUZ TARDÍA.",
-        "en": "Black card: LIGHT DELAY over LATE LIGHT."
+        "es": "Cartela a negro: LUZ TARDÍA.",
+        "en": "Black card: LIGHT DELAY."
       },
       "purpose": {
         "es": "Presentar el título de la obra tras el cold open.",
@@ -10980,11 +10959,6 @@
           "cueId": "main:cue-title-01",
           "atMs": 0,
           "durationMs": 3500
-        },
-        {
-          "cueId": "main:cue-title-02",
-          "atMs": 0,
-          "durationMs": 3500
         }
       ],
       "takeIds": [
@@ -10997,8 +10971,8 @@
           "status": "open",
           "priority": "medium",
           "text": {
-            "es": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.",
-            "en": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. See docs/TITLE_AND_CREDITS.md."
+            "es": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY on black void; soft delayed light layers optional; no Spanish glyphs. See docs/TITLE_AND_CREDITS.md."
           }
         }
       ]
@@ -13275,21 +13249,7 @@
       "shotId": "main:shot-05-07",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-12-08",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "canon_mismatch"
-        ],
-        "explanation": {
-          "es": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
-          "en": "Still outdated after the Ardor orientation change (decks perpendicular to prograde) and the exterior visual revision; regenerate the shot."
-        },
-        "replacementBrief": {
-          "es": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic.",
-          "en": "Regenerate to match the current architecture (thrust = up), framing, and shot description; do not reuse previous animatic frames."
-        }
-      }
+      "imageAssetId": "asset:animatic-05-07"
     },
     {
       "id": "main:take-05-08-01",
@@ -13743,18 +13703,7 @@
       "shotId": "main:shot-title-01",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-placeholder-missing-frame",
-      "imageStatus": {
-        "status": "needs_replacement",
-        "reasons": [
-          "placeholder"
-        ],
-        "explanation": {
-          "es": "Título/crédito nuevo; still pendiente de generación autorizada (prompt EN en notas).",
-          "en": "New title/credit shot; still pending authorized generation (EN prompt in notes)."
-        },
-        "sourceShotId": "main:shot-title-01"
-      }
+      "imageAssetId": "asset:animatic-title-film"
     },
     {
       "id": "main:take-18-01-01",

@@ -86,8 +86,8 @@
         "en": "The warning triggers sabotage"
       },
       "summary": {
-        "es": "Zao llama al puente. Harlan, que acaba una tarea legítima y llega por coincidencia con actitud rutinaria, pasa inadvertido porque la tripulación escucha a Voss. Sólo reacciona cuando Zao dice que la firma real está por señalar a alguien; corta wireless y COM A/B. Voss sopesa que la identidad de Sorell fue falsificada pero que ella sigue implicada: la envía a verificar, la retiene para ordenarle buscar a Harlan y no entrar sola, y esa cautela da ventaja al saboteador.",
-        "en": "Zao calls the bridge. Harlan, finishing a legitimate duty and arriving coincidentally with an ordinary manner, goes unnoticed because the crew is listening to Voss. He reacts only when Zao says the real signature is about to point to someone; he cuts wireless and COM A/B. Voss weighs that Sorell’s identity was forged but she remains implicated: he sends her to verify, calls her back to order her to find Harlan and not enter alone, and that caution gives the saboteur a head start."
+        "es": "Zao llama al puente. Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo en ese momento; pasa inadvertido porque la escotilla y la bandeja contigua quedan ocultas desde los puestos. Sólo reacciona cuando Zao dice que la firma real está por señalar a alguien: corta primero wireless, abre la bandeja y desenchufa COM A/B. Vuelve a entrar, cierra la escotilla y desciende hacia Zao. Voss sopesa que la identidad de Sorell fue falsificada pero que ella sigue implicada: la envía a verificar, la retiene para ordenarle buscar a Harlan y no entrar sola, y esa cautela da ventaja al saboteador.",
+        "en": "Zao calls the bridge. Harlan comes up the service cylinder and opens the hatch at bridge level at that exact moment; he goes unnoticed because the hatch and adjacent tray are hidden from the crew stations. He reacts only when Zao says the real signature is about to point to someone: first he cuts wireless, then opens the tray and unplugs COM A/B. He re-enters, closes the hatch, and descends toward Zao. Voss weighs that Sorell’s identity was forged but she remains implicated: he sends her to verify, calls her back to order her to find Harlan and not enter alone, and that caution gives the saboteur a head start."
       },
       "importance": "required",
       "causalLinks": [
@@ -95,8 +95,8 @@
           "sourceStepId": "main:story-03",
           "relation": "forces",
           "explanation": {
-            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Zao llama al puente y alcanza a revelar la carga y la firma aparentemente falsa. Harlan llega sin ser visto, oye que ella está cerca de exponerlo, activa el jammer y corta COM A/B. Voss envía a Sorell a investigar y le ordena buscar a Harlan, que ya tomó la ruta de servicio hacia Zao.",
-            "en": "The outcome of the previous beat causes or enables this consequence: Zao calls the bridge and manages to reveal the payload and apparently forged signature. Harlan arrives unseen, hears that she is close to exposing him, activates the jammer, and cuts COM A/B. Voss sends Sorell to investigate and tells her to find Harlan, who has already taken the service route toward Zao."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Zao llama al puente y alcanza a revelar la carga y la firma aparentemente falsa. Harlan abre la escotilla de servicio sin ser visto, oye que ella está cerca de exponerlo, activa el jammer, abre la bandeja y desenchufa COM A/B. Vuelve a entrar, cierra la escotilla y desciende hacia Zao antes de que Voss envíe a Sorell a investigar.",
+            "en": "The outcome of the previous beat causes or enables this consequence: Zao calls the bridge and manages to reveal the payload and apparently forged signature. Harlan opens the service hatch unseen, hears that she is close to exposing him, activates the jammer, opens the tray, and unplugs COM A/B. He re-enters, closes the hatch, and descends toward Zao before Voss sends Sorell to investigate."
           }
         }
       ]
@@ -386,8 +386,8 @@
         "en": "Film title"
       },
       "summary": {
-        "es": "Tras el cold open de embarque, cartela no diegética LIGHT DELAY / LUZ TARDÍA antes de fijar el rumbo.",
-        "en": "After the boarding cold open, non-diegetic LIGHT DELAY / LUZ TARDÍA card before the course is committed."
+        "es": "Tras el cold open de embarque, cartela no diegética LUZ TARDÍA / LIGHT DELAY antes de fijar el rumbo.",
+        "en": "After the boarding cold open, non-diegetic LUZ TARDÍA / LIGHT DELAY card before the course is committed."
       },
       "importance": "required",
       "coverage": {
@@ -409,8 +409,7 @@
             "main:beat-title-01"
           ],
           "cueIds": [
-            "main:cue-title-01",
-            "main:cue-title-02"
+            "main:cue-title-01"
           ]
         },
         "animatic": {

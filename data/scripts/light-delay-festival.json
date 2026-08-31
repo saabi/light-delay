@@ -973,12 +973,11 @@
         "en": "Title card"
       },
       "summary": {
-        "es": "LIGHT DELAY / LUZ TARDÍA.",
-        "en": "LIGHT DELAY / LATE LIGHT."
+        "es": "LUZ TARDÍA.",
+        "en": "LIGHT DELAY."
       },
       "cueIds": [
-        "festival:cue-title-01",
-        "festival:cue-title-02"
+        "festival:cue-title-01"
       ],
       "purpose": {
         "es": "Presentar el título tras la apertura de misión.",
@@ -1015,8 +1014,8 @@
       "order": 2,
       "type": "action",
       "text": {
-        "es": "Harlan termina una tarea legítima en otra cubierta y llega al acceso axial con actitud rutinaria y relajada, por coincidencia cuando Zao abre canal. Voss está en primer término; tripulantes y Sorell miran a Voss o siguen sus monitores, de modo que nadie ve a Harlan. Sólo «la verdadera firma apunta a—» le provoca una microreacción.",
-        "en": "Harlan finishes a legitimate duty on another deck and reaches the axial access with an ordinary, relaxed manner, coincidentally as Zao opens a channel. Voss is in the foreground; crew and Sorell look toward Voss or remain on their displays, so no one sees Harlan. Only “the real signature points to—” triggers a microreaction."
+        "es": "Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao abre canal. Voss está en primer término; tripulantes y Sorell atienden a Voss, a Zao o a sus monitores. El propio cilindro oculta la escotilla y la bandeja contigua. Sólo «la verdadera firma apunta a—» le provoca una microreacción.",
+        "en": "Harlan comes up the service cylinder and opens the hatch at bridge level just as Zao opens a channel. Voss is in the foreground; crew and Sorell attend to Voss, Zao, or their displays. The cylinder itself hides the hatch and adjacent tray. Only “the real signature points to—” triggers a microreaction."
       }
     },
     {
@@ -1046,8 +1045,8 @@
       "order": 4,
       "type": "action",
       "text": {
-        "es": "Harlan activa el jammer, se oculta y desconecta COM A/B en el distribuidor del cilindro de servicio.",
-        "en": "Harlan activates the jammer, hides, and disconnects COM A/B at the service-cylinder distributor."
+        "es": "Harlan abre la escotilla de servicio al llegar al puente, activa el jammer, abre la bandeja contigua y desenchufa COM A/B; vuelve a entrar, cierra la escotilla y desciende.",
+        "en": "Harlan opens the service hatch on reaching the bridge, activates the jammer, opens the adjacent tray, and unplugs COM A/B; he re-enters, closes the hatch, and descends."
       }
     },
     {
@@ -2244,31 +2243,11 @@
         "sourceLanguage": "es",
         "variants": {
           "es": {
-            "text": "LIGHT DELAY",
-            "status": "source"
-          },
-          "en": {
-            "text": "LIGHT DELAY",
-            "status": "draft"
-          }
-        }
-      }
-    },
-    {
-      "id": "festival:cue-title-02",
-      "beatId": "festival:beat-title-01",
-      "order": 2,
-      "type": "text",
-      "presentation": "title",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
             "text": "LUZ TARDÍA",
             "status": "source"
           },
           "en": {
-            "text": "LATE LIGHT",
+            "text": "LIGHT DELAY",
             "status": "draft"
           }
         }
@@ -2461,7 +2440,7 @@
         {
           "type": "production",
           "text": {
-            "es": "Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02.",
+            "es": "Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que asciende por servicio y abre la escotilla al nivel del puente en festival:shot-b-02.",
             "en": "Placeholder from main:shot-04-01 (asset asset:animatic-04-01); that still only shows Zao — Elin leaving and Harlan's screen are missing, a new take is needed for the Festival Cut. Elin's exit within this same shot establishes that Zao is left alone before the murder (no witnesses); Harlan appears only via screen/channel, never physically present, so as not to contradict him reaching the axial access unseen in festival:shot-b-02."
           }
         }
@@ -2617,8 +2596,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Cartela a negro: LIGHT DELAY sobre LUZ TARDÍA.",
-        "en": "Black card: LIGHT DELAY over LATE LIGHT."
+        "es": "Cartela a negro: LUZ TARDÍA.",
+        "en": "Black card: LIGHT DELAY."
       },
       "purpose": {
         "es": "Presentar el título tras la apertura de misión.",
@@ -2645,11 +2624,6 @@
           "cueId": "festival:cue-title-01",
           "atMs": 0,
           "durationMs": 3500
-        },
-        {
-          "cueId": "festival:cue-title-02",
-          "atMs": 0,
-          "durationMs": 3500
         }
       ],
       "takeIds": [
@@ -2662,8 +2636,8 @@
           "status": "open",
           "priority": "medium",
           "text": {
-            "es": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.",
-            "en": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. See docs/TITLE_AND_CREDITS.md."
+            "es": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY on black void; soft delayed light layers optional; no Spanish glyphs. See docs/TITLE_AND_CREDITS.md."
           }
         }
       ]
@@ -2677,8 +2651,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Frente a Voss, el puente escucha a Zao. La tripulación y Sorell miran a Voss o a sus monitores; al fondo Harlan llega relajado, inadvertido, y sólo reacciona cuando la firma real está por señalarlo.",
-        "en": "Facing Voss, the bridge listens to Zao. Crew and Sorell look at Voss or their displays; in the background Harlan arrives casually, unnoticed, and reacts only when the real signature is about to point to him."
+        "es": "Frente a Voss, el puente escucha a Zao. La tripulación y Sorell miran a Voss o a sus monitores; oculto por el cilindro de servicio, Harlan abre la escotilla al nivel del puente y sólo reacciona cuando la firma real está por señalarlo.",
+        "en": "Facing Voss, the bridge listens to Zao. Crew and Sorell look at Voss or their displays; hidden by the service cylinder, Harlan opens the hatch at bridge level and reacts only when the real signature is about to point to him."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -2837,8 +2811,8 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "Con gesto metódico, sin dudar, Harlan activa el jammer y desconecta COM A/B en el distribuidor del cilindro de servicio; la transmisión de Zao se corta a media frase.",
-        "en": "With a methodical, unhesitating gesture, Harlan activates the jammer and disconnects COM A/B at the service cylinder's distributor; Zao's transmission cuts off mid-sentence."
+        "es": "Con gesto metódico, Harlan activa primero el jammer; luego abre la bandeja junto a la escotilla y desenchufa COM A/B. Vuelve a entrar, cierra la escotilla y desciende; la transmisión de Zao queda aislada a media frase.",
+        "en": "Methodically, Harlan activates the jammer first; then he opens the tray beside the hatch and unplugs COM A/B. He re-enters, closes the hatch, and descends; Zao’s transmission is isolated mid-sentence."
       },
       "locationId": "location:celestial-ardor-service-cylinder",
       "composition": {
@@ -2878,8 +2852,8 @@
         {
           "type": "production",
           "text": {
-            "es": "Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara (\"en el distribuidor del cilindro de servicio\").",
-            "en": "Reuses the frame from main:shot-05-07 (asset asset:animatic-12-08); corrected from celestial-ardor-command-vestibule to celestial-ardor-service-cylinder to match the location festival:cue-b-04 itself states (\"at the service cylinder's distributor\")."
+            "es": "Reutiliza frame de main:shot-05-07 (asset asset:animatic-05-07).",
+            "en": "Reuses the frame from main:shot-05-07 (asset asset:animatic-05-07)."
           }
         }
       ],
@@ -7707,8 +7681,8 @@
           "en": "Still reused from the canonical short (main:shot-05-03) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
         },
         "replacementBrief": {
-          "es": "Harlan llega al acceso axial del puente sin ser visto mientras Zao sigue transmitiendo.",
-          "en": "Harlan reaches the bridge's axial access unseen while Zao keeps transmitting."
+          "es": "Harlan asciende por servicio y abre la escotilla al nivel del puente sin ser visto mientras Zao sigue transmitiendo.",
+          "en": "Harlan comes up through service and opens the hatch at bridge level unseen while Zao keeps transmitting."
         }
       }
     },
@@ -7717,21 +7691,7 @@
       "shotId": "festival:shot-b-03",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-12-08",
-      "imageStatus": {
-        "status": "needs_regeneration",
-        "reasons": [
-          "canon_mismatch"
-        ],
-        "explanation": {
-          "es": "Still reutilizado del corto canónico (main:shot-05-07) como marcador de posición para el Festival Cut; regenerar en el encuadre/composición de esta toma.",
-          "en": "Still reused from the canonical short (main:shot-05-07) as a placeholder for the Festival Cut; regenerate in this shot's framing/composition."
-        },
-        "replacementBrief": {
-          "es": "Harlan activa el jammer y desconecta COM A/B en el distribuidor; la transmisión de Zao se corta a media frase.",
-          "en": "Harlan activates the jammer and disconnects COM A/B at the distributor; Zao's transmission cuts off mid-sentence."
-        }
-      }
+      "imageAssetId": "asset:animatic-05-07"
     },
     {
       "id": "festival:shot-b-04-take-01",
@@ -8998,18 +8958,7 @@
       "shotId": "festival:shot-title-01",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-placeholder-missing-frame",
-      "imageStatus": {
-        "status": "needs_replacement",
-        "reasons": [
-          "placeholder"
-        ],
-        "explanation": {
-          "es": "Título/crédito nuevo; still pendiente de generación autorizada (prompt EN en notas).",
-          "en": "New title/credit shot; still pending authorized generation (EN prompt in notes)."
-        },
-        "sourceShotId": "festival:shot-title-01"
-      }
+      "imageAssetId": "asset:animatic-title-film"
     },
     {
       "id": "festival:take-h-01-01",

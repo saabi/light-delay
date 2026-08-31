@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "06003f4311e37bdb42e09a8932039a8e9f29a4c719c2f2629870824fbf933149",
+    "sourceDigest": "5d662f12f5ac404cd65d32e57ff4bc8aca21634159e8f5fb43c4e6821608505e",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -1265,6 +1265,44 @@
       "segments": [
         {
           "id": "trailer:shot-i-05:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-i-06",
+      "status": "blocked",
+      "blockers": [
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-i-06:segment-01",
           "startMs": 0,
           "endMs": 2500,
           "continuation": "none",

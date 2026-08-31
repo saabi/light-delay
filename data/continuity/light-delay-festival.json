@@ -189,8 +189,8 @@
       "id": "festival:causal-03",
       "order": 3,
       "description": {
-        "es": "Harlan corta wireless y COM A/B; Voss piensa, envía a Sorell a verificar y luego le exige buscar a Harlan y no entrar sola.",
-        "en": "Harlan cuts wireless and COM A/B; Voss thinks, sends Sorell to verify, then requires her to find Harlan and not enter alone."
+        "es": "Harlan abre la escotilla de servicio al llegar al puente, corta primero wireless, abre la bandeja y desenchufa COM A/B; vuelve a entrar, cierra la escotilla y desciende. Voss piensa, envía a Sorell a verificar y luego le exige buscar a Harlan y no entrar sola.",
+        "en": "Harlan opens the service hatch on reaching the bridge, cuts wireless first, opens the tray, and unplugs COM A/B; he re-enters, closes the hatch, and descends. Voss thinks, sends Sorell to verify, then requires her to find Harlan and not enter alone."
       },
       "knowers": [
         "character:harlan",

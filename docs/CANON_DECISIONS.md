@@ -19,8 +19,11 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 - Es una nave humana axial de aproximadamente 80–100 m y unas 300 t, funcional, reparable y sin estética de nave de lujo.
 - Sus cubiertas son transversales al eje de empuje. En los tramos propulsados, la aceleración produce gravedad aparente. La aproximación y el cruce de la garganta local se realizan por inercia y en microgravedad; la aproximación remota al encuentro Velari termina con una desaceleración bajo 1 g y un corte de motor programado al igualar velocidad.
 - La circulación longitudinal se reparte entre un cilindro central de acceso, un pozo de ascensor y un cilindro de servicio más estrecho. El núcleo diplomático está fuera del eje y posee accesos operativo y técnico separados.
-- La cubierta de mando conecta con un vestíbulo axial: el puente ve la salida del cilindro central, mientras el acceso lateral al cilindro de servicio queda fuera de la línea visual de las consolas.
-- La voz y los datos operativos disponen de respaldo cableado redundante por cubierta. Un distribuidor A/B accesible desde el cilindro de servicio permite aislar físicamente una zona para mantenimiento.
+- El puente circular tiene seis puestos en arco, silla de capitán independiente y mesa de reunión para seis. La abertura de baranda de una escalera queda junto al cilindro de servicio; la de la segunda, junto al pozo de ascensor.
+- La pared curva del puente es casco presurizado gris, no un ventanal panorámico ni una pantalla. Sólo lleva ventanas pequeñas, escasas, profundas, reforzadas y con obturadores; el azul queda restringido a los displays de los seis puestos.
+- Como espacio principal de guardia en una nave de larga duración, combina función y habitabilidad: paneles compuestos claros, acentos apagados azul pizarra/verde azulado, tapicería y luz de trabajo neutra reducen el metal expuesto sin sugerir lujo. Todas las caras abiertas de las escaleras y descansos tienen barandas exteriores continuas además de las interiores.
+- El cilindro de servicio abre al puente mediante una escotilla oscura de esquinas redondeadas, fuera de la línea visual normal de los puestos. A su lado, una bandeja abatible expone los acopladores COM A/B.
+- La voz y los datos operativos disponen de respaldo cableado redundante por cubierta. Los acopladores de la bandeja permiten desenchufar físicamente una zona para mantenimiento.
 - El control local de contingencia gobierna el láser exterior estándar de comunicaciones mediante una ruta física dedicada que no atraviesa la malla inalámbrica ni el distribuidor ordinario por cubiertas.
 - Los displays operativos, archivos, contadores y controles integrados en imagen usan inglés como idioma diegético maestro. No muestran español e inglés simultáneamente; una futura versión visual en español será un derivado de edición.
 
@@ -67,10 +70,10 @@ Este documento resume las decisiones vigentes y prevalece sobre formulaciones an
 ## Conflicto y clímax
 
 - El sabotaje no debe depender de una única prueba digital falsificable.
-- Antes del aviso, Harlan termina tareas legítimas en otra cubierta y llega por coincidencia al acceso del puente con actitud rutinaria y relajada. Sólo cambia al oír que «la verdadera firma apunta a—»; no estaba siguiendo a Zao.
+- En microgravedad, Harlan asciende por el cilindro de servicio y abre su escotilla al nivel del puente justo cuando Zao llama. No estaba siguiendo a Zao; sólo cambia al oír que «la verdadera firma apunta a—».
 - Zao alcanza a decir: «Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. La verdadera firma apunta a—». El jammer corta el nombre.
 - Voss sopesa que la identidad de Sorell fue falsificada pero que ella sigue implicada: la envía a verificar, luego la retiene para ordenarle buscar a Harlan y no entrar sola. Esa cautela da a Harlan una ventaja causal.
-- En microgravedad, Harlan aprovecha su agilidad y el cilindro de servicio directo; Sorell pierde tiempo buscándolo y avanza mano sobre mano por el acceso cotidiano. La diferencia de llegada no implica torpeza de Sorell.
+- Harlan corta primero la malla inalámbrica con el jammer; luego abre la bandeja contigua y desenchufa COM A/B. Entra de nuevo por la escotilla que acaba de abrir, la cierra y desciende por el cilindro de servicio directo. Sorell pierde tiempo buscándolo y avanza mano sobre mano por el acceso cotidiano; la diferencia de llegada no implica torpeza de Sorell.
 - El manifiesto del relé está firmado por su propio hardware y conserva la asignación física a R. Harlan. Zao captura un snapshot, lo adjunta al mensaje y firma ambos con su token criptográfico personal; la clave privada permanece en el token y requiere presencia local.
 - Harlan borra cámaras, archivo local e índice operativo del manifiesto, pero bajo presión deja ese cabo suelto: el snapshot firmado ya fue transmitido.
 - La cadena probatoria combina dispositivo y hora del transmisor, firma personal de Zao, snapshot físico firmado por hardware, auditoría independiente de Elin y saludo pasivo de sólo lectura. Ninguna capa aislada basta.

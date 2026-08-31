@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0.0",
+  "project": "Light Delay / Luz Tardía",
+  "campaign": "poster-campaign-v1",
+  "generatedAt": "2026-08-30",
+  "provider": "OpenAI",
+  "model": "unknown",
+  "competitionEligible": "unverified",
+  "brandReferences": [
+    "/brand/light-delay-mark.svg",
+    "/brand/light-delay-logo.svg"
+  ],
+  "items": [
+    {
+      "id": "poster:signal-landscape-v1",
+      "file": "v1/01-signal-landscape.png",
+      "englishFile": "v1/01-signal-landscape-en.png",
+      "orientation": "landscape",
+      "dimensions": [1672, 941],
+      "title": "LUZ TARDÍA",
+      "tagline": "SU ÚLTIMO MENSAJE AÚN ESTÁ EN CAMINO.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "HER LAST MESSAGE IS STILL ON ITS WAY.",
+      "concept": "Teaser minimalista basado en la marca: ocultación, señal y desfase.",
+      "references": ["/brand/light-delay-mark.svg"]
+    },
+    {
+      "id": "poster:signal-portrait-v1",
+      "file": "v1/01-signal-portrait.png",
+      "englishFile": "v1/01-signal-portrait-en.png",
+      "orientation": "portrait",
+      "dimensions": [1024, 1536],
+      "title": "LUZ TARDÍA",
+      "tagline": "SU ÚLTIMO MENSAJE AÚN ESTÁ EN CAMINO.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "HER LAST MESSAGE IS STILL ON ITS WAY.",
+      "concept": "Adaptación vertical nativa del teaser minimalista.",
+      "references": ["/brand/light-delay-mark.svg"]
+    },
+    {
+      "id": "poster:departure-landscape-v1",
+      "file": "v1/02-departure-landscape.png",
+      "englishFile": "v1/02-departure-landscape-en.png",
+      "orientation": "landscape",
+      "dimensions": [1672, 941],
+      "title": "LUZ TARDÍA",
+      "tagline": "LA HUMANIDAD RECIBIÓ UNA INVITACIÓN. NO TODOS QUERÍAN QUE RESPONDIÉRAMOS.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "HUMANITY RECEIVED AN INVITATION. NOT EVERYONE WANTED US TO ANSWER.",
+      "concept": "Celestial Ardor abandona el muelle axial externo de Proxima ante Júpiter.",
+      "references": [
+        "/assets/locations/proxima-station/concept-sheet.png",
+        "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
+        "/assets/locations/proxima-station/proportional-reference.png",
+        "/assets/vehicles/celestial-ardor/model-sheet.png"
+      ]
+    },
+    {
+      "id": "poster:departure-portrait-v1",
+      "file": "v1/02-departure-portrait.png",
+      "englishFile": "v1/02-departure-portrait-en.png",
+      "orientation": "portrait",
+      "dimensions": [1024, 1536],
+      "title": "LUZ TARDÍA",
+      "tagline": "LA HUMANIDAD RECIBIÓ UNA INVITACIÓN. NO TODOS QUERÍAN QUE RESPONDIÉRAMOS.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "HUMANITY RECEIVED AN INVITATION. NOT EVERYONE WANTED US TO ANSWER.",
+      "concept": "Adaptación vertical nativa de la partida desde Proxima.",
+      "references": [
+        "/assets/locations/proxima-station/concept-sheet.png",
+        "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
+        "/assets/locations/proxima-station/proportional-reference.png",
+        "/assets/vehicles/celestial-ardor/model-sheet.png"
+      ]
+    },
+    {
+      "id": "poster:zao-message-landscape-v1",
+      "file": "v1/03-zao-message-landscape.png",
+      "englishFile": "v1/03-zao-message-landscape-en.png",
+      "orientation": "landscape",
+      "dimensions": [1672, 941],
+      "title": "LUZ TARDÍA",
+      "tagline": "SU ÚLTIMO MENSAJE AÚN NO HABÍA LLEGADO.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "HER LAST MESSAGE HADN'T ARRIVED YET.",
+      "concept": "Retrato de Zao degradado por la transmisión y una interferencia roja contenida.",
+      "references": [
+        "/assets/characters/zao/model-sheet.png",
+        "/brand/light-delay-mark.svg"
+      ]
+    },
+    {
+      "id": "poster:zao-message-portrait-v1",
+      "file": "v1/03-zao-message-portrait.png",
+      "englishFile": "v1/03-zao-message-portrait-en.png",
+      "orientation": "portrait",
+      "dimensions": [1024, 1536],
+      "title": "LUZ TARDÍA",
+      "tagline": "SU ÚLTIMO MENSAJE AÚN NO HABÍA LLEGADO.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "HER LAST MESSAGE HADN'T ARRIVED YET.",
+      "concept": "Adaptación vertical nativa del mensaje de Zao.",
+      "references": [
+        "/assets/characters/zao/model-sheet.png",
+        "/brand/light-delay-mark.svg"
+      ]
+    },
+    {
+      "id": "poster:first-contact-landscape-v1",
+      "file": "v1/04-first-contact-landscape.png",
+      "englishFile": "v1/04-first-contact-landscape-en.png",
+      "orientation": "landscape",
+      "dimensions": [1672, 941],
+      "title": "LUZ TARDÍA",
+      "tagline": "EL PRIMER CONTACTO COMIENZA CON LO QUE DECIDIMOS LLEVAR.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "FIRST CONTACT BEGINS WITH WHAT WE CHOOSE TO BRING.",
+      "concept": "Afiche coral ante la Estación Velari, con la Ardor a escala mínima.",
+      "references": [
+        "/assets/locations/velari-station/concept-sheet.png",
+        "/assets/vehicles/celestial-ardor/model-sheet.png",
+        "/assets/characters/zao/model-sheet.png",
+        "/assets/characters/voss/model-sheet.png",
+        "/assets/characters/harlan/model-sheet.png",
+        "/assets/characters/rao/model-sheet.png",
+        "/assets/characters/sorell/model-sheet.png",
+        "/assets/characters/cael/model-sheet.png"
+      ]
+    },
+    {
+      "id": "poster:first-contact-portrait-v1",
+      "file": "v1/04-first-contact-portrait.png",
+      "englishFile": "v1/04-first-contact-portrait-en.png",
+      "orientation": "portrait",
+      "dimensions": [1023, 1537],
+      "title": "LUZ TARDÍA",
+      "tagline": "EL PRIMER CONTACTO COMIENZA CON LO QUE DECIDIMOS LLEVAR.",
+      "titleEn": "LIGHT DELAY",
+      "taglineEn": "FIRST CONTACT BEGINS WITH WHAT WE CHOOSE TO BRING.",
+      "concept": "Adaptación vertical nativa del afiche coral de primer contacto.",
+      "references": [
+        "/assets/locations/velari-station/concept-sheet.png",
+        "/assets/vehicles/celestial-ardor/model-sheet.png",
+        "/assets/characters/zao/model-sheet.png",
+        "/assets/characters/voss/model-sheet.png",
+        "/assets/characters/harlan/model-sheet.png",
+        "/assets/characters/rao/model-sheet.png",
+        "/assets/characters/sorell/model-sheet.png",
+        "/assets/characters/cael/model-sheet.png"
+      ]
+    }
+  ]
+}

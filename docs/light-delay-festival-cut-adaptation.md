@@ -175,10 +175,10 @@ Debe contener, en orden:
 
 1. Zao confirma que el payload está asociado al protocolo diplomático.
 2. Descubre que el registro lógico puede haber sido manipulado.
-3. Harlan termina una tarea legítima y llega al puente por coincidencia, relajado; la tripulación concentrada en Voss no lo ve.
-4. Zao alcanza a decir que la firma de Sorell parece falsa y «la verdadera firma apunta a—». Sólo esa frase provoca la microreacción de Harlan, que activa el jammer y corta COM A/B.
+3. Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao llama; el propio cilindro lo oculta desde los puestos.
+4. Zao alcanza a decir que la firma de Sorell parece falsa y «la verdadera firma apunta a—». Sólo esa frase provoca la microreacción de Harlan: activa primero el jammer, abre la bandeja contigua y desenchufa COM A/B; luego vuelve a entrar, cierra la escotilla y desciende.
 5. Voss sopesa que Sorell sigue implicada pese a la falsificación, la envía a verificar y luego la retiene para exigir que busque a Harlan y no entre sola.
-6. Harlan se lanza balísticamente por servicio; Sorell pierde tiempo buscándolo y avanza mano sobre mano por el cilindro central.
+6. Harlan se lanza balísticamente hacia abajo por servicio; Sorell pierde tiempo buscándolo y avanza mano sobre mano por la circulación cotidiana.
 7. Zao comprueba que los tres enlaces cayeron, pero el control físico dedicado del láser exterior continúa activo.
 8. Descarta Tierra por el doble retardo y Proxima porque Júpiter ocluye la línea de vista L2–L1.
 9. Calcula la intercepción con la posición futura de la nave y ajusta un barrido sobre la elipse de incertidumbre.

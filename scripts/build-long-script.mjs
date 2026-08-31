@@ -93,7 +93,7 @@ const rows = [
 		7,
 		1,
 		'Despliegue hostil',
-		'La envoltura revela un escaneo intrusivo. Zao avisa: «Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. La verdadera firma apunta a—». Harlan termina una tarea legítima y llega por coincidencia al acceso con actitud rutinaria; sólo esa última frase provoca su microreacción. Sin ser visto activa el jammer y corta COM A/B. Voss sopesa que la identidad de Sorell fue falsificada pero que ella sigue implicada: la envía a verificar, la retiene y le ordena buscar a Harlan y no entrar sola.',
+		'La envoltura revela un escaneo intrusivo. Zao avisa: «Capitán, hay un payload autónomo firmado por Sorell. La firma parece falsa. La verdadera firma apunta a—». Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo entonces; sólo esa última frase provoca su microreacción. Oculto por el cilindro, activa primero el jammer, abre la bandeja y desenchufa COM A/B; vuelve a entrar, cierra la escotilla y desciende. Voss sopesa que la identidad de Sorell fue falsificada pero que ella sigue implicada: la envía a verificar, la retiene y le ordena buscar a Harlan y no entrar sola.',
 		'location:diplomatic-core-room',
 		['character:zao', 'character:voss', 'character:sorell', 'character:harlan'],
 		'T+57H43M',

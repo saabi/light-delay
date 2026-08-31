@@ -208,6 +208,87 @@
       "height": 1024
     },
     {
+      "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Puente del Celestial Ardor — referencia interior realista",
+        "en": "Celestial Ardor Bridge — realistic interior reference"
+      },
+      "width": 1536,
+      "height": 864,
+      "source": {
+        "provider": "OpenAI",
+        "generatedAt": "2026-08-31"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "containsText": false,
+        "referencePerspective": "upload/ed331f0f-e3e7-40a6-bf13-cf28e008f8b7.png",
+        "referenceTopDown": "upload/471e150c-7f53-43e1-8691-78b840fbbd20.png",
+        "competitionEligibility": "unverified",
+        "revision": 4,
+        "editNotes": "Re-rendered from the authoritative blockout with parallel inner and outer stair railings, continuous inner guards across horizontal landings, functional access openings beside both shafts, and reinforced windows around every visible hull wall"
+      }
+    },
+    {
+      "id": "asset:location-celestial-ardor-bridge-console-reference",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-bridge/realistic-console-reference.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Puente del Celestial Ardor — puestos y silla de capitán",
+        "en": "Celestial Ardor Bridge — stations and captain's chair"
+      },
+      "width": 1536,
+      "height": 979,
+      "source": {
+        "provider": "OpenAI",
+        "generatedAt": "2026-08-31"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "containsText": false,
+        "referencePerspective": "upload/4e4aeb39-cd32-4cac-ae57-0778b26fa21f.png",
+        "styleReference": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+        "competitionEligibility": "unverified",
+        "revision": 1,
+        "editNotes": "Closer bridge view preserving the six console stations, captain's chair, shafts, stairs and supplied railings, with reinforced windows distributed around the visible pressure hull"
+      }
+    },
+    {
+      "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Puente del Celestial Ardor — acceso oculto de servicio",
+        "en": "Celestial Ardor Bridge — concealed service access"
+      },
+      "width": 1536,
+      "height": 864,
+      "source": {
+        "provider": "OpenAI",
+        "generatedAt": "2026-08-31"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "containsText": false,
+        "referencePerspective": "upload/18059d5f-e231-4122-a955-3839dee69e63.png",
+        "styleReference": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+        "competitionEligibility": "unverified",
+        "revision": 1,
+        "editNotes": "Bridge angle for staging Harlan's concealed arrival from behind the stairs; preserves the supplied geometry and railings, gives the captain's chair stronger visual hierarchy, and continues reinforced windows around the visible pressure hull"
+      }
+    },
+    {
       "id": "asset:location-celestial-ardor-engineering-sheet",
       "kind": "image",
       "role": "reference",
@@ -855,6 +936,23 @@
       "description": {
         "es": "Canal al puente falla; Zao mira el transmisor independiente.",
         "en": "Canal to bridge fails; Zao looks at the independent transmitter."
+      }
+    },
+    {
+      "id": "asset:animatic-05-07",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/scene-05/shot-07.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Animatic scene-05 shot 7 — Harlan desenchufa COM A/B",
+        "en": "Animatic scene-05 shot 7 — Harlan unplugs COM A/B"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Harlan, junto a la escotilla de servicio abierta, abre la bandeja contigua y desenchufa los acopladores COM A/B.",
+        "en": "Harlan, beside the open service hatch, opens the adjacent tray and unplugs the COM A/B couplers."
       }
     },
     {
@@ -2009,8 +2107,8 @@
       "width": 1536,
       "height": 864,
       "description": {
-        "es": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra por el ventanal.",
-        "en": "Silent bridge; The light from the emissary and the organic station enters through the window."
+        "es": "Puente silencioso; la luz de la emisaria y de la estación orgánica entra en haces estrechos por las pequeñas ventanas reforzadas del casco.",
+        "en": "Silent bridge; light from the emissary and organic station enters in narrow beams through the hull’s small reinforced windows."
       }
     },
     {
@@ -2060,8 +2158,8 @@
       "width": 1536,
       "height": 864,
       "description": {
-        "es": "Voss mira el archivo de Zao y luego el ventanal.",
-        "en": "Voss looks at Zao's file and then at the window."
+        "es": "Voss mira el archivo de Zao y luego las pequeñas ventanas reforzadas del casco.",
+        "en": "Voss looks at Zao’s file and then at the hull’s small reinforced windows."
       }
     },
     {
@@ -2096,6 +2194,72 @@
       "description": {
         "es": "La nave humana avanza hacia la emisaria; detrás, la Estación Velari parece respirar. Fundido lento.",
         "en": "The human ship advances towards the emissary; behind, the Velari Station seems to breathe. Slow fade."
+      }
+    },
+    {
+      "id": "asset:animatic-title-film",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/titles/film-title.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Cartela de título — LUZ TARDÍA / LIGHT DELAY",
+        "en": "Film title card — LUZ TARDÍA / LIGHT DELAY"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cartela opaca de título diferido para main y Festival; inglés en imagen (LIGHT DELAY).",
+        "en": "Full-frame delayed title card for main and Festival; English on-image copy (LIGHT DELAY)."
+      },
+      "metadata": {
+        "useCase": "title-card",
+        "containsNarrativeContent": false,
+        "containsText": true
+      }
+    },
+    {
+      "id": "asset:animatic-title-trailer-brand",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/titles/trailer-brand.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Marca final del tráiler — LIGHT DELAY",
+        "en": "Trailer end brand — LIGHT DELAY"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cartela de marca al cierre del tráiler (escena I, toma 2).",
+        "en": "Brand card at trailer close (scene I, shot 2)."
+      },
+      "metadata": {
+        "useCase": "title-card",
+        "containsNarrativeContent": false,
+        "containsText": true
+      }
+    },
+    {
+      "id": "asset:animatic-title-trailer-tagline",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/titles/trailer-tagline.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Lema del tráiler",
+        "en": "Trailer tagline card"
+      },
+      "width": 1536,
+      "height": 864,
+      "description": {
+        "es": "Cartela de lema al cierre del tráiler (escena I, toma 3).",
+        "en": "Tagline card at trailer close (scene I, shot 3)."
+      },
+      "metadata": {
+        "useCase": "title-card",
+        "containsNarrativeContent": false,
+        "containsText": true
       }
     },
     {

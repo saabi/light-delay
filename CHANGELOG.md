@@ -1,9 +1,33 @@
 # Changelog
 
-## 2026-08-31 — Tráiler sin lema
+## 2026-08-31 — Harlan desenchufa COM A/B (escena 5, toma 7)
 
-- Eliminada la cartela de lema (`SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.`) del cierre del tráiler; permanece la marca `LIGHT DELAY` / `LATE LIGHT` y las tres tarjetas de créditos.
-- Animatic del tráiler: **32** tomas (1:40). Prompt C retirado de `docs/TITLE_AND_CREDITS.md`.
+- Registrado `asset:animatic-05-07` (`scene-05/shot-07.png`) y enlazado en `main:take-05-07-01` y `festival:shot-b-03-take-01`; deja de reutilizar erróneamente `asset:animatic-12-08`.
+
+## 2026-08-31 — Cartelas de título en el animatic
+
+- Registrados tres assets en `data/assets.json` y enlazados en las tomas: `film-title.png` (main y Festival), `trailer-brand.png` y `trailer-tagline.png` (tráiler). Las tres tarjetas de créditos siguen con placeholder.
+
+## 2026-08-31 — Referencia del acceso oculto al puente
+
+- Añadida una vista realista para montar la entrada de Harlan desde el cilindro de servicio oculto por las escaleras.
+- Conservados cámara, escaleras, barandas y arco de consolas del blockout; la silla de capitán recibe mayor jerarquía visual sin convertirse en un elemento ornamental.
+
+## 2026-08-31 — Referencia cercana de los puestos del puente
+
+- Añadida una segunda referencia realista del puente desde la cámara cercana a los seis puestos y la silla de capitán.
+- Conservada la geometría de cilindros, escaleras y barandas del nuevo blockout, aplicando los materiales, iluminación y ventanas reforzadas de la referencia general.
+
+## 2026-08-31 — Barandas completas y ventanas perimetrales del puente
+
+- Rehecha la referencia realista conservando la planta y cámara del blockout autoritativo.
+- Añadidas barandas exteriores paralelas a las interiores en todos los tramos de escalera; las interiores continúan sin interrupción sobre los descansos horizontales.
+- Distribuidas ventanas pequeñas y reforzadas por todas las paredes visibles del casco, manteniendo las aberturas de acceso junto a los cilindros de servicio y ascensor.
+
+## 2026-08-31 — Título de una línea y lema restaurado
+
+- Título de obra: un solo cue (`LUZ TARDÍA` en español / `LIGHT DELAY` en inglés); eliminado `LATE LIGHT` como segunda línea errónea.
+- Tráiler: restaurada la cartela de lema (`SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.`) tras la marca; **33** tomas (1:42,5). Prompt C de nuevo en `docs/TITLE_AND_CREDITS.md`.
 
 ## 2026-08-30 — Títulos y créditos en main, Festival y tráiler
 
@@ -25,6 +49,37 @@
 - El protocolo libera automáticamente sólo el saludo ya autorizado cuando abre el canal. La escala diferenciada de Ardor, emisaria y estación sostiene la dimensión cósmica sin sustituir la decisión humana.
 - El tráiler mantiene anónima la amenaza y deja sin resolver envío, recepción, destino de Zao, contención y resultado del saludo; el guard de spoilers cubre ahora también estas dos últimas categorías.
 - El largometraje sólo adopta esta lógica en su escaleta. Su tratamiento, generador, ledger, comparación y producción quedan como deuda explícita para una revisión posterior; no se generaron imágenes, video ni prompts.
+
+## 2026-08-31 — Habitabilidad y seguridad del puente
+
+- Revisada la referencia realista para reducir el aspecto enteramente metálico mediante paneles compuestos claros, acentos apagados azul pizarra/verde azulado, tapicería y luz de trabajo más cálida.
+- Añadidas barandas exteriores continuas a todas las caras expuestas de escaleras y descansos, conservando también las interiores y las aberturas funcionales.
+- Eliminado un objeto suelto introducido durante la revisión para mantener seguridad en microgravedad.
+
+## 2026-08-31 — Casco y referencia realista del puente
+
+- Aclarado que la pared curva gris del puente es casco presurizado, no ventanal panorámico ni pantalla; sólo los displays de los seis puestos son azules.
+- Añadidas pocas ventanas pequeñas, profundas, reforzadas y obturables a lo largo del cilindro, destinadas a orientación e inspección, no al pilotaje.
+- Generada y registrada una referencia interior realista de 1536 × 864 a partir de los blockouts en perspectiva y planta.
+
+## 2026-08-31 — Geometría del puente y ruta de Harlan
+
+- Corregida la descripción del puente de la Celestial Ardor según el bloqueo tridimensional: seis puestos en arco, silla de capitán, mesa para seis y aberturas de escalera junto al cilindro de servicio y el ascensor.
+- La escotilla oscura del cilindro de servicio y la bandeja abatible COM A/B contigua quedan fuera de la línea visual de los puestos.
+- Sincronizada la secuencia en main, Festival y largo: Harlan asciende por servicio, abre la escotilla durante la llamada de Zao, corta primero wireless y luego desenchufa COM A/B, vuelve a entrar, cierra y desciende hacia ella.
+
+## 2026-08-31 — Cartelas inglesas de título y tráiler
+
+- Regeneradas tres cartelas opacas de 1536 × 864 bajo `static/assets/animatic/titles/`: título principal/festival, marca final del tráiler y eslogan independiente.
+- El título visual queda reducido a `LIGHT DELAY`, sin subtítulo ni eslogan; la marca del tráiler añade únicamente un pulso Velari cian muy tenue.
+- El eslogan propuesto `THE MESSAGE ARRIVED BEFORE THEY DID.` queda como asset independiente y no se incorpora al montaje, preservando la decisión posterior de eliminar la cartela de lema del tráiler.
+
+## 2026-08-30 — Campaña de afiches V1
+
+- Añadidos ocho afiches de `Luz Tardía`: cuatro conceptos en formatos apaisado y retrato, bajo `static/assets/marketing/posters/v1/`.
+- Añadidas sus ocho versiones inglesas `Light Delay`, localizando únicamente título y eslogan y conservando el arte y la composición.
+- Las piezas narrativas usan las referencias canónicas de Zao, Proxima, Celestial Ardor, la Estación Velari y el reparto principal; el teaser minimalista deriva de la marca oficial.
+- `static/assets/marketing/posters/manifest.json` registra copy, dimensiones, orientación, referencias visuales y estado de elegibilidad todavía no verificado.
 
 ## 2026-08-30 — Metadatos de producción Festival A–D
 

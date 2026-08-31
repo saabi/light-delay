@@ -86,8 +86,8 @@
         "en": "Harlan isolates Zao"
       },
       "summary": {
-        "es": "Harlan activa el jammer, corta COM A/B y toma el cilindro de servicio. Voss piensa antes de enviar a Sorell: su identidad fue falsificada, pero sigue implicada; la retiene para ordenarle buscar a Harlan y no entrar sola. La cautela le cuesta tiempo: ella no lo encuentra y avanza mano sobre mano por el acceso común, mientras Harlan, más ágil, se lanza balísticamente por la ruta directa hacia Zao.",
-        "en": "Harlan activates the jammer, cuts COM A/B, and takes the service cylinder. Voss thinks before sending Sorell: her identity was forged, but she remains implicated; he calls her back to order her to find Harlan and not enter alone. The precaution costs her time: she cannot find him and moves hand over hand through common access while the more agile Harlan launches ballistically along the direct route toward Zao."
+        "es": "Harlan abre la escotilla de servicio al nivel del puente, activa el jammer, abre la bandeja contigua y desenchufa COM A/B. Vuelve a entrar, cierra la escotilla y desciende por servicio. Voss piensa antes de enviar a Sorell: su identidad fue falsificada, pero sigue implicada; la retiene para ordenarle buscar a Harlan y no entrar sola. La cautela le cuesta tiempo: ella no lo encuentra y avanza mano sobre mano por el acceso común, mientras Harlan ya se lanza balísticamente por la ruta directa hacia Zao.",
+        "en": "Harlan opens the service hatch at bridge level, activates the jammer, opens the adjacent tray, and unplugs COM A/B. He re-enters, closes the hatch, and descends through service. Voss thinks before sending Sorell: her identity was forged, but she remains implicated; he calls her back to order her to find Harlan and not enter alone. The precaution costs her time: she cannot find him and moves hand over hand through common access while Harlan is already launching ballistically along the direct route toward Zao."
       },
       "importance": "required",
       "causalLinks": [
@@ -95,8 +95,8 @@
           "sourceStepId": "festival:story-03",
           "relation": "forces",
           "explanation": {
-            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Para impedir que Zao complete la acusación, Harlan activa el jammer, corta COM A/B desde el distribuidor de servicio y toma la ruta rápida hacia el núcleo. Voss envía a Sorell a investigar y le ordena buscar a Harlan, pero ella debe avanzar sola por el acceso común.",
-            "en": "The outcome of the previous beat causes or enables this consequence: To prevent Zao from completing the accusation, Harlan activates the jammer, cuts COM A/B at the service distributor, and takes the fast route to the core. Voss sends Sorell to investigate and tells her to find Harlan, but she must proceed alone through the common access."
+            "es": "El resultado del hito anterior provoca o habilita esta consecuencia: Para impedir que Zao complete la acusación, Harlan activa el jammer, abre la bandeja de servicio y desenchufa COM A/B. Vuelve a entrar, cierra la escotilla y toma la ruta rápida hacia el núcleo. Voss envía a Sorell a investigar y le ordena buscar a Harlan, pero ella debe avanzar sola por el acceso común.",
+            "en": "The outcome of the previous beat causes or enables this consequence: To prevent Zao from completing the accusation, Harlan activates the jammer, opens the service tray, and unplugs COM A/B. He re-enters, closes the hatch, and takes the fast route to the core. Voss sends Sorell to investigate and tells her to find Harlan, but she must proceed alone through common access."
           }
         }
       ]
@@ -411,8 +411,8 @@
         "en": "Film title"
       },
       "summary": {
-        "es": "Tras la apertura de misión (overlay diegético intacto), cartela no diegética LIGHT DELAY / LUZ TARDÍA antes de que la anomalía se intensifique.",
-        "en": "After the mission open (diegetic overlay intact), non-diegetic LIGHT DELAY / LUZ TARDÍA card before the anomaly intensifies."
+        "es": "Tras la apertura de misión (overlay diegético intacto), cartela no diegética LUZ TARDÍA / LIGHT DELAY antes de que la anomalía se intensifique.",
+        "en": "After the mission open (diegetic overlay intact), non-diegetic LUZ TARDÍA / LIGHT DELAY card before the anomaly intensifies."
       },
       "importance": "required",
       "coverage": {
@@ -434,8 +434,7 @@
             "festival:beat-title-01"
           ],
           "cueIds": [
-            "festival:cue-title-01",
-            "festival:cue-title-02"
+            "festival:cue-title-01"
           ]
         },
         "animatic": {
@@ -564,8 +563,8 @@
         "en": "Harlan arrives unseen"
       },
       "summary": {
-        "es": "Harlan termina una tarea legítima y llega por coincidencia al acceso axial justo cuando Zao abre canal. Su actitud es rutinaria y relajada; nadie lo ve detrás de la tripulación concentrada en Voss.",
-        "en": "Harlan finishes a legitimate duty and coincidentally reaches the axial access just as Zao opens a channel. His manner is ordinary and relaxed; no one sees him behind the crew focused on Voss."
+        "es": "Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao abre canal. El cilindro oculta la escotilla y la bandeja contigua desde los puestos; nadie ve su llegada ni su microreacción.",
+        "en": "Harlan comes up the service cylinder and opens the hatch at bridge level just as Zao opens a channel. The cylinder hides the hatch and adjacent tray from the crew stations; no one sees his arrival or microreaction."
       },
       "importance": "required",
       "coverage": {
@@ -660,8 +659,8 @@
         "en": "Sabotage, caution, and a race along two routes"
       },
       "summary": {
-        "es": "Harlan activa el jammer y desconecta COM A/B. Voss sopesa que Sorell sigue implicada pese a la falsificación, la envía a verificar y luego exige que busque a Harlan y no entre sola. Mientras ella pierde tiempo y avanza mano sobre mano por el cilindro central, Harlan se lanza balísticamente por servicio.",
-        "en": "Harlan activates the jammer and disconnects COM A/B. Voss weighs that Sorell remains implicated despite the forgery, sends her to verify, then requires her to find Harlan and not enter alone. While she loses time and moves hand over hand through the central cylinder, Harlan launches ballistically through service."
+        "es": "Harlan activa el jammer, abre la bandeja y desenchufa COM A/B; vuelve a entrar, cierra la escotilla y desciende por servicio. Voss sopesa que Sorell sigue implicada pese a la falsificación, la envía a verificar y luego exige que busque a Harlan y no entre sola. Mientras ella pierde tiempo y avanza mano sobre mano por el acceso común, Harlan ya se lanza balísticamente por la ruta directa.",
+        "en": "Harlan activates the jammer, opens the tray, and unplugs COM A/B; he re-enters, closes the hatch, and descends through service. Voss weighs that Sorell remains implicated despite the forgery, sends her to verify, then requires her to find Harlan and not enter alone. While she loses time and moves hand over hand through common access, Harlan is already launching ballistically along the direct route."
       },
       "importance": "required",
       "coverage": {

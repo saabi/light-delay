@@ -55,21 +55,21 @@ if (main.shots.length !== 128)
 	errors.push(`main script: expected 128 shots, got ${main.shots.length}`);
 if (main.takes.length !== 128)
 	errors.push(`main script: expected 128 takes, got ${main.takes.length}`);
-if (animaticAssets !== 100)
-	errors.push(`assets: expected 100 legacy animatic frames, got ${animaticAssets}`);
-if (referenceAssets !== 31)
-	errors.push(`assets: expected 31 reference images, got ${referenceAssets}`);
+if (animaticAssets !== 104)
+	errors.push(`assets: expected 104 animatic images (100 legacy + 3 title cards + scene-05 shot 7), got ${animaticAssets}`);
+if (referenceAssets !== 34)
+	errors.push(`assets: expected 34 reference images, got ${referenceAssets}`);
 if (placeholders !== 1) errors.push(`assets: expected 1 animatic placeholder, got ${placeholders}`);
-if (assets.length !== 132) errors.push(`assets: expected current total 132, got ${assets.length}`);
-if (withoutSource !== 131)
-	errors.push(`assets: expected 131 records without source, got ${withoutSource}`);
+if (assets.length !== 139) errors.push(`assets: expected current total 139, got ${assets.length}`);
+if (withoutSource !== 135)
+	errors.push(`assets: expected 135 records without source, got ${withoutSource}`);
 if (withExactModel !== 0)
 	errors.push(`assets: expected exact model metadata to remain unknown, got ${withExactModel}`);
 
 requireText('AGENTS.md', 'animatic principal **128** tomas');
 requireText('README.md', 'animatic textual de 128 tomas');
-requireText('docs/ASSET_PROVENANCE.md', '**132 imágenes registradas**');
-requireText('docs/ASSET_PROVENANCE.md', '31 imágenes de referencia');
+requireText('docs/ASSET_PROVENANCE.md', '**139 imágenes registradas**');
+requireText('docs/ASSET_PROVENANCE.md', '34 imágenes de referencia');
 requireText('docs/PROJECT_STATUS.md', '**128** tomas y ~30:50,5');
 requireText(
 	'docs/SCRIPT_ANIMATIC_SYNC.md',
