@@ -7,7 +7,7 @@ El **guion estructurado** (`data/scripts/light-delay-main-short.json`) es la fue
 | Métrica | Guion / cues | Animatic legacy | JSON |
 | --- | ---: | ---: | ---: |
 | Escenas | 17 | 17 | 17 escenas |
-| Tomas / takes | — | 124 tomas | 124 shots / 124 takes |
+| Tomas / takes | — | 128 tomas | 128 shots / 128 takes |
 | Diálogos / subtítulos | 99 cues | 99 subs | 99 placements únicos |
 | Imágenes únicas disponibles | — | 100 PNG | 100 frames + 1 placeholder técnico |
 

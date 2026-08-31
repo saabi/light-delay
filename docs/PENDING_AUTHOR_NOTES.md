@@ -2,7 +2,7 @@
 
 > Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
 
-Pendientes: **153**
+Pendientes: **167**
 
 ## medium
 
@@ -14,77 +14,85 @@ Pendientes: **153**
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[0].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[1].notes[0]** [production · open] — Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que llega sin ser visto al acceso axial en festival:shot-b-02.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[1].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[10].notes[0]** [production · open] — Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04).
+- **data/scripts/light-delay-festival.json:$.shots[10].notes[0]** [production · open] — Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[10].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[11].notes[0]** [production · open] — Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01).
+- **data/scripts/light-delay-festival.json:$.shots[11].notes[0]** [production · open] — Reutiliza frame de main:shot-06-07 (asset asset:animatic-06-04).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[11].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[12].notes[0]** [production · open] — Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02).
+- **data/scripts/light-delay-festival.json:$.shots[12].notes[0]** [production · open] — Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[12].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[13].notes[0]** [production · open] — Continúa visualmente festival:cue-c-01 (borrado de cámaras/archivo) sin cue propio.
+- **data/scripts/light-delay-festival.json:$.shots[13].notes[0]** [production · open] — Reutiliza frame de main:shot-07-02 (asset asset:animatic-07-02).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[13].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[14].notes[0]** [production · open] — Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05).
+- **data/scripts/light-delay-festival.json:$.shots[14].notes[0]** [production · open] — Continúa visualmente festival:cue-c-01 (borrado de cámaras/archivo) sin cue propio.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[14].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[15].notes[0]** [production · open] — Continúa visualmente festival:cue-c-02 (reanimación fallida) sin cue propio.
+- **data/scripts/light-delay-festival.json:$.shots[15].notes[0]** [production · open] — Reutiliza frame de main:shot-06-05 (asset asset:animatic-06-05).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[15].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[16].notes[0]** [production · open] — Reutiliza frame de main:shot-07-04 (asset asset:animatic-07-04).
+- **data/scripts/light-delay-festival.json:$.shots[16].notes[0]** [production · open] — Continúa visualmente festival:cue-c-02 (reanimación fallida) sin cue propio.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[16].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[17].notes[0]** [production · open] — Continúa visualmente festival:cue-c-03 (niega haber visto a Sorell) sin cue propio.
+- **data/scripts/light-delay-festival.json:$.shots[17].notes[0]** [production · open] — Reutiliza frame de main:shot-07-04 (asset asset:animatic-07-04).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[17].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[18].notes[0]** [production · open] — Continúa visualmente festival:cue-c-03 (Voss envía a Harlan con Okoye) sin cue propio.
+- **data/scripts/light-delay-festival.json:$.shots[18].notes[0]** [production · open] — Continúa visualmente festival:cue-c-03 (niega haber visto a Sorell) sin cue propio.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[18].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[19].notes[0]** [production · open] — Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04).
+- **data/scripts/light-delay-festival.json:$.shots[19].notes[0]** [production · open] — Continúa visualmente festival:cue-c-03 (Voss envía a Harlan con Okoye) sin cue propio.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[19].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[2].notes[0]** [production · open] — Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[2].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[20].notes[0]** [production · open] — Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01), mismo still que festival:shot-c-01, como marcador de posición — necesita una toma propia para el Festival Cut (la asunción y el suspiro de Harlan no existen como beat separado en el corto canónico).
+- **data/scripts/light-delay-festival.json:$.shots[20].notes[0]** [production · open] — Reutiliza frame de main:shot-02-04 (asset asset:animatic-02-04).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[20].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[21].notes[0]** [production · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
+- **data/scripts/light-delay-festival.json:$.shots[21].notes[0]** [production · open] — Reutiliza frame de main:shot-07-01 (asset asset:animatic-07-01), mismo still que festival:shot-c-01, como marcador de posición — necesita una toma propia para el Festival Cut (la asunción y el suspiro de Harlan no existen como beat separado en el corto canónico).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[21].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[22].notes[0]** [production · open] — Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03).
+- **data/scripts/light-delay-festival.json:$.shots[22].notes[0]** [production · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[22].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[23].notes[0]** [production · open] — Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04).
+- **data/scripts/light-delay-festival.json:$.shots[23].notes[0]** [production · open] — Reutiliza frame de main:shot-10-03 (asset asset:animatic-10-03).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[23].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[24].notes[0]** [production · open] — Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02).
+- **data/scripts/light-delay-festival.json:$.shots[24].notes[0]** [production · open] — Reutiliza frame de main:shot-10-04 (asset asset:animatic-10-04).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[24].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[25].notes[0]** [production · open] — Reutiliza frame de main:shot-09-02 (asset asset:animatic-09-02).
+- **data/scripts/light-delay-festival.json:$.shots[25].notes[0]** [production · open] — Reutiliza frame de main:shot-10-02 (asset asset:animatic-10-02).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[25].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[26].notes[0]** [production · open] — Reutiliza frame de main:shot-10-07 (asset asset:animatic-10-07).
+- **data/scripts/light-delay-festival.json:$.shots[26].notes[0]** [production · open] — Reutiliza frame de main:shot-09-02 (asset asset:animatic-09-02).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[26].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[27].notes[0]** [production · open] — Reutiliza frame de main:shot-11-01 (asset asset:animatic-11-01).
+- **data/scripts/light-delay-festival.json:$.shots[27].notes[0]** [production · open] — Reutiliza frame de main:shot-10-07 (asset asset:animatic-10-07).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[27].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[28].notes[0]** [production · open] — Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).
+- **data/scripts/light-delay-festival.json:$.shots[28].notes[0]** [production · open] — Reutiliza frame de main:shot-11-01 (asset asset:animatic-11-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[28].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[29].notes[0]** [production · open] — Reutiliza frame de main:shot-11-02 (asset asset:animatic-11-02).
+- **data/scripts/light-delay-festival.json:$.shots[29].notes[0]** [production · open] — Reutiliza frame de main:shot-11-05 (asset asset:animatic-11-05).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[29].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[3].notes[0]** [production · open] — Reutiliza frame de main:shot-03-04 (asset asset:animatic-03-04).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[3].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[30].notes[0]** [production · open] — Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).
+- **data/scripts/light-delay-festival.json:$.shots[30].notes[0]** [production · open] — Reutiliza frame de main:shot-11-02 (asset asset:animatic-11-02).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[30].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[31].notes[0]** [production · open] — Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[31].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[32].notes[0]** [production · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03).
+- **data/scripts/light-delay-festival.json:$.shots[32].notes[0]** [production · open] — Reutiliza frame de main:shot-06-02 (asset asset:animatic-06-02).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[32].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[33].notes[0]** [production · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
+- **data/scripts/light-delay-festival.json:$.shots[33].notes[0]** [production · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[33].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[34].notes[0]** [production · open] — Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).
+- **data/scripts/light-delay-festival.json:$.shots[34].notes[0]** [production · open] — Reutiliza frame de main:shot-10-01 (asset asset:animatic-10-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[34].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[35].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-05-08; requiere imagen propia coherente con esta toma.
+- **data/scripts/light-delay-festival.json:$.shots[35].notes[0]** [production · open] — Reutiliza frame de main:shot-10-05 (asset asset:animatic-10-05).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[35].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[36].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-06-04; requiere imagen propia coherente con esta toma.
+- **data/scripts/light-delay-festival.json:$.shots[36].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-05-08; requiere imagen propia coherente con esta toma.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[36].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[37].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-06-05; requiere imagen propia coherente con esta toma.
+- **data/scripts/light-delay-festival.json:$.shots[37].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-06-04; requiere imagen propia coherente con esta toma.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[37].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[4].notes[0]** [production · open] — Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03).
+- **data/scripts/light-delay-festival.json:$.shots[38].notes[0]** [production · open] — Reutiliza provisoriamente main:shot-06-05; requiere imagen propia coherente con esta toma.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[38].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[4].notes[0]** [production · open] — Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[4].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[5].notes[0]** [production · open] — Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01).
+- **data/scripts/light-delay-festival.json:$.shots[5].notes[0]** [production · open] — Reutiliza frame de main:shot-05-03 (asset asset:animatic-05-03).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[5].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[6].notes[0]** [production · open] — Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara ("en el distribuidor del cilindro de servicio").
+- **data/scripts/light-delay-festival.json:$.shots[6].notes[0]** [production · open] — Reutiliza frame de main:shot-05-01 (asset asset:animatic-05-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[6].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[7].notes[0]** [production · open] — Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01).
+- **data/scripts/light-delay-festival.json:$.shots[68].notes[0]** [production · open] — Prompt D1 (EN on-image): credit card WRITTEN AND PRODUCED BY / AUTHOR_NAME_PLACEHOLDER. Full opaque black. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[68].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[69].notes[0]** [production · open] — Prompt D2 (EN on-image): AI ASSISTANCE — ChatGPT · Claude · Gemini · Cursor Composer. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[69].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[7].notes[0]** [production · open] — Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara ("en el distribuidor del cilindro de servicio").
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[7].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[8].notes[0]** [production · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03); continúa visualmente la acción de festival:cue-b-05 sin cue propio.
+- **data/scripts/light-delay-festival.json:$.shots[70].notes[0]** [production · open] — Prompt D3 (EN on-image): PRODUCTION TOOLS — Light Delay schema & production tools. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[70].notes[0]`
+- **data/scripts/light-delay-festival.json:$.shots[8].notes[0]** [production · open] — Reutiliza frame de main:shot-06-01 (asset asset:animatic-06-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[8].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[9].notes[0]** [production · open] — Reutiliza frame de main:shot-06-06 (asset asset:animatic-06-06).
+- **data/scripts/light-delay-festival.json:$.shots[9].notes[0]** [production · open] — Reutiliza frame de main:shot-06-03 (asset asset:animatic-06-03); continúa visualmente la acción de festival:cue-b-05 sin cue propio.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[9].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[0].notes[0]** [sound · open] — Ambiente industrial, radio lejana, crujidos estructurales.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[0].notes[0]`
@@ -140,6 +148,14 @@ Pendientes: **153**
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[122].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[123].notes[0]** [editorial · open] — Toma 3 original excedía el montaje (0:08) frente al diálogo estimado (~0:18); se partió el VO de la periodista en dos tomas de mosaico.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[123].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[124].notes[0]** [production · open] — Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[124].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[125].notes[0]** [production · open] — Prompt D1 (EN on-image): credit card WRITTEN AND PRODUCED BY / AUTHOR_NAME_PLACEHOLDER. Full opaque black. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[125].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[126].notes[0]** [production · open] — Prompt D2 (EN on-image): AI ASSISTANCE — ChatGPT · Claude · Gemini · Cursor Composer. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[126].notes[0]`
+- **data/scripts/light-delay-main-short.json:$.shots[127].notes[0]** [production · open] — Prompt D3 (EN on-image): PRODUCTION TOOLS — Light Delay schema & production tools. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[127].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[17].notes[0]** [sound · open] — Motores en espera.
   - Origen: `data/scripts/light-delay-main-short.json` · `$.shots[17].notes[0]`
 - **data/scripts/light-delay-main-short.json:$.shots[18].notes[0]** [sound · open] — Silencio previo.
@@ -296,10 +312,18 @@ Pendientes: **153**
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[26].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[27].notes[0]** [editorial · open] — Reutiliza frame de main:shot-16-03 (asset asset:animatic-16-03).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[27].notes[0]`
-- **data/scripts/light-delay-trailer.json:$.shots[28].notes[0]** [editorial · open] — Reutiliza frame de main:shot-17-06 (asset asset:animatic-17-06).
+- **data/scripts/light-delay-trailer.json:$.shots[28].notes[0]** [production · open] — Prompt B (EN on-image): trailer end brand LIGHT DELAY / LATE LIGHT. See docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[28].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[29].notes[0]** [production · open] — Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[29].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[3].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-01 (asset asset:animatic-04-01).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[3].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[30].notes[0]** [production · open] — Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[30].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[31].notes[0]** [production · open] — Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[31].notes[0]`
+- **data/scripts/light-delay-trailer.json:$.shots[32].notes[0]** [production · open] — Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[32].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[4].notes[0]** [editorial · open] — Reutiliza frame de main:shot-14-05 (asset asset:animatic-14-05).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[4].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[5].notes[0]** [editorial · open] — Reutiliza frame de main:shot-04-02 (asset asset:animatic-04-02).
@@ -312,4 +336,11 @@ Pendientes: **153**
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[8].notes[0]`
 - **data/scripts/light-delay-trailer.json:$.shots[9].notes[0]** [editorial · open] — Reutiliza frame de main:shot-05-06 (asset asset:animatic-05-06).
   - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[9].notes[0]`
+
+## low
+
+- **data/scripts/light-delay-festival.json:$.shots[0].notes[1]** [production · open] — Prompt F (alpha): FIRST CONTACT — VELARI MISSION HUD for festival open. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-festival.json` · `$.shots[0].notes[1]`
+- **data/scripts/light-delay-trailer.json:$.shots[3].notes[1]** [production · open] — Prompt E (alpha): FIRST CONTACT overlay. Ver docs/TITLE_AND_CREDITS.md.
+  - Origen: `data/scripts/light-delay-trailer.json` · `$.shots[3].notes[1]`
 

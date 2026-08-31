@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-30 — Títulos y créditos en main, Festival y tráiler
+
+- Main y Festival añaden título diferido tras el cold open (`LIGHT DELAY` / `LUZ TARDÍA`) y tres tarjetas de créditos finales; el tráiler conserva marca/lema y añade las mismas tarjetas de créditos.
+- Animatic: main **128** tomas (~30:50,5), Festival **71** (~6:14,2), tráiler **33** (1:42,5). Stills de cartela usan placeholder hasta generación autorizada; prompts EN en `docs/TITLE_AND_CREDITS.md` y notas de toma.
+- `TextCue.presentation` admite `credits`. Autor legal pendiente: `AUTHOR_NAME_PLACEHOLDER`.
+
 ## 2026-08-30 — Completitud de propósitos y encuadres
 
 - Main completa propósitos bilingües en sus 68 tomas pendientes y encuadres en las 12 tomas que carecían de `composition.framing`, conservando descripciones, movimientos, IDs y duración.

@@ -1,17 +1,17 @@
 # Light Delay / Luz Tardía
 
-Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas y el animatic textual de 124 tomas con imágenes de referencia reutilizadas donde aún faltan stills definitivos.
+Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas y el animatic textual de 128 tomas con imágenes de referencia reutilizadas donde aún faltan stills definitivos.
 
 ## Estado actual
 
 - Sitio público bilingüe: inglés en `/` y español en `/es/`, con selector de idioma, metadatos SEO, sitemap, identidad visual y landing de presentación. El español continúa siendo la fuente editorial.
 - Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
 - Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
-- Guion corto canónico: 17 escenas, objetivo inicial de 30:00 y montaje de datos actual de 30:39,5.
+- Guion corto canónico: 17 escenas de historia (+ título/créditos), objetivo inicial de 30:00 y montaje de datos actual de ~30:50,5.
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
-- Animatic textual principal de 124 tomas con image take, encuadre, audio, subtítulos y duración editable (30:39,5). En el corto hay 112 reutilizaciones candidatas a regeneración y 12 tomas nuevas que usan el placeholder técnico; Festival tiene 67 placeholders reutilizados y el tráiler suma 29 candidatos. La producción visual está deferida hasta aprobar cada cut y su freeze de prompts.
+- Animatic textual principal de 128 tomas con image take, encuadre, audio, subtítulos y duración editable (~30:50,5). En el corto hay 112 reutilizaciones candidatas a regeneración y 16 tomas con placeholder técnico (12 de historia + título/créditos); Festival tiene 71 tomas y el tráiler 33. La producción visual está deferida hasta aprobar cada cut y su freeze de prompts.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.

@@ -5,7 +5,7 @@
 ### Cortometraje completo
 
 - Duración objetivo: 30:00; montaje de datos vigente: 30:39,5.
-- Base: guion canónico de 17 escenas y animatic de 124 tomas que reutiliza 100 frames; 112 reutilizaciones son candidatas a regeneración y 12 tomas nuevas usan placeholder.
+- Base: guion canónico de 17 escenas de historia (+ título/créditos) y animatic de 128 tomas que reutiliza 100 frames; 112 reutilizaciones son candidatas a regeneración y 16 tomas usan placeholder (historia + cartelas).
 - El objetivo de duración debe validarse con lectura y montaje reales.
 - La producción visual está bloqueada por guion hasta cerrar continuidad causal, placements y cobertura. No se regeneran imágenes como parte de la sincronización narrativa.
 
