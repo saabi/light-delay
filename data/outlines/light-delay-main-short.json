@@ -377,10 +377,55 @@
       "majorEventId": "event:embarkation"
     },
     {
+      "id": "main:outline-title",
+      "level": "detail",
+      "parentStepId": "main:story-01",
+      "order": 2,
+      "title": {
+        "es": "Título de la obra",
+        "en": "Film title"
+      },
+      "summary": {
+        "es": "Tras el cold open de embarque, cartela no diegética LIGHT DELAY / LUZ TARDÍA antes de fijar el rumbo.",
+        "en": "After the boarding cold open, non-diegetic LIGHT DELAY / LUZ TARDÍA card before the course is committed."
+      },
+      "importance": "required",
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "main:scene-title"
+          ],
+          "beatIds": [
+            "main:beat-title-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "main:scene-title"
+          ],
+          "beatIds": [
+            "main:beat-title-01"
+          ],
+          "cueIds": [
+            "main:cue-title-01",
+            "main:cue-title-02"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "main:shot-title-01"
+          ]
+        }
+      }
+    },
+    {
       "id": "main:outline-02",
       "level": "detail",
       "parentStepId": "main:story-02",
-      "order": 2,
+      "order": 3,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
@@ -429,7 +474,7 @@
       "id": "main:outline-03",
       "level": "detail",
       "parentStepId": "main:story-03",
-      "order": 3,
+      "order": 4,
       "title": {
         "es": "INT. CELESTIAL ARDOR — SALA DE MÁQUINAS — TRÁNSITO, T+29H",
         "en": "INT. CELESTIAL ARDOR — ENGINE ROOM — TRANSIT, T+29H"
@@ -479,7 +524,7 @@
       "id": "main:outline-04",
       "level": "detail",
       "parentStepId": "main:story-03",
-      "order": 4,
+      "order": 5,
       "title": {
         "es": "INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRÁNSITO, T+40H",
         "en": "INT. CELESTIAL ARDOR — DIPLOMATIC CORE — TRANSIT, T+40H"
@@ -532,7 +577,7 @@
       "id": "main:outline-05",
       "level": "detail",
       "parentStepId": "main:story-04",
-      "order": 5,
+      "order": 6,
       "title": {
         "es": "Confirmación y silencio",
         "en": "Confirmation and silence"
@@ -598,7 +643,7 @@
       "id": "main:outline-06",
       "level": "detail",
       "parentStepId": "main:story-05",
-      "order": 6,
+      "order": 7,
       "title": {
         "es": "INT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO — TRANSMISOR EXTERNO — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — DIPLOMATIC CORE — EXTERNAL TRANSMITTER — CONTINUOUS"
@@ -671,7 +716,7 @@
       "id": "main:outline-07",
       "level": "detail",
       "parentStepId": "main:story-06",
-      "order": 7,
+      "order": 8,
       "title": {
         "es": "INT./EXT. CELESTIAL ARDOR — NÚCLEO DIPLOMÁTICO / LA BOCA — CONTINUO",
         "en": "INT./EXT. CELESTIAL ARDOR — DIPLOMATIC CORE / THE MOUTH — CONTINUOUS"
@@ -737,7 +782,7 @@
       "id": "main:outline-08",
       "level": "detail",
       "parentStepId": "main:story-07",
-      "order": 8,
+      "order": 9,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
@@ -795,7 +840,7 @@
       "id": "main:outline-09",
       "level": "detail",
       "parentStepId": "main:story-08",
-      "order": 9,
+      "order": 10,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE / NÚCLEO / ENFERMERÍA — MÁS TARDE",
         "en": "INT. CELESTIAL ARDOR — BRIDGE / CORE / INFIRMARY — LATER"
@@ -849,7 +894,7 @@
       "id": "main:outline-10",
       "level": "detail",
       "parentStepId": "main:story-08",
-      "order": 10,
+      "order": 11,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUESTO TÉCNICO DEL PUENTE — MÁS TARDE",
         "en": "INT. CELESTIAL ARDOR — BRIDGE TECHNICAL STATION — LATER"
@@ -905,7 +950,7 @@
       "id": "main:outline-11",
       "level": "detail",
       "parentStepId": "main:story-09",
-      "order": 11,
+      "order": 12,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
@@ -962,7 +1007,7 @@
       "id": "main:outline-12",
       "level": "detail",
       "parentStepId": "main:story-09",
-      "order": 12,
+      "order": 13,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — MINUTOS DESPUÉS",
         "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — MINUTES LATER"
@@ -1022,7 +1067,7 @@
       "id": "main:outline-13",
       "level": "detail",
       "parentStepId": "main:story-10",
-      "order": 13,
+      "order": 14,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PASILLO / PUENTE — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — CORRIDOR / BRIDGE — CONTINUOUS"
@@ -1073,7 +1118,7 @@
       "id": "main:outline-14",
       "level": "detail",
       "parentStepId": "main:story-11",
-      "order": 14,
+      "order": 15,
       "title": {
         "es": "INT. CELESTIAL ARDOR — NÚCLEO / PUENTE — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — CORE / BRIDGE — CONTINUOUS"
@@ -1138,7 +1183,7 @@
       "id": "main:outline-15",
       "level": "detail",
       "parentStepId": "main:story-11",
-      "order": 15,
+      "order": 16,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
@@ -1194,7 +1239,7 @@
       "id": "main:outline-16",
       "level": "detail",
       "parentStepId": "main:story-12",
-      "order": 16,
+      "order": 17,
       "title": {
         "es": "EXT. ESPACIO — REGIÓN DE ENCUENTRO — MINUTOS DESPUÉS",
         "en": "EXT. SPACE — ENCOUNTER REGION — MINUTES LATER"
@@ -1238,7 +1283,7 @@
       "id": "main:outline-17",
       "level": "detail",
       "parentStepId": "main:story-12",
-      "order": 17,
+      "order": 18,
       "title": {
         "es": "INT. CELESTIAL ARDOR — PUENTE DE MANDO — CONTINUO",
         "en": "INT. CELESTIAL ARDOR — COMMAND BRIDGE — CONTINUOUS"
@@ -1285,6 +1330,54 @@
         }
       },
       "majorEventId": "event:aftermath"
+    },
+    {
+      "id": "main:outline-credits",
+      "level": "detail",
+      "parentStepId": "main:story-12",
+      "order": 19,
+      "title": {
+        "es": "Créditos",
+        "en": "Credits"
+      },
+      "summary": {
+        "es": "Tras el cierre emocional, tarjetas de créditos (autor/productor, asistencia de IA, herramientas) y negro.",
+        "en": "After the emotional close, credit cards (author/producer, AI assistance, tools) and black."
+      },
+      "importance": "optional",
+      "coverage": {
+        "treatment": {
+          "status": "covered",
+          "sceneIds": [
+            "main:scene-18"
+          ],
+          "beatIds": [
+            "main:beat-18-01"
+          ]
+        },
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "main:scene-18"
+          ],
+          "beatIds": [
+            "main:beat-18-01"
+          ],
+          "cueIds": [
+            "main:cue-18-01",
+            "main:cue-18-02",
+            "main:cue-18-03"
+          ]
+        },
+        "animatic": {
+          "status": "covered",
+          "shotIds": [
+            "main:shot-18-01",
+            "main:shot-18-02",
+            "main:shot-18-03"
+          ]
+        }
+      }
     }
   ]
 }
