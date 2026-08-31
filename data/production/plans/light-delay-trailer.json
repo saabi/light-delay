@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "ec50d19f42a25f2e35f503561ad6e6f3a4de828839fe4887dcdd6f34d3f75eed",
+    "sourceDigest": "5be6d10ad1fcbde2cff890cf1a18c2eebd0b00c25e39254793d68ca369ac980a",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -1153,6 +1153,158 @@
           "id": "trailer:shot-i-02:segment-01",
           "startMs": 0,
           "endMs": 4000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-i-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-i-03:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-i-04",
+      "status": "blocked",
+      "blockers": [
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-i-04:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-i-05",
+      "status": "blocked",
+      "blockers": [
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-i-05:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "trailer:shot-i-06",
+      "status": "blocked",
+      "blockers": [
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "trailer:shot-i-06:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null

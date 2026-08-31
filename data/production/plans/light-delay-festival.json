@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival",
     "scriptId": "script:light-delay-festival",
     "scriptVersion": "0.3.0-draft",
-    "sourceDigest": "9bfe39d8da24ae38f980502abe84d96aa22f2d89bd53c476bb1cb3a418260cc7",
+    "sourceDigest": "1ab26c732ae992de6453ed29bd5a4e8e2beba5d671616702f27679de27866dcc",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -214,6 +214,45 @@
           "id": "festival:shot-a-04:segment-01",
           "startMs": 0,
           "endMs": 6500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-title-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-title-01:segment-01",
+          "startMs": 0,
+          "endMs": 3500,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -3462,6 +3501,123 @@
           "id": "festival:shot-g-11:segment-01",
           "startMs": 0,
           "endMs": 5000,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-h-01",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-h-01:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-h-02",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-h-02:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
+          "continuation": "none",
+          "promptStatus": "blocked",
+          "compiledPrompt": null
+        }
+      ]
+    },
+    {
+      "shotId": "festival:shot-h-03",
+      "status": "blocked",
+      "blockers": [
+        "missing_production_context",
+        "missing_entity_binding",
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "diegeticText": [],
+      "artifacts": {
+        "animaticStill": {
+          "required": true,
+          "status": "missing"
+        },
+        "firstFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "lastFrame": {
+          "required": false,
+          "status": "missing"
+        },
+        "finalAudio": {
+          "required": false,
+          "status": "missing"
+        }
+      },
+      "requiredReferences": [],
+      "segments": [
+        {
+          "id": "festival:shot-h-03:segment-01",
+          "startMs": 0,
+          "endMs": 2500,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
