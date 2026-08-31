@@ -11,14 +11,14 @@
     "version": "0.3.0-draft",
     "status": "draft",
     "kind": "festival_cut",
-    "targetDurationMs": 363200,
+    "targetDurationMs": 374200,
     "lineage": {
       "sourceScriptId": "script:light-delay-main-short",
       "relationship": "adaptation",
       "sourceVersion": "1.1.0-draft",
       "notes": {
-        "es": "Primera asamblea completa A–G. El orden de cinco minutos es orientativo; las 67 tomas actuales suman aproximadamente 6:03,2 y priorizan causalidad y respiración editorial.",
-        "en": "First complete A–G assembly. The five-minute scale is approximate; the current 67 shots total about 6:03.2 and prioritize causality and editorial breathing room."
+        "es": "Asamblea A–G más título diferido y créditos. Las tomas de historia siguen priorizando causalidad; título/créditos usan placeholder hasta generación autorizada.",
+        "en": "A–G assembly plus delayed title and credits. Story shots still prioritize causality; title/credits use placeholders until authorized generation."
       }
     },
     "declaredEntityRefs": [
@@ -324,12 +324,14 @@
       },
       "sceneIds": [
         "festival:scene-a",
+        "festival:scene-title",
         "festival:scene-b",
         "festival:scene-c",
         "festival:scene-d",
         "festival:scene-e",
         "festival:scene-f",
-        "festival:scene-g"
+        "festival:scene-g",
+        "festival:scene-h"
       ]
     }
   ],
@@ -378,10 +380,43 @@
       "targetDurationMs": 26000
     },
     {
+      "id": "festival:scene-title",
+      "actId": "festival:act-1",
+      "number": 0,
+      "order": 2,
+      "title": {
+        "es": "TÍTULO — LIGHT DELAY",
+        "en": "TITLE — LIGHT DELAY"
+      },
+      "setting": {
+        "interiorExterior": "EXT",
+        "timeOfDay": {
+          "es": "NEGRO",
+          "en": "BLACK"
+        }
+      },
+      "summary": {
+        "es": "Cartela de título tras la apertura de misión.",
+        "en": "Title card after mission open."
+      },
+      "dramaticPurpose": {
+        "es": "Nombrar la obra sin reemplazar el overlay diegético.",
+        "en": "Name the work without replacing the diegetic overlay."
+      },
+      "characterIds": [],
+      "beatIds": [
+        "festival:beat-title-01"
+      ],
+      "shotIds": [
+        "festival:shot-title-01"
+      ],
+      "targetDurationMs": 3500
+    },
+    {
       "id": "festival:scene-b",
       "actId": "festival:act-1",
       "number": 2,
-      "order": 2,
+      "order": 3,
       "title": {
         "es": "Zao descubre y transmite",
         "en": "Zao Discovers and Transmits"
@@ -441,7 +476,7 @@
       "id": "festival:scene-c",
       "actId": "festival:act-1",
       "number": 3,
-      "order": 3,
+      "order": 4,
       "title": {
         "es": "Harlan / muerte de Zao / salto temporal",
         "en": "Harlan / Zao's Death / Time Jump"
@@ -495,7 +530,7 @@
       "id": "festival:scene-d",
       "actId": "festival:act-1",
       "number": 4,
-      "order": 4,
+      "order": 5,
       "title": {
         "es": "La mitad técnica",
         "en": "The Technical Half"
@@ -543,7 +578,7 @@
       "id": "festival:scene-e",
       "actId": "festival:act-1",
       "number": 5,
-      "order": 5,
+      "order": 6,
       "title": {
         "es": "La señal y la doble llave",
         "en": "The Signal and the Double Key"
@@ -591,7 +626,7 @@
       "id": "festival:scene-f",
       "actId": "festival:act-1",
       "number": 6,
-      "order": 6,
+      "order": 7,
       "title": {
         "es": "Override y cuarentena",
         "en": "Override and Quarantine"
@@ -638,7 +673,7 @@
       "id": "festival:scene-g",
       "actId": "festival:act-1",
       "number": 7,
-      "order": 7,
+      "order": 8,
       "title": {
         "es": "Contacto / cierre",
         "en": "Contact / Closing"
@@ -680,6 +715,41 @@
         "festival:shot-g-11"
       ],
       "targetDurationMs": 48500
+    },
+    {
+      "id": "festival:scene-h",
+      "actId": "festival:act-1",
+      "number": 8,
+      "order": 9,
+      "title": {
+        "es": "CRÉDITOS",
+        "en": "CREDITS"
+      },
+      "setting": {
+        "interiorExterior": "EXT",
+        "timeOfDay": {
+          "es": "NEGRO",
+          "en": "BLACK"
+        }
+      },
+      "summary": {
+        "es": "Tarjetas de créditos finales.",
+        "en": "End credit cards."
+      },
+      "dramaticPurpose": {
+        "es": "Cierre de presentación.",
+        "en": "Presentation close."
+      },
+      "characterIds": [],
+      "beatIds": [
+        "festival:beat-h-01"
+      ],
+      "shotIds": [
+        "festival:shot-h-01",
+        "festival:shot-h-02",
+        "festival:shot-h-03"
+      ],
+      "targetDurationMs": 7500
     }
   ],
   "beats": [
@@ -893,6 +963,49 @@
         "festival:cue-g-05"
       ],
       "targetDurationMs": 48500
+    },
+    {
+      "id": "festival:beat-title-01",
+      "sceneId": "festival:scene-title",
+      "order": 1,
+      "title": {
+        "es": "Cartela de título",
+        "en": "Title card"
+      },
+      "summary": {
+        "es": "LIGHT DELAY / LUZ TARDÍA.",
+        "en": "LIGHT DELAY / LATE LIGHT."
+      },
+      "cueIds": [
+        "festival:cue-title-01",
+        "festival:cue-title-02"
+      ],
+      "purpose": {
+        "es": "Presentar el título tras la apertura de misión.",
+        "en": "Present the title after the mission open."
+      }
+    },
+    {
+      "id": "festival:beat-h-01",
+      "sceneId": "festival:scene-h",
+      "order": 1,
+      "title": {
+        "es": "Créditos",
+        "en": "Credits"
+      },
+      "summary": {
+        "es": "Autor, IA y herramientas.",
+        "en": "Author, AI, and tools."
+      },
+      "cueIds": [
+        "festival:cue-h-01",
+        "festival:cue-h-02",
+        "festival:cue-h-03"
+      ],
+      "purpose": {
+        "es": "Mostrar créditos finales.",
+        "en": "Show end credits."
+      }
     }
   ],
   "cues": [
@@ -2120,6 +2233,106 @@
           "status": "resolved"
         }
       ]
+    },
+    {
+      "id": "festival:cue-title-01",
+      "beatId": "festival:beat-title-01",
+      "order": 1,
+      "type": "text",
+      "presentation": "title",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "LIGHT DELAY",
+            "status": "source"
+          },
+          "en": {
+            "text": "LIGHT DELAY",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-title-02",
+      "beatId": "festival:beat-title-01",
+      "order": 2,
+      "type": "text",
+      "presentation": "title",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "LUZ TARDÍA",
+            "status": "source"
+          },
+          "en": {
+            "text": "LATE LIGHT",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-h-01",
+      "beatId": "festival:beat-h-01",
+      "order": 1,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "ESCRITO Y PRODUCIDO POR\nAUTHOR_NAME_PLACEHOLDER",
+            "status": "source"
+          },
+          "en": {
+            "text": "WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-h-02",
+      "beatId": "festival:beat-h-01",
+      "order": 2,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "ASISTENCIA DE IA\nChatGPT · Claude · Gemini · Cursor Composer",
+            "status": "source"
+          },
+          "en": {
+            "text": "AI ASSISTANCE\nChatGPT · Claude · Gemini · Cursor Composer",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival:cue-h-03",
+      "beatId": "festival:beat-h-01",
+      "order": 3,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "HERRAMIENTAS DE PRODUCCIÓN\nEsquema y herramientas de producción Light Delay",
+            "status": "source"
+          },
+          "en": {
+            "text": "PRODUCTION TOOLS\nLight Delay schema & production tools",
+            "status": "draft"
+          }
+        }
+      }
     }
   ],
   "shots": [
@@ -2175,6 +2388,15 @@
           "text": {
             "es": "Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).",
             "en": "Reuse frame from main:shot-01-01 (asset asset:animatic-01-01)."
+          }
+        },
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "low",
+          "text": {
+            "es": "Prompt F (alpha): FIRST CONTACT — VELARI MISSION HUD for festival open. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt F (alpha): FIRST CONTACT — VELARI MISSION HUD for festival open. See docs/TITLE_AND_CREDITS.md."
           }
         }
       ],
@@ -2383,6 +2605,66 @@
           "kind": "character",
           "id": "character:zao",
           "role": "discoverer"
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-title-01",
+      "sceneId": "festival:scene-title",
+      "beatIds": [
+        "festival:beat-title-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": {
+        "es": "Cartela a negro: LIGHT DELAY sobre LUZ TARDÍA.",
+        "en": "Black card: LIGHT DELAY over LATE LIGHT."
+      },
+      "purpose": {
+        "es": "Presentar el título tras la apertura de misión.",
+        "en": "Present the title after the mission open."
+      },
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 3500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-title-01",
+          "atMs": 0,
+          "durationMs": 3500
+        },
+        {
+          "cueId": "festival:cue-title-02",
+          "atMs": 0,
+          "durationMs": 3500
+        }
+      ],
+      "takeIds": [
+        "festival:take-title-01-01"
+      ],
+      "selectedTakeId": "festival:take-title-01-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt A (EN on-image): full opaque 1536×864 title card — LIGHT DELAY / LATE LIGHT on black void; soft delayed light layers optional; no Spanish glyphs. See docs/TITLE_AND_CREDITS.md."
+          }
         }
       ]
     },
@@ -7136,6 +7418,171 @@
           "status": "resolved"
         }
       ]
+    },
+    {
+      "id": "festival:shot-h-01",
+      "sceneId": "festival:scene-h",
+      "beatIds": [
+        "festival:beat-h-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": {
+        "es": "Crédito: escrito y producido por.",
+        "en": "Credit: written and produced by."
+      },
+      "purpose": {
+        "es": "Acreditar autoría y producción.",
+        "en": "Credit authorship and production."
+      },
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-h-01",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "festival:take-h-01-01"
+      ],
+      "selectedTakeId": "festival:take-h-01-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt D1 (EN on-image): credit card WRITTEN AND PRODUCED BY / AUTHOR_NAME_PLACEHOLDER. Full opaque black. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D1 (EN on-image): credit card WRITTEN AND PRODUCED BY / AUTHOR_NAME_PLACEHOLDER. Full opaque black. See docs/TITLE_AND_CREDITS.md."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-h-02",
+      "sceneId": "festival:scene-h",
+      "beatIds": [
+        "festival:beat-h-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "description": {
+        "es": "Crédito: asistencia de IA.",
+        "en": "Credit: AI assistance."
+      },
+      "purpose": {
+        "es": "Acreditar asistencia de modelos.",
+        "en": "Credit model assistance."
+      },
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-h-02",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "festival:take-h-02-01"
+      ],
+      "selectedTakeId": "festival:take-h-02-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt D2 (EN on-image): AI ASSISTANCE — ChatGPT · Claude · Gemini · Cursor Composer. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D2 (EN on-image): AI ASSISTANCE — ChatGPT · Claude · Gemini · Cursor Composer. See docs/TITLE_AND_CREDITS.md."
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival:shot-h-03",
+      "sceneId": "festival:scene-h",
+      "beatIds": [
+        "festival:beat-h-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "description": {
+        "es": "Crédito: herramientas de producción.",
+        "en": "Credit: production tools."
+      },
+      "purpose": {
+        "es": "Acreditar esquema y herramientas.",
+        "en": "Credit schema and tools."
+      },
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "festival:cue-h-03",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "festival:take-h-03-01"
+      ],
+      "selectedTakeId": "festival:take-h-03-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt D3 (EN on-image): PRODUCTION TOOLS — Light Delay schema & production tools. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D3 (EN on-image): PRODUCTION TOOLS — Light Delay schema & production tools. See docs/TITLE_AND_CREDITS.md."
+          }
+        }
+      ]
     }
   ],
   "takes": [
@@ -8544,6 +8991,78 @@
           "es": "La Ardor avanza hacia la emisaria con la estación detrás; fundido lento sin cierre triunfalista. Si aparece texto diegético, generar únicamente la copia inglesa indicada; nunca mostrar ambos idiomas.",
           "en": "Ardor advances toward the emissary with the station behind it; slow fade without triumphalism. If diegetic text appears, render only the specified English copy; never show both languages."
         }
+      }
+    },
+    {
+      "id": "festival:take-title-01-01",
+      "shotId": "festival:shot-title-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito nuevo; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "New title/credit shot; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "festival:shot-title-01"
+      }
+    },
+    {
+      "id": "festival:take-h-01-01",
+      "shotId": "festival:shot-h-01",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito nuevo; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "New title/credit shot; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "festival:shot-h-01"
+      }
+    },
+    {
+      "id": "festival:take-h-02-01",
+      "shotId": "festival:shot-h-02",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito nuevo; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "New title/credit shot; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "festival:shot-h-02"
+      }
+    },
+    {
+      "id": "festival:take-h-03-01",
+      "shotId": "festival:shot-h-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito nuevo; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "New title/credit shot; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "festival:shot-h-03"
       }
     }
   ]
