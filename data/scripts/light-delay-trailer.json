@@ -11,7 +11,7 @@
     "version": "0.2.0-draft",
     "status": "draft",
     "kind": "trailer",
-    "targetDurationMs": 102500,
+    "targetDurationMs": 100000,
     "lineage": {
       "sourceScriptId": "script:light-delay-main-short",
       "relationship": "trailer",
@@ -706,8 +706,8 @@
         }
       },
       "summary": {
-        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA, lema y créditos.",
-        "en": "Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT, tagline, and credits."
+        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y créditos.",
+        "en": "Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT and credits."
       },
       "dramaticPurpose": {
         "es": "Cierre de marca y créditos.",
@@ -724,10 +724,9 @@
         "trailer:shot-i-02",
         "trailer:shot-i-03",
         "trailer:shot-i-04",
-        "trailer:shot-i-05",
-        "trailer:shot-i-06"
+        "trailer:shot-i-05"
       ],
-      "targetDurationMs": 18000,
+      "targetDurationMs": 15500,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
@@ -921,8 +920,8 @@
         "en": "Close on the brand and credits."
       },
       "summary": {
-        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA, lema y créditos.",
-        "en": "Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT, tagline, and credits."
+        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y créditos.",
+        "en": "Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT and credits."
       },
       "cueIds": [
         "trailer:cue-i-01",
@@ -930,8 +929,7 @@
         "trailer:cue-i-03",
         "trailer:cue-i-04",
         "trailer:cue-i-05",
-        "trailer:cue-i-06",
-        "trailer:cue-i-07"
+        "trailer:cue-i-06"
       ]
     }
   ],
@@ -1439,26 +1437,6 @@
       "beatId": "trailer:beat-i-01",
       "order": 4,
       "type": "text",
-      "presentation": "caption",
-      "content": {
-        "sourceLanguage": "es",
-        "variants": {
-          "es": {
-            "text": "A VECES, LLEGAR TARDE ES LLEGAR A TIEMPO.",
-            "status": "source"
-          },
-          "en": {
-            "text": "SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.",
-            "status": "draft"
-          }
-        }
-      }
-    },
-    {
-      "id": "trailer:cue-i-05",
-      "beatId": "trailer:beat-i-01",
-      "order": 5,
-      "type": "text",
       "presentation": "credits",
       "content": {
         "sourceLanguage": "es",
@@ -1475,9 +1453,9 @@
       }
     },
     {
-      "id": "trailer:cue-i-06",
+      "id": "trailer:cue-i-05",
       "beatId": "trailer:beat-i-01",
-      "order": 6,
+      "order": 5,
       "type": "text",
       "presentation": "credits",
       "content": {
@@ -1495,9 +1473,9 @@
       }
     },
     {
-      "id": "trailer:cue-i-07",
+      "id": "trailer:cue-i-06",
       "beatId": "trailer:beat-i-01",
-      "order": 7,
+      "order": 6,
       "type": "text",
       "presentation": "credits",
       "content": {
@@ -3207,12 +3185,12 @@
       "number": 3,
       "order": 30,
       "description": {
-        "es": "Lema en cartela tipográfica.",
-        "en": "Tagline typographic card."
+        "es": "Tarjeta de crédito: escrito y producido por.",
+        "en": "Credit card: written and produced by."
       },
       "purpose": {
-        "es": "Cierre de marca y créditos. La toma muestra: Lema en cartela tipográfica.",
-        "en": "Close on the brand and credits. The shot shows: Tagline typographic card."
+        "es": "Acreditar autoría y producción.",
+        "en": "Credit authorship and production."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -3248,8 +3226,8 @@
           "status": "open",
           "priority": "medium",
           "text": {
-            "es": "Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md.",
-            "en": "Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md."
+            "es": "Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md."
           }
         }
       ]
@@ -3263,12 +3241,12 @@
       "number": 4,
       "order": 31,
       "description": {
-        "es": "Tarjeta de crédito: escrito y producido por.",
-        "en": "Credit card: written and produced by."
+        "es": "Tarjeta de crédito: asistencia de IA.",
+        "en": "Credit card: AI assistance."
       },
       "purpose": {
-        "es": "Acreditar autoría y producción.",
-        "en": "Credit authorship and production."
+        "es": "Acreditar asistencia de modelos.",
+        "en": "Credit model assistance."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -3304,8 +3282,8 @@
           "status": "open",
           "priority": "medium",
           "text": {
-            "es": "Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.",
-            "en": "Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md."
+            "es": "Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md."
           }
         }
       ]
@@ -3319,12 +3297,12 @@
       "number": 5,
       "order": 32,
       "description": {
-        "es": "Tarjeta de crédito: asistencia de IA.",
-        "en": "Credit card: AI assistance."
+        "es": "Tarjeta de crédito: herramientas de producción.",
+        "en": "Credit card: production tools."
       },
       "purpose": {
-        "es": "Acreditar asistencia de modelos.",
-        "en": "Credit model assistance."
+        "es": "Acreditar esquema y herramientas.",
+        "en": "Credit schema and tools."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -3354,62 +3332,6 @@
         "trailer:take-i-05-01"
       ],
       "selectedTakeId": "trailer:take-i-05-01",
-      "notes": [
-        {
-          "type": "production",
-          "status": "open",
-          "priority": "medium",
-          "text": {
-            "es": "Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.",
-            "en": "Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md."
-          }
-        }
-      ]
-    },
-    {
-      "id": "trailer:shot-i-06",
-      "sceneId": "trailer:scene-i",
-      "beatIds": [
-        "trailer:beat-i-01"
-      ],
-      "number": 6,
-      "order": 33,
-      "description": {
-        "es": "Tarjeta de crédito: herramientas de producción.",
-        "en": "Credit card: production tools."
-      },
-      "purpose": {
-        "es": "Acreditar esquema y herramientas.",
-        "en": "Credit schema and tools."
-      },
-      "locationId": "location:celestial-ardor-bridge",
-      "composition": {
-        "size": "OTHER",
-        "framing": {
-          "es": "Cartela tipográfica a pantalla completa",
-          "en": "Full-frame typographic card"
-        },
-        "aspectRatio": "16:9"
-      },
-      "camera": {
-        "movement": "locked",
-        "movementDescription": {
-          "es": "Negro / tipografía fija",
-          "en": "Black field / locked typography"
-        }
-      },
-      "durationMs": 2500,
-      "cuePlacements": [
-        {
-          "cueId": "trailer:cue-i-07",
-          "atMs": 0,
-          "durationMs": 2500
-        }
-      ],
-      "takeIds": [
-        "trailer:take-i-06-01"
-      ],
-      "selectedTakeId": "trailer:take-i-06-01",
       "notes": [
         {
           "type": "production",
@@ -4082,24 +4004,6 @@
           "en": "Title/credit; still pending authorized generation (EN prompt in notes)."
         },
         "sourceShotId": "trailer:shot-i-05"
-      }
-    },
-    {
-      "id": "trailer:take-i-06-01",
-      "shotId": "trailer:shot-i-06",
-      "number": 1,
-      "status": "selected",
-      "imageAssetId": "asset:animatic-placeholder-missing-frame",
-      "imageStatus": {
-        "status": "needs_replacement",
-        "reasons": [
-          "placeholder"
-        ],
-        "explanation": {
-          "es": "Título/crédito; still pendiente de generación autorizada (prompt EN en notas).",
-          "en": "Title/credit; still pending authorized generation (EN prompt in notes)."
-        },
-        "sourceShotId": "trailer:shot-i-06"
       }
     }
   ]

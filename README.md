@@ -11,7 +11,7 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 - Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
-- Animatic textual principal de 128 tomas con image take, encuadre, audio, subtítulos y duración editable (~30:50,5). En el corto hay 112 reutilizaciones candidatas a regeneración y 16 tomas con placeholder técnico (12 de historia + título/créditos); Festival tiene 71 tomas y el tráiler 33. La producción visual está deferida hasta aprobar cada cut y su freeze de prompts.
+- Animatic textual principal de 128 tomas con image take, encuadre, audio, subtítulos y duración editable (~30:50,5). En el corto hay 112 reutilizaciones candidatas a regeneración y 16 tomas con placeholder técnico (12 de historia + título/créditos); Festival tiene 71 tomas y el tráiler 32. La producción visual está deferida hasta aprobar cada cut y su freeze de prompts.
 - Biblia visual: 10 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.

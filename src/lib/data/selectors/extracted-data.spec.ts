@@ -37,15 +37,15 @@ describe('extracted canonical data', () => {
 		const trailer = getScript('script:light-delay-trailer');
 		expect(trailer.script.kind).toBe('trailer');
 		expect(trailer.scenes).toHaveLength(9);
-		expect(trailer.shots).toHaveLength(33);
+		expect(trailer.shots).toHaveLength(32);
 		expect(trailer.takes.every((t) => Boolean(t.imageAssetId))).toBe(true);
-		expect(getEffectiveDuration(trailer)).toBe(102_500);
+		expect(getEffectiveDuration(trailer)).toBe(100_000);
 		const storyTakes = trailer.takes.filter(
 			(t) => t.imageStatus?.status === 'needs_regeneration'
 		);
 		const cardTakes = trailer.takes.filter((t) => t.imageStatus?.status === 'needs_replacement');
 		expect(storyTakes.length).toBeGreaterThan(0);
-		expect(cardTakes.length).toBe(5);
+		expect(cardTakes.length).toBe(4);
 	});
 
 	it('separates main regeneration candidates from placeholder replacements', () => {

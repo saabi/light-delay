@@ -1,8 +1,13 @@
 # Changelog
 
+## 2026-08-31 — Tráiler sin lema
+
+- Eliminada la cartela de lema (`SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.`) del cierre del tráiler; permanece la marca `LIGHT DELAY` / `LATE LIGHT` y las tres tarjetas de créditos.
+- Animatic del tráiler: **32** tomas (1:40). Prompt C retirado de `docs/TITLE_AND_CREDITS.md`.
+
 ## 2026-08-30 — Títulos y créditos en main, Festival y tráiler
 
-- Main y Festival añaden título diferido tras el cold open (`LIGHT DELAY` / `LUZ TARDÍA`) y tres tarjetas de créditos finales; el tráiler conserva marca/lema y añade las mismas tarjetas de créditos.
+- Main y Festival añaden título diferido tras el cold open (`LIGHT DELAY` / `LUZ TARDÍA`) y tres tarjetas de créditos finales; el tráiler conserva marca al cierre y añade las mismas tarjetas de créditos.
 - Animatic: main **128** tomas (~30:50,5), Festival **71** (~6:14,2), tráiler **33** (1:42,5). Stills de cartela usan placeholder hasta generación autorizada; prompts EN en `docs/TITLE_AND_CREDITS.md` y notas de toma.
 - `TextCue.presentation` admite `credits`. Autor legal pendiente: `AUTHOR_NAME_PLACEHOLDER`.
 

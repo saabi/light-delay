@@ -266,12 +266,12 @@ const SEGMENTS = [
 		key: 'i',
 		title: 'Título y créditos',
 		titleEn: 'Title and credits',
-		summary: 'Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA, lema y créditos.',
-		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT, tagline, and credits.',
+		summary: 'Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y créditos.',
+		summaryEn: 'Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT and credits.',
 		dramaticPurpose: 'Cierre de marca y créditos.',
 		dramaticPurposeEn: 'Close on the brand and credits.',
 		locationId: 'location:velari-station',
-		targetDurationMs: 18000,
+		targetDurationMs: 15500,
 		characterIds: ['character:zao'],
 		shots: [
 			{
@@ -286,13 +286,6 @@ const SEGMENTS = [
 				description: 'Corte a negro y títulos LIGHT DELAY / LATE LIGHT.',
 				descriptionEn: 'Cut to black and LIGHT DELAY / LATE LIGHT titles.',
 				promptKey: 'B'
-			},
-			{
-				mainShotId: 'main:shot-17-06',
-				durationMs: 2500,
-				description: 'Lema en cartela tipográfica.',
-				descriptionEn: 'Tagline typographic card.',
-				promptKey: 'C'
 			},
 			{
 				mainShotId: 'main:shot-17-06',
@@ -619,9 +612,9 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'trailer:cue-i-04',
 				beatId,
 				4,
-				'A VECES, LLEGAR TARDE ES LLEGAR A TIEMPO.',
-				'caption',
-				'SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.'
+				'ESCRITO Y PRODUCIDO POR\nAUTHOR_NAME_PLACEHOLDER',
+				'credits',
+				'WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER'
 			),
 			2
 		);
@@ -630,9 +623,9 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'trailer:cue-i-05',
 				beatId,
 				5,
-				'ESCRITO Y PRODUCIDO POR\nAUTHOR_NAME_PLACEHOLDER',
+				'ASISTENCIA DE IA\nChatGPT · Claude · Gemini · Cursor Composer',
 				'credits',
-				'WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER'
+				'AI ASSISTANCE\nChatGPT · Claude · Gemini · Cursor Composer'
 			),
 			3
 		);
@@ -641,22 +634,11 @@ for (const [si, seg] of SEGMENTS.entries()) {
 				'trailer:cue-i-06',
 				beatId,
 				6,
-				'ASISTENCIA DE IA\nChatGPT · Claude · Gemini · Cursor Composer',
-				'credits',
-				'AI ASSISTANCE\nChatGPT · Claude · Gemini · Cursor Composer'
-			),
-			4
-		);
-		addCue(
-			textCue(
-				'trailer:cue-i-07',
-				beatId,
-				7,
 				'HERRAMIENTAS DE PRODUCCIÓN\nEsquema y herramientas de producción Light Delay',
 				'credits',
 				'PRODUCTION TOOLS\nLight Delay schema & production tools'
 			),
-			5
+			4
 		);
 	}
 
@@ -682,7 +664,6 @@ for (const [si, seg] of SEGMENTS.entries()) {
 		if (spec.promptKey) {
 			const promptBlurb = {
 				B: 'Prompt B (EN on-image): trailer end brand LIGHT DELAY / LATE LIGHT. See docs/TITLE_AND_CREDITS.md.',
-				C: 'Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md.',
 				D1: 'Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.',
 				D2: 'Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.',
 				D3: 'Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md.',
@@ -798,8 +779,8 @@ for (const [si, seg] of SEGMENTS.entries()) {
 	scenes[scenes.length - 1].shotIds = sceneShotIds;
 }
 
-if (totalMs !== 102500) {
-	throw new Error(`Unexpected total duration ${totalMs}ms (expected 102500)`);
+if (totalMs !== 100000) {
+	throw new Error(`Unexpected total duration ${totalMs}ms (expected 100000)`);
 }
 
 const file = {
@@ -812,7 +793,7 @@ const file = {
 		version: '0.2.0-draft',
 		status: 'draft',
 		kind: 'trailer',
-		targetDurationMs: 102500,
+		targetDurationMs: 100000,
 		lineage: {
 			sourceScriptId: 'script:light-delay-main-short',
 			relationship: 'trailer',

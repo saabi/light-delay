@@ -1,11 +1,11 @@
 # Estado del proyecto
 
-Fecha de corte: 2026-08-30.
+Fecha de corte: 2026-08-31.
 
 ## Completado
 
 - **Completitud de metadatos de toma:** Main tiene propósito y encuadre en sus tomas de historia y cartelas; Festival conserva cobertura en A–G más título/créditos; el generador y JSON del tráiler cubren propósito y encuadre sin heredar spoilers. La deuda restante está separada en bindings, placements, performance y subcampos avanzados de cámara.
-- **Títulos y créditos:** cold open + título diferido + créditos finales en main y Festival; tráiler con marca/lema al cierre y las mismas tarjetas de créditos. Specs y prompts EN en [`docs/TITLE_AND_CREDITS.md`](TITLE_AND_CREDITS.md). Nombre legal del autor aún `AUTHOR_NAME_PLACEHOLDER`. No se generaron stills.
+- **Títulos y créditos:** cold open + título diferido + créditos finales en main y Festival; tráiler con marca al cierre y las mismas tarjetas de créditos. Specs y prompts EN en [`docs/TITLE_AND_CREDITS.md`](TITLE_AND_CREDITS.md). Nombre legal del autor aún `AUTHOR_NAME_PLACEHOLDER`. No se generaron stills.
 - **Guion corto — ritmo, causalidad y láser:** 17 escenas de historia (+ título/créditos), **128** tomas y ~30:50,5 de montaje derivado; ocho tripulantes de misión declarados. Ver `docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md` y `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
 - **Clímax causal revisado en main y Festival:** la cámara prueba que Sorell llegó después de la muerte y Voss suspende la credencial comprometida con escolta, sin tratarla como culpable. El token de Zao autentica evidencia; Voss revoca a Harlan; Elin necesita cinco segundos para cerrar la rama hostil. Bajo 1 g, Harlan bloquea el accionamiento principal; el corte programado a T−12 s inicia microgravedad y Okoye supera una vacilación ante su apelación para redirigirlo con pasamanos y tether. Sorell valida el saludo fuera de línea, Voss lo preautoriza y el protocolo lo libera automáticamente en T=0.
 - **Escaletas causales por cut:** los cuatro scripts tienen sinopsis y una capa `story` legible (12 main, 7 tráiler, 12 largo, 15 festival) sobre el detalle editorial existente (17/9/28/44). Los hitos cuentan una historia continua con los detalles cerrados; el detalle conserva IDs históricos y cobertura separada para tratamiento, guion y animatic. Ya no se regeneran desde resúmenes de escena.
@@ -71,7 +71,7 @@ Fecha de corte: 2026-08-30.
 
 1. **Duración real.** Los 30:00 son el objetivo; el montaje de datos suma ~30:50,5 (historia + título/créditos). Debe validarse mediante lectura cronometrada y luego con animación/video.
 2. **Festival Cut.** Datos con 9 escenas (A–G + título/créditos), guion y animatic y **71** tomas. La asamblea con cartelas suma ~6:14,2; cinco minutos es sólo un orden de magnitud y no un máximo estricto. Faltan lectura/montaje editorial, imágenes canónicas y poblar el array `sequences`. Ver escaleta y `docs/CUIDADOS_NARRATIVOS.md`.
-3. **Tráiler.** Versión animatic operativa de **33** tomas (1:42,5): ya oculta identidad del culpable, éxito del envío/recepción y destino de Zao; incluye créditos. Falta afinado de ritmo, stills de título/créditos (ver docs/TITLE_AND_CREDITS.md) y audio.
+3. **Tráiler.** Versión animatic operativa de **32** tomas (1:40): ya oculta identidad del culpable, éxito del envío/recepción y destino de Zao; incluye créditos. Falta afinado de ritmo, stills de título/créditos (ver docs/TITLE_AND_CREDITS.md) y audio.
 4. **Cobertura estructural.** Antes de habilitar imágenes deben resolverse por prioridad los placements, bindings y datos de performance que afecten continuidad o producción. Main, Festival y tráiler ya cerraron propósito y framing; la deuda medida restante se concentra en bindings, placements, performance y subcampos avanzados de cámara. El largo no puede figurar como animatic completo mientras no tenga tomas.
 5. **Cobertura de Festival y largo.** El largo tiene tratamiento pero todavía no guion dialogado ni animatic. Su escaleta ya incorpora el clímax causal vigente, pero tratamiento, generador, ledger, comparación y producción quedaron expresamente diferidos y no deben figurar como sincronizados. Festival ya cubre A–G con tomas y placements, pero sus stills son provisionales y no autorizan generación hasta aprobar ritmo, performance y freeze visual.
 6. **Procedencia completa.** Los prompts exactos, parámetros y referencias de varias imágenes no quedaron incluidos en los manifests actuales.
