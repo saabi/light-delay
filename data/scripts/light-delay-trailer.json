@@ -11,7 +11,7 @@
     "version": "0.2.0-draft",
     "status": "draft",
     "kind": "trailer",
-    "targetDurationMs": 92500,
+    "targetDurationMs": 102500,
     "lineage": {
       "sourceScriptId": "script:light-delay-main-short",
       "relationship": "trailer",
@@ -694,8 +694,8 @@
       "number": 9,
       "order": 9,
       "title": {
-        "es": "Título",
-        "en": "Title"
+        "es": "Título y créditos",
+        "en": "Title and credits"
       },
       "locationId": "location:velari-station",
       "setting": {
@@ -706,12 +706,12 @@
         }
       },
       "summary": {
-        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.",
-        "en": "Velari scale with no confirmed response; LIGHT DELAY / LUZ TARDÍA and tagline."
+        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA, lema y créditos.",
+        "en": "Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT, tagline, and credits."
       },
       "dramaticPurpose": {
-        "es": "Cierre de marca.",
-        "en": "Close on the brand."
+        "es": "Cierre de marca y créditos.",
+        "en": "Close on the brand and credits."
       },
       "characterIds": [
         "character:zao"
@@ -721,17 +721,17 @@
       ],
       "shotIds": [
         "trailer:shot-i-01",
-        "trailer:shot-i-02"
+        "trailer:shot-i-02",
+        "trailer:shot-i-03",
+        "trailer:shot-i-04",
+        "trailer:shot-i-05",
+        "trailer:shot-i-06"
       ],
-      "targetDurationMs": 8000,
+      "targetDurationMs": 18000,
       "sourceRefs": [
         {
           "scriptId": "script:light-delay-main-short",
           "shotId": "main:shot-16-03"
-        },
-        {
-          "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-17-06"
         }
       ]
     }
@@ -913,22 +913,25 @@
       "sceneId": "trailer:scene-i",
       "order": 1,
       "title": {
-        "es": "Título",
-        "en": "Title"
+        "es": "Título y créditos",
+        "en": "Title and credits"
       },
       "purpose": {
-        "es": "Cierre de marca.",
-        "en": "Close on the brand."
+        "es": "Cierre de marca y créditos.",
+        "en": "Close on the brand and credits."
       },
       "summary": {
-        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA y lema.",
-        "en": "Velari scale with no confirmed response; LIGHT DELAY / LUZ TARDÍA and tagline."
+        "es": "Escala Velari sin respuesta confirmada; LIGHT DELAY / LUZ TARDÍA, lema y créditos.",
+        "en": "Velari scale with no confirmed response; LIGHT DELAY / LATE LIGHT, tagline, and credits."
       },
       "cueIds": [
         "trailer:cue-i-01",
         "trailer:cue-i-02",
         "trailer:cue-i-03",
-        "trailer:cue-i-04"
+        "trailer:cue-i-04",
+        "trailer:cue-i-05",
+        "trailer:cue-i-06",
+        "trailer:cue-i-07"
       ]
     }
   ],
@@ -1445,7 +1448,67 @@
             "status": "source"
           },
           "en": {
-            "text": "SOMETIMES, TO BE LATE IS TO BE ON TIME.",
+            "text": "SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "trailer:cue-i-05",
+      "beatId": "trailer:beat-i-01",
+      "order": 5,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "ESCRITO Y PRODUCIDO POR\nAUTHOR_NAME_PLACEHOLDER",
+            "status": "source"
+          },
+          "en": {
+            "text": "WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "trailer:cue-i-06",
+      "beatId": "trailer:beat-i-01",
+      "order": 6,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "ASISTENCIA DE IA\nChatGPT · Claude · Gemini · Cursor Composer",
+            "status": "source"
+          },
+          "en": {
+            "text": "AI ASSISTANCE\nChatGPT · Claude · Gemini · Cursor Composer",
+            "status": "draft"
+          }
+        }
+      }
+    },
+    {
+      "id": "trailer:cue-i-07",
+      "beatId": "trailer:beat-i-01",
+      "order": 7,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "es",
+        "variants": {
+          "es": {
+            "text": "HERRAMIENTAS DE PRODUCCIÓN\nEsquema y herramientas de producción Light Delay",
+            "status": "source"
+          },
+          "en": {
+            "text": "PRODUCTION TOOLS\nLight Delay schema & production tools",
             "status": "draft"
           }
         }
@@ -1673,6 +1736,15 @@
           "text": {
             "es": "Reutiliza frame de main:shot-04-01 (asset asset:animatic-04-01).",
             "en": "Reuse frame from main:shot-04-01 (asset asset:animatic-04-01)."
+          }
+        },
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "low",
+          "text": {
+            "es": "Prompt E (alpha): FIRST CONTACT overlay. Ver docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt E (alpha): FIRST CONTACT overlay. See docs/TITLE_AND_CREDITS.md."
           }
         }
       ]
@@ -3019,8 +3091,8 @@
         "en": "Station and emissary retain their own lights without synchronizing with the Ardor; the shot does not confirm a response."
       },
       "purpose": {
-        "es": "Cierre de marca. La toma muestra: Estación y emisaria conservan luces propias sin sincronizar con la Ardor; el plano no confirma respuesta.",
-        "en": "Close on the brand. The shot shows: Station and emissary retain their own lights without synchronizing with the Ardor; the shot does not confirm a response."
+        "es": "Cierre de marca y créditos. La toma muestra: Estación y emisaria conservan luces propias sin sincronizar con la Ardor; el plano no confirma respuesta.",
+        "en": "Close on the brand and credits. The shot shows: Station and emissary retain their own lights without synchronizing with the Ardor; the shot does not confirm a response."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
@@ -3041,16 +3113,6 @@
       "cuePlacements": [
         {
           "cueId": "trailer:cue-i-01",
-          "atMs": 0,
-          "durationMs": 4000
-        },
-        {
-          "cueId": "trailer:cue-i-02",
-          "atMs": 0,
-          "durationMs": 4000
-        },
-        {
-          "cueId": "trailer:cue-i-03",
           "atMs": 0,
           "durationMs": 4000
         }
@@ -3084,32 +3146,38 @@
       "number": 2,
       "order": 29,
       "description": {
-        "es": "Corte a negro y títulos antes de resolver el canal, la amenaza o la aproximación.",
-        "en": "Cut to black and titles before resolving the channel, threat, or approach."
+        "es": "Corte a negro y títulos LIGHT DELAY / LATE LIGHT.",
+        "en": "Cut to black and LIGHT DELAY / LATE LIGHT titles."
       },
       "purpose": {
-        "es": "Cierre de marca. La toma muestra: Corte a negro y títulos antes de resolver el canal, la amenaza o la aproximación.",
-        "en": "Close on the brand. The shot shows: Cut to black and titles before resolving the channel, threat, or approach."
+        "es": "Cierre de marca y créditos. La toma muestra: Corte a negro y títulos LIGHT DELAY / LATE LIGHT.",
+        "en": "Close on the brand and credits. The shot shows: Cut to black and LIGHT DELAY / LATE LIGHT titles."
       },
       "locationId": "location:celestial-ardor-bridge",
       "composition": {
-        "size": "LS",
+        "size": "OTHER",
         "framing": {
-          "es": "PG",
-          "en": "PG"
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
         },
         "aspectRatio": "16:9"
       },
       "camera": {
+        "movement": "locked",
         "movementDescription": {
-          "es": "24 mm exterior · sin cierre triunfalista; escala humana subordinada.",
-          "en": "24 mm outside · without triumphalist closure; subordinate human scale."
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
         }
       },
       "durationMs": 4000,
       "cuePlacements": [
         {
-          "cueId": "trailer:cue-i-04",
+          "cueId": "trailer:cue-i-02",
+          "atMs": 0,
+          "durationMs": 4000
+        },
+        {
+          "cueId": "trailer:cue-i-03",
           "atMs": 0,
           "durationMs": 4000
         }
@@ -3118,18 +3186,238 @@
         "trailer:take-i-02-01"
       ],
       "selectedTakeId": "trailer:take-i-02-01",
-      "sourceRefs": [
-        {
-          "scriptId": "script:light-delay-main-short",
-          "shotId": "main:shot-17-06"
-        }
-      ],
       "notes": [
         {
-          "type": "editorial",
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
           "text": {
-            "es": "Reutiliza frame de main:shot-17-06 (asset asset:animatic-17-06).",
-            "en": "Reuse frame from main:shot-17-06 (asset asset:animatic-17-06)."
+            "es": "Prompt B (EN on-image): trailer end brand LIGHT DELAY / LATE LIGHT. See docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt B (EN on-image): trailer end brand LIGHT DELAY / LATE LIGHT. See docs/TITLE_AND_CREDITS.md."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:shot-i-03",
+      "sceneId": "trailer:scene-i",
+      "beatIds": [
+        "trailer:beat-i-01"
+      ],
+      "number": 3,
+      "order": 30,
+      "description": {
+        "es": "Lema en cartela tipográfica.",
+        "en": "Tagline typographic card."
+      },
+      "purpose": {
+        "es": "Cierre de marca y créditos. La toma muestra: Lema en cartela tipográfica.",
+        "en": "Close on the brand and credits. The shot shows: Tagline typographic card."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer:cue-i-04",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer:take-i-03-01"
+      ],
+      "selectedTakeId": "trailer:take-i-03-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt C (EN on-image): tagline SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME. See docs/TITLE_AND_CREDITS.md."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:shot-i-04",
+      "sceneId": "trailer:scene-i",
+      "beatIds": [
+        "trailer:beat-i-01"
+      ],
+      "number": 4,
+      "order": 31,
+      "description": {
+        "es": "Tarjeta de crédito: escrito y producido por.",
+        "en": "Credit card: written and produced by."
+      },
+      "purpose": {
+        "es": "Acreditar autoría y producción.",
+        "en": "Credit authorship and production."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer:cue-i-05",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer:take-i-04-01"
+      ],
+      "selectedTakeId": "trailer:take-i-04-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D1 (EN on-image): WRITTEN AND PRODUCED BY. See docs/TITLE_AND_CREDITS.md."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:shot-i-05",
+      "sceneId": "trailer:scene-i",
+      "beatIds": [
+        "trailer:beat-i-01"
+      ],
+      "number": 5,
+      "order": 32,
+      "description": {
+        "es": "Tarjeta de crédito: asistencia de IA.",
+        "en": "Credit card: AI assistance."
+      },
+      "purpose": {
+        "es": "Acreditar asistencia de modelos.",
+        "en": "Credit model assistance."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer:cue-i-06",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer:take-i-05-01"
+      ],
+      "selectedTakeId": "trailer:take-i-05-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D2 (EN on-image): AI ASSISTANCE. See docs/TITLE_AND_CREDITS.md."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer:shot-i-06",
+      "sceneId": "trailer:scene-i",
+      "beatIds": [
+        "trailer:beat-i-01"
+      ],
+      "number": 6,
+      "order": 33,
+      "description": {
+        "es": "Tarjeta de crédito: herramientas de producción.",
+        "en": "Credit card: production tools."
+      },
+      "purpose": {
+        "es": "Acreditar esquema y herramientas.",
+        "en": "Credit schema and tools."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "composition": {
+        "size": "OTHER",
+        "framing": {
+          "es": "Cartela tipográfica a pantalla completa",
+          "en": "Full-frame typographic card"
+        },
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro / tipografía fija",
+          "en": "Black field / locked typography"
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer:cue-i-07",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer:take-i-06-01"
+      ],
+      "selectedTakeId": "trailer:take-i-06-01",
+      "notes": [
+        {
+          "type": "production",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md.",
+            "en": "Prompt D3 (EN on-image): PRODUCTION TOOLS. See docs/TITLE_AND_CREDITS.md."
           }
         }
       ]
@@ -3729,20 +4017,89 @@
       "shotId": "trailer:shot-i-02",
       "number": 1,
       "status": "selected",
-      "imageAssetId": "asset:animatic-17-06",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_replacement",
         "reasons": [
-          "canon_mismatch"
+          "placeholder"
         ],
         "explanation": {
-          "es": "Still desactualizado tras el cambio de orientación de la Ardor (cubiertas perpendiculares al progrado) y la revisión visual de exteriores; regenerar la toma.",
-          "en": "Still outdated after the Ardor orientation change (decks perpendicular to prograde) and the exterior visual revision; regenerate the shot."
+          "es": "Título/crédito; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "Title/credit; still pending authorized generation (EN prompt in notes)."
         },
-        "replacementBrief": {
-          "es": "Regenerar coherente con la arquitectura actual (empuje = arriba), encuadre y descripción de la toma; no reutilizar frames previos del animatic.",
-          "en": "Regenerate to match the current architecture (thrust = up), framing, and shot description; do not reuse previous animatic frames."
-        }
+        "sourceShotId": "trailer:shot-i-02"
+      }
+    },
+    {
+      "id": "trailer:take-i-03-01",
+      "shotId": "trailer:shot-i-03",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "Title/credit; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "trailer:shot-i-03"
+      }
+    },
+    {
+      "id": "trailer:take-i-04-01",
+      "shotId": "trailer:shot-i-04",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "Title/credit; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "trailer:shot-i-04"
+      }
+    },
+    {
+      "id": "trailer:take-i-05-01",
+      "shotId": "trailer:shot-i-05",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "Title/credit; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "trailer:shot-i-05"
+      }
+    },
+    {
+      "id": "trailer:take-i-06-01",
+      "shotId": "trailer:shot-i-06",
+      "number": 1,
+      "status": "selected",
+      "imageAssetId": "asset:animatic-placeholder-missing-frame",
+      "imageStatus": {
+        "status": "needs_replacement",
+        "reasons": [
+          "placeholder"
+        ],
+        "explanation": {
+          "es": "Título/crédito; still pendiente de generación autorizada (prompt EN en notas).",
+          "en": "Title/credit; still pending authorized generation (EN prompt in notes)."
+        },
+        "sourceShotId": "trailer:shot-i-06"
       }
     }
   ]
