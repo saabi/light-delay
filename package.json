@@ -31,6 +31,7 @@
 		"schema:types:check": "node scripts/generate-schema-types.mjs --check",
 		"production:plans": "node scripts/build-generation-plans.mjs",
 		"production:plans:check": "node scripts/build-generation-plans.mjs --check",
+		"production:checklist:higgsfield": "node scripts/generate-higgsfield-pre-subscribe-checklist.mjs",
 		"generated:check": "npm run build:trailer:check && npm run build:long:check && npm run archive:orphan-actions:check && npm run notes:check && npm run schema:types:check && npm run production:plans:check && npm run check:trailer-spoilers",
 		"check:trailer-spoilers": "node scripts/check-trailer-spoilers.mjs",
 		"build:brand": "node scripts/build-brand-assets.mjs",

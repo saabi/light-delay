@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-01 — Checklist pre-suscripción Higgsfield
+
+- Estrategia acordada: **Ultra × 1 mes** tras congelar outline/guion/animatic/prompts; no suscribir hasta cerrar editorial.
+- Checklist regenerable: `docs/production/HIGGSFIELD_PRE_SUBSCRIBE_CHECKLIST.md` (28 video gens tráiler, 46 festival nuevos, 5+4 PNG skip, ~888 cr @ 480p sin reintentos). JSON: `data/production/checklists/higgsfield-pre-subscribe.json`.
+
 ## 2026-08-31 — Referencia Higgsfield MCP
 
 - Referencia operativa MCP (créditos vs Unlimited, dos agentes, JSON de corrida): `docs/technical/HIGGSFIELD_MCP.md`.

@@ -1,0 +1,882 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-09-01T21:53:30.171Z",
+  "strategy": {
+    "plan": "higgsfield-ultra-monthly",
+    "subscribeWhen": "outline_script_animatic_prompts_frozen",
+    "defaultResolution": "480p",
+    "festivalProject": "Cinema Studio festival submission project (all competition gens in-project)"
+  },
+  "counts": {
+    "trailerShots": 33,
+    "festivalShots": 71,
+    "trailerPngSkip": 5,
+    "trailerVideoGenerations": 28,
+    "festivalPngSkip": 4,
+    "festivalReuseFromTrailer": 21,
+    "festivalMustGenerateAfterTrailer": 46
+  },
+  "creditEstimates": {
+    "trailerPass": {
+      "shots": 28,
+      "credits": 336,
+      "note": "~12 cr/shot @ 4s min bill, 480p"
+    },
+    "festivalIncremental": {
+      "shots": 46,
+      "credits": 552,
+      "note": "~12 cr/shot @ 4s min bill, 480p"
+    },
+    "combined480p": {
+      "shots": 74,
+      "credits": 888,
+      "note": "~12 cr/shot @ 4s min bill, 480p"
+    },
+    "ultraMonthlyAllowance": 3000
+  },
+  "preSubscribeGates": [
+    {
+      "id": "gate-outline-festival",
+      "path": "data/outlines/light-delay-festival.json",
+      "status": "review"
+    },
+    {
+      "id": "gate-script-festival",
+      "path": "data/scripts/light-delay-festival.json",
+      "status": "review",
+      "note": "Diálogo Zao/Elin pendiente (informe gap A/B/E/F)"
+    },
+    {
+      "id": "gate-script-trailer",
+      "path": "data/scripts/light-delay-trailer.json",
+      "status": "draft_ok"
+    },
+    {
+      "id": "gate-animatic-refs",
+      "path": "static/assets/animatic/",
+      "status": "partial"
+    },
+    {
+      "id": "gate-hf-uploads",
+      "path": "higgsfield-uploads/",
+      "status": "staging"
+    },
+    {
+      "id": "gate-production-plans",
+      "path": "data/production/plans/",
+      "status": "blocked",
+      "note": "compiledPrompt null en todas las tomas"
+    },
+    {
+      "id": "gate-festival-project",
+      "path": "higgsfield.ai Cinema Studio",
+      "status": "external",
+      "note": "Proyecto público sin generaciones aún"
+    }
+  ],
+  "trailer": [
+    {
+      "id": "trailer:shot-a-01",
+      "scene": "a",
+      "main": "main:shot-01-01",
+      "dur": 3500,
+      "asset": "asset:animatic-01-01",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-a-01"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-a-02",
+      "scene": "a",
+      "main": "main:shot-01-08",
+      "dur": 4500,
+      "asset": "asset:animatic-01-08",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-b-01",
+      "scene": "b",
+      "main": "main:shot-02-04",
+      "dur": 3000,
+      "asset": "asset:animatic-02-04",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-c-09"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-b-02",
+      "scene": "b",
+      "main": "main:shot-04-01",
+      "dur": 3500,
+      "asset": "asset:animatic-04-01",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-a-02"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-b-03",
+      "scene": "b",
+      "main": "main:shot-14-05",
+      "dur": 3600,
+      "asset": "asset:animatic-14-05",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-f-06"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-c-01",
+      "scene": "c",
+      "main": "main:shot-04-02",
+      "dur": 4000,
+      "asset": "asset:animatic-04-02",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-a-03"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-c-02",
+      "scene": "c",
+      "main": "main:shot-04-03",
+      "dur": 4500,
+      "asset": "asset:animatic-04-03",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-c-03",
+      "scene": "c",
+      "main": "main:shot-05-01",
+      "dur": 4500,
+      "asset": "asset:animatic-05-01",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-b-01"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-d-01",
+      "scene": "d",
+      "main": "main:shot-05-04",
+      "dur": 3600,
+      "asset": "asset:animatic-05-04",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-d-02",
+      "scene": "d",
+      "main": "main:shot-05-06",
+      "dur": 3500,
+      "asset": "asset:animatic-05-06",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-d-03",
+      "scene": "d",
+      "main": "main:shot-06-01",
+      "dur": 3500,
+      "asset": "asset:animatic-06-01",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-b-04"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-d-04",
+      "scene": "d",
+      "main": "main:shot-06-03",
+      "dur": 3000,
+      "asset": "asset:animatic-06-03",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-b-05",
+        "festival:shot-b-04c"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-e-01",
+      "scene": "e",
+      "main": "main:shot-06-09",
+      "dur": 4500,
+      "asset": "asset:animatic-placeholder-missing-frame",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-e-02",
+      "scene": "e",
+      "main": "main:shot-07-02",
+      "dur": 2500,
+      "asset": "asset:animatic-07-02",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-c-02"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-f-01",
+      "scene": "f",
+      "main": "main:shot-07-08",
+      "dur": 3000,
+      "asset": "asset:animatic-07-03",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-f-02",
+      "scene": "f",
+      "main": "main:shot-07-10",
+      "dur": 3000,
+      "asset": "asset:animatic-07-05",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-f-03",
+      "scene": "f",
+      "main": "main:shot-08-02",
+      "dur": 2000,
+      "asset": "asset:animatic-08-02",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-f-04",
+      "scene": "f",
+      "main": "main:shot-10-01",
+      "dur": 3200,
+      "asset": "asset:animatic-10-01",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-d-01",
+        "festival:shot-d-00"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-g-01",
+      "scene": "g",
+      "main": "main:shot-10-02",
+      "dur": 2800,
+      "asset": "asset:animatic-10-02",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-d-04"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-g-02",
+      "scene": "g",
+      "main": "main:shot-10-03",
+      "dur": 3000,
+      "asset": "asset:animatic-10-03",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-d-02"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-g-03",
+      "scene": "g",
+      "main": "main:shot-10-04",
+      "dur": 2800,
+      "asset": "asset:animatic-10-04",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-d-03"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-g-04",
+      "scene": "g",
+      "main": "main:shot-10-05",
+      "dur": 3000,
+      "asset": "asset:animatic-10-05",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-d-04b"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-h-01",
+      "scene": "h",
+      "main": "main:shot-14-02",
+      "dur": 2000,
+      "asset": "asset:animatic-14-02",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-f-01",
+        "festival:shot-g-01"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-h-02",
+      "scene": "h",
+      "main": "main:shot-14-04",
+      "dur": 2500,
+      "asset": "asset:animatic-14-04",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-f-05"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-h-03",
+      "scene": "h",
+      "main": "main:shot-14-06",
+      "dur": 1500,
+      "asset": "asset:animatic-14-06",
+      "pngSkip": null,
+      "festivalMatches": [],
+      "genMode": "trailer_only"
+    },
+    {
+      "id": "trailer:shot-h-04",
+      "scene": "h",
+      "main": "main:shot-14-05",
+      "dur": 1500,
+      "asset": "asset:animatic-14-05",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-f-06"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-h-05",
+      "scene": "h",
+      "main": "main:shot-16-01",
+      "dur": 2500,
+      "asset": "asset:animatic-16-01",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-g-05"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-i-01",
+      "scene": "i",
+      "main": "main:shot-16-03",
+      "dur": 4000,
+      "asset": "asset:animatic-16-03",
+      "pngSkip": null,
+      "festivalMatches": [
+        "festival:shot-g-07"
+      ],
+      "genMode": "reuse_candidate"
+    },
+    {
+      "id": "trailer:shot-i-02",
+      "scene": "i",
+      "main": null,
+      "dur": 4000,
+      "asset": "asset:animatic-title-trailer-brand",
+      "pngSkip": "title_credits_segment_i",
+      "festivalMatches": [],
+      "genMode": "png_skip"
+    },
+    {
+      "id": "trailer:shot-i-03",
+      "scene": "i",
+      "main": null,
+      "dur": 2500,
+      "asset": "asset:animatic-title-trailer-tagline",
+      "pngSkip": "title_credits_segment_i",
+      "festivalMatches": [],
+      "genMode": "png_skip"
+    },
+    {
+      "id": "trailer:shot-i-04",
+      "scene": "i",
+      "main": null,
+      "dur": 2500,
+      "asset": "asset:animatic-placeholder-missing-frame",
+      "pngSkip": "title_credits_segment_i",
+      "festivalMatches": [],
+      "genMode": "png_skip"
+    },
+    {
+      "id": "trailer:shot-i-05",
+      "scene": "i",
+      "main": null,
+      "dur": 2500,
+      "asset": "asset:animatic-placeholder-missing-frame",
+      "pngSkip": "title_credits_segment_i",
+      "festivalMatches": [],
+      "genMode": "png_skip"
+    },
+    {
+      "id": "trailer:shot-i-06",
+      "scene": "i",
+      "main": null,
+      "dur": 2500,
+      "asset": "asset:animatic-placeholder-missing-frame",
+      "pngSkip": "title_credits_segment_i",
+      "festivalMatches": [],
+      "genMode": "png_skip"
+    }
+  ],
+  "festival": {
+    "reuseFromTrailer": [
+      {
+        "id": "festival:shot-a-01",
+        "main": "main:shot-01-01",
+        "trailerSource": "trailer:shot-a-01"
+      },
+      {
+        "id": "festival:shot-a-02",
+        "main": "main:shot-04-01",
+        "trailerSource": "trailer:shot-b-02"
+      },
+      {
+        "id": "festival:shot-a-03",
+        "main": "main:shot-04-02",
+        "trailerSource": "trailer:shot-c-01"
+      },
+      {
+        "id": "festival:shot-b-01",
+        "main": "main:shot-05-01",
+        "trailerSource": "trailer:shot-c-03"
+      },
+      {
+        "id": "festival:shot-b-04",
+        "main": "main:shot-06-01",
+        "trailerSource": "trailer:shot-d-03"
+      },
+      {
+        "id": "festival:shot-b-05",
+        "main": "main:shot-06-03",
+        "trailerSource": "trailer:shot-d-04"
+      },
+      {
+        "id": "festival:shot-c-02",
+        "main": "main:shot-07-02",
+        "trailerSource": "trailer:shot-e-02"
+      },
+      {
+        "id": "festival:shot-c-09",
+        "main": "main:shot-02-04",
+        "trailerSource": "trailer:shot-b-01"
+      },
+      {
+        "id": "festival:shot-d-01",
+        "main": "main:shot-10-01",
+        "trailerSource": "trailer:shot-f-04"
+      },
+      {
+        "id": "festival:shot-d-02",
+        "main": "main:shot-10-03",
+        "trailerSource": "trailer:shot-g-02"
+      },
+      {
+        "id": "festival:shot-d-03",
+        "main": "main:shot-10-04",
+        "trailerSource": "trailer:shot-g-03"
+      },
+      {
+        "id": "festival:shot-d-04",
+        "main": "main:shot-10-02",
+        "trailerSource": "trailer:shot-g-01"
+      },
+      {
+        "id": "festival:shot-b-04c",
+        "main": "main:shot-06-03",
+        "trailerSource": "trailer:shot-d-04"
+      },
+      {
+        "id": "festival:shot-d-00",
+        "main": "main:shot-10-01",
+        "trailerSource": "trailer:shot-f-04"
+      },
+      {
+        "id": "festival:shot-d-04b",
+        "main": "main:shot-10-05",
+        "trailerSource": "trailer:shot-g-04"
+      },
+      {
+        "id": "festival:shot-f-01",
+        "main": "main:shot-14-02",
+        "trailerSource": "trailer:shot-h-01"
+      },
+      {
+        "id": "festival:shot-f-05",
+        "main": "main:shot-14-04",
+        "trailerSource": "trailer:shot-h-02"
+      },
+      {
+        "id": "festival:shot-f-06",
+        "main": "main:shot-14-05",
+        "trailerSource": "trailer:shot-b-03"
+      },
+      {
+        "id": "festival:shot-g-01",
+        "main": "main:shot-14-02",
+        "trailerSource": "trailer:shot-h-01"
+      },
+      {
+        "id": "festival:shot-g-05",
+        "main": "main:shot-16-01",
+        "trailerSource": "trailer:shot-h-05"
+      },
+      {
+        "id": "festival:shot-g-07",
+        "main": "main:shot-16-03",
+        "trailerSource": "trailer:shot-i-01"
+      }
+    ],
+    "mustGenerate": [
+      {
+        "id": "festival:shot-a-04",
+        "scene": "a",
+        "main": "main:shot-03-04",
+        "dur": 6500
+      },
+      {
+        "id": "festival:shot-b-02",
+        "scene": "b",
+        "main": "main:shot-05-03",
+        "dur": 7000
+      },
+      {
+        "id": "festival:shot-b-03",
+        "scene": "b",
+        "main": "main:shot-05-07",
+        "dur": 6000
+      },
+      {
+        "id": "festival:shot-b-06",
+        "scene": "b",
+        "main": "main:shot-06-06",
+        "dur": 11500
+      },
+      {
+        "id": "festival:shot-b-07",
+        "scene": "b",
+        "main": "main:shot-06-07",
+        "dur": 7500
+      },
+      {
+        "id": "festival:shot-c-01",
+        "scene": "c",
+        "main": "main:shot-07-01",
+        "dur": 3000
+      },
+      {
+        "id": "festival:shot-c-03",
+        "scene": "c",
+        "main": "main:shot-07-03",
+        "dur": 2500
+      },
+      {
+        "id": "festival:shot-c-04",
+        "scene": "c",
+        "main": "main:shot-06-05",
+        "dur": 2500
+      },
+      {
+        "id": "festival:shot-c-05",
+        "scene": "c",
+        "main": "main:shot-07-05",
+        "dur": 2500
+      },
+      {
+        "id": "festival:shot-c-06",
+        "scene": "c",
+        "main": "main:shot-07-04",
+        "dur": 2000
+      },
+      {
+        "id": "festival:shot-c-07",
+        "scene": "c",
+        "main": "main:shot-08-03",
+        "dur": 5000
+      },
+      {
+        "id": "festival:shot-c-08",
+        "scene": "c",
+        "main": "main:shot-08-04",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-c-10",
+        "scene": "c",
+        "main": "main:shot-07-01",
+        "dur": 7600
+      },
+      {
+        "id": "festival:shot-d-05",
+        "scene": "d",
+        "main": "main:shot-09-02",
+        "dur": 3500
+      },
+      {
+        "id": "festival:shot-d-06",
+        "scene": "d",
+        "main": "main:shot-10-07",
+        "dur": 5500
+      },
+      {
+        "id": "festival:shot-d-07",
+        "scene": "d",
+        "main": "main:shot-11-01",
+        "dur": 7900
+      },
+      {
+        "id": "festival:shot-d-08",
+        "scene": "d",
+        "main": "main:shot-11-05",
+        "dur": 5000
+      },
+      {
+        "id": "festival:shot-d-09",
+        "scene": "d",
+        "main": "main:shot-11-02",
+        "dur": 3600
+      },
+      {
+        "id": "festival:shot-b-04a",
+        "scene": "b",
+        "main": "main:shot-06-02",
+        "dur": 12500
+      },
+      {
+        "id": "festival:shot-b-04b",
+        "scene": "b",
+        "main": "main:shot-06-02",
+        "dur": 5000
+      },
+      {
+        "id": "festival:shot-b-08",
+        "scene": "b",
+        "main": "main:shot-05-08",
+        "dur": 9000
+      },
+      {
+        "id": "festival:shot-b-09",
+        "scene": "b",
+        "main": "main:shot-06-04",
+        "dur": 6500
+      },
+      {
+        "id": "festival:shot-b-10",
+        "scene": "b",
+        "main": "main:shot-06-05",
+        "dur": 6500
+      },
+      {
+        "id": "festival:shot-e-01",
+        "scene": "e",
+        "main": "main:shot-11-05",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-e-02",
+        "scene": "e",
+        "main": "main:shot-12-01",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-e-03",
+        "scene": "e",
+        "main": "main:shot-06-06",
+        "dur": 11000
+      },
+      {
+        "id": "festival:shot-e-04",
+        "scene": "e",
+        "main": "main:shot-12-02",
+        "dur": 2500
+      },
+      {
+        "id": "festival:shot-e-05",
+        "scene": "e",
+        "main": "main:shot-12-03",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-e-06",
+        "scene": "e",
+        "main": "main:shot-12-04",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-e-07",
+        "scene": "e",
+        "main": "main:shot-12-05",
+        "dur": 7000
+      },
+      {
+        "id": "festival:shot-e-08",
+        "scene": "e",
+        "main": "main:shot-12-06",
+        "dur": 3000
+      },
+      {
+        "id": "festival:shot-e-09",
+        "scene": "e",
+        "main": "main:shot-12-08",
+        "dur": 5500
+      },
+      {
+        "id": "festival:shot-e-10",
+        "scene": "e",
+        "main": "main:shot-12-07",
+        "dur": 4500
+      },
+      {
+        "id": "festival:shot-f-02",
+        "scene": "f",
+        "main": "main:shot-13-02",
+        "dur": 6000
+      },
+      {
+        "id": "festival:shot-f-03",
+        "scene": "f",
+        "main": "main:shot-13-04",
+        "dur": 6000
+      },
+      {
+        "id": "festival:shot-f-04",
+        "scene": "f",
+        "main": "main:shot-14-08",
+        "dur": 6000
+      },
+      {
+        "id": "festival:shot-f-07",
+        "scene": "f",
+        "main": "main:shot-14-10",
+        "dur": 7000
+      },
+      {
+        "id": "festival:shot-f-08",
+        "scene": "f",
+        "main": "main:shot-15-02",
+        "dur": 5000
+      },
+      {
+        "id": "festival:shot-g-02",
+        "scene": "g",
+        "main": "main:shot-15-04",
+        "dur": 3000
+      },
+      {
+        "id": "festival:shot-g-03",
+        "scene": "g",
+        "main": "main:shot-15-05",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-g-04",
+        "scene": "g",
+        "main": "main:shot-15-06",
+        "dur": 4500
+      },
+      {
+        "id": "festival:shot-g-06",
+        "scene": "g",
+        "main": "main:shot-16-02",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-g-08",
+        "scene": "g",
+        "main": "main:shot-17-02",
+        "dur": 7000
+      },
+      {
+        "id": "festival:shot-g-09",
+        "scene": "g",
+        "main": "main:shot-17-05",
+        "dur": 6000
+      },
+      {
+        "id": "festival:shot-g-10",
+        "scene": "g",
+        "main": "main:shot-17-02",
+        "dur": 4000
+      },
+      {
+        "id": "festival:shot-g-11",
+        "scene": "g",
+        "main": "main:shot-17-06",
+        "dur": 5000
+      }
+    ],
+    "pngSkip": [
+      {
+        "id": "festival:shot-title-01",
+        "reason": "film_title_card"
+      },
+      {
+        "id": "festival:shot-h-01",
+        "reason": "credits_cards"
+      },
+      {
+        "id": "festival:shot-h-02",
+        "reason": "credits_cards"
+      },
+      {
+        "id": "festival:shot-h-03",
+        "reason": "credits_cards"
+      }
+    ]
+  },
+  "trailerPngSkip": [
+    {
+      "id": "trailer:shot-i-02",
+      "reason": "title_credits_segment_i",
+      "asset": "asset:animatic-title-trailer-brand"
+    },
+    {
+      "id": "trailer:shot-i-03",
+      "reason": "title_credits_segment_i",
+      "asset": "asset:animatic-title-trailer-tagline"
+    },
+    {
+      "id": "trailer:shot-i-04",
+      "reason": "title_credits_segment_i",
+      "asset": "asset:animatic-placeholder-missing-frame"
+    },
+    {
+      "id": "trailer:shot-i-05",
+      "reason": "title_credits_segment_i",
+      "asset": "asset:animatic-placeholder-missing-frame"
+    },
+    {
+      "id": "trailer:shot-i-06",
+      "reason": "title_credits_segment_i",
+      "asset": "asset:animatic-placeholder-missing-frame"
+    }
+  ]
+}

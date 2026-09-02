@@ -19,6 +19,7 @@
 ## Higgsfield
 
 - La estrategia discutida parte de que las generaciones presentadas al festival deben realizarse con herramientas de Higgsfield.
+- **Suscripción:** Ultra mensual único, **después** de congelar outline, guion, animatic y prompts. Checklist por toma: [`docs/production/HIGGSFIELD_PRE_SUBSCRIBE_CHECKLIST.md`](production/HIGGSFIELD_PRE_SUBSCRIBE_CHECKLIST.md) (`npm run production:checklist:higgsfield`).
 - Referencia operativa MCP, créditos vs Unlimited y flujo de dos agentes: [`docs/technical/HIGGSFIELD_MCP.md`](technical/HIGGSFIELD_MCP.md).
 - Las imágenes y animatics externos pueden servir para diseño, referencia, encuadre y planificación, pero debe verificarse su admisibilidad antes de presentar material final.
 - Prioridad: minimizar generaciones desperdiciadas mediante prompts cerrados, referencias visuales y aprobación previa de cada toma.

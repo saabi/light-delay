@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-01 — Checklist pre-suscripción Higgsfield
+
+- Añadido `docs/production/HIGGSFIELD_PRE_SUBSCRIBE_CHECKLIST.md` y snapshot JSON (`data/production/checklists/higgsfield-pre-subscribe.json`): matriz tráiler↔festival, PNG skip, ~28 gens de tráiler + ~46 festival incremental (~888 cr @ 480p), puertas editoriales antes de Ultra.
+- Script `scripts/generate-higgsfield-pre-subscribe-checklist.mjs` (`npm run production:checklist:higgsfield`).
+
 ## 2026-08-31 — Referencia Higgsfield MCP
 
 - Añadido `docs/technical/HIGGSFIELD_MCP.md`: conexión MCP oficial, créditos vs Unlimited 24 h, referencias, flujo de dos agentes y esquema JSON propuesto para corridas.
