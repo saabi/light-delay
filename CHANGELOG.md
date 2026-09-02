@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-02 — Borrador de reestructura Festival (no canon)
+
+- Añadido `docs/wip/festival-cut-outline-v2-restructured-EN.md` como propuesta de trabajo en inglés. No modifica outlines ni guiones JSON; el desfase de traducción queda explícito.
+
 ## 2026-09-01 — Consola del puente y tomas de tránsito de Júpiter
 
 - Actualizado `blender/light-delay-blockout.blend` y exportado `blender/bridge-console-station.glb`.

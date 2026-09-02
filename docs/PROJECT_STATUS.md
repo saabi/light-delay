@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-02 — Borrador de reestructura Festival (no canon)
+
+- Propuesta en `docs/wip/festival-cut-outline-v2-restructured-EN.md`. No toca `data/outlines/` ni guiones. Sólo inglés; falta copia española.
+- No sustituye el canon vigente (sabotaje COM / láser). Cualquier adopción requiere confirmación explícita y escaleta JSON posterior.
+
 ## 2026-09-01 — Consola del puente y tomas de tránsito de Júpiter
 
 - Blockout actualizado; GLB de la consola en `blender/bridge-console-station.glb` (LFS).
