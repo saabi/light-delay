@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-01 — Consola del puente y tomas de tránsito de Júpiter
+
+- Actualizado `blender/light-delay-blockout.blend` y exportado `blender/bridge-console-station.glb`.
+- Añadidas vistas de referencia del puesto con silla en `static/assets/props/bridge-console-station-with-chair/` (aún no registradas en `data/assets.json`).
+- Añadidas escenas de toma `blender/shots/jupiter-transit-a-01b-approach-sunlit.blend` y `jupiter-transit-a-01c-flip-and-burn.blend`.
+
 ## 2026-09-01 — Checklist pre-suscripción Higgsfield
 
 - Añadido `docs/production/HIGGSFIELD_PRE_SUBSCRIBE_CHECKLIST.md` y snapshot JSON (`data/production/checklists/higgsfield-pre-subscribe.json`): matriz tráiler↔festival, PNG skip, ~28 gens de tráiler + ~46 festival incremental (~888 cr @ 480p), puertas editoriales antes de Ultra.

@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-01 — Consola del puente y tomas de tránsito de Júpiter
+
+- Blockout actualizado; GLB de la consola en `blender/bridge-console-station.glb` (LFS).
+- Hojas de vista en `static/assets/props/bridge-console-station-with-chair/`; pendiente registrarlas en el catálogo de assets.
+- Escenas de toma de tránsito: `blender/shots/jupiter-transit-a-01b-approach-sunlit.blend` y `jupiter-transit-a-01c-flip-and-burn.blend`.
+
 ## 2026-09-01 — Checklist pre-suscripción Higgsfield
 
 - Estrategia acordada: **Ultra × 1 mes** tras congelar outline/guion/animatic/prompts; no suscribir hasta cerrar editorial.
