@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0.0",
-	"generatedAt": "2026-08-28T22:05:17.994Z",
+	"generatedAt": "2026-09-01T00:55:03.751Z",
 	"entries": {
 		"characters/zao/model-sheet.png.webp": {
 			"source": "/assets/characters/zao/model-sheet.png",
@@ -16,12 +16,12 @@
 			"size": 2457380,
 			"hash": "ba66028c0801c18a"
 		},
-		"characters/harlan/model-sheet.png.webp": {
-			"source": "/assets/characters/harlan/model-sheet.png",
-			"thumb": "/assets/_thumbs/characters/harlan/model-sheet.png.webp",
-			"mtimeMs": 1787611445000,
-			"size": 2231992,
-			"hash": "1cc40f6414b38367"
+		"characters/harlan/model-sheet-v2.png.webp": {
+			"source": "/assets/characters/harlan/model-sheet-v2.png",
+			"thumb": "/assets/_thumbs/characters/harlan/model-sheet-v2.png.webp",
+			"mtimeMs": 1788222333719.6296,
+			"size": 2298346,
+			"hash": "719392421fb58cd4"
 		},
 		"characters/rao/model-sheet.png.webp": {
 			"source": "/assets/characters/rao/model-sheet.png",
@@ -72,6 +72,27 @@
 			"size": 2680746,
 			"hash": "78f994f6078b9441"
 		},
+		"characters/manifestante-acheron/model-sheet.png.webp": {
+			"source": "/assets/characters/manifestante-acheron/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/manifestante-acheron/model-sheet.png.webp",
+			"mtimeMs": 1788223775181.9248,
+			"size": 2554292,
+			"hash": "c5a4b5b4c171e34f"
+		},
+		"characters/joven-contacto/model-sheet.png.webp": {
+			"source": "/assets/characters/joven-contacto/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/joven-contacto/model-sheet.png.webp",
+			"mtimeMs": 1788223842944.151,
+			"size": 2399341,
+			"hash": "2daacbb08343b42f"
+		},
+		"characters/periodista/model-sheet.png.webp": {
+			"source": "/assets/characters/periodista/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/periodista/model-sheet.png.webp",
+			"mtimeMs": 1788223903444.6995,
+			"size": 2295604,
+			"hash": "02e2fc7af0a27d36"
+		},
 		"locations/proxima-station/concept-sheet.png.webp": {
 			"source": "/assets/locations/proxima-station/concept-sheet.png",
 			"thumb": "/assets/_thumbs/locations/proxima-station/concept-sheet.png.webp",
@@ -113,6 +134,27 @@
 			"mtimeMs": 1787614081000,
 			"size": 2405752,
 			"hash": "7efde35d3714fea4"
+		},
+		"locations/celestial-ardor-bridge/realistic-reference.png.webp": {
+			"source": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-reference.png.webp",
+			"mtimeMs": 1788159777665.29,
+			"size": 2164946,
+			"hash": "97b36271ea893df0"
+		},
+		"locations/celestial-ardor-bridge/realistic-console-reference.png.webp": {
+			"source": "/assets/locations/celestial-ardor-bridge/realistic-console-reference.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-console-reference.png.webp",
+			"mtimeMs": 1788159777660.5498,
+			"size": 2429966,
+			"hash": "360fe0a9a1be87d1"
+		},
+		"locations/celestial-ardor-bridge/realistic-service-shaft-reference.png.webp": {
+			"source": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png.webp",
+			"mtimeMs": 1788159777670.945,
+			"size": 2135450,
+			"hash": "5bbfca7451215386"
 		},
 		"locations/celestial-ardor-engineering/concept-sheet.png.webp": {
 			"source": "/assets/locations/celestial-ardor-engineering/concept-sheet.png",
@@ -222,9 +264,9 @@
 		"animatic/frames/scene-01/shot-01.png.webp": {
 			"source": "/assets/animatic/frames/scene-01/shot-01.png",
 			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-01.png.webp",
-			"mtimeMs": 1787615693000,
-			"size": 1895377,
-			"hash": "44dd0de3d29d10e3"
+			"mtimeMs": 1787953223799.7715,
+			"size": 1913399,
+			"hash": "bbc4e48ac8bf9175"
 		},
 		"animatic/frames/scene-01/shot-02.png.webp": {
 			"source": "/assets/animatic/frames/scene-01/shot-02.png",
@@ -407,6 +449,13 @@
 			"mtimeMs": 1787617250000,
 			"size": 1688330,
 			"hash": "5d33da28c9a6f508"
+		},
+		"animatic/frames/scene-05/shot-07.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-07.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-07.png.webp",
+			"mtimeMs": 1788161122691.3374,
+			"size": 2575270,
+			"hash": "2517d435e61413d7"
 		},
 		"animatic/frames/scene-06/shot-01.png.webp": {
 			"source": "/assets/animatic/frames/scene-06/shot-01.png",
@@ -918,6 +967,27 @@
 			"mtimeMs": 1787622042000,
 			"size": 1634875,
 			"hash": "5de86354a5b458cb"
+		},
+		"animatic/titles/film-title.png.webp": {
+			"source": "/assets/animatic/titles/film-title.png",
+			"thumb": "/assets/_thumbs/animatic/titles/film-title.png.webp",
+			"mtimeMs": 1788159777652.4878,
+			"size": 181701,
+			"hash": "2b2c251ca2f1a56d"
+		},
+		"animatic/titles/trailer-brand.png.webp": {
+			"source": "/assets/animatic/titles/trailer-brand.png",
+			"thumb": "/assets/_thumbs/animatic/titles/trailer-brand.png.webp",
+			"mtimeMs": 1788159777654.5876,
+			"size": 825260,
+			"hash": "64d9ccf9e4726583"
+		},
+		"animatic/titles/trailer-tagline.png.webp": {
+			"source": "/assets/animatic/titles/trailer-tagline.png",
+			"thumb": "/assets/_thumbs/animatic/titles/trailer-tagline.png.webp",
+			"mtimeMs": 1788159777655.114,
+			"size": 165162,
+			"hash": "9deeb84a74f4bdc4"
 		},
 		"animatic/placeholder-missing-frame.png.webp": {
 			"source": "/assets/animatic/placeholder-missing-frame.png",
