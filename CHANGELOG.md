@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-08-31 — Referencias terrestres separadas
+
+- Añadidas hojas independientes para el manifestante Aqueronte, la partidaria del contacto y la periodista terrestre.
+- Las entidades de cada voz ahora apuntan a su referencia propia; `earth-protesters` se conserva para planos de multitud.
+- Higgsfield staging y el catálogo de assets se actualizaron (142 assets registrados).
+
+## 2026-08-31 — Hoja de referencia de Harlan regenerada
+
+- Reescrita la descripción canónica bilingüe de Rylen Harlan para fijar rasgos, porte y diferencia visual respecto de Voss.
+- Regenerada `static/assets/characters/harlan/model-sheet-v2.png` en el formato neutral del resto del elenco; la hoja anterior queda como procedencia histórica.
+- Harlan vuelve al staging de Higgsfield con su referencia versionada; queda pendiente sólo la verificación externa de similitud.
+- `npm run prepare:higgsfield` refresca copias de Zao, Harlan y briefs de escena 5 para subida externa.
+
 ## 2026-08-31 — Harlan desenchufa COM A/B (escena 5, toma 7)
 
 - Registrado `asset:animatic-05-07` (`scene-05/shot-07.png`) y enlazado en `main:take-05-07-01` y `festival:shot-b-03-take-01`; deja de reutilizar erróneamente `asset:animatic-12-08`.

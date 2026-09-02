@@ -31,14 +31,23 @@
       "id": "asset:character-harlan-sheet",
       "kind": "image",
       "role": "reference",
-      "path": "/assets/characters/harlan/model-sheet.png",
+      "path": "/assets/characters/harlan/model-sheet-v2.png",
       "mimeType": "image/png",
       "title": {
         "es": "Rylen Harlan model sheet",
         "en": "Rylen Harlan model sheet"
       },
       "width": 1536,
-      "height": 1024
+      "height": 1024,
+      "provenance": {
+        "status": "replaced",
+        "previousPath": "/assets/characters/harlan/model-sheet.png",
+        "method": "imagegen",
+        "notes": {
+          "es": "Hoja regenerada para distinguir visualmente a Harlan de Voss y conservar el formato neutral de las hojas de referencia del elenco.",
+          "en": "Regenerated to distinguish Harlan visually from Voss while preserving the cast reference-sheet format."
+        }
+      }
     },
     {
       "id": "asset:character-rao-sheet",
@@ -130,6 +139,66 @@
       },
       "width": 1536,
       "height": 1024
+    },
+    {
+      "id": "asset:character-manifestante-acheron-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/manifestante-acheron/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Hoja de referencia del manifestante Aqueronte",
+        "en": "Acheron protester reference sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "provenance": {
+        "method": "imagegen",
+        "notes": {
+          "es": "Hoja separada de la facción defensiva, derivada de la hoja combinada sin incluir partidarios del contacto.",
+          "en": "Separate defensive-faction sheet derived from the combined sheet without contact supporters."
+        }
+      }
+    },
+    {
+      "id": "asset:character-joven-contacto-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/joven-contacto/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Hoja de referencia de la partidaria del contacto",
+        "en": "Contact supporter reference sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "provenance": {
+        "method": "imagegen",
+        "notes": {
+          "es": "Hoja separada de la facción partidaria del contacto, derivada de la hoja combinada sin incluir manifestantes Aqueronte.",
+          "en": "Separate contact-supporter sheet derived from the combined sheet without Acheron protesters."
+        }
+      }
+    },
+    {
+      "id": "asset:character-periodista-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/periodista/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Hoja de referencia de la periodista",
+        "en": "Reporter reference sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "provenance": {
+        "method": "imagegen",
+        "notes": {
+          "es": "Hoja neutral de periodista de noticias terrestres para posibles insertos en cámara; la voz en off conserva su uso actual.",
+          "en": "Neutral Earth news reporter sheet for possible on-camera inserts; the existing voice-over use remains unchanged."
+        }
+      }
     },
     {
       "id": "asset:location-proxima-station-sheet",

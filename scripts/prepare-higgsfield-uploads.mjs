@@ -3,7 +3,7 @@
  * with unique filenames for external upload (Higgsfield).
  *
  * Does NOT rename or move static/assets/ sources.
- * Excludes Harlan pending visual redesign (see higgsfield-uploads/TODO.md).
+ * Includes the regenerated Harlan sheet after visual redesign.
  *
  * Usage: node scripts/prepare-higgsfield-uploads.mjs
  */
@@ -15,7 +15,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const STATIC = join(ROOT, 'static', 'assets');
 const OUT = join(ROOT, 'higgsfield-uploads');
 
-const SKIP_CHARACTER_SLUGS = new Set(['harlan']);
+const SKIP_CHARACTER_SLUGS = new Set();
 
 /** @type {{ kind: 'character' | 'location' | 'prop' | 'brief'; slug: string; label: string; sourceRel: string }[]} */
 const ENTRIES = [
@@ -30,6 +30,12 @@ const ENTRIES = [
 		slug: 'voss',
 		label: 'Elias Voss',
 		sourceRel: 'characters/voss/model-sheet.png'
+	},
+	{
+		kind: 'character',
+		slug: 'harlan',
+		label: 'Rylen Harlan',
+		sourceRel: 'characters/harlan/model-sheet-v2.png'
 	},
 	{
 		kind: 'character',
@@ -72,6 +78,24 @@ const ENTRIES = [
 		slug: 'earth-protesters',
 		label: 'Manifestantes terrestres',
 		sourceRel: 'characters/earth-protesters/model-sheet.png'
+	},
+	{
+		kind: 'character',
+		slug: 'manifestante-acheron',
+		label: 'Manifestante Aqueronte',
+		sourceRel: 'characters/manifestante-acheron/model-sheet.png'
+	},
+	{
+		kind: 'character',
+		slug: 'joven-contacto',
+		label: 'Joven partidaria del contacto',
+		sourceRel: 'characters/joven-contacto/model-sheet.png'
+	},
+	{
+		kind: 'character',
+		slug: 'periodista',
+		label: 'Periodista',
+		sourceRel: 'characters/periodista/model-sheet.png'
 	},
 	{
 		kind: 'location',
@@ -153,6 +177,18 @@ const ENTRIES = [
 	},
 	{
 		kind: 'brief',
+		slug: 'harlan-service-hatch-com-sabotage',
+		label: 'Harlan desenchufa COM A/B junto a la escotilla de servicio (animatic esc. 5 / toma 7)',
+		sourceRel: 'animatic/frames/scene-05/shot-07.png'
+	},
+	{
+		kind: 'brief',
+		slug: 'celestial-ardor-bridge-service-shaft',
+		label: 'Acceso de servicio oculto del puente (referencia realista)',
+		sourceRel: 'locations/celestial-ardor-bridge/realistic-service-shaft-reference.png'
+	},
+	{
+		kind: 'brief',
 		slug: 'proxima-ardor-berthed',
 		label: 'Proxima con Celestial Ardor atracada (bloqueo 3D, escala común)',
 		sourceRel: 'locations/proxima-station/proxima-with-ardor-berthed.png'
@@ -191,26 +227,27 @@ const ENTRIES = [
 
 const TODO_MD = `# TODO — Higgsfield uploads
 
-## Excluidos de este lote
+## Listo para subir (prioridad Zao / Harlan)
 
-- **Harlan** no se copia a \`higgsfield-uploads/\` ni debe subirse todavía.
+| Archivo | Uso en Higgsfield |
+| --- | --- |
+| \`characters/light-delay-character-zao.png\` | Referencia de personaje — Zao |
+| \`characters/light-delay-character-harlan.png\` | Referencia de personaje — Harlan (hoja v2, diferenciada de Voss) |
+| \`brief/light-delay-brief-zao-optical-contingency-transmitter.png\` | Contexto de escena — Zao en sala del núcleo |
+| \`brief/light-delay-brief-harlan-service-hatch-com-sabotage.png\` | Contexto de escena — sabotaje COM A/B |
+| \`brief/light-delay-brief-celestial-ardor-bridge-service-shaft.png\` | Localización — escotilla de servicio del puente |
 
-## Pendiente de redesign
+Subir también \`characters/light-delay-character-voss.png\` si Harlan comparte plano con el capitán; comparar en Higgsfield que no colapsen identidades.
 
-1. **Harlan** se parece demasiado al capitán (**Voss**). Hace falta un rediseño visual (silueta, rasgos, vestuario) que los separe con claridad en model sheets y frames.
+## Siguiente control
+
+- Verificar en Higgsfield que la hoja de Harlan mantiene separación suficiente de Voss antes de autorizar generación de tomas.
+- Las hojas de personaje no habilitan por sí solas regeneración de tomas; el freeze editorial del cut sigue vigente.
 
 ## Nombre de Elin resuelto
 
 - Se conservan el nombre legal **Elin Rao**, el ID \`character:rao\`, el slug \`rao\` y los paths existentes.
 - En diálogo, cartelas y texto operativo se usa **Elin**, por lo que ya no se confunde auditivamente con Zao.
-- Su sheet existente puede copiarse como referencia; esto no habilita regeneración de tomas ni producción visual.
-
-## Cuando estén listos
-
-1. Resolver el rediseño visual de Harlan.
-2. Añadir el slug \`harlan\` al mapa en \`scripts/prepare-higgsfield-uploads.mjs\`.
-3. Quitar \`harlan\` de \`SKIP_CHARACTER_SLUGS\`.
-4. Ejecutar \`npm run prepare:higgsfield\` sólo cuando se quiera refrescar el staging y actualizar este TODO.
 `;
 
 function destName(kind, slug) {
@@ -273,8 +310,9 @@ function main() {
 	writeFileSync(join(OUT, 'TODO.md'), TODO_MD, 'utf8');
 	writeFileSync(join(OUT, 'MANIFEST.md'), manifestLines.join('\n'), 'utf8');
 
+	const skippedNote = skipped ? ` skipped=${skipped}` : '';
 	console.log(
-		`prepare:higgsfield OK — copied=${copied} skipped=${skipped} (harlan) → ${relative(ROOT, OUT)}`
+		`prepare:higgsfield OK — copied=${copied}${skippedNote} → ${relative(ROOT, OUT)}`
 	);
 }
 

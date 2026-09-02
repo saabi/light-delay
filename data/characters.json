@@ -67,8 +67,8 @@
         "en": "Commander"
       },
       "description": {
-        "es": "Competencia creíble, convicción ideológica y quiebre.",
-        "en": "Credible competence, ideological conviction, and fracture."
+        "es": "Comandante de cuarenta y tantos, delgado y atlético, de rostro anguloso y afeitado, cabello castaño oscuro muy corto y una muesca cicatrizada en la ceja derecha. Su porte militar es ágil y controlado; combina competencia convincente y encanto medido con una convicción ideológica que convierte la prudencia en manipulación.",
+        "en": "A lean, athletic commander in his forties with an angular clean-shaven face, close-cropped dark brown hair, and a healed notch through his right eyebrow. His military bearing is agile and controlled; he combines credible competence and measured charm with an ideological conviction that turns prudence into manipulation."
       },
       "factionIds": [
         "faction:human"
@@ -284,13 +284,15 @@
         "en": "News voice-over"
       },
       "description": {
-        "es": "Narración de transmisión terrestre.",
-        "en": "Narration from an Earth transmission."
+        "es": "Periodista de noticias terrestres, sobria y observadora; su voz en off narra la transmisión mientras la imagen puede permanecer en mosaicos de archivo o mostrarla en cámara.",
+        "en": "A restrained, observant Earth news journalist; her voice-over narrates the broadcast while the image may remain archival mosaic footage or show her on camera."
       },
       "factionIds": [
         "faction:human"
       ],
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:character-periodista-sheet"
+      ],
       "aliases": [
         "PERIODISTA"
       ]
@@ -306,13 +308,15 @@
         "en": "Protester"
       },
       "description": {
-        "es": "Voz de la Directiva Aqueronte en transmisión.",
-        "en": "Voice of the Acheron Directive in a broadcast."
+        "es": "Civil asociado a la Directiva Aqueronte: postura cerrada, ropa de campo gastada y temor defensivo ante un contacto sin garantías.",
+        "en": "A civilian associated with the Acheron Directive: guarded posture, weathered field clothing, and defensive fear of contact without safeguards."
       },
       "factionIds": [
         "faction:human"
       ],
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:character-manifestante-acheron-sheet"
+      ],
       "aliases": [
         "MANIFESTANTE AQUERONTE"
       ]
@@ -328,13 +332,15 @@
         "en": "Protester"
       },
       "description": {
-        "es": "Voz partidaria del contacto en transmisión.",
-        "en": "Pro-contact voice in a broadcast."
+        "es": "Joven partidaria del contacto cauteloso: ropa cotidiana azul grisácea, postura abierta y esperanza atenta ante la posibilidad de no estar solos.",
+        "en": "A young cautious-contact supporter: blue-gray everyday clothing, open posture, and alert hope at the possibility that humanity is not alone."
       },
       "factionIds": [
         "faction:human"
       ],
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:character-joven-contacto-sheet"
+      ],
       "aliases": [
         "JOVEN PARTIDARIA DEL CONTACTO"
       ]

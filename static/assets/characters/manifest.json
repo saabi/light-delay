@@ -182,6 +182,39 @@
         1536,
         1024
       ]
+    },
+    {
+      "slug": "manifestante-acheron",
+      "name": "Manifestante Aqueronte",
+      "role": "Manifestante",
+      "note": "Facción defensiva separada para evitar mezclarla con partidarios del contacto.",
+      "category": "fondo",
+      "views": ["front", "left profile", "back"],
+      "expression_count": 5,
+      "file": "manifestante-acheron/model-sheet.png",
+      "dimensions": [1536, 1024]
+    },
+    {
+      "slug": "joven-contacto",
+      "name": "Joven partidaria del contacto",
+      "role": "Manifestante",
+      "note": "Facción de contacto cauteloso separada de los manifestantes Aqueronte.",
+      "category": "fondo",
+      "views": ["front", "left profile", "back"],
+      "expression_count": 5,
+      "file": "joven-contacto/model-sheet.png",
+      "dimensions": [1536, 1024]
+    },
+    {
+      "slug": "periodista",
+      "name": "Periodista",
+      "role": "Voz en off de noticias",
+      "note": "Referencia neutral para posibles insertos de la transmisión terrestre.",
+      "category": "secundario",
+      "views": ["front", "left profile", "back"],
+      "expression_count": 5,
+      "file": "periodista/model-sheet.png",
+      "dimensions": [1536, 1024]
     }
   ]
 }

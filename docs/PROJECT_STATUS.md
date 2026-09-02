@@ -1,5 +1,17 @@
 # Estado del proyecto
 
+## 2026-08-31 — Referencia visual de Harlan
+
+- Descripción canónica bilingüe ampliada para distinguir a Harlan de Voss en silueta, rostro, vestuario y actitud.
+- Hoja regenerada en `static/assets/characters/harlan/model-sheet-v2.png` y registrada como reemplazo con procedencia.
+- El staging de Higgsfield incluye Zao, Harlan (v2) y briefs de escena 5; falta confirmar externamente que Harlan no colapsa con Voss antes del freeze de prompts.
+
+## 2026-08-31 — Referencias terrestres separadas
+
+- La hoja combinada de manifestantes se conserva para multitudes, pero Aqueronte y partidarios del contacto tienen ahora hojas independientes y descripciones bilingües.
+- La periodista tiene una hoja neutral para posibles insertos en cámara; sus tomas de voz en off no se alteran.
+- Catálogo y staging actualizados: 142 assets registrados y 34 copias preparadas para Higgsfield.
+
 Fecha de corte: 2026-08-31.
 
 ## Completado
@@ -27,7 +39,7 @@ Fecha de corte: 2026-08-31.
 - **Carrusel de assets en entidades:** detalle de personaje/lugar/vehículo/objeto muestra las imágenes raster de `referenceAssetIds` en un carrusel; Proxima y Celestial Ardor incluyen sheet, proportional, stills de bloqueo y escala común.
 - **Miniaturas de catálogo:** WebP derivados en `static/assets/_thumbs/` (`thumbs:generate` / `thumbs:sync`); las tarjetas de arte/entidades usan la miniatura; el detalle sigue con el original.
 - **Carrusel automático en tarjetas:** si una entidad tiene varias referencias raster, la tarjeta rota miniaturas sin controles; el detalle mantiene navegación manual.
-- **Documentación reconciliada:** fuentes activas saneadas contra los JSON y el estado 3D vigente; 17 escenas de historia (+ título/créditos), 128 tomas/takes, 100 frames legacy y 139 imágenes quedan diferenciados.
+- **Documentación reconciliada:** fuentes activas saneadas contra los JSON y el estado 3D vigente; 17 escenas de historia (+ título/créditos), 128 tomas/takes, 100 frames legacy y 142 imágenes quedan diferenciados.
 - **Sitio público bilingüe y presentación:** inglés por defecto en `/`, español en `/es/`, landing pública, archivo editorial en `/project`, selector de idioma con rutas recargables, Paraglide JS, SEO canónico con `hreflang`, Open Graph, sitemap, manifest, favicon y marca propia. Las rutas EN/ES se prerenderizan también con `BASE_PATH=/light-delay`.
 - **Copy de portada revisado:** la landing identifica la obra como ciencia ficción dura, simplifica la premisa de Zao sin cambiar el canon, usa inglés estadounidense coherente con `en_US` y alinea numerales, nombre del corto y CTA del archivo en EN/ES.
 - **Generación i18n reproducible:** `npm run check` genera los módulos tipados de Paraglide antes de `svelte-check`; el compilador directo y el plugin de Vite comparten opciones, incluido el base path de Pages. Una instalación limpia ya no depende de artefactos ignorados del entorno local.
@@ -55,7 +67,7 @@ Fecha de corte: 2026-08-31.
 - **Selector de guion adaptable:** `ScriptSwitcher` permanece visible en el rail de escritorio y dentro de la hoja móvil de `ProjectNav`; Guion/Animatic respetan el cut activo (sessionStorage + URL).
 - **Tráiler (1:32,5):** `data/scripts/light-delay-trailer.json` — 9 secuencias, 29 tomas reutilizando frames del main short y 0 sobras de diálogo; regenerable y verificable desde `build:trailer`.
 - **Modo película:** chrome alineado al legacy en landscape (`AnimaticPlayer` fullscreen con meta, detalles flotantes y barra inferior) y flujo frame → detalles → controles en portrait.
-- **Higgsfield (staging):** el staging actual todavía excluye Harlan y Elin; el generador ya habilita la sheet legal de Elin Rao con slug estable `rao`, mientras Harlan sigue bloqueado por similitud visual con Voss. No se refrescó el staging ni se generó arte en este pase.
+- **Higgsfield (staging):** `higgsfield-uploads/` incluye Zao, Harlan (hoja v2), Voss y briefs de escena 5; regenerable con `npm run prepare:higgsfield`. Falta verificación externa de que Harlan no colapsa con Voss antes del freeze de prompts.
 - **Referencias de escala:** `proportional-reference` por entidad (Proxima, Celestial Ardor) y comparativa común en `art-bible/scale-references/`.
 - **Retorno de Modo película:** el enlace a edición restaura la toma activa mediante `?shot=` y centra/enfoca su tarjeta; hay control visible de pantalla completa.
 - Guion corto revisado de 17 escenas con objetivo de 30 minutos.
@@ -93,11 +105,11 @@ Fecha de corte: 2026-08-31.
 - Política de idioma: español = fuente de verdad. Detalle en `AGENTS.md`.
 - Política narrativa: evitar exposición forzada; revelar por pensamiento/decisión del personaje (véase `AGENTS.md`).
 - Haz de Zao: `docs/SIGNAL_BEAM_REQUIREMENTS.md` conserva sólo una aproximación visual; el presupuesto óptico exacto permanece en `TODO.md`.
-- Assets: 139 imágenes registradas en `static/assets/` (100 frames legacy, 1 frame nuevo escena 5, 3 cartelas de título, 34 referencias y 1 placeholder técnico). `legacy-site/assets/` permanece intacto como referencia.
+- Assets: 142 imágenes registradas en `static/assets/` (100 frames legacy, 1 frame nuevo escena 5, 3 cartelas de título, 37 referencias y 1 placeholder técnico). `legacy-site/assets/` permanece intacto como referencia.
 - Documentos prose: cinco páginas legacy extraídas y traducidas en `data/documents.json`; canon y tres referencias históricas/editoriales también exponen variante inglesa; validación exige paridad de bloques ES/EN y cobertura del ledger de migración.
 - Estado editorial: las traducciones inglesas permanecen en `draft`; el canon estructurado es todavía un `stub`; los cuatro scripts registrados continúan en `draft`.
 - Calidad del último pase validado: `validate:data` (incluido JSON Schema), `validate:docs`, `validate:translations`, `generated:check`, ledger causal, `svelte-check`, pruebas unitarias y build estático. E2E y lint estricto continúan fuera de CI; Vite mantiene el warning conocido del chunk de repositorios >500 kB.
-- Validación pendiente: los 139 assets registrados existen y el grafo actual no mostró referencias rotas en la auditoría puntual, pero el validador de CI no comprueba todavía paths físicos ni toda la integridad padre/hijo.
+- Validación pendiente: los 142 assets registrados existen y el grafo actual no mostró referencias rotas en la auditoría puntual, pero el validador de CI no comprueba todavía paths físicos ni toda la integridad padre/hijo.
 
 ## Próxima fase técnica
 

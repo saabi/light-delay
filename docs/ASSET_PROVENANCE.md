@@ -2,15 +2,18 @@
 
 ## Inventario actual
 
-- **139 imágenes registradas** en `data/assets.json`.
+- **142 imágenes registradas** en `data/assets.json`.
 - 100 fotogramas legacy del animatic en 17 escenas.
 - 1 fotograma nuevo de escena 5 toma 7 (Harlan / COM A/B) en `static/assets/animatic/frames/scene-05/shot-07.png`.
+- La hoja de referencia de Harlan fue regenerada como `static/assets/characters/harlan/model-sheet-v2.png` para separar su identidad visual de Voss; la hoja anterior permanece como procedencia histórica.
+- Se separaron las referencias de `manifestante-acheron` y `joven-contacto` desde la hoja combinada de manifestantes; la hoja grupal se conserva para multitudes.
+- Se añadió `periodista/model-sheet.png` como referencia neutral para posibles insertos de la transmisión terrestre; su voz en off no cambia.
 - 3 cartelas de título (main/Festival, marca y lema del tráiler) en `static/assets/animatic/titles/`.
 - 34 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
 - 1 placeholder técnico para frames faltantes o fallidos.
 - No hay todavía assets de audio ni video registrados.
 - Las tres referencias realistas del puente están registradas como assets independientes; conservan proveedor, fecha, referencias de entrada y elegibilidad no verificada.
-- La campaña de afiches V1 añade 16 imágenes de marketing —ocho piezas en español y sus ocho versiones inglesas— bajo `static/assets/marketing/posters/v1/`. Su manifiesto específico registra orientación, dimensiones, copy, pares localizados y referencias canónicas; todavía no forman parte de los 139 assets del grafo narrativo.
+- La campaña de afiches V1 añade 16 imágenes de marketing —ocho piezas en español y sus ocho versiones inglesas— bajo `static/assets/marketing/posters/v1/`. Su manifiesto específico registra orientación, dimensiones, copy, pares localizados y referencias canónicas; todavía no forman parte de los 142 assets del grafo narrativo.
 
 Los manifests existentes se encuentran bajo `legacy-site/assets/` y documentan nombres, rutas, categorías y descripciones visuales.
 
@@ -29,8 +32,8 @@ Los assets fueron generados con herramientas de generación de imágenes asistid
 
 Auditoría de corte 2026-08-28:
 
-- 135 de 139 assets no tienen objeto `source`;
-- los 139 carecen de modelo/versionado exacto verificable;
+- 138 de 142 assets no tienen objeto `source`;
+- los 142 carecen de modelo/versionado exacto verificable;
 - el placeholder técnico y las tres referencias realistas del puente registran proveedor y fecha de generación;
 - ningún asset registra todavía elegibilidad verificada para concurso.
 

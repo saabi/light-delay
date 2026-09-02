@@ -6,12 +6,17 @@ Copias renombradas para subir a Higgsfield. Origen canónico: `static/assets/`.
 | --- | --- | --- | --- |
 | `characters/light-delay-character-zao.png` | Zao | character | `static/assets/characters/zao/model-sheet.png` |
 | `characters/light-delay-character-voss.png` | Elias Voss | character | `static/assets/characters/voss/model-sheet.png` |
+| `characters/light-delay-character-harlan.png` | Rylen Harlan | character | `static/assets/characters/harlan/model-sheet-v2.png` |
+| `characters/light-delay-character-rao.png` | Elin Rao | character | `static/assets/characters/rao/model-sheet.png` |
 | `characters/light-delay-character-sorell.png` | Lian Sorell | character | `static/assets/characters/sorell/model-sheet.png` |
 | `characters/light-delay-character-cael.png` | Juno Cael | character | `static/assets/characters/cael/model-sheet.png` |
 | `characters/light-delay-character-proxima-technician.png` | Técnico de Proxima | character | `static/assets/characters/proxima-technician/model-sheet.png` |
 | `characters/light-delay-character-medical-officer.png` | Oficial médico | character | `static/assets/characters/medical-officer/model-sheet.png` |
 | `characters/light-delay-character-security-crew.png` | Tripulante de seguridad | character | `static/assets/characters/security-crew/model-sheet.png` |
 | `characters/light-delay-character-earth-protesters.png` | Manifestantes terrestres | character | `static/assets/characters/earth-protesters/model-sheet.png` |
+| `characters/light-delay-character-manifestante-acheron.png` | Manifestante Aqueronte | character | `static/assets/characters/manifestante-acheron/model-sheet.png` |
+| `characters/light-delay-character-joven-contacto.png` | Joven partidaria del contacto | character | `static/assets/characters/joven-contacto/model-sheet.png` |
+| `characters/light-delay-character-periodista.png` | Periodista | character | `static/assets/characters/periodista/model-sheet.png` |
 | `locations/light-delay-location-proxima-station.png` | Estación Proxima | location | `static/assets/locations/proxima-station/concept-sheet.png` |
 | `locations/light-delay-location-proxima-dock.png` | Muelle axial de Proxima | location | `static/assets/locations/proxima-dock/concept-sheet.png` |
 | `locations/light-delay-location-celestial-ardor-bridge.png` | Puente del Celestial Ardor | location | `static/assets/locations/celestial-ardor-bridge/concept-sheet.png` |
@@ -25,6 +30,8 @@ Copias renombradas para subir a Higgsfield. Origen canónico: `static/assets/`.
 | `props/light-delay-prop-read-only-greeting-medium.png` | Soporte de saludo de Sorell | prop | `static/assets/props/read-only-greeting-medium/prop-sheet.png` |
 | `brief/light-delay-brief-celestial-ardor-jupiter.png` | Celestial Ardor bordeando Júpiter (animatic esc. 3 / toma 1) | brief | `static/assets/animatic/frames/scene-03/shot-01.png` |
 | `brief/light-delay-brief-zao-optical-contingency-transmitter.png` | Zao ante el transmisor óptico de contingencia (animatic esc. 5 / toma 6) | brief | `static/assets/animatic/frames/scene-05/shot-06.png` |
+| `brief/light-delay-brief-harlan-service-hatch-com-sabotage.png` | Harlan desenchufa COM A/B junto a la escotilla de servicio (animatic esc. 5 / toma 7) | brief | `static/assets/animatic/frames/scene-05/shot-07.png` |
+| `brief/light-delay-brief-celestial-ardor-bridge-service-shaft.png` | Acceso de servicio oculto del puente (referencia realista) | brief | `static/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png` |
 | `brief/light-delay-brief-proxima-ardor-berthed.png` | Proxima con Celestial Ardor atracada (bloqueo 3D, escala común) | brief | `static/assets/locations/proxima-station/proxima-with-ardor-berthed.png` |
 | `brief/light-delay-brief-blender-proxima-with-ardor-berthed.png` | Proxima con Celestial Ardor atracada (viewport Blender, bloqueo) | brief | `static/assets/locations/proxima-station/blender-proxima-with-ardor-berthed.png` |
 | `brief/light-delay-brief-celestial-ardor-with-jupiter.png` | Celestial Ardor con Júpiter (bloqueo 3D) | brief | `static/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png` |
