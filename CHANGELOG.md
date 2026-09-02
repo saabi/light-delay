@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-31 — Referencia Higgsfield MCP
+
+- Añadido `docs/technical/HIGGSFIELD_MCP.md`: conexión MCP oficial, créditos vs Unlimited 24 h, referencias, flujo de dos agentes y esquema JSON propuesto para corridas.
+
 ## 2026-08-31 — Referencias terrestres separadas
 
 - Añadidas hojas independientes para el manifestante Aqueronte, la partidaria del contacto y la periodista terrestre.

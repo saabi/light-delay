@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-08-31 — Referencia Higgsfield MCP
+
+- Referencia operativa MCP (créditos vs Unlimited, dos agentes, JSON de corrida): `docs/technical/HIGGSFIELD_MCP.md`.
+
 ## 2026-08-31 — Referencia visual de Harlan
 
 - Descripción canónica bilingüe ampliada para distinguir a Harlan de Voss en silueta, rostro, vestuario y actitud.
