@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-04 — Conteos de assets alineados con el catálogo
+
+- `validate:docs` y `ASSET_PROVENANCE.md` pasan a 142 assets / 37 referencias / 138 sin `source`,
+  coherentes con el catálogo tras las hojas terrestres y la periodista.
+
 ## 2026-09-04 — Digest de planes de producción estable en CI
 
 - `production:plans` normaliza CRLF antes del `sourceDigest` para que el chequeo en Linux no

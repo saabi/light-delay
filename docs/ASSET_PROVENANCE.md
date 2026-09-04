@@ -9,7 +9,7 @@
 - Se separaron las referencias de `manifestante-acheron` y `joven-contacto` desde la hoja combinada de manifestantes; la hoja grupal se conserva para multitudes.
 - Se añadió `periodista/model-sheet.png` como referencia neutral para posibles insertos de la transmisión terrestre; su voz en off no cambia.
 - 3 cartelas de título (main/Festival, marca y lema del tráiler) en `static/assets/animatic/titles/`.
-- 34 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
+- 37 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
 - 1 placeholder técnico para frames faltantes o fallidos.
 - No hay todavía assets de audio ni video registrados.
 - Las tres referencias realistas del puente están registradas como assets independientes; conservan proveedor, fecha, referencias de entrada y elegibilidad no verificada.
