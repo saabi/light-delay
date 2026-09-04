@@ -1,6 +1,6 @@
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 9.
+Working draft, English, revision 10.
 
 ## Purpose of this document
 
@@ -127,6 +127,15 @@ accident.
 The Ardor is approximately 6,800 tonnes and 90 m × 18 m, powered by a D–³He fusion torch. It
 maintains 1g through most powered flight.
 
+The D–³He fuel cycle is comparatively low-neutron but not neutron-free. Deuterium–deuterium
+side reactions produce fast neutrons, while another branch produces tritium that can undergo
+deuterium–tritium fusion, producing still more energetic neutrons. A helium-3 feed loss or
+metering fault could therefore leave the plasma deuterium-rich and increase neutron output.
+
+When main thrust cuts, the fusion system remains in a low-power ship-services mode. Its known
+neutron baseline and fuel-mixture telemetry allow the crew to distinguish normal operation from
+a fault once the complete records have been reconciled.
+
 The bridge is forward. The reactor and reactor-shielding zone are aft. The shielding-bay
 entrance is approximately 65 m aft of the bridge deck.
 
@@ -156,11 +165,14 @@ member’s shipboard access.
 ### Reactor service bay and inner shielding vault
 
 The **outer reactor service bay** is an accessible engineering workspace. It contains a local
-console for the long-distance optical communications array.
+console for the long-distance optical communications array and emergency inspection and
+isolation hardware for the adjacent fusion-fuel tankage and feed system. Any crew member with
+standard emergency training can reach these panels.
 
-Recessed behind the reactor shielding is an **inner shielding vault**, originally used to
-isolate hazardous research equipment. Its shielding masks the bomb’s weak neutron signature
-from ordinary ship sensors.
+The reactor shielding assembly protects both crew spaces and the fusion-fuel tankage from
+reactor radiation. Recessed inside this combined shielding zone is an **inner shielding vault**,
+originally used to isolate hazardous research equipment. Its shielding masks the bomb’s weak
+neutron signature from ordinary ship sensors.
 
 The vault has a pre-existing local radiation-safety lock. Harlan rekeys it to his wrist device.
 It is not networked, maintains no central access log, and cannot receive Voss’s later authority
@@ -478,13 +490,21 @@ her thoughts.
 
 ### A5 — Understanding
 
-Zao initially investigates the discrepancy as a possible leak or unmanifested mass.
+Zao initially investigates the discrepancy as a possible fuel leak, an inefficient off-ratio
+burn, or unmanifested mass.
+
+A helium-3 feed loss could leave the torch plasma deuterium-rich during the final burn,
+producing additional D–D and secondary D–T neutrons while consuming extra fuel to preserve the
+commanded thrust.
 
 Near the reactor service bay, her engineering dosimeter registers a weak but abnormal neutron
-signature inconsistent with the reactor’s logged state. It is not a generic radiation alarm.
-The spectrum suggests fissile material behind shielding where no source should exist.
+excess above the reactor’s low-power baseline. Because the neutrons have passed through shielding
+and the suit instrument is not a full spectrometer, the reading cannot yet distinguish an
+off-ratio fusion burn from a compact shielded source.
 
-She enters the outer reactor service bay and approaches the inner shielding vault.
+No active fuel alarm is present. Zao does not treat that as proof that no fault occurred. She
+enters the outer reactor service bay and follows the strengthening reading toward the inner
+shielding vault.
 
 ---
 
@@ -503,8 +523,9 @@ exactly where she is and what she may discover.
 Zao enters the still-accessible inner vault.
 
 She finds the geophysical impulse package. Its form and markings identify it as Proxima
-equipment, not part of the Ardor. At close range, her dosimeter confirms the neutron signature
-of its fission primary.
+equipment, not part of the Ardor. At close range, her dosimeter count rises sharply. The
+package’s form, markings, and shielding provide the context the suit instrument alone could not:
+the weak emissions come from its fission primary.
 
 A local display is counting down.
 
@@ -826,33 +847,72 @@ At least once, Sorell speaks without being prompted:
 > “You’re treating the first explanation as if it were the only one. That’s exactly what I
 > warned you not to do out there.”
 
-### D2 — Zao’s trace
+### D2 — A plausible fuel-system theory
 
-Elin reconstructs Zao’s final persistent records.
+Elin begins reconstructing Zao’s final persistent records.
 
-The dosimeter stored a brief abnormal neutron spectrum near the inner shielding vault. Zao’s
-unfinished mass reconciliation independently points to approximately 1–1.5 tonnes of
-unmanifested mass.
+The dosimeter stored a brief fast-neutron excess from the combined shielding-and-tankage zone.
+After passage through shielding and registration by the suit instrument, the first-pass data
+establish exposure but do not identify the source.
 
-The evidence converges on the inner vault, but it does not reveal exactly what is inside or
-whether anything is active.
+Zao’s unfinished propulsion audit also records a small quantity of excess fuel consumption. Her
+final reconciliation among lost fuel, inefficient burn, and added vehicle mass is incomplete.
 
-Elin follows Zao’s characteristic method: she does not ask only whether a system passed its
-check; she asks what the check may have failed to measure.
+Harlan gives the two facts one explanation:
+
+> “Lose helium-three and the mix goes deuterium-rich. More side-reaction neutrons, more fuel to
+> hold thrust. Keep bleeding it and we miss the window.”
+
+He proposes that someone tampered with a helium-3 feed or its metering to force a mission-ending
+fuel loss. If Zao interrupted the attempt, that explains why no active leak alarm remains. The
+outer-bay emergency panels are accessible to every trained crew member, so the theory does not
+require Sorell to be an engineer. Her supposed desire to delay contact supplies the motive.
+
+The theory joins the propellant discrepancy, radiation record, interrupted sabotage warning,
+and Sorell’s presence into one coherent account. Voss finds it persuasive. Elin records it as a
+hypothesis rather than a conclusion.
+
+### D2b — The clues separate
+
+Over several hours, Elin and Okoye test the fuel-system theory in the order that the records
+become available:
+
+- Tank inventory and pressure agree with engine metering. No helium-3 or deuterium left the
+  Ardor unaccounted for.
+- The commanded and measured helium-3-to-deuterium ratio remained normal. There was no
+  deuterium-rich excursion.
+- Plasma efficiency, exhaust velocity, and delivered thrust remained within their expected
+  ranges.
+- The supposedly missing quantity was not lost fuel. The engine consumed it while the guidance
+  system maintained the planned acceleration and schedule.
+
+At the measured thrust and acceleration, the excess burn indicates that the Ardor was carrying
+approximately 1–1.5 tonnes of additional inertial mass. A leak cannot explain it.
+
+Harlan argues that Zao may have interrupted the tampering before a sustained mixture excursion.
+That preserves the possibility of an attempted sabotage, but it no longer explains either the
+extra propellant already consumed or the independent neutron exposure. The case against Sorell
+weakens without disappearing.
 
 ### D3 — Locked inner door
 
-Elin and Okoye reach the outer reactor service bay.
+Elin and Okoye reach the outer reactor service bay with a portable radiation survey instrument.
+The neutron reading strengthens away from the accessible fuel panels and toward the inner vault.
+It does not vary with reactor power or fuel-mixture telemetry.
 
 The inner shielding vault is sealed by its isolated local lock. Voss’s authority cannot reach
 it through the network. Attempts to open it without the proper wrist key fail.
 
 ### D4 — Honest limits
 
-The crew knows that an unauthorized radiological mass is hidden inside a locked vault near the
-reactor zone.
+The crew can now support two related but not yet identical conclusions:
 
-They do not yet know that it is a bomb, that it has a countdown, or that it is timed to contact.
+- The Ardor carried approximately 1–1.5 tonnes of unmanifested mass, causing the excess
+  propellant burn.
+- A weak, compact neutron source lies behind the inner-vault shielding.
+
+The same hidden object may explain both, but they cannot prove that through the locked door. They
+do not know that it is a bomb, that it has a countdown, or that it is timed to contact.
 
 Voss asks Elin whether she can open the vault, not whether she can stop whatever is inside.
 
@@ -985,7 +1045,7 @@ The message joins the evidence already present:
 
 - Harlan’s unverifiable location during the blackout.
 - His immediate accusation of Sorell.
-- The abnormal mass and neutron record.
+- The additional mass and compact neutron source that disproved the fuel-sabotage account.
 - The outbound burst he claimed Zao had mis-aimed.
 - The fact that the burst was aimed exactly where the Ardor would be.
 - Zao naming him at the door.
@@ -1318,6 +1378,10 @@ Voss repeatedly mistakes interpretations for facts:
 Elin reverses that process by keeping explanations provisional until independent evidence
 converges.
 
+The fuel-sabotage theory demonstrates the same principle. The excess propellant consumption and
+neutron exposure are both genuine, but Harlan makes them persuasive by forcing them into one
+cause. Elin reaches the truth only after separating them and testing each independently.
+
 Harlan’s failure is also interpretive. Under pressure, he reads the raw pointing data through
 his conviction that Earth is the only possible destination. When the reconstructed vector points
 into empty space, he treats that result as confirmation that Zao missed. He cannot imagine that
@@ -1344,6 +1408,7 @@ design, or storyboard development:
 
 - The bomb’s exact classified yield within the multi-megaton range.
 - Propellant load and exhaust velocity used to pin the excess-propellant figure.
+- Exact dosimeter resolution and fuel-system diagnostic presentation used in the false theory.
 - Exact stair riser count, turns, landing geometry, and screen timing of the descent.
 - The precise interval between outward and return apertures.
 - The specific visual design of the throat, station, and environmental sphere.

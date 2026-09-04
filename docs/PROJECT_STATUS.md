@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-04 — Hipótesis falsa de sabotaje de combustible (WIP, no canon)
+
+- `docs/wip/general-narrative-outline.en.md` está en rev. 10. Harlan unifica inicialmente el
+  consumo extra y los neutrones como sabotaje del sistema D–³He; Elin descarta la fuga, demuestra
+  masa adicional y localiza una fuente compacta detrás de la puerta antes del mensaje de Zao.
+- No toca `data/outlines/` ni guiones y no sustituye el canon vigente.
+- Sólo inglés; falta copia española.
+
 ## 2026-09-04 — Revelación diferida del mensaje de Zao (WIP, no canon)
 
 - `docs/wip/general-narrative-outline.en.md` está en rev. 9. El público ve que Zao transmite,

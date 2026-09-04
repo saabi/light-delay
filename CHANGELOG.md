@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-04 — Hipótesis falsa de sabotaje de combustible (WIP)
+
+- Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 10: la investigación acepta primero
+  una avería provocada en la alimentación D–³He, luego separa el consumo extra, la masa no
+  declarada y la fuente de neutrones antes de que el mensaje de Zao confirme la bomba.
+- No modifica outlines ni guiones JSON. El borrador sigue sólo en inglés y no es canon.
+
 ## 2026-09-04 — Revelación diferida del mensaje de Zao (WIP)
 
 - Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 9: la secuencia B conserva las
