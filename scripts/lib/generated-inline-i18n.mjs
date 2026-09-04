@@ -68,7 +68,8 @@ export function mergeGeneratedInlineI18n(value, previous, path = '$') {
 }
 
 export function assertGeneratedCheck(actual, expected, label) {
-	if (actual !== expected) {
+	const normalize = (value) => value.replace(/\r\n/g, '\n');
+	if (normalize(actual) !== normalize(expected)) {
 		throw new Error(`${label} is stale; run its build command and review the diff.`);
 	}
 }

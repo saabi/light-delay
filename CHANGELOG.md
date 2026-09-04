@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-04 — Digest de planes de producción estable en CI
+
+- `production:plans` normaliza CRLF antes del `sourceDigest` para que el chequeo en Linux no
+  diverja del working tree Windows (`light-delay-long.json`).
+- `assertGeneratedCheck` compara también con newlines normalizados, evitando falsos *stale* locales.
+
 ## 2026-09-04 — Regeneración de notas pendientes
 
 - Regenerado `docs/PENDING_AUTHOR_NOTES.md` para alinear el informe con el texto actual de las

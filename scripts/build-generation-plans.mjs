@@ -23,7 +23,8 @@ for (const file of entityFiles) {
 const scripts = ['light-delay-main-short', 'light-delay-festival', 'light-delay-trailer', 'light-delay-long'];
 for (const slug of scripts) {
 	const scriptPath = join(ROOT, 'data', 'scripts', `${slug}.json`);
-	const source = readFileSync(scriptPath, 'utf8');
+	// Normalize CRLF so sourceDigest matches Linux CI checkouts (Windows autocrlf).
+	const source = readFileSync(scriptPath, 'utf8').replace(/\r\n/g, '\n');
 	const file = JSON.parse(source);
 	const shots = file.shots.map((shot) => {
 		const references = [];
