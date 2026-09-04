@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-04 — Regeneración de notas pendientes
+
+- Regenerado `docs/PENDING_AUTHOR_NOTES.md` para alinear el informe con el texto actual de las
+  notas en JSON (incluido el asset reutilizado en festival `shots[7]`) y desbloquear `notes:check` en CI.
+
 ## 2026-09-04 — Sincronización estructurada de la narrativa maestra rev. 12
 
 - Sincronizada `data/outlines/light-delay-master-narrative.json` con todos los cambios de la

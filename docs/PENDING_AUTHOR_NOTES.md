@@ -86,7 +86,7 @@ Pendientes: **167**
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[68].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[69].notes[0]** [production · open] — Prompt D2 (EN on-image): AI ASSISTANCE — ChatGPT · Claude · Gemini · Cursor Composer. Ver docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[69].notes[0]`
-- **data/scripts/light-delay-festival.json:$.shots[7].notes[0]** [production · open] — Reutiliza frame de main:shot-05-07 (asset asset:animatic-12-08); corregido de celestial-ardor-command-vestibule a celestial-ardor-service-cylinder para que coincida con la ubicación que el propio cue festival:cue-b-04 declara ("en el distribuidor del cilindro de servicio").
+- **data/scripts/light-delay-festival.json:$.shots[7].notes[0]** [production · open] — Reutiliza frame de main:shot-05-07 (asset asset:animatic-05-07).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[7].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[70].notes[0]** [production · open] — Prompt D3 (EN on-image): PRODUCTION TOOLS — Light Delay schema & production tools. Ver docs/TITLE_AND_CREDITS.md.
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[70].notes[0]`
