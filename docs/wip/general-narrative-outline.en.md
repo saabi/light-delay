@@ -148,8 +148,10 @@ through the center of the shaft.
 The crew stations are arranged against the curved outer hull wall in front of the shaft
 cluster. Crew members seated at their displays have their backs toward the shaft openings.
 
-The service-shaft hatch immediately behind the bridge stations can be locked locally from
-inside the shaft. The lock is independent of the ship’s network.
+The uppermost service-shaft hatch opens immediately behind the bridge stations. Like the
+service-shaft access hatch on every deck, it can be locked locally from inside the shaft. These
+locks are independent of the ship’s network and remain unaffected by the revocation of a crew
+member’s shipboard access.
 
 ### Reactor service bay and inner shielding vault
 
@@ -956,8 +958,9 @@ Harlan appears to comply. He offers his wrist.
 When Okoye grips the wrist device and glances toward the revocation display, Harlan uses the
 momentary distraction to drive him into a console and break free.
 
-Harlan enters the service shaft and locks its bridge hatch locally behind him. The lock prevents
-Okoye from following by the same route and is unaffected by Voss’s network revocation.
+Harlan enters the service shaft and locks its bridge hatch locally behind him. This prevents
+immediate pursuit through the shaft. Voss and Okoye do not yet know whether its lower-deck
+access hatches remain usable.
 
 Harlan knows Elin is heading toward the bomb. Because the device is self-contained and accepts
 no remote commands, his only remaining chance is to reach it physically, stop her, or force an
@@ -973,13 +976,23 @@ reactor service bay.
 
 She reaches the inner vault first and begins attempting to open its local lock.
 
-Harlan descends the segmented ladder in the service shaft, sliding between its deck stops. The
-route is faster but far more dangerous under thrust. He reaches the outer bay after Elin and
-attacks her before she can solve the lock.
+Harlan descends the segmented ladder in the service shaft, sliding between its deck stops and
+locking every access hatch from inside as he passes. The route is faster but far more dangerous
+under thrust. He reaches the outer bay after Elin and attacks her before she can solve the lock.
 
-Unable to use the locked service-shaft hatch, Voss and Okoye enter the central shaft and take
-the two helical staircases, one each. The stairs reach the shielding-bay level, but their spiral
-paths and repeated deck landings make them substantially slower than Harlan’s direct descent.
+Unable to use the locked bridge hatch, Voss and Okoye enter the central shaft and take opposite
+helical staircases, one each.
+
+At the first deck below the bridge, Okoye leaves his staircase long enough to test the adjacent
+service-shaft hatch. It is locked from inside. At the next deck, Voss crosses his landing and
+tests the next hatch. It is locked as well.
+
+The two detours cost them time. After finding the bridge hatch and the next two access hatches
+secured in succession, they conclude that Harlan is locking every hatch behind him. They stop
+checking and continue down the helical stairs without further detours.
+
+The stairs reach the shielding-bay level, but their spiral paths, repeated deck landings, and
+two wasted checks make them substantially slower than Harlan’s direct descent.
 
 ### F3 — Third gravity dip
 
@@ -1236,8 +1249,8 @@ Elin reverses that process by keeping explanations provisional until independent
 converges.
 
 Harlan’s failure is also interpretive. He imagines Zao chose the obvious destination and made
-the obvious plea for help. He cannot imagine that she used the mission’s greatest distance as
-as a way to reach forward.
+the obvious plea for help. He cannot imagine that she used the mission’s greatest distance as a
+way to reach forward.
 
 ### Character handoff
 
