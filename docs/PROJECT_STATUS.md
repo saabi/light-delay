@@ -1,5 +1,15 @@
 # Estado del proyecto
 
+## 2026-09-04 — Vindicación imaginada de Harlan (WIP, no canon)
+
+- `docs/wip/general-narrative-outline.en.md` está en rev. 11. Harlan teme que el mensaje de Zao
+  lo condene, pero también espera que permita una vindicación póstuma; al creer que el disparo
+  falló, lamenta en privado que nadie sepa quién «los salvó».
+- El reconocimiento queda como recompensa psicológica, no como cuarto motivo operativo. El
+  informe final atribuye a Zao el rescate de la tripulación y la preservación del contacto.
+- No toca `data/outlines/` ni guiones y no sustituye el canon vigente.
+- Sólo inglés; falta copia española.
+
 ## 2026-09-04 — Hipótesis falsa de sabotaje de combustible (WIP, no canon)
 
 - `docs/wip/general-narrative-outline.en.md` está en rev. 10. Harlan unifica inicialmente el

@@ -1,6 +1,6 @@
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 10.
+Working draft, English, revision 11.
 
 ## Purpose of this document
 
@@ -293,6 +293,11 @@ His political and moral motive is consent. Six people aboard a research ship hav
 authorized to define humanity’s relationship with an unknown civilization. To him, accepting
 an alien-built door, alien instructions, and an alien timetable is already a surrender of human
 agency.
+
+Separate from those operational motives is an emotional reward Harlan barely admits: if he dies
+carrying out the attack, he wants history to understand the destruction as a sacrifice made to
+save Earth. Recognition does not cause the plan and he does not require it to proceed, but the
+hope of eventual vindication helps him imagine himself as a protector rather than a murderer.
 
 He knows the violent encounter could provoke retaliation. He believes the Velari’s demonstrated
 patience makes withdrawal more likely, and he accepts the risk of war as the price of avoiding
@@ -716,6 +721,11 @@ Harlan assumes she sent her sabotage warning toward Earth. Whatever she said may
 historically, but it cannot stop the contact-point detonation, and he expects to die with the
 others.
 
+That possibility produces more than fear. If the detonation succeeds, a surviving accusation
+may also give Earth enough information to reconstruct his purpose. He imagines that people who
+first condemn him could eventually decide that he saved them. He does not expect present
+gratitude or rescue; he hopes for a posthumous verdict.
+
 He prioritizes killing Zao, securing the inner vault, leaving before the approaching crew member
 arrives, and restoring the cameras in time to record that person with the body. His mistake is
 not a failure to look at the telemetry. It is his certainty that he already knows what it means.
@@ -957,6 +967,21 @@ else.
 Elin cannot disprove his explanation yet. She records it as a possibility rather than accepting
 it as fact. His willingness to explain Zao by making her careless troubles the person who knew
 her best.
+
+### D5b — The lost witness
+
+During a brief interval afterward, Harlan is alone in his berth. The result gives him two opposed
+reactions. Zao’s direct accusation now appears lost, which relieves him of the historical
+condemnation he anticipated. But it also appears to remove the witness through whom Earth might
+one day reconstruct and vindicate his sacrifice.
+
+He allows himself a private lament, quiet rather than triumphant:
+
+> “Now they’ll never know who saved them.”
+
+Recognition remains a psychological reward, not another reason for the attack. Harlan would
+continue without it; the line exposes how thoroughly he has cast himself as humanity’s unthanked
+protector.
 
 ### D6 — Suspicion broadens
 
@@ -1300,7 +1325,8 @@ throat, but it will continue even if the Ardor fails to make the return window.
 Voss recounts the discovery, the sabotage, Zao’s death, the delayed warning, the intervention,
 and the successful contact.
 
-He attaches Zao’s signed warning and personnel record.
+He explicitly credits Zao with saving the crew and preserving the meeting, then attaches her
+signed warning and personnel record.
 
 Her photograph fills part of the screen.
 
@@ -1314,6 +1340,9 @@ The words carry several meanings without selecting among them:
 - The warning reached the Ardor in time to stop Harlan and delay the bomb.
 - Through the warning and the report now carrying her name, Zao reached the encounter she died
   to preserve.
+
+The ending answers Harlan’s private lament without repeating it: Earth will learn who saved
+them, but the name carried into history is Zao’s.
 
 Voss sends the report.
 
@@ -1386,6 +1415,10 @@ Harlan’s failure is also interpretive. Under pressure, he reads the raw pointi
 his conviction that Earth is the only possible destination. When the reconstructed vector points
 into empty space, he treats that result as confirmation that Zao missed. He cannot imagine that
 she used the mission’s greatest distance as a way to reach forward.
+
+His hoped-for vindication extends the same failure into his view of history. He imagines a future
+record that redeems his violence. Voss instead creates the record that recognizes Zao’s attempt
+to communicate as the act that saved the crew and preserved contact.
 
 ### Character handoff
 

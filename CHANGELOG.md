@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-04 — Vindicación imaginada de Harlan (WIP)
+
+- Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 11: Harlan oscila entre el temor
+  a que el mensaje de Zao lo condene y la esperanza de que la historia lo considere un salvador.
+- Añadido su lamento privado al creer perdido el mensaje y su contrapunto final: el informe de
+  Voss identifica a Zao como quien salvó a la tripulación y preservó el contacto.
+- El reconocimiento sigue siendo subtexto psicológico, no un cuarto motivo operativo. No se
+  modifican outlines ni guiones JSON; el borrador continúa sólo en inglés y no es canon.
+
 ## 2026-09-04 — Hipótesis falsa de sabotaje de combustible (WIP)
 
 - Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 10: la investigación acepta primero
