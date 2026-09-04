@@ -1,40 +1,57 @@
-# Festival Cut — Restructured Outline (working draft, English, rev. 2)
+# Festival Cut — Restructured Outline (working draft, English, rev. 5)
 
 ## Note on this document
 
-Still a **proposal**, not an edit to `outline-light-delay-festival.json`. This revision folds in
-a full pass of review comments and a long follow-up discussion. Resolved items are written
-directly into the steps below. Unresolved items are marked **[OPEN]** inline, and collected again
-at the bottom for quick reference. Workflow unchanged: outline → script → next stage (name still
-pending - <NOTE_FOR_REVIEW>Name: Storyboard? We would have to change it in the app as well</NOTE_FOR_REVIEW>).
+Still a **proposal**, not an edit to `outline-light-delay-festival.json`. This revision fully
+merges the separate Velari-scenes addendum back into a single document — there is no longer a
+split file. Workflow: outline → script → **storyboard** (stills with dialogue as subtitles, built
+to measure rhythm and timing). A later stage adding sound and motion would be the point to start
+calling something "animatics" — out of scope for now. Written at natural length throughout, not
+pre-sized for any particular cut — trimming decisions come later, once a real script exists to
+measure against three eventual edits.
 
-**Framing worth stating explicitly, since it now governs staging decisions throughout:** this is
-not a whodunit. The audience sees Harlan's crossing with Zao, his look, the cables, the murder,
-in real time across Sequences A–C. Nothing about "who did it" is ever in question for the viewer.
-The tension from Sequence D onward is watching the crew *not yet* see what the audience already
-knows, and specifically fearing for Sorell. <NOTE_FOR_REVIEW>Not just Sorell, the entire crew may blow up, the Velari as well, and it may trigger an interstellar war we can't win.</NOTE_FOR_REVIEW> Zao's message in Sequence E is not new information for the audience — it's *reliving* what they already watched, now from her side, which is why its content is withheld from the audience until that exact moment (see Sequence B note below).
+**Stakes, stated plainly:** from Sequence D onward, the tension isn't limited to fearing for
+Sorell. The crew, the Velari, and the possibility of an interstellar war humanity cannot win are
+all in play. The audience carries all of this while watching the crew work with less information
+than they have.
+
+**This is not a whodunit.** The audience sees Harlan's crossing with Zao, his look, the cables,
+the murder, in real time across Sequences A–C. Zao's message in Sequence E is not new information
+for the audience — it's *reliving* what they already watched, now from her side, which is why its
+content is withheld from the audience until that exact moment (Sequence B7, Sequence E2).
+
+**Gravity, stated as a throughline — three dips, not two.** The ship runs 1g through most of the
+local transit, but drops to microgravity three separate times, each a genuine "can't do this
+under thrust" requirement, not a contrivance: once at periapsis, flipping from prograde to
+retrograde; once again nearing the throat, for the same precision-approach reason; and a third
+time nearing the Velari, for first contact itself. The murder happens during the second of these
+dips. The climax's decisive turn happens during the third.
 
 **Confirmed physics used throughout:** local segment (Proxima L1 → boca at L2) is 57h48min total,
-28h54min prograde-accel to Jupiter periapsis + 28h54min retrograde-decel to L2/apoapsis, constant
-1g. Zao's transmission does not use the tunnel — it's a direct light-speed signal across the full
-167.8 AU to the encounter region (~23h15min light-time), aimed at the ship's own calculated future
-position on the far side. Even with the throat open, a signal riding through it would overshoot the
-ship entirely — the remaining ~18.3M km to the Velari station takes light about a minute, so it
-would blow straight past wherever the ship actually is. Two independent reasons the message can't
-take the shortcut, not one. <NOTE_FOR_REVIEW>This may all be expressed by Zao's mutterings.</NOTE_FOR_REVIEW>
+28h54min prograde-accel to Jupiter periapsis + 28h54min retrograde-decel to L2/apoapsis. Zao's
+transmission does not use the tunnel — a direct light-speed signal across the full 167.8 AU to the
+encounter region (~23h15min light-time), aimed at the ship's own calculated future position on the
+far side. Even with the throat open, a signal riding through it would overshoot the ship entirely —
+the remaining ~18.3M km to the Velari station takes light about a minute, so it would blow straight
+past wherever the ship actually is, and wouldn't wait for it. Zao states both of these reasons
+herself, aloud, in B5.
+
+**The ending, stated plainly, since it governs the whole final sequence:** the alien encounter is a
+reward, not the film's close. Contact happens, then the film returns to something quieter for its
+actual last word. Encounter first (G2, G2b), closing thoughts after (G3).
 
 ---
 
 ## Cast (unchanged)
 
 Zao (engineer, the victim), Elin/Rao (systems investigator), Harlan (second-in-command,
-saboteur), Voss (captain), Sorell (xenolinguist, wrongfully suspected), Okoye (assists Voss).
+saboteur), Voss (captain), Sorell (xenolinguist, wrongfully suspected), Okoye (security).
 
 ## New location: Reactor Shielding Bay
 
-Replaces the diplomatic core. Aft, engineering/reactor zone, behind the reactor's own radiation
-shielding — which is also why the same shielding plausibly blocks a remote trigger signal (see
-Sequence E). **[OPEN: name still just functional — open to something with more character.]**
+Aft, engineering/reactor zone, behind the reactor's own radiation shielding — which is also why
+the same shielding plausibly blocks a remote trigger signal. **[OPEN: name still just
+functional.]**
 
 ---
 
@@ -43,16 +60,18 @@ Sequence E). **[OPEN: name still just functional — open to something with more
 **P1 — Protest.** Overlay: Earth–Jupiter delay indicator, "43 MIN 18 S," over a divided protest.
 Both sides get a real argument.
 
-**P2 — Harlan observes.** At a distance, not participating: "I wish they were right." <NOTE_FOR_REVIEW>Clarify that Harlan is referring to the optimist crowd. I think this is what you mean, right?</NOTE_FOR_REVIEW>
-
-**P2b — Sorell, caution.** Among technical staff, a beat of genuine professional caution — not
-opposition, just rigor: wanting to be certain before assuming good faith is returned. True, and
-later usable against her.<NOTE_FOR_REVIEW>In the conversation, watching the protests on the screen should be Harlan, Sorell, Zao and Voss to witness Sorell's caution. He reads Harlan's objection as hopeful and Sorell's as pessimistic instead of cautious. Maybe Voss responds to Sorell so that the audience sees his confusion. Zao on the other hand starts to dstruust Harlan, which then also partially justifies A4 as well.</NOTE_FOR_REVIEW>
-
-**P3 — Sorell, conviction.** <NOTE_FOR_REVIEW>This could be in response to Voss, so he again can read it as Sorell covering up at some point.</NOTE_FOR_REVIEW> Same context, immediately after: "We're going to study their
-language before we send a single ship out there. That's not naivety. That's respect." Two true
-things about her, on the record before anything else happens — Harlan only shows the crew one of
-them later.
+**P2 — Watching, together.** Harlan, Sorell, Zao, and Voss watch the coverage as a single scene.
+- Harlan watches the optimist crowd specifically: "I wish they were right."
+- Sorell voices genuine professional caution — not opposition, rigor: wanting certainty before
+  assuming good faith is returned.
+- Voss misreads both of them in front of the others — hears Harlan's dread as simple hope, hears
+  Sorell's caution as pessimism — and responds to Sorell in a way that shows the audience his
+  misreading.
+- Sorell answers him directly: "We're going to study their language before we send a single ship
+  out there. That's not naivety. That's respect." True, and — delivered as a response to being
+  misread — something that could later be recast as covering something up.
+- Zao, watching this whole exchange, is the one who reads it correctly. Her quiet unease about
+  Harlan starts here — the explicit seed for her audit in A4.
 
 ---
 
@@ -65,59 +84,89 @@ them later.
 **A3 — Systems check.** Zao and Elin's routine post-launch check. Zao's habitual double-checking
 shown. Elin leaves; Zao stays to finish.
 
-**A3b — Transit.** Everything checks out. The ship detaches from Proxima, rotates prograde, begins
-its 1g burn toward Jupiter periapsis — the confirmed 57h48min local segment, constant 1g
-throughout. This opens real slack time: casual dialogue, crew relationships, ordinary shipboard
-life — applied on the cut wherever there's room for it. Zao does not find the anomaly until the
-ship is nearing L2, minutes before the throat opens. **[OPEN: this is the natural spot for one
-throwaway line establishing the throat/return-window stakes — not written here, script-stage
-placement, not yet confirmed.]**<NOTE_FOR_REVIEW>If there's time we can insert the take near periapsis when the ship turns retrograde with the backlit Jovian rings in the background. This answers A3b misconception.</NOTE_FOR_REVIEW>
+**A3b — Transit, and the first gravity dip.** Everything checks out. The ship detaches from
+Proxima, rotates prograde, begins its 1g burn toward Jupiter periapsis. Real slack time here for
+casual dialogue and shipboard life, applied wherever there's room. **[Optional insert: the
+turnaround at periapsis itself, backlit Jovian rings, thrust cut briefly for the flip from
+prograde to retrograde — the film's first gravity dip, and a concrete visual midpoint for "a lot
+of time has passed."]** **[OPEN: the natural spot for one throwaway line establishing the
+throat/return-window stakes. Rough draft candidates, not placed or chosen yet: "We're right on
+schedule to reach the throat as it opens." / "If we miss it, we're screwed."]**
 
-**A4 — Discrepancy.** Near L2. <NOTE_FOR_REVIEW>Once again in microgravity about to enter the throat. This affects Sorell's and Harlan's way over to Zao in B3 and B4b</NOTE_FOR_REVIEW>. Zao's audit — driven by her perfectionism, and possibly an already-nagging unease about Harlan — flags a fuel-consumption discrepancy: propellant burned is a small but precise fraction above what the 1g profile should have required, meaning the drive compensated for mass that isn't on any manifest. **Confirmed: this is a fuel-margin discrepancy, not a timing delay** — the ship held its schedule exactly; it just cost more to do it.
+**A3c — Curious dialogue in transit.** Several crew, unforced, during this same slack time:
+- Okoye asks something like: *"So how do you even say hello to something like that?"*
+- Sorell explains, not as a lecture: there's no single word for a greeting — meaning unfolds
+  across a sequence, not a flash. And: *"When they go quiet, that's not nothing. That's a
+  choice."*
+- Zao, obsessive, skeptical: *"And if the AI gets it wrong?"* Sorell's answer is honest, not
+  reassuring — misreading is genuinely possible. Not magic translation, interpretation under real
+  uncertainty.
+- Harlan, quieter, gets one line — ordinary now, dreadful in hindsight: *"And what if we're the
+  ones who get it wrong?"* — echoing his Prologue line without repeating it.
 
-**A5 — Understanding.** Close on Zao: a stray radiation reading near the reactor shielding bay,
-inconsistent with anything logged. Not a sensor fault. Something is hidden here, and it's what's
-been eating the fuel margin.
+*Effect:* three things pay off much later — "silence is a choice" is what makes the silence in G2
+read as suspense rather than failure; establishing the AI translation layer here means F7 doesn't
+have to introduce it cold, under pressure; Harlan's line is a second, subtler foreshadowing beat.
+
+**A4 — Discrepancy.** Nearing L2, the ship drops to microgravity again for precision approach to
+the throat — the second of the film's three gravity dips. Zao's audit — her perfectionism, and
+the unease seeded in the Prologue — flags a fuel-consumption discrepancy: propellant burned is a
+small but precise fraction above what the 1g profile should have required. The deviation only
+separates from ordinary measurement noise after this much accumulated burn time, which is also
+the explicit reason nobody caught it earlier. A fuel-margin discrepancy, not a timing delay — the
+ship held its schedule exactly, it just cost more to do it.
+
+**A5 — Understanding.** Missing fuel means a possible leak, so Zao heads for the tanks the way
+anyone would — but it's the dosimeter on her own suit that signals stray radiation near the
+reactor shielding bay, inconsistent with anything logged. Not a sensor fault. Something is hidden
+here, and it's what's been eating the fuel margin.
 
 ---
 
 ## Sequence B — Warning and Sabotage
 
-**B1 — The crossing.** As Zao heads to investigate further, she passes Harlan in a corridor, <NOTE_FOR_REVIEW>exiting the bay with the radiation readings, </NOTE_FOR_REVIEW>
-returning to the bridge. He gives her a brief, worried/upset look. She clocks it, doesn't dwell on
+**B1 — The crossing.** In microgravity, Zao heads to investigate further and passes Harlan
+exiting the bay itself. He gives her a brief, worried/upset look. She clocks it, doesn't dwell on
 it — not yet. He now knows exactly where to find her.
 
-**B2 — Live report, cut off.** Already alarmed from being seen, Harlan <NOTE_FOR_REVIEW>who arrives just in time at the bridge via the service shaft, from having crossed Zao moments before,</NOTE_FOR_REVIEW> overhears when Zao calls the bridge — she gets out that there's "a grave attempt to sabotage the mission" and nothing more specific before he cuts the channel. <NOTE_FOR_REVIEW>Nobody sees him arrive as they're all either focused on their consoles or listening to Zao.</NOTE_FOR_REVIEW>
+**B2 — Live report, cut off.** Already alarmed from being seen, Harlan makes it back to the bridge
+via the service shaft just as Zao calls in — nobody notices his arrival, everyone's attention is
+on her voice. She gets out that she's discovered "a grave attempt to sabotage the mission" and
+nothing more specific before he cuts the channel.
 
 **B3 — Sabotage.** Harlan disconnects comms *and* cameras together, physically, at the service
-shaft tray on the bridge — cables pulled, not a digital shutdown, which is precisely why there's
-no access log for either action. This is deliberate on his part, not an oversight: a digital
-deactivation would need credentials and would log to someone. <NOTE_FOR_REVIEW>He then reenters the service shaft and heads back down to where he last saw Zao. He knows where she is and what he has to do.</NOTE_FOR_REVIEW>
+shaft tray on the bridge — cables pulled, not a digital shutdown, deliberately: a digital
+deactivation would need credentials and would log to someone, a physical one logs to no one. He
+re-enters the shaft and heads back down, in microgravity, to where he last saw her.
 
 **B4 — Confirmation of sabotage.** Zao checks all three comms paths; all down at once — deliberate.
 
-<NOTE_FOR_REVIEW>**B4b - Sorell ordered to find Zao** Voss orders Sorell to find Harlan and head over to Zao. She never finds him, can't callhim since comms are down and heads over by herself.</NOTE_FOR_REVIEW>
+**B4b — Sorell sent to find her.** Voss orders Sorell to find Harlan and head to Zao together.
+Sorell can't locate him and goes alone, in the same microgravity Harlan and Zao are already
+moving through.
 
-**B5 — The corridor message.** Comms are down, so a message toward Earth or Proxima is useless
-regardless. <NOTE_FOR_REVIEW>The reasons must be stated here explictly. The purpose of the outline is to make all causes, motivations and effects explicit as it's the source of all narrative truth. (BTW, verify everywhere that all reasons are explicit in this outline) </NOTE_FOR_REVIEW> She also reasons, aloud, that she may not survive this — the message needs to exist independent of her. She aims a transmission down the ship's own future flight corridor, using the already-known flight plan, calculating only the aiming geometry needed for the signal to converge with the ship's calculated position on the far side, ~23h15min later.
+**B5 — The corridor message.** Zao reasons the whole chain aloud, explicitly: Earth and Proxima
+are both useless regardless of the jamming — Proxima's occluded by Jupiter from here, and Earth
+is so far that even an unblocked signal would arrive after the encounter, not before. The tunnel
+is no help either, and she says why: shut to anything but the crossing itself, and even if it
+weren't, a signal riding through would outrun the ship and overshoot the destination before the
+Ardor ever got there — light doesn't get the shortcut, and wouldn't wait even if it did. She also
+reasons aloud that she may not survive this — the message needs to exist independent of her. She
+aims a transmission down the ship's own future flight corridor, calculating only the aiming
+geometry needed for it to converge with the ship's position on the far side, ~23h15min later.
 
-**B6 — Targeting-math insert. Required, not optional.** Flight plan, light-time, the intercept
-geometry — and now also carries the fuel-discrepancy math, <NOTE_FOR_REVIEW>not necessarily because if the ship maintains 1G the path is not affected but she may consider it while reckoning</NOTE_FOR_REVIEW>, since that's what let her estimate the device's mass. She reacts audibly to the number.
+**B6 — Targeting-math insert.** Flight plan, light-time, intercept geometry. The fuel-discrepancy
+math doesn't affect this — the drive held the schedule exactly — but it's what let her estimate
+the device's mass, and it's present in her head as she works. She reacts audibly to the number.
 
 **B7 — The full recording. Streamed live, not recorded-then-sent.** What the device is, her
 estimate of its mass, that it's on a countdown, everything she's pieced together — ending, as
-Harlan reaches the door, with: *"Just in case. Goodbye. Harlan's at the door."*
-**The audience does not hear any of this content now.** We see her recording — the urgency, the
-process, fragments of technical work — without hearing the words. The full content plays exactly
-once, in Sequence E, so the reveal there is the first and only time the audience hears her voice
-say what happened.
-**[Confirmed technically plausible: a reactor-powered ship at even a modest power multiple over a
-Voyager-class transmitter clears the bandwidth needed for a compressed voice message at this
-distance — worked the numbers, holds up.]**
+Harlan reaches the door, with: *"Just in case: goodbye. Harlan's at the door."* The audience does
+not hear any of this now — only the act of recording, without the words. The full content plays
+exactly once, in Sequence E.
 
-**B8 — Transmitted / door.** The sweep completes essentially as Harlan arrives — this beat now
-runs almost simultaneous with C1, not sequential. Visually, we simply see him at the door. No
-audio plays.
+**B8 — Transmitted / door.** The sweep completes essentially as Harlan arrives — almost
+simultaneous with C1. Visually, we simply see him at the door. No audio plays.
 
 ---
 
@@ -131,31 +180,38 @@ before closing the distance. **Needs actual dialogue to land clearly — script-
 
 **C3 — Murder**, off-screen.
 
-<NOTE_FOR_REVIEW>Moved C4 after C6 (renumerate).</NOTE_FOR_REVIEW>
+**C3b — The crossing.** Visually the largest moment in the film to this point, deliberately
+juxtaposed against what just happened: the throat opens, the Ardor enters, the throat closes
+behind it. No abort, no return. The ship achieves something historic while completely unaware of
+what just happened aboard it.
 
-**C5 — Sorell finds the body.** Tries to help, tries to call the bridge — comms are down until C4
-resolves relative to her own timing — and is now on camera, since the feed is live again by the
-time she's found. **[OPEN — see below: the original reasoning for why this takes her real time
-leaned partly on a gravity transition that may no longer fit the timeline; needs resolving.]**
+**C4 — Sorell arrives.** Still in microgravity, still with comms and cameras down. She tries to
+help, tries to call the bridge. Both fail — nothing has been reconnected yet.
 
-~~**C6 — Harlan, composed, returns to the bridge.**~~ <NOTE_FOR_REVIEW></NOTE_FOR_REVIEW>
+**C5 — Reconnection.** Harlan, exiting the service shaft at the tray, reconnects comms and
+cameras. The feed comes back live with Sorell already at the scene, beside the body.
 
-**C4 — Reconnection.** Harlan exiting the service shaft next to the service tray, reconnects comms and cameras — quickly, efficiently — ~~well before Sorell reaches the scene~~. <NOTE_FOR_REVIEW>The camera comes back to film Sorell next to Zao's corpse, laying down the reason she's later detained. Voss asks Harlan if Sorell contacted him, which he denies, so he then orders him and Okoye to go find out what is going on.</NOTE_FOR_REVIEW>
+**C6 — The lie.** Voss asks Harlan whether Sorell ever reached him. He denies it, acting
+dumbfounded. Voss sends him and Okoye to find out what's going on.
 
+**C7 — Found.** Harlan and Okoye arrive and find Sorell with the body. Harlan accuses her
+immediately: "How could you? Why?" Okoye detains her. She pleads her innocence to both of them.
 
-<NOTE_FOR_REVIEW>**C6b - Harlan and Okoye find Sorell with Zao.** Voss sends Harlan, now on the bridge, with Okoye to find out why Sorell hasn't come back.</NOTE_FOR_REVIEW>
+**C8 — Restrained on the bridge.** No formal brig — she's restrained in the bridge itself, always
+guarded because someone is always there, and available to be questioned at multiple points across
+Sequence D. She gets at least one line of her own volition somewhere in D, unprompted.
 
-**C7 — Sorell is found / restrained on the bridge.** No formal brig — she's restrained in the
-bridge itself, always guarded because someone is always there, and available to be questioned at
-multiple points across Sequence D rather than in one scene. She gets at least one line of her own
-volition somewhere in D, unprompted.
+**C9 — Doubt, not proof.** The crew — not the audience — briefly entertains an accomplice theory:
+being on camera beside the body doesn't clear her, since restoring the feed wasn't within her
+skill set or access to begin with. It doesn't resolve either way. What stays with Elin specifically
+is something outside the logic entirely: Sorell is genuinely, visibly disconsolate — not
+performing grief. Elin can't square that with guilt. For the audience, who already know it's
+Harlan, none of this is mystery — it's dread: fear for Sorell, fear he isn't caught in time, fear
+for humanity's fate.
 
-**C8 — The crew — not the audience — briefly entertains an accomplice theory.** The reasoning:
-Sorell couldn't have restored the cameras herself — not her skill set, not her access <NOTE_FOR_REVIEW>She's also on camera next to Zao's corpse when they're restored, not at service tray connecting cables.</NOTE_FOR_REVIEW>— so *someone* did, deliberately, and it wasn't logged. For the audience, who already know it's Harlan, this beat isn't mystery — it's dread: worry for Sorell, worry that he isn't going to be caught.
-
-**C9 — Time jump.** Overlay: roughly a day forward, the contact window approaching. The jump
-compresses screen time, not story time — Sorell is being actively, continuously disbelieved
-throughout it.
+**C10 — Time jump.** Overlay: roughly a day forward, the contact window approaching. The jump
+compresses screen time, not story time — Sorell is being actively disbelieved throughout it, and
+Voss is quietly making arrangements to cover her role at the encounter without her.
 
 ---
 
@@ -163,30 +219,34 @@ throughout it.
 
 **D1 — Standing condition, not a single beat.** Voss orders a systems audit; Sorell's ongoing
 suspicion and questioning run as continuous texture through D2–D5 rather than as repeated
-dedicated steps. **[OPEN: this is a structural recommendation, not confirmed — you may want her
-interrogation to have its own explicit beat instead.]**
+dedicated steps. **[OPEN: structural recommendation, not confirmed.]**
 
 **D2 — The trace.** Elin, with Okoye, finds an unauthorized system wired into the reactor/fuel
 section — resistant to deletion, clearly dangerous, clearly not standard. Both have been at this
-for most of the day and are visibly exhausted by the time this pays off — which is also why Okoye
-alone won't be enough to stop Harlan later.
+for most of the day and are visibly exhausted by the time this pays off.
 
 **D3 — Locked door.** Harlan sealed access to the area himself, bypassing ship systems entirely —
-a physical/local lock, not a network one. The crew is stopped cold here, not by ambiguity but by a
-door they can't open.
+a physical/local lock, not a network one, and not even an obviously visible lock — it just reads
+as inaccessible.
 
-**D4 — Real risk, honestly uncertain.** Voss asks if it can be stopped outright; Elin says she can
-work on it once she's inside, not before.
+**D4 — What they actually know, honestly limited.** At this point nobody knows there's anything
+active to stop — only that something dangerous is behind a door they can't open. Voss asks Elin
+whether she can get them in, not whether she can stop it.
 
 **D5 — Harlan's misdirection.** A confident, specific, wrong technical answer, offered in the
-moment rather than a prepared paper trail — the falseness only lands in hindsight, once E2 reveals
-the truth. **[OPEN: exact content not written. Direction confirmed: an actual wrong answer, not
-generic obstruction.]**
+moment — the falseness only lands in hindsight, once E2 reveals the truth. **[OPEN: exact content
+not written.]**
 
-**D6 — Suspicion narrows.** Opportunity/timing logic — who was near the tray when the feed died and
-came back — points at Harlan specifically, alongside the standing "or an accomplice" doubt from C8.
+**D6 — Elin's confusion becomes suspicion.** The opportunity/timing logic points at Harlan: he
+wasn't seen leaving earlier, only seen arriving back. Elin turns over the standing accomplice
+theory from C9 and briefly gets tangled in it herself — if Sorell had an accomplice, why would
+that accomplice be the one so eager to accuse her? It doesn't fit a co-conspirator's behavior.
+The contradiction doesn't get resolved by finding a better answer — it resolves by discarding the
+accomplice theory entirely. There wasn't one. It was just him.
 
-**D7 — Signal detected.** Elin picks up Zao's transmission, arriving on schedule.
+**D7 — Signal detected.** Elin's console beeps — Zao's transmission, arriving on schedule. Her
+reaction runs through it in real time: surprise, then confusion — a transmission, from where? Not
+Earth. Zao. What? How?
 
 ---
 
@@ -194,61 +254,108 @@ came back — points at Harlan specifically, alongside the standing "or an accom
 
 **E1 — Authentication.** Confirmed as Zao's own transmitter.
 
-**E2 — The message plays — for the first time, for everyone, including the audience.** Full
-content: the device, her mass estimate, the countdown, what she pieced together — and closing
-with "Harlan's at the door," heard now with all the dread the audience already carries from
+**E2 — The message plays — for the first time, for everyone, including the audience.** The
+device, her mass estimate, the countdown, what she pieced together — closing with "Just in case:
+goodbye. Harlan's at the door," heard now with all the dread the audience already carries from
 watching it happen three sequences ago.
 
 **E3 — Harlan objects.** A voice can be faked.
 
-**E4 — Convergence.** The opportunity/timing logic from D6, plus Zao's own testimony. Two strands,
-not three — the earlier access-log and paper-trail ideas are both dropped.<NOTE_FOR_REVIEW>The final outline shouldn't mention anything dropped from previous versions, just the current narrative, to avoid confusion and remove deprecated plot lines from memory.</NOTE_FOR_REVIEW>
+**E4 — Convergence.** The opportunity/timing logic from D6, and Zao's own testimony, land on him
+together.
 
 **E5 — Confirmed.** Attribution shown on screen.
 
-**E6 — Revoked, and Elin is sent down immediately.** Voss revokes Harlan's authority<NOTE_FOR_REVIEW>, orders him detained by Okoye,</NOTE_FOR_REVIEW> and orders
-Elin to the bay right away — still 1g, she takes the elevator.
+**E6 — Revoked.** Voss revokes Harlan's authority, orders him detained by Okoye, and orders Elin
+to the bay immediately. Still 1g on this side of the transit — she takes the elevator.
 
 ---
 
 ## Sequence F — Confrontation and Climax
 
-**F1 — Break.** Harlan, ~~initially~~ <NOTE_FOR_REVIEW>previously</NOTE_FOR_REVIEW> detained, breaks free, knocks Okoye down, and flees via the service shaft — his own established shortcut from B3 — sliding down at dangerous speed, locking the hatch behind him from the inside. The same physical, non-networked lock logic as D3: nothing Voss's revocation can reach in time.
+**F1 — Break.** Okoye is exhausted from a full day investigating alongside Elin — enough that
+Harlan, running on adrenaline rather than fatigue, breaks free of a trained security officer,
+knocks him down, and flees via the service shaft — the same route from B3 — sliding almost in
+free fall, and locks the hatch behind him from the inside. The same physical, non-networked lock
+logic as D3: nothing Voss's revocation can reach in time.
 
-**F2 — The chase splits.** Voss and Okoye are forced onto the central shaft's helical stairs —
-longer than Harlan's route. **[OPEN: exact distances — the stairs' length and the eventual jump
-distance below — need measuring in Blender; ~50–80m <NOTE_FOR_REVIEW>(measured: ~48m)</NOTE_FOR_REVIEW> and ~10–20m <NOTE_FOR_REVIEW>(measured: ~15m)</NOTE_FOR_REVIEW> respectively, not confirmed.]**
+**F2 — The chase splits.** The point-to-point distance from the bridge to the bay is 63m (48m +
+15m). Harlan takes the service shaft in a near-freefall slide; Elin takes the elevator, covering
+the identical 63m — but the elevator is speed-governed for safety and Harlan isn't, which is why
+he arrives first despite the same distance. Voss and Okoye take the central shaft's helical
+stairs instead, covering the first 48m of vertical rise — 282 steps at a measured 17cm riser
+height, and because the stairs spiral around a ~5m-diameter shaft rather than dropping straight
+down, the actual walked distance is several times that (exact multiple depends on the stairs'
+real steps-per-revolution, not pinned down here; a fast descent of 282 steps alone runs roughly
+two minutes, useful as a pacing anchor). This is why they fall behind.
 
 **F3 — Harlan reaches Elin first** and is attacking her when the ship cuts thrust for final
-approach — the same transition driving the whole countdown, not a coincidental one — and enters
-microgravity.
+approach and drops to microgravity a third time — the same transition driving the whole
+countdown, not a coincidental one.
 
-**F4 — The save.** Microgravity lets Voss and Okoye close the last stretch fast, reaching Harlan
-directly rather than by the stairs' full length. A struggle. **[OPEN: Harlan's fate — restrained,
-or an accidental death from his own recklessness/the fight itself. Leaning toward accidental —
-"he who lives by the sword" made literal, and it avoids the crew making a deliberate kill — but
-not decided.]** His wrist device is recovered either way.
+**F4 — The save, and the confession.** Microgravity lets Voss and Okoye close the remaining 15m
+by pushing off directly rather than finishing the stairs, reaching Harlan fast despite falling
+behind on the first 48m. A struggle. Whether he ends up restrained or dies in the fall/struggle
+itself **[OPEN, still undecided]**, he gets a moment here either way: desperate, pleading, telling
+Voss and the crew why — he genuinely believes the sacrifice might save humanity. If he survives,
+it's true (though outside this film's own timeframe) that he may eventually come to regret this,
+including killing Zao, once he learns the real scale and benevolence of what he tried to stop —
+that reckoning belongs after the story ends, not in it. His wrist device is recovered either way.
 
-**F5 — Disarmed.** Elin, using the device to get through the door and acting on the hint from
-Zao's own message that the device runs on a countdown, feeds it a false future clock signal —
-delaying detonation by months rather than attempting to stop it outright. <NOTE_FOR_REVIEW>Visuals: bomb's clock: 4, 3, 2, 1, 99999999999. Voss is still aft at the shiled bay, radios the bridge to have Sorell released (no time for him to head back) and to let her setup her diplomatic protocol (enabling F7) and jumps to float up to the bridge.</NOTE_FOR_REVIEW>
+**F5 — Disarmed.** Elin uses the device to get through the door and, acting on the hint from
+Zao's own message that it runs on a countdown, feeds it a false future clock signal rather than
+attempting to stop it outright. Visual: the readout counts 4, 3, 2, 1 — then jumps to a number
+absurdly far in the future.
 
-**F6 — Sorell released**, as soon as Harlan's guilt is confirmed (**[OPEN: exact timing relative
-to the chase above — placed early here, at E6, but this needs to be checked against the final
-chase choreography once that's locked]**) — and moves to prepare the greeting.
+**F6 — Sorell released**, by Voss's order the moment the device is handled — and moves to prepare
+the greeting.
 
-**F7 — The greeting.** Sorell's own pre-designed protocol, sent through the ship's lighting,
-AI-assisted — deliberately minor, contextual detail, not its own dramatized beat.
+**F7 — Staged, not sent.** Sorell aims and readies her own pre-designed protocol. Her own console
+— what she's actually watching as she works — resembles neurons firing: apparent chaotic
+flickering resolving into organized, branching light as the protocol becomes coherent, the same
+grammar the Velari's own communication runs on. The physical transmission itself will be carried
+by lights mounted along the ship's hull, not a handheld device. Before she finishes, one quiet
+line: *"They'll have it in seconds. Understanding it — that's a different clock."* Standing by,
+not yet transmitted.
 
 ---
 
 ## Sequence G — First Contact and Close
 
-**G1 — Zero.** Voss gives the order; the clean signal goes out.<NOTE_FOR_REVIEW>Continuity? Didn't the message head out at F7?</NOTE_FOR_REVIEW>
+**G1 — Zero.** Voss, back on the bridge, finds Sorell first — a quiet, private "I'm sorry" before
+anything else — then gives the order. Sorell's staged signal goes out now, the first and only
+time it's actually sent. **[OPEN: whether this apology happens here, in person, or earlier by
+radio from the bay in F5 — leaning toward here, since it lands heavier face to face and doesn't
+cost Sequence F any of its urgency, but not locked.]**
 
-**G2 — Response.** Silence, then the Velari — hero shot of the Ardor against their vessel.
+**G2 — The greeting, the response, and the turn.** Sorell's protocol fires along the Ardor's own
+hull — a deliberate, composed sequence of light, not a beam or a single flash. Silence. Then the
+Velari's own vessel responds in kind: its surface alive with slow, branching, coordinated light,
+the same grammar scaled up to something vast — not a face yet, not a greeting gesture, just proof
+that something out there is answering in a language built the same way. Sorell watches and, for a
+few real seconds, does nothing but work — decoding, not celebrating. The "different clock" line
+from F7 is dramatized here rather than just spoken: the signal arrived instantly, what it *means*
+doesn't, and the audience sits in that gap with her, not knowing yet whether this is good news.
+She turns to the crew — not relief, urgency: *"Let's suit up. They're coming over."*
 
-**G3 — Close.** Zao's message archived; Voss: "You made it in time."
+**G2b — The meeting.** The reward the film has been building toward, not its ending. Sorell suits
+up — **[OPEN: alone, or with Voss accompanying. Leaning alone: Voss has real narrative business
+bookending this sequence on the bridge (the apology in G1, the closing line in G3), which argues
+for Sorell going out on her own rather than splitting his attention between two places at once.
+Not locked.]** — and drifts out through the airlock into open space. Nearby, a small transparent
+pressurized bubble has closed the distance, close enough to touch. Inside it: a single Velari.
+Not the vast, arms-spread scale of the vessel's response a moment ago — gathered in, deliberately
+smaller than it could be, arms drawn toward the body rather than unfurled. Its sensory region
+turns to align with her. The mantle presents its light, restrained and controlled rather than
+overwhelming — an unfamiliar intelligence making a visible effort to be understood, and to make
+the meeting beautiful. The sequence holds here, on the encounter itself, before cutting away.
+
+**G3 — Close.** The film's actual ending, deliberately after the encounter rather than inside it.
+Back to something quieter — the bridge, or wherever feels right once this is on the page. Zao's
+message is archived: the thread that carried the whole back half of the film given a proper rest.
+Voss's last line: *"You made it in time."* Said now, in this quieter moment rather than mid-
+scramble, it carries both meanings at once without having to choose between them — in time to
+stop the bomb, in time for this.
 
 ---
 
@@ -256,17 +363,18 @@ AI-assisted — deliberately minor, contextual detail, not its own dramatized be
 
 - **Bomb mass:** narrowed to roughly 1,000–1,500 kg by the fuel-margin math; not finalized.
 - **D5's exact lie:** direction settled (an in-the-moment wrong answer), content not written.
-- **Chase geometry:** stair length, jump distance — needs Blender measurement. You flagged wanting
-  to revisit this whole sequence in more detail.
-- **Harlan's fate:** restrained vs. accidental death — leaning restrained-by-accident, not decided.
-- **Sorell's delay reaching the bridge:** originally leaned partly on a gravity transition, but
-  A3b now establishes constant 1g from shortly after departure all the way through L2 — there's no
-  transition at the point of the murder for her to struggle against anymore. The only confirmed
-  gravity change left in the story is the one in F3, much later. Needs a decision: drop gravity as
-  part of her delay and rely on jamming + shock alone, or find a different justification.
-- **Sorell's release timing** relative to the chase sequence — flagged above, depends on the chase
-  being finalized.
-- **Throat/return-window line:** placement recommended (A3b) but not confirmed.
+- **Chase geometry, precision:** 282 vertical steps is solid; the actual spiral path length and
+  turn count depend on the stairs' real steps-per-revolution from the built model.
+- **Harlan's fate:** restrained vs. accidental death — still undecided; the confession beat in F4
+  works either way.
+- **Throat/return-window line:** two rough draft candidates offered in A3b; placement and final
+  wording not confirmed.
+- **Voss's apology to Sorell:** placed in G1 (in person) as the current lean; radioed-earlier
+  version from F5 still on the table.
+- **Sorell alone vs. with Voss in G2b:** leaning alone, for the reason given above; not locked.
 - **Location name:** still just functional.
 - **Sound bible follow-up** (echo motif → engine heartbeat): outside the outline, still pending.
-- **E4's convergence wording:** first-draft, now simplified to two strands.
+- **Velari environments** (no privileged forward orientation, anchor points instead of chairs):
+  not relevant to this cut, since G2b keeps the Velari inside its bubble seen from outside —
+  interiors never come on camera. Noted only so it isn't lost if a longer cut ever goes further.
+  
