@@ -12,12 +12,12 @@
       "en": "Non-canonical, unconstrained development draft. It does not replace the registered short, festival, trailer, or feature scripts."
     },
     "status": "draft",
-    "version": "0.1.0-wip",
+    "version": "0.2.0-wip",
     "source": {
       "path": "docs/wip/general-narrative-outline.en.md",
-      "revision": "11",
+      "revision": "12",
       "language": "en",
-      "sha256": "f1942722a47ad168adad591854440ccfe278ecd967abac5a5ca79038ebd1865a"
+      "sha256": "1d9f8073cf6009972bc578b1c22a5dd58eb30356243eec409ec2ebac67867268"
     },
     "editorialNotice": {
       "es": "Esta narrativa maestra es una rama de trabajo no canónica. Su trama no fue adoptada por ninguna de las cuatro versiones existentes.",
@@ -78,8 +78,15 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La estructura Velari que espera en el encuentro previsto es una estación de aproximadamente 4–5 km de diámetro. Para el encuentro físico, la estación envía una esfera ambiental transparente que contiene a un Velari.",
-            "en": "The Velari structure waiting at the planned encounter is a station, approximately 4–5 km across. For the physical meeting, the station sends a transparent environmental sphere containing one Velari."
+            "es": "Velari es tanto singular como plural. La estructura Velari que espera en el encuentro previsto es una estación de aproximadamente 4–5 km de diámetro. Para el encuentro físico, la estación envía una esfera ambiental transparente autopropulsada, de unos 5 m de diámetro, que contiene a un Velari de tamaño natural en una atmósfera adecuada.",
+            "en": "Velari is both singular and plural. The Velari structure waiting at the planned encounter is a station, approximately 4–5 km across. For the physical meeting, the station sends a transparent self-propelled environmental sphere, roughly 5 m across, containing one full-size Velari in a suitable atmosphere."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "El cuerpo principal y órgano de comunicación luminoso de un Velari es su manto alargado y selectivamente translúcido.",
+            "en": "A Velari’s principal body and luminous communication organ is its elongated, selectively translucent mantle."
           }
         },
         {
@@ -101,6 +108,42 @@
           "text": {
             "es": "A Elin Rao se la llama Elin en todo momento, para mantenerla claramente diferenciada de Zao.",
             "en": "Elin Rao is called Elin throughout, keeping her distinct from Zao."
+          }
+        },
+        {
+          "type": "heading",
+          "level": 3,
+          "text": {
+            "es": "Biología y comunicación Velari",
+            "en": "Velari biology and communication"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Los Velari están adaptados a hábitats presurizados en microgravedad, no al vacío abierto. Necesitan una atmósfera respirable adecuada, presión y humedad controlada. Por lo tanto, fuera de sus hábitats requieren protección ambiental, como la esfera.",
+            "en": "The Velari are adapted to pressurized microgravity habitats, not to open vacuum. They require a suitable breathing atmosphere, pressure, and controlled humidity. Outside their habitats they therefore need environmental protection such as the sphere."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Un adulto abarca aproximadamente 2,5–3 m en una postura conversacional recogida y alcanza bastante más cuando despliega sus extremidades. Ocho extremidades flexibles funcionan como manipuladores, anclajes e instrumentos de expresión. Sus finos extremos articulados no tienen ventosas ni estructuras circulares de adhesión repetitivas. Varios elementos sensoriales pequeños distribuidos de manera irregular reemplazan un rostro o un único ojo dominante; la atención se comunica mediante la orientación, la quietud y la presentación del manto.",
+            "en": "An adult spans approximately 2.5–3 m in a gathered conversational posture and has substantially greater reach when its limbs unfold. Eight flexible limbs serve as manipulators, anchors, and instruments of expression. Their fine articulated tips have no suckers or repetitive circular attachment structures. Several small, irregularly distributed sensory elements replace a face or single dominant eye; attention is conveyed through orientation, stillness, and presentation of the mantle."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Dentro del manto hay una red tridimensional de neuronas emisoras de luz controlada voluntariamente. Una ramificación tenue permanece visible como anatomía mientras está inactiva; los patrones emitidos son comunicación deliberada, no una exhibición involuntaria del pensamiento. El significado se transmite mediante la disposición espacial, el tiempo, la intensidad y la longitud de onda. Cuando un Velari presta atención a alguien, las ramas más próximas a esa persona convergen, se coordinan y se sostienen antes de que comience el habla plena.",
+            "en": "Within the mantle is a voluntarily controlled three-dimensional network of light-emitting neurons. Faint branching remains visible as anatomy while inactive; emitted patterns are deliberate communication rather than involuntary thought display. Meaning is carried through spatial arrangement, timing, intensity, and wavelength. When a Velari attends to someone, branches nearer that person converge, coordinate, and hold before full speech begins."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La tecnología óptica Velari extiende este lenguaje biológico. El manual de la boca incluye ejemplos visibles de luz estructurada adaptados de la gramática del manto. La IA de Sorell despliega sus relaciones espaciales simultáneas en una forma secuencial legible para humanos y realiza el mapeo inverso al preparar el saludo de luces del casco de la Ardor. Puede recuperar el significado práctico aunque al principio pierda matices y arte. El gran ancho de banda no elimina los malentendidos, desacuerdos ni engaños.",
+            "en": "Velari optical technology extends this biological language. The mouth’s primer includes visible structured-light examples adapted from mantle grammar. Sorell’s AI unfolds their simultaneous spatial relationships into a sequential human-readable form and performs the reverse mapping when preparing the Ardor’s hull-light greeting. It can recover practical meaning while initially missing nuance and artistry. High bandwidth does not eliminate misunderstanding, disagreement, or deception."
           }
         }
       ]
@@ -125,8 +168,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "En su estado piloto, la boca transmite una secuencia estructurada de instrucciones. Le ha proporcionado a la humanidad información limitada sobre los Velari, ejemplos de su gramática comunicativa y el cronograma de una apertura completa. No recibe ni acusa recibo de transmisiones humanas. Mecanismos dentro de la garganta han detectado el descubrimiento de la humanidad y se lo han notificado a los Velari por medios que la humanidad no comprende.",
-            "en": "In its pilot state, the mouth broadcasts a structured instructional sequence. It has supplied humanity with limited information about the Velari, examples of their communicative grammar, and a schedule for a full aperture. It does not receive or acknowledge human transmissions. Mechanisms within the throat have detected humanity’s discovery and notified the Velari by means humanity does not understand."
+            "es": "En su estado piloto, la boca transmite una secuencia instructiva estructurada en luz visible. Le ha proporcionado a la humanidad información limitada sobre los Velari, ejemplos de su gramática comunicativa y el cronograma de una apertura completa. No recibe ni acusa recibo de transmisiones humanas. Mecanismos dentro de la garganta han detectado el descubrimiento de la humanidad y se lo han notificado a los Velari por medios que la humanidad no comprende.",
+            "en": "In its pilot state, the mouth broadcasts a structured visible-light instructional sequence. It has supplied humanity with limited information about the Velari, examples of their communicative grammar, and a schedule for a full aperture. It does not receive or acknowledge human transmissions. Mechanisms within the throat have detected humanity’s discovery and notified the Velari by means humanity does not understand."
           }
         },
         {
@@ -146,8 +189,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Las posiciones son el resultado de órbitas heliocéntricas con radios, velocidades y fases diferentes. En esta alineación particular, la distancia en línea recta desde la boca de Júpiter hasta el punto donde el mensaje de Zao interceptará a la Ardor es de 167,8 UA. La boca lejana deposita a la Ardor aproximadamente 18,3 millones de km antes del encuentro previsto con la estación. La geometría puede ser parte del motivo del cronograma, pero la humanidad no sabe lo suficiente para estar segura.",
-            "en": "The positions are the result of heliocentric orbits with different radii, velocities, and phases. At this particular alignment, the straight-line distance from the Jupiter mouth to the point where Zao’s message will intercept the Ardor is 167.8 AU. The far mouth deposits the Ardor approximately 18.3 million km short of the planned encounter with the station. The geometry may be part of the reason for the schedule, but humanity does not know enough to be certain."
+            "es": "Las posiciones son el resultado de órbitas heliocéntricas con radios, velocidades y fases diferentes. En esta alineación particular, la distancia en línea recta desde la boca de Júpiter hasta el punto donde el mensaje de Zao interceptará a la Ardor es de 167,8 UA. La boca lejana deposita a la Ardor aproximadamente 17,4 millones de km antes del encuentro previsto con la estación. La geometría puede ser parte del motivo del cronograma, pero la humanidad no sabe lo suficiente para estar segura.",
+            "en": "The positions are the result of heliocentric orbits with different radii, velocities, and phases. At this particular alignment, the straight-line distance from the Jupiter mouth to the point where Zao’s message will intercept the Ardor is 167.8 AU. The far mouth deposits the Ardor approximately 17.4 million km short of the planned encounter with the station. The geometry may be part of the reason for the schedule, but humanity does not know enough to be certain."
           }
         },
         {
@@ -418,8 +461,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Un inhibidor local oculto puede suprimir los repetidores inalámbricos internos. Los troncales de comunicaciones cableadas y cámaras atraviesan una bandeja física dentro del conducto de servicio, justo debajo de la escotilla del puente.",
-            "en": "A concealed local jammer can suppress the internal wireless repeaters. The wired communications and camera trunks pass through a physical tray inside the service shaft just below the bridge hatch."
+            "es": "Un jammer local oculto puede suprimir los repetidores inalámbricos internos. Harlan vinculó su control local directo con el dispositivo de su muñeca; la activación no deja registro en el mando central de la nave. Los enlaces de comunicaciones cableadas y cámaras pasan por una bandeja física dentro del cilindro de servicio, justo debajo de la escotilla del puente.",
+            "en": "A concealed local jammer can suppress the internal wireless repeaters. Harlan has paired its direct local control with his wrist device; activation leaves no central shipboard command record. The wired communications and camera trunks pass through a physical tray inside the service shaft just below the bridge hatch."
           }
         },
         {
@@ -458,8 +501,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 18,3 millones de km. Un perfil de aceleración–desaceleración a 1 g toma unas 24 horas.",
-            "en": "The far-side segment from the far mouth to the planned encounter is approximately 18.3 million km. A 1g accelerate–decelerate profile takes approximately 24 hours."
+            "es": "El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 17,4 millones de km. Un perfil de aceleración–desaceleración a 1 g toma aproximadamente 23 h 25 min.",
+            "en": "The far-side segment from the far mouth to the planned encounter is approximately 17.4 million km. A 1g accelerate–decelerate profile takes approximately 23 h 25 min."
           }
         },
         {
@@ -472,8 +515,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La Ardor cruza la garganta poco después de que Zao realiza el envío. Por eso la nave salta más de veintitrés horas luz por delante de su propia advertencia y luego pasa aproximadamente veinticuatro horas volando hacia la estación. La advertencia alcanza la nave unos 45 minutos antes del primer contacto previsto. Las Secuencias E y F ocurren dentro de ese intervalo.",
-            "en": "The Ardor crosses the throat shortly after Zao sends. The ship therefore jumps more than twenty-three light-hours ahead of its own warning, then spends approximately twenty-four hours flying toward the station. The warning catches the ship roughly 45 minutes before planned first contact. Sequences E and F occur inside that interval."
+            "es": "La Ardor cruza la garganta pocos minutos después de que Zao realiza el envío. Por eso la nave salta más de veintitrés horas luz por delante de su propia advertencia y luego pasa aproximadamente 23 h 25 min volando hacia la estación. La ruta del mensaje, que no cambia y dura 23 h 15 min, alcanza la nave unos 10–15 minutos antes del primer contacto previsto. Las Secuencias E y F ocurren dentro de ese intervalo.",
+            "en": "The Ardor crosses the throat within a few minutes after Zao sends. The ship therefore jumps more than twenty-three light-hours ahead of its own warning, then spends approximately 23 h 25 min flying toward the station. The unchanged 23 h 15 min message path catches the ship roughly 10–15 minutes before planned first contact. Sequences E and F occur inside that interval."
           }
         },
         {
@@ -980,6 +1023,10 @@
             {
               "es": "La resolución exacta del dosímetro y la presentación del diagnóstico del sistema de combustible usadas en la teoría falsa.",
               "en": "Exact dosimeter resolution and fuel-system diagnostic presentation used in the false theory."
+            },
+            {
+              "es": "La distancia final del tramo lejano y el margen exacto de recepción de 10–15 minutos después de cronometrar la advertencia de Zao y bloquear las Secuencias E y F.",
+              "en": "The final far-side distance and exact 10–15 minute reception margin after timing Zao’s warning and blocking Sequences E and F."
             },
             {
               "es": "La cantidad exacta de peldaños, giros, geometría de los descansos y tiempo en pantalla del descenso.",
@@ -1860,8 +1907,15 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Harlan asciende por el conducto de servicio y abre la escotilla detrás de los puestos del puente. La tripulación del puente mira las pantallas dispuestas sobre la pared exterior del casco y queda de espaldas a las aberturas de los conductos. Nadie lo ve salir.",
-            "en": "Harlan climbs the service shaft and opens the hatch behind the bridge stations. The bridge crew are facing the displays along the outer hull wall, with their backs toward the shaft openings. Nobody sees him emerge."
+            "es": "Después de su última inspección de la bomba, Harlan toma el cilindro de servicio hacia el puente. En microgravedad es la ruta más rápida. Pretende informar que completó la inspección asignada y retomar su puesto en el puente antes del cruce de la garganta.",
+            "en": "After his final check of the bomb, Harlan takes the service shaft toward the bridge. In microgravity it is the quickest route. He intends to report his assigned inspection complete and resume his bridge station before the throat crossing."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Abre la escotilla detrás de los puestos del puente. La tripulación mira los displays de la pared exterior del casco, de espaldas a las aberturas de los cilindros. Nadie lo ve salir y él todavía no ha anunciado su presencia.",
+            "en": "He opens the hatch behind the bridge stations. The bridge crew are facing the displays along the outer hull wall, with their backs toward the shaft openings. Nobody sees him emerge, and he has not yet announced himself."
           }
         },
         {
@@ -1881,8 +1935,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Harlan la escucha. Sin anunciar su presencia, activa un inhibidor local oculto. La voz de Zao se deshace en estática.",
-            "en": "Harlan hears her. Without announcing his presence, he activates a concealed local jammer. Her voice collapses into static."
+            "es": "Harlan la oye y abandona el informe que pensaba dar. Activa el jammer preparado con el dispositivo de su muñeca. La voz de Zao se deshace en estática.",
+            "en": "Harlan hears her and abandons his intended report. Using his wrist device, he activates the prepared local jammer. Her voice collapses into static."
           }
         },
         {
@@ -1899,8 +1953,8 @@
           "sourceStepId": "master:story-b1b",
           "relation": "forces",
           "explanation": {
-            "es": "El descubrimiento de la bomba obliga a Zao a informar al puente, mientras el conocimiento de Harlan sobre su ubicación lo impulsa a interceptar el aviso.",
-            "en": "Discovering the bomb forces Zao to report to the bridge, while Harlan's knowledge of her location drives him to intercept the warning."
+            "es": "Después de revisar la bomba, el regreso ordinario de Harlan a su puesto lo coloca sin ser visto junto a la escotilla del puente cuando comienza el informe de Zao; al oírlo, abandona su informe previsto y activa el jammer preparado.",
+            "en": "After checking the bomb, Harlan's ordinary return to his station places him unseen at the bridge hatch when Zao's report begins; overhearing it makes him abandon his intended report and activate the prepared jammer."
           }
         }
       ]
@@ -3413,8 +3467,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Aproximadamente 45 minutos antes del primer contacto previsto, la consola de Elin detecta una transmisión óptica entrante precisamente sobre la trayectoria actual de la Ardor.",
-            "en": "Approximately 45 minutes before planned first contact, Elin’s console detects an incoming optical transmission precisely on the Ardor’s current trajectory."
+            "es": "Aproximadamente 10–15 minutos antes del primer contacto previsto, la consola de Elin detecta una transmisión óptica entrante precisamente sobre la trayectoria actual de la Ardor.",
+            "en": "Approximately 10–15 minutes before planned first contact, Elin’s console detects an incoming optical transmission precisely on the Ardor’s current trajectory."
           }
         },
         {
@@ -4251,22 +4305,22 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La consola de Sorell muestra cómo toma forma el protocolo. Una IA humana primitiva organiza puntos de luz ramificados en la gramática demostrada por la secuencia de instrucciones de la garganta.",
-            "en": "Sorell’s console shows the protocol taking form. A primitive human AI organizes branching points of light into the grammar demonstrated by the throat’s instructional sequence."
+            "es": "La consola de Sorell muestra cómo toma forma el protocolo. Una IA humana primitiva despliega las relaciones espaciales simultáneas del manual de la garganta en una forma de trabajo secuencial legible para humanos. Luego realiza la operación inversa y organiza puntos de luz ramificados en la gramática demostrada por la secuencia instructiva.",
+            "en": "Sorell’s console shows the protocol taking form. A primitive human AI unfolds the simultaneous spatial relationships in the throat’s primer into a sequential human-readable working form. It then performs the reverse operation, organizing branching points of light into the grammar demonstrated by the instructional sequence."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "La pantalla se asemeja a neuronas que se activan: una actividad irregular se resuelve gradualmente en una estructura ordenada y deliberada.",
-            "en": "The display resembles neurons firing: irregular activity gradually resolving into a deliberate ordered structure."
+            "es": "El display parece mostrar neuronas activándose porque la gramática es una extensión tecnológica del lenguaje del manto Velari: una actividad irregular se resuelve gradualmente en una estructura deliberada y ordenada.",
+            "en": "The display resembles neurons firing because the grammar is a technological extension of the Velari’s mantle language: irregular activity gradually resolves into a deliberate ordered structure."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "El saludo se expresará mediante luces distribuidas por el casco de la Ardor. No es un único destello ni un haz estrecho.",
-            "en": "The greeting will be expressed by lights distributed across the Ardor’s hull. It is not a single flash or a narrow beam."
+            "es": "El saludo se expresará mediante luces distribuidas por el casco de la Ardor, conservando tanto el medio visible como la forma relacional del manual. No es un único destello ni un haz estrecho.",
+            "en": "The greeting will be expressed by lights distributed across the Ardor’s hull, preserving both the visible medium and the relational form of the primer. It is not a single flash or a narrow beam."
           }
         },
         {
@@ -4409,8 +4463,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Su inmensa superficie cobra vida con una luz lenta, coordinada y ramificada. El pequeño esquema mostrado durante el tránsito se revela como una representación simplificada de una gramática que es natural para los Velari y arquitectónica a la escala de la estación.",
-            "en": "Its immense surface comes alive with slow, coordinated, branching light. The small schematic shown during transit is revealed as a simplified representation of a grammar that is natural to the Velari and architectural at the station’s scale."
+            "es": "Su inmensa superficie cobra vida con una luz lenta, coordinada y ramificada. El pequeño esquema mostrado durante el tránsito se revela como una representación simplificada de una gramática natural para los Velari y extendida tecnológicamente a la escala de la estación.",
+            "en": "Its immense surface comes alive with slow, coordinated, branching light. The small schematic shown during transit is revealed as a simplified representation of a grammar that is natural to the Velari and technologically extended to the station’s scale."
           }
         },
         {
@@ -4440,6 +4494,13 @@
             "es": "«Están enviando a alguien».",
             "en": "“They’re sending someone.”"
           }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La respuesta de la estación termina. Sus luces ramificadas se retiran hasta que la inmensa estructura vuelve a quedar quieta. Como la luz es el medio, el regreso a la oscuridad también es un silencio deliberado. La observación anterior de Sorell adquiere un segundo significado: el silencio sigue siendo una elección.",
+            "en": "The station’s answer ends. Its branching lights withdraw until the immense structure is quiet again. Because light is the medium, the return to darkness is also a deliberate silence. Sorell’s earlier observation acquires a second meaning: silence is still a choice."
+          }
         }
       ],
       "importance": "required",
@@ -4467,15 +4528,15 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La estación despliega una esfera ambiental transparente y autopropulsada.",
-            "en": "The station deploys a transparent self-propelled environmental sphere."
+            "es": "La estación despliega la esfera ambiental transparente autopropulsada ya presentada.",
+            "en": "The station deploys the transparent self-propelled environmental sphere."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "La esfera es diminuta junto a la estación, pero enorme junto a un ser humano. Mantiene en su interior una atmósfera adecuada para los Velari mediante mecanismos que la humanidad no comprende.",
-            "en": "The sphere is tiny beside the station but enormous beside a human being. It maintains a Velari-appropriate internal atmosphere by mechanisms humanity does not understand."
+            "es": "La esfera de unos 5 m es diminuta junto a la estación, pero enorme junto a un ser humano. Su carcasa transparente de capas sutiles, una tenue bruma interior y unos pocos nodos integrados sugieren presión, regulación ambiental y propulsión sin revelar mecanismos que la humanidad comprenda.",
+            "en": "The roughly 5 m sphere is tiny beside the station but enormous beside a human being. Its subtly layered transparent shell, faint internal haze, and sparse embedded nodes imply pressure, environmental regulation, and propulsion without revealing mechanisms humanity understands."
           }
         },
         {
@@ -4488,22 +4549,22 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La esfera ambiental cierra la distancia lentamente y se detiene en vez de invadir su espacio.",
-            "en": "The environmental sphere closes the distance slowly and stops rather than crowding her."
+            "es": "La esfera ambiental acorta la distancia lentamente a través de la sombra solar de la estación y se detiene en lugar de invadir el espacio de Sorell. Las luces de saludo de la Ardor ya no están activas. Sorell atenúa la lámpara exterior del traje y espera junto a la esfera casi a oscuras.",
+            "en": "The environmental sphere closes the distance slowly through the station’s solar shadow and stops rather than crowding her. The Ardor’s greeting lights are no longer active. Sorell dims her exterior suit lamp and waits with the sphere in near-darkness."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Dentro hay un Velari: un animal grande, con muchas extremidades, suspendido naturalmente en su propia atmósfera. No se hace físicamente más pequeño. Su escala sigue siendo abrumadora.",
-            "en": "Inside is one Velari: a large, many-limbed animal suspended naturally in its own atmosphere. It does not make itself physically smaller. Its scale remains overwhelming."
+            "es": "Dentro hay un Velari, suspendido con naturalidad en su propia atmósfera. No encoge ni disimula su escala. Recoge la mayor parte de sus ocho extremidades en una postura conversacional controlada y deja un volumen despejado del lado de Sorell, mientras una o dos extremidades parcialmente extendidas sugieren su mayor alcance. Incluso recogido, abarca aproximadamente 2,5–3 m y sigue resultando abrumador junto a ella.",
+            "en": "Inside is one Velari, suspended naturally in its own atmosphere. It does not shrink or disguise its scale. It gathers most of its eight limbs into a controlled conversational posture, leaving clear volume on Sorell’s side while one or two partly extended limbs imply its greater reach. Even gathered, it spans approximately 2.5–3 m and remains overwhelming beside her."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "La adaptación visible se encuentra en otros gestos:",
-            "en": "The visible accommodation lies elsewhere:"
+            "es": "La adaptación procede como un intercambio ordenado, no como una exhibición plana:",
+            "en": "The accommodation proceeds as an ordered exchange rather than a flat display:"
           }
         },
         {
@@ -4522,24 +4583,42 @@
               "en": "The sphere stops and waits."
             },
             {
-              "es": "Su región sensorial se alinea con Sorell.",
-              "en": "Its sensory region aligns with Sorell."
+              "es": "Su región sensorial irregular y su manto se orientan hacia Sorell.",
+              "en": "Its irregular sensory region and mantle orient toward Sorell."
             },
             {
-              "es": "Su bioluminiscencia natural disminuye hasta una intensidad contenida.",
-              "en": "Its natural bioluminescence lowers to a restrained intensity."
+              "es": "Una ramificación tenue e inactiva apenas vuelve legible el cuerpo en la oscuridad.",
+              "en": "Faint inactive branching makes the body barely legible in the dark."
             },
             {
-              "es": "Repite y amplía elementos del saludo de la Ardor.",
-              "en": "It repeats and extends elements of the Ardor’s greeting."
+              "es": "Las ramas luminosas más próximas a Sorell convergen y se sostienen: atención antes del habla.",
+              "en": "Luminous branches nearer Sorell converge and hold: attention before speech."
+            },
+            {
+              "es": "Sólo entonces regiones seleccionadas del manto se despliegan en patrones tridimensionales deliberados que repiten y amplían elementos del saludo de la Ardor.",
+              "en": "Only then do selected mantle regions unfold into deliberate three-dimensional patterns that repeat and extend elements of the Ardor’s greeting."
             }
           ]
         },
         {
           "type": "paragraph",
           "text": {
+            "es": "El habla del Velari se convierte en la luz principal del encuentro. Revela el visor de Sorell y los planos frontales de su traje, partículas suspendidas en la atmósfera de la esfera, el borde refractivo de la carcasa y partes seleccionadas del Velari sin aplanarlo todo en un resplandor.",
+            "en": "The Velari’s speech becomes the principal light in the encounter. It reveals Sorell’s visor and the front planes of her suit, suspended particles in the sphere’s atmosphere, the shell’s refractive edge, and selected portions of the Velari without flattening everything into glare."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
             "es": "Una inteligencia desconocida realiza un esfuerzo visible por ser comprendida y por volver hermoso el encuentro.",
             "en": "An unfamiliar intelligence is making a visible effort to be understood and to make the meeting beautiful."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La belleza no demuestra benevolencia ni elimina la posibilidad de malentendidos, desacuerdos o engaños. Demuestra atención y adaptación, conserva la base de la incertidumbre de Harlan y a la vez rechaza su afirmación de que la violencia era la única respuesta segura de la humanidad.",
+            "en": "The beauty does not prove benevolence or eliminate the possibility of misunderstanding, disagreement, or deception. It demonstrates attention and accommodation, preserving the basis of Harlan’s uncertainty while rejecting his claim that violence was humanity’s only safe answer."
           }
         },
         {

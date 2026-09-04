@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCE_PATH = 'docs/wip/general-narrative-outline.en.md';
 const OUTPUT_PATH = 'data/outlines/light-delay-master-narrative.json';
+const EXPECTED_SOURCE_REVISION = '12';
 const sourceFile = join(ROOT, SOURCE_PATH);
 const outputFile = join(ROOT, OUTPUT_PATH);
 
@@ -143,13 +144,38 @@ function headings(lines, level) {
 		.map((entry) => ({ index: entry.index, title: entry.match[1].trim() }));
 }
 
+function blockSignature(block, language = null) {
+	const value = (localized) => (language ? (localized?.[language] ?? '') : (localized ?? ''));
+	return JSON.stringify(
+		block.type === 'list'
+			? {
+					type: block.type,
+					ordered: Boolean(block.ordered),
+					items: block.items.map(value)
+				}
+			: {
+					type: block.type,
+					...(block.type === 'heading' ? { level: block.level } : {}),
+					text: value(block.text)
+				}
+	);
+}
+
 function localizedBlock(block, previous) {
 	if (block.type === 'list') {
+		const previousItems = new Map();
+		if (previous?.type === 'list') {
+			for (const item of previous.items ?? []) {
+				const queue = previousItems.get(item.en) ?? [];
+				queue.push(item.es);
+				previousItems.set(item.en, queue);
+			}
+		}
 		return {
 			type: 'list',
 			...(block.ordered ? { ordered: true } : {}),
-			items: block.items.map((text, index) => ({
-				es: previous?.type === 'list' ? (previous.items?.[index]?.es ?? '') : '',
+			items: block.items.map((text) => ({
+				es: previousItems.get(text)?.shift() ?? '',
 				en: text
 			}))
 		};
@@ -162,7 +188,32 @@ function localizedBlock(block, previous) {
 }
 
 function localizedBlocks(blocks, previous = []) {
-	return blocks.map((block, index) => localizedBlock(block, previous[index]));
+	const previousBySignature = new Map();
+	for (const block of previous) {
+		const signature = blockSignature(block, 'en');
+		const queue = previousBySignature.get(signature) ?? [];
+		queue.push(block);
+		previousBySignature.set(signature, queue);
+	}
+	const claimed = new Set();
+	const exactMatches = blocks.map((block) => {
+		const match = previousBySignature.get(blockSignature(block))?.shift();
+		if (match) claimed.add(match);
+		return match;
+	});
+	const unmatchedPreviousLists = previous.filter(
+		(block) => block.type === 'list' && !claimed.has(block)
+	);
+	const unmatchedNewLists = blocks.filter(
+		(block, index) => block.type === 'list' && !exactMatches[index]
+	);
+	const fallbackList =
+		unmatchedPreviousLists.length === 1 && unmatchedNewLists.length === 1
+			? unmatchedPreviousLists[0]
+			: undefined;
+	return blocks.map((block, index) =>
+		localizedBlock(block, exactMatches[index] ?? (block.type === 'list' ? fallbackList : undefined))
+	);
 }
 
 function sectionId(title) {
@@ -174,6 +225,11 @@ function sectionId(title) {
 
 function buildOutline() {
 	const source = readFileSync(sourceFile, 'utf8').replaceAll('\r\n', '\n');
+	const revision = source.match(/^Working draft, English, revision (\d+)\.$/m)?.[1];
+	if (revision !== EXPECTED_SOURCE_REVISION)
+		throw new Error(
+			`Expected ${SOURCE_PATH} revision ${EXPECTED_SOURCE_REVISION}, found ${revision ?? 'none'}`
+		);
 	const lines = source.split('\n');
 	const h2 = headings(lines, 2);
 	const previous = existsSync(outputFile) ? JSON.parse(readFileSync(outputFile, 'utf8')) : null;
@@ -258,8 +314,8 @@ function buildOutline() {
 				en: 'Non-canonical, unconstrained development draft. It does not replace the registered short, festival, trailer, or feature scripts.'
 			},
 			status: 'draft',
-			version: '0.1.0-wip',
-			source: { path: SOURCE_PATH, revision: '11', language: 'en', sha256 },
+			version: '0.2.0-wip',
+			source: { path: SOURCE_PATH, revision, language: 'en', sha256 },
 			editorialNotice: {
 				es:
 					previous?.outline?.editorialNotice?.es ??
@@ -291,7 +347,8 @@ function englishProjection(file) {
 					text: block.text.en
 				};
 	return {
-		sha256: file.outline.source.sha256,
+		version: file.outline.version,
+		source: file.outline.source,
 		framing: file.framing.map((section) => ({
 			id: section.id,
 			placement: section.placement,
@@ -328,7 +385,7 @@ if (process.argv.includes('--write')) {
 	const actualJson = JSON.stringify(englishProjection(actual));
 	if (actualJson !== expectedJson) {
 		console.error(
-			'master-outline: English source layer differs from WIP revision 11; run with --write and review Spanish alignment'
+			`master-outline: English source layer differs from WIP revision ${EXPECTED_SOURCE_REVISION}; run with --write and review Spanish alignment`
 		);
 		process.exit(1);
 	}
@@ -343,6 +400,6 @@ if (process.argv.includes('--write')) {
 		process.exit(1);
 	}
 	console.log(
-		'master-outline: English source fidelity OK (revision 11; 57 beats; 11 framing sections)'
+		`master-outline: English source fidelity OK (revision ${EXPECTED_SOURCE_REVISION}; 57 beats; 11 framing sections)`
 	);
 }

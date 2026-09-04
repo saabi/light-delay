@@ -11,13 +11,15 @@
 - El contexto inicial incorpora la biología y el lenguaje luminoso Velari necesarios para que la
   escaleta sea autosuficiente. F7 y G2–G2b fijan la secuencia silencio, atención y habla dentro de
   una esfera ambiental de ~5 m, bajo la sombra solar de la estación.
-- Esta revisión sólo actualiza el Markdown fuente. La conversión estructurada no confirmada que
-  existe en el árbol de trabajo sigue derivada de rev. 11 y deberá regenerarse por separado.
+- `data/outlines/light-delay-master-narrative.json` ya está sincronizado con rev. 12 en español e
+  inglés: conserva 11 secciones de contexto, 8 secciones narrativas y 57 beats `story`, sin
+  inventar implementación. La descripción Velari vive dentro de `Terminology` como prosa
+  estructurada y la fidelidad inglesa se verifica contra la revisión y el SHA-256 de la fuente.
 
 ## 2026-09-04 — Narrativa maestra estructurada (WIP, no canon)
 
 - Quinta entrada registrada: `script:light-delay-master-narrative`, dentro de la continuidad de desarrollo `continuity:light-delay-master-wip`; no altera `canonicalScriptId`, los cuatro guiones COM/láser ni el tratamiento largo de ~100 minutos.
-- `data/outlines/light-delay-master-narrative.json` convierte íntegramente la revisión 11: 11 secciones de contexto, 8 secciones narrativas y 57 beats `story`, sin inventar actos, escenas, cues, tomas, cobertura o planes de generación.
+- La conversión inicial tomó íntegramente la revisión 11; la entrada superior registra su sincronización posterior con rev. 12. Conserva 11 secciones de contexto, 8 secciones narrativas y 57 beats `story`, sin inventar actos, escenas, cues, tomas, cobertura o planes de generación.
 - El español y el inglés conviven inline. Los textos ingleses de P1–G3 se derivan literalmente del Markdown —normalizando sólo su estructura— y `npm run build:master-outline:check` los verifica contra ruta, revisión y SHA-256.
 - El contrato admite `framing`, `storySections` y `story.body`; `/outline/[scriptId]` presenta contexto anterior/posterior, navegación por secuencia, aviso no canónico y la prosa completa. Guion, editor y player muestran estados vacíos seguros para esta entrada.
 - El Markdown WIP se conserva como procedencia histórica en inglés. La fuente autoral de la entrada estructurada es el JSON bilingüe; una futura adopción en otros cuts requiere una decisión explícita.

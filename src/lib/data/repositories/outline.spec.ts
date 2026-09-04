@@ -51,6 +51,8 @@ describe('outlines (optional)', () => {
 
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
+		expect(source.outline.source?.revision).toBe('12');
+		expect(source.outline.version).toBe('0.2.0-wip');
 		expect(source.framing).toHaveLength(11);
 		expect(source.storySections).toHaveLength(8);
 		expect(source.steps).toHaveLength(57);
@@ -61,6 +63,40 @@ describe('outlines (optional)', () => {
 		expect(localized.steps[0]?.body?.[0]?.type).toBe('paragraph');
 		const first = localized.steps[0]?.body?.[0];
 		expect(first && first.type !== 'list' ? first.text : '').toBe('Overlay: 43 MIN 18 S.');
+		const terminology = source.framing?.find(
+			(section) => section.id === 'master:framing-terminology'
+		);
+		expect(terminology?.blocks).toHaveLength(12);
+		const velariHeading = terminology?.blocks.find(
+			(block) =>
+				block.type === 'heading' &&
+				typeof block.text !== 'string' &&
+				block.text.en === 'Velari biology and communication'
+		);
+		expect(velariHeading).toMatchObject({
+			type: 'heading',
+			level: 3,
+			text: { es: 'Biología y comunicación Velari', en: 'Velari biology and communication' }
+		});
+		expect(
+			terminology?.blocks.some(
+				(block) =>
+					block.type === 'paragraph' &&
+					typeof block.text !== 'string' &&
+					block.text.en?.includes('voluntarily controlled three-dimensional network') &&
+					block.text.es?.includes('red tridimensional de neuronas emisoras de luz')
+			)
+		).toBe(true);
+		const meeting = source.steps.find((step) => step.id === 'master:story-g2b');
+		expect(
+			meeting?.body?.some(
+				(block) =>
+					block.type === 'paragraph' &&
+					typeof block.text !== 'string' &&
+					block.text.en?.includes('does not prove benevolence') &&
+					block.text.es?.includes('no demuestra benevolencia')
+			)
+		).toBe(true);
 	});
 
 	it('validateOutline accepts hierarchy, causal explanations, and optional coverage', () => {

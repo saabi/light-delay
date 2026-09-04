@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-09-04 — Sincronización estructurada de la narrativa maestra rev. 12
+
+- Sincronizada `data/outlines/light-delay-master-narrative.json` con todos los cambios de la
+  revisión 12, con español e inglés inline, versión `0.2.0-wip` y procedencia SHA-256 renovada.
+- Incorporadas la biología y comunicación luminosa Velari al framing, la ventana final de
+  10–15 minutos, el regreso fortuito de Harlan al puente y la progresión completa de silencio,
+  atención y habla en F7 y G2–G2b, sin modificar ningún cut canónico.
+- El importador deja de reutilizar traducciones por posición: sólo conserva bloques y elementos
+  de lista cuyo inglés coincide, evitando desplazar copy español cuando cambia el Markdown.
+- Añadidas regresiones de datos y UI para la descripción Velari bilingüe; la escaleta conserva
+  11 secciones de contexto, 8 secciones narrativas y 57 beats `story` sin implementación.
+
 ## 2026-09-04 — Ventana final, regreso de Harlan y encuentro Velari (WIP)
 
 - Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 12: el tramo lejano se acorta a

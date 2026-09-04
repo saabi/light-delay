@@ -78,10 +78,24 @@ test('master narrative exposes its framing and keeps implementation empty', asyn
 		)
 	).toBeVisible();
 	await expect(page.getByText('Purpose of this document', { exact: true })).toBeVisible();
+	await page.locator('details[id="master:framing-terminology"] > summary').click();
+	await expect(
+		page.getByRole('heading', { name: 'Velari biology and communication' })
+	).toBeVisible();
+	await expect(
+		page.getByText(/The Velari are adapted to pressurized microgravity habitats/)
+	).toBeVisible();
 	await expect(
 		page.getByRole('heading', { name: 'Sequence G — First contact and close' })
 	).toBeVisible();
 	await expect(page.getByRole('heading', { name: 'G3 — Close' })).toBeVisible();
+
+	await page.goto('/es/outline/script~light-delay-master-narrative');
+	await page.locator('details[id="master:framing-terminology"] > summary').click();
+	await expect(page.getByRole('heading', { name: 'Biología y comunicación Velari' })).toBeVisible();
+	await expect(
+		page.getByText(/Los Velari están adaptados a hábitats presurizados en microgravedad/)
+	).toBeVisible();
 
 	await page.goto('/script/script~light-delay-master-narrative');
 	await expect(
