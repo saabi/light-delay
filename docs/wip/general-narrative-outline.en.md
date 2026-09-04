@@ -127,20 +127,26 @@ accident.
 The Ardor is approximately 6,800 tonnes and 90 m × 18 m, powered by a D–³He fusion torch. It
 maintains 1g through most powered flight.
 
-The bridge is forward. The reactor and reactor-shielding zone are aft. The point-to-point
-distance from the bridge to the inner shielding vault is approximately 63 m.
+The bridge is forward. The reactor and reactor-shielding zone are aft. The shielding-bay
+entrance is approximately 65 m aft of the bridge deck.
 
-The first 48 m follows the ship’s main vertical axis under thrust. Three routes cover this
-section:
+Three parallel longitudinal shafts connect the bridge region with every intervening deck and
+the aft engineering level:
 
-- A speed-governed elevator.
-- Helical stairs with 282 steps at a 17 cm rise, wrapped around an unobstructed central well.
-- A segmented service shaft with ladders and a hatch at every deck.
+- A slightly wider, speed-governed elevator shaft.
+- A central circulation shaft containing two helical staircases.
+- A narrower service shaft divided into ladder segments.
 
-The elevator and service shaft continue through the remaining 15 m to the reactor service bay.
-The stair route ends at the engineering landing; from there, a final 15 m axial access well with
-handholds leads to the bay. Under thrust this last well must be descended carefully. In
-microgravity it becomes a direct path.
+All three shafts have a stop, landing, or hatch at every deck and continue to the
+shielding-bay level.
+
+The central shaft is approximately 5.5 m in diameter. Each helical staircase is approximately
+1 m wide and expands into a landing approximately 1.5 m wide at every deck. Railings, stringers,
+and structural supports leave a continuous aligned opening approximately 2 m in clear diameter
+through the center of the shaft.
+
+The crew stations are arranged against the curved outer hull wall in front of the shaft
+cluster. Crew members seated at their displays have their backs toward the shaft openings.
 
 The service-shaft hatch immediately behind the bridge stations can be locked locally from
 inside the shaft. The lock is independent of the ship’s network.
@@ -512,8 +518,9 @@ console is available.
 
 ### B2 — Wireless report cut off
 
-Harlan climbs the service shaft and opens the hatch behind the bridge stations. Everyone is
-facing forward.
+Harlan climbs the service shaft and opens the hatch behind the bridge stations. The bridge crew
+are facing the displays along the outer hull wall, with their backs toward the shaft openings.
+Nobody sees him emerge.
 
 Zao begins a wireless report:
 
@@ -557,9 +564,13 @@ Sorell is the only person whose specialized work is not immediately useful to th
 volunteers to go aft and check on Zao.
 
 Voss tells her to locate Harlan and take him with her. She cannot find him and continues alone.
-There are no cameras or reliable position records during her journey.
 
-This is the decision Voss later apologizes for.
+Sorell uses one of the central shaft’s helical staircases, moving hand over hand along its rails
+and landings in microgravity. Harlan is already taking the separate, more direct service shaft
+aft, so their paths do not cross. There are no cameras or reliable position records during her
+journey.
+
+Sending her alone is the decision Voss later apologizes for.
 
 ### B5 — The only possible warning
 
@@ -957,17 +968,18 @@ while preparing the contact protocol.
 
 ### F2 — The chase splits
 
-Elin has the head start. The speed-governed elevator carries her the full 63 m to the outer
+Elin has the head start. The speed-governed elevator carries her approximately 65 m to the outer
 reactor service bay.
 
 She reaches the inner vault first and begins attempting to open its local lock.
 
-Harlan descends the segmented ladder in the service shaft, sliding between deck hatches. The
-route is faster but far more dangerous. He reaches the outer bay after Elin and attacks her
-before she can solve the lock.
+Harlan descends the segmented ladder in the service shaft, sliding between its deck stops. The
+route is faster but far more dangerous under thrust. He reaches the outer bay after Elin and
+attacks her before she can solve the lock.
 
-Unable to use the locked service-shaft hatch, Voss and Okoye take the helical stairs. They must
-descend the 282 steps covering the first 48 m and fall behind.
+Unable to use the locked service-shaft hatch, Voss and Okoye enter the central shaft and take
+the two helical staircases, one each. The stairs reach the shielding-bay level, but their spiral
+paths and repeated deck landings make them substantially slower than Harlan’s direct descent.
 
 ### F3 — Third gravity dip
 
@@ -980,16 +992,21 @@ The Ardor enters microgravity for the third time. The navigation display continu
 down the remaining moments to the scheduled contact point. The bomb is synchronized to that
 contact time, not to the thrust command itself.
 
-Voss and Okoye have reached the engineering landing but remain approximately 15 m above Harlan
-and Elin at the top of the final axial access well.
+At that instant, Voss and Okoye are passing deck landings approximately 15 m above Harlan and
+Elin. The distance is a consequence of the chase timing, not a separate architectural section
+of the ship.
 
 ### F4 — The save and Harlan’s explanation
 
-In microgravity, Voss and Okoye no longer need to descend the final access well handhold by
-handhold. They push through its unobstructed center and close the 15 m directly.
+In microgravity, Voss and Okoye no longer need to follow the helical paths. Using the landing
+rails to control their momentum, they push through the approximately 2 m-wide aligned openings
+at the center of the shaft.
 
-Okoye reaches Harlan, uses a restraint tether to bind him to a structural rail, and removes his
-wrist device. Voss helps Elin clear the struggle.
+The opening is too narrow for them to dive safely side by side. Okoye goes first; Voss follows
+half a beat later. They pass through the remaining deck openings and close the 15 m directly.
+
+Okoye reaches Harlan, uses a restraint tether to bind him to a structural rail, and removes
+his wrist device. Voss helps Elin clear the struggle.
 
 Harlan remains alive and conscious.
 
@@ -1243,7 +1260,7 @@ design, or storyboard development:
 
 - The bomb’s exact classified yield within the multi-megaton range.
 - Propellant load and exhaust velocity used to pin the excess-propellant figure.
-- Exact steps-per-revolution and screen timing of the helical stair descent.
+- Exact stair riser count, turns, landing geometry, and screen timing of the descent.
 - The precise interval between outward and return apertures.
 - The specific visual design of the throat, station, and environmental sphere.
 - How much of the master outline survives in each target-duration adaptation.
