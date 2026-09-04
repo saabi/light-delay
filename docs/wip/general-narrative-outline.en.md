@@ -394,7 +394,31 @@ The crew acknowledges the return constraint:
 
 Several crew members talk without turning the scene into a briefing.
 
-Okoye asks:
+Delayed protest coverage continues silently on a nearby display. An exterior status feed puts
+the Ardor in profile.
+
+Okoye watches a protester accuse the mission of presenting itself too aggressively.
+
+> “They think the mission looks too aggressive.”
+
+Elin studies the ship’s silhouette.
+
+> “We’re making first contact in a ninety-metre phallus called Celestial Ardor.”
+
+Voss gives her a look.
+
+> “I didn’t name it.”
+
+Zao tries not to laugh and fails.
+
+Sorell continues working on the greeting.
+
+> “Let’s make the greeting less ambiguous.”
+
+Harlan does not join in. He remains focused on the protest coverage, but the moment passes
+without anyone treating his silence as significant.
+
+The joke turns naturally into a real question. Okoye asks:
 
 > “How do you say hello to something you’ve never heard answer?”
 
