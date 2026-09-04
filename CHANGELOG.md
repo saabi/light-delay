@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-04 — Revelación diferida del mensaje de Zao (WIP)
+
+- Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 9: la secuencia B conserva las
+  pistas del envío, pero oculta al público su destino y mecanismo; E2 los revela mediante un
+  flashback durante la reproducción del mensaje.
+- No modifica outlines ni guiones JSON. El borrador sigue sólo en inglés y no es canon.
+
 ## 2026-09-03 — Escaleta narrativa general (WIP)
 
 - Renombrado el borrador WIP a `docs/wip/general-narrative-outline.en.md` (rev. 7): escaleta maestra cut-agnóstica en inglés; no modifica outlines ni guiones JSON. Falta copia española.

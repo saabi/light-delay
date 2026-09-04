@@ -1,6 +1,6 @@
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 8.
+Working draft, English, revision 9.
 
 ## Purpose of this document
 
@@ -218,6 +218,10 @@ communications target.
 The warning is recorded, compressed, cryptographically signed, and transmitted as a single
 burst. A burst minimizes the time during which the long-distance optical communications array
 must maintain aim at an interception point calculated almost a day into the future.
+
+These are authorial facts rather than information disclosed immediately to the audience. The
+destination and interception mechanism are withheld during Sequence B. They become explicit in
+the E2 flashback only after the warning reaches the Ardor.
 
 The extra 1–1.5 tonnes aboard a 6,800-tonne ship produces an extremely small increase in
 propellant consumption. The guidance system preserves the scheduled 1g profile automatically.
@@ -583,7 +587,7 @@ Sending her alone is the decision Voss later apologizes for.
 
 ### B5 — The only possible warning
 
-Zao reasons through the problem aloud as she works.
+Zao works through the available dead ends aloud.
 
 Proxima is occluded by Jupiter from the Ardor’s present position. A message to Earth would
 arrive only after the planned contact and detonation.
@@ -595,25 +599,34 @@ confirmed human communications path to the station.
 Even if a signal could be placed through the full aperture before the Ardor, it would emerge
 ahead of the ship and continue at light speed. It would never be seen by the crew.
 
-Ordinary space offers the counterintuitive solution. If she sends a burst through real space
-and the Ardor crosses the throat minutes later, the ship will jump ahead of its own message.
-The light can then catch the ship near the end of the far-side transit.
+She then notices a relationship between the scheduled throat crossing and ordinary-space
+light-time. At this point the presentation deliberately withholds her decisive reasoning. She
+stops speaking, studies the flight plan, and begins a new calculation. The readable portions of
+the display do not show its target or projected path.
+
+For narrative causality, Zao has realized that she can send the burst through ordinary space.
+When the Ardor crosses the throat minutes later, the ship will jump more than twenty-three
+light-hours ahead of its own warning, allowing the light to catch it near the end of the
+far-side transit. The audience does not learn this yet.
 
 Zao realizes she may not survive. The warning must exist independently of her.
 
-She uses the long-distance optical communications array to calculate an intercept with the
-Ardor’s own future position.
+She commits to the calculation without revealing to the audience whom she intends to reach.
 
 ### B6 — Targeting mathematics
 
-Flight plan, orbital geometry, light-time, and the projected interception point.
+Zao combines the flight plan, orbital geometry, light-time, and projected interception point.
+Only fragments of her work are shown legibly. The destination label, future trajectory, and
+final beam path remain outside the frame or unreadable.
 
 Overlay: **23 H 15 MIN**.
 
-The propellant discrepancy does not change the intercept because the guidance system preserved
-the schedule. It has, however, given Zao an estimate of the hidden package’s mass.
+The propellant discrepancy does not change the hidden intercept because the guidance system
+preserved the schedule. It has, however, given Zao an estimate of the hidden package’s mass.
 
-She reacts audibly when the complete number appears. The title’s second delay becomes real.
+She reacts audibly when the complete number appears. For the audience, the title’s second delay
+is an unexplained result rather than a solution. Its meaning will become clear in the E2
+flashback.
 
 ### B7 — The recording
 
@@ -630,14 +643,16 @@ As Harlan reaches the outer-bay door, she ends:
 
 She cryptographically signs the packet with her personal key.
 
-The audience sees her make the recording but does not hear its content. The soundtrack remains
-with the ship’s distant vibration and Zao’s breathing rather than her words. The complete
-message will play once, in E2.
+The audience sees her make the recording but does not hear its content. No readable target or
+recipient appears on the display. The soundtrack remains with the ship’s distant vibration and
+Zao’s breathing. The audience knows she recorded a warning, but not whom she expects it to reach
+or how it could arrive in time. The complete message will play once, in E2.
 
 ### B8 — Burst and door
 
-The long-distance optical communications array slews to the calculated interception point and
-fires a compressed burst.
+The long-distance optical communications array slews and fires a compressed burst. The framing
+supplies no celestial reference by which the audience could identify its target. As an authorial
+fact, it is aimed at the Ardor’s future interception point, but that fact is withheld until E2.
 
 Its local volatile buffer clears as a normal consequence of transmission. The controller retains
 only the emission summary, including the array’s final azimuth and elevation and the Ardor’s
@@ -851,6 +866,9 @@ The payload is no longer stored locally. Its pointing direction is not Earth, Pr
 known beacon. From the ship’s current perspective, it appears to have been fired into empty
 space.
 
+The crew and audience receive this result together. Nothing yet identifies the Ardor as the
+moving object that will cross the beam almost a day after it was fired.
+
 Everyone heard the beginning of Zao’s sabotage warning before communications failed. Harlan can
 therefore infer publicly, without revealing that he witnessed the recording, that she may have
 tried to finish the warning through the external array.
@@ -904,6 +922,9 @@ Her reaction unfolds in real time:
 - Recognition of Zao’s signature header.
 - Understanding that Zao did not miss.
 
+For both the crew and the audience, this is the first proof that the apparently empty-space
+transmission had an intended receiver.
+
 ---
 
 ## Sequence E — Revelation
@@ -916,9 +937,23 @@ Voss orders it opened on the bridge.
 
 ### E2 — Zao’s message
 
-The complete recording plays for the first time for the crew and the audience.
+The complete recording begins to play for the first time for both the crew and the audience.
 
-Zao identifies:
+Zao’s opening words carry the soundtrack back to the outer reactor service bay. The image
+returns to the moments shown in B5–B7, now restoring the information that their original framing
+and sound deliberately withheld. The flashback does not add a second recording or change what
+happened.
+
+The previously hidden solution becomes legible:
+
+- The uncropped console shows Zao combining the flight plan with an ordinary-space light path.
+- The trajectory display shows the Ardor crossing the throat and jumping more than twenty-three
+  light-hours ahead of the burst.
+- The projected beam catches the Ardor near the end of its far-side transit.
+- The same **23 H 15 MIN** result now acquires its meaning.
+- The view settles on Zao recording the words that were previously inaudible.
+
+Over this flashback, Zao identifies:
 
 - The thermonuclear geophysical impulse package.
 - Its estimated 1–1.5 tonne mass.
@@ -933,7 +968,12 @@ The recording ends:
 
 > “Just in case: goodbye. Harlan’s at the door.”
 
-The crew now relives from Zao’s side what the audience watched happen almost a day earlier.
+On the words “Harlan’s at the door,” the image returns to the present bridge. The final phrase
+lands on Harlan as the others turn toward him.
+
+The crew and audience now understand at the same moment that the apparently empty-space
+transmission was aimed at a moving receiver: the Ardor itself, after the throat placed it ahead
+of its own light.
 
 ### E3 — Harlan objects
 
@@ -1236,7 +1276,9 @@ The possible consequences include:
 - The loss of a contact opportunity that may not recur for thousands of years.
 
 The audience carries these stakes while the crew spends most of the far-side transit with less
-information than the audience possesses.
+information about the bomb and murder. It knows Zao transmitted something but shares the crew’s
+uncertainty about where the empty-space burst went. The audience knows danger is aboard; it does
+not know that a warning is approaching.
 
 ## Structural throughlines
 
@@ -1247,8 +1289,10 @@ The title is the structure.
 The **43 MIN 18 S** overlay establishes that distance makes every observation historical before
 it is received.
 
-The **23 H 15 MIN** overlay turns the same limitation into Zao’s solution. The back half of the
-film is the crew living inside that delay without knowing it.
+The **23 H 15 MIN** overlay first appears as an unexplained result. In the E2 flashback, it turns
+the same limitation into Zao’s solution: the throat places the Ardor ahead of its own warning and
+ordinary light closes the distance. Through the back half of the film, both the crew and the
+audience live inside that delay without knowing that the warning is approaching.
 
 Voss’s final report repeats Zao’s choice: a person sends the truth into silence because the
 record must survive independently of its witness.

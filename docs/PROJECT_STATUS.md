@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-04 — Revelación diferida del mensaje de Zao (WIP, no canon)
+
+- `docs/wip/general-narrative-outline.en.md` está en rev. 9. El público ve que Zao transmite,
+  pero comparte con la tripulación la incertidumbre sobre el destino del disparo hasta que E2
+  revela el cálculo y la grabación mediante flashback.
+- No toca `data/outlines/` ni guiones y no sustituye el canon vigente.
+- Sólo inglés; falta copia española.
+
 ## 2026-09-03 — Escaleta narrativa general (WIP, no canon)
 
 - Borrador maestro en `docs/wip/general-narrative-outline.en.md` (rev. 7; antes `festival-cut-outline-v2-restructured-EN.md`). Cadena causal a longitud natural, adaptable a cortes corto/medio/largo.
