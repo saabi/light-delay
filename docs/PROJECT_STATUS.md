@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-04 — Narrativa maestra estructurada (WIP, no canon)
+
+- Quinta entrada registrada: `script:light-delay-master-narrative`, dentro de la continuidad de desarrollo `continuity:light-delay-master-wip`; no altera `canonicalScriptId`, los cuatro guiones COM/láser ni el tratamiento largo de ~100 minutos.
+- `data/outlines/light-delay-master-narrative.json` convierte íntegramente la revisión 11: 11 secciones de contexto, 8 secciones narrativas y 57 beats `story`, sin inventar actos, escenas, cues, tomas, cobertura o planes de generación.
+- El español y el inglés conviven inline. Los textos ingleses de P1–G3 se derivan literalmente del Markdown —normalizando sólo su estructura— y `npm run build:master-outline:check` los verifica contra ruta, revisión y SHA-256.
+- El contrato admite `framing`, `storySections` y `story.body`; `/outline/[scriptId]` presenta contexto anterior/posterior, navegación por secuencia, aviso no canónico y la prosa completa. Guion, editor y player muestran estados vacíos seguros para esta entrada.
+- El Markdown WIP se conserva como procedencia histórica en inglés. La fuente autoral de la entrada estructurada es el JSON bilingüe; una futura adopción en otros cuts requiere una decisión explícita.
+
 ## 2026-09-04 — Vindicación imaginada de Harlan (WIP, no canon)
 
 - `docs/wip/general-narrative-outline.en.md` está en rev. 11. Harlan teme que el mensaje de Zao
@@ -7,30 +15,30 @@
   falló, lamenta en privado que nadie sepa quién «los salvó».
 - El reconocimiento queda como recompensa psicológica, no como cuarto motivo operativo. El
   informe final atribuye a Zao el rescate de la tripulación y la preservación del contacto.
-- No toca `data/outlines/` ni guiones y no sustituye el canon vigente.
-- Sólo inglés; falta copia española.
+- Esa revisión del Markdown no tocó `data/outlines/` ni guiones y no sustituyó el canon vigente; su conversión estructurada posterior está registrada en la entrada superior.
+- El Markdown fuente sigue sólo en inglés; la escaleta JSON derivada ya contiene español e inglés inline.
 
 ## 2026-09-04 — Hipótesis falsa de sabotaje de combustible (WIP, no canon)
 
 - `docs/wip/general-narrative-outline.en.md` está en rev. 10. Harlan unifica inicialmente el
   consumo extra y los neutrones como sabotaje del sistema D–³He; Elin descarta la fuga, demuestra
   masa adicional y localiza una fuente compacta detrás de la puerta antes del mensaje de Zao.
-- No toca `data/outlines/` ni guiones y no sustituye el canon vigente.
-- Sólo inglés; falta copia española.
+- Esa revisión intermedia no tocó `data/outlines/` ni guiones y no sustituyó el canon vigente.
+- El Markdown fuente sigue sólo en inglés; la traducción vive en la escaleta JSON posterior.
 
 ## 2026-09-04 — Revelación diferida del mensaje de Zao (WIP, no canon)
 
 - `docs/wip/general-narrative-outline.en.md` está en rev. 9. El público ve que Zao transmite,
   pero comparte con la tripulación la incertidumbre sobre el destino del disparo hasta que E2
   revela el cálculo y la grabación mediante flashback.
-- No toca `data/outlines/` ni guiones y no sustituye el canon vigente.
-- Sólo inglés; falta copia española.
+- Esa revisión intermedia no tocó `data/outlines/` ni guiones y no sustituyó el canon vigente.
+- El Markdown fuente sigue sólo en inglés; la traducción vive en la escaleta JSON posterior.
 
 ## 2026-09-03 — Escaleta narrativa general (WIP, no canon)
 
 - Borrador maestro en `docs/wip/general-narrative-outline.en.md` (rev. 7; antes `festival-cut-outline-v2-restructured-EN.md`). Cadena causal a longitud natural, adaptable a cortes corto/medio/largo.
-- No toca `data/outlines/` ni guiones. Sólo inglés; falta copia española.
-- No sustituye el canon vigente (sabotaje COM / láser). Cualquier adopción requiere confirmación explícita y escaleta JSON posterior.
+- Esa revisión inicial no tocó `data/outlines/` ni guiones. El Markdown fuente permanece sólo en inglés.
+- No sustituye el canon vigente (sabotaje COM / láser). La escaleta JSON posterior registra esta rama como WIP no canónico; cualquier adopción todavía requiere confirmación explícita.
 
 ## 2026-09-01 — Consola del puente y tomas de tránsito de Júpiter
 
@@ -73,7 +81,7 @@ Fecha de corte: 2026-08-31.
 - **Puente y bloqueo de Harlan:** la geometría documentada ya coincide con el modelo: seis puestos en arco, silla de capitán, mesa para seis, escaleras abiertas junto a servicio/ascensor y escotilla de servicio con bandeja COM A/B contigua fuera de la vista. Main, Festival y largo conservan el orden causal exacto: ascenso y apertura de escotilla durante la llamada, jammer, apertura de bandeja, desenchufe cableado, reingreso, cierre y descenso.
 - **Cartelas inglesas de título:** `static/assets/animatic/titles/` contiene `film-title.png`, `trailer-brand.png` y `trailer-tagline.png`, todos opacos y normalizados a 1536 × 864. Registrados en `data/assets.json` y enlazados en main, Festival y tráiler; el título principal y la marca usan únicamente `LIGHT DELAY`.
 - **Campaña de afiches V1:** cuatro conceptos en formatos apaisado y retrato, disponibles en español e inglés bajo `static/assets/marketing/posters/v1/`, con continuidad basada en las hojas canónicas de personajes, Proxima, Celestial Ardor y la Estación Velari. El manifiesto de marketing conserva copy, dimensiones, orientación, pares localizados y referencias; la elegibilidad para concurso permanece sin verificar.
-- **Escaletas causales por cut:** los cuatro scripts tienen sinopsis y una capa `story` legible (12 main, 7 tráiler, 12 largo, 15 festival) sobre el detalle editorial existente (17/9/28/44). Los hitos cuentan una historia continua con los detalles cerrados; el detalle conserva IDs históricos y cobertura separada para tratamiento, guion y animatic. Ya no se regeneran desde resúmenes de escena.
+- **Escaletas causales por cut:** las cinco entradas tienen synopsis y una capa `story` legible: 12 main, 7 tráiler, 12 largo, 15 festival y 57 master WIP. Las cuatro primeras conservan su detalle editorial existente (17/9/28/44); el master es deliberadamente story-only y suma framing anterior/posterior sin afirmar implementación. Los hitos cuentan una historia continua con los detalles cerrados.
 - **Lectura aislada y protección del tráiler:** `report:outline-story` exporta sólo la columna vertebral narrativa para revisión humana; la falta de enlaces causales en `story` es error. `check:trailer-spoilers` y su prueba de regresión impiden identificar al culpable o confirmar envío, recepción, muerte, contención de la amenaza o resultado del saludo en el avance.
 - **Fatalidad fuera de campo diferenciada:** main, festival y largo confirman la muerte de Zao mediante golpe seco, cese de forcejeo/respiración y negro sostenido. El tráiler conserva el mismo corte previo al ataque, pero sale pronto del negro con música continua y deja inciertos tanto la muerte como el envío.
 - **Razonamiento crítico restaurado:** main, festival y largo explican en escaleta por qué Zao descarta Tierra (doble retardo hasta la Ardor) y Proxima (oclusión de Júpiter L2–L1), y por qué sólo sirve apuntar al corredor futuro. También conservan que Harlan supone erróneamente un envío a la Tierra, se tranquiliza, lamenta la suerte de Zao y suspira antes de matarla.
@@ -154,7 +162,7 @@ Fecha de corte: 2026-08-31.
 - Haz de Zao: `docs/SIGNAL_BEAM_REQUIREMENTS.md` conserva sólo una aproximación visual; el presupuesto óptico exacto permanece en `TODO.md`.
 - Assets: 142 imágenes registradas en `static/assets/` (100 frames legacy, 1 frame nuevo escena 5, 3 cartelas de título, 37 referencias y 1 placeholder técnico). `legacy-site/assets/` permanece intacto como referencia.
 - Documentos prose: cinco páginas legacy extraídas y traducidas en `data/documents.json`; canon y tres referencias históricas/editoriales también exponen variante inglesa; validación exige paridad de bloques ES/EN y cobertura del ledger de migración.
-- Estado editorial: las traducciones inglesas permanecen en `draft`; el canon estructurado es todavía un `stub`; los cuatro scripts registrados continúan en `draft`.
+- Estado editorial: las traducciones inglesas permanecen en `draft`; el canon estructurado es todavía un `stub`; las cinco entradas registradas continúan en `draft`. La narrativa maestra es explícitamente no canónica y sólo posee escaleta.
 - Calidad del último pase validado: `validate:data` (incluido JSON Schema), `validate:docs`, `validate:translations`, `generated:check`, ledger causal, `svelte-check`, pruebas unitarias y build estático. E2E y lint estricto continúan fuera de CI; Vite mantiene el warning conocido del chunk de repositorios >500 kB.
 - Validación pendiente: los 142 assets registrados existen y el grafo actual no mostró referencias rotas en la auditoría puntual, pero el validador de CI no comprueba todavía paths físicos ni toda la integridad padre/hijo.
 

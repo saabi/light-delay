@@ -2,6 +2,7 @@ import type { ValidationResult } from '$lib/types/common';
 import type { ProjectFile } from '$lib/types/project';
 import type { ScriptFile } from '$lib/types/script';
 import type { ScriptId } from '$lib/types/ids';
+import { sourceStoryText } from './localizedString.ts';
 
 const SPANISH_SOURCE = /^(es)(-[A-Za-z0-9]+)?$/;
 
@@ -52,6 +53,20 @@ export function validateProject(
 	}
 
 	const continuityIds = new Set((p.continuities ?? []).map((c) => c.id));
+	for (const continuity of p.continuities ?? []) {
+		if (!continuity.id) errors.push('project.continuities: entry missing id');
+		if (!sourceStoryText(continuity.name)?.trim())
+			errors.push(`project.continuities ${continuity.id}: missing name`);
+		if (continuity.description != null && !sourceStoryText(continuity.description)?.trim())
+			errors.push(`project.continuities ${continuity.id}: empty description`);
+		if (
+			continuity.derivedFromContinuityId &&
+			!continuityIds.has(continuity.derivedFromContinuityId)
+		)
+			errors.push(`project.continuities ${continuity.id}: invalid derivedFromContinuityId`);
+		if (continuity.derivedFromContinuityId === continuity.id)
+			errors.push(`project.continuities ${continuity.id}: cannot derive from itself`);
+	}
 	const registryIds = new Set<ScriptId>();
 	for (const entry of p.scripts ?? []) {
 		if (!entry.id) errors.push('project.scripts: entry missing id');

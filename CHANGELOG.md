@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-04 — Quinta continuidad: narrativa maestra WIP
+
+- Registrada `script:light-delay-master-narrative` como entrada `master_narrative` vacía dentro de una continuidad de desarrollo separada; no reemplaza el corto canónico, Festival, tráiler ni el tratamiento largo.
+- Convertida íntegramente `docs/wip/general-narrative-outline.en.md` rev. 11 a una escaleta bilingüe con 11 secciones de framing, 8 secciones narrativas y 57 beats story-only. El inglés se comprueba contra el texto fuente y su SHA-256 mediante `build:master-outline:check`.
+- El esquema, tipos, validadores, traducción e informes admiten `framing`, `storySections` y cuerpos narrativos semánticos sin exigir detalle o cobertura inexistentes.
+- `/outline/[scriptId]` incorpora aviso editorial, procedencia, navegación interna, contexto plegable y agrupación por secuencia; las rutas de guion y animatic manejan el stub sin intentar renderizar o reproducir tomas vacías.
+
 ## 2026-09-04 — Vindicación imaginada de Harlan (WIP)
 
 - Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 11: Harlan oscila entre el temor

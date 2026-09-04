@@ -10,8 +10,8 @@ export interface ScriptLineage {
 
 export interface Continuity {
 	id: ContinuityId;
-	name: string;
-	description?: string;
+	name: StoryText;
+	description?: StoryText;
 	derivedFromContinuityId?: ContinuityId;
 }
 

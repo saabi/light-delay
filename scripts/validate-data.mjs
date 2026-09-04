@@ -43,6 +43,47 @@ const OUTLINE_COVERAGE_STATUS = new Set([
 	'not_applicable'
 ]);
 const OUTLINE_FILE_STATUS = new Set(['draft', 'reviewed', 'locked']);
+const OUTLINE_FRAMING_PLACEMENT = new Set(['before_story', 'after_story']);
+const OUTLINE_FRAMING_KIND = new Set([
+	'purpose',
+	'terminology',
+	'premise',
+	'setting',
+	'physics',
+	'gravity',
+	'cast',
+	'motivation',
+	'stakes',
+	'throughlines',
+	'production_choices',
+	'other'
+]);
+
+function validateOutlineBlocks(blocks, label, errors) {
+	if (!Array.isArray(blocks) || blocks.length === 0) {
+		errors.push(`${label}: requires at least one block`);
+		return;
+	}
+	for (const [index, block] of blocks.entries()) {
+		const blockLabel = `${label}[${index}]`;
+		if (block?.type === 'list') {
+			if (!Array.isArray(block.items) || block.items.length === 0)
+				errors.push(`${blockLabel}: list requires items`);
+			for (const item of block.items || [])
+				if (!sourceLocalizedString(item)?.trim()) errors.push(`${blockLabel}: empty list item`);
+		} else if (['paragraph', 'blockquote', 'heading'].includes(block?.type)) {
+			if (!sourceLocalizedString(block.text)?.trim()) errors.push(`${blockLabel}: empty text`);
+			if (block.type === 'heading' && ![3, 4].includes(block.level))
+				errors.push(`${blockLabel}: heading level must be 3 or 4`);
+		} else errors.push(`${blockLabel}: invalid block type ${block?.type}`);
+	}
+}
+
+function validateContinuousOrders(values, label, errors) {
+	const sorted = [...values].sort((a, b) => a - b);
+	if (sorted.some((value, index) => !Number.isInteger(value) || value !== index + 1))
+		errors.push(`${label}: orders must be unique and continuous from 1`);
+}
 
 function validateImageStatus(status, label, errors) {
 	if (!IMAGE_STATES.has(status.status))
@@ -273,6 +314,19 @@ function main() {
 	if (!continuities.length) errors.push('project: empty continuities');
 
 	const continuityIds = new Set(continuities.map((c) => c.id));
+	for (const continuity of continuities) {
+		if (!sourceLocalizedString(continuity.name)?.trim())
+			errors.push(`continuity ${continuity.id}: missing localized name`);
+		if (continuity.description != null && !sourceLocalizedString(continuity.description)?.trim())
+			errors.push(`continuity ${continuity.id}: empty localized description`);
+		if (
+			continuity.derivedFromContinuityId &&
+			!continuityIds.has(continuity.derivedFromContinuityId)
+		)
+			errors.push(`continuity ${continuity.id}: bad derivedFromContinuityId`);
+		if (continuity.derivedFromContinuityId === continuity.id)
+			errors.push(`continuity ${continuity.id}: cannot derive from itself`);
+	}
 	const registryIds = new Set(registry.map((e) => e.id));
 	if (!registryIds.has(project.project?.canonicalScriptId)) {
 		errors.push('project: canonicalScriptId not in registry');
@@ -479,6 +533,50 @@ function main() {
 			if (!OUTLINE_FILE_STATUS.has(outline.outline?.status)) {
 				errors.push(`${label}: invalid status ${outline.outline?.status}`);
 			}
+			if (
+				outline.outline?.editorialNotice != null &&
+				!sourceLocalizedString(outline.outline.editorialNotice)?.trim()
+			)
+				errors.push(`${label}: empty editorialNotice`);
+			if (outline.outline?.source) {
+				const source = outline.outline.source;
+				if (!source.path?.trim() || !source.revision?.trim() || !source.language?.trim())
+					errors.push(`${label}: incomplete source metadata`);
+				if (source.sha256 && !/^[a-f0-9]{64}$/.test(source.sha256))
+					errors.push(`${label}: invalid source SHA-256`);
+			}
+			const framingIds = new Set();
+			const framingOrders = new Map();
+			for (const section of outline.framing || []) {
+				const sectionLabel = `${label}.framing(${section?.id || '?'})`;
+				if (!section?.id || framingIds.has(section.id))
+					errors.push(`${sectionLabel}: missing or duplicate id`);
+				framingIds.add(section?.id);
+				if (!OUTLINE_FRAMING_PLACEMENT.has(section?.placement))
+					errors.push(`${sectionLabel}: invalid placement ${section?.placement}`);
+				if (!OUTLINE_FRAMING_KIND.has(section?.kind))
+					errors.push(`${sectionLabel}: invalid kind ${section?.kind}`);
+				if (!sourceLocalizedString(section?.title)?.trim())
+					errors.push(`${sectionLabel}: missing title`);
+				validateOutlineBlocks(section?.blocks, `${sectionLabel}.blocks`, errors);
+				const orders = framingOrders.get(section?.placement) || [];
+				orders.push(section?.order);
+				framingOrders.set(section?.placement, orders);
+			}
+			for (const [placement, orders] of framingOrders)
+				validateContinuousOrders(orders, `${label}.framing.${placement}`, errors);
+			const storySectionIds = new Set();
+			const storySectionOrders = [];
+			for (const section of outline.storySections || []) {
+				if (!section?.id || storySectionIds.has(section.id))
+					errors.push(`${label}: missing or duplicate story section id ${section?.id}`);
+				storySectionIds.add(section?.id);
+				storySectionOrders.push(section?.order);
+				if (!sourceLocalizedString(section?.title)?.trim())
+					errors.push(`${label}.storySection(${section?.id}): missing title`);
+			}
+			if (storySectionOrders.length)
+				validateContinuousOrders(storySectionOrders, `${label}.storySections`, errors);
 			const script = scriptsById.get(outline.outline?.scriptId);
 			const sceneIds = new Set((script?.scenes || []).map((scene) => scene.id));
 			const beatIds = new Set((script?.beats || []).map((beat) => beat.id));
@@ -503,8 +601,20 @@ function main() {
 					ordersByLevel.set(step.level, orders);
 				}
 				if (!sourceLocalizedString(step.title)?.trim()) errors.push(`${stepLabel}: missing title`);
-				if (!sourceLocalizedString(step.summary)?.trim())
-					errors.push(`${stepLabel}: missing summary`);
+				const hasSummary = Boolean(sourceLocalizedString(step.summary)?.trim());
+				const hasBody = Array.isArray(step.body) && step.body.length > 0;
+				if (hasSummary === hasBody)
+					errors.push(`${stepLabel}: requires exactly one of summary or body`);
+				if (step.body) {
+					if (step.level !== 'story') errors.push(`${stepLabel}: body requires story level`);
+					validateOutlineBlocks(step.body, `${stepLabel}.body`, errors);
+				}
+				if ((outline.storySections || []).length && step.level === 'story') {
+					if (!storySectionIds.has(step.sectionId))
+						errors.push(`${stepLabel}: invalid sectionId ${step.sectionId}`);
+				}
+				if (step.level === 'detail' && step.sectionId)
+					errors.push(`${stepLabel}: detail cannot declare sectionId`);
 				if (!OUTLINE_IMPORTANCE.has(step.importance)) {
 					errors.push(`${stepLabel}: invalid importance ${step.importance}`);
 				}
@@ -523,6 +633,14 @@ function main() {
 						if (!beatIds.has(beatId)) errors.push(`${stepLabel}: unknown beatId ${beatId}`);
 					}
 				}
+			}
+			for (const sectionId of storySectionIds) {
+				if (
+					!(outline.steps || []).some(
+						(step) => step.level === 'story' && step.sectionId === sectionId
+					)
+				)
+					errors.push(`${label}: story section ${sectionId} has no story steps`);
 			}
 			for (const step of outline.steps || []) {
 				if (!step?.id) continue;

@@ -2,7 +2,7 @@ import type { Asset } from '$lib/types/assets';
 import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import type { Note } from '$lib/types/common';
 import type { StoryText } from '$lib/types/i18n';
-import type { OutlineFile } from '$lib/types/outline';
+import type { OutlineFile, OutlineProseBlock } from '$lib/types/outline';
 import type { EntityVariant, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
 import type { ScriptRegistryEntry } from '$lib/types/project';
 import { resolveLocalizedString } from './localized.ts';
@@ -198,15 +198,35 @@ export function localizeOutline(source: OutlineFile, language: string): OutlineF
 	const file = structuredClone(source);
 	file.outline.title = resolveRequired(file.outline.title, language);
 	file.outline.synopsis = resolveRequired(file.outline.synopsis, language);
+	if (file.outline.editorialNotice != null)
+		file.outline.editorialNotice = resolveRequired(file.outline.editorialNotice, language);
+	for (const section of file.framing ?? []) {
+		section.title = resolveRequired(section.title, language);
+		section.blocks = section.blocks.map((block) => localizeOutlineBlock(block, language));
+	}
+	for (const section of file.storySections ?? []) {
+		section.title = resolveRequired(section.title, language);
+	}
 	for (const step of file.steps) {
 		step.title = resolveRequired(step.title, language);
-		step.summary = resolveRequired(step.summary, language);
+		if (step.summary != null) step.summary = resolveRequired(step.summary, language);
+		if (step.body) step.body = step.body.map((block) => localizeOutlineBlock(block, language));
 		for (const link of step.causalLinks ?? []) {
 			link.explanation = resolveRequired(link.explanation, language);
 		}
 		step.notes = translateNotes(step.notes, language);
 	}
 	return file;
+}
+
+function localizeOutlineBlock(block: OutlineProseBlock, language: string): OutlineProseBlock {
+	if (block.type === 'list') {
+		return {
+			...block,
+			items: block.items.map((item) => resolveRequired(item, language))
+		};
+	}
+	return { ...block, text: resolveRequired(block.text, language) };
 }
 
 export function publicTranslationStatus() {

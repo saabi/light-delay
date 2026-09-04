@@ -3,6 +3,7 @@ import mainScriptJson from '../../../../data/scripts/light-delay-main-short.json
 import festivalScriptJson from '../../../../data/scripts/light-delay-festival.json';
 import trailerScriptJson from '../../../../data/scripts/light-delay-trailer.json';
 import longScriptJson from '../../../../data/scripts/light-delay-long.json';
+import masterNarrativeScriptJson from '../../../../data/scripts/light-delay-master-narrative.json';
 import assetsJson from '../../../../data/assets.json';
 import charactersJson from '../../../../data/characters.json';
 import locationsJson from '../../../../data/locations.json';
@@ -70,6 +71,10 @@ const SCRIPT_MODULES: Record<string, ScriptFile> = {
 	'script:light-delay-long': assertJsonModule(
 		longScriptJson as ScriptFile,
 		'scripts/light-delay-long'
+	),
+	'script:light-delay-master-narrative': assertJsonModule(
+		masterNarrativeScriptJson as ScriptFile,
+		'scripts/light-delay-master-narrative'
 	)
 };
 

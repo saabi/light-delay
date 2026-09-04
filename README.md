@@ -8,7 +8,7 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 - Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
 - Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
 - Guion corto canónico: 17 escenas de historia (+ título/créditos), objetivo inicial de 30:00 y montaje de datos actual de ~30:50,5.
-- Cuatro productos registrados: corto principal, tratamiento de largometraje, Festival Cut y tráiler.
+- Cinco entradas registradas: corto principal, tratamiento de largometraje, Festival Cut, tráiler y una narrativa maestra sin límite de duración marcada como WIP no canónico.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
 - Animatic textual principal de 128 tomas con image take, encuadre, audio, subtítulos y duración editable (~30:50,5). En el corto hay 112 reutilizaciones candidatas a regeneración y 16 tomas con placeholder técnico (12 de historia + título/créditos); Festival tiene 71 tomas y el tráiler 33. La producción visual está deferida hasta aprobar cada cut y su freeze de prompts.
@@ -55,7 +55,7 @@ https://saabi.github.io/light-delay/
 
 La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
 
-El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. Los cuatro scripts y el resto del copy de historia llevan inglés **inline** en los JSON (`LocalizedString` / `variants.en`, estado `draft`); el español permanece como fuente de verdad y una elección manual de idioma narrativo se conserva localmente.
+El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. Las cinco entradas y el resto del copy de historia llevan inglés **inline** en los JSON (`LocalizedString` / `variants.en`, estado `draft`); el español permanece como fuente de verdad y una elección manual de idioma narrativo se conserva localmente. La narrativa maestra sólo implementa por ahora una escaleta estructurada; no reemplaza el canon ni los cuatro guiones previos.
 
 GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
 

@@ -4,31 +4,37 @@ import { fileURLToPath } from 'node:url';
 const root = join(dirname(fileURLToPath(import.meta.url)), '..'),
 	issues = [];
 const text = (v) => (typeof v === 'string' ? v : (v?.es ?? v?.en ?? ''));
+const bodyText = (blocks = []) =>
+	blocks
+		.flatMap((block) => (block.type === 'list' ? block.items.map(text) : [text(block.text)]))
+		.join(' ');
 for (const name of readdirSync(join(root, 'data', 'outlines')).filter((n) => n.endsWith('.json'))) {
 	const file = JSON.parse(readFileSync(join(root, 'data', 'outlines', name), 'utf8')),
-		children = new Map();
+		children = new Map(),
+		hasDetailLayer = file.steps.some((step) => step.level === 'detail');
 	for (const step of file.steps)
 		if (step.parentStepId)
 			children.set(step.parentStepId, (children.get(step.parentStepId) ?? 0) + 1);
 	for (const step of file.steps) {
 		const title = text(step.title).trim(),
-			summary = text(step.summary).trim(),
-			words = summary.split(/\s+/).filter(Boolean).length;
-		if (title.toLocaleLowerCase() === summary.toLocaleLowerCase())
+			storyText = (step.body ? bodyText(step.body) : text(step.summary)).trim(),
+			storyField = step.body ? 'body' : 'summary',
+			words = storyText.split(/\s+/).filter(Boolean).length;
+		if (title.toLocaleLowerCase() === storyText.toLocaleLowerCase())
 			issues.push({
 				file: name,
 				stepId: step.id,
 				severity: 'error',
-				issue: 'title repeats summary'
+				issue: `title repeats ${storyField}`
 			});
 		if (words < 12)
 			issues.push({
 				file: name,
 				stepId: step.id,
 				severity: 'warning',
-				issue: `summary is only ${words} words`
+				issue: `${storyField} is only ${words} words`
 			});
-		if (step.level === 'story' && !children.get(step.id))
+		if (hasDetailLayer && step.level === 'story' && !children.get(step.id))
 			issues.push({
 				file: name,
 				stepId: step.id,
@@ -42,7 +48,7 @@ for (const name of readdirSync(join(root, 'data', 'outlines')).filter((n) => n.e
 				severity: 'error',
 				issue: 'story beat has no explicit causal link'
 			});
-		if (/\b(propuesto|pendiente|to be proposed|pending)\b/i.test(`${title} ${summary}`))
+		if (/\b(propuesto|pendiente|to be proposed|pending)\b/i.test(`${title} ${storyText}`))
 			issues.push({
 				file: name,
 				stepId: step.id,

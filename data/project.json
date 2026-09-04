@@ -28,12 +28,30 @@
     "canonicalScriptId": "script:light-delay-main-short",
     "targetDurationMs": 1800000,
     "createdAt": "2026-08-25",
-    "updatedAt": "2026-08-25",
+    "updatedAt": "2026-09-04",
     "continuities": [
       {
         "id": "continuity:light-delay-primary",
-        "name": "Light Delay — continuidad primaria",
-        "description": "Continuidad narrativa del cortometraje canónico, su tratamiento largo y los cuts derivados."
+        "name": {
+          "es": "Light Delay — continuidad primaria",
+          "en": "Light Delay — primary continuity"
+        },
+        "description": {
+          "es": "Continuidad narrativa del cortometraje canónico, su tratamiento largo y los cuts derivados.",
+          "en": "Narrative continuity of the canonical short film, its feature treatment, and derived cuts."
+        }
+      },
+      {
+        "id": "continuity:light-delay-master-wip",
+        "name": {
+          "es": "Light Delay — narrativa maestra WIP",
+          "en": "Light Delay — master narrative WIP"
+        },
+        "description": {
+          "es": "Rama de desarrollo no canónica y sin límite de duración, todavía no adoptada por los guiones registrados.",
+          "en": "Non-canonical, unconstrained development branch not yet adopted by the registered screenplays."
+        },
+        "derivedFromContinuityId": "continuity:light-delay-primary"
       }
     ],
     "scripts": [
@@ -99,6 +117,16 @@
             "en": "Recovered material reviewed against the current short-film canon."
           }
         }
+      },
+      {
+        "id": "script:light-delay-master-narrative",
+        "continuityId": "continuity:light-delay-master-wip",
+        "label": {
+          "es": "Narrativa maestra sin límite (WIP)",
+          "en": "Unconstrained master narrative (WIP)"
+        },
+        "kind": "master_narrative",
+        "status": "draft"
       }
     ]
   }

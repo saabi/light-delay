@@ -47,6 +47,15 @@ function checkNotes(notes, context) {
 	}
 }
 
+function checkOutlineBlocks(blocks, context) {
+	for (const [index, block] of (blocks ?? []).entries()) {
+		if (block.type === 'list') {
+			for (const [itemIndex, item] of (block.items ?? []).entries())
+				checkLocalized(item, `${context}[${index}].items[${itemIndex}]`);
+		} else checkLocalized(block.text, `${context}[${index}].text`);
+	}
+}
+
 function checkScript(file, filename) {
 	const root = `scripts/${filename}`;
 	checkLocalized(file.script?.title, `${root}.script.title`);
@@ -157,9 +166,18 @@ function checkOutline(file, filename) {
 	const root = `outlines/${filename}`;
 	checkLocalized(file.outline?.title, `${root}.outline.title`);
 	checkLocalized(file.outline?.synopsis, `${root}.outline.synopsis`);
+	if (file.outline?.editorialNotice != null)
+		checkLocalized(file.outline.editorialNotice, `${root}.outline.editorialNotice`);
+	for (const section of file.framing ?? []) {
+		checkLocalized(section.title, `${root}.${section.id}.title`);
+		checkOutlineBlocks(section.blocks, `${root}.${section.id}.blocks`);
+	}
+	for (const section of file.storySections ?? [])
+		checkLocalized(section.title, `${root}.${section.id}.title`);
 	for (const step of file.steps ?? []) {
 		checkLocalized(step.title, `${root}.${step.id}.title`);
-		checkLocalized(step.summary, `${root}.${step.id}.summary`);
+		if (step.summary != null) checkLocalized(step.summary, `${root}.${step.id}.summary`);
+		if (step.body) checkOutlineBlocks(step.body, `${root}.${step.id}.body`);
 		for (const link of step.causalLinks ?? [])
 			checkLocalized(link.explanation, `${root}.${step.id}.causalLinks.explanation`);
 		checkNotes(step.notes, `${root}.${step.id}`);
@@ -171,6 +189,10 @@ for (const item of project.scripts ?? []) {
 	checkLocalized(item.label, `project.${item.id}.label`);
 	if (item.lineage?.notes != null)
 		checkLocalized(item.lineage.notes, `project.${item.id}.lineage.notes`);
+}
+for (const item of project.continuities ?? []) {
+	checkLocalized(item.name, `project.${item.id}.name`);
+	if (item.description != null) checkLocalized(item.description, `project.${item.id}.description`);
 }
 
 for (const filename of readdirSync(join(DATA, 'scripts')).filter((n) => n.endsWith('.json'))) {

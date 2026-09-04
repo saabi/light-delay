@@ -16,6 +16,7 @@ import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../../../..');
 const festivalId = 'script:light-delay-festival';
+const masterId = 'script:light-delay-master-narrative';
 
 describe('outlines (optional)', () => {
 	it('returns an outline for every registered script', () => {
@@ -46,6 +47,20 @@ describe('outlines (optional)', () => {
 		expect(localized.outline.title).toBe('Outline — Light Delay: Festival Cut');
 		expect(localized.steps[0]?.title).not.toBe(source.steps[0]?.title);
 		expect(typeof localized.steps[0]?.title).toBe('string');
+	});
+
+	it('loads the complete story-only master outline with structured framing', () => {
+		const source = getOutline(masterId)!;
+		expect(source.framing).toHaveLength(11);
+		expect(source.storySections).toHaveLength(8);
+		expect(source.steps).toHaveLength(57);
+		expect(source.steps.every((step) => step.level === 'story' && step.body?.length)).toBe(true);
+		expect(source.steps.some((step) => step.summary != null)).toBe(false);
+		expect(source.steps.some((step) => step.coverage != null)).toBe(false);
+		const localized = getLocalizedOutline(masterId, 'en')!;
+		expect(localized.steps[0]?.body?.[0]?.type).toBe('paragraph');
+		const first = localized.steps[0]?.body?.[0];
+		expect(first && first.type !== 'list' ? first.text : '').toBe('Overlay: 43 MIN 18 S.');
 	});
 
 	it('validateOutline accepts hierarchy, causal explanations, and optional coverage', () => {
@@ -127,7 +142,7 @@ describe('outlines (optional)', () => {
 describe('report:outline-missing', () => {
 	it('reports complete outline coverage', () => {
 		const report = buildOutlineMissingReport(ROOT);
-		expect(report.summary.scripts).toBe(4);
+		expect(report.summary.scripts).toBe(5);
 		expect(report.summary.missing).toBe(0);
 		expect(report.missing).toEqual([]);
 	});

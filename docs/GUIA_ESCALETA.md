@@ -4,7 +4,7 @@ Procedimiento obligatorio antes de crear o ampliar guion, diálogo, tomas o anim
 
 ## 1. Leer la historia antes de implementarla
 
-1. Abrir `data/outlines/<slug>.json` y leer `synopsis` más todos los pasos `story` sin consultar primero el guion.
+1. Abrir `data/outlines/<slug>.json` y leer `synopsis` más todos los pasos `story` —`summary` o `body`— sin consultar primero el guion. Leer también el `framing` cuando exista, pero no usarlo para reparar una causa ausente de la historia.
 2. Comprobar que una persona puede contar premisa, conflicto, decisiones decisivas y resolución con esa capa.
 3. Para cada consecuencia directa, verificar que el resumen o `causalLinks.explanation` deja claro qué hecho previo la habilita, motiva, revela, fuerza, impide o resuelve.
 4. Sólo entonces desplegar los pasos `detail` y contrastarlos con canon y continuidad.
@@ -20,6 +20,9 @@ Si la capa principal sólo repite encabezados o resúmenes de escena, todavía n
 - Escribir primero los hitos `story`; no generarlos desde `scene.summary`.
 - Cada hito debe describir un cambio narrativo, no una localización ni una toma.
 - Añadir detalle sólo cuando ayude a escribir o verificar la implementación.
+- Una escaleta story-only es válida antes de que exista un guion; no inventar detalle o cobertura para aparentar avance.
+- Usar `storySections` para prólogos o secuencias, no steps narrativos que sólo funcionen como encabezados.
+- Usar `framing` para contexto anterior o posterior que no sea un acontecimiento. No esconder allí causas necesarias para comprender un beat.
 - Mantener los IDs existentes; nuevos IDs van namespaced por cut.
 - No enlazar por mera adyacencia. Una omisión deliberada de explicación es válida cuando el vínculo ya es inequívoco en el propio resumen.
 - Evitar exposición forzada: la escaleta puede declarar la lógica autoral, pero el guion debe revelarla mediante pensamiento en acción, elección y consecuencia visible.
@@ -56,4 +59,4 @@ La escaleta principal responde la cadena; el ledger causal verifica conocimiento
 
 ## 5. Cierre
 
-Ejecutar `validate:data`, `validate:translations`, `report:outline-readability`, `report:outline-story` y `report:outline-gaps` para el destino trabajado. Para el tráiler ejecutar además `check:trailer-spoilers`. Leer `reports/outline-story/project.md` de corrido: es la superficie de revisión que excluye deliberadamente los detalles. Revisar `/outline/[scriptId]` con detalles cerrados y abiertos. Actualizar primero el español y luego el inglés inline. No regenerar imágenes salvo instrucción explícita. Registrar cambios materiales en `CHANGELOG.md` y `docs/PROJECT_STATUS.md`.
+Ejecutar `validate:data`, `validate:translations`, `report:outline-readability`, `report:outline-story` y `report:outline-gaps` para el destino trabajado. Para el tráiler ejecutar además `check:trailer-spoilers`. Si una escaleta declara una fuente verificable, ejecutar también su comprobación de fidelidad. Leer `reports/outline-story/project.md` de corrido: es la superficie de revisión que excluye deliberadamente los detalles. Revisar `/outline/[scriptId]` con framing y detalles cerrados y abiertos. Actualizar primero el español y luego el inglés inline. No regenerar imágenes salvo instrucción explícita. Registrar cambios materiales en `CHANGELOG.md` y `docs/PROJECT_STATUS.md`.

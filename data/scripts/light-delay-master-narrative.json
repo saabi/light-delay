@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.1.0",
+  "script": {
+    "id": "script:light-delay-master-narrative",
+    "projectId": "project:light-delay",
+    "continuityId": "continuity:light-delay-master-wip",
+    "title": {
+      "es": "Light Delay — narrativa maestra sin límite (WIP)",
+      "en": "Light Delay — unconstrained master narrative (WIP)"
+    },
+    "version": "0.1.0-wip",
+    "status": "draft",
+    "kind": "master_narrative",
+    "actIds": []
+  },
+  "acts": [],
+  "sequences": [],
+  "scenes": [],
+  "beats": [],
+  "cues": [],
+  "shots": [],
+  "takes": []
+}

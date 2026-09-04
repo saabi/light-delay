@@ -12,6 +12,8 @@ export function scriptLabel(entry: ScriptRegistryEntry): string {
 			return m.script_trailer_name();
 		case 'script:light-delay-long':
 			return m.script_long_name();
+		case 'script:light-delay-master-narrative':
+			return m.script_master_narrative_name();
 		default:
 			return (
 				resolveLocalizedString(entry.label, 'es', { sourceLanguage: 'es' }) ??
@@ -30,6 +32,8 @@ export function scriptKindLabel(kind: ScriptRegistryEntry['kind']): string {
 			return m.script_kind_trailer();
 		case 'long_version':
 			return m.script_kind_long_version();
+		case 'master_narrative':
+			return m.script_kind_master_narrative();
 		default:
 			return kind;
 	}

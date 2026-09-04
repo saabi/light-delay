@@ -9,11 +9,15 @@
 	import { withLocale } from '$lib/utils/paths';
 	import type { Cue, Shot } from '$lib/types/script';
 	import { onMount } from 'svelte';
+	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import { storyText } from '$lib/data/selectors/localized';
+	import * as m from '$lib/paraglide/messages.js';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const language = $derived(getLanguageState());
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
 	const encoded = $derived(encodeScriptId(scriptId));
+	const outlineHref = $derived(withLocale(`/outline/${encoded}`));
 
 	const orderedShots = $derived(
 		[...script.shots].sort((a, b) => {
@@ -47,4 +51,27 @@
 	});
 </script>
 
-<AnimaticPlayer {script} {shots} returnHref={withLocale(`/animatic/${encoded}`)} />
+{#if shots.length === 0}
+	<main class="empty-page">
+		<PageHeader
+			eyebrow={m.animatic_label()}
+			title={storyText(script.script.title, language.dialogueLanguage)}
+			lede={m.animatic_empty_body()}
+			meta={[m.animatic_empty_title()]}
+		/>
+		<a href={outlineHref}>{m.animatic_open_outline()}</a>
+	</main>
+{:else}
+	<AnimaticPlayer {script} {shots} returnHref={withLocale(`/animatic/${encoded}`)} />
+{/if}
+
+<style>
+	.empty-page {
+		max-width: var(--content-max);
+		margin: 0 auto;
+		padding: 2.5rem var(--page-gutter) 4rem;
+	}
+	.empty-page a {
+		color: var(--cyan);
+	}
+</style>

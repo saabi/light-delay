@@ -18,9 +18,7 @@ const TARGET_LANG = 'en';
 const APPLY = process.argv.includes('--apply');
 const PRUNE_OVERLAY = process.argv.includes('--prune-overlay');
 
-const overlayFile = JSON.parse(
-	readFileSync(join(DATA, 'translations', 'public.en.json'), 'utf8')
-);
+const overlayFile = JSON.parse(readFileSync(join(DATA, 'translations', 'public.en.json'), 'utf8'));
 const overlay = overlayFile.translations ?? {};
 
 const stats = {
@@ -57,12 +55,20 @@ function localizeField(value, context) {
 	}
 	if (isLocalizedMap(value)) {
 		stats.alreadyLocalized += 1;
-		if (!value[TARGET_LANG] && typeof value[SOURCE_LANG] === 'string' && overlay[value[SOURCE_LANG]]) {
+		if (
+			!value[TARGET_LANG] &&
+			typeof value[SOURCE_LANG] === 'string' &&
+			overlay[value[SOURCE_LANG]]
+		) {
 			const next = { ...value, [TARGET_LANG]: overlay[value[SOURCE_LANG]] };
 			stats.enFilled += 1;
 			return next;
 		}
-		if (!value[TARGET_LANG] && typeof value[SOURCE_LANG] === 'string' && value[SOURCE_LANG].trim()) {
+		if (
+			!value[TARGET_LANG] &&
+			typeof value[SOURCE_LANG] === 'string' &&
+			value[SOURCE_LANG].trim()
+		) {
 			stats.missingEn.push(context);
 		}
 		return value;
@@ -99,9 +105,7 @@ function migrateDialogueVariant(sourceVariant, context) {
 	return {
 		spokenText: translateOrKeep(sourceVariant.spokenText),
 		subtitleText:
-			sourceVariant.subtitleText != null
-				? translateOrKeep(sourceVariant.subtitleText)
-				: undefined,
+			sourceVariant.subtitleText != null ? translateOrKeep(sourceVariant.subtitleText) : undefined,
 		translatorNote: undefined,
 		pronunciationNote:
 			sourceVariant.pronunciationNote != null
@@ -213,10 +217,7 @@ function migrateScript(file, filename) {
 		if (item.setting) {
 			for (const key of ['timeOfDay', 'storyTime', 'continuity']) {
 				if (item.setting[key] != null)
-					item.setting[key] = localizeField(
-						item.setting[key],
-						`${root}.${item.id}.setting.${key}`
-					);
+					item.setting[key] = localizeField(item.setting[key], `${root}.${item.id}.setting.${key}`);
 			}
 		}
 		item.notes = localizeNotes(item.notes, `${root}.${item.id}`);
@@ -270,10 +271,7 @@ function migrateScript(file, filename) {
 		if (item.camera) {
 			for (const key of ['movementDescription', 'startFrame', 'endFrame']) {
 				if (item.camera[key] != null)
-					item.camera[key] = localizeField(
-						item.camera[key],
-						`${root}.${item.id}.camera.${key}`
-					);
+					item.camera[key] = localizeField(item.camera[key], `${root}.${item.id}.camera.${key}`);
 			}
 		}
 		if (item.transitionIn?.description != null)
@@ -309,11 +307,39 @@ function migrateScript(file, filename) {
 
 function migrateOutline(file, filename) {
 	const root = `outlines/${filename}`;
-	file.schemaVersion = '1.1.0';
+	if (!file.schemaVersion || file.schemaVersion === '1.0.0') file.schemaVersion = '1.1.0';
 	file.outline.title = localizeField(file.outline.title, `${root}.outline.title`);
+	file.outline.synopsis = localizeField(file.outline.synopsis, `${root}.outline.synopsis`);
+	if (file.outline.editorialNotice != null)
+		file.outline.editorialNotice = localizeField(
+			file.outline.editorialNotice,
+			`${root}.outline.editorialNotice`
+		);
+	const localizeBlocks = (blocks, context) => {
+		for (const [index, block] of (blocks ?? []).entries()) {
+			if (block.type === 'list')
+				block.items = block.items.map((item, itemIndex) =>
+					localizeField(item, `${context}[${index}].items[${itemIndex}]`)
+				);
+			else block.text = localizeField(block.text, `${context}[${index}].text`);
+		}
+	};
+	for (const section of file.framing ?? []) {
+		section.title = localizeField(section.title, `${root}.${section.id}.title`);
+		localizeBlocks(section.blocks, `${root}.${section.id}.blocks`);
+	}
+	for (const section of file.storySections ?? [])
+		section.title = localizeField(section.title, `${root}.${section.id}.title`);
 	for (const step of file.steps ?? []) {
 		step.title = localizeField(step.title, `${root}.${step.id}.title`);
-		step.summary = localizeField(step.summary, `${root}.${step.id}.summary`);
+		if (step.summary != null)
+			step.summary = localizeField(step.summary, `${root}.${step.id}.summary`);
+		localizeBlocks(step.body, `${root}.${step.id}.body`);
+		for (const link of step.causalLinks ?? [])
+			link.explanation = localizeField(
+				link.explanation,
+				`${root}.${step.id}.causalLinks.explanation`
+			);
 		step.notes = localizeNotes(step.notes, `${root}.${step.id}`);
 	}
 	return file;
@@ -324,6 +350,11 @@ function migrateProject(file) {
 		item.label = localizeField(item.label, `project.${item.id}.label`);
 		if (item.lineage?.notes != null)
 			item.lineage.notes = localizeField(item.lineage.notes, `project.${item.id}.lineage.notes`);
+	}
+	for (const item of file.project.continuities ?? []) {
+		item.name = localizeField(item.name, `project.${item.id}.name`);
+		if (item.description != null)
+			item.description = localizeField(item.description, `project.${item.id}.description`);
 	}
 	return file;
 }
@@ -450,7 +481,10 @@ const report = {
 };
 if (APPLY) {
 	mkdirSync(reportDir, { recursive: true });
-	writeFileSync(join(reportDir, 'inline-i18n-migration.json'), `${JSON.stringify(report, null, 2)}\n`);
+	writeFileSync(
+		join(reportDir, 'inline-i18n-migration.json'),
+		`${JSON.stringify(report, null, 2)}\n`
+	);
 }
 
 console.log(JSON.stringify({ ...report, missingEnSample: report.missingEn.slice(0, 20) }, null, 2));

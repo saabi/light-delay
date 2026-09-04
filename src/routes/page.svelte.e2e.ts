@@ -65,6 +65,30 @@ test('festival script exposes localized editorial labels', async ({ page }) => {
 	await expect(page.getByRole('heading', { name: 'Narrative functions' })).toBeVisible();
 });
 
+test('master narrative exposes its framing and keeps implementation empty', async ({ page }) => {
+	await page.goto('/outline/script~light-delay-master-narrative');
+	await expect(
+		page.getByRole('heading', {
+			name: 'Outline — Light Delay: unconstrained master narrative (WIP)'
+		})
+	).toBeVisible();
+	await expect(
+		page.getByText(
+			'This master narrative is a non-canonical development branch. Its plot has not been adopted by any of the four existing versions.'
+		)
+	).toBeVisible();
+	await expect(page.getByText('Purpose of this document', { exact: true })).toBeVisible();
+	await expect(
+		page.getByRole('heading', { name: 'Sequence G — First contact and close' })
+	).toBeVisible();
+	await expect(page.getByRole('heading', { name: 'G3 — Close' })).toBeVisible();
+
+	await page.goto('/script/script~light-delay-master-narrative');
+	await expect(
+		page.getByRole('heading', { name: 'Screenplay implementation has not started yet.' })
+	).toBeVisible();
+});
+
 test('screenplay content defaults to the route language and preserves a manual choice', async ({
 	page
 }) => {

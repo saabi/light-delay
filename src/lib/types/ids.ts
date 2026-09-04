@@ -29,4 +29,5 @@ export type ScriptKind =
 	| 'trailer'
 	| 'teaser'
 	| 'proof_of_concept'
+	| 'master_narrative'
 	| 'alternate';

@@ -172,8 +172,8 @@ export interface ComparisonProfile {
 
 export interface Continuity {
   id: ContinuityId;
-  name: string;
-  description?: string;
+  name: LocalizedString;
+  description?: LocalizedString;
   derivedFromContinuityId?: ContinuityId;
 }
 
@@ -201,7 +201,7 @@ See ADR-0001 for full registry types. Summary:
 export interface ScriptRegistryEntry {
   id: ScriptId;
   continuityId: ContinuityId;
-  label: string;
+  label: LocalizedString;
   kind: ScriptKind;
   status: "draft" | "review" | "locked" | "deprecated";
   targetDurationMs?: number;
@@ -236,13 +236,39 @@ export type OutlineFileStatus = "draft" | "reviewed" | "locked";
 export type OutlineStepLevel = "story" | "detail";
 export type OutlineCoverageStatus = "not_started" | "partial" | "covered" | "deferred" | "not_applicable";
 
+export type OutlineProseBlock =
+  | { type: "paragraph"; text: LocalizedString }
+  | { type: "heading"; level: 3 | 4; text: LocalizedString }
+  | { type: "list"; ordered?: boolean; items: LocalizedString[] }
+  | { type: "blockquote"; text: LocalizedString };
+
+export interface OutlineStorySection {
+  id: string;
+  order: number;
+  title: LocalizedString;
+}
+
+export interface OutlineFramingSection {
+  id: string;
+  placement: "before_story" | "after_story";
+  order: number;
+  kind: "purpose" | "terminology" | "premise" | "setting" | "physics" |
+    "gravity" | "cast" | "motivation" | "stakes" | "throughlines" |
+    "production_choices" | "other";
+  title: LocalizedString;
+  blocks: OutlineProseBlock[];
+}
+
 export interface OutlineStep {
   id: string; // namespaced to the cut, e.g. main:outline-01
   level: OutlineStepLevel;
   parentStepId?: string; // required for detail; points to story
+  sectionId?: string; // story only; points to storySections
   order: number; // unique inside its level
   title: LocalizedString;
-  summary: LocalizedString; // change, decision, or consequence
+  summary?: LocalizedString; // compact main description
+  body?: OutlineProseBlock[]; // full main description; story only
+  // Exactly one of summary/body is required.
   importance: OutlineImportance;
   causalLinks?: Array<{
     sourceStepId: string; // earlier step at the same level
@@ -267,10 +293,21 @@ export interface OutlineFile {
     synopsis: LocalizedString;
     status: OutlineFileStatus;
     version: string;
+    editorialNotice?: LocalizedString;
+    source?: {
+      path: string;
+      revision: string;
+      language: string;
+      sha256?: string;
+    };
   };
+  framing?: OutlineFramingSection[];
+  storySections?: OutlineStorySection[];
   steps: OutlineStep[];
 }
 ```
+
+`framing` conserva contexto que no constituye acontecimientos dramáticos. `storySections` agrupa la historia sin inferir estructura desde IDs. Una escaleta puede omitir por completo `detail` y cobertura mientras su implementación no exista.
 
 ### Script structure
 

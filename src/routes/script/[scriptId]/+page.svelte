@@ -5,7 +5,8 @@
 	import { getLocalizedScript } from '$lib/data/repositories/index';
 	import { estimateScriptSpokenMs, montageScriptMs } from '$lib/data/selectors/dialogueTiming';
 	import { getLanguageState } from '$lib/state/language.svelte';
-	import { decodeScriptId } from '$lib/utils/scriptId';
+	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
+	import { withLocale } from '$lib/utils/paths';
 	import type { Beat, Cue, Scene } from '$lib/types/script';
 	import { page } from '$app/state';
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
@@ -18,6 +19,7 @@
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
 	const scriptMontageMs = $derived(montageScriptMs(script));
 	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, language.dialogueLanguage));
+	const outlineHref = $derived(withLocale(`/outline/${encodeScriptId(scriptId)}`));
 
 	const scenesById = $derived(
 		Object.fromEntries(script.scenes.map((s) => [s.id, s])) as Record<string, Scene>
@@ -58,20 +60,28 @@
 			scriptKindLabel(script.script.kind)
 		]}
 	/>
-	<p class="timing-lede">{m.timing_compare_lede()}</p>
-	<p class="timing-total">
-		<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} />
-	</p>
 	<StoryLanguageNotice />
-	<ScriptViewer
-		acts={script.acts}
-		{scenesById}
-		{beatsBySceneId}
-		{cuesByBeatId}
-		characterFunctionAssignments={script.script.characterFunctionAssignments}
-		{script}
-		dialogueLanguage={language.dialogueLanguage}
-	/>
+	{#if script.scenes.length === 0}
+		<div class="empty" role="status">
+			<h2>{m.script_empty_title()}</h2>
+			<p>{m.script_empty_body()}</p>
+			<a href={outlineHref}>{m.script_open_outline()}</a>
+		</div>
+	{:else}
+		<p class="timing-lede">{m.timing_compare_lede()}</p>
+		<p class="timing-total">
+			<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} />
+		</p>
+		<ScriptViewer
+			acts={script.acts}
+			{scenesById}
+			{beatsBySceneId}
+			{cuesByBeatId}
+			characterFunctionAssignments={script.script.characterFunctionAssignments}
+			{script}
+			dialogueLanguage={language.dialogueLanguage}
+		/>
+	{/if}
 </main>
 
 <style>
@@ -89,5 +99,18 @@
 
 	.timing-total {
 		margin: 0 0 1rem;
+	}
+	.empty {
+		padding: 1.2rem;
+		border: 1px dashed var(--line);
+		border-radius: 12px;
+		background: var(--panel2);
+	}
+	.empty h2 {
+		margin-top: 0;
+		font-family: var(--font-serif);
+	}
+	.empty a {
+		color: var(--cyan);
 	}
 </style>

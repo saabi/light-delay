@@ -19,6 +19,7 @@
 	const language = $derived(getLanguageState());
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
 	const encoded = $derived(encodeScriptId(scriptId));
+	const outlineHref = $derived(withLocale(`/outline/${encoded}`));
 	const initialShotId = $derived(
 		browser ? (page.url.searchParams.get('shot') ?? undefined) : undefined
 	);
@@ -79,18 +80,26 @@
 		]}
 	/>
 	<StoryLanguageNotice />
-	{#key `${script.script.id}:${script.script.version}`}
-		<AnimaticEditor
-			{groups}
-			{script}
-			scriptId={script.script.id}
-			scriptVersion={script.script.version}
-			playerHref={withLocale(`/animatic/${encoded}/player`)}
-			targetDurationMs={script.script.targetDurationMs}
-			{warnings}
-			{initialShotId}
-		/>
-	{/key}
+	{#if script.shots.length === 0}
+		<div class="empty" role="status">
+			<h2>{m.animatic_empty_title()}</h2>
+			<p>{m.animatic_empty_body()}</p>
+			<a href={outlineHref}>{m.animatic_open_outline()}</a>
+		</div>
+	{:else}
+		{#key `${script.script.id}:${script.script.version}`}
+			<AnimaticEditor
+				{groups}
+				{script}
+				scriptId={script.script.id}
+				scriptVersion={script.script.version}
+				playerHref={withLocale(`/animatic/${encoded}/player`)}
+				targetDurationMs={script.script.targetDurationMs}
+				{warnings}
+				{initialShotId}
+			/>
+		{/key}
+	{/if}
 </main>
 
 <style>
@@ -98,5 +107,18 @@
 		max-width: min(1600px, 100%);
 		margin: 0 auto;
 		padding: 2.5rem var(--page-gutter) 4rem;
+	}
+	.empty {
+		padding: 1.2rem;
+		border: 1px dashed var(--line);
+		border-radius: 12px;
+		background: var(--panel2);
+	}
+	.empty h2 {
+		margin-top: 0;
+		font-family: var(--font-serif);
+	}
+	.empty a {
+		color: var(--cyan);
 	}
 </style>
