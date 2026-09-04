@@ -1,6 +1,6 @@
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 7.
+Working draft, English, revision 8.
 
 ## Purpose of this document
 
@@ -183,8 +183,10 @@ independent local control path from the reactor service bay. Jamming internal ra
 the ship’s wired communications trunks do not disable it.
 
 With the main data trunks disconnected, the local array controller records into a volatile
-burst buffer. After transmission, it retains emission time, energy, and pointing telemetry but
-not a local copy of the payload. No person digitally erases the message.
+burst buffer. After transmission, it retains an emission summary: time, energy, the array’s
+azimuth and elevation relative to the ship, and the Ardor’s attitude at the moment of emission.
+The summary names no destination and retains no local copy of the payload. No person digitally
+erases the message.
 
 ## Confirmed physics and timing
 
@@ -544,6 +546,11 @@ command.
 
 He descends the service shaft toward the reactor service bay.
 
+Harlan does not know whom Voss will send in response to Zao’s interrupted warning, but he knows
+someone will be sent aft immediately. The identity does not matter to him. Whoever discovers
+Zao’s body can be blamed for the murder, or at least create enough uncertainty to protect his
+timetable. He assumes that person will be close behind him.
+
 ### B4 — Confirmation of sabotage
 
 Zao tests the internal wireless system, the wired hardline, and the emergency internal path.
@@ -632,11 +639,15 @@ message will play once, in E2.
 The long-distance optical communications array slews to the calculated interception point and
 fires a compressed burst.
 
-Its local volatile buffer clears as a normal consequence of transmission. The controller
-retains only the time, energy, and pointing telemetry.
+Its local volatile buffer clears as a normal consequence of transmission. The controller retains
+only the emission summary, including the array’s final azimuth and elevation and the Ardor’s
+attitude when the burst was fired. It displays no recipient or destination.
 
 Harlan enters almost simultaneously. He has seen enough to know that she transmitted something,
-but not where it will arrive or what she said.
+but not where it will arrive or what she said. The raw angles are sufficient to reconstruct the
+beam’s inertial direction, but they do not answer either question at a glance.
+
+He knows that whoever the bridge sent must already be descending toward them.
 
 ---
 
@@ -652,16 +663,26 @@ Zao does not answer.
 
 ### C2 — The sigh
 
-Harlan reasons from the same immediate facts Zao considered.
+Harlan gives the emission summary a hurried technical inspection. Confirming a destination would
+require converting the array angles and ship attitude into an inertial vector, then comparing it
+with the relevant ephemerides. With another crew member close behind, he decides he has no time
+to perform that reconstruction.
+
+He reasons instead from the same immediate facts Zao considered.
 
 > “Proxima’s behind Jupiter. Earth won’t know until we’re already there.”
 
-He assumes she sent her sabotage warning to Earth. Whatever she said may condemn him
+Proxima is occluded. The pilot throat does not accept human messages. Zao does not know how to
+address the Velari, and there is no confirmed communications path to their station. Where else
+would she point the array?
+
+Harlan assumes she sent her sabotage warning toward Earth. Whatever she said may condemn him
 historically, but it cannot stop the contact-point detonation, and he expects to die with the
 others.
 
-He does not inspect the long-distance optical communications array’s pointing telemetry then or
-later. His certainty that Zao chose the obvious destination is his decisive mistake.
+He prioritizes killing Zao, securing the inner vault, leaving before the approaching crew member
+arrives, and restoring the cameras in time to record that person with the body. His mistake is
+not a failure to look at the telemetry. It is his certainty that he already knows what it means.
 
 He sighs before closing the distance.
 
@@ -823,7 +844,8 @@ Voss asks Elin whether she can open the vault, not whether she can stop whatever
 ### D5 — The outbound burst
 
 Elin finds another surviving record: during the blackout, the long-distance optical
-communications array transmitted a compressed burst from the outer-bay controller.
+communications array transmitted a compressed burst from the outer-bay controller. She converts
+the recorded array angles and ship attitude into an inertial pointing vector.
 
 The payload is no longer stored locally. Its pointing direction is not Earth, Proxima, or any
 known beacon. From the ship’s current perspective, it appears to have been fired into empty
@@ -846,9 +868,13 @@ Harlan says:
 
 > “She was frightened. She knew someone was coming.”
 
-He imagines that the packet contains a fuller version of the sabotage report the bridge already
-heard. He remains certain that, whether it reached Earth or empty space, it cannot affect the
-encounter.
+The empty-space vector does not make Harlan reconsider his assumption. He treats it as
+confirmation that Zao attempted an urgent manual shot toward Earth and missed. He imagines that
+the packet contains a fuller version of the sabotage report the bridge already heard and remains
+certain that, whether it reached Earth or empty space, it cannot affect the encounter.
+
+He has turned the conclusion he reached under pressure into the explanation he gives everyone
+else.
 
 Elin cannot disprove his explanation yet. She records it as a possibility rather than accepting
 it as fact. His willingness to explain Zao by making her careless troubles the person who knew
@@ -1248,9 +1274,10 @@ Voss repeatedly mistakes interpretations for facts:
 Elin reverses that process by keeping explanations provisional until independent evidence
 converges.
 
-Harlan’s failure is also interpretive. He imagines Zao chose the obvious destination and made
-the obvious plea for help. He cannot imagine that she used the mission’s greatest distance as a
-way to reach forward.
+Harlan’s failure is also interpretive. Under pressure, he reads the raw pointing data through
+his conviction that Earth is the only possible destination. When the reconstructed vector points
+into empty space, he treats that result as confirmation that Zao missed. He cannot imagine that
+she used the mission’s greatest distance as a way to reach forward.
 
 ### Character handoff
 
