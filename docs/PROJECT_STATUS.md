@@ -1,5 +1,19 @@
 # Estado del proyecto
 
+## 2026-09-04 — Ventana final, regreso de Harlan y encuentro Velari (WIP, no canon)
+
+- `docs/wip/general-narrative-outline.en.md` está en rev. 12. El tramo desde la boca lejana hasta
+  la estación baja a ~17,4 millones de km y ~23 h 25 min; el trayecto óptico de Zao se mantiene
+  en 167,8 AU / 23 h 15 min y deja unos 10–15 minutos para E–F.
+- Harlan sube por servicio con intención de informar y retomar su puesto; al oír a Zao cambia de
+  plan y activa el jammer preparado desde su dispositivo de muñeca. El jammer no se añade como
+  pista de la investigación.
+- El contexto inicial incorpora la biología y el lenguaje luminoso Velari necesarios para que la
+  escaleta sea autosuficiente. F7 y G2–G2b fijan la secuencia silencio, atención y habla dentro de
+  una esfera ambiental de ~5 m, bajo la sombra solar de la estación.
+- Esta revisión sólo actualiza el Markdown fuente. La conversión estructurada no confirmada que
+  existe en el árbol de trabajo sigue derivada de rev. 11 y deberá regenerarse por separado.
+
 ## 2026-09-04 — Narrativa maestra estructurada (WIP, no canon)
 
 - Quinta entrada registrada: `script:light-delay-master-narrative`, dentro de la continuidad de desarrollo `continuity:light-delay-master-wip`; no altera `canonicalScriptId`, los cuatro guiones COM/láser ni el tratamiento largo de ~100 minutos.

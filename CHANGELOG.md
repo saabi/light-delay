@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-09-04 — Ventana final, regreso de Harlan y encuentro Velari (WIP)
+
+- Actualizado `docs/wip/general-narrative-outline.en.md` a rev. 12: el tramo lejano se acorta a
+  ~23 h 25 min sin alterar la ruta óptica de Zao, dejando una ventana de respuesta de ~10–15 min.
+- Harlan regresa por servicio para informar y retomar su puesto, pero al oír a Zao activa el
+  jammer preparado mediante su dispositivo de muñeca y vuelve atrás; no se incorpora como pista.
+- Añadido al contexto el mínimo descriptivo Velari necesario y reescritos F7 y G2–G2b para que el
+  saludo conserve el medio luminoso del manto y el encuentro progrese de silencio a atención y
+  habla dentro de la esfera ambiental.
+- No se modifican los JSON estructurados ni los guiones. La conversión WIP existente continúa
+  derivada de rev. 11 y requiere regeneración separada después de adoptar esta fuente.
+
 ## 2026-09-04 — Quinta continuidad: narrativa maestra WIP
 
 - Registrada `script:light-delay-master-narrative` como entrada `master_narrative` vacía dentro de una continuidad de desarrollo separada; no reemplaza el corto canónico, Festival, tráiler ni el tratamiento largo.

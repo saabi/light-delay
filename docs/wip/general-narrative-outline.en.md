@@ -1,6 +1,6 @@
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 11.
+Working draft, English, revision 12.
 
 ## Purpose of this document
 
@@ -20,9 +20,13 @@ the far mouth beyond the known planetary system.
 In its resting condition, the throat occupies a **pilot state**. The pilot state is not a
 conversation channel. It broadcasts instructions but accepts no human messages.
 
-The Velari structure waiting at the planned encounter is a **station**, approximately 4–5 km
-across. For the physical meeting, the station sends a transparent **environmental sphere**
-containing one Velari.
+**Velari** is both singular and plural. The Velari structure waiting at the planned encounter is
+a **station**, approximately 4–5 km across. For the physical meeting, the station sends a
+transparent self-propelled **environmental sphere**, roughly 5 m across, containing one
+full-size Velari in a suitable atmosphere.
+
+A Velari’s principal body and luminous communication organ is its elongated, selectively
+translucent **mantle**.
 
 The human ship is the **Celestial Ardor**, or the **Ardor** in dialogue.
 
@@ -31,14 +35,41 @@ communications array**.
 
 Elin Rao is called **Elin** throughout, keeping her distinct from Zao.
 
+### Velari biology and communication
+
+The Velari are adapted to pressurized microgravity habitats, not to open vacuum. They require a
+suitable breathing atmosphere, pressure, and controlled humidity. Outside their habitats they
+therefore need environmental protection such as the sphere.
+
+An adult spans approximately 2.5–3 m in a gathered conversational posture and has substantially
+greater reach when its limbs unfold. Eight flexible limbs serve as manipulators, anchors, and
+instruments of expression. Their fine articulated tips have no suckers or repetitive circular
+attachment structures. Several small, irregularly distributed sensory elements replace a face
+or single dominant eye; attention is conveyed through orientation, stillness, and presentation
+of the mantle.
+
+Within the mantle is a voluntarily controlled three-dimensional network of light-emitting
+neurons. Faint branching remains visible as anatomy while inactive; emitted patterns are
+deliberate communication rather than involuntary thought display. Meaning is carried through
+spatial arrangement, timing, intensity, and wavelength. When a Velari attends to someone,
+branches nearer that person converge, coordinate, and hold before full speech begins.
+
+Velari optical technology extends this biological language. The mouth’s primer includes visible
+structured-light examples adapted from mantle grammar. Sorell’s AI unfolds their simultaneous
+spatial relationships into a sequential human-readable form and performs the reverse mapping
+when preparing the Ardor’s hull-light greeting. It can recover practical meaning while initially
+missing nuance and artistry. High bandwidth does not eliminate misunderstanding, disagreement,
+or deception.
+
 ## Premise
 
 Humanity discovered the Jupiter mouth recently. The throat was built thousands of years ago and
 left waiting for humanity to become capable of finding it.
 
-In its pilot state, the mouth broadcasts a structured instructional sequence. It has supplied
-humanity with limited information about the Velari, examples of their communicative grammar,
-and a schedule for a full aperture. It does not receive or acknowledge human transmissions.
+In its pilot state, the mouth broadcasts a structured visible-light instructional sequence. It
+has supplied humanity with limited information about the Velari, examples of their communicative
+grammar, and a schedule for a full aperture. It does not receive or acknowledge human
+transmissions.
 Mechanisms within the throat have detected humanity’s discovery and notified the Velari by
 means humanity does not understand.
 
@@ -54,7 +85,7 @@ where a Velari station will be waiting on the far side, and a later return apert
 The positions are the result of heliocentric orbits with different radii, velocities, and
 phases. At this particular alignment, the straight-line distance from the Jupiter mouth to the
 point where Zao’s message will intercept the Ardor is 167.8 AU. The far mouth deposits the Ardor
-approximately 18.3 million km short of the planned encounter with the station. The geometry may
+approximately 17.4 million km short of the planned encounter with the station. The geometry may
 be part of the reason for the schedule, but humanity does not know enough to be certain.
 
 At full aperture, the throat is physically traversable in both directions, but only during its
@@ -186,9 +217,10 @@ allows Sorell and the investigators to reach Zao while the device remains locked
 The crew normally uses internal wireless communications, backed by wired hardlines. Cameras
 share the wired trunk near the bridge.
 
-A concealed local jammer can suppress the internal wireless repeaters. The wired communications
-and camera trunks pass through a physical tray inside the service shaft just below the bridge
-hatch.
+A concealed local jammer can suppress the internal wireless repeaters. Harlan has paired its
+direct local control with his wrist device; activation leaves no central shipboard command
+record. The wired communications and camera trunks pass through a physical tray inside the
+service shaft just below the bridge hatch.
 
 The long-distance optical communications array is separate. Its aft emitter retains an
 independent local control path from the reactor service bay. Jamming internal radio and pulling
@@ -206,17 +238,17 @@ The local segment from Proxima at L1 to the Jupiter mouth at L2 lasts 57 h 48 mi
 approximately 28 h 54 min accelerating toward Jupiter periapsis and approximately 28 h 54 min
 decelerating toward L2.
 
-The far-side segment from the far mouth to the planned encounter is approximately 18.3 million
-km. A 1g accelerate–decelerate profile takes approximately 24 hours.
+The far-side segment from the far mouth to the planned encounter is approximately 17.4 million
+km. A 1g accelerate–decelerate profile takes approximately 23 h 25 min.
 
 Zao’s warning does not use the throat. She sends it through ordinary space from the Jupiter
 mouth using the long-distance optical communications array. At the scheduled alignment, the
 light-time to the Ardor’s calculated interception point is approximately 23 h 15 min.
 
-The Ardor crosses the throat shortly after Zao sends. The ship therefore jumps more than
-twenty-three light-hours ahead of its own warning, then spends approximately twenty-four hours
-flying toward the station. The warning catches the ship roughly 45 minutes before planned first
-contact. Sequences E and F occur inside that interval.
+The Ardor crosses the throat within a few minutes after Zao sends. The ship therefore jumps more
+than twenty-three light-hours ahead of its own warning, then spends approximately 23 h 25 min
+flying toward the station. The unchanged 23 h 15 min message path catches the ship roughly 10–15
+minutes before planned first contact. Sequences E and F occur inside that interval.
 
 The pilot throat cannot accept Zao’s message. Even if a signal could be sent through the full
 aperture ahead of the ship, it would emerge ahead of the Ardor and continue moving away at light
@@ -552,16 +584,20 @@ console is available.
 
 ### B2 — Wireless report cut off
 
-Harlan climbs the service shaft and opens the hatch behind the bridge stations. The bridge crew
-are facing the displays along the outer hull wall, with their backs toward the shaft openings.
-Nobody sees him emerge.
+After his final check of the bomb, Harlan takes the service shaft toward the bridge. In
+microgravity it is the quickest route. He intends to report his assigned inspection complete and
+resume his bridge station before the throat crossing.
+
+He opens the hatch behind the bridge stations. The bridge crew are facing the displays along the
+outer hull wall, with their backs toward the shaft openings. Nobody sees him emerge, and he has
+not yet announced himself.
 
 Zao begins a wireless report:
 
 > “I’ve found a grave attempt to sabotage the mission—”
 
-Harlan hears her. Without announcing his presence, he activates a concealed local jammer. Her
-voice collapses into static.
+Harlan hears her and abandons his intended report. Using his wrist device, he activates the
+prepared local jammer. Her voice collapses into static.
 
 He immediately re-enters the service shaft.
 
@@ -997,7 +1033,7 @@ the body is not sufficient to close the case.
 
 ### D7 — Signal detected
 
-Approximately 45 minutes before planned first contact, Elin’s console detects an incoming
+Approximately 10–15 minutes before planned first contact, Elin’s console detects an incoming
 optical transmission precisely on the Ardor’s current trajectory.
 
 Her reaction unfolds in real time:
@@ -1225,14 +1261,18 @@ returning forward.
 
 ### F7 — Staged, not sent
 
-Sorell’s console shows the protocol taking form. A primitive human AI organizes branching
-points of light into the grammar demonstrated by the throat’s instructional sequence.
+Sorell’s console shows the protocol taking form. A primitive human AI unfolds the simultaneous
+spatial relationships in the throat’s primer into a sequential human-readable working form. It
+then performs the reverse operation, organizing branching points of light into the grammar
+demonstrated by the instructional sequence.
 
-The display resembles neurons firing: irregular activity gradually resolving into a deliberate
-ordered structure.
+The display resembles neurons firing because the grammar is a technological extension of the
+Velari’s mantle language: irregular activity gradually resolves into a deliberate ordered
+structure.
 
-The greeting will be expressed by lights distributed across the Ardor’s hull. It is not a
-single flash or a narrow beam.
+The greeting will be expressed by lights distributed across the Ardor’s hull, preserving both
+the visible medium and the relational form of the primer. It is not a single flash or a narrow
+beam.
 
 Sorell says:
 
@@ -1271,7 +1311,7 @@ Then the station answers.
 
 Its immense surface comes alive with slow, coordinated, branching light. The small schematic
 shown during transit is revealed as a simplified representation of a grammar that is natural
-to the Velari and architectural at the station’s scale.
+to the Velari and technologically extended to the station’s scale.
 
 The Velari understand the human attempt because the throat supplied humanity with their primer.
 The human AI, by contrast, must work to parse a fluent Velari response from a language humanity
@@ -1284,32 +1324,51 @@ She turns to the crew:
 
 > “They’re sending someone.”
 
+The station’s answer ends. Its branching lights withdraw until the immense structure is quiet
+again. Because light is the medium, the return to darkness is also a deliberate silence. Sorell’s
+earlier observation acquires a second meaning: silence is still a choice.
+
 ### G2b — The meeting
 
-The station deploys a transparent self-propelled environmental sphere.
+The station deploys the transparent self-propelled environmental sphere.
 
-The sphere is tiny beside the station but enormous beside a human being. It maintains a
-Velari-appropriate internal atmosphere by mechanisms humanity does not understand.
+The roughly 5 m sphere is tiny beside the station but enormous beside a human being. Its subtly
+layered transparent shell, faint internal haze, and sparse embedded nodes imply pressure,
+environmental regulation, and propulsion without revealing mechanisms humanity understands.
 
 Sorell suits up alone. Voss remains on the bridge, preserving the command perspective that
 bookends the sequence. Sorell exits through the airlock with a safety tether and suit camera.
 
-The environmental sphere closes the distance slowly and stops rather than crowding her.
+The environmental sphere closes the distance slowly through the station’s solar shadow and stops
+rather than crowding her. The Ardor’s greeting lights are no longer active. Sorell dims her
+exterior suit lamp and waits with the sphere in near-darkness.
 
-Inside is one Velari: a large, many-limbed animal suspended naturally in its own atmosphere.
-It does not make itself physically smaller. Its scale remains overwhelming.
+Inside is one Velari, suspended naturally in its own atmosphere. It does not shrink or disguise
+its scale. It gathers most of its eight limbs into a controlled conversational posture, leaving
+clear volume on Sorell’s side while one or two partly extended limbs imply its greater reach. Even
+gathered, it spans approximately 2.5–3 m and remains overwhelming beside her.
 
-The visible accommodation lies elsewhere:
+The accommodation proceeds as an ordered exchange rather than a flat display:
 
 - The station sends one individual rather than approaching with its entire mass.
 - The Velari remains within its own contained environment.
 - The sphere stops and waits.
-- Its sensory region aligns with Sorell.
-- Its natural bioluminescence lowers to a restrained intensity.
-- It repeats and extends elements of the Ardor’s greeting.
+- Its irregular sensory region and mantle orient toward Sorell.
+- Faint inactive branching makes the body barely legible in the dark.
+- Luminous branches nearer Sorell converge and hold: attention before speech.
+- Only then do selected mantle regions unfold into deliberate three-dimensional patterns that
+  repeat and extend elements of the Ardor’s greeting.
+
+The Velari’s speech becomes the principal light in the encounter. It reveals Sorell’s visor and
+the front planes of her suit, suspended particles in the sphere’s atmosphere, the shell’s
+refractive edge, and selected portions of the Velari without flattening everything into glare.
 
 An unfamiliar intelligence is making a visible effort to be understood and to make the meeting
 beautiful.
+
+The beauty does not prove benevolence or eliminate the possibility of misunderstanding,
+disagreement, or deception. It demonstrates attention and accommodation, preserving the basis of
+Harlan’s uncertainty while rejecting his claim that violence was humanity’s only safe answer.
 
 The sequence holds before cutting away.
 
@@ -1442,6 +1501,8 @@ design, or storyboard development:
 - The bomb’s exact classified yield within the multi-megaton range.
 - Propellant load and exhaust velocity used to pin the excess-propellant figure.
 - Exact dosimeter resolution and fuel-system diagnostic presentation used in the false theory.
+- The final far-side distance and exact 10–15 minute reception margin after timing Zao’s warning
+  and blocking Sequences E and F.
 - Exact stair riser count, turns, landing geometry, and screen timing of the descent.
 - The precise interval between outward and return apertures.
 - The specific visual design of the throat, station, and environmental sphere.
