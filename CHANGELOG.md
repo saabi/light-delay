@@ -1,8 +1,12 @@
 # Changelog
 
+## 2026-09-03 — Escaleta narrativa general (WIP)
+
+- Renombrado el borrador WIP a `docs/wip/general-narrative-outline.en.md` (rev. 7): escaleta maestra cut-agnóstica en inglés; no modifica outlines ni guiones JSON. Falta copia española.
+
 ## 2026-09-02 — Borrador de reestructura Festival (no canon)
 
-- Añadido `docs/wip/festival-cut-outline-v2-restructured-EN.md` como propuesta de trabajo en inglés. No modifica outlines ni guiones JSON; el desfase de traducción queda explícito.
+- Añadido el borrador WIP de reestructura Festival en inglés (ruta histórica `docs/wip/festival-cut-outline-v2-restructured-EN.md`; ver entrada 2026-09-03). No modifica outlines ni guiones JSON.
 
 ## 2026-09-01 — Consola del puente y tomas de tránsito de Júpiter
 

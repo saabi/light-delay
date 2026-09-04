@@ -1,8 +1,9 @@
 # Estado del proyecto
 
-## 2026-09-02 — Borrador de reestructura Festival (no canon)
+## 2026-09-03 — Escaleta narrativa general (WIP, no canon)
 
-- Propuesta en `docs/wip/festival-cut-outline-v2-restructured-EN.md`. No toca `data/outlines/` ni guiones. Sólo inglés; falta copia española.
+- Borrador maestro en `docs/wip/general-narrative-outline.en.md` (rev. 7; antes `festival-cut-outline-v2-restructured-EN.md`). Cadena causal a longitud natural, adaptable a cortes corto/medio/largo.
+- No toca `data/outlines/` ni guiones. Sólo inglés; falta copia española.
 - No sustituye el canon vigente (sabotaje COM / láser). Cualquier adopción requiere confirmación explícita y escaleta JSON posterior.
 
 ## 2026-09-01 — Consola del puente y tomas de tránsito de Júpiter
