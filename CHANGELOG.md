@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-06 — Duales de audiencia regenerados (rev. 15)
+
+- ES: `light-delay-audience-dual-es.mp3` (~43.3 min); EN:
+  `light-delay-audience-dual-en.mp3` (~42.4 min), con títulos localizados,
+  **Próxima**, pausas de capítulo y pronunciación de Sorell.
+- No se tocaron refs de voz ni los duales de la escaleta general.
+
 ## 2026-09-06 — Títulos, revisión y pronunciación TTS localizadas
 
 - El master y el relato usan **Lúz Tardía** y **Próxima** en español; inglés
@@ -9,7 +16,8 @@
 - Cada número de capítulo se pronuncia solo y precede una pausa explícita de
   1200 ms antes del título, igual que el prólogo.
 - `pronunciationMap` mantiene `Sorell` como grafía editorial y genera **Soréll**
-  en inglés o **Sorél** en español. Se regeneraron los Markdown TTS, no el audio.
+  en inglés o **Sorél** en español. Los Markdown TTS y los duales de audiencia
+  ya están regenerados.
 
 ## 2026-09-06 — Relato para público rev. 15 + dirección por ID
 

@@ -1,5 +1,14 @@
 # Estado del proyecto
 
+## 2026-09-06 — Audio del relato para público regenerado
+
+- Duales alineados con rev. 15, **Lúz Tardía** / **Próxima**, pausas de capítulo
+  y `pronunciationMap` de Sorell:
+  `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-es.mp3` (~43.3 min);
+  `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-en.mp3` (~42.4 min).
+- Los MP3 anteriores quedan sustituidos. No se regeneraron refs de voz ni los
+  duales de la escaleta general.
+
 ## 2026-09-06 — Localización y autoridad del pipeline TTS
 
 - La narrativa vigente y el relato para público escriben **Lúz Tardía** y
@@ -11,7 +20,8 @@
   de 1200 ms. `Sorell` permanece en las fuentes; el mapa de la variante de voz genera
   **Soréll** (EN) o **Sorél** (ES).
 - Las instrucciones Qwen declaran idioma, situación dramática y entrega en lenguaje
-  natural. Los derivados Markdown están actualizados; los MP3 previos quedan obsoletos.
+  natural. Los derivados Markdown y los duales de audiencia ya coinciden con esas
+  fuentes.
 
 ## 2026-09-06 — Relato para público rev. 15 y dirección de interpretación estable
 
@@ -26,9 +36,8 @@
 - La escaleta maestra pasa a revisión 15 con los diálogos corregidos y sus exports
   Markdown regenerados. Conserva 38 citas; el relato oye 36 porque omite la cita
   de encuadre P1 y reproduce la despedida de Zao sólo en E2, no en B7.
-- Los MP3 marcados como listos en las entradas anteriores son ahora **obsoletos**
-  frente al texto y las direcciones rev. 15. Queda pendiente regenerarlos; en esta
-  tarea sólo se reconstruyeron los Markdown de voces, no audio.
+- Los MP3 de las entradas anteriores quedaron obsoletos frente al texto rev. 15;
+  ya fueron regenerados (véase la entrada de audio del mismo día).
 
 ## 2026-09-06 — Audience: Ardor Celestial + pausa tras número de capítulo
 
