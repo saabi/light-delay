@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-06 — Tomas estables por audience-dialogue-id
+
+- Overlays de imitación keyed por `audience-dialogue-id`; stale = contentHash +
+  speaker + idioma + engine. Regenerar el dual sin cambiar diálogos no exige
+  Accept de nuevo. Backfill del índice y migración one-shot de tomas ya grabadas.
+
 ## 2026-09-06 — Studio local de imitación
 
 - Editor `/studio` (SvelteKit, sólo `npm run dev`) + worker `:8765` con GPU

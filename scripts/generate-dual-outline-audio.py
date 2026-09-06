@@ -43,6 +43,10 @@ AUDIO_SUBDIR = "audio"
 PAUSE_RE = re.compile(r"^\[PAUSE\s+(\d+)\]\s*", re.I)
 INSTRUCT_RE = re.compile(r"^\[QwenInstruct\]\s*(.+)$", re.I | re.M)
 SPEAKER_RE = re.compile(r"^\[([A-Za-z]+)\]\s*\n([\s\S]+)$")
+DIALOGUE_ID_RE = re.compile(
+    r"^<!--\s*audience-dialogue-id:\s*([^\s]+)\s*-->\s*(.*)$",
+    re.I | re.S,
+)
 
 
 def repo_path(p: str | Path) -> Path:
@@ -79,25 +83,43 @@ def extract_instruct(text: str) -> tuple[str | None, str]:
     return None, text.strip()
 
 
-def parse_cues(text: str) -> list[tuple[str, str, str | None]]:
-    """Return list of (speaker, speakable_text, qwen_instruct|None)."""
+def parse_cues(text: str) -> list[tuple[str, str, str | None, str | None]]:
+    """Return list of (speaker, speakable_text, qwen_instruct|None, stableDialogueId|None)."""
     if "\n---\n" in text:
         text = text.split("\n---\n", 1)[1]
-    cues: list[tuple[str, str, str | None]] = []
+    cues: list[tuple[str, str, str | None, str | None]] = []
+    pending_dialogue_id: str | None = None
     for chunk in re.split(r"\n\s*\n", text.strip()):
         chunk = chunk.strip()
         if not chunk or chunk.startswith("#"):
             continue
         if chunk.startswith("[Content continues") or chunk.startswith("[Note:"):
             continue
+        id_match = DIALOGUE_ID_RE.match(chunk)
+        if id_match:
+            pending_dialogue_id = id_match.group(1).strip()
+            rest = (id_match.group(2) or "").strip()
+            if not rest:
+                continue
+            chunk = rest
         m = SPEAKER_RE.match(chunk)
         if not m:
-            cues.append(("Narrator", strip_ipa(chunk), None))
+            if pending_dialogue_id is not None:
+                raise ValueError(
+                    f"audience-dialogue-id {pending_dialogue_id!r} is not followed by a speaker cue"
+                )
+            cues.append(("Narrator", strip_ipa(chunk), None, None))
             continue
         speaker, body = m.group(1), strip_ipa(m.group(2).strip())
         instruct, spoken = extract_instruct(body)
+        dialogue_id = pending_dialogue_id
+        pending_dialogue_id = None
         if spoken:
-            cues.append((speaker, spoken, instruct))
+            cues.append((speaker, spoken, instruct, dialogue_id))
+    if pending_dialogue_id is not None:
+        raise ValueError(
+            f"audience-dialogue-id {pending_dialogue_id!r} is not followed by a speaker cue"
+        )
     return cues
 
 
@@ -688,7 +710,7 @@ def main() -> int:
     regenerated = 0
     prev_was_dialogue = False
 
-    for i, (speaker, text, instruct) in enumerate(cues, 1):
+    for i, (speaker, text, instruct, stable_dialogue_id) in enumerate(cues, 1):
         abs_i = args.start + i
         pause_ms, text = extract_pause_ms(text)
         if not text and pause_ms <= 0:
@@ -696,6 +718,11 @@ def main() -> int:
 
         is_dialogue = bool(text) and text.lstrip().startswith(('"', "“"))
         use_qwen = speaker in prompts and is_dialogue
+        if use_qwen and not stable_dialogue_id:
+            raise SystemExit(
+                f"Qwen dialogue cue {abs_i} ({speaker}) is missing audience-dialogue-id. "
+                "Rebuild voices with npm run tts:audience:build."
+            )
 
         if pause_ms > 0:
             pre_silence_ms = pause_ms
@@ -741,6 +768,7 @@ def main() -> int:
                     "voice_fingerprint": voice_fp,
                     "wav": rel,
                     "seconds": 0.0,
+                    "stableDialogueId": None,
                 }
             )
             prev_was_dialogue = False
@@ -862,6 +890,7 @@ def main() -> int:
                 "voice_fingerprint": voice_fp,
                 "wav": rel,
                 "seconds": round(dur, 3),
+                "stableDialogueId": stable_dialogue_id if use_qwen else None,
             }
         )
         prev_was_dialogue = is_dialogue

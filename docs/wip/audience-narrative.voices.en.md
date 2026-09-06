@@ -1,6 +1,6 @@
 # Light Delay — audience narrative TTS (English)
 
-Revision 15 (from the master outline). Chaptered short story for listeners; no production frontmatter.
+Revision 16 (from the master outline). Chaptered short story for listeners; no production frontmatter.
 Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Spoken name: Soréll; tag and editorial spelling stay ASCII [Sorell]. Dialogue from attributed blockquotes only.
 Cast/ref: `docs/wip/qwen3-tts-cast.json`.
@@ -9,7 +9,7 @@ Generate: `python scripts/generate-dual-outline-audio.py --lang en --script docs
 ---
 
 [Narrator]
-[PAUSE 1200] Light Delay. Revision 15.
+[PAUSE 1200] Light Delay. Revision 16.
 
 [Narrator]
 Prologue.
@@ -35,6 +35,7 @@ The second crowd sees the same facts and reaches the opposite conclusion. Someon
 [Narrator]
 Rylen Harlan watches the hopeful half of the square for a long time.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-harlan-wish -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: Harlan lets genuine regret escape while concealing that he has already chosen to act against the mission. Performance and delivery: Very low and contained; a tiny hesitation before ‘right,’ with no self-pity.
 "I wish they were right."
@@ -42,6 +43,7 @@ Rylen Harlan watches the hopeful half of the square for a long time.
 [Narrator]
 He does not claim that the Velari could have entered whenever they wished. He does not know that. What he says is narrower, and harder to dismiss.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-harlan-door -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He turns political fear into a conclusion that sounds inevitable. Performance and delivery: Dignified and precise; build from ‘door’ to ‘walk through’ without raising volume.
 "They built a door in our system before we knew they existed. Now the door tells us when to walk through."
@@ -52,6 +54,7 @@ Lian Soréll has spent months studying the instructional sequence. She answers h
 [Narrator]
 Elias Voss hears ordinary nerves in Harlan and fear of action in Soréll. He misreads them both.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-sorell-respect -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll defends caution as ethical rigor, stung that Voss mistook it for fear. Performance and delivery: Warm but firm; slightly quicken the first sentence, then clearly separate ‘fear’ from ‘respect.’
 "We studied everything they gave us before we agreed to send a single ship out there. That isn't fear. It's respect."
@@ -59,6 +62,7 @@ Elias Voss hears ordinary nerves in Harlan and fear of action in Soréll. He mis
 [Narrator]
 Zao says almost nothing. When the exchange ends, she finds Voss alone and lowers her voice.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-zao-not-hope -->
 [Zao]
 [QwenInstruct] Speak English. Dramatic situation: Zao delivers a human diagnosis as dryly as an engineering reading. Performance and delivery: Private, low, and absolutely certain; land on ‘hope’ and stop.
 "That wasn't hope."
@@ -66,6 +70,7 @@ Zao says almost nothing. When the exchange ends, she finds Voss alone and lowers
 [Narrator]
 Voss smiles at her with the affection reserved for an instrument he trusts and does not intend to consult.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-voss-faults -->
 [Voss]
 [QwenInstruct] Speak English. Dramatic situation: Voss means to reassure her and unknowingly dismisses the correct warning. Performance and delivery: Calm baritone with professional affection; the second sentence is a gentle correction, not a rebuke.
 "You find faults for a living. That doesn't make everyone a fault."
@@ -94,6 +99,7 @@ Below, Zao and Elin Rao run the post-loading check in the shorthand of people wh
 [Narrator]
 Voss asks for departure status. Elin says they are ready. Zao asks for one more minute.
 
+<!-- audience-dialogue-id: audience:dialogue:a3-voss-on-time -->
 [Voss]
 [QwenInstruct] Speak English. Dramatic situation: Voss expresses routine trust in Zao and grants the time she asks for. Performance and delivery: Light and assured, almost casual; repeat ‘on time’ with a definitive close.
 "If Zao says we're on time, we're on time."
@@ -119,6 +125,7 @@ At periapsis, thrust cuts. Weight disappears while the ship turns from prograde 
 [Narrator]
 Soréll says what none of them has said aloud.
 
+<!-- audience-dialogue-id: audience:dialogue:a3b-sorell-no-return -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll makes audible the irreversibility everyone already feels. Performance and delivery: Unhurried, with quiet gravity; leave space before ‘no turning around.’
 "The outbound throat closes behind us. Until the return window, there's no turning around."
@@ -129,6 +136,7 @@ Later, off watch, delayed protest coverage runs silently on one wall display. Be
 [Narrator]
 Dara Okoye studies a demonstrator repeating an argument against a security line.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-okoye-aggressive -->
 [Okoye]
 [QwenInstruct] Speak English. Dramatic situation: Okoye reports what she sees with barely perceptible irony. Performance and delivery: Direct and observational; a dry shade on ‘too aggressive,’ without turning it into a joke.
 "They think the mission looks too aggressive."
@@ -136,6 +144,7 @@ Dara Okoye studies a demonstrator repeating an argument against a security line.
 [Narrator]
 Elin studies the other screen: sharp bow, long cylinder, the ship's name painted across her flank.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-elin-phallus -->
 [Elin]
 [QwenInstruct] Speak English. Dramatic situation: Elin finds a description that is technically exact and socially awkward. Performance and delivery: Absolute deadpan; one continuous analytical rhythm, with no audible smile.
 "We're making first contact in a ninety-metre phallus called Celestial Ardor."
@@ -143,6 +152,7 @@ Elin studies the other screen: sharp bow, long cylinder, the ship's name painted
 [Narrator]
 Voss looks at her.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-elin-name -->
 [Elin]
 [QwenInstruct] Speak English. Dramatic situation: Elin disowns the absurdity she just identified without breaking deadpan. Performance and delivery: Very brief; a micro-pause before ‘name,’ ending dry.
 "I didn't name it."
@@ -153,6 +163,7 @@ Zao tries not to laugh and fails.
 [Narrator]
 Soréll keeps working on the greeting.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-greeting -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll catches the joke and turns it back toward the work without killing the camaraderie. Performance and delivery: Agile and warm, with the smallest smile; practical emphasis on ‘less ambiguous.’
 "Let's make the greeting less ambiguous."
@@ -160,6 +171,7 @@ Soréll keeps working on the greeting.
 [Narrator]
 The joke opens the real question beneath it. Okoye asks.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-okoye-hello -->
 [Okoye]
 [QwenInstruct] Speak English. Dramatic situation: Okoye’s curiosity opens the question the joke was avoiding. Performance and delivery: Softer than a command; genuine wonder with a restrained questioning rise.
 "How do you say hello to something you've never heard answer?"
@@ -170,6 +182,7 @@ Soréll turns a training pattern onto the display: a few points of light branchi
 [Narrator]
 The mouth supplied examples, not a dictionary. There is no isolated word for greeting. Break the sequence apart and it does not become a shorter message; it becomes a different one.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-primer -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll distinguishes receiving instruction from having held a conversation. Performance and delivery: Pedagogical but intimate; clearly contrast ‘wrote’ with ‘haven’t spoken back.’
 "They wrote the primer. We haven't spoken back."
@@ -177,6 +190,7 @@ The mouth supplied examples, not a dictionary. There is no isolated word for gre
 [Narrator]
 She watches the pattern go dark.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-silence -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll states the linguistic principle that will later make Velari silence legible. Performance and delivery: Reflective and calm; discover the thought in the first sentence and settle it in the second.
 "When the mouth goes quiet, it is still saying something. Silence is still a choice."
@@ -184,6 +198,7 @@ She watches the pattern go dark.
 [Narrator]
 Zao listens from the far side of the compartment.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-zao-ai -->
 [Zao]
 [QwenInstruct] Speak English. Dramatic situation: Zao tests the system’s weak point, not Soréll’s competence. Performance and delivery: A genuine technical question; direct, not personally challenging, with a slight final rise.
 "And if the AI learned it wrong?"
@@ -191,6 +206,7 @@ Zao listens from the far side of the compartment.
 [Narrator]
 Soréll answers without protecting her own expertise.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-misreading -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll honestly admits the limit her expertise cannot remove. Performance and delivery: Measured and vulnerable; a small pause after ‘possible,’ then firm on ‘cannot.’
 "Misreading is possible. The AI can arrange the patterns, but it cannot turn uncertainty into knowledge."
@@ -198,6 +214,7 @@ Soréll answers without protecting her own expertise.
 [Narrator]
 From the doorway, where he has watched the protests rather than the conversation, Harlan speaks.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-harlan-read-wrong -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: Harlan turns a reasonable question into an insinuation of threat. Performance and delivery: From the edge of the conversation; soft, even, and disturbing only in retrospect.
 "And what if we're the ones being read wrong?"
@@ -292,6 +309,7 @@ The upper hatch opens immediately behind the bridge stations. The crew face thei
 [Narrator]
 Zao's voice arrives over the internal wireless.
 
+<!-- audience-dialogue-id: audience:dialogue:b2-zao-sabotage -->
 [Zao]
 [QwenInstruct] Speak English. Dramatic situation: Zao begins an urgent, controlled report before an external force severs the channel. Performance and delivery: Continuous forward drive and engineering diction; do not trail off voluntarily—the line is ripped away by static.
 "I have found a grave attempt to sabotage the mission—"
@@ -362,6 +380,7 @@ Chapter 6.
 [Narrator]
 [PAUSE 1200] Murder
 
+<!-- audience-dialogue-id: audience:dialogue:c1-harlan-recipient -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: Harlan demands the only fact that can still threaten his plan. Performance and delivery: Close, low, and dangerous; hard consonants and weight on ‘who.’
 "Who did you send that to?"
@@ -375,6 +394,7 @@ Harlan scans the emission summary. Confirming a destination means converting arr
 [Narrator]
 Instead, he reasons from the same immediate facts Zao considered.
 
+<!-- audience-dialogue-id: audience:dialogue:c2-harlan-earth -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He reasons aloud, turning incomplete facts into the mistaken certainty that reassures him. Performance and delivery: Calculate through the first sentence; slow into cold relief by ‘already there.’
 "Proxima is behind Jupiter. Earth will not know until we are already there."
@@ -442,6 +462,7 @@ Voss sends Harlan and Okoye aft to determine what happened.
 [Narrator]
 They find Soréll with Zao. Harlan turns the sight into a verdict before Okoye can speak.
 
+<!-- audience-dialogue-id: audience:dialogue:c7-harlan-accuse -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He manufactures outrage to turn the sight of Soréll with the body into an instant verdict. Performance and delivery: Projected for witnesses; hard, clean shock with no real grief, ‘Why?’ landing as the final blow.
 "How could you? Why?"
@@ -461,6 +482,7 @@ The restored camera shows Soréll holding the corpse. She travelled alone during
 [Narrator]
 During questioning, Harlan adds a lie of exactly the right size.
 
+<!-- audience-dialogue-id: audience:dialogue:c9-harlan-lie -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He inserts a small lie into a plausible memory to activate Voss’s existing bias. Performance and delivery: Conversational, helpful, almost compassionate; no audible sign of invention.
 "Before launch she asked me what it would take to delay the crossing. I thought it was professional caution."
@@ -472,10 +494,16 @@ Voss remembers Soréll under the protest feed saying that isn't fear, it's respe
 Custody is justified. Murder is not proved. Elin knows those are different sentences. What stays with her is how completely Soréll broke while holding Zao—and how quickly Harlan converted uncertainty into guilt.
 
 [Narrator]
-The ship settles into its far-side run: roughly seventeen point four million kilometres to the meeting point, about twenty-three and a half hours of acceleration and braking under one gravity.
+Once clear of the far mouth, the ship settles into its far-side run and thrust restores weight to the decks: roughly seventeen point four million kilometres to the meeting point, about twenty-three and a half hours of acceleration and braking under one gravity.
 
 [Narrator]
-Soréll spends that time under questioning instead of preparing the greeting. Voss quietly plans how to approach an alien station without his xenolinguist. Elin and Okoye work until exhaustion blurs the displays, then keep working.
+Through the first half, Soréll remains under questioning instead of preparing the greeting. Voss quietly plans how to approach an alien station without his xenolinguist. Elin and Okoye work until exhaustion blurs the displays, then keep working.
+
+[Narrator]
+Midway through the leg, thrust cuts and weight disappears for the third time. The crew secure themselves and their work as the Ardor rotates one hundred and eighty degrees from its acceleration attitude to its braking attitude. Hours of investigation become visible in a single maneuver.
+
+[Narrator]
+The engine pushes toward the same deck again. One gravity returns and deceleration toward the Velari station begins.
 
 [Narrator]
 Chapter 8.
@@ -489,6 +517,7 @@ Voss orders a complete audit: the communications failure, Zao's final work, the 
 [Narrator]
 Restrained a few metres behind him, Soréll does not wait to be asked.
 
+<!-- audience-dialogue-id: audience:dialogue:d1-sorell-first-explanation -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: From custody, Soréll forces the bridge to admit that a coherent explanation can still be false. Performance and delivery: Hurt but intellectually firm; press the first accusation, then leave space before ‘exactly.’
 "You're treating the first explanation as if it were the only one. That's exactly what I warned you not to do out there."
@@ -502,6 +531,7 @@ The dosimeter logged a brief fast-neutron excess from the combined shielding-and
 [Narrator]
 Harlan gives both facts one cause.
 
+<!-- audience-dialogue-id: audience:dialogue:d2-harlan-fuel -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He sells a false hypothesis as a complete, inevitable chain of physics. Performance and delivery: Fluid technical authority; make each consequence cause the next, with ‘miss the window’ closing the case.
 "Lose helium-three and the mix goes deuterium-rich. More side-reaction neutrons, more fuel to hold thrust. Keep bleeding it and we miss the window."
@@ -548,6 +578,7 @@ It points to neither Earth nor Proxima, nor to any beacon or station in the cata
 [Narrator]
 Everyone heard the start of Zao's report before the static. Harlan can offer the obvious explanation without admitting that he saw the transmission himself.
 
+<!-- audience-dialogue-id: audience:dialogue:d5-harlan-missed -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He offers an apparently protective explanation that diminishes Zao’s precision and preserves his theory. Performance and delivery: False empathy and gentle certainty; frame ‘to Earth’ with a pause and end definitively on ‘missed.’
 "She was trying to finish the report she started—to Earth. The guidance trunk was down, so she entered the aim manually. She missed."
@@ -555,10 +586,12 @@ Everyone heard the start of Zao's report before the static. Harlan can offer the
 [Narrator]
 Elin does not look up.
 
+<!-- audience-dialogue-id: audience:dialogue:d5-elin-no-miss -->
 [Elin]
 [QwenInstruct] Speak English. Dramatic situation: Elin rejects the one premise that contradicts everything she knows about Zao. Performance and delivery: Low, immediate, and absolute; one falling contour, with no invitation to debate.
 "Zao didn't miss."
 
+<!-- audience-dialogue-id: audience:dialogue:d5-harlan-frightened -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He uses feigned compassion to explain Zao’s supposed mistake. Performance and delivery: Soft, almost kind; ‘frightened’ sounds understanding, while ‘someone was coming’ introduces threat without emphasis.
 "She was frightened. She knew someone was coming."
@@ -572,6 +605,7 @@ Elin cannot disprove him. What bothers her is the premise his explanation requir
 [Narrator]
 Alone in his berth, Harlan sits with a result that cuts both ways. Zao's accusation appears lost, lifting a future condemnation from him. It also removes the only witness through whom Earth might understand what he believes he has done for it.
 
+<!-- audience-dialogue-id: audience:dialogue:d5b-harlan-saved -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: Alone, he mourns losing the chance for history to absolve him as a savior. Performance and delivery: Low, sincere narcissistic hurt; the pain sits on ‘never know,’ not on ‘saved.’
 "Now they'll never know who saved them."
@@ -621,6 +655,7 @@ Over the restored image, Zao identifies the thermonuclear geophysical impulse pa
 [Narrator]
 The recording reaches the moment when a door opens behind her.
 
+<!-- audience-dialogue-id: audience:dialogue:e2-zao-goodbye -->
 [Zao]
 [QwenInstruct] Speak English. Dramatic situation: Zao ends a technical record and accepts in one breath that these may be her last words. Performance and delivery: Fast and clear at first; a tiny fracture before ‘goodbye,’ then controlled alarm on ‘at the door.’
 "Just in case: goodbye. Harlan's at the door."
@@ -706,10 +741,12 @@ Okoye strikes Harlan, tethers him to a structural rail, and strips the wrist dev
 [Narrator]
 Harlan is conscious, restrained, and out of moves. What comes out of him is not triumph.
 
+<!-- audience-dialogue-id: audience:dialogue:f4-harlan-answer-earth -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: Restrained and defeated, he accuses the others from a conviction he still considers moral. Performance and delivery: Breath shortened by the struggle; hard on ‘don’t know,’ then cracked rather than grandiose on ‘Earth.’
 "You don't know what they are. You don't get to answer for Earth."
 
+<!-- audience-dialogue-id: audience:dialogue:f4-harlan-time -->
 [Harlan]
 [QwenInstruct] Speak English. Dramatic situation: He exposes the deterrence logic with which he justified murder and collective sacrifice. Performance and delivery: Begin as argument, quicken through ‘bites,’ and end pleading on ‘needed time’; the voice cracks, the conviction does not.
 "If they think we're harmless, they come closer. If they see a species that bites, maybe they wait. We needed time."
@@ -735,6 +772,7 @@ Elin supplies a valid mission-time reference—drastically rewound.
 [Narrator]
 The display reads four, three, two, one, then jumps to a date absurdly far in the future.
 
+<!-- audience-dialogue-id: audience:dialogue:f5-elin-delayed -->
 [Elin]
 [QwenInstruct] Speak English. Dramatic situation: Elin precisely states the limit of her solution so nobody mistakes delay for disarmament. Performance and delivery: Exhausted but exact; cleanly contrast ‘isn’t disarmed’ with ‘isn’t going off here,’ without triumph.
 "It isn't disarmed. It just isn't going off here."
@@ -751,6 +789,7 @@ Her console unfolds the simultaneous spatial relationships of the throat's prime
 [Narrator]
 The greeting will not be a flash or narrow beam. It will be spoken through lights distributed across the Ardor's hull, preserving both the visible medium and the relational form of the lesson.
 
+<!-- audience-dialogue-id: audience:dialogue:f7-sorell-primer-return -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll recognizes the ceremonial weight of finally answering with the structure the Velari taught. Performance and delivery: Low, focused intensity; make ‘primer’ intimate and ‘first time’ disciplined with awe.
 "They wrote the primer. This is the first time they'll hear us read it back."
@@ -767,6 +806,7 @@ Chapter 11.
 [Narrator]
 Voss returns to the bridge and goes to Soréll before he looks at the station.
 
+<!-- audience-dialogue-id: audience:dialogue:g1-voss-sorry -->
 [Voss]
 [QwenInstruct] Speak English. Dramatic situation: Voss owns several wrong decisions before Soréll without trying to justify himself. Performance and delivery: Very low, with a gathering pause before speech; make ‘sorry’ slow and complete, asking for no absolution.
 "I'm sorry."
@@ -804,6 +844,7 @@ Approach. Permission. Meeting.
 [Narrator]
 She turns to the others.
 
+<!-- audience-dialogue-id: audience:dialogue:g2-sorell-someone -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: Soréll verifies an impossible answer before allowing herself to feel awe. Performance and delivery: Professional certainty first, then contained wonder on ‘someone’; share the news, do not celebrate.
 "They're sending someone."
@@ -859,6 +900,7 @@ He includes the discovery, sabotage, murder, delayed warning, intervention, and 
 [Narrator]
 Voss stops.
 
+<!-- audience-dialogue-id: audience:dialogue:g3-voss-time -->
 [Voss]
 [QwenInstruct] Speak English. Dramatic situation: Voss speaks to Zao’s image and lets one sentence hold her warning, the rescue, and the encounter. Performance and delivery: Intimate, broken, and warm; make ‘you’ almost private, with a long fall through ‘in time.’
 "You made it in time."

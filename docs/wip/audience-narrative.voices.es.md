@@ -1,6 +1,6 @@
 # Lúz Tardía — relato TTS para público (español)
 
-Revisión 15 (desde la escaleta maestra). Relato por capítulos; sin frontmatter de producción.
+Revisión 16 (desde la escaleta maestra). Relato por capítulos; sin frontmatter de producción.
 Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Nombre hablado: Sorél; la grafía editorial y la etiqueta siguen como [Sorell]. Diálogo sólo desde citas atribuidas.
 Cast/ref: `docs/wip/qwen3-tts-cast.es.json`.
@@ -9,7 +9,7 @@ Generar: `python scripts/generate-dual-outline-audio.py --lang es --script docs/
 ---
 
 [Narrator]
-[PAUSE 1200] Lúz Tardía. Revisión 15.
+[PAUSE 1200] Lúz Tardía. Revisión 16.
 
 [Narrator]
 Prólogo.
@@ -35,6 +35,7 @@ La segunda multitud observa los mismos hechos y llega a la conclusión opuesta. 
 [Narrator]
 Rylen Harlan contempla durante largo rato a la mitad esperanzada de la plaza.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-harlan-wish -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: Harlan lets genuine regret escape while concealing that he has already chosen to act against the mission. Performance and delivery: Very low, with restrained Buenos Aires cadence; place slight weight on ‘razón,’ without sentimentality.
 "Ojalá tuvieran razón"
@@ -42,6 +43,7 @@ Rylen Harlan contempla durante largo rato a la mitad esperanzada de la plaza.
 [Narrator]
 No afirma que los Velari podrían haber entrado cuando quisieran. No lo sabe. Lo que dice es más acotado y más difícil de descartar.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-harlan-door -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He turns political fear into a conclusion that sounds inevitable. Performance and delivery: Polished and persuasive; stress ‘puerta’ and ‘cuándo atravesarla’ as evidence, not rhetoric.
 "Construyeron una puerta en nuestro sistema antes de que supiéramos que existían. Ahora la puerta nos dice cuándo atravesarla"
@@ -52,6 +54,7 @@ Lian Sorél lleva meses estudiando la secuencia instructiva. Le responde desde e
 [Narrator]
 Elias Voss oye nervios corrientes en Harlan y miedo a actuar en Sorél. Se equivoca con ambos.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-sorell-respect -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél defends caution as ethical rigor, stung that Voss mistook it for fear. Performance and delivery: Expressive and cultivated; contain the hurt until a clean pause between ‘miedo’ and ‘respeto.’
 "Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Eso no es miedo. Es respeto"
@@ -59,6 +62,7 @@ Elias Voss oye nervios corrientes en Harlan y miedo a actuar en Sorél. Se equiv
 [Narrator]
 Zao casi no dice nada. Cuando termina el intercambio, encuentra a Voss a solas y baja la voz.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-zao-not-hope -->
 [Zao]
 [QwenInstruct] Speak Spanish. Dramatic situation: Zao delivers a human diagnosis as dryly as an engineering reading. Performance and delivery: Restrained and conclusive; place a falling stress on ‘esperanza,’ then offer no explanation.
 "Eso no era esperanza"
@@ -66,6 +70,7 @@ Zao casi no dice nada. Cuando termina el intercambio, encuentra a Voss a solas y
 [Narrator]
 Voss le sonríe con el afecto que se reserva para un instrumento en el que se confía, pero al que no se piensa consultar.
 
+<!-- audience-dialogue-id: audience:dialogue:p2-voss-faults -->
 [Voss]
 [QwenInstruct] Speak Spanish. Dramatic situation: Voss means to reassure her and unknowingly dismisses the correct warning. Performance and delivery: Institutional but familiar cadence; a considered pause before ‘todos,’ never condescending.
 "Te ganas la vida encontrando fallas. Eso no convierte a todos en una falla"
@@ -94,6 +99,7 @@ Más abajo, Zao y Elin Rao realizan la inspección posterior a la carga con la t
 [Narrator]
 Voss pide el estado de partida. Elin dice que están listos. Zao pide un minuto más.
 
+<!-- audience-dialogue-id: audience:dialogue:a3-voss-on-time -->
 [Voss]
 [QwenInstruct] Speak Spanish. Dramatic situation: Voss expresses routine trust in Zao and grants the time she asks for. Performance and delivery: Relaxed authority; both instances of ‘vamos a tiempo’ should sound trusting, not impatient.
 "Si Zao dice que vamos a tiempo, vamos a tiempo"
@@ -119,6 +125,7 @@ En el periapsis, el empuje se corta. El peso desaparece mientras la nave gira de
 [Narrator]
 Sorél dice lo que ninguno ha dicho en voz alta.
 
+<!-- audience-dialogue-id: audience:dialogue:a3b-sorell-no-return -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél makes audible the irreversibility everyone already feels. Performance and delivery: Solemn but conversational; pause after ‘regreso’ and fall firmly through ‘no hay vuelta atrás.’
 "La garganta de ida se cierra detrás de nosotros. Hasta la ventana de regreso, no hay vuelta atrás"
@@ -129,6 +136,7 @@ Más tarde, fuera de guardia, la cobertura demorada de las protestas corre sin s
 [Narrator]
 Dara Okoye observa a una manifestante que repite un argumento frente a un cordón de seguridad.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-okoye-aggressive -->
 [Okoye]
 [QwenInstruct] Speak Spanish. Dramatic situation: Okoye reports what she sees with barely perceptible irony. Performance and delivery: Crisp formal Equatoguinean diction; give restrained weight to ‘demasiado agresiva.’
 "Piensan que la misión parece demasiado agresiva"
@@ -136,6 +144,7 @@ Dara Okoye observa a una manifestante que repite un argumento frente a un cordó
 [Narrator]
 Elin estudia la otra pantalla: proa afilada, cilindro largo, el nombre de la nave pintado a lo largo del flanco.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-elin-phallus -->
 [Elin]
 [QwenInstruct] Speak Spanish. Dramatic situation: Elin finds a description that is technically exact and socially awkward. Performance and delivery: Dry, direct, and slightly quicker on ‘falo’; say ‘Ardor Celestial’ as technical data.
 "Vamos a hacer el primer contacto en un falo de noventa metros llamado Ardor Celestial"
@@ -143,6 +152,7 @@ Elin estudia la otra pantalla: proa afilada, cilindro largo, el nombre de la nav
 [Narrator]
 Voss la mira.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-elin-name -->
 [Elin]
 [QwenInstruct] Speak Spanish. Dramatic situation: Elin disowns the absurdity she just identified without breaking deadpan. Performance and delivery: Nearly flat; lightly stress ‘yo’ as a necessary correction.
 "Yo no le puse el nombre"
@@ -153,6 +163,7 @@ Zao intenta no reírse y fracasa.
 [Narrator]
 Sorél sigue trabajando en el saludo.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-greeting -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél catches the joke and turns it back toward the work without killing the camaraderie. Performance and delivery: Cultivated but light; ‘hagamos’ includes the group and ‘menos ambiguo’ returns to the real problem.
 "Hagamos que el saludo sea menos ambiguo"
@@ -160,6 +171,7 @@ Sorél sigue trabajando en el saludo.
 [Narrator]
 La broma abre la verdadera pregunta que hay debajo. Okoye la formula.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-okoye-hello -->
 [Okoye]
 [QwenInstruct] Speak Spanish. Dramatic situation: Okoye’s curiosity opens the question the joke was avoiding. Performance and delivery: Clear and thoughtful; sustain ‘nunca has oído responder’ without dramatizing it.
 "¿Cómo se saluda a algo que nunca has oído responder?"
@@ -170,6 +182,7 @@ Sorél lleva a la pantalla un patrón de entrenamiento: unos pocos puntos de luz
 [Narrator]
 La boca proporcionó ejemplos, no un diccionario. No existe una palabra aislada para saludo. Si se separa la secuencia, no se obtiene un mensaje más corto, sino uno distinto.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-primer -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél distinguishes receiving instruction from having held a conversation. Performance and delivery: Semantic precision without a classroom tone; pause between ‘manual’ and ‘aún no hemos respondido.’
 "Ellos escribieron el manual. Nosotros aún no hemos respondido"
@@ -177,6 +190,7 @@ La boca proporcionó ejemplos, no un diccionario. No existe una palabra aislada 
 [Narrator]
 Observa cómo el patrón se apaga.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-silence -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél states the linguistic principle that will later make Velari silence legible. Performance and delivery: Restrained musicality; stress ‘diciendo algo’ and ‘elección,’ without sounding prophetic.
 "Cuando la boca calla, sigue diciendo algo. El silencio también es una elección"
@@ -184,6 +198,7 @@ Observa cómo el patrón se apaga.
 [Narrator]
 Zao escucha desde el otro extremo del compartimiento.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-zao-ai -->
 [Zao]
 [QwenInstruct] Speak Spanish. Dramatic situation: Zao tests the system’s weak point, not Sorél’s competence. Performance and delivery: Precise and restrained; brief emphasis on ‘IA’ and ‘mal,’ without anxiety.
 "¿Y si la IA lo aprendió mal?"
@@ -191,6 +206,7 @@ Zao escucha desde el otro extremo del compartimiento.
 [Narrator]
 Sorél responde sin proteger su propia pericia.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-sorell-misreading -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél honestly admits the limit her expertise cannot remove. Performance and delivery: Uncomfortable honesty; separate ‘ordenar los patrones’ from ‘convertir la incertidumbre,’ without apologizing.
 "Es posible interpretarlo mal. La IA puede ordenar los patrones, pero no convertir la incertidumbre en conocimiento"
@@ -198,6 +214,7 @@ Sorél responde sin proteger su propia pericia.
 [Narrator]
 Desde la puerta, donde ha observado las protestas en vez de la conversación, Harlan habla.
 
+<!-- audience-dialogue-id: audience:dialogue:a3c-harlan-read-wrong -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: Harlan turns a reasonable question into an insinuation of threat. Performance and delivery: Strategic courtesy at low volume; lightly stress ‘nosotros’ without revealing hostility.
 "¿Y si somos nosotros a quienes interpretan mal?"
@@ -292,6 +309,7 @@ La escotilla superior se abre justo detrás de los puestos del puente. La tripul
 [Narrator]
 La voz de Zao llega por la red inalámbrica interna.
 
+<!-- audience-dialogue-id: audience:dialogue:b2-zao-sabotage -->
 [Zao]
 [QwenInstruct] Speak Spanish. Dramatic situation: Zao begins an urgent, controlled report before an external force severs the channel. Performance and delivery: Fast but exact; drive through ‘he descubierto’ and ‘intento grave’ into an abrupt external cutoff.
 "He descubierto un intento grave de sabotear la misión—"
@@ -362,6 +380,7 @@ Capítulo 6.
 [Narrator]
 [PAUSE 1200] Asesinato
 
+<!-- audience-dialogue-id: audience:dialogue:c1-harlan-recipient -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: Harlan demands the only fact that can still threaten his plan. Performance and delivery: Contained threat; stress ‘a quién’ and cut sharply through ‘eso.’
 "¿A quién le enviaste eso?"
@@ -375,6 +394,7 @@ Harlan examina el resumen de emisión. Confirmar un destino exige convertir los 
 [Narrator]
 En cambio, razona a partir de los mismos hechos inmediatos que consideró Zao.
 
+<!-- audience-dialogue-id: audience:dialogue:c2-harlan-earth -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He reasons aloud, turning incomplete facts into the mistaken certainty that reassures him. Performance and delivery: Technical inferential cadence; calm arrives only on ‘ya estemos allí.’
 "Próxima está detrás de Júpiter. La Tierra no se va a enterar hasta que ya estemos allí"
@@ -442,6 +462,7 @@ Voss envía a Harlan y a Okoye a popa para determinar qué ocurrió.
 [Narrator]
 Encuentran a Sorél junto a Zao. Harlan convierte la escena en un veredicto antes de que Okoye pueda hablar.
 
+<!-- audience-dialogue-id: audience:dialogue:c7-harlan-accuse -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He manufactures outrage to turn the sight of Sorél with the body into an instant verdict. Performance and delivery: Theatrical but credible accusation; rise through ‘cómo pudiste’ and compress ‘por qué’ into a verdict.
 "¿Cómo pudiste? ¿Por qué?"
@@ -461,6 +482,7 @@ La cámara restaurada muestra a Sorél sosteniendo el cadáver. Viajó sola dura
 [Narrator]
 Durante el interrogatorio, Harlan añade una mentira de la medida exacta.
 
+<!-- audience-dialogue-id: audience:dialogue:c9-harlan-lie -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He inserts a small lie into a plausible memory to activate Voss’s existing bias. Performance and delivery: Polished and calm; a reflective pause before ‘pensé,’ as if trying to be fair to Sorél.
 "Antes del lanzamiento me preguntó qué haría falta para demorar el cruce. Pensé que era cautela profesional"
@@ -472,10 +494,16 @@ Voss recuerda a Sorél bajo la cobertura de las protestas diciendo eso no es mie
 La custodia está justificada. El asesinato no está demostrado. Elin sabe que son dos frases distintas. No puede olvidar la desolación absoluta de Sorél mientras sostenía a Zao ni la rapidez con que Harlan convirtió la incertidumbre en culpa.
 
 [Narrator]
-La nave se estabiliza en su trayecto del otro lado: unos diecisiete coma cuatro millones de kilómetros hasta el punto de encuentro, cerca de veintitrés horas y media de aceleración y frenado bajo un g.
+Una vez despejada la boca lejana, la nave se estabiliza en su trayecto del otro lado y el empuje devuelve el peso a las cubiertas: unos diecisiete coma cuatro millones de kilómetros hasta el punto de encuentro, cerca de veintitrés horas y media de aceleración y frenado bajo un g.
 
 [Narrator]
-Sorél pasa ese tiempo sometida a interrogatorios en vez de preparar el saludo. Voss planifica en silencio cómo acercarse a una estación alienígena sin su xenolingüista. Elin y Okoye trabajan hasta que el cansancio desdibuja las pantallas, y después siguen trabajando.
+Durante la primera mitad, Sorél permanece sometida a interrogatorios en vez de preparar el saludo. Voss planifica en silencio cómo acercarse a una estación alienígena sin su xenolingüista. Elin y Okoye trabajan hasta que el cansancio desdibuja las pantallas, y después siguen trabajando.
+
+[Narrator]
+A mitad del trayecto, el empuje se corta y el peso desaparece por tercera vez. La tripulación asegura cuerpos y trabajo mientras la Ardor rota ciento ochenta grados desde la orientación de aceleración hasta la de frenado. Horas de investigación se vuelven visibles en una única maniobra.
+
+[Narrator]
+El motor vuelve a empujar hacia el mismo piso. Regresa un g y comienza la desaceleración hacia la estación Velari.
 
 [Narrator]
 Capítulo 8.
@@ -489,6 +517,7 @@ Voss ordena una auditoría completa: la falla de comunicaciones, el último trab
 [Narrator]
 Inmovilizada a pocos metros de él, Sorél no espera a que le pregunten.
 
+<!-- audience-dialogue-id: audience:dialogue:d1-sorell-first-explanation -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: From custody, Sorél forces the bridge to admit that a coherent explanation can still be false. Performance and delivery: Cultivated, direct Peninsular delivery; mark ‘estáis’ and ‘os advertí’ without shrillness or pleading.
 "Estáis tratando la primera explicación como si fuera la única. Eso es exactamente lo que os advertí que no hicierais ahí fuera"
@@ -502,6 +531,7 @@ El dosímetro registró un breve exceso de neutrones rápidos en la zona combina
 [Narrator]
 Harlan atribuye ambos hechos a una sola causa.
 
+<!-- audience-dialogue-id: audience:dialogue:d2-harlan-fuel -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He sells a false hypothesis as a complete, inevitable chain of physics. Performance and delivery: Restrained voseo and instructional confidence; accumulate pressure through ‘no llegamos a la ventana.’
 "Si perdés helio-3, la mezcla queda rica en deuterio. Más neutrones de reacciones secundarias, más combustible para mantener el empuje. Si la pérdida continúa, no llegamos a la ventana"
@@ -548,6 +578,7 @@ No apunta a la Tierra ni a Próxima, ni a ninguna baliza o estación del catálo
 [Narrator]
 Todos oyeron el comienzo del informe de Zao antes de la estática. Harlan puede ofrecer la explicación evidente sin admitir que él mismo vio la transmisión.
 
+<!-- audience-dialogue-id: audience:dialogue:d5-harlan-missed -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He offers an apparently protective explanation that diminishes Zao’s precision and preserves his theory. Performance and delivery: Warm on the surface; explain the aiming patiently and leave ‘falló’ as the inevitable conclusion.
 "Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba fuera de servicio, así que introdujo la puntería manualmente. Falló"
@@ -555,10 +586,12 @@ Todos oyeron el comienzo del informe de Zao antes de la estática. Harlan puede 
 [Narrator]
 Elin no levanta la vista.
 
+<!-- audience-dialogue-id: audience:dialogue:d5-elin-no-miss -->
 [Elin]
 [QwenInstruct] Speak Spanish. Dramatic situation: Elin rejects the one premise that contradicts everything she knows about Zao. Performance and delivery: Two words as a diagnosis; stress ‘no’ and close firmly on ‘falló.’
 "Zao no falló"
 
+<!-- audience-dialogue-id: audience:dialogue:d5-harlan-frightened -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He uses feigned compassion to explain Zao’s supposed mistake. Performance and delivery: Controlled false tenderness; do not load ‘alguien,’ as if merely protecting her memory.
 "Estaba asustada. Sabía que alguien se acercaba"
@@ -572,6 +605,7 @@ Elin no puede refutarlo. Lo que le molesta es la premisa que exige su explicaci�
 [Narrator]
 A solas en su camarote, Harlan se enfrenta a un resultado que corta en ambas direcciones. La acusación de Zao parece perdida y lo libera de una condena futura. También elimina a la única testigo a través de la cual la Tierra podría comprender lo que él cree haber hecho por ella.
 
+<!-- audience-dialogue-id: audience:dialogue:d5b-harlan-saved -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: Alone, he mourns losing the chance for history to absolve him as a savior. Performance and delivery: Private lament without triumph; sustain ‘nunca sabrán’ and let ‘quién los salvó’ nearly run out of breath.
 "Ahora nunca sabrán quién los salvó"
@@ -621,6 +655,7 @@ Sobre la imagen restaurada, Zao identifica el paquete de impulso geofísico term
 [Narrator]
 La grabación llega al momento en que una puerta se abre detrás de ella.
 
+<!-- audience-dialogue-id: audience:dialogue:e2-zao-goodbye -->
 [Zao]
 [QwenInstruct] Speak Spanish. Dramatic situation: Zao ends a technical record and accepts in one breath that these may be her last words. Performance and delivery: Technical control barely cracking on ‘adiós’; ‘Harlan está en la puerta’ must be urgent, not melodramatic.
 "Por si acaso: adiós. Harlan está en la puerta"
@@ -706,10 +741,12 @@ Okoye golpea a Harlan, lo amarra con una correa de restricción a un riel estruc
 [Narrator]
 Harlan está consciente, inmovilizado y sin opciones. Lo que sale de él no es triunfo.
 
+<!-- audience-dialogue-id: audience:dialogue:f4-harlan-answer-earth -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: Restrained and defeated, he accuses the others from a conviction he still considers moral. Performance and delivery: Breathless but intelligible; each negative is an accusation, and ‘Tierra’ carries the real fear.
 "No saben qué son. No tienen derecho a responder por la Tierra"
 
+<!-- audience-dialogue-id: audience:dialogue:f4-harlan-time -->
 [Harlan]
 [QwenInstruct] Speak Spanish. Dramatic situation: He exposes the deterrence logic with which he justified murder and collective sacrifice. Performance and delivery: Short phrases between breaths; ‘muerde’ should sound deliberate and ‘necesitábamos tiempo’ desperately human.
 "Si creen que somos inofensivos, se acercarán. Si ven una especie que muerde, quizá esperen. Necesitábamos tiempo"
@@ -735,6 +772,7 @@ Elin le proporciona una referencia válida de tiempo de misión, atrasada de man
 [Narrator]
 La pantalla muestra cuatro, tres, dos, uno, y después salta a una fecha absurdamente lejana.
 
+<!-- audience-dialogue-id: audience:dialogue:f5-elin-delayed -->
 [Elin]
 [QwenInstruct] Speak Spanish. Dramatic situation: Elin precisely states the limit of her solution so nobody mistakes delay for disarmament. Performance and delivery: Conclusive technical mode; pause after ‘desactivada,’ allowing restrained relief only on ‘aquí.’
 "No está desactivada. Simplemente no va a explotar aquí"
@@ -751,6 +789,7 @@ Su consola despliega las relaciones espaciales simultáneas del manual de la gar
 [Narrator]
 El saludo no será un destello ni un haz estrecho. Se expresará mediante luces distribuidas por el casco de la Ardor, conservando tanto el medio visible como la forma relacional de la lección.
 
+<!-- audience-dialogue-id: audience:dialogue:f7-sorell-primer-return -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél recognizes the ceremonial weight of finally answering with the structure the Velari taught. Performance and delivery: Warm and ceremonial; pause after ‘manual’ and build gently toward ‘responder con él.’
 "Ellos escribieron el manual. Es la primera vez que nos oirán responder con él"
@@ -767,6 +806,7 @@ Capítulo 11.
 [Narrator]
 Voss regresa al puente y se acerca a Sorél antes de mirar la estación.
 
+<!-- audience-dialogue-id: audience:dialogue:g1-voss-sorry -->
 [Voss]
 [QwenInstruct] Speak Spanish. Dramatic situation: Voss owns several wrong decisions before Sorél without trying to justify himself. Performance and delivery: Controlled baritone losing just a little firmness; ‘lo siento’ carries responsibility, not formality.
 "Lo siento"
@@ -804,6 +844,7 @@ Aproximación. Permiso. Encuentro.
 [Narrator]
 Se vuelve hacia los demás.
 
+<!-- audience-dialogue-id: audience:dialogue:g2-sorell-someone -->
 [Sorell]
 [QwenInstruct] Speak Spanish. Dramatic situation: Sorél verifies an impossible answer before allowing herself to feel awe. Performance and delivery: Begin as a confirmed reading and open the voice slightly on ‘alguien’; almost a whisper.
 "Están enviando a alguien"
@@ -859,6 +900,7 @@ Incluye el descubrimiento, el sabotaje, el asesinato, la advertencia demorada, l
 [Narrator]
 Voss se detiene.
 
+<!-- audience-dialogue-id: audience:dialogue:g3-voss-time -->
 [Voss]
 [QwenInstruct] Speak Spanish. Dramatic situation: Voss speaks to Zao’s image and lets one sentence hold her warning, the rescue, and the encounter. Performance and delivery: Contained grief; stress ‘llegaste’ as if Zao were present and leave ‘a tiempo’ open to several meanings.
 "Llegaste a tiempo"

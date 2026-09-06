@@ -179,9 +179,24 @@ function parseGeneratedVoices(markdown, lang) {
 	const lines = markdown.split(/\r?\n/);
 	const dialogues = [];
 	const actorTag = /^\[(Zao|Voss|Harlan|Elin|Sorell|Okoye)\]$/;
+	const idComment = /^<!--\s*audience-dialogue-id:\s*([^\s]+)\s*-->$/;
 	for (let index = 0; index < lines.length; index += 1) {
 		const tag = lines[index].match(actorTag);
 		if (!tag) continue;
+		let dialogueId = null;
+		for (let look = index - 1; look >= 0; look -= 1) {
+			const prev = lines[look].trim();
+			if (!prev) continue;
+			const idMatch = prev.match(idComment);
+			if (idMatch) {
+				dialogueId = idMatch[1];
+				break;
+			}
+			break;
+		}
+		if (!dialogueId) {
+			fail(`${lang} voices: missing audience-dialogue-id before [${tag[1]}]`);
+		}
 		const instruct = lines[index + 1] ?? '';
 		const quote = lines[index + 2] ?? '';
 		if (
@@ -192,7 +207,7 @@ function parseGeneratedVoices(markdown, lang) {
 			fail(`${lang} voices: missing ID-derived performance instruction after [${tag[1]}]`);
 		}
 		if (!quote.trim()) fail(`${lang} voices: missing dialogue text after [${tag[1]}]`);
-		dialogues.push({ speaker: tag[1], instruct, quote });
+		dialogues.push({ id: dialogueId, speaker: tag[1], instruct, quote });
 	}
 	return dialogues;
 }
@@ -310,6 +325,9 @@ for (const [lang, languageCode, parsed, voiceFile] of [
 	for (let index = 0; index < Math.min(generated.length, parsed.dialogues.length); index += 1) {
 		const source = parsed.dialogues[index];
 		const voice = generated[index];
+		if (voice.id !== source.id) {
+			fail(`${lang} voices: dialogue id mismatch at index ${index}: ${voice.id} != ${source.id}`);
+		}
 		if (voice.speaker !== ttsLabels[source.speaker]) {
 			fail(`${lang} voices: speaker mismatch at ${source.id}`);
 		}

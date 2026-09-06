@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-06 — Tomas estables por audience-dialogue-id
+
+- Overlays y `replacements.json` se keyean por `stableDialogueId`; stale =
+  `contentHash` + speaker + idioma + engine (no índice ni hash del WAV Qwen).
+- Voices MD emiten `<!-- audience-dialogue-id -->`; el dual anota el id en
+  `index.json`. Scripts de backfill y migración para el dual actual.
+- Accept persiste entre regeneraciones del dual con los mismos diálogos.
+
 ## 2026-09-06 — Studio local de imitación
 
 - Catálogo lógico `data/production/audio/audio-outputs.json` (sólo audience-es/en).

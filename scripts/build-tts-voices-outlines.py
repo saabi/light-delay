@@ -721,9 +721,13 @@ def build_voices(
             quote = apply_pronunciations(quote, lang=lang)
             spoken = quote.strip().strip("«»\"“”").strip()
             spoken = f'"{spoken}"'
-            out.append(
-                f"[{speaker}]\n[QwenInstruct] {instruct}\n{spoken}\n"
-            )
+            if source == "audience" and dialogue_id:
+                out.append(
+                    f"<!-- audience-dialogue-id: {dialogue_id} -->\n"
+                    f"[{speaker}]\n[QwenInstruct] {instruct}\n{spoken}\n"
+                )
+            else:
+                out.append(f"[{speaker}]\n[QwenInstruct] {instruct}\n{spoken}\n")
             continue
 
         if kind == "list":
