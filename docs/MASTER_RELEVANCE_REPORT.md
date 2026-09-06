@@ -8,7 +8,7 @@ Los elementos inciertos se conservan. Ningún candidato puede borrarse hasta cer
 
 Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `replacement_derivatives_approved` (open), `no_active_dependants` (open).
 
-## Vigente o compatible (54)
+## Vigente o compatible (68)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -45,7 +45,9 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | script | `script:light-delay-master-narrative` | explicit | retain |
 | static_file | `AGENTS.md` | explicit | retain |
 | static_file | `CHANGELOG.md` | explicit | retain |
+| static_file | `data/production/audio/audience-dialogue-performance.json` | explicit | retain |
 | static_file | `data/README.md` | explicit | retain |
+| static_file | `data/schemas/dialogue-performance.schema.json` | explicit | retain |
 | static_file | `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md` | explicit | retain |
 | static_file | `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` | explicit | retain |
 | static_file | `docs/ESCALETA.md` | explicit | retain |
@@ -55,10 +57,22 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/MASTER_RELEVANCE_REPORT.md` | explicit | retain |
 | static_file | `docs/PENDING_AUTHOR_NOTES.md` | explicit | retain |
 | static_file | `docs/PROJECT_STATUS.md` | explicit | retain |
+| static_file | `docs/TTS_VOICE_PIPELINE.en.md` | explicit | retain |
+| static_file | `docs/TTS_VOICE_PIPELINE.es.md` | explicit | retain |
+| static_file | `docs/wip/audience-narrative.en.md` | explicit | retain |
+| static_file | `docs/wip/audience-narrative.es.md` | explicit | retain |
+| static_file | `docs/wip/audience-narrative.voices.en.md` | explicit | retain |
+| static_file | `docs/wip/audience-narrative.voices.es.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.en.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.es.md` | explicit | retain |
+| static_file | `docs/wip/outiline-for-kokoro-tts.es.md` | explicit | retain |
+| static_file | `docs/wip/outiline-for-kokoro-tts.md` | explicit | retain |
+| static_file | `docs/wip/outiline-for-kokoro-tts.voices.es.md` | explicit | retain |
+| static_file | `docs/wip/outiline-for-kokoro-tts.voices.md` | explicit | retain |
 | static_file | `docs/WORKFLOW.md` | explicit | retain |
 | static_file | `README.md` | explicit | retain |
+| static_file | `scripts/build-tts-voices-outlines.py` | explicit | retain |
+| static_file | `scripts/check-audience-narrative.mjs` | explicit | retain |
 | static_file | `TODO.md` | explicit | retain |
 | voice_profile | `voice:harlan-es` | explicit | retain |
 | voice_profile | `voice:okoye` | explicit | retain |
@@ -67,7 +81,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (107)
+## Revisión requerida (97)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -163,18 +177,8 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/technical/PRODUCTION_ROADMAP.md` | default-review | retain |
 | static_file | `docs/technical/PROXIMA_STATION.md` | default-review | retain |
 | static_file | `docs/TITLE_AND_CREDITS.md` | default-review | retain |
-| static_file | `docs/TTS_VOICE_PIPELINE.en.md` | default-review | retain |
-| static_file | `docs/TTS_VOICE_PIPELINE.es.md` | default-review | retain |
 | static_file | `docs/wip/additonal-characters-for-general-outline.md` | default-review | retain |
-| static_file | `docs/wip/audience-narrative.en.md` | default-review | retain |
-| static_file | `docs/wip/audience-narrative.es.md` | default-review | retain |
-| static_file | `docs/wip/audience-narrative.voices.en.md` | default-review | retain |
-| static_file | `docs/wip/audience-narrative.voices.es.md` | default-review | retain |
 | static_file | `docs/wip/observations-and-ideas-for-festival-cut.md` | default-review | retain |
-| static_file | `docs/wip/outiline-for-kokoro-tts.es.md` | default-review | retain |
-| static_file | `docs/wip/outiline-for-kokoro-tts.md` | default-review | retain |
-| static_file | `docs/wip/outiline-for-kokoro-tts.voices.es.md` | default-review | retain |
-| static_file | `docs/wip/outiline-for-kokoro-tts.voices.md` | default-review | retain |
 | static_file | `docs/wip/velari.md` | default-review | retain |
 | voice_profile | `voice:earth-protesters-es` | default-review | retain |
 | voice_profile | `voice:proxima-technician-es` | default-review | retain |

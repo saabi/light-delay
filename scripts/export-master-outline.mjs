@@ -47,27 +47,47 @@ function renderBlocks(blocks, language) {
 }
 
 function render(file, language) {
-	const title = language === 'es'
-		? 'Light Delay — Escaleta narrativa general'
-		: 'Light Delay — General Narrative Outline';
-	const generated = language === 'es'
-		? '<!-- GENERADO desde data/outlines/light-delay-master-narrative.json. NO EDITAR. -->'
-		: '<!-- GENERATED from data/outlines/light-delay-master-narrative.json. DO NOT EDIT. -->';
-	const revision = file.outline.revision ?? file.outline.provenance?.importedFrom?.[0]?.revision ?? file.outline.version;
-	const revisionLine = language === 'es'
-		? `Borrador de trabajo, español, revisión ${revision}.`
-		: `Working draft, English, revision ${revision}.`;
-	const authorityLine = language === 'es'
-		? '**Estado editorial:** fuente de verdad narrativa vigente; continúa WIP.'
-		: '**Editorial status:** current narrative source of truth; still WIP.';
+	const title =
+		language === 'es'
+			? 'Lúz Tardía — Escaleta narrativa general'
+			: 'Light Delay — General Narrative Outline';
+	const generated =
+		language === 'es'
+			? '<!-- GENERADO desde data/outlines/light-delay-master-narrative.json. NO EDITAR. -->'
+			: '<!-- GENERATED from data/outlines/light-delay-master-narrative.json. DO NOT EDIT. -->';
+	const revision =
+		file.outline.revision ??
+		file.outline.provenance?.importedFrom?.[0]?.revision ??
+		file.outline.version;
+	const revisionLine =
+		language === 'es'
+			? `Borrador de trabajo, español, revisión ${revision}.`
+			: `Working draft, English, revision ${revision}.`;
+	const authorityLine =
+		language === 'es'
+			? '**Estado editorial:** fuente de verdad narrativa vigente; continúa WIP.'
+			: '**Editorial status:** current narrative source of truth; still WIP.';
 	const lines = [generated, '', `# ${title}`, '', revisionLine, '', authorityLine, ''];
-	const before = (file.framing ?? []).filter((section) => section.placement === 'before_story').sort((a, b) => a.order - b.order);
-	const after = (file.framing ?? []).filter((section) => section.placement === 'after_story').sort((a, b) => a.order - b.order);
+	const before = (file.framing ?? [])
+		.filter((section) => section.placement === 'before_story')
+		.sort((a, b) => a.order - b.order);
+	const after = (file.framing ?? [])
+		.filter((section) => section.placement === 'after_story')
+		.sort((a, b) => a.order - b.order);
 	for (const section of before) {
-		lines.push(`## ${value(section.title, language)}`, '', renderBlocks(section.blocks, language), '', '---', '');
+		lines.push(
+			`## ${value(section.title, language)}`,
+			'',
+			renderBlocks(section.blocks, language),
+			'',
+			'---',
+			''
+		);
 	}
 	const stepsBySection = new Map();
-	for (const step of (file.steps ?? []).filter((item) => item.level === 'story').sort((a, b) => a.order - b.order)) {
+	for (const step of (file.steps ?? [])
+		.filter((item) => item.level === 'story')
+		.sort((a, b) => a.order - b.order)) {
 		const list = stepsBySection.get(step.sectionId) ?? [];
 		list.push(step);
 		stepsBySection.set(step.sectionId, list);
@@ -75,19 +95,36 @@ function render(file, language) {
 	for (const section of [...(file.storySections ?? [])].sort((a, b) => a.order - b.order)) {
 		lines.push(`## ${value(section.title, language)}`, '');
 		for (const step of stepsBySection.get(section.id) ?? []) {
-			lines.push(`### ${value(step.title, language)}`, '', renderBlocks(step.body ?? [], language), '');
+			lines.push(
+				`### ${value(step.title, language)}`,
+				'',
+				renderBlocks(step.body ?? [], language),
+				''
+			);
 		}
 		lines.push('---', '');
 	}
 	for (const section of after) {
-		lines.push(`## ${value(section.title, language)}`, '', renderBlocks(section.blocks, language), '', '---', '');
+		lines.push(
+			`## ${value(section.title, language)}`,
+			'',
+			renderBlocks(section.blocks, language),
+			'',
+			'---',
+			''
+		);
 	}
-	return `${lines.join('\n').replace(/\n{4,}/g, '\n\n\n').trim()}\n`;
+	return `${lines
+		.join('\n')
+		.replace(/\n{4,}/g, '\n\n\n')
+		.trim()}\n`;
 }
 
 const file = JSON.parse(readFileSync(INPUT, 'utf8'));
 for (const language of LANGUAGES) {
-	const declaration = file.outline.exports?.find((item) => item.language === language && item.format === 'markdown');
+	const declaration = file.outline.exports?.find(
+		(item) => item.language === language && item.format === 'markdown'
+	);
 	if (!declaration) throw new Error(`Missing ${language} Markdown export declaration`);
 	const output = join(ROOT, declaration.path);
 	const expected = render(file, language);

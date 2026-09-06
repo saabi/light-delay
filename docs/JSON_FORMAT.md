@@ -36,6 +36,9 @@ data/
 |-- factions.json
 |-- assets.json
 |-- voice-profiles.json
+|-- production/
+|   `-- audio/
+|       `-- audience-dialogue-performance.json
 |-- narrative-functions.json
 |-- entity-variants.json
 `-- comparison-taxonomy.json
@@ -798,6 +801,7 @@ export interface VoiceProfileVariant {
   model?: string;
   providerVoiceId?: string;
   sampleAssetIds?: AssetId[];
+  pronunciationMap?: Record<string, string>;
   pronunciationDictionaryAssetId?: AssetId;
   settings?: Record<string, string | number | boolean>;
 }
@@ -809,6 +813,53 @@ sintaxis, registro y tratamiento para escribir diálogo. `locale` describe esa v
 BCP 47; no autoriza caricatura fonética. La misma variante agrupa proveedor, modelo, muestras y
 ajustes propios del idioma. La ausencia de `sampleAssetIds` significa que la voz está descrita
 pero todavía no posee una muestra aprobada.
+
+`pronunciationMap` transforma una grafía editorial canónica en una forma exclusivamente
+pronunciable para el idioma de esa variante. Por ejemplo, `Sorell` se conserva en la narrativa y
+se compila como `Soréll` en inglés o `Sorél` en español. No debe utilizarse para corregir la
+ortografía localizada real: el topónimo español se escribe `Próxima` desde la fuente.
+
+### Dirección de interpretación del relato para público
+
+`production/audio/audience-dialogue-performance.json` separa la dirección de
+interpretación del texto narrativo sin volver a depender de su traducción ni de
+su posición. Cada cita audible en `docs/wip/audience-narrative.{es,en}.md` lleva
+el mismo comentario `audience-dialogue-id`, que debe resolver una única entrada:
+
+```ts
+export interface DialoguePerformanceFile {
+  schemaVersion: string;
+  narrativeId: string; // audience:…
+  sourceOutlineId: string; // outline:…; autoridad de revisión
+  entries: DialoguePerformanceEntry[];
+}
+
+export interface DialoguePerformanceEntry {
+  id: string; // audience:dialogue:…; estable entre idiomas
+  sourceStepId: string; // master:story-…
+  speakerId: CharacterId;
+  intent: LocalizedString;
+  delivery: {
+    en: LocalizedString;
+    es: LocalizedString;
+  };
+}
+```
+
+`intent` describe la misma función dramática en ambos idiomas. Cada miembro de
+`delivery` describe cómo realizar esa lengua concreta; el valor sigue siendo
+bilingüe para que también sea legible por editores humanos. El builder TTS toma
+la versión inglesa de la intención y de la indicación específica porque Qwen
+interpreta esas instrucciones con mayor fiabilidad en inglés. El texto hablado
+continúa viniendo exclusivamente del relato ES o EN.
+
+`narrativeId` identifica establemente la adaptación y no contiene un número de revisión.
+La revisión se lee siempre desde el outline indicado por `sourceOutlineId`; cualquier etiqueta
+visible en Markdown es una copia verificada, no otra autoridad editorial.
+
+El esquema es estricto y no admite propiedades extra. Además de la validación
+JSON, `npm run tts:audience:check` exige paridad de estructura, IDs y hablantes,
+referencias válidas al master y derivados TTS actualizados.
 
 ## Locations, objects, vehicles and factions
 

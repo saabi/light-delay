@@ -172,6 +172,32 @@
       ]
     },
     {
+      "id": "lifecycle:master-audio-derivatives",
+      "status": "active",
+      "relevance": "compatible",
+      "disposition": "retain",
+      "reason": {
+        "es": "Relatos y guiones TTS bilingües derivados del master, con un contrato reproducible de dirección de voces; no sustituyen la autoridad narrativa.",
+        "en": "Bilingual stories and TTS scripts derived from the master, with a reproducible voice-direction contract; they do not replace narrative authority."
+      },
+      "refs": [
+        { "kind": "static_file", "id": "data/production/audio/audience-dialogue-performance.json" },
+        { "kind": "static_file", "id": "data/schemas/dialogue-performance.schema.json" },
+        { "kind": "static_file", "id": "docs/TTS_VOICE_PIPELINE.es.md" },
+        { "kind": "static_file", "id": "docs/TTS_VOICE_PIPELINE.en.md" },
+        { "kind": "static_file", "id": "docs/wip/audience-narrative.es.md" },
+        { "kind": "static_file", "id": "docs/wip/audience-narrative.en.md" },
+        { "kind": "static_file", "id": "docs/wip/audience-narrative.voices.es.md" },
+        { "kind": "static_file", "id": "docs/wip/audience-narrative.voices.en.md" },
+        { "kind": "static_file", "id": "docs/wip/outiline-for-kokoro-tts.es.md" },
+        { "kind": "static_file", "id": "docs/wip/outiline-for-kokoro-tts.md" },
+        { "kind": "static_file", "id": "docs/wip/outiline-for-kokoro-tts.voices.es.md" },
+        { "kind": "static_file", "id": "docs/wip/outiline-for-kokoro-tts.voices.md" },
+        { "kind": "static_file", "id": "scripts/build-tts-voices-outlines.py" },
+        { "kind": "static_file", "id": "scripts/check-audience-narrative.mjs" }
+      ]
+    },
+    {
       "id": "lifecycle:master-compatible-support",
       "status": "active",
       "relevance": "compatible",

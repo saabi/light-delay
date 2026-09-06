@@ -11,6 +11,7 @@ Datos estructurados del proyecto. La autoridad narrativa WIP vive en `outlines/l
 | `characters.json` / `locations.json` / `objects.json` / `vehicles.json` / `factions.json` | Entidades |
 | `assets.json` | Rutas públicas `/assets/...` para binarios en `static/assets/` |
 | `voice-profiles.json` | Timbre común y perfiles ES/EN de formación, prosodia, estilo, proveedor y muestras de voz |
+| `production/audio/audience-dialogue-performance.json` | Intención dramática e indicaciones EN/ES por ID estable; referencia al outline maestro que aporta la revisión |
 | `documents.json` | Cinco documentos prose ES/EN extraídos, canon estructurado aún como stub y tres referencias históricas/editoriales en revisión |
 | `narrative-functions.json` / `entity-variants.json` | Funciones dramáticas compartidas y perfiles específicos por guion |
 | `comparison-taxonomy.json` | Dimensiones de canon y eventos principales comparables entre scripts |

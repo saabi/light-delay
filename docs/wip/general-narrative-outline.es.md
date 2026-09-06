@@ -1,8 +1,8 @@
 <!-- GENERADO desde data/outlines/light-delay-master-narrative.json. NO EDITAR. -->
 
-# Light Delay — Escaleta narrativa general
+# Lúz Tardía — Escaleta narrativa general
 
-Borrador de trabajo, español, revisión 14.
+Borrador de trabajo, español, revisión 15.
 
 **Estado editorial:** fuente de verdad narrativa vigente; continúa WIP.
 
@@ -70,15 +70,15 @@ La película es la discusión entre esas interpretaciones.
 
 ## Ambientación
 
-### Estación Proxima
+### Estación Próxima
 
-Proxima es una estación de investigación de Júpiter ubicada en L1 Sol–Júpiter, con una masa aproximada de 217.000 toneladas.
+Próxima es una estación de investigación de Júpiter ubicada en L1 Sol–Júpiter, con una masa aproximada de 217.000 toneladas.
 
-La Ardor y su tripulación de seis personas pertenecen a la misión de investigación de Proxima. No son diplomáticos ni un equipo construido expresamente para el contacto. Son la nave y las personas que ya se encuentran lo bastante cerca como para cumplir el cronograma.
+La Ardor y su tripulación de seis personas pertenecen a la misión de investigación de Próxima. No son diplomáticos ni un equipo construido expresamente para el contacto. Son la nave y las personas que ya se encuentran lo bastante cerca como para cumplir el cronograma.
 
-La boca fue descubierta varios meses antes de la partida, lo que permitió que Sorell viajara desde la Tierra hasta Proxima y comenzara a estudiar su secuencia de instrucciones. Sin embargo, el cronograma exacto de la apertura completa llega apenas unas 36 horas antes de que la Ardor deba partir. Es tiempo suficiente para preparar la nave local, pero no para traer físicamente desde la Tierra a un equipo diplomático o una tripulación de reemplazo.
+La boca fue descubierta varios meses antes de la partida, lo que permitió que Sorell viajara desde la Tierra hasta Próxima y comenzara a estudiar su secuencia de instrucciones. Sin embargo, el cronograma exacto de la apertura completa llega apenas unas 36 horas antes de que la Ardor deba partir. Es tiempo suficiente para preparar la nave local, pero no para traer físicamente desde la Tierra a un equipo diplomático o una tripulación de reemplazo.
 
-Como segundo al mando de Proxima, Harlan tiene autoridad legítima sobre los depósitos peligrosos, el movimiento de carga y la preparación final de la nave. Durante el período apresurado de carga, después de la certificación final de masa de carga de la Ardor, transfiere un dispositivo experimental desde los depósitos de Proxima sin agregarlo al manifiesto de la nave. Los registros de la estación podrían llegar a exponer la transferencia, pero él espera que todos a bordo de la Ardor mueran antes de que esos registros puedan importar.
+Como segundo al mando de Próxima, Harlan tiene autoridad legítima sobre los depósitos peligrosos, el movimiento de carga y la preparación final de la nave. Durante el período apresurado de carga, después de la certificación final de masa de carga de la Ardor, transfiere un dispositivo experimental desde los depósitos de Próxima sin agregarlo al manifiesto de la nave. Los registros de la estación podrían llegar a exponer la transferencia, pero él espera que todos a bordo de la Ardor mueran antes de que esos registros puedan importar.
 
 ### El paquete de impulso geofísico
 
@@ -138,7 +138,7 @@ Con los troncales principales de datos desconectados, el controlador local de la
 
 ## Física y tiempos confirmados
 
-El tramo local desde Proxima en L1 hasta la boca de Júpiter en L2 dura 57 h 48 min: aproximadamente 28 h 54 min acelerando hacia el periapsis de Júpiter y aproximadamente 28 h 54 min desacelerando hacia L2.
+El tramo local desde Próxima en L1 hasta la boca de Júpiter en L2 dura 57 h 48 min: aproximadamente 28 h 54 min acelerando hacia el periapsis de Júpiter y aproximadamente 28 h 54 min desacelerando hacia L2.
 
 El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 17,4 millones de km. Un perfil de aceleración–desaceleración a 1 g toma aproximadamente 23 h 25 min.
 
@@ -178,7 +178,7 @@ Zao — Ingeniera. Rigurosa, comprueba habitualmente el trabajo dos veces y perc
 
 Elin Rao — «Elin» — Ingeniera de sistemas y compañera de trabajo más cercana de Zao. Se convierte en la investigadora después de la muerte de Zao. Su conocimiento de los hábitos de Zao es esencial para reconocer la maniobra de distracción de Harlan y actuar a partir de la advertencia. Su prosodia parte del sur de India; formó su inglés tecnológico en Bengaluru y su español profesional en Medellín.
 
-Harlan — Segundo al mando de Proxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Sorell e intenta preservar la detonación. Su prosodia es británica; formó su inglés de servicio naval en Portsmouth y su español rioplatense en Buenos Aires.
+Harlan — Segundo al mando de Próxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Sorell e intenta preservar la detonación. Su prosodia es británica; formó su inglés de servicio naval en Portsmouth y su español rioplatense en Buenos Aires.
 
 Voss — Capitán. Es capaz, pero confía demasiado en su habilidad para interpretar a su gente. Interpreta mal a Harlan, interpreta mal a Sorell, descarta la inquietud temprana de Zao y debe enfrentar el costo humano de esos errores. Su prosodia es germánica o nórdica; formó su inglés institucional en Toronto y su español formal en Lima.
 
@@ -210,13 +210,13 @@ Su formulación más clara es:
 
 ---
 
-## Prólogo — Proxima observa la Tierra
+## Prólogo — Próxima observa la Tierra
 
 ### P1 — Protesta
 
 Sobreimpresión: 43 MIN 18 S.
 
-La tripulación de Proxima observa una cobertura demorada de protestas divididas en la Tierra.
+La tripulación de Próxima observa una cobertura demorada de protestas divididas en la Tierra.
 
 Quienes apoyan la misión sostienen que la antigua garganta, su paciente secuencia de instrucciones y la negativa de los Velari a ingresar al Sistema Solar demuestran moderación. La oportunidad podría no repetirse durante miles de años.
 
@@ -248,7 +248,7 @@ Dicha a la defensiva, la frase puede recordarse más adelante como prueba de que
 
 Zao interpreta correctamente a Harlan. Después del intercambio, le dice en voz baja a Voss:
 
-> **Zao:** «No estaba esperanzado».
+> **Zao:** «Eso no era esperanza».
 
 Voss descarta la preocupación. Confía en la precisión técnica de Zao, pero supone que ella está aplicando a una persona el mismo instinto con el que busca fallas.
 
@@ -262,7 +262,7 @@ La inquietud de Zao se convierte en la semilla emocional explícita de su audito
 
 ### A1 — Embarque
 
-Plano exterior de establecimiento: la Celestial Ardor en Proxima, con su nombre visible en el casco. La preparación apresurada refleja el poco tiempo entre la recepción del cronograma de apertura y la partida.
+Plano exterior de establecimiento: la Celestial Ardor en Próxima, con su nombre visible en el casco. La preparación apresurada refleja el poco tiempo entre la recepción del cronograma de apertura y la partida.
 
 ### A2 — Jerarquía establecida
 
@@ -276,13 +276,13 @@ Zao completa la lista de control y vuelve a empezarla desde otra dirección. Eli
 
 Voss pregunta si están listos para partir. Elin dice que sí; Zao pide un minuto más. Voss responde con una confianza familiar:
 
-> **Elias Voss:** «Si Zao dice que llegamos a tiempo, llegamos a tiempo».
+> **Elias Voss:** «Si Zao dice que vamos a tiempo, vamos a tiempo».
 
 Zao da su aprobación sólo después de la segunda comprobación. Elin se retira hacia su propio puesto. Zao se queda para cerrar la auditoría.
 
 ### A3b — Tránsito y primera caída de gravedad
 
-La nave se desprende de Proxima, rota a orientación prógrada y comienza su impulso a 1 g hacia el periapsis de Júpiter.
+La nave se desprende de Próxima, rota a orientación prógrada y comienza su impulso a 1 g hacia el periapsis de Júpiter.
 
 El tránsito prolongado permite conversaciones naturales y atisbos de la vida a bordo.
 
@@ -304,7 +304,7 @@ Okoye observa a un manifestante acusar a la misión de presentarse con demasiada
 
 Elin estudia la silueta de la nave.
 
-> **Elin Rao:** «Vamos a hacer el primer contacto en un falo de noventa metros llamado Celestial Ardor».
+> **Elin Rao:** «Vamos a hacer el primer contacto en un falo de noventa metros llamado Ardor Celestial».
 
 Voss la mira.
 
@@ -326,17 +326,19 @@ Sorell muestra en una pantalla un pequeño patrón de entrenamiento: unos pocos 
 
 Explica que la boca piloto proporcionó ejemplos en vez de un diccionario único. No existe una palabra aislada para saludo; el significado se desarrolla a través de una secuencia ordenada.
 
-> **Lian Sorell:** «Ellos escribieron el manual básico. Nosotros todavía no respondimos».
+> **Lian Sorell:** «Ellos escribieron el manual. Nosotros aún no hemos respondido».
 
 Agrega:
 
-> **Lian Sorell:** «Cuando la boca calla, eso no equivale a nada. El silencio sigue siendo una elección».
+> **Lian Sorell:** «Cuando la boca calla, sigue diciendo algo. El silencio también es una elección».
 
 Zao pregunta:
 
 > **Zao:** «¿Y si la IA lo aprendió mal?».
 
-Sorell responde con honestidad. Es posible interpretar mal. La IA puede organizar los patrones, pero no puede convertir la incertidumbre en conocimiento.
+Sorell responde con honestidad:
+
+> **Lian Sorell:** «Es posible interpretarlo mal. La IA puede ordenar los patrones, pero no convertir la incertidumbre en conocimiento».
 
 Harlan dice:
 
@@ -378,7 +380,7 @@ Le dirige una mirada breve e inquieta. Zao lo nota, pero no lo enfrenta. Ahora �
 
 Zao entra en la bóveda interior, que todavía es accesible.
 
-Encuentra el paquete de impulso geofísico. Su forma y sus marcas lo identifican como equipo de Proxima, no como parte de la Ardor. A corta distancia, el conteo de su dosímetro aumenta bruscamente. La forma, las marcas y el blindaje del paquete proporcionan el contexto que el instrumento del traje por sí solo no podía ofrecer: las débiles emisiones provienen de su primario de fisión.
+Encuentra el paquete de impulso geofísico. Su forma y sus marcas lo identifican como equipo de Próxima, no como parte de la Ardor. A corta distancia, el conteo de su dosímetro aumenta bruscamente. La forma, las marcas y el blindaje del paquete proporcionan el contexto que el instrumento del traje por sí solo no podía ofrecer: las débiles emisiones provienen de su primario de fisión.
 
 Una pantalla local muestra una cuenta regresiva.
 
@@ -390,7 +392,7 @@ Tres hechos se asientan al mismo tiempo:
 
 - Es una bomba termonuclear.
 - Está programada para el primer contacto.
-- Ningún mensaje ordinario a la Tierra o a Proxima puede regresar a tiempo para detenerla.
+- Ningún mensaje ordinario a la Tierra o a Próxima puede regresar a tiempo para detenerla.
 
 Zao se retira al compartimiento exterior, donde está disponible la consola local de la matriz óptica de comunicaciones de larga distancia.
 
@@ -402,7 +404,7 @@ Abre la escotilla detrás de los puestos del puente. La tripulación mira los di
 
 Zao comienza un informe inalámbrico:
 
-> **Zao:** «Encontré un grave intento de sabotear la misión…».
+> **Zao:** «He descubierto un intento grave de sabotear la misión—».
 
 Harlan la oye y abandona el informe que pensaba dar. Activa el jammer preparado con el dispositivo de su muñeca. La voz de Zao se deshace en estática.
 
@@ -444,7 +446,7 @@ Enviarla sola es la decisión por la que Voss se disculpa más adelante.
 
 Zao examina en voz alta todas las opciones que no conducen a ninguna parte.
 
-Desde la posición actual de la Ardor, Júpiter oculta a Proxima. Un mensaje a la Tierra sólo llegaría después del contacto y la detonación previstos.
+Desde la posición actual de la Ardor, Júpiter oculta a Próxima. Un mensaje a la Tierra sólo llegaría después del contacto y la detonación previstos.
 
 La garganta piloto es inútil porque no acepta mensajes humanos. Sorell, y no Zao, es la única persona capaz de construir siquiera un saludo rudimentario dirigido a los Velari, y no existe una ruta humana confirmada de comunicaciones con la estación.
 
@@ -510,9 +512,9 @@ Harlan inspecciona apresuradamente el resumen técnico de la emisión. Confirmar
 
 En cambio, razona a partir de los mismos hechos inmediatos que consideró Zao.
 
-> **Zao:** «Proxima está detrás de Júpiter. La Tierra no se enterará hasta que ya estemos allí».
+> **Rylen Harlan:** «Próxima está detrás de Júpiter. La Tierra no se va a enterar hasta que ya estemos allí».
 
-Proxima está oculta. La garganta piloto no acepta mensajes humanos. Zao no sabe cómo dirigirse a los Velari y no hay una ruta de comunicaciones confirmada hacia su estación. ¿Hacia dónde más podría haber apuntado la matriz?
+Próxima está oculta. La garganta piloto no acepta mensajes humanos. Zao no sabe cómo dirigirse a los Velari y no hay una ruta de comunicaciones confirmada hacia su estación. ¿Hacia dónde más podría haber apuntado la matriz?
 
 Harlan supone que envió su advertencia de sabotaje hacia la Tierra. Lo que haya dicho puede condenarlo históricamente, pero no puede impedir la detonación en el punto de contacto, y él espera morir con los demás.
 
@@ -624,7 +626,7 @@ La custodia y el interrogatorio de Sorell continúan como textura a lo largo de 
 
 Al menos una vez, Sorell habla sin que se lo pidan:
 
-> **Lian Sorell:** «Están tratando la primera explicación como si fuera la única. Eso es exactamente lo que les advertí que no hicieran ahí fuera».
+> **Lian Sorell:** «Estáis tratando la primera explicación como si fuera la única. Eso es exactamente lo que os advertí que no hicierais ahí fuera».
 
 ### D2 — Una teoría plausible sobre el sistema de combustible
 
@@ -676,7 +678,7 @@ Voss le pregunta a Elin si puede abrir la bóveda, no si puede detener lo que ha
 
 Elin encuentra otro registro sobreviviente: durante el apagón, la matriz óptica de comunicaciones de larga distancia transmitió una ráfaga comprimida desde el controlador del compartimiento exterior. Convierte los ángulos registrados de la matriz y la actitud de la nave en un vector inercial de puntería.
 
-El contenido ya no está almacenado localmente. Su dirección de puntería no es la Tierra, Proxima ni ninguna baliza conocida. Desde la perspectiva actual de la nave, parece haber sido disparada hacia el espacio vacío.
+El contenido ya no está almacenado localmente. Su dirección de puntería no es la Tierra, Próxima ni ninguna baliza conocida. Desde la perspectiva actual de la nave, parece haber sido disparada hacia el espacio vacío.
 
 La tripulación y el público reciben juntos este resultado. Nada identifica todavía a la Ardor como el objeto móvil que atravesará el haz casi un día después de su disparo.
 
@@ -684,11 +686,11 @@ Todos escucharon el comienzo de la advertencia de sabotaje de Zao antes de que f
 
 Le ofrece a la tripulación una explicación plausible pero falsa:
 
-> **Rylen Harlan:** «Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba caído, así que introdujo la puntería manualmente. Falló».
+> **Rylen Harlan:** «Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba fuera de servicio, así que introdujo la puntería manualmente. Falló».
 
 Elin responde:
 
-> **Elin Rao:** «Zao no fallaba».
+> **Elin Rao:** «Zao no falló».
 
 Harlan dice:
 
@@ -759,7 +761,7 @@ Sobre este flashback, Zao identifica:
 
 - El paquete termonuclear de impulso geofísico.
 - Su masa estimada de entre 1 y 1,5 toneladas.
-- Su origen en los depósitos peligrosos de Proxima.
+- Su origen en los depósitos peligrosos de Próxima.
 - Su ubicación en la bóveda interior de blindaje.
 - La firma neutrónica de su primario de fisión.
 - Su capacidad de varios megatones.
@@ -891,7 +893,7 @@ Entonces salta a una cifra absurdamente lejana en el futuro.
 
 Elin explicita el límite:
 
-> **Elin Rao:** «No está desarmada. Simplemente no va a explotar aquí».
+> **Elin Rao:** «No está desactivada. Simplemente no va a explotar aquí».
 
 Más adelante, la bomba podrá remolcarse al espacio profundo para una detonación controlada o ser abordada por un equipo especialista en desactivación. El encuentro inmediato está a salvo.
 
@@ -911,7 +913,7 @@ El saludo se expresará mediante luces distribuidas por el casco de la Ardor, co
 
 Sorell dice:
 
-> **Lian Sorell:** «Ellos escribieron el manual básico. Ésta es la primera vez que nos escucharán leerlo de vuelta».
+> **Lian Sorell:** «Ellos escribieron el manual. Es la primera vez que nos oirán responder con él».
 
 La señal está preparada, pero todavía no fue transmitida.
 

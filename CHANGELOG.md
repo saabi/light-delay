@@ -1,9 +1,34 @@
 # Changelog
 
+## 2026-09-06 — Títulos, revisión y pronunciación TTS localizadas
+
+- El master y el relato usan **Lúz Tardía** y **Próxima** en español; inglés
+  conserva **Light Delay** y **Proxima**.
+- La revisión TTS se obtiene exclusivamente del outline maestro y el relato se
+  vincula mediante un `sourceOutlineId`; su identidad ya no contiene la revisión.
+- Cada número de capítulo se pronuncia solo y precede una pausa explícita de
+  1200 ms antes del título, igual que el prólogo.
+- `pronunciationMap` mantiene `Sorell` como grafía editorial y genera **Soréll**
+  en inglés o **Sorél** en español. Se regeneraron los Markdown TTS, no el audio.
+
+## 2026-09-06 — Relato para público rev. 15 + dirección por ID
+
+- Revisión profunda del relato EN y reescritura ES en presente, con paridad causal
+  y de revelaciones a lo largo de 12 secciones.
+- Se añadieron 36 `audience-dialogue-id` estables y el contrato bilingüe
+  `data/production/audio/audience-dialogue-performance.json`, con intención común
+  e indicaciones de interpretación específicas para EN y ES.
+- El builder TTS usa esos IDs sin fallback para el relato; nuevo
+  `npm run tts:audience:check` valida estructura, atribución, master y derivados.
+- Master rev. 15 (38 citas) y exports sincronizados. Los Markdown de voces se regeneraron;
+  los MP3 anteriores quedan obsoletos y pendientes de una futura síntesis.
+
 ## 2026-09-06 — Audience: Ardor Celestial; Capítulo N. título
 
 - ES: nave **Ardor Celestial**. Capítulos con punto tras el número (`Capítulo 1. …` /
   `Chapter 1. …`) para pausa corta al narrar.
+- MP3: `light-delay-audience-dual-es.mp3` (~47.7 min);
+  `light-delay-audience-dual-en.mp3` (~51.0 min).
 
 ## 2026-09-06 — Audience: pausa tras Prólogo; Capítulos numerados
 

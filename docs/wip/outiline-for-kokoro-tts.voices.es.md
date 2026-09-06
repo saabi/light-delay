@@ -1,7 +1,7 @@
-# Light Delay — esquema TTS multi-voz (español)
+# Lúz Tardía — esquema TTS multi-voz (español)
 
-Revisión 14 (desde `general-narrative-outline.es.md`). Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
-Nombre hablado: Soréll; la etiqueta del hablante sigue en ASCII [Sorell].
+Revisión 15 (desde la escaleta maestra). Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
+Nombre hablado: Sorél; la grafía editorial y la etiqueta siguen en ASCII [Sorell].
 Los hablantes de diálogo salen sólo de las citas atribuidas del master (`speakerId` / `> **Nombre:**`), no de heurísticas sobre comillas.
 Los [QwenInstruct] son los mismos directores de interpretación que en inglés (el modelo los entiende en inglés mientras habla español).
 Cast/ref: `docs/wip/qwen3-tts-cast.es.json` (narración Kokoro ES pendiente de cast dedicado).
@@ -10,10 +10,10 @@ Generar: `python scripts/generate-dual-outline-audio.py --lang es --script docs/
 ---
 
 [Narrator]
-[PAUSE 1200] Light Delay. Escaleta narrativa general. Revisión 14.
+[PAUSE 1200] Lúz Tardía. Escaleta narrativa general. Revisión 15.
 
 [Narrator]
-Borrador de trabajo, español, revisión 14.
+Borrador de trabajo, español, revisión 15.
 
 [Narrator]
 [PAUSE 1200] Propósito de este documento
@@ -61,7 +61,7 @@ Un adulto abarca aproximadamente 2,5–3 m en una postura conversacional recogid
 Dentro del manto hay una red tridimensional de neuronas emisoras de luz controlada voluntariamente. Una ramificación tenue permanece visible como anatomía mientras está inactiva; los patrones emitidos son comunicación deliberada, no una exhibición involuntaria del pensamiento. El significado se transmite mediante la disposición espacial, el tiempo, la intensidad y la longitud de onda. Cuando un Velari presta atención a alguien, las ramas más próximas a esa persona convergen, se coordinan y se sostienen antes de que comience el habla plena.
 
 [Narrator]
-La tecnología óptica Velari extiende este lenguaje biológico. El manual de la boca incluye ejemplos visibles de luz estructurada adaptados de la gramática del manto. La IA de Soréll despliega sus relaciones espaciales simultáneas en una forma secuencial legible para humanos y realiza el mapeo inverso al preparar el saludo de luces del casco de la Ardor. Puede recuperar el significado práctico aunque al principio pierda matices y arte. El gran ancho de banda no elimina los malentendidos, desacuerdos ni engaños.
+La tecnología óptica Velari extiende este lenguaje biológico. El manual de la boca incluye ejemplos visibles de luz estructurada adaptados de la gramática del manto. La IA de Sorél despliega sus relaciones espaciales simultáneas en una forma secuencial legible para humanos y realiza el mapeo inverso al preparar el saludo de luces del casco de la Ardor. Puede recuperar el significado práctico aunque al principio pierda matices y arte. El gran ancho de banda no elimina los malentendidos, desacuerdos ni engaños.
 
 [Narrator]
 [PAUSE 1200] Premisa
@@ -73,7 +73,7 @@ La humanidad descubrió hace poco la boca de Júpiter. La garganta fue construid
 En su estado piloto, la boca transmite una secuencia instructiva estructurada en luz visible. Le ha proporcionado a la humanidad información limitada sobre los Velari, ejemplos de su gramática comunicativa y el cronograma de una apertura completa. No recibe ni acusa recibo de transmisiones humanas. Mecanismos dentro de la garganta han detectado el descubrimiento de la humanidad y se lo han notificado a los Velari por medios que la humanidad no comprende.
 
 [Narrator]
-Con ayuda de IA, Soréll lleva meses estudiando la secuencia de instrucciones. Puede construir un saludo rudimentario en la gramática que la garganta ha demostrado, pero la humanidad nunca le ha hablado a un Velari y recibido respuesta. El primer saludo será también la primera prueba de si la humanidad aprendió correctamente el idioma.
+Con ayuda de IA, Sorél lleva meses estudiando la secuencia de instrucciones. Puede construir un saludo rudimentario en la gramática que la garganta ha demostrado, pero la humanidad nunca le ha hablado a un Velari y recibido respuesta. El primer saludo será también la primera prueba de si la humanidad aprendió correctamente el idioma.
 
 [Narrator]
 La garganta piloto termina transmitiendo un cronograma preciso. A la hora indicada, se abrirá lo suficiente para que la Ardor la atraviese. El cronograma incluye las coordenadas previstas para el primer contacto, donde una estación Velari estará esperando del otro lado, y una apertura posterior para el regreso.
@@ -91,7 +91,7 @@ Si el encuentro fracasa, no se espera otra oportunidad comparable durante miles 
 Los Velari no cruzan por sí mismos al Sistema Solar. Es un principio y una forma de mensaje: no se impondrán ni llegarán de una manera que la humanidad pueda interpretar como una invasión. Dos personajes interpretan esa moderación de maneras opuestas.
 
 [Narrator]
-Soréll cree que una especie dispuesta a esperar milenios para ser visitada demuestra moderación, y que esa moderación es en sí misma un lenguaje.
+Sorél cree que una especie dispuesta a esperar milenios para ser visitada demuestra moderación, y que esa moderación es en sí misma un lenguaje.
 
 [Narrator]
 Harlan ve una puerta alienígena instalada dentro del hogar de la humanidad antes de que ésta pudiera conocerla o consentirla. Para él, que la boca suministre toda la información, imponga el cronograma y no pueda ser interrogada vuelve su aparente generosidad más aterradora, no menos.
@@ -103,19 +103,19 @@ La película es la discusión entre esas interpretaciones.
 [PAUSE 1200] Ambientación
 
 [Narrator]
-[PAUSE 1200] Estación Proxima
+[PAUSE 1200] Estación Próxima
 
 [Narrator]
-Proxima es una estación de investigación de Júpiter ubicada en L1 Sol–Júpiter, con una masa aproximada de 217.000 toneladas.
+Próxima es una estación de investigación de Júpiter ubicada en L1 Sol–Júpiter, con una masa aproximada de 217.000 toneladas.
 
 [Narrator]
-La Ardor y su tripulación de seis personas pertenecen a la misión de investigación de Proxima. No son diplomáticos ni un equipo construido expresamente para el contacto. Son la nave y las personas que ya se encuentran lo bastante cerca como para cumplir el cronograma.
+La Ardor y su tripulación de seis personas pertenecen a la misión de investigación de Próxima. No son diplomáticos ni un equipo construido expresamente para el contacto. Son la nave y las personas que ya se encuentran lo bastante cerca como para cumplir el cronograma.
 
 [Narrator]
-La boca fue descubierta varios meses antes de la partida, lo que permitió que Soréll viajara desde la Tierra hasta Proxima y comenzara a estudiar su secuencia de instrucciones. Sin embargo, el cronograma exacto de la apertura completa llega apenas unas 36 horas antes de que la Ardor deba partir. Es tiempo suficiente para preparar la nave local, pero no para traer físicamente desde la Tierra a un equipo diplomático o una tripulación de reemplazo.
+La boca fue descubierta varios meses antes de la partida, lo que permitió que Sorél viajara desde la Tierra hasta Próxima y comenzara a estudiar su secuencia de instrucciones. Sin embargo, el cronograma exacto de la apertura completa llega apenas unas 36 horas antes de que la Ardor deba partir. Es tiempo suficiente para preparar la nave local, pero no para traer físicamente desde la Tierra a un equipo diplomático o una tripulación de reemplazo.
 
 [Narrator]
-Como segundo al mando de Proxima, Harlan tiene autoridad legítima sobre los depósitos peligrosos, el movimiento de carga y la preparación final de la nave. Durante el período apresurado de carga, después de la certificación final de masa de carga de la Ardor, transfiere un dispositivo experimental desde los depósitos de Proxima sin agregarlo al manifiesto de la nave. Los registros de la estación podrían llegar a exponer la transferencia, pero él espera que todos a bordo de la Ardor mueran antes de que esos registros puedan importar.
+Como segundo al mando de Próxima, Harlan tiene autoridad legítima sobre los depósitos peligrosos, el movimiento de carga y la preparación final de la nave. Durante el período apresurado de carga, después de la certificación final de masa de carga de la Ardor, transfiere un dispositivo experimental desde los depósitos de Próxima sin agregarlo al manifiesto de la nave. Los registros de la estación podrían llegar a exponer la transferencia, pero él espera que todos a bordo de la Ardor mueran antes de que esos registros puedan importar.
 
 [Narrator]
 [PAUSE 1200] El paquete de impulso geofísico
@@ -178,7 +178,7 @@ El conjunto de blindaje del reactor protege de la radiación tanto los espacios 
 La bóveda posee una cerradura local preexistente de seguridad radiológica. Harlan la recodifica para su dispositivo de muñeca. No está conectada a la red, no conserva un registro central de accesos y no puede recibir la posterior revocación de autoridad de Voss. La puerta simplemente se reporta como inaccesible ante la nave.
 
 [Narrator]
-La bóveda interior contiene la bomba. Zao es asesinada en el compartimiento exterior accesible. Esta distinción permite que Soréll y los investigadores lleguen hasta Zao mientras el dispositivo permanece encerrado.
+La bóveda interior contiene la bomba. Zao es asesinada en el compartimiento exterior accesible. Esta distinción permite que Sorél y los investigadores lleguen hasta Zao mientras el dispositivo permanece encerrado.
 
 [Narrator]
 [PAUSE 1200] Topología de comunicaciones
@@ -199,7 +199,7 @@ Con los troncales principales de datos desconectados, el controlador local de la
 [PAUSE 1200] Física y tiempos confirmados
 
 [Narrator]
-El tramo local desde Proxima en L1 hasta la boca de Júpiter en L2 dura 57 h 48 min: aproximadamente 28 h 54 min acelerando hacia el periapsis de Júpiter y aproximadamente 28 h 54 min desacelerando hacia L2.
+El tramo local desde Próxima en L1 hasta la boca de Júpiter en L2 dura 57 h 48 min: aproximadamente 28 h 54 min acelerando hacia el periapsis de Júpiter y aproximadamente 28 h 54 min desacelerando hacia L2.
 
 [Narrator]
 El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 17,4 millones de km. Un perfil de aceleración–desaceleración a 1 g toma aproximadamente 23 h 25 min.
@@ -214,7 +214,7 @@ La Ardor cruza la garganta pocos minutos después de que Zao realiza el envío. 
 La garganta piloto no puede aceptar el mensaje de Zao. Incluso si una señal pudiera enviarse por la apertura completa antes que la nave, emergería por delante de la Ardor y continuaría alejándose a la velocidad de la luz. No esperaría a la tripulación. No hay un receptor o relé humano esperando más allá de la boca lejana.
 
 [Narrator]
-Zao tampoco puede redactar una advertencia para los Velari. La gramática de la boca es la especialidad de Soréll, nunca fue probada en una conversación y la estación distante todavía no está disponible como destino de comunicaciones conocido.
+Zao tampoco puede redactar una advertencia para los Velari. La gramática de la boca es la especialidad de Sorél, nunca fue probada en una conversación y la estación distante todavía no está disponible como destino de comunicaciones conocido.
 
 [Narrator]
 La advertencia se graba, comprime, firma criptográficamente y transmite como una única ráfaga. Una ráfaga minimiza el tiempo durante el cual la matriz óptica de comunicaciones de larga distancia debe mantener la puntería hacia un punto de intercepción calculado casi un día en el futuro.
@@ -250,16 +250,16 @@ Zao — Ingeniera. Rigurosa, comprueba habitualmente el trabajo dos veces y perc
 Elin Rao — «Elin» — Ingeniera de sistemas y compañera de trabajo más cercana de Zao. Se convierte en la investigadora después de la muerte de Zao. Su conocimiento de los hábitos de Zao es esencial para reconocer la maniobra de distracción de Harlan y actuar a partir de la advertencia. Su prosodia parte del sur de India; formó su inglés tecnológico en Bengaluru y su español profesional en Medellín.
 
 [Narrator]
-Harlan — Segundo al mando de Proxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Soréll e intenta preservar la detonación. Su prosodia es británica; formó su inglés de servicio naval en Portsmouth y su español rioplatense en Buenos Aires.
+Harlan — Segundo al mando de Próxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Sorél e intenta preservar la detonación. Su prosodia es británica; formó su inglés de servicio naval en Portsmouth y su español rioplatense en Buenos Aires.
 
 [Narrator]
-Voss — Capitán. Es capaz, pero confía demasiado en su habilidad para interpretar a su gente. Interpreta mal a Harlan, interpreta mal a Soréll, descarta la inquietud temprana de Zao y debe enfrentar el costo humano de esos errores. Su prosodia es germánica o nórdica; formó su inglés institucional en Toronto y su español formal en Lima.
+Voss — Capitán. Es capaz, pero confía demasiado en su habilidad para interpretar a su gente. Interpreta mal a Harlan, interpreta mal a Sorél, descarta la inquietud temprana de Zao y debe enfrentar el costo humano de esos errores. Su prosodia es germánica o nórdica; formó su inglés institucional en Toronto y su español formal en Lima.
 
 [Narrator]
-Soréll — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad. Su prosodia parte del francés; formó su inglés en el entorno francófono de Montréal y su español académico en Madrid.
+Sorél — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad. Su prosodia parte del francés; formó su inglés en el entorno francófono de Montréal y su español académico en Madrid.
 
 [Narrator]
-Okoye — Oficial de seguridad nigeriana. Protege el puente después del informe de sabotaje, retira a Soréll de la escena del asesinato bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, finalmente, persigue e inmoviliza a Harlan. Su prosodia parte del igbo nigeriano; formó su inglés en Enugu y su español formal en Malabo.
+Okoye — Oficial de seguridad nigeriana. Protege el puente después del informe de sabotaje, retira a Sorél de la escena del asesinato bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, finalmente, persigue e inmoviliza a Harlan. Su prosodia parte del igbo nigeriano; formó su inglés en Enugu y su español formal en Malabo.
 
 [Narrator]
 [PAUSE 1200] Motivación de Harlan
@@ -293,7 +293,7 @@ Su formulación más clara es:
 "Sabemos lo que nos dijo la boca. No es lo mismo que saber quién le dijo que hablara"
 
 [Narrator]
-[PAUSE 1200] Prólogo — Proxima observa la Tierra
+[PAUSE 1200] Prólogo — Próxima observa la Tierra
 
 [Narrator]
 [PAUSE 1200] Secuencia Papá 1. Protesta
@@ -302,7 +302,7 @@ Su formulación más clara es:
 Sobreimpresión: 43 MIN 18 S.
 
 [Narrator]
-La tripulación de Proxima observa una cobertura demorada de protestas divididas en la Tierra.
+La tripulación de Próxima observa una cobertura demorada de protestas divididas en la Tierra.
 
 [Narrator]
 Quienes apoyan la misión sostienen que la antigua garganta, su paciente secuencia de instrucciones y la negativa de los Velari a ingresar al Sistema Solar demuestran moderación. La oportunidad podría no repetirse durante miles de años.
@@ -317,7 +317,7 @@ La cobertura periodística y los carteles de la protesta establecen la garganta 
 [PAUSE 1200] Secuencia Papá 2. Mirando juntos
 
 [Narrator]
-Harlan, Soréll, Zao y Voss observan juntos en una única escena.
+Harlan, Sorél, Zao y Voss observan juntos en una única escena.
 
 [Narrator]
 Harlan mira a la multitud optimista.
@@ -334,27 +334,27 @@ No afirma que los Velari pudieran haber cruzado cuando quisieran.
 "Construyeron una puerta en nuestro sistema antes de que supiéramos que existían. Ahora la puerta nos dice cuándo atravesarla"
 
 [Narrator]
-Soréll responde con cautela profesional, no con optimismo ciego. Los Velari esperaron. Esperar es en sí mismo un mensaje, pero ella quiere tener certeza sobre qué significa ese mensaje antes de dar por sentado que fue correspondido.
+Sorél responde con cautela profesional, no con optimismo ciego. Los Velari esperaron. Esperar es en sí mismo un mensaje, pero ella quiere tener certeza sobre qué significa ese mensaje antes de dar por sentado que fue correspondido.
 
 [Narrator]
-Voss interpreta mal a ambos. Escucha la angustia de Harlan como nervios normales atenuados por la esperanza, y el rigor de Soréll como miedo de actuar.
+Voss interpreta mal a ambos. Escucha la angustia de Harlan como nervios normales atenuados por la esperanza, y el rigor de Sorél como miedo de actuar.
 
 [Narrator]
-Soréll responde:
+Sorél responde:
 
 [Sorell]
 [QwenInstruct] Warm but firm. Defending rigor as respect, not panic. Precise diction; slight French-English musicality without caricature.
 "Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Eso no es miedo. Es respeto"
 
 [Narrator]
-Dicha a la defensiva, la frase puede recordarse más adelante como prueba de que Soréll quería demorar la misión.
+Dicha a la defensiva, la frase puede recordarse más adelante como prueba de que Sorél quería demorar la misión.
 
 [Narrator]
 Zao interpreta correctamente a Harlan. Después del intercambio, le dice en voz baja a Voss:
 
 [Zao]
 [QwenInstruct] Dry, flat correction. Quiet certainty. Almost no emotion on the surface; a sharp observational cut.
-"No estaba esperanzado"
+"Eso no era esperanza"
 
 [Narrator]
 Voss descarta la preocupación. Confía en la precisión técnica de Zao, pero supone que ella está aplicando a una persona el mismo instinto con el que busca fallas.
@@ -373,7 +373,7 @@ La inquietud de Zao se convierte en la semilla emocional explícita de su audito
 [PAUSE 1200] Secuencia Alfa 1. Embarque
 
 [Narrator]
-Plano exterior de establecimiento: la Celestial Ardor en Proxima, con su nombre visible en el casco. La preparación apresurada refleja el poco tiempo entre la recepción del cronograma de apertura y la partida.
+Plano exterior de establecimiento: la Celestial Ardor en Próxima, con su nombre visible en el casco. La preparación apresurada refleja el poco tiempo entre la recepción del cronograma de apertura y la partida.
 
 [Narrator]
 [PAUSE 1200] Secuencia Alfa 2. Jerarquía establecida
@@ -395,7 +395,7 @@ Voss pregunta si están listos para partir. Elin dice que sí; Zao pide un minut
 
 [Voss]
 [QwenInstruct] Familiar trust. Light confidence. Easy, almost casual, still in command register.
-"Si Zao dice que llegamos a tiempo, llegamos a tiempo"
+"Si Zao dice que vamos a tiempo, vamos a tiempo"
 
 [Narrator]
 Zao da su aprobación sólo después de la segunda comprobación. Elin se retira hacia su propio puesto. Zao se queda para cerrar la auditoría.
@@ -404,7 +404,7 @@ Zao da su aprobación sólo después de la segunda comprobación. Elin se retira
 [PAUSE 1200] Secuencia Alfa 3 Bravo. Tránsito y primera caída de gravedad
 
 [Narrator]
-La nave se desprende de Proxima, rota a orientación prógrada y comienza su impulso a 1 g hacia el periapsis de Júpiter.
+La nave se desprende de Próxima, rota a orientación prógrada y comienza su impulso a 1 g hacia el periapsis de Júpiter.
 
 [Narrator]
 El tránsito prolongado permite conversaciones naturales y atisbos de la vida a bordo.
@@ -440,7 +440,7 @@ Elin estudia la silueta de la nave.
 
 [Elin]
 [QwenInstruct] Deadpan dry humor. Flat delivery; no laugh. Technical woman stating an absurd fact plainly.
-"Vamos a hacer el primer contacto en un falo de noventa metros llamado Celestial Ardor"
+"Vamos a hacer el primer contacto en un falo de noventa metros llamado Ardor Celestial"
 
 [Narrator]
 Voss la mira.
@@ -453,7 +453,7 @@ Voss la mira.
 Zao intenta no reírse y fracasa.
 
 [Narrator]
-Soréll continúa trabajando en el saludo.
+Sorél continúa trabajando en el saludo.
 
 [Sorell]
 [QwenInstruct] Professional focus. Constructive, slightly urgent, still collegial.
@@ -470,21 +470,21 @@ La broma se convierte naturalmente en una pregunta real. Okoye pregunta:
 "¿Cómo se saluda a algo que nunca has oído responder?"
 
 [Narrator]
-Soréll muestra en una pantalla un pequeño patrón de entrenamiento: unos pocos puntos de luz que se ramifican a lo largo de una secuencia. Es apenas un fragmento esquemático, para preservar la sorpresa de la futura exhibición completa de la estación.
+Sorél muestra en una pantalla un pequeño patrón de entrenamiento: unos pocos puntos de luz que se ramifican a lo largo de una secuencia. Es apenas un fragmento esquemático, para preservar la sorpresa de la futura exhibición completa de la estación.
 
 [Narrator]
 Explica que la boca piloto proporcionó ejemplos en vez de un diccionario único. No existe una palabra aislada para saludo; el significado se desarrolla a través de una secuencia ordenada.
 
 [Sorell]
 [QwenInstruct] Thoughtful unease. Quiet realization; weight on the second sentence.
-"Ellos escribieron el manual básico. Nosotros todavía no respondimos"
+"Ellos escribieron el manual. Nosotros aún no hemos respondido"
 
 [Narrator]
 Agrega:
 
 [Sorell]
 [QwenInstruct] Quiet pedagogical weight. Soft certainty; let the second sentence land as principle, not flourish.
-"Cuando la boca calla, eso no equivale a nada. El silencio sigue siendo una elección"
+"Cuando la boca calla, sigue diciendo algo. El silencio también es una elección"
 
 [Narrator]
 Zao pregunta:
@@ -494,7 +494,11 @@ Zao pregunta:
 "¿Y si la IA lo aprendió mal?"
 
 [Narrator]
-Soréll responde con honestidad. Es posible interpretar mal. La IA puede organizar los patrones, pero no puede convertir la incertidumbre en conocimiento.
+Sorél responde con honestidad:
+
+[Sorell]
+[QwenInstruct] Uncomfortable honesty. Measured admission of limits; no apology, no lecture.
+"Es posible interpretarlo mal. La IA puede ordenar los patrones, pero no convertir la incertidumbre en conocimiento"
 
 [Narrator]
 Harlan dice:
@@ -555,7 +559,7 @@ Le dirige una mirada breve e inquieta. Zao lo nota, pero no lo enfrenta. Ahora �
 Zao entra en la bóveda interior, que todavía es accesible.
 
 [Narrator]
-Encuentra el paquete de impulso geofísico. Su forma y sus marcas lo identifican como equipo de Proxima, no como parte de la Ardor. A corta distancia, el conteo de su dosímetro aumenta bruscamente. La forma, las marcas y el blindaje del paquete proporcionan el contexto que el instrumento del traje por sí solo no podía ofrecer: las débiles emisiones provienen de su primario de fisión.
+Encuentra el paquete de impulso geofísico. Su forma y sus marcas lo identifican como equipo de Próxima, no como parte de la Ardor. A corta distancia, el conteo de su dosímetro aumenta bruscamente. La forma, las marcas y el blindaje del paquete proporcionan el contexto que el instrumento del traje por sí solo no podía ofrecer: las débiles emisiones provienen de su primario de fisión.
 
 [Narrator]
 Una pantalla local muestra una cuenta regresiva.
@@ -570,7 +574,7 @@ La carcasa de despliegue, el sistema de disparo, la protección contra manipulac
 Tres hechos se asientan al mismo tiempo:
 
 [Narrator]
-Es una bomba termonuclear. Está programada para el primer contacto. Ningún mensaje ordinario a la Tierra o a Proxima puede regresar a tiempo para detenerla.
+Es una bomba termonuclear. Está programada para el primer contacto. Ningún mensaje ordinario a la Tierra o a Próxima puede regresar a tiempo para detenerla.
 
 [Narrator]
 Zao se retira al compartimiento exterior, donde está disponible la consola local de la matriz óptica de comunicaciones de larga distancia.
@@ -589,7 +593,7 @@ Zao comienza un informe inalámbrico:
 
 [Zao]
 [QwenInstruct] Urgent wireless report cut mid-sentence. Clear engineer diction; rising alarm; trail off abruptly as if the channel dies.
-"Encontré un grave intento de sabotear la misión…"
+"He descubierto un intento grave de sabotear la misión—"
 
 [Narrator]
 Harlan la oye y abandona el informe que pensaba dar. Activa el jammer preparado con el dispositivo de su muñeca. La voz de Zao se deshace en estática.
@@ -625,7 +629,7 @@ La propia secuencia comunica lo sucedido: primero interferencia inalámbrica, de
 La matriz óptica de comunicaciones de larga distancia sigue operativa porque su emisor de popa y su controlador local son independientes de los troncales internos deshabilitados.
 
 [Narrator]
-[PAUSE 1200] Secuencia Bravo 4 Bravo. Soréll se ofrece
+[PAUSE 1200] Secuencia Bravo 4 Bravo. Sorél se ofrece
 
 [Narrator]
 En el puente, Voss sólo alcanzó a escuchar la advertencia parcial de sabotaje de Zao.
@@ -634,13 +638,13 @@ En el puente, Voss sólo alcanzó a escuchar la advertencia parcial de sabotaje 
 Pone a Elin a diagnosticar la interrupción. Mantiene a Okoye en el puente porque un informe de sabotaje significa que la propia zona de mando puede necesitar protección.
 
 [Narrator]
-Soréll es la única persona cuyo trabajo especializado no resulta inmediatamente útil para resolver la interrupción. Se ofrece a ir a popa y comprobar qué le ocurrió a Zao.
+Sorél es la única persona cuyo trabajo especializado no resulta inmediatamente útil para resolver la interrupción. Se ofrece a ir a popa y comprobar qué le ocurrió a Zao.
 
 [Narrator]
-Voss le indica que encuentre a Harlan y lo lleve con ella. Soréll no logra encontrarlo y continúa sola.
+Voss le indica que encuentre a Harlan y lo lleve con ella. Sorél no logra encontrarlo y continúa sola.
 
 [Narrator]
-Soréll utiliza una de las escaleras helicoidales del conducto central y avanza mano sobre mano por sus barandas y descansos en microgravedad. Harlan ya está recorriendo hacia popa el conducto de servicio separado y más directo, por lo que sus caminos no se cruzan. Durante el trayecto no hay cámaras ni registros de posición confiables.
+Sorél utiliza una de las escaleras helicoidales del conducto central y avanza mano sobre mano por sus barandas y descansos en microgravedad. Harlan ya está recorriendo hacia popa el conducto de servicio separado y más directo, por lo que sus caminos no se cruzan. Durante el trayecto no hay cámaras ni registros de posición confiables.
 
 [Narrator]
 Enviarla sola es la decisión por la que Voss se disculpa más adelante.
@@ -652,10 +656,10 @@ Enviarla sola es la decisión por la que Voss se disculpa más adelante.
 Zao examina en voz alta todas las opciones que no conducen a ninguna parte.
 
 [Narrator]
-Desde la posición actual de la Ardor, Júpiter oculta a Proxima. Un mensaje a la Tierra sólo llegaría después del contacto y la detonación previstos.
+Desde la posición actual de la Ardor, Júpiter oculta a Próxima. Un mensaje a la Tierra sólo llegaría después del contacto y la detonación previstos.
 
 [Narrator]
-La garganta piloto es inútil porque no acepta mensajes humanos. Soréll, y no Zao, es la única persona capaz de construir siquiera un saludo rudimentario dirigido a los Velari, y no existe una ruta humana confirmada de comunicaciones con la estación.
+La garganta piloto es inútil porque no acepta mensajes humanos. Sorél, y no Zao, es la única persona capaz de construir siquiera un saludo rudimentario dirigido a los Velari, y no existe una ruta humana confirmada de comunicaciones con la estación.
 
 [Narrator]
 Incluso si pudiera enviarse una señal por la apertura completa antes que la Ardor, emergería por delante de la nave y continuaría a la velocidad de la luz. La tripulación nunca la vería.
@@ -749,12 +753,12 @@ Harlan inspecciona apresuradamente el resumen técnico de la emisión. Confirmar
 [Narrator]
 En cambio, razona a partir de los mismos hechos inmediatos que consideró Zao.
 
-[Zao]
-[QwenInstruct] Defiant dying clarity. Breath short; force the facts out before he reaches her.
-"Proxima está detrás de Júpiter. La Tierra no se enterará hasta que ya estemos allí"
+[Harlan]
+[QwenInstruct] Cold inferential certainty. Quiet, measured; reasoning aloud under time pressure, not defiance.
+"Próxima está detrás de Júpiter. La Tierra no se va a enterar hasta que ya estemos allí"
 
 [Narrator]
-Proxima está oculta. La garganta piloto no acepta mensajes humanos. Zao no sabe cómo dirigirse a los Velari y no hay una ruta de comunicaciones confirmada hacia su estación. ¿Hacia dónde más podría haber apuntado la matriz?
+Próxima está oculta. La garganta piloto no acepta mensajes humanos. Zao no sabe cómo dirigirse a los Velari y no hay una ruta de comunicaciones confirmada hacia su estación. ¿Hacia dónde más podría haber apuntado la matriz?
 
 [Narrator]
 Harlan supone que envió su advertencia de sabotaje hacia la Tierra. Lo que haya dicho puede condenarlo históricamente, pero no puede impedir la detonación en el punto de contacto, y él espera morir con los demás.
@@ -808,10 +812,10 @@ No hay forma de abortar inmediatamente ni de regresar antes de la ventana poster
 La tripulación logra algo histórico sin saber qué sucedió a bordo.
 
 [Narrator]
-[PAUSE 1200] Secuencia Charlie 4. Llega Soréll
+[PAUSE 1200] Secuencia Charlie 4. Llega Sorél
 
 [Narrator]
-Todavía en microgravedad, con las comunicaciones y cámaras deshabilitadas, Soréll llega al compartimiento exterior de servicio del reactor.
+Todavía en microgravedad, con las comunicaciones y cámaras deshabilitadas, Sorél llega al compartimiento exterior de servicio del reactor.
 
 [Narrator]
 Encuentra a Zao flotando, la atrapa e intenta asistirla. Trata de llamar al puente. Nada funciona.
@@ -826,16 +830,16 @@ Harlan llega a la bandeja del conducto de servicio, reconecta los troncales de c
 Sale por la escotilla del puente diciendo ya que encontró los cables desconectados y los restauró.
 
 [Narrator]
-La señal de cámara regresa mostrando a Soréll en el compartimiento exterior, sosteniendo el cuerpo de Zao.
+La señal de cámara regresa mostrando a Sorél en el compartimiento exterior, sosteniendo el cuerpo de Zao.
 
 [Narrator]
 [PAUSE 1200] Secuencia Charlie 6. El relato de Harlan
 
 [Narrator]
-Voss pregunta si Soréll logró encontrarlo.
+Voss pregunta si Sorél logró encontrarlo.
 
 [Narrator]
-Harlan dice que no. Afirma que estaba a popa cumpliendo tareas asignadas, que se cruzó con Zao cuando ella entraba al compartimiento de servicio del reactor mientras él se dirigía al puente y que no vio a Soréll.
+Harlan dice que no. Afirma que estaba a popa cumpliendo tareas asignadas, que se cruzó con Zao cuando ella entraba al compartimiento de servicio del reactor mientras él se dirigía al puente y que no vio a Sorél.
 
 [Narrator]
 La afirmación de haberse cruzado con Zao es verdadera y la ofrece por iniciativa propia. Se adelanta al único movimiento anterior que más adelante podría reconstruirse.
@@ -847,7 +851,7 @@ Voss envía a Harlan y Okoye para determinar qué ocurrió.
 [PAUSE 1200] Secuencia Charlie 7. Hallazgo
 
 [Narrator]
-Harlan y Okoye llegan al compartimiento exterior de servicio del reactor y encuentran a Soréll con Zao.
+Harlan y Okoye llegan al compartimiento exterior de servicio del reactor y encuentran a Sorél con Zao.
 
 [Narrator]
 Harlan convierte de inmediato la imagen en una acusación:
@@ -857,13 +861,13 @@ Harlan convierte de inmediato la imagen en una acusación:
 "¿Cómo pudiste? ¿Por qué?"
 
 [Narrator]
-Soréll proclama su inocencia. Okoye la retira de la escena bajo custodia protectora.
+Sorél proclama su inocencia. Okoye la retira de la escena bajo custodia protectora.
 
 [Narrator]
 [PAUSE 1200] Secuencia Charlie 8. Restringida en el puente
 
 [Narrator]
-La Ardor no tiene calabozo. Soréll queda restringida en el puente, donde siempre pueden observarla e interrogarla.
+La Ardor no tiene calabozo. Sorél queda restringida en el puente, donde siempre pueden observarla e interrogarla.
 
 [Narrator]
 Es una custodia provisoria, no una declaración de culpabilidad concluida. Harlan la trata como culpable; Voss teme que pueda serlo; Elin mantiene la incertidumbre.
@@ -872,7 +876,7 @@ Es una custodia provisoria, no una declaración de culpabilidad concluida. Harla
 [PAUSE 1200] Secuencia Charlie 9. Un caso plausible pero incompleto
 
 [Narrator]
-La imagen restaurada de la cámara muestra a Soréll sosteniendo el cadáver de Zao, con sangre transferida a su traje mientras intentaba ayudarla.
+La imagen restaurada de la cámara muestra a Sorél sosteniendo el cadáver de Zao, con sangre transferida a su traje mientras intentaba ayudarla.
 
 [Narrator]
 Viajó sola durante el período exacto en que no había comunicaciones, cámaras ni registros de posición confiables.
@@ -888,10 +892,10 @@ Durante el interrogatorio, Harlan agrega una mentira:
 "Antes del lanzamiento me preguntó qué haría falta para demorar el cruce. Pensé que era cautela profesional"
 
 [Narrator]
-Voss recuerda haber interpretado mal los comentarios de Soréll en el Prólogo como miedo. Por eso, el mismo miedo que atribuyó a Harlan puede atribuírselo a ella.
+Voss recuerda haber interpretado mal los comentarios de Sorél en el Prólogo como miedo. Por eso, el mismo miedo que atribuyó a Harlan puede atribuírselo a ella.
 
 [Narrator]
-Las pruebas justifican la custodia, pero no demuestran el asesinato. Lo que perdura para Elin es el dolor desconsolado de Soréll y la rapidez con que Harlan convirtió la incertidumbre en acusación.
+Las pruebas justifican la custodia, pero no demuestran el asesinato. Lo que perdura para Elin es el dolor desconsolado de Sorél y la rapidez con que Harlan convirtió la incertidumbre en acusación.
 
 [Narrator]
 [PAUSE 1200] Secuencia Charlie 10. Salto temporal
@@ -900,7 +904,7 @@ Las pruebas justifican la custodia, pero no demuestran el asesinato. Lo que perd
 La historia avanza a través de la mayor parte del tránsito del otro lado, de aproximadamente veinticuatro horas.
 
 [Narrator]
-Soréll permanece bajo interrogatorio activo y no puede preparar el saludo. Voss comienza discretamente a planear cómo abordar el encuentro sin ella.
+Sorél permanece bajo interrogatorio activo y no puede preparar el saludo. Voss comienza discretamente a planear cómo abordar el encuentro sin ella.
 
 [Narrator]
 Elin y Okoye examinan las pruebas físicas y de sistemas disponibles. Ambas muestran un agotamiento visible.
@@ -915,14 +919,14 @@ Elin y Okoye examinan las pruebas físicas y de sistemas disponibles. Ambas mues
 Voss ordena una auditoría completa de la falla de comunicaciones, el último trabajo de Zao, la conciliación de masa de la nave y todos los registros sobrevivientes de instrumentos locales.
 
 [Narrator]
-La custodia y el interrogatorio de Soréll continúan como textura a lo largo de la investigación, en vez de repetirse como una única escena.
+La custodia y el interrogatorio de Sorél continúan como textura a lo largo de la investigación, en vez de repetirse como una única escena.
 
 [Narrator]
-Al menos una vez, Soréll habla sin que se lo pidan:
+Al menos una vez, Sorél habla sin que se lo pidan:
 
 [Sorell]
 [QwenInstruct] Sharp intellectual challenge. Firm, not shrill; refusing a closed story from custody.
-"Están tratando la primera explicación como si fuera la única. Eso es exactamente lo que les advertí que no hicieran ahí fuera"
+"Estáis tratando la primera explicación como si fuera la única. Eso es exactamente lo que os advertí que no hicierais ahí fuera"
 
 [Narrator]
 [PAUSE 1200] Secuencia Delta 2. Una teoría plausible sobre el sistema de combustible
@@ -944,10 +948,10 @@ Harlan les da una única explicación a ambos hechos:
 "Si perdés helio-3, la mezcla queda rica en deuterio. Más neutrones de reacciones secundarias, más combustible para mantener el empuje. Si la pérdida continúa, no llegamos a la ventana"
 
 [Narrator]
-Propone que alguien manipuló una alimentación de helio-3 o su sistema de dosificación para provocar una pérdida de combustible que obligara a cancelar la misión. Si Zao interrumpió el intento, eso explicaría por qué ya no hay una alarma de fuga activa. Todos los tripulantes capacitados pueden acceder a los paneles de emergencia del compartimiento exterior, por lo que la teoría no requiere que Soréll sea ingeniera. Su supuesto deseo de demorar el contacto proporciona el motivo.
+Propone que alguien manipuló una alimentación de helio-3 o su sistema de dosificación para provocar una pérdida de combustible que obligara a cancelar la misión. Si Zao interrumpió el intento, eso explicaría por qué ya no hay una alarma de fuga activa. Todos los tripulantes capacitados pueden acceder a los paneles de emergencia del compartimiento exterior, por lo que la teoría no requiere que Sorél sea ingeniera. Su supuesto deseo de demorar el contacto proporciona el motivo.
 
 [Narrator]
-La teoría reúne la discrepancia de propelente, el registro de radiación, la advertencia interrumpida de sabotaje y la presencia de Soréll en un único relato coherente. Voss la considera persuasiva. Elin la registra como hipótesis y no como conclusión.
+La teoría reúne la discrepancia de propelente, el registro de radiación, la advertencia interrumpida de sabotaje y la presencia de Sorél en un único relato coherente. Voss la considera persuasiva. Elin la registra como hipótesis y no como conclusión.
 
 [Narrator]
 [PAUSE 1200] Secuencia Delta 2 Bravo. Las pistas se separan
@@ -962,7 +966,7 @@ El inventario y la presión de los tanques coinciden con la medición del motor.
 Con el empuje y la aceleración medidos, el consumo excesivo indica que la Ardor transportaba aproximadamente entre 1 y 1,5 toneladas de masa inercial adicional. Una fuga no puede explicarlo.
 
 [Narrator]
-Harlan sostiene que Zao pudo haber interrumpido la manipulación antes de que se produjera una alteración prolongada de la mezcla. Eso conserva la posibilidad de un intento de sabotaje, pero ya no explica ni el propelente adicional ya consumido ni la exposición independiente a neutrones. El caso contra Soréll se debilita sin desaparecer.
+Harlan sostiene que Zao pudo haber interrumpido la manipulación antes de que se produjera una alteración prolongada de la mezcla. Eso conserva la posibilidad de un intento de sabotaje, pero ya no explica ni el propelente adicional ya consumido ni la exposición independiente a neutrones. El caso contra Sorél se debilita sin desaparecer.
 
 [Narrator]
 [PAUSE 1200] Secuencia Delta 3. Puerta interior cerrada
@@ -995,7 +999,7 @@ Voss le pregunta a Elin si puede abrir la bóveda, no si puede detener lo que ha
 Elin encuentra otro registro sobreviviente: durante el apagón, la matriz óptica de comunicaciones de larga distancia transmitió una ráfaga comprimida desde el controlador del compartimiento exterior. Convierte los ángulos registrados de la matriz y la actitud de la nave en un vector inercial de puntería.
 
 [Narrator]
-El contenido ya no está almacenado localmente. Su dirección de puntería no es la Tierra, Proxima ni ninguna baliza conocida. Desde la perspectiva actual de la nave, parece haber sido disparada hacia el espacio vacío.
+El contenido ya no está almacenado localmente. Su dirección de puntería no es la Tierra, Próxima ni ninguna baliza conocida. Desde la perspectiva actual de la nave, parece haber sido disparada hacia el espacio vacío.
 
 [Narrator]
 La tripulación y el público reciben juntos este resultado. Nada identifica todavía a la Ardor como el objeto móvil que atravesará el haz casi un día después de su disparo.
@@ -1008,14 +1012,14 @@ Le ofrece a la tripulación una explicación plausible pero falsa:
 
 [Harlan]
 [QwenInstruct] False explanation delivered earnestly. Soft certainty; protective storytelling that is a lie.
-"Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba caído, así que introdujo la puntería manualmente. Falló"
+"Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba fuera de servicio, así que introdujo la puntería manualmente. Falló"
 
 [Narrator]
 Elin responde:
 
 [Elin]
 [QwenInstruct] Flat absolute refusal. Quiet steel; no hesitation.
-"Zao no fallaba"
+"Zao no falló"
 
 [Narrator]
 Harlan dice:
@@ -1056,10 +1060,10 @@ El reconocimiento sigue siendo una recompensa psicológica y no otro motivo del 
 El propio relato de Harlan lo sitúa a popa durante el apagón, y las cámaras deshabilitadas no verifican nada.
 
 [Narrator]
-Elin reconsidera la teoría del cómplice. El afán de Harlan por acusar a Soréll podría ser la conducta de un oficial inocente, de un cómplice que la sacrifica o de un asesino solitario que incrimina a la primera persona encontrada en la escena.
+Elin reconsidera la teoría del cómplice. El afán de Harlan por acusar a Sorél podría ser la conducta de un oficial inocente, de un cómplice que la sacrifica o de un asesino solitario que incrimina a la primera persona encontrada en la escena.
 
 [Narrator]
-No concluye que Harlan actuó solo. Concluye únicamente que la presencia de Soréll junto al cuerpo no basta para cerrar el caso.
+No concluye que Harlan actuó solo. Concluye únicamente que la presencia de Sorél junto al cuerpo no basta para cerrar el caso.
 
 [Narrator]
 [PAUSE 1200] Secuencia Delta 7. Señal detectada
@@ -1107,7 +1111,7 @@ La consola sin recortar muestra a Zao combinando el plan de vuelo con una trayec
 Sobre este flashback, Zao identifica:
 
 [Narrator]
-El paquete termonuclear de impulso geofísico. Su masa estimada de entre 1 y 1,5 toneladas. Su origen en los depósitos peligrosos de Proxima. Su ubicación en la bóveda interior de blindaje. La firma neutrónica de su primario de fisión. Su capacidad de varios megatones. Su cuenta regresiva hasta la hora y las coordenadas programadas para el primer contacto. La discrepancia de propelente que la condujo hasta él.
+El paquete termonuclear de impulso geofísico. Su masa estimada de entre 1 y 1,5 toneladas. Su origen en los depósitos peligrosos de Próxima. Su ubicación en la bóveda interior de blindaje. La firma neutrónica de su primario de fisión. Su capacidad de varios megatones. Su cuenta regresiva hasta la hora y las coordenadas programadas para el primer contacto. La discrepancia de propelente que la condujo hasta él.
 
 [Narrator]
 La grabación termina:
@@ -1135,7 +1139,7 @@ Harlan afirma que una voz y una imagen pueden ser fabricadas.
 El mensaje se suma a las pruebas ya presentes:
 
 [Narrator]
-La ubicación no verificable de Harlan durante el apagón. Su acusación inmediata contra Soréll. La masa adicional y la fuente compacta de neutrones que refutaron el relato de sabotaje del combustible. La ráfaga saliente que, según él, Zao dirigió mal. El hecho de que la ráfaga apuntaba exactamente hacia donde estaría la Ardor. Zao nombrándolo en la puerta.
+La ubicación no verificable de Harlan durante el apagón. Su acusación inmediata contra Sorél. La masa adicional y la fuente compacta de neutrones que refutaron el relato de sabotaje del combustible. La ráfaga saliente que, según él, Zao dirigió mal. El hecho de que la ráfaga apuntaba exactamente hacia donde estaría la Ardor. Zao nombrándolo en la puerta.
 
 [Narrator]
 Ninguna pista sostiene por sí sola la revelación.
@@ -1156,13 +1160,13 @@ La autenticación responde de inmediato a la objeción de Harlan.
 [PAUSE 1200] Secuencia Eco 6. Órdenes
 
 [Narrator]
-Voss revoca la autoridad de red de Harlan y le ordena a Okoye liberar a Soréll de inmediato.
+Voss revoca la autoridad de red de Harlan y le ordena a Okoye liberar a Sorél de inmediato.
 
 [Narrator]
 Elin toma el ascensor hacia el compartimiento exterior de servicio del reactor. Su objetivo es alcanzar la bóveda interior, aunque todavía no puede abrir su cerradura local.
 
 [Narrator]
-Okoye le quita las restricciones a Soréll. Voss le ordena permanecer en el puente, vigilar la aproximación final programada y comenzar a preparar el saludo.
+Okoye le quita las restricciones a Sorél. Voss le ordena permanecer en el puente, vigilar la aproximación final programada y comenzar a preparar el saludo.
 
 [Narrator]
 Voss le ordena entonces a Okoye quitarle a Harlan su dispositivo de muñeca e inmovilizarlo.
@@ -1186,7 +1190,7 @@ Harlan entra al conducto de servicio y cierra localmente detrás de sí la escot
 Harlan sabe que Elin se dirige hacia la bomba. Como el dispositivo es autónomo y no acepta órdenes remotas, su única posibilidad restante es alcanzarlo físicamente, detenerla o provocar una detonación inmediata.
 
 [Narrator]
-Soréll queda sola en el puente. La aproximación final se ejecuta automáticamente; ella la vigila mientras prepara el protocolo de contacto.
+Sorél queda sola en el puente. La aproximación final se ejecuta automáticamente; ella la vigila mientras prepara el protocolo de contacto.
 
 [Narrator]
 [PAUSE 1200] Secuencia Foxtrot 2. La persecución se divide
@@ -1291,7 +1295,7 @@ Elin explicita el límite:
 
 [Elin]
 [QwenInstruct] Precise engineer calm under fire. Flat clarity; make the limit explicit without triumph.
-"No está desarmada. Simplemente no va a explotar aquí"
+"No está desactivada. Simplemente no va a explotar aquí"
 
 [Narrator]
 Más adelante, la bomba podrá remolcarse al espacio profundo para una detonación controlada o ser abordada por un equipo especialista en desactivación. El encuentro inmediato está a salvo.
@@ -1303,13 +1307,13 @@ Más adelante, la bomba podrá remolcarse al espacio profundo para una detonaci�
 Voss informa al puente el intervalo seguro.
 
 [Narrator]
-Soréll ya fue liberada. Completa el protocolo de saludo mientras los demás comienzan a regresar hacia proa.
+Sorél ya fue liberada. Completa el protocolo de saludo mientras los demás comienzan a regresar hacia proa.
 
 [Narrator]
 [PAUSE 1200] Secuencia Foxtrot 7. Preparado, no enviado
 
 [Narrator]
-La consola de Soréll muestra cómo toma forma el protocolo. Una IA humana primitiva despliega las relaciones espaciales simultáneas del manual de la garganta en una forma de trabajo secuencial legible para humanos. Luego realiza la operación inversa y organiza puntos de luz ramificados en la gramática demostrada por la secuencia instructiva.
+La consola de Sorél muestra cómo toma forma el protocolo. Una IA humana primitiva despliega las relaciones espaciales simultáneas del manual de la garganta en una forma de trabajo secuencial legible para humanos. Luego realiza la operación inversa y organiza puntos de luz ramificados en la gramática demostrada por la secuencia instructiva.
 
 [Narrator]
 El display parece mostrar neuronas activándose porque la gramática es una extensión tecnológica del lenguaje del manto Velari: una actividad irregular se resuelve gradualmente en una estructura deliberada y ordenada.
@@ -1318,11 +1322,11 @@ El display parece mostrar neuronas activándose porque la gramática es una exte
 El saludo se expresará mediante luces distribuidas por el casco de la Ardor, conservando tanto el medio visible como la forma relacional del manual. No es un único destello ni un haz estrecho.
 
 [Narrator]
-Soréll dice:
+Sorél dice:
 
 [Sorell]
 [QwenInstruct] Ceremonial resolve. Focused, hushed intensity; first-contact weight.
-"Ellos escribieron el manual básico. Ésta es la primera vez que nos escucharán leerlo de vuelta"
+"Ellos escribieron el manual. Es la primera vez que nos oirán responder con él"
 
 [Narrator]
 La señal está preparada, pero todavía no fue transmitida.
@@ -1337,7 +1341,7 @@ La señal está preparada, pero todavía no fue transmitida.
 Voss regresa al puente.
 
 [Narrator]
-Antes de atender a la estación, se acerca a Soréll.
+Antes de atender a la estación, se acerca a Sorél.
 
 [Voss]
 [QwenInstruct] Heavy quiet apology. Slow; more than the detention — personal failure landing softly.
@@ -1350,7 +1354,7 @@ La disculpa abarca más que su detención. Interpretó mal su cautela, la envió
 Voss ocupa el puesto de mando y da la orden.
 
 [Narrator]
-Soréll transmite por primera y única vez el saludo preparado a través del casco de la Ardor.
+Sorél transmite por primera y única vez el saludo preparado a través del casco de la Ardor.
 
 [Narrator]
 [PAUSE 1200] Secuencia Golf 2. La estación responde
@@ -1374,7 +1378,7 @@ Su inmensa superficie cobra vida con una luz lenta, coordinada y ramificada. El 
 Los Velari comprenden el intento humano porque la garganta proporcionó a la humanidad su manual básico. La IA humana, en cambio, debe esforzarse por interpretar una respuesta Velari fluida en un idioma que la humanidad apenas imitó.
 
 [Narrator]
-Soréll observa sin celebrar. Dentro de la respuesta surgen elementos estructurales familiares. Un motivo repetido del manual básico es suficientemente claro: aproximación, permiso, encuentro.
+Sorél observa sin celebrar. Dentro de la respuesta surgen elementos estructurales familiares. Un motivo repetido del manual básico es suficientemente claro: aproximación, permiso, encuentro.
 
 [Narrator]
 Se vuelve hacia la tripulación:
@@ -1384,7 +1388,7 @@ Se vuelve hacia la tripulación:
 "Están enviando a alguien"
 
 [Narrator]
-La respuesta de la estación termina. Sus luces ramificadas se retiran hasta que la inmensa estructura vuelve a quedar quieta. Como la luz es el medio, el regreso a la oscuridad también es un silencio deliberado. La observación anterior de Soréll adquiere un segundo significado: el silencio sigue siendo una elección.
+La respuesta de la estación termina. Sus luces ramificadas se retiran hasta que la inmensa estructura vuelve a quedar quieta. Como la luz es el medio, el regreso a la oscuridad también es un silencio deliberado. La observación anterior de Sorél adquiere un segundo significado: el silencio sigue siendo una elección.
 
 [Narrator]
 [PAUSE 1200] Secuencia Golf 2 Bravo. El encuentro
@@ -1396,22 +1400,22 @@ La estación despliega la esfera ambiental transparente autopropulsada ya presen
 La esfera de unos 5 m es diminuta junto a la estación, pero enorme junto a un ser humano. Su carcasa transparente de capas sutiles, una tenue bruma interior y unos pocos nodos integrados sugieren presión, regulación ambiental y propulsión sin revelar mecanismos que la humanidad comprenda.
 
 [Narrator]
-Soréll se coloca el traje y sale sola. Voss permanece en el puente, preservando la perspectiva de mando que enmarca la secuencia. Soréll sale por la esclusa con un cable de seguridad y una cámara en el traje.
+Sorél se coloca el traje y sale sola. Voss permanece en el puente, preservando la perspectiva de mando que enmarca la secuencia. Sorél sale por la esclusa con un cable de seguridad y una cámara en el traje.
 
 [Narrator]
-La esfera ambiental acorta la distancia lentamente a través de la sombra solar de la estación y se detiene en lugar de invadir el espacio de Soréll. Las luces de saludo de la Ardor ya no están activas. Soréll atenúa la lámpara exterior del traje y espera junto a la esfera casi a oscuras.
+La esfera ambiental acorta la distancia lentamente a través de la sombra solar de la estación y se detiene en lugar de invadir el espacio de Sorél. Las luces de saludo de la Ardor ya no están activas. Sorél atenúa la lámpara exterior del traje y espera junto a la esfera casi a oscuras.
 
 [Narrator]
-Dentro hay un Velari, suspendido con naturalidad en su propia atmósfera. No encoge ni disimula su escala. Recoge la mayor parte de sus ocho extremidades en una postura conversacional controlada y deja un volumen despejado del lado de Soréll, mientras una o dos extremidades parcialmente extendidas sugieren su mayor alcance. Incluso recogido, abarca aproximadamente 2,5–3 m y sigue resultando abrumador junto a ella.
+Dentro hay un Velari, suspendido con naturalidad en su propia atmósfera. No encoge ni disimula su escala. Recoge la mayor parte de sus ocho extremidades en una postura conversacional controlada y deja un volumen despejado del lado de Sorél, mientras una o dos extremidades parcialmente extendidas sugieren su mayor alcance. Incluso recogido, abarca aproximadamente 2,5–3 m y sigue resultando abrumador junto a ella.
 
 [Narrator]
 La adaptación procede como un intercambio ordenado, no como una exhibición plana:
 
 [Narrator]
-La estación envía a un solo individuo en vez de aproximarse con toda su masa. El Velari permanece dentro de su propio ambiente contenido. La esfera se detiene y espera. Su región sensorial irregular y su manto se orientan hacia Soréll. Una ramificación tenue e inactiva apenas vuelve legible el cuerpo en la oscuridad. Las ramas luminosas más próximas a Soréll convergen y se sostienen: atención antes del habla. Sólo entonces regiones seleccionadas del manto se despliegan en patrones tridimensionales deliberados que repiten y amplían elementos del saludo de la Ardor.
+La estación envía a un solo individuo en vez de aproximarse con toda su masa. El Velari permanece dentro de su propio ambiente contenido. La esfera se detiene y espera. Su región sensorial irregular y su manto se orientan hacia Sorél. Una ramificación tenue e inactiva apenas vuelve legible el cuerpo en la oscuridad. Las ramas luminosas más próximas a Sorél convergen y se sostienen: atención antes del habla. Sólo entonces regiones seleccionadas del manto se despliegan en patrones tridimensionales deliberados que repiten y amplían elementos del saludo de la Ardor.
 
 [Narrator]
-El habla del Velari se convierte en la luz principal del encuentro. Revela el visor de Soréll y los planos frontales de su traje, partículas suspendidas en la atmósfera de la esfera, el borde refractivo de la carcasa y partes seleccionadas del Velari sin aplanarlo todo en un resplandor.
+El habla del Velari se convierte en la luz principal del encuentro. Revela el visor de Sorél y los planos frontales de su traje, partículas suspendidas en la atmósfera de la esfera, el borde refractivo de la carcasa y partes seleccionadas del Velari sin aplanarlo todo en un resplandor.
 
 [Narrator]
 Una inteligencia desconocida realiza un esfuerzo visible por ser comprendida y por volver hermoso el encuentro.
@@ -1466,7 +1470,7 @@ La transmisión se aleja hacia el mismo silencio en el que Zao confió casi un d
 [PAUSE 1200] Riesgos narrativos desde la Secuencia D
 
 [Narrator]
-El peligro no se limita a que crean o no a Soréll.
+El peligro no se limita a que crean o no a Sorél.
 
 [Narrator]
 La tripulación se aproxima a una estación alienígena desconocida de 4–5 km con una bomba termonuclear activa a bordo. Las posibles consecuencias incluyen:
@@ -1508,13 +1512,13 @@ La primera vuelve físico el paso del tiempo. La segunda hace posibles el descub
 [PAUSE 1200] Interpretación
 
 [Narrator]
-Soréll advierte que el significado no puede separarse de la secuencia y el contexto.
+Sorél advierte que el significado no puede separarse de la secuencia y el contexto.
 
 [Narrator]
 Voss confunde repetidamente interpretaciones con hechos:
 
 [Narrator]
-La angustia de Harlan con esperanza. El rigor de Soréll con miedo. La presencia de Soréll junto al cuerpo con culpa.
+La angustia de Harlan con esperanza. El rigor de Sorél con miedo. La presencia de Sorél junto al cuerpo con culpa.
 
 [Narrator]
 Elin invierte ese proceso al mantener las explicaciones como provisionales hasta que convergen pruebas independientes.
@@ -1535,7 +1539,7 @@ Su esperanza de reivindicación prolonga el mismo fracaso en su visión de la hi
 La escaleta sigue siendo coral sin cambiar arbitrariamente de protagonista:
 
 [Narrator]
-Zao inicia la cadena causal y crea la advertencia. Elin se convierte en el punto de vista investigador que continúa la historia al aplicar el hábito de Zao de verificar dos veces. El trabajo de Elin exonera a Soréll y permite que la información de Zao detenga la bomba. Soréll completa el contacto que Zao preservó. Voss reconoce y registra lo que lograron las tres mujeres.
+Zao inicia la cadena causal y crea la advertencia. Elin se convierte en el punto de vista investigador que continúa la historia al aplicar el hábito de Zao de verificar dos veces. El trabajo de Elin exonera a Sorél y permite que la información de Zao detenga la bomba. Sorél completa el contacto que Zao preservó. Voss reconoce y registra lo que lograron las tres mujeres.
 
 [Narrator]
 El mensaje demorado, y no el punto de vista ininterrumpido de un único personaje, es el hilo estructural que une la película.

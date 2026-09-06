@@ -2,7 +2,7 @@
 
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 14.
+Working draft, English, revision 15.
 
 **Editorial status:** current narrative source of truth; still WIP.
 
@@ -248,7 +248,7 @@ Delivered defensively, the line can later be remembered as evidence that Sorell 
 
 Zao reads Harlan correctly. After the exchange, she tells Voss quietly:
 
-> **Zao:** “He wasn’t hoping.”
+> **Zao:** “That wasn’t hope.”
 
 Voss dismisses the concern. He trusts Zao’s engineering precision but assumes she is applying the same fault-finding instinct to a person.
 
@@ -330,13 +330,15 @@ She explains that the pilot mouth supplied examples rather than a single diction
 
 She adds:
 
-> **Lian Sorell:** “When the mouth goes quiet, that isn’t nothing. Silence is still a choice.”
+> **Lian Sorell:** “When the mouth goes quiet, it is still saying something. Silence is still a choice.”
 
 Zao asks:
 
 > **Zao:** “And if the AI learned it wrong?”
 
-Sorell answers honestly. Misreading is possible. The AI can organize the patterns, but it cannot turn uncertainty into knowledge.
+Sorell answers honestly:
+
+> **Lian Sorell:** “Misreading is possible. The AI can arrange the patterns, but it cannot turn uncertainty into knowledge.”
 
 Harlan says:
 
@@ -510,7 +512,7 @@ Harlan gives the emission summary a hurried technical inspection. Confirming a d
 
 He reasons instead from the same immediate facts Zao considered.
 
-> **Zao:** “Proxima is behind Jupiter. Earth will not know until we are already there.”
+> **Rylen Harlan:** “Proxima is behind Jupiter. Earth will not know until we are already there.”
 
 Proxima is occluded. The pilot throat does not accept human messages. Zao does not know how to address the Velari, and there is no confirmed communications path to their station. Where else would she point the array?
 

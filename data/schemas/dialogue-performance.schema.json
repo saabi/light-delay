@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/dialogue-performance.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "narrativeId", "sourceOutlineId", "entries"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "narrativeId": { "type": "string", "pattern": "^audience:" },
+    "sourceOutlineId": { "type": "string", "pattern": "^outline:" },
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/entry" }
+    }
+  },
+  "$defs": {
+    "languageDelivery": {
+      "type": "object",
+      "required": ["en", "es"],
+      "properties": {
+        "en": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "es": { "$ref": "common.schema.json#/$defs/localizedString" }
+      },
+      "additionalProperties": false
+    },
+    "entry": {
+      "type": "object",
+      "required": ["id", "sourceStepId", "speakerId", "intent", "delivery"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^audience:dialogue:" },
+        "sourceStepId": { "type": "string", "pattern": "^master:story-" },
+        "speakerId": { "type": "string", "pattern": "^character:" },
+        "intent": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "delivery": { "$ref": "#/$defs/languageDelivery" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

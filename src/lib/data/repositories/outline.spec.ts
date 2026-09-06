@@ -52,8 +52,8 @@ describe('outlines (optional)', () => {
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
 		expect(source.outline.provenance?.importedFrom?.[0]?.revision).toBe('13');
-		expect(source.outline.revision).toBe(14);
-		expect(source.outline.version).toBe('0.5.0-wip');
+		expect(source.outline.revision).toBe(15);
+		expect(source.outline.version).toBe('0.5.1-wip');
 		expect(source.outline.status).toBe('draft');
 		expect(source.outline.exports?.map((item) => item.path)).toEqual([
 			'docs/wip/general-narrative-outline.es.md',
@@ -65,15 +65,16 @@ describe('outlines (optional)', () => {
 		expect(source.steps.every((step) => step.level === 'story' && step.body?.length)).toBe(true);
 		expect(source.steps.some((step) => step.summary != null)).toBe(false);
 		expect(source.steps.some((step) => step.coverage != null)).toBe(false);
+		expect(getLocalizedOutline(masterId, 'es')?.outline.title).toBe(
+			'Escaleta — Lúz Tardía: narrativa maestra sin límite (WIP)'
+		);
 		const quotations = [...(source.framing ?? []), ...source.steps].flatMap((item) =>
 			('blocks' in item ? item.blocks : (item.body ?? [])).filter(
 				(block) => block.type === 'blockquote'
 			)
 		);
-		expect(quotations).toHaveLength(37);
-		expect(quotations.every((block) => block.type === 'blockquote' && block.speakerId)).toBe(
-			true
-		);
+		expect(quotations).toHaveLength(38);
+		expect(quotations.every((block) => block.type === 'blockquote' && block.speakerId)).toBe(true);
 		const localized = getLocalizedOutline(masterId, 'en')!;
 		expect(localized.steps[0]?.body?.[0]?.type).toBe('paragraph');
 		const first = localized.steps[0]?.body?.[0];

@@ -359,3 +359,40 @@ export interface GenerationPlanFile33 {
 	compiledPrompt: GenerationPlanFile39;
 }
 
+export type DialoguePerformanceFile1 = string;
+export type DialoguePerformanceFile2 = string;
+export type DialoguePerformanceFile3 = string;
+/**
+ * @minItems 1
+ */
+export type DialoguePerformanceFile4 = [DialoguePerformanceFile5, ...DialoguePerformanceFile5[]];
+export type DialoguePerformanceFile6 = string;
+export type DialoguePerformanceFile7 = string;
+export type DialoguePerformanceFile8 = string;
+export type DialoguePerformanceFile10 = string;
+export type DialoguePerformanceFile11 = string;
+export type DialoguePerformanceFile12 = string;
+
+export interface DialoguePerformanceFile {
+	schemaVersion: DialoguePerformanceFile1;
+	narrativeId: DialoguePerformanceFile2;
+	sourceOutlineId: DialoguePerformanceFile3;
+	entries: DialoguePerformanceFile4;
+}
+export interface DialoguePerformanceFile5 {
+	id: DialoguePerformanceFile6;
+	sourceStepId: DialoguePerformanceFile7;
+	speakerId: DialoguePerformanceFile8;
+	intent: DialoguePerformanceFile9;
+	delivery: DialoguePerformanceFile13;
+}
+export interface DialoguePerformanceFile9 {
+	es: DialoguePerformanceFile10;
+	en: DialoguePerformanceFile11;
+	[k: string]: DialoguePerformanceFile12;
+}
+export interface DialoguePerformanceFile13 {
+	en: DialoguePerformanceFile9;
+	es: DialoguePerformanceFile9;
+}
+

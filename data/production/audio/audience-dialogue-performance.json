@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "1.0.0",
+  "narrativeId": "audience:light-delay-master",
+  "sourceOutlineId": "outline:light-delay-master-narrative",
+  "entries": [
+    {
+      "id": "audience:dialogue:p2-harlan-wish",
+      "sourceStepId": "master:story-p2",
+      "speakerId": "character:harlan",
+      "intent": {
+        "es": "Harlan deja escapar una pena sincera que también oculta que ya ha elegido actuar contra la misión.",
+        "en": "Harlan lets genuine regret escape while concealing that he has already chosen to act against the mission."
+      },
+      "delivery": {
+        "en": { "es": "Muy bajo y contenido; una pausa mínima antes de right y sin autocompasión.", "en": "Very low and contained; a tiny hesitation before ‘right,’ with no self-pity." },
+        "es": { "es": "Muy bajo, con cadencia porteña contenida; apoyar apenas razón, sin sentimentalismo.", "en": "Very low, with restrained Buenos Aires cadence; place slight weight on ‘razón,’ without sentimentality." }
+      }
+    },
+    {
+      "id": "audience:dialogue:p2-harlan-door",
+      "sourceStepId": "master:story-p2",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Convierte un temor político en una conclusión que parece inevitable.", "en": "He turns political fear into a conclusion that sounds inevitable." },
+      "delivery": {
+        "en": { "es": "Digno y preciso; crecer desde door hasta walk through sin levantar la voz.", "en": "Dignified and precise; build from ‘door’ to ‘walk through’ without raising volume." },
+        "es": { "es": "Pulido y persuasivo; marcar puerta y cuándo atravesarla como pruebas, no como retórica.", "en": "Polished and persuasive; stress ‘puerta’ and ‘cuándo atravesarla’ as evidence, not rhetoric." }
+      }
+    },
+    {
+      "id": "audience:dialogue:p2-sorell-respect",
+      "sourceStepId": "master:story-p2",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell defiende su cautela como rigor ético, herida porque Voss la confundió con miedo.", "en": "Sorell defends caution as ethical rigor, stung that Voss mistook it for fear." },
+      "delivery": {
+        "en": { "es": "Cálida pero firme; acelerar levemente la primera frase y separar fear de respect.", "en": "Warm but firm; slightly quicken the first sentence, then clearly separate ‘fear’ from ‘respect.’" },
+        "es": { "es": "Expresiva y culta; contener la ofensa hasta una pausa limpia entre miedo y respeto.", "en": "Expressive and cultivated; contain the hurt until a clean pause between ‘miedo’ and ‘respeto.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:p2-zao-not-hope",
+      "sourceStepId": "master:story-p2",
+      "speakerId": "character:zao",
+      "intent": { "es": "Zao entrega un diagnóstico humano tan seco como una lectura de ingeniería.", "en": "Zao delivers a human diagnosis as dryly as an engineering reading." },
+      "delivery": {
+        "en": { "es": "Íntimo, bajo y absolutamente seguro; apoyar hope y cortar.", "en": "Private, low, and absolutely certain; land on ‘hope’ and stop." },
+        "es": { "es": "Sobrio y concluyente; apoyar esperanza con una caída tonal, sin explicar más.", "en": "Restrained and conclusive; place a falling stress on ‘esperanza,’ then offer no explanation." }
+      }
+    },
+    {
+      "id": "audience:dialogue:p2-voss-faults",
+      "sourceStepId": "master:story-p2",
+      "speakerId": "character:voss",
+      "intent": { "es": "Voss intenta tranquilizarla y, sin saberlo, descarta la advertencia correcta.", "en": "Voss means to reassure her and unknowingly dismisses the correct warning." },
+      "delivery": {
+        "en": { "es": "Barítono sereno con afecto profesional; la segunda frase es una corrección amable, no un reto.", "en": "Calm baritone with professional affection; the second sentence is a gentle correction, not a rebuke." },
+        "es": { "es": "Cadencia institucional y cercana; una pausa pensada antes de todos, sin condescendencia.", "en": "Institutional but familiar cadence; a considered pause before ‘todos,’ never condescending." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3-voss-on-time",
+      "sourceStepId": "master:story-a3",
+      "speakerId": "character:voss",
+      "intent": { "es": "Voss expresa confianza cotidiana en Zao y le concede el tiempo que pide.", "en": "Voss expresses routine trust in Zao and grants the time she asks for." },
+      "delivery": {
+        "en": { "es": "Ligero y seguro, casi casual; repetir on time con cierre definitivo.", "en": "Light and assured, almost casual; repeat ‘on time’ with a definitive close." },
+        "es": { "es": "Autoridad relajada; las dos apariciones de vamos a tiempo suenan a confianza, no a impaciencia.", "en": "Relaxed authority; both instances of ‘vamos a tiempo’ should sound trusting, not impatient." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3b-sorell-no-return",
+      "sourceStepId": "master:story-a3b",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell vuelve audible la irreversibilidad que todos ya sienten.", "en": "Sorell makes audible the irreversibility everyone already feels." },
+      "delivery": {
+        "en": { "es": "Sin prisa, con gravedad tranquila; dejar espacio antes de no turning around.", "en": "Unhurried, with quiet gravity; leave space before ‘no turning around.’" },
+        "es": { "es": "Solemne pero conversacional; pausa después de regreso y caída firme en no hay vuelta atrás.", "en": "Solemn but conversational; pause after ‘regreso’ and fall firmly through ‘no hay vuelta atrás.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-okoye-aggressive",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:okoye",
+      "intent": { "es": "Okoye informa lo que ve con una ironía apenas perceptible.", "en": "Okoye reports what she sees with barely perceptible irony." },
+      "delivery": {
+        "en": { "es": "Directo y observacional; un matiz seco en too aggressive, sin convertirlo en chiste.", "en": "Direct and observational; a dry shade on ‘too aggressive,’ without turning it into a joke." },
+        "es": { "es": "Dicción ecuatoguineana formal y nítida; apoyar demasiado agresiva con sobriedad.", "en": "Crisp formal Equatoguinean diction; give restrained weight to ‘demasiado agresiva.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-elin-phallus",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:rao",
+      "intent": { "es": "Elin encuentra una descripción técnicamente exacta y socialmente incómoda.", "en": "Elin finds a description that is technically exact and socially awkward." },
+      "delivery": {
+        "en": { "es": "Deadpan absoluto; ritmo analítico continuo y ninguna sonrisa audible.", "en": "Absolute deadpan; one continuous analytical rhythm, with no audible smile." },
+        "es": { "es": "Seca, directa y un poco más rápida al llegar a falo; decir Ardor Celestial como dato técnico.", "en": "Dry, direct, and slightly quicker on ‘falo’; say ‘Ardor Celestial’ as technical data." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-elin-name",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:rao",
+      "intent": { "es": "Elin se defiende del absurdo que acaba de señalar sin abandonar el deadpan.", "en": "Elin disowns the absurdity she just identified without breaking deadpan." },
+      "delivery": {
+        "en": { "es": "Muy breve; micro pausa antes de name y final seco.", "en": "Very brief; a micro-pause before ‘name,’ ending dry." },
+        "es": { "es": "Casi sin inflexión; apoyar yo apenas, como una precisión necesaria.", "en": "Nearly flat; lightly stress ‘yo’ as a necessary correction." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-sorell-greeting",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell recoge la broma y la devuelve al trabajo sin apagar la camaradería.", "en": "Sorell catches the joke and turns it back toward the work without killing the camaraderie." },
+      "delivery": {
+        "en": { "es": "Ágil y cálida, con una sonrisa mínima; énfasis práctico en less ambiguous.", "en": "Agile and warm, with the smallest smile; practical emphasis on ‘less ambiguous.’" },
+        "es": { "es": "Culta pero ligera; hagamos incluye al grupo y menos ambiguo vuelve al problema real.", "en": "Cultivated but light; ‘hagamos’ includes the group and ‘menos ambiguo’ returns to the real problem." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-okoye-hello",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:okoye",
+      "intent": { "es": "La curiosidad de Okoye abre la pregunta que la broma estaba evitando.", "en": "Okoye’s curiosity opens the question the joke was avoiding." },
+      "delivery": {
+        "en": { "es": "Más suave que una orden; asombro genuino y ascenso interrogativo contenido.", "en": "Softer than a command; genuine wonder with a restrained questioning rise." },
+        "es": { "es": "Clara y pensativa; sostener nunca has oído responder sin dramatizarlo.", "en": "Clear and thoughtful; sustain ‘nunca has oído responder’ without dramatizing it." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-sorell-primer",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell distingue entre haber recibido una enseñanza y haber mantenido una conversación.", "en": "Sorell distinguishes receiving instruction from having held a conversation." },
+      "delivery": {
+        "en": { "es": "Pedagógico pero íntimo; contraste claro entre wrote y haven’t spoken back.", "en": "Pedagogical but intimate; clearly contrast ‘wrote’ with ‘haven’t spoken back.’" },
+        "es": { "es": "Precisión semántica, sin tono de clase; pausa entre manual y aún no hemos respondido.", "en": "Semantic precision without a classroom tone; pause between ‘manual’ and ‘aún no hemos respondido.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-sorell-silence",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell formula el principio lingüístico que más tarde permitirá leer el silencio Velari.", "en": "Sorell states the linguistic principle that will later make Velari silence legible." },
+      "delivery": {
+        "en": { "es": "Reflexivo y sereno; la primera frase descubre la idea y la segunda la fija.", "en": "Reflective and calm; discover the thought in the first sentence and settle it in the second." },
+        "es": { "es": "Musicalidad contenida; apoyar diciendo algo y elección, sin tono profético.", "en": "Restrained musicality; stress ‘diciendo algo’ and ‘elección,’ without sounding prophetic." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-zao-ai",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:zao",
+      "intent": { "es": "Zao prueba el punto débil del sistema, no la competencia de Sorell.", "en": "Zao tests the system’s weak point, not Sorell’s competence." },
+      "delivery": {
+        "en": { "es": "Pregunta técnica auténtica; directa, sin desafío personal, con leve ascenso final.", "en": "A genuine technical question; direct, not personally challenging, with a slight final rise." },
+        "es": { "es": "Precisa y sobria; énfasis corto en IA y mal, sin ansiedad.", "en": "Precise and restrained; brief emphasis on ‘IA’ and ‘mal,’ without anxiety." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-sorell-misreading",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell admite con honestidad el límite que su especialidad no puede eliminar.", "en": "Sorell honestly admits the limit her expertise cannot remove." },
+      "delivery": {
+        "en": { "es": "Medido y vulnerable; pequeña pausa después de possible, firme en cannot.", "en": "Measured and vulnerable; a small pause after ‘possible,’ then firm on ‘cannot.’" },
+        "es": { "es": "Honestidad incómoda; separar ordenar los patrones de convertir la incertidumbre, sin pedir disculpas.", "en": "Uncomfortable honesty; separate ‘ordenar los patrones’ from ‘convertir la incertidumbre,’ without apologizing." }
+      }
+    },
+    {
+      "id": "audience:dialogue:a3c-harlan-read-wrong",
+      "sourceStepId": "master:story-a3c",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Harlan convierte una pregunta razonable en una insinuación de amenaza.", "en": "Harlan turns a reasonable question into an insinuation of threat." },
+      "delivery": {
+        "en": { "es": "Desde la periferia de la conversación; suave, ecuánime y perturbador sólo en retrospectiva.", "en": "From the edge of the conversation; soft, even, and disturbing only in retrospect." },
+        "es": { "es": "Cortesía estratégica y tono bajo; apoyar nosotros sin revelar hostilidad.", "en": "Strategic courtesy at low volume; lightly stress ‘nosotros’ without revealing hostility." }
+      }
+    },
+    {
+      "id": "audience:dialogue:b2-zao-sabotage",
+      "sourceStepId": "master:story-b2",
+      "speakerId": "character:zao",
+      "intent": { "es": "Zao inicia un informe urgente y controlado antes de que una fuerza externa corte el canal.", "en": "Zao begins an urgent, controlled report before an external force severs the channel." },
+      "delivery": {
+        "en": { "es": "Impulso continuo y dicción de ingeniería; no desvanecerse voluntariamente: la frase es arrancada por estática.", "en": "Continuous forward drive and engineering diction; do not trail off voluntarily—the line is ripped away by static." },
+        "es": { "es": "Rápido pero exacto; sostener he descubierto e intento grave hasta un corte externo abrupto.", "en": "Fast but exact; drive through ‘he descubierto’ and ‘intento grave’ into an abrupt external cutoff." }
+      }
+    },
+    {
+      "id": "audience:dialogue:c1-harlan-recipient",
+      "sourceStepId": "master:story-c1",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Harlan exige el único dato que todavía puede amenazar su plan.", "en": "Harlan demands the only fact that can still threaten his plan." },
+      "delivery": {
+        "en": { "es": "Cerca, bajo y peligroso; consonantes duras y peso sobre who.", "en": "Close, low, and dangerous; hard consonants and weight on ‘who.’" },
+        "es": { "es": "Amenaza contenida; énfasis en a quién y cierre cortante en eso.", "en": "Contained threat; stress ‘a quién’ and cut sharply through ‘eso.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:c2-harlan-earth",
+      "sourceStepId": "master:story-c2",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Razona en voz alta y transforma datos incompletos en la certeza equivocada que lo tranquiliza.", "en": "He reasons aloud, turning incomplete facts into the mistaken certainty that reassures him." },
+      "delivery": {
+        "en": { "es": "Primera frase calculadora; segunda más lenta, con alivio frío al llegar a already there.", "en": "Calculate through the first sentence; slow into cold relief by ‘already there.’" },
+        "es": { "es": "Cadencia de inferencia técnica; la calma aparece recién en ya estemos allí.", "en": "Technical inferential cadence; calm arrives only on ‘ya estemos allí.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:c7-harlan-accuse",
+      "sourceStepId": "master:story-c7",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Fabrica indignación para convertir la imagen de Sorell con el cuerpo en un veredicto inmediato.", "en": "He manufactures outrage to turn the sight of Sorell with the body into an instant verdict." },
+      "delivery": {
+        "en": { "es": "Proyectado hacia testigos; shock duro y limpio, sin dolor real, con Why como golpe final.", "en": "Projected for witnesses; hard, clean shock with no real grief, ‘Why?’ landing as the final blow." },
+        "es": { "es": "Acusación teatral pero creíble; subir en cómo pudiste y comprimir por qué como condena.", "en": "Theatrical but credible accusation; rise through ‘cómo pudiste’ and compress ‘por qué’ into a verdict." }
+      }
+    },
+    {
+      "id": "audience:dialogue:c9-harlan-lie",
+      "sourceStepId": "master:story-c9",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Inserta una mentira pequeña dentro de un recuerdo plausible para activar el prejuicio de Voss.", "en": "He inserts a small lie into a plausible memory to activate Voss’s existing bias." },
+      "delivery": {
+        "en": { "es": "Conversacional, servicial y casi compasivo; ninguna señal audible de invención.", "en": "Conversational, helpful, almost compassionate; no audible sign of invention." },
+        "es": { "es": "Pulido y sereno; pausa reflexiva antes de pensé, como si buscara ser justo con Sorell.", "en": "Polished and calm; a reflective pause before ‘pensé,’ as if trying to be fair to Sorell." }
+      }
+    },
+    {
+      "id": "audience:dialogue:d1-sorell-first-explanation",
+      "sourceStepId": "master:story-d1",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Desde la custodia, Sorell obliga al puente a reconocer que una explicación coherente todavía puede ser falsa.", "en": "From custody, Sorell forces the bridge to admit that a coherent explanation can still be false." },
+      "delivery": {
+        "en": { "es": "Herida pero intelectualmente firme; acelerar la primera acusación y abrir espacio antes de exactly.", "en": "Hurt but intellectually firm; press the first accusation, then leave space before ‘exactly.’" },
+        "es": { "es": "Peninsular culto y directo; marcar estáis y os advertí sin estridencia ni súplica.", "en": "Cultivated, direct Peninsular delivery; mark ‘estáis’ and ‘os advertí’ without shrillness or pleading." }
+      }
+    },
+    {
+      "id": "audience:dialogue:d2-harlan-fuel",
+      "sourceStepId": "master:story-d2",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Vende una hipótesis falsa como una cadena física inevitable y completa.", "en": "He sells a false hypothesis as a complete, inevitable chain of physics." },
+      "delivery": {
+        "en": { "es": "Autoridad técnica fluida; cada consecuencia conduce a la siguiente y miss the window cierra el argumento.", "en": "Fluid technical authority; make each consequence cause the next, with ‘miss the window’ closing the case." },
+        "es": { "es": "Voseo sobrio y seguridad didáctica; ritmo acumulativo hasta no llegamos a la ventana.", "en": "Restrained voseo and instructional confidence; accumulate pressure through ‘no llegamos a la ventana.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:d5-harlan-missed",
+      "sourceStepId": "master:story-d5",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Ofrece una explicación protectora en apariencia que degrada la precisión de Zao y salva su propia teoría.", "en": "He offers an apparently protective explanation that diminishes Zao’s precision and preserves his theory." },
+      "delivery": {
+        "en": { "es": "Empatía falsa y certeza suave; pausa alrededor de to Earth y final definitivo en missed.", "en": "False empathy and gentle certainty; frame ‘to Earth’ with a pause and end definitively on ‘missed.’" },
+        "es": { "es": "Cálido en la superficie; explicar la puntería con paciencia y dejar falló como conclusión inevitable.", "en": "Warm on the surface; explain the aiming patiently and leave ‘falló’ as the inevitable conclusion." }
+      }
+    },
+    {
+      "id": "audience:dialogue:d5-elin-no-miss",
+      "sourceStepId": "master:story-d5",
+      "speakerId": "character:rao",
+      "intent": { "es": "Elin rechaza el único supuesto que contradice todo lo que sabe de Zao.", "en": "Elin rejects the one premise that contradicts everything she knows about Zao." },
+      "delivery": {
+        "en": { "es": "Bajo, inmediato y absoluto; una sola caída tonal, sin discusión.", "en": "Low, immediate, and absolute; one falling contour, with no invitation to debate." },
+        "es": { "es": "Dos palabras como diagnóstico; apoyar no y cerrar con firmeza en falló.", "en": "Two words as a diagnosis; stress ‘no’ and close firmly on ‘falló.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:d5-harlan-frightened",
+      "sourceStepId": "master:story-d5",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Usa una compasión fingida para explicar el supuesto error de Zao.", "en": "He uses feigned compassion to explain Zao’s supposed mistake." },
+      "delivery": {
+        "en": { "es": "Suave, casi amable; frightened parece comprensión y someone coming introduce amenaza sin subrayarla.", "en": "Soft, almost kind; ‘frightened’ sounds understanding, while ‘someone was coming’ introduces threat without emphasis." },
+        "es": { "es": "Ternura falsa y controlada; no cargar alguien, como si sólo protegiera su memoria.", "en": "Controlled false tenderness; do not load ‘alguien,’ as if merely protecting her memory." }
+      }
+    },
+    {
+      "id": "audience:dialogue:d5b-harlan-saved",
+      "sourceStepId": "master:story-d5b",
+      "speakerId": "character:harlan",
+      "intent": { "es": "A solas, lamenta perder la posibilidad de que la historia lo absuelva como salvador.", "en": "Alone, he mourns losing the chance for history to absolve him as a savior." },
+      "delivery": {
+        "en": { "es": "Herida narcisista, baja y sincera; el dolor está en never know, no en saved.", "en": "Low, sincere narcissistic hurt; the pain sits on ‘never know,’ not on ‘saved.’" },
+        "es": { "es": "Lamento íntimo sin triunfo; sostener nunca sabrán y dejar quién los salvó casi sin aire.", "en": "Private lament without triumph; sustain ‘nunca sabrán’ and let ‘quién los salvó’ nearly run out of breath." }
+      }
+    },
+    {
+      "id": "audience:dialogue:e2-zao-goodbye",
+      "sourceStepId": "master:story-e2",
+      "speakerId": "character:zao",
+      "intent": { "es": "Zao termina un registro técnico y acepta en una sola respiración que puede estar dejando sus últimas palabras.", "en": "Zao ends a technical record and accepts in one breath that these may be her last words." },
+      "delivery": {
+        "en": { "es": "Rápido y claro al inicio; una fractura mínima antes de goodbye y alarma controlada en at the door.", "en": "Fast and clear at first; a tiny fracture before ‘goodbye,’ then controlled alarm on ‘at the door.’" },
+        "es": { "es": "Control técnico que apenas se quiebra en adiós; Harlan está en la puerta debe salir urgente, no melodramático.", "en": "Technical control barely cracking on ‘adiós’; ‘Harlan está en la puerta’ must be urgent, not melodramatic." }
+      }
+    },
+    {
+      "id": "audience:dialogue:f4-harlan-answer-earth",
+      "sourceStepId": "master:story-f4",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Ya inmovilizado, acusa al resto desde una convicción que todavía considera moral.", "en": "Restrained and defeated, he accuses the others from a conviction he still considers moral." },
+      "delivery": {
+        "en": { "es": "Respiración corta por el forcejeo; duro en don’t know y quebrado, no grandilocuente, en Earth.", "en": "Breath shortened by the struggle; hard on ‘don’t know,’ then cracked rather than grandiose on ‘Earth.’" },
+        "es": { "es": "Sin aire pero inteligible; cada no es una acusación y Tierra carga el miedo real.", "en": "Breathless but intelligible; each negative is an accusation, and ‘Tierra’ carries the real fear." }
+      }
+    },
+    {
+      "id": "audience:dialogue:f4-harlan-time",
+      "sourceStepId": "master:story-f4",
+      "speakerId": "character:harlan",
+      "intent": { "es": "Expone la lógica de disuasión con la que justificó asesinato y sacrificio colectivo.", "en": "He exposes the deterrence logic with which he justified murder and collective sacrifice." },
+      "delivery": {
+        "en": { "es": "Empieza argumentando, acelera en bites y termina suplicando en needed time; la voz se quiebra, la convicción no.", "en": "Begin as argument, quicken through ‘bites,’ and end pleading on ‘needed time’; the voice cracks, the conviction does not." },
+        "es": { "es": "Frases cortas entre respiraciones; muerde debe sonar deliberado y necesitábamos tiempo, desesperadamente humano.", "en": "Short phrases between breaths; ‘muerde’ should sound deliberate and ‘necesitábamos tiempo’ desperately human." }
+      }
+    },
+    {
+      "id": "audience:dialogue:f5-elin-delayed",
+      "sourceStepId": "master:story-f5",
+      "speakerId": "character:rao",
+      "intent": { "es": "Elin define con precisión el límite de su solución para que nadie confunda demora con desactivación.", "en": "Elin precisely states the limit of her solution so nobody mistakes delay for disarmament." },
+      "delivery": {
+        "en": { "es": "Agotada pero exacta; contraste limpio entre isn’t disarmed y isn’t going off here, sin triunfo.", "en": "Exhausted but exact; cleanly contrast ‘isn’t disarmed’ with ‘isn’t going off here,’ without triumph." },
+        "es": { "es": "Modo técnico concluyente; pausa después de desactivada y alivio contenido sólo en aquí.", "en": "Conclusive technical mode; pause after ‘desactivada,’ allowing restrained relief only on ‘aquí.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:f7-sorell-primer-return",
+      "sourceStepId": "master:story-f7",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell reconoce el peso ceremonial de responder por fin con la estructura que los Velari enseñaron.", "en": "Sorell recognizes the ceremonial weight of finally answering with the structure the Velari taught." },
+      "delivery": {
+        "en": { "es": "Intensidad baja y enfocada; primer en voz íntima, first time con asombro disciplinado.", "en": "Low, focused intensity; make ‘primer’ intimate and ‘first time’ disciplined with awe." },
+        "es": { "es": "Cálida y ceremonial; pausa después de manual y crecer suavemente hacia responder con él.", "en": "Warm and ceremonial; pause after ‘manual’ and build gently toward ‘responder con él.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:g1-voss-sorry",
+      "sourceStepId": "master:story-g1",
+      "speakerId": "character:voss",
+      "intent": { "es": "Voss asume ante Sorell varias decisiones equivocadas sin intentar justificarse.", "en": "Voss owns several wrong decisions before Sorell without trying to justify himself." },
+      "delivery": {
+        "en": { "es": "Muy bajo, con una pausa de valor antes de hablar; sorry lento y completo, sin pedir absolución.", "en": "Very low, with a gathering pause before speech; make ‘sorry’ slow and complete, asking for no absolution." },
+        "es": { "es": "Barítono controlado que pierde apenas firmeza; lo siento carga responsabilidad, no formalidad.", "en": "Controlled baritone losing just a little firmness; ‘lo siento’ carries responsibility, not formality." }
+      }
+    },
+    {
+      "id": "audience:dialogue:g2-sorell-someone",
+      "sourceStepId": "master:story-g2",
+      "speakerId": "character:sorell",
+      "intent": { "es": "Sorell verifica una respuesta imposible antes de permitirse sentir asombro.", "en": "Sorell verifies an impossible answer before allowing herself to feel awe." },
+      "delivery": {
+        "en": { "es": "Primero certeza profesional, luego maravilla contenida en someone; compartir, no celebrar.", "en": "Professional certainty first, then contained wonder on ‘someone’; share the news, do not celebrate." },
+        "es": { "es": "Comenzar como lectura confirmada y abrir la voz apenas en alguien; casi un susurro.", "en": "Begin as a confirmed reading and open the voice slightly on ‘alguien’; almost a whisper." }
+      }
+    },
+    {
+      "id": "audience:dialogue:g3-voss-time",
+      "sourceStepId": "master:story-g3",
+      "speakerId": "character:voss",
+      "intent": { "es": "Voss habla a la imagen de Zao y deja que una frase abarque su advertencia, el rescate y el encuentro.", "en": "Voss speaks to Zao’s image and lets one sentence hold her warning, the rescue, and the encounter." },
+      "delivery": {
+        "en": { "es": "Íntimo, quebrado y cálido; you casi privado y una larga caída sobre in time.", "en": "Intimate, broken, and warm; make ‘you’ almost private, with a long fall through ‘in time.’" },
+        "es": { "es": "Dolor contenido; apoyar llegaste como si Zao estuviera presente y dejar a tiempo abierto a varios sentidos.", "en": "Contained grief; stress ‘llegaste’ as if Zao were present and leave ‘a tiempo’ open to several meanings." }
+      }
+    }
+  ]
+}

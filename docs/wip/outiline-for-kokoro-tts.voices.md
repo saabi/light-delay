@@ -1,6 +1,6 @@
 # Light Delay — multi-speaker TTS outline (English)
 
-Revision 14 (from `general-narrative-outline.en.md`). Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
+Revision 15 (from the master outline). Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Spoken name: Soréll / Soréll’s; keep ASCII [Sorell] only as the speaker tag.
 Dialogue speakers are taken only from attributed master blockquotes (`speakerId` / `> **Name:**`), not from heuristic quote matching.
 Cast/ref: `docs/wip/qwen3-tts-cast.json`, `docs/wip/kokoro-voice-cast.json`.
@@ -9,10 +9,10 @@ Generate: `python scripts/generate-dual-outline-audio.py --lang en --script docs
 ---
 
 [Narrator]
-[PAUSE 1200] Light Delay. General narrative outline. Revision 14.
+[PAUSE 1200] Light Delay. General narrative outline. Revision 15.
 
 [Narrator]
-Working draft, English, revision 14.
+Working draft, English, revision 15.
 
 [Narrator]
 [PAUSE 1200] Purpose of this document
@@ -353,7 +353,7 @@ Zao reads Harlan correctly. After the exchange, she tells Voss quietly:
 
 [Zao]
 [QwenInstruct] Dry, flat correction. Quiet certainty. Almost no emotion on the surface; a sharp observational cut.
-"He wasn’t hoping."
+"That wasn’t hope."
 
 [Narrator]
 Voss dismisses the concern. He trusts Zao’s engineering precision but assumes she is applying the same fault-finding instinct to a person.
@@ -483,7 +483,7 @@ She adds:
 
 [Sorell]
 [QwenInstruct] Quiet pedagogical weight. Soft certainty; let the second sentence land as principle, not flourish.
-"When the mouth goes quiet, that isn’t nothing. Silence is still a choice."
+"When the mouth goes quiet, it is still saying something. Silence is still a choice."
 
 [Narrator]
 Zao asks:
@@ -493,7 +493,11 @@ Zao asks:
 "And if the AI learned it wrong?"
 
 [Narrator]
-Soréll answers honestly. Misreading is possible. The artificial intelligence can organize the patterns, but it cannot turn uncertainty into knowledge.
+Soréll answers honestly:
+
+[Sorell]
+[QwenInstruct] Uncomfortable honesty. Measured admission of limits; no apology, no lecture.
+"Misreading is possible. The AI can arrange the patterns, but it cannot turn uncertainty into knowledge."
 
 [Narrator]
 Harlan says:
@@ -748,8 +752,8 @@ Harlan gives the emission summary a hurried technical inspection. Confirming a d
 [Narrator]
 He reasons instead from the same immediate facts Zao considered.
 
-[Zao]
-[QwenInstruct] Defiant dying clarity. Breath short; force the facts out before he reaches her.
+[Harlan]
+[QwenInstruct] Cold inferential certainty. Quiet, measured; reasoning aloud under time pressure, not defiance.
 "Proxima is behind Jupiter. Earth will not know until we are already there."
 
 [Narrator]

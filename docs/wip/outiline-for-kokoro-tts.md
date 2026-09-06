@@ -1,6 +1,6 @@
-[PAUSE 1200] Light Delay. General narrative outline. Revision 14.
+[PAUSE 1200] Light Delay. General narrative outline. Revision 15.
 
-Working draft, English, revision 14.
+Working draft, English, revision 15.
 
 [PAUSE 1200] Purpose of this document
 
@@ -224,7 +224,7 @@ Delivered defensively, the line can later be remembered as evidence that Soréll
 
 Zao reads Harlan correctly. After the exchange, she tells Voss quietly:
 
-"He wasn’t hoping."
+"That wasn’t hope."
 
 Voss dismisses the concern. He trusts Zao’s engineering precision but assumes she is applying the same fault-finding instinct to a person.
 
@@ -304,13 +304,15 @@ She explains that the pilot mouth supplied examples rather than a single diction
 
 She adds:
 
-"When the mouth goes quiet, that isn’t nothing. Silence is still a choice."
+"When the mouth goes quiet, it is still saying something. Silence is still a choice."
 
 Zao asks:
 
 "And if the AI learned it wrong?"
 
-Soréll answers honestly. Misreading is possible. The artificial intelligence can organize the patterns, but it cannot turn uncertainty into knowledge.
+Soréll answers honestly:
+
+"Misreading is possible. The AI can arrange the patterns, but it cannot turn uncertainty into knowledge."
 
 Harlan says:
 

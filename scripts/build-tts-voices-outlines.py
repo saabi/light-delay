@@ -11,6 +11,7 @@ Usage:
 
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -19,6 +20,21 @@ WIP = ROOT / "docs" / "wip"
 
 EN_SRC = WIP / "general-narrative-outline.en.md"
 ES_SRC = WIP / "general-narrative-outline.es.md"
+AUDIENCE_PERFORMANCE_SRC = (
+    ROOT / "data" / "production" / "audio" / "audience-dialogue-performance.json"
+)
+MASTER_OUTLINE_SRC = ROOT / "data" / "outlines" / "light-delay-master-narrative.json"
+VOICE_PROFILES_SRC = ROOT / "data" / "voice-profiles.json"
+
+CHARACTER_ID_BY_SPEAKER = {
+    "Zao": "character:zao",
+    "Voss": "character:voss",
+    "Harlan": "character:harlan",
+    "Elin": "character:rao",
+    "Sorell": "character:sorell",
+    "Okoye": "character:okoye",
+    "Cael": "character:cael",
+}
 
 # Performance directs keyed by EN quote (normalized). Spanish file uses the same
 # keys after normalizing guillemets to the EN surface for lookup when possible;
@@ -37,6 +53,9 @@ INSTRUCT_EN: dict[str, str] = {
         "Warm but firm. Defending rigor as respect, not panic. Precise diction; slight French-English musicality without caricature."
     ),
     "he wasn't hoping.": (
+        "Dry, flat correction. Quiet certainty. Almost no emotion on the surface; a sharp observational cut."
+    ),
+    "that wasn't hope.": (
         "Dry, flat correction. Quiet certainty. Almost no emotion on the surface; a sharp observational cut."
     ),
     "you find faults for a living. that doesn't make everyone a fault.": (
@@ -69,6 +88,9 @@ INSTRUCT_EN: dict[str, str] = {
     "when the mouth goes quiet, that isn't nothing. silence is still a choice.": (
         "Quiet pedagogical weight. Soft certainty; let the second sentence land as principle, not flourish."
     ),
+    "when the mouth goes quiet, it is still saying something. silence is still a choice.": (
+        "Quiet pedagogical weight. Soft certainty; let the second sentence land as principle, not flourish."
+    ),
     "and if the ai learned it wrong?": (
         "Careful technical worry. Controlled; a real risk stated without panic."
     ),
@@ -76,6 +98,9 @@ INSTRUCT_EN: dict[str, str] = {
         "Careful technical worry. Controlled; a real risk stated without panic."
     ),
     "misreading is possible. the ai can arrange the patterns, but it cannot convert uncertainty into knowledge.": (
+        "Uncomfortable honesty. Measured admission of limits; no apology, no lecture."
+    ),
+    "misreading is possible. the ai can arrange the patterns, but it cannot turn uncertainty into knowledge.": (
         "Uncomfortable honesty. Measured admission of limits; no apology, no lecture."
     ),
     "se puede interpretar mal. la ia puede ordenar los patrones, pero no puede convertir la incertidumbre en conocimiento.": (
@@ -264,14 +289,41 @@ def speaker_from_label(label: str) -> str:
     raise ValueError(f"Unrecognized dialogue speaker label: {label!r}")
 
 
-def sorell_spoken(text: str, *, lang: str) -> str:
-    # Spoken form Soréll; never rewrite [Sorell] tags (those are added separately).
-    text = re.sub(r"\bSorell’s\b", "Soréll’s", text)
-    text = re.sub(r"\bSorell's\b", "Soréll's", text)
-    text = re.sub(r"\bSorell\b", "Soréll", text)
-    if lang == "es":
-        text = re.sub(r"\bde Soréll\b", "de Soréll", text)
-    return text
+def load_pronunciation_maps() -> dict[str, dict[str, str]]:
+    """Collect canonical-to-spoken forms for each target language."""
+    data = json.loads(VOICE_PROFILES_SRC.read_text(encoding="utf-8"))
+    maps: dict[str, dict[str, str]] = {"es": {}, "en": {}}
+    for profile in data.get("voiceProfiles", []):
+        for variant in profile.get("variants", []):
+            lang = variant.get("language")
+            if lang not in maps:
+                continue
+            for written, spoken in variant.get("pronunciationMap", {}).items():
+                existing = maps[lang].get(written)
+                if existing is not None and existing != spoken:
+                    raise ValueError(
+                        f"Conflicting {lang} pronunciation for {written!r}: "
+                        f"{existing!r} / {spoken!r}"
+                    )
+                maps[lang][written] = spoken
+    return maps
+
+
+PRONUNCIATION_MAPS = load_pronunciation_maps()
+
+
+def apply_pronunciations(text: str, *, lang: str) -> str:
+    """Return TTS-only spelling without changing canonical editorial copy."""
+    result = text
+    for written, spoken in sorted(
+        PRONUNCIATION_MAPS.get(lang, {}).items(), key=lambda item: len(item[0]), reverse=True
+    ):
+        result = re.sub(
+            rf"(?<!\w){re.escape(written)}(?!\w)",
+            lambda _match, replacement=spoken: replacement,
+            result,
+        )
+    return result
 
 
 def expand_en_speakables(text: str) -> str:
@@ -327,28 +379,28 @@ ATTR_RE = re.compile(
 )
 
 
-def parse_blocks(md: str) -> list[tuple[str, str]]:
-    """Return list of (kind, text) where kind is heading|para|dialogue|listitem|skip."""
-    # Drop generated banner / HTML comments
-    md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+def parse_blocks(md: str) -> list[tuple[str, str, str | None]]:
+    """Return Markdown blocks and the stable ID attached to each dialogue."""
     lines = md.splitlines()
-    blocks: list[tuple[str, str]] = []
+    blocks: list[tuple[str, str, str | None]] = []
     buf: list[str] = []
     mode = None  # para | dialogue | list
+    pending_dialogue_id: str | None = None
 
     def flush():
-        nonlocal buf, mode
+        nonlocal buf, mode, pending_dialogue_id
         if not buf:
             mode = None
             return
         text = "\n".join(buf).strip()
         buf = []
         if mode == "dialogue":
-            blocks.append(("dialogue", text))
+            blocks.append(("dialogue", text, pending_dialogue_id))
+            pending_dialogue_id = None
         elif mode == "list":
-            blocks.append(("list", text))
+            blocks.append(("list", text, None))
         else:
-            blocks.append(("para", text))
+            blocks.append(("para", text, None))
         mode = None
 
     for ln in lines:
@@ -356,10 +408,36 @@ def parse_blocks(md: str) -> list[tuple[str, str]]:
             flush()
             continue
         if ln.startswith("#"):
+            if pending_dialogue_id is not None:
+                raise ValueError(
+                    f"Dialogue ID {pending_dialogue_id!r} is not followed by dialogue"
+                )
             flush()
-            blocks.append(("heading", ln.strip()))
+            blocks.append(("heading", ln.strip(), None))
             continue
         if ln.strip() == "---":
+            if pending_dialogue_id is not None:
+                raise ValueError(
+                    f"Dialogue ID {pending_dialogue_id!r} is not followed by dialogue"
+                )
+            flush()
+            continue
+        id_match = re.fullmatch(
+            r"\s*<!--\s*audience-dialogue-id:\s*([^\s]+)\s*-->\s*", ln
+        )
+        if id_match:
+            flush()
+            if pending_dialogue_id is not None:
+                raise ValueError(
+                    f"Dialogue ID {pending_dialogue_id!r} is not followed by dialogue"
+                )
+            pending_dialogue_id = id_match.group(1)
+            continue
+        if ln.lstrip().startswith("<!--"):
+            if pending_dialogue_id is not None:
+                raise ValueError(
+                    f"Dialogue ID {pending_dialogue_id!r} is not followed by dialogue"
+                )
             flush()
             continue
         if ln.startswith(">"):
@@ -368,6 +446,10 @@ def parse_blocks(md: str) -> list[tuple[str, str]]:
             mode = "dialogue"
             buf.append(ln)
             continue
+        if pending_dialogue_id is not None:
+            raise ValueError(
+                f"Dialogue ID {pending_dialogue_id!r} is not followed by dialogue"
+            )
         if re.match(r"^[-*]\s+", ln) or re.match(r"^\d+\.\s+", ln):
             if mode not in (None, "list"):
                 flush()
@@ -379,11 +461,64 @@ def parse_blocks(md: str) -> list[tuple[str, str]]:
         mode = "para"
         buf.append(ln)
     flush()
+    if pending_dialogue_id is not None:
+        raise ValueError(f"Dialogue ID {pending_dialogue_id!r} has no dialogue block")
     return blocks
 
 
+def collect_json_values(node: object, key: str) -> set[str]:
+    values: set[str] = set()
+    if isinstance(node, dict):
+        value = node.get(key)
+        if isinstance(value, str):
+            values.add(value)
+        for child in node.values():
+            values.update(collect_json_values(child, key))
+    elif isinstance(node, list):
+        for child in node:
+            values.update(collect_json_values(child, key))
+    return values
+
+
+def load_audience_performance() -> dict[str, dict]:
+    data = json.loads(AUDIENCE_PERFORMANCE_SRC.read_text(encoding="utf-8"))
+    entries = data.get("entries", [])
+    by_id = {entry["id"]: entry for entry in entries}
+    if len(by_id) != len(entries):
+        raise ValueError("Duplicate IDs in audience dialogue performance data")
+
+    master = json.loads(MASTER_OUTLINE_SRC.read_text(encoding="utf-8"))
+    if data.get("narrativeId") != "audience:light-delay-master":
+        raise ValueError("Audience narrativeId must be stable and must not embed a revision")
+    if data.get("sourceOutlineId") != master.get("outline", {}).get("id"):
+        raise ValueError("Audience sourceOutlineId does not match the master outline")
+    master_ids = collect_json_values(master, "id")
+    master_speakers = collect_json_values(master, "speakerId")
+    for entry in entries:
+        if entry["sourceStepId"] not in master_ids:
+            raise ValueError(
+                f"Unknown master sourceStepId for {entry['id']}: {entry['sourceStepId']}"
+            )
+        if entry["speakerId"] not in master_speakers:
+            raise ValueError(
+                f"Unknown master speakerId for {entry['id']}: {entry['speakerId']}"
+            )
+    return by_id
+
+
+def audience_instruct(entry: dict, *, lang: str) -> str:
+    intent = entry["intent"]["en"].strip()
+    delivery = entry["delivery"][lang]["en"].strip()
+    language = "English" if lang == "en" else "Spanish"
+    instruction = (
+        f"Speak {language}. Dramatic situation: {intent} "
+        f"Performance and delivery: {delivery}"
+    )
+    return instruction
+
+
 def cue_narrator(text: str, *, lang: str) -> str:
-    text = sorell_spoken(text, lang=lang)
+    text = apply_pronunciations(text, lang=lang)
     if lang == "en":
         text = expand_en_speakables(text)
     text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
@@ -399,7 +534,7 @@ def cue_pause(label: str) -> str:
 def audience_heading_cues(
     title: str, *, lang: str, chapter_i: list[int]
 ) -> list[str]:
-    """Audience titles: pause after Prologue/Prólogo; Chapter/Capítulo N. Title (period = short pause)."""
+    """Speak section labels alone, then pause before the section title."""
     t = title.strip()
     m = re.match(r"^(Prologue|Prólogo)\s*[.—–-]\s*(.+)$", t, flags=re.I)
     if m:
@@ -413,13 +548,13 @@ def audience_heading_cues(
         chapter_i[0] = max(chapter_i[0], n)
         body = m.group(2).strip()
         prefix = f"Chapter {n}" if lang == "en" else f"Capítulo {n}"
-        return [cue_pause(f"{prefix}. {body}")]
+        return [cue_narrator(f"{prefix}.", lang=lang), cue_pause(body)]
 
     # Unnumbered H2: assign next chapter number (prologue already handled above).
     chapter_i[0] += 1
     n = chapter_i[0]
     prefix = f"Chapter {n}" if lang == "en" else f"Capítulo {n}"
-    return [cue_pause(f"{prefix}. {t}")]
+    return [cue_narrator(f"{prefix}.", lang=lang), cue_pause(t)]
 
 
 def build_voices(
@@ -428,18 +563,19 @@ def build_voices(
     lang: str,
     revision: str,
     instruct_by_index: list[str] | None = None,
+    performance_by_id: dict[str, dict] | None = None,
     source: str = "outline",
-) -> tuple[str, list[tuple[str, str]], list[str], list[str]]:
+) -> tuple[str, list[tuple[str | None, str, str]], list[str], list[str]]:
     blocks = parse_blocks(md)
     out: list[str] = []
     if source == "audience":
         if lang == "en":
             out.append(
                 "# Light Delay — audience narrative TTS (English)\n\n"
-                f"Revision {revision} (from `audience-narrative.en.md`). "
+                f"Revision {revision} (from the master outline). "
                 "Chaptered short story for listeners; no production frontmatter.\n"
                 "Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].\n"
-                "Spoken name: Soréll; tag stays ASCII [Sorell]. "
+                "Spoken name: Soréll; tag and editorial spelling stay ASCII [Sorell]. "
                 "Dialogue from attributed blockquotes only.\n"
                 "Cast/ref: `docs/wip/qwen3-tts-cast.json`.\n"
                 "Generate: `python scripts/generate-dual-outline-audio.py --lang en "
@@ -448,11 +584,11 @@ def build_voices(
             )
         else:
             out.append(
-                "# Light Delay — relato TTS para público (español)\n\n"
-                f"Revisión {revision} (desde `audience-narrative.es.md`). "
+                "# Lúz Tardía — relato TTS para público (español)\n\n"
+                f"Revisión {revision} (desde la escaleta maestra). "
                 "Relato por capítulos; sin frontmatter de producción.\n"
                 "Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].\n"
-                "Nombre hablado: Soréll; etiqueta [Sorell]. "
+                "Nombre hablado: Sorél; la grafía editorial y la etiqueta siguen como [Sorell]. "
                 "Diálogo sólo desde citas atribuidas.\n"
                 "Cast/ref: `docs/wip/qwen3-tts-cast.es.json`.\n"
                 "Generar: `python scripts/generate-dual-outline-audio.py --lang es "
@@ -463,13 +599,13 @@ def build_voices(
             cue_pause(
                 f"Light Delay. Revision {revision}."
                 if lang == "en"
-                else f"Light Delay. Revisión {revision}."
+                else f"Lúz Tardía. Revisión {revision}."
             )
         )
     elif lang == "en":
         out.append(
             "# Light Delay — multi-speaker TTS outline (English)\n\n"
-            f"Revision {revision} (from `general-narrative-outline.en.md`). "
+            f"Revision {revision} (from the master outline). "
             "Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].\n"
             "Spoken name: Soréll / Soréll’s; keep ASCII [Sorell] only as the speaker tag.\n"
             "Dialogue speakers are taken only from attributed master blockquotes "
@@ -485,10 +621,10 @@ def build_voices(
         )
     else:
         out.append(
-            "# Light Delay — esquema TTS multi-voz (español)\n\n"
-            f"Revisión {revision} (desde `general-narrative-outline.es.md`). "
+            "# Lúz Tardía — esquema TTS multi-voz (español)\n\n"
+            f"Revisión {revision} (desde la escaleta maestra). "
             "Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].\n"
-            "Nombre hablado: Soréll; la etiqueta del hablante sigue en ASCII [Sorell].\n"
+            "Nombre hablado: Sorél; la grafía editorial y la etiqueta siguen en ASCII [Sorell].\n"
             "Los hablantes de diálogo salen sólo de las citas atribuidas del master "
             "(`speakerId` / `> **Nombre:**`), no de heurísticas sobre comillas.\n"
             "Los [QwenInstruct] son los mismos directores de interpretación que en inglés "
@@ -499,17 +635,18 @@ def build_voices(
         )
         out.append(
             cue_pause(
-                f"Light Delay. Escaleta narrativa general. Revisión {revision}."
+                f"Lúz Tardía. Escaleta narrativa general. Revisión {revision}."
             )
         )
 
     missing_instruct: list[str] = []
-    dialogue_log: list[tuple[str, str]] = []
+    dialogue_log: list[tuple[str | None, str, str]] = []
     instructs_out: list[str] = []
     dialogue_i = 0
     audience_chapter_i = [0]
+    used_performance_ids: set[str] = set()
 
-    for kind, text in blocks:
+    for kind, text, dialogue_id in blocks:
         if kind == "heading":
             level = len(text) - len(text.lstrip("#"))
             title = re.sub(r"^#+\s*", "", text).strip()
@@ -525,7 +662,7 @@ def build_voices(
                 )
                 continue
             spoken = speak_heading(title, lang=lang)
-            spoken = sorell_spoken(spoken, lang=lang)
+            spoken = apply_pronunciations(spoken, lang=lang)
             if lang == "en":
                 spoken = expand_en_speakables(spoken)
             out.append(cue_pause(spoken))
@@ -545,7 +682,29 @@ def build_voices(
             quote = re.sub(r"\*([^*]+)\*", r"\1", quote)
             speaker = speaker_from_label(label)
             key = norm_quote(quote)
-            if instruct_by_index is not None and dialogue_i < len(instruct_by_index):
+            if source == "audience":
+                if performance_by_id is None:
+                    raise ValueError("Audience performance data was not supplied")
+                if dialogue_id is None:
+                    raise ValueError(
+                        f"Audience dialogue has no stable ID: {speaker}: {quote[:80]}"
+                    )
+                if dialogue_id in used_performance_ids:
+                    raise ValueError(f"Duplicate audience dialogue ID: {dialogue_id}")
+                entry = performance_by_id.get(dialogue_id)
+                if entry is None:
+                    raise ValueError(
+                        f"No performance entry for audience dialogue ID: {dialogue_id}"
+                    )
+                expected_speaker = CHARACTER_ID_BY_SPEAKER.get(speaker)
+                if entry["speakerId"] != expected_speaker:
+                    raise ValueError(
+                        f"Speaker mismatch for {dialogue_id}: Markdown {expected_speaker}, "
+                        f"performance data {entry['speakerId']}"
+                    )
+                instruct = audience_instruct(entry, lang=lang)
+                used_performance_ids.add(dialogue_id)
+            elif instruct_by_index is not None and dialogue_i < len(instruct_by_index):
                 instruct = instruct_by_index[dialogue_i]
             else:
                 instruct = INSTRUCT_EN.get(key) or INSTRUCT_EN.get(key.lstrip("¿¡"))
@@ -555,10 +714,11 @@ def build_voices(
                 )
                 missing_instruct.append(f"{speaker}: {quote[:80]}")
             instructs_out.append(instruct)
-            dialogue_log.append((speaker, quote[:60]))
+            instruct = apply_pronunciations(instruct, lang=lang)
+            dialogue_log.append((dialogue_id, speaker, quote[:60]))
             dialogue_i += 1
 
-            quote = sorell_spoken(quote, lang=lang)
+            quote = apply_pronunciations(quote, lang=lang)
             spoken = quote.strip().strip("«»\"“”").strip()
             spoken = f'"{spoken}"'
             out.append(
@@ -567,7 +727,7 @@ def build_voices(
             continue
 
         if kind == "list":
-            items = [sorell_spoken(i, lang=lang) for i in text.splitlines() if i.strip()]
+            items = [apply_pronunciations(i, lang=lang) for i in text.splitlines() if i.strip()]
             if lang == "en":
                 items = [expand_en_speakables(i) for i in items]
             out.append(cue_narrator(" ".join(items), lang=lang))
@@ -583,6 +743,13 @@ def build_voices(
                 continue
             out.append(cue_narrator(text, lang=lang))
             continue
+
+    if source == "audience" and performance_by_id is not None:
+        unused = sorted(set(performance_by_id) - used_performance_ids)
+        if unused:
+            raise ValueError(
+                f"Performance entries not used by {lang} audience source: {unused}"
+            )
 
     body = "\n".join(out)
     body = re.sub(r"\n{3,}", "\n\n", body)
@@ -616,29 +783,37 @@ def write_pair(
 ) -> None:
     en_md = en_src.read_text(encoding="utf-8")
     es_md = es_src.read_text(encoding="utf-8")
-    rev_en = re.search(r"revision\s+(\d+)", en_md, re.I)
-    rev_es = re.search(r"revisión\s+(\d+)", es_md, re.I)
-    revision = (rev_en or rev_es).group(1) if (rev_en or rev_es) else "14"
+    master = json.loads(MASTER_OUTLINE_SRC.read_text(encoding="utf-8"))
+    revision_value = master.get("outline", {}).get("revision")
+    if not isinstance(revision_value, int):
+        raise ValueError("Master outline revision must be an integer")
+    revision = str(revision_value)
+    performance_by_id = load_audience_performance() if source == "audience" else None
 
     en_voices, en_log, en_miss, en_instructs = build_voices(
-        en_md, lang="en", revision=revision, source=source
+        en_md,
+        lang="en",
+        revision=revision,
+        performance_by_id=performance_by_id,
+        source=source,
     )
     es_voices, es_log, es_miss, _ = build_voices(
         es_md,
         lang="es",
         revision=revision,
         instruct_by_index=en_instructs,
+        performance_by_id=performance_by_id,
         source=source,
     )
 
     assert len(en_log) == len(es_log), f"dialogue count EN {len(en_log)} != ES {len(es_log)}"
     mismatches = [
         (i, a, b)
-        for i, ((a, _), (b, _)) in enumerate(zip(en_log, es_log))
-        if a != b
+        for i, (a, b) in enumerate(zip(en_log, es_log))
+        if a[:2] != b[:2]
     ]
     if mismatches:
-        raise SystemExit(f"Speaker parity mismatch: {mismatches[:10]}")
+        raise SystemExit(f"Dialogue ID/speaker parity mismatch: {mismatches[:10]}")
 
     en_voices_out.write_text(en_voices, encoding="utf-8")
     es_voices_out.write_text(es_voices, encoding="utf-8")
@@ -651,9 +826,10 @@ def write_pair(
         f"Wrote {source}: dialogues={len(en_log)} revision={revision} "
         f"-> {en_voices_out.name} / {es_voices_out.name}"
     )
-    for i, ((a, qa), (b, qb)) in enumerate(zip(en_log, es_log)):
-        print(f"  {i:02d} {a:7} | {qa[:50]!r}")
-        print(f"       {b:7} | {qb[:50]!r}")
+    for i, ((dialogue_id, a, qa), (_, b, qb)) in enumerate(zip(en_log, es_log)):
+        id_label = dialogue_id or "legacy-quote"
+        print(f"  {i:02d} {a:7} {id_label} | {qa[:50]!r}")
+        print(f"       {b:7} {'':{len(id_label)}} | {qb[:50]!r}")
     if en_miss:
         print("EN missing curated instruct (used fallback):", len(en_miss))
         for m in en_miss:

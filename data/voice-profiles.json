@@ -1,5 +1,5 @@
 {
-	"schemaVersion": "1.2.0",
+	"schemaVersion": "1.3.0",
 	"voiceProfiles": [
 		{
 			"id": "voice:zao-es",
@@ -196,7 +196,8 @@
 					"dialogueStyle": {
 						"es": "Español peninsular culto y expresivo. Usa tú con cercanos, usted en situaciones ceremoniales y vosotros sólo cuando el destinatario plural lo vuelve natural; evita coloquialismos cerrados y formula metáforas con precisión lingüística.",
 						"en": "Cultivated, expressive Peninsular Spanish. She uses tú with close colleagues, usted ceremonially, and vosotros only when a plural audience makes it natural; she avoids opaque slang and formulates metaphors with linguistic precision."
-					}
+					},
+					"pronunciationMap": { "Sorell": "Sorél" }
 				},
 				{
 					"language": "en",
@@ -212,7 +213,8 @@
 					"dialogueStyle": {
 						"es": "Inglés canadiense preciso y pedagógico, con contracciones naturales y preguntas que abren una idea. Su especialidad aparece en elecciones semánticas cuidadas, no en explicaciones para el público.",
 						"en": "Precise, pedagogical Canadian English, with natural contractions and questions that open an idea. Her expertise appears in careful semantic choices, not explanations aimed at the audience."
-					}
+					},
+					"pronunciationMap": { "Sorell": "Soréll" }
 				}
 			]
 		},
@@ -233,7 +235,7 @@
 		{
 			"id": "voice:proxima-technician-es",
 			"characterId": "character:proxima-technician",
-			"name": "Técnico de Proxima (es)",
+			"name": "Técnico de Próxima (es)",
 			"description": {
 				"es": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
 				"en": "Dock maintenance, schedule pressure, and operational discipline."

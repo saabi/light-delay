@@ -1,10 +1,41 @@
 # Estado del proyecto
 
+## 2026-09-06 — Localización y autoridad del pipeline TTS
+
+- La narrativa vigente y el relato para público escriben **Lúz Tardía** y
+  **Próxima** en español; las formas inglesas siguen como **Light Delay** y **Proxima**.
+- El builder obtiene la revisión de `light-delay-master-narrative.json`, no de los
+  Markdown. `audience-dialogue-performance.json` tiene identidad estable y referencia
+  explícita al outline que gobierna su revisión.
+- Los once capítulos separan el número pronunciado de su título mediante una pausa
+  de 1200 ms. `Sorell` permanece en las fuentes; el mapa de la variante de voz genera
+  **Soréll** (EN) o **Sorél** (ES).
+- Las instrucciones Qwen declaran idioma, situación dramática y entrega en lenguaje
+  natural. Los derivados Markdown están actualizados; los MP3 previos quedan obsoletos.
+
+## 2026-09-06 — Relato para público rev. 15 y dirección de interpretación estable
+
+- El relato EN recibió una revisión narrativa profunda; la versión ES se reescribió
+  en presente con la misma estructura causal, orden de revelaciones y 12 secciones.
+- Las dos fuentes contienen 36 intervenciones audibles enlazadas por
+  `audience-dialogue-id`; ya no se sincronizan por índice ni por el texto traducido.
+- `data/production/audio/audience-dialogue-performance.json` conserva intención
+  dramática bilingüe e indicaciones específicas para interpretar cada idioma.
+- El builder falla ante IDs ausentes/duplicados, pasos master inválidos o hablantes
+  discordantes. `npm run tts:audience:check` verifica también fuentes y derivados.
+- La escaleta maestra pasa a revisión 15 con los diálogos corregidos y sus exports
+  Markdown regenerados. Conserva 38 citas; el relato oye 36 porque omite la cita
+  de encuadre P1 y reproduce la despedida de Zao sólo en E2, no en B7.
+- Los MP3 marcados como listos en las entradas anteriores son ahora **obsoletos**
+  frente al texto y las direcciones rev. 15. Queda pendiente regenerarlos; en esta
+  tarea sólo se reconstruyeron los Markdown de voces, no audio.
+
 ## 2026-09-06 — Audience: Ardor Celestial + pausa tras número de capítulo
 
 - ES: nombre completo de la nave **Ardor Celestial** (antes «Celestial Ardor»).
 - Capítulos EN/ES: `Chapter N. …` / `Capítulo N. …` (punto = pausa corta TTS).
-- Pendiente regen MP3 tras este pase.
+- **Listo:** `light-delay-audience-dual-es.mp3` (~47.7 min);
+  `light-delay-audience-dual-en.mp3` (~51.0 min).
 
 ## 2026-09-06 — Audience: pausa tras Prólogo + Capítulos numerados
 

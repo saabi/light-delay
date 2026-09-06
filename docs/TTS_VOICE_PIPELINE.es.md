@@ -134,55 +134,87 @@ python scripts/generate-dual-outline-audio.py --lang en --assemble-only
 python scripts/generate-dual-outline-audio.py --lang es
 ```
 
-Scripts TTS multi-voz (rev. 14, 37 diálogos atribuidos desde el master):
+Scripts TTS multi-voz de la escaleta (rev. 15, 38 citas atribuidas desde el master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
 - Rebuild desde exports MD: `python scripts/build-tts-voices-outlines.py`
 
-Relato para público (capítulos, sin frontmatter; 35 diálogos audibles):
+Relato para público (12 secciones, sin frontmatter; **36 diálogos audibles**):
 
 - ES/EN prosa: `docs/wip/audience-narrative.es.md` / `.en.md`
 - TTS: `docs/wip/audience-narrative.voices.es.md` / `.voices.en.md`
-- Rebuild: `python scripts/build-tts-voices-outlines.py --source audience`
+- Dirección por ID: `data/production/audio/audience-dialogue-performance.json`
+- Revisión: se obtiene exclusivamente de `data/outlines/light-delay-master-narrative.json`
+- Rebuild: `npm run tts:audience:build`
+- Verificación de estructura, paridad, atribución y derivados:
+  `npm run tts:audience:check`
 - Ejemplo: `python scripts/generate-dual-outline-audio.py --lang es --script docs/wip/audience-narrative.voices.es.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/es-audience`
+
+Cada cita audible lleva un comentario estable `audience-dialogue-id` en ambas
+fuentes. Ese ID, no el índice ni el texto traducido, selecciona una entrada con:
+
+- intención dramática compartida y bilingüe;
+- indicación específica para interpretación EN;
+- indicación específica para interpretación ES.
+
+El builder compone una directiva `[QwenInstruct]` natural en inglés, declara el
+idioma objetivo y combina situación dramática con entrega específica. No
+hay fallback genérico en el relato para público: un ID ausente, duplicado, sin
+paso master válido o atribuido a otro personaje detiene la generación.
+
+La API oficial documenta `instruct` para VoiceDesign y CustomVoice 1.7B. Este
+pipeline conserva el timbre clonado con Base mediante `instruct_ids` internos;
+por eso todo cambio de dirección requiere escucha comparativa antes de aprobar audio.
+Véase [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) y su
+[informe técnico](https://arxiv.org/abs/2601.15621).
+
+La diferencia de conteo es deliberada: el master contiene 38 citas. El relato
+omite la cita de encuadre P1 y hace audible la despedida de Zao sólo en E2 —no en
+su primera aparición de B7— para preservar la revelación; por eso contiene 36.
+
+Los Markdown `audience-narrative.voices.*.md` son derivados y se reconstruyen
+después de editar las fuentes o la dirección. Los MP3 y chunks existentes quedan
+obsoletos cuando cambia cualquiera de esos insumos; este comando **no** los
+regenera.
 
 Flags útiles: `--chunks-dir`, `--force-all`, `--no-assemble`, `--limit`,
 `--dialogue-only-limit`, `--whisper-ref-text`.
 
 ## 5. Pronunciación de Sorell en texto para audio
 
-**Problema:** «Sorell» en ASCII suena mal en Kokoro/Qwen (aprox. «sorel» / «sore-ell»).
-La forma hablada deseada es **Soréll** (acento en la e).
+**Problema:** la grafía editorial `Sorell` necesita una ayuda distinta por idioma.
+La forma hablada es **Soréll** en inglés y **Sorél** en español.
 
 ### Reglas
 
 1. **Etiqueta de hablante** (metadato, no se lee): siempre ASCII
    `[Sorell]`
-2. **Texto narrado o diálogo que nombra al personaje:** usar la forma acentuada
-   `Soréll` / `Soréll’s` (EN) · `Soréll` / `de Soréll` (ES)
-3. **No usar spans Misaki IPA** que combinen la etiqueta `Sorell` con la transcripción
+2. **Fuentes narrativas y datos editoriales:** conservar `Sorell`.
+3. **Texto compilado para voz:** `Soréll` / `Soréll’s` (EN) y `Sorél` (ES),
+   mediante `voiceProfiles[].variants[].pronunciationMap`.
+4. **No usar spans Misaki IPA** que combinen la etiqueta `Sorell` con la transcripción
    `/səˈɹɛl/` mediante sintaxis de enlace; con Kokoro ONNX el
    runtime lee el span como texto literal. Preferir la grafía `Soréll`.
-4. El formateador `scripts/format-outline-for-kokoro.mjs` **no** debe reintroducir
+5. El formateador `scripts/format-outline-for-kokoro.mjs` **no** debe reintroducir
    IPA; el script de voces documenta la convención en la cabecera de
    `docs/wip/outiline-for-kokoro-tts.voices.md` (+ `.voices.es.md`).
-5. Prueba A/B: `python scripts/test-sorell-pronunciation.py`
+6. Prueba A/B: `python scripts/test-sorell-pronunciation.py`
    → `E:/Models/Qwen3-TTS/output/pronunciation-tests/sorell-pronunciation-ab.wav`
 
 ### Ejemplo
 
 ```markdown
 [Narrator]
-With artificial intelligence assistance, Soréll has spent months studying the sequence.
+With artificial intelligence assistance, Sorell has spent months studying the sequence.
 
 [Sorell]
 [QwenInstruct] Ceremonial resolve.
 "They wrote the primer. This is the first time they’ll hear us read it back."
 ```
 
-Misma regla al preparar guiones o outlines futuros destinados a TTS: **tag ASCII,
-nombre hablado con tilde**.
+La transformación ocurre al generar los derivados TTS. El topónimo español
+**Próxima**, en cambio, se escribe correctamente desde la fuente y no pertenece al mapa fonético.
 
 ## 6. Referencias rápidas
 

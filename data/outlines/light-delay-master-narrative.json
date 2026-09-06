@@ -4,7 +4,7 @@
     "id": "outline:light-delay-master-narrative",
     "scriptId": "script:light-delay-master-narrative",
     "title": {
-      "es": "Escaleta — Light Delay: narrativa maestra sin límite (WIP)",
+      "es": "Escaleta — Lúz Tardía: narrativa maestra sin límite (WIP)",
       "en": "Outline — Light Delay: unconstrained master narrative (WIP)"
     },
     "synopsis": {
@@ -12,8 +12,8 @@
       "en": "Authoritative bilingual master narrative, still WIP and unconstrained by duration. Earlier screenplays and cuts are deprecated until new versions can be derived."
     },
     "status": "draft",
-    "version": "0.5.0-wip",
-    "revision": 14,
+    "version": "0.5.1-wip",
+    "revision": 15,
     "provenance": {
       "importedFrom": [
         {
@@ -268,35 +268,35 @@
           "type": "heading",
           "level": 3,
           "text": {
-            "es": "Estación Proxima",
+            "es": "Estación Próxima",
             "en": "Proxima Station"
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Proxima es una estación de investigación de Júpiter ubicada en L1 Sol–Júpiter, con una masa aproximada de 217.000 toneladas.",
+            "es": "Próxima es una estación de investigación de Júpiter ubicada en L1 Sol–Júpiter, con una masa aproximada de 217.000 toneladas.",
             "en": "Proxima is a Jupiter research station at Sun–Jupiter L1, with a mass of approximately 217,000 tonnes."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "La Ardor y su tripulación de seis personas pertenecen a la misión de investigación de Proxima. No son diplomáticos ni un equipo construido expresamente para el contacto. Son la nave y las personas que ya se encuentran lo bastante cerca como para cumplir el cronograma.",
+            "es": "La Ardor y su tripulación de seis personas pertenecen a la misión de investigación de Próxima. No son diplomáticos ni un equipo construido expresamente para el contacto. Son la nave y las personas que ya se encuentran lo bastante cerca como para cumplir el cronograma.",
             "en": "The Ardor and its six-person crew belong to Proxima’s research mission. They are not diplomats or a purpose-built contact team. They are the ship and people already positioned close enough to meet the schedule."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "La boca fue descubierta varios meses antes de la partida, lo que permitió que Sorell viajara desde la Tierra hasta Proxima y comenzara a estudiar su secuencia de instrucciones. Sin embargo, el cronograma exacto de la apertura completa llega apenas unas 36 horas antes de que la Ardor deba partir. Es tiempo suficiente para preparar la nave local, pero no para traer físicamente desde la Tierra a un equipo diplomático o una tripulación de reemplazo.",
+            "es": "La boca fue descubierta varios meses antes de la partida, lo que permitió que Sorell viajara desde la Tierra hasta Próxima y comenzara a estudiar su secuencia de instrucciones. Sin embargo, el cronograma exacto de la apertura completa llega apenas unas 36 horas antes de que la Ardor deba partir. Es tiempo suficiente para preparar la nave local, pero no para traer físicamente desde la Tierra a un equipo diplomático o una tripulación de reemplazo.",
             "en": "The mouth was discovered several months before departure, allowing Sorell to travel from Earth to Proxima and begin studying its instructional sequence. The exact full-aperture schedule, however, arrives only approximately 36 hours before the Ardor must depart. That is enough time to prepare the local ship, but not enough to bring a diplomatic team or replacement crew physically from Earth."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Como segundo al mando de Proxima, Harlan tiene autoridad legítima sobre los depósitos peligrosos, el movimiento de carga y la preparación final de la nave. Durante el período apresurado de carga, después de la certificación final de masa de carga de la Ardor, transfiere un dispositivo experimental desde los depósitos de Proxima sin agregarlo al manifiesto de la nave. Los registros de la estación podrían llegar a exponer la transferencia, pero él espera que todos a bordo de la Ardor mueran antes de que esos registros puedan importar.",
+            "es": "Como segundo al mando de Próxima, Harlan tiene autoridad legítima sobre los depósitos peligrosos, el movimiento de carga y la preparación final de la nave. Durante el período apresurado de carga, después de la certificación final de masa de carga de la Ardor, transfiere un dispositivo experimental desde los depósitos de Próxima sin agregarlo al manifiesto de la nave. Los registros de la estación podrían llegar a exponer la transferencia, pero él espera que todos a bordo de la Ardor mueran antes de que esos registros puedan importar.",
             "en": "As Proxima’s second-in-command, Harlan has legitimate authority over hazardous stores, cargo movement, and final ship preparation. During the hurried loading period, after the Ardor’s final cargo-mass certification, he transfers an experimental device from Proxima’s stores without adding it to the ship’s manifest. Station-side records may eventually expose the transfer, but he expects everyone aboard the Ardor to die before those records can matter."
           }
         },
@@ -511,7 +511,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "El tramo local desde Proxima en L1 hasta la boca de Júpiter en L2 dura 57 h 48 min: aproximadamente 28 h 54 min acelerando hacia el periapsis de Júpiter y aproximadamente 28 h 54 min desacelerando hacia L2.",
+            "es": "El tramo local desde Próxima en L1 hasta la boca de Júpiter en L2 dura 57 h 48 min: aproximadamente 28 h 54 min acelerando hacia el periapsis de Júpiter y aproximadamente 28 h 54 min desacelerando hacia L2.",
             "en": "The local segment from Proxima at L1 to the Jupiter mouth at L2 lasts 57 h 48 min: approximately 28 h 54 min accelerating toward Jupiter periapsis and approximately 28 h 54 min decelerating toward L2."
           }
         },
@@ -651,7 +651,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Harlan — Segundo al mando de Proxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Sorell e intenta preservar la detonación. Su prosodia es británica; formó su inglés de servicio naval en Portsmouth y su español rioplatense en Buenos Aires.",
+            "es": "Harlan — Segundo al mando de Próxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Sorell e intenta preservar la detonación. Su prosodia es británica; formó su inglés de servicio naval en Portsmouth y su español rioplatense en Buenos Aires.",
             "en": "Harlan — Proxima and Ardor second-in-command. He transfers the bomb aboard, murders Zao, frames Sorell opportunistically, and attempts to preserve the detonation. His prosody is British; he formed his naval-service English in Portsmouth and his Rioplatense Spanish in Buenos Aires."
           }
         },
@@ -1072,7 +1072,7 @@
       "id": "master:section-prologue",
       "order": 1,
       "title": {
-        "es": "Prólogo — Proxima observa la Tierra",
+        "es": "Prólogo — Próxima observa la Tierra",
         "en": "Prologue — Proxima watching Earth"
       }
     },
@@ -1154,7 +1154,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La tripulación de Proxima observa una cobertura demorada de protestas divididas en la Tierra.",
+            "es": "La tripulación de Próxima observa una cobertura demorada de protestas divididas en la Tierra.",
             "en": "The Proxima crew watches delayed coverage of divided protests on Earth."
           }
         },
@@ -1276,8 +1276,8 @@
           "type": "blockquote",
           "speakerId": "character:zao",
           "text": {
-            "es": "«No estaba esperanzado».",
-            "en": "“He wasn’t hoping.”"
+            "es": "«Eso no era esperanza».",
+            "en": "“That wasn’t hope.”"
           }
         },
         {
@@ -1328,7 +1328,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Plano exterior de establecimiento: la Celestial Ardor en Proxima, con su nombre visible en el casco. La preparación apresurada refleja el poco tiempo entre la recepción del cronograma de apertura y la partida.",
+            "es": "Plano exterior de establecimiento: la Celestial Ardor en Próxima, con su nombre visible en el casco. La preparación apresurada refleja el poco tiempo entre la recepción del cronograma de apertura y la partida.",
             "en": "Exterior establishing shot: the Celestial Ardor at Proxima, its name visible on the hull. Hurried preparation reflects the short notice between receipt of the aperture schedule and departure."
           }
         }
@@ -1410,7 +1410,7 @@
           "type": "blockquote",
           "speakerId": "character:voss",
           "text": {
-            "es": "«Si Zao dice que llegamos a tiempo, llegamos a tiempo».",
+            "es": "«Si Zao dice que vamos a tiempo, vamos a tiempo».",
             "en": "“If Zao says we’re on time, we’re on time.”"
           }
         },
@@ -1447,7 +1447,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La nave se desprende de Proxima, rota a orientación prógrada y comienza su impulso a 1 g hacia el periapsis de Júpiter.",
+            "es": "La nave se desprende de Próxima, rota a orientación prógrada y comienza su impulso a 1 g hacia el periapsis de Júpiter.",
             "en": "The ship detaches from Proxima, rotates prograde, and begins its 1g burn toward Jupiter periapsis."
           }
         },
@@ -1543,7 +1543,7 @@
           "type": "blockquote",
           "speakerId": "character:rao",
           "text": {
-            "es": "«Vamos a hacer el primer contacto en un falo de noventa metros llamado Celestial Ardor».",
+            "es": "«Vamos a hacer el primer contacto en un falo de noventa metros llamado Ardor Celestial».",
             "en": "“We’re making first contact in a ninety-metre phallus called Celestial Ardor.”"
           }
         },
@@ -1624,7 +1624,7 @@
           "type": "blockquote",
           "speakerId": "character:sorell",
           "text": {
-            "es": "«Ellos escribieron el manual básico. Nosotros todavía no respondimos».",
+            "es": "«Ellos escribieron el manual. Nosotros aún no hemos respondido».",
             "en": "“They wrote the primer. We haven’t spoken back.”"
           }
         },
@@ -1639,8 +1639,8 @@
           "type": "blockquote",
           "speakerId": "character:sorell",
           "text": {
-            "es": "«Cuando la boca calla, eso no equivale a nada. El silencio sigue siendo una elección».",
-            "en": "“When the mouth goes quiet, that isn’t nothing. Silence is still a choice.”"
+            "es": "«Cuando la boca calla, sigue diciendo algo. El silencio también es una elección».",
+            "en": "“When the mouth goes quiet, it is still saying something. Silence is still a choice.”"
           }
         },
         {
@@ -1661,8 +1661,16 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Sorell responde con honestidad. Es posible interpretar mal. La IA puede organizar los patrones, pero no puede convertir la incertidumbre en conocimiento.",
-            "en": "Sorell answers honestly. Misreading is possible. The AI can organize the patterns, but it cannot turn uncertainty into knowledge."
+            "es": "Sorell responde con honestidad:",
+            "en": "Sorell answers honestly:"
+          }
+        },
+        {
+          "type": "blockquote",
+          "speakerId": "character:sorell",
+          "text": {
+            "es": "«Es posible interpretarlo mal. La IA puede ordenar los patrones, pero no convertir la incertidumbre en conocimiento».",
+            "en": "“Misreading is possible. The AI can arrange the patterns, but it cannot turn uncertainty into knowledge.”"
           }
         },
         {
@@ -1859,7 +1867,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Encuentra el paquete de impulso geofísico. Su forma y sus marcas lo identifican como equipo de Proxima, no como parte de la Ardor. A corta distancia, el conteo de su dosímetro aumenta bruscamente. La forma, las marcas y el blindaje del paquete proporcionan el contexto que el instrumento del traje por sí solo no podía ofrecer: las débiles emisiones provienen de su primario de fisión.",
+            "es": "Encuentra el paquete de impulso geofísico. Su forma y sus marcas lo identifican como equipo de Próxima, no como parte de la Ardor. A corta distancia, el conteo de su dosímetro aumenta bruscamente. La forma, las marcas y el blindaje del paquete proporcionan el contexto que el instrumento del traje por sí solo no podía ofrecer: las débiles emisiones provienen de su primario de fisión.",
             "en": "She finds the geophysical impulse package. Its form and markings identify it as Proxima equipment, not part of the Ardor. At close range, her dosimeter count rises sharply. The package’s form, markings, and shielding provide the context the suit instrument alone could not: the weak emissions come from its fission primary."
           }
         },
@@ -1903,7 +1911,7 @@
               "en": "It is timed to first contact."
             },
             {
-              "es": "Ningún mensaje ordinario a la Tierra o a Proxima puede regresar a tiempo para detenerla.",
+              "es": "Ningún mensaje ordinario a la Tierra o a Próxima puede regresar a tiempo para detenerla.",
               "en": "No ordinary message to Earth or Proxima can return in time to stop it."
             }
           ]
@@ -1963,7 +1971,7 @@
           "type": "blockquote",
           "speakerId": "character:zao",
           "text": {
-            "es": "«Encontré un grave intento de sabotear la misión…».",
+            "es": "«He descubierto un intento grave de sabotear la misión—».",
             "en": "“I have found a grave attempt to sabotage the mission—”"
           }
         },
@@ -2174,7 +2182,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Desde la posición actual de la Ardor, Júpiter oculta a Proxima. Un mensaje a la Tierra sólo llegaría después del contacto y la detonación previstos.",
+            "es": "Desde la posición actual de la Ardor, Júpiter oculta a Próxima. Un mensaje a la Tierra sólo llegaría después del contacto y la detonación previstos.",
             "en": "Proxima is occluded by Jupiter from the Ardor’s present position. A message to Earth would arrive only after the planned contact and detonation."
           }
         },
@@ -2472,16 +2480,16 @@
         },
         {
           "type": "blockquote",
-          "speakerId": "character:zao",
+          "speakerId": "character:harlan",
           "text": {
-            "es": "«Proxima está detrás de Júpiter. La Tierra no se enterará hasta que ya estemos allí».",
+            "es": "«Próxima está detrás de Júpiter. La Tierra no se va a enterar hasta que ya estemos allí».",
             "en": "“Proxima is behind Jupiter. Earth will not know until we are already there.”"
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Proxima está oculta. La garganta piloto no acepta mensajes humanos. Zao no sabe cómo dirigirse a los Velari y no hay una ruta de comunicaciones confirmada hacia su estación. ¿Hacia dónde más podría haber apuntado la matriz?",
+            "es": "Próxima está oculta. La garganta piloto no acepta mensajes humanos. Zao no sabe cómo dirigirse a los Velari y no hay una ruta de comunicaciones confirmada hacia su estación. ¿Hacia dónde más podría haber apuntado la matriz?",
             "en": "Proxima is occluded. The pilot throat does not accept human messages. Zao does not know how to address the Velari, and there is no confirmed communications path to their station. Where else would she point the array?"
           }
         },
@@ -3038,7 +3046,7 @@
           "type": "blockquote",
           "speakerId": "character:sorell",
           "text": {
-            "es": "«Están tratando la primera explicación como si fuera la única. Eso es exactamente lo que les advertí que no hicieran ahí fuera».",
+            "es": "«Estáis tratando la primera explicación como si fuera la única. Eso es exactamente lo que os advertí que no hicierais ahí fuera».",
             "en": "“You’re treating the first explanation as if it were the only one. That’s exactly what I warned you not to do out there.”"
           }
         }
@@ -3307,7 +3315,7 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "El contenido ya no está almacenado localmente. Su dirección de puntería no es la Tierra, Proxima ni ninguna baliza conocida. Desde la perspectiva actual de la nave, parece haber sido disparada hacia el espacio vacío.",
+            "es": "El contenido ya no está almacenado localmente. Su dirección de puntería no es la Tierra, Próxima ni ninguna baliza conocida. Desde la perspectiva actual de la nave, parece haber sido disparada hacia el espacio vacío.",
             "en": "The payload is no longer stored locally. Its pointing direction is not Earth, Proxima, or any known beacon. From the ship’s current perspective, it appears to have been fired into empty space."
           }
         },
@@ -3336,7 +3344,7 @@
           "type": "blockquote",
           "speakerId": "character:harlan",
           "text": {
-            "es": "«Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba caído, así que introdujo la puntería manualmente. Falló».",
+            "es": "«Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba fuera de servicio, así que introdujo la puntería manualmente. Falló».",
             "en": "“She was trying to finish the report she started—to Earth. The guidance trunk was down, so she entered the aim manually. She missed.”"
           }
         },
@@ -3351,7 +3359,7 @@
           "type": "blockquote",
           "speakerId": "character:rao",
           "text": {
-            "es": "«Zao no fallaba».",
+            "es": "«Zao no falló».",
             "en": "“Zao didn’t miss.”"
           }
         },
@@ -3677,7 +3685,7 @@
               "en": "Its estimated 1–1.5 tonne mass."
             },
             {
-              "es": "Su origen en los depósitos peligrosos de Proxima.",
+              "es": "Su origen en los depósitos peligrosos de Próxima.",
               "en": "Its origin in Proxima’s hazardous stores."
             },
             {
@@ -4281,7 +4289,7 @@
           "type": "blockquote",
           "speakerId": "character:rao",
           "text": {
-            "es": "«No está desarmada. Simplemente no va a explotar aquí».",
+            "es": "«No está desactivada. Simplemente no va a explotar aquí».",
             "en": "“It isn’t disarmed. It just isn’t going off here.”"
           }
         },
@@ -4384,7 +4392,7 @@
           "type": "blockquote",
           "speakerId": "character:sorell",
           "text": {
-            "es": "«Ellos escribieron el manual básico. Ésta es la primera vez que nos escucharán leerlo de vuelta».",
+            "es": "«Ellos escribieron el manual. Es la primera vez que nos oirán responder con él».",
             "en": "“They wrote the primer. This is the first time they’ll hear us read it back.”"
           }
         },

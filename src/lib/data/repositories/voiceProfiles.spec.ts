@@ -36,4 +36,17 @@ describe('master-cast dialogue direction', () => {
 			}
 		}
 	});
+
+	it('keeps Sorell canonical in data and resolves a distinct spoken form per language', () => {
+		const profile = getVoiceProfiles().voiceProfiles.find(
+			(item) => item.characterId === 'character:sorell'
+		);
+		expect(profile?.name).toBe('Lian Sorell');
+		expect(profile?.variants.find(({ language }) => language === 'en')?.pronunciationMap).toEqual({
+			Sorell: 'Soréll'
+		});
+		expect(profile?.variants.find(({ language }) => language === 'es')?.pronunciationMap).toEqual({
+			Sorell: 'Sorél'
+		});
+	});
 });

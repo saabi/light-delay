@@ -4,6 +4,7 @@
     { "schema": "archive.schema.json", "files": ["archive/main-short-unplaced-action-cues.json"] },
     { "schema": "editorial-lifecycle.schema.json", "files": ["editorial-lifecycle.json"] },
     { "schema": "voice-profiles.schema.json", "files": ["voice-profiles.json"] },
+    { "schema": "dialogue-performance.schema.json", "files": ["production/audio/audience-dialogue-performance.json"] },
     { "schema": "outline.schema.json", "directories": ["outlines"] },
     { "schema": "production-contexts.schema.json", "files": ["production/contexts.json"] },
     { "schema": "provider-capabilities.schema.json", "files": ["production/provider-capabilities.json"] },

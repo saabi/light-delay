@@ -54,6 +54,8 @@ export interface VoiceProfileVariant {
 	model?: string;
 	providerVoiceId?: string;
 	sampleAssetIds?: AssetId[];
+	/** Canonical written form to language-specific speakable form for TTS. */
+	pronunciationMap?: Record<string, string>;
 	pronunciationDictionaryAssetId?: AssetId;
 	settings?: Record<string, string | number | boolean>;
 }
