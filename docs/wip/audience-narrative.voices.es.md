@@ -68,10 +68,10 @@ Voss confiaba en la precisión técnica de Zao más que en la de cualquier otra 
 Zao no discutió. Guardó la observación donde guardaba todo lo que no cerraba.
 
 [Narrator]
-[PAUSE 1200] Capítulo 1 — Embarque
+[PAUSE 1200] Capítulo 1. Embarque
 
 [Narrator]
-El cronograma exacto de la apertura completa llegó apenas unas treinta y seis horas antes de la partida. Alcanzaba para preparar la nave que ya estaba allí; no alcanzaba para traer desde la Tierra un cuerpo diplomático, ni una tripulación elegida para este trabajo. La Celestial Ardor era la nave disponible y sus seis tripulantes eran la gente disponible: un equipo de investigación de Proxima, con su nombre pintado en el casco de noventa metros y una carga que hubo que completar a las apuradas.
+El cronograma exacto de la apertura completa llegó apenas unas treinta y seis horas antes de la partida. Alcanzaba para preparar la nave que ya estaba allí; no alcanzaba para traer desde la Tierra un cuerpo diplomático, ni una tripulación elegida para este trabajo. La Ardor Celestial era la nave disponible y sus seis tripulantes eran la gente disponible: un equipo de investigación de Proxima, con su nombre pintado en el casco de noventa metros y una carga que hubo que completar a las apuradas.
 
 [Narrator]
 Grúas, listas y voces superpuestas. Nadie hizo una sola cosa con calma en esas horas.
@@ -93,7 +93,7 @@ Voss preguntó si estaban listas para partir. Elin dijo que sí. Zao pidió un m
 Zao dio su aprobación recién después de la segunda pasada. Elin se fue hacia su puesto. Zao se quedó a cerrar la auditoría.
 
 [Narrator]
-[PAUSE 1200] Capítulo 2 — Tránsito
+[PAUSE 1200] Capítulo 2. Tránsito
 
 [Narrator]
 La Ardor se desprendió de Proxima, rotó a orientación prógrada y encendió su antorcha de fusión. Un g sostenido, cincuenta y siete horas y cuarenta y ocho minutos hasta la boca de Júpiter: primero acelerando hacia el periapsis, después frenando hacia el otro extremo del sistema jupiteriano.
@@ -123,7 +123,7 @@ Elin estudió la silueta de la nave en la pantalla vecina, la proa aguda, los no
 
 [Elin]
 [QwenInstruct] Deadpan dry humor. Flat delivery; no laugh. Technical woman stating an absurd fact plainly.
-"Vamos a hacer el primer contacto en un falo de noventa metros llamado Celestial Ardor"
+"Vamos a hacer el primer contacto en un falo de noventa metros llamado Ardor Celestial"
 
 [Narrator]
 Voss levantó la vista y la miró.
@@ -188,7 +188,7 @@ Harlan había estado callado todo el rato, con los ojos en la cobertura de las p
 Sonó razonable. Nadie le encontró nada extraño a su silencio de esa tarde.
 
 [Narrator]
-[PAUSE 1200] Capítulo 3 — La discrepancia
+[PAUSE 1200] Capítulo 3. La discrepancia
 
 [Narrator]
 Al aproximarse a la boca de Júpiter, la Ardor cortó el empuje para la aproximación de precisión. Por segunda vez el peso se fue, y esta vez sin planeta que iluminara la maniobra.
@@ -212,7 +212,7 @@ Cerca del compartimiento de servicio del reactor, el dosímetro registró un exc
 No había ninguna alarma de combustible activa. Zao no tomó ese silencio como prueba de nada. Entró en el compartimiento exterior de servicio y siguió el conteo creciente hacia donde el conteo la llevaba: la bóveda interior de blindaje.
 
 [Narrator]
-[PAUSE 1200] Capítulo 4 — Lo que hay detrás de la puerta
+[PAUSE 1200] Capítulo 4. Lo que hay detrás de la puerta
 
 [Narrator]
 Se cruzó con Harlan en la puerta. Él salía de la bóveda interior hacia el compartimiento exterior, flotando, con la calma de alguien que termina una tarea asignada. Le dirigió una mirada breve, y en esa mirada había algo que no correspondía. Zao lo notó y no dijo nada. No era el momento de acusar a nadie de una expresión.
@@ -242,7 +242,7 @@ Tres hechos se acomodaron al mismo tiempo, con el peso ordenado de las cosas ver
 Se empujó hacia el compartimiento exterior, donde estaba la consola local de la matriz óptica de comunicaciones de larga distancia.
 
 [Narrator]
-[PAUSE 1200] Capítulo 5 — La advertencia
+[PAUSE 1200] Capítulo 5. La advertencia
 
 [Narrator]
 Harlan tomó el conducto de servicio hacia proa porque en microgravedad era la ruta más rápida. Pensaba anunciar que había completado su inspección y retomar su puesto antes del cruce. Abrió la escotilla superior, la que se abre justo detrás de los puestos del puente, y no salió.
@@ -309,7 +309,7 @@ La matriz óptica giró hacia una porción de cielo sin nada reconocible y dispa
 Harlan entró un segundo después. Había visto lo suficiente para saber que ella había transmitido algo, y nada que le dijera qué ni adónde. Y sabía que quien el puente hubiera mandado ya venía bajando.
 
 [Narrator]
-[PAUSE 1200] Capítulo 6 — Asesinato
+[PAUSE 1200] Capítulo 6. Asesinato
 
 [Narrator]
 En el compartimiento exterior de servicio del reactor, flotando a un brazo de distancia, Harlan preguntó lo único que le importaba.
@@ -368,7 +368,7 @@ Harlan alcanzó la bandeja del conducto de servicio, volvió a enchufar los tron
 La señal de cámara volvió detrás de sus palabras, y en la pantalla apareció Soréll, sola, sesenta y cinco metros a popa, con el cuerpo de Zao en los brazos.
 
 [Narrator]
-[PAUSE 1200] Capítulo 7 — Custodia
+[PAUSE 1200] Capítulo 7. Custodia
 
 [Narrator]
 Voss le preguntó a Harlan si Soréll lo había encontrado.
@@ -412,7 +412,7 @@ Lo que se le quedó a Elin fue otra cosa: el dolor de Soréll, que no se parecí
 Después vinieron casi veinticuatro horas de tránsito del otro lado, la Ardor acelerando y frenando a un g hacia unas coordenadas que le habían dado extraños. Soréll pasó ese tiempo bajo interrogatorio, sin poder tocar el saludo, mientras Voss empezaba discretamente a planear un primer contacto sin su xenolingüista. Elin y Okoye pasaron ese tiempo con las pruebas, y el agotamiento se les fue notando en la cara.
 
 [Narrator]
-[PAUSE 1200] Capítulo 8 — Investigación
+[PAUSE 1200] Capítulo 8. Investigación
 
 [Narrator]
 Voss ordenó una auditoría completa: la falla de comunicaciones, el último trabajo de Zao, la conciliación de masa de la nave, todos los registros locales que hubieran sobrevivido al apagón.
@@ -514,7 +514,7 @@ Su reacción se desplegó a la vista de todos. Primero desconcierto de que algo 
 Y después la única frase que importaba: Zao no había fallado.
 
 [Narrator]
-[PAUSE 1200] Capítulo 9 — El mensaje
+[PAUSE 1200] Capítulo 9. El mensaje
 
 [Narrator]
 La ráfaga entró y se descomprimió sin reproducirse. Voss ordenó abrirla en el puente.
@@ -563,7 +563,7 @@ Elin tomó el ascensor hacia popa, hacia una bóveda que todavía no sabía cóm
 Después le ordenó a Okoye quitarle a Harlan el dispositivo de muñeca e inmovilizarlo.
 
 [Narrator]
-[PAUSE 1200] Capítulo 10 — Confrontación
+[PAUSE 1200] Capítulo 10. Confrontación
 
 [Narrator]
 Harlan pareció obedecer. Ofreció la muñeca.
@@ -660,7 +660,7 @@ En su consola, la IA desplegaba las relaciones espaciales simultáneas del manua
 La señal quedó preparada y sin transmitir.
 
 [Narrator]
-[PAUSE 1200] Capítulo 11 — Primer contacto
+[PAUSE 1200] Capítulo 11. Primer contacto
 
 [Narrator]
 Voss regresó al puente y, antes de atender a lo que esperaba afuera, se acercó a Soréll.

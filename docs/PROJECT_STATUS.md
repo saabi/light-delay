@@ -1,11 +1,19 @@
 # Estado del proyecto
 
+## 2026-09-06 — Audience: Ardor Celestial + pausa tras número de capítulo
+
+- ES: nombre completo de la nave **Ardor Celestial** (antes «Celestial Ardor»).
+- Capítulos EN/ES: `Chapter N. …` / `Capítulo N. …` (punto = pausa corta TTS).
+- Pendiente regen MP3 tras este pase.
+
 ## 2026-09-06 — Audience: pausa tras Prólogo + Capítulos numerados
 
 - Prólogo/Prologue se habla solo; pausa 1200 ms; luego el subtítulo.
 - Capítulos: `Chapter N — …` / `Capítulo N — …` (1–11) en prosa y voces.
 - Builder: `audience_heading_cues` en `build-tts-voices-outlines.py`.
-- Pendiente: reensamblar MP3 EN/ES (sólo cues de títulos cambian; resto reutilizable).
+- **Listo:** `light-delay-audience-dual-es.mp3` (~47.8 min) y
+  `light-delay-audience-dual-en.mp3` (~51.0 min; también regeneró diálogo EN
+  con refs selected-slow-v2).
 
 ## 2026-09-06 — Refs selected-slow-v2 promocionadas; regen audience ES
 

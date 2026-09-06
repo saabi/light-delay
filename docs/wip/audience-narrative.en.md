@@ -38,7 +38,7 @@ Voss smiles at her the way a man smiles at an instrument he trusts and does not 
 
 > **Elias Voss:** "You find faults for a living. That doesn't make everyone a fault."
 
-## Chapter 1 — Embarkation
+## Chapter 1. Embarkation
 The mouth was found months ago. The schedule was not. The precise timing of the full aperture arrives roughly thirty-six hours before departure, which is long enough to prepare a ship and nowhere near long enough to bring a diplomatic team or a replacement crew out from Earth.
 
 So the mission goes to the ship that is already close enough, and to the people already aboard it. *Celestial Ardor*, six thousand eight hundred tonnes, ninety metres by eighteen, her name painted along a hull that has never carried anything more ceremonial than core samples. Six people. Not diplomats. A research crew with a calendar it cannot negotiate.
@@ -55,7 +55,7 @@ Voss asks for departure status. Elin says they are ready. Zao asks for one more 
 
 She signs off only after the second pass. Elin leaves for her own station. Zao stays behind to close the audit.
 
-## Chapter 2 — Transit
+## Chapter 2. Transit
 The *Ardor* releases, rotates prograde, and lights her fusion torch. Fifty-seven hours and forty-eight minutes from L1 to L2 — twenty-nine hours falling toward Jupiter under a full gravity of thrust, and twenty-nine hours standing on the brakes afterward.
 
 It is a long time to be a small number of people inside a small amount of metal. They eat. They argue about nothing. They sleep badly.
@@ -116,7 +116,7 @@ From the doorway, where he has been watching the protests and not the conversati
 
 Nobody has an answer. The watch changes.
 
-## Chapter 3 — The Discrepancy
+## Chapter 3. The Discrepancy
 Nearing the mouth, thrust cuts for the second time. The approach has to be precise, and precision means coasting, and coasting means weightlessness. Loose hair lifts. Pens drift.
 
 Zao's audit, which she has quietly extended past the point where anyone asked her to stop, flags a discrepancy in propellant.
@@ -137,7 +137,7 @@ No fuel alarm is showing. Zao has never once treated the absence of an alarm as 
 
 She goes aft, into the outer reactor service bay, and follows the reading as it strengthens — away from the accessible fuel panels, and toward the inner shielding vault.
 
-## Chapter 4 — Behind the Door
+## Chapter 4. Behind the Door
 Weightless, sixty-five metres aft of her own bridge, Zao meets Harlan coming out of the inner vault.
 
 He has been making a final check. He has not quite finished securing the door behind him.
@@ -164,7 +164,7 @@ It is a thermonuclear weapon. It is timed to first contact. And no ordinary mess
 
 She withdraws into the outer bay, where the local console for the long-distance optical communications array is bolted to the wall.
 
-## Chapter 5 — The Warning
+## Chapter 5. The Warning
 Harlan takes the service shaft forward. In microgravity it is the fastest way to the bridge — a narrow trunk broken into ladder segments, with an access hatch at every deck. He intends to log his assigned inspection complete and be back at his station before the crossing.
 
 He opens the uppermost hatch, which lets out immediately behind the bridge stations. The crew are at their displays along the curve of the outer hull, backs to the shaft openings. Nobody turns. He has not yet said a word.
@@ -219,7 +219,7 @@ Nobody deletes anything. There is simply nothing left to delete.
 
 Harlan comes through the door almost on top of it. He has seen enough to know that she transmitted something. He has not seen where it went or what it said.
 
-## Chapter 6 — Murder
+## Chapter 6. Murder
 > **Rylen Harlan:** "Who did you send that to?"
 
 Zao does not answer him.
@@ -258,7 +258,7 @@ The *Ardor* crosses.
 
 The throat closes behind her and settles back into its patient one-way pilot state, and there is now no abort and no way home until a return window that is a great many hours away. The crew have just done something no human beings have ever done, and five of them do not yet know what it cost, and the sixth is climbing a ladder with his heart rate coming down.
 
-## Chapter 7 — Custody
+## Chapter 7. Custody
 Soréll reaches the outer reactor service bay with no communications, no cameras, and no gravity. She finds Zao drifting, catches her, and tries to help her.
 
 She tries to call the bridge. Nothing works. She keeps trying anyway, because the alternative is to stop.
@@ -299,7 +299,7 @@ Then the ship settles into the long far-side run: seventeen point four million k
 
 Soréll spends it under active questioning, which means she cannot prepare the greeting. Voss quietly begins working out how to approach an alien station without his xenolinguist. Elin and Okoye work the evidence until neither of them is thinking clearly, and then keep working it.
 
-## Chapter 8 — Investigation
+## Chapter 8. Investigation
 Voss orders everything audited: the communications failure, Zao's last work, the ship's mass reconciliation, every surviving local instrument record.
 
 Soréll, restrained a few metres behind him, does not wait to be asked.
@@ -378,7 +378,7 @@ Her reactions arrive in sequence, and she says each one out loud without meaning
 
 Recognition of the name in it.
 
-## Chapter 9 — The Message
+## Chapter 9. The Message
 The burst is received and decompressed. Nobody has played it.
 
 Voss orders it opened on the bridge.
@@ -415,7 +415,7 @@ He orders Okoye to release Soréll immediately. He orders Elin aft, to the vault
 
 Then he tells Okoye to take Harlan's wrist device and restrain him.
 
-## Chapter 10 — Confrontation
+## Chapter 10. Confrontation
 Harlan appears to comply. He offers his wrist.
 
 Okoye's hand closes on the device and her eyes flick, for less than a second, to the revocation confirming itself on the display. He drives her into a console and is through the service-shaft hatch before she hits the deck, and he locks it behind him from the inside, where the ship's authority cannot follow.
@@ -486,7 +486,7 @@ It will not be a flash or a beam. It will be spoken with lights distributed acro
 
 The signal is staged. She does not send it.
 
-## Chapter 11 — First Contact
+## Chapter 11. First Contact
 Voss comes back onto his own bridge, and before he goes anywhere near the station he goes to Soréll.
 
 > **Elias Voss:** "I'm sorry."

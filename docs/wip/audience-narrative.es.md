@@ -34,8 +34,8 @@ Voss confiaba en la precisión técnica de Zao más que en la de cualquier otra 
 
 Zao no discutió. Guardó la observación donde guardaba todo lo que no cerraba.
 
-## Capítulo 1 — Embarque
-El cronograma exacto de la apertura completa llegó apenas unas treinta y seis horas antes de la partida. Alcanzaba para preparar la nave que ya estaba allí; no alcanzaba para traer desde la Tierra un cuerpo diplomático, ni una tripulación elegida para este trabajo. La *Celestial Ardor* era la nave disponible y sus seis tripulantes eran la gente disponible: un equipo de investigación de Proxima, con su nombre pintado en el casco de noventa metros y una carga que hubo que completar a las apuradas.
+## Capítulo 1. Embarque
+El cronograma exacto de la apertura completa llegó apenas unas treinta y seis horas antes de la partida. Alcanzaba para preparar la nave que ya estaba allí; no alcanzaba para traer desde la Tierra un cuerpo diplomático, ni una tripulación elegida para este trabajo. La *Ardor Celestial* era la nave disponible y sus seis tripulantes eran la gente disponible: un equipo de investigación de Proxima, con su nombre pintado en el casco de noventa metros y una carga que hubo que completar a las apuradas.
 
 Grúas, listas y voces superpuestas. Nadie hizo una sola cosa con calma en esas horas.
 
@@ -49,7 +49,7 @@ Voss preguntó si estaban listas para partir. Elin dijo que sí. Zao pidió un m
 
 Zao dio su aprobación recién después de la segunda pasada. Elin se fue hacia su puesto. Zao se quedó a cerrar la auditoría.
 
-## Capítulo 2 — Tránsito
+## Capítulo 2. Tránsito
 La Ardor se desprendió de Proxima, rotó a orientación prógrada y encendió su antorcha de fusión. Un g sostenido, cincuenta y siete horas y cuarenta y ocho minutos hasta la boca de Júpiter: primero acelerando hacia el periapsis, después frenando hacia el otro extremo del sistema jupiteriano.
 
 En el periapsis se cortó el empuje. El peso desapareció de golpe y la nave giró en microgravedad, de prógrada a retrógrada, a contraluz de Júpiter y sus anillos: un planeta entero convertido en borde luminoso detrás de los ventanales. Nadie anunció que era el punto medio. La ausencia de gravedad lo dijo mejor que un reloj. Después la antorcha volvió a encenderse y el peso volvió a caer sobre los hombros de todos para la larga desaceleración.
@@ -66,7 +66,7 @@ Okoye miraba a un manifestante repetir su argumento contra un cordón de segurid
 
 Elin estudió la silueta de la nave en la pantalla vecina, la proa aguda, los noventa metros de cilindro, el nombre a lo largo del flanco.
 
-> **Elin Rao:** «Vamos a hacer el primer contacto en un falo de noventa metros llamado Celestial Ardor».
+> **Elin Rao:** «Vamos a hacer el primer contacto en un falo de noventa metros llamado Ardor Celestial».
 
 Voss levantó la vista y la miró.
 
@@ -104,7 +104,7 @@ Harlan había estado callado todo el rato, con los ojos en la cobertura de las p
 
 Sonó razonable. Nadie le encontró nada extraño a su silencio de esa tarde.
 
-## Capítulo 3 — La discrepancia
+## Capítulo 3. La discrepancia
 Al aproximarse a la boca de Júpiter, la Ardor cortó el empuje para la aproximación de precisión. Por segunda vez el peso se fue, y esta vez sin planeta que iluminara la maniobra.
 
 Zao cerró la auditoría que había quedado abierta desde Proxima y la cifra no cerró con ella. La nave había consumido una fracción pequeña y perfectamente definida de propelente por encima de lo que exigía el perfil previsto de un g. No era un error de trayectoria: la Ardor había cumplido el cronograma al segundo. Simplemente había gastado más para cumplirlo.
@@ -119,7 +119,7 @@ Cerca del compartimiento de servicio del reactor, el dosímetro registró un exc
 
 No había ninguna alarma de combustible activa. Zao no tomó ese silencio como prueba de nada. Entró en el compartimiento exterior de servicio y siguió el conteo creciente hacia donde el conteo la llevaba: la bóveda interior de blindaje.
 
-## Capítulo 4 — Lo que hay detrás de la puerta
+## Capítulo 4. Lo que hay detrás de la puerta
 Se cruzó con Harlan en la puerta. Él salía de la bóveda interior hacia el compartimiento exterior, flotando, con la calma de alguien que termina una tarea asignada. Le dirigió una mirada breve, y en esa mirada había algo que no correspondía. Zao lo notó y no dijo nada. No era el momento de acusar a nadie de una expresión.
 
 Él siguió hacia proa sabiendo exactamente dónde estaba ella y exactamente qué podía encontrar.
@@ -138,7 +138,7 @@ Tres hechos se acomodaron al mismo tiempo, con el peso ordenado de las cosas ver
 
 Se empujó hacia el compartimiento exterior, donde estaba la consola local de la matriz óptica de comunicaciones de larga distancia.
 
-## Capítulo 5 — La advertencia
+## Capítulo 5. La advertencia
 Harlan tomó el conducto de servicio hacia proa porque en microgravedad era la ruta más rápida. Pensaba anunciar que había completado su inspección y retomar su puesto antes del cruce. Abrió la escotilla superior, la que se abre justo detrás de los puestos del puente, y no salió.
 
 Los tripulantes estaban sentados de cara a las pantallas montadas contra la pared curva del casco, de espaldas a las aberturas de los conductos. Nadie lo vio. Nadie sabía que estaba ahí.
@@ -181,7 +181,7 @@ La matriz óptica giró hacia una porción de cielo sin nada reconocible y dispa
 
 Harlan entró un segundo después. Había visto lo suficiente para saber que ella había transmitido algo, y nada que le dijera qué ni adónde. Y sabía que quien el puente hubiera mandado ya venía bajando.
 
-## Capítulo 6 — Asesinato
+## Capítulo 6. Asesinato
 En el compartimiento exterior de servicio del reactor, flotando a un brazo de distancia, Harlan preguntó lo único que le importaba.
 
 > **Rylen Harlan:** «¿A quién le enviaste eso?».
@@ -218,7 +218,7 @@ Harlan alcanzó la bandeja del conducto de servicio, volvió a enchufar los tron
 
 La señal de cámara volvió detrás de sus palabras, y en la pantalla apareció Soréll, sola, sesenta y cinco metros a popa, con el cuerpo de Zao en los brazos.
 
-## Capítulo 7 — Custodia
+## Capítulo 7. Custodia
 Voss le preguntó a Harlan si Soréll lo había encontrado.
 
 Harlan dijo que no. Dijo que había estado a popa cumpliendo tareas asignadas, que se había cruzado con Zao cuando ella entraba al compartimiento de servicio del reactor y él subía al puente, y que no había visto a Soréll en ningún momento. Ofreció ese cruce por iniciativa propia, sin que nadie se lo pidiera: era el único movimiento suyo que alguien podía reconstruir más adelante, y prefería haberlo contado él.
@@ -245,7 +245,7 @@ Lo que se le quedó a Elin fue otra cosa: el dolor de Soréll, que no se parecí
 
 Después vinieron casi veinticuatro horas de tránsito del otro lado, la Ardor acelerando y frenando a un g hacia unas coordenadas que le habían dado extraños. Soréll pasó ese tiempo bajo interrogatorio, sin poder tocar el saludo, mientras Voss empezaba discretamente a planear un primer contacto sin su xenolingüista. Elin y Okoye pasaron ese tiempo con las pruebas, y el agotamiento se les fue notando en la cara.
 
-## Capítulo 8 — Investigación
+## Capítulo 8. Investigación
 Voss ordenó una auditoría completa: la falla de comunicaciones, el último trabajo de Zao, la conciliación de masa de la nave, todos los registros locales que hubieran sobrevivido al apagón.
 
 Soréll, restringida en su rincón del puente, habló una vez sin que le preguntaran.
@@ -308,7 +308,7 @@ Su reacción se desplegó a la vista de todos. Primero desconcierto de que algo 
 
 Y después la única frase que importaba: Zao no había fallado.
 
-## Capítulo 9 — El mensaje
+## Capítulo 9. El mensaje
 La ráfaga entró y se descomprimió sin reproducirse. Voss ordenó abrirla en el puente.
 
 La voz de Zao llenó la cubierta, y la voz de Zao los llevó de vuelta al compartimiento exterior de servicio del reactor, veintitrés horas y quince minutos antes: la misma consola, la misma luz desde abajo, las mismas manos, y ahora todo lo que aquel momento había ocultado.
@@ -339,7 +339,7 @@ Elin tomó el ascensor hacia popa, hacia una bóveda que todavía no sabía cóm
 
 Después le ordenó a Okoye quitarle a Harlan el dispositivo de muñeca e inmovilizarlo.
 
-## Capítulo 10 — Confrontación
+## Capítulo 10. Confrontación
 Harlan pareció obedecer. Ofreció la muñeca.
 
 Cuando Okoye tuvo el dispositivo en la mano y giró la cabeza hacia la pantalla de revocación, él usó ese medio segundo: la lanzó contra una consola, se soltó y entró al conducto de servicio, cerrando la escotilla del puente localmente detrás de sí. La cerradura era independiente de la red y de cualquier autoridad. Nadie iba a seguirlo por ahí, y nadie sabía todavía si las escotillas de las cubiertas de abajo serían utilizables.
@@ -400,7 +400,7 @@ En su consola, la IA desplegaba las relaciones espaciales simultáneas del manua
 
 La señal quedó preparada y sin transmitir.
 
-## Capítulo 11 — Primer contacto
+## Capítulo 11. Primer contacto
 Voss regresó al puente y, antes de atender a lo que esperaba afuera, se acercó a Soréll.
 
 > **Elias Voss:** «Lo siento».

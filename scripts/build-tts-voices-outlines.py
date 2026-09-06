@@ -399,27 +399,27 @@ def cue_pause(label: str) -> str:
 def audience_heading_cues(
     title: str, *, lang: str, chapter_i: list[int]
 ) -> list[str]:
-    """Audience chapter titles: pause after Prologue/Prólogo; Chapter/Capítulo N — title."""
+    """Audience titles: pause after Prologue/Prólogo; Chapter/Capítulo N. Title (period = short pause)."""
     t = title.strip()
-    m = re.match(r"^(Prologue|Prólogo)\s*[—–-]\s*(.+)$", t, flags=re.I)
+    m = re.match(r"^(Prologue|Prólogo)\s*[.—–-]\s*(.+)$", t, flags=re.I)
     if m:
         word = "Prologue." if lang == "en" else "Prólogo."
         sub = m.group(2).strip()
         return [cue_narrator(word, lang=lang), cue_pause(sub)]
 
-    m = re.match(r"^(?:Chapter|Capítulo)\s+(\d+)\s*[—–-]\s*(.+)$", t, flags=re.I)
+    m = re.match(r"^(?:Chapter|Capítulo)\s+(\d+)\s*[.—–-]\s*(.+)$", t, flags=re.I)
     if m:
         n = int(m.group(1))
         chapter_i[0] = max(chapter_i[0], n)
         body = m.group(2).strip()
         prefix = f"Chapter {n}" if lang == "en" else f"Capítulo {n}"
-        return [cue_pause(f"{prefix} — {body}")]
+        return [cue_pause(f"{prefix}. {body}")]
 
     # Unnumbered H2: assign next chapter number (prologue already handled above).
     chapter_i[0] += 1
     n = chapter_i[0]
     prefix = f"Chapter {n}" if lang == "en" else f"Capítulo {n}"
-    return [cue_pause(f"{prefix} — {t}")]
+    return [cue_pause(f"{prefix}. {t}")]
 
 
 def build_voices(

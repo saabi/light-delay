@@ -1,10 +1,17 @@
 # Changelog
 
+## 2026-09-06 — Audience: Ardor Celestial; Capítulo N. título
+
+- ES: nave **Ardor Celestial**. Capítulos con punto tras el número (`Capítulo 1. …` /
+  `Chapter 1. …`) para pausa corta al narrar.
+
 ## 2026-09-06 — Audience: pausa tras Prólogo; Capítulos numerados
 
 - Voces/prosa EN+ES: «Prologue.» / «Prólogo.» → pausa → subtítulo; capítulos
   `Chapter N` / `Capítulo N` (1–11).
 - `build-tts-voices-outlines.py`: `audience_heading_cues` para fuente audience.
+- MP3: `light-delay-audience-dual-es.mp3` (~47.8 min);
+  `light-delay-audience-dual-en.mp3` (~51.0 min).
 
 ## 2026-09-06 — Promoción selected-slow-v2 + regen ES
 

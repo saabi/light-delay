@@ -74,7 +74,7 @@ Voss smiles at her the way a man smiles at an instrument he trusts and does not 
 "You find faults for a living. That doesn't make everyone a fault."
 
 [Narrator]
-[PAUSE 1200] Chapter 1 — Embarkation
+[PAUSE 1200] Chapter 1. Embarkation
 
 [Narrator]
 The mouth was found months ago. The schedule was not. The precise timing of the full aperture arrives roughly thirty-six hours before departure, which is long enough to prepare a ship and nowhere near long enough to bring a diplomatic team or a replacement crew out from Earth.
@@ -102,7 +102,7 @@ Voss asks for departure status. Elin says they are ready. Zao asks for one more 
 She signs off only after the second pass. Elin leaves for her own station. Zao stays behind to close the audit.
 
 [Narrator]
-[PAUSE 1200] Chapter 2 — Transit
+[PAUSE 1200] Chapter 2. Transit
 
 [Narrator]
 The Ardor releases, rotates prograde, and lights her fusion torch. Fifty-seven hours and forty-eight minutes from L one to L two — twenty-nine hours falling toward Jupiter under a full gravity of thrust, and twenty-nine hours standing on the brakes afterward.
@@ -206,7 +206,7 @@ From the doorway, where he has been watching the protests and not the conversati
 Nobody has an answer. The watch changes.
 
 [Narrator]
-[PAUSE 1200] Chapter 3 — The Discrepancy
+[PAUSE 1200] Chapter 3. The Discrepancy
 
 [Narrator]
 Nearing the mouth, thrust cuts for the second time. The approach has to be precise, and precision means coasting, and coasting means weightlessness. Loose hair lifts. Pens drift.
@@ -239,7 +239,7 @@ No fuel alarm is showing. Zao has never once treated the absence of an alarm as 
 She goes aft, into the outer reactor service bay, and follows the reading as it strengthens — away from the accessible fuel panels, and toward the inner shielding vault.
 
 [Narrator]
-[PAUSE 1200] Chapter 4 — Behind the Door
+[PAUSE 1200] Chapter 4. Behind the Door
 
 [Narrator]
 Weightless, sixty-five metres aft of her own bridge, Zao meets Harlan coming out of the inner vault.
@@ -281,7 +281,7 @@ It is a thermonuclear weapon. It is timed to first contact. And no ordinary mess
 She withdraws into the outer bay, where the local console for the long-distance optical communications array is bolted to the wall.
 
 [Narrator]
-[PAUSE 1200] Chapter 5 — The Warning
+[PAUSE 1200] Chapter 5. The Warning
 
 [Narrator]
 Harlan takes the service shaft forward. In microgravity it is the fastest way to the bridge — a narrow trunk broken into ladder segments, with an access hatch at every deck. He intends to log his assigned inspection complete and be back at his station before the crossing.
@@ -366,7 +366,7 @@ Nobody deletes anything. There is simply nothing left to delete.
 Harlan comes through the door almost on top of it. He has seen enough to know that she transmitted something. He has not seen where it went or what it said.
 
 [Narrator]
-[PAUSE 1200] Chapter 6 — Murder
+[PAUSE 1200] Chapter 6. Murder
 
 [Harlan]
 [QwenInstruct] Confrontation. Controlled threat. Close, hard consonants; low and dangerous.
@@ -428,7 +428,7 @@ The Ardor crosses.
 The throat closes behind her and settles back into its patient one-way pilot state, and there is now no abort and no way home until a return window that is a great many hours away. The crew have just done something no human beings have ever done, and five of them do not yet know what it cost, and the sixth is climbing a ladder with his heart rate coming down.
 
 [Narrator]
-[PAUSE 1200] Chapter 7 — Custody
+[PAUSE 1200] Chapter 7. Custody
 
 [Narrator]
 Soréll reaches the outer reactor service bay with no communications, no cameras, and no gravity. She finds Zao drifting, catches her, and tries to help her.
@@ -493,7 +493,7 @@ Then the ship settles into the long far-side run: seventeen point four million k
 Soréll spends it under active questioning, which means she cannot prepare the greeting. Voss quietly begins working out how to approach an alien station without his xenolinguist. Elin and Okoye work the evidence until neither of them is thinking clearly, and then keep working it.
 
 [Narrator]
-[PAUSE 1200] Chapter 8 — Investigation
+[PAUSE 1200] Chapter 8. Investigation
 
 [Narrator]
 Voss orders everything audited: the communications failure, Zao's last work, the ship's mass reconciliation, every surviving local instrument record.
@@ -619,7 +619,7 @@ Her reactions arrive in sequence, and she says each one out loud without meaning
 Recognition of the name in it.
 
 [Narrator]
-[PAUSE 1200] Chapter 9 — The Message
+[PAUSE 1200] Chapter 9. The Message
 
 [Narrator]
 The burst is received and decompressed. Nobody has played it.
@@ -677,7 +677,7 @@ He orders Okoye to release Soréll immediately. He orders Elin aft, to the vault
 Then he tells Okoye to take Harlan's wrist device and restrain him.
 
 [Narrator]
-[PAUSE 1200] Chapter 10 — Confrontation
+[PAUSE 1200] Chapter 10. Confrontation
 
 [Narrator]
 Harlan appears to comply. He offers his wrist.
@@ -789,7 +789,7 @@ It will not be a flash or a beam. It will be spoken with lights distributed acro
 The signal is staged. She does not send it.
 
 [Narrator]
-[PAUSE 1200] Chapter 11 — First Contact
+[PAUSE 1200] Chapter 11. First Contact
 
 [Narrator]
 Voss comes back onto his own bridge, and before he goes anywhere near the station he goes to Soréll.
