@@ -40,5 +40,7 @@ export function scriptKindLabel(kind: ScriptRegistryEntry['kind']): string {
 }
 
 export function scriptStatusLabel(status: ScriptRegistryEntry['status']): string {
-	return status === 'draft' ? m.script_status_draft() : status;
+	if (status === 'draft') return m.script_status_draft();
+	if (status === 'deprecated') return m.script_status_deprecated();
+	return status;
 }

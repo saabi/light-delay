@@ -25,6 +25,13 @@ export interface ScriptRegistryEntry {
 	lineage?: ScriptLineage;
 }
 
+export interface NarrativeAuthority {
+	outlineId: string;
+	scriptId: ScriptId;
+	continuityId: ContinuityId;
+	status: 'wip_authoritative';
+}
+
 export interface ProjectFile {
 	schemaVersion: string;
 	project: {
@@ -34,6 +41,7 @@ export interface ProjectFile {
 		description?: string;
 		languages: ProjectLanguages;
 		canonicalScriptId: ScriptId;
+		narrativeAuthority: NarrativeAuthority;
 		scripts: ScriptRegistryEntry[];
 		continuities: Continuity[];
 		targetDurationMs?: number;

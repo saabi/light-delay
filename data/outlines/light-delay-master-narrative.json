@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.3.0",
+  "schemaVersion": "1.4.0",
   "outline": {
     "id": "outline:light-delay-master-narrative",
     "scriptId": "script:light-delay-master-narrative",
@@ -8,20 +8,37 @@
       "en": "Outline — Light Delay: unconstrained master narrative (WIP)"
     },
     "synopsis": {
-      "es": "Borrador de desarrollo no canónico y sin límite de duración. No reemplaza los guiones corto, festival, tráiler ni largo registrados.",
-      "en": "Non-canonical, unconstrained development draft. It does not replace the registered short, festival, trailer, or feature scripts."
+      "es": "Fuente narrativa maestra y bilingüe, todavía WIP y sin límite de duración. Los guiones y cuts anteriores quedan deprecados hasta que puedan derivarse nuevas versiones.",
+      "en": "Authoritative bilingual master narrative, still WIP and unconstrained by duration. Earlier screenplays and cuts are deprecated until new versions can be derived."
     },
     "status": "draft",
-    "version": "0.2.0-wip",
-    "source": {
-      "path": "docs/wip/general-narrative-outline.en.md",
-      "revision": "12",
-      "language": "en",
-      "sha256": "1d9f8073cf6009972bc578b1c22a5dd58eb30356243eec409ec2ebac67867268"
+    "version": "0.5.0-wip",
+    "revision": 14,
+    "provenance": {
+      "importedFrom": [
+        {
+          "path": "docs/wip/general-narrative-outline.en.md",
+          "revision": "13",
+          "language": "en",
+          "sha256": "fc1458a9d164b1c42e568abd4d8d93512a88c0b2b25ed8655a37c43aa6fa744e"
+        }
+      ]
     },
+    "exports": [
+      {
+        "path": "docs/wip/general-narrative-outline.es.md",
+        "language": "es",
+        "format": "markdown"
+      },
+      {
+        "path": "docs/wip/general-narrative-outline.en.md",
+        "language": "en",
+        "format": "markdown"
+      }
+    ],
     "editorialNotice": {
-      "es": "Esta narrativa maestra es una rama de trabajo no canónica. Su trama no fue adoptada por ninguna de las cuatro versiones existentes.",
-      "en": "This master narrative is a non-canonical development branch. Its plot has not been adopted by any of the four existing versions."
+      "es": "Esta escaleta WIP es la fuente de verdad narrativa. Las versiones corto, festival, tráiler y largo son material obsoleto conservado sólo para rescate y procedencia.",
+      "en": "This WIP outline is the narrative source of truth. The short, festival, trailer, and feature versions are obsolete material retained only for salvage and provenance."
     }
   },
   "framing": [
@@ -620,43 +637,43 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Zao — Ingeniera. Rigurosa, comprueba habitualmente el trabajo dos veces y percibe discrepancias que otros aceptarían como ruido. Descubre la bomba, crea la advertencia demorada y es asesinada.",
-            "en": "Zao — Engineer. Exacting, habitually checks work twice, and notices discrepancies others would accept as noise. She discovers the bomb, creates the delayed warning, and is murdered."
+            "es": "Zao — Ingeniera. Rigurosa, comprueba habitualmente el trabajo dos veces y percibe discrepancias que otros aceptarían como ruido. Descubre la bomba, crea la advertencia demorada y es asesinada. Su prosodia parte del mandarín; formó su inglés técnico en Singapur y su español profesional en Bogotá.",
+            "en": "Zao — Engineer. Exacting, habitually checks work twice, and notices discrepancies others would accept as noise. She discovers the bomb, creates the delayed warning, and is murdered. Her prosody is rooted in Mandarin; she formed her technical English in Singapore and her professional Spanish in Bogotá."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Elin Rao — «Elin» — Ingeniera de sistemas y compañera de trabajo más cercana de Zao. Se convierte en la investigadora después de la muerte de Zao. Su conocimiento de los hábitos de Zao es esencial para reconocer la maniobra de distracción de Harlan y actuar a partir de la advertencia.",
-            "en": "Elin Rao — “Elin” — Systems engineer and Zao’s closest working partner. She becomes the investigator after Zao’s death. Her knowledge of Zao’s habits is essential to recognizing Harlan’s misdirection and acting on the warning."
+            "es": "Elin Rao — «Elin» — Ingeniera de sistemas y compañera de trabajo más cercana de Zao. Se convierte en la investigadora después de la muerte de Zao. Su conocimiento de los hábitos de Zao es esencial para reconocer la maniobra de distracción de Harlan y actuar a partir de la advertencia. Su prosodia parte del sur de India; formó su inglés tecnológico en Bengaluru y su español profesional en Medellín.",
+            "en": "Elin Rao — “Elin” — Systems engineer and Zao’s closest working partner. She becomes the investigator after Zao’s death. Her knowledge of Zao’s habits is essential to recognizing Harlan’s misdirection and acting on the warning. Her prosody is rooted in South India; she formed her technology English in Bengaluru and her professional Spanish in Medellín."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Harlan — Segundo al mando de Proxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Sorell e intenta preservar la detonación.",
-            "en": "Harlan — Proxima and Ardor second-in-command. He transfers the bomb aboard, murders Zao, frames Sorell opportunistically, and attempts to preserve the detonation."
+            "es": "Harlan — Segundo al mando de Proxima y de la Ardor. Transfiere la bomba a bordo, asesina a Zao, incrimina oportunistamente a Sorell e intenta preservar la detonación. Su prosodia es británica; formó su inglés de servicio naval en Portsmouth y su español rioplatense en Buenos Aires.",
+            "en": "Harlan — Proxima and Ardor second-in-command. He transfers the bomb aboard, murders Zao, frames Sorell opportunistically, and attempts to preserve the detonation. His prosody is British; he formed his naval-service English in Portsmouth and his Rioplatense Spanish in Buenos Aires."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Voss — Capitán. Es capaz, pero confía demasiado en su habilidad para interpretar a su gente. Interpreta mal a Harlan, interpreta mal a Sorell, descarta la inquietud temprana de Zao y debe enfrentar el costo humano de esos errores.",
-            "en": "Voss — Captain. He is capable but overconfident in his ability to read his people. He misreads Harlan, misreads Sorell, dismisses Zao’s early unease, and must confront the human cost of those errors."
+            "es": "Voss — Capitán. Es capaz, pero confía demasiado en su habilidad para interpretar a su gente. Interpreta mal a Harlan, interpreta mal a Sorell, descarta la inquietud temprana de Zao y debe enfrentar el costo humano de esos errores. Su prosodia es germánica o nórdica; formó su inglés institucional en Toronto y su español formal en Lima.",
+            "en": "Voss — Captain. He is capable but overconfident in his ability to read his people. He misreads Harlan, misreads Sorell, dismisses Zao’s early unease, and must confront the human cost of those errors. His prosody is Germanic or Nordic; he formed his institutional English in Toronto and his formal Spanish in Lima."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Sorell — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad.",
-            "en": "Sorell — Xenolinguist. She has spent months studying the throat’s one-way instructional grammar and has designed humanity’s first attempted greeting."
+            "es": "Sorell — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad. Su prosodia parte del francés; formó su inglés en el entorno francófono de Montréal y su español académico en Madrid.",
+            "en": "Sorell — Xenolinguist. She has spent months studying the throat’s one-way instructional grammar and has designed humanity’s first attempted greeting. Her prosody is rooted in French; she formed her English in Montréal’s francophone environment and her academic Spanish in Madrid."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Okoye — Oficial de seguridad.",
-            "en": "Okoye — Security officer."
+            "es": "Okoye — Oficial de seguridad nigeriana. Protege el puente después del informe de sabotaje, retira a Sorell de la escena del asesinato bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, finalmente, persigue e inmoviliza a Harlan. Su prosodia parte del igbo nigeriano; formó su inglés en Enugu y su español formal en Malabo.",
+            "en": "Okoye — Nigerian security officer. She protects the bridge after the sabotage report, removes Sorell from the murder scene under protective detention, works through the physical and systems evidence with Elin, and ultimately pursues and restrains Harlan. Her prosody is rooted in Nigerian Igbo; she formed her English in Enugu and her formal Spanish in Malabo."
           }
         }
       ]
@@ -729,6 +746,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Sabemos lo que nos dijo la boca. No es lo mismo que saber quién le dijo que hablara».",
             "en": "“We know what the mouth told us. That isn’t the same as knowing who told it to speak.”"
@@ -1190,6 +1208,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Ojalá tuvieran razón».",
             "en": "“I wish they were right.”"
@@ -1204,6 +1223,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Construyeron una puerta en nuestro sistema antes de que supiéramos que existían. Ahora la puerta nos dice cuándo atravesarla».",
             "en": "“They built a door in our system before we knew they existed. Now the door tells us when to walk through.”"
@@ -1232,6 +1252,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
             "es": "«Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Eso no es miedo. Es respeto».",
             "en": "“We studied everything they gave us before we agreed to send a single ship out there. That isn’t fear. It’s respect.”"
@@ -1253,6 +1274,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:zao",
           "text": {
             "es": "«No estaba esperanzado».",
             "en": "“He wasn’t hoping.”"
@@ -1267,6 +1289,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:voss",
           "text": {
             "es": "«Te ganas la vida encontrando fallas. Eso no convierte a todos en una falla».",
             "en": "“You find faults for a living. That doesn’t make everyone a fault.”"
@@ -1385,6 +1408,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:voss",
           "text": {
             "es": "«Si Zao dice que llegamos a tiempo, llegamos a tiempo».",
             "en": "“If Zao says we’re on time, we’re on time.”"
@@ -1450,6 +1474,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
             "es": "«La garganta de ida se cierra detrás de nosotros. Hasta la ventana de regreso, no hay vuelta atrás».",
             "en": "“The outbound throat closes behind us. Until the return window, there’s no turning around.”"
@@ -1501,6 +1526,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:okoye",
           "text": {
             "es": "«Piensan que la misión parece demasiado agresiva».",
             "en": "“They think the mission looks too aggressive.”"
@@ -1515,6 +1541,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:rao",
           "text": {
             "es": "«Vamos a hacer el primer contacto en un falo de noventa metros llamado Celestial Ardor».",
             "en": "“We’re making first contact in a ninety-metre phallus called Celestial Ardor.”"
@@ -1529,6 +1556,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:rao",
           "text": {
             "es": "«Yo no le puse el nombre».",
             "en": "“I didn’t name it.”"
@@ -1550,6 +1578,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
             "es": "«Hagamos que el saludo sea menos ambiguo».",
             "en": "“Let’s make the greeting less ambiguous.”"
@@ -1571,8 +1600,9 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:okoye",
           "text": {
-            "es": "«¿Cómo se saluda a algo a lo que nunca escuchaste responder?».",
+            "es": "«¿Cómo se saluda a algo que nunca has oído responder?».",
             "en": "“How do you say hello to something you’ve never heard answer?”"
           }
         },
@@ -1592,6 +1622,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
             "es": "«Ellos escribieron el manual básico. Nosotros todavía no respondimos».",
             "en": "“They wrote the primer. We haven’t spoken back.”"
@@ -1606,6 +1637,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
             "es": "«Cuando la boca calla, eso no equivale a nada. El silencio sigue siendo una elección».",
             "en": "“When the mouth goes quiet, that isn’t nothing. Silence is still a choice.”"
@@ -1620,6 +1652,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:zao",
           "text": {
             "es": "«¿Y si la IA lo aprendió mal?».",
             "en": "“And if the AI learned it wrong?”"
@@ -1641,6 +1674,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«¿Y si somos nosotros a quienes interpretan mal?».",
             "en": "“And what if we’re the ones being read wrong?”"
@@ -1927,9 +1961,10 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:zao",
           "text": {
             "es": "«Encontré un grave intento de sabotear la misión…».",
-            "en": "“I’ve found a grave attempt to sabotage the mission—”"
+            "en": "“I have found a grave attempt to sabotage the mission—”"
           }
         },
         {
@@ -2282,6 +2317,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:zao",
           "text": {
             "es": "«Por si acaso: adiós. Harlan está en la puerta».",
             "en": "“Just in case: goodbye. Harlan’s at the door.”"
@@ -2384,9 +2420,10 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
-            "es": "HARLAN: «¿A quién le enviaste eso?».",
-            "en": "HARLAN: “Who did you send that to?”"
+            "es": "«¿A quién le enviaste eso?».",
+            "en": "“Who did you send that to?”"
           }
         },
         {
@@ -2435,9 +2472,10 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:zao",
           "text": {
             "es": "«Proxima está detrás de Júpiter. La Tierra no se enterará hasta que ya estemos allí».",
-            "en": "“Proxima’s behind Jupiter. Earth won’t know until we’re already there.”"
+            "en": "“Proxima is behind Jupiter. Earth will not know until we are already there.”"
           }
         },
         {
@@ -2785,6 +2823,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«¿Cómo pudiste? ¿Por qué?».",
             "en": "“How could you? Why?”"
@@ -2887,6 +2926,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Antes del lanzamiento me preguntó qué haría falta para demorar el cruce. Pensé que era cautela profesional».",
             "en": "“Before launch she asked me what it would take to delay the crossing. I thought it was professional caution.”"
@@ -2996,8 +3036,9 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
-            "es": "«Están tratando la primera explicación como si fuera la única. Eso es exactamente lo que les advertí que no hicieran allá afuera».",
+            "es": "«Están tratando la primera explicación como si fuera la única. Eso es exactamente lo que les advertí que no hicieran ahí fuera».",
             "en": "“You’re treating the first explanation as if it were the only one. That’s exactly what I warned you not to do out there.”"
           }
         }
@@ -3054,6 +3095,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Si perdés helio-3, la mezcla queda rica en deuterio. Más neutrones de reacciones secundarias, más combustible para mantener el empuje. Si la pérdida continúa, no llegamos a la ventana».",
             "en": "“Lose helium-three and the mix goes deuterium-rich. More side-reaction neutrons, more fuel to hold thrust. Keep bleeding it and we miss the window.”"
@@ -3292,6 +3334,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Estaba tratando de terminar el informe que había empezado: enviarlo a la Tierra. El troncal de guiado estaba caído, así que introdujo la puntería manualmente. Falló».",
             "en": "“She was trying to finish the report she started—to Earth. The guidance trunk was down, so she entered the aim manually. She missed.”"
@@ -3306,6 +3349,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:rao",
           "text": {
             "es": "«Zao no fallaba».",
             "en": "“Zao didn’t miss.”"
@@ -3320,6 +3364,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Estaba asustada. Sabía que alguien se acercaba».",
             "en": "“She was frightened. She knew someone was coming.”"
@@ -3385,6 +3430,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Ahora nunca sabrán quién los salvó».",
             "en": "“Now they’ll never know who saved them.”"
@@ -3665,6 +3711,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:zao",
           "text": {
             "es": "«Por si acaso: adiós. Harlan está en la puerta».",
             "en": "“Just in case: goodbye. Harlan’s at the door.”"
@@ -3908,8 +3955,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Cuando Okoye sujeta el dispositivo de muñeca y mira hacia la pantalla de revocación, Harlan aprovecha la distracción momentánea para lanzar a Okoye contra una consola y liberarse.",
-            "en": "When Okoye grips the wrist device and glances toward the revocation display, Harlan uses the momentary distraction to drive him into a console and break free."
+            "es": "Cuando Okoye sujeta el dispositivo de muñeca y mira hacia la pantalla de revocación, Harlan aprovecha la distracción momentánea para lanzarla contra una consola y liberarse.",
+            "en": "When Okoye grips the wrist device and glances toward the revocation display, Harlan uses the momentary distraction to drive her into a console and break free."
           }
         },
         {
@@ -3988,7 +4035,7 @@
           "type": "paragraph",
           "text": {
             "es": "En la primera cubierta bajo el puente, Okoye abandona momentáneamente su escalera para probar la escotilla contigua del conducto de servicio. Está cerrada desde adentro. En la cubierta siguiente, Voss cruza su descanso y prueba la próxima escotilla. También está cerrada.",
-            "en": "At the first deck below the bridge, Okoye leaves his staircase long enough to test the adjacent service-shaft hatch. It is locked from inside. At the next deck, Voss crosses his landing and tests the next hatch. It is locked as well."
+            "en": "At the first deck below the bridge, Okoye leaves her staircase long enough to test the adjacent service-shaft hatch. It is locked from inside. At the next deck, Voss crosses his landing and tests the next hatch. It is locked as well."
           }
         },
         {
@@ -4116,6 +4163,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«No saben qué son. No tienen derecho a responder por la Tierra».",
             "en": "“You don’t know what they are. You don’t get to answer for Earth.”"
@@ -4130,6 +4178,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:harlan",
           "text": {
             "es": "«Si creen que somos inofensivos, se acercarán. Si ven una especie que muerde, quizá esperen. Necesitábamos tiempo».",
             "en": "“If they think we’re harmless, they come closer. If they see a species that bites, maybe they wait. We needed time.”"
@@ -4230,6 +4279,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:rao",
           "text": {
             "es": "«No está desarmada. Simplemente no va a explotar aquí».",
             "en": "“It isn’t disarmed. It just isn’t going off here.”"
@@ -4332,6 +4382,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
             "es": "«Ellos escribieron el manual básico. Ésta es la primera vez que nos escucharán leerlo de vuelta».",
             "en": "“They wrote the primer. This is the first time they’ll hear us read it back.”"
@@ -4383,6 +4434,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:voss",
           "text": {
             "es": "«Lo siento».",
             "en": "“I’m sorry.”"
@@ -4490,6 +4542,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:sorell",
           "text": {
             "es": "«Están enviando a alguien».",
             "en": "“They’re sending someone.”"
@@ -4695,6 +4748,7 @@
         },
         {
           "type": "blockquote",
+          "speakerId": "character:voss",
           "text": {
             "es": "«Llegaste a tiempo».",
             "en": "“You made it in time.”"

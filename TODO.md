@@ -2,6 +2,18 @@
 
 Este archivo es el registro canónico de deuda editorial y técnica accionable que todavía no se resolvió. El español es la fuente de verdad. Las tareas resueltas deben eliminarse o trasladarse al historial correspondiente; `docs/PROJECT_STATUS.md` resume el estado y `CHANGELOG.md` conserva los cierres.
 
+## Prioridad crítica — completar la autoridad maestra antes de nuevos derivados
+
+- **Fuente vigente:** terminar y aprobar `data/outlines/light-delay-master-narrative.json`. Mientras siga WIP, no ampliar main-short, Festival, tráiler o long ni generar nuevos guiones, tomas, prompts o medios salvo autorización editorial explícita.
+- **Exports:** editar el JSON y ejecutar `npm run master-outline:export`; los Markdown ES/EN son generados. La vía Markdown→JSON sólo produce un candidato separado para revisión.
+- **Inventario de rescate:** revisar los elementos `review_required` de `docs/MASTER_RELEVANCE_REPORT.md` y decidir explícitamente cuáles son compatibles, cuáles requieren una variante y cuáles son obsoletos. No convertir ausencia en prueba de descarte.
+- **Catálogo faltante del master:** modelar, sin adelantar decisiones visuales, el compartimiento exterior de servicio del reactor, la bóveda radiológica, el jammer local, el dispositivo de muñeca de Harlan, el paquete de impulso geofísico/la bomba y sus relaciones. El objeto con ID estable `object:optical-contingency-transmitter` ya adopta el nombre canónico «matriz óptica de comunicaciones de larga distancia», pero su hoja visual sigue `review_required` hasta verificarla contra el nuevo contexto.
+- **Derivación posterior:** una vez completo el master, definir cada nuevo producto mediante continuidad/lineage, escaleta propia y aprobación de omisiones. Sólo después crear guion, animatic y plan de producción.
+- **Producción bloqueada:** los planes main/Festival/tráiler/long y el checklist Higgsfield están `obsolete`; no consumir créditos ni regenerar imágenes desde ellos.
+- **Eliminación diferida:** no borrar ningún producto, asset, prop, dependencia o dependiente hasta cerrar simultáneamente `master_outline_complete`, `salvage_review_complete`, `replacement_derivatives_approved` y `no_active_dependants` en `data/editorial-lifecycle.json`.
+
+> Las tareas de abajo que nombran productos de la continuidad anterior se conservan como deuda de archivo o posibles criterios de rescate, no como autorización para seguir desarrollando esos productos. Las tareas de plataforma, validación e infraestructura continúan vigentes cuando no dependen de canon anterior.
+
 ## Prioridad alta
 
 ### Cierre causal y de cobertura antes de producir imágenes

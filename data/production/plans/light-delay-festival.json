@@ -4,9 +4,9 @@
     "id": "generation-plan:light-delay-festival",
     "scriptId": "script:light-delay-festival",
     "scriptVersion": "0.3.0-draft",
-    "sourceDigest": "3ca38740b9bd3eb16e0939c75c62e61f930068398e845dea1902e7d89fde499e",
+    "sourceDigest": "efd72949de9b0dbffacdbd2e31cec65b699b03f151780bb68922632e0e17195a",
     "campaignId": "campaign:higgsfield-trial-24h",
-    "status": "blocked",
+    "status": "obsolete",
     "promptLanguage": "en",
     "diegeticTextLanguage": "en",
     "briefLanguage": "es"
@@ -1002,7 +1002,7 @@
         },
         {
           "kind": "image",
-          "id": "asset:character-security-crew-sheet",
+          "id": "asset:character-okoye-sheet",
           "required": true,
           "role": "character"
         }
@@ -2640,7 +2640,7 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-security-crew-sheet",
+          "id": "asset:character-okoye-sheet",
           "required": true,
           "role": "character"
         },
@@ -2703,7 +2703,7 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-security-crew-sheet",
+          "id": "asset:character-okoye-sheet",
           "required": true,
           "role": "character"
         },

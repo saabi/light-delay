@@ -1,14 +1,16 @@
 # Datos estructurados
 
-JSON canónicos derivados inicialmente del sitio legacy y desarrollados después en la arquitectura multi-script. Se validan con `npm run validate:data`; `npm run extract:legacy` ya no es un regenerador seguro del árbol actual y no debe ejecutarse sobre `data/` hasta resolver la deuda registrada en `TODO.md`.
+Datos estructurados del proyecto. La autoridad narrativa WIP vive en `outlines/light-delay-master-narrative.json`; los productos anteriores permanecen archivados y clasificados por `editorial-lifecycle.json`. Se validan con `npm run validate:data`; `npm run extract:legacy` ya no es un regenerador seguro del árbol actual y no debe ejecutarse sobre `data/`.
 
 | Archivo | Contenido |
 | --- | --- |
-| `project.json` | Metadatos, idiomas, continuidades y registro de scripts (`sourceLanguage: es`) |
-| `scripts/*.json` | Actos, escenas, beats, cues, shots y takes de cada guion/cut; incluye corto, largometraje, festival y tráiler |
+| `project.json` | Metadatos, idiomas, autoridad narrativa, continuidades y registro de scripts (`sourceLanguage: es`) |
+| `editorial-lifecycle.json` | Clasificación segura de autoridad, compatibilidad, archivo, obsolescencia y compuertas de borrado |
+| `outlines/light-delay-master-narrative.json` | Escaleta maestra bilingüe WIP y fuente narrativa vigente |
+| `scripts/*.json` | Stub maestro vacío y productos anteriores deprecados con actos, escenas, beats, cues, shots y takes |
 | `characters.json` / `locations.json` / `objects.json` / `vehicles.json` / `factions.json` | Entidades |
 | `assets.json` | Rutas públicas `/assets/...` para binarios en `static/assets/` |
-| `voice-profiles.json` | Perfiles de voz por idioma |
+| `voice-profiles.json` | Timbre común y perfiles ES/EN de formación, prosodia, estilo, proveedor y muestras de voz |
 | `documents.json` | Cinco documentos prose ES/EN extraídos, canon estructurado aún como stub y tres referencias históricas/editoriales en revisión |
 | `narrative-functions.json` / `entity-variants.json` | Funciones dramáticas compartidas y perfiles específicos por guion |
 | `comparison-taxonomy.json` | Dimensiones de canon y eventos principales comparables entre scripts |
@@ -17,4 +19,4 @@ JSON canónicos derivados inicialmente del sitio legacy y desarrollados después
 
 El copy de guiones, outlines, assets, taxonomía, funciones y variantes lleva idiomas **inline** (`LocalizedString` / `variants.en`). `npm run validate:translations` exige `es` y `en` no vacíos en esos campos. Paraglide cubre el chrome de UI.
 
-Autoridad de esquema: `docs/JSON_FORMAT.md` + `docs/JSON_FORMAT_I18N_ADDENDUM.md`. El guion es la fuente narrativa; ver `docs/SCRIPT_ANIMATIC_SYNC.md`. La comparación es declarativa: una ausencia de datos se muestra como no especificada y no activa inferencias de fusiones, divisiones o herencia de diálogo.
+Autoridad de esquema: `docs/JSON_FORMAT.md` + `docs/JSON_FORMAT_I18N_ADDENDUM.md`. La escaleta maestra es la fuente narrativa; el stub de guion sólo sostiene el registro y las rutas hasta que existan derivados. La comparación es declarativa: una ausencia de datos se muestra como no especificada y no activa inferencias de fusiones, divisiones o herencia de diálogo.

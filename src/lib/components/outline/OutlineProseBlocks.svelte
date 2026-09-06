@@ -1,10 +1,16 @@
 <script lang="ts">
 	import { storyText } from '$lib/data/selectors/localized';
+	import { getCharacters } from '$lib/data/repositories/index';
 	import type { StoryText } from '$lib/types/i18n';
 	import type { OutlineProseBlock } from '$lib/types/outline';
 
 	let { blocks, language }: { blocks: OutlineProseBlock[]; language: string } = $props();
 	const text = (value: StoryText) => storyText(value, language);
+	const characters = getCharacters().characters;
+	const speakerName = (speakerId: string | undefined) => {
+		const character = characters.find((item) => item.id === speakerId);
+		return character ? storyText(character.name, language) : undefined;
+	};
 </script>
 
 <div class="prose">
@@ -12,7 +18,12 @@
 		{#if block.type === 'paragraph'}
 			<p>{text(block.text)}</p>
 		{:else if block.type === 'blockquote'}
-			<blockquote>{text(block.text)}</blockquote>
+			<blockquote>
+				{#if speakerName(block.speakerId)}
+					<cite>{speakerName(block.speakerId)}</cite>
+				{/if}
+				<span>{text(block.text)}</span>
+			</blockquote>
 		{:else if block.type === 'heading' && block.level === 3}
 			<h3>{text(block.text)}</h3>
 		{:else if block.type === 'heading'}
@@ -59,11 +70,20 @@
 		margin-top: 0.35rem;
 	}
 	blockquote {
+		display: grid;
+		gap: 0.22rem;
 		margin: 0.9rem 0;
 		padding: 0.2rem 0 0.2rem 1rem;
 		border-left: 3px solid var(--cyan);
 		color: var(--muted);
 		font-family: var(--font-serif);
 		font-size: 1.04rem;
+	}
+	cite {
+		color: var(--gold);
+		font: 650 0.78rem/1.2 var(--font-sans);
+		font-style: normal;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
 	}
 </style>

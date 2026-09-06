@@ -2,59 +2,74 @@
 
 **Propósito:** describir la voz de cada personaje con el detalle suficiente para generar audio de referencia (clonación / voces preestablecidas) en Higgsfield u otra herramienta de voz IA, en inglés y en castellano, manteniendo el mismo timbre entre ambos idiomas.
 
-**Nota sobre el elenco:** la biblia de producción previa lista 14 personajes nombrados bajo el título "12 miembros de la tripulación" — una inconsistencia heredada de sesiones anteriores. Se incluyen los 14 acá; si el número real debe ser 12, avisame cuáles dos personajes se descartan y ajusto el documento.
+**Alcance vigente:** la narrativa maestra WIP tiene seis personajes: Zao, Elin Rao, Harlan, Voss, Sorell y Okoye. Sus datos estructurados viven en `data/voice-profiles.json`; esta guía explica el criterio autoral. Los perfiles restantes se conservan al final sólo como archivo de continuidades deprecadas y no deben orientar diálogo nuevo del master.
 
 **Metodología de acento:**
 - **Timbre** = cualidad física de la voz (altura, resonancia, textura). No cambia entre idiomas — es lo que hace que sea "la misma persona" hablando en inglés o en castellano.
-- **Acento en inglés** = inflexión del idioma nativo/de origen del personaje sobre un inglés internacional de tripulación diplomática — aporta textura sin sacrificar inteligibilidad.
-- **Acento en castellano** = asignado entre colombiano, peruano y argentino (según pediste), como una decisión de casting de doblaje — no necesariamente calcado del "país de origen" del personaje en el inglés, salvo casos donde tiene sentido narrativo (ver Vega).
+- **Prosodia de origen** = ritmo, entonación y articulación que el personaje conserva de su primera comunidad lingüística. Se dirige en interpretación y audio; nunca se imita mediante faltas, gramática rota u ortografía fonética.
+- **Formación lingüística** = lugar y comunidad donde el personaje aprendió a usar inglés o español de manera habitual. Determina léxico, sintaxis, tratamientos, registro e idioma profesional sin borrar la prosodia de origen.
+- **Diálogo escrito** = combinación sutil de prosodia, variedad aprendida, relación entre hablantes y presión dramática. La relación y la intención de la escena prevalecen sobre tics mecánicos: una variedad no obliga a usar siempre el mismo tratamiento ni a insertar localismos.
 - **Género:** confirmado por el texto existente en la mayoría de los casos; marcado como "sin confirmar" donde el material previo no lo especifica — ajustable sin tocar el resto del perfil.
 
-**Distribución de acentos en castellano:** Colombia (5) — Zao, Rao, Okoye, Wei, Vega · Perú (4) — Voss, Sorell, Volkov, Hassan · Argentina (5) — Harlan, Cael, Carvalho, Tanaka, Keene.
+**Regla bilingüe:** editar primero el diálogo español y ajustar el inglés hermano en el mismo pase. El objetivo no es traducir modismos literalmente, sino conservar intención, jerarquía, precisión técnica y personalidad mediante la variedad propia de cada idioma.
 
 ---
 
-## NÚCLEO PRINCIPAL
+## ELENCO DE LA NARRATIVA MAESTRA
 
 ### ZAO — Ingeniera Jefe
 *Género: femenino (confirmado). 40–50 años.*
 
 - **Timbre:** contralto, registro medio-bajo, ligera sequedad/aspereza (años de ambientes ruidosos de maquinaria), resonancia de pecho, casi sin vibrato — voz sin pulir a propósito, funcional antes que agradable.
-- **Inglés:** inflexión de mandarín sobre inglés internacional — consonantes marcadas, entonación que cae al final de la frase en vez de subir, casi no usa contracciones. Habla más rápido y con más seguridad cuando describe algo técnico que cuando habla de sí misma.
-- **Castellano (Colombia, bogotano/paisa neutro):** ritmo pausado, entonación descendente en frases técnicas, usa "usted" incluso bajo presión — la formalidad refuerza su distancia emocional.
+- **Inglés — Singapur (`en-SG`):** formó su inglés técnico en ámbitos científicos de Singapur. Usa un inglés internacional preciso, con pocas contracciones y sin partículas coloquiales singapurenses; conserva consonantes marcadas, ritmo parejo y cierres descendentes de base mandarín.
+- **Español — Bogotá (`es-CO`):** formó su español profesional en Bogotá. Emplea un registro bogotano formal y técnico, prefiere `usted` en relaciones profesionales y frases completas; bajo presión recorta la sintaxis sin perder exactitud.
 - **Nota de continuidad:** el mensaje final de auxilio debe sonar más rápido y con la voz ligeramente quebrada — es la única vez que se le nota el miedo, en ambos idiomas.
 
 ### CAPITÁN ELIAS VOSS
 *Género: masculino (confirmado). 50s.*
 
 - **Timbre:** barítono, resonancia plena de pecho, fundamental grave, respiración estable (entrenamiento de mando), casi sin aspereza.
-- **Inglés:** inflexión germánica/nórdica sobre inglés formal — consonantes duras, vocales muy definidas, como alguien que aprendió el idioma de forma disciplinada. Pausas parejas, sin muletillas, caída tonal al final de cada frase que comunica autoridad sin necesidad de subir el volumen.
-- **Castellano (Perú, Lima neutro/formal):** dicción muy clara, ritmo institucional, "usted" constante, pausa deliberada antes de dar una orden.
+- **Inglés — Toronto (`en-CA`):** formó su inglés institucional en Toronto. Habla un inglés canadiense estándar, formal y medido, con consonantes firmes y vocales definidas por su base germánica o nórdica; pregunta antes de ordenar y reserva las contracciones para cercanía o urgencia.
+- **Español — Lima (`es-PE`):** formó su español formal en Lima. Usa dicción institucional, instrucciones ordenadas y pocas muletillas. Emplea `usted` al ejercer mando, pero puede tutear a colegas de confianza cuando la relación dramática lo justifica.
 - **Nota de continuidad:** su calma vocal debe mantenerse estable incluso en el clímax — es el ancla sonora de la nave; cuando finalmente sube el volumen, tiene que sentirse como una ruptura real del patrón.
 
 ### COMANDANTE RYLEN HARLAN
 *Género: masculino (asumido por descriptores físicos previos — mandíbula marcada, sin pronombre explícito confirmado). 40s.*
 
 - **Timbre:** barítono más filoso que el de Voss — colocación más adelante/nasal que da un brillo metálico, tensión de mandíbula audible en las consonantes.
-- **Inglés:** inglés de oficial británico/atlántico, muy pulido, cadencia inquietantemente pareja en las escenas de calma — se quiebra en velocidad y tono hacia el clímax (la voz se le va antes que el cuerpo).
-- **Castellano (Argentina, porteño):** voseo, entonación ascendente-descendente porteña usada acá para dar un aire de superioridad/sarcasmo latente; se rompe en el clímax igual que en inglés.
+- **Inglés — Portsmouth (`en-GB`):** formó su inglés en el servicio naval de Portsmouth. Es británico meridional, preciso, persuasivo y estratégicamente cortés; usa understatement y preguntas que ya contienen una conclusión. Al perder control abandona la cortesía antes que la lógica.
+- **Español — Buenos Aires (`es-AR`):** formó su español rioplatense en Buenos Aires. Usa voseo natural, ironía porteña contenida y formulaciones pulidas que convierten su ideología en aparente sentido común; bajo presión acorta las frases y aflora el imperativo.
 - **Nota de continuidad:** la sonrisa "que nunca llega del todo a los ojos" tiene que oírse — un tono cálido en la superficie con algo frío debajo, en los dos idiomas.
 
 ### ELIN RAO — Especialista en IA
 *Género: femenino (confirmado por "la involucra"). 30s.*
 
 - **Timbre:** mezzosoprano ligera, aspiración/aire perceptible en reposo, resonancia delgada — pero se endurece y acelera (mismo tono fundamental, más energía) cuando trabaja con sistemas. Este contraste es el rasgo central de su voz.
-- **Inglés:** inflexión de inglés indio (zona Hyderabad/Bangalore) — consonantes suaves, sube el tono al final de la frase cuando está insegura, se aplana y acelera al hablar de temas técnicos.
-- **Castellano (Colombia):** tono suave, ritmo entrecortado con silencios breves en escenas sociales, mucho más fluida y rápida al hablar de sistemas — el mismo contraste que en inglés, en el mismo idioma.
+- **Inglés — Bengaluru (`en-IN`):** formó su inglés tecnológico en Bengaluru. Usa inglés indio urbano, técnico y directo, con base prosódica del sur de India; fuera del trabajo matiza y vacila, mientras que ante datos concluyentes formula declaraciones breves y absolutas.
+- **Español — Medellín (`es-CO`):** formó su español profesional en Medellín. Su variedad paisa urbana es cercana pero contenida; alterna tratamientos según confianza. En situaciones sociales deja frases incompletas y al trabajar con sistemas encadena diagnósticos breves sin rodeos.
 - **Nota de continuidad:** es la transición Zao→Rao como motor activo de la historia — su voz "de sistemas" debería, en el clímax, empezar a acercarse a la precisión/seguridad de Zao sin imitarla del todo.
 
 ### DRA. LIAN SORELL — Xenolingüista
 *Género: femenino (confirmado, "Dra."). 30s.*
 
 - **Timbre:** mezzo cálida, rango de alturas amplio y expresivo, resonancia adelante en la máscara (voz que proyecta, hecha para aulas).
-- **Inglés:** inflexión francesa sobre inglés — R suavizadas, entonación algo musical, acelera cuando algo le apasiona, dicción muy precisa (coherente con su entrenamiento en lingüística).
-- **Castellano (Perú):** entonación cálida y melódica, cambios de tono marcados, habla más rápido cuando defiende una idea.
+- **Inglés — Montréal (`en-CA`):** formó su inglés canadiense en un entorno francófono de Montréal. Conserva una inflexión francesa suave y dicción deliberadamente clara; usa contracciones naturales y preguntas que abren ideas, con elecciones semánticas propias de una lingüista.
+- **Español — Madrid (`es-ES`):** formó su español académico en Madrid. Usa un español peninsular culto y expresivo; alterna `tú`, `usted` y, cuando corresponda, `vosotros` según relación y situación, sin convertir la variedad en exhibición de localismos.
 - **Nota de continuidad:** su escena breve con Zao (quince segundos, sobre una traducción Velari) debería sonar genuinamente relajada — es el contraste de referencia antes de la acusación, que le endurece la voz por el resto de la historia.
+
+### LT. CMDR. DARA OKOYE — Jefa de Seguridad
+*Género: femenino, fijado por la continuidad vigente.*
+
+- **Timbre:** contralto firme, resonancia de pecho marcada y ataque directo. Sus órdenes son entrenadas y precisas, nunca teatrales; el conflicto aparece en pausas mínimas antes de recuperar la autoridad.
+- **Inglés — Enugu (`en-NG`):** formó su inglés educado en Enugu, dentro de un entorno igbo. Conserva ritmo silábico, consonantes muy claras y cierres descendentes; da órdenes inequívocas y expresa duda mediante una pausa o una pregunta exacta.
+- **Español — Malabo (`es-GQ`):** formó su español formal en Malabo. Usa español ecuatoguineano directo, plenamente gramatical, con verbos operativos y tratamientos respetuosos; mantiene la inflexión igbo sin errores inventados ni caricatura fonética.
+- **Nota de continuidad:** frente a una apelación personal de Harlan, una pausa mínima puede revelar conflicto; la respuesta recupera enseguida la firmeza porque la decisión se expresa mediante la acción, no mediante exposición.
+
+---
+
+## PERFILES ARCHIVADOS DE CONTINUIDADES DEPRECADAS
+
+Estos perfiles no pertenecen al elenco maestro vigente. Se conservan para rescatar material útil y procedencia; no deben usarse para ampliar el master sin una decisión narrativa explícita.
 
 ### LT. JUNO CAEL — Piloto / Comunicaciones
 *Género: femenino ("Pragmática", confirmado por concordancia). 30s.*
@@ -66,14 +81,7 @@
 
 ---
 
-## ELENCO SECUNDARIO (historia completa / versión larga)
-
-### LT. CMDR. DARA OKOYE — Jefa de Seguridad
-*Género: femenino, fijado por la continuidad vigente.*
-
-- **Timbre:** contralto firme, resonancia de pecho marcada, ataque directo (voz entrenada para dar órdenes en situaciones de riesgo).
-- **Inglés:** inflexión nigeriana (igbo) sobre inglés — ritmo marcado por sílabas, consonantes muy definidas, entonación firme y descendente.
-- **Castellano (Colombia):** ritmo firme, dicción muy clara, tono que no admite ambigüedad. Ante la apelación de Harlan, una pausa mínima revela el pasado operativo compartido; la respuesta recupera de inmediato la firmeza porque elige su deber hacia Voss y la misión.
+### Otros perfiles heredados de la historia completa / versión larga
 
 ### ENSIGN PETRA VOLKOV — Ingeniera Junior, protégée de Zao
 *Género: femenino (confirmado, "Petra"). Probablemente 20s.*
@@ -129,7 +137,7 @@
 
 ## Notas de producción para Higgsfield
 
-- **Límite de clonación:** los planes de Higgsfield permiten clonar hasta 3 voces personalizadas por cuenta. Con 14 personajes vas a necesitar repartir el trabajo entre varias cuentas/planes, o usar voces preestablecidas (hay más de 40) combinadas con las etiquetas de emoción de Eleven v3 o el control de voz/estilo de Qwen Audio 3.0 para los personajes que no requieran clonación completa — reservá el cupo de clonación para los 6 principales, que son los que más diálogo llevan.
+- **Capacidad del proveedor:** volver a verificar límites, modelos y cupos de Higgsfield antes de contratar o generar; esta guía no fija cifras comerciales temporales. La producción vigente sólo necesita resolver las seis voces del elenco maestro.
 - **Consistencia de timbre EN/ES:** si clonás una voz a partir de una muestra de audio, subí la misma muestra base para generar tanto la versión en inglés como en castellano — el timbre (altura, resonancia, textura) se mantiene porque viene de la misma muestra; el acento lo controla el idioma/prompt del modelo, no la muestra.
 - **Multi-hablante:** para escenas de puente de mando con varios personajes a la vez, Seed Audio 1.0 es el modelo indicado — genera el diálogo y la ambientación juntos, así que conviene tener las descripciones de este documento a mano al escribir el prompt de cada escena grupal.
 

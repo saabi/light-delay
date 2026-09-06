@@ -4,9 +4,9 @@
     "id": "generation-plan:light-delay-trailer",
     "scriptId": "script:light-delay-trailer",
     "scriptVersion": "0.2.0-draft",
-    "sourceDigest": "22fa566993a29c46fd7ea7f3e2808e559476d09987a4bffc96449880039174b4",
+    "sourceDigest": "54b23023430b58f10e9e0bdd189827cc80d775a9f3dac7291327fb15f20ce295",
     "campaignId": "campaign:higgsfield-trial-24h",
-    "status": "blocked",
+    "status": "obsolete",
     "promptLanguage": "en",
     "diegeticTextLanguage": "en",
     "briefLanguage": "es"

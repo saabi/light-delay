@@ -27,13 +27,16 @@ export function resolveActiveScriptId(options: {
 	storedId?: string | null;
 	canonicalId: string;
 	registeredIds: readonly string[];
+	defaultEligibleIds?: readonly string[];
 }): string {
 	const registered = new Set(options.registeredIds);
+	const defaultEligible = new Set(options.defaultEligibleIds ?? options.registeredIds);
 	if (options.paramEncoded) {
 		const decoded = decodeScriptId(options.paramEncoded);
 		if (registered.has(decoded)) return decoded;
 	}
-	if (options.storedId && registered.has(options.storedId)) return options.storedId;
+	if (options.storedId && registered.has(options.storedId) && defaultEligible.has(options.storedId))
+		return options.storedId;
 	if (registered.has(options.canonicalId)) return options.canonicalId;
 	return options.registeredIds[0] ?? options.canonicalId;
 }

@@ -1,5 +1,7 @@
 # Light Delay — Plan de adaptación de 30 minutos a Festival Cut (~5 minutos)
 
+> **OBSOLETO — FESTIVAL CUT ANTERIOR.** Se conserva para rescatar decisiones de compresión y puesta; no es un plan de producción vigente ni deriva del master actual.
+
 **Estado:** propuesta de adaptación derivada  
 **Objetivo:** producir una versión de aproximadamente **4:45–5:00** apta para festival, presentación pública y producción de video generativo de costo contenido, sin sustituir el guion canónico de 30 minutos.  
 **Fuente narrativa:** guion canónico revisado de 30:00, estructura de 17 escenas, momentos clave y notas técnicas/continuidad consolidadas.

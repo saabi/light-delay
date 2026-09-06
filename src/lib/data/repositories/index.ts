@@ -15,6 +15,7 @@ import documentsJson from '../../../../data/documents.json';
 import narrativeFunctionsJson from '../../../../data/narrative-functions.json';
 import entityVariantsJson from '../../../../data/entity-variants.json';
 import comparisonTaxonomyJson from '../../../../data/comparison-taxonomy.json';
+import editorialLifecycleJson from '../../../../data/editorial-lifecycle.json';
 
 import type { ProjectFile, ScriptRegistryEntry } from '$lib/types/project';
 import type { EntityVariantsFile, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
@@ -31,6 +32,13 @@ import type { DocumentsFile } from '$lib/types/document';
 import type { ScriptId } from '$lib/types/ids';
 import type { ComparisonTaxonomyFile } from '$lib/types/comparison';
 import type { OutlineCoverageEntry, OutlineFile } from '$lib/types/outline';
+import type {
+	EditorialLifecycleFile,
+	LifecycleRefKind,
+	LifecycleStatus,
+	MasterRelevance,
+	LifecycleDisposition
+} from '$lib/types/lifecycle';
 import { assertJsonModule } from '../loaders/loadJson.ts';
 import {
 	localizeComparisonTaxonomy,
@@ -93,6 +101,62 @@ export function listScripts(): ScriptRegistryEntry[] {
 
 export function listLocalizedScripts(language: string): ScriptRegistryEntry[] {
 	return localizeScriptRegistryEntries(listScripts(), language);
+}
+
+export function listCurrentScripts(): ScriptRegistryEntry[] {
+	return listScripts().filter((entry) => entry.status !== 'deprecated');
+}
+
+export function getEditorialLifecycle(): EditorialLifecycleFile {
+	return assertJsonModule(
+		editorialLifecycleJson as EditorialLifecycleFile,
+		'editorial-lifecycle'
+	);
+}
+
+export interface ResolvedLifecycle {
+	status: LifecycleStatus;
+	relevance: MasterRelevance;
+	disposition: LifecycleDisposition;
+	reason?: import('$lib/types/i18n').StoryText;
+	basis: string;
+}
+
+export function getLifecycleForRef(kind: LifecycleRefKind, id: string): ResolvedLifecycle {
+	const lifecycle = getEditorialLifecycle();
+	for (const group of lifecycle.groups) {
+		if (group.refs.some((item) => item.kind === kind && item.id === id)) {
+			return { ...group, basis: 'explicit' };
+		}
+	}
+	if (kind === 'asset') {
+		const asset = getAssets().assets.find((item) => item.id === id);
+		if (asset?.role === 'animatic_placeholder') {
+			return { status: 'active', relevance: 'platform', disposition: 'retain', basis: 'asset-role' };
+		}
+		if (asset?.role === 'animatic') {
+			return { status: 'obsolete', relevance: 'unrelated', disposition: 'delete_after_gates', basis: 'deprecated-animatic' };
+		}
+		const owners = [
+			...getCharacters().characters,
+			...getLocations().locations,
+			...getObjects().objects,
+			...getVehicles().vehicles,
+			...getFactions().factions
+		].filter((entity) => entity.referenceAssetIds?.includes(id));
+		if (owners.length) {
+			const states = owners.map((entity) => getLifecycleForRef('entity', entity.id));
+			if (states.every((item) => item.status === 'obsolete')) {
+				return { status: 'obsolete', relevance: 'unrelated', disposition: 'delete_after_gates', basis: 'obsolete-entity-only' };
+			}
+		}
+	}
+	return {
+		status: lifecycle.defaults.unclassifiedStatus,
+		relevance: lifecycle.defaults.unclassifiedRelevance,
+		disposition: lifecycle.defaults.unclassifiedDisposition,
+		basis: 'default-review'
+	};
 }
 
 export function getCanonicalScript(): ScriptFile {

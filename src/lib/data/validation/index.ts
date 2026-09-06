@@ -123,12 +123,12 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 	}
 
 	for (const script of scripts) {
-		const isCanonical = script.script.id === bundle.project.project.canonicalScriptId;
+		const isArchivedMain = script.script.id === 'script:light-delay-main-short';
 		results.push(
 			validateScript(script, {
 				sourceLanguage,
-				expectSceneCount: isCanonical ? 19 : undefined,
-				expectShotCount: isCanonical ? 128 : undefined,
+				expectSceneCount: isArchivedMain ? 19 : undefined,
+				expectShotCount: isArchivedMain ? 128 : undefined,
 				requireSelectedTakes: script.shots.length > 0,
 				narrativeFunctions: bundle.narrativeFunctions,
 				characterIds,

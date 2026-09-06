@@ -40,6 +40,16 @@ export interface VoiceProfilesFile {
 
 export interface VoiceProfileVariant {
 	language: LanguageTag;
+	/** BCP 47 locale for the acquired language variety (for example es-AR or en-NG). */
+	locale?: string;
+	languageFormation?: {
+		place: StoryText;
+		variety: StoryText;
+	};
+	/** Acoustic rhythm and intonation carried into this language; never an orthographic style. */
+	prosody?: StoryText;
+	/** Lexicon, syntax, register and forms of address used when authoring dialogue. */
+	dialogueStyle?: StoryText;
 	provider?: string;
 	model?: string;
 	providerVoiceId?: string;
@@ -52,7 +62,7 @@ export interface VoiceProfile {
 	id: VoiceProfileId;
 	characterId?: CharacterId;
 	name: string;
-	description?: string;
+	description?: StoryText;
 	variants: VoiceProfileVariant[];
 }
 

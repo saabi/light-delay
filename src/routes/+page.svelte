@@ -22,7 +22,7 @@
 			><img src={withBase('/brand/light-delay-logo.svg')} alt="Light Delay" /></a
 		>
 		<nav aria-label={m.nav_primary()}>
-			<a href={withLocale(`/animatic/${scriptId}`)}>{m.nav_animatic()}</a><a
+			<a href={withLocale(`/outline/${scriptId}`)}>{m.nav_outline()}</a><a
 				href={withLocale('/project')}>{m.nav_project()}</a
 			><a href="https://github.com/saabi/light-delay">{m.nav_github()}</a><LocaleSwitcher compact />
 		</nav>
@@ -34,8 +34,8 @@
 				<h1>{m.landing_title()}</h1>
 				<p class="lede">{m.landing_lede()}</p>
 				<div class="actions">
-					<a class="primary" href={withLocale(`/animatic/${scriptId}`)}>{m.landing_watch()}</a><a
-						href={withLocale(`/script/${scriptId}`)}>{m.landing_read()}</a
+					<a class="primary" href={withLocale(`/outline/${scriptId}`)}>{m.landing_watch()}</a><a
+						href={withLocale('/project')}>{m.landing_read()}</a
 					>
 				</div>
 			</div>
@@ -65,7 +65,7 @@
 		<section class="explore">
 			<p class="eyebrow">{m.landing_explore_title()}</p>
 			<div class="cards">
-				<a href={withLocale(`/script/${scriptId}`)}
+				<a href={withLocale(`/outline/${scriptId}`)}
 					><h2>{m.landing_card_script()}</h2>
 					<p>{m.landing_card_script_body()}</p>
 					<b>{m.action_open()} →</b></a

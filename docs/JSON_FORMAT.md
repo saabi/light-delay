@@ -8,17 +8,26 @@ Important terminology: what the current animatic calls a “toma” is usually a
 
 Dialogue and action should live in ordered **cues** inside beats. Shots then reference the cues they cover. This allows one line of dialogue to continue across several cuts: speaker, listener reaction, insert shot, return to speaker, etc.
 
+## Autoridad narrativa y ciclo de vida
+
+`data/outlines/light-delay-master-narrative.json` es la autoridad narrativa WIP. `project.narrativeAuthority` la vincula con su continuidad y con un `ScriptFile` stub vacío; `canonicalScriptId` apunta a ese stub sólo para resolver rutas. Los guiones y outlines anteriores usan `status: "deprecated"` y no deben alimentar trabajo nuevo.
+
+`data/editorial-lifecycle.json` clasifica cada recurso conocido sin borrar por inferencia. El estado por defecto es `review_required`; sólo `obsolete` puede combinarse con `delete_after_gates`, y aun así el archivo permanece hasta completar la escaleta maestra, la revisión de rescate, la aprobación de reemplazos y la auditoría de dependientes.
+
 ## Proposed files
 
 ```text
 data/
 |-- project.json
+|-- editorial-lifecycle.json
 |-- scripts/
+|   |-- light-delay-master-narrative.json
 |   |-- light-delay-main-short.json
 |   |-- light-delay-long.json
 |   |-- light-delay-festival.json
 |   `-- light-delay-trailer.json
 |-- outlines/                         # optional; one JSON per script when authored
+|   |-- light-delay-master-narrative.json
 |   `-- light-delay-<cut>.json
 |-- characters.json
 |-- locations.json
@@ -67,6 +76,7 @@ export type ScriptKind =
   | "trailer"
   | "teaser"
   | "proof_of_concept"
+  | "master_narrative"
   | "alternate";
 
 export type EntityKind =
@@ -232,7 +242,7 @@ Path convention: `data/outlines/<script-slug>.json` where `<script-slug>` is the
 
 ```ts
 export type OutlineImportance = "required" | "optional";
-export type OutlineFileStatus = "draft" | "reviewed" | "locked";
+export type OutlineFileStatus = "draft" | "reviewed" | "locked" | "deprecated";
 export type OutlineStepLevel = "story" | "detail";
 export type OutlineCoverageStatus = "not_started" | "partial" | "covered" | "deferred" | "not_applicable";
 
@@ -240,7 +250,7 @@ export type OutlineProseBlock =
   | { type: "paragraph"; text: LocalizedString }
   | { type: "heading"; level: 3 | 4; text: LocalizedString }
   | { type: "list"; ordered?: boolean; items: LocalizedString[] }
-  | { type: "blockquote"; text: LocalizedString };
+  | { type: "blockquote"; text: LocalizedString; speakerId?: CharacterId };
 
 export interface OutlineStorySection {
   id: string;
@@ -293,6 +303,7 @@ export interface OutlineFile {
     synopsis: LocalizedString;
     status: OutlineFileStatus;
     version: string;
+    revision?: number; // revisión editorial vigente; no confundir con procedencia histórica
     editorialNotice?: LocalizedString;
     source?: {
       path: string;
@@ -300,6 +311,19 @@ export interface OutlineFile {
       language: string;
       sha256?: string;
     };
+    provenance?: {
+      importedFrom?: Array<{
+        path: string;
+        revision: string;
+        language: string;
+        sha256?: string;
+      }>;
+    };
+    exports?: Array<{
+      path: string;
+      language: string;
+      format: "markdown";
+    }>;
   };
   framing?: OutlineFramingSection[];
   storySections?: OutlineStorySection[];
@@ -757,19 +781,34 @@ export interface VoiceProfile {
   characterId?: CharacterId;
 
   name: string;
-  language: string;
-  description?: string;
+  description?: LocalizedString;
+  variants: VoiceProfileVariant[];
+}
 
+export interface VoiceProfileVariant {
+  language: LanguageTag;
+  locale?: string; // BCP 47; variedad aprendida, p. ej. es-AR o en-NG
+  languageFormation?: {
+    place: LocalizedString;
+    variety: LocalizedString;
+  };
+  prosody?: LocalizedString;
+  dialogueStyle?: LocalizedString;
   provider?: string;
   model?: string;
   providerVoiceId?: string;
-
   sampleAssetIds?: AssetId[];
   pronunciationDictionaryAssetId?: AssetId;
-
   settings?: Record<string, string | number | boolean>;
 }
 ```
+
+La descripción editorial común separa el timbre de la lengua. Cada variante puede declarar la
+prosodia que el personaje conserva, dónde y qué variedad aprendió, y las pautas de léxico,
+sintaxis, registro y tratamiento para escribir diálogo. `locale` describe esa variedad mediante
+BCP 47; no autoriza caricatura fonética. La misma variante agrupa proveedor, modelo, muestras y
+ajustes propios del idioma. La ausencia de `sampleAssetIds` significa que la voz está descrita
+pero todavía no posee una muestra aprobada.
 
 ## Locations, objects, vehicles and factions
 

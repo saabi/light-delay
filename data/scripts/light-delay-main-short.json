@@ -8,7 +8,7 @@
       "en": "Light Delay — Short Film Screenplay"
     },
     "version": "1.1.0-draft",
-    "status": "draft",
+    "status": "deprecated",
     "actIds": [
       "main:act-1",
       "main:act-2",

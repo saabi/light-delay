@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0.0",
-	"generatedAt": "2026-09-01T00:55:03.751Z",
+	"generatedAt": "2026-09-05T18:59:32.754Z",
 	"entries": {
 		"characters/zao/model-sheet.png.webp": {
 			"source": "/assets/characters/zao/model-sheet.png",
@@ -64,6 +64,13 @@
 			"mtimeMs": 1787612704000,
 			"size": 2495894,
 			"hash": "e7719c1c49017759"
+		},
+		"characters/okoye/model-sheet.png.webp": {
+			"source": "/assets/characters/okoye/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/okoye/model-sheet.png.webp",
+			"mtimeMs": 1788634410516.1094,
+			"size": 2484978,
+			"hash": "55eb50ab4f3ae90c"
 		},
 		"characters/earth-protesters/model-sheet.png.webp": {
 			"source": "/assets/characters/earth-protesters/model-sheet.png",

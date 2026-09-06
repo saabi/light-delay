@@ -1,0 +1,287 @@
+{
+  "schemaVersion": "1.0.0",
+  "authority": {
+    "outlineId": "outline:light-delay-master-narrative",
+    "scriptId": "script:light-delay-master-narrative",
+    "continuityId": "continuity:light-delay-master-wip",
+    "status": "wip_authoritative"
+  },
+  "deletionGates": [
+    { "id": "master_outline_complete", "status": "open" },
+    { "id": "salvage_review_complete", "status": "open" },
+    { "id": "replacement_derivatives_approved", "status": "open" },
+    { "id": "no_active_dependants", "status": "open" }
+  ],
+  "defaults": {
+    "unclassifiedStatus": "review_required",
+    "unclassifiedRelevance": "uncertain",
+    "unclassifiedDisposition": "retain"
+  },
+  "groups": [
+    {
+      "id": "lifecycle:master-authority",
+      "status": "active",
+      "relevance": "authoritative",
+      "disposition": "retain",
+      "reason": {
+        "es": "La escaleta maestra bilingüe es la fuente narrativa vigente aunque continúe en desarrollo.",
+        "en": "The bilingual master outline is the current narrative source even while it remains in development."
+      },
+      "refs": [
+        { "kind": "project", "id": "project:light-delay" },
+        { "kind": "continuity", "id": "continuity:light-delay-master-wip" },
+        { "kind": "script", "id": "script:light-delay-master-narrative" },
+        { "kind": "outline", "id": "outline:light-delay-master-narrative" }
+      ]
+    },
+    {
+      "id": "lifecycle:master-empty-surfaces",
+      "status": "active",
+      "relevance": "platform",
+      "disposition": "retain",
+      "reason": {
+        "es": "Ruta vigente que representa honestamente que todavía no existe implementación derivada del master.",
+        "en": "Current route that honestly represents that no implementation has yet been derived from the master."
+      },
+      "refs": [
+        { "kind": "animatic", "id": "script:light-delay-master-narrative" }
+      ]
+    },
+    {
+      "id": "lifecycle:current-editorial-contracts",
+      "status": "active",
+      "relevance": "platform",
+      "disposition": "retain",
+      "reason": {
+        "es": "Contrato, estado o derivado vigente que gobierna la autoridad maestra y su manejo seguro.",
+        "en": "Current contract, status record, or derivative governing the master authority and its safe handling."
+      },
+      "refs": [
+        { "kind": "static_file", "id": "AGENTS.md" },
+        { "kind": "static_file", "id": "README.md" },
+        { "kind": "static_file", "id": "TODO.md" },
+        { "kind": "static_file", "id": "CHANGELOG.md" },
+        { "kind": "static_file", "id": "data/README.md" },
+        { "kind": "static_file", "id": "docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md" },
+        { "kind": "static_file", "id": "docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md" },
+        { "kind": "static_file", "id": "docs/ESCALETA.md" },
+        { "kind": "static_file", "id": "docs/GUIA_ESCALETA.md" },
+        { "kind": "static_file", "id": "docs/JSON_FORMAT.md" },
+        { "kind": "static_file", "id": "docs/JSON_FORMAT_I18N_ADDENDUM.md" },
+        { "kind": "static_file", "id": "docs/PROJECT_STATUS.md" },
+        { "kind": "static_file", "id": "docs/MASTER_RELEVANCE_REPORT.md" },
+        { "kind": "static_file", "id": "docs/PENDING_AUTHOR_NOTES.md" },
+        { "kind": "static_file", "id": "docs/WORKFLOW.md" },
+        { "kind": "static_file", "id": "docs/wip/general-narrative-outline.es.md" },
+        { "kind": "static_file", "id": "docs/wip/general-narrative-outline.en.md" }
+      ]
+    },
+    {
+      "id": "lifecycle:deprecated-products",
+      "status": "deprecated",
+      "relevance": "unrelated",
+      "disposition": "retain_for_salvage",
+      "reason": {
+        "es": "Producto anterior al master vigente. Se conserva para rescatar diálogo, encuadres y procedencia; no puede guiar trabajo nuevo.",
+        "en": "Product predating the current master. It is retained to salvage dialogue, framing, and provenance; it cannot guide new work."
+      },
+      "refs": [
+        { "kind": "continuity", "id": "continuity:light-delay-primary" },
+        { "kind": "script", "id": "script:light-delay-main-short" },
+        { "kind": "script", "id": "script:light-delay-festival" },
+        { "kind": "script", "id": "script:light-delay-trailer" },
+        { "kind": "script", "id": "script:light-delay-long" },
+        { "kind": "outline", "id": "outline:light-delay-main-short" },
+        { "kind": "outline", "id": "outline:light-delay-festival" },
+        { "kind": "outline", "id": "outline:light-delay-trailer" },
+        { "kind": "outline", "id": "outline:light-delay-long" }
+      ]
+    },
+    {
+      "id": "lifecycle:obsolete-implementations",
+      "status": "obsolete",
+      "relevance": "unrelated",
+      "disposition": "retain_for_salvage",
+      "reason": {
+        "es": "Implementación o planificación ligada exclusivamente a productos narrativos deprecados. Se conserva hasta completar el rescate.",
+        "en": "Implementation or planning tied exclusively to deprecated narrative products. It is retained until salvage is complete."
+      },
+      "refs": [
+        { "kind": "animatic", "id": "script:light-delay-main-short" },
+        { "kind": "animatic", "id": "script:light-delay-festival" },
+        { "kind": "animatic", "id": "script:light-delay-trailer" },
+        { "kind": "animatic", "id": "script:light-delay-long" },
+        { "kind": "production_plan", "id": "script:light-delay-main-short" },
+        { "kind": "production_plan", "id": "script:light-delay-festival" },
+        { "kind": "production_plan", "id": "script:light-delay-trailer" },
+        { "kind": "production_plan", "id": "script:light-delay-long" },
+        { "kind": "continuity_ledger", "id": "script:light-delay-main-short" },
+        { "kind": "continuity_ledger", "id": "script:light-delay-festival" },
+        { "kind": "continuity_ledger", "id": "script:light-delay-trailer" },
+        { "kind": "continuity_ledger", "id": "script:light-delay-long" },
+        { "kind": "archive", "id": "archive:main-short-unplaced-action-cues" },
+        { "kind": "static_file", "id": "data/production/checklists/higgsfield-pre-subscribe.json" },
+        { "kind": "static_file", "id": "docs/production/HIGGSFIELD_PRE_SUBSCRIBE_CHECKLIST.md" },
+        { "kind": "static_file", "id": "docs/PRODUCTION_PLAN.md" },
+        { "kind": "static_file", "id": "docs/PLAN_SINCRONIZACION_ANIMATICS.md" },
+        { "kind": "static_file", "id": "docs/EDICION_ESCENA_LASER_Y_RITMO_DIALOGO.md" },
+        { "kind": "static_file", "id": "docs/Light Delay — Tráiler de la versión de 30 minutos.md" },
+        { "kind": "static_file", "id": "docs/light-delay-festival-cut-adaptation.md" },
+        { "kind": "static_file", "id": "docs/REVISION_LARGOMETRAJE_RECUPERADO.md" },
+        { "kind": "static_file", "id": "docs/REVISION_TRABAJO_OTRO_AGENTE.md" }
+      ]
+    },
+    {
+      "id": "lifecycle:master-required-entities",
+      "status": "active",
+      "relevance": "required",
+      "disposition": "retain",
+      "reason": {
+        "es": "Entidad nombrada o requerida directamente por la escaleta maestra.",
+        "en": "Entity directly named or required by the master outline."
+      },
+      "refs": [
+        { "kind": "entity", "id": "character:zao" },
+        { "kind": "entity", "id": "character:voss" },
+        { "kind": "entity", "id": "character:harlan" },
+        { "kind": "entity", "id": "character:rao" },
+        { "kind": "entity", "id": "character:sorell" },
+        { "kind": "entity", "id": "character:okoye" },
+        { "kind": "entity", "id": "location:proxima-station" },
+        { "kind": "entity", "id": "location:proxima-dock" },
+        { "kind": "entity", "id": "location:celestial-ardor-bridge" },
+        { "kind": "entity", "id": "location:celestial-ardor-command-vestibule" },
+        { "kind": "entity", "id": "location:celestial-ardor-central-access" },
+        { "kind": "entity", "id": "location:celestial-ardor-service-cylinder" },
+        { "kind": "entity", "id": "location:celestial-ardor-engineering" },
+        { "kind": "entity", "id": "location:velari-wormhole-mouth" },
+        { "kind": "entity", "id": "location:velari-station" },
+        { "kind": "entity", "id": "object:optical-contingency-transmitter" },
+        { "kind": "entity", "id": "object:wired-comms-deck-patch-panel" },
+        { "kind": "entity", "id": "vehicle:celestial-ardor" },
+        { "kind": "entity", "id": "faction:human" },
+        { "kind": "entity", "id": "faction:velari" },
+        { "kind": "entity_variant", "id": "variant:okoye-master-wip" },
+        { "kind": "asset", "id": "asset:character-okoye-sheet" },
+        { "kind": "voice_profile", "id": "voice:zao-es" },
+        { "kind": "voice_profile", "id": "voice:voss-es" },
+        { "kind": "voice_profile", "id": "voice:harlan-es" },
+        { "kind": "voice_profile", "id": "voice:rao-es" },
+        { "kind": "voice_profile", "id": "voice:sorell-es" },
+        { "kind": "voice_profile", "id": "voice:okoye" }
+      ]
+    },
+    {
+      "id": "lifecycle:master-compatible-support",
+      "status": "active",
+      "relevance": "compatible",
+      "disposition": "retain",
+      "reason": {
+        "es": "Puede implementar una función presente en el master sin imponer canon adicional.",
+        "en": "It can implement a function present in the master without imposing additional canon."
+      },
+      "refs": [
+        { "kind": "entity", "id": "character:earth-protesters" },
+        { "kind": "entity", "id": "character:periodista" },
+        { "kind": "entity", "id": "character:joven-contacto" }
+      ]
+    },
+    {
+      "id": "lifecycle:master-review-required",
+      "status": "review_required",
+      "relevance": "uncertain",
+      "disposition": "retain",
+      "reason": {
+        "es": "El master admite una función semejante, pero no confirma esta identidad o formulación exacta.",
+        "en": "The master allows a similar function but does not confirm this exact identity or formulation."
+      },
+      "refs": [
+        { "kind": "entity", "id": "character:proxima-technician" },
+        { "kind": "entity", "id": "character:manifestante-acheron" },
+        { "kind": "entity", "id": "faction:acheron" }
+      ]
+    },
+    {
+      "id": "lifecycle:obsolete-story-elements",
+      "status": "obsolete",
+      "relevance": "unrelated",
+      "disposition": "delete_after_gates",
+      "reason": {
+        "es": "Pertenece a una versión anterior y su función fue eliminada o sustituida por la trama del master.",
+        "en": "It belongs to an earlier version and its function was removed or replaced by the master plot."
+      },
+      "refs": [
+        { "kind": "entity", "id": "character:cael" },
+        { "kind": "entity", "id": "character:medical-officer" },
+        { "kind": "entity", "id": "character:security-crew" },
+        { "kind": "entity", "id": "character:keene" },
+        { "kind": "entity", "id": "character:vega" },
+        { "kind": "entity", "id": "character:wei" },
+        { "kind": "entity", "id": "character:hassan" },
+        { "kind": "entity", "id": "character:carvalho" },
+        { "kind": "entity", "id": "character:volkov" },
+        { "kind": "entity", "id": "character:tanaka" },
+        { "kind": "entity", "id": "location:diplomatic-core-room" },
+        { "kind": "entity", "id": "object:diplomatic-quantum-core" },
+        { "kind": "entity", "id": "object:physical-override-relay" },
+        { "kind": "entity", "id": "object:read-only-greeting-medium" },
+        { "kind": "entity", "id": "vehicle:velari-emissary" },
+        { "kind": "entity_variant", "id": "variant:cael-long-pilot" }
+      ]
+    },
+    {
+      "id": "lifecycle:platform-placeholder",
+      "status": "active",
+      "relevance": "platform",
+      "disposition": "retain",
+      "reason": {
+        "es": "Recurso técnico de la aplicación; no formula canon narrativo.",
+        "en": "Application infrastructure resource; it does not establish narrative canon."
+      },
+      "refs": [
+        { "kind": "asset", "id": "asset:animatic-placeholder-missing-frame" }
+      ]
+    },
+    {
+      "id": "lifecycle:legacy-authority-documents",
+      "status": "deprecated",
+      "relevance": "unrelated",
+      "disposition": "retain_for_salvage",
+      "reason": {
+        "es": "Autoridad de la continuidad primaria anterior; sólo conserva procedencia y material candidato a rescate.",
+        "en": "Authority for the former primary continuity; retained only for provenance and salvage candidates."
+      },
+      "refs": [
+        { "kind": "static_file", "id": "docs/CANON_DECISIONS.md" },
+        { "kind": "static_file", "id": "docs/SCRIPT_ANIMATIC_SYNC.md" },
+        { "kind": "static_file", "id": "docs/CONTINUIDAD_CAUSAL_GUIONES.md" },
+        { "kind": "static_file", "id": "docs/light-delay-long-full-feature-cut.md" },
+        { "kind": "static_file", "id": "docs/light-delay-full-feature-overview.md" },
+        { "kind": "static_file", "id": "docs/MIGRATION_PLAN.md" },
+        { "kind": "static_file", "id": "docs/SVELTEKIT_SETUP.md" },
+        { "kind": "static_file", "id": "legacy-site/" }
+      ]
+    },
+    {
+      "id": "lifecycle:deprecated-document-records",
+      "status": "deprecated",
+      "relevance": "unrelated",
+      "disposition": "retain_for_salvage",
+      "reason": {
+        "es": "Documento público extraído o redactado para versiones anteriores. Se conserva para procedencia y rescate, no como descripción vigente del master.",
+        "en": "Public document extracted or authored for earlier versions. It is retained for provenance and salvage, not as a current description of the master."
+      },
+      "refs": [
+        { "kind": "document", "id": "document:notas-tecnicas" },
+        { "kind": "document", "id": "document:biblia-produccion" },
+        { "kind": "document", "id": "document:reporte-comprensivo" },
+        { "kind": "document", "id": "document:momentos-clave" },
+        { "kind": "document", "id": "document:estructura-30-minutos" },
+        { "kind": "document", "id": "document:canon" },
+        { "kind": "document", "id": "document:legacy-feature-overview" },
+        { "kind": "document", "id": "document:legacy-feature-beats" },
+        { "kind": "document", "id": "document:feature-recovery-review" }
+      ]
+    }
+  ]
+}

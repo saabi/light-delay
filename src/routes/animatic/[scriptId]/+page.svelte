@@ -1,7 +1,8 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import AnimaticEditor from '$lib/components/animatic/AnimaticEditor.svelte';
-	import { getLocalizedScript } from '$lib/data/repositories/index';
+	import { getLifecycleForRef, getLocalizedScript } from '$lib/data/repositories/index';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import { getShotMedia } from '$lib/data/repositories/lookups';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
@@ -18,6 +19,7 @@
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const language = $derived(getLanguageState());
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
+	const lifecycle = $derived(getLifecycleForRef('animatic', scriptId));
 	const encoded = $derived(encodeScriptId(scriptId));
 	const outlineHref = $derived(withLocale(`/outline/${encoded}`));
 	const initialShotId = $derived(
@@ -68,6 +70,10 @@
 	});
 </script>
 
+<svelte:head>
+	{#if lifecycle.status !== 'active'}<meta name="robots" content="noindex,follow" />{/if}
+</svelte:head>
+
 <main class="page">
 	<PageHeader
 		eyebrow={m.animatic_label()}
@@ -79,6 +85,7 @@
 			scriptKindLabel(script.script.kind)
 		]}
 	/>
+	<LifecycleNotice {lifecycle} />
 	<StoryLanguageNotice />
 	{#if script.shots.length === 0}
 		<div class="empty" role="status">

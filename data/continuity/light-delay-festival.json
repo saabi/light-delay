@@ -3,7 +3,7 @@
   "ledger": {
     "id": "ledger:light-delay-festival",
     "scriptId": "script:light-delay-festival",
-    "status": "draft",
+    "status": "obsolete",
     "sourceDocument": "docs/CONTINUIDAD_CAUSAL_GUIONES.md",
     "notes": {
       "es": "Causalidad y animatic cubiertos A–G con 67 tomas; los stills reutilizados permanecen como placeholders marcados para regeneración.",

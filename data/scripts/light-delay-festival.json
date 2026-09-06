@@ -9,7 +9,7 @@
       "en": "Light Delay — Festival Cut"
     },
     "version": "0.3.0-draft",
-    "status": "draft",
+    "status": "deprecated",
     "kind": "festival_cut",
     "targetDurationMs": 374200,
     "lineage": {

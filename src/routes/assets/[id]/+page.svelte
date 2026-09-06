@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import { withBase } from '$lib/utils/paths';
 	import * as m from '$lib/paraglide/messages.js';
 	import { getLocale } from '$lib/paraglide/runtime.js';
@@ -13,6 +14,10 @@
 	const description = $derived(storyText(asset.description, locale) || undefined);
 </script>
 
+<svelte:head>
+	{#if data.lifecycle.status !== 'active'}<meta name="robots" content="noindex,follow" />{/if}
+</svelte:head>
+
 <main class="page">
 	<PageHeader
 		eyebrow={m.asset_label()}
@@ -24,6 +29,7 @@
 			asset.path
 		]}
 	/>
+	<LifecycleNotice lifecycle={data.lifecycle} />
 
 	{#if asset.kind === 'image'}
 		<figure>

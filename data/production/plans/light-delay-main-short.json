@@ -4,9 +4,9 @@
     "id": "generation-plan:light-delay-main-short",
     "scriptId": "script:light-delay-main-short",
     "scriptVersion": "1.1.0-draft",
-    "sourceDigest": "d89a5ab130938d4f9c840f440b3e9038e19b9523503f0ed8481733ce212d76d0",
+    "sourceDigest": "1136d1a6ac85369851c3acdf83976640c394e7c7d200b025b3da63370d1a2536",
     "campaignId": "campaign:higgsfield-trial-24h",
-    "status": "blocked",
+    "status": "obsolete",
     "promptLanguage": "en",
     "diegeticTextLanguage": "en",
     "briefLanguage": "es"

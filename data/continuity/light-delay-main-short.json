@@ -3,7 +3,7 @@
   "ledger": {
     "id": "ledger:light-delay-main-short",
     "scriptId": "script:light-delay-main-short",
-    "status": "draft",
+    "status": "obsolete",
     "sourceDocument": "docs/CONTINUIDAD_CAUSAL_GUIONES.md",
     "notes": {
       "es": "Cadena causal revisada hasta contacto y cierre; pendiente aprobación humana antes de bloquearla.",

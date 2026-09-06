@@ -1,5 +1,7 @@
 # Edición: escena del cálculo del láser y reparto de diálogo (29/08/2026)
 
+> **OBSOLETO — IMPLEMENTACIÓN ANTERIOR.** Este pase se conserva para rescatar razonamiento y soluciones de puesta; no describe un guion vigente.
+
 Este documento resume una pasada editorial sobre `data/scripts/light-delay-main-short.json`: (1) se marcaron los assets Velari como diferidos, (2) se añadió la toma en la que la consola ayuda a Zao a calcular el blanco del láser, con los trayectos en pantalla, y (3) se repartieron varias tomas cuyo diálogo no encajaba en el montaje asignado. Todos los cambios pasan `npm run validate:data` y se verificaron con `report:dialogue-timing` y `report:shot-completeness`.
 
 ## 1. Assets Velari: diferidos

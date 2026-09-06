@@ -25,6 +25,7 @@ export function validateProject(
 	if (!p.id) errors.push('project: missing id');
 	if (!p.title) errors.push('project: missing title');
 	if (!p.canonicalScriptId) errors.push('project: missing canonicalScriptId');
+	if (!p.narrativeAuthority) errors.push('project: missing narrativeAuthority');
 	if (!Array.isArray(p.scripts) || p.scripts.length === 0) {
 		errors.push('project: scripts registry must be a non-empty array');
 	}
@@ -82,6 +83,17 @@ export function validateProject(
 
 	if (p.canonicalScriptId && !registryIds.has(p.canonicalScriptId)) {
 		errors.push(`project: canonicalScriptId "${p.canonicalScriptId}" not in scripts registry`);
+	}
+	if (p.narrativeAuthority) {
+		if (p.narrativeAuthority.scriptId !== p.canonicalScriptId) {
+			errors.push('project: narrativeAuthority.scriptId must equal canonicalScriptId');
+		}
+		if (!registryIds.has(p.narrativeAuthority.scriptId)) {
+			errors.push('project: narrativeAuthority script not registered');
+		}
+		if (!continuityIds.has(p.narrativeAuthority.continuityId)) {
+			errors.push('project: narrativeAuthority continuity not registered');
+		}
 	}
 
 	for (const entry of p.scripts ?? []) {

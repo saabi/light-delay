@@ -10,9 +10,15 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SOURCE_PATH = 'docs/wip/general-narrative-outline.en.md';
 const OUTPUT_PATH = 'data/outlines/light-delay-master-narrative.json';
-const EXPECTED_SOURCE_REVISION = '12';
+const CANDIDATE_PATH = 'data/outlines/light-delay-master-narrative.import-candidate.json';
 const sourceFile = join(ROOT, SOURCE_PATH);
 const outputFile = join(ROOT, OUTPUT_PATH);
+const characters = JSON.parse(readFileSync(join(ROOT, 'data/characters.json'), 'utf8')).characters;
+const speakerIdByName = new Map(
+	characters.flatMap((character) =>
+		Object.values(character.name ?? {}).map((name) => [String(name).toLowerCase(), character.id])
+	)
+);
 
 const framingDefinitions = new Map([
 	[
@@ -91,7 +97,17 @@ function parseBlocks(lines) {
 				parts.push(lines[index].replace(/^>\s?/, '').trim());
 				index += 1;
 			}
-			blocks.push({ type: 'blockquote', text: cleanInline(parts.join(' ')) });
+			const raw = parts.join(' ');
+			const attributed = raw.match(/^\*\*([^*]+):\*\*\s*(.+)$/);
+			const speakerId = attributed
+				? speakerIdByName.get(attributed[1].trim().toLowerCase())
+				: undefined;
+			if (attributed && !speakerId) throw new Error(`Unknown blockquote speaker: ${attributed[1]}`);
+			blocks.push({
+				type: 'blockquote',
+				...(speakerId ? { speakerId } : {}),
+				text: cleanInline(attributed?.[2] ?? raw)
+			});
 			continue;
 		}
 		const listMatch = line.match(/^\s*(-|\d+\.)\s+(.+)$/);
@@ -156,6 +172,9 @@ function blockSignature(block, language = null) {
 			: {
 					type: block.type,
 					...(block.type === 'heading' ? { level: block.level } : {}),
+					...(block.type === 'blockquote' && block.speakerId
+						? { speakerId: block.speakerId }
+						: {}),
 					text: value(block.text)
 				}
 	);
@@ -183,6 +202,9 @@ function localizedBlock(block, previous) {
 	return {
 		type: block.type,
 		...(block.type === 'heading' ? { level: block.level } : {}),
+		...(block.type === 'blockquote' && (block.speakerId ?? previous?.speakerId)
+			? { speakerId: block.speakerId ?? previous.speakerId }
+			: {}),
 		text: { es: previous?.type === block.type ? (previous.text?.es ?? '') : '', en: block.text }
 	};
 }
@@ -226,13 +248,16 @@ function sectionId(title) {
 function buildOutline() {
 	const source = readFileSync(sourceFile, 'utf8').replaceAll('\r\n', '\n');
 	const revision = source.match(/^Working draft, English, revision (\d+)\.$/m)?.[1];
-	if (revision !== EXPECTED_SOURCE_REVISION)
+	const previous = existsSync(outputFile) ? JSON.parse(readFileSync(outputFile, 'utf8')) : null;
+	const expectedRevision = String(
+		previous?.outline?.revision ?? previous?.outline?.provenance?.importedFrom?.[0]?.revision ?? ''
+	);
+	if (!revision || revision !== expectedRevision)
 		throw new Error(
-			`Expected ${SOURCE_PATH} revision ${EXPECTED_SOURCE_REVISION}, found ${revision ?? 'none'}`
+			`Expected ${SOURCE_PATH} revision ${expectedRevision || 'declared by authoritative JSON'}, found ${revision ?? 'none'}`
 		);
 	const lines = source.split('\n');
 	const h2 = headings(lines, 2);
-	const previous = existsSync(outputFile) ? JSON.parse(readFileSync(outputFile, 'utf8')) : null;
 	const previousFraming = new Map((previous?.framing ?? []).map((item) => [item.id, item]));
 	const previousSteps = new Map((previous?.steps ?? []).map((item) => [item.id, item]));
 	const framing = [];
@@ -297,7 +322,7 @@ function buildOutline() {
 
 	const sha256 = createHash('sha256').update(readFileSync(sourceFile)).digest('hex');
 	return {
-		schemaVersion: '1.3.0',
+		schemaVersion: previous?.schemaVersion ?? '1.4.0',
 		outline: {
 			id: 'outline:light-delay-master-narrative',
 			scriptId: 'script:light-delay-master-narrative',
@@ -313,9 +338,13 @@ function buildOutline() {
 					'Borrador de desarrollo no canónico y sin límite de duración. No reemplaza los guiones corto, festival, tráiler ni largo registrados.',
 				en: 'Non-canonical, unconstrained development draft. It does not replace the registered short, festival, trailer, or feature scripts.'
 			},
-			status: 'draft',
-			version: '0.2.0-wip',
-			source: { path: SOURCE_PATH, revision, language: 'en', sha256 },
+			status: previous?.outline?.status ?? 'draft',
+			version: previous?.outline?.version ?? '0.5.0-wip',
+			revision: previous?.outline?.revision ?? Number(revision),
+			provenance: previous?.outline?.provenance ?? {
+				importedFrom: [{ path: SOURCE_PATH, revision, language: 'en', sha256 }]
+			},
+			exports: previous?.outline?.exports ?? [],
 			editorialNotice: {
 				es:
 					previous?.outline?.editorialNotice?.es ??
@@ -344,11 +373,14 @@ function englishProjection(file) {
 			: {
 					type: block.type,
 					...(block.type === 'heading' ? { level: block.level } : {}),
+					...(block.type === 'blockquote' && block.speakerId
+						? { speakerId: block.speakerId }
+						: {}),
 					text: block.text.en
 				};
 	return {
 		version: file.outline.version,
-		source: file.outline.source,
+		revision: file.outline.revision,
 		framing: file.framing.map((section) => ({
 			id: section.id,
 			placement: section.placement,
@@ -374,9 +406,10 @@ function englishProjection(file) {
 
 const expected = buildOutline();
 if (process.argv.includes('--write')) {
-	writeFileSync(outputFile, `${JSON.stringify(expected, null, 2)}\n`, 'utf8');
+	const candidateFile = join(ROOT, CANDIDATE_PATH);
+	writeFileSync(candidateFile, `${JSON.stringify(expected, null, 2)}\n`, 'utf8');
 	console.log(
-		`master-outline: wrote ${expected.steps.length} story beats and ${expected.framing.length} framing sections`
+		`master-outline: wrote import candidate ${CANDIDATE_PATH}; the authoritative JSON was not replaced`
 	);
 } else {
 	if (!existsSync(outputFile)) throw new Error(`Missing ${OUTPUT_PATH}`);
@@ -385,7 +418,7 @@ if (process.argv.includes('--write')) {
 	const actualJson = JSON.stringify(englishProjection(actual));
 	if (actualJson !== expectedJson) {
 		console.error(
-			`master-outline: English source layer differs from WIP revision ${EXPECTED_SOURCE_REVISION}; run with --write and review Spanish alignment`
+			`master-outline: generated English Markdown does not round-trip to the authoritative JSON; run npm run master-outline:export or use --write to create an import candidate`
 		);
 		process.exit(1);
 	}
@@ -400,6 +433,6 @@ if (process.argv.includes('--write')) {
 		process.exit(1);
 	}
 	console.log(
-		`master-outline: English source fidelity OK (revision ${EXPECTED_SOURCE_REVISION}; 57 beats; 11 framing sections)`
+		`master-outline: English source fidelity OK (revision ${actual.outline.revision}; 57 beats; 11 framing sections)`
 	);
 }

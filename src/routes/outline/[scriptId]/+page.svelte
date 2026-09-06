@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import StoryLanguageNotice from '$lib/components/controls/StoryLanguageNotice.svelte';
 	import OutlineFramingSection from '$lib/components/outline/OutlineFramingSection.svelte';
 	import OutlineProseBlocks from '$lib/components/outline/OutlineProseBlocks.svelte';
 	import {
 		getLocalizedOutline,
+		getLifecycleForRef,
 		getProject,
 		listLocalizedScripts,
 		outlinePathForScript
@@ -34,6 +36,9 @@
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const entry = $derived(registry.find((item) => item.id === scriptId));
 	const outline = $derived(getLocalizedOutline(scriptId, language.dialogueLanguage));
+	const lifecycle = $derived(
+		getLifecycleForRef('outline', outline?.outline.id ?? `outline:${scriptId.replace('script:', '')}`)
+	);
 	const storySteps = $derived(
 		outline
 			? outline.steps.filter((step) => step.level === 'story').sort((a, b) => a.order - b.order)
@@ -53,6 +58,10 @@
 		(outline?.framing ?? [])
 			.filter((section) => section.placement === 'after_story')
 			.sort((a, b) => a.order - b.order)
+	);
+	const importedSources = $derived(
+		outline?.outline.provenance?.importedFrom ??
+			(outline?.outline.source ? [outline.outline.source] : [])
 	);
 	const storyGroups = $derived.by(() => {
 		const sections = [...(outline?.storySections ?? [])].sort((a, b) => a.order - b.order);
@@ -95,12 +104,14 @@
 				? m.outline_coverage_script()
 				: m.outline_coverage_animatic();
 	}
-	function outlineStatusLabel(value: 'draft' | 'reviewed' | 'locked') {
+	function outlineStatusLabel(value: 'draft' | 'reviewed' | 'locked' | 'deprecated') {
 		return value === 'draft'
 			? m.script_status_draft()
 			: value === 'reviewed'
 				? m.outline_file_status_reviewed()
-				: m.outline_file_status_locked();
+				: value === 'deprecated'
+					? m.script_status_deprecated()
+					: m.outline_file_status_locked();
 	}
 	function evidenceIds(evidence: OutlineCoverageEvidence) {
 		return [
@@ -118,6 +129,10 @@
 	}
 </script>
 
+<svelte:head>
+	{#if lifecycle.status !== 'active'}<meta name="robots" content="noindex,follow" />{/if}
+</svelte:head>
+
 <main class="page">
 	{#if outline}
 		<PageHeader
@@ -126,6 +141,7 @@
 			lede={text(outline.outline.synopsis)}
 			meta={[
 				`v${outline.outline.version}`,
+				...(outline.outline.revision ? [`r${outline.outline.revision}`] : []),
 				entry ? scriptKindLabel(entry.kind) : scriptId,
 				outlineStatusLabel(outline.outline.status),
 				...(outline.storySections?.length
@@ -135,16 +151,20 @@
 				...(detailSteps.length ? [`${detailSteps.length} ${m.outline_detail_steps()}`] : [])
 			]}
 		/>
+		<LifecycleNotice {lifecycle} />
 		<StoryLanguageNotice />
 
 		{#if outline.outline.editorialNotice}
 			<aside class="editorial-notice" role="note">
 				<strong>{outlineStatusLabel(outline.outline.status)}</strong>
 				<p>{text(outline.outline.editorialNotice)}</p>
-				{#if outline.outline.source}
+				{#if importedSources.length}
 					<p class="source">
-						{m.outline_source()}: <code>{outline.outline.source.path}</code> ·
-						{m.outline_source_revision({ revision: outline.outline.source.revision })}
+						{m.outline_source()}:
+						{#each importedSources as source, index (source.path)}
+							{#if index > 0}<span> · </span>{/if}<code>{source.path}</code> ·
+							{m.outline_source_revision({ revision: source.revision })}
+						{/each}
 					</p>
 				{/if}
 			</aside>

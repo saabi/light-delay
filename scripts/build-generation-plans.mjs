@@ -76,7 +76,7 @@ for (const slug of scripts) {
 			scriptVersion: file.script.version,
 			sourceDigest: sha256(source),
 			campaignId,
-		status: 'blocked',
+		status: file.script.status === 'deprecated' ? 'obsolete' : 'blocked',
 		promptLanguage: 'en',
 		diegeticTextLanguage: 'en',
 		briefLanguage: 'es'

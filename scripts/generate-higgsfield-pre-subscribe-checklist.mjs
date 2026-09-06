@@ -113,7 +113,9 @@ const creditEstimate = (count, res = '480p') => {
 const payload = {
 	schemaVersion: '1.0.0',
 	generatedAt: new Date().toISOString(),
+	lifecycleStatus: 'obsolete',
 	strategy: {
+		enabled: false,
 		plan: 'higgsfield-ultra-monthly',
 		subscribeWhen: 'outline_script_animatic_prompts_frozen',
 		defaultResolution: '480p',
@@ -167,7 +169,9 @@ function mdTable(rows, cols) {
 
 const md = `# Checklist pre-suscripción Higgsfield (Ultra × 1 mes)
 
-Documento generado desde los guiones vigentes. Regenerar tras cambios materiales en \`light-delay-trailer.json\` o \`light-delay-festival.json\`:
+> **OBSOLETO — NO EJECUTAR.** Este checklist depende del tráiler y Festival Cut deprecados. Se conserva para rescatar decisiones de presupuesto y flujo; una campaña nueva deberá derivarse del master terminado.
+
+Documento generado desde los guiones archivados. Regenerar sólo para auditoría histórica tras cambios materiales en \`light-delay-trailer.json\` o \`light-delay-festival.json\`:
 
 \`\`\`bash
 node scripts/generate-higgsfield-pre-subscribe-checklist.mjs

@@ -3,8 +3,10 @@
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import {
 		getCharacters,
+		getLifecycleForRef,
 		getLocalizedComparisonTaxonomy,
 		getLocalizedEntityVariants,
 		getLocalizedNarrativeFunctions,
@@ -61,6 +63,8 @@
 	);
 	const primaryEntry = $derived(registry.find((entry) => entry.id === primaryId));
 	const againstEntry = $derived(registry.find((entry) => entry.id === againstId));
+	const primaryLifecycle = $derived(getLifecycleForRef('script', primaryId));
+	const againstLifecycle = $derived(getLifecycleForRef('script', againstId));
 
 	function comparisonLabel(value: string) {
 		return value === 'same'
@@ -111,6 +115,12 @@
 	});
 </script>
 
+<svelte:head>
+	{#if primaryLifecycle.status !== 'active' || againstLifecycle.status !== 'active'}
+		<meta name="robots" content="noindex,follow" />
+	{/if}
+</svelte:head>
+
 <main class="page">
 	<PageHeader
 		eyebrow={m.compare_eyebrow()}
@@ -122,6 +132,8 @@
 			primary.script.continuityId
 		]}
 	/>
+	<LifecycleNotice lifecycle={primaryLifecycle} />
+	<LifecycleNotice lifecycle={againstLifecycle} />
 
 	<label class="against-picker">
 		<span>{m.compare_against()}</span>

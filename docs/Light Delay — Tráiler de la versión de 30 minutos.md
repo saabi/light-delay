@@ -1,4 +1,6 @@
-**Duración del brief original:** ~1:30. **Montaje estructurado vigente:** 1:32,5; sus duraciones y placements se generan desde `scripts/build-trailer-script.mjs` y prevalecen sobre los timecodes orientativos de este documento.
+> **OBSOLETO — TRÁILER ANTERIOR.** Este brief se conserva para rescate; no autoriza actualizar ni producir el montaje deprecado.
+
+**Duración del brief original:** ~1:30. **Montaje estructurado archivado:** 1:32,5; sus duraciones y placements pueden reconstruirse para auditoría desde `scripts/build-trailer-script.mjs`.
 
 **0:00–0:08 — Escala**  
 Negro. Silencio.  

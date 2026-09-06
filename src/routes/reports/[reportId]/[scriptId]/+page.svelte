@@ -2,6 +2,7 @@
 	import { error } from '@sveltejs/kit';
 	import { page } from '$app/state';
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import DialogueTimingReportView from '$lib/components/reports/DialogueTimingReportView.svelte';
 	import EditorialReportView from '$lib/components/reports/EditorialReportView.svelte';
 	import {
@@ -9,7 +10,11 @@
 		createProjectContext,
 		getReportEntry
 	} from '$lib/data/reports/index';
-	import { getLocalizedScript, listLocalizedScripts } from '$lib/data/repositories/index';
+	import {
+		getLifecycleForRef,
+		getLocalizedScript,
+		listLocalizedScripts
+	} from '$lib/data/repositories/index';
 	import { reportDescription, reportTitle } from '$lib/data/selectors/reportPresentation';
 	import { scriptLabel } from '$lib/data/selectors/scriptPresentation';
 	import { getLocale } from '$lib/paraglide/runtime.js';
@@ -29,6 +34,7 @@
 	});
 	const scripts = listLocalizedScripts(locale);
 	const scriptEntry = $derived(scripts.find((item) => item.id === scriptId));
+	const lifecycle = $derived(getLifecycleForRef('script', scriptId));
 	$effect(() => {
 		if (!scriptEntry) error(404, `Script not found: ${scriptId}`);
 	});
@@ -40,6 +46,10 @@
 	);
 </script>
 
+<svelte:head>
+	{#if lifecycle.status !== 'active'}<meta name="robots" content="noindex,follow" />{/if}
+</svelte:head>
+
 <main class="page">
 	{#if report && scriptEntry}
 		<PageHeader
@@ -50,6 +60,7 @@
 				`${m.reports_generated_at()}: ${new Date(report.generatedAt).toLocaleString(locale)}`
 			]}
 		/>
+		<LifecycleNotice {lifecycle} />
 		<nav class="nav">
 			<a href={withLocale('/reports')}>← {m.reports_back_to_hub()}</a>
 			<a href={withLocale(`/reports/${reportId}`)}>{reportTitle(entry.titleKey)}</a>

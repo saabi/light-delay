@@ -6,10 +6,12 @@
 	import { decodeScriptId } from '$lib/utils/scriptId';
 	import { hrefAfterScriptSwitch } from '$lib/utils/scriptRouting';
 	import * as m from '$lib/paraglide/messages.js';
-	import { scriptKindLabel, scriptLabel } from '$lib/data/selectors/scriptPresentation';
+	import { scriptKindLabel, scriptLabel, scriptStatusLabel } from '$lib/data/selectors/scriptPresentation';
 	import { getLocale } from '$lib/paraglide/runtime.js';
 
 	const scripts = listLocalizedScripts(getLocale());
+	const currentScripts = scripts.filter((entry) => entry.status !== 'deprecated');
+	const archivedScripts = scripts.filter((entry) => entry.status === 'deprecated');
 
 	const activeScriptId = $derived(activeScriptIdFromParam(page.params.scriptId));
 
@@ -35,9 +37,18 @@
 <label class="switcher">
 	<span class="label">{m.script_switcher()}</span>
 	<select aria-label={m.script_switcher_aria()} value={activeScriptId} onchange={onChange}>
-		{#each scripts as entry (entry.id)}
-			<option value={entry.id}>{scriptLabel(entry)} ({scriptKindLabel(entry.kind)})</option>
-		{/each}
+		<optgroup label={m.script_switcher_current()}>
+			{#each currentScripts as entry (entry.id)}
+				<option value={entry.id}>{scriptLabel(entry)} ({scriptKindLabel(entry.kind)})</option>
+			{/each}
+		</optgroup>
+		{#if archivedScripts.length}
+			<optgroup label={m.script_switcher_archive()}>
+				{#each archivedScripts as entry (entry.id)}
+					<option value={entry.id}>{scriptLabel(entry)} — {scriptStatusLabel(entry.status)}</option>
+				{/each}
+			</optgroup>
+		{/if}
 	</select>
 </label>
 

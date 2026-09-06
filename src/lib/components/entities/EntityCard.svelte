@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ImageCarousel from '$lib/components/media/ImageCarousel.svelte';
 	import { withBase, withLocale } from '$lib/utils/paths';
+	import * as m from '$lib/paraglide/messages.js';
 
 	let {
 		href,
@@ -8,7 +9,8 @@
 		description,
 		imageSrc,
 		imageSrcs,
-		eyebrow
+		eyebrow,
+		lifecycleStatus = 'active'
 	}: {
 		href: string;
 		title: string;
@@ -16,7 +18,16 @@
 		imageSrc?: string;
 		imageSrcs?: string[];
 		eyebrow?: string;
+		lifecycleStatus?: 'active' | 'deprecated' | 'obsolete' | 'review_required';
 	} = $props();
+
+	const lifecycleLabel = $derived(
+		lifecycleStatus === 'obsolete'
+			? m.lifecycle_obsolete()
+			: lifecycleStatus === 'deprecated'
+				? m.lifecycle_deprecated()
+				: m.lifecycle_review_required()
+	);
 
 	const resolvedHref = $derived(withLocale(href));
 	const sources = $derived(
@@ -42,10 +53,11 @@
 	{:else}
 		<div class="placeholder" aria-hidden="true"></div>
 	{/if}
-	<div class="body">
+	<div class="body" data-lifecycle={lifecycleStatus}>
 		{#if eyebrow}
 			<span class="eyebrow">{eyebrow}</span>
 		{/if}
+		{#if lifecycleStatus !== 'active'}<span class="lifecycle">{lifecycleLabel}</span>{/if}
 		<h2>{title}</h2>
 		{#if description}
 			<p>{description}</p>
@@ -109,6 +121,17 @@
 		font: 800 0.72rem var(--font-mono);
 		text-transform: uppercase;
 		letter-spacing: 0.08em;
+	}
+
+	.lifecycle {
+		width: fit-content;
+		padding: 0.2rem 0.4rem;
+		border: 1px solid color-mix(in srgb, var(--gold) 60%, var(--line));
+		border-radius: 999px;
+		color: var(--gold);
+		font: 700 0.62rem/1 var(--font-mono);
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
 	}
 
 	h2 {

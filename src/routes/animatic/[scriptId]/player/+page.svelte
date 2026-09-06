@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import AnimaticPlayer from '$lib/components/animatic/AnimaticPlayer.svelte';
-	import { getLocalizedScript } from '$lib/data/repositories/index';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
+	import { getLifecycleForRef, getLocalizedScript } from '$lib/data/repositories/index';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import { getCueById, getShotMedia } from '$lib/data/repositories/lookups';
 	import { setShotIndex } from '$lib/state/player.svelte';
@@ -16,6 +17,7 @@
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const language = $derived(getLanguageState());
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
+	const lifecycle = $derived(getLifecycleForRef('animatic', scriptId));
 	const encoded = $derived(encodeScriptId(scriptId));
 	const outlineHref = $derived(withLocale(`/outline/${encoded}`));
 
@@ -51,6 +53,10 @@
 	});
 </script>
 
+<svelte:head>
+	{#if lifecycle.status !== 'active'}<meta name="robots" content="noindex,follow" />{/if}
+</svelte:head>
+
 {#if shots.length === 0}
 	<main class="empty-page">
 		<PageHeader
@@ -59,9 +65,13 @@
 			lede={m.animatic_empty_body()}
 			meta={[m.animatic_empty_title()]}
 		/>
+		<LifecycleNotice {lifecycle} />
 		<a href={outlineHref}>{m.animatic_open_outline()}</a>
 	</main>
 {:else}
+	{#if lifecycle.status !== 'active'}
+		<div class="archive-notice"><LifecycleNotice {lifecycle} /></div>
+	{/if}
 	<AnimaticPlayer {script} {shots} returnHref={withLocale(`/animatic/${encoded}`)} />
 {/if}
 
@@ -73,5 +83,11 @@
 	}
 	.empty-page a {
 		color: var(--cyan);
+	}
+	.archive-notice {
+		position: relative;
+		z-index: 20;
+		padding: 0.75rem 0.75rem 0;
+		background: #03090e;
 	}
 </style>

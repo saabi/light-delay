@@ -10,43 +10,45 @@ async function openNavigation(page: import('@playwright/test').Page) {
 test('public landing is English-first and has crawlable project links', async ({ page }) => {
 	await page.goto('/');
 	await expect(
-		page.getByRole('heading', { name: 'A message aimed at where the ship will be.' })
+		page.getByRole('heading', { name: 'An ancient invitation. One chance to answer.' })
 	).toBeVisible();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-	await expect(page.getByText('Hard science-fiction short film · In development')).toBeVisible();
+	await expect(page.getByText('Hard science fiction · Narrative in development')).toBeVisible();
 	await expect(
 		page.getByText(
-			'Light Delay is a first-contact thriller about a crew crossing an interstellar gateway and a warning that can only catch them by traveling at the speed of light.'
+			'Light Delay is a first-contact thriller about a human crew crossing an ancient throat near Jupiter to meet the civilization that built it.'
 		)
 	).toBeVisible();
 	await expect(
 		page.getByText(
-			"A human mission approaches an unrepeatable encounter. When an engineer discovers sabotage and internal communications fail, she must aim the ship's external laser at its future trajectory before the saboteur reaches her."
+			'The Velari waited thousands of years for humanity to find their door. Some read that patience as restraint; others see a threat. A hidden act of sabotage turns that disagreement into a race to preserve first contact.'
 		)
 	).toBeVisible();
-	await expect(page.getByText('17 scenes from the main short film.')).toBeVisible();
+	await expect(page.getByText(/The master story is still being completed/)).toBeVisible();
 	const archiveCard = page.locator('.cards a').filter({
 		has: page.getByRole('heading', { name: 'Project archive' })
 	});
 	await expect(archiveCard.locator('b')).toHaveText('Open →');
-	await expect(page.getByRole('link', { name: 'Read the script' })).toBeVisible();
+	await expect(page.getByRole('link', { name: 'Read the master outline' })).toBeVisible();
 });
 
 test('Spanish landing is prerendered and localized', async ({ page }) => {
 	await page.goto('/es/');
 	await expect(
-		page.getByRole('heading', { name: 'Un mensaje dirigido a donde la nave todavía no llegó.' })
+		page.getByRole('heading', {
+			name: 'Una invitación antigua. Una sola oportunidad de responder.'
+		})
 	).toBeVisible();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'es');
 	await expect(
-		page.getByText('Cortometraje de ciencia ficción dura · En desarrollo')
+		page.getByText('Ciencia ficción dura · Narrativa en desarrollo')
 	).toBeVisible();
 	await expect(
 		page.getByText(
-			'Una misión humana se aproxima a un encuentro irrepetible. Cuando una ingeniera descubre un sabotaje y las comunicaciones internas fallan, debe apuntar el láser exterior de la nave a su trayectoria futura antes de que el saboteador la alcance.'
+			'Los Velari esperaron miles de años a que la humanidad encontrara su puerta. Algunos leen esa paciencia como moderación; otros ven una amenaza. Un sabotaje oculto transforma ese desacuerdo en una carrera por preservar el primer contacto.'
 		)
 	).toBeVisible();
-	await expect(page.getByText('17 escenas del cortometraje principal.')).toBeVisible();
+	await expect(page.getByText(/La historia maestra todavía se está completando/)).toBeVisible();
 	const archiveCard = page.locator('.cards a').filter({
 		has: page.getByRole('heading', { name: 'Archivo del proyecto' })
 	});
@@ -55,8 +57,10 @@ test('Spanish landing is prerendered and localized', async ({ page }) => {
 
 test('/script redirects to the encoded canonical script', async ({ page }) => {
 	await page.goto('/script');
-	await expect(page).toHaveURL(/\/script\/script~light-delay-main-short\/?$/);
-	await expect(page.getByRole('heading', { name: /Light Delay/i }).first()).toBeVisible();
+	await expect(page).toHaveURL(/\/script\/script~light-delay-master-narrative\/?$/);
+	await expect(
+		page.getByRole('heading', { name: 'Screenplay implementation has not started yet.' })
+	).toBeVisible();
 });
 
 test('festival script exposes localized editorial labels', async ({ page }) => {
@@ -74,7 +78,7 @@ test('master narrative exposes its framing and keeps implementation empty', asyn
 	).toBeVisible();
 	await expect(
 		page.getByText(
-			'This master narrative is a non-canonical development branch. Its plot has not been adopted by any of the four existing versions.'
+			'This WIP outline is the narrative source of truth. The short, festival, trailer, and feature versions are obsolete material retained only for salvage and provenance.'
 		)
 	).toBeVisible();
 	await expect(page.getByText('Purpose of this document', { exact: true })).toBeVisible();
@@ -89,6 +93,7 @@ test('master narrative exposes its framing and keeps implementation empty', asyn
 		page.getByRole('heading', { name: 'Sequence G — First contact and close' })
 	).toBeVisible();
 	await expect(page.getByRole('heading', { name: 'G3 — Close' })).toBeVisible();
+	await expect(page.locator('cite:visible').filter({ hasText: 'Rylen Harlan' }).first()).toBeVisible();
 
 	await page.goto('/es/outline/script~light-delay-master-narrative');
 	await page.locator('details[id="master:framing-terminology"] > summary').click();
@@ -112,10 +117,13 @@ test('screenplay content defaults to the route language and preserves a manual c
 	).toBeVisible();
 	await expect(page.getByText('Boarding and transit', { exact: true })).toBeVisible();
 	await expect(
-		page.getByText('The signature looks forged. The real signature points to—', { exact: true })
+		page.getByText(/^The signature looks forged\. The real signature points to—/)
 	).toBeVisible();
 
-	await page.getByLabel('Story and dialogue').selectOption('es');
+	await page
+		.getByRole('complementary', { name: 'Primary navigation' })
+		.getByLabel('Story and dialogue')
+		.selectOption('es');
 	await expect(page.getByText('Embarque y tránsito', { exact: true })).toBeVisible();
 	await page.reload();
 	await expect(page.getByText('Embarque y tránsito', { exact: true })).toBeVisible();
@@ -134,8 +142,8 @@ test('English public document stubs expose their draft variants', async ({ page 
 
 test('/animatic redirects and is scoped by script ID', async ({ page }) => {
 	await page.goto('/animatic');
-	await expect(page).toHaveURL(/\/animatic\/script~light-delay-main-short\/?$/);
-	await expect(page.getByRole('link', { name: 'Watch as film' })).toBeVisible();
+	await expect(page).toHaveURL(/\/animatic\/script~light-delay-master-narrative\/?$/);
+	await expect(page.getByRole('heading', { name: 'The animatic has not started yet.' })).toBeVisible();
 });
 
 test('script switcher preserves the current section', async ({ page }) => {
@@ -203,6 +211,25 @@ test('principal routes do not overflow a narrow viewport', async ({ page }) => {
 			`horizontal overflow on ${route}`
 		).toBe(true);
 	}
+});
+
+test('Okoye exposes her Nigerian visual and voice profile in both locales', async ({ page }) => {
+	await page.goto('/entities/characters/character~okoye');
+	await expect(page.getByRole('heading', { name: 'Dara Okoye' })).toBeVisible();
+	await expect(page.getByRole('heading', { name: 'Appearance' })).toBeVisible();
+	await expect(page.getByText(/A Nigerian woman around forty/)).toBeVisible();
+	await expect(page.getByRole('heading', { name: 'Voice' })).toBeVisible();
+	await expect(page.getByText(/Nigerian, preferably Igbo, inflection/)).toBeVisible();
+	await expect(page.getByText('Enugu, Nigeria')).toBeVisible();
+	await expect(page.getByText('Malabo, Equatorial Guinea')).toBeVisible();
+	await expect(page.getByAltText('Dara Okoye model sheet')).toBeVisible();
+
+	await page.goto('/es/entities/characters/character~okoye');
+	await expect(page.getByRole('heading', { name: 'Apariencia' })).toBeVisible();
+	await expect(page.getByText(/Mujer nigeriana de alrededor de cuarenta años/)).toBeVisible();
+	await expect(page.getByRole('heading', { name: 'Voz' })).toBeVisible();
+	await expect(page.getByText('Enugu, Nigeria')).toBeVisible();
+	await expect(page.getByText('Malabo, Guinea Ecuatorial')).toBeVisible();
 });
 
 test('comparison route localizes the interface and preserves selection', async ({ page }) => {

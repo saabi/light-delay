@@ -289,7 +289,7 @@ export interface VoiceProfile {
   characterId?: CharacterId;
 
   name: string;
-  description?: string;
+  description?: LocalizedString;
 
   variants: VoiceProfileVariant[];
 }

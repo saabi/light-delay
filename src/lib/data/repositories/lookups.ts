@@ -185,7 +185,18 @@ export function listEntities(kind: EntityKind) {
 }
 
 export function getEntity(kind: EntityKind, id: string) {
-	return listEntities(kind).find((e) => e.id === id);
+	switch (kind) {
+		case 'characters':
+			return getCharacterById(id);
+		case 'locations':
+			return getLocationById(id);
+		case 'objects':
+			return getObjectById(id);
+		case 'vehicles':
+			return getVehicleById(id);
+		case 'factions':
+			return getFactionById(id);
+	}
 }
 
 export function getSceneById(scriptOrId: ScriptFile | ScriptId, id: string): Scene | undefined {

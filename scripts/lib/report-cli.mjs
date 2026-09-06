@@ -23,6 +23,7 @@ export function parseReportArgs(argv) {
 		scriptId: undefined,
 		language: 'es',
 		all: false,
+		includeDeprecated: false,
 		format: 'both'
 	};
 	for (let i = 0; i < argv.length; i += 1) {
@@ -30,6 +31,7 @@ export function parseReportArgs(argv) {
 		if (arg === '--script') options.scriptId = argv[++i];
 		else if (arg === '--lang') options.language = argv[++i] ?? 'es';
 		else if (arg === '--all') options.all = true;
+		else if (arg === '--include-deprecated') options.includeDeprecated = true;
 		else if (arg === '--format') {
 			const value = argv[++i] ?? 'both';
 			if (value === 'md' || value === 'json' || value === 'both') options.format = value;
@@ -52,11 +54,16 @@ export function loadProject() {
 
 /**
  * @param {ReturnType<typeof loadProject>} project
- * @param {{ scriptId?: string; all?: boolean }} options
+ * @param {{ scriptId?: string; all?: boolean; includeDeprecated?: boolean }} options
  */
 export function getScriptIds(project, options) {
 	if (options.all) {
-		return project.project.scripts.map((/** @type {{ id: string }} */ e) => e.id);
+		return project.project.scripts
+			.filter(
+				(/** @type {{ status?: string }} */ entry) =>
+					options.includeDeprecated || entry.status !== 'deprecated'
+			)
+			.map((/** @type {{ id: string }} */ entry) => entry.id);
 	}
 	return [options.scriptId ?? project.project.canonicalScriptId];
 }

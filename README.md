@@ -1,17 +1,17 @@
 # Light Delay / Luz Tardía
 
-Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio conserva el guion canónico, la biblia de producción y arte, las notas técnicas y el animatic textual de 128 tomas con imágenes de referencia reutilizadas donde aún faltan stills definitivos.
+Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe WIP es la fuente narrativa vigente; los guiones, cuts, animatics y recursos de la continuidad anterior permanecen archivados para rescate y procedencia hasta que puedan derivarse versiones nuevas del master terminado.
 
 ## Estado actual
 
 - Sitio público bilingüe: inglés en `/` y español en `/es/`, con selector de idioma, metadatos SEO, sitemap, identidad visual y landing de presentación. El español continúa siendo la fuente editorial.
 - Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
 - Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
-- Guion corto canónico: 17 escenas de historia (+ título/créditos), objetivo inicial de 30:00 y montaje de datos actual de ~30:50,5.
-- Cinco entradas registradas: corto principal, tratamiento de largometraje, Festival Cut, tráiler y una narrativa maestra sin límite de duración marcada como WIP no canónico.
+- Autoridad narrativa: `data/outlines/light-delay-master-narrative.json`, todavía WIP, con exports Markdown ES/EN generados desde ese JSON.
+- Cinco entradas registradas: la narrativa maestra activa y cuatro productos de la continuidad anterior —corto principal, tratamiento largo, Festival Cut y tráiler— marcados como deprecados.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
-- Animatic textual principal de 128 tomas con image take, encuadre, audio, subtítulos y duración editable (~30:50,5). En el corto hay 112 reutilizaciones candidatas a regeneración y 16 tomas con placeholder técnico (12 de historia + título/créditos); Festival tiene 71 tomas y el tráiler 33. La producción visual está deferida hasta aprobar cada cut y su freeze de prompts.
+- El archivo conserva un animatic anterior de 128 tomas y los montajes Festival/tráiler como material de rescate. No son planes de producción vigentes; la producción visual queda suspendida hasta completar el master y aprobar nuevos derivados.
 - Biblia visual: 13 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
@@ -26,11 +26,11 @@ Proyecto de cortometraje de ciencia ficción de primer contacto. El repositorio 
 |-- src/                      # Aplicación SvelteKit
 |-- static/                   # Assets públicos usados por la aplicación
 |-- docs/                     # Canon, producción, estado y procedencia
-|-- data/                     # Contratos y futuros JSON canónicos
-`-- legacy-site/              # Sitio HTML actual y todos sus assets
+|-- data/                     # Autoridad narrativa y contratos JSON
+`-- legacy-site/              # Archivo HTML obsoleto retenido para rescate
 ```
 
-No debe eliminarse `legacy-site/` hasta que la nueva aplicación reproduzca todas sus páginas y el modo Película del animatic.
+`legacy-site/` está marcado para eventual eliminación, pero se conserva hasta completar el master, revisar el material rescatable, aprobar sus reemplazos y confirmar que no quedan dependientes activos.
 
 ## Abrir la aplicación SvelteKit
 
@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 
-Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`, `npm run generated:check`, `npm run notes:build`, `npm run report:causal-validity`, `npm run report:outline-story`, `npm run check:trailer-spoilers`, `npm run report:prompt-readiness`, `npm run report:editorial` y `npm run report:all`.
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`, `npm run generated:check`, `npm run notes:build`, `npm run report:causal-validity`, `npm run report:outline-story`, `npm run report:dialogue-style`, `npm run check:trailer-spoilers`, `npm run report:prompt-readiness`, `npm run report:editorial` y `npm run report:all`.
 
 > `npm run extract:legacy` es una herramienta histórica anterior a la arquitectura multi-script. No debe ejecutarse sobre el árbol canónico actual: todavía sobrescribe varios archivos de `data/` con el formato previo. Su aislamiento o retiro está registrado en [`TODO.md`](TODO.md).
 
@@ -55,7 +55,7 @@ https://saabi.github.io/light-delay/
 
 La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
 
-El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. Las cinco entradas y el resto del copy de historia llevan inglés **inline** en los JSON (`LocalizedString` / `variants.en`, estado `draft`); el español permanece como fuente de verdad y una elección manual de idioma narrativo se conserva localmente. La narrativa maestra sólo implementa por ahora una escaleta estructurada; no reemplaza el canon ni los cuatro guiones previos.
+El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. El copy de historia lleva inglés **inline** en los JSON (`LocalizedString` / `variants.en`); el español permanece como fuente documental. La escaleta maestra es la autoridad narrativa WIP. Los cuatro guiones previos siguen accesibles sólo como archivo deprecado y no se presentan en el sitemap público.
 
 GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
 
@@ -67,19 +67,19 @@ La publicación del repositorio y del sitio no concede permiso para reutilizar l
 
 El modelo de datos y la aplicación podrían convertirse en una plataforma para desarrollar otros guiones, pero todavía dependen directamente del contenido y de las reglas de Light Delay. La separación del motor genérico y una licencia específica para ese software se anunciarán cuando la extracción esté completa; por ahora no se ofrece la aplicación como plataforma reutilizable.
 
-## Abrir la versión legacy
+## Consultar el archivo legacy
 
-Puede abrirse `legacy-site/index.html` directamente. Para evitar restricciones del navegador, también puede servirse desde la raíz con cualquier servidor HTTP estático.
+Puede abrirse `legacy-site/index.html` directamente para tareas de procedencia o rescate. No representa la obra vigente ni debe usarse como baseline de canon.
 
 ## Autoridad documental
 
 1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (español como fuente de verdad; inglés como secundario).
-2. `docs/CANON_DECISIONS.md` fija las decisiones de canon vigentes.
-3. `data/scripts/light-delay-main-short.json` es la fuente estructurada vigente del guion corto y del animatic; diálogo, cues, shots y takes se proyectan desde ese grafo.
-4. `data/outlines/*.json` fija por cut la intención narrativa y su cadena causal; el guion implementa la escaleta y no debe regenerarla desde sus propios resúmenes.
-5. `docs/technical/` y los documentos prose reconciliados en `data/documents.json` fijan las reglas físicas y de continuidad complementarias.
-6. `legacy-site/guion-30-minutos.html`, `legacy-site/animatic-textual.html` y las demás páginas HTML se conservan como referencia de regresión y procedencia, no como una segunda autoridad editable.
-7. Los documentos históricos de largometraje sólo aportan procedencia; `docs/REVISION_LARGOMETRAJE_RECUPERADO.md` determina qué material fue aceptado, reescrito o rechazado.
+2. `data/outlines/light-delay-master-narrative.json` es la fuente narrativa vigente, aunque continúa en estado WIP.
+3. `data/editorial-lifecycle.json` clasifica autoridad, material compatible, archivo deprecado, elementos obsoletos y casos que requieren revisión; también define las compuertas previas a cualquier borrado.
+4. `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` documenta la promoción del master y el futuro flujo de derivación.
+5. `data/scripts/light-delay-master-narrative.json` es un stub para rutas y registro: no contiene todavía escenas, cues, shots ni takes y no sustituye la escaleta como autoría.
+6. Los demás outlines, guiones, animatics, planes y ledgers son material de la continuidad anterior. Permanecen accesibles para rescate, pero no fijan canon ni producción vigente.
+7. `docs/CANON_DECISIONS.md`, `docs/technical/`, documentos prose y `legacy-site/` son fuentes anteriores o complementarias sujetas a la clasificación de ciclo de vida; no pueden contradecir silenciosamente al master.
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
 
@@ -89,10 +89,11 @@ Cuando existan copias del mismo documento en varios idiomas, editar primero la c
 
 Las siguientes fases deben:
 
-- completar el tratamiento largo con escenas dialogadas, tomas y recursos sólo cuando se apruebe su revisión narrativa;
-- evaluar por separado los candidatos de retropropagación al corto, Festival Cut y tráiler;
-- ampliar la comparación sin inferir automáticamente herencia de diálogo o fusiones de personajes;
-- revisar editorialmente el borrador inglés estructurado hasta poder promover sus traducciones desde `draft`, sin alterar la autoridad del español.
+- terminar y aprobar la escaleta maestra WIP;
+- revisar el inventario `review_required` y rescatar del archivo sólo material compatible con el master;
+- definir y aprobar nuevos cuts como derivados explícitos, comenzando por su propia escaleta;
+- generar después sus guiones, animatics y planes de producción, sin revivir implícitamente los productos obsoletos;
+- revisar editorialmente el inglés inline sin alterar la autoridad documental del español.
 
 Los HTML existentes son referencia y material de migración, no el formato final de autoría.
 

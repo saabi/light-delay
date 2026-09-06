@@ -3,6 +3,7 @@ import {
 	getCanonicalBundle,
 	getCanonicalScript,
 	getScript,
+	listCurrentScripts,
 	listScripts
 } from '../repositories/index.ts';
 import { getEffectiveDuration, getSubtitleSegments } from './index.ts';
@@ -10,13 +11,24 @@ import { validateAll } from '../validation/index.ts';
 import { getShotMedia } from '../repositories/lookups.ts';
 import { getAssets } from '../repositories/index.ts';
 
-describe('extracted canonical data', () => {
-	it('has 19 scenes and 128 shots on the main short (17 story + title/credits)', () => {
+describe('structured project data', () => {
+	it('uses the empty master stub as the current route authority', () => {
 		const script = getCanonicalScript();
+		expect(script.script.id).toBe('script:light-delay-master-narrative');
+		expect(script.scenes).toHaveLength(0);
+		expect(script.shots).toHaveLength(0);
+		expect(script.takes).toHaveLength(0);
+		expect(listCurrentScripts().map((entry) => entry.id)).toEqual([
+			'script:light-delay-master-narrative'
+		]);
+	});
+
+	it('preserves 19 scenes and 128 shots in the deprecated main-short archive', () => {
+		const script = getScript('script:light-delay-main-short');
+		expect(script.script.status).toBe('deprecated');
 		expect(script.scenes).toHaveLength(19);
 		expect(script.shots).toHaveLength(128);
 		expect(script.takes).toHaveLength(128);
-		expect(script.script.id).toBe('script:light-delay-main-short');
 		expect(script.scenes[0]?.id).toMatch(/^main:/);
 	});
 
@@ -49,7 +61,7 @@ describe('extracted canonical data', () => {
 	});
 
 	it('separates main regeneration candidates from placeholder replacements', () => {
-		const script = getCanonicalScript();
+		const script = getScript('script:light-delay-main-short');
 		const regen = script.takes.filter((take) => take.imageStatus?.status === 'needs_regeneration');
 		expect(regen).toHaveLength(111);
 		expect(regen.every((take) => take.imageStatus?.reasons.includes('canon_mismatch'))).toBe(true);
@@ -66,7 +78,7 @@ describe('extracted canonical data', () => {
 	});
 
 	it('resolves editorial image state and a generic fallback', () => {
-		const script = getCanonicalScript();
+		const script = getScript('script:light-delay-main-short');
 		const regenShot = script.shots.find((shot) => shot.id === 'main:shot-05-01')!;
 		const media = getShotMedia(script, regenShot);
 		expect(media.state).toBe('provisional');
@@ -94,13 +106,16 @@ describe('extracted canonical data', () => {
 		expect(long.script.declaredEntityRefs).toHaveLength(14);
 	});
 
-	it('sums the current animatic duration independently from the 30-minute target', () => {
-		expect(getCanonicalScript().script.targetDurationMs).toBe(30 * 60 * 1000);
-		expect(getEffectiveDuration(getCanonicalScript())).toBe(1_850_500);
+	it('preserves the archived main animatic duration independently from its target', () => {
+		const script = getScript('script:light-delay-main-short');
+		expect(script.script.targetDurationMs).toBe(30 * 60 * 1000);
+		expect(getEffectiveDuration(script)).toBe(1_850_500);
 	});
 
-	it('derives subtitle segments from cue placements', () => {
-		const segments = getSubtitleSegments(getCanonicalScript(), { subtitleLanguage: 'es' });
+	it('derives archived subtitle segments from cue placements', () => {
+		const segments = getSubtitleSegments(getScript('script:light-delay-main-short'), {
+			subtitleLanguage: 'es'
+		});
 		expect(segments.length).toBeGreaterThan(90);
 	});
 

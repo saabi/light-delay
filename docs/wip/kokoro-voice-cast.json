@@ -1,0 +1,65 @@
+{
+  "model": {
+    "path": "E:/Models/Kokoro/kokoro-v1.0.onnx",
+    "voices": "E:/Models/Kokoro/voices-v1.0.bin",
+    "variant": "fp32",
+    "note": "Largest Kokoro v1.0 ONNX build (FP32 ~310MB). Official package size is 82M params; FP32 is the highest-precision ONNX export."
+  },
+  "defaults": {
+    "narratorSpeed": 0.92,
+    "dialogueSpeed": 0.95,
+    "pauseBetweenChunksMs": 280,
+    "pauseBeforeDialogueMs": 180,
+    "pauseAfterDialogueMs": 220
+  },
+  "cast": {
+    "Narrator": {
+      "voice": "am_michael",
+      "lang": "en-us",
+      "speed": 0.92,
+      "rationale": "Default Michael (US male). Clear narrative baseline for outline prose."
+    },
+    "Zao": {
+      "voice": "af_nicole",
+      "lang": "en-us",
+      "speed": 0.93,
+      "rationale": "Mature natural female (HH training). Closest dry/functional contralto among high-data EN voices; Mandarin inflection not available in EN Kokoro presets."
+    },
+    "Voss": {
+      "voice": "bm_george",
+      "lang": "en-gb",
+      "speed": 0.9,
+      "rationale": "Mature authoritative male. Matches baritone command presence and disciplined formal English."
+    },
+    "Harlan": {
+      "voice": "bm_daniel",
+      "lang": "en-gb",
+      "speed": 0.94,
+      "rationale": "British polished officer timbre; cooler/businesslike vs Voss’s warmer authority."
+    },
+    "Elin": {
+      "voice": "af_kore",
+      "lang": "en-us",
+      "speed": 0.97,
+      "rationale": "Younger expressive female; lighter than Zao. Indian inflection not available in EN presets."
+    },
+    "Sorell": {
+      "voice": "bf_emma",
+      "lang": "en-gb",
+      "speed": 0.95,
+      "rationale": "Warm expressive mezzo with strong training data. French-accent EN not available; ff_siwis is French-language-only."
+    },
+    "Okoye": {
+      "voice": "af_bella",
+      "lang": "en-us",
+      "speed": 0.94,
+      "rationale": "Firm high-grade female presence for security commands. Nigerian inflection not available in EN presets."
+    },
+    "Cael": {
+      "voice": "af_sky",
+      "lang": "en-us",
+      "speed": 1.0,
+      "rationale": "Bright clear high voice for informal pilot/comms energy."
+    }
+  }
+}

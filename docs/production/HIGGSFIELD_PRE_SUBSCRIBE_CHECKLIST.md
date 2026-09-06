@@ -1,6 +1,8 @@
 # Checklist pre-suscripción Higgsfield (Ultra × 1 mes)
 
-Documento generado desde los guiones vigentes. Regenerar tras cambios materiales en `light-delay-trailer.json` o `light-delay-festival.json`:
+> **OBSOLETO — NO EJECUTAR.** Este checklist depende del tráiler y Festival Cut deprecados. Se conserva para rescatar decisiones de presupuesto y flujo; una campaña nueva deberá derivarse del master terminado.
+
+Documento generado desde los guiones archivados. Regenerar sólo para auditoría histórica tras cambios materiales en `light-delay-trailer.json` o `light-delay-festival.json`:
 
 ```bash
 node scripts/generate-higgsfield-pre-subscribe-checklist.mjs
@@ -8,7 +10,7 @@ node scripts/generate-higgsfield-pre-subscribe-checklist.mjs
 
 **Estrategia:** congelar outline, guion, animatic y prompts **antes** de pagar Ultra (~3 000 cr/mes). Día de suscripción = día de generación. Referencia MCP: [`docs/technical/HIGGSFIELD_MCP.md`](../technical/HIGGSFIELD_MCP.md).
 
-**Generado:** 2026-09-01T21:53:30.171Z
+**Generado:** 2026-09-05T20:16:37.734Z
 
 ---
 

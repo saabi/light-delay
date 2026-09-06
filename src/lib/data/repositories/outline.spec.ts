@@ -51,14 +51,29 @@ describe('outlines (optional)', () => {
 
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
-		expect(source.outline.source?.revision).toBe('12');
-		expect(source.outline.version).toBe('0.2.0-wip');
+		expect(source.outline.provenance?.importedFrom?.[0]?.revision).toBe('13');
+		expect(source.outline.revision).toBe(14);
+		expect(source.outline.version).toBe('0.5.0-wip');
+		expect(source.outline.status).toBe('draft');
+		expect(source.outline.exports?.map((item) => item.path)).toEqual([
+			'docs/wip/general-narrative-outline.es.md',
+			'docs/wip/general-narrative-outline.en.md'
+		]);
 		expect(source.framing).toHaveLength(11);
 		expect(source.storySections).toHaveLength(8);
 		expect(source.steps).toHaveLength(57);
 		expect(source.steps.every((step) => step.level === 'story' && step.body?.length)).toBe(true);
 		expect(source.steps.some((step) => step.summary != null)).toBe(false);
 		expect(source.steps.some((step) => step.coverage != null)).toBe(false);
+		const quotations = [...(source.framing ?? []), ...source.steps].flatMap((item) =>
+			('blocks' in item ? item.blocks : (item.body ?? [])).filter(
+				(block) => block.type === 'blockquote'
+			)
+		);
+		expect(quotations).toHaveLength(37);
+		expect(quotations.every((block) => block.type === 'blockquote' && block.speakerId)).toBe(
+			true
+		);
 		const localized = getLocalizedOutline(masterId, 'en')!;
 		expect(localized.steps[0]?.body?.[0]?.type).toBe('paragraph');
 		const first = localized.steps[0]?.body?.[0];
@@ -85,6 +100,25 @@ describe('outlines (optional)', () => {
 					typeof block.text !== 'string' &&
 					block.text.en?.includes('voluntarily controlled three-dimensional network') &&
 					block.text.es?.includes('red tridimensional de neuronas emisoras de luz')
+			)
+		).toBe(true);
+		const cast = source.framing?.find((section) => section.id === 'master:framing-cast');
+		expect(
+			cast?.blocks.some(
+				(block) =>
+					block.type === 'paragraph' &&
+					typeof block.text !== 'string' &&
+					block.text.en?.includes('Nigerian security officer') &&
+					block.text.es?.includes('Oficial de seguridad nigeriana')
+			)
+		).toBe(true);
+		expect(
+			cast?.blocks.some(
+				(block) =>
+					block.type === 'paragraph' &&
+					typeof block.text !== 'string' &&
+					block.text.en?.includes('formed her English in Enugu') &&
+					block.text.es?.includes('su español formal en Malabo')
 			)
 		).toBe(true);
 		const meeting = source.steps.find((step) => step.id === 'master:story-g2b');

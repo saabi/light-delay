@@ -1,8 +1,9 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import ScriptViewer from '$lib/components/script/ScriptViewer.svelte';
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
-	import { getLocalizedScript } from '$lib/data/repositories/index';
+	import { getLifecycleForRef, getLocalizedScript } from '$lib/data/repositories/index';
 	import { estimateScriptSpokenMs, montageScriptMs } from '$lib/data/selectors/dialogueTiming';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
@@ -17,6 +18,7 @@
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const language = $derived(getLanguageState());
 	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
+	const lifecycle = $derived(getLifecycleForRef('script', scriptId));
 	const scriptMontageMs = $derived(montageScriptMs(script));
 	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, language.dialogueLanguage));
 	const outlineHref = $derived(withLocale(`/outline/${encodeScriptId(scriptId)}`));
@@ -48,6 +50,10 @@
 	});
 </script>
 
+<svelte:head>
+	{#if lifecycle.status !== 'active'}<meta name="robots" content="noindex,follow" />{/if}
+</svelte:head>
+
 <main class="page">
 	<PageHeader
 		eyebrow={script.script.kind === 'festival_cut' ? 'Festival Cut' : m.script_label()}
@@ -60,6 +66,7 @@
 			scriptKindLabel(script.script.kind)
 		]}
 	/>
+	<LifecycleNotice {lifecycle} />
 	<StoryLanguageNotice />
 	{#if script.scenes.length === 0}
 		<div class="empty" role="status">

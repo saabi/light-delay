@@ -1,7 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-01T21:53:30.171Z",
+  "generatedAt": "2026-09-05T20:16:37.734Z",
+  "lifecycleStatus": "obsolete",
   "strategy": {
+    "enabled": false,
     "plan": "higgsfield-ultra-monthly",
     "subscribeWhen": "outline_script_animatic_prompts_frozen",
     "defaultResolution": "480p",

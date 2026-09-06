@@ -1,4 +1,4 @@
-import { getProject, listScripts } from '$lib/data/repositories/index';
+import { getProject, listCurrentScripts, listScripts } from '$lib/data/repositories/index';
 import {
 	readStoredScriptId,
 	resolveActiveScriptId,
@@ -13,7 +13,8 @@ export function activeScriptIdFromParam(paramEncoded: string | null | undefined)
 		paramEncoded: paramEncoded ?? null,
 		storedId,
 		canonicalId: project.canonicalScriptId,
-		registeredIds: listScripts().map((s) => s.id)
+		registeredIds: listScripts().map((s) => s.id),
+		defaultEligibleIds: listCurrentScripts().map((s) => s.id)
 	});
 }
 

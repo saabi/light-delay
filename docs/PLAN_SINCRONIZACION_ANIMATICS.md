@@ -1,5 +1,7 @@
 # Plan: sincronizar guiones con sus animatics (29/08/2026)
 
+> **OBSOLETO — IMPLEMENTACIÓN ANTERIOR.** Se conserva para rescatar diagnóstico y procedimiento. Sus guiones y animatics consumidores están deprecados y no deben seguir sincronizándose como productos vigentes.
+
 **Estado:** ejecución completada para Festival. El cut tiene guion causal y animatic A–G con 67 tomas; los 29 shots E–G colocan todo el diálogo aprobado y cierran revelación, cuarentena, contacto y desenlace. Los 57 cues huérfanos del corto fueron retirados del grafo activo y archivados con cobertura/procedencia en `data/archive/main-short-unplaced-action-cues.json`. La regresión de diálogo del tráiler quedó corregida en su generador.
 
 ## Resumen del diagnóstico

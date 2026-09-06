@@ -1,0 +1,60 @@
+{
+  "workflow": {
+    "phase": "dual-render-es",
+    "note": "Spanish dual outline: direction comes from data/voice-profiles.json. These selected refs were chosen before the location-specific language profiles were formalized and require human reevaluation against Bogotá, Lima, Buenos Aires, Medellín, Madrid and Malabo respectively. Same ICL knobs as EN (docs/wip/qwen-icl-clone-defaults.json). REF_TEXT.txt must match the spoken phrase in each curated WAV, or use Whisper sidecars."
+  },
+  "models": {
+    "voiceDesign": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+    "voiceClone": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "cacheDir": "E:/Models/Qwen3-TTS/hf-cache",
+    "candidatesDir": "E:/Models/Qwen3-TTS/candidates",
+    "selectedDir": "static/assets/voices/es"
+  },
+  "refText": "Los sistemas de la nave están estables. Propulsión, guiado y comunicaciones en orden. Mantendremos la aceleración prevista y el calendario de contacto.",
+  "samplesPerCharacter": 8,
+  "language": "Spanish",
+  "generation": {
+    "temperature": 0.82,
+    "top_k": 50,
+    "top_p": 0.9,
+    "max_new_tokens": 3072,
+    "non_streaming_mode": true,
+    "x_vector_only": false,
+    "dialogueSpeed": 1.0,
+    "dialogueTailMs": 220,
+    "repetition_penalty": 1.05,
+    "defaultsFile": "docs/wip/qwen-icl-clone-defaults.json"
+  },
+  "characters": {
+    "Zao": {
+      "selectedRef": "static/assets/voices/es/Zao.wav",
+      "sourceCandidate": "es-accents/selected-slow-v2/Zao.wav",
+      "instruct": "Contralto funcional con prosodia de mandarín y español profesional aprendido en Bogotá: formal, técnico, preciso, con usted cuando la relación lo pide; natural y sin caricatura fonética."
+    },
+    "Voss": {
+      "selectedRef": "static/assets/voices/es/Voss.wav",
+      "sourceCandidate": "es-accents/selected-slow-v2/Voss.wav",
+      "instruct": "Barítono de mando con prosodia germánica o nórdica y español institucional aprendido en Lima: instrucciones ordenadas, pausas deliberadas y tratamiento según jerarquía y confianza."
+    },
+    "Harlan": {
+      "selectedRef": "static/assets/voices/es/Harlan.wav",
+      "sourceCandidate": "es-accents/selected-slow-v2/Harlan.wav",
+      "instruct": "Barítono filoso con base británica y español rioplatense aprendido en Buenos Aires: voseo sobrio, ironía contenida, formulación pulida y amenaza nunca caricaturesca."
+    },
+    "Elin": {
+      "selectedRef": "static/assets/voices/es/Elin.wav",
+      "sourceCandidate": "es-accents/selected-slow-v2/Elin.wav",
+      "instruct": "Mezzo ligera con prosodia del sur de India y español profesional aprendido en Medellín: paisa urbano contenido, vacilante en lo social y breve, directo y concluyente al analizar sistemas."
+    },
+    "Sorell": {
+      "selectedRef": "static/assets/voices/es/Sorell.wav",
+      "sourceCandidate": "es-accents/selected-slow-v2/Sorell.wav",
+      "instruct": "Mezzo cálida con prosodia francesa y español académico aprendido en Madrid: peninsular culto, expresivo y semánticamente preciso, con tratamientos naturales según la relación."
+    },
+    "Okoye": {
+      "selectedRef": "static/assets/voices/es/Okoye.wav",
+      "sourceCandidate": "es-accents/selected-slow-v2/Okoye.wav",
+      "instruct": "Contralto firme con prosodia igbo y español formal aprendido en Malabo: ecuatoguineano directo, plenamente gramatical, órdenes inequívocas y ninguna imitación fonética del acento."
+    }
+  }
+}

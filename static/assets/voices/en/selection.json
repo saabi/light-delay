@@ -1,0 +1,96 @@
+{
+  "selectedDir": "static/assets/voices/en",
+  "note": "Selected-slow-v2: slower ICL from prior native-L1 selected refs; EN L1 accents preserved. Cael not in this set.",
+  "engine": "selected-slow-v2 (ICL reclone from prior selected)",
+  "phrasePath": "static/assets/voices/en/REF_TEXT.txt",
+  "mapping": [
+    {
+      "file": "Zao.wav",
+      "character": "Zao",
+      "l1": "mandarin",
+      "source": "en-accents/selected-slow-v2/Zao.wav",
+      "priorSource": "en-accents/native-l1-v2/finalists/Zao/native-02__Zao_v2_qwen-en.wav"
+    },
+    {
+      "file": "Voss.wav",
+      "character": "Voss",
+      "l1": "german",
+      "source": "en-accents/selected-slow-v2/Voss.wav",
+      "priorSource": "en-accents/native-l1-v2/finalists/Voss/native-02__Voss_v2_qwen-en.wav"
+    },
+    {
+      "file": "Harlan.wav",
+      "character": "Harlan",
+      "l1": "british-english",
+      "source": "en-accents/selected-slow-v2/Harlan.wav",
+      "priorSource": "en-accents/native-l1-v2/finalists/Harlan/native-02__Harlan_v2_qwen-en.wav"
+    },
+    {
+      "file": "Elin.wav",
+      "character": "Elin",
+      "l1": "hindi",
+      "source": "en-accents/selected-slow-v2/Elin.wav",
+      "priorSource": "en-accents/native-l1-v2/finalists/Elin/native-03__Elin_v2_qwen-en.wav"
+    },
+    {
+      "file": "Sorell.wav",
+      "character": "Sorell",
+      "l1": "french",
+      "source": "en-accents/selected-slow-v2/Sorell.wav",
+      "priorSource": "en-accents/native-l1-v2/finalists/Sorell/native-02__Sorell_v2_qwen-en.wav"
+    },
+    {
+      "file": "Okoye.wav",
+      "character": "Okoye",
+      "l1": "igbo",
+      "source": "en-accents/selected-slow-v2/Okoye.wav",
+      "priorSource": "en-accents/native-l1-v2/finalists/Okoye/native-03__Okoye_v2_qwen-en.wav"
+    }
+  ],
+  "refTextPath": "static/assets/voices/en/REF_TEXT.txt",
+  "characters": {
+    "Elin": {
+      "selectedFile": "Elin.wav",
+      "source": "selected-slow-v2",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\en-accents\\selected-slow-v2\\Elin.wav",
+      "promotedAt": "2026-09-06T04:21:34.122058+00:00",
+      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+    },
+    "Harlan": {
+      "selectedFile": "Harlan.wav",
+      "source": "selected-slow-v2",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\en-accents\\selected-slow-v2\\Harlan.wav",
+      "promotedAt": "2026-09-06T04:21:34.123396+00:00",
+      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+    },
+    "Okoye": {
+      "selectedFile": "Okoye.wav",
+      "source": "selected-slow-v2",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\en-accents\\selected-slow-v2\\Okoye.wav",
+      "promotedAt": "2026-09-06T04:21:34.124403+00:00",
+      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+    },
+    "Sorell": {
+      "selectedFile": "Sorell.wav",
+      "source": "selected-slow-v2",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\en-accents\\selected-slow-v2\\Sorell.wav",
+      "promotedAt": "2026-09-06T04:21:34.125351+00:00",
+      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+    },
+    "Voss": {
+      "selectedFile": "Voss.wav",
+      "source": "selected-slow-v2",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\en-accents\\selected-slow-v2\\Voss.wav",
+      "promotedAt": "2026-09-06T04:21:34.126359+00:00",
+      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+    },
+    "Zao": {
+      "selectedFile": "Zao.wav",
+      "source": "selected-slow-v2",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\en-accents\\selected-slow-v2\\Zao.wav",
+      "promotedAt": "2026-09-06T04:21:34.127609+00:00",
+      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+    }
+  },
+  "updated": "2026-09-06T04:21:34.127637+00:00"
+}

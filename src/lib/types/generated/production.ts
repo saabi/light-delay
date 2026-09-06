@@ -187,7 +187,7 @@ export interface ProviderCapabilitiesFile32 {
 export type ContinuityLedgerFile1 = string;
 export type ContinuityLedgerFile3 = string;
 export type ContinuityLedgerFile4 = string;
-export type ContinuityLedgerFile5 = 'draft' | 'reviewed' | 'locked' | 'incomplete';
+export type ContinuityLedgerFile5 = 'draft' | 'reviewed' | 'locked' | 'incomplete' | 'deprecated' | 'obsolete';
 export type ContinuityLedgerFile6 = string;
 export type ContinuityLedgerFile8 = string;
 export type ContinuityLedgerFile9 = string;
@@ -274,7 +274,7 @@ export type GenerationPlanFile4 = string;
 export type GenerationPlanFile5 = string;
 export type GenerationPlanFile6 = string;
 export type GenerationPlanFile7 = string;
-export type GenerationPlanFile8 = 'blocked' | 'draft' | 'ready' | 'frozen' | 'executed';
+export type GenerationPlanFile8 = 'blocked' | 'draft' | 'ready' | 'frozen' | 'executed' | 'obsolete';
 export type GenerationPlanFile9 = 'en';
 export type GenerationPlanFile10 = 'en';
 export type GenerationPlanFile11 = 'es';

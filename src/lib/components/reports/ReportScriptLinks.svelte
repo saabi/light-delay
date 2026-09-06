@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { withLocale } from '$lib/utils/paths';
 	import { encodeScriptId } from '$lib/utils/scriptId';
-	import { scriptLabel } from '$lib/data/selectors/scriptPresentation';
+	import { scriptLabel, scriptStatusLabel } from '$lib/data/selectors/scriptPresentation';
 	import type { ScriptRegistryEntry } from '$lib/types/project';
 	import * as m from '$lib/paraglide/messages.js';
 
@@ -23,6 +23,7 @@
 				<a href={withLocale(`/reports/${reportId}/${encodeScriptId(entry.id)}`)}>
 					{scriptLabel(entry)}
 				</a>
+				<small class:archived={entry.status === 'deprecated'}>{scriptStatusLabel(entry.status)}</small>
 				{#if summaries[entry.id]}
 					<small>{summaries[entry.id]}</small>
 				{/if}
@@ -75,5 +76,11 @@
 		margin-top: 0.25rem;
 		color: var(--muted);
 		font-size: 0.78rem;
+	}
+
+	small.archived {
+		color: var(--gold);
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 </style>

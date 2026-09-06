@@ -1,5 +1,274 @@
 # Changelog
 
+## 2026-09-06 — Audience: pausa tras Prólogo; Capítulos numerados
+
+- Voces/prosa EN+ES: «Prologue.» / «Prólogo.» → pausa → subtítulo; capítulos
+  `Chapter N` / `Capítulo N` (1–11).
+- `build-tts-voices-outlines.py`: `audience_heading_cues` para fuente audience.
+
+## 2026-09-06 — Promoción selected-slow-v2 + regen ES
+
+- Refs maestras EN/ES reemplazadas por `selected-slow-v2` (más lentas; ES acento suave).
+- Audience ES: regenerar diálogo y reensamblar primero.
+
+## 2026-09-06 — Refs lentas v2 (EN acento / ES suave)
+
+- Instruct más pausado (~15–20%); EN mantiene L1; ES suaviza acento.
+- Salida: `…/selected-slow-v2/` (v1 conservada).
+
+## 2026-09-06 — Refs lentas desde selected (sin re-curar pools)
+
+- Nuevo `scripts/regenerate-selected-voice-refs-slower.py`: reclona
+  `static/assets/voices/{en,es}/` → `selected-slow-v1/` con instruct pausado.
+- `dialogueSpeed` permanece en 1.0 (sin time-stretch).
+
+## 2026-09-06 — Diálogo EN: speed/temp + completar frases
+
+- Cast EN: `dialogueSpeed` 0.85; acentos L1 intactos.
+- Anti-corte de finales: instruct de completitud, `max_new_tokens` 3072,
+  `repetition_penalty` 1.05, cola 220 ms; prefijos EN/ES separados.
+
+## 2026-09-06 — Diálogo ES: temp 0.82 + acento más suave
+
+- Temp/top_p `0.82`/`0.90`. Instruct ES + prefijo: color L1 ligero, sin exagerar.
+- Audience ES reensamblado: `light-delay-audience-dual-es.mp3` (~48.1 min;
+  `dialogueSpeed` 0.85 incluido).
+
+## 2026-09-06 — Diálogo ES más lento (`dialogueSpeed` 0.85)
+
+- Qwen no expone `speed`; el dual aplica time-stretch (librosa) post-synth.
+- Cast ES: `generation.dialogueSpeed: 0.85` (alineado al narrador Alex).
+- Instruct ES pide ritmo un poco más pausado. EN sigue en `1.0`.
+
+## 2026-09-06 — Qwen diálogo más expresivo (sin tocar refs)
+
+- `qwen-icl-clone-defaults.json`: instruct con color emocional; `expressivenessPrefix`
+  antepuesto a cada `[QwenInstruct]`; temp `0.75` / top_p `0.88`.
+- Casts EN/ES alineados; `compose_instruct` en `qwen_icl.py` + dual renderer.
+- Invalida hash de cues de diálogo → regenerar con `--force-speaker` o regen dual
+  (las WAV maestras en `static/assets/voices/` no cambian).
+- Audience ES reensamblado tras regen de 36 cues de diálogo:
+  `light-delay-audience-dual-es.mp3` (~47.7 min).
+
+## 2026-09-05 — Audience ES: narración más lenta + léxico castellano
+
+- Narrador Kokoro `em_alex`: speed **0.85** (antes 0.92) en `kokoro-voice-cast.es.json`.
+- Título hablado/escrito ES: **Lúz Tardía**. `jammer` → *inhibidor de señales*;
+  `displays` → *pantallas*. Diálogo de Soréll sobre la IA pasa a cita hablada
+  (`audience-narrative.es.md` / `.voices.es.md`; EN hermano alineado).
+
+## 2026-09-05 — Render audience EN dual
+
+- Audience EN: `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-en.mp3`
+  (~50.7 min; chunks en `outline-chunks/en-audience/`; Kokoro `am_michael` + Qwen ICL).
+
+## 2026-09-05 — Ensamblado dual en MP3
+
+- `generate-dual-outline-audio.py` escribe el producto ensamblado como `.mp3`
+  (libmp3lame 192k) por defecto; `.wav` sigue disponible si `--out` lo pide.
+- Audience ES: `light-delay-audience-dual-es.mp3` (WAV intermedio eliminado).
+
+## 2026-09-05 — Narrador ES Kokoro `em_alex` + render audience ES
+
+- Nuevo `docs/wip/kokoro-voice-cast.es.json` (Narrator = `em_alex`, `lang=es`).
+- `generate-dual-outline-audio.py --lang es` usa ese cast por defecto.
+- Arranque del dual audience ES → `outline-chunks/es-audience/` +
+  `light-delay-audience-dual-es.mp3`.
+
+## 2026-09-05 — Voces selected native-L1 → `static/assets/voices`
+
+- Promovidas las tomas curadas de
+  `…/native-l1-v2/finalists/` (una por personaje × EN/ES) a
+  `static/assets/voices/{en,es}/{Character}.wav`, reemplazando las refs anteriores.
+- Actualizados `selection.json`, casts Qwen y `voices/README.md`. Okoye ES pasa a
+  Igbo L1 (deja el interim rioplatense). `REF_TEXT.txt` sin cambios (frase Qwen).
+
+## 2026-09-05 — Relato narrativo para público (EN/ES) + TTS multi-voz
+
+- Nuevos `docs/wip/audience-narrative.es.md` / `.en.md`: relato por capítulos
+  (sin frontmatter de producción, sin spoilers anticipados; la puntería de retardo
+  de luz y el contenido del mensaje de Zao se revelan sólo al reproducirse).
+- TTS: `audience-narrative.voices.es.md` / `.voices.en.md` (35 diálogos, paridad
+  EN/ES). Rebuild: `python scripts/build-tts-voices-outlines.py --source audience`.
+
+## 2026-09-05 — Outlines TTS multi-voz rev. 14 (EN + ES)
+
+- Regenerados `docs/wip/outiline-for-kokoro-tts.voices.md` y
+  `docs/wip/outiline-for-kokoro-tts.voices.es.md` desde la escaleta maestra rev. 14
+  (export MD), más hermanas sin tags (`outiline-for-kokoro-tts.md` / `.es.md`).
+- Los 37 diálogos toman hablante sólo de citas atribuidas (`speakerId` /
+  `> **Nombre:**`); paridad EN/ES verificada; mismos `[QwenInstruct]` por índice.
+- `generate-dual-outline-audio.py --lang es` usa por defecto el outline ES.
+- Builder: `scripts/build-tts-voices-outlines.py`. El master no necesitó
+  atribuciones nuevas (37/37 ya tenían `speakerId`).
+
+## 2026-09-05 — Outline por chunks + docs TTS en el repo
+
+- `generate-dual-outline-audio.py` guarda cada cue en
+  `E:/Models/Qwen3-TTS/output/outline-chunks/{lang}/` con `index.json`;
+  `--force-speaker` / fingerprint de voz regeneran sólo ese personaje;
+  `--assemble-only` reensambla sin modelos.
+- Guía canónica: `docs/TTS_VOICE_PIPELINE.es.md` (+ `.en.md`) — recrear
+  `E:\Models\`, native-L1 V2+ICL, y pronunciación **Soréll** en texto para audio.
+
+## 2026-09-05 — Canon ICL + EN native-L1 V2; limpieza de pools obsoletos
+
+- Knobs canónicos en `docs/wip/qwen-icl-clone-defaults.json` (Seed-VC V2 L1 + Qwen ICL).
+- `generate-dual-outline-audio.py` respeta ICL para EN/ES (`--lang en|es`, cast ES
+  `qwen3-tts-cast.es.json`): `x_vector_only=false`, temp=0.70, top_p=0.85,
+  `ref_text` desde `REF_TEXT.txt` / sidecar / Whisper.
+- Nuevo `pipeline-english-native-l1-v2-qwen.py` (mismo framing que ES). El pipeline
+  V1 multi-pase queda deprecado (stub).
+- Conservados: `voice-donors/` y `es-accents/native-l1-v2/`. Borrados pools Qwen/Seed-VC
+  obsoletos (EdAcc, l1-prosody, okoye-rioplatense, native-l1 V1 EN, smokes).
+- Re-run EN Seed-VC V2 + Qwen ICL → `…/en-accents/native-l1-v2/` (**24/24**).
+
+## 2026-09-06 — Formación lingüística y voces bilingües del elenco maestro
+
+- Los seis perfiles de voz del master separan timbre, prosodia de origen, lugar/variedad de aprendizaje y estilo de diálogo para español e inglés; se formalizan mediante un schema propio y validación bilingüe.
+- La escaleta maestra pasa a revisión 14, incorpora la formación lingüística en Reparto y atribuye sus 37 citas con `speakerId`; los Markdown generados, el importador reversible y la UI preservan y muestran al hablante.
+- El diálogo maestro recibe un pase sutil de variedad aprendida sin grafías fonéticas ni exposición añadida. Los cuatro cuts deprecados y los audios WIP no se regeneran.
+- Las fichas públicas muestran las dos variantes de voz y `report:dialogue-style` verifica atribución y cobertura de dirección antes de futuros guiones o TTS.
+
+## 2026-09-05 — ES native-L1: Qwen ICL (prosodia Seed-VC)
+
+- Borrados los 24 Qwen previos (`x_vector_only`, que descartaban `ref_code`).
+- Regenerados con ICL: Whisper-medium transcript de cada `*_v2.wav`,
+  `x_vector_only=false`, temp=0.70, top_p=0.85, instruct mínimo.
+  Pool `…/native-l1-v2/finalists/` (**24/24**).
+
+## 2026-09-05 — ES native-L1 vía Seed-VC V2 (1 pase) + Qwen
+
+- Timbre = `static/assets/voices/es/`; prosodia = `voice-donors/native/`.
+- V2 afinado para **supervivencia L1**: `convert_style=false`, intel=0.90, sim=0.55,
+  steps=35. Qwen ICL (no `x_vector_only`): temp=0.70, top_p=0.85.
+- Pool: `…/es-accents/native-l1-v2/finalists/` (**24/24**). Script:
+  `pipeline-spanish-native-l1-v2-qwen.py`.
+
+## 2026-09-05 — Okoye ES seleccionada (rioplatense 4º pase)
+
+- Promovida
+  `okoye-rioplatense/…/openslr61-weather-03__Okoye_4th_pass_qwen-es.wav`
+  → `static/assets/voices/es/Okoye.wav`. Siguiente: native-L1 igbo en ES.
+
+## 2026-09-05 — Seed-VC V2 instalado
+
+- Pesos V2 + ASTRAL descargados en el venv `E:/Models/Seed-VC/`; smoke Okoye×rioplatense OK.
+  Notas: `E:/Models/Seed-VC/LIGHT_DELAY_NOTES.md`. Pipelines de producción siguen en V1 hasta
+  migrar/comparar.
+
+## 2026-09-05 — Okoye ES rioplatense (pre-selección)
+
+- Timbre `en/Okoye.wav` × donantes argentinos (`voice-donors/es/rioplatense/`) × Seed-VC
+  pases 1–5 → frase Qwen ES. Pool: `…/es-accents/okoye-rioplatense/finalists/` (**20/20**).
+  Script: `pipeline-okoye-spanish-rioplatense.py`. Curar una → `static/assets/voices/es/Okoye.wav`
+  antes del pase nativo igbo en ES.
+
+## 2026-09-05 — EN native-L1: pases 4–5 adicionales
+
+- Dos pases Seed-VC más sobre la cadena nativa (mayor impronta de prosodia L1), luego
+  Qwen EN. Pool `…/en-accents/native-l1/finalists/`: **120/120** (6×4×5).
+
+## 2026-09-05 — EN native-L1: Seed-VC ×3 + Qwen frase
+
+- Timbre = `static/assets/voices/en/` (incl. Okoye `okoye-02`). Prosodia = donantes
+  nativos (`voice-donors/native/`: mandarín/alemán/británico/hindi/francés/igbo).
+- 6 × 4 donantes × 3 pases Seed-VC → Qwen EN con la frase `refText` (`x_vector_only`).
+  Pool de curaduría: `…/en-accents/native-l1/finalists/` (**72/72**). ES análogo pendiente.
+
+## 2026-09-05 — Okoye EN seleccionada (`okoye-02`)
+
+- Promovida `candidates/Okoye/okoye-02.wav` → `static/assets/voices/en/Okoye.wav`.
+  Cast WIP y `selection.json` actualizados. ES regional de Okoye sigue pendiente.
+
+## 2026-09-05 — Promoción de la escaleta maestra y retiro seguro de productos anteriores
+
+- La escaleta maestra bilingüe WIP pasa a ser la autoridad narrativa; `project.narrativeAuthority` y `canonicalScriptId` apuntan a su continuidad y stub vacío.
+- Main-short, Festival, tráiler y long se marcan `deprecated`; animatics, planes de generación, ledgers y checklist Higgsfield se marcan `obsolete` sin borrar material rescatable.
+- Nuevo ledger `data/editorial-lifecycle.json`, esquema, validador e informe generado con clasificación conservadora y cuatro compuertas obligatorias antes de eliminar archivos.
+- Los Markdown ES/EN del master pasan a ser exports JSON→Markdown reproducibles; Markdown→JSON sólo genera candidatos de importación.
+- Selector, rutas, landing, archivo editorial, entidades y assets muestran la nueva autoridad o su advertencia de ciclo de vida. Las rutas archivadas usan `noindex` y no entran al sitemap.
+- ADR-0002, reglas de agentes, contrato de escaleta, README, TODO y documentos de la continuidad anterior fueron sincronizados con la transición.
+- El objeto estable del antiguo transmisor se realinea con la terminología del master como «matriz óptica de comunicaciones de larga distancia»; su hoja visual queda en revisión y los componentes nuevos aún no catalogados se registran como deuda, sin inventarlos.
+- La regresión Playwright se adapta al reloj de diálogo y a los controles duplicados por layout; la suite completa queda verde con 18 pruebas.
+
+## 2026-09-05 — Okoye EN: nuevos candidatos VoiceDesign
+
+- Regenerados 8 candidatos bajo `E:/Models/Qwen3-TTS/candidates/Okoye/` con instruct
+  alineado a la biblia (contralto firme, inglés nigeriano/igbo, ritmo silábico,
+  sin caricatura). Luego seleccionada `okoye-02` → `static/assets/voices/en/Okoye.wav`.
+
+## 2026-09-05 — Voces ES curadas en el repo; Okoye EN retirada
+
+- Cinco refs regionales ES movidas a `static/assets/voices/es/` (Zao CO, Voss PE,
+  Harlan AR, Elin CO, Sorell PE). El pool `es-accents/finalists/` queda vacío tras
+  la selección (descartes del curador + movimiento).
+- Eliminada `static/assets/voices/en/Okoye.wav`; cast WIP marca Okoye pendiente de
+  VoiceDesign / nueva selección de candidatos.
+
+## 2026-09-05 — Donantes nativos (L1 auténtico)
+
+- Clips en la lengua materna de cada acento (no inglés L2): `E:/Models/voice-donors/native/`.
+  Zao→mandarín, Voss→alemán, Harlan→inglés británico, Elin→hindi, Sorell→francés,
+  Okoye→igbo (4 × ~10 s). Fuentes: LibriVox (archive.org) y FLEURS Igbo.
+- Script: `download-native-language-donors.py`. Pipelines EN y ES+L1 preferen `native/`
+  y caen a EdAcc `voice-donors/en/` si falta.
+
+## 2026-09-05 — Dara Okoye: identidad, voz y referencia propias
+
+- Completada la entidad bilingüe de Okoye con rasgos, apariencia nigeriana, vestuario de seguridad y perfil vocal nigeriano/igbo en inglés y castellano.
+- Generada y catalogada una hoja propia de personaje con tres vistas y cinco expresiones; la referencia genérica de seguridad se conserva sólo para extras y vestuario.
+- La narrativa maestra pasa a rev. 13, amplía su función sin importar el pasado con Harlan de la continuidad primaria y corrige dos pronombres incorrectos; el JSON estructurado conserva la fidelidad inglesa.
+- La página de entidades presenta rol, rasgos, apariencia, vestuario y voz; la biblia de producción y los planes de generación apuntan a la identidad propia.
+- Inventario actualizado a 143 assets y 38 referencias. No se registraron ni generaron muestras de voz aprobadas.
+
+## 2026-09-05 — Voces selected en el repo
+
+- Refs EN curadas en `static/assets/voices/en/` (Zao, Voss, Harlan, Elin, Sorell, Okoye;
+  sin Cael). Cast WIP: `docs/wip/qwen3-tts-cast.json` usa rutas relativas al repo.
+
+## 2026-09-05 — Donantes unificados (agnósticos de modelo)
+
+- Clips donantes en `E:/Models/voice-donors/` (`en/` EdAcc L1, `es/` regionales), fuera de
+  cualquier árbol `Qwen3-TTS/output/`. Scripts de descarga/pipeline actualizados.
+
+## 2026-09-05 — ES + prosodia L1 (origen EN) sobre finalistas regionales
+
+- Mismo mapa de origen que el pipeline EN (Zao mandarín, Voss germánico/nórdico, Harlan
+  británico, Elin indio, Sorell francés, Cael celta) pintado con Seed-VC sobre las WAV
+  finalistas ES (CO/PE/AR), luego frase Qwen en español (`x_vector_only`).
+- Donantes L1: `E:/Models/voice-donors/en/`. Salida:
+  `…/es-accents/l1-prosody/` (**252/252** Qwen-ES en `finalists/`). Scripts:
+  `download-l1-prosody-donors.py`, `pipeline-spanish-l1-prosody-seedvc-qwen.py`.
+
+## 2026-09-05 — Acentos EN vía Seed-VC + Qwen (candidatos)
+
+- Misma metodología que ES: donantes de inglés con inflexión L1 (EdAcc) → Seed-VC pases 1–3
+  sobre `selected/` → Qwen3-TTS con la frase `refText` por cada pase.
+- Seis principales (Zao/Voss/Harlan/Elin/Sorell/Cael); Cael obtiene `selected/Cael.wav` vía
+  VoiceDesign. Salida: `E:/Models/Qwen3-TTS/output/pronunciation-tests/en-accents/finalists/`
+  (**71/72**; falta `edacc-03__Sorell_2nd_pass` por overflow de duración).
+- Scripts: `download-english-accent-donors.py`, `pipeline-english-accent-seedvc-qwen.py`.
+  Carga Qwen: `dtype` recursivo en subconfigs para Flash Attention 2 sin warning.
+
+## 2026-09-05 — Seed-VC para separar timbre y prosodia
+
+- Investigación: Seed-VC supera a OpenVoice v2 y CosyVoice en SECS/WER para conversión
+  zero-shot; ProsoCodec/Discl-VC/REF-VC son papers más nuevos pero menos listos en Windows.
+- Instalación en `E:/Models/Seed-VC/` (venv + pesos HF). Uso: fuente = acento/prosodia
+  (p. ej. Qwen español), target = `static/assets/voices/en/<Character>.wav`. Notas:
+  `E:/Models/Seed-VC/LIGHT_DELAY_NOTES.md`.
+
+## 2026-09-04 — Dual TTS de la escaleta (Kokoro + Qwen3-TTS)
+
+- Narrador con Kokoro; diálogo de personajes con clonado Qwen3-TTS Base y refs curadas en
+  `static/assets/voices/en/` (antes bajo `Qwen3-TTS/selected/`).
+- Cada réplica lleva `[QwenInstruct]` (emoción/prosodia en lenguaje natural) alineado al contexto
+  narrativo; el render usa `instruct_ids` + `voice_clone_prompt` (el wrapper público
+  `generate_voice_clone` no expone `instruct`).
+- Scripts: `annotate-qwen-instructs.py`, `generate-dual-outline-audio.py`; salida
+  `E:/Models/Qwen3-TTS/output/light-delay-outline-dual.wav` (~83 min, 35 réplicas).
+
 ## 2026-09-04 — Conteos de assets alineados con el catálogo
 
 - `validate:docs` y `ASSET_PROVENANCE.md` pasan a 142 assets / 37 referencias / 138 sin `source`,

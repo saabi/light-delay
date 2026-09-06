@@ -219,6 +219,33 @@ for (const item of assets) {
 		);
 }
 
+const voiceProfiles = JSON.parse(
+	readFileSync(join(DATA, 'voice-profiles.json'), 'utf8')
+).voiceProfiles;
+for (const item of voiceProfiles) {
+	if (item.description != null)
+		checkLocalized(item.description, `voice-profiles.${item.id}.description`);
+	for (const variant of item.variants ?? []) {
+		if (variant.languageFormation?.place != null)
+			checkLocalized(
+				variant.languageFormation.place,
+				`voice-profiles.${item.id}.${variant.language}.languageFormation.place`
+			);
+		if (variant.languageFormation?.variety != null)
+			checkLocalized(
+				variant.languageFormation.variety,
+				`voice-profiles.${item.id}.${variant.language}.languageFormation.variety`
+			);
+		if (variant.prosody != null)
+			checkLocalized(variant.prosody, `voice-profiles.${item.id}.${variant.language}.prosody`);
+		if (variant.dialogueStyle != null)
+			checkLocalized(
+				variant.dialogueStyle,
+				`voice-profiles.${item.id}.${variant.language}.dialogueStyle`
+			);
+	}
+}
+
 const taxonomy = JSON.parse(readFileSync(join(DATA, 'comparison-taxonomy.json'), 'utf8'));
 for (const item of [...taxonomy.canonDimensions, ...taxonomy.majorEvents]) {
 	checkLocalized(item.label, `comparison.${item.id}.label`);

@@ -128,6 +128,33 @@
       "height": 1024
     },
     {
+      "id": "asset:character-okoye-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/okoye/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Hoja de modelo de Dara Okoye",
+        "en": "Dara Okoye model sheet"
+      },
+      "description": {
+        "es": "Referencia visual propia de la jefa de seguridad nigeriana de la Celestial Ardor, con traje de seguridad de a bordo, tether y elementos de inmovilización no letales.",
+        "en": "Dedicated visual reference for the Celestial Ardor's Nigerian chief of security, wearing a shipboard security suit with a tether and non-lethal restraint hardware."
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "openai-imagegen",
+        "generatedAt": "2026-09-05",
+        "originalAssetId": "asset:character-security-crew-sheet"
+      },
+      "metadata": {
+        "generationPrompt": "Create a grounded photoreal cinematic hard-science-fiction model sheet for Lieutenant Commander Dara Okoye, a Nigerian woman around forty with deep dark-brown skin, dark-brown eyes, defined cheekbones, short tightly coiled natural black hair, a compact athletic build, controlled vigilant posture, and understated command authority. Show front, left profile, and back full-body views plus five expressions: neutral vigilance, suspicion, firm command, contained inner conflict, and decisive resolve. Dress her in a charcoal shipboard security flight suit with flexible protection, discreet lieutenant-commander insignia, flight gloves and boots, a restraint tether, and non-lethal restraint hardware. Neutral light-gray studio background, soft even light, realistic skin and fabric, one consistent person. No firearms, heavy armor, police styling, cultural caricature, ceremonial clothing, labels, logos, text, watermark, glamour, sexualization, fantasy, or neon.",
+        "referenceAssetIds": "asset:character-security-crew-sheet (costume/equipment only); asset:character-rao-sheet and asset:character-harlan-sheet (layout, lighting, realism only)",
+        "competitionEligible": "unverified"
+      }
+    },
+    {
       "id": "asset:character-earth-protesters-sheet",
       "kind": "image",
       "role": "reference",

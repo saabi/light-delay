@@ -6,6 +6,7 @@
 		listEntities,
 		type EntityKind
 	} from '$lib/data/repositories/lookups';
+	import { getLifecycleForRef } from '$lib/data/repositories/index';
 	import { withLocale } from '$lib/utils/paths';
 	import { encodeRouteId } from '$lib/utils/routeId';
 	import * as m from '$lib/paraglide/messages.js';
@@ -27,6 +28,7 @@
 			title: e.name,
 			description: e.description,
 			imageSrcs: getEntityThumbnailPaths(e.referenceAssetIds),
+			lifecycleStatus: getLifecycleForRef('entity', e.id).status,
 			eyebrow: {
 				characters: m.entities_characters(),
 				locations: m.entities_locations(),

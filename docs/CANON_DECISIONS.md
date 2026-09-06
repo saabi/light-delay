@@ -1,6 +1,8 @@
 # Decisiones de canon
 
-Este documento resume las decisiones vigentes y prevalece sobre formulaciones anteriores incompatibles.
+> **DEPRECADO — CONTINUIDAD ANTERIOR.** Desde 2026-09-05 la fuente narrativa vigente es `data/outlines/light-delay-master-narrative.json`. Este documento se conserva para procedencia y rescate; sus afirmaciones no prevalecen sobre la escaleta maestra.
+
+Este documento resume las decisiones que regían la continuidad primaria anterior.
 
 ## Proxima
 

@@ -45,7 +45,7 @@
       "role": "Comandante",
       "note": "Competencia creíble, convicción ideológica y quiebre.",
       "category": "principal",
-      "file": "harlan/model-sheet.png",
+      "file": "harlan/model-sheet-v2.png",
       "dimensions": [
         1536,
         1024
@@ -154,6 +154,24 @@
       "note": "Autoridad física sin militarización ni armamento visible.",
       "category": "secundario",
       "file": "security-crew/model-sheet.png",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "views": [
+        "front",
+        "left profile",
+        "back"
+      ],
+      "expression_count": 5
+    },
+    {
+      "slug": "okoye",
+      "name": "Dara Okoye",
+      "role": "Teniente comandante / Jefa de seguridad",
+      "note": "Oficial nigeriana; autoridad contenida, vigilancia táctica y decisión bajo presión.",
+      "category": "principal",
+      "file": "okoye/model-sheet.png",
       "dimensions": [
         1536,
         1024

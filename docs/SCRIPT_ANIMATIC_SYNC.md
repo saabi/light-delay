@@ -1,6 +1,8 @@
 # Sincronización guion ↔ animatic
 
-El **guion estructurado** (`data/scripts/light-delay-main-short.json`) es la fuente de verdad narrativa vigente y alimenta también el animatic. `legacy-site/guion-30-minutos.html` documenta la procedencia y permanece como referencia de regresión; ya no debe editarse como autoridad paralela. Los desajustes se registran aquí sin duplicar diálogo ni subtítulos.
+> **DEPRECADO — IMPLEMENTACIÓN ANTERIOR.** Este ledger describe el corto y animatic previos, conservados sólo para rescate. La autoridad vigente es `data/outlines/light-delay-master-narrative.json`; todavía no existen guiones ni animatics derivados del master.
+
+El **guion estructurado archivado** (`data/scripts/light-delay-main-short.json`) continúa alimentando su propio animatic deprecado. `legacy-site/guion-30-minutos.html` documenta procedencia, no una autoridad o baseline vigente.
 
 ## Conteos vigentes (revisión 2026-08-29)
 

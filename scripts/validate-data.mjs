@@ -42,7 +42,7 @@ const OUTLINE_COVERAGE_STATUS = new Set([
 	'deferred',
 	'not_applicable'
 ]);
-const OUTLINE_FILE_STATUS = new Set(['draft', 'reviewed', 'locked']);
+const OUTLINE_FILE_STATUS = new Set(['draft', 'reviewed', 'locked', 'deprecated']);
 const OUTLINE_FRAMING_PLACEMENT = new Set(['before_story', 'after_story']);
 const OUTLINE_FRAMING_KIND = new Set([
 	'purpose',
@@ -331,6 +331,14 @@ function main() {
 	if (!registryIds.has(project.project?.canonicalScriptId)) {
 		errors.push('project: canonicalScriptId not in registry');
 	}
+	const authority = project.project?.narrativeAuthority;
+	if (!authority) errors.push('project: missing narrativeAuthority');
+	else {
+		if (authority.scriptId !== project.project.canonicalScriptId)
+			errors.push('project: narrativeAuthority.scriptId must equal canonicalScriptId');
+		if (!registryIds.has(authority.scriptId)) errors.push('project: narrativeAuthority script not registered');
+		if (!continuityIds.has(authority.continuityId)) errors.push('project: narrativeAuthority continuity not registered');
+	}
 
 	const scriptFilesOnDisk = readdirSync(SCRIPTS_DIR).filter((f) => f.endsWith('.json'));
 	const scriptsById = new Map();
@@ -483,11 +491,11 @@ function main() {
 	const ownedIds = new Set();
 
 	for (const [id, script] of scriptsById) {
-		const isCanonical = id === project.project.canonicalScriptId;
+		const isArchivedMain = id === 'script:light-delay-main-short';
 		validateScriptFile(script, {
 			sourceLang,
-			expectScenes: isCanonical ? 19 : undefined,
-			expectShots: isCanonical ? 128 : undefined,
+			expectScenes: isArchivedMain ? 19 : undefined,
+			expectShots: isArchivedMain ? 128 : undefined,
 			functionIds,
 			characterIds,
 			taxonomy,
@@ -754,7 +762,7 @@ function main() {
 	for (const warning of warnings) console.warn(' warning:', warning);
 	const main = scriptsById.get(project.project.canonicalScriptId);
 	console.log(
-		`scripts=${scriptsById.size} scenes(main)=${main?.scenes?.length} shots(main)=${main?.shots?.length} assets=${assets.assets.length} outlines=${outlineCount}`
+		`scripts=${scriptsById.size} scenes(authority)=${main?.scenes?.length} shots(authority)=${main?.shots?.length} assets=${assets.assets.length} outlines=${outlineCount}`
 	);
 }
 

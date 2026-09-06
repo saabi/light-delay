@@ -1,6 +1,6 @@
 # Guía de escaleta para agentes
 
-Procedimiento obligatorio antes de crear o ampliar guion, diálogo, tomas o animatic de un `scriptId`. Contrato: `docs/ESCALETA.md`. Cuidados: `docs/CUIDADOS_NARRATIVOS.md`. Continuidad: `docs/CONTINUIDAD_CAUSAL_GUIONES.md`.
+Procedimiento obligatorio antes de crear o ampliar guion, diálogo, tomas o animatic de un `scriptId`. Contrato: `docs/ESCALETA.md`. Cuidados: `docs/CUIDADOS_NARRATIVOS.md`. Autoridad vigente: `data/outlines/light-delay-master-narrative.json`. `docs/CONTINUIDAD_CAUSAL_GUIONES.md` sólo describe la continuidad anterior deprecada.
 
 ## 1. Leer la historia antes de implementarla
 
@@ -31,7 +31,9 @@ Si la capa principal sólo repite encabezados o resúmenes de escena, todavía n
 - Tratar cada cut según su promesa al público. La escaleta de una película puede confirmar muerte, envío y recepción; la de un tráiler sólo puede registrar lo que el montaje revela. Metadatos, IDs de eventos, referencias de personajes, descripciones heredadas y traducciones también cuentan como revelación.
 - En el tráiler, una acción interrumpida no equivale a un resultado: progreso menor a 100 % no confirma envío; un corte breve a negro no confirma muerte; mostrar la investigación no confirma recepción. La incertidumbre debe sobrevivir tanto en `story` como en `detail`, guion y tomas.
 
-Fuentes, en orden: canon y continuidad vigente; perfil de eventos del cut; documentos específicos aprobados. No inventar huecos.
+Fuentes, en orden: escaleta maestra vigente; escaleta derivada explícitamente aprobada para el cut; documentos específicos compatibles y aprobados. Los guiones/outlines anteriores sólo pueden aportar material de rescate identificado como tal. No inventar huecos.
+
+Mientras el master siga incompleto, no crear ni ampliar derivados salvo autorización editorial explícita. Cuando se autorice un nuevo cut, registrar su lineage/procedencia, escribir primero su escaleta y no copiar cobertura, canon o implementación desde un producto deprecado por conveniencia.
 
 ## 3. Cobertura posterior
 

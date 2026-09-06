@@ -1,8 +1,9 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import {
-		getCanonicalScript,
 		getDocuments,
+		getLifecycleForRef,
+		getOutline,
 		getProject,
 		listLocalizedScripts
 	} from '$lib/data/repositories/index';
@@ -20,10 +21,24 @@
 
 	const project = getProject().project;
 	const scripts = listLocalizedScripts(getLocale());
-	const canonical = getCanonicalScript();
+	const currentScripts = scripts.filter((entry) => entry.status !== 'deprecated');
+	const archivedScripts = scripts.filter((entry) => entry.status === 'deprecated');
+	const authorityOutline = getOutline(project.narrativeAuthority.scriptId);
 	const documents = $derived(
-		getDocuments().documents.map((document) => resolveDocument(document, getLocale()))
+		getDocuments().documents.map((document) => ({
+			...resolveDocument(document, getLocale()),
+			lifecycle: getLifecycleForRef('document', document.id)
+		}))
 	);
+	function lifecycleLabel(status: string) {
+		return status === 'obsolete'
+			? m.lifecycle_obsolete()
+			: status === 'deprecated'
+				? m.lifecycle_deprecated()
+				: status === 'review_required'
+					? m.lifecycle_review_required()
+					: m.lifecycle_authoritative();
+	}
 </script>
 
 <main class="page">
@@ -32,8 +47,9 @@
 		title={m.project_title()}
 		lede={m.project_lede()}
 		meta={[
-			`${canonical.scenes.length} ${m.script_scenes()}`,
-			`${canonical.shots.length} ${m.animatic_shots()}`,
+			`${authorityOutline?.storySections?.length ?? 0} ${m.outline_story()}`,
+			`${authorityOutline?.steps.filter((step) => step.level === 'story').length ?? 0} ${m.outline_story_beats()}`,
+			m.lifecycle_authoritative(),
 			'ES · EN'
 		]}
 	/>
@@ -79,7 +95,7 @@
 		<div>
 			<h2>{m.project_scripts()}</h2>
 			<ul>
-				{#each scripts as entry (entry.id)}<li>
+				{#each currentScripts as entry (entry.id)}<li>
 						<div>
 							<a href={withLocale(`/script/${encodeScriptId(entry.id)}`)}>{scriptLabel(entry)}</a
 							><small>{scriptKindLabel(entry.kind)} · {scriptStatusLabel(entry.status)}</small>
@@ -90,6 +106,21 @@
 						</div>
 					</li>{/each}
 			</ul>
+			{#if archivedScripts.length}
+				<h3>{m.script_switcher_archive()}</h3>
+				<ul>
+					{#each archivedScripts as entry (entry.id)}<li>
+							<div>
+								<a href={withLocale(`/script/${encodeScriptId(entry.id)}`)}>{scriptLabel(entry)}</a>
+								<small>{scriptKindLabel(entry.kind)} · {scriptStatusLabel(entry.status)}</small>
+							</div>
+							<div class="cut-links">
+								<a href={withLocale(`/outline/${encodeScriptId(entry.id)}`)}>{m.nav_outline()}</a>
+								<a href={withLocale(`/animatic/${encodeScriptId(entry.id)}`)}>{m.nav_animatic()}</a>
+							</div>
+						</li>{/each}
+				</ul>
+			{/if}
 		</div>
 		<div>
 			<h2>{m.project_documents()}</h2>
@@ -97,7 +128,9 @@
 				{#each documents as doc (doc.id)}<li>
 						<div>
 							<a href={withLocale(`/documents/${doc.slug}`)}>{doc.title}</a><small
-								>{editorialValueLabel(doc.status, getLocale())}</small
+							>{editorialValueLabel(doc.status, getLocale())} · {lifecycleLabel(
+								doc.lifecycle.status
+							)}</small
 							>
 						</div>
 					</li>{/each}
@@ -157,6 +190,13 @@
 	}
 	.lists h2 {
 		font: 700 1.3rem var(--font-serif);
+	}
+	.lists h3 {
+		margin: 1.5rem 0 0.65rem;
+		color: var(--gold);
+		font: 700 0.78rem/1 var(--font-mono);
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
 	}
 	ul {
 		list-style: none;

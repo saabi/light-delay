@@ -104,6 +104,14 @@ export function validateFactions(file: FactionsFile): ValidationResult {
 
 export function validateVoiceProfiles(file: VoiceProfilesFile): ValidationResult {
 	const errors: string[] = [];
+	const masterCharacters = new Set([
+		'character:zao',
+		'character:voss',
+		'character:harlan',
+		'character:rao',
+		'character:sorell',
+		'character:okoye'
+	]);
 	if (!file?.schemaVersion) errors.push('voice-profiles: missing schemaVersion');
 	if (!Array.isArray(file?.voiceProfiles)) {
 		errors.push('voice-profiles: missing voiceProfiles array');
@@ -117,6 +125,29 @@ export function validateVoiceProfiles(file: VoiceProfilesFile): ValidationResult
 	for (const profile of file.voiceProfiles) {
 		if (!Array.isArray(profile.variants) || profile.variants.length === 0) {
 			errors.push(`voice-profiles: ${profile.id} needs at least one language variant`);
+			continue;
+		}
+		const languages = profile.variants.map((variant) => variant.language);
+		if (new Set(languages).size !== languages.length) {
+			errors.push(`voice-profiles: ${profile.id} has duplicate language variants`);
+		}
+		if (!profile.characterId || !masterCharacters.has(profile.characterId)) continue;
+		for (const language of ['es', 'en'] as const) {
+			const variant = profile.variants.find((item) => item.language === language);
+			if (!variant) {
+				errors.push(`voice-profiles: ${profile.id} missing master ${language} variant`);
+				continue;
+			}
+			if (!variant.locale?.startsWith(`${language}-`)) {
+				errors.push(`voice-profiles: ${profile.id}.${language} needs a matching BCP 47 locale`);
+			}
+			if (!variant.languageFormation?.place || !variant.languageFormation?.variety) {
+				errors.push(`voice-profiles: ${profile.id}.${language} missing language formation`);
+			}
+			if (!variant.prosody) errors.push(`voice-profiles: ${profile.id}.${language} missing prosody`);
+			if (!variant.dialogueStyle) {
+				errors.push(`voice-profiles: ${profile.id}.${language} missing dialogue style`);
+			}
 		}
 	}
 	return { ok: errors.length === 0, errors };

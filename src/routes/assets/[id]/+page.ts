@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { getAssetById } from '$lib/data/repositories/lookups';
+import { getLifecycleForRef } from '$lib/data/repositories/index';
 import { decodeRouteId } from '$lib/utils/routeId';
 import type { PageLoad } from './$types';
 
@@ -9,5 +10,5 @@ export const load: PageLoad = ({ params }) => {
 	if (!asset) {
 		error(404, `Asset no encontrado: ${assetId}`);
 	}
-	return { asset };
+	return { asset, lifecycle: getLifecycleForRef('asset', assetId) };
 };

@@ -1,0 +1,60 @@
+{
+  "workflow": {
+    "phase": "dual-render",
+    "note": "Kokoro narrator + Qwen3-TTS Base clone for dialogue. Voice direction comes from data/voice-profiles.json; selected refs were chosen before the location-specific language profiles were formalized and require human reevaluation against them. ICL clone knobs (temp/top_p/x_vector_only) live in docs/wip/qwen-icl-clone-defaults.json — do not use x_vector_only. Per-line [QwenInstruct] adds performance colour only. Selected refs: static/assets/voices/en/."
+  },
+  "models": {
+    "voiceDesign": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+    "voiceClone": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+    "cacheDir": "E:/Models/Qwen3-TTS/hf-cache",
+    "candidatesDir": "E:/Models/Qwen3-TTS/candidates",
+    "selectedDir": "static/assets/voices/en"
+  },
+  "refText": "Ship systems are stable. Propellant, guidance, and communications check out. We hold the planned acceleration and stay on the contact schedule. I will say this once, clearly, so the record is clean.",
+  "samplesPerCharacter": 8,
+  "language": "English",
+  "generation": {
+    "temperature": 0.82,
+    "top_k": 50,
+    "top_p": 0.9,
+    "max_new_tokens": 3072,
+    "non_streaming_mode": true,
+    "x_vector_only": false,
+    "dialogueSpeed": 1.0,
+    "dialogueTailMs": 220,
+    "repetition_penalty": 1.05,
+    "defaultsFile": "docs/wip/qwen-icl-clone-defaults.json"
+  },
+  "characters": {
+    "Zao": {
+      "selectedRef": "static/assets/voices/en/Zao.wav",
+      "sourceCandidate": "en-accents/selected-slow-v2/Zao.wav",
+      "instruct": "Female, mid-40s, dry functional contralto with slight rasp from years near machinery, chest resonance, almost no vibrato. Mandarin prosody carried into formal scientific Singapore English: marked consonants, even rhythm, falling phrase endings, few contractions, no colloquial particles. Calm, precise technical authority; not warm or theatrical."
+    },
+    "Voss": {
+      "selectedRef": "static/assets/voices/en/Voss.wav",
+      "sourceCandidate": "en-accents/selected-slow-v2/Voss.wav",
+      "instruct": "Male, early 50s, full baritone with deep chest resonance, steady breath, almost no rasp. Germanic or Nordic prosody carried into standard institutional Toronto English: hard consonants, very clear vowels, even pauses, few fillers. Formal Canadian command presence; authority without shouting."
+    },
+    "Harlan": {
+      "selectedRef": "static/assets/voices/en/Harlan.wav",
+      "sourceCandidate": "en-accents/selected-slow-v2/Harlan.wav",
+      "instruct": "Male, early 40s, lighter baritone than a captain, forward metallic edge, jaw tension audible in consonants. Polished southern British English formed through naval service in Portsmouth: precise, strategically courteous, unnervingly even, with understated threat. Surface warmth with something cold underneath; controlled, not booming."
+    },
+    "Elin": {
+      "selectedRef": "static/assets/voices/en/Elin.wav",
+      "sourceCandidate": "en-accents/selected-slow-v2/Elin.wav",
+      "instruct": "Female, early 30s, light mezzo with audible breath at rest, thinner resonance. South Indian prosody carried into urban technology English learned in Bengaluru: softer consonants, syllable timing, slight rises when unsure; flatter and faster during technical analysis. Intelligent, careful, not childish."
+    },
+    "Sorell": {
+      "selectedRef": "static/assets/voices/en/Sorell.wav",
+      "sourceCandidate": "en-accents/selected-slow-v2/Sorell.wav",
+      "instruct": "Female, early 30s, warm expressive mezzo with wide pitch range, forward mask resonance made for classrooms. French prosody carried into Canadian English learned in Montréal's francophone environment: softened R, flexible musical intonation, natural contractions, very precise diction. Passionate when defending an idea, but this sample should stay composed and clear."
+    },
+    "Okoye": {
+      "selectedRef": "static/assets/voices/en/Okoye.wav",
+      "sourceCandidate": "en-accents/selected-slow-v2/Okoye.wav",
+      "instruct": "Female, firm contralto with marked chest resonance and direct consonant attack. Educated Nigerian English learned in Enugu with Igbo prosody: syllable-timed rhythm, very clear consonants, firm falling intonation at phrase ends. Security-officer delivery trained for commands under risk; calm authority, unambiguous, not soft, no caricature."
+    }
+  }
+}

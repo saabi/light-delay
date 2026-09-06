@@ -41,6 +41,15 @@ project.inlang/README.md
 # Temporary exports
 *.tmp
 *.bak
+/*.zip
+/docs/wip/*.mp3
+/scripts/_debug-*.py
+**/__pycache__/
+*.py[cod]
+
+# Local model checkpoints and known unregistered generated media
+/checkpoints/
+/static/assets/animatic/frames/scene-03/d0c33674-2e10-4dc7-a4d2-13731f2f16cd.png
 
 # Blender autosave / backup
 *.blend1

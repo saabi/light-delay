@@ -22,12 +22,12 @@
     {
       "id": "object:optical-contingency-transmitter",
       "name": {
-        "es": "Control local de contingencia del láser exterior",
-        "en": "External Laser Local Control"
+        "es": "Matriz óptica de comunicaciones de larga distancia",
+        "en": "Long-distance Optical Communications Array"
       },
       "description": {
-        "es": "Consola local con energía y canalización física dedicadas hacia el láser exterior estándar de comunicaciones. Puede orientar y emitir aun cuando fallen la malla inalámbrica y el distribuidor cableado ordinario.",
-        "en": "Local console with dedicated power and physical routing to the standard external communications laser. It can aim and transmit after wireless and the ordinary wired distributor fail."
+        "es": "Sistema direccional exterior de la Ardor con emisor de popa y control local independiente en el compartimiento exterior de servicio del reactor. Puede orientar y emitir una ráfaga comprimida aunque fallen la radio interna y los troncales cableados; su buffer volátil no conserva una copia local del payload después del envío.",
+        "en": "The Ardor's directional external system, with an aft emitter and independent local control in the outer reactor service bay. It can aim and send a compressed burst after internal radio and wired trunks fail; its volatile buffer retains no local copy of the payload after transmission."
       },
       "dramaticFunction": {
         "es": "Canal físico independiente usado por Zao",

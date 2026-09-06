@@ -1,0 +1,51 @@
+{
+  "note": "Canonical Qwen3-TTS Base clone knobs when the ref already carries Seed-VC (or other) prosody that must survive. Used by accent pipelines and dual outline audio. Do not use x_vector_only=true: it discards ref_code and keeps only timbre.",
+  "qwen": {
+    "x_vector_only": false,
+    "temperature": 0.82,
+    "top_p": 0.9,
+    "top_k": 50,
+    "max_new_tokens": 3072,
+    "max_out_seconds": 25.0,
+    "non_streaming_mode": true,
+    "ref_text_source": "whisper-medium of the reference WAV (or accurate sidecar / REF_TEXT.txt when the WAV speaks that phrase)",
+    "instruct": {
+      "en": "Speak English clearly with natural emotional colour, audible dynamics, and a slightly slower unhurried pace. Finish every word and final consonant fully — do not cut off or trail into silence mid-syllable. Match the feeling of the line; do not sound flat or monotone.",
+      "es": "Speak Spanish clearly with natural emotional colour, audible dynamics, and a slightly slower unhurried pace. Keep only a light L1 colour — do not exaggerate the accent. Finish every word and final consonant fully — do not cut off mid-syllable. Match the feeling of the line; do not sound flat, monotone, or rushed.",
+      "note": "EN keeps curated L1 accent as-is. ES softens accent slightly. Both ask for full phrase completion. Per-line [QwenInstruct] is prefixed with expressivenessPrefix."
+    },
+    "expressivenessPrefix": {
+      "en": "Deliver with natural emotional colour and clear dynamics; do not flatten the line. Complete every syllable through the end of the sentence.",
+      "es": "Deliver with natural emotional colour and clear dynamics; do not flatten the line. Soften the accent; keep identity without heavy L1 colour. Complete every syllable through the end of the sentence."
+    },
+    "dialogueSpeed": {
+      "en": 1.0,
+      "es": 1.0,
+      "note": "DISABLED for quality: post-synth time_stretch (librosa) sounded bad. Prefer slower source refs (re-run native-L1 Qwen ICL with slow instruct / optional Seed-VC length_adjust>1). Keep 1.0 unless experimenting."
+    },
+    "dialogueTailMs": 220,
+    "repetition_penalty": 1.05
+  },
+  "seedVcV2": {
+    "note": "Native-L1 paint: source = voice-donors/native/{lang}, target = selected character timbre. convert_style=true pulls accent toward the target and washes L1.",
+    "diffusion_steps": 35,
+    "length_adjust": 1.0,
+    "intelligibility_cfg_rate": 0.9,
+    "similarity_cfg_rate": 0.55,
+    "top_p": 0.9,
+    "temperature": 1.0,
+    "repetition_penalty": 1.0,
+    "convert_style": false,
+    "anonymization_only": false,
+    "compile": false
+  },
+  "paths": {
+    "enNativeL1V2": "E:/Models/Qwen3-TTS/output/pronunciation-tests/en-accents/native-l1-v2",
+    "esNativeL1V2": "E:/Models/Qwen3-TTS/output/pronunciation-tests/es-accents/native-l1-v2",
+    "outlineChunks": "E:/Models/Qwen3-TTS/output/outline-chunks",
+    "nativeDonors": "E:/Models/voice-donors/native",
+    "pipelineDocEs": "docs/TTS_VOICE_PIPELINE.es.md",
+    "pipelineDocEn": "docs/TTS_VOICE_PIPELINE.en.md",
+    "seedVcNotes": "E:/Models/Seed-VC/LIGHT_DELAY_NOTES.md"
+  }
+}

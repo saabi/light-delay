@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/editorial-lifecycle.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "authority", "deletionGates", "defaults", "groups"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "authority": {
+      "type": "object",
+      "required": ["outlineId", "scriptId", "continuityId", "status"],
+      "properties": {
+        "outlineId": { "type": "string" },
+        "scriptId": { "type": "string" },
+        "continuityId": { "type": "string" },
+        "status": { "const": "wip_authoritative" }
+      },
+      "additionalProperties": false
+    },
+    "deletionGates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": {
+            "enum": [
+              "master_outline_complete",
+              "salvage_review_complete",
+              "replacement_derivatives_approved",
+              "no_active_dependants"
+            ]
+          },
+          "status": { "enum": ["open", "complete"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "required": ["unclassifiedStatus", "unclassifiedRelevance", "unclassifiedDisposition"],
+      "properties": {
+        "unclassifiedStatus": { "const": "review_required" },
+        "unclassifiedRelevance": { "const": "uncertain" },
+        "unclassifiedDisposition": { "const": "retain" }
+      },
+      "additionalProperties": false
+    },
+    "groups": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/group" }
+    }
+  },
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "project", "continuity", "script", "outline", "animatic", "entity", "asset",
+            "voice_profile", "entity_variant", "narrative_function", "comparison_item",
+            "production_plan", "production_context", "continuity_ledger", "document",
+            "archive", "static_file"
+          ]
+        },
+        "id": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "group": {
+      "type": "object",
+      "required": ["id", "status", "relevance", "disposition", "reason", "refs"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["active", "deprecated", "obsolete", "review_required"] },
+        "relevance": { "enum": ["authoritative", "required", "compatible", "unrelated", "uncertain", "platform"] },
+        "disposition": { "enum": ["retain", "retain_for_salvage", "delete_after_gates"] },
+        "reason": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "replacementRef": { "$ref": "#/$defs/ref" },
+        "refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/ref" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

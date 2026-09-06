@@ -1,6 +1,8 @@
 # Revisión del largometraje recuperado
 
-Este documento en español es la evaluación editorial autorizada de `light-delay-long-full-feature-cut.md` y `light-delay-full-feature-overview.md`. Ambos archivos se conservan como fuentes históricas; no sustituyen las decisiones de canon vigentes.
+> **OBSOLETO — CONTINUIDAD ANTERIOR.** Esta revisión conserva procedencia y criterios potencialmente rescatables; no autoriza continuar el tratamiento largo deprecado.
+
+Este documento en español fue la evaluación editorial autorizada de `light-delay-long-full-feature-cut.md` y `light-delay-full-feature-overview.md`. Los tres archivos se conservan como fuentes históricas y no sustituyen la escaleta maestra vigente.
 
 ## Decisión de continuidad
 

@@ -1,6 +1,6 @@
 # Escaleta por guion
 
-La escaleta es la fuente autoral de la **historia y su cadena causal** para cada cut. Debe permitir comprender qué ocurre, por qué una decisión o consecuencia se vuelve posible y cómo se resuelve el conflicto sin depender de leer escenas, diálogos o tomas. El `ScriptFile` implementa esa intención; no debe usarse para regenerarla de forma circular.
+La escaleta es la fuente autoral de la **historia y su cadena causal**. La autoridad narrativa vigente del proyecto es `data/outlines/light-delay-master-narrative.json`; los futuros cuts tendrán escaletas derivadas explícitamente de ella cuando el master se complete. Debe permitir comprender qué ocurre, por qué una decisión o consecuencia se vuelve posible y cómo se resuelve el conflicto sin depender de leer escenas, diálogos o tomas. El `ScriptFile` implementa esa intención; no debe usarse para regenerarla de forma circular.
 
 ## Espina narrativa y detalle
 
@@ -15,7 +15,7 @@ Una escaleta puede ser deliberadamente **story-only** antes de que exista implem
 
 `framing` conserva material necesario que no es un beat: propósito, terminología, ambientación, física, reparto, motivaciones, riesgos, líneas estructurales y decisiones de producción. Cada sección declara `before_story` o `after_story`, y la UI la presenta fuera de la cadena causal.
 
-Tanto `framing.blocks` como `story.body` usan bloques semánticos `paragraph`, `heading`, `list` y `blockquote`, con español e inglés inline. `outline.source` puede registrar ruta, revisión, idioma y SHA-256 de una fuente; `editorialNotice` muestra advertencias de procedencia o estado sin convertirlas en canon.
+Tanto `framing.blocks` como `story.body` usan bloques semánticos `paragraph`, `heading`, `list` y `blockquote`, con español e inglés inline. Una cita pronunciada por un personaje declara `speakerId`; así la UI, los exportadores y las herramientas de voz no infieren al hablante desde el texto. `outline.revision` identifica la revisión editorial vigente, mientras que `outline.provenance.importedFrom` conserva revisiones históricas de las fuentes importadas con ruta, idioma y SHA-256. `outline.exports` declara derivados generados. `editorialNotice` muestra advertencias de procedencia o estado sin convertirlas en canon. El campo legacy `outline.source` continúa aceptado sólo para archivos anteriores.
 
 ## Causalidad
 
@@ -49,12 +49,13 @@ npm run report:outline-gaps -- --target script
 npm run report:outline-gaps -- --target animatic
 npm run report:outline-readability
 npm run report:outline-story
+npm run report:dialogue-style
 npm run check:trailer-spoilers
 ```
 
 `report:outline-story` exporta synopsis, framing y los hitos `story`, pero excluye `detail`: es la lectura narrativa que debe funcionar sin abrir implementación. `check:trailer-spoilers` falla si el guion o la escaleta del avance identifican al culpable, confirman el envío/recepción o asientan positivamente la muerte de Zao.
 
-La narrativa maestra WIP posee además `npm run build:master-outline:check`, que comprueba que su capa inglesa siga correspondiendo exactamente —salvo delimitadores estructurales de Markdown— a la revisión fuente registrada.
+La narrativa maestra WIP se edita en JSON. `npm run master-outline:export` genera sus Markdown ES/EN —incluidos revisión y hablantes— y `npm run master-outline:export:check` detecta deriva. `npm run master-outline:import-candidate` conserva la vía inversa únicamente como importación revisable: escribe un candidato separado y nunca reemplaza la autoridad. `report:dialogue-style` verifica que todas sus citas estén atribuidas y que cada miembro del elenco maestro tenga dirección completa en ambos idiomas.
 
 `npm run seed:outline -- --script <slug> --output <ruta-de-borrador>` sólo crea una plantilla fuera de `data/outlines/`, nunca sobrescribe una escaleta canónica y deja marcadores explícitos para autoría humana.
 

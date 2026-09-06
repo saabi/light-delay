@@ -10,7 +10,7 @@
       "required": ["id", "scriptId", "status", "sourceDocument"],
       "properties": {
         "id": { "type": "string" }, "scriptId": { "type": "string" },
-        "status": { "enum": ["draft", "reviewed", "locked", "incomplete"] },
+        "status": { "enum": ["draft", "reviewed", "locked", "incomplete", "deprecated", "obsolete"] },
         "sourceDocument": { "type": "string" },
         "notes": { "$ref": "common.schema.json#/$defs/localizedString" }
       },

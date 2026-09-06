@@ -1,0 +1,59 @@
+{
+  "model": {
+    "path": "E:/Models/Kokoro/kokoro-v1.0.onnx",
+    "voices": "E:/Models/Kokoro/voices-v1.0.bin",
+    "variant": "fp32",
+    "note": "Same Kokoro FP32 ONNX as EN cast. Spanish narrator uses em_alex (LatAm male)."
+  },
+  "defaults": {
+    "narratorSpeed": 0.85,
+    "dialogueSpeed": 0.95,
+    "pauseBetweenChunksMs": 280,
+    "pauseBeforeDialogueMs": 180,
+    "pauseAfterDialogueMs": 220
+  },
+  "cast": {
+    "Narrator": {
+      "voice": "em_alex",
+      "lang": "es",
+      "speed": 0.85,
+      "rationale": "Interim ES narrator (2026-09-05). Kokoro LatAm male; preferred Argentine baritone pack not available. Speed 0.85 (was 0.92) — audience dual felt too fast."
+    },
+    "Zao": {
+      "voice": "ef_dora",
+      "lang": "es",
+      "speed": 0.93,
+      "rationale": "Kokoro fallback only; dual render uses Qwen clone for dialogue."
+    },
+    "Voss": {
+      "voice": "em_santa",
+      "lang": "es",
+      "speed": 0.9,
+      "rationale": "Kokoro fallback only; dual render uses Qwen clone for dialogue."
+    },
+    "Harlan": {
+      "voice": "em_alex",
+      "lang": "es",
+      "speed": 0.94,
+      "rationale": "Kokoro fallback only; dual render uses Qwen clone for dialogue."
+    },
+    "Elin": {
+      "voice": "ef_dora",
+      "lang": "es",
+      "speed": 0.97,
+      "rationale": "Kokoro fallback only; dual render uses Qwen clone for dialogue."
+    },
+    "Sorell": {
+      "voice": "ef_dora",
+      "lang": "es",
+      "speed": 0.95,
+      "rationale": "Kokoro fallback only; dual render uses Qwen clone for dialogue."
+    },
+    "Okoye": {
+      "voice": "ef_dora",
+      "lang": "es",
+      "speed": 0.94,
+      "rationale": "Kokoro fallback only; dual render uses Qwen clone for dialogue."
+    }
+  }
+}

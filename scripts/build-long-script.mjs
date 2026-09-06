@@ -497,7 +497,7 @@ const script = {
 		continuityId: 'continuity:light-delay-primary',
 		title: 'Light Delay — Tratamiento de largometraje',
 		version: '0.2.0-draft',
-		status: 'draft',
+		status: 'deprecated',
 		kind: 'long_version',
 		targetDurationMs: 6000000,
 		lineage: {

@@ -25,6 +25,43 @@
       "referenceAssetIds": [
         "asset:character-cael-sheet"
       ]
+    },
+    {
+      "id": "variant:okoye-master-wip",
+      "entity": {
+        "kind": "character",
+        "id": "character:okoye"
+      },
+      "continuityId": "continuity:light-delay-master-wip",
+      "label": {
+        "es": "Dara Okoye — seguridad de la narrativa maestra WIP",
+        "en": "Dara Okoye — master-narrative WIP security"
+      },
+      "roleOverride": {
+        "es": "Teniente comandante · Jefa de seguridad",
+        "en": "Lieutenant Commander · Chief of Security"
+      },
+      "traitsOverride": [
+        {
+          "es": "Protege el mando durante el sabotaje",
+          "en": "Protects command during the sabotage"
+        },
+        {
+          "es": "Custodia a Sorell e investiga junto a Elin",
+          "en": "Guards Sorell and investigates alongside Elin"
+        },
+        {
+          "es": "Persigue e inmoviliza a Harlan",
+          "en": "Pursues and restrains Harlan"
+        }
+      ],
+      "descriptionOverride": {
+        "es": "Jefa de seguridad de la Celestial Ardor. Tras el informe de sabotaje protege el puente, retira a Sorell de la escena bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, en el clímax, persigue e inmoviliza a Harlan. Esta rama WIP no establece un pasado operativo compartido entre ambos.",
+        "en": "Chief of security aboard the Celestial Ardor. After the sabotage report she protects the bridge, removes Sorell from the scene under protective detention, works through the physical and systems evidence with Elin, and pursues and restrains Harlan in the climax. This WIP branch does not establish a shared operational past between them."
+      },
+      "referenceAssetIds": [
+        "asset:character-okoye-sheet"
+      ]
     }
   ]
 }

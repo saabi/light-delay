@@ -825,7 +825,7 @@ const file = {
 		continuityId: 'continuity:light-delay-primary',
 		title: 'Light Delay — Tráiler (~1:30)',
 		version: '0.2.0-draft',
-		status: 'draft',
+		status: 'deprecated',
 		kind: 'trailer',
 		targetDurationMs: 102500,
 		lineage: {

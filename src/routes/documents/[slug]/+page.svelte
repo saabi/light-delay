@@ -1,6 +1,8 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
+	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import DocumentViewer from '$lib/components/document/DocumentViewer.svelte';
+	import { getLifecycleForRef } from '$lib/data/repositories/index';
 	import { resolveDocument } from '$lib/data/selectors/localized';
 	import { getLocale } from '$lib/paraglide/runtime.js';
 	import * as m from '$lib/paraglide/messages.js';
@@ -8,7 +10,12 @@
 
 	let { data } = $props();
 	const doc = $derived(resolveDocument(data.document, getLocale()));
+	const lifecycle = $derived(getLifecycleForRef('document', data.document.id));
 </script>
+
+<svelte:head>
+	{#if lifecycle.status !== 'active'}<meta name="robots" content="noindex,follow" />{/if}
+</svelte:head>
 
 <main class="page">
 	<PageHeader
@@ -23,6 +30,7 @@
 				: [])
 		]}
 	/>
+	<LifecycleNotice {lifecycle} />
 	<DocumentViewer blocks={doc.blocks} />
 </main>
 

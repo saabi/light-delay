@@ -1,5 +1,7 @@
 # ADR-0001: Multiple scripts, continuities and character-function reassignment
 
+> **Estado posterior:** vigente para la arquitectura multi-script, pero reemplazado por `ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` en la selección de la autoridad narrativa y de las rutas por defecto. Las referencias de este documento al corto de ~30 minutos como “canónico” describen la decisión anterior y no el estado actual.
+
 - **Status:** Accepted
 - **Date:** 2026-08-25
 - **Decision owners:** Light Delay project maintainers

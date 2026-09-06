@@ -1,4 +1,4 @@
-import { getDocuments, listScripts } from '$lib/data/repositories/index';
+import { getDocuments, getLifecycleForRef, listCurrentScripts } from '$lib/data/repositories/index';
 import { VALID_ENTITY_KINDS, listEntities, type EntityKind } from '$lib/data/repositories/lookups';
 import { encodeRouteId } from '$lib/utils/routeId';
 import { encodeScriptId } from '$lib/utils/scriptId';
@@ -10,18 +10,25 @@ const escapeXml = (value: string) =>
 
 export const GET = () => {
 	const paths = new Set<string>(['/', '/project/', '/art/', '/reports/']);
-	for (const script of listScripts()) {
+	for (const script of listCurrentScripts()) {
 		const id = encodeScriptId(script.id);
 		paths.add(`/script/${id}/`);
 		paths.add(`/outline/${id}/`);
 		paths.add(`/animatic/${id}/`);
 		paths.add(`/compare/${id}/`);
 	}
-	for (const document of getDocuments().documents) paths.add(`/documents/${document.slug}/`);
+	for (const document of getDocuments().documents) {
+		if (getLifecycleForRef('document', document.id).status === 'active') {
+			paths.add(`/documents/${document.slug}/`);
+		}
+	}
 	for (const kind of VALID_ENTITY_KINDS as readonly EntityKind[]) {
 		paths.add(`/entities/${kind}/`);
-		for (const entity of listEntities(kind))
-			paths.add(`/entities/${kind}/${encodeRouteId(entity.id)}/`);
+		for (const entity of listEntities(kind)) {
+			if (getLifecycleForRef('entity', entity.id).status === 'active') {
+				paths.add(`/entities/${kind}/${encodeRouteId(entity.id)}/`);
+			}
+		}
 	}
 	const urls = [...paths]
 		.map((path) => {

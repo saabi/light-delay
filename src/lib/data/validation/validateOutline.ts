@@ -14,7 +14,7 @@ const IMPORTANCE = new Set(['required', 'optional']);
 const LEVELS = new Set(['story', 'detail']);
 const RELATIONS = new Set(['enables', 'motivates', 'reveals', 'forces', 'prevents', 'pays_off']);
 const COVERAGE = new Set(['not_started', 'partial', 'covered', 'deferred', 'not_applicable']);
-const FILE_STATUS = new Set(['draft', 'reviewed', 'locked']);
+const FILE_STATUS = new Set(['draft', 'reviewed', 'locked', 'deprecated']);
 const FRAMING_PLACEMENTS = new Set(['before_story', 'after_story']);
 const FRAMING_KINDS = new Set([
 	'purpose',
@@ -226,6 +226,8 @@ function validateProseBlocks(
 			errors.push(`${blockLabel}: invalid block type ${(block as { type?: string }).type}`);
 			continue;
 		}
+		if (block.type === 'blockquote' && block.speakerId && !block.speakerId.startsWith('character:'))
+			errors.push(`${blockLabel}: invalid speakerId ${block.speakerId}`);
 		if (!sourceStoryText(block.text)?.trim()) errors.push(`${blockLabel}: empty text`);
 	}
 }

@@ -9,6 +9,7 @@
 		imageSrc?: string;
 		imageSrcs?: string[];
 		eyebrow?: string;
+		lifecycleStatus?: 'active' | 'deprecated' | 'obsolete' | 'review_required';
 	};
 
 	let { items }: { items: Item[] } = $props();
@@ -23,6 +24,7 @@
 			imageSrc={item.imageSrc}
 			imageSrcs={item.imageSrcs}
 			eyebrow={item.eyebrow}
+			lifecycleStatus={item.lifecycleStatus}
 		/>
 	{/each}
 </div>

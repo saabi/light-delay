@@ -1,6 +1,8 @@
 # Continuidad causal entre guiones
 
-Estado de revisión: vigente desde 2026-08-29. Este documento registra qué información conoce cada personaje y qué efectos puede causar en cada versión. No reemplaza al guion canónico ni autoriza a completar vacíos por invención.
+> **DEPRECADO — CONTINUIDAD ANTERIOR.** Este documento registra la causalidad de productos archivados. No describe ni completa la escaleta maestra vigente y se conserva únicamente para evaluar material rescatable.
+
+Estado histórico de revisión: vigente para la continuidad primaria desde 2026-08-29 hasta 2026-09-05. No autoriza a trasladar hechos al master por inferencia.
 
 ## Cadena causal obligatoria
 

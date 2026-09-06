@@ -1,11 +1,12 @@
 import { error } from '@sveltejs/kit';
 import {
-	ENTITY_KIND_LABELS,
-	getEntityThumbnailPaths,
+		ENTITY_KIND_LABELS,
+		getEntityThumbnailPaths,
 	listEntities,
 	VALID_ENTITY_KINDS,
 	type EntityKind
 } from '$lib/data/repositories/lookups';
+import { getLifecycleForRef } from '$lib/data/repositories/index';
 import { encodeRouteId } from '$lib/utils/routeId';
 import type { PageLoad } from './$types';
 
@@ -20,6 +21,7 @@ export const load: PageLoad = ({ params }) => {
 		title: e.name,
 		description: e.description,
 		imageSrcs: getEntityThumbnailPaths(e.referenceAssetIds),
+		lifecycleStatus: getLifecycleForRef('entity', e.id).status,
 		eyebrow: ENTITY_KIND_LABELS[kind]
 	}));
 	return {

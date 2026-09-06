@@ -11,7 +11,7 @@
       "properties": {
         "id": { "type": "string" }, "scriptId": { "type": "string" }, "scriptVersion": { "type": "string" },
         "sourceDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "campaignId": { "type": "string" },
-        "status": { "enum": ["blocked", "draft", "ready", "frozen", "executed"] },
+        "status": { "enum": ["blocked", "draft", "ready", "frozen", "executed", "obsolete"] },
         "promptLanguage": { "const": "en" },
         "diegeticTextLanguage": { "const": "en" },
         "briefLanguage": { "const": "es" },

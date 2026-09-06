@@ -1,5 +1,7 @@
 # Plan de producción
 
+> **OBSOLETO — CONTINUIDAD ANTERIOR.** Este plan depende de guiones y animatics deprecados. Se conserva para rescatar restricciones y decisiones útiles; no autoriza producción ni generación hasta completar el master y aprobar nuevos derivados.
+
 ## Versiones previstas
 
 ### Cortometraje completo

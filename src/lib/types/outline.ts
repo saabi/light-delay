@@ -1,11 +1,11 @@
-import type { BeatId, CueId, SceneId, ScriptId, ShotId } from './ids.ts';
+import type { BeatId, CharacterId, CueId, SceneId, ScriptId, ShotId } from './ids.ts';
 import type { Note } from './common.ts';
 import type { StoryText } from './i18n.ts';
 import type { SourceReference } from './script.ts';
 
 export type OutlineImportance = 'required' | 'optional';
 export type OutlineStepStatus = 'planned' | 'covered' | 'missing' | 'deferred';
-export type OutlineFileStatus = 'draft' | 'reviewed' | 'locked';
+export type OutlineFileStatus = 'draft' | 'reviewed' | 'locked' | 'deprecated';
 export type OutlineStepLevel = 'story' | 'detail';
 export type OutlineCausalRelation =
 	'enables' | 'motivates' | 'reveals' | 'forces' | 'prevents' | 'pays_off';
@@ -31,7 +31,7 @@ export type OutlineProseBlock =
 	| { type: 'paragraph'; text: StoryText }
 	| { type: 'heading'; level: 3 | 4; text: StoryText }
 	| { type: 'list'; ordered?: boolean; items: StoryText[] }
-	| { type: 'blockquote'; text: StoryText };
+	| { type: 'blockquote'; text: StoryText; speakerId?: CharacterId };
 
 export interface OutlineFramingSection {
 	id: string;
@@ -55,6 +55,12 @@ export interface OutlineSource {
 	sha256?: string;
 }
 
+export interface OutlineExport {
+	path: string;
+	language: string;
+	format: 'markdown';
+}
+
 export interface OutlineMeta {
 	id: string;
 	scriptId: ScriptId;
@@ -62,7 +68,11 @@ export interface OutlineMeta {
 	synopsis: StoryText;
 	status: OutlineFileStatus;
 	version: string;
+	/** Current editorial revision; independent from historical import provenance. */
+	revision?: number;
 	source?: OutlineSource;
+	provenance?: { importedFrom?: OutlineSource[] };
+	exports?: OutlineExport[];
 	editorialNotice?: StoryText;
 }
 

@@ -1,58 +1,218 @@
 {
-	"schemaVersion": "1.0.0",
+	"schemaVersion": "1.2.0",
 	"voiceProfiles": [
 		{
 			"id": "voice:zao-es",
 			"characterId": "character:zao",
-			"name": "Zao (es)",
-			"description": "Practicidad, observación y resolución bajo presión.",
+			"name": "Zao",
+			"description": {
+				"es": "Contralto funcional de registro medio-bajo, ligera aspereza de años junto a maquinaria, resonancia de pecho y casi nada de vibrato. Gana velocidad y seguridad al hablar de ingeniería; el miedo sólo quiebra apenas su control bajo presión letal.",
+				"en": "A functional low-mid contralto, lightly roughened by years around machinery, with chest resonance and almost no vibrato. She becomes faster and more assured when discussing engineering; fear only barely fractures her control under lethal pressure."
+			},
 			"variants": [
 				{
-					"language": "es"
+					"language": "es",
+					"locale": "es-CO",
+					"languageFormation": {
+						"place": { "es": "Bogotá, Colombia", "en": "Bogotá, Colombia" },
+						"variety": { "es": "español bogotano formal y técnico", "en": "formal, technical Bogotá Spanish" }
+					},
+					"prosody": {
+						"es": "Conserva una base prosódica de mandarín: consonantes marcadas, ritmo contenido y finales de frase descendentes.",
+						"en": "She retains Mandarin-based prosody: marked consonants, controlled rhythm, and falling phrase endings."
+					},
+					"dialogueStyle": {
+						"es": "Preciso, sobrio y poco idiomático. Prefiere usted en relaciones profesionales, términos técnicos exactos y frases completas; bajo presión recorta la sintaxis sin perder claridad.",
+						"en": "Precise, restrained, and sparing with idiom. She favors usted in professional relationships, exact technical terms, and complete sentences; under pressure she clips syntax without losing clarity."
+					}
+				},
+				{
+					"language": "en",
+					"locale": "en-SG",
+					"languageFormation": {
+						"place": { "es": "Singapur", "en": "Singapore" },
+						"variety": { "es": "inglés singapurense formal de ámbitos científicos", "en": "formal Singapore English used in scientific settings" }
+					},
+					"prosody": {
+						"es": "Conserva una base prosódica de mandarín, con consonantes definidas, ritmo parejo y caídas tonales al cerrar ideas.",
+						"en": "She retains Mandarin-based prosody, with defined consonants, even rhythm, and tonal falls when closing an idea."
+					},
+					"dialogueStyle": {
+						"es": "Inglés internacional técnico, conciso y de pocas contracciones. Evita tanto la ornamentación como las partículas coloquiales de Singapur; la presión vuelve sus frases fragmentarias, no imprecisas.",
+						"en": "Technical international English, concise and light on contractions. She avoids ornament and colloquial Singapore particles alike; pressure makes her sentences fragmentary, never imprecise."
+					}
 				}
 			]
 		},
 		{
 			"id": "voice:voss-es",
 			"characterId": "character:voss",
-			"name": "Elias Voss (es)",
-			"description": "Autoridad contenida, responsabilidad y duelo.",
+			"name": "Elias Voss",
+			"description": {
+				"es": "Barítono pleno, grave estable, respiración entrenada y autoridad sin volumen excesivo. Sus pausas muestran que pesa una decisión antes de formularla; cuando rompe ese control, la alteración debe sentirse excepcional.",
+				"en": "A full baritone with a stable low register, trained breath, and authority without excessive volume. His pauses show him weighing a decision before stating it; when that control breaks, the change should feel exceptional."
+			},
 			"variants": [
 				{
-					"language": "es"
+					"language": "es",
+					"locale": "es-PE",
+					"languageFormation": {
+						"place": { "es": "Lima, Perú", "en": "Lima, Peru" },
+						"variety": { "es": "español limeño formal e institucional", "en": "formal, institutional Lima Spanish" }
+					},
+					"prosody": {
+						"es": "La prosodia germánica o nórdica permanece en vocales muy definidas, consonantes firmes, pausas regulares y cierres descendentes.",
+						"en": "Germanic or Nordic prosody remains in sharply defined vowels, firm consonants, even pauses, and falling endings."
+					},
+					"dialogueStyle": {
+						"es": "Registro institucional, instrucciones ordenadas y pocas muletillas. Usa usted al ejercer mando, pero puede tutear a colegas de confianza; la jerarquía y la relación dramática mandan sobre una regla fija de tratamiento.",
+						"en": "Institutional register, ordered instructions, and few fillers. He uses usted when exercising command but may use tú with trusted colleagues; hierarchy and dramatic relationship outrank a fixed form-of-address rule."
+					}
+				},
+				{
+					"language": "en",
+					"locale": "en-CA",
+					"languageFormation": {
+						"place": { "es": "Toronto, Canadá", "en": "Toronto, Canada" },
+						"variety": { "es": "inglés canadiense estándar de ámbito institucional", "en": "standard Canadian English used in institutional settings" }
+					},
+					"prosody": {
+						"es": "Conserva una inflexión germánica o nórdica: consonantes duras, vocales nítidas y cadencia deliberada.",
+						"en": "He retains a Germanic or Nordic inflection: hard consonants, clear vowels, and deliberate cadence."
+					},
+					"dialogueStyle": {
+						"es": "Inglés canadiense estándar, formal y medido. Formula preguntas antes de dictar órdenes, evita muletillas y reserva las contracciones para momentos de cercanía o urgencia.",
+						"en": "Standard Canadian English, formal and measured. He frames questions before issuing orders, avoids fillers, and reserves contractions for intimacy or urgency."
+					}
 				}
 			]
 		},
 		{
 			"id": "voice:harlan-es",
 			"characterId": "character:harlan",
-			"name": "Rylen Harlan (es)",
-			"description": "Competencia creíble, convicción ideológica y quiebre.",
+			"name": "Rylen Harlan",
+			"description": {
+				"es": "Barítono filoso, colocación adelantada con brillo metálico y tensión de mandíbula audible. Su calidez superficial vuelve creíbles sus mentiras; hacia el clímax la velocidad y el tono se quiebran antes que su convicción.",
+				"en": "A sharp baritone with forward placement, a metallic edge, and audible jaw tension. Surface warmth makes his lies credible; toward the climax, pace and pitch fracture before his conviction does."
+			},
 			"variants": [
 				{
-					"language": "es"
+					"language": "es",
+					"locale": "es-AR",
+					"languageFormation": {
+						"place": { "es": "Buenos Aires, Argentina", "en": "Buenos Aires, Argentina" },
+						"variety": { "es": "español rioplatense porteño", "en": "Buenos Aires Rioplatense Spanish" }
+					},
+					"prosody": {
+						"es": "La base británica permanece en el control de consonantes y la cadencia de oficial; la musicalidad porteña aparece sin tapar ese origen.",
+						"en": "His British base remains in controlled consonants and officer cadence; Buenos Aires musicality appears without masking that origin."
+					},
+					"dialogueStyle": {
+						"es": "Voseo natural y sobrio, con ironía porteña contenida. Usa formulaciones pulidas para convertir su ideología en sentido común; al perder control acorta frases y deja aflorar el imperativo.",
+						"en": "Natural, restrained voseo with controlled Buenos Aires irony. He uses polished formulations to make ideology sound like common sense; when control slips, sentences shorten and imperatives surface."
+					}
+				},
+				{
+					"language": "en",
+					"locale": "en-GB",
+					"languageFormation": {
+						"place": { "es": "Portsmouth, Reino Unido", "en": "Portsmouth, United Kingdom" },
+						"variety": { "es": "inglés británico meridional de formación naval", "en": "southern British English shaped by naval service" }
+					},
+					"prosody": {
+						"es": "Cadencia británica pulida y pareja, ataque consonántico duro y amenaza contenida en el registro bajo.",
+						"en": "Polished, even British cadence, hard consonant attack, and threat contained in the low register."
+					},
+					"dialogueStyle": {
+						"es": "Inglés británico preciso, persuasivo y estratégicamente cortés. Prefiere understatement y preguntas que ya contienen una conclusión; bajo presión abandona la cortesía antes que la lógica.",
+						"en": "Precise, persuasive, strategically courteous British English. He favors understatement and questions that already contain a conclusion; under pressure he abandons courtesy before logic."
+					}
 				}
 			]
 		},
 		{
 			"id": "voice:rao-es",
 			"characterId": "character:rao",
-			"name": "Elin Rao (es)",
-			"description": "Concentración analítica, alarma y determinación.",
+			"name": "Elin Rao",
+			"description": {
+				"es": "Mezzosoprano ligera, algo de aire en reposo y resonancia delgada. En situaciones sociales deja pequeños silencios; al entrar en modo técnico se endurece, acelera y habla con precisión concluyente.",
+				"en": "A light mezzo with audible breath at rest and slender resonance. Socially she leaves small silences; in technical mode she firms up, accelerates, and speaks with conclusive precision."
+			},
 			"variants": [
 				{
-					"language": "es"
+					"language": "es",
+					"locale": "es-CO",
+					"languageFormation": {
+						"place": { "es": "Medellín, Colombia", "en": "Medellín, Colombia" },
+						"variety": { "es": "español paisa profesional y urbano", "en": "professional urban Paisa Spanish" }
+					},
+					"prosody": {
+						"es": "Conserva una inflexión de India meridional, con consonantes suaves, ritmo silábico y leves ascensos cuando duda.",
+						"en": "She retains a South Indian inflection, with soft consonants, syllable timing, and slight rises when uncertain."
+					},
+					"dialogueStyle": {
+						"es": "Español colombiano cercano pero contenido. Puede alternar usted y formas informales según confianza; socialmente deja frases incompletas, mientras que al explicar sistemas elimina rodeos y encadena diagnósticos breves.",
+						"en": "Warm but restrained Colombian Spanish. She may alternate usted and informal forms according to trust; socially she leaves sentences unfinished, while systems work removes hedging and produces short chained diagnoses."
+					}
+				},
+				{
+					"language": "en",
+					"locale": "en-IN",
+					"languageFormation": {
+						"place": { "es": "Bengaluru, India", "en": "Bengaluru, India" },
+						"variety": { "es": "inglés indio urbano de ámbitos tecnológicos", "en": "urban Indian English used in technology settings" }
+					},
+					"prosody": {
+						"es": "Inflexión de India meridional, consonantes suaves y finales ascendentes al tantear una idea; el análisis aplana y acelera la melodía.",
+						"en": "South Indian inflection, soft consonants, and rising endings while testing an idea; analysis flattens and accelerates the melody."
+					},
+					"dialogueStyle": {
+						"es": "Inglés indio técnico y directo, con preferencia por formulaciones lógicas completas. Fuera del trabajo matiza y vacila; ante datos concluyentes usa declaraciones cortas y absolutas.",
+						"en": "Technical, direct Indian English with a preference for complete logical formulations. Away from work she qualifies and hesitates; faced with conclusive data she uses short, absolute statements."
+					}
 				}
 			]
 		},
 		{
 			"id": "voice:sorell-es",
 			"characterId": "character:sorell",
-			"name": "Lian Sorell (es)",
-			"description": "Curiosidad, indignación, empatía y esperanza cauta.",
+			"name": "Lian Sorell",
+			"description": {
+				"es": "Mezzo cálida, resonancia adelantada y rango tonal amplio, propio de alguien acostumbrada a enseñar. La curiosidad y la empatía sobreviven incluso bajo sospecha; al defender una idea acelera sin perder dicción.",
+				"en": "A warm mezzo with forward resonance and a broad pitch range, shaped by teaching. Curiosity and empathy survive even under suspicion; when defending an idea she accelerates without losing diction."
+			},
 			"variants": [
 				{
-					"language": "es"
+					"language": "es",
+					"locale": "es-ES",
+					"languageFormation": {
+						"place": { "es": "Madrid, España", "en": "Madrid, Spain" },
+						"variety": { "es": "español peninsular académico de Madrid", "en": "academic Peninsular Spanish from Madrid" }
+					},
+					"prosody": {
+						"es": "Conserva una inflexión francesa: erres suavizadas, entonación musical y cuidado particular de la articulación.",
+						"en": "She retains a French inflection: softened r sounds, musical intonation, and particular care with articulation."
+					},
+					"dialogueStyle": {
+						"es": "Español peninsular culto y expresivo. Usa tú con cercanos, usted en situaciones ceremoniales y vosotros sólo cuando el destinatario plural lo vuelve natural; evita coloquialismos cerrados y formula metáforas con precisión lingüística.",
+						"en": "Cultivated, expressive Peninsular Spanish. She uses tú with close colleagues, usted ceremonially, and vosotros only when a plural audience makes it natural; she avoids opaque slang and formulates metaphors with linguistic precision."
+					}
+				},
+				{
+					"language": "en",
+					"locale": "en-CA",
+					"languageFormation": {
+						"place": { "es": "Montréal, Canadá", "en": "Montréal, Canada" },
+						"variety": { "es": "inglés canadiense formado en un entorno francófono", "en": "Canadian English formed in a francophone environment" }
+					},
+					"prosody": {
+						"es": "Inflexión francesa suave, melodía flexible y erres poco marcadas, siempre con dicción deliberadamente clara.",
+						"en": "A gentle French inflection, flexible melody, and softened r sounds, always with deliberately clear diction."
+					},
+					"dialogueStyle": {
+						"es": "Inglés canadiense preciso y pedagógico, con contracciones naturales y preguntas que abren una idea. Su especialidad aparece en elecciones semánticas cuidadas, no en explicaciones para el público.",
+						"en": "Precise, pedagogical Canadian English, with natural contractions and questions that open an idea. Her expertise appears in careful semantic choices, not explanations aimed at the audience."
+					}
 				}
 			]
 		},
@@ -60,7 +220,10 @@
 			"id": "voice:cael-es",
 			"characterId": "character:cael",
 			"name": "Juno Cael (es)",
-			"description": "Pragmatismo, concentración, humor seco y asombro.",
+			"description": {
+				"es": "Pragmatismo, concentración, humor seco y asombro.",
+				"en": "Pragmatism, concentration, dry humor, and wonder."
+			},
 			"variants": [
 				{
 					"language": "es"
@@ -71,7 +234,10 @@
 			"id": "voice:proxima-technician-es",
 			"characterId": "character:proxima-technician",
 			"name": "Técnico de Proxima (es)",
-			"description": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
+			"description": {
+				"es": "Mantenimiento de muelle, presión horaria y disciplina operativa.",
+				"en": "Dock maintenance, schedule pressure, and operational discipline."
+			},
 			"variants": [
 				{
 					"language": "es"
@@ -82,7 +248,10 @@
 			"id": "voice:medical-officer-es",
 			"characterId": "character:medical-officer",
 			"name": "Oficial médico (es)",
-			"description": "Examen forense inicial, gravedad clínica y urgencia contenida.",
+			"description": {
+				"es": "Examen forense inicial, gravedad clínica y urgencia contenida.",
+				"en": "Initial forensic examination, clinical gravity, and restrained urgency."
+			},
 			"variants": [
 				{
 					"language": "es"
@@ -93,7 +262,10 @@
 			"id": "voice:security-crew-es",
 			"characterId": "character:security-crew",
 			"name": "Tripulante de seguridad (es)",
-			"description": "Autoridad física sin militarización ni armamento visible.",
+			"description": {
+				"es": "Autoridad física sin militarización ni armamento visible.",
+				"en": "Physical authority without militarization or visible weapons."
+			},
 			"variants": [
 				{
 					"language": "es"
@@ -101,10 +273,56 @@
 			]
 		},
 		{
+			"id": "voice:okoye",
+			"characterId": "character:okoye",
+			"name": "Dara Okoye",
+			"description": {
+				"es": "Contralto firme, resonancia de pecho marcada y ataque directo. Sus órdenes suenan entrenadas y precisas, nunca teatrales; el conflicto aparece en pausas mínimas antes de que recupere de inmediato la autoridad.",
+				"en": "A firm contralto with strong chest resonance and direct attack. Her commands sound trained and precise, never theatrical; conflict appears in minimal pauses before she immediately recovers authority."
+			},
+			"variants": [
+				{
+					"language": "es",
+					"locale": "es-GQ",
+					"languageFormation": {
+						"place": { "es": "Malabo, Guinea Ecuatorial", "en": "Malabo, Equatorial Guinea" },
+						"variety": { "es": "español ecuatoguineano formal de Malabo", "en": "formal Equatoguinean Spanish from Malabo" }
+					},
+					"prosody": {
+						"es": "Conserva una inflexión nigeriana, preferentemente igbo: ritmo silábico claro, consonantes definidas y entonación firme y descendente.",
+						"en": "She retains a Nigerian, preferably Igbo, inflection: clear syllable timing, defined consonants, and firm falling intonation."
+					},
+					"dialogueStyle": {
+						"es": "Español ecuatoguineano formal, directo y plenamente gramatical. Prefiere órdenes breves, verbos operativos y tratamientos respetuosos; no se representa el acento con errores ni ortografía fonética.",
+						"en": "Formal, direct, fully grammatical Equatoguinean Spanish. She favors brief commands, operational verbs, and respectful forms of address; her accent is never represented through errors or phonetic spelling."
+					}
+				},
+				{
+					"language": "en",
+					"locale": "en-NG",
+					"languageFormation": {
+						"place": { "es": "Enugu, Nigeria", "en": "Enugu, Nigeria" },
+						"variety": { "es": "inglés nigeriano educado con entorno igbo", "en": "educated Nigerian English in an Igbo environment" }
+					},
+					"prosody": {
+						"es": "Inflexión igbo en el inglés: ritmo silábico marcado, consonantes muy claras y cierres descendentes sin exageración.",
+						"en": "Igbo-inflected English: marked syllable timing, very clear consonants, and falling endings without exaggeration."
+					},
+					"dialogueStyle": {
+						"es": "Inglés nigeriano educado, conciso y orientado a la acción. Da órdenes con estructuras inequívocas y expresa duda mediante una pausa o una pregunta exacta, no mediante vaguedad ni caricatura dialectal.",
+						"en": "Educated Nigerian English, concise and action-oriented. She gives orders in unambiguous structures and expresses doubt through a pause or an exact question, not vagueness or dialect caricature."
+					}
+				}
+			]
+		},
+		{
 			"id": "voice:earth-protesters-es",
 			"characterId": "character:earth-protesters",
 			"name": "Manifestantes terrestres (es)",
-			"description": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
+			"description": {
+				"es": "Temor defensivo y esperanza cautelosa, tratados con igual humanidad.",
+				"en": "Defensive fear and cautious hope, treated with equal humanity."
+			},
 			"variants": [
 				{
 					"language": "es"
