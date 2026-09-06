@@ -1,5 +1,30 @@
 # Estado del proyecto
 
+## 2026-09-06 — Studio local de imitación
+
+- Editor `/studio` (SvelteKit, sólo `npm run dev`) + worker `:8765` con GPU
+  perezosa. Catálogo `audience-es` / `audience-en` (275 cues, 24 kHz). Auto-F0
+  on por A/B Elin/Zao ES. Tomas versionadas; stale a nivel de cue; ensamblado
+  no pisa los duales canónicos. GitHub Pages no publica la ruta ni el worker.
+- El historial de tomas permite escuchar una conversión antes de aceptarla; Play
+  no cambia hasta el puntero aceptado.
+- Cargar modelo y Convertir requieren `E:\Models\Seed-VC\.venv`. El worker
+  reinserta el `site-packages` del venv al cargar el modelo y muestra el
+  intérprete en diagnósticos. En Windows el bind de `:8765` es exclusivo.
+
+## 2026-09-06 — Pase de imitación Seed-VC SVC (F0)
+
+- Nueva pista paralela a Qwen: la toma del actor (acento imitado + emoción)
+  conserva el contorno F0; Seed-VC pinta el timbre de
+  `static/assets/voices/{lang}/{Character}.wav`.
+- CLI y worker local: `scripts/convert-imitation-performance.py` (`--check`,
+  `--check-local`, conversión, `--serve` en `:8765` **sin** cargar GPU al
+  arrancar). Knobs portátiles:
+  `docs/wip/seedvc-imitation-defaults.json` (`f0_condition` on, `auto_f0_adjust`
+  on, 50 pasos). Rutas de máquina en env o `seedvc-imitation-defaults.local.json`.
+- Studio en `/studio` con `npm run dev` + worker. GitHub Pages no aloja este
+  worker ni anuncia la ruta.
+
 ## 2026-09-06 — Audio del relato para público regenerado
 
 - Duales alineados con rev. 15, **Lúz Tardía** / **Próxima**, pausas de capítulo

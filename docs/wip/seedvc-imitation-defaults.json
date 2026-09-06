@@ -1,0 +1,47 @@
+{
+  "note": "Portable Seed-VC SVC knobs for the imitation pass. Actor take (accent + emotion) is the source; curated character WAV is timbre only. Machine paths live in env or seedvc-imitation-defaults.local.json. Do not turn f0_condition off. Do not use app_vc.py, inference_v2.py, or seed_vc_wrapper.py.",
+  "engine": "seed-vc-svc",
+  "actorNote": {
+    "es": "El actor imita el acento objetivo. auto_f0_adjust está encendido por defecto: asienta el contorno emocional en el registro del personaje. Apágalo en el panel si ya coincidiste el tono a mano. Decisión: A/B Elin y Zao ES del 2026-09-06.",
+    "en": "The actor imitates the target accent. auto_f0_adjust defaults on: it seats the emotional contour in the character's range. Turn it off in the panel if you already matched pitch by ear. Decision: 2026-09-06 Elin and Zao ES A/B."
+  },
+  "seedVc": {
+    "f0_condition": true,
+    "auto_f0_adjust": true,
+    "semi_tone_shift": 0,
+    "diffusion_steps": 50,
+    "diffusion_steps_max": 100,
+    "inference_cfg_rate": 0.7,
+    "length_adjust": 1.0,
+    "fp16": true,
+    "hf_repo": "Plachta/Seed-VC",
+    "checkpoint": "DiT_seed_v2_uvit_whisper_base_f0_44k_bigvgan_pruned_ft_ema_v2.pth",
+    "config": "config_dit_mel_seed_uvit_whisper_base_f0_44k.yml"
+  },
+  "bounds": {
+    "diffusion_steps": { "min": 1, "max": 100 },
+    "semi_tone_shift": { "min": -24, "max": 24 },
+    "length_adjust": { "min": 0.5, "max": 2.0 },
+    "inference_cfg_rate": { "min": 0.0, "max": 1.0 },
+    "maxUploadBytes": 52428800,
+    "maxRecordingSeconds": 120
+  },
+  "paths": {
+    "castEn": "docs/wip/qwen3-tts-cast.json",
+    "castEs": "docs/wip/qwen3-tts-cast.es.json",
+    "pipelineDocEs": "docs/TTS_VOICE_PIPELINE.es.md",
+    "pipelineDocEn": "docs/TTS_VOICE_PIPELINE.en.md",
+    "qwenIclDefaults": "docs/wip/qwen-icl-clone-defaults.json",
+    "audioOutputs": "data/production/audio/audio-outputs.json"
+  },
+  "http": {
+    "host": "127.0.0.1",
+    "port": 8765,
+    "corsOrigins": [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "http://localhost:4173",
+      "http://127.0.0.1:4173"
+    ]
+  }
+}

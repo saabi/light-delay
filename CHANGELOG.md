@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-09-06 — Studio local de imitación
+
+- Catálogo lógico `data/production/audio/audio-outputs.json` (sólo audience-es/en).
+- Defaults portátiles con auto-F0 **on**; rutas de máquina en env o `*.local.json`.
+- Worker `/v1/imitation` con GPU perezosa, tomas versionadas, stale por cue y
+  ensamblado GPU-free. Vite proxy `/v1/imitation` → `:8765`. Studio en `/studio`
+  sólo con `npm run dev`; Pages no lo anuncia.
+- Escuchar una toma convertida desde el historial **antes** de aceptarla; Play
+  sigue siendo el audio efectivo (original o puntero aceptado).
+- Cargar modelo / Convertir exigen el Python del venv de Seed-VC; el worker
+  reinserta `site-packages`, muestra el intérprete en diagnósticos y deja de
+  devolver un 500 opaco si falta una dependencia. En Windows el bind de `:8765`
+  es exclusivo para que un `python` huérfano no siga contestando.
+- `npm run tts:imitation:check` (CI) y `tts:imitation:check:local` (audio root).
+
+## 2026-09-06 — Pase de imitación Seed-VC SVC
+
+- CLI/worker F0-lock: `scripts/convert-imitation-performance.py` y
+  `scripts/lib/seedvc_imitation.py`. Knobs en
+  `docs/wip/seedvc-imitation-defaults.json`.
+- Conserva la toma emocional del actor y pinta el timbre del elenco; no pasa por
+  Qwen ni regenera duales, refs ni Gradio.
+- `npm run tts:imitation:check` valida casts, instalación Seed-VC y knobs.
+
 ## 2026-09-06 — Duales de audiencia regenerados (rev. 15)
 
 - ES: `light-delay-audience-dual-es.mp3` (~43.3 min); EN:

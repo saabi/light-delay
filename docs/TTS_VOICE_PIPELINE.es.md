@@ -18,6 +18,7 @@ E:\Models\
 │   ├── candidates\              # candidatos VoiceDesign por personaje
 │   └── output\
 │       ├── outline-chunks\{en,es}\   # cue WAVs + index.json (render incremental)
+│       ├── imitation-pass\{en,es}\   # tomas de actor → timbre de personaje (SVC/F0)
 │       ├── light-delay-outline-dual.mp3
 │       ├── light-delay-audience-dual-es.mp3
 │       └── pronunciation-tests\
@@ -106,7 +107,100 @@ sidecar `{stem}_whisper.txt` o regenerar Whisper al renderizar (`--whisper-ref-t
 **Estado actual (2026-09-05):** las seis tomas EN y ES ya están promocionadas en
 `static/assets/voices/{en,es}/` (Okoye ES = Igbo L1). Ver cada `selection.json`.
 
-## 4. Audio de la escaleta (chunks + ensamblado)
+## 4. Pase de imitación (Seed-VC SVC / F0)
+
+Pista **paralela** a Qwen3-TTS: no sintetiza texto. Conserva la toma del actor
+(contenido, acento imitado, contorno F0 emocional) y pinta encima el timbre de
+la ref curada. No sustituye los duales de la escaleta ni del relato.
+
+El actor imita el acento objetivo. `auto_f0_adjust` queda **encendido** por
+defecto: asienta el contorno emocional en el registro del personaje sin
+aplastar la toma. Decisión de escucha: A/B Elin y Zao ES del 2026-09-06
+(`auto_f0` off vs on) contra las mismas cuatro grabaciones de origen. El panel
+del Studio sigue exponiendo el interruptor; cada `metadata.json` de toma guarda
+los knobs reales para reproducir tomas antiguas con auto-F0 apagado.
+
+No usar Gradio en producción. `app_svc.py` es la misma pila que
+`inference.py --f0-condition True`. Equivalencia:
+
+| Gradio (`app_svc.py`) | CLI / JSON |
+|----------------------|------------|
+| Source Audio | `--source` / cuerpo `POST` / Studio |
+| Reference Audio | `--character` + `--lang` → `static/assets/voices/{lang}/{Character}.wav` |
+| f0-condition (siempre en SVC) | `seedVc.f0_condition: true` (no se apaga) |
+| Auto F0 adjust | `--auto-f0-adjust` (defecto **on**) |
+| Pitch shift | `--semi-tone-shift` (defecto 0) |
+| Diffusion steps 50–100 | `--diffusion-steps` (defecto **50**) |
+
+No usar `app_vc.py`, `inference_v2.py`, `seed_vc_wrapper.py` ni los pipelines
+native-L1 → Qwen ICL para esta pista. Knobs portátiles:
+[`docs/wip/seedvc-imitation-defaults.json`](wip/seedvc-imitation-defaults.json).
+Rutas de máquina: env `LIGHT_DELAY_SEEDVC_ROOT`, `LIGHT_DELAY_AUDIO_ROOT`,
+`LIGHT_DELAY_IMITATION_ROOT` o
+[`docs/wip/seedvc-imitation-defaults.local.json.example`](wip/seedvc-imitation-defaults.local.json.example)
+(copiar a `*.local.json`, gitignored). Precedencia: entorno → archivo local →
+defaults portátiles. El navegador nunca recibe ni envía rutas de filesystem.
+
+```powershell
+python scripts/convert-imitation-performance.py --check
+npm run tts:imitation:check
+
+python scripts/convert-imitation-performance.py --check-local
+npm run tts:imitation:check:local
+
+E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/convert-imitation-performance.py `
+  --source path\to\toma.wav --character Zao --lang es
+
+E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/convert-imitation-performance.py --serve --port 8765
+```
+
+`--check` es seguro para CI: catálogo lógico, knobs, casts del repo. No exige
+`E:\Models`. `--check-local` exige el audio root, 275 cues a 24 kHz y la
+instalación Seed-VC; falla en voz alta si faltan. El worker con el Python del
+sistema puede servir la línea de tiempo y Play; **Cargar modelo** y Convertir
+exigen el venv de Seed-VC (`munch`, torch, GPU).
+
+Studio local (`npm run dev` + worker en `:8765`): Vite hace proxy de
+`/v1/imitation` hacia `http://127.0.0.1:8765` **sin duplicar el prefijo**.
+GitHub Pages no anuncia `/studio`. El worker carga la GPU en el primer convert
+o `POST /v1/imitation/prepare` (`modelState`: unloaded | loading | ready | error).
+Convert serializado (409 si está ocupado). Ensamblado GPU-free a
+`assembled/audience-*.mp3`; nunca pisa
+`light-delay-audience-dual-*.mp3`. Tomas versionadas bajo
+`imitationRoot/overlays/{outputId}/{safeDialogueKey}/takes/{takeId}/`. El stale es
+por huella de diálogo (`contentHash` + speaker + idioma + engine), no por el
+índice del cue ni por el hash del WAV Qwen. Accept persiste entre regeneraciones
+del dual mientras el diálogo no cambie (`audience-dialogue-id` estable). Limpieza
+de tomas no aceptadas: fuera del MVP (trabajo futuro: candidatas antiguas que no
+sean el puntero aceptado).
+
+Backfill del índice actual (sin resintetizar):
+
+```powershell
+python scripts/backfill-audience-stable-dialogue-ids.py
+python scripts/migrate-imitation-overlays-to-dialogue-ids.py
+```
+
+Tras cambiar la prosa o la dirección, regenerar voices (`npm run tts:audience:build`)
+para que los Markdown TTS lleven `<!-- audience-dialogue-id: … -->` y el dual
+escriba `stableDialogueId` en `index.json`.
+
+Contrato HTTP (orígenes CORS = scheme+host+port, nunca `github.io`):
+
+- `GET /v1/imitation/health`
+- `GET /v1/imitation/defaults`
+- `GET /v1/imitation/outputs`
+- `GET /v1/imitation/outputs/{id}/timeline`
+- `GET /v1/imitation/outputs/{id}/chunks/{cueId}`
+- `GET /v1/imitation/outputs/{id}/takes/{takeId}/audio`
+- `GET /v1/imitation/outputs/{id}/assembled`
+- `POST /v1/imitation/prepare`
+- `POST /v1/imitation/outputs/{id}/cues/{cueId}/convert`
+- `POST /v1/imitation/outputs/{id}/cues/{cueId}/accept`
+- `POST /v1/imitation/outputs/{id}/cues/{cueId}/restore`
+- `POST /v1/imitation/outputs/{id}/assemble`
+
+## 5. Audio de la escaleta (chunks + ensamblado)
 
 Script: `scripts/generate-dual-outline-audio.py`.
 
@@ -134,7 +228,7 @@ python scripts/generate-dual-outline-audio.py --lang en --assemble-only
 python scripts/generate-dual-outline-audio.py --lang es
 ```
 
-Scripts TTS multi-voz de la escaleta (rev. 15, 38 citas atribuidas desde el master):
+Scripts TTS multi-voz de la escaleta (rev. 16, 38 citas atribuidas desde el master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
@@ -150,6 +244,10 @@ Relato para público (12 secciones, sin frontmatter; **36 diálogos audibles**):
 - Verificación de estructura, paridad, atribución y derivados:
   `npm run tts:audience:check`
 - Ejemplo: `python scripts/generate-dual-outline-audio.py --lang es --script docs/wip/audience-narrative.voices.es.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/es-audience`
+
+Los duales y los 275 chunks de audiencia existentes fueron generados desde la
+revisión 15. Después de incorporar la tercera inversión de trayecto al master
+16 se conservan sólo para referencia y rescate hasta regenerarlos.
 
 Cada cita audible lleva un comentario estable `audience-dialogue-id` en ambas
 fuentes. Ese ID, no el índice ni el texto traducido, selecciona una entrada con:
@@ -181,7 +279,7 @@ regenera.
 Flags útiles: `--chunks-dir`, `--force-all`, `--no-assemble`, `--limit`,
 `--dialogue-only-limit`, `--whisper-ref-text`.
 
-## 5. Pronunciación de Sorell en texto para audio
+## 6. Pronunciación de Sorell en texto para audio
 
 **Problema:** la grafía editorial `Sorell` necesita una ayuda distinta por idioma.
 La forma hablada es **Soréll** en inglés y **Sorél** en español.
@@ -216,14 +314,19 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 La transformación ocurre al generar los derivados TTS. El topónimo español
 **Próxima**, en cambio, se escribe correctamente desde la fuente y no pertenece al mapa fonético.
 
-## 6. Referencias rápidas
+## 7. Referencias rápidas
 
 | Recurso | Ruta |
 |---------|------|
 | Knobs ICL / Seed-VC V2 | `docs/wip/qwen-icl-clone-defaults.json` |
+| Knobs imitación SVC/F0 | `docs/wip/seedvc-imitation-defaults.json` |
 | Biblia de voces | `docs/DESCRIPCION_DE_VOCES_DE_PERSONAJES.md` |
 | Refs selected | `static/assets/voices/` |
-| Helper compartido | `scripts/lib/qwen_icl.py` |
+| Helper ICL | `scripts/lib/qwen_icl.py` |
+| Helper imitación | `scripts/lib/seedvc_imitation.py` |
+| Catálogo de salidas | `data/production/audio/audio-outputs.json` |
+| Overlay / ensamble | `scripts/lib/imitation_overlay.py`, `imitation_assemble.py`, `imitation_http.py` |
+| CLI imitación | `scripts/convert-imitation-performance.py` |
 | Pipeline ES | `scripts/pipeline-spanish-native-l1-v2-qwen.py` |
 | Pipeline EN | `scripts/pipeline-english-native-l1-v2-qwen.py` |
 | Outline dual | `scripts/generate-dual-outline-audio.py` |

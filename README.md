@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 
-Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`, `npm run generated:check`, `npm run tts:audience:build`, `npm run tts:audience:check`, `npm run notes:build`, `npm run report:causal-validity`, `npm run report:outline-story`, `npm run report:dialogue-style`, `npm run check:trailer-spoilers`, `npm run report:prompt-readiness`, `npm run report:editorial` y `npm run report:all`.
+Otras órdenes útiles: `npm run check`, `npm run test`, `npm run build`, `npm run preview`, `npm run port:legacy-text`, `npm run build:brand`, `npm run validate:data`, `npm run generated:check`, `npm run tts:audience:build`, `npm run tts:audience:check`, `npm run tts:imitation:check`, `npm run tts:imitation:check:local`, `npm run notes:build`, `npm run report:causal-validity`, `npm run report:outline-story`, `npm run report:dialogue-style`, `npm run check:trailer-spoilers`, `npm run report:prompt-readiness`, `npm run report:editorial` y `npm run report:all`.
 
 > `npm run extract:legacy` es una herramienta histórica anterior a la arquitectura multi-script. No debe ejecutarse sobre el árbol canónico actual: todavía sobrescribe varios archivos de `data/` con el formato previo. Su aislamiento o retiro está registrado en [`TODO.md`](TODO.md).
 
@@ -60,6 +60,8 @@ El idioma público por defecto es inglés. La versión española conserva rutas 
 GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
 
 El editor de duración del animatic continúa siendo local al navegador: no modifica el JSON ni el repositorio público.
+
+El Studio de imitación (`/studio`) sólo existe en `npm run dev` junto al worker local en `:8765`. El sitio de Pages no lo enlaza.
 
 ## Derechos y plataforma reutilizable
 

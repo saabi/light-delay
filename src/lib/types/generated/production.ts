@@ -396,3 +396,50 @@ export interface DialoguePerformanceFile13 {
 	es: DialoguePerformanceFile9;
 }
 
+export type AudioOutputsFile1 = '1.0.0';
+/**
+ * @minItems 1
+ */
+export type AudioOutputsFile2 = [AudioOutputsFile3, ...AudioOutputsFile3[]];
+export type AudioOutputsFile4 = string;
+export type AudioOutputsFile5 = 'audience' | 'outline' | 'cut-dialogue' | 'other';
+export type AudioOutputsFile6 = 'es' | 'en';
+export type AudioOutputsFile8 = string;
+export type AudioOutputsFile9 = string;
+export type AudioOutputsFile10 = string;
+export type AudioOutputsFile11 = string;
+export type AudioOutputsFile12 = number;
+export type AudioOutputsFile13 = string;
+/**
+ * @minItems 1
+ */
+export type AudioOutputsFile14 = [AudioOutputsFile15, ...AudioOutputsFile15[]];
+export type AudioOutputsFile15 = string;
+export type AudioOutputsFile16 = number;
+export type AudioOutputsFile17 = number;
+
+export interface AudioOutputsFile {
+	schemaVersion: AudioOutputsFile1;
+	outputs: AudioOutputsFile2;
+}
+export interface AudioOutputsFile3 {
+	id: AudioOutputsFile4;
+	kind: AudioOutputsFile5;
+	lang: AudioOutputsFile6;
+	label: AudioOutputsFile7;
+	description: AudioOutputsFile7;
+	sourceOutlineId: AudioOutputsFile11;
+	sourceOutlineRevision: AudioOutputsFile12;
+	chunksKey: AudioOutputsFile13;
+	canonicalMp3Key: AudioOutputsFile13;
+	assembledKey: AudioOutputsFile13;
+	recordableSpeakers: AudioOutputsFile14;
+	expectedSampleRate: AudioOutputsFile16;
+	expectedCueCount: AudioOutputsFile17;
+}
+export interface AudioOutputsFile7 {
+	es: AudioOutputsFile8;
+	en: AudioOutputsFile9;
+	[k: string]: AudioOutputsFile10;
+}
+

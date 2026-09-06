@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "outputs": [
+    {
+      "id": "audience-es",
+      "kind": "audience",
+      "lang": "es",
+      "label": {
+        "es": "Relato para público (español)",
+        "en": "Audience narrative (Spanish)"
+      },
+      "description": {
+        "es": "275 cues del dual de audiencia en español, generado desde la revisión 15 y ahora desactualizado frente a la revisión 16.",
+        "en": "275 cues from the Spanish audience dual, generated from revision 15 and now stale against revision 16."
+      },
+      "sourceOutlineId": "outline:light-delay-master-narrative",
+      "sourceOutlineRevision": 15,
+      "chunksKey": "outline-chunks/es-audience",
+      "canonicalMp3Key": "light-delay-audience-dual-es.mp3",
+      "assembledKey": "assembled/audience-es.mp3",
+      "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
+      "expectedSampleRate": 24000,
+      "expectedCueCount": 275
+    },
+    {
+      "id": "audience-en",
+      "kind": "audience",
+      "lang": "en",
+      "label": {
+        "es": "Relato para público (inglés)",
+        "en": "Audience narrative (English)"
+      },
+      "description": {
+        "es": "275 cues del dual de audiencia en inglés, generado desde la revisión 15 y ahora desactualizado frente a la revisión 16.",
+        "en": "275 cues from the English audience dual, generated from revision 15 and now stale against revision 16."
+      },
+      "sourceOutlineId": "outline:light-delay-master-narrative",
+      "sourceOutlineRevision": 15,
+      "chunksKey": "outline-chunks/en-audience",
+      "canonicalMp3Key": "light-delay-audience-dual-en.mp3",
+      "assembledKey": "assembled/audience-en.mp3",
+      "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
+      "expectedSampleRate": 24000,
+      "expectedCueCount": 275
+    }
+  ]
+}

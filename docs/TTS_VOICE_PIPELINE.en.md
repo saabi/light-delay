@@ -18,6 +18,7 @@ E:\Models\
 │   ├── candidates\
 │   └── output\
 │       ├── outline-chunks\{en,es}\
+│       ├── imitation-pass\{en,es}\   # actor takes → character timbre (SVC/F0)
 │       ├── light-delay-outline-dual.mp3
 │       ├── light-delay-audience-dual-es.mp3
 │       └── pronunciation-tests\
@@ -73,7 +74,99 @@ Promote chosen finalists into `static/assets/voices/{lang}/`.
 **Current (2026-09-05):** six EN + six ES native-L1 ICL takes promoted; see
 `selection.json` (Okoye ES = Igbo L1).
 
-## 4. Outline audio (chunks + assemble)
+## 4. Imitation pass (Seed-VC SVC / F0)
+
+A **parallel** track to Qwen3-TTS: it does not synthesize from text. It keeps the
+actor take (content, imitated accent, emotional F0 contour) and paints the curated
+character timbre on top. It does not replace outline or audience duals.
+
+The actor imitates the target accent. `auto_f0_adjust` defaults **on**: it seats
+the emotional contour in the character's range without flattening the take.
+Listening decision: 2026-09-06 Elin and Zao ES A/B (`auto_f0` off vs on) against
+the same four source recordings. The Studio panel still exposes the toggle;
+per-take `metadata.json` stores the knobs actually used so older off takes stay
+reproducible.
+
+Do not launch Gradio for production. `app_svc.py` is the UI for the same stack as
+`inference.py --f0-condition True`:
+
+| Gradio (`app_svc.py`) | CLI / JSON |
+|----------------------|------------|
+| Source Audio | `--source` / `POST` body / Studio |
+| Reference Audio | `--character` + `--lang` → `static/assets/voices/{lang}/{Character}.wav` |
+| f0-condition (always on in SVC) | `seedVc.f0_condition: true` (never off) |
+| Auto F0 adjust | `--auto-f0-adjust` (default **on**) |
+| Pitch shift | `--semi-tone-shift` (default 0) |
+| Diffusion steps 50–100 | `--diffusion-steps` (default **50**) |
+
+Do not use `app_vc.py`, `inference_v2.py`, `seed_vc_wrapper.py`, or the native-L1
+→ Qwen ICL pipelines for this track. Portable knobs:
+[`docs/wip/seedvc-imitation-defaults.json`](wip/seedvc-imitation-defaults.json).
+Machine paths: env `LIGHT_DELAY_SEEDVC_ROOT`, `LIGHT_DELAY_AUDIO_ROOT`,
+`LIGHT_DELAY_IMITATION_ROOT` or
+[`docs/wip/seedvc-imitation-defaults.local.json.example`](wip/seedvc-imitation-defaults.local.json.example)
+(copy to `*.local.json`, gitignored). Precedence: environment → local file →
+portable defaults. The browser never receives or posts filesystem paths.
+
+```powershell
+python scripts/convert-imitation-performance.py --check
+npm run tts:imitation:check
+
+python scripts/convert-imitation-performance.py --check-local
+npm run tts:imitation:check:local
+
+E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/convert-imitation-performance.py `
+  --source path\to\take.wav --character Zao --lang es
+
+E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/convert-imitation-performance.py --serve --port 8765
+```
+
+`--check` is CI-safe: logical catalog, knobs, in-repo casts. It does not require
+`E:\Models`. `--check-local` requires the audio root, 275 cues at 24 kHz, and the
+Seed-VC install; it fails loudly when those are missing. A worker started with
+system Python can still serve the timeline and Play; **Load model** and Convert
+need the Seed-VC venv (`munch`, torch, GPU).
+
+Local Studio (`npm run dev` + worker on `:8765`): Vite proxies `/v1/imitation` to
+`http://127.0.0.1:8765` **without duplicating the prefix**. GitHub Pages does not
+advertise `/studio`. The worker loads the GPU on the first convert or
+`POST /v1/imitation/prepare` (`modelState`: unloaded | loading | ready | error).
+Convert is serialized (409 if busy). GPU-free assemble writes
+`assembled/audience-*.mp3` and never overwrites
+`light-delay-audience-dual-*.mp3`. Versioned takes live under
+`imitationRoot/overlays/{outputId}/{safeDialogueKey}/takes/{takeId}/`. Stale is
+dialogue-level (`contentHash` + speaker + language + engine), not cue index or
+the Qwen WAV hash. Accept survives dual regenerations while dialogue content is
+unchanged (stable `audience-dialogue-id`). Cleanup of unaccepted takes is out of
+MVP (future job: old candidates that are not the accepted pointer).
+
+Backfill the current index without resynthesizing:
+
+```powershell
+python scripts/backfill-audience-stable-dialogue-ids.py
+python scripts/migrate-imitation-overlays-to-dialogue-ids.py
+```
+
+After prose or direction changes, rebuild voices (`npm run tts:audience:build`)
+so TTS Markdown carries `<!-- audience-dialogue-id: … -->` and the dual writes
+`stableDialogueId` into `index.json`.
+
+HTTP contract (CORS origins = scheme+host+port, never `github.io`):
+
+- `GET /v1/imitation/health`
+- `GET /v1/imitation/defaults`
+- `GET /v1/imitation/outputs`
+- `GET /v1/imitation/outputs/{id}/timeline`
+- `GET /v1/imitation/outputs/{id}/chunks/{cueId}`
+- `GET /v1/imitation/outputs/{id}/takes/{takeId}/audio`
+- `GET /v1/imitation/outputs/{id}/assembled`
+- `POST /v1/imitation/prepare`
+- `POST /v1/imitation/outputs/{id}/cues/{cueId}/convert`
+- `POST /v1/imitation/outputs/{id}/cues/{cueId}/accept`
+- `POST /v1/imitation/outputs/{id}/cues/{cueId}/restore`
+- `POST /v1/imitation/outputs/{id}/assemble`
+
+## 5. Outline audio (chunks + assemble)
 
 `scripts/generate-dual-outline-audio.py` stores each cue under
 `outline-chunks/{lang}/` with `index.json`. Changing a character WAV updates
@@ -87,7 +180,7 @@ python scripts/generate-dual-outline-audio.py --lang en --assemble-only
 python scripts/generate-dual-outline-audio.py --lang es
 ```
 
-Multi-speaker TTS outlines (rev. 15, 38 attributed quotations from the master):
+Multi-speaker TTS outlines (rev. 16, 38 attributed quotations from the master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
@@ -103,6 +196,10 @@ Audience short story (12 sections, no frontmatter; **36 audible dialogues**):
 - Check structure, parity, attribution, and derivatives:
   `npm run tts:audience:check`
 - Example: `python scripts/generate-dual-outline-audio.py --lang en --script docs/wip/audience-narrative.voices.en.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/en-audience`
+
+The existing audience duals and their 275 chunks were generated from revision
+15. After adding the third transit turnover to master revision 16, they are
+retained only for reference and salvage until regenerated.
 
 Every audible quotation has the same stable `audience-dialogue-id` comment in
 both source files. That ID—not its array position or translated wording—selects
@@ -129,7 +226,7 @@ in E2—not in its first B7 appearance—to preserve the reveal, so it has 36.
 source or direction edit. Existing MP3s and chunks become stale when either
 input changes; this rebuild command does **not** regenerate them.
 
-## 5. Pronouncing Sorell in audio text
+## 6. Pronouncing Sorell in audio text
 
 The canonical written name is **Sorell**. Its generated spoken form is
 **Soréll** in English and **Sorél** in Spanish.
@@ -151,13 +248,18 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 "They wrote the primer."
 ```
 
-## 6. Quick links
+## 7. Quick links
 
 | Resource | Path |
 |----------|------|
 | ICL / V2 knobs | `docs/wip/qwen-icl-clone-defaults.json` |
+| Imitation SVC/F0 knobs | `docs/wip/seedvc-imitation-defaults.json` |
 | Voice bible | `docs/DESCRIPCION_DE_VOCES_DE_PERSONAJES.md` |
 | Selected refs | `static/assets/voices/` |
-| Shared helper | `scripts/lib/qwen_icl.py` |
+| ICL helper | `scripts/lib/qwen_icl.py` |
+| Imitation helper | `scripts/lib/seedvc_imitation.py` |
+| Audio catalog | `data/production/audio/audio-outputs.json` |
+| Overlay / assemble | `scripts/lib/imitation_overlay.py`, `imitation_assemble.py`, `imitation_http.py` |
+| Imitation CLI | `scripts/convert-imitation-performance.py` |
 | ES / EN pipelines | `scripts/pipeline-*-native-l1-v2-qwen.py` |
 | Dual outline | `scripts/generate-dual-outline-audio.py` |

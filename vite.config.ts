@@ -24,6 +24,14 @@ export default defineConfig({
 		}),
 		paraglideVitePlugin(paraglideOptions(base))
 	],
+	server: {
+		proxy: {
+			'/v1/imitation': {
+				target: 'http://127.0.0.1:8765',
+				changeOrigin: false
+			}
+		}
+	},
 	test: {
 		expect: { requireAssertions: true },
 		projects: [

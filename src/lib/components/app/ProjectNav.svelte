@@ -4,6 +4,7 @@
 	import { scriptSectionHref } from '$lib/utils/scriptRouting';
 	import { encodeScriptId } from '$lib/utils/scriptId';
 	import { canonicalPathname, withLocale } from '$lib/utils/paths';
+	import { shouldShowStudioNav } from '$lib/studio/gating';
 	import * as m from '$lib/paraglide/messages.js';
 	import ScriptSwitcher from './ScriptSwitcher.svelte';
 	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
@@ -34,6 +35,9 @@
 			label: m.nav_reports(),
 			match: '/reports'
 		},
+		...(shouldShowStudioNav()
+			? [{ href: withLocale('/studio'), label: m.nav_studio(), match: '/studio' }]
+			: []),
 		{ href: withLocale('/art'), label: m.nav_art(), match: '/art' },
 		{ href: withLocale('/entities/characters'), label: m.nav_entities(), match: '/entities' },
 		{

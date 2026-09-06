@@ -1,0 +1,8 @@
+{
+  "note": "Copy to seedvc-imitation-defaults.local.json (gitignored). Override any machine path. Precedence: environment → this file → portable defaults.",
+  "localPaths": {
+    "seedVcRoot": "E:/Models/Seed-VC",
+    "audioRoot": "E:/Models/Qwen3-TTS/output",
+    "imitationRoot": "E:/Models/Qwen3-TTS/output/imitation-pass"
+  }
+}
