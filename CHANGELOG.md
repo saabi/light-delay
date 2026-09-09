@@ -9,7 +9,8 @@
   pools en `…/es-accents/latam-regional/`.
 - Curaduría promovida a `static/assets/voices/es/` (Zao m-02 5th, Voss m-01 5th,
   Harlan weather-03 3rd, Elin m-00 4th, Sorell proxy-03 4th, Okoye m-02 5th).
-- Regen del dual de audiencia ES (diálogo Qwen; narrador Kokoro reutilizado).
+- Dual audiencia ES regenerado: `light-delay-audience-dual-es.mp3` (~43.8 min);
+  36 diálogos Qwen nuevos, narrador Kokoro reutilizado (236 cues).
 
 ## 2026-09-06 — Giro remoto y cuarta caída de gravedad
 

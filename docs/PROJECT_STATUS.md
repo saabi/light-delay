@@ -7,8 +7,9 @@
   en la viñeta ES. Inglés L1 sin cambios.
 - Generación: `voice-donors/es/*` coloreados con `static/assets/voices/en/{Character}.wav`
   → `…/es-accents/latam-regional/`. Curaduría en `static/assets/voices/es/`.
-- Dual ES de audiencia: diálogo regenerado con las nuevas refs; narrador Kokoro
-  reutilizado cuando el `content_hash` coincide.
+- Dual ES de audiencia regenerado (~43.8 min): 36 diálogos con refs LatAm;
+  narrador Kokoro reutilizado. MP3:
+  `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-es.mp3`.
 
 ## 2026-09-06 — Cuatro transiciones a microgravedad (master rev. 16)
 

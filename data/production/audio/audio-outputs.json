@@ -10,8 +10,8 @@
         "en": "Audience narrative (Spanish)"
       },
       "description": {
-        "es": "275 cues del dual de audiencia en español, generado desde la revisión 15 y ahora desactualizado frente a la revisión 16.",
-        "en": "275 cues from the Spanish audience dual, generated from revision 15 and now stale against revision 16."
+        "es": "275 cues del dual de audiencia en español con refs LatAm (rev. 15 de prosa; desactualizado frente a master rev. 16).",
+        "en": "275 cues from the Spanish audience dual with LatAm refs (prose revision 15; stale against master revision 16)."
       },
       "sourceOutlineId": "outline:light-delay-master-narrative",
       "sourceOutlineRevision": 15,
