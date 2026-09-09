@@ -1,5 +1,25 @@
 # Estado del proyecto
 
+## 2026-09-09 — Refs ES latinoamericanas desde timbre EN
+
+- Biblia y perfiles: castellano del elenco = Bogotá, Lima, Buenos Aires, Medellín,
+  Santiago del Estero, Caracas. Sin mandarín/germánico/británico/hindi/francés/igbo
+  en la viñeta ES. Inglés L1 sin cambios.
+- Generación: `voice-donors/es/*` coloreados con `static/assets/voices/en/{Character}.wav`
+  → `…/es-accents/latam-regional/`. Curaduría en `static/assets/voices/es/`.
+- Dual ES de audiencia: diálogo regenerado con las nuevas refs; narrador Kokoro
+  reutilizado cuando el `content_hash` coincide.
+
+## 2026-09-06 — Cuatro transiciones a microgravedad (master rev. 16)
+
+- La escaleta maestra incorpora `C10b`, el giro de 180° a mitad del tramo entre
+  la boca lejana y la estación Velari. La maniobra es la tercera entrada en
+  microgravedad; el corte del clímax pasa a ser la cuarta.
+- El master conserva 11 secciones de contexto y 8 secciones narrativas, ahora
+  con 58 beats `story`. Los exports y relatos textuales ES/EN están sincronizados.
+- Los duales de audiencia y sus 275 chunks siguen correspondiendo a rev. 15 y
+  quedan marcados como desactualizados hasta una regeneración posterior.
+
 ## 2026-09-06 — Tomas estables por audience-dialogue-id
 
 - Overlays de imitación keyed por `audience-dialogue-id`; stale = contentHash +
@@ -184,7 +204,7 @@
 ## 2026-09-06 — Formación lingüística y dirección bilingüe del elenco maestro
 
 - `data/voice-profiles.json` separa ahora el timbre común de la prosodia, el lugar y variedad de aprendizaje y el estilo de diálogo por idioma para Zao, Elin, Harlan, Voss, Sorell y Okoye.
-- Formación fijada: Zao (Singapur/Bogotá), Elin (Bengaluru/Medellín), Harlan (Portsmouth/Buenos Aires), Voss (Toronto/Lima), Sorell (Montréal/Madrid) y Okoye (Enugu/Malabo). La sección Reparto de la escaleta maestra conserva estos datos como biografía WIP.
+- Formación fijada: Zao (Singapur/Bogotá), Elin (Bengaluru/Medellín), Harlan (Portsmouth/Buenos Aires), Voss (Toronto/Lima), Sorell (Montréal/Santiago del Estero) y Okoye (Enugu/Caracas). La sección Reparto de la escaleta maestra conserva estos datos como biografía WIP.
 - La narrativa maestra sube a revisión 14 y sus 37 citas poseen `speakerId`. Los Markdown ES/EN muestran la atribución y el round-trip la conserva; `report:dialogue-style` bloquea citas anónimas y perfiles bilingües incompletos.
 - El diálogo existente del master fue auditado con diferencias sutiles y no fonéticas. Los cuts deprecados no se modificaron. Sus diálogos y las referencias TTS generadas antes de fijar estas variedades requieren revisión antes de cualquier rescate; los WAV WIP aún no están registrados como muestras aprobadas en `sampleAssetIds`.
 - La ficha pública de cada personaje presenta por idioma locale, formación, prosodia y estilo de diálogo. El schema de perfiles de voz y las pruebas de repositorio formalizan el contrato.
@@ -204,7 +224,7 @@
 
 - `character:okoye` incorpora rasgos, apariencia y vestuario bilingües; deja de compartir la hoja y el perfil de voz del tripulante genérico de seguridad.
 - Nueva hoja propia `static/assets/characters/okoye/model-sheet.png`: mujer nigeriana de alrededor de cuarenta años, complexión atlética compacta, traje carbón, tether y elementos de inmovilización no letales. El prompt, las referencias y la elegibilidad no verificada quedan registrados en el asset.
-- `voice:okoye` fija contralto e inflexión nigeriana/igbo tanto en inglés como en castellano. La revisión 14 precisa inglés aprendido en Enugu y español aprendido en Malabo. No se registra todavía ninguna muestra aprobada en `sampleAssetIds`; el material TTS WIP preexistente queda pendiente de reevaluación.
+- `voice:okoye` fija contralto; inglés con inflexión nigeriana/igbo (Enugu) y castellano venezolano formal de Caracas. No se registra todavía ninguna muestra aprobada en `sampleAssetIds` más allá de las refs TTS en `static/assets/voices/`; el material TTS WIP preexistente queda pendiente de reevaluación tras LatAm.
 - La narrativa maestra sube a rev. 13: amplía la función de Okoye, corrige dos pronombres masculinos y selecciona una variante de continuidad que no hereda el pasado operativo con Harlan del canon primario. Conserva 11 secciones de contexto, 8 secciones narrativas y 57 beats.
 - La ficha pública de personajes muestra rol, rasgos, apariencia, vestuario y voz cuando existen. Catálogo actual: 143 assets, incluidas 38 referencias.
 
@@ -337,7 +357,7 @@ Fecha de corte: 2026-08-31.
 - **Puente y bloqueo de Harlan:** la geometría documentada ya coincide con el modelo: seis puestos en arco, silla de capitán, mesa para seis, escaleras abiertas junto a servicio/ascensor y escotilla de servicio con bandeja COM A/B contigua fuera de la vista. Main, Festival y largo conservan el orden causal exacto: ascenso y apertura de escotilla durante la llamada, jammer, apertura de bandeja, desenchufe cableado, reingreso, cierre y descenso.
 - **Cartelas inglesas de título:** `static/assets/animatic/titles/` contiene `film-title.png`, `trailer-brand.png` y `trailer-tagline.png`, todos opacos y normalizados a 1536 × 864. Registrados en `data/assets.json` y enlazados en main, Festival y tráiler; el título principal y la marca usan únicamente `LIGHT DELAY`.
 - **Campaña de afiches V1:** cuatro conceptos en formatos apaisado y retrato, disponibles en español e inglés bajo `static/assets/marketing/posters/v1/`, con continuidad basada en las hojas canónicas de personajes, Proxima, Celestial Ardor y la Estación Velari. El manifiesto de marketing conserva copy, dimensiones, orientación, pares localizados y referencias; la elegibilidad para concurso permanece sin verificar.
-- **Escaletas causales por cut:** las cinco entradas tienen synopsis y una capa `story` legible: 12 main, 7 tráiler, 12 largo, 15 festival y 57 master WIP. Las cuatro primeras conservan su detalle editorial existente (17/9/28/44); el master es deliberadamente story-only y suma framing anterior/posterior sin afirmar implementación. Los hitos cuentan una historia continua con los detalles cerrados.
+- **Escaletas causales por cut:** las cinco entradas tienen synopsis y una capa `story` legible: 12 main, 7 tráiler, 12 largo, 15 festival y 58 master WIP. Las cuatro primeras conservan su detalle editorial existente (17/9/28/44); el master es deliberadamente story-only y suma framing anterior/posterior sin afirmar implementación. Los hitos cuentan una historia continua con los detalles cerrados.
 - **Lectura aislada y protección del tráiler:** `report:outline-story` exporta sólo la columna vertebral narrativa para revisión humana; la falta de enlaces causales en `story` es error. `check:trailer-spoilers` y su prueba de regresión impiden identificar al culpable o confirmar envío, recepción, muerte, contención de la amenaza o resultado del saludo en el avance.
 - **Fatalidad fuera de campo diferenciada:** main, festival y largo confirman la muerte de Zao mediante golpe seco, cese de forcejeo/respiración y negro sostenido. El tráiler conserva el mismo corte previo al ataque, pero sale pronto del negro con música continua y deja inciertos tanto la muerte como el envío.
 - **Razonamiento crítico restaurado:** main, festival y largo explican en escaleta por qué Zao descarta Tierra (doble retardo hasta la Ardor) y Proxima (oclusión de Júpiter L2–L1), y por qué sólo sirve apuntar al corredor futuro. También conservan que Harlan supone erróneamente un envío a la Tierra, se tranquiliza, lamenta la suerte de Zao y suspira antes de matarla.

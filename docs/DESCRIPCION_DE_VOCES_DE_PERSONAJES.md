@@ -6,9 +6,10 @@
 
 **Metodología de acento:**
 - **Timbre** = cualidad física de la voz (altura, resonancia, textura). No cambia entre idiomas — es lo que hace que sea "la misma persona" hablando en inglés o en castellano.
-- **Prosodia de origen** = ritmo, entonación y articulación que el personaje conserva de su primera comunidad lingüística. Se dirige en interpretación y audio; nunca se imita mediante faltas, gramática rota u ortografía fonética.
-- **Formación lingüística** = lugar y comunidad donde el personaje aprendió a usar inglés o español de manera habitual. Determina léxico, sintaxis, tratamientos, registro e idioma profesional sin borrar la prosodia de origen.
-- **Diálogo escrito** = combinación sutil de prosodia, variedad aprendida, relación entre hablantes y presión dramática. La relación y la intención de la escena prevalecen sobre tics mecánicos: una variedad no obliga a usar siempre el mismo tratamiento ni a insertar localismos.
+- **Prosodia de origen (inglés):** ritmo, entonación y articulación que el personaje conserva de su primera comunidad lingüística al hablar inglés. Se dirige en interpretación y audio; nunca se imita mediante faltas, gramática rota u ortografía fonética.
+- **Castellano del elenco maestro:** variedad **latinoamericana** de formación (léxico, sintaxis, tratamientos, ritmo regional). En las viñetas y refs de español **no** se arrastra el acento de otra lengua (mandarín, germánico, británico, hindi, francés, igbo, etc.): el castellano suena a la región donde lo aprendió.
+- **Formación lingüística** = lugar y comunidad donde el personaje aprendió a usar inglés o español de manera habitual.
+- **Diálogo escrito** = combinación sutil de variedad aprendida, relación entre hablantes y presión dramática. La relación y la intención de la escena prevalecen sobre tics mecánicos: una variedad no obliga a usar siempre el mismo tratamiento ni a insertar localismos.
 - **Género:** confirmado por el texto existente en la mayoría de los casos; marcado como "sin confirmar" donde el material previo no lo especifica — ajustable sin tocar el resto del perfil.
 
 **Regla bilingüe:** editar primero el diálogo español y ajustar el inglés hermano en el mismo pase. El objetivo no es traducir modismos literalmente, sino conservar intención, jerarquía, precisión técnica y personalidad mediante la variedad propia de cada idioma.
@@ -54,7 +55,7 @@
 
 - **Timbre:** mezzo cálida, rango de alturas amplio y expresivo, resonancia adelante en la máscara (voz que proyecta, hecha para aulas).
 - **Inglés — Montréal (`en-CA`):** formó su inglés canadiense en un entorno francófono de Montréal. Conserva una inflexión francesa suave y dicción deliberadamente clara; usa contracciones naturales y preguntas que abren ideas, con elecciones semánticas propias de una lingüista.
-- **Español — Madrid (`es-ES`):** formó su español académico en Madrid. Usa un español peninsular culto y expresivo; alterna `tú`, `usted` y, cuando corresponda, `vosotros` según relación y situación, sin convertir la variedad en exhibición de localismos.
+- **Español — Santiago del Estero (`es-AR`):** formó su español académico en el noroeste argentino (Santiago del Estero). Usa un castellano argentino interior claro y expresivo, con ll/y menos rehiladas que el porteño; alterna `vos` y `usted` según relación, sin exhibir localismos ni arrastrar inflexión francesa al castellano.
 - **Nota de continuidad:** su escena breve con Zao (quince segundos, sobre una traducción Velari) debería sonar genuinamente relajada — es el contraste de referencia antes de la acusación, que le endurece la voz por el resto de la historia.
 
 ### LT. CMDR. DARA OKOYE — Jefa de Seguridad
@@ -62,7 +63,7 @@
 
 - **Timbre:** contralto firme, resonancia de pecho marcada y ataque directo. Sus órdenes son entrenadas y precisas, nunca teatrales; el conflicto aparece en pausas mínimas antes de recuperar la autoridad.
 - **Inglés — Enugu (`en-NG`):** formó su inglés educado en Enugu, dentro de un entorno igbo. Conserva ritmo silábico, consonantes muy claras y cierres descendentes; da órdenes inequívocas y expresa duda mediante una pausa o una pregunta exacta.
-- **Español — Malabo (`es-GQ`):** formó su español formal en Malabo. Usa español ecuatoguineano directo, plenamente gramatical, con verbos operativos y tratamientos respetuosos; mantiene la inflexión igbo sin errores inventados ni caricatura fonética.
+- **Español — Caracas (`es-VE`):** formó su español operativo en Caracas. Usa español venezolano directo y plenamente gramatical, con verbos operativos, tratamientos respetuosos y cadencia caribeña contenida; sin inflexión igbo ni caricatura fonética en el castellano.
 - **Nota de continuidad:** frente a una apelación personal de Harlan, una pausa mínima puede revelar conflicto; la respuesta recupera enseguida la firmeza porque la decisión se expresa mediante la acción, no mediante exposición.
 
 ---

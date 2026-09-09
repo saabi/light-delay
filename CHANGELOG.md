@@ -1,5 +1,25 @@
 # Changelog
 
+## 2026-09-09 — Refs ES latinoamericanas (timbre EN × donantes)
+
+- Castellano del elenco maestro: solo variedades latinoamericanas; sin acento L1
+  extranjero en viñetas ES. Sorell → Santiago del Estero; Okoye → Caracas.
+- Biblia, `voice-profiles`, master, casts y pipeline docs sincronizados.
+- Pipeline `pipeline-spanish-latam-regional-qwen.py`: donantes ES × timbre EN;
+  pools en `…/es-accents/latam-regional/`.
+- Curaduría promovida a `static/assets/voices/es/` (Zao m-02 5th, Voss m-01 5th,
+  Harlan weather-03 3rd, Elin m-00 4th, Sorell proxy-03 4th, Okoye m-02 5th).
+- Regen del dual de audiencia ES (diálogo Qwen; narrador Kokoro reutilizado).
+
+## 2026-09-06 — Giro remoto y cuarta caída de gravedad
+
+- El master sube a rev. 16 / `0.5.2-wip` y añade `C10b`: corte de empuje,
+  microgravedad y giro de 180° a mitad del trayecto lejano antes de frenar.
+- La caída de gravedad del clímax queda correctamente identificada como la
+  cuarta; los exports y relatos textuales ES/EN se sincronizan con 58 beats.
+- Los duales de audiencia rev. 15 no se regeneran y quedan marcados como
+  desactualizados en el catálogo local de audio.
+
 ## 2026-09-06 — Tomas estables por audience-dialogue-id
 
 - Overlays y `replacements.json` se keyean por `stableDialogueId`; stale =

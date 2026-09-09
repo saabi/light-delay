@@ -52,27 +52,49 @@ python scripts/download-native-language-donors.py
 ```
 
 L1 map: Zao←Mandarin, Voss←German, Harlan←British English, Elin←Hindi,
-Sorell←French, Okoye←Igbo.
+Sorell←French, Okoye←Igbo (**English / historical native-L1 only**).
 
-## 3. Native-L1 candidates (Seed-VC V2 + Qwen ICL)
+## 3. Latin American Spanish refs (current)
+
+Cast Spanish refs do **not** use foreign L1 prosody. Timbre =
+`static/assets/voices/en/{Character}.wav`; prosody =
+`E:/Models/voice-donors/es/{accent}/`.
+
+| Character | Variety | Donor folder |
+|-----------|---------|--------------|
+| Zao | Bogotá | `colombian-bogota` |
+| Voss | Lima | `peruvian-lima` |
+| Harlan | Buenos Aires | `rioplatense` |
+| Elin | Medellín (Bogotá proxy) | `colombian-bogota` |
+| Sorell | Santiago del Estero | `santiago-del-estero` |
+| Okoye | Caracas | `venezuelan` |
+
+```powershell
+E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/pipeline-spanish-latam-regional-qwen.py --seedvc-only
+python scripts/pipeline-spanish-latam-regional-qwen.py --qwen-only
+# After curating: --promote --character Zao --take path\to\finalist.wav
+```
+
+Output: `…/es-accents/latam-regional/`. Qwen ES instruct = regional Latin American,
+no “light L1 colour”. Native-L1 ES and selected-slow remain local archive only.
+
+## 3b. Native-L1 candidates (EN still; ES superseded by §3)
 
 Canonical knobs (see JSON): V2 `convert_style=false`, intel `0.90`, sim `0.55`,
 steps `35`; Qwen **ICL** (`x_vector_only=false` + Whisper of each `*_v2.wav`),
 temp `0.82`, top_p `0.90`, expressive language instruct (+ prefix on per-line `[QwenInstruct]`).
 Dialogue uses `dialogueSpeed` `0.85` (EN+ES), `dialogueTailMs` 220, `max_new_tokens` 3072,
-and completion-oriented instruct. ES also softens L1 accent; EN keeps curated accents.
+and completion-oriented instruct. EN may keep curated L1 colour; ES uses §3 instead.
 
 ```powershell
-E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/pipeline-spanish-native-l1-v2-qwen.py --seedvc-only
-python scripts/pipeline-spanish-native-l1-v2-qwen.py --qwen-only
-
 E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/pipeline-english-native-l1-v2-qwen.py --seedvc-only
 python scripts/pipeline-english-native-l1-v2-qwen.py --qwen-only
 ```
 
-Promote chosen finalists into `static/assets/voices/{lang}/`.
-**Current (2026-09-05):** six EN + six ES native-L1 ICL takes promoted; see
-`selection.json` (Okoye ES = Igbo L1).
+Promote chosen EN finalists into `static/assets/voices/en/`.
+**Current (2026-09-09):** EN = selected-slow-v2 / native-L1. ES = LatAm regional
+(donors × EN timbre) after promotion from `latam-regional/`. See each
+`selection.json`. The ES dual may still use older L1 refs until regenerated.
 
 ## 4. Imitation pass (Seed-VC SVC / F0)
 

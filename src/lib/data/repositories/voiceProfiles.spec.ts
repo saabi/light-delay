@@ -7,8 +7,8 @@ const expectedLocales = {
 	'character:rao': { es: 'es-CO', en: 'en-IN' },
 	'character:harlan': { es: 'es-AR', en: 'en-GB' },
 	'character:voss': { es: 'es-PE', en: 'en-CA' },
-	'character:sorell': { es: 'es-ES', en: 'en-CA' },
-	'character:okoye': { es: 'es-GQ', en: 'en-NG' }
+	'character:sorell': { es: 'es-AR', en: 'en-CA' },
+	'character:okoye': { es: 'es-VE', en: 'en-NG' }
 } as const;
 
 describe('master-cast dialogue direction', () => {

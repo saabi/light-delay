@@ -1,102 +1,120 @@
 {
   "selectedDir": "static/assets/voices/es",
-  "note": "Selected-slow-v2: slower ICL from prior native-L1 selected refs; ES L1 accents softened. Okoye=Igbo L1. Cael not in this set.",
-  "engine": "selected-slow-v2 (ICL reclone from prior selected)",
+  "note": "LatAm regional: EN timbre × voice-donors/es accents. No foreign L1 colour in Spanish. Dual regen is a separate pass.",
+  "engine": "latam-regional (Seed-VC paint + Qwen ICL)",
   "phrase": "Los sistemas de la nave están estables. Propulsión, guiado y comunicaciones en orden. Mantendremos la aceleración prevista y el calendario de contacto.",
   "mapping": [
     {
-      "file": "Zao.wav",
-      "character": "Zao",
-      "l1": "mandarin",
-      "formation_es": "Bogotá",
-      "source": "es-accents/selected-slow-v2/Zao.wav",
-      "priorSource": "es-accents/native-l1-v2/finalists/Zao/native-02__Zao_v2_qwen-es.wav"
-    },
-    {
-      "file": "Voss.wav",
-      "character": "Voss",
-      "l1": "german",
-      "formation_es": "Lima",
-      "source": "es-accents/selected-slow-v2/Voss.wav",
-      "priorSource": "es-accents/native-l1-v2/finalists/Voss/native-03__Voss_v2_qwen-es.wav"
-    },
-    {
-      "file": "Harlan.wav",
-      "character": "Harlan",
-      "l1": "british-english",
-      "formation_es": "Buenos Aires",
-      "source": "es-accents/selected-slow-v2/Harlan.wav",
-      "priorSource": "es-accents/native-l1-v2/finalists/Harlan/native-03__Harlan_v2_qwen-es.wav"
-    },
-    {
       "file": "Elin.wav",
       "character": "Elin",
-      "l1": "hindi",
-      "formation_es": "Medellín",
-      "source": "es-accents/selected-slow-v2/Elin.wav",
-      "priorSource": "es-accents/native-l1-v2/finalists/Elin/native-03__Elin_v2_qwen-es.wav"
+      "accent": "colombian-bogota",
+      "variety": "Medellín Paisa (Bogotá donor proxy)",
+      "source": "es-accents/latam-regional/finalists/Elin/openslr-co-m-00__Elin_4th_pass_qwen-es.wav",
+      "timbre": "en/Elin.wav"
     },
     {
       "file": "Sorell.wav",
       "character": "Sorell",
-      "l1": "french",
-      "formation_es": "Madrid",
-      "source": "es-accents/selected-slow-v2/Sorell.wav",
-      "priorSource": "es-accents/native-l1-v2/finalists/Sorell/native-02__Sorell_v2_qwen-es.wav"
+      "accent": "santiago-del-estero",
+      "variety": "Santiago del Estero Argentine",
+      "source": "es-accents/latam-regional/finalists/Sorell/openslr-ar-proxy-m-03__Sorell_4th_pass_qwen-es.wav",
+      "timbre": "en/Sorell.wav"
+    },
+    {
+      "file": "Voss.wav",
+      "character": "Voss",
+      "accent": "peruvian-lima",
+      "variety": "Lima Peruvian",
+      "source": "es-accents/latam-regional/finalists/Voss/openslr-pe-m-01__Voss_5th_pass_qwen-es.wav",
+      "timbre": "en/Voss.wav"
+    },
+    {
+      "file": "Harlan.wav",
+      "character": "Harlan",
+      "accent": "rioplatense",
+      "variety": "Buenos Aires Rioplatense",
+      "source": "es-accents/latam-regional/finalists/Harlan/openslr61-weather-03__Harlan_3rd_pass_qwen-es.wav",
+      "timbre": "en/Harlan.wav"
+    },
+    {
+      "file": "Zao.wav",
+      "character": "Zao",
+      "accent": "colombian-bogota",
+      "variety": "Bogotá Colombian",
+      "source": "es-accents/latam-regional/finalists/Zao/openslr-co-m-02__Zao_5th_pass_qwen-es.wav",
+      "timbre": "en/Zao.wav"
     },
     {
       "file": "Okoye.wav",
       "character": "Okoye",
-      "l1": "igbo",
-      "formation_es": "Malabo",
-      "source": "es-accents/selected-slow-v2/Okoye.wav",
-      "priorSource": "es-accents/native-l1-v2/finalists/Okoye/native-01__Okoye_v2_qwen-es.wav"
+      "accent": "venezuelan",
+      "variety": "Caracas Venezuelan",
+      "source": "es-accents/latam-regional/finalists/Okoye/openslr-ve-m-02__Okoye_5th_pass_qwen-es.wav",
+      "timbre": "en/Okoye.wav"
     }
   ],
   "refTextPath": "static/assets/voices/es/REF_TEXT.txt",
   "characters": {
     "Elin": {
       "selectedFile": "Elin.wav",
-      "source": "selected-slow-v2",
-      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\selected-slow-v2\\Elin.wav",
-      "promotedAt": "2026-09-06T04:21:34.129360+00:00",
-      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+      "source": "latam-regional",
+      "accent": "colombian-bogota",
+      "variety": "Medellín Paisa (Bogotá donor proxy)",
+      "timbre": "static/assets/voices/en/Elin.wav",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\latam-regional\\finalists\\Elin\\openslr-co-m-00__Elin_4th_pass_qwen-es.wav",
+      "promotedAt": "2026-09-09T21:03:05Z",
+      "note": "Latin American regional Spanish; EN timbre; no foreign L1 in ES."
     },
     "Harlan": {
       "selectedFile": "Harlan.wav",
-      "source": "selected-slow-v2",
-      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\selected-slow-v2\\Harlan.wav",
-      "promotedAt": "2026-09-06T04:21:34.130324+00:00",
-      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+      "source": "latam-regional",
+      "accent": "rioplatense",
+      "variety": "Buenos Aires Rioplatense",
+      "timbre": "static/assets/voices/en/Harlan.wav",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\latam-regional\\finalists\\Harlan\\openslr61-weather-03__Harlan_3rd_pass_qwen-es.wav",
+      "promotedAt": "2026-09-09T21:03:06Z",
+      "note": "Latin American regional Spanish; EN timbre; no foreign L1 in ES."
     },
     "Okoye": {
       "selectedFile": "Okoye.wav",
-      "source": "selected-slow-v2",
-      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\selected-slow-v2\\Okoye.wav",
-      "promotedAt": "2026-09-06T04:21:34.131322+00:00",
-      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+      "source": "latam-regional",
+      "accent": "venezuelan",
+      "variety": "Caracas Venezuelan",
+      "timbre": "static/assets/voices/en/Okoye.wav",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\latam-regional\\finalists\\Okoye\\openslr-ve-m-02__Okoye_5th_pass_qwen-es.wav",
+      "promotedAt": "2026-09-09T21:03:06Z",
+      "note": "Latin American regional Spanish; EN timbre; no foreign L1 in ES."
     },
     "Sorell": {
       "selectedFile": "Sorell.wav",
-      "source": "selected-slow-v2",
-      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\selected-slow-v2\\Sorell.wav",
-      "promotedAt": "2026-09-06T04:21:34.132326+00:00",
-      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+      "source": "latam-regional",
+      "accent": "santiago-del-estero",
+      "variety": "Santiago del Estero Argentine",
+      "timbre": "static/assets/voices/en/Sorell.wav",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\latam-regional\\finalists\\Sorell\\openslr-ar-proxy-m-03__Sorell_4th_pass_qwen-es.wav",
+      "promotedAt": "2026-09-09T21:03:05Z",
+      "note": "Latin American regional Spanish; EN timbre; no foreign L1 in ES."
     },
     "Voss": {
       "selectedFile": "Voss.wav",
-      "source": "selected-slow-v2",
-      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\selected-slow-v2\\Voss.wav",
-      "promotedAt": "2026-09-06T04:21:34.133307+00:00",
-      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+      "source": "latam-regional",
+      "accent": "peruvian-lima",
+      "variety": "Lima Peruvian",
+      "timbre": "static/assets/voices/en/Voss.wav",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\latam-regional\\finalists\\Voss\\openslr-pe-m-01__Voss_5th_pass_qwen-es.wav",
+      "promotedAt": "2026-09-09T21:03:05Z",
+      "note": "Latin American regional Spanish; EN timbre; no foreign L1 in ES."
     },
     "Zao": {
       "selectedFile": "Zao.wav",
-      "source": "selected-slow-v2",
-      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\selected-slow-v2\\Zao.wav",
-      "promotedAt": "2026-09-06T04:21:34.134368+00:00",
-      "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+      "source": "latam-regional",
+      "accent": "colombian-bogota",
+      "variety": "Bogotá Colombian",
+      "timbre": "static/assets/voices/en/Zao.wav",
+      "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\es-accents\\latam-regional\\finalists\\Zao\\openslr-co-m-02__Zao_5th_pass_qwen-es.wav",
+      "promotedAt": "2026-09-09T21:03:06Z",
+      "note": "Latin American regional Spanish; EN timbre; no foreign L1 in ES."
     }
   },
-  "updated": "2026-09-06T04:21:34.134395+00:00"
+  "updated": "2026-09-09T21:03:06Z"
 }

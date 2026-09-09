@@ -69,10 +69,35 @@ python scripts/download-native-language-donors.py
 # → E:\Models\voice-donors\native\{lang}\native-00..03.wav
 ```
 
-Mapa L1 → personaje: Zao←mandarín, Voss←alemán, Harlan←británico, Elin←hindi,
-Sorell←francés, Okoye←igbo.
+Mapa L1 → personaje **(sólo inglés / native-L1 histórico):** Zao←mandarín, Voss←alemán,
+Harlan←británico, Elin←hindi, Sorell←francés, Okoye←igbo.
 
-## 3. Generar candidatos native-L1 (Seed-VC V2 + Qwen ICL)
+## 3. Refs ES latinoamericanas (vigente)
+
+Las refs castellanas del elenco **no** usan prosodia L1 extranjera. Timbre =
+`static/assets/voices/en/{Character}.wav`; prosodia = donantes
+`E:/Models/voice-donors/es/{accent}/`.
+
+| Personaje | Variedad | Donante |
+|-----------|----------|---------|
+| Zao | Bogotá | `colombian-bogota` |
+| Voss | Lima | `peruvian-lima` |
+| Harlan | Buenos Aires | `rioplatense` |
+| Elin | Medellín (proxy Bogotá) | `colombian-bogota` |
+| Sorell | Santiago del Estero | `santiago-del-estero` |
+| Okoye | Caracas | `venezuelan` |
+
+```powershell
+E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/pipeline-spanish-latam-regional-qwen.py --seedvc-only
+python scripts/pipeline-spanish-latam-regional-qwen.py --qwen-only
+# Tras curar: --promote --character Zao --take path\to\finalist.wav
+```
+
+Salida: `…/es-accents/latam-regional/`. Instruct Qwen ES = acento regional latino,
+sin «light L1 colour». Native-L1 ES y selected-slow quedan como archivo local, no
+como autoridad de refs.
+
+## 3b. Generar candidatos native-L1 (histórico EN; ES sustituido por §3)
 
 Knobs canónicos (`qwen-icl-clone-defaults.json`):
 
@@ -85,27 +110,26 @@ Knobs canónicos (`qwen-icl-clone-defaults.json`):
 | Qwen Base | `x_vector_only` | **`false`** (ICL; `true` borra `ref_code`) |
 | | `ref_text` | Whisper-medium del `*_v2.wav` |
 | | `temperature` / `top_p` | `0.82` / `0.90` |
-| | instruct | expresivo + acento L1 suave (ES); prefijo en cues con `[QwenInstruct]` |
+| | instruct | expresivo; EN puede conservar color L1 suave |
 | | `max_new_tokens` / cola | `3072` / `dialogueTailMs` 220 (anti-corte de finales) |
 | | `repetition_penalty` | `1.05` |
 
 ```powershell
-# Español
-E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/pipeline-spanish-native-l1-v2-qwen.py --seedvc-only
-python scripts/pipeline-spanish-native-l1-v2-qwen.py --qwen-only
-
-# Inglés
+# Inglés (sigue vigente para pools L1 EN)
 E:\Models\Seed-VC\.venv\Scripts\python.exe scripts/pipeline-english-native-l1-v2-qwen.py --seedvc-only
 python scripts/pipeline-english-native-l1-v2-qwen.py --qwen-only
+
+# Español native-L1: histórico; usar §3 LatAm en su lugar
 ```
 
-Pools de curaduría: `…/native-l1-v2/finalists/{Character}/`. Tras elegir una toma,
-copiarla a `static/assets/voices/{lang}/{Character}.wav` y actualizar
+Pools EN: `…/en-accents/native-l1-v2/finalists/{Character}/`. Tras elegir una toma,
+copiarla a `static/assets/voices/en/{Character}.wav` y actualizar
 `selection.json` / casts. Si el WAV ya no dice la frase de `REF_TEXT.txt`, dejar
 sidecar `{stem}_whisper.txt` o regenerar Whisper al renderizar (`--whisper-ref-text`).
 
-**Estado actual (2026-09-05):** las seis tomas EN y ES ya están promocionadas en
-`static/assets/voices/{en,es}/` (Okoye ES = Igbo L1). Ver cada `selection.json`.
+**Estado actual (2026-09-09):** EN = selected-slow-v2 / native-L1. ES = LatAm regional
+(donantes × timbre EN) tras promoción desde `latam-regional/`. Ver cada
+`selection.json`. El dual ES puede seguir en refs L1 antiguas hasta regenerarlo.
 
 ## 4. Pase de imitación (Seed-VC SVC / F0)
 

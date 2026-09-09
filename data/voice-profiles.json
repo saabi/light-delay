@@ -18,8 +18,8 @@
 						"variety": { "es": "español bogotano formal y técnico", "en": "formal, technical Bogotá Spanish" }
 					},
 					"prosody": {
-						"es": "Conserva una base prosódica de mandarín: consonantes marcadas, ritmo contenido y finales de frase descendentes.",
-						"en": "She retains Mandarin-based prosody: marked consonants, controlled rhythm, and falling phrase endings."
+						"es": "Español bogotano claro: consonantes definidas, ritmo contenido y finales de frase descendentes, sin arrastrar acento de otra lengua.",
+						"en": "Clear Bogotá Spanish: defined consonants, controlled rhythm, and falling phrase endings, without carrying another language’s accent."
 					},
 					"dialogueStyle": {
 						"es": "Preciso, sobrio y poco idiomático. Prefiere usted en relaciones profesionales, términos técnicos exactos y frases completas; bajo presión recorta la sintaxis sin perder claridad.",
@@ -61,8 +61,8 @@
 						"variety": { "es": "español limeño formal e institucional", "en": "formal, institutional Lima Spanish" }
 					},
 					"prosody": {
-						"es": "La prosodia germánica o nórdica permanece en vocales muy definidas, consonantes firmes, pausas regulares y cierres descendentes.",
-						"en": "Germanic or Nordic prosody remains in sharply defined vowels, firm consonants, even pauses, and falling endings."
+						"es": "Español limeño institucional: vocales definidas, consonantes firmes, pausas regulares y cierres descendentes, sin inflexión germánica ni nórdica en el castellano.",
+						"en": "Institutional Lima Spanish: defined vowels, firm consonants, even pauses, and falling endings, without Germanic or Nordic inflection in Spanish."
 					},
 					"dialogueStyle": {
 						"es": "Registro institucional, instrucciones ordenadas y pocas muletillas. Usa usted al ejercer mando, pero puede tutear a colegas de confianza; la jerarquía y la relación dramática mandan sobre una regla fija de tratamiento.",
@@ -104,8 +104,8 @@
 						"variety": { "es": "español rioplatense porteño", "en": "Buenos Aires Rioplatense Spanish" }
 					},
 					"prosody": {
-						"es": "La base británica permanece en el control de consonantes y la cadencia de oficial; la musicalidad porteña aparece sin tapar ese origen.",
-						"en": "His British base remains in controlled consonants and officer cadence; Buenos Aires musicality appears without masking that origin."
+						"es": "Rioplatense porteño: control consonántico claro, cadencia de oficial y musicalidad porteña, sin base británica audible en el castellano.",
+						"en": "Buenos Aires Rioplatense: clear consonant control, officer cadence, and porteño musicality, without an audible British base in Spanish."
 					},
 					"dialogueStyle": {
 						"es": "Voseo natural y sobrio, con ironía porteña contenida. Usa formulaciones pulidas para convertir su ideología en sentido común; al perder control acorta frases y deja aflorar el imperativo.",
@@ -147,8 +147,8 @@
 						"variety": { "es": "español paisa profesional y urbano", "en": "professional urban Paisa Spanish" }
 					},
 					"prosody": {
-						"es": "Conserva una inflexión de India meridional, con consonantes suaves, ritmo silábico y leves ascensos cuando duda.",
-						"en": "She retains a South Indian inflection, with soft consonants, syllable timing, and slight rises when uncertain."
+						"es": "Paisa urbano contenido: consonantes suaves, ritmo silábico cercano y leves ascensos cuando duda, sin inflexión del sur de India en el castellano.",
+						"en": "Restrained urban Paisa: soft consonants, close syllable timing, and slight rises when uncertain, without South Indian inflection in Spanish."
 					},
 					"dialogueStyle": {
 						"es": "Español colombiano cercano pero contenido. Puede alternar usted y formas informales según confianza; socialmente deja frases incompletas, mientras que al explicar sistemas elimina rodeos y encadena diagnósticos breves.",
@@ -184,18 +184,18 @@
 			"variants": [
 				{
 					"language": "es",
-					"locale": "es-ES",
+					"locale": "es-AR",
 					"languageFormation": {
-						"place": { "es": "Madrid, España", "en": "Madrid, Spain" },
-						"variety": { "es": "español peninsular académico de Madrid", "en": "academic Peninsular Spanish from Madrid" }
+						"place": { "es": "Santiago del Estero, Argentina", "en": "Santiago del Estero, Argentina" },
+						"variety": { "es": "español argentino del noroeste, académico y claro", "en": "clear academic Northwestern Argentine Spanish" }
 					},
 					"prosody": {
-						"es": "Conserva una inflexión francesa: erres suavizadas, entonación musical y cuidado particular de la articulación.",
-						"en": "She retains a French inflection: softened r sounds, musical intonation, and particular care with articulation."
+						"es": "Castellano santiagueño claro: ll/y menos rehiladas que el porteño, entonación expresiva y articulación cuidada, sin inflexión francesa en el castellano.",
+						"en": "Clear Santiago del Estero Spanish: less rehilado ll/y than Buenos Aires, expressive intonation, and careful articulation, without French inflection in Spanish."
 					},
 					"dialogueStyle": {
-						"es": "Español peninsular culto y expresivo. Usa tú con cercanos, usted en situaciones ceremoniales y vosotros sólo cuando el destinatario plural lo vuelve natural; evita coloquialismos cerrados y formula metáforas con precisión lingüística.",
-						"en": "Cultivated, expressive Peninsular Spanish. She uses tú with close colleagues, usted ceremonially, and vosotros only when a plural audience makes it natural; she avoids opaque slang and formulates metaphors with linguistic precision."
+						"es": "Español argentino interior culto y expresivo. Alterna vos y usted según relación; evita coloquialismos cerrados y formula metáforas con precisión lingüística.",
+						"en": "Cultivated, expressive interior Argentine Spanish. She alternates vos and usted according to relationship; she avoids opaque slang and formulates metaphors with linguistic precision."
 					},
 					"pronunciationMap": { "Sorell": "Sorél" }
 				},
@@ -285,18 +285,18 @@
 			"variants": [
 				{
 					"language": "es",
-					"locale": "es-GQ",
+					"locale": "es-VE",
 					"languageFormation": {
-						"place": { "es": "Malabo, Guinea Ecuatorial", "en": "Malabo, Equatorial Guinea" },
-						"variety": { "es": "español ecuatoguineano formal de Malabo", "en": "formal Equatoguinean Spanish from Malabo" }
+						"place": { "es": "Caracas, Venezuela", "en": "Caracas, Venezuela" },
+						"variety": { "es": "español venezolano formal de Caracas", "en": "formal Venezuelan Spanish from Caracas" }
 					},
 					"prosody": {
-						"es": "Conserva una inflexión nigeriana, preferentemente igbo: ritmo silábico claro, consonantes definidas y entonación firme y descendente.",
-						"en": "She retains a Nigerian, preferably Igbo, inflection: clear syllable timing, defined consonants, and firm falling intonation."
+						"es": "Español caraqueño operativo: ritmo silábico claro, consonantes definidas y entonación firme y descendente, sin inflexión igbo en el castellano.",
+						"en": "Operational Caracas Spanish: clear syllable timing, defined consonants, and firm falling intonation, without Igbo inflection in Spanish."
 					},
 					"dialogueStyle": {
-						"es": "Español ecuatoguineano formal, directo y plenamente gramatical. Prefiere órdenes breves, verbos operativos y tratamientos respetuosos; no se representa el acento con errores ni ortografía fonética.",
-						"en": "Formal, direct, fully grammatical Equatoguinean Spanish. She favors brief commands, operational verbs, and respectful forms of address; her accent is never represented through errors or phonetic spelling."
+						"es": "Español venezolano formal, directo y plenamente gramatical. Prefiere órdenes breves, verbos operativos y tratamientos respetuosos; no se representa el acento con errores ni ortografía fonética.",
+						"en": "Formal, direct, fully grammatical Venezuelan Spanish. She favors brief commands, operational verbs, and respectful forms of address; her accent is never represented through errors or phonetic spelling."
 					}
 				},
 				{

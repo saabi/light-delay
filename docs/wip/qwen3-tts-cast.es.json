@@ -1,7 +1,7 @@
 {
   "workflow": {
     "phase": "dual-render-es",
-    "note": "Spanish dual outline: direction comes from data/voice-profiles.json. These selected refs were chosen before the location-specific language profiles were formalized and require human reevaluation against Bogotá, Lima, Buenos Aires, Medellín, Madrid and Malabo respectively. Same ICL knobs as EN (docs/wip/qwen-icl-clone-defaults.json). REF_TEXT.txt must match the spoken phrase in each curated WAV, or use Whisper sidecars."
+    "note": "Spanish dual outline: direction comes from data/voice-profiles.json. ES refs are Latin American regional (donors × EN timbre); no foreign L1 accent in Spanish. Regions: Bogotá, Lima, Buenos Aires, Medellín (proxy Bogotá donors), Santiago del Estero, Caracas. Same ICL knobs as EN (docs/wip/qwen-icl-clone-defaults.json). REF_TEXT.txt must match the spoken phrase in each curated WAV, or use Whisper sidecars."
   },
   "models": {
     "voiceDesign": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
@@ -28,33 +28,33 @@
   "characters": {
     "Zao": {
       "selectedRef": "static/assets/voices/es/Zao.wav",
-      "sourceCandidate": "es-accents/selected-slow-v2/Zao.wav",
-      "instruct": "Contralto funcional con prosodia de mandarín y español profesional aprendido en Bogotá: formal, técnico, preciso, con usted cuando la relación lo pide; natural y sin caricatura fonética."
+      "sourceCandidate": "es-accents/latam-regional/finalists/Zao/openslr-co-m-02__Zao_5th_pass_qwen-es.wav",
+      "instruct": "Contralto funcional con español bogotano formal y técnico: preciso, con usted cuando la relación lo pide; natural y sin caricatura fonética ni acento de otra lengua."
     },
     "Voss": {
       "selectedRef": "static/assets/voices/es/Voss.wav",
-      "sourceCandidate": "es-accents/selected-slow-v2/Voss.wav",
-      "instruct": "Barítono de mando con prosodia germánica o nórdica y español institucional aprendido en Lima: instrucciones ordenadas, pausas deliberadas y tratamiento según jerarquía y confianza."
+      "sourceCandidate": "es-accents/latam-regional/finalists/Voss/openslr-pe-m-01__Voss_5th_pass_qwen-es.wav",
+      "instruct": "Barítono de mando con español limeño institucional: instrucciones ordenadas, pausas deliberadas y tratamiento según jerarquía y confianza; sin inflexión germánica en el castellano."
     },
     "Harlan": {
       "selectedRef": "static/assets/voices/es/Harlan.wav",
-      "sourceCandidate": "es-accents/selected-slow-v2/Harlan.wav",
-      "instruct": "Barítono filoso con base británica y español rioplatense aprendido en Buenos Aires: voseo sobrio, ironía contenida, formulación pulida y amenaza nunca caricaturesca."
+      "sourceCandidate": "es-accents/latam-regional/finalists/Harlan/openslr61-weather-03__Harlan_3rd_pass_qwen-es.wav",
+      "instruct": "Barítono filoso con español rioplatense de Buenos Aires: voseo sobrio, ironía contenida, formulación pulida y amenaza nunca caricaturesca; sin base británica en el castellano."
     },
     "Elin": {
       "selectedRef": "static/assets/voices/es/Elin.wav",
-      "sourceCandidate": "es-accents/selected-slow-v2/Elin.wav",
-      "instruct": "Mezzo ligera con prosodia del sur de India y español profesional aprendido en Medellín: paisa urbano contenido, vacilante en lo social y breve, directo y concluyente al analizar sistemas."
+      "sourceCandidate": "es-accents/latam-regional/finalists/Elin/openslr-co-m-00__Elin_4th_pass_qwen-es.wav",
+      "instruct": "Mezzo ligera con español paisa profesional de Medellín: urbano contenido, vacilante en lo social y breve, directo y concluyente al analizar sistemas; sin inflexión del sur de India en el castellano."
     },
     "Sorell": {
       "selectedRef": "static/assets/voices/es/Sorell.wav",
-      "sourceCandidate": "es-accents/selected-slow-v2/Sorell.wav",
-      "instruct": "Mezzo cálida con prosodia francesa y español académico aprendido en Madrid: peninsular culto, expresivo y semánticamente preciso, con tratamientos naturales según la relación."
+      "sourceCandidate": "es-accents/latam-regional/finalists/Sorell/openslr-ar-proxy-m-03__Sorell_4th_pass_qwen-es.wav",
+      "instruct": "Mezzo cálida con español argentino del noroeste (Santiago del Estero): claro, expresivo y semánticamente preciso, con vos/usted según la relación; sin inflexión francesa en el castellano."
     },
     "Okoye": {
       "selectedRef": "static/assets/voices/es/Okoye.wav",
-      "sourceCandidate": "es-accents/selected-slow-v2/Okoye.wav",
-      "instruct": "Contralto firme con prosodia igbo y español formal aprendido en Malabo: ecuatoguineano directo, plenamente gramatical, órdenes inequívocas y ninguna imitación fonética del acento."
+      "sourceCandidate": "es-accents/latam-regional/finalists/Okoye/openslr-ve-m-02__Okoye_5th_pass_qwen-es.wav",
+      "instruct": "Contralto firme con español venezolano formal de Caracas: directo, plenamente gramatical, órdenes inequívocas y ninguna imitación fonética de otra lengua."
     }
   }
 }
