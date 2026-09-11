@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-09-09 — Studio: regenerar con Qwen3-TTS
+
+- El Studio añade modo paralelo a Seed-VC: regenerar un cue grabable con
+  Qwen3-TTS Base (ICL, `x_vector_only=false`) sin micrófono.
+- Knobs editables: temperatura, top-p/k, max tokens, repetition penalty,
+  dirección de línea, prefijo de expresividad e instruct por defecto
+  (semilla desde `docs/wip/qwen-icl-clone-defaults.json`).
+- Worker: `POST /v1/imitation/.../regenerate` y `POST /prepare-qwen`; carga
+  perezosa de Qwen aparte de Seed-VC; tomas con `engine: qwen-clone`.
+- Si el worker corre en el venv Seed-VC (sin `qwen_tts`), arranca un sidecar
+  con el Python del sistema (`LIGHT_DELAY_QWEN_PYTHON` opcional).
+- Acción **Purgar tomas huérfanas**: borra tomas de overlay no aceptadas
+  (`POST …/purge-takes`); conserva pointers de `replacements.json`.
+- Ayuda `?` por parámetro Qwen en el Studio (textos ES/EN desde Paraglide).
+
 ## 2026-09-09 — Refs ES latinoamericanas (timbre EN × donantes)
 
 - Castellano del elenco maestro: solo variedades latinoamericanas; sin acento L1

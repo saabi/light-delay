@@ -1,5 +1,7 @@
 export type StudioModelState = 'unloaded' | 'loading' | 'ready' | 'error';
 
+export type StudioEngineMode = 'seedvc' | 'qwen';
+
 export type StudioMachineState =
 	| 'offline'
 	| 'loading'
@@ -68,8 +70,30 @@ export type StudioTimeline = {
 	sampleRate: number;
 	modelState: StudioModelState;
 	modelError?: string | null;
+	qwenModelState?: StudioModelState;
+	qwenModelError?: string | null;
 	python?: string;
 	cues: StudioCue[];
+};
+
+export type QwenLangDefaults = {
+	engine: string;
+	x_vector_only: boolean;
+	temperature: number;
+	top_p: number;
+	top_k: number;
+	max_new_tokens: number;
+	repetition_penalty: number;
+	non_streaming_mode: boolean;
+	defaultInstruct: string;
+	expressivenessPrefix: string;
+	bounds: {
+		temperature?: { min: number; max: number };
+		top_p?: { min: number; max: number };
+		top_k?: { min: number; max: number };
+		max_new_tokens?: { min: number; max: number };
+		repetition_penalty?: { min: number; max: number };
+	};
 };
 
 export type StudioDefaults = {
@@ -84,6 +108,10 @@ export type StudioDefaults = {
 		inference_cfg_rate: number;
 		length_adjust: number;
 	};
+	qwen?: {
+		es: QwenLangDefaults;
+		en: QwenLangDefaults;
+	};
 	bounds: {
 		diffusion_steps?: { min: number; max: number };
 		semi_tone_shift?: { min: number; max: number };
@@ -94,6 +122,8 @@ export type StudioDefaults = {
 	};
 	modelState: StudioModelState;
 	modelError?: string | null;
+	qwenModelState?: StudioModelState;
+	qwenModelError?: string | null;
 	python?: string;
 };
 
@@ -103,4 +133,15 @@ export type ConvertSettings = {
 	diffusionSteps: number;
 	lengthAdjust: number;
 	inferenceCfgRate: number;
+};
+
+export type QwenRegenSettings = {
+	temperature: number;
+	topP: number;
+	topK: number;
+	maxNewTokens: number;
+	repetitionPenalty: number;
+	instruct: string;
+	expressivenessPrefix: string;
+	defaultInstruct: string;
 };

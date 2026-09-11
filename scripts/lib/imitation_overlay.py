@@ -135,6 +135,21 @@ def wav_duration_seconds(path: Path) -> float:
         return frames / float(rate)
 
 
+def _tree_bytes(path: Path) -> int:
+    total = 0
+    if path.is_file():
+        return path.stat().st_size
+    if not path.is_dir():
+        return 0
+    for child in path.rglob("*"):
+        if child.is_file():
+            try:
+                total += child.stat().st_size
+            except OSError:
+                continue
+    return total
+
+
 class OverlayStore:
     def __init__(self, imitation_root: Path) -> None:
         self.root = Path(imitation_root) / "overlays"
@@ -317,6 +332,103 @@ class OverlayStore:
         if dialogue_key in cues:
             del cues[dialogue_key]
             self.save_replacements(output_id, payload)
+
+    def purge_unreferenced_takes(self, output_id: str, *, dry_run: bool = False) -> dict[str, Any]:
+        """Delete take folders that are not the accepted pointer for their dialogue.
+
+        Keeps only ``replacements.json`` → ``cues[*].takeId`` directories. Does not touch
+        canonical dual chunks/MP3 or the replacements file itself. Orphan dialogue
+        folders with no kept takes are removed.
+        """
+        import shutil
+
+        root = self.output_dir(output_id)
+        keep_by_dialogue: dict[str, str] = {}
+        for dialogue_key, row in (self.load_replacements(output_id).get("cues") or {}).items():
+            if not isinstance(row, dict):
+                continue
+            take_id = str(row.get("takeId") or "").strip()
+            if dialogue_key and take_id:
+                keep_by_dialogue[str(dialogue_key)] = take_id
+
+        deleted_takes = 0
+        kept_takes = 0
+        freed_bytes = 0
+        deleted_ids: list[str] = []
+        kept_ids: list[str] = []
+
+        if not root.is_dir():
+            return {
+                "outputId": output_id,
+                "dryRun": dry_run,
+                "deletedTakes": 0,
+                "keptTakes": 0,
+                "freedBytes": 0,
+                "deletedTakeIds": [],
+                "keptTakeIds": [],
+            }
+
+        for dialogue_dir in sorted(root.iterdir()):
+            if not dialogue_dir.is_dir() or dialogue_dir.name.startswith("."):
+                continue
+            if dialogue_dir.name == "replacements.json":
+                continue
+            takes_root = dialogue_dir / "takes"
+            if not takes_root.is_dir():
+                # Empty / leftover dialogue folder with no takes.
+                if not dry_run and not any(dialogue_dir.iterdir()):
+                    dialogue_dir.rmdir()
+                continue
+
+            dialogue_key_for_keep: str | None = None
+            # Resolve stable id from any take metadata so pointer lookup works.
+            for child in takes_root.iterdir():
+                meta_path = child / "metadata.json"
+                if child.is_dir() and meta_path.is_file():
+                    meta = json.loads(meta_path.read_text(encoding="utf-8"))
+                    if isinstance(meta, dict):
+                        dialogue_key_for_keep = str(
+                            meta.get("stableDialogueId") or meta.get("dialogueKey") or ""
+                        ) or None
+                        if dialogue_key_for_keep:
+                            break
+
+            keep_id = (
+                keep_by_dialogue.get(dialogue_key_for_keep or "")
+                if dialogue_key_for_keep
+                else None
+            )
+
+            for child in list(takes_root.iterdir()):
+                if not child.is_dir():
+                    continue
+                take_id = child.name
+                size = _tree_bytes(child)
+                if keep_id and take_id == keep_id:
+                    kept_takes += 1
+                    kept_ids.append(take_id)
+                    continue
+                deleted_takes += 1
+                deleted_ids.append(take_id)
+                freed_bytes += size
+                if not dry_run:
+                    shutil.rmtree(child, ignore_errors=False)
+
+            if not dry_run:
+                if takes_root.is_dir() and not any(takes_root.iterdir()):
+                    takes_root.rmdir()
+                if dialogue_dir.is_dir() and not any(dialogue_dir.iterdir()):
+                    dialogue_dir.rmdir()
+
+        return {
+            "outputId": output_id,
+            "dryRun": dry_run,
+            "deletedTakes": deleted_takes,
+            "keptTakes": kept_takes,
+            "freedBytes": freed_bytes,
+            "deletedTakeIds": deleted_ids,
+            "keptTakeIds": kept_ids,
+        }
 
     def replacement_status(
         self,

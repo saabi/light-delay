@@ -1,4 +1,4 @@
-import type { ConvertSettings, StudioDefaults, StudioTimeline } from './types';
+import type { ConvertSettings, QwenRegenSettings, StudioDefaults, StudioTimeline } from './types';
 
 export const IMITATION_API = '/v1/imitation';
 
@@ -57,6 +57,14 @@ export async function prepareModel(): Promise<JsonObject> {
 	return requestJson('/prepare', { method: 'POST' });
 }
 
+export async function prepareQwenModel(lang: 'es' | 'en'): Promise<JsonObject> {
+	return requestJson('/prepare-qwen', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({ lang })
+	});
+}
+
 export async function convertCue(
 	outputId: string,
 	cueId: string,
@@ -93,6 +101,30 @@ export async function convertCue(
 	return payload;
 }
 
+export async function regenerateCue(
+	outputId: string,
+	cueId: string,
+	settings: QwenRegenSettings
+): Promise<JsonObject> {
+	return requestJson(
+		`/outputs/${encodeURIComponent(outputId)}/cues/${encodeURIComponent(cueId)}/regenerate`,
+		{
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({
+				temperature: settings.temperature,
+				top_p: settings.topP,
+				top_k: settings.topK,
+				max_new_tokens: settings.maxNewTokens,
+				repetition_penalty: settings.repetitionPenalty,
+				instruct: settings.instruct,
+				expressiveness_prefix: settings.expressivenessPrefix,
+				default_instruct: settings.defaultInstruct
+			})
+		}
+	);
+}
+
 export async function acceptTake(
 	outputId: string,
 	cueId: string,
@@ -115,4 +147,15 @@ export async function restoreCue(outputId: string, cueId: string): Promise<JsonO
 
 export async function assembleOutput(outputId: string): Promise<JsonObject> {
 	return requestJson(`/outputs/${encodeURIComponent(outputId)}/assemble`, { method: 'POST' });
+}
+
+export async function purgeUnreferencedTakes(
+	outputId: string,
+	options?: { dryRun?: boolean }
+): Promise<JsonObject> {
+	return requestJson(`/outputs/${encodeURIComponent(outputId)}/purge-takes`, {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({ dryRun: Boolean(options?.dryRun) })
+	});
 }

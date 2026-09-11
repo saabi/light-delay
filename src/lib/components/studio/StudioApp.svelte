@@ -15,6 +15,9 @@
 		fetchHealth,
 		fetchTimeline,
 		prepareModel,
+		prepareQwenModel,
+		purgeUnreferencedTakes,
+		regenerateCue,
 		restoreCue,
 		takeAudioUrl,
 		StudioApiError
@@ -23,18 +26,32 @@
 	import { ChunkSequencer } from '$lib/studio/sequencer';
 	import type {
 		ConvertSettings,
+		QwenRegenSettings,
 		StudioCue,
 		StudioDefaults,
+		StudioEngineMode,
 		StudioMachineState,
 		StudioTimeline
 	} from '$lib/studio/types';
 
 	const OUTPUTS = ['audience-es', 'audience-en'] as const;
 
+	const FALLBACK_QWEN: QwenRegenSettings = {
+		temperature: 0.82,
+		topP: 0.9,
+		topK: 50,
+		maxNewTokens: 3072,
+		repetitionPenalty: 1.05,
+		instruct: '',
+		expressivenessPrefix: '',
+		defaultInstruct: ''
+	};
+
 	let outputId = $state<(typeof OUTPUTS)[number]>('audience-es');
 	let machine = $state<StudioMachineState>('loading');
 	let timeline = $state.raw<StudioTimeline | null>(null);
 	let defaults = $state.raw<StudioDefaults | null>(null);
+	let engineMode = $state<StudioEngineMode>('seedvc');
 	let settings = $state<ConvertSettings>({
 		autoF0Adjust: true,
 		semiToneShift: 0,
@@ -42,6 +59,7 @@
 		lengthAdjust: 1,
 		inferenceCfgRate: 0
 	});
+	let qwenSettings = $state<QwenRegenSettings>({ ...FALLBACK_QWEN });
 	let selectedId = $state<string | null>(null);
 	let filter = $state<'all' | 'recordable' | 'replaced' | 'stale'>('all');
 	let search = $state('');
@@ -53,6 +71,7 @@
 	let pendingCueId = $state<string | null>(null);
 	let assembledHref = $state<string | null>(null);
 	let listeningTakeId = $state<string | null>(null);
+	let purging = $state(false);
 
 	const sequencer = new ChunkSequencer();
 	const preview = new TakePreview();
@@ -96,6 +115,15 @@
 	const canConvert = $derived(
 		Boolean(pendingBlob && pendingCueId && selectedCue?.id === pendingCueId)
 	);
+	const canRegenerate = $derived(
+		Boolean(selectedCue?.recordable) &&
+			machine !== 'offline' &&
+			machine !== 'loading' &&
+			machine !== 'converting' &&
+			machine !== 'assembling' &&
+			machine !== 'recording'
+	);
+	const outputLang = $derived(timeline?.output.lang ?? 'es');
 	const unsaved = $derived.by(() => {
 		if (!lastConvertTakeId || !lastConvertCueId || !timeline) return false;
 		const cue = timeline.cues.find((item) => item.id === lastConvertCueId);
@@ -126,6 +154,7 @@
 	});
 	const statusLabel = $derived.by(() => {
 		if (notice) return notice;
+		if (purging) return m.studio_purging();
 		switch (machine) {
 			case 'offline':
 				return m.studio_offline();
@@ -154,10 +183,38 @@
 		};
 	}
 
+	function qwenFromDefaults(
+		next: StudioDefaults | null,
+		lang: 'es' | 'en',
+		cueInstruct: string
+	): QwenRegenSettings {
+		const langDefaults = next?.qwen?.[lang];
+		if (!langDefaults) {
+			return { ...FALLBACK_QWEN, instruct: cueInstruct };
+		}
+		return {
+			temperature: langDefaults.temperature,
+			topP: langDefaults.top_p,
+			topK: langDefaults.top_k,
+			maxNewTokens: langDefaults.max_new_tokens,
+			repetitionPenalty: langDefaults.repetition_penalty,
+			instruct: cueInstruct,
+			expressivenessPrefix: langDefaults.expressivenessPrefix,
+			defaultInstruct: langDefaults.defaultInstruct
+		};
+	}
+
+	function applyCueInstruct(cue: StudioCue | null | undefined) {
+		qwenSettings = { ...qwenSettings, instruct: cue?.instruct ?? '' };
+	}
+
 	function bindSequencer(cues: StudioCue[]) {
 		sequencer.onAdvance = (index) => {
 			const cue = cues[index];
-			if (cue) selectedId = cue.id;
+			if (cue) {
+				selectedId = cue.id;
+				applyCueInstruct(cue);
+			}
 		};
 	}
 
@@ -219,7 +276,9 @@
 	function selectCue(id: string) {
 		stopPreview();
 		selectedId = id;
-		const index = timeline?.cues.findIndex((cue) => cue.id === id) ?? -1;
+		const cue = timeline?.cues.find((item) => item.id === id) ?? null;
+		applyCueInstruct(cue);
+		const index = timeline?.cues.findIndex((item) => item.id === id) ?? -1;
 		if (index >= 0) sequencer.seek(index);
 	}
 
@@ -359,6 +418,31 @@
 		}
 	}
 
+	async function regenerate() {
+		if (!selectedCue?.recordable) return;
+		const cueId = selectedCue.id;
+		stopPreview();
+		notice = '';
+		machine = 'converting';
+		try {
+			const result = await regenerateCue(outputId, cueId, qwenSettings);
+			const takeId = result.takeId;
+			lastConvertTakeId = typeof takeId === 'string' && takeId ? takeId : null;
+			lastConvertCueId = cueId;
+			await refetchTimeline();
+			machine = 'ready';
+		} catch (error) {
+			machine = 'ready';
+			if (error instanceof StudioApiError && error.status === 409) {
+				notice = m.studio_busy();
+			} else if (error instanceof StudioApiError && error.message) {
+				notice = error.message;
+			} else {
+				notice = m.studio_offline();
+			}
+		}
+	}
+
 	async function accept(takeId: string) {
 		if (!selectedCue) return;
 		const take = selectedCue.takes.find((item) => item.takeId === takeId);
@@ -407,6 +491,45 @@
 		}
 	}
 
+	function formatFreedBytes(bytes: number): string {
+		if (bytes >= 1e6) return `${(bytes / 1e6).toFixed(1)} MB`;
+		return `${Math.round(bytes / 1e3)} KB`;
+	}
+
+	async function purgeTakes() {
+		if (machine === 'offline' || machine === 'loading') return;
+		if (!confirm(m.studio_purge_confirm())) return;
+		purging = true;
+		notice = '';
+		try {
+			const result = await purgeUnreferencedTakes(outputId);
+			const deletedTakes =
+				typeof result.deletedTakes === 'number' ? result.deletedTakes : Number(result.deletedTakes) || 0;
+			const freedBytes =
+				typeof result.freedBytes === 'number' ? result.freedBytes : Number(result.freedBytes) || 0;
+			const deletedTakeIds = Array.isArray(result.deletedTakeIds)
+				? result.deletedTakeIds.filter((id): id is string => typeof id === 'string')
+				: [];
+			const freedLabel = formatFreedBytes(freedBytes);
+			notice = m.studio_purge_done({ deleted: deletedTakes, freed: freedLabel });
+			if (lastConvertTakeId && deletedTakeIds.includes(lastConvertTakeId)) {
+				lastConvertTakeId = null;
+				lastConvertCueId = null;
+			}
+			await refetchTimeline();
+		} catch (error) {
+			if (error instanceof StudioApiError && error.status === 409) {
+				notice = m.studio_busy();
+			} else if (error instanceof StudioApiError && error.message) {
+				notice = error.message;
+			} else {
+				notice = m.studio_offline();
+			}
+		} finally {
+			purging = false;
+		}
+	}
+
 	function applyModelStatus(next: StudioDefaults) {
 		defaults = next;
 		if (timeline) {
@@ -414,7 +537,9 @@
 				...timeline,
 				modelState: next.modelState,
 				modelError: next.modelError ?? null,
-				python: next.python ?? timeline.python
+				python: next.python ?? timeline.python,
+				qwenModelState: next.qwenModelState ?? timeline.qwenModelState,
+				qwenModelError: next.qwenModelError ?? null
 			};
 		}
 	}
@@ -434,6 +559,31 @@
 			} catch {
 				if (timeline) {
 					timeline = { ...timeline, modelState: 'error', modelError: notice };
+				}
+			}
+		}
+	}
+
+	async function prepareQwen() {
+		notice = '';
+		const lang = timeline?.output.lang ?? 'es';
+		try {
+			await prepareQwenModel(lang);
+			applyModelStatus(await fetchDefaults());
+		} catch (error) {
+			notice =
+				error instanceof StudioApiError && error.message
+					? error.message
+					: m.studio_offline();
+			try {
+				applyModelStatus(await fetchDefaults());
+			} catch {
+				if (timeline) {
+					timeline = {
+						...timeline,
+						qwenModelState: 'error',
+						qwenModelError: notice
+					};
 				}
 			}
 		}
@@ -497,8 +647,14 @@
 				if (cancelled) return;
 				defaults = nextDefaults;
 				settings = settingsFromDefaults(nextDefaults);
+				const firstCue = nextTimeline.cues[0] ?? null;
+				qwenSettings = qwenFromDefaults(
+					nextDefaults,
+					nextTimeline.output.lang,
+					firstCue?.instruct ?? ''
+				);
 				timeline = nextTimeline;
-				selectedId = nextTimeline.cues[0]?.id ?? null;
+				selectedId = firstCue?.id ?? null;
 				bindSequencer(nextTimeline.cues);
 				machine = 'ready';
 			} catch {
@@ -607,15 +763,24 @@
 
 				<section class="column">
 					<TweakPanel
+						mode={engineMode}
 						{settings}
+						{qwenSettings}
 						{defaults}
+						lang={outputLang}
 						{canConvert}
-						converting={machine === 'converting'}
+						{canRegenerate}
+						converting={machine === 'converting' || machine === 'loading'}
 						assembling={machine === 'assembling'}
+						{purging}
 						{assembledHref}
+						onmode={(next) => (engineMode = next)}
 						onchange={(next) => (settings = next)}
+						onqwenchange={(next) => (qwenSettings = next)}
 						onconvert={() => void convert()}
+						onregenerate={() => void regenerate()}
 						onassemble={() => void assemble()}
+						onpurge={() => void purgeTakes()}
 					/>
 					<section class="diagnostics" aria-label={m.studio_diagnostics()}>
 						<h2>{m.studio_diagnostics()}</h2>
@@ -632,13 +797,23 @@
 							</p>
 						{/if}
 						<p><span>{m.studio_model_state()}</span> {timeline.modelState}</p>
+						<p>
+							<span>{m.studio_qwen_model_state()}</span>
+							{timeline.qwenModelState ?? 'unloaded'}
+						</p>
 						{#if timeline.python}
 							<p><span>{m.studio_python()}</span> {timeline.python}</p>
 						{/if}
 						{#if timeline.modelError}
 							<p class="banner warn">{timeline.modelError}</p>
 						{/if}
+						{#if timeline.qwenModelError}
+							<p class="banner warn">{timeline.qwenModelError}</p>
+						{/if}
 						<button type="button" onclick={() => void prepare()}>{m.studio_prepare()}</button>
+						<button type="button" onclick={() => void prepareQwen()}
+							>{m.studio_prepare_qwen()}</button
+						>
 					</section>
 				</section>
 			</div>
@@ -662,6 +837,7 @@
 		border: 1px solid var(--line);
 		border-radius: 12px;
 		background: var(--panel);
+		min-width: 0;
 	}
 
 	.toolbar {
@@ -672,7 +848,7 @@
 
 	.grid {
 		display: grid;
-		grid-template-columns: minmax(16rem, 20rem) minmax(0, 1fr) minmax(16rem, 22rem);
+		grid-template-columns: minmax(0, 20rem) minmax(0, 1fr) minmax(0, 22rem);
 		gap: 1rem;
 		align-items: start;
 	}
@@ -725,6 +901,11 @@
 		display: block;
 		color: var(--muted);
 		font-size: 0.75rem;
+	}
+
+	.diagnostics p {
+		overflow-wrap: anywhere;
+		word-break: break-word;
 	}
 
 	button {

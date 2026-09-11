@@ -285,6 +285,62 @@ class OverlayTests(unittest.TestCase):
             self.assertEqual(before, meta_path.read_text(encoding="utf-8"))
             self.assertNotIn("acceptedAt", after)
 
+    def test_purge_keeps_accepted_deletes_others(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            wav = write_tone(root / "orig.wav", sr=24000, seconds=0.05)
+            dialogue_id = "audience:dialogue:test-zao"
+            cue = self._dialogue_cue(
+                cue_id="00042_Zao_abcd1234",
+                content_hash="abcd1234",
+                dialogue_id=dialogue_id,
+            )
+            fp = cue_fingerprint(cue, lang="es", original_wav=wav)
+            store = OverlayStore(root)
+            source = write_tone(root / "src.wav", sr=44100, seconds=0.04)
+            converted = write_tone(root / "conv.wav", sr=44100, seconds=0.04)
+            keep = store.write_take(
+                output_id="audience-es",
+                cue=cue,
+                fingerprint=fp,
+                index_hash_value="idx",
+                source_wav=source,
+                converted_wav=converted,
+                settings={},
+            )
+            drop = store.write_take(
+                output_id="audience-es",
+                cue=cue,
+                fingerprint=fp,
+                index_hash_value="idx",
+                source_wav=source,
+                converted_wav=converted,
+                settings={},
+            )
+            store.accept(
+                output_id="audience-es",
+                dialogue_key=dialogue_id,
+                take_id=keep["takeId"],
+                current_fingerprint=fp,
+                index_hash_value="idx",
+            )
+            preview = store.purge_unreferenced_takes("audience-es", dry_run=True)
+            self.assertEqual(preview["deletedTakes"], 1)
+            self.assertEqual(preview["keptTakes"], 1)
+            self.assertTrue(
+                store.take_dir("audience-es", dialogue_id, drop["takeId"]).is_dir()
+            )
+            result = store.purge_unreferenced_takes("audience-es", dry_run=False)
+            self.assertEqual(result["deletedTakes"], 1)
+            self.assertEqual(result["keptTakes"], 1)
+            self.assertGreater(result["freedBytes"], 0)
+            self.assertTrue(
+                store.take_dir("audience-es", dialogue_id, keep["takeId"]).is_dir()
+            )
+            self.assertFalse(
+                store.take_dir("audience-es", dialogue_id, drop["takeId"]).is_dir()
+            )
+
     def test_wav_hash_alone_does_not_stale(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -408,9 +464,34 @@ class HttpGuardTests(unittest.TestCase):
             ],
             "convert",
         )
+        self.assertEqual(
+            parse_imitation_path("/v1/imitation/outputs/audience-es/cues/00042_Zao_ab/regenerate")[
+                "name"
+            ],
+            "regenerate",
+        )
+        self.assertEqual(parse_imitation_path("/v1/imitation/prepare-qwen")["name"], "prepare-qwen")
+        self.assertEqual(
+            parse_imitation_path("/v1/imitation/outputs/audience-es/purge-takes")["name"],
+            "purge-takes",
+        )
         self.assertEqual(parse_imitation_path("/v1/imitation/outputs/../etc/timeline")["name"], "traversal")
         self.assertIsNone(parse_imitation_path("/health"))
         self.assertIsNone(parse_imitation_path("/v1/imitation/outputs/nope"))
+
+    def test_qwen_public_defaults(self) -> None:
+        from lib.qwen_studio_regen import clamp_temperature, public_qwen_defaults
+
+        es = public_qwen_defaults("es")
+        en = public_qwen_defaults("en")
+        self.assertEqual(es["engine"], "qwen-clone")
+        self.assertFalse(es["x_vector_only"])
+        self.assertIn("temperature", es["bounds"])
+        self.assertTrue(es["defaultInstruct"])
+        self.assertTrue(es["expressivenessPrefix"])
+        self.assertNotEqual(es["defaultInstruct"], en["defaultInstruct"])
+        self.assertEqual(clamp_temperature(9.0), 1.5)
+        self.assertEqual(clamp_temperature(0.01), 0.1)
 
     def test_host_and_origin(self) -> None:
         allow = ["http://localhost:5173", "http://127.0.0.1:5173"]

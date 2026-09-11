@@ -35,6 +35,7 @@ from lib.imitation_overlay import (
     unquote_segment,
     wav_duration_seconds,
 )
+from lib.qwen_studio_regen import QwenRegenGateway, public_qwen_defaults
 from lib.seedvc_imitation import (
     ImitationError,
     ImitationSession,
@@ -79,6 +80,9 @@ class WorkerState:
         self.session = ImitationSession(self.defaults)
         self.model_state = "unloaded"
         self.model_error: str | None = None
+        self.qwen = QwenRegenGateway()
+        self.qwen_model_state = "unloaded"
+        self.qwen_model_error: str | None = None
         self.convert_lock = threading.Lock()
         self.overlay = OverlayStore(imitation_root(self.defaults))
         self.audio_root = audio_root(self.defaults)
@@ -88,6 +92,8 @@ class WorkerState:
         seed = self.defaults["seedVc"]
         bounds = self.defaults.get("bounds") or {}
         http = self.defaults.get("http") or {}
+        qwen_es = public_qwen_defaults("es")
+        qwen_en = public_qwen_defaults("en")
         return {
             "engine": self.defaults.get("engine"),
             "actorNote": self.defaults.get("actorNote") or {},
@@ -98,6 +104,10 @@ class WorkerState:
                 "diffusion_steps": int(seed["diffusion_steps"]),
                 "inference_cfg_rate": float(seed["inference_cfg_rate"]),
                 "length_adjust": float(seed["length_adjust"]),
+            },
+            "qwen": {
+                "es": qwen_es,
+                "en": qwen_en,
             },
             "bounds": {
                 "diffusion_steps": bounds.get("diffusion_steps"),
@@ -113,8 +123,25 @@ class WorkerState:
             },
             "modelState": self.model_state,
             "modelError": self.model_error,
+            "qwenModelState": self.qwen_model_state,
+            "qwenModelError": self.qwen_model_error,
             "python": sys.executable,
         }
+
+    def prepare_qwen(self, lang: str) -> str:
+        lang = normalize_lang(lang)
+        if self.qwen_model_state == "ready" and self.qwen.lang == lang:
+            return self.qwen_model_state
+        self.qwen_model_state = "loading"
+        self.qwen_model_error = None
+        try:
+            self.qwen.load(lang)
+            self.qwen_model_state = "ready"
+        except Exception as exc:  # noqa: BLE001
+            self.qwen_model_state = "error"
+            self.qwen_model_error = str(exc)
+            raise
+        return self.qwen_model_state
 
     def prepare(self) -> str:
         if self.model_state == "ready":
@@ -181,6 +208,8 @@ def parse_imitation_path(path: str) -> dict[str, str] | None:
         return {"name": "outputs"}
     if rest == ["prepare"]:
         return {"name": "prepare"}
+    if rest == ["prepare-qwen"]:
+        return {"name": "prepare-qwen"}
     if len(rest) >= 2 and rest[0] == "outputs":
         if any(_bad_segment(part) for part in rest[1:]):
             return {"name": "traversal"}
@@ -195,6 +224,9 @@ def parse_imitation_path(path: str) -> dict[str, str] | None:
         if tail == ["assemble"]:
             route["name"] = "assemble"
             return route
+        if tail == ["purge-takes"]:
+            route["name"] = "purge-takes"
+            return route
         if len(tail) == 2 and tail[0] == "chunks":
             route["name"] = "chunk"
             route["cueId"] = unquote_segment(tail[1])
@@ -203,7 +235,12 @@ def parse_imitation_path(path: str) -> dict[str, str] | None:
             route["name"] = "take_audio"
             route["takeId"] = unquote_segment(tail[1])
             return route
-        if len(tail) == 3 and tail[0] == "cues" and tail[2] in {"convert", "accept", "restore"}:
+        if len(tail) == 3 and tail[0] == "cues" and tail[2] in {
+            "convert",
+            "accept",
+            "restore",
+            "regenerate",
+        }:
             route["name"] = tail[2]
             route["cueId"] = unquote_segment(tail[1])
             return route
@@ -352,6 +389,9 @@ def make_handler(state: WorkerState) -> type[BaseHTTPRequestHandler]:
                         "engine": "seed-vc-svc",
                         "modelState": state.model_state,
                         "modelError": state.model_error,
+                        "qwenModelState": state.qwen_model_state,
+                        "qwenModelError": state.qwen_model_error,
+                        "qwenLang": state.qwen.lang,
                         "python": sys.executable,
                         "device": device,
                         "f0_condition": True,
@@ -409,14 +449,55 @@ def make_handler(state: WorkerState) -> type[BaseHTTPRequestHandler]:
                     state.convert_lock.release()
                 self._send_json(200, {"ok": True, "modelState": state.model_state})
                 return
+            if name == "prepare-qwen":
+                body = _read_json_body(self, max_upload)
+                qs = parse_qs(urlparse(self.path).query)
+                lang = str(
+                    body.get("lang")
+                    or (qs.get("lang") or [None])[0]
+                    or "es"
+                )
+                if not state.convert_lock.acquire(blocking=False):
+                    raise WorkerBusy("convert in progress")
+                try:
+                    state.prepare_qwen(lang)
+                finally:
+                    state.convert_lock.release()
+                self._send_json(
+                    200,
+                    {
+                        "ok": True,
+                        "qwenModelState": state.qwen_model_state,
+                        "qwenLang": state.qwen.lang,
+                    },
+                )
+                return
             row = get_output(route["outputId"])
             if name == "assemble":
                 payload = _assemble(state, row)
                 self._send_json(200, {"ok": True, **payload})
                 return
+            if name == "purge-takes":
+                body = _read_json_body(self, max_upload)
+                dry_run = parse_bool(body.get("dryRun"), default=False)
+                if not state.convert_lock.acquire(blocking=False):
+                    raise WorkerBusy("convert in progress")
+                try:
+                    payload = state.overlay.purge_unreferenced_takes(
+                        str(row["id"]), dry_run=dry_run
+                    )
+                finally:
+                    state.convert_lock.release()
+                self._send_json(200, {"ok": True, **payload})
+                return
             cue_id = route.get("cueId") or ""
             if name == "convert":
                 payload = _convert_cue(self, state, row, cue_id, max_upload, max_seconds)
+                self._send_json(200, {"ok": True, **payload})
+                return
+            if name == "regenerate":
+                body = _read_json_body(self, max_upload)
+                payload = _regenerate_cue(state, row, cue_id, body)
                 self._send_json(200, {"ok": True, **payload})
                 return
             if name == "accept":
@@ -543,6 +624,8 @@ def _timeline_payload(state: WorkerState, row: dict[str, Any], chunks: Path) -> 
         "sampleRate": int(index.get("sample_rate") or row.get("expectedSampleRate") or 0),
         "modelState": state.model_state,
         "modelError": state.model_error,
+        "qwenModelState": state.qwen_model_state,
+        "qwenModelError": state.qwen_model_error,
         "python": sys.executable,
         "cues": cues_out,
     }
@@ -706,6 +789,86 @@ def _convert_cue(
         "previewUrl": preview,
         "settings": meta.get("settings") or settings,
         "modelState": state.model_state,
+        "cueId": cue_id,
+    }
+
+
+def _regenerate_cue(
+    state: WorkerState,
+    row: dict[str, Any],
+    cue_id: str,
+    body: dict[str, Any],
+) -> dict[str, Any]:
+    chunks, index, index_path = _load_output_index(state, row)
+    cue = find_cue(index, cue_id)
+    _assert_recordable(row, cue)
+    dialogue_key_for_cue(cue, require=True)
+    lang = normalize_lang(str(row.get("lang") or index.get("lang") or "es"))
+    qwen_defaults = public_qwen_defaults(lang)
+    original = chunks / str(cue.get("wav") or "")
+    fingerprint = cue_fingerprint(cue, lang=lang, original_wav=original)
+
+    temperature = body.get("temperature", qwen_defaults["temperature"])
+    top_p = body.get("top_p", qwen_defaults["top_p"])
+    top_k = body.get("top_k", qwen_defaults["top_k"])
+    max_new_tokens = body.get("max_new_tokens", qwen_defaults["max_new_tokens"])
+    repetition_penalty = body.get("repetition_penalty", qwen_defaults["repetition_penalty"])
+    line_instruct = body.get("instruct")
+    if line_instruct is None:
+        line_instruct = cue.get("instruct")
+    expressiveness_prefix = body.get("expressiveness_prefix")
+    if expressiveness_prefix is None:
+        expressiveness_prefix = qwen_defaults["expressivenessPrefix"]
+    default_instruct = body.get("default_instruct")
+    if default_instruct is None:
+        default_instruct = qwen_defaults["defaultInstruct"]
+
+    if not state.convert_lock.acquire(blocking=False):
+        raise WorkerBusy("convert in progress")
+    try:
+        import tempfile
+
+        with tempfile.TemporaryDirectory(prefix="imitation-qwen-") as tmp:
+            out_wav = Path(tmp) / "converted.wav"
+            state.prepare_qwen(lang)
+            settings = state.qwen.synthesize(
+                speaker=str(cue.get("speaker") or ""),
+                text=str(cue.get("text") or ""),
+                line_instruct=str(line_instruct) if line_instruct is not None else None,
+                lang=lang,
+                temperature=float(temperature),
+                top_p=float(top_p),
+                top_k=int(top_k),
+                max_new_tokens=int(max_new_tokens),
+                repetition_penalty=float(repetition_penalty),
+                expressiveness_prefix=(
+                    str(expressiveness_prefix) if expressiveness_prefix is not None else None
+                ),
+                default_instruct=str(default_instruct) if default_instruct is not None else None,
+                out_wav=out_wav,
+            )
+            source_wav = original if original.is_file() else out_wav
+            meta = state.overlay.write_take(
+                output_id=str(row["id"]),
+                cue=cue,
+                fingerprint=fingerprint,
+                index_hash_value=index_hash(index_path),
+                source_wav=source_wav,
+                converted_wav=out_wav,
+                settings=settings,
+            )
+    finally:
+        state.convert_lock.release()
+
+    take_id = str(meta["takeId"])
+    preview = f"/v1/imitation/outputs/{row['id']}/takes/{take_id}/audio"
+    return {
+        "takeId": take_id,
+        "durationSec": meta["durationSec"],
+        "previewUrl": preview,
+        "settings": meta.get("settings") or settings,
+        "modelState": state.model_state,
+        "qwenModelState": state.qwen_model_state,
         "cueId": cue_id,
     }
 

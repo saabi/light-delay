@@ -1,5 +1,16 @@
 # Estado del proyecto
 
+## 2026-09-09 — Studio: regenerar con Qwen3-TTS
+
+- En `/studio`, modo **Regenerar (Qwen3-TTS)** junto a **Imitar (Seed-VC)**.
+- Ajuste de knobs emocionales/generativos y `instruct`; Accept/Listen/Assemble
+  siguen sobre overlays keyed por diálogo estable.
+- Worker: `regenerate` + `prepare-qwen` (GPU perezosa, lock compartido).
+- Regenerar usa sidecar `qwen-studio-sidecar.py` cuando el worker es el venv
+  Seed-VC (sin `qwen_tts`); Python del dual / `LIGHT_DELAY_QWEN_PYTHON`.
+- Purga de tomas no aceptadas en overlays (`purge-takes`) desde el Studio.
+- Ayuda contextual `?` por knob Qwen (ES/EN) en el panel Regenerar.
+
 ## 2026-09-09 — Refs ES latinoamericanas desde timbre EN
 
 - Biblia y perfiles: castellano del elenco = Bogotá, Lima, Buenos Aires, Medellín,
