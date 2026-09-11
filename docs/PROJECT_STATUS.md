@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-11 — Dual festival EN (escaleta festival rev. 1)
+
+- Generado `E:/Models/Qwen3-TTS/output/light-delay-festival-audience-dual-en.mp3`
+  (~14.9 min) y `outline-chunks/en-festival-audience/` (114 cues @ 24 kHz).
+- 25 diálogos Qwen sintetizados; catálogo `audience-festival-en` current.
+- Chunks separados del dual master (`en-audience`).
+
 ## 2026-09-11 — Relato de audiencia del Festival derivado
 
 - Creado el relato inglés de 11 capítulos derivado de `outline:light-delay-festival-master`, con trazabilidad explícita de sus 24 beats y las cuatro transiciones a microgravedad.

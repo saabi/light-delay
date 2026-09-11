@@ -42,6 +42,27 @@
       "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
       "expectedSampleRate": 24000,
       "expectedCueCount": 287
+    },
+    {
+      "id": "audience-festival-en",
+      "kind": "audience",
+      "lang": "en",
+      "label": {
+        "es": "Relato festival para público (inglés)",
+        "en": "Festival audience narrative (English)"
+      },
+      "description": {
+        "es": "114 cues del dual de audiencia del corte festival en inglés (rev. 1 de la escaleta festival; ~14.9 min).",
+        "en": "114 cues from the Festival-cut English audience dual (festival outline revision 1; ~14.9 min)."
+      },
+      "sourceOutlineId": "outline:light-delay-festival-master",
+      "sourceOutlineRevision": 1,
+      "chunksKey": "outline-chunks/en-festival-audience",
+      "canonicalMp3Key": "light-delay-festival-audience-dual-en.mp3",
+      "assembledKey": "assembled/audience-festival-en.mp3",
+      "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
+      "expectedSampleRate": 24000,
+      "expectedCueCount": 114
     }
   ]
 }

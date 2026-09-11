@@ -10,6 +10,13 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 CATALOG_PATH = ROOT / "data" / "production" / "audio" / "audio-outputs.json"
 MASTER_OUTLINE_PATH = ROOT / "data" / "outlines" / "light-delay-master-narrative.json"
+OUTLINE_PATHS = {
+    "outline:light-delay-master-narrative": MASTER_OUTLINE_PATH,
+    "outline:light-delay-festival-master": ROOT
+    / "data"
+    / "outlines"
+    / "light-delay-festival-master.json",
+}
 
 ABS_OR_TRAVERSAL = re.compile(r"(?:^[A-Za-z]:)|(?:^[\\/])|(?:\.\.)")
 
@@ -88,18 +95,29 @@ def find_cue(index: dict[str, Any], cue_id: str) -> dict[str, Any]:
     raise CatalogError(f"Unknown cue {wanted!r}")
 
 
-def current_master_revision(path: Path | None = None) -> int:
-    source = path or MASTER_OUTLINE_PATH
-    data = json.loads(source.read_text(encoding="utf-8"))
+def current_outline_revision(outline_id: str | None = None, path: Path | None = None) -> int:
+    if path is None:
+        wanted = (outline_id or "outline:light-delay-master-narrative").strip()
+        path = OUTLINE_PATHS.get(wanted)
+        if path is None:
+            raise CatalogError(f"Unknown outline id for revision lookup: {wanted!r}")
+    data = json.loads(path.read_text(encoding="utf-8"))
     revision = data.get("outline", {}).get("revision")
     if not isinstance(revision, int):
-        raise CatalogError("Master outline has no integer revision")
+        raise CatalogError(f"{path} has no integer outline.revision")
     return revision
+
+
+def current_master_revision(path: Path | None = None) -> int:
+    return current_outline_revision(path=path or MASTER_OUTLINE_PATH)
 
 
 def public_output(row: dict[str, Any], *, master_revision: int | None = None) -> dict[str, Any]:
     """JSON-safe catalog row for the worker API (no filesystem paths)."""
-    current_revision = master_revision if master_revision is not None else current_master_revision()
+    if master_revision is not None:
+        current_revision = master_revision
+    else:
+        current_revision = current_outline_revision(str(row.get("sourceOutlineId") or ""))
     source_revision = int(row.get("sourceOutlineRevision") or 0)
     return {
         "id": row["id"],
@@ -158,15 +176,20 @@ def collect_catalog_errors(catalog: dict[str, Any] | None = None) -> list[str]:
             errors.append(f"{prefix} {oid}.recordableSpeakers missing")
         elif len(set(speakers)) != len(speakers):
             errors.append(f"{prefix} {oid}.recordableSpeakers must be unique")
-        if str(row.get("sourceOutlineId") or "") != "outline:light-delay-master-narrative":
-            errors.append(f"{prefix} {oid}.sourceOutlineId must identify the master outline")
+        if str(row.get("sourceOutlineId") or "") not in {
+            "outline:light-delay-master-narrative",
+            "outline:light-delay-festival-master",
+        }:
+            errors.append(
+                f"{prefix} {oid}.sourceOutlineId must identify a registered audience outline"
+            )
         if not isinstance(row.get("sourceOutlineRevision"), int):
             errors.append(f"{prefix} {oid}.sourceOutlineRevision must be an integer")
 
     if len(ids) != len(set(ids)):
         errors.append("audio-outputs.json ids must be unique")
 
-    expected = {"audience-es", "audience-en"}
+    expected = {"audience-es", "audience-en", "audience-festival-en"}
     actual = set(ids)
     if actual != expected:
         errors.append(

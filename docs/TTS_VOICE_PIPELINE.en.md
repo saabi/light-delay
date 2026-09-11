@@ -232,6 +232,7 @@ The master-derived Festival cut has its own registered audience adaptation:
 - Focused check: `npm run tts:audience:festival:check`
 - Generate EN:
   `python scripts/generate-dual-outline-audio.py --lang en --script docs/wip/festival-cut-audience-narrative.voices.en.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/en-festival-audience --out E:/Models/Qwen3-TTS/output/light-delay-festival-audience-dual-en.mp3`
+- Rendered 2026-09-11: `light-delay-festival-audience-dual-en.mp3` (114 cues, ~14.9 min)
 
 `data/production/audio/audience-narratives.json` registers both adaptations and
 their source outlines, language states, source files, performance ledgers, and

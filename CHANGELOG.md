@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-11 — Dual festival EN de audiencia generado (rev. 1)
+
+- Generado `light-delay-festival-audience-dual-en.mp3` (~14.9 min) y chunks
+  `outline-chunks/en-festival-audience/` (114 cues; 25 diálogos Qwen nuevos).
+- Catálogo `audience-festival-en` registrado. El header Generate del voices festival
+  ya no apunta a `en-audience` (evita pisar el dual master).
+
 ## 2026-09-11 — Master-derived Festival audience narrative
 
 - Added an 11-chapter English audience narrative covering all 24 Festival beats in order, with deferred targeting, four microgravity transitions, and post-murder flight sabotage preserved.
