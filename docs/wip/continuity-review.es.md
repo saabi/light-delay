@@ -72,9 +72,8 @@ editoriales con margen para las maniobras, no una solución orbital exacta.
 Se cotejan ES/EN, orden temporal, conocimiento, accesos, fuentes del mensaje y revelaciones.
 Los tests estructurales no certifican por sí solos la causalidad: esta tabla acompaña la lectura
 de corrido de los cuerpos `story`, sin apoyarse en detalles ni enlaces desplegados.
-El dual EN de audiencia se regeneró para rev. 19 (2026-09-11). El texto ES del relato
-incluye el beat de sabotaje post-asesinato (`lastSyncedRevision` 19, `needs_revision`);
-el dual ES de audio sigue pendiente de regeneración.
+El dual EN de audiencia se regeneró para rev. 19 (2026-09-11). El texto y el dual ES
+quedan en lastSyncedRevision 19 (`needs_revision` textual).
 
 Verificación ejecutada el 2026-09-11: 96 tests unitarios y dos tests de catálogo de audio
 aprobados; Svelte/TypeScript sin errores ni advertencias; datos, traducciones, documentación,

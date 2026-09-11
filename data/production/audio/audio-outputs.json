@@ -10,17 +10,17 @@
         "en": "Audience narrative (Spanish)"
       },
       "description": {
-        "es": "275 cues del dual de audiencia en español con refs LatAm (rev. 15 de prosa; desactualizado frente a master rev. 17).",
-        "en": "275 cues from the Spanish audience dual with LatAm refs (prose revision 15; stale against master revision 17)."
+        "es": "287 cues del dual de audiencia en español con refs LatAm (regenerado desde texto ES lastSyncedRevision 19; ~48.5 min).",
+        "en": "287 cues from the Spanish audience dual with LatAm refs (regenerated from ES text at lastSyncedRevision 19; ~48.5 min)."
       },
       "sourceOutlineId": "outline:light-delay-master-narrative",
-      "sourceOutlineRevision": 15,
+      "sourceOutlineRevision": 19,
       "chunksKey": "outline-chunks/es-audience",
       "canonicalMp3Key": "light-delay-audience-dual-es.mp3",
       "assembledKey": "assembled/audience-es.mp3",
       "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
       "expectedSampleRate": 24000,
-      "expectedCueCount": 275
+      "expectedCueCount": 287
     },
     {
       "id": "audience-en",

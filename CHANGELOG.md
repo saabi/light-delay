@@ -1,19 +1,25 @@
 # Changelog
 
+## 2026-09-11 — Dual de audiencia ES regenerado (rev. 19)
+
+- Regenerado `light-delay-audience-dual-es.mp3` (~48.5 min) y chunks
+  `outline-chunks/es-audience/` desde voces ES lastSyncedRevision 19.
+- 287 cues (240 reutilizados, 47 regenerados; 4 diálogos Qwen nuevos).
+- Catálogo `audience-es` current en revisión 19; ES textual sigue `needs_revision`.
+
 ## 2026-09-11 — Español sincronizado al beat de sabotaje de rev. 19
 
 - Traducido al español el desplazamiento del sabotaje de vuelo post-asesinato (master,
   relato, voces TTS y escaleta ES retenida).
-- Añadido el diálogo `p2-voss-doubt` en ES para paridad de IDs con la fuente inglesa;
-  `lastSyncedRevision` 19 con status `needs_revision` (prólogo y resto aún no a current).
-- Pendiente regenerar el dual ES de audiencia.
+- Añadido el diálogo `p2-voss-doubt` en ES para paridad de IDs; `lastSyncedRevision` 19
+  con status `needs_revision` (aún no current frente a toda la fuente inglesa).
 
 ## 2026-09-11 — Dual de audiencia EN regenerado (rev. 19)
 
 - Regenerado `light-delay-audience-dual-en.mp3` (~49.0 min) y chunks
   `outline-chunks/en-audience/` desde `audience-narrative.voices.en.md` rev. 19.
 - 287 cues (283 reutilizados por hash, 4 regenerados; 0 diálogos Qwen nuevos).
-- Catálogo `audience-en` marcado current en master rev. 19. ES sigue stale.
+- Catálogo `audience-en` marcado current en master rev. 19. ES audio regenerado después.
 
 ## 2026-09-11 — Master revision 19: flight sabotage moved after the murder
 

@@ -77,9 +77,8 @@ with room for maneuvers, not an exact orbital solution.
 Check ES/EN, chronology, knowledge, access, message sources and reveals.
 Structural tests alone do not certify causality: this table accompanies a continuous
 reading of story bodies without relying on details or expanded causal links.
-English audience dual regenerated for revision 19 (2026-09-11). Spanish audience text
-synced for the post-murder flight-sabotage beat at lastSyncedRevision 19
-(`needs_revision`); Spanish dual audio still pending regeneration.
+English audience dual regenerated for revision 19 (2026-09-11). Spanish audience text and
+dual audio updated for lastSyncedRevision 19 (`needs_revision` text status remains).
 Regenerate exports and TTS text only. Archived cuts remain unchanged.
 
 Verification performed 2026-09-11: 96 unit tests and two audio catalog tests passed;

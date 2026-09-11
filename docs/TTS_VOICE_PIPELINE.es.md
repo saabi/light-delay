@@ -269,9 +269,9 @@ Relato para público (12 secciones, sin frontmatter; **36 diálogos audibles**):
   `npm run tts:audience:check`
 - Ejemplo: `python scripts/generate-dual-outline-audio.py --lang es --script docs/wip/audience-narrative.voices.es.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/es-audience`
 
-El dual ES y sus 275 chunks se generaron desde la revisión 15. El dual EN se
-regeneró para la revisión 18 (287 cues, ~48.7 min). El audio ES permanece stale
-y se conserva sólo para referencia y rescate hasta regenerarlo.
+El dual ES y sus 287 chunks se regeneraron desde el texto ES en lastSyncedRevision 19
+(~48.5 min). El dual EN está en revisión 19 (~49.0 min). El texto ES permanece
+`needs_revision`.
 
 Cada cita audible lleva un comentario estable `audience-dialogue-id` en ambas
 fuentes. Ese ID, no el índice ni el texto traducido, selecciona una entrada con:
@@ -355,8 +355,9 @@ La transformación ocurre al generar los derivados TTS. El topónimo español
 | Pipeline EN | `scripts/pipeline-english-native-l1-v2-qwen.py` |
 | Outline dual | `scripts/generate-dual-outline-audio.py` |
 
-La revisión 18 hace del inglés la fuente activa y corrige el orden de reacción del
-prólogo y causalidad relacionada. El dual EN se regeneró el 2026-09-11
-(`light-delay-audience-dual-en.mp3`, 287 cues, ~48.7 min). El guion de voces ES
-sigue en rev. 17 y su audio en prosa rev. 15. Los IDs de diálogo se conservan;
-texto o dirección cambiados deben invalidar las tomas dependientes.
+La revisión 19 mueve el sabotaje de mando de vuelo después del asesinato de Zao.
+El dual EN se regeneró el 2026-09-11 (`light-delay-audience-dual-en.mp3`, 287 cues,
+~49.0 min). El dual ES se regeneró el mismo día desde lastSyncedRevision 19
+(`light-delay-audience-dual-es.mp3`, 287 cues, ~48.5 min). El texto ES sigue
+`needs_revision`. Los IDs de diálogo se conservan; texto o dirección cambiados
+deben invalidar las tomas dependientes.

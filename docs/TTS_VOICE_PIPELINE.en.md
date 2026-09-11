@@ -219,9 +219,9 @@ Audience short story (12 sections, no frontmatter; **37 audible English dialogue
   `npm run tts:audience:check`
 - Example: `python scripts/generate-dual-outline-audio.py --lang en --script docs/wip/audience-narrative.voices.en.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/en-audience`
 
-The Spanish audience dual and its 275 chunks were generated from revision 15.
+The Spanish audience dual was regenerated for lastSyncedRevision 19 (287 cues, ~48.5 min).
 The English audience dual was regenerated for revision 19 (287 cues, ~49.0 min).
-Spanish audio remains stale and is retained only for reference and salvage until regenerated.
+Spanish narrative text remains `needs_revision` against the English source.
 
 Every audible quotation has the same stable `audience-dialogue-id` comment in
 both source files. That ID—not its array position or translated wording—selects
@@ -288,6 +288,7 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 
 Revision 19 moves the flight-control sabotage after Zao's murder so the communications cut
 remains Harlan's first unequivocal reveal. The English audience dual was regenerated on
-2026-09-11 (`light-delay-audience-dual-en.mp3`, 287 cues, ~49.0 min). The Spanish voice
-script remains revision 17 and its audio remains prose revision 15. Dialogue IDs are
+2026-09-11 (`light-delay-audience-dual-en.mp3`, 287 cues, ~49.0 min). The Spanish dual was
+regenerated the same day from lastSyncedRevision 19 (`light-delay-audience-dual-es.mp3`,
+287 cues, ~48.5 min); Spanish narrative text remains `needs_revision`. Dialogue IDs are
 preserved; changed narration or direction must invalidate dependent takes.

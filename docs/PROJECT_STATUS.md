@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-11 — Dual de audiencia ES (lastSyncedRevision 19)
+
+- Generado `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-es.mp3` (~48.5 min)
+  y `outline-chunks/es-audience/` (287 cues @ 24 kHz).
+- Reuso 240; regenerados 47 (4 diálogos Qwen nuevos, incl. `p2-voss-doubt`).
+- Catálogo `audience-es`: `sourceOutlineRevision` 19, `expectedCueCount` 287.
+  Texto ES permanece `needs_revision` frente a la fuente inglesa.
+
 ## 2026-09-11 — Español al beat de sabotaje (master rev. 19)
 
 - Master ES, `audience-narrative.es.md`, voces ES y escaleta ES actualizados al sabotaje
@@ -7,7 +15,6 @@
 - Diálogos de audiencia ES: 37 (incluye `p2-voss-doubt`). Export completo ES sigue
   bloqueado por campos españoles ausentes fuera de este beat; la escaleta ES se retuvo
   y se editó a mano en los pasajes del commit.
-- Dual ES de audiencia pendiente de regeneración (siguiente paso).
 
 ## 2026-09-11 — Dual de audiencia EN (master rev. 19)
 
@@ -15,7 +22,7 @@
   y `outline-chunks/en-audience/` (287 cues @ 24 kHz).
 - Reuso por content_hash: 283; regenerados 4 (solo narrador Kokoro).
 - Catálogo `audience-en`: `sourceOutlineRevision` 19, `expectedCueCount` 287, current.
-- ES (`audience-es`) permanece stale en prosa rev. 15 / master ES 17.
+- Dual ES regenerado después (véase entrada superior).
 
 ## 2026-09-11 — Master revision 19: post-murder flight sabotage
 
