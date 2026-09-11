@@ -1,6 +1,6 @@
 # Light Delay
 
-*Audience narrative. Revision 15.*
+*Audience narrative. Revision 16.*
 
 ## Prologue — Lights of Earth
 
@@ -300,9 +300,13 @@ Voss remembers Sorell under the protest feed saying *that isn't fear, it's respe
 
 Custody is justified. Murder is not proved. Elin knows those are different sentences. What stays with her is how completely Sorell broke while holding Zao—and how quickly Harlan converted uncertainty into guilt.
 
-The ship settles into its far-side run: roughly seventeen point four million kilometres to the meeting point, about twenty-three and a half hours of acceleration and braking under one gravity.
+Once clear of the far mouth, the ship settles into its far-side run and thrust restores weight to the decks: roughly seventeen point four million kilometres to the meeting point, about twenty-three and a half hours of acceleration and braking under one gravity.
 
-Sorell spends that time under questioning instead of preparing the greeting. Voss quietly plans how to approach an alien station without his xenolinguist. Elin and Okoye work until exhaustion blurs the displays, then keep working.
+Through the first half, Sorell remains under questioning instead of preparing the greeting. Voss quietly plans how to approach an alien station without his xenolinguist. Elin and Okoye work until exhaustion blurs the displays, then keep working.
+
+Midway through the leg, thrust cuts and weight disappears for the third time. The crew secure themselves and their work as the *Ardor* rotates one hundred and eighty degrees from its acceleration attitude to its braking attitude. Hours of investigation become visible in a single maneuver.
+
+The engine pushes toward the same deck again. One gravity returns and deceleration toward the Velari station begins.
 
 ## Chapter 8. Investigation
 

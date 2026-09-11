@@ -52,8 +52,8 @@ describe('outlines (optional)', () => {
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
 		expect(source.outline.provenance?.importedFrom?.[0]?.revision).toBe('13');
-		expect(source.outline.revision).toBe(15);
-		expect(source.outline.version).toBe('0.5.1-wip');
+		expect(source.outline.revision).toBe(16);
+		expect(source.outline.version).toBe('0.5.2-wip');
 		expect(source.outline.status).toBe('draft');
 		expect(source.outline.exports?.map((item) => item.path)).toEqual([
 			'docs/wip/general-narrative-outline.es.md',
@@ -61,7 +61,7 @@ describe('outlines (optional)', () => {
 		]);
 		expect(source.framing).toHaveLength(11);
 		expect(source.storySections).toHaveLength(8);
-		expect(source.steps).toHaveLength(57);
+		expect(source.steps).toHaveLength(58);
 		expect(source.steps.every((step) => step.level === 'story' && step.body?.length)).toBe(true);
 		expect(source.steps.some((step) => step.summary != null)).toBe(false);
 		expect(source.steps.some((step) => step.coverage != null)).toBe(false);
@@ -75,6 +75,19 @@ describe('outlines (optional)', () => {
 		);
 		expect(quotations).toHaveLength(38);
 		expect(quotations.every((block) => block.type === 'blockquote' && block.speakerId)).toBe(true);
+		const gravity = source.framing?.find((section) => section.id === 'master:framing-gravity');
+		const gravityList = gravity?.blocks.find((block) => block.type === 'list');
+		expect(gravityList?.type === 'list' ? gravityList.items : []).toHaveLength(4);
+		const c10 = source.steps.find((step) => step.id === 'master:story-c10');
+		const c10b = source.steps.find((step) => step.id === 'master:story-c10b');
+		const d1 = source.steps.find((step) => step.id === 'master:story-d1');
+		const f3 = source.steps.find((step) => step.id === 'master:story-f3');
+		expect([c10?.order, c10b?.order, d1?.order]).toEqual([31, 32, 33]);
+		expect(c10b?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10');
+		expect(d1?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10b');
+		expect(typeof f3?.title === 'string' ? f3.title : f3?.title.en).toContain(
+			'Fourth gravity dip'
+		);
 		const localized = getLocalizedOutline(masterId, 'en')!;
 		expect(localized.steps[0]?.body?.[0]?.type).toBe('paragraph');
 		const first = localized.steps[0]?.body?.[0];

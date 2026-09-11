@@ -42,9 +42,13 @@ Consecuencia arquitectónica fundamental:
 
 Esto significa que la Ardor no debe representarse internamente como un avión o submarino con cubiertas longitudinales horizontales. En un corte longitudinal, las cubiertas aparecen como planos transversales apilados a lo largo del eje.
 
-### Inversión de mitad de trayecto
+### Inversiones de mitad de trayecto
 
 Cuando la misión requiere invertir el empuje para desacelerar, la nave interrumpe el empuje, entra temporalmente en microgravedad, rota aproximadamente 180° y vuelve a acelerar. Las mismas superficies siguen funcionando como pisos una vez restablecido el empuje.
+
+La historia contiene dos inversiones de este tipo: la primera ocurre en el periapsis de Júpiter, entre la aceleración desde Próxima y la desaceleración hacia la boca local; la segunda ocurre aproximadamente a mitad de los 17,4 millones de km entre la boca lejana y la estación Velari. Después del cruce, la Ardor despeja la boca, reanuda el empuje y recupera 1 g mientras acelera hacia la estación. En la segunda inversión corta el empuje, entra en microgravedad por tercera vez, rota unos 180° y restaura 1 g hacia el mismo piso mientras comienza a desacelerar.
+
+En total, la Ardor entra cuatro veces en microgravedad durante la historia: las dos inversiones, la aproximación y cruce de la garganta, y el corte final al igualar velocidad con el punto de encuentro.
 
 ### Corte al igualar velocidad en el encuentro remoto
 

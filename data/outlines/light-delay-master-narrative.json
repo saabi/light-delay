@@ -12,8 +12,8 @@
       "en": "Authoritative bilingual master narrative, still WIP and unconstrained by duration. Earlier screenplays and cuts are deprecated until new versions can be derived."
     },
     "status": "draft",
-    "version": "0.5.1-wip",
-    "revision": 15,
+    "version": "0.5.2-wip",
+    "revision": 16,
     "provenance": {
       "importedFrom": [
         {
@@ -518,8 +518,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 17,4 millones de km. Un perfil de aceleración–desaceleración a 1 g toma aproximadamente 23 h 25 min.",
-            "en": "The far-side segment from the far mouth to the planned encounter is approximately 17.4 million km. A 1g accelerate–decelerate profile takes approximately 23 h 25 min."
+            "es": "El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 17,4 millones de km. Un perfil de aceleración–desaceleración a 1 g toma aproximadamente 23 h 25 min. Después de despejar la boca lejana, la nave acelera durante la primera mitad del tramo, corta el empuje y rota unos 180° en microgravedad, y luego reanuda el empuje hacia el mismo piso para desacelerar durante la segunda mitad.",
+            "en": "The far-side segment from the far mouth to the planned encounter is approximately 17.4 million km. A 1g accelerate–decelerate profile takes approximately 23 h 25 min. After clearing the far mouth, the ship accelerates through the first half of the leg, cuts thrust and rotates roughly 180° in microgravity, then resumes thrust toward the same deck to decelerate through the second half."
           }
         },
         {
@@ -593,8 +593,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La nave funciona a 1 g durante la mayor parte del tránsito propulsado, pero entra tres veces en microgravedad, cada una debido a una operación de vuelo necesaria:",
-            "en": "The ship runs at 1g through most of its powered transit but enters microgravity three times, each for a necessary flight operation:"
+            "es": "La nave funciona a 1 g durante la mayor parte del tránsito propulsado, pero entra cuatro veces en microgravedad, cada una debido a una operación de vuelo necesaria:",
+            "en": "The ship runs at 1g through most of its powered transit but enters microgravity four times, each for a necessary flight operation:"
           }
         },
         {
@@ -608,6 +608,10 @@
             {
               "es": "Al acercarse a la boca de Júpiter, el empuje se detiene para realizar la aproximación de precisión y el cruce de la garganta. El descubrimiento y asesinato de Zao ocurren durante este intervalo.",
               "en": "Nearing the Jupiter mouth, thrust stops for precision approach and throat crossing. Zao’s discovery and murder occur during this interval."
+            },
+            {
+              "es": "A mitad del tramo entre la boca lejana y la estación Velari, el empuje se detiene brevemente para que la nave rote unos 180° desde la aceleración hasta la desaceleración. La investigación continúa a lo largo de esta transición.",
+              "en": "Midway between the far mouth and the Velari station, thrust stops briefly so the ship can rotate roughly 180° from acceleration to deceleration. The investigation continues through this transition."
             },
             {
               "es": "Al final de la desaceleración del otro lado, el empuje se detiene poco antes de las coordenadas previstas para el primer contacto. El giro decisivo del clímax ocurre durante este intervalo.",
@@ -665,15 +669,15 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Sorell — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad. Su prosodia parte del francés; formó su inglés en el entorno francófono de Montréal y su español académico en Madrid.",
-            "en": "Sorell — Xenolinguist. She has spent months studying the throat’s one-way instructional grammar and has designed humanity’s first attempted greeting. Her prosody is rooted in French; she formed her English in Montréal’s francophone environment and her academic Spanish in Madrid."
+            "es": "Sorell — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad. Su prosodia parte del francés; formó su inglés en el entorno francófono de Montréal y su español académico en Santiago del Estero.",
+            "en": "Sorell — Xenolinguist. She has spent months studying the throat’s one-way instructional grammar and has designed humanity’s first attempted greeting. Her prosody is rooted in French; she formed her English in Montréal’s francophone environment and her academic Spanish in Santiago del Estero."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Okoye — Oficial de seguridad nigeriana. Protege el puente después del informe de sabotaje, retira a Sorell de la escena del asesinato bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, finalmente, persigue e inmoviliza a Harlan. Su prosodia parte del igbo nigeriano; formó su inglés en Enugu y su español formal en Malabo.",
-            "en": "Okoye — Nigerian security officer. She protects the bridge after the sabotage report, removes Sorell from the murder scene under protective detention, works through the physical and systems evidence with Elin, and ultimately pursues and restrains Harlan. Her prosody is rooted in Nigerian Igbo; she formed her English in Enugu and her formal Spanish in Malabo."
+            "es": "Okoye — Oficial de seguridad nigeriana. Protege el puente después del informe de sabotaje, retira a Sorell de la escena del asesinato bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, finalmente, persigue e inmoviliza a Harlan. Su prosodia parte del igbo nigeriano; formó su inglés en Enugu y su español formal en Caracas.",
+            "en": "Okoye — Nigerian security officer. She protects the bridge after the sabotage report, removes Sorell from the murder scene under protective detention, works through the physical and systems evidence with Elin, and ultimately pursues and restrains Harlan. Her prosody is rooted in Nigerian Igbo; she formed her English in Enugu and her formal Spanish in Caracas."
           }
         }
       ]
@@ -873,8 +877,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Cada una de las tres transiciones a microgravedad cambia la historia:",
-            "en": "Each of the three transitions to microgravity changes the story:"
+            "es": "Cada una de las cuatro transiciones a microgravedad cambia la historia:",
+            "en": "Each of the four transitions to microgravity changes the story:"
           }
         },
         {
@@ -889,8 +893,12 @@
               "en": "The second enables Zao’s discovery, message, and murder."
             },
             {
-              "es": "La tercera cambia la geometría de la persecución y permite que Voss y Okoye alcancen a Harlan.",
-              "en": "The third changes the geometry of the chase and allows Voss and Okoye to reach Harlan."
+              "es": "La tercera vuelve físico el tiempo transcurrido durante la investigación y marca el paso de la aceleración al frenado en el tramo lejano.",
+              "en": "The third makes the investigation’s elapsed time physical and marks the change from acceleration to braking on the far-side leg."
+            },
+            {
+              "es": "La cuarta cambia la geometría de la persecución y permite que Voss y Okoye alcancen a Harlan.",
+              "en": "The fourth changes the geometry of the chase and allows Voss and Okoye to reach Harlan."
             }
           ]
         },
@@ -2980,8 +2988,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La historia avanza a través de la mayor parte del tránsito del otro lado, de aproximadamente veinticuatro horas.",
-            "en": "The story advances through most of the approximately twenty-four-hour far-side transit."
+            "es": "Después de despejar la boca lejana, la Ardor reanuda el empuje hacia la estación y recupera 1 g. La historia avanza a través de la primera mitad del tránsito del otro lado, de aproximadamente veinticuatro horas.",
+            "en": "After clearing the far mouth, the Ardor resumes thrust toward the station and restores 1g. The story advances through the first half of the approximately twenty-four-hour far-side transit."
           }
         },
         {
@@ -3012,10 +3020,54 @@
       ]
     },
     {
+      "id": "master:story-c10b",
+      "level": "story",
+      "sectionId": "master:section-c",
+      "order": 32,
+      "title": {
+        "es": "C10b — Tercera caída de gravedad",
+        "en": "C10b — Third gravity dip"
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Aproximadamente a mitad del trayecto entre la boca lejana y la estación Velari, la Ardor corta el empuje y entra en microgravedad por tercera vez.",
+            "en": "Approximately midway between the far mouth and the Velari station, the Ardor cuts thrust and enters microgravity for the third time."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La nave rota unos 180° desde la orientación de aceleración hasta la de desaceleración. Sorell continúa bajo custodia mientras Elin y Okoye aseguran su trabajo y sus cuerpos para atravesar la maniobra; el giro vuelve físicamente visibles las horas consumidas por la investigación.",
+            "en": "The ship rotates roughly 180° from its acceleration attitude to its deceleration attitude. Sorell remains in custody while Elin and Okoye secure their work and themselves through the maneuver; the turn makes the hours consumed by the investigation physically visible."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "El empuje se reanuda hacia el mismo piso y restaura 1 g mientras la Ardor comienza a frenar durante la segunda mitad del trayecto.",
+            "en": "Thrust resumes toward the same deck and restores 1g as the Ardor begins braking through the second half of the leg."
+          }
+        }
+      ],
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "master:story-c10",
+          "relation": "enables",
+          "explanation": {
+            "es": "El avance de la investigación durante la primera mitad del tramo lleva a la tripulación hasta el giro programado, que marca el tiempo transcurrido antes de que Voss amplíe formalmente la auditoría.",
+            "en": "The investigation’s progress through the first half of the leg carries the crew to the scheduled turnover, which marks the elapsed time before Voss formally broadens the audit."
+          }
+        }
+      ]
+    },
+    {
       "id": "master:story-d1",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 32,
+      "order": 33,
       "title": {
         "es": "D1 — Situación sostenida",
         "en": "D1 — Standing condition"
@@ -3054,7 +3106,7 @@
       "importance": "required",
       "causalLinks": [
         {
-          "sourceStepId": "master:story-c10",
+          "sourceStepId": "master:story-c10b",
           "relation": "motivates",
           "explanation": {
             "es": "El paso del tiempo sin una resolución obliga a Voss a ampliar la revisión mientras el encierro de Sorell sigue afectando la misión.",
@@ -3067,7 +3119,7 @@
       "id": "master:story-d2",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 33,
+      "order": 34,
       "title": {
         "es": "D2 — Una teoría plausible sobre el sistema de combustible",
         "en": "D2 — A plausible fuel-system theory"
@@ -3140,7 +3192,7 @@
       "id": "master:story-d2b",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 34,
+      "order": 35,
       "title": {
         "es": "D2b — Las pistas se separan",
         "en": "D2b — The clues separate"
@@ -3205,7 +3257,7 @@
       "id": "master:story-d3",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 35,
+      "order": 36,
       "title": {
         "es": "D3 — Puerta interior cerrada",
         "en": "D3 — Locked inner door"
@@ -3242,7 +3294,7 @@
       "id": "master:story-d4",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 36,
+      "order": 37,
       "title": {
         "es": "D4 — Límites honestos",
         "en": "D4 — Honest limits"
@@ -3299,7 +3351,7 @@
       "id": "master:story-d5",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 37,
+      "order": 38,
       "title": {
         "es": "D5 — La ráfaga saliente",
         "en": "D5 — The outbound burst"
@@ -3416,7 +3468,7 @@
       "id": "master:story-d5b",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 38,
+      "order": 39,
       "title": {
         "es": "D5b — La testigo perdida",
         "en": "D5b — The lost witness"
@@ -3468,7 +3520,7 @@
       "id": "master:story-d6",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 39,
+      "order": 40,
       "title": {
         "es": "D6 — La sospecha se amplía",
         "en": "D6 — Suspicion broadens"
@@ -3512,7 +3564,7 @@
       "id": "master:story-d7",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 40,
+      "order": 41,
       "title": {
         "es": "D7 — Señal detectada",
         "en": "D7 — Signal detected"
@@ -3577,7 +3629,7 @@
       "id": "master:story-e1",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 41,
+      "order": 42,
       "title": {
         "es": "E1 — Recibida",
         "en": "E1 — Received"
@@ -3614,7 +3666,7 @@
       "id": "master:story-e2",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 42,
+      "order": 43,
       "title": {
         "es": "E2 — El mensaje de Zao",
         "en": "E2 — Zao’s message"
@@ -3756,7 +3808,7 @@
       "id": "master:story-e3",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 43,
+      "order": 44,
       "title": {
         "es": "E3 — Harlan objeta",
         "en": "E3 — Harlan objects"
@@ -3786,7 +3838,7 @@
       "id": "master:story-e4",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 44,
+      "order": 45,
       "title": {
         "es": "E4 — Convergencia",
         "en": "E4 — Convergence"
@@ -3852,7 +3904,7 @@
       "id": "master:story-e5",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 45,
+      "order": 46,
       "title": {
         "es": "E5 — Autenticación",
         "en": "E5 — Authentication"
@@ -3896,7 +3948,7 @@
       "id": "master:story-e6",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 46,
+      "order": 47,
       "title": {
         "es": "E6 — Órdenes",
         "en": "E6 — Orders"
@@ -3947,7 +3999,7 @@
       "id": "master:story-f1",
       "level": "story",
       "sectionId": "master:section-f",
-      "order": 47,
+      "order": 48,
       "title": {
         "es": "F1 — Fuga",
         "en": "F1 — Break"
@@ -4005,7 +4057,7 @@
       "id": "master:story-f2",
       "level": "story",
       "sectionId": "master:section-f",
-      "order": 48,
+      "order": 49,
       "title": {
         "es": "F2 — La persecución se divide",
         "en": "F2 — The chase splits"
@@ -4077,10 +4129,10 @@
       "id": "master:story-f3",
       "level": "story",
       "sectionId": "master:section-f",
-      "order": 49,
+      "order": 50,
       "title": {
-        "es": "F3 — Tercera caída de gravedad",
-        "en": "F3 — Third gravity dip"
+        "es": "F3 — Cuarta caída de gravedad",
+        "en": "F3 — Fourth gravity dip"
       },
       "body": [
         {
@@ -4100,8 +4152,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La Ardor entra en microgravedad por tercera vez. La pantalla de navegación continúa contando los instantes restantes hasta el punto de contacto programado. La bomba está sincronizada con la hora de contacto, no con la propia orden de empuje.",
-            "en": "The Ardor enters microgravity for the third time. The navigation display continues counting down the remaining moments to the scheduled contact point. The bomb is synchronized to that contact time, not to the thrust command itself."
+            "es": "La Ardor entra en microgravedad por cuarta vez. La pantalla de navegación continúa contando los instantes restantes hasta el punto de contacto programado. La bomba está sincronizada con la hora de contacto, no con la propia orden de empuje.",
+            "en": "The Ardor enters microgravity for the fourth time. The navigation display continues counting down the remaining moments to the scheduled contact point. The bomb is synchronized to that contact time, not to the thrust command itself."
           }
         },
         {
@@ -4128,7 +4180,7 @@
       "id": "master:story-f4",
       "level": "story",
       "sectionId": "master:section-f",
-      "order": 50,
+      "order": 51,
       "title": {
         "es": "F4 — El rescate y la explicación de Harlan",
         "en": "F4 — The save and Harlan’s explanation"
@@ -4223,7 +4275,7 @@
       "id": "master:story-f5",
       "level": "story",
       "sectionId": "master:section-f",
-      "order": 51,
+      "order": 52,
       "title": {
         "es": "F5 — Demorada, no desarmada",
         "en": "F5 — Delayed, not disarmed"
@@ -4317,7 +4369,7 @@
       "id": "master:story-f6",
       "level": "story",
       "sectionId": "master:section-f",
-      "order": 52,
+      "order": 53,
       "title": {
         "es": "F6 — Tiempo ganado",
         "en": "F6 — Time bought"
@@ -4354,7 +4406,7 @@
       "id": "master:story-f7",
       "level": "story",
       "sectionId": "master:section-f",
-      "order": 53,
+      "order": 54,
       "title": {
         "es": "F7 — Preparado, no enviado",
         "en": "F7 — Staged, not sent"
@@ -4420,7 +4472,7 @@
       "id": "master:story-g1",
       "level": "story",
       "sectionId": "master:section-g",
-      "order": 54,
+      "order": 55,
       "title": {
         "es": "G1 — Cero",
         "en": "G1 — Zero"
@@ -4486,7 +4538,7 @@
       "id": "master:story-g2",
       "level": "story",
       "sectionId": "master:section-g",
-      "order": 55,
+      "order": 56,
       "title": {
         "es": "G2 — La estación responde",
         "en": "G2 — The station answers"
@@ -4580,7 +4632,7 @@
       "id": "master:story-g2b",
       "level": "story",
       "sectionId": "master:section-g",
-      "order": 56,
+      "order": 57,
       "title": {
         "es": "G2b — El encuentro",
         "en": "G2b — The meeting"
@@ -4706,7 +4758,7 @@
       "id": "master:story-g3",
       "level": "story",
       "sectionId": "master:section-g",
-      "order": 57,
+      "order": 58,
       "title": {
         "es": "G3 — Cierre",
         "en": "G3 — Close"

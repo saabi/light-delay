@@ -1,6 +1,6 @@
 # Lúz Tardía — esquema TTS multi-voz (español)
 
-Revisión 15 (desde la escaleta maestra). Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
+Revisión 16 (desde la escaleta maestra). Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Nombre hablado: Sorél; la grafía editorial y la etiqueta siguen en ASCII [Sorell].
 Los hablantes de diálogo salen sólo de las citas atribuidas del master (`speakerId` / `> **Nombre:**`), no de heurísticas sobre comillas.
 Los [QwenInstruct] son los mismos directores de interpretación que en inglés (el modelo los entiende en inglés mientras habla español).
@@ -10,10 +10,10 @@ Generar: `python scripts/generate-dual-outline-audio.py --lang es --script docs/
 ---
 
 [Narrator]
-[PAUSE 1200] Lúz Tardía. Escaleta narrativa general. Revisión 15.
+[PAUSE 1200] Lúz Tardía. Escaleta narrativa general. Revisión 16.
 
 [Narrator]
-Borrador de trabajo, español, revisión 15.
+Borrador de trabajo, español, revisión 16.
 
 [Narrator]
 [PAUSE 1200] Propósito de este documento
@@ -202,7 +202,7 @@ Con los troncales principales de datos desconectados, el controlador local de la
 El tramo local desde Próxima en L1 hasta la boca de Júpiter en L2 dura 57 h 48 min: aproximadamente 28 h 54 min acelerando hacia el periapsis de Júpiter y aproximadamente 28 h 54 min desacelerando hacia L2.
 
 [Narrator]
-El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 17,4 millones de km. Un perfil de aceleración–desaceleración a 1 g toma aproximadamente 23 h 25 min.
+El tramo del otro lado, desde la boca lejana hasta el encuentro previsto, tiene aproximadamente 17,4 millones de km. Un perfil de aceleración–desaceleración a 1 g toma aproximadamente 23 h 25 min. Después de despejar la boca lejana, la nave acelera durante la primera mitad del tramo, corta el empuje y rota unos 180° en microgravedad, y luego reanuda el empuje hacia el mismo piso para desacelerar durante la segunda mitad.
 
 [Narrator]
 La advertencia de Zao no utiliza la garganta. La envía a través del espacio ordinario desde la boca de Júpiter mediante la matriz óptica de comunicaciones de larga distancia. En la alineación programada, el tiempo de viaje de la luz hasta el punto de intercepción calculado de la Ardor es de aproximadamente 23 h 15 min.
@@ -232,10 +232,10 @@ En la alineación orbital del Prólogo, el retardo unidireccional de la luz desd
 [PAUSE 1200] Línea transversal de la gravedad
 
 [Narrator]
-La nave funciona a 1 g durante la mayor parte del tránsito propulsado, pero entra tres veces en microgravedad, cada una debido a una operación de vuelo necesaria:
+La nave funciona a 1 g durante la mayor parte del tránsito propulsado, pero entra cuatro veces en microgravedad, cada una debido a una operación de vuelo necesaria:
 
 [Narrator]
-1. En el periapsis de Júpiter, el empuje se detiene brevemente para que la nave pueda rotar desde la aceleración prógrada hasta la desaceleración retrógrada. 2. Al acercarse a la boca de Júpiter, el empuje se detiene para realizar la aproximación de precisión y el cruce de la garganta. El descubrimiento y asesinato de Zao ocurren durante este intervalo. 3. Al final de la desaceleración del otro lado, el empuje se detiene poco antes de las coordenadas previstas para el primer contacto. El giro decisivo del clímax ocurre durante este intervalo.
+1. En el periapsis de Júpiter, el empuje se detiene brevemente para que la nave pueda rotar desde la aceleración prógrada hasta la desaceleración retrógrada. 2. Al acercarse a la boca de Júpiter, el empuje se detiene para realizar la aproximación de precisión y el cruce de la garganta. El descubrimiento y asesinato de Zao ocurren durante este intervalo. 3. A mitad del tramo entre la boca lejana y la estación Velari, el empuje se detiene brevemente para que la nave rote unos 180° desde la aceleración hasta la desaceleración. La investigación continúa a lo largo de esta transición. 4. Al final de la desaceleración del otro lado, el empuje se detiene poco antes de las coordenadas previstas para el primer contacto. El giro decisivo del clímax ocurre durante este intervalo.
 
 [Narrator]
 La bomba cuenta hacia la hora y las coordenadas previstas para el contacto, no hacia el acto mecánico de cortar el empuje. El corte final ocurre instantes antes de que el temporizador llegue a cero.
@@ -256,10 +256,10 @@ Harlan — Segundo al mando de Próxima y de la Ardor. Transfiere la bomba a bor
 Voss — Capitán. Es capaz, pero confía demasiado en su habilidad para interpretar a su gente. Interpreta mal a Harlan, interpreta mal a Sorél, descarta la inquietud temprana de Zao y debe enfrentar el costo humano de esos errores. Su prosodia es germánica o nórdica; formó su inglés institucional en Toronto y su español formal en Lima.
 
 [Narrator]
-Sorél — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad. Su prosodia parte del francés; formó su inglés en el entorno francófono de Montréal y su español académico en Madrid.
+Sorél — Xenolingüista. Ha pasado meses estudiando la gramática unidireccional de instrucciones de la garganta y ha diseñado el primer intento de saludo de la humanidad. Su prosodia parte del francés; formó su inglés en el entorno francófono de Montréal y su español académico en Santiago del Estero.
 
 [Narrator]
-Okoye — Oficial de seguridad nigeriana. Protege el puente después del informe de sabotaje, retira a Sorél de la escena del asesinato bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, finalmente, persigue e inmoviliza a Harlan. Su prosodia parte del igbo nigeriano; formó su inglés en Enugu y su español formal en Malabo.
+Okoye — Oficial de seguridad nigeriana. Protege el puente después del informe de sabotaje, retira a Sorél de la escena del asesinato bajo custodia protectora, examina junto a Elin las pruebas físicas y de sistemas y, finalmente, persigue e inmoviliza a Harlan. Su prosodia parte del igbo nigeriano; formó su inglés en Enugu y su español formal en Caracas.
 
 [Narrator]
 [PAUSE 1200] Motivación de Harlan
@@ -901,13 +901,25 @@ Las pruebas justifican la custodia, pero no demuestran el asesinato. Lo que perd
 [PAUSE 1200] Secuencia Charlie 10. Salto temporal
 
 [Narrator]
-La historia avanza a través de la mayor parte del tránsito del otro lado, de aproximadamente veinticuatro horas.
+Después de despejar la boca lejana, la Ardor reanuda el empuje hacia la estación y recupera 1 g. La historia avanza a través de la primera mitad del tránsito del otro lado, de aproximadamente veinticuatro horas.
 
 [Narrator]
 Sorél permanece bajo interrogatorio activo y no puede preparar el saludo. Voss comienza discretamente a planear cómo abordar el encuentro sin ella.
 
 [Narrator]
 Elin y Okoye examinan las pruebas físicas y de sistemas disponibles. Ambas muestran un agotamiento visible.
+
+[Narrator]
+[PAUSE 1200] Secuencia Charlie 10 Bravo. Tercera caída de gravedad
+
+[Narrator]
+Aproximadamente a mitad del trayecto entre la boca lejana y la estación Velari, la Ardor corta el empuje y entra en microgravedad por tercera vez.
+
+[Narrator]
+La nave rota unos 180° desde la orientación de aceleración hasta la de desaceleración. Sorél continúa bajo custodia mientras Elin y Okoye aseguran su trabajo y sus cuerpos para atravesar la maniobra; el giro vuelve físicamente visibles las horas consumidas por la investigación.
+
+[Narrator]
+El empuje se reanuda hacia el mismo piso y restaura 1 g mientras la Ardor comienza a frenar durante la segunda mitad del trayecto.
 
 [Narrator]
 [PAUSE 1200] Secuencia Delta — Investigación
@@ -1217,7 +1229,7 @@ Los dos desvíos les cuestan tiempo. Después de encontrar cerradas sucesivament
 Las escaleras llegan al nivel del compartimiento de blindaje, pero sus recorridos en espiral, los repetidos descansos de cubierta y las dos comprobaciones desperdiciadas los vuelven considerablemente más lentos que el descenso directo de Harlan.
 
 [Narrator]
-[PAUSE 1200] Secuencia Foxtrot 3. Tercera caída de gravedad
+[PAUSE 1200] Secuencia Foxtrot 3. Cuarta caída de gravedad
 
 [Narrator]
 Harlan está atacando a Elin en la entrada de la bóveda interior cuando la nave completa su desaceleración programada.
@@ -1226,7 +1238,7 @@ Harlan está atacando a Elin en la entrada de la bóveda interior cuando la nave
 Se corta el empuje.
 
 [Narrator]
-La Ardor entra en microgravedad por tercera vez. La pantalla de navegación continúa contando los instantes restantes hasta el punto de contacto programado. La bomba está sincronizada con la hora de contacto, no con la propia orden de empuje.
+La Ardor entra en microgravedad por cuarta vez. La pantalla de navegación continúa contando los instantes restantes hasta el punto de contacto programado. La bomba está sincronizada con la hora de contacto, no con la propia orden de empuje.
 
 [Narrator]
 En ese instante, Voss y Okoye están pasando por descansos de cubierta aproximadamente 15 m por encima de Harlan y Elin. La distancia es consecuencia del tiempo de la persecución, no una sección arquitectónica separada de la nave.
@@ -1503,10 +1515,10 @@ El informe final de Voss repite la elección de Zao: una persona envía la verda
 [PAUSE 1200] Gravedad
 
 [Narrator]
-Cada una de las tres transiciones a microgravedad cambia la historia:
+Cada una de las cuatro transiciones a microgravedad cambia la historia:
 
 [Narrator]
-La primera vuelve físico el paso del tiempo. La segunda hace posibles el descubrimiento, el mensaje y el asesinato de Zao. La tercera cambia la geometría de la persecución y permite que Voss y Okoye alcancen a Harlan.
+La primera vuelve físico el paso del tiempo. La segunda hace posibles el descubrimiento, el mensaje y el asesinato de Zao. La tercera vuelve físico el tiempo transcurrido durante la investigación y marca el paso de la aceleración al frenado en el tramo lejano. La cuarta cambia la geometría de la persecución y permite que Voss y Okoye alcancen a Harlan.
 
 [Narrator]
 [PAUSE 1200] Interpretación

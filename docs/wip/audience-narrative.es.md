@@ -1,6 +1,6 @@
 # Lúz Tardía
 
-*Relato para público. Revisión 15.*
+*Relato para público. Revisión 16.*
 
 ## Prólogo — Luces de la Tierra
 
@@ -300,9 +300,13 @@ Voss recuerda a Sorell bajo la cobertura de las protestas diciendo *eso no es mi
 
 La custodia está justificada. El asesinato no está demostrado. Elin sabe que son dos frases distintas. No puede olvidar la desolación absoluta de Sorell mientras sostenía a Zao ni la rapidez con que Harlan convirtió la incertidumbre en culpa.
 
-La nave se estabiliza en su trayecto del otro lado: unos diecisiete coma cuatro millones de kilómetros hasta el punto de encuentro, cerca de veintitrés horas y media de aceleración y frenado bajo un g.
+Una vez despejada la boca lejana, la nave se estabiliza en su trayecto del otro lado y el empuje devuelve el peso a las cubiertas: unos diecisiete coma cuatro millones de kilómetros hasta el punto de encuentro, cerca de veintitrés horas y media de aceleración y frenado bajo un g.
 
-Sorell pasa ese tiempo sometida a interrogatorios en vez de preparar el saludo. Voss planifica en silencio cómo acercarse a una estación alienígena sin su xenolingüista. Elin y Okoye trabajan hasta que el cansancio desdibuja las pantallas, y después siguen trabajando.
+Durante la primera mitad, Sorell permanece sometida a interrogatorios en vez de preparar el saludo. Voss planifica en silencio cómo acercarse a una estación alienígena sin su xenolingüista. Elin y Okoye trabajan hasta que el cansancio desdibuja las pantallas, y después siguen trabajando.
+
+A mitad del trayecto, el empuje se corta y el peso desaparece por tercera vez. La tripulación asegura cuerpos y trabajo mientras la *Ardor* rota ciento ochenta grados desde la orientación de aceleración hasta la de frenado. Horas de investigación se vuelven visibles en una única maniobra.
+
+El motor vuelve a empujar hacia el mismo piso. Regresa un g y comienza la desaceleración hacia la estación Velari.
 
 ## Capítulo 8. Investigación
 

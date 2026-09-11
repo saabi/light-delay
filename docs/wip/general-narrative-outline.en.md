@@ -2,7 +2,7 @@
 
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 15.
+Working draft, English, revision 16.
 
 **Editorial status:** current narrative source of truth; still WIP.
 
@@ -140,7 +140,7 @@ With the main data trunks disconnected, the local array controller records into 
 
 The local segment from Proxima at L1 to the Jupiter mouth at L2 lasts 57 h 48 min: approximately 28 h 54 min accelerating toward Jupiter periapsis and approximately 28 h 54 min decelerating toward L2.
 
-The far-side segment from the far mouth to the planned encounter is approximately 17.4 million km. A 1g accelerate–decelerate profile takes approximately 23 h 25 min.
+The far-side segment from the far mouth to the planned encounter is approximately 17.4 million km. A 1g accelerate–decelerate profile takes approximately 23 h 25 min. After clearing the far mouth, the ship accelerates through the first half of the leg, cuts thrust and rotates roughly 180° in microgravity, then resumes thrust toward the same deck to decelerate through the second half.
 
 Zao’s warning does not use the throat. She sends it through ordinary space from the Jupiter mouth using the long-distance optical communications array. At the scheduled alignment, the light-time to the Ardor’s calculated interception point is approximately 23 h 15 min.
 
@@ -162,11 +162,12 @@ At the Prologue’s orbital alignment, the one-way Earth-to-Jupiter light delay 
 
 ## Gravity throughline
 
-The ship runs at 1g through most of its powered transit but enters microgravity three times, each for a necessary flight operation:
+The ship runs at 1g through most of its powered transit but enters microgravity four times, each for a necessary flight operation:
 
 1. At Jupiter periapsis, thrust stops briefly so the ship can rotate from prograde acceleration to retrograde deceleration.
 2. Nearing the Jupiter mouth, thrust stops for precision approach and throat crossing. Zao’s discovery and murder occur during this interval.
-3. At the end of the far-side deceleration, thrust stops shortly before the scheduled first-contact coordinates. The decisive turn in the climax occurs during this interval.
+3. Midway between the far mouth and the Velari station, thrust stops briefly so the ship can rotate roughly 180° from acceleration to deceleration. The investigation continues through this transition.
+4. At the end of the far-side deceleration, thrust stops shortly before the scheduled first-contact coordinates. The decisive turn in the climax occurs during this interval.
 
 The bomb is counting down to the scheduled contact time and coordinates, not to the mechanical act of thrust cutoff. Final cutoff occurs moments before the timer reaches zero.
 
@@ -182,9 +183,9 @@ Harlan — Proxima and Ardor second-in-command. He transfers the bomb aboard, mu
 
 Voss — Captain. He is capable but overconfident in his ability to read his people. He misreads Harlan, misreads Sorell, dismisses Zao’s early unease, and must confront the human cost of those errors. His prosody is Germanic or Nordic; he formed his institutional English in Toronto and his formal Spanish in Lima.
 
-Sorell — Xenolinguist. She has spent months studying the throat’s one-way instructional grammar and has designed humanity’s first attempted greeting. Her prosody is rooted in French; she formed her English in Montréal’s francophone environment and her academic Spanish in Madrid.
+Sorell — Xenolinguist. She has spent months studying the throat’s one-way instructional grammar and has designed humanity’s first attempted greeting. Her prosody is rooted in French; she formed her English in Montréal’s francophone environment and her academic Spanish in Santiago del Estero.
 
-Okoye — Nigerian security officer. She protects the bridge after the sabotage report, removes Sorell from the murder scene under protective detention, works through the physical and systems evidence with Elin, and ultimately pursues and restrains Harlan. Her prosody is rooted in Nigerian Igbo; she formed her English in Enugu and her formal Spanish in Malabo.
+Okoye — Nigerian security officer. She protects the bridge after the sabotage report, removes Sorell from the murder scene under protective detention, works through the physical and systems evidence with Elin, and ultimately pursues and restrains Harlan. Her prosody is rooted in Nigerian Igbo; she formed her English in Enugu and her formal Spanish in Caracas.
 
 ---
 
@@ -608,11 +609,19 @@ The evidence justifies custody but does not prove murder. What stays with Elin i
 
 ### C10 — Time jump
 
-The story advances through most of the approximately twenty-four-hour far-side transit.
+After clearing the far mouth, the Ardor resumes thrust toward the station and restores 1g. The story advances through the first half of the approximately twenty-four-hour far-side transit.
 
 Sorell remains under active questioning and cannot prepare the greeting. Voss quietly begins planning how to approach the encounter without her.
 
 Elin and Okoye work through the available physical and systems evidence. Both become visibly exhausted.
+
+### C10b — Third gravity dip
+
+Approximately midway between the far mouth and the Velari station, the Ardor cuts thrust and enters microgravity for the third time.
+
+The ship rotates roughly 180° from its acceleration attitude to its deceleration attitude. Sorell remains in custody while Elin and Okoye secure their work and themselves through the maneuver; the turn makes the hours consumed by the investigation physically visible.
+
+Thrust resumes toward the same deck and restores 1g as the Ardor begins braking through the second half of the leg.
 
 ---
 
@@ -843,13 +852,13 @@ The two detours cost them time. After finding the bridge hatch and the next two 
 
 The stairs reach the shielding-bay level, but their spiral paths, repeated deck landings, and two wasted checks make them substantially slower than Harlan’s direct descent.
 
-### F3 — Third gravity dip
+### F3 — Fourth gravity dip
 
 Harlan is attacking Elin at the inner-vault entrance when the ship completes its programmed deceleration.
 
 Thrust cuts.
 
-The Ardor enters microgravity for the third time. The navigation display continues counting down the remaining moments to the scheduled contact point. The bomb is synchronized to that contact time, not to the thrust command itself.
+The Ardor enters microgravity for the fourth time. The navigation display continues counting down the remaining moments to the scheduled contact point. The bomb is synchronized to that contact time, not to the thrust command itself.
 
 At that instant, Voss and Okoye are passing deck landings approximately 15 m above Harlan and Elin. The distance is a consequence of the chase timing, not a separate architectural section of the ship.
 
@@ -1048,11 +1057,12 @@ Voss’s final report repeats Zao’s choice: a person sends the truth into sile
 
 ### Gravity
 
-Each of the three transitions to microgravity changes the story:
+Each of the four transitions to microgravity changes the story:
 
 - The first makes elapsed time physical.
 - The second enables Zao’s discovery, message, and murder.
-- The third changes the geometry of the chase and allows Voss and Okoye to reach Harlan.
+- The third makes the investigation’s elapsed time physical and marks the change from acceleration to braking on the far-side leg.
+- The fourth changes the geometry of the chase and allows Voss and Okoye to reach Harlan.
 
 ### Interpretation
 

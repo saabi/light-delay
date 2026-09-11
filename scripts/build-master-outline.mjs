@@ -423,16 +423,16 @@ if (process.argv.includes('--write')) {
 		process.exit(1);
 	}
 	if (
-		actual.steps.length !== 57 ||
+		actual.steps.length !== 58 ||
 		actual.storySections.length !== 8 ||
 		actual.framing.length !== 11
 	) {
 		console.error(
-			'master-outline: completeness counts must be 57 story beats, 8 story sections, and 11 framing sections'
+			'master-outline: completeness counts must be 58 story beats, 8 story sections, and 11 framing sections'
 		);
 		process.exit(1);
 	}
 	console.log(
-		`master-outline: English source fidelity OK (revision ${actual.outline.revision}; 57 beats; 11 framing sections)`
+		`master-outline: English source fidelity OK (revision ${actual.outline.revision}; 58 beats; 11 framing sections)`
 	);
 }
