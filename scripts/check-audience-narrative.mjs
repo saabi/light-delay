@@ -14,7 +14,7 @@ const files = {
 };
 
 const expectedSections = 12;
-const expectedDialogues = { en: 37, es: 36 };
+const expectedDialogues = { en: 37, es: 37 };
 const speakerIds = {
 	Zao: 'character:zao',
 	'Elias Voss': 'character:voss',

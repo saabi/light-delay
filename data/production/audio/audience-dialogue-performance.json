@@ -41,11 +41,17 @@
       "sourceStepId": "master:story-p2",
       "speakerId": "character:voss",
       "intent": {
+        "es": "Voss zanja lo que cree dudas compartidas ordinarias y revela que ha aplanado dos advertencias distintas en la misma preocupación manejable.",
         "en": "Voss settles what he believes are ordinary shared doubts, revealing that he has flattened two fundamentally different warnings into the same manageable concern."
       },
       "delivery": {
         "en": {
+          "es": "Voz de mando mesurada y tranquilizadora. Dar a part of the job el peso calmado de una doctrina cerrada, pausar y hacer We go anyway decisivo.",
           "en": "Measured, reassuring command voice. Give ‘part of the job’ the calm weight of settled doctrine, pause briefly, then make ‘We go anyway’ decisive enough to close discussion."
+        },
+        "es": {
+          "es": "Cadencia de mando serena y cercana. Apoyar forma parte del trabajo como doctrina cerrada, pausar y cerrar con vamos de todos modos sin abrir debate.",
+          "en": "Calm, familiar command cadence. Place doctrine weight on ‘forma parte del trabajo,’ pause, then close with ‘vamos de todos modos’ so discussion ends."
         }
       }
     },

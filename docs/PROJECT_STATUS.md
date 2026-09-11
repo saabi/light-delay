@@ -1,5 +1,14 @@
 # Estado del proyecto
 
+## 2026-09-11 — Español al beat de sabotaje (master rev. 19)
+
+- Master ES, `audience-narrative.es.md`, voces ES y escaleta ES actualizados al sabotaje
+  de vuelo post-asesinato; `lastSyncedRevision` 19, status `needs_revision`.
+- Diálogos de audiencia ES: 37 (incluye `p2-voss-doubt`). Export completo ES sigue
+  bloqueado por campos españoles ausentes fuera de este beat; la escaleta ES se retuvo
+  y se editó a mano en los pasajes del commit.
+- Dual ES de audiencia pendiente de regeneración (siguiente paso).
+
 ## 2026-09-11 — Dual de audiencia EN (master rev. 19)
 
 - Generado `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-en.mp3` (~49.0 min)

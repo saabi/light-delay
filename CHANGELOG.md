@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-11 — Español sincronizado al beat de sabotaje de rev. 19
+
+- Traducido al español el desplazamiento del sabotaje de vuelo post-asesinato (master,
+  relato, voces TTS y escaleta ES retenida).
+- Añadido el diálogo `p2-voss-doubt` en ES para paridad de IDs con la fuente inglesa;
+  `lastSyncedRevision` 19 con status `needs_revision` (prólogo y resto aún no a current).
+- Pendiente regenerar el dual ES de audiencia.
+
 ## 2026-09-11 — Dual de audiencia EN regenerado (rev. 19)
 
 - Regenerado `light-delay-audience-dual-en.mp3` (~49.0 min) y chunks

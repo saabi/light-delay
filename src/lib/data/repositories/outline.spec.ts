@@ -57,7 +57,7 @@ describe('outlines (optional)', () => {
 		expect(source.outline.version).toBe('0.8.0-wip');
 		expect(source.outline.localization).toEqual({
 			sourceLanguage: 'en',
-			translations: { es: { status: 'needs_revision', lastSyncedRevision: 17 } }
+			translations: { es: { status: 'needs_revision', lastSyncedRevision: 19 } }
 		});
 		expect(source.outline.status).toBe('draft');
 		expect(source.outline.exports?.map((item) => item.path)).toEqual([

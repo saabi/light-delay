@@ -1,6 +1,6 @@
 # Lúz Tardía — relato TTS para público (español)
 
-Revisión 17 (desde la escaleta maestra). Relato por capítulos; sin frontmatter de producción.
+Revisión 19 (desde la escaleta maestra). Relato por capítulos; sin frontmatter de producción.
 Etiquetas: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Nombre hablado: Sorél; la grafía editorial y la etiqueta siguen como [Sorell]. Diálogo sólo desde citas atribuidas.
 Cast/ref: `docs/wip/qwen3-tts-cast.es.json`.
@@ -9,7 +9,7 @@ Generar: `python scripts/generate-dual-outline-audio.py --lang es --script docs/
 ---
 
 [Narrator]
-[PAUSE 1200] Lúz Tardía. Revisión 17.
+[PAUSE 1200] Lúz Tardía. Revisión 19.
 
 [Narrator]
 Prólogo.
@@ -49,18 +49,23 @@ No afirma que los Velari podrían haber entrado cuando quisieran. No lo sabe. Lo
 "Construyeron una puerta en nuestro sistema antes de que supiéramos que existían. Ahora la puerta nos dice cuándo atravesarla"
 
 [Narrator]
-Lian Sorél lleva meses estudiando la secuencia instructiva. Le responde desde el procedimiento, no desde el optimismo. Esperar es un mensaje, pero ella se niega a decidir qué significa antes de que la humanidad responda una vez y escuche la contestación.
-
-[Narrator]
-Elias Voss oye nervios corrientes en Harlan y miedo a actuar en Sorél. Se equivoca con ambos.
+Lian Sorél lleva meses estudiando la secuencia instructiva. Le responde desde el procedimiento, no desde el optimismo.
 
 <!-- audience-dialogue-id: audience:dialogue:p2-sorell-respect -->
 [Sorell]
-[QwenInstruct] Speak Spanish. Dramatic situation: Sorél defends caution as ethical rigor, stung that Voss mistook it for fear. Performance and delivery: Expressive and cultivated; contain the hurt until a clean pause between ‘miedo’ and ‘respeto.’
-"Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Eso no es miedo. Es respeto"
+[QwenInstruct] Speak Spanish. Dramatic situation: Sorél defines caution as disciplined interpretation rather than reluctance, refusing to mistake the first plausible reading for knowledge. Performance and delivery: Expressive and cultivated; contain the hurt until a clean pause between ‘miedo’ and ‘respeto.’
+"Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Ahora respondemos una vez, escuchamos y sólo entonces decidimos qué significa su espera. Eso no es miedo. Es respeto"
 
 [Narrator]
-Zao casi no dice nada. Cuando termina el intercambio, encuentra a Voss a solas y baja la voz.
+Voss los mira a ambos con la calma de un capitán que ordena nervios ordinarios previos a la partida. Oye el temor de Harlan como duda suavizada por la esperanza y el rigor de Sorél como renuencia a actuar.
+
+<!-- audience-dialogue-id: audience:dialogue:p2-voss-doubt -->
+[Voss]
+[QwenInstruct] Speak Spanish. Dramatic situation: Voss settles what he believes are ordinary shared doubts, revealing that he has flattened two fundamentally different warnings into the same manageable concern. Performance and delivery: Calm, familiar command cadence. Place doctrine weight on ‘forma parte del trabajo,’ pause, then close with ‘vamos de todos modos’ so discussion ends.
+"La duda forma parte del trabajo. Vamos de todos modos"
+
+[Narrator]
+Zao observa que Voss cierra el asunto en lugar de examinar la diferencia. Cuando termina el intercambio, lo encuentra a solas y baja la voz.
 
 <!-- audience-dialogue-id: audience:dialogue:p2-zao-not-hope -->
 [Zao]
@@ -262,13 +267,7 @@ Capítulo 4.
 [PAUSE 1200] Detrás de la puerta
 
 [Narrator]
-En ingravidez y a sesenta y cinco metros a popa del puente, Zao se cruza con Harlan cuando éste sale de la bóveda interior.
-
-[Narrator]
-Parece estar terminando una inspección asignada. No ha terminado de asegurar la puerta a su espalda.
-
-[Narrator]
-Un instante antes, sus manos trabajaban en otro panel del compartimiento exterior. Cerró la tapa y comprobó la telemetría. Todo seguía pareciendo normal en el puente.
+En ingravidez y a sesenta y cinco metros a popa del puente, Zao se cruza con Harlan cuando éste sale de la bóveda interior. Parece estar terminando una inspección asignada y no ha terminado de asegurar la puerta a su espalda.
 
 [Narrator]
 Su mirada dura una fracción de segundo de más. No ofrece ninguna explicación, y ella no acusa a un hombre basándose en una expresión. Se cruzan sin decir palabra.
@@ -412,7 +411,7 @@ Supone que la acusación de Zao viaja hacia casa. Tal vez lo condene ante la his
 Esa perspectiva le provoca algo más complejo que miedo. Si el ataque tiene éxito, la acusación también podría preservar su motivo. Imagina un futuro en el que primero lo maldicen y después deciden que actuó como su escudo. No espera que lo rescaten ni que nadie vivo le agradezca: sólo un veredicto póstumo.
 
 [Narrator]
-El trabajo que le queda es más pequeño y más sucio: matar a Zao, asegurar la bóveda, marcharse antes de que llegue el tripulante que se acerca y restaurar las cámaras a tiempo para que registren a esa persona junto al cuerpo.
+El puente oyó a Zao denunciar el sabotaje antes de que él la cortara. Tras el cruce comprometido de la garganta, Voss puede intentar interrumpir la aproximación automática. El trabajo que le queda es más pequeño y más sucio: matar a Zao, asegurar la bóveda, cortar la vía de mando de vuelo del puente, marcharse antes de que llegue el tripulante que se acerca y restaurar las cámaras a tiempo para que registren a esa persona junto al cuerpo.
 
 [Narrator]
 Su error no consiste en no leer la telemetría. Consiste en creer que ya sabe lo que significa.
@@ -431,6 +430,9 @@ Se oye un golpe.
 
 [Narrator]
 El cuerpo de Zao queda en el compartimiento exterior accesible. Harlan cierra la bóveda interior de blindaje y vincula su cerradura local aislada con el dispositivo de su muñeca. La puerta nunca ha estado conectada a la red de la nave. Ahora se declara inaccesible incluso para el capitán y no deja ningún registro central de acceso.
+
+[Narrator]
+En la consola local de vuelo adyacente, Harlan desconecta físicamente las entradas de mando del puente y el corte de emergencia remoto. Tarda segundos. El plan automático, la telemetría normal de retorno, el corte final programado y el mando independiente a popa permanecen intactos. Después se dirige a la bandeja de servicio. El descenso más lento de Sorél por el conducto central todavía le da tiempo de restaurar comunicaciones y cámaras antes de que ella pueda informar de lo que encuentra.
 
 [Narrator]
 Por delante de la nave, la garganta se abre. La Ardor cruza. La apertura se cierra a sus espaldas y vuelve a su paciente estado piloto unidireccional.

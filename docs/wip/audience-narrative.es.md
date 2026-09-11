@@ -1,6 +1,6 @@
 # Lúz Tardía
 
-*Relato para público. Revisión 17.*
+*Relato para público. Revisión 19. Traducción pendiente de paridad plena con la fuente inglesa.*
 
 ## Prólogo — Luces de la Tierra
 
@@ -24,14 +24,17 @@ No afirma que los Velari podrían haber entrado cuando quisieran. No lo sabe. Lo
 <!-- audience-dialogue-id: audience:dialogue:p2-harlan-door -->
 > **Rylen Harlan:** «Construyeron una puerta en nuestro sistema antes de que supiéramos que existían. Ahora la puerta nos dice cuándo atravesarla».
 
-Lian Sorell lleva meses estudiando la secuencia instructiva. Le responde desde el procedimiento, no desde el optimismo. Esperar es un mensaje, pero ella se niega a decidir qué significa antes de que la humanidad responda una vez y escuche la contestación.
-
-Elias Voss oye nervios corrientes en Harlan y miedo a actuar en Sorell. Se equivoca con ambos.
+Lian Sorell lleva meses estudiando la secuencia instructiva. Le responde desde el procedimiento, no desde el optimismo.
 
 <!-- audience-dialogue-id: audience:dialogue:p2-sorell-respect -->
-> **Lian Sorell:** «Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Eso no es miedo. Es respeto».
+> **Lian Sorell:** «Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Ahora respondemos una vez, escuchamos y sólo entonces decidimos qué significa su espera. Eso no es miedo. Es respeto».
 
-Zao casi no dice nada. Cuando termina el intercambio, encuentra a Voss a solas y baja la voz.
+Voss los mira a ambos con la calma de un capitán que ordena nervios ordinarios previos a la partida. Oye el temor de Harlan como duda suavizada por la esperanza y el rigor de Sorell como renuencia a actuar.
+
+<!-- audience-dialogue-id: audience:dialogue:p2-voss-doubt -->
+> **Elias Voss:** «La duda forma parte del trabajo. Vamos de todos modos».
+
+Zao observa que Voss cierra el asunto en lugar de examinar la diferencia. Cuando termina el intercambio, lo encuentra a solas y baja la voz.
 
 <!-- audience-dialogue-id: audience:dialogue:p2-zao-not-hope -->
 > **Zao:** «Eso no era esperanza».
@@ -153,11 +156,7 @@ No hay ninguna alarma de combustible activa. Zao nunca ha confundido la ausencia
 
 ## Capítulo 4. Detrás de la puerta
 
-En ingravidez y a sesenta y cinco metros a popa del puente, Zao se cruza con Harlan cuando éste sale de la bóveda interior.
-
-Parece estar terminando una inspección asignada. No ha terminado de asegurar la puerta a su espalda.
-
-Un instante antes, sus manos trabajaban en otro panel del compartimiento exterior. Cerró la tapa y comprobó la telemetría. Todo seguía pareciendo normal en el puente.
+En ingravidez y a sesenta y cinco metros a popa del puente, Zao se cruza con Harlan cuando éste sale de la bóveda interior. Parece estar terminando una inspección asignada y no ha terminado de asegurar la puerta a su espalda.
 
 Su mirada dura una fracción de segundo de más. No ofrece ninguna explicación, y ella no acusa a un hombre basándose en una expresión. Se cruzan sin decir palabra.
 
@@ -248,7 +247,7 @@ Supone que la acusación de Zao viaja hacia casa. Tal vez lo condene ante la his
 
 Esa perspectiva le provoca algo más complejo que miedo. Si el ataque tiene éxito, la acusación también podría preservar su motivo. Imagina un futuro en el que primero lo maldicen y después deciden que actuó como su escudo. No espera que lo rescaten ni que nadie vivo le agradezca: sólo un veredicto póstumo.
 
-El trabajo que le queda es más pequeño y más sucio: matar a Zao, asegurar la bóveda, marcharse antes de que llegue el tripulante que se acerca y restaurar las cámaras a tiempo para que registren a esa persona junto al cuerpo.
+El puente oyó a Zao denunciar el sabotaje antes de que él la cortara. Tras el cruce comprometido de la garganta, Voss puede intentar interrumpir la aproximación automática. El trabajo que le queda es más pequeño y más sucio: matar a Zao, asegurar la bóveda, cortar la vía de mando de vuelo del puente, marcharse antes de que llegue el tripulante que se acerca y restaurar las cámaras a tiempo para que registren a esa persona junto al cuerpo.
 
 Su error no consiste en no leer la telemetría. Consiste en creer que ya sabe lo que significa.
 
@@ -261,6 +260,8 @@ La imagen se funde a negro antes del impacto.
 Se oye un golpe.
 
 El cuerpo de Zao queda en el compartimiento exterior accesible. Harlan cierra la bóveda interior de blindaje y vincula su cerradura local aislada con el dispositivo de su muñeca. La puerta nunca ha estado conectada a la red de la nave. Ahora se declara inaccesible incluso para el capitán y no deja ningún registro central de acceso.
+
+En la consola local de vuelo adyacente, Harlan desconecta físicamente las entradas de mando del puente y el corte de emergencia remoto. Tarda segundos. El plan automático, la telemetría normal de retorno, el corte final programado y el mando independiente a popa permanecen intactos. Después se dirige a la bandeja de servicio. El descenso más lento de Sorell por el conducto central todavía le da tiempo de restaurar comunicaciones y cámaras antes de que ella pueda informar de lo que encuentra.
 
 Por delante de la nave, la garganta se abre. La *Ardor* cruza. La apertura se cierra a sus espaldas y vuelve a su paciente estado piloto unidireccional.
 

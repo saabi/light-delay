@@ -2,9 +2,9 @@
 
 # Lúz Tardía — Escaleta narrativa general
 
-Borrador de trabajo, español, revisión 17.
+Borrador de trabajo, español, revisión 19.
 
-**Estado editorial:** fuente de verdad narrativa vigente; continúa WIP.
+**Estado editorial:** traducción `needs_revision`; fuente activa en inglés.
 
 ## Propósito de este documento
 
@@ -120,7 +120,7 @@ El compartimiento exterior de servicio del reactor es un espacio de trabajo de i
 
 En ese mismo compartimiento hay un mando local independiente para interrumpir el perfil de vuelo, además de un cajón de instrumental de diagnóstico y referencias de tiempo para equipos científicos. El guiado autónomo ejecuta el plan aprobado; los mandos del puente normalmente pueden sustituirlo o interrumpirlo. La telemetría de retorno es independiente de esas entradas de mando.
 
-Durante su última inspección a popa, después de las pruebas de partida y justo antes de encontrarse con Zao, Harlan inutiliza físicamente las entradas de mando del puente, incluido su corte de emergencia remoto. Deja intactos el plan almacenado, la telemetría y el mando local del compartimiento. El vuelo normal no solicita un cambio y no revela la avería; el sabotaje aparece al intentar abortar. No borra registros ni modifica las mediciones de propulsión. Es una intervención distinta del corte posterior de comunicaciones, y reconectar sus troncales no la revierte.
+Tras asesinar a Zao y asegurar la bóveda interior, Harlan usa la consola local de vuelo adyacente para inutilizar físicamente las entradas de mando del puente, incluido su corte de emergencia remoto. Deja intactos el plan almacenado, la telemetría y el mando local del compartimiento. Había mantenido esas entradas operativas antes para no crear una anomalía mientras su plan seguía oculto; la advertencia de Zao hace previsible un intento posterior de aborto y lo obliga a ese sabotaje adicional. La intervención dura sólo segundos, no crea ningún registro digital de mando, no borra registros ni modifica las mediciones de propulsión, y permanece separada del corte de comunicaciones. Reconectar esos troncales no la revierte.
 
 El conjunto de blindaje del reactor protege de la radiación tanto los espacios de la tripulación como los tanques de combustible de fusión. Empotrada dentro de esta zona de blindaje combinada hay una bóveda interior de blindaje, utilizada originalmente para aislar equipos de investigación peligrosos. Su blindaje oculta la débil firma neutrónica de la bomba a los sensores ordinarios de la nave.
 
@@ -381,7 +381,7 @@ No hay una alarma de combustible activa. Zao no considera que esto demuestre que
 
 ### B1 — El cruce
 
-Antes de salir de la bóveda, Harlan ha terminado una intervención en los mandos de vuelo del compartimiento exterior: el puente ya no puede sustituir ni cortar el plan automático, aunque sus pantallas sigan recibiendo telemetría normal. Conserva operativo el mando local a popa. El público ve la manipulación, pero todavía no su efecto; Voss lo descubrirá al intentar abortar.
+Antes de que Zao llegue al compartimiento, Harlan termina su inspección final dentro de la bóveda interior. No toca los mandos de vuelo del compartimiento exterior. Para un observador, parece estar terminando sólo la inspección que le corresponde; nada de lo mostrado aquí confirma una acción hostil.
 
 En microgravedad, Zao se encuentra con Harlan mientras éste sale de la bóveda interior de blindaje hacia el compartimiento exterior. Él estuvo haciendo una comprobación final y dejó la bóveda sin asegurar por completo.
 
@@ -531,7 +531,7 @@ Harlan supone que envió su advertencia de sabotaje hacia la Tierra. Lo que haya
 
 Esa posibilidad le produce algo más que miedo. Si la detonación tiene éxito, una acusación que sobreviva también podría darle a la Tierra suficiente información para reconstruir su propósito. Imagina que personas que primero lo condenen podrían terminar decidiendo que las salvó. No espera gratitud ni rescate en el presente; espera un veredicto póstumo.
 
-Da prioridad a matar a Zao, asegurar la bóveda interior, irse antes de que llegue el tripulante que se aproxima y restaurar las cámaras a tiempo para que registren a esa persona junto al cuerpo. Su error no consiste en no mirar la telemetría. Es su certeza de que ya sabe qué significa.
+El puente oyó a Zao denunciar el sabotaje antes de que él la cortara. Una vez completado el cruce comprometido de la garganta, Voss puede por tanto intentar interrumpir la aproximación automática. Harlan da prioridad a matar a Zao, asegurar la bóveda interior, inutilizar la vía de mando de vuelo del puente como nueva contingencia, irse antes de que llegue el tripulante que se aproxima y restaurar las cámaras a tiempo para que registren a esa persona junto al cuerpo. Su error no consiste en no mirar la telemetría. Es su certeza de que ya sabe qué significa.
 
 Suspira antes de acortar la distancia.
 
@@ -543,13 +543,13 @@ La imagen corta a negro antes del impacto.
 
 Un golpe audible.
 
-### C3a — La bóveda interior cerrada
+### C3a — La bóveda asegurada y los mandos de vuelo cortados
 
 El cuerpo de Zao queda en el compartimiento exterior accesible.
 
 Harlan cierra la bóveda interior de blindaje que contiene la bomba y vincula la cerradura local a su dispositivo de muñeca. A partir de este momento, la puerta interior se reporta como inaccesible.
 
-Abandona el compartimiento exterior y regresa hacia la bandeja del conducto.
+En la consola local de vuelo adyacente, Harlan desconecta físicamente las entradas de mando del puente y el corte de emergencia remoto. La intervención rápida deja intactos el plan automático almacenado, la telemetría normal de retorno, el corte final programado y el mando independiente a popa. Después abandona el compartimiento exterior y regresa hacia la bandeja del conducto; el descenso más lento de Sorell por el conducto central todavía le da tiempo de restaurar comunicaciones y cámaras antes de que ella pueda informar de lo que encuentra.
 
 ### C3b — El cruce de la garganta
 
