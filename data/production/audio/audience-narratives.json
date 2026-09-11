@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "narratives": [
+    {
+      "id": "audience:light-delay-master",
+      "key": "master",
+      "sourceOutlineId": "outline:light-delay-master-narrative",
+      "performancePath": "data/production/audio/audience-dialogue-performance.json",
+      "title": {
+        "en": "Light Delay",
+        "es": "Lúz Tardía"
+      },
+      "chapterCount": 12,
+      "sourceStepCoverage": "none",
+      "languages": {
+        "en": {
+          "status": "current",
+          "prosePath": "docs/wip/audience-narrative.en.md",
+          "voicesPath": "docs/wip/audience-narrative.voices.en.md"
+        },
+        "es": {
+          "status": "needs_revision",
+          "prosePath": "docs/wip/audience-narrative.es.md",
+          "voicesPath": "docs/wip/audience-narrative.voices.es.md"
+        }
+      }
+    },
+    {
+      "id": "audience:light-delay-festival-master",
+      "key": "festival-master",
+      "sourceOutlineId": "outline:light-delay-festival-master",
+      "performancePath": "data/production/audio/festival-audience-dialogue-performance.json",
+      "title": {
+        "en": "Light Delay — Festival Cut",
+        "es": "Lúz Tardía — Corte Festival"
+      },
+      "chapterCount": 11,
+      "sourceStepCoverage": "complete",
+      "wordTarget": {
+        "minimum": 1600,
+        "preferredMaximum": 1900,
+        "hardMaximum": 2200
+      },
+      "languages": {
+        "en": {
+          "status": "current",
+          "prosePath": "docs/wip/festival-cut-audience-narrative.en.md",
+          "voicesPath": "docs/wip/festival-cut-audience-narrative.voices.en.md"
+        },
+        "es": {
+          "status": "not_started",
+          "prosePath": "docs/wip/festival-cut-audience-narrative.es.md",
+          "voicesPath": "docs/wip/festival-cut-audience-narrative.voices.es.md"
+        }
+      }
+    }
+  ]
+}

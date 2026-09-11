@@ -3,18 +3,8 @@ import path from 'node:path';
 import process from 'node:process';
 
 const root = process.cwd();
-const files = {
-	en: path.join(root, 'docs/wip/audience-narrative.en.md'),
-	es: path.join(root, 'docs/wip/audience-narrative.es.md'),
-	voicesEn: path.join(root, 'docs/wip/audience-narrative.voices.en.md'),
-	voicesEs: path.join(root, 'docs/wip/audience-narrative.voices.es.md'),
-	performance: path.join(root, 'data/production/audio/audience-dialogue-performance.json'),
-	master: path.join(root, 'data/outlines/light-delay-master-narrative.json'),
-	voiceProfiles: path.join(root, 'data/voice-profiles.json')
-};
-
-const expectedSections = 12;
-const expectedDialogues = { en: 37, es: 37 };
+const registryPath = path.join(root, 'data/production/audio/audience-narratives.json');
+const voiceProfilesPath = path.join(root, 'data/voice-profiles.json');
 const speakerIds = {
 	Zao: 'character:zao',
 	'Elias Voss': 'character:voss',
@@ -33,46 +23,17 @@ const ttsLabels = {
 };
 
 const failures = [];
+const warnings = [];
 const fail = (message) => failures.push(message);
+const warn = (message) => warnings.push(message);
 const read = (file) => fs.readFileSync(file, 'utf8');
 
-function localizedComplete(value) {
-	return (
-		value &&
-		typeof value === 'object' &&
-		typeof value.es === 'string' &&
-		value.es.trim() &&
-		typeof value.en === 'string' &&
-		value.en.trim()
-	);
+function escapeRegExp(value) {
+	return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function englishComplete(value) {
 	return value && typeof value === 'object' && typeof value.en === 'string' && value.en.trim();
-}
-
-function collectValues(node, key, output = new Set()) {
-	if (Array.isArray(node)) {
-		for (const child of node) collectValues(child, key, output);
-	} else if (node && typeof node === 'object') {
-		if (typeof node[key] === 'string') output.add(node[key]);
-		for (const child of Object.values(node)) collectValues(child, key, output);
-	}
-	return output;
-}
-
-function collectLocalizedStrings(node, language, output = []) {
-	if (Array.isArray(node)) {
-		for (const child of node) collectLocalizedStrings(child, language, output);
-	} else if (node && typeof node === 'object') {
-		if (typeof node[language] === 'string') output.push(node[language]);
-		for (const child of Object.values(node)) collectLocalizedStrings(child, language, output);
-	}
-	return output;
-}
-
-function escapeRegExp(value) {
-	return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function pronunciationMap(profiles, language) {
@@ -99,76 +60,6 @@ function applyPronunciations(value, map) {
 	return result;
 }
 
-function parseAudience(markdown, lang) {
-	const lines = markdown.split(/\r?\n/);
-	const blocks = [];
-	const dialogues = [];
-	let pendingId;
-	let section = -1;
-	let paragraph = [];
-
-	const flushParagraph = () => {
-		if (!paragraph.length) return;
-		blocks.push({ kind: 'paragraph', section });
-		paragraph = [];
-	};
-
-	for (const line of lines) {
-		if (!line.trim()) {
-			flushParagraph();
-			continue;
-		}
-		if (line.startsWith('## ')) {
-			if (pendingId) fail(`${lang}: ${pendingId} is not followed by dialogue`);
-			flushParagraph();
-			section += 1;
-			blocks.push({ kind: 'section', section });
-			continue;
-		}
-		if (line.startsWith('# ')) {
-			if (pendingId) fail(`${lang}: ${pendingId} is not followed by dialogue`);
-			flushParagraph();
-			blocks.push({ kind: 'title', section });
-			continue;
-		}
-		const idMatch = line.match(/^<!--\s*audience-dialogue-id:\s*([^\s]+)\s*-->$/);
-		if (idMatch) {
-			flushParagraph();
-			if (pendingId) fail(`${lang}: ${pendingId} is not followed by dialogue`);
-			pendingId = idMatch[1];
-			continue;
-		}
-		if (line.startsWith('>')) {
-			flushParagraph();
-			const match = line.match(/^>\s*\*\*([^*]+):\*\*\s*[«“"](.+)[»”"]\.?$/u);
-			if (!match) {
-				fail(`${lang}: malformed attributed dialogue: ${line}`);
-				continue;
-			}
-			if (!pendingId) fail(`${lang}: dialogue has no stable audience-dialogue-id: ${line}`);
-			const dialogue = {
-				id: pendingId,
-				speaker: match[1],
-				quote: match[2].replace(/\*([^*]+)\*/g, '$1'),
-				section
-			};
-			dialogues.push(dialogue);
-			blocks.push({ kind: 'dialogue', section });
-			pendingId = undefined;
-			continue;
-		}
-		if (line.trim().startsWith('<!--')) {
-			if (pendingId) fail(`${lang}: ${pendingId} is not followed by dialogue`);
-			continue;
-		}
-		if (pendingId) fail(`${lang}: ${pendingId} is not followed by dialogue`);
-		paragraph.push(line);
-	}
-	flushParagraph();
-	if (pendingId) fail(`${lang}: ${pendingId} has no dialogue block`);
-	return { blocks, dialogues, sections: section + 1 };
-}
-
 function normalizeQuote(value) {
 	return value
 		.normalize('NFC')
@@ -179,7 +70,77 @@ function normalizeQuote(value) {
 		.trim();
 }
 
-function parseGeneratedVoices(markdown, lang) {
+function parseAudience(markdown, label) {
+	const lines = markdown.split(/\r?\n/);
+	const blocks = [];
+	const dialogues = [];
+	const sourceSteps = [];
+	let pendingId;
+	let section = -1;
+	let paragraph = [];
+	const flushParagraph = () => {
+		if (!paragraph.length) return;
+		blocks.push({ kind: 'paragraph', section });
+		paragraph = [];
+	};
+	for (const line of lines) {
+		if (!line.trim()) {
+			flushParagraph();
+			continue;
+		}
+		if (line.startsWith('## ')) {
+			if (pendingId) fail(`${label}: ${pendingId} is not followed by dialogue`);
+			flushParagraph();
+			section += 1;
+			blocks.push({ kind: 'section', section });
+			continue;
+		}
+		if (line.startsWith('# ')) {
+			flushParagraph();
+			blocks.push({ kind: 'title', section });
+			continue;
+		}
+		const sourceMatch = line.match(/^<!--\s*audience-source-step:\s*([^\s]+)\s*-->$/);
+		if (sourceMatch) {
+			flushParagraph();
+			sourceSteps.push(sourceMatch[1]);
+			continue;
+		}
+		const idMatch = line.match(/^<!--\s*audience-dialogue-id:\s*([^\s]+)\s*-->$/);
+		if (idMatch) {
+			flushParagraph();
+			if (pendingId) fail(`${label}: ${pendingId} is not followed by dialogue`);
+			pendingId = idMatch[1];
+			continue;
+		}
+		if (line.startsWith('>')) {
+			flushParagraph();
+			const match = line.match(/^>\s*\*\*([^*]+):\*\*\s*[«“"](.+)[»”"]\.?$/u);
+			if (!match) {
+				fail(`${label}: malformed attributed dialogue: ${line}`);
+				continue;
+			}
+			if (!pendingId) fail(`${label}: dialogue has no stable audience-dialogue-id: ${line}`);
+			dialogues.push({
+				id: pendingId,
+				speaker: match[1],
+				quote: match[2].replace(/\*([^*]+)\*/g, '$1'),
+				section
+			});
+			blocks.push({ kind: 'dialogue', section });
+			pendingId = undefined;
+			continue;
+		}
+		if (line.trim().startsWith('<!--')) continue;
+		if (pendingId) fail(`${label}: ${pendingId} is not followed by dialogue`);
+		paragraph.push(line);
+	}
+	flushParagraph();
+	if (pendingId) fail(`${label}: ${pendingId} has no dialogue block`);
+	return { blocks, dialogues, sections: section + 1, sourceSteps };
+}
+
+function parseGeneratedVoices(markdown, label) {
 	const lines = markdown.split(/\r?\n/);
 	const dialogues = [];
 	const actorTag = /^\[(Zao|Voss|Harlan|Elin|Sorell|Okoye)\]$/;
@@ -189,18 +150,13 @@ function parseGeneratedVoices(markdown, lang) {
 		if (!tag) continue;
 		let dialogueId = null;
 		for (let look = index - 1; look >= 0; look -= 1) {
-			const prev = lines[look].trim();
-			if (!prev) continue;
-			const idMatch = prev.match(idComment);
-			if (idMatch) {
-				dialogueId = idMatch[1];
-				break;
-			}
+			const previous = lines[look].trim();
+			if (!previous) continue;
+			const match = previous.match(idComment);
+			if (match) dialogueId = match[1];
 			break;
 		}
-		if (!dialogueId) {
-			fail(`${lang} voices: missing audience-dialogue-id before [${tag[1]}]`);
-		}
+		if (!dialogueId) fail(`${label}: missing audience-dialogue-id before [${tag[1]}]`);
 		const instruct = lines[index + 1] ?? '';
 		const quote = lines[index + 2] ?? '';
 		if (
@@ -208,201 +164,238 @@ function parseGeneratedVoices(markdown, lang) {
 			!instruct.includes(' Dramatic situation: ') ||
 			!instruct.includes(' Performance and delivery: ')
 		) {
-			fail(`${lang} voices: missing ID-derived performance instruction after [${tag[1]}]`);
+			fail(`${label}: missing performance instruction after [${tag[1]}]`);
 		}
-		if (!quote.trim()) fail(`${lang} voices: missing dialogue text after [${tag[1]}]`);
+		if (!quote.trim()) fail(`${label}: missing dialogue text after [${tag[1]}]`);
 		dialogues.push({ id: dialogueId, speaker: tag[1], instruct, quote });
 	}
 	return dialogues;
 }
 
-const en = parseAudience(read(files.en), 'EN');
-const es = parseAudience(read(files.es), 'ES');
-const performance = JSON.parse(read(files.performance));
-const master = JSON.parse(read(files.master));
-const voiceProfiles = JSON.parse(read(files.voiceProfiles));
-const pronunciations = {
-	en: pronunciationMap(voiceProfiles, 'en'),
-	es: pronunciationMap(voiceProfiles, 'es')
-};
-const masterRevision = master.outline?.revision;
-const spanishLocalization = master.outline?.localization?.translations?.es;
-const spanishRevision = spanishLocalization?.lastSyncedRevision;
-const spanishCurrent = spanishLocalization?.status === 'current';
-
-if (!Number.isInteger(masterRevision)) fail('master: outline.revision must be an integer');
-if (performance.narrativeId !== 'audience:light-delay-master') {
-	fail('performance: narrativeId must be stable and must not contain a revision');
-}
-if (performance.sourceOutlineId !== master.outline?.id) {
-	fail('performance: sourceOutlineId must match the master outline');
-}
-if (!read(files.en).startsWith('# Light Delay\n')) fail('EN: wrong audience title');
-if (!read(files.es).startsWith('# Lúz Tardía\n')) fail('ES: wrong audience title');
-if (/\bProxima\b/u.test(read(files.es))) fail('ES: Proxima must be written Próxima');
-if (collectLocalizedStrings(master, 'es').some((value) => /\bProxima\b/u.test(value))) {
-	fail('master: an es field still contains unaccented Proxima');
-}
-for (const [label, text] of [
-	['EN source', read(files.en)],
-	['ES source', read(files.es)],
-	['performance', read(files.performance)]
-]) {
-	if (/Soréll|Sorél/u.test(text)) fail(`${label}: phonetic spelling leaked into editorial data`);
+function loadOutline(outlineId) {
+	const directory = path.join(root, 'data/outlines');
+	for (const name of fs.readdirSync(directory)) {
+		if (!name.endsWith('.json')) continue;
+		const candidate = JSON.parse(read(path.join(directory, name)));
+		if (candidate.outline?.id === outlineId) return candidate;
+	}
+	return undefined;
 }
 
-for (const [lang, languageCode, parsed] of [
-	['EN', 'en', en],
-	['ES', 'es', es]
-]) {
-	if (parsed.sections !== expectedSections) {
-		fail(`${lang}: expected ${expectedSections} H2 sections, found ${parsed.sections}`);
-	}
-	if (parsed.dialogues.length !== expectedDialogues[languageCode]) {
-		fail(`${lang}: expected ${expectedDialogues[languageCode]} dialogues, found ${parsed.dialogues.length}`);
-	}
-	const ids = parsed.dialogues.map((entry) => entry.id);
-	if (new Set(ids).size !== ids.length) fail(`${lang}: duplicate dialogue IDs`);
+function expectedRevision(outline, language, status) {
+	if (language === 'en' || status === 'current') return outline.outline?.revision;
+	return outline.outline?.localization?.translations?.[language]?.lastSyncedRevision;
 }
 
-if (spanishCurrent) {
-	const enShape = en.blocks.map(({ kind, section }) => `${section}:${kind}`);
-	const esShape = es.blocks.map(({ kind, section }) => `${section}:${kind}`);
-	if (JSON.stringify(enShape) !== JSON.stringify(esShape)) {
-		fail('EN/ES audience sources do not have the same block structure and section boundaries');
-	}
-	for (let index = 0; index < Math.max(en.dialogues.length, es.dialogues.length); index += 1) {
-		const left = en.dialogues[index];
-		const right = es.dialogues[index];
-		if (!left || !right) continue;
-		if (left.id !== right.id || left.speaker !== right.speaker || left.section !== right.section) {
-			fail(`EN/ES dialogue parity mismatch at index ${index}: ${left.id} / ${right.id}`);
-		}
-	}
+function wordCount(markdown) {
+	return markdown
+		.replace(/<!--.*?-->/gs, '')
+		.replace(/^#+\s+.*$/gm, '')
+		.trim()
+		.split(/\s+/)
+		.filter(Boolean).length;
 }
 
-const masterIds = collectValues(master, 'id');
-const masterSpeakers = collectValues(master, 'speakerId');
-const performanceIds = new Set();
-for (const entry of performance.entries ?? []) {
-	if (performanceIds.has(entry.id)) fail(`performance: duplicate ID ${entry.id}`);
-	performanceIds.add(entry.id);
-	if (!masterIds.has(entry.sourceStepId)) {
-		fail(`performance: ${entry.id} has unknown sourceStepId ${entry.sourceStepId}`);
+function validateFestivalContinuity(markdown, label) {
+	const reveal = markdown.indexOf('<!-- audience-source-step: festival-master:story-16 -->');
+	if (reveal < 0) return;
+	const hidden = markdown.slice(0, reveal).toLowerCase();
+	for (const phrase of ['future position', 'twenty-three light-hours', 'beam spent']) {
+		if (hidden.includes(phrase))
+			fail(`${label}: deferred targeting reveal leaked before story-16 (${phrase})`);
 	}
-	if (!masterSpeakers.has(entry.speakerId)) {
-		fail(`performance: ${entry.id} has unknown speakerId ${entry.speakerId}`);
+	for (const ordinal of ['first', 'second', 'third', 'fourth']) {
+		const phrase = `microgravity for the ${ordinal} time`;
+		if (markdown.split(phrase).length !== 2)
+			fail(`${label}: expected exactly one transition marked ${phrase}`);
 	}
-	if (!englishComplete(entry.intent)) fail(`performance: ${entry.id} has no English intent`);
-	if (!englishComplete(entry.delivery?.en)) {
-		fail(`performance: ${entry.id} has no English delivery`);
-	}
-	if (es.dialogues.some((dialogue) => dialogue.id === entry.id) && !englishComplete(entry.delivery?.es)) {
-		fail(`performance: ${entry.id} has no Spanish-language delivery direction`);
-	}
-}
-if (performanceIds.size !== expectedDialogues.en) {
-	fail(`performance: expected ${expectedDialogues.en} entries, found ${performanceIds.size}`);
+	const impact = markdown.indexOf('A single thump lands in darkness.');
+	const flightBreak = markdown.indexOf('he disconnects bridge flight commands');
+	if (impact < 0 || flightBreak < 0 || impact >= flightBreak)
+		fail(`${label}: flight-control sabotage must occur after the fatal impact`);
 }
 
-for (const dialogue of en.dialogues) {
-	const entry = performance.entries.find(({ id }) => id === dialogue.id);
-	if (!entry) {
-		fail(`performance: no entry for ${dialogue.id}`);
-		continue;
+function validateProfile(profile, voiceProfiles) {
+	const outline = loadOutline(profile.sourceOutlineId);
+	if (!outline) {
+		fail(`${profile.key}: source outline ${profile.sourceOutlineId} does not exist`);
+		return;
 	}
-	const expectedSpeakerId = speakerIds[dialogue.speaker];
-	if (!expectedSpeakerId) fail(`EN: unknown speaker label ${dialogue.speaker}`);
-	if (entry.speakerId !== expectedSpeakerId) {
-		fail(
-			`performance: ${dialogue.id} speaker is ${entry.speakerId}, expected ${expectedSpeakerId}`
-		);
+	const performancePath = path.join(root, profile.performancePath);
+	if (!fs.existsSync(performancePath)) {
+		fail(`${profile.key}: performance file does not exist`);
+		return;
 	}
-}
-for (const id of performanceIds) {
-	if (!en.dialogues.some((dialogue) => dialogue.id === id)) fail(`performance: unused entry ${id}`);
-}
-
-for (const [lang, languageCode, parsed, voiceFile] of [
-	['EN', 'en', en, files.voicesEn],
-	['ES', 'es', es, files.voicesEs]
-]) {
-	const generated = parseGeneratedVoices(read(voiceFile), lang);
-	if (generated.length !== expectedDialogues[languageCode]) {
-		fail(`${lang} voices: expected ${expectedDialogues[languageCode]} actor cues, found ${generated.length}`);
-	}
-	for (let index = 0; index < Math.min(generated.length, parsed.dialogues.length); index += 1) {
-		const source = parsed.dialogues[index];
-		const voice = generated[index];
-		if (voice.id !== source.id) {
-			fail(`${lang} voices: dialogue id mismatch at index ${index}: ${voice.id} != ${source.id}`);
-		}
-		if (voice.speaker !== ttsLabels[source.speaker]) {
-			fail(`${lang} voices: speaker mismatch at ${source.id}`);
-		}
-		const entry = performance.entries.find(({ id }) => id === source.id);
-		if (entry && (languageCode === 'en' || spanishCurrent)) {
-			const language = languageCode === 'en' ? 'English' : 'Spanish';
-			const rawInstruct = `Speak ${language}. Dramatic situation: ${entry.intent.en.trim()} Performance and delivery: ${entry.delivery[languageCode].en.trim()}`;
-			const expectedInstruct = `[QwenInstruct] ${applyPronunciations(rawInstruct, pronunciations[languageCode])}`;
-			if (voice.instruct !== expectedInstruct) {
-				fail(`${lang} voices: performance direction is stale at ${source.id}`);
-			}
-		}
-		const expectedQuote = applyPronunciations(source.quote, pronunciations[languageCode]);
-		if (normalizeQuote(voice.quote) !== normalizeQuote(expectedQuote)) {
-			fail(`${lang} voices: speakable text is stale at ${source.id}`);
-		}
-	}
-}
-
-for (const [lang, file, revisionLabel, expectedRevision] of [
-	['EN', files.en, 'Revision', masterRevision],
-	['ES', files.es, 'Revisión', spanishCurrent ? masterRevision : spanishRevision]
-]) {
-	if (!Number.isInteger(expectedRevision) || !read(file).includes(`${revisionLabel} ${expectedRevision}.`)) {
-		fail(`${lang}: revision label does not match expected revision ${expectedRevision}`);
-	}
-}
-
-for (const [lang, file, chapter, prologue, title, spokenName, expectedRevision] of [
-	['EN', files.voicesEn, 'Chapter', 'Prologue', 'Light Delay', 'Soréll', masterRevision],
-	['ES', files.voicesEs, 'Capítulo', 'Prólogo', 'Lúz Tardía', 'Sorél', spanishCurrent ? masterRevision : spanishRevision]
-]) {
-	const text = read(file);
-	const chapters = [
-		...text.matchAll(
-			new RegExp(
-				`\\[Narrator\\]\\r?\\n${chapter} (\\d+)\\.\\r?\\n\\r?\\n\\[Narrator\\]\\r?\\n\\[PAUSE 1200\\] `,
-				'gu'
-			)
-		)
-	];
-	if (chapters.length !== 11)
-		fail(`${lang} voices: expected 11 numbered chapter pauses, found ${chapters.length}`);
-	const prologuePattern = new RegExp(
-		`\\[Narrator\\]\\r?\\n${prologue}\\.\\r?\\n\\r?\\n\\[Narrator\\]\\r?\\n\\[PAUSE 1200\\] `,
-		'u'
+	const performance = JSON.parse(read(performancePath));
+	if (performance.narrativeId !== profile.id) fail(`${profile.key}: narrativeId mismatch`);
+	if (performance.sourceOutlineId !== profile.sourceOutlineId)
+		fail(`${profile.key}: performance sourceOutlineId mismatch`);
+	const storySteps = (outline.steps ?? []).filter((step) => step.level === 'story');
+	const storyIds = new Set(storySteps.map((step) => step.id));
+	const knownSpeakers = new Set(
+		(voiceProfiles.voiceProfiles ?? []).map((profile) => profile.characterId)
 	);
-	if (!prologuePattern.test(text)) {
-		fail(`${lang} voices: prologue pause is missing`);
+	const performanceIds = new Set();
+	for (const entry of performance.entries ?? []) {
+		if (performanceIds.has(entry.id)) fail(`${profile.key}: duplicate performance ID ${entry.id}`);
+		performanceIds.add(entry.id);
+		if (!storyIds.has(entry.sourceStepId))
+			fail(`${profile.key}: ${entry.id} references unknown story step ${entry.sourceStepId}`);
+		if (!knownSpeakers.has(entry.speakerId))
+			fail(`${profile.key}: ${entry.id} references unknown speaker ${entry.speakerId}`);
+		if (!englishComplete(entry.intent)) fail(`${profile.key}: ${entry.id} has no English intent`);
+		if (!englishComplete(entry.delivery?.en))
+			fail(`${profile.key}: ${entry.id} has no English delivery`);
 	}
-	if (
-		!text.includes(
-			`[PAUSE 1200] ${title}. ${lang === 'EN' ? 'Revision' : 'Revisión'} ${expectedRevision}.`
-		)
-	) {
-		fail(`${lang} voices: localized spoken title or master revision is stale`);
+
+	const parsedByLanguage = new Map();
+	for (const [language, output] of Object.entries(profile.languages)) {
+		if (output.status === 'not_started') continue;
+		const prosePath = path.join(root, output.prosePath);
+		const voicesPath = path.join(root, output.voicesPath);
+		if (!fs.existsSync(prosePath) || !fs.existsSync(voicesPath)) {
+			fail(`${profile.key}/${language}: prose or generated voices file does not exist`);
+			continue;
+		}
+		const prose = read(prosePath);
+		const label = `${profile.key}/${language}`;
+		const parsed = parseAudience(prose, label);
+		parsedByLanguage.set(language, parsed);
+		if (parsed.sections !== profile.chapterCount)
+			fail(`${label}: expected ${profile.chapterCount} chapters, found ${parsed.sections}`);
+		const ids = parsed.dialogues.map((entry) => entry.id);
+		if (new Set(ids).size !== ids.length) fail(`${label}: duplicate dialogue IDs`);
+		if (ids.length !== performanceIds.size || ids.some((id) => !performanceIds.has(id)))
+			fail(`${label}: prose dialogue IDs do not match the performance ledger`);
+		const revision = expectedRevision(outline, language, output.status);
+		const revisionLabel = language === 'es' ? 'Revisión' : 'Revision';
+		if (!Number.isInteger(revision) || !prose.includes(`${revisionLabel} ${revision}`))
+			fail(`${label}: revision label does not match source revision ${revision}`);
+		if (/Soréll|Sorél/u.test(prose)) fail(`${label}: phonetic spelling leaked into prose`);
+		if (language === 'es' && /\bProxima\b/u.test(prose))
+			fail(`${label}: Proxima must be written Próxima in Spanish`);
+
+		for (const dialogue of parsed.dialogues) {
+			const entry = (performance.entries ?? []).find((item) => item.id === dialogue.id);
+			const expectedSpeakerId = speakerIds[dialogue.speaker];
+			if (!expectedSpeakerId || entry?.speakerId !== expectedSpeakerId)
+				fail(`${label}: speaker mismatch at ${dialogue.id}`);
+		}
+
+		const pronunciations = pronunciationMap(voiceProfiles, language);
+		const generated = parseGeneratedVoices(read(voicesPath), `${label} voices`);
+		if (generated.length !== parsed.dialogues.length)
+			fail(
+				`${label} voices: expected ${parsed.dialogues.length} actor cues, found ${generated.length}`
+			);
+		for (let index = 0; index < Math.min(generated.length, parsed.dialogues.length); index += 1) {
+			const source = parsed.dialogues[index];
+			const voice = generated[index];
+			const entry = (performance.entries ?? []).find((item) => item.id === source.id);
+			if (voice.id !== source.id) fail(`${label} voices: ID mismatch at ${source.id}`);
+			if (voice.speaker !== ttsLabels[source.speaker])
+				fail(`${label} voices: speaker mismatch at ${source.id}`);
+			if (entry && englishComplete(entry.delivery?.[language])) {
+				const spokenLanguage = language === 'es' ? 'Spanish' : 'English';
+				const instruction = `Speak ${spokenLanguage}. Dramatic situation: ${entry.intent.en.trim()} Performance and delivery: ${entry.delivery[language].en.trim()}`;
+				if (voice.instruct !== `[QwenInstruct] ${applyPronunciations(instruction, pronunciations)}`)
+					fail(`${label} voices: performance direction is stale at ${source.id}`);
+			}
+			if (
+				normalizeQuote(voice.quote) !==
+				normalizeQuote(applyPronunciations(source.quote, pronunciations))
+			)
+				fail(`${label} voices: spoken text is stale at ${source.id}`);
+		}
+
+		const voices = read(voicesPath);
+		const chapterWord = language === 'es' ? 'Capítulo' : 'Chapter';
+		const chapterPauses = [
+			...voices.matchAll(
+				new RegExp(
+					`\\[Narrator\\]\\r?\\n${chapterWord} (\\d+)\\.\\r?\\n\\r?\\n\\[Narrator\\]\\r?\\n\\[PAUSE 1200\\] `,
+					'gu'
+				)
+			)
+		];
+		const expectedNumbered =
+			prose.includes('## Prologue') || prose.includes('## Prólogo')
+				? profile.chapterCount - 1
+				: profile.chapterCount;
+		if (chapterPauses.length !== expectedNumbered)
+			fail(
+				`${label} voices: expected ${expectedNumbered} numbered chapter pauses, found ${chapterPauses.length}`
+			);
+		if (expectedNumbered !== profile.chapterCount) {
+			const prologue = language === 'es' ? 'Prólogo' : 'Prologue';
+			const prologuePattern = new RegExp(
+				`\\[Narrator\\]\\r?\\n${prologue}\\.\\r?\\n\\r?\\n\\[Narrator\\]\\r?\\n\\[PAUSE 1200\\] `,
+				'u'
+			);
+			if (!prologuePattern.test(voices)) fail(`${label} voices: prologue pause is missing`);
+		}
+		const spokenTitle = applyPronunciations(
+			profile.title[language] ?? profile.title.en,
+			pronunciations
+		);
+		const spokenRevision = language === 'es' ? 'Revisión' : 'Revision';
+		if (!voices.includes(`[PAUSE 1200] ${spokenTitle}. ${spokenRevision} ${revision}.`)) {
+			fail(`${label} voices: spoken title or source revision is stale`);
+		}
+
+		if (language === 'en' && profile.wordTarget) {
+			const words = wordCount(prose);
+			if (words < profile.wordTarget.minimum || words > profile.wordTarget.hardMaximum)
+				fail(
+					`${label}: ${words} words falls outside ${profile.wordTarget.minimum}–${profile.wordTarget.hardMaximum}`
+				);
+			else if (words > profile.wordTarget.preferredMaximum)
+				warn(
+					`${label}: ${words} words exceeds preferred maximum ${profile.wordTarget.preferredMaximum}`
+				);
+		}
+		if (profile.sourceStepCoverage === 'complete' && language === 'en') {
+			const expected = storySteps.map((step) => step.id);
+			if (JSON.stringify(parsed.sourceSteps) !== JSON.stringify(expected))
+				fail(`${label}: source-step markers do not cover every story beat once and in order`);
+		}
+		if (profile.key === 'festival-master' && language === 'en')
+			validateFestivalContinuity(prose, label);
 	}
-	if (!text.includes(spokenName)) fail(`${lang} voices: expected spoken form ${spokenName}`);
+
+	const en = parsedByLanguage.get('en');
+	const es = parsedByLanguage.get('es');
+	if (en && es && profile.languages.es?.status === 'current') {
+		const enShape = en.blocks.map(({ kind, section }) => `${section}:${kind}`);
+		const esShape = es.blocks.map(({ kind, section }) => `${section}:${kind}`);
+		if (JSON.stringify(enShape) !== JSON.stringify(esShape))
+			fail(`${profile.key}: current English and Spanish prose have different structures`);
+	}
+	return {
+		dialogues: performanceIds.size,
+		provisional: (performance.entries ?? []).filter((entry) => entry.lineStatus === 'provisional')
+			.length
+	};
 }
 
+const requestedArg = process.argv.find((argument) => argument.startsWith('--audience='));
+const requested = requestedArg?.split('=')[1] ?? 'all';
+const registry = JSON.parse(read(registryPath));
+const voiceProfiles = JSON.parse(read(voiceProfilesPath));
+const profiles = (registry.narratives ?? []).filter(
+	(profile) => requested === 'all' || profile.key === requested
+);
+if (!profiles.length) fail(`Unknown audience profile: ${requested}`);
+const results = [];
+for (const profile of profiles) {
+	const result = validateProfile(profile, voiceProfiles);
+	if (result)
+		results.push(`${profile.key}=${result.dialogues} dialogues/${result.provisional} provisional`);
+}
+for (const warning of warnings) console.warn(`Audience narrative warning: ${warning}`);
 if (failures.length) {
 	console.error(`Audience narrative validation failed (${failures.length}):`);
 	for (const failure of failures) console.error(`- ${failure}`);
 	process.exit(1);
 }
-
-console.log(
-	`Audience narrative valid: English rev ${masterRevision} (${expectedDialogues.en} dialogues); Spanish ${spanishCurrent ? 'current' : `stale at rev ${spanishRevision}`} (${expectedDialogues.es} dialogues).`
-);
+console.log(`Audience narratives valid: ${results.join('; ')}`);

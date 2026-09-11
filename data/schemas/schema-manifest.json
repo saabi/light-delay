@@ -4,7 +4,14 @@
     { "schema": "archive.schema.json", "files": ["archive/main-short-unplaced-action-cues.json"] },
     { "schema": "editorial-lifecycle.schema.json", "files": ["editorial-lifecycle.json"] },
     { "schema": "voice-profiles.schema.json", "files": ["voice-profiles.json"] },
-    { "schema": "dialogue-performance.schema.json", "files": ["production/audio/audience-dialogue-performance.json"] },
+    {
+      "schema": "dialogue-performance.schema.json",
+      "files": [
+        "production/audio/audience-dialogue-performance.json",
+        "production/audio/festival-audience-dialogue-performance.json"
+      ]
+    },
+    { "schema": "audience-narratives.schema.json", "files": ["production/audio/audience-narratives.json"] },
     { "schema": "audio-outputs.schema.json", "files": ["production/audio/audio-outputs.json"] },
     { "schema": "outline.schema.json", "directories": ["outlines"] },
     { "schema": "production-contexts.schema.json", "files": ["production/contexts.json"] },

@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-11 — Relato de audiencia del Festival derivado
+
+- Creado el relato inglés de 11 capítulos derivado de `outline:light-delay-festival-master`, con trazabilidad explícita de sus 24 beats y las cuatro transiciones a microgravedad.
+- Conserva el ocultamiento del destino y mecanismo del mensaje hasta la recepción, y ubica el sabotaje de vuelo después del asesinato.
+- Registra 25 diálogos con dirección inglesa; 9 líneas nuevas quedan marcadas `provisional` y no se incorporan todavía al guion vacío.
+- El registro y las herramientas de audiencia ahora admiten múltiples narrativas. La traducción española del Festival queda `not_started`. Dual EN generado después (~14.9 min).
+
 ## 2026-09-11 — Nuevo Festival derivado del master rev. 19
 
 - Registrado `script:light-delay-festival-master` como derivado WIP independiente dentro de `continuity:light-delay-master-wip`; el Festival anterior permanece deprecado.

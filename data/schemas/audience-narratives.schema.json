@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/audience-narratives.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "narratives"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "narratives": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/narrative" }
+    }
+  },
+  "$defs": {
+    "languageOutput": {
+      "type": "object",
+      "required": ["status", "prosePath", "voicesPath"],
+      "properties": {
+        "status": { "enum": ["current", "needs_revision", "not_started"] },
+        "prosePath": { "type": "string", "minLength": 1 },
+        "voicesPath": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "narrative": {
+      "type": "object",
+      "required": [
+        "id",
+        "key",
+        "sourceOutlineId",
+        "performancePath",
+        "title",
+        "chapterCount",
+        "sourceStepCoverage",
+        "languages"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^audience:" },
+        "key": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "sourceOutlineId": { "type": "string", "pattern": "^outline:" },
+        "performancePath": { "type": "string", "minLength": 1 },
+        "title": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "chapterCount": { "type": "integer", "minimum": 1 },
+        "sourceStepCoverage": { "enum": ["none", "complete"] },
+        "wordTarget": {
+          "type": "object",
+          "required": ["minimum", "preferredMaximum", "hardMaximum"],
+          "properties": {
+            "minimum": { "type": "integer", "minimum": 1 },
+            "preferredMaximum": { "type": "integer", "minimum": 1 },
+            "hardMaximum": { "type": "integer", "minimum": 1 }
+          },
+          "additionalProperties": false
+        },
+        "languages": {
+          "type": "object",
+          "required": ["en"],
+          "properties": {
+            "en": { "$ref": "#/$defs/languageOutput" },
+            "es": { "$ref": "#/$defs/languageOutput" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

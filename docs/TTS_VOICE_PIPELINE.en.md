@@ -208,7 +208,7 @@ Multi-speaker TTS outlines (rev. 17, 38 attributed quotations from the master):
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
 - Rebuild from MD exports: `python scripts/build-tts-voices-outlines.py`
 
-Audience short story (12 sections, no frontmatter; **37 audible English dialogues** at master revision 19; Spanish remains at 36/revision 17):
+Audience short story (12 sections, no frontmatter; **37 audible dialogues** in English and Spanish at master revision 19; Spanish prose remains marked for revision):
 
 - Prose: `docs/wip/audience-narrative.en.md` / `.es.md`
 - TTS: `docs/wip/audience-narrative.voices.en.md` / `.voices.es.md`
@@ -222,6 +222,21 @@ Audience short story (12 sections, no frontmatter; **37 audible English dialogue
 The Spanish audience dual was regenerated for lastSyncedRevision 19 (287 cues, ~48.5 min).
 The English audience dual was regenerated for revision 19 (287 cues, ~49.0 min).
 Spanish narrative text remains `needs_revision` against the English source.
+
+The master-derived Festival cut has its own registered audience adaptation:
+
+- English prose: `docs/wip/festival-cut-audience-narrative.en.md`
+- English TTS: `docs/wip/festival-cut-audience-narrative.voices.en.md`
+- Direction: `data/production/audio/festival-audience-dialogue-performance.json`
+- Rebuild: `npm run tts:audience:festival:build`
+- Focused check: `npm run tts:audience:festival:check`
+- Generate EN:
+  `python scripts/generate-dual-outline-audio.py --lang en --script docs/wip/festival-cut-audience-narrative.voices.en.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/en-festival-audience --out E:/Models/Qwen3-TTS/output/light-delay-festival-audience-dual-en.mp3`
+
+`data/production/audio/audience-narratives.json` registers both adaptations and
+their source outlines, language states, source files, performance ledgers, and
+generated outputs. The global audience check validates every started language.
+The Festival Spanish adaptation remains explicitly `not_started`.
 
 Every audible quotation has the same stable `audience-dialogue-id` comment in
 both source files. That ID—not its array position or translated wording—selects
@@ -242,7 +257,8 @@ See [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) and its
 
 The count difference is deliberate. The master has 38 quotations. The audience
 narrative omits the P1 framing quotation and makes Zao's farewell audible only
-in E2—not in its first B7 appearance—to preserve the reveal, so it has 36.
+in E2—not in its first B7 appearance. Its additional Voss clarification gives
+the current English audience adaptation 37 attributed lines.
 
 `audience-narrative.voices.*.md` files are derived and must be rebuilt after a
 source or direction edit. Existing MP3s and chunks become stale when either

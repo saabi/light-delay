@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1.1.0",
+  "narrativeId": "audience:light-delay-festival-master",
+  "sourceOutlineId": "outline:light-delay-festival-master",
+  "entries": [
+    {
+      "id": "audience:dialogue:festival-f01-harlan-wish",
+      "sourceStepId": "festival-master:story-01",
+      "speakerId": "character:harlan",
+      "lineStatus": "established",
+      "intent": { "en": "Harlan lets sincere regret escape while concealing how completely fear already governs him." },
+      "delivery": { "en": { "en": "Very low and contained. Let the wish sound genuine, not manipulative; finish without self-pity." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f01-zao-not-hope",
+      "sourceStepId": "festival-master:story-01",
+      "speakerId": "character:zao",
+      "lineStatus": "established",
+      "intent": { "en": "Zao corrects Voss with the certainty of an engineer identifying a dangerous misreading." },
+      "delivery": { "en": { "en": "Private, low, and exact. Land firmly on ‘hope,’ then stop rather than explain." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f01-voss-faults",
+      "sourceStepId": "festival-master:story-01",
+      "speakerId": "character:voss",
+      "lineStatus": "established",
+      "intent": { "en": "Voss means to reassure Zao and unknowingly dismisses the warning she has read correctly." },
+      "delivery": { "en": { "en": "Calm command voice with professional affection. Make the correction gentle, not contemptuous." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f01-elin-ready",
+      "sourceStepId": "festival-master:story-02",
+      "speakerId": "character:rao",
+      "lineStatus": "provisional",
+      "intent": { "en": "Elin reports the completed check as an ordinary technical fact." },
+      "delivery": { "en": { "en": "Terse and neutral, already mentally moving to the next task. No impatience with Zao." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f01-zao-again",
+      "sourceStepId": "festival-master:story-02",
+      "speakerId": "character:zao",
+      "lineStatus": "provisional",
+      "intent": { "en": "Zao reveals her redundant method without defending or dramatizing it." },
+      "delivery": { "en": { "en": "Matter-of-fact and focused on the work. A small pause after the first sentence as she reverses the audit." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f02-harlan-misread",
+      "sourceStepId": "festival-master:story-03",
+      "speakerId": "character:harlan",
+      "lineStatus": "established",
+      "intent": { "en": "Harlan turns Sorell’s uncertainty back upon humanity and exposes his deepest fear." },
+      "delivery": { "en": { "en": "Quiet, controlled, and intellectually sincere. The question should unsettle rather than challenge." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f03-zao-mass",
+      "sourceStepId": "festival-master:story-04",
+      "speakerId": "character:zao",
+      "lineStatus": "provisional",
+      "intent": { "en": "Zao eliminates engine inefficiency and redirects her attention toward hidden mass." },
+      "delivery": { "en": { "en": "A low working murmur. Stress ‘clean’ as a confirmed result, then let the question sharpen." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f04-zao-warning",
+      "sourceStepId": "festival-master:story-06",
+      "speakerId": "character:zao",
+      "lineStatus": "established",
+      "intent": { "en": "Zao begins the most urgent report of her career before the jammer erases her voice." },
+      "delivery": { "en": { "en": "Formal and grave, moving quickly but clearly. Cut off abruptly after ‘mission’ with no performed fade." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f04-zao-links",
+      "sourceStepId": "festival-master:story-07",
+      "speakerId": "character:zao",
+      "lineStatus": "provisional",
+      "intent": { "en": "Zao tests independent communication paths and recognizes coordinated sabotage." },
+      "delivery": { "en": { "en": "Fragmented thought in action. Count each failed route with rising concern; make the conclusion cold and certain." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f04-zao-options",
+      "sourceStepId": "festival-master:story-07",
+      "speakerId": "character:zao",
+      "lineStatus": "provisional",
+      "intent": { "en": "Zao discards impossible recipients while searching for one route that can still matter." },
+      "delivery": { "en": { "en": "Very quiet, clipped, and rapid. Each fragment closes a door; end before the new idea becomes audible." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f05-harlan-recipient",
+      "sourceStepId": "festival-master:story-08",
+      "speakerId": "character:harlan",
+      "lineStatus": "established",
+      "intent": { "en": "Harlan needs the recipient immediately but tries to make the demand sound controlled." },
+      "delivery": { "en": { "en": "Low and direct, breath still elevated from the descent. Keep the threat beneath disciplined diction." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f05-harlan-earth",
+      "sourceStepId": "festival-master:story-08",
+      "speakerId": "character:harlan",
+      "lineStatus": "established",
+      "intent": { "en": "Harlan reassures himself that an Earthbound accusation cannot stop the encounter." },
+      "delivery": { "en": { "en": "Analytical at first, then quietly relieved. This is a mistaken calculation he trusts, not a boast." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f06-sorell-call",
+      "sourceStepId": "festival-master:story-10",
+      "speakerId": "character:sorell",
+      "lineStatus": "provisional",
+      "intent": { "en": "Sorell fights panic by issuing a precise emergency call and receives only silence." },
+      "delivery": { "en": { "en": "Begin with trained clarity, then let urgency fracture the final question when nobody answers." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f06-harlan-accuse",
+      "sourceStepId": "festival-master:story-11",
+      "speakerId": "character:harlan",
+      "lineStatus": "established",
+      "intent": { "en": "Harlan converts apparent shock into an accusation before anyone else can frame the scene." },
+      "delivery": { "en": { "en": "Immediate and wounded on the surface, with trained projection. Do not reveal calculation in the voice." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f07-elin-mass",
+      "sourceStepId": "festival-master:story-13",
+      "speakerId": "character:rao",
+      "lineStatus": "provisional",
+      "intent": { "en": "Elin separates Harlan’s single convenient theory into two unresolved physical facts." },
+      "delivery": { "en": { "en": "Clinical and decisive. Give each sentence equal evidentiary weight; no triumph or accusation." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f07-elin-no-miss",
+      "sourceStepId": "festival-master:story-15",
+      "speakerId": "character:rao",
+      "lineStatus": "established",
+      "intent": { "en": "Elin rejects Harlan’s explanation because it contradicts Zao’s demonstrated precision." },
+      "delivery": { "en": { "en": "Flat, immediate, and completely certain. Place the emphasis on ‘didn’t,’ then return to the data." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f07-harlan-saved",
+      "sourceStepId": "festival-master:story-15",
+      "speakerId": "character:harlan",
+      "lineStatus": "established",
+      "intent": { "en": "Alone, Harlan grieves the loss of the future vindication he expected from Zao’s warning." },
+      "delivery": { "en": { "en": "Almost inaudible and genuinely bereaved. He means himself, but does not relish the thought." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f08-zao-goodbye",
+      "sourceStepId": "festival-master:story-16",
+      "speakerId": "character:zao",
+      "lineStatus": "established",
+      "intent": { "en": "Zao closes the warning with personal acceptance and one final identifying fact." },
+      "delivery": { "en": { "en": "Controlled and intimate. A small breath after ‘goodbye’; name Harlan plainly, without melodrama." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f08-voss-abort",
+      "sourceStepId": "festival-master:story-16",
+      "speakerId": "character:voss",
+      "lineStatus": "provisional",
+      "intent": { "en": "Voss converts shock into two immediate command priorities: the ship and Harlan." },
+      "delivery": { "en": { "en": "Crisp command cadence with no pause for grief. Separate the two orders cleanly." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f09-okoye-time",
+      "sourceStepId": "festival-master:story-19",
+      "speakerId": "character:okoye",
+      "lineStatus": "provisional",
+      "intent": { "en": "Okoye reports both the deadline and Elin’s immediate danger while still moving." },
+      "delivery": { "en": { "en": "Breath controlled under exertion, tactical and compressed. Make the second sentence more urgent than the first." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f09-harlan-answer",
+      "sourceStepId": "festival-master:story-20",
+      "speakerId": "character:harlan",
+      "lineStatus": "established",
+      "intent": { "en": "Restrained and losing, Harlan makes his sincere ideological plea rather than celebrating violence." },
+      "delivery": { "en": { "en": "Breathless from the struggle but controlled enough to persuade. Let ‘Earth’ carry fear and conviction." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f10-elin-delayed",
+      "sourceStepId": "festival-master:story-21",
+      "speakerId": "character:rao",
+      "lineStatus": "established",
+      "intent": { "en": "Elin states the exact limit of her success before anyone mistakes delay for safety." },
+      "delivery": { "en": { "en": "Exhausted but precise. Pause after ‘disarmed’; make the second sentence a correction, not reassurance." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f10-sorell-primer",
+      "sourceStepId": "festival-master:story-22",
+      "speakerId": "character:sorell",
+      "lineStatus": "established",
+      "intent": { "en": "Sorell gives the greeting its ethical and historical meaning while completing her work." },
+      "delivery": { "en": { "en": "Warm, awed, and intellectually clear. Build gently toward ‘read it back’ without making a speech." } }
+    },
+    {
+      "id": "audience:dialogue:festival-f10-sorell-someone",
+      "sourceStepId": "festival-master:story-23",
+      "speakerId": "character:sorell",
+      "lineStatus": "established",
+      "intent": { "en": "Sorell recognizes that the station’s answer has become a physical invitation." },
+      "delivery": { "en": { "en": "Barely above a whisper, astonishment held inside professional focus. Stress ‘someone,’ not ‘sending.’" } }
+    },
+    {
+      "id": "audience:dialogue:festival-f11-voss-time",
+      "sourceStepId": "festival-master:story-24",
+      "speakerId": "character:voss",
+      "lineStatus": "established",
+      "intent": { "en": "Voss finally gives Zao the recognition that cannot reach her but will accompany the record home." },
+      "delivery": { "en": { "en": "Private, tired, and grateful. Address the photograph as a person; let ‘time’ settle into silence." } }
+    }
+  ]
+}

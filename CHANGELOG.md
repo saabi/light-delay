@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-11 — Master-derived Festival audience narrative
+
+- Added an 11-chapter English audience narrative covering all 24 Festival beats in order, with deferred targeting, four microgravity transitions, and post-murder flight sabotage preserved.
+- Added 25 ID-addressed performance directions; nine adaptation-only lines are explicitly provisional and do not modify the empty Festival screenplay.
+- Generalized audience TTS build and validation through a data registry while retaining the existing master commands and outputs.
+- Added automated source-step coverage, timing-range, dialogue parity, deferred-reveal, and continuity checks. Festival Spanish remains not started.
+
 ## 2026-09-11 — Master-derived Festival outline
 
 - Registered a new `script:light-delay-festival-master` WIP in the master continuity without reviving or overwriting the deprecated Festival cut.

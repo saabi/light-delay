@@ -23,6 +23,9 @@ ES_SRC = WIP / "general-narrative-outline.es.md"
 AUDIENCE_PERFORMANCE_SRC = (
     ROOT / "data" / "production" / "audio" / "audience-dialogue-performance.json"
 )
+AUDIENCE_NARRATIVES_SRC = (
+    ROOT / "data" / "production" / "audio" / "audience-narratives.json"
+)
 MASTER_OUTLINE_SRC = ROOT / "data" / "outlines" / "light-delay-master-narrative.json"
 VOICE_PROFILES_SRC = ROOT / "data" / "voice-profiles.json"
 
@@ -480,28 +483,33 @@ def collect_json_values(node: object, key: str) -> set[str]:
     return values
 
 
-def load_audience_performance() -> dict[str, dict]:
-    data = json.loads(AUDIENCE_PERFORMANCE_SRC.read_text(encoding="utf-8"))
+def load_audience_performance(
+    performance_src: Path = AUDIENCE_PERFORMANCE_SRC,
+    *,
+    narrative_id: str = "audience:light-delay-master",
+    source_outline: dict | None = None,
+) -> dict[str, dict]:
+    data = json.loads(performance_src.read_text(encoding="utf-8"))
     entries = data.get("entries", [])
     by_id = {entry["id"]: entry for entry in entries}
     if len(by_id) != len(entries):
         raise ValueError("Duplicate IDs in audience dialogue performance data")
 
-    master = json.loads(MASTER_OUTLINE_SRC.read_text(encoding="utf-8"))
-    if data.get("narrativeId") != "audience:light-delay-master":
+    outline = source_outline or json.loads(MASTER_OUTLINE_SRC.read_text(encoding="utf-8"))
+    if data.get("narrativeId") != narrative_id:
         raise ValueError("Audience narrativeId must be stable and must not embed a revision")
-    if data.get("sourceOutlineId") != master.get("outline", {}).get("id"):
-        raise ValueError("Audience sourceOutlineId does not match the master outline")
-    master_ids = collect_json_values(master, "id")
-    master_speakers = collect_json_values(master, "speakerId")
+    if data.get("sourceOutlineId") != outline.get("outline", {}).get("id"):
+        raise ValueError("Audience sourceOutlineId does not match its registered outline")
+    outline_ids = collect_json_values(outline, "id")
+    known_speakers = set(CHARACTER_ID_BY_SPEAKER.values())
     for entry in entries:
-        if entry["sourceStepId"] not in master_ids:
+        if entry["sourceStepId"] not in outline_ids:
             raise ValueError(
-                f"Unknown master sourceStepId for {entry['id']}: {entry['sourceStepId']}"
+                f"Unknown outline sourceStepId for {entry['id']}: {entry['sourceStepId']}"
             )
-        if entry["speakerId"] not in master_speakers:
+        if entry["speakerId"] not in known_speakers:
             raise ValueError(
-                f"Unknown master speakerId for {entry['id']}: {entry['speakerId']}"
+                f"Unknown speakerId for {entry['id']}: {entry['speakerId']}"
             )
     return by_id
 
@@ -565,22 +573,33 @@ def build_voices(
     instruct_by_index: list[str] | None = None,
     performance_by_id: dict[str, dict] | None = None,
     source: str = "outline",
+    audience_title: str = "Light Delay",
+    audience_source_label: str = "the master outline",
+    audience_voices_path: str = "docs/wip/audience-narrative.voices.en.md",
+    audience_chunks_dir: str = "E:/Models/Qwen3-TTS/output/outline-chunks/en-audience",
+    audience_out_mp3: str | None = None,
 ) -> tuple[str, list[tuple[str | None, str, str]], list[str], list[str]]:
     blocks = parse_blocks(md)
     out: list[str] = []
     if source == "audience":
         if lang == "en":
+            generate = (
+                "Generate: `python scripts/generate-dual-outline-audio.py --lang en "
+                f"--script {audience_voices_path} "
+                f"--chunks-dir {audience_chunks_dir}"
+            )
+            if audience_out_mp3:
+                generate += f" --out {audience_out_mp3}"
+            generate += "`\n\n---\n"
             out.append(
-                "# Light Delay — audience narrative TTS (English)\n\n"
-                f"Revision {revision} (from the master outline). "
+                f"# {audience_title} — audience narrative TTS (English)\n\n"
+                f"Revision {revision} (from {audience_source_label}). "
                 "Chaptered short story for listeners; no production frontmatter.\n"
                 "Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].\n"
                 "Spoken name: Soréll; tag and editorial spelling stay ASCII [Sorell]. "
                 "Dialogue from attributed blockquotes only.\n"
                 "Cast/ref: `docs/wip/qwen3-tts-cast.json`.\n"
-                "Generate: `python scripts/generate-dual-outline-audio.py --lang en "
-                "--script docs/wip/audience-narrative.voices.en.md "
-                "--chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/en-audience`\n\n---\n"
+                f"{generate}"
             )
         else:
             out.append(
@@ -597,7 +616,7 @@ def build_voices(
             )
         out.append(
             cue_pause(
-                f"Light Delay. Revision {revision}."
+                f"{audience_title}. Revision {revision}."
                 if lang == "en"
                 else f"Lúz Tardía. Revisión {revision}."
             )
@@ -835,6 +854,97 @@ def write_pair(
                 print(" ", item)
 
 
+def load_outline_by_id(outline_id: str) -> dict:
+    for outline_path in (ROOT / "data" / "outlines").glob("*.json"):
+        candidate = json.loads(outline_path.read_text(encoding="utf-8"))
+        if candidate.get("outline", {}).get("id") == outline_id:
+            return candidate
+    raise ValueError(f"Unknown audience source outline: {outline_id}")
+
+
+def write_audience_profile(*, profile_key: str, language: str) -> None:
+    registry = json.loads(AUDIENCE_NARRATIVES_SRC.read_text(encoding="utf-8"))
+    profile = next(
+        (item for item in registry.get("narratives", []) if item.get("key") == profile_key),
+        None,
+    )
+    if profile is None:
+        raise ValueError(f"Unknown audience profile: {profile_key}")
+
+    outline = load_outline_by_id(profile["sourceOutlineId"])
+    revision_value = outline.get("outline", {}).get("revision")
+    if not isinstance(revision_value, int):
+        raise ValueError("Audience source outline revision must be an integer")
+    performance_by_id = load_audience_performance(
+        ROOT / profile["performancePath"],
+        narrative_id=profile["id"],
+        source_outline=outline,
+    )
+
+    requested = profile["languages"].keys() if language == "all" else (language,)
+    for lang in requested:
+        output = profile["languages"].get(lang)
+        if output is None or output.get("status") == "not_started":
+            print(f"Skipped audience {profile_key} {lang}: not started")
+            continue
+        revision = revision_value
+        if lang == "es" and output.get("status") != "current":
+            translated_revision = (
+                outline.get("outline", {})
+                .get("localization", {})
+                .get("translations", {})
+                .get("es", {})
+                .get("lastSyncedRevision")
+            )
+            if isinstance(translated_revision, int):
+                revision = translated_revision
+        source_path = ROOT / output["prosePath"]
+        voices_path = ROOT / output["voicesPath"]
+        if profile["key"] == "festival-master":
+            chunks_dir = (
+                "E:/Models/Qwen3-TTS/output/outline-chunks/en-festival-audience"
+                if lang == "en"
+                else "E:/Models/Qwen3-TTS/output/outline-chunks/es-festival-audience"
+            )
+            out_mp3 = (
+                "E:/Models/Qwen3-TTS/output/light-delay-festival-audience-dual-en.mp3"
+                if lang == "en"
+                else "E:/Models/Qwen3-TTS/output/light-delay-festival-audience-dual-es.mp3"
+            )
+        else:
+            chunks_dir = (
+                "E:/Models/Qwen3-TTS/output/outline-chunks/en-audience"
+                if lang == "en"
+                else "E:/Models/Qwen3-TTS/output/outline-chunks/es-audience"
+            )
+            out_mp3 = None
+        voices, log, missing, _ = build_voices(
+            source_path.read_text(encoding="utf-8"),
+            lang=lang,
+            revision=str(revision),
+            performance_by_id=performance_by_id,
+            source="audience",
+            audience_title=profile["title"].get(lang, profile["title"]["en"]),
+            audience_source_label=(
+                "the master outline"
+                if profile["key"] == "master"
+                else f"outline {profile['sourceOutlineId']}"
+            ),
+            audience_voices_path=output["voicesPath"],
+            audience_chunks_dir=chunks_dir,
+            audience_out_mp3=out_mp3,
+        )
+        voices_path.write_text(voices, encoding="utf-8")
+        print(
+            f"Wrote audience {profile_key} {lang.upper()}: "
+            f"dialogues={len(log)} revision={revision} -> {voices_path.name}"
+        )
+        if missing:
+            print(f"{lang.upper()} missing curated instruct (used fallback):", len(missing))
+            for item in missing:
+                print(" ", item)
+
+
 def main() -> None:
     import argparse
 
@@ -851,6 +961,12 @@ def main() -> None:
         default="all",
         help="Which language output to rebuild (default: all).",
     )
+    parser.add_argument(
+        "--audience",
+        choices=("master", "festival-master"),
+        default="master",
+        help="Registered audience narrative to rebuild (default: master).",
+    )
     args = parser.parse_args()
 
     if args.source in ("outline", "all"):
@@ -865,16 +981,7 @@ def main() -> None:
             language=args.lang,
         )
     if args.source in ("audience", "all"):
-        write_pair(
-            en_src=WIP / "audience-narrative.en.md",
-            es_src=WIP / "audience-narrative.es.md",
-            en_voices_out=WIP / "audience-narrative.voices.en.md",
-            es_voices_out=WIP / "audience-narrative.voices.es.md",
-            en_plain_out=None,
-            es_plain_out=None,
-            source="audience",
-            language=args.lang,
-        )
+        write_audience_profile(profile_key=args.audience, language=args.lang)
 
 
 if __name__ == "__main__":

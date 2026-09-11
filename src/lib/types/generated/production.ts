@@ -11,7 +11,7 @@ export type ProductionContextsFile10 = ProductionContextsFile5[];
  * @minItems 1
  */
 export type ProductionContextsFile11 = [ProductionContextsFile12, ...ProductionContextsFile12[]];
-export type ProductionContextsFile12 = ProductionContextsFile13 | ProductionContextsFile20;
+export type ProductionContextsFile12 = ProductionContextsFile13 | ProductionContextsFile20 | ProductionContextsFile24;
 export type ProductionContextsFile14 = 'script';
 export type ProductionContextsFile15 = string;
 export type ProductionContextsFile16 = string;
@@ -21,9 +21,12 @@ export type ProductionContextsFile19 = string;
 export type ProductionContextsFile21 = 'document';
 export type ProductionContextsFile22 = string;
 export type ProductionContextsFile23 = string;
-export type ProductionContextsFile24 = 'draft' | 'reviewed' | 'locked';
+export type ProductionContextsFile25 = 'outline';
+export type ProductionContextsFile26 = string;
 export type ProductionContextsFile27 = string;
-export type ProductionContextsFile28 =
+export type ProductionContextsFile28 = 'draft' | 'reviewed' | 'locked';
+export type ProductionContextsFile31 = string;
+export type ProductionContextsFile32 =
 	| 'story'
 	| 'continuity'
 	| 'performance'
@@ -35,30 +38,30 @@ export type ProductionContextsFile28 =
 	| 'technical'
 	| 'visual'
 	| 'todo';
-export type ProductionContextsFile29 = 'open' | 'in_progress' | 'resolved' | 'wont_fix';
-export type ProductionContextsFile30 = 'critical' | 'high' | 'medium' | 'low';
-export type ProductionContextsFile32 = string;
-export type ProductionContextsFile31 = ProductionContextsFile32[];
-export type ProductionContextsFile33 = string;
-export type ProductionContextsFile34 = string;
-export type ProductionContextsFile35 = string;
+export type ProductionContextsFile33 = 'open' | 'in_progress' | 'resolved' | 'wont_fix';
+export type ProductionContextsFile34 = 'critical' | 'high' | 'medium' | 'low';
+export type ProductionContextsFile36 = string;
+export type ProductionContextsFile35 = ProductionContextsFile36[];
+export type ProductionContextsFile37 = string;
+export type ProductionContextsFile38 = string;
+export type ProductionContextsFile39 = string;
 /**
  */
-export type ProductionContextsFile36 = boolean;
-export type ProductionContextsFile25 = ProductionContextsFile26[];
+export type ProductionContextsFile40 = boolean;
+export type ProductionContextsFile29 = ProductionContextsFile30[];
 export type ProductionContextsFile2 = ProductionContextsFile3[];
-export type ProductionContextsFile39 = string;
-export type ProductionContextsFile40 = string;
-export type ProductionContextsFile42 = string;
-export type ProductionContextsFile41 = ProductionContextsFile42[];
+export type ProductionContextsFile43 = string;
 export type ProductionContextsFile44 = string;
-export type ProductionContextsFile43 = ProductionContextsFile44[];
-export type ProductionContextsFile37 = ProductionContextsFile38[];
+export type ProductionContextsFile46 = string;
+export type ProductionContextsFile45 = ProductionContextsFile46[];
+export type ProductionContextsFile48 = string;
+export type ProductionContextsFile47 = ProductionContextsFile48[];
+export type ProductionContextsFile41 = ProductionContextsFile42[];
 
 export interface ProductionContextsFile {
 	schemaVersion: ProductionContextsFile1;
 	contexts: ProductionContextsFile2;
-	assignments: ProductionContextsFile37;
+	assignments: ProductionContextsFile41;
 }
 export interface ProductionContextsFile3 {
 	id: ProductionContextsFile4;
@@ -67,8 +70,8 @@ export interface ProductionContextsFile3 {
 	visualRules?: ProductionContextsFile9;
 	soundRules?: ProductionContextsFile10;
 	sourceRefs: ProductionContextsFile11;
-	status: ProductionContextsFile24;
-	notes?: ProductionContextsFile25;
+	status: ProductionContextsFile28;
+	notes?: ProductionContextsFile29;
 }
 export interface ProductionContextsFile5 {
 	es?: ProductionContextsFile6;
@@ -88,25 +91,30 @@ export interface ProductionContextsFile20 {
 	documentId: ProductionContextsFile22;
 	anchor?: ProductionContextsFile23;
 }
-export interface ProductionContextsFile26 {
-	id?: ProductionContextsFile27;
-	type: ProductionContextsFile28;
+export interface ProductionContextsFile24 {
+	kind: ProductionContextsFile25;
+	outlineId: ProductionContextsFile26;
+	stepId?: ProductionContextsFile27;
+}
+export interface ProductionContextsFile30 {
+	id?: ProductionContextsFile31;
+	type: ProductionContextsFile32;
 	text: ProductionContextsFile5;
-	status?: ProductionContextsFile29;
-	priority?: ProductionContextsFile30;
+	status?: ProductionContextsFile33;
+	priority?: ProductionContextsFile34;
 	suggestedAction?: ProductionContextsFile5;
 	acceptanceCriteria?: ProductionContextsFile5;
-	targetPaths?: ProductionContextsFile31;
-	author?: ProductionContextsFile33;
-	createdAt?: ProductionContextsFile34;
-	updatedAt?: ProductionContextsFile35;
-	resolved?: ProductionContextsFile36;
+	targetPaths?: ProductionContextsFile35;
+	author?: ProductionContextsFile37;
+	createdAt?: ProductionContextsFile38;
+	updatedAt?: ProductionContextsFile39;
+	resolved?: ProductionContextsFile40;
 }
-export interface ProductionContextsFile38 {
-	contextId: ProductionContextsFile39;
-	scriptId: ProductionContextsFile40;
-	sceneIds?: ProductionContextsFile41;
-	shotIds?: ProductionContextsFile43;
+export interface ProductionContextsFile42 {
+	contextId: ProductionContextsFile43;
+	scriptId: ProductionContextsFile44;
+	sceneIds?: ProductionContextsFile45;
+	shotIds?: ProductionContextsFile47;
 }
 
 export type ProviderCapabilitiesFile1 = string;
@@ -369,9 +377,10 @@ export type DialoguePerformanceFile4 = [DialoguePerformanceFile5, ...DialoguePer
 export type DialoguePerformanceFile6 = string;
 export type DialoguePerformanceFile7 = string;
 export type DialoguePerformanceFile8 = string;
-export type DialoguePerformanceFile10 = string;
+export type DialoguePerformanceFile9 = 'established' | 'provisional';
 export type DialoguePerformanceFile11 = string;
 export type DialoguePerformanceFile12 = string;
+export type DialoguePerformanceFile13 = string;
 
 export interface DialoguePerformanceFile {
 	schemaVersion: DialoguePerformanceFile1;
@@ -383,17 +392,18 @@ export interface DialoguePerformanceFile5 {
 	id: DialoguePerformanceFile6;
 	sourceStepId: DialoguePerformanceFile7;
 	speakerId: DialoguePerformanceFile8;
-	intent: DialoguePerformanceFile9;
-	delivery: DialoguePerformanceFile13;
+	lineStatus?: DialoguePerformanceFile9;
+	intent: DialoguePerformanceFile10;
+	delivery: DialoguePerformanceFile14;
 }
-export interface DialoguePerformanceFile9 {
+export interface DialoguePerformanceFile10 {
+	es?: DialoguePerformanceFile11;
+	en: DialoguePerformanceFile12;
+	[k: string]: DialoguePerformanceFile13 | undefined;
+}
+export interface DialoguePerformanceFile14 {
+	en: DialoguePerformanceFile10;
 	es?: DialoguePerformanceFile10;
-	en: DialoguePerformanceFile11;
-	[k: string]: DialoguePerformanceFile12 | undefined;
-}
-export interface DialoguePerformanceFile13 {
-	en: DialoguePerformanceFile9;
-	es?: DialoguePerformanceFile9;
 }
 
 export type AudioOutputsFile1 = '1.0.0';

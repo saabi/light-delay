@@ -53,13 +53,17 @@
       "relevance": "required",
       "disposition": "retain",
       "reason": {
-        "es": "Derivado Festival WIP autorizado y fijado a la revisión 19 del master; contiene escaleta y un stub de guion vacío.",
-        "en": "Authorized Festival WIP derivative pinned to master revision 19; it contains an outline and an empty screenplay stub."
+        "es": "Derivado Festival WIP autorizado y fijado a la revisión 19 del master; contiene escaleta, relato de audiencia inglés y un stub de guion vacío.",
+        "en": "Authorized Festival WIP derivative pinned to master revision 19; it contains an outline, an English audience narrative, and an empty screenplay stub."
       },
       "refs": [
         { "kind": "script", "id": "script:light-delay-festival-master" },
         { "kind": "outline", "id": "outline:light-delay-festival-master" },
-        { "kind": "static_file", "id": "docs/wip/festival-cut-screenplay-runway.en.md" }
+        { "kind": "static_file", "id": "docs/wip/festival-cut-screenplay-runway.en.md" },
+        { "kind": "static_file", "id": "docs/wip/festival-cut-audience-narrative.en.md" },
+        { "kind": "static_file", "id": "docs/wip/festival-cut-audience-narrative.voices.en.md" },
+        { "kind": "static_file", "id": "data/production/audio/festival-audience-dialogue-performance.json" },
+        { "kind": "static_file", "id": "data/production/audio/audience-narratives.json" }
       ]
     },
     {

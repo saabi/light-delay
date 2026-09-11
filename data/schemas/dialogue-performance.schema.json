@@ -28,8 +28,9 @@
       "required": ["id", "sourceStepId", "speakerId", "intent", "delivery"],
       "properties": {
         "id": { "type": "string", "pattern": "^audience:dialogue:" },
-        "sourceStepId": { "type": "string", "pattern": "^master:story-" },
+        "sourceStepId": { "type": "string", "pattern": "^[a-z0-9-]+:story-[a-z0-9-]+$" },
         "speakerId": { "type": "string", "pattern": "^character:" },
+        "lineStatus": { "enum": ["established", "provisional"] },
         "intent": { "$ref": "common.schema.json#/$defs/localizedString" },
         "delivery": { "$ref": "#/$defs/languageDelivery" }
       },
