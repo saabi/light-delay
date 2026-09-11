@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-09-11 — Agent generation brief for storyboard/frame/video prompts
+
+- Added `docs/production/AGENT_GENERATION_BRIEF.md`: authority chain, generation-plan contracts
+  (schema/types/compiler), live-data inventory, asset locations, tooling, and I/O templates for
+  storyboard stills, first/last frame, video-segment prompts, and reference-asset requests.
+- Declares gaps verified against the repository at the time of writing; some (e.g. the
+  `build-generation-plans.mjs` cut list, the provider-capabilities snapshot) were closed by the
+  concurrent Festival screenplay/storyboard work recorded below and should be re-checked before reuse.
+- Adds a dialogue-tone-pass note (English-first, per-speaker `dialogueStyle`, no forced exposition)
+  for making harsh lines read more human without losing causal information.
+
+## 2026-09-11 — Master-derived Festival screenplay and storyboard blueprint
+
+- Authored the English Festival screenplay as 3 acts, 11 sequences, 31 story scenes plus title/credits, with complete colloquial dialogue and a total 11:30 scene budget.
+- Bound all 24 Festival outline beats to concrete scene, beat, and cue evidence; added a Festival-specific causal knowledge ledger.
+- Added an English storyboard blueprint reserving 96 story candidates plus title and three credit cards. It records camera grammar, visible/off-screen participants, cue coverage, continuity, and references while leaving `shots` and `takes` empty.
+- Preserved the concealed-transmission reveal, four separate microgravity events, and post-murder flight sabotage. Added an English voice profile for the Earth reporter, the only additional intelligible Earth speaker.
+- Added explicit ScriptFile localization status so Spanish can remain visibly `not_started` without weakening bilingual validation for existing scripts.
+
+## 2026-09-11 — Campaña video: segmentos hasta 30 s
+
+- `data/production/provider-capabilities.json`: `maxSegmentMs` **30000**; campaña apunta a snapshot Seedance 2.5.
+- `build-generation-plans.mjs` lee `maxSegmentMs` del JSON (ya no hardcodea 8 s); planes regenerados.
+
 ## 2026-09-11 — Studio lista todos los outputs del catálogo
 
 - El selector de Imitation Studio carga `GET /v1/imitation/outputs` en lugar de
@@ -247,8 +271,8 @@
 ## 2026-09-05 — Audience ES: narración más lenta + léxico castellano
 
 - Narrador Kokoro `em_alex`: speed **0.85** (antes 0.92) en `kokoro-voice-cast.es.json`.
-- Título hablado/escrito ES: **Lúz Tardía**. `jammer` → *inhibidor de señales*;
-  `displays` → *pantallas*. Diálogo de Soréll sobre la IA pasa a cita hablada
+- Título hablado/escrito ES: **Lúz Tardía**. `jammer` → _inhibidor de señales_;
+  `displays` → _pantallas_. Diálogo de Soréll sobre la IA pasa a cita hablada
   (`audience-narrative.es.md` / `.voices.es.md`; EN hermano alineado).
 
 ## 2026-09-05 — Render audience EN dual
@@ -472,7 +496,7 @@
 
 - `production:plans` normaliza CRLF antes del `sourceDigest` para que el chequeo en Linux no
   diverja del working tree Windows (`light-delay-long.json`).
-- `assertGeneratedCheck` compara también con newlines normalizados, evitando falsos *stale* locales.
+- `assertGeneratedCheck` compara también con newlines normalizados, evitando falsos _stale_ locales.
 
 ## 2026-09-04 — Regeneración de notas pendientes
 

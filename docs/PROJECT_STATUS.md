@@ -1,5 +1,18 @@
 # Estado del proyecto
 
+## 2026-09-11 — Guion Festival derivado y blueprint de storyboard
+
+- `script:light-delay-festival-master` ya contiene el primer guion fuente en inglés: 3 actos, 11 secuencias, 31 escenas narrativas más título/créditos, 33 beats y 125 cues de diálogo dentro de un objetivo total de 11:30.
+- Los 24 hitos de la escaleta Festival tienen cobertura de guion explícita por escenas, beats y cues. El ledger `data/continuity/light-delay-festival-master.json` registra estados de conocimiento y precondiciones sin inventar evidencia de animatic.
+- `docs/wip/festival-master-shot-blueprint.en.md` reserva 96 unidades narrativas y cuatro cartelas, todas de hasta ocho segundos, con cámara, personajes, cues, continuidad y referencias. Sigue siendo un blueprint: `shots` y `takes` permanecen vacíos y no se asignaron imágenes ni prompts.
+- Se preservan el ocultamiento del mensaje hasta F08, las cuatro entradas en microgravedad y el sabotaje de vuelo posterior al asesinato. La única voz terrestre inteligible adicional es la periodista, con perfil de voz inglés propio.
+- `script.localization` marca el español como `not_started`; el validador permite ese desfase declarado sin relajar los guiones bilingües históricos.
+
+## 2026-09-11 — Campaña generación: maxSegmentMs 30 s
+
+- `campaign:higgsfield-trial-24h.maxSegmentMs` pasa de 8 s a **30 s** (Seedance 2.5).
+- Builder lee el tope desde `provider-capabilities.json`; planes regenerados.
+
 ## 2026-09-11 — Studio: outputs desde catálogo (incl. Festival EN)
 
 - `/studio` lista todos los outputs de `audio-outputs.json` vía el worker
@@ -17,7 +30,7 @@
 
 - Creado el relato inglés de 11 capítulos derivado de `outline:light-delay-festival-master`, con trazabilidad explícita de sus 24 beats y las cuatro transiciones a microgravedad.
 - Conserva el ocultamiento del destino y mecanismo del mensaje hasta la recepción, y ubica el sabotaje de vuelo después del asesinato.
-- Registra 25 diálogos con dirección inglesa; 9 líneas nuevas quedan marcadas `provisional` y no se incorporan todavía al guion vacío.
+- Registra 25 diálogos con dirección inglesa; el guion Festival posterior los revisa como material de adaptación y ya no depende de que el stub permanezca vacío.
 - El registro y las herramientas de audiencia ahora admiten múltiples narrativas. La traducción española del Festival queda `not_started`. Dual EN generado después (~14.9 min).
 
 ## 2026-09-11 — Nuevo Festival derivado del master rev. 19
@@ -25,7 +38,7 @@
 - Registrado `script:light-delay-festival-master` como derivado WIP independiente dentro de `continuity:light-delay-master-wip`; el Festival anterior permanece deprecado.
 - Su escaleta story-only comprime los 58 hitos del master en 24 beats y 11 secuencias, con objetivo aproximado de 11:30 y rango editorial de 10–12 minutos.
 - La trazabilidad outline→outline y el nuevo `report:outline-derivation` comprueban revisión fuente y cobertura causal completa. La UI muestra revisión, estado y enlaces a los hitos master.
-- El `ScriptFile` sigue vacío. `docs/wip/festival-cut-screenplay-runway.en.md` anticipa escenas, funciones de diálogo y silencios sin declarar implementación.
+- El `ScriptFile` dejó de estar vacío en el pase de guion posterior. `docs/wip/festival-cut-screenplay-runway.en.md` conserva procedencia de planificación; el estado vigente se resume en la entrada superior.
 
 ## 2026-09-11 — Dual de audiencia ES (lastSyncedRevision 19)
 
@@ -470,7 +483,7 @@ Fecha de corte: 2026-08-31.
 - **Puente y bloqueo de Harlan:** la geometría documentada ya coincide con el modelo: seis puestos en arco, silla de capitán, mesa para seis, escaleras abiertas junto a servicio/ascensor y escotilla de servicio con bandeja COM A/B contigua fuera de la vista. Main, Festival y largo conservan el orden causal exacto: ascenso y apertura de escotilla durante la llamada, jammer, apertura de bandeja, desenchufe cableado, reingreso, cierre y descenso.
 - **Cartelas inglesas de título:** `static/assets/animatic/titles/` contiene `film-title.png`, `trailer-brand.png` y `trailer-tagline.png`, todos opacos y normalizados a 1536 × 864. Registrados en `data/assets.json` y enlazados en main, Festival y tráiler; el título principal y la marca usan únicamente `LIGHT DELAY`.
 - **Campaña de afiches V1:** cuatro conceptos en formatos apaisado y retrato, disponibles en español e inglés bajo `static/assets/marketing/posters/v1/`, con continuidad basada en las hojas canónicas de personajes, Proxima, Celestial Ardor y la Estación Velari. El manifiesto de marketing conserva copy, dimensiones, orientación, pares localizados y referencias; la elegibilidad para concurso permanece sin verificar.
-- **Escaletas causales por cut:** las seis entradas tienen synopsis y una capa `story` legible: 12 main, 7 tráiler, 12 largo y 15 Festival deprecado; 58 master WIP; y 24 beats en el nuevo Festival derivado. Los cuatro productos anteriores conservan su detalle editorial existente (17/9/28/44); master y nuevo Festival son deliberadamente story-only y no afirman implementación. Los 24 beats nuevos trazan los 58 hitos master sin omisiones.
+- **Escaletas causales por cut:** las seis entradas tienen synopsis y una capa `story` legible: 12 main, 7 tráiler, 12 largo y 15 Festival deprecado; 58 master WIP; y 24 beats en el nuevo Festival derivado. El master permanece story-only; el nuevo Festival ya declara cobertura de guion pero no de animatic. Sus 24 beats trazan los 58 hitos master sin omisiones.
 - **Lectura aislada y protección del tráiler:** `report:outline-story` exporta sólo la columna vertebral narrativa para revisión humana; la falta de enlaces causales en `story` es error. `check:trailer-spoilers` y su prueba de regresión impiden identificar al culpable o confirmar envío, recepción, muerte, contención de la amenaza o resultado del saludo en el avance.
 - **Fatalidad fuera de campo diferenciada:** main, festival y largo confirman la muerte de Zao mediante golpe seco, cese de forcejeo/respiración y negro sostenido. El tráiler conserva el mismo corte previo al ataque, pero sale pronto del negro con música continua y deja inciertos tanto la muerte como el envío.
 - **Razonamiento crítico restaurado:** main, festival y largo explican en escaleta por qué Zao descarta Tierra (doble retardo hasta la Ardor) y Proxima (oclusión de Júpiter L2–L1), y por qué sólo sirve apuntar al corredor futuro. También conservan que Harlan supone erróneamente un envío a la Tierra, se tranquiliza, lamenta la suerte de Zao y suspira antes de matarla.
@@ -553,7 +566,7 @@ Fecha de corte: 2026-08-31.
 - Haz de Zao: `docs/SIGNAL_BEAM_REQUIREMENTS.md` conserva sólo una aproximación visual; el presupuesto óptico exacto permanece en `TODO.md`.
 - Assets: 143 imágenes registradas en `static/assets/` (100 frames legacy, 1 frame nuevo escena 5, 3 cartelas de título, 38 referencias y 1 placeholder técnico). `legacy-site/assets/` permanece intacto como referencia.
 - Documentos prose: cinco páginas legacy extraídas y traducidas en `data/documents.json`; canon y tres referencias históricas/editoriales también exponen variante inglesa; validación exige paridad de bloques ES/EN y cobertura del ledger de migración.
-- Estado editorial: las traducciones inglesas permanecen en `draft`. La narrativa maestra es la autoridad WIP y sólo posee escaleta más un `ScriptFile` stub; las otras cuatro entradas están deprecadas. Todavía no existen guiones, animatics ni planes de producción derivados del master.
+- Estado editorial: la narrativa maestra es la autoridad WIP y conserva su `ScriptFile` stub. El nuevo Festival ya posee guion fuente en inglés y blueprint, con español `not_started` y sin tomas, takes ni animatic; las otras cuatro entradas siguen deprecadas.
 - Calidad del último pase validado: `validate:data` (incluido JSON Schema), `validate:docs`, `validate:translations`, `generated:check`, ledger causal, `svelte-check`, 86 pruebas unitarias, build estático y 18 pruebas Playwright. E2E y lint estricto continúan fuera de CI; Vite mantiene el warning conocido del chunk de repositorios >500 kB.
 - Validación pendiente: los 143 assets registrados existen y el grafo actual no mostró referencias rotas en la auditoría puntual, pero el validador de CI no comprueba todavía paths físicos ni toda la integridad padre/hijo.
 
