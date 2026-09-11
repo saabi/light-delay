@@ -31,11 +31,11 @@
         "en": "Audience narrative (English)"
       },
       "description": {
-        "es": "287 cues del dual de audiencia en inglés regenerado desde master rev. 18 (~48.7 min).",
-        "en": "287 cues from the English audience dual regenerated from master revision 18 (~48.7 min); stale against master revision 19."
+        "es": "287 cues del dual de audiencia en inglés regenerado desde master rev. 19 (~49.0 min).",
+        "en": "287 cues from the English audience dual regenerated from master revision 19 (~49.0 min)."
       },
       "sourceOutlineId": "outline:light-delay-master-narrative",
-      "sourceOutlineRevision": 18,
+      "sourceOutlineRevision": 19,
       "chunksKey": "outline-chunks/en-audience",
       "canonicalMp3Key": "light-delay-audience-dual-en.mp3",
       "assembledKey": "assembled/audience-en.mp3",

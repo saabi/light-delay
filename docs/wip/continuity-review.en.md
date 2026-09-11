@@ -77,7 +77,7 @@ with room for maneuvers, not an exact orbital solution.
 Check ES/EN, chronology, knowledge, access, message sources and reveals.
 Structural tests alone do not certify causality: this table accompanies a continuous
 reading of story bodies without relying on details or expanded causal links.
-English audience dual regenerated for revision 18 (2026-09-11). Spanish prose-revision-15
+English audience dual regenerated for revision 19 (2026-09-11). Spanish prose-revision-15
 audio remains stale against the English source.
 Regenerate exports and TTS text only. Archived cuts remain unchanged.
 

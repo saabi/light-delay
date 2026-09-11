@@ -10,7 +10,7 @@ describe('audio output catalog', () => {
 		const rows = listAudioOutputs();
 		expect(rows.map((row) => row.id).sort()).toEqual(['audience-en', 'audience-es']);
 		const expectedById: Record<string, { cueCount: number; revision: number }> = {
-			'audience-en': { cueCount: 287, revision: 18 },
+			'audience-en': { cueCount: 287, revision: 19 },
 			'audience-es': { cueCount: 275, revision: 15 }
 		};
 		for (const row of rows) {
