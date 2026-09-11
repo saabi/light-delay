@@ -318,6 +318,33 @@
 			]
 		},
 		{
+			"id": "voice:reporter-en",
+			"characterId": "character:periodista",
+			"name": "Earth Broadcast Reporter",
+			"description": {
+				"es": "Mezzosoprano clara de registro medio, con presencia de estudio y autoridad sin dramatización artificial. La urgencia aparece en pausas más breves y consonantes más firmes, no en volumen excesivo.",
+				"en": "A clear mid-register mezzo with studio presence and authority without artificial drama. Urgency appears through shorter pauses and firmer consonants, not excessive volume."
+			},
+			"variants": [
+				{
+					"language": "en",
+					"locale": "en-US",
+					"languageFormation": {
+						"place": { "es": "Washington, D. C., Estados Unidos", "en": "Washington, D.C., United States" },
+						"variety": { "es": "inglés estadounidense general de radiodifusión internacional", "en": "General American English shaped by international broadcasting" }
+					},
+					"prosody": {
+						"es": "Cadencia de informativo contemporáneo: ritmo estable, nombres propios articulados con cuidado y énfasis reservado para contrastes verificables.",
+						"en": "Contemporary news cadence: steady pace, carefully articulated proper names, and emphasis reserved for verifiable contrasts."
+					},
+					"dialogueStyle": {
+						"es": "Inglés internacional accesible, frases compactas y atribuciones claras. Presenta posiciones enfrentadas sin convertir la narración en editorial ni caricaturizar a manifestantes o partidarios.",
+						"en": "Accessible international English, compact sentences, and clear attribution. She presents opposing positions without turning narration into an editorial or caricaturing protesters or supporters."
+					}
+				}
+			]
+		},
+		{
 			"id": "voice:earth-protesters-es",
 			"characterId": "character:earth-protesters",
 			"name": "Manifestantes terrestres (es)",

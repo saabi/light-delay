@@ -12,7 +12,7 @@
       "en": "During an improvised first-contact mission, Zao discovers a bomb timed for the encounter, manages to send a warning toward the Ardor’s future position, and is murdered by Harlan. As he frames Sorell and protects the automatic flight, Elin separates false explanations from real evidence until the delayed message authenticates the warning. The crew restrains Harlan, delays rather than disarms the bomb, and preserves contact; afterward, Voss sends Earth a record recognizing that Zao made it in time."
     },
     "status": "draft",
-    "version": "0.1.0-wip",
+    "version": "0.2.0-wip",
     "revision": 1,
     "localization": {
       "sourceLanguage": "en",
@@ -24,8 +24,8 @@
       }
     },
     "editorialNotice": {
-      "es": "Derivado WIP autorizado contra el master rev. 19. No reemplaza la autoridad maestra ni continúa el Corte Festival deprecado. Su guion y animatic todavía no existen.",
-      "en": "WIP derivative authorized against master revision 19. It neither replaces the master authority nor continues the deprecated Festival cut. Its screenplay and animatic do not yet exist."
+      "es": "Derivado WIP autorizado contra el master rev. 19. El guion fuente en inglés cubre la escaleta; la traducción española, las tomas de producción, los takes, el animatic y los planes de generación no comenzaron.",
+      "en": "WIP derivative authorized against master revision 19. Its English screenplay is drafted with complete outline coverage; Spanish translation, production shots, takes, animatic media, and generation plans have not started."
     },
     "derivation": {
       "sourceOutlineId": "outline:light-delay-master-narrative",
@@ -65,17 +65,94 @@
     }
   ],
   "storySections": [
-    { "id": "festival-master:section-01", "order": 1, "title": { "es": "F01 — Tierra y partida", "en": "F01 — Earth and departure" } },
-    { "id": "festival-master:section-02", "order": 2, "title": { "es": "F02 — Tránsito", "en": "F02 — Transit" } },
-    { "id": "festival-master:section-03", "order": 3, "title": { "es": "F03 — Descubrimiento", "en": "F03 — Discovery" } },
-    { "id": "festival-master:section-04", "order": 4, "title": { "es": "F04 — Aislamiento", "en": "F04 — Isolation" } },
-    { "id": "festival-master:section-05", "order": 5, "title": { "es": "F05 — Advertencia y asesinato", "en": "F05 — Warning and murder" } },
-    { "id": "festival-master:section-06", "order": 6, "title": { "es": "F06 — Incriminación", "en": "F06 — Frame-up" } },
-    { "id": "festival-master:section-07", "order": 7, "title": { "es": "F07 — Investigación", "en": "F07 — Investigation" } },
-    { "id": "festival-master:section-08", "order": 8, "title": { "es": "F08 — Revelación", "en": "F08 — Revelation" } },
-    { "id": "festival-master:section-09", "order": 9, "title": { "es": "F09 — Persecución", "en": "F09 — Chase" } },
-    { "id": "festival-master:section-10", "order": 10, "title": { "es": "F10 — Contacto", "en": "F10 — Contact" } },
-    { "id": "festival-master:section-11", "order": 11, "title": { "es": "F11 — Registro", "en": "F11 — Record" } }
+    {
+      "id": "festival-master:section-01",
+      "order": 1,
+      "title": {
+        "es": "F01 — Tierra y partida",
+        "en": "F01 — Earth and departure"
+      }
+    },
+    {
+      "id": "festival-master:section-02",
+      "order": 2,
+      "title": {
+        "es": "F02 — Tránsito",
+        "en": "F02 — Transit"
+      }
+    },
+    {
+      "id": "festival-master:section-03",
+      "order": 3,
+      "title": {
+        "es": "F03 — Descubrimiento",
+        "en": "F03 — Discovery"
+      }
+    },
+    {
+      "id": "festival-master:section-04",
+      "order": 4,
+      "title": {
+        "es": "F04 — Aislamiento",
+        "en": "F04 — Isolation"
+      }
+    },
+    {
+      "id": "festival-master:section-05",
+      "order": 5,
+      "title": {
+        "es": "F05 — Advertencia y asesinato",
+        "en": "F05 — Warning and murder"
+      }
+    },
+    {
+      "id": "festival-master:section-06",
+      "order": 6,
+      "title": {
+        "es": "F06 — Incriminación",
+        "en": "F06 — Frame-up"
+      }
+    },
+    {
+      "id": "festival-master:section-07",
+      "order": 7,
+      "title": {
+        "es": "F07 — Investigación",
+        "en": "F07 — Investigation"
+      }
+    },
+    {
+      "id": "festival-master:section-08",
+      "order": 8,
+      "title": {
+        "es": "F08 — Revelación",
+        "en": "F08 — Revelation"
+      }
+    },
+    {
+      "id": "festival-master:section-09",
+      "order": 9,
+      "title": {
+        "es": "F09 — Persecución",
+        "en": "F09 — Chase"
+      }
+    },
+    {
+      "id": "festival-master:section-10",
+      "order": 10,
+      "title": {
+        "es": "F10 — Contacto",
+        "en": "F10 — Contact"
+      }
+    },
+    {
+      "id": "festival-master:section-11",
+      "order": 11,
+      "title": {
+        "es": "F11 — Registro",
+        "en": "F11 — Record"
+      }
+    }
   ],
   "steps": [
     {
@@ -83,15 +160,71 @@
       "level": "story",
       "sectionId": "festival-master:section-01",
       "order": 1,
-      "title": { "es": "Una discusión que Voss interpreta mal", "en": "An argument Voss misreads" },
+      "title": {
+        "es": "Una discusión que Voss interpreta mal",
+        "en": "An argument Voss misreads"
+      },
       "summary": {
         "es": "Con una demora de 43 MIN 18 S, la tripulación de Próxima observa protestas terrestres que enfrentan dos lecturas de la garganta y del encuentro irrepetible. Harlan teme una puerta alienígena que dicta condiciones sin responder; Sorell defiende contestar con cautela antes de juzgar. Voss confunde el temor de Harlan con esperanza y el rigor de Sorell con resistencia. Sólo después de oírla, Zao comprende el error y le advierte en privado: «Eso no era esperanza»; Voss descarta su inquietud.",
         "en": "Across a 43 MIN 18 S delay, the Proxima crew watches Earth protests divide over the throat and the once-in-millennia encounter. Harlan fears an alien door that dictates terms without answering; Sorell argues for a cautious reply before judgment. Voss mistakes Harlan’s dread for hope and Sorell’s rigor for reluctance. Only after hearing them does Zao recognize the error and warn him privately, “That wasn’t hope”; Voss dismisses her concern."
       },
       "importance": "required",
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-p1" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-p2" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-p1"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-p2"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-02",
+            "festival-master:scene-03"
+          ],
+          "beatIds": [
+            "festival-master:beat-02",
+            "festival-master:beat-03"
+          ],
+          "cueIds": [
+            "festival-master:cue-0002",
+            "festival-master:cue-0003",
+            "festival-master:cue-0004",
+            "festival-master:cue-0005",
+            "festival-master:cue-0006",
+            "festival-master:cue-0007",
+            "festival-master:cue-0008",
+            "festival-master:cue-0009",
+            "festival-master:cue-0010",
+            "festival-master:cue-0011"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-02",
+        "festival-master:scene-03"
+      ],
+      "beatIds": [
+        "festival-master:beat-02",
+        "festival-master:beat-03"
+      ],
+      "cueIds": [
+        "festival-master:cue-0002",
+        "festival-master:cue-0003",
+        "festival-master:cue-0004",
+        "festival-master:cue-0005",
+        "festival-master:cue-0006",
+        "festival-master:cue-0007",
+        "festival-master:cue-0008",
+        "festival-master:cue-0009",
+        "festival-master:cue-0010",
+        "festival-master:cue-0011"
       ]
     },
     {
@@ -99,17 +232,76 @@
       "level": "story",
       "sectionId": "festival-master:section-01",
       "order": 2,
-      "title": { "es": "Partida apresurada y doble comprobación", "en": "Hurried departure and a second check" },
+      "title": {
+        "es": "Partida apresurada y doble comprobación",
+        "en": "Hurried departure and a second check"
+      },
       "summary": {
         "es": "El cronograma exacto llegó demasiado tarde para traer diplomáticos desde la Tierra, así que la tripulación local prepara a toda prisa la Celestial Ardor. Voss llama «Commander» a Harlan y hace visible su autoridad sobre carga y preparación. Zao y Elin completan la revisión; Elin declara la nave lista, pero Zao repite el control desde otro ángulo antes de autorizar la partida. Su hábito, que Voss conoce y respeta, la deja revisando registros que otra persona habría cerrado.",
         "en": "The exact schedule arrived too late to bring diplomats from Earth, so the local crew hurriedly prepares the Celestial Ardor. Voss addresses Harlan as “Commander,” making his authority over loading and preparation visible. Zao and Elin finish the check; Elin calls the ship ready, but Zao repeats it from another direction before signing off. Her habit, known and trusted by Voss, leaves her examining records someone else would have closed."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-01", "relation": "forces", "explanation": { "es": "El cronograma alienígena inminente convierte el debate en una partida local apresurada y deja a Harlan con autoridad práctica sobre la carga.", "en": "The imminent alien timetable turns the debate into a hurried local departure and leaves Harlan with practical authority over the loading." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-01",
+          "relation": "forces",
+          "explanation": {
+            "es": "El cronograma alienígena inminente convierte el debate en una partida local apresurada y deja a Harlan con autoridad práctica sobre la carga.",
+            "en": "The imminent alien timetable turns the debate into a hurried local departure and leaves Harlan with practical authority over the loading."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-a1" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-a2" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-a3" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-a1"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-a2"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-a3"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-04"
+          ],
+          "beatIds": [
+            "festival-master:beat-04"
+          ],
+          "cueIds": [
+            "festival-master:cue-0012",
+            "festival-master:cue-0013",
+            "festival-master:cue-0014",
+            "festival-master:cue-0015",
+            "festival-master:cue-0016",
+            "festival-master:cue-0017",
+            "festival-master:cue-0018"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-04"
+      ],
+      "beatIds": [
+        "festival-master:beat-04"
+      ],
+      "cueIds": [
+        "festival-master:cue-0012",
+        "festival-master:cue-0013",
+        "festival-master:cue-0014",
+        "festival-master:cue-0015",
+        "festival-master:cue-0016",
+        "festival-master:cue-0017",
+        "festival-master:cue-0018"
       ]
     },
     {
@@ -117,16 +309,83 @@
       "level": "story",
       "sectionId": "festival-master:section-02",
       "order": 3,
-      "title": { "es": "Primera caída de gravedad", "en": "First gravity dip" },
+      "title": {
+        "es": "Primera caída de gravedad",
+        "en": "First gravity dip"
+      },
       "summary": {
         "es": "Durante el largo tránsito a la boca de Júpiter, una conversación informal convierte la broma sobre el nombre y la forma de la Ardor en una pregunta real: cómo saludar a una inteligencia que nunca respondió. Sorell muestra un fragmento del manual luminoso y admite que la IA puede ordenar patrones, no eliminar la incertidumbre; Harlan pregunta qué pasa si los malinterpretados son los humanos. En periapsis, el empuje se corta y la nave gira en microgravedad antes de reanudar la desaceleración, haciendo tangible el tiempo transcurrido y la futura imposibilidad de regresar de inmediato.",
         "en": "During the long transit to the Jupiter mouth, casual talk turns a joke about the Ardor’s name and shape into a real question: how to greet an intelligence that has never answered. Sorell shows a fragment of the luminous primer and admits that AI can arrange patterns, not remove uncertainty; Harlan asks what happens if humanity is being misread. At periapsis, thrust cuts and the ship turns in microgravity before resuming deceleration, making elapsed time and the future lack of an immediate return tangible."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-02", "relation": "enables", "explanation": { "es": "La partida abre el tránsito necesario para revelar las relaciones de la tripulación y la primera transición física de la historia.", "en": "Departure opens the transit needed to reveal crew relationships and the story’s first physical transition." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-02",
+          "relation": "enables",
+          "explanation": {
+            "es": "La partida abre el tránsito necesario para revelar las relaciones de la tripulación y la primera transición física de la historia.",
+            "en": "Departure opens the transit needed to reveal crew relationships and the story’s first physical transition."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-a3b" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-a3c" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-a3b"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-a3c"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-05",
+            "festival-master:scene-06"
+          ],
+          "beatIds": [
+            "festival-master:beat-05",
+            "festival-master:beat-06"
+          ],
+          "cueIds": [
+            "festival-master:cue-0019",
+            "festival-master:cue-0020",
+            "festival-master:cue-0021",
+            "festival-master:cue-0022",
+            "festival-master:cue-0023",
+            "festival-master:cue-0024",
+            "festival-master:cue-0025",
+            "festival-master:cue-0026",
+            "festival-master:cue-0027",
+            "festival-master:cue-0028",
+            "festival-master:cue-0029"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-05",
+        "festival-master:scene-06"
+      ],
+      "beatIds": [
+        "festival-master:beat-05",
+        "festival-master:beat-06"
+      ],
+      "cueIds": [
+        "festival-master:cue-0019",
+        "festival-master:cue-0020",
+        "festival-master:cue-0021",
+        "festival-master:cue-0022",
+        "festival-master:cue-0023",
+        "festival-master:cue-0024",
+        "festival-master:cue-0025",
+        "festival-master:cue-0026",
+        "festival-master:cue-0027",
+        "festival-master:cue-0028",
+        "festival-master:cue-0029"
       ]
     },
     {
@@ -134,16 +393,83 @@
       "level": "story",
       "sectionId": "festival-master:section-03",
       "order": 4,
-      "title": { "es": "La discrepancia adquiere peso", "en": "The discrepancy gains weight" },
+      "title": {
+        "es": "La discrepancia adquiere peso",
+        "en": "The discrepancy gains weight"
+      },
       "summary": {
         "es": "Al aproximarse a la boca, la Ardor corta empuje para el cruce de precisión y entra por segunda vez en microgravedad. La auditoría extendida de Zao separa del ruido un exceso pequeño pero exacto de propelente: la nave mantuvo el perfil de 1 g usando más combustible. Al probar fuga, combustión ineficiente o masa no declarada, su dosímetro detecta neutrones débiles que aumentan hacia la bóveda blindada; todavía no distinguen una anomalía de fusión de una fuente compacta, de modo que Zao sigue la lectura.",
         "en": "Nearing the mouth, the Ardor cuts thrust for precision crossing and enters microgravity for the second time. Zao’s extended audit separates a small but exact propellant excess from noise: the ship held its 1g profile by using more fuel. Testing leakage, inefficient burn, or unmanifested mass, her dosimeter finds a weak neutron excess growing toward the shielded vault; it cannot yet distinguish a fusion anomaly from a compact source, so Zao follows it."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-03", "relation": "motivates", "explanation": { "es": "El hábito de Zao y la inquietud que dejó Harlan la llevan a revisar una desviación acumulada durante el tránsito.", "en": "Zao’s habit and the unease Harlan left behind lead her to examine a deviation accumulated during transit." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-03",
+          "relation": "motivates",
+          "explanation": {
+            "es": "El hábito de Zao y la inquietud que dejó Harlan la llevan a revisar una desviación acumulada durante el tránsito.",
+            "en": "Zao’s habit and the unease Harlan left behind lead her to examine a deviation accumulated during transit."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-a4" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-a5" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-a4"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-a5"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-07",
+            "festival-master:scene-08"
+          ],
+          "beatIds": [
+            "festival-master:beat-07",
+            "festival-master:beat-08"
+          ],
+          "cueIds": [
+            "festival-master:cue-0030",
+            "festival-master:cue-0031",
+            "festival-master:cue-0032",
+            "festival-master:cue-0033",
+            "festival-master:cue-0034",
+            "festival-master:cue-0035",
+            "festival-master:cue-0036",
+            "festival-master:cue-0037",
+            "festival-master:cue-0038",
+            "festival-master:cue-0039",
+            "festival-master:cue-0040"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-07",
+        "festival-master:scene-08"
+      ],
+      "beatIds": [
+        "festival-master:beat-07",
+        "festival-master:beat-08"
+      ],
+      "cueIds": [
+        "festival-master:cue-0030",
+        "festival-master:cue-0031",
+        "festival-master:cue-0032",
+        "festival-master:cue-0033",
+        "festival-master:cue-0034",
+        "festival-master:cue-0035",
+        "festival-master:cue-0036",
+        "festival-master:cue-0037",
+        "festival-master:cue-0038",
+        "festival-master:cue-0039",
+        "festival-master:cue-0040"
       ]
     },
     {
@@ -151,16 +477,83 @@
       "level": "story",
       "sectionId": "festival-master:section-03",
       "order": 5,
-      "title": { "es": "Harlan sale; Zao entra", "en": "Harlan exits; Zao enters" },
+      "title": {
+        "es": "Harlan sale; Zao entra",
+        "en": "Harlan exits; Zao enters"
+      },
       "summary": {
         "es": "Zao encuentra a Harlan saliendo de la bóveda interior después de una inspección aparentemente legítima; él no ha tocado los mandos de vuelo y nada visible confirma sabotaje, pero sabe qué puede descubrir ella. La puerta quedó mal asegurada. Dentro, las marcas, la lectura cercana y el temporizador revelan un paquete termonuclear de impulso geofísico de Próxima, de 1–1,5 toneladas y varios megatones, programado para detonar en las coordenadas y el instante del primer contacto. Ningún aviso ordinario puede regresar a tiempo.",
         "en": "Zao meets Harlan leaving the inner vault after an apparently legitimate inspection; he has not touched flight controls and nothing visible confirms sabotage, but he now knows what she may discover. The door was left incompletely secured. Inside, markings, the close-range reading, and the timer reveal Proxima’s 1–1.5-tonne, multi-megaton geophysical impulse package, set to detonate at the first-contact coordinates and time. No ordinary warning can return in time."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-04", "relation": "reveals", "explanation": { "es": "La lectura neutrónica lleva a Zao al lugar que Harlan acaba de abandonar y la puerta incompletamente cerrada le permite identificar la amenaza.", "en": "The neutron reading leads Zao to the place Harlan has just left, and the incompletely secured door lets her identify the threat." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-04",
+          "relation": "reveals",
+          "explanation": {
+            "es": "La lectura neutrónica lleva a Zao al lugar que Harlan acaba de abandonar y la puerta incompletamente cerrada le permite identificar la amenaza.",
+            "en": "The neutron reading leads Zao to the place Harlan has just left, and the incompletely secured door lets her identify the threat."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b1" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b1b" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b1"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b1b"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-08",
+            "festival-master:scene-09"
+          ],
+          "beatIds": [
+            "festival-master:beat-08",
+            "festival-master:beat-09"
+          ],
+          "cueIds": [
+            "festival-master:cue-0035",
+            "festival-master:cue-0036",
+            "festival-master:cue-0037",
+            "festival-master:cue-0038",
+            "festival-master:cue-0039",
+            "festival-master:cue-0040",
+            "festival-master:cue-0041",
+            "festival-master:cue-0042",
+            "festival-master:cue-0043",
+            "festival-master:cue-0044",
+            "festival-master:cue-0045"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-08",
+        "festival-master:scene-09"
+      ],
+      "beatIds": [
+        "festival-master:beat-08",
+        "festival-master:beat-09"
+      ],
+      "cueIds": [
+        "festival-master:cue-0035",
+        "festival-master:cue-0036",
+        "festival-master:cue-0037",
+        "festival-master:cue-0038",
+        "festival-master:cue-0039",
+        "festival-master:cue-0040",
+        "festival-master:cue-0041",
+        "festival-master:cue-0042",
+        "festival-master:cue-0043",
+        "festival-master:cue-0044",
+        "festival-master:cue-0045"
       ]
     },
     {
@@ -168,17 +561,88 @@
       "level": "story",
       "sectionId": "festival-master:section-04",
       "order": 6,
-      "title": { "es": "Harlan oye y aísla a Zao", "en": "Harlan hears and isolates Zao" },
+      "title": {
+        "es": "Harlan oye y aísla a Zao",
+        "en": "Harlan hears and isolates Zao"
+      },
       "summary": {
         "es": "Harlan vuelve por el conducto de servicio para informar una tarea legítima y emerge sin ser visto detrás de una tripulación orientada hacia las pantallas. Oye a Zao comenzar «He encontrado un grave intento de sabotear la misión—», activa con su muñequera el jammer preparado y corta la voz. Reingresa al conducto, desconecta físicamente comunicaciones cableadas y cámaras y desciende hacia ella. Voss asigna a Elin al fallo y retiene a Okoye para proteger el puente; Sorell, cuya especialidad no ayuda a reparar comunicaciones, se ofrece a buscar a Zao. Voss le ordena encontrar a Harlan y no ir sola, pero, sin respuesta y con una advertencia urgente, Sorell continúa por la escalera helicoidal más lenta.",
         "en": "Harlan returns through the service shaft to report a legitimate duty and emerges unseen behind a crew facing their displays. He hears Zao begin, “I have found a grave attempt to sabotage the mission—,” activates the prepared jammer from his wrist, and cuts her voice off. He reenters the shaft, physically disconnects wired communications and cameras, and descends toward her. Voss assigns Elin to the outage and keeps Okoye protecting the bridge; Sorell, whose specialty cannot repair communications, volunteers to find Zao. Voss orders her to locate Harlan and not go alone, but with no answer and an urgent warning, Sorell continues down the slower helical stairs."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-05", "relation": "forces", "explanation": { "es": "El descubrimiento de Zao convierte el regreso rutinario de Harlan en una carrera para silenciarla antes de que Voss actúe.", "en": "Zao’s discovery turns Harlan’s routine return into a race to silence her before Voss can act." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-05",
+          "relation": "forces",
+          "explanation": {
+            "es": "El descubrimiento de Zao convierte el regreso rutinario de Harlan en una carrera para silenciarla antes de que Voss actúe.",
+            "en": "Zao’s discovery turns Harlan’s routine return into a race to silence her before Voss can act."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b2" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b3" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b4b" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b2"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b3"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b4b"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-10",
+            "festival-master:scene-11"
+          ],
+          "beatIds": [
+            "festival-master:beat-10",
+            "festival-master:beat-11"
+          ],
+          "cueIds": [
+            "festival-master:cue-0046",
+            "festival-master:cue-0047",
+            "festival-master:cue-0048",
+            "festival-master:cue-0049",
+            "festival-master:cue-0050",
+            "festival-master:cue-0051",
+            "festival-master:cue-0052",
+            "festival-master:cue-0053",
+            "festival-master:cue-0054",
+            "festival-master:cue-0055",
+            "festival-master:cue-0056"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-10",
+        "festival-master:scene-11"
+      ],
+      "beatIds": [
+        "festival-master:beat-10",
+        "festival-master:beat-11"
+      ],
+      "cueIds": [
+        "festival-master:cue-0046",
+        "festival-master:cue-0047",
+        "festival-master:cue-0048",
+        "festival-master:cue-0049",
+        "festival-master:cue-0050",
+        "festival-master:cue-0051",
+        "festival-master:cue-0052",
+        "festival-master:cue-0053",
+        "festival-master:cue-0054",
+        "festival-master:cue-0055",
+        "festival-master:cue-0056"
       ]
     },
     {
@@ -186,17 +650,78 @@
       "level": "story",
       "sectionId": "festival-master:section-04",
       "order": 7,
-      "title": { "es": "La única advertencia posible", "en": "The only possible warning" },
+      "title": {
+        "es": "La única advertencia posible",
+        "en": "The only possible warning"
+      },
       "summary": {
         "es": "Zao prueba radio, cable y emergencia: que fallen juntos confirma sabotaje, mientras la matriz óptica de larga distancia conserva su control local independiente. Descarta Próxima, oculta detrás de Júpiter; la Tierra, porque recibiría el aviso pero su retransmisión llegaría después de la detonación; la garganta piloto, que no acepta mensajes humanos; y una advertencia Velari, porque sólo Sorell conoce el manual y no hay destino confirmado. Entonces percibe una relación entre el cruce inminente y el tiempo de luz ordinario, deja de hablar y comienza un nuevo cálculo. El encuadre oculta destinatario, trayectoria y razonamiento decisivo; sólo revela el resultado 23 H 15 MIN.",
         "en": "Zao tests radio, hardline, and emergency paths: their combined failure confirms sabotage, while the long-distance optical array retains its independent local control. She eliminates Proxima, hidden behind Jupiter; Earth, which could receive the warning but could not relay it before detonation; the pilot throat, which accepts no human messages; and a Velari warning, because only Sorell knows the primer and no target is confirmed. She then notices a relationship between the imminent crossing and ordinary light-time, stops speaking, and begins a new calculation. Framing hides its recipient, trajectory, and decisive reasoning; only the result 23 H 15 MIN is revealed."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-06", "relation": "forces", "explanation": { "es": "El corte deliberado de todas las rutas internas obliga a Zao a eliminar alternativas y usar la matriz óptica independiente.", "en": "The deliberate loss of every internal route forces Zao to eliminate alternatives and use the independent optical array." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-06",
+          "relation": "forces",
+          "explanation": {
+            "es": "El corte deliberado de todas las rutas internas obliga a Zao a eliminar alternativas y usar la matriz óptica independiente.",
+            "en": "The deliberate loss of every internal route forces Zao to eliminate alternatives and use the independent optical array."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b4" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b5" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b6" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b4"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b5"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b6"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-12"
+          ],
+          "beatIds": [
+            "festival-master:beat-12"
+          ],
+          "cueIds": [
+            "festival-master:cue-0057",
+            "festival-master:cue-0058",
+            "festival-master:cue-0059",
+            "festival-master:cue-0060",
+            "festival-master:cue-0061",
+            "festival-master:cue-0062",
+            "festival-master:cue-0063",
+            "festival-master:cue-0064"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-12"
+      ],
+      "beatIds": [
+        "festival-master:beat-12"
+      ],
+      "cueIds": [
+        "festival-master:cue-0057",
+        "festival-master:cue-0058",
+        "festival-master:cue-0059",
+        "festival-master:cue-0060",
+        "festival-master:cue-0061",
+        "festival-master:cue-0062",
+        "festival-master:cue-0063",
+        "festival-master:cue-0064"
       ]
     },
     {
@@ -204,18 +729,95 @@
       "level": "story",
       "sectionId": "festival-master:section-05",
       "order": 8,
-      "title": { "es": "Una ráfaga sin destino visible", "en": "A burst with no visible destination" },
+      "title": {
+        "es": "Una ráfaga sin destino visible",
+        "en": "A burst with no visible destination"
+      },
       "summary": {
         "es": "Zao graba en el buffer volátil una advertencia de menos de un minuto con identidad, masa, origen, ubicación, potencia, reloj, firma neutrónica y protecciones de la bomba; el público ve la grabación sin oírla. Firma y transmite una ráfaga cuyo encuadre oculta destino y mecanismo. Harlan entra, ve que algo salió pero no sabe a dónde ni qué dijo. Pregunta a quién se lo envió; ante el silencio, evita reconstruir el vector porque Sorell se acerca. Deduce erróneamente que fue a la Tierra: Próxima está oculta, la garganta no escucha y Zao no habla Velari. Cree que una acusación terrestre llegará demasiado tarde para impedir su ataque y quizá algún día reivindique su sacrificio. Suspira y se aproxima.",
         "en": "Zao records a warning under one minute into the volatile buffer, giving the bomb’s identity, mass, origin, location, yield, timer, neutron signature, and protections; the audience sees the recording without hearing it. She signs and transmits a burst whose framing hides destination and mechanism. Harlan enters, sees that something left, but knows neither where nor what she said. He asks whom she sent it to; when she remains silent, he avoids reconstructing the vector because Sorell is approaching. He wrongly infers Earth: Proxima is hidden, the throat does not listen, and Zao cannot speak Velari. He believes an Earthbound accusation will arrive too late to prevent his attack and may someday vindicate his sacrifice. He sighs and closes in."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-07", "relation": "enables", "explanation": { "es": "La solución que Zao oculta al público le permite crear una advertencia independiente, mientras la presión de tiempo lleva a Harlan a interpretarla según su propia certeza.", "en": "The solution Zao hides from the audience lets her create an independent warning, while time pressure makes Harlan interpret it through his own certainty." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-07",
+          "relation": "enables",
+          "explanation": {
+            "es": "La solución que Zao oculta al público le permite crear una advertencia independiente, mientras la presión de tiempo lleva a Harlan a interpretarla según su propia certeza.",
+            "en": "The solution Zao hides from the audience lets her create an independent warning, while time pressure makes Harlan interpret it through his own certainty."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b7" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-b8" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c1" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c2" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b7"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-b8"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c1"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c2"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-13",
+            "festival-master:scene-14"
+          ],
+          "beatIds": [
+            "festival-master:beat-13",
+            "festival-master:beat-14"
+          ],
+          "cueIds": [
+            "festival-master:cue-0065",
+            "festival-master:cue-0066",
+            "festival-master:cue-0067",
+            "festival-master:cue-0068",
+            "festival-master:cue-0069",
+            "festival-master:cue-0070",
+            "festival-master:cue-0071",
+            "festival-master:cue-0072",
+            "festival-master:cue-0073",
+            "festival-master:cue-0074",
+            "festival-master:cue-0075",
+            "festival-master:cue-0076"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-13",
+        "festival-master:scene-14"
+      ],
+      "beatIds": [
+        "festival-master:beat-13",
+        "festival-master:beat-14"
+      ],
+      "cueIds": [
+        "festival-master:cue-0065",
+        "festival-master:cue-0066",
+        "festival-master:cue-0067",
+        "festival-master:cue-0068",
+        "festival-master:cue-0069",
+        "festival-master:cue-0070",
+        "festival-master:cue-0071",
+        "festival-master:cue-0072",
+        "festival-master:cue-0073",
+        "festival-master:cue-0074",
+        "festival-master:cue-0075",
+        "festival-master:cue-0076"
       ]
     },
     {
@@ -223,17 +825,94 @@
       "level": "story",
       "sectionId": "festival-master:section-05",
       "order": 9,
-      "title": { "es": "Asesinato, contingencia y cruce", "en": "Murder, contingency, and crossing" },
+      "title": {
+        "es": "Asesinato, contingencia y cruce",
+        "en": "Murder, contingency, and crossing"
+      },
       "summary": {
         "es": "Harlan asesina a Zao en microgravedad; la imagen corta antes del impacto y un golpe confirma el desenlace. Deja el cuerpo en la bahía exterior, asegura la bomba en la bóveda con su muñequera y, sólo ahora que el aviso hace previsible un aborto, desconecta físicamente en la consola local los mandos de vuelo y el corte de emergencia del puente, sin alterar el plan automático ni la telemetría. Mientras regresa hacia el distribuidor de comunicaciones, la garganta se abre, la Ardor cruza y la boca se cierra detrás. La tripulación completa el logro histórico sin saber qué ocurrió en la bahía ni qué relación tiene el cruce con la ráfaga ya perdida de vista.",
         "en": "Harlan murders Zao in microgravity; the image cuts before impact and a thump confirms the outcome. He leaves her body in the outer bay, secures the bomb inside the vault with his wrist device, and—only now that her warning makes an abort foreseeable—physically disconnects bridge flight commands and its remote emergency cutoff at the local console, without altering the automatic plan or telemetry. As he returns toward the communications tray, the throat opens, the Ardor crosses, and the mouth closes behind it. The crew completes the historic achievement without knowing what happened in the bay or how the crossing relates to the burst already lost from view."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-08", "relation": "motivates", "explanation": { "es": "La transmisión y la llegada inminente de otra tripulante obligan a Harlan a matar, asegurar la bomba y añadir el sabotaje de vuelo antes de construir su coartada.", "en": "The transmission and an approaching crewmember force Harlan to kill, secure the bomb, and add flight sabotage before constructing his alibi." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-08",
+          "relation": "motivates",
+          "explanation": {
+            "es": "La transmisión y la llegada inminente de otra tripulante obligan a Harlan a matar, asegurar la bomba y añadir el sabotaje de vuelo antes de construir su coartada.",
+            "en": "The transmission and an approaching crewmember force Harlan to kill, secure the bomb, and add flight sabotage before constructing his alibi."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c3" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c3a" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c3b" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c3"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c3a"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c3b"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-14",
+            "festival-master:scene-15"
+          ],
+          "beatIds": [
+            "festival-master:beat-14",
+            "festival-master:beat-15"
+          ],
+          "cueIds": [
+            "festival-master:cue-0069",
+            "festival-master:cue-0070",
+            "festival-master:cue-0071",
+            "festival-master:cue-0072",
+            "festival-master:cue-0073",
+            "festival-master:cue-0074",
+            "festival-master:cue-0075",
+            "festival-master:cue-0076",
+            "festival-master:cue-0077",
+            "festival-master:cue-0078",
+            "festival-master:cue-0079",
+            "festival-master:cue-0080",
+            "festival-master:cue-0081",
+            "festival-master:cue-0082"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-14",
+        "festival-master:scene-15"
+      ],
+      "beatIds": [
+        "festival-master:beat-14",
+        "festival-master:beat-15"
+      ],
+      "cueIds": [
+        "festival-master:cue-0069",
+        "festival-master:cue-0070",
+        "festival-master:cue-0071",
+        "festival-master:cue-0072",
+        "festival-master:cue-0073",
+        "festival-master:cue-0074",
+        "festival-master:cue-0075",
+        "festival-master:cue-0076",
+        "festival-master:cue-0077",
+        "festival-master:cue-0078",
+        "festival-master:cue-0079",
+        "festival-master:cue-0080",
+        "festival-master:cue-0081",
+        "festival-master:cue-0082"
       ]
     },
     {
@@ -241,16 +920,75 @@
       "level": "story",
       "sectionId": "festival-master:section-06",
       "order": 10,
-      "title": { "es": "La testigo llega demasiado tarde", "en": "The witness arrives too late" },
+      "title": {
+        "es": "La testigo llega demasiado tarde",
+        "en": "The witness arrives too late"
+      },
       "summary": {
         "es": "Sorell llega por la ruta más lenta, encuentra a Zao flotando en la bahía accesible, la sujeta, intenta auxiliarla y llama sin éxito al puente. Harlan alcanza primero el distribuidor superior, reconecta cables y cámaras, apaga el jammer y emerge anunciando que encontró y reparó el corte. La imagen recuperada muestra sólo a Sorell sosteniendo el cuerpo ensangrentado.",
         "en": "Sorell arrives by the slower route, finds Zao drifting in the accessible bay, catches her, attempts aid, and calls the bridge without success. Harlan reaches the upper tray first, reconnects cables and cameras, disables the jammer, and emerges announcing that he found and repaired the break. The restored image shows only Sorell holding the bloodied body."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-09", "relation": "enables", "explanation": { "es": "La diferencia entre rutas permite que Harlan termine su contingencia y restaure el registro justo cuando Sorell queda sola con Zao.", "en": "The difference between routes lets Harlan finish his contingency and restore the record precisely when Sorell is alone with Zao." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-09",
+          "relation": "enables",
+          "explanation": {
+            "es": "La diferencia entre rutas permite que Harlan termine su contingencia y restaure el registro justo cuando Sorell queda sola con Zao.",
+            "en": "The difference between routes lets Harlan finish his contingency and restore the record precisely when Sorell is alone with Zao."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c4" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c5" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c4"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c5"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-16"
+          ],
+          "beatIds": [
+            "festival-master:beat-16"
+          ],
+          "cueIds": [
+            "festival-master:cue-0083",
+            "festival-master:cue-0084",
+            "festival-master:cue-0085",
+            "festival-master:cue-0086",
+            "festival-master:cue-0087",
+            "festival-master:cue-0088",
+            "festival-master:cue-0089",
+            "festival-master:cue-0090",
+            "festival-master:cue-0091"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-16"
+      ],
+      "beatIds": [
+        "festival-master:beat-16"
+      ],
+      "cueIds": [
+        "festival-master:cue-0083",
+        "festival-master:cue-0084",
+        "festival-master:cue-0085",
+        "festival-master:cue-0086",
+        "festival-master:cue-0087",
+        "festival-master:cue-0088",
+        "festival-master:cue-0089",
+        "festival-master:cue-0090",
+        "festival-master:cue-0091"
       ]
     },
     {
@@ -258,18 +996,103 @@
       "level": "story",
       "sectionId": "festival-master:section-06",
       "order": 11,
-      "title": { "es": "Una acusación plausible", "en": "A plausible accusation" },
+      "title": {
+        "es": "Una acusación plausible",
+        "en": "A plausible accusation"
+      },
       "summary": {
         "es": "Harlan afirma que estuvo en tareas asignadas, que cruzó a Zao camino al puente y que nunca vio a Sorell. Voss lo envía con Okoye; al encontrar a Sorell junto al cadáver, Harlan pregunta de inmediato cómo pudo hacerlo y convierte la escena en acusación. Sin calabozo, Sorell queda bajo custodia provisional en el puente. La sangre, su viaje sin registros y una mentira de Harlan —que antes quiso retrasar la misión— forman un caso incompleto pero suficiente para sospechar; Voss proyecta sobre él su antigua lectura equivocada, mientras Elin observa el dolor de Sorell y la velocidad de la acusación.",
         "en": "Harlan says he was performing assigned duties, passed Zao on his way to the bridge, and never saw Sorell. Voss sends him with Okoye; finding Sorell beside the body, Harlan immediately asks how she could do it and turns the scene into an accusation. With no brig, Sorell is held provisionally on the bridge. Blood, her unrecorded journey, and Harlan’s lie—that she earlier wanted to delay the mission—form an incomplete but sufficient case for suspicion; Voss projects his earlier misreading onto it, while Elin notices Sorell’s grief and the accusation’s speed."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-10", "relation": "enables", "explanation": { "es": "La imagen restaurada y el vacío de registros permiten que Harlan convierta a la primera testigo en sospechosa y explote el error previo de Voss.", "en": "The restored image and record gap let Harlan turn the first witness into a suspect and exploit Voss’s earlier error." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-10",
+          "relation": "enables",
+          "explanation": {
+            "es": "La imagen restaurada y el vacío de registros permiten que Harlan convierta a la primera testigo en sospechosa y explote el error previo de Voss.",
+            "en": "The restored image and record gap let Harlan turn the first witness into a suspect and exploit Voss’s earlier error."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c6" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c7" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c8" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c9" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c6"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c7"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c8"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c9"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-16",
+            "festival-master:scene-17"
+          ],
+          "beatIds": [
+            "festival-master:beat-16",
+            "festival-master:beat-17"
+          ],
+          "cueIds": [
+            "festival-master:cue-0083",
+            "festival-master:cue-0084",
+            "festival-master:cue-0085",
+            "festival-master:cue-0086",
+            "festival-master:cue-0087",
+            "festival-master:cue-0088",
+            "festival-master:cue-0089",
+            "festival-master:cue-0090",
+            "festival-master:cue-0091",
+            "festival-master:cue-0092",
+            "festival-master:cue-0093",
+            "festival-master:cue-0094",
+            "festival-master:cue-0095",
+            "festival-master:cue-0096",
+            "festival-master:cue-0097",
+            "festival-master:cue-0098"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-16",
+        "festival-master:scene-17"
+      ],
+      "beatIds": [
+        "festival-master:beat-16",
+        "festival-master:beat-17"
+      ],
+      "cueIds": [
+        "festival-master:cue-0083",
+        "festival-master:cue-0084",
+        "festival-master:cue-0085",
+        "festival-master:cue-0086",
+        "festival-master:cue-0087",
+        "festival-master:cue-0088",
+        "festival-master:cue-0089",
+        "festival-master:cue-0090",
+        "festival-master:cue-0091",
+        "festival-master:cue-0092",
+        "festival-master:cue-0093",
+        "festival-master:cue-0094",
+        "festival-master:cue-0095",
+        "festival-master:cue-0096",
+        "festival-master:cue-0097",
+        "festival-master:cue-0098"
       ]
     },
     {
@@ -277,31 +1100,145 @@
       "level": "story",
       "sectionId": "festival-master:section-06",
       "order": 12,
-      "title": { "es": "La investigación viaja con la nave", "en": "The investigation travels with the ship" },
+      "title": {
+        "es": "La investigación viaja con la nave",
+        "en": "The investigation travels with the ship"
+      },
       "summary": {
         "es": "Tras salir de la boca lejana, la Ardor reanuda empuje y 1 g hacia la estación durante unas veintitrés horas y media. Voss no cierra el caso: exige reconstruir comunicaciones, registros, masa y trabajo final de Zao. Sorell permanece interrogada y no puede preparar el saludo; Voss comienza a pensar cómo llegar sin ella, mientras Elin y Okoye preservan la escena y las pruebas.",
         "en": "After clearing the far mouth, the Ardor resumes thrust and 1g toward the station for roughly twenty-three and a half hours. Voss does not close the case: he orders communications, records, mass, and Zao’s final work reconstructed. Sorell remains under questioning and cannot prepare the greeting; Voss begins considering how to arrive without her, while Elin and Okoye preserve the scene and evidence."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-11", "relation": "forces", "explanation": { "es": "El caso plausible pero incompleto obliga a mantener la custodia sin detener una investigación que debe resolverse antes del encuentro.", "en": "The plausible but incomplete case forces the crew to maintain custody without ending an investigation that must resolve before contact." } }],
-      "sourceRefs": [{ "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c10" }]
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-11",
+          "relation": "forces",
+          "explanation": {
+            "es": "El caso plausible pero incompleto obliga a mantener la custodia sin detener una investigación que debe resolverse antes del encuentro.",
+            "en": "The plausible but incomplete case forces the crew to maintain custody without ending an investigation that must resolve before contact."
+          }
+        }
+      ],
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c10"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-17"
+          ],
+          "beatIds": [
+            "festival-master:beat-17"
+          ],
+          "cueIds": [
+            "festival-master:cue-0092",
+            "festival-master:cue-0093",
+            "festival-master:cue-0094",
+            "festival-master:cue-0095",
+            "festival-master:cue-0096",
+            "festival-master:cue-0097",
+            "festival-master:cue-0098"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-17"
+      ],
+      "beatIds": [
+        "festival-master:beat-17"
+      ],
+      "cueIds": [
+        "festival-master:cue-0092",
+        "festival-master:cue-0093",
+        "festival-master:cue-0094",
+        "festival-master:cue-0095",
+        "festival-master:cue-0096",
+        "festival-master:cue-0097",
+        "festival-master:cue-0098"
+      ]
     },
     {
       "id": "festival-master:story-13",
       "level": "story",
       "sectionId": "festival-master:section-07",
       "order": 13,
-      "title": { "es": "Una teoría coherente se rompe en dos", "en": "One coherent theory breaks in two" },
+      "title": {
+        "es": "Una teoría coherente se rompe en dos",
+        "en": "One coherent theory breaks in two"
+      },
       "summary": {
         "es": "Harlan une el exceso de propelente y los neutrones en una teoría de sabotaje de combustible: una mezcla rica en deuterio habría producido ambos y Sorell tendría motivo para demorar el contacto. Voss la considera plausible; Elin la conserva como hipótesis. Horas de auditoría demuestran que no hubo pérdida, mezcla anómala ni baja eficiencia: el motor consumió combustible extra para acelerar 1–1,5 toneladas de masa no declarada. La exposición neutrónica sigue siendo real pero independiente. La explicación única de Harlan ya no cubre ninguna de las dos pistas, y el caso contra Sorell se debilita.",
         "en": "Harlan joins excess propellant and neutrons into a fuel-sabotage theory: a deuterium-rich mixture would have produced both, and Sorell had a motive to delay contact. Voss finds it plausible; Elin keeps it as a hypothesis. Hours of audit prove there was no loss, abnormal mixture, or efficiency drop: the engine burned extra fuel to accelerate 1–1.5 tonnes of unmanifested mass. The neutron exposure remains real but separate. Harlan’s single explanation no longer accounts for either clue, weakening the case against Sorell."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-12", "relation": "reveals", "explanation": { "es": "La reconstrucción ordenada por Voss permite a Elin probar la teoría en lugar de aceptar su coherencia como verdad.", "en": "The reconstruction Voss orders lets Elin test the theory instead of accepting coherence as truth." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-12",
+          "relation": "reveals",
+          "explanation": {
+            "es": "La reconstrucción ordenada por Voss permite a Elin probar la teoría en lugar de aceptar su coherencia como verdad.",
+            "en": "The reconstruction Voss orders lets Elin test the theory instead of accepting coherence as truth."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d1" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d2" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d2b" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d1"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d2"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d2b"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-18"
+          ],
+          "beatIds": [
+            "festival-master:beat-18"
+          ],
+          "cueIds": [
+            "festival-master:cue-0099",
+            "festival-master:cue-0100",
+            "festival-master:cue-0101",
+            "festival-master:cue-0102",
+            "festival-master:cue-0103",
+            "festival-master:cue-0104",
+            "festival-master:cue-0105",
+            "festival-master:cue-0106"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-18"
+      ],
+      "beatIds": [
+        "festival-master:beat-18"
+      ],
+      "cueIds": [
+        "festival-master:cue-0099",
+        "festival-master:cue-0100",
+        "festival-master:cue-0101",
+        "festival-master:cue-0102",
+        "festival-master:cue-0103",
+        "festival-master:cue-0104",
+        "festival-master:cue-0105",
+        "festival-master:cue-0106"
       ]
     },
     {
@@ -309,17 +1246,76 @@
       "level": "story",
       "sectionId": "festival-master:section-07",
       "order": 14,
-      "title": { "es": "Tercera caída y una puerta cerrada", "en": "Third dip and a locked door" },
+      "title": {
+        "es": "Tercera caída y una puerta cerrada",
+        "en": "Third dip and a locked door"
+      },
       "summary": {
         "es": "A mitad del trayecto, la nave corta empuje por tercera vez y gira en microgravedad para comenzar a frenar, haciendo visibles las horas de investigación. Elin y Okoye siguen los neutrones hacia la bóveda, pero su cerradura local aislada rechaza la autoridad de Voss. Harlan miente que Sorell debió reconfigurarla durante el apagón. Los datos sólo permiten afirmar masa oculta y una fuente neutrónica compacta, no todavía una bomba. Elin deja sobre el banco un equipo diagnóstico que, entre otros usos, verifica referencias temporales y vuelve a estudiar los rastros ópticos.",
         "en": "Midway through the leg, the ship cuts thrust for the third time and turns in microgravity to begin braking, making the investigation’s elapsed hours visible. Elin and Okoye trace neutrons toward the vault, but its isolated local lock rejects Voss’s authority. Harlan lies that Sorell must have reconfigured it during the blackout. The data supports only hidden mass and a compact neutron source, not yet a bomb. Elin leaves a diagnostic unit that can check time references on the bench and returns to the optical traces."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-13", "relation": "motivates", "explanation": { "es": "Al separarse las pistas, Elin debe localizar físicamente la fuente y buscar otro registro independiente.", "en": "Once the clues separate, Elin must locate the source physically and seek another independent record." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-13",
+          "relation": "motivates",
+          "explanation": {
+            "es": "Al separarse las pistas, Elin debe localizar físicamente la fuente y buscar otro registro independiente.",
+            "en": "Once the clues separate, Elin must locate the source physically and seek another independent record."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-c10b" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d3" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d4" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-c10b"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d3"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d4"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-19"
+          ],
+          "beatIds": [
+            "festival-master:beat-19"
+          ],
+          "cueIds": [
+            "festival-master:cue-0107",
+            "festival-master:cue-0108",
+            "festival-master:cue-0109",
+            "festival-master:cue-0110",
+            "festival-master:cue-0111",
+            "festival-master:cue-0112",
+            "festival-master:cue-0113"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-19"
+      ],
+      "beatIds": [
+        "festival-master:beat-19"
+      ],
+      "cueIds": [
+        "festival-master:cue-0107",
+        "festival-master:cue-0108",
+        "festival-master:cue-0109",
+        "festival-master:cue-0110",
+        "festival-master:cue-0111",
+        "festival-master:cue-0112",
+        "festival-master:cue-0113"
       ]
     },
     {
@@ -327,18 +1323,85 @@
       "level": "story",
       "sectionId": "festival-master:section-07",
       "order": 15,
-      "title": { "es": "El disparo al espacio vacío regresa", "en": "The shot into empty space returns" },
+      "title": {
+        "es": "El disparo al espacio vacío regresa",
+        "en": "The shot into empty space returns"
+      },
       "summary": {
         "es": "Elin reconstruye la ráfaga emitida durante el apagón: no queda contenido, sólo ángulos y actitud, y el vector no apunta a Tierra, Próxima ni baliza alguna. Harlan, sin revelar que vio la transmisión, dice que Zao intentó completar su aviso a la Tierra y falló; Elin responde que Zao no fallaba así y compara la dirección con trayectorias móviles. A solas, Harlan lamenta que la aparente pérdida del mensaje también borre al testigo que esperaba que algún día lo reivindicara. Su ubicación no verificable, su acusación precipitada y su relato sobre la cerradura amplían la sospecha sin probar culpabilidad. Trece minutos antes del contacto, una señal óptica entra por el mismo corredor y confirma que la nave era el receptor móvil.",
         "en": "Elin reconstructs the burst emitted during the blackout: no content remains, only angles and attitude, and its vector points to neither Earth, Proxima, nor any beacon. Without revealing that he saw the transmission, Harlan says Zao tried to finish her warning to Earth and missed; Elin answers that Zao did not miss like that and compares the direction with moving trajectories. Alone, Harlan laments that the message’s apparent loss also erases the witness he hoped would someday vindicate him. His unverifiable location, hurried accusation, and account of the lock broaden suspicion without proving guilt. Thirteen minutes before contact, an optical signal arrives along the same corridor and confirms that the ship was the moving receiver."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-14", "relation": "reveals", "explanation": { "es": "Al no poder abrir la bóveda, Elin usa el registro óptico independiente y descubre que el supuesto error de puntería era una intercepción en movimiento.", "en": "Unable to open the vault, Elin uses the independent optical record and discovers that the apparent pointing error was a moving interception." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-14",
+          "relation": "reveals",
+          "explanation": {
+            "es": "Al no poder abrir la bóveda, Elin usa el registro óptico independiente y descubre que el supuesto error de puntería era una intercepción en movimiento.",
+            "en": "Unable to open the vault, Elin uses the independent optical record and discovers that the apparent pointing error was a moving interception."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d5" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d5b" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d6" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-d7" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d5"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d5b"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d6"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-d7"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-20"
+          ],
+          "beatIds": [
+            "festival-master:beat-20"
+          ],
+          "cueIds": [
+            "festival-master:cue-0114",
+            "festival-master:cue-0115",
+            "festival-master:cue-0116",
+            "festival-master:cue-0117",
+            "festival-master:cue-0118",
+            "festival-master:cue-0119",
+            "festival-master:cue-0120",
+            "festival-master:cue-0121",
+            "festival-master:cue-0122"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-20"
+      ],
+      "beatIds": [
+        "festival-master:beat-20"
+      ],
+      "cueIds": [
+        "festival-master:cue-0114",
+        "festival-master:cue-0115",
+        "festival-master:cue-0116",
+        "festival-master:cue-0117",
+        "festival-master:cue-0118",
+        "festival-master:cue-0119",
+        "festival-master:cue-0120",
+        "festival-master:cue-0121",
+        "festival-master:cue-0122"
       ]
     },
     {
@@ -346,16 +1409,73 @@
       "level": "story",
       "sectionId": "festival-master:section-08",
       "order": 16,
-      "title": { "es": "La demora se vuelve solución", "en": "Delay becomes the solution" },
+      "title": {
+        "es": "La demora se vuelve solución",
+        "en": "Delay becomes the solution"
+      },
       "summary": {
         "es": "Elin reconoce el formato y la cabecera firmada de Zao; Voss abre el paquete sin esperar. Por primera vez se oye la grabación y un flashback restaura lo oculto: Zao apuntó por espacio ordinario al punto donde la Ardor estaría después de saltar veintitrés horas-luz por la garganta, para que el haz la alcanzara al final del trayecto. El mensaje identifica la bomba, sus protecciones y el plazo y termina «Por si acaso: adiós. Harlan está en la puerta». Voss ordena abortar apenas comprende la amenaza, pero el puente rechaza la orden; cuando Zao nombra a Harlan, Okoye lo sujeta y no le permite marcharse.",
         "en": "Elin recognizes Zao’s packet format and signed header; Voss opens it without waiting. For the first time, the recording is heard and a flashback restores what was hidden: Zao aimed through ordinary space at the point where the Ardor would be after jumping twenty-three light-hours through the throat, so the beam could catch it near the journey’s end. The message identifies the bomb, its protections, and its deadline, ending, “Just in case: goodbye. Harlan’s at the door.” Voss orders an abort as soon as he understands the threat, but the bridge rejects it; when Zao names Harlan, Okoye restrains him and does not let him leave."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-15", "relation": "pays_off", "explanation": { "es": "La señal entrante resuelve el vector vacío y convierte el retardo que aislaba a Zao en el mecanismo que lleva su advertencia hasta la nave.", "en": "The incoming signal resolves the empty vector and turns the delay that isolated Zao into the mechanism carrying her warning to the ship." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-15",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "La señal entrante resuelve el vector vacío y convierte el retardo que aislaba a Zao en el mecanismo que lleva su advertencia hasta la nave.",
+            "en": "The incoming signal resolves the empty vector and turns the delay that isolated Zao into the mechanism carrying her warning to the ship."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-e1" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-e2" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-e1"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-e2"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-21"
+          ],
+          "beatIds": [
+            "festival-master:beat-21"
+          ],
+          "cueIds": [
+            "festival-master:cue-0123",
+            "festival-master:cue-0124",
+            "festival-master:cue-0125",
+            "festival-master:cue-0126",
+            "festival-master:cue-0127",
+            "festival-master:cue-0128",
+            "festival-master:cue-0129",
+            "festival-master:cue-0130"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-21"
+      ],
+      "beatIds": [
+        "festival-master:beat-21"
+      ],
+      "cueIds": [
+        "festival-master:cue-0123",
+        "festival-master:cue-0124",
+        "festival-master:cue-0125",
+        "festival-master:cue-0126",
+        "festival-master:cue-0127",
+        "festival-master:cue-0128",
+        "festival-master:cue-0129",
+        "festival-master:cue-0130"
       ]
     },
     {
@@ -363,17 +1483,74 @@
       "level": "story",
       "sectionId": "festival-master:section-08",
       "order": 17,
-      "title": { "es": "La voz no basta; las pruebas convergen", "en": "A voice is not enough; evidence converges" },
+      "title": {
+        "es": "La voz no basta; las pruebas convergen",
+        "en": "A voice is not enough; evidence converges"
+      },
       "summary": {
         "es": "Harlan objeta que voz e imagen pueden falsificarse. Elin no depende de ellas: la firma personal y la marca temporal autentican a Zao, mientras mensaje, masa no declarada, fuente neutrónica, dirección exacta de la ráfaga, ubicación no verificable de Harlan, su acusación y su mentira sobre la bóveda convergen. Ninguna pista aislada dicta un veredicto ni descarta cómplices, pero juntas justifican aislar a Harlan y revisar la detención de Sorell.",
         "en": "Harlan objects that voice and image can be fabricated. Elin does not rely on them: Zao’s personal signature and timestamp authenticate her, while the message, unmanifested mass, neutron source, exact burst direction, Harlan’s unverifiable location, his accusation, and his lie about the vault converge. No single clue dictates a verdict or excludes accomplices, but together they justify isolating Harlan and reviewing Sorell’s detention."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-16", "relation": "reveals", "explanation": { "es": "La advertencia aporta la hipótesis decisiva, pero su firma y la evidencia independiente son las que permiten actuar sin convertir una grabación en prueba mágica.", "en": "The warning supplies the decisive hypothesis, but its signature and independent evidence permit action without turning a recording into magical proof." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-16",
+          "relation": "reveals",
+          "explanation": {
+            "es": "La advertencia aporta la hipótesis decisiva, pero su firma y la evidencia independiente son las que permiten actuar sin convertir una grabación en prueba mágica.",
+            "en": "The warning supplies the decisive hypothesis, but its signature and independent evidence permit action without turning a recording into magical proof."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-e3" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-e4" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-e5" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-e3"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-e4"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-e5"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-22"
+          ],
+          "beatIds": [
+            "festival-master:beat-22"
+          ],
+          "cueIds": [
+            "festival-master:cue-0131",
+            "festival-master:cue-0132",
+            "festival-master:cue-0133",
+            "festival-master:cue-0134",
+            "festival-master:cue-0135",
+            "festival-master:cue-0136"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-22"
+      ],
+      "beatIds": [
+        "festival-master:beat-22"
+      ],
+      "cueIds": [
+        "festival-master:cue-0131",
+        "festival-master:cue-0132",
+        "festival-master:cue-0133",
+        "festival-master:cue-0134",
+        "festival-master:cue-0135",
+        "festival-master:cue-0136"
       ]
     },
     {
@@ -381,30 +1558,154 @@
       "level": "story",
       "sectionId": "festival-master:section-08",
       "order": 18,
-      "title": { "es": "Once minutos para recuperar el mando", "en": "Eleven minutes to recover command" },
+      "title": {
+        "es": "Once minutos para recuperar el mando",
+        "en": "Eleven minutes to recover command"
+      },
       "summary": {
         "es": "Voss revoca la autoridad de red de Harlan, libera a Sorell porque la base de su custodia se debilitó y necesita a la xenolingüista, y durante ocho minutos intenta cancelar el perfil mediante controles normales y corte remoto. Elin demuestra que las órdenes llegan pero no alcanzan el plan autónomo: sólo la consola local de popa puede interrumpirlo. Con tres minutos, ella toma el ascensor hacia la bóveda; Sorell queda preparando el saludo y vigilando el enfoque; Okoye debe asegurar a Harlan y quitarle la muñequera que podría abrir la cerradura local.",
         "en": "Voss revokes Harlan’s network authority, releases Sorell because the basis of custody has weakened and he needs the xenolinguist, and spends eight minutes trying to cancel the profile through normal controls and the remote cutoff. Elin proves that commands arrive but do not reach the autonomous plan: only the aft local console can interrupt it. With three minutes left, she takes the elevator toward the vault; Sorell stays to prepare the greeting and monitor approach; Okoye must secure Harlan and remove the wrist device that may open the local lock."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-17", "relation": "forces", "explanation": { "es": "La convergencia autenticada obliga a Voss a actuar contra Harlan, corregir la detención de Sorell y localizar por qué el aborto no se ejecuta.", "en": "Authenticated convergence forces Voss to act against Harlan, correct Sorell’s detention, and locate why the abort does not execute." } }],
-      "sourceRefs": [{ "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-e6" }]
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-17",
+          "relation": "forces",
+          "explanation": {
+            "es": "La convergencia autenticada obliga a Voss a actuar contra Harlan, corregir la detención de Sorell y localizar por qué el aborto no se ejecuta.",
+            "en": "Authenticated convergence forces Voss to act against Harlan, correct Sorell’s detention, and locate why the abort does not execute."
+          }
+        }
+      ],
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-e6"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-23"
+          ],
+          "beatIds": [
+            "festival-master:beat-23"
+          ],
+          "cueIds": [
+            "festival-master:cue-0137",
+            "festival-master:cue-0138",
+            "festival-master:cue-0139",
+            "festival-master:cue-0140",
+            "festival-master:cue-0141",
+            "festival-master:cue-0142",
+            "festival-master:cue-0143"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-23"
+      ],
+      "beatIds": [
+        "festival-master:beat-23"
+      ],
+      "cueIds": [
+        "festival-master:cue-0137",
+        "festival-master:cue-0138",
+        "festival-master:cue-0139",
+        "festival-master:cue-0140",
+        "festival-master:cue-0141",
+        "festival-master:cue-0142",
+        "festival-master:cue-0143"
+      ]
     },
     {
       "id": "festival-master:story-19",
       "level": "story",
       "sectionId": "festival-master:section-09",
       "order": 19,
-      "title": { "es": "La persecución se divide", "en": "The pursuit divides" },
+      "title": {
+        "es": "La persecución se divide",
+        "en": "The pursuit divides"
+      },
       "summary": {
         "es": "Harlan aparenta colaborar y ofrece la muñeca; cuando Okoye mira la revocación, la golpea contra la consola, escapa al conducto de servicio y cierra la escotilla desde dentro. Sabe que Elin puede desviar la nave o abrir la bomba y debe impedirlo físicamente porque el dispositivo no acepta órdenes remotas. Elin llega primero en ascensor a la consola local; Harlan baja por la escalera segmentada, bloquea cada acceso y la ataca antes de que termine. Voss y Okoye deben tomar las escaleras helicoidales, pierden tiempo comprobando dos escotillas y luego continúan sin más desvíos.",
         "en": "Harlan appears to cooperate and offers his wrist; when Okoye looks at the revocation, he drives her into the console, escapes into the service shaft, and locks the hatch locally. He knows Elin can divert the ship or open the bomb and must stop her physically because the device accepts no remote commands. Elin reaches the local console first by elevator; Harlan descends the segmented ladder, locks each access, and attacks before she finishes. Voss and Okoye must take the helical stairs, lose time testing two hatches, and then continue without further detours."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-18", "relation": "forces", "explanation": { "es": "La orden de retirar la llave local y la partida de Elin obligan a Harlan a abandonar su coartada y proteger la bomba en persona.", "en": "The order to remove the local key and Elin’s departure force Harlan to abandon his cover and protect the bomb in person." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-18",
+          "relation": "forces",
+          "explanation": {
+            "es": "La orden de retirar la llave local y la partida de Elin obligan a Harlan a abandonar su coartada y proteger la bomba en persona.",
+            "en": "The order to remove the local key and Elin’s departure force Harlan to abandon his cover and protect the bomb in person."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-f1" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-f2" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-f1"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-f2"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-24",
+            "festival-master:scene-25"
+          ],
+          "beatIds": [
+            "festival-master:beat-24",
+            "festival-master:beat-25"
+          ],
+          "cueIds": [
+            "festival-master:cue-0144",
+            "festival-master:cue-0145",
+            "festival-master:cue-0146",
+            "festival-master:cue-0147",
+            "festival-master:cue-0148",
+            "festival-master:cue-0149",
+            "festival-master:cue-0150",
+            "festival-master:cue-0151",
+            "festival-master:cue-0152",
+            "festival-master:cue-0153",
+            "festival-master:cue-0154",
+            "festival-master:cue-0155",
+            "festival-master:cue-0156"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-24",
+        "festival-master:scene-25"
+      ],
+      "beatIds": [
+        "festival-master:beat-24",
+        "festival-master:beat-25"
+      ],
+      "cueIds": [
+        "festival-master:cue-0144",
+        "festival-master:cue-0145",
+        "festival-master:cue-0146",
+        "festival-master:cue-0147",
+        "festival-master:cue-0148",
+        "festival-master:cue-0149",
+        "festival-master:cue-0150",
+        "festival-master:cue-0151",
+        "festival-master:cue-0152",
+        "festival-master:cue-0153",
+        "festival-master:cue-0154",
+        "festival-master:cue-0155",
+        "festival-master:cue-0156"
       ]
     },
     {
@@ -412,16 +1713,71 @@
       "level": "story",
       "sectionId": "festival-master:section-09",
       "order": 20,
-      "title": { "es": "La cuarta caída cambia la geometría", "en": "The fourth dip changes the geometry" },
+      "title": {
+        "es": "La cuarta caída cambia la geometría",
+        "en": "The fourth dip changes the geometry"
+      },
       "summary": {
         "es": "Mientras Harlan inmoviliza a Elin junto a la bóveda y Voss y Okoye están quince metros arriba, el plan intacto completa la desaceleración: el empuje se corta por cuarta vez, un minuto antes de la detonación. En microgravedad, las escaleras dejan de limitarlos. Okoye y luego Voss se impulsan por el hueco central alineado, alcanzan la bahía, atan a Harlan a un riel y recuperan su muñequera. Él no presume: suplica que nadie puede responder por la Tierra y explica que esperaba demorar, disuadir y ganar tiempo mostrando que la humanidad «muerde». Voss no debate mientras el reloj sigue corriendo.",
         "en": "As Harlan pins Elin beside the vault and Voss and Okoye remain fifteen metres above, the intact plan completes deceleration: thrust cuts for the fourth time, one minute before detonation. In microgravity, the stairs no longer constrain them. Okoye and then Voss push through the aligned central opening, reach the bay, tether Harlan to a rail, and recover his wrist device. He does not boast: he pleads that nobody can answer for Earth and explains that he hoped to delay, deter, and buy time by showing that humanity “bites.” Voss does not debate while the clock continues."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-19", "relation": "enables", "explanation": { "es": "Las rutas y demoras colocan a todos donde el corte programado puede eliminar la ventaja de Harlan y permitir el rescate.", "en": "The routes and delays place everyone where the scheduled cutoff can remove Harlan’s advantage and enable the rescue." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-19",
+          "relation": "enables",
+          "explanation": {
+            "es": "Las rutas y demoras colocan a todos donde el corte programado puede eliminar la ventaja de Harlan y permitir el rescate.",
+            "en": "The routes and delays place everyone where the scheduled cutoff can remove Harlan’s advantage and enable the rescue."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-f3" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-f4" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-f3"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-f4"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-26"
+          ],
+          "beatIds": [
+            "festival-master:beat-26"
+          ],
+          "cueIds": [
+            "festival-master:cue-0157",
+            "festival-master:cue-0158",
+            "festival-master:cue-0159",
+            "festival-master:cue-0160",
+            "festival-master:cue-0161",
+            "festival-master:cue-0162",
+            "festival-master:cue-0163"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-26"
+      ],
+      "beatIds": [
+        "festival-master:beat-26"
+      ],
+      "cueIds": [
+        "festival-master:cue-0157",
+        "festival-master:cue-0158",
+        "festival-master:cue-0159",
+        "festival-master:cue-0160",
+        "festival-master:cue-0161",
+        "festival-master:cue-0162",
+        "festival-master:cue-0163"
       ]
     },
     {
@@ -429,16 +1785,73 @@
       "level": "story",
       "sectionId": "festival-master:section-10",
       "order": 21,
-      "title": { "es": "Demorada, no desarmada", "en": "Delayed, not disarmed" },
+      "title": {
+        "es": "Demorada, no desarmada",
+        "en": "Delayed, not disarmed"
+      },
       "summary": {
         "es": "Elin abre la bóveda con la muñequera. La advertencia de Zao y los indicadores confirman que cortar energía o dañar el controlador sería una apuesta fatal. Elin reconoce la función científica que acepta una referencia temporal externa y conecta el equipo diagnóstico dejado antes. El reloj marca 4—3—2—1 y luego salta hacia arriba mientras el reloj independiente de la nave atraviesa el plazo original. La bomba sigue armada: «No está desarmada. Sólo no va a explotar aquí». El intervalo comprado permite tomar control local, impedir nuevo empuje y mantener vigilancia sobre la carga.",
         "en": "Elin opens the vault with the wrist device. Zao’s warning and local indicators confirm that cutting power or damaging the controller would be a fatal gamble. Elin recognizes the scientific service function that accepts an external time reference and connects the diagnostic unit she left earlier. The timer reads 4—3—2—1, then jumps upward while the ship’s independent clock passes the original deadline. The bomb remains armed: “It isn’t disarmed. It just isn’t going off here.” The interval bought allows local control, prevents renewed thrust, and keeps the charge under watch."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-20", "relation": "enables", "explanation": { "es": "Contener a Harlan y recuperar su llave permite abrir la bóveda; la información de Zao y el equipo preparado permiten elegir una intervención segura.", "en": "Restraining Harlan and recovering his key opens the vault; Zao’s information and the prepared instrument enable a safe intervention." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-20",
+          "relation": "enables",
+          "explanation": {
+            "es": "Contener a Harlan y recuperar su llave permite abrir la bóveda; la información de Zao y el equipo preparado permiten elegir una intervención segura.",
+            "en": "Restraining Harlan and recovering his key opens the vault; Zao’s information and the prepared instrument enable a safe intervention."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-f5" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-f6" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-f5"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-f6"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-27"
+          ],
+          "beatIds": [
+            "festival-master:beat-27"
+          ],
+          "cueIds": [
+            "festival-master:cue-0164",
+            "festival-master:cue-0165",
+            "festival-master:cue-0166",
+            "festival-master:cue-0167",
+            "festival-master:cue-0168",
+            "festival-master:cue-0169",
+            "festival-master:cue-0170",
+            "festival-master:cue-0171"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-27"
+      ],
+      "beatIds": [
+        "festival-master:beat-27"
+      ],
+      "cueIds": [
+        "festival-master:cue-0164",
+        "festival-master:cue-0165",
+        "festival-master:cue-0166",
+        "festival-master:cue-0167",
+        "festival-master:cue-0168",
+        "festival-master:cue-0169",
+        "festival-master:cue-0170",
+        "festival-master:cue-0171"
       ]
     },
     {
@@ -446,16 +1859,67 @@
       "level": "story",
       "sectionId": "festival-master:section-10",
       "order": 22,
-      "title": { "es": "El saludo espera una orden", "en": "The greeting awaits an order" },
+      "title": {
+        "es": "El saludo espera una orden",
+        "en": "The greeting awaits an order"
+      },
       "summary": {
         "es": "Mientras Elin vigila la bomba, Okoye custodia a Harlan y Voss regresa al puente, Sorell termina el saludo: la IA despliega la gramática espacial del manual en forma humana y vuelve a organizarla como luces ramificadas sobre el casco, no como haz. «Ellos escribieron el manual. Es la primera vez que nos oirán leerlo». Voss se disculpa por haber malinterpretado su cautela, enviarla sin escolta confirmada y detenerla demasiado pronto. Sólo entonces toma el mando y autoriza una única transmisión.",
         "en": "While Elin watches the bomb, Okoye guards Harlan, and Voss returns to the bridge, Sorell completes the greeting: AI unfolds the primer’s spatial grammar into human-readable form and reorganizes it as branching lights across the hull, not a beam. “They wrote the primer. This is the first time they’ll hear us read it back.” Voss apologizes for misreading her caution, sending her without a confirmed escort, and detaining her too quickly. Only then does he take command and authorize a single transmission."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-21", "relation": "enables", "explanation": { "es": "El tiempo comprado y la liberación de Sorell permiten terminar el saludo sin abandonar la vigilancia de la bomba.", "en": "The time bought and Sorell’s release allow the greeting to be completed without abandoning the bomb watch." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-21",
+          "relation": "enables",
+          "explanation": {
+            "es": "El tiempo comprado y la liberación de Sorell permiten terminar el saludo sin abandonar la vigilancia de la bomba.",
+            "en": "The time bought and Sorell’s release allow the greeting to be completed without abandoning the bomb watch."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-f7" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-g1" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-f7"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-g1"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-28"
+          ],
+          "beatIds": [
+            "festival-master:beat-28"
+          ],
+          "cueIds": [
+            "festival-master:cue-0172",
+            "festival-master:cue-0173",
+            "festival-master:cue-0174",
+            "festival-master:cue-0175",
+            "festival-master:cue-0176"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-28"
+      ],
+      "beatIds": [
+        "festival-master:beat-28"
+      ],
+      "cueIds": [
+        "festival-master:cue-0172",
+        "festival-master:cue-0173",
+        "festival-master:cue-0174",
+        "festival-master:cue-0175",
+        "festival-master:cue-0176"
       ]
     },
     {
@@ -463,16 +1927,83 @@
       "level": "story",
       "sectionId": "festival-master:section-10",
       "order": 23,
-      "title": { "es": "La estación responde y envía a alguien", "en": "The station answers and sends someone" },
+      "title": {
+        "es": "La estación responde y envía a alguien",
+        "en": "The station answers and sends someone"
+      },
       "summary": {
         "es": "Las luces de la Ardor recorren su casco; tras un silencio deliberado, la estación Velari de 4–5 km responde con una gramática luminosa inmensa que la IA apenas comienza a analizar. Sorell reconoce aproximación, permiso y encuentro: «Están enviando a alguien». Una esfera ambiental transparente se acerca y espera. Sorell sale sola con cámara y cable de seguridad; dentro, un Velari de 2,5–3 m orienta su manto, concentra primero su atención y sólo después responde con patrones luminosos que amplían el saludo humano. Su esfuerzo por acomodarse y ser entendido refuta que la violencia fuera la única respuesta segura sin demostrar benevolencia absoluta.",
         "en": "Light travels across the Ardor’s hull; after a deliberate silence, the 4–5 km Velari station answers with an immense luminous grammar the AI can only begin to parse. Sorell recognizes approach, permission, and meeting: “They’re sending someone.” A transparent environmental sphere approaches and waits. Sorell exits alone with suit camera and tether; inside, a 2.5–3 m Velari orients its mantle, focuses attention first, and only then responds with luminous patterns extending the human greeting. Its effort to accommodate and be understood rejects violence as the only safe answer without proving absolute benevolence."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-22", "relation": "pays_off", "explanation": { "es": "El saludo cauteloso que Sorell pudo completar provoca una respuesta y habilita un encuentro físico igualmente cauteloso.", "en": "The cautious greeting Sorell was able to complete produces a response and enables an equally cautious physical meeting." } }],
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-22",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "El saludo cauteloso que Sorell pudo completar provoca una respuesta y habilita un encuentro físico igualmente cauteloso.",
+            "en": "The cautious greeting Sorell was able to complete produces a response and enables an equally cautious physical meeting."
+          }
+        }
+      ],
       "sourceRefs": [
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-g2" },
-        { "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-g2b" }
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-g2"
+        },
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-g2b"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-29",
+            "festival-master:scene-30"
+          ],
+          "beatIds": [
+            "festival-master:beat-29",
+            "festival-master:beat-30"
+          ],
+          "cueIds": [
+            "festival-master:cue-0177",
+            "festival-master:cue-0178",
+            "festival-master:cue-0179",
+            "festival-master:cue-0180",
+            "festival-master:cue-0181",
+            "festival-master:cue-0182",
+            "festival-master:cue-0183",
+            "festival-master:cue-0184",
+            "festival-master:cue-0185",
+            "festival-master:cue-0186",
+            "festival-master:cue-0187"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-29",
+        "festival-master:scene-30"
+      ],
+      "beatIds": [
+        "festival-master:beat-29",
+        "festival-master:beat-30"
+      ],
+      "cueIds": [
+        "festival-master:cue-0177",
+        "festival-master:cue-0178",
+        "festival-master:cue-0179",
+        "festival-master:cue-0180",
+        "festival-master:cue-0181",
+        "festival-master:cue-0182",
+        "festival-master:cue-0183",
+        "festival-master:cue-0184",
+        "festival-master:cue-0185",
+        "festival-master:cue-0186",
+        "festival-master:cue-0187"
       ]
     },
     {
@@ -480,14 +2011,75 @@
       "level": "story",
       "sectionId": "festival-master:section-11",
       "order": 24,
-      "title": { "es": "Zao llega a la historia", "en": "Zao reaches history" },
+      "title": {
+        "es": "Zao llega a la historia",
+        "en": "Zao reaches history"
+      },
       "summary": {
         "es": "Antes del regreso, aún deben reparar mandos y mantener una guardia segura sobre la bomba. Mientras esas tareas continúan, Voss usa la matriz óptica para enviar a la Tierra un registro independiente del descubrimiento, asesinato, advertencia, intervención y contacto. Adjunta el mensaje firmado y el expediente de Zao, la acredita como quien salvó a la tripulación y preservó el encuentro y, ante su fotografía, dice: «Llegaste a tiempo». El nuevo mensaje parte hacia el mismo silencio en que ella confió.",
         "en": "Before return, flight controls still require repair and the bomb needs a safe watch. While those tasks continue, Voss uses the optical array to send Earth an independent record of the discovery, murder, warning, intervention, and contact. He attaches Zao’s signed message and personnel record, credits her with saving the crew and preserving the encounter, and tells her photograph, “You made it in time.” The new message departs into the same silence she trusted."
       },
       "importance": "required",
-      "causalLinks": [{ "sourceStepId": "festival-master:story-23", "relation": "pays_off", "explanation": { "es": "Al completar el encuentro que Zao preservó, Voss puede corregir su error inicial y asegurar que el registro histórico lleve su nombre.", "en": "Completing the encounter Zao preserved lets Voss correct his initial error and ensure the historical record carries her name." } }],
-      "sourceRefs": [{ "kind": "outline", "outlineId": "outline:light-delay-master-narrative", "stepId": "master:story-g3" }]
+      "causalLinks": [
+        {
+          "sourceStepId": "festival-master:story-23",
+          "relation": "pays_off",
+          "explanation": {
+            "es": "Al completar el encuentro que Zao preservó, Voss puede corregir su error inicial y asegurar que el registro histórico lleve su nombre.",
+            "en": "Completing the encounter Zao preserved lets Voss correct his initial error and ensure the historical record carries her name."
+          }
+        }
+      ],
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-master-narrative",
+          "stepId": "master:story-g3"
+        }
+      ],
+      "coverage": {
+        "script": {
+          "status": "covered",
+          "sceneIds": [
+            "festival-master:scene-31",
+            "festival-master:scene-32"
+          ],
+          "beatIds": [
+            "festival-master:beat-31",
+            "festival-master:beat-32"
+          ],
+          "cueIds": [
+            "festival-master:cue-0188",
+            "festival-master:cue-0189",
+            "festival-master:cue-0190",
+            "festival-master:cue-0191",
+            "festival-master:cue-0192",
+            "festival-master:cue-0193",
+            "festival-master:cue-0194",
+            "festival-master:cue-0195",
+            "festival-master:cue-0196"
+          ]
+        }
+      },
+      "sceneIds": [
+        "festival-master:scene-31",
+        "festival-master:scene-32"
+      ],
+      "beatIds": [
+        "festival-master:beat-31",
+        "festival-master:beat-32"
+      ],
+      "cueIds": [
+        "festival-master:cue-0188",
+        "festival-master:cue-0189",
+        "festival-master:cue-0190",
+        "festival-master:cue-0191",
+        "festival-master:cue-0192",
+        "festival-master:cue-0193",
+        "festival-master:cue-0194",
+        "festival-master:cue-0195",
+        "festival-master:cue-0196"
+      ]
     }
   ]
 }

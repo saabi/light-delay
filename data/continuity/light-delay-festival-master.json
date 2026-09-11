@@ -1,0 +1,1598 @@
+{
+  "schemaVersion": "1.0.0",
+  "ledger": {
+    "id": "ledger:light-delay-festival-master",
+    "scriptId": "script:light-delay-festival-master",
+    "status": "draft",
+    "sourceDocument": "data/outlines/light-delay-festival-master.json",
+    "notes": {
+      "es": "Ledger de estados de conocimiento para el guion Festival derivado del master. La evidencia de tomas queda ausente hasta que se creen las tomas.",
+      "en": "Knowledge-state ledger for the master-derived Festival screenplay. Shot evidence remains absent until shots are authored."
+    }
+  },
+  "facts": [
+    {
+      "id": "festival-master:fact-01",
+      "description": {
+        "es": "Hecho causal 1 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Voss has misread Harlan’s fear as hope and Sorell’s caution as reluctance."
+      }
+    },
+    {
+      "id": "festival-master:fact-02",
+      "description": {
+        "es": "Hecho causal 2 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Harlan has legitimate loading and vault access; Zao’s independent recheck remains open."
+      }
+    },
+    {
+      "id": "festival-master:fact-03",
+      "description": {
+        "es": "Hecho causal 3 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The Ardor has completed its first thrust cutoff and turnover."
+      }
+    },
+    {
+      "id": "festival-master:fact-04",
+      "description": {
+        "es": "Hecho causal 4 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Extra fuel indicates undeclared mass; a separate neutron source lies aft."
+      }
+    },
+    {
+      "id": "festival-master:fact-05",
+      "description": {
+        "es": "Hecho causal 5 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao has identified the timed geophysical impulse package; Harlan knows she may find it."
+      }
+    },
+    {
+      "id": "festival-master:fact-06",
+      "description": {
+        "es": "Hecho causal 6 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The bridge heard sabotage but no culprit; Harlan cut wireless, wired communications, and cameras."
+      }
+    },
+    {
+      "id": "festival-master:fact-07",
+      "description": {
+        "es": "Hecho causal 7 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao has eliminated every useful warning route except an undisclosed moving intercept."
+      }
+    },
+    {
+      "id": "festival-master:fact-08",
+      "description": {
+        "es": "Hecho causal 8 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao transmitted a signed burst; Harlan saw the result but wrongly inferred Earth."
+      }
+    },
+    {
+      "id": "festival-master:fact-09",
+      "description": {
+        "es": "Hecho causal 9 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao is dead; Harlan disabled bridge flight commands only after the murder."
+      }
+    },
+    {
+      "id": "festival-master:fact-10",
+      "description": {
+        "es": "Hecho causal 10 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Sorell found Zao after the blackout; restored cameras show only the rescue attempt."
+      }
+    },
+    {
+      "id": "festival-master:fact-11",
+      "description": {
+        "es": "Hecho causal 11 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Harlan’s accusation creates suspicion but does not prove Sorell killed Zao."
+      }
+    },
+    {
+      "id": "festival-master:fact-12",
+      "description": {
+        "es": "Hecho causal 12 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Voss kept the case open during the twenty-three-and-a-half-hour station leg."
+      }
+    },
+    {
+      "id": "festival-master:fact-13",
+      "description": {
+        "es": "Hecho causal 13 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The engine was healthy; hidden mass and neutrons require separate causes."
+      }
+    },
+    {
+      "id": "festival-master:fact-14",
+      "description": {
+        "es": "Hecho causal 14 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The local vault lock rejects command authority; Elin left a timing diagnostic beside it."
+      }
+    },
+    {
+      "id": "festival-master:fact-15",
+      "description": {
+        "es": "Hecho causal 15 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The burst targeted a moving receiver; an incoming signal now follows its corridor."
+      }
+    },
+    {
+      "id": "festival-master:fact-16",
+      "description": {
+        "es": "Hecho causal 16 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao’s authenticated recording identifies the bomb, Harlan, the protected controller, and the future intercept."
+      }
+    },
+    {
+      "id": "festival-master:fact-17",
+      "description": {
+        "es": "Hecho causal 17 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Independent evidence converges on Harlan strongly enough to isolate him and release Sorell."
+      }
+    },
+    {
+      "id": "festival-master:fact-18",
+      "description": {
+        "es": "Hecho causal 18 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Only the aft local console can interrupt the automatic plan; three minutes remain."
+      }
+    },
+    {
+      "id": "festival-master:fact-19",
+      "description": {
+        "es": "Hecho causal 19 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Harlan escaped toward Elin with the wrist device still controlling the local lock."
+      }
+    },
+    {
+      "id": "festival-master:fact-20",
+      "description": {
+        "es": "Hecho causal 20 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The fourth gravity cutoff lets Okoye and Voss bypass the stairs and contain Harlan."
+      }
+    },
+    {
+      "id": "festival-master:fact-21",
+      "description": {
+        "es": "Hecho causal 21 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The bomb can be delayed through its scientific timing input but is not disarmed."
+      }
+    },
+    {
+      "id": "festival-master:fact-22",
+      "description": {
+        "es": "Hecho causal 22 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Sorell has prepared one clean hull-light greeting and Voss has authorized only it."
+      }
+    },
+    {
+      "id": "festival-master:fact-23",
+      "description": {
+        "es": "Hecho causal 23 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The station answered and sent a protected Velari emissary to meet Sorell."
+      }
+    },
+    {
+      "id": "festival-master:fact-24",
+      "description": {
+        "es": "Hecho causal 24 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Voss sent Earth an independent record crediting Zao while repair and bomb watch continue."
+      }
+    }
+  ],
+  "steps": [
+    {
+      "id": "festival-master:causal-01",
+      "order": 1,
+      "description": {
+        "es": "Paso causal 1 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Voss has misread Harlan’s fear as hope and Sorell’s caution as reluctance."
+      },
+      "knowers": [
+        "character:voss",
+        "character:zao",
+        "character:harlan",
+        "character:sorell"
+      ],
+      "requiresFactIds": [],
+      "revealsFactIds": [
+        "festival-master:fact-01"
+      ],
+      "enables": {
+        "es": "El hito Festival 02 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 02 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-01"
+      ]
+    },
+    {
+      "id": "festival-master:causal-02",
+      "order": 2,
+      "description": {
+        "es": "Paso causal 2 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Harlan has legitimate loading and vault access; Zao’s independent recheck remains open."
+      },
+      "knowers": [
+        "character:voss",
+        "character:harlan",
+        "character:zao",
+        "character:rao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-01"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-02"
+      ],
+      "enables": {
+        "es": "El hito Festival 03 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 03 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-02"
+      ]
+    },
+    {
+      "id": "festival-master:causal-03",
+      "order": 3,
+      "description": {
+        "es": "Paso causal 3 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The Ardor has completed its first thrust cutoff and turnover."
+      },
+      "knowers": [
+        "character:zao",
+        "character:rao",
+        "character:sorell",
+        "character:harlan",
+        "character:voss",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-02"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-03"
+      ],
+      "enables": {
+        "es": "El hito Festival 04 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 04 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-03"
+      ]
+    },
+    {
+      "id": "festival-master:causal-04",
+      "order": 4,
+      "description": {
+        "es": "Paso causal 4 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Extra fuel indicates undeclared mass; a separate neutron source lies aft."
+      },
+      "knowers": [
+        "character:zao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-03"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-04"
+      ],
+      "enables": {
+        "es": "El hito Festival 05 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 05 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-04"
+      ]
+    },
+    {
+      "id": "festival-master:causal-05",
+      "order": 5,
+      "description": {
+        "es": "Paso causal 5 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao has identified the timed geophysical impulse package; Harlan knows she may find it."
+      },
+      "knowers": [
+        "character:zao",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-04"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-05"
+      ],
+      "enables": {
+        "es": "El hito Festival 06 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 06 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-05"
+      ]
+    },
+    {
+      "id": "festival-master:causal-06",
+      "order": 6,
+      "description": {
+        "es": "Paso causal 6 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The bridge heard sabotage but no culprit; Harlan cut wireless, wired communications, and cameras."
+      },
+      "knowers": [
+        "character:harlan",
+        "character:zao",
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-05"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-06"
+      ],
+      "enables": {
+        "es": "El hito Festival 07 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 07 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-06"
+      ]
+    },
+    {
+      "id": "festival-master:causal-07",
+      "order": 7,
+      "description": {
+        "es": "Paso causal 7 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao has eliminated every useful warning route except an undisclosed moving intercept."
+      },
+      "knowers": [
+        "character:zao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-06"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-07"
+      ],
+      "enables": {
+        "es": "El hito Festival 08 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 08 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-07"
+      ]
+    },
+    {
+      "id": "festival-master:causal-08",
+      "order": 8,
+      "description": {
+        "es": "Paso causal 8 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao transmitted a signed burst; Harlan saw the result but wrongly inferred Earth."
+      },
+      "knowers": [
+        "character:zao",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-07"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-08"
+      ],
+      "enables": {
+        "es": "El hito Festival 09 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 09 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-08"
+      ]
+    },
+    {
+      "id": "festival-master:causal-09",
+      "order": 9,
+      "description": {
+        "es": "Paso causal 9 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao is dead; Harlan disabled bridge flight commands only after the murder."
+      },
+      "knowers": [
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-08"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-09"
+      ],
+      "enables": {
+        "es": "El hito Festival 10 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 10 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-09"
+      ]
+    },
+    {
+      "id": "festival-master:causal-10",
+      "order": 10,
+      "description": {
+        "es": "Paso causal 10 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Sorell found Zao after the blackout; restored cameras show only the rescue attempt."
+      },
+      "knowers": [
+        "character:sorell",
+        "character:harlan",
+        "character:voss",
+        "character:okoye",
+        "character:rao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-09"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-10"
+      ],
+      "enables": {
+        "es": "El hito Festival 11 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 11 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-10"
+      ]
+    },
+    {
+      "id": "festival-master:causal-11",
+      "order": 11,
+      "description": {
+        "es": "Paso causal 11 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Harlan’s accusation creates suspicion but does not prove Sorell killed Zao."
+      },
+      "knowers": [
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:okoye",
+        "character:rao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-10"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-11"
+      ],
+      "enables": {
+        "es": "El hito Festival 12 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 12 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-11"
+      ]
+    },
+    {
+      "id": "festival-master:causal-12",
+      "order": 12,
+      "description": {
+        "es": "Paso causal 12 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Voss kept the case open during the twenty-three-and-a-half-hour station leg."
+      },
+      "knowers": [
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:okoye",
+        "character:rao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-11"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-12"
+      ],
+      "enables": {
+        "es": "El hito Festival 13 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 13 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-12"
+      ]
+    },
+    {
+      "id": "festival-master:causal-13",
+      "order": 13,
+      "description": {
+        "es": "Paso causal 13 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The engine was healthy; hidden mass and neutrons require separate causes."
+      },
+      "knowers": [
+        "character:rao",
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-12"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-13"
+      ],
+      "enables": {
+        "es": "El hito Festival 14 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 14 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-13"
+      ]
+    },
+    {
+      "id": "festival-master:causal-14",
+      "order": 14,
+      "description": {
+        "es": "Paso causal 14 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The local vault lock rejects command authority; Elin left a timing diagnostic beside it."
+      },
+      "knowers": [
+        "character:rao",
+        "character:okoye",
+        "character:voss",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-13"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-14"
+      ],
+      "enables": {
+        "es": "El hito Festival 15 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 15 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-14"
+      ]
+    },
+    {
+      "id": "festival-master:causal-15",
+      "order": 15,
+      "description": {
+        "es": "Paso causal 15 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The burst targeted a moving receiver; an incoming signal now follows its corridor."
+      },
+      "knowers": [
+        "character:rao",
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-14"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-15"
+      ],
+      "enables": {
+        "es": "El hito Festival 16 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 16 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-15"
+      ]
+    },
+    {
+      "id": "festival-master:causal-16",
+      "order": 16,
+      "description": {
+        "es": "Paso causal 16 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao’s authenticated recording identifies the bomb, Harlan, the protected controller, and the future intercept."
+      },
+      "knowers": [
+        "character:rao",
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-15"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-16"
+      ],
+      "enables": {
+        "es": "El hito Festival 17 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 17 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-16"
+      ]
+    },
+    {
+      "id": "festival-master:causal-17",
+      "order": 17,
+      "description": {
+        "es": "Paso causal 17 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Independent evidence converges on Harlan strongly enough to isolate him and release Sorell."
+      },
+      "knowers": [
+        "character:rao",
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-16"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-17"
+      ],
+      "enables": {
+        "es": "El hito Festival 18 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 18 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-17"
+      ]
+    },
+    {
+      "id": "festival-master:causal-18",
+      "order": 18,
+      "description": {
+        "es": "Paso causal 18 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Only the aft local console can interrupt the automatic plan; three minutes remain."
+      },
+      "knowers": [
+        "character:rao",
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:okoye"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-17"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-18"
+      ],
+      "enables": {
+        "es": "El hito Festival 19 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 19 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-18"
+      ]
+    },
+    {
+      "id": "festival-master:causal-19",
+      "order": 19,
+      "description": {
+        "es": "Paso causal 19 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Harlan escaped toward Elin with the wrist device still controlling the local lock."
+      },
+      "knowers": [
+        "character:harlan",
+        "character:okoye",
+        "character:voss",
+        "character:sorell",
+        "character:rao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-18"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-19"
+      ],
+      "enables": {
+        "es": "El hito Festival 20 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 20 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-19"
+      ]
+    },
+    {
+      "id": "festival-master:causal-20",
+      "order": 20,
+      "description": {
+        "es": "Paso causal 20 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The fourth gravity cutoff lets Okoye and Voss bypass the stairs and contain Harlan."
+      },
+      "knowers": [
+        "character:harlan",
+        "character:okoye",
+        "character:voss",
+        "character:rao"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-19"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-20"
+      ],
+      "enables": {
+        "es": "El hito Festival 21 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 21 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-20"
+      ]
+    },
+    {
+      "id": "festival-master:causal-21",
+      "order": 21,
+      "description": {
+        "es": "Paso causal 21 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The bomb can be delayed through its scientific timing input but is not disarmed."
+      },
+      "knowers": [
+        "character:rao",
+        "character:voss",
+        "character:okoye",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-20"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-21"
+      ],
+      "enables": {
+        "es": "El hito Festival 22 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 22 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-21"
+      ]
+    },
+    {
+      "id": "festival-master:causal-22",
+      "order": 22,
+      "description": {
+        "es": "Paso causal 22 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Sorell has prepared one clean hull-light greeting and Voss has authorized only it."
+      },
+      "knowers": [
+        "character:sorell",
+        "character:voss",
+        "character:rao",
+        "character:okoye",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-21"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-22"
+      ],
+      "enables": {
+        "es": "El hito Festival 23 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 23 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-22"
+      ]
+    },
+    {
+      "id": "festival-master:causal-23",
+      "order": 23,
+      "description": {
+        "es": "Paso causal 23 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The station answered and sent a protected Velari emissary to meet Sorell."
+      },
+      "knowers": [
+        "character:sorell",
+        "character:voss",
+        "character:rao",
+        "character:okoye",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-22"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-23"
+      ],
+      "enables": {
+        "es": "El hito Festival 24 puede ocurrir sin usar conocimiento futuro.",
+        "en": "Festival story 24 can occur without using future knowledge."
+      },
+      "outlineStepIds": [
+        "festival-master:story-23"
+      ]
+    },
+    {
+      "id": "festival-master:causal-24",
+      "order": 24,
+      "description": {
+        "es": "Paso causal 24 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Voss sent Earth an independent record crediting Zao while repair and bomb watch continue."
+      },
+      "knowers": [
+        "character:voss",
+        "character:rao",
+        "character:sorell",
+        "character:okoye",
+        "character:harlan"
+      ],
+      "requiresFactIds": [
+        "festival-master:fact-23"
+      ],
+      "revealsFactIds": [
+        "festival-master:fact-24"
+      ],
+      "enables": {
+        "es": "El registro oficial puede preservar el papel de Zao más allá de la tripulación.",
+        "en": "The official record can preserve Zao’s role beyond the crew."
+      },
+      "outlineStepIds": [
+        "festival-master:story-24"
+      ]
+    }
+  ],
+  "knowledgeEvents": [
+    {
+      "stepId": "festival-master:causal-01",
+      "factId": "festival-master:fact-01",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-01",
+      "factId": "festival-master:fact-01",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-01",
+      "factId": "festival-master:fact-01",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-01",
+      "factId": "festival-master:fact-01",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-02",
+      "factId": "festival-master:fact-02",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-02",
+      "factId": "festival-master:fact-02",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-02",
+      "factId": "festival-master:fact-02",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-02",
+      "factId": "festival-master:fact-02",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-03",
+      "factId": "festival-master:fact-03",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-03",
+      "factId": "festival-master:fact-03",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-03",
+      "factId": "festival-master:fact-03",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-03",
+      "factId": "festival-master:fact-03",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-03",
+      "factId": "festival-master:fact-03",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-03",
+      "factId": "festival-master:fact-03",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-04",
+      "factId": "festival-master:fact-04",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-05",
+      "factId": "festival-master:fact-05",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-05",
+      "factId": "festival-master:fact-05",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-06",
+      "factId": "festival-master:fact-06",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-06",
+      "factId": "festival-master:fact-06",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-06",
+      "factId": "festival-master:fact-06",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-06",
+      "factId": "festival-master:fact-06",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-06",
+      "factId": "festival-master:fact-06",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-06",
+      "factId": "festival-master:fact-06",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-07",
+      "factId": "festival-master:fact-07",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-08",
+      "factId": "festival-master:fact-08",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-08",
+      "factId": "festival-master:fact-08",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-09",
+      "factId": "festival-master:fact-09",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-10",
+      "factId": "festival-master:fact-10",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-10",
+      "factId": "festival-master:fact-10",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-10",
+      "factId": "festival-master:fact-10",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-10",
+      "factId": "festival-master:fact-10",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-10",
+      "factId": "festival-master:fact-10",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-11",
+      "factId": "festival-master:fact-11",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-11",
+      "factId": "festival-master:fact-11",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-11",
+      "factId": "festival-master:fact-11",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-11",
+      "factId": "festival-master:fact-11",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-11",
+      "factId": "festival-master:fact-11",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-12",
+      "factId": "festival-master:fact-12",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-12",
+      "factId": "festival-master:fact-12",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-12",
+      "factId": "festival-master:fact-12",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-12",
+      "factId": "festival-master:fact-12",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-12",
+      "factId": "festival-master:fact-12",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-13",
+      "factId": "festival-master:fact-13",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-13",
+      "factId": "festival-master:fact-13",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-13",
+      "factId": "festival-master:fact-13",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-13",
+      "factId": "festival-master:fact-13",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-13",
+      "factId": "festival-master:fact-13",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-14",
+      "factId": "festival-master:fact-14",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-14",
+      "factId": "festival-master:fact-14",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-14",
+      "factId": "festival-master:fact-14",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-14",
+      "factId": "festival-master:fact-14",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-15",
+      "factId": "festival-master:fact-15",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-15",
+      "factId": "festival-master:fact-15",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-15",
+      "factId": "festival-master:fact-15",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-15",
+      "factId": "festival-master:fact-15",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-15",
+      "factId": "festival-master:fact-15",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-16",
+      "factId": "festival-master:fact-16",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-16",
+      "factId": "festival-master:fact-16",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-16",
+      "factId": "festival-master:fact-16",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-16",
+      "factId": "festival-master:fact-16",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-16",
+      "factId": "festival-master:fact-16",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-17",
+      "factId": "festival-master:fact-17",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-17",
+      "factId": "festival-master:fact-17",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-17",
+      "factId": "festival-master:fact-17",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-17",
+      "factId": "festival-master:fact-17",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-17",
+      "factId": "festival-master:fact-17",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-18",
+      "factId": "festival-master:fact-18",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-18",
+      "factId": "festival-master:fact-18",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-18",
+      "factId": "festival-master:fact-18",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-18",
+      "factId": "festival-master:fact-18",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-18",
+      "factId": "festival-master:fact-18",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-19",
+      "factId": "festival-master:fact-19",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-19",
+      "factId": "festival-master:fact-19",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-19",
+      "factId": "festival-master:fact-19",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-19",
+      "factId": "festival-master:fact-19",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-19",
+      "factId": "festival-master:fact-19",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-20",
+      "factId": "festival-master:fact-20",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-20",
+      "factId": "festival-master:fact-20",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-20",
+      "factId": "festival-master:fact-20",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-20",
+      "factId": "festival-master:fact-20",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-21",
+      "factId": "festival-master:fact-21",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-21",
+      "factId": "festival-master:fact-21",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-21",
+      "factId": "festival-master:fact-21",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-21",
+      "factId": "festival-master:fact-21",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-22",
+      "factId": "festival-master:fact-22",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-22",
+      "factId": "festival-master:fact-22",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-22",
+      "factId": "festival-master:fact-22",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-22",
+      "factId": "festival-master:fact-22",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-22",
+      "factId": "festival-master:fact-22",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-23",
+      "factId": "festival-master:fact-23",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-23",
+      "factId": "festival-master:fact-23",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-23",
+      "factId": "festival-master:fact-23",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-23",
+      "factId": "festival-master:fact-23",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-23",
+      "factId": "festival-master:fact-23",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-24",
+      "factId": "festival-master:fact-24",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-24",
+      "factId": "festival-master:fact-24",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-24",
+      "factId": "festival-master:fact-24",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-24",
+      "factId": "festival-master:fact-24",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-24",
+      "factId": "festival-master:fact-24",
+      "characterIds": [
+        "character:harlan"
+      ]
+    }
+  ],
+  "actionRequirements": [
+    {
+      "stepId": "festival-master:causal-06",
+      "actorId": "character:harlan",
+      "action": {
+        "es": "Interferir las comunicaciones de Zao sólo después de oír que encontró sabotaje.",
+        "en": "Jam Zao only after hearing that she found sabotage."
+      },
+      "requiresKnownFactIds": [
+        "festival-master:fact-05"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-07",
+      "actorId": "character:zao",
+      "action": {
+        "es": "Elegir una intercepción futura oculta después de descartar los destinos obvios.",
+        "en": "Choose a concealed future intercept after eliminating the obvious destinations."
+      },
+      "requiresKnownFactIds": [
+        "festival-master:fact-06"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-09",
+      "actorId": "character:harlan",
+      "action": {
+        "es": "Desactivar los mandos de vuelo del puente sólo después de que la advertencia de Zao vuelve previsible un aborto.",
+        "en": "Disable bridge flight commands only after Zao’s warning creates a foreseeable abort."
+      },
+      "requiresKnownFactIds": [
+        "festival-master:fact-08"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-16",
+      "actorId": "character:voss",
+      "action": {
+        "es": "Ordenar un aborto sólo después de oír la advertencia autenticada.",
+        "en": "Order an abort only after hearing the authenticated warning."
+      },
+      "requiresKnownFactIds": [
+        "festival-master:fact-15"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-21",
+      "actorId": "character:rao",
+      "action": {
+        "es": "Usar la entrada de tiempo en vez de cortar energía porque Zao advirtió que la manipulación podía activar el arma.",
+        "en": "Use the timing input instead of cutting power because Zao warned that tampering could trigger the weapon."
+      },
+      "requiresKnownFactIds": [
+        "festival-master:fact-16",
+        "festival-master:fact-20"
+      ]
+    },
+    {
+      "stepId": "festival-master:causal-22",
+      "actorId": "character:voss",
+      "action": {
+        "es": "Autorizar sólo el saludo limpio de Sorell después de demorar la bomba.",
+        "en": "Authorize only Sorell’s clean greeting after the bomb is delayed."
+      },
+      "requiresKnownFactIds": [
+        "festival-master:fact-21"
+      ]
+    }
+  ]
+}

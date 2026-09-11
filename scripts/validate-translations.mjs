@@ -41,9 +41,9 @@ function checkLocalized(value, context, { required = true, targetRequired = true
 	if (targetRequired && (typeof en !== 'string' || !en.trim())) missingTarget.push(context);
 }
 
-function checkNotes(notes, context) {
+function checkNotes(notes, context, options) {
 	for (const [index, note] of (notes ?? []).entries()) {
-		checkLocalized(note.text, `${context}.notes[${index}].text`);
+		checkLocalized(note.text, `${context}.notes[${index}].text`, options);
 	}
 }
 
@@ -58,9 +58,12 @@ function checkOutlineBlocks(blocks, context, options) {
 
 function checkScript(file, filename) {
 	const root = `scripts/${filename}`;
-	checkLocalized(file.script?.title, `${root}.script.title`);
+	const spanishStatus = file.script?.localization?.translations?.es?.status;
+	const targetRequired = spanishStatus !== 'needs_revision' && spanishStatus !== 'not_started';
+	const options = { targetRequired };
+	checkLocalized(file.script?.title, `${root}.script.title`, options);
 	if (file.script?.lineage?.notes != null)
-		checkLocalized(file.script.lineage.notes, `${root}.script.lineage.notes`);
+		checkLocalized(file.script.lineage.notes, `${root}.script.lineage.notes`, options);
 	for (const [index, assignment] of (file.script?.characterFunctionAssignments ?? []).entries()) {
 		if (assignment.notes != null)
 			checkLocalized(
@@ -79,55 +82,61 @@ function checkScript(file, filename) {
 			checkLocalized(event.note, `${root}.script.comparisonProfile.eventCoverage[${index}].note`);
 	}
 	for (const item of file.acts ?? []) {
-		if (item.title != null) checkLocalized(item.title, `${root}.${item.id}.title`);
+		if (item.title != null) checkLocalized(item.title, `${root}.${item.id}.title`, options);
 		if (item.dramaticPurpose != null)
-			checkLocalized(item.dramaticPurpose, `${root}.${item.id}.dramaticPurpose`);
+			checkLocalized(item.dramaticPurpose, `${root}.${item.id}.dramaticPurpose`, options);
 	}
 	for (const item of file.sequences ?? []) {
-		checkLocalized(item.title, `${root}.${item.id}.title`);
-		if (item.summary != null) checkLocalized(item.summary, `${root}.${item.id}.summary`);
+		checkLocalized(item.title, `${root}.${item.id}.title`, options);
+		if (item.summary != null) checkLocalized(item.summary, `${root}.${item.id}.summary`, options);
 	}
 	for (const item of file.scenes ?? []) {
-		checkLocalized(item.title, `${root}.${item.id}.title`);
-		checkLocalized(item.summary, `${root}.${item.id}.summary`);
+		checkLocalized(item.title, `${root}.${item.id}.title`, options);
+		checkLocalized(item.summary, `${root}.${item.id}.summary`, options);
 		if (item.dramaticPurpose != null)
-			checkLocalized(item.dramaticPurpose, `${root}.${item.id}.dramaticPurpose`);
+			checkLocalized(item.dramaticPurpose, `${root}.${item.id}.dramaticPurpose`, options);
 		for (const key of ['timeOfDay', 'storyTime', 'continuity']) {
 			if (item.setting?.[key] != null)
-				checkLocalized(item.setting[key], `${root}.${item.id}.setting.${key}`);
+				checkLocalized(item.setting[key], `${root}.${item.id}.setting.${key}`, options);
 		}
-		checkNotes(item.notes, `${root}.${item.id}`);
+		checkNotes(item.notes, `${root}.${item.id}`, options);
 	}
 	for (const item of file.beats ?? []) {
-		if (item.title != null) checkLocalized(item.title, `${root}.${item.id}.title`);
-		checkLocalized(item.purpose, `${root}.${item.id}.purpose`);
-		checkLocalized(item.summary, `${root}.${item.id}.summary`);
-		checkNotes(item.notes, `${root}.${item.id}`);
+		if (item.title != null) checkLocalized(item.title, `${root}.${item.id}.title`, options);
+		checkLocalized(item.purpose, `${root}.${item.id}.purpose`, options);
+		checkLocalized(item.summary, `${root}.${item.id}.summary`, options);
+		checkNotes(item.notes, `${root}.${item.id}`, options);
 	}
 	for (const item of file.cues ?? []) {
-		if (item.type === 'action') checkLocalized(item.text, `${root}.${item.id}.text`);
+		if (item.type === 'action') checkLocalized(item.text, `${root}.${item.id}.text`, options);
 		else if (item.type === 'dialogue') {
 			const source = item.content?.variants?.[item.content?.sourceLanguage ?? SOURCE];
 			const target = item.content?.variants?.[TARGET];
 			if (!source?.spokenText?.trim()) missingSource.push(`${root}.${item.id}.spokenText`);
-			if (!target?.spokenText?.trim()) missingTarget.push(`${root}.${item.id}.variants.${TARGET}`);
+			if (targetRequired && !target?.spokenText?.trim())
+				missingTarget.push(`${root}.${item.id}.variants.${TARGET}`);
 			if (item.performance?.emotion != null)
-				checkLocalized(item.performance.emotion, `${root}.${item.id}.performance.emotion`);
+				checkLocalized(item.performance.emotion, `${root}.${item.id}.performance.emotion`, options);
 			if (item.performance?.intention != null)
-				checkLocalized(item.performance.intention, `${root}.${item.id}.performance.intention`);
+				checkLocalized(
+					item.performance.intention,
+					`${root}.${item.id}.performance.intention`,
+					options
+				);
 		} else if (item.type === 'sound' || item.type === 'music')
-			checkLocalized(item.description, `${root}.${item.id}.description`);
+			checkLocalized(item.description, `${root}.${item.id}.description`, options);
 		else if (item.type === 'silence' && item.purpose != null)
-			checkLocalized(item.purpose, `${root}.${item.id}.purpose`);
+			checkLocalized(item.purpose, `${root}.${item.id}.purpose`, options);
 		else if (item.type === 'transition' && item.description != null)
-			checkLocalized(item.description, `${root}.${item.id}.description`);
+			checkLocalized(item.description, `${root}.${item.id}.description`, options);
 		else if (item.type === 'text') {
 			const source = item.content?.variants?.[item.content?.sourceLanguage ?? SOURCE];
 			const target = item.content?.variants?.[TARGET];
 			if (!source?.text?.trim()) missingSource.push(`${root}.${item.id}.text`);
-			if (!target?.text?.trim()) missingTarget.push(`${root}.${item.id}.variants.${TARGET}`);
+			if (targetRequired && !target?.text?.trim())
+				missingTarget.push(`${root}.${item.id}.variants.${TARGET}`);
 		}
-		checkNotes(item.notes, `${root}.${item.id}`);
+		checkNotes(item.notes, `${root}.${item.id}`, options);
 	}
 	for (const item of file.shots ?? []) {
 		if (item.purpose != null) checkLocalized(item.purpose, `${root}.${item.id}.purpose`);

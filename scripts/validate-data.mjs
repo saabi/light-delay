@@ -132,6 +132,7 @@ function validateScriptFile(
 		characterIds,
 		taxonomy,
 		scriptsById,
+		outlineStepIdsById,
 		documentIds,
 		errors,
 		assetIds
@@ -141,6 +142,16 @@ function validateScriptFile(
 	if (!script.script?.id) errors.push(`${label}: missing id`);
 	if (!script.script?.kind) errors.push(`${label}: missing kind`);
 	if (!script.script?.continuityId) errors.push(`${label}: missing continuityId`);
+	if (script.script?.localization) {
+		if (script.script.localization.sourceLanguage !== 'en')
+			errors.push(`${label}: localization.sourceLanguage must be en`);
+		for (const [language, translation] of Object.entries(
+			script.script.localization.translations || {}
+		)) {
+			if (!['current', 'needs_revision', 'not_started'].includes(translation?.status))
+				errors.push(`${label}: invalid ${language} translation status ${translation?.status}`);
+		}
+	}
 
 	unique(
 		`${label}.scenes`,
@@ -266,6 +277,13 @@ function validateScriptFile(
 				if (ref.kind === 'document') {
 					if (!documentIds.has(ref.documentId))
 						errors.push(`${label}: unknown source document ${ref.documentId}`);
+					continue;
+				}
+				if (ref.kind === 'outline') {
+					const stepIds = outlineStepIdsById.get(ref.outlineId);
+					if (!stepIds) errors.push(`${label}: unknown source outline ${ref.outlineId}`);
+					else if (ref.stepId && !stepIds.has(ref.stepId))
+						errors.push(`${label}: unknown source outline step ${ref.stepId}`);
 					continue;
 				}
 				const source = scriptsById.get(ref.scriptId);
@@ -491,6 +509,19 @@ function main() {
 	const documentIds = new Set(documents.documents.map((d) => d.id));
 	const assetIds = new Set(assets.assets.map((asset) => asset.id));
 	const ownedIds = new Set();
+	const outlineFiles = readdirSync(OUTLINES_DIR).filter((name) => name.endsWith('.json'));
+	const loadedOutlines = outlineFiles.map((filename) => ({
+		filename,
+		outline: JSON.parse(readFileSync(join(OUTLINES_DIR, filename), 'utf8'))
+	}));
+	const outlineStepIdsById = new Map(
+		loadedOutlines
+			.filter((record) => record.outline.outline?.id)
+			.map((record) => [
+				record.outline.outline.id,
+				new Set((record.outline.steps || []).map((step) => step.id))
+			])
+	);
 
 	for (const [id, script] of scriptsById) {
 		const isArchivedMain = id === 'script:light-delay-main-short';
@@ -504,7 +535,8 @@ function main() {
 			scriptsById,
 			documentIds,
 			errors,
-			assetIds
+			assetIds,
+			outlineStepIdsById
 		});
 		for (const collection of [
 			script.acts,
@@ -524,11 +556,6 @@ function main() {
 	let outlineCount = 0;
 	const outlinesById = new Map();
 	try {
-		const outlineFiles = readdirSync(OUTLINES_DIR).filter((name) => name.endsWith('.json'));
-		const loadedOutlines = outlineFiles.map((filename) => ({
-			filename,
-			outline: JSON.parse(readFileSync(join(OUTLINES_DIR, filename), 'utf8'))
-		}));
 		for (const record of loadedOutlines) {
 			const id = record.outline.outline?.id;
 			if (!id) continue;

@@ -113,6 +113,13 @@ export interface ScriptFile {
 		status: 'draft' | 'review' | 'locked' | 'deprecated';
 		kind: ScriptKind;
 		targetDurationMs?: number;
+		localization?: {
+			sourceLanguage: 'en';
+			translations: Record<
+				string,
+				{ status: 'current' | 'needs_revision' | 'not_started'; lastSyncedVersion?: string }
+			>;
+		};
 		lineage?: ScriptLineage;
 		declaredEntityRefs?: EntityRef[];
 		entityVariantSelections?: ScriptEntityVariantSelections;

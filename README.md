@@ -8,7 +8,7 @@ Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe W
 - Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
 - Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
 - Autoridad narrativa: `data/outlines/light-delay-master-narrative.json`, todavía WIP, con exports Markdown ES/EN generados desde ese JSON.
-- Seis entradas registradas: la narrativa maestra activa; un nuevo Corte Festival WIP fijado al master rev. 19 y todavía sin guion; y cuatro productos de la continuidad anterior —corto principal, tratamiento largo, Festival Cut y tráiler— marcados como deprecados.
+- Seis entradas registradas: la narrativa maestra activa; un nuevo Corte Festival WIP fijado al master rev. 19 con guion fuente en inglés y blueprint de storyboard, todavía sin tomas ni animatic; y cuatro productos de la continuidad anterior —corto principal, tratamiento largo, Festival Cut y tráiler— marcados como deprecados.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
 - El archivo conserva un animatic anterior de 128 tomas y los montajes Festival/tráiler como material de rescate. No son planes de producción vigentes; la producción visual queda suspendida hasta completar el master y aprobar nuevos derivados.

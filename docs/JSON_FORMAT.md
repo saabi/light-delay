@@ -370,6 +370,13 @@ export interface ScriptFile {
     status: "draft" | "review" | "locked" | "deprecated";
     kind: ScriptKind;
     targetDurationMs?: number;
+    localization?: {
+      sourceLanguage: "en";
+      translations: Record<string, {
+        status: "current" | "needs_revision" | "not_started";
+        lastSyncedVersion?: string;
+      }>;
+    };
     lineage?: ScriptLineage;
     declaredEntityRefs?: EntityRef[];
     entityVariantSelections?: ScriptEntityVariantSelections;
@@ -389,6 +396,8 @@ export interface ScriptFile {
 ```
 
 Script-owned IDs are globally unique and namespaced (e.g. `main:scene-01`, `festival:cue-02-001`). Project entities use ids such as `character:voss`. Scene, Beat, Cue and Shot may include `sourceRefs` for provenance without live inheritance. `comparisonProfile` uses the stable dimensions and events in `comparison-taxonomy.json`; missing claims remain unspecified and must not be inferred.
+
+`script.localization` makes an intentionally deferred translation explicit. English source fields and dialogue variants remain mandatory; when Spanish is `needs_revision` or `not_started`, translation validation permits the missing target while the UI falls back to the English source. Omission of `script.localization` preserves the historical requirement that both inline languages be present.
 
 ### Acts, optional sequences and scenes
 

@@ -8,13 +8,14 @@ Los elementos inciertos se conservan. Ningún candidato puede borrarse hasta cer
 
 Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `replacement_derivatives_approved` (open), `no_active_dependants` (open).
 
-## Vigente o compatible (77)
+## Vigente o compatible (80)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
 | animatic | `script:light-delay-master-narrative` | explicit | retain |
 | asset | `asset:animatic-placeholder-missing-frame` | explicit | retain |
 | asset | `asset:character-okoye-sheet` | explicit | retain |
+| continuity_ledger | `script:light-delay-festival-master` | explicit | retain |
 | continuity | `continuity:light-delay-master-wip` | explicit | retain |
 | entity_variant | `variant:okoye-master-wip` | explicit | retain |
 | entity | `character:earth-protesters` | explicit | retain |
@@ -72,6 +73,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/wip/festival-cut-audience-narrative.en.md` | explicit | retain |
 | static_file | `docs/wip/festival-cut-audience-narrative.voices.en.md` | explicit | retain |
 | static_file | `docs/wip/festival-cut-screenplay-runway.en.md` | explicit | retain |
+| static_file | `docs/wip/festival-master-shot-blueprint.en.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.en.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.es.md` | explicit | retain |
 | static_file | `docs/wip/outiline-for-kokoro-tts.es.md` | explicit | retain |
@@ -86,11 +88,12 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:harlan-es` | explicit | retain |
 | voice_profile | `voice:okoye` | explicit | retain |
 | voice_profile | `voice:rao-es` | explicit | retain |
+| voice_profile | `voice:reporter-en` | explicit | retain |
 | voice_profile | `voice:sorell-es` | explicit | retain |
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (98)
+## Revisión requerida (99)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -179,6 +182,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/DESCRIPCION_DE_VOCES_DE_PERSONAJES.md` | default-review | retain |
 | static_file | `docs/GUIA_BANDA_SONORA.md` | default-review | retain |
 | static_file | `docs/MIGRATION_INVENTORY.md` | default-review | retain |
+| static_file | `docs/production/AGENT_GENERATION_BRIEF.md` | default-review | retain |
 | static_file | `docs/SIGNAL_BEAM_REQUIREMENTS.md` | default-review | retain |
 | static_file | `docs/technical/ANIMATION_WORKFLOW.md` | default-review | retain |
 | static_file | `docs/technical/CELESTIAL_ARDOR.md` | default-review | retain |

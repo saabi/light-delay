@@ -69,6 +69,18 @@ export function validateScript(
 	if (!file?.script?.id) errors.push('script: missing script.id');
 	if (!file?.script?.kind) errors.push('script: missing script.kind');
 	if (!file?.script?.continuityId) errors.push('script: missing script.continuityId');
+	if (file?.script?.localization) {
+		if (file.script.localization.sourceLanguage !== 'en') {
+			errors.push('script: localization.sourceLanguage must be "en"');
+		}
+		for (const [language, translation] of Object.entries(
+			file.script.localization.translations ?? {}
+		)) {
+			if (!['current', 'needs_revision', 'not_started'].includes(translation.status)) {
+				errors.push(`script: invalid ${language} translation status ${translation.status}`);
+			}
+		}
+	}
 	if (file?.script?.title != null) {
 		assertLocalizedString(file.script.title, 'script.title', errors, sourceLanguage ?? 'en');
 	} else {

@@ -24,13 +24,17 @@ describe('structured project data', () => {
 		]);
 	});
 
-	it('registers the new Festival derivative as an empty master-based stub', () => {
+	it('registers the new Festival derivative with screenplay data but no production shots', () => {
 		const festival = getScript('script:light-delay-festival-master');
 		expect(festival.script.kind).toBe('festival_cut');
 		expect(festival.script.continuityId).toBe('continuity:light-delay-master-wip');
 		expect(festival.script.lineage?.sourceOutlineRevision).toBe(19);
-		expect(festival.scenes).toHaveLength(0);
+		expect(festival.acts).toHaveLength(3);
+		expect(festival.sequences).toHaveLength(11);
+		expect(festival.scenes).toHaveLength(33);
+		expect(festival.scenes.filter((scene) => scene.sequenceId)).toHaveLength(31);
 		expect(festival.shots).toHaveLength(0);
+		expect(festival.takes).toHaveLength(0);
 	});
 
 	it('preserves 19 scenes and 128 shots in the deprecated main-short archive', () => {

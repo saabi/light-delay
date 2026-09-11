@@ -1,6 +1,6 @@
 # Master-derived Festival Cut — screenplay runway
 
-Editorial planning companion to `outline:light-delay-festival-master`. It is not narrative authority and contains no screenplay implementation. The outline, pinned to master revision 19, governs every later scene and line.
+Historical planning companion to `outline:light-delay-festival-master`. It is not narrative authority and predates the implemented English screenplay in `data/scripts/light-delay-festival-master.json`. The outline, pinned to master revision 19, governs every scene and line; the current shot planning surface is `docs/wip/festival-master-shot-blueprint.en.md`.
 
 ## Proposed scene spine and timing
 
@@ -53,4 +53,4 @@ Dialogue must perform an action, expose character under pressure, or connect evi
 
 ## Gate before screenplay authoring
 
-Read the Festival outline alone from beginning to end. If a cause, decision, false assumption, or consequence requires this document to make sense, repair the outline first. Only after editorial approval should the empty `ScriptFile` receive scenes, beats or cues.
+Read the Festival outline alone from beginning to end. If a cause, decision, false assumption, or consequence requires this document to make sense, repair the outline first. The subsequent screenplay pass has populated the `ScriptFile`; production `Shot` and `Take` records remain gated on editorial approval of dialogue, timing, and the separate blueprint.
