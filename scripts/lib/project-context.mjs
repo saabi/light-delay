@@ -45,7 +45,7 @@ export function createProjectContext(options = {}) {
 		assetById,
 		entities,
 		supportedLangs,
-		sourceLanguage: project.languages?.sourceLanguage ?? 'es',
+		sourceLanguage: project.languages?.sourceLanguage ?? 'en',
 		allScripts: project.scripts.map((s) => s.id),
 		locationById,
 		checkDisk: options.checkDisk,

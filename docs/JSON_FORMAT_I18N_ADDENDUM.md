@@ -4,9 +4,9 @@ This addendum extends `docs/JSON_FORMAT.md`. It is intentionally limited to lang
 
 ## 1. Design Requirements
 
-- **Spanish dialogue is the source of truth.** For every dialogue cue, the `es` variant (or the project `sourceLanguage`, which must be Spanish for Light Delay) is the authoritative spoken line. Other language variants are translations or adaptations of that Spanish text, not parallel originals.
-- Edit Spanish dialogue first. After a material change to Spanish `spokenText` (or source-language delivery that affects meaning), update or mark stale every other language variant for that cue in the same editorial pass.
-- On conflict between languages, the Spanish dialogue variant prevails.
+- **English dialogue is the source of truth.** For every active dialogue cue, the `en` variant (the project `sourceLanguage`) is the authoritative spoken line. Spanish is a translation or adaptation, not a parallel original.
+- Edit English dialogue first. After a material change to English `spokenText` or delivery, update Spanish later or mark it visibly stale with its last synchronized revision.
+- On conflict between active language variants, English prevails. Deprecated cuts may retain Spanish as their historical per-cue source for provenance only.
 - Preserve one dialogue cue identity across translations.
 - Use [BCP 47](https://tools.ietf.org/html/bcp47) language tags such as `es`, `es-AR`, `en` or `fr-CA`.
 - Distinguish spoken/dubbed text from subtitle text.
@@ -16,11 +16,11 @@ This addendum extends `docs/JSON_FORMAT.md`. It is intentionally limited to lang
 - Track translation status without duplicating acts, scenes, beats or shots.
 - Keep dialogue language separate from application-interface language.
 
-This matches the repository language policy in `AGENTS.md` for authored content: Spanish first; other languages must not drift silently.
+This matches the repository language policy in `AGENTS.md`: English first; translations must not drift silently.
 
 ## 1.1 Current Website and Document Scope
 
-The SvelteKit interface uses Paraglide JS. Interface locale is encoded in the URL: English uses unprefixed routes and Spanish uses `/es/`. This routing choice does not change authorship authority: Spanish remains the source language for narrative and project documentation.
+The SvelteKit interface uses Paraglide JS. Interface locale is encoded in the URL: English uses unprefixed routes and Spanish uses `/es/`. English remains the narrative and documentary source language regardless of the selected UI locale.
 
 Structured prose documents use the same `LocalizedValue<T>` container for `title`, `summary`, and `content`. `content` is an ordered array of blocks; translated variants must preserve block count, type, and stable block ID so tables of contents, deep links, and editorial comparison remain deterministic.
 
@@ -42,7 +42,7 @@ Entity galleries use the same co-located language maps as other story data. `dat
 Story copy for the four registered scripts, optional outlines, assets, comparison taxonomy, narrative functions, entity variants, and project script labels uses **co-located** language maps on disk:
 
 ```ts
-/** At least project sourceLanguage (es) required; other tags optional until translated. */
+/** At least project sourceLanguage (en) required; other tags optional until translated. */
 export type LocalizedString = { [tag: LanguageTag]: string | undefined };
 // Example: "title": { "es": "…", "en": "…" }
 ```
@@ -51,9 +51,9 @@ Dialogue and text cues keep `LocalizedValue<DialogueVariant | TextVariant>` with
 
 Presentation selectors (`localizeScript`, `localizeOutline`, …) resolve `LocalizedString` → flat string for the UI. Paraglide (`messages/*.json`) remains the application chrome only. `data/translations/public.en.json` is retired for story strings (empty map; do not reintroduce Spanish-keyed overlays).
 
-`npm run validate:translations` checks inline coverage: every harvested field has non-empty `es` and `en` (dialogue/text via `variants.en`). After editing Spanish story text, update the sibling `en` (or `variants.en`) in the same file and pass.
+`npm run validate:translations` checks inline coverage. English is always required. Spanish remains required for synchronized data, but an active outline may omit or retain older Spanish when its localization metadata explicitly says `needs_revision` or `not_started`.
 
-At read time, English dialogue variants already live on disk with `status: "draft"`; no audio or voice asset is inferred. Subtitles continue to derive from the selected dialogue variant. Unprefixed English routes default story and subtitle selection to English on first visit, while `/es/` defaults them to Spanish; a later manual choice persists locally. English pages identify the translation as a draft, and Spanish remains authoritative.
+At read time, language variants already live on disk; no audio or voice asset is inferred. Subtitles continue to derive from the selected dialogue variant. Unprefixed routes default story and subtitles to English, while `/es/` requests Spanish and must expose when that translation trails the English source.
 
 ## 2. Language Definitions
 
@@ -104,7 +104,7 @@ export interface ProjectFile {
 ```json
 {
   "languages": {
-    "sourceLanguage": "es",
+    "sourceLanguage": "en",
     "defaultDialogueLanguage": "es",
     "defaultSubtitleLanguage": "es",
     "fallbackLanguage": "es",
@@ -116,9 +116,9 @@ export interface ProjectFile {
 }
 ```
 
-`sourceLanguage` must remain `es` (or a Spanish regional tag such as `es-AR` if that becomes the sole Spanish source). Do not set English or another language as `sourceLanguage` to shortcut translation workflow.
+`sourceLanguage` is `en` for active Light Delay material. This is an authorship decision, not a translation shortcut.
 
-Use `es-AR` instead of `es` only if the project intends to maintain distinct regional Spanish variants. Do not introduce both until their editorial difference is real. When a regional Spanish tag is the source, that tag--not generic `es` or English--is the dialogue source of truth.
+Use `es-AR` instead of `es` only if the project intends to maintain distinct regional Spanish translations. Do not introduce both until their editorial difference is real; neither supersedes the English source.
 
 ## 3. Localized Value Container
 
@@ -201,7 +201,7 @@ export interface DialogueCue extends CueBase {
 }
 ```
 
-`content.sourceLanguage` must equal the project Spanish source language. The variant keyed by that tag must use `status: "source"`. Non-Spanish variants must not use `status: "source"`.
+For active material, `content.sourceLanguage` must equal the project English source language and that variant uses `status: "source"`. Deprecated cues may preserve a historical Spanish `sourceLanguage`; this is provenance, not permission to derive new canon from them.
 
 **Example:**
 
@@ -416,10 +416,10 @@ export function resolveLocalized<T>(
 
 Add checks for:
 
-- Project `sourceLanguage` is Spanish (`es` or an approved regional Spanish tag);
+- Project `sourceLanguage` is English (`en`);
 - Source language exists in variants;
 - All variant keys use supported language tags;
-- `source` status appears only on the source-language (Spanish) variant;
+- `source` status appears only on the source-language (English) variant for active material;
 - Non-source variants do not claim `status: "source"`;
 - Referenced voice profiles support the requested language;
 - Referenced audio assets exist and are audio files;
@@ -430,7 +430,7 @@ Add checks for:
 
 ## 11. Migration of Existing Dialogue
 
-Convert the current Spanish string:
+Convert a legacy Spanish source string:
 
 ```json
 "text": "Tenemos una ventana."
@@ -450,6 +450,6 @@ to:
 }
 ```
 
-**Do not generate English (or other) translations during the mechanical extraction step.** Extract Spanish as `status: "source"` only. Translation and dialogue development for other languages are separate editorial changes that must follow the validated Spanish lines--never invent English first and back-translate into Spanish.
+For archived extraction, preserve the original Spanish as `status: "source"` so provenance is not rewritten. For new active material, author English first and translate into Spanish later.
 
-When revising an existing multilingual cue, change Spanish first, then bring other variants up to date (or set them to `needs_revision` until translated).
+When revising active multilingual material, change English first, then bring Spanish up to date or mark it `needs_revision` until translated.

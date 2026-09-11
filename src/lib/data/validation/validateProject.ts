@@ -4,8 +4,6 @@ import type { ScriptFile } from '$lib/types/script';
 import type { ScriptId } from '$lib/types/ids';
 import { sourceStoryText } from './localizedString.ts';
 
-const SPANISH_SOURCE = /^(es)(-[A-Za-z0-9]+)?$/;
-
 export function validateProject(
 	file: ProjectFile,
 	options: { scripts?: ScriptFile[] } = {}
@@ -36,11 +34,7 @@ export function validateProject(
 		errors.push('project: missing languages');
 	} else {
 		const langs = p.languages;
-		if (!SPANISH_SOURCE.test(langs.sourceLanguage ?? '')) {
-			errors.push(
-				`project: sourceLanguage must be Spanish (es / es-XX), got "${langs.sourceLanguage}"`
-			);
-		}
+		if (!langs.sourceLanguage) errors.push('project: missing sourceLanguage');
 		if (!langs.defaultDialogueLanguage) errors.push('project: missing defaultDialogueLanguage');
 		if (!langs.fallbackLanguage) errors.push('project: missing fallbackLanguage');
 		if (!Array.isArray(langs.supported) || langs.supported.length === 0) {

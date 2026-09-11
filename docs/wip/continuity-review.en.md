@@ -1,6 +1,6 @@
-# Continuity review — master, revision 17
+# Continuity review — master, revision 18
 
-Status: narrative corrections integrated; this is not production authorization.
+Status: English narrative corrections integrated; this is not production authorization. Spanish remains synchronized through revision 17 and is explicitly pending translation.
 Authority: `data/outlines/light-delay-master-narrative.json`. Outline Markdown files
 are exports; audience narratives are adaptations checked against that authority.
 
@@ -8,6 +8,11 @@ are exports; audience narratives are adaptations checked against that authority.
 
 | Finding | Resolution and location |
 | --- | --- |
+| Voss misreads Harlan and Sorell before Sorell speaks | P2: Harlan and Sorell now state their distinct positions first. Voss then visibly flattens both into ordinary doubt and says, “Doubt is part of the job. We go anyway,” giving Zao an observable reason to challenge his reading. |
+| Harlan reaches flight control without established opportunity | B1: his flight-control tampering is placed during the final inspection before Zao meets him. |
+| Sorell proceeds alone without checking the escort order | B4b: she calls Harlan, checks nearby deck entrances, then chooses to continue alone rather than lose more time. Voss later apologizes for failing to confirm the escort, not for making her choose alone. |
+| Evidence and confrontation order obscures what defeats Harlan's forgery claim | E3–E6: Harlan objects, Elin authenticates Zao immediately, the independent evidence converges, and only then does the operational consequence follow. |
+| Charge described as immediately detonatable | F1: Harlan must delay Elin until the existing countdown; the outline no longer grants him an unsupported immediate-detonation control. |
 | Earth learns after the explosion | B5/C2: reception takes about 43 minutes; the onward ordinary-space relay is late. Harlan's assumption and hope of posthumous recognition remain. |
 | Investigation starts after twelve hours of investigation | C10/D1: it starts when thrust returns. D2–D2b occur during acceleration; C10b retains its ID and moves into D before D3. |
 | Chase consumes an unexplained margin | E2/E6: Voss attempts an abort on learning the threat; eight minutes of command diagnosis precede the two-minute chase. |
@@ -72,7 +77,8 @@ with room for maneuvers, not an exact orbital solution.
 Check ES/EN, chronology, knowledge, access, message sources and reveals.
 Structural tests alone do not certify causality: this table accompanies a continuous
 reading of story bodies without relying on details or expanded causal links.
-Existing prose-revision-15 audio remains stale against revision 17.
+English audience dual regenerated for revision 17 (2026-09-11). Spanish prose-revision-15
+audio remains stale against revision 17.
 Regenerate exports and TTS text only. Archived cuts remain unchanged.
 
 Verification performed 2026-09-11: 96 unit tests and two audio catalog tests passed;

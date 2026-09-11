@@ -19,7 +19,7 @@ export interface ProjectLanguages {
 
 /**
  * Co-located per-language story copy in JSON files.
- * At least `es` (project sourceLanguage) must be present and non-empty on disk.
+ * At least the project source language (`en` for Light Delay) must be present and non-empty.
  */
 export type LocalizedString = {
 	es: string;

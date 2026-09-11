@@ -16,19 +16,22 @@ function uniqueIds(label: string, ids: string[], errors: string[]) {
 	}
 }
 
-function validateDialogueCue(cue: Cue, sourceLanguage: string, errors: string[]) {
+function validateDialogueCue(cue: Cue, sourceLanguage: string | undefined, errors: string[]) {
 	if (cue.type !== 'dialogue') return;
 	if (!cue.speakerId) errors.push(`script: dialogue ${cue.id} missing speakerId`);
 	if (!cue.content) {
 		errors.push(`script: dialogue ${cue.id} missing content`);
 		return;
 	}
-	if (cue.content.sourceLanguage !== sourceLanguage) {
-		errors.push(`script: dialogue ${cue.id} content.sourceLanguage must be "${sourceLanguage}"`);
+	const expectedSourceLanguage = sourceLanguage ?? cue.content.sourceLanguage;
+	if (cue.content.sourceLanguage !== expectedSourceLanguage) {
+		errors.push(
+			`script: dialogue ${cue.id} content.sourceLanguage must be "${expectedSourceLanguage}"`
+		);
 	}
-	const sourceVariant = cue.content.variants?.[sourceLanguage];
+	const sourceVariant = cue.content.variants?.[expectedSourceLanguage];
 	if (!sourceVariant) {
-		errors.push(`script: dialogue ${cue.id} missing source variant "${sourceLanguage}"`);
+		errors.push(`script: dialogue ${cue.id} missing source variant "${expectedSourceLanguage}"`);
 		return;
 	}
 	if (sourceVariant.status !== 'source') {
@@ -38,7 +41,7 @@ function validateDialogueCue(cue: Cue, sourceLanguage: string, errors: string[])
 		errors.push(`script: dialogue ${cue.id} source spokenText is empty`);
 	}
 	for (const [tag, variant] of Object.entries(cue.content.variants ?? {})) {
-		if (tag !== sourceLanguage && variant.status === 'source') {
+		if (tag !== expectedSourceLanguage && variant.status === 'source') {
 			errors.push(
 				`script: dialogue ${cue.id} non-source language "${tag}" must not use status "source"`
 			);
@@ -59,7 +62,7 @@ export function validateScript(
 	} = {}
 ): ValidationResult {
 	const errors: string[] = [];
-	const sourceLanguage = options.sourceLanguage ?? 'es';
+	const sourceLanguage = options.sourceLanguage;
 	const requireSelectedTakes = options.requireSelectedTakes ?? true;
 
 	if (!file?.schemaVersion) errors.push('script: missing schemaVersion');
@@ -67,7 +70,7 @@ export function validateScript(
 	if (!file?.script?.kind) errors.push('script: missing script.kind');
 	if (!file?.script?.continuityId) errors.push('script: missing script.continuityId');
 	if (file?.script?.title != null) {
-		assertLocalizedString(file.script.title, 'script.title', errors, sourceLanguage);
+		assertLocalizedString(file.script.title, 'script.title', errors, sourceLanguage ?? 'en');
 	} else {
 		errors.push('script: missing script.title');
 	}

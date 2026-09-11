@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-09-11 — English narrative authority and master revision 18
+
+- Reordered the Prologue exchange so Harlan and Sorell speak before Voss visibly conflates their warnings, then gave Voss an observable reply before Zao reacts.
+- Clarified the sabotage/search chronology, Harlan's assumptions, the evidence sequence, the surviving crew count, and the non-immediate detonation constraint in the English master and audience narrative.
+- Made English the active narrative/documentary source. Spanish remains at revision 17 and is explicitly marked `needs_revision`; archived cuts retain historical Spanish provenance.
+- Added revision-aware localization metadata, UI notices, validators, and English-only audience TTS generation so pending Spanish work is visible rather than silently overwritten.
+
+## 2026-09-11 — Dual de audiencia EN regenerado (rev. 17)
+
+- Regenerado `light-delay-audience-dual-en.mp3` (~47.8 min) y chunks
+  `outline-chunks/en-audience/` desde `audience-narrative.voices.en.md` rev. 17.
+- 287 cues (244 reutilizados por hash, 43 regenerados; 2 diálogos Qwen nuevos:
+  Harlan Tierra y Sorell interrogatorio). Catálogo `audience-en` marcado current.
+- El dual ES sigue en prosa rev. 15 / desactualizado frente a master 17.
+
 ## 2026-09-10 — Master rev. 17: continuidad y aborto impedido
 
 - Investigación a lo largo de todo el tránsito, con C10b reubicado en D y enlaces causales revisados.

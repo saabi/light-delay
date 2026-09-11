@@ -1,7 +1,7 @@
 # Celestial Ardor — referencia técnica y visual
 
 > Estado: documento de diseño canónico/semicanónico para continuidad, arte conceptual, modelado y guion.  
-> Idioma fuente: español.  
+> Idioma histórico de este documento: español. La autoridad narrativa vigente se escribe primero en inglés.
 > Entidad estructurada relacionada: `data/vehicles.json` → `vehicle:celestial-ardor`.
 
 > Autoridad vigente: master WIP rev. 17 en `data/outlines/light-delay-master-narrative.json`.
@@ -358,7 +358,7 @@ La existencia simultánea de cilindro central, ascensor y cilindro de servicio p
 
 - El inglés es el idioma maestro del texto integrado en displays operativos, archivos, contadores y controles de la Ardor.
 - Una imagen o video generado no debe mostrar traducciones simultáneas ni interfaces bilingües. El texto visible se resuelve exclusivamente desde la variante inglesa del cue correspondiente.
-- El español continúa siendo la autoridad editorial del guion, las descripciones y la documentación; esa autoridad no obliga a traducir el arte diegético dentro del frame.
+- El inglés es la autoridad editorial vigente del guion, las descripciones y la documentación; esto no obliga a traducir el arte diegético dentro del frame.
 - Una futura edición con displays en español debe producirse como variante derivada —por ejemplo mediante edición de video asistida por ML— sin sobrescribir el master inglés.
 
 ## 11. Parámetros pendientes / revisables

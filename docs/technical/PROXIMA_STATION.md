@@ -1,7 +1,7 @@
 # Estación Proxima — referencia técnica y visual
 
 > Estado: documento de diseño canónico/semicanónico para continuidad, arte conceptual, modelado y guion.  
-> Idioma fuente: español.  
+> Idioma histórico de este documento: español. La autoridad narrativa vigente se escribe primero en inglés.
 > Entidad estructurada relacionada: `data/locations.json` → `location:proxima-station` y `location:proxima-dock`.
 
 ## 1. Identidad y función

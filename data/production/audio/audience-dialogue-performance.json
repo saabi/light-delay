@@ -30,10 +30,23 @@
       "id": "audience:dialogue:p2-sorell-respect",
       "sourceStepId": "master:story-p2",
       "speakerId": "character:sorell",
-      "intent": { "es": "Sorell defiende su cautela como rigor ético, herida porque Voss la confundió con miedo.", "en": "Sorell defends caution as ethical rigor, stung that Voss mistook it for fear." },
+      "intent": { "es": "Sorell defiende su cautela como rigor ético, herida porque Voss la confundió con miedo.", "en": "Sorell defines caution as disciplined interpretation rather than reluctance, refusing to mistake the first plausible reading for knowledge." },
       "delivery": {
-        "en": { "es": "Cálida pero firme; acelerar levemente la primera frase y separar fear de respect.", "en": "Warm but firm; slightly quicken the first sentence, then clearly separate ‘fear’ from ‘respect.’" },
+        "en": { "es": "Cálida pero firme; acelerar levemente la primera frase y separar fear de respect.", "en": "Warm, deliberate, and intellectually exact. Let the procedural clauses gather momentum, then land ‘respect’ as a quiet correction rather than a plea." },
         "es": { "es": "Expresiva y culta; contener la ofensa hasta una pausa limpia entre miedo y respeto.", "en": "Expressive and cultivated; contain the hurt until a clean pause between ‘miedo’ and ‘respeto.’" }
+      }
+    },
+    {
+      "id": "audience:dialogue:p2-voss-doubt",
+      "sourceStepId": "master:story-p2",
+      "speakerId": "character:voss",
+      "intent": {
+        "en": "Voss settles what he believes are ordinary shared doubts, revealing that he has flattened two fundamentally different warnings into the same manageable concern."
+      },
+      "delivery": {
+        "en": {
+          "en": "Measured, reassuring command voice. Give ‘part of the job’ the calm weight of settled doctrine, pause briefly, then make ‘We go anyway’ decisive enough to close discussion."
+        }
       }
     },
     {

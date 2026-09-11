@@ -1,6 +1,6 @@
 # Escenas exteriores y necesidades de animación
 
-> Estado: documento de planificación de producción, derivado de `data/scripts/*.json` y `data/locations.json`. No reemplaza a `CELESTIAL_ARDOR.md` ni a `PROXIMA_STATION.md` — los complementa con la vista "qué se ve desde afuera y qué se mueve". Idioma fuente: español. Ver también `ANIMATION_WORKFLOW.md` — este documento dice *qué* hace falta animar; ese dice *cómo* organizar los archivos y el proceso para hacerlo.
+> Estado: documento de planificación de producción, derivado de material ahora deprecado. No reemplaza a `CELESTIAL_ARDOR.md` ni a `PROXIMA_STATION.md`. Idioma histórico: español; la futura revisión derivada del master se autoriza primero en inglés. Ver también `ANIMATION_WORKFLOW.md`.
 
 Este documento no implica trabajo de modelado o animación inmediato. Es un mapa de lo que hará falta cuando se aborde la fase de tomas exteriores y animación, para no tener que rederivarlo del guion cada vez.
 

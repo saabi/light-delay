@@ -1,6 +1,6 @@
 # Light Delay
 
-*Audience narrative. Revision 17.*
+*Audience narrative. Revision 18. English source.*
 
 ## Prologue — Lights of Earth
 
@@ -24,14 +24,17 @@ He does not claim that the Velari could have entered whenever they wished. He do
 <!-- audience-dialogue-id: audience:dialogue:p2-harlan-door -->
 > **Rylen Harlan:** "They built a door in our system before we knew they existed. Now the door tells us when to walk through."
 
-Lian Sorell has spent months studying the instructional sequence. She answers him with procedure, not optimism. Waiting is a message, but she refuses to decide what it means before humanity has answered once and listened to the reply.
-
-Elias Voss hears ordinary nerves in Harlan and fear of action in Sorell. He misreads them both.
+Lian Sorell has spent months studying the instructional sequence. She answers him with procedure, not optimism.
 
 <!-- audience-dialogue-id: audience:dialogue:p2-sorell-respect -->
-> **Lian Sorell:** "We studied everything they gave us before we agreed to send a single ship out there. That isn't fear. It's respect."
+> **Lian Sorell:** "We studied everything they gave us before we agreed to send a single ship out there. Now we answer once, listen, and only then decide what their waiting means. That isn't fear. It's respect."
 
-Zao says almost nothing. When the exchange ends, she finds Voss alone and lowers her voice.
+Voss looks between them with the calm of a captain settling ordinary pre-departure nerves. He hears Harlan's dread as doubt softened by hope and Sorell's rigor as reluctance to act.
+
+<!-- audience-dialogue-id: audience:dialogue:p2-voss-doubt -->
+> **Elias Voss:** "Doubt is part of the job. We go anyway."
+
+Zao watches Voss close the matter instead of examining the difference. When the exchange ends, she finds him alone and lowers her voice.
 
 <!-- audience-dialogue-id: audience:dialogue:p2-zao-not-hope -->
 > **Zao:** "That wasn't hope."
@@ -124,7 +127,7 @@ Sorell answers without protecting her own expertise.
 <!-- audience-dialogue-id: audience:dialogue:a3c-sorell-misreading -->
 > **Lian Sorell:** "Misreading is possible. The AI can arrange the patterns, but it cannot turn uncertainty into knowledge."
 
-From the doorway, where he has watched the protests rather than the conversation, Harlan speaks.
+From the doorway, where he has appeared focused on the protests while still listening, Harlan speaks.
 
 <!-- audience-dialogue-id: audience:dialogue:a3c-harlan-read-wrong -->
 > **Rylen Harlan:** "And what if we're the ones being read wrong?"
@@ -153,11 +156,9 @@ No fuel alarm is active. Zao has never treated the absence of an alarm as proof 
 
 ## Chapter 4. Behind the Door
 
-Weightless and sixty-five metres aft of the bridge, Zao meets Harlan leaving the inner vault.
+Before Zao reaches the bay, Harlan alters its flight controls so the bridge can no longer replace or cut the automatic plan. He checks the telemetry: everything still looks normal forward. He leaves local aft control operational and enters the inner vault for his final check.
 
-He appears to be finishing an assigned inspection. He has not quite secured the door behind him.
-
-A moment earlier, his hands were at another panel in the outer bay. He closed its cover and checked the telemetry. Everything still looked normal on the bridge.
+Weightless and sixty-five metres aft of the bridge, Zao meets him leaving that vault. He appears to be finishing an assigned inspection and has not quite secured the door behind him.
 
 His look lasts a fraction too long. He offers no explanation, and she does not accuse a man on the evidence of an expression. They pass without a word.
 
@@ -198,7 +199,7 @@ He does not know whom Voss will send. He knows someone will come immediately. Wh
 
 On the bridge, Voss has half a sentence and a wall of static. He puts Elin on the outage and keeps Okoye forward because a sabotage report may mean the command deck itself needs protection.
 
-Sorell's specialty cannot repair a communications failure. She volunteers to find Zao. Voss tells her to take Harlan as a precaution. She cannot find him, so she goes alone.
+Sorell's specialty cannot repair a communications failure. She volunteers to find Zao. Voss tells her to take Harlan as a precaution. She calls him over the radio, but the jammer prevents any reply. Descending the central shaft, she briefly checks nearby deck entrances and calls again. Zao's interrupted warning makes every delay more dangerous, so Sorell decides to continue alone.
 
 She uses one of the helical staircases in the central shaft, pulling herself hand over hand along rails and landings. Harlan is already below her in the narrower, straighter service route. Their paths never meet. With cameras and position records gone, neither leaves a reliable trace.
 
@@ -235,7 +236,7 @@ Harlan reaches the doorway almost on top of the burst. He sees that she transmit
 
 Zao does not answer.
 
-Harlan scans the emission summary. Confirming a destination means converting array angles and ship attitude into an inertial vector, then checking that vector against ephemerides. Someone is approaching through the ship. He decides he does not have the minutes.
+Harlan scans the emission summary. Confirming a destination means converting array angles and ship attitude into an inertial vector, then checking that vector against ephemerides. He assumes someone is already approaching through the ship and decides he does not have the minutes.
 
 Instead, he reasons from the same immediate facts Zao considered.
 
@@ -373,7 +374,7 @@ Elin does not look up.
 <!-- audience-dialogue-id: audience:dialogue:d5-harlan-frightened -->
 > **Rylen Harlan:** "She was frightened. She knew someone was coming."
 
-The empty-space vector confirms Harlan's private assumption: a terrified engineer, a dead guidance trunk, a hurried manual shot, and an accusation flying toward nowhere—or toward Earth too late to matter.
+Harlan treats the empty-space vector as confirmation of his private assumption: a terrified engineer, a dead guidance trunk, and a hurried manual shot that missed Earth. Objectively, the vector confirms only that the packet is travelling toward nowhere in the catalogue.
 
 Elin cannot disprove him yet, but she does not leave the explanation untested. She has only just reconstructed the vector. After ruling out fixed destinations, she compares its time and direction with moving trajectories, including their own flight plan. Harlan has already written off the signal. She keeps calculating.
 
@@ -384,7 +385,7 @@ Alone in his berth, Harlan sits with a result that cuts both ways. Zao's accusat
 
 He would have continued regardless. The sentence matters because he has cast himself completely as the unthanked protector of a species.
 
-Meanwhile, Elin tests the account nobody has tested. Harlan places himself aft during the blackout, and cameras he restored prove nothing about the time they were dark. His haste to convict Sorell could belong to an innocent officer, an accomplice discarding a partner, or a lone killer framing the first witness.
+While that trajectory check continues, Elin also tests the account nobody else has tested. Harlan places himself aft during the blackout, and cameras he restored prove nothing about the time they were dark. His haste to convict Sorell could belong to an innocent officer, an accomplice discarding a partner, or a lone killer framing the first witness.
 
 Elin does not decide which. She decides only that finding someone beside a body is not enough to close a case.
 
@@ -392,7 +393,7 @@ About thirteen minutes before contact, while she is still checking the intercept
 
 Surprise gives way to recognition: the array's packet format, then a signature header, then a name.
 
-She calls the bridge. Voss gathers all five; Harlan returns from his berth before the packet is opened.
+She calls the bridge. Voss orders all five survivors assembled there; Harlan returns from his berth before the packet is opened.
 
 ## Chapter 9. The Message
 
@@ -421,15 +422,15 @@ On the final words, the bridge returns to the present. Four people turn toward H
 
 The message that seemed aimed at nothing was aimed at a moving receiver: the *Ardor*, after the throat placed the ship ahead of her own light.
 
-Harlan says that voice and image can be fabricated. It is not a foolish objection. It is simply too late.
+Harlan says that voice and image can be fabricated. It is not a foolish objection.
 
-The message now joins everything Elin and Okoye uncovered: Harlan's unverifiable location, the speed of his accusation, the added mass and compact neutron source that broke his fuel theory, the burst he explained by calling Zao careless, and a vector that intersects the ship exactly where its flight plan always said it would be.
+Elin immediately verifies Zao's personal cryptographic signature and its timestamp, minutes before the crossing. The attribution appears on the main display. Harlan's fabrication claim fails before it can become the bridge's next convenient explanation.
+
+The authenticated message now joins everything Elin and Okoye uncovered: Harlan's unverifiable location, the speed of his accusation, the added mass and compact neutron source that broke his fuel theory, the burst he explained by calling Zao careless, and a vector that intersects the ship exactly where its flight plan always said it would be.
 
 No single fact proves the whole story. Together, they require isolating Harlan and reconsidering Sorell’s detention. They do not prove there are no accomplices or turn suspicion into a verdict.
 
-Elin verifies Zao's personal cryptographic signature and its timestamp, minutes before the crossing. The attribution appears on the main display.
-
-About eleven minutes remain. Voss revokes Harlan’s network authority and releases Sorell while Okoye keeps control of him. The basis for Sorell’s detention no longer justifies keeping her tied down. He needs her at her station.
+About eleven minutes remain. Voss revokes Harlan's network authority and releases Sorell while Okoye keeps control of him. The basis for Sorell's detention no longer justifies keeping her tied down. He needs her at her station.
 
 Voss tries to cancel the profile, replace it and cut thrust through the remote emergency control. Minutes pass in rejected commands and actual checks: Elin compares what the controller received with what the engine keeps doing. Sorell tracks the exhausted routes and the time left.
 
@@ -449,7 +450,7 @@ Okoye closes a hand around the device and glances at the display confirming revo
 
 There is no immediate pursuit through the shaft and no way to know whether the lower access hatches remain usable.
 
-Harlan knows where Elin is going. If she reaches local control, the contact-point attack fails even if the bomb remains active. The package accepts no remote command, even from him. He has to reach her, prevent both interventions or force detonation there.
+Harlan knows where Elin is going. If she reaches local control, the contact-point attack fails even if the bomb remains active. The package accepts no remote command, even from him. He has to reach her and keep her from completing either intervention until the existing countdown expires.
 
 Sorell stays on the bridge with an approach executing automatically and an unfinished greeting in her hands.
 
@@ -520,7 +521,7 @@ Voss returns to the bridge and goes to Sorell before he looks at the station.
 <!-- audience-dialogue-id: audience:dialogue:g1-voss-sorry -->
 > **Elias Voss:** "I'm sorry."
 
-He means more than the restraints. He misread her caution, sent her aft alone, accepted the first complete explanation, and brought the mission to the edge of first contact without its only xenolinguist.
+He means more than the restraints. He misread her caution, sent her into the blackout without confirming her escort, accepted the first coherent explanation too quickly, and kept the ship's only xenolinguist from preparing the greeting until the final minutes.
 
 Then Voss takes command and gives the order.
 

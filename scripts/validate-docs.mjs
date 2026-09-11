@@ -70,6 +70,8 @@ requireText('AGENTS.md', 'animatic deprecado **128** tomas');
 requireText('README.md', 'animatic anterior de 128 tomas');
 requireText('README.md', 'data/outlines/light-delay-master-narrative.json');
 requireText('docs/PROJECT_STATUS.md', 'es ahora la fuente de verdad narrativa');
+requireText('AGENTS.md', 'El inglés es la fuente de verdad');
+requireText('README.md', 'El inglés es la fuente editorial vigente');
 requireText('docs/CANON_DECISIONS.md', 'DEPRECADO — CONTINUIDAD ANTERIOR');
 requireText('docs/ASSET_PROVENANCE.md', '**143 imágenes registradas**');
 requireText('docs/ASSET_PROVENANCE.md', '38 imágenes de referencia');

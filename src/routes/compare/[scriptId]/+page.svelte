@@ -148,7 +148,7 @@
 			{/each}
 		</select>
 	</label>
-	<StoryLanguageNotice />
+	<StoryLanguageNotice sourceLanguage={primary.script.status === 'deprecated' ? 'es' : 'en'} />
 
 	{#if foundationalWarnings.length}
 		<aside class="warning" aria-label={m.compare_foundational_conflicts()}>

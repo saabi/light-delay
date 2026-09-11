@@ -16,7 +16,7 @@
   "$defs": {
     "languageDelivery": {
       "type": "object",
-      "required": ["en", "es"],
+      "required": ["en"],
       "properties": {
         "en": { "$ref": "common.schema.json#/$defs/localizedString" },
         "es": { "$ref": "common.schema.json#/$defs/localizedString" }

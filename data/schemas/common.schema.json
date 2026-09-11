@@ -4,7 +4,7 @@
   "$defs": {
     "localizedString": {
       "type": "object",
-      "required": ["es", "en"],
+      "required": ["en"],
       "properties": {
         "es": { "type": "string", "minLength": 1 },
         "en": { "type": "string", "minLength": 1 }

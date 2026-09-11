@@ -1,6 +1,6 @@
 # Signal Beam Requirements — Working Notes
 
-> Status: non-canonical engineering aid. The Spanish screenplay and `docs/technical/CELESTIAL_ARDOR.md` are authoritative. This file preserves useful scale estimates from an older version while removing its FTL-drive and radio-transmitter assumptions.
+> Status: non-canonical engineering aid. The English fields of `data/outlines/light-delay-master-narrative.json` are the WIP narrative authority; `docs/technical/CELESTIAL_ARDOR.md` remains a technical reference subject to that outline. This file preserves useful scale estimates from an older version while removing its FTL-drive and radio-transmitter assumptions.
 
 ## 1. Interception geometry
 

@@ -70,6 +70,13 @@ export interface OutlineMeta {
 	version: string;
 	/** Current editorial revision; independent from historical import provenance. */
 	revision?: number;
+	localization?: {
+		sourceLanguage: 'en';
+		translations: Record<
+			string,
+			{ status: 'current' | 'needs_revision' | 'not_started'; lastSyncedRevision?: number }
+		>;
+	};
 	source?: OutlineSource;
 	provenance?: { importedFrom?: OutlineSource[] };
 	exports?: OutlineExport[];

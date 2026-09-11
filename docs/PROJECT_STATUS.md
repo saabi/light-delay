@@ -1,5 +1,21 @@
 # Estado del proyecto
 
+## 2026-09-11 — English source policy and master revision 18
+
+- English is now the active narrative and documentary source; Spanish is a subsequent translation. Deprecated cuts retain their historical Spanish cue provenance without governing new work.
+- Master revision 18 repairs the Prologue reaction order, establishes Voss's visible misreading before Zao responds, and clarifies sabotage, search, evidence, survivor, motive, and detonation causality in English.
+- `outline.localization` records Spanish as `needs_revision`, last synchronized at revision 17. The Spanish master export, audience narrative, voice script, and audio were deliberately not regenerated.
+- The UI and validation pipeline now expose and tolerate that declared revision gap while continuing to require complete English source text.
+
+## 2026-09-11 — Dual de audiencia EN (master rev. 17)
+
+- Generado `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-en.mp3` (~47.8 min)
+  y `outline-chunks/en-audience/` (287 cues @ 24 kHz).
+- Reuso por content_hash: 244; regenerados 43 (incl. 2 diálogos Qwen nuevos).
+- Catálogo `audience-en`: `sourceOutlineRevision` 17, `expectedCueCount` 287, current.
+- ES (`audience-es`) permanece stale en prosa rev. 15. Workers Studio detenidos
+  durante la generación GPU; reiniciar worker/sidecar si se vuelve a `/studio`.
+
 ## 2026-09-10 — Continuidad temporal y causal, master rev. 17
 
 - Auditoría continua desde la muerte de Zao; C10b conserva ID y pasa a la secuencia D.
@@ -12,7 +28,8 @@
 - Relatos ES/EN, exports y textos TTS sincronizados; se corrigen reparto, cuarta microgravedad,
   cronograma antiguo/nuevo y revelación prematura. Conservados 58 beats y 36 diálogos de audiencia.
 - Registro de las quince correcciones y cronología: `docs/wip/continuity-review.es.md` y `.en.md`.
-  Los audios de prosa rev. 15 siguen desactualizados; no se generaron MP3, chunks ni imágenes.
+  En aquel momento los audios de prosa rev. 15 seguían pendientes; el dual EN se regeneró
+  el 2026-09-11 (véase la entrada superior).
 - Verificación final 2026-09-11: 96 tests unitarios y dos de catálogo de audio aprobados;
   check de Svelte/TypeScript, validaciones y derivados verdes. Readability sin errores;
   seis advertencias por beats breves, mayormente del archivo. Pruebas antiguas de Okoye

@@ -8,10 +8,10 @@
     ],
     "description": "Proyecto de ciencia ficción de primer contacto cuya escaleta maestra bilingüe WIP es la autoridad narrativa vigente.",
     "languages": {
-      "sourceLanguage": "es",
-      "defaultDialogueLanguage": "es",
-      "defaultSubtitleLanguage": "es",
-      "fallbackLanguage": "es",
+      "sourceLanguage": "en",
+      "defaultDialogueLanguage": "en",
+      "defaultSubtitleLanguage": "en",
+      "fallbackLanguage": "en",
       "supported": [
         {
           "tag": "es",

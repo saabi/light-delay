@@ -14,6 +14,26 @@
         "synopsis": { "$ref": "common.schema.json#/$defs/localizedString" },
         "status": { "enum": ["draft", "reviewed", "locked", "deprecated"] }, "version": { "type": "string" },
         "revision": { "type": "integer", "minimum": 1 },
+        "localization": {
+          "type": "object",
+          "required": ["sourceLanguage", "translations"],
+          "properties": {
+            "sourceLanguage": { "const": "en" },
+            "translations": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "object",
+                "required": ["status"],
+                "properties": {
+                  "status": { "enum": ["current", "needs_revision", "not_started"] },
+                  "lastSyncedRevision": { "type": "integer", "minimum": 1 }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
+        },
         "editorialNotice": { "$ref": "common.schema.json#/$defs/localizedString" },
         "source": {
           "type": "object",

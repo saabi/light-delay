@@ -65,7 +65,7 @@ function render(file, language) {
 			: `Working draft, English, revision ${revision}.`;
 	const authorityLine =
 		language === 'es'
-			? '**Estado editorial:** fuente de verdad narrativa vigente; continúa WIP.'
+			? '**Estado editorial:** traducción de la fuente narrativa inglesa; continúa WIP.'
 			: '**Editorial status:** current narrative source of truth; still WIP.';
 	const lines = [generated, '', `# ${title}`, '', revisionLine, '', authorityLine, ''];
 	const before = (file.framing ?? [])
@@ -127,6 +127,20 @@ for (const language of LANGUAGES) {
 	);
 	if (!declaration) throw new Error(`Missing ${language} Markdown export declaration`);
 	const output = join(ROOT, declaration.path);
+	const translation = file.outline.localization?.translations?.[language];
+	if (language !== (file.outline.localization?.sourceLanguage ?? 'en') && translation?.status !== 'current') {
+		if (!existsSync(output)) throw new Error(`Missing stale translation export ${declaration.path}`);
+		const existing = readFileSync(output, 'utf8');
+		if (
+			translation?.lastSyncedRevision &&
+			!existing.includes(`revisión ${translation.lastSyncedRevision}.`)
+		)
+			throw new Error(`${declaration.path} does not match its recorded synchronized revision`);
+		console.log(
+			`master-outline: retained ${declaration.path} at revision ${translation?.lastSyncedRevision ?? 'unknown'} (${translation?.status ?? 'not_started'})`
+		);
+		continue;
+	}
 	const expected = render(file, language);
 	if (check) {
 		if (!existsSync(output) || readFileSync(output, 'utf8').replaceAll('\r\n', '\n') !== expected) {

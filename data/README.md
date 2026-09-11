@@ -4,7 +4,7 @@ Datos estructurados del proyecto. La autoridad narrativa WIP vive en `outlines/l
 
 | Archivo | Contenido |
 | --- | --- |
-| `project.json` | Metadatos, idiomas, autoridad narrativa, continuidades y registro de scripts (`sourceLanguage: es`) |
+| `project.json` | Metadatos, idiomas, autoridad narrativa, continuidades y registro de scripts (`sourceLanguage: en`) |
 | `editorial-lifecycle.json` | Clasificación segura de autoridad, compatibilidad, archivo, obsolescencia y compuertas de borrado |
 | `outlines/light-delay-master-narrative.json` | Escaleta maestra bilingüe WIP y fuente narrativa vigente |
 | `scripts/*.json` | Stub maestro vacío y productos anteriores deprecados con actos, escenas, beats, cues, shots y takes |

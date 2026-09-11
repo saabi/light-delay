@@ -1,6 +1,6 @@
 # Arquitectura de generación audiovisual
 
-Estado: arquitectura ejecutable inicial, sin autorización de generación. El español es la fuente editorial; los prompts destinados a modelos se compilan en inglés sólo después del cierre del cut.
+Estado: arquitectura ejecutable inicial, sin autorización de generación. El inglés es la fuente editorial y el idioma de compilación de prompts; la traducción española no altera el contenido fuente.
 
 ## Principios
 
@@ -67,7 +67,7 @@ El compilador exige secciones completas y rechaza cualquier toma con bloqueos:
 10. audio;
 11. restricciones negativas.
 
-El brief humano se autoriza en español. La versión inglesa compilada es un producto reproducible, no una segunda fuente narrativa. Los planes reales conservan `compiledPrompt: null` hasta que el cut esté cerrado; las pruebas unitarias ejercitan el compilador con fixtures sintéticos.
+El brief humano se autoriza en inglés. La versión compilada es un producto reproducible de esa fuente. Los planes reales conservan `compiledPrompt: null` hasta que el cut esté cerrado; las pruebas unitarias ejercitan el compilador con fixtures sintéticos.
 
 ## Referencias y voces
 

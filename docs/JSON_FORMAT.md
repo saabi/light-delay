@@ -817,7 +817,7 @@ pero todavía no posee una muestra aprobada.
 `pronunciationMap` transforma una grafía editorial canónica en una forma exclusivamente
 pronunciable para el idioma de esa variante. Por ejemplo, `Sorell` se conserva en la narrativa y
 se compila como `Soréll` en inglés o `Sorél` en español. No debe utilizarse para corregir la
-ortografía localizada real: el topónimo español se escribe `Próxima` desde la fuente.
+ortografía localizada real: la traducción española escribe el topónimo `Próxima`.
 
 ### Dirección de interpretación del relato para público
 

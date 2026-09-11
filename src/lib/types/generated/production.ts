@@ -71,9 +71,9 @@ export interface ProductionContextsFile3 {
 	notes?: ProductionContextsFile25;
 }
 export interface ProductionContextsFile5 {
-	es: ProductionContextsFile6;
+	es?: ProductionContextsFile6;
 	en: ProductionContextsFile7;
-	[k: string]: ProductionContextsFile8;
+	[k: string]: ProductionContextsFile8 | undefined;
 }
 export interface ProductionContextsFile13 {
 	kind?: ProductionContextsFile14;
@@ -170,9 +170,9 @@ export interface ProviderCapabilitiesFile10 {
 	maxDurationMs?: ProviderCapabilitiesFile23;
 }
 export interface ProviderCapabilitiesFile27 {
-	es: ProviderCapabilitiesFile28;
+	es?: ProviderCapabilitiesFile28;
 	en: ProviderCapabilitiesFile29;
-	[k: string]: ProviderCapabilitiesFile30;
+	[k: string]: ProviderCapabilitiesFile30 | undefined;
 }
 export interface ProviderCapabilitiesFile32 {
 	id: ProviderCapabilitiesFile33;
@@ -237,9 +237,9 @@ export interface ContinuityLedgerFile2 {
 	notes?: ContinuityLedgerFile7;
 }
 export interface ContinuityLedgerFile7 {
-	es: ContinuityLedgerFile8;
+	es?: ContinuityLedgerFile8;
 	en: ContinuityLedgerFile9;
-	[k: string]: ContinuityLedgerFile10;
+	[k: string]: ContinuityLedgerFile10 | undefined;
 }
 export interface ContinuityLedgerFile12 {
 	id: ContinuityLedgerFile13;
@@ -387,13 +387,13 @@ export interface DialoguePerformanceFile5 {
 	delivery: DialoguePerformanceFile13;
 }
 export interface DialoguePerformanceFile9 {
-	es: DialoguePerformanceFile10;
+	es?: DialoguePerformanceFile10;
 	en: DialoguePerformanceFile11;
-	[k: string]: DialoguePerformanceFile12;
+	[k: string]: DialoguePerformanceFile12 | undefined;
 }
 export interface DialoguePerformanceFile13 {
 	en: DialoguePerformanceFile9;
-	es: DialoguePerformanceFile9;
+	es?: DialoguePerformanceFile9;
 }
 
 export type AudioOutputsFile1 = '1.0.0';
@@ -438,8 +438,8 @@ export interface AudioOutputsFile3 {
 	expectedCueCount: AudioOutputsFile17;
 }
 export interface AudioOutputsFile7 {
-	es: AudioOutputsFile8;
+	es?: AudioOutputsFile8;
 	en: AudioOutputsFile9;
-	[k: string]: AudioOutputsFile10;
+	[k: string]: AudioOutputsFile10 | undefined;
 }
 

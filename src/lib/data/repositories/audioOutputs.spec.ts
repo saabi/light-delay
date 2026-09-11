@@ -9,15 +9,19 @@ describe('audio output catalog', () => {
 	it('lists only the two audience duals with relative keys', () => {
 		const rows = listAudioOutputs();
 		expect(rows.map((row) => row.id).sort()).toEqual(['audience-en', 'audience-es']);
+		const expectedById: Record<string, { cueCount: number; revision: number }> = {
+			'audience-en': { cueCount: 287, revision: 17 },
+			'audience-es': { cueCount: 275, revision: 15 }
+		};
 		for (const row of rows) {
 			expect(row.label.es.length).toBeGreaterThan(0);
 			expect(row.label.en.length).toBeGreaterThan(0);
 			expect(row.description.es.length).toBeGreaterThan(0);
 			expect(row.description.en.length).toBeGreaterThan(0);
-			expect(row.expectedCueCount).toBe(275);
+			expect(row.expectedCueCount).toBe(expectedById[row.id].cueCount);
 			expect(row.expectedSampleRate).toBe(24000);
 			expect(row.sourceOutlineId).toBe('outline:light-delay-master-narrative');
-			expect(row.sourceOutlineRevision).toBe(15);
+			expect(row.sourceOutlineRevision).toBe(expectedById[row.id].revision);
 			expect(looksAbsoluteOrTraversal(row.chunksKey)).toBe(false);
 			expect(looksAbsoluteOrTraversal(row.canonicalMp3Key)).toBe(false);
 			expect(looksAbsoluteOrTraversal(row.assembledKey)).toBe(false);

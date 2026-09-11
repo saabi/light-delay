@@ -12,7 +12,7 @@
 - **Diálogo escrito** = combinación sutil de variedad aprendida, relación entre hablantes y presión dramática. La relación y la intención de la escena prevalecen sobre tics mecánicos: una variedad no obliga a usar siempre el mismo tratamiento ni a insertar localismos.
 - **Género:** confirmado por el texto existente en la mayoría de los casos; marcado como "sin confirmar" donde el material previo no lo especifica — ajustable sin tocar el resto del perfil.
 
-**Regla bilingüe:** editar primero el diálogo español y ajustar el inglés hermano en el mismo pase. El objetivo no es traducir modismos literalmente, sino conservar intención, jerarquía, precisión técnica y personalidad mediante la variedad propia de cada idioma.
+**Regla bilingüe:** editar primero el diálogo inglés. El español se traduce desde esa fuente conservando intención, jerarquía, precisión técnica y personalidad mediante su variedad propia; si se posterga, debe quedar marcado como desactualizado.
 
 ---
 

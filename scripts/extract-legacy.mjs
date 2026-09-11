@@ -1,6 +1,6 @@
 /**
  * Extract canonical JSON from legacy-site HTML + manifests.
- * Spanish dialogue only (source of truth). Does not invent translations.
+ * Historical Spanish dialogue only (archive provenance). Does not invent translations or set current project authority.
  *
  * Usage: node scripts/extract-legacy.mjs
  *

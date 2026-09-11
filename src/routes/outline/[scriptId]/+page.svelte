@@ -152,7 +152,13 @@
 			]}
 		/>
 		<LifecycleNotice {lifecycle} />
-		<StoryLanguageNotice />
+		<StoryLanguageNotice sourceLanguage={outline.outline.localization?.sourceLanguage ?? (entry?.status === 'deprecated' ? 'es' : 'en')} />
+		{#if language.dialogueLanguage === 'es' && outline.outline.localization?.translations.es?.status === 'needs_revision'}
+			<aside class="editorial-notice" role="note">
+				<strong>{m.outline_translation_stale()}</strong>
+				<p>{m.outline_translation_revision({ revision: String(outline.outline.localization.translations.es.lastSyncedRevision ?? '?') })}</p>
+			</aside>
+		{/if}
 
 		{#if outline.outline.editorialNotice}
 			<aside class="editorial-notice" role="note">

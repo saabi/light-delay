@@ -6,7 +6,7 @@ render outline audio. Clone knobs live in
 Local Seed-VC install notes: `E:/Models/Seed-VC/LIGHT_DELAY_NOTES.md`
 (derived; this document wins on conflict).
 
-Español (fuente): [`TTS_VOICE_PIPELINE.es.md`](TTS_VOICE_PIPELINE.es.md).
+Spanish translation: [`TTS_VOICE_PIPELINE.es.md`](TTS_VOICE_PIPELINE.es.md).
 
 ## 1. Expected tree under `E:\Models\`
 
@@ -208,7 +208,7 @@ Multi-speaker TTS outlines (rev. 17, 38 attributed quotations from the master):
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
 - Rebuild from MD exports: `python scripts/build-tts-voices-outlines.py`
 
-Audience short story (12 sections, no frontmatter; **36 audible dialogues**):
+Audience short story (12 sections, no frontmatter; **37 audible English dialogues** at master revision 18; Spanish remains at 36/revision 17):
 
 - Prose: `docs/wip/audience-narrative.en.md` / `.es.md`
 - TTS: `docs/wip/audience-narrative.voices.en.md` / `.voices.es.md`
@@ -219,9 +219,10 @@ Audience short story (12 sections, no frontmatter; **36 audible dialogues**):
   `npm run tts:audience:check`
 - Example: `python scripts/generate-dual-outline-audio.py --lang en --script docs/wip/audience-narrative.voices.en.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/en-audience`
 
-The existing audience duals and their 275 chunks were generated from revision
-15. After adding the third transit turnover to master revision 16, they are
-retained only for reference and salvage until regenerated.
+The Spanish audience dual and its 275 chunks were generated from revision 15.
+The English audience dual was regenerated for revision 17 (287 cues). Master revision
+18 changes the English source again, so both audio catalogs are now stale and retained
+only for reference and salvage until regenerated.
 
 Every audible quotation has the same stable `audience-dialogue-id` comment in
 both source files. That ID—not its array position or translated wording—selects
@@ -286,7 +287,8 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 | ES / EN pipelines | `scripts/pipeline-*-native-l1-v2-qwen.py` |
 | Dual outline | `scripts/generate-dual-outline-audio.py` |
 
-Revision 17 corrects chronology, abort logic and the time-reference intervention in the master
-and audience narratives. TTS text was regenerated; existing prose-revision-15 duals and chunks
-still need regeneration. Dialogue IDs are preserved; changed directions for Harlan (Earth)
-and Sorell (questioning) must invalidate takes that depend on them.
+Revision 18 makes English the source and corrects the Prologue reaction order and related
+causality. Its English voice script has been regenerated, but the existing English audience
+audio is still revision 17 (`light-delay-audience-dual-en.mp3`, 287 cues, ~47.8 min). The
+Spanish voice script remains revision 17 and its audio remains prose revision 15. Dialogue IDs
+are preserved; changed text or direction must invalidate dependent takes.

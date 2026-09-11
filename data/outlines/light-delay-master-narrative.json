@@ -12,8 +12,17 @@
       "en": "Authoritative bilingual master narrative, still WIP and unconstrained by duration. Earlier screenplays and cuts are deprecated until new versions can be derived."
     },
     "status": "draft",
-    "version": "0.6.0-wip",
-    "revision": 17,
+    "version": "0.7.0-wip",
+    "revision": 18,
+    "localization": {
+      "sourceLanguage": "en",
+      "translations": {
+        "es": {
+          "status": "needs_revision",
+          "lastSyncedRevision": 17
+        }
+      }
+    },
     "provenance": {
       "importedFrom": [
         {
@@ -1275,13 +1284,6 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Voss interpreta mal a ambos. Escucha la angustia de Harlan como nervios normales atenuados por la esperanza, y el rigor de Sorell como miedo de actuar.",
-            "en": "Voss misreads them both. He hears Harlan’s dread as ordinary nerves softened by hope, and Sorell’s rigor as fear of acting."
-          }
-        },
-        {
-          "type": "paragraph",
-          "text": {
             "es": "Sorell responde:",
             "en": "Sorell responds:"
           }
@@ -1291,7 +1293,21 @@
           "speakerId": "character:sorell",
           "text": {
             "es": "«Estudiamos todo lo que nos dieron antes de aceptar enviar una sola nave hasta allí. Eso no es miedo. Es respeto».",
-            "en": "“We studied everything they gave us before we agreed to send a single ship out there. That isn’t fear. It’s respect.”"
+            "en": "“We studied everything they gave us before we agreed to send a single ship out there. Now we answer once, listen, and only then decide what their waiting means. That isn’t fear. It’s respect.”"
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Voss interpreta mal a ambos. Escucha la angustia de Harlan como nervios normales atenuados por la esperanza, y el rigor de Sorell como miedo de actuar.",
+            "en": "Voss looks between them with the calm of a captain settling ordinary pre-departure nerves. He hears Harlan’s dread as doubt softened by hope and Sorell’s rigor as reluctance to act. Zao watches him close the matter instead of examining the difference."
+          }
+        },
+        {
+          "type": "blockquote",
+          "speakerId": "character:voss",
+          "text": {
+            "en": "“Doubt is part of the job. We go anyway.”"
           }
         },
         {
@@ -1305,7 +1321,7 @@
           "type": "paragraph",
           "text": {
             "es": "Zao interpreta correctamente a Harlan. Después del intercambio, le dice en voz baja a Voss:",
-            "en": "Zao reads Harlan correctly. After the exchange, she tells Voss quietly:"
+            "en": "Because Zao has just watched Voss dismiss the distinction, she waits until the exchange ends and tells him quietly:"
           }
         },
         {
@@ -1860,7 +1876,7 @@
           "type": "paragraph",
           "text": {
             "es": "Antes de salir de la bóveda, Harlan ha terminado una intervención en los mandos de vuelo del compartimiento exterior: el puente ya no puede sustituir ni cortar el plan automático, aunque sus pantallas sigan recibiendo telemetría normal. Conserva operativo el mando local a popa. El público ve la manipulación, pero todavía no su efecto; Voss lo descubrirá al intentar abortar.",
-            "en": "Before leaving the vault, Harlan has completed an intervention on the outer bay’s flight controls: the bridge can no longer replace or cut the automatic plan, although its displays still receive normal telemetry. He leaves the local aft control operational. The audience sees the tampering but not yet its effect; Voss will discover that when he attempts to abort."
+            "en": "Before Zao reaches the bay, Harlan alters its flight controls so the bridge can no longer replace or cut the automatic plan while its displays continue receiving normal telemetry. He verifies that the bridge still sees a healthy system, leaves local aft control operational, and then enters the inner vault for his final check. The audience sees the apparently routine panel work but not yet its effect; Voss will discover that when he attempts to abort."
           }
         },
         {
@@ -2175,7 +2191,7 @@
           "type": "paragraph",
           "text": {
             "es": "Voss le indica que encuentre a Harlan y lo lleve con ella. Sorell no logra encontrarlo y continúa sola.",
-            "en": "Voss tells her to locate Harlan and take him with her. She cannot find him and continues alone."
+            "en": "Voss tells her to locate Harlan and take him with her. Sorell calls him over the radio, but the jammer prevents any reply. As she descends the central shaft, she briefly checks nearby deck entrances and calls again. Zao’s interrupted warning makes delay increasingly dangerous, so Sorell decides to continue alone."
           }
         },
         {
@@ -2189,7 +2205,7 @@
           "type": "paragraph",
           "text": {
             "es": "Enviarla sola es la decisión por la que Voss se disculpa más adelante.",
-            "en": "Sending her alone is the decision Voss later apologizes for."
+            "en": "Voss later apologizes for sending Sorell into a communications blackout without confirming her escort and for the premature judgment that followed. The final decision to continue alone is Sorell’s."
           }
         }
       ],
@@ -2987,7 +3003,7 @@
           "type": "paragraph",
           "text": {
             "es": "Voss recuerda haber interpretado mal los comentarios de Sorell en el Prólogo como miedo. Por eso, el mismo miedo que atribuyó a Harlan puede atribuírselo a ella.",
-            "en": "Voss remembers misreading Sorell’s Prologue comments as fear. The same fear assigned to Harlan can therefore be assigned to her."
+            "en": "Voss remembers having reduced Sorell’s Prologue caution to reluctance. Harlan weaponizes that earlier mistake, sharpening professional rigor into a motive for delay."
           }
         },
         {
@@ -3926,7 +3942,7 @@
       "id": "master:story-e4",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 45,
+      "order": 46,
       "title": {
         "es": "E4 — Convergencia",
         "en": "E4 — Convergence"
@@ -3986,11 +4002,11 @@
       "importance": "required",
       "causalLinks": [
         {
-          "sourceStepId": "master:story-e3",
+          "sourceStepId": "master:story-e5",
           "relation": "reveals",
           "explanation": {
             "es": "La objeción de Harlan obliga a evaluar el mensaje junto con todas las pruebas independientes, cuya convergencia no depende de la voz o la imagen.",
-            "en": "Harlan's objection forces the message to be tested against all independent evidence, whose convergence does not depend on the voice or image."
+            "en": "After authentication answers Harlan's fabrication claim, the message must still be tested against the independent evidence; their convergence establishes the operational case without pretending to be a final verdict."
           }
         }
       ]
@@ -3999,7 +4015,7 @@
       "id": "master:story-e5",
       "level": "story",
       "sectionId": "master:section-e",
-      "order": 46,
+      "order": 45,
       "title": {
         "es": "E5 — Autenticación",
         "en": "E5 — Authentication"
@@ -4037,11 +4053,11 @@
       "importance": "required",
       "causalLinks": [
         {
-          "sourceStepId": "master:story-e4",
+          "sourceStepId": "master:story-e3",
           "relation": "reveals",
           "explanation": {
             "es": "Además de la convergencia circunstancial, la firma personal y la marca temporal verifican directamente la autoría de Zao.",
-            "en": "Beyond the circumstantial convergence, the personal signature and timestamp directly verify Zao's authorship."
+            "en": "Harlan's fabrication claim makes direct verification necessary; Zao's personal signature and timestamp answer that objection before the broader evidence is weighed."
           }
         }
       ]
@@ -4139,7 +4155,7 @@
           "type": "paragraph",
           "text": {
             "es": "Harlan sabe que Elin se dirige tanto al mando local como a la bomba. Si desvía o detiene la nave, su ataque al punto de contacto fracasa aunque la carga siga activa. Como el dispositivo no acepta órdenes remotas, debe alcanzarla físicamente, impedir ambas intervenciones o forzar una detonación inmediata.",
-            "en": "Harlan knows Elin is heading toward both the local control and the bomb. If she diverts or stops the ship, his contact-point attack fails even if the charge remains active. Because the device accepts no remote commands, he must reach her physically, prevent both interventions or force an immediate detonation."
+            "en": "Harlan knows Elin is heading toward both the local control and the bomb. If she diverts or stops the ship, his contact-point attack fails even if the charge remains active. Because the device accepts no remote commands, he must reach her physically and keep her from completing either intervention until the existing countdown expires."
           }
         },
         {
@@ -4620,7 +4636,7 @@
           "type": "paragraph",
           "text": {
             "es": "La disculpa abarca más que su detención. Interpretó mal su cautela, la envió sola, aceptó una explicación incompleta y permitió que la misión se aproximara al contacto sin su xenolingüista.",
-            "en": "The apology covers more than her detention. He misread her caution, sent her alone, accepted an incomplete explanation, and allowed the mission to approach contact without its xenolinguist."
+            "en": "The apology covers more than her detention. He misread her caution, sent her into the blackout without confirming her escort, accepted the first coherent explanation too quickly, and kept the ship’s only xenolinguist from preparing the greeting until the final minutes."
           }
         },
         {

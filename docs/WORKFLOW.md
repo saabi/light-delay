@@ -2,7 +2,7 @@
 
 ## Principio
 
-El español es la fuente editorial. Cada guion o cut tiene un único `ScriptFile`; lector, animatic, player y subtítulos se proyectan desde ese archivo. Las traducciones y el estado editorial no crean una segunda continuidad ni sustituyen los IDs estables.
+El inglés es la fuente editorial vigente. Cada guion o cut tiene un único `ScriptFile`; lector, animatic, player y subtítulos se proyectan desde ese archivo. Las traducciones y el estado editorial no crean una segunda continuidad ni sustituyen los IDs estables. Los cuts deprecados conservan su procedencia histórica en español, pero no fijan la política de autoría futura.
 
 ## Fuentes vigentes
 
@@ -20,7 +20,7 @@ El español es la fuente editorial. Cada guion o cut tiene un único `ScriptFile
 ## Cambio narrativo
 
 1. Leer las autoridades indicadas en `AGENTS.md`.
-2. Editar primero el español del `ScriptFile` correspondiente sin reutilizar IDs de otro cut.
+2. Editar primero el inglés del `ScriptFile` correspondiente sin reutilizar IDs de otro cut.
 3. Actualizar o marcar obsoletas sus traducciones en la misma tarea.
 4. Derivar subtítulos desde los cues de diálogo; no mantener una copia independiente.
 5. Actualizar canon, estado y changelog cuando corresponda.
@@ -38,7 +38,7 @@ Los cuts derivados tienen `lineage`, no herencia en vivo: un cambio del corto no
 
 ## Cambio documental
 
-- Corregir primero la fuente española y sincronizar otras lenguas.
+- Corregir primero la fuente inglesa y sincronizar o marcar pendiente la traducción española.
 - Distinguir estado vigente, baseline histórico y fuente no canónica.
 - Eliminar tareas o snapshots consumidos cuando su resultado ya esté en `PROJECT_STATUS.md`, `TODO.md` o `CHANGELOG.md`; Git conserva su historia.
 - No copiar cifras derivables sin validarlas contra los JSON. `npm run validate:docs` comprueba los inventarios activos y los enlaces Markdown locales.

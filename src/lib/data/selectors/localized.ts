@@ -39,7 +39,7 @@ export function resolveLocalizedString(
 	if (value == null) return undefined;
 	if (typeof value === 'string') return value;
 	if (!isLocalizedString(value)) return undefined;
-	const sourceLanguage = options.sourceLanguage ?? 'es';
+	const sourceLanguage = options.sourceLanguage ?? 'en';
 	const fallbackLanguage = options.fallbackLanguage ?? sourceLanguage;
 	const map = value as Record<string, string | undefined>;
 	const requested = map[requestedLanguage];
@@ -57,7 +57,7 @@ export function resolveLocalizedString(
 /** Flatten story text for UI props that require string. */
 export function storyText(
 	value: StoryText | undefined | null,
-	requestedLanguage: LanguageTag = 'es',
+	requestedLanguage: LanguageTag = 'en',
 	options: { sourceLanguage?: LanguageTag; fallbackLanguage?: LanguageTag } = {}
 ): string {
 	return resolveLocalizedString(value, requestedLanguage, options) ?? '';
@@ -65,7 +65,7 @@ export function storyText(
 
 export function sourceLocalizedString(
 	value: StoryText | undefined | null,
-	sourceLanguage: LanguageTag = 'es'
+	sourceLanguage: LanguageTag = 'en'
 ): string | undefined {
 	return resolveLocalizedString(value, sourceLanguage, { sourceLanguage });
 }

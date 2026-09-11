@@ -124,9 +124,10 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 
 	for (const script of scripts) {
 		const isArchivedMain = script.script.id === 'script:light-delay-main-short';
+		const scriptSourceLanguage = script.script.status === 'deprecated' ? undefined : sourceLanguage;
 		results.push(
 			validateScript(script, {
-				sourceLanguage,
+				sourceLanguage: scriptSourceLanguage,
 				expectSceneCount: isArchivedMain ? 19 : undefined,
 				expectShotCount: isArchivedMain ? 128 : undefined,
 				requireSelectedTakes: script.shots.length > 0,

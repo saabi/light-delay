@@ -4,7 +4,7 @@ Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe W
 
 ## Estado actual
 
-- Sitio público bilingüe: inglés en `/` y español en `/es/`, con selector de idioma, metadatos SEO, sitemap, identidad visual y landing de presentación. El español continúa siendo la fuente editorial.
+- Sitio público bilingüe: inglés en `/` y español en `/es/`, con selector de idioma, metadatos SEO, sitemap, identidad visual y landing de presentación. El inglés es la fuente editorial vigente; el español es traducción revisionada.
 - Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
 - Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
 - Autoridad narrativa: `data/outlines/light-delay-master-narrative.json`, todavía WIP, con exports Markdown ES/EN generados desde ese JSON.
@@ -55,7 +55,7 @@ https://saabi.github.io/light-delay/
 
 La aplicación usa la base configurada de SvelteKit para navegación, imágenes, animatic y assets, de modo que el desarrollo local sigue funcionando en `/` y GitHub Pages bajo `/light-delay/`.
 
-El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. El copy de historia lleva inglés **inline** en los JSON (`LocalizedString` / `variants.en`); el español permanece como fuente documental. La escaleta maestra es la autoridad narrativa WIP. Los cuatro guiones previos siguen accesibles sólo como archivo deprecado y no se presentan en el sitemap público.
+El idioma público por defecto es inglés. La versión española conserva rutas equivalentes bajo `/es/`; ambas se prerenderizan y se declaran entre sí mediante `hreflang`. El copy de historia lleva ambos idiomas **inline** en los JSON (`LocalizedString` / variantes), con inglés como fuente vigente y estado de sincronización explícito para la traducción española. La escaleta maestra es la autoridad narrativa WIP. Los cuatro guiones previos siguen accesibles sólo como archivo deprecado y conservan su procedencia histórica en español; no se presentan en el sitemap público.
 
 GitHub Pages ya usa **GitHub Actions** como fuente. Los pull requests ejecutan la validación y el build sin desplegar; los pushes a `master` publican el sitio.
 
@@ -75,7 +75,7 @@ Puede abrirse `legacy-site/index.html` directamente para tareas de procedencia o
 
 ## Autoridad documental
 
-1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (español como fuente de verdad; inglés como secundario).
+1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (inglés como fuente vigente; español como traducción).
 2. `data/outlines/light-delay-master-narrative.json` es la fuente narrativa vigente, aunque continúa en estado WIP.
 3. `data/editorial-lifecycle.json` clasifica autoridad, material compatible, archivo deprecado, elementos obsoletos y casos que requieren revisión; también define las compuertas previas a cualquier borrado.
 4. `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` documenta la promoción del master y el futuro flujo de derivación.
@@ -85,7 +85,7 @@ Puede abrirse `legacy-site/index.html` directamente para tareas de procedencia o
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.
 
-Cuando existan copias del mismo documento en varios idiomas, editar primero la copia en español y sincronizar el resto en la misma tarea. Detalle en `AGENTS.md`.
+Cuando existan copias del mismo documento en varios idiomas, editar primero la copia en inglés. La traducción española se sincroniza después o se marca explícitamente como pendiente con su última revisión compatible. Detalle en `AGENTS.md`.
 
 ## Desarrollo editorial pendiente
 
@@ -95,7 +95,7 @@ Las siguientes fases deben:
 - revisar el inventario `review_required` y rescatar del archivo sólo material compatible con el master;
 - definir y aprobar nuevos cuts como derivados explícitos, comenzando por su propia escaleta;
 - generar después sus guiones, animatics y planes de producción, sin revivir implícitamente los productos obsoletos;
-- revisar editorialmente el inglés inline sin alterar la autoridad documental del español.
+- revisar editorialmente el inglés fuente y mantener visible el estado de la traducción española.
 
 Los HTML existentes son referencia y material de migración, no el formato final de autoría.
 

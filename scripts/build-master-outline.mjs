@@ -1,6 +1,6 @@
 /**
  * Import/check the English source layer of the unconstrained master outline.
- * Spanish remains authored in the JSON; --write preserves existing Spanish and editorial links.
+ * English is the authored narrative source; --write preserves existing Spanish translations and editorial links.
  */
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';

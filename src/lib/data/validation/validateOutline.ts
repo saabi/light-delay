@@ -53,6 +53,25 @@ export function validateOutline(
 	if (!sourceStoryText(meta.synopsis)?.trim()) errors.push(`${label}: missing synopsis`);
 	if (!meta.version) errors.push(`${label}: missing version`);
 	if (!FILE_STATUS.has(meta.status)) errors.push(`${label}: invalid status ${meta.status}`);
+	if (meta.localization) {
+		if (meta.localization.sourceLanguage !== 'en')
+			errors.push(`${label}: localization.sourceLanguage must be en`);
+		for (const [language, translation] of Object.entries(meta.localization.translations ?? {})) {
+			if (!['current', 'needs_revision', 'not_started'].includes(translation.status))
+				errors.push(`${label}: invalid ${language} translation status ${translation.status}`);
+			if (
+				['current', 'needs_revision'].includes(translation.status) &&
+				!Number.isInteger(translation.lastSyncedRevision)
+			)
+				errors.push(`${label}: ${language} translation must record lastSyncedRevision`);
+			if (
+				translation.status === 'current' &&
+				meta.revision &&
+				translation.lastSyncedRevision !== meta.revision
+			)
+				errors.push(`${label}: current ${language} translation must match revision ${meta.revision}`);
+		}
+	}
 	if (meta.editorialNotice != null && !sourceStoryText(meta.editorialNotice)?.trim())
 		errors.push(`${label}: empty editorialNotice`);
 	if (meta.source) {

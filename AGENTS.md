@@ -6,16 +6,16 @@ Transformar gradualmente el paquete estático de Light Delay en una aplicación 
 
 ## Idioma y autoridad documental
 
-El español es la fuente de verdad de la documentación del repositorio.
+El inglés es la fuente de verdad de la documentación y de la autoría narrativa vigente del repositorio. El español es una traducción que puede completarse en un pase posterior.
 
 La fuente de verdad **narrativa** vigente es `data/outlines/light-delay-master-narrative.json`. Es una autoridad WIP: puede seguir cambiando, pero prevalece desde ahora sobre los outlines, guiones, animatics y documentos de canon anteriores. Sus exports Markdown ES/EN son derivados generados y no se editan a mano.
 
-- Si un documento existe en varios idiomas, **editar primero la copia en español**. Las demás lenguas son traducciones o adaptaciones, no fuentes paralelas de autoría.
-- Si **no hay copia en español**, el inglés es el idioma secundario de trabajo hasta que exista versión española (o se decida explícitamente dejarlo solo en inglés).
-- Tras cualquier cambio material, **actualizar las copias en otros idiomas en la misma tarea** (o dejar marcado y visible el desfase en `docs/PROJECT_STATUS.md` si la sincronización debe posponerse).
-- No introducir divergencias de canon, procedimiento o estado entre idiomas. Ante conflicto, prevalece la versión española.
-- El copy de historia en JSON (guiones, outlines, assets, entidades, taxonomía, funciones, variantes, etiquetas de script) vive **en el mismo archivo** como mapas por idioma (`{ "es": "…", "en": "…" }`) o, en diálogo/texto, como `content.variants.<lang>`. Tras editar el español, actualizar el inglés hermano en el mismo pase. La UI chrome sigue en Paraglide (`messages/*.json`). No reintroducir overlays de traducción por texto o por id.
-- Convención de nombres cuando haya pares: `nombre.md` o `nombre.es.md` para español; `nombre.en.md` (u otro sufijo de idioma) para el resto. Si solo hay un archivo sin sufijo, su idioma debe inferirse del contenido; al crear la segunda lengua, renombrar o añadir sufijos de forma explícita.
+- Si un documento existe en varios idiomas, **editar primero la copia en inglés**. Las demás lenguas son traducciones o adaptaciones, no fuentes paralelas de autoría.
+- Si **no hay copia en inglés**, el documento existente conserva su función y procedencia hasta que se cree una fuente inglesa explícita; no traducirlo ni reemplazarlo de forma mecánica.
+- Tras cualquier cambio material en inglés, actualizar las traducciones en un pase posterior o marcar de forma visible su revisión y estado. Una traducción desactualizada no bloquea la autoría inglesa.
+- Ante conflicto entre variantes equivalentes y vigentes, prevalece el inglés. La autoridad narrativa y el estado de ciclo de vida prevalecen sobre el idioma: un documento inglés obsoleto o deprecado no sustituye al master.
+- El copy de historia en JSON vive **en el mismo archivo** como mapas por idioma o, en diálogo/texto, como `content.variants.<lang>`. Editar primero `en`; `es` puede quedar marcado `needs_revision`. La UI chrome sigue en Paraglide (`messages/*.json`). No reintroducir overlays.
+- Convención de nombres cuando haya pares: `nombre.md` o `nombre.en.md` para inglés; `nombre.es.md` para español. Los archivos históricos sin par no se renombran sólo para imponer la convención.
 - `AGENTS.md` es el único lugar canónico de instrucciones para agentes (cualquier modelo o plataforma). Otras guías de herramienta deben **referenciar** este archivo, no duplicar reglas.
 
 ## Reglas obligatorias
@@ -27,7 +27,7 @@ La fuente de verdad **narrativa** vigente es `data/outlines/light-delay-master-n
 - No reescribir el canon para resolver una dificultad de implementación.
 - No inventar datos ausentes. Marcar incertidumbres y decisiones pendientes.
 - Evitar la exposición forzada: no tratar al público como incapaz de inferir. La información se revela de forma natural (pensamiento en acción, decisión bajo presión, consecuencia visible), no con diálogos o monólogos que explican el mundo «para el espectador». Ejemplo: cuando Zao decide dónde apuntar el láser y por qué elige la posición futura de la nave, son su propio razonamiento y la elección lo que exponen el porqué; no hace falta que alguien se lo diga a la audiencia.
-- Al escribir o traducir diálogo del elenco maestro, consultar la variante del idioma en `data/voice-profiles.json`: la prosodia de origen se combina con la variedad aprendida, el registro, la relación y la presión dramática. Mantener estas diferencias sutiles y naturales; no representar acentos mediante ortografía fonética, errores gramaticales ni localismos mecánicos. Editar primero el español y ajustar el inglés hermano en el mismo pase.
+- Al escribir o traducir diálogo del elenco maestro, consultar la variante del idioma en `data/voice-profiles.json`: la prosodia de origen se combina con la variedad aprendida, el registro, la relación y la presión dramática. Mantener estas diferencias sutiles y naturales; no representar acentos mediante ortografía fonética, errores gramaticales ni localismos mecánicos. Editar primero el inglés y traducir el español en un pase posterior.
 - La capa `story` de cada escaleta debe contar una historia continua y causalmente completa con los detalles cerrados. Los pasos `detail`, notas o conocimiento externo no pueden reparar una causa, sujeto o consecuencia ausente del resumen principal.
 - Preservar las omisiones deliberadas de cada cut en todo dato público, incluidas traducciones, metadatos, IDs, referencias y descripciones heredadas. En particular, el tráiler no identifica al culpable ni confirma el envío, la recepción o la muerte de Zao; sólo puede insinuar que ella descubrió a una persona responsable y que quedó en peligro.
 - No confundir exposición forzada con razonamiento dramático: la escaleta debe conservar causas, alternativas descartadas, motivaciones, suposiciones (incluso erróneas) y consecuencias cruciales. Un personaje puede pensar en acción o hablar para sí cuando eso revela una decisión o profundidad propia, no para impartir una lección al público.

@@ -9,7 +9,7 @@ export function resolveLocalizedString(value, language, options = {}) {
 	if (value == null) return undefined;
 	if (typeof value === 'string') return value;
 	if (typeof value !== 'object' || Array.isArray(value)) return undefined;
-	const sourceLanguage = options.sourceLanguage ?? 'es';
+	const sourceLanguage = options.sourceLanguage ?? 'en';
 	const fallbackLanguage = options.fallbackLanguage ?? sourceLanguage;
 	const map = /** @type {Record<string, unknown>} */ (value);
 	const requested = map[language];
@@ -26,9 +26,9 @@ export function resolveLocalizedString(value, language, options = {}) {
 
 /**
  * @param {unknown} value
- * @param {string} [sourceLanguage='es']
+ * @param {string} [sourceLanguage='en']
  * @returns {string | undefined}
  */
-export function sourceLocalizedString(value, sourceLanguage = 'es') {
+export function sourceLocalizedString(value, sourceLanguage = 'en') {
 	return resolveLocalizedString(value, sourceLanguage, { sourceLanguage });
 }

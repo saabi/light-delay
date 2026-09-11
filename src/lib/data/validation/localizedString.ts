@@ -7,7 +7,7 @@ export function assertLocalizedString(
 	value: StoryText | undefined | null,
 	label: string,
 	errors: string[],
-	sourceLanguage = 'es',
+	sourceLanguage = 'en',
 	{ required = true }: { required?: boolean } = {}
 ): string | undefined {
 	if (value == null) {
@@ -29,7 +29,7 @@ export function assertLocalizedString(
 
 export function sourceStoryText(
 	value: StoryText | undefined | null,
-	sourceLanguage = 'es'
+	sourceLanguage = 'en'
 ): string | undefined {
 	return sourceLocalizedString(value, sourceLanguage);
 }

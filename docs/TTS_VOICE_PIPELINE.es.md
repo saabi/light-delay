@@ -6,7 +6,7 @@ voz y renderizar el audio de la escaleta. Los knobs de clonación viven en
 Notas locales de instalación de Seed-VC: `E:/Models/Seed-VC/LIGHT_DELAY_NOTES.md`
 (derivadas; ante conflicto prevalece este documento).
 
-English: [`TTS_VOICE_PIPELINE.en.md`](TTS_VOICE_PIPELINE.en.md).
+Fuente inglesa: [`TTS_VOICE_PIPELINE.en.md`](TTS_VOICE_PIPELINE.en.md). Esta copia española es una traducción y debe declarar cualquier desfase de revisión.
 
 ## 1. Árbol esperado bajo `E:\Models\`
 
@@ -269,9 +269,9 @@ Relato para público (12 secciones, sin frontmatter; **36 diálogos audibles**):
   `npm run tts:audience:check`
 - Ejemplo: `python scripts/generate-dual-outline-audio.py --lang es --script docs/wip/audience-narrative.voices.es.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/es-audience`
 
-Los duales y los 275 chunks de audiencia existentes fueron generados desde la
-revisión 15. Después de incorporar la tercera inversión de trayecto al master
-16 se conservan sólo para referencia y rescate hasta regenerarlos.
+El dual ES y sus 275 chunks se generaron desde la revisión 15. El dual EN se
+regeneró para la revisión 17 (287 cues). Tras el master 16, los duales viejos se
+conservaban sólo para referencia y rescate hasta regenerarlos.
 
 Cada cita audible lleva un comentario estable `audience-dialogue-id` en ambas
 fuentes. Ese ID, no el índice ni el texto traducido, selecciona una entrada con:
@@ -336,7 +336,7 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 ```
 
 La transformación ocurre al generar los derivados TTS. El topónimo español
-**Próxima**, en cambio, se escribe correctamente desde la fuente y no pertenece al mapa fonético.
+**Próxima**, en cambio, se escribe correctamente en la traducción española y no pertenece al mapa fonético.
 
 ## 7. Referencias rápidas
 
@@ -356,6 +356,7 @@ La transformación ocurre al generar los derivados TTS. El topónimo español
 | Outline dual | `scripts/generate-dual-outline-audio.py` |
 
 La revisión 17 corrige cronología, aborto y referencia temporal del master y de los relatos.
-Los textos TTS se regeneraron; los duales y chunks existentes de prosa rev. 15 continúan
-pendientes de regeneración. Los IDs de diálogo se conservan; las direcciones cambiadas
-para Harlan (Tierra) y Sorell (interrogatorio) deben invalidar las tomas que dependan de ellas.
+El dual EN se regeneró el 2026-09-11 (`light-delay-audience-dual-en.mp3`, 287 cues, ~47.8 min).
+El dual ES y sus chunks siguen en prosa rev. 15 y pendientes de regeneración. Los IDs de
+diálogo se conservan; las direcciones cambiadas para Harlan (Tierra) y Sorell (interrogatorio)
+deben invalidar las tomas que dependan de ellas.

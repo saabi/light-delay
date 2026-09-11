@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { getLocale } from '$lib/paraglide/runtime.js';
 	import * as m from '$lib/paraglide/messages.js';
+	let { sourceLanguage = 'en' }: { sourceLanguage?: string } = $props();
 </script>
 
-{#if getLocale() === 'en'}
+{#if getLocale() !== sourceLanguage}
 	<aside class="story-language-notice" role="note">
-		<span aria-hidden="true">EN</span>
-		<p>{m.language_story_notice()}</p>
+		<span aria-hidden="true">{getLocale().toUpperCase()}</span>
+		<p>{sourceLanguage === 'en' ? m.language_story_notice() : m.language_story_notice_archived()}</p>
 	</aside>
 {/if}
 

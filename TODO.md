@@ -1,6 +1,6 @@
 # Deuda editorial y técnica pendiente
 
-Este archivo es el registro canónico de deuda editorial y técnica accionable que todavía no se resolvió. El español es la fuente de verdad. Las tareas resueltas deben eliminarse o trasladarse al historial correspondiente; `docs/PROJECT_STATUS.md` resume el estado y `CHANGELOG.md` conserva los cierres.
+Este archivo es el registro canónico de deuda editorial y técnica accionable que todavía no se resolvió. El inglés es la fuente editorial vigente; el español es traducción y puede quedar explícitamente pendiente por revisión. Las tareas resueltas deben eliminarse o trasladarse al historial correspondiente; `docs/PROJECT_STATUS.md` resume el estado y `CHANGELOG.md` conserva los cierres.
 
 ## Prioridad crítica — completar la autoridad maestra antes de nuevos derivados
 

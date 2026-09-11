@@ -14,7 +14,7 @@ const files = {
 };
 
 const expectedSections = 12;
-const expectedDialogues = 36;
+const expectedDialogues = { en: 37, es: 36 };
 const speakerIds = {
 	Zao: 'character:zao',
 	'Elias Voss': 'character:voss',
@@ -45,6 +45,10 @@ function localizedComplete(value) {
 		typeof value.en === 'string' &&
 		value.en.trim()
 	);
+}
+
+function englishComplete(value) {
+	return value && typeof value === 'object' && typeof value.en === 'string' && value.en.trim();
 }
 
 function collectValues(node, key, output = new Set()) {
@@ -222,6 +226,9 @@ const pronunciations = {
 	es: pronunciationMap(voiceProfiles, 'es')
 };
 const masterRevision = master.outline?.revision;
+const spanishLocalization = master.outline?.localization?.translations?.es;
+const spanishRevision = spanishLocalization?.lastSyncedRevision;
+const spanishCurrent = spanishLocalization?.status === 'current';
 
 if (!Number.isInteger(masterRevision)) fail('master: outline.revision must be an integer');
 if (performance.narrativeId !== 'audience:light-delay-master') {
@@ -244,32 +251,33 @@ for (const [label, text] of [
 	if (/Soréll|Sorél/u.test(text)) fail(`${label}: phonetic spelling leaked into editorial data`);
 }
 
-for (const [lang, parsed] of [
-	['EN', en],
-	['ES', es]
+for (const [lang, languageCode, parsed] of [
+	['EN', 'en', en],
+	['ES', 'es', es]
 ]) {
 	if (parsed.sections !== expectedSections) {
 		fail(`${lang}: expected ${expectedSections} H2 sections, found ${parsed.sections}`);
 	}
-	if (parsed.dialogues.length !== expectedDialogues) {
-		fail(`${lang}: expected ${expectedDialogues} dialogues, found ${parsed.dialogues.length}`);
+	if (parsed.dialogues.length !== expectedDialogues[languageCode]) {
+		fail(`${lang}: expected ${expectedDialogues[languageCode]} dialogues, found ${parsed.dialogues.length}`);
 	}
 	const ids = parsed.dialogues.map((entry) => entry.id);
 	if (new Set(ids).size !== ids.length) fail(`${lang}: duplicate dialogue IDs`);
 }
 
-const enShape = en.blocks.map(({ kind, section }) => `${section}:${kind}`);
-const esShape = es.blocks.map(({ kind, section }) => `${section}:${kind}`);
-if (JSON.stringify(enShape) !== JSON.stringify(esShape)) {
-	fail('EN/ES audience sources do not have the same block structure and section boundaries');
-}
-
-for (let index = 0; index < Math.max(en.dialogues.length, es.dialogues.length); index += 1) {
-	const left = en.dialogues[index];
-	const right = es.dialogues[index];
-	if (!left || !right) continue;
-	if (left.id !== right.id || left.speaker !== right.speaker || left.section !== right.section) {
-		fail(`EN/ES dialogue parity mismatch at index ${index}: ${left.id} / ${right.id}`);
+if (spanishCurrent) {
+	const enShape = en.blocks.map(({ kind, section }) => `${section}:${kind}`);
+	const esShape = es.blocks.map(({ kind, section }) => `${section}:${kind}`);
+	if (JSON.stringify(enShape) !== JSON.stringify(esShape)) {
+		fail('EN/ES audience sources do not have the same block structure and section boundaries');
+	}
+	for (let index = 0; index < Math.max(en.dialogues.length, es.dialogues.length); index += 1) {
+		const left = en.dialogues[index];
+		const right = es.dialogues[index];
+		if (!left || !right) continue;
+		if (left.id !== right.id || left.speaker !== right.speaker || left.section !== right.section) {
+			fail(`EN/ES dialogue parity mismatch at index ${index}: ${left.id} / ${right.id}`);
+		}
 	}
 }
 
@@ -285,15 +293,16 @@ for (const entry of performance.entries ?? []) {
 	if (!masterSpeakers.has(entry.speakerId)) {
 		fail(`performance: ${entry.id} has unknown speakerId ${entry.speakerId}`);
 	}
-	if (!localizedComplete(entry.intent)) fail(`performance: ${entry.id} has incomplete intent`);
-	for (const lang of ['en', 'es']) {
-		if (!localizedComplete(entry.delivery?.[lang])) {
-			fail(`performance: ${entry.id} has incomplete ${lang} delivery`);
-		}
+	if (!englishComplete(entry.intent)) fail(`performance: ${entry.id} has no English intent`);
+	if (!englishComplete(entry.delivery?.en)) {
+		fail(`performance: ${entry.id} has no English delivery`);
+	}
+	if (es.dialogues.some((dialogue) => dialogue.id === entry.id) && !englishComplete(entry.delivery?.es)) {
+		fail(`performance: ${entry.id} has no Spanish-language delivery direction`);
 	}
 }
-if (performanceIds.size !== expectedDialogues) {
-	fail(`performance: expected ${expectedDialogues} entries, found ${performanceIds.size}`);
+if (performanceIds.size !== expectedDialogues.en) {
+	fail(`performance: expected ${expectedDialogues.en} entries, found ${performanceIds.size}`);
 }
 
 for (const dialogue of en.dialogues) {
@@ -319,8 +328,8 @@ for (const [lang, languageCode, parsed, voiceFile] of [
 	['ES', 'es', es, files.voicesEs]
 ]) {
 	const generated = parseGeneratedVoices(read(voiceFile), lang);
-	if (generated.length !== expectedDialogues) {
-		fail(`${lang} voices: expected ${expectedDialogues} actor cues, found ${generated.length}`);
+	if (generated.length !== expectedDialogues[languageCode]) {
+		fail(`${lang} voices: expected ${expectedDialogues[languageCode]} actor cues, found ${generated.length}`);
 	}
 	for (let index = 0; index < Math.min(generated.length, parsed.dialogues.length); index += 1) {
 		const source = parsed.dialogues[index];
@@ -332,7 +341,7 @@ for (const [lang, languageCode, parsed, voiceFile] of [
 			fail(`${lang} voices: speaker mismatch at ${source.id}`);
 		}
 		const entry = performance.entries.find(({ id }) => id === source.id);
-		if (entry) {
+		if (entry && (languageCode === 'en' || spanishCurrent)) {
 			const language = languageCode === 'en' ? 'English' : 'Spanish';
 			const rawInstruct = `Speak ${language}. Dramatic situation: ${entry.intent.en.trim()} Performance and delivery: ${entry.delivery[languageCode].en.trim()}`;
 			const expectedInstruct = `[QwenInstruct] ${applyPronunciations(rawInstruct, pronunciations[languageCode])}`;
@@ -347,18 +356,18 @@ for (const [lang, languageCode, parsed, voiceFile] of [
 	}
 }
 
-for (const [lang, file, revisionLabel] of [
-	['EN', files.en, 'Revision'],
-	['ES', files.es, 'Revisión']
+for (const [lang, file, revisionLabel, expectedRevision] of [
+	['EN', files.en, 'Revision', masterRevision],
+	['ES', files.es, 'Revisión', spanishCurrent ? masterRevision : spanishRevision]
 ]) {
-	if (!read(file).includes(`${revisionLabel} ${masterRevision}.`)) {
-		fail(`${lang}: revision label does not match master revision ${masterRevision}`);
+	if (!Number.isInteger(expectedRevision) || !read(file).includes(`${revisionLabel} ${expectedRevision}.`)) {
+		fail(`${lang}: revision label does not match expected revision ${expectedRevision}`);
 	}
 }
 
-for (const [lang, file, chapter, prologue, title, spokenName] of [
-	['EN', files.voicesEn, 'Chapter', 'Prologue', 'Light Delay', 'Soréll'],
-	['ES', files.voicesEs, 'Capítulo', 'Prólogo', 'Lúz Tardía', 'Sorél']
+for (const [lang, file, chapter, prologue, title, spokenName, expectedRevision] of [
+	['EN', files.voicesEn, 'Chapter', 'Prologue', 'Light Delay', 'Soréll', masterRevision],
+	['ES', files.voicesEs, 'Capítulo', 'Prólogo', 'Lúz Tardía', 'Sorél', spanishCurrent ? masterRevision : spanishRevision]
 ]) {
 	const text = read(file);
 	const chapters = [
@@ -380,7 +389,7 @@ for (const [lang, file, chapter, prologue, title, spokenName] of [
 	}
 	if (
 		!text.includes(
-			`[PAUSE 1200] ${title}. ${lang === 'EN' ? 'Revision' : 'Revisión'} ${masterRevision}.`
+			`[PAUSE 1200] ${title}. ${lang === 'EN' ? 'Revision' : 'Revisión'} ${expectedRevision}.`
 		)
 	) {
 		fail(`${lang} voices: localized spoken title or master revision is stale`);
@@ -395,5 +404,5 @@ if (failures.length) {
 }
 
 console.log(
-	`Audience narrative valid: ${expectedSections} sections, ${expectedDialogues} stable bilingual dialogues, performance data and TTS outputs synchronized.`
+	`Audience narrative valid: English rev ${masterRevision} (${expectedDialogues.en} dialogues); Spanish ${spanishCurrent ? 'current' : `stale at rev ${spanishRevision}`} (${expectedDialogues.es} dialogues).`
 );

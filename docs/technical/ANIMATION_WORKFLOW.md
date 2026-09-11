@@ -1,6 +1,6 @@
 # Flujo de trabajo de animación en Blender
 
-> Estado: documento de planificación de flujo de trabajo, sin tomas producidas todavía — el guion aún no está cerrado. No implica animación ni render inmediatos. Complementa a `EXTERNAL_SCENES_AND_ANIMATION.md` (qué falta modelar/animar) y a `PRODUCTION_ROADMAP.md` (orden de trabajo); este documento responde una pregunta distinta: **cómo organizar los archivos y el proceso** una vez que empecemos a producir tomas animadas. Idioma fuente: español.
+> Estado: documento de planificación de flujo de trabajo, sin tomas producidas todavía — el guion aún no está cerrado. No implica animación ni render inmediatos. Complementa a `EXTERNAL_SCENES_AND_ANIMATION.md` y a `PRODUCTION_ROADMAP.md`. Idioma histórico: español; las revisiones vigentes se escriben primero en inglés.
 
 ## 0. Por qué hace falta decidir esto ahora, aunque el guion no esté listo
 

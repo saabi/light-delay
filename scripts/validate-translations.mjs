@@ -9,8 +9,8 @@ import { sourceLocalizedString } from './lib/localized-string.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
-const SOURCE = 'es';
-const TARGET = 'en';
+const SOURCE = 'en';
+const TARGET = 'es';
 
 const missingSource = [];
 const missingTarget = [];
@@ -20,7 +20,7 @@ function isMap(value) {
 	return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
 }
 
-function checkLocalized(value, context, { required = true } = {}) {
+function checkLocalized(value, context, { required = true, targetRequired = true } = {}) {
 	if (value == null) {
 		if (required) missingSource.push(context);
 		return;
@@ -28,7 +28,7 @@ function checkLocalized(value, context, { required = true } = {}) {
 	if (typeof value === 'string') {
 		invalidShape.push(`${context}: expected LocalizedString map, got plain string`);
 		if (!value.trim()) missingSource.push(context);
-		else missingTarget.push(context);
+		else if (targetRequired) missingTarget.push(context);
 		return;
 	}
 	if (!isMap(value)) {
@@ -38,7 +38,7 @@ function checkLocalized(value, context, { required = true } = {}) {
 	const es = value[SOURCE];
 	if (typeof es !== 'string' || !es.trim()) missingSource.push(context);
 	const en = value[TARGET];
-	if (typeof en !== 'string' || !en.trim()) missingTarget.push(context);
+	if (targetRequired && (typeof en !== 'string' || !en.trim())) missingTarget.push(context);
 }
 
 function checkNotes(notes, context) {
@@ -47,12 +47,12 @@ function checkNotes(notes, context) {
 	}
 }
 
-function checkOutlineBlocks(blocks, context) {
+function checkOutlineBlocks(blocks, context, options) {
 	for (const [index, block] of (blocks ?? []).entries()) {
 		if (block.type === 'list') {
 			for (const [itemIndex, item] of (block.items ?? []).entries())
-				checkLocalized(item, `${context}[${index}].items[${itemIndex}]`);
-		} else checkLocalized(block.text, `${context}[${index}].text`);
+				checkLocalized(item, `${context}[${index}].items[${itemIndex}]`, options);
+		} else checkLocalized(block.text, `${context}[${index}].text`, options);
 	}
 }
 
@@ -108,9 +108,9 @@ function checkScript(file, filename) {
 		if (item.type === 'action') checkLocalized(item.text, `${root}.${item.id}.text`);
 		else if (item.type === 'dialogue') {
 			const source = item.content?.variants?.[item.content?.sourceLanguage ?? SOURCE];
-			const en = item.content?.variants?.[TARGET];
+			const target = item.content?.variants?.[TARGET];
 			if (!source?.spokenText?.trim()) missingSource.push(`${root}.${item.id}.spokenText`);
-			if (!en?.spokenText?.trim()) missingTarget.push(`${root}.${item.id}.variants.en`);
+			if (!target?.spokenText?.trim()) missingTarget.push(`${root}.${item.id}.variants.${TARGET}`);
 			if (item.performance?.emotion != null)
 				checkLocalized(item.performance.emotion, `${root}.${item.id}.performance.emotion`);
 			if (item.performance?.intention != null)
@@ -123,9 +123,9 @@ function checkScript(file, filename) {
 			checkLocalized(item.description, `${root}.${item.id}.description`);
 		else if (item.type === 'text') {
 			const source = item.content?.variants?.[item.content?.sourceLanguage ?? SOURCE];
-			const en = item.content?.variants?.[TARGET];
+			const target = item.content?.variants?.[TARGET];
 			if (!source?.text?.trim()) missingSource.push(`${root}.${item.id}.text`);
-			if (!en?.text?.trim()) missingTarget.push(`${root}.${item.id}.variants.en`);
+			if (!target?.text?.trim()) missingTarget.push(`${root}.${item.id}.variants.${TARGET}`);
 		}
 		checkNotes(item.notes, `${root}.${item.id}`);
 	}
@@ -164,23 +164,27 @@ function checkScript(file, filename) {
 
 function checkOutline(file, filename) {
 	const root = `outlines/${filename}`;
-	checkLocalized(file.outline?.title, `${root}.outline.title`);
-	checkLocalized(file.outline?.synopsis, `${root}.outline.synopsis`);
+	const spanishStatus = file.outline?.localization?.translations?.es?.status;
+	const targetRequired = spanishStatus !== 'needs_revision' && spanishStatus !== 'not_started';
+	const options = { targetRequired };
+	checkLocalized(file.outline?.title, `${root}.outline.title`, options);
+	checkLocalized(file.outline?.synopsis, `${root}.outline.synopsis`, options);
 	if (file.outline?.editorialNotice != null)
-		checkLocalized(file.outline.editorialNotice, `${root}.outline.editorialNotice`);
+		checkLocalized(file.outline.editorialNotice, `${root}.outline.editorialNotice`, options);
 	for (const section of file.framing ?? []) {
-		checkLocalized(section.title, `${root}.${section.id}.title`);
-		checkOutlineBlocks(section.blocks, `${root}.${section.id}.blocks`);
+		checkLocalized(section.title, `${root}.${section.id}.title`, options);
+		checkOutlineBlocks(section.blocks, `${root}.${section.id}.blocks`, options);
 	}
 	for (const section of file.storySections ?? [])
-		checkLocalized(section.title, `${root}.${section.id}.title`);
+		checkLocalized(section.title, `${root}.${section.id}.title`, options);
 	for (const step of file.steps ?? []) {
-		checkLocalized(step.title, `${root}.${step.id}.title`);
-		if (step.summary != null) checkLocalized(step.summary, `${root}.${step.id}.summary`);
-		if (step.body) checkOutlineBlocks(step.body, `${root}.${step.id}.body`);
+		checkLocalized(step.title, `${root}.${step.id}.title`, options);
+		if (step.summary != null) checkLocalized(step.summary, `${root}.${step.id}.summary`, options);
+		if (step.body) checkOutlineBlocks(step.body, `${root}.${step.id}.body`, options);
 		for (const link of step.causalLinks ?? [])
-			checkLocalized(link.explanation, `${root}.${step.id}.causalLinks.explanation`);
-		checkNotes(step.notes, `${root}.${step.id}`);
+			checkLocalized(link.explanation, `${root}.${step.id}.causalLinks.explanation`, options);
+		for (const [index, note] of (step.notes ?? []).entries())
+			checkLocalized(note.text, `${root}.${step.id}.notes[${index}].text`, options);
 	}
 }
 
@@ -317,7 +321,7 @@ console.log(
 			missingSourceSample: missingSource.slice(0, 20),
 			missingTargetSample: missingTarget.slice(0, 20),
 			invalidShapeSample: invalidShape.slice(0, 20),
-			note: 'Story and entity copy use co-located inline localization.'
+			note: 'English is the active narrative source; Spanish coverage may be deferred only where lifecycle metadata marks it stale.'
 		},
 		null,
 		2

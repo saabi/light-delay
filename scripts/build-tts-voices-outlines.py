@@ -784,6 +784,7 @@ def write_pair(
     en_plain_out: Path | None,
     es_plain_out: Path | None,
     source: str,
+    language: str,
 ) -> None:
     en_md = en_src.read_text(encoding="utf-8")
     es_md = es_src.read_text(encoding="utf-8")
@@ -791,55 +792,47 @@ def write_pair(
     revision_value = master.get("outline", {}).get("revision")
     if not isinstance(revision_value, int):
         raise ValueError("Master outline revision must be an integer")
-    revision = str(revision_value)
+    en_revision = str(revision_value)
+    es_localization = master.get("outline", {}).get("localization", {}).get("translations", {}).get("es", {})
+    es_revision_value = revision_value if es_localization.get("status") == "current" else es_localization.get("lastSyncedRevision")
+    if not isinstance(es_revision_value, int):
+        raise ValueError("Spanish translation must record lastSyncedRevision while it is not current")
+    es_revision = str(es_revision_value)
     performance_by_id = load_audience_performance() if source == "audience" else None
 
-    en_voices, en_log, en_miss, en_instructs = build_voices(
-        en_md,
-        lang="en",
-        revision=revision,
-        performance_by_id=performance_by_id,
-        source=source,
-    )
-    es_voices, es_log, es_miss, _ = build_voices(
-        es_md,
-        lang="es",
-        revision=revision,
-        instruct_by_index=en_instructs,
-        performance_by_id=performance_by_id,
-        source=source,
-    )
+    if language in ("en", "all"):
+        en_voices, en_log, en_miss, _ = build_voices(
+            en_md,
+            lang="en",
+            revision=en_revision,
+            performance_by_id=performance_by_id,
+            source=source,
+        )
+        en_voices_out.write_text(en_voices, encoding="utf-8")
+        if en_plain_out is not None:
+            en_plain_out.write_text(build_plain(en_voices), encoding="utf-8")
+        print(f"Wrote {source} EN: dialogues={len(en_log)} revision={en_revision} -> {en_voices_out.name}")
+        if en_miss:
+            print("EN missing curated instruct (used fallback):", len(en_miss))
+            for item in en_miss:
+                print(" ", item)
 
-    assert len(en_log) == len(es_log), f"dialogue count EN {len(en_log)} != ES {len(es_log)}"
-    mismatches = [
-        (i, a, b)
-        for i, (a, b) in enumerate(zip(en_log, es_log))
-        if a[:2] != b[:2]
-    ]
-    if mismatches:
-        raise SystemExit(f"Dialogue ID/speaker parity mismatch: {mismatches[:10]}")
-
-    en_voices_out.write_text(en_voices, encoding="utf-8")
-    es_voices_out.write_text(es_voices, encoding="utf-8")
-    if en_plain_out is not None:
-        en_plain_out.write_text(build_plain(en_voices), encoding="utf-8")
-    if es_plain_out is not None:
-        es_plain_out.write_text(build_plain(es_voices), encoding="utf-8")
-
-    print(
-        f"Wrote {source}: dialogues={len(en_log)} revision={revision} "
-        f"-> {en_voices_out.name} / {es_voices_out.name}"
-    )
-    for i, ((dialogue_id, a, qa), (_, b, qb)) in enumerate(zip(en_log, es_log)):
-        id_label = dialogue_id or "legacy-quote"
-        print(f"  {i:02d} {a:7} {id_label} | {qa[:50]!r}")
-        print(f"       {b:7} {'':{len(id_label)}} | {qb[:50]!r}")
-    if en_miss:
-        print("EN missing curated instruct (used fallback):", len(en_miss))
-        for m in en_miss:
-            print(" ", m)
-    if es_miss:
-        print("ES missing curated instruct (used fallback):", len(es_miss))
+    if language in ("es", "all"):
+        es_voices, es_log, es_miss, _ = build_voices(
+            es_md,
+            lang="es",
+            revision=es_revision,
+            performance_by_id=performance_by_id,
+            source=source,
+        )
+        es_voices_out.write_text(es_voices, encoding="utf-8")
+        if es_plain_out is not None:
+            es_plain_out.write_text(build_plain(es_voices), encoding="utf-8")
+        print(f"Wrote {source} ES: dialogues={len(es_log)} revision={es_revision} -> {es_voices_out.name}")
+        if es_miss:
+            print("ES missing curated instruct (used fallback):", len(es_miss))
+            for item in es_miss:
+                print(" ", item)
 
 
 def main() -> None:
@@ -852,6 +845,12 @@ def main() -> None:
         default="all",
         help="Which TTS markdown pair to rebuild (default: all).",
     )
+    parser.add_argument(
+        "--lang",
+        choices=("en", "es", "all"),
+        default="all",
+        help="Which language output to rebuild (default: all).",
+    )
     args = parser.parse_args()
 
     if args.source in ("outline", "all"):
@@ -863,6 +862,7 @@ def main() -> None:
             en_plain_out=WIP / "outiline-for-kokoro-tts.md",
             es_plain_out=WIP / "outiline-for-kokoro-tts.es.md",
             source="outline",
+            language=args.lang,
         )
     if args.source in ("audience", "all"):
         write_pair(
@@ -873,6 +873,7 @@ def main() -> None:
             en_plain_out=None,
             es_plain_out=None,
             source="audience",
+            language=args.lang,
         )
 
 

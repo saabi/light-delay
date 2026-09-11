@@ -53,8 +53,12 @@ describe('outlines (optional)', () => {
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
 		expect(source.outline.provenance?.importedFrom?.[0]?.revision).toBe('13');
-		expect(source.outline.revision).toBe(17);
-		expect(source.outline.version).toBe('0.6.0-wip');
+		expect(source.outline.revision).toBe(18);
+		expect(source.outline.version).toBe('0.7.0-wip');
+		expect(source.outline.localization).toEqual({
+			sourceLanguage: 'en',
+			translations: { es: { status: 'needs_revision', lastSyncedRevision: 17 } }
+		});
 		expect(source.outline.status).toBe('draft');
 		expect(source.outline.exports?.map((item) => item.path)).toEqual([
 			'docs/wip/general-narrative-outline.es.md',
@@ -74,7 +78,7 @@ describe('outlines (optional)', () => {
 				(block) => block.type === 'blockquote'
 			)
 		);
-		expect(quotations).toHaveLength(38);
+		expect(quotations).toHaveLength(39);
 		expect(quotations.every((block) => block.type === 'blockquote' && block.speakerId)).toBe(true);
 		const gravity = source.framing?.find((section) => section.id === 'master:framing-gravity');
 		const gravityList = gravity?.blocks.find((block) => block.type === 'list');
@@ -82,11 +86,18 @@ describe('outlines (optional)', () => {
 		const c10 = source.steps.find((step) => step.id === 'master:story-c10');
 		const c10b = source.steps.find((step) => step.id === 'master:story-c10b');
 		const d1 = source.steps.find((step) => step.id === 'master:story-d1');
+		const e3 = source.steps.find((step) => step.id === 'master:story-e3');
+		const e5 = source.steps.find((step) => step.id === 'master:story-e5');
+		const e4 = source.steps.find((step) => step.id === 'master:story-e4');
+		const e6 = source.steps.find((step) => step.id === 'master:story-e6');
 		const f3 = source.steps.find((step) => step.id === 'master:story-f3');
 		expect([c10?.order, d1?.order, c10b?.order]).toEqual([31, 32, 35]);
 		expect(c10b?.sectionId).toBe('master:section-d');
 		expect(c10b?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10'); // The flight profile, not investigation, requires the turn.
 		expect(d1?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10');
+		expect([e3?.order, e5?.order, e4?.order, e6?.order]).toEqual([44, 45, 46, 47]);
+		expect(e5?.causalLinks?.[0]?.sourceStepId).toBe('master:story-e3');
+		expect(e4?.causalLinks?.[0]?.sourceStepId).toBe('master:story-e5');
 		expect(typeof f3?.title === 'string' ? f3.title : f3?.title.en).toContain(
 			'Fourth gravity dip'
 		);

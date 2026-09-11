@@ -172,10 +172,11 @@ function validateScriptFile(
 
 	for (const cue of script.cues || []) {
 		if (cue.type !== 'dialogue') continue;
-		if (cue.content?.sourceLanguage !== sourceLang) {
-			errors.push(`${label} cue ${cue.id}: content.sourceLanguage must be ${sourceLang}`);
+		const expectedSource = sourceLang ?? cue.content?.sourceLanguage;
+		if (cue.content?.sourceLanguage !== expectedSource) {
+			errors.push(`${label} cue ${cue.id}: content.sourceLanguage must be ${expectedSource}`);
 		}
-		const v = cue.content?.variants?.[sourceLang];
+		const v = cue.content?.variants?.[expectedSource];
 		if (!v || v.status !== 'source') {
 			errors.push(`${label} cue ${cue.id}: source variant missing or status != source`);
 		}
@@ -304,9 +305,8 @@ function main() {
 	if (!project.schemaVersion) errors.push('project: missing schemaVersion');
 	const langs = project.project?.languages;
 	if (!langs) errors.push('project: missing languages');
-	else if (!/^es(-|$)/i.test(langs.sourceLanguage)) {
-		errors.push(`project: sourceLanguage must be Spanish, got ${langs.sourceLanguage}`);
-	}
+	else if (!langs.supported?.some((language) => language.tag === langs.sourceLanguage))
+		errors.push(`project: sourceLanguage is not listed as supported: ${langs.sourceLanguage}`);
 
 	const registry = project.project?.scripts || [];
 	const continuities = project.project?.continuities || [];
@@ -483,7 +483,7 @@ function main() {
 		if (asset.imageStatus) validateImageStatus(asset.imageStatus, `asset ${asset.id}`, errors);
 	}
 
-	const sourceLang = langs?.sourceLanguage || 'es';
+	const sourceLang = langs?.sourceLanguage || 'en';
 	const functionIds = new Set(narrativeFunctions.functions.map((f) => f.id));
 	const characterIds = new Set(characters.characters.map((c) => c.id));
 	const documentIds = new Set(documents.documents.map((d) => d.id));
@@ -493,7 +493,7 @@ function main() {
 	for (const [id, script] of scriptsById) {
 		const isArchivedMain = id === 'script:light-delay-main-short';
 		validateScriptFile(script, {
-			sourceLang,
+			sourceLang: script.script?.status === 'deprecated' ? undefined : sourceLang,
 			expectScenes: isArchivedMain ? 19 : undefined,
 			expectShots: isArchivedMain ? 128 : undefined,
 			functionIds,

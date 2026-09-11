@@ -86,7 +86,7 @@
 		]}
 	/>
 	<LifecycleNotice {lifecycle} />
-	<StoryLanguageNotice />
+	<StoryLanguageNotice sourceLanguage={script.script.status === 'deprecated' ? 'es' : 'en'} />
 	{#if script.shots.length === 0}
 		<div class="empty" role="status">
 			<h2>{m.animatic_empty_title()}</h2>

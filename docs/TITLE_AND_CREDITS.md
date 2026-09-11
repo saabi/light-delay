@@ -1,6 +1,6 @@
 # Títulos y créditos
 
-Estado: especificación de presentación para main, Festival y tráiler. El español es la fuente editorial de los cues; las stills generadas usan inglés en imagen por ahora. No autoriza generación hasta el freeze del cut.
+Estado: especificación de presentación para main, Festival y tráiler deprecados. El inglés es la fuente editorial vigente; las stills usan inglés en imagen. No autoriza generación hasta el freeze de un futuro cut derivado del master.
 
 ## Colocación
 
@@ -41,7 +41,7 @@ FIRST CONTACT
 FIRST CONTACT — VELARI MISSION
 ```
 
-Los cues JSON conservan español fuente + inglés draft. `AUTHOR_NAME_PLACEHOLDER` se sustituye cuando el autor aporte el nombre legal.
+Los cues JSON archivados conservan español fuente + inglés draft por procedencia histórica. Los futuros derivados usan inglés como fuente. `AUTHOR_NAME_PLACEHOLDER` se sustituye cuando el autor aporte el nombre legal.
 
 ## Prompts (EN → modelo)
 

@@ -2,7 +2,7 @@
 
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 17.
+Working draft, English, revision 18.
 
 **Editorial status:** current narrative source of truth; still WIP.
 
@@ -247,15 +247,17 @@ He does not claim the Velari could have crossed whenever they wanted.
 
 Sorell answers with professional caution rather than blind optimism. The Velari have waited. Waiting is itself a message, but she wants certainty about what that message means before assuming it has been returned.
 
-Voss misreads them both. He hears Harlan’s dread as ordinary nerves softened by hope, and Sorell’s rigor as fear of acting.
-
 Sorell responds:
 
-> **Lian Sorell:** “We studied everything they gave us before we agreed to send a single ship out there. That isn’t fear. It’s respect.”
+> **Lian Sorell:** “We studied everything they gave us before we agreed to send a single ship out there. Now we answer once, listen, and only then decide what their waiting means. That isn’t fear. It’s respect.”
+
+Voss looks between them with the calm of a captain settling ordinary pre-departure nerves. He hears Harlan’s dread as doubt softened by hope and Sorell’s rigor as reluctance to act. Zao watches him close the matter instead of examining the difference.
+
+> **Elias Voss:** “Doubt is part of the job. We go anyway.”
 
 Delivered defensively, the line can later be remembered as evidence that Sorell wanted the mission delayed.
 
-Zao reads Harlan correctly. After the exchange, she tells Voss quietly:
+Because Zao has just watched Voss dismiss the distinction, she waits until the exchange ends and tells him quietly:
 
 > **Zao:** “That wasn’t hope.”
 
@@ -381,7 +383,7 @@ No active fuel alarm is present. Zao does not treat that as proof that no fault 
 
 ### B1 — The crossing
 
-Before leaving the vault, Harlan has completed an intervention on the outer bay’s flight controls: the bridge can no longer replace or cut the automatic plan, although its displays still receive normal telemetry. He leaves the local aft control operational. The audience sees the tampering but not yet its effect; Voss will discover that when he attempts to abort.
+Before Zao reaches the bay, Harlan alters its flight controls so the bridge can no longer replace or cut the automatic plan while its displays continue receiving normal telemetry. He verifies that the bridge still sees a healthy system, leaves local aft control operational, and then enters the inner vault for his final check. The audience sees the apparently routine panel work but not yet its effect; Voss will discover that when he attempts to abort.
 
 In microgravity, Zao encounters Harlan exiting the inner shielding vault into the outer bay. He has been making a final check and has left the vault incompletely secured.
 
@@ -447,11 +449,11 @@ He puts Elin on diagnosing the outage. He keeps Okoye on the bridge because a sa
 
 Sorell is the only person whose specialized work is not immediately useful to the outage. She volunteers to go aft and check on Zao.
 
-Voss tells her to locate Harlan and take him with her. She cannot find him and continues alone.
+Voss tells her to locate Harlan and take him with her. Sorell calls him over the radio, but the jammer prevents any reply. As she descends the central shaft, she briefly checks nearby deck entrances and calls again. Zao’s interrupted warning makes delay increasingly dangerous, so Sorell decides to continue alone.
 
 Sorell uses one of the central shaft’s helical staircases, moving hand over hand along its rails and landings in microgravity. Harlan is already taking the separate, more direct service shaft aft, so their paths do not cross. There are no cameras or reliable position records during her journey.
 
-Sending her alone is the decision Voss later apologizes for.
+Voss later apologizes for sending Sorell into a communications blackout without confirming her escort and for the premature judgment that followed. The final decision to continue alone is Sorell’s.
 
 ### B5 — The only possible warning
 
@@ -613,7 +615,7 @@ During questioning, Harlan adds a lie:
 
 > **Rylen Harlan:** “Before launch she asked me what it would take to delay the crossing. I thought it was professional caution.”
 
-Voss remembers misreading Sorell’s Prologue comments as fear. The same fear assigned to Harlan can therefore be assigned to her.
+Voss remembers having reduced Sorell’s Prologue caution to reluctance. Harlan weaponizes that earlier mistake, sharpening professional rigor into a motive for delay.
 
 The evidence justifies custody but does not prove murder. What stays with Elin is Sorell’s disconsolate grief and the speed with which Harlan converted uncertainty into accusation.
 
@@ -814,6 +816,16 @@ During the first minute, as soon as the recording establishes the bomb and its d
 
 Harlan says that a voice and image can be fabricated.
 
+### E5 — Authentication
+
+Elin verifies the cryptographic signature. It is Zao’s personal key and is timestamped minutes before the throat crossing.
+
+Attribution appears on screen.
+
+The authentication answers Harlan’s objection immediately.
+
+The signature verifies promptly. During that second minute the timestamp, exposure and manifest are also cross-checked; the subsequent delay belongs to flight control, not cryptographic computation.
+
 ### E4 — Convergence
 
 The message joins the evidence already present:
@@ -828,16 +840,6 @@ The message joins the evidence already present:
 No single clue carries the revelation alone.
 
 The convergence requires isolating Harlan and reviewing Sorell’s detention; it does not turn every suspicion into a judicial certainty or by itself prove that there are no accomplices.
-
-### E5 — Authentication
-
-Elin verifies the cryptographic signature. It is Zao’s personal key and is timestamped minutes before the throat crossing.
-
-Attribution appears on screen.
-
-The authentication answers Harlan’s objection immediately.
-
-The signature verifies promptly. During that second minute the timestamp, exposure and manifest are also cross-checked; the subsequent delay belongs to flight control, not cryptographic computation.
 
 ### E6 — Orders
 
@@ -863,7 +865,7 @@ When Okoye grips the wrist device and glances toward the revocation display, Har
 
 Harlan enters the service shaft and locks its bridge hatch locally behind him. This prevents immediate pursuit through the shaft. Voss and Okoye do not yet know whether its lower-deck access hatches remain usable.
 
-Harlan knows Elin is heading toward both the local control and the bomb. If she diverts or stops the ship, his contact-point attack fails even if the charge remains active. Because the device accepts no remote commands, he must reach her physically, prevent both interventions or force an immediate detonation.
+Harlan knows Elin is heading toward both the local control and the bomb. If she diverts or stops the ship, his contact-point attack fails even if the charge remains active. Because the device accepts no remote commands, he must reach her physically and keep her from completing either intervention until the existing countdown expires.
 
 Sorell remains alone on the bridge. Final approach is executing automatically; she monitors it while preparing the contact protocol.
 
@@ -971,7 +973,7 @@ Before attending to the station, he goes to Sorell.
 
 > **Elias Voss:** “I’m sorry.”
 
-The apology covers more than her detention. He misread her caution, sent her alone, accepted an incomplete explanation, and allowed the mission to approach contact without its xenolinguist.
+The apology covers more than her detention. He misread her caution, sent her into the blackout without confirming her escort, accepted the first coherent explanation too quickly, and kept the ship’s only xenolinguist from preparing the greeting until the final minutes.
 
 Voss takes command position and gives the order.
 

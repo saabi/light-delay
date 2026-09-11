@@ -72,8 +72,8 @@ editoriales con margen para las maniobras, no una solución orbital exacta.
 Se cotejan ES/EN, orden temporal, conocimiento, accesos, fuentes del mensaje y revelaciones.
 Los tests estructurales no certifican por sí solos la causalidad: esta tabla acompaña la lectura
 de corrido de los cuerpos `story`, sin apoyarse en detalles ni enlaces desplegados.
-Los audios existentes de prosa rev. 15 permanecen desactualizados frente a rev. 17.
-Se regeneran sólo exports y textos TTS. No se modifica el archivo de cuts anteriores.
+El dual EN de audiencia se regeneró para rev. 17 (2026-09-11). El audio ES de prosa
+rev. 15 permanece desactualizado. No se modifica el archivo de cuts anteriores.
 
 Verificación ejecutada el 2026-09-11: 96 tests unitarios y dos tests de catálogo de audio
 aprobados; Svelte/TypeScript sin errores ni advertencias; datos, traducciones, documentación,
