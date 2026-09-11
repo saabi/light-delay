@@ -9,6 +9,8 @@ La escaleta es la fuente autoral de la **historia y su cadena causal**. La autor
 
 `outline.synopsis` resume conflicto, cadena principal y resolución. `order` se controla por nivel, no por posición en el array.
 
+Una escaleta derivada puede declarar `outline.derivation` con la escaleta y revisión fuente, la relación de adaptación, el nivel de fidelidad y su estado de revisión. Cuando la fidelidad es `complete_causal_chain`, todos los hitos `story` de la fuente deben aparecer en al menos un `sourceRefs` de tipo `outline`; pueden combinarse, pero no desaparecer silenciosamente. Un cambio de revisión en la fuente obliga a marcar o revisar el derivado antes de seguir llamándolo vigente.
+
 Una escaleta puede ser deliberadamente **story-only** antes de que exista implementación. No debe inventar `detail`, escenas o cobertura para aparentar avance. `storySections` agrupa la espina en prólogo, secuencias u otras unidades sin convertir sus encabezados en falsos acontecimientos.
 
 ## Contexto y prosa estructurada
@@ -49,11 +51,14 @@ npm run report:outline-gaps -- --target script
 npm run report:outline-gaps -- --target animatic
 npm run report:outline-readability
 npm run report:outline-story
+npm run report:outline-derivation
 npm run report:dialogue-style
 npm run check:trailer-spoilers
 ```
 
 `report:outline-story` exporta synopsis, framing y los hitos `story`, pero excluye `detail`: es la lectura narrativa que debe funcionar sin abrir implementación. `check:trailer-spoilers` falla si el guion o la escaleta del avance identifican al culpable, confirman el envío/recepción o asientan positivamente la muerte de Zao.
+
+`report:outline-derivation` compara la revisión fijada con la fuente vigente y verifica la cobertura de los hitos fuente. No juzga por sí solo si una compresión conserva toda la información causal: esa comprobación sigue requiriendo leer el informe `outline-story` de corrido.
 
 La narrativa maestra WIP se edita en JSON. `npm run master-outline:export` genera sus Markdown ES/EN —incluidos revisión y hablantes— y `npm run master-outline:export:check` detecta deriva. `npm run master-outline:import-candidate` conserva la vía inversa únicamente como importación revisable: escribe un candidato separado y nunca reemplaza la autoridad. `report:dialogue-style` verifica que todas sus citas estén atribuidas y que cada miembro del elenco maestro tenga dirección completa en ambos idiomas.
 

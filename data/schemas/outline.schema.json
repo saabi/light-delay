@@ -35,6 +35,19 @@
           "additionalProperties": false
         },
         "editorialNotice": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "derivation": {
+          "type": "object",
+          "required": ["sourceOutlineId", "sourceRevision", "relationship", "fidelity", "reviewStatus"],
+          "properties": {
+            "sourceOutlineId": { "type": "string", "minLength": 1 },
+            "sourceRevision": { "type": "integer", "minimum": 1 },
+            "sourceVersion": { "type": "string", "minLength": 1 },
+            "relationship": { "const": "adaptation" },
+            "fidelity": { "const": "complete_causal_chain" },
+            "reviewStatus": { "enum": ["current", "stale", "review_required"] }
+          },
+          "additionalProperties": false
+        },
         "source": {
           "type": "object",
           "required": ["path", "revision", "language"],

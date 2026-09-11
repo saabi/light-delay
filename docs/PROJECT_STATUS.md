@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-11 — Nuevo Festival derivado del master rev. 19
+
+- Registrado `script:light-delay-festival-master` como derivado WIP independiente dentro de `continuity:light-delay-master-wip`; el Festival anterior permanece deprecado.
+- Su escaleta story-only comprime los 58 hitos del master en 24 beats y 11 secuencias, con objetivo aproximado de 11:30 y rango editorial de 10–12 minutos.
+- La trazabilidad outline→outline y el nuevo `report:outline-derivation` comprueban revisión fuente y cobertura causal completa. La UI muestra revisión, estado y enlaces a los hitos master.
+- El `ScriptFile` sigue vacío. `docs/wip/festival-cut-screenplay-runway.en.md` anticipa escenas, funciones de diálogo y silencios sin declarar implementación.
+
 ## 2026-09-11 — Dual de audiencia ES (lastSyncedRevision 19)
 
 - Generado `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-es.mp3` (~48.5 min)

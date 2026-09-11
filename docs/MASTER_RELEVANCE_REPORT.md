@@ -8,7 +8,7 @@ Los elementos inciertos se conservan. Ningún candidato puede borrarse hasta cer
 
 Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `replacement_derivatives_approved` (open), `no_active_dependants` (open).
 
-## Vigente o compatible (70)
+## Vigente o compatible (77)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -40,12 +40,16 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | entity | `object:optical-contingency-transmitter` | explicit | retain |
 | entity | `object:wired-comms-deck-patch-panel` | explicit | retain |
 | entity | `vehicle:celestial-ardor` | explicit | retain |
+| outline | `outline:light-delay-festival-master` | explicit | retain |
 | outline | `outline:light-delay-master-narrative` | explicit | retain |
 | project | `project:light-delay` | explicit | retain |
+| script | `script:light-delay-festival-master` | explicit | retain |
 | script | `script:light-delay-master-narrative` | explicit | retain |
 | static_file | `AGENTS.md` | explicit | retain |
 | static_file | `CHANGELOG.md` | explicit | retain |
 | static_file | `data/production/audio/audience-dialogue-performance.json` | explicit | retain |
+| static_file | `data/production/audio/audience-narratives.json` | explicit | retain |
+| static_file | `data/production/audio/festival-audience-dialogue-performance.json` | explicit | retain |
 | static_file | `data/README.md` | explicit | retain |
 | static_file | `data/schemas/dialogue-performance.schema.json` | explicit | retain |
 | static_file | `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md` | explicit | retain |
@@ -65,6 +69,9 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/wip/audience-narrative.voices.es.md` | explicit | retain |
 | static_file | `docs/wip/continuity-review.en.md` | explicit | retain |
 | static_file | `docs/wip/continuity-review.es.md` | explicit | retain |
+| static_file | `docs/wip/festival-cut-audience-narrative.en.md` | explicit | retain |
+| static_file | `docs/wip/festival-cut-audience-narrative.voices.en.md` | explicit | retain |
+| static_file | `docs/wip/festival-cut-screenplay-runway.en.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.en.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.es.md` | explicit | retain |
 | static_file | `docs/wip/outiline-for-kokoro-tts.es.md` | explicit | retain |
@@ -83,10 +90,11 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (97)
+## Revisión requerida (98)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
+| animatic | `script:light-delay-festival-master` | default-review | retain |
 | asset | `asset:character-earth-protesters-sheet` | active-entity-reference | retain |
 | asset | `asset:character-harlan-sheet` | active-entity-reference | retain |
 | asset | `asset:character-joven-contacto-sheet` | active-entity-reference | retain |

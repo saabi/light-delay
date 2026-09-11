@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-11 — Master-derived Festival outline
+
+- Registered a new `script:light-delay-festival-master` WIP in the master continuity without reviving or overwriting the deprecated Festival cut.
+- Added a 24-beat, 11-sequence Festival outline targeting 10–12 minutes and mapping all 58 master revision-19 story beats exactly once.
+- Added outline-to-outline provenance, revision/fidelity metadata, derivation validation/reporting, and source-beat links in the outline UI.
+- Added a non-authoritative screenplay runway covering scene timing, dialogue opportunities, and intentional silence; the screenplay stub remains empty.
+
 ## 2026-09-11 — Dual de audiencia ES regenerado (rev. 19)
 
 - Regenerado `light-delay-audience-dual-es.mp3` (~48.5 min) y chunks

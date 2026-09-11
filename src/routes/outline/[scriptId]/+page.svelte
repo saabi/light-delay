@@ -27,6 +27,7 @@
 		OutlineStorySection
 	} from '$lib/types/outline';
 	import type { StoryText } from '$lib/types/i18n';
+	import type { OutlineSourceReference } from '$lib/types/script';
 	import { withLocale } from '$lib/utils/paths';
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 
@@ -37,7 +38,10 @@
 	const entry = $derived(registry.find((item) => item.id === scriptId));
 	const outline = $derived(getLocalizedOutline(scriptId, language.dialogueLanguage));
 	const lifecycle = $derived(
-		getLifecycleForRef('outline', outline?.outline.id ?? `outline:${scriptId.replace('script:', '')}`)
+		getLifecycleForRef(
+			'outline',
+			outline?.outline.id ?? `outline:${scriptId.replace('script:', '')}`
+		)
 	);
 	const storySteps = $derived(
 		outline
@@ -62,6 +66,13 @@
 	const importedSources = $derived(
 		outline?.outline.provenance?.importedFrom ??
 			(outline?.outline.source ? [outline.outline.source] : [])
+	);
+	const derivation = $derived(outline?.outline.derivation);
+	const authority = getProject().project.narrativeAuthority;
+	const derivationSourceHref = $derived(
+		derivation?.sourceOutlineId === authority.outlineId
+			? withLocale(`/outline/${encodeScriptId(authority.scriptId)}`)
+			: undefined
 	);
 	const storyGroups = $derived.by(() => {
 		const sections = [...(outline?.storySections ?? [])].sort((a, b) => a.order - b.order);
@@ -127,6 +138,18 @@
 	function groupTitle(group: OutlineStorySection | { title?: StoryText }) {
 		return group.title ? text(group.title) : m.outline_story();
 	}
+	function derivationStatusLabel(value: 'current' | 'stale' | 'review_required') {
+		return value === 'current'
+			? m.outline_derivation_current()
+			: value === 'stale'
+				? m.outline_derivation_stale()
+				: m.outline_derivation_review();
+	}
+	function outlineSourceRefs(step: OutlineStep): OutlineSourceReference[] {
+		return (step.sourceRefs ?? []).filter(
+			(ref): ref is OutlineSourceReference => ref.kind === 'outline'
+		);
+	}
 </script>
 
 <svelte:head>
@@ -152,11 +175,29 @@
 			]}
 		/>
 		<LifecycleNotice {lifecycle} />
-		<StoryLanguageNotice sourceLanguage={outline.outline.localization?.sourceLanguage ?? (entry?.status === 'deprecated' ? 'es' : 'en')} />
+		<StoryLanguageNotice
+			sourceLanguage={outline.outline.localization?.sourceLanguage ??
+				(entry?.status === 'deprecated' ? 'es' : 'en')}
+		/>
+		{#if derivation}
+			<aside class="derivation-notice" data-status={derivation.reviewStatus} role="note">
+				<strong>{derivationStatusLabel(derivation.reviewStatus)}</strong>
+				<p>
+					{#if derivationSourceHref}<a href={derivationSourceHref}>{derivation.sourceOutlineId}</a
+						>{:else}<code>{derivation.sourceOutlineId}</code>{/if}
+					· {m.outline_source_revision({ revision: String(derivation.sourceRevision) })}
+					· <code>{derivation.fidelity}</code>
+				</p>
+			</aside>
+		{/if}
 		{#if language.dialogueLanguage === 'es' && outline.outline.localization?.translations.es?.status === 'needs_revision'}
 			<aside class="editorial-notice" role="note">
 				<strong>{m.outline_translation_stale()}</strong>
-				<p>{m.outline_translation_revision({ revision: String(outline.outline.localization.translations.es.lastSyncedRevision ?? '?') })}</p>
+				<p>
+					{m.outline_translation_revision({
+						revision: String(outline.outline.localization.translations.es.lastSyncedRevision ?? '?')
+					})}
+				</p>
 			</aside>
 		{/if}
 
@@ -238,6 +279,16 @@
 										{/each}
 									</div>
 								{/if}
+								{#if outlineSourceRefs(step).length}
+									<p class="source-steps">
+										<strong>{m.outline_source_steps()}:</strong>
+										{#each outlineSourceRefs(step) as ref, index}
+											{index ? ', ' : ''}{#if derivationSourceHref && ref.stepId}<a
+													href={`${derivationSourceHref}#${ref.stepId}`}>{ref.stepId}</a
+												>{:else}<code>{ref.stepId ?? ref.outlineId}</code>{/if}
+										{/each}
+									</p>
+								{/if}
 								{#if detail.length}
 									<details class="details">
 										<summary>{m.outline_details_show({ count: String(detail.length) })}</summary>
@@ -313,12 +364,38 @@
 		padding: 2.5rem var(--page-gutter) 4rem;
 	}
 	.editorial-notice,
+	.derivation-notice,
 	.story-only {
 		margin: 0 0 1.25rem;
 		padding: 0.9rem 1rem;
 		border: 1px solid color-mix(in srgb, var(--gold) 55%, var(--line));
 		border-radius: 10px;
 		background: color-mix(in srgb, var(--gold) 7%, var(--panel));
+	}
+	.derivation-notice {
+		margin: 0 0 1.25rem;
+		padding: 0.9rem 1rem;
+		border: 1px solid color-mix(in srgb, var(--cyan) 50%, var(--line));
+		border-radius: 10px;
+		background: color-mix(in srgb, var(--cyan) 6%, var(--panel));
+	}
+	.derivation-notice[data-status='stale'],
+	.derivation-notice[data-status='review_required'] {
+		border-color: color-mix(in srgb, var(--gold) 65%, var(--line));
+	}
+	.derivation-notice p {
+		margin: 0.35rem 0 0;
+		color: var(--muted);
+	}
+	.derivation-notice a,
+	.source-steps a {
+		color: var(--cyan);
+	}
+	.source-steps {
+		margin: 0.8rem 0 0;
+		color: var(--muted);
+		font: 0.72rem/1.5 var(--font-mono);
+		overflow-wrap: anywhere;
 	}
 	.editorial-notice p {
 		margin: 0.35rem 0 0;

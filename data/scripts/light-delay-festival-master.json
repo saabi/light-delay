@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.1.0",
+  "script": {
+    "id": "script:light-delay-festival-master",
+    "projectId": "project:light-delay",
+    "continuityId": "continuity:light-delay-master-wip",
+    "title": {
+      "es": "Lúz Tardía — Corte Festival derivado del master (WIP)",
+      "en": "Light Delay — Master-derived Festival Cut (WIP)"
+    },
+    "version": "0.1.0-wip",
+    "status": "draft",
+    "kind": "festival_cut",
+    "targetDurationMs": 690000,
+    "lineage": {
+      "sourceScriptId": "script:light-delay-master-narrative",
+      "relationship": "cut",
+      "sourceVersion": "0.1.0-wip",
+      "sourceOutlineId": "outline:light-delay-master-narrative",
+      "sourceOutlineRevision": 19
+    },
+    "actIds": []
+  },
+  "acts": [],
+  "sequences": [],
+  "scenes": [],
+  "beats": [],
+  "cues": [],
+  "shots": [],
+  "takes": []
+}

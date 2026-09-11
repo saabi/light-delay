@@ -10,10 +10,7 @@
 	} from '$lib/data/repositories/lookups';
 	import { resolveLocalized } from '$lib/data/selectors/index';
 	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
-	import {
-		analyzeShotDialogue,
-		estimateShotSpokenMs
-	} from '$lib/data/selectors/dialogueTiming';
+	import { analyzeShotDialogue, estimateShotSpokenMs } from '$lib/data/selectors/dialogueTiming';
 	import { getShotReadinessChips } from '$lib/data/selectors/editorialReadiness';
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import type { EntityRef, Note } from '$lib/types/common';
@@ -88,6 +85,9 @@
 		if (source.kind === 'document') {
 			return `${source.documentId}${source.anchor ? ` #${source.anchor}` : ''}`;
 		}
+		if (source.kind === 'outline') {
+			return `${source.outlineId}${source.stepId ? ` · ${source.stepId}` : ''}`;
+		}
 		return [source.scriptId, source.sceneId, source.beatId, source.cueId, source.shotId]
 			.filter(Boolean)
 			.join(' · ');
@@ -145,7 +145,9 @@
 							<span class="flag">{m.readiness_missing_camera()}</span>
 						{/if}
 						{#if dialogueFlags.multiSpeaker}
-							<span class="flag">{m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}</span>
+							<span class="flag"
+								>{m.timing_flag_multi_speaker({ count: dialogueFlags.speakerCount })}</span
+							>
 						{/if}
 						{#if dialogueFlags.offCameraDialogue}
 							<span class="flag">{m.timing_flag_off_camera()}</span>
@@ -483,7 +485,6 @@
 			{/each}
 		</section>
 	{/if}
-
 </div>
 
 <style>

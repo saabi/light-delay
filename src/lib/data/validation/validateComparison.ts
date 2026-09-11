@@ -42,6 +42,8 @@ function validateSourceReference(
 			errors.push(`${label}: unknown document ${ref.documentId}`);
 		return;
 	}
+	// Outline references are validated against the outline repository by validate:data.
+	if (ref.kind === 'outline') return;
 	const source = scriptsById.get(ref.scriptId);
 	if (!source) {
 		errors.push(`${label}: unknown source script ${ref.scriptId}`);

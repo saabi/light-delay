@@ -336,8 +336,10 @@ function main() {
 	else {
 		if (authority.scriptId !== project.project.canonicalScriptId)
 			errors.push('project: narrativeAuthority.scriptId must equal canonicalScriptId');
-		if (!registryIds.has(authority.scriptId)) errors.push('project: narrativeAuthority script not registered');
-		if (!continuityIds.has(authority.continuityId)) errors.push('project: narrativeAuthority continuity not registered');
+		if (!registryIds.has(authority.scriptId))
+			errors.push('project: narrativeAuthority script not registered');
+		if (!continuityIds.has(authority.continuityId))
+			errors.push('project: narrativeAuthority continuity not registered');
 	}
 
 	const scriptFilesOnDisk = readdirSync(SCRIPTS_DIR).filter((f) => f.endsWith('.json'));
@@ -520,12 +522,22 @@ function main() {
 	}
 
 	let outlineCount = 0;
+	const outlinesById = new Map();
 	try {
 		const outlineFiles = readdirSync(OUTLINES_DIR).filter((name) => name.endsWith('.json'));
+		const loadedOutlines = outlineFiles.map((filename) => ({
+			filename,
+			outline: JSON.parse(readFileSync(join(OUTLINES_DIR, filename), 'utf8'))
+		}));
+		for (const record of loadedOutlines) {
+			const id = record.outline.outline?.id;
+			if (!id) continue;
+			if (outlinesById.has(id)) errors.push(`outlines: duplicate outline id ${id}`);
+			outlinesById.set(id, record);
+		}
 		const eventIds = new Set(taxonomy.majorEvents.map((event) => event.id));
-		for (const filename of outlineFiles) {
+		for (const { filename, outline } of loadedOutlines) {
 			outlineCount += 1;
-			const outline = JSON.parse(readFileSync(join(OUTLINES_DIR, filename), 'utf8'));
 			const label = `outline(${filename})`;
 			if (!outline.schemaVersion) errors.push(`${label}: missing schemaVersion`);
 			if (!outline.outline?.id) errors.push(`${label}: missing outline.id`);
@@ -552,6 +564,26 @@ function main() {
 					errors.push(`${label}: incomplete source metadata`);
 				if (source.sha256 && !/^[a-f0-9]{64}$/.test(source.sha256))
 					errors.push(`${label}: invalid source SHA-256`);
+			}
+			const derivation = outline.outline?.derivation;
+			if (derivation) {
+				const sourceRecord = outlinesById.get(derivation.sourceOutlineId);
+				if (!sourceRecord)
+					errors.push(`${label}: unknown derivation source ${derivation.sourceOutlineId}`);
+				else {
+					const sourceMeta = sourceRecord.outline.outline;
+					if (
+						derivation.reviewStatus === 'current' &&
+						sourceMeta.revision !== derivation.sourceRevision
+					)
+						errors.push(
+							`${label}: claims current against ${derivation.sourceOutlineId} r${derivation.sourceRevision}, but source is r${sourceMeta.revision}`
+						);
+					if (derivation.sourceVersion && sourceMeta.version !== derivation.sourceVersion)
+						warnings.push(
+							`${label}: source version ${sourceMeta.version} differs from pinned ${derivation.sourceVersion}`
+						);
+				}
 			}
 			const framingIds = new Set();
 			const framingOrders = new Map();
@@ -641,6 +673,45 @@ function main() {
 						if (!beatIds.has(beatId)) errors.push(`${stepLabel}: unknown beatId ${beatId}`);
 					}
 				}
+				for (const ref of step.sourceRefs || []) {
+					if (ref.kind !== 'outline') continue;
+					const sourceRecord = outlinesById.get(ref.outlineId);
+					if (!sourceRecord) {
+						errors.push(`${stepLabel}: unknown source outline ${ref.outlineId}`);
+						continue;
+					}
+					if (
+						ref.stepId &&
+						!sourceRecord.outline.steps.some((candidate) => candidate.id === ref.stepId)
+					)
+						errors.push(`${stepLabel}: unknown source outline step ${ref.stepId}`);
+				}
+			}
+			if (derivation?.fidelity === 'complete_causal_chain') {
+				const source = outlinesById.get(derivation.sourceOutlineId)?.outline;
+				if (source) {
+					const expected = source.steps
+						.filter((step) => step.level === 'story')
+						.map((step) => step.id);
+					const mapped = (outline.steps || []).flatMap((step) =>
+						(step.sourceRefs || [])
+							.filter(
+								(ref) => ref.kind === 'outline' && ref.outlineId === derivation.sourceOutlineId
+							)
+							.map((ref) => ref.stepId)
+							.filter(Boolean)
+					);
+					const missing = expected.filter((id) => !mapped.includes(id));
+					const duplicates = [
+						...new Set(mapped.filter((id, index) => mapped.indexOf(id) !== index))
+					];
+					if (missing.length)
+						errors.push(`${label}: unmapped source story steps ${missing.join(', ')}`);
+					if (duplicates.length)
+						warnings.push(
+							`${label}: source story steps mapped more than once ${duplicates.join(', ')}`
+						);
+				}
 			}
 			for (const sectionId of storySectionIds) {
 				if (
@@ -685,6 +756,20 @@ function main() {
 		if (error && typeof error === 'object' && 'code' in error && error.code !== 'ENOENT') {
 			errors.push(`outlines: failed to read directory (${String(error)})`);
 		}
+	}
+	for (const entry of registry) {
+		const lineage = entry.lineage;
+		if (!lineage?.sourceOutlineId) continue;
+		const sourceRecord = outlinesById.get(lineage.sourceOutlineId);
+		if (!sourceRecord)
+			errors.push(`registry ${entry.id}: unknown sourceOutlineId ${lineage.sourceOutlineId}`);
+		else if (
+			lineage.sourceOutlineRevision &&
+			sourceRecord.outline.outline?.revision !== lineage.sourceOutlineRevision
+		)
+			warnings.push(
+				`registry ${entry.id}: source outline is r${sourceRecord.outline.outline?.revision}, lineage pins r${lineage.sourceOutlineRevision}`
+			);
 	}
 
 	for (const variant of entityVariants.variants) {

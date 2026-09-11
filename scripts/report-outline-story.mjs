@@ -31,6 +31,7 @@ const outlines = readdirSync(sourceDir)
 		title: file.outline.title,
 		synopsis: file.outline.synopsis,
 		editorialNotice: file.outline.editorialNotice,
+		derivation: file.outline.derivation,
 		source: file.outline.source,
 		framing: file.framing ?? [],
 		storySections: file.storySections ?? [],
@@ -58,6 +59,11 @@ const markdown = ['# Escaletas — lectura de historia', ''];
 for (const outline of outlines) {
 	markdown.push(`## ${local(outline.title, 'es')}`, '', local(outline.synopsis, 'es'), '');
 	if (outline.editorialNotice) markdown.push(`> ${local(outline.editorialNotice, 'es')}`, '');
+	if (outline.derivation)
+		markdown.push(
+			`> Derivada de \`${outline.derivation.sourceOutlineId}\` r${outline.derivation.sourceRevision} · ${outline.derivation.reviewStatus} · ${outline.derivation.fidelity}`,
+			''
+		);
 	for (const framing of outline.framing
 		.filter((item) => item.placement === 'before_story')
 		.sort((a, b) => a.order - b.order)) {

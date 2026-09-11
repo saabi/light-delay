@@ -19,8 +19,18 @@ describe('structured project data', () => {
 		expect(script.shots).toHaveLength(0);
 		expect(script.takes).toHaveLength(0);
 		expect(listCurrentScripts().map((entry) => entry.id)).toEqual([
-			'script:light-delay-master-narrative'
+			'script:light-delay-master-narrative',
+			'script:light-delay-festival-master'
 		]);
+	});
+
+	it('registers the new Festival derivative as an empty master-based stub', () => {
+		const festival = getScript('script:light-delay-festival-master');
+		expect(festival.script.kind).toBe('festival_cut');
+		expect(festival.script.continuityId).toBe('continuity:light-delay-master-wip');
+		expect(festival.script.lineage?.sourceOutlineRevision).toBe(19);
+		expect(festival.scenes).toHaveLength(0);
+		expect(festival.shots).toHaveLength(0);
 	});
 
 	it('preserves 19 scenes and 128 shots in the deprecated main-short archive', () => {
@@ -52,9 +62,7 @@ describe('structured project data', () => {
 		expect(trailer.shots).toHaveLength(33);
 		expect(trailer.takes.every((t) => Boolean(t.imageAssetId))).toBe(true);
 		expect(getEffectiveDuration(trailer)).toBe(102_500);
-		const storyTakes = trailer.takes.filter(
-			(t) => t.imageStatus?.status === 'needs_regeneration'
-		);
+		const storyTakes = trailer.takes.filter((t) => t.imageStatus?.status === 'needs_regeneration');
 		const cardTakes = trailer.takes.filter((t) => t.imageStatus?.status === 'needs_replacement');
 		expect(storyTakes.length).toBeGreaterThan(0);
 		expect(cardTakes.length).toBe(3);

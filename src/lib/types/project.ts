@@ -5,6 +5,8 @@ export interface ScriptLineage {
 	sourceScriptId: ScriptId;
 	relationship: 'cut' | 'trailer' | 'teaser' | 'adaptation' | 'rewrite' | 'alternate_continuity';
 	sourceVersion?: string;
+	sourceOutlineId?: string;
+	sourceOutlineRevision?: number;
 	notes?: StoryText;
 }
 

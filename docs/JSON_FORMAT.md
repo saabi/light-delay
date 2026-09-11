@@ -110,9 +110,16 @@ export interface DocumentSourceReference {
   anchor?: string;
 }
 
+export interface OutlineSourceReference {
+  kind: "outline";
+  outlineId: string;
+  stepId?: string;
+}
+
 export type SourceReference =
   | ScriptSourceReference
-  | DocumentSourceReference;
+  | DocumentSourceReference
+  | OutlineSourceReference;
 
 export interface SourceTraceable {
   sourceRefs?: SourceReference[];
@@ -200,6 +207,8 @@ export interface ScriptLineage {
     | "rewrite"
     | "alternate_continuity";
   sourceVersion?: string;
+  sourceOutlineId?: string;
+  sourceOutlineRevision?: number;
   notes?: string;
 }
 ```
@@ -308,6 +317,14 @@ export interface OutlineFile {
     version: string;
     revision?: number; // revisión editorial vigente; no confundir con procedencia histórica
     editorialNotice?: LocalizedString;
+    derivation?: {
+      sourceOutlineId: string;
+      sourceRevision: number;
+      sourceVersion?: string;
+      relationship: "adaptation";
+      fidelity: "complete_causal_chain";
+      reviewStatus: "current" | "stale" | "review_required";
+    };
     source?: {
       path: string;
       revision: string;
@@ -335,6 +352,8 @@ export interface OutlineFile {
 ```
 
 `framing` conserva contexto que no constituye acontecimientos dramáticos. `storySections` agrupa la historia sin inferir estructura desde IDs. Una escaleta puede omitir por completo `detail` y cobertura mientras su implementación no exista.
+
+`SourceReference` también acepta `{ kind: "outline", outlineId, stepId? }`. En un derivado, esas referencias registran qué hitos de la escaleta fuente fueron preservados o combinados sin crear herencia viva. La revisión fuente permanece fijada en `outline.derivation`; `report:outline-derivation` detecta deriva y faltantes.
 
 ### Script structure
 
@@ -836,8 +855,9 @@ export interface DialoguePerformanceFile {
 
 export interface DialoguePerformanceEntry {
   id: string; // audience:dialogue:…; estable entre idiomas
-  sourceStepId: string; // master:story-…
+  sourceStepId: string; // paso story del outline registrado
   speakerId: CharacterId;
+  lineStatus?: 'established' | 'provisional'; // default: established
   intent: LocalizedString;
   delivery: {
     en: LocalizedString;
@@ -857,9 +877,16 @@ continúa viniendo exclusivamente del relato ES o EN.
 La revisión se lee siempre desde el outline indicado por `sourceOutlineId`; cualquier etiqueta
 visible en Markdown es una copia verificada, no otra autoridad editorial.
 
+`production/audio/audience-narratives.json` registra múltiples adaptaciones sin fijar rutas en
+los builders. Cada entrada declara su outline fuente, prosa, ledger de interpretación, salida TTS,
+cantidad de capítulos y estado por idioma. `sourceStepCoverage: complete` exige comentarios
+`audience-source-step` que cubran cada beat `story` una vez y en orden. Las líneas nuevas de una
+adaptación se marcan `provisional`: pueden servir de semilla para un guion futuro, pero no lo
+modifican ni adquieren autoridad de guion por aparecer en el relato.
+
 El esquema es estricto y no admite propiedades extra. Además de la validación
-JSON, `npm run tts:audience:check` exige paridad de estructura, IDs y hablantes,
-referencias válidas al master y derivados TTS actualizados.
+JSON, `npm run tts:audience:check` exige estructura, IDs y hablantes válidos,
+referencias al outline declarado y derivados TTS actualizados para toda lengua iniciada.
 
 ## Locations, objects, vehicles and factions
 

@@ -4,6 +4,7 @@ import festivalScriptJson from '../../../../data/scripts/light-delay-festival.js
 import trailerScriptJson from '../../../../data/scripts/light-delay-trailer.json';
 import longScriptJson from '../../../../data/scripts/light-delay-long.json';
 import masterNarrativeScriptJson from '../../../../data/scripts/light-delay-master-narrative.json';
+import festivalMasterScriptJson from '../../../../data/scripts/light-delay-festival-master.json';
 import assetsJson from '../../../../data/assets.json';
 import charactersJson from '../../../../data/characters.json';
 import locationsJson from '../../../../data/locations.json';
@@ -83,6 +84,10 @@ const SCRIPT_MODULES: Record<string, ScriptFile> = {
 	'script:light-delay-master-narrative': assertJsonModule(
 		masterNarrativeScriptJson as ScriptFile,
 		'scripts/light-delay-master-narrative'
+	),
+	'script:light-delay-festival-master': assertJsonModule(
+		festivalMasterScriptJson as ScriptFile,
+		'scripts/light-delay-festival-master'
 	)
 };
 
@@ -108,10 +113,7 @@ export function listCurrentScripts(): ScriptRegistryEntry[] {
 }
 
 export function getEditorialLifecycle(): EditorialLifecycleFile {
-	return assertJsonModule(
-		editorialLifecycleJson as EditorialLifecycleFile,
-		'editorial-lifecycle'
-	);
+	return assertJsonModule(editorialLifecycleJson as EditorialLifecycleFile, 'editorial-lifecycle');
 }
 
 export interface ResolvedLifecycle {
@@ -132,10 +134,20 @@ export function getLifecycleForRef(kind: LifecycleRefKind, id: string): Resolved
 	if (kind === 'asset') {
 		const asset = getAssets().assets.find((item) => item.id === id);
 		if (asset?.role === 'animatic_placeholder') {
-			return { status: 'active', relevance: 'platform', disposition: 'retain', basis: 'asset-role' };
+			return {
+				status: 'active',
+				relevance: 'platform',
+				disposition: 'retain',
+				basis: 'asset-role'
+			};
 		}
 		if (asset?.role === 'animatic') {
-			return { status: 'obsolete', relevance: 'unrelated', disposition: 'delete_after_gates', basis: 'deprecated-animatic' };
+			return {
+				status: 'obsolete',
+				relevance: 'unrelated',
+				disposition: 'delete_after_gates',
+				basis: 'deprecated-animatic'
+			};
 		}
 		const owners = [
 			...getCharacters().characters,
@@ -147,7 +159,12 @@ export function getLifecycleForRef(kind: LifecycleRefKind, id: string): Resolved
 		if (owners.length) {
 			const states = owners.map((entity) => getLifecycleForRef('entity', entity.id));
 			if (states.every((item) => item.status === 'obsolete')) {
-				return { status: 'obsolete', relevance: 'unrelated', disposition: 'delete_after_gates', basis: 'obsolete-entity-only' };
+				return {
+					status: 'obsolete',
+					relevance: 'unrelated',
+					disposition: 'delete_after_gates',
+					basis: 'obsolete-entity-only'
+				};
 			}
 		}
 	}

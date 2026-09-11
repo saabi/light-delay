@@ -17,6 +17,7 @@ import { readFileSync } from 'node:fs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../../../..');
 const festivalId = 'script:light-delay-festival';
+const festivalMasterId = 'script:light-delay-festival-master';
 const masterId = 'script:light-delay-master-narrative';
 
 describe('outlines (optional)', () => {
@@ -111,9 +112,7 @@ describe('outlines (optional)', () => {
 		expect([e3?.order, e5?.order, e4?.order, e6?.order]).toEqual([44, 45, 46, 47]);
 		expect(e5?.causalLinks?.[0]?.sourceStepId).toBe('master:story-e3');
 		expect(e4?.causalLinks?.[0]?.sourceStepId).toBe('master:story-e5');
-		expect(typeof f3?.title === 'string' ? f3.title : f3?.title.en).toContain(
-			'Fourth gravity dip'
-		);
+		expect(typeof f3?.title === 'string' ? f3.title : f3?.title.en).toContain('Fourth gravity dip');
 		const localized = getLocalizedOutline(masterId, 'en')!;
 		expect(localized.steps[0]?.body?.[0]?.type).toBe('paragraph');
 		const first = localized.steps[0]?.body?.[0];
@@ -171,6 +170,31 @@ describe('outlines (optional)', () => {
 					block.text.es?.includes('no demuestra benevolencia')
 			)
 		).toBe(true);
+	});
+
+	it('maps the master-derived Festival outline to every revision-19 story beat', () => {
+		const master = getOutline(masterId)!;
+		const festival = getOutline(festivalMasterId)!;
+		expect(festival.outline.derivation).toEqual({
+			sourceOutlineId: 'outline:light-delay-master-narrative',
+			sourceRevision: 19,
+			sourceVersion: '0.8.0-wip',
+			relationship: 'adaptation',
+			fidelity: 'complete_causal_chain',
+			reviewStatus: 'current'
+		});
+		expect(festival.storySections).toHaveLength(11);
+		expect(festival.steps).toHaveLength(24);
+		expect(festival.steps.every((step) => step.level === 'story')).toBe(true);
+		const mapped = festival.steps.flatMap((step) =>
+			(step.sourceRefs ?? [])
+				.filter((ref) => ref.kind === 'outline')
+				.map((ref) => (ref.kind === 'outline' ? ref.stepId : undefined))
+				.filter(Boolean)
+		);
+		const sourceIds = master.steps.filter((step) => step.level === 'story').map((step) => step.id);
+		expect(mapped).toHaveLength(58);
+		expect(new Set(mapped)).toEqual(new Set(sourceIds));
 	});
 
 	it('validateOutline accepts hierarchy, causal explanations, and optional coverage', () => {
@@ -252,7 +276,7 @@ describe('outlines (optional)', () => {
 describe('report:outline-missing', () => {
 	it('reports complete outline coverage', () => {
 		const report = buildOutlineMissingReport(ROOT);
-		expect(report.summary.scripts).toBe(5);
+		expect(report.summary.scripts).toBe(6);
 		expect(report.summary.missing).toBe(0);
 		expect(report.missing).toEqual([]);
 	});
@@ -283,11 +307,55 @@ describe('master narrative continuity', () => {
 			const fourth = lang === 'es' ? 'por cuarta vez' : 'for the fourth time';
 			expect(text.split(third)).toHaveLength(2);
 			expect(text.split(fourth)).toHaveLength(2);
-			expect(investigation.indexOf('audience:dialogue:d2-harlan-fuel')).toBeLessThan(investigation.indexOf(third));
+			expect(investigation.indexOf('audience:dialogue:d2-harlan-fuel')).toBeLessThan(
+				investigation.indexOf(third)
+			);
 			expect(investigation).toContain(third);
 			expect(climax).toContain(fourth);
-			expect(revelation).toContain(lang === 'es' ? 'Cuatro personas se vuelven hacia Harlan' : 'Four people turn toward Harlan');
-			expect(text).not.toMatch(/Five people turn toward Harlan|Earth will not know until|Weight vanishes for the third time|salta a una fecha absurdamente/);
+			expect(revelation).toContain(
+				lang === 'es' ? 'Cuatro personas se vuelven hacia Harlan' : 'Four people turn toward Harlan'
+			);
+			expect(text).not.toMatch(
+				/Five people turn toward Harlan|Earth will not know until|Weight vanishes for the third time|salta a una fecha absurdamente/
+			);
 		}
+	});
+});
+
+describe('master-derived Festival audience narrative', () => {
+	it('covers every Festival story beat once and preserves deferred causality', () => {
+		const outline = getOutline(festivalMasterId)!;
+		const text = readFileSync(join(ROOT, 'docs/wip/festival-cut-audience-narrative.en.md'), 'utf8');
+		const sourceSteps = [...text.matchAll(/<!--\s*audience-source-step:\s*([^\s]+)\s*-->/g)].map(
+			(match) => match[1]
+		);
+		expect(sourceSteps).toEqual(
+			outline.steps.filter((step) => step.level === 'story').map((step) => step.id)
+		);
+		expect(text.match(/^## /gm)).toHaveLength(11);
+
+		const reveal = text.indexOf('festival-master:story-16');
+		expect(reveal).toBeGreaterThan(0);
+		expect(text.slice(0, reveal)).not.toMatch(/future position|twenty-three light-hours/i);
+		expect(text.slice(reveal)).toContain('twenty-three light-hours ahead');
+		expect(text.indexOf('A single thump lands in darkness.')).toBeLessThan(
+			text.indexOf('he disconnects bridge flight commands')
+		);
+		for (const ordinal of ['first', 'second', 'third', 'fourth']) {
+			expect(text.split(`microgravity for the ${ordinal} time`)).toHaveLength(2);
+		}
+	});
+
+	it('keeps provisional dialogue distinct from future screenplay canon', () => {
+		const performance = JSON.parse(
+			readFileSync(
+				join(ROOT, 'data/production/audio/festival-audience-dialogue-performance.json'),
+				'utf8'
+			)
+		) as { entries: Array<{ lineStatus?: string }> };
+		expect(performance.entries).toHaveLength(25);
+		expect(performance.entries.filter((entry) => entry.lineStatus === 'provisional')).toHaveLength(
+			9
+		);
 	});
 });

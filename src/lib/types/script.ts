@@ -41,7 +41,14 @@ export interface DocumentSourceReference {
 	anchor?: string;
 }
 
-export type SourceReference = ScriptSourceReference | DocumentSourceReference;
+export interface OutlineSourceReference {
+	kind: 'outline';
+	outlineId: string;
+	stepId?: string;
+}
+
+export type SourceReference =
+	ScriptSourceReference | DocumentSourceReference | OutlineSourceReference;
 
 export interface SourceTraceable {
 	sourceRefs?: SourceReference[];
@@ -269,7 +276,8 @@ export interface TextVariant {
 
 export interface TextCue extends CueBase {
 	type: 'text';
-	presentation: 'title' | 'subtitle' | 'caption' | 'interface' | 'location_card' | 'time_card' | 'credits';
+	presentation:
+		'title' | 'subtitle' | 'caption' | 'interface' | 'location_card' | 'time_card' | 'credits';
 	content: LocalizedValue<TextVariant>;
 }
 

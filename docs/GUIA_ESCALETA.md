@@ -35,6 +35,8 @@ Fuentes, en orden: escaleta maestra vigente; escaleta derivada explícitamente a
 
 Mientras el master siga incompleto, no crear ni ampliar derivados salvo autorización editorial explícita. Cuando se autorice un nuevo cut, registrar su lineage/procedencia, escribir primero su escaleta y no copiar cobertura, canon o implementación desde un producto deprecado por conveniencia.
 
+Para un derivado con fidelidad `complete_causal_chain`, mapear cada hito fuente mediante un `sourceRefs` de tipo `outline`. La cobertura automática evita omisiones silenciosas; no autoriza resúmenes vacíos ni reemplaza la lectura causal. Si cambia la revisión fuente, actualizar `reviewStatus` a `stale` o completar una nueva revisión comparada antes de continuar con guion o animatic.
+
 ## 3. Cobertura posterior
 
 La cobertura no define la historia: verifica dónde fue implementada.
@@ -61,4 +63,4 @@ La escaleta principal responde la cadena; el ledger causal verifica conocimiento
 
 ## 5. Cierre
 
-Ejecutar `validate:data`, `validate:translations`, `report:outline-readability`, `report:outline-story` y `report:outline-gaps` para el destino trabajado. Para el tráiler ejecutar además `check:trailer-spoilers`. Si una escaleta declara una fuente verificable, ejecutar también su comprobación de fidelidad. Leer `reports/outline-story/project.md` de corrido: es la superficie de revisión que excluye deliberadamente los detalles. Revisar `/outline/[scriptId]` con framing y detalles cerrados y abiertos. Actualizar primero el inglés; sincronizar luego el español inline o marcar su revisión pendiente. No regenerar imágenes salvo instrucción explícita. Registrar cambios materiales en `CHANGELOG.md` y `docs/PROJECT_STATUS.md`.
+Ejecutar `validate:data`, `validate:translations`, `report:outline-readability`, `report:outline-story`, `report:outline-derivation` y `report:outline-gaps` para el destino trabajado. Para el tráiler ejecutar además `check:trailer-spoilers`. Si una escaleta declara una fuente verificable, ejecutar también su comprobación de fidelidad. Leer `reports/outline-story/project.md` de corrido: es la superficie de revisión que excluye deliberadamente los detalles. Revisar `/outline/[scriptId]` con framing y detalles cerrados y abiertos. Actualizar primero el inglés; sincronizar luego el español inline o marcar su revisión pendiente. No regenerar imágenes salvo instrucción explícita. Registrar cambios materiales en `CHANGELOG.md` y `docs/PROJECT_STATUS.md`.

@@ -131,6 +131,28 @@
         },
         "kind": "master_narrative",
         "status": "draft"
+      },
+      {
+        "id": "script:light-delay-festival-master",
+        "continuityId": "continuity:light-delay-master-wip",
+        "label": {
+          "es": "Corte Festival derivado del master (~11:30, WIP)",
+          "en": "Master-derived Festival cut (~11:30, WIP)"
+        },
+        "kind": "festival_cut",
+        "status": "draft",
+        "targetDurationMs": 690000,
+        "lineage": {
+          "sourceScriptId": "script:light-delay-master-narrative",
+          "relationship": "cut",
+          "sourceVersion": "0.1.0-wip",
+          "sourceOutlineId": "outline:light-delay-master-narrative",
+          "sourceOutlineRevision": 19,
+          "notes": {
+            "es": "Derivado editorial explícito de la escaleta maestra, fijado a la revisión 19. No continúa el Festival deprecado.",
+            "en": "Explicit editorial derivative of the master outline, pinned to revision 19. It does not continue the deprecated Festival cut."
+          }
+        }
       }
     ]
   }

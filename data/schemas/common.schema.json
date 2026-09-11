@@ -35,6 +35,16 @@
             "anchor": { "type": "string" }
           },
           "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": ["kind", "outlineId"],
+          "properties": {
+            "kind": { "const": "outline" },
+            "outlineId": { "type": "string" },
+            "stepId": { "type": "string" }
+          },
+          "additionalProperties": false
         }
       ]
     },

@@ -81,6 +81,14 @@ export interface OutlineMeta {
 	provenance?: { importedFrom?: OutlineSource[] };
 	exports?: OutlineExport[];
 	editorialNotice?: StoryText;
+	derivation?: {
+		sourceOutlineId: string;
+		sourceRevision: number;
+		sourceVersion?: string;
+		relationship: 'adaptation';
+		fidelity: 'complete_causal_chain';
+		reviewStatus: 'current' | 'stale' | 'review_required';
+	};
 }
 
 export interface OutlineStep {
