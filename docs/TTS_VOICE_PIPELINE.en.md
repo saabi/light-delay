@@ -220,9 +220,8 @@ Audience short story (12 sections, no frontmatter; **37 audible English dialogue
 - Example: `python scripts/generate-dual-outline-audio.py --lang en --script docs/wip/audience-narrative.voices.en.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/en-audience`
 
 The Spanish audience dual and its 275 chunks were generated from revision 15.
-The English audience dual was regenerated for revision 17 (287 cues). Master revision
-18 changes the English source again, so both audio catalogs are now stale and retained
-only for reference and salvage until regenerated.
+The English audience dual was regenerated for revision 18 (287 cues, ~48.7 min).
+Spanish audio remains stale and is retained only for reference and salvage until regenerated.
 
 Every audible quotation has the same stable `audience-dialogue-id` comment in
 both source files. That ID—not its array position or translated wording—selects
@@ -288,7 +287,7 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 | Dual outline | `scripts/generate-dual-outline-audio.py` |
 
 Revision 18 makes English the source and corrects the Prologue reaction order and related
-causality. Its English voice script has been regenerated, but the existing English audience
-audio is still revision 17 (`light-delay-audience-dual-en.mp3`, 287 cues, ~47.8 min). The
-Spanish voice script remains revision 17 and its audio remains prose revision 15. Dialogue IDs
-are preserved; changed text or direction must invalidate dependent takes.
+causality. The English audience dual was regenerated on 2026-09-11
+(`light-delay-audience-dual-en.mp3`, 287 cues, ~48.7 min). The Spanish voice script remains
+revision 17 and its audio remains prose revision 15. Dialogue IDs are preserved; changed
+text or direction must invalidate dependent takes.

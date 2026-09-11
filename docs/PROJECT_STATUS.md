@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-11 — Dual de audiencia EN (master rev. 18)
+
+- Generado `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-en.mp3` (~48.7 min)
+  y `outline-chunks/en-audience/` (287 cues @ 24 kHz).
+- Reuso por content_hash: 267; regenerados 20 (incl. 2 diálogos Qwen nuevos).
+- Catálogo `audience-en`: `sourceOutlineRevision` 18, `expectedCueCount` 287, current.
+- ES (`audience-es`) permanece stale en prosa rev. 15 / master ES 17.
+
 ## 2026-09-11 — English source policy and master revision 18
 
 - English is now the active narrative and documentary source; Spanish is a subsequent translation. Deprecated cuts retain their historical Spanish cue provenance without governing new work.

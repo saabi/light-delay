@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-11 — Dual de audiencia EN regenerado (rev. 18)
+
+- Regenerado `light-delay-audience-dual-en.mp3` (~48.7 min) y chunks
+  `outline-chunks/en-audience/` desde `audience-narrative.voices.en.md` rev. 18.
+- 287 cues (267 reutilizados por hash, 20 regenerados; 2 diálogos Qwen nuevos).
+- Catálogo `audience-en` marcado current en master rev. 18. ES sigue stale.
+
 ## 2026-09-11 — English narrative authority and master revision 18
 
 - Reordered the Prologue exchange so Harlan and Sorell speak before Voss visibly conflates their warnings, then gave Voss an observable reply before Zao reacts.

@@ -270,8 +270,8 @@ Relato para público (12 secciones, sin frontmatter; **36 diálogos audibles**):
 - Ejemplo: `python scripts/generate-dual-outline-audio.py --lang es --script docs/wip/audience-narrative.voices.es.md --chunks-dir E:/Models/Qwen3-TTS/output/outline-chunks/es-audience`
 
 El dual ES y sus 275 chunks se generaron desde la revisión 15. El dual EN se
-regeneró para la revisión 17 (287 cues). Tras el master 16, los duales viejos se
-conservaban sólo para referencia y rescate hasta regenerarlos.
+regeneró para la revisión 18 (287 cues, ~48.7 min). El audio ES permanece stale
+y se conserva sólo para referencia y rescate hasta regenerarlo.
 
 Cada cita audible lleva un comentario estable `audience-dialogue-id` en ambas
 fuentes. Ese ID, no el índice ni el texto traducido, selecciona una entrada con:
@@ -355,8 +355,8 @@ La transformación ocurre al generar los derivados TTS. El topónimo español
 | Pipeline EN | `scripts/pipeline-english-native-l1-v2-qwen.py` |
 | Outline dual | `scripts/generate-dual-outline-audio.py` |
 
-La revisión 17 corrige cronología, aborto y referencia temporal del master y de los relatos.
-El dual EN se regeneró el 2026-09-11 (`light-delay-audience-dual-en.mp3`, 287 cues, ~47.8 min).
-El dual ES y sus chunks siguen en prosa rev. 15 y pendientes de regeneración. Los IDs de
-diálogo se conservan; las direcciones cambiadas para Harlan (Tierra) y Sorell (interrogatorio)
-deben invalidar las tomas que dependan de ellas.
+La revisión 18 hace del inglés la fuente activa y corrige el orden de reacción del
+prólogo y causalidad relacionada. El dual EN se regeneró el 2026-09-11
+(`light-delay-audience-dual-en.mp3`, 287 cues, ~48.7 min). El guion de voces ES
+sigue en rev. 17 y su audio en prosa rev. 15. Los IDs de diálogo se conservan;
+texto o dirección cambiados deben invalidar las tomas dependientes.
