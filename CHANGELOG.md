@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-11 — Studio lista todos los outputs del catálogo
+
+- El selector de Imitation Studio carga `GET /v1/imitation/outputs` en lugar de
+  una lista fija; incluye `audience-festival-en` (Festival EN) junto a los
+  duales master ES/EN.
+
 ## 2026-09-11 — Dual festival EN de audiencia generado (rev. 1)
 
 - Generado `light-delay-festival-audience-dual-en.mp3` (~14.9 min) y chunks

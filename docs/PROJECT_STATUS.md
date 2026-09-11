@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-11 — Studio: outputs desde catálogo (incl. Festival EN)
+
+- `/studio` lista todos los outputs de `audio-outputs.json` vía el worker
+  (`fetchOutputs`), con etiquetas localizadas; `audience-festival-en` es
+  seleccionable y carga su timeline/chunks.
+
 ## 2026-09-11 — Dual festival EN (escaleta festival rev. 1)
 
 - Generado `E:/Models/Qwen3-TTS/output/light-delay-festival-audience-dual-en.mp3`

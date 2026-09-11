@@ -13,6 +13,7 @@
 		convertCue,
 		fetchDefaults,
 		fetchHealth,
+		fetchOutputs,
 		fetchTimeline,
 		prepareModel,
 		prepareQwenModel,
@@ -31,10 +32,9 @@
 		StudioDefaults,
 		StudioEngineMode,
 		StudioMachineState,
+		StudioOutput,
 		StudioTimeline
 	} from '$lib/studio/types';
-
-	const OUTPUTS = ['audience-es', 'audience-en'] as const;
 
 	const FALLBACK_QWEN: QwenRegenSettings = {
 		temperature: 0.82,
@@ -47,7 +47,8 @@
 		defaultInstruct: ''
 	};
 
-	let outputId = $state<(typeof OUTPUTS)[number]>('audience-es');
+	let availableOutputs = $state<StudioOutput[]>([]);
+	let outputId = $state('audience-es');
 	let machine = $state<StudioMachineState>('loading');
 	let timeline = $state.raw<StudioTimeline | null>(null);
 	let defaults = $state.raw<StudioDefaults | null>(null);
@@ -589,7 +590,7 @@
 		}
 	}
 
-	function changeOutput(next: (typeof OUTPUTS)[number]) {
+	function changeOutput(next: string) {
 		notice = '';
 		stopPreview();
 		assembledHref = null;
@@ -640,10 +641,21 @@
 			machine = 'loading';
 			try {
 				await fetchHealth();
-				const [nextDefaults, nextTimeline] = await Promise.all([
+				const [nextDefaults, outputsResult] = await Promise.all([
 					fetchDefaults(),
-					fetchTimeline(id)
+					fetchOutputs()
 				]);
+				if (cancelled) return;
+				availableOutputs = outputsResult.outputs;
+				const firstAvailable = outputsResult.outputs[0];
+				if (
+					!outputsResult.outputs.some((output) => output.id === id) &&
+					firstAvailable
+				) {
+					outputId = firstAvailable.id;
+					return;
+				}
+				const nextTimeline = await fetchTimeline(id);
 				if (cancelled) return;
 				defaults = nextDefaults;
 				settings = settingsFromDefaults(nextDefaults);
@@ -690,10 +702,12 @@
 					value={outputId}
 					aria-label={m.studio_output()}
 					onchange={(event) =>
-						changeOutput((event.currentTarget as HTMLSelectElement).value as (typeof OUTPUTS)[number])}
+						changeOutput((event.currentTarget as HTMLSelectElement).value)}
 				>
-					{#each OUTPUTS as id (id)}
-						<option value={id}>{id}</option>
+					{#each availableOutputs as output (output.id)}
+						<option value={output.id}>
+							{output.label[getLocale()] ?? output.label.es ?? output.id}
+						</option>
 					{/each}
 				</select>
 			</label>
