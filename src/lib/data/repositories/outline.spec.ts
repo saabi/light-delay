@@ -13,6 +13,7 @@ import { localizeOutline } from '$lib/data/selectors/publicTranslations';
 import { buildOutlineMissingReport } from '../../../../scripts/lib/outline-missing.mjs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { readFileSync } from 'node:fs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '../../../..');
 const festivalId = 'script:light-delay-festival';
@@ -52,8 +53,8 @@ describe('outlines (optional)', () => {
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
 		expect(source.outline.provenance?.importedFrom?.[0]?.revision).toBe('13');
-		expect(source.outline.revision).toBe(16);
-		expect(source.outline.version).toBe('0.5.2-wip');
+		expect(source.outline.revision).toBe(17);
+		expect(source.outline.version).toBe('0.6.0-wip');
 		expect(source.outline.status).toBe('draft');
 		expect(source.outline.exports?.map((item) => item.path)).toEqual([
 			'docs/wip/general-narrative-outline.es.md',
@@ -82,9 +83,10 @@ describe('outlines (optional)', () => {
 		const c10b = source.steps.find((step) => step.id === 'master:story-c10b');
 		const d1 = source.steps.find((step) => step.id === 'master:story-d1');
 		const f3 = source.steps.find((step) => step.id === 'master:story-f3');
-		expect([c10?.order, c10b?.order, d1?.order]).toEqual([31, 32, 33]);
-		expect(c10b?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10');
-		expect(d1?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10b');
+		expect([c10?.order, d1?.order, c10b?.order]).toEqual([31, 32, 35]);
+		expect(c10b?.sectionId).toBe('master:section-d');
+		expect(c10b?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10'); // The flight profile, not investigation, requires the turn.
+		expect(d1?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10');
 		expect(typeof f3?.title === 'string' ? f3.title : f3?.title.en).toContain(
 			'Fourth gravity dip'
 		);
@@ -132,7 +134,7 @@ describe('outlines (optional)', () => {
 					block.type === 'paragraph' &&
 					typeof block.text !== 'string' &&
 					block.text.en?.includes('formed her English in Enugu') &&
-					block.text.es?.includes('su español formal en Malabo')
+					block.text.es?.includes('su español formal en Caracas')
 			)
 		).toBe(true);
 		const meeting = source.steps.find((step) => step.id === 'master:story-g2b');
@@ -229,5 +231,39 @@ describe('report:outline-missing', () => {
 		expect(report.summary.scripts).toBe(5);
 		expect(report.summary.missing).toBe(0);
 		expect(report.missing).toEqual([]);
+	});
+});
+
+describe('master narrative continuity', () => {
+	it('keeps investigation across the turn without future causal prerequisites', () => {
+		const source = getOutline(masterId)!;
+		const order = new Map(source.steps.map((step) => [step.id, step.order]));
+		for (const step of source.steps) {
+			for (const link of step.causalLinks ?? []) {
+				expect(order.has(link.sourceStepId)).toBe(true);
+				expect(order.get(link.sourceStepId)!).toBeLessThan(step.order);
+			}
+		}
+		expect(order.get('master:story-d2b')!).toBeLessThan(order.get('master:story-c10b')!);
+		expect(order.get('master:story-c10b')!).toBeLessThan(order.get('master:story-d3')!);
+	});
+
+	it('preserves the audience gravity count, crew count, and investigation chronology in both languages', () => {
+		for (const lang of ['es', 'en']) {
+			const text = readFileSync(join(ROOT, `docs/wip/audience-narrative.${lang}.md`), 'utf8');
+			const sections = text.split(/^## /m);
+			const investigation = sections[9];
+			const revelation = sections[10];
+			const climax = sections[11];
+			const third = lang === 'es' ? 'por tercera vez' : 'for the third time';
+			const fourth = lang === 'es' ? 'por cuarta vez' : 'for the fourth time';
+			expect(text.split(third)).toHaveLength(2);
+			expect(text.split(fourth)).toHaveLength(2);
+			expect(investigation.indexOf('audience:dialogue:d2-harlan-fuel')).toBeLessThan(investigation.indexOf(third));
+			expect(investigation).toContain(third);
+			expect(climax).toContain(fourth);
+			expect(revelation).toContain(lang === 'es' ? 'Cuatro personas se vuelven hacia Harlan' : 'Four people turn toward Harlan');
+			expect(text).not.toMatch(/Five people turn toward Harlan|Earth will not know until|Weight vanishes for the third time|salta a una fecha absurdamente/);
+		}
 	});
 });

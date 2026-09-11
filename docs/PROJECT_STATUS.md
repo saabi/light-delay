@@ -1,5 +1,23 @@
 # Estado del proyecto
 
+## 2026-09-10 — Continuidad temporal y causal, master rev. 17
+
+- Auditoría continua desde la muerte de Zao; C10b conserva ID y pasa a la secuencia D.
+- Tierra recibe antes de la explosión, pero su retransmisión llega tarde. Cronología de
+  trece minutos desde recepción: mensaje y evidencia, aborto fallido, persecución y rescate.
+- Harlan sabotea el mando remoto durante su inspección final; el control local queda a popa.
+  Voss intenta abortar temprano. La mentira de Harlan sobre el acceso de Sorell queda interrogada.
+- Elin prueba el vector antes de recibir, usa información explícita del mensaje y equipo
+  diagnóstico establecido para sustituir la referencia temporal. La carga sigue armada y vigilada.
+- Relatos ES/EN, exports y textos TTS sincronizados; se corrigen reparto, cuarta microgravedad,
+  cronograma antiguo/nuevo y revelación prematura. Conservados 58 beats y 36 diálogos de audiencia.
+- Registro de las quince correcciones y cronología: `docs/wip/continuity-review.es.md` y `.en.md`.
+  Los audios de prosa rev. 15 siguen desactualizados; no se generaron MP3, chunks ni imágenes.
+- Verificación final 2026-09-11: 96 tests unitarios y dos de catálogo de audio aprobados;
+  check de Svelte/TypeScript, validaciones y derivados verdes. Readability sin errores;
+  seis advertencias por beats breves, mayormente del archivo. Pruebas antiguas de Okoye
+  reconciliadas con el perfil vigente de Caracas sin cambiar su caracterización.
+
 ## 2026-09-09 — Studio: regenerar con Qwen3-TTS
 
 - En `/studio`, modo **Regenerar (Qwen3-TTS)** junto a **Imitar (Seed-VC)**.

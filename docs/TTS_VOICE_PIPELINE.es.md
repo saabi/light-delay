@@ -252,7 +252,7 @@ python scripts/generate-dual-outline-audio.py --lang en --assemble-only
 python scripts/generate-dual-outline-audio.py --lang es
 ```
 
-Scripts TTS multi-voz de la escaleta (rev. 16, 38 citas atribuidas desde el master):
+Scripts TTS multi-voz de la escaleta (rev. 17, 38 citas atribuidas desde el master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
@@ -354,3 +354,8 @@ La transformación ocurre al generar los derivados TTS. El topónimo español
 | Pipeline ES | `scripts/pipeline-spanish-native-l1-v2-qwen.py` |
 | Pipeline EN | `scripts/pipeline-english-native-l1-v2-qwen.py` |
 | Outline dual | `scripts/generate-dual-outline-audio.py` |
+
+La revisión 17 corrige cronología, aborto y referencia temporal del master y de los relatos.
+Los textos TTS se regeneraron; los duales y chunks existentes de prosa rev. 15 continúan
+pendientes de regeneración. Los IDs de diálogo se conservan; las direcciones cambiadas
+para Harlan (Tierra) y Sorell (interrogatorio) deben invalidar las tomas que dependan de ellas.

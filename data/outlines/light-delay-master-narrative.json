@@ -12,8 +12,8 @@
       "en": "Authoritative bilingual master narrative, still WIP and unconstrained by duration. Earlier screenplays and cuts are deprecated until new versions can be derived."
     },
     "status": "draft",
-    "version": "0.5.2-wip",
-    "revision": 16,
+    "version": "0.6.0-wip",
+    "revision": 17,
     "provenance": {
       "importedFrom": [
         {
@@ -213,8 +213,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Durante la apertura completa, la garganta puede atravesarse físicamente en ambas direcciones, pero sólo durante las ventanas programadas. Se abre para el cruce de ida, se cierra detrás de la Ardor y más adelante vuelve a abrirse para el regreso previsto. Después de cerrarse, vuelve a su estado piloto unidireccional. Una vez que la nave cruza hacia el otro lado, no existe una opción inmediata de abortar.",
-            "en": "At full aperture, the throat is physically traversable in both directions, but only during its scheduled windows. It opens for the outward crossing, closes behind the Ardor, and later opens for the scheduled return. After closing, it returns to its one-way pilot state. Once the ship has crossed outward, there is no immediate abort."
+            "es": "Durante la apertura completa, la garganta puede atravesarse físicamente en ambas direcciones, pero sólo durante las ventanas programadas. Se abre para el cruce de ida, se cierra detrás de la Ardor y más adelante vuelve a abrirse para el regreso previsto. Después de cerrarse, vuelve a su estado piloto unidireccional. Una vez del otro lado, la nave no puede volver inmediatamente por la garganta; eso no impide por sí solo cambiar su aproximación a la estación.",
+            "en": "At full aperture, the throat is physically traversable in both directions, but only during its scheduled windows. It opens for the outward crossing, closes behind the Ardor, and later opens for the scheduled return. After closing, it returns to its one-way pilot state. Once across, the ship cannot immediately return through the throat; that does not by itself prevent changing its approach to the station."
           }
         },
         {
@@ -318,8 +318,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "En términos funcionales, es una bomba de hidrógeno de varios megatones con un primario de fisión. Contiene su propia fuente de energía, reloj, controlador de disparo, interfaz de despliegue y circuitos de protección contra manipulaciones. No acepta órdenes remotas. Existe una interfaz de mantenimiento para sincronizar con precisión su reloj antes de un despliegue científico.",
-            "en": "It is, functionally, a multi-megaton hydrogen bomb with a fission primary. It contains its own power, clock, firing controller, deployment interface, and tamper-protection circuitry. It accepts no remote commands. A maintenance interface exists so its clock can be synchronized precisely before a scientific deployment."
+            "es": "Funcionalmente, es una bomba de hidrógeno de varios megatones con primario de fisión. Contiene alimentación, reloj, controlador de disparo, interfaz de despliegue y protección contra manipulación propios. No acepta órdenes remotas. En este dispositivo ficticio, una interfaz local de mantenimiento permite contrastar la referencia de tiempo utilizada por su controlador con instrumental científico externo incluso mientras la cuenta sigue activa. Harlan ha protegido las interrupciones obvias, pero no ha eliminado esa función de servicio.",
+            "en": "It is, functionally, a multi-megaton hydrogen bomb with a fission primary. It contains its own power, clock, firing controller, deployment interface and tamper protection. It accepts no remote commands. In this fictional device, a local maintenance interface allows the time reference used by its controller to be checked against external scientific test equipment even while the countdown remains active. Harlan has protected against obvious interruptions but has not removed that service function."
           }
         },
         {
@@ -437,6 +437,20 @@
           "text": {
             "es": "El compartimiento exterior de servicio del reactor es un espacio de trabajo de ingeniería accesible. Contiene una consola local para la matriz óptica de comunicaciones de larga distancia, además de equipos de inspección y aislamiento de emergencia para los tanques y el sistema de alimentación de combustible de fusión adyacentes. Cualquier tripulante con capacitación estándar para emergencias puede acceder a estos paneles.",
             "en": "The outer reactor service bay is an accessible engineering workspace. It contains a local console for the long-distance optical communications array and emergency inspection and isolation hardware for the adjacent fusion-fuel tankage and feed system. Any crew member with standard emergency training can reach these panels."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "En ese mismo compartimiento hay un mando local independiente para interrumpir el perfil de vuelo, además de un cajón de instrumental de diagnóstico y referencias de tiempo para equipos científicos. El guiado autónomo ejecuta el plan aprobado; los mandos del puente normalmente pueden sustituirlo o interrumpirlo. La telemetría de retorno es independiente de esas entradas de mando.",
+            "en": "The same bay contains an independent local control for interrupting the flight profile, together with a drawer of diagnostic instruments and time-reference equipment for scientific work. Autonomous guidance executes the approved plan; bridge controls can normally replace or interrupt it. Return telemetry is independent of those command inputs."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Durante su última inspección a popa, después de las pruebas de partida y justo antes de encontrarse con Zao, Harlan inutiliza físicamente las entradas de mando del puente, incluido su corte de emergencia remoto. Deja intactos el plan almacenado, la telemetría y el mando local del compartimiento. El vuelo normal no solicita un cambio y no revela la avería; el sabotaje aparece al intentar abortar. No borra registros ni modifica las mediciones de propulsión. Es una intervención distinta del corte posterior de comunicaciones, y reconectar sus troncales no la revierte.",
+            "en": "During his final aft inspection, after departure checks and immediately before encountering Zao, Harlan physically disables the bridge command inputs, including its remote emergency cutoff. He leaves the stored plan, telemetry and the bay’s local control intact. Normal flight requests no change and does not expose the failure; an abort attempt does. He neither erases logs nor alters propulsion measurements. This intervention is separate from the later communications disconnection, and reconnecting those trunks does not reverse it."
           }
         },
         {
@@ -577,6 +591,20 @@
             "es": "En la alineación orbital del Prólogo, el retardo unidireccional de la luz desde la Tierra hasta Júpiter es de 43 min 18 s.",
             "en": "At the Prologue’s orbital alignment, the one-way Earth-to-Jupiter light delay is 43 min 18 s."
           }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La Tierra recibiría una advertencia enviada desde Júpiter en unos 43 minutos, mucho antes de la detonación; lo que llega tarde es su retransmisión a la Ardor. Para el bloqueo geométrico de esta revisión se adopta una alineación ilustrativa con 43 min 18 s de Júpiter a la Tierra y unos 23 h 58 min de la Tierra al punto de intercepción remoto. Incluso sin demora humana, esa ruta tarda unas 24 h 41 min, frente a 23 h 15 min por la ruta directa. Cuando la Tierra recibe, la garganta ya está cerrada. Son trayectos diferentes, no el doble del retardo local.",
+            "en": "Earth would receive a warning sent from Jupiter in about 43 minutes, well before detonation; it is the onward relay to the Ardor that arrives too late. This revision uses an illustrative blocking alignment with 43 min 18 s from Jupiter to Earth and approximately 23 h 58 min from Earth to the remote interception point. Even with no human delay, that route takes about 24 h 41 min, compared with 23 h 15 min directly. By Earth’s reception the throat is already closed. These are different legs, not twice the local delay."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Cronología editorial de referencia: envío en t=0; cruce y despeje de la boca en torno a t=+3 min; encuentro en torno a t=+23 h 28 min; recepción en torno a t=+23 h 15 min, con unos trece minutos de margen. La investigación comienza al recuperar el empuje y atraviesa el giro a mitad del tramo. En el margen final, aproximadamente un minuto corresponde al mensaje, uno a la convergencia inicial y firma, ocho a los intentos de aborto y localización del fallo de mando, dos a la persecución, y el último minuto al rescate y la intervención. Son duraciones de acción y montaje que deben seguir siendo visibles en la historia; la comprobación criptográfica no consume esos ocho minutos.",
+            "en": "Reference editorial chronology: transmission at t=0; crossing and clearance around t=+3 min; encounter around t=+23 h 28 min; reception around t=+23 h 15 min, leaving about thirteen minutes. Investigation begins when thrust returns and spans the midpoint turn. Within the final margin, approximately one minute belongs to the message, one to initial evidence convergence and signature checking, eight to abort attempts and locating the command failure, two to the chase, and the final minute to rescue and intervention. These are action and editing durations that must remain legible in the story; cryptographic verification does not consume those eight minutes."
+          }
         }
       ]
     },
@@ -622,8 +650,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La bomba cuenta hacia la hora y las coordenadas previstas para el contacto, no hacia el acto mecánico de cortar el empuje. El corte final ocurre instantes antes de que el temporizador llegue a cero.",
-            "en": "The bomb is counting down to the scheduled contact time and coordinates, not to the mechanical act of thrust cutoff. Final cutoff occurs moments before the timer reaches zero."
+            "es": "La bomba cuenta hacia la hora prevista para el contacto, no detecta coordenadas ni responde al acto mecánico de cortar el empuje. El plan de vuelo debe llevarla a ese lugar en ese momento. El corte final ocurre aproximadamente un minuto antes de que el temporizador llegue a cero.",
+            "en": "The bomb counts toward the scheduled contact time; it does not sense coordinates or respond to the mechanical act of thrust cutoff. The flight plan is intended to carry it to that place at that time. Final cutoff occurs approximately one minute before the timer reaches zero."
           }
         }
       ]
@@ -1831,6 +1859,13 @@
         {
           "type": "paragraph",
           "text": {
+            "es": "Antes de salir de la bóveda, Harlan ha terminado una intervención en los mandos de vuelo del compartimiento exterior: el puente ya no puede sustituir ni cortar el plan automático, aunque sus pantallas sigan recibiendo telemetría normal. Conserva operativo el mando local a popa. El público ve la manipulación, pero todavía no su efecto; Voss lo descubrirá al intentar abortar.",
+            "en": "Before leaving the vault, Harlan has completed an intervention on the outer bay’s flight controls: the bridge can no longer replace or cut the automatic plan, although its displays still receive normal telemetry. He leaves the local aft control operational. The audience sees the tampering but not yet its effect; Voss will discover that when he attempts to abort."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
             "es": "En microgravedad, Zao se encuentra con Harlan mientras éste sale de la bóveda interior de blindaje hacia el compartimiento exterior. Él estuvo haciendo una comprobación final y dejó la bóveda sin asegurar por completo.",
             "en": "In microgravity, Zao encounters Harlan exiting the inner shielding vault into the outer bay. He has been making a final check and has left the vault incompletely secured."
           }
@@ -2190,8 +2225,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Desde la posición actual de la Ardor, Júpiter oculta a Próxima. Un mensaje a la Tierra sólo llegaría después del contacto y la detonación previstos.",
-            "en": "Proxima is occluded by Jupiter from the Ardor’s present position. A message to Earth would arrive only after the planned contact and detonation."
+            "es": "Desde la posición actual de la Ardor, Júpiter oculta a Próxima. La Tierra recibiría la advertencia en unos 43 minutos, pero para entonces la garganta ya estaría cerrada. Zao compara la ruta de retransmisión terrestre por el espacio ordinario con el plazo del dispositivo: ni una respuesta inmediata alcanzaría la nave antes de la detonación. Advertir a la Tierra puede conservar pruebas; no puede salvar a la tripulación.",
+            "en": "Jupiter occludes Proxima from the Ardor’s present position. Earth would receive the warning in about 43 minutes, but by then the throat would be closed. Zao compares the ordinary-space Earth relay route with the device’s deadline: even an immediate response would not reach the ship before detonation. Warning Earth could preserve evidence; it could not save the crew."
           }
         },
         {
@@ -2320,8 +2355,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Identifica la bomba, su masa y origen aproximados, su capacidad de varios megatones, su ubicación en la bóveda interior, la cuenta regresiva hasta el contacto, la firma neutrónica y las pistas que la condujeron hasta allí.",
-            "en": "She identifies the bomb, its approximate mass and origin, its multi-megaton capability, its location in the inner vault, the contact-time countdown, the neutron signature, and the clues that led her there."
+            "es": "Identifica la bomba, su masa y origen aproximados, su capacidad de varios megatones, su ubicación en la bóveda interior, la cuenta hacia la hora del contacto, la firma neutrónica y las pistas que la llevaron allí. Incluye la alimentación independiente y la protección contra interrupciones que ha reconocido en el equipo. La advertencia completa dura menos de un minuto: Zao no dispone de tiempo para un informe largo.",
+            "en": "She identifies the bomb, its approximate mass and origin, its multi-megaton capability, its location in the inner vault, the contact-time countdown, the neutron signature and the clues that led her there. She includes the independent power and protection against interruption she has recognized on the equipment. The complete warning lasts less than a minute: Zao has no time for a long report."
           }
         },
         {
@@ -2490,8 +2525,8 @@
           "type": "blockquote",
           "speakerId": "character:harlan",
           "text": {
-            "es": "«Próxima está detrás de Júpiter. La Tierra no se va a enterar hasta que ya estemos allí».",
-            "en": "“Proxima is behind Jupiter. Earth will not know until we are already there.”"
+            "es": "«Próxima está detrás de Júpiter. La Tierra se va a enterar. Pero su respuesta no llega antes del encuentro».",
+            "en": "“Proxima is behind Jupiter. Earth will know. But their answer cannot reach us before the encounter.”"
           }
         },
         {
@@ -2657,8 +2692,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "No hay forma de abortar inmediatamente ni de regresar antes de la ventana posterior programada.",
-            "en": "There is no immediate abort and no return before the later scheduled window."
+            "es": "No hay regreso inmediato por la garganta ni retorno antes de la ventana posterior. Eso no equivale a una prohibición física de cambiar el rumbo del otro lado.",
+            "en": "There is no immediate return through the throat before the later window. That is not a physical prohibition on changing course on the far side."
           }
         },
         {
@@ -2981,15 +3016,15 @@
       "sectionId": "master:section-c",
       "order": 31,
       "title": {
-        "es": "C10 — Salto temporal",
-        "en": "C10 — Time jump"
+        "es": "C10 — La investigación comienza",
+        "en": "C10 — Investigation begins"
       },
       "body": [
         {
           "type": "paragraph",
           "text": {
-            "es": "Después de despejar la boca lejana, la Ardor reanuda el empuje hacia la estación y recupera 1 g. La historia avanza a través de la primera mitad del tránsito del otro lado, de aproximadamente veinticuatro horas.",
-            "en": "After clearing the far mouth, the Ardor resumes thrust toward the station and restores 1g. The story advances through the first half of the approximately twenty-four-hour far-side transit."
+            "es": "Después de despejar la boca lejana, la Ardor reanuda el empuje hacia la estación y recupera 1 g. Comienza un trayecto de unas veintitrés horas y media: la investigación se desarrolla durante todo ese tiempo, no empieza después de un salto de medio día.",
+            "en": "After clearing the far mouth, the Ardor resumes thrust toward the station and restores 1g. A roughly twenty-three-and-a-half-hour flight begins: the investigation unfolds throughout that time, rather than starting after a half-day jump."
           }
         },
         {
@@ -3002,8 +3037,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Elin y Okoye examinan las pruebas físicas y de sistemas disponibles. Ambas muestran un agotamiento visible.",
-            "en": "Elin and Okoye work through the available physical and systems evidence. Both become visibly exhausted."
+            "es": "Elin y Okoye preservan los registros y el lugar de la muerte. Voss exige una reconstrucción desde el principio; las horas de trabajo y el agotamiento aparecerán a medida que avance la investigación.",
+            "en": "Elin and Okoye preserve the records and the scene of the death. Voss demands a reconstruction from the beginning; hours of work and exhaustion will accumulate as the investigation proceeds."
           }
         }
       ],
@@ -3020,54 +3055,10 @@
       ]
     },
     {
-      "id": "master:story-c10b",
-      "level": "story",
-      "sectionId": "master:section-c",
-      "order": 32,
-      "title": {
-        "es": "C10b — Tercera caída de gravedad",
-        "en": "C10b — Third gravity dip"
-      },
-      "body": [
-        {
-          "type": "paragraph",
-          "text": {
-            "es": "Aproximadamente a mitad del trayecto entre la boca lejana y la estación Velari, la Ardor corta el empuje y entra en microgravedad por tercera vez.",
-            "en": "Approximately midway between the far mouth and the Velari station, the Ardor cuts thrust and enters microgravity for the third time."
-          }
-        },
-        {
-          "type": "paragraph",
-          "text": {
-            "es": "La nave rota unos 180° desde la orientación de aceleración hasta la de desaceleración. Sorell continúa bajo custodia mientras Elin y Okoye aseguran su trabajo y sus cuerpos para atravesar la maniobra; el giro vuelve físicamente visibles las horas consumidas por la investigación.",
-            "en": "The ship rotates roughly 180° from its acceleration attitude to its deceleration attitude. Sorell remains in custody while Elin and Okoye secure their work and themselves through the maneuver; the turn makes the hours consumed by the investigation physically visible."
-          }
-        },
-        {
-          "type": "paragraph",
-          "text": {
-            "es": "El empuje se reanuda hacia el mismo piso y restaura 1 g mientras la Ardor comienza a frenar durante la segunda mitad del trayecto.",
-            "en": "Thrust resumes toward the same deck and restores 1g as the Ardor begins braking through the second half of the leg."
-          }
-        }
-      ],
-      "importance": "required",
-      "causalLinks": [
-        {
-          "sourceStepId": "master:story-c10",
-          "relation": "enables",
-          "explanation": {
-            "es": "El avance de la investigación durante la primera mitad del tramo lleva a la tripulación hasta el giro programado, que marca el tiempo transcurrido antes de que Voss amplíe formalmente la auditoría.",
-            "en": "The investigation’s progress through the first half of the leg carries the crew to the scheduled turnover, which marks the elapsed time before Voss formally broadens the audit."
-          }
-        }
-      ]
-    },
-    {
       "id": "master:story-d1",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 33,
+      "order": 32,
       "title": {
         "es": "D1 — Situación sostenida",
         "en": "D1 — Standing condition"
@@ -3076,8 +3067,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Voss ordena una auditoría completa de la falla de comunicaciones, el último trabajo de Zao, la conciliación de masa de la nave y todos los registros sobrevivientes de instrumentos locales.",
-            "en": "Voss orders a complete audit of the communications failure, Zao’s last work, the ship’s mass reconciliation, and every surviving local instrument record."
+            "es": "Apenas restablecido el empuje, Voss ordena una auditoría completa de la falla de comunicaciones, el último trabajo de Zao, la conciliación de masa y los registros locales sobrevivientes. No acepta cerrar el caso con la imagen de Sorell junto al cuerpo.",
+            "en": "As soon as thrust is restored, Voss orders a complete audit of the communications failure, Zao’s final work, the mass reconciliation and surviving local records. He will not close the case on the image of Sorell beside the body."
           }
         },
         {
@@ -3098,7 +3089,7 @@
           "type": "blockquote",
           "speakerId": "character:sorell",
           "text": {
-            "es": "«Estáis tratando la primera explicación como si fuera la única. Eso es exactamente lo que os advertí que no hicierais ahí fuera».",
+            "es": "«Están tratando la primera explicación como si fuera la única. Eso es exactamente lo que les advertí que no hicieran allá afuera».",
             "en": "“You’re treating the first explanation as if it were the only one. That’s exactly what I warned you not to do out there.”"
           }
         }
@@ -3106,11 +3097,11 @@
       "importance": "required",
       "causalLinks": [
         {
-          "sourceStepId": "master:story-c10b",
+          "sourceStepId": "master:story-c10",
           "relation": "motivates",
           "explanation": {
-            "es": "El paso del tiempo sin una resolución obliga a Voss a ampliar la revisión mientras el encierro de Sorell sigue afectando la misión.",
-            "en": "The passage of time without a resolution motivates Voss to broaden the review while Sorell's confinement continues to affect the mission."
+            "es": "La evidencia se conserva desde el comienzo del tránsito y la acusación aún no probada exige reconstruir lo ocurrido.",
+            "en": "Evidence is preserved from the start of transit, and the unproved accusation requires reconstructing what happened."
           }
         }
       ]
@@ -3119,7 +3110,7 @@
       "id": "master:story-d2",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 34,
+      "order": 33,
       "title": {
         "es": "D2 — Una teoría plausible sobre el sistema de combustible",
         "en": "D2 — A plausible fuel-system theory"
@@ -3192,7 +3183,7 @@
       "id": "master:story-d2b",
       "level": "story",
       "sectionId": "master:section-d",
-      "order": 35,
+      "order": 34,
       "title": {
         "es": "D2b — Las pistas se separan",
         "en": "D2b — The clues separate"
@@ -3201,8 +3192,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Durante varias horas, Elin y Okoye ponen a prueba la teoría del sistema de combustible en el orden en que los registros quedan disponibles:",
-            "en": "Over several hours, Elin and Okoye test the fuel-system theory in the order that the records become available:"
+            "es": "Durante la primera mitad del vuelo del otro lado, Elin y Okoye ponen a prueba la teoría del sistema de combustible en el orden en que concilian los registros. La repetición de turnos, comidas interrumpidas y cansancio hace legibles las horas:",
+            "en": "During the first half of the far-side flight, Elin and Okoye test the fuel-system theory as they reconcile the records. Changing watches, interrupted meals and fatigue make the passing hours legible:"
           }
         },
         {
@@ -3254,6 +3245,50 @@
       ]
     },
     {
+      "id": "master:story-c10b",
+      "level": "story",
+      "sectionId": "master:section-d",
+      "order": 35,
+      "title": {
+        "es": "C10b — Tercera caída de gravedad",
+        "en": "C10b — Third gravity dip"
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Aproximadamente a mitad del trayecto entre la boca lejana y la estación Velari, la Ardor corta el empuje y entra en microgravedad por tercera vez.",
+            "en": "Approximately midway between the far mouth and the Velari station, the Ardor cuts thrust and enters microgravity for the third time."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La nave rota unos 180° desde la orientación de aceleración hasta la de desaceleración. Sorell continúa bajo custodia mientras Elin y Okoye aseguran su trabajo y sus cuerpos para atravesar la maniobra; el giro vuelve físicamente visibles las horas consumidas por la investigación.",
+            "en": "The ship rotates roughly 180° from its acceleration attitude to its deceleration attitude. Sorell remains in custody while Elin and Okoye secure their work and themselves through the maneuver; the turn makes the hours consumed by the investigation physically visible."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "El empuje se reanuda hacia el mismo piso y restaura 1 g mientras la Ardor comienza a frenar durante la segunda mitad del trayecto.",
+            "en": "Thrust resumes toward the same deck and restores 1g as the Ardor begins braking through the second half of the leg."
+          }
+        }
+      ],
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "master:story-c10",
+          "relation": "forces",
+          "explanation": {
+            "es": "El perfil de vuelo iniciado al salir de la boca exige invertir la orientación para frenar y llegar con la velocidad prevista; el avance de la investigación no causa el giro.",
+            "en": "The flight profile begun after clearing the mouth requires a turnaround to brake and arrive at the planned velocity; investigation progress does not cause the turn."
+          }
+        }
+      ]
+    },
+    {
       "id": "master:story-d3",
       "level": "story",
       "sectionId": "master:section-d",
@@ -3275,6 +3310,27 @@
           "text": {
             "es": "La bóveda interior de blindaje está sellada por su cerradura local aislada. La autoridad de Voss no puede alcanzarla a través de la red. Los intentos de abrirla sin la clave de muñeca correcta fracasan.",
             "en": "The inner shielding vault is sealed by its isolated local lock. Voss’s authority cannot reach it through the network. Attempts to open it without the proper wrist key fail."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Voss pregunta directamente a Harlan qué revisó allí y quién puede abrir la bóveda. Harlan afirma que completó su inspección antes del aviso y que Sorell debió cambiar el acceso mientras las cámaras estaban cortadas; ahora, dice, finge inocencia. Es mentira: él cerró y reconfiguró la cerradura después del asesinato.",
+            "en": "Voss asks Harlan directly what he inspected there and who can open the vault. Harlan claims he completed his inspection before the warning and that Sorell must have changed the access while the cameras were down; now, he says, she is pretending innocence. It is a lie: he closed and rekeyed the lock after the murder."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La cerradura sólo informa que la credencial no es válida, no quién la posee. Elin y Okoye registran la versión de Harlan como una afirmación no comprobada, no como prueba contra Sorell. Examinar los permisos de red de las pulseras no revela una clave de emparejamiento local.",
+            "en": "The lock reports only that a credential is invalid, not who owns it. Elin and Okoye record Harlan’s account as an unverified claim, not evidence against Sorell. Examining the wrist devices’ network permissions does not reveal a locally paired key."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Durante el reconocimiento, Elin deja junto a la mesa de trabajo un equipo portátil de diagnóstico tomado del cajón del compartimiento. Entre sus usos normales está contrastar referencias de tiempo de instrumental científico. Todavía no tiene acceso al dispositivo encerrado ni sabe que necesitará esa función.",
+            "en": "During the survey, Elin sets a portable diagnostic unit from the bay’s drawer beside the workbench. One of its ordinary uses is checking time references in scientific instruments. She cannot yet access the enclosed device and does not know she will need that function."
           }
         }
       ],
@@ -3333,6 +3389,13 @@
             "es": "Voss le pregunta a Elin si puede abrir la bóveda, no si puede detener lo que haya dentro.",
             "en": "Voss asks Elin whether she can open the vault, not whether she can stop whatever is inside."
           }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La recuperación del acceso y las comprobaciones radiológicas ocupan buena parte de la fase de frenado. Al no poder abrir la bóveda, Elin vuelve a las trazas del controlador óptico; Okoye conserva los resultados y la cadena de custodia.",
+            "en": "Access-recovery attempts and radiation checks occupy much of the braking phase. Unable to open the vault, Elin returns to the optical controller’s traces; Okoye preserves the findings and their chain of custody."
+          }
         }
       ],
       "importance": "required",
@@ -3360,8 +3423,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Elin encuentra otro registro sobreviviente: durante el apagón, la matriz óptica de comunicaciones de larga distancia transmitió una ráfaga comprimida desde el controlador del compartimiento exterior. Convierte los ángulos registrados de la matriz y la actitud de la nave en un vector inercial de puntería.",
-            "en": "Elin finds another surviving record: during the blackout, the long-distance optical communications array transmitted a compressed burst from the outer-bay controller. She converts the recorded array angles and ship attitude into an inertial pointing vector."
+            "es": "En los últimos minutos de su revisión, poco antes de la recepción, Elin concilia otro registro sobreviviente: durante el apagón, la matriz óptica de comunicaciones de larga distancia transmitió una ráfaga comprimida desde el controlador del compartimiento exterior. Convierte los ángulos registrados y la actitud de la nave en un vector inercial de puntería.",
+            "en": "In the final minutes of her review, shortly before reception, Elin reconciles another surviving record: during the blackout, the long-distance optical communications array transmitted a compressed burst from the outer-bay controller. She converts the recorded array angles and ship attitude into an inertial pointing vector."
           }
         },
         {
@@ -3447,8 +3510,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Elin todavía no puede refutar su explicación. La registra como una posibilidad en vez de aceptarla como un hecho. A la persona que mejor conocía a Zao le inquieta que él esté dispuesto a explicarla volviéndola descuidada.",
-            "en": "Elin cannot disprove his explanation yet. She records it as a possibility rather than accepting it as fact. His willingness to explain Zao by making her careless troubles the person who knew her best."
+            "es": "Elin no acepta el error de puntería como conclusión. Tras descartar los destinos fijos del catálogo, contrasta de inmediato la dirección y la hora de emisión con trayectorias móviles, incluido su propio plan de vuelo. Acaba de reconstruir el vector; no lleva horas evitando esa comprobación. La facilidad con que Harlan vuelve descuidada a Zao le resulta sospechosa. El público ve que Elin sigue calculando, pero todavía no el resultado.",
+            "en": "Elin does not accept a pointing error as a conclusion. After ruling out fixed catalogue destinations, she immediately compares the direction and emission time with moving trajectories, including their own flight plan. She has only just reconstructed the vector; she has not spent hours avoiding that check. Harlan’s readiness to make Zao careless troubles her. The audience sees Elin continue calculating, but not yet the result."
           }
         }
       ],
@@ -3477,8 +3540,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Durante un breve intervalo posterior, Harlan está solo en su camarote. El resultado le produce dos reacciones opuestas. La acusación directa de Zao ahora parece perdida, lo que lo libera de la condena histórica que esperaba. Pero también parece eliminar a la testigo a través de la cual la Tierra podría algún día reconstruir y reivindicar su sacrificio.",
-            "en": "During a brief interval afterward, Harlan is alone in his berth. The result gives him two opposed reactions. Zao’s direct accusation now appears lost, which relieves him of the historical condemnation he anticipated. But it also appears to remove the witness through whom Earth might one day reconstruct and vindicate his sacrifice."
+            "es": "Durante un breve intervalo después de esa conversación, mientras Elin prosigue los cálculos, Harlan se aparta a su camarote. El resultado le produce dos reacciones opuestas. La acusación directa de Zao ahora parece perdida, lo que lo libera de la condena histórica que esperaba. Pero también parece eliminar a la testigo a través de la cual la Tierra podría algún día reconstruir y reivindicar su sacrificio.",
+            "en": "During a brief interval after that exchange, while Elin continues calculating, Harlan withdraws to his berth. The result gives him two opposed reactions. Zao’s direct accusation now appears lost, which relieves him of the historical condemnation he anticipated. But it also appears to remove the witness through whom Earth might one day reconstruct and vindicate his sacrifice."
           }
         },
         {
@@ -3536,8 +3599,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Elin reconsidera la teoría del cómplice. El afán de Harlan por acusar a Sorell podría ser la conducta de un oficial inocente, de un cómplice que la sacrifica o de un asesino solitario que incrimina a la primera persona encontrada en la escena.",
-            "en": "Elin reconsiders the accomplice theory. Harlan’s eagerness to accuse Sorell could be the behavior of an innocent officer, an accomplice sacrificing her, or a lone killer framing the first person found at the scene."
+            "es": "Al contrastar las trayectorias, Elin también reevalúa la hipótesis de un cómplice. La prisa de Harlan por acusar a Sorell y su explicación no verificada de la cerradura podrían pertenecer a un inocente, a un cómplice que la sacrifica o a un asesino que culpa a la primera testigo.",
+            "en": "While checking the trajectories, Elin also reconsiders the accomplice theory. Harlan’s haste to accuse Sorell and his unverified account of the lock could belong to an innocent officer, an accomplice sacrificing her, or a killer blaming the first witness."
           }
         },
         {
@@ -3573,8 +3636,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Aproximadamente 10–15 minutos antes del primer contacto previsto, la consola de Elin detecta una transmisión óptica entrante precisamente sobre la trayectoria actual de la Ardor.",
-            "en": "Approximately 10–15 minutes before planned first contact, Elin’s console detects an incoming optical transmission precisely on the Ardor’s current trajectory."
+            "es": "A unos trece minutos del primer contacto previsto, dentro del margen de 10–15 minutos, la consola de Elin detecta una transmisión óptica entrante mientras ella todavía verifica la intercepción calculada. La recepción confirma el receptor móvil que estaba poniendo a prueba; no sustituye una comprobación que ella hubiera omitido.",
+            "en": "About thirteen minutes before planned first contact, within the 10–15-minute margin, Elin’s console detects an incoming optical transmission while she is still verifying the calculated interception. Reception confirms the moving receiver she was testing; it does not replace a check she had neglected."
           }
         },
         {
@@ -3610,6 +3673,13 @@
           "text": {
             "es": "Para la tripulación y el público, ésta es la primera prueba de que la transmisión aparentemente dirigida al espacio vacío tenía un receptor previsto.",
             "en": "For both the crew and the audience, this is the first proof that the apparently empty-space transmission had an intended receiver."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Elin llama al puente. Harlan regresa de inmediato de su camarote al requerimiento de Voss, antes de que se reproduzca el paquete.",
+            "en": "Elin calls the bridge. Harlan returns immediately from his berth at Voss’s summons, before the packet is played."
           }
         }
       ],
@@ -3647,6 +3717,13 @@
           "text": {
             "es": "Voss ordena abrirla en el puente.",
             "en": "Voss orders it opened on the bridge."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "El puente muestra trece minutos hasta el contacto. Elin no demora la escucha para terminar sus cálculos.",
+            "en": "The bridge shows thirteen minutes to contact. Elin does not delay playback to finish her calculations."
           }
         }
       ],
@@ -3759,6 +3836,10 @@
             {
               "es": "La discrepancia de propelente que la condujo hasta él.",
               "en": "The propellant discrepancy that led her to it."
+            },
+            {
+              "es": "La alimentación independiente y las protecciones contra interrupciones que Zao vio en el equipo.",
+              "en": "The independent power and protection against interruption Zao saw on the equipment."
             }
           ]
         },
@@ -3789,6 +3870,13 @@
           "text": {
             "es": "La tripulación y el público comprenden al mismo tiempo que la transmisión aparentemente dirigida al espacio vacío apuntaba a un receptor móvil: la propia Ardor, después de que la garganta la colocara por delante de su propia luz.",
             "en": "The crew and audience now understand at the same moment that the apparently empty-space transmission was aimed at a moving receiver: the Ardor itself, after the throat placed it ahead of its own light."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Durante el primer minuto, apenas la grabación establece la bomba y su plazo, Voss ordena abortar la aproximación. El puente rechaza el cambio aunque siga mostrando empuje y guiado normales. Cuando Zao nombra a Harlan al final, Okoye se coloca a su lado y lo mantiene bajo control físico; no le permite volver a salir del puente.",
+            "en": "During the first minute, as soon as the recording establishes the bomb and its deadline, Voss orders the approach aborted. The bridge rejects the change despite continuing to show normal thrust and guidance. When Zao names Harlan at the end, Okoye moves beside him and keeps him under physical control; she does not let him leave the bridge again."
           }
         }
       ],
@@ -3886,6 +3974,13 @@
             "es": "Ninguna pista sostiene por sí sola la revelación.",
             "en": "No single clue carries the revelation alone."
           }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La convergencia exige aislar a Harlan y revisar la detención de Sorell; no convierte cada sospecha en una certeza judicial ni demuestra por sí sola que no existan cómplices.",
+            "en": "The convergence requires isolating Harlan and reviewing Sorell’s detention; it does not turn every suspicion into a judicial certainty or by itself prove that there are no accomplices."
+          }
         }
       ],
       "importance": "required",
@@ -3930,6 +4025,13 @@
             "es": "La autenticación responde de inmediato a la objeción de Harlan.",
             "en": "The authentication answers Harlan’s objection immediately."
           }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "La firma se verifica enseguida. Durante ese segundo minuto se cotejan también la marca temporal, la exposición y el manifiesto; la demora posterior corresponde al control de vuelo, no al cálculo criptográfico.",
+            "en": "The signature verifies promptly. During that second minute the timestamp, exposure and manifest are also cross-checked; the subsequent delay belongs to flight control, not cryptographic computation."
+          }
         }
       ],
       "importance": "required",
@@ -3957,29 +4059,36 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Voss revoca la autoridad de red de Harlan y le ordena a Okoye liberar a Sorell de inmediato.",
-            "en": "Voss revokes Harlan’s network authority and orders Okoye to release Sorell at once."
+            "es": "Con unos once minutos hasta el contacto, Voss revoca la autoridad de red de Harlan. Retira la custodia de Sorell porque el fundamento de esa detención se ha debilitado: necesita a la especialista y no tiene pruebas suficientes para seguir inmovilizándola. Okoye mantiene el control de Harlan mientras Voss libera a Sorell.",
+            "en": "With about eleven minutes to contact, Voss revokes Harlan’s network authority. He ends Sorell’s custody because its basis has weakened: he needs the specialist and lacks sufficient evidence to keep her immobilized. Okoye maintains control of Harlan while Voss releases Sorell."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Elin toma el ascensor hacia el compartimiento exterior de servicio del reactor. Su objetivo es alcanzar la bóveda interior, aunque todavía no puede abrir su cerradura local.",
-            "en": "Elin takes the elevator toward the outer reactor service bay. Her purpose is to reach the inner vault, though she still cannot open its local lock."
+            "es": "Durante los siguientes ocho minutos, Voss intenta cancelar y sustituir el perfil por las vías normales y el corte remoto de emergencia. Elin coteja la recepción de órdenes con la telemetría real, localiza el tramo común que ya no entrega mandos y verifica que reconectar las comunicaciones no lo ha reparado. Sorell sigue los rechazos y el tiempo restante; no hay una espera pasiva ni una discusión que dure ocho minutos sobre la firma.",
+            "en": "Over the next eight minutes, Voss tries to cancel and replace the profile through normal controls and the remote emergency cutoff. Elin compares command receipt with actual telemetry, locates the common section that no longer delivers commands, and verifies that reconnecting communications did not repair it. Sorell tracks the rejections and remaining time; there is no passive wait or eight-minute debate over the signature."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Okoye le quita las restricciones a Sorell. Voss le ordena permanecer en el puente, vigilar la aproximación final programada y comenzar a preparar el saludo.",
-            "en": "Okoye removes Sorell’s restraints. Voss orders her to remain on the bridge, monitor the programmed final approach, and begin preparing the greeting."
+            "es": "Harlan niega haber alterado los mandos y vuelve a culpar a Sorell. Sigue bajo el control de Okoye durante la comprobación. Elin establece que el plan almacenado continúa por sí solo, conserva el corte programado y sólo puede interrumpirse ahora desde el mando local independiente del compartimiento exterior. Las mediciones de combustible no fueron borradas ni falsificadas.",
+            "en": "Harlan denies altering the controls and blames Sorell again. He remains under Okoye’s control throughout the check. Elin establishes that the stored plan is continuing autonomously, retains its scheduled cutoff, and can now be interrupted only through the independent local control in the outer bay. The fuel measurements were neither erased nor falsified."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Voss le ordena entonces a Okoye quitarle a Harlan su dispositivo de muñeca e inmovilizarlo.",
-            "en": "Voss then orders Okoye to take Harlan’s wrist device and restrain him."
+            "es": "Quedan unos tres minutos. Elin toma el ascensor hacia popa para interrumpir localmente el vuelo y acceder a la bóveda. Voss ordena a Sorell permanecer en el puente, vigilar la aproximación y recuperar el saludo. La nave no mantiene rumbo por elección de Voss: él ya intentó abortar y todavía trata de conseguirlo.",
+            "en": "About three minutes remain. Elin takes the elevator aft to interrupt the flight locally and access the vault. Voss orders Sorell to remain on the bridge, monitor the approach and recover the greeting. The ship is not holding course by Voss’s choice: he has already attempted to abort and is still trying."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Voss ordena a Okoye asegurar a Harlan al puesto y retirar su dispositivo de muñeca: puede contener la clave local de la bóveda, aunque aún no está probado. Para sujetarlo a la estructura y quitarle el dispositivo, Okoye cambia su agarre. Harlan aparenta colaborar.",
+            "en": "Voss orders Okoye to secure Harlan to his station and remove his wrist device: it may hold the vault’s local key, although that is not yet proved. To tether him to the structure and remove the device, Okoye changes her grip. Harlan appears to cooperate."
           }
         }
       ],
@@ -4029,8 +4138,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Harlan sabe que Elin se dirige hacia la bomba. Como el dispositivo es autónomo y no acepta órdenes remotas, su única posibilidad restante es alcanzarlo físicamente, detenerla o provocar una detonación inmediata.",
-            "en": "Harlan knows Elin is heading toward the bomb. Because the device is self-contained and accepts no remote commands, his only remaining chance is to reach it physically, stop her, or force an immediate detonation."
+            "es": "Harlan sabe que Elin se dirige tanto al mando local como a la bomba. Si desvía o detiene la nave, su ataque al punto de contacto fracasa aunque la carga siga activa. Como el dispositivo no acepta órdenes remotas, debe alcanzarla físicamente, impedir ambas intervenciones o forzar una detonación inmediata.",
+            "en": "Harlan knows Elin is heading toward both the local control and the bomb. If she diverts or stops the ship, his contact-point attack fails even if the charge remains active. Because the device accepts no remote commands, he must reach her physically, prevent both interventions or force an immediate detonation."
           }
         },
         {
@@ -4073,15 +4182,15 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Llega primero a la bóveda interior y comienza a intentar abrir su cerradura local.",
-            "en": "She reaches the inner vault first and begins attempting to open its local lock."
+            "es": "Elin llega primero al compartimiento exterior y se dirige al mando de emergencia local, próximo a la entrada de la bóveda. Necesita hacerse cargo desde allí del plan que el puente ya no puede interrumpir.",
+            "en": "Elin reaches the outer bay first and goes to the local emergency control near the vault entrance. She needs to take over there from the plan the bridge can no longer interrupt."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "Harlan desciende por la escalera segmentada del conducto de servicio, deslizándose entre las paradas de las cubiertas y cerrando desde adentro cada escotilla de acceso al pasar. La ruta es más rápida pero mucho más peligrosa bajo empuje. Llega al compartimiento exterior después de Elin y la ataca antes de que pueda resolver la cerradura.",
-            "en": "Harlan descends the segmented ladder in the service shaft, sliding between its deck stops and locking every access hatch from inside as he passes. The route is faster but far more dangerous under thrust. He reaches the outer bay after Elin and attacks her before she can solve the lock."
+            "es": "Harlan desciende por la escalera segmentada del conducto de servicio, deslizándose entre las paradas de cubierta y cerrando cada escotilla desde dentro a su paso. La ruta es más rápida, pero mucho más peligrosa bajo empuje. Llega después de Elin y la ataca antes de que complete la intervención local. La aparta del mando y la mantiene contra el acceso a la bóveda.",
+            "en": "Harlan descends the segmented service-shaft ladder, sliding between deck stops and locking every access hatch from inside as he passes. The route is faster but far more dangerous under thrust. He arrives after Elin and attacks before she completes the local intervention. He forces her away from the control and holds her against the vault entrance."
           }
         },
         {
@@ -4152,8 +4261,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La Ardor entra en microgravedad por cuarta vez. La pantalla de navegación continúa contando los instantes restantes hasta el punto de contacto programado. La bomba está sincronizada con la hora de contacto, no con la propia orden de empuje.",
-            "en": "The Ardor enters microgravity for the fourth time. The navigation display continues counting down the remaining moments to the scheduled contact point. The bomb is synchronized to that contact time, not to the thrust command itself."
+            "es": "La Ardor entra en microgravedad por cuarta vez. Queda aproximadamente un minuto hasta la hora de contacto y de detonación. El corte lo ejecuta el plan intacto, no la lucha; la cuenta del dispositivo sigue avanzando con independencia de la posición real de la nave.",
+            "en": "The Ardor enters microgravity for the fourth time. Approximately one minute remains until the contact and detonation time. The intact plan executes the cutoff, not the struggle; the device’s countdown continues independently of the ship’s actual position."
           }
         },
         {
@@ -4298,15 +4407,15 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "La advertencia de Zao le informa a Elin que la unidad tiene alimentación autónoma y está protegida contra interrupciones obvias. La pantalla local y los indicadores de diagnóstico muestran alimentación redundante para el disparo y respuestas contra manipulaciones. Con pocos segundos restantes, cortar la energía o dañar el controlador sería una apuesta inaceptable.",
-            "en": "Zao’s warning tells Elin that the unit is self-powered and protected against obvious interruption. The local display and diagnostic indicators show redundant firing power and tamper responses. With seconds remaining, cutting power or damaging the controller would be an unacceptable gamble."
+            "es": "La advertencia de Zao ya le ha dicho a Elin que la unidad tiene alimentación propia y protección contra interrupciones obvias. Los indicadores locales confirman que sigue activa. Con segundos disponibles, no puede apostar por un corte de alimentación ni por dañar el controlador.",
+            "en": "Zao’s warning has already told Elin that the unit has independent power and protection against obvious interruption. Local indicators confirm it remains active. With seconds available, she cannot gamble on cutting power or damaging the controller."
           }
         },
         {
           "type": "paragraph",
           "text": {
-            "es": "El propósito científico original del paquete exigía una sincronización precisa del reloj antes del despliegue remoto. A través de su interfaz local de mantenimiento, Elin suministra una referencia válida de tiempo de misión, pero drásticamente atrasada.",
-            "en": "The package’s original scientific purpose required precise clock synchronization before remote deployment. Through its local maintenance interface, Elin supplies a valid but drastically rewound mission-time reference."
+            "es": "Elin reconoce en el equipo la función de referencia temporal de servicio propia del instrumental científico. Toma de la mesa el diagnóstico que dejó allí durante la investigación e improvisa una referencia de tiempo sustitutiva. La intervención cambia el tiempo que el controlador acepta para decidir, no sólo los dígitos de la pantalla. Es una capacidad del dispositivo ficticio ya establecida, no una segunda bomba ni una solución recibida de Zao.",
+            "en": "Elin recognizes the equipment’s scientific service-time reference function. She takes the diagnostic unit she left on the bench during the investigation and improvises a substituted time reference. The intervention changes the time the controller accepts for its decision, not merely the screen’s digits. This is an established capability of the fictional device, not a second bomb or a solution supplied by Zao."
           }
         },
         {
@@ -4326,8 +4435,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Entonces salta a una cifra absurdamente lejana en el futuro.",
-            "en": "Then it jumps to a number absurdly far in the future."
+            "es": "Entonces el intervalo restante salta hacia arriba mientras el reloj independiente de la nave sigue avanzando y atraviesa la hora original sin detonación. Elin comprueba la discrepancia entre ambas referencias y que la carga continúa armada. No aparece una fecha futura ni se afirma que el peligro haya desaparecido.",
+            "en": "Then the remaining interval jumps upward while the ship’s independent clock keeps advancing and passes the original deadline without detonation. Elin checks the discrepancy between the references and confirms that the charge remains armed. No future calendar date appears, and the danger is not declared gone."
           }
         },
         {
@@ -4348,8 +4457,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Más adelante, la bomba podrá remolcarse al espacio profundo para una detonación controlada o ser abordada por un equipo especialista en desactivación. El encuentro inmediato está a salvo.",
-            "en": "The bomb can later be towed into deep space for controlled detonation or approached by a specialist defusal team. The immediate encounter is safe."
+            "es": "La intervención compra un intervalo suficiente para atender el control de vuelo y conservar el encuentro. El equipo de diagnóstico queda conectado y el estado de la carga debe seguir vigilándose. Su disposición definitiva corresponderá después a especialistas; la pausa obtenida no autoriza tratarla como inofensiva.",
+            "en": "The intervention buys an interval sufficient to address flight control and preserve the encounter. The diagnostic unit remains connected and the charge’s state must continue to be monitored. Specialists must handle its eventual disposition; the pause does not make it harmless."
           }
         }
       ],
@@ -4378,6 +4487,13 @@
         {
           "type": "paragraph",
           "text": {
+            "es": "Con el plazo inmediato postergado, Elin toma el control local, impide que se reanude un empuje no autorizado y confirma que la nave se mantiene en el punto previsto tras el corte. Informa que el puente continúa sin mando de vuelo hasta reparar el sabotaje. Se queda a popa vigilando la carga y el control local; Okoye custodia a Harlan y Voss vuelve al puente.",
+            "en": "With the immediate deadline deferred, Elin takes local control, prevents any unauthorized resumption of thrust and confirms that the ship is holding at the planned point after cutoff. She reports that bridge flight control remains unavailable until the sabotage is repaired. She stays aft monitoring the charge and local control; Okoye guards Harlan and Voss returns to the bridge."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
             "es": "Voss informa al puente el intervalo seguro.",
             "en": "Voss reports the safe interval to the bridge."
           }
@@ -4385,8 +4501,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Sorell ya fue liberada. Completa el protocolo de saludo mientras los demás comienzan a regresar hacia proa.",
-            "en": "Sorell has already been released. She completes the greeting protocol while the others begin returning forward."
+            "es": "Sorell ya está libre. Completa el saludo mientras Voss vuelve hacia proa; la vigilancia a popa no queda abandonada.",
+            "en": "Sorell has already been released. She completes the greeting while Voss returns forward; the aft watch is not abandoned."
           }
         }
       ],
@@ -4767,6 +4883,13 @@
         {
           "type": "paragraph",
           "text": {
+            "es": "Antes de emprender el regreso, deben restaurarse los mandos del puente y organizarse una vigilancia segura de la carga. El informe puede enviarse mientras esas tareas siguen en curso; terminar el encuentro no las vuelve innecesarias.",
+            "en": "Before beginning the return, bridge controls must be restored and a safe watch on the charge arranged. The report can be sent while those tasks continue; completing the encounter does not make them unnecessary."
+          }
+        },
+        {
+          "type": "paragraph",
+          "text": {
             "es": "Después del encuentro y antes de comenzar el trayecto de regreso, Voss prepara un informe oficial para la Tierra.",
             "en": "After the meeting and before beginning the return leg, Voss prepares an official report for Earth."
           }
@@ -4774,8 +4897,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Utiliza la matriz óptica de comunicaciones de larga distancia de la Ardor para enviar el informe a través del espacio ordinario como registro independiente. Puede llegar después de que la tripulación regrese por la garganta, pero continuará viajando incluso si la Ardor no alcanza la ventana de regreso.",
-            "en": "He uses the Ardor’s long-distance optical communications array to send the report through ordinary space as an independent record. It may arrive after the crew returns through the throat, but it will continue even if the Ardor fails to make the return window."
+            "es": "Usa la matriz óptica de comunicaciones de larga distancia de la Ardor para enviar el informe por el espacio ordinario como registro independiente. Seguirá viajando aunque la nave no alcance la ventana de regreso. El relato no afirma cuál llegará primero sin un cronograma de retorno calculado.",
+            "en": "He uses the Ardor’s long-distance optical communications array to send the report through ordinary space as an independent record. It will continue even if the ship misses the return window. The narrative makes no claim about which arrives first without a calculated return schedule."
           }
         },
         {

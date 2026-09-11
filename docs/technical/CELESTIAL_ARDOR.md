@@ -4,6 +4,9 @@
 > Idioma fuente: español.  
 > Entidad estructurada relacionada: `data/vehicles.json` → `vehicle:celestial-ardor`.
 
+> Autoridad vigente: master WIP rev. 17 en `data/outlines/light-delay-master-narrative.json`.
+> Este documento conserva diseño anterior; las notas explícitas del master prevalecen.
+
 ## 1. Identidad y función
 
 La **Celestial Ardor** es una nave humana de larga duración construida originalmente en la Tierra y destinada posteriormente en la Estación Proxima. Ya se encontraba en Proxima, junto con su tripulación, cuando se descubrió la garganta piloto Velari. No fue diseñada para el primer contacto: el **núcleo/complemento diplomático** y los sistemas específicos de contacto fueron instalados posteriormente mediante retrofit en Proxima.
@@ -52,9 +55,25 @@ En total, la Ardor entra cuatro veces en microgravedad durante la historia: las 
 
 ### Corte al igualar velocidad en el encuentro remoto
 
-La aproximación remota a la estación Velari termina bajo desaceleración, con gravedad aparente cercana a 1 g. El corte de motor al igualar velocidad está programado y anunciado; en el clímax ocurre a T−12 s respecto de la apertura del canal. La tripulación no es sorprendida por el cambio, pero pierde apoyo en el instante del corte. No deben aparecer herramientas ni objetos peligrosos sin asegurar: el paso a microgravedad se expresa con correas, tethers, cables flexibles, cabello y elementos sujetos que se elevan.
+La aproximación remota a la estación Velari termina bajo desaceleración, con gravedad aparente cercana a 1 g. En el master rev. 17, el corte programado ocurre aproximadamente un minuto antes de la hora de contacto y del plazo original de la carga; es la cuarta entrada en microgravedad. La tripulación conoce el corte, pero pierde apoyo en ese instante. No deben aparecer herramientas ni objetos peligrosos sin asegurar: el paso a microgravedad se expresa con correas, tethers, cables flexibles, cabello y elementos sujetos que se elevan. El antiguo T−12 s de apertura de canal corresponde a la continuidad archivada.
 
-El relé físico del núcleo dispone de accionamientos principal y auxiliar alcanzables desde el ramal técnico. Bajo 1 g una persona puede usar la arquitectura estrecha para bloquear el principal; en microgravedad puede impulsarse hacia el auxiliar. Los pasamanos y puntos de tether permiten interceptar y redirigir ese movimiento sin aplicar una lógica de tackle terrestre.
+Referencia archivada: el relé físico del núcleo disponía de accionamientos principal y auxiliar alcanzables desde el ramal técnico. No describe el clímax vigente. Se conserva como recurso de puesta la intercepción por pasamanos y tethers, sin aplicar una lógica de tackle terrestre.
+
+### Mando de vuelo y compartimiento exterior — master rev. 17
+
+El controlador autónomo ejecuta el perfil aprobado, con sus giros y cortes programados.
+El puente puede normalmente sustituirlo o interrumpirlo, incluido un corte remoto de emergencia.
+La telemetría y la ejecución almacenada no dependen de esas entradas de mando.
+Existe un mando local independiente en el compartimiento exterior de servicio del reactor,
+junto al acceso de la bóveda, a unos 65 m del puente. Un cajón contiene instrumental de
+diagnóstico científico, incluidas funciones de contraste de referencias de tiempo.
+
+Harlan inutiliza físicamente los mandos remotos durante su última inspección a popa,
+después de las pruebas de partida y antes de cruzarse con Zao. No toca la telemetría,
+el plan ni el mando local. El vuelo normal no delata el fallo; el intento de aborto sí.
+Reconectar las comunicaciones no repara esa intervención independiente. No se borran logs.
+Voss intenta abortar al oír la amenaza y Elin busca el mando local; Harlan la intercepta.
+Tras el rescate, Elin mantiene vigilancia de la carga y control local hasta reparar el mando remoto.
 
 ## 4. Arquitectura interna axial
 

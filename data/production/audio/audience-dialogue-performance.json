@@ -202,8 +202,8 @@
       "speakerId": "character:harlan",
       "intent": { "es": "Razona en voz alta y transforma datos incompletos en la certeza equivocada que lo tranquiliza.", "en": "He reasons aloud, turning incomplete facts into the mistaken certainty that reassures him." },
       "delivery": {
-        "en": { "es": "Primera frase calculadora; segunda más lenta, con alivio frío al llegar a already there.", "en": "Calculate through the first sentence; slow into cold relief by ‘already there.’" },
-        "es": { "es": "Cadencia de inferencia técnica; la calma aparece recién en ya estemos allí.", "en": "Technical inferential cadence; calm arrives only on ‘ya estemos allí.’" }
+        "en": { "es": "Calculador al nombrar Júpiter; aceptar con una pausa Earth will know y cerrar con alivio frío en before the encounter.", "en": "Calculating on Jupiter; accept ‘Earth will know’ with a pause, then settle into cold relief on ‘before the encounter.’" },
+        "es": { "es": "Cadencia porteña de inferencia; asumir se va a enterar sin pánico y encontrar la calma en no llega antes del encuentro.", "en": "Buenos Aires inferential cadence; accept ‘se va a enterar’ without panic and find calm on ‘no llega antes del encuentro.’" }
       }
     },
     {
@@ -233,7 +233,7 @@
       "intent": { "es": "Desde la custodia, Sorell obliga al puente a reconocer que una explicación coherente todavía puede ser falsa.", "en": "From custody, Sorell forces the bridge to admit that a coherent explanation can still be false." },
       "delivery": {
         "en": { "es": "Herida pero intelectualmente firme; acelerar la primera acusación y abrir espacio antes de exactly.", "en": "Hurt but intellectually firm; press the first accusation, then leave space before ‘exactly.’" },
-        "es": { "es": "Peninsular culto y directo; marcar estáis y os advertí sin estridencia ni súplica.", "en": "Cultivated, direct Peninsular delivery; mark ‘estáis’ and ‘os advertí’ without shrillness or pleading." }
+        "es": { "es": "Santiagueño culto y directo; marcar primera explicación y les advertí, herida pero firme, sin estridencia ni súplica.", "en": "Cultivated, direct Santiago del Estero delivery; stress ‘primera explicación’ and ‘les advertí,’ hurt but firm, without shrillness or pleading." }
       }
     },
     {

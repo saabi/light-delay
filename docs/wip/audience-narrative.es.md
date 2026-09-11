@@ -1,6 +1,6 @@
 # Lúz Tardía
 
-*Relato para público. Revisión 16.*
+*Relato para público. Revisión 17.*
 
 ## Prólogo — Luces de la Tierra
 
@@ -10,7 +10,7 @@ Esa es la edad que tiene la Tierra cuando llega a Júpiter. Cada grito, cada dis
 
 Esta noche, una misma plaza contiene dos multitudes.
 
-La primera señala la antigua garganta junto a Júpiter. Durante miles de años, su boca ha repetido la misma secuencia de luz visible: un manual básico, una instrucción, una invitación y el horario de una apertura que quizá no vuelva a ocurrir en milenios. Los Velari nunca han cruzado al Sistema Solar. Para sus defensores, esa paciencia demuestra moderación.
+La primera señala la antigua garganta junto a Júpiter. Su boca ofrece un manual de luz visible: instrucciones y una invitación dejadas por una civilización capaz de esperar milenios. El horario preciso de la apertura llegó hace poco. Los Velari no han venido a imponer el encuentro. Para quienes apoyan la misión, esa paciencia demuestra moderación.
 
 La segunda multitud observa los mismos hechos y llega a la conclusión opuesta. Alguien construyó una puerta dentro del hogar de la humanidad antes de que la humanidad supiera que había alguien afuera. La puerta habla, pero no escucha. Nadie puede preguntar si sus instrucciones están completas, si dicen la verdad o si son seguras.
 
@@ -66,7 +66,7 @@ La *Ardor* se desacopla, rota en sentido prógrado y enciende su antorcha de fus
 
 Es mucho tiempo para que seis personas habiten tan poco metal. Comen. Discuten por nada. Duermen mal.
 
-En el periapsis, el empuje se corta. El peso desaparece mientras la nave gira de prógrada a retrógrada y Júpiter cruza los puertos profundos, con sus anillos iluminados desde atrás. Después la antorcha vuelve a encenderse. Abajo regresa, ahora en la dirección contraria.
+En el periapsis, el empuje se corta. El peso desaparece mientras la nave gira de prógrada a retrógrada y Júpiter cruza las ventanas profundas con sus anillos iluminados a contraluz. Después, la antorcha vuelve a encenderse. El mismo piso recibe sus pies; lo que cambió fue la orientación de la nave en el espacio.
 
 Sorell dice lo que ninguno ha dicho en voz alta.
 
@@ -157,6 +157,8 @@ En ingravidez y a sesenta y cinco metros a popa del puente, Zao se cruza con Har
 
 Parece estar terminando una inspección asignada. No ha terminado de asegurar la puerta a su espalda.
 
+Un instante antes, sus manos trabajaban en otro panel del compartimiento exterior. Cerró la tapa y comprobó la telemetría. Todo seguía pareciendo normal en el puente.
+
 Su mirada dura una fracción de segundo de más. No ofrece ninguna explicación, y ella no acusa a un hombre basándose en una expresión. Se cruzan sin decir palabra.
 
 Ahora él sabe exactamente dónde está ella y qué puede encontrar.
@@ -204,11 +206,11 @@ En el compartimiento exterior, Zao prueba la red inalámbrica, la conexión cabl
 
 La matriz óptica de larga distancia sigue operativa. Su emisor de popa y su controlador local no dependen de los troncales que Harlan ha cortado.
 
-Zao descarta en voz alta todos los destinos evidentes. Júpiter bloquea Próxima. Una advertencia a la Tierra llegará después de la detonación que describe. La garganta piloto transmite, pero nunca ha aceptado una emisión humana. Zao no puede improvisar un mensaje para los Velari en la gramática no probada de Sorell, y la humanidad no tiene una dirección confirmada para su estación. Incluso si pudiera enviar un haz a través de la apertura completa por delante de la nave, éste saldría frente a la *Ardor* y seguiría avanzando a la velocidad de la luz. No esperaría a ningún receptor.
+Zao descarta los destinos evidentes en voz baja. Júpiter bloquea Próxima. La Tierra recibiría la advertencia en unos cuarenta y tres minutos, pero la garganta ya estaría cerrada. Su respuesta tendría que recorrer el espacio ordinario hasta la nave: al sumar ese segundo trayecto, el resultado supera las veinticuatro horas. Demasiado tarde. La Tierra podría conservar su testimonio, no devolverle ayuda a la Ardor antes de la explosión. La garganta piloto nunca ha aceptado una transmisión humana. Zao tampoco puede improvisar una advertencia en la gramática no probada de Sorell. Incluso una señal enviada a través de la apertura por delante de la nave seguiría alejándose a la velocidad de la luz, sin un receptor humano que la esperara.
 
 Entonces deja de hablar.
 
-Superpone el plan de vuelo con una trayectoria a través del espacio ordinario. Faltan minutos para el cruce. La nave está a punto de tomar un atajo que su luz no puede tomar.
+Vuelve al plan de vuelo. Faltan minutos para el cruce. Recorre dos veces los mismos valores y cambia de pantalla; desde la puerta sólo se ve su rostro.
 
 Zao inicia un cálculo nuevo y no dice nada. Cuando aparece la solución, deja escapar un breve suspiro.
 
@@ -216,7 +218,7 @@ Veintitrés horas, quince minutos.
 
 La cifra no promete ayuda para ella. Promete que la advertencia puede sobrevivirla.
 
-Con los troncales principales fuera de servicio, graba directamente en el búfer volátil de ráfagas de la matriz: el paquete, la masa y el origen aproximados, la potencia, la bóveda, la cuenta regresiva, la firma neutrónica y cada indicio que la llevó a popa. Firma el paquete con su clave personal.
+Con los troncales principales caídos, graba en el búfer volátil de la matriz. Identifica el paquete, su masa y origen, su potencia, la bóveda, el plazo y las pistas que la llevaron a descubrirlo. Incluye su alimentación independiente y las protecciones contra interrupciones. Lo dice en menos de un minuto y firma el paquete con su clave personal.
 
 La consola no muestra ningún destino legible. Más allá del compartimiento, sus palabras se pierden bajo las nervaduras del casco y la vibración distante de un reactor a potencia de servicio.
 
@@ -238,7 +240,7 @@ Harlan examina el resumen de emisión. Confirmar un destino exige convertir los 
 En cambio, razona a partir de los mismos hechos inmediatos que consideró Zao.
 
 <!-- audience-dialogue-id: audience:dialogue:c2-harlan-earth -->
-> **Rylen Harlan:** «Próxima está detrás de Júpiter. La Tierra no se va a enterar hasta que ya estemos allí».
+> **Rylen Harlan:** «Próxima está detrás de Júpiter. La Tierra se va a enterar. Pero su respuesta no llega antes del encuentro».
 
 Próxima está oculta. La garganta no escucha. Zao no puede dirigirse a los Velari, y su estación no tiene una vía de comunicación confirmada. La Tierra parece ser el único destino posible.
 
@@ -262,7 +264,7 @@ El cuerpo de Zao queda en el compartimiento exterior accesible. Harlan cierra la
 
 Por delante de la nave, la garganta se abre. La *Ardor* cruza. La apertura se cierra a sus espaldas y vuelve a su paciente estado piloto unidireccional.
 
-Ahora no hay forma de abortar ni de volver a casa antes de la ventana de regreso. De las cinco personas que siguen vivas a bordo, cuatro aún ignoran el precio del cruce. La quinta asciende hacia el puente mientras su ritmo cardíaco disminuye.
+Ahora no hay regreso inmediato por la garganta. Todavía podrían cambiar el rumbo del otro lado, si los mandos respondieran. De las cinco personas que siguen vivas a bordo, cuatro ignoran lo ocurrido. La quinta asciende hacia el puente mientras su ritmo cardíaco disminuye.
 
 ## Capítulo 7. Custodia
 
@@ -302,20 +304,16 @@ La custodia está justificada. El asesinato no está demostrado. Elin sabe que s
 
 Una vez despejada la boca lejana, la nave se estabiliza en su trayecto del otro lado y el empuje devuelve el peso a las cubiertas: unos diecisiete coma cuatro millones de kilómetros hasta el punto de encuentro, cerca de veintitrés horas y media de aceleración y frenado bajo un g.
 
-Durante la primera mitad, Sorell permanece sometida a interrogatorios en vez de preparar el saludo. Voss planifica en silencio cómo acercarse a una estación alienígena sin su xenolingüista. Elin y Okoye trabajan hasta que el cansancio desdibuja las pantallas, y después siguen trabajando.
-
-A mitad del trayecto, el empuje se corta y el peso desaparece por tercera vez. La tripulación asegura cuerpos y trabajo mientras la *Ardor* rota ciento ochenta grados desde la orientación de aceleración hasta la de frenado. Horas de investigación se vuelven visibles en una única maniobra.
-
-El motor vuelve a empujar hacia el mismo piso. Regresa un g y comienza la desaceleración hacia la estación Velari.
+Sorell sigue bajo custodia. Voss teme tener que acercarse a la estación sin su xenolingüista, pero aún no tiene una explicación que pueda sostener. Elin y Okoye preservan las pruebas y empiezan a reconstruir lo ocurrido.
 
 ## Capítulo 8. Investigación
 
-Voss ordena una auditoría completa: la falla de comunicaciones, el último trabajo de Zao, la conciliación de masa y todos los registros de instrumentos locales que hayan sobrevivido.
+Apenas vuelve el empuje, Voss ordena una auditoría completa: la falla de comunicaciones, el último trabajo de Zao, la conciliación de masa y todos los registros locales que sobrevivieron. La imagen de Sorell junto al cuerpo no basta para cerrar el caso.
 
 Inmovilizada a pocos metros de él, Sorell no espera a que le pregunten.
 
 <!-- audience-dialogue-id: audience:dialogue:d1-sorell-first-explanation -->
-> **Lian Sorell:** «Estáis tratando la primera explicación como si fuera la única. Eso es exactamente lo que os advertí que no hicierais ahí fuera».
+> **Lian Sorell:** «Están tratando la primera explicación como si fuera la única. Eso es exactamente lo que les advertí que no hicieran allá afuera».
 
 Elin empieza por lo que Zao dejó atrás, porque Zao siempre dejaba algo atrás.
 
@@ -330,7 +328,7 @@ Alguien manipuló el suministro o la medición de helio-3 para provocar una pér
 
 La teoría explica el combustible, la radiación, la advertencia interrumpida y la presencia de Sorell mediante una sola cadena ordenada. A Voss le resulta convincente. Elin la registra como hipótesis, que no es lo mismo que creer en ella.
 
-Ella y Okoye la desmontan a medida que aparecen los registros.
+Durante la primera mitad del trayecto, Elin y Okoye desmontan la hipótesis registro por registro. Cambian los turnos. La comida se enfría junto a las pantallas. El cansancio empieza a borrar los números y las obliga a comprobarlos otra vez.
 
 El inventario y la presión de los tanques concuerdan con la medición del motor. No salió de la nave helio-3 ni deuterio sin contabilizar. Las proporciones de mezcla ordenadas y medidas se mantuvieron normales. La eficiencia del plasma, la velocidad de escape y el empuje entregado permanecieron dentro de los márgenes previstos.
 
@@ -340,13 +338,23 @@ Al dividir el empuje medido por la aceleración medida queda una sola explicaci�
 
 Harlan se adapta. Tal vez Zao detuvo la manipulación antes de que la mezcla cambiara por mucho tiempo. La revisión mantiene como posible el intento de sabotaje, pero ya no explica el combustible consumido ni los neutrones. Un único hecho conveniente se ha partido en dos.
 
+A mitad del trayecto, el empuje se corta y el peso desaparece por tercera vez. La tripulación asegura cuerpos y trabajo mientras la *Ardor* rota ciento ochenta grados desde la orientación de aceleración hasta la de frenado. Horas de investigación se vuelven visibles en una única maniobra.
+
+El motor vuelve a empujar hacia el mismo piso. Regresa un g y comienza la desaceleración hacia la estación Velari.
+
 Elin y Okoye llevan a popa un detector portátil de radiación. El conteo de neutrones disminuye lejos de los paneles de combustible accesibles y aumenta hacia la bóveda interior. No sigue ni la potencia del reactor ni la telemetría de mezcla. Algo compacto y estacionario se encuentra detrás del blindaje.
 
 La bóveda sigue sellada por su cerradura local aislada. La autoridad de red de Voss no puede alcanzarla. Todos los intentos sin la clave de muñeca correcta fracasan.
 
+Voss le exige a Harlan que precise qué inspeccionó y quién puede abrir la puerta. Harlan afirma que terminó antes del aviso de Zao. Sorell debió cambiar el acceso durante el apagón, dice; ahora finge no saber nada.
+
+La cerradura no identifica a quien posee la clave. Los permisos de red de una pulsera tampoco revelan su emparejamiento local. Elin anota la explicación de Harlan como una afirmación que falta demostrar. Okoye mantiene esa distinción cuando vuelve a interrogar a Sorell.
+
+Elin saca un diagnóstico portátil del cajón del compartimiento y lo deja junto a la mesa de trabajo. Es instrumental corriente de una nave científica; entre otras cosas, permite contrastar referencias de tiempo. Por ahora, nada de eso abre la puerta.
+
 Pueden sostener dos conclusiones y mantenerlas separadas. La *Ardor* transportó masa no declarada, que causó el consumo adicional. Una fuente compacta de neutrones espera detrás de una puerta que no pueden abrir. Es probable que un mismo objeto explique ambas cosas, pero el acero impide demostrarlo. Todavía no saben que es un arma ni que tiene una cuenta regresiva.
 
-Elin vuelve a los registros y encuentra otro superviviente.
+Las comprobaciones radiológicas y los intentos de recuperar el acceso consumen buena parte del frenado. Al final, Elin vuelve a las trazas del controlador óptico y encuentra otro registro sobreviviente.
 
 Durante el apagón, la matriz óptica de comunicaciones de larga distancia disparó una ráfaga comprimida desde el controlador del compartimiento exterior. El contenido ya no existe, pero el resumen conserva los ángulos de la matriz y la actitud de la nave. Elin los convierte en un vector inercial.
 
@@ -367,7 +375,7 @@ Elin no levanta la vista.
 
 El vector hacia el espacio vacío confirma la suposición privada de Harlan: una ingeniera aterrada, un troncal de navegación averiado, un disparo manual apresurado y una acusación rumbo a ninguna parte, o a la Tierra demasiado tarde para que importe.
 
-Elin no puede refutarlo. Lo que le molesta es la premisa que exige su explicación: que Zao se volvió descuidada. Harlan acepta esa premisa con demasiada facilidad.
+Elin no puede refutarlo todavía, pero tampoco deja la explicación sin probar. Acaba de reconstruir el vector. Tras descartar los destinos fijos, contrasta su hora y dirección con trayectorias móviles, incluido su propio plan de vuelo. Harlan ya da por perdida la señal. Ella sigue calculando.
 
 A solas en su camarote, Harlan se enfrenta a un resultado que corta en ambas direcciones. La acusación de Zao parece perdida y lo libera de una condena futura. También elimina a la única testigo a través de la cual la Tierra podría comprender lo que él cree haber hecho por ella.
 
@@ -380,9 +388,11 @@ Mientras tanto, Elin pone a prueba la versión que nadie ha examinado. Harlan se
 
 Elin no decide cuál de las tres. Sólo decide que encontrar a alguien junto a un cuerpo no basta para cerrar un caso.
 
-Entre diez y quince minutos antes del contacto, con la desaceleración casi terminada, su consola detecta una transmisión óptica entrante que coincide exactamente con la trayectoria de la *Ardor*.
+A unos trece minutos del contacto, mientras todavía comprueba la intercepción, su consola detecta una transmisión óptica entrante. El resultado que estaba poniendo a prueba acaba de encontrarla.
 
 La sorpresa da paso al reconocimiento: el formato de paquete de la matriz, después un encabezado de firma y, finalmente, un nombre.
+
+Llama al puente. Voss reúne a los cinco; Harlan vuelve de su camarote antes de que se abra el paquete.
 
 ## Capítulo 9. El mensaje
 
@@ -394,18 +404,20 @@ La voz de Zao los transporta veintitrés horas y sesenta y cinco metros hacia at
 
 El plan de vuelo aparece superpuesto con una trayectoria de luz por el espacio ordinario. La *Ardor* cruzará la garganta minutos después de que parta la ráfaga y emergerá más de veintitrés horas luz por delante de ella. Zao no puede advertir a la nave donde está. Puede enviar la advertencia al lugar donde estará.
 
-A través de unas ciento sesenta y ocho unidades astronómicas, el haz proyectado y la trayectoria de regreso se encuentran cerca del final del tránsito del otro lado, cuando aún quedan minutos antes de que la cuenta regresiva llegue a cero.
+A través de unas ciento sesenta y ocho unidades astronómicas, el haz proyectado y la trayectoria futura se encuentran cerca del final del tránsito del otro lado, cuando aún quedan minutos antes de que la cuenta llegue a cero.
 
 Veintitrés horas, quince minutos. La cifra nunca fue una falla. Era la puntería.
 
 Sobre la imagen restaurada, Zao identifica el paquete de impulso geofísico termonuclear: entre una tonelada y una tonelada y media, tomado de los depósitos de materiales peligrosos de Próxima, sellado dentro de la bóveda interior de blindaje. Su primario de fisión explica los neutrones; su masa explica el propelente adicional. Su carga de varios megatones está sincronizada con las coordenadas y la hora programadas para el primer contacto.
+
+Zao también identifica la alimentación independiente y la protección contra interrupciones. Voss no espera al final: intenta abortar la aproximación. La orden es rechazada. Las pantallas siguen mostrando un motor sano y una trayectoria impecable.
 
 La grabación llega al momento en que una puerta se abre detrás de ella.
 
 <!-- audience-dialogue-id: audience:dialogue:e2-zao-goodbye -->
 > **Zao:** «Por si acaso: adiós. Harlan está en la puerta».
 
-Con las últimas palabras, el puente regresa al presente. Cinco personas se vuelven hacia Harlan.
+En las últimas palabras, el puente vuelve al presente. Cuatro personas se vuelven hacia Harlan. Okoye se coloca a su lado y lo mantiene bajo control físico. Esta vez no puede salir del puente sin que nadie lo vea.
 
 El mensaje que parecía dirigido a nada apuntaba a un receptor en movimiento: la *Ardor*, después de que la garganta situara a la nave por delante de su propia luz.
 
@@ -413,13 +425,21 @@ Harlan afirma que se pueden falsificar la voz y la imagen. No es una objeción a
 
 El mensaje se suma ahora a todo lo que Elin y Okoye descubrieron: la ubicación no verificable de Harlan, la rapidez de su acusación, la masa adicional y la fuente compacta de neutrones que destruyeron su teoría del combustible, la ráfaga que explicó llamando descuidada a Zao y un vector que encuentra la nave exactamente donde su plan de vuelo siempre indicó que estaría.
 
-Ningún hecho aislado demuestra la historia completa. Juntos no dejan ninguna alternativa coherente.
+Ningún hecho demuestra por sí solo toda la historia. Juntos obligan a aislar a Harlan y reconsiderar la detención de Sorell. No demuestran que no haya cómplices ni convierten una sospecha en sentencia.
 
 Elin verifica la firma criptográfica personal de Zao y su marca de tiempo, de minutos antes del cruce. La atribución aparece en la pantalla principal.
 
-Voss revoca la autoridad de red de Harlan. Ordena a Okoye liberar a Sorell, envía a Elin a popa hacia la bóveda y le indica a Sorell que vigile la aproximación automatizada y termine el saludo.
+Quedan unos once minutos. Voss revoca la autoridad de red de Harlan y libera a Sorell mientras Okoye sigue controlándolo. El fundamento de la detención de Sorell ya no basta para mantenerla atada. La necesita en su puesto.
 
-Después ordena a Okoye quitarle a Harlan el dispositivo de muñeca e inmovilizarlo.
+Voss intenta cancelar el perfil, sustituirlo y cortar el empuje por emergencia remota. Los minutos transcurren entre órdenes rechazadas y comprobaciones reales: Elin coteja qué recibió el controlador con lo que el motor sigue haciendo. Sorell lleva la cuenta de las vías agotadas y del tiempo que queda.
+
+La avería se concentra en las entradas de mando del puente. El plan almacenado sigue ejecutándose y conserva su corte programado. Reconectar las comunicaciones no arregló esto porque el daño está en otro sitio. Aquel panel que Harlan cerró antes de cruzarse con Zao ha seguido haciendo su trabajo en silencio.
+
+Bajo la mano de Okoye, Harlan niega haberlo tocado y vuelve a culpar a Sorell. Elin localiza la única intervención que queda: el mando independiente a popa. Sus comprobaciones han consumido ocho minutos. Ahora faltan tres.
+
+Elin toma el ascensor. Primero, recuperar el control del vuelo; después, abrir la bóveda. Sorell se queda con la aproximación y el saludo. Voss no ha elegido seguir hacia la estación. Ha intentado detener la nave desde que supo lo que llevaba.
+
+Voss ordena asegurar a Harlan al puesto y quitarle la pulsera. Puede contener la clave local que les negó, aunque aún no lo saben. Okoye cambia su agarre para sujetarlo a la estructura.
 
 ## Capítulo 10. Confrontación
 
@@ -429,13 +449,13 @@ Okoye cierra una mano alrededor del dispositivo y mira de reojo la pantalla que 
 
 No pueden perseguirlo de inmediato por el conducto ni saber si las escotillas de acceso inferiores siguen siendo utilizables.
 
-Harlan sabe adónde va Elin. El paquete no acepta ninguna orden remota, ni siquiera de él. Las opciones que le quedan son físicas: alcanzar la bóveda, detenerla o provocar la detonación del arma allí mismo.
+Harlan sabe adónde va Elin. Si alcanza el mando local, el ataque al punto de contacto fracasa aunque la bomba siga activa. El paquete no acepta órdenes remotas, ni siquiera suyas. Tiene que alcanzarla, impedir ambas intervenciones o forzar la detonación allí mismo.
 
 Sorell permanece en el puente con una aproximación que se ejecuta de forma automática y un saludo inconcluso entre las manos.
 
-Elin lleva ventaja. El ascensor de velocidad regulada la transporta sesenta y cinco metros hacia popa. Llega a la bóveda interior y empieza a atacar la cerradura local.
+Elin lleva ventaja. El ascensor de velocidad regulada la transporta sesenta y cinco metros a popa. Llega al compartimiento exterior y se dirige al mando de emergencia junto a la entrada de la bóveda.
 
-La *Ardor* todavía frena bajo un g. Harlan desciende por la escalera segmentada del conducto de servicio, dejándose caer entre las paradas de las cubiertas tan rápido como permite el empuje y bloqueando detrás de sí cada escotilla de acceso. La ruta directa es más rápida que el desplazamiento regulado del ascensor y mucho más peligrosa que un trayecto común. Alcanza a Elin antes de que ella resuelva la cerradura y la ataca.
+La *Ardor* sigue frenando bajo un g. Harlan baja por la escalera segmentada del conducto de servicio, se deja caer entre paradas y cierra las escotillas desde dentro. Su descenso directo es más rápido y mucho más peligroso que una circulación normal. Llega después de Elin, pero antes de que termine de intervenir el mando local. La arranca del panel y la empuja contra la entrada de la bóveda.
 
 Sin poder atravesar la escotilla del puente, Voss y Okoye entran al conducto central y toman escaleras helicoidales opuestas. Okoye se desvía en la primera cubierta para probar la escotilla de servicio contigua. Cerrada desde dentro. Una cubierta más abajo, Voss prueba la siguiente. Cerrada.
 
@@ -447,7 +467,7 @@ La *Ardor* completa su desaceleración programada.
 
 El empuje se corta.
 
-El peso desaparece por tercera vez. La pantalla de navegación sigue contando los segundos hasta las coordenadas de contacto. La bomba está sincronizada con ese tiempo y ese lugar, no con una orden del motor.
+El peso desaparece por cuarta vez. Queda aproximadamente un minuto hasta la hora del contacto y de la detonación. El corte estaba programado; la cuenta del dispositivo sigue avanzando, esté donde esté la nave.
 
 En microgravedad, las escaleras dejan de importar.
 
@@ -471,18 +491,18 @@ Elin abre la bóveda con el dispositivo de Harlan. El paquete avanza hacia cero.
 
 La advertencia de Zao ya le ha proporcionado lo que no tiene tiempo de descubrir: alimentación independiente y protección contra manipulaciones. Los diagnósticos confirman una alimentación redundante para el disparo. Cortar cables o atacar el controlador es una apuesta que no puede hacer.
 
-Pero el paquete fue construido para la ciencia, y la ciencia exigía una hora exacta de detonación bajo la superficie de una luna. Su interfaz de mantenimiento debe permitir una sincronización precisa del reloj antes del despliegue.
+Elin reconoce una función de servicio del instrumental científico: contrastar el tiempo del controlador con una referencia externa. El equipo portátil que dejó junto a la mesa sigue allí. Lo alcanza.
 
-Elin le proporciona una referencia válida de tiempo de misión, atrasada de manera drástica.
+Improvisa una referencia de tiempo sustitutiva. Necesita cambiar el valor que el controlador acepta para decidir; engañar sólo a la pantalla no serviría.
 
-La pantalla muestra cuatro, tres, dos, uno, y después salta a una fecha absurdamente lejana.
+La pantalla muestra cuatro, tres, dos, uno. Entonces el intervalo restante salta hacia arriba. En su muñeca, el reloj de la nave continúa y atraviesa la hora original. No hay explosión. Elin compara ambas lecturas; la carga sigue armada.
 
 <!-- audience-dialogue-id: audience:dialogue:f5-elin-delayed -->
 > **Elin Rao:** «No está desactivada. Simplemente no va a explotar aquí».
 
-Algún día, especialistas podrán remolcarla al espacio profundo o abrirla de manera segura. Hoy es un objeto pesado dentro de una habitación cerrada.
+El equipo debe quedarse conectado y alguien tiene que seguir vigilando la carga. Su disposición definitiva corresponderá a especialistas. Hoy han ganado tiempo, no una habitación segura.
 
-Voss informa a proa el intervalo seguro. Sorell termina el saludo mientras los demás comienzan el largo ascenso a casa.
+Elin toma el control local, impide que vuelva un empuje no autorizado y confirma que la nave se mantiene en el punto previsto. El puente sigue sin poder gobernar el vuelo hasta que reparen el daño. Voss informa a proa y vuelve; Elin queda junto a los controles y la carga, Okoye con Harlan. Sorell termina el saludo.
 
 Su consola despliega las relaciones espaciales simultáneas del manual de la garganta en una secuencia que un ser humano puede leer y después invierte el proceso. Puntos de luz ramificados se reúnen en la gramática que la boca lleva milenios demostrando.
 
@@ -553,7 +573,7 @@ La belleza no demuestra benevolencia. No puede impedir el malentendido, el desac
 
 La luz continúa durante largo rato.
 
-Antes de que la *Ardor* vire hacia la ventana de regreso, Voss prepara un informe oficial para la Tierra. Lo envía por el espacio ordinario mediante la matriz óptica de larga distancia como registro independiente. Quizá llegue después que la tripulación. Seguirá viajando aunque la nave pierda la ventana.
+Antes de emprender el regreso deben restaurar los mandos del puente y mantener vigilada la carga. Mientras se organiza ese trabajo, Voss prepara un informe oficial para la Tierra. Lo enviará por el espacio ordinario como registro independiente: seguirá viajando aunque la nave pierda la ventana.
 
 Incluye el descubrimiento, el sabotaje, el asesinato, la advertencia demorada, la intervención y el contacto. Afirma que Zao salvó a la tripulación y preservó el encuentro. Su advertencia firmada y su legajo personal acompañan el informe, y su fotografía ocupa una parte de la pantalla.
 

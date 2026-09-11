@@ -1,6 +1,6 @@
-[PAUSE 1200] Light Delay. General narrative outline. Revision 16.
+[PAUSE 1200] Light Delay. General narrative outline. Revision 17.
 
-Working draft, English, revision 16.
+Working draft, English, revision 17.
 
 [PAUSE 1200] Purpose of this document
 
@@ -46,7 +46,7 @@ The pilot throat eventually broadcasts a precise schedule. At the appointed time
 
 The positions are the result of heliocentric orbits with different radii, velocities, and phases. At this particular alignment, the straight-line distance from the Jupiter mouth to the point where Zao’s message will intercept the Ardor is one hundred sixty seven point eight astronomical units. The far mouth deposits the Ardor approximately seventeen point four million kilometers short of the planned encounter with the station. The geometry may be part of the reason for the schedule, but humanity does not know enough to be certain.
 
-At full aperture, the throat is physically traversable in both directions, but only during its scheduled windows. It opens for the outward crossing, closes behind the Ardor, and later opens for the scheduled return. After closing, it returns to its one-way pilot state. Once the ship has crossed outward, there is no immediate abort.
+At full aperture, the throat is physically traversable in both directions, but only during its scheduled windows. It opens for the outward crossing, closes behind the Ardor, and later opens for the scheduled return. After closing, it returns to its one-way pilot state. Once across, the ship cannot immediately return through the throat; that does not by itself prevent changing its approach to the station.
 
 If the encounter fails, no comparable opportunity is expected for thousands of years.
 
@@ -74,7 +74,7 @@ As Proxima’s second-in-command, Harlan has legitimate authority over hazardous
 
 The device is a 1–1.5 tonne experimental thermonuclear geophysical impulse package. It was designed for emplacement beneath the surface of a sterile, uninhabited irregular Jovian moon. A controlled detonation would generate a global seismic impulse, expose deep material for remote sampling, and validate models for nuclear deflection or disruption of dangerous captured objects.
 
-It is, functionally, a multi-megaton hydrogen bomb with a fission primary. It contains its own power, clock, firing controller, deployment interface, and tamper-protection circuitry. It accepts no remote commands. A maintenance interface exists so its clock can be synchronized precisely before a scientific deployment.
+It is, functionally, a multi-megaton hydrogen bomb with a fission primary. It contains its own power, clock, firing controller, deployment interface and tamper protection. It accepts no remote commands. In this fictional device, a local maintenance interface allows the time reference used by its controller to be checked against external scientific test equipment even while the countdown remains active. Harlan has protected against obvious interruptions but has not removed that service function.
 
 Harlan has not built a bomb from scratch. He has converted a legitimate dual-use research package into an improvised contact-point weapon. He has protected it against the most obvious attempts to interrupt the countdown, but he has not anticipated every possible intervention.
 
@@ -105,6 +105,10 @@ The uppermost service-shaft hatch opens immediately behind the bridge stations. 
 [PAUSE 1200] Reactor service bay and inner shielding vault
 
 The outer reactor service bay is an accessible engineering workspace. It contains a local console for the long-distance optical communications array and emergency inspection and isolation hardware for the adjacent fusion-fuel tankage and feed system. Any crew member with standard emergency training can reach these panels.
+
+The same bay contains an independent local control for interrupting the flight profile, together with a drawer of diagnostic instruments and time-reference equipment for scientific work. Autonomous guidance executes the approved plan; bridge controls can normally replace or interrupt it. Return telemetry is independent of those command inputs.
+
+During his final aft inspection, after departure checks and immediately before encountering Zao, Harlan physically disables the bridge command inputs, including its remote emergency cutoff. He leaves the stored plan, telemetry and the bay’s local control intact. Normal flight requests no change and does not expose the failure; an abort attempt does. He neither erases logs nor alters propulsion measurements. This intervention is separate from the later communications disconnection, and reconnecting those trunks does not reverse it.
 
 The reactor shielding assembly protects both crew spaces and the fusion-fuel tankage from reactor radiation. Recessed inside this combined shielding zone is an inner shielding vault, originally used to isolate hazardous research equipment. Its shielding masks the bomb’s weak neutron signature from ordinary ship sensors.
 
@@ -144,13 +148,17 @@ The extra 1–1.5 tonnes aboard a 6,800-tonne ship produces an extremely small i
 
 At the Prologue’s orbital alignment, the one-way Earth-to-Jupiter light delay is 43 min 18 s.
 
+Earth would receive a warning sent from Jupiter in about 43 minutes, well before detonation; it is the onward relay to the Ardor that arrives too late. This revision uses an illustrative blocking alignment with 43 min 18 s from Jupiter to Earth and approximately twenty three hours fifty eight minutes from Earth to the remote interception point. Even with no human delay, that route takes about twenty four hours forty one minutes, compared with twenty three hours fifteen minutes directly. By Earth’s reception the throat is already closed. These are different legs, not twice the local delay.
+
+Reference editorial chronology: transmission at t=0; crossing and clearance around t=+3 min; encounter around t=+twenty three hours twenty eight minutes; reception around t=+twenty three hours fifteen minutes, leaving about thirteen minutes. Investigation begins when thrust returns and spans the midpoint turn. Within the final margin, approximately one minute belongs to the message, one to initial evidence convergence and signature checking, eight to abort attempts and locating the command failure, two to the chase, and the final minute to rescue and intervention. These are action and editing durations that must remain legible in the story; cryptographic verification does not consume those eight minutes.
+
 [PAUSE 1200] Gravity throughline
 
 The ship runs at 1g through most of its powered transit but enters microgravity four times, each for a necessary flight operation:
 
 1. At Jupiter periapsis, thrust stops briefly so the ship can rotate from prograde acceleration to retrograde deceleration. 2. Nearing the Jupiter mouth, thrust stops for precision approach and throat crossing. Zao’s discovery and murder occur during this interval. 3. Midway between the far mouth and the Velari station, thrust stops briefly so the ship can rotate roughly 180° from acceleration to deceleration. The investigation continues through this transition. 4. At the end of the far-side deceleration, thrust stops shortly before the scheduled first-contact coordinates. The decisive turn in the climax occurs during this interval.
 
-The bomb is counting down to the scheduled contact time and coordinates, not to the mechanical act of thrust cutoff. Final cutoff occurs moments before the timer reaches zero.
+The bomb counts toward the scheduled contact time; it does not sense coordinates or respond to the mechanical act of thrust cutoff. The flight plan is intended to carry it to that place at that time. Final cutoff occurs approximately one minute before the timer reaches zero.
 
 [PAUSE 1200] Cast
 
@@ -344,6 +352,8 @@ No active fuel alarm is present. Zao does not treat that as proof that no fault 
 
 [PAUSE 1200] Sequence Bravo one. The crossing
 
+Before leaving the vault, Harlan has completed an intervention on the outer bay’s flight controls: the bridge can no longer replace or cut the automatic plan, although its displays still receive normal telemetry. He leaves the local aft control operational. The audience sees the tampering but not yet its effect; Voss will discover that when he attempts to abort.
+
 In microgravity, Zao encounters Harlan exiting the inner shielding vault into the outer bay. He has been making a final check and has left the vault incompletely secured.
 
 He gives her a brief, disturbed look. Zao notices but does not confront him. He now knows exactly where she is and what she may discover.
@@ -416,7 +426,7 @@ Sending her alone is the decision Voss later apologizes for.
 
 Zao works through the available dead ends aloud.
 
-Proxima is occluded by Jupiter from the Ardor’s present position. A message to Earth would arrive only after the planned contact and detonation.
+Jupiter occludes Proxima from the Ardor’s present position. Earth would receive the warning in about 43 minutes, but by then the throat would be closed. Zao compares the ordinary-space Earth relay route with the device’s deadline: even an immediate response would not reach the ship before detonation. Warning Earth could preserve evidence; it could not save the crew.
 
 The pilot throat is useless because it does not accept human messages. Soréll, not Zao, is the only person able to construct even a rudimentary Velari-directed greeting, and there is no confirmed human communications path to the station.
 
@@ -444,7 +454,7 @@ She reacts audibly when the complete number appears. For the audience, the title
 
 With the main data trunks disconnected, Zao records directly into the volatile buffer of the long-distance optical communications array.
 
-She identifies the bomb, its approximate mass and origin, its multi-megaton capability, its location in the inner vault, the contact-time countdown, the neutron signature, and the clues that led her there.
+She identifies the bomb, its approximate mass and origin, its multi-megaton capability, its location in the inner vault, the contact-time countdown, the neutron signature and the clues that led her there. She includes the independent power and protection against interruption she has recognized on the equipment. The complete warning lasts less than a minute: Zao has no time for a long report.
 
 As Harlan reaches the outer-bay door, she ends:
 
@@ -480,7 +490,7 @@ Harlan gives the emission summary a hurried technical inspection. Confirming a d
 
 He reasons instead from the same immediate facts Zao considered.
 
-"Proxima is behind Jupiter. Earth will not know until we are already there."
+"Proxima is behind Jupiter. Earth will know. But their answer cannot reach us before the encounter."
 
 Proxima is occluded. The pilot throat does not accept human messages. Zao does not know how to address the Velari, and there is no confirmed communications path to their station. Where else would she point the array?
 
@@ -514,7 +524,7 @@ The largest visual moment in the film to this point is deliberately juxtaposed w
 
 The throat opens. The Ardor crosses. The throat closes behind it and returns to its pilot state.
 
-There is no immediate abort and no return before the later scheduled window.
+There is no immediate return through the throat before the later window. That is not a physical prohibition on changing course on the far side.
 
 The crew achieves something historic while unaware of what has happened aboard.
 
@@ -574,27 +584,19 @@ Voss remembers misreading Soréll’s Prologue comments as fear. The same fear a
 
 The evidence justifies custody but does not prove murder. What stays with Elin is Soréll’s disconsolate grief and the speed with which Harlan converted uncertainty into accusation.
 
-[PAUSE 1200] Sequence Charlie ten. Time jump
+[PAUSE 1200] Sequence Charlie ten. Investigation begins
 
-After clearing the far mouth, the Ardor resumes thrust toward the station and restores 1g. The story advances through the first half of the approximately twenty-four-hour far-side transit.
+After clearing the far mouth, the Ardor resumes thrust toward the station and restores 1g. A roughly twenty-three-and-a-half-hour flight begins: the investigation unfolds throughout that time, rather than starting after a half-day jump.
 
 Soréll remains under active questioning and cannot prepare the greeting. Voss quietly begins planning how to approach the encounter without her.
 
-Elin and Okoye work through the available physical and systems evidence. Both become visibly exhausted.
-
-[PAUSE 1200] Sequence Charlie ten Bravo. Third gravity dip
-
-Approximately midway between the far mouth and the Velari station, the Ardor cuts thrust and enters microgravity for the third time.
-
-The ship rotates roughly 180° from its acceleration attitude to its deceleration attitude. Soréll remains in custody while Elin and Okoye secure their work and themselves through the maneuver; the turn makes the hours consumed by the investigation physically visible.
-
-Thrust resumes toward the same deck and restores 1g as the Ardor begins braking through the second half of the leg.
+Elin and Okoye preserve the records and the scene of the death. Voss demands a reconstruction from the beginning; hours of work and exhaustion will accumulate as the investigation proceeds.
 
 [PAUSE 1200] Sequence Delta — Investigation
 
 [PAUSE 1200] Sequence Delta one. Standing condition
 
-Voss orders a complete audit of the communications failure, Zao’s last work, the ship’s mass reconciliation, and every surviving local instrument record.
+As soon as thrust is restored, Voss orders a complete audit of the communications failure, Zao’s final work, the mass reconciliation and surviving local records. He will not close the case on the image of Soréll beside the body.
 
 Soréll’s custody and questioning continue as texture through the investigation rather than as a single repeated scene.
 
@@ -620,7 +622,7 @@ The theory joins the propellant discrepancy, radiation record, interrupted sabot
 
 [PAUSE 1200] Sequence Delta two Bravo. The clues separate
 
-Over several hours, Elin and Okoye test the fuel-system theory in the order that the records become available:
+During the first half of the far-side flight, Elin and Okoye test the fuel-system theory as they reconcile the records. Changing watches, interrupted meals and fatigue make the passing hours legible:
 
 Tank inventory and pressure agree with engine metering. No helium three or deuterium left the Ardor unaccounted for. The commanded and measured helium three-to-deuterium ratio remained normal. There was no deuterium-rich excursion. Plasma efficiency, exhaust velocity, and delivered thrust remained within their expected ranges. The supposedly missing quantity was not lost fuel. The engine consumed it while the guidance system maintained the planned acceleration and schedule.
 
@@ -628,11 +630,25 @@ At the measured thrust and acceleration, the excess burn indicates that the Ardo
 
 Harlan argues that Zao may have interrupted the tampering before a sustained mixture excursion. That preserves the possibility of an attempted sabotage, but it no longer explains either the extra propellant already consumed or the independent neutron exposure. The case against Soréll weakens without disappearing.
 
+[PAUSE 1200] Sequence Charlie ten Bravo. Third gravity dip
+
+Approximately midway between the far mouth and the Velari station, the Ardor cuts thrust and enters microgravity for the third time.
+
+The ship rotates roughly 180° from its acceleration attitude to its deceleration attitude. Soréll remains in custody while Elin and Okoye secure their work and themselves through the maneuver; the turn makes the hours consumed by the investigation physically visible.
+
+Thrust resumes toward the same deck and restores 1g as the Ardor begins braking through the second half of the leg.
+
 [PAUSE 1200] Sequence Delta three. Locked inner door
 
 Elin and Okoye reach the outer reactor service bay with a portable radiation survey instrument. The neutron reading strengthens away from the accessible fuel panels and toward the inner vault. It does not vary with reactor power or fuel-mixture telemetry.
 
 The inner shielding vault is sealed by its isolated local lock. Voss’s authority cannot reach it through the network. Attempts to open it without the proper wrist key fail.
+
+Voss asks Harlan directly what he inspected there and who can open the vault. Harlan claims he completed his inspection before the warning and that Soréll must have changed the access while the cameras were down; now, he says, she is pretending innocence. It is a lie: he closed and rekeyed the lock after the murder.
+
+The lock reports only that a credential is invalid, not who owns it. Elin and Okoye record Harlan’s account as an unverified claim, not evidence against Soréll. Examining the wrist devices’ network permissions does not reveal a locally paired key.
+
+During the survey, Elin sets a portable diagnostic unit from the bay’s drawer beside the workbench. One of its ordinary uses is checking time references in scientific instruments. She cannot yet access the enclosed device and does not know she will need that function.
 
 [PAUSE 1200] Sequence Delta four. Honest limits
 
@@ -644,9 +660,11 @@ The same hidden object may explain both, but they cannot prove that through the 
 
 Voss asks Elin whether she can open the vault, not whether she can stop whatever is inside.
 
+Access-recovery attempts and radiation checks occupy much of the braking phase. Unable to open the vault, Elin returns to the optical controller’s traces; Okoye preserves the findings and their chain of custody.
+
 [PAUSE 1200] Sequence Delta five. The outbound burst
 
-Elin finds another surviving record: during the blackout, the long-distance optical communications array transmitted a compressed burst from the outer-bay controller. She converts the recorded array angles and ship attitude into an inertial pointing vector.
+In the final minutes of her review, shortly before reception, Elin reconciles another surviving record: during the blackout, the long-distance optical communications array transmitted a compressed burst from the outer-bay controller. She converts the recorded array angles and ship attitude into an inertial pointing vector.
 
 The payload is no longer stored locally. Its pointing direction is not Earth, Proxima, or any known beacon. From the ship’s current perspective, it appears to have been fired into empty space.
 
@@ -670,11 +688,11 @@ The empty-space vector does not make Harlan reconsider his assumption. He treats
 
 He has turned the conclusion he reached under pressure into the explanation he gives everyone else.
 
-Elin cannot disprove his explanation yet. She records it as a possibility rather than accepting it as fact. His willingness to explain Zao by making her careless troubles the person who knew her best.
+Elin does not accept a pointing error as a conclusion. After ruling out fixed catalogue destinations, she immediately compares the direction and emission time with moving trajectories, including their own flight plan. She has only just reconstructed the vector; she has not spent hours avoiding that check. Harlan’s readiness to make Zao careless troubles her. The audience sees Elin continue calculating, but not yet the result.
 
 [PAUSE 1200] Sequence Delta five Bravo. The lost witness
 
-During a brief interval afterward, Harlan is alone in his berth. The result gives him two opposed reactions. Zao’s direct accusation now appears lost, which relieves him of the historical condemnation he anticipated. But it also appears to remove the witness through whom Earth might one day reconstruct and vindicate his sacrifice.
+During a brief interval after that exchange, while Elin continues calculating, Harlan withdraws to his berth. The result gives him two opposed reactions. Zao’s direct accusation now appears lost, which relieves him of the historical condemnation he anticipated. But it also appears to remove the witness through whom Earth might one day reconstruct and vindicate his sacrifice.
 
 He allows himself a private lament, quiet rather than triumphant:
 
@@ -686,19 +704,21 @@ Recognition remains a psychological reward, not another reason for the attack. H
 
 Harlan’s own account places him aft during the blackout, and the disabled cameras verify nothing.
 
-Elin reconsiders the accomplice theory. Harlan’s eagerness to accuse Soréll could be the behavior of an innocent officer, an accomplice sacrificing her, or a lone killer framing the first person found at the scene.
+While checking the trajectories, Elin also reconsiders the accomplice theory. Harlan’s haste to accuse Soréll and his unverified account of the lock could belong to an innocent officer, an accomplice sacrificing her, or a killer blaming the first witness.
 
 She does not conclude that Harlan acted alone. She concludes only that Soréll’s presence beside the body is not sufficient to close the case.
 
 [PAUSE 1200] Sequence Delta seven. Signal detected
 
-Approximately ten to fifteen minutes before planned first contact, Elin’s console detects an incoming optical transmission precisely on the Ardor’s current trajectory.
+About thirteen minutes before planned first contact, within the 10–15-minute margin, Elin’s console detects an incoming optical transmission while she is still verifying the calculated interception. Reception confirms the moving receiver she was testing; it does not replace a check she had neglected.
 
 Her reaction unfolds in real time:
 
 Surprise that anything is arriving from this direction. Recognition of the long-distance optical communications array’s packet format. Recognition of Zao’s signature header. Understanding that Zao did not miss.
 
 For both the crew and the audience, this is the first proof that the apparently empty-space transmission had an intended receiver.
+
+Elin calls the bridge. Harlan returns immediately from his berth at Voss’s summons, before the packet is played.
 
 [PAUSE 1200] Sequence Echo — Revelation
 
@@ -707,6 +727,8 @@ For both the crew and the audience, this is the first proof that the apparently 
 The burst is received and decompressed but has not yet been played.
 
 Voss orders it opened on the bridge.
+
+The bridge shows thirteen minutes to contact. Elin does not delay playback to finish her calculations.
 
 [PAUSE 1200] Sequence Echo two. Zao’s message
 
@@ -720,7 +742,7 @@ The uncropped console shows Zao combining the flight plan with an ordinary-space
 
 Over this flashback, Zao identifies:
 
-The thermonuclear geophysical impulse package. Its estimated 1–1.5 tonne mass. Its origin in Proxima’s hazardous stores. Its placement in the inner shielding vault. Its fission-primary neutron signature. Its multi-megaton capability. Its countdown to the scheduled first-contact time and coordinates. The propellant discrepancy that led her to it.
+The thermonuclear geophysical impulse package. Its estimated 1–1.5 tonne mass. Its origin in Proxima’s hazardous stores. Its placement in the inner shielding vault. Its fission-primary neutron signature. Its multi-megaton capability. Its countdown to the scheduled first-contact time and coordinates. The propellant discrepancy that led her to it. The independent power and protection against interruption Zao saw on the equipment.
 
 The recording ends:
 
@@ -729,6 +751,8 @@ The recording ends:
 On the words “Harlan’s at the door,” the image returns to the present bridge. The final phrase lands on Harlan as the others turn toward him.
 
 The crew and audience now understand at the same moment that the apparently empty-space transmission was aimed at a moving receiver: the Ardor itself, after the throat placed it ahead of its own light.
+
+During the first minute, as soon as the recording establishes the bomb and its deadline, Voss orders the approach aborted. The bridge rejects the change despite continuing to show normal thrust and guidance. When Zao names Harlan at the end, Okoye moves beside him and keeps him under physical control; she does not let him leave the bridge again.
 
 [PAUSE 1200] Sequence Echo three. Harlan objects
 
@@ -742,6 +766,8 @@ Harlan’s unverifiable location during the blackout. His immediate accusation o
 
 No single clue carries the revelation alone.
 
+The convergence requires isolating Harlan and reviewing Soréll’s detention; it does not turn every suspicion into a judicial certainty or by itself prove that there are no accomplices.
+
 [PAUSE 1200] Sequence Echo five. Authentication
 
 Elin verifies the cryptographic signature. It is Zao’s personal key and is timestamped minutes before the throat crossing.
@@ -750,15 +776,19 @@ Attribution appears on screen.
 
 The authentication answers Harlan’s objection immediately.
 
+The signature verifies promptly. During that second minute the timestamp, exposure and manifest are also cross-checked; the subsequent delay belongs to flight control, not cryptographic computation.
+
 [PAUSE 1200] Sequence Echo six. Orders
 
-Voss revokes Harlan’s network authority and orders Okoye to release Soréll at once.
+With about eleven minutes to contact, Voss revokes Harlan’s network authority. He ends Soréll’s custody because its basis has weakened: he needs the specialist and lacks sufficient evidence to keep her immobilized. Okoye maintains control of Harlan while Voss releases Soréll.
 
-Elin takes the elevator toward the outer reactor service bay. Her purpose is to reach the inner vault, though she still cannot open its local lock.
+Over the next eight minutes, Voss tries to cancel and replace the profile through normal controls and the remote emergency cutoff. Elin compares command receipt with actual telemetry, locates the common section that no longer delivers commands, and verifies that reconnecting communications did not repair it. Soréll tracks the rejections and remaining time; there is no passive wait or eight-minute debate over the signature.
 
-Okoye removes Soréll’s restraints. Voss orders her to remain on the bridge, monitor the programmed final approach, and begin preparing the greeting.
+Harlan denies altering the controls and blames Soréll again. He remains under Okoye’s control throughout the check. Elin establishes that the stored plan is continuing autonomously, retains its scheduled cutoff, and can now be interrupted only through the independent local control in the outer bay. The fuel measurements were neither erased nor falsified.
 
-Voss then orders Okoye to take Harlan’s wrist device and restrain him.
+About three minutes remain. Elin takes the elevator aft to interrupt the flight locally and access the vault. Voss orders Soréll to remain on the bridge, monitor the approach and recover the greeting. The ship is not holding course by Voss’s choice: he has already attempted to abort and is still trying.
+
+Voss orders Okoye to secure Harlan to his station and remove his wrist device: it may hold the vault’s local key, although that is not yet proved. To tether him to the structure and remove the device, Okoye changes her grip. Harlan appears to cooperate.
 
 [PAUSE 1200] Sequence Foxtrot — Confrontation and climax
 
@@ -770,7 +800,7 @@ When Okoye grips the wrist device and glances toward the revocation display, Har
 
 Harlan enters the service shaft and locks its bridge hatch locally behind him. This prevents immediate pursuit through the shaft. Voss and Okoye do not yet know whether its lower-deck access hatches remain usable.
 
-Harlan knows Elin is heading toward the bomb. Because the device is self-contained and accepts no remote commands, his only remaining chance is to reach it physically, stop her, or force an immediate detonation.
+Harlan knows Elin is heading toward both the local control and the bomb. If she diverts or stops the ship, his contact-point attack fails even if the charge remains active. Because the device accepts no remote commands, he must reach her physically, prevent both interventions or force an immediate detonation.
 
 Soréll remains alone on the bridge. Final approach is executing automatically; she monitors it while preparing the contact protocol.
 
@@ -778,9 +808,9 @@ Soréll remains alone on the bridge. Final approach is executing automatically; 
 
 Elin has the head start. The speed-governed elevator carries her approximately 65 m to the outer reactor service bay.
 
-She reaches the inner vault first and begins attempting to open its local lock.
+Elin reaches the outer bay first and goes to the local emergency control near the vault entrance. She needs to take over there from the plan the bridge can no longer interrupt.
 
-Harlan descends the segmented ladder in the service shaft, sliding between its deck stops and locking every access hatch from inside as he passes. The route is faster but far more dangerous under thrust. He reaches the outer bay after Elin and attacks her before she can solve the lock.
+Harlan descends the segmented service-shaft ladder, sliding between deck stops and locking every access hatch from inside as he passes. The route is faster but far more dangerous under thrust. He arrives after Elin and attacks before she completes the local intervention. He forces her away from the control and holds her against the vault entrance.
 
 Unable to use the locked bridge hatch, Voss and Okoye enter the central shaft and take opposite helical staircases, one each.
 
@@ -796,7 +826,7 @@ Harlan is attacking Elin at the inner-vault entrance when the ship completes its
 
 Thrust cuts.
 
-The Ardor enters microgravity for the fourth time. The navigation display continues counting down the remaining moments to the scheduled contact point. The bomb is synchronized to that contact time, not to the thrust command itself.
+The Ardor enters microgravity for the fourth time. Approximately one minute remains until the contact and detonation time. The intact plan executes the cutoff, not the struggle; the device’s countdown continues independently of the ship’s actual position.
 
 At that instant, Voss and Okoye are passing deck landings approximately 15 m above Harlan and Elin. The distance is a consequence of the chase timing, not a separate architectural section of the ship.
 
@@ -828,27 +858,29 @@ Elin uses Harlan’s wrist device to open the inner shielding vault.
 
 The geophysical impulse package is counting down toward zero.
 
-Zao’s warning tells Elin that the unit is self-powered and protected against obvious interruption. The local display and diagnostic indicators show redundant firing power and tamper responses. With seconds remaining, cutting power or damaging the controller would be an unacceptable gamble.
+Zao’s warning has already told Elin that the unit has independent power and protection against obvious interruption. Local indicators confirm it remains active. With seconds available, she cannot gamble on cutting power or damaging the controller.
 
-The package’s original scientific purpose required precise clock synchronization before remote deployment. Through its local maintenance interface, Elin supplies a valid but drastically rewound mission-time reference.
+Elin recognizes the equipment’s scientific service-time reference function. She takes the diagnostic unit she left on the bench during the investigation and improvises a substituted time reference. The intervention changes the time the controller accepts for its decision, not merely the screen’s digits. This is an established capability of the fictional device, not a second bomb or a solution supplied by Zao.
 
 The display reads:
 
 4 — 3 — 2 — 1
 
-Then it jumps to a number absurdly far in the future.
+Then the remaining interval jumps upward while the ship’s independent clock keeps advancing and passes the original deadline without detonation. Elin checks the discrepancy between the references and confirms that the charge remains armed. No future calendar date appears, and the danger is not declared gone.
 
 Elin makes the limit explicit:
 
 "It isn’t disarmed. It just isn’t going off here."
 
-The bomb can later be towed into deep space for controlled detonation or approached by a specialist defusal team. The immediate encounter is safe.
+The intervention buys an interval sufficient to address flight control and preserve the encounter. The diagnostic unit remains connected and the charge’s state must continue to be monitored. Specialists must handle its eventual disposition; the pause does not make it harmless.
 
 [PAUSE 1200] Sequence Foxtrot six. Time bought
 
+With the immediate deadline deferred, Elin takes local control, prevents any unauthorized resumption of thrust and confirms that the ship is holding at the planned point after cutoff. She reports that bridge flight control remains unavailable until the sabotage is repaired. She stays aft monitoring the charge and local control; Okoye guards Harlan and Voss returns to the bridge.
+
 Voss reports the safe interval to the bridge.
 
-Soréll has already been released. She completes the greeting protocol while the others begin returning forward.
+Soréll has already been released. She completes the greeting while Voss returns forward; the aft watch is not abandoned.
 
 [PAUSE 1200] Sequence Foxtrot seven. Staged, not sent
 
@@ -928,9 +960,11 @@ The sequence holds before cutting away.
 
 [PAUSE 1200] Sequence Golf three. Close
 
+Before beginning the return, bridge controls must be restored and a safe watch on the charge arranged. The report can be sent while those tasks continue; completing the encounter does not make them unnecessary.
+
 After the meeting and before beginning the return leg, Voss prepares an official report for Earth.
 
-He uses the Ardor’s long-distance optical communications array to send the report through ordinary space as an independent record. It may arrive after the crew returns through the throat, but it will continue even if the Ardor fails to make the return window.
+He uses the Ardor’s long-distance optical communications array to send the report through ordinary space as an independent record. It will continue even if the ship misses the return window. The narrative makes no claim about which arrives first without a calculated return schedule.
 
 Voss recounts the discovery, the sabotage, Zao’s death, the delayed warning, the intervention, and the successful contact.
 

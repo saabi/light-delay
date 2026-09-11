@@ -1,6 +1,6 @@
 # Light Delay — audience narrative TTS (English)
 
-Revision 16 (from the master outline). Chaptered short story for listeners; no production frontmatter.
+Revision 17 (from the master outline). Chaptered short story for listeners; no production frontmatter.
 Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Spoken name: Soréll; tag and editorial spelling stay ASCII [Sorell]. Dialogue from attributed blockquotes only.
 Cast/ref: `docs/wip/qwen3-tts-cast.json`.
@@ -9,7 +9,7 @@ Generate: `python scripts/generate-dual-outline-audio.py --lang en --script docs
 ---
 
 [Narrator]
-[PAUSE 1200] Light Delay. Revision 16.
+[PAUSE 1200] Light Delay. Revision 17.
 
 [Narrator]
 Prologue.
@@ -27,7 +27,7 @@ That is how old Earth is when it reaches Jupiter. Every shout, speech, and raise
 Tonight, one square holds two crowds.
 
 [Narrator]
-The first points to the ancient throat beside Jupiter. For thousands of years its mouth has repeated the same visible-light sequence: a primer, an instruction, an invitation, and the timing of an aperture that may not open again for millennia. The Velari have never crossed into the Solar System. To the supporters, that patience is evidence of restraint.
+The first points to the ancient throat beside Jupiter. Its mouth offers a visible-light primer: instructions and an invitation left by a civilization willing to wait millennia. The precise aperture schedule arrived only recently. The Velari have not come to impose the meeting. To the supporters, that patience is evidence of restraint.
 
 [Narrator]
 The second crowd sees the same facts and reaches the opposite conclusion. Someone built a door inside humanity's home before humanity knew there was anyone outside it. The door speaks, but it does not listen. Nobody can ask whether its instructions are complete, truthful, or safe.
@@ -120,7 +120,7 @@ The Ardor releases, rotates prograde, and lights her fusion torch. The flight fr
 It is a long time for six people to inhabit a small amount of metal. They eat. They argue about nothing. They sleep badly.
 
 [Narrator]
-At periapsis, thrust cuts. Weight disappears while the ship turns from prograde to retrograde, and Jupiter crosses the deep ports with its rings lit from behind. Then the torch relights. Down returns, pointed the other way.
+At periapsis, thrust cuts. Weight disappears while the ship turns from prograde to retrograde, and Jupiter crosses the deep ports with its rings lit from behind. Then the torch relights. The same deck takes their feet; it is the ship’s orientation in space that has changed.
 
 [Narrator]
 Soréll says what none of them has said aloud.
@@ -268,6 +268,9 @@ Weightless and sixty-five metres aft of the bridge, Zao meets Harlan leaving the
 He appears to be finishing an assigned inspection. He has not quite secured the door behind him.
 
 [Narrator]
+A moment earlier, his hands were at another panel in the outer bay. He closed its cover and checked the telemetry. Everything still looked normal on the bridge.
+
+[Narrator]
 His look lasts a fraction too long. He offers no explanation, and she does not accuse a man on the evidence of an expression. They pass without a word.
 
 [Narrator]
@@ -342,13 +345,13 @@ In the outer bay, Zao tries wireless, hardline, and emergency internal communica
 The long-distance optical array remains alive. Its aft emitter and local controller do not depend on the trunks Harlan cut.
 
 [Narrator]
-Zao eliminates every obvious destination aloud. Jupiter blocks Proxima. A warning to Earth arrives after the detonation it describes. The pilot throat broadcasts but has never accepted a human transmission. Zao cannot improvise a message to the Velari in Soréll's untested grammar, and humanity has no confirmed address for their station. Even a beam somehow sent through the full aperture ahead of the ship would emerge in front of the Ardor and continue at light speed. It would wait for no receiver.
+Zao rules out the obvious destinations under her breath. Jupiter blocks Proxima. Earth would receive the warning in about forty-three minutes, but the throat would already be closed. An answer would have to cross ordinary space to the ship: adding that second leg puts the result beyond twenty-four hours. Too late. Earth could preserve her testimony, not return help to the Ardor before the explosion. The pilot throat has never accepted a human transmission. Nor can Zao improvise a warning in Soréll’s untested grammar. Even a signal sent through the aperture ahead of the ship would continue away at light speed, with no human receiver waiting for it.
 
 [Narrator]
 Then she stops speaking.
 
 [Narrator]
-She overlays the flight plan with a path through ordinary space. The crossing is minutes away. The ship is about to take a shortcut her light cannot take.
+She returns to the flight plan. The crossing is minutes away. She checks the same values twice and changes the display; from the doorway, only her face is visible.
 
 [Narrator]
 Zao starts a new calculation and says none of it aloud. When the solution resolves, she releases a small breath.
@@ -360,7 +363,7 @@ Twenty-three hours, fifteen minutes.
 The number does not promise help for her. It promises that the warning can outlive her.
 
 [Narrator]
-With the main trunks dead, she records directly into the array's volatile burst buffer: the package, approximate mass and origin, rating, vault, countdown, neutron signature, and every clue that brought her aft. She signs the packet with her personal key.
+With the main trunks dead, she records into the array’s volatile buffer. She identifies the package, its mass and origin, rating, vault, deadline and the clues that led her to it. She includes its independent power and protection against interruption. She gets it out in under a minute and signs the packet with her personal key.
 
 [Narrator]
 No destination is readable on the console. Beyond the bay, her words vanish beneath hull ribs and the distant vibration of a reactor at service power.
@@ -396,8 +399,8 @@ Instead, he reasons from the same immediate facts Zao considered.
 
 <!-- audience-dialogue-id: audience:dialogue:c2-harlan-earth -->
 [Harlan]
-[QwenInstruct] Speak English. Dramatic situation: He reasons aloud, turning incomplete facts into the mistaken certainty that reassures him. Performance and delivery: Calculate through the first sentence; slow into cold relief by ‘already there.’
-"Proxima is behind Jupiter. Earth will not know until we are already there."
+[QwenInstruct] Speak English. Dramatic situation: He reasons aloud, turning incomplete facts into the mistaken certainty that reassures him. Performance and delivery: Calculating on Jupiter; accept ‘Earth will know’ with a pause, then settle into cold relief on ‘before the encounter.’
+"Proxima is behind Jupiter. Earth will know. But their answer cannot reach us before the encounter."
 
 [Narrator]
 Proxima is occluded. The throat does not listen. Zao cannot address the Velari, and their station has no confirmed communications path. Earth seems like the only place left.
@@ -433,7 +436,7 @@ Zao's body remains in the accessible outer bay. Harlan closes the inner shieldin
 Ahead of the ship, the throat opens. The Ardor crosses. The aperture closes behind her and returns to its patient one-way pilot state.
 
 [Narrator]
-There is no abort now, and no way home before the return window. Of the five people still alive aboard, four do not yet know what the crossing cost. The fifth is climbing toward the bridge while his heart rate falls.
+There is no immediate return through the throat now. They could still change course on the far side, if the controls answered. Of the five people still alive aboard, four do not know what has happened. The fifth is climbing toward the bridge while his heart rate falls.
 
 [Narrator]
 Chapter 7.
@@ -497,13 +500,7 @@ Custody is justified. Murder is not proved. Elin knows those are different sente
 Once clear of the far mouth, the ship settles into its far-side run and thrust restores weight to the decks: roughly seventeen point four million kilometres to the meeting point, about twenty-three and a half hours of acceleration and braking under one gravity.
 
 [Narrator]
-Through the first half, Soréll remains under questioning instead of preparing the greeting. Voss quietly plans how to approach an alien station without his xenolinguist. Elin and Okoye work until exhaustion blurs the displays, then keep working.
-
-[Narrator]
-Midway through the leg, thrust cuts and weight disappears for the third time. The crew secure themselves and their work as the Ardor rotates one hundred and eighty degrees from its acceleration attitude to its braking attitude. Hours of investigation become visible in a single maneuver.
-
-[Narrator]
-The engine pushes toward the same deck again. One gravity returns and deceleration toward the Velari station begins.
+Soréll remains in custody. Voss fears approaching the station without his xenolinguist, but he still has no account he can stand behind. Elin and Okoye preserve the evidence and begin reconstructing what happened.
 
 [Narrator]
 Chapter 8.
@@ -512,7 +509,7 @@ Chapter 8.
 [PAUSE 1200] Investigation
 
 [Narrator]
-Voss orders a complete audit: the communications failure, Zao's final work, the mass reconciliation, every local instrument record that survived.
+As soon as thrust returns, Voss orders a complete audit: the communications failure, Zao’s last work, the mass reconciliation and every surviving local record. The image of Soréll beside the body is not enough to close the case.
 
 [Narrator]
 Restrained a few metres behind him, Soréll does not wait to be asked.
@@ -520,7 +517,7 @@ Restrained a few metres behind him, Soréll does not wait to be asked.
 <!-- audience-dialogue-id: audience:dialogue:d1-sorell-first-explanation -->
 [Sorell]
 [QwenInstruct] Speak English. Dramatic situation: From custody, Soréll forces the bridge to admit that a coherent explanation can still be false. Performance and delivery: Hurt but intellectually firm; press the first accusation, then leave space before ‘exactly.’
-"You're treating the first explanation as if it were the only one. That's exactly what I warned you not to do out there."
+"You’re treating the first explanation as if it were the only one. That’s exactly what I warned you not to do out there."
 
 [Narrator]
 Elin starts with what Zao left behind, because Zao always left something behind.
@@ -543,7 +540,7 @@ Someone tampered with helium three feed or metering to force a mission-ending lo
 The theory accounts for the fuel, radiation, interrupted warning, and Soréll's presence in one clean chain. Voss finds it persuasive. Elin records it as a hypothesis, which is not the same as believing it.
 
 [Narrator]
-She and Okoye dismantle it as the records become available.
+Through the first half of the leg, Elin and Okoye dismantle the hypothesis record by record. Watches change. Food goes cold beside the displays. Fatigue begins to blur the numbers and makes them check again.
 
 [Narrator]
 Tank inventory and pressure agree with engine metering. No helium three or deuterium left the ship unaccounted for. Commanded and measured mixture ratios remained normal. Plasma efficiency, exhaust velocity, and delivered thrust stayed inside their expected ranges.
@@ -558,16 +555,31 @@ Measured thrust divided by measured acceleration leaves one explanation: the Ard
 Harlan adjusts. Perhaps Zao stopped the tampering before the mixture shifted for long. The revision keeps attempted sabotage possible, but no longer explains the fuel already burned or the neutrons. One convenient fact has split into two.
 
 [Narrator]
+Midway through the leg, thrust cuts and weight disappears for the third time. The crew secure themselves and their work as the Ardor rotates one hundred and eighty degrees from its acceleration attitude to its braking attitude. Hours of investigation become visible in a single maneuver.
+
+[Narrator]
+The engine pushes toward the same deck again. One gravity returns and deceleration toward the Velari station begins.
+
+[Narrator]
 Elin and Okoye carry a portable radiation survey aft. The neutron count falls away from accessible fuel panels and strengthens toward the inner vault. It follows neither reactor power nor mixture telemetry. Something compact and stationary sits behind shielding.
 
 [Narrator]
 The vault remains sealed by its isolated local lock. Voss's network authority cannot reach it. Every attempt without the correct wrist key fails.
 
 [Narrator]
+Voss makes Harlan specify what he inspected and who can open the door. Harlan says he finished before Zao’s warning. Soréll must have changed the access during the blackout, he says; now she is pretending to know nothing.
+
+[Narrator]
+The lock does not identify its keyholder. A wrist device’s network permissions do not disclose its local pairing either. Elin records Harlan’s explanation as a claim still to be proved. Okoye keeps that distinction when she questions Soréll again.
+
+[Narrator]
+Elin takes a portable diagnostic unit from the bay’s drawer and leaves it beside the workbench. It is ordinary equipment on a scientific ship; among other things, it checks time references. For now, none of it opens the door.
+
+[Narrator]
 They can support two conclusions and keep them separate. The Ardor carried unmanifested mass, which caused the excess burn. A compact neutron source waits behind a door they cannot open. The same object probably explains both, but steel prevents proof. They do not yet know it is a weapon or that it is counting down.
 
 [Narrator]
-Elin returns to the records and finds another survivor.
+Radiation checks and attempts to recover access consume much of the braking phase. Near its end, Elin returns to the optical controller’s traces and finds another surviving record.
 
 [Narrator]
 During the blackout, the long-distance optical array fired a compressed burst from the outer-bay controller. Its payload is gone, but the summary retains the array angles and ship attitude. Elin converts them into an inertial vector.
@@ -600,7 +612,7 @@ Elin does not look up.
 The empty-space vector confirms Harlan's private assumption: a terrified engineer, a dead guidance trunk, a hurried manual shot, and an accusation flying toward nowhere—or toward Earth too late to matter.
 
 [Narrator]
-Elin cannot disprove him. What bothers her is the premise his explanation requires: that Zao became careless. Harlan accepts that premise too easily.
+Elin cannot disprove him yet, but she does not leave the explanation untested. She has only just reconstructed the vector. After ruling out fixed destinations, she compares its time and direction with moving trajectories, including their own flight plan. Harlan has already written off the signal. She keeps calculating.
 
 [Narrator]
 Alone in his berth, Harlan sits with a result that cuts both ways. Zao's accusation appears lost, lifting a future condemnation from him. It also removes the only witness through whom Earth might understand what he believes he has done for it.
@@ -620,10 +632,13 @@ Meanwhile, Elin tests the account nobody has tested. Harlan places himself aft d
 Elin does not decide which. She decides only that finding someone beside a body is not enough to close a case.
 
 [Narrator]
-Ten to fifteen minutes before contact, with deceleration nearly complete, her console detects an incoming optical transmission lying exactly along the Ardor's trajectory.
+About thirteen minutes before contact, while she is still checking the interception, her console detects an incoming optical transmission. The result she was testing has just found her.
 
 [Narrator]
 Surprise gives way to recognition: the array's packet format, then a signature header, then a name.
+
+[Narrator]
+She calls the bridge. Voss gathers all five; Harlan returns from his berth before the packet is opened.
 
 [Narrator]
 Chapter 9.
@@ -644,13 +659,16 @@ Zao's voice carries them backward twenty-three hours and sixty-five metres, into
 The flight plan is overlaid with an ordinary-space light path. The Ardor will cross the throat minutes after the burst leaves and emerge more than twenty-three light-hours ahead of it. Zao cannot warn the ship where it is. She can warn the place where it will be.
 
 [Narrator]
-Across roughly one hundred and sixty-eight astronomical units, the projected beam and the returning trajectory meet near the end of the far-side transit—with minutes remaining before the countdown reaches zero.
+Across roughly one hundred and sixty-eight astronomical units, the projected beam and the future trajectory meet near the end of the far-side transit—with minutes remaining before the countdown reaches zero.
 
 [Narrator]
 Twenty-three hours, fifteen minutes. The number was never a failure. It was the aim.
 
 [Narrator]
 Over the restored image, Zao identifies the thermonuclear geophysical impulse package: one to one and a half tonnes, taken from Proxima's hazardous stores, sealed inside the inner shielding vault. Its fission primary explains the neutrons; its mass explains the extra propellant. Its multi-megaton charge is timed to the scheduled first-contact coordinates and hour.
+
+[Narrator]
+Zao also identifies independent power and protection against interruption. Voss does not wait for the end: he tries to abort the approach. The command is rejected. The displays still show a healthy engine and a perfect trajectory.
 
 [Narrator]
 The recording reaches the moment when a door opens behind her.
@@ -661,7 +679,7 @@ The recording reaches the moment when a door opens behind her.
 "Just in case: goodbye. Harlan's at the door."
 
 [Narrator]
-On the final words, the bridge returns to the present. Five people turn toward Harlan.
+On the final words, the bridge returns to the present. Four people turn toward Harlan. Okoye moves beside him and keeps him under physical control. This time he cannot leave the bridge unseen.
 
 [Narrator]
 The message that seemed aimed at nothing was aimed at a moving receiver: the Ardor, after the throat placed the ship ahead of her own light.
@@ -673,16 +691,28 @@ Harlan says that voice and image can be fabricated. It is not a foolish objectio
 The message now joins everything Elin and Okoye uncovered: Harlan's unverifiable location, the speed of his accusation, the added mass and compact neutron source that broke his fuel theory, the burst he explained by calling Zao careless, and a vector that intersects the ship exactly where its flight plan always said it would be.
 
 [Narrator]
-No single fact proves the whole story. Together, they leave no coherent alternative.
+No single fact proves the whole story. Together, they require isolating Harlan and reconsidering Soréll’s detention. They do not prove there are no accomplices or turn suspicion into a verdict.
 
 [Narrator]
 Elin verifies Zao's personal cryptographic signature and its timestamp, minutes before the crossing. The attribution appears on the main display.
 
 [Narrator]
-Voss revokes Harlan's network authority. He orders Okoye to release Soréll, sends Elin aft to the vault, and tells Soréll to monitor the automated approach and finish the greeting.
+About eleven minutes remain. Voss revokes Harlan’s network authority and releases Soréll while Okoye keeps control of him. The basis for Soréll’s detention no longer justifies keeping her tied down. He needs her at her station.
 
 [Narrator]
-Then he orders Okoye to remove Harlan's wrist device and restrain him.
+Voss tries to cancel the profile, replace it and cut thrust through the remote emergency control. Minutes pass in rejected commands and actual checks: Elin compares what the controller received with what the engine keeps doing. Soréll tracks the exhausted routes and the time left.
+
+[Narrator]
+The failure converges on the bridge command inputs. The stored plan keeps running and retains its scheduled cutoff. Reconnecting communications did not fix this because the damage is elsewhere. The panel Harlan closed before passing Zao has been doing its work in silence.
+
+[Narrator]
+Under Okoye’s hand, Harlan denies touching it and blames Soréll again. Elin locates the remaining intervention: independent local control aft. The checks have consumed eight minutes. Three remain.
+
+[Narrator]
+Elin takes the elevator. First, recover flight control; then open the vault. Soréll stays with the approach and the greeting. Voss has not chosen to continue toward the station. He has been trying to stop the ship since he learned what it carried.
+
+[Narrator]
+Voss orders Harlan secured to his station and his wrist device removed. It may contain the local key he denied them, although they do not yet know. Okoye changes her grip to tether him to the structure.
 
 [Narrator]
 Chapter 10.
@@ -700,16 +730,16 @@ Okoye closes a hand around the device and glances at the display confirming revo
 There is no immediate pursuit through the shaft and no way to know whether the lower access hatches remain usable.
 
 [Narrator]
-Harlan knows where Elin is going. The package accepts no remote command, even from him. His remaining choices are physical: reach the vault, stop her, or trigger the weapon now.
+Harlan knows where Elin is going. If she reaches local control, the contact-point attack fails even if the bomb remains active. The package accepts no remote command, even from him. He has to reach her, prevent both interventions or force detonation there.
 
 [Narrator]
 Soréll stays on the bridge with an approach executing automatically and an unfinished greeting in her hands.
 
 [Narrator]
-Elin has a head start. The speed-governed elevator carries her sixty-five metres aft. She reaches the inner vault and attacks the local lock.
+Elin has a head start. The speed-governed elevator carries her sixty-five metres aft. She reaches the outer bay and goes to the emergency control beside the vault entrance.
 
 [Narrator]
-The Ardor is still braking under one gravity. Harlan descends the service shaft on its segmented ladder, dropping between deck stops as fast as thrust allows and locking each access hatch behind him. The direct route is faster than the elevator's governed travel and far more dangerous than an ordinary passage. He reaches Elin before she solves the lock and attacks her.
+The Ardor is still braking under one gravity. Harlan descends the segmented service ladder, drops between stops and locks the hatches from inside. His direct descent is faster and far more dangerous than an ordinary passage. He arrives after Elin, but before she finishes intervening at local control. He pulls her from the panel and drives her against the vault entrance.
 
 [Narrator]
 Locked out of the bridge hatch, Voss and Okoye enter the central circulation shaft and take opposite helical staircases. Okoye detours at the first deck to test the adjacent service hatch. Locked from inside. One deck lower, Voss tests the next. Locked.
@@ -727,7 +757,7 @@ The Ardor completes her programmed deceleration.
 Thrust cuts.
 
 [Narrator]
-Weight vanishes for the third time. The navigation display continues counting down to the contact coordinates. The bomb is synchronized to that time and place, not to an engine command.
+Weight vanishes for the fourth time. Approximately one minute remains until the contact and detonation time. The cutoff was programmed; the device’s countdown keeps advancing, wherever the ship is.
 
 [Narrator]
 In microgravity, the staircases stop mattering.
@@ -764,13 +794,13 @@ Elin opens the vault with Harlan's device. The package is counting toward zero.
 Zao's warning has already given her what she has no time to discover: independent power and tamper protection. Diagnostics confirm redundant firing power. Cutting cables or attacking the controller is a wager she cannot make.
 
 [Narrator]
-But the package was built for science, and science required an exact detonation time beneath a moon. Its maintenance interface must allow precise clock synchronization before deployment.
+Elin recognizes a scientific instrument’s service function: checking the controller’s time against an external reference. The portable unit she left beside the bench is still there. She reaches it.
 
 [Narrator]
-Elin supplies a valid mission-time reference—drastically rewound.
+She improvises a substituted time reference. She needs to change the value the controller accepts for its decision; fooling only the display would do nothing.
 
 [Narrator]
-The display reads four, three, two, one, then jumps to a date absurdly far in the future.
+The display reads four, three, two, one. Then the remaining interval jumps upward. On her wrist, the ship’s clock continues and passes the original deadline. There is no explosion. Elin compares the readings; the charge is still armed.
 
 <!-- audience-dialogue-id: audience:dialogue:f5-elin-delayed -->
 [Elin]
@@ -778,10 +808,10 @@ The display reads four, three, two, one, then jumps to a date absurdly far in th
 "It isn't disarmed. It just isn't going off here."
 
 [Narrator]
-Someday specialists can tow it into deep space or open it safely. Today it is a heavy object in a locked room.
+The unit must remain connected, and someone must keep watching the charge. Specialists will have to handle its eventual disposition. Today they have gained time, not a safe room.
 
 [Narrator]
-Voss reports the safe interval forward. Soréll finishes the greeting while the others begin the long climb home.
+Elin takes local control, prevents unauthorized thrust from resuming and confirms that the ship is holding at the planned point. The bridge still cannot govern flight until the damage is repaired. Voss reports forward and returns; Elin stays with the controls and charge, Okoye with Harlan. Soréll finishes the greeting.
 
 [Narrator]
 Her console unfolds the simultaneous spatial relationships of the throat's primer into a sequence a human can read, then reverses the process. Branching points of light gather into the grammar the mouth spent millennia demonstrating.
@@ -892,7 +922,7 @@ Beauty proves nothing about benevolence. It cannot prevent misunderstanding, dis
 The light continues for a long time.
 
 [Narrator]
-Before the Ardor turns toward the return window, Voss prepares an official report for Earth. He sends it through ordinary space with the long-distance optical array as an independent record. It may arrive after the crew. It will continue even if the ship misses the window.
+Before beginning the return, they must restore bridge controls and keep the charge under watch. While that work is organized, Voss prepares an official report for Earth. He will send it through ordinary space as an independent record: it will continue even if the ship misses the window.
 
 [Narrator]
 He includes the discovery, sabotage, murder, delayed warning, intervention, and contact. He states that Zao saved the crew and preserved the meeting. Her signed warning and personnel record accompany the report, and her photograph occupies part of the display.

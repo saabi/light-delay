@@ -202,7 +202,7 @@ python scripts/generate-dual-outline-audio.py --lang en --assemble-only
 python scripts/generate-dual-outline-audio.py --lang es
 ```
 
-Multi-speaker TTS outlines (rev. 16, 38 attributed quotations from the master):
+Multi-speaker TTS outlines (rev. 17, 38 attributed quotations from the master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
@@ -285,3 +285,8 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 | Imitation CLI | `scripts/convert-imitation-performance.py` |
 | ES / EN pipelines | `scripts/pipeline-*-native-l1-v2-qwen.py` |
 | Dual outline | `scripts/generate-dual-outline-audio.py` |
+
+Revision 17 corrects chronology, abort logic and the time-reference intervention in the master
+and audience narratives. TTS text was regenerated; existing prose-revision-15 duals and chunks
+still need regeneration. Dialogue IDs are preserved; changed directions for Harlan (Earth)
+and Sorell (questioning) must invalidate takes that depend on them.

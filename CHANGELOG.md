@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-10 — Master rev. 17: continuidad y aborto impedido
+
+- Investigación a lo largo de todo el tránsito, con C10b reubicado en D y enlaces causales revisados.
+- Corregidos el tiempo de aviso a Tierra y la geometría de retransmisión; cronología explícita de E–F.
+- Sabotaje físico de mandos remotos, intento temprano de aborto y control local en el compartimiento exterior.
+- Interrogatorio del acceso a bóveda, prueba activa del vector e información de Zao preservada en el mensaje.
+- Rescate por referencia temporal ficticia con instrumental establecido; carga armada bajo vigilancia posterior.
+- Relatos ES/EN y derivados TTS sincronizados; corregidas las seis desviaciones de adaptación y documentadas
+  todas las resoluciones. Audios existentes marcados desactualizados frente a rev. 17; sin generación de medios.
+
 ## 2026-09-09 — Studio: regenerar con Qwen3-TTS
 
 - El Studio añade modo paralelo a Seed-VC: regenerar un cue grabable con

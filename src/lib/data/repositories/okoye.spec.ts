@@ -27,7 +27,7 @@ describe('Dara Okoye catalog', () => {
 		expect(storyText(voice?.description, 'es')).toContain('Contralto firme');
 		expect(storyText(voice?.description, 'en')).toContain('firm contralto');
 		expect(voice?.variants.map((variant) => variant.language)).toEqual(['es', 'en']);
-		expect(voice?.variants.find((variant) => variant.language === 'es')?.locale).toBe('es-GQ');
+		expect(voice?.variants.find((variant) => variant.language === 'es')?.locale).toBe('es-VE');
 		expect(voice?.variants.find((variant) => variant.language === 'en')?.locale).toBe('en-NG');
 		expect(voice?.variants.some((variant) => variant.sampleAssetIds?.length)).toBe(false);
 	});

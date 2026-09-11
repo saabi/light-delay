@@ -72,6 +72,8 @@
         { "kind": "static_file", "id": "docs/MASTER_RELEVANCE_REPORT.md" },
         { "kind": "static_file", "id": "docs/PENDING_AUTHOR_NOTES.md" },
         { "kind": "static_file", "id": "docs/WORKFLOW.md" },
+        { "kind": "static_file", "id": "docs/wip/continuity-review.es.md" },
+        { "kind": "static_file", "id": "docs/wip/continuity-review.en.md" },
         { "kind": "static_file", "id": "docs/wip/general-narrative-outline.es.md" },
         { "kind": "static_file", "id": "docs/wip/general-narrative-outline.en.md" }
       ]

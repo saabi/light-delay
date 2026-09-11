@@ -8,7 +8,7 @@ Los elementos inciertos se conservan. Ningún candidato puede borrarse hasta cer
 
 Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `replacement_derivatives_approved` (open), `no_active_dependants` (open).
 
-## Vigente o compatible (68)
+## Vigente o compatible (70)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -63,6 +63,8 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/wip/audience-narrative.es.md` | explicit | retain |
 | static_file | `docs/wip/audience-narrative.voices.en.md` | explicit | retain |
 | static_file | `docs/wip/audience-narrative.voices.es.md` | explicit | retain |
+| static_file | `docs/wip/continuity-review.en.md` | explicit | retain |
+| static_file | `docs/wip/continuity-review.es.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.en.md` | explicit | retain |
 | static_file | `docs/wip/general-narrative-outline.es.md` | explicit | retain |
 | static_file | `docs/wip/outiline-for-kokoro-tts.es.md` | explicit | retain |
