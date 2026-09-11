@@ -530,7 +530,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -556,16 +556,8 @@
         {
           "id": "festival:shot-b-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "festival:shot-b-06:segment-02",
-          "startMs": 8000,
           "endMs": 11500,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1613,7 +1605,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1633,16 +1625,8 @@
         {
           "id": "festival:shot-b-04a:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "festival:shot-b-04a:segment-02",
-          "startMs": 8000,
           "endMs": 12500,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1831,7 +1815,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1851,16 +1835,8 @@
         {
           "id": "festival:shot-d-04b:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "festival:shot-d-04b:segment-02",
-          "startMs": 8000,
           "endMs": 8600,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1884,7 +1860,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1910,16 +1886,8 @@
         {
           "id": "festival:shot-b-08:segment-01",
           "startMs": 0,
-          "endMs": 5600,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "festival:shot-b-08:segment-02",
-          "startMs": 5600,
           "endMs": 9000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2139,7 +2107,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2159,16 +2127,8 @@
         {
           "id": "festival:shot-e-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "festival:shot-e-03:segment-02",
-          "startMs": 8000,
           "endMs": 11000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }

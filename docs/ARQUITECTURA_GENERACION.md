@@ -80,8 +80,8 @@ La integración futura con Higgsfield debe resolver IDs remotos a partir de esto
 El snapshot vigente separa:
 
 - Seedance 2.0 documentado: hasta 9 imágenes (incluidos boundaries), 3 videos, 3 audios y 12 referencias totales;
-- campaña de prueba informada: segmentos de hasta 8 s, ventana de 24 h y ejecución condicionada a preflight;
-- Seedance 2.5: perfil provisional de marketing, no habilitado para ejecución hasta confirmar catálogo CLI/MCP y contrato real.
+- campaña vigente: segmentos de hasta **30 s** (`maxSegmentMs`), alineados con Seedance 2.5 single-pass; ventana/ejecución condicionadas a preflight;
+- Seedance 2.5: `maxDurationMs` 30000 en snapshot; perfil aún provisional hasta confirmar catálogo CLI/MCP y contrato real.
 
 `scripts/higgsfield-preflight.mjs` es deliberadamente de sólo lectura. No envía medios. Cualquier adapter posterior debe exigir catálogo vivo, entitlement, costo/créditos y confirmación de que la corrida no consumirá recursos no autorizados. Ver también [`docs/technical/HIGGSFIELD_MCP.md`](technical/HIGGSFIELD_MCP.md). Ver también [`docs/technical/HIGGSFIELD_MCP.md`](technical/HIGGSFIELD_MCP.md).
 

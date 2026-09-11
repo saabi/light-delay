@@ -31,7 +31,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -44,24 +44,8 @@
         {
           "id": "main:shot-01-01:segment-01",
           "startMs": 0,
-          "endMs": 3500,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-01:segment-02",
-          "startMs": 3500,
-          "endMs": 11500,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-01:segment-03",
-          "startMs": 11500,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -85,7 +69,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -98,24 +82,8 @@
         {
           "id": "main:shot-01-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-02:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-02:segment-03",
-          "startMs": 16000,
           "endMs": 20000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -140,7 +108,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -153,16 +121,8 @@
         {
           "id": "main:shot-01-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-03:segment-02",
-          "startMs": 8000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -266,7 +226,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -279,24 +239,8 @@
         {
           "id": "main:shot-01-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-06:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-06:segment-03",
-          "startMs": 16000,
           "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -322,7 +266,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -335,32 +279,8 @@
         {
           "id": "main:shot-01-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-07:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-07:segment-03",
-          "startMs": 16000,
-          "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-07:segment-04",
-          "startMs": 24000,
           "endMs": 28000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -580,7 +500,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -593,16 +513,8 @@
         {
           "id": "main:shot-01-13:segment-01",
           "startMs": 0,
-          "endMs": 1000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-13:segment-02",
-          "startMs": 1000,
           "endMs": 9000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -784,7 +696,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -797,16 +709,8 @@
         {
           "id": "main:shot-02-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-02-01:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -832,7 +736,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -845,16 +749,8 @@
         {
           "id": "main:shot-02-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-02-02:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -879,7 +775,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -892,16 +788,8 @@
         {
           "id": "main:shot-02-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-02-03:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -926,7 +814,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -939,16 +827,8 @@
         {
           "id": "main:shot-02-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-02-04:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -973,7 +853,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -986,16 +866,8 @@
         {
           "id": "main:shot-03-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-03-01:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1020,7 +892,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1033,16 +905,8 @@
         {
           "id": "main:shot-03-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-03-02:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1068,7 +932,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1081,16 +945,8 @@
         {
           "id": "main:shot-03-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-03-03:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1116,7 +972,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1129,16 +985,8 @@
         {
           "id": "main:shot-03-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-03-04:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1163,7 +1011,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1176,16 +1024,8 @@
         {
           "id": "main:shot-04-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-01:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1210,7 +1050,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1223,24 +1063,8 @@
         {
           "id": "main:shot-04-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-02:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-02:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1264,7 +1088,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1277,24 +1101,8 @@
         {
           "id": "main:shot-04-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-03:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-03:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1318,7 +1126,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1331,24 +1139,8 @@
         {
           "id": "main:shot-04-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-04:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-04:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1372,7 +1164,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1385,24 +1177,8 @@
         {
           "id": "main:shot-04-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-05:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-04-05:segment-03",
-          "startMs": 16000,
           "endMs": 20000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1426,7 +1202,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1439,16 +1215,8 @@
         {
           "id": "main:shot-05-01:segment-01",
           "startMs": 0,
-          "endMs": 7000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-01:segment-02",
-          "startMs": 7000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1473,7 +1241,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1486,16 +1254,8 @@
         {
           "id": "main:shot-05-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-02:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1520,7 +1280,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1533,24 +1293,8 @@
         {
           "id": "main:shot-05-03:segment-01",
           "startMs": 0,
-          "endMs": 6000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-03:segment-02",
-          "startMs": 6000,
-          "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-03:segment-03",
-          "startMs": 12000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1574,7 +1318,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1587,16 +1331,8 @@
         {
           "id": "main:shot-05-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-04:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1621,7 +1357,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1634,16 +1370,8 @@
         {
           "id": "main:shot-05-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-05:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1667,7 +1395,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1680,16 +1408,8 @@
         {
           "id": "main:shot-05-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-06:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1713,7 +1433,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1726,16 +1446,8 @@
         {
           "id": "main:shot-05-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-07:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1760,7 +1472,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1773,32 +1485,8 @@
         {
           "id": "main:shot-05-08:segment-01",
           "startMs": 0,
-          "endMs": 2800,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-08:segment-02",
-          "startMs": 2800,
-          "endMs": 8500,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-08:segment-03",
-          "startMs": 8500,
-          "endMs": 12500,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-05-08:segment-04",
-          "startMs": 12500,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1822,7 +1510,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1835,16 +1523,8 @@
         {
           "id": "main:shot-06-01:segment-01",
           "startMs": 0,
-          "endMs": 5000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-01:segment-02",
-          "startMs": 5000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1868,7 +1548,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1881,16 +1561,8 @@
         {
           "id": "main:shot-06-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-02:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -1954,7 +1626,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -1967,16 +1639,8 @@
         {
           "id": "main:shot-06-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-04:segment-02",
-          "startMs": 8000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2000,7 +1664,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2013,16 +1677,8 @@
         {
           "id": "main:shot-06-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-05:segment-02",
-          "startMs": 8000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2047,7 +1703,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2060,16 +1716,8 @@
         {
           "id": "main:shot-06-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-06:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2094,7 +1742,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2107,16 +1755,8 @@
         {
           "id": "main:shot-06-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-07:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2142,7 +1782,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2155,16 +1795,8 @@
         {
           "id": "main:shot-06-08:segment-01",
           "startMs": 0,
-          "endMs": 6000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-08:segment-02",
-          "startMs": 6000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2194,7 +1826,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2207,16 +1839,8 @@
         {
           "id": "main:shot-06-09:segment-01",
           "startMs": 0,
-          "endMs": 7600,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-06-09:segment-02",
-          "startMs": 7600,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2854,7 +2478,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2867,16 +2491,8 @@
         {
           "id": "main:shot-08-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-08-07:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2900,7 +2516,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2913,16 +2529,8 @@
         {
           "id": "main:shot-09-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-01:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -2946,7 +2554,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -2959,24 +2567,8 @@
         {
           "id": "main:shot-09-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-02:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-02:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3002,7 +2594,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3015,24 +2607,8 @@
         {
           "id": "main:shot-09-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-03:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-03:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3057,7 +2633,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3070,24 +2646,8 @@
         {
           "id": "main:shot-09-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-04:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-04:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3112,7 +2672,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3125,24 +2685,8 @@
         {
           "id": "main:shot-09-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-05:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-05:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3167,7 +2711,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3180,24 +2724,8 @@
         {
           "id": "main:shot-09-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-06:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-09-06:segment-03",
-          "startMs": 16000,
           "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3221,7 +2749,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3234,24 +2762,8 @@
         {
           "id": "main:shot-10-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-01:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-01:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3276,7 +2788,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3289,24 +2801,8 @@
         {
           "id": "main:shot-10-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-02:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-02:segment-03",
-          "startMs": 16000,
           "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3331,7 +2827,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3344,24 +2840,8 @@
         {
           "id": "main:shot-10-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-03:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-03:segment-03",
-          "startMs": 16000,
           "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3385,7 +2865,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3398,32 +2878,8 @@
         {
           "id": "main:shot-10-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-04:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-04:segment-03",
-          "startMs": 16000,
-          "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-04:segment-04",
-          "startMs": 24000,
           "endMs": 26000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3448,7 +2904,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3461,32 +2917,8 @@
         {
           "id": "main:shot-10-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-05:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-05:segment-03",
-          "startMs": 16000,
-          "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-05:segment-04",
-          "startMs": 24000,
           "endMs": 26000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3511,7 +2943,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3524,32 +2956,8 @@
         {
           "id": "main:shot-10-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-06:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-06:segment-03",
-          "startMs": 16000,
-          "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-06:segment-04",
-          "startMs": 24000,
           "endMs": 28000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3574,7 +2982,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3587,32 +2995,8 @@
         {
           "id": "main:shot-10-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-07:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-07:segment-03",
-          "startMs": 16000,
-          "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-10-07:segment-04",
-          "startMs": 24000,
           "endMs": 30000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3638,7 +3022,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3651,16 +3035,8 @@
         {
           "id": "main:shot-11-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-11-01:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3685,7 +3061,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3698,16 +3074,8 @@
         {
           "id": "main:shot-11-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-11-02:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3732,7 +3100,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3745,16 +3113,8 @@
         {
           "id": "main:shot-11-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-11-03:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3780,7 +3140,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3793,16 +3153,8 @@
         {
           "id": "main:shot-11-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-11-04:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3827,7 +3179,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3840,16 +3192,8 @@
         {
           "id": "main:shot-11-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-11-05:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3874,7 +3218,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3887,16 +3231,8 @@
         {
           "id": "main:shot-11-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-11-06:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3921,7 +3257,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3934,16 +3270,8 @@
         {
           "id": "main:shot-12-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-01:segment-02",
-          "startMs": 8000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -3968,7 +3296,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -3981,16 +3309,8 @@
         {
           "id": "main:shot-12-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-02:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4015,7 +3335,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4028,16 +3348,8 @@
         {
           "id": "main:shot-12-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-03:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4063,7 +3375,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4076,16 +3388,8 @@
         {
           "id": "main:shot-12-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-04:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4112,7 +3416,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4125,16 +3429,8 @@
         {
           "id": "main:shot-12-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-05:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4161,7 +3457,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4174,24 +3470,8 @@
         {
           "id": "main:shot-12-06:segment-01",
           "startMs": 0,
-          "endMs": 3500,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-06:segment-02",
-          "startMs": 3500,
-          "endMs": 11500,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-06:segment-03",
-          "startMs": 11500,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4216,7 +3496,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4229,16 +3509,8 @@
         {
           "id": "main:shot-12-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-07:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4263,7 +3535,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4276,16 +3548,8 @@
         {
           "id": "main:shot-12-08:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-08:segment-02",
-          "startMs": 8000,
           "endMs": 14000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4310,7 +3574,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4323,16 +3587,8 @@
         {
           "id": "main:shot-12-09:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-12-09:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4356,7 +3612,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4369,16 +3625,8 @@
         {
           "id": "main:shot-13-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-13-01:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4402,7 +3650,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4415,16 +3663,8 @@
         {
           "id": "main:shot-13-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-13-02:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4450,7 +3690,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4463,16 +3703,8 @@
         {
           "id": "main:shot-13-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-13-03:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4496,7 +3728,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4509,16 +3741,8 @@
         {
           "id": "main:shot-13-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-13-04:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4543,7 +3767,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4556,16 +3780,8 @@
         {
           "id": "main:shot-13-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-13-05:segment-02",
-          "startMs": 8000,
           "endMs": 12000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4589,7 +3805,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4602,24 +3818,8 @@
         {
           "id": "main:shot-14-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-01:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-01:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4643,7 +3843,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4656,24 +3856,8 @@
         {
           "id": "main:shot-14-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-02:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-02:segment-03",
-          "startMs": 16000,
           "endMs": 20000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4699,7 +3883,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4712,24 +3896,8 @@
         {
           "id": "main:shot-14-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-03:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-03:segment-03",
-          "startMs": 16000,
           "endMs": 20000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4754,7 +3922,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4767,24 +3935,8 @@
         {
           "id": "main:shot-14-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-04:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-04:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4810,7 +3962,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4823,24 +3975,8 @@
         {
           "id": "main:shot-14-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-05:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-05:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4865,7 +4001,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4878,24 +4014,8 @@
         {
           "id": "main:shot-14-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-06:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-06:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4921,7 +4041,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4934,24 +4054,8 @@
         {
           "id": "main:shot-14-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-07:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-07:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -4976,7 +4080,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -4989,24 +4093,8 @@
         {
           "id": "main:shot-14-08:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-08:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-08:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5032,7 +4120,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5045,24 +4133,8 @@
         {
           "id": "main:shot-14-09:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-09:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-09:segment-03",
-          "startMs": 16000,
           "endMs": 20000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5089,7 +4161,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5102,32 +4174,8 @@
         {
           "id": "main:shot-14-10:segment-01",
           "startMs": 0,
-          "endMs": 3600,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-10:segment-02",
-          "startMs": 3600,
-          "endMs": 11600,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-10:segment-03",
-          "startMs": 11600,
-          "endMs": 19600,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-14-10:segment-04",
-          "startMs": 19600,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5151,7 +4199,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5164,16 +4212,8 @@
         {
           "id": "main:shot-15-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-01:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5199,7 +4239,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5212,24 +4252,8 @@
         {
           "id": "main:shot-15-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-02:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-02:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5254,7 +4278,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5267,24 +4291,8 @@
         {
           "id": "main:shot-15-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-03:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-03:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5309,7 +4317,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5322,24 +4330,8 @@
         {
           "id": "main:shot-15-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-04:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-04:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5363,7 +4355,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5376,16 +4368,8 @@
         {
           "id": "main:shot-15-05:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-05:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5411,7 +4395,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5424,16 +4408,8 @@
         {
           "id": "main:shot-15-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-06:segment-02",
-          "startMs": 8000,
           "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5459,7 +4435,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5472,24 +4448,8 @@
         {
           "id": "main:shot-15-07:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-07:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-15-07:segment-03",
-          "startMs": 16000,
           "endMs": 18000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5514,7 +4474,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5527,16 +4487,8 @@
         {
           "id": "main:shot-16-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-16-01:segment-02",
-          "startMs": 8000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5561,7 +4513,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5574,16 +4526,8 @@
         {
           "id": "main:shot-16-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-16-02:segment-02",
-          "startMs": 8000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5608,7 +4552,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5621,16 +4565,8 @@
         {
           "id": "main:shot-16-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-16-03:segment-02",
-          "startMs": 8000,
           "endMs": 10000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5655,7 +4591,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5668,24 +4604,8 @@
         {
           "id": "main:shot-17-01:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-01:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-01:segment-03",
-          "startMs": 16000,
           "endMs": 22000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5710,7 +4630,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5723,24 +4643,8 @@
         {
           "id": "main:shot-17-02:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-02:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-02:segment-03",
-          "startMs": 16000,
           "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5766,7 +4670,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5779,24 +4683,8 @@
         {
           "id": "main:shot-17-03:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-03:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-03:segment-03",
-          "startMs": 16000,
           "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5822,7 +4710,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5835,32 +4723,8 @@
         {
           "id": "main:shot-17-04:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-04:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-04:segment-03",
-          "startMs": 16000,
-          "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-04:segment-04",
-          "startMs": 24000,
           "endMs": 26000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5886,7 +4750,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5899,32 +4763,8 @@
         {
           "id": "main:shot-17-05:segment-01",
           "startMs": 0,
-          "endMs": 3300,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-05:segment-02",
-          "startMs": 3300,
-          "endMs": 11300,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-05:segment-03",
-          "startMs": 11300,
-          "endMs": 19300,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-05:segment-04",
-          "startMs": 19300,
           "endMs": 26000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -5949,7 +4789,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -5962,32 +4802,8 @@
         {
           "id": "main:shot-17-06:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-06:segment-02",
-          "startMs": 8000,
-          "endMs": 16000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-06:segment-03",
-          "startMs": 16000,
-          "endMs": 24000,
-          "continuation": "accepted_video_and_last_frame",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-17-06:segment-04",
-          "startMs": 24000,
           "endMs": 28000,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }
@@ -6012,7 +4828,7 @@
           "status": "missing"
         },
         "lastFrame": {
-          "required": true,
+          "required": false,
           "status": "missing"
         },
         "finalAudio": {
@@ -6025,16 +4841,8 @@
         {
           "id": "main:shot-01-18:segment-01",
           "startMs": 0,
-          "endMs": 8000,
-          "continuation": "none",
-          "promptStatus": "blocked",
-          "compiledPrompt": null
-        },
-        {
-          "id": "main:shot-01-18:segment-02",
-          "startMs": 8000,
           "endMs": 9500,
-          "continuation": "accepted_video_and_last_frame",
+          "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
         }

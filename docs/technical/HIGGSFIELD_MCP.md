@@ -128,9 +128,9 @@ En [`data/production/provider-capabilities.json`](../../data/production/provider
 | Videos de referencia | 3 |
 | Audios de referencia | 3 |
 | **Total referencias** | **12** |
-| Segmento de campaña trial (autor) | **8 s** (`campaign:higgsfield-trial-24h`) |
+| Segmento de campaña (`campaign:higgsfield-trial-24h`) | **30 s** (`maxSegmentMs`, alineado a Seedance 2.5) |
 
-Seedance 2.5 figura como perfil **provisional** de marketing; no usar para validar envíos hasta confirmar catálogo MCP/CLI.
+Seedance 2.5 figura con `maxDurationMs: 30000` en el mismo archivo; el snapshot sigue `provisional` / no ejecutable hasta confirmar catálogo MCP/CLI.
 
 ---
 
@@ -204,7 +204,7 @@ Alineado con [`docs/ARQUITECTURA_GENERACION.md`](../ARQUITECTURA_GENERACION.md):
   },
   "parameters": {
     "aspectRatio": "16:9",
-    "durationSeconds": 8,
+    "durationSeconds": 30,
     "resolution": "1080p",
     "generateAudio": false
   },
@@ -241,7 +241,7 @@ Campos a rellenar tras la primera conexión real: `model` exacto aceptado por el
 - Prompt compilado en **inglés**; brief humano en español en el plan, no en el job.
 - Displays diegéticos solo en inglés ([`docs/PRODUCTION_PLAN.md`](../PRODUCTION_PLAN.md)).
 - No superar 12 referencias totales por job si se usa Seedance 2.0 según snapshot.
-- Segmentos ≤ 8 s mientras `campaign:higgsfield-trial-24h` siga acotando la campaña documental (independiente del límite del modelo).
+- Segmentos ≤ **30 s** según `campaign:higgsfield-trial-24h` / Seedance 2.5 single-pass; confirmar en preflight que el plan de cuenta no baje ese techo.
 - Ejecutar `npm run prepare:higgsfield` antes de cada corrida para refrescar staging.
 
 ---

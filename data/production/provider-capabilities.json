@@ -45,14 +45,14 @@
   "campaigns": [
     {
       "id": "campaign:higgsfield-trial-24h",
-      "providerSnapshotId": "provider:higgsfield:seedance-2.0:2026-08-29",
-      "maxSegmentMs": 8000,
+      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+      "maxSegmentMs": 30000,
       "requiresEntitlementPreflight": true,
       "noCreditsAllowed": true,
       "concurrency": null,
       "notes": {
-        "es": "Restricción de la cuenta de prueba informada por el autor; no confundir con el límite intrínseco del modelo.",
-        "en": "Trial-account constraint reported by the author; do not confuse it with the model's intrinsic limit."
+        "es": "Segmentos hasta 30 s, alineados con el single-pass de Seedance 2.5 (`maxDurationMs`). Verificar en preflight que la cuenta/plan no imponga un techo menor (p. ej. Unlimited a 8/15 s).",
+        "en": "Segments up to 30 s, aligned with Seedance 2.5 single-pass (`maxDurationMs`). Preflight must confirm the account/plan does not impose a lower ceiling (e.g. Unlimited at 8/15 s)."
       }
     }
   ]

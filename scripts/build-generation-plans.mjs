@@ -6,7 +6,12 @@ import { planSegments, resolveDiegeticText, sha256 } from './lib/generation-plan
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const checkOnly = process.argv.includes('--check');
 const campaignId = 'campaign:higgsfield-trial-24h';
-const maxSegmentMs = 8000;
+const providerCapabilities = JSON.parse(
+	readFileSync(join(ROOT, 'data', 'production', 'provider-capabilities.json'), 'utf8')
+);
+const campaign = providerCapabilities.campaigns.find((item) => item.id === campaignId);
+if (!campaign) throw new Error(`Missing campaign ${campaignId} in provider-capabilities.json`);
+const maxSegmentMs = campaign.maxSegmentMs;
 const productionContexts = JSON.parse(
 	readFileSync(join(ROOT, 'data', 'production', 'contexts.json'), 'utf8')
 );
