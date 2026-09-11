@@ -12,8 +12,8 @@
       "en": "Authoritative bilingual master narrative, still WIP and unconstrained by duration. Earlier screenplays and cuts are deprecated until new versions can be derived."
     },
     "status": "draft",
-    "version": "0.7.0-wip",
-    "revision": 18,
+    "version": "0.8.0-wip",
+    "revision": 19,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -459,7 +459,7 @@
           "type": "paragraph",
           "text": {
             "es": "Durante su última inspección a popa, después de las pruebas de partida y justo antes de encontrarse con Zao, Harlan inutiliza físicamente las entradas de mando del puente, incluido su corte de emergencia remoto. Deja intactos el plan almacenado, la telemetría y el mando local del compartimiento. El vuelo normal no solicita un cambio y no revela la avería; el sabotaje aparece al intentar abortar. No borra registros ni modifica las mediciones de propulsión. Es una intervención distinta del corte posterior de comunicaciones, y reconectar sus troncales no la revierte.",
-            "en": "During his final aft inspection, after departure checks and immediately before encountering Zao, Harlan physically disables the bridge command inputs, including its remote emergency cutoff. He leaves the stored plan, telemetry and the bay’s local control intact. Normal flight requests no change and does not expose the failure; an abort attempt does. He neither erases logs nor alters propulsion measurements. This intervention is separate from the later communications disconnection, and reconnecting those trunks does not reverse it."
+        "en": "After murdering Zao and securing the inner vault, Harlan uses the adjacent local flight console to physically disable the bridge command inputs, including its remote emergency cutoff. He leaves the stored plan, telemetry and the bay’s local control intact. He had kept those inputs operational beforehand to avoid creating an anomaly while his plan remained undiscovered; Zao’s warning makes a later abort attempt foreseeable and forces the additional sabotage. The intervention takes only seconds, creates no digital command record, neither erases logs nor alters propulsion measurements, and remains separate from the communications disconnection. Reconnecting the communications trunks does not reverse it."
           }
         },
         {
@@ -1876,7 +1876,7 @@
           "type": "paragraph",
           "text": {
             "es": "Antes de salir de la bóveda, Harlan ha terminado una intervención en los mandos de vuelo del compartimiento exterior: el puente ya no puede sustituir ni cortar el plan automático, aunque sus pantallas sigan recibiendo telemetría normal. Conserva operativo el mando local a popa. El público ve la manipulación, pero todavía no su efecto; Voss lo descubrirá al intentar abortar.",
-            "en": "Before Zao reaches the bay, Harlan alters its flight controls so the bridge can no longer replace or cut the automatic plan while its displays continue receiving normal telemetry. He verifies that the bridge still sees a healthy system, leaves local aft control operational, and then enters the inner vault for his final check. The audience sees the apparently routine panel work but not yet its effect; Voss will discover that when he attempts to abort."
+            "en": "Before Zao reaches the bay, Harlan completes his final inspection inside the inner vault. He does not touch the outer-bay flight controls. To an observer, he appears to be finishing only his assigned inspection; nothing shown here confirms hostile action."
           }
         },
         {
@@ -2570,7 +2570,7 @@
           "type": "paragraph",
           "text": {
             "es": "Da prioridad a matar a Zao, asegurar la bóveda interior, irse antes de que llegue el tripulante que se aproxima y restaurar las cámaras a tiempo para que registren a esa persona junto al cuerpo. Su error no consiste en no mirar la telemetría. Es su certeza de que ya sabe qué significa.",
-            "en": "He prioritizes killing Zao, securing the inner vault, leaving before the approaching crew member arrives, and restoring the cameras in time to record that person with the body. His mistake is not a failure to look at the telemetry. It is his certainty that he already knows what it means."
+            "en": "The bridge heard Zao report sabotage before he cut her off. Once the committed throat crossing is complete, Voss may therefore try to interrupt the automatic approach. Harlan prioritizes killing Zao, securing the inner vault, disabling the bridge’s flight-command path as a new contingency, leaving before the approaching crew member arrives, and restoring the cameras in time to record that person with the body. His mistake is not a failure to look at the telemetry. It is his certainty that he already knows what it means."
           }
         },
         {
@@ -2644,7 +2644,7 @@
       "order": 23,
       "title": {
         "es": "C3a — La bóveda interior cerrada",
-        "en": "C3a — The inner vault locked"
+        "en": "C3a — The vault secured and flight controls cut"
       },
       "body": [
         {
@@ -2665,7 +2665,7 @@
           "type": "paragraph",
           "text": {
             "es": "Abandona el compartimiento exterior y regresa hacia la bandeja del conducto.",
-            "en": "He leaves the outer bay and heads back toward the shaft tray."
+            "en": "At the adjacent local flight console, Harlan physically disconnects the bridge command inputs and remote emergency cutoff. The quick intervention leaves the stored automatic plan, normal return telemetry, scheduled final cutoff and independent aft control intact. He then leaves the outer bay and heads back toward the shaft tray; Sorell’s slower descent through the central shaft still gives him time to restore communications and cameras before she can report what she finds."
           }
         }
       ],
@@ -2676,7 +2676,7 @@
           "relation": "enables",
           "explanation": {
             "es": "Después del asesinato, Harlan puede asegurar la bomba con una cerradura local y comenzar a construir su coartada.",
-            "en": "After the murder, Harlan can secure the bomb behind a local lock and begin constructing his alibi."
+          "en": "After the murder, Zao can no longer interrupt him while he secures the bomb, prevents the warned bridge from aborting the later approach, and begins constructing his alibi."
           }
         }
       ]
@@ -2727,7 +2727,7 @@
           "relation": "prevents",
           "explanation": {
             "es": "El cruce programado se completa mientras el sabotaje permanece oculto y elimina la posibilidad de un regreso inmediato.",
-            "en": "The scheduled crossing completes while the sabotage remains hidden and removes the possibility of an immediate return."
+          "en": "The scheduled crossing completes while Harlan’s murder and both physical interventions remain hidden. It removes an immediate return through the throat but does not itself prevent the bridge from changing course on the far side; the newly severed flight-command path does that."
           }
         }
       ]

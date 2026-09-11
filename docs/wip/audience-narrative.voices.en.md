@@ -1,6 +1,6 @@
 # Light Delay — audience narrative TTS (English)
 
-Revision 18 (from the master outline). Chaptered short story for listeners; no production frontmatter.
+Revision 19 (from the master outline). Chaptered short story for listeners; no production frontmatter.
 Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Spoken name: Soréll; tag and editorial spelling stay ASCII [Sorell]. Dialogue from attributed blockquotes only.
 Cast/ref: `docs/wip/qwen3-tts-cast.json`.
@@ -9,7 +9,7 @@ Generate: `python scripts/generate-dual-outline-audio.py --lang en --script docs
 ---
 
 [Narrator]
-[PAUSE 1200] Light Delay. Revision 18.
+[PAUSE 1200] Light Delay. Revision 19.
 
 [Narrator]
 Prologue.
@@ -267,10 +267,7 @@ Chapter 4.
 [PAUSE 1200] Behind the Door
 
 [Narrator]
-Before Zao reaches the bay, Harlan alters its flight controls so the bridge can no longer replace or cut the automatic plan. He checks the telemetry: everything still looks normal forward. He leaves local aft control operational and enters the inner vault for his final check.
-
-[Narrator]
-Weightless and sixty-five metres aft of the bridge, Zao meets him leaving that vault. He appears to be finishing an assigned inspection and has not quite secured the door behind him.
+Weightless and sixty-five metres aft of the bridge, Zao meets Harlan leaving the inner vault. He appears to be finishing an assigned inspection and has not quite secured the door behind him.
 
 [Narrator]
 His look lasts a fraction too long. He offers no explanation, and she does not accuse a man on the evidence of an expression. They pass without a word.
@@ -414,7 +411,7 @@ He assumes her accusation is travelling home. It may condemn him in history, but
 That prospect produces something more complicated than fear. If the attack succeeds, the accusation may also preserve his motive. He imagines a future in which people curse him first and later decide that he acted as their shield. He expects no rescue and no living gratitude—only a posthumous verdict.
 
 [Narrator]
-His remaining work is smaller and uglier: kill Zao, secure the vault, leave before the approaching crew member arrives, and restore the cameras in time to record that person beside the body.
+The bridge heard Zao report sabotage before he cut her off. After the committed throat crossing, Voss may try to interrupt the automatic approach. His remaining work is smaller and uglier: kill Zao, secure the vault, sever the bridge's flight-command path, leave before the approaching crew member arrives, and restore the cameras in time to record that person beside the body.
 
 [Narrator]
 His mistake is not failing to read the telemetry. It is believing he already knows what it means.
@@ -433,6 +430,9 @@ There is a sound.
 
 [Narrator]
 Zao's body remains in the accessible outer bay. Harlan closes the inner shielding vault and binds its isolated local lock to his wrist device. The door has never been on the ship's network. It now reports itself as inaccessible even to the captain and leaves no central access record.
+
+[Narrator]
+At the adjacent local flight console, Harlan physically disconnects the bridge command inputs and remote emergency cutoff. It takes seconds. The automatic plan, normal return telemetry, scheduled final cutoff and independent aft control remain intact. Then he leaves for the service tray. Soréll's slower descent through the central shaft still gives him enough time to restore communications and cameras before she can report what she finds.
 
 [Narrator]
 Ahead of the ship, the throat opens. The Ardor crosses. The aperture closes behind her and returns to its patient one-way pilot state.

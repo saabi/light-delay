@@ -53,8 +53,8 @@ describe('outlines (optional)', () => {
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
 		expect(source.outline.provenance?.importedFrom?.[0]?.revision).toBe('13');
-		expect(source.outline.revision).toBe(18);
-		expect(source.outline.version).toBe('0.7.0-wip');
+		expect(source.outline.revision).toBe(19);
+		expect(source.outline.version).toBe('0.8.0-wip');
 		expect(source.outline.localization).toEqual({
 			sourceLanguage: 'en',
 			translations: { es: { status: 'needs_revision', lastSyncedRevision: 17 } }
@@ -85,6 +85,8 @@ describe('outlines (optional)', () => {
 		expect(gravityList?.type === 'list' ? gravityList.items : []).toHaveLength(4);
 		const c10 = source.steps.find((step) => step.id === 'master:story-c10');
 		const c10b = source.steps.find((step) => step.id === 'master:story-c10b');
+		const b1 = source.steps.find((step) => step.id === 'master:story-b1');
+		const c3a = source.steps.find((step) => step.id === 'master:story-c3a');
 		const d1 = source.steps.find((step) => step.id === 'master:story-d1');
 		const e3 = source.steps.find((step) => step.id === 'master:story-e3');
 		const e5 = source.steps.find((step) => step.id === 'master:story-e5');
@@ -95,6 +97,17 @@ describe('outlines (optional)', () => {
 		expect(c10b?.sectionId).toBe('master:section-d');
 		expect(c10b?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10'); // The flight profile, not investigation, requires the turn.
 		expect(d1?.causalLinks?.[0]?.sourceStepId).toBe('master:story-c10');
+		const englishBody = (step: typeof b1) =>
+			(step?.body ?? [])
+				.flatMap((block) =>
+					block.type === 'list'
+						? block.items.map((item) => (typeof item === 'string' ? item : (item.en ?? '')))
+						: [typeof block.text === 'string' ? block.text : (block.text?.en ?? '')]
+				)
+				.join(' ');
+		expect(englishBody(b1)).not.toContain('disables the bridge command inputs');
+		expect(englishBody(c3a)).toContain('physically disconnects the bridge command inputs');
+		expect(englishBody(c3a)).toContain('independent aft control intact');
 		expect([e3?.order, e5?.order, e4?.order, e6?.order]).toEqual([44, 45, 46, 47]);
 		expect(e5?.causalLinks?.[0]?.sourceStepId).toBe('master:story-e3');
 		expect(e4?.causalLinks?.[0]?.sourceStepId).toBe('master:story-e5');

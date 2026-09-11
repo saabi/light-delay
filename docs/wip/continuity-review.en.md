@@ -1,4 +1,4 @@
-# Continuity review — master, revision 18
+# Continuity review — master, revision 19
 
 Status: English narrative corrections integrated; this is not production authorization. Spanish remains synchronized through revision 17 and is explicitly pending translation.
 Authority: `data/outlines/light-delay-master-narrative.json`. Outline Markdown files
@@ -9,7 +9,7 @@ are exports; audience narratives are adaptations checked against that authority.
 | Finding | Resolution and location |
 | --- | --- |
 | Voss misreads Harlan and Sorell before Sorell speaks | P2: Harlan and Sorell now state their distinct positions first. Voss then visibly flattens both into ordinary doubt and says, “Doubt is part of the job. We go anyway,” giving Zao an observable reason to challenge his reading. |
-| Harlan reaches flight control without established opportunity | B1: his flight-control tampering is placed during the final inspection before Zao meets him. |
+| Flight-control sabotage reveals Harlan before the communications cut | B1/C2/C3a: Harlan leaves flight control intact while undiscovered. After the bridge hears Zao report sabotage and he murders her, he secures the vault and uses the adjacent local console to cut bridge command inputs in seconds before returning to the communications tray. |
 | Sorell proceeds alone without checking the escort order | B4b: she calls Harlan, checks nearby deck entrances, then chooses to continue alone rather than lose more time. Voss later apologizes for failing to confirm the escort, not for making her choose alone. |
 | Evidence and confrontation order obscures what defeats Harlan's forgery claim | E3–E6: Harlan objects, Elin authenticates Zao immediately, the independent evidence converges, and only then does the operational consequence follow. |
 | Charge described as immediately detonatable | F1: Harlan must delay Elin until the existing countdown; the outline no longer grants him an unsupported immediate-detonation control. |
@@ -17,7 +17,7 @@ are exports; audience narratives are adaptations checked against that authority.
 | Investigation starts after twelve hours of investigation | C10/D1: it starts when thrust returns. D2–D2b occur during acceleration; C10b retains its ID and moves into D before D3. |
 | Chase consumes an unexplained margin | E2/E6: Voss attempts an abort on learning the threat; eight minutes of command diagnosis precede the two-minute chase. |
 | Elin never tests their own trajectory | D5–D7: she reconstructs the vector late, immediately tests moving targets, and reception confirms her ongoing check. Harlan returns before playback. |
-| Voss never tries to protect the station | E2/E6: he tries to cancel the profile; Harlan physically disabled remote commands during his final inspection. Independent local control remains aft. |
+| Voss never tries to protect the station | E2/E6: he tries to cancel the profile; Harlan physically disabled remote commands after murdering Zao, once her partial warning made a later abort foreseeable. Independent local control remains aft. |
 | Nobody asks about the lock | D3: Harlan blames Sorell for changing access; investigators record an unproved claim. The lock does not identify the local keyholder. |
 | Elin knows things absent from the message | B7/E2: independent power and protection against interruption explicitly belong to the warning. |
 | Time intervention lacks preparation | Setting/D3/F5: established fictional service-time function and diagnostic equipment. Elin substitutes the time accepted by the controller, not just the visible readout. |

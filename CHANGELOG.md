@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-11 — Master revision 19: flight sabotage moved after the murder
+
+- Harlan no longer alters flight controls before crossing Zao; their encounter remains ambiguous and the communications cut remains the first explicit reveal of his guilt.
+- After murdering Zao and securing the vault, he quickly disconnects bridge flight-command inputs at the adjacent local console because her partial warning makes a later abort foreseeable.
+- English master and audience text advanced to revision 19. Spanish remains synchronized through revision 17, and the existing English audience audio remains a revision-18 artifact pending regeneration.
+
 ## 2026-09-11 — Dual de audiencia EN regenerado (rev. 18)
 
 - Regenerado `light-delay-audience-dual-en.mp3` (~48.7 min) y chunks

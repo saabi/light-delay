@@ -208,7 +208,7 @@ Multi-speaker TTS outlines (rev. 17, 38 attributed quotations from the master):
 - ES: `docs/wip/outiline-for-kokoro-tts.voices.es.md`
 - Rebuild from MD exports: `python scripts/build-tts-voices-outlines.py`
 
-Audience short story (12 sections, no frontmatter; **37 audible English dialogues** at master revision 18; Spanish remains at 36/revision 17):
+Audience short story (12 sections, no frontmatter; **37 audible English dialogues** at master revision 19; Spanish remains at 36/revision 17):
 
 - Prose: `docs/wip/audience-narrative.en.md` / `.es.md`
 - TTS: `docs/wip/audience-narrative.voices.en.md` / `.voices.es.md`
@@ -221,7 +221,8 @@ Audience short story (12 sections, no frontmatter; **37 audible English dialogue
 
 The Spanish audience dual and its 275 chunks were generated from revision 15.
 The English audience dual was regenerated for revision 18 (287 cues, ~48.7 min).
-Spanish audio remains stale and is retained only for reference and salvage until regenerated.
+Master revision 19 changes the English narration, so both audio artifacts are now stale and
+retained only for reference and salvage until regenerated.
 
 Every audible quotation has the same stable `audience-dialogue-id` comment in
 both source files. That ID—not its array position or translated wording—selects
@@ -286,8 +287,8 @@ With artificial intelligence assistance, Sorell has spent months studying the se
 | ES / EN pipelines | `scripts/pipeline-*-native-l1-v2-qwen.py` |
 | Dual outline | `scripts/generate-dual-outline-audio.py` |
 
-Revision 18 makes English the source and corrects the Prologue reaction order and related
-causality. The English audience dual was regenerated on 2026-09-11
-(`light-delay-audience-dual-en.mp3`, 287 cues, ~48.7 min). The Spanish voice script remains
-revision 17 and its audio remains prose revision 15. Dialogue IDs are preserved; changed
-text or direction must invalidate dependent takes.
+Revision 19 moves the flight-control sabotage after Zao's murder so the communications cut
+remains Harlan's first unequivocal reveal. Its English voice script is current, but the existing
+English audience audio remains revision 18 (`light-delay-audience-dual-en.mp3`, 287 cues,
+~48.7 min). The Spanish voice script remains revision 17 and its audio remains prose revision 15.
+Dialogue IDs are preserved; changed narration or direction must invalidate dependent takes.

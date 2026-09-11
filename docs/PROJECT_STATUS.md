@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-11 — Master revision 19: post-murder flight sabotage
+
+- Harlan leaves flight control untouched before meeting Zao, preserving the later communications cut as the first unequivocal reveal of his guilt.
+- Once Zao’s partial warning makes a later abort foreseeable, he murders her, secures the vault, cuts the bridge flight-command inputs at the adjacent local console, and then restores communications and cameras.
+- English outline, audience narrative, generated outline export, and English TTS voice text are revision 19. Spanish remains at revision 17 and is not modified in this pass.
+- The existing English audience audio and its 287-cue catalog remain revision 18 and are now stale; no media was regenerated.
+
 ## 2026-09-11 — Dual de audiencia EN (master rev. 18)
 
 - Generado `E:/Models/Qwen3-TTS/output/light-delay-audience-dual-en.mp3` (~48.7 min)

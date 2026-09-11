@@ -2,7 +2,7 @@
 
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 18.
+Working draft, English, revision 19.
 
 **Editorial status:** current narrative source of truth; still WIP.
 
@@ -120,7 +120,7 @@ The outer reactor service bay is an accessible engineering workspace. It contain
 
 The same bay contains an independent local control for interrupting the flight profile, together with a drawer of diagnostic instruments and time-reference equipment for scientific work. Autonomous guidance executes the approved plan; bridge controls can normally replace or interrupt it. Return telemetry is independent of those command inputs.
 
-During his final aft inspection, after departure checks and immediately before encountering Zao, Harlan physically disables the bridge command inputs, including its remote emergency cutoff. He leaves the stored plan, telemetry and the bay’s local control intact. Normal flight requests no change and does not expose the failure; an abort attempt does. He neither erases logs nor alters propulsion measurements. This intervention is separate from the later communications disconnection, and reconnecting those trunks does not reverse it.
+After murdering Zao and securing the inner vault, Harlan uses the adjacent local flight console to physically disable the bridge command inputs, including its remote emergency cutoff. He leaves the stored plan, telemetry and the bay’s local control intact. He had kept those inputs operational beforehand to avoid creating an anomaly while his plan remained undiscovered; Zao’s warning makes a later abort attempt foreseeable and forces the additional sabotage. The intervention takes only seconds, creates no digital command record, neither erases logs nor alters propulsion measurements, and remains separate from the communications disconnection. Reconnecting the communications trunks does not reverse it.
 
 The reactor shielding assembly protects both crew spaces and the fusion-fuel tankage from reactor radiation. Recessed inside this combined shielding zone is an inner shielding vault, originally used to isolate hazardous research equipment. Its shielding masks the bomb’s weak neutron signature from ordinary ship sensors.
 
@@ -383,7 +383,7 @@ No active fuel alarm is present. Zao does not treat that as proof that no fault 
 
 ### B1 — The crossing
 
-Before Zao reaches the bay, Harlan alters its flight controls so the bridge can no longer replace or cut the automatic plan while its displays continue receiving normal telemetry. He verifies that the bridge still sees a healthy system, leaves local aft control operational, and then enters the inner vault for his final check. The audience sees the apparently routine panel work but not yet its effect; Voss will discover that when he attempts to abort.
+Before Zao reaches the bay, Harlan completes his final inspection inside the inner vault. He does not touch the outer-bay flight controls. To an observer, he appears to be finishing only his assigned inspection; nothing shown here confirms hostile action.
 
 In microgravity, Zao encounters Harlan exiting the inner shielding vault into the outer bay. He has been making a final check and has left the vault incompletely secured.
 
@@ -533,7 +533,7 @@ Harlan assumes she sent her sabotage warning toward Earth. Whatever she said may
 
 That possibility produces more than fear. If the detonation succeeds, a surviving accusation may also give Earth enough information to reconstruct his purpose. He imagines that people who first condemn him could eventually decide that he saved them. He does not expect present gratitude or rescue; he hopes for a posthumous verdict.
 
-He prioritizes killing Zao, securing the inner vault, leaving before the approaching crew member arrives, and restoring the cameras in time to record that person with the body. His mistake is not a failure to look at the telemetry. It is his certainty that he already knows what it means.
+The bridge heard Zao report sabotage before he cut her off. Once the committed throat crossing is complete, Voss may therefore try to interrupt the automatic approach. Harlan prioritizes killing Zao, securing the inner vault, disabling the bridge’s flight-command path as a new contingency, leaving before the approaching crew member arrives, and restoring the cameras in time to record that person with the body. His mistake is not a failure to look at the telemetry. It is his certainty that he already knows what it means.
 
 He sighs before closing the distance.
 
@@ -545,13 +545,13 @@ The image cuts to black before impact.
 
 An audible thump.
 
-### C3a — The inner vault locked
+### C3a — The vault secured and flight controls cut
 
 Zao’s body remains in the accessible outer bay.
 
 Harlan closes the inner shielding vault containing the bomb and keys its local lock to his wrist device. From this point onward, the inner door reports itself as inaccessible.
 
-He leaves the outer bay and heads back toward the shaft tray.
+At the adjacent local flight console, Harlan physically disconnects the bridge command inputs and remote emergency cutoff. The quick intervention leaves the stored automatic plan, normal return telemetry, scheduled final cutoff and independent aft control intact. He then leaves the outer bay and heads back toward the shaft tray; Sorell’s slower descent through the central shaft still gives him time to restore communications and cameras before she can report what she finds.
 
 ### C3b — The throat crossing
 

@@ -32,7 +32,7 @@
       },
       "description": {
         "es": "287 cues del dual de audiencia en inglés regenerado desde master rev. 18 (~48.7 min).",
-        "en": "287 cues from the English audience dual regenerated from master revision 18 (~48.7 min)."
+        "en": "287 cues from the English audience dual regenerated from master revision 18 (~48.7 min); stale against master revision 19."
       },
       "sourceOutlineId": "outline:light-delay-master-narrative",
       "sourceOutlineRevision": 18,
