@@ -18824,13 +18824,14 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Exterior: the Celestial Ardor, small against the Velari wormhole mouth's distributed field of black nodes kilometres apart, threads the 150-200 m aperture as it crosses; the far mouth closes silently behind it, nodes drifting back into darkness. Setting: the Velari wormhole mouth — a distributed field of black nodes kilometres apart, never forming a visible ring, its 150-200 m aperture existing only during the energy pulse. Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis. No gravity reference (exterior shot). Frame implies a tracking move, establishing geography and screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra characters, cartoonish exaggeration, visible ring-shaped wormhole (the mouth is a distributed node field, never a ring)",
+        "prompt": "Grounded cinematic hard-science-fiction exterior storyboard still, photorealistic VFX concept art, 16:9, extreme long shot with restrained tracking composition. The Celestial Ardor is small in frame as it threads the active Velari throat aperture. Use the supplied multi-angle Celestial Ardor reference as authoritative for static ship geometry; do not add solar sails, wings, fantasy fins, station rings, or docking structures. Surround it with a distributed field of black Velari nodes kilometres apart. The temporary 150–200 metre throat aperture is open only during the energy pulse, with subtle volumetric distortion between the nodes; it is not a circular mechanical ring. The far mouth begins closing silently behind the ship. No characters, no text or watermark.",
+        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra characters, solar sails, wings, fantasy fins, station rings, docking structures, obsolete ship design, cartoonish exaggeration, visible mechanical ring-shaped wormhole, watermark",
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z",
         "referenceAssetIds": [
-          "asset:location-velari-wormhole-mouth-sheet"
+          "asset:location-velari-wormhole-mouth-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
         ]
       },
       "imageAssetId": "asset:festival-master-storyboard-040b",

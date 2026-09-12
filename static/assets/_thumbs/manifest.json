@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0.0",
-	"generatedAt": "2026-09-12T17:38:04.781Z",
+	"generatedAt": "2026-09-12T19:11:51.712Z",
 	"entries": {
 		"characters/zao/model-sheet.png.webp": {
 			"source": "/assets/characters/zao/model-sheet.png",
@@ -1615,9 +1615,9 @@
 		"animatic/frames/festival-master/shot-plan-040b.png.webp": {
 			"source": "/assets/animatic/frames/festival-master/shot-plan-040b.png",
 			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-040b.png.webp",
-			"mtimeMs": 1789200975294.7754,
-			"size": 2578228,
-			"hash": "6888da4397eff100"
+			"mtimeMs": 1789240202724.5332,
+			"size": 2408450,
+			"hash": "492724286a5f8d38"
 		},
 		"animatic/frames/festival-master/shot-plan-081.png.webp": {
 			"source": "/assets/animatic/frames/festival-master/shot-plan-081.png",

@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-12 — Regenerated Festival-master shot-plan-040b
+
+- Replaced `shot-plan-040b`, whose previous still used the obsolete Ardor sail/fin silhouette.
+- The replacement uses the clean multi-angle Ardor sheet and keeps the active throat as a transient distortion between distributed Velari nodes; no station rings or characters are present.
+- Updated take-level references, prompt, production plan, and thumbnail.
+
 ## 2026-09-12 — Typecheck CI desbloqueado
 
 - Corregidos 13 errores de `svelte-check` en helpers/specs del tráiler master y

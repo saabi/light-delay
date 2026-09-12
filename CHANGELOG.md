@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-12 — Regenerated Festival-master shot-plan-040b
+
+- Replaced the crossing still for `festival-master:shot-plan-040b`, which showed the superseded Ardor sail/fin design.
+- The new frame uses `asset:vehicle-celestial-ardor-model-sheet-v2` and the Velari throat sheet, with the Ardor small against the active distributed-node aperture and no station rings or extra characters.
+- Updated the take prompt, generation plan, thumbnail, and reference metadata.
+
 ## 2026-09-12 — Fix svelte-check errors blocking Pages deploy
 
 - Tightened JSDoc/types in trailer↔festival dialogue-link helpers and related specs
