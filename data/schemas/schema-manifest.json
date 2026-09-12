@@ -18,5 +18,6 @@
     { "schema": "provider-capabilities.schema.json", "files": ["production/provider-capabilities.json"] },
     { "schema": "continuity-ledger.schema.json", "directories": ["continuity"] },
     { "schema": "generation-plan.schema.json", "directories": ["production/plans"] }
+    ,{ "schema": "asset-generation-manifest.schema.json", "files": ["production/asset-generation-manifest.json"] }
   ]
 }

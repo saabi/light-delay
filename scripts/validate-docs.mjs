@@ -57,14 +57,14 @@ if (main.takes.length !== 128)
 	errors.push(`main script: expected 128 takes, got ${main.takes.length}`);
 if (animaticAssets !== 104)
 	errors.push(`assets: expected 104 animatic images (100 legacy + 3 title cards + scene-05 shot 7), got ${animaticAssets}`);
-if (referenceAssets !== 38)
-	errors.push(`assets: expected 38 reference images, got ${referenceAssets}`);
+if (referenceAssets !== 43)
+	errors.push(`assets: expected 43 reference images, got ${referenceAssets}`);
 if (placeholders !== 1) errors.push(`assets: expected 1 animatic placeholder, got ${placeholders}`);
-if (assets.length !== 143) errors.push(`assets: expected current total 143, got ${assets.length}`);
-if (withoutSource !== 138)
-	errors.push(`assets: expected 138 records without source, got ${withoutSource}`);
-if (withExactModel !== 0)
-	errors.push(`assets: expected exact model metadata to remain unknown, got ${withExactModel}`);
+if (assets.length !== 477) errors.push(`assets: expected current total 477, got ${assets.length}`);
+if (withoutSource !== 358)
+	errors.push(`assets: expected 358 records without source, got ${withoutSource}`);
+if (withExactModel !== 114)
+	errors.push(`assets: expected 114 records with exact model metadata, got ${withExactModel}`);
 
 requireText('AGENTS.md', 'animatic deprecado **128** tomas');
 requireText('README.md', 'animatic anterior de 128 tomas');
@@ -73,8 +73,8 @@ requireText('docs/PROJECT_STATUS.md', 'es ahora la fuente de verdad narrativa');
 requireText('AGENTS.md', 'El inglés es la fuente de verdad');
 requireText('README.md', 'El inglés es la fuente editorial vigente');
 requireText('docs/CANON_DECISIONS.md', 'DEPRECADO — CONTINUIDAD ANTERIOR');
-requireText('docs/ASSET_PROVENANCE.md', '**143 imágenes registradas**');
-requireText('docs/ASSET_PROVENANCE.md', '38 imágenes de referencia');
+requireText('docs/ASSET_PROVENANCE.md', '**477 assets registrados**');
+requireText('docs/ASSET_PROVENANCE.md', '43 imágenes de referencia');
 requireText('docs/PROJECT_STATUS.md', '**128** tomas y ~30:50,5');
 requireText(
 	'docs/SCRIPT_ANIMATIC_SYNC.md',

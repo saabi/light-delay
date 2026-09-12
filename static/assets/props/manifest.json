@@ -35,6 +35,38 @@
       "role": "Contenido limpio y pasivo",
       "note": "Cartucho óptico sellado de sólo lectura: puede almacenar lenguaje diplomático, pero no ejecutar código. Es la tercera pieza del clímax.",
       "file": "read-only-greeting-medium/prop-sheet.png"
+    },
+    {
+      "slug": "proxima-geophysical-impulse-package",
+      "name": "Proxima Geophysical Impulse Package",
+      "role": "Master-derived concealed threat",
+      "note": "Armored tonne-scale package with protected controller and scientific service input.",
+      "file": "proxima-geophysical-impulse-package/prop-sheet.png",
+      "generator": "OpenAI GPT-Image-2"
+    },
+    {
+      "slug": "harlan-wrist-device",
+      "name": "Harlan Wrist Device",
+      "role": "Jammer and vault-lock control",
+      "note": "Compact physical wrist unit with guarded JAMMER and VAULT LOCK controls.",
+      "file": "harlan-wrist-device/prop-sheet.png",
+      "generator": "OpenAI GPT-Image-2"
+    },
+    {
+      "slug": "time-reference-diagnostic-unit",
+      "name": "Time-Reference Diagnostic Unit",
+      "role": "Scientific timing instrument",
+      "note": "Portable diagnostic unit that must remain visually identical across its two story appearances.",
+      "file": "time-reference-diagnostic-unit/prop-sheet.png",
+      "generator": "OpenAI GPT-Image-2"
+    },
+    {
+      "slug": "wired-comms-deck-patch-panel",
+      "name": "Wired Communications Distributor",
+      "role": "Physical COM A / COM B junction",
+      "note": "Passive hinged board with deck-zone couplers that can be unplugged by hand.",
+      "file": "wired-comms-deck-patch-panel/prop-sheet.png",
+      "generator": "OpenAI GPT-Image-2"
     }
   ]
 }

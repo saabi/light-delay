@@ -298,21 +298,22 @@ export type GenerationPlanFile24 = 'missing' | 'planned' | 'generated' | 'accept
 export type GenerationPlanFile25 = string;
 export type GenerationPlanFile28 = 'image' | 'video' | 'audio';
 export type GenerationPlanFile29 = string;
-export type GenerationPlanFile30 = boolean;
-export type GenerationPlanFile31 = string;
+export type GenerationPlanFile30 = string;
+export type GenerationPlanFile31 = boolean;
+export type GenerationPlanFile32 = string;
 export type GenerationPlanFile26 = GenerationPlanFile27[];
 /**
  * @minItems 1
  */
-export type GenerationPlanFile32 = [GenerationPlanFile33, ...GenerationPlanFile33[]];
-export type GenerationPlanFile34 = string;
-export type GenerationPlanFile35 = number;
+export type GenerationPlanFile33 = [GenerationPlanFile34, ...GenerationPlanFile34[]];
+export type GenerationPlanFile35 = string;
 export type GenerationPlanFile36 = number;
-export type GenerationPlanFile37 = 'none' | 'accepted_video_and_last_frame' | 'last_frame_as_next_first';
-export type GenerationPlanFile38 = 'blocked' | 'draft' | 'ready' | 'frozen';
-export type GenerationPlanFile39 = GenerationPlanFile40 | GenerationPlanFile41;
-export type GenerationPlanFile40 = string;
-export type GenerationPlanFile41 = null;
+export type GenerationPlanFile37 = number;
+export type GenerationPlanFile38 = 'none' | 'accepted_video_and_last_frame' | 'last_frame_as_next_first';
+export type GenerationPlanFile39 = 'blocked' | 'draft' | 'ready' | 'frozen';
+export type GenerationPlanFile40 = GenerationPlanFile41 | GenerationPlanFile42;
+export type GenerationPlanFile41 = string;
+export type GenerationPlanFile42 = null;
 export type GenerationPlanFile13 = GenerationPlanFile14[];
 
 export interface GenerationPlanFile {
@@ -339,7 +340,7 @@ export interface GenerationPlanFile14 {
 	diegeticText: GenerationPlanFile19;
 	artifacts: GenerationPlanFile21;
 	requiredReferences: GenerationPlanFile26;
-	segments: GenerationPlanFile32;
+	segments: GenerationPlanFile33;
 }
 export interface GenerationPlanFile21 {
 	animaticStill: GenerationPlanFile22;
@@ -355,16 +356,17 @@ export interface GenerationPlanFile22 {
 export interface GenerationPlanFile27 {
 	kind: GenerationPlanFile28;
 	id: GenerationPlanFile29;
-	required: GenerationPlanFile30;
-	role?: GenerationPlanFile31;
+	path?: GenerationPlanFile30;
+	required: GenerationPlanFile31;
+	role?: GenerationPlanFile32;
 }
-export interface GenerationPlanFile33 {
-	id: GenerationPlanFile34;
-	startMs: GenerationPlanFile35;
-	endMs: GenerationPlanFile36;
-	continuation: GenerationPlanFile37;
-	promptStatus: GenerationPlanFile38;
-	compiledPrompt: GenerationPlanFile39;
+export interface GenerationPlanFile34 {
+	id: GenerationPlanFile35;
+	startMs: GenerationPlanFile36;
+	endMs: GenerationPlanFile37;
+	continuation: GenerationPlanFile38;
+	promptStatus: GenerationPlanFile39;
+	compiledPrompt: GenerationPlanFile40;
 }
 
 export type DialoguePerformanceFile1 = string;
@@ -412,7 +414,7 @@ export type AudioOutputsFile1 = '1.0.0';
  */
 export type AudioOutputsFile2 = [AudioOutputsFile3, ...AudioOutputsFile3[]];
 export type AudioOutputsFile4 = string;
-export type AudioOutputsFile5 = 'audience' | 'outline' | 'cut-dialogue' | 'other';
+export type AudioOutputsFile5 = 'audience' | 'outline' | 'cut-dialogue' | 'animatic' | 'other';
 export type AudioOutputsFile6 = 'es' | 'en';
 export type AudioOutputsFile8 = string;
 export type AudioOutputsFile9 = string;

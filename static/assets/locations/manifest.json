@@ -2,32 +2,19 @@
   "project": "Light Delay",
   "asset_type": "location_concept_sheets",
   "style": "grounded cinematic hard science fiction",
-  "generated": "2026-08-31",
+  "generated": "2026-09-12",
   "dimensions": [
     1536,
     1024
   ],
   "items": [
     {
-      "slug": "proxima-station",
-      "name": "Estación Proxima",
-      "role": "Exterior y silueta orbital",
-      "note": "Infraestructura científica humana ampliada por décadas: módulos blancos antiguos, adiciones grafito y dos hábitats cilíndricos. Júpiter aparece lejano; no es una estación construida para el portal.",
-      "file": "proxima-station/concept-sheet.png"
-    },
-    {
       "slug": "proxima-dock",
       "name": "Muelle axial de Proxima",
       "role": "Partida del Celestial Ardor",
       "note": "Puerto industrial estratificado y desgastado. El Ardor ya estaba destinado allí y recibe el retrofit diplomático contra reloj.",
-      "file": "proxima-dock/concept-sheet.png"
-    },
-    {
-      "slug": "celestial-ardor-bridge",
-      "name": "Puente del Celestial Ardor",
-      "role": "Centro de mando",
-      "note": "Puente compacto para seis puestos, iluminación cian funcional, superficies reparables y encuadres que sostienen tensión sin grandilocuencia.",
-      "file": "celestial-ardor-bridge/concept-sheet.png"
+      "file": "proxima-dock/concept-sheet-v3.png",
+      "generator": "OpenAI GPT-Image-2"
     },
     {
       "slug": "celestial-ardor-bridge-realistic-reference",
@@ -47,7 +34,40 @@
       "name": "Ingeniería del Celestial Ardor",
       "role": "Diagnóstico y cuarentena",
       "note": "Volumen axial denso, tuberías expuestas y accesos físicos. La nave se entiende como máquina mantenible, no como interior abstracto.",
-      "file": "celestial-ardor-engineering/concept-sheet.png"
+      "file": "celestial-ardor-engineering/concept-sheet-v2.png",
+      "generator": "OpenAI GPT-Image-2"
+    },
+    {
+      "slug": "celestial-ardor-reactor-service-bay",
+      "name": "Outer Reactor Service Bay",
+      "role": "Optical array and flight-control service workspace",
+      "note": "Master-derived maintainable reactor-side workspace with local optical, flight-interrupt, and diagnostic controls.",
+      "file": "celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
+      "generator": "OpenAI GPT-Image-2"
+    },
+    {
+      "slug": "celestial-ardor-inner-shielding-vault",
+      "name": "Inner Shielding Vault",
+      "role": "Isolated radiation-safety enclosure",
+      "note": "Master-derived shielded vault with an off-network local lock and empty equipment bay.",
+      "file": "celestial-ardor-inner-shielding-vault/concept-sheet.png",
+      "generator": "OpenAI GPT-Image-2"
+    },
+    {
+      "slug": "celestial-ardor-central-access",
+      "name": "Central Access Cylinder",
+      "role": "Ordinary microgravity crew route",
+      "note": "Master-derived axial transit cylinder with continuous handrails and multi-deck landings.",
+      "file": "celestial-ardor-central-access/concept-sheet-v2.png",
+      "generator": "OpenAI GPT-Image-2"
+    },
+    {
+      "slug": "celestial-ardor-service-cylinder",
+      "name": "Restricted Service Cylinder",
+      "role": "Ballistic service route and communications junction",
+      "note": "Master-derived direct service tube with maintenance grips, bridge hatch, and physical COM distributor.",
+      "file": "celestial-ardor-service-cylinder/concept-sheet-v3.png",
+      "generator": "OpenAI GPT-Image-2"
     },
     {
       "slug": "diplomatic-core-room",

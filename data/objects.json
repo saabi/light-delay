@@ -51,7 +51,7 @@
         "es": "Harlan corta y restaura el respaldo cableado de la cubierta para aislar a Zao",
         "en": "Harlan cuts and restores a deck's wired backup to isolate Zao"
       },
-      "referenceAssetIds": []
+      "referenceAssetIds": ["asset:object-wired-comms-deck-patch-panel-sheet"]
     },
     {
       "id": "object:proxima-geophysical-impulse-package",
@@ -68,7 +68,7 @@
         "en": "The concealed threat Zao discovers; delayed rather than disarmed through its own diagnostic input."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
-      "referenceAssetIds": [],
+      "referenceAssetIds": ["asset:object-proxima-geophysical-impulse-package-sheet"],
       "notes": [
         {
           "id": "note:proxima-geophysical-impulse-package-visual-reference",
@@ -97,7 +97,7 @@
         "en": "Harlan's concealed means of isolating Zao and controlling vault access; Okoye must recover it."
       },
       "ownerCharacterId": "character:harlan",
-      "referenceAssetIds": [],
+      "referenceAssetIds": ["asset:object-harlan-wrist-device-sheet"],
       "notes": [
         {
           "id": "note:harlan-wrist-device-visual-reference",
@@ -127,7 +127,7 @@
       },
       "ownerCharacterId": "character:rao",
       "locationId": "location:celestial-ardor-reactor-service-bay",
-      "referenceAssetIds": [],
+      "referenceAssetIds": ["asset:object-time-reference-diagnostic-unit-sheet"],
       "notes": [
         {
           "id": "note:time-reference-diagnostic-unit-visual-reference",

@@ -22,7 +22,9 @@ describe('public structured translations (inline LocalizedString)', () => {
 			'The signature looks forged. The real signature points to—'
 		);
 		expect(dialogue.content.variants.en?.status).toBe('draft');
-		expect(dialogue.content.variants.en?.audioAssetId).toBeUndefined();
+		expect(dialogue.content.variants.en?.audioAssetId).toMatch(
+			/^asset:dialogue-light-delay-main-short-en-/
+		);
 		expect(sourceDialogue?.type).toBe('dialogue');
 		if (sourceDialogue?.type !== 'dialogue') throw new Error('source dialogue fixture not found');
 		expect(sourceDialogue.content.variants.en?.spokenText).toBe(

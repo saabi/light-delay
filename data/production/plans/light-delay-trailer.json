@@ -40,7 +40,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-proxima-dock-sheet",
+          "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-a-01:segment-01",
@@ -79,7 +87,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-proxima-dock-sheet",
+          "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-a-02:segment-01",
@@ -118,7 +134,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-b-01:segment-01",
@@ -157,7 +181,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-b-02:segment-01",
@@ -197,7 +229,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-b-03:segment-01",
@@ -237,7 +277,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-c-01:segment-01",
@@ -278,7 +326,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-c-02:segment-01",
@@ -318,7 +374,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-c-03:segment-01",
@@ -358,7 +422,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-d-01:segment-01",
@@ -399,7 +471,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-d-02:segment-01",
@@ -438,7 +518,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-d-03:segment-01",
@@ -477,7 +565,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-d-04:segment-01",
@@ -518,7 +614,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-e-01:segment-01",
@@ -557,7 +661,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-e-02:segment-01",
@@ -596,7 +708,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-velari-wormhole-mouth-sheet",
+          "path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-f-01:segment-01",
@@ -635,7 +755,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-velari-wormhole-mouth-sheet",
+          "path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-f-02:segment-01",
@@ -674,7 +802,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-f-03:segment-01",
@@ -714,7 +850,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-f-04:segment-01",
@@ -754,7 +898,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-g-01:segment-01",
@@ -795,7 +947,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-g-02:segment-01",
@@ -834,7 +994,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-g-03:segment-01",
@@ -875,7 +1043,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-g-04:segment-01",
@@ -915,7 +1091,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-h-01:segment-01",
@@ -954,7 +1138,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-h-02:segment-01",
@@ -992,7 +1184,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-h-03:segment-01",
@@ -1032,7 +1232,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-h-04:segment-01",
@@ -1070,7 +1278,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-h-05:segment-01",
@@ -1109,7 +1325,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-i-01:segment-01",
@@ -1147,7 +1371,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-i-02:segment-01",
@@ -1185,7 +1417,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-i-03:segment-01",
@@ -1223,7 +1463,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-i-04:segment-01",
@@ -1261,7 +1509,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-i-05:segment-01",
@@ -1299,7 +1555,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "trailer:shot-i-06:segment-01",

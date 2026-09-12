@@ -14,9 +14,7 @@
       "factionId": "faction:human",
       "referenceAssetIds": [
         "asset:vehicle-celestial-ardor-sheet",
-        "asset:vehicle-celestial-ardor-proportional",
-        "asset:vehicle-celestial-ardor-jupiter",
-        "asset:scale-reference-proxima-ardor"
+        "asset:vehicle-celestial-ardor-jupiter"
       ]
     },
     {
@@ -45,7 +43,9 @@
         "en": "A transparent, personal-scale environmental sphere with no visible propulsion or exhaust. It carries a single Velari envoy between the station and the Ardor for a face-to-face meeting; it must not be confused with the 300–600 m emissary vehicle."
       },
       "factionId": "faction:velari",
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:vehicle-velari-transport-sphere-sheet"
+      ],
       "notes": [
         {
           "id": "note:velari-transport-sphere-visual-reference",

@@ -101,25 +101,25 @@ const ENTRIES = [
 		kind: 'location',
 		slug: 'proxima-station',
 		label: 'Estación Proxima',
-		sourceRel: 'locations/proxima-station/concept-sheet.png'
+		sourceRel: 'locations/proxima-station/proxima-with-ardor-berthed.png'
 	},
 	{
 		kind: 'location',
 		slug: 'proxima-dock',
 		label: 'Muelle axial de Proxima',
-		sourceRel: 'locations/proxima-dock/concept-sheet.png'
+		sourceRel: 'locations/proxima-dock/concept-sheet-v3.png'
 	},
 	{
 		kind: 'location',
 		slug: 'celestial-ardor-bridge',
 		label: 'Puente del Celestial Ardor',
-		sourceRel: 'locations/celestial-ardor-bridge/concept-sheet.png'
+		sourceRel: 'locations/celestial-ardor-bridge/realistic-reference.png'
 	},
 	{
 		kind: 'location',
 		slug: 'celestial-ardor-engineering',
 		label: 'Ingeniería del Celestial Ardor',
-		sourceRel: 'locations/celestial-ardor-engineering/concept-sheet.png'
+		sourceRel: 'locations/celestial-ardor-engineering/concept-sheet-v2.png'
 	},
 	{
 		kind: 'location',
@@ -195,27 +195,15 @@ const ENTRIES = [
 	},
 	{
 		kind: 'brief',
-		slug: 'blender-proxima-with-ardor-berthed',
-		label: 'Proxima con Celestial Ardor atracada (viewport Blender, bloqueo)',
-		sourceRel: 'locations/proxima-station/blender-proxima-with-ardor-berthed.png'
-	},
-	{
-		kind: 'brief',
 		slug: 'celestial-ardor-with-jupiter',
 		label: 'Celestial Ardor con Júpiter (bloqueo 3D)',
 		sourceRel: 'vehicles/celestial-ardor/celestial-ardor-with-jupiter.png'
 	},
 	{
 		kind: 'brief',
-		slug: 'proxima-station-proportional-reference',
-		label: 'Proxima Station — referencia proporcional (diagrama)',
-		sourceRel: 'locations/proxima-station/proportional-reference.png'
-	},
-	{
-		kind: 'brief',
 		slug: 'celestial-ardor-proportional-reference',
 		label: 'Celestial Ardor — referencia proporcional (diagrama)',
-		sourceRel: 'vehicles/celestial-ardor/proportional-reference.png'
+		sourceRel: 'vehicles/celestial-ardor/specs/proportional-reference.png'
 	},
 	{
 		kind: 'brief',

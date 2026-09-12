@@ -69,7 +69,7 @@
     "reference": {
       "type": "object",
       "required": ["kind", "id", "required"],
-      "properties": { "kind": { "enum": ["image", "video", "audio"] }, "id": { "type": "string" }, "required": { "type": "boolean" }, "role": { "type": "string" } },
+      "properties": { "kind": { "enum": ["image", "video", "audio"] }, "id": { "type": "string" }, "path": { "type": "string", "minLength": 1 }, "required": { "type": "boolean" }, "role": { "type": "string" } },
       "additionalProperties": false
     }
   },

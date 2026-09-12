@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/asset-generation-manifest.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "generator", "assets"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "generator": {
+      "type": "object",
+      "required": ["provider", "model", "promptLanguage"],
+      "properties": {
+        "provider": { "const": "OpenAI" },
+        "model": { "const": "gpt-image-2" },
+        "promptLanguage": { "const": "en" }
+      },
+      "additionalProperties": false
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assetId", "entityId", "kind", "status", "outputPath", "dimensions", "prompt", "references"],
+        "properties": {
+          "assetId": { "type": "string" },
+          "entityId": { "type": "string" },
+          "kind": { "enum": ["location", "prop", "vehicle", "display", "animaticStill", "firstFrame", "lastFrame"] },
+          "status": { "enum": ["draft", "approved", "generated", "accepted", "rejected", "review_required", "deprecated"] },
+          "outputPath": { "type": "string", "pattern": "^/assets/" },
+          "dimensions": {
+            "type": "object",
+            "required": ["width", "height"],
+            "properties": { "width": { "type": "integer", "minimum": 1 }, "height": { "type": "integer", "minimum": 1 } },
+            "additionalProperties": false
+          },
+          "styleAnchorAssetIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "references": { "type": "array", "items": { "$ref": "#/$defs/reference" } },
+          "prompt": {
+            "type": "object",
+            "required": ["useCase", "assetType", "primaryRequest", "sceneBackdrop", "subject", "styleMedium", "compositionFraming", "lightingMood", "colorPalette", "materialsTextures", "constraints", "avoid"],
+            "properties": {
+              "useCase": { "const": "stylized-concept" },
+              "assetType": { "type": "string" },
+              "primaryRequest": { "type": "string", "minLength": 1 },
+              "inputImages": { "type": "array", "items": { "type": "string" } },
+              "sceneBackdrop": { "type": "string", "minLength": 1 },
+              "subject": { "type": "string", "minLength": 1 },
+              "styleMedium": { "type": "string", "minLength": 1 },
+              "compositionFraming": { "type": "string", "minLength": 1 },
+              "lightingMood": { "type": "string", "minLength": 1 },
+              "colorPalette": { "type": "string", "minLength": 1 },
+              "materialsTextures": { "type": "string", "minLength": 1 },
+              "textVerbatim": { "type": "string" },
+              "constraints": { "type": "string", "minLength": 1 },
+              "avoid": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          },
+          "review": {
+            "type": "object",
+            "properties": { "notes": { "type": "string" }, "regenerationRequired": { "type": "boolean" } },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "required": ["assetId", "role"],
+      "properties": { "assetId": { "type": "string" }, "role": { "type": "string" } },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

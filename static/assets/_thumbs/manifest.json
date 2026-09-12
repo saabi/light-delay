@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0.0",
-	"generatedAt": "2026-09-05T18:59:32.754Z",
+	"generatedAt": "2026-09-12T03:30:30.026Z",
 	"entries": {
 		"characters/zao/model-sheet.png.webp": {
 			"source": "/assets/characters/zao/model-sheet.png",
@@ -100,27 +100,6 @@
 			"size": 2295604,
 			"hash": "02e2fc7af0a27d36"
 		},
-		"locations/proxima-station/concept-sheet.png.webp": {
-			"source": "/assets/locations/proxima-station/concept-sheet.png",
-			"thumb": "/assets/_thumbs/locations/proxima-station/concept-sheet.png.webp",
-			"mtimeMs": 1787614081000,
-			"size": 2434760,
-			"hash": "cbc8b8c7d4a61f70"
-		},
-		"locations/proxima-station/proportional-reference.png.webp": {
-			"source": "/assets/locations/proxima-station/proportional-reference.png",
-			"thumb": "/assets/_thumbs/locations/proxima-station/proportional-reference.png.webp",
-			"mtimeMs": 1787717790446.5735,
-			"size": 151497,
-			"hash": "12837b4665397ca6"
-		},
-		"locations/proxima-station/proportional-reference.svg.webp": {
-			"source": "/assets/locations/proxima-station/proportional-reference.svg",
-			"thumb": "/assets/_thumbs/locations/proxima-station/proportional-reference.svg.webp",
-			"mtimeMs": 1787717776716.7095,
-			"size": 9820,
-			"hash": "69218287a5f7b038"
-		},
 		"locations/proxima-station/proxima-with-ardor-berthed.png.webp": {
 			"source": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
 			"thumb": "/assets/_thumbs/locations/proxima-station/proxima-with-ardor-berthed.png.webp",
@@ -128,19 +107,12 @@
 			"size": 1913399,
 			"hash": "bbc4e48ac8bf9175"
 		},
-		"locations/proxima-dock/concept-sheet.png.webp": {
-			"source": "/assets/locations/proxima-dock/concept-sheet.png",
-			"thumb": "/assets/_thumbs/locations/proxima-dock/concept-sheet.png.webp",
-			"mtimeMs": 1787614081000,
-			"size": 3050999,
-			"hash": "5b83c0718c85eb62"
-		},
-		"locations/celestial-ardor-bridge/concept-sheet.png.webp": {
-			"source": "/assets/locations/celestial-ardor-bridge/concept-sheet.png",
-			"thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/concept-sheet.png.webp",
-			"mtimeMs": 1787614081000,
-			"size": 2405752,
-			"hash": "7efde35d3714fea4"
+		"locations/proxima-dock/concept-sheet-v3.png.webp": {
+			"source": "/assets/locations/proxima-dock/concept-sheet-v3.png",
+			"thumb": "/assets/_thumbs/locations/proxima-dock/concept-sheet-v3.png.webp",
+			"mtimeMs": 1787953223799.7715,
+			"size": 1913399,
+			"hash": "bbc4e48ac8bf9175"
 		},
 		"locations/celestial-ardor-bridge/realistic-reference.png.webp": {
 			"source": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
@@ -163,12 +135,40 @@
 			"size": 2135450,
 			"hash": "5bbfca7451215386"
 		},
-		"locations/celestial-ardor-engineering/concept-sheet.png.webp": {
-			"source": "/assets/locations/celestial-ardor-engineering/concept-sheet.png",
-			"thumb": "/assets/_thumbs/locations/celestial-ardor-engineering/concept-sheet.png.webp",
-			"mtimeMs": 1787614081000,
-			"size": 2240930,
-			"hash": "de398ea1c5332783"
+		"locations/celestial-ardor-engineering/concept-sheet-v2.png.webp": {
+			"source": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-engineering/concept-sheet-v2.png.webp",
+			"mtimeMs": 1789180956664.585,
+			"size": 2770247,
+			"hash": "c2966d37fd81875a"
+		},
+		"locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png.webp": {
+			"source": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png.webp",
+			"mtimeMs": 1789181097121.7837,
+			"size": 3010915,
+			"hash": "72f931ded8deb904"
+		},
+		"locations/celestial-ardor-inner-shielding-vault/concept-sheet.png.webp": {
+			"source": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png.webp",
+			"mtimeMs": 1789179194950.1726,
+			"size": 2772383,
+			"hash": "96570fc4cdaec98b"
+		},
+		"locations/celestial-ardor-central-access/concept-sheet-v2.png.webp": {
+			"source": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-central-access/concept-sheet-v2.png.webp",
+			"mtimeMs": 1789183057091.106,
+			"size": 2538697,
+			"hash": "f023e3b4f67d1fee"
+		},
+		"locations/celestial-ardor-service-cylinder/concept-sheet-v3.png.webp": {
+			"source": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png.webp",
+			"mtimeMs": 1789183174826.2253,
+			"size": 2667723,
+			"hash": "9945b48b0c5072da"
 		},
 		"locations/diplomatic-core-room/concept-sheet.png.webp": {
 			"source": "/assets/locations/diplomatic-core-room/concept-sheet.png",
@@ -205,6 +205,34 @@
 			"size": 2604757,
 			"hash": "f1b67c6c13dad727"
 		},
+		"props/proxima-geophysical-impulse-package/prop-sheet.png.webp": {
+			"source": "/assets/props/proxima-geophysical-impulse-package/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/proxima-geophysical-impulse-package/prop-sheet.png.webp",
+			"mtimeMs": 1789179396599.745,
+			"size": 2597030,
+			"hash": "5a85106b82af3b1e"
+		},
+		"props/harlan-wrist-device/prop-sheet.png.webp": {
+			"source": "/assets/props/harlan-wrist-device/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/harlan-wrist-device/prop-sheet.png.webp",
+			"mtimeMs": 1789179460502.5647,
+			"size": 2734691,
+			"hash": "eba9b6aa96c53a17"
+		},
+		"props/time-reference-diagnostic-unit/prop-sheet.png.webp": {
+			"source": "/assets/props/time-reference-diagnostic-unit/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/time-reference-diagnostic-unit/prop-sheet.png.webp",
+			"mtimeMs": 1789179522707.1736,
+			"size": 2617045,
+			"hash": "7f0f2da63790104f"
+		},
+		"props/wired-comms-deck-patch-panel/prop-sheet.png.webp": {
+			"source": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/wired-comms-deck-patch-panel/prop-sheet.png.webp",
+			"mtimeMs": 1789179641014.0627,
+			"size": 2542623,
+			"hash": "d37b87ba36522718"
+		},
 		"props/physical-override-relay/prop-sheet.png.webp": {
 			"source": "/assets/props/physical-override-relay/prop-sheet.png",
 			"thumb": "/assets/_thumbs/props/physical-override-relay/prop-sheet.png.webp",
@@ -226,16 +254,16 @@
 			"size": 2461895,
 			"hash": "2e88a19f700914c5"
 		},
-		"vehicles/celestial-ardor/proportional-reference.png.webp": {
-			"source": "/assets/vehicles/celestial-ardor/proportional-reference.png",
-			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/proportional-reference.png.webp",
+		"vehicles/celestial-ardor/specs/proportional-reference.png.webp": {
+			"source": "/assets/vehicles/celestial-ardor/specs/proportional-reference.png",
+			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.png.webp",
 			"mtimeMs": 1787717760328.2092,
 			"size": 119603,
 			"hash": "eb60de51f27cfa83"
 		},
-		"vehicles/celestial-ardor/proportional-reference.svg.webp": {
-			"source": "/assets/vehicles/celestial-ardor/proportional-reference.svg",
-			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/proportional-reference.svg.webp",
+		"vehicles/celestial-ardor/specs/proportional-reference.svg.webp": {
+			"source": "/assets/vehicles/celestial-ardor/specs/proportional-reference.svg",
+			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.svg.webp",
 			"mtimeMs": 1787717751761.1658,
 			"size": 13575,
 			"hash": "ed3423b134d84e93"
@@ -267,6 +295,13 @@
 			"mtimeMs": 1787614780000,
 			"size": 2418213,
 			"hash": "933ec9ecffccc776"
+		},
+		"vehicles/velari-transport-sphere/model-sheet.png.webp": {
+			"source": "/assets/vehicles/velari-transport-sphere/model-sheet.png",
+			"thumb": "/assets/_thumbs/vehicles/velari-transport-sphere/model-sheet.png.webp",
+			"mtimeMs": 1789179698398.205,
+			"size": 2695426,
+			"hash": "7aed06f4832515e4"
 		},
 		"animatic/frames/scene-01/shot-01.png.webp": {
 			"source": "/assets/animatic/frames/scene-01/shot-01.png",

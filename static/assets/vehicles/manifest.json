@@ -21,6 +21,14 @@
       "role": "Interlocutor del encuentro",
       "note": "Vehículo orgánico de 300–600 m sin motores, ventanas ni armas visibles. Comparte piel y bioluminiscencia con la estación, pero conserva silueta propia.",
       "file": "velari-emissary/model-sheet.png"
+    },
+    {
+      "slug": "velari-transport-sphere",
+      "name": "Velari Transport Sphere",
+      "role": "Personal-scale envoy transport",
+      "note": "Master-derived transparent environmental sphere, distinct from the 300–600 m emissary vehicle.",
+      "file": "velari-transport-sphere/model-sheet.png",
+      "generator": "OpenAI GPT-Image-2"
     }
   ]
 }

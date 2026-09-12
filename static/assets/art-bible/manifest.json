@@ -26,8 +26,8 @@
       "role": "Proporciones de entidad",
       "note": "Vive con la localización; listada aquí para descubrimiento.",
       "files": [
-        "../locations/proxima-station/proportional-reference.png",
-        "../locations/proxima-station/proportional-reference.svg"
+        "../locations/proxima-station/specs/proportional-reference.png",
+        "../locations/proxima-station/specs/proportional-reference.svg"
       ]
     },
     {
@@ -36,8 +36,8 @@
       "role": "Proporciones de entidad",
       "note": "Vive con el vehículo; listada aquí para descubrimiento.",
       "files": [
-        "../vehicles/celestial-ardor/proportional-reference.png",
-        "../vehicles/celestial-ardor/proportional-reference.svg"
+        "../vehicles/celestial-ardor/specs/proportional-reference.png",
+        "../vehicles/celestial-ardor/specs/proportional-reference.svg"
       ]
     }
   ],

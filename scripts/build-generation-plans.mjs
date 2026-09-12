@@ -25,7 +25,16 @@ for (const file of entityFiles) {
 		for (const entity of collection) referenceAssets.set(entity.id, entity.referenceAssetIds ?? []);
 	}
 }
-const scripts = ['light-delay-main-short', 'light-delay-festival', 'light-delay-trailer', 'light-delay-long'];
+const assetsById = new Map(
+	JSON.parse(readFileSync(join(ROOT, 'data', 'assets.json'), 'utf8')).assets.map((asset) => [asset.id, asset])
+);
+const makeReference = (kind, id, required, role) => {
+	const asset = assetsById.get(id);
+	if (!asset) throw new Error(`Missing asset ${id} while building generation plan`);
+	return { kind, id, ...(asset.path ? { path: asset.path } : {}), required, role };
+};
+const locationReferences = new Map(referenceAssets);
+const scripts = ['light-delay-main-short', 'light-delay-festival', 'light-delay-trailer', 'light-delay-long', 'light-delay-festival-master'];
 for (const slug of scripts) {
 	const scriptPath = join(ROOT, 'data', 'scripts', `${slug}.json`);
 	// Normalize CRLF so sourceDigest matches Linux CI checkouts (Windows autocrlf).
@@ -33,8 +42,13 @@ for (const slug of scripts) {
 	const file = JSON.parse(source);
 	const shots = file.shots.map((shot) => {
 		const references = [];
+		const offScreen = new Set(shot.offScreenCharacterIds ?? []);
 		for (const ref of shot.visibleRefs ?? []) {
-			for (const assetId of referenceAssets.get(ref.id) ?? []) references.push({ kind: 'image', id: assetId, required: true, role: ref.kind });
+			if (ref.kind === 'character' && offScreen.has(ref.id)) continue;
+			for (const assetId of referenceAssets.get(ref.id) ?? []) references.push(makeReference('image', assetId, true, ref.kind));
+		}
+		for (const locationId of [shot.locationId, ...(shot.secondaryLocationIds ?? [])].filter(Boolean)) {
+			for (const assetId of locationReferences.get(locationId) ?? []) references.push(makeReference('image', assetId, true, 'location'));
 		}
 		const uniqueReferences = [...new Map(references.map((reference) => [reference.id, reference])).values()];
 		const blockers = [];
@@ -45,7 +59,7 @@ for (const slug of scripts) {
 			const profile = voiceProfiles.find((item) => item.characterId === cue.speakerId);
 			const samples = profile?.variants.flatMap((variant) => variant.sampleAssetIds ?? []) ?? [];
 			if (!samples.length) blockers.push(`missing_voice_sample:${cue.speakerId}`);
-			for (const assetId of samples) uniqueReferences.push({ kind: 'audio', id: assetId, required: true, role: 'voice_sample' });
+			for (const assetId of samples) uniqueReferences.push(makeReference('audio', assetId, true, 'voice_sample'));
 		}
 		const hasContext = contextAssignments.some(
 			(assignment) =>

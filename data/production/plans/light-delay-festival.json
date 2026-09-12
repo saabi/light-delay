@@ -43,30 +43,21 @@
         {
           "kind": "image",
           "id": "asset:location-proxima-dock-sheet",
+          "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-sheet",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-proportional",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:scale-reference-proxima-ardor",
+          "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
         }
@@ -111,14 +102,23 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -161,8 +161,16 @@
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -205,8 +213,16 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -289,20 +305,30 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-sorell-sheet",
+          "path": "/assets/characters/sorell/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -345,14 +371,23 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -395,8 +430,23 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-wired-comms-deck-patch-panel-sheet",
+          "path": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
+          "required": true,
+          "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -439,14 +489,23 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -491,14 +550,23 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -542,14 +610,23 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -592,20 +669,30 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -649,20 +736,30 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -701,7 +798,15 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-02:segment-01",
@@ -742,14 +847,23 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -792,8 +906,16 @@
         {
           "kind": "image",
           "id": "asset:character-sorell-sheet",
+          "path": "/assets/characters/sorell/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -836,14 +958,23 @@
         {
           "kind": "image",
           "id": "asset:character-sorell-sheet",
+          "path": "/assets/characters/sorell/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -886,8 +1017,23 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-wired-comms-deck-patch-panel-sheet",
+          "path": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
+          "required": true,
+          "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -932,14 +1078,23 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -983,20 +1138,30 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1041,26 +1206,23 @@
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-sheet",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-proportional",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
+          "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
-          "id": "asset:scale-reference-proxima-ardor",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
-          "role": "vehicle"
+          "role": "location"
         }
       ],
       "segments": [
@@ -1104,14 +1266,23 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1154,8 +1325,16 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1201,8 +1380,16 @@
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1248,8 +1435,16 @@
         {
           "kind": "image",
           "id": "asset:object-physical-override-relay-sheet",
+          "path": "/assets/props/physical-override-relay/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1292,14 +1487,23 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1343,14 +1547,23 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1394,14 +1607,23 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1446,20 +1668,30 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1503,20 +1735,30 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1560,20 +1802,30 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1617,8 +1869,16 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1664,8 +1924,16 @@
         {
           "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1712,32 +1980,30 @@
         {
           "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
           "role": "object"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-sheet",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-proportional",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
+          "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
-          "id": "asset:scale-reference-proxima-ardor",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
-          "role": "vehicle"
+          "role": "location"
         }
       ],
       "segments": [
@@ -1782,8 +2048,16 @@
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1827,8 +2101,16 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1872,14 +2154,23 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-sorell-sheet",
+          "path": "/assets/characters/sorell/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1922,8 +2213,16 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -1966,8 +2265,16 @@
         {
           "kind": "image",
           "id": "asset:character-sorell-sheet",
+          "path": "/assets/characters/sorell/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2010,26 +2317,23 @@
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-sheet",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-proportional",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
+          "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
-          "id": "asset:scale-reference-proxima-ardor",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
-          "role": "vehicle"
+          "role": "location"
         }
       ],
       "segments": [
@@ -2074,8 +2378,16 @@
         {
           "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2119,8 +2431,16 @@
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2164,8 +2484,16 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2209,14 +2537,23 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2261,14 +2598,23 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2313,8 +2659,16 @@
         {
           "kind": "image",
           "id": "asset:object-physical-override-relay-sheet",
+          "path": "/assets/props/physical-override-relay/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2359,8 +2713,16 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2404,20 +2766,30 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2460,8 +2832,16 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2506,8 +2886,16 @@
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2551,14 +2939,23 @@
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-physical-override-relay-sheet",
+          "path": "/assets/props/physical-override-relay/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2601,26 +2998,37 @@
         {
           "kind": "image",
           "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2664,14 +3072,23 @@
         {
           "kind": "image",
           "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2714,14 +3131,23 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2766,8 +3192,16 @@
         {
           "kind": "image",
           "id": "asset:object-read-only-greeting-medium-sheet",
+          "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2810,14 +3244,23 @@
         {
           "kind": "image",
           "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2862,8 +3305,16 @@
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2908,8 +3359,16 @@
         {
           "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2953,8 +3412,16 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -2997,8 +3464,16 @@
         {
           "kind": "image",
           "id": "asset:object-read-only-greeting-medium-sheet",
+          "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
           "required": true,
           "role": "object"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -3041,6 +3516,7 @@
         {
           "kind": "image",
           "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
         }
@@ -3085,30 +3561,21 @@
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-sheet",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-proportional",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:scale-reference-proxima-ardor",
+          "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
         }
@@ -3153,12 +3620,14 @@
         {
           "kind": "image",
           "id": "asset:vehicle-velari-emissary-sheet",
+          "path": "/assets/vehicles/velari-emissary/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
         }
@@ -3203,36 +3672,28 @@
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-sheet",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-proportional",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:scale-reference-proxima-ardor",
+          "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-velari-emissary-sheet",
+          "path": "/assets/vehicles/velari-emissary/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
         }
@@ -3277,14 +3738,23 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -3328,14 +3798,23 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
           "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -3378,8 +3857,16 @@
         {
           "kind": "image",
           "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "segments": [
@@ -3422,36 +3909,28 @@
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-sheet",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-proportional",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:scale-reference-proxima-ardor",
+          "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:vehicle-velari-emissary-sheet",
+          "path": "/assets/vehicles/velari-emissary/model-sheet.png",
           "required": true,
           "role": "vehicle"
         },
         {
           "kind": "image",
           "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
         }

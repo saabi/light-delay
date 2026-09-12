@@ -18,7 +18,11 @@ Historical planning companion to `outline:light-delay-festival-master`. It is no
 | F10 | Bomb delayed, greeting prepared and sent, station answer and physical meeting | 85 s |
 | F11 | Independent report to Earth and Zao’s final recognition | 25 s |
 
-Story target: about 11 minutes. Title and credits may add up to 30 seconds, with 12 minutes as the hard editorial ceiling unless causal readability requires a new decision.
+Story target: about 12:43. The original ~11-minute target and 12-minute ceiling were deliberately
+exceeded once shots were authored against real dialogue length: deliverable speaking pace is itself
+a causal-readability requirement, and 23 shots' original assigned durations could not accommodate
+their dialogue at a natural pace. The per-shot ceiling is 30 seconds (campaign `maxSegmentMs`), not
+8 seconds as an earlier draft of this table implied.
 
 ## Dialogue lanes for the screenplay pass
 

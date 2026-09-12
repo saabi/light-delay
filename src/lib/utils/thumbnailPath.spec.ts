@@ -3,8 +3,8 @@ import { isThumbAssetPath, thumbnailPathForAsset } from './thumbnailPath';
 
 describe('thumbnailPathForAsset', () => {
 	it('maps raster assets under /assets/ to mirrored webp thumbs', () => {
-		expect(thumbnailPathForAsset('/assets/locations/proxima-station/concept-sheet.png')).toBe(
-			'/assets/_thumbs/locations/proxima-station/concept-sheet.png.webp'
+		expect(thumbnailPathForAsset('/assets/locations/proxima-station/proxima-with-ardor-berthed.png')).toBe(
+			'/assets/_thumbs/locations/proxima-station/proxima-with-ardor-berthed.png.webp'
 		);
 		expect(thumbnailPathForAsset('/assets/vehicles/celestial-ardor/model-sheet.png')).toBe(
 			'/assets/_thumbs/vehicles/celestial-ardor/model-sheet.png.webp'
@@ -16,11 +16,11 @@ describe('thumbnailPathForAsset', () => {
 
 	it('keeps SVG and PNG stems distinct', () => {
 		expect(
-			thumbnailPathForAsset('/assets/locations/proxima-station/proportional-reference.svg')
-		).toBe('/assets/_thumbs/locations/proxima-station/proportional-reference.svg.webp');
+			thumbnailPathForAsset('/assets/vehicles/celestial-ardor/specs/proportional-reference.svg')
+		).toBe('/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.svg.webp');
 		expect(
-			thumbnailPathForAsset('/assets/locations/proxima-station/proportional-reference.png')
-		).toBe('/assets/_thumbs/locations/proxima-station/proportional-reference.png.webp');
+			thumbnailPathForAsset('/assets/vehicles/celestial-ardor/specs/proportional-reference.png')
+		).toBe('/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.png.webp');
 	});
 
 	it('rejects thumbs, non-assets, and empty names', () => {

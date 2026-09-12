@@ -12,10 +12,7 @@
         "en": "Human science infrastructure expanded over decades: old white modules, graphite additions, and two cylindrical habitats. Jupiter appears distant; the station was not built for the gate."
       },
       "referenceAssetIds": [
-        "asset:location-proxima-station-sheet",
-        "asset:location-proxima-station-proportional",
-        "asset:location-proxima-station-berthed",
-        "asset:scale-reference-proxima-ardor"
+        "asset:location-proxima-station-berthed"
       ],
       "atmosphere": {
         "es": "Exterior y silueta orbital",
@@ -51,7 +48,6 @@
         "en": "Compact circular bridge designed to remain habitable through long watches, with six stations in an arc, a separate captain’s chair, and a six-seat meeting table. Matte composite panels in light gray, warm off-white, and muted slate-blue/teal reduce exposed metal; upholstery, soft-touch surfaces, and neutral work lighting add comfort without making the room luxurious. A helical stair wraps the central opening, and every exposed stair edge has continuous outer railings in addition to the inner rails; access gaps beside service and the lift remain clear. The curved wall is pressure hull with a few small reinforced windows; only the displays are blue. The dark service hatch and adjacent tray remain hidden from the stations."
       },
       "referenceAssetIds": [
-        "asset:location-celestial-ardor-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
       "atmosphere": {
@@ -69,11 +65,25 @@
         "es": "Descanso de la cubierta de mando organizado alrededor de dos escaleras: la abertura de baranda de una queda junto al cilindro de servicio y la de la segunda junto al pozo de ascensor. La escotilla del servicio está retranqueada fuera de la línea visual normal de las consolas.",
         "en": "Command-deck landing organized around two stairs: one railing opening lands beside the service cylinder and the second beside the lift shaft. The service hatch is recessed beyond the crew stations’ normal sightline."
       },
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
+      ],
       "atmosphere": {
         "es": "Tránsito axial y punto ciego del puente",
         "en": "Axial transit and bridge blind spot"
-      }
+      },
+      "notes": [
+        {
+          "id": "note:celestial-ardor-command-vestibule-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Falta una referencia visual para el vestíbulo axial de mando; usado en varias escenas del Festival.",
+            "en": "A visual reference for the command axial vestibule is pending; used across several Festival scenes."
+          }
+        }
+      ]
     },
     {
       "id": "location:celestial-ardor-central-access",
@@ -82,14 +92,28 @@
         "en": "Central Access Cylinder"
       },
       "description": {
-        "es": "Tronco axial principal con pasamanos, descansos y compuertas. En microgravedad permite circulación segura mano sobre mano entre cubiertas.",
-        "en": "Main axial trunk with handrails, rests, and hatches. In microgravity it supports safe hand-over-hand movement between decks."
+        "es": "Tronco axial principal con pasamanos, descansos y compuertas. En microgravedad permite circulación segura mano sobre mano entre cubiertas. Dos escaleras helicoidales opuestas recorren el hueco central, cada una siguiendo la pared curva del cilindro y entrelazándose con la otra en cada descanso; comparten baranda interior continua y no dejan caídas abiertas. Esta escalera es una estructura distinta del cilindro de servicio contiguo, que usa segmentos de escalerilla recta, no la hélice.",
+        "en": "Main axial trunk with handrails, rests, and hatches. In microgravity it supports safe hand-over-hand movement between decks. Two opposed helical staircases run the length of the central hollow, each following the cylinder's curved wall and interlocking with the other at every landing; they share a continuous inner railing and leave no open drops. This staircase is a distinct structure from the adjacent service cylinder, which uses straight ladder segments, not the helix."
       },
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-central-access-sheet"
+      ],
       "atmosphere": {
         "es": "Circulación cotidiana en microgravedad",
         "en": "Everyday microgravity circulation"
-      }
+      },
+      "notes": [
+        {
+          "id": "note:celestial-ardor-central-access-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Falta una referencia visual para el cilindro central de acceso; es una de las tres rutas de la persecución del Festival.",
+            "en": "A visual reference for the central access cylinder is pending; it is one of the Festival chase's three routes."
+          }
+        }
+      ]
     },
     {
       "id": "location:celestial-ardor-service-cylinder",
@@ -101,11 +125,25 @@
         "es": "Conducto axial restringido con bandejas técnicas periféricas, agarres de mantenimiento y tramos libres para desplazamiento por inercia. En el puente abre mediante una escotilla oscura de esquinas redondeadas, junto a una bandeja abatible que expone los acopladores cableados de comunicaciones.",
         "en": "Restricted axial conduit with peripheral technical trays, maintenance grips, and clear stretches for inertial travel. At bridge level it opens through a dark rounded-corner hatch beside a hinged tray that exposes the wired communications couplers."
       },
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-service-cylinder-sheet"
+      ],
       "atmosphere": {
         "es": "Ruta técnica restringida",
         "en": "Restricted technical route"
-      }
+      },
+      "notes": [
+        {
+          "id": "note:celestial-ardor-service-cylinder-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Falta una referencia visual para el cilindro de servicio; es una de las tres rutas de la persecución del Festival.",
+            "en": "A visual reference for the service cylinder is pending; it is one of the Festival chase's three routes."
+          }
+        }
+      ]
     },
     {
       "id": "location:celestial-ardor-engineering",
@@ -136,7 +174,9 @@
         "en": "Accessible engineering workspace beside the reactor. It contains the independent local control for the long-distance optical communications array, the local control for interrupting the flight profile, and emergency inspection and isolation hardware for the adjacent fusion-fuel tankage and feed system. It also holds diagnostic instruments and scientific time-reference equipment."
       },
       "parentLocationId": "location:celestial-ardor-engineering",
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-reactor-service-bay-sheet"
+      ],
       "atmosphere": {
         "es": "Espacio de trabajo accesible, denso y utilitario junto al reactor",
         "en": "Accessible, dense, utilitarian workspace beside the reactor"
@@ -165,7 +205,9 @@
         "en": "Vault recessed inside the combined shielding zone for the reactor, crew spaces, and fusion-fuel tankage. It was built to isolate hazardous research equipment; its shielding masks the geophysical impulse package's weak neutron signature from ordinary ship sensors. Its pre-existing local radiation-safety lock is isolated from the ship network."
       },
       "parentLocationId": "location:celestial-ardor-reactor-service-bay",
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+      ],
       "atmosphere": {
         "es": "Recinto blindado, aislado y de acceso restringido",
         "en": "Shielded, isolated, restricted-access enclosure"
@@ -217,6 +259,24 @@
       "atmosphere": {
         "es": "Umbral y ventana única",
         "en": "Threshold and single window"
+      }
+    },
+    {
+      "id": "location:jupiter-periapsis",
+      "name": {
+        "es": "Periapsis de Júpiter",
+        "en": "Jupiter Periapsis"
+      },
+      "description": {
+        "es": "El Ardor pasa junto a Júpiter en la periapsis, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras la nave gira de punta a punta; radiadores recogidos para la maniobra.",
+        "en": "The Ardor passes Jupiter at periapsis, backlit by the planet's banded cloud tops and faint ring arcs as the ship turns end for end; radiators retracted for the maneuver."
+      },
+      "referenceAssetIds": [
+        "asset:vehicle-celestial-ardor-jupiter"
+      ],
+      "atmosphere": {
+        "es": "Umbral de la primera caída de gravedad",
+        "en": "Threshold of the first gravity dip"
       }
     },
     {

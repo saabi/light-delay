@@ -370,6 +370,110 @@
         "festival:shot-g-08",
         "festival:shot-g-10"
       ]
+    },
+    {
+      "contextId": "context:ardor-docked-at-proxima",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": [
+        "festival-master:scene-00-title",
+        "festival-master:scene-02",
+        "festival-master:scene-03"
+      ]
+    },
+    {
+      "contextId": "context:proxima-dock",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": ["festival-master:scene-04"]
+    },
+    {
+      "contextId": "context:ardor-thrust-gravity",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": [
+        "festival-master:scene-05",
+        "festival-master:scene-17",
+        "festival-master:scene-18",
+        "festival-master:scene-20",
+        "festival-master:scene-21",
+        "festival-master:scene-22",
+        "festival-master:scene-23",
+        "festival-master:scene-24",
+        "festival-master:scene-25",
+        "festival-master:scene-28",
+        "festival-master:scene-29",
+        "festival-master:scene-31",
+        "festival-master:scene-32"
+      ]
+    },
+    {
+      "contextId": "context:ardor-coast-microgravity",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": [
+        "festival-master:scene-06",
+        "festival-master:scene-07",
+        "festival-master:scene-08",
+        "festival-master:scene-09",
+        "festival-master:scene-10",
+        "festival-master:scene-11",
+        "festival-master:scene-12",
+        "festival-master:scene-13",
+        "festival-master:scene-14",
+        "festival-master:scene-15",
+        "festival-master:scene-16",
+        "festival-master:scene-19"
+      ]
+    },
+    {
+      "contextId": "context:ardor-remote-cutoff-transition",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": ["festival-master:scene-26", "festival-master:scene-27"]
+    },
+    {
+      "contextId": "context:ardor-exterior-vacuum",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": ["festival-master:scene-30"]
+    },
+    {
+      "contextId": "context:ardor-exterior-vacuum",
+      "scriptId": "script:light-delay-festival-master",
+      "shotIds": [
+        "festival-master:shot-plan-credit-01",
+        "festival-master:shot-plan-credit-02",
+        "festival-master:shot-plan-credit-03"
+      ]
+    },
+    {
+      "contextId": "context:zao-optical-transmission",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": [
+        "festival-master:scene-12",
+        "festival-master:scene-13",
+        "festival-master:scene-14",
+        "festival-master:scene-20",
+        "festival-master:scene-21",
+        "festival-master:scene-32"
+      ]
+    },
+    {
+      "contextId": "context:ardor-operational-displays",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": [
+        "festival-master:scene-02",
+        "festival-master:scene-03",
+        "festival-master:scene-05",
+        "festival-master:scene-07",
+        "festival-master:scene-09",
+        "festival-master:scene-12",
+        "festival-master:scene-13",
+        "festival-master:scene-15",
+        "festival-master:scene-18",
+        "festival-master:scene-20",
+        "festival-master:scene-21",
+        "festival-master:scene-23",
+        "festival-master:scene-27",
+        "festival-master:scene-28",
+        "festival-master:scene-29",
+        "festival-master:scene-32"
+      ]
     }
   ]
 }

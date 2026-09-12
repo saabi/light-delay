@@ -98,6 +98,17 @@ do not import its narrative framing (culprit-reveal-by-laser) into Festival-mast
 Per shot, the plan records:
 
 - `artifacts.animaticStill` (required) — storyboard/animatic still
+
+### Festival-master reference rule
+
+For `script:light-delay-festival-master`, image references are rebuilt from the shot's
+`visibleRefs`, `locationId`, and `secondaryLocationIds`. `offScreenCharacterIds` is an
+absolute exclusion: an off-screen character must not receive a model-sheet reference,
+even when that character speaks, appears in voice-over, or was referenced by an older
+take. Generation-plan references include the resolved asset path as well as the stable
+asset ID so an image adapter can attach the actual file. Props and vehicles should be
+listed in `visibleRefs` when they are visible; prose mentions alone do not authorize an
+image attachment.
 - `artifacts.firstFrame` / `lastFrame` — Seedance boundaries / extension anchors
 - `artifacts.finalAudio` — when the shot carries dialogue
 - `requiredReferences[]` — `character` / `location` / `prop` / `video` (Blender guide) / `voice`, each `{ kind: image|video|audio, id, required, role }`
@@ -118,6 +129,12 @@ last quarter of the segment budget, else a hard cut at `maxSegmentMs`).
 | `node scripts/higgsfield-preflight.mjs` | Preflight only — never submits |
 
 ## 6. Gaps to declare explicitly (verified 2026-09-11)
+
+The master storyboard asset pass now has a provider-neutral asset manifest at
+`data/production/asset-generation-manifest.json`, validated by
+`data/schemas/asset-generation-manifest.schema.json`. It records the nine new
+GPT-Image-2 reference sheets, their style anchors, structured English prompts,
+and project output paths. The manifest does not authorize a provider run.
 
 - **No `storyboard.schema.json` / no standalone "storyboard JSON" product.** It lives today in
   `Shot.composition` + PNG stills + plan `artifacts.animaticStill`.
@@ -176,7 +193,7 @@ When a line reads too stiff, formal, or expository:
   },
   "requiredReferences": [
     { "kind": "image", "id": "asset:character-zao-sheet", "required": true, "role": "character" },
-    { "kind": "image", "id": "asset:location-celestial-ardor-bridge-sheet", "required": true, "role": "location" }
+    { "kind": "image", "id": "asset:location-celestial-ardor-bridge-realistic-reference", "required": true, "role": "location" }
   ],
   "segments": [
     {
