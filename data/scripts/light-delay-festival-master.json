@@ -17,7 +17,12 @@
       "translations": {
         "es": {
           "status": "needs_revision",
-          "lastSyncedVersion": "0.2.0-wip"
+          "lastSyncedAt": "2026-09-12",
+          "lastSyncedVersion": "0.2.0-wip",
+          "notes": {
+            "en": "Updated stale/missing Festival-master ES dialogue against current English (vault readout, clarification cues, and related structure quotes). Still needs_revision pending editorial pass.",
+            "es": "Actualizado el diálogo ES faltante o desfasado del Festival master respecto al inglés vigente (lectura en la bóveda, cues de clarificación y citas estructurales). Sigue needs_revision pendiente de pase editorial."
+          }
         }
       }
     },
@@ -2540,7 +2545,7 @@
         "en": "Dramatize the package through observable choice, pressure, and consequence."
       },
       "summary": {
-        "es": "Dentro de la bóveda incompletamente asegurada, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. Las coordenadas y el tiempo del encuentro están en su controlador armado. zao: Paquete de impulso geofísico… una coma tres toneladas. zao: Multimegatón. Coordenadas de contacto. Hora de contacto. Mira el reloj de comunicaciones ordinario. Ningún ida y vuelta puede ganarle al temporizador. zao: No. Nadie mandó esto por error.",
+        "es": "Dentro de la bóveda incompletamente asegurada, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. Las coordenadas y el tiempo del encuentro están en su controlador armado. zao: Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. zao: Multimegatón. Ajustada a las coordenadas de contacto — y a la hora de contacto. Mira el reloj de comunicaciones ordinario. Ningún ida y vuelta puede ganarle al temporizador. zao: No. Nadie mandó esto por error.",
         "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The encounter coordinates and time sit on its armed controller. zao: This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. zao: Multi-megaton. Set for the contact coordinates — and the contact time! She looks at the ordinary communications clock. No round trip can beat the timer. zao: No. No one sent this by mistake."
       },
       "participantRefs": [
@@ -4922,7 +4927,7 @@
       "presentation": "on_screen",
       "performance": {
         "emotion": {
-          "es": "",
+          "es": "uneasy",
           "en": "uneasy"
         },
         "intention": {
@@ -4939,6 +4944,11 @@
             "status": "source",
             "estimatedDurationMs": 3580,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0030b"
+          },
+          "es": {
+            "spokenText": "Algo no cuadra. Usamos más combustible del que debíamos.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 3580
           }
         }
       }
@@ -5366,10 +5376,11 @@
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0042"
           },
           "es": {
-            "spokenText": "Paquete de impulso geofísico… uno punto tres toneladas.",
+            "spokenText": "Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas.",
             "status": "needs_revision",
-            "delivery": "barely audible, reading only what she must confirm",
-            "estimatedDurationMs": 4620
+            "delivery": "apenas audible, lee sólo lo que debe confirmar",
+            "estimatedDurationMs": 5820,
+            "voiceProfileId": "voice:zao-es"
           }
         }
       }
@@ -5411,10 +5422,11 @@
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0043"
           },
           "es": {
-            "spokenText": "Multimegatón. Coordenadas de contacto. Hora de contacto.",
+            "spokenText": "Multimegatón. Ajustada a las coordenadas de contacto — y a la hora de contacto.",
             "status": "needs_revision",
-            "delivery": "each fragment tighter than the last",
-            "estimatedDurationMs": 4300
+            "delivery": "cada fragmento más tenso que el anterior; el plazo cae con fuerza",
+            "estimatedDurationMs": 4780,
+            "voiceProfileId": "voice:zao-es"
           }
         }
       }
@@ -5987,7 +5999,7 @@
       "presentation": "on_screen",
       "performance": {
         "emotion": {
-          "es": "",
+          "es": "frightened but precise",
           "en": "frightened but precise"
         },
         "intention": {
@@ -6004,6 +6016,11 @@
             "status": "source",
             "estimatedDurationMs": 3900,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0059b"
+          },
+          "es": {
+            "spokenText": "Los canales internos están cortados. Necesito otra manera de llegar a alguien.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 3900
           }
         }
       }
@@ -6552,7 +6569,7 @@
       "presentation": "on_screen",
       "performance": {
         "emotion": {
-          "es": "",
+          "es": "controlled, wry, alone",
           "en": "controlled, wry, alone"
         },
         "intention": {
@@ -6569,6 +6586,11 @@
             "status": "source",
             "estimatedDurationMs": 1100,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0076b"
+          },
+          "es": {
+            "spokenText": "Qué desastre.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 1100
           }
         }
       }
@@ -6589,11 +6611,11 @@
       "presentation": "on_screen",
       "performance": {
         "emotion": {
-          "es": "",
+          "es": "resolved",
           "en": "resolved"
         },
         "intention": {
-          "es": "",
+          "es": "comprometerse en voz alta a desconectar el mando de vuelo antes de hacerlo",
           "en": "commit out loud to disconnecting flight control before doing it"
         },
         "pace": "normal"
@@ -6606,6 +6628,11 @@
             "status": "source",
             "estimatedDurationMs": 2700,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0076c"
+          },
+          "es": {
+            "spokenText": "No hay problema. Voy a cortar los controles de vuelo.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 2700
           }
         }
       }
@@ -7878,7 +7905,7 @@
       "presentation": "on_screen",
       "performance": {
         "emotion": {
-          "es": "",
+          "es": "focused",
           "en": "focused"
         },
         "intention": {
@@ -7895,6 +7922,11 @@
             "status": "source",
             "estimatedDurationMs": 3580,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0107b"
+          },
+          "es": {
+            "spokenText": "La bahía de blindaje. Ahí es donde yo escondería una fuente de neutrones.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 3580
           }
         }
       }
@@ -8389,10 +8421,11 @@
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0120"
           },
           "es": {
-            "spokenText": "Ahora nunca van a saber quién los salvó.",
+            "spokenText": "Zao falló el tiro. La señal se fue, irrecuperable — ahora nunca van a saber quién los salvó.",
             "status": "needs_revision",
-            "delivery": "private grief, not triumph",
-            "estimatedDurationMs": 2460
+            "delivery": "duelo privado, no triunfo",
+            "estimatedDurationMs": 6780,
+            "voiceProfileId": "voice:harlan-es"
           }
         }
       }
@@ -9973,10 +10006,11 @@
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0162"
           },
           "es": {
-            "spokenText": "Necesitaba tiempo. Una sola señal de que mordemos, y tal vez esperen.",
+            "spokenText": "Necesitaba tiempo. Una señal de que no estamos indefensos — de que podemos morder — y pensarán dos veces antes de tomarnos lo que quieran. La Tierra necesita esos años.",
             "status": "needs_revision",
-            "delivery": "rushing because nobody is listening anymore",
-            "estimatedDurationMs": 3820
+            "delivery": "apurado porque ya nadie escucha",
+            "estimatedDurationMs": 9260,
+            "voiceProfileId": "voice:harlan-es"
           }
         }
       }
@@ -10148,10 +10182,11 @@
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0167"
           },
           "es": {
-            "spokenText": "Referencia externa. Eso sí puedo moverlo.",
+            "spokenText": "Está sincronizado con el reloj propio de la nave, no con uno aparte. Si le doy otra referencia de tiempo, deja de confiar en cuándo es «ahora».",
             "status": "needs_revision",
-            "delivery": "a solution forming aloud",
-            "estimatedDurationMs": 2460
+            "delivery": "una solución formándose en voz alta",
+            "estimatedDurationMs": 7740,
+            "voiceProfileId": "voice:rao-es"
           }
         }
       }
@@ -10306,10 +10341,11 @@
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0171"
           },
           "es": {
-            "spokenText": "Manténganlo vigilado. Sin propulsión.",
+            "spokenText": "Manténganlo vigilado. Sin empuje, sin vibración — nada que sacuda esta nave hasta que estemos seguros.",
             "status": "needs_revision",
-            "delivery": "immediate follow-through",
-            "estimatedDurationMs": 2380
+            "delivery": "seguimiento inmediato",
+            "estimatedDurationMs": 5660,
+            "voiceProfileId": "voice:voss-es"
           }
         }
       }
@@ -12583,7 +12619,7 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Conmocionada y luego asustada, Zao lee el controlador en voz alta para sí: \"Paquete de impulso geofísico… una coma tres toneladas. Multimegatón. Coordenadas de contacto. Hora de contacto\".",
+        "es": "Conmocionada y luego asustada, Zao lee el controlador en voz alta para sí: «Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. Multimegatón. Ajustada a las coordenadas de contacto — y a la hora de contacto».",
         "en": "Shocked, then afraid, Zao reads the controller aloud to herself: \"This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. Multi-megaton. Set for the contact coordinates — and the contact time!\"."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",

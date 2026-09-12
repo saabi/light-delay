@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-12 — Festival-master stale Spanish dialogue refresh
+
+- Filled five missing ES dialogue variants added after the first Spanish pass
+  (`cue-0030b`, `0059b`, `0076b`, `0076c`, `0107b`).
+- Rewrote ES for cues that had drifted from current English (vault readout
+  `0042`/`0043`, plus `0120`, `0162`, `0167`, `0171`) and aligned beat-09 /
+  shot-021 quotes. Status remains `needs_revision` pending editorial polish.
+
 ## 2026-09-12 — Movie player: subtitle switch no longer desyncs audio
 
 - Root cause: `getLanguageState()` returned a fresh object snapshot and setters

@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-12 — Diálogo ES desfasado del Festival master actualizado
+
+- Completadas 5 variantes ES ausentes y reescritas las que no seguían el inglés
+  vigente (bóveda `0042`/`0043`, `0120`, `0162`, `0167`, `0171` + citas en beat-09 /
+  shot-021). Sigue `needs_revision`. Cobertura de diálogo ES: 131/131.
+
 ## 2026-09-12 — Sync de subtítulos en el player
 
 - Cambiar solo el idioma de subtítulos ya no reclona el guion ni desincroniza
