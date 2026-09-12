@@ -2,6 +2,37 @@
   "schemaVersion": "1.1.0",
   "characters": [
     {
+      "id": "character:velari-envoy",
+      "name": {
+        "es": "Enviado Velari",
+        "en": "Velari Envoy"
+      },
+      "role": {
+        "es": "Emisario de primer contacto",
+        "en": "First-contact emissary"
+      },
+      "description": {
+        "es": "Un Velari individual de aproximadamente 2,5 a 3 metros, con un manto alargado que orienta hacia quien se dirige a él. Concentra primero su atención y sólo después responde: sus patrones de luz ramificados se reorganizan en tiempo real para extender el saludo humano que Sorell prepara.",
+        "en": "An individual Velari roughly 2.5 to 3 metres tall, with an elongated mantle it orients toward whoever addresses it. It focuses attention first and only then responds: its branching luminous patterns rearrange in real time to extend the human greeting Sorell prepares."
+      },
+      "factionIds": [
+        "faction:velari"
+      ],
+      "referenceAssetIds": [],
+      "notes": [
+        {
+          "id": "note:velari-envoy-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "high",
+          "text": {
+            "es": "Falta una referencia visual para el emisario individual; es el clímax visual de primer contacto y no debe confundirse en escala ni diseño con la nave emisaria de 300-600 m.",
+            "en": "A visual reference for the individual envoy is pending; it is the first-contact climax's visual centerpiece and must not be confused in scale or design with the 300-600 m emissary vehicle."
+          }
+        }
+      ]
+    },
+    {
       "id": "character:zao",
       "name": {
         "es": "Zao",

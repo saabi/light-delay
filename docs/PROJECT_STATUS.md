@@ -1,5 +1,29 @@
 # Estado del proyecto
 
+## 2026-09-11 — Diálogo, catálogo de props y limpieza de referencias obsoletas del Festival
+
+- Revisadas las 197 cues de `script:light-delay-festival-master` contra los perfiles de voz y biografías
+  de los seis protagonistas. Corregidas dos líneas agramaticales (Rao, Harlan) y dos matices de
+  consistencia de voz de Sorell; reescrita la apelación de Harlan a Okoye en tono personal sin inventar
+  un incidente compartido; añadida una línea de Harlan al beat de sabotaje de vuelo, antes mudo.
+- Catalogados tres objetos nuevos (bomba, dispositivo de muñeca de Harlan, unidad de diagnóstico de
+  Elin), un personaje nuevo (el enviado Velari individual) y un vehículo nuevo (esfera de transporte
+  Velari, distinta en escala de la nave emisaria de 300-600 m); ninguno tenía entrada previa pese a
+  nombrarse repetidamente en el guion. Cada uno queda con una nota `visual` abierta señalando que
+  falta su hoja de referencia.
+- Eliminada la referencia obsoleta a `object:diplomatic-quantum-core` de `declaredEntityRefs` y
+  corregida la función dramática del distribuidor cableado para quitar su encuadre "diplomático"
+  residual. Verificado que ningún término del canon deprecado (láser, núcleo cuántico, cian, relé de
+  override, cartucho de saludo) sigue apareciendo en el texto activo de las cues.
+- Verificada la coherencia del blueprint de storyboard contra el guion vigente (195/195 referencias de
+  cue resuelven) y actualizadas sus celdas citadas para las cinco líneas de diálogo cambiadas o añadidas.
+- Precisada la descripción de `object:time-reference-diagnostic-unit` (desplaza el reloj de
+  comparación del controlador de la bomba para que la cuenta atrás salte más allá de la detonación),
+  subida su nota visual a prioridad `high`, y enlazadas por `objectRefs` las tres cues de acción donde
+  Elin lo planta y lo usa (`cue-0112`, `cue-0166`, `cue-0168`).
+- Aclarada la línea de Zao en `beat-03`: "That wasn't hope." → "That wasn't hope. Not from Harlan."
+  Misma entrega contenida y sin acusación; ahora sin ambigüedad sobre a quién se refiere.
+
 ## 2026-09-11 — Geografía de reactor corregida en el Festival vigente
 
 - El guion `script:light-delay-festival-master` ya no usa `location:diplomatic-core-room`: distingue el compartimiento exterior de servicio del reactor y la bóveda interior de blindaje definidos por el master.

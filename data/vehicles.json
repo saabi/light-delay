@@ -33,6 +33,31 @@
       "referenceAssetIds": [
         "asset:vehicle-velari-emissary-sheet"
       ]
+    },
+    {
+      "id": "vehicle:velari-transport-sphere",
+      "name": {
+        "es": "Esfera de transporte Velari",
+        "en": "Velari Transport Sphere"
+      },
+      "description": {
+        "es": "Esfera ambiental transparente de escala personal, sin propulsión visible ni escape aparente. Transporta a un único enviado Velari entre la estación y la Ardor para un encuentro cara a cara; no debe confundirse con la nave emisaria de 300–600 m.",
+        "en": "A transparent, personal-scale environmental sphere with no visible propulsion or exhaust. It carries a single Velari envoy between the station and the Ardor for a face-to-face meeting; it must not be confused with the 300–600 m emissary vehicle."
+      },
+      "factionId": "faction:velari",
+      "referenceAssetIds": [],
+      "notes": [
+        {
+          "id": "note:velari-transport-sphere-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "high",
+          "text": {
+            "es": "Falta una referencia visual para la esfera de transporte personal, distinta en escala de la nave emisaria.",
+            "en": "A visual reference for the personal transport sphere, distinct in scale from the emissary vehicle, is pending."
+          }
+        }
+      ]
     }
   ]
 }

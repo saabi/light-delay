@@ -66,15 +66,31 @@
       },
       {
         "kind": "object",
-        "id": "object:diplomatic-quantum-core"
-      },
-      {
-        "kind": "object",
         "id": "object:optical-contingency-transmitter"
       },
       {
         "kind": "object",
         "id": "object:wired-comms-deck-patch-panel"
+      },
+      {
+        "kind": "object",
+        "id": "object:proxima-geophysical-impulse-package"
+      },
+      {
+        "kind": "object",
+        "id": "object:harlan-wrist-device"
+      },
+      {
+        "kind": "object",
+        "id": "object:time-reference-diagnostic-unit"
+      },
+      {
+        "kind": "character",
+        "id": "character:velari-envoy"
+      },
+      {
+        "kind": "vehicle",
+        "id": "vehicle:velari-transport-sphere"
       }
     ],
     "actIds": [
@@ -2817,6 +2833,7 @@
       "cueIds": [
         "festival-master:cue-0077",
         "festival-master:cue-0078",
+        "festival-master:cue-0078b",
         "festival-master:cue-0079",
         "festival-master:cue-0080",
         "festival-master:cue-0081",
@@ -4015,7 +4032,7 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "That wasn’t hope.",
+            "spokenText": "That wasn’t hope. Not from Harlan.",
             "status": "source",
             "delivery": "low and exact; no accusation yet",
             "voiceProfileId": "voice:zao-es"
@@ -6072,9 +6089,37 @@
       }
     },
     {
-      "id": "festival-master:cue-0079",
+      "id": "festival-master:cue-0078b",
       "beatId": "festival-master:beat-15",
       "order": 3,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "performance": {
+        "emotion": {
+          "es": "",
+          "en": "cold"
+        },
+        "intention": {
+          "es": "",
+          "en": "mark his own point of no return, not explain the sabotage to anyone"
+        },
+        "pace": "normal"
+      },
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "No stopping it now.",
+            "status": "source"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival-master:cue-0079",
+      "beatId": "festival-master:beat-15",
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6092,7 +6137,7 @@
     {
       "id": "festival-master:cue-0080",
       "beatId": "festival-master:beat-15",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6129,7 +6174,7 @@
     {
       "id": "festival-master:cue-0081",
       "beatId": "festival-master:beat-15",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6166,7 +6211,7 @@
     {
       "id": "festival-master:cue-0082",
       "beatId": "festival-master:beat-15",
-      "order": 6,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -7186,7 +7231,7 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Could have is not did.",
+            "spokenText": "Could have doesn’t mean did.",
             "status": "source",
             "delivery": "dry and impatient",
             "voiceProfileId": "voice:rao-es"
@@ -7209,7 +7254,13 @@
       "text": {
         "es": "",
         "en": "The data proves hidden mass and a compact neutron source, not yet a bomb. Elin leaves a time-reference diagnostic on the bench and returns to the optical traces."
-      }
+      },
+      "objectRefs": [
+        {
+          "kind": "object",
+          "id": "object:time-reference-diagnostic-unit"
+        }
+      ]
     },
     {
       "id": "festival-master:cue-0113",
@@ -7937,7 +7988,7 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Agree is not prove.",
+            "spokenText": "Agreement isn’t proof.",
             "status": "source",
             "delivery": "clipped; courtesy thinning",
             "voiceProfileId": "voice:harlan-es"
@@ -8284,7 +8335,7 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "You served long enough to know caution isn’t treason.",
+            "spokenText": "I know you, Dara. I know what duty costs you.",
             "status": "source",
             "delivery": "soft appeal, strategically personal but not based on invented shared history",
             "voiceProfileId": "voice:harlan-es"
@@ -8909,7 +8960,13 @@
       "text": {
         "es": "",
         "en": "She sees the scientific service timing input and the diagnostic unit she planted hours earlier."
-      }
+      },
+      "objectRefs": [
+        {
+          "kind": "object",
+          "id": "object:time-reference-diagnostic-unit"
+        }
+      ]
     },
     {
       "id": "festival-master:cue-0167",
@@ -8963,7 +9020,13 @@
       "text": {
         "es": "",
         "en": "She connects it. The display counts 4—3—2—1, then jumps upward as the ship clock crosses the original deadline."
-      }
+      },
+      "objectRefs": [
+        {
+          "kind": "object",
+          "id": "object:time-reference-diagnostic-unit"
+        }
+      ]
     },
     {
       "id": "festival-master:cue-0169",
@@ -9196,7 +9259,7 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Be right now. We can talk about sorry later.",
+            "spokenText": "We can be sorry later. Right now, I need to be right.",
             "status": "source",
             "delivery": "hurt, practical, not cruel",
             "voiceProfileId": "voice:sorell-es"
@@ -9467,7 +9530,7 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "That is what makes going mean something.",
+            "spokenText": "That’s what makes going mean something.",
             "status": "source",
             "delivery": "soft, steady",
             "voiceProfileId": "voice:sorell-es"

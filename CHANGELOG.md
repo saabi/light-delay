@@ -1,5 +1,32 @@
 # Changelog
 
+## 2026-09-11 — Festival master dialogue, prop catalog, and stale-reference cleanup
+
+- Reviewed all 197 cues of `script:light-delay-festival-master` against the six leads' voice
+  profiles and character bios; rewrote two ungrammatical lines (Rao's "Could have is not did.",
+  Harlan's "Agree is not prove.") and two voice-consistency nits for Sorell.
+- Sharpened Harlan's appeal to Okoye (`beat-24`) toward a personal register without inventing a
+  shared incident, and added one internal line for Harlan at the previously silent post-murder
+  flight-sabotage beat (`beat-15`) so an image+sound-only edit has an audible anchor.
+- Added three new objects (`object:proxima-geophysical-impulse-package`,
+  `object:harlan-wrist-device`, `object:time-reference-diagnostic-unit`), a new character
+  (`character:velari-envoy`, the individual first-contact creature), and a new vehicle
+  (`vehicle:velari-transport-sphere`, distinct in scale from the 300-600 m emissary) — all named
+  repeatedly in the screenplay but previously uncatalogued. Each carries an open `visual` note
+  flagging its pending reference sheet.
+- Removed the stale `object:diplomatic-quantum-core` entry from the script's `declaredEntityRefs`
+  and reworded `object:wired-comms-deck-patch-panel`'s dramatic function to drop its leftover
+  "diplomatic deck" framing; confirmed no other deprecated-canon terms (laser, quantum core, cyan,
+  override relay, greeting-medium cartridge) remain in any active cue text.
+- Validated the shot blueprint against the current script: 195/195 cue references resolve, and
+  updated the blueprint's quoted cells for the five changed/added dialogue lines.
+- Sharpened `object:time-reference-diagnostic-unit`'s description to name its actual function
+  (shifting the bomb controller's comparison clock so the countdown jumps past detonation), raised
+  its visual-reference note to `high` priority, and linked the three action cues where Elin plants
+  and uses it (`cue-0112`, `cue-0166`, `cue-0168`) to that object via `objectRefs`.
+- Clarified Zao's `beat-03` line to name who she means: "That wasn't hope." → "That wasn't hope.
+  Not from Harlan." — same understated, non-accusatory delivery, now unambiguous on the page.
+
 ## 2026-09-11 — Festival master reactor geography correction
 
 - Replaced every active Festival reference to the obsolete diplomatic-core room with the master-authority outer reactor service bay and inner shielding vault, preserving archived cuts unchanged.

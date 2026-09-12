@@ -48,10 +48,98 @@
         "en": "Hinged tray beside the service-cylinder hatch, with COM A/B trunks and double couplers labelled by zone. Opening it allows a deck’s operational voice and data to be physically unplugged without cutting its local systems."
       },
       "dramaticFunction": {
-        "es": "Harlan corta y restaura el respaldo cableado de la cubierta diplomática",
-        "en": "Harlan cuts and restores the diplomatic deck wired backup"
+        "es": "Harlan corta y restaura el respaldo cableado de la cubierta para aislar a Zao",
+        "en": "Harlan cuts and restores a deck's wired backup to isolate Zao"
       },
       "referenceAssetIds": []
+    },
+    {
+      "id": "object:proxima-geophysical-impulse-package",
+      "name": {
+        "es": "Paquete de impulso geofísico de Próxima",
+        "en": "Proxima Geophysical Impulse Package"
+      },
+      "description": {
+        "es": "Dispositivo termonuclear de aproximadamente 1,3 toneladas y potencia multimegatón, armado para las coordenadas y el instante del primer contacto. Su controlador está protegido: rechaza el corte de energía y el daño directo, pero expone una entrada de servicio científico que acepta una referencia temporal externa.",
+        "en": "A thermonuclear device of roughly 1.3 tonnes and multi-megaton yield, armed for the first-contact coordinates and time. Its controller is protected — it rejects power cuts and direct damage — but exposes a scientific service input that accepts an external time reference."
+      },
+      "dramaticFunction": {
+        "es": "La amenaza oculta que descubre Zao; se demora, no se desarma, mediante su propia entrada de diagnóstico.",
+        "en": "The concealed threat Zao discovers; delayed rather than disarmed through its own diagnostic input."
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "referenceAssetIds": [],
+      "notes": [
+        {
+          "id": "note:proxima-geophysical-impulse-package-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "high",
+          "text": {
+            "es": "Falta una referencia visual derivada del master para el paquete y su controlador.",
+            "en": "A master-derived visual reference for the package and its controller is pending."
+          }
+        }
+      ]
+    },
+    {
+      "id": "object:harlan-wrist-device",
+      "name": {
+        "es": "Dispositivo de muñeca de Harlan",
+        "en": "Harlan's Wrist Device"
+      },
+      "description": {
+        "es": "Unidad de control que Harlan lleva en la muñeca. Activa el inhibidor que corta el canal inalámbrico de Zao y controla la cerradura local de la bóveda interior de blindaje.",
+        "en": "A wrist-mounted control unit Harlan wears. It activates the jammer that cuts Zao's wireless channel and controls the inner shielding vault's local lock."
+      },
+      "dramaticFunction": {
+        "es": "El medio oculto de Harlan para aislar a Zao y controlar el acceso a la bóveda; Okoye debe recuperarlo.",
+        "en": "Harlan's concealed means of isolating Zao and controlling vault access; Okoye must recover it."
+      },
+      "ownerCharacterId": "character:harlan",
+      "referenceAssetIds": [],
+      "notes": [
+        {
+          "id": "note:harlan-wrist-device-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "high",
+          "text": {
+            "es": "Falta una referencia visual derivada del master para el dispositivo de muñeca.",
+            "en": "A master-derived visual reference for the wrist device is pending."
+          }
+        }
+      ]
+    },
+    {
+      "id": "object:time-reference-diagnostic-unit",
+      "name": {
+        "es": "Unidad de diagnóstico de referencia temporal",
+        "en": "Time-Reference Diagnostic Unit"
+      },
+      "description": {
+        "es": "Instrumento portátil de diagnóstico científico con una función de contraste de referencias de tiempo. Elin lo deja junto a la bóveda antes de comprender su uso; luego lo conecta a la entrada de servicio científico del controlador de la bomba para desplazar hacia adelante el reloj que compara contra el plazo original, de modo que la cuenta atrás salte más allá de la detonación sin desarmar el dispositivo.",
+        "en": "A portable scientific diagnostic instrument with a time-reference contrast function. Elin leaves it beside the vault before she understands its use; she later connects it to the bomb controller's scientific service input to shift the clock the controller compares itself against, making the countdown jump past detonation without disarming the device."
+      },
+      "dramaticFunction": {
+        "es": "El instrumento plantado y cobrado que permite demorar la bomba sin desarmarla: Elin lo usa para alterar el reloj del controlador.",
+        "en": "The planted-and-paid-off instrument that lets the bomb be delayed rather than disarmed: Elin uses it to alter the controller's clock."
+      },
+      "ownerCharacterId": "character:rao",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "referenceAssetIds": [],
+      "notes": [
+        {
+          "id": "note:time-reference-diagnostic-unit-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "high",
+          "text": {
+            "es": "Falta una referencia visual derivada del master para el instrumento; debe verse idéntico en las dos escenas separadas donde aparece (plantado en beat-19, conectado en beat-27).",
+            "en": "A master-derived visual reference for the instrument is pending; it must look identical across the two separated scenes where it appears (planted in beat-19, connected in beat-27)."
+          }
+        }
+      ]
     },
     {
       "id": "object:physical-override-relay",
