@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-12 — Fix svelte-check errors blocking Pages deploy
+
+- Tightened JSDoc/types in trailer↔festival dialogue-link helpers and related specs
+  so `npm run check` passes under `checkJs` (GitHub Actions had failed after
+  translation validation).
+
 ## 2026-09-12 — Refresh stale generated editorial checks for deploy
 
 - Regenerated `docs/MASTER_RELEVANCE_REPORT.md`, `docs/PENDING_AUTHOR_NOTES.md`, and

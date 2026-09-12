@@ -17,7 +17,10 @@ export const ACTION_HOLD_FLOOR_MS = 400;
  */
 export function englishOf(value) {
 	if (typeof value === 'string') return value;
-	if (value && typeof value === 'object' && typeof value.en === 'string') return value.en;
+	if (value && typeof value === 'object' && !Array.isArray(value)) {
+		const map = /** @type {Record<string, unknown>} */ (value);
+		if (typeof map.en === 'string') return map.en;
+	}
 	return '';
 }
 

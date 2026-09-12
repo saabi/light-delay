@@ -70,14 +70,19 @@ describe('master-derived trailer', () => {
 
 		for (const cue of dialogue) {
 			if (cue.type !== 'dialogue') continue;
-			const sourceId = TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP[cue.id];
+			const sourceId =
+				TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP[
+					cue.id as keyof typeof TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP
+				];
 			expect(sourceId, cue.id).toBeTruthy();
 			const source = festivalCueById.get(sourceId);
 			expect(source?.type, sourceId).toBe('dialogue');
 			if (!source || source.type !== 'dialogue') continue;
 			expect(cue.speakerId).toBe(source.speakerId);
 			expect(cue.content.variants.en?.audioAssetId).toBe(source.content.variants.en?.audioAssetId);
-			expect(cue.sourceRefs?.some((ref) => ref.cueId === sourceId)).toBe(true);
+			expect(
+				cue.sourceRefs?.some((ref) => 'cueId' in ref && ref.cueId === sourceId)
+			).toBe(true);
 		}
 	});
 
@@ -116,7 +121,7 @@ describe('master-derived trailer', () => {
 		// No shot in the trailer reuses the ending beats (contact success / "You made it in time").
 		const reusedSourceShotIds = script.shots
 			.flatMap((shot) => shot.sourceRefs ?? [])
-			.map((ref) => ref.shotId);
+			.map((ref) => ('shotId' in ref ? ref.shotId : undefined));
 		expect(reusedSourceShotIds).not.toContain('festival-master:shot-plan-096');
 		expect(reusedSourceShotIds).not.toContain('festival-master:shot-plan-095');
 	});

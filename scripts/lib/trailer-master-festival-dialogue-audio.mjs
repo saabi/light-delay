@@ -22,17 +22,34 @@ export const TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP = Object.freeze({
 });
 
 /**
- * @param {object} trailer
- * @param {object} festival
+ * @typedef {{ cueId?: string, scriptId?: string }} CueSourceRef
+ * @typedef {{
+ *   id: string,
+ *   type: string,
+ *   speakerId?: string,
+ *   content?: { variants?: { en?: Record<string, unknown> } },
+ *   sourceRefs?: CueSourceRef[]
+ * }} CueLike
+ * @typedef {{ cues?: CueLike[] }} ScriptLike
+ */
+
+/**
+ * @param {ScriptLike} trailer
+ * @param {ScriptLike} festival
  */
 export function linkTrailerMasterFestivalDialogue(trailer, festival) {
-	const festivalCueById = new Map((festival.cues || []).map((cue) => [cue.id, cue]));
+	const festivalCueById = new Map(
+		(festival.cues || []).map((/** @type {CueLike} */ cue) => [cue.id, cue])
+	);
 	const linked = [];
 	const missing = [];
 
 	for (const cue of trailer.cues || []) {
 		if (cue.type !== 'dialogue') continue;
-		const sourceId = TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP[cue.id];
+		const sourceId =
+			TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP[
+				/** @type {keyof typeof TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP} */ (cue.id)
+			];
 		if (!sourceId) {
 			missing.push({ trailerCueId: cue.id, reason: 'unmapped' });
 			continue;
@@ -52,14 +69,18 @@ export function linkTrailerMasterFestivalDialogue(trailer, festival) {
 			continue;
 		}
 
-		const en = cue.content.variants.en;
+		const en = cue.content?.variants?.en;
+		if (!en) {
+			missing.push({ trailerCueId: cue.id, festivalCueId: sourceId, reason: 'missing-trailer-en' });
+			continue;
+		}
 		en.audioAssetId = srcEn.audioAssetId;
 		en.estimatedDurationMs = srcEn.estimatedDurationMs;
 		if (srcEn.delivery && !en.delivery) en.delivery = srcEn.delivery;
 		if (srcEn.voiceProfileId && !en.voiceProfileId) en.voiceProfileId = srcEn.voiceProfileId;
 
 		const refs = Array.isArray(cue.sourceRefs) ? cue.sourceRefs : [];
-		if (!refs.some((ref) => ref.cueId === sourceId)) {
+		if (!refs.some((/** @type {CueSourceRef} */ ref) => ref.cueId === sourceId)) {
 			cue.sourceRefs = [
 				...refs,
 				{
@@ -81,6 +102,7 @@ export function linkTrailerMasterFestivalDialogue(trailer, festival) {
 	return { linked, missing };
 }
 
+/** @param {unknown} text */
 function normalizeSpoken(text) {
 	return String(text || '')
 		.replace(/[’‘]/g, "'")

@@ -108,12 +108,16 @@ describe('festival-master-dialogue-fit', () => {
 			],
 			2000
 		);
-		expect(filled[1].atMs + filled[1].durationMs).toBe(2000);
+		expect(filled[1]!.atMs + (filled[1]!.durationMs ?? 0)).toBe(2000);
 	});
 
 	it('resolvePlacementDurationMs prefers measured WAV for dialogue', () => {
 		expect(
-			resolvePlacementDurationMs({ cueId: 'a', atMs: 0, durationMs: 100 }, { type: 'dialogue' }, 2500)
+			resolvePlacementDurationMs(
+				{ cueId: 'a', atMs: 0, durationMs: 100 },
+				{ id: 'a', type: 'dialogue' },
+				2500
+			)
 		).toBe(2500);
 	});
 
