@@ -48,7 +48,7 @@ for (const name of shotNames) {
 			...(take.generation ?? {}),
 			referenceAssetIds: [
 				'asset:location-velari-wormhole-mouth-sheet',
-				'asset:vehicle-celestial-ardor-sheet',
+				'asset:vehicle-celestial-ardor-jupiter',
 				'asset:vehicle-celestial-ardor-proportional'
 			]
 		};
@@ -58,7 +58,7 @@ for (const name of shotNames) {
 			...(take.generation ?? {}),
 			referenceAssetIds: [
 				'asset:location-proxima-station-berthed',
-				'asset:vehicle-celestial-ardor-sheet',
+				'asset:vehicle-celestial-ardor-jupiter',
 				'asset:vehicle-celestial-ardor-jupiter'
 			]
 		};

@@ -7,13 +7,15 @@
 		alt,
 		shotId,
 		loading = 'eager',
-		fit = 'contain'
+		fit = 'contain',
+		badgePlacement = 'overlay'
 	}: {
 		media: ShotMedia;
 		alt: string;
 		shotId: string;
 		loading?: 'eager' | 'lazy';
 		fit?: 'contain' | 'cover';
+		badgePlacement?: 'overlay' | 'below';
 	} = $props();
 
 	let failedImagePath = $state<string>();
@@ -25,6 +27,7 @@
 	const missing = $derived(media.state === 'missing' || imageFailed);
 	const displayPath = $derived(missing ? fallbackPath : imagePath);
 	const sourceShotId = $derived(media.take?.imageStatus?.sourceShotId);
+	const provisional = $derived(media.state === 'provisional');
 
 	function onImageError() {
 		if (!missing && imagePath) {
@@ -35,12 +38,19 @@
 	}
 </script>
 
-<div class="frame" class:missing class:provisional={media.state === 'provisional'}>
-	{#if displayPath && !failedFallback}
-		<img src={displayPath} {alt} {loading} onerror={onImageError} style:object-fit={fit} />
-	{:else}
-		<div class="fallback-surface" aria-hidden="true"></div>
-	{/if}
+<div
+	class="frame"
+	class:below={badgePlacement === 'below'}
+	class:missing
+	class:provisional
+>
+	<div class="media-surface">
+		{#if displayPath && !failedFallback}
+			<img src={displayPath} {alt} {loading} onerror={onImageError} style:object-fit={fit} />
+		{:else}
+			<div class="fallback-surface" aria-hidden="true"></div>
+		{/if}
+	</div>
 
 	{#if missing}
 		<div class="missing-label" role="img" aria-label={`Imagen pendiente para ${shotId}`}>
@@ -48,7 +58,7 @@
 			<span>{shotId}</span>
 			{#if imageFailed}<small>No se pudo cargar la imagen asignada</small>{/if}
 		</div>
-	{:else if media.state === 'provisional'}
+	{:else if provisional}
 		<div class="placeholder-label">
 			<strong>PLACEHOLDER</strong>
 			{#if sourceShotId}<span>Origen: {sourceShotId}</span>{/if}
@@ -66,6 +76,29 @@
 		background: #01060b;
 	}
 
+	.frame.below {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		overflow: visible;
+		background: transparent;
+	}
+
+	.media-surface {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		min-height: 0;
+		overflow: hidden;
+		background: #01060b;
+	}
+
+	.frame.below .media-surface {
+		aspect-ratio: 16 / 9;
+		height: auto;
+		flex: none;
+	}
+
 	img,
 	.fallback-surface {
 		display: block;
@@ -81,7 +114,6 @@
 
 	.placeholder-label,
 	.missing-label {
-		position: absolute;
 		z-index: 2;
 		display: flex;
 		gap: 0.4rem;
@@ -89,6 +121,11 @@
 		font-family: var(--font-mono), ui-monospace, monospace;
 		letter-spacing: 0.04em;
 		text-shadow: 0 1px 4px #000;
+	}
+
+	.frame:not(.below) .placeholder-label,
+	.frame:not(.below) .missing-label {
+		position: absolute;
 	}
 
 	.placeholder-label {
@@ -125,5 +162,37 @@
 	.missing-label span,
 	.missing-label small {
 		color: #a8c0cd;
+	}
+
+	.frame.below .placeholder-label,
+	.frame.below .missing-label {
+		position: static;
+		inset: auto;
+		left: auto;
+		top: auto;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-self: flex-start;
+		margin-top: 0.45rem;
+		padding: 0.35rem 0.5rem;
+		border: 1px solid #ffb84d99;
+		border-radius: 4px;
+		background: #120b02dc;
+		font-size: 0.68rem;
+		text-align: left;
+		color: #ffd18b;
+		pointer-events: auto;
+	}
+
+	.frame.below .missing-label strong {
+		font-size: inherit;
+		color: inherit;
+	}
+
+	.frame.below .placeholder-label span,
+	.frame.below .missing-label span,
+	.frame.below .missing-label small {
+		color: #e8edf1;
 	}
 </style>

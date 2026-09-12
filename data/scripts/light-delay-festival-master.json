@@ -11,7 +11,7 @@
     "version": "0.2.0-wip",
     "status": "draft",
     "kind": "festival_cut",
-    "targetDurationMs": 773357,
+    "targetDurationMs": 806519,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -471,7 +471,7 @@
         "festival-master:beat-02"
       ],
       "shotIds": [],
-      "targetDurationMs": 22867,
+      "targetDurationMs": 22889,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -714,8 +714,8 @@
           "en": "Festival sequence F03"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -736,7 +736,7 @@
         "festival-master:beat-07"
       ],
       "shotIds": [],
-      "targetDurationMs": 21740,
+      "targetDurationMs": 24240,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -766,8 +766,8 @@
           "en": "Festival sequence F03"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -824,8 +824,8 @@
           "en": "Festival sequence F03"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -876,8 +876,8 @@
           "en": "Festival sequence F04"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -984,8 +984,8 @@
           "en": "Festival sequence F04"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -1006,7 +1006,7 @@
         "festival-master:beat-12"
       ],
       "shotIds": [],
-      "targetDurationMs": 36470,
+      "targetDurationMs": 40670,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1082,8 +1082,8 @@
           "en": "Festival sequence F05"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -1168,7 +1168,7 @@
         "festival-master:beat-15"
       ],
       "shotIds": [],
-      "targetDurationMs": 29360,
+      "targetDurationMs": 33760,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1285,7 +1285,7 @@
         "festival-master:beat-17"
       ],
       "shotIds": [],
-      "targetDurationMs": 24390,
+      "targetDurationMs": 25490,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1452,7 +1452,7 @@
         "festival-master:beat-20"
       ],
       "shotIds": [],
-      "targetDurationMs": 25580,
+      "targetDurationMs": 30460,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1782,7 +1782,7 @@
         "festival-master:beat-26"
       ],
       "shotIds": [],
-      "targetDurationMs": 24720,
+      "targetDurationMs": 30160,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1812,8 +1812,8 @@
           "en": "Festival sequence F10"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master, tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -1837,7 +1837,7 @@
         "festival-master:beat-27"
       ],
       "shotIds": [],
-      "targetDurationMs": 23180,
+      "targetDurationMs": 33800,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1864,8 +1864,8 @@
           "en": "Festival sequence F10"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master, tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -1920,8 +1920,8 @@
           "en": "Festival sequence F10"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master, tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -2027,8 +2027,8 @@
           "en": "Festival sequence F11"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master, tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -2080,8 +2080,8 @@
           "en": "Festival sequence F11"
         },
         "continuity": {
-          "es": "Seguir el estado de vuelo derivado del master, tal como se enuncia en la acción.",
-          "en": "Follow the master-derived flight state stated in action."
+          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
+          "en": "Microgravity; follow the stated flight event."
         }
       },
       "summary": {
@@ -3861,11 +3861,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it a door humanity never agreed to install.",
+            "spokenText": "At the Jupiter mouth, protesters call it a door humanity never agreed to install. Supporters call tomorrow an invitation.",
             "status": "source",
             "delivery": "broadcast-clear; urgency held behind professional control",
             "voiceProfileId": "voice:reporter-en",
-            "estimatedDurationMs": 9237,
+            "estimatedDurationMs": 9259,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0003"
           },
           "es": {
@@ -5972,6 +5972,43 @@
       }
     },
     {
+      "id": "festival-master:cue-0059b",
+      "beatId": "festival-master:beat-12",
+      "order": 0,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master",
+          "stepId": "festival-master:story-07"
+        }
+      ],
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "on_screen",
+      "performance": {
+        "emotion": {
+          "es": "",
+          "en": "frightened but precise"
+        },
+        "intention": {
+          "es": "",
+          "en": "state the goal before evaluating destinations"
+        },
+        "pace": "normal"
+      },
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Internal comms are cut. I need another way to reach someone.",
+            "status": "source",
+            "estimatedDurationMs": 3900,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0059b"
+          }
+        }
+      }
+    },
+    {
       "id": "festival-master:cue-0060",
       "beatId": "festival-master:beat-12",
       "order": 4,
@@ -6498,6 +6535,80 @@
         "en": "One dry bodily impact in sustained black; Zao’s breath stops."
       },
       "mode": "diegetic"
+    },
+    {
+      "id": "festival-master:cue-0076b",
+      "beatId": "festival-master:beat-15",
+      "order": -2,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master",
+          "stepId": "festival-master:story-09"
+        }
+      ],
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "performance": {
+        "emotion": {
+          "es": "",
+          "en": "controlled, wry, alone"
+        },
+        "intention": {
+          "es": "",
+          "en": "register the weight of what he is about to do"
+        },
+        "pace": "slow"
+      },
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "What a mess.",
+            "status": "source",
+            "estimatedDurationMs": 1100,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0076b"
+          }
+        }
+      }
+    },
+    {
+      "id": "festival-master:cue-0076c",
+      "beatId": "festival-master:beat-15",
+      "order": -1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master",
+          "stepId": "festival-master:story-09"
+        }
+      ],
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "performance": {
+        "emotion": {
+          "es": "",
+          "en": "resolved"
+        },
+        "intention": {
+          "es": "",
+          "en": "commit out loud to disconnecting flight control before doing it"
+        },
+        "pace": "normal"
+      },
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "No problem. I'll cut the flight controls.",
+            "status": "source",
+            "estimatedDurationMs": 2700,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0076c"
+          }
+        }
+      }
     },
     {
       "id": "festival-master:cue-0077",
@@ -7068,6 +7179,24 @@
           }
         }
       }
+    },
+    {
+      "id": "festival-master:cue-0091b",
+      "beatId": "festival-master:beat-17",
+      "order": -1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master",
+          "stepId": "festival-master:story-10"
+        }
+      ],
+      "type": "sound",
+      "description": {
+        "es": "El motor vuelve a encenderse; el peso restablecido asienta a la tripulación y los restos sueltos en la cubierta.",
+        "en": "The engine relights; restored weight settles crew and drifting debris back to the deck."
+      },
+      "mode": "diegetic"
     },
     {
       "id": "festival-master:cue-0092",
@@ -7992,6 +8121,24 @@
       }
     },
     {
+      "id": "festival-master:cue-0113b",
+      "beatId": "festival-master:beat-20",
+      "order": -1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master",
+          "stepId": "festival-master:story-13"
+        }
+      ],
+      "type": "sound",
+      "description": {
+        "es": "El motor vuelve a encenderse; el peso se asienta mientras el Ardor reanuda su aproximación.",
+        "en": "The engine relights; weight settles back as the Ardor resumes its approach."
+      },
+      "mode": "diegetic"
+    },
+    {
       "id": "festival-master:cue-0114",
       "beatId": "festival-master:beat-20",
       "order": 1,
@@ -8234,11 +8381,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Now they’ll never know who saved them.",
+            "spokenText": "Zao missed her aim. The signal's gone, unrecoverable — now they'll never know who saved them.",
             "status": "source",
             "delivery": "private grief, not triumph",
             "voiceProfileId": "voice:harlan-es",
-            "estimatedDurationMs": 2460,
+            "estimatedDurationMs": 6780,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0120"
           },
           "es": {
@@ -9818,11 +9965,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "I needed time. One sign we bite, and they might wait.",
+            "spokenText": "I needed time. One sign that we're not defenseless — that we can bite back — and they'll think twice before they take what they want from us. Earth needs those years.",
             "status": "source",
             "delivery": "rushing because nobody is listening anymore",
             "voiceProfileId": "voice:harlan-es",
-            "estimatedDurationMs": 3820,
+            "estimatedDurationMs": 9260,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0162"
           },
           "es": {
@@ -9993,11 +10140,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "External reference. That I can move.",
+            "spokenText": "It's keyed to the ship's own clock, not a separate one. Feed it a different time reference and it stops trusting when 'now' is.",
             "status": "source",
             "delivery": "a solution forming aloud",
             "voiceProfileId": "voice:rao-es",
-            "estimatedDurationMs": 2460,
+            "estimatedDurationMs": 7740,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0167"
           },
           "es": {
@@ -10151,11 +10298,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Keep it watched. No thrust.",
+            "spokenText": "Keep it watched. No thrust, no vibration — nothing that shakes this ship until we're certain it's safe.",
             "status": "source",
             "delivery": "immediate follow-through",
             "voiceProfileId": "voice:voss-es",
-            "estimatedDurationMs": 2380,
+            "estimatedDurationMs": 5660,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0171"
           },
           "es": {
@@ -11083,7 +11230,7 @@
           "en": "Locked; establishes geography and screen direction."
         }
       },
-      "durationMs": 10137,
+      "durationMs": 10159,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0002",
@@ -11093,7 +11240,7 @@
         {
           "cueId": "festival-master:cue-0003",
           "atMs": 900,
-          "durationMs": 9237
+          "durationMs": 9259
         }
       ],
       "takeIds": [
@@ -12135,17 +12282,17 @@
           "en": "Tracking; establishes geography and screen direction."
         }
       },
-      "durationMs": 5000,
+      "durationMs": 7500,
       "cuePlacements": [
-        {
-          "cueId": "festival-master:cue-0030",
-          "atMs": 0,
-          "durationMs": 5000
-        },
         {
           "cueId": "festival-master:cue-0029c",
           "atMs": 0,
           "durationMs": 2500
+        },
+        {
+          "cueId": "festival-master:cue-0030",
+          "atMs": 2500,
+          "durationMs": 5000
         }
       ],
       "takeIds": [
@@ -12927,8 +13074,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Asustada pero precisa, Zao enumera las rutas fallidas en un panel de comunicaciones: \"Radio. Línea dura. Emergencia. Las tres. Es deliberado\".",
-        "en": "Frightened but precise, Zao names the failed routes at a comms panel: \"Radio. Hardline. Emergency. All three. That's deliberate.\"."
+        "es": "Asustada pero precisa, Zao enumera las rutas fallidas en un panel de comunicaciones: \"Radio. Línea dura. Emergencia. Las tres. Es deliberado\". «Los canales internos están cortados. Necesito otra manera de llegar a alguien».",
+        "en": "Frightened but precise, Zao names the failed routes at a comms panel: \"Radio. Hardline. Emergency. All three. That's deliberate.\" \"Internal comms are cut. I need another way to reach someone.\"."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
       "visibleRefs": [
@@ -12949,7 +13096,7 @@
           "en": "Tracking; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 9590,
+      "durationMs": 13790,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0059",
@@ -12957,8 +13104,13 @@
           "durationMs": 5740
         },
         {
-          "cueId": "festival-master:cue-0060",
+          "cueId": "festival-master:cue-0059b",
           "atMs": 5840,
+          "durationMs": 3900
+        },
+        {
+          "cueId": "festival-master:cue-0060",
+          "atMs": 10040,
           "durationMs": 3750
         }
       ],
@@ -13383,8 +13535,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Ya a solas, Harlan cierra y re-codifica la bóveda con su dispositivo de muñeca, luego alcanza la consola local contigua y desconecta físicamente las líneas de mando de vuelo del puente y el corte remoto. Frío, para sí: \"Ahora ya no se puede detener\".",
-        "en": "Alone now, Harlan closes and rekeys the vault with his wrist device, then reaches to the adjacent local console and physically disconnects the bridge flight-command and remote-cutoff lines. Cold, to himself: \"No stopping it now.\"."
+        "es": "Ya a solas, Harlan reacciona en voz baja: \"Qué desastre\". Se recompone: \"No hay problema. Voy a cortar los controles de vuelo\". Cierra y re-codifica la bóveda con su dispositivo de muñeca, luego alcanza la consola local contigua y desconecta físicamente las líneas de mando de vuelo del puente y el corte remoto. Frío, para sí: \"Ahora ya no se puede detener\".",
+        "en": "Alone now, Harlan mutters, low: \"What a mess.\" He steadies himself: \"No problem. I'll cut the flight controls.\" He closes and rekeys the vault with his wrist device, then reaches to the adjacent local console and physically disconnects the bridge flight-command and remote-cutoff lines. Cold, to himself: \"No stopping it now.\"."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
@@ -13408,21 +13560,31 @@
           "en": "Dolly; establishes geography and screen direction."
         }
       },
-      "durationMs": 7940,
+      "durationMs": 12340,
       "cuePlacements": [
         {
-          "cueId": "festival-master:cue-0077",
+          "cueId": "festival-master:cue-0076b",
           "atMs": 0,
+          "durationMs": 1100
+        },
+        {
+          "cueId": "festival-master:cue-0076c",
+          "atMs": 1200,
+          "durationMs": 2700
+        },
+        {
+          "cueId": "festival-master:cue-0077",
+          "atMs": 4300,
           "durationMs": 5700
         },
         {
           "cueId": "festival-master:cue-0078",
-          "atMs": 5700,
+          "atMs": 10100,
           "durationMs": 800
         },
         {
           "cueId": "festival-master:cue-0078b",
-          "atMs": 6600,
+          "atMs": 11000,
           "durationMs": 1340
         }
       ],
@@ -13836,8 +13998,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "En el puente, con el empuje restablecido, Harlan se vuelve acusador hacia Sorell: \"¿Cómo pudiste? ¿Por qué?\".",
-        "en": "On the bridge, thrust restored, Harlan turns accusing toward Sorell: \"How could you? Why?\"."
+        "es": "En el puente, el empuje se restablece: herramientas sueltas y hojas se asientan en la cubierta, y Harlan pasa de estar sujeto a un agarre a apoyarse firmemente en el piso mientras se vuelve acusador hacia Sorell: \"¿Cómo pudiste? ¿Por qué?\".",
+        "en": "On the bridge, thrust restores: loose tools and sheets settle to the deck, and Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell: \"How could you? Why?\"."
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
@@ -13881,11 +14043,16 @@
           "en": "Tracking; establishes geography and screen direction."
         }
       },
-      "durationMs": 1500,
+      "durationMs": 2600,
       "cuePlacements": [
         {
-          "cueId": "festival-master:cue-0092",
+          "cueId": "festival-master:cue-0091b",
           "atMs": 0,
+          "durationMs": 1000
+        },
+        {
+          "cueId": "festival-master:cue-0092",
+          "atMs": 1100,
           "durationMs": 1500
         }
       ],
@@ -14582,8 +14749,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "De la ráfaga reconstruida de Zao en la pantalla de Elin sólo sobreviven los ángulos de disparo y la actitud de la nave; el vector trazado no apunta a ningún planeta, estación ni baliza.",
-        "en": "Only firing angles and ship attitude survive from Zao's reconstructed burst on Elin's display; the plotted vector points at no planet, station, or beacon."
+        "es": "El empuje se restablece y el peso asienta a Elin en su puesto mientras revisa la pantalla: de la ráfaga reconstruida de Zao sólo sobreviven los ángulos de disparo y la actitud de la nave; el vector trazado no apunta a ningún planeta, estación ni baliza.",
+        "en": "Thrust restores and weight settles Elin at her station as she reads the display: only firing angles and ship attitude survive from Zao's reconstructed burst; the plotted vector points at no planet, station, or beacon."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -14624,21 +14791,26 @@
           "en": "Locked; establishes geography and screen direction."
         }
       },
-      "durationMs": 8160,
+      "durationMs": 9160,
       "cuePlacements": [
         {
-          "cueId": "festival-master:cue-0114",
+          "cueId": "festival-master:cue-0113b",
           "atMs": 0,
+          "durationMs": 1000
+        },
+        {
+          "cueId": "festival-master:cue-0114",
+          "atMs": 1000,
           "durationMs": 1200
         },
         {
           "cueId": "festival-master:cue-0115",
-          "atMs": 1300,
+          "atMs": 2300,
           "durationMs": 4540
         },
         {
           "cueId": "festival-master:cue-0116",
-          "atMs": 5940,
+          "atMs": 6940,
           "durationMs": 2220
         }
       ],
@@ -14752,21 +14924,21 @@
           "en": "Dolly; orthogonal, legible insert framing."
         }
       },
-      "durationMs": 8520,
+      "durationMs": 12400,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0120",
           "atMs": 0,
-          "durationMs": 2460
+          "durationMs": 6780
         },
         {
           "cueId": "festival-master:cue-0121",
-          "atMs": 3000,
+          "atMs": 6880,
           "durationMs": 2000
         },
         {
           "cueId": "festival-master:cue-0122",
-          "atMs": 5100,
+          "atMs": 8980,
           "durationMs": 3420
         }
       ],
@@ -16062,7 +16234,7 @@
           "en": "Dolly; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 9660,
+      "durationMs": 15100,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0161",
@@ -16072,11 +16244,11 @@
         {
           "cueId": "festival-master:cue-0162",
           "atMs": 3600,
-          "durationMs": 3820
+          "durationMs": 9260
         },
         {
           "cueId": "festival-master:cue-0163",
-          "atMs": 7520,
+          "atMs": 12960,
           "durationMs": 2140
         }
       ],
@@ -16161,8 +16333,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Ve la entrada de temporización de servicio científico de la bomba junto al mismo instrumento portátil de diagnóstico que dejó horas antes; esperanzada, lo conecta: «Referencia externa. Eso sí lo puedo mover».",
-        "en": "She sees the bomb's scientific service timing input beside the same portable diagnostic instrument she planted hours earlier; hopeful, she connects it: \"External reference. That I can move.\"."
+        "es": "Ve la entrada de temporización de servicio científico de la bomba junto al mismo instrumento de diagnóstico portátil que plantó horas antes; esperanzada, lo conecta: «Está sincronizado con el reloj propio de la nave, no uno separado. Le doy otra referencia de tiempo y deja de confiar en cuándo es 'ahora'».",
+        "en": "She sees the bomb's scientific service timing input beside the same portable diagnostic instrument she planted hours earlier; hopeful, she connects it: \"It's keyed to the ship's own clock, not a separate one. Feed it a different time reference and it stops trusting when 'now' is.\"."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
@@ -16198,7 +16370,7 @@
           "en": "Locked; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 8360,
+      "durationMs": 15700,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0166",
@@ -16208,11 +16380,11 @@
         {
           "cueId": "festival-master:cue-0167",
           "atMs": 5000,
-          "durationMs": 2460
+          "durationMs": 7740
         },
         {
           "cueId": "festival-master:cue-0168",
-          "atMs": 7560,
+          "atMs": 14900,
           "durationMs": 800
         }
       ],
@@ -16230,8 +16402,8 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "La pantalla cuenta 4—3—2—1 y luego salta hacia arriba, más allá del límite. Voss, tenso, exige por radio: «¿Estado?» Elin Rao, aliviada: «No está desarmada. Simplemente no va a estallar aquí».",
-        "en": "The display counts 4—3—2—1, then jumps upward past the deadline. Voss, tense, demands over comm: \"Status?\" Elin Rao, relieved: \"It isn't disarmed. It just isn't going off here.\"."
+        "es": "El contador marca 4—3—2—1, luego salta hacia arriba más allá del plazo. Voss, tenso, exige por el comunicador: «¿Estado?». Elin Rao, aliviada: «No está desarmada. Sólo que no va a estallar aquí». Voss: «Que quede vigilada. Nada de empuje ni vibración — nada que sacuda esta nave hasta que estemos seguros».",
+        "en": "The display counts 4—3—2—1, then jumps upward past the deadline. Voss, tense, demands over comm: \"Status?\" Elin Rao, relieved: \"It isn't disarmed. It just isn't going off here.\" Voss, immediate: \"Keep it watched. No thrust, no vibration — nothing that shakes this ship until we're certain it's safe.\"."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
@@ -16265,7 +16437,7 @@
           "en": "Tracking; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 6140,
+      "durationMs": 9420,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0169",
@@ -16280,7 +16452,7 @@
         {
           "cueId": "festival-master:cue-0171",
           "atMs": 3760,
-          "durationMs": 2380
+          "durationMs": 5660
         }
       ],
       "takeIds": [
@@ -16846,8 +17018,8 @@
       "number": 4,
       "order": 4,
       "description": {
-        "es": "Dentro de la esfera transparente, un individuo velari de tamaño completo —de unos 2,5 a 3 metros de altura, con un manto alargado y patrones luminosos ramificados a lo largo de su superficie— orienta su manto hacia Sorell, reúne su luz, sostiene la atención y luego devuelve el saludo humano en luz viva.",
-        "en": "Inside the transparent sphere, a full-size Velari individual — roughly 2.5 to 3 metres tall, an elongated mantle, branching luminous patterns along its surface — orients its mantle toward Sorell, gathers its light, holds attention, then extends the human greeting back in living light."
+        "es": "Todavía en su traje EVA y casco, con el cable de seguridad visible, Sorell alcanza la esfera transparente en el espacio abierto; un individuo velari de tamaño completo —de unos 2,5 a 3 metros de altura, con un manto alargado y patrones luminosos ramificados a lo largo de su superficie— orienta su manto hacia ella a través de la pared transparente de la esfera, reúne su luz, sostiene la atención y luego devuelve el saludo humano en luz viva. El Ardor, la estación Velari y el campo de estrellas permanecen visibles a través de la esfera.",
+        "en": "Still in her EVA suit and helmet, tether visible, Sorell reaches the transparent sphere in open space; a full-size Velari individual — roughly 2.5 to 3 metres tall, an elongated mantle, branching luminous patterns along its surface — orients its mantle toward her through the sphere's transparent wall, gathers its light, holds attention, then extends the human greeting back in living light. The Ardor, the Velari station, and the starfield stay visible through the sphere."
       },
       "locationId": "location:velari-station",
       "visibleRefs": [
@@ -17262,9 +17434,9 @@
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Static 16:9 opening title card at Proxima Station in the Sun–Jupiter system. The station and the Celestial Ardor are near Jupiter, before departure toward the Jupiter-mouth throat; Jupiter dominates the left background with unmistakable banded cloud detail. Preserve the established rotating station ring-and-spine geometry and Ardor axial silhouette. Hold the exact English title text \"LIGHT DELAY\" in clean thin widely tracked white sans-serif lettering across the dark negative space. No Earth, no Earth-like blue planet, no continents, no Earth city lights, no other text. Locked camera, quiet observational mood, cold starlight and restrained warm Jovian reflections, grounded cinematic hard-science-fiction concept art, 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
-          "asset:vehicle-celestial-ardor-sheet",
+          "asset:location-proxima-station-berthed",
           "asset:vehicle-celestial-ardor-jupiter",
-          "asset:location-proxima-station-berthed"
+          "asset:vehicle-celestial-ardor-jupiter"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -17819,7 +17991,9 @@
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. After nearly a day and a half of deceleration, the Ardor arrives retrograde, engine-first, near the Velari tunnel mouth; its main torch burns bright on approach, then dims and cuts to nothing as the precision-approach burn ends. Setting: the Velari wormhole mouth's threshold — a distributed field of black nodes kilometres apart hangs distant in the background, never forming a visible ring or glowing aperture (the 150-200 m opening only exists during the energy pulse, not now). Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis, oriented engine-first (retrograde) for the deceleration burn. No gravity reference (exterior shot). Frame implies a tracking move, establishing geography and screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, a visible glowing ring-shaped aperture or active wormhole opening (the mouth is closed outside its pulse window), Saturn-style bold bright planetary rings (this is the wormhole mouth's node field, not Jupiter)",
         "referenceAssetIds": [
-          "asset:location-velari-wormhole-mouth-sheet"
+          "asset:location-velari-wormhole-mouth-sheet",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-proportional"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -17844,7 +18018,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. Zao braces at an engineering console, concentrating, while loose gear floats past behind her: \"Burn's clean. Feed is clean. So what were we carrying?\". Setting: the ship's dense engineering deck — exposed piping and physical access panels, a maintainable-machine aesthetic with no abstract or decorative interior. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: Engineering console showing burn/fuel diagnostic readouts, English labels only. Frame implies a slow pan, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. Zao braces at an engineering console, concentrating, while loose gear floats past behind her: \"Burn's clean. Feed is clean. So what were we carrying?\". Setting: the ship's dense engineering deck — exposed piping and physical access panels, a maintainable-machine aesthetic with no abstract or decorative interior. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Zao (matching her established reference sheet). Detail: Engineering console showing burn/fuel diagnostic readouts, English labels only. Frame implies a slow pan, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -17873,7 +18047,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. She recomputes the propellant profile; a small excess repeats exactly across the long leg. Uneasy, she commits: \"One point three tonnes. Not noise.\" Her wrist dosimeter begins a sparse neutron tick. Setting: the ship's dense engineering deck — exposed piping and physical access panels, a maintainable-machine aesthetic with no abstract or decorative interior. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: Console readout highlighting a repeating propellant discrepancy; small wrist dosimeter with a faint tick indicator. Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. She recomputes the propellant profile; a small excess repeats exactly across the long leg. Uneasy, she commits: \"One point three tonnes. Not noise.\" Her wrist dosimeter begins a sparse neutron tick. Setting: the ship's dense engineering deck — exposed piping and physical access panels, a maintainable-machine aesthetic with no abstract or decorative interior. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Zao (matching her established reference sheet). Detail: Console readout highlighting a repeating propellant discrepancy; small wrist dosimeter with a faint tick indicator. Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -17903,8 +18077,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. The neutron count strengthens toward the vault door. Harlan emerges from its inner bay and meets Zao in the passage, guarded: \"Engineer. Your readings brought you aft as well?\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Frame implies a tracking move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan emerges from the inner bay and meets Zao in the passage, guarded: \"Engineer. Your readings brought you aft as well?\" Composition: MCU framing. Camera: Tracking; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:character-harlan-sheet",
@@ -17916,7 +18090,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-018",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -17927,7 +18100,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-018"
     },
     {
       "id": "festival-master:shot-plan-019:take-01",
@@ -17935,8 +18109,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Harlan, controlled, explains his access: \"Scheduled inspection. The latch is temperamental in free-fall.\" Zao, watchful then firm, answers without revealing suspicion: \"They brought me to the door you just left. I’ll take it from here.\" Continuing directly from the previous shot’s blocking (Zao screen-left near the vault access door, Harlan screen-right facing her across the passage), Harlan now turns and walks away alone, back to camera, departing in the opposite direction from the vault; Zao stays behind near the vault access door, watching him go, empty-handed, then turns toward it herself. They do not walk together and are not moving in the same direction. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array’s local control, and a drawer of scientific diagnostic instruments; secondary: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet, standing alone near the vault door); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing, walking away alone, empty-handed). Frame implies a dolly move, preserving eyeline and action-axis continuity with the previous shot. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration, Harlan and Zao walking together in the same direction, Harlan carrying a briefcase or any bag or case, invented props not described in the prompt",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan explains his access, then turns and walks away alone in the opposite direction from the vault while Zao remains by the door and watches him go. Preserve the established blocking; he has touched no flight control. Composition: ELS framing. Camera: Dolly; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:character-harlan-sheet",
@@ -17967,8 +18141,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Inside the incompletely secured vault, Zao follows markings and the neutron peak to a squat, armored, tonne-scale device wired to a small illuminated controller displaying the encounter coordinates and time. Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface; secondary: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: A Proxima geophysical impulse package: dense metal casing, radiation-warning markings, a compact armed controller with a small illuminated countdown/coordinate readout in English. Frame implies a slow pan, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao follows the markings and neutron peak to the encounter coordinates and time on the local controller. Composition: MS framing. Camera: Pan; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-inner-shielding-vault-sheet",
@@ -17980,7 +18154,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-020",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -17991,7 +18164,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-020"
     },
     {
       "id": "festival-master:shot-plan-021:take-01",
@@ -17999,8 +18173,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Shocked, then afraid, Zao reads the controller aloud to herself: \"Geophysical impulse package… one point three tonnes. Multi-megaton. Contact coordinates. Contact time.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: Close view of the controller readout, English text only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao reads the controller aloud, shocked and afraid: \"Geophysical impulse package… one point three tonnes. Multi-megaton. Contact coordinates. Contact time.\" Composition: CU framing. Camera: Locked; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-inner-shielding-vault-sheet",
@@ -18010,7 +18184,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-021",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18021,7 +18194,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-021"
     },
     {
       "id": "festival-master:shot-plan-022:take-01",
@@ -18029,8 +18203,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. She looks from the bomb's timer to an ordinary wrist communications clock; resolved, she rejects an innocent explanation: \"No. No one sent this by mistake.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: Wrist communications display beside the bomb's countdown, both in English. Frame implies a tracking move, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao compares the bomb timer with an ordinary wrist communications clock and rejects an innocent explanation: \"No. No one sent this by mistake.\" Composition: INSERT framing. Camera: Tracking; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-inner-shielding-vault-sheet",
@@ -18040,7 +18214,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-022",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18051,7 +18224,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-022"
     },
     {
       "id": "festival-master:shot-plan-023:take-01",
@@ -18059,14 +18233,12 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. Harlan rises unseen from the recessed service hatch behind the command vestibule as the bridge crew, facing forward, hears Zao's channel open: \"Bridge, Zao. I have found a grave attempt to sabotage the mission—\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the command-deck vestibule behind the bridge — two stair landings, one beside the service cylinder and one beside the lift shaft, a recessed dark service hatch hidden from the crew stations' sightline. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing); Sorell (matching her established reference sheet); Elin Rao (matching her established reference sheet); Okoye (Nigerian, around forty, deep dark-brown skin, defined cheekbones, short tightly coiled natural black hair, compact athletic build, charcoal shipboard security suit with tether and non-lethal restraint hardware at the belt). Frame implies a dolly move, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan rises unseen from the recessed service hatch as the bridge crew faces forward and hears Zao open the channel: \"Bridge, Zao. I have found a grave attempt to sabotage the mission—\" Composition: INSERT framing. Camera: Dolly; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:character-sorell-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-voss-sheet",
           "asset:character-harlan-sheet",
+          "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:location-celestial-ardor-bridge-service-shaft-reference"
         ],
@@ -18074,7 +18246,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-023",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18085,7 +18256,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-023"
     },
     {
       "id": "festival-master:shot-plan-024:take-01",
@@ -18093,8 +18265,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Only when the word 'sabotage' lands does Harlan touch his wrist device. The channel dies mid-word. He withdraws into the service hatch before anyone on the bridge turns. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the command-deck vestibule behind the bridge — two stair landings, one beside the service cylinder and one beside the lift shaft, a recessed dark service hatch hidden from the crew stations' sightline. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Detail: A small wrist-mounted control device, subtly lit, on Harlan's forearm. Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan touches his wrist device only when the word \"sabotage\" lands; the channel dies mid-word and he withdraws into the service hatch before anyone turns. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
@@ -18105,7 +18277,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-024",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18116,7 +18287,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-024"
     },
     {
       "id": "festival-master:shot-plan-025:take-01",
@@ -18124,8 +18296,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Elin Rao, focused, reports the outage from her station: \"Wireless just vanished across her deck.\" Voss, urgent, splits the response: \"Elin, find the break. Okoye, bridge security.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet); Sorell (matching her established reference sheet); Elin Rao (matching her established reference sheet); Okoye (Nigerian, around forty, deep dark-brown skin, defined cheekbones, short tightly coiled natural black hair, compact athletic build, charcoal shipboard security suit with tether and non-lethal restraint hardware at the belt). Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Elin reports the wireless outage: \"Wireless just vanished across her deck.\" Voss urgently assigns the response: \"Elin, find the break. Okoye, bridge security.\" Composition: ELS framing. Camera: Locked; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
@@ -18137,7 +18309,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-025",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18148,7 +18319,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-025"
     },
     {
       "id": "festival-master:shot-plan-026:take-01",
@@ -18246,8 +18418,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. Zao finishes her sentence into dead air, then rapidly tests every channel in turn while the bomb's timer continues behind her, unseen but implied by a small wall countdown. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: Small secondary countdown display visible in the background, English digits only. Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao finishes into dead air and rapidly tests every channel in turn while the small wall countdown continues behind her. Composition: INSERT framing. Camera: Locked; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -18257,7 +18429,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-029",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18268,7 +18439,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-029"
     },
     {
       "id": "festival-master:shot-plan-030:take-01",
@@ -18276,8 +18448,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Frightened but precise, Zao names the failed routes at a comms panel: \"Radio. Hardline. Emergency. All three. That's deliberate.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao names the failed routes at the comms panel: \"Radio. Hardline. Emergency. All three. That’s deliberate.\" \"Internal comms are cut. I need another way to reach someone.\" Composition: MCU framing. Camera: Tracking; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -18287,7 +18459,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-030",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18298,7 +18469,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-030"
     },
     {
       "id": "festival-master:shot-plan-031:take-01",
@@ -18306,8 +18478,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Pressed, Zao eliminates routes aloud at the independent optical-array console: \"Proxima's behind Jupiter. Earth gets it, answers too late. The throat won't listen.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: Independent optical-array control panel, separate from the disabled comms, English labels only. Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao eliminates the destinations aloud at the independent optical-array console: \"Proxima’s behind Jupiter. Earth gets it, answers too late. The throat won’t listen.\" Composition: ELS framing. Camera: Dolly; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -18317,7 +18489,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-031",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18328,7 +18499,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-031"
     },
     {
       "id": "festival-master:shot-plan-032:take-01",
@@ -18336,8 +18508,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. The crossing clock aligns with ordinary light-time on her display. Zao stops talking, resolved, and begins plotting a moving intercept: \"There you are.\" Only \"23 H 15 MIN\" is legible on screen; destination and trajectory stay hidden from view. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet). Detail: Display shows only the legible readout \"23 H 15 MIN\" — no destination, no trajectory line, no aim point visible. Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The crossing clock aligns with ordinary light-time. Zao begins plotting a moving intercept and says, \"There you are.\" Only \"23 H 15 MIN\" is legible; destination and trajectory remain hidden. Composition: MS framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -18347,7 +18519,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-032",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18358,7 +18529,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-032"
     },
     {
       "id": "festival-master:shot-plan-033:take-01",
@@ -18456,8 +18628,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Harlan enters as Zao closes the pointing solution before he can read it; he sees only that a transmission left, dangerous and focused: \"Who did you send that to?\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Frame implies a slow pan, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan enters as Zao closes the pointing solution; he sees only that a focused transmission left and asks, \"Who did you send that to?\" Composition: MCU framing. Camera: Pan; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:character-harlan-sheet",
@@ -18468,7 +18640,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-036",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18479,7 +18650,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-036"
     },
     {
       "id": "festival-master:shot-plan-037:take-01",
@@ -18487,8 +18659,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Zao says nothing. Harlan, calculating, narrows the destination aloud: \"Not Proxima. Not the throat. You don't speak Velari.\" Then grim, reassuring himself: \"Earth, then. They may believe you. Their answer still can't reach us before contact.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan narrows the destination aloud: \"Not Proxima. Not the throat. You don’t speak Velari.\" Then he reassures himself: \"Earth, then. They may believe you. Their answer still can’t reach us before contact.\" Composition: ELS framing. Camera: Locked; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:character-harlan-sheet",
@@ -18499,7 +18671,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-037",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18510,7 +18681,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-037"
     },
     {
       "id": "festival-master:shot-plan-038:take-01",
@@ -18518,8 +18690,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Harlan, sorrowful for a moment, closes the distance: \"You should never have had to find it.\" He moves in; the frame cuts to black before impact — no violence shown, only the closing distance between them. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Zao (matching her established reference sheet); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan, briefly sorrowful, says, \"You should never have had to find it,\" closes the distance, and moves in; cut to black before impact. Composition: MS framing. Camera: Tracking; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
           "asset:character-harlan-sheet",
@@ -18530,7 +18702,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-038",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18541,7 +18712,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-038"
     },
     {
       "id": "festival-master:shot-plan-039:take-01",
@@ -18549,7 +18721,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Alone now, Harlan closes and rekeys the vault with his wrist device, then reaches to the adjacent local console and physically disconnects the bridge flight-command and remote-cutoff lines. Cold, to himself: \"No stopping it now.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Detail: Wrist device pressed against the vault's lock panel; separately, a labeled flight-command terminal at the local console with a cable visibly pulled free. Frame implies a dolly move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Alone now, Harlan mutters, low: \"What a mess.\" He steadies himself: \"No problem. I'll cut the flight controls.\" He closes and rekeys the vault with his wrist device, then reaches to the adjacent local console and physically disconnects the bridge flight-command and remote-cutoff lines. Cold, to himself: \"No stopping it now.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Detail: Wrist device pressed against the vault's lock panel; separately, a labeled flight-command terminal at the local console with a cable visibly pulled free. Frame implies a dolly move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -18800,23 +18972,19 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. On the bridge, thrust restored, Harlan turns accusing toward Sorell: \"How could you? Why?\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing); Sorell (matching her established reference sheet); Elin Rao (matching her established reference sheet); Okoye (Nigerian, around forty, deep dark-brown skin, defined cheekbones, short tightly coiled natural black hair, compact athletic build, charcoal shipboard security suit with tether and non-lethal restraint hardware at the belt). Frame implies a tracking move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: As thrust restores, loose tools and sheets settle to the deck. Harlan plants his feet and turns accusingly toward Sorell: \"How could you? Why?\" Composition: OTS framing. Camera: Tracking; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-harlan-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-harlan-sheet",
           "asset:character-sorell-sheet",
           "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-046",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -18827,7 +18995,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-046"
     },
     {
       "id": "festival-master:shot-plan-047:take-01",
@@ -19163,12 +19332,11 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Only firing angles and ship attitude survive from Zao's reconstructed burst on Elin's display; the plotted vector points at no planet, station, or beacon. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Elin Rao (matching her established reference sheet). Detail: Display showing a firing-angle plot with no matching destination marker, English labels only. Locked, static frame, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Elin reads the surviving firing angles and ship attitude; the reconstructed vector points at no planet, station, or beacon. Composition: CU framing. Camera: Locked; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-harlan-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
@@ -19177,7 +19345,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-057",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -19188,7 +19355,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-057"
     },
     {
       "id": "festival-master:shot-plan-058:take-01",
@@ -19229,7 +19397,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. Alone for a moment, Harlan watches the unrecoverable burst record, mourning: \"Now they'll never know who saved them.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Frame implies a dolly move, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. Alone for a moment, Harlan watches the unrecoverable burst record, mourning: \"Zao missed her aim. The signal's gone, unrecoverable — now they'll never know who saved them.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Frame implies a dolly move, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -19883,7 +20051,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Desperate, then frantic, tethered and restrained, Harlan pleads his case: \"You don't know what they are. You don't get to answer for Earth. I needed time. One sign we bite, and they might wait.\" Voss, commanding, turns away: \"Not now. Elin, open it.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Desperate, then frantic, tethered and restrained, Harlan pleads his case: \"You don't know what they are. You don't get to answer for Earth. I needed time. One sign that we're not defenseless — that we can bite back — and they'll think twice before they take what they want from us. Earth needs those years.\" Voss, commanding, turns away: \"Not now. Elin, open it.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -19916,23 +20084,19 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Elin Rao opens the vault with the recovered wrist device; local indicators confirm Zao's warning, fast and focused: \"No power cut. No damage. She was right.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface; secondary: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Elin Rao (matching her established reference sheet). Detail: Vault indicators showing a warning against power loss or physical tampering, English labels only. Frame implies a slow pan, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Elin opens the vault with the recovered wrist device; local indicators confirm Zao’s warning. She says, \"No power cut. No damage. She was right.\" Composition: MS framing. Camera: Pan; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-rao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-harlan-wrist-device-sheet, asset:object-optical-contingency-transmitter-sheet, asset:character-voss-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-rao-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "asset:object-harlan-wrist-device-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:character-voss-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-080",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -19943,7 +20107,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-080"
     },
     {
       "id": "festival-master:shot-plan-081:take-01",
@@ -19951,20 +20116,18 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. She sees the bomb's scientific service timing input beside the same portable diagnostic instrument she planted hours earlier; hopeful, she connects it: \"External reference. That I can move.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Elin Rao (matching her established reference sheet). Detail: The same compact diagnostic instrument from scene 19, now wired directly into the bomb controller's timing input. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Elin connects the external scientific timing reference beside the bomb: \"External reference. That I can move.\" Composition: CU framing. Camera: Locked; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-rao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:object-time-reference-diagnostic-unit-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-rao-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet",
+          "asset:object-time-reference-diagnostic-unit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-081",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -19975,7 +20138,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-081"
     },
     {
       "id": "festival-master:shot-plan-082:take-01",
@@ -19983,19 +20147,19 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. The display counts 4—3—2—1, then jumps upward past the deadline. Voss, tense, demands over comm: \"Status?\" Elin Rao, relieved: \"It isn't disarmed. It just isn't going off here.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Elin Rao (matching her established reference sheet). Detail: The countdown display visibly jumping from \"1\" upward past its original deadline, English digits only. Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The display counts 4—3—2—1, then jumps upward. Voss asks, \"Status?\" Elin answers, \"It isn’t disarmed. It just isn’t going off here.\" Composition: OTS framing. Camera: Tracking; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-rao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:character-okoye-sheet, asset:character-harlan-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet",
           "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+          "asset:character-harlan-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-082",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20006,7 +20170,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-082"
     },
     {
       "id": "festival-master:shot-plan-083:take-01",
@@ -20014,21 +20179,19 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. Sorell finishes translating the Velari primer's geometry into branching patterns of light for the ship's hull display. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Sorell (matching her established reference sheet). Detail: A schematic preview of branching light patterns on a bridge display, English interface labels only. Frame implies a dolly move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell finishes translating the Velari primer into branching patterns of light for the ship’s hull display. Composition: INSERT framing. Camera: Dolly; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-083",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20039,7 +20202,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-083"
     },
     {
       "id": "festival-master:shot-plan-084:take-01",
@@ -20047,21 +20211,19 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Sorell, awed: \"They wrote the primer. This is the first time they'll hear us read it back.\" Voss, remorseful, speaks quietly to her: \"Lian… I mistook caution for refusal. I sent you alone, then decided too quickly what that meant. I'm sorry.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Sorell (matching her established reference sheet); Voss (matching his established reference sheet). Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell says, awed: \"They wrote the primer. This is the first time they’ll hear us read it back.\" Voss quietly apologizes for mistaking caution for refusal. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-084",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20072,7 +20234,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-084"
     },
     {
       "id": "festival-master:shot-plan-085:take-01",
@@ -20080,21 +20243,19 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Sorell, pressed but not cruel: \"We can be sorry later. Right now, I need to be right.\" Voss, decisive, authorizes only the clean message: \"One greeting. Nothing else. Send.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Sorell (matching her established reference sheet); Voss (matching his established reference sheet). Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell answers, pressed but not cruel: \"We can be sorry later. Right now, I need to be right.\" Voss authorizes only the clean greeting: \"One greeting. Nothing else. Send.\" Composition: ELS framing. Camera: Locked; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-085",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20105,7 +20266,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-085"
     },
     {
       "id": "festival-master:shot-plan-086:take-01",
@@ -20113,14 +20275,12 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Structured light branches across the Celestial Ardor's hull, visible through the bridge's small reinforced windows; the 4-5 km Velari station beyond stays dark through a deliberate silence. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet); Sorell (matching her established reference sheet); Elin Rao (matching her established reference sheet); Okoye (Nigerian, around forty, deep dark-brown skin, defined cheekbones, short tightly coiled natural black hair, compact athletic build, charcoal shipboard security suit with tether and non-lethal restraint hardware at the belt); Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Detail: Branching hull-light patterns visible through the bridge windows, the distant organic station remaining unlit. Frame implies a tracking move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Structured light branches across the Ardor’s hull, visible through the bridge’s small reinforced windows; the Velari station remains dark through a deliberate silence. Composition: MS framing. Camera: Tracking; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-velari-station-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
           "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:location-velari-station-sheet"
         ],
@@ -20128,7 +20288,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-086",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20139,7 +20298,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-086"
     },
     {
       "id": "festival-master:shot-plan-087:take-01",
@@ -20147,21 +20307,17 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. The station answers with an immense luminous grammar spreading across its living skin; Sorell, astonished, catches only fragments through her parser: \"Approach. Permission… meeting.\". Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Sorell (matching her established reference sheet). Detail: Vast, organic branching light patterns across the station's skin, no legible alien script — light-based, not textual. Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The Velari station answers with luminous grammar across its living skin. Sorell catches fragments through her parser: \"Approach. Permission… meeting.\" Composition: CU framing. Camera: Dolly; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:location-velari-station-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
+          "asset:character-voss-sheet",
           "asset:location-velari-station-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-087",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20172,7 +20328,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-087"
     },
     {
       "id": "festival-master:shot-plan-088:take-01",
@@ -20180,21 +20337,16 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. A transparent environmental sphere, personal in scale, separates from the station and approaches the Ardor without visible exhaust. Sorell, moved: \"They're sending someone.\". Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Sorell (matching her established reference sheet). Detail: A small transparent spherical craft — personal/shuttle scale, not to be confused with the much larger organic emissary ship — approaching with no visible engines or exhaust. Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The Velari Transport Sphere separates from the station and approaches the Ardor with no visible engines or exhaust (matching its established reference). Sorell says, \"They’re sending someone.\" Composition: OTS framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet",
-          "asset:location-velari-station-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-088",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20205,7 +20357,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-088"
     },
     {
       "id": "festival-master:shot-plan-089:take-01",
@@ -20213,12 +20366,12 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. Sorell exits alone on a tether in a spacesuit, her helmet suit-camera feed showing on Voss's distant bridge display. The transparent sphere waits, motionless, between ship and station. Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Sorell (matching her established reference sheet). Detail: Sorell in a full EVA spacesuit with helmet and tether; a small inset feed of Voss's bridge visible on her display. Locked, static frame, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell exits alone on a tether in a spacesuit; her suit-camera feed appears on Voss’s distant bridge display. The Velari Transport Sphere waits, motionless, between ship and station (matching its established reference). Composition: INSERT framing. Camera: Locked; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:location-velari-station-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -20243,7 +20396,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Voss, concerned, watches her suit-camera feed on the bridge: \"Tether good. You can still come back.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet). Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Voss, concerned, watches her suit-camera feed on the bridge: \"Tether good. You can still come back.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Voss (matching his established reference sheet). Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
@@ -20272,11 +20425,11 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Resolved, drifting on her tether toward the waiting sphere: \"That's what makes going mean something.\". Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Sorell (matching her established reference sheet). Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Resolved, Sorell drifts on her tether toward the waiting Velari Transport Sphere: \"That’s what makes going mean something.\" Composition: ELS framing. Camera: Dolly; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:location-velari-station-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -20301,17 +20454,17 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Inside the transparent sphere, a full-size Velari individual — roughly 2.5 to 3 metres tall, an elongated mantle, branching luminous patterns along its surface — orients its mantle toward Sorell, gathers its light, holds attention, then extends the human greeting back in living light. Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Sorell (matching her established reference sheet). Detail: A single Velari envoy: tall, elongated bioluminescent mantle, no humanoid limbs or face, communicating in shifting branched light patterns. Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Still in her EVA suit and helmet, tether visible, Sorell reaches the Velari Transport Sphere in open space. The Velari envoy (matching its established reference) orients toward her through the sphere’s transparent wall, gathers its light, holds attention, then extends the human greeting back in living light. The Ardor, the Velari station, and the starfield stay visible through the sphere. Composition: MS framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:vehicle-velari-transport-sphere-sheet, asset:character-velari-envoy-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:location-velari-station-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:character-velari-envoy-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-092",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20322,7 +20475,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-092"
     },
     {
       "id": "festival-master:shot-plan-093:take-01",
@@ -20330,23 +20484,19 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Before the return window, flight commands still need repair and the armed package remains under constant watch. Okoye, steady: \"Harlan is secure. I'll take first watch aft.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Okoye (Nigerian, around forty, deep dark-brown skin, defined cheekbones, short tightly coiled natural black hair, compact athletic build, charcoal shipboard security suit with tether and non-lethal restraint hardware at the belt). Locked, static frame, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Before the return window, flight commands still need repair and the armed package remains under constant watch. Okoye says, steady: \"Harlan is secure. I’ll take first watch aft.\" Composition: CU framing. Camera: Locked; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-okoye-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
           "asset:character-okoye-sheet",
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-093",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20357,7 +20507,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-093"
     },
     {
       "id": "festival-master:shot-plan-094:take-01",
@@ -20365,8 +20516,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. Elin Rao, focused, states the remaining obligations: \"Bridge path is repairable. The bomb still gets a person beside it.\" Voss, resolved, changes procedure after the failure: \"Rotate every twenty minutes. Nobody works alone.\". Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet); Elin Rao (matching her established reference sheet). Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Elin states the remaining obligations: \"Bridge path is repairable. The bomb still gets a person beside it.\" Voss changes procedure: \"Rotate every twenty minutes. Nobody works alone.\" Composition: OTS framing. Camera: Tracking; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
@@ -20378,7 +20529,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-094",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20389,7 +20539,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-094"
     },
     {
       "id": "festival-master:shot-plan-095:take-01",
@@ -20397,8 +20548,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. Voss uses the restored optical array to send Earth an independent record of discovery, murder, warning, intervention, and contact, solemn, attaching Zao's signed message and personnel file: \"Proxima Control, this is Celestial Ardor. Full record follows. Chief Engineer Zao found the weapon, warned us, and preserved first contact.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet). Detail: The optical-array console displaying an outgoing report header, English text only. Frame implies a dolly move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Voss uses the restored optical array to send Earth an independent record of discovery, murder, warning, intervention, and contact, attaching Zao’s signed message and personnel file: \"Proxima Control, this is Celestial Ardor. Full record follows. Chief Engineer Zao found the weapon, warned us, and preserved first contact.\" Composition: INSERT framing. Camera: Dolly; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-zao-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-zao-sheet",
@@ -20409,7 +20560,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-095",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20420,7 +20570,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-095"
     },
     {
       "id": "festival-master:shot-plan-096:take-01",
@@ -20428,8 +20579,8 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. The console reads \"TRANSMITTED.\" Zao's personnel photograph remains on the display. Voss, grieving, speaks to it quietly: \"You made it in time.\". Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Cast: Voss (matching his established reference sheet). Detail: The console reading only \"TRANSMITTED\" in English beside Zao's personnel photograph — a calm official ID-style portrait, not an action pose. Frame implies a slow pan, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The console reads \"TRANSMITTED.\" Zao’s personnel photograph remains on the display. Voss speaks to it quietly: \"You made it in time.\" Composition: INSERT framing. Camera: Pan; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-zao-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-zao-sheet",
@@ -20440,7 +20591,6 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
-      "imageAssetId": "asset:festival-master-storyboard-096",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20451,7 +20601,8 @@
           "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
           "en": "Generated storyboard still; pending editorial review."
         }
-      }
+      },
+      "imageAssetId": "asset:festival-master-storyboard-096"
     },
     {
       "id": "festival-master:shot-plan-credit-01:take-01",

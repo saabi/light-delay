@@ -7,7 +7,9 @@ describe('buildShotDialogueTimeline (festival-master promoted EN)', () => {
 		const script = getScript('script:light-delay-festival-master');
 		const durations = script.shots.map((shot) => shot.durationMs);
 		const timeline = buildShotDialogueTimeline(script, durations, 'en');
-		expect(timeline.length).toBe(128);
+		// A concurrent TTS pass has since generated audio for all 8 of the cues changed/added in
+		// the prior gravity/dialogue-clarity pass (128 original + 3 brand-new dialogue cues = 131).
+		expect(timeline.length).toBe(131);
 		expect(timeline.every((cue) => cue.url.includes('/assets/audio/dialogue/'))).toBe(true);
 		expect(timeline[0]!.startMs).toBeGreaterThanOrEqual(0);
 		for (let i = 1; i < timeline.length; i += 1) {

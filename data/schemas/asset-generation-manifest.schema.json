@@ -23,7 +23,7 @@
         "properties": {
           "assetId": { "type": "string" },
           "entityId": { "type": "string" },
-          "kind": { "enum": ["location", "prop", "vehicle", "display", "animaticStill", "firstFrame", "lastFrame"] },
+          "kind": { "enum": ["character", "location", "prop", "vehicle", "display", "animaticStill", "firstFrame", "lastFrame"] },
           "status": { "enum": ["draft", "approved", "generated", "accepted", "rejected", "review_required", "deprecated"] },
           "outputPath": { "type": "string", "pattern": "^/assets/" },
           "dimensions": {

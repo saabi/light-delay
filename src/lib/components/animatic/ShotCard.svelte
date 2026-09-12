@@ -74,6 +74,7 @@
 			alt={`${m.animatic_take()} ${shot.number}`}
 			loading="lazy"
 			fit="cover"
+			badgePlacement="below"
 		/>
 	</a>
 	<div
@@ -161,11 +162,15 @@
 
 	.media {
 		display: block;
+		align-self: start;
 		text-decoration: none;
-		aspect-ratio: 16 / 9;
 		border: 1px solid var(--line);
 		border-radius: 8px;
-		overflow: hidden;
+		overflow: visible;
+	}
+
+	.media :global(.media-surface) {
+		border-radius: 8px;
 	}
 
 	.body {

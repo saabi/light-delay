@@ -17,12 +17,12 @@
         "height": 1024
       },
       "styleAnchorAssetIds": [
-        "asset:vehicle-celestial-ardor-sheet",
+        "asset:vehicle-celestial-ardor-jupiter",
         "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
       "references": [
         {
-          "assetId": "asset:vehicle-celestial-ardor-sheet",
+          "assetId": "asset:vehicle-celestial-ardor-jupiter",
           "role": "axial exterior and orientation anchor"
         },
         {
@@ -373,6 +373,49 @@
       }
     },
     {
+      "assetId": "asset:character-velari-envoy-sheet",
+      "entityId": "character:velari-envoy",
+      "kind": "character",
+      "status": "generated",
+      "outputPath": "/assets/characters/velari-envoy/model-sheet.png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "styleAnchorAssetIds": [
+        "asset:festival-master-storyboard-092"
+      ],
+      "references": [
+        {
+          "assetId": "asset:festival-master-storyboard-092",
+          "role": "authoritative envoy appearance reference"
+        },
+        {
+          "assetId": "asset:character-zao-sheet",
+          "role": "project model-sheet layout reference only"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Light Delay master character reference sheet",
+        "primaryRequest": "Create a multi-view character sheet for the individual Velari envoy, matching its appearance in Festival Master shot 092.",
+        "sceneBackdrop": "Neutral charcoal studio background; no station, ship, or transport sphere in the main views.",
+        "subject": "A 2.5–3 m Velari individual with an elongated translucent organic mantle and branching amber, violet, and blue luminous patterns; no face or humanoid limbs.",
+        "styleMedium": "Grounded photorealistic cinematic hard-science-fiction concept art matching the project character sheets.",
+        "compositionFraming": "1536x1024 front, three-quarter, side, rear, scale, and mantle-detail views with one consistent individual.",
+        "lightingMood": "Soft studio light with restrained internal bioluminescence clearly readable.",
+        "colorPalette": "Charcoal, pearlescent translucent material, amber-gold, violet, and cool blue light.",
+        "materialsTextures": "Layered glasslike organic mantle, branching luminous channels, coherent translucent folds.",
+        "textVerbatim": "No text labels.",
+        "constraints": "Base identity and anatomy on asset:festival-master-storyboard-092; do not depict the obsolete emissary spacecraft.",
+        "avoid": "Humanoid face, eyes, arms, legs, wings, engines, cockpit, ship silhouette, sphere enclosure, armor, tentacles with suckers, logos, watermark."
+      },
+      "review": {
+        "notes": "Generated from the Festival Master envoy appearance; pending editorial review.",
+        "regenerationRequired": false
+      }
+    },
+    {
       "assetId": "asset:vehicle-velari-transport-sphere-sheet",
       "entityId": "vehicle:velari-transport-sphere",
       "kind": "vehicle",
@@ -419,7 +462,7 @@
       },
       "styleAnchorAssetIds": [
         "asset:location-proxima-station-berthed",
-        "asset:vehicle-celestial-ardor-sheet"
+        "asset:vehicle-celestial-ardor-jupiter"
       ],
       "references": [
         {
@@ -427,7 +470,7 @@
           "role": "authoritative station geography input actually attached to generation"
         },
         {
-          "assetId": "asset:vehicle-celestial-ardor-sheet",
+          "assetId": "asset:vehicle-celestial-ardor-jupiter",
           "role": "authoritative Ardor hull, scale, and docking orientation input actually attached to generation"
         }
       ],
@@ -7271,7 +7314,7 @@
       },
       "styleAnchorAssetIds": [
         "asset:location-velari-wormhole-mouth-sheet",
-        "asset:vehicle-celestial-ardor-sheet",
+        "asset:vehicle-celestial-ardor-jupiter",
         "asset:vehicle-celestial-ardor-proportional"
       ],
       "references": [
@@ -7280,7 +7323,7 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:vehicle-celestial-ardor-sheet",
+          "assetId": "asset:vehicle-celestial-ardor-jupiter",
           "role": "visual continuity reference"
         },
         {
@@ -7294,7 +7337,7 @@
         "primaryRequest": "Exterior: after nearly a day and a half of deceleration, the Ardor arrives retrograde, engine-first, near the Velari tunnel mouth; its torch dims to nothing as the mouth's distributed field of black nodes hangs distant in the background.",
         "inputImages": [
           "Reference asset: asset:location-velari-wormhole-mouth-sheet",
-          "Reference asset: asset:vehicle-celestial-ardor-sheet",
+          "Reference asset: asset:vehicle-celestial-ardor-jupiter",
           "Reference asset: asset:vehicle-celestial-ardor-proportional"
         ],
         "sceneBackdrop": "Continuity setting location:velari-wormhole-mouth.",

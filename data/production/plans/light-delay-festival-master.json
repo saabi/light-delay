@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "1826cb1f67f16a72928de0eda34135cc697ea4faf0a55b402ef7b3a3c1a1a12f",
+    "sourceDigest": "1fdad980763d2967e48b7515fa13f75802a512c0cd180b6937dac6114f13b1ca",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -40,13 +40,6 @@
         }
       },
       "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
@@ -156,7 +149,7 @@
         {
           "id": "festival-master:shot-plan-001:segment-01",
           "startMs": 0,
-          "endMs": 10137,
+          "endMs": 10159,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -1440,7 +1433,7 @@
         {
           "id": "festival-master:shot-plan-016b:segment-01",
           "startMs": 0,
-          "endMs": 5000,
+          "endMs": 7500,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -2379,7 +2372,7 @@
         {
           "id": "festival-master:shot-plan-030:segment-01",
           "startMs": 0,
-          "endMs": 9590,
+          "endMs": 13790,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -2899,7 +2892,7 @@
         {
           "id": "festival-master:shot-plan-039:segment-01",
           "startMs": 0,
-          "endMs": 7940,
+          "endMs": 12340,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -3453,7 +3446,7 @@
         {
           "id": "festival-master:shot-plan-046:segment-01",
           "startMs": 0,
-          "endMs": 1500,
+          "endMs": 2600,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -4351,7 +4344,7 @@
         {
           "id": "festival-master:shot-plan-057:segment-01",
           "startMs": 0,
-          "endMs": 8160,
+          "endMs": 9160,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -4491,7 +4484,7 @@
         {
           "id": "festival-master:shot-plan-059:segment-01",
           "startMs": 0,
-          "endMs": 8520,
+          "endMs": 12400,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -6075,7 +6068,7 @@
         {
           "id": "festival-master:shot-plan-079:segment-01",
           "startMs": 0,
-          "endMs": 9660,
+          "endMs": 15100,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -6234,7 +6227,7 @@
         {
           "id": "festival-master:shot-plan-081:segment-01",
           "startMs": 0,
-          "endMs": 8360,
+          "endMs": 15700,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -6304,7 +6297,7 @@
         {
           "id": "festival-master:shot-plan-082:segment-01",
           "startMs": 0,
-          "endMs": 6140,
+          "endMs": 9420,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null

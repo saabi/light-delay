@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-12 — Regeneración de tomas pendientes del Festival Master
+
+- Se regeneraron las 33 tomas marcadas para actualización (31 sin imagen y las revisadas `088`, `089` y `091`), incluyendo `094`–`096`, y se registraron las 103 imágenes del storyboard del Festival Master.
+- Las tomas `088`, `089`, `091` y `092` llevan ahora `asset:vehicle-velari-transport-sphere-sheet`; `092` añade también `asset:character-velari-envoy-sheet`. Sus prompts sólo describen acción, física y comportamiento dinámico; la apariencia está delegada a las referencias.
+- Se eliminó de esos prompts la referencia heredada de la hoja obsoleta de la nave emisaria. El catálogo de `vehicle:velari-transport-sphere` ya no conserva la nota visual stale.
+- La auditoría de referencias queda en verde (`takes=103`, `references=482`, `errors=0`); `validate:data` y los planes de producción también pasan.
+
 ## 2026-09-12 — Nuevo tráiler derivado del master
 
 - **Nuevo guion `script:light-delay-trailer-master`** (borrador, ~67,7s, 7 escenas, 22 tomas),
@@ -32,6 +39,35 @@
 - La hoja antigua de Harlan (`model-sheet.png`) ya estaba sustituida por `model-sheet-v2.png`
   en el catálogo; se actualizaron rutas residuales en manifiestos de pósters. El
   `previousPath` de procedencia se conserva.
+
+## 2026-09-12 — Auditoría de microgravedad, legibilidad del empuje y claridad de diálogo
+
+- **Auditoría de gravedad**: se trazó la línea temporal real de corte/reanudación de empuje de la
+  propia historia (no sólo la etiqueta `setting.continuity` de cada escena, que estaba incompleta) y
+  se encontraron dos tramos confirmados con el prompt incorrecto "Steady 1 g" mientras el empuje ya
+  estaba cortado: escenas 7–16 y escenas 27–32 (el cuarto corte nunca se reanuda — confirmado por la
+  propia línea de Voss "Keep it watched. No thrust"). Se etiquetaron las 11 escenas nuevas como
+  microgravedad.
+- Se auditaron 31 tomas individualmente — **se vio cada imagen actual antes de decidir**, según la
+  instrucción vigente de no marcar como obsoleto lo que ya está bien. 3 imágenes (`shot-plan-016`,
+  `017`, `090`) ya mostraban microgravedad a pesar del texto incorrecto — se conservaron, sólo se
+  corrigió el prompt. Las otras **28 tomas** mostraban claramente una pose de gravedad normal y se
+  marcaron para regeneración.
+- **Legibilidad de las transiciones de empuje**: se agregó refuerzo visual más una cue de sonido
+  interior emparejada a las dos reanudaciones poco marcadas (`shot-plan-046`, `057`); no se tocaron
+  las transiciones ya cubiertas (diálogo, la toma exterior de lucimiento, o sonido solo después de las
+  primeras una o dos veces).
+- **Corregida `shot-plan-092`**: la imagen mostraba a Sorell de pie en un interior sin traje EVA,
+  contradiciendo `shot-plan-089`/`091`. Prompt corregido, regenerada.
+- **Siete aclaraciones de diálogo** (extendiendo tomas existentes): la línea del reportero
+  reordenada para que "I wish they were right" de Harlan se refiera claramente a los partidarios
+  esperanzados; el "they'll never know who saved them" de Harlan con su contexto faltante; su "one
+  sign we bite" reescrito como el argumento de disuasión que siempre quiso ser; la línea de Rao en
+  la desactivación de la bomba ampliada a una explicación real; el "no thrust" de Voss ampliado a
+  una decisión de seguridad explícita y continua; el sabotaje silencioso de Harlan en
+  `shot-plan-039` con una reacción y una intención habladas antes del acto; el razonamiento de Zao
+  en `shot-plan-030` con un objetivo declarado antes de la geometría.
+- Tomas sin cambios (103/103). Duración del guion: 773.357ms → **803.560ms** (~13:24).
 
 ## 2026-09-12 — Hoja visual del enviado Velari
 

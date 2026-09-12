@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-12 — Festival Master storyboard regeneration
+
+- Regenerated the 33 Festival Master takes awaiting images or prompt/reference updates, including closing transmission shots `094`–`096`.
+- Wired the Velari Transport Sphere reference into shots `088`, `089`, `091`, and `092`; shot `092` also uses the Velari envoy sheet. Prompts now leave static appearance to those references and retain only blocking, physics, and dynamic behavior.
+- Removed the obsolete emissary/legacy station reference from the sphere shots and resolved the transport sphere's stale visual-reference note. Reference audit and data validation pass.
+
 ## 2026-09-12 — New master-derived trailer
 
 - **New script `script:light-delay-trailer-master`** (draft, ~67.7s, 7 scenes, 22 shots), sourced
@@ -41,6 +47,44 @@
 - Harlan’s deleted `model-sheet.png` was already superseded by `model-sheet-v2.png` in the
   catalog; poster provenance paths that still pointed at the old file now use v2.
   `provenance.previousPath` on `asset:character-harlan-sheet` still records the deleted file.
+
+## 2026-09-12 — Microgravity staging audit, thrust-transition legibility, and dialogue clarity pass
+
+- **Gravity-state audit**: traced the story's own thrust-cut/thrust-resume timeline (not just each
+  scene's `setting.continuity` tag, which was incomplete) and found two confirmed stretches wrongly
+  prompted "Steady 1 g artificial gravity" when thrust was already cut: scenes 7–16 (thrust cuts at
+  the top of scene 7, doesn't resume until scene 17) and scenes 27–32 (the fourth cut never resumes —
+  confirmed by Voss's own "Keep it watched. No thrust" line). Tagged all 11 newly-identified scenes
+  `setting.continuity: "Microgravity..."`, matching the 8 scenes already tagged.
+- Audited 31 shots across those stretches individually — **viewed every current image before
+  deciding**, per standing instruction not to mark anything stale that's already correct. 3 images
+  (`shot-plan-016`, `017`, `090`) already showed microgravity staging (drifting gear, tethered
+  harness, or no contradicting floor/standing tell) despite the wrong prompt text — kept, prompt-only
+  fix. The other **28 shots** clearly showed a normal-gravity pose (standing, walking, or loose
+  objects — a pen, a mug, a tool — resting undisturbed) and are marked for regeneration.
+- **Thrust-transition legibility**: re-verified all four cuts and three resumes against the rule that
+  the first one or two occurrences need a clear dialogue/visual marker and later ones don't need
+  re-teaching, and that exterior/vacuum shots can carry no diegetic sound. Added visual reinforcement
+  (weight settling, stance shifting) plus a paired interior sound cue to the two under-marked resume
+  beats (`shot-plan-046`, top of scene 17; `shot-plan-057`, scene 19→20) — new cues `cue-0091b`,
+  `cue-0113b`. No change where a shot is already covered (dialogue-marked cut 1, the exterior beauty
+  shot covering cut 2/resume 1, sound-only cuts 3/4 past the "first one or two" threshold).
+- **Fixed `shot-plan-092`**: image showed Sorell standing indoors in casual clothes, no spacesuit,
+  contradicting `shot-plan-089`/`091` immediately before it (both correctly suited, tethered, in open
+  space). Rewrote the prompt to explicitly restate the suit/open-space continuity. Regenerated.
+- **Seven dialogue clarifications** (extend existing takes, no new shots): reordered the opening
+  broadcast line so "I wish they were right" (Harlan) unambiguously refers to the hopeful supporters,
+  not the protesters; gave Harlan's "they'll never know who saved them" its missing context (still
+  believing he's won, not doubting); rewrote his "one sign we bite" line as the deterrence argument it
+  was always meant to be, not humans turning on each other; expanded Rao's vault-defusal line into a
+  real explanation of the trick; expanded Voss's "no thrust" into an explicit ongoing safety choice;
+  gave Harlan's silent sabotage in `shot-plan-039` a spoken reaction-then-intent lead-in ("What a
+  mess." / "No problem. I'll cut the flight controls."); gave Zao's Proxima/Earth/Velari reasoning in
+  `shot-plan-030` a stated goal before the geometry ("Internal comms are cut. I need another way to
+  reach someone.").
+- Cleared stale `audioAssetId` on the 5 edited pre-existing dialogue cues (their recorded audio no
+  longer matches the new text) so the TTS pipeline regenerates them.
+- Shot/take count unchanged (103/103). Script duration: 773,357ms → **803,560ms** (~13:24).
 
 ## 2026-09-12 — Velari envoy character reference corrected
 

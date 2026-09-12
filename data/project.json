@@ -136,12 +136,12 @@
         "id": "script:light-delay-festival-master",
         "continuityId": "continuity:light-delay-master-wip",
         "label": {
-          "es": "Corte Festival derivado del master (~12:53, WIP)",
-          "en": "Master-derived Festival cut (~12:53, WIP)"
+          "es": "Corte Festival derivado del master (~13:27, WIP)",
+          "en": "Master-derived Festival cut (~13:27, WIP)"
         },
         "kind": "festival_cut",
         "status": "draft",
-        "targetDurationMs": 773357,
+        "targetDurationMs": 806519,
         "lineage": {
           "sourceScriptId": "script:light-delay-master-narrative",
           "relationship": "cut",
@@ -152,7 +152,8 @@
             "es": "Derivado editorial explícito de la escaleta maestra, fijado a la revisión 19. No continúa el Festival deprecado.",
             "en": "Explicit editorial derivative of the master outline, pinned to revision 19. It does not continue the deprecated Festival cut."
           }
-        },
+        }
+      },
       {
         "id": "script:light-delay-trailer-master",
         "continuityId": "continuity:light-delay-master-wip",
@@ -172,8 +173,6 @@
             "en": "Trailer edited from the master-derived Festival cut. Reuses already-generated frames via imageAssetId where they exist. It does not continue the deprecated trailer (a different continuity)."
           }
         }
-      }
-
       }
     ]
   }
