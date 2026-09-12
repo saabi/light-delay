@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { getScript } from './index.ts';
+import { TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP } from '../../../../scripts/lib/trailer-master-festival-dialogue-audio.mjs';
+import { getProject, getScript } from './index.ts';
 
 const scriptId = 'script:light-delay-trailer-master';
+const festivalScriptId = 'script:light-delay-festival-master';
 
 describe('master-derived trailer', () => {
 	it('is registered as a draft trailer sourced from the Festival master cut', () => {
@@ -50,9 +52,61 @@ describe('master-derived trailer', () => {
 
 	it('sums scene durations to the script target duration', () => {
 		const script = getScript(scriptId);
-		const sum = script.scenes.reduce((total, scene) => total + (scene.targetDurationMs ?? 0), 0);
-		expect(sum).toBe(script.script.targetDurationMs);
-		expect(sum).toBe(67_700);
+		const shotSum = script.shots.reduce((total, shot) => total + shot.durationMs, 0);
+		const sceneSum = script.scenes.reduce((total, scene) => total + (scene.targetDurationMs ?? 0), 0);
+		expect(sceneSum).toBe(script.script.targetDurationMs);
+		expect(shotSum).toBe(script.script.targetDurationMs);
+		expect(sceneSum).toBe(87_640);
+		const registry = getProject().project.scripts.find((entry) => entry.id === scriptId);
+		expect(registry?.targetDurationMs).toBe(87_640);
+	});
+
+	it('reuses Festival-master EN dialogue audio on every spoken trailer cue', () => {
+		const trailer = getScript(scriptId);
+		const festival = getScript(festivalScriptId);
+		const festivalCueById = new Map(festival.cues.map((cue) => [cue.id, cue]));
+		const dialogue = trailer.cues.filter((cue) => cue.type === 'dialogue');
+		expect(dialogue).toHaveLength(Object.keys(TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP).length);
+
+		for (const cue of dialogue) {
+			if (cue.type !== 'dialogue') continue;
+			const sourceId = TRAILER_MASTER_FESTIVAL_DIALOGUE_MAP[cue.id];
+			expect(sourceId, cue.id).toBeTruthy();
+			const source = festivalCueById.get(sourceId);
+			expect(source?.type, sourceId).toBe('dialogue');
+			if (!source || source.type !== 'dialogue') continue;
+			expect(cue.speakerId).toBe(source.speakerId);
+			expect(cue.content.variants.en?.audioAssetId).toBe(source.content.variants.en?.audioAssetId);
+			expect(cue.sourceRefs?.some((ref) => ref.cueId === sourceId)).toBe(true);
+		}
+	});
+
+	it('keeps promoted EN dialogue audio inside its shot without overlaps', () => {
+		const script = getScript(scriptId);
+		const cueById = new Map(script.cues.map((cue) => [cue.id, cue]));
+		for (const shot of script.shots) {
+			const intervals: { id: string; at: number; end: number }[] = [];
+			for (const placement of shot.cuePlacements) {
+				const cue = cueById.get(placement.cueId);
+				if (!cue || cue.type !== 'dialogue') continue;
+				const wavMs = cue.content.variants.en?.estimatedDurationMs;
+				expect(wavMs, cue.id).toBeGreaterThan(0);
+				expect(placement.atMs + (wavMs ?? 0), `${shot.id}:${cue.id}`).toBeLessThanOrEqual(
+					shot.durationMs
+				);
+				intervals.push({
+					id: cue.id,
+					at: placement.atMs,
+					end: placement.atMs + (wavMs ?? 0)
+				});
+			}
+			intervals.sort((a, b) => a.at - b.at || a.id.localeCompare(b.id));
+			for (let i = 1; i < intervals.length; i += 1) {
+				expect(intervals[i]!.at, `${shot.id}:${intervals[i]!.id}`).toBeGreaterThanOrEqual(
+					intervals[i - 1]!.end
+				);
+			}
+		}
 	});
 
 	it('ends before first contact resolves, matching its stated restraint', () => {

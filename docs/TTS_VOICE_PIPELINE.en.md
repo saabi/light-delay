@@ -228,7 +228,9 @@ Animatic movie mode plays promoted assets via `WebAudioCueSequencer` (absolute
 `startMs` = prior shot durations + placement `atMs`). Studio can scrub the same
 chunks through an `audio-outputs.json` catalog row (`animatic-{slug}-{lang}`).
 Current promoted EN demo for the active Festival cut:
-`animatic-light-delay-festival-master-en` (126 cues).
+`animatic-light-delay-festival-master-en` (131 cues). The master-derived trailer
+(`script:light-delay-trailer-master`) reuses those same EN assets by `audioAssetId`;
+it does not generate a separate trailer catalogue.
 
 Multi-speaker TTS outlines (rev. 17, 38 attributed quotations from the master):
 

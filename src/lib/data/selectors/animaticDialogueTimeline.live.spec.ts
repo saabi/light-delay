@@ -18,6 +18,24 @@ describe('buildShotDialogueTimeline (festival-master promoted EN)', () => {
 	});
 });
 
+describe('buildShotDialogueTimeline (trailer-master reused Festival EN)', () => {
+	it('resolves audio URLs for placed dialogue cues', () => {
+		const script = getScript('script:light-delay-trailer-master');
+		const durations = script.shots.map((shot) => shot.durationMs);
+		const timeline = buildShotDialogueTimeline(script, durations, 'en');
+		expect(timeline.length).toBe(16);
+		expect(
+			timeline.every((cue) =>
+				cue.url.includes('/assets/audio/dialogue/light-delay-festival-master/')
+			)
+		).toBe(true);
+		expect(timeline[0]!.startMs).toBeGreaterThanOrEqual(0);
+		for (let i = 1; i < timeline.length; i += 1) {
+			expect(timeline[i]!.startMs).toBeGreaterThanOrEqual(timeline[i - 1]!.startMs);
+		}
+	});
+});
+
 describe('buildShotDialogueTimeline (main-short promoted EN)', () => {
 	it('resolves audio URLs for placed dialogue cues', () => {
 		const script = getScript('script:light-delay-main-short');

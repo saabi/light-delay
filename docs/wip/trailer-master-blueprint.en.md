@@ -1,7 +1,7 @@
 # Trailer (master-derived) — editorial blueprint
 
 `script:light-delay-trailer-master`, sourced from `script:light-delay-festival-master`. Draft,
-~67.7s, 7 scenes, 22 shots. This document records the beat-mapping and reuse/condense decisions
+~87.6s (~1:28), 7 scenes, 22 shots. This document records the beat-mapping and reuse/condense decisions
 behind each shot, mirroring the festival-master shot blueprint's purpose.
 
 Structural model: the old trailer (`script:light-delay-trailer`, deprecated, sourced from the old
@@ -16,7 +16,21 @@ resolves — rebuilt entirely from festival-master's actual 103 shots and dialog
 source is still mid-regeneration in festival-master (from the earlier gravity-staging fix), the
 trailer take carries its own standalone `generation.prompt` instead of depending on a pending image.
 
-## Scene a — Arrival (~14.9s)
+**Dialogue audio reuse**: every spoken English cue points at the Festival-master WAV via the same
+`audioAssetId` (no new TTS). Shot durations were refit to those measured performances, so the
+storyboard is longer than the original condensed-copy estimate. Four trailer lines remain
+editorially condensed on the page while playing the fuller source take:
+
+| Trailer cue | Source cue | Trailer copy | Source performance |
+| --- | --- | --- | --- |
+| `cue-a-03` | `cue-0005` | "We answer carefully. We listen. Then we judge." | "They gave us a primer and waited. We answer carefully, we listen, then we judge." |
+| `cue-b-02` | `cue-0042` | "A geophysical impulse package. Multi-megaton." | "Geophysical impulse package… one point three tonnes." (`cue-0043` is not linked) |
+| `cue-e-01` | `cue-0126` | "If this reaches you — I found a weapon in the shielded vault." | The full recorded vault warning |
+| `cue-f-01` | `cue-0167` | "It's keyed to the ship's own clock." | The full clock / time-reference explanation |
+
+Relink and refit: `npm run fit:trailer-master-dialogue-audio`.
+
+## Scene a — Arrival (~18.0s)
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
@@ -25,14 +39,14 @@ trailer take carries its own standalone `generation.prompt` instead of depending
 | `shot-a-03` | `shot-plan-012` | reused | voss: "First we arrive. Philosophy after turnover." |
 | `shot-a-04` | `shot-plan-011` | reused | sorell: "Better than telling the Velari we arrived in the Flying Radiator." |
 
-## Scene b — The anomaly (~6.4s)
+## Scene b — The anomaly (~8.2s)
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
 | `shot-b-01` | `shot-plan-016` | reused | zao: "Something's off. We used more fuel than we had to." |
 | `shot-b-02` | `shot-plan-021` | **own prompt** (source pending) | zao: "A geophysical impulse package. Multi-megaton." (condensed from the source's fuller line) |
 
-## Scene c — The warning (~6.8s)
+## Scene c — The warning (~8.0s)
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
@@ -40,7 +54,7 @@ trailer take carries its own standalone `generation.prompt` instead of depending
 | `shot-c-02` | `shot-plan-024` | **own prompt** (source pending) | voss: "Zao? Repeat." |
 | `shot-c-03` | — (new) | new black frame | (hard cut to black, no dialogue — the attack happens off-page) |
 
-## Scene d — Suspicion (~9.1s)
+## Scene d — Suspicion (~9.0s)
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
@@ -48,13 +62,13 @@ trailer take carries its own standalone `generation.prompt` instead of depending
 | `shot-d-02` | `shot-plan-048` | reused | harlan: "She wanted the contact delayed. You heard her." |
 | `shot-d-03` | `shot-plan-058` | reused | rao: "Zao didn't miss like that." |
 
-## Scene e — The reveal (~4.5s)
+## Scene e — The reveal (~15.2s)
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
 | `shot-e-01` | `shot-plan-062` | reused | zao (recorded): "If this reaches you — I found a weapon in the shielded vault." (condensed from the full recorded message) |
 
-## Scene f — The clock (~13s)
+## Scene f — The clock (~16.3s)
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |

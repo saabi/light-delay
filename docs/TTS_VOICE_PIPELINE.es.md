@@ -273,7 +273,9 @@ npm run tts:animatic-dialogue:main-short:promote
 El modo película del animatic reproduce los assets promocionados con
 `WebAudioCueSequencer` (`startMs` absoluto = duraciones de tomas previas + `atMs`
 del placement). Demo EN vigente del Festival:
-`animatic-light-delay-festival-master-en` (126 cues).
+`animatic-light-delay-festival-master-en` (131 cues). El tráiler derivado del master
+(`script:light-delay-trailer-master`) reutiliza esos mismos assets EN por
+`audioAssetId`; no genera un catálogo aparte.
 
 Scripts TTS multi-voz de la escaleta (rev. 17, 38 citas atribuidas desde el master):
 

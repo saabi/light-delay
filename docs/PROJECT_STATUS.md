@@ -1,5 +1,14 @@
 # Estado del proyecto
 
+## 2026-09-12 — Audio de diálogo del tráiler master reutilizado del Festival
+
+- Las 16 cues habladas EN de `script:light-delay-trailer-master` apuntan ahora a los
+  WAV ya promocionados del Festival master (mismo `audioAssetId`; sin TTS nuevo).
+  Cuatro líneas condensadas conservan el texto corto y reproducen la interpretación
+  fuente más larga.
+- Tomas reajustadas a la duración medida: **67,7s → 87,6s** (~1:28). El modo Película
+  del storyboard del tráiler ya puede oír ese diálogo.
+
 ## 2026-09-12 — Regeneración de tomas pendientes del Festival Master
 
 - Se regeneraron las 33 tomas marcadas para actualización (31 sin imagen y las revisadas `088`, `089` y `091`), incluyendo `094`–`096`, y se registraron las 103 imágenes del storyboard del Festival Master.
@@ -9,7 +18,7 @@
 
 ## 2026-09-12 — Nuevo tráiler derivado del master
 
-- **Nuevo guion `script:light-delay-trailer-master`** (borrador, ~67,7s, 7 escenas, 22 tomas),
+- **Nuevo guion `script:light-delay-trailer-master`** (borrador, ~87,6s, 7 escenas, 22 tomas),
   derivado de `script:light-delay-festival-master`. El tráiler anterior (deprecado) se basaba en
   un mecanismo de la continuidad vieja; este reutiliza su forma funcional y su contención — no
   resuelve el contacto — pero reconstruido con las tomas y diálogos reales del Festival master.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-12 — Trailer master storyboard reuses Festival dialogue audio
+
+- All 16 spoken English cues in `script:light-delay-trailer-master` now point at the
+  existing Festival-master WAVs (`audioAssetId` shared; no new TTS). Four condensed
+  trailer lines keep their shorter copy and play the longer source performance.
+- Shot timings were refit to the measured WAVs: **67.7s → 87.6s** (~1:28). Movie mode
+  on the trailer storyboard can play the reused dialogue.
+
 ## 2026-09-12 — Festival Master storyboard regeneration
 
 - Regenerated the 33 Festival Master takes awaiting images or prompt/reference updates, including closing transmission shots `094`–`096`.
@@ -8,7 +16,7 @@
 
 ## 2026-09-12 — New master-derived trailer
 
-- **New script `script:light-delay-trailer-master`** (draft, ~67.7s, 7 scenes, 22 shots), sourced
+- **New script `script:light-delay-trailer-master`** (draft, ~87.6s, 7 scenes, 22 shots), sourced
   from `script:light-delay-festival-master`. The old trailer (`script:light-delay-trailer`,
   deprecated) is built around a different mechanism from the old continuity (an "autonomous
   payload," a "Velari channel" trigger); this one reuses its functional shape and restraint —
