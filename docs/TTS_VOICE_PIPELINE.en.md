@@ -202,6 +202,34 @@ python scripts/generate-dual-outline-audio.py --lang en --assemble-only
 python scripts/generate-dual-outline-audio.py --lang es
 ```
 
+## 5b. Animatic dialogue audio (ScriptFile → chunks → movie play)
+
+Offline generation mirrors the dual outline pipeline. A thin driver exports
+dialogue cues from a `ScriptFile` to voices markdown, then calls
+`generate-dual-outline-audio.py`. Chunks live under
+`E:/Models/Qwen3-TTS/output/animatic-chunks/{scriptSlug}/{lang}/` with
+`index.json` + `script-link.json`. Promote copies accepted WAVs into
+`static/assets/audio/dialogue/…` and sets `DialogueVariant.audioAssetId`
+(explicit; does not run on every regen).
+
+```powershell
+npm run tts:animatic-dialogue
+# or:
+python scripts/generate-animatic-dialogue-audio.py --lang en --script-id script:light-delay-festival-master
+python scripts/generate-animatic-dialogue-audio.py --lang en --script-id script:light-delay-festival-master --force-speaker Zao
+python scripts/generate-animatic-dialogue-audio.py --lang en --script-id script:light-delay-festival-master --assemble-only
+npm run tts:animatic-dialogue:promote
+# Archived continuity:
+npm run tts:animatic-dialogue:main-short
+npm run tts:animatic-dialogue:main-short:promote
+```
+
+Animatic movie mode plays promoted assets via `WebAudioCueSequencer` (absolute
+`startMs` = prior shot durations + placement `atMs`). Studio can scrub the same
+chunks through an `audio-outputs.json` catalog row (`animatic-{slug}-{lang}`).
+Current promoted EN demo for the active Festival cut:
+`animatic-light-delay-festival-master-en` (126 cues).
+
 Multi-speaker TTS outlines (rev. 17, 38 attributed quotations from the master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`

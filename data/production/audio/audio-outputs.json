@@ -18,7 +18,14 @@
       "chunksKey": "outline-chunks/es-audience",
       "canonicalMp3Key": "light-delay-audience-dual-es.mp3",
       "assembledKey": "assembled/audience-es.mp3",
-      "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
+      "recordableSpeakers": [
+        "Zao",
+        "Voss",
+        "Harlan",
+        "Elin",
+        "Sorell",
+        "Okoye"
+      ],
       "expectedSampleRate": 24000,
       "expectedCueCount": 287
     },
@@ -39,7 +46,14 @@
       "chunksKey": "outline-chunks/en-audience",
       "canonicalMp3Key": "light-delay-audience-dual-en.mp3",
       "assembledKey": "assembled/audience-en.mp3",
-      "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
+      "recordableSpeakers": [
+        "Zao",
+        "Voss",
+        "Harlan",
+        "Elin",
+        "Sorell",
+        "Okoye"
+      ],
       "expectedSampleRate": 24000,
       "expectedCueCount": 287
     },
@@ -60,9 +74,72 @@
       "chunksKey": "outline-chunks/en-festival-audience",
       "canonicalMp3Key": "light-delay-festival-audience-dual-en.mp3",
       "assembledKey": "assembled/audience-festival-en.mp3",
-      "recordableSpeakers": ["Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"],
+      "recordableSpeakers": [
+        "Zao",
+        "Voss",
+        "Harlan",
+        "Elin",
+        "Sorell",
+        "Okoye"
+      ],
       "expectedSampleRate": 24000,
       "expectedCueCount": 114
+    },
+    {
+      "id": "animatic-light-delay-main-short-en",
+      "kind": "animatic",
+      "lang": "en",
+      "label": {
+        "es": "Diálogo de animatic (light-delay-main-short, en)",
+        "en": "Animatic dialogue (light-delay-main-short, en)"
+      },
+      "description": {
+        "es": "98 cues de diálogo del script script:light-delay-main-short.",
+        "en": "98 dialogue cues from script script:light-delay-main-short."
+      },
+      "sourceOutlineId": "script:light-delay-main-short",
+      "sourceOutlineRevision": 0,
+      "chunksKey": "animatic-chunks/light-delay-main-short/en",
+      "canonicalMp3Key": "light-delay-animatic-dialogue-light-delay-main-short-en.mp3",
+      "assembledKey": "assembled/animatic-light-delay-main-short-en.mp3",
+      "recordableSpeakers": [
+        "Elin",
+        "Harlan",
+        "Okoye",
+        "Sorell",
+        "Voss",
+        "Zao"
+      ],
+      "expectedSampleRate": 24000,
+      "expectedCueCount": 98
+    },
+    {
+      "id": "animatic-light-delay-festival-master-en",
+      "kind": "animatic",
+      "lang": "en",
+      "label": {
+        "es": "Diálogo de animatic (light-delay-festival-master, en)",
+        "en": "Animatic dialogue (light-delay-festival-master, en)"
+      },
+      "description": {
+        "es": "128 cues de diálogo del script script:light-delay-festival-master.",
+        "en": "128 dialogue cues from script script:light-delay-festival-master."
+      },
+      "sourceOutlineId": "script:light-delay-festival-master",
+      "sourceOutlineRevision": 0,
+      "chunksKey": "animatic-chunks/light-delay-festival-master/en",
+      "canonicalMp3Key": "light-delay-animatic-dialogue-light-delay-festival-master-en.mp3",
+      "assembledKey": "assembled/animatic-light-delay-festival-master-en.mp3",
+      "recordableSpeakers": [
+        "Elin",
+        "Harlan",
+        "Okoye",
+        "Sorell",
+        "Voss",
+        "Zao"
+      ],
+      "expectedSampleRate": 24000,
+      "expectedCueCount": 128
     }
   ]
 }

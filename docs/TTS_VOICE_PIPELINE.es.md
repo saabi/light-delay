@@ -252,6 +252,29 @@ python scripts/generate-dual-outline-audio.py --lang en --assemble-only
 python scripts/generate-dual-outline-audio.py --lang es
 ```
 
+## 5b. Audio de diálogo del animatic (ScriptFile → chunks → modo película)
+
+La generación offline reutiliza el pipeline dual. Un driver exporta las cues de
+diálogo de un `ScriptFile` a markdown de voces y llama a
+`generate-dual-outline-audio.py`. Los chunks viven en
+`E:/Models/Qwen3-TTS/output/animatic-chunks/{scriptSlug}/{lang}/` con
+`index.json` + `script-link.json`. `--promote` copia los WAV aceptados a
+`static/assets/audio/dialogue/…` y escribe `DialogueVariant.audioAssetId`
+(explícito; no se ejecuta en cada regen).
+
+```powershell
+npm run tts:animatic-dialogue
+npm run tts:animatic-dialogue:promote
+# Continuidad archivada:
+npm run tts:animatic-dialogue:main-short
+npm run tts:animatic-dialogue:main-short:promote
+```
+
+El modo película del animatic reproduce los assets promocionados con
+`WebAudioCueSequencer` (`startMs` absoluto = duraciones de tomas previas + `atMs`
+del placement). Demo EN vigente del Festival:
+`animatic-light-delay-festival-master-en` (126 cues).
+
 Scripts TTS multi-voz de la escaleta (rev. 17, 38 citas atribuidas desde el master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`
