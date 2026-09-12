@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-12 — Artefactos editoriales regenerados (deploy)
+
+- `MASTER_RELEVANCE_REPORT`, `PENDING_AUTHOR_NOTES` y el plan de generación del
+  Festival master regenerados; `generated:check` en verde tras el fallo de Actions.
+
 ## 2026-09-12 — Diálogo ES desfasado del Festival master actualizado
 
 - Completadas 5 variantes ES ausentes y reescritas las que no seguían el inglés

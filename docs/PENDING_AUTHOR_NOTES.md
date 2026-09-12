@@ -2,7 +2,7 @@
 
 > Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
 
-Pendientes vigentes o por revisar: **2**
+Pendientes vigentes o por revisar: **23**
 
 Notas archivadas para rescate: **167**
 
@@ -14,15 +14,60 @@ Notas archivadas para rescate: **167**
   - Origen: `data/locations.json` · `$.locations[7].notes[0]`
 - **note:inner-shielding-vault-visual-reference** [visual · open · active] — Falta una referencia visual derivada del master para la bóveda y su cerradura local. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.
   - Origen: `data/locations.json` · `$.locations[8].notes[0]`
+- **note:proxima-geophysical-impulse-package-visual-reference** [visual · open · review_required] — Falta una referencia visual derivada del master para el paquete y su controlador.
+  - Origen: `data/objects.json` · `$.objects[3].notes[0]`
+- **note:harlan-wrist-device-visual-reference** [visual · open · review_required] — Falta una referencia visual derivada del master para el dispositivo de muñeca.
+  - Origen: `data/objects.json` · `$.objects[4].notes[0]`
+- **note:time-reference-diagnostic-unit-visual-reference** [visual · open · review_required] — Falta una referencia visual derivada del master para el instrumento; debe verse idéntico en las dos escenas separadas donde aparece (plantado en beat-19, conectado en beat-27).
+  - Origen: `data/objects.json` · `$.objects[5].notes[0]`
+
+### medium
+
+- **note:celestial-ardor-command-vestibule-visual-reference** [visual · open · active] — Falta una referencia visual para el vestíbulo axial de mando; usado en varias escenas del Festival.
+  - Origen: `data/locations.json` · `$.locations[3].notes[0]`
+- **note:celestial-ardor-central-access-visual-reference** [visual · open · active] — Falta una referencia visual para el cilindro central de acceso; es una de las tres rutas de la persecución del Festival.
+  - Origen: `data/locations.json` · `$.locations[4].notes[0]`
+- **note:celestial-ardor-service-cylinder-visual-reference** [visual · open · active] — Falta una referencia visual para el cilindro de servicio; es una de las tres rutas de la persecución del Festival.
+  - Origen: `data/locations.json` · `$.locations[5].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[0].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[0].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[1].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-002 (asset asset:festival-master-storyboard-002).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[1].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[10].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-048 (asset asset:festival-master-storyboard-048).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[10].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[11].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[11].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[12].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-062 (asset asset:festival-master-storyboard-062).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[12].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[16].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-039 (asset asset:festival-master-storyboard-039).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[16].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[17].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[17].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[18].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[18].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[19].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-credit-01 (asset asset:festival-master-storyboard-credit-01).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[19].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[2].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-012 (asset asset:festival-master-storyboard-012).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[2].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[20].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-credit-02 (asset asset:festival-master-storyboard-credit-02).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[20].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[21].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-credit-03 (asset asset:festival-master-storyboard-credit-03).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[21].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[3].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-011 (asset asset:festival-master-storyboard-011).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[3].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[4].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-016 (asset asset:festival-master-storyboard-016).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[4].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[9].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-047 (asset asset:festival-master-storyboard-047).
+  - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[9].notes[0]`
 
 ## Archivo deprecado/obsoleto — sólo rescate
 
 ### medium
 
-- **data/characters.json:$.characters[19].notes[0]** [todo · open · obsolete] — Precisar especialidad y arco sin inventar datos ausentes.
-  - Origen: `data/characters.json` · `$.characters[19].notes[0]`
-- **data/characters.json:$.characters[20].notes[0]** [todo · open · obsolete] — Recuperar o decidir función antes de escribir diálogo.
+- **data/characters.json:$.characters[20].notes[0]** [todo · open · obsolete] — Precisar especialidad y arco sin inventar datos ausentes.
   - Origen: `data/characters.json` · `$.characters[20].notes[0]`
+- **data/characters.json:$.characters[21].notes[0]** [todo · open · obsolete] — Recuperar o decidir función antes de escribir diálogo.
+  - Origen: `data/characters.json` · `$.characters[21].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[0].notes[0]** [production · open · deprecated] — Reutiliza frame de main:shot-01-01 (asset asset:animatic-01-01).
   - Origen: `data/scripts/light-delay-festival.json` · `$.shots[0].notes[0]`
 - **data/scripts/light-delay-festival.json:$.shots[1].notes[0]** [production · open · deprecated] — Placeholder de main:shot-04-01 (asset asset:animatic-04-01); ese still sólo muestra a Zao — faltan Elin retirándose y la pantalla de Harlan, se necesita una toma nueva para el Festival Cut. El retiro de Elin dentro de esta misma toma establece que Zao queda sola antes del asesinato (sin testigos); Harlan aparece sólo por pantalla/canal, nunca presente físicamente, para no contradecir que asciende por servicio y abre la escotilla al nivel del puente en festival:shot-b-02.
