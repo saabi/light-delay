@@ -690,10 +690,17 @@ export interface CameraDirection {
   endFrame?: string;
 }
 
+export interface CuePlacementTiming {
+  atMs?: number;
+  sourceOffsetMs?: number;
+  durationMs?: number;
+  gainDb?: number;
+}
+
 export interface CuePlacement {
   cueId: CueId;
 
-  // Position within this shot.
+  // Position within this shot (shot-relative; absolute time = sum of prior shot durations + atMs).
   atMs: number;
   durationMs?: number;
 
@@ -712,6 +719,9 @@ export interface CuePlacement {
     | "recording";
 
   gainDb?: number;
+
+  /** Optional per-language overrides for atMs / durationMs / gain (shot-relative). */
+  timingByLanguage?: Record<LanguageTag, CuePlacementTiming>;
 }
 
 export interface ShotTransition {

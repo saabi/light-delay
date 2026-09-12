@@ -103,11 +103,12 @@ export function getSubtitleSegments(
 			if (!resolved) continue;
 			const text = resolved.value.subtitleText ?? resolved.value.spokenText;
 			if (!text?.trim()) continue;
+			const localizedTiming = placement.timingByLanguage?.[dialogueLanguage];
 			segments.push({
 				cueId: cue.id,
 				shotId: shot.id,
-				atMs: placement.atMs,
-				durationMs: placement.durationMs,
+				atMs: localizedTiming?.atMs ?? placement.atMs,
+				durationMs: localizedTiming?.durationMs ?? placement.durationMs,
 				text,
 				resolvedLanguage: resolved.resolvedLanguage,
 				usedFallback: resolved.usedFallback

@@ -1,90 +1,74 @@
+import { WebAudioCueSequencer, type SequencerStatus } from '$lib/audio/webAudioCueSequencer';
 import { chunkAudioUrl } from './api';
 import type { StudioCue } from './types';
 
-export type SequencerStatus = 'idle' | 'playing' | 'paused';
-
-type Scheduled = {
-	source: AudioBufferSourceNode;
-	startAt: number;
-};
-
-const PREFETCH = 8;
+export type { SequencerStatus };
 
 export class ChunkSequencer {
-	private ctx: AudioContext | null = null;
-	private abort: AbortController | null = null;
-	private scheduled: Scheduled[] = [];
-	private buffers = new Map<string, AudioBuffer>();
-	status: SequencerStatus = 'idle';
-	cursor = 0;
-	private startCtxTime = 0;
-	private startOffset = 0;
+	private inner = new WebAudioCueSequencer();
 	private cues: StudioCue[] = [];
 	private outputId = '';
+	cursor = 0;
 	onAdvance: ((index: number) => void) | null = null;
 
+	constructor() {
+		this.inner.onAdvance = (cueId) => {
+			const index = this.cues.findIndex((cue) => cue.id === cueId);
+			if (index >= 0) {
+				this.cursor = Math.min(index + 1, Math.max(0, this.cues.length - 1));
+				this.onAdvance?.(this.cursor);
+			}
+		};
+	}
+
+	get status(): SequencerStatus {
+		return this.inner.status;
+	}
+
 	get currentTime(): number {
-		if (!this.ctx || this.status !== 'playing') return this.startOffset;
-		return this.startOffset + (this.ctx.currentTime - this.startCtxTime);
+		return this.inner.currentTimeMs / 1000;
 	}
 
 	async play(outputId: string, cues: StudioCue[], fromIndex = 0): Promise<void> {
-		this.stop();
 		this.outputId = outputId;
 		this.cues = cues;
-		this.cursor = Math.max(0, Math.min(fromIndex, cues.length - 1));
-		this.ctx = new AudioContext();
-		if (this.ctx.state === 'suspended') await this.ctx.resume();
-		this.abort = new AbortController();
-		this.status = 'playing';
-		this.startOffset = this.offsetAt(this.cursor);
-		this.startCtxTime = this.ctx.currentTime;
-		await this.scheduleFrom(this.cursor);
+		this.cursor = Math.max(0, Math.min(fromIndex, Math.max(0, cues.length - 1)));
+		await this.inner.play(this.toTimed(), this.offsetAt(this.cursor) * 1000);
 	}
 
 	pause(): void {
-		if (this.status !== 'playing' || !this.ctx) return;
-		this.startOffset = this.currentTime;
-		this.clearScheduled();
-		this.status = 'paused';
+		this.inner.pause();
 	}
 
 	async resume(): Promise<void> {
-		if (this.status !== 'paused' || !this.ctx) return;
-		if (this.ctx.state === 'suspended') await this.ctx.resume();
-		this.abort = new AbortController();
-		this.status = 'playing';
-		this.startCtxTime = this.ctx.currentTime;
-		const index = this.indexAt(this.startOffset);
-		this.cursor = index;
-		await this.scheduleFrom(index, this.startOffset - this.offsetAt(index));
+		await this.inner.resume();
+		this.cursor = this.indexAt(this.currentTime);
 	}
 
 	stop(): void {
-		this.abort?.abort();
-		this.abort = null;
-		this.clearScheduled();
-		this.buffers.clear();
-		if (this.ctx) {
-			void this.ctx.close();
-			this.ctx = null;
-		}
-		this.status = 'idle';
-		this.startOffset = 0;
-		this.startCtxTime = 0;
+		this.inner.stop();
+		this.cursor = 0;
+		this.cues = [];
+		this.outputId = '';
 	}
 
 	seek(index: number): void {
-		const playing = this.status === 'playing';
-		this.clearScheduled();
-		this.cursor = index;
-		this.startOffset = this.offsetAt(index);
-		if (playing && this.ctx) {
-			this.startCtxTime = this.ctx.currentTime;
-			this.abort?.abort();
-			this.abort = new AbortController();
-			void this.scheduleFrom(index);
-		}
+		this.cursor = Math.max(0, Math.min(index, Math.max(0, this.cues.length - 1)));
+		this.inner.seek(this.offsetAt(this.cursor) * 1000);
+	}
+
+	private toTimed() {
+		let tMs = 0;
+		return this.cues.map((cue) => {
+			tMs += cue.preSilenceMs;
+			const startMs = tMs;
+			tMs += cue.effectiveSeconds * 1000;
+			return {
+				id: cue.id,
+				url: chunkAudioUrl(this.outputId, cue.id, cue.cacheKey),
+				startMs
+			};
+		});
 	}
 
 	private offsetAt(index: number): number {
@@ -107,58 +91,5 @@ export class ChunkSequencer {
 			t += dur;
 		}
 		return Math.max(0, this.cues.length - 1);
-	}
-
-	private clearScheduled(): void {
-		for (const item of this.scheduled) {
-			try {
-				item.source.stop();
-			} catch {
-				/* already stopped */
-			}
-		}
-		this.scheduled = [];
-	}
-
-	private async scheduleFrom(index: number, skipSeconds = 0): Promise<void> {
-		if (!this.ctx || !this.abort) return;
-		const ctx = this.ctx;
-		let when = ctx.currentTime;
-		for (let i = index; i < Math.min(this.cues.length, index + PREFETCH); i += 1) {
-			const cue = this.cues[i];
-			if (!cue) break;
-			const silence = i === index ? Math.max(0, cue.preSilenceMs / 1000 - skipSeconds) : cue.preSilenceMs / 1000;
-			when += silence;
-			const buffer = await this.loadCue(cue);
-			if (!this.abort || this.abort.signal.aborted || !this.ctx) return;
-			const source = ctx.createBufferSource();
-			source.buffer = buffer;
-			source.connect(ctx.destination);
-			const offset = i === index ? Math.max(0, skipSeconds - cue.preSilenceMs / 1000) : 0;
-			source.start(when, offset);
-			const captured = i;
-			source.onended = () => {
-				if (this.status === 'playing') {
-					this.cursor = Math.min(captured + 1, this.cues.length - 1);
-					this.onAdvance?.(this.cursor);
-				}
-			};
-			this.scheduled.push({ source, startAt: when });
-			when += Math.max(0, buffer.duration - offset);
-		}
-	}
-
-	private async loadCue(cue: StudioCue): Promise<AudioBuffer> {
-		const key = `${cue.id}:${cue.cacheKey}`;
-		const hit = this.buffers.get(key);
-		if (hit) return hit;
-		const url = chunkAudioUrl(this.outputId, cue.id, cue.cacheKey);
-		const response = await fetch(url, { signal: this.abort?.signal });
-		if (!response.ok) throw new Error('chunk fetch failed');
-		const raw = await response.arrayBuffer();
-		if (!this.ctx) throw new Error('no audio context');
-		const buffer = await this.ctx.decodeAudioData(raw.slice(0));
-		this.buffers.set(key, buffer);
-		return buffer;
 	}
 }

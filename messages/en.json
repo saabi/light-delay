@@ -120,6 +120,8 @@
 	"animatic_play_pause": "Play or pause",
 	"animatic_stop": "Stop",
 	"animatic_next": "Next shot",
+	"animatic_mute": "Mute dialogue",
+	"animatic_unmute": "Unmute dialogue",
 	"animatic_progress": "Film progress",
 	"animatic_content": "Content",
 	"animatic_camera": "Camera and framing",

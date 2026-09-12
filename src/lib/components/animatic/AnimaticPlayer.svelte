@@ -3,6 +3,7 @@
 	import AnimaticFrame from './AnimaticFrame.svelte';
 	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
+	import { WebAudioCueSequencer } from '$lib/audio/webAudioCueSequencer';
 	import {
 		getPlayerState,
 		pause,
@@ -16,16 +17,17 @@
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import { durationFromEdits, loadAnimaticEdits } from '$lib/state/animatic-overlay';
 	import { getSubtitleSegments } from '$lib/data/selectors/index';
+	import { buildShotDialogueTimeline } from '$lib/data/selectors/animaticDialogueTimeline';
 	import {
 		analyzeShotDialogue,
 		estimateScriptSpokenMs,
 		montageScriptMs
 	} from '$lib/data/selectors/dialogueTiming';
 	import { formatClock } from '$lib/utils/duration';
-	import { withBase } from '$lib/utils/paths';
+	import { withBase, withLocale } from '$lib/utils/paths';
 	import type { Cue, ScriptFile, Shot } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
-	import { onDestroy, onMount } from 'svelte';
+	import { onDestroy, onMount, untrack } from 'svelte';
 	import * as m from '$lib/paraglide/messages.js';
 	import { storyText } from '$lib/data/selectors/localized';
 
@@ -61,6 +63,16 @@
 		durations.slice(0, player.shotIndex).reduce((a, b) => a + b, 0) + player.elapsedInShotMs
 	);
 
+	const dialogueTimeline = $derived(
+		buildShotDialogueTimeline(script, durations, lang.dialogueLanguage, 'es')
+	);
+
+	const timelineFingerprint = $derived(
+		`${lang.dialogueLanguage}:${dialogueTimeline.length}:${dialogueTimeline
+			.map((cue) => `${cue.id}|${cue.url}|${cue.startMs}`)
+			.join(';')}`
+	);
+
 	const current = $derived(shots[player.shotIndex]);
 	const currentDuration = $derived(durations[player.shotIndex] ?? 0);
 	const currentShotAnalysis = $derived(
@@ -86,7 +98,7 @@
 	);
 
 	const editorHref = $derived(
-		`${returnHref}${current ? `?shot=${encodeURIComponent(current.shot.id)}` : ''}`
+		`${withLocale(returnHref)}${current ? `?shot=${encodeURIComponent(current.shot.id)}` : ''}`
 	);
 
 	const activeSubtitles = $derived.by(() => {
@@ -104,9 +116,13 @@
 		});
 	});
 
+	const sequencer = new WebAudioCueSequencer();
+	let scheduledFingerprint = '';
+	let lastRescheduleKey = '';
 	let raf = 0;
 	let lastTs = 0;
 	let rootEl: HTMLElement | undefined = $state();
+	let audioMuted = $state(false);
 
 	function framingCode(shot: Shot): string {
 		const framing = storyText(shot.composition?.framing);
@@ -122,6 +138,27 @@
 			OTHER: '—'
 		};
 		return (size && map[size]) || size || '—';
+	}
+
+	function computeAbsoluteMs(shotIndex: number, elapsedInShotMs: number): number {
+		return durations.slice(0, shotIndex).reduce((a, b) => a + b, 0) + elapsedInShotMs;
+	}
+
+	function visualAbsoluteMs(): number {
+		const state = getPlayerState();
+		return computeAbsoluteMs(state.shotIndex, state.elapsedInShotMs);
+	}
+
+	function startAudioFromVisualClock() {
+		void sequencer.play(dialogueTimeline, visualAbsoluteMs());
+		scheduledFingerprint = timelineFingerprint;
+		lastRescheduleKey = timelineFingerprint;
+	}
+
+	function syncSequencerSeek(nextAbsoluteMs: number) {
+		if (sequencer.status === 'playing' || sequencer.status === 'paused') {
+			sequencer.seek(nextAbsoluteMs);
+		}
 	}
 
 	function tick(ts: number) {
@@ -151,6 +188,9 @@
 			setElapsedInShotMs(curDur);
 			setStatus('idle');
 			lastTs = 0;
+			sequencer.stop();
+			scheduledFingerprint = '';
+			lastRescheduleKey = '';
 			return;
 		}
 
@@ -169,9 +209,17 @@
 		if (getPlayerState().status === 'playing') {
 			pause();
 			cancelAnimationFrame(raf);
+			sequencer.pause();
 		} else {
+			const canResume =
+				sequencer.status === 'paused' && scheduledFingerprint === timelineFingerprint;
 			play();
 			startLoop();
+			if (canResume) {
+				void sequencer.resume();
+			} else {
+				startAudioFromVisualClock();
+			}
 		}
 	}
 
@@ -179,20 +227,28 @@
 		stop();
 		cancelAnimationFrame(raf);
 		lastTs = 0;
+		sequencer.stop();
+		scheduledFingerprint = '';
+		lastRescheduleKey = '';
 	}
 
 	function goPrev() {
 		const state = getPlayerState();
 		if (state.elapsedInShotMs > 400) {
 			setElapsedInShotMs(0);
+			syncSequencerSeek(computeAbsoluteMs(state.shotIndex, 0));
 			return;
 		}
-		setShotIndex(Math.max(0, state.shotIndex - 1));
+		const idx = Math.max(0, state.shotIndex - 1);
+		setShotIndex(idx);
+		syncSequencerSeek(computeAbsoluteMs(idx, 0));
 	}
 
 	function goNext() {
 		const state = getPlayerState();
-		setShotIndex(Math.min(shots.length - 1, state.shotIndex + 1));
+		const idx = Math.min(shots.length - 1, state.shotIndex + 1);
+		setShotIndex(idx);
+		syncSequencerSeek(computeAbsoluteMs(idx, 0));
 	}
 
 	function seekAbsoluteBy(deltaSec: number) {
@@ -207,6 +263,7 @@
 		}
 		setShotIndex(idx);
 		setElapsedInShotMs(remaining);
+		syncSequencerSeek(next);
 	}
 
 	function onScrub(e: Event) {
@@ -221,6 +278,12 @@
 		}
 		setShotIndex(idx);
 		setElapsedInShotMs(remaining);
+		syncSequencerSeek(value);
+	}
+
+	function toggleMute() {
+		audioMuted = !audioMuted;
+		sequencer.setMuted(audioMuted);
 	}
 
 	async function toggleFullscreen() {
@@ -261,18 +324,37 @@
 		}
 	});
 
+	// Reschedule dialogue when language/timeline changes while playing.
+	// Do not depend on absoluteMs (rAF updates it every frame).
+	$effect(() => {
+		lang.dialogueLanguage;
+		const key = timelineFingerprint;
+		dialogueTimeline.length;
+
+		if (untrack(() => getPlayerState().status) !== 'playing') return;
+		if (key === lastRescheduleKey) return;
+
+		const fromMs = untrack(() => visualAbsoluteMs());
+		const cues = untrack(() => dialogueTimeline);
+		void sequencer.play(cues, fromMs);
+		scheduledFingerprint = key;
+		lastRescheduleKey = key;
+	});
+
 	onMount(() => {
 		if (rootEl) {
 			void rootEl.requestFullscreen().catch(() => undefined);
 		}
 		play();
 		startLoop();
+		startAudioFromVisualClock();
 	});
 
 	onDestroy(() => {
 		if (typeof cancelAnimationFrame !== 'undefined') {
 			cancelAnimationFrame(raf);
 		}
+		sequencer.stop();
 	});
 </script>
 
@@ -375,6 +457,15 @@
 			<button type="button" class="btn next" onclick={goNext} aria-label={m.animatic_next()}
 				>▶|</button
 			>
+			<button
+				type="button"
+				class="btn mute"
+				onclick={toggleMute}
+				aria-label={audioMuted ? m.animatic_unmute() : m.animatic_mute()}
+				aria-pressed={audioMuted}
+			>
+				{audioMuted ? '✕♪' : '♪'}
+			</button>
 			<input
 				class="movie-range"
 				type="range"
@@ -615,7 +706,7 @@
 		background: #06101be8;
 		backdrop-filter: blur(14px);
 		display: grid;
-		grid-template-columns: auto auto auto auto minmax(80px, 1fr) auto auto auto;
+		grid-template-columns: auto auto auto auto auto minmax(80px, 1fr) auto auto auto;
 		gap: 9px;
 		align-items: center;
 	}
@@ -667,7 +758,7 @@
 			left: 8px;
 			right: 8px;
 			bottom: 8px;
-			grid-template-columns: repeat(4, auto) minmax(80px, 1fr) auto auto auto;
+			grid-template-columns: repeat(5, auto) minmax(80px, 1fr) auto auto auto;
 			gap: 6px;
 			padding: 8px;
 			font-size: 0.76rem;
@@ -764,11 +855,11 @@
 			border-radius: 0;
 			background: #06101b;
 			backdrop-filter: none;
-			grid-template-columns: repeat(4, minmax(0, 1fr));
+			grid-template-columns: repeat(5, minmax(0, 1fr));
 			grid-template-areas:
-				'previous play stop next'
-				'range range range range'
-				'time time fullscreen edit';
+				'previous play stop next mute'
+				'range range range range range'
+				'time time fullscreen edit edit';
 			gap: 7px;
 		}
 
@@ -786,6 +877,10 @@
 
 		.next {
 			grid-area: next;
+		}
+
+		.mute {
+			grid-area: mute;
 		}
 
 		.movie-range {

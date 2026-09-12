@@ -120,6 +120,8 @@
 	"animatic_play_pause": "Reproducir o pausar",
 	"animatic_stop": "Detener",
 	"animatic_next": "Toma siguiente",
+	"animatic_mute": "Silenciar diálogo",
+	"animatic_unmute": "Activar diálogo",
 	"animatic_progress": "Progreso de la película",
 	"animatic_content": "Contenido",
 	"animatic_camera": "Cámara y encuadre",
