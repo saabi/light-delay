@@ -1,5 +1,227 @@
 # Changelog
 
+## 2026-09-12 — Beauty shot bridges the ~29-hour deceleration burn to L2
+
+- **New shot `shot-plan-016b`** (5s, exterior, no characters) added to scene 7 ("The extra burn"):
+  the Ardor arriving retrograde, engine-first, near the wormhole mouth as its torch dims to nothing
+  ending the deceleration burn, node field distant in the background. Scene 6 (periapsis, still near
+  Jupiter) used to cut straight to scene 7 (already "near the mouth") with no signal that ~29 hours
+  of burn (per the master outline's own transit math: ~28h54min decelerating to L2) separate them —
+  audiences would read it as continuous. Carries a new "29 HOURS LATER" `time_card` `TextCue`
+  (`cue-0029c`), reusing a schema mechanism (`presentation: 'time_card'`) already established once in
+  the deprecated trailer/main-short (`trailer:cue-f-01`, "23 HOURS LATER") but not yet used in
+  festival-master.
+- Reassigned the existing action cue `cue-0030` ("thrust cuts again for the precision crossing") to
+  the new exterior shot, reworded to name the elapsed burn explicitly; re-timed `shot-plan-016`
+  (dropped the now-redundant leading clause, 8.80s → 7.90s) — its existing generated image is
+  unaffected (a pure interior OTS of Zao) and is kept, not regenerated.
+- Shot/take count: 102 → **103**. Script duration: 769,257ms → **773,357ms** (~12:53).
+
+## 2026-09-12 — Exterior Jupiter periapsis shot and central-access stair-geometry fix
+
+- **New shot `shot-plan-013b`** (5s, exterior, no characters) added to scene 6 ("First gravity
+  dip"), showing the Celestial Ardor backlit by Jupiter and its faint ring arcs during the periapsis
+  turn. The outline's own text for this beat ("the ship rotates from prograde to retrograde, backlit
+  by Jupiter and its rings") had never been rendered — the beat was interior-only. Grounded in the
+  vehicle's existing `asset:vehicle-celestial-ardor-jupiter` reference plate; new location entry
+  `location:jupiter-periapsis` added. New action cue `cue-0024b`. Shot/take count: 101 → **102**;
+  script duration +5,000ms.
+- **Root-caused and fixed a stair-geometry error in `shot-plan-074`**: the central-access cylinder's
+  two opposed helical staircases are documented (via its reference sheet) to hug the shaft's curved
+  wall and interlock at each landing — every other shot at this location renders that correctly, but
+  `shot-plan-074` (which composites three locations in one frame: the elevator, the central-access
+  stair, and the service cylinder's separate straight ladder) rendered two independent staircases
+  that don't follow the wall and a free-standing central ladder, effectively merging the central-access
+  stair with the adjacent service-cylinder ladder into one incoherent structure. Enriched
+  `location:celestial-ardor-central-access`'s own description with the stair geometry (previously
+  undocumented at the location level, only implicit in the reference sheet's metadata) and rewrote
+  `shot-plan-074`'s prompt with explicit geometry and a negative constraint keeping the two structures
+  visually distinct. Image marked for regeneration (`continuity_error`).
+- Recomputed scene/script/project target durations: 764,257ms → **769,257ms** (~12:49).
+
+## 2026-09-12 — Festival-master dialogue audio fit (EN)
+
+- Generated and promoted EN WAVs for new lines `cue-0030b` (Zao) and `cue-0107b` (Rao);
+  content-hash reused 126 existing cues (128 dialogue total).
+- Added `scripts/fit-festival-master-dialogue-audio.mjs` (+ WAV measure / pack helpers): measures
+  on-disk WAV lengths, syncs `estimatedDurationMs`, packs placements without overlap, compresses
+  idle gaps while preserving silence/action/suspense holds, extends or trims shot durations, and
+  cascades scene/`project.json` totals.
+- Cleared 40 audio spills and 9 within-shot WAV overlaps. Montage **767 440 → 764 257** ms.
+- npm: `fit:festival-master-dialogue-audio` / `report:dialogue-audio-fit`.
+
+## 2026-09-12 — Festival-master position continuity and missing-trigger dialogue
+
+- **Presence/visibility metadata corrected against the actual generated stills** for 9 shots
+  (`shot-plan-024`, `025`, `026`, `027`, `041`, `042`, `043`, `044`, `045`, `059`): each shot's
+  image was viewed before editing; in every case the image already staged the scene correctly and
+  only the `visibleRefs`/`offScreenCharacterIds` metadata was wrong (over-inclusive cast copied from
+  the scene's blanket list). None of these images are marked stale.
+- **`shot-plan-019` regenerated**: the only image in this pass that actually contradicted its own
+  shot (Harlan and Zao shown walking away together with an invented briefcase, instead of Harlan
+  departing alone per the beat). Prompt rewritten to continue `shot-plan-018`'s established blocking
+  explicitly, with a negative constraint against the briefcase and against showing them walking
+  together.
+- **Root-caused and fixed impossible bridge geometry during the wormhole crossing**
+  (`shot-plan-040`, `041`): both shots were bound only to the exterior `location:velari-wormhole-mouth`
+  even though their action is on the bridge, so generation had no interior grounding and rendered a
+  large glass floor-level window onto the throat — impossible, since bridge decks sit perpendicular
+  to prograde and the bridge canon has only small reinforced windows. Rebound both shots to
+  `location:celestial-ardor-bridge` (secondary: the wormhole mouth), added
+  `celestial-ardor-bridge` to scene 15's `secondaryLocationIds`, and rewrote both prompts with an
+  explicit negative constraint against large/panoramic glass. Both images are regenerated.
+- **New shot `shot-plan-040b`** (5s, exterior, no characters) inserted between 040 and 041 so the
+  audience still sees the Ardor thread the wormhole from outside, now that the bridge shots
+  correctly stop showing the throat directly. New action cue `cue-0082b` split out of `cue-0082`.
+- **Two missing trigger-dialogue lines added**, each extending its existing take rather than adding
+  a new shot: `shot-plan-016` gains `Zao: "Something's off. We used more fuel than we had to."`
+  before the existing "Burn's clean..." line (8.00s → 9.00s); `shot-plan-054` gains
+  `Rao: "The shielding bay. That's where I'd hide a neutron source."` as Elin and Okoye arrive at
+  the vault (8.00s → 6.10s, replacing padding with real dialogue).
+- **`visibleRefs[].role` added across all 101 shots** to record each character's explicit stage
+  position/facing, closing the root cause of position drift between consecutive shots. 14 shots
+  carry image-verified position text; the rest carry text derived from the shot's own description
+  or speaking role.
+- Recomputed scene/script/project target durations end to end: script total
+  763,340ms → **767,440ms** (~12:47). Shot/take count: 100 → **101**.
+
+## 2026-09-12 — Festival master ScriptFile/storyboard Spanish fill
+
+- Filled Spanish for `script:light-delay-festival-master`: acts/sequences/scenes/beats,
+  126 dialogue `variants.es` (voice-aware LatAm, `needs_revision`), action/text cues,
+  performance notes, and shot description/camera movement copy used by the storyboard UI.
+- Left take `generation.prompt` / `negativePrompt` in English (image-gen only).
+- Set `script.localization.translations.es.status` to `needs_revision`.
+- Helper: `scripts/festival-master-es-i18n.mjs` (export/apply). `validate:translations` OK.
+
+## 2026-09-12 — Festival-master storyboard batch 01
+
+- Generated and registered 103 storyboard stills for the title card, Festival-master shots 001–096, inserted shots 013b/016b/040b, and three credits under `static/assets/animatic/frames/festival-master/`.
+- Regenerated stale shot compositions 019, 040, and 041 after their blocking/camera canon changed.
+- Linked each still to its selected take and marked it `needs_review`; these are generated drafts, not editorially accepted canon.
+- Recorded the batch in `data/production/asset-generation-manifest.json` with visible-shot references and English display-text constraints.
+
+## 2026-09-12 — Festival-master storyboard reference preparation
+
+- Rebuilt Festival-master take references deterministically from visible shot bindings and location fields; stale references are no longer retained between syncs.
+- Enforced off-screen character exclusions and added resolved image paths to generation-plan references for direct adapter attachment.
+- Added Festival-master production-context assignments and a `report:festival-master-refs` audit command; 100 takes and 523 image references currently pass with zero missing paths or off-screen character references.
+
+## 2026-09-12 — Festival master animatic dialogue (EN)
+
+- Generated and promoted **126** English dialogue WAVs for
+  `script:light-delay-festival-master` (Kokoro narrator for the journalist VO;
+  Qwen ICL for cast; ~7.1 min assembled speech). Linked under
+  `static/assets/audio/dialogue/light-delay-festival-master/en/` with
+  `audioAssetId` on each EN variant.
+- Default npm targets `tts:animatic-dialogue` / `:promote` now point at Festival
+  master; archived main-short keeps `:main-short` aliases.
+- Movie-mode timeline falls back to any language that already has linked audio
+  when the active dialogue language has none.
+
+## 2026-09-12 — Removed superseded shaft references
+
+- Deleted the incorrect horizontal/old central-access and service-cylinder concept sheets from the active asset tree.
+- Thumbnail synchronization and Higgsfield source manifests now retain only the current vertical shaft references.
+
+## 2026-09-12 — Reference-locked Proxima dock and Ardor shaft sheets
+
+- Regenerated the Proxima external dock as `concept-sheet-v3.png` using the existing Proxima station and Celestial Ardor model sheets as attached image inputs, preserving station geography, hull identity, docking orientation, and scale.
+- Regenerated the restricted service shaft as `concept-sheet-v3.png` so the artwork reads as a vertical deck-to-deck shaft while retaining the longitudinal fore/aft axis, radial side hatches, and physical COM distributor.
+- Regenerated the central access sheet as `concept-sheet-v2.png` with the bridge reference attached, preserving the two helical staircases, continuous railings, and landing geometry.
+- Updated active catalogs, generation prompts, provenance metadata, static manifests, and thumbnails without deleting superseded images.
+
+## 2026-09-11 — Keep Proxima/Ardor scale diagrams out of storyboard takes
+
+- Moved Celestial Ardor proportional PNG/SVG under `vehicles/celestial-ardor/specs/`
+  (Proxima proportional already lived under `locations/proxima-station/specs/`).
+- Removed scale/proportional assets from entity `referenceAssetIds` and marked them
+  `storyboardEligible: false` in `assets.json`; Festival take sync now skips specs.
+- Storyboard refs keep concept art only (model/concept sheets, berthed lock, Jupiter plate).
+
+## 2026-09-11 — Corrected ship and Proxima reference geography
+
+- Replaced the active engineering, reactor service-bay, and service-cylinder references with orientation-correct v2 sheets. Engineering and reactor workspaces now read as transverse decks perpendicular to the Ardor thrust axis; service-cylinder access doors are radial side-wall hatches, not end-cap doors.
+- Replaced the obsolete Proxima dock reference with a current external axial dock on the non-rotating station spine, including the capture collar, transfer tube, service gantry, umbilicals, and correct Ardor scale/orientation.
+- Retained superseded images for provenance and recorded the replacement paths and orientation constraints in the asset catalog and generation manifest.
+
+## 2026-09-11 — Drop obsolete Proxima/bridge reference images from catalog
+
+- Removed catalog entries and entity/take refs for deleted location sheets:
+  Proxima Station concept + proportional PNG/SVG, Celestial Ardor Bridge concept sheet,
+  and the unused Blender berthed viewport still.
+- Pruned matching `_thumbs` WebPs via `thumbs:sync`, cleaned location/art-bible/poster
+  manifests, retargeted Higgsfield upload sources, and regenerated production plans.
+
+## 2026-09-11 — Festival master storyboard reference assets
+
+- Generated nine new GPT-Image-2 reference sheets for the master-derived Festival Cut: reactor service bay, inner shielding vault, central access cylinder, restricted service cylinder, geophysical impulse package, Harlan wrist device, time-reference diagnostic unit, wired communications distributor, and Velari personal transport sphere.
+- Reused existing bridge, engineering, character, station, transmitter, and Velari-emissary references as style and continuity anchors; no existing image was overwritten.
+- Registered the new assets and entity bindings, added `data/production/asset-generation-manifest.json` with its schema, and extended the provider-neutral generation-plan builder to include `light-delay-festival-master`.
+- Added a synchronization tool so Festival-master take references include the primary/secondary locations and visible master props without exceeding the existing reference budget.
+- Generation remains provider-neutral and unsent. Prompt freeze, production contexts, voice samples, and live Higgsfield entitlement remain separate blockers.
+
+## 2026-09-11 — Festival master storyboard: extended shot durations to natural dialogue pace
+
+- Fixed the 23 shots flagged in the previous storyboard pass whose blueprint-assigned duration was
+  unrealistic for their dialogue's word count. Recomputed each one's `durationMs`/`cuePlacements`
+  from the same `spoken-duration-core.mjs` WPM estimator at full natural pace (no compression), and
+  cascaded the change through the 17 affected scenes' `targetDurationMs`.
+- Total runtime grows from 11:30 to **12:43** (763,340 ms) as a result — confirmed acceptable:
+  deliverable dialogue pacing is itself a causal-readability requirement, which the outline's own
+  10–12 minute range explicitly allows exceeding for. Updated the stated target/ceiling language in
+  the outline framing and `docs/wip/festival-cut-screenplay-runway.en.md` accordingly.
+- Corrected the blueprint's stale "every video candidate is eight seconds or shorter" rule to the
+  actual campaign ceiling of 30 s (`maxSegmentMs`) — the only place in the repo that still said 8 s;
+  two of the fixed shots (Zao's recorded warning) now run 16.5 s and 24.4 s under that corrected
+  ceiling. Updated the corresponding two hardcoded `≤8` assertions in `festivalMasterScript.spec.ts`
+  (per-shot ceiling, and the total-duration constant) to match.
+- Updated `data/project.json`'s registry `targetDurationMs`/label alongside the script's own.
+
+## 2026-09-11 — Animatic dialogue audio (offline TTS + movie playback)
+
+- Added shared `WebAudioCueSequencer` with absolute cue scheduling and rolling
+  prefetch; Studio `ChunkSequencer` now wraps it so long timelines keep prefetching.
+- Animatic movie mode plays promoted dialogue WAVs via shot-relative placements
+  (`sum(prior shot durations) + atMs`), with mute and subtitle `timingByLanguage` parity.
+- Offline driver `scripts/generate-animatic-dialogue-audio.py` exports ScriptFile
+  dialogue to voices markdown, reuses the dual Kokoro+Qwen pipeline (content_hash,
+  `--force-speaker`, assemble), catalogs outputs, and `--promote` links
+  `audioAssetId` under `static/assets/audio/dialogue/…`.
+- npm: `tts:animatic-dialogue` / `tts:animatic-dialogue:promote`. Docs in
+  TTS_VOICE_PIPELINE (EN/ES) and JSON_FORMAT placement timing note.
+- Generated and promoted 98 English dialogue cues for archived
+  `script:light-delay-main-short` (~7.2 min assembled MP3 under Models output).
+
+## 2026-09-11 — Festival master storyboard: Shot/Take records and still-image prompts
+
+- Implemented all 96 reserved story shot candidates plus the 4 non-story cards from
+  `docs/wip/festival-master-shot-blueprint.en.md` as real `Shot` + `Take` records in
+  `script:light-delay-festival-master` (100 shots, 100 takes), keeping the blueprint's reserved IDs
+  unchanged for traceability.
+- Authored a still-image generation prompt (`generation.prompt` + `negativePrompt`, English only) for
+  every take, in the confirmed "grounded cinematic hard science fiction" house register; no provider,
+  model, or image asset is set — nothing has been generated. Video-segment prompts, first/last frame,
+  final audio, and the provider-neutral generation plan remain explicitly out of scope for this pass.
+- Computed `cuePlacements` from actual cue text via the existing `spoken-duration-core.mjs` WPM
+  estimator rather than inventing a new timing heuristic; flagged 23 shots where the blueprint's
+  target duration is unrealistic for the dialogue's word count at normal pace, compressing their
+  placements proportionally to stay schema-valid pending an editorial timing pass in the video/audio
+  phase.
+- Added `visual`/`open` reference-art notes to three legacy zero-reference locations used across the
+  Festival chase and bridge scenes (`command-vestibule`, `central-access`, `service-cylinder`),
+  matching the convention already used for the reactor-service-bay/vault.
+- QA pass caught and fixed 13 shots where a mechanical transcription of the blueprint's dual
+  visible/off-screen notation (meant for multi-shot video coverage planning) had wrongly excluded a
+  character from a still that clearly depicts them on-camera (e.g. Zao recording her own warning,
+  Voss sending Earth the final report) — verified against each shot's own authored prompt text, not
+  against the blueprint shorthand. Also populated `generation.referenceAssetIds` per take from
+  on-screen characters' and the primary location's existing reference sheets, which the first pass
+  had omitted.
+- Updated `festivalMasterScript.spec.ts` and `extracted-data.spec.ts`'s milestone assertions (previously
+  asserting empty `shots`/`takes`) to the new state, and corrected the blueprint's own header, which
+  had claimed the arrays "remain empty."
+
 ## 2026-09-11 — Festival master dialogue, prop catalog, and stale-reference cleanup
 
 - Reviewed all 197 cues of `script:light-delay-festival-master` against the six leads' voice

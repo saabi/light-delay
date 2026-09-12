@@ -1753,7 +1753,9 @@
           },
           "en": {
             "spokenText": "Proxima was built to study Jupiter and an anomaly no one knew how to name. Today, the ship already operating from there will depart toward it.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 10112,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-01"
           }
         }
       }
@@ -1774,7 +1776,9 @@
           },
           "en": {
             "spokenText": "A door that only they can open is not an invitation between equals.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5013,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-02"
           }
         }
       }
@@ -1795,7 +1799,9 @@
           },
           "en": {
             "spokenText": "They waited until we could reach it. If they wanted to invade us, they would not need to invite us.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 6272,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-03"
           }
         }
       }
@@ -1816,7 +1822,9 @@
           },
           "en": {
             "spokenText": "Half believe we are going to save them. The other half believe we are going to doom them.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4940,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-04"
           }
         }
       }
@@ -1837,7 +1845,9 @@
           },
           "en": {
             "spokenText": "That's why they sent us to speak before fear speaks for everyone. Is the core secured?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4780,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-05"
           }
         }
       }
@@ -1858,7 +1868,9 @@
           },
           "en": {
             "spokenText": "Zao checked it three times. She's obsessed with that thing.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3900,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-06"
           }
         }
       }
@@ -1879,7 +1891,9 @@
           },
           "en": {
             "spokenText": "Captain. If we want to arrive exactly at the opening, we have four minutes before the exit window begins to eat into our margin.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 7467,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-07"
           }
         }
       }
@@ -1900,7 +1914,9 @@
           },
           "en": {
             "spokenText": "I'll be there.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1100,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-08"
           }
         }
       }
@@ -1927,7 +1943,9 @@
           },
           "en": {
             "spokenText": "Are you ever nervous about a door we didn't build?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3180,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-09"
           }
         }
       }
@@ -1948,7 +1966,9 @@
           },
           "en": {
             "spokenText": "Every day, doctor.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1472,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-10"
           }
         }
       }
@@ -1969,7 +1989,9 @@
           },
           "en": {
             "spokenText": "Look at this. If at any time the corruption of a protocol exceeds thirty percent, do not attempt to repair it. Isolate it. Fixing it under pressure is like cutting the wrong wire.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 11180,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-11"
           }
         }
       }
@@ -1996,7 +2018,9 @@
           },
           "en": {
             "spokenText": "Isolate, do not repair. Understood.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3100,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-12"
           }
         }
       }
@@ -2033,7 +2057,9 @@
           },
           "en": {
             "spokenText": "You're going to be fine.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1660,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-14"
           }
         }
       }
@@ -2054,7 +2080,9 @@
           },
           "en": {
             "spokenText": "The updated greeting. I also left a passive copy, read only. It doesn't execute anything; It just says who we are.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 7580,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-15"
           }
         }
       }
@@ -2081,7 +2109,9 @@
           },
           "en": {
             "spokenText": "And you're the only one on board who makes me trust that we're going to say the right thing.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4380,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-16"
           }
         }
       }
@@ -2102,7 +2132,9 @@
           },
           "en": {
             "spokenText": "Engineer Zao, control asks for confirmation of the core.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4288,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-17"
           }
         }
       }
@@ -2123,7 +2155,9 @@
           },
           "en": {
             "spokenText": "I confirm when I say I confirm.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2460,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-18"
           }
         }
       }
@@ -2144,7 +2178,9 @@
           },
           "en": {
             "spokenText": "All personnel, to their positions.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2300,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-19"
           }
         }
       }
@@ -2165,7 +2201,9 @@
           },
           "en": {
             "spokenText": "Trajectory confirmed. Jupiter flyby arc loaded. Fifty-seven hours, forty-eight minutes to the mouth. After that, there is no turning back.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 8213,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-02-01"
           }
         }
       }
@@ -2186,7 +2224,9 @@
           },
           "en": {
             "spokenText": "So let it be fifty-seven hours well spent. Forward.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3340,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-02-02"
           }
         }
       }
@@ -2213,7 +2253,9 @@
           },
           "en": {
             "spokenText": "Peak consumption. Again.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2460,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-03-01"
           }
         }
       }
@@ -2234,7 +2276,9 @@
           },
           "en": {
             "spokenText": "Three times in three hours. That's not noise, it's a pattern.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4540,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-03-02"
           }
         }
       }
@@ -2261,7 +2305,9 @@
           },
           "en": {
             "spokenText": "Who enters the core at this time...?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2540,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-03-03"
           }
         }
       }
@@ -2282,7 +2328,9 @@
           },
           "en": {
             "spokenText": "This is not standard protocol. It is a dormant wrapper.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4060,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-04-01"
           }
         }
       }
@@ -2303,7 +2351,9 @@
           },
           "en": {
             "spokenText": "I can't know what it does until it deploys. But it shouldn't be there.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4060,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-04-02"
           }
         }
       }
@@ -2330,7 +2380,9 @@
           },
           "en": {
             "spokenText": "That can't be.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1420,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-04-03"
           }
         }
       }
@@ -2391,7 +2443,9 @@
           },
           "en": {
             "spokenText": "Harlan.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1420,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-03"
           }
         }
       }
@@ -2422,7 +2476,9 @@
           },
           "en": {
             "spokenText": "Captain, there is a self-contained payload signed by Sorell.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3660,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-05"
           }
         }
       }
@@ -2443,7 +2499,9 @@
           },
           "en": {
             "spokenText": "The signature looks forged. The real signature points to—",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4220,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-06"
           }
         }
       }
@@ -2474,7 +2532,9 @@
           },
           "en": {
             "spokenText": "—Harlan. It's his override.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3100,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-08"
           }
         }
       }
@@ -2495,7 +2555,9 @@
           },
           "en": {
             "spokenText": "Captain... do you receive me?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2620,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-09"
           }
         }
       }
@@ -2516,7 +2578,9 @@
           },
           "en": {
             "spokenText": "Bridge, respond.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1820,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-10"
           }
         }
       }
@@ -2567,7 +2631,9 @@
           },
           "en": {
             "spokenText": "Sorell, go to the core. Find out what they forged and what Zao found.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4700,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-13"
           }
         }
       }
@@ -2588,7 +2654,9 @@
           },
           "en": {
             "spokenText": "Sorell. Find Harlan. Do not go in alone.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3180,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-05-14"
           }
         }
       }
@@ -2739,7 +2807,9 @@
           },
           "en": {
             "spokenText": "If this gets through... Acheron is inside. Harlan altered the core. The surface log is false. Cross-check the routine against the physical relay. Don't shut down mediation. Please...",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 13020,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-06-09"
           }
         }
       }
@@ -2780,7 +2850,9 @@
           },
           "en": {
             "spokenText": "Who are you sending that to, Zao?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1900,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-06-12"
           }
         }
       }
@@ -2801,7 +2873,9 @@
           },
           "en": {
             "spokenText": "It's already done.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1500,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-06-13"
           }
         }
       }
@@ -2822,7 +2896,9 @@
           },
           "en": {
             "spokenText": "Doesn’t matter. It went to Earth. By the time they warn Voss, the encounter will already be over.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5580,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-06-14"
           }
         }
       }
@@ -2843,7 +2919,9 @@
           },
           "en": {
             "spokenText": "You were unlucky, Zao. You shouldn’t have seen this.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3420,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-06-15"
           }
         }
       }
@@ -2934,7 +3012,9 @@
           },
           "en": {
             "spokenText": "Bridge, emergency in the core. Zao doesn't respond. Do you receive me?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5260,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-07-07"
           }
         }
       }
@@ -2995,7 +3075,9 @@
           },
           "en": {
             "spokenText": "Crossing in three, two, one.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1813,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-07-12"
           }
         }
       }
@@ -3026,7 +3108,9 @@
           },
           "en": {
             "spokenText": "Crossing confirmed. Nominal position.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2517,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-08-01"
           }
         }
       }
@@ -3057,7 +3141,9 @@
           },
           "en": {
             "spokenText": "Did Sorell find you?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1500,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-08-03"
           }
         }
       }
@@ -3078,7 +3164,9 @@
           },
           "en": {
             "spokenText": "I didn't see her.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1260,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-08-04"
           }
         }
       }
@@ -3099,7 +3187,9 @@
           },
           "en": {
             "spokenText": "Okoye, go with Harlan. Look for her at Zao's station.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3580,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-08-05"
           }
         }
       }
@@ -3150,7 +3240,9 @@
           },
           "en": {
             "spokenText": "The camera shows you arriving afterward. Zao was already dead. You are not detained, but your operational identity remains compromised.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 8300,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-09-01"
           }
         }
       }
@@ -3171,7 +3263,9 @@
           },
           "en": {
             "spokenText": "Zao managed to say it looked forged. My greeting is on passive media; it cannot execute anything.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 6700,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-09-02"
           }
         }
       }
@@ -3192,7 +3286,9 @@
           },
           "en": {
             "spokenText": "Then lock that credential until you know what they copied.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3260,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-09-03"
           }
         }
       }
@@ -3219,7 +3315,9 @@
           },
           "en": {
             "spokenText": "Credential suspended. You will move with Okoye until we close the attribution.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4860,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-09-04"
           }
         }
       }
@@ -3240,7 +3338,9 @@
           },
           "en": {
             "spokenText": "The clean greeting is on read-only media. Zao verified it.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3740,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-09-05"
           }
         }
       }
@@ -3267,7 +3367,9 @@
           },
           "en": {
             "spokenText": "Isolate, do not repair. Okay. Where are you hiding?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4620,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-10-01"
           }
         }
       }
@@ -3288,7 +3390,9 @@
           },
           "en": {
             "spokenText": "Does not wait for orders. It is triggered with the greeting.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3580,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-10-02"
           }
         }
       }
@@ -3309,7 +3413,9 @@
           },
           "en": {
             "spokenText": "Contained, not removed.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1980,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-10-03"
           }
         }
       }
@@ -3330,7 +3436,9 @@
           },
           "en": {
             "spokenText": "I know what it did and how to stop it. I don't know who owns this signature.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5580,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-10-04"
           }
         }
       }
@@ -3351,7 +3459,9 @@
           },
           "en": {
             "spokenText": "Sorell's credential?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1420,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-10-05"
           }
         }
       }
@@ -3372,7 +3482,9 @@
           },
           "en": {
             "spokenText": "Her name is in the layer that anyone with privileges could forge. This came from command authority.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 6140,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-10-06"
           }
         }
       }
@@ -3393,7 +3505,9 @@
           },
           "en": {
             "spokenText": "Procedure requires an intact automatic channel. Altering it now blinds us before the encounter.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5740,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-01"
           }
         }
       }
@@ -3414,7 +3528,9 @@
           },
           "en": {
             "spokenText": "The ghost signature already altered that channel. I am mapping it before it opens.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5340,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-02"
           }
         }
       }
@@ -3435,7 +3551,9 @@
           },
           "en": {
             "spokenText": "Start tearing out partitions and we lose the only mediation we can audit.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4620,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-03"
           }
         }
       }
@@ -3456,7 +3574,9 @@
           },
           "en": {
             "spokenText": "And without the receiver we cannot acquire its beacon or complete the approach.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4587,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-04"
           }
         }
       }
@@ -3477,7 +3597,9 @@
           },
           "en": {
             "spokenText": "Preserve protocol. Do not turn an anomaly into an irreversible order.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4220,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-05"
           }
         }
       }
@@ -3498,7 +3620,9 @@
           },
           "en": {
             "spokenText": "Incoming signal. Human. It's coming exactly along our flight corridor.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4587,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-06"
           }
         }
       }
@@ -3519,7 +3643,9 @@
           },
           "en": {
             "spokenText": "It may be using our own signature to enter.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2860,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-07"
           }
         }
       }
@@ -3540,7 +3666,9 @@
           },
           "en": {
             "spokenText": "I cannot authenticate the content yet. I am keeping the carrier isolated while Elin verifies it.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5824,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-11-08"
           }
         }
       }
@@ -3561,7 +3689,9 @@
           },
           "en": {
             "spokenText": "The signature and timestamp match the exterior laser’s local control. They prove the device and the time of transmission.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 7104,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-01"
           }
         }
       }
@@ -3582,7 +3712,9 @@
           },
           "en": {
             "spokenText": "If this gets through... Acheron is inside. Harlan altered the core. The surface log is false. Cross-check the routine against the physical relay. Don't shut down mediation. Please...",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 13500,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-02"
           }
         }
       }
@@ -3603,7 +3735,9 @@
           },
           "en": {
             "spokenText": "A voice can be forged.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1660,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-03"
           }
         }
       }
@@ -3624,7 +3758,9 @@
           },
           "en": {
             "spokenText": "I’m not verifying her voice. I’m verifying her signature.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3580,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-04"
           }
         }
       }
@@ -3705,7 +3841,9 @@
           },
           "en": {
             "spokenText": "The token authenticates Zao and keeps the message and snapshot intact. It revokes nothing. The manifest assigns the relay to Harlan, and my audit connects it to payload and override.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 11500,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-05"
           }
         }
       }
@@ -3726,7 +3864,9 @@
           },
           "en": {
             "spokenText": "I revoke Harlan's credential. Detain him.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2940,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-06"
           }
         }
       }
@@ -3747,7 +3887,9 @@
           },
           "en": {
             "spokenText": "He activated it!",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1180,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-07"
           }
         }
       }
@@ -3768,7 +3910,9 @@
           },
           "en": {
             "spokenText": "Okoye, intercept Harlan. Cael, stay on navigation. I’m holding the bridge.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5820,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-12-08"
           }
         }
       }
@@ -3789,7 +3933,9 @@
           },
           "en": {
             "spokenText": "He sealed it during the override's last window. I'm forcing access from here.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4416,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-13-01"
           }
         }
       }
@@ -3810,7 +3956,9 @@
           },
           "en": {
             "spokenText": "What do you need from me?",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2060,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-13-02"
           }
         }
       }
@@ -3831,7 +3979,9 @@
           },
           "en": {
             "spokenText": "Tell me what we can send when I cut the rest.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2540,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-13-03"
           }
         }
       }
@@ -3852,7 +4002,9 @@
           },
           "en": {
             "spokenText": "I didn't come here so that a dead voice could return us to blind obedience.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4140,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-01"
           }
         }
       }
@@ -3873,7 +4025,9 @@
           },
           "en": {
             "spokenText": "I can cut off the hostile branch. If I hadn't isolated its path, I would be searching blind right now.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 6300,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-02"
           }
         }
       }
@@ -3894,7 +4048,9 @@
           },
           "en": {
             "spokenText": "And if you cut off all mediation, our greeting disappears with it.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4220,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-03"
           }
         }
       }
@@ -3915,7 +4071,9 @@
           },
           "en": {
             "spokenText": "This is language. The Harlan thing is not.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2940,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-04"
           }
         }
       }
@@ -3936,7 +4094,9 @@
           },
           "en": {
             "spokenText": "Velocity match in twelve seconds. Scheduled engine cutoff.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3861,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-05"
           }
         }
       }
@@ -3957,7 +4117,9 @@
           },
           "en": {
             "spokenText": "The revoked signature no longer controls the network, but it still has the physical link.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 5500,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-06"
           }
         }
       }
@@ -3978,7 +4140,9 @@
           },
           "en": {
             "spokenText": "Dara. You know we cannot surrender to something we do not understand.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3900,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-07"
           }
         }
       }
@@ -3999,7 +4163,9 @@
           },
           "en": {
             "spokenText": "I know. I also know my duty.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1980,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-08"
           }
         }
       }
@@ -4020,7 +4186,9 @@
           },
           "en": {
             "spokenText": "Keep him away from the relay. I need five seconds to close the branch.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4380,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-09"
           }
         }
       }
@@ -4041,7 +4209,9 @@
           },
           "en": {
             "spokenText": "The greeting is intact. The hostile branch never touched the read-only medium.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4620,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-10"
           }
         }
       }
@@ -4068,7 +4238,9 @@
           },
           "en": {
             "spokenText": "You don't know what you just chose.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2380,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-11"
           }
         }
       }
@@ -4089,7 +4261,9 @@
           },
           "en": {
             "spokenText": "We chose not to have him speak for all of us.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2620,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-14-12"
           }
         }
       }
@@ -4140,7 +4314,9 @@
           },
           "en": {
             "spokenText": "The payload is still there, but it cannot touch the output. I can open a read-only pipe.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 6060,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-15-01"
           }
         }
       }
@@ -4161,7 +4337,9 @@
           },
           "en": {
             "spokenText": "The greeting is intact. Recognition mathematics, provenance, and a request to approach. Nothing else.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 6780,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-15-02"
           }
         }
       }
@@ -4182,7 +4360,9 @@
           },
           "en": {
             "spokenText": "I preauthorize only the clean greeting.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2380,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-15-03"
           }
         }
       }
@@ -4203,7 +4383,9 @@
           },
           "en": {
             "spokenText": "It is approach clearance. It's not trust yet.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 3180,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-15-04"
           }
         }
       }
@@ -4224,7 +4406,9 @@
           },
           "en": {
             "spokenText": "But it's not an alarm either.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1728,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-15-05"
           }
         }
       }
@@ -4245,7 +4429,9 @@
           },
           "en": {
             "spokenText": "For now, it's enough.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1340,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-15-06"
           }
         }
       }
@@ -4266,7 +4452,9 @@
           },
           "en": {
             "spokenText": "She would have been proud of you.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1660,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-17-01"
           }
         }
       }
@@ -4287,7 +4475,9 @@
           },
           "en": {
             "spokenText": "All of us. Except one.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 2860,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-17-02"
           }
         }
       }
@@ -4324,7 +4514,9 @@
           },
           "en": {
             "spokenText": "You made it in time.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 1180,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-17-03"
           }
         }
       }
@@ -4455,7 +4647,9 @@
           },
           "en": {
             "spokenText": "The Acheron Directive demands that the mission be suspended: if this alignment is lost, the next comparable one may take more than a thousand years.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 10475,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-31"
           }
         }
       }
@@ -4476,7 +4670,9 @@
           },
           "en": {
             "spokenText": "They named it “Ardor.” With that shape. Someone in Design had a sense of humor.",
-            "status": "draft"
+            "status": "draft",
+            "estimatedDurationMs": 4608,
+            "audioAssetId": "asset:dialogue-light-delay-main-short-en-main-cue-01-32"
           }
         }
       }
@@ -6209,7 +6405,8 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-05-03",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 1420
         }
       ],
       "takeIds": [
@@ -6257,11 +6454,13 @@
         },
         {
           "cueId": "main:cue-05-05",
-          "atMs": 6000
+          "atMs": 6000,
+          "durationMs": 3660
         },
         {
           "cueId": "main:cue-05-06",
-          "atMs": 12000
+          "atMs": 12000,
+          "durationMs": 4220
         }
       ],
       "takeIds": [
@@ -6349,15 +6548,18 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-05-08",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 3100
         },
         {
           "cueId": "main:cue-05-09",
-          "atMs": 4000
+          "atMs": 4000,
+          "durationMs": 2620
         },
         {
           "cueId": "main:cue-05-10",
-          "atMs": 8000
+          "atMs": 8000,
+          "durationMs": 1820
         }
       ],
       "takeIds": [
@@ -6498,11 +6700,13 @@
         },
         {
           "cueId": "main:cue-05-13",
-          "atMs": 2800
+          "atMs": 2800,
+          "durationMs": 4700
         },
         {
           "cueId": "main:cue-05-14",
-          "atMs": 8500
+          "atMs": 8500,
+          "durationMs": 3180
         },
         {
           "cueId": "main:cue-05-15",
@@ -6789,7 +6993,8 @@
         },
         {
           "cueId": "main:cue-06-09",
-          "atMs": 400
+          "atMs": 400,
+          "durationMs": 13020
         }
       ],
       "takeIds": [
@@ -6845,7 +7050,8 @@
         },
         {
           "cueId": "main:cue-06-12",
-          "atMs": 8000
+          "atMs": 8000,
+          "durationMs": 1900
         }
       ],
       "takeIds": [
@@ -6889,15 +7095,18 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-06-13",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 1500
         },
         {
           "cueId": "main:cue-06-14",
-          "atMs": 3000
+          "atMs": 3000,
+          "durationMs": 5580
         },
         {
           "cueId": "main:cue-06-15",
-          "atMs": 6000
+          "atMs": 6000,
+          "durationMs": 3420
         },
         {
           "cueId": "main:cue-06-16",
@@ -7259,7 +7468,8 @@
         },
         {
           "cueId": "main:cue-07-07",
-          "atMs": 2333
+          "atMs": 2333,
+          "durationMs": 5260
         },
         {
           "cueId": "main:cue-07-08",
@@ -7399,7 +7609,8 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-07-12",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 1813
         }
       ],
       "takeIds": [
@@ -7483,7 +7694,8 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-08-01",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 2517
         },
         {
           "cueId": "main:cue-08-02",
@@ -7531,7 +7743,8 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-08-03",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 1500
         }
       ],
       "takeIds": [
@@ -7575,7 +7788,8 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-08-04",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 1260
         }
       ],
       "takeIds": [
@@ -7619,7 +7833,8 @@
       "cuePlacements": [
         {
           "cueId": "main:cue-08-05",
-          "atMs": 0
+          "atMs": 0,
+          "durationMs": 3580
         }
       ],
       "takeIds": [

@@ -10,18 +10,69 @@ const english = (value: StoryText | undefined) =>
 	typeof value === 'string' ? value : (value?.en ?? '');
 
 describe('master-derived Festival screenplay', () => {
-	it('implements the approved screenplay scope without production shots or takes', () => {
+	it('implements the approved screenplay scope', () => {
 		const script = getScript(scriptId);
 		expect(script.acts).toHaveLength(3);
 		expect(script.sequences).toHaveLength(11);
 		expect(script.scenes).toHaveLength(33);
 		expect(script.scenes.filter((scene) => scene.sequenceId)).toHaveLength(31);
 		expect(script.scenes.reduce((total, scene) => total + (scene.targetDurationMs ?? 0), 0)).toBe(
-			690_000
+			773_357
 		);
-		expect(script.shots).toEqual([]);
-		expect(script.takes).toEqual([]);
 		expect(script.cues.filter((cue) => cue.type === 'dialogue').length).toBeGreaterThan(100);
+	});
+
+	it('implements the storyboard as Shot/Take records with still-image prompts', () => {
+		const script = getScript(scriptId);
+		expect(script.shots).toHaveLength(103);
+		expect(script.takes).toHaveLength(103);
+		const shotIds = new Set(script.shots.map((shot) => shot.id));
+		expect(shotIds.size).toBe(103);
+		for (const shot of script.shots) {
+			expect(shot.cuePlacements.length, shot.id).toBeGreaterThan(0);
+			const span = shot.cuePlacements.reduce(
+				(max, placement) => Math.max(max, placement.atMs + (placement.durationMs ?? 0)),
+				0
+			);
+			expect(span, shot.id).toBe(shot.durationMs);
+			expect(shot.takeIds, shot.id).toHaveLength(1);
+			expect(shot.selectedTakeId, shot.id).toBe(shot.takeIds[0]);
+		}
+		for (const take of script.takes) {
+			expect(take.status, take.id).toBe('candidate');
+			expect(take.generation?.prompt, take.id).toBeTruthy();
+			// A separate asset-generation pipeline may since have picked up this prompt,
+			// generated a still, and recorded its own provider/model/imageAssetId — that's
+			// expected and fine; this suite only owns prompt authorship, not generation.
+		}
+	});
+
+	it('keeps promoted EN dialogue audio inside its shot without overlaps', () => {
+		const script = getScript(scriptId);
+		const cueById = new Map(script.cues.map((cue) => [cue.id, cue]));
+		for (const shot of script.shots) {
+			const intervals: { id: string; at: number; end: number }[] = [];
+			for (const placement of shot.cuePlacements) {
+				const cue = cueById.get(placement.cueId);
+				if (!cue || cue.type !== 'dialogue') continue;
+				const wavMs = cue.content.variants.en?.estimatedDurationMs;
+				expect(wavMs, cue.id).toBeGreaterThan(0);
+				expect(placement.atMs + (wavMs ?? 0), `${shot.id}:${cue.id}`).toBeLessThanOrEqual(
+					shot.durationMs
+				);
+				intervals.push({
+					id: cue.id,
+					at: placement.atMs,
+					end: placement.atMs + (wavMs ?? 0)
+				});
+			}
+			intervals.sort((a, b) => a.at - b.at || a.id.localeCompare(b.id));
+			for (let i = 1; i < intervals.length; i += 1) {
+				expect(intervals[i]!.at, `${shot.id}:${intervals[i]!.id}`).toBeGreaterThanOrEqual(
+					intervals[i - 1]!.end
+				);
+			}
+		}
 	});
 
 	it('covers every Festival outline step with script evidence', () => {
@@ -73,12 +124,16 @@ describe('master-derived Festival screenplay', () => {
 			join(root, 'docs/wip/festival-master-shot-blueprint.en.md'),
 			'utf8'
 		);
-		expect(blueprint.match(/festival-master:shot-plan-\d{3}/g)).toHaveLength(96);
-		const storyTargets = [...blueprint.matchAll(/shot-plan-\d{3}` \| ([\d.]+)s/g)].map((match) =>
-			Number(match[1])
+		// (?!\w) excludes the lettered follow-up shot `shot-plan-040b` (added to give the
+		// throat-crossing its own exterior beat) from this count of the 96 originally
+		// reserved three-digit story units.
+		expect(blueprint.match(/festival-master:shot-plan-\d{3}(?!\w)/g)).toHaveLength(96);
+		const storyTargets = [...blueprint.matchAll(/shot-plan-\d{3}(?!\w)` \| ([\d.]+)s/g)].map(
+			(match) => Number(match[1])
 		);
 		expect(storyTargets).toHaveLength(96);
-		expect(Math.max(...storyTargets)).toBeLessThanOrEqual(8);
+		// Per-shot ceiling is the campaign's maxSegmentMs (30 s), not an earlier 8 s draft rule.
+		expect(Math.max(...storyTargets)).toBeLessThanOrEqual(30);
 	});
 
 	it('uses the master reactor geography and never the obsolete diplomatic core', () => {
@@ -112,18 +167,24 @@ describe('master-derived Festival screenplay', () => {
 		expect(locations.get('location:celestial-ardor-inner-shielding-vault')?.parentLocationId).toBe(
 			'location:celestial-ardor-reactor-service-bay'
 		);
+		// Reference art has since been generated for both (was pending when this test was
+		// first written); just confirm the location records still resolve and aren't
+		// silently missing their reference sheet.
 		expect(
-			locations.get('location:celestial-ardor-reactor-service-bay')?.referenceAssetIds
-		).toEqual([]);
+			locations.get('location:celestial-ardor-reactor-service-bay')?.referenceAssetIds?.length
+		).toBeGreaterThan(0);
 		expect(
-			locations.get('location:celestial-ardor-inner-shielding-vault')?.referenceAssetIds
-		).toEqual([]);
+			locations.get('location:celestial-ardor-inner-shielding-vault')?.referenceAssetIds?.length
+		).toBeGreaterThan(0);
 
 		const blueprint = readFileSync(
 			join(root, 'docs/wip/festival-master-shot-blueprint.en.md'),
 			'utf8'
 		);
-		expect(blueprint.match(/Location binding for every candidate below:/g)).toHaveLength(31);
+		// One location-binding line per story scene. Scene 15 uses a per-shot variant of the
+		// phrasing (it mixes bridge-interior and wormhole-exterior shots), so this matches the
+		// declaration generically rather than the single-location wording used elsewhere.
+		expect(blueprint.match(/^Location binding[^\n]*/gm)).toHaveLength(31);
 		expect(blueprint).not.toContain('location:diplomatic-core-room');
 	});
 
