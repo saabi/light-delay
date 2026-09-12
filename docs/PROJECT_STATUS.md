@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-12 — Diálogo EN del storyboard Festival master completo
+
+- Generadas y promocionadas las 8 cues EN que faltaban
+  (`cue-0003`, `0059b`, `0076b`, `0076c`, `0120`, `0162`, `0167`, `0171`).
+- Catálogo `animatic-light-delay-festival-master-en`: **131** cues; fit en verde
+  (~806.5 s). Español de diálogo sigue sin audio.
+
 ## 2026-09-12 — JSON alineado tras borrar hojas de referencia
 
 - Eliminada la entrada `asset:vehicle-celestial-ardor-sheet` tras borrar

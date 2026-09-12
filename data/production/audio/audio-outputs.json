@@ -122,8 +122,8 @@
         "en": "Animatic dialogue (light-delay-festival-master, en)"
       },
       "description": {
-        "es": "128 cues de diálogo del script script:light-delay-festival-master.",
-        "en": "128 dialogue cues from script script:light-delay-festival-master."
+        "es": "131 cues de diálogo del script script:light-delay-festival-master.",
+        "en": "131 dialogue cues from script script:light-delay-festival-master."
       },
       "sourceOutlineId": "script:light-delay-festival-master",
       "sourceOutlineRevision": 0,
@@ -139,7 +139,7 @@
         "Zao"
       ],
       "expectedSampleRate": 24000,
-      "expectedCueCount": 128
+      "expectedCueCount": 131
     }
   ]
 }

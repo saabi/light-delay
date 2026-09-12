@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-12 — Festival master storyboard EN dialogue complete
+
+- Synthesized and promoted the 8 missing English dialogue cues for
+  `script:light-delay-festival-master` (131/131 WAVs linked).
+- Re-fitted shot timings; `report:dialogue-audio-fit` is green
+  (`missingAudio: 0`, total ~806.5 s).
+
 ## 2026-09-12 — Sync JSON after deleted reference sheets
 
 - Removed catalog entry `asset:vehicle-celestial-ardor-sheet` after deleting

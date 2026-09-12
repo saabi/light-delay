@@ -7,7 +7,7 @@ Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye], [C
 
 <!-- audience-dialogue-id: festival-master:cue-0003 -->
 [Narrator]
-At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it a door humanity never agreed to install.
+At the Jupiter mouth, protesters call it a door humanity never agreed to install. Supporters call tomorrow an invitation.
 
 <!-- audience-dialogue-id: festival-master:cue-0004 -->
 [Harlan]
@@ -198,6 +198,10 @@ At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it
 [QwenInstruct] Speak English. Performance and delivery: diagnostic fragments accelerating into certainty
 "Radio. Hardline. Emergency. All three. That’s deliberate."
 
+<!-- audience-dialogue-id: festival-master:cue-0059b -->
+[Zao]
+"Internal comms are cut. I need another way to reach someone."
+
 <!-- audience-dialogue-id: festival-master:cue-0061 -->
 [Zao]
 [QwenInstruct] Speak English. Performance and delivery: thinking with her hands; each rejected path changes the plot
@@ -232,6 +236,14 @@ At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it
 [Harlan]
 [QwenInstruct] Speak English. Performance and delivery: a genuine regret that does not change his choice
 "You should never have had to find it."
+
+<!-- audience-dialogue-id: festival-master:cue-0076b -->
+[Harlan]
+"What a mess."
+
+<!-- audience-dialogue-id: festival-master:cue-0076c -->
+[Harlan]
+"No problem. I'll cut the flight controls."
 
 <!-- audience-dialogue-id: festival-master:cue-0078b -->
 [Harlan]
@@ -389,7 +401,7 @@ At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it
 <!-- audience-dialogue-id: festival-master:cue-0120 -->
 [Harlan]
 [QwenInstruct] Speak English. Performance and delivery: private grief, not triumph
-"Now they’ll never know who saved them."
+"Zao missed her aim. The signal's gone, unrecoverable — now they'll never know who saved them."
 
 <!-- audience-dialogue-id: festival-master:cue-0122 -->
 [Elin]
@@ -544,7 +556,7 @@ At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it
 <!-- audience-dialogue-id: festival-master:cue-0162 -->
 [Harlan]
 [QwenInstruct] Speak English. Performance and delivery: rushing because nobody is listening anymore
-"I needed time. One sign we bite, and they might wait."
+"I needed time. One sign that we're not defenseless — that we can bite back — and they'll think twice before they take what they want from us. Earth needs those years."
 
 <!-- audience-dialogue-id: festival-master:cue-0163 -->
 [Voss]
@@ -559,7 +571,7 @@ At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it
 <!-- audience-dialogue-id: festival-master:cue-0167 -->
 [Elin]
 [QwenInstruct] Speak English. Performance and delivery: a solution forming aloud
-"External reference. That I can move."
+"It's keyed to the ship's own clock, not a separate one. Feed it a different time reference and it stops trusting when 'now' is."
 
 <!-- audience-dialogue-id: festival-master:cue-0169 -->
 [Voss]
@@ -574,7 +586,7 @@ At the Jupiter mouth, supporters call tomorrow an invitation. Protesters call it
 <!-- audience-dialogue-id: festival-master:cue-0171 -->
 [Voss]
 [QwenInstruct] Speak English. Performance and delivery: immediate follow-through
-"Keep it watched. No thrust."
+"Keep it watched. No thrust, no vibration — nothing that shakes this ship until we're certain it's safe."
 
 <!-- audience-dialogue-id: festival-master:cue-0173 -->
 [Sorell]
