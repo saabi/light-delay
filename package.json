@@ -55,6 +55,8 @@
 		"report:dialogue-timing": "node scripts/report-dialogue-timing.mjs",
 		"report:dialogue-audio-fit": "node scripts/fit-festival-master-dialogue-audio.mjs --check",
 		"fit:festival-master-dialogue-audio": "node scripts/fit-festival-master-dialogue-audio.mjs --write",
+		"fit:trailer-master-dialogue-audio": "node scripts/link-trailer-master-festival-dialogue-audio.mjs --write",
+		"report:trailer-master-dialogue-audio": "node scripts/link-trailer-master-festival-dialogue-audio.mjs --check",
 		"report:visual-art": "node scripts/report-visual-art.mjs",
 		"report:image-debt": "node scripts/report-image-debt.mjs",
 		"report:shot-completeness": "node scripts/report-shot-completeness.mjs",

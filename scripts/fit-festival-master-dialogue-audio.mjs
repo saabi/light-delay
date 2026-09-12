@@ -6,8 +6,8 @@
  *   node scripts/fit-festival-master-dialogue-audio.mjs --write
  */
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { measureWavDurationMs } from './lib/wav-duration.mjs';
 import {
 	CONVERSATIONAL_GAP_MS,
@@ -363,4 +363,14 @@ function main() {
 	if ((doCheck || doWrite) && !report.ok) process.exit(1);
 }
 
-main();
+function invokedDirectly() {
+	try {
+		return import.meta.url === pathToFileURL(resolve(process.argv[1])).href;
+	} catch {
+		return false;
+	}
+}
+
+if (invokedDirectly()) {
+	main();
+}
