@@ -331,7 +331,15 @@
         "trailer-master:cue-a-03",
         "trailer-master:cue-a-04",
         "trailer-master:cue-a-05"
-      ]
+      ],
+      "purpose": {
+        "en": "Establish arrival and mission scale before the cut tightens.",
+        "es": "Establecer la llegada y la escala de la misión antes de que el corte se apriete."
+      },
+      "title": {
+        "en": "Arrival",
+        "es": "Llegada"
+      }
     },
     {
       "id": "trailer-master:beat-b-01",
@@ -344,7 +352,15 @@
       "cueIds": [
         "trailer-master:cue-b-01",
         "trailer-master:cue-b-02"
-      ]
+      ],
+      "purpose": {
+        "en": "Reveal the anomaly Zao finds without resolving who planted it.",
+        "es": "Revelar la anomalía que encuentra Zao sin resolver quién la plantó."
+      },
+      "title": {
+        "en": "The anomaly",
+        "es": "La anomalía"
+      }
     },
     {
       "id": "trailer-master:beat-c-01",
@@ -358,7 +374,15 @@
         "trailer-master:cue-c-01",
         "trailer-master:cue-c-02",
         "trailer-master:cue-c-03"
-      ]
+      ],
+      "purpose": {
+        "en": "Cut the warning mid-call so the threat is felt, not explained.",
+        "es": "Cortar la advertencia a media llamada para que la amenaza se sienta, no se explique."
+      },
+      "title": {
+        "en": "The warning",
+        "es": "La advertencia"
+      }
     },
     {
       "id": "trailer-master:beat-d-01",
@@ -372,7 +396,15 @@
         "trailer-master:cue-d-01",
         "trailer-master:cue-d-02",
         "trailer-master:cue-d-03"
-      ]
+      ],
+      "purpose": {
+        "en": "Shift suspicion onto the crew without confirming the culprit.",
+        "es": "Desplazar la sospecha sobre la tripulación sin confirmar al culpable."
+      },
+      "title": {
+        "en": "Suspicion",
+        "es": "Sospecha"
+      }
     },
     {
       "id": "trailer-master:beat-e-01",
@@ -384,7 +416,15 @@
       },
       "cueIds": [
         "trailer-master:cue-e-01"
-      ]
+      ],
+      "purpose": {
+        "en": "Deliver the delayed reveal that reframes the earlier warning.",
+        "es": "Entregar la revelación diferida que reencuadra la advertencia anterior."
+      },
+      "title": {
+        "en": "The reveal",
+        "es": "La revelación"
+      }
     },
     {
       "id": "trailer-master:beat-f-01",
@@ -400,7 +440,15 @@
         "trailer-master:cue-f-03",
         "trailer-master:cue-f-04",
         "trailer-master:cue-f-05"
-      ]
+      ],
+      "purpose": {
+        "en": "Hold on the armed clock so contact remains unresolved.",
+        "es": "Mantener el reloj armado para que el contacto quede sin resolver."
+      },
+      "title": {
+        "en": "The clock",
+        "es": "El reloj"
+      }
     },
     {
       "id": "trailer-master:beat-g-01",
@@ -416,7 +464,15 @@
         "trailer-master:cue-g-3",
         "trailer-master:cue-g-4",
         "trailer-master:cue-g-5"
-      ]
+      ],
+      "purpose": {
+        "en": "Close on title and credits without resolving the encounter.",
+        "es": "Cerrar con título y créditos sin resolver el encuentro."
+      },
+      "title": {
+        "en": "Title and credits",
+        "es": "Título y créditos"
+      }
     }
   ],
   "cues": [

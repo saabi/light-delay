@@ -5,6 +5,8 @@
 - Regenerated `docs/MASTER_RELEVANCE_REPORT.md`, `docs/PENDING_AUTHOR_NOTES.md`, and
   the Festival-master generation plan so `npm run generated:check` passes again after
   recent ScriptFile edits (GitHub Pages deploy had failed on stale artifacts).
+- Added missing English/Spanish `purpose` maps on trailer-master beats so
+  `validate:translations` passes.
 
 ## 2026-09-12 — Festival-master stale Spanish dialogue refresh
 

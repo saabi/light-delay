@@ -3,7 +3,8 @@
 ## 2026-09-12 — Artefactos editoriales regenerados (deploy)
 
 - `MASTER_RELEVANCE_REPORT`, `PENDING_AUTHOR_NOTES` y el plan de generación del
-  Festival master regenerados; `generated:check` en verde tras el fallo de Actions.
+  Festival master regenerados; `purpose` EN/ES añadido a los beats del tráiler
+  master. `generated:check` y `validate:translations` en verde.
 
 ## 2026-09-12 — Diálogo ES desfasado del Festival master actualizado
 
