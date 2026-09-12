@@ -184,6 +184,17 @@
       "expression_count": 5
     },
     {
+      "slug": "velari-envoy",
+      "name": "Enviado Velari",
+      "role": "Emisario de primer contacto",
+      "note": "Individuo Velari de manto alargado y translúcido, con patrones luminosos ramificados; sin rostro ni extremidades humanoides.",
+      "category": "principal",
+      "views": ["front", "three-quarter", "side", "back", "detail studies"],
+      "expression_count": 0,
+      "file": "velari-envoy/model-sheet.png",
+      "dimensions": [1536, 1024]
+    },
+    {
       "slug": "earth-protesters",
       "name": "Manifestantes terrestres",
       "role": "Aqueronte / partidarios del contacto",

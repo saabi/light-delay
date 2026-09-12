@@ -49,13 +49,6 @@
         },
         {
           "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -1205,13 +1198,6 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -1986,13 +1972,6 @@
         },
         {
           "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -2314,13 +2293,6 @@
         }
       },
       "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
@@ -3560,13 +3532,6 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -3669,13 +3634,6 @@
         }
       },
       "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
@@ -3906,13 +3864,6 @@
         }
       },
       "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-sheet",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
         {
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",

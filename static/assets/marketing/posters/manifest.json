@@ -63,7 +63,7 @@
       "concept": "Celestial Ardor abandona el muelle axial externo de Proxima ante Júpiter.",
       "references": [
         "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
-        "/assets/vehicles/celestial-ardor/model-sheet.png"
+        "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png"
       ]
     },
     {
@@ -82,7 +82,7 @@
       "concept": "Adaptación vertical nativa de la partida desde Proxima.",
       "references": [
         "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
-        "/assets/vehicles/celestial-ardor/model-sheet.png"
+        "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png"
       ]
     },
     {
@@ -139,10 +139,10 @@
       "concept": "Afiche coral ante la Estación Velari, con la Ardor a escala mínima.",
       "references": [
         "/assets/locations/velari-station/concept-sheet.png",
-        "/assets/vehicles/celestial-ardor/model-sheet.png",
+        "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
         "/assets/characters/zao/model-sheet.png",
         "/assets/characters/voss/model-sheet.png",
-        "/assets/characters/harlan/model-sheet.png",
+        "/assets/characters/harlan/model-sheet-v2.png",
         "/assets/characters/rao/model-sheet.png",
         "/assets/characters/sorell/model-sheet.png",
         "/assets/characters/cael/model-sheet.png"
@@ -164,10 +164,10 @@
       "concept": "Adaptación vertical nativa del afiche coral de primer contacto.",
       "references": [
         "/assets/locations/velari-station/concept-sheet.png",
-        "/assets/vehicles/celestial-ardor/model-sheet.png",
+        "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
         "/assets/characters/zao/model-sheet.png",
         "/assets/characters/voss/model-sheet.png",
-        "/assets/characters/harlan/model-sheet.png",
+        "/assets/characters/harlan/model-sheet-v2.png",
         "/assets/characters/rao/model-sheet.png",
         "/assets/characters/sorell/model-sheet.png",
         "/assets/characters/cael/model-sheet.png"

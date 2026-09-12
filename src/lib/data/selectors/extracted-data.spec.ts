@@ -20,7 +20,8 @@ describe('structured project data', () => {
 		expect(script.takes).toHaveLength(0);
 		expect(listCurrentScripts().map((entry) => entry.id)).toEqual([
 			'script:light-delay-master-narrative',
-			'script:light-delay-festival-master'
+			'script:light-delay-festival-master',
+			'script:light-delay-trailer-master'
 		]);
 	});
 

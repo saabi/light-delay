@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-09-12 — Sync JSON after deleted reference sheets
+
+- Removed catalog entry `asset:vehicle-celestial-ardor-sheet` after deleting
+  `static/assets/vehicles/celestial-ardor/model-sheet.png`. Live references now use
+  `asset:vehicle-celestial-ardor-jupiter` (`celestial-ardor-with-jupiter.png`).
+- Updated vehicle entity refs, Festival master take refs, generation manifest, production
+  plans, vehicles/thumbs/marketing poster manifests, and related helper script/test paths.
+- Harlan’s deleted `model-sheet.png` was already superseded by `model-sheet-v2.png` in the
+  catalog; poster provenance paths that still pointed at the old file now use v2.
+  `provenance.previousPath` on `asset:character-harlan-sheet` still records the deleted file.
+
+## 2026-09-12 — Velari envoy character reference corrected
+
+- Generated and registered `static/assets/characters/velari-envoy/model-sheet.png` from the authoritative
+  Festival Master appearance in `shot-plan-092`.
+- The sheet depicts only the individual envoy—an elongated translucent mantle with branching
+  bioluminescent patterns—and does not use the obsolete emissary-ship design from the earlier continuity.
+
 ## 2026-09-12 — Beauty shot bridges the ~29-hour deceleration burn to L2
 
 - **New shot `shot-plan-016b`** (5s, exterior, no characters) added to scene 7 ("The extra burn"):

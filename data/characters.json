@@ -18,12 +18,14 @@
       "factionIds": [
         "faction:velari"
       ],
-      "referenceAssetIds": [],
+      "referenceAssetIds": [
+        "asset:character-velari-envoy-sheet"
+      ],
       "notes": [
         {
           "id": "note:velari-envoy-visual-reference",
           "type": "visual",
-          "status": "open",
+          "status": "resolved",
           "priority": "high",
           "text": {
             "es": "Falta una referencia visual para el emisario individual; es el clímax visual de primer contacto y no debe confundirse en escala ni diseño con la nave emisaria de 300-600 m.",

@@ -13,7 +13,6 @@
       },
       "factionId": "faction:human",
       "referenceAssetIds": [
-        "asset:vehicle-celestial-ardor-sheet",
         "asset:vehicle-celestial-ardor-jupiter"
       ]
     },
@@ -50,11 +49,11 @@
         {
           "id": "note:velari-transport-sphere-visual-reference",
           "type": "visual",
-          "status": "open",
+          "status": "resolved",
           "priority": "high",
           "text": {
-            "es": "Falta una referencia visual para la esfera de transporte personal, distinta en escala de la nave emisaria.",
-            "en": "A visual reference for the personal transport sphere, distinct in scale from the emissary vehicle, is pending."
+          "es": "La referencia visual de la esfera de transporte personal ya existe y está conectada a las tomas del master; se mantiene separada de la nave emisaria obsoleta.",
+          "en": "The personal transport sphere visual reference exists and is wired to the master shots; it remains separate from the obsolete emissary vehicle."
           }
         }
       ]

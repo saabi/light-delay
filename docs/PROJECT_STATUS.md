@@ -1,5 +1,24 @@
 # Estado del proyecto
 
+## 2026-09-12 — JSON alineado tras borrar hojas de referencia
+
+- Eliminada la entrada `asset:vehicle-celestial-ardor-sheet` tras borrar
+  `static/assets/vehicles/celestial-ardor/model-sheet.png`. Las referencias vigentes pasan a
+  `asset:vehicle-celestial-ardor-jupiter`.
+- La hoja antigua de Harlan (`model-sheet.png`) ya estaba sustituida por `model-sheet-v2.png`
+  en el catálogo; se actualizaron rutas residuales en manifiestos de pósters. El
+  `previousPath` de procedencia se conserva.
+
+## 2026-09-12 — Hoja visual del enviado Velari
+
+- La referencia visual del individuo `character:velari-envoy` se regeneró a partir de la toma
+  `festival-master:shot-plan-092`, que es la apariencia vigente del enviado en el master: manto
+  orgánico alargado y translúcido, patrones luminosos ramificados y ausencia de rostro o extremidades
+  humanoides.
+- La hoja anterior de la nave emisaria pertenece a una continuidad antigua y no se usa para el master;
+  la nave emisaria queda fuera de esta referencia. El archivo nuevo es
+  `static/assets/characters/velari-envoy/model-sheet.png` y permanece pendiente de revisión editorial.
+
 ## 2026-09-12 — Toma de lucimiento para el salto de ~29 horas hasta L2
 
 - **Nueva toma `shot-plan-016b`** (5s, exterior, sin personajes) agregada a la escena 7 ("El

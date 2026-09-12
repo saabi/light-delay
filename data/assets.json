@@ -15,6 +15,37 @@
       "height": 1024
     },
     {
+      "id": "asset:character-velari-envoy-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/velari-envoy/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Hoja de modelo del enviado Velari",
+        "en": "Velari envoy model sheet"
+      },
+      "description": {
+        "es": "Hoja de referencia del individuo Velari visto en la toma 092: manto orgánico alargado y translúcido, sin rostro ni extremidades humanoides, con patrones luminosos ramificados.",
+        "en": "Reference sheet for the Velari individual seen in shot 092: an elongated translucent organic mantle with no face or humanoid limbs and branching luminous patterns."
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-12"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "referenceAssetIds": [
+          "asset:festival-master-storyboard-092",
+          "asset:character-zao-sheet"
+        ],
+        "generationPrompt": "Character model sheet for the individual Velari envoy, based on Festival Master shot 092; elongated translucent organic mantle, branching amber/violet/blue bioluminescence, no humanoid face or limbs, multiple consistent views, neutral studio background."
+      }
+    },
+    {
       "id": "asset:character-voss-sheet",
       "kind": "image",
       "role": "reference",
@@ -265,7 +296,7 @@
         "geography": "external-axial-dock-on-non-rotating-spine",
         "referenceAssetIds": [
           "asset:location-proxima-station-berthed",
-          "asset:vehicle-celestial-ardor-sheet"
+          "asset:vehicle-celestial-ardor-jupiter"
         ],
         "referenceInputsAttached": true
       }
@@ -665,19 +696,6 @@
       "title": {
         "es": "Soporte de saludo de Sorell prop sheet",
         "en": "Sorell greeting support prop sheet"
-      },
-      "width": 1536,
-      "height": 1024
-    },
-    {
-      "id": "asset:vehicle-celestial-ardor-sheet",
-      "kind": "image",
-      "role": "reference",
-      "path": "/assets/vehicles/celestial-ardor/model-sheet.png",
-      "mimeType": "image/png",
-      "title": {
-        "es": "Celestial Ardor model sheet",
-        "en": "Celestial Ardor model sheet"
       },
       "width": 1536,
       "height": 1024
@@ -4284,7 +4302,7 @@
         "es": "festival-master:cue-0003",
         "en": "festival-master:cue-0003"
       },
-      "durationMs": 9237,
+      "durationMs": 9259,
       "metadata": {
         "scriptCueId": "festival-master:cue-0003",
         "lang": "en",
@@ -5559,7 +5577,7 @@
         "es": "festival-master:cue-0120",
         "en": "festival-master:cue-0120"
       },
-      "durationMs": 2460,
+      "durationMs": 6780,
       "metadata": {
         "scriptCueId": "festival-master:cue-0120",
         "lang": "en",
@@ -6086,7 +6104,7 @@
         "es": "festival-master:cue-0162",
         "en": "festival-master:cue-0162"
       },
-      "durationMs": 3820,
+      "durationMs": 9260,
       "metadata": {
         "scriptCueId": "festival-master:cue-0162",
         "lang": "en",
@@ -6137,7 +6155,7 @@
         "es": "festival-master:cue-0167",
         "en": "festival-master:cue-0167"
       },
-      "durationMs": 2460,
+      "durationMs": 7740,
       "metadata": {
         "scriptCueId": "festival-master:cue-0167",
         "lang": "en",
@@ -6188,7 +6206,7 @@
         "es": "festival-master:cue-0171",
         "en": "festival-master:cue-0171"
       },
-      "durationMs": 2380,
+      "durationMs": 5660,
       "metadata": {
         "scriptCueId": "festival-master:cue-0171",
         "lang": "en",
@@ -10362,6 +10380,57 @@
           "es": "Imagen generada; la aceptación editorial está pendiente.",
           "en": "Generated batch still; editorial acceptance is pending."
         }
+      }
+    },
+    {
+      "id": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0059b",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/audio/dialogue/light-delay-festival-master/en/festival-master-cue-0059b.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "festival-master:cue-0059b",
+        "en": "festival-master:cue-0059b"
+      },
+      "durationMs": 3900,
+      "metadata": {
+        "scriptCueId": "festival-master:cue-0059b",
+        "lang": "en",
+        "scriptSlug": "light-delay-festival-master"
+      }
+    },
+    {
+      "id": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0076b",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/audio/dialogue/light-delay-festival-master/en/festival-master-cue-0076b.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "festival-master:cue-0076b",
+        "en": "festival-master:cue-0076b"
+      },
+      "durationMs": 1100,
+      "metadata": {
+        "scriptCueId": "festival-master:cue-0076b",
+        "lang": "en",
+        "scriptSlug": "light-delay-festival-master"
+      }
+    },
+    {
+      "id": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0076c",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/audio/dialogue/light-delay-festival-master/en/festival-master-cue-0076c.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "festival-master:cue-0076c",
+        "en": "festival-master:cue-0076c"
+      },
+      "durationMs": 2700,
+      "metadata": {
+        "scriptCueId": "festival-master:cue-0076c",
+        "lang": "en",
+        "scriptSlug": "light-delay-festival-master"
       }
     }
   ]

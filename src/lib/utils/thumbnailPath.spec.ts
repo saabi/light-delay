@@ -6,8 +6,8 @@ describe('thumbnailPathForAsset', () => {
 		expect(thumbnailPathForAsset('/assets/locations/proxima-station/proxima-with-ardor-berthed.png')).toBe(
 			'/assets/_thumbs/locations/proxima-station/proxima-with-ardor-berthed.png.webp'
 		);
-		expect(thumbnailPathForAsset('/assets/vehicles/celestial-ardor/model-sheet.png')).toBe(
-			'/assets/_thumbs/vehicles/celestial-ardor/model-sheet.png.webp'
+		expect(thumbnailPathForAsset('/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png')).toBe(
+			'/assets/_thumbs/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png.webp'
 		);
 		expect(thumbnailPathForAsset('/assets/animatic/frames/scene-01/shot-01.png')).toBe(
 			'/assets/_thumbs/animatic/frames/scene-01/shot-01.png.webp'
