@@ -4,7 +4,7 @@ Fecha de corte documental: 2026-08-31.
 
 Documento de **investigación previa a cuenta**. Resume la documentación pública de Higgsfield sobre MCP, CLI y créditos, y propone cómo encajar un flujo de **dos agentes** (compilación de prompts JSON + ejecución vía MCP) con el pipeline de Light Delay. No sustituye el catálogo vivo del servidor: tras crear la cuenta hay que volver a inspeccionar las herramientas expuestas.
 
-Relacionado: [`docs/ARQUITECTURA_GENERACION.md`](../ARQUITECTURA_GENERACION.md), [`docs/PRODUCTION_PLAN.md`](../PRODUCTION_PLAN.md), [`data/production/provider-capabilities.json`](../../data/production/provider-capabilities.json), [`higgsfield-uploads/`](../../higgsfield-uploads/).
+Relacionado: [`docs/ARQUITECTURA_GENERACION.md`](../ARQUITECTURA_GENERACION.md), [`docs/PRODUCTION_PLAN.md`](../PRODUCTION_PLAN.md), [`docs/production/SEEDANCE_PROMPTING.md`](../production/SEEDANCE_PROMPTING.md) (oficio de prompts; inglés), [`data/production/provider-capabilities.json`](../../data/production/provider-capabilities.json), [`higgsfield-uploads/`](../../higgsfield-uploads/).
 
 ---
 
@@ -130,7 +130,7 @@ En [`data/production/provider-capabilities.json`](../../data/production/provider
 | **Total referencias** | **12** |
 | Segmento de campaña (`campaign:higgsfield-trial-24h`) | **30 s** (`maxSegmentMs`, alineado a Seedance 2.5) |
 
-Seedance 2.5 figura con `maxDurationMs: 30000` en el mismo archivo; el snapshot sigue `provisional` / no ejecutable hasta confirmar catálogo MCP/CLI.
+Seedance 2.5 figura con `maxDurationMs: 30000` en el mismo archivo; el snapshot sigue `provisional` / no ejecutable hasta confirmar catálogo MCP/CLI. Oficio de prompts: [`SEEDANCE_PROMPTING.md`](../production/SEEDANCE_PROMPTING.md) (muestras de voz, no WAV de diálogo TTS; tomas consecutivas < 30 s).
 
 ---
 

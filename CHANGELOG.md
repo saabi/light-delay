@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-09-12 — Seedance video prompting notes
+
+- Added `docs/production/SEEDANCE_PROMPTING.md` (English source): Seedance **2.5** prompt craft
+  (task routing, reference-role maps, integer-second timelines, edit/extend locks) for Higgsfield
+  video jobs. Published 2.5 ceilings stay surface-dependent pending preflight.
+- Seedance audio refs are approved voice samples (`sampleAssetIds`) for speakers in the job;
+  generated animatic cue WAVs are never attached. Consecutive same-location, same-cast shots
+  under 30 s prefer one generation (`SEEDANCE_PROMPTING.md` §6.1–6.2).
+- Linked from `AGENT_GENERATION_BRIEF.md`, `ARQUITECTURA_GENERACION.md`, `HIGGSFIELD_MCP.md`, and
+  `DIALOGUE_AND_PROMPT_LESSONS.md`.
+
 ## 2026-09-12 — Dialogue clarity guide
 
 - Added `docs/production/DIALOGUE_CLARITY_GUIDE.md`, documenting the recurring "accurate but too

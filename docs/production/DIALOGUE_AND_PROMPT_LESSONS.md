@@ -193,4 +193,7 @@ for stills). Concretely:
 No `firstFrame`/`lastFrame` or video-segment prompts exist yet for `light-delay-festival-master`
 (per `AGENT_GENERATION_BRIEF.md` §6, `compiledPrompt` stays `null` pre-freeze) — these rules are
 written now so they're applied from the start once that work begins, instead of needing a second
-audit pass later.
+audit pass later. For Seedance-facing video prompt *shape* (task routing, `@` reference maps,
+integer-second beats, voice-sample audio refs, consecutive-shot jobs under 30 s), use
+`SEEDANCE_PROMPTING.md` §6; it does not replace this file's editorial rules. Never attach generated
+cue WAVs as Seedance `@Audio` references.

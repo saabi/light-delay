@@ -1,5 +1,16 @@
 # Estado del proyecto
 
+## 2026-09-12 — Notas de prompting Seedance
+
+- Nuevo `docs/production/SEEDANCE_PROMPTING.md` (inglés): oficio de prompts de video para
+  **Seedance 2.5** (enrutado de tarea, mapa de referencias, línea de tiempo a segundos enteros,
+  bloqueos de edición/extensión). Los techos publicados siguen siendo provisionales hasta
+  preflight. Enlazado desde el brief de generación, la arquitectura, Higgsfield MCP y las lecciones
+  de diálogo/prompt.
+- Referencias de audio de Seedance: sólo muestras aprobadas (`sampleAssetIds`) de quien habla en
+  el pedido; no adjuntar WAV de diálogo TTS del animatic. Tomas consecutivas, mismo lugar y elenco,
+  suma menor de 30 s: un solo trabajo (§6.1–6.2).
+
 ## 2026-09-12 — Guía de claridad de diálogo
 
 - Nuevo `docs/production/DIALOGUE_CLARITY_GUIDE.md`: documenta el patrón de líneas correctas pero

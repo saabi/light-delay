@@ -277,6 +277,11 @@ del placement). Demo EN vigente del Festival:
 (`script:light-delay-trailer-master`) reutiliza esos mismos assets EN por
 `audioAssetId`; no genera un catálogo aparte.
 
+Esos WAV de cue son **sólo reproducción del animatic**. No adjuntarlos (ni tomas de
+imitation-pass / outline) como referencias `@Audio` de Seedance 2.5. Los pedidos de
+video usan `VoiceProfileVariant.sampleAssetIds` aprobados y dejan que el modelo diga
+la cue (`docs/production/SEEDANCE_PROMPTING.md` §6.1).
+
 Scripts TTS multi-voz de la escaleta (rev. 17, 38 citas atribuidas desde el master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`

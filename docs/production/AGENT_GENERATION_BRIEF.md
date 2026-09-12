@@ -18,6 +18,7 @@ that date, since the festival screenplay this brief supports is being authored c
 | 2 | `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` | Which narrative/plan is current vs. deprecated, deletion gates |
 | 3 | `docs/ARQUITECTURA_GENERACION.md` (ES) | Pipeline: plan → ES brief → freeze → EN prompt → adapter; the 11 compiler sections |
 | 4 | `docs/technical/HIGGSFIELD_MCP.md` (ES) | Seedance/MCP limits, credits, staging, the proposed job-JSON shape |
+| 4b | `docs/production/SEEDANCE_PROMPTING.md` (EN) | Seedance 2.5 video prompt craft (voice samples only; consecutive-shot jobs). Not generation authority |
 | 5 | `docs/JSON_FORMAT.md` + `docs/JSON_FORMAT_I18N_ADDENDUM.md` | `ScriptFile` contract: shots, composition, cues, diegetic EN-only text, dialogue variants |
 | 6 | `docs/PROJECT_STATUS.md` / `TODO.md` | Current freeze/blocker state — **`TODO.md` predates the Festival-master derivative** authorized in `data/editorial-lifecycle.json` (`lifecycle:master-festival-derivative`); its "do not extend Festival" language does not apply to that authorized WIP, only to the deprecated `light-delay-festival` cut |
 | 7 | `data/README.md` | Map of the `data/` tree |
@@ -62,7 +63,7 @@ is non-empty — do not populate a section string to force through a blocked sho
 | `data/characters.json` / `locations.json` / `objects.json` / `vehicles.json` | Entities + `referenceAssetIds` — **see gap in §6: the bomb, vault, jammer and Harlan's wrist device have no catalog entries yet** |
 | `data/entity-variants.json` | Visual variants by continuity |
 | `data/assets.json` | `assetId` → path under `static/assets/` |
-| `data/voice-profiles.json` | Voice samples (today largely empty `sampleAssetIds` → blocks final audio) |
+| `data/voice-profiles.json` | Voice samples (`sampleAssetIds`). Empty samples block Seedance speech refs; do not substitute generated cue WAVs |
 | `data/outlines/light-delay-festival-master.json` + `data/scripts/light-delay-festival-master.json` | Festival WIP outline (authoritative for beats) + script (being populated with shots now) |
 | Deprecated cuts `data/scripts/light-delay-{main-short,festival,trailer,long}.json` | Rescue only — dialogue, staging, compatible assets; never authority |
 
@@ -110,12 +111,17 @@ asset ID so an image adapter can attach the actual file. Props and vehicles shou
 listed in `visibleRefs` when they are visible; prose mentions alone do not authorize an
 image attachment.
 - `artifacts.firstFrame` / `lastFrame` — Seedance boundaries / extension anchors
-- `artifacts.finalAudio` — when the shot carries dialogue
-- `requiredReferences[]` — `character` / `location` / `prop` / `video` (Blender guide) / `voice`, each `{ kind: image|video|audio, id, required, role }`
+- `artifacts.finalAudio` — when the shot carries dialogue (later mix/lock; **not** a Seedance
+  attachment). Seedance jobs attach `sampleAssetIds` only (`SEEDANCE_PROMPTING.md` §6.1)
+- `requiredReferences[]` — `character` / `location` / `prop` / `video` (Blender guide) / `voice_sample`,
+  each `{ kind: image|video|audio, id, required, role }`. Audio refs are approved voice samples for
+  speakers in the shot or grouped run; never `DialogueVariant.audioAssetId`
 
 Segments: `continuation: none | accepted_video_and_last_frame | last_frame_as_next_first`, used when a
 shot exceeds 30 s or needs to chain (see `planSegments` — it prefers a semantic cue boundary within the
-last quarter of the segment budget, else a hard cut at `maxSegmentMs`).
+last quarter of the segment budget, else a hard cut at `maxSegmentMs`). The inverse case — consecutive
+same-location, same-cast shots whose durations sum to under 30 s — prefers **one** Seedance job
+covering the run (`SEEDANCE_PROMPTING.md` §6.2); shot IDs stay distinct.
 
 ## 5. Tooling (do not invent another format)
 
@@ -220,7 +226,7 @@ lighting: <source, quality, motivated practicals>
 physics: <gravity state — 1g / microgravity / transition — from context id>
 interfaceVfx: <diegetic screens/holograms — English text only, from resolveDiegeticText>
 continuity: <what must match the surrounding shots/takes>
-audio: <diegetic sound cues relevant to the generated clip, not final mix>
+audio: <voice-sample role map + script cue as spoken text; diegetic SFX; never generated cue WAVs>
 negative: <what must not appear>
 ```
 
@@ -263,12 +269,16 @@ negative: <what must not appear>
 > lines is enough — do not pad prompts with “avoid subtitles” boilerplate
 > (`scripts/lib/still-prompt-no-dialogue.mjs`, `npm run scrub:still-prompts:check`).
 > Respect campaign `maxSegmentMs` (30 s) from `provider-capabilities.json`; longer shots → segments +
-> `continuation`/extension per `planSegments`.
+> `continuation`/extension per `planSegments`. Consecutive same-location, same-cast shots under 30 s
+> → one Seedance 2.5 job (`SEEDANCE_PROMPTING.md` §6.2).
 > Artifacts are distinct: `animaticStill` (storyboard), `firstFrame`, `lastFrame`, `finalAudio`; plus
-> `requiredReferences` from characters/locations/objects/vehicles, and optional Blender guide videos/stills.
+> `requiredReferences` from characters/locations/objects/vehicles, optional Blender guide videos/stills,
+> and `voice_sample` audio from `sampleAssetIds` for speakers in the job. Never attach generated
+> dialogue WAVs (`audioAssetId`) to a Seedance prompt.
 > Do not invent missing references — mark blockers and file a reference-asset request (§8.3) instead.
 > Do not submit anything to Higgsfield. Do not regenerate existing PNGs unless explicitly ordered.
 > Keep `compiledPrompt: null` until editorial freeze unless told otherwise for this session.
 > When rewriting dialogue for tone, edit English only and consult that speaker's voice-profile
 > `dialogueStyle` first; never fix tone by adding exposition.
-> Read `docs/ARQUITECTURA_GENERACION.md` and `docs/technical/HIGGSFIELD_MCP.md` before writing prompts.
+> Read `docs/ARQUITECTURA_GENERACION.md`, `docs/technical/HIGGSFIELD_MCP.md`, and
+> `docs/production/SEEDANCE_PROMPTING.md` before writing video prompts.

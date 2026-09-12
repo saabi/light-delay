@@ -232,6 +232,11 @@ Current promoted EN demo for the active Festival cut:
 (`script:light-delay-trailer-master`) reuses those same EN assets by `audioAssetId`;
 it does not generate a separate trailer catalogue.
 
+Those cue WAVs are **animatic playback only**. Do not attach them (or outline/imitation-pass
+takes) as Seedance 2.5 `@Audio` references. Video jobs use approved
+`VoiceProfileVariant.sampleAssetIds` and let the model speak the cue
+(`docs/production/SEEDANCE_PROMPTING.md` §6.1).
+
 Multi-speaker TTS outlines (rev. 17, 38 attributed quotations from the master):
 
 - EN: `docs/wip/outiline-for-kokoro-tts.voices.md`
