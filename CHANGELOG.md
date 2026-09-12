@@ -5,6 +5,8 @@
 - Tightened JSDoc/types in trailer↔festival dialogue-link helpers and related specs
   so `npm run check` passes under `checkJs` (GitHub Actions had failed after
   translation validation).
+- Synced unit-test duration and audio-output catalog expectations with the current
+  Festival (~808.2 s) and trailer (~88.8 s) fits plus registered animatic duals.
 
 ## 2026-09-12 — Refresh stale generated editorial checks for deploy
 

@@ -3,7 +3,8 @@
 ## 2026-09-12 — Typecheck CI desbloqueado
 
 - Corregidos 13 errores de `svelte-check` en helpers/specs del tráiler master y
-  del fit de diálogo; `npm run check` en verde de nuevo para el deploy a Pages.
+  del fit de diálogo; expectativas de duración/catálogo de audio alineadas con
+  los fits vigentes. `npm run check` en verde de nuevo para el deploy a Pages.
 
 ## 2026-09-12 — Artefactos editoriales regenerados (deploy)
 

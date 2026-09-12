@@ -6,9 +6,11 @@ import {
 } from './audioOutputs';
 
 describe('audio output catalog', () => {
-	it('lists the registered audience duals with relative keys', () => {
+	it('lists the registered audio outputs with relative keys', () => {
 		const rows = listAudioOutputs();
 		expect(rows.map((row) => row.id).sort()).toEqual([
+			'animatic-light-delay-festival-master-en',
+			'animatic-light-delay-main-short-en',
 			'audience-en',
 			'audience-es',
 			'audience-festival-en'
@@ -31,6 +33,16 @@ describe('audio output catalog', () => {
 				cueCount: 114,
 				revision: 1,
 				outlineId: 'outline:light-delay-festival-master'
+			},
+			'animatic-light-delay-main-short-en': {
+				cueCount: 98,
+				revision: 0,
+				outlineId: 'script:light-delay-main-short'
+			},
+			'animatic-light-delay-festival-master-en': {
+				cueCount: 131,
+				revision: 0,
+				outlineId: 'script:light-delay-festival-master'
 			}
 		};
 		for (const row of rows) {

@@ -17,7 +17,7 @@ describe('master-derived Festival screenplay', () => {
 		expect(script.scenes).toHaveLength(33);
 		expect(script.scenes.filter((scene) => scene.sequenceId)).toHaveLength(31);
 		expect(script.scenes.reduce((total, scene) => total + (scene.targetDurationMs ?? 0), 0)).toBe(
-			806_519
+			808_199
 		);
 		expect(script.cues.filter((cue) => cue.type === 'dialogue').length).toBeGreaterThan(100);
 	});
