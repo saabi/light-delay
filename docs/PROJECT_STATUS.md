@@ -1,5 +1,30 @@
 # Estado del proyecto
 
+## 2026-09-12 — Ardor multi-angle reference and exterior still correction
+
+## 2026-09-12 — Prompts de still sin diálogo/subtítulos
+
+- Los `generation.prompt` del Festival master y del tráiler master ya no incluyen
+  líneas habladas ni copy de subtítulos (sí conservan UI diegética intencional).
+  No se añade boilerplate de “avoid subtitles”: basta con no suministrar el texto.
+- Herramienta `scrub:still-prompts` / `:check`; regla en blueprint y
+  `AGENT_GENERATION_BRIEF`. Las PNG ya generadas con texto quemado no se
+  regeneraron en este pase.
+
+## 2026-09-12 — Ardor multi-angle reference and exterior still correction
+
+## 2026-09-12 — Diálogo EN del readout en la bóveda (cue-0042/0043)
+
+- `festival-master:cue-0042`: “This is an impulse warhead for geophysical research from the Proxima… one point three tonnes.”
+- `festival-master:cue-0043`: “Multi-megaton. Set for the contact coordinates — and the contact time!”
+- TTS EN regenerado (2 cues) + promote; fit Festival (~808.2 s) y tráiler master (~88.8 s, reusa WAV de `cue-0042`). Fit en verde.
+
+## 2026-09-12 — Regenerated Festival-master shot-plan-016b
+
+- Replaced the `festival-master:shot-plan-016b` storyboard still because it used a superseded Celestial Ardor design with solar-sail-like structures.
+- The replacement uses the current axial cylindrical Ardor reference and preserves the master beat: engine-first retrograde braking near the closed Velari throat, with the torch dimming to zero and the distributed node field remaining distant.
+- Updated the English generation prompt, rebuilt the production plan, refreshed the thumbnail, and passed `validate:data` and `validate:docs`.
+
 ## 2026-09-12 — Audio de diálogo del tráiler master reutilizado del Festival
 
 - Las 16 cues habladas EN de `script:light-delay-trailer-master` apuntan ahora a los

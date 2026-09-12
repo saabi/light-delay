@@ -13,7 +13,8 @@
       },
       "factionId": "faction:human",
       "referenceAssetIds": [
-        "asset:vehicle-celestial-ardor-jupiter"
+        "asset:vehicle-celestial-ardor-jupiter",
+        "asset:vehicle-celestial-ardor-model-sheet-v2"
       ]
     },
     {

@@ -1,5 +1,42 @@
 # Changelog
 
+## 2026-09-12 — Ardor multi-angle reference and exterior still correction
+
+- Added `asset:vehicle-celestial-ardor-model-sheet-v2`, derived from the Jupiter render and isolated from Proxima docking geometry.
+- Regenerated Festival-master shots `013b` and `016b` with the new sheet. `016b` now makes the retrograde, engine-first approach unambiguous: throat field left, engine nozzle toward it, hull and exhaust trailing right, with deep separation.
+- Removed the accidental character implication from `016b`; both frames contain no people or Zao. Updated manifests, thumbnails, and validation counts.
+
+## 2026-09-12 — Storyboard still prompts: no dialogue / subtitles
+
+- Stripped spoken dialogue and subtitle copy from Festival-master and trailer-master
+  `generation.prompt` fields (kept intentional diegetic UI such as `LIGHT DELAY`,
+  `23 H 15 MIN`, `TRANSMITTED`). Omitting those lines is enough — prompts are not padded
+  with “avoid subtitles” boilerplate.
+- Added `scripts/lib/still-prompt-no-dialogue.mjs` plus `scrub:still-prompts` /
+  `scrub:still-prompts:check`; regeneration prep and agent briefs follow the same rule.
+- Existing still PNGs that already burned in dialogue are unchanged until regenerated.
+
+## 2026-09-12 — Ardor multi-angle reference and exterior still correction
+
+- Added `asset:vehicle-celestial-ardor-model-sheet-v2`, derived from the Jupiter render and isolated from Proxima docking geometry.
+- Regenerated Festival-master shots `013b` and `016b` with the new sheet. `016b` now makes the retrograde, engine-first approach unambiguous: throat field left, engine nozzle toward it, hull and exhaust trailing right, with deep separation.
+- Removed the accidental character implication from `016b`; both frames contain no people or Zao. Updated manifests, thumbnails, and validation counts.
+
+## 2026-09-12 — Festival vault readout dialogue (EN) + TTS
+
+- Updated `festival-master:cue-0042` / `cue-0043` English copy for Zao’s vault controller
+  readout: research framing from the Proxima, then emphatic contact coordinates/time.
+- Regenerated the two Qwen EN WAVs (content-hash reuse for the rest), promoted into
+  `static/assets/audio/dialogue/light-delay-festival-master/en/`, and refit Festival +
+  trailer-master timings (Festival ~808.2 s; trailer ~88.8 s). `report:dialogue-audio-fit`
+  green with `missingAudio: 0`.
+
+## 2026-09-12 — Regenerated Festival-master shot-plan-016b
+
+- Replaced the storyboard still for `festival-master:shot-plan-016b`, which had been generated against a superseded Ardor design.
+- The new exterior frame uses the current axial cylindrical Ardor reference, preserves engine-first retrograde braking, and keeps the Velari throat as a closed distributed node field rather than a visible aperture.
+- Updated the take prompt and production plan, refreshed thumbnails, and verified `validate:data` and `validate:docs`.
+
 ## 2026-09-12 — Trailer master storyboard reuses Festival dialogue audio
 
 - All 16 spoken English cues in `script:light-delay-trailer-master` now point at the

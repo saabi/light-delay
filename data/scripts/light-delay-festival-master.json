@@ -17870,7 +17870,8 @@
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z",
         "referenceAssetIds": [
-          "asset:vehicle-celestial-ardor-jupiter"
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
         ]
       },
       "imageAssetId": "asset:festival-master-storyboard-013b",
@@ -17993,7 +17994,8 @@
         "referenceAssetIds": [
           "asset:location-velari-wormhole-mouth-sheet",
           "asset:vehicle-celestial-ardor-jupiter",
-          "asset:vehicle-celestial-ardor-proportional"
+          "asset:vehicle-celestial-ardor-proportional",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",

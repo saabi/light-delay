@@ -53,6 +53,13 @@
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
+          "required": true,
+          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1205,6 +1212,13 @@
         },
         {
           "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
@@ -1979,6 +1993,13 @@
         },
         {
           "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
@@ -2297,6 +2318,13 @@
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
           "required": true,
           "role": "vehicle"
         },
@@ -3539,6 +3567,13 @@
         },
         {
           "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
           "id": "asset:location-velari-station-sheet",
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
@@ -3638,6 +3673,13 @@
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
           "required": true,
           "role": "vehicle"
         },
@@ -3868,6 +3910,13 @@
           "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
+          "required": true,
+          "role": "vehicle"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
           "required": true,
           "role": "vehicle"
         },

@@ -748,6 +748,32 @@
       "height": 1117
     },
     {
+      "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Celestial Ardor — hoja de referencia multiángulo v2",
+        "en": "Celestial Ardor — multi-angle reference sheet v2"
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-12",
+        "references": [
+          "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png"
+        ]
+      },
+      "metadata": {
+        "useCase": "vehicle-model-sheet",
+        "containsNarrativeContent": false,
+        "styleAnchor": "asset:vehicle-celestial-ardor-jupiter"
+      }
+    },
+    {
       "id": "asset:scale-reference-proxima-ardor",
       "kind": "image",
       "role": "reference",
