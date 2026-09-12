@@ -12,7 +12,7 @@ Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe W
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
 - El archivo conserva un animatic anterior de 128 tomas y los montajes Festival/tráiler como material de rescate. No son planes de producción vigentes; la producción visual queda suspendida hasta completar el master y aprobar nuevos derivados.
-- Biblia visual: 13 hojas de personajes, 7 localizaciones, 2 naves y 4 objetos clave.
+- Biblia visual: 13 hojas de personajes, 7 hojas de localización, 2 naves y 4 objetos clave. El catálogo suma dos localizaciones del reactor requeridas por el master que todavía no tienen hoja visual y no reutilizan la sala obsoleta del núcleo diplomático.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
 

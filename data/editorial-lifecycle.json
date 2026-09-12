@@ -178,6 +178,8 @@
         { "kind": "entity", "id": "location:celestial-ardor-central-access" },
         { "kind": "entity", "id": "location:celestial-ardor-service-cylinder" },
         { "kind": "entity", "id": "location:celestial-ardor-engineering" },
+        { "kind": "entity", "id": "location:celestial-ardor-reactor-service-bay" },
+        { "kind": "entity", "id": "location:celestial-ardor-inner-shielding-vault" },
         { "kind": "entity", "id": "location:velari-wormhole-mouth" },
         { "kind": "entity", "id": "location:velari-station" },
         { "kind": "entity", "id": "object:optical-contingency-transmitter" },

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-11 — Festival master reactor geography correction
+
+- Replaced every active Festival reference to the obsolete diplomatic-core room with the master-authority outer reactor service bay and inner shielding vault, preserving archived cuts unchanged.
+- Added both nested locations to the bilingual catalog and active lifecycle inventory without inventing visual assets; their open notes prohibit using the obsolete diplomatic-core sheet as a substitute.
+- Added explicit location bindings to all 96 Festival storyboard candidates and corrected the ship-design production priorities to distinguish current master requirements from historical cut counts.
+- Added location hierarchy, scene-reference, lifecycle, and Festival-specific regression validation.
+
 ## 2026-09-11 — Agent generation brief for storyboard/frame/video prompts
 
 - Added `docs/production/AGENT_GENERATION_BRIEF.md`: authority chain, generation-plan contracts

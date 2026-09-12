@@ -2,11 +2,18 @@
 
 > Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
 
-Pendientes vigentes o por revisar: **0**
+Pendientes vigentes o por revisar: **2**
 
 Notas archivadas para rescate: **167**
 
 ## Accionables
+
+### high
+
+- **note:reactor-service-bay-visual-reference** [visual · open · active] — Falta una referencia visual derivada del master para este espacio. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.
+  - Origen: `data/locations.json` · `$.locations[7].notes[0]`
+- **note:inner-shielding-vault-visual-reference** [visual · open · active] — Falta una referencia visual derivada del master para la bóveda y su cerradura local. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.
+  - Origen: `data/locations.json` · `$.locations[8].notes[0]`
 
 ## Archivo deprecado/obsoleto — sólo rescate
 

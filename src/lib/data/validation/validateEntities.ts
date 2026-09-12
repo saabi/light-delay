@@ -54,6 +54,32 @@ export function validateLocations(file: LocationsFile): ValidationResult {
 		file.locations.map((l) => l.id),
 		errors
 	);
+	const locationIds = new Set(file.locations.map((location) => location.id));
+	const parentById = new Map(
+		file.locations
+			.filter((location) => location.parentLocationId)
+			.map((location) => [location.id, location.parentLocationId!])
+	);
+	for (const location of file.locations) {
+		if (!location.name) errors.push(`locations: ${location.id} missing name`);
+		if (!location.description) errors.push(`locations: ${location.id} missing description`);
+		if (!Array.isArray(location.referenceAssetIds)) {
+			errors.push(`locations: ${location.id} missing referenceAssetIds`);
+		}
+		if (location.parentLocationId && !locationIds.has(location.parentLocationId)) {
+			errors.push(`locations: ${location.id} has unknown parent ${location.parentLocationId}`);
+		}
+		const ancestry = new Set([location.id]);
+		let parentId = location.parentLocationId;
+		while (parentId) {
+			if (ancestry.has(parentId)) {
+				errors.push(`locations: ${location.id} has a cyclic parent hierarchy`);
+				break;
+			}
+			ancestry.add(parentId);
+			parentId = parentById.get(parentId);
+		}
+	}
 	return { ok: errors.length === 0, errors };
 }
 
@@ -144,7 +170,8 @@ export function validateVoiceProfiles(file: VoiceProfilesFile): ValidationResult
 			if (!variant.languageFormation?.place || !variant.languageFormation?.variety) {
 				errors.push(`voice-profiles: ${profile.id}.${language} missing language formation`);
 			}
-			if (!variant.prosody) errors.push(`voice-profiles: ${profile.id}.${language} missing prosody`);
+			if (!variant.prosody)
+				errors.push(`voice-profiles: ${profile.id}.${language} missing prosody`);
 			if (!variant.dialogueStyle) {
 				errors.push(`voice-profiles: ${profile.id}.${language} missing dialogue style`);
 			}

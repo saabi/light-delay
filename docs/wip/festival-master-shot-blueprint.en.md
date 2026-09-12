@@ -18,6 +18,8 @@
 
 #### festival-master:scene-02 — Forty-three minutes late (16s; 3 candidates)
 
+Location binding for every candidate below: primary `location:proxima-station`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-001` | 5.33s | A delayed Earth broadcast fills Proxima’s operations wall. Hopeful supporters and frightened protesters share the frame; the crew watches a debate that ended forty-three minutes ago. | ELS, establish geography and screen direction; locked | character:periodista, character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye; off: character:periodista | festival-master:cue-0002, festival-master:cue-0003 | Follow the master-derived flight state stated in action. Refs: character:periodista, character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye, vehicle:celestial-ardor, festival-master:story-01 |
@@ -26,12 +28,16 @@
 
 #### festival-master:scene-03 — That was not hope (12s; 2 candidates)
 
+Location binding for every candidate below: primary `location:proxima-station`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-004` | 6.00s | After the others disperse, Zao catches Voss alone beside the delayed feed. | OTS, establish geography and screen direction; pan | character:voss, character:zao; off: — | festival-master:cue-0008, festival-master:cue-0009 | Follow the master-derived flight state stated in action. Refs: character:voss, character:zao, vehicle:celestial-ardor, festival-master:story-01 |
 | `festival-master:shot-plan-005` | 6.00s | voss — “You find faults for a living. That doesn’t make everyone a fault.” | INSERT, orthogonal readable insert; locked | character:voss, character:zao; off: — | festival-master:cue-0010, festival-master:cue-0011 | Follow the master-derived flight state stated in action. Refs: character:voss, character:zao, vehicle:celestial-ardor, festival-master:story-01 |
 
 #### festival-master:scene-04 — One more pass (17s; 4 candidates)
+
+Location binding for every candidate below: primary `location:proxima-dock`; secondary `location:celestial-ardor-engineering`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -44,6 +50,8 @@
 
 #### festival-master:scene-05 — A name and a greeting (15s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-010` | 5.00s | Under steady thrust, the small crew shares a meal from anchored trays. The Ardor’s long silhouette rotates on a systems display. | INSERT, orthogonal readable insert; tracking | character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye; off: — | festival-master:cue-0019, festival-master:cue-0020 | Follow the master-derived flight state stated in action. Refs: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye, vehicle:celestial-ardor, festival-master:story-03 |
@@ -51,6 +59,8 @@
 | `festival-master:shot-plan-012` | 5.00s | sorell — “Then we correct the reading. We don’t begin by punishing them for it.” | MCU, preserve eyeline and action axis; pan | character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye; off: — | festival-master:cue-0023, festival-master:cue-0024 | Follow the master-derived flight state stated in action. Refs: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye, vehicle:celestial-ardor, festival-master:story-03 |
 
 #### festival-master:scene-06 — First gravity dip (15s; 3 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-central-access`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -62,6 +72,8 @@
 
 #### festival-master:scene-07 — The extra burn (16s; 2 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-engineering`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-016` | 8.00s | Near the mouth, thrust cuts again for the precision crossing. Zao braces at an engineering console while the rest of the ship floats. | OTS, establish geography and screen direction; pan | character:zao; off: — | festival-master:cue-0030, festival-master:cue-0031 | Follow the master-derived flight state stated in action. Refs: character:zao, vehicle:celestial-ardor, festival-master:story-04 |
@@ -69,12 +81,16 @@
 
 #### festival-master:scene-08 — A direction (16s; 2 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`; secondary `location:celestial-ardor-inner-shielding-vault`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-018` | 8.00s | The neutron count strengthens toward the shielded vault. Harlan emerges from its inner bay and meets Zao in the passage. | MCU, establish geography and screen direction; tracking | character:zao, character:harlan; off: — | festival-master:cue-0035, festival-master:cue-0036, festival-master:cue-0037 | Follow the master-derived flight state stated in action. Refs: character:zao, character:harlan, vehicle:celestial-ardor, festival-master:story-04, festival-master:story-05 |
 | `festival-master:shot-plan-019` | 8.00s | harlan — “Scheduled inspection. The latch is temperamental in free-fall.” | ELS, preserve eyeline and action axis; dolly | character:zao, character:harlan; off: — | festival-master:cue-0038, festival-master:cue-0039, festival-master:cue-0040 | Follow the master-derived flight state stated in action. Refs: character:zao, character:harlan, vehicle:celestial-ardor, festival-master:story-04, festival-master:story-05 |
 
 #### festival-master:scene-09 — The package (23s; 3 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-inner-shielding-vault`; secondary `location:celestial-ardor-reactor-service-bay`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -86,6 +102,8 @@
 
 #### festival-master:scene-10 — The warning breaks (20s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`; secondary `location:celestial-ardor-command-vestibule`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-023` | 6.67s | Harlan rises from the service hatch behind the command vestibule. The bridge crew faces forward as Zao’s channel opens. | INSERT, orthogonal readable insert; dolly | character:voss, character:harlan, character:sorell, character:rao, character:okoye, character:zao; off: character:zao | festival-master:cue-0046, festival-master:cue-0047 | Follow the master-derived flight state stated in action. Refs: character:voss, character:harlan, character:sorell, character:rao, character:okoye, character:zao, vehicle:celestial-ardor, festival-master:story-06 |
@@ -94,6 +112,8 @@
 
 #### festival-master:scene-11 — Two routes aft (18s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-service-cylinder`; secondary `location:celestial-ardor-central-access`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-026` | 6.00s | At the tray below the hatch, Harlan disconnects the wired communications and camera trunks without speaking, then launches ballistically down the service shaft. | MS, establish geography and screen direction; tracking | character:harlan, character:sorell, character:voss; off: — | festival-master:cue-0052 | Microgravity; follow the stated flight event. Refs: character:harlan, character:sorell, character:voss, vehicle:celestial-ardor, festival-master:story-06 |
@@ -101,6 +121,8 @@
 | `festival-master:shot-plan-028` | 6.00s | sorell — “Harlan, answer. Where are you?” | OTS, preserve eyeline and action axis; pan | character:harlan, character:sorell, character:voss; off: character:sorell | festival-master:cue-0055, festival-master:cue-0056 | Microgravity; follow the stated flight event. Refs: character:harlan, character:sorell, character:voss, vehicle:celestial-ardor, festival-master:story-06 |
 
 #### festival-master:scene-12 — Not back, not through (27s; 4 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -113,6 +135,8 @@
 
 #### festival-master:scene-13 — The silent recording (23s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-033` | 7.67s | Zao records into volatile memory. We see her speak but hear only breath, controls, and the approaching vibration of the service hatch. The contents remain withheld. | CU, establish geography and screen direction; locked | character:zao; off: — | festival-master:cue-0065 | Microgravity; follow the stated flight event. Refs: character:zao, vehicle:celestial-ardor, festival-master:story-08 |
@@ -121,6 +145,8 @@
 
 #### festival-master:scene-14 — Too late to answer (23s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-036` | 7.67s | Harlan enters. Zao closes the pointing solution before he can read it. He sees only that a transmission left. | MCU, establish geography and screen direction; pan | character:zao, character:harlan; off: — | festival-master:cue-0069, festival-master:cue-0070 | Follow the master-derived flight state stated in action. Refs: character:zao, character:harlan, vehicle:celestial-ardor, festival-master:story-08, festival-master:story-09 |
@@ -128,6 +154,8 @@
 | `festival-master:shot-plan-038` | 7.67s | harlan — “You should never have had to find it.” | MS, preserve eyeline and action axis; tracking | character:zao, character:harlan; off: — | festival-master:cue-0074, festival-master:cue-0075, festival-master:cue-0076 | Follow the master-derived flight state stated in action. Refs: character:zao, character:harlan, vehicle:celestial-ardor, festival-master:story-08, festival-master:story-09 |
 
 #### festival-master:scene-15 — Contingency after murder (24s; 3 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`; secondary `location:celestial-ardor-inner-shielding-vault`, `location:velari-wormhole-mouth`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -139,6 +167,8 @@
 
 #### festival-master:scene-16 — The picture Harlan wanted (30s; 4 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`; secondary `location:celestial-ardor-service-cylinder`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-042` | 7.50s | Sorell reaches the outer bay, catches Zao’s drifting body, checks airway and pulse, and tries to stop blood that no longer circulates. | MCU, establish geography and screen direction; tracking | character:sorell, character:harlan, character:voss, character:okoye, character:zao; off: — | festival-master:cue-0083, festival-master:cue-0084 | Microgravity; follow the stated flight event. Refs: character:sorell, character:harlan, character:voss, character:okoye, character:zao, vehicle:celestial-ardor, festival-master:story-10, festival-master:story-11 |
@@ -147,6 +177,8 @@
 | `festival-master:shot-plan-045` | 7.50s | harlan — “I never saw her.” | CU, preserve eyeline and action axis; locked | character:sorell, character:harlan, character:voss, character:okoye, character:zao; off: — | festival-master:cue-0089, festival-master:cue-0090, festival-master:cue-0091 | Microgravity; follow the stated flight event. Refs: character:sorell, character:harlan, character:voss, character:okoye, character:zao, vehicle:celestial-ardor, festival-master:story-10, festival-master:story-11 |
 
 #### festival-master:scene-17 — Suspicion travels (25s; 4 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`; secondary `location:celestial-ardor-reactor-service-bay`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -159,6 +191,8 @@
 
 #### festival-master:scene-18 — One theory, two failures (32s; 4 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-050` | 8.00s | harlan — “A deuterium-rich mix explains the fuel and the neutrons. It also explains a delay she kept asking for.” | MS, establish geography and screen direction; tracking | character:voss, character:harlan, character:rao, character:okoye, character:sorell; off: — | festival-master:cue-0099, festival-master:cue-0100 | Follow the master-derived flight state stated in action. Refs: character:voss, character:harlan, character:rao, character:okoye, character:sorell, vehicle:celestial-ardor, festival-master:story-13 |
@@ -168,6 +202,8 @@
 
 #### festival-master:scene-19 — Third gravity dip (24s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-central-access`; secondary `location:celestial-ardor-reactor-service-bay`, `location:celestial-ardor-inner-shielding-vault`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-054` | 8.00s | Midway to the station, thrust cuts for the third time. The Ardor turns to begin braking; Elin and Okoye float beside the sealed vault. | MCU, establish geography and screen direction; tracking | character:rao, character:okoye, character:harlan, character:voss; off: — | festival-master:cue-0107, festival-master:cue-0108 | Microgravity; follow the stated flight event. Refs: character:rao, character:okoye, character:harlan, character:voss, vehicle:celestial-ardor, festival-master:story-14 |
@@ -175,6 +211,8 @@
 | `festival-master:shot-plan-056` | 8.00s | rao — “Could have is not did.” | MS, preserve eyeline and action axis; pan | character:rao, character:okoye, character:harlan, character:voss; off: — | festival-master:cue-0111, festival-master:cue-0112, festival-master:cue-0113 | Microgravity; follow the stated flight event. Refs: character:rao, character:okoye, character:harlan, character:voss, vehicle:celestial-ardor, festival-master:story-14 |
 
 #### festival-master:scene-20 — The empty direction (24s; 3 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -186,6 +224,8 @@
 
 #### festival-master:scene-21 — Zao’s message arrives (37s; 5 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`; secondary `location:celestial-ardor-reactor-service-bay`, `location:celestial-ardor-inner-shielding-vault`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-060` | 7.40s | rao — “Zao’s packet format. Personal signature. Sent before the crossing.” | MCU, establish geography and screen direction; pan | character:voss, character:rao, character:harlan, character:okoye, character:sorell, character:zao; off: — | festival-master:cue-0123 | Follow the master-derived flight state stated in action. Refs: character:voss, character:rao, character:harlan, character:okoye, character:sorell, character:zao, vehicle:celestial-ardor, festival-master:story-16 |
@@ -196,6 +236,8 @@
 
 #### festival-master:scene-22 — Not the voice (24s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-065` | 8.00s | harlan — “A voice and a face can be built from ship archives. You know that.” | INSERT, orthogonal readable insert; locked | character:voss, character:rao, character:harlan, character:okoye, character:sorell; off: — | festival-master:cue-0131, festival-master:cue-0132 | Follow the master-derived flight state stated in action. Refs: character:voss, character:rao, character:harlan, character:okoye, character:sorell, vehicle:celestial-ardor, festival-master:story-17 |
@@ -203,6 +245,8 @@
 | `festival-master:shot-plan-067` | 8.00s | rao — “No. It is enough to isolate you. It is enough to release her.” | ELS, preserve eyeline and action axis; dolly | character:voss, character:rao, character:harlan, character:okoye, character:sorell; off: — | festival-master:cue-0135, festival-master:cue-0136 | Follow the master-derived flight state stated in action. Refs: character:voss, character:rao, character:harlan, character:okoye, character:sorell, vehicle:celestial-ardor, festival-master:story-17 |
 
 #### festival-master:scene-23 — Eleven minutes (24s; 3 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -214,6 +258,8 @@
 
 #### festival-master:scene-24 — The offered wrist (24s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`; secondary `location:celestial-ardor-service-cylinder`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-071` | 8.00s | Harlan extends the wrist device. Okoye reaches without relaxing her stance. | INSERT, orthogonal readable insert; dolly | character:harlan, character:okoye, character:voss, character:sorell; off: — | festival-master:cue-0144, festival-master:cue-0145 | Follow the master-derived flight state stated in action. Refs: character:harlan, character:okoye, character:voss, character:sorell, vehicle:celestial-ardor, festival-master:story-19 |
@@ -222,6 +268,8 @@
 
 #### festival-master:scene-25 — Three routes close (20s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-central-access`; secondary `location:celestial-ardor-reactor-service-bay`, `location:celestial-ardor-service-cylinder`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-074` | 6.67s | Elin’s elevator reaches the local console first. Harlan descends the segmented ladder, locking each access behind him. Voss and Okoye lose time at two hatches on the helical stair. | MS, establish geography and screen direction; tracking | character:rao, character:harlan, character:voss, character:okoye; off: — | festival-master:cue-0151, festival-master:cue-0152 | Microgravity; follow the stated flight event. Refs: character:rao, character:harlan, character:voss, character:okoye, vehicle:celestial-ardor, festival-master:story-19 |
@@ -229,6 +277,8 @@
 | `festival-master:shot-plan-076` | 6.67s | okoye — “One minute. He’s in the bay with her.” | OTS, preserve eyeline and action axis; pan | character:rao, character:harlan, character:voss, character:okoye; off: character:okoye | festival-master:cue-0155, festival-master:cue-0156 | Microgravity; follow the stated flight event. Refs: character:rao, character:harlan, character:voss, character:okoye, vehicle:celestial-ardor, festival-master:story-19 |
 
 #### festival-master:scene-26 — Fourth gravity dip (21s; 3 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`; secondary `location:celestial-ardor-central-access`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -240,6 +290,8 @@
 
 #### festival-master:scene-27 — Four, three, two, one (24s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-inner-shielding-vault`; secondary `location:celestial-ardor-reactor-service-bay`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-080` | 8.00s | Elin opens the vault with Harlan’s wrist. Local indicators confirm Zao’s warning: power loss or controller damage could trigger the package. | MS, establish geography and screen direction; pan | character:rao, character:voss, character:okoye, character:harlan; off: — | festival-master:cue-0164, festival-master:cue-0165 | Follow the master-derived flight state stated in action. Refs: character:rao, character:voss, character:okoye, character:harlan, vehicle:celestial-ardor, festival-master:story-21 |
@@ -247,6 +299,8 @@
 | `festival-master:shot-plan-082` | 8.00s | voss — “Status?” | OTS, preserve eyeline and action axis; tracking | character:rao, character:voss, character:okoye, character:harlan; off: character:voss, character:voss | festival-master:cue-0169, festival-master:cue-0170, festival-master:cue-0171 | Follow the master-derived flight state stated in action. Refs: character:rao, character:voss, character:okoye, character:harlan, vehicle:celestial-ardor, festival-master:story-21 |
 
 #### festival-master:scene-28 — Read it back (20s; 3 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -256,6 +310,8 @@
 
 #### festival-master:scene-29 — The station answers (20s; 3 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`; secondary `location:velari-station`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-086` | 6.67s | Structured light branches across the Ardor’s hull. The 4–5 km Velari station remains dark through a deliberate silence. | MS, establish geography and screen direction; tracking | character:voss, character:sorell, character:rao, character:okoye, character:harlan; off: — | festival-master:cue-0177, festival-master:cue-0178 | Follow the master-derived flight state stated in action. Refs: character:voss, character:sorell, character:rao, character:okoye, character:harlan, vehicle:celestial-ardor, festival-master:story-23 |
@@ -263,6 +319,8 @@
 | `festival-master:shot-plan-088` | 6.67s | A transparent environmental sphere separates from the station and approaches without visible exhaust. | OTS, preserve eyeline and action axis; pan | character:voss, character:sorell, character:rao, character:okoye, character:harlan; off: — | festival-master:cue-0181, festival-master:cue-0182 | Follow the master-derived flight state stated in action. Refs: character:voss, character:sorell, character:rao, character:okoye, character:harlan, vehicle:celestial-ardor, festival-master:story-23 |
 
 #### festival-master:scene-30 — Someone (21s; 4 candidates)
+
+Location binding for every candidate below: primary `location:velari-station`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
@@ -275,12 +333,16 @@
 
 #### festival-master:scene-31 — Work before return (12s; 2 candidates)
 
+Location binding for every candidate below: primary `location:celestial-ardor-bridge`; secondary `location:celestial-ardor-reactor-service-bay`, `location:celestial-ardor-inner-shielding-vault`.
+
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-093` | 6.00s | Before the return window, flight commands still need repair and the armed package remains under constant watch. | CU, establish geography and screen direction; locked | character:voss, character:rao, character:sorell, character:okoye, character:harlan; off: character:rao | festival-master:cue-0188, festival-master:cue-0189 | Follow the master-derived flight state stated in action. Refs: character:voss, character:rao, character:sorell, character:okoye, character:harlan, vehicle:celestial-ardor, festival-master:story-24 |
 | `festival-master:shot-plan-094` | 6.00s | okoye — “Harlan is secure. I’ll take first watch aft.” | OTS, preserve eyeline and action axis; tracking | character:voss, character:rao, character:sorell, character:okoye, character:harlan; off: character:okoye | festival-master:cue-0190, festival-master:cue-0191 | Follow the master-derived flight state stated in action. Refs: character:voss, character:rao, character:sorell, character:okoye, character:harlan, vehicle:celestial-ardor, festival-master:story-24 |
 
 #### festival-master:scene-32 — You made it in time (13s; 2 candidates)
+
+Location binding for every candidate below: primary `location:celestial-ardor-reactor-service-bay`.
 
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|

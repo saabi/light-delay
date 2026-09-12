@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { getOutline, getScript } from './index.ts';
+import { getLocations, getOutline, getScript } from './index.ts';
 import type { StoryText } from '$lib/types/i18n';
 
 const scriptId = 'script:light-delay-festival-master';
@@ -43,15 +43,15 @@ describe('master-derived Festival screenplay', () => {
 			(cue) => cue.type === 'sound' && english(cue.description).includes('bodily impact')
 		);
 		const flightSabotage = cues.findIndex(
-			(cue) => cue.type === 'action' && english(cue.text).includes('disconnects bridge flight commands')
+			(cue) =>
+				cue.type === 'action' && english(cue.text).includes('disconnects bridge flight commands')
 		);
 		const heardRecording = cues.findIndex(
 			(cue) =>
 				cue.type === 'dialogue' && cue.content.variants.en.spokenText.startsWith('If this reaches')
 		);
 		const silentRecording = cues.findIndex(
-			(cue) =>
-				cue.type === 'silence' && english(cue.purpose).includes('deliberately inaudible')
+			(cue) => cue.type === 'silence' && english(cue.purpose).includes('deliberately inaudible')
 		);
 		expect(impact).toBeGreaterThan(-1);
 		expect(flightSabotage).toBeGreaterThan(impact);
@@ -74,11 +74,57 @@ describe('master-derived Festival screenplay', () => {
 			'utf8'
 		);
 		expect(blueprint.match(/festival-master:shot-plan-\d{3}/g)).toHaveLength(96);
-		const storyTargets = [...blueprint.matchAll(/shot-plan-\d{3}` \| ([\d.]+)s/g)].map(
-			(match) => Number(match[1])
+		const storyTargets = [...blueprint.matchAll(/shot-plan-\d{3}` \| ([\d.]+)s/g)].map((match) =>
+			Number(match[1])
 		);
 		expect(storyTargets).toHaveLength(96);
 		expect(Math.max(...storyTargets)).toBeLessThanOrEqual(8);
+	});
+
+	it('uses the master reactor geography and never the obsolete diplomatic core', () => {
+		const script = getScript(scriptId);
+		const byId = new Map(script.scenes.map((scene) => [scene.id, scene]));
+		const usedLocations = script.scenes.flatMap((scene) => [
+			scene.locationId,
+			...(scene.secondaryLocationIds ?? [])
+		]);
+		expect(usedLocations).not.toContain('location:diplomatic-core-room');
+		expect(byId.get('festival-master:scene-09')?.locationId).toBe(
+			'location:celestial-ardor-inner-shielding-vault'
+		);
+		expect(byId.get('festival-master:scene-27')?.locationId).toBe(
+			'location:celestial-ardor-inner-shielding-vault'
+		);
+		for (const sceneId of [
+			'festival-master:scene-14',
+			'festival-master:scene-26',
+			'festival-master:scene-32'
+		]) {
+			expect(byId.get(sceneId)?.locationId, sceneId).toBe(
+				'location:celestial-ardor-reactor-service-bay'
+			);
+		}
+
+		const locations = new Map(getLocations().locations.map((location) => [location.id, location]));
+		expect(locations.get('location:celestial-ardor-reactor-service-bay')?.parentLocationId).toBe(
+			'location:celestial-ardor-engineering'
+		);
+		expect(locations.get('location:celestial-ardor-inner-shielding-vault')?.parentLocationId).toBe(
+			'location:celestial-ardor-reactor-service-bay'
+		);
+		expect(
+			locations.get('location:celestial-ardor-reactor-service-bay')?.referenceAssetIds
+		).toEqual([]);
+		expect(
+			locations.get('location:celestial-ardor-inner-shielding-vault')?.referenceAssetIds
+		).toEqual([]);
+
+		const blueprint = readFileSync(
+			join(root, 'docs/wip/festival-master-shot-blueprint.en.md'),
+			'utf8'
+		);
+		expect(blueprint.match(/Location binding for every candidate below:/g)).toHaveLength(31);
+		expect(blueprint).not.toContain('location:diplomatic-core-room');
 	});
 
 	it('uses no extra intelligible Earth speaker beyond the reporter', () => {
@@ -88,10 +134,9 @@ describe('master-derived Festival screenplay', () => {
 		)!;
 		const openingBeatIds = new Set(opening.beatIds);
 		const openingSpeakers = new Set(
-			script.cues
-				.flatMap((cue) =>
-					openingBeatIds.has(cue.beatId) && cue.type === 'dialogue' ? [cue.speakerId] : []
-				)
+			script.cues.flatMap((cue) =>
+				openingBeatIds.has(cue.beatId) && cue.type === 'dialogue' ? [cue.speakerId] : []
+			)
 		);
 		expect(openingSpeakers).toContain('character:periodista');
 		expect(openingSpeakers).not.toContain('character:earth-protesters');

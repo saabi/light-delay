@@ -8,7 +8,7 @@ Los elementos inciertos se conservan. Ningún candidato puede borrarse hasta cer
 
 Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `replacement_derivatives_approved` (open), `no_active_dependants` (open).
 
-## Vigente o compatible (80)
+## Vigente o compatible (82)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -33,6 +33,8 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | entity | `location:celestial-ardor-central-access` | explicit | retain |
 | entity | `location:celestial-ardor-command-vestibule` | explicit | retain |
 | entity | `location:celestial-ardor-engineering` | explicit | retain |
+| entity | `location:celestial-ardor-inner-shielding-vault` | explicit | retain |
+| entity | `location:celestial-ardor-reactor-service-bay` | explicit | retain |
 | entity | `location:celestial-ardor-service-cylinder` | explicit | retain |
 | entity | `location:proxima-dock` | explicit | retain |
 | entity | `location:proxima-station` | explicit | retain |

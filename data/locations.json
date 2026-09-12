@@ -126,6 +126,64 @@
       }
     },
     {
+      "id": "location:celestial-ardor-reactor-service-bay",
+      "name": {
+        "es": "Compartimiento exterior de servicio del reactor",
+        "en": "Outer Reactor Service Bay"
+      },
+      "description": {
+        "es": "Espacio de ingeniería accesible junto al reactor. Contiene el control local independiente de la matriz óptica de comunicaciones de larga distancia, el control local para interrumpir el perfil de vuelo y equipos de inspección y aislamiento de emergencia para los tanques y el sistema de alimentación de combustible de fusión adyacentes. También guarda instrumentos de diagnóstico y equipos científicos de referencia temporal.",
+        "en": "Accessible engineering workspace beside the reactor. It contains the independent local control for the long-distance optical communications array, the local control for interrupting the flight profile, and emergency inspection and isolation hardware for the adjacent fusion-fuel tankage and feed system. It also holds diagnostic instruments and scientific time-reference equipment."
+      },
+      "parentLocationId": "location:celestial-ardor-engineering",
+      "referenceAssetIds": [],
+      "atmosphere": {
+        "es": "Espacio de trabajo accesible, denso y utilitario junto al reactor",
+        "en": "Accessible, dense, utilitarian workspace beside the reactor"
+      },
+      "notes": [
+        {
+          "id": "note:reactor-service-bay-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "high",
+          "text": {
+            "es": "Falta una referencia visual derivada del master para este espacio. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.",
+            "en": "A master-derived visual reference for this space is pending. The obsolete diplomatic-core-room sheet must not be used as a substitute."
+          }
+        }
+      ]
+    },
+    {
+      "id": "location:celestial-ardor-inner-shielding-vault",
+      "name": {
+        "es": "Bóveda interior de blindaje",
+        "en": "Inner Shielding Vault"
+      },
+      "description": {
+        "es": "Bóveda hundida dentro de la zona combinada de blindaje del reactor, los espacios de tripulación y los tanques de combustible de fusión. Fue creada para aislar equipos de investigación peligrosos; su blindaje oculta a los sensores ordinarios de la nave la débil firma neutrónica del paquete de impulso geofísico. Su cerradura local preexistente de seguridad radiológica está aislada de la red de la nave.",
+        "en": "Vault recessed inside the combined shielding zone for the reactor, crew spaces, and fusion-fuel tankage. It was built to isolate hazardous research equipment; its shielding masks the geophysical impulse package's weak neutron signature from ordinary ship sensors. Its pre-existing local radiation-safety lock is isolated from the ship network."
+      },
+      "parentLocationId": "location:celestial-ardor-reactor-service-bay",
+      "referenceAssetIds": [],
+      "atmosphere": {
+        "es": "Recinto blindado, aislado y de acceso restringido",
+        "en": "Shielded, isolated, restricted-access enclosure"
+      },
+      "notes": [
+        {
+          "id": "note:inner-shielding-vault-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "high",
+          "text": {
+            "es": "Falta una referencia visual derivada del master para la bóveda y su cerradura local. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.",
+            "en": "A master-derived visual reference for the vault and its local lock is pending. The obsolete diplomatic-core-room sheet must not be used as a substitute."
+          }
+        }
+      ]
+    },
+    {
       "id": "location:diplomatic-core-room",
       "name": {
         "es": "Sala del núcleo diplomático",

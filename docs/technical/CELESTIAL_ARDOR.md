@@ -1,15 +1,15 @@
 # Celestial Ardor — referencia técnica y visual
 
-> Estado: documento de diseño canónico/semicanónico para continuidad, arte conceptual, modelado y guion.  
+> Estado: referencia técnica mixta. Las restricciones compatibles con el master siguen vigentes; el inventario Blender y las secciones identificadas como continuidad anterior conservan únicamente procedencia.
 > Idioma histórico de este documento: español. La autoridad narrativa vigente se escribe primero en inglés.
 > Entidad estructurada relacionada: `data/vehicles.json` → `vehicle:celestial-ardor`.
 
-> Autoridad vigente: master WIP rev. 17 en `data/outlines/light-delay-master-narrative.json`.
+> Autoridad vigente: master WIP rev. 19 en `data/outlines/light-delay-master-narrative.json`.
 > Este documento conserva diseño anterior; las notas explícitas del master prevalecen.
 
 ## 1. Identidad y función
 
-La **Celestial Ardor** es una nave humana de larga duración construida originalmente en la Tierra y destinada posteriormente en la Estación Proxima. Ya se encontraba en Proxima, junto con su tripulación, cuando se descubrió la garganta piloto Velari. No fue diseñada para el primer contacto: el **núcleo/complemento diplomático** y los sistemas específicos de contacto fueron instalados posteriormente mediante retrofit en Proxima.
+La **Celestial Ardor** es una nave humana de larga duración construida originalmente en la Tierra y destinada posteriormente en la Estación Proxima. Ya se encontraba en Proxima, junto con su tripulación, cuando se descubrió la garganta piloto Velari. No fue diseñada para el primer contacto y recibió en Proxima las adaptaciones necesarias para la misión.
 
 La nave debe sentirse como una máquina humana avanzada pero mantenible: funcional, reparable, estratificada, con sistemas visibles donde conviene al mantenimiento y sin lenguaje de crucero de lujo. Su identidad visual debe comunicar autonomía, disciplina técnica y capacidad de operar durante viajes prolongados.
 
@@ -194,11 +194,11 @@ El puente es un recinto circular con **seis puestos de tripulación en arco**, u
 
 El cilindro de servicio abre directamente al nivel del puente mediante una **escotilla oscura de esquinas redondeadas**, retranqueada fuera de la línea visual normal de los seis puestos. Junto a ella hay una **bandeja abatible de comunicaciones**. Esta geometría permite que alguien salga del conducto, opere la bandeja y vuelva a entrar sin cruzar el centro visual del puente.
 
-Junto a la escotilla se encuentra el **distribuidor cableado de comunicaciones por cubiertas**. Es una bandeja mantenible que se abre para exponer dos troncos redundantes, `COM A` y `COM B`, y acopladores dobles rotulados por zona funcional. Permite aislar una cubierta durante diagnóstico sin cortar energía, soporte vital ni controles locales. Desenchufar `SISTEMAS DIPLOMÁTICOS — COM A/B` interrumpe voz, intercomunicador y datos operativos cableados de esa zona.
+Junto a la escotilla se encuentra el **distribuidor cableado de comunicaciones**. Es una bandeja mantenible que expone los troncos físicos de comunicaciones y cámaras. Manipularlos interrumpe las rutas cableadas sin cortar energía, soporte vital, controles locales ni dejar una orden digital de apagado.
 
-El respaldo cableado es independiente de la malla inalámbrica. A su vez, la consola local de contingencia del núcleo diplomático controla el láser exterior estándar mediante una canalización física dedicada que no atraviesa este distribuidor.
+El respaldo cableado es independiente de la malla inalámbrica. La matriz óptica de comunicaciones de larga distancia también es independiente: su emisor de popa conserva un control local desde `location:celestial-ardor-reactor-service-bay`, de modo que el jammer interno y la desconexión de los troncos no lo inutilizan.
 
-**Blocking canónico — escena de Harlan en el puente:** la escena ocurre en microgravedad. Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao inicia la llamada. La tripulación permanece sujeta a sus puestos y atiende a Zao o a sus monitores; la propia masa del cilindro y el retranqueo de la escotilla ocultan a Harlan. Al oír «La firma parece falsa. La verdadera firma apunta a—», comprende que Zao va a delatarlo. Primero activa el jammer de muñeca para cortar la malla inalámbrica; luego abre la bandeja contigua, libera los seguros y desenchufa `SISTEMAS DIPLOMÁTICOS — COM A/B`. Finalmente vuelve a entrar por la misma escotilla, la cierra y desciende por el cilindro de servicio hacia el ramal técnico del núcleo diplomático.
+**Blocking vigente — escena de Harlan en el puente:** la escena ocurre en microgravedad. Harlan asciende por el cilindro de servicio y abre la escotilla al nivel del puente justo cuando Zao inicia la llamada. La tripulación permanece sujeta a sus puestos y atiende a Zao o a sus monitores; la propia masa del cilindro y el retranqueo de la escotilla ocultan a Harlan. La secuencia exacta de información, decisión y sabotaje se rige por el master rev. 19 y su derivado Festival, no por el antiguo diálogo de la firma falsa. Harlan activa el jammer local, abre la bandeja, desconecta físicamente comunicaciones y cámaras y desciende hacia el compartimiento exterior de servicio del reactor.
 
 La secuencia no usa ninguna escalera: las dos aberturas de baranda sólo describen la circulación del puente. El ocultamiento depende de la escotilla de servicio y de la bandeja contigua fuera de la línea visual; la ventaja temporal depende de que Harlan ya está en esa ruta directa cuando Sorell comienza a buscarlo por la circulación cotidiana.
 
@@ -229,21 +229,13 @@ La nave fue concebida para viajes prolongados, por lo que estos espacios deben s
 - consumibles críticos,
 - almacenamiento de contingencia.
 
-### Sistemas diplomáticos
+### Compartimiento de servicio del reactor y bóveda interior
 
-El **núcleo diplomático/cuántico** fue añadido en Proxima como retrofit y, por tanto, **no ocupa el eje central**. Está montado fuera del eje, próximo al cilindro central para acceso operativo pero físicamente separado y sectorizable.
+El **compartimiento exterior de servicio del reactor** (`location:celestial-ardor-reactor-service-bay`) es un espacio de ingeniería accesible. Contiene el control local independiente de la matriz óptica de comunicaciones de larga distancia, el control local para interrumpir el perfil de vuelo, instrumentos de diagnóstico y referencia temporal, y los paneles de inspección y aislamiento de emergencia de los tanques y la alimentación de combustible de fusión.
 
-Posee una entrada operativa desde la circulación cotidiana y un ramal técnico secundario desde el cilindro de servicio. Ambos desembocan en puntos distintos de la instalación retrofit, lo que permite mantenimiento sin convertir el núcleo en parte del tronco axial.
+Dentro de la zona combinada de blindaje se encuentra la **bóveda interior de blindaje** (`location:celestial-ardor-inner-shielding-vault`). Fue concebida para aislar equipos de investigación peligrosos; el blindaje enmascara la firma neutrónica débil del paquete. Su cerradura local de seguridad radiológica no depende de la red de la nave.
 
-El área incluye:
-
-- cámara del núcleo diplomático,
-- consolas de IA/mediación,
-- control de protocolos,
-- interfaces de diagnóstico,
-- consola local cableada para puntería y transmisión mediante el láser exterior estándar.
-
-El carácter de retrofit debe ser visible: arquitectura y cableado ligeramente distintos del casco original.
+El diseño debe hacer legible que la bóveda está contenida dentro del conjunto blindado y se abre al compartimiento exterior, mientras que los controles que Zao y Harlan utilizan permanecen accesibles fuera de ella.
 
 ### Ingeniería
 
@@ -332,7 +324,8 @@ La arquitectura debe sostener los espacios narrativos existentes:
 
 - puente de mando,
 - ingeniería,
-- sala del núcleo diplomático,
+- compartimiento exterior de servicio del reactor,
+- bóveda interior de blindaje,
 - recorridos por pasillos/circulación,
 - acceso de servicio,
 - persecución y bloqueo de puertas,
@@ -347,7 +340,7 @@ La existencia simultánea de cilindro central, ascensor y cilindro de servicio p
 2. Mantener el casco axial; no convertirlo en un avión con cubiertas longitudinales.
 3. Representar pisos perpendiculares al eje de empuje.
 4. Mantener tres troncos axiales: acceso central, ascensor y servicio.
-5. Mantener el núcleo diplomático fuera del eje.
+5. Situar la bóveda dentro del blindaje combinado y conectarla directamente con el compartimiento exterior de servicio del reactor.
 6. Mantener el puerto principal en la proa.
 7. No sobredimensionar ventanas.
 8. No introducir hangares internos para naves grandes.
@@ -385,7 +378,7 @@ Estos parámetros pueden refinarse sin alterar el principio arquitectónico cent
 - [x] Collar y puerto de atraque de proa (§7, §6 "Proa").
 - [x] Corona de sensores alrededor del collar de proa (§6 "Proa").
 - [x] Tres troncos axiales bloqueados como volúmenes de referencia — cilindro central de acceso, pozo de ascensor, cilindro de servicio (§5) — sin detalle interior todavía.
-- [x] Núcleo diplomático: volumen exterior fuera de eje + nodo de retrofit visualmente distinguible (§6 "Sistemas diplomáticos").
+- [x] Volumen exterior del antiguo núcleo diplomático, conservado sólo en el archivo Blender de la continuidad anterior; no representa el compartimiento del reactor ni la bóveda vigentes.
 - [x] Conjunto de motor: tambor de reactor, 3 bobinas de confinamiento, tobera magnética (§6 "Motor").
 - [x] 6 aletas radiadoras, 3 a cada banda del casco (§8).
 - [x] Orientación de atraque corregida: proa hacia la estación, motor en dirección contraria (§7, §6 "Motor" — "debe quedar orientado lejos de Proxima").
@@ -398,7 +391,7 @@ Estos parámetros pueden refinarse sin alterar el principio arquitectónico cent
 - [x] Desgaste técnico moderado: 10 manchas/parches oscuros irregulares, concentrados en ingeniería/tanques/reactor (§8 "detalles de identificación y desgaste técnico moderado").
 - [x] Interior del puente: piso circular, 6 puestos de consola en arco, silla de capitán independiente, mesa de reunión para seis, escalera helicoidal alrededor del hueco central y segunda escalera. La abertura de baranda de una desemboca junto al cilindro de servicio y la de la otra junto al pozo de ascensor. La escotilla oscura de servicio y la bandeja abatible COM A/B contigua quedan retranqueadas fuera de la línea visual de los puestos. La pared curva es casco presurizado gris con pocas ventanas pequeñas, profundas, reforzadas y obturables; no hay vidrio panorámico y sólo los displays son azules (§6 "Cubierta de mando").
 - [x] Corrección de gravedad artificial: las consolas y el pedestal de mando estaban del lado equivocado del piso (más hacia popa/abajo que el piso mismo, en vez de sobre su cara hacia proa/arriba) y su "altura" estaba construida sobre el eje Z en vez del eje Y — el eje Y es el verdadero eje vertical de la nave bajo aceleración (proa = arriba, popa/motor = abajo), no Z. Reconstruidas de pie sobre la cara hacia proa del piso, con su dimensión de altura a lo largo de Y.
-- [x] Interior de la sala del núcleo diplomático: esfera cian del núcleo sobre pedestal, dos consolas de IA/mediación flanqueando la esfera, consola de control de protocolos, panel de interfaz de diagnóstico, consola local del láser en tono distinto (indicando su cableado independiente), piso propio, puerta sellable en el acceso operativo (hacia la circulación principal) y una segunda abertura hacia el ramal técnico del cilindro de servicio (§6 "Sistemas diplomáticos"). El corredor completo que conecta este ramal técnico con el cilindro de servicio en sí queda como bloqueo simplificado, no un túnel modelado en detalle.
+- [x] Interior de la antigua sala del núcleo diplomático, conservado únicamente como geometría de procedencia de la continuidad anterior. No debe adaptarse ni presentarse como los dos espacios vigentes.
 - [x] Corrección de gravedad artificial: el piso original estaba construido perpendicular al eje Z (una placa horizontal "Z-arriba" convencional), un eje completamente equivocado para esta nave — se reconstruyó perpendicular al eje Y (el extremo hacia popa/abajo de la sala), con la esfera, el pedestal y las 4 consolas de pie sobre su cara hacia proa/arriba, y las dos puertas reconstruidas como aberturas verticales (altura a lo largo de Y) en las paredes laterales en vez de con la orientación anterior.
 - [x] **Corrección de interferencia física: los tres troncos axiales (cilindro central, ascensor, servicio) estaban modelados como cilindros sólidos de bloqueo a lo largo de los 84 m completos de la nave**, sin hueco alguno. Al añadir mobiliario interior real en el eje de cada tronco, tres piezas quedaban literalmente dentro del material sólido del tronco correspondiente: el pedestal de mando del puente (dentro del cilindro central), la esfera del núcleo diplomático (dentro del pozo de ascensor — la sala del núcleo diplomático comparte el mismo offset lateral que el ascensor) y el bastidor distribuidor COM A/B (dentro del cilindro de servicio, donde el propio documento pide que esté). Solución aplicada, consistente con la propia redacción del documento ("la salida del cilindro central... converge en un vestíbulo axial de mando" — el corredor termina ahí, no lo atraviesa): cada uno de los tres troncos se dividió en un segmento de proa y uno de popa con un hueco exactamente donde está la pieza en cuestión — `Ardor_Trunk_MainAccess_Fore/Aft` (hueco Y -346.9 a -350.9, cubre el puente), `Ardor_Trunk_Elevator_Fore/Aft` (hueco Y -391.7 a -395.7, cubre el núcleo diplomático), `Ardor_Trunk_Service_Fore/Aft` (hueco Y -350.6 a -352.4, cubre el distribuidor COM). La circulación de la nave por ese tramo puntual queda cubierta por los otros dos troncos paralelos, que sí siguen corridos — de ahí la redundancia de tener tres troncos en primer lugar.
 
@@ -408,7 +401,7 @@ Estos parámetros pueden refinarse sin alterar el principio arquitectónico cent
 - [ ] Cubierta(s) de misión: briefing, puestos científicos, comunicaciones de misión (§6).
 - [ ] Hábitat: camarotes, comedor/cocina, higiene, recreación, ejercicio (§6).
 - [ ] Soporte/refugio: enfermería, soporte vital, refugio de emergencia, consumibles críticos (§6).
-- [x] ~~Interior de la sala del núcleo diplomático: cámara del núcleo, consolas de IA/mediación, consola local del láser (§6 "Sistemas diplomáticos").~~ Hecho — ver arriba.
+- [ ] Compartimiento exterior de servicio del reactor y bóveda interior de blindaje: pendientes de diseño y bloqueo derivados del master rev. 19; no reutilizar la antigua sala del núcleo diplomático.
 - [x] ~~Ingeniería como espacio habitable: estaciones de diagnóstico/fabricación, controles de potencia, puesto de trabajo de Zao (§6 "Ingeniería").~~ Hecho — ver arriba.
 - [ ] Carga y consumibles (§6).
 - [ ] Sección de tanques y potencia más allá del tambor del reactor: blindaje, acumuladores térmicos, acondicionamiento de potencia (§6 "Tanques y sección de potencia").
@@ -435,17 +428,28 @@ Estos parámetros pueden refinarse sin alterar el principio arquitectónico cent
 - **Convención de "arriba/abajo" para todo el interior de la nave (importante para cualquier trabajo futuro)**: el eje vertical real de la Ardor bajo aceleración es el eje mundial Y (el eje de empuje), NO Z. Proa (Y menos negativo, hacia -339.7) es "arriba"; popa/motor (Y más negativo) es "abajo" — la seudogravedad durante el empuje empuja todo hacia popa. Cualquier piso es un disco perpendicular a Y, y cualquier mueble/consola que se apoye en él debe tener su dimensión de altura a lo largo de Y (no Z) y estar del lado hacia proa (menos negativo) del piso, nunca del lado hacia popa. El cilindro central de acceso y el cilindro de servicio son corredores axiales de tránsito en microgravedad, no cubiertas con piso propio, así que esta convención no les aplica igual (ver `data/locations.json`: "circulación... mano sobre mano", "tramos libres para desplazamiento por inercia").
 - Asa de agarre en la boca del vestíbulo (`Ardor_CommandVestibule_ShaftGrip_Post1/Post2/Bar`, Y≈-342,8, ligeramente descentrada del eje) — necesaria para el blocking de la escena de Harlan en el puente (ver nota bajo "Cubierta de mando"); no había ningún agarre existente exactamente en ese punto (el pasamanos/plataforma de descanso más cercano del cilindro central está en Y=-348, dentro de la cámara del puente, no en el vestíbulo).
 
-### Áreas requeridas por guion (`data/scripts/*.json`) — priorizar su detallado
+### Áreas requeridas por el master y su nuevo derivado Festival
 
-Recuento de referencias a `locationId` en `scenes`/`shots` de los 4 guiones (`light-delay-festival.json`, `light-delay-long.json`, `light-delay-main-short.json`, `light-delay-trailer.json`). Estas ubicaciones aparecen efectivamente en tomas y necesitan diseño 3D más allá del bloqueo actual:
+La prioridad vigente se deriva de `data/outlines/light-delay-master-narrative.json` y de `data/scripts/light-delay-festival-master.json`, no de los cuatro guiones de la continuidad anterior. El master distingue dos espacios contiguos que aún no tienen referencia visual ni diseño 3D aprobado:
+
+| Ubicación vigente | `locationId` | Función narrativa |
+|---|---|---|
+| Compartimiento exterior de servicio del reactor | `location:celestial-ardor-reactor-service-bay` | Espacio accesible con controles locales de la matriz óptica y del perfil de vuelo, además de inspección de combustible; allí ocurren la investigación, el envío de Zao, el asesinato, el hallazgo del cuerpo y la persecución final. |
+| Bóveda interior de blindaje | `location:celestial-ardor-inner-shielding-vault` | Recinto aislado dentro del blindaje combinado; oculta el paquete y su firma neutrónica débil, y usa una cerradura local fuera de red. |
+
+Ambos espacios deben diseñarse como partes de ingeniería mantenibles de la nave. No se debe reciclar la hoja visual ni la geometría de `location:diplomatic-core-room`: esa sala pertenece a la continuidad anterior y está clasificada como obsoleta.
+
+### Recuento histórico de los cuatro guiones deprecados
+
+La tabla siguiente conserva procedencia de los antiguos `light-delay-festival.json`, `light-delay-long.json`, `light-delay-main-short.json` y `light-delay-trailer.json`. No establece prioridades para el master ni para nuevos assets:
 
 | Ubicación | `locationId` | Apariciones en escenas/tomas |
 |---|---|---|
 | Puente del Celestial Ardor | `location:celestial-ardor-bridge` | **114** — la ubicación más usada de toda la historia; máxima prioridad |
-| Sala del núcleo diplomático | `location:diplomatic-core-room` | **47** — escenario del sabotaje; segunda prioridad |
+| Sala del núcleo diplomático | `location:diplomatic-core-room` | **47** — escenario obsoleto de la trama anterior; sólo rescate y procedencia |
 | Ingeniería del Celestial Ardor | `location:celestial-ardor-engineering` | 8 |
 | Vestíbulo axial de mando | `location:celestial-ardor-command-vestibule` | 4 |
 | Cilindro de servicio | `location:celestial-ardor-service-cylinder` | 4 |
 | Cilindro central de acceso | `location:celestial-ardor-central-access` | 2 |
 
-Nota: `data/locations.json` ya trae una descripción corta por cada una de estas ubicaciones (útil como punto de partida al modelarlas). También aparecen `location:proxima-dock` (14, ya cubierto por el exterior de Proxima) y dos ubicaciones fuera del alcance de este documento — `location:velari-station` (4) y `location:velari-wormhole-mouth` (5) — que no corresponden ni a la Ardor ni a Proxima y no tienen modelo 3D todavía.
+Nota histórica: también aparecían `location:proxima-dock` (14) y las ubicaciones exteriores `location:velari-station` (4) y `location:velari-wormhole-mouth` (5). Esos conteos tampoco deben extrapolarse al derivado vigente.

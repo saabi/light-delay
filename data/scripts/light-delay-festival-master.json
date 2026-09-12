@@ -735,9 +735,9 @@
         "es": "",
         "en": "A direction"
       },
-      "locationId": "location:celestial-ardor-engineering",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
-        "location:diplomatic-core-room"
+        "location:celestial-ardor-inner-shielding-vault"
       ],
       "setting": {
         "interiorExterior": "INT",
@@ -793,7 +793,10 @@
         "es": "",
         "en": "The package"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-reactor-service-bay"
+      ],
       "setting": {
         "interiorExterior": "INT",
         "storyTime": {
@@ -953,7 +956,7 @@
         "es": "",
         "en": "Not back, not through"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "setting": {
         "interiorExterior": "INT",
         "storyTime": {
@@ -1002,7 +1005,7 @@
         "es": "",
         "en": "The silent recording"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "setting": {
         "interiorExterior": "INT",
         "storyTime": {
@@ -1051,7 +1054,7 @@
         "es": "",
         "en": "Too late to answer"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "setting": {
         "interiorExterior": "INT",
         "storyTime": {
@@ -1106,8 +1109,9 @@
         "es": "",
         "en": "Contingency after murder"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
+        "location:celestial-ardor-inner-shielding-vault",
         "location:velari-wormhole-mouth"
       ],
       "setting": {
@@ -1162,7 +1166,7 @@
         "es": "",
         "en": "The picture Harlan wanted"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
         "location:celestial-ardor-service-cylinder"
       ],
@@ -1225,7 +1229,7 @@
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
-        "location:diplomatic-core-room"
+        "location:celestial-ardor-reactor-service-bay"
       ],
       "setting": {
         "interiorExterior": "INT",
@@ -1339,7 +1343,8 @@
       },
       "locationId": "location:celestial-ardor-central-access",
       "secondaryLocationIds": [
-        "location:diplomatic-core-room"
+        "location:celestial-ardor-reactor-service-bay",
+        "location:celestial-ardor-inner-shielding-vault"
       ],
       "setting": {
         "interiorExterior": "INT",
@@ -1447,7 +1452,8 @@
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
-        "location:diplomatic-core-room"
+        "location:celestial-ardor-reactor-service-bay",
+        "location:celestial-ardor-inner-shielding-vault"
       ],
       "setting": {
         "interiorExterior": "INT",
@@ -1665,7 +1671,7 @@
       },
       "locationId": "location:celestial-ardor-central-access",
       "secondaryLocationIds": [
-        "location:diplomatic-core-room",
+        "location:celestial-ardor-reactor-service-bay",
         "location:celestial-ardor-service-cylinder"
       ],
       "setting": {
@@ -1719,7 +1725,7 @@
         "es": "",
         "en": "Fourth gravity dip"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
         "location:celestial-ardor-central-access"
       ],
@@ -1774,7 +1780,10 @@
         "es": "",
         "en": "Four, three, two, one"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-reactor-service-bay"
+      ],
       "setting": {
         "interiorExterior": "INT",
         "storyTime": {
@@ -1987,7 +1996,8 @@
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
-        "location:diplomatic-core-room"
+        "location:celestial-ardor-reactor-service-bay",
+        "location:celestial-ardor-inner-shielding-vault"
       ],
       "setting": {
         "interiorExterior": "INT",
@@ -2041,7 +2051,7 @@
         "es": "",
         "en": "You made it in time"
       },
-      "locationId": "location:diplomatic-core-room",
+      "locationId": "location:celestial-ardor-reactor-service-bay",
       "setting": {
         "interiorExterior": "INT",
         "storyTime": {

@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-11 — Geografía de reactor corregida en el Festival vigente
+
+- El guion `script:light-delay-festival-master` ya no usa `location:diplomatic-core-room`: distingue el compartimiento exterior de servicio del reactor y la bóveda interior de blindaje definidos por el master.
+- Las dos localizaciones nuevas están catalogadas y vinculadas jerárquicamente, pero no tienen hojas visuales. Sus notas impiden reutilizar como sustituto la hoja obsoleta del núcleo diplomático.
+- Las 96 unidades narrativas del blueprint declaran ahora la localización primaria y las secundarias que hereda cada candidato. No se crearon tomas, takes, prompts ni imágenes.
+- La validación comprueba jerarquías de localización, referencias de escenas y que un guion activo no use localizaciones clasificadas como obsoletas. Los cuatro cuts anteriores permanecen intactos y exentos como archivo deprecado.
+
 ## 2026-09-11 — Guion Festival derivado y blueprint de storyboard
 
 - `script:light-delay-festival-master` ya contiene el primer guion fuente en inglés: 3 actos, 11 secuencias, 31 escenas narrativas más título/créditos, 33 beats y 125 cues de diálogo dentro de un objetivo total de 11:30.

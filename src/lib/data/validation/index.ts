@@ -75,6 +75,7 @@ export interface CanonicalDataBundle {
 export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 	const scripts = bundle.scripts?.length ? bundle.scripts : [bundle.script];
 	const characterIds = new Set(bundle.characters.characters.map((c) => c.id));
+	const locationIds = new Set(bundle.locations.locations.map((location) => location.id));
 	const assetIds = new Set(bundle.assets.assets.map((asset) => asset.id));
 	const sourceLanguage = bundle.project.project.languages.sourceLanguage;
 	const registeredScriptIds = new Set(bundle.project.project.scripts.map((s) => s.id));
@@ -90,6 +91,16 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 		validateFactions(bundle.factions),
 		validateVoiceProfiles(bundle.voiceProfiles)
 	];
+	for (const location of bundle.locations.locations) {
+		for (const assetId of location.referenceAssetIds) {
+			if (!assetIds.has(assetId)) {
+				results.push({
+					ok: false,
+					errors: [`locations: ${location.id} references unknown asset ${assetId}`]
+				});
+			}
+		}
+	}
 
 	if (bundle.documents) results.push(validateDocuments(bundle.documents));
 	if (bundle.entityVariants) {
@@ -136,6 +147,20 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 				assetIds
 			})
 		);
+		for (const scene of script.scenes) {
+			for (const locationId of [scene.locationId, ...(scene.secondaryLocationIds ?? [])].filter(
+				(value): value is NonNullable<typeof value> => Boolean(value)
+			)) {
+				if (!locationIds.has(locationId)) {
+					results.push({
+						ok: false,
+						errors: [
+							`${script.script.id}: scene ${scene.id} references unknown location ${locationId}`
+						]
+					});
+				}
+			}
+		}
 	}
 
 	if (bundle.outlines) {
