@@ -1,5 +1,58 @@
 # Changelog
 
+## 2026-09-12 — Festival-master dialogue clarity pass, cue-0062 follow-up
+
+- Per direction that a clarity rewrite may extend its shot's timing when needed, fixed the fourth
+  candidate the same-day clarity pass had flagged but left alone for lack of slack: `cue-0062`
+  (Zao) — "And I can't address the Velari without Sorell. Not back. Not through. Not to them."
+  → "And I can't address the Velari without Sorell — not back to Earth, not through the throat,
+  not to them." Names what each fragment was negating (Earth / the throat / the Velari directly),
+  which the original left to be inferred purely from proximity to the previous line.
+- This grew the line from 16 to 20 words (estimated spoken duration 6140ms → 7700ms, scaled from
+  this cue's own recorded pacing rather than raw WPM). Retimed the whole chain it sits in:
+  `shot-plan-031.durationMs` 12060 → 13620 (its last cue, so only the shot's own end extends — no
+  overlap with any neighboring placement); `scene-12.targetDurationMs` 40670 → 42230; the script's
+  own `targetDurationMs` 808199 → 809759; `project.json`'s matching entry and its `~13:28` labels
+  → `~13:29`. Deleted `cue-0062`'s now-stale `audioAssetId` per the same pattern as the other three
+  cues. No other cue placement in the shot needed to move (`cue-0062` is last in `shot-plan-031`).
+- Updated `festivalMasterScript.spec.ts`'s scene-duration-sum assertion (808_199 → 809_759) and
+  `animaticDialogueTimeline.live.spec.ts`'s festival-master resolved-audio count (128 → 127, one
+  more cue now pending re-synthesis).
+
+## 2026-09-12 — Festival-master dialogue clarity pass (English)
+
+- Reviewed all 131 English dialogue cues in `script:light-delay-festival-master` against
+  `DIALOGUE_CLARITY_GUIDE.md`'s criteria. Most of the corpus already reads clearly (short lines are
+  either visually reinforced, genre-appropriate clipped speech consistent with the speaker's
+  established voice profile, or already benefited from earlier clarity/tightening passes); three
+  genuine gaps were fixed:
+  - `cue-0024` (Voss): "Philosophy after turnover." → "Philosophy can wait." — removed an unexplained
+    aerospace term ("turnover") with no spoken anchor anywhere in the script, at equal length.
+  - `cue-0133` (Rao): the six-item evidence list ("The mass, neutrons, vector, lock, your missing
+    location, and that accusation all agree with her") reordered to state the conclusion before the
+    list ("All agree with her: the mass, neutrons, ...") — same words, easier to hold onto on one
+    hearing. In the same pass, fixed a pre-existing stale echo of this beat's summary text still
+    reading "Agree is not prove" instead of the already-corrected "Agreement isn't proof."
+  - `cue-0140` (Rao): "The plan never sees them" → "The autopilot never sees them" — "the plan" was
+    never spoken anywhere else in the script (only in production-only shot/beat prose), so a first-time
+    listener had no way to know what it meant; "autopilot" needs no introduction, same word count.
+  - A fourth candidate (`cue-0062`'s unlabeled "Not back. Not through. Not to them.") was identified
+    but left unchanged: its shot has zero timing slack, and a proper fix needs more words than fit —
+    flagged for a future pass that can also retime the shot.
+- Synced every place that quoted the three changed lines verbatim: the cue's own beat `summary.en`,
+  the shot `description.en` that quotes it (per `DIALOGUE_AND_PROMPT_LESSONS.md` §1), the matching
+  row in `festival-master-shot-blueprint.en.md`, the TTS `animatic-dialogue-...voices.en.md` export,
+  and `asset-generation-manifest.json`'s `primaryRequest` text. Spanish variants were intentionally
+  left untouched — translation is deferred to a later pass, matching the precedent set when
+  `cue-0042`/`cue-0043` were last rewritten.
+- `trailer-master:cue-a-04` reuses `cue-0024`'s text and audio directly; updated its `spokenText` to
+  match and removed its now-stale `audioAssetId` (same for the two other changed festival-master
+  cues) so the TTS pipeline knows to re-synthesize them. Updated
+  `animaticDialogueTimeline.live.spec.ts`'s resolved-audio counts accordingly (131→128 for
+  festival-master, 16→15 for trailer-master).
+- No shot, cue-placement, or scene/act/script `targetDurationMs` changed: all three fixes were chosen
+  to keep the exact same spoken word count as the line they replaced.
+
 ## 2026-09-12 — Seedance video prompting notes
 
 - Added `docs/production/SEEDANCE_PROMPTING.md` (English source): Seedance **2.5** prompt craft

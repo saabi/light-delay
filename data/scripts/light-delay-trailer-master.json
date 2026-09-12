@@ -562,10 +562,9 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "First we arrive. Philosophy after turnover.",
+            "spokenText": "First we arrive. Philosophy can wait.",
             "status": "source",
             "estimatedDurationMs": 3420,
-            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0024",
             "delivery": "dry command warmth",
             "voiceProfileId": "voice:voss-es"
           },

@@ -5033,7 +5033,7 @@
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Elin Rao, analytical, denies his premise and lists converging evidence: \"I'm not using the voice. Her personal signature and timestamp are valid. The mass, neutrons, vector, lock, your missing location, and that accusation all agree with her.\" Harlan, cornered, counters: \"Agreement isn't proof.\".",
+        "primaryRequest": "Elin Rao, analytical, denies his premise and lists converging evidence: \"I'm not using the voice. Her personal signature and timestamp are valid. All agree with her: the mass, neutrons, vector, lock, your missing location, and that accusation.\" Harlan, cornered, counters: \"Agreement isn't proof.\".",
         "inputImages": [
           "Reference asset: asset:character-voss-sheet",
           "Reference asset: asset:character-harlan-sheet",
@@ -5249,7 +5249,7 @@
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "For eight compressed minutes, Elin Rao, urgent, works a console showing repeated failed abort attempts: \"Commands arrive. The plan never sees them. The bridge path is physically open.\".",
+        "primaryRequest": "For eight compressed minutes, Elin Rao, urgent, works a console showing repeated failed abort attempts: \"Commands arrive. The autopilot never sees them. The bridge path is physically open.\".",
         "inputImages": [
           "Reference asset: asset:character-voss-sheet",
           "Reference asset: asset:character-harlan-sheet",

@@ -11,7 +11,7 @@
     "version": "0.2.0-wip",
     "status": "draft",
     "kind": "festival_cut",
-    "targetDurationMs": 808199,
+    "targetDurationMs": 809759,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -1011,7 +1011,7 @@
         "festival-master:beat-12"
       ],
       "shotIds": [],
-      "targetDurationMs": 40670,
+      "targetDurationMs": 42230,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -2350,7 +2350,7 @@
       },
       "summary": {
         "es": "Bajo empuje constante, la pequeña tripulación comparte una comida en charolas ancladas. La silueta larga de la Ardor rota en una pantalla de sistemas. zao: Celestial Ardor. Suena como un perfume con problemas de motor. sorell: Mejor que decirle a los Velari que llegamos en el Radiador Volador. harlan: ¿Y si somos nosotros los que estamos siendo leídos mal? sorell: Entonces corregimos la lectura. No empezamos castigándolos por eso. voss: Primero llegamos. Filosofía después del relevo.",
-        "en": "Under steady thrust, the small crew shares a meal from anchored trays. The Ardor’s long silhouette rotates on a systems display. zao: Celestial Ardor. Sounds like a perfume with engine trouble. sorell: Better than telling the Velari we arrived in the Flying Radiator. harlan: And what if we’re the ones being read wrong? sorell: Then we correct the reading. We don’t begin by punishing them for it. voss: First we arrive. Philosophy after turnover."
+        "en": "Under steady thrust, the small crew shares a meal from anchored trays. The Ardor’s long silhouette rotates on a systems display. zao: Celestial Ardor. Sounds like a perfume with engine trouble. sorell: Better than telling the Velari we arrived in the Flying Radiator. harlan: And what if we’re the ones being read wrong? sorell: Then we correct the reading. We don’t begin by punishing them for it. voss: First we arrive. Philosophy can wait."
       },
       "participantRefs": [
         {
@@ -3226,7 +3226,7 @@
       },
       "summary": {
         "es": "harlan: Una voz y una cara se pueden construir desde archivos de la nave. Ustedes lo saben. rao: No estoy usando la voz. rao: Su firma personal y marca de tiempo son válidas. La masa, los neutrones, el vector, el candado, tu ubicación perdida y esa acusación coinciden con ella. harlan: Coincidir no es probar. rao: No. Es suficiente para aislarte. Es suficiente para liberarla. Voss mira de Harlan a Sorell y ve cuánto de su caso nació de su primer error.",
-        "en": "harlan: A voice and a face can be built from ship archives. You know that. rao: I’m not using the voice. rao: Her personal signature and timestamp are valid. The mass, neutrons, vector, lock, your missing location, and that accusation all agree with her. harlan: Agree is not prove. rao: No. It is enough to isolate you. It is enough to release her. Voss looks from Harlan to Sorell and sees how much of his case came from his first mistake."
+        "en": "harlan: A voice and a face can be built from ship archives. You know that. rao: I’m not using the voice. rao: Her personal signature and timestamp are valid. All agree with her: the mass, neutrons, vector, lock, your missing location, and that accusation. harlan: Agreement isn’t proof. rao: No. It is enough to isolate you. It is enough to release her. Voss looks from Harlan to Sorell and sees how much of his case came from his first mistake."
       },
       "participantRefs": [
         {
@@ -3281,7 +3281,7 @@
       },
       "summary": {
         "es": "voss: La autoridad de red de Harlan queda revocada. Sorell, estás libre. Necesito el saludo listo. sorell: Lo tendrá. Durante ocho minutos, los abortos normales y el corte remoto llegan al sistema pero no al plan autónomo. rao: Los comandos llegan. El plan nunca los ve. La ruta al puente está físicamente abierta. voss: ¿Dónde podemos romperlo? rao: Consola local a popa. Tres minutos si el ascensor está libre. voss: Ve. Sorell, mantente en aproximación. Okoye, asegúralo y quítale ese dispositivo de muñeca.",
-        "en": "voss: Harlan’s network authority is revoked. Sorell, you are released. I need the greeting ready. sorell: You’ll have it. For eight minutes, normal aborts and the remote cutoff reach the system but not the autonomous plan. rao: Commands arrive. The plan never sees them. The bridge path is physically open. voss: Where can we break it? rao: Aft local console. Three minutes if the elevator is clear. voss: Go. Sorell, stay on approach. Okoye, secure him and take that wrist device."
+        "en": "voss: Harlan’s network authority is revoked. Sorell, you are released. I need the greeting ready. sorell: You’ll have it. For eight minutes, normal aborts and the remote cutoff reach the system but not the autonomous plan. rao: Commands arrive. The autopilot never sees them. The bridge path is physically open. voss: Where can we break it? rao: Aft local console. Three minutes if the elevator is clear. voss: Go. Sorell, stay on approach. Okoye, secure him and take that wrist device."
       },
       "participantRefs": [
         {
@@ -4699,12 +4699,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "First we arrive. Philosophy after turnover.",
+            "spokenText": "First we arrive. Philosophy can wait.",
             "status": "source",
             "delivery": "dry command warmth",
             "voiceProfileId": "voice:voss-es",
-            "estimatedDurationMs": 3420,
-            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0024"
+            "estimatedDurationMs": 3420
           },
           "es": {
             "spokenText": "Primero llegamos. Filosofía después del relevo.",
@@ -6116,12 +6115,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "And I can’t address the Velari without Sorell. Not back. Not through. Not to them.",
+            "spokenText": "And I can’t address the Velari without Sorell — not back to Earth, not through the throat, not to them.",
             "status": "source",
             "delivery": "quieter, almost cornered",
             "voiceProfileId": "voice:zao-es",
-            "estimatedDurationMs": 6140,
-            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0062"
+            "estimatedDurationMs": 7700
           },
           "es": {
             "spokenText": "Y no puedo dirigirme a los Velari sin Sorell. Ni de vuelta. Ni a través. Ni a ellos.",
@@ -8943,12 +8941,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Her personal signature and timestamp are valid. The mass, neutrons, vector, lock, your missing location, and that accusation all agree with her.",
+            "spokenText": "Her personal signature and timestamp are valid. All agree with her: the mass, neutrons, vector, lock, your missing location, and that accusation.",
             "status": "source",
             "delivery": "rapid evidence chain, never theatrical",
             "voiceProfileId": "voice:rao-es",
-            "estimatedDurationMs": 10220,
-            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0133"
+            "estimatedDurationMs": 10220
           },
           "es": {
             "spokenText": "Su firma personal y la marca de tiempo son válidas. La masa, los neutrones, el vector, el bloqueo, su ubicación ausente y esa acusación coinciden con ella.",
@@ -9202,12 +9199,11 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Commands arrive. The plan never sees them. The bridge path is physically open.",
+            "spokenText": "Commands arrive. The autopilot never sees them. The bridge path is physically open.",
             "status": "source",
             "delivery": "fast, conclusive",
             "voiceProfileId": "voice:rao-es",
-            "estimatedDurationMs": 5260,
-            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0140"
+            "estimatedDurationMs": 5260
           },
           "es": {
             "spokenText": "Las órdenes llegan. El plan nunca las ve. La ruta al puente está físicamente abierta.",
@@ -13186,7 +13182,7 @@
           "en": "Dolly; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 12060,
+      "durationMs": 13620,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0061",
@@ -13196,7 +13192,7 @@
         {
           "cueId": "festival-master:cue-0062",
           "atMs": 5920,
-          "durationMs": 6140
+          "durationMs": 7700
         }
       ],
       "takeIds": [
@@ -15374,7 +15370,7 @@
       "order": 2,
       "description": {
         "es": "Elin Rao, analítica, niega su premisa y enumera evidencias convergentes: «No estoy usando la voz. Su firma personal y la marca de tiempo son válidas. La masa, los neutrones, el vector, la cerradura, tu ubicación faltante y esa acusación coinciden con ella». Harlan, acorralado, replica: «La coincidencia no es prueba».",
-        "en": "Elin Rao, analytical, denies his premise and lists converging evidence: \"I'm not using the voice. Her personal signature and timestamp are valid. The mass, neutrons, vector, lock, your missing location, and that accusation all agree with her.\" Harlan, cornered, counters: \"Agreement isn't proof.\"."
+        "en": "Elin Rao, analytical, denies his premise and lists converging evidence: \"I'm not using the voice. Her personal signature and timestamp are valid. All agree with her: the mass, neutrons, vector, lock, your missing location, and that accusation.\" Harlan, cornered, counters: \"Agreement isn't proof.\"."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -15581,7 +15577,7 @@
       "order": 2,
       "description": {
         "es": "Durante ocho minutos comprimidos, Elin Rao, urgente, trabaja en una consola que muestra abortos fallidos repetidos: «Los comandos llegan. El plan nunca los ve. La ruta del puente está físicamente abierta».",
-        "en": "For eight compressed minutes, Elin Rao, urgent, works a console showing repeated failed abort attempts: \"Commands arrive. The plan never sees them. The bridge path is physically open.\"."
+        "en": "For eight compressed minutes, Elin Rao, urgent, works a console showing repeated failed abort attempts: \"Commands arrive. The autopilot never sees them. The bridge path is physically open.\"."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [

@@ -100,13 +100,47 @@ needs. Signs a line should stay short as-is:
 ## Applying this across the rest of the corpus
 
 The two passes that produced the examples above (`e95aec8`, `ad199b3`) covered a handful of lines each,
-found opportunistically while working on other things — this has **not** been done as a systematic pass
-over all ~130+ dialogue cues. A useful audit method: read each scene's dialogue cues in isolation (text
-only, no stage direction, no visuals) and flag any line where the plot-relevant content doesn't land on
-one read. Cross-check flagged lines against the speaker's `voice-profiles.json` entry before rewriting,
-per §7 of `AGENT_GENERATION_BRIEF.md` — and re-run `npm run report:dialogue-style` /
-`npm run validate:data` after any batch of changes, same as every other dialogue pass this project has
-made.
+found opportunistically while working on other things. A later pass (2026-09-12) then read all 131
+English dialogue cues in isolation specifically for this failure mode — the audit method below — and
+found the corpus already in good shape: most short lines are visually reinforced, match the speaker's
+established `voice-profiles.json` register, or were already fixed by the two passes above. It fixed
+three genuine gaps at equal word count (`cue-0024`'s unanchored "turnover," `cue-0133`'s list-then-verb
+evidence dump, `cue-0140`'s never-spoken-elsewhere "the plan"), and flagged a fourth
+(`cue-0062`'s unlabeled "Not back. Not through. Not to them.") whose correct fix needed more words than
+its shot had timing slack for. A follow-up the same day fixed it too, retiming the shot rather than
+forcing a same-length compromise — see the rule below and `CHANGELOG.md` 2026-09-12 ("Festival-master
+dialogue clarity pass" and its "cue-0062 follow-up") for the full list and everything that was synced.
+
+**When a clarity rewrite needs more room than its shot has: extend the shot, don't compromise the fix.**
+A longer, clearer line is worth a few hundred milliseconds of runtime; a same-length rewrite that only
+half-fixes the ambiguity is not a good trade. Retime in this order: (1) the cue's own `estimatedDurationMs`
+(scale the WPM formula's old-vs-new ratio against the cue's actual stored value, per the worked example
+in `cue-0062`'s CHANGELOG entry, rather than trusting raw WPM math, since real recorded pacing usually
+runs slower than the formula); (2) its `cuePlacement.durationMs`; (3) the shot's own `durationMs` — only
+straightforward when the cue is the *last* placement in its shot (extend the end, no neighbor to
+displace); when it isn't last, the next placement's `atMs` must shift too, which extends the shot by the
+same amount; (4) the containing scene's `targetDurationMs` (add the same delta — check first whether it
+currently equals the live sum of its shots' `durationMs`, which it does for a scene actively kept in
+sync, though not every beat/scene in this script is; don't force a sum-invariant that wasn't already
+true); (5) the script's own top-level `targetDurationMs`, by the same delta; (6) `project.json`'s
+matching script entry, both its `targetDurationMs` and any `~MM:SS` duration in its `label` (floor to
+whole seconds, matching how the existing label was derived); (7) the hardcoded scene-duration-sum
+assertion in `festivalMasterScript.spec.ts`. Skip any step whose invariant wasn't already true before
+your edit (e.g. `beat.targetDurationMs` in this script is not kept in sync with its shots' durations
+today — don't "fix" that as a side effect of a dialogue edit).
+
+Audit method, for whoever runs the next pass (a new scene, a rewritten beat, or literally re-checking
+this one): read each scene's dialogue cues in isolation (text only, no stage direction, no visuals) and
+flag any line where the plot-relevant content doesn't land on one read. Cross-check flagged lines
+against the speaker's `voice-profiles.json` entry before rewriting, per §7 of
+`AGENT_GENERATION_BRIEF.md`. Before committing to a rewrite, count words (`\p{L}+`, matching
+`scripts/lib/spoken-duration-core.mjs`) against the original and check the cue's shot for timing slack
+(its `cuePlacement` against the shot's `durationMs` and the *next* placement's `atMs` — that inner gap,
+not just the shot boundary, is usually the binding constraint) — a same-word-count rewrite is always
+safe; a longer one may need a shot retime first. Re-run `npm run validate:data` and `npx vitest run`
+after any batch of changes, and check for stale verbatim copies of the changed line elsewhere (beat
+`summary`, other shots' `description`, blueprint docs, TTS voice exports, the asset-generation
+manifest) the way `DIALOGUE_AND_PROMPT_LESSONS.md` §1 describes for shot descriptions generally.
 
 This generalizes to Spanish too: an ES variant carried over from a since-clarified EN source needs the
 same clarity pass, not just a literal retranslation — check that the ES phrasing has the same plain-

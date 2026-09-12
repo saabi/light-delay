@@ -1,5 +1,32 @@
 # Estado del proyecto
 
+## 2026-09-12 — Seguimiento de claridad: cue-0062 retimada
+
+- Autorizado a extender la toma cuando una reescritura de claridad lo requiera, se corrigió la
+  cuarta candidata que había quedado señalada sin tocar: `cue-0062` (Zao) ahora nombra a qué se
+  refiere cada negación ("not back to Earth, not through the throat, not to them" en vez de "Not
+  back. Not through. Not to them."). La línea pasó de 16 a 20 palabras (6140ms → 7700ms estimados).
+- Propagado el cambio de duración: `shot-plan-031` 12060 → 13620 ms; `scene-12.targetDurationMs`
+  40670 → 42230; duración objetivo del guion 808199 → 809759; entrada y etiqueta (~13:28 → ~13:29)
+  en `project.json`. `audioAssetId` de la cue eliminado, igual que las otras tres. Ninguna otra cue
+  de esa toma necesitó moverse (`cue-0062` es la última). Expectativas de test actualizadas.
+
+## 2026-09-12 — Pase de claridad de diálogo del Festival master (inglés)
+
+- Revisadas las 131 cues de diálogo en inglés de `script:light-delay-festival-master` contra
+  `DIALOGUE_CLARITY_GUIDE.md`. La mayor parte del corpus ya es clara; se corrigieron 3 líneas
+  (`cue-0024` "turnover" sin ancla hablada → "can wait"; `cue-0133`, lista de seis ítems reordenada
+  para adelantar la conclusión; `cue-0140` "the plan" → "the autopilot", término nunca dicho en voz
+  alta en ningún otro lugar). `cue-0062` quedó identificada pero sin tocar por falta de margen de
+  tiempo en su toma.
+- Sincronizados los resúmenes de beat, descripciones de toma, el blueprint, la exportación de voces
+  TTS y el manifiesto de generación que citaban esas líneas textualmente. Las variantes en español
+  quedaron intencionalmente sin tocar (traducción diferida, mismo criterio que la corrección previa
+  de `cue-0042`/`cue-0043`).
+- `audioAssetId` eliminado en las 3 cues (más la cue equivalente del tráiler, que reutiliza el audio
+  de `cue-0024`) para que el pipeline de TTS las regenere; ninguna duración de toma/escena/acto/guion
+  cambió, ya que las tres reescrituras conservan el mismo conteo de palabras.
+
 ## 2026-09-12 — Notas de prompting Seedance
 
 - Nuevo `docs/production/SEEDANCE_PROMPTING.md` (inglés): oficio de prompts de video para

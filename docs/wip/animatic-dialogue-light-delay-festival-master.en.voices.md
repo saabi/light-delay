@@ -92,7 +92,7 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 <!-- audience-dialogue-id: festival-master:cue-0024 -->
 [Voss]
 [QwenInstruct] Speak English. Performance and delivery: dry command warmth
-"First we arrive. Philosophy after turnover."
+"First we arrive. Philosophy can wait."
 
 <!-- audience-dialogue-id: festival-master:cue-0027 -->
 [Elin]
@@ -456,7 +456,7 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 <!-- audience-dialogue-id: festival-master:cue-0133 -->
 [Elin]
 [QwenInstruct] Speak English. Performance and delivery: rapid evidence chain, never theatrical
-"Her personal signature and timestamp are valid. The mass, neutrons, vector, lock, your missing location, and that accusation all agree with her."
+"Her personal signature and timestamp are valid. All agree with her: the mass, neutrons, vector, lock, your missing location, and that accusation."
 
 <!-- audience-dialogue-id: festival-master:cue-0134 -->
 [Harlan]
@@ -481,7 +481,7 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 <!-- audience-dialogue-id: festival-master:cue-0140 -->
 [Elin]
 [QwenInstruct] Speak English. Performance and delivery: fast, conclusive
-"Commands arrive. The plan never sees them. The bridge path is physically open."
+"Commands arrive. The autopilot never sees them. The bridge path is physically open."
 
 <!-- audience-dialogue-id: festival-master:cue-0141 -->
 [Voss]

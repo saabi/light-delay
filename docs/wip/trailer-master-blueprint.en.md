@@ -36,7 +36,7 @@ Relink and refit: `npm run fit:trailer-master-dialogue-audio`.
 | --- | --- | --- | --- |
 | `shot-a-01` | `shot-plan-title` | reused | (silent, cold open) |
 | `shot-a-02` | `shot-plan-002` | reused | harlan: "I wish they were right." / sorell: "We answer carefully. We listen. Then we judge." |
-| `shot-a-03` | `shot-plan-012` | reused | voss: "First we arrive. Philosophy after turnover." |
+| `shot-a-03` | `shot-plan-012` | reused | voss: "First we arrive. Philosophy can wait." |
 | `shot-a-04` | `shot-plan-011` | reused | sorell: "Better than telling the Velari we arrived in the Flying Radiator." |
 
 ## Scene b — The anomaly (~8.2s)
