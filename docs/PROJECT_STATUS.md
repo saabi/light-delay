@@ -1,5 +1,22 @@
 # Estado del proyecto
 
+## 2026-09-12 — Nuevo tráiler derivado del master
+
+- **Nuevo guion `script:light-delay-trailer-master`** (borrador, ~67,7s, 7 escenas, 22 tomas),
+  derivado de `script:light-delay-festival-master`. El tráiler anterior (deprecado) se basaba en
+  un mecanismo de la continuidad vieja; este reutiliza su forma funcional y su contención — no
+  resuelve el contacto — pero reconstruido con las tomas y diálogos reales del Festival master.
+- 15 de 22 tomas reutilizan un frame ya generado vía `imageAssetId`; 6 tomas cuyo origen todavía
+  está pendiente de regeneración tienen su propio prompt independiente; 1 toma nueva (negro
+  sostenido) marca el ataque fuera de cuadro. Los créditos reutilizan el texto más claro del
+  tráiler anterior en vez del crédito genérico repetido de festival-master.
+- Nueva escaleta `outline:light-delay-trailer-master` y nuevo
+  `docs/wip/trailer-master-blueprint.en.md`.
+- Corregido un error residual: las descripciones de `shot-plan-081`/`082` nunca se habían
+  actualizado con el diálogo corregido, y un compilador de prompts concurrente había regenerado
+  sus prompts a partir de esa descripción obsoleta. Ambas descripciones ya coinciden con el
+  diálogo vigente.
+
 ## 2026-09-12 — Diálogo EN del storyboard Festival master completo
 
 - Generadas y promocionadas las 8 cues EN que faltaban

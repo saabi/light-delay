@@ -5,6 +5,7 @@ import trailerScriptJson from '../../../../data/scripts/light-delay-trailer.json
 import longScriptJson from '../../../../data/scripts/light-delay-long.json';
 import masterNarrativeScriptJson from '../../../../data/scripts/light-delay-master-narrative.json';
 import festivalMasterScriptJson from '../../../../data/scripts/light-delay-festival-master.json';
+import trailerMasterScriptJson from '../../../../data/scripts/light-delay-trailer-master.json';
 import assetsJson from '../../../../data/assets.json';
 import charactersJson from '../../../../data/characters.json';
 import locationsJson from '../../../../data/locations.json';
@@ -88,6 +89,10 @@ const SCRIPT_MODULES: Record<string, ScriptFile> = {
 	'script:light-delay-festival-master': assertJsonModule(
 		festivalMasterScriptJson as ScriptFile,
 		'scripts/light-delay-festival-master'
+	),
+	'script:light-delay-trailer-master': assertJsonModule(
+		trailerMasterScriptJson as ScriptFile,
+		'scripts/light-delay-trailer-master'
 	)
 };
 

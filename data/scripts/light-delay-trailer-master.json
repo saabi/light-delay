@@ -1,0 +1,2666 @@
+{
+  "schemaVersion": "1.0.0",
+  "script": {
+    "id": "script:light-delay-trailer-master",
+    "projectId": "project:light-delay",
+    "continuityId": "continuity:light-delay-master-wip",
+    "title": {
+      "es": "Light Delay — Tráiler (~88s, WIP)",
+      "en": "Light Delay — Trailer (~88s, WIP)"
+    },
+    "version": "0.1.0-draft",
+    "status": "draft",
+    "kind": "trailer",
+    "targetDurationMs": 87640,
+    "lineage": {
+      "sourceScriptId": "script:light-delay-festival-master",
+      "relationship": "trailer",
+      "sourceVersion": "0.1.0-wip",
+      "notes": {
+        "es": "Tráiler editado a partir del corte Festival derivado del master. Reutiliza frames ya generados vía imageAssetId y el audio de diálogo EN del Festival master; los diálogos condensados conservan el WAV fuente.",
+        "en": "Trailer edited from the master-derived Festival cut. Reuses already-generated frames via imageAssetId and Festival-master EN dialogue audio; condensed lines keep the source WAV."
+      }
+    },
+    "declaredEntityRefs": [
+      {
+        "kind": "character",
+        "id": "character:zao"
+      },
+      {
+        "kind": "character",
+        "id": "character:voss"
+      },
+      {
+        "kind": "character",
+        "id": "character:rao"
+      },
+      {
+        "kind": "character",
+        "id": "character:sorell"
+      },
+      {
+        "kind": "character",
+        "id": "character:harlan"
+      },
+      {
+        "kind": "character",
+        "id": "character:okoye"
+      }
+    ],
+    "actIds": [
+      "trailer-master:act-1"
+    ]
+  },
+  "acts": [
+    {
+      "id": "trailer-master:act-1",
+      "number": 1,
+      "title": {
+        "es": "Tráiler",
+        "en": "Trailer"
+      },
+      "sceneIds": [
+        "trailer-master:scene-a",
+        "trailer-master:scene-b",
+        "trailer-master:scene-c",
+        "trailer-master:scene-d",
+        "trailer-master:scene-e",
+        "trailer-master:scene-f",
+        "trailer-master:scene-g"
+      ]
+    }
+  ],
+  "sequences": [],
+  "scenes": [
+    {
+      "id": "trailer-master:scene-a",
+      "actId": "trailer-master:act-1",
+      "number": 1,
+      "order": 1,
+      "title": {
+        "es": "Llegada",
+        "en": "Arrival"
+      },
+      "locationId": "location:proxima-station",
+      "setting": {
+        "interiorExterior": "EXT",
+        "continuity": {
+          "es": "Sigue el guion fuente.",
+          "en": "Follows the source script."
+        }
+      },
+      "summary": {
+        "es": "Llegada",
+        "en": "Arrival"
+      },
+      "dramaticPurpose": {
+        "es": "Fragmento de tráiler editado a partir del guion Festival master.",
+        "en": "Trailer excerpt edited from the Festival master script."
+      },
+      "characterIds": [
+        "character:harlan",
+        "character:sorell",
+        "character:voss"
+      ],
+      "beatIds": [
+        "trailer-master:beat-a-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 18000
+    },
+    {
+      "id": "trailer-master:scene-b",
+      "actId": "trailer-master:act-1",
+      "number": 2,
+      "order": 2,
+      "title": {
+        "es": "La anomalía",
+        "en": "The anomaly"
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "setting": {
+        "interiorExterior": "INT",
+        "continuity": {
+          "es": "Sigue el guion fuente.",
+          "en": "Follows the source script."
+        }
+      },
+      "summary": {
+        "es": "La anomalía",
+        "en": "The anomaly"
+      },
+      "dramaticPurpose": {
+        "es": "Fragmento de tráiler editado a partir del guion Festival master.",
+        "en": "Trailer excerpt edited from the Festival master script."
+      },
+      "characterIds": [
+        "character:zao"
+      ],
+      "beatIds": [
+        "trailer-master:beat-b-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 8200
+    },
+    {
+      "id": "trailer-master:scene-c",
+      "actId": "trailer-master:act-1",
+      "number": 3,
+      "order": 3,
+      "title": {
+        "es": "La advertencia",
+        "en": "The warning"
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "setting": {
+        "interiorExterior": "INT",
+        "continuity": {
+          "es": "Sigue el guion fuente.",
+          "en": "Follows the source script."
+        }
+      },
+      "summary": {
+        "es": "La advertencia",
+        "en": "The warning"
+      },
+      "dramaticPurpose": {
+        "es": "Fragmento de tráiler editado a partir del guion Festival master.",
+        "en": "Trailer excerpt edited from the Festival master script."
+      },
+      "characterIds": [
+        "character:zao",
+        "character:voss"
+      ],
+      "beatIds": [
+        "trailer-master:beat-c-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 8020
+    },
+    {
+      "id": "trailer-master:scene-d",
+      "actId": "trailer-master:act-1",
+      "number": 4,
+      "order": 4,
+      "title": {
+        "es": "Sospecha",
+        "en": "Suspicion"
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "setting": {
+        "interiorExterior": "INT",
+        "continuity": {
+          "es": "Sigue el guion fuente.",
+          "en": "Follows the source script."
+        }
+      },
+      "summary": {
+        "es": "Sospecha",
+        "en": "Suspicion"
+      },
+      "dramaticPurpose": {
+        "es": "Fragmento de tráiler editado a partir del guion Festival master.",
+        "en": "Trailer excerpt edited from the Festival master script."
+      },
+      "characterIds": [
+        "character:sorell",
+        "character:harlan",
+        "character:rao"
+      ],
+      "beatIds": [
+        "trailer-master:beat-d-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 8980
+    },
+    {
+      "id": "trailer-master:scene-e",
+      "actId": "trailer-master:act-1",
+      "number": 5,
+      "order": 5,
+      "title": {
+        "es": "La revelación",
+        "en": "The reveal"
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "setting": {
+        "interiorExterior": "INT",
+        "continuity": {
+          "es": "Sigue el guion fuente.",
+          "en": "Follows the source script."
+        }
+      },
+      "summary": {
+        "es": "La revelación",
+        "en": "The reveal"
+      },
+      "dramaticPurpose": {
+        "es": "Fragmento de tráiler editado a partir del guion Festival master.",
+        "en": "Trailer excerpt edited from the Festival master script."
+      },
+      "characterIds": [
+        "character:zao"
+      ],
+      "beatIds": [
+        "trailer-master:beat-e-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 15180
+    },
+    {
+      "id": "trailer-master:scene-f",
+      "actId": "trailer-master:act-1",
+      "number": 6,
+      "order": 6,
+      "title": {
+        "es": "El reloj",
+        "en": "The clock"
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "setting": {
+        "interiorExterior": "INT",
+        "continuity": {
+          "es": "Sigue el guion fuente.",
+          "en": "Follows the source script."
+        }
+      },
+      "summary": {
+        "es": "El reloj",
+        "en": "The clock"
+      },
+      "dramaticPurpose": {
+        "es": "Fragmento de tráiler editado a partir del guion Festival master.",
+        "en": "Trailer excerpt edited from the Festival master script."
+      },
+      "characterIds": [
+        "character:rao",
+        "character:voss",
+        "character:harlan"
+      ],
+      "beatIds": [
+        "trailer-master:beat-f-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 16260
+    },
+    {
+      "id": "trailer-master:scene-g",
+      "actId": "trailer-master:act-1",
+      "number": 7,
+      "order": 7,
+      "title": {
+        "es": "Título y créditos",
+        "en": "Title and credits"
+      },
+      "locationId": "location:proxima-station",
+      "setting": {
+        "interiorExterior": "EXT",
+        "continuity": {
+          "es": "Sigue el guion fuente.",
+          "en": "Follows the source script."
+        }
+      },
+      "summary": {
+        "es": "Título y créditos",
+        "en": "Title and credits"
+      },
+      "dramaticPurpose": {
+        "es": "Fragmento de tráiler editado a partir del guion Festival master.",
+        "en": "Trailer excerpt edited from the Festival master script."
+      },
+      "characterIds": [],
+      "beatIds": [
+        "trailer-master:beat-g-01"
+      ],
+      "shotIds": [],
+      "targetDurationMs": 13000
+    }
+  ],
+  "beats": [
+    {
+      "id": "trailer-master:beat-a-01",
+      "sceneId": "trailer-master:scene-a",
+      "order": 1,
+      "summary": {
+        "es": "Llegada",
+        "en": "Arrival"
+      },
+      "cueIds": [
+        "trailer-master:cue-a-01",
+        "trailer-master:cue-a-02",
+        "trailer-master:cue-a-03",
+        "trailer-master:cue-a-04",
+        "trailer-master:cue-a-05"
+      ]
+    },
+    {
+      "id": "trailer-master:beat-b-01",
+      "sceneId": "trailer-master:scene-b",
+      "order": 1,
+      "summary": {
+        "es": "La anomalía",
+        "en": "The anomaly"
+      },
+      "cueIds": [
+        "trailer-master:cue-b-01",
+        "trailer-master:cue-b-02"
+      ]
+    },
+    {
+      "id": "trailer-master:beat-c-01",
+      "sceneId": "trailer-master:scene-c",
+      "order": 1,
+      "summary": {
+        "es": "La advertencia",
+        "en": "The warning"
+      },
+      "cueIds": [
+        "trailer-master:cue-c-01",
+        "trailer-master:cue-c-02",
+        "trailer-master:cue-c-03"
+      ]
+    },
+    {
+      "id": "trailer-master:beat-d-01",
+      "sceneId": "trailer-master:scene-d",
+      "order": 1,
+      "summary": {
+        "es": "Sospecha",
+        "en": "Suspicion"
+      },
+      "cueIds": [
+        "trailer-master:cue-d-01",
+        "trailer-master:cue-d-02",
+        "trailer-master:cue-d-03"
+      ]
+    },
+    {
+      "id": "trailer-master:beat-e-01",
+      "sceneId": "trailer-master:scene-e",
+      "order": 1,
+      "summary": {
+        "es": "La revelación",
+        "en": "The reveal"
+      },
+      "cueIds": [
+        "trailer-master:cue-e-01"
+      ]
+    },
+    {
+      "id": "trailer-master:beat-f-01",
+      "sceneId": "trailer-master:scene-f",
+      "order": 1,
+      "summary": {
+        "es": "El reloj",
+        "en": "The clock"
+      },
+      "cueIds": [
+        "trailer-master:cue-f-01",
+        "trailer-master:cue-f-02",
+        "trailer-master:cue-f-03",
+        "trailer-master:cue-f-04",
+        "trailer-master:cue-f-05"
+      ]
+    },
+    {
+      "id": "trailer-master:beat-g-01",
+      "sceneId": "trailer-master:scene-g",
+      "order": 1,
+      "summary": {
+        "es": "Título y créditos",
+        "en": "Title and credits"
+      },
+      "cueIds": [
+        "trailer-master:cue-g-01",
+        "trailer-master:cue-g-02",
+        "trailer-master:cue-g-3",
+        "trailer-master:cue-g-4",
+        "trailer-master:cue-g-5"
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "id": "trailer-master:cue-a-01",
+      "beatId": "trailer-master:beat-a-01",
+      "order": 0,
+      "type": "silence",
+      "purpose": {
+        "es": "Apertura fría en la escala, antes de cualquier diálogo.",
+        "en": "Cold open on scale, before any dialogue."
+      },
+      "estimatedDurationMs": 3500
+    },
+    {
+      "id": "trailer-master:cue-a-02",
+      "beatId": "trailer-master:beat-a-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "I wish they were right.",
+            "status": "source",
+            "estimatedDurationMs": 1340,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0004",
+            "delivery": "quiet; almost warm, with dread underneath",
+            "voiceProfileId": "voice:harlan-es"
+          },
+          "es": {
+            "spokenText": "Ojalá tengan razón.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 1200
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0004"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-a-03",
+      "beatId": "trailer-master:beat-a-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:sorell",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "We answer carefully. We listen. Then we judge.",
+            "status": "source",
+            "estimatedDurationMs": 5740,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0005",
+            "delivery": "measured but alive; correcting the premise, not the person",
+            "voiceProfileId": "voice:sorell-es"
+          },
+          "es": {
+            "spokenText": "Respondemos con cuidado. Escuchamos. Y después juzgamos.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 2800
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0005"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-a-04",
+      "beatId": "trailer-master:beat-a-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "First we arrive. Philosophy after turnover.",
+            "status": "source",
+            "estimatedDurationMs": 3420,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0024",
+            "delivery": "dry command warmth",
+            "voiceProfileId": "voice:voss-es"
+          },
+          "es": {
+            "spokenText": "Primero llegamos. Filosofía después del relevo.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 2400
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0024"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-a-05",
+      "beatId": "trailer-master:beat-a-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:sorell",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Better than telling the Velari we arrived in the Flying Radiator.",
+            "status": "source",
+            "estimatedDurationMs": 3900,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0021",
+            "delivery": "warm, quick",
+            "voiceProfileId": "voice:sorell-es"
+          },
+          "es": {
+            "spokenText": "Mejor que decirle a los Velari que llegamos en el Radiador Volador.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 4800
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0021"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-b-01",
+      "beatId": "trailer-master:beat-b-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Something's off. We used more fuel than we had to.",
+            "status": "source",
+            "estimatedDurationMs": 3580,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0030b"
+          },
+          "es": {
+            "spokenText": "Algo no cuadra. Usamos más combustible del necesario.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 3200
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0030b"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-b-02",
+      "beatId": "trailer-master:beat-b-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "A geophysical impulse package. Multi-megaton.",
+            "status": "source",
+            "estimatedDurationMs": 4620,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0042",
+            "delivery": "barely audible, reading only what she must confirm",
+            "voiceProfileId": "voice:zao-es"
+          },
+          "es": {
+            "spokenText": "Un paquete de impulso geofísico. Multimegatón.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 2400
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0042"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-c-01",
+      "beatId": "trailer-master:beat-c-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Bridge, Zao. I have found a grave attempt to sabotage the mission—",
+            "status": "source",
+            "estimatedDurationMs": 4780,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0047",
+            "delivery": "urgent but controlled; cut mid-thought",
+            "voiceProfileId": "voice:zao-es"
+          },
+          "es": {
+            "spokenText": "Puente, Zao. He encontrado un intento grave de sabotear la misión—",
+            "status": "needs_revision",
+            "estimatedDurationMs": 4400
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0047"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-c-02",
+      "beatId": "trailer-master:beat-c-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Zao? Repeat.",
+            "status": "source",
+            "estimatedDurationMs": 1740,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0049",
+            "delivery": "immediate command",
+            "voiceProfileId": "voice:voss-es"
+          },
+          "es": {
+            "spokenText": "¿Zao? Repita.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 800
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0049"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-c-03",
+      "beatId": "trailer-master:beat-c-01",
+      "order": 0,
+      "type": "silence",
+      "purpose": {
+        "es": "El ataque ocurre fuera de cuadro, en silencio — deliberadamente sin mostrarse.",
+        "en": "The attack happens off-page, in silence — deliberately unseen."
+      },
+      "estimatedDurationMs": 1500
+    },
+    {
+      "id": "trailer-master:cue-d-01",
+      "beatId": "trailer-master:beat-d-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:sorell",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "I found her like this. I tried to help her.",
+            "status": "source",
+            "estimatedDurationMs": 3420,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0093",
+            "delivery": "shaking but precise",
+            "voiceProfileId": "voice:sorell-es"
+          },
+          "es": {
+            "spokenText": "La encontré así. Intenté ayudarla.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 2000
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0093"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-d-02",
+      "beatId": "trailer-master:beat-d-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "She wanted the contact delayed. You heard her.",
+            "status": "source",
+            "estimatedDurationMs": 3340,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0096",
+            "delivery": "softly supplying Voss the pattern he expects",
+            "voiceProfileId": "voice:harlan-es"
+          },
+          "es": {
+            "spokenText": "Ella quería retrasar el contacto. Usted la oyó.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 3200
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0096"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-d-03",
+      "beatId": "trailer-master:beat-d-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Zao didn't miss like that.",
+            "status": "source",
+            "estimatedDurationMs": 2220,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0116",
+            "delivery": "quiet, personal certainty",
+            "voiceProfileId": "voice:rao-es"
+          },
+          "es": {
+            "spokenText": "Zao no fallaba así.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 1600
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0116"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-e-01",
+      "beatId": "trailer-master:beat-e-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "If this reaches you — I found a weapon in the shielded vault.",
+            "status": "source",
+            "estimatedDurationMs": 15180,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0126",
+            "delivery": "compressed urgency, exact enough to act on; fear held at the edges",
+            "voiceProfileId": "voice:zao-es"
+          },
+          "es": {
+            "spokenText": "Si esto le llega — encontré un arma en la bóveda blindada.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 4400
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0126"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-f-01",
+      "beatId": "trailer-master:beat-f-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "It's keyed to the ship's own clock.",
+            "status": "source",
+            "estimatedDurationMs": 7740,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0167",
+            "delivery": "a solution forming aloud",
+            "voiceProfileId": "voice:rao-es"
+          },
+          "es": {
+            "spokenText": "Está sincronizada con el reloj propio de la nave.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 3600
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0167"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-f-02",
+      "beatId": "trailer-master:beat-f-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:voss",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Status?",
+            "status": "source",
+            "estimatedDurationMs": 380,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0169",
+            "delivery": "one word held steady",
+            "voiceProfileId": "voice:voss-es"
+          },
+          "es": {
+            "spokenText": "¿Estado?",
+            "status": "needs_revision",
+            "estimatedDurationMs": 400
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0169"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-f-03",
+      "beatId": "trailer-master:beat-f-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:rao",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "It isn't disarmed. It just isn't going off here.",
+            "status": "source",
+            "estimatedDurationMs": 3180,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0170",
+            "delivery": "controlled relief with a warning inside it",
+            "voiceProfileId": "voice:rao-es"
+          },
+          "es": {
+            "spokenText": "No está desarmada. Sólo que no va a estallar aquí.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 4000
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0170"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-f-04",
+      "beatId": "trailer-master:beat-f-01",
+      "order": 0,
+      "type": "silence",
+      "purpose": {
+        "es": "Un vistazo mudo y sin resolver de la escala del primer contacto.",
+        "en": "A wordless, unresolved glimpse of first contact's scale."
+      },
+      "estimatedDurationMs": 3500
+    },
+    {
+      "id": "trailer-master:cue-f-05",
+      "beatId": "trailer-master:beat-f-01",
+      "order": 0,
+      "type": "dialogue",
+      "speakerId": "character:harlan",
+      "presentation": "on_screen",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "No stopping it now.",
+            "status": "source",
+            "estimatedDurationMs": 1340,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0078b"
+          },
+          "es": {
+            "spokenText": "Ya no se puede detener.",
+            "status": "needs_revision",
+            "estimatedDurationMs": 2000
+          }
+        }
+      },
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0078b"
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:cue-g-01",
+      "beatId": "trailer-master:beat-g-01",
+      "order": 0,
+      "type": "text",
+      "presentation": "title",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "text": "LIGHT DELAY",
+            "status": "source"
+          },
+          "es": {
+            "text": "LIGHT DELAY",
+            "status": "needs_revision"
+          }
+        }
+      }
+    },
+    {
+      "id": "trailer-master:cue-g-02",
+      "beatId": "trailer-master:beat-g-01",
+      "order": 0,
+      "type": "text",
+      "presentation": "caption",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "text": "SOMETIMES, ARRIVING LATE IS ARRIVING ON TIME.",
+            "status": "source"
+          },
+          "es": {
+            "text": "A VECES, LLEGAR TARDE ES LLEGAR A TIEMPO.",
+            "status": "needs_revision"
+          }
+        }
+      }
+    },
+    {
+      "id": "trailer-master:cue-g-3",
+      "beatId": "trailer-master:beat-g-01",
+      "order": 0,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "text": "WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER",
+            "status": "source"
+          },
+          "es": {
+            "text": "ESCRITO Y PRODUCIDO POR\nAUTHOR_NAME_PLACEHOLDER",
+            "status": "needs_revision"
+          }
+        }
+      }
+    },
+    {
+      "id": "trailer-master:cue-g-4",
+      "beatId": "trailer-master:beat-g-01",
+      "order": 0,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "text": "AI ASSISTANCE\nChatGPT · Claude · Gemini · Cursor Composer",
+            "status": "source"
+          },
+          "es": {
+            "text": "ASISTENCIA DE IA\nChatGPT · Claude · Gemini · Cursor Composer",
+            "status": "needs_revision"
+          }
+        }
+      }
+    },
+    {
+      "id": "trailer-master:cue-g-5",
+      "beatId": "trailer-master:beat-g-01",
+      "order": 0,
+      "type": "text",
+      "presentation": "credits",
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "text": "PRODUCTION TOOLS\nLight Delay schema & production tools",
+            "status": "source"
+          },
+          "es": {
+            "text": "HERRAMIENTAS DE PRODUCCIÓN\nEsquema y herramientas de producción Light Delay",
+            "status": "needs_revision"
+          }
+        }
+      }
+    }
+  ],
+  "shots": [
+    {
+      "id": "trailer-master:shot-a-01",
+      "sceneId": "trailer-master:scene-a",
+      "beatIds": [
+        "trailer-master:beat-a-01"
+      ],
+      "number": 1,
+      "order": 1,
+      "description": {
+        "es": "Una vista exterior lenta y distante de la Estación Proxima, pequeña contra la oscuridad, Júpiter al fondo. Sin diálogo.",
+        "en": "A slow, distant exterior view of Proxima Station, small against the dark, Jupiter beyond it. Silent."
+      },
+      "locationId": "location:proxima-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "distant ship visible near the station"
+        }
+      ],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 3500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-a-01",
+          "atMs": 0,
+          "durationMs": 3500
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-a-01:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-a-01:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-title"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).",
+            "en": "Reuses the frame from festival-master:shot-plan-title (asset asset:festival-master-storyboard-title)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-a-02",
+      "sceneId": "trailer-master:scene-a",
+      "beatIds": [
+        "trailer-master:beat-a-01"
+      ],
+      "number": 2,
+      "order": 2,
+      "description": {
+        "es": "Harlan, receloso, habla en voz baja para sí. Sorell responde, firme. La tensión bajo la doctrina declarada de la misión ya es visible.",
+        "en": "Harlan, guarded, speaks quietly to himself. Sorell answers, steady. The tension under the mission's stated doctrine is already visible."
+      },
+      "locationId": "location:proxima-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:periodista",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 7180,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-a-02",
+          "atMs": 0,
+          "durationMs": 1340
+        },
+        {
+          "cueId": "trailer-master:cue-a-03",
+          "atMs": 1440,
+          "durationMs": 5740
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-a-02:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-a-02:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-002"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-002 (asset asset:festival-master-storyboard-002).",
+            "en": "Reuses the frame from festival-master:shot-plan-002 (asset asset:festival-master-storyboard-002)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-a-03",
+      "sceneId": "trailer-master:scene-a",
+      "beatIds": [
+        "trailer-master:beat-a-01"
+      ],
+      "number": 3,
+      "order": 3,
+      "description": {
+        "es": "Voss, en el puente, termina el debate antes de que empiece.",
+        "en": "Voss, on the bridge, ends the debate before it starts."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 3420,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-a-04",
+          "atMs": 0,
+          "durationMs": 3420
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-a-03:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-a-03:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-012"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-012 (asset asset:festival-master-storyboard-012).",
+            "en": "Reuses the frame from festival-master:shot-plan-012 (asset asset:festival-master-storyboard-012)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-a-04",
+      "sceneId": "trailer-master:scene-a",
+      "beatIds": [
+        "trailer-master:beat-a-01"
+      ],
+      "number": 4,
+      "order": 4,
+      "description": {
+        "es": "Un raro momento ligero entre Sorell y Harlan, antes de que todo cambie.",
+        "en": "A rare light beat between Sorell and Harlan, before everything changes."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 3900,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-a-05",
+          "atMs": 0,
+          "durationMs": 3900
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-a-04:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-a-04:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-011"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-011 (asset asset:festival-master-storyboard-011).",
+            "en": "Reuses the frame from festival-master:shot-plan-011 (asset asset:festival-master-storyboard-011)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-b-01",
+      "sceneId": "trailer-master:scene-b",
+      "beatIds": [
+        "trailer-master:beat-b-01"
+      ],
+      "number": 5,
+      "order": 5,
+      "description": {
+        "es": "Zao, sola en su consola, capta el primer hilo de que algo anda mal.",
+        "en": "Zao, alone at her console, catches the first thread of something wrong."
+      },
+      "locationId": "location:celestial-ardor-engineering",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "in focus, center frame"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 3580,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-b-01",
+          "atMs": 0,
+          "durationMs": 3580
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-b-01:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-b-01:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-016"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-016 (asset asset:festival-master-storyboard-016).",
+            "en": "Reuses the frame from festival-master:shot-plan-016 (asset asset:festival-master-storyboard-016)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-b-02",
+      "sceneId": "trailer-master:scene-b",
+      "beatIds": [
+        "trailer-master:beat-b-01"
+      ],
+      "number": 6,
+      "order": 6,
+      "description": {
+        "es": "Dentro de la bóveda, Zao encuentra lo que en realidad iba escondido a bordo.",
+        "en": "Inside the vault, Zao finds what was actually hidden aboard."
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "in focus, center frame"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, preservando la continuidad con la toma fuente.",
+          "en": "Locked, preserving continuity with the source shot."
+        }
+      },
+      "durationMs": 4620,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-b-02",
+          "atMs": 0,
+          "durationMs": 4620
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-b-02:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-b-02:take-01"
+    },
+    {
+      "id": "trailer-master:shot-c-01",
+      "sceneId": "trailer-master:scene-c",
+      "beatIds": [
+        "trailer-master:beat-c-01"
+      ],
+      "number": 7,
+      "order": 7,
+      "description": {
+        "es": "Zao abre el canal — y la cortan a media palabra.",
+        "en": "Zao opens the channel — and gets cut off mid-word."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-command-vestibule"
+      ],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "dolly",
+        "movementDescription": {
+          "es": "Dolly; encuadre inserto legible y ortogonal.",
+          "en": "Dolly; orthogonal, legible insert framing."
+        }
+      },
+      "durationMs": 4780,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-c-01",
+          "atMs": 0,
+          "durationMs": 4780
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-c-01:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-c-01:take-01"
+    },
+    {
+      "id": "trailer-master:shot-c-02",
+      "sceneId": "trailer-master:scene-c",
+      "beatIds": [
+        "trailer-master:beat-c-01"
+      ],
+      "number": 8,
+      "order": 8,
+      "description": {
+        "es": "El puente se da cuenta de que algo acaba de salir mal.",
+        "en": "The bridge realizes something just went wrong."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-command-vestibule"
+      ],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "foreground, back to camera, beside the service hatch"
+        }
+      ],
+      "composition": {
+        "size": "MCU",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "pan",
+        "movementDescription": {
+          "es": "Paneo; mantiene la línea de mirada y la continuidad del eje de acción.",
+          "en": "Pan; preserves eyeline and action-axis continuity."
+        }
+      },
+      "durationMs": 1740,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-c-02",
+          "atMs": 0,
+          "durationMs": 1740
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-c-02:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-c-02:take-01"
+    },
+    {
+      "id": "trailer-master:shot-c-03",
+      "sceneId": "trailer-master:scene-c",
+      "beatIds": [
+        "trailer-master:beat-c-01"
+      ],
+      "number": 9,
+      "order": 9,
+      "description": {
+        "es": "Corte duro a negro. Sin diálogo, sin música salvo el pulso de la partitura.",
+        "en": "Hard cut to black. No dialogue, nothing but the score's pulse."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [],
+      "visibleRefs": [],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Negro fijo.",
+          "en": "Locked black frame."
+        }
+      },
+      "durationMs": 1500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-c-03",
+          "atMs": 0,
+          "durationMs": 1500
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-c-03:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-c-03:take-01"
+    },
+    {
+      "id": "trailer-master:shot-d-01",
+      "sceneId": "trailer-master:scene-d",
+      "beatIds": [
+        "trailer-master:beat-d-01"
+      ],
+      "number": 10,
+      "order": 10,
+      "description": {
+        "es": "Sorell, conmocionada, hallada junto al cuerpo de Zao.",
+        "en": "Sorell, shaken, found beside Zao's body."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "speaking, in focus"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 3420,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-d-01",
+          "atMs": 0,
+          "durationMs": 3420
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-d-01:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-d-01:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-047"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-047 (asset asset:festival-master-storyboard-047).",
+            "en": "Reuses the frame from festival-master:shot-plan-047 (asset asset:festival-master-storyboard-047)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-d-02",
+      "sceneId": "trailer-master:scene-d",
+      "beatIds": [
+        "trailer-master:beat-d-01"
+      ],
+      "number": 11,
+      "order": 11,
+      "description": {
+        "es": "Harlan dirige la sospecha hacia Sorell.",
+        "en": "Harlan turns suspicion toward Sorell."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 3340,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-d-02",
+          "atMs": 0,
+          "durationMs": 3340
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-d-02:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-d-02:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-048"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-048 (asset asset:festival-master-storyboard-048).",
+            "en": "Reuses the frame from festival-master:shot-plan-048 (asset asset:festival-master-storyboard-048)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-d-03",
+      "sceneId": "trailer-master:scene-d",
+      "beatIds": [
+        "trailer-master:beat-d-01"
+      ],
+      "number": 12,
+      "order": 12,
+      "description": {
+        "es": "Rao rechaza la explicación fácil.",
+        "en": "Rao refuses the easy explanation."
+      },
+      "locationId": "location:celestial-ardor-bridge",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:sorell",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "MS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 2220,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-d-03",
+          "atMs": 0,
+          "durationMs": 2220
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-d-03:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-d-03:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-058"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058).",
+            "en": "Reuses the frame from festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-e-01",
+      "sceneId": "trailer-master:scene-e",
+      "beatIds": [
+        "trailer-master:beat-e-01"
+      ],
+      "number": 13,
+      "order": 13,
+      "description": {
+        "es": "La advertencia grabada de Zao, finalmente escuchada.",
+        "en": "Zao's recorded warning, finally heard."
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:zao",
+          "role": "in focus, center frame"
+        }
+      ],
+      "composition": {
+        "size": "INSERT",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 15180,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-e-01",
+          "atMs": 0,
+          "durationMs": 15180
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-e-01:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-e-01:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-062"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-062 (asset asset:festival-master-storyboard-062).",
+            "en": "Reuses the frame from festival-master:shot-plan-062 (asset asset:festival-master-storyboard-062)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-f-01",
+      "sceneId": "trailer-master:scene-f",
+      "beatIds": [
+        "trailer-master:beat-f-01"
+      ],
+      "number": 14,
+      "order": 14,
+      "description": {
+        "es": "Rao encuentra una manera de ganar tiempo, si funciona.",
+        "en": "Rao finds a way to buy time, if it works."
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, preservando la línea de mirada y la continuidad del eje de acción.",
+          "en": "Locked, preserving eyeline and action-axis continuity."
+        }
+      },
+      "durationMs": 7740,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-f-01",
+          "atMs": 0,
+          "durationMs": 7740
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-f-01:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-f-01:take-01"
+    },
+    {
+      "id": "trailer-master:shot-f-02",
+      "sceneId": "trailer-master:scene-f",
+      "beatIds": [
+        "trailer-master:beat-f-01"
+      ],
+      "number": 15,
+      "order": 15,
+      "description": {
+        "es": "La cuenta regresiva salta más allá de su plazo — pero nada está realmente a salvo todavía.",
+        "en": "The countdown jumps past its deadline — but nothing is truly safe yet."
+      },
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "present, listening"
+        },
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "present, listening"
+        }
+      ],
+      "composition": {
+        "size": "OTS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "tracking",
+        "movementDescription": {
+          "es": "Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
+          "en": "Tracking; preserves eyeline and action-axis continuity."
+        }
+      },
+      "durationMs": 3680,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-f-02",
+          "atMs": 0,
+          "durationMs": 380
+        },
+        {
+          "cueId": "trailer-master:cue-f-03",
+          "atMs": 500,
+          "durationMs": 3180
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-f-02:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-f-02:take-01"
+    },
+    {
+      "id": "trailer-master:shot-f-03",
+      "sceneId": "trailer-master:scene-f",
+      "beatIds": [
+        "trailer-master:beat-f-01"
+      ],
+      "number": 16,
+      "order": 16,
+      "description": {
+        "es": "La nave Velari, inmensa, responde. El tráiler no dice cómo termina esto.",
+        "en": "The Velari ship, immense, answers. The trailer does not say how this ends."
+      },
+      "locationId": "location:velari-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "dolly",
+        "movementDescription": {
+          "es": "Dolly lento, sin diálogo.",
+          "en": "Slow dolly, wordless."
+        }
+      },
+      "durationMs": 3500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-f-04",
+          "atMs": 0,
+          "durationMs": 3500
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-f-03:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-f-03:take-01"
+    },
+    {
+      "id": "trailer-master:shot-f-04",
+      "sceneId": "trailer-master:scene-f",
+      "beatIds": [
+        "trailer-master:beat-f-01"
+      ],
+      "number": 17,
+      "order": 17,
+      "description": {
+        "es": "Harlan, solo, frío. La línea final antes del título.",
+        "en": "Harlan, alone, cold. The button line before the title."
+      },
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-inner-shielding-vault"
+      ],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "in focus, center frame"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 1340,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-f-05",
+          "atMs": 0,
+          "durationMs": 1340
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-f-04:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-f-04:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-039"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-039 (asset asset:festival-master-storyboard-039).",
+            "en": "Reuses the frame from festival-master:shot-plan-039 (asset asset:festival-master-storyboard-039)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-g-01",
+      "sceneId": "trailer-master:scene-g",
+      "beatIds": [
+        "trailer-master:beat-g-01"
+      ],
+      "number": 18,
+      "order": 18,
+      "description": {
+        "es": "Corte a negro, luego el título sobre el mismo exterior distante que abrió el tráiler.",
+        "en": "Cut to black, then the title over the same distant exterior that opened the trailer."
+      },
+      "locationId": "location:proxima-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "distant ship visible near the station"
+        }
+      ],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 3000,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-g-01",
+          "atMs": 0,
+          "durationMs": 3000
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-g-01:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-g-01:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-title"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).",
+            "en": "Reuses the frame from festival-master:shot-plan-title (asset asset:festival-master-storyboard-title)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-g-02",
+      "sceneId": "trailer-master:scene-g",
+      "beatIds": [
+        "trailer-master:beat-g-01"
+      ],
+      "number": 19,
+      "order": 19,
+      "description": {
+        "es": "Tarjeta de eslogan, sostenida sobre el mismo exterior.",
+        "en": "Tagline card, held over the same exterior."
+      },
+      "locationId": "location:proxima-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [
+        {
+          "kind": "vehicle",
+          "id": "vehicle:celestial-ardor",
+          "role": "distant ship visible near the station"
+        }
+      ],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-g-02",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-g-02:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-g-02:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-title"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).",
+            "en": "Reuses the frame from festival-master:shot-plan-title (asset asset:festival-master-storyboard-title)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-g-03",
+      "sceneId": "trailer-master:scene-g",
+      "beatIds": [
+        "trailer-master:beat-g-01"
+      ],
+      "number": 20,
+      "order": 20,
+      "description": {
+        "es": "Tarjeta de crédito: ESCRITO Y PRODUCIDO POR",
+        "en": "Credit card: WRITTEN AND PRODUCED BY"
+      },
+      "locationId": "location:velari-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-g-3",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-g-03:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-g-03:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-credit-01"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-credit-01 (asset asset:festival-master-storyboard-credit-01).",
+            "en": "Reuses the frame from festival-master:shot-plan-credit-01 (asset asset:festival-master-storyboard-credit-01)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-g-04",
+      "sceneId": "trailer-master:scene-g",
+      "beatIds": [
+        "trailer-master:beat-g-01"
+      ],
+      "number": 21,
+      "order": 21,
+      "description": {
+        "es": "Tarjeta de crédito: ASISTENCIA DE IA",
+        "en": "Credit card: AI ASSISTANCE"
+      },
+      "locationId": "location:velari-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-g-4",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-g-04:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-g-04:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-credit-02"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-credit-02 (asset asset:festival-master-storyboard-credit-02).",
+            "en": "Reuses the frame from festival-master:shot-plan-credit-02 (asset asset:festival-master-storyboard-credit-02)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:shot-g-05",
+      "sceneId": "trailer-master:scene-g",
+      "beatIds": [
+        "trailer-master:beat-g-01"
+      ],
+      "number": 22,
+      "order": 22,
+      "description": {
+        "es": "Tarjeta de crédito: HERRAMIENTAS DE PRODUCCIÓN",
+        "en": "Credit card: PRODUCTION TOOLS"
+      },
+      "locationId": "location:velari-station",
+      "secondaryLocationIds": [],
+      "visibleRefs": [],
+      "composition": {
+        "size": "ELS",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Fijo, sosteniendo el cuadro.",
+          "en": "Locked, holding the frame."
+        }
+      },
+      "durationMs": 2500,
+      "cuePlacements": [
+        {
+          "cueId": "trailer-master:cue-g-5",
+          "atMs": 0,
+          "durationMs": 2500
+        }
+      ],
+      "takeIds": [
+        "trailer-master:shot-g-05:take-01"
+      ],
+      "selectedTakeId": "trailer-master:shot-g-05:take-01",
+      "sourceRefs": [
+        {
+          "scriptId": "script:light-delay-festival-master",
+          "shotId": "festival-master:shot-plan-credit-03"
+        }
+      ],
+      "notes": [
+        {
+          "type": "editorial",
+          "text": {
+            "es": "Reutiliza el frame de festival-master:shot-plan-credit-03 (asset asset:festival-master-storyboard-credit-03).",
+            "en": "Reuses the frame from festival-master:shot-plan-credit-03 (asset asset:festival-master-storyboard-credit-03)."
+          }
+        }
+      ]
+    }
+  ],
+  "takes": [
+    {
+      "id": "trailer-master:shot-a-01:take-01",
+      "shotId": "trailer-master:shot-a-01",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-title"
+    },
+    {
+      "id": "trailer-master:shot-a-02:take-01",
+      "shotId": "trailer-master:shot-a-02",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-002"
+    },
+    {
+      "id": "trailer-master:shot-a-03:take-01",
+      "shotId": "trailer-master:shot-a-03",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-012"
+    },
+    {
+      "id": "trailer-master:shot-a-04:take-01",
+      "shotId": "trailer-master:shot-a-04",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-011"
+    },
+    {
+      "id": "trailer-master:shot-b-01:take-01",
+      "shotId": "trailer-master:shot-b-01",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-016"
+    },
+    {
+      "id": "trailer-master:shot-b-02:take-01",
+      "shotId": "trailer-master:shot-b-02",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Zao reads the controller aloud, shocked and afraid: \"A geophysical impulse package. Multi-megaton.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Zao (matching her established reference sheet). Detail: The controller display reading GEOPHYSICAL IMPULSE PACKAGE, MASS 1.3 TONNES, YIELD MULTI-MEGATON, English digits and labels only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "trailer-master:shot-c-01:take-01",
+      "shotId": "trailer-master:shot-c-01",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan rises unseen from the recessed service hatch as the bridge crew faces forward and hears Zao open the channel: \"Bridge, Zao. I have found a grave attempt to sabotage the mission—\" Composition: INSERT framing. Camera: Dolly; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:character-sorell-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-voss-sheet",
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference"
+        ]
+      }
+    },
+    {
+      "id": "trailer-master:shot-c-02:take-01",
+      "shotId": "trailer-master:shot-c-02",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan touches his wrist device only when the word \"sabotage\" lands; the channel dies mid-word and he withdraws into the service hatch before anyone turns. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "trailer-master:shot-c-03:take-01",
+      "shotId": "trailer-master:shot-c-03",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Pure black frame, no image content, no text, no characters. A held beat of silence and darkness between two scenes.",
+        "negativePrompt": "any visible imagery, text, characters, or light."
+      }
+    },
+    {
+      "id": "trailer-master:shot-d-01:take-01",
+      "shotId": "trailer-master:shot-d-01",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-047"
+    },
+    {
+      "id": "trailer-master:shot-d-02:take-01",
+      "shotId": "trailer-master:shot-d-02",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-048"
+    },
+    {
+      "id": "trailer-master:shot-d-03:take-01",
+      "shotId": "trailer-master:shot-d-03",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-058"
+    },
+    {
+      "id": "trailer-master:shot-e-01:take-01",
+      "shotId": "trailer-master:shot-e-01",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-062"
+    },
+    {
+      "id": "trailer-master:shot-f-01:take-01",
+      "shotId": "trailer-master:shot-f-01",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Elin connects the external timing reference beside the bomb: \"It's keyed to the ship's own clock.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Elin Rao (matching her established reference sheet). Detail: A compact diagnostic instrument wired directly into the bomb controller's timing input, English digits only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "referenceAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet",
+          "asset:object-time-reference-diagnostic-unit-sheet"
+        ]
+      }
+    },
+    {
+      "id": "trailer-master:shot-f-02:take-01",
+      "shotId": "trailer-master:shot-f-02",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The display counts 4—3—2—1, then jumps upward. Voss asks, \"Status?\" Elin answers, \"It isn’t disarmed. It just isn’t going off here.\" Composition: OTS framing. Camera: Tracking; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-rao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:character-okoye-sheet, asset:character-harlan-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "referenceAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-harlan-sheet"
+        ]
+      }
+    },
+    {
+      "id": "trailer-master:shot-f-03:take-01",
+      "shotId": "trailer-master:shot-f-03",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. The Velari station answers with luminous grammar across its living skin, visible through the bridge's small reinforced windows. Wordless. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, matte light-gray and warm off-white composite panels, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. No characters prominent in frame; the light beyond the windows is the subject. Slow dolly toward the windows. Aspect ratio 16:9.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "referenceAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-velari-station-sheet"
+        ]
+      }
+    },
+    {
+      "id": "trailer-master:shot-f-04:take-01",
+      "shotId": "trailer-master:shot-f-04",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-039"
+    },
+    {
+      "id": "trailer-master:shot-g-01:take-01",
+      "shotId": "trailer-master:shot-g-01",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-title"
+    },
+    {
+      "id": "trailer-master:shot-g-02:take-01",
+      "shotId": "trailer-master:shot-g-02",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-title"
+    },
+    {
+      "id": "trailer-master:shot-g-03:take-01",
+      "shotId": "trailer-master:shot-g-03",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-credit-01"
+    },
+    {
+      "id": "trailer-master:shot-g-04:take-01",
+      "shotId": "trailer-master:shot-g-04",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-credit-02"
+    },
+    {
+      "id": "trailer-master:shot-g-05:take-01",
+      "shotId": "trailer-master:shot-g-05",
+      "number": 1,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-storyboard-credit-03"
+    }
+  ]
+}

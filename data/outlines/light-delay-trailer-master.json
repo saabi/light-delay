@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.2.0",
+  "outline": {
+    "id": "outline:light-delay-trailer-master",
+    "scriptId": "script:light-delay-trailer-master",
+    "title": {
+      "es": "Escaleta — Light Delay: tráiler (derivado del master)",
+      "en": "Outline — Light Delay: trailer (master-derived)"
+    },
+    "status": "draft",
+    "version": "0.1.0",
+    "synopsis": {
+      "es": "Un avance condensado, editado a partir del corte Festival derivado del master, presenta la doctrina de primer contacto de la tripulación, el hallazgo de un arma oculta a bordo, la advertencia de Zao cortada a media palabra, la sospecha que recae sobre la tripulación y la carrera contra un reloj que no se resuelve en pantalla. La identidad del saboteador, el desenlace de la desactivación y el resultado del contacto permanecen deliberadamente sin confirmar.",
+      "en": "A condensed preview, edited from the master-derived Festival cut, introduces the crew's first-contact doctrine, the discovery of a hidden weapon aboard, Zao's warning cut off mid-word, the suspicion that falls on the crew, and a race against a clock that never resolves on screen. The saboteur's identity, the outcome of the defusal, and the result of contact deliberately remain unconfirmed."
+    }
+  },
+  "steps": [
+    {
+      "id": "trailer-master:story-01",
+      "level": "story",
+      "order": 1,
+      "title": {
+        "es": "Una doctrina puesta a prueba",
+        "en": "A doctrine put to the test"
+      },
+      "summary": {
+        "es": "La Ardor parte hacia el primer contacto bajo una doctrina declarada — llegar, saludar, escuchar y sólo después juzgar — mientras una tensión no dicha ya recorre a la tripulación.",
+        "en": "The Ardor departs for first contact under a stated doctrine — arrive, greet, listen, and only then judge — while an unspoken tension already runs through the crew."
+      },
+      "importance": "required"
+    },
+    {
+      "id": "trailer-master:story-02",
+      "level": "story",
+      "order": 2,
+      "title": {
+        "es": "Algo no debería estar ahí",
+        "en": "Something shouldn't be there"
+      },
+      "summary": {
+        "es": "Un exceso de combustible lleva a Zao hasta la bóveda blindada, donde encuentra un paquete de impulso geofísico armado — multimegatón, con coordenadas y hora de contacto.",
+        "en": "A fuel excess leads Zao to the shielded vault, where she finds an armed geophysical impulse package — multi-megaton, with contact coordinates and time."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer-master:story-01",
+          "relation": "reveals",
+          "explanation": {
+            "es": "El hito anterior habilita este descubrimiento sin resolver el suspenso: Zao encuentra el arma oculta a bordo.",
+            "en": "The previous beat enables this discovery without resolving the suspense: Zao finds the hidden weapon aboard."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:story-03",
+      "level": "story",
+      "order": 3,
+      "title": {
+        "es": "Cortada a media palabra",
+        "en": "Cut off mid-word"
+      },
+      "summary": {
+        "es": "Zao abre el canal para advertir al puente. La transmisión muere a media frase — alguien a bordo no quiere que el mensaje salga — y un corte duro a negro deja el ataque fuera de cuadro.",
+        "en": "Zao opens the channel to warn the bridge. The transmission dies mid-sentence — someone aboard doesn't want the message out — and a hard cut to black leaves the attack off-page."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer-master:story-02",
+          "relation": "forces",
+          "explanation": {
+            "es": "El hallazgo obliga a Zao a advertir de inmediato, sin resolver quién la corta.",
+            "en": "The discovery forces Zao to warn immediately, without resolving who cuts her off."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:story-04",
+      "level": "story",
+      "order": 4,
+      "title": {
+        "es": "La sospecha recae",
+        "en": "Suspicion falls"
+      },
+      "summary": {
+        "es": "Sorell es hallada junto al cuerpo de Zao y queda bajo sospecha. Rao se niega a aceptar la explicación fácil: el tráiler no revela quién tiene razón.",
+        "en": "Sorell is found beside Zao's body and falls under suspicion. Rao refuses to accept the easy explanation: the trailer does not reveal who is right."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer-master:story-03",
+          "relation": "forces",
+          "explanation": {
+            "es": "El ataque fuera de cuadro deja a la tripulación sin certeza sobre quién es responsable.",
+            "en": "The off-page attack leaves the crew without certainty about who is responsible."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:story-05",
+      "level": "story",
+      "order": 5,
+      "title": {
+        "es": "El mensaje llega",
+        "en": "The message arrives"
+      },
+      "summary": {
+        "es": "La advertencia grabada de Zao finalmente se reproduce, confirmando el arma sin confirmar todavía quién la puso ahí.",
+        "en": "Zao's recorded warning finally plays, confirming the weapon without yet confirming who placed it."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer-master:story-04",
+          "relation": "reveals",
+          "explanation": {
+            "es": "La sospecha sin resolver empuja a la tripulación a buscar la prueba que el mensaje de Zao finalmente aporta.",
+            "en": "The unresolved suspicion pushes the crew toward the proof Zao's message finally provides."
+          }
+        }
+      ]
+    },
+    {
+      "id": "trailer-master:story-06",
+      "level": "story",
+      "order": 6,
+      "title": {
+        "es": "Un reloj sin resolver",
+        "en": "An unresolved clock"
+      },
+      "summary": {
+        "es": "Elin gana tiempo desviando el reloj del arma, pero nada queda verdaderamente a salvo. Un vistazo mudo a la nave Velari se abre; el tráiler termina antes de que el contacto se resuelva.",
+        "en": "Elin buys time by diverting the weapon's clock, but nothing is truly safe yet. A wordless glimpse of the Velari ship opens; the trailer ends before contact resolves."
+      },
+      "importance": "required",
+      "causalLinks": [
+        {
+          "sourceStepId": "trailer-master:story-05",
+          "relation": "forces",
+          "explanation": {
+            "es": "Confirmada el arma, la tripulación corre contra su reloj sin que el tráiler confirme el desenlace.",
+            "en": "With the weapon confirmed, the crew races against its clock without the trailer confirming the outcome."
+          }
+        }
+      ]
+    }
+  ]
+}

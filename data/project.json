@@ -152,7 +152,28 @@
             "es": "Derivado editorial explícito de la escaleta maestra, fijado a la revisión 19. No continúa el Festival deprecado.",
             "en": "Explicit editorial derivative of the master outline, pinned to revision 19. It does not continue the deprecated Festival cut."
           }
+        },
+      {
+        "id": "script:light-delay-trailer-master",
+        "continuityId": "continuity:light-delay-master-wip",
+        "label": {
+          "es": "Tráiler derivado del master (~1:08, WIP)",
+          "en": "Master-derived trailer (~1:08, WIP)"
+        },
+        "kind": "trailer",
+        "status": "draft",
+        "targetDurationMs": 67700,
+        "lineage": {
+          "sourceScriptId": "script:light-delay-festival-master",
+          "relationship": "trailer",
+          "sourceVersion": "0.1.0-wip",
+          "notes": {
+            "es": "Tráiler editado a partir del corte Festival derivado del master. Reutiliza frames ya generados vía imageAssetId donde existen. No continúa el tráiler deprecado (otra continuidad).",
+            "en": "Trailer edited from the master-derived Festival cut. Reuses already-generated frames via imageAssetId where they exist. It does not continue the deprecated trailer (a different continuity)."
+          }
         }
+      }
+
       }
     ]
   }

@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-09-12 — New master-derived trailer
+
+- **New script `script:light-delay-trailer-master`** (draft, ~67.7s, 7 scenes, 22 shots), sourced
+  from `script:light-delay-festival-master`. The old trailer (`script:light-delay-trailer`,
+  deprecated) is built around a different mechanism from the old continuity (an "autonomous
+  payload," a "Velari channel" trigger); this one reuses its functional shape and restraint —
+  scale → mission doctrine → anomaly → warning cut short → suspicion → reveal → unresolved ticking
+  clock → title/tagline/credits, ending before contact resolves — rebuilt from festival-master's
+  actual shots and dialogue.
+- 15 of 22 shots reuse an already-generated festival-master frame directly via `imageAssetId`
+  (no re-render); 6 shots whose festival-master source is still mid-regeneration get their own
+  standalone `generation.prompt`; 1 new shot (a held black frame) marks the off-page attack.
+  Credit cards reuse the old trailer's clearer, distinct 3-card text (written/produced by, AI
+  assistance, production tools) over festival-master's own credit images, since festival-master's
+  own end-credit cue currently just repeats one generic card three times.
+- New outline `outline:light-delay-trailer-master` (6 story steps) and a new
+  `docs/wip/trailer-master-blueprint.en.md` recording the shot-by-shot reuse/condense decisions.
+- Registered in `data/project.json` and `src/lib/data/repositories/index.ts`; new
+  `trailerMasterScript.spec.ts`.
+- Fixed a lingering bug from the prior pass: `shot-plan-081`/`082`'s own `description` fields (not
+  just their take prompts) were never updated with the corrected dialogue, so a concurrent
+  prompt-compiler pass had regenerated their prompts from the stale description, reverting the
+  earlier fix. Both descriptions now match the current dialogue.
+
 ## 2026-09-12 — Festival master storyboard EN dialogue complete
 
 - Synthesized and promoted the 8 missing English dialogue cues for

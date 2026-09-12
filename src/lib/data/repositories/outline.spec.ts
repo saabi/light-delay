@@ -276,7 +276,7 @@ describe('outlines (optional)', () => {
 describe('report:outline-missing', () => {
 	it('reports complete outline coverage', () => {
 		const report = buildOutlineMissingReport(ROOT);
-		expect(report.summary.scripts).toBe(6);
+		expect(report.summary.scripts).toBe(7);
 		expect(report.summary.missing).toBe(0);
 		expect(report.missing).toEqual([]);
 	});

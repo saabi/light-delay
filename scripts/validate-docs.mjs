@@ -60,11 +60,11 @@ if (animaticAssets !== 104)
 if (referenceAssets !== 43)
 	errors.push(`assets: expected 43 reference images, got ${referenceAssets}`);
 if (placeholders !== 1) errors.push(`assets: expected 1 animatic placeholder, got ${placeholders}`);
-if (assets.length !== 477) errors.push(`assets: expected current total 477, got ${assets.length}`);
-if (withoutSource !== 358)
-	errors.push(`assets: expected 358 records without source, got ${withoutSource}`);
-if (withExactModel !== 114)
-	errors.push(`assets: expected 114 records with exact model metadata, got ${withExactModel}`);
+if (assets.length !== 480) errors.push(`assets: expected current total 480, got ${assets.length}`);
+if (withoutSource !== 360)
+	errors.push(`assets: expected 360 records without source, got ${withoutSource}`);
+if (withExactModel !== 115)
+	errors.push(`assets: expected 115 records with exact model metadata, got ${withExactModel}`);
 
 requireText('AGENTS.md', 'animatic deprecado **128** tomas');
 requireText('README.md', 'animatic anterior de 128 tomas');
@@ -73,7 +73,7 @@ requireText('docs/PROJECT_STATUS.md', 'es ahora la fuente de verdad narrativa');
 requireText('AGENTS.md', 'El inglés es la fuente de verdad');
 requireText('README.md', 'El inglés es la fuente editorial vigente');
 requireText('docs/CANON_DECISIONS.md', 'DEPRECADO — CONTINUIDAD ANTERIOR');
-requireText('docs/ASSET_PROVENANCE.md', '**477 assets registrados**');
+requireText('docs/ASSET_PROVENANCE.md', '**480 assets registrados**');
 requireText('docs/ASSET_PROVENANCE.md', '43 imágenes de referencia');
 requireText('docs/PROJECT_STATUS.md', '**128** tomas y ~30:50,5');
 requireText(
