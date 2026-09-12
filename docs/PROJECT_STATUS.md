@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-12 — Sync de subtítulos en el player
+
+- Cambiar solo el idioma de subtítulos ya no reclona el guion ni desincroniza
+  el reloj visual respecto del audio Web Audio; el estado de idioma es
+  fine-grained y el secuenciador se realinea tras un reschedule de diálogo.
+
 ## 2026-09-12 — Prompts de still sin diálogo/subtítulos
 
 - Los `generation.prompt` del Festival master y del tráiler master ya no incluyen

@@ -49,6 +49,9 @@
 
 	const player = $derived(getPlayerState());
 	const lang = $derived(getLanguageState());
+	/** Fine-grained: subtitle-only changes must not rebuild the audio timeline. */
+	const dialogueLanguage = $derived(lang.dialogueLanguage);
+	const subtitleLanguage = $derived(lang.subtitleLanguage);
 	const edits = $derived(loadAnimaticEdits(script.script.id, script.script.version));
 
 	const durations = $derived(
@@ -57,18 +60,18 @@
 
 	const totalMs = $derived(durations.reduce((a, b) => a + b, 0));
 	const scriptMontageMs = $derived(montageScriptMs(script, edits));
-	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, lang.dialogueLanguage));
+	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, dialogueLanguage));
 
 	const absoluteMs = $derived(
 		durations.slice(0, player.shotIndex).reduce((a, b) => a + b, 0) + player.elapsedInShotMs
 	);
 
 	const dialogueTimeline = $derived(
-		buildShotDialogueTimeline(script, durations, lang.dialogueLanguage, 'es')
+		buildShotDialogueTimeline(script, durations, dialogueLanguage, 'es')
 	);
 
 	const timelineFingerprint = $derived(
-		`${lang.dialogueLanguage}:${dialogueTimeline.length}:${dialogueTimeline
+		`${dialogueLanguage}:${dialogueTimeline.length}:${dialogueTimeline
 			.map((cue) => `${cue.id}|${cue.url}|${cue.startMs}`)
 			.join(';')}`
 	);
@@ -76,7 +79,7 @@
 	const current = $derived(shots[player.shotIndex]);
 	const currentDuration = $derived(durations[player.shotIndex] ?? 0);
 	const currentShotAnalysis = $derived(
-		current ? analyzeShotDialogue(script, current.shot, lang.dialogueLanguage) : undefined
+		current ? analyzeShotDialogue(script, current.shot, dialogueLanguage) : undefined
 	);
 
 	const currentScene = $derived(
@@ -102,10 +105,10 @@
 	);
 
 	const activeSubtitles = $derived.by(() => {
-		if (!current || lang.subtitleLanguage === null) return [];
+		if (!current || subtitleLanguage === null) return [];
 		const segments = getSubtitleSegments(script, {
-			dialogueLanguage: lang.dialogueLanguage,
-			subtitleLanguage: lang.subtitleLanguage,
+			dialogueLanguage,
+			subtitleLanguage,
 			projectFallback: 'es',
 			shotIds: [current.shot.id]
 		});
@@ -324,21 +327,25 @@
 		}
 	});
 
-	// Reschedule dialogue when language/timeline changes while playing.
-	// Do not depend on absoluteMs (rAF updates it every frame).
+	// Reschedule dialogue only when the audio timeline fingerprint changes.
+	// Do not depend on subtitleLanguage or absoluteMs (rAF updates every frame).
 	$effect(() => {
-		lang.dialogueLanguage;
 		const key = timelineFingerprint;
-		dialogueTimeline.length;
 
 		if (untrack(() => getPlayerState().status) !== 'playing') return;
 		if (key === lastRescheduleKey) return;
 
-		const fromMs = untrack(() => visualAbsoluteMs());
 		const cues = untrack(() => dialogueTimeline);
-		void sequencer.play(cues, fromMs);
 		scheduledFingerprint = key;
 		lastRescheduleKey = key;
+		void (async () => {
+			await sequencer.play(cues, untrack(() => visualAbsoluteMs()));
+			// Align to the visual clock after async context/decode so audio cannot
+			// drift ahead of subtitles across a language-driven reschedule.
+			if (untrack(() => getPlayerState().status) === 'playing' && sequencer.status === 'playing') {
+				sequencer.seek(untrack(() => visualAbsoluteMs()));
+			}
+		})();
 	});
 
 	onMount(() => {

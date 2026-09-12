@@ -16,11 +16,11 @@
 	import { storyText } from '$lib/data/selectors/localized';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
-	const language = $derived(getLanguageState());
-	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
+	const dialogueLanguage = $derived(getLanguageState().dialogueLanguage);
+	const script = $derived(getLocalizedScript(scriptId, dialogueLanguage));
 	const lifecycle = $derived(getLifecycleForRef('script', scriptId));
 	const scriptMontageMs = $derived(montageScriptMs(script));
-	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, language.dialogueLanguage));
+	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, dialogueLanguage));
 	const outlineHref = $derived(withLocale(`/outline/${encodeScriptId(scriptId)}`));
 
 	const scenesById = $derived(
@@ -57,7 +57,7 @@
 <main class="page">
 	<PageHeader
 		eyebrow={script.script.kind === 'festival_cut' ? 'Festival Cut' : m.script_label()}
-		title={storyText(script.script.title, language.dialogueLanguage)}
+		title={storyText(script.script.title, dialogueLanguage)}
 		lede={m.script_structured_lede()}
 		meta={[
 			`v${script.script.version}`,
@@ -86,7 +86,7 @@
 			{cuesByBeatId}
 			characterFunctionAssignments={script.script.characterFunctionAssignments}
 			{script}
-			dialogueLanguage={language.dialogueLanguage}
+			dialogueLanguage={dialogueLanguage}
 		/>
 	{/if}
 </main>

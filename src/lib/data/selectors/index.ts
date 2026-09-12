@@ -72,6 +72,9 @@ export interface SubtitleSegment {
 /**
  * Derive subtitle segments from shot cue placements + localized dialogue variants.
  * Does not maintain an independent subtitle copy.
+ * Placement clocks (`atMs` / `durationMs`) stay shared unless `timingByLanguage`
+ * has an entry for the active dialogue language — subtitle language alone never
+ * shifts the segment clock.
  */
 export function getSubtitleSegments(
 	script: ScriptFile,

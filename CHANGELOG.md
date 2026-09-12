@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-12 — Movie player: subtitle switch no longer desyncs audio
+
+- Root cause: `getLanguageState()` returned a fresh object snapshot and setters
+  reassigned the whole `$state` bag, so changing **Subtitles** invalidated every
+  dialogue consumer (including `getLocalizedScript`’s heavy `structuredClone`)
+  and could leave Web Audio ahead of the visual/subtitle clock until refresh.
+- Fix: return the reactive language proxy, mutate fields in setters, derive
+  `dialogueLanguage` finely on player/script/animatic/outline routes, and
+  re-seek the cue sequencer to the visual clock after async dialogue reschedule.
+
 ## 2026-09-12 — Storyboard still prompts: no dialogue / subtitles
 
 - Stripped spoken dialogue and subtitle copy from Festival-master and trailer-master

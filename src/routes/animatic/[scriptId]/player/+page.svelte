@@ -15,8 +15,8 @@
 	import * as m from '$lib/paraglide/messages.js';
 
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
-	const language = $derived(getLanguageState());
-	const script = $derived(getLocalizedScript(scriptId, language.dialogueLanguage));
+	const dialogueLanguage = $derived(getLanguageState().dialogueLanguage);
+	const script = $derived(getLocalizedScript(scriptId, dialogueLanguage));
 	const lifecycle = $derived(getLifecycleForRef('animatic', scriptId));
 	const encoded = $derived(encodeScriptId(scriptId));
 	const outlineHref = $derived(withLocale(`/outline/${encoded}`));
@@ -61,7 +61,7 @@
 	<main class="empty-page">
 		<PageHeader
 			eyebrow={m.animatic_label()}
-			title={storyText(script.script.title, language.dialogueLanguage)}
+			title={storyText(script.script.title, dialogueLanguage)}
 			lede={m.animatic_empty_body()}
 			meta={[m.animatic_empty_title()]}
 		/>

@@ -32,11 +32,11 @@
 	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
 
 	const locale = getLocale();
-	const language = $derived(getLanguageState());
+	const dialogueLanguage = $derived(getLanguageState().dialogueLanguage);
 	const registry = listLocalizedScripts(locale);
 	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
 	const entry = $derived(registry.find((item) => item.id === scriptId));
-	const outline = $derived(getLocalizedOutline(scriptId, language.dialogueLanguage));
+	const outline = $derived(getLocalizedOutline(scriptId, dialogueLanguage));
 	const lifecycle = $derived(
 		getLifecycleForRef(
 			'outline',
@@ -133,7 +133,7 @@
 		];
 	}
 	function text(value: StoryText | undefined) {
-		return storyText(value, language.dialogueLanguage);
+		return storyText(value, dialogueLanguage);
 	}
 	function groupTitle(group: OutlineStorySection | { title?: StoryText }) {
 		return group.title ? text(group.title) : m.outline_story();
@@ -190,7 +190,7 @@
 				</p>
 			</aside>
 		{/if}
-		{#if language.dialogueLanguage === 'es' && outline.outline.localization?.translations.es?.status === 'needs_revision'}
+		{#if dialogueLanguage === 'es' && outline.outline.localization?.translations.es?.status === 'needs_revision'}
 			<aside class="editorial-notice" role="note">
 				<strong>{m.outline_translation_stale()}</strong>
 				<p>
@@ -236,7 +236,7 @@
 					{#each beforeFraming as section (section.id)}
 						<OutlineFramingSection
 							{section}
-							language={language.dialogueLanguage}
+							language={dialogueLanguage}
 							initiallyOpen={section.kind === 'purpose' || section.kind === 'premise'}
 						/>
 					{/each}
@@ -263,7 +263,7 @@
 									<h3>{text(step.title)}</h3>
 								</header>
 								{#if step.body}
-									<OutlineProseBlocks blocks={step.body} language={language.dialogueLanguage} />
+									<OutlineProseBlocks blocks={step.body} language={dialogueLanguage} />
 								{:else}
 									<p class="summary">{text(step.summary)}</p>
 								{/if}
@@ -336,7 +336,7 @@
 				<h2>{m.outline_context_after()}</h2>
 				<div class="framing-list">
 					{#each afterFraming as section (section.id)}
-						<OutlineFramingSection {section} language={language.dialogueLanguage} />
+						<OutlineFramingSection {section} language={dialogueLanguage} />
 					{/each}
 				</div>
 			</section>

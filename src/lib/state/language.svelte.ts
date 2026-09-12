@@ -56,6 +56,12 @@ function persist(state: LanguageState) {
 
 let language = $state<LanguageState>(load());
 
+/**
+ * Return the reactive language proxy (not a snapshot).
+ * Callers that read only `dialogueLanguage` or only `subtitleLanguage` keep
+ * fine-grained subscriptions — switching subtitles must not invalidate dialogue
+ * consumers (e.g. getLocalizedScript structuredClone) or the audio timeline.
+ */
 export function getLanguageState(): LanguageState {
 	if (!browser) {
 		const routeLanguage = getLocale();
@@ -65,15 +71,17 @@ export function getLanguageState(): LanguageState {
 			subtitleLanguage: routeLanguage
 		};
 	}
-	return { ...language, interfaceLanguage: getLocale() };
+	return language;
 }
 
 export function setDialogueLanguage(tag: string) {
-	language = { ...language, dialogueLanguage: tag };
+	language.dialogueLanguage = tag;
+	language.interfaceLanguage = getLocale();
 	persist(language);
 }
 
 export function setSubtitleLanguage(tag: string | null) {
-	language = { ...language, subtitleLanguage: tag };
+	language.subtitleLanguage = tag;
+	language.interfaceLanguage = getLocale();
 	persist(language);
 }

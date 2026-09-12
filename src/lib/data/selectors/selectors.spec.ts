@@ -133,6 +133,35 @@ describe('selectors', () => {
 		expect(segments[0].shotId).toBe('test:shot-01-01');
 	});
 
+	it('getSubtitleSegments keeps shared placement clocks across subtitle languages', () => {
+		const bilingual = structuredClone(fixtureScript);
+		const cue = bilingual.cues[0];
+		if (cue.type !== 'dialogue') throw new Error('expected dialogue');
+		cue.content.variants.en = {
+			spokenText: 'We have a window.',
+			status: 'approved'
+		};
+		bilingual.shots[0].cuePlacements[0] = {
+			cueId: 'test:cue-01-01',
+			atMs: 450,
+			durationMs: 1800
+		};
+
+		const en = getSubtitleSegments(bilingual, {
+			dialogueLanguage: 'en',
+			subtitleLanguage: 'en'
+		});
+		const es = getSubtitleSegments(bilingual, {
+			dialogueLanguage: 'en',
+			subtitleLanguage: 'es'
+		});
+
+		expect(en[0]).toMatchObject({ atMs: 450, durationMs: 1800, text: 'We have a window.' });
+		expect(es[0]).toMatchObject({ atMs: 450, durationMs: 1800, text: 'Tenemos una ventana.' });
+		expect(es[0].atMs).toBe(en[0].atMs);
+		expect(es[0].durationMs).toBe(en[0].durationMs);
+	});
+
 	it('resolveLocalized falls back to source language', () => {
 		const cue = fixtureScript.cues[0];
 		if (cue.type !== 'dialogue') throw new Error('expected dialogue');
