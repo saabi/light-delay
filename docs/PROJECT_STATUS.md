@@ -1,5 +1,22 @@
 # Estado del proyecto
 
+## 2026-09-12 — Guía de claridad de diálogo
+
+- Nuevo `docs/production/DIALOGUE_CLARITY_GUIDE.md`: documenta el patrón de líneas correctas pero
+  demasiado crípticas para audiencia general, con seis ejemplos concretos de antes/después ya
+  aplicados (lectura de la ojiva en la bóveda, líneas de Elin, línea de Harlan a Okoye, línea de
+  Sorell), un método de corrección priorizado y calibración frente al paso previo de ajuste/recorte
+  de diálogo para no sobre-expandir líneas que sí deben quedar breves.
+
+## 2026-09-12 — Documento de lecciones de diálogo y prompts
+
+- Nuevo `docs/production/DIALOGUE_AND_PROMPT_LESSONS.md`: destila correcciones editoriales
+  recurrentes (deriva descripción/prompt, legibilidad de transiciones físicas, precisión del
+  estado de creencia del hablante, verificación del argumento de la línea, nomenclatura de
+  catálogo, economía de prosa frente a hojas de referencia, continuidad de vestuario/equipo) en
+  recomendaciones reutilizables para el resto del corpus de tomas/diálogo y para los futuros
+  prompts de first-frame, last-frame y video.
+
 ## 2026-09-12 — Regenerated Festival-master shot-plan-040b
 
 - Replaced `shot-plan-040b`, whose previous still used the obsolete Ardor sail/fin silhouette.

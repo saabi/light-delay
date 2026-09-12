@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-09-12 — Dialogue clarity guide
+
+- Added `docs/production/DIALOGUE_CLARITY_GUIDE.md`, documenting the recurring "accurate but too
+  cryptic for a general audience" dialogue failure mode with six grounded before/after examples from
+  recent fixes (the vault-readout warhead line, Elin's "could have"/"agreement" lines, Harlan's
+  Okoye-persuasion line, Sorell's "sorry later" line), a prioritized fix method, a test for telling
+  appropriately-terse from too-cryptic per character, and calibration notes against the project's
+  earlier tightening pass so the guide doesn't become a license to over-expand every short line.
+- Cross-linked from `DIALOGUE_AND_PROMPT_LESSONS.md`.
+
+## 2026-09-12 — Dialogue and prompt lessons document
+
+- Added `docs/production/DIALOGUE_AND_PROMPT_LESSONS.md`, distilling recurring editorial fixes
+  (description-vs-prompt drift, physics-transition legibility, speaker belief-state accuracy,
+  argument-content checks, catalog naming, reference-sheet prose economy, costume continuity) into
+  reusable recommendations for the rest of the shot/dialogue corpus and for future first-frame,
+  last-frame, and video-segment prompts.
+
 ## 2026-09-12 — Regenerated Festival-master shot-plan-040b
 
 - Replaced the crossing still for `festival-master:shot-plan-040b`, which showed the superseded Ardor sail/fin design.
