@@ -258,6 +258,10 @@ negative: <what must not appear>
 > Output must validate against `data/schemas/generation-plan.schema.json`.
 > Video/image prompts: English only, via the 11 `compilePrompt` sections in
 > `scripts/lib/generation-planning.mjs` — do not invent a different section set or order.
+> Storyboard / animatic still prompts: never paste spoken dialogue or subtitle text into
+> `generation.prompt`. Describe visible action and intentional diegetic UI only; omitting the
+> lines is enough — do not pad prompts with “avoid subtitles” boilerplate
+> (`scripts/lib/still-prompt-no-dialogue.mjs`, `npm run scrub:still-prompts:check`).
 > Respect campaign `maxSegmentMs` (30 s) from `provider-capabilities.json`; longer shots → segments +
 > `continuation`/extension per `planSegments`.
 > Artifacts are distinct: `animaticStill` (storyboard), `firstFrame`, `lastFrame`, `finalAudio`; plus

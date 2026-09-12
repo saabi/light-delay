@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stripSpokenDialogueQuotes } from './lib/still-prompt-no-dialogue.mjs';
 
 const ROOT = join(fileURLToPath(new URL('..', import.meta.url)));
 const scriptPath = join(ROOT, 'data/scripts/light-delay-festival-master.json');
@@ -76,7 +77,7 @@ for (const name of shotNames) {
 	const prompt = {
 		useCase: 'stylized-concept',
 		assetType: 'Festival-master storyboard still',
-		primaryRequest: shot.description?.en ?? `Storyboard still for ${shotId}`,
+		primaryRequest: stripSpokenDialogueQuotes(shot.description?.en ?? `Storyboard still for ${shotId}`),
 		inputImages,
 		sceneBackdrop: `Continuity setting ${location}.`,
 		subject: visibleCharacters || 'The subjects specified by the shot description.',
@@ -85,7 +86,7 @@ for (const name of shotNames) {
 		lightingMood: 'Practical cinematic lighting appropriate to the shot description and ship/station continuity.',
 		colorPalette: 'Cool graphite, off-white, slate-blue and restrained practical amber accents.',
 		materialsTextures: 'Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.',
-		textVerbatim: 'English-only diegetic text where the shot requires it; no bilingual display text.',
+		textVerbatim: 'English-only diegetic UI where the shot requires it; no bilingual display text.',
 		constraints: 'Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.',
 		avoid: 'Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark.'
 	};

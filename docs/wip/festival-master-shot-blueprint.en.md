@@ -11,6 +11,7 @@ first/last frame, final audio, and the provider-neutral generation plan remain u
 - Reserved shot IDs are stable planning handles; they are now also the implemented `Shot` IDs, unchanged.
 - Every video candidate is 30 seconds or shorter (campaign `maxSegmentMs`). Longer dramatic moments are divided into adjacent candidates.
 - Displays are in English. Spanish display replacement is deferred to post-production planning.
+- **Storyboard still prompts must not include spoken dialogue or subtitle copy.** Lines live in dialogue cues / audio; still `generation.prompt` describes visible action, blocking, and intentional diegetic UI only. Do not paste spoken lines into the prompt — omitting them is enough (see `scripts/lib/still-prompt-no-dialogue.mjs`).
 - The transmission’s destination, mechanism, and recording content remain visually and audibly withheld until F08.
 - Harlan does not touch flight controls before Zao’s murder.
 - Gravity events are distinct: periapsis turnover, precision crossing cutoff, mid-leg braking turnover, and final braking cutoff.
@@ -108,7 +109,7 @@ Location binding for every candidate below: primary `location:celestial-ardor-in
 | Reserved shot ID | Target | Editorial action | Camera | Visible / off-screen | Cue coverage | Continuity and references |
 |---|---:|---|---|---|---|---|
 | `festival-master:shot-plan-020` | 7.67s | Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The encounter coordinates and time sit on its armed controller. | MS, establish geography and screen direction; pan | character:zao; off: — | festival-master:cue-0041 | Follow the master-derived flight state stated in action. Refs: character:zao, vehicle:celestial-ardor, festival-master:story-05 |
-| `festival-master:shot-plan-021` | 7.67s | zao — “Geophysical impulse package… one point three tonnes.” | CU, preserve eyeline and action axis; locked | character:zao; off: — | festival-master:cue-0042, festival-master:cue-0043 | Follow the master-derived flight state stated in action. Refs: character:zao, vehicle:celestial-ardor, festival-master:story-05 |
+| `festival-master:shot-plan-021` | 7.67s | zao — “This is an impulse warhead for geophysical research from the Proxima… one point three tonnes.” | CU, preserve eyeline and action axis; locked | character:zao; off: — | festival-master:cue-0042, festival-master:cue-0043 | Follow the master-derived flight state stated in action. Refs: character:zao, vehicle:celestial-ardor, festival-master:story-05 |
 | `festival-master:shot-plan-022` | 7.67s | She looks at the ordinary communications clock. No round trip can beat the timer. | INSERT, orthogonal readable insert; tracking | character:zao; off: — | festival-master:cue-0044, festival-master:cue-0045 | Follow the master-derived flight state stated in action. Refs: character:zao, vehicle:celestial-ardor, festival-master:story-05 |
 
 ### F04 — Isolation
