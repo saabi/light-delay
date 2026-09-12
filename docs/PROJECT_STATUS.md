@@ -1,5 +1,12 @@
 # Estado del proyecto
 
+## 2026-09-12 — Festival-master continuity and storyboard corrections (English source)
+
+- The bridge beats after throat exit now keep Sorell below deck until the explicit retrieval beat; shot 045 shows her only in the restored camera feed, and shot 046 places her on the bridge after retrieval.
+- Added `festival-master:shot-plan-045b` to make Voss's order and the contrasting service-shaft/central-route travel leg visible in the animatic data.
+- Regenerated shots 040, 041, 044, 045, and 046 and generated 045b using the current Ardor/service-shaft references, with planets and unrelated locations excluded from these interior frames.
+- Take reference IDs, generation prompts, image metadata, and the production manifest are synchronized. Spanish documentation remains a translation pass and is not authoritative for this update.
+
 ## 2026-09-12 — Seguimiento de claridad: cue-0062 retimada
 
 - Autorizado a extender la toma cuando una reescritura de claridad lo requiera, se corrigió la

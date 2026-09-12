@@ -7999,7 +7999,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:03:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8014,7 +8014,7 @@
         ],
         "explanation": {
           "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "en": "Regenerated storyboard still; editorial review pending."
         }
       }
     },
@@ -8037,7 +8037,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:24:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8052,7 +8052,7 @@
         ],
         "explanation": {
           "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "en": "Regenerated storyboard still; editorial review pending."
         }
       }
     },
@@ -8151,7 +8151,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:28:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8166,7 +8166,7 @@
         ],
         "explanation": {
           "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "en": "Regenerated storyboard still; editorial review pending."
         }
       }
     },
@@ -8189,7 +8189,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:12:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8204,7 +8204,45 @@
         ],
         "explanation": {
           "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "en": "Regenerated storyboard still; editorial review pending."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-storyboard-045b",
+      "kind": "image",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-045b.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Storyboard Festival Master 045",
+        "en": "Festival Master storyboard 045b"
+      },
+      "description": {
+        "es": "Imagen de storyboard generada para festival-master:shot-plan-045; pendiente de revisión editorial.",
+        "en": "Generated storyboard still for festival-master:shot-plan-045b; pending editorial review."
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-12T20:20:00.000Z"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-045b",
+        "batch": "festival-master-storyboard-01",
+        "storyboardEligible": true
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Imagen generada; la aceptación editorial está pendiente.",
+          "en": "Regenerated storyboard still; editorial review pending."
         }
       }
     },
@@ -8227,7 +8265,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:16:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8242,7 +8280,7 @@
         ],
         "explanation": {
           "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "en": "Regenerated storyboard still; editorial review pending."
         }
       }
     },

@@ -11,7 +11,7 @@
     "version": "0.2.0-wip",
     "status": "draft",
     "kind": "festival_cut",
-    "targetDurationMs": 809759,
+    "targetDurationMs": 813259,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -1229,7 +1229,7 @@
         "festival-master:beat-16"
       ],
       "shotIds": [],
-      "targetDurationMs": 32140,
+      "targetDurationMs": 35640,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -13635,7 +13635,7 @@
       "order": 2,
       "description": {
         "es": "Un coro estructural bajo recorre el casco del puente mientras la boca del agujero de gusano se abre en algún punto por delante; la tripulación mantiene sus puestos. Voss, reteniendo la atención de la tripulación: «Apertura estable. Mantengan la línea.»",
-        "en": "A low structural chorus travels through the bridge's hull as the wormhole mouth opens somewhere ahead; the crew holds their stations. Voss, holding the crew's attention: \"Aperture stable. Hold the line.\""
+        "en": "A low structural chorus travels through the bridge's hull as the wormhole mouth opens somewhere ahead; Voss, Elin Rao, and Okoye hold their stations while Sorell remains below in transit through the central shaft. Voss, holding the crew's attention: \"Aperture stable. Hold the line.\""
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -13643,11 +13643,6 @@
           "kind": "character",
           "id": "character:voss",
           "role": "center, standing, addressing the seated crew"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "seated at her station"
         },
         {
           "kind": "character",
@@ -13741,7 +13736,7 @@
       "order": 4,
       "description": {
         "es": "En el puente, Elin Rao, asombrada, marca el momento histórico: «Estamos del otro lado.» El puente celebra en silencio; el cuerpo de Zao deriva sin ser visto mucho más abajo.",
-        "en": "On the bridge, Elin Rao, awed, marks the historic moment: \"We’re through.\" The bridge celebrates quietly; Zao’s body drifts unseen far below."
+        "en": "On the bridge, Elin Rao, awed, marks the historic moment: \"We’re through.\" Voss, Elin Rao, and Okoye celebrate quietly while Sorell remains below, still moving through the central shaft toward Zao; no one on the bridge knows what has happened."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -13749,11 +13744,6 @@
           "kind": "character",
           "id": "character:voss",
           "role": "seated, screen left"
-        },
-        {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "seated, background"
         },
         {
           "kind": "character",
@@ -13808,7 +13798,7 @@
       "order": 1,
       "description": {
         "es": "Sorell llega a la bahía exterior y atrapa el cuerpo de Zao, a la deriva y ensangrentado; le comprueba la vía aérea y el pulso, y presiona en vano una sangre que ya no circula en microgravedad.",
-        "en": "Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity."
+        "en": "Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity. The optical transmitter and service-shaft trays remain outside this frame."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
@@ -13919,7 +13909,7 @@
       "order": 3,
       "description": {
         "es": "Arriba, Harlan reconecta los troncales de comunicaciones y desactiva en silencio su inhibidor, luego sale al vestíbulo, controlado: \"Encontré la rotura. Ambos troncales estaban desconectados en la bandeja de servicio\".",
-        "en": "Above, Harlan reconnects the communications trunks and quietly disables his jammer, then emerges into the vestibule, controlled: \"Found the break. Both trunks were out at the service tray.\"."
+        "en": "Harlan reconnects the communications trunks at the service-shaft tray and emerges through the bridge-side hatch, controlled: \"Found the break. Both trunks were out at the service tray.\""
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
@@ -13974,7 +13964,7 @@
       "order": 4,
       "description": {
         "es": "Engañoso, Harlan se despega de la escena: \"Yo no la vi\". Detrás de él, el feed de cámara restaurado muestra sólo a Sorell sosteniendo el cuerpo ensangrentado.",
-        "en": "Deceptive, Harlan separates himself from the scene: \"I never saw her.\" Behind him, the restored camera feed shows only Sorell holding the bloodied body."
+        "en": "Deceptive, Harlan separates himself from the scene: \"I never saw her.\" Harlan is the only physical person in this compartment; behind him, a restored camera-feed monitor shows Sorell alone holding the bloodied body."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
       "visibleRefs": [
@@ -14022,6 +14012,57 @@
       ]
     },
     {
+      "id": "festival-master:shot-plan-045b",
+      "sceneId": "festival-master:scene-16",
+      "beatIds": [
+        "festival-master:beat-16"
+      ],
+      "number": 5,
+      "order": 5,
+      "description": {
+        "es": "Por orden de Voss, Harlan y Okoye toman la ruta de servicio para buscar a Sorell. Llegan a la bahía exterior y la traen de regreso bajo supervisión; avanzan rápido por el eje de servicio y más despacio por la ruta central.",
+        "en": "Voss’s order sends Harlan and Okoye through the service route to retrieve Sorell. They reach the outer bay and bring her back under supervision; the movement is quick through the service shaft and slow through the central route."
+      },
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "secondaryLocationIds": [
+        "location:celestial-ardor-reactor-service-bay",
+        "location:celestial-ardor-bridge"
+      ],
+      "visibleRefs": [
+        {
+          "kind": "character",
+          "id": "character:harlan",
+          "role": "moving through the service route"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "moving with Harlan toward the outer bay"
+        }
+      ],
+      "composition": {
+        "size": "CU",
+        "aspectRatio": "16:9"
+      },
+      "camera": {
+        "movement": "locked",
+        "movementDescription": {
+          "es": "Cámara fija; mantiene las líneas de mirada y la continuidad del eje de acción.",
+          "en": "Locked; preserves eyeline and action-axis continuity."
+        }
+      },
+      "durationMs": 3500,
+      "cuePlacements": [],
+      "takeIds": [
+        "festival-master:shot-plan-045b:take-01"
+      ],
+      "selectedTakeId": "festival-master:shot-plan-045b:take-01",
+      "offScreenCharacterIds": [
+        "character:voss",
+        "character:sorell"
+      ]
+    },
+    {
       "id": "festival-master:shot-plan-046",
       "sceneId": "festival-master:scene-17",
       "beatIds": [
@@ -14031,7 +14072,7 @@
       "order": 1,
       "description": {
         "es": "En el puente, el empuje se restablece: herramientas sueltas y hojas se asientan en la cubierta, y Harlan pasa de estar sujeto a un agarre a apoyarse firmemente en el piso mientras se vuelve acusador hacia Sorell: \"¿Cómo pudiste? ¿Por qué?\".",
-        "en": "On the bridge, thrust restores: loose tools and sheets settle to the deck, and Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell: \"How could you? Why?\"."
+        "en": "After Voss has sent Harlan and Okoye to retrieve her, Sorell is back on the bridge under their supervision. As thrust restores, loose tools and sheets settle to the deck; Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell: \"How could you? Why?\". No image of Zao's body appears in this bridge shot."
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
@@ -18787,11 +18828,10 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. A low structural chorus travels through the bridge's hull as the wormhole mouth opens somewhere ahead, unseen directly; the crew holds their stations, tense. Voss stands addressing them. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the Velari wormhole mouth — a distributed field of black nodes kilometres apart, never forming a visible ring, its 150-200 m aperture existing only during the energy pulse, glimpsed only through the bridge's small reinforced windows or on displays, never as a direct panoramic view. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Voss (matching his established reference sheet); Sorell (matching her established reference sheet); Elin Rao (matching her established reference sheet); Okoye (Nigerian, around forty, deep dark-brown skin, defined cheekbones, short tightly coiled natural black hair, compact athletic build, charcoal shipboard security suit with tether and non-lethal restraint hardware at the belt). Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration, large glass windows, panoramic viewport, floor-to-ceiling window, direct unobstructed wormhole view from the bridge interior",
+        "prompt": "Use the supplied bridge and Velari-mouth references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, over-the-shoulder view from the Celestial Ardor bridge. Voss addresses Elin Rao and Okoye as the ship enters the throat; Sorell is not visible because she remains below in the central shaft. The crew holds handholds in microgravity while loose straps and small tools drift. The throat is only a distant, distributed black-node field glimpsed through small reinforced windows or displays, never a panoramic view. Preserve the specified blocking, physics, timing, and English-only diegetic text.",
+        "negativePrompt": "Sorell on the bridge, Sorell visible, any extra unlisted character, Earth, Jupiter, Proxima, any planet, moon, large blue or gray planetary disc, planetary surface, large glass windows, panoramic viewport, floor-to-ceiling window, direct unobstructed throat view, visible mechanical ring-shaped wormhole, non-English text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
-          "asset:character-sorell-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
@@ -18799,7 +18839,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:03:00.000Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -18849,11 +18889,10 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. On the bridge, Elin Rao, awed, marks the historic moment. The crew celebrates quietly, unaware Zao's body drifts far below. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue; secondary: the Velari wormhole mouth — a distributed field of black nodes kilometres apart, never forming a visible ring, its 150-200 m aperture existing only during the energy pulse, glimpsed only through the bridge's small reinforced windows or on displays, never as a direct panoramic view. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Elin Rao (matching her established reference sheet); Voss (matching his established reference sheet); Sorell (matching her established reference sheet); Okoye (Nigerian, around forty, deep dark-brown skin, defined cheekbones, short tightly coiled natural black hair, compact athletic build, charcoal shipboard security suit with tether and non-lethal restraint hardware at the belt). Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration, large glass windows, panoramic viewport, floor-to-ceiling window, direct unobstructed wormhole view from the bridge interior",
+        "prompt": "Use the supplied bridge reference as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, locked insert on the Celestial Ardor bridge after the crossing. Elin Rao says, \"We're through.\" Voss, Elin Rao, and Okoye celebrate quietly in microgravity; Sorell remains below in transit and is not visible. Zao's body is not visible. Keep only sparse deep-space stars through the small reinforced windows; no planet or exterior globe. Preserve the specified blocking, physics, timing, and English-only diegetic text. Single cinematic frame only, not a contact sheet or multi-panel layout. Do not render subtitles, captions, or burned-in dialogue.",
+        "negativePrompt": "Sorell on the bridge, Sorell visible, Zao, Zao's body, any extra unlisted character, Earth, Jupiter, Proxima, any planet, moon, large blue or gray planetary disc, planetary surface, large glass windows, panoramic viewport, floor-to-ceiling window, direct unobstructed throat view, non-English text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark, subtitles, closed captions, burned-in dialogue, contact sheet, multi-panel grid",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
-          "asset:character-sorell-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
@@ -18861,7 +18900,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:24:00.000Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -18882,14 +18921,12 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the narrow, restricted service cylinder — peripheral technical trays, maintenance handholds, a dark rounded-corner hatch at bridge level beside a hinged tray exposing wired-communications couplers. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Sorell (matching her established reference sheet); Zao (matching her established reference sheet). Frame implies a tracking move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied Sorell, Zao, and outer-reactor-bay references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, medium close-up in microgravity. Sorell catches Zao's drifting, bloodied body, checks airway and pulse, and tries to stop blood that no longer circulates. Preserve the established service-bay geography and handhold-based movement. The service-shaft tray and optical transmitter are off-frame; do not show them.",
+        "negativePrompt": "non-English text, Earth, Jupiter, Proxima, any planet, moon, large planetary disc, extra unlisted characters, service-shaft tray in frame, optical transmitter in frame, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:location-celestial-ardor-service-cylinder-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:location-celestial-ardor-reactor-service-bay-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -18945,18 +18982,17 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Above, Harlan reconnects the communications trunks and quietly disables his jammer, then emerges into the vestibule, controlled:. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the narrow, restricted service cylinder — peripheral technical trays, maintenance handholds, a dark rounded-corner hatch at bridge level beside a hinged tray exposing wired-communications couplers. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Detail. Reconnected communications tray, trunks now plugged back in. Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied Harlan, bridge, and wired-comms-panel references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, medium shot in the bridge-side command vestibule. Harlan alone reconnects the wired communications trunks at the service-shaft tray, disables the jammer, and emerges through the recessed hatch. Preserve microgravity handhold movement, the closed service-shaft geometry, and English-only diegetic text. The outer reactor bay, optical transmitter, Sorell, Zao, and any planet are off-frame. Single cinematic frame only, not a contact sheet, model sheet, collage, or multi-panel layout. Do not render subtitles, captions, or burned-in dialogue.",
+        "negativePrompt": "Sorell, Zao, outer reactor service bay, optical transmitter, Earth, Jupiter, Proxima, any planet, moon, large planetary disc, service shaft open to the central shaft, floor hatch, extra unlisted characters, non-English text, obsolete continuity, lens flare, heavy motion blur, watermark, subtitles, closed captions, burned-in dialogue, contact sheet, model sheet, collage, multi-panel grid",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:location-celestial-ardor-service-cylinder-sheet",
-          "asset:object-harlan-wrist-device-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-wired-comms-deck-patch-panel-sheet",
+          "asset:object-harlan-wrist-device-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:28:00.000Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-044",
       "imageStatus": {
@@ -18977,16 +19013,16 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Deceptive, Harlan separates himself from the scene. Behind him, the restored camera feed shows only Sorell holding the bloodied body. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Harlan (lean, athletic commander in his forties, angular clean-shaven face, close-cropped dark brown hair, a healed notch through his right eyebrow, controlled military bearing). Detail. A small monitor in frame shows the restored camera feed. Sorell alone with the body. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
+        "prompt": "Use the supplied Harlan, bridge, and wired-comms-panel references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, close-up in microgravity at the bridge-side service vestibule. Harlan is the only physical person in the compartment, separating himself from the scene after saying, \"I never saw her.\" A restored camera-feed monitor behind him shows Sorell alone holding Zao's bloodied body in the distant outer bay. No physical Sorell, Zao, or outer-bay space appears beside Harlan. Preserve the specified blocking, physics, timing, and English-only diegetic display text.",
+        "negativePrompt": "physical Sorell in Harlan's compartment, physical Zao, outer reactor bay as the foreground setting, optical transmitter in frame, Earth, Jupiter, Proxima, any planet, moon, large blue or gray planetary disc, planetary surface, extra unlisted characters, non-English text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:12:00.000Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-045",
       "imageStatus": {
@@ -19002,13 +19038,47 @@
       }
     },
     {
+      "id": "festival-master:shot-plan-045b:take-01",
+      "shotId": "festival-master:shot-plan-045b",
+      "number": 1,
+      "status": "candidate",
+      "generation": {
+        "prompt": "Use the supplied Harlan, Okoye, bridge-vestibule, service-cylinder, and wired-comms-panel references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, brief tracking view in microgravity: after Voss orders them to go, Harlan and Okoye move rapidly through the direct service shaft toward the outer bay, while Sorell is brought back under supervision through the slower central route. Show the separated vertical service shaft and its wall hatch; preserve clear directional geography. No planet or exterior celestial body is visible.",
+        "negativePrompt": "Sorell alone at the bridge, Zao, Zao body, outer-bay medical close-up, Earth, Jupiter, Proxima, any planet, moon, large planetary disc, open central/service shaft connection, floor hatch, extra people, non-English text, obsolete continuity, lens flare, heavy motion blur, watermark",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-service-cylinder-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ],
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-12T20:20:00.000Z"
+      },
+      "imageAssetId": "asset:festival-master-storyboard-045b",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-045b",
+        "explanation": {
+          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
+          "en": "New retrieval beat; storyboard still pending editorial review."
+        }
+      },
+      "durationMs": 3500,
+      "cuePlacements": []
+    },
+    {
       "id": "festival-master:shot-plan-046:take-01",
       "shotId": "festival-master:shot-plan-046",
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: As thrust restores, loose tools and sheets settle to the deck. Harlan plants his feet and turns accusingly toward Sorell. Composition: OTS framing. Camera: Tracking; establishes geography and screen direction. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-harlan-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "prompt": "Use the supplied character and bridge references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9, OTS framing on the bridge after Harlan and Okoye have retrieved Sorell from the outer bay. As thrust restores, loose tools and sheets settle to the deck; Harlan plants his feet and turns accusingly toward Sorell. The bridge contains no image of Zao's body and no outer-bay monitor inset. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text.",
+        "negativePrompt": "Zao, Zao's body, bloodied corpse, outer reactor service bay, camera-feed inset of the body, optical transmitter, Earth, Jupiter, Proxima, any planet, moon, large blue or gray planetary disc, planetary surface, obsolete emissary spacecraft, extra people or vehicles, non-English text, watermark",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-harlan-sheet",
@@ -19018,7 +19088,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T20:16:00.000Z"
       },
       "imageStatus": {
         "status": "needs_review",

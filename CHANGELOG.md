@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-12 — Festival-master continuity and storyboard corrections
+
+- Corrected the throat-exit bridge beats so Sorell remains below deck until the retrieval beat; she is no longer staged on the bridge while the crew celebrates the crossing.
+- Added `festival-master:shot-plan-045b` for Voss's retrieval order, preserving Harlan's fast service-shaft route and Okoye/Sorell's slower central-route movement in microgravity.
+- Regenerated shot stills 040, 041, 044, 045, and 046, and generated 045b with explicit no-planet constraints and current Ardor/service-shaft references. Shot 045 keeps Sorell confined to the restored camera feed; shot 046 places her on the bridge only after retrieval.
+- Updated take-level reference maps and the production generation manifest. Spanish descriptions for the new beat are translated from the English source and remain secondary to the English authoring pass.
+
 ## 2026-09-12 — Festival-master dialogue clarity pass, cue-0062 follow-up
 
 - Per direction that a clarity rewrite may extend its shot's timing when needed, fixed the fourth

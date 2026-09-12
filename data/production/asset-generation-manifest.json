@@ -3108,28 +3108,14 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-voss-sheet",
-        "asset:character-harlan-sheet",
-        "asset:character-sorell-sheet",
-        "asset:character-zao-sheet",
         "asset:character-rao-sheet",
         "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:location-velari-wormhole-mouth-sheet"
       ],
       "references": [
         {
           "assetId": "asset:character-voss-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-harlan-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-sorell-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-zao-sheet",
           "role": "visual continuity reference"
         },
         {
@@ -3141,6 +3127,10 @@
           "role": "visual continuity reference"
         },
         {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "visual continuity reference"
+        },
+        {
           "assetId": "asset:location-velari-wormhole-mouth-sheet",
           "role": "visual continuity reference"
         }
@@ -3148,18 +3138,16 @@
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "The wormhole mouth's opening builds around the Celestial Ardor as a low structural chorus travels through the hull; on the bridge, Voss holds the crew's attention: \"Aperture stable. Hold the line.\".",
+        "primaryRequest": "A low structural chorus travels through the bridge's hull as the wormhole mouth opens somewhere ahead; Voss, Elin Rao, and Okoye hold their stations while Sorell remains below in transit through the central shaft. Voss, holding the crew's attention: \"Aperture stable. Hold the line.\"",
         "inputImages": [
           "Reference asset: asset:character-voss-sheet",
-          "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:character-sorell-sheet",
-          "Reference asset: asset:character-zao-sheet",
           "Reference asset: asset:character-rao-sheet",
           "Reference asset: asset:character-okoye-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
           "Reference asset: asset:location-velari-wormhole-mouth-sheet"
         ],
         "sceneBackdrop": "Continuity setting location:velari-wormhole-mouth.",
-        "subject": "character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye",
+        "subject": "character:voss, character:rao, character:okoye",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
         "compositionFraming": "OTS composition, 16:9 aspect ratio; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
@@ -3170,7 +3158,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
         "regenerationRequired": false
       }
     },
@@ -3186,28 +3174,14 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-voss-sheet",
-        "asset:character-harlan-sheet",
-        "asset:character-sorell-sheet",
-        "asset:character-zao-sheet",
         "asset:character-rao-sheet",
         "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:location-velari-wormhole-mouth-sheet"
       ],
       "references": [
         {
           "assetId": "asset:character-voss-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-harlan-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-sorell-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-zao-sheet",
           "role": "visual continuity reference"
         },
         {
@@ -3219,6 +3193,10 @@
           "role": "visual continuity reference"
         },
         {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "visual continuity reference"
+        },
+        {
           "assetId": "asset:location-velari-wormhole-mouth-sheet",
           "role": "visual continuity reference"
         }
@@ -3226,18 +3204,16 @@
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "The distributed black nodes of the mouth close behind the ship as it crosses; Elin Rao, awed, marks the historic moment: \"We're through.\" The bridge celebrates quietly; Zao's body drifts unseen far below.",
+        "primaryRequest": "On the bridge, Elin Rao, awed, marks the historic moment: \"We’re through.\" Voss, Elin Rao, and Okoye celebrate quietly while Sorell remains below, still moving through the central shaft toward Zao; no one on the bridge knows what has happened.",
         "inputImages": [
           "Reference asset: asset:character-voss-sheet",
-          "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:character-sorell-sheet",
-          "Reference asset: asset:character-zao-sheet",
           "Reference asset: asset:character-rao-sheet",
           "Reference asset: asset:character-okoye-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
           "Reference asset: asset:location-velari-wormhole-mouth-sheet"
         ],
         "sceneBackdrop": "Continuity setting location:velari-wormhole-mouth.",
-        "subject": "character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye",
+        "subject": "character:voss, character:rao, character:okoye",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
         "compositionFraming": "INSERT composition, 16:9 aspect ratio; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
@@ -3248,7 +3224,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
         "regenerationRequired": false
       }
     },
@@ -3264,29 +3240,12 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-sorell-sheet",
-        "asset:character-harlan-sheet",
-        "asset:character-voss-sheet",
-        "asset:character-okoye-sheet",
         "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:location-celestial-ardor-service-cylinder-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:location-celestial-ardor-reactor-service-bay-sheet"
       ],
       "references": [
         {
           "assetId": "asset:character-sorell-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-harlan-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-voss-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-okoye-sheet",
           "role": "visual continuity reference"
         },
         {
@@ -3296,32 +3255,19 @@
         {
           "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:object-optical-contingency-transmitter-sheet",
-          "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity.",
+        "primaryRequest": "Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity. The optical transmitter and service-shaft trays remain outside this frame.",
         "inputImages": [
           "Reference asset: asset:character-sorell-sheet",
-          "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:character-voss-sheet",
-          "Reference asset: asset:character-okoye-sheet",
           "Reference asset: asset:character-zao-sheet",
-          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet",
-          "Reference asset: asset:object-optical-contingency-transmitter-sheet"
+          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet"
         ],
         "sceneBackdrop": "Continuity setting location:celestial-ardor-reactor-service-bay.",
-        "subject": "character:sorell, character:harlan, character:voss, character:okoye, character:zao",
+        "subject": "character:sorell, character:zao",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
         "compositionFraming": "MCU composition, 16:9 aspect ratio; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
@@ -3332,7 +3278,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
         "regenerationRequired": false
       }
     },
@@ -3425,71 +3371,41 @@
         "height": 941
       },
       "styleAnchorAssetIds": [
-        "asset:character-sorell-sheet",
         "asset:character-harlan-sheet",
-        "asset:character-voss-sheet",
-        "asset:character-okoye-sheet",
-        "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:location-celestial-ardor-service-cylinder-sheet",
-        "asset:object-harlan-wrist-device-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-wired-comms-deck-patch-panel-sheet",
+        "asset:object-harlan-wrist-device-sheet"
       ],
       "references": [
-        {
-          "assetId": "asset:character-sorell-sheet",
-          "role": "visual continuity reference"
-        },
         {
           "assetId": "asset:character-harlan-sheet",
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:character-voss-sheet",
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:character-okoye-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-zao-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
           "role": "visual continuity reference"
         },
         {
           "assetId": "asset:object-harlan-wrist-device-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:object-optical-contingency-transmitter-sheet",
           "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Above, Harlan reconnects the communications trunks and quietly disables his jammer, then emerges into the vestibule, controlled: \"Found the break. Both trunks were out at the service tray.\".",
+        "primaryRequest": "Harlan reconnects the communications trunks at the service-shaft tray and emerges through the bridge-side hatch, controlled: \"Found the break. Both trunks were out at the service tray.\"",
         "inputImages": [
-          "Reference asset: asset:character-sorell-sheet",
           "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:character-voss-sheet",
-          "Reference asset: asset:character-okoye-sheet",
-          "Reference asset: asset:character-zao-sheet",
-          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet",
-          "Reference asset: asset:object-harlan-wrist-device-sheet",
-          "Reference asset: asset:object-optical-contingency-transmitter-sheet"
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Reference asset: asset:object-wired-comms-deck-patch-panel-sheet",
+          "Reference asset: asset:object-harlan-wrist-device-sheet"
         ],
         "sceneBackdrop": "Continuity setting location:celestial-ardor-reactor-service-bay.",
-        "subject": "character:sorell, character:harlan, character:voss, character:okoye, character:zao",
+        "subject": "character:harlan",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
         "compositionFraming": "MS composition, 16:9 aspect ratio; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
@@ -3500,7 +3416,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
         "regenerationRequired": false
       }
     },
@@ -3515,59 +3431,35 @@
         "height": 941
       },
       "styleAnchorAssetIds": [
-        "asset:character-sorell-sheet",
         "asset:character-harlan-sheet",
-        "asset:character-voss-sheet",
-        "asset:character-okoye-sheet",
-        "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-wired-comms-deck-patch-panel-sheet"
       ],
       "references": [
-        {
-          "assetId": "asset:character-sorell-sheet",
-          "role": "visual continuity reference"
-        },
         {
           "assetId": "asset:character-harlan-sheet",
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:character-voss-sheet",
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:character-okoye-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-zao-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:object-optical-contingency-transmitter-sheet",
+          "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
           "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Deceptive, Harlan separates himself from the scene: \"I never saw her.\" Behind him, the restored camera feed shows only Sorell holding the bloodied body.",
+        "primaryRequest": "Deceptive, Harlan separates himself from the scene: \"I never saw her.\" Harlan is the only physical person in this compartment; behind him, a restored camera-feed monitor shows Sorell alone holding the bloodied body.",
         "inputImages": [
-          "Reference asset: asset:character-sorell-sheet",
           "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:character-voss-sheet",
-          "Reference asset: asset:character-okoye-sheet",
-          "Reference asset: asset:character-zao-sheet",
-          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "Reference asset: asset:object-optical-contingency-transmitter-sheet"
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Reference asset: asset:object-wired-comms-deck-patch-panel-sheet"
         ],
         "sceneBackdrop": "Continuity setting location:celestial-ardor-reactor-service-bay.",
-        "subject": "character:sorell, character:harlan, character:voss, character:okoye, character:zao",
+        "subject": "character:harlan",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
         "compositionFraming": "CU composition, 16:9 aspect ratio; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
@@ -3578,7 +3470,73 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-045b",
+      "entityId": "festival-master:shot-plan-045b",
+      "kind": "animaticStill",
+      "status": "generated",
+      "outputPath": "/assets/animatic/frames/festival-master/shot-plan-045b.png",
+      "dimensions": {
+        "width": 1672,
+        "height": 941
+      },
+      "styleAnchorAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-celestial-ardor-service-cylinder-sheet",
+        "asset:object-wired-comms-deck-patch-panel-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:character-harlan-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:character-okoye-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
+          "role": "visual continuity reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Festival-master storyboard still",
+        "primaryRequest": "Voss’s order sends Harlan and Okoye through the service route to retrieve Sorell. They reach the outer bay and bring her back under supervision; the movement is quick through the service shaft and slow through the central route.",
+        "inputImages": [
+          "Reference asset: asset:character-harlan-sheet",
+          "Reference asset: asset:character-okoye-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet",
+          "Reference asset: asset:object-wired-comms-deck-patch-panel-sheet"
+        ],
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-command-vestibule.",
+        "subject": "character:harlan, character:okoye",
+        "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
+        "compositionFraming": "CU composition, 16:9 aspect ratio; follow the shot camera plan.",
+        "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
+        "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
+        "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
+        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
+        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor geography, separated shafts, and microgravity movement; no planet or exterior celestial body; no watermark.",
+        "avoid": "Off-screen characters, planets, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+      },
+      "review": {
+        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
         "regenerationRequired": false
       }
     },
@@ -3597,10 +3555,7 @@
         "asset:character-harlan-sheet",
         "asset:character-sorell-sheet",
         "asset:character-rao-sheet",
-        "asset:character-okoye-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
       "references": [
         {
@@ -3620,35 +3575,20 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:character-okoye-sheet",
-          "role": "visual continuity reference"
-        },
-        {
           "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:object-optical-contingency-transmitter-sheet",
           "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "On the bridge, thrust restored, Harlan turns accusing toward Sorell: \"How could you? Why?\".",
+        "primaryRequest": "After Voss has sent Harlan and Okoye to retrieve her, Sorell is back on the bridge under their supervision. As thrust restores, loose tools and sheets settle to the deck; Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell: \"How could you? Why?\". No image of Zao's body appears in this bridge shot.",
         "inputImages": [
           "Reference asset: asset:character-voss-sheet",
           "Reference asset: asset:character-harlan-sheet",
           "Reference asset: asset:character-sorell-sheet",
           "Reference asset: asset:character-rao-sheet",
-          "Reference asset: asset:character-okoye-sheet",
-          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
-          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "Reference asset: asset:object-optical-contingency-transmitter-sheet"
+          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "sceneBackdrop": "Continuity setting location:celestial-ardor-bridge.",
         "subject": "character:voss, character:harlan, character:sorell, character:rao, character:okoye",
@@ -3662,7 +3602,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
         "regenerationRequired": false
       }
     },
