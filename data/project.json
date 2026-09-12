@@ -136,12 +136,12 @@
         "id": "script:light-delay-festival-master",
         "continuityId": "continuity:light-delay-master-wip",
         "label": {
-          "es": "Corte Festival derivado del master (~13:27, WIP)",
-          "en": "Master-derived Festival cut (~13:27, WIP)"
+          "es": "Corte Festival derivado del master (~13:28, WIP)",
+          "en": "Master-derived Festival cut (~13:28, WIP)"
         },
         "kind": "festival_cut",
         "status": "draft",
-        "targetDurationMs": 806519,
+        "targetDurationMs": 808199,
         "lineage": {
           "sourceScriptId": "script:light-delay-master-narrative",
           "relationship": "cut",
@@ -158,12 +158,12 @@
         "id": "script:light-delay-trailer-master",
         "continuityId": "continuity:light-delay-master-wip",
         "label": {
-          "es": "Tráiler derivado del master (~1:28, WIP)",
-          "en": "Master-derived trailer (~1:28, WIP)"
+          "es": "Tráiler derivado del master (~1:29, WIP)",
+          "en": "Master-derived trailer (~1:29, WIP)"
         },
         "kind": "trailer",
         "status": "draft",
-        "targetDurationMs": 87640,
+        "targetDurationMs": 88840,
         "lineage": {
           "sourceScriptId": "script:light-delay-festival-master",
           "relationship": "trailer",

@@ -1,7 +1,5 @@
 # Estado del proyecto
 
-## 2026-09-12 — Ardor multi-angle reference and exterior still correction
-
 ## 2026-09-12 — Prompts de still sin diálogo/subtítulos
 
 - Los `generation.prompt` del Festival master y del tráiler master ya no incluyen

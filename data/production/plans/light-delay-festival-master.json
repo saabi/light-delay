@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "1fdad980763d2967e48b7515fa13f75802a512c0cd180b6937dac6114f13b1ca",
+    "sourceDigest": "852f91c2f3a597b19783b238f70079f178e9a0a8d43799a1a4267fef7d633598",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -150,13 +150,6 @@
           "path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -255,13 +248,6 @@
           "path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -359,13 +345,6 @@
           "path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -428,13 +407,6 @@
           "path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -498,13 +470,6 @@
           "path": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -601,13 +566,6 @@
           "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -699,13 +657,6 @@
           "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -797,13 +748,6 @@
           "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -895,13 +839,6 @@
           "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -992,13 +929,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1090,13 +1020,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1188,13 +1111,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1243,13 +1159,6 @@
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1325,13 +1234,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1408,13 +1310,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1491,13 +1386,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1546,13 +1434,6 @@
           "path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1608,13 +1489,6 @@
           "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1670,13 +1544,6 @@
           "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1747,13 +1614,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1824,13 +1684,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1892,13 +1745,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -1954,20 +1800,13 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
         {
           "id": "festival-master:shot-plan-021:segment-01",
           "startMs": 0,
-          "endMs": 9020,
+          "endMs": 10700,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -2016,13 +1855,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2113,13 +1945,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2182,13 +2007,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2266,13 +2084,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2334,13 +2145,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2404,13 +2208,6 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2466,13 +2263,6 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2528,13 +2318,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2590,13 +2373,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2652,13 +2428,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2714,13 +2483,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2775,13 +2537,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2836,13 +2591,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2897,13 +2645,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -2966,13 +2707,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3035,13 +2769,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3104,13 +2831,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3173,13 +2893,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3263,13 +2976,6 @@
           "path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3318,13 +3024,6 @@
           "path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3408,13 +3107,6 @@
           "path": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3484,13 +3176,6 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3553,13 +3238,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3623,13 +3301,6 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3686,13 +3357,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3783,13 +3447,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3874,13 +3531,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -3964,13 +3614,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4055,13 +3698,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4146,13 +3782,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4236,13 +3865,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4326,13 +3948,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4417,13 +4032,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4514,13 +4122,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4584,13 +4185,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4667,13 +4261,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4758,13 +4345,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4849,13 +4429,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -4912,13 +4485,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5023,13 +4589,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5120,13 +4679,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5182,13 +4734,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5244,13 +4789,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5335,13 +4873,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5426,13 +4957,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5517,13 +5041,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5607,13 +5124,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5698,13 +5208,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5788,13 +5291,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5879,13 +5375,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -5969,13 +5458,6 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6052,13 +5534,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6144,13 +5619,6 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6241,13 +5709,6 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6310,13 +5771,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6380,13 +5834,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6469,13 +5916,6 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6552,13 +5992,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6636,13 +6069,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6726,13 +6152,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6809,13 +6228,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6886,13 +6298,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -6975,13 +6380,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7066,13 +6464,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7157,13 +6548,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7253,13 +6637,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7343,13 +6720,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7433,13 +6803,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7501,13 +6864,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7563,13 +6919,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7625,13 +6974,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7686,13 +7028,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7783,13 +7118,6 @@
           "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7867,13 +7195,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -7936,13 +7257,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -8005,13 +7319,6 @@
           "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -8060,13 +7367,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -8115,13 +7415,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [
@@ -8170,13 +7463,6 @@
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:vehicle-celestial-ardor-model-sheet-v2",
-          "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
-          "required": true,
-          "role": "vehicle"
         }
       ],
       "segments": [

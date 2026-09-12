@@ -141,12 +141,12 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 <!-- audience-dialogue-id: festival-master:cue-0042 -->
 [Zao]
 [QwenInstruct] Speak English. Performance and delivery: barely audible, reading only what she must confirm
-"Geophysical impulse package… one point three tonnes."
+"This is an impulse warhead for geophysical research from the Proxima… one point three tonnes."
 
 <!-- audience-dialogue-id: festival-master:cue-0043 -->
 [Zao]
-[QwenInstruct] Speak English. Performance and delivery: each fragment tighter than the last
-"Multi-megaton. Contact coordinates. Contact time."
+[QwenInstruct] Speak English. Performance and delivery: each fragment tighter than the last; the deadline lands hard
+"Multi-megaton. Set for the contact coordinates — and the contact time!"
 
 <!-- audience-dialogue-id: festival-master:cue-0045 -->
 [Zao]

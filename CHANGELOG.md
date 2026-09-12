@@ -1,11 +1,5 @@
 # Changelog
 
-## 2026-09-12 — Ardor multi-angle reference and exterior still correction
-
-- Added `asset:vehicle-celestial-ardor-model-sheet-v2`, derived from the Jupiter render and isolated from Proxima docking geometry.
-- Regenerated Festival-master shots `013b` and `016b` with the new sheet. `016b` now makes the retrograde, engine-first approach unambiguous: throat field left, engine nozzle toward it, hull and exhaust trailing right, with deep separation.
-- Removed the accidental character implication from `016b`; both frames contain no people or Zao. Updated manifests, thumbnails, and validation counts.
-
 ## 2026-09-12 — Storyboard still prompts: no dialogue / subtitles
 
 - Stripped spoken dialogue and subtitle copy from Festival-master and trailer-master

@@ -1,1763 +1,1770 @@
 {
-  "schemaVersion": "1.0.0",
-  "generatedAt": "2026-09-12T10:01:54.694Z",
-  "entries": {
-    "characters/zao/model-sheet.png.webp": {
-      "source": "/assets/characters/zao/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/zao/model-sheet.png.webp",
-      "mtimeMs": 1787611307000,
-      "size": 2358356,
-      "hash": "04d8e932f68c7e56"
-    },
-    "characters/velari-envoy/model-sheet.png.webp": {
-      "source": "/assets/characters/velari-envoy/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/velari-envoy/model-sheet.png.webp",
-      "mtimeMs": 1789206954611.2122,
-      "size": 2833118,
-      "hash": "83eddad83e064a87"
-    },
-    "characters/voss/model-sheet.png.webp": {
-      "source": "/assets/characters/voss/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/voss/model-sheet.png.webp",
-      "mtimeMs": 1787611377000,
-      "size": 2457380,
-      "hash": "ba66028c0801c18a"
-    },
-    "characters/harlan/model-sheet-v2.png.webp": {
-      "source": "/assets/characters/harlan/model-sheet-v2.png",
-      "thumb": "/assets/_thumbs/characters/harlan/model-sheet-v2.png.webp",
-      "mtimeMs": 1788222333719.6296,
-      "size": 2298346,
-      "hash": "719392421fb58cd4"
-    },
-    "characters/rao/model-sheet.png.webp": {
-      "source": "/assets/characters/rao/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/rao/model-sheet.png.webp",
-      "mtimeMs": 1787611514000,
-      "size": 2263948,
-      "hash": "673bc28bdf6bd0a4"
-    },
-    "characters/sorell/model-sheet.png.webp": {
-      "source": "/assets/characters/sorell/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/sorell/model-sheet.png.webp",
-      "mtimeMs": 1787611580000,
-      "size": 2234049,
-      "hash": "0938a259dabbeb42"
-    },
-    "characters/cael/model-sheet.png.webp": {
-      "source": "/assets/characters/cael/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/cael/model-sheet.png.webp",
-      "mtimeMs": 1787611645000,
-      "size": 2406625,
-      "hash": "9d8b117f31791046"
-    },
-    "characters/proxima-technician/model-sheet.png.webp": {
-      "source": "/assets/characters/proxima-technician/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/proxima-technician/model-sheet.png.webp",
-      "mtimeMs": 1787612704000,
-      "size": 2449705,
-      "hash": "9ee78225dc10376d"
-    },
-    "characters/medical-officer/model-sheet.png.webp": {
-      "source": "/assets/characters/medical-officer/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/medical-officer/model-sheet.png.webp",
-      "mtimeMs": 1787612704000,
-      "size": 2401569,
-      "hash": "0653074dfdd8a06c"
-    },
-    "characters/security-crew/model-sheet.png.webp": {
-      "source": "/assets/characters/security-crew/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/security-crew/model-sheet.png.webp",
-      "mtimeMs": 1787612704000,
-      "size": 2495894,
-      "hash": "e7719c1c49017759"
-    },
-    "characters/okoye/model-sheet.png.webp": {
-      "source": "/assets/characters/okoye/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/okoye/model-sheet.png.webp",
-      "mtimeMs": 1788634410516.1094,
-      "size": 2484978,
-      "hash": "55eb50ab4f3ae90c"
-    },
-    "characters/earth-protesters/model-sheet.png.webp": {
-      "source": "/assets/characters/earth-protesters/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/earth-protesters/model-sheet.png.webp",
-      "mtimeMs": 1787612704000,
-      "size": 2680746,
-      "hash": "78f994f6078b9441"
-    },
-    "characters/manifestante-acheron/model-sheet.png.webp": {
-      "source": "/assets/characters/manifestante-acheron/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/manifestante-acheron/model-sheet.png.webp",
-      "mtimeMs": 1788223775181.9248,
-      "size": 2554292,
-      "hash": "c5a4b5b4c171e34f"
-    },
-    "characters/joven-contacto/model-sheet.png.webp": {
-      "source": "/assets/characters/joven-contacto/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/joven-contacto/model-sheet.png.webp",
-      "mtimeMs": 1788223842944.151,
-      "size": 2399341,
-      "hash": "2daacbb08343b42f"
-    },
-    "characters/periodista/model-sheet.png.webp": {
-      "source": "/assets/characters/periodista/model-sheet.png",
-      "thumb": "/assets/_thumbs/characters/periodista/model-sheet.png.webp",
-      "mtimeMs": 1788223903444.6995,
-      "size": 2295604,
-      "hash": "02e2fc7af0a27d36"
-    },
-    "locations/proxima-station/proxima-with-ardor-berthed.png.webp": {
-      "source": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
-      "thumb": "/assets/_thumbs/locations/proxima-station/proxima-with-ardor-berthed.png.webp",
-      "mtimeMs": 1787953223799.7715,
-      "size": 1913399,
-      "hash": "bbc4e48ac8bf9175"
-    },
-    "locations/proxima-dock/concept-sheet-v3.png.webp": {
-      "source": "/assets/locations/proxima-dock/concept-sheet-v3.png",
-      "thumb": "/assets/_thumbs/locations/proxima-dock/concept-sheet-v3.png.webp",
-      "mtimeMs": 1787953223799.7715,
-      "size": 1913399,
-      "hash": "bbc4e48ac8bf9175"
-    },
-    "locations/celestial-ardor-bridge/realistic-reference.png.webp": {
-      "source": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-reference.png.webp",
-      "mtimeMs": 1788159777665.29,
-      "size": 2164946,
-      "hash": "97b36271ea893df0"
-    },
-    "locations/celestial-ardor-bridge/realistic-console-reference.png.webp": {
-      "source": "/assets/locations/celestial-ardor-bridge/realistic-console-reference.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-console-reference.png.webp",
-      "mtimeMs": 1788159777660.5498,
-      "size": 2429966,
-      "hash": "360fe0a9a1be87d1"
-    },
-    "locations/celestial-ardor-bridge/realistic-service-shaft-reference.png.webp": {
-      "source": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png.webp",
-      "mtimeMs": 1788159777670.945,
-      "size": 2135450,
-      "hash": "5bbfca7451215386"
-    },
-    "locations/celestial-ardor-engineering/concept-sheet-v2.png.webp": {
-      "source": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-engineering/concept-sheet-v2.png.webp",
-      "mtimeMs": 1789180956664.585,
-      "size": 2770247,
-      "hash": "c2966d37fd81875a"
-    },
-    "locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png.webp": {
-      "source": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png.webp",
-      "mtimeMs": 1789181097121.7837,
-      "size": 3010915,
-      "hash": "72f931ded8deb904"
-    },
-    "locations/celestial-ardor-inner-shielding-vault/concept-sheet.png.webp": {
-      "source": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png.webp",
-      "mtimeMs": 1789179194950.1726,
-      "size": 2772383,
-      "hash": "96570fc4cdaec98b"
-    },
-    "locations/celestial-ardor-central-access/concept-sheet-v2.png.webp": {
-      "source": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-central-access/concept-sheet-v2.png.webp",
-      "mtimeMs": 1789183057091.106,
-      "size": 2538697,
-      "hash": "f023e3b4f67d1fee"
-    },
-    "locations/celestial-ardor-service-cylinder/concept-sheet-v3.png.webp": {
-      "source": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
-      "thumb": "/assets/_thumbs/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png.webp",
-      "mtimeMs": 1789183174826.2253,
-      "size": 2667723,
-      "hash": "9945b48b0c5072da"
-    },
-    "locations/diplomatic-core-room/concept-sheet.png.webp": {
-      "source": "/assets/locations/diplomatic-core-room/concept-sheet.png",
-      "thumb": "/assets/_thumbs/locations/diplomatic-core-room/concept-sheet.png.webp",
-      "mtimeMs": 1787614480000,
-      "size": 2853066,
-      "hash": "af7b4f7c378bd5f2"
-    },
-    "locations/velari-wormhole-mouth/concept-sheet.png.webp": {
-      "source": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
-      "thumb": "/assets/_thumbs/locations/velari-wormhole-mouth/concept-sheet.png.webp",
-      "mtimeMs": 1787614480000,
-      "size": 2199114,
-      "hash": "76f82fa989f1a643"
-    },
-    "locations/velari-station/concept-sheet.png.webp": {
-      "source": "/assets/locations/velari-station/concept-sheet.png",
-      "thumb": "/assets/_thumbs/locations/velari-station/concept-sheet.png.webp",
-      "mtimeMs": 1787614480000,
-      "size": 2369064,
-      "hash": "f387060be26d5df6"
-    },
-    "props/diplomatic-quantum-core/prop-sheet.png.webp": {
-      "source": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/diplomatic-quantum-core/prop-sheet.png.webp",
-      "mtimeMs": 1787614780000,
-      "size": 2632666,
-      "hash": "f19ceade66773e24"
-    },
-    "props/optical-contingency-transmitter/prop-sheet.png.webp": {
-      "source": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/optical-contingency-transmitter/prop-sheet.png.webp",
-      "mtimeMs": 1787614780000,
-      "size": 2604757,
-      "hash": "f1b67c6c13dad727"
-    },
-    "props/proxima-geophysical-impulse-package/prop-sheet.png.webp": {
-      "source": "/assets/props/proxima-geophysical-impulse-package/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/proxima-geophysical-impulse-package/prop-sheet.png.webp",
-      "mtimeMs": 1789179396599.745,
-      "size": 2597030,
-      "hash": "5a85106b82af3b1e"
-    },
-    "props/harlan-wrist-device/prop-sheet.png.webp": {
-      "source": "/assets/props/harlan-wrist-device/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/harlan-wrist-device/prop-sheet.png.webp",
-      "mtimeMs": 1789179460502.5647,
-      "size": 2734691,
-      "hash": "eba9b6aa96c53a17"
-    },
-    "props/time-reference-diagnostic-unit/prop-sheet.png.webp": {
-      "source": "/assets/props/time-reference-diagnostic-unit/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/time-reference-diagnostic-unit/prop-sheet.png.webp",
-      "mtimeMs": 1789179522707.1736,
-      "size": 2617045,
-      "hash": "7f0f2da63790104f"
-    },
-    "props/wired-comms-deck-patch-panel/prop-sheet.png.webp": {
-      "source": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/wired-comms-deck-patch-panel/prop-sheet.png.webp",
-      "mtimeMs": 1789179641014.0627,
-      "size": 2542623,
-      "hash": "d37b87ba36522718"
-    },
-    "props/physical-override-relay/prop-sheet.png.webp": {
-      "source": "/assets/props/physical-override-relay/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/physical-override-relay/prop-sheet.png.webp",
-      "mtimeMs": 1787614780000,
-      "size": 2598615,
-      "hash": "c112af1ebced5ca9"
-    },
-    "props/read-only-greeting-medium/prop-sheet.png.webp": {
-      "source": "/assets/props/read-only-greeting-medium/prop-sheet.png",
-      "thumb": "/assets/_thumbs/props/read-only-greeting-medium/prop-sheet.png.webp",
-      "mtimeMs": 1787614780000,
-      "size": 2686632,
-      "hash": "6a24c8b9c994a122"
-    },
-    "vehicles/celestial-ardor/specs/proportional-reference.png.webp": {
-      "source": "/assets/vehicles/celestial-ardor/specs/proportional-reference.png",
-      "thumb": "/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.png.webp",
-      "mtimeMs": 1787717760328.2092,
-      "size": 119603,
-      "hash": "eb60de51f27cfa83"
-    },
-    "vehicles/celestial-ardor/specs/proportional-reference.svg.webp": {
-      "source": "/assets/vehicles/celestial-ardor/specs/proportional-reference.svg",
-      "thumb": "/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.svg.webp",
-      "mtimeMs": 1787717751761.1658,
-      "size": 13575,
-      "hash": "ed3423b134d84e93"
-    },
-    "vehicles/celestial-ardor/celestial-ardor-with-jupiter.png.webp": {
-      "source": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
-      "thumb": "/assets/_thumbs/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png.webp",
-      "mtimeMs": 1787953457830.8767,
-      "size": 1995540,
-      "hash": "97ee877f235e3ae5"
-    },
-    "art-bible/scale-references/proxima-ardor-common-scale-reference.png.webp": {
-      "source": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.png",
-      "thumb": "/assets/_thumbs/art-bible/scale-references/proxima-ardor-common-scale-reference.png.webp",
-      "mtimeMs": 1787717803062.8916,
-      "size": 38653,
-      "hash": "4f610bb350ebb17b"
-    },
-    "art-bible/scale-references/proxima-ardor-common-scale-reference.svg.webp": {
-      "source": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.svg",
-      "thumb": "/assets/_thumbs/art-bible/scale-references/proxima-ardor-common-scale-reference.svg.webp",
-      "mtimeMs": 1787717797045.9949,
-      "size": 3595,
-      "hash": "b656fe6652920720"
-    },
-    "vehicles/velari-emissary/model-sheet.png.webp": {
-      "source": "/assets/vehicles/velari-emissary/model-sheet.png",
-      "thumb": "/assets/_thumbs/vehicles/velari-emissary/model-sheet.png.webp",
-      "mtimeMs": 1787614780000,
-      "size": 2418213,
-      "hash": "933ec9ecffccc776"
-    },
-    "vehicles/velari-transport-sphere/model-sheet.png.webp": {
-      "source": "/assets/vehicles/velari-transport-sphere/model-sheet.png",
-      "thumb": "/assets/_thumbs/vehicles/velari-transport-sphere/model-sheet.png.webp",
-      "mtimeMs": 1789179698398.205,
-      "size": 2695426,
-      "hash": "7aed06f4832515e4"
-    },
-    "animatic/frames/scene-01/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-01.png.webp",
-      "mtimeMs": 1787953223799.7715,
-      "size": 1913399,
-      "hash": "bbc4e48ac8bf9175"
-    },
-    "animatic/frames/scene-01/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-02.png.webp",
-      "mtimeMs": 1787615879000,
-      "size": 1646134,
-      "hash": "57279461ed1c8447"
-    },
-    "animatic/frames/scene-01/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-03.png.webp",
-      "mtimeMs": 1787616421000,
-      "size": 1788617,
-      "hash": "1b383c72885fb218"
-    },
-    "animatic/frames/scene-01/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-04.png.webp",
-      "mtimeMs": 1787616157000,
-      "size": 1917566,
-      "hash": "c3d5d23cb4de9db7"
-    },
-    "animatic/frames/scene-01/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-05.png.webp",
-      "mtimeMs": 1787616422000,
-      "size": 1666505,
-      "hash": "34797d3dc8c05631"
-    },
-    "animatic/frames/scene-01/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-06.png.webp",
-      "mtimeMs": 1787616207000,
-      "size": 1821882,
-      "hash": "751ed7a1d176d839"
-    },
-    "animatic/frames/scene-01/shot-07.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-07.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-07.png.webp",
-      "mtimeMs": 1787616258000,
-      "size": 1902850,
-      "hash": "315827eea4089893"
-    },
-    "animatic/frames/scene-01/shot-08.png.webp": {
-      "source": "/assets/animatic/frames/scene-01/shot-08.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-08.png.webp",
-      "mtimeMs": 1787616304000,
-      "size": 1644572,
-      "hash": "7539c175a212dab7"
-    },
-    "animatic/frames/scene-02/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-02/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-01.png.webp",
-      "mtimeMs": 1787616632000,
-      "size": 1984382,
-      "hash": "83a4cd8eed8a8e2d"
-    },
-    "animatic/frames/scene-02/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-02/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-02.png.webp",
-      "mtimeMs": 1787616706000,
-      "size": 1646708,
-      "hash": "fb2b1f893e02be76"
-    },
-    "animatic/frames/scene-02/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-02/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-03.png.webp",
-      "mtimeMs": 1787616800000,
-      "size": 1583279,
-      "hash": "9e3867880c575e2e"
-    },
-    "animatic/frames/scene-02/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-02/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-04.png.webp",
-      "mtimeMs": 1787616896000,
-      "size": 1890242,
-      "hash": "cb7e6b65d1bb3a7e"
-    },
-    "animatic/frames/scene-03/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-03/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-01.png.webp",
-      "mtimeMs": 1787616661000,
-      "size": 1712532,
-      "hash": "7165a076fa16dc10"
-    },
-    "animatic/frames/scene-03/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-03/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-02.png.webp",
-      "mtimeMs": 1787616896000,
-      "size": 1558544,
-      "hash": "bc62bb678b5ed18d"
-    },
-    "animatic/frames/scene-03/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-03/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-03.png.webp",
-      "mtimeMs": 1787616753000,
-      "size": 1673024,
-      "hash": "d025f1222c99ac60"
-    },
-    "animatic/frames/scene-03/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-03/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-04.png.webp",
-      "mtimeMs": 1787616847000,
-      "size": 1424925,
-      "hash": "a77735bb3e512010"
-    },
-    "animatic/frames/scene-04/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-04/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-01.png.webp",
-      "mtimeMs": 1787617449000,
-      "size": 1947485,
-      "hash": "3923007c11e90347"
-    },
-    "animatic/frames/scene-04/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-04/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-02.png.webp",
-      "mtimeMs": 1787617449000,
-      "size": 1940161,
-      "hash": "36c0e2eae049f30b"
-    },
-    "animatic/frames/scene-04/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-04/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-03.png.webp",
-      "mtimeMs": 1787617077000,
-      "size": 1701116,
-      "hash": "5f44689795c6d378"
-    },
-    "animatic/frames/scene-04/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-04/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-04.png.webp",
-      "mtimeMs": 1787617134000,
-      "size": 1738241,
-      "hash": "b23d278f3da6f7f9"
-    },
-    "animatic/frames/scene-04/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-04/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-05.png.webp",
-      "mtimeMs": 1787617164000,
-      "size": 1836414,
-      "hash": "57de7c8f15e948b9"
-    },
-    "animatic/frames/scene-05/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-05/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-01.png.webp",
-      "mtimeMs": 1787617197000,
-      "size": 2087754,
-      "hash": "8d4fd70cea2d5ebc"
-    },
-    "animatic/frames/scene-05/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-05/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-02.png.webp",
-      "mtimeMs": 1787617298000,
-      "size": 1944935,
-      "hash": "cc74c8ae8052ed28"
-    },
-    "animatic/frames/scene-05/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-05/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-03.png.webp",
-      "mtimeMs": 1787617449000,
-      "size": 1691813,
-      "hash": "b9af12f7b8ee318d"
-    },
-    "animatic/frames/scene-05/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-05/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-04.png.webp",
-      "mtimeMs": 1787617407000,
-      "size": 2010361,
-      "hash": "90c7fe94f39090b4"
-    },
-    "animatic/frames/scene-05/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-05/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-05.png.webp",
-      "mtimeMs": 1787617347000,
-      "size": 1873702,
-      "hash": "593f77c292142041"
-    },
-    "animatic/frames/scene-05/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-05/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-06.png.webp",
-      "mtimeMs": 1787617250000,
-      "size": 1688330,
-      "hash": "5d33da28c9a6f508"
-    },
-    "animatic/frames/scene-05/shot-07.png.webp": {
-      "source": "/assets/animatic/frames/scene-05/shot-07.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-07.png.webp",
-      "mtimeMs": 1788161122691.3374,
-      "size": 2575270,
-      "hash": "2517d435e61413d7"
-    },
-    "animatic/frames/scene-06/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-06/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-01.png.webp",
-      "mtimeMs": 1787617748000,
-      "size": 1611210,
-      "hash": "af636a2b272638c5"
-    },
-    "animatic/frames/scene-06/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-06/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-02.png.webp",
-      "mtimeMs": 1787617927000,
-      "size": 1797839,
-      "hash": "1880d78a6d594417"
-    },
-    "animatic/frames/scene-06/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-06/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-03.png.webp",
-      "mtimeMs": 1787617927000,
-      "size": 1589531,
-      "hash": "6430f3a7b4773703"
-    },
-    "animatic/frames/scene-06/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-06/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-04.png.webp",
-      "mtimeMs": 1787617927000,
-      "size": 1513212,
-      "hash": "e773ab0203ec5d25"
-    },
-    "animatic/frames/scene-06/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-06/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-05.png.webp",
-      "mtimeMs": 1787617900000,
-      "size": 1595354,
-      "hash": "7c51a21b52f1eda7"
-    },
-    "animatic/frames/scene-06/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-06/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-06.png.webp",
-      "mtimeMs": 1787617795000,
-      "size": 1691010,
-      "hash": "05268f4d8b6186d3"
-    },
-    "animatic/frames/scene-07/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-07/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-01.png.webp",
-      "mtimeMs": 1787617821000,
-      "size": 1370781,
-      "hash": "d82926aa0e75d5ea"
-    },
-    "animatic/frames/scene-07/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-07/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-02.png.webp",
-      "mtimeMs": 1787617489000,
-      "size": 318,
-      "hash": "434d4e216f2a5569"
-    },
-    "animatic/frames/scene-07/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-07/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-03.png.webp",
-      "mtimeMs": 1787617645000,
-      "size": 2144559,
-      "hash": "939612b06c44774a"
-    },
-    "animatic/frames/scene-07/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-07/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-04.png.webp",
-      "mtimeMs": 1787622021000,
-      "size": 1425405,
-      "hash": "537ad8451cc2d75b"
-    },
-    "animatic/frames/scene-07/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-07/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-05.png.webp",
-      "mtimeMs": 1787617853000,
-      "size": 1644221,
-      "hash": "69fba3a0f89b3f1a"
-    },
-    "animatic/frames/scene-08/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-08/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-01.png.webp",
-      "mtimeMs": 1787618614000,
-      "size": 1873124,
-      "hash": "5f735ca7f7ff189f"
-    },
-    "animatic/frames/scene-08/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-08/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-02.png.webp",
-      "mtimeMs": 1787618191000,
-      "size": 1461209,
-      "hash": "3334fb1727c4a6b9"
-    },
-    "animatic/frames/scene-08/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-08/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-03.png.webp",
-      "mtimeMs": 1787618614000,
-      "size": 1564319,
-      "hash": "321a78c16e72dc6f"
-    },
-    "animatic/frames/scene-08/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-08/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-04.png.webp",
-      "mtimeMs": 1787618313000,
-      "size": 1640801,
-      "hash": "a7327643b78c0451"
-    },
-    "animatic/frames/scene-09/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-09/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-01.png.webp",
-      "mtimeMs": 1787618407000,
-      "size": 1813392,
-      "hash": "7deb74b65be23763"
-    },
-    "animatic/frames/scene-09/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-09/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-02.png.webp",
-      "mtimeMs": 1787618363000,
-      "size": 1611057,
-      "hash": "33ae7059bfdc32a6"
-    },
-    "animatic/frames/scene-09/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-09/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-03.png.webp",
-      "mtimeMs": 1787618457000,
-      "size": 1558162,
-      "hash": "7c48b5878b17b57a"
-    },
-    "animatic/frames/scene-09/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-09/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-04.png.webp",
-      "mtimeMs": 1787618505000,
-      "size": 1602510,
-      "hash": "aad1d93b140c9524"
-    },
-    "animatic/frames/scene-09/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-09/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-05.png.webp",
-      "mtimeMs": 1787618555000,
-      "size": 1632997,
-      "hash": "ce80815b820f6027"
-    },
-    "animatic/frames/scene-09/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-09/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-06.png.webp",
-      "mtimeMs": 1787618615000,
-      "size": 1615009,
-      "hash": "42e272230579503d"
-    },
-    "animatic/frames/scene-10/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-10/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-01.png.webp",
-      "mtimeMs": 1787619004000,
-      "size": 1785104,
-      "hash": "d63b2d47524c883f"
-    },
-    "animatic/frames/scene-10/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-10/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-02.png.webp",
-      "mtimeMs": 1787619533000,
-      "size": 1836072,
-      "hash": "c389510079a6ec1c"
-    },
-    "animatic/frames/scene-10/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-10/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-03.png.webp",
-      "mtimeMs": 1787619124000,
-      "size": 1770159,
-      "hash": "e4760599f8bbb8f1"
-    },
-    "animatic/frames/scene-10/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-10/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-04.png.webp",
-      "mtimeMs": 1787619583000,
-      "size": 1777128,
-      "hash": "4bc28ba29f927b66"
-    },
-    "animatic/frames/scene-10/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-10/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-05.png.webp",
-      "mtimeMs": 1787619583000,
-      "size": 1840705,
-      "hash": "94efbc94d66ebc77"
-    },
-    "animatic/frames/scene-10/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-10/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-06.png.webp",
-      "mtimeMs": 1787619316000,
-      "size": 1408569,
-      "hash": "d2f15a6ab4b2e720"
-    },
-    "animatic/frames/scene-10/shot-07.png.webp": {
-      "source": "/assets/animatic/frames/scene-10/shot-07.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-07.png.webp",
-      "mtimeMs": 1787618883000,
-      "size": 1878322,
-      "hash": "6574b7ad0fa3c2b2"
-    },
-    "animatic/frames/scene-11/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-11/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-01.png.webp",
-      "mtimeMs": 1787619174000,
-      "size": 1640342,
-      "hash": "3ca624e1c4f88f2c"
-    },
-    "animatic/frames/scene-11/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-11/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-02.png.webp",
-      "mtimeMs": 1787619316000,
-      "size": 1703638,
-      "hash": "553bc0cefaead146"
-    },
-    "animatic/frames/scene-11/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-11/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-03.png.webp",
-      "mtimeMs": 1787619434000,
-      "size": 1616143,
-      "hash": "2daa9a1872aa6897"
-    },
-    "animatic/frames/scene-11/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-11/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-04.png.webp",
-      "mtimeMs": 1787619388000,
-      "size": 1682690,
-      "hash": "68aa1f7efeb99bc0"
-    },
-    "animatic/frames/scene-11/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-11/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-05.png.webp",
-      "mtimeMs": 1787619486000,
-      "size": 1627446,
-      "hash": "6442a855165872d7"
-    },
-    "animatic/frames/scene-11/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-11/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-06.png.webp",
-      "mtimeMs": 1787619584000,
-      "size": 1699381,
-      "hash": "68bcd825884d04d7"
-    },
-    "animatic/frames/scene-12/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-01.png.webp",
-      "mtimeMs": 1787620276000,
-      "size": 1463660,
-      "hash": "7966e49cffb86efd"
-    },
-    "animatic/frames/scene-12/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-02.png.webp",
-      "mtimeMs": 1787622577000,
-      "size": 1538052,
-      "hash": "08ffe8a8f97d1b84"
-    },
-    "animatic/frames/scene-12/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-03.png.webp",
-      "mtimeMs": 1787620279000,
-      "size": 1427700,
-      "hash": "9f0b2bec6565d3c8"
-    },
-    "animatic/frames/scene-12/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-04.png.webp",
-      "mtimeMs": 1787622578000,
-      "size": 1521219,
-      "hash": "d009132cd42b411c"
-    },
-    "animatic/frames/scene-12/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-05.png.webp",
-      "mtimeMs": 1787620281000,
-      "size": 1521609,
-      "hash": "8689588c20892b1e"
-    },
-    "animatic/frames/scene-12/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-06.png.webp",
-      "mtimeMs": 1787622779000,
-      "size": 2278323,
-      "hash": "9d6421c50f74d9a4"
-    },
-    "animatic/frames/scene-12/shot-07.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-07.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-07.png.webp",
-      "mtimeMs": 1787620284000,
-      "size": 1588369,
-      "hash": "2403d2146d0daa05"
-    },
-    "animatic/frames/scene-12/shot-08.png.webp": {
-      "source": "/assets/animatic/frames/scene-12/shot-08.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-08.png.webp",
-      "mtimeMs": 1787622580000,
-      "size": 1532714,
-      "hash": "892f286e4ce4d5ae"
-    },
-    "animatic/frames/scene-13/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-13/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-01.png.webp",
-      "mtimeMs": 1787620286000,
-      "size": 1556129,
-      "hash": "c9c89f941571e902"
-    },
-    "animatic/frames/scene-13/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-13/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-02.png.webp",
-      "mtimeMs": 1787620288000,
-      "size": 1481778,
-      "hash": "a76f127c69bb09e7"
-    },
-    "animatic/frames/scene-13/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-13/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-03.png.webp",
-      "mtimeMs": 1787620289000,
-      "size": 1891000,
-      "hash": "1330c935a1751cf7"
-    },
-    "animatic/frames/scene-13/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-13/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-04.png.webp",
-      "mtimeMs": 1787622581000,
-      "size": 1742719,
-      "hash": "579be3077263796d"
-    },
-    "animatic/frames/scene-13/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-13/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-05.png.webp",
-      "mtimeMs": 1787620291000,
-      "size": 1571467,
-      "hash": "096552510e994648"
-    },
-    "animatic/frames/scene-14/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-01.png.webp",
-      "mtimeMs": 1787621085000,
-      "size": 1887569,
-      "hash": "53bfbe6d1fb76490"
-    },
-    "animatic/frames/scene-14/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-02.png.webp",
-      "mtimeMs": 1787622582000,
-      "size": 1560157,
-      "hash": "1faa7f0f8a756143"
-    },
-    "animatic/frames/scene-14/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-03.png.webp",
-      "mtimeMs": 1787621085000,
-      "size": 1547784,
-      "hash": "80f02aafeb1fca43"
-    },
-    "animatic/frames/scene-14/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-04.png.webp",
-      "mtimeMs": 1787622583000,
-      "size": 1687021,
-      "hash": "d08f384d31c5f488"
-    },
-    "animatic/frames/scene-14/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-05.png.webp",
-      "mtimeMs": 1787621087000,
-      "size": 1780578,
-      "hash": "e61407822eabdf1f"
-    },
-    "animatic/frames/scene-14/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-06.png.webp",
-      "mtimeMs": 1787621088000,
-      "size": 1680847,
-      "hash": "828997006905ab5c"
-    },
-    "animatic/frames/scene-14/shot-07.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-07.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-07.png.webp",
-      "mtimeMs": 1787621089000,
-      "size": 1678525,
-      "hash": "1c59e9d637b074cf"
-    },
-    "animatic/frames/scene-14/shot-08.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-08.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-08.png.webp",
-      "mtimeMs": 1787621090000,
-      "size": 1706536,
-      "hash": "33630169ef157912"
-    },
-    "animatic/frames/scene-14/shot-09.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-09.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-09.png.webp",
-      "mtimeMs": 1787621091000,
-      "size": 1693716,
-      "hash": "6bc68958990bdcdf"
-    },
-    "animatic/frames/scene-14/shot-10.png.webp": {
-      "source": "/assets/animatic/frames/scene-14/shot-10.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-10.png.webp",
-      "mtimeMs": 1787622583000,
-      "size": 1787908,
-      "hash": "d57d2f9900481d47"
-    },
-    "animatic/frames/scene-15/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-15/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-01.png.webp",
-      "mtimeMs": 1787622023000,
-      "size": 1877727,
-      "hash": "f41e82488166587f"
-    },
-    "animatic/frames/scene-15/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-15/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-02.png.webp",
-      "mtimeMs": 1787622778000,
-      "size": 2560903,
-      "hash": "a9e08cf289516a72"
-    },
-    "animatic/frames/scene-15/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-15/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-03.png.webp",
-      "mtimeMs": 1787622026000,
-      "size": 1716432,
-      "hash": "56614e7bc7ee1c2c"
-    },
-    "animatic/frames/scene-15/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-15/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-04.png.webp",
-      "mtimeMs": 1787622027000,
-      "size": 1550059,
-      "hash": "57e210be49e3a3ac"
-    },
-    "animatic/frames/scene-15/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-15/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-05.png.webp",
-      "mtimeMs": 1787622028000,
-      "size": 1544660,
-      "hash": "f9ce76c445eba43e"
-    },
-    "animatic/frames/scene-15/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-15/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-06.png.webp",
-      "mtimeMs": 1787622585000,
-      "size": 1672840,
-      "hash": "e6217bc2db62cb7c"
-    },
-    "animatic/frames/scene-15/shot-07.png.webp": {
-      "source": "/assets/animatic/frames/scene-15/shot-07.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-07.png.webp",
-      "mtimeMs": 1787622031000,
-      "size": 1788229,
-      "hash": "9358f3b5877039e1"
-    },
-    "animatic/frames/scene-16/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-16/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-16/shot-01.png.webp",
-      "mtimeMs": 1787622032000,
-      "size": 2053328,
-      "hash": "19d8fb3e1585380d"
-    },
-    "animatic/frames/scene-16/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-16/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-16/shot-02.png.webp",
-      "mtimeMs": 1787622033000,
-      "size": 1728007,
-      "hash": "43b55b885f015a67"
-    },
-    "animatic/frames/scene-16/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-16/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-16/shot-03.png.webp",
-      "mtimeMs": 1787622586000,
-      "size": 1667902,
-      "hash": "435096c493e41383"
-    },
-    "animatic/frames/scene-17/shot-01.png.webp": {
-      "source": "/assets/animatic/frames/scene-17/shot-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-01.png.webp",
-      "mtimeMs": 1787622035000,
-      "size": 1718431,
-      "hash": "468d39652d0dbed2"
-    },
-    "animatic/frames/scene-17/shot-02.png.webp": {
-      "source": "/assets/animatic/frames/scene-17/shot-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-02.png.webp",
-      "mtimeMs": 1787622037000,
-      "size": 1524146,
-      "hash": "334dbca76ba5f2a8"
-    },
-    "animatic/frames/scene-17/shot-03.png.webp": {
-      "source": "/assets/animatic/frames/scene-17/shot-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-03.png.webp",
-      "mtimeMs": 1787622038000,
-      "size": 1589997,
-      "hash": "9870d47313403266"
-    },
-    "animatic/frames/scene-17/shot-04.png.webp": {
-      "source": "/assets/animatic/frames/scene-17/shot-04.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-04.png.webp",
-      "mtimeMs": 1787622587000,
-      "size": 1563553,
-      "hash": "f8fe9626e85da244"
-    },
-    "animatic/frames/scene-17/shot-05.png.webp": {
-      "source": "/assets/animatic/frames/scene-17/shot-05.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-05.png.webp",
-      "mtimeMs": 1787622040000,
-      "size": 1433225,
-      "hash": "bf1c36d3640aa0c2"
-    },
-    "animatic/frames/scene-17/shot-06.png.webp": {
-      "source": "/assets/animatic/frames/scene-17/shot-06.png",
-      "thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-06.png.webp",
-      "mtimeMs": 1787622042000,
-      "size": 1634875,
-      "hash": "5de86354a5b458cb"
-    },
-    "animatic/titles/film-title.png.webp": {
-      "source": "/assets/animatic/titles/film-title.png",
-      "thumb": "/assets/_thumbs/animatic/titles/film-title.png.webp",
-      "mtimeMs": 1788159777652.4878,
-      "size": 181701,
-      "hash": "2b2c251ca2f1a56d"
-    },
-    "animatic/titles/trailer-brand.png.webp": {
-      "source": "/assets/animatic/titles/trailer-brand.png",
-      "thumb": "/assets/_thumbs/animatic/titles/trailer-brand.png.webp",
-      "mtimeMs": 1788159777654.5876,
-      "size": 825260,
-      "hash": "64d9ccf9e4726583"
-    },
-    "animatic/titles/trailer-tagline.png.webp": {
-      "source": "/assets/animatic/titles/trailer-tagline.png",
-      "thumb": "/assets/_thumbs/animatic/titles/trailer-tagline.png.webp",
-      "mtimeMs": 1788159777655.114,
-      "size": 165162,
-      "hash": "9deeb84a74f4bdc4"
-    },
-    "animatic/placeholder-missing-frame.png.webp": {
-      "source": "/assets/animatic/placeholder-missing-frame.png",
-      "thumb": "/assets/_thumbs/animatic/placeholder-missing-frame.png.webp",
-      "mtimeMs": 1787727783539.7087,
-      "size": 1174339,
-      "hash": "89df9dd240a9b29c"
-    },
-    "animatic/frames/festival-master/shot-plan-title.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-title.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-title.png.webp",
-      "mtimeMs": 1789203788738.0718,
-      "size": 1953864,
-      "hash": "9d862050b4be781d"
-    },
-    "animatic/frames/festival-master/shot-plan-001.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-001.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-001.png.webp",
-      "mtimeMs": 1789186642312.099,
-      "size": 2008208,
-      "hash": "4c160b3136f22b77"
-    },
-    "animatic/frames/festival-master/shot-plan-002.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-002.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-002.png.webp",
-      "mtimeMs": 1789186729988.4128,
-      "size": 1999854,
-      "hash": "30be3196e202e98a"
-    },
-    "animatic/frames/festival-master/shot-plan-003.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-003.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-003.png.webp",
-      "mtimeMs": 1789186779546.134,
-      "size": 2121483,
-      "hash": "b1b4d4d6c2a8a93c"
-    },
-    "animatic/frames/festival-master/shot-plan-004.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-004.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-004.png.webp",
-      "mtimeMs": 1789186821102.2468,
-      "size": 1859106,
-      "hash": "c7c37b23fda6da09"
-    },
-    "animatic/frames/festival-master/shot-plan-005.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-005.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-005.png.webp",
-      "mtimeMs": 1789186923492.0483,
-      "size": 1970022,
-      "hash": "a364533712e04a1a"
-    },
-    "animatic/frames/festival-master/shot-plan-006.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-006.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-006.png.webp",
-      "mtimeMs": 1789186974031.8655,
-      "size": 2660573,
-      "hash": "49ca5bab173dcc60"
-    },
-    "animatic/frames/festival-master/shot-plan-007.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-007.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-007.png.webp",
-      "mtimeMs": 1789187072861.6428,
-      "size": 2378692,
-      "hash": "e3c4ae602e418ca8"
-    },
-    "animatic/frames/festival-master/shot-plan-008.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-008.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-008.png.webp",
-      "mtimeMs": 1789187178394.1853,
-      "size": 2202453,
-      "hash": "8d13b9201213a959"
-    },
-    "animatic/frames/festival-master/shot-plan-009.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-009.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-009.png.webp",
-      "mtimeMs": 1789187283196.525,
-      "size": 2434197,
-      "hash": "7aed9ddbe59f7994"
-    },
-    "animatic/frames/festival-master/shot-plan-010.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-010.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-010.png.webp",
-      "mtimeMs": 1789187435761.3818,
-      "size": 2373562,
-      "hash": "fc01ec64bf980c39"
-    },
-    "animatic/frames/festival-master/shot-plan-011.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-011.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-011.png.webp",
-      "mtimeMs": 1789187484119.2942,
-      "size": 2136290,
-      "hash": "5e8af760c9e077b4"
-    },
-    "animatic/frames/festival-master/shot-plan-012.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-012.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-012.png.webp",
-      "mtimeMs": 1789187532991.2432,
-      "size": 2177685,
-      "hash": "fe215dcdfb4ff159"
-    },
-    "animatic/frames/festival-master/shot-plan-013.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-013.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-013.png.webp",
-      "mtimeMs": 1789187630146.7468,
-      "size": 2580228,
-      "hash": "7ef6959ceadb772c"
-    },
-    "animatic/frames/festival-master/shot-plan-014.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-014.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-014.png.webp",
-      "mtimeMs": 1789187682444.5425,
-      "size": 2094522,
-      "hash": "7e0ed7b3786709f2"
-    },
-    "animatic/frames/festival-master/shot-plan-015.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-015.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-015.png.webp",
-      "mtimeMs": 1789187867240.5007,
-      "size": 2364253,
-      "hash": "0aeb8a436a627d1b"
-    },
-    "animatic/frames/festival-master/shot-plan-016.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-016.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-016.png.webp",
-      "mtimeMs": 1789187913468.7324,
-      "size": 2310814,
-      "hash": "73ceaf67e4d807ee"
-    },
-    "animatic/frames/festival-master/shot-plan-017.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-017.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-017.png.webp",
-      "mtimeMs": 1789188010484.4612,
-      "size": 2150437,
-      "hash": "c47700a5fa157b70"
-    },
-    "animatic/frames/festival-master/shot-plan-018.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-018.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-018.png.webp",
-      "mtimeMs": 1789188063455.6155,
-      "size": 2366059,
-      "hash": "0259b64152ef030c"
-    },
-    "animatic/frames/festival-master/shot-plan-019.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-019.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-019.png.webp",
-      "mtimeMs": 1789200867347.0771,
-      "size": 2804911,
-      "hash": "21e4eee4c602dbdd"
-    },
-    "animatic/frames/festival-master/shot-plan-020.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-020.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-020.png.webp",
-      "mtimeMs": 1789188212548.4836,
-      "size": 2335909,
-      "hash": "b8e6dd1c8dd71e1f"
-    },
-    "animatic/frames/festival-master/shot-plan-021.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-021.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-021.png.webp",
-      "mtimeMs": 1789189202398.3628,
-      "size": 2441805,
-      "hash": "4f994f878dfc601b"
-    },
-    "animatic/frames/festival-master/shot-plan-022.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-022.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-022.png.webp",
-      "mtimeMs": 1789189252182.9473,
-      "size": 2134343,
-      "hash": "54ad4f963716668b"
-    },
-    "animatic/frames/festival-master/shot-plan-023.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-023.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-023.png.webp",
-      "mtimeMs": 1789189292737.9922,
-      "size": 1941537,
-      "hash": "2711a7b2aa8ef0a5"
-    },
-    "animatic/frames/festival-master/shot-plan-024.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-024.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-024.png.webp",
-      "mtimeMs": 1789189341109.7488,
-      "size": 1685581,
-      "hash": "e43bd622186d3cc2"
-    },
-    "animatic/frames/festival-master/shot-plan-025.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-025.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-025.png.webp",
-      "mtimeMs": 1789189390952.6306,
-      "size": 2192787,
-      "hash": "68e380f6afc7ea4f"
-    },
-    "animatic/frames/festival-master/shot-plan-026.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-026.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-026.png.webp",
-      "mtimeMs": 1789189496640.4478,
-      "size": 2378440,
-      "hash": "48b3202ae3f5b952"
-    },
-    "animatic/frames/festival-master/shot-plan-027.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-027.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-027.png.webp",
-      "mtimeMs": 1789189545360.734,
-      "size": 2297184,
-      "hash": "a83cd6a284a94dc8"
-    },
-    "animatic/frames/festival-master/shot-plan-028.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-028.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-028.png.webp",
-      "mtimeMs": 1789189590814.601,
-      "size": 2442389,
-      "hash": "06bb1a4ee0f47c5f"
-    },
-    "animatic/frames/festival-master/shot-plan-029.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-029.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-029.png.webp",
-      "mtimeMs": 1789189645578.1487,
-      "size": 2351462,
-      "hash": "f740ad7e72168da2"
-    },
-    "animatic/frames/festival-master/shot-plan-030.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-030.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-030.png.webp",
-      "mtimeMs": 1789189699982.5122,
-      "size": 2382940,
-      "hash": "bb76b2dcf6b2df9d"
-    },
-    "animatic/frames/festival-master/shot-plan-031.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-031.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-031.png.webp",
-      "mtimeMs": 1789189853151.6624,
-      "size": 2220340,
-      "hash": "f17720afe2099742"
-    },
-    "animatic/frames/festival-master/shot-plan-032.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-032.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-032.png.webp",
-      "mtimeMs": 1789189898965.9058,
-      "size": 2081699,
-      "hash": "f89b590e1b07a37c"
-    },
-    "animatic/frames/festival-master/shot-plan-033.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-033.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-033.png.webp",
-      "mtimeMs": 1789189946720.755,
-      "size": 2205061,
-      "hash": "748a2b03d7ecdc1e"
-    },
-    "animatic/frames/festival-master/shot-plan-034.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-034.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-034.png.webp",
-      "mtimeMs": 1789189989966.7278,
-      "size": 2262890,
-      "hash": "d8a3f832510bc292"
-    },
-    "animatic/frames/festival-master/shot-plan-035.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-035.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-035.png.webp",
-      "mtimeMs": 1789190038336.1145,
-      "size": 2370860,
-      "hash": "523df60aeacaef5f"
-    },
-    "animatic/frames/festival-master/shot-plan-036.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-036.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-036.png.webp",
-      "mtimeMs": 1789190146349.0996,
-      "size": 2258185,
-      "hash": "87c4d6f31ef9052e"
-    },
-    "animatic/frames/festival-master/shot-plan-037.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-037.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-037.png.webp",
-      "mtimeMs": 1789190194703.923,
-      "size": 2325355,
-      "hash": "f9bfc840705d0d78"
-    },
-    "animatic/frames/festival-master/shot-plan-038.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-038.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-038.png.webp",
-      "mtimeMs": 1789190244291.639,
-      "size": 2156734,
-      "hash": "6520cd79f80c73c5"
-    },
-    "animatic/frames/festival-master/shot-plan-039.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-039.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-039.png.webp",
-      "mtimeMs": 1789190352506.2817,
-      "size": 2447224,
-      "hash": "eaca4c4018f48d11"
-    },
-    "animatic/frames/festival-master/shot-plan-040.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-040.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-040.png.webp",
-      "mtimeMs": 1789200916683.1992,
-      "size": 2100213,
-      "hash": "30528f13a73e12ff"
-    },
-    "animatic/frames/festival-master/shot-plan-041.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-041.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-041.png.webp",
-      "mtimeMs": 1789201025425.5303,
-      "size": 2510409,
-      "hash": "62b9db0ed281ff9a"
-    },
-    "animatic/frames/festival-master/shot-plan-042.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-042.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-042.png.webp",
-      "mtimeMs": 1789191068781.5244,
-      "size": 2219773,
-      "hash": "d901d045dcfeab25"
-    },
-    "animatic/frames/festival-master/shot-plan-043.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-043.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-043.png.webp",
-      "mtimeMs": 1789191118933.4138,
-      "size": 2170276,
-      "hash": "7cfd8a7e878a762b"
-    },
-    "animatic/frames/festival-master/shot-plan-044.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-044.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-044.png.webp",
-      "mtimeMs": 1789191171360.2283,
-      "size": 2400494,
-      "hash": "a23903ab126e925b"
-    },
-    "animatic/frames/festival-master/shot-plan-045.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-045.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-045.png.webp",
-      "mtimeMs": 1789191223417.6384,
-      "size": 2240153,
-      "hash": "d96d0053562b8d2d"
-    },
-    "animatic/frames/festival-master/shot-plan-046.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-046.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-046.png.webp",
-      "mtimeMs": 1789191305208.1938,
-      "size": 2183572,
-      "hash": "250751b2f488bcbe"
-    },
-    "animatic/frames/festival-master/shot-plan-047.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-047.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-047.png.webp",
-      "mtimeMs": 1789191351173.3474,
-      "size": 2075105,
-      "hash": "8c61f567678d97ac"
-    },
-    "animatic/frames/festival-master/shot-plan-048.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-048.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-048.png.webp",
-      "mtimeMs": 1789191398282.8071,
-      "size": 2214965,
-      "hash": "ff007f1f44765bf6"
-    },
-    "animatic/frames/festival-master/shot-plan-049.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-049.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-049.png.webp",
-      "mtimeMs": 1789191445371.8237,
-      "size": 2161665,
-      "hash": "ac95d873caf38414"
-    },
-    "animatic/frames/festival-master/shot-plan-050.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-050.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-050.png.webp",
-      "mtimeMs": 1789191493993.0317,
-      "size": 2305963,
-      "hash": "31871632dd6bf6d8"
-    },
-    "animatic/frames/festival-master/shot-plan-051.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-051.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-051.png.webp",
-      "mtimeMs": 1789191582469.909,
-      "size": 2264300,
-      "hash": "5aec763d586b8054"
-    },
-    "animatic/frames/festival-master/shot-plan-052.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-052.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-052.png.webp",
-      "mtimeMs": 1789191633969.6084,
-      "size": 2005551,
-      "hash": "431320d0f10c4e19"
-    },
-    "animatic/frames/festival-master/shot-plan-053.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-053.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-053.png.webp",
-      "mtimeMs": 1789191679817.6558,
-      "size": 2046049,
-      "hash": "7b0837f2291d0f5d"
-    },
-    "animatic/frames/festival-master/shot-plan-054.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-054.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-054.png.webp",
-      "mtimeMs": 1789191729363.352,
-      "size": 2453229,
-      "hash": "922928a843abb7fc"
-    },
-    "animatic/frames/festival-master/shot-plan-055.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-055.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-055.png.webp",
-      "mtimeMs": 1789191774132.0847,
-      "size": 2202042,
-      "hash": "3dd86d72615726c4"
-    },
-    "animatic/frames/festival-master/shot-plan-056.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-056.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-056.png.webp",
-      "mtimeMs": 1789191868665.16,
-      "size": 2249077,
-      "hash": "5bafccee848fec27"
-    },
-    "animatic/frames/festival-master/shot-plan-057.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-057.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-057.png.webp",
-      "mtimeMs": 1789191921137.687,
-      "size": 2079121,
-      "hash": "bef88b42665da914"
-    },
-    "animatic/frames/festival-master/shot-plan-058.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-058.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-058.png.webp",
-      "mtimeMs": 1789191967764.5317,
-      "size": 1969070,
-      "hash": "88b2ef868f93ad92"
-    },
-    "animatic/frames/festival-master/shot-plan-059.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-059.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-059.png.webp",
-      "mtimeMs": 1789192009188.6987,
-      "size": 2019746,
-      "hash": "57577739d68150d4"
-    },
-    "animatic/frames/festival-master/shot-plan-060.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-060.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-060.png.webp",
-      "mtimeMs": 1789192062307.5474,
-      "size": 2087738,
-      "hash": "5505290e96b34ce8"
-    },
-    "animatic/frames/festival-master/shot-plan-061.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-061.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-061.png.webp",
-      "mtimeMs": 1789193710333.642,
-      "size": 2040992,
-      "hash": "4d49431ec0cc4a46"
-    },
-    "animatic/frames/festival-master/shot-plan-062.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-062.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-062.png.webp",
-      "mtimeMs": 1789193754326.4714,
-      "size": 2484595,
-      "hash": "c0f6690223bcdd55"
-    },
-    "animatic/frames/festival-master/shot-plan-063.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-063.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-063.png.webp",
-      "mtimeMs": 1789193796091.567,
-      "size": 2042936,
-      "hash": "c420ede299050362"
-    },
-    "animatic/frames/festival-master/shot-plan-064.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-064.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-064.png.webp",
-      "mtimeMs": 1789193848376.8232,
-      "size": 2185169,
-      "hash": "0ba75241ae986772"
-    },
-    "animatic/frames/festival-master/shot-plan-065.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-065.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-065.png.webp",
-      "mtimeMs": 1789193896053.173,
-      "size": 2126806,
-      "hash": "6b010f26972b8f94"
-    },
-    "animatic/frames/festival-master/shot-plan-066.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-066.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-066.png.webp",
-      "mtimeMs": 1789193984720.7295,
-      "size": 2097019,
-      "hash": "fdd770e639803c5a"
-    },
-    "animatic/frames/festival-master/shot-plan-067.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-067.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-067.png.webp",
-      "mtimeMs": 1789194032075.3306,
-      "size": 2145766,
-      "hash": "35218d3cfe33e7d9"
-    },
-    "animatic/frames/festival-master/shot-plan-068.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-068.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-068.png.webp",
-      "mtimeMs": 1789194081624.3254,
-      "size": 2257923,
-      "hash": "28f0ba008de9caa2"
-    },
-    "animatic/frames/festival-master/shot-plan-069.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-069.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-069.png.webp",
-      "mtimeMs": 1789194129091.571,
-      "size": 2163494,
-      "hash": "dae54cbabe5f2ad4"
-    },
-    "animatic/frames/festival-master/shot-plan-070.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-070.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-070.png.webp",
-      "mtimeMs": 1789194174409.9736,
-      "size": 2424015,
-      "hash": "1bab4bbae0776767"
-    },
-    "animatic/frames/festival-master/shot-plan-071.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-071.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-071.png.webp",
-      "mtimeMs": 1789194257568.4868,
-      "size": 2075754,
-      "hash": "72a9d99fee17799d"
-    },
-    "animatic/frames/festival-master/shot-plan-072.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-072.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-072.png.webp",
-      "mtimeMs": 1789194295455.491,
-      "size": 2205144,
-      "hash": "e4649d30d4a90c1a"
-    },
-    "animatic/frames/festival-master/shot-plan-073.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-073.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-073.png.webp",
-      "mtimeMs": 1789194344759.312,
-      "size": 2353540,
-      "hash": "34e5026aa95f35f0"
-    },
-    "animatic/frames/festival-master/shot-plan-074.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-074.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-074.png.webp",
-      "mtimeMs": 1789194395102,
-      "size": 2306088,
-      "hash": "6cf86ccb90d25588"
-    },
-    "animatic/frames/festival-master/shot-plan-075.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-075.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-075.png.webp",
-      "mtimeMs": 1789194441696.2537,
-      "size": 2337615,
-      "hash": "bc58156c6a375625"
-    },
-    "animatic/frames/festival-master/shot-plan-076.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-076.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-076.png.webp",
-      "mtimeMs": 1789194528181.3916,
-      "size": 2643817,
-      "hash": "50de507ea76a0e9d"
-    },
-    "animatic/frames/festival-master/shot-plan-077.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-077.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-077.png.webp",
-      "mtimeMs": 1789194641002.6753,
-      "size": 2392785,
-      "hash": "5bb55de076a158b0"
-    },
-    "animatic/frames/festival-master/shot-plan-078.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-078.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-078.png.webp",
-      "mtimeMs": 1789194697976.697,
-      "size": 2569074,
-      "hash": "91c555e540e8c819"
-    },
-    "animatic/frames/festival-master/shot-plan-079.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-079.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-079.png.webp",
-      "mtimeMs": 1789194805152.0713,
-      "size": 2420762,
-      "hash": "2fe89f7e7c22aee7"
-    },
-    "animatic/frames/festival-master/shot-plan-080.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-080.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-080.png.webp",
-      "mtimeMs": 1789194916825.4963,
-      "size": 2492947,
-      "hash": "ceac5d093b8799b0"
-    },
-    "animatic/frames/festival-master/shot-plan-040b.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-040b.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-040b.png.webp",
-      "mtimeMs": 1789200975294.7754,
-      "size": 2578228,
-      "hash": "6888da4397eff100"
-    },
-    "animatic/frames/festival-master/shot-plan-081.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-081.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-081.png.webp",
-      "mtimeMs": 1789201568377.5652,
-      "size": 2224330,
-      "hash": "bfe9bad86a267fc5"
-    },
-    "animatic/frames/festival-master/shot-plan-082.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-082.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-082.png.webp",
-      "mtimeMs": 1789201625669.6086,
-      "size": 2040755,
-      "hash": "a2f889d934f138c5"
-    },
-    "animatic/frames/festival-master/shot-plan-083.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-083.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-083.png.webp",
-      "mtimeMs": 1789201686554.2913,
-      "size": 2178459,
-      "hash": "a817078dd3e8a3f1"
-    },
-    "animatic/frames/festival-master/shot-plan-084.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-084.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-084.png.webp",
-      "mtimeMs": 1789201747444.6497,
-      "size": 2129666,
-      "hash": "62e0bc0ddc16e262"
-    },
-    "animatic/frames/festival-master/shot-plan-085.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-085.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-085.png.webp",
-      "mtimeMs": 1789201803673.5676,
-      "size": 2027043,
-      "hash": "f86f13d18b0f5a59"
-    },
-    "animatic/frames/festival-master/shot-plan-086.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-086.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-086.png.webp",
-      "mtimeMs": 1789201902863.6401,
-      "size": 2229654,
-      "hash": "ce6a970f4383bf58"
-    },
-    "animatic/frames/festival-master/shot-plan-087.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-087.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-087.png.webp",
-      "mtimeMs": 1789201961258.3071,
-      "size": 2424020,
-      "hash": "d0f5cc27a5e33336"
-    },
-    "animatic/frames/festival-master/shot-plan-088.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-088.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-088.png.webp",
-      "mtimeMs": 1789202021658.6887,
-      "size": 2366859,
-      "hash": "81fae26a8b6e88b2"
-    },
-    "animatic/frames/festival-master/shot-plan-089.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-089.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-089.png.webp",
-      "mtimeMs": 1789202070614.8328,
-      "size": 2423354,
-      "hash": "d3af08c49e6aa790"
-    },
-    "animatic/frames/festival-master/shot-plan-090.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-090.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-090.png.webp",
-      "mtimeMs": 1789202117217.637,
-      "size": 2028923,
-      "hash": "847ccfea561c7c9b"
-    },
-    "animatic/frames/festival-master/shot-plan-091.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-091.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-091.png.webp",
-      "mtimeMs": 1789202192640.9119,
-      "size": 2431923,
-      "hash": "f5c13bd94eae92cc"
-    },
-    "animatic/frames/festival-master/shot-plan-092.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-092.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-092.png.webp",
-      "mtimeMs": 1789202256804.3882,
-      "size": 2698273,
-      "hash": "680dd39162016007"
-    },
-    "animatic/frames/festival-master/shot-plan-093.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-093.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-093.png.webp",
-      "mtimeMs": 1789202312231.0977,
-      "size": 2230914,
-      "hash": "e9107fe7712f3871"
-    },
-    "animatic/frames/festival-master/shot-plan-094.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-094.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-094.png.webp",
-      "mtimeMs": 1789202371918.8152,
-      "size": 2203197,
-      "hash": "2f7c6efb92d3d0b1"
-    },
-    "animatic/frames/festival-master/shot-plan-095.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-095.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-095.png.webp",
-      "mtimeMs": 1789202434872.737,
-      "size": 2211850,
-      "hash": "83ff41b851cf8658"
-    },
-    "animatic/frames/festival-master/shot-plan-096.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-096.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-096.png.webp",
-      "mtimeMs": 1789202525703.0652,
-      "size": 2167667,
-      "hash": "b3339095730b14cd"
-    },
-    "animatic/frames/festival-master/shot-plan-credit-01.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-credit-01.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-credit-01.png.webp",
-      "mtimeMs": 1789202574712.266,
-      "size": 2161548,
-      "hash": "604438ca044c1b9c"
-    },
-    "animatic/frames/festival-master/shot-plan-credit-02.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-credit-02.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-credit-02.png.webp",
-      "mtimeMs": 1789202618109.6223,
-      "size": 2155410,
-      "hash": "49d9fc6d60864b69"
-    },
-    "animatic/frames/festival-master/shot-plan-credit-03.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-credit-03.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-credit-03.png.webp",
-      "mtimeMs": 1789202663416.5593,
-      "size": 1771340,
-      "hash": "8a821f957ee2f07c"
-    },
-    "animatic/frames/festival-master/shot-plan-013b.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-013b.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-013b.png.webp",
-      "mtimeMs": 1789202804003.2659,
-      "size": 1808845,
-      "hash": "cb0578bea7426c82"
-    },
-    "animatic/frames/festival-master/shot-plan-016b.png.webp": {
-      "source": "/assets/animatic/frames/festival-master/shot-plan-016b.png",
-      "thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-016b.png.webp",
-      "mtimeMs": 1789203342160.2632,
-      "size": 2139313,
-      "hash": "d507ef37021c07d4"
-    }
-  }
+	"schemaVersion": "1.0.0",
+	"generatedAt": "2026-09-12T17:38:04.781Z",
+	"entries": {
+		"characters/zao/model-sheet.png.webp": {
+			"source": "/assets/characters/zao/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/zao/model-sheet.png.webp",
+			"mtimeMs": 1787611307000,
+			"size": 2358356,
+			"hash": "04d8e932f68c7e56"
+		},
+		"characters/velari-envoy/model-sheet.png.webp": {
+			"source": "/assets/characters/velari-envoy/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/velari-envoy/model-sheet.png.webp",
+			"mtimeMs": 1789206954611.2122,
+			"size": 2833118,
+			"hash": "83eddad83e064a87"
+		},
+		"characters/voss/model-sheet.png.webp": {
+			"source": "/assets/characters/voss/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/voss/model-sheet.png.webp",
+			"mtimeMs": 1787611377000,
+			"size": 2457380,
+			"hash": "ba66028c0801c18a"
+		},
+		"characters/harlan/model-sheet-v2.png.webp": {
+			"source": "/assets/characters/harlan/model-sheet-v2.png",
+			"thumb": "/assets/_thumbs/characters/harlan/model-sheet-v2.png.webp",
+			"mtimeMs": 1788222333719.6296,
+			"size": 2298346,
+			"hash": "719392421fb58cd4"
+		},
+		"characters/rao/model-sheet.png.webp": {
+			"source": "/assets/characters/rao/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/rao/model-sheet.png.webp",
+			"mtimeMs": 1787611514000,
+			"size": 2263948,
+			"hash": "673bc28bdf6bd0a4"
+		},
+		"characters/sorell/model-sheet.png.webp": {
+			"source": "/assets/characters/sorell/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/sorell/model-sheet.png.webp",
+			"mtimeMs": 1787611580000,
+			"size": 2234049,
+			"hash": "0938a259dabbeb42"
+		},
+		"characters/cael/model-sheet.png.webp": {
+			"source": "/assets/characters/cael/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/cael/model-sheet.png.webp",
+			"mtimeMs": 1787611645000,
+			"size": 2406625,
+			"hash": "9d8b117f31791046"
+		},
+		"characters/proxima-technician/model-sheet.png.webp": {
+			"source": "/assets/characters/proxima-technician/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/proxima-technician/model-sheet.png.webp",
+			"mtimeMs": 1787612704000,
+			"size": 2449705,
+			"hash": "9ee78225dc10376d"
+		},
+		"characters/medical-officer/model-sheet.png.webp": {
+			"source": "/assets/characters/medical-officer/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/medical-officer/model-sheet.png.webp",
+			"mtimeMs": 1787612704000,
+			"size": 2401569,
+			"hash": "0653074dfdd8a06c"
+		},
+		"characters/security-crew/model-sheet.png.webp": {
+			"source": "/assets/characters/security-crew/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/security-crew/model-sheet.png.webp",
+			"mtimeMs": 1787612704000,
+			"size": 2495894,
+			"hash": "e7719c1c49017759"
+		},
+		"characters/okoye/model-sheet.png.webp": {
+			"source": "/assets/characters/okoye/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/okoye/model-sheet.png.webp",
+			"mtimeMs": 1788634410516.1094,
+			"size": 2484978,
+			"hash": "55eb50ab4f3ae90c"
+		},
+		"characters/earth-protesters/model-sheet.png.webp": {
+			"source": "/assets/characters/earth-protesters/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/earth-protesters/model-sheet.png.webp",
+			"mtimeMs": 1787612704000,
+			"size": 2680746,
+			"hash": "78f994f6078b9441"
+		},
+		"characters/manifestante-acheron/model-sheet.png.webp": {
+			"source": "/assets/characters/manifestante-acheron/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/manifestante-acheron/model-sheet.png.webp",
+			"mtimeMs": 1788223775181.9248,
+			"size": 2554292,
+			"hash": "c5a4b5b4c171e34f"
+		},
+		"characters/joven-contacto/model-sheet.png.webp": {
+			"source": "/assets/characters/joven-contacto/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/joven-contacto/model-sheet.png.webp",
+			"mtimeMs": 1788223842944.151,
+			"size": 2399341,
+			"hash": "2daacbb08343b42f"
+		},
+		"characters/periodista/model-sheet.png.webp": {
+			"source": "/assets/characters/periodista/model-sheet.png",
+			"thumb": "/assets/_thumbs/characters/periodista/model-sheet.png.webp",
+			"mtimeMs": 1788223903444.6995,
+			"size": 2295604,
+			"hash": "02e2fc7af0a27d36"
+		},
+		"locations/proxima-station/proxima-with-ardor-berthed.png.webp": {
+			"source": "/assets/locations/proxima-station/proxima-with-ardor-berthed.png",
+			"thumb": "/assets/_thumbs/locations/proxima-station/proxima-with-ardor-berthed.png.webp",
+			"mtimeMs": 1787953223799.7715,
+			"size": 1913399,
+			"hash": "bbc4e48ac8bf9175"
+		},
+		"locations/proxima-dock/concept-sheet-v3.png.webp": {
+			"source": "/assets/locations/proxima-dock/concept-sheet-v3.png",
+			"thumb": "/assets/_thumbs/locations/proxima-dock/concept-sheet-v3.png.webp",
+			"mtimeMs": 1787953223799.7715,
+			"size": 1913399,
+			"hash": "bbc4e48ac8bf9175"
+		},
+		"locations/celestial-ardor-bridge/realistic-reference.png.webp": {
+			"source": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-reference.png.webp",
+			"mtimeMs": 1788159777665.29,
+			"size": 2164946,
+			"hash": "97b36271ea893df0"
+		},
+		"locations/celestial-ardor-bridge/realistic-console-reference.png.webp": {
+			"source": "/assets/locations/celestial-ardor-bridge/realistic-console-reference.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-console-reference.png.webp",
+			"mtimeMs": 1788159777660.5498,
+			"size": 2429966,
+			"hash": "360fe0a9a1be87d1"
+		},
+		"locations/celestial-ardor-bridge/realistic-service-shaft-reference.png.webp": {
+			"source": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png.webp",
+			"mtimeMs": 1788159777670.945,
+			"size": 2135450,
+			"hash": "5bbfca7451215386"
+		},
+		"locations/celestial-ardor-engineering/concept-sheet-v2.png.webp": {
+			"source": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-engineering/concept-sheet-v2.png.webp",
+			"mtimeMs": 1789180956664.585,
+			"size": 2770247,
+			"hash": "c2966d37fd81875a"
+		},
+		"locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png.webp": {
+			"source": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png.webp",
+			"mtimeMs": 1789181097121.7837,
+			"size": 3010915,
+			"hash": "72f931ded8deb904"
+		},
+		"locations/celestial-ardor-inner-shielding-vault/concept-sheet.png.webp": {
+			"source": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png.webp",
+			"mtimeMs": 1789179194950.1726,
+			"size": 2772383,
+			"hash": "96570fc4cdaec98b"
+		},
+		"locations/celestial-ardor-central-access/concept-sheet-v2.png.webp": {
+			"source": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-central-access/concept-sheet-v2.png.webp",
+			"mtimeMs": 1789183057091.106,
+			"size": 2538697,
+			"hash": "f023e3b4f67d1fee"
+		},
+		"locations/celestial-ardor-service-cylinder/concept-sheet-v3.png.webp": {
+			"source": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png.webp",
+			"mtimeMs": 1789183174826.2253,
+			"size": 2667723,
+			"hash": "9945b48b0c5072da"
+		},
+		"locations/diplomatic-core-room/concept-sheet.png.webp": {
+			"source": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+			"thumb": "/assets/_thumbs/locations/diplomatic-core-room/concept-sheet.png.webp",
+			"mtimeMs": 1787614480000,
+			"size": 2853066,
+			"hash": "af7b4f7c378bd5f2"
+		},
+		"locations/velari-wormhole-mouth/concept-sheet.png.webp": {
+			"source": "/assets/locations/velari-wormhole-mouth/concept-sheet.png",
+			"thumb": "/assets/_thumbs/locations/velari-wormhole-mouth/concept-sheet.png.webp",
+			"mtimeMs": 1787614480000,
+			"size": 2199114,
+			"hash": "76f82fa989f1a643"
+		},
+		"locations/velari-station/concept-sheet.png.webp": {
+			"source": "/assets/locations/velari-station/concept-sheet.png",
+			"thumb": "/assets/_thumbs/locations/velari-station/concept-sheet.png.webp",
+			"mtimeMs": 1787614480000,
+			"size": 2369064,
+			"hash": "f387060be26d5df6"
+		},
+		"props/diplomatic-quantum-core/prop-sheet.png.webp": {
+			"source": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/diplomatic-quantum-core/prop-sheet.png.webp",
+			"mtimeMs": 1787614780000,
+			"size": 2632666,
+			"hash": "f19ceade66773e24"
+		},
+		"props/optical-contingency-transmitter/prop-sheet.png.webp": {
+			"source": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/optical-contingency-transmitter/prop-sheet.png.webp",
+			"mtimeMs": 1787614780000,
+			"size": 2604757,
+			"hash": "f1b67c6c13dad727"
+		},
+		"props/proxima-geophysical-impulse-package/prop-sheet.png.webp": {
+			"source": "/assets/props/proxima-geophysical-impulse-package/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/proxima-geophysical-impulse-package/prop-sheet.png.webp",
+			"mtimeMs": 1789179396599.745,
+			"size": 2597030,
+			"hash": "5a85106b82af3b1e"
+		},
+		"props/harlan-wrist-device/prop-sheet.png.webp": {
+			"source": "/assets/props/harlan-wrist-device/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/harlan-wrist-device/prop-sheet.png.webp",
+			"mtimeMs": 1789179460502.5647,
+			"size": 2734691,
+			"hash": "eba9b6aa96c53a17"
+		},
+		"props/time-reference-diagnostic-unit/prop-sheet.png.webp": {
+			"source": "/assets/props/time-reference-diagnostic-unit/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/time-reference-diagnostic-unit/prop-sheet.png.webp",
+			"mtimeMs": 1789179522707.1736,
+			"size": 2617045,
+			"hash": "7f0f2da63790104f"
+		},
+		"props/wired-comms-deck-patch-panel/prop-sheet.png.webp": {
+			"source": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/wired-comms-deck-patch-panel/prop-sheet.png.webp",
+			"mtimeMs": 1789179641014.0627,
+			"size": 2542623,
+			"hash": "d37b87ba36522718"
+		},
+		"props/physical-override-relay/prop-sheet.png.webp": {
+			"source": "/assets/props/physical-override-relay/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/physical-override-relay/prop-sheet.png.webp",
+			"mtimeMs": 1787614780000,
+			"size": 2598615,
+			"hash": "c112af1ebced5ca9"
+		},
+		"props/read-only-greeting-medium/prop-sheet.png.webp": {
+			"source": "/assets/props/read-only-greeting-medium/prop-sheet.png",
+			"thumb": "/assets/_thumbs/props/read-only-greeting-medium/prop-sheet.png.webp",
+			"mtimeMs": 1787614780000,
+			"size": 2686632,
+			"hash": "6a24c8b9c994a122"
+		},
+		"vehicles/celestial-ardor/specs/proportional-reference.png.webp": {
+			"source": "/assets/vehicles/celestial-ardor/specs/proportional-reference.png",
+			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.png.webp",
+			"mtimeMs": 1787717760328.2092,
+			"size": 119603,
+			"hash": "eb60de51f27cfa83"
+		},
+		"vehicles/celestial-ardor/specs/proportional-reference.svg.webp": {
+			"source": "/assets/vehicles/celestial-ardor/specs/proportional-reference.svg",
+			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/specs/proportional-reference.svg.webp",
+			"mtimeMs": 1787717751761.1658,
+			"size": 13575,
+			"hash": "ed3423b134d84e93"
+		},
+		"vehicles/celestial-ardor/celestial-ardor-with-jupiter.png.webp": {
+			"source": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
+			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png.webp",
+			"mtimeMs": 1787953457830.8767,
+			"size": 1995540,
+			"hash": "97ee877f235e3ae5"
+		},
+		"vehicles/celestial-ardor/model-sheet-v2.png.webp": {
+			"source": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
+			"thumb": "/assets/_thumbs/vehicles/celestial-ardor/model-sheet-v2.png.webp",
+			"mtimeMs": 1789234397992.256,
+			"size": 2224605,
+			"hash": "924daa0f329a7963"
+		},
+		"art-bible/scale-references/proxima-ardor-common-scale-reference.png.webp": {
+			"source": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.png",
+			"thumb": "/assets/_thumbs/art-bible/scale-references/proxima-ardor-common-scale-reference.png.webp",
+			"mtimeMs": 1787717803062.8916,
+			"size": 38653,
+			"hash": "4f610bb350ebb17b"
+		},
+		"art-bible/scale-references/proxima-ardor-common-scale-reference.svg.webp": {
+			"source": "/assets/art-bible/scale-references/proxima-ardor-common-scale-reference.svg",
+			"thumb": "/assets/_thumbs/art-bible/scale-references/proxima-ardor-common-scale-reference.svg.webp",
+			"mtimeMs": 1787717797045.9949,
+			"size": 3595,
+			"hash": "b656fe6652920720"
+		},
+		"vehicles/velari-emissary/model-sheet.png.webp": {
+			"source": "/assets/vehicles/velari-emissary/model-sheet.png",
+			"thumb": "/assets/_thumbs/vehicles/velari-emissary/model-sheet.png.webp",
+			"mtimeMs": 1787614780000,
+			"size": 2418213,
+			"hash": "933ec9ecffccc776"
+		},
+		"vehicles/velari-transport-sphere/model-sheet.png.webp": {
+			"source": "/assets/vehicles/velari-transport-sphere/model-sheet.png",
+			"thumb": "/assets/_thumbs/vehicles/velari-transport-sphere/model-sheet.png.webp",
+			"mtimeMs": 1789179698398.205,
+			"size": 2695426,
+			"hash": "7aed06f4832515e4"
+		},
+		"animatic/frames/scene-01/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-01.png.webp",
+			"mtimeMs": 1787953223799.7715,
+			"size": 1913399,
+			"hash": "bbc4e48ac8bf9175"
+		},
+		"animatic/frames/scene-01/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-02.png.webp",
+			"mtimeMs": 1787615879000,
+			"size": 1646134,
+			"hash": "57279461ed1c8447"
+		},
+		"animatic/frames/scene-01/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-03.png.webp",
+			"mtimeMs": 1787616421000,
+			"size": 1788617,
+			"hash": "1b383c72885fb218"
+		},
+		"animatic/frames/scene-01/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-04.png.webp",
+			"mtimeMs": 1787616157000,
+			"size": 1917566,
+			"hash": "c3d5d23cb4de9db7"
+		},
+		"animatic/frames/scene-01/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-05.png.webp",
+			"mtimeMs": 1787616422000,
+			"size": 1666505,
+			"hash": "34797d3dc8c05631"
+		},
+		"animatic/frames/scene-01/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-06.png.webp",
+			"mtimeMs": 1787616207000,
+			"size": 1821882,
+			"hash": "751ed7a1d176d839"
+		},
+		"animatic/frames/scene-01/shot-07.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-07.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-07.png.webp",
+			"mtimeMs": 1787616258000,
+			"size": 1902850,
+			"hash": "315827eea4089893"
+		},
+		"animatic/frames/scene-01/shot-08.png.webp": {
+			"source": "/assets/animatic/frames/scene-01/shot-08.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-01/shot-08.png.webp",
+			"mtimeMs": 1787616304000,
+			"size": 1644572,
+			"hash": "7539c175a212dab7"
+		},
+		"animatic/frames/scene-02/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-02/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-01.png.webp",
+			"mtimeMs": 1787616632000,
+			"size": 1984382,
+			"hash": "83a4cd8eed8a8e2d"
+		},
+		"animatic/frames/scene-02/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-02/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-02.png.webp",
+			"mtimeMs": 1787616706000,
+			"size": 1646708,
+			"hash": "fb2b1f893e02be76"
+		},
+		"animatic/frames/scene-02/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-02/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-03.png.webp",
+			"mtimeMs": 1787616800000,
+			"size": 1583279,
+			"hash": "9e3867880c575e2e"
+		},
+		"animatic/frames/scene-02/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-02/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-02/shot-04.png.webp",
+			"mtimeMs": 1787616896000,
+			"size": 1890242,
+			"hash": "cb7e6b65d1bb3a7e"
+		},
+		"animatic/frames/scene-03/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-03/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-01.png.webp",
+			"mtimeMs": 1787616661000,
+			"size": 1712532,
+			"hash": "7165a076fa16dc10"
+		},
+		"animatic/frames/scene-03/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-03/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-02.png.webp",
+			"mtimeMs": 1787616896000,
+			"size": 1558544,
+			"hash": "bc62bb678b5ed18d"
+		},
+		"animatic/frames/scene-03/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-03/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-03.png.webp",
+			"mtimeMs": 1787616753000,
+			"size": 1673024,
+			"hash": "d025f1222c99ac60"
+		},
+		"animatic/frames/scene-03/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-03/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-03/shot-04.png.webp",
+			"mtimeMs": 1787616847000,
+			"size": 1424925,
+			"hash": "a77735bb3e512010"
+		},
+		"animatic/frames/scene-04/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-04/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-01.png.webp",
+			"mtimeMs": 1787617449000,
+			"size": 1947485,
+			"hash": "3923007c11e90347"
+		},
+		"animatic/frames/scene-04/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-04/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-02.png.webp",
+			"mtimeMs": 1787617449000,
+			"size": 1940161,
+			"hash": "36c0e2eae049f30b"
+		},
+		"animatic/frames/scene-04/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-04/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-03.png.webp",
+			"mtimeMs": 1787617077000,
+			"size": 1701116,
+			"hash": "5f44689795c6d378"
+		},
+		"animatic/frames/scene-04/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-04/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-04.png.webp",
+			"mtimeMs": 1787617134000,
+			"size": 1738241,
+			"hash": "b23d278f3da6f7f9"
+		},
+		"animatic/frames/scene-04/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-04/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-04/shot-05.png.webp",
+			"mtimeMs": 1787617164000,
+			"size": 1836414,
+			"hash": "57de7c8f15e948b9"
+		},
+		"animatic/frames/scene-05/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-01.png.webp",
+			"mtimeMs": 1787617197000,
+			"size": 2087754,
+			"hash": "8d4fd70cea2d5ebc"
+		},
+		"animatic/frames/scene-05/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-02.png.webp",
+			"mtimeMs": 1787617298000,
+			"size": 1944935,
+			"hash": "cc74c8ae8052ed28"
+		},
+		"animatic/frames/scene-05/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-03.png.webp",
+			"mtimeMs": 1787617449000,
+			"size": 1691813,
+			"hash": "b9af12f7b8ee318d"
+		},
+		"animatic/frames/scene-05/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-04.png.webp",
+			"mtimeMs": 1787617407000,
+			"size": 2010361,
+			"hash": "90c7fe94f39090b4"
+		},
+		"animatic/frames/scene-05/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-05.png.webp",
+			"mtimeMs": 1787617347000,
+			"size": 1873702,
+			"hash": "593f77c292142041"
+		},
+		"animatic/frames/scene-05/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-06.png.webp",
+			"mtimeMs": 1787617250000,
+			"size": 1688330,
+			"hash": "5d33da28c9a6f508"
+		},
+		"animatic/frames/scene-05/shot-07.png.webp": {
+			"source": "/assets/animatic/frames/scene-05/shot-07.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-05/shot-07.png.webp",
+			"mtimeMs": 1788161122691.3374,
+			"size": 2575270,
+			"hash": "2517d435e61413d7"
+		},
+		"animatic/frames/scene-06/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-06/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-01.png.webp",
+			"mtimeMs": 1787617748000,
+			"size": 1611210,
+			"hash": "af636a2b272638c5"
+		},
+		"animatic/frames/scene-06/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-06/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-02.png.webp",
+			"mtimeMs": 1787617927000,
+			"size": 1797839,
+			"hash": "1880d78a6d594417"
+		},
+		"animatic/frames/scene-06/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-06/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-03.png.webp",
+			"mtimeMs": 1787617927000,
+			"size": 1589531,
+			"hash": "6430f3a7b4773703"
+		},
+		"animatic/frames/scene-06/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-06/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-04.png.webp",
+			"mtimeMs": 1787617927000,
+			"size": 1513212,
+			"hash": "e773ab0203ec5d25"
+		},
+		"animatic/frames/scene-06/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-06/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-05.png.webp",
+			"mtimeMs": 1787617900000,
+			"size": 1595354,
+			"hash": "7c51a21b52f1eda7"
+		},
+		"animatic/frames/scene-06/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-06/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-06/shot-06.png.webp",
+			"mtimeMs": 1787617795000,
+			"size": 1691010,
+			"hash": "05268f4d8b6186d3"
+		},
+		"animatic/frames/scene-07/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-07/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-01.png.webp",
+			"mtimeMs": 1787617821000,
+			"size": 1370781,
+			"hash": "d82926aa0e75d5ea"
+		},
+		"animatic/frames/scene-07/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-07/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-02.png.webp",
+			"mtimeMs": 1787617489000,
+			"size": 318,
+			"hash": "434d4e216f2a5569"
+		},
+		"animatic/frames/scene-07/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-07/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-03.png.webp",
+			"mtimeMs": 1787617645000,
+			"size": 2144559,
+			"hash": "939612b06c44774a"
+		},
+		"animatic/frames/scene-07/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-07/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-04.png.webp",
+			"mtimeMs": 1787622021000,
+			"size": 1425405,
+			"hash": "537ad8451cc2d75b"
+		},
+		"animatic/frames/scene-07/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-07/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-07/shot-05.png.webp",
+			"mtimeMs": 1787617853000,
+			"size": 1644221,
+			"hash": "69fba3a0f89b3f1a"
+		},
+		"animatic/frames/scene-08/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-08/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-01.png.webp",
+			"mtimeMs": 1787618614000,
+			"size": 1873124,
+			"hash": "5f735ca7f7ff189f"
+		},
+		"animatic/frames/scene-08/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-08/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-02.png.webp",
+			"mtimeMs": 1787618191000,
+			"size": 1461209,
+			"hash": "3334fb1727c4a6b9"
+		},
+		"animatic/frames/scene-08/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-08/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-03.png.webp",
+			"mtimeMs": 1787618614000,
+			"size": 1564319,
+			"hash": "321a78c16e72dc6f"
+		},
+		"animatic/frames/scene-08/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-08/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-08/shot-04.png.webp",
+			"mtimeMs": 1787618313000,
+			"size": 1640801,
+			"hash": "a7327643b78c0451"
+		},
+		"animatic/frames/scene-09/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-09/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-01.png.webp",
+			"mtimeMs": 1787618407000,
+			"size": 1813392,
+			"hash": "7deb74b65be23763"
+		},
+		"animatic/frames/scene-09/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-09/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-02.png.webp",
+			"mtimeMs": 1787618363000,
+			"size": 1611057,
+			"hash": "33ae7059bfdc32a6"
+		},
+		"animatic/frames/scene-09/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-09/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-03.png.webp",
+			"mtimeMs": 1787618457000,
+			"size": 1558162,
+			"hash": "7c48b5878b17b57a"
+		},
+		"animatic/frames/scene-09/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-09/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-04.png.webp",
+			"mtimeMs": 1787618505000,
+			"size": 1602510,
+			"hash": "aad1d93b140c9524"
+		},
+		"animatic/frames/scene-09/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-09/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-05.png.webp",
+			"mtimeMs": 1787618555000,
+			"size": 1632997,
+			"hash": "ce80815b820f6027"
+		},
+		"animatic/frames/scene-09/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-09/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-09/shot-06.png.webp",
+			"mtimeMs": 1787618615000,
+			"size": 1615009,
+			"hash": "42e272230579503d"
+		},
+		"animatic/frames/scene-10/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-10/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-01.png.webp",
+			"mtimeMs": 1787619004000,
+			"size": 1785104,
+			"hash": "d63b2d47524c883f"
+		},
+		"animatic/frames/scene-10/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-10/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-02.png.webp",
+			"mtimeMs": 1787619533000,
+			"size": 1836072,
+			"hash": "c389510079a6ec1c"
+		},
+		"animatic/frames/scene-10/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-10/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-03.png.webp",
+			"mtimeMs": 1787619124000,
+			"size": 1770159,
+			"hash": "e4760599f8bbb8f1"
+		},
+		"animatic/frames/scene-10/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-10/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-04.png.webp",
+			"mtimeMs": 1787619583000,
+			"size": 1777128,
+			"hash": "4bc28ba29f927b66"
+		},
+		"animatic/frames/scene-10/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-10/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-05.png.webp",
+			"mtimeMs": 1787619583000,
+			"size": 1840705,
+			"hash": "94efbc94d66ebc77"
+		},
+		"animatic/frames/scene-10/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-10/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-06.png.webp",
+			"mtimeMs": 1787619316000,
+			"size": 1408569,
+			"hash": "d2f15a6ab4b2e720"
+		},
+		"animatic/frames/scene-10/shot-07.png.webp": {
+			"source": "/assets/animatic/frames/scene-10/shot-07.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-10/shot-07.png.webp",
+			"mtimeMs": 1787618883000,
+			"size": 1878322,
+			"hash": "6574b7ad0fa3c2b2"
+		},
+		"animatic/frames/scene-11/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-11/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-01.png.webp",
+			"mtimeMs": 1787619174000,
+			"size": 1640342,
+			"hash": "3ca624e1c4f88f2c"
+		},
+		"animatic/frames/scene-11/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-11/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-02.png.webp",
+			"mtimeMs": 1787619316000,
+			"size": 1703638,
+			"hash": "553bc0cefaead146"
+		},
+		"animatic/frames/scene-11/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-11/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-03.png.webp",
+			"mtimeMs": 1787619434000,
+			"size": 1616143,
+			"hash": "2daa9a1872aa6897"
+		},
+		"animatic/frames/scene-11/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-11/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-04.png.webp",
+			"mtimeMs": 1787619388000,
+			"size": 1682690,
+			"hash": "68aa1f7efeb99bc0"
+		},
+		"animatic/frames/scene-11/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-11/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-05.png.webp",
+			"mtimeMs": 1787619486000,
+			"size": 1627446,
+			"hash": "6442a855165872d7"
+		},
+		"animatic/frames/scene-11/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-11/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-11/shot-06.png.webp",
+			"mtimeMs": 1787619584000,
+			"size": 1699381,
+			"hash": "68bcd825884d04d7"
+		},
+		"animatic/frames/scene-12/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-01.png.webp",
+			"mtimeMs": 1787620276000,
+			"size": 1463660,
+			"hash": "7966e49cffb86efd"
+		},
+		"animatic/frames/scene-12/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-02.png.webp",
+			"mtimeMs": 1787622577000,
+			"size": 1538052,
+			"hash": "08ffe8a8f97d1b84"
+		},
+		"animatic/frames/scene-12/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-03.png.webp",
+			"mtimeMs": 1787620279000,
+			"size": 1427700,
+			"hash": "9f0b2bec6565d3c8"
+		},
+		"animatic/frames/scene-12/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-04.png.webp",
+			"mtimeMs": 1787622578000,
+			"size": 1521219,
+			"hash": "d009132cd42b411c"
+		},
+		"animatic/frames/scene-12/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-05.png.webp",
+			"mtimeMs": 1787620281000,
+			"size": 1521609,
+			"hash": "8689588c20892b1e"
+		},
+		"animatic/frames/scene-12/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-06.png.webp",
+			"mtimeMs": 1787622779000,
+			"size": 2278323,
+			"hash": "9d6421c50f74d9a4"
+		},
+		"animatic/frames/scene-12/shot-07.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-07.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-07.png.webp",
+			"mtimeMs": 1787620284000,
+			"size": 1588369,
+			"hash": "2403d2146d0daa05"
+		},
+		"animatic/frames/scene-12/shot-08.png.webp": {
+			"source": "/assets/animatic/frames/scene-12/shot-08.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-12/shot-08.png.webp",
+			"mtimeMs": 1787622580000,
+			"size": 1532714,
+			"hash": "892f286e4ce4d5ae"
+		},
+		"animatic/frames/scene-13/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-13/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-01.png.webp",
+			"mtimeMs": 1787620286000,
+			"size": 1556129,
+			"hash": "c9c89f941571e902"
+		},
+		"animatic/frames/scene-13/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-13/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-02.png.webp",
+			"mtimeMs": 1787620288000,
+			"size": 1481778,
+			"hash": "a76f127c69bb09e7"
+		},
+		"animatic/frames/scene-13/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-13/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-03.png.webp",
+			"mtimeMs": 1787620289000,
+			"size": 1891000,
+			"hash": "1330c935a1751cf7"
+		},
+		"animatic/frames/scene-13/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-13/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-04.png.webp",
+			"mtimeMs": 1787622581000,
+			"size": 1742719,
+			"hash": "579be3077263796d"
+		},
+		"animatic/frames/scene-13/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-13/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-13/shot-05.png.webp",
+			"mtimeMs": 1787620291000,
+			"size": 1571467,
+			"hash": "096552510e994648"
+		},
+		"animatic/frames/scene-14/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-01.png.webp",
+			"mtimeMs": 1787621085000,
+			"size": 1887569,
+			"hash": "53bfbe6d1fb76490"
+		},
+		"animatic/frames/scene-14/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-02.png.webp",
+			"mtimeMs": 1787622582000,
+			"size": 1560157,
+			"hash": "1faa7f0f8a756143"
+		},
+		"animatic/frames/scene-14/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-03.png.webp",
+			"mtimeMs": 1787621085000,
+			"size": 1547784,
+			"hash": "80f02aafeb1fca43"
+		},
+		"animatic/frames/scene-14/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-04.png.webp",
+			"mtimeMs": 1787622583000,
+			"size": 1687021,
+			"hash": "d08f384d31c5f488"
+		},
+		"animatic/frames/scene-14/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-05.png.webp",
+			"mtimeMs": 1787621087000,
+			"size": 1780578,
+			"hash": "e61407822eabdf1f"
+		},
+		"animatic/frames/scene-14/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-06.png.webp",
+			"mtimeMs": 1787621088000,
+			"size": 1680847,
+			"hash": "828997006905ab5c"
+		},
+		"animatic/frames/scene-14/shot-07.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-07.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-07.png.webp",
+			"mtimeMs": 1787621089000,
+			"size": 1678525,
+			"hash": "1c59e9d637b074cf"
+		},
+		"animatic/frames/scene-14/shot-08.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-08.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-08.png.webp",
+			"mtimeMs": 1787621090000,
+			"size": 1706536,
+			"hash": "33630169ef157912"
+		},
+		"animatic/frames/scene-14/shot-09.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-09.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-09.png.webp",
+			"mtimeMs": 1787621091000,
+			"size": 1693716,
+			"hash": "6bc68958990bdcdf"
+		},
+		"animatic/frames/scene-14/shot-10.png.webp": {
+			"source": "/assets/animatic/frames/scene-14/shot-10.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-14/shot-10.png.webp",
+			"mtimeMs": 1787622583000,
+			"size": 1787908,
+			"hash": "d57d2f9900481d47"
+		},
+		"animatic/frames/scene-15/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-15/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-01.png.webp",
+			"mtimeMs": 1787622023000,
+			"size": 1877727,
+			"hash": "f41e82488166587f"
+		},
+		"animatic/frames/scene-15/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-15/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-02.png.webp",
+			"mtimeMs": 1787622778000,
+			"size": 2560903,
+			"hash": "a9e08cf289516a72"
+		},
+		"animatic/frames/scene-15/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-15/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-03.png.webp",
+			"mtimeMs": 1787622026000,
+			"size": 1716432,
+			"hash": "56614e7bc7ee1c2c"
+		},
+		"animatic/frames/scene-15/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-15/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-04.png.webp",
+			"mtimeMs": 1787622027000,
+			"size": 1550059,
+			"hash": "57e210be49e3a3ac"
+		},
+		"animatic/frames/scene-15/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-15/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-05.png.webp",
+			"mtimeMs": 1787622028000,
+			"size": 1544660,
+			"hash": "f9ce76c445eba43e"
+		},
+		"animatic/frames/scene-15/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-15/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-06.png.webp",
+			"mtimeMs": 1787622585000,
+			"size": 1672840,
+			"hash": "e6217bc2db62cb7c"
+		},
+		"animatic/frames/scene-15/shot-07.png.webp": {
+			"source": "/assets/animatic/frames/scene-15/shot-07.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-15/shot-07.png.webp",
+			"mtimeMs": 1787622031000,
+			"size": 1788229,
+			"hash": "9358f3b5877039e1"
+		},
+		"animatic/frames/scene-16/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-16/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-16/shot-01.png.webp",
+			"mtimeMs": 1787622032000,
+			"size": 2053328,
+			"hash": "19d8fb3e1585380d"
+		},
+		"animatic/frames/scene-16/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-16/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-16/shot-02.png.webp",
+			"mtimeMs": 1787622033000,
+			"size": 1728007,
+			"hash": "43b55b885f015a67"
+		},
+		"animatic/frames/scene-16/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-16/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-16/shot-03.png.webp",
+			"mtimeMs": 1787622586000,
+			"size": 1667902,
+			"hash": "435096c493e41383"
+		},
+		"animatic/frames/scene-17/shot-01.png.webp": {
+			"source": "/assets/animatic/frames/scene-17/shot-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-01.png.webp",
+			"mtimeMs": 1787622035000,
+			"size": 1718431,
+			"hash": "468d39652d0dbed2"
+		},
+		"animatic/frames/scene-17/shot-02.png.webp": {
+			"source": "/assets/animatic/frames/scene-17/shot-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-02.png.webp",
+			"mtimeMs": 1787622037000,
+			"size": 1524146,
+			"hash": "334dbca76ba5f2a8"
+		},
+		"animatic/frames/scene-17/shot-03.png.webp": {
+			"source": "/assets/animatic/frames/scene-17/shot-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-03.png.webp",
+			"mtimeMs": 1787622038000,
+			"size": 1589997,
+			"hash": "9870d47313403266"
+		},
+		"animatic/frames/scene-17/shot-04.png.webp": {
+			"source": "/assets/animatic/frames/scene-17/shot-04.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-04.png.webp",
+			"mtimeMs": 1787622587000,
+			"size": 1563553,
+			"hash": "f8fe9626e85da244"
+		},
+		"animatic/frames/scene-17/shot-05.png.webp": {
+			"source": "/assets/animatic/frames/scene-17/shot-05.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-05.png.webp",
+			"mtimeMs": 1787622040000,
+			"size": 1433225,
+			"hash": "bf1c36d3640aa0c2"
+		},
+		"animatic/frames/scene-17/shot-06.png.webp": {
+			"source": "/assets/animatic/frames/scene-17/shot-06.png",
+			"thumb": "/assets/_thumbs/animatic/frames/scene-17/shot-06.png.webp",
+			"mtimeMs": 1787622042000,
+			"size": 1634875,
+			"hash": "5de86354a5b458cb"
+		},
+		"animatic/titles/film-title.png.webp": {
+			"source": "/assets/animatic/titles/film-title.png",
+			"thumb": "/assets/_thumbs/animatic/titles/film-title.png.webp",
+			"mtimeMs": 1788159777652.4878,
+			"size": 181701,
+			"hash": "2b2c251ca2f1a56d"
+		},
+		"animatic/titles/trailer-brand.png.webp": {
+			"source": "/assets/animatic/titles/trailer-brand.png",
+			"thumb": "/assets/_thumbs/animatic/titles/trailer-brand.png.webp",
+			"mtimeMs": 1788159777654.5876,
+			"size": 825260,
+			"hash": "64d9ccf9e4726583"
+		},
+		"animatic/titles/trailer-tagline.png.webp": {
+			"source": "/assets/animatic/titles/trailer-tagline.png",
+			"thumb": "/assets/_thumbs/animatic/titles/trailer-tagline.png.webp",
+			"mtimeMs": 1788159777655.114,
+			"size": 165162,
+			"hash": "9deeb84a74f4bdc4"
+		},
+		"animatic/placeholder-missing-frame.png.webp": {
+			"source": "/assets/animatic/placeholder-missing-frame.png",
+			"thumb": "/assets/_thumbs/animatic/placeholder-missing-frame.png.webp",
+			"mtimeMs": 1787727783539.7087,
+			"size": 1174339,
+			"hash": "89df9dd240a9b29c"
+		},
+		"animatic/frames/festival-master/shot-plan-title.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-title.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-title.png.webp",
+			"mtimeMs": 1789203788738.0718,
+			"size": 1953864,
+			"hash": "9d862050b4be781d"
+		},
+		"animatic/frames/festival-master/shot-plan-001.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-001.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-001.png.webp",
+			"mtimeMs": 1789186642312.099,
+			"size": 2008208,
+			"hash": "4c160b3136f22b77"
+		},
+		"animatic/frames/festival-master/shot-plan-002.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-002.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-002.png.webp",
+			"mtimeMs": 1789186729988.4128,
+			"size": 1999854,
+			"hash": "30be3196e202e98a"
+		},
+		"animatic/frames/festival-master/shot-plan-003.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-003.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-003.png.webp",
+			"mtimeMs": 1789186779546.134,
+			"size": 2121483,
+			"hash": "b1b4d4d6c2a8a93c"
+		},
+		"animatic/frames/festival-master/shot-plan-004.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-004.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-004.png.webp",
+			"mtimeMs": 1789186821102.2468,
+			"size": 1859106,
+			"hash": "c7c37b23fda6da09"
+		},
+		"animatic/frames/festival-master/shot-plan-005.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-005.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-005.png.webp",
+			"mtimeMs": 1789186923492.0483,
+			"size": 1970022,
+			"hash": "a364533712e04a1a"
+		},
+		"animatic/frames/festival-master/shot-plan-006.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-006.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-006.png.webp",
+			"mtimeMs": 1789186974031.8655,
+			"size": 2660573,
+			"hash": "49ca5bab173dcc60"
+		},
+		"animatic/frames/festival-master/shot-plan-007.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-007.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-007.png.webp",
+			"mtimeMs": 1789187072861.6428,
+			"size": 2378692,
+			"hash": "e3c4ae602e418ca8"
+		},
+		"animatic/frames/festival-master/shot-plan-008.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-008.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-008.png.webp",
+			"mtimeMs": 1789187178394.1853,
+			"size": 2202453,
+			"hash": "8d13b9201213a959"
+		},
+		"animatic/frames/festival-master/shot-plan-009.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-009.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-009.png.webp",
+			"mtimeMs": 1789187283196.525,
+			"size": 2434197,
+			"hash": "7aed9ddbe59f7994"
+		},
+		"animatic/frames/festival-master/shot-plan-010.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-010.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-010.png.webp",
+			"mtimeMs": 1789187435761.3818,
+			"size": 2373562,
+			"hash": "fc01ec64bf980c39"
+		},
+		"animatic/frames/festival-master/shot-plan-011.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-011.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-011.png.webp",
+			"mtimeMs": 1789187484119.2942,
+			"size": 2136290,
+			"hash": "5e8af760c9e077b4"
+		},
+		"animatic/frames/festival-master/shot-plan-012.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-012.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-012.png.webp",
+			"mtimeMs": 1789187532991.2432,
+			"size": 2177685,
+			"hash": "fe215dcdfb4ff159"
+		},
+		"animatic/frames/festival-master/shot-plan-013.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-013.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-013.png.webp",
+			"mtimeMs": 1789187630146.7468,
+			"size": 2580228,
+			"hash": "7ef6959ceadb772c"
+		},
+		"animatic/frames/festival-master/shot-plan-014.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-014.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-014.png.webp",
+			"mtimeMs": 1789187682444.5425,
+			"size": 2094522,
+			"hash": "7e0ed7b3786709f2"
+		},
+		"animatic/frames/festival-master/shot-plan-015.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-015.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-015.png.webp",
+			"mtimeMs": 1789187867240.5007,
+			"size": 2364253,
+			"hash": "0aeb8a436a627d1b"
+		},
+		"animatic/frames/festival-master/shot-plan-016.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-016.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-016.png.webp",
+			"mtimeMs": 1789187913468.7324,
+			"size": 2310814,
+			"hash": "73ceaf67e4d807ee"
+		},
+		"animatic/frames/festival-master/shot-plan-017.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-017.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-017.png.webp",
+			"mtimeMs": 1789188010484.4612,
+			"size": 2150437,
+			"hash": "c47700a5fa157b70"
+		},
+		"animatic/frames/festival-master/shot-plan-018.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-018.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-018.png.webp",
+			"mtimeMs": 1789212704697.4236,
+			"size": 2292438,
+			"hash": "5c9c891cc843172a"
+		},
+		"animatic/frames/festival-master/shot-plan-019.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-019.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-019.png.webp",
+			"mtimeMs": 1789212815310.965,
+			"size": 2394648,
+			"hash": "88bd9b142f894748"
+		},
+		"animatic/frames/festival-master/shot-plan-020.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-020.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-020.png.webp",
+			"mtimeMs": 1789212868318.152,
+			"size": 2602305,
+			"hash": "00c7ec13044b4cf7"
+		},
+		"animatic/frames/festival-master/shot-plan-021.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-021.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-021.png.webp",
+			"mtimeMs": 1789212922787.1758,
+			"size": 2155195,
+			"hash": "18b41c02e06e8359"
+		},
+		"animatic/frames/festival-master/shot-plan-022.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-022.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-022.png.webp",
+			"mtimeMs": 1789212970735.7312,
+			"size": 1980317,
+			"hash": "505046b614084044"
+		},
+		"animatic/frames/festival-master/shot-plan-023.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-023.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-023.png.webp",
+			"mtimeMs": 1789213103782.5422,
+			"size": 2103439,
+			"hash": "f539af3c128bd6ed"
+		},
+		"animatic/frames/festival-master/shot-plan-024.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-024.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-024.png.webp",
+			"mtimeMs": 1789213199202.511,
+			"size": 2188837,
+			"hash": "6ecef43c03d2510c"
+		},
+		"animatic/frames/festival-master/shot-plan-025.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-025.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-025.png.webp",
+			"mtimeMs": 1789213298579.5835,
+			"size": 2055702,
+			"hash": "f5d44ee88373f1d2"
+		},
+		"animatic/frames/festival-master/shot-plan-026.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-026.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-026.png.webp",
+			"mtimeMs": 1789189496640.4478,
+			"size": 2378440,
+			"hash": "48b3202ae3f5b952"
+		},
+		"animatic/frames/festival-master/shot-plan-027.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-027.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-027.png.webp",
+			"mtimeMs": 1789189545360.734,
+			"size": 2297184,
+			"hash": "a83cd6a284a94dc8"
+		},
+		"animatic/frames/festival-master/shot-plan-028.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-028.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-028.png.webp",
+			"mtimeMs": 1789189590814.601,
+			"size": 2442389,
+			"hash": "06bb1a4ee0f47c5f"
+		},
+		"animatic/frames/festival-master/shot-plan-029.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-029.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-029.png.webp",
+			"mtimeMs": 1789213398167.0356,
+			"size": 2293430,
+			"hash": "00020d637ff2e24d"
+		},
+		"animatic/frames/festival-master/shot-plan-030.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-030.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-030.png.webp",
+			"mtimeMs": 1789213498878.4067,
+			"size": 2381224,
+			"hash": "00d5d948151d057b"
+		},
+		"animatic/frames/festival-master/shot-plan-031.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-031.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-031.png.webp",
+			"mtimeMs": 1789213665430.422,
+			"size": 2278114,
+			"hash": "f0f1122b4461321a"
+		},
+		"animatic/frames/festival-master/shot-plan-032.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-032.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-032.png.webp",
+			"mtimeMs": 1789213766244.3948,
+			"size": 2282743,
+			"hash": "a39d50042a760e24"
+		},
+		"animatic/frames/festival-master/shot-plan-033.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-033.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-033.png.webp",
+			"mtimeMs": 1789189946720.755,
+			"size": 2205061,
+			"hash": "748a2b03d7ecdc1e"
+		},
+		"animatic/frames/festival-master/shot-plan-034.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-034.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-034.png.webp",
+			"mtimeMs": 1789189989966.7278,
+			"size": 2262890,
+			"hash": "d8a3f832510bc292"
+		},
+		"animatic/frames/festival-master/shot-plan-035.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-035.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-035.png.webp",
+			"mtimeMs": 1789190038336.1145,
+			"size": 2370860,
+			"hash": "523df60aeacaef5f"
+		},
+		"animatic/frames/festival-master/shot-plan-036.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-036.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-036.png.webp",
+			"mtimeMs": 1789213872676.232,
+			"size": 2134874,
+			"hash": "1705922b61abbaaa"
+		},
+		"animatic/frames/festival-master/shot-plan-037.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-037.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-037.png.webp",
+			"mtimeMs": 1789213974750.4417,
+			"size": 2397113,
+			"hash": "2e05258bec84013b"
+		},
+		"animatic/frames/festival-master/shot-plan-038.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-038.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-038.png.webp",
+			"mtimeMs": 1789214076620.1572,
+			"size": 2107788,
+			"hash": "ba9dcb139f97a5e9"
+		},
+		"animatic/frames/festival-master/shot-plan-039.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-039.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-039.png.webp",
+			"mtimeMs": 1789190352506.2817,
+			"size": 2447224,
+			"hash": "eaca4c4018f48d11"
+		},
+		"animatic/frames/festival-master/shot-plan-040.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-040.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-040.png.webp",
+			"mtimeMs": 1789200916683.1992,
+			"size": 2100213,
+			"hash": "30528f13a73e12ff"
+		},
+		"animatic/frames/festival-master/shot-plan-041.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-041.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-041.png.webp",
+			"mtimeMs": 1789201025425.5303,
+			"size": 2510409,
+			"hash": "62b9db0ed281ff9a"
+		},
+		"animatic/frames/festival-master/shot-plan-042.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-042.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-042.png.webp",
+			"mtimeMs": 1789191068781.5244,
+			"size": 2219773,
+			"hash": "d901d045dcfeab25"
+		},
+		"animatic/frames/festival-master/shot-plan-043.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-043.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-043.png.webp",
+			"mtimeMs": 1789191118933.4138,
+			"size": 2170276,
+			"hash": "7cfd8a7e878a762b"
+		},
+		"animatic/frames/festival-master/shot-plan-044.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-044.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-044.png.webp",
+			"mtimeMs": 1789191171360.2283,
+			"size": 2400494,
+			"hash": "a23903ab126e925b"
+		},
+		"animatic/frames/festival-master/shot-plan-045.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-045.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-045.png.webp",
+			"mtimeMs": 1789191223417.6384,
+			"size": 2240153,
+			"hash": "d96d0053562b8d2d"
+		},
+		"animatic/frames/festival-master/shot-plan-046.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-046.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-046.png.webp",
+			"mtimeMs": 1789214232536.1335,
+			"size": 2032743,
+			"hash": "5a673b08b97ba00b"
+		},
+		"animatic/frames/festival-master/shot-plan-047.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-047.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-047.png.webp",
+			"mtimeMs": 1789191351173.3474,
+			"size": 2075105,
+			"hash": "8c61f567678d97ac"
+		},
+		"animatic/frames/festival-master/shot-plan-048.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-048.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-048.png.webp",
+			"mtimeMs": 1789191398282.8071,
+			"size": 2214965,
+			"hash": "ff007f1f44765bf6"
+		},
+		"animatic/frames/festival-master/shot-plan-049.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-049.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-049.png.webp",
+			"mtimeMs": 1789191445371.8237,
+			"size": 2161665,
+			"hash": "ac95d873caf38414"
+		},
+		"animatic/frames/festival-master/shot-plan-050.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-050.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-050.png.webp",
+			"mtimeMs": 1789191493993.0317,
+			"size": 2305963,
+			"hash": "31871632dd6bf6d8"
+		},
+		"animatic/frames/festival-master/shot-plan-051.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-051.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-051.png.webp",
+			"mtimeMs": 1789191582469.909,
+			"size": 2264300,
+			"hash": "5aec763d586b8054"
+		},
+		"animatic/frames/festival-master/shot-plan-052.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-052.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-052.png.webp",
+			"mtimeMs": 1789191633969.6084,
+			"size": 2005551,
+			"hash": "431320d0f10c4e19"
+		},
+		"animatic/frames/festival-master/shot-plan-053.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-053.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-053.png.webp",
+			"mtimeMs": 1789191679817.6558,
+			"size": 2046049,
+			"hash": "7b0837f2291d0f5d"
+		},
+		"animatic/frames/festival-master/shot-plan-054.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-054.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-054.png.webp",
+			"mtimeMs": 1789191729363.352,
+			"size": 2453229,
+			"hash": "922928a843abb7fc"
+		},
+		"animatic/frames/festival-master/shot-plan-055.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-055.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-055.png.webp",
+			"mtimeMs": 1789191774132.0847,
+			"size": 2202042,
+			"hash": "3dd86d72615726c4"
+		},
+		"animatic/frames/festival-master/shot-plan-056.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-056.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-056.png.webp",
+			"mtimeMs": 1789191868665.16,
+			"size": 2249077,
+			"hash": "5bafccee848fec27"
+		},
+		"animatic/frames/festival-master/shot-plan-057.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-057.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-057.png.webp",
+			"mtimeMs": 1789214286812.0273,
+			"size": 2070047,
+			"hash": "e724acf089cb3165"
+		},
+		"animatic/frames/festival-master/shot-plan-058.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-058.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-058.png.webp",
+			"mtimeMs": 1789191967764.5317,
+			"size": 1969070,
+			"hash": "88b2ef868f93ad92"
+		},
+		"animatic/frames/festival-master/shot-plan-059.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-059.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-059.png.webp",
+			"mtimeMs": 1789192009188.6987,
+			"size": 2019746,
+			"hash": "57577739d68150d4"
+		},
+		"animatic/frames/festival-master/shot-plan-060.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-060.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-060.png.webp",
+			"mtimeMs": 1789192062307.5474,
+			"size": 2087738,
+			"hash": "5505290e96b34ce8"
+		},
+		"animatic/frames/festival-master/shot-plan-061.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-061.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-061.png.webp",
+			"mtimeMs": 1789193710333.642,
+			"size": 2040992,
+			"hash": "4d49431ec0cc4a46"
+		},
+		"animatic/frames/festival-master/shot-plan-062.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-062.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-062.png.webp",
+			"mtimeMs": 1789193754326.4714,
+			"size": 2484595,
+			"hash": "c0f6690223bcdd55"
+		},
+		"animatic/frames/festival-master/shot-plan-063.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-063.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-063.png.webp",
+			"mtimeMs": 1789193796091.567,
+			"size": 2042936,
+			"hash": "c420ede299050362"
+		},
+		"animatic/frames/festival-master/shot-plan-064.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-064.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-064.png.webp",
+			"mtimeMs": 1789193848376.8232,
+			"size": 2185169,
+			"hash": "0ba75241ae986772"
+		},
+		"animatic/frames/festival-master/shot-plan-065.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-065.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-065.png.webp",
+			"mtimeMs": 1789193896053.173,
+			"size": 2126806,
+			"hash": "6b010f26972b8f94"
+		},
+		"animatic/frames/festival-master/shot-plan-066.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-066.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-066.png.webp",
+			"mtimeMs": 1789193984720.7295,
+			"size": 2097019,
+			"hash": "fdd770e639803c5a"
+		},
+		"animatic/frames/festival-master/shot-plan-067.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-067.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-067.png.webp",
+			"mtimeMs": 1789194032075.3306,
+			"size": 2145766,
+			"hash": "35218d3cfe33e7d9"
+		},
+		"animatic/frames/festival-master/shot-plan-068.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-068.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-068.png.webp",
+			"mtimeMs": 1789194081624.3254,
+			"size": 2257923,
+			"hash": "28f0ba008de9caa2"
+		},
+		"animatic/frames/festival-master/shot-plan-069.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-069.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-069.png.webp",
+			"mtimeMs": 1789194129091.571,
+			"size": 2163494,
+			"hash": "dae54cbabe5f2ad4"
+		},
+		"animatic/frames/festival-master/shot-plan-070.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-070.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-070.png.webp",
+			"mtimeMs": 1789194174409.9736,
+			"size": 2424015,
+			"hash": "1bab4bbae0776767"
+		},
+		"animatic/frames/festival-master/shot-plan-071.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-071.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-071.png.webp",
+			"mtimeMs": 1789194257568.4868,
+			"size": 2075754,
+			"hash": "72a9d99fee17799d"
+		},
+		"animatic/frames/festival-master/shot-plan-072.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-072.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-072.png.webp",
+			"mtimeMs": 1789194295455.491,
+			"size": 2205144,
+			"hash": "e4649d30d4a90c1a"
+		},
+		"animatic/frames/festival-master/shot-plan-073.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-073.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-073.png.webp",
+			"mtimeMs": 1789194344759.312,
+			"size": 2353540,
+			"hash": "34e5026aa95f35f0"
+		},
+		"animatic/frames/festival-master/shot-plan-074.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-074.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-074.png.webp",
+			"mtimeMs": 1789194395102,
+			"size": 2306088,
+			"hash": "6cf86ccb90d25588"
+		},
+		"animatic/frames/festival-master/shot-plan-075.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-075.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-075.png.webp",
+			"mtimeMs": 1789194441696.2537,
+			"size": 2337615,
+			"hash": "bc58156c6a375625"
+		},
+		"animatic/frames/festival-master/shot-plan-076.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-076.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-076.png.webp",
+			"mtimeMs": 1789194528181.3916,
+			"size": 2643817,
+			"hash": "50de507ea76a0e9d"
+		},
+		"animatic/frames/festival-master/shot-plan-077.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-077.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-077.png.webp",
+			"mtimeMs": 1789194641002.6753,
+			"size": 2392785,
+			"hash": "5bb55de076a158b0"
+		},
+		"animatic/frames/festival-master/shot-plan-078.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-078.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-078.png.webp",
+			"mtimeMs": 1789194697976.697,
+			"size": 2569074,
+			"hash": "91c555e540e8c819"
+		},
+		"animatic/frames/festival-master/shot-plan-079.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-079.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-079.png.webp",
+			"mtimeMs": 1789194805152.0713,
+			"size": 2420762,
+			"hash": "2fe89f7e7c22aee7"
+		},
+		"animatic/frames/festival-master/shot-plan-080.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-080.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-080.png.webp",
+			"mtimeMs": 1789214396945.0505,
+			"size": 2299237,
+			"hash": "1596637f06d01983"
+		},
+		"animatic/frames/festival-master/shot-plan-040b.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-040b.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-040b.png.webp",
+			"mtimeMs": 1789200975294.7754,
+			"size": 2578228,
+			"hash": "6888da4397eff100"
+		},
+		"animatic/frames/festival-master/shot-plan-081.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-081.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-081.png.webp",
+			"mtimeMs": 1789214452730.3887,
+			"size": 2253246,
+			"hash": "3fe69dc0a3c13e7d"
+		},
+		"animatic/frames/festival-master/shot-plan-082.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-082.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-082.png.webp",
+			"mtimeMs": 1789214512655.886,
+			"size": 2212627,
+			"hash": "3773adbda3dbc29e"
+		},
+		"animatic/frames/festival-master/shot-plan-083.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-083.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-083.png.webp",
+			"mtimeMs": 1789214627791.8586,
+			"size": 2268791,
+			"hash": "975013fcc919da45"
+		},
+		"animatic/frames/festival-master/shot-plan-084.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-084.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-084.png.webp",
+			"mtimeMs": 1789214743218.302,
+			"size": 2101388,
+			"hash": "bd34298e9c6e8a03"
+		},
+		"animatic/frames/festival-master/shot-plan-085.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-085.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-085.png.webp",
+			"mtimeMs": 1789214853391.8174,
+			"size": 2048697,
+			"hash": "91069b3e600a9af1"
+		},
+		"animatic/frames/festival-master/shot-plan-086.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-086.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-086.png.webp",
+			"mtimeMs": 1789214970248.683,
+			"size": 2196757,
+			"hash": "cb3e088c21d154c2"
+		},
+		"animatic/frames/festival-master/shot-plan-087.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-087.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-087.png.webp",
+			"mtimeMs": 1789215024202.1946,
+			"size": 2132605,
+			"hash": "cc072efb801f0bc3"
+		},
+		"animatic/frames/festival-master/shot-plan-088.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-088.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-088.png.webp",
+			"mtimeMs": 1789215737800.9626,
+			"size": 1979126,
+			"hash": "53ddbdc1a330c0ea"
+		},
+		"animatic/frames/festival-master/shot-plan-089.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-089.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-089.png.webp",
+			"mtimeMs": 1789215841032.3577,
+			"size": 2040751,
+			"hash": "057d3477118051c2"
+		},
+		"animatic/frames/festival-master/shot-plan-090.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-090.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-090.png.webp",
+			"mtimeMs": 1789202117217.637,
+			"size": 2028923,
+			"hash": "847ccfea561c7c9b"
+		},
+		"animatic/frames/festival-master/shot-plan-091.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-091.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-091.png.webp",
+			"mtimeMs": 1789215941559.8928,
+			"size": 2540129,
+			"hash": "d58032c00629e84b"
+		},
+		"animatic/frames/festival-master/shot-plan-092.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-092.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-092.png.webp",
+			"mtimeMs": 1789215996620.6917,
+			"size": 2837707,
+			"hash": "baf6cf73fffb6e4e"
+		},
+		"animatic/frames/festival-master/shot-plan-093.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-093.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-093.png.webp",
+			"mtimeMs": 1789215466399.0059,
+			"size": 2134552,
+			"hash": "36d9fb5925de9764"
+		},
+		"animatic/frames/festival-master/shot-plan-094.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-094.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-094.png.webp",
+			"mtimeMs": 1789216342266.8506,
+			"size": 2201536,
+			"hash": "ca2b8449b5bfa66e"
+		},
+		"animatic/frames/festival-master/shot-plan-095.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-095.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-095.png.webp",
+			"mtimeMs": 1789216453808.5945,
+			"size": 2463192,
+			"hash": "12c4e8f690a63de0"
+		},
+		"animatic/frames/festival-master/shot-plan-096.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-096.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-096.png.webp",
+			"mtimeMs": 1789216522005.0857,
+			"size": 2399290,
+			"hash": "45963ee6e1acdf0f"
+		},
+		"animatic/frames/festival-master/shot-plan-credit-01.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-credit-01.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-credit-01.png.webp",
+			"mtimeMs": 1789202574712.266,
+			"size": 2161548,
+			"hash": "604438ca044c1b9c"
+		},
+		"animatic/frames/festival-master/shot-plan-credit-02.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-credit-02.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-credit-02.png.webp",
+			"mtimeMs": 1789202618109.6223,
+			"size": 2155410,
+			"hash": "49d9fc6d60864b69"
+		},
+		"animatic/frames/festival-master/shot-plan-credit-03.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-credit-03.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-credit-03.png.webp",
+			"mtimeMs": 1789202663416.5593,
+			"size": 1771340,
+			"hash": "8a821f957ee2f07c"
+		},
+		"animatic/frames/festival-master/shot-plan-013b.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-013b.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-013b.png.webp",
+			"mtimeMs": 1789234470287.859,
+			"size": 1832481,
+			"hash": "bfda3d57170b5d1d"
+		},
+		"animatic/frames/festival-master/shot-plan-016b.png.webp": {
+			"source": "/assets/animatic/frames/festival-master/shot-plan-016b.png",
+			"thumb": "/assets/_thumbs/animatic/frames/festival-master/shot-plan-016b.png.webp",
+			"mtimeMs": 1789234606971.5266,
+			"size": 2089805,
+			"hash": "adf13bf741b4de38"
+		}
+	}
 }

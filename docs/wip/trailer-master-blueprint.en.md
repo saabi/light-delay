@@ -24,7 +24,7 @@ editorially condensed on the page while playing the fuller source take:
 | Trailer cue | Source cue | Trailer copy | Source performance |
 | --- | --- | --- | --- |
 | `cue-a-03` | `cue-0005` | "We answer carefully. We listen. Then we judge." | "They gave us a primer and waited. We answer carefully, we listen, then we judge." |
-| `cue-b-02` | `cue-0042` | "A geophysical impulse package. Multi-megaton." | "Geophysical impulse package… one point three tonnes." (`cue-0043` is not linked) |
+| `cue-b-02` | `cue-0042` | "A geophysical impulse package. Multi-megaton." | "This is an impulse warhead for geophysical research from the Proxima… one point three tonnes." (`cue-0043` is not linked) |
 | `cue-e-01` | `cue-0126` | "If this reaches you — I found a weapon in the shielded vault." | The full recorded vault warning |
 | `cue-f-01` | `cue-0167` | "It's keyed to the ship's own clock." | The full clock / time-reference explanation |
 

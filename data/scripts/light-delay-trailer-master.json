@@ -5,13 +5,13 @@
     "projectId": "project:light-delay",
     "continuityId": "continuity:light-delay-master-wip",
     "title": {
-      "es": "Light Delay — Tráiler (~88s, WIP)",
-      "en": "Light Delay — Trailer (~88s, WIP)"
+      "es": "Light Delay — Tráiler (~89s, WIP)",
+      "en": "Light Delay — Trailer (~89s, WIP)"
     },
     "version": "0.1.0-draft",
     "status": "draft",
     "kind": "trailer",
-    "targetDurationMs": 87640,
+    "targetDurationMs": 88840,
     "lineage": {
       "sourceScriptId": "script:light-delay-festival-master",
       "relationship": "trailer",
@@ -140,7 +140,7 @@
         "trailer-master:beat-b-01"
       ],
       "shotIds": [],
-      "targetDurationMs": 8200
+      "targetDurationMs": 9400
     },
     {
       "id": "trailer-master:scene-c",
@@ -602,7 +602,7 @@
           "en": {
             "spokenText": "A geophysical impulse package. Multi-megaton.",
             "status": "source",
-            "estimatedDurationMs": 4620,
+            "estimatedDurationMs": 5820,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0042",
             "delivery": "barely audible, reading only what she must confirm",
             "voiceProfileId": "voice:zao-es"
@@ -1480,12 +1480,12 @@
           "en": "Locked, preserving continuity with the source shot."
         }
       },
-      "durationMs": 4620,
+      "durationMs": 5820,
       "cuePlacements": [
         {
           "cueId": "trailer-master:cue-b-02",
           "atMs": 0,
-          "durationMs": 4620
+          "durationMs": 5820
         }
       ],
       "takeIds": [
@@ -2492,7 +2492,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Zao reads the controller aloud, shocked and afraid: \"A geophysical impulse package. Multi-megaton.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Zao (matching her established reference sheet). Detail: The controller display reading GEOPHYSICAL IMPULSE PACKAGE, MASS 1.3 TONNES, YIELD MULTI-MEGATON, English digits and labels only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Zao reads the controller aloud, shocked and afraid:. Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Zao (matching her established reference sheet). Detail. The controller display reading GEOPHYSICAL IMPULSE PACKAGE, MASS 1.3 TONNES, YIELD MULTI-MEGATON, English digits and labels only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -2507,7 +2507,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan rises unseen from the recessed service hatch as the bridge crew faces forward and hears Zao open the channel: \"Bridge, Zao. I have found a grave attempt to sabotage the mission—\" Composition: INSERT framing. Camera: Dolly; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:character-sorell-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan rises unseen from the recessed service hatch as the bridge crew faces forward and hears Zao open the channel. Composition: INSERT framing. Camera: Dolly; orthogonal, legible insert framing. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:character-sorell-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -2524,7 +2524,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan touches his wrist device only when the word \"sabotage\" lands; the channel dies mid-word and he withdraws into the service hatch before anyone turns. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan touches his wrist device only when that accusation lands; the channel dies mid-word and he withdraws into the service hatch before anyone turns. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -2578,7 +2578,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Elin connects the external timing reference beside the bomb: \"It's keyed to the ship's own clock.\". Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Elin Rao (matching her established reference sheet). Detail: A compact diagnostic instrument wired directly into the bomb controller's timing input, English digits only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Elin connects the external timing reference beside the bomb:. Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Elin Rao (matching her established reference sheet). Detail. A compact diagnostic instrument wired directly into the bomb controller's timing input, English digits only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-rao-sheet",
@@ -2594,7 +2594,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The display counts 4—3—2—1, then jumps upward. Voss asks, \"Status?\" Elin answers, \"It isn’t disarmed. It just isn’t going off here.\" Composition: OTS framing. Camera: Tracking; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-rao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:character-okoye-sheet, asset:character-harlan-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The display counts 4—3—2—1, then jumps upward. Voss. Elin answers, Composition: OTS framing. Camera: Tracking; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-rao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:character-okoye-sheet, asset:character-harlan-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-rao-sheet",
