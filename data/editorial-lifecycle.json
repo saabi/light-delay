@@ -53,8 +53,8 @@
       "relevance": "required",
       "disposition": "retain",
       "reason": {
-        "es": "Derivado Festival WIP autorizado y fijado a la revisión 19 del master; contiene escaleta, guion fuente en inglés, ledger causal y blueprint de storyboard sin tomas de producción.",
-        "en": "Authorized Festival WIP derivative pinned to master revision 19; it contains an outline, English-source screenplay, causal ledger, and storyboard blueprint without production shots."
+        "es": "Derivado Festival WIP autorizado (fijado a la revisión del master en derivation); escaleta, guion EN, cues con implementsFactIds hacia master:fact-*, ledger causal obsoleto (procedencia), blueprint de storyboard.",
+        "en": "Authorized Festival WIP derivative (pinned via outline.derivation to the master revision); outline, English screenplay, cues with implementsFactIds → master:fact-*, obsolete continuity ledger (provenance only), storyboard blueprint."
       },
       "refs": [
         { "kind": "script", "id": "script:light-delay-festival-master" },
@@ -174,7 +174,6 @@
         { "kind": "entity", "id": "location:proxima-station" },
         { "kind": "entity", "id": "location:proxima-dock" },
         { "kind": "entity", "id": "location:celestial-ardor-bridge" },
-        { "kind": "entity", "id": "location:celestial-ardor-command-vestibule" },
         { "kind": "entity", "id": "location:celestial-ardor-central-access" },
         { "kind": "entity", "id": "location:celestial-ardor-service-cylinder" },
         { "kind": "entity", "id": "location:celestial-ardor-engineering" },

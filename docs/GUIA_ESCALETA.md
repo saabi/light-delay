@@ -37,6 +37,8 @@ Mientras el master siga incompleto, no crear ni ampliar derivados salvo autoriza
 
 Para un derivado con fidelidad `complete_causal_chain`, mapear cada hito fuente mediante un `sourceRefs` de tipo `outline`. La cobertura automática evita omisiones silenciosas; no autoriza resúmenes vacíos ni reemplaza la lectura causal. Si cambia la revisión fuente, actualizar `reviewStatus` a `stale` o completar una nueva revisión comparada antes de continuar con guion o animatic.
 
+Tras editar prosa del master, reconstruir hechos/conocimiento/acciones según [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](production/CAUSAL_AND_MEANING_PIPELINE.md) y dejar verde `npm run report:causal-structure` antes del meaning audit. Enlazar cues con `implementsFactIds` → `master:fact-*`; no acuñar ids de hechos locales del cut.
+
 ## 3. Cobertura posterior
 
 La cobertura no define la historia: verifica dónde fue implementada.

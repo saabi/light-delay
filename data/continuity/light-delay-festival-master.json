@@ -3,11 +3,11 @@
   "ledger": {
     "id": "ledger:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
-    "status": "draft",
-    "sourceDocument": "data/outlines/light-delay-festival-master.json",
+    "status": "obsolete",
+    "sourceDocument": "data/outlines/light-delay-master-narrative.json",
     "notes": {
-      "es": "Ledger de estados de conocimiento para el guion Festival derivado del master. La evidencia de tomas queda ausente hasta que se creen las tomas.",
-      "en": "Knowledge-state ledger for the master-derived Festival screenplay. Shot evidence remains absent until shots are authored."
+      "es": "Obsoleto como autoría: los hechos causales viven en la escaleta maestra (master:fact-*). Conservado sólo como procedencia de la migración.",
+      "en": "Obsolete as authorship: causal facts now live on the master outline (master:fact-*). Retained only as migration provenance."
     }
   },
   "facts": [

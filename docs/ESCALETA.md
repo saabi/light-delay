@@ -34,6 +34,8 @@ Tanto `framing.blocks` como `story.body` usan bloques semánticos `paragraph`, `
 
 La explicación debe nombrar el vínculo concreto. No basta con enlazar automáticamente cada paso con el anterior.
 
+En la escaleta **maestra**, la capa máquina comprobable son `facts`, `knowledgeEvents` y `actionRequirements` (`master:fact-*`), más `requiresFactIds` / `revealsFactIds` en pasos. Los guiones derivados enlazan con `cue.implementsFactIds`. Procedimiento y comandos: [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](production/CAUSAL_AND_MEANING_PIPELINE.md). Los ledgers de continuidad por cut no son SoT de hechos tras la migración Festival→master.
+
 ## Cobertura independiente
 
 `coverage` es opcional porque la escaleta puede preceder a toda implementación. Cada detalle puede declarar por separado `treatment`, `script` y `animatic`, con estados `not_started`, `partial`, `covered`, `deferred` o `not_applicable`. Un estado `covered` requiere evidencia: referencias narrativas para tratamiento/guion y `shotIds` para animatic.
@@ -52,11 +54,15 @@ npm run report:outline-gaps -- --target animatic
 npm run report:outline-readability
 npm run report:outline-story
 npm run report:outline-derivation
+npm run report:causal-structure
+npm run report:meaning-audit
 npm run report:dialogue-style
 npm run check:trailer-spoilers
 ```
 
 `report:outline-story` exporta synopsis, framing y los hitos `story`, pero excluye `detail`: es la lectura narrativa que debe funcionar sin abrir implementación. `check:trailer-spoilers` falla si el guion o la escaleta del avance identifican al culpable, confirman el envío/recepción o asientan positivamente la muerte de Zao.
+
+`report:causal-structure` valida el grafo de hechos del master y los bindings Festival (`implementsFactIds`). `report:causal-validity` sólo aplica a ledgers de cuts deprecados/obsoletos (no es el check vivo de Festival-master).
 
 `report:outline-derivation` compara la revisión fijada con la fuente vigente y verifica la cobertura de los hitos fuente. No juzga por sí solo si una compresión conserva toda la información causal: esa comprobación sigue requiriendo leer el informe `outline-story` de corrido.
 

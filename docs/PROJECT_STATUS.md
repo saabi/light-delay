@@ -1,5 +1,109 @@
 # Estado del proyecto
 
+## 2026-09-13 — Meaning-audit cue rebinds (English source)
+
+- Festival-master fact→cue bindings corrected for nine meaning-audit findings (content-verified, not adjacency). Master: b5 actionRequirement + p2 knowledgeEvents; revision 23.
+- Structure remains green; low/storyboard-only findings deferred.
+
+## 2026-09-13 — Festival Master storyboard refresh (English source)
+
+- Completed the active storyboard refresh pass using current prompts and reference bindings; refreshed outputs were registered in the script, asset catalog, and production manifest.
+- The active Festival Master has 104 storyboard takes awaiting editorial image review and no remaining needs_regeneration status; deprecated cut frames were not regenerated.
+
+## 2026-09-13 — Master fact migration notes applied (English source)
+
+- Author-signed migration notes applied to the master outline (33 active `master:fact-*`, 7 retired). Festival cues remapped; `report:causal-structure` green.
+- See `docs/production/MASTER_FACT_MIGRATION_MAP.md` (post-apply set) and `MASTER_FACT_MIGRATION_NOTES.md`.
+
+## 2026-09-13 — Causal structure + meaning pipeline (English source)
+
+- Master outline owns causal `facts` / `knowledgeEvents` / `actionRequirements` (`master:fact-*`); Festival-master ledger is obsolete provenance only (migration map pending author sign-off for splits/merges).
+- Live gate: `npm run report:causal-structure` (CI). Meaning packet: `npm run report:meaning-audit`. Guide: `docs/production/CAUSAL_AND_MEANING_PIPELINE.md`.
+- Festival cues carry `implementsFactIds`; delayed-reveal Vitest uses fact ids, not English dialogue prefixes.
+
+## 2026-09-13 — Central-access reference regenerated (English source)
+
+- Replaced the invalidated central-access v3 sheet with v4, whose section and elevation views preserve a clear approximately two-metre central opening and twin helical stairs with no solid column.
+- Updated asset/manifest and production-plan paths, deleted v3, and marked the ten Festival Master dependent takes for regeneration.
+- Validation: `validate:data` and `validate:schemas` pass.
+
+## 2026-09-13 — Two ship-geometry errors fixed: command vestibule, central-shaft column (English source)
+
+- Author-reported, confirmed against the actual reference blueprint. Full
+  writeup: "Pass 3" in `docs/production/OUTLINE_FIDELITY_AUDIT_FESTIVAL_MASTER.md`.
+- Removed the fabricated `location:celestial-ardor-command-vestibule`
+  (duplicated the bridge's own description) from `data/locations.json` and
+  `data/editorial-lifecycle.json`; reworded every reference in
+  `light-delay-festival-master.json` and `data/translations/documents.en.json`;
+  flagged its orphaned reference asset. `docs/technical/CELESTIAL_ARDOR.md`
+  was flagged, not rewritten — it ties the vestibule to real 3D coordinates
+  needing a Blender-side reconciliation.
+- Flagged the central-access shaft's reference art (solid column vs. the
+  canon ~2 m open aperture the climax dive depends on); upgraded
+  `shot-plan-077`/`078` after visually confirming they show the defect.
+  `shot-plan-013` was checked and found correct, so left alone. No image
+  regenerated.
+
+## 2026-09-13 — Orphan concept-sheet cleanup (English source)
+
+- Removed three unreferenced superseded sheets: engineering v2, reactor service-bay v2, and service-cylinder v3.
+- Updated the Higgsfield staging manifest to point to the current engineering v3 sheet; older sheets still referenced by production plans remain until those dependencies are reconciled.
+
+## 2026-09-13 — Master-derived reference assets regenerated (English source)
+
+- Generated and registered eight pending visual references: Celestial Ardor command vestibule, central access cylinder, service cylinder, outer reactor service bay, inner shielding vault, Proxima geophysical impulse package, Harlan wrist device, and time-reference diagnostic unit.
+- Updated the asset catalog and production manifest to the versioned outputs; prior files remain available as superseded provenance. Pending visual notes are resolved, with editorial review still required.
+- Validation: `validate:data` and `validate:schemas` pass.
+
+## 2026-09-13 — Festival-master outline-fidelity audit, beyond gravity (English source)
+
+- Generalized the gravity audit to every other category of parent-outline
+  fact a still prompt can silently omit or contradict; report + fixes at
+  `docs/production/OUTLINE_FIDELITY_AUDIT_FESTIVAL_MASTER.md`.
+- Fixed: a `contexts.json` hazard-object rule contradicted by 16 shots'
+  generic microgravity sentence; `scene-25`'s stale continuity field; a
+  geography contradiction (`shot-plan-028`'s wrong stair type/speed) plus 7
+  under-specified central-access shots; 3 plot-critical objects with no
+  physical description and a pending reference sheet (bomb, wrist device,
+  diagnostic unit); 4 shots missing a present character's reference sheet
+  (and the same staleness in those prompts' own reference-asset text list).
+- 33 takes marked `imageStatus: needs_regeneration`; no images regenerated.
+
+## 2026-09-13 — Still-prompt restatement rule (English source)
+
+- `DIALOGUE_AND_PROMPT_LESSONS.md` §2c: still/image prompts must restate gravity and
+  other load-bearing visual state; “cue it once” is audience-only. Seedance still gets
+  dialogue + voice samples. Mirrored in `AGENTS.md` and related prompt docs.
+
+## 2026-09-13 — Festival-master: 33 shots got their missing gravity statement (English source)
+
+- Per `DIALOGUE_AND_PROMPT_LESSONS.md` §2c, re-scanned all 104 shots and found
+  33 whose prompts stated no gravity/vacuum at all (`shot-plan-021` and 32
+  peers) — a stateless still prompt cannot inherit scene continuity. Fixed by
+  inserting the correct sentence into each `Take.generation.prompt` (27 MG, 2
+  1g, 3 new vacuum-specific for the EVA shots, 1 exterior "no gravity
+  reference" note).
+- All 33 takes marked `imageStatus: needs_regeneration` (`canon_mismatch`); no
+  images regenerated. See §8 of `GRAVITY_AUDIT_FESTIVAL_MASTER.md`.
+
+## 2026-09-13 — Festival-master gravity-state audit (English source)
+
+- Audited all 104 Festival-master shots/prompts against the master and derived
+  outlines for microgravity vs. 1g correctness; see
+  `docs/production/GRAVITY_AUDIT_FESTIVAL_MASTER.md`.
+- Fixed: scene 25 prompts wrongly said microgravity (scene is 1g under thrust);
+  scenes 28/29/31/32 were mis-assigned to 1g in `contexts.json` — confirmed
+  with the author the ship stays in microgravity through the end of the film
+  (no relight after the fourth thrust cutoff). New context
+  `context:ardor-post-climax-microgravity` added for that stretch.
+- 4 takes now carry `imageStatus: needs_regeneration` (`shot-plan-074/075/076`,
+  `shot-plan-083`); no images were regenerated in this pass.
+
+## 2026-09-13 — AuK TTS plan (deferred, English source)
+
+- `docs/production/AUK_INSTALL_PLAN.md` records hardware fit (3090 + `--cpu_offload`)
+  and a non-urgent install checklist. Do not install until approved; Qwen3-TTS stays.
+
 ## 2026-09-13 — SRT para Resolve junto al OTIO
 
 - El export OTIO escribe también `*.en.srt` / `*.es.srt` en `tmp/resolve-otio/` (reloj del
@@ -12,6 +116,18 @@
   and `provider` is not `local`. Current AI assets are filled with `gpt-image-2`.
 - Generation-manifest schema accepts any non-empty model string; live data remains
   `gpt-image-2`.
+
+## 2026-09-13 — Festival-master reference regeneration completed (English source)
+
+- All 36 remaining Festival-master stills previously marked for regeneration are now regenerated and registered, including the two canon-mismatch shots and the corrected non-graphic injury beats.
+- Take records, storyboard assets, and generation-manifest entries are synchronized; all Festival-master takes now await editorial review rather than regeneration.
+
+## 2026-09-12 — Trailer OTIO picture gaps filled (English source)
+
+- Resolve import of `light-delay-trailer-master.otio` showed empty timeline stretches because
+  seven trailer takes had no still (OTIO `Gap`s), not because Resolve dropped random media.
+- Those takes now resolve to festival frames / a black card; re-import the fresh trailer OTIO.
+  For the full cut, use `light-delay-festival-master.otio` (104 stills, continuous V1).
 
 ## 2026-09-12 — TTS EN cue-0044 / cue-0045
 

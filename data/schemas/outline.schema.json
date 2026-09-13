@@ -93,6 +93,18 @@
       "type": "array",
       "items": { "$ref": "#/$defs/storySection" }
     },
+    "facts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/outlineFact" }
+    },
+    "knowledgeEvents": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/outlineKnowledgeEvent" }
+    },
+    "actionRequirements": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/outlineActionRequirement" }
+    },
     "steps": {
       "type": "array",
       "items": {
@@ -138,6 +150,8 @@
           "sceneIds": { "$ref": "#/$defs/idList" }, "beatIds": { "$ref": "#/$defs/idList" },
           "cueIds": { "$ref": "#/$defs/idList" }, "shotIds": { "$ref": "#/$defs/idList" },
           "dependsOnStepIds": { "$ref": "#/$defs/idList" },
+          "requiresFactIds": { "$ref": "#/$defs/idList" },
+          "revealsFactIds": { "$ref": "#/$defs/idList" },
           "sourceRefs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/sourceRef" } },
           "notes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/note" } }
         },
@@ -156,6 +170,50 @@
     }
   },
   "$defs": {
+    "outlineFact": {
+      "type": "object",
+      "required": ["id", "description", "status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^master:fact-" },
+        "description": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "dependsOnFactIds": { "$ref": "#/$defs/idList" },
+        "introducedInStepId": { "type": "string", "minLength": 1 },
+        "audienceVisibility": { "enum": ["overt", "withheld", "implied"] },
+        "status": { "enum": ["active", "retired"] },
+        "legacyIds": { "$ref": "#/$defs/idList" }
+      },
+      "additionalProperties": false
+    },
+    "outlineKnowledgeEvent": {
+      "type": "object",
+      "required": ["stepId", "factId", "characterIds"],
+      "properties": {
+        "stepId": { "type": "string", "minLength": 1 },
+        "factId": { "type": "string", "pattern": "^master:fact-" },
+        "characterIds": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^character:" },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
+    "outlineActionRequirement": {
+      "type": "object",
+      "required": ["stepId", "actorId", "action", "requiresKnownFactIds"],
+      "properties": {
+        "stepId": { "type": "string", "minLength": 1 },
+        "actorId": { "type": "string", "pattern": "^character:" },
+        "action": { "$ref": "common.schema.json#/$defs/localizedString" },
+        "requiresKnownFactIds": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "^master:fact-" },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false
+    },
     "outlineSource": {
       "type": "object",
       "required": ["path", "revision", "language"],

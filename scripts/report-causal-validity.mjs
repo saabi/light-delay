@@ -8,6 +8,14 @@ for (const name of readdirSync(join(ROOT, 'data', 'continuity')).filter((name) =
 	const ledger = JSON.parse(readFileSync(join(ROOT, 'data', 'continuity', name), 'utf8'));
 	const script = JSON.parse(readFileSync(join(ROOT, 'data', 'scripts', name), 'utf8'));
 	const outline = JSON.parse(readFileSync(join(ROOT, 'data', 'outlines', name), 'utf8'));
+	const status = ledger.ledger.status;
+	const retired = status === 'incomplete' || status === 'obsolete' || status === 'deprecated';
+	if (retired) {
+		console.log(
+			`${ledger.ledger.scriptId}: not_applicable; ledger.status=${status}; steps=${ledger.steps.length}; actions=${ledger.actionRequirements.length}; errors=0`
+		);
+		continue;
+	}
 	const factIds = new Set(ledger.facts.map((fact) => fact.id));
 	const available = new Set();
 	const knowledge = new Map();
@@ -46,8 +54,7 @@ for (const name of readdirSync(join(ROOT, 'data', 'continuity')).filter((name) =
 			}
 		}
 	}
-	const applicable = ledger.ledger.status !== 'incomplete';
-	const state = errors.length ? 'debt' : applicable ? 'complete' : 'not_applicable';
+	const state = errors.length ? 'debt' : 'complete';
 	console.log(`${ledger.ledger.scriptId}: ${state}; steps=${ledger.steps.length}; actions=${ledger.actionRequirements.length}; errors=${errors.length}`);
 	for (const error of errors) console.log(`  - ${error}`);
 	if (errors.length) failed = true;

@@ -115,8 +115,33 @@ export interface OutlineStep {
 	shotIds?: ShotId[];
 	/** @deprecated Use causalLinks with a human-readable explanation. */
 	dependsOnStepIds?: string[];
+	requiresFactIds?: string[];
+	revealsFactIds?: string[];
 	sourceRefs?: SourceReference[];
 	notes?: Note[];
+}
+
+export interface OutlineFact {
+	id: string;
+	description: StoryText;
+	dependsOnFactIds?: string[];
+	introducedInStepId?: string;
+	audienceVisibility?: 'overt' | 'withheld' | 'implied';
+	status: 'active' | 'retired';
+	legacyIds?: string[];
+}
+
+export interface OutlineKnowledgeEvent {
+	stepId: string;
+	factId: string;
+	characterIds: CharacterId[];
+}
+
+export interface OutlineActionRequirement {
+	stepId: string;
+	actorId: CharacterId;
+	action: StoryText;
+	requiresKnownFactIds: string[];
 }
 
 export interface OutlineCausalLink {
@@ -145,6 +170,9 @@ export interface OutlineFile {
 	outline: OutlineMeta;
 	framing?: OutlineFramingSection[];
 	storySections?: OutlineStorySection[];
+	facts?: OutlineFact[];
+	knowledgeEvents?: OutlineKnowledgeEvent[];
+	actionRequirements?: OutlineActionRequirement[];
 	steps: OutlineStep[];
 }
 

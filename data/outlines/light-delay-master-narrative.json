@@ -13,7 +13,7 @@
     },
     "status": "draft",
     "version": "0.8.0-wip",
-    "revision": 19,
+    "revision": 23,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -1365,6 +1365,9 @@
             "en": "The opposing interpretations present in the protests motivate the exchange that reveals how Harlan and Sorell understand contact."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-voss-misread-motives"
       ]
     },
     {
@@ -1425,6 +1428,12 @@
             "en": "The hurried preparation naturally reveals Harlan's operational authority over loading."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-harlan-loading-access-open"
+      ],
+      "requiresFactIds": [
+        "master:fact-voss-misread-motives"
       ]
     },
     {
@@ -1543,6 +1552,12 @@
             "en": "Systems approval enables departure and the flight profile that establishes elapsed time and the lack of an immediate return."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-first-thrust-cutoff-done"
+      ],
+      "requiresFactIds": [
+        "master:fact-harlan-loading-access-open"
       ]
     },
     {
@@ -1809,6 +1824,12 @@
             "en": "The unease Harlan left behind, combined with Zao's habit of double-checking, motivates her to examine a deviation that might otherwise look like noise."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-fuel-mass-discrepancy"
+      ],
+      "requiresFactIds": [
+        "master:fact-first-thrust-cutoff-done"
       ]
     },
     {
@@ -1860,6 +1881,12 @@
             "en": "The confirmed discrepancy forces Zao to test possible explanations and follow the neutron reading into the shielded area."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-neutron-excess-detected"
+      ],
+      "requiresFactIds": [
+        "master:fact-fuel-mass-discrepancy"
       ]
     },
     {
@@ -2004,6 +2031,12 @@
             "en": "The vault Harlan left incompletely secured allows Zao to enter and understand the full threat."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-impulse-package-identified"
+      ],
+      "requiresFactIds": [
+        "master:fact-neutron-excess-detected"
       ]
     },
     {
@@ -2070,6 +2103,13 @@
             "en": "After checking the bomb, Harlan's ordinary return to his station places him unseen at the bridge hatch when Zao's report begins; overhearing it makes him abandon his intended report and activate the prepared jammer."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-bridge-hears-cutoff-warning",
+        "master:fact-harlan-jams-wireless"
+      ],
+      "requiresFactIds": [
+        "master:fact-impulse-package-identified"
       ]
     },
     {
@@ -2121,6 +2161,12 @@
             "en": "After jamming the wireless report, Harlan cuts the physical backups to keep Zao from completing the warning and remove the record of his return."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-harlan-cuts-wired-comms-cameras"
+      ],
+      "requiresFactIds": [
+        "master:fact-harlan-jams-wireless"
       ]
     },
     {
@@ -2309,6 +2355,12 @@
             "en": "The sabotage of every internal communication route forces Zao to eliminate destinations and paths until she finds a viable use for the independent optical array."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-only-moving-intercept-left"
+      ],
+      "requiresFactIds": [
+        "master:fact-bridge-hears-cutoff-warning"
       ]
     },
     {
@@ -2602,6 +2654,12 @@
             "en": "Zao's silence and the approaching crew member force Harlan to interpret the emission quickly and act on his mistaken assumption."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-harlan-believes-burst-reached-earth"
+      ],
+      "requiresFactIds": [
+        "master:fact-only-moving-intercept-left"
       ]
     },
     {
@@ -2646,6 +2704,12 @@
             "en": "Convinced the message cannot stop his plan and pressured by an approaching witness, Harlan kills Zao."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-zao-murdered"
+      ],
+      "requiresFactIds": [
+        "master:fact-harlan-believes-burst-reached-earth"
       ]
     },
     {
@@ -2690,6 +2754,13 @@
             "en": "After the murder, Zao can no longer interrupt him while he secures the bomb, prevents the warned bridge from aborting the later approach, and begins constructing his alibi."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-harlan-secures-vault",
+        "master:fact-flight-controls-cut"
+      ],
+      "requiresFactIds": [
+        "master:fact-zao-murdered"
       ]
     },
     {
@@ -2778,6 +2849,12 @@
             "en": "Continuing alone by the slower route makes Sorell arrive after Harlan and find the body without witnesses or communications."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-sorell-found-zao"
+      ],
+      "requiresFactIds": [
+        "master:fact-zao-murdered"
       ]
     },
     {
@@ -2822,6 +2899,12 @@
             "en": "Once Sorell is holding Zao, Harlan selectively restores the systems so the camera turns her attempt to help into an incriminating image."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-cameras-show-only-rescue"
+      ],
+      "requiresFactIds": [
+        "master:fact-sorell-found-zao"
       ]
     },
     {
@@ -2925,6 +3008,12 @@
             "en": "Voss's order brings Harlan and Okoye to a scene Harlan has already prepared to implicate whoever found the body."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-harlan-accuses-sorell"
+      ],
+      "requiresFactIds": [
+        "master:fact-cameras-show-only-rescue"
       ]
     },
     {
@@ -3035,6 +3124,12 @@
             "en": "Custody allows a coherent circumstantial case to be assembled, although Elin recognizes that its pieces still do not prove murder."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-harlan-accusation-not-proof"
+      ],
+      "requiresFactIds": [
+        "master:fact-harlan-accuses-sorell"
       ]
     },
     {
@@ -3079,6 +3174,12 @@
             "en": "Because the case remains plausible but inconclusive, the investigation continues through the transit and Sorell's operational absence begins to compromise the encounter."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-case-open-station-leg"
+      ],
+      "requiresFactIds": [
+        "master:fact-harlan-accusation-not-proof"
       ]
     },
     {
@@ -3269,6 +3370,12 @@
             "en": "Testing the plausible theory against independent records reveals that fuel use and neutrons do not share Harlan's proposed cause."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-engine-healthy-separate-causes"
+      ],
+      "requiresFactIds": [
+        "master:fact-case-open-station-leg"
       ]
     },
     {
@@ -3435,6 +3542,13 @@
             "en": "The reading concentrated behind a door they cannot open allows the anomalies to be related while defining exactly what they still do not know."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-vault-lock-rejects-timing-diagnostic"
+      ],
+      "requiresFactIds": [
+        "master:fact-engine-healthy-separate-causes",
+        "master:fact-harlan-secures-vault"
       ]
     },
     {
@@ -3720,6 +3834,12 @@
             "en": "The burst that appeared lost finally reaches the Ardor and proves that Zao's aim followed a precise plan."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-burst-corridor-signal-incoming"
+      ],
+      "requiresFactIds": [
+        "master:fact-vault-lock-rejects-timing-diagnostic"
       ]
     },
     {
@@ -3917,6 +4037,12 @@
             "en": "Playing the received packet restores Zao's withheld reasoning through sound and framing, revealing both the threat and the true recipient."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-recording-identifies-bomb-harlan"
+      ],
+      "requiresFactIds": [
+        "master:fact-burst-corridor-signal-incoming"
       ]
     },
     {
@@ -4071,6 +4197,12 @@
             "en": "Harlan's fabrication claim makes direct verification necessary; Zao's personal signature and timestamp answer that objection before the broader evidence is weighed."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-recording-authenticated"
+      ],
+      "requiresFactIds": [
+        "master:fact-recording-identifies-bomb-harlan"
       ]
     },
     {
@@ -4129,6 +4261,13 @@
             "en": "Authentication removes Harlan's objection and forces Voss to act against him, release Sorell, and send Elin toward the threat at once."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-evidence-converges-revoke-harlan",
+        "master:fact-aft-console-only-interrupt"
+      ],
+      "requiresFactIds": [
+        "master:fact-recording-authenticated"
       ]
     },
     {
@@ -4259,6 +4398,12 @@
             "en": "Harlan's escape and local locking of the hatch split the chase among the elevator, direct service shaft, and slower stairs."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-harlan-escaped-with-wrist"
+      ],
+      "requiresFactIds": [
+        "master:fact-aft-console-only-interrupt"
       ]
     },
     {
@@ -4405,6 +4550,12 @@
             "en": "The loss of gravity removes the stairs' disadvantage and allows Voss and Okoye to cross the shaft directly to reach Harlan."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-fourth-cutoff-bypass-stairs"
+      ],
+      "requiresFactIds": [
+        "master:fact-harlan-escaped-with-wrist"
       ]
     },
     {
@@ -4499,6 +4650,12 @@
             "en": "With Harlan restrained and his device recovered, Elin can open the vault and use Zao's information to choose the only safe intervention available."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-bomb-delayable-scientific-input"
+      ],
+      "requiresFactIds": [
+        "master:fact-fourth-cutoff-bypass-stairs"
       ]
     },
     {
@@ -4543,6 +4700,12 @@
             "en": "Rewinding the clock does not disarm the bomb, but it buys enough time for Sorell to finish the greeting and the mission to continue."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-greeting-completed"
+      ],
+      "requiresFactIds": [
+        "master:fact-bomb-delayable-scientific-input"
       ]
     },
     {
@@ -4675,6 +4838,12 @@
             "en": "With the threat delayed and the greeting ready, Voss can acknowledge his errors and finally authorize contact."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-greeting-authorized-sent"
+      ],
+      "requiresFactIds": [
+        "master:fact-greeting-completed"
       ]
     },
     {
@@ -4895,6 +5064,12 @@
             "en": "The station's response expresses approach and permission, enabling a cautious physical meeting between Sorell and a single Velari."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-station-answered-emissary"
+      ],
+      "requiresFactIds": [
+        "master:fact-greeting-authorized-sent"
       ]
     },
     {
@@ -5020,6 +5195,1747 @@
             "en": "After preserving and completing the meeting, Voss creates an independent record that carries the truth to Earth and credits Zao."
           }
         }
+      ],
+      "revealsFactIds": [
+        "master:fact-voss-earth-record-credits-zao"
+      ],
+      "requiresFactIds": [
+        "master:fact-station-answered-emissary"
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "id": "master:fact-voss-misread-motives",
+      "description": {
+        "en": "Voss has misread Harlan’s fear as hope and Sorell’s caution as reluctance.",
+        "es": "Traducción pendiente (needs_revision): Voss has misread Harlan’s fear as hope and Sorell’s caution as reluctance."
+      },
+      "dependsOnFactIds": [],
+      "introducedInStepId": "master:story-p2",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-01"
+      ]
+    },
+    {
+      "id": "master:fact-harlan-loading-access-open",
+      "description": {
+        "en": "Harlan’s authority over loading and ship preparation is established; Zao’s independent recheck remains open.",
+        "es": "Traducción pendiente (needs_revision): Harlan’s authority over loading and ship preparation is established; Zao’s independent recheck remains open."
+      },
+      "dependsOnFactIds": [
+        "master:fact-voss-misread-motives"
+      ],
+      "introducedInStepId": "master:story-a2",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-02"
+      ]
+    },
+    {
+      "id": "master:fact-first-thrust-cutoff-done",
+      "description": {
+        "en": "The Ardor has completed its first thrust cutoff and turnover.",
+        "es": "Traducción pendiente (needs_revision): The Ardor has completed its first thrust cutoff and turnover."
+      },
+      "dependsOnFactIds": [
+        "master:fact-harlan-loading-access-open"
+      ],
+      "introducedInStepId": "master:story-a3b",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-03"
+      ]
+    },
+    {
+      "id": "master:fact-fuel-mass-discrepancy",
+      "description": {
+        "en": "Propellant audit shows a precise excess burn consistent with undeclared mass.",
+        "es": "Traducción pendiente (needs_revision): Propellant audit shows a precise excess burn consistent with undeclared mass."
+      },
+      "dependsOnFactIds": [
+        "master:fact-first-thrust-cutoff-done"
+      ],
+      "introducedInStepId": "master:story-a4",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-04"
+      ]
+    },
+    {
+      "id": "master:fact-neutron-excess-detected",
+      "description": {
+        "en": "A neutron excess is detected aft; the reading cannot yet distinguish an off-ratio burn from a compact shielded source.",
+        "es": "Traducción pendiente (needs_revision): A neutron excess is detected aft; the reading cannot yet distinguish an off-ratio burn from a compact shielded source."
+      },
+      "dependsOnFactIds": [
+        "master:fact-fuel-mass-discrepancy"
+      ],
+      "introducedInStepId": "master:story-a5",
+      "audienceVisibility": "overt",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-impulse-package-identified",
+      "description": {
+        "en": "Zao has identified the timed geophysical impulse package; Harlan knows she may find it.",
+        "es": "Traducción pendiente (needs_revision): Zao has identified the timed geophysical impulse package; Harlan knows she may find it."
+      },
+      "dependsOnFactIds": [
+        "master:fact-neutron-excess-detected"
+      ],
+      "introducedInStepId": "master:story-b1b",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-05"
+      ]
+    },
+    {
+      "id": "master:fact-bridge-hears-cutoff-warning",
+      "description": {
+        "en": "The bridge hears Zao’s sabotage warning cut off mid-sentence; no culprit is identified.",
+        "es": "Traducción pendiente (needs_revision): The bridge hears Zao’s sabotage warning cut off mid-sentence; no culprit is identified."
+      },
+      "dependsOnFactIds": [
+        "master:fact-impulse-package-identified"
+      ],
+      "introducedInStepId": "master:story-b2",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-06"
+      ]
+    },
+    {
+      "id": "master:fact-harlan-jams-wireless",
+      "description": {
+        "en": "Harlan jams Zao’s wireless from the service shaft behind the bridge.",
+        "es": "Traducción pendiente (needs_revision): Harlan jams Zao’s wireless from the service shaft behind the bridge."
+      },
+      "dependsOnFactIds": [
+        "master:fact-impulse-package-identified"
+      ],
+      "introducedInStepId": "master:story-b2",
+      "audienceVisibility": "withheld",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-harlan-cuts-wired-comms-cameras",
+      "description": {
+        "en": "Harlan physically disconnects wired communications and camera trunks at the bridge tray.",
+        "es": "Traducción pendiente (needs_revision): Harlan physically disconnects wired communications and camera trunks at the bridge tray."
+      },
+      "dependsOnFactIds": [
+        "master:fact-harlan-jams-wireless"
+      ],
+      "introducedInStepId": "master:story-b3",
+      "audienceVisibility": "withheld",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-only-moving-intercept-left",
+      "description": {
+        "en": "Zao has eliminated every useful warning route except an undisclosed moving intercept.",
+        "es": "Traducción pendiente (needs_revision): Zao has eliminated every useful warning route except an undisclosed moving intercept."
+      },
+      "dependsOnFactIds": [
+        "master:fact-bridge-hears-cutoff-warning"
+      ],
+      "introducedInStepId": "master:story-b5",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-07"
+      ]
+    },
+    {
+      "id": "master:fact-harlan-believes-burst-reached-earth",
+      "description": {
+        "en": "Harlan believes Zao’s burst targeted Earth and that the double delay makes abort unlikely.",
+        "es": "Traducción pendiente (needs_revision): Harlan believes Zao’s burst targeted Earth and that the double delay makes abort unlikely."
+      },
+      "dependsOnFactIds": [
+        "master:fact-only-moving-intercept-left"
+      ],
+      "introducedInStepId": "master:story-c2",
+      "audienceVisibility": "implied",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-08"
+      ]
+    },
+    {
+      "id": "master:fact-zao-murdered",
+      "description": {
+        "en": "Harlan murders Zao in the outer reactor service bay.",
+        "es": "Traducción pendiente (needs_revision): Harlan murders Zao in the outer reactor service bay."
+      },
+      "dependsOnFactIds": [
+        "master:fact-harlan-believes-burst-reached-earth"
+      ],
+      "introducedInStepId": "master:story-c3",
+      "audienceVisibility": "withheld",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-09"
+      ]
+    },
+    {
+      "id": "master:fact-harlan-secures-vault",
+      "description": {
+        "en": "Harlan closes the inner shielding vault and keys its local lock to his wrist device.",
+        "es": "Traducción pendiente (needs_revision): Harlan closes the inner shielding vault and keys its local lock to his wrist device."
+      },
+      "dependsOnFactIds": [
+        "master:fact-zao-murdered"
+      ],
+      "introducedInStepId": "master:story-c3a",
+      "audienceVisibility": "withheld",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-flight-controls-cut",
+      "description": {
+        "en": "Harlan physically disables bridge flight commands at the adjacent local console after the murder.",
+        "es": "Traducción pendiente (needs_revision): Harlan physically disables bridge flight commands at the adjacent local console after the murder."
+      },
+      "dependsOnFactIds": [
+        "master:fact-zao-murdered"
+      ],
+      "introducedInStepId": "master:story-c3a",
+      "audienceVisibility": "withheld",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-sorell-found-zao",
+      "description": {
+        "en": "Sorell finds Zao drifting in the outer bay and attempts aid.",
+        "es": "Traducción pendiente (needs_revision): Sorell finds Zao drifting in the outer bay and attempts aid."
+      },
+      "dependsOnFactIds": [
+        "master:fact-zao-murdered"
+      ],
+      "introducedInStepId": "master:story-c4",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-10"
+      ]
+    },
+    {
+      "id": "master:fact-cameras-show-only-rescue",
+      "description": {
+        "en": "Restored cameras show Sorell with Zao’s body during the rescue attempt; they do not show the murder.",
+        "es": "Traducción pendiente (needs_revision): Restored cameras show Sorell with Zao’s body during the rescue attempt; they do not show the murder."
+      },
+      "dependsOnFactIds": [
+        "master:fact-sorell-found-zao"
+      ],
+      "introducedInStepId": "master:story-c5",
+      "audienceVisibility": "overt",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-harlan-accuses-sorell",
+      "description": {
+        "en": "Harlan publicly accuses Sorell over Zao’s body.",
+        "es": "Traducción pendiente (needs_revision): Harlan publicly accuses Sorell over Zao’s body."
+      },
+      "dependsOnFactIds": [
+        "master:fact-cameras-show-only-rescue"
+      ],
+      "introducedInStepId": "master:story-c7",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-11"
+      ]
+    },
+    {
+      "id": "master:fact-harlan-accusation-not-proof",
+      "description": {
+        "en": "The restored image and blackout create suspicion of Sorell but do not prove she killed Zao.",
+        "es": "Traducción pendiente (needs_revision): The restored image and blackout create suspicion of Sorell but do not prove she killed Zao."
+      },
+      "dependsOnFactIds": [
+        "master:fact-harlan-accuses-sorell"
+      ],
+      "introducedInStepId": "master:story-c9",
+      "audienceVisibility": "overt",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-case-open-station-leg",
+      "description": {
+        "en": "Voss kept the case open during the twenty-three-and-a-half-hour station leg.",
+        "es": "Traducción pendiente (needs_revision): Voss kept the case open during the twenty-three-and-a-half-hour station leg."
+      },
+      "dependsOnFactIds": [
+        "master:fact-harlan-accusation-not-proof"
+      ],
+      "introducedInStepId": "master:story-c10",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-12"
+      ]
+    },
+    {
+      "id": "master:fact-engine-healthy-separate-causes",
+      "description": {
+        "en": "The engine was healthy; hidden mass and neutrons require separate causes.",
+        "es": "Traducción pendiente (needs_revision): The engine was healthy; hidden mass and neutrons require separate causes."
+      },
+      "dependsOnFactIds": [
+        "master:fact-case-open-station-leg"
+      ],
+      "introducedInStepId": "master:story-d2b",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-13"
+      ]
+    },
+    {
+      "id": "master:fact-vault-lock-rejects-timing-diagnostic",
+      "description": {
+        "en": "The local vault lock rejects command authority; a compact neutron source remains behind the sealed vault.",
+        "es": "Traducción pendiente (needs_revision): The local vault lock rejects command authority; a compact neutron source remains behind the sealed vault."
+      },
+      "dependsOnFactIds": [
+        "master:fact-engine-healthy-separate-causes",
+        "master:fact-harlan-secures-vault"
+      ],
+      "introducedInStepId": "master:story-d4",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-14"
+      ]
+    },
+    {
+      "id": "master:fact-burst-corridor-signal-incoming",
+      "description": {
+        "en": "The burst targeted a moving receiver; an incoming signal now follows its corridor.",
+        "es": "Traducción pendiente (needs_revision): The burst targeted a moving receiver; an incoming signal now follows its corridor."
+      },
+      "dependsOnFactIds": [
+        "master:fact-vault-lock-rejects-timing-diagnostic"
+      ],
+      "introducedInStepId": "master:story-d7",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-15"
+      ]
+    },
+    {
+      "id": "master:fact-recording-identifies-bomb-harlan",
+      "description": {
+        "en": "Zao’s recording identifies the bomb, Harlan, the protected controller, and the future intercept (not yet cryptographically settled).",
+        "es": "Traducción pendiente (needs_revision): Zao’s recording identifies the bomb, Harlan, the protected controller, and the future intercept (not yet cryptographically settled)."
+      },
+      "dependsOnFactIds": [
+        "master:fact-burst-corridor-signal-incoming"
+      ],
+      "introducedInStepId": "master:story-e2",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-16"
+      ]
+    },
+    {
+      "id": "master:fact-recording-authenticated",
+      "description": {
+        "en": "Elin verifies Zao’s cryptographic signature; authentication answers Harlan’s objection.",
+        "es": "Traducción pendiente (needs_revision): Elin verifies Zao’s cryptographic signature; authentication answers Harlan’s objection."
+      },
+      "dependsOnFactIds": [
+        "master:fact-recording-identifies-bomb-harlan"
+      ],
+      "introducedInStepId": "master:story-e5",
+      "audienceVisibility": "overt",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-evidence-converges-revoke-harlan",
+      "description": {
+        "en": "Independent evidence converges on Harlan strongly enough to isolate him and release Sorell.",
+        "es": "Traducción pendiente (needs_revision): Independent evidence converges on Harlan strongly enough to isolate him and release Sorell."
+      },
+      "dependsOnFactIds": [
+        "master:fact-recording-authenticated"
+      ],
+      "introducedInStepId": "master:story-e6",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-17"
+      ]
+    },
+    {
+      "id": "master:fact-aft-console-only-interrupt",
+      "description": {
+        "en": "Only the aft local console can interrupt the automatic plan; three minutes remain.",
+        "es": "Traducción pendiente (needs_revision): Only the aft local console can interrupt the automatic plan; three minutes remain."
+      },
+      "dependsOnFactIds": [
+        "master:fact-recording-authenticated"
+      ],
+      "introducedInStepId": "master:story-e6",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-18"
+      ]
+    },
+    {
+      "id": "master:fact-harlan-escaped-with-wrist",
+      "description": {
+        "en": "Harlan escaped toward Elin with the wrist device still controlling the local lock.",
+        "es": "Traducción pendiente (needs_revision): Harlan escaped toward Elin with the wrist device still controlling the local lock."
+      },
+      "dependsOnFactIds": [
+        "master:fact-aft-console-only-interrupt"
+      ],
+      "introducedInStepId": "master:story-f2",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-19"
+      ]
+    },
+    {
+      "id": "master:fact-fourth-cutoff-bypass-stairs",
+      "description": {
+        "en": "The fourth gravity cutoff lets Okoye and Voss bypass the stairs and contain Harlan.",
+        "es": "Traducción pendiente (needs_revision): The fourth gravity cutoff lets Okoye and Voss bypass the stairs and contain Harlan."
+      },
+      "dependsOnFactIds": [
+        "master:fact-harlan-escaped-with-wrist"
+      ],
+      "introducedInStepId": "master:story-f4",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-20"
+      ]
+    },
+    {
+      "id": "master:fact-bomb-delayable-scientific-input",
+      "description": {
+        "en": "The bomb can be delayed through its scientific timing input but is not disarmed.",
+        "es": "Traducción pendiente (needs_revision): The bomb can be delayed through its scientific timing input but is not disarmed."
+      },
+      "dependsOnFactIds": [
+        "master:fact-fourth-cutoff-bypass-stairs"
+      ],
+      "introducedInStepId": "master:story-f5",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-21"
+      ]
+    },
+    {
+      "id": "master:fact-greeting-completed",
+      "description": {
+        "en": "Sorell completes the clean hull-light greeting offline.",
+        "es": "Traducción pendiente (needs_revision): Sorell completes the clean hull-light greeting offline."
+      },
+      "dependsOnFactIds": [
+        "master:fact-bomb-delayable-scientific-input"
+      ],
+      "introducedInStepId": "master:story-f6",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-22"
+      ]
+    },
+    {
+      "id": "master:fact-greeting-authorized-sent",
+      "description": {
+        "en": "Voss authorizes only Sorell’s clean greeting for transmission at contact.",
+        "es": "Traducción pendiente (needs_revision): Voss authorizes only Sorell’s clean greeting for transmission at contact."
+      },
+      "dependsOnFactIds": [
+        "master:fact-greeting-completed"
+      ],
+      "introducedInStepId": "master:story-g1",
+      "audienceVisibility": "overt",
+      "status": "active"
+    },
+    {
+      "id": "master:fact-station-answered-emissary",
+      "description": {
+        "en": "The station answered and sent a protected Velari emissary to meet Sorell.",
+        "es": "Traducción pendiente (needs_revision): The station answered and sent a protected Velari emissary to meet Sorell."
+      },
+      "dependsOnFactIds": [
+        "master:fact-greeting-authorized-sent"
+      ],
+      "introducedInStepId": "master:story-g2b",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-23"
+      ]
+    },
+    {
+      "id": "master:fact-voss-earth-record-credits-zao",
+      "description": {
+        "en": "Voss sent Earth an independent record crediting Zao while repair and bomb watch continue.",
+        "es": "Traducción pendiente (needs_revision): Voss sent Earth an independent record crediting Zao while repair and bomb watch continue."
+      },
+      "dependsOnFactIds": [
+        "master:fact-station-answered-emissary"
+      ],
+      "introducedInStepId": "master:story-g3",
+      "audienceVisibility": "overt",
+      "status": "active",
+      "legacyIds": [
+        "festival-master:fact-24"
+      ]
+    },
+    {
+      "id": "master:fact-undeclared-mass-neutron-aft",
+      "description": {
+        "es": "Hecho causal 4 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Extra fuel indicates undeclared mass; a separate neutron source lies aft."
+      },
+      "status": "retired",
+      "legacyIds": [
+        "festival-master:fact-04"
+      ],
+      "introducedInStepId": "master:story-a5",
+      "dependsOnFactIds": [
+        "master:fact-first-thrust-cutoff-done"
+      ],
+      "audienceVisibility": "overt"
+    },
+    {
+      "id": "master:fact-sabotage-heard-comms-cut",
+      "description": {
+        "es": "Hecho causal 6 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "The bridge heard sabotage but no culprit; Harlan cut wireless, wired communications, and cameras."
+      },
+      "status": "retired",
+      "legacyIds": [
+        "festival-master:fact-06"
+      ],
+      "introducedInStepId": "master:story-b4b",
+      "dependsOnFactIds": [
+        "master:fact-impulse-package-identified"
+      ],
+      "audienceVisibility": "overt"
+    },
+    {
+      "id": "master:fact-burst-sent-earth-wrong-inference",
+      "description": {
+        "es": "Hecho causal 8 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao transmitted a signed burst; Harlan saw the result but wrongly inferred Earth."
+      },
+      "status": "retired",
+      "legacyIds": [
+        "festival-master:fact-08"
+      ],
+      "introducedInStepId": "master:story-c2",
+      "dependsOnFactIds": [
+        "master:fact-only-moving-intercept-left"
+      ],
+      "audienceVisibility": "implied"
+    },
+    {
+      "id": "master:fact-zao-dead-flight-cut-after-murder",
+      "description": {
+        "es": "Hecho causal 9 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao is dead; Harlan disabled bridge flight commands only after the murder."
+      },
+      "status": "retired",
+      "legacyIds": [
+        "festival-master:fact-09"
+      ],
+      "introducedInStepId": "master:story-c3b",
+      "dependsOnFactIds": [
+        "master:fact-burst-sent-earth-wrong-inference"
+      ],
+      "audienceVisibility": "overt"
+    },
+    {
+      "id": "master:fact-sorell-found-body-cameras",
+      "description": {
+        "es": "Hecho causal 10 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Sorell found Zao after the blackout; restored cameras show only the rescue attempt."
+      },
+      "status": "retired",
+      "legacyIds": [
+        "festival-master:fact-10"
+      ],
+      "introducedInStepId": "master:story-c5",
+      "dependsOnFactIds": [
+        "master:fact-zao-dead-flight-cut-after-murder"
+      ],
+      "audienceVisibility": "overt"
+    },
+    {
+      "id": "master:fact-recording-ids-bomb-harlan",
+      "description": {
+        "es": "Hecho causal 16 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Zao’s authenticated recording identifies the bomb, Harlan, the protected controller, and the future intercept."
+      },
+      "status": "retired",
+      "legacyIds": [
+        "festival-master:fact-16"
+      ],
+      "introducedInStepId": "master:story-e2",
+      "dependsOnFactIds": [
+        "master:fact-burst-corridor-signal-incoming"
+      ],
+      "audienceVisibility": "overt"
+    },
+    {
+      "id": "master:fact-clean-greeting-prepared",
+      "description": {
+        "es": "Hecho causal 22 del corte Festival derivado del master; véase la descripción inglesa fuente.",
+        "en": "Sorell has prepared one clean hull-light greeting and Voss has authorized only it."
+      },
+      "status": "retired",
+      "legacyIds": [
+        "festival-master:fact-22"
+      ],
+      "introducedInStepId": "master:story-g1",
+      "dependsOnFactIds": [
+        "master:fact-bomb-delayable-scientific-input"
+      ],
+      "audienceVisibility": "overt"
+    }
+  ],
+  "knowledgeEvents": [
+    {
+      "stepId": "master:story-p2",
+      "factId": "master:fact-voss-misread-motives",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-p2",
+      "factId": "master:fact-voss-misread-motives",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-p2",
+      "factId": "master:fact-voss-misread-motives",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-p2",
+      "factId": "master:fact-voss-misread-motives",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-a2",
+      "factId": "master:fact-harlan-loading-access-open",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-a2",
+      "factId": "master:fact-harlan-loading-access-open",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-a2",
+      "factId": "master:fact-harlan-loading-access-open",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-a2",
+      "factId": "master:fact-harlan-loading-access-open",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-a2",
+      "factId": "master:fact-harlan-loading-access-open",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-a2",
+      "factId": "master:fact-harlan-loading-access-open",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-a3b",
+      "factId": "master:fact-first-thrust-cutoff-done",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-a3b",
+      "factId": "master:fact-first-thrust-cutoff-done",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-a3b",
+      "factId": "master:fact-first-thrust-cutoff-done",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-a3b",
+      "factId": "master:fact-first-thrust-cutoff-done",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-a3b",
+      "factId": "master:fact-first-thrust-cutoff-done",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-a3b",
+      "factId": "master:fact-first-thrust-cutoff-done",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-a4",
+      "factId": "master:fact-fuel-mass-discrepancy",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-a4",
+      "factId": "master:fact-fuel-mass-discrepancy",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-a4",
+      "factId": "master:fact-fuel-mass-discrepancy",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-a5",
+      "factId": "master:fact-neutron-excess-detected",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-a5",
+      "factId": "master:fact-neutron-excess-detected",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-a5",
+      "factId": "master:fact-neutron-excess-detected",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-b1b",
+      "factId": "master:fact-impulse-package-identified",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-b1b",
+      "factId": "master:fact-impulse-package-identified",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-b2",
+      "factId": "master:fact-bridge-hears-cutoff-warning",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-b2",
+      "factId": "master:fact-bridge-hears-cutoff-warning",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-b2",
+      "factId": "master:fact-bridge-hears-cutoff-warning",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-b2",
+      "factId": "master:fact-bridge-hears-cutoff-warning",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-b2",
+      "factId": "master:fact-bridge-hears-cutoff-warning",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-b2",
+      "factId": "master:fact-bridge-hears-cutoff-warning",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-b2",
+      "factId": "master:fact-harlan-jams-wireless",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-b3",
+      "factId": "master:fact-harlan-cuts-wired-comms-cameras",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-b5",
+      "factId": "master:fact-only-moving-intercept-left",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-c2",
+      "factId": "master:fact-harlan-believes-burst-reached-earth",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-c3",
+      "factId": "master:fact-zao-murdered",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-c3a",
+      "factId": "master:fact-harlan-secures-vault",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-c3a",
+      "factId": "master:fact-flight-controls-cut",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-c4",
+      "factId": "master:fact-sorell-found-zao",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-cameras-show-only-rescue",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-cameras-show-only-rescue",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-cameras-show-only-rescue",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-cameras-show-only-rescue",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-cameras-show-only-rescue",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-zao-murdered",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-zao-murdered",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-zao-murdered",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-c5",
+      "factId": "master:fact-zao-murdered",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-c7",
+      "factId": "master:fact-harlan-accuses-sorell",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-c7",
+      "factId": "master:fact-harlan-accuses-sorell",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-c7",
+      "factId": "master:fact-harlan-accuses-sorell",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-c7",
+      "factId": "master:fact-harlan-accuses-sorell",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-c7",
+      "factId": "master:fact-harlan-accuses-sorell",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-c7",
+      "factId": "master:fact-harlan-accuses-sorell",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-c9",
+      "factId": "master:fact-harlan-accusation-not-proof",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-c9",
+      "factId": "master:fact-harlan-accusation-not-proof",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-c9",
+      "factId": "master:fact-harlan-accusation-not-proof",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-c9",
+      "factId": "master:fact-harlan-accusation-not-proof",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-c9",
+      "factId": "master:fact-harlan-accusation-not-proof",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-c10",
+      "factId": "master:fact-case-open-station-leg",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-c10",
+      "factId": "master:fact-case-open-station-leg",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-c10",
+      "factId": "master:fact-case-open-station-leg",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-c10",
+      "factId": "master:fact-case-open-station-leg",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-c10",
+      "factId": "master:fact-case-open-station-leg",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-d2b",
+      "factId": "master:fact-engine-healthy-separate-causes",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-d2b",
+      "factId": "master:fact-engine-healthy-separate-causes",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-d2b",
+      "factId": "master:fact-engine-healthy-separate-causes",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-d2b",
+      "factId": "master:fact-engine-healthy-separate-causes",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-d4",
+      "factId": "master:fact-vault-lock-rejects-timing-diagnostic",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-d4",
+      "factId": "master:fact-vault-lock-rejects-timing-diagnostic",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-d4",
+      "factId": "master:fact-vault-lock-rejects-timing-diagnostic",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-d4",
+      "factId": "master:fact-vault-lock-rejects-timing-diagnostic",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-d7",
+      "factId": "master:fact-burst-corridor-signal-incoming",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-d7",
+      "factId": "master:fact-burst-corridor-signal-incoming",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-d7",
+      "factId": "master:fact-burst-corridor-signal-incoming",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-d7",
+      "factId": "master:fact-burst-corridor-signal-incoming",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-d7",
+      "factId": "master:fact-burst-corridor-signal-incoming",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-d7",
+      "factId": "master:fact-burst-corridor-signal-incoming",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-recording-identifies-bomb-harlan",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-recording-identifies-bomb-harlan",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-recording-identifies-bomb-harlan",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-recording-identifies-bomb-harlan",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-recording-identifies-bomb-harlan",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-recording-identifies-bomb-harlan",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-jams-wireless",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-jams-wireless",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-jams-wireless",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-jams-wireless",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-cuts-wired-comms-cameras",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-cuts-wired-comms-cameras",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-cuts-wired-comms-cameras",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-cuts-wired-comms-cameras",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-secures-vault",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-secures-vault",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-secures-vault",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-harlan-secures-vault",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-flight-controls-cut",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-flight-controls-cut",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-flight-controls-cut",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e2",
+      "factId": "master:fact-flight-controls-cut",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e5",
+      "factId": "master:fact-recording-authenticated",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-e5",
+      "factId": "master:fact-recording-authenticated",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-e5",
+      "factId": "master:fact-recording-authenticated",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e5",
+      "factId": "master:fact-recording-authenticated",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e5",
+      "factId": "master:fact-recording-authenticated",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e5",
+      "factId": "master:fact-recording-authenticated",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-evidence-converges-revoke-harlan",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-evidence-converges-revoke-harlan",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-evidence-converges-revoke-harlan",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-evidence-converges-revoke-harlan",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-evidence-converges-revoke-harlan",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-evidence-converges-revoke-harlan",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-aft-console-only-interrupt",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-aft-console-only-interrupt",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-aft-console-only-interrupt",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-aft-console-only-interrupt",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-aft-console-only-interrupt",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-e6",
+      "factId": "master:fact-aft-console-only-interrupt",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-f2",
+      "factId": "master:fact-harlan-escaped-with-wrist",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-f2",
+      "factId": "master:fact-harlan-escaped-with-wrist",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-f2",
+      "factId": "master:fact-harlan-escaped-with-wrist",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-f2",
+      "factId": "master:fact-harlan-escaped-with-wrist",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-f2",
+      "factId": "master:fact-harlan-escaped-with-wrist",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-f2",
+      "factId": "master:fact-harlan-escaped-with-wrist",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-f4",
+      "factId": "master:fact-fourth-cutoff-bypass-stairs",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-f4",
+      "factId": "master:fact-fourth-cutoff-bypass-stairs",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-f4",
+      "factId": "master:fact-fourth-cutoff-bypass-stairs",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-f4",
+      "factId": "master:fact-fourth-cutoff-bypass-stairs",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-f4",
+      "factId": "master:fact-fourth-cutoff-bypass-stairs",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-f4",
+      "factId": "master:fact-fourth-cutoff-bypass-stairs",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-f5",
+      "factId": "master:fact-bomb-delayable-scientific-input",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-f5",
+      "factId": "master:fact-bomb-delayable-scientific-input",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-f5",
+      "factId": "master:fact-bomb-delayable-scientific-input",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-f5",
+      "factId": "master:fact-bomb-delayable-scientific-input",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-f6",
+      "factId": "master:fact-greeting-completed",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-f6",
+      "factId": "master:fact-greeting-completed",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-f6",
+      "factId": "master:fact-greeting-completed",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-g1",
+      "factId": "master:fact-greeting-authorized-sent",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-g1",
+      "factId": "master:fact-greeting-authorized-sent",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-g1",
+      "factId": "master:fact-greeting-authorized-sent",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-g1",
+      "factId": "master:fact-greeting-authorized-sent",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-g2b",
+      "factId": "master:fact-station-answered-emissary",
+      "characterIds": [
+        "character:harlan"
+      ]
+    },
+    {
+      "stepId": "master:story-g2b",
+      "factId": "master:fact-station-answered-emissary",
+      "characterIds": [
+        "character:zao"
+      ]
+    },
+    {
+      "stepId": "master:story-g2b",
+      "factId": "master:fact-station-answered-emissary",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-g2b",
+      "factId": "master:fact-station-answered-emissary",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-g2b",
+      "factId": "master:fact-station-answered-emissary",
+      "characterIds": [
+        "character:sorell"
+      ]
+    },
+    {
+      "stepId": "master:story-g2b",
+      "factId": "master:fact-station-answered-emissary",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-g3",
+      "factId": "master:fact-voss-earth-record-credits-zao",
+      "characterIds": [
+        "character:voss"
+      ]
+    },
+    {
+      "stepId": "master:story-g3",
+      "factId": "master:fact-voss-earth-record-credits-zao",
+      "characterIds": [
+        "character:rao"
+      ]
+    },
+    {
+      "stepId": "master:story-g3",
+      "factId": "master:fact-voss-earth-record-credits-zao",
+      "characterIds": [
+        "character:okoye"
+      ]
+    },
+    {
+      "stepId": "master:story-g3",
+      "factId": "master:fact-voss-earth-record-credits-zao",
+      "characterIds": [
+        "character:sorell"
+      ]
+    }
+  ],
+  "actionRequirements": [
+    {
+      "stepId": "master:story-b2",
+      "actorId": "character:harlan",
+      "action": {
+        "en": "Jam Zao only after hearing that she found sabotage.",
+        "es": "Traducción pendiente (needs_revision): Jam Zao only after hearing that she found sabotage."
+      },
+      "requiresKnownFactIds": [
+        "master:fact-impulse-package-identified"
+      ]
+    },
+    {
+      "stepId": "master:story-b5",
+      "actorId": "character:zao",
+      "action": {
+        "en": "Choose a concealed future intercept after her outbound warning path is dead and the obvious destinations are eliminated.",
+        "es": "Traducción pendiente (needs_revision): Choose a concealed future intercept after her outbound warning path is dead and the obvious destinations are eliminated."
+      },
+      "requiresKnownFactIds": [
+        "master:fact-impulse-package-identified"
+      ]
+    },
+    {
+      "stepId": "master:story-c3a",
+      "actorId": "character:harlan",
+      "action": {
+        "en": "Disable bridge flight commands only after Zao’s warning creates a foreseeable abort.",
+        "es": "Traducción pendiente (needs_revision): Disable bridge flight commands only after Zao’s warning creates a foreseeable abort."
+      },
+      "requiresKnownFactIds": [
+        "master:fact-harlan-believes-burst-reached-earth"
+      ]
+    },
+    {
+      "stepId": "master:story-e5",
+      "actorId": "character:voss",
+      "action": {
+        "en": "Order an abort only after hearing the authenticated warning.",
+        "es": "Traducción pendiente (needs_revision): Order an abort only after hearing the authenticated warning."
+      },
+      "requiresKnownFactIds": [
+        "master:fact-recording-authenticated"
+      ]
+    },
+    {
+      "stepId": "master:story-f5",
+      "actorId": "character:rao",
+      "action": {
+        "en": "Use the timing input instead of cutting power because Zao warned that tampering could trigger the weapon.",
+        "es": "Traducción pendiente (needs_revision): Use the timing input instead of cutting power because Zao warned that tampering could trigger the weapon."
+      },
+      "requiresKnownFactIds": [
+        "master:fact-recording-identifies-bomb-harlan",
+        "master:fact-fourth-cutoff-bypass-stairs"
+      ]
+    },
+    {
+      "stepId": "master:story-g1",
+      "actorId": "character:voss",
+      "action": {
+        "en": "Authorize only Sorell’s clean greeting after the bomb is delayed.",
+        "es": "Traducción pendiente (needs_revision): Authorize only Sorell’s clean greeting after the bomb is delayed."
+      },
+      "requiresKnownFactIds": [
+        "master:fact-bomb-delayable-scientific-input"
       ]
     }
   ]

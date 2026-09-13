@@ -12,8 +12,11 @@ repository on 2026-09-11; re-check line numbers and counts before relying on the
 that date, since the festival screenplay this brief supports is being authored concurrently.
 
 **Storyboard stills:** durable source for what a shot shows is `Shot.description`; `Take.generation.prompt`
-is a disposable compiled artifact (see `DIALOGUE_AND_PROMPT_LESSONS.md` §1). Still prompts must not
-paste spoken dialogue (`npm run scrub:still-prompts:check`).
+is a disposable compiled artifact (see `DIALOGUE_AND_PROMPT_LESSONS.md` §1). Each still request is
+**stateless** — restate gravity and other load-bearing visual state in the prompt (or via attached
+refs); scene continuity is not visible to the image model (§2c). Still prompts must not paste spoken
+dialogue (`npm run scrub:still-prompts:check`); Seedance/video prompts intentionally include cue text
+and voice-sample `@Audio` refs instead.
 
 ## 1. Authority chain (read in this order)
 
@@ -41,7 +44,8 @@ do not point it at the deprecated `script:light-delay-festival`.
 | `data/schemas/generation-plan.schema.json` | Shape of the plan JSON: `plan`, per-shot `artifacts`/`requiredReferences`/`segments` |
 | `data/schemas/provider-capabilities.schema.json` | Provider snapshots + campaigns (limits, `executable`) |
 | `data/schemas/production-contexts.schema.json` | Physical/visual contexts assigned to scenes/shots |
-| `data/schemas/continuity-ledger.schema.json` | Causal gate: facts, knowledge events, action requirements |
+| `data/schemas/continuity-ledger.schema.json` | Deprecated cut ledgers (obsolete authorship); live facts are on the master outline |
+| `docs/production/CAUSAL_AND_MEANING_PIPELINE.md` | Fact rebuild + `report:causal-structure` / `report:meaning-audit` |
 | `data/schemas/outline.schema.json` | Outline coverage/derivation contract |
 | `data/schemas/voice-profiles.schema.json` | Voice samples as audio references |
 | `data/schemas/common.schema.json` / `schema-manifest.json` | Shared `$defs` + manifest-driven validation |
@@ -135,7 +139,9 @@ covering the run (`SEEDANCE_PROMPTING.md` §6.2); shot IDs stay distinct.
 | --- | --- |
 | `npm run production:plans` | `scripts/build-generation-plans.mjs` — **currently hardcoded to the four deprecated cuts only** (`main-short`, `festival`, `trailer`, `long`); it will need an explicit addition before it can (re)build `light-delay-festival-master`'s plan |
 | `npm run report:prompt-readiness` | Blockers / budget / segments |
-| `npm run report:causal-validity` | Continuity ledger |
+| `npm run report:causal-structure` | Master facts + Festival cue bindings (live) |
+| `npm run report:causal-validity` | Obsolete/deprecated cut ledgers only |
+| `npm run report:meaning-audit` | Meaning packet after structure green |
 | `npm run prepare:higgsfield` | Copies sheets → `higgsfield-uploads/` |
 | `npm run validate:schemas` / `npm run schema:types` | Contracts |
 | `node scripts/higgsfield-preflight.mjs` | Preflight only — never submits |

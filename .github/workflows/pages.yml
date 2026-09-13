@@ -41,6 +41,9 @@ jobs:
       - name: Validate causal ledger
         run: npm run report:causal-validity
 
+      - name: Validate causal structure
+        run: npm run report:causal-structure
+
       - name: Validate documentation
         run: npm run validate:docs
 

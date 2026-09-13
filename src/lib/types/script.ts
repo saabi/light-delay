@@ -202,6 +202,8 @@ export interface CueBase extends SourceTraceable {
 	id: CueId;
 	beatId: BeatId;
 	order: number;
+	/** Master outline fact ids this cue implements (causal structure binding). */
+	implementsFactIds?: string[];
 	notes?: Note[];
 }
 

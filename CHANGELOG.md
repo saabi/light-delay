@@ -1,5 +1,145 @@
 # Changelog
 
+## 2026-09-13 — Meaning-audit cue rebinds (Festival-master)
+
+- Content-verified nine mis-anchored `implementsFactIds` (adjacent-beat heuristic): flight-cut, Sorell find, cameras, bridge hears warning, greeting completed, fuel/neutron swap, recording auth, Harlan accusation.
+- Rewired Zao’s b5 actionRequirement onto `impulse-package-identified` (not withheld Harlan-cut facts); narrowed p2 `voss-misread-motives` knowers to staged cast.
+- `report:causal-structure` green; Vitest flight-cut cue updated to `cue-0077`.
+
+## 2026-09-13 — Festival Master storyboard refresh
+
+- Refreshed and registered active Festival Master storyboard outputs using each take's current prompt and visible-reference bindings.
+- Cleared stale needs_regeneration markers from the active take queue; all 104 flagged takes remain explicitly needs_review for human editorial acceptance.
+- Deprecated cut assets were excluded; the master outline remains narrative authority.
+
+## 2026-09-13 — Master fact migration notes applied
+
+- Reminted master outline causal objects from the author-signed migration notes: 33 active facts, 7 retired, corrected knowledgeEvents (incl. fact-06 everyone-knows bug), rewired actionRequirements, Festival `implementsFactIds` remapped.
+- Notable mints/splits: bridge-hears vs Harlan jam/cut; murder / vault / flight-cut; recording identify vs authenticate; fuel vs neutron; Harlan wrong-belief only.
+- `report:causal-structure` green; Vitest delayed-reveal assertions updated to new fact ids.
+
+## 2026-09-13 — Causal structure + meaning pipeline
+
+- Lifted Festival-master continuity-ledger facts / knowledgeEvents / actionRequirements onto the master outline as the single fact SoT (`master:fact-*`); Festival ledger marked `obsolete`.
+- Added `report:causal-structure`, `report:meaning-audit`, and `report:fact-rebuild-proposal`; `report:causal-validity` now skips obsolete/deprecated ledgers as `not_applicable`.
+- Tagged Festival-master cues with `implementsFactIds`; replaced brittle dialogue-prefix causality Vitest with fact-id order assertions.
+- Docs: `docs/production/CAUSAL_AND_MEANING_PIPELINE.md`, migration map, AGENTS/onboarding/JSON_FORMAT/ESCALETA pointers; CI step for causal-structure.
+
+## 2026-09-13 — Central-access reference regenerated
+
+- Replaced the invalidated central-access v3 sheet with v4, whose section and elevation views preserve a clear approximately two-metre central opening and twin helical stairs with no solid column.
+- Updated asset/manifest and production-plan paths, deleted v3, and marked the ten Festival Master dependent takes for regeneration.
+- Validation: `validate:data` and `validate:schemas` pass.
+
+## 2026-09-13 — Removed the fabricated "command vestibule"; flagged the central-shaft column
+
+- Author identified two ship-geometry errors against the actual reference
+  blueprint (`static/assets/vehicles/celestial-ardor/specs/ardor-sectional-cut-and-bridge-top-view.png`):
+  a fabricated `location:celestial-ardor-command-vestibule` duplicating the
+  bridge's own description, and a solid column in the central-access
+  shaft's reference art where canon calls for an open ~2 m aperture (needed
+  for Voss/Okoye's climax dive). Full writeup: "Pass 3" in
+  `docs/production/OUTLINE_FIDELITY_AUDIT_FESTIVAL_MASTER.md`.
+- Removed `location:celestial-ardor-command-vestibule` from
+  `data/locations.json` and `data/editorial-lifecycle.json`; reworded every
+  "command/service vestibule" mention in `data/scripts/light-delay-festival-master.json`
+  (scene-10/beat-10/cue-0046/scene-16/beat-16, `shot-plan-023/024/044/045/045b`)
+  and `data/translations/documents.en.json` to describe the bridge's
+  service hatch, hidden from the crew's sightline, instead of a separate
+  room; marked the orphaned vestibule reference asset `needs_replacement`.
+  Flagged (did not rewrite) `docs/technical/CELESTIAL_ARDOR.md`, which ties
+  the vestibule to real, already-modeled 3D coordinates that need a Blender
+  pass to reconcile, not a prose edit.
+- Flagged `asset:location-celestial-ardor-central-access-sheet`
+  `needs_regeneration`/`canon_mismatch` for the solid column. Visually
+  checked every shot at that location rather than assuming they all
+  inherited the defect: `shot-plan-013` is actually correct (left alone);
+  `shot-plan-077`/`078` (the climax) do show the column and were
+  flagged/updated accordingly. No image regenerated.
+
+## 2026-09-13 — Orphan concept-sheet cleanup
+
+- Removed three unreferenced superseded sheets: the engineering v2, reactor service-bay v2, and service-cylinder v3 sheets.
+- Updated the Higgsfield staging manifest to point to the current engineering v3 sheet; retained other older sheets that remain referenced by production plans.
+
+## 2026-09-13 — Master-derived reference assets regenerated
+
+- Generated and registered eight pending visual references: the Celestial Ardor command vestibule, central access cylinder, service cylinder, outer reactor service bay, inner shielding vault, Proxima geophysical impulse package, Harlan wrist device, and time-reference diagnostic unit.
+- Wired the new versioned paths into the asset catalog and production manifest, resolved their pending visual-reference notes, and preserved prior files as superseded provenance.
+- Validation: `validate:data` and `validate:schemas` pass; generated images remain `needs_review` for editorial acceptance.
+
+## 2026-09-13 — Festival-master outline-fidelity audit (beyond gravity)
+
+- Generalized the gravity-audit method to every other category of
+  parent-outline fact that can go missing at the shot/prompt layer: report
+  and fixes both at `docs/production/OUTLINE_FIDELITY_AUDIT_FESTIVAL_MASTER.md`.
+- Fixed a live contradiction: 16 shots (scenes 26–29/31/32) contradicted
+  `contexts.json`'s own "no unsecured hazardous objects" rule via the
+  generic microgravity sentence; swapped for a hazard-safe variant.
+- Fixed `scene-25`'s stale `setting.continuity` (still said microgravity
+  after the gravity audit already corrected the scene to 1g).
+- Fixed a geography contradiction: `shot-plan-028` put a helical stair in
+  the ladder-only service shaft and got the relative speed backwards vs. its
+  own sibling shots; corrected both. Added the twin-staircase geometry to 7
+  central-access shots that previously relied only on the reference image.
+- Grounded 3 plot-critical objects (the bomb, Harlan's wrist device, the
+  time-reference diagnostic unit) that had zero physical description and a
+  catalog-flagged "pending" reference sheet: threaded each object's own
+  catalog description into the shots that show it, and attached the
+  diagnostic unit's reference sheet to its first appearance (previously
+  missing, despite the catalog requiring it look identical across both).
+- Attached missing character reference sheets to 4 shots where
+  `Shot.visibleRefs` marked someone present but their sheet wasn't attached;
+  in the process found and fixed the same class of staleness in those
+  takes' own literal "Reference assets attached" prompt text — confirmed no
+  other take in the file has that drift.
+- 33 takes marked `imageStatus: needs_regeneration` (`canon_mismatch`); no
+  images regenerated.
+
+## 2026-09-13 — Still prompts must restate non-inherited state (incl. gravity)
+
+- Documented that image generators are stateless: scene continuity and “cue it once”
+  audience craft do not substitute for an explicit gravity (and other load-bearing)
+  clause in each still prompt. Spoken dialogue stays out of stills; Seedance/video
+  keeps cue text + voice samples. See `DIALOGUE_AND_PROMPT_LESSONS.md` §2c,
+  `AGENTS.md`, `AGENT_GENERATION_BRIEF.md`, `SEEDANCE_PROMPTING.md`; gravity audit
+  note updated so blank prompt markers are not treated as green for regen.
+
+## 2026-09-13 — Festival-master: 33 shots got their missing gravity statement
+
+- Applying the stateless-still-prompt rule above (`DIALOGUE_AND_PROMPT_LESSONS.md`
+  §2c): re-scanned all 104 Festival-master shots and found 33 whose prompts had
+  no explicit gravity/vacuum statement at all (the `shot-plan-021` case), not
+  just the 2 with a wrong one from the first pass below.
+- Fixed: 27 MG + 2 1g interior shots got the existing boilerplate sentence; 3
+  EVA/vacuum shots (`089/091/092`) got a new vacuum-appropriate sentence; 1
+  exterior establishing shot (`040b`) got the existing "No gravity reference"
+  note. `Take.generation.prompt` only, per established convention.
+- Marked all 33 takes `imageStatus: needs_regeneration` (`canon_mismatch`); no
+  images regenerated. See §8 of `docs/production/GRAVITY_AUDIT_FESTIVAL_MASTER.md`.
+
+## 2026-09-13 — Festival-master gravity-state audit and fixes
+
+- Audited all 104 Festival-master shots/prompts against the master and derived
+  outlines for correct microgravity vs. 1g flagging; report at
+  `docs/production/GRAVITY_AUDIT_FESTIVAL_MASTER.md`.
+- Fixed scene 25 (`shot-plan-074/075/076`): prompts wrongly carried the
+  microgravity boilerplate for a scene that is 1g under thrust; corrected to
+  the 1g sentence. Marked `imageStatus: needs_regeneration` (`canon_mismatch`).
+- Confirmed the ship stays in microgravity through the end of the film (no
+  relight after the fourth thrust cutoff, `cue-0157`); reassigned scenes 28,
+  29, 31, 32 from `context:ardor-thrust-gravity` to a new
+  `context:ardor-post-climax-microgravity` in `data/production/contexts.json`.
+  Added a legibility detail + explicit marker to `shot-plan-083`, the first
+  shot of that stretch.
+- Regenerated `data/production/plans/light-delay-festival-master.json` from
+  the corrected source data (no images regenerated).
+
+## 2026-09-13 — Deferred AuK TTS install plan
+
+- Added `docs/production/AUK_INSTALL_PLAN.md`: investigate-only plan for a parallel
+  Tencent AuK stack on RTX 3090 (CPU offload required; keep Qwen3-TTS tooling).
+
 ## 2026-09-13 — Resolve OTIO export writes EN/ES SRT sidecars
 
 - `export:resolve-otio` now writes `tmp/resolve-otio/<slug>.en.srt` and `.es.srt` beside the
@@ -17,6 +157,19 @@
   black-frame asset remains without a model.
 - Loosened `asset-generation-manifest` schema so `generator.model` is any non-empty
   string (data still records `gpt-image-2`).
+
+## 2026-09-13 — Festival-master reference regeneration completed
+
+- Regenerated and registered all 36 remaining Festival-master stills that had been stale after the Ardor reference-sheet corrections or marked with a canon mismatch: `006`, `016–022`, `026–039`, `042–043`, `045b`, `054`, `060`, `071`, `073–075`, `077–079`, and `095–096`.
+- Injury beats use non-graphic staging while preserving the required discovery and rescue actions. Each take, storyboard asset, and generation-manifest entry was updated immediately after its image was generated.
+
+## 2026-09-12 — Trailer OTIO gaps were missing stills, not a Resolve failure
+
+- Wired the seven trailer takes that had no `imageAssetId` to on-disk frames (festival
+  021/023/024/081/082/087 plus a new pure-black still for `shot-c-03`).
+- Re-exported `light-delay-trailer-master.otio`: 22 picture clips, 0 picture gaps, 16 dialogue
+  clips. Documented in `RESOLVE_OTIO_EXPORT.md` that empty Resolve stretches usually mean OTIO
+  `Gap`s for unresolved stills — and that trailer vs festival are different files.
 
 ## 2026-09-12 — Festival-master EN dialogue for cue-0044 / cue-0045
 

@@ -17,6 +17,7 @@ Read this file at the start of every session. For a short day-one map, also open
 - **Ignore as current product:** deprecated `main-short`, `festival`, `trailer`, and `long`. Never confuse `light-delay-festival` with `light-delay-festival-master`.
 - **Incomplete master** blocks *new unauthorized* cuts. It does **not** freeze work on derivatives already authorized in `data/editorial-lifecycle.json`.
 - **English authorship** for story copy and docs; edit `en` first; `es` may stay `needs_revision`. UI chrome = Paraglide (`messages/*.json`), not story overlays.
+- **Causal facts SoT:** master outline `facts` / `knowledgeEvents` / `actionRequirements` (`master:fact-*`). Cut ledgers are not live authorship. Pipeline: [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](docs/production/CAUSAL_AND_MEANING_PIPELINE.md).
 
 Before changing narrative or structure, also read `README.md`, the master outline, `data/editorial-lifecycle.json`, `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md`, and `docs/PROJECT_STATUS.md`. `docs/CANON_DECISIONS.md` is previous continuity only. For cut script/animatic work, read `docs/GUIA_ESCALETA.md` (contract: `docs/ESCALETA.md`).
 
@@ -46,7 +47,8 @@ When a needed edit at a lower layer conflicts with authoritative truth above it:
 ### Durable production rules
 
 - Edit **`Shot.description`** (EN first) before or together with `Take.generation.prompt`. Prompt-only edits get overwritten by compilers. See `docs/production/DIALOGUE_AND_PROMPT_LESSONS.md`.
-- Still prompts: **no spoken dialogue**; English-only diegetic UI. Check with `npm run scrub:still-prompts:check`.
+- Still / image prompts are **stateless**: the model sees only prompt text + attached refs — not scene `setting.continuity` or other shots. Restate gravity and any other load-bearing visual state in each prompt (or on an attached sheet). “Cue it once” is audience-sequence craft, not a still-prompt omission. See `DIALOGUE_AND_PROMPT_LESSONS.md` §2c.
+- Still prompts: **no spoken dialogue**; English-only diegetic UI. Check with `npm run scrub:still-prompts:check`. Video jobs (e.g. Seedance 2.5) **do** take cue text + voice-sample audio refs — do not apply the still no-dialogue scrub there (`SEEDANCE_PROMPTING.md`).
 - **Do not regenerate existing images** unless explicitly instructed. Mark debt with `imageStatus` (`needs_regeneration` + reason). Marking stale ≠ permission to regenerate.
 - Generation depth: `docs/production/AGENT_GENERATION_BRIEF.md`.
 

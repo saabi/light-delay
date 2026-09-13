@@ -90,23 +90,39 @@ describe('master-derived Festival screenplay', () => {
 	it('preserves the delayed reveal and places flight sabotage after the murder', () => {
 		const script = getScript(scriptId);
 		const cues = script.cues;
+		const indexOfFact = (factId: string) =>
+			cues.findIndex((cue) => cue.implementsFactIds?.includes(factId));
+		const murderFact = 'master:fact-zao-murdered';
+		const flightCutFact = 'master:fact-flight-controls-cut';
+		const harlanWrongBelief = 'master:fact-harlan-believes-burst-reached-earth';
+		const recordingHeard = 'master:fact-recording-identifies-bomb-harlan';
+		const murderIdx = indexOfFact(murderFact);
+		const beliefIdx = indexOfFact(harlanWrongBelief);
+		const heardIdx = indexOfFact(recordingHeard);
 		const impact = cues.findIndex(
-			(cue) => cue.type === 'sound' && english(cue.description).includes('bodily impact')
+			(cue) => cue.id === 'festival-master:cue-0076' && cue.implementsFactIds?.includes(murderFact)
 		);
 		const flightSabotage = cues.findIndex(
 			(cue) =>
-				cue.type === 'action' && english(cue.text).includes('disconnects bridge flight commands')
+				cue.id === 'festival-master:cue-0077' && cue.implementsFactIds?.includes(flightCutFact)
+		);
+		const silentBelief = cues.findIndex(
+			(cue) =>
+				cue.id === 'festival-master:cue-0066' && cue.implementsFactIds?.includes(harlanWrongBelief)
 		);
 		const heardRecording = cues.findIndex(
 			(cue) =>
-				cue.type === 'dialogue' && cue.content.variants.en.spokenText.startsWith('If this reaches')
+				cue.id === 'festival-master:cue-0126' && cue.implementsFactIds?.includes(recordingHeard)
 		);
-		const silentRecording = cues.findIndex(
-			(cue) => cue.type === 'silence' && english(cue.purpose).includes('deliberately inaudible')
-		);
+		expect(murderIdx).toBeGreaterThan(-1);
+		expect(beliefIdx).toBeGreaterThan(-1);
+		expect(heardIdx).toBeGreaterThan(-1);
 		expect(impact).toBeGreaterThan(-1);
 		expect(flightSabotage).toBeGreaterThan(impact);
-		expect(heardRecording).toBeGreaterThan(silentRecording);
+		expect(silentBelief).toBeGreaterThan(-1);
+		expect(heardRecording).toBeGreaterThan(silentBelief);
+		expect(heardIdx).toBeGreaterThan(beliefIdx);
+		expect(indexOfFact(flightCutFact)).toBeGreaterThan(murderIdx);
 	});
 
 	it('marks four separate gravity events and reserves 96 story shot-plan units', () => {

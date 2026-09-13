@@ -4184,7 +4184,10 @@
             "estimatedDurationMs": 2060
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-voss-misread-motives"
+      ]
     },
     {
       "id": "festival-master:cue-0012",
@@ -4471,7 +4474,10 @@
             "estimatedDurationMs": 1260
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-harlan-loading-access-open"
+      ]
     },
     {
       "id": "festival-master:cue-0019",
@@ -4872,7 +4878,10 @@
       "text": {
         "es": "El empuje regresa en sentido contrario. El peso vuelve a asentarse cuando el Ardor empieza a frenar hacia la boca.",
         "en": "Thrust returns in the opposite direction. Weight settles back as the Ardor begins braking toward the mouth."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-first-thrust-cutoff-done"
+      ]
     },
     {
       "id": "festival-master:cue-0029c",
@@ -5013,7 +5022,10 @@
       "text": {
         "es": "Recalcula el perfil. Un pequeño exceso de propelente se repite con exactitud a lo largo del tramo largo.",
         "en": "She recomputes the profile. A small propellant excess repeats exactly across the long leg."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-fuel-mass-discrepancy"
+      ]
     },
     {
       "id": "festival-master:cue-0033",
@@ -5098,7 +5110,10 @@
       "text": {
         "es": "El conteo de neutrones se intensifica hacia la cámara acorazada blindada. Harlan sale de su bahía interior y se cruza con Zao en el pasillo.",
         "en": "The neutron count strengthens toward the shielded vault. Harlan emerges from its inner bay and meets Zao in the passage."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-neutron-excess-detected"
+      ]
     },
     {
       "id": "festival-master:cue-0036",
@@ -5519,7 +5534,10 @@
             "estimatedDurationMs": 4700
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-impulse-package-identified"
+      ]
     },
     {
       "id": "festival-master:cue-0046",
@@ -5581,7 +5599,10 @@
             "estimatedDurationMs": 4780
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-bridge-hears-cutoff-warning"
+      ]
     },
     {
       "id": "festival-master:cue-0048",
@@ -5598,7 +5619,10 @@
       "text": {
         "es": "Solo cuando cae la palabra sabotaje Harlan se toca la muñeca. El canal muere. Se retira antes de que nadie se dé vuelta.",
         "en": "Only when the word sabotage lands does Harlan touch his wrist. The channel dies. He withdraws before anyone turns."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-harlan-jams-wireless"
+      ]
     },
     {
       "id": "festival-master:cue-0049",
@@ -5750,7 +5774,10 @@
       "text": {
         "es": "En la bandeja bajo la escotilla, Harlan desconecta, sin decir palabra, los mazos cableados de comunicaciones y cámaras, y luego se lanza en caída balística por el conducto de servicio.",
         "en": "At the tray below the hatch, Harlan disconnects the wired communications and camera trunks without speaking, then launches ballistically down the service shaft."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-harlan-cuts-wired-comms-cameras"
+      ]
     },
     {
       "id": "festival-master:cue-0053",
@@ -6220,7 +6247,10 @@
             "estimatedDurationMs": 1420
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-only-moving-intercept-left"
+      ]
     },
     {
       "id": "festival-master:cue-0065",
@@ -6255,7 +6285,10 @@
         "es": "La grabación es deliberadamente inaudible aquí para que el destino y la advertencia regresen juntos más adelante.",
         "en": "The recording is deliberately inaudible here so the destination and warning return together later."
       },
-      "estimatedDurationMs": 9000
+      "estimatedDurationMs": 9000,
+      "implementsFactIds": [
+        "master:fact-harlan-believes-burst-reached-earth"
+      ]
     },
     {
       "id": "festival-master:cue-0067",
@@ -6579,7 +6612,10 @@
         "es": "Un golpe seco de cuerpo en negro sostenido; la respiración de Zao se detiene.",
         "en": "One dry bodily impact in sustained black; Zao’s breath stops."
       },
-      "mode": "diegetic"
+      "mode": "diegetic",
+      "implementsFactIds": [
+        "master:fact-zao-murdered"
+      ]
     },
     {
       "id": "festival-master:cue-0076b",
@@ -6680,7 +6716,11 @@
       "text": {
         "es": "Harlan deja a Zao fuera de la bóveda interior, la cierra y la vuelve a codificar con su dispositivo de muñeca; luego desconecta los mandos de vuelo del puente y el corte remoto en la consola local contigua. Solo lo hace ahora porque su advertencia vuelve previsible un aborto.",
         "en": "Harlan leaves Zao outside the inner vault, closes and rekeys it with his wrist device, then disconnects bridge flight commands and the remote cutoff at the adjacent local console. He does this only now because her warning makes an abort foreseeable."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-harlan-secures-vault",
+        "master:fact-flight-controls-cut"
+      ]
     },
     {
       "id": "festival-master:cue-0078",
@@ -6889,7 +6929,10 @@
       "text": {
         "es": "Sorell llega a la bahía exterior, atrapa el cuerpo a la deriva de Zao, comprueba vía aérea y pulso, e intenta detener una sangre que ya no circula.",
         "en": "Sorell reaches the outer bay, catches Zao’s drifting body, checks airway and pulse, and tries to stop blood that no longer circulates."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-sorell-found-zao"
+      ]
     },
     {
       "id": "festival-master:cue-0084",
@@ -7183,7 +7226,10 @@
       "text": {
         "es": "La señal de cámara vuelve: Sorell sostiene el cuerpo ensangrentado.",
         "en": "The camera feed returns on Sorell holding the bloodied body."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-cameras-show-only-rescue"
+      ]
     },
     {
       "id": "festival-master:cue-0091",
@@ -7301,7 +7347,10 @@
             "estimatedDurationMs": 1500
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-harlan-accuses-sorell"
+      ]
     },
     {
       "id": "festival-master:cue-0093",
@@ -7473,7 +7522,10 @@
             "estimatedDurationMs": 3340
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-harlan-accusation-not-proof"
+      ]
     },
     {
       "id": "festival-master:cue-0097",
@@ -7573,7 +7625,10 @@
             "estimatedDurationMs": 6860
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-case-open-station-leg"
+      ]
     },
     {
       "id": "festival-master:cue-0099",
@@ -7905,7 +7960,10 @@
             "estimatedDurationMs": 700
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-engine-healthy-separate-causes"
+      ]
     },
     {
       "id": "festival-master:cue-0107",
@@ -8178,7 +8236,10 @@
             "estimatedDurationMs": 2620
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-vault-lock-rejects-timing-diagnostic"
+      ]
     },
     {
       "id": "festival-master:cue-0113b",
@@ -8518,7 +8579,10 @@
             "estimatedDurationMs": 3420
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-burst-corridor-signal-incoming"
+      ]
     },
     {
       "id": "festival-master:cue-0123",
@@ -8670,7 +8734,10 @@
             "estimatedDurationMs": 15180
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-recording-identifies-bomb-harlan"
+      ]
     },
     {
       "id": "festival-master:cue-0127",
@@ -8985,7 +9052,10 @@
             "estimatedDurationMs": 10220
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-recording-authenticated"
+      ]
     },
     {
       "id": "festival-master:cue-0134",
@@ -9092,7 +9162,10 @@
       "text": {
         "es": "Voss mira de Harlan a Sorell y ve cuánto de su caso nació de su primer error.",
         "en": "Voss looks from Harlan to Sorell and sees how much of his case came from his first mistake."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-evidence-converges-revoke-harlan"
+      ]
     },
     {
       "id": "festival-master:cue-0137",
@@ -9379,7 +9452,10 @@
             "estimatedDurationMs": 6700
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-aft-console-only-interrupt"
+      ]
     },
     {
       "id": "festival-master:cue-0144",
@@ -9853,7 +9929,10 @@
             "estimatedDurationMs": 1980
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-harlan-escaped-with-wrist"
+      ]
     },
     {
       "id": "festival-master:cue-0157",
@@ -10086,7 +10165,10 @@
             "estimatedDurationMs": 2140
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-fourth-cutoff-bypass-stairs"
+      ]
     },
     {
       "id": "festival-master:cue-0164",
@@ -10240,6 +10322,9 @@
           "kind": "object",
           "id": "object:time-reference-diagnostic-unit"
         }
+      ],
+      "implementsFactIds": [
+        "master:fact-bomb-delayable-scientific-input"
       ]
     },
     {
@@ -10393,7 +10478,10 @@
       "text": {
         "es": "Sorell termina de traducir la geometría simultánea del primer en luces ramificadas sobre el casco. Elin se mantiene en el monitoreo de la bomba; Okoye vigila a Harlan.",
         "en": "Sorell finishes translating the primer’s simultaneous geometry into branching hull lights. Elin remains on the bomb feed; Okoye guards Harlan."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-greeting-completed"
+      ]
     },
     {
       "id": "festival-master:cue-0173",
@@ -10573,7 +10661,10 @@
             "estimatedDurationMs": 2460
           }
         }
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-greeting-authorized-sent"
+      ]
     },
     {
       "id": "festival-master:cue-0177",
@@ -10874,7 +10965,10 @@
         "es": "Ningún humano traduce aún el patrón final; la adaptación es visible antes de que el significado sea seguro.",
         "en": "No human translates the final pattern yet; accommodation is visible before meaning is certain."
       },
-      "estimatedDurationMs": 5000
+      "estimatedDurationMs": 5000,
+      "implementsFactIds": [
+        "master:fact-station-answered-emissary"
+      ]
     },
     {
       "id": "festival-master:cue-0188",
@@ -11167,7 +11261,10 @@
       "text": {
         "es": "La nueva luz parte hacia el mismo silencio en el que ella confió.",
         "en": "The new light departs into the same silence she trusted."
-      }
+      },
+      "implementsFactIds": [
+        "master:fact-voss-earth-record-credits-zao"
+      ]
     },
     {
       "id": "festival-master:cue-credits",
@@ -17569,7 +17666,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:54:45.081Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-title",
       "imageStatus": {
@@ -17579,8 +17676,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-title",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       }
     },
@@ -17772,9 +17869,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-006",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-006",
         "explanation": {
@@ -18161,9 +18258,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-016",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-016",
         "explanation": {
@@ -18191,9 +18288,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-017",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-017",
         "explanation": {
@@ -18222,9 +18319,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-018",
         "explanation": {
@@ -18254,9 +18351,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-019",
         "explanation": {
@@ -18286,9 +18383,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-020",
         "explanation": {
@@ -18316,9 +18413,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "canon_mismatch"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-021",
         "explanation": {
@@ -18345,9 +18442,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "canon_mismatch"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-022",
         "explanation": {
@@ -18472,9 +18569,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-026",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-026",
         "explanation": {
@@ -18502,9 +18599,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-027",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-027",
         "explanation": {
@@ -18531,9 +18628,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-028",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-028",
         "explanation": {
@@ -18560,9 +18657,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-029",
         "explanation": {
@@ -18590,9 +18687,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-030",
         "explanation": {
@@ -18620,9 +18717,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-031",
         "explanation": {
@@ -18650,9 +18747,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-032",
         "explanation": {
@@ -18681,9 +18778,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-033",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-033",
         "explanation": {
@@ -18711,9 +18808,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-034",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-034",
         "explanation": {
@@ -18741,9 +18838,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-035",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-035",
         "explanation": {
@@ -18771,9 +18868,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-036",
         "explanation": {
@@ -18802,9 +18899,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-037",
         "explanation": {
@@ -18833,9 +18930,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-038",
         "explanation": {
@@ -18866,9 +18963,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-039",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-039",
         "explanation": {
@@ -18989,9 +19086,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-042",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-042",
         "explanation": {
@@ -19020,9 +19117,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-043",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-043",
         "explanation": {
@@ -19113,9 +19210,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-045b",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-045b",
         "explanation": {
@@ -19413,9 +19510,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-054",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-054",
         "explanation": {
@@ -19606,9 +19703,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-060",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-060",
         "explanation": {
@@ -19965,9 +20062,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-071",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-071",
         "explanation": {
@@ -20030,9 +20127,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-073",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-073",
         "explanation": {
@@ -20064,9 +20161,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-074",
         "explanation": {
@@ -20096,9 +20193,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-075",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-075",
         "explanation": {
@@ -20160,9 +20257,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-077",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-077",
         "explanation": {
@@ -20194,9 +20291,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-078",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-078",
         "explanation": {
@@ -20227,9 +20324,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-079",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-079",
         "explanation": {
@@ -20350,7 +20447,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:50:48.226Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20359,8 +20456,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-083",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-083"
@@ -20382,7 +20479,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:52:41.033Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20391,8 +20488,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-084",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-084"
@@ -20414,7 +20511,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:53:53.949Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20423,8 +20520,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-085",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-085"
@@ -20446,7 +20543,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:57:24.530Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20455,8 +20552,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-086",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-086"
@@ -20476,7 +20573,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:57:59.800Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20485,8 +20582,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-087",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-087"
@@ -20564,7 +20661,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:58:38.757Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-090",
       "imageStatus": {
@@ -20574,8 +20671,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-090",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       }
     },
@@ -20655,7 +20752,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T17:59:21.984Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20664,8 +20761,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-093",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-093"
@@ -20687,7 +20784,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T18:00:04.801Z"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20696,8 +20793,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-094",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-094"
@@ -20721,9 +20818,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-095",
         "explanation": {
@@ -20752,9 +20849,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-096",
         "explanation": {
@@ -20777,7 +20874,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T18:00:50.325Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-credit-01",
       "imageStatus": {
@@ -20787,8 +20884,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-credit-01",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       }
     },
@@ -20805,7 +20902,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T18:01:33.649Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-credit-02",
       "imageStatus": {
@@ -20815,8 +20912,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-credit-02",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       }
     },
@@ -20833,7 +20930,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-13T18:02:05.667Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-credit-03",
       "imageStatus": {
@@ -20843,8 +20940,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-credit-03",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
+          "en": "Regenerated storyboard still; pending editorial review."
         }
       }
     }

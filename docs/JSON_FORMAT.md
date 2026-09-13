@@ -281,6 +281,29 @@ export interface OutlineFramingSection {
   blocks: OutlineProseBlock[];
 }
 
+export interface OutlineFact {
+  id: string; // master:fact-<kebab> only on the master outline
+  description: LocalizedString;
+  dependsOnFactIds?: string[];
+  introducedInStepId?: string;
+  audienceVisibility?: "overt" | "withheld" | "implied";
+  status: "active" | "retired";
+  legacyIds?: string[]; // e.g. festival-master:fact-NN after migration
+}
+
+export interface OutlineKnowledgeEvent {
+  stepId: string; // master story step
+  factId: string; // master:fact-*
+  characterIds: CharacterId[];
+}
+
+export interface OutlineActionRequirement {
+  stepId: string;
+  actorId: CharacterId;
+  action: LocalizedString;
+  requiresKnownFactIds: string[];
+}
+
 export interface OutlineStep {
   id: string; // namespaced to the cut, e.g. main:outline-01
   level: OutlineStepLevel;
@@ -297,6 +320,8 @@ export interface OutlineStep {
     relation: "enables" | "motivates" | "reveals" | "forces" | "prevents" | "pays_off";
     explanation: LocalizedString;
   }>;
+  requiresFactIds?: string[]; // machine layer; master:fact-*
+  revealsFactIds?: string[];
   coverage?: Partial<Record<"treatment" | "script" | "animatic", {
     status: OutlineCoverageStatus;
     sceneIds?: SceneId[]; beatIds?: BeatId[]; cueIds?: CueId[]; shotIds?: ShotId[];
@@ -347,11 +372,15 @@ export interface OutlineFile {
   };
   framing?: OutlineFramingSection[];
   storySections?: OutlineStorySection[];
+  /** Master outline only: checkable causal machine layer (see CAUSAL_AND_MEANING_PIPELINE.md). */
+  facts?: OutlineFact[];
+  knowledgeEvents?: OutlineKnowledgeEvent[];
+  actionRequirements?: OutlineActionRequirement[];
   steps: OutlineStep[];
 }
 ```
 
-`framing` conserva contexto que no constituye acontecimientos dramáticos. `storySections` agrupa la historia sin inferir estructura desde IDs. Una escaleta puede omitir por completo `detail` y cobertura mientras su implementación no exista.
+`framing` conserva contexto que no constituye acontecimientos dramáticos. `storySections` agrupa la historia sin inferir estructura desde IDs. Una escaleta puede omitir por completo `detail` y cobertura mientras su implementación no exista. On the **master** outline, `facts` / `knowledgeEvents` / `actionRequirements` are the single fact SoT; cut continuity ledgers are obsolete authorship. Pipeline: [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](production/CAUSAL_AND_MEANING_PIPELINE.md).
 
 `SourceReference` también acepta `{ kind: "outline", outlineId, stepId? }`. En un derivado, esas referencias registran qué hitos de la escaleta fuente fueron preservados o combinados sin crear herencia viva. La revisión fuente permanece fijada en `outline.derivation`; `report:outline-derivation` detecta deriva y faltantes.
 
@@ -499,6 +528,8 @@ export interface CueBase {
   id: CueId;
   beatId: BeatId;
   order: number;
+  /** Master outline fact ids this cue implements (`master:fact-*`). */
+  implementsFactIds?: string[];
 
   notes?: Note[];
 }

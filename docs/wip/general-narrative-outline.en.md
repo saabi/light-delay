@@ -2,7 +2,7 @@
 
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 19.
+Working draft, English, revision 23.
 
 **Editorial status:** current narrative source of truth; still WIP.
 
@@ -401,11 +401,14 @@ Zao compares the timer with the flight plan and recognizes the number: zero coin
 
 The package’s deployment casing, firing system, tamper protection, and multi-megaton rating make its purpose aboard the Ardor unmistakable.
 
-Three facts land together:
+Four facts land together:
 
 - It is a thermonuclear bomb.
 - It is timed to first contact.
-- No ordinary message to Earth or Proxima can return in time to stop it.
+- Harlan had to have known — he must be detained.
+- They must abort the approach, or try to defuse or delay it.
+
+Every crew member carries a dosimeter, Harlan included. His would have ticked for him exactly as hers did for her, leading him straight to the package. If he were not behind this, he would already be on the radio to Voss — just as she is about to be.
 
 Zao withdraws to the outer bay, where the local long-distance optical communications array console is available.
 
