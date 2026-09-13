@@ -7,7 +7,7 @@
 	import { getCharacterById } from '$lib/data/repositories/lookups';
 	import { resolveLocalized } from '$lib/data/selectors/index';
 	import { getLanguageState } from '$lib/state/language.svelte';
-	import type { Cue, Shot } from '$lib/types/script';
+	import type { Cue, Shot, VisualStretch, VisualStretchMember } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
 	import * as m from '$lib/paraglide/messages.js';
 
@@ -21,6 +21,7 @@
 		readinessChips = [],
 		playerHref,
 		selected = false,
+		stretchMembership = null,
 		onselect,
 		onduration
 	}: {
@@ -36,6 +37,7 @@
 		readinessChips?: ShotReadinessChip[];
 		playerHref: string;
 		selected?: boolean;
+		stretchMembership?: { stretch: VisualStretch; member: VisualStretchMember } | null;
 		onselect?: () => void;
 		onduration: (ms: number) => void;
 	} = $props();
@@ -89,6 +91,12 @@
 		<header>
 			<span class="num">{m.animatic_take()} {shot.number}</span>
 			<span class="size">{shot.composition.size}</span>
+			{#if stretchMembership}
+				<span class="stretch-badge" title={stretchMembership.stretch.id}>
+					{m.animatic_stretch_badge()} {stretchMembership.member.order}/{stretchMembership.stretch
+						.members.length}
+				</span>
+			{/if}
 		</header>
 		<p class="desc">{shot.description}</p>
 		{#if dialogueCues.length}
@@ -208,6 +216,15 @@
 	.size {
 		color: var(--gold);
 		font-size: 0.78rem;
+	}
+
+	.stretch-badge {
+		margin-left: auto;
+		color: var(--cyan);
+		font: 700 0.68rem var(--font-mono);
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+		opacity: 0.9;
 	}
 
 	.desc {

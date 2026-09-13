@@ -16,6 +16,7 @@
 	import type { EntityRef, Note } from '$lib/types/common';
 	import type { Cue, CuePlacement, ScriptFile, Shot, SourceReference } from '$lib/types/script';
 	import { formatClock } from '$lib/utils/duration';
+	import { findStretchForShot } from '$lib/utils/visualStretch';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let {
@@ -52,6 +53,22 @@
 	const shotSpokenMs = $derived(estimateShotSpokenMs(script, shot, lang.dialogueLanguage));
 	const dialogueFlags = $derived(analyzeShotDialogue(script, shot, lang.dialogueLanguage));
 	const readinessChips = $derived(getShotReadinessChips(script, shot));
+	const stretchMembership = $derived(findStretchForShot(script, shot.id));
+	const stretchNeighbors = $derived.by(() => {
+		if (!stretchMembership) return [];
+		return [...stretchMembership.stretch.members].sort((a, b) => a.order - b.order);
+	});
+	const takeIsSelected = $derived(shot.selectedTakeId === media.take?.id);
+	const stretchStale = $derived(
+		Boolean(
+			media.take?.generation?.visualStretchId &&
+				stretchMembership &&
+				media.take.generation.visualStretchId === stretchMembership.stretch.id &&
+				media.take.generation.stretchJobId &&
+				media.take.generation.stretchJobId !==
+					`${stretchMembership.stretch.id}:rev-${stretchMembership.stretch.revision}`
+		)
+	);
 
 	function present(value: unknown): string {
 		return editorialValueLabel(value, lang.interfaceLanguage);
@@ -167,6 +184,56 @@
 		<p><b>{m.animatic_content()}</b><br />{shot.description}</p>
 		{#if shot.purpose}<p><b>{m.details_purpose()}</b><br />{shot.purpose}</p>{/if}
 	</section>
+
+	{#if stretchMembership}
+		<section>
+			<h3>{m.details_stretch()}</h3>
+			<dl>
+				<div>
+					<dt>{m.details_shot_id()}</dt>
+					<dd class="mono">{stretchMembership.stretch.id}</dd>
+				</div>
+				<div>
+					<dt>{m.details_stretch_revision()}</dt>
+					<dd>{stretchMembership.stretch.revision} · {stretchMembership.stretch.status}</dd>
+				</div>
+				<div>
+					<dt>{m.details_stretch_mode()}</dt>
+					<dd>{stretchMembership.stretch.generationProfile.stillMode}</dd>
+				</div>
+				<div>
+					<dt>{m.details_stretch_members()}</dt>
+					<dd>
+						{stretchMembership.member.order} /
+						{stretchMembership.stretch.members.length}
+						·
+						{stretchNeighbors.map((member) => member.shotId.replace(/^.*shot-plan-/, '')).join(' → ')}
+					</dd>
+				</div>
+				<div>
+					<dt>{m.details_stretch_sheet()}</dt>
+					<dd class="mono">{stretchMembership.stretch.combinedStillAssetId ?? '—'}</dd>
+				</div>
+				<div>
+					<dt>{takeIsSelected ? m.details_stretch_selected_take() : m.details_stretch_candidate()}</dt>
+					<dd class="mono">{media.take?.id ?? '—'}</dd>
+				</div>
+				{#if stretchStale}
+					<div>
+						<dt>{m.details_stretch_stale()}</dt>
+						<dd>{media.take?.generation?.stretchDigest}</dd>
+					</div>
+				{/if}
+				{#if stretchMembership.stretch.status === 'draft'}
+					<div>
+						<dt>{m.details_stretch_blockers()}</dt>
+						<dd>missing_stretch_blocking (author seating pending)</dd>
+					</div>
+				{/if}
+			</dl>
+			<p>{present(stretchMembership.stretch.sharedDescription)}</p>
+		</section>
+	{/if}
 
 	{#if scene}
 		<section>

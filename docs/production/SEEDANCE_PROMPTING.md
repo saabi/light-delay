@@ -245,7 +245,11 @@ How:
 - Keep distinct `shotId`s in the `ScriptFile`. Grouping is a **job** strategy, not a merge of
   shots in data.
 - Attach each shot's approved still as an ordered keyframe (`Use Images 1 through N in order as
-  keyframes` / one stage per shot). Do not collapse several framings into one still.
+  keyframes` / one stage per shot). Do not collapse several framings into one still. When those
+  stills were produced from a **visual stretch** combined sheet, use the **split panel** assets as
+  keyframes; the full sheet may be attached additionally as a blocking/storyboard reference
+  (`docs/production/VISUAL_STRETCH_PIPELINE.md`). A long stretch may require **multiple** Seedance
+  jobs under the segment ceiling, each depending on the same still job.
 - Write the timeline as stages that follow those shots: one primary action (or camera move) per
   beat; about four to six beats in a 30 s clip.
 - Attach one voice sample per speaker who talks **anywhere in the run**, still ignoring sample

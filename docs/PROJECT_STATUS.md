@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-13 — Visual stretches (English source)
+
+- Festival-master owns draft stretch `festival-master:stretch-bridge-meal-010-012` for shots 010–012 (combined 2×2 sheet policy; seating incomplete on purpose).
+- Pipeline: `docs/production/VISUAL_STRETCH_PIPELINE.md`. CLI: `compile:visual-stretch`, `report:visual-stretches`. Image generation only after author seating + explicit authorization.
+
 ## 2026-09-13 — Meaning-audit cue rebinds (English source)
 
 - Festival-master fact→cue bindings corrected for nine meaning-audit findings (content-verified, not adjacency). Master: b5 actionRequirement + p2 knowledgeEvents; revision 23.

@@ -104,6 +104,19 @@ Concretely:
 gravity (or other load-bearing physical state) on a body/loose-object frame as a defect even if
 the scene is correctly marked microgravity/1 g and §2 would omit a repeated *audience* cue.
 
+## 2d. Multi-shot blocking: visual stretches (not N independent stills)
+
+**What happened (`shot-plan-018` / `019` and the bridge-meal 010–012 class of problem):** consecutive
+shots in one room re-inferred seating/standing/prop state because each still job is independent
+(§2c). Manual prompt patches after the fact do not scale.
+
+**Rule:** author a `ScriptFile.visualStretches[]` for eligible consecutive same-location runs.
+Generate **one** ordered multi-panel sheet (agent image tool), then split panels in-repo into
+**new candidate takes**. Do not invent seating. Do not play the unsplit sheet as each shot's
+animatic frame. Pipeline: `docs/production/VISUAL_STRETCH_PIPELINE.md`. Seedance still uses
+**per-shot panel stills as ordered keyframes** (`SEEDANCE_PROMPTING.md` §6.2); the combined sheet
+is an optional blocking reference only.
+
 ## 3. Dialogue must match the speaker's actual belief state, not the audience's later knowledge
 
 **What happened (`cue-0120`):** an earlier draft of Harlan's line implied he "tried" to stop the signal

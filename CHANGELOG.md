@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-13 — Visual stretches (Schema + dry-run pilot)
+
+- Added `ScriptFile.visualStretches[]` types, validate-data checks, layout helpers, generation-plan `visualStretchJobs`, provisional gpt-image-2 still-provider snapshot, compile/split/register CLIs, `report:visual-stretches`, and ShotCard/ShotDetailsPanel stretch UI.
+- Festival-master pilot stretch `festival-master:stretch-bridge-meal-010-012` (draft; seating blockers; no image generation). Docs: `docs/production/VISUAL_STRETCH_PIPELINE.md`.
+
 ## 2026-09-13 — Meaning-audit cue rebinds (Festival-master)
 
 - Content-verified nine mis-anchored `implementsFactIds` (adjacent-beat heuristic): flight-cut, Sorell find, cameras, bridge hears warning, greeting completed, fuel/neutron swap, recording auth, Harlan accusation.

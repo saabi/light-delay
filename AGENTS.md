@@ -47,7 +47,7 @@ When a needed edit at a lower layer conflicts with authoritative truth above it:
 ### Durable production rules
 
 - Edit **`Shot.description`** (EN first) before or together with `Take.generation.prompt`. Prompt-only edits get overwritten by compilers. See `docs/production/DIALOGUE_AND_PROMPT_LESSONS.md`.
-- Still / image prompts are **stateless**: the model sees only prompt text + attached refs — not scene `setting.continuity` or other shots. Restate gravity and any other load-bearing visual state in each prompt (or on an attached sheet). “Cue it once” is audience-sequence craft, not a still-prompt omission. See `DIALOGUE_AND_PROMPT_LESSONS.md` §2c.
+- Still / image prompts are **stateless**: the model sees only prompt text + attached refs — not scene `setting.continuity` or other shots. Restate gravity and any other load-bearing visual state in each prompt (or on an attached sheet). “Cue it once” is audience-sequence craft, not a still-prompt omission. See `DIALOGUE_AND_PROMPT_LESSONS.md` §2c. For consecutive same-location coverage, prefer a `ScriptFile.visualStretches[]` combined sheet + deterministic panel split (`docs/production/VISUAL_STRETCH_PIPELINE.md`) instead of N independent gens that re-infer blocking.
 - Still prompts: **no spoken dialogue**; English-only diegetic UI. Check with `npm run scrub:still-prompts:check`. Video jobs (e.g. Seedance 2.5) **do** take cue text + voice-sample audio refs — do not apply the still no-dialogue scrub there (`SEEDANCE_PROMPTING.md`).
 - **Do not regenerate existing images** unless explicitly instructed. Mark debt with `imageStatus` (`needs_regeneration` + reason). Marking stale ≠ permission to regenerate.
 - Generation depth: `docs/production/AGENT_GENERATION_BRIEF.md`.

@@ -20945,5 +20945,169 @@
         }
       }
     }
+  ],
+  "visualStretches": [
+    {
+      "id": "festival-master:stretch-bridge-meal-010-012",
+      "title": {
+        "en": "Bridge meal stretch (010–012)",
+        "es": "Tramo de comida en el puente (010–012)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-010",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Crew at meal under thrust; systems display shows Ardor silhouette.",
+            "es": "Tripulación en la comida bajo empuje; el display muestra la silueta del Ardor."
+          },
+          "event": {
+            "en": "Insert tracking across trays and display.",
+            "es": "Inserto en travelling sobre bandejas y display."
+          },
+          "endState": {
+            "en": "Meal and display established; cast still present.",
+            "es": "Comida y display establecidos; el elenco sigue presente."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-011",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Same bridge meal seating as panel 1.",
+            "es": "Misma disposición de comida en el puente que el panel 1."
+          },
+          "event": {
+            "en": "Zao jokes about the ship name; Sorell tops the joke.",
+            "es": "Zao bromea con el nombre de la nave; Sorell remata."
+          },
+          "endState": {
+            "en": "Joke lands; mood still light.",
+            "es": "La broma cae; el tono sigue ligero."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-012",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Same bridge meal seating; continuity from panel 2.",
+            "es": "Misma disposición de comida; continuidad desde el panel 2."
+          },
+          "event": {
+            "en": "Harlan turns the joke serious; Sorell answers seriously.",
+            "es": "Harlan pone la broma en serio; Sorell responde en serio."
+          },
+          "endState": {
+            "en": "Tone shifted to serious without changing seats.",
+            "es": "El tono pasa a serio sin cambiar asientos."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:zao",
+        "character:rao",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Steady 1 g artificial gravity: feet planted, normal weight, no floating debris.",
+        "es": "Gravedad artificial estable a 1 g: pies apoyados, peso normal, sin restos flotando."
+      },
+      "lighting": {
+        "en": "Bridge interior; displays glow blue; practical panel light.",
+        "es": "Interior del puente; displays en azul; luz práctica de paneles."
+      },
+      "blocking": [
+        {
+          "characterId": "character:voss",
+          "notes": {
+            "en": "Seat/zone pending author decision — do not invent.",
+            "es": "Asiento/zona pendiente de decisión del autor — no inventar."
+          }
+        },
+        {
+          "characterId": "character:harlan",
+          "notes": {
+            "en": "Seat/zone pending author decision — do not invent.",
+            "es": "Asiento/zona pendiente de decisión del autor — no inventar."
+          }
+        },
+        {
+          "characterId": "character:sorell",
+          "notes": {
+            "en": "Seat/zone pending author decision — do not invent.",
+            "es": "Asiento/zona pendiente de decisión del autor — no inventar."
+          }
+        },
+        {
+          "characterId": "character:zao",
+          "notes": {
+            "en": "Seat/zone pending author decision — do not invent.",
+            "es": "Asiento/zona pendiente de decisión del autor — no inventar."
+          }
+        },
+        {
+          "characterId": "character:rao",
+          "notes": {
+            "en": "Seat/zone pending author decision — do not invent.",
+            "es": "Asiento/zona pendiente de decisión del autor — no inventar."
+          }
+        },
+        {
+          "characterId": "character:okoye",
+          "notes": {
+            "en": "Seat/zone pending author decision — do not invent.",
+            "es": "Asiento/zona pendiente de decisión del autor — no inventar."
+          }
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous bridge-meal stretch: same location, cast, 1 g physics, and meeting-table geometry across three ordered panels. Seat assignments are incomplete pending author decisions.",
+        "es": "Tramo continuo de comida en el puente: misma ubicación, elenco, física a 1 g y geometría de mesa a través de tres paneles ordenados. Asientos incompletos pendientes de decisión del autor."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [4]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "notes": [
+        {
+          "id": "note:stretch-bridge-meal-blocking",
+          "type": "todo",
+          "status": "open",
+          "text": {
+            "en": "Blockers: missing zoneOrSeat and posture for all present characters. Do not invent seating. Dry-run only until author supplies positions and authorizes image generation.",
+            "es": "Bloqueos: faltan zoneOrSeat y posture para todos los presentes. No inventar asientos. Solo dry-run hasta que el autor aporte posiciones y autorice la generación."
+          }
+        }
+      ]
+    }
   ]
 }

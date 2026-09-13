@@ -53,6 +53,7 @@ Authority flows **down**. Compatible lower-only fixes (typo, timing slack, non-s
 | Script / dialogue | `data/scripts/light-delay-festival-master.json`, `data/voice-profiles.json`, [`docs/production/DIALOGUE_AND_PROMPT_LESSONS.md`](production/DIALOGUE_AND_PROMPT_LESSONS.md), [`docs/production/DIALOGUE_CLARITY_GUIDE.md`](production/DIALOGUE_CLARITY_GUIDE.md) |
 | Storyboard / stills / prompts | [`docs/production/AGENT_GENERATION_BRIEF.md`](production/AGENT_GENERATION_BRIEF.md), [`docs/ARQUITECTURA_GENERACION.md`](ARQUITECTURA_GENERACION.md), prompt lessons above |
 | Causal rebuild / meaning | [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](production/CAUSAL_AND_MEANING_PIPELINE.md), `npm run report:causal-structure`, `npm run report:meaning-audit` |
+| Visual stretches (multi-shot stills) | [`docs/production/VISUAL_STRETCH_PIPELINE.md`](production/VISUAL_STRETCH_PIPELINE.md), `npm run compile:visual-stretch`, `npm run report:visual-stretches` |
 | App / Svelte | [`README.md`](../README.md), `src/lib/data/`, [`docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`](ADR-0001-MULTI-SCRIPT-CONTINUITIES.md) |
 | Media tooling | [`docs/production/RESOLVE_OTIO_EXPORT.md`](production/RESOLVE_OTIO_EXPORT.md), TTS scripts in `package.json` — not generation authority |
 
@@ -78,6 +79,8 @@ Authority flows **down**. Compatible lower-only fixes (typo, timing slack, non-s
 | `npm run report:image-debt` / `report:prompt-readiness` | Production readiness (images / plans) |
 | `npm run report:causal-structure` | Live master + Festival fact bindings |
 | `npm run report:causal-validity` | Deprecated/obsolete cut ledgers only |
+| `npm run compile:visual-stretch` | Dry-run combined-sheet prompt for a stretch |
+| `npm run report:visual-stretches` | Stretch membership / blockers |
 | `npm run report:meaning-audit` | Meaning-review packet after structure is green |
 | `npm run check:trailer-spoilers` | Trailer omission rules |
 | `npm run generated:check` | Stale generated artifacts |

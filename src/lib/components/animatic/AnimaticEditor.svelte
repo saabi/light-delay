@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ShotCard from './ShotCard.svelte';
 	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
+	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
 	import ContinuityWarnings from './ContinuityWarnings.svelte';
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import {
@@ -24,6 +25,7 @@
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import { getCueById, type ShotMedia } from '$lib/data/repositories/lookups';
 	import { formatClock } from '$lib/utils/duration';
+	import { findStretchForShot } from '$lib/utils/visualStretch';
 	import type { ScriptId } from '$lib/types/ids';
 	import type { Cue, Scene, ScriptFile, Shot } from '$lib/types/script';
 	import { onMount } from 'svelte';
@@ -206,6 +208,7 @@
 							dialogueFlags={shotAnalysis}
 							{cues}
 							{readinessChips}
+							stretchMembership={findStretchForShot(script, shot.id)}
 							selected={shot.id === selectedShotId}
 							playerHref={`${playerHref}?shot=${encodeURIComponent(shot.id)}`}
 							onselect={() => selectShot(shot.id)}
