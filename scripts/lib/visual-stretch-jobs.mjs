@@ -216,10 +216,15 @@ export function isStretchJobRunnable(job) {
 
 /**
  * @param {Omit<VisualStretchJob, 'runnable' | 'blockers'> & { blockers?: string[] }} job
+ * @param {{ maxOutputsPerRequest?: number | null }} [opts]
  * @returns {VisualStretchJob}
  */
-function finalizeStretchJob(job) {
+function finalizeStretchJob(job, opts = {}) {
 	const blockers = [...new Set(job.blockers || [])];
+	const maxOutputs = opts.maxOutputsPerRequest;
+	if (maxOutputs != null && Array.isArray(job.outputs) && job.outputs.length > maxOutputs) {
+		blockers.push(`outputs:${job.outputs.length}>${maxOutputs}`);
+	}
 	return /** @type {VisualStretchJob} */ ({
 		...job,
 		blockers,
@@ -244,7 +249,8 @@ function finalizeStretchJob(job) {
  *   voiceProfiles?: VoiceProfile[],
  *   language?: string,
  *   videoLimits?: { maxImages?: number | null, maxVideos?: number | null, maxAudios?: number | null, maxTotalReferences?: number | null },
- *   providerSnapshotId?: string
+ *   providerSnapshotId?: string,
+ *   maxOutputsPerRequest?: number | null
  * }} [opts]
  * @returns {VisualStretchJob[]}
  */
@@ -331,7 +337,7 @@ export function partitionStretchVideoJobs(
 			outputs: [{ order: 1, artifact: 'video' }],
 			blockers,
 			coherenceException: false
-		});
+		}, { maxOutputsPerRequest: opts.maxOutputsPerRequest });
 	};
 
 	const flush = () => {
@@ -503,7 +509,7 @@ export function buildVisualStretchJobs(
 					],
 					blockers,
 					coherenceException: false
-				})
+				}, { maxOutputsPerRequest: stillProvider?.limits?.maxOutputsPerRequest })
 			);
 		} else {
 			jobs.push(
@@ -532,7 +538,7 @@ export function buildVisualStretchJobs(
 					})),
 					blockers: [...blockers, 'coherence_exception'],
 					coherenceException: true
-				})
+				}, { maxOutputsPerRequest: stillProvider?.limits?.maxOutputsPerRequest })
 			);
 		}
 
@@ -550,7 +556,8 @@ export function buildVisualStretchJobs(
 					voiceProfiles,
 					language,
 					videoLimits: videoProvider?.limits,
-					providerSnapshotId: videoProvider?.id ?? ''
+					providerSnapshotId: videoProvider?.id ?? '',
+					maxOutputsPerRequest: videoProvider?.limits?.maxOutputsPerRequest
 				}
 			);
 			jobs.push(...videoJobs);

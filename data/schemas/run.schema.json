@@ -103,5 +103,25 @@
     "runnablePlanJob": { "type": "boolean" },
     "agentInstructions": { "type": "string" }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "preview" } }, "required": ["status"] },
+      "then": { "properties": { "nonExecutable": { "const": true } }, "required": ["nonExecutable"] }
+    },
+    {
+      "if": { "properties": { "status": { "const": "ready" } }, "required": ["status"] },
+      "then": {
+        "properties": {
+          "nonExecutable": { "const": false },
+          "blockers": { "type": "array", "maxItems": 0 }
+        },
+        "required": ["nonExecutable"]
+      }
+    },
+    {
+      "if": { "properties": { "nonExecutable": { "const": false } }, "required": ["nonExecutable"] },
+      "then": { "properties": { "status": { "const": "ready" } } }
+    }
+  ]
 }

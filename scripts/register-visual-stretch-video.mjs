@@ -1,19 +1,33 @@
 /**
  * Register a grouped Seedance stretch video at job level only (no member takes).
- * Usage: node scripts/register-visual-stretch-video.mjs --from data/production/runs/<id>-results.json [--video <path>]
+ * Usage:
+ *   node scripts/register-visual-stretch-video.mjs --from <result.json> --run <ready-run.json> [--video <path>]
+ *
+ * Pending_review registration requires a ready, executable source run (--run or result.sourceRunPath)
+ * whose inputDigest/job/snapshot match the result. Download the provider video into the repo first
+ * (see HIGGSFIELD_MCP.md §8b), then point --video or output.repoPath at that file.
  */
-import { createHash, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { dirname, isAbsolute, join, normalize, relative, sep } from 'node:path';
+import { createHash } from 'node:crypto';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { dirname, isAbsolute, join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { atomicCopyFile } from './lib/atomic-fs.mjs';
 import { readArgValue, scriptAnimaticFramesSegment } from './lib/visual-stretch.mjs';
+import {
+	loadSourceRunFile,
+	sanitizeRunResultFilename,
+	validateVisualStretchVideoRegistration
+} from './lib/visual-stretch-result-register.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const DURATION_TOLERANCE_MS = 500;
 const args = process.argv.slice(2);
 const fromPath = readArgValue(args, '--from');
+const runPathArg = readArgValue(args, '--run');
+const videoArg = readArgValue(args, '--video');
 if (!fromPath) {
-	console.error('Usage: node scripts/register-visual-stretch-video.mjs --from <result.json> [--video <path>]');
+	console.error(
+		'Usage: node scripts/register-visual-stretch-video.mjs --from <result.json> --run <ready-run.json> [--video <path>]'
+	);
 	process.exit(1);
 }
 
@@ -24,31 +38,6 @@ if (!existsSync(resultAbs)) {
 }
 
 const result = JSON.parse(readFileSync(resultAbs, 'utf8'));
-for (const key of [
-	'jobId',
-	'scriptId',
-	'stretchId',
-	'providerSnapshotId',
-	'inputDigest',
-	'artifact',
-	'status',
-	'sourceRunId',
-	'output'
-]) {
-	if (result[key] == null) {
-		console.error(`Result missing required field: ${key}`);
-		process.exit(1);
-	}
-}
-if (result.artifact !== 'video') {
-	console.error('artifact must be video');
-	process.exit(1);
-}
-if (!['pending_review', 'rejected'].includes(result.status)) {
-	console.error('status must be pending_review or rejected');
-	process.exit(1);
-}
-
 const plansDir = join(ROOT, 'data/production/plans');
 let plan = null;
 let planPath = null;
@@ -67,90 +56,73 @@ if (!plan || !planPath) {
 }
 
 const jobs = (plan.visualStretchJobs || []).filter((j) => j.id === result.jobId);
-if (jobs.length !== 1) {
-	console.error(`Expected exactly one plan job ${result.jobId}, found ${jobs.length}`);
-	process.exit(1);
-}
-const job = jobs[0];
-if (job.stretchId !== result.stretchId) {
-	console.error(`stretchId mismatch: result ${result.stretchId} vs job ${job.stretchId}`);
-	process.exit(1);
-}
-if (job.providerSnapshotId !== result.providerSnapshotId) {
-	console.error('providerSnapshotId mismatch');
-	process.exit(1);
-}
+const job = jobs.length === 1 ? jobs[0] : null;
 
 const runsDir = join(ROOT, 'data/production/runs');
 mkdirSync(runsDir, { recursive: true });
-for (const name of readdirSync(runsDir).filter((n) => n.endsWith('-results.json'))) {
-	const priorAbs = join(runsDir, name);
-	if (normalize(priorAbs) === normalize(resultAbs)) continue;
-	const prior = JSON.parse(readFileSync(priorAbs, 'utf8'));
-	if (prior.providerJobId && result.providerJobId && prior.providerJobId === result.providerJobId) {
-		console.error(`Duplicate providerJobId ${result.providerJobId} in ${name}`);
+const priorResults = readdirSync(runsDir)
+	.filter((n) => n.endsWith('-results.json'))
+	.map((name) => {
+		const abs = join(runsDir, name);
+		const prior = JSON.parse(readFileSync(abs, 'utf8'));
+		return { abs, ...prior };
+	});
+
+const trackedPath = join(runsDir, sanitizeRunResultFilename(result.sourceRunId || result.jobId));
+
+if (result.status === 'rejected') {
+	const fieldErrors = [];
+	for (const key of ['jobId', 'scriptId', 'stretchId', 'providerSnapshotId', 'inputDigest', 'sourceRunId']) {
+		if (result[key] == null) fieldErrors.push(key);
+	}
+	if (fieldErrors.length) {
+		console.error(`Rejected result missing fields: ${fieldErrors.join(', ')}`);
 		process.exit(1);
 	}
-	if (prior.jobId === result.jobId && prior.inputDigest && prior.inputDigest !== result.inputDigest) {
-		console.error(
-			`inputDigest mismatch vs prior result for ${result.jobId}: keep the exact run file used for submission`
-		);
-		process.exit(1);
-	}
+	writeFileSync(trackedPath, `${JSON.stringify(result, null, 2)}\n`, 'utf8');
+	console.log(JSON.stringify({ ok: true, status: 'rejected', registered: false, resultPath: trackedPath }, null, 2));
+	process.exit(0);
 }
 
-const outRel = String(result.output.repoPath || '').split(sep).join('/');
-if (!outRel || outRel.includes('..') || isAbsolute(outRel) || !outRel.startsWith('static/')) {
-	console.error(`output.repoPath must be repo-relative under static/: got ${result.output.repoPath}`);
-	process.exit(1);
-}
-const stagedAbs = join(ROOT, ...outRel.split('/'));
-const staticRoot = normalize(join(ROOT, 'static'));
-if (!normalize(stagedAbs).startsWith(staticRoot)) {
-	console.error('output path escapes static/');
-	process.exit(1);
-}
-
-const sourceVideoArg = readArgValue(args, '--video');
-const sourceVideo = sourceVideoArg
-	? isAbsolute(sourceVideoArg)
-		? sourceVideoArg
-		: join(ROOT, sourceVideoArg)
-	: stagedAbs;
-if (!existsSync(sourceVideo)) {
-	console.error(`Video file missing: ${sourceVideo}`);
-	process.exit(1);
-}
-
-const buf = readFileSync(sourceVideo);
-const hash = createHash('sha256').update(buf).digest('hex');
-if (result.output.sha256 && result.output.sha256 !== hash) {
-	console.error(`sha256 mismatch: result ${result.output.sha256} vs file ${hash}`);
-	process.exit(1);
-}
-
-const declared = result.declaredDurationMs ?? job.durationMs;
-const measured = result.output.durationMs;
-if (
-	declared != null &&
-	measured != null &&
-	Math.abs(Number(measured) - Number(declared)) > DURATION_TOLERANCE_MS
-) {
+const { run, errors: runLoadErrors } = loadSourceRunFile(ROOT, result.sourceRunPath, runPathArg);
+const pathProbe = result.output?.repoPath
+	? isAbsolute(result.output.repoPath)
+		? result.output.repoPath
+		: join(ROOT, result.output.repoPath)
+	: null;
+const sourceVideo = videoArg
+	? isAbsolute(videoArg)
+		? videoArg
+		: join(ROOT, videoArg)
+	: pathProbe;
+if (!sourceVideo || !existsSync(sourceVideo)) {
 	console.error(
-		`duration drift: declared ${declared} vs measured ${measured} (tolerance ${DURATION_TOLERANCE_MS}ms)`
+		`Video file missing. Download the Higgsfield output into the repo, then pass --video <path> or set output.repoPath under static/. Tried: ${sourceVideo || '(none)'}`
 	);
 	process.exit(1);
 }
 
-const trackedName = `${String(result.sourceRunId).replace(/[^a-zA-Z0-9._:-]+/g, '-')}-results.json`;
-const trackedPath = join(runsDir, trackedName);
-
-if (result.status === 'rejected') {
-	writeFileSync(trackedPath, `${JSON.stringify(result, null, 2)}\n`, 'utf8');
-	console.log(JSON.stringify({ ok: true, status: 'rejected', registered: false }, null, 2));
-	process.exit(0);
+const videoBuf = readFileSync(sourceVideo);
+const validation = validateVisualStretchVideoRegistration({
+	root: ROOT,
+	result,
+	job,
+	priorResults,
+	resultAbs,
+	videoBuf,
+	run,
+	requireReadyRun: true
+});
+if (runLoadErrors.length && !run) {
+	validation.errors.push(...runLoadErrors);
+	validation.ok = false;
+}
+if (!validation.ok) {
+	console.error(`Registration refused:\n${[...new Set(validation.errors)].join('\n')}`);
+	process.exit(1);
 }
 
+const hash = createHash('sha256').update(videoBuf).digest('hex');
 const scriptSlug = String(result.scriptId).replace(/^script:/, '');
 const framesSegment = scriptAnimaticFramesSegment(scriptSlug);
 const stretchSlug = String(result.stretchId).replace(/[^a-zA-Z0-9_-]+/g, '-');
@@ -164,6 +136,8 @@ const assetId = `asset:${jobSlug}-video`;
 const assetsPath = join(ROOT, 'data/assets.json');
 const assetsFile = JSON.parse(readFileSync(assetsPath, 'utf8'));
 const webPath = `/${destRel.replace(/^static\//, '')}`;
+const measured = result.output.durationMs;
+const declared = result.declaredDurationMs ?? job.durationMs;
 const record = {
 	id: assetId,
 	kind: 'video',

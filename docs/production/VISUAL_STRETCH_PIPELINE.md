@@ -50,7 +50,7 @@ generation plan job → §8 run JSON (preview) → [future freeze → ready] →
 - Paid smoke requires a future freeze that sets plan `compiledPrompt`, run `status: ready`, and `nonExecutable: false`, then human cost confirmation.
 - `executionPolicy.smoke_test` forces `maxJobs: 1` regardless of platform parallel capacity (account concurrency is recorded separately; see `HIGGSFIELD_MCP.md`).
 - Keep the exact run file used for any future submit; do not re-handoff between submit and register (`inputDigest` covers the prompt).
-- Result manifests live in `data/production/runs/*-results.json` and retain `sourceRunId` + `inputDigest`. Registrar binds the clip to the **job** `outputs[]` only — not to member takes.
+- After completion: download the generated video from Higgsfield Assets into the repo under `static/` (agreed stretch path), then register with `--run` pointing at the exact ready run file used for submit. Freeze must omit null keyframe slots from executable `references[]` while keeping `missing_keyframe:*` blockers until panels exist.
 
 Voice samples: **one** approved `sampleAssetIds` entry per dialogue speaker for the job language (`en` first), matching `SEEDANCE_PROMPTING.md` §4 / §6.1 — not every variant's samples.
 
@@ -67,7 +67,7 @@ npm run handoff:visual-stretch -- --script light-delay-festival-master --job <st
 npm run register:visual-stretch-sheet -- --script light-delay-festival-master --stretch <id> --from <generator-output.png>
 npm run split:visual-stretch -- --script light-delay-festival-master --stretch <id> [--dry-run]
 npm run register:visual-stretch-panels -- --script light-delay-festival-master --stretch <id> [--dry-run]
-npm run register:visual-stretch-video -- --from data/production/runs/<runId>-results.json [--video <path>]
+npm run register:visual-stretch-video -- --from data/production/runs/<runId>-results.json --run <ready-run.json> [--video <downloaded.mp4>]
 ```
 
 ## UI (v1)

@@ -263,8 +263,9 @@ Agent steps for a **paid** smoke (after freeze exists):
 4. Upload references **only** in `references[]` order from that file. Map each `assetId` → remote handle in the result.
 5. Before generating: state the credit cost and **wait for human confirmation**.
 6. Submit **exactly one** job; stop (`stopAfterFirst`, no retry/continue/auto-accept).
-7. Write `data/production/runs/<runId>-results.json` (`visual-stretch-result.schema.json`) with `sourceRunId`, `inputDigest`, `providerJobId` when returned, output hash/duration, upload handles.
-8. `npm run register:visual-stretch-video -- --from …` — binds the clip at **job** level only; never changes `selectedTakeId`.
+7. **Download** the completed video from Higgsfield Assets into the repo under `static/assets/animatic/frames/<segment>/stretches/.../` (or a temp path you will pass to `--video`). Record remote upload handles per `assetId`.
+8. Write `data/production/runs/<runId>-results.json` (`visual-stretch-result.schema.json`) with `sourceRunId`, `inputDigest`, `providerJobId` when returned, output hash/duration, upload handles, and `output.repoPath` / sha256 of the downloaded file.
+9. `npm run register:visual-stretch-video -- --from … --run <ready-run.json> [--video …]` — binds the clip at **job** level only; never changes `selectedTakeId`. Requires a `status: ready` / `nonExecutable: false` run whose digests match.
 
 Preview today:
 

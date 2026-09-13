@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-13 — MCP handoff review fixes (registrar, prompt, schema)
+
+- Fixed video registrar `createHash` import (crypto); extracted refuse checks into a testable library; sanitized result filenames for NTFS.
+- Stretch video preview uses `spokenText` and `movementDescription`; omits hardcoded 1080p; Ajv-validates emitted runs; enforces `maxOutputsPerRequest`.
+- Registrar requires a ready/`nonExecutable: false` source run; runbook states download-then-register.
+
 ## 2026-09-13 — Visual-stretch MCP handoff + provider capability contract
 
 - Preview-only §8 run handoff (`handoff:visual-stretch`) with smoke_test policy; `nonExecutable: true` never submittable until a future freeze.

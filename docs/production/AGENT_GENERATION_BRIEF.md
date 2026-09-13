@@ -54,7 +54,8 @@ do not point it at the deprecated `script:light-delay-festival`.
 | `src/lib/types/entities.ts` / `assets.ts` | `referenceAssetIds`, `Asset.imageStatus` |
 | `scripts/lib/generation-planning.mjs` | `compilePrompt` (11 sections), `planSegments`, `checkReferenceBudget`, `resolveDiegeticText` |
 | `src/lib/generation/planning.spec.js` | Fixtures showing the exact expected shape/behavior of the four functions above |
-| `docs/technical/HIGGSFIELD_MCP.md` § 8 | Proposed job-JSON payload toward Seedance/MCP (no `run.schema.json` exists yet — see §6) |
+| `docs/technical/HIGGSFIELD_MCP.md` § 8 / §8b | Run JSON (`data/schemas/run.schema.json`) + MCP smoke runbook; preview handoffs via `handoff:visual-stretch` |
+
 
 **Compiled prompt section order** (`compilePrompt` in `generation-planning.mjs`, enforced by throwing on
 any missing key): `style → actionTiming → subjects → location → camera → lighting → physics → interfaceVfx

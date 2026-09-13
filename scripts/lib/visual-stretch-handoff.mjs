@@ -24,7 +24,8 @@ export const AGENT_INSTRUCTIONS_PREVIEW = [
 	'Before any future paid submit: run node scripts/higgsfield-preflight.mjs --probe; confirm live concurrency and credits; ask for credit cost and wait for human confirmation.',
 	'executionPolicy.smoke_test: submit exactly one job, then stop. No retries, no queue continuation, no auto-accept.',
 	'Upload references ONLY in the order of references[] in this file. Do not reconstruct or reorder from the generation plan.',
-	'Record remote Higgsfield upload handles per assetId in the result manifest. Register at job level only (no take binding).'
+	'After completion: download the generated video from Higgsfield Assets into the repo under static/ (agreed stretch path), record remote upload handles per assetId, write data/production/runs/*-results.json, then npm run register:visual-stretch-video -- --from <results> --run <this-ready-run.json> [--video <downloaded>].',
+	'Register at job level only (no take binding).'
 ].join(' ');
 
 /**
@@ -267,6 +268,11 @@ export function buildVisualStretchRunHandoff(args) {
 
 	const runId = `run:${job.id}:preview`;
 	const blockers = [...new Set([...(job.blockers || []), ...missing, ...promptResult.blockers])];
+	const resolution =
+		snapshot?.preferredResolution ||
+		snapshot?.limits?.defaultResolution ||
+		snapshot?.defaultResolution ||
+		null;
 
 	return {
 		schemaVersion: '1.0.0',
@@ -287,7 +293,7 @@ export function buildVisualStretchRunHandoff(args) {
 			aspectRatio,
 			durationSeconds: Math.round(durationMs / 1000),
 			durationMs,
-			resolution: '1080p',
+			...(resolution ? { resolution } : {}),
 			generateAudio: references.some((r) => r.kind === 'audio')
 		},
 		references: references.map((r) => ({

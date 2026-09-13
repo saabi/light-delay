@@ -91,7 +91,9 @@ export function compileStretchVideoPrompt({
 		for (const placement of shot?.cuePlacements || []) {
 			const cue = cuesById.get(placement.cueId);
 			if (cue?.type !== 'dialogue') continue;
-			const line = cue.content?.variants?.en?.text?.trim();
+			const line =
+				cue.content?.variants?.en?.spokenText?.trim() ||
+				cue.content?.variants?.en?.text?.trim();
 			if (!line) continue;
 			dialogueLines.push(
 				`${cue.speakerId || 'speaker'} at ~${placement.atMs ?? 0}ms in ${member.shotId}: {${line}}`
@@ -106,8 +108,11 @@ export function compileStretchVideoPrompt({
 	const cameraBits = members
 		.map((member) => {
 			const shot = shotsById.get(member.shotId);
-			const move = shot?.camera?.move || shot?.composition?.size;
-			return move ? `${member.shotId}: ${move}` : null;
+			const movement =
+				shot?.camera?.movementDescription?.en?.trim() ||
+				shot?.camera?.movement ||
+				shot?.composition?.size;
+			return movement ? `${member.shotId}: ${movement}` : null;
 		})
 		.filter(Boolean)
 		.join('; ');

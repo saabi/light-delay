@@ -7,6 +7,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, isAbsolute, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import Ajv2020 from 'ajv/dist/2020.js';
 import { resolveCampaignProviders, resolveSnapshotById } from './lib/provider-capabilities.mjs';
 import { readArgValue } from './lib/visual-stretch.mjs';
 import { buildVisualStretchRunHandoff } from './lib/visual-stretch-handoff.mjs';
@@ -85,6 +86,18 @@ try {
 	});
 } catch (err) {
 	console.error(err instanceof Error ? err.message : String(err));
+	process.exit(1);
+}
+
+const runSchema = JSON.parse(readFileSync(join(ROOT, 'data/schemas/run.schema.json'), 'utf8'));
+const ajv = new Ajv2020({ allErrors: true, strict: true, validateFormats: false });
+const validateRun = ajv.compile(runSchema);
+if (!validateRun(run)) {
+	console.error(
+		`Emitted run failed run.schema.json:\n${(validateRun.errors || [])
+			.map((e) => `${e.instancePath || '/'} ${e.message}`)
+			.join('\n')}`
+	);
 	process.exit(1);
 }
 
