@@ -136,12 +136,12 @@
         "id": "script:light-delay-festival-master",
         "continuityId": "continuity:light-delay-master-wip",
         "label": {
-          "es": "Corte Festival derivado del master (~13:30, WIP)",
-          "en": "Master-derived Festival cut (~13:30, WIP)"
+          "es": "Corte Festival derivado del master (~13:37, WIP)",
+          "en": "Master-derived Festival cut (~13:37, WIP)"
         },
         "kind": "festival_cut",
         "status": "draft",
-        "targetDurationMs": 809939,
+        "targetDurationMs": 816769,
         "lineage": {
           "sourceScriptId": "script:light-delay-master-narrative",
           "relationship": "cut",

@@ -4854,7 +4854,7 @@
         "es": "festival-master:cue-0045",
         "en": "festival-master:cue-0045"
       },
-      "durationMs": 3420,
+      "durationMs": 6220,
       "metadata": {
         "scriptCueId": "festival-master:cue-0045",
         "lang": "en",
@@ -10547,6 +10547,23 @@
       "durationMs": 2700,
       "metadata": {
         "scriptCueId": "festival-master:cue-0076c",
+        "lang": "en",
+        "scriptSlug": "light-delay-festival-master"
+      }
+    },
+    {
+      "id": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0044",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/audio/dialogue/light-delay-festival-master/en/festival-master-cue-0044.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "festival-master:cue-0044",
+        "en": "festival-master:cue-0044"
+      },
+      "durationMs": 9100,
+      "metadata": {
+        "scriptCueId": "festival-master:cue-0044",
         "lang": "en",
         "scriptSlug": "light-delay-festival-master"
       }

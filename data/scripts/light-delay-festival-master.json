@@ -11,7 +11,7 @@
     "version": "0.2.0-wip",
     "status": "draft",
     "kind": "festival_cut",
-    "targetDurationMs": 809939,
+    "targetDurationMs": 816769,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -851,7 +851,7 @@
         "festival-master:beat-09"
       ],
       "shotIds": [],
-      "targetDurationMs": 26000,
+      "targetDurationMs": 32830,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5464,7 +5464,8 @@
             "status": "source",
             "delivery": "the pieces landing in real time",
             "voiceProfileId": "voice:zao-es",
-            "estimatedDurationMs": 6200
+            "estimatedDurationMs": 9100,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0044"
           },
           "es": {
             "spokenText": "¿Harlan? Él también lleva un dosímetro; lo habría llevado directo aquí, igual que a mí. Si no estuviera detrás de esto, ya estaría avisando.",
@@ -5508,7 +5509,8 @@
             "status": "source",
             "delivery": "fear hardening into action",
             "voiceProfileId": "voice:zao-es",
-            "estimatedDurationMs": 4700
+            "estimatedDurationMs": 6220,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0045"
           },
           "es": {
             "spokenText": "Tengo que avisar a Voss. Que aborte la aproximación, o desactivamos esto, lo retrasamos, y lo detenemos a él.",
@@ -12734,17 +12736,17 @@
           "en": "Slow push-in dolly; holds on her face as suspicion turns to decision."
         }
       },
-      "durationMs": 11000,
+      "durationMs": 15420,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0044",
           "atMs": 0,
-          "durationMs": 6200
+          "durationMs": 9100
         },
         {
           "cueId": "festival-master:cue-0045",
-          "atMs": 6300,
-          "durationMs": 4700
+          "atMs": 9200,
+          "durationMs": 6220
         }
       ],
       "takeIds": [
