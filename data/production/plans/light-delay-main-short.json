@@ -1033,7 +1033,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-engineering-sheet",
-          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png",
           "required": true,
           "role": "location"
         }
@@ -1080,7 +1080,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-engineering-sheet",
-          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png",
           "required": true,
           "role": "location"
         }
@@ -1128,7 +1128,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-engineering-sheet",
-          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png",
           "required": true,
           "role": "location"
         }
@@ -1176,7 +1176,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-engineering-sheet",
-          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png",
           "required": true,
           "role": "location"
         }
@@ -1733,7 +1733,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -1966,7 +1966,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2390,7 +2390,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }

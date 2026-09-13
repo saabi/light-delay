@@ -34,7 +34,7 @@
       "name": "Ingeniería del Celestial Ardor",
       "role": "Diagnóstico y cuarentena",
       "note": "Volumen axial denso, tuberías expuestas y accesos físicos. La nave se entiende como máquina mantenible, no como interior abstracto.",
-      "file": "celestial-ardor-engineering/concept-sheet-v2.png",
+      "file": "celestial-ardor-engineering/concept-sheet-v3.png",
       "generator": "OpenAI GPT-Image-2"
     },
     {
@@ -42,7 +42,7 @@
       "name": "Outer Reactor Service Bay",
       "role": "Optical array and flight-control service workspace",
       "note": "Master-derived maintainable reactor-side workspace with local optical, flight-interrupt, and diagnostic controls.",
-      "file": "celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
+      "file": "celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
       "generator": "OpenAI GPT-Image-2"
     },
     {
@@ -66,7 +66,7 @@
       "name": "Restricted Service Cylinder",
       "role": "Ballistic service route and communications junction",
       "note": "Master-derived direct service tube with maintenance grips, bridge hatch, and physical COM distributor.",
-      "file": "celestial-ardor-service-cylinder/concept-sheet-v3.png",
+      "file": "celestial-ardor-service-cylinder/concept-sheet-v4.png",
       "generator": "OpenAI GPT-Image-2"
     },
     {

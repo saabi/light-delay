@@ -18,7 +18,7 @@
       "id": "asset:character-velari-envoy-sheet",
       "kind": "image",
       "role": "reference",
-      "path": "/assets/characters/velari-envoy/model-sheet.png",
+      "path": "/assets/characters/velari-envoy/model-sheet-v2.png",
       "mimeType": "image/png",
       "title": {
         "es": "Hoja de modelo del enviado Velari",
@@ -33,7 +33,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12"
+        "generatedAt": "2026-09-12T21:00:00.000Z"
       },
       "metadata": {
         "useCase": "stylized-concept",
@@ -43,6 +43,16 @@
           "asset:character-zao-sheet"
         ],
         "generationPrompt": "Character model sheet for the individual Velari envoy, based on Festival Master shot 092; elongated translucent organic mantle, branching amber/violet/blue bioluminescence, no humanoid face or limbs, multiple consistent views, neutral studio background."
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja de referencia regenerada; pendiente de revisión editorial.",
+          "en": "Regenerated visual reference sheet; editorial review pending."
+        }
       }
     },
     {
@@ -386,7 +396,7 @@
       "id": "asset:location-celestial-ardor-engineering-sheet",
       "kind": "image",
       "role": "reference",
-      "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png",
+      "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png",
       "mimeType": "image/png",
       "title": {
         "es": "Ingeniería del Celestial Ardor concept sheet",
@@ -397,7 +407,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-11"
+        "generatedAt": "2026-09-12T21:00:00.000Z"
       },
       "metadata": {
         "useCase": "stylized-concept",
@@ -405,13 +415,23 @@
         "supersedesPath": "/assets/locations/celestial-ardor-engineering/concept-sheet.png",
         "revision": 2,
         "orientation": "transverse-deck-perpendicular-to-thrust-axis"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja de referencia regenerada; pendiente de revisión editorial.",
+          "en": "Regenerated visual reference sheet; editorial review pending."
+        }
       }
     },
     {
       "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
       "kind": "image",
       "role": "reference",
-      "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v2.png",
+      "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
       "mimeType": "image/png",
       "title": {
         "es": "Compartimiento exterior de servicio del reactor — referencia",
@@ -422,7 +442,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-11"
+        "generatedAt": "2026-09-12T21:00:00.000Z"
       },
       "metadata": {
         "useCase": "stylized-concept",
@@ -431,6 +451,16 @@
         "supersedesPath": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet.png",
         "revision": 2,
         "orientation": "transverse-deck-perpendicular-to-thrust-axis"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja de referencia regenerada; pendiente de revisión editorial.",
+          "en": "Regenerated visual reference sheet; editorial review pending."
+        }
       }
     },
     {
@@ -491,7 +521,7 @@
       "id": "asset:location-celestial-ardor-service-cylinder-sheet",
       "kind": "image",
       "role": "reference",
-      "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v3.png",
+      "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
       "mimeType": "image/png",
       "title": {
         "es": "Cilindro de servicio — referencia",
@@ -502,7 +532,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12"
+        "generatedAt": "2026-09-12T21:00:00.000Z"
       },
       "metadata": {
         "useCase": "stylized-concept",
@@ -515,6 +545,16 @@
         "presentationOrientation": "vertical-deck-to-deck",
         "shaftAxis": "longitudinal-fore-aft",
         "stairSystem": "ladder-segments-not-helical-stairs"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja de referencia regenerada; pendiente de revisión editorial.",
+          "en": "Regenerated visual reference sheet; editorial review pending."
+        }
       }
     },
     {
@@ -824,7 +864,7 @@
       "id": "asset:vehicle-velari-transport-sphere-sheet",
       "kind": "image",
       "role": "reference",
-      "path": "/assets/vehicles/velari-transport-sphere/model-sheet.png",
+      "path": "/assets/vehicles/velari-transport-sphere/model-sheet-v3.png",
       "mimeType": "image/png",
       "title": {
         "es": "Esfera de transporte Velari — referencia",
@@ -835,12 +875,22 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-11"
+        "generatedAt": "2026-09-12T21:30:00.000Z"
       },
       "metadata": {
         "useCase": "stylized-concept",
         "containsNarrativeContent": false,
         "styleAnchor": "asset:vehicle-velari-emissary-sheet"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "continuity_error"
+        ],
+        "explanation": {
+          "es": "Hoja regenerada: el enviado flota y se sujeta a la pared interior en microgravedad.",
+          "en": "Regenerated sheet: the envoy floats and braces against the inner wall in microgravity."
+        }
       }
     },
     {
@@ -7269,8 +7319,8 @@
         "en": "Festival Master storyboard 021"
       },
       "description": {
-        "es": "Imagen de storyboard generada para festival-master:shot-plan-021; pendiente de revisión editorial.",
-        "en": "Generated storyboard still for festival-master:shot-plan-021; pending editorial review."
+        "es": "Imagen de storyboard para festival-master:shot-plan-021. Desfasada: el controlador muestra CONTACT COORDINATES.",
+        "en": "Storyboard still for festival-master:shot-plan-021. Stale: the controller shows CONTACT COORDINATES."
       },
       "width": 1672,
       "height": 941,
@@ -7286,13 +7336,13 @@
         "storyboardEligible": true
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "canon_mismatch"
         ],
         "explanation": {
-          "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "es": "La imagen está desfasada: el controlador muestra CONTACT COORDINATES. El dispositivo sólo tiene un temporizador puesto a la hora de llegada.",
+          "en": "Stale still: the controller shows CONTACT COORDINATES. The device only has a timer set to arrival time."
         }
       }
     },
@@ -9933,7 +9983,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:00:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9946,9 +9996,10 @@
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-088",
         "explanation": {
-          "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       }
     },
@@ -9971,7 +10022,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:10:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9984,9 +10035,10 @@
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-089",
         "explanation": {
-          "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       }
     },
@@ -10047,7 +10099,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:20:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -10060,9 +10112,10 @@
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-091",
         "explanation": {
-          "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       }
     },
@@ -10085,7 +10138,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:30:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -10098,9 +10151,10 @@
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-092",
         "explanation": {
-          "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Generated batch still; editorial acceptance is pending."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       }
     },

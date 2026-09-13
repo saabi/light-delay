@@ -191,7 +191,7 @@
       "category": "principal",
       "views": ["front", "three-quarter", "side", "back", "detail studies"],
       "expression_count": 0,
-      "file": "velari-envoy/model-sheet.png",
+      "file": "velari-envoy/model-sheet-v2.png",
       "dimensions": [1536, 1024]
     },
     {

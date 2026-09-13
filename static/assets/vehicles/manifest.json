@@ -28,7 +28,7 @@
       "name": "Velari Transport Sphere",
       "role": "Personal-scale envoy transport",
       "note": "Master-derived transparent environmental sphere, distinct from the 300–600 m emissary vehicle.",
-      "file": "velari-transport-sphere/model-sheet.png",
+      "file": "velari-transport-sphere/model-sheet-v3.png",
       "generator": "OpenAI GPT-Image-2"
     }
   ]
