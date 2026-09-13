@@ -40,7 +40,7 @@ describe('audio output catalog', () => {
 				outlineId: 'script:light-delay-main-short'
 			},
 			'animatic-light-delay-festival-master-en': {
-				cueCount: 131,
+				cueCount: 132,
 				revision: 0,
 				outlineId: 'script:light-delay-festival-master'
 			}

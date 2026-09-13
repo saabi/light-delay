@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-12 — TTS EN cue-0044 / cue-0045
+
+- Audit: 2 Festival EN cues sin `audioAssetId` (`0044`, `0045`); trailer y main-short completos.
+- Regenerados/promovidos; fit Festival ~816.8 s; 132/132 con audio. Fit en verde.
+
 ## Current working set (agents)
 
 - **Policy:** [`AGENTS.md`](../AGENTS.md) · day-one map: [`docs/AGENT_ONBOARDING.md`](AGENT_ONBOARDING.md)

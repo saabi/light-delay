@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-12 — Festival-master EN dialogue for cue-0044 / cue-0045
+
+- Audited Festival / trailer / main-short dialogue audio: only `festival-master:cue-0044` and
+  `cue-0045` were missing promoted EN WAVs (new/rewritten Zao vault lines); no broken asset paths.
+- Regenerated and promoted those two cues (130 reused); re-fitted Festival timings (~816.8 s).
+  Trailer unchanged (16/16). `report:dialogue-audio-fit` green.
+
 ## 2026-09-12 — Agent onboarding spine
 
 - Made `AGENTS.md` English-first with a current working set, outline→script→storyboard→prompt

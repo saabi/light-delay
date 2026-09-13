@@ -95,7 +95,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (455)
+## Revisión requerida (457)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -141,6 +141,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:dialogue-light-delay-festival-master-en-festival-master-cue-0039` | default-review | retain |
 | asset | `asset:dialogue-light-delay-festival-master-en-festival-master-cue-0042` | default-review | retain |
 | asset | `asset:dialogue-light-delay-festival-master-en-festival-master-cue-0043` | default-review | retain |
+| asset | `asset:dialogue-light-delay-festival-master-en-festival-master-cue-0044` | default-review | retain |
 | asset | `asset:dialogue-light-delay-festival-master-en-festival-master-cue-0045` | default-review | retain |
 | asset | `asset:dialogue-light-delay-festival-master-en-festival-master-cue-0047` | default-review | retain |
 | asset | `asset:dialogue-light-delay-festival-master-en-festival-master-cue-0049` | default-review | retain |
@@ -525,6 +526,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | production_context | `context:zao-optical-transmission` | default-review | retain |
 | production_plan | `script:light-delay-festival-master` | default-review | retain |
 | script | `script:light-delay-trailer-master` | default-review | retain |
+| static_file | `docs/AGENT_ONBOARDING.md` | default-review | retain |
 | static_file | `docs/ARQUITECTURA_GENERACION.md` | default-review | retain |
 | static_file | `docs/ASSET_PATH_MAP.md` | default-review | retain |
 | static_file | `docs/ASSET_PROVENANCE.md` | default-review | retain |

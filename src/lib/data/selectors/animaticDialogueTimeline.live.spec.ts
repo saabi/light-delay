@@ -7,8 +7,8 @@ describe('buildShotDialogueTimeline (festival-master promoted EN)', () => {
 		const script = getScript('script:light-delay-festival-master');
 		const durations = script.shots.map((shot) => shot.durationMs);
 		const timeline = buildShotDialogueTimeline(script, durations, 'en');
-		// All 131 Festival-master EN dialogue cues have promoted WAVs (clarity-pass + vault-timer).
-		expect(timeline.length).toBe(131);
+		// All 132 Festival-master EN dialogue cues have promoted WAVs.
+		expect(timeline.length).toBe(132);
 		expect(timeline.every((cue) => cue.url.includes('/assets/audio/dialogue/'))).toBe(true);
 		expect(timeline[0]!.startMs).toBeGreaterThanOrEqual(0);
 		for (let i = 1; i < timeline.length; i += 1) {
