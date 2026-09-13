@@ -8,6 +8,7 @@ import {
 	assembleTimeline,
 	assetsByIdFromFile,
 	collectDialogueCues,
+	clipTargetUrl,
 	isStillUrl,
 	matchShotId,
 	msToFrames,
@@ -98,17 +99,33 @@ describe('resolve OTIO fresh assembly', () => {
 		const video = timeline.tracks.children[0];
 		const audio = timeline.tracks.children[1];
 		expect(video.kind).toBe('Video');
+		expect(video.name).toBe('Video 1');
+		expect(audio.name).toBe('Audio 1');
 		expect(video.children).toHaveLength(2);
-		expect(video.children[0].name).toBe('test:shot-a');
+		expect(timeline.name).toBe('test-cut');
+		expect(timeline.global_start_time.value).toBe(86400);
+		expect(timeline.metadata.Resolve_OTIO['Resolve OTIO Meta Version']).toBe('1.0');
+		expect(video.children[0].name).toBe('test__shot-a');
+		expect(video.children[0].name.includes(':')).toBe(false);
+		expect(video.children[0].OTIO_SCHEMA).toBe('Clip.2');
+		expect(video.children[0].enabled).toBe(true);
+		expect(video.children[0].markers).toEqual([]);
 		expect(video.children[0].source_range.duration.value).toBe(48);
-		expect(isStillUrl(video.children[0].media_reference.target_url)).toBe(true);
+		expect(video.children[0].media_references.DEFAULT_MEDIA.available_range.duration.value).toBe(1);
+		const stillUrl = clipTargetUrl(video.children[0]);
+		expect(isStillUrl(stillUrl)).toBe(true);
+		expect(stillUrl.startsWith('file:')).toBe(false);
+		expect(stillUrl.replace(/\\/g, '/')).toMatch(/\/static\/assets\/a\.png$/);
+		if (process.platform === 'win32') expect(stillUrl.includes('\\')).toBe(true);
 		const cues = collectDialogueCues(script, { lang: 'en', fps: 24 });
 		expect(cues[0].startMs).toBe(250);
 		expect(cues[0].startFrame).toBe(msToFrames(250, 24));
 		const wav = audio.children.find((item) => item.OTIO_SCHEMA.startsWith('Clip'));
-		expect(wav?.name).toBe('test:cue-1');
+		expect(wav?.name).toBe('test__cue-1');
 		expect(wav?.source_range.duration.value).toBe(24);
-		const parsed = JSON.parse(serializeOtio(timeline));
+		const serialized = serializeOtio(timeline);
+		expect(serialized).toContain('"rate": 24.0');
+		const parsed = JSON.parse(serialized);
 		expect(parsed.OTIO_SCHEMA).toBe('Timeline.1');
 	});
 
@@ -155,16 +172,34 @@ describe('resolve OTIO swap', () => {
 		});
 		expect(report.swapped).toEqual(['test:shot-a']);
 		const picture = next.tracks.children[0].children[0];
-		expect(picture.media_reference.target_url).toContain('a.mov');
+		expect(picture.OTIO_SCHEMA).toBe('Clip.2');
+		expect(clipTargetUrl(picture)).toContain('a.mov');
 		expect(picture.source_range.duration.value).toBe(beforeDuration);
 		expect(picture.metadata.light_delay.mediaKind).toBe('video');
 		const dialogue = next.tracks.children[1].children.filter((item) =>
 			String(item.OTIO_SCHEMA).startsWith('Clip')
 		);
-		expect(dialogue.some((item) => item.name === 'test:cue-1')).toBe(false);
+		expect(dialogue.some((item) => item.name === 'test__cue-1' || item.name === 'test:cue-1')).toBe(
+			false
+		);
 		expect(report.droppedDialogue).toContain('test:cue-1');
 		expect(next.tracks.children[0].children.at(-1).name).toBe('user-broll');
 		expect(matchShotId({ name: 'test:shot-a' }, new Set(['test:shot-a']))).toBe('test:shot-a');
+		expect(matchShotId({ name: 'test__shot-a' }, new Set(['test:shot-a']))).toBe('test:shot-a');
+		expect(
+			matchShotId(
+				{
+					name: 'shot-plan-001.png',
+					media_references: {
+						DEFAULT_MEDIA: {
+							target_url:
+								'E:\\Work\\light-delay\\static\\assets\\animatic\\frames\\festival-master\\shot-plan-001.png'
+						}
+					}
+				},
+				new Set(['festival-master:shot-plan-001'])
+			)
+		).toBe('festival-master:shot-plan-001');
 	});
 });
 
@@ -183,6 +218,14 @@ describe('resolve OTIO live Festival and trailer assemblies', () => {
 			String(item.OTIO_SCHEMA).startsWith('Clip')
 		);
 		expect(wavClips[0].source_range.start_time.value).toBe(0);
+		const firstStill = timeline.tracks.children[0].children.find((item) =>
+			String(item.OTIO_SCHEMA).startsWith('Clip')
+		);
+		expect(firstStill?.OTIO_SCHEMA).toBe('Clip.2');
+		expect(firstStill?.name).toBe('festival-master__shot-plan-title');
+		expect(firstStill?.name.includes(':')).toBe(false);
+		expect(clipTargetUrl(firstStill).startsWith('file:')).toBe(false);
+		expect(timeline.name.includes(':')).toBe(false);
 	});
 
 	it('builds a trailer-master timeline on its own shot clock with reused Festival media', () => {

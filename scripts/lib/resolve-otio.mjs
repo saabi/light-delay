@@ -4,7 +4,6 @@
  */
 import { existsSync } from 'node:fs';
 import { basename, join } from 'node:path';
-import { pathToFileURL } from 'node:url';
 
 export const DEFAULT_FPS = 24;
 export const DEFAULT_LANG = 'en';
@@ -41,8 +40,43 @@ export function staticPathFromAsset(root, asset) {
 	return join(root, 'static', rel);
 }
 
-export function fileUrlFromPath(absPath) {
-	return pathToFileURL(absPath).href;
+/**
+ * Resolve 20.1 Windows exports (and reimports) native filesystem paths:
+ * `E:\\Work\\...` in JSON, not `file://` and not POSIX slashes.
+ */
+export function filesystemPathForOtio(absPath) {
+	return String(absPath || '');
+}
+
+export const RESOLVE_OTIO_META_VERSION = '1.0';
+export const TIMELINE_START_SECONDS = 3600;
+
+function resolveTimelineMeta(extra = {}) {
+	return {
+		Resolve_OTIO: { 'Resolve OTIO Meta Version': RESOLVE_OTIO_META_VERSION },
+		...extra
+	};
+}
+
+function resolveClipMeta(extra = {}) {
+	return { Resolve_OTIO: {}, ...extra };
+}
+
+function resolveVideoTrackMeta() {
+	return { Resolve_OTIO: { Locked: false } };
+}
+
+function resolveAudioTrackMeta() {
+	return { Resolve_OTIO: { 'Audio Type': 'Stereo', Locked: false, SoloOn: false } };
+}
+
+/** Resolve/Windows reject `:` in clip and timeline names. Swap still matches via metadata. */
+export function otioSafeName(id) {
+	return String(id || '').replace(/:/g, '__');
+}
+
+export function otioNameToId(name) {
+	return String(name || '').replace(/__/g, ':');
 }
 
 export function isStillUrl(url) {
@@ -55,6 +89,24 @@ export function isVideoUrl(url) {
 	return VIDEO_EXT.test(path);
 }
 
+export function clipMediaRef(clipItem) {
+	if (clipItem?.media_reference) return clipItem.media_reference;
+	const key = clipItem?.active_media_reference_key || 'DEFAULT_MEDIA';
+	return clipItem?.media_references?.[key] ?? null;
+}
+
+export function clipTargetUrl(clipItem) {
+	return clipMediaRef(clipItem)?.target_url || '';
+}
+
+function setClipMedia(clipItem, ref) {
+	clipItem.OTIO_SCHEMA = 'Clip.2';
+	clipItem.enabled = true;
+	clipItem.media_references = { DEFAULT_MEDIA: ref };
+	clipItem.active_media_reference_key = 'DEFAULT_MEDIA';
+	delete clipItem.media_reference;
+}
+
 function rationalTime(value, rate) {
 	return { OTIO_SCHEMA: 'RationalTime.1', rate, value };
 }
@@ -62,88 +114,119 @@ function rationalTime(value, rate) {
 function timeRange(start, duration, rate) {
 	return {
 		OTIO_SCHEMA: 'TimeRange.1',
-		start_time: rationalTime(start, rate),
-		duration: rationalTime(duration, rate)
+		duration: rationalTime(duration, rate),
+		start_time: rationalTime(start, rate)
 	};
 }
 
 function externalReference(targetUrl, availableFrames, fps) {
 	const ref = {
 		OTIO_SCHEMA: 'ExternalReference.1',
-		name: basename(String(targetUrl || '').split(/[?#]/)[0] || 'media'),
-		target_url: targetUrl
+		metadata: {},
+		name: basename(String(targetUrl || '').split(/[?#]/)[0] || 'media')
 	};
 	if (availableFrames != null) {
 		ref.available_range = timeRange(0, availableFrames, fps);
 	}
+	ref.available_image_bounds = null;
+	ref.target_url = targetUrl;
 	return ref;
 }
 
-function marker(name, fps) {
+function clip({ name, start, duration, fps, targetUrl, availableFrames, metadata }) {
 	return {
-		OTIO_SCHEMA: 'Marker.1',
-		name,
-		marked_range: timeRange(0, 1, fps),
-		color: 'RED'
-	};
-}
-
-function clip({ name, start, duration, fps, targetUrl, availableFrames, metadata, freeze }) {
-	const item = {
-		OTIO_SCHEMA: 'Clip.1',
+		OTIO_SCHEMA: 'Clip.2',
+		metadata: resolveClipMeta(metadata ?? {}),
 		name,
 		source_range: timeRange(start, duration, fps),
-		media_reference: externalReference(targetUrl, availableFrames, fps),
-		metadata: metadata ?? {},
-		markers: [marker(name, fps)],
-		effects: freeze
-			? [{ OTIO_SCHEMA: 'FreezeFrame.1', name: 'FreezeFrame' }]
-			: []
+		effects: [],
+		markers: [],
+		enabled: true,
+		media_references: {
+			DEFAULT_MEDIA: externalReference(targetUrl, availableFrames, fps)
+		},
+		active_media_reference_key: 'DEFAULT_MEDIA'
 	};
-	return item;
 }
 
-function gap(duration, fps, name = 'gap') {
+function gap(duration, fps, name = '') {
 	return {
 		OTIO_SCHEMA: 'Gap.1',
+		metadata: {},
 		name,
 		source_range: timeRange(0, duration, fps),
-		media_reference: null,
-		metadata: {},
+		effects: [],
 		markers: [],
-		effects: []
+		enabled: true
 	};
 }
 
-function track(name, kind, children) {
+function track(name, kind, children, metadata = {}) {
 	return {
 		OTIO_SCHEMA: 'Track.1',
+		metadata,
 		name,
-		kind,
-		children,
 		source_range: null,
-		metadata: {},
+		effects: [],
 		markers: [],
-		effects: []
+		enabled: true,
+		children,
+		kind
 	};
 }
 
 export function emptyTimeline(name, fps = DEFAULT_FPS) {
 	return {
 		OTIO_SCHEMA: 'Timeline.1',
+		metadata: resolveTimelineMeta(),
 		name,
-		global_start_time: rationalTime(0, fps),
-		metadata: { light_delay: { fps } },
+		global_start_time: rationalTime(fps * TIMELINE_START_SECONDS, fps),
 		tracks: {
 			OTIO_SCHEMA: 'Stack.1',
-			name: 'tracks',
-			children: [],
-			source_range: null,
 			metadata: {},
+			name: '',
+			source_range: null,
+			effects: [],
 			markers: [],
-			effects: []
+			enabled: true,
+			children: []
 		}
 	};
+}
+
+export function defaultSmokeOtioPath(root) {
+	return join(root, 'tmp', 'resolve-otio', 'smoke-one-still.otio');
+}
+
+export function assembleSmokeTimeline(root, { fps = DEFAULT_FPS, fileExists = existsSync } = {}) {
+	const abs = join(root, 'static', 'assets', 'animatic', 'frames', 'festival-master', 'shot-plan-title.png');
+	if (!fileExists(abs)) throw new Error(`Smoke still missing: ${abs}`);
+	const timeline = emptyTimeline('smoke-one-still', fps);
+	timeline.tracks.children = [
+		track(
+			'Video 1',
+			'Video',
+			[
+				clip({
+					name: 'smoke-still',
+					start: 0,
+					duration: fps * 3,
+					fps,
+					targetUrl: filesystemPathForOtio(abs),
+					availableFrames: 1,
+					metadata: {}
+				})
+			],
+			resolveVideoTrackMeta()
+		),
+		track(
+			'Audio 1',
+			'Audio',
+			[gap(fps * 3, fps)],
+			resolveAudioTrackMeta()
+		)
+	];
+	return timeline;
 }
 
 function takeForShot(script, shot) {
@@ -214,7 +297,7 @@ function resolveMediaFile(root, asset, fileExists) {
 	if (!asset?.path) return null;
 	const abs = staticPathFromAsset(root, asset);
 	if (!abs || !fileExists(abs)) return null;
-	return { abs, url: fileUrlFromPath(abs), asset };
+	return { abs, url: filesystemPathForOtio(abs), asset };
 }
 
 export function assembleTimeline(
@@ -240,12 +323,11 @@ export function assembleTimeline(
 		snap: [],
 		videoShots: []
 	};
-	const name = script.script?.id || 'timeline';
+	const name = slugFromScriptId(script.script?.id) || 'timeline';
 	const timeline = emptyTimeline(name, fps);
 	const pictureChildren = [];
 	const takeAudioSlots = [];
 	const stillShotIds = new Set();
-	const cueIdsByShot = new Map();
 
 	let pictureFrames = 0;
 	for (const shot of script.shots || []) {
@@ -265,7 +347,6 @@ export function assembleTimeline(
 		const imageAsset = take?.imageAssetId ? assetsById.get(take.imageAssetId) : undefined;
 		const imageFile = !videoFile && imageAsset ? resolveMediaFile(root, imageAsset, fileExists) : null;
 		const cueIds = (shot.cuePlacements || []).map((placement) => placement.cueId);
-		cueIdsByShot.set(shot.id, cueIds);
 
 		if (videoFile) {
 			report.pictureClips += 1;
@@ -278,19 +359,18 @@ export function assembleTimeline(
 			});
 			pictureChildren.push(
 				clip({
-					name: shot.id,
+					name: otioSafeName(shot.id),
 					start: 0,
 					duration: durationFrames,
 					fps,
 					targetUrl: videoFile.url,
 					availableFrames: null,
-					metadata: meta,
-					freeze: false
+					metadata: meta
 				})
 			);
 			takeAudioSlots.push({
 				kind: 'clip',
-				name: `${shot.id}:audio`,
+				name: `${otioSafeName(shot.id)}__audio`,
 				duration: durationFrames,
 				url: videoFile.url,
 				metadata: meta
@@ -306,21 +386,20 @@ export function assembleTimeline(
 			});
 			pictureChildren.push(
 				clip({
-					name: shot.id,
+					name: otioSafeName(shot.id),
 					start: 0,
 					duration: durationFrames,
 					fps,
 					targetUrl: imageFile.url,
-					availableFrames: durationFrames,
-					metadata: meta,
-					freeze: true
+					availableFrames: 1,
+					metadata: meta
 				})
 			);
 			takeAudioSlots.push({ kind: 'gap', duration: durationFrames });
 		} else {
 			report.pictureGaps += 1;
 			report.missingStills.push(shot.id);
-			pictureChildren.push(gap(durationFrames, fps, `${shot.id}:missing`));
+			pictureChildren.push(gap(durationFrames, fps));
 			takeAudioSlots.push({ kind: 'gap', duration: durationFrames });
 		}
 		pictureFrames += durationFrames;
@@ -343,7 +422,7 @@ export function assembleTimeline(
 		const duration = cue.durationFrames;
 		audioChildren.push(
 			clip({
-				name: cue.cueId,
+				name: otioSafeName(cue.cueId),
 				start: 0,
 				duration,
 				fps,
@@ -353,8 +432,7 @@ export function assembleTimeline(
 					shotId: cue.shotId,
 					mediaKind: 'dialogue',
 					cueIds: [cue.cueId]
-				}),
-				freeze: false
+				})
 			})
 		);
 		report.dialogueClips += 1;
@@ -372,21 +450,19 @@ export function assembleTimeline(
 			fps,
 			targetUrl: slot.url,
 			availableFrames: null,
-			metadata: slot.metadata,
-			freeze: false
+			metadata: slot.metadata
 		});
 	});
 
 	timeline.tracks.children = [
-		track('V1 Picture', 'Video', pictureChildren),
-		track('A1 Dialogue', 'Audio', audioChildren),
-		track('A2 Take audio', 'Audio', takeAudioChildren)
+		track('Video 1', 'Video', pictureChildren, resolveVideoTrackMeta()),
+		track('Audio 1', 'Audio', audioChildren, resolveAudioTrackMeta()),
+		track('Audio 2', 'Audio', takeAudioChildren, resolveAudioTrackMeta())
 	];
 	timeline.metadata.light_delay = {
 		fps,
 		lang,
-		scriptId: script.script?.id,
-		cueIdsByShot: Object.fromEntries(cueIdsByShot)
+		scriptId: script.script?.id
 	};
 	return { timeline, report };
 }
@@ -416,7 +492,7 @@ function isGap(item) {
 function mediaKindOf(clipItem) {
 	const kind = clipItem?.metadata?.light_delay?.mediaKind;
 	if (kind) return kind;
-	const url = clipItem?.media_reference?.target_url;
+	const url = clipTargetUrl(clipItem);
 	if (isStillUrl(url)) return 'still';
 	if (isVideoUrl(url)) return 'video';
 	return 'unknown';
@@ -426,7 +502,9 @@ export function matchShotId(clipItem, shotIds) {
 	const meta = clipItem?.metadata?.light_delay?.shotId;
 	if (meta && shotIds.has(meta)) return meta;
 	if (clipItem?.name && shotIds.has(clipItem.name)) return clipItem.name;
-	const url = clipItem?.media_reference?.target_url || '';
+	const fromSafe = otioNameToId(clipItem?.name);
+	if (fromSafe && shotIds.has(fromSafe)) return fromSafe;
+	const url = clipTargetUrl(clipItem);
 	const base = basename(url.split(/[?#]/)[0] || '').replace(/\.[^.]+$/, '');
 	if (!base) return null;
 	for (const id of shotIds) {
@@ -446,8 +524,10 @@ function cueIdsOfClip(clipItem) {
 	const fromMeta = clipItem?.metadata?.light_delay?.cueIds;
 	if (Array.isArray(fromMeta) && fromMeta.length) return fromMeta;
 	const name = clipItem?.name || '';
-	if (name.includes('cue-') || name.includes(':cue')) return [name];
-	const url = clipItem?.media_reference?.target_url || '';
+	if (name.includes('cue-') || name.includes(':cue') || name.includes('__cue')) {
+		return [otioNameToId(name)];
+	}
+	const url = clipTargetUrl(clipItem);
 	const base = basename(url.split(/[?#]/)[0] || '').replace(/\.[^.]+$/, '');
 	if (base.includes('cue-')) return [base];
 	return [];
@@ -465,18 +545,17 @@ function rebuildTakeAudioTrack(pictureChildren, fps) {
 	for (const item of pictureChildren) {
 		const duration = clipDurationFrames(item);
 		if (isClip(item) && mediaKindOf(item) === 'video') {
-			const url = item.media_reference?.target_url;
-			const shotId = item.metadata?.light_delay?.shotId || item.name;
+			const url = clipTargetUrl(item);
+			const shotId = item.metadata?.light_delay?.shotId || otioNameToId(item.name);
 			children.push(
 				clip({
-					name: `${shotId}:audio`,
+					name: `${otioSafeName(shotId)}__audio`,
 					start: item.source_range?.start_time?.value ?? 0,
 					duration,
 					fps,
 					targetUrl: url,
 					availableFrames: null,
-					metadata: item.metadata,
-					freeze: false
+					metadata: item.metadata
 				})
 			);
 		} else {
@@ -509,12 +588,13 @@ export function swapTakes(
 
 	const stack = timeline.tracks?.children || [];
 	const videoTrack = stack.find((item) => item.kind === 'Video') || stack[0];
+	const audioTracks = stack.filter((item) => item.kind === 'Audio');
 	const dialogueTrack =
-		stack.find((item) => item.kind === 'Audio' && String(item.name || '').includes('Dialogue')) ||
-		stack.find((item) => item.kind === 'Audio');
-	let takeAudioTrack = stack.find(
-		(item) => item.kind === 'Audio' && String(item.name || '').includes('Take')
-	);
+		stack.find((item) => item.kind === 'Audio' && /Dialogue|Audio 1/i.test(String(item.name || ''))) ||
+		audioTracks[0];
+	let takeAudioTrack =
+		stack.find((item) => item.kind === 'Audio' && /Take|Audio 2/i.test(String(item.name || ''))) ||
+		audioTracks[1];
 
 	const pictureChildren = videoTrack?.children || [];
 	const stillClipsByShot = new Map();
@@ -538,7 +618,7 @@ export function swapTakes(
 		let offset = 0;
 		for (const item of clipsForShot) {
 			const duration = clipDurationFrames(item);
-			item.media_reference = externalReference(file.url, null, fps);
+			setClipMedia(item, externalReference(file.url, null, fps));
 			item.effects = [];
 			setClipStart(item, offset, fps);
 			setClipDuration(item, duration, fps);
@@ -591,7 +671,7 @@ export function swapTakes(
 			const drop =
 				(shotId && swappedShotIds.has(shotId)) || cueIds.some((id) => swappedCueIds.has(id));
 			if (drop) {
-				report.droppedDialogue.push(item.name || cueIds[0] || shotId);
+				report.droppedDialogue.push(cueIds[0] || otioNameToId(item.name) || shotId);
 				const duration = clipDurationFrames(item);
 				kept.push(gap(duration, fps));
 				continue;
@@ -605,7 +685,7 @@ export function swapTakes(
 	if (takeAudioTrack) {
 		takeAudioTrack.children = rebuilt;
 	} else {
-		takeAudioTrack = track('A2 Take audio', 'Audio', rebuilt);
+		takeAudioTrack = track('Audio 2', 'Audio', rebuilt, resolveAudioTrackMeta());
 		stack.push(takeAudioTrack);
 	}
 
@@ -613,7 +693,8 @@ export function swapTakes(
 }
 
 export function serializeOtio(timeline) {
-	return `${JSON.stringify(timeline, null, 2)}\n`;
+	const json = JSON.stringify(timeline, null, 4);
+	return `${json.replace(/("(?:rate|value)": )(-?\d+)(\s*[,}\n])/g, '$1$2.0$3')}\n`;
 }
 
 export function assetsByIdFromFile(assetsFile) {

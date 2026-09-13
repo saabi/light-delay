@@ -12,7 +12,7 @@ Resolve 18.5+ imports and **exports** OpenTimelineIO:
 
 | File | What it is | Use |
 | --- | --- | --- |
-| `.otio` | JSON timeline + `file://` media paths | Daily assembly and take-swap |
+| `.otio` | JSON timeline + **plain filesystem** media paths | Daily assembly and take-swap |
 | `.otioz` | Timeline plus copied media | Occasional hand-off snapshot; do not commit |
 
 Cuts, clip order, source in/out, track structure, gaps, basic markers, and clip names round-trip. Color, Fusion graphs, Fairlight volume automation, and most effects do **not**. That is enough to treat a Resolve **export** as the edit spine when placeholders become takes.
@@ -25,7 +25,7 @@ Cuts, clip order, source in/out, track structure, gaps, basic markers, and clip 
 | AAF | Hard | Yes (Avid) | Excellent | Overkill | No |
 | Resolve `.drp` | Not a public format | — | — | — | No |
 
-Do not generate `.drp`. Do not commit generated `.otio` (local `file://` paths) or `.otioz`. Output default: `tmp/resolve-otio/` (gitignored).
+Do not generate `.drp`. Do not commit generated `.otio` (local machine paths) or `.otioz`. Output default: `tmp/resolve-otio/` (gitignored).
 
 ## 2. Cuts and media
 
@@ -36,7 +36,7 @@ First-class ScriptFiles:
 
 Trailer stills and EN dialogue WAVs already reuse Festival `imageAssetId` / `audioAssetId`. The exporter follows those IDs; it does not invent trailer-only media.
 
-Picture chain (same as the animatic): `shot.selectedTakeId` → take → `videoAssetId` if the file exists, else `imageAssetId` → `data/assets.json` → `static/` + `file://`.
+Picture chain (same as the animatic): `shot.selectedTakeId` → take → `videoAssetId` if the file exists, else `imageAssetId` → `data/assets.json` → `static/` as a **native Windows path** (`E:\\Work\\light-delay\\static\\...`). Reverse-engineered from a Resolve 20.1 export of five stills (`tmp/resolve-otio/Timeline 1.otio`): Clip.2, `media_references.DEFAULT_MEDIA`, still `available_range` of 1 frame, `source_range` = hold length, `global_start_time` 01:00:00:00 (86400 frames at 24 fps), `metadata.Resolve_OTIO`, RationalTime as `24.0` / `120.0`. Do not emit `file://` URLs or POSIX slashes on Windows.
 
 Dialogue chain: `cuePlacements` → cue `content.variants.<lang>.audioAssetId` → WAV, timed as `shotOriginMs + atMs` (same formula as `buildShotDialogueTimeline`).
 
@@ -58,7 +58,7 @@ This exporter **locks 24 fps**. `durationMs` / `atMs` snap with `round(ms * 24 /
 | A1 Dialogue | Audio | Cue WAVs **only for shots still on a still**. Gaps where nobody speaks. |
 | A2 Take audio | Audio | For shots already on video: the **same** MOV/MP4 as V1, same range (Resolve often will not pull embedded audio from an OTIO video clip alone). |
 
-Clip `name` = stable `shotId` (e.g. `festival-master:shot-plan-031`). Namespaced metadata:
+Clip `name` is the shot id with `:` replaced by `__` (e.g. `festival-master__shot-plan-031`). Resolve 20 on Windows aborts the whole OTIO import when clip or timeline names contain a colon. The original `shotId` stays in namespaced metadata:
 
 ```json
 "metadata": {
@@ -71,7 +71,7 @@ Clip `name` = stable `shotId` (e.g. `festival-master:shot-plan-031`). Namespaced
 }
 ```
 
-Resolve may drop custom metadata on export. **Clip name is the durable match key.** A marker with the same `shotId` is a backup. Still clips also carry a `FreezeFrame` effect so a PNG can hold for the shot length.
+Resolve may drop custom metadata on export. **Clip name (and metadata `shotId`) are the durable match keys.** Still clips hold duration via `source_range`; `available_range` on a PNG is **1 frame** (the file’s real length). Do not emit FreezeFrame or per-clip markers — Resolve’s OTIO reader may abort the whole import on those.
 
 ## 5. Authority after Resolve edits
 
@@ -130,9 +130,14 @@ Swap is **per file**: `--from-otio` plus the matching `--script-id`. Do not swap
 
 1. Edit page (not Cut).
 2. File → Import → Timeline → the `.otio`.
-3. Leave **Automatically import source clips into media pool** on.
-4. If paths miss, point at the repo `static/` tree (subfolders are walked).
-5. Later relink by filename: **Ignore file extensions when matching** so `shot-plan-031.png` can become `shot-plan-031.mov` *if* you use that convention. This repo’s primary path is regenerate / `--swap`, not basename relink.
+3. **Uncheck Automatically set project settings** (the OTIO has no picture size; leaving this on can abort the import). Keep 1920×1080 and 24 fps as already shown.
+4. Leave **Automatically import source clips into media pool** on.
+5. **Import timeline** can stay empty — OTIO is a single timeline; Resolve uses **Timeline name**.
+6. First import `tmp/resolve-otio/smoke-one-still.otio` (one PNG, no colons). If that lands, import the Festival/trailer files.
+7. If paths miss, point at the repo `static/` tree (subfolders are walked).
+8. Later relink by filename: **Ignore file extensions when matching** so `shot-plan-031.png` can become `shot-plan-031.mov` *if* you use that convention. This repo’s primary path is regenerate / `--swap`, not basename relink.
+
+If import still adds nothing: Media Pool → right-click Timelines → Show Log → Import Log. The same lines are in `%AppData%\Blackmagic Design\DaVinci Resolve\Support\logs\davinci_resolve.log` (`Import Log (Fatal) - failed to import OTIO timeline`). Resolve does not log a per-clip reason.
 
 Scripting API import often leaves clips unlinked; UI import is the reliable path.
 
@@ -140,9 +145,10 @@ Scripting API import often leaves clips unlinked; UI import is the reliable path
 
 OTIO still-holds are not as explicitly documented as FCPXML stills. After the first export:
 
-1. Import `tmp/resolve-otio/light-delay-festival-master.otio` (or a one-shot fixture).
-2. Confirm a storyboard PNG holds for the shot length (several seconds), not one frame.
-3. Confirm a dialogue WAV sits on A1 at the cue.
+1. Import `tmp/resolve-otio/smoke-one-still.otio` first (3-second hold of the title still).
+2. Then import `tmp/resolve-otio/light-delay-festival-master.otio`.
+3. Confirm a storyboard PNG holds for the shot length (several seconds), not one frame.
+4. Confirm a dialogue WAV sits on A1 at the cue.
 
 If stills collapse to one frame, the fallback is FCPXML / FCP7 XML from the same builder (not implemented in v1).
 

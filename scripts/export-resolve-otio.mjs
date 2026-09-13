@@ -15,9 +15,11 @@ import {
 	DEFAULT_FPS,
 	DEFAULT_LANG,
 	FESTIVAL_SCRIPT_ID,
+	assembleSmokeTimeline,
 	assembleTimeline,
 	assetsByIdFromFile,
 	defaultOtioPath,
+	defaultSmokeOtioPath,
 	scriptPathForId,
 	serializeOtio,
 	slugFromScriptId,
@@ -103,6 +105,16 @@ export function runExport(argv = process.argv.slice(2)) {
 			? swapOne(scriptId, args)
 			: assembleOne(scriptId, { ...args, out: args.all ? undefined : args.out });
 		results.push({ scriptId, ...result });
+	}
+	if (!args.swap && !args.check) {
+		const smokeDest = defaultSmokeOtioPath(ROOT);
+		writeOtio(smokeDest, assembleSmokeTimeline(ROOT));
+		results.push({
+			scriptId: 'smoke-one-still',
+			dest: smokeDest,
+			wrote: true,
+			report: { pictureClips: 1, dialogueClips: 0 }
+		});
 	}
 	return results;
 }
