@@ -96,7 +96,7 @@ Un archivo índice, separado de los 4 guiones, que mapea:
 ## 6. Ajustes de render compartidos
 
 Definidos una vez en `_shot_template.blend`, no por archivo:
-- Frame rate y resolución de trabajo (a definir con dirección — ninguno fijado todavía; usar un valor bajo/rápido para previews mientras el guion no cierre, ya que el destino final es un pase de IA y no hace falta resolución de render final desde ahora).
+- Frame rate y resolución de trabajo: el exportador OTIO a DaVinci Resolve fija **24 fps** (`docs/production/RESOLVE_OTIO_EXPORT.md`). El preview de Blender puede usar otro valor bajo/rápido mientras el guion no cierre; no asumir que coinciden.
 - Motor de render para las previews de blocking/cámara: preferir Eevee/viewport (rápido) sobre Cycles mientras se está iterando cámara y blocking — Cycles solo si en algún punto hace falta un frame de referencia con iluminación/sombras más fieles para el pase de IA.
 
 ## 7. Qué hacer cuando el guion cambie

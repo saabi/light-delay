@@ -18,7 +18,7 @@ that date, since the festival screenplay this brief supports is being authored c
 | 2 | `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` | Which narrative/plan is current vs. deprecated, deletion gates |
 | 3 | `docs/ARQUITECTURA_GENERACION.md` (ES) | Pipeline: plan → ES brief → freeze → EN prompt → adapter; the 11 compiler sections |
 | 4 | `docs/technical/HIGGSFIELD_MCP.md` (ES) | Seedance/MCP limits, credits, staging, the proposed job-JSON shape |
-| 4b | `docs/production/SEEDANCE_PROMPTING.md` (EN) | Seedance 2.5 video prompt craft (voice samples only; consecutive-shot jobs). Not generation authority |
+| 4c | `docs/production/RESOLVE_OTIO_EXPORT.md` (EN) | DaVinci Resolve OTIO assembly + take-swap. Not generation authority |
 | 5 | `docs/JSON_FORMAT.md` + `docs/JSON_FORMAT_I18N_ADDENDUM.md` | `ScriptFile` contract: shots, composition, cues, diegetic EN-only text, dialogue variants |
 | 6 | `docs/PROJECT_STATUS.md` / `TODO.md` | Current freeze/blocker state — **`TODO.md` predates the Festival-master derivative** authorized in `data/editorial-lifecycle.json` (`lifecycle:master-festival-derivative`); its "do not extend Festival" language does not apply to that authorized WIP, only to the deprecated `light-delay-festival` cut |
 | 7 | `data/README.md` | Map of the `data/` tree |
@@ -133,6 +133,7 @@ covering the run (`SEEDANCE_PROMPTING.md` §6.2); shot IDs stay distinct.
 | `npm run prepare:higgsfield` | Copies sheets → `higgsfield-uploads/` |
 | `npm run validate:schemas` / `npm run schema:types` | Contracts |
 | `node scripts/higgsfield-preflight.mjs` | Preflight only — never submits |
+| `npm run export:resolve-otio:all` | OTIO assembly for Festival-master and trailer-master (`RESOLVE_OTIO_EXPORT.md`) |
 
 ## 6. Gaps to declare explicitly (verified 2026-09-11)
 

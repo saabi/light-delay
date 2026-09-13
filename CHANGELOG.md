@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-12 — DaVinci Resolve OTIO export
+
+- Added `docs/production/RESOLVE_OTIO_EXPORT.md` (English source): 24 fps OpenTimelineIO assembly
+  for Festival-master and trailer-master, with storyboard stills and dialogue WAVs as placeholders
+  and a `--swap` path that relinks downloaded takes onto a Resolve-exported edit without discarding
+  trims or order.
+- CLI: `npm run export:resolve-otio:festival`, `:trailer`, `:all`, and `:check`. Generated `.otio`
+  files stay under `tmp/resolve-otio/` (gitignored). Inventory counts in `ASSET_PROVENANCE.md` now
+  include Festival-master still `045b` (482 registered assets).
+
 ## 2026-09-12 — Festival-master continuity and storyboard corrections
 
 - Corrected the throat-exit bridge beats so Sorell remains below deck until the retrieval beat; she is no longer staged on the bridge while the crew celebrates the crossing.

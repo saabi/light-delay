@@ -1,5 +1,13 @@
 # Estado del proyecto
 
+## 2026-09-12 — Export OTIO para DaVinci Resolve
+
+- Nuevo `docs/production/RESOLVE_OTIO_EXPORT.md` (inglés): ensamblado OpenTimelineIO a 24 fps de
+  Festival-master y trailer-master, con stills y WAV de diálogo como placeholders y `--swap` para
+  relinkear tomas sobre un OTIO exportado desde Resolve sin perder recortes ni orden.
+- CLI: `npm run export:resolve-otio:all`. Los `.otio` generados viven en `tmp/resolve-otio/`
+  (ignorado por git). No autoriza generación.
+
 ## 2026-09-12 — Festival-master continuity and storyboard corrections (English source)
 
 - The bridge beats after throat exit now keep Sorell below deck until the explicit retrieval beat; shot 045 shows her only in the restored camera feed, and shot 046 places her on the bridge after retrieval.

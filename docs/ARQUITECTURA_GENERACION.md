@@ -83,6 +83,7 @@ El snapshot vigente separa:
 - campaña vigente: segmentos de hasta **30 s** (`maxSegmentMs`), alineados con Seedance 2.5 single-pass; ventana/ejecución condicionadas a preflight;
 - Seedance 2.5: `maxDurationMs` 30000 en snapshot; perfil aún provisional hasta confirmar catálogo CLI/MCP y contrato real.
 - Oficio de prompts de video: [`docs/production/SEEDANCE_PROMPTING.md`](production/SEEDANCE_PROMPTING.md) (inglés; Seedance 2.5). No autoriza generación.
+- Ensamblado para DaVinci Resolve: [`docs/production/RESOLVE_OTIO_EXPORT.md`](production/RESOLVE_OTIO_EXPORT.md) (inglés; OTIO 24 fps, stills + diálogo, `--swap` de tomas). No autoriza generación.
 
 `scripts/higgsfield-preflight.mjs` es deliberadamente de sólo lectura. No envía medios. Cualquier adapter posterior debe exigir catálogo vivo, entitlement, costo/créditos y confirmación de que la corrida no consumirá recursos no autorizados. Ver también [`docs/technical/HIGGSFIELD_MCP.md`](technical/HIGGSFIELD_MCP.md).
 
