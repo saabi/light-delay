@@ -7531,6 +7531,7 @@
       "revision": 1,
       "medium": "still",
       "mode": "combined_storyboard_sheet",
+      "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
       "outputTakePolicy": "new_candidate",
       "memberInputs": [
         {
@@ -7640,6 +7641,7 @@
       "revision": 1,
       "medium": "video",
       "mode": "grouped_seedance",
+      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
       "dependsOnStillJobId": "festival-master:stretch-bridge-meal-010-012:rev-1",
       "durationMs": 20800,

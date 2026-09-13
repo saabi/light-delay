@@ -5,6 +5,8 @@
       "id": "provider:higgsfield:seedance-2.0:2026-08-29",
       "provider": "higgsfield",
       "model": "seedance-2.0",
+      "medium": "video",
+      "limitSurface": ["api", "mcp", "model"],
       "capturedAt": "2026-08-29",
       "confidence": "verified",
       "executable": false,
@@ -13,18 +15,22 @@
         "maxVideos": 3,
         "maxAudios": 3,
         "maxTotalReferences": 12,
-        "maxDurationMs": null
+        "maxDurationMs": null,
+        "maxOutputsPerRequest": 1,
+        "maxConcurrentRequests": null
       },
       "source": "https://docs.higgsfield.ai/api-reference/cli/video/seedance-v2",
       "notes": {
         "es": "Snapshot documental. La ejecución queda deshabilitada hasta verificar catálogo, cuenta, costo y entitlement mediante preflight.",
-        "en": "Documentation snapshot. Execution remains disabled until catalog, account, cost, and entitlement are verified by preflight."
+        "en": "Documentation snapshot. Execution remains disabled until catalog, account, cost, and entitlement are verified by preflight. Concurrency is account-specific; leave null until Cloud dashboard confirms."
       }
     },
     {
       "id": "provider:higgsfield:seedance-2.5:2026-08-29",
       "provider": "higgsfield",
       "model": "seedance-2.5",
+      "medium": "video",
+      "limitSurface": ["api", "mcp", "ui", "model"],
       "capturedAt": "2026-09-13",
       "confidence": "provisional",
       "executable": false,
@@ -33,18 +39,22 @@
         "maxVideos": null,
         "maxAudios": null,
         "maxTotalReferences": 50,
-        "maxDurationMs": 30000
+        "maxDurationMs": 30000,
+        "maxOutputsPerRequest": 1,
+        "maxConcurrentRequests": null
       },
       "source": "https://higgsfield.ai/seedance-2.5",
       "notes": {
-        "es": "Techo de generación única: 30 s (FAQ Higgsfield; igual en 480p/720p/1080p). Más allá requiere extensión o corte. Perfil provisional; preflight de cuenta/entitlement antes de ejecutar.",
-        "en": "Single-pass ceiling: 30 s (Higgsfield FAQ; same at 480p/720p/1080p). Longer needs extension or edit. Provisional profile; account/entitlement preflight before execution."
+        "es": "Techo de generación única: 30 s (FAQ Higgsfield; igual en 480p/720p/1080p). Más allá requiere extensión o corte. Concurrencia por cuenta/plan; preflight debe anotar el techo vivo.",
+        "en": "Single-pass ceiling: 30 s (Higgsfield FAQ; same at 480p/720p/1080p). Longer needs extension or edit. Concurrent slots are account/plan-specific and change (API 400 when hit; Concurrency Boost can raise). Record live concurrency in preflight; maxConcurrentRequests stays null until verified."
       }
     },
     {
       "id": "provider:openai:gpt-image-2:2026-09-13",
       "provider": "openai",
       "model": "gpt-image-2",
+      "medium": "image",
+      "limitSurface": ["api", "model"],
       "capturedAt": "2026-09-13",
       "confidence": "provisional",
       "executable": false,
@@ -53,7 +63,9 @@
         "maxVideos": 0,
         "maxAudios": 0,
         "maxTotalReferences": 8,
-        "maxDurationMs": null
+        "maxDurationMs": null,
+        "maxOutputsPerRequest": 1,
+        "maxConcurrentRequests": null
       },
       "supportsCombinedStoryboardSheet": true,
       "maxStoryboardPanels": 9,
@@ -92,8 +104,8 @@
       ],
       "source": "https://platform.openai.com/docs/guides/image-generation",
       "notes": {
-        "es": "Snapshot provisional para hojas storyboard combinadas. Límites de tamaño a verificar en la cuenta/API en uso; la ejecución in-repo sigue deshabilitada.",
-        "en": "Provisional snapshot for combined storyboard sheets. Output sizes must be verified on the account/API in use; in-repo execution remains disabled."
+        "es": "Snapshot provisional para hojas storyboard combinadas. maxImages = referencias de entrada; maxOutputsPerRequest = salidas por petición.",
+        "en": "Provisional snapshot for combined storyboard sheets. maxImages = input reference count; maxOutputsPerRequest = outputs per request. Execution remains disabled until account/API verification."
       }
     }
   ],
@@ -101,13 +113,14 @@
     {
       "id": "campaign:higgsfield-trial-24h",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+      "stillProviderSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
       "maxSegmentMs": 30000,
       "requiresEntitlementPreflight": true,
       "noCreditsAllowed": true,
       "concurrency": null,
       "notes": {
-        "es": "Segmentos hasta 30 s, alineados con el techo hard de Seedance 2.5 (`maxDurationMs`). Preflight debe confirmar que la cuenta/plan no imponga un techo menor.",
-        "en": "Segments up to 30 s, aligned with the Seedance 2.5 hard ceiling (`maxDurationMs`). Preflight must confirm the account/plan does not impose a lower ceiling."
+        "es": "Segmentos hasta 30 s, alineados con Seedance 2.5. concurrency null hasta preflight de cuenta. Smoke siempre maxJobs: 1.",
+        "en": "Segments up to 30 s, aligned with Seedance 2.5 maxDurationMs. Campaign concurrency is the project ceiling once verified (null until then). Smoke executionPolicy always forces maxJobs: 1 regardless of platform parallel capacity; later batching must respect min(campaign.concurrency, account limit)."
       }
     }
   ]

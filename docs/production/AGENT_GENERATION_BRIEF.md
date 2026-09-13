@@ -157,10 +157,8 @@ and project output paths. The manifest does not authorize a provider run.
 
 - **No `storyboard.schema.json` / no standalone "storyboard JSON" product.** It lives today in
   `Shot.composition` + PNG stills + plan `artifacts.animaticStill`.
-- **No `run.schema.json` / `data/production/runs/`.** The HF job is only an example in
-  `HIGGSFIELD_MCP.md` §8; nothing in the repo validates or stores a run.
-- **`scripts/build-generation-plans.mjs` only regenerates plans for the four deprecated cuts.**
-  Neither `light-delay-master-narrative` nor `light-delay-festival-master` is wired in yet.
+- **`run.schema.json` + preview handoffs** under `reports/runs/` (`npm run handoff:visual-stretch`). Tracked results: `data/production/runs/*-results.json` (`visual-stretch-result.schema.json`). Preview/`nonExecutable` runs must never be submitted; paid smoke needs a future freeze. Runbook: `HIGGSFIELD_MCP.md` §8b.
+- **`scripts/build-generation-plans.mjs`** regenerates deprecated cuts plus `light-delay-festival-master` (includes `visualStretchJobs` with pinned `providerSnapshotId`).
 - **`compiledPrompt` must stay `null`** on every real plan until editorial freeze for that cut,
   per `docs/ARQUITECTURA_GENERACION.md` — unless this conversation explicitly says otherwise.
 - **No catalog entries yet for the bomb/vault/jammer/wrist device.** `objects.json` has no
@@ -168,14 +166,12 @@ and project output paths. The manifest does not authorize a provider run.
   wrist device — all central to Festival-master's F03–F05, F09–F10 beats. `TODO.md` already flags
   this ("Catálogo faltante del master"); it blocks `requiredReferences` for any shot that needs them
   until modeled (description + reference sheet), not before.
-- **No `assetId` ↔ remote-HF-upload registry.** Nothing tracks which local asset maps to which
-  uploaded/remote handle.
+- **Result manifests record remote upload handles** per `assetId` when an MCP smoke completes; there is still no general asset↔remote registry beyond that.
 - **`shots_index.json` / `_shot_template.blend`** are documented in `ANIMATION_WORKFLOW.md` but
   incomplete.
 - **Seedance 2.5 stays `provisional` / `executable: false`** in `provider-capabilities.json` until
   its catalog/CLI/MCP contract is confirmed against a live account.
-- **`higgsfield-uploads/MANIFEST.md` indexes the old cast/cut**, not Festival-master; it will need
-  new rows once Festival-master shots and their references exist.
+- **`higgsfield-uploads/`** still indexes legacy cast sheets; `prepare:higgsfield` also stages stretch refs under `stretch/` with stable names from asset ids.
 
 ## 7. Dialogue tone pass (harsh → human/colloquial)
 

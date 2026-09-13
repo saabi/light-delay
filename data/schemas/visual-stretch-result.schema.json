@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/visual-stretch-result.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "jobId",
+    "scriptId",
+    "stretchId",
+    "providerSnapshotId",
+    "inputDigest",
+    "artifact",
+    "status",
+    "sourceRunId",
+    "output"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "jobId": { "type": "string" },
+    "scriptId": { "type": "string" },
+    "stretchId": { "type": "string" },
+    "providerSnapshotId": { "type": "string" },
+    "inputDigest": { "type": "string" },
+    "sourceRunId": { "type": "string" },
+    "sourceRunPath": { "type": "string" },
+    "providerJobId": { "type": "string" },
+    "provider": { "type": "string" },
+    "model": { "type": "string" },
+    "artifact": { "const": "video" },
+    "status": { "enum": ["pending_review", "rejected"] },
+    "creditsSpent": { "type": ["number", "null"] },
+    "submittedAt": { "type": "string" },
+    "completedAt": { "type": "string" },
+    "uploadHandles": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Map of local assetId to remote Higgsfield upload handle."
+    },
+    "output": {
+      "type": "object",
+      "required": ["repoPath", "sha256"],
+      "properties": {
+        "repoPath": {
+          "type": "string",
+          "description": "Repo-relative path under static/ for the landed video."
+        },
+        "sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+        "durationMs": { "type": ["integer", "null"], "minimum": 0 },
+        "width": { "type": ["integer", "null"], "minimum": 1 },
+        "height": { "type": ["integer", "null"], "minimum": 1 },
+        "mimeType": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "declaredDurationMs": { "type": ["integer", "null"], "minimum": 0 },
+    "registeredAssetId": { "type": "string" },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": false
+}

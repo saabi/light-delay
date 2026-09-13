@@ -243,7 +243,8 @@ function finalizeStretchJob(job) {
  *   cuesById?: Map<string, any>,
  *   voiceProfiles?: VoiceProfile[],
  *   language?: string,
- *   videoLimits?: { maxImages?: number | null, maxVideos?: number | null, maxAudios?: number | null, maxTotalReferences?: number | null }
+ *   videoLimits?: { maxImages?: number | null, maxVideos?: number | null, maxAudios?: number | null, maxTotalReferences?: number | null },
+ *   providerSnapshotId?: string
  * }} [opts]
  * @returns {VisualStretchJob[]}
  */
@@ -266,6 +267,7 @@ export function partitionStretchVideoJobs(
 	const cuesById = opts.cuesById ?? new Map();
 	const voiceProfiles = opts.voiceProfiles ?? [];
 	const language = opts.language ?? 'en';
+	const providerSnapshotId = opts.providerSnapshotId ?? '';
 
 	/**
 	 * @param {StretchMember[]} bucketMembers
@@ -310,12 +312,14 @@ export function partitionStretchVideoJobs(
 		if (durationMs > maxSegmentMs) {
 			blockers.push('member_exceeds_max_duration');
 		}
+		if (!providerSnapshotId) blockers.push('missing_provider_snapshot');
 		return finalizeStretchJob({
 			id: `${stillJobId}:video-${part}`,
 			stretchId: stretch.id,
 			revision: stretch.revision,
 			medium: 'video',
 			mode: 'grouped_seedance',
+			providerSnapshotId,
 			outputTakePolicy: 'new_candidate',
 			dependsOnStillJobId: stillJobId,
 			durationMs,
@@ -417,6 +421,9 @@ export function buildVisualStretchJobs(
 			if (take.imageAssetId) keyframeByShotId.set(shotId, take.imageAssetId);
 		}
 
+		const stillSnapshotId = stillProvider?.id ?? '';
+		if (!stillSnapshotId) blockers.push('missing_provider_snapshot');
+
 		if (stillMode === 'combined_storyboard_sheet') {
 			const gridLayout =
 				stretch.generationProfile?.gridLayout ??
@@ -467,6 +474,7 @@ export function buildVisualStretchJobs(
 					revision: stretch.revision,
 					medium: 'still',
 					mode: 'combined_storyboard_sheet',
+					providerSnapshotId: stillSnapshotId,
 					outputTakePolicy: 'new_candidate',
 					memberInputs,
 					sharedReferenceAssetIds,
@@ -505,6 +513,7 @@ export function buildVisualStretchJobs(
 					revision: stretch.revision,
 					medium: 'still',
 					mode: 'independent_shared_authority',
+					providerSnapshotId: stillSnapshotId,
 					outputTakePolicy: 'new_candidate',
 					memberInputs,
 					sharedReferenceAssetIds,
@@ -540,7 +549,8 @@ export function buildVisualStretchJobs(
 					cuesById,
 					voiceProfiles,
 					language,
-					videoLimits: videoProvider?.limits
+					videoLimits: videoProvider?.limits,
+					providerSnapshotId: videoProvider?.id ?? ''
 				}
 			);
 			jobs.push(...videoJobs);

@@ -271,7 +271,8 @@ describe('visual stretch Seedance partition', () => {
 			members,
 			shotsById,
 			EFFECTIVE_CEILING_MS,
-			'still:1'
+			'still:1',
+			{ providerSnapshotId: videoProviderFixture.id }
 		);
 		expect(jobs).toHaveLength(1);
 		expect(jobs[0].durationMs ?? 0).toBe(29000);
@@ -293,7 +294,8 @@ describe('visual stretch Seedance partition', () => {
 			members,
 			shotsById,
 			EFFECTIVE_CEILING_MS,
-			'still:1'
+			'still:1',
+			{ providerSnapshotId: videoProviderFixture.id }
 		);
 		expect(jobs).toHaveLength(2);
 		expect(jobs.every((job) => (job.durationMs ?? 0) <= EFFECTIVE_CEILING_MS)).toBe(true);
@@ -307,7 +309,8 @@ describe('visual stretch Seedance partition', () => {
 			members,
 			shotsById,
 			EFFECTIVE_CEILING_MS,
-			'still:1'
+			'still:1',
+			{ providerSnapshotId: videoProviderFixture.id }
 		);
 		expect(jobs).toHaveLength(1);
 		expect(jobs[0].durationMs ?? 0).toBe(45000);

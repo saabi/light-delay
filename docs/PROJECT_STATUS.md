@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-13 — Visual-stretch MCP handoff (English source)
+
+- Dry-run §8 run JSON under `reports/runs/` (`npm run handoff:visual-stretch -- --allow-preview-prompt`); never submit preview/`nonExecutable` runs.
+- Job-level video registration only (`register:visual-stretch-video`); results under `data/production/runs/`. Paid smoke needs a future freeze CLI.
+- Provider capabilities distinguish image/video snapshots; campaign pins still + video providers; concurrency remains null until account preflight.
+
 ## 2026-09-13 — Festival-master outline derivation stale (English source)
 
 - Marked Festival-master outline derivation.reviewStatus: stale (still pinned to master r19) because master is r23; rederive pending.

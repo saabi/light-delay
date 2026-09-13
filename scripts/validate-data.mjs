@@ -6,6 +6,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sourceLocalizedString } from './lib/localized-string.mjs';
+import { resolveStillProvider } from './lib/provider-capabilities.mjs';
 import {
 	providerAllowsFourByFour,
 	stretchBlockingBlockers,
@@ -21,7 +22,7 @@ const stillProvider = (() => {
 		const file = JSON.parse(
 			readFileSync(join(DATA, 'production', 'provider-capabilities.json'), 'utf8')
 		);
-		return file.snapshots?.find((s) => s.model === 'gpt-image-2') ?? null;
+		return resolveStillProvider(file, { campaignId: 'campaign:higgsfield-trial-24h' });
 	} catch {
 		return null;
 	}

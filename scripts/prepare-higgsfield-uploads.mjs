@@ -7,13 +7,16 @@
  *
  * Usage: node scripts/prepare-higgsfield-uploads.mjs
  */
-import { copyFileSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
-import { dirname, join, relative } from 'node:path';
+import { copyFileSync, mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
+import { dirname, extname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stagingFilenameForAssetId } from './lib/visual-stretch-handoff.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const STATIC = join(ROOT, 'static', 'assets');
 const OUT = join(ROOT, 'higgsfield-uploads');
+const ASSETS = JSON.parse(readFileSync(join(ROOT, 'data', 'assets.json'), 'utf8')).assets;
+const assetsById = new Map(ASSETS.map((a) => [a.id, a]));
 
 const SKIP_CHARACTER_SLUGS = new Set();
 
@@ -249,12 +252,48 @@ function folderFor(kind) {
 	return 'props';
 }
 
+function stageStretchAssets(rows) {
+	mkdirSync(join(OUT, 'stretch'), { recursive: true });
+	let copied = 0;
+	const planPath = join(ROOT, 'data/production/plans/light-delay-festival-master.json');
+	if (!existsSync(planPath)) return 0;
+	const plan = JSON.parse(readFileSync(planPath, 'utf8'));
+	/** @type {Set<string>} */
+	const ids = new Set();
+	for (const job of plan.visualStretchJobs || []) {
+		for (const assetId of job.sharedReferenceAssetIds || []) ids.add(assetId);
+		for (const mi of job.memberInputs || []) {
+			if (mi.keyframeAssetId) ids.add(mi.keyframeAssetId);
+		}
+	}
+	for (const assetId of ids) {
+		const asset = assetsById.get(assetId);
+		if (!asset?.path) continue;
+		const rel = String(asset.path).replace(/^\/+/, '').replace(/^assets\//, '');
+		const src = join(STATIC, rel);
+		if (!existsSync(src)) continue;
+		const ext = extname(src).replace(/^\./, '') || 'png';
+		const file = stagingFilenameForAssetId(assetId, ext);
+		const destRel = `stretch/${file}`;
+		const dest = join(OUT, destRel);
+		copyFileSync(src, dest);
+		copied += 1;
+		rows.push({
+			file: destRel.replaceAll('\\', '/'),
+			label: assetId,
+			kind: 'stretch',
+			origin: `static/assets/${rel}`
+		});
+	}
+	return copied;
+}
+
 function main() {
 	const rows = [];
 	let copied = 0;
 	let skipped = 0;
 
-	for (const kind of ['characters', 'locations', 'props', 'brief']) {
+	for (const kind of ['characters', 'locations', 'props', 'brief', 'stretch']) {
 		mkdirSync(join(OUT, kind), { recursive: true });
 	}
 
@@ -282,10 +321,13 @@ function main() {
 		});
 	}
 
+	copied += stageStretchAssets(rows);
+
 	const manifestLines = [
 		'# Manifest — higgsfield-uploads',
 		'',
 		'Copias renombradas para subir a Higgsfield. Origen canónico: `static/assets/`.',
+		'Stretch refs use stable `stretch/asset-*.ext` names derived from asset ids (no churn on rerun).',
 		'',
 		'| Archivo | Entidad | Tipo | Origen |',
 		'| --- | --- | --- | --- |'

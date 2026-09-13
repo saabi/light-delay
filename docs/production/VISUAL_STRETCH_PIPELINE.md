@@ -38,22 +38,36 @@ Inner gutters only (`gutterFraction`, pilot `0.02`). Letterbox/pillarbox **compu
 
 Plan root `visualStretchJobs[]`. Still modes: `combined_storyboard_sheet` | `independent_shared_authority` (author/provider only; `coherenceException` required). Video: `grouped_seedance` with `dependsOnStillJobId`. A stretch is **not** one video job — partition by segment ceiling (`min(campaign.maxSegmentMs, provider.maxDurationMs)`). Seedance 2.5 hard limit is **30 s** per generation on Higgsfield ([product FAQ](https://higgsfield.ai/seedance-2.5)); resolution (including 480p) does not raise that ceiling. Single members longer than the ceiling get `member_exceeds_max_duration` rather than a clean oversized job.
 
-Still jobs budget every authored `referenceAssetIds` entry against the still-provider limits (gpt-image-2: 8). Seedance jobs count ordered keyframe images plus only additional refs whose subjects are **not** already depicted in those keyframes (any `visibleRefs` entity — characters, locations, props, vehicles), plus one approved voice sample per dialogue speaker in the bucket. Jobs always set `runnable: false` when any blocker is present (including `member_exceeds_max_duration`); submission adapters must refuse non-runnable jobs. **No submission adapter exists in-repo yet** — the gate is enforced in plan data and tests only. `compiledPrompt` stays `null` until editorial freeze.
+Still jobs budget every authored `referenceAssetIds` entry against the still-provider limits (gpt-image-2: 8). Seedance jobs count ordered keyframe images plus only additional refs whose subjects are **not** already depicted in those keyframes (any `visibleRefs` entity — characters, locations, props, vehicles), plus one approved voice sample per dialogue speaker in the bucket. Jobs always set `runnable: false` when any blocker is present (including `member_exceeds_max_duration`). Each job pins `providerSnapshotId`. **No submission adapter exists in-repo** — MCP agents consume a §8 **run file** from the handoff CLI.
+
+### MCP handoff boundary
+
+```text
+generation plan job → §8 run JSON (preview) → [future freeze → ready] → one MCP smoke → result manifest → job-level register
+```
+
+- `npm run handoff:visual-stretch -- --script … --job … --allow-preview-prompt` writes `reports/runs/*.json` with `nonExecutable: true` / `status: preview`. **Never submit preview runs to Higgsfield.**
+- Paid smoke requires a future freeze that sets plan `compiledPrompt`, run `status: ready`, and `nonExecutable: false`, then human cost confirmation.
+- `executionPolicy.smoke_test` forces `maxJobs: 1` regardless of platform parallel capacity (account concurrency is recorded separately; see `HIGGSFIELD_MCP.md`).
+- Keep the exact run file used for any future submit; do not re-handoff between submit and register (`inputDigest` covers the prompt).
+- Result manifests live in `data/production/runs/*-results.json` and retain `sourceRunId` + `inputDigest`. Registrar binds the clip to the **job** `outputs[]` only — not to member takes.
 
 Voice samples: **one** approved `sampleAssetIds` entry per dialogue speaker for the job language (`en` first), matching `SEEDANCE_PROMPTING.md` §4 / §6.1 — not every variant's samples.
 
 ## Asset status
 
-Reuse `imageStatus`: sheet `needs_review` after register; panel candidates `needs_review`; `needs_replacement` + explanation if split fails. Job-record `supersededByJobId` only — not an asset status enum.
+Reuse `imageStatus`: sheet `needs_review` after register; panel candidates `needs_review`; video asset `needs_review` after job-level register; `needs_replacement` + explanation if split fails. Job-record `supersededByJobId` only — not an asset status enum.
 
 ## CLI
 
 ```bash
 npm run compile:visual-stretch -- --script light-delay-festival-master --stretch festival-master:stretch-bridge-meal-010-012
 npm run report:visual-stretches -- --script script:light-delay-festival-master
+npm run handoff:visual-stretch -- --script light-delay-festival-master --job <stretchJobId> --allow-preview-prompt
 npm run register:visual-stretch-sheet -- --script light-delay-festival-master --stretch <id> --from <generator-output.png>
 npm run split:visual-stretch -- --script light-delay-festival-master --stretch <id> [--dry-run]
 npm run register:visual-stretch-panels -- --script light-delay-festival-master --stretch <id> [--dry-run]
+npm run register:visual-stretch-video -- --from data/production/runs/<runId>-results.json [--video <path>]
 ```
 
 ## UI (v1)

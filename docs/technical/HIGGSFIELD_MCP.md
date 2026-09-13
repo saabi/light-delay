@@ -180,7 +180,7 @@ Alineado con [`docs/ARQUITECTURA_GENERACION.md`](../ARQUITECTURA_GENERACION.md):
 
 **Entrada:** `data/production/plans/<script>.json`, tomas con `freeze` aprobado, briefs ES cerrados, [`higgsfield-uploads/MANIFEST.md`](../../higgsfield-uploads/MANIFEST.md).
 
-**Salida:** archivo de corrida JSON (propuesta de ruta: `data/production/runs/<runId>.json`, **aún no implementado en el repo**).
+**Salida:** archivo de corrida JSON bajo `reports/runs/` (regenerable, gitignored) vía `npm run handoff:visual-stretch`. Schema: `data/schemas/run.schema.json`. Resultados con créditos: `data/production/runs/*-results.json` (`visual-stretch-result.schema.json`).
 
 ### Agente 2 — Ejecutor MCP (solo envío y seguimiento)
 
@@ -242,7 +242,37 @@ Campos a rellenar tras la primera conexión real: `model` exacto aceptado por el
 - Displays diegéticos solo en inglés ([`docs/PRODUCTION_PLAN.md`](../PRODUCTION_PLAN.md)).
 - No superar 12 referencias totales por job si se usa Seedance 2.0 según snapshot.
 - Segmentos ≤ **30 s** según `campaign:higgsfield-trial-24h` / Seedance 2.5 single-pass; confirmar en preflight que el plan de cuenta no baje ese techo.
-- Ejecutar `npm run prepare:higgsfield` antes de cada corrida para refrescar staging.
+- Ejecutar `npm run prepare:higgsfield` antes de cada corrida para refrescar staging (incluye `higgsfield-uploads/stretch/` con nombres estables por `assetId`).
+
+---
+
+## 8b. MCP smoke runbook (English — visual stretch / Seedance)
+
+Hard gates:
+
+| Run artifact | `nonExecutable` | Submit to Higgsfield? |
+| --- | --- | --- |
+| `handoff:visual-stretch --allow-preview-prompt` | `true` | **Never** |
+| Future frozen run (`status: ready`) | `false` | Only after human cost confirmation |
+
+Agent steps for a **paid** smoke (after freeze exists):
+
+1. `node scripts/higgsfield-preflight.mjs --probe` — record live model catalog, credits, and **concurrency** (account/plan/model; API returns 400 when concurrent cap is hit; Concurrency Boost can raise it; caps change). Campaign `concurrency` is the project ceiling once verified (`null` until then). Smoke always uses `executionPolicy.maxJobs: 1`.
+2. `npm run prepare:higgsfield` — refresh staging; stretch refs under `higgsfield-uploads/stretch/`.
+3. Use the **exact** frozen run JSON (`reports/runs/` or promoted path). Do **not** re-run handoff between submit and register (`inputDigest` covers the prompt).
+4. Upload references **only** in `references[]` order from that file. Map each `assetId` → remote handle in the result.
+5. Before generating: state the credit cost and **wait for human confirmation**.
+6. Submit **exactly one** job; stop (`stopAfterFirst`, no retry/continue/auto-accept).
+7. Write `data/production/runs/<runId>-results.json` (`visual-stretch-result.schema.json`) with `sourceRunId`, `inputDigest`, `providerJobId` when returned, output hash/duration, upload handles.
+8. `npm run register:visual-stretch-video -- --from …` — binds the clip at **job** level only; never changes `selectedTakeId`.
+
+Preview today:
+
+```bash
+npm run handoff:visual-stretch -- --script light-delay-festival-master --job <videoJobId> --allow-preview-prompt
+```
+
+Schemas: `data/schemas/run.schema.json` (handoff), `data/schemas/visual-stretch-result.schema.json` (tracked results). Same rules are embedded in each run file’s `agentInstructions`.
 
 ---
 
@@ -297,5 +327,5 @@ Campos a rellenar tras la primera conexión real: `model` exacto aceptado por el
 
 1. Volcar el catálogo real de tools MCP a un snapshot versionado en el repo.
 2. Decidir si el ejecutor usa **MCP oficial** o **CLI Skills** en Cursor (Higgsfield favorece CLI para código).
-3. Implementar `data/production/runs/` y el adaptador que lea el JSON de corrida (fuera del alcance de este documento).
+3. Usar `handoff:visual-stretch` / registrar resultados en `data/production/runs/` (ver §8b). No hay adaptador de submit in-repo — el agente MCP ejecuta el runbook.
 4. Reconciliar la campaña `campaign:higgsfield-trial-24h` con la política real de créditos si se confirma que Unlimited no aplica a MCP.

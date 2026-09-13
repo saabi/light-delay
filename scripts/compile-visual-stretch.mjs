@@ -24,6 +24,7 @@ import {
 	collectStillStretchReferences,
 	referenceBudgetBlockers
 } from './lib/visual-stretch-jobs.mjs';
+import { resolveCampaignProviders } from './lib/provider-capabilities.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -38,7 +39,10 @@ const script = JSON.parse(readFileSync(join(ROOT, 'data/scripts', `${scriptSlug}
 const providerCapabilities = JSON.parse(
 	readFileSync(join(ROOT, 'data/production/provider-capabilities.json'), 'utf8')
 );
-const stillProvider = providerCapabilities.snapshots.find((s) => s.model === 'gpt-image-2');
+const { stillProvider } = resolveCampaignProviders(
+	providerCapabilities,
+	'campaign:higgsfield-trial-24h'
+);
 const stretch = (script.visualStretches || []).find((s) => s.id === stretchId);
 if (!stretch) throw new Error(`Stretch not found: ${stretchId}`);
 

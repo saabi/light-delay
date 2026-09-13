@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/run.schema.json",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "runId",
+    "scriptId",
+    "jobId",
+    "kind",
+    "provider",
+    "model",
+    "providerSnapshotId",
+    "prompt",
+    "parameters",
+    "references",
+    "effectiveReferencesDigest",
+    "promptDigest",
+    "inputDigest",
+    "executionPolicy",
+    "preflight",
+    "nonExecutable",
+    "status",
+    "agentInstructions"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "runId": { "type": "string" },
+    "scriptId": { "type": "string" },
+    "stretchId": { "type": "string" },
+    "jobId": { "type": "string" },
+    "kind": { "enum": ["image", "video"] },
+    "provider": { "type": "string" },
+    "model": { "type": "string" },
+    "providerSnapshotId": { "type": "string" },
+    "dependsOnStillJobId": { "type": "string" },
+    "prompt": {
+      "type": "object",
+      "required": ["compiledEn"],
+      "properties": {
+        "compiledEn": { "type": "string" },
+        "negativeEn": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "parameters": {
+      "type": "object",
+      "required": ["aspectRatio"],
+      "properties": {
+        "aspectRatio": { "type": "string" },
+        "durationSeconds": { "type": "number" },
+        "durationMs": { "type": "integer", "minimum": 0 },
+        "resolution": { "type": "string" },
+        "generateAudio": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "assetId"],
+        "properties": {
+          "role": { "type": "string" },
+          "assetId": { "type": ["string", "null"] },
+          "kind": { "enum": ["image", "video", "audio"] },
+          "localStagingPath": { "type": ["string", "null"] },
+          "repoPath": { "type": ["string", "null"] }
+        },
+        "additionalProperties": false
+      }
+    },
+    "effectiveReferencesDigest": { "type": "string" },
+    "promptDigest": { "type": "string" },
+    "inputDigest": { "type": "string" },
+    "executionPolicy": {
+      "type": "object",
+      "required": ["mode", "maxJobs", "stopAfterFirst", "autoRetry", "autoContinue", "autoAccept"],
+      "properties": {
+        "mode": { "enum": ["smoke_test", "batch"] },
+        "maxJobs": { "type": "integer", "minimum": 1 },
+        "stopAfterFirst": { "type": "boolean" },
+        "autoRetry": { "type": "boolean" },
+        "autoContinue": { "type": "boolean" },
+        "autoAccept": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "preflight": {
+      "type": "object",
+      "required": ["requiresHumanApproval"],
+      "properties": {
+        "requiresHumanApproval": { "type": "boolean" },
+        "requiresEntitlementPreflight": { "type": "boolean" },
+        "maxCredits": { "type": ["number", "null"] },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "nonExecutable": { "type": "boolean" },
+    "status": { "enum": ["preview", "ready", "pending"] },
+    "blockers": { "type": "array", "items": { "type": "string" } },
+    "runnablePlanJob": { "type": "boolean" },
+    "agentInstructions": { "type": "string" }
+  },
+  "additionalProperties": false
+}

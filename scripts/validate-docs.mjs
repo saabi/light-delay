@@ -57,14 +57,14 @@ if (main.takes.length !== 128)
 	errors.push(`main script: expected 128 takes, got ${main.takes.length}`);
 if (animaticAssets !== 104)
 	errors.push(`assets: expected 104 animatic images (100 legacy + 3 title cards + scene-05 shot 7), got ${animaticAssets}`);
-if (referenceAssets !== 44)
-	errors.push(`assets: expected 44 reference images, got ${referenceAssets}`);
+if (referenceAssets !== 45)
+	errors.push(`assets: expected 45 reference images, got ${referenceAssets}`);
 if (placeholders !== 1) errors.push(`assets: expected 1 animatic placeholder, got ${placeholders}`);
-if (assets.length !== 484) errors.push(`assets: expected current total 484, got ${assets.length}`);
+if (assets.length !== 485) errors.push(`assets: expected current total 485, got ${assets.length}`);
 if (withoutSource !== 361)
 	errors.push(`assets: expected 361 records without source, got ${withoutSource}`);
-if (withExactModel !== 117)
-	errors.push(`assets: expected 117 records with exact model metadata, got ${withExactModel}`);
+if (withExactModel !== 123)
+	errors.push(`assets: expected 123 records with exact model metadata, got ${withExactModel}`);
 
 requireText('AGENTS.md', 'deprecated animatic **128** takes');
 requireText('README.md', 'animatic anterior de 128 tomas');
@@ -75,8 +75,8 @@ requireText('AGENTS.md', 'Upward-propagation gate');
 requireText('docs/AGENT_ONBOARDING.md', 'Day-one checklist');
 requireText('README.md', 'El inglés es la fuente editorial vigente');
 requireText('docs/CANON_DECISIONS.md', 'DEPRECADO — CONTINUIDAD ANTERIOR');
-requireText('docs/ASSET_PROVENANCE.md', '**484 assets registrados**');
-requireText('docs/ASSET_PROVENANCE.md', '44 imágenes de referencia');
+requireText('docs/ASSET_PROVENANCE.md', '**485 assets registrados**');
+requireText('docs/ASSET_PROVENANCE.md', '45 imágenes de referencia');
 requireText('docs/PROJECT_STATUS.md', '**128** tomas y ~30:50,5');
 requireText(
 	'docs/SCRIPT_ANIMATIC_SYNC.md',

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-13 — Visual-stretch MCP handoff + provider capability contract
+
+- Preview-only §8 run handoff (`handoff:visual-stretch`) with smoke_test policy; `nonExecutable: true` never submittable until a future freeze.
+- Blocker-tolerant Seedance stretch video preview compiler; job-level video result registrar (no take binding).
+- Provider snapshots: `medium`, `limitSurface`, `maxOutputsPerRequest`, campaign `stillProviderSnapshotId`, pinned `providerSnapshotId` on stretch jobs; concurrency stays nullable.
+- Schemas: `run.schema.json`, `visual-stretch-result.schema.json`; MCP smoke runbook in `docs/technical/HIGGSFIELD_MCP.md`.
+
 ## 2026-09-13 — Stretch digest selection-independent; typed jobs; one voice sample
 
 - Stretch digests no longer hash `selectedTakeId` / take prompts, so selecting a derived panel does not mark it stale.

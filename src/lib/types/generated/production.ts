@@ -121,12 +121,18 @@ export type ProviderCapabilitiesFile1 = string;
 export type ProviderCapabilitiesFile4 = string;
 export type ProviderCapabilitiesFile5 = string;
 export type ProviderCapabilitiesFile6 = string;
-export type ProviderCapabilitiesFile7 = string;
-export type ProviderCapabilitiesFile8 = 'verified' | 'provisional' | 'unknown';
-export type ProviderCapabilitiesFile9 = boolean;
-export type ProviderCapabilitiesFile11 = ProviderCapabilitiesFile12 | ProviderCapabilitiesFile13;
-export type ProviderCapabilitiesFile12 = number;
-export type ProviderCapabilitiesFile13 = null;
+export type ProviderCapabilitiesFile7 = 'image' | 'video';
+/**
+ * @minItems 1
+ */
+export type ProviderCapabilitiesFile8 = [ProviderCapabilitiesFile9, ...ProviderCapabilitiesFile9[]];
+export type ProviderCapabilitiesFile9 = 'api' | 'mcp' | 'ui' | 'account' | 'model';
+export type ProviderCapabilitiesFile10 = string;
+export type ProviderCapabilitiesFile11 = 'verified' | 'provisional' | 'unknown';
+export type ProviderCapabilitiesFile12 = boolean;
+/**
+ * Input reference image count (not outputs).
+ */
 export type ProviderCapabilitiesFile14 = ProviderCapabilitiesFile15 | ProviderCapabilitiesFile16;
 export type ProviderCapabilitiesFile15 = number;
 export type ProviderCapabilitiesFile16 = null;
@@ -139,90 +145,111 @@ export type ProviderCapabilitiesFile22 = null;
 export type ProviderCapabilitiesFile23 = ProviderCapabilitiesFile24 | ProviderCapabilitiesFile25;
 export type ProviderCapabilitiesFile24 = number;
 export type ProviderCapabilitiesFile25 = null;
-export type ProviderCapabilitiesFile26 = boolean;
-export type ProviderCapabilitiesFile27 = ProviderCapabilitiesFile28 | ProviderCapabilitiesFile29;
-export type ProviderCapabilitiesFile28 = number;
-export type ProviderCapabilitiesFile29 = null;
-export type ProviderCapabilitiesFile31 = number;
-export type ProviderCapabilitiesFile32 = number;
-export type ProviderCapabilitiesFile35 = number;
-export type ProviderCapabilitiesFile36 = number;
-export type ProviderCapabilitiesFile37 = string;
-export type ProviderCapabilitiesFile33 = ProviderCapabilitiesFile34[];
+export type ProviderCapabilitiesFile26 = ProviderCapabilitiesFile27 | ProviderCapabilitiesFile28;
+export type ProviderCapabilitiesFile27 = number;
+export type ProviderCapabilitiesFile28 = null;
+export type ProviderCapabilitiesFile29 = ProviderCapabilitiesFile30 | ProviderCapabilitiesFile31;
+export type ProviderCapabilitiesFile30 = number;
+export type ProviderCapabilitiesFile31 = null;
+/**
+ * Last-known concurrent generation slots for this model/surface; null until verified for the account.
+ */
+export type ProviderCapabilitiesFile32 = ProviderCapabilitiesFile33 | ProviderCapabilitiesFile34;
+export type ProviderCapabilitiesFile33 = number;
+export type ProviderCapabilitiesFile34 = null;
+export type ProviderCapabilitiesFile35 = boolean;
+export type ProviderCapabilitiesFile36 = ProviderCapabilitiesFile37 | ProviderCapabilitiesFile38;
+export type ProviderCapabilitiesFile37 = number;
+export type ProviderCapabilitiesFile38 = null;
 export type ProviderCapabilitiesFile40 = number;
 export type ProviderCapabilitiesFile41 = number;
-export type ProviderCapabilitiesFile42 = string;
-export type ProviderCapabilitiesFile38 = ProviderCapabilitiesFile39[];
-export type ProviderCapabilitiesFile43 = string;
-export type ProviderCapabilitiesFile45 = string;
+export type ProviderCapabilitiesFile44 = number;
+export type ProviderCapabilitiesFile45 = number;
 export type ProviderCapabilitiesFile46 = string;
-export type ProviderCapabilitiesFile47 = string;
-export type ProviderCapabilitiesFile2 = ProviderCapabilitiesFile3[];
-export type ProviderCapabilitiesFile50 = string;
+export type ProviderCapabilitiesFile42 = ProviderCapabilitiesFile43[];
+export type ProviderCapabilitiesFile49 = number;
+export type ProviderCapabilitiesFile50 = number;
 export type ProviderCapabilitiesFile51 = string;
-export type ProviderCapabilitiesFile52 = number;
-export type ProviderCapabilitiesFile53 = boolean;
-export type ProviderCapabilitiesFile54 = boolean;
-export type ProviderCapabilitiesFile55 = ProviderCapabilitiesFile56 | ProviderCapabilitiesFile57;
-export type ProviderCapabilitiesFile56 = number;
-export type ProviderCapabilitiesFile57 = null;
-export type ProviderCapabilitiesFile48 = ProviderCapabilitiesFile49[];
+export type ProviderCapabilitiesFile47 = ProviderCapabilitiesFile48[];
+export type ProviderCapabilitiesFile52 = string;
+export type ProviderCapabilitiesFile54 = string;
+export type ProviderCapabilitiesFile55 = string;
+export type ProviderCapabilitiesFile56 = string;
+export type ProviderCapabilitiesFile2 = ProviderCapabilitiesFile3[];
+export type ProviderCapabilitiesFile59 = string;
+export type ProviderCapabilitiesFile60 = string;
+export type ProviderCapabilitiesFile61 = string;
+export type ProviderCapabilitiesFile62 = number;
+export type ProviderCapabilitiesFile63 = boolean;
+export type ProviderCapabilitiesFile64 = boolean;
+/**
+ * Authoritative project concurrent-job ceiling once verified; null until preflight records the account limit. Smoke always uses maxJobs: 1.
+ */
+export type ProviderCapabilitiesFile65 = ProviderCapabilitiesFile66 | ProviderCapabilitiesFile67;
+export type ProviderCapabilitiesFile66 = number;
+export type ProviderCapabilitiesFile67 = null;
+export type ProviderCapabilitiesFile57 = ProviderCapabilitiesFile58[];
 
 export interface ProviderCapabilitiesFile {
 	schemaVersion: ProviderCapabilitiesFile1;
 	snapshots: ProviderCapabilitiesFile2;
-	campaigns: ProviderCapabilitiesFile48;
+	campaigns: ProviderCapabilitiesFile57;
 }
 export interface ProviderCapabilitiesFile3 {
 	id: ProviderCapabilitiesFile4;
 	provider: ProviderCapabilitiesFile5;
 	model: ProviderCapabilitiesFile6;
-	capturedAt: ProviderCapabilitiesFile7;
-	confidence: ProviderCapabilitiesFile8;
-	executable: ProviderCapabilitiesFile9;
-	limits: ProviderCapabilitiesFile10;
-	supportsCombinedStoryboardSheet?: ProviderCapabilitiesFile26;
-	maxStoryboardPanels?: ProviderCapabilitiesFile27;
-	minPanelResolution?: ProviderCapabilitiesFile30;
-	supportedStoryboardLayouts?: ProviderCapabilitiesFile33;
-	outputSizes?: ProviderCapabilitiesFile38;
-	source: ProviderCapabilitiesFile43;
-	notes?: ProviderCapabilitiesFile44;
+	medium: ProviderCapabilitiesFile7;
+	limitSurface: ProviderCapabilitiesFile8;
+	capturedAt: ProviderCapabilitiesFile10;
+	confidence: ProviderCapabilitiesFile11;
+	executable: ProviderCapabilitiesFile12;
+	limits: ProviderCapabilitiesFile13;
+	supportsCombinedStoryboardSheet?: ProviderCapabilitiesFile35;
+	maxStoryboardPanels?: ProviderCapabilitiesFile36;
+	minPanelResolution?: ProviderCapabilitiesFile39;
+	supportedStoryboardLayouts?: ProviderCapabilitiesFile42;
+	outputSizes?: ProviderCapabilitiesFile47;
+	source: ProviderCapabilitiesFile52;
+	notes?: ProviderCapabilitiesFile53;
 }
-export interface ProviderCapabilitiesFile10 {
-	maxImages: ProviderCapabilitiesFile11;
-	maxVideos: ProviderCapabilitiesFile14;
-	maxAudios: ProviderCapabilitiesFile17;
-	maxTotalReferences: ProviderCapabilitiesFile20;
-	maxDurationMs?: ProviderCapabilitiesFile23;
-}
-export interface ProviderCapabilitiesFile30 {
-	width: ProviderCapabilitiesFile31;
-	height: ProviderCapabilitiesFile32;
-}
-export interface ProviderCapabilitiesFile34 {
-	rows: ProviderCapabilitiesFile35;
-	columns: ProviderCapabilitiesFile36;
-	aspectRatio: ProviderCapabilitiesFile37;
+export interface ProviderCapabilitiesFile13 {
+	maxImages: ProviderCapabilitiesFile14;
+	maxVideos: ProviderCapabilitiesFile17;
+	maxAudios: ProviderCapabilitiesFile20;
+	maxTotalReferences: ProviderCapabilitiesFile23;
+	maxDurationMs?: ProviderCapabilitiesFile26;
+	maxOutputsPerRequest?: ProviderCapabilitiesFile29;
+	maxConcurrentRequests?: ProviderCapabilitiesFile32;
 }
 export interface ProviderCapabilitiesFile39 {
 	width: ProviderCapabilitiesFile40;
 	height: ProviderCapabilitiesFile41;
-	aspectRatio: ProviderCapabilitiesFile42;
 }
-export interface ProviderCapabilitiesFile44 {
-	es?: ProviderCapabilitiesFile45;
-	en: ProviderCapabilitiesFile46;
-	[k: string]: ProviderCapabilitiesFile47 | undefined;
+export interface ProviderCapabilitiesFile43 {
+	rows: ProviderCapabilitiesFile44;
+	columns: ProviderCapabilitiesFile45;
+	aspectRatio: ProviderCapabilitiesFile46;
 }
-export interface ProviderCapabilitiesFile49 {
-	id: ProviderCapabilitiesFile50;
-	providerSnapshotId: ProviderCapabilitiesFile51;
-	maxSegmentMs: ProviderCapabilitiesFile52;
-	requiresEntitlementPreflight: ProviderCapabilitiesFile53;
-	noCreditsAllowed: ProviderCapabilitiesFile54;
-	concurrency?: ProviderCapabilitiesFile55;
-	notes?: ProviderCapabilitiesFile44;
+export interface ProviderCapabilitiesFile48 {
+	width: ProviderCapabilitiesFile49;
+	height: ProviderCapabilitiesFile50;
+	aspectRatio: ProviderCapabilitiesFile51;
+}
+export interface ProviderCapabilitiesFile53 {
+	es?: ProviderCapabilitiesFile54;
+	en: ProviderCapabilitiesFile55;
+	[k: string]: ProviderCapabilitiesFile56 | undefined;
+}
+export interface ProviderCapabilitiesFile58 {
+	id: ProviderCapabilitiesFile59;
+	providerSnapshotId: ProviderCapabilitiesFile60;
+	stillProviderSnapshotId: ProviderCapabilitiesFile61;
+	maxSegmentMs: ProviderCapabilitiesFile62;
+	requiresEntitlementPreflight: ProviderCapabilitiesFile63;
+	noCreditsAllowed: ProviderCapabilitiesFile64;
+	concurrency?: ProviderCapabilitiesFile65;
+	notes?: ProviderCapabilitiesFile53;
 }
 
 export type ContinuityLedgerFile1 = string;
@@ -357,55 +384,56 @@ export type GenerationPlanFile50 = string;
 export type GenerationPlanFile51 = number;
 export type GenerationPlanFile52 = 'still' | 'video';
 export type GenerationPlanFile53 = 'combined_storyboard_sheet' | 'independent_shared_authority' | 'grouped_seedance';
-export type GenerationPlanFile54 = 'new_candidate';
-export type GenerationPlanFile57 = number;
-export type GenerationPlanFile58 = string;
-export type GenerationPlanFile60 = string;
-export type GenerationPlanFile59 = GenerationPlanFile60[];
+export type GenerationPlanFile54 = string;
+export type GenerationPlanFile55 = 'new_candidate';
+export type GenerationPlanFile58 = number;
+export type GenerationPlanFile59 = string;
 export type GenerationPlanFile61 = string;
-export type GenerationPlanFile55 = GenerationPlanFile56[];
+export type GenerationPlanFile60 = GenerationPlanFile61[];
 export type GenerationPlanFile62 = string;
-export type GenerationPlanFile63 = number;
-export type GenerationPlanFile65 = string;
-export type GenerationPlanFile64 = GenerationPlanFile65[];
-export type GenerationPlanFile67 = number;
+export type GenerationPlanFile56 = GenerationPlanFile57[];
+export type GenerationPlanFile63 = string;
+export type GenerationPlanFile64 = number;
+export type GenerationPlanFile66 = string;
+export type GenerationPlanFile65 = GenerationPlanFile66[];
 export type GenerationPlanFile68 = number;
 export type GenerationPlanFile69 = number;
-export type GenerationPlanFile70 = '16:9';
-export type GenerationPlanFile72 = number;
-export type GenerationPlanFile71 = GenerationPlanFile72[];
+export type GenerationPlanFile70 = number;
+export type GenerationPlanFile71 = '16:9';
 export type GenerationPlanFile73 = number;
-export type GenerationPlanFile75 = number;
+export type GenerationPlanFile72 = GenerationPlanFile73[];
+export type GenerationPlanFile74 = number;
 export type GenerationPlanFile76 = number;
 export type GenerationPlanFile77 = number;
 export type GenerationPlanFile78 = number;
-export type GenerationPlanFile79 = GenerationPlanFile80 | GenerationPlanFile81;
-export type GenerationPlanFile80 = string;
-export type GenerationPlanFile81 = null;
-export type GenerationPlanFile82 = string;
-export type GenerationPlanFile85 = number;
-export type GenerationPlanFile86 = 'combinedStoryboard' | 'animaticStill' | 'firstFrame' | 'lastFrame' | 'video';
-export type GenerationPlanFile87 = string;
+export type GenerationPlanFile79 = number;
+export type GenerationPlanFile80 = GenerationPlanFile81 | GenerationPlanFile82;
+export type GenerationPlanFile81 = string;
+export type GenerationPlanFile82 = null;
+export type GenerationPlanFile83 = string;
+export type GenerationPlanFile86 = number;
+export type GenerationPlanFile87 = 'combinedStoryboard' | 'animaticStill' | 'firstFrame' | 'lastFrame' | 'video';
 export type GenerationPlanFile88 = string;
-export type GenerationPlanFile91 = number;
-export type GenerationPlanFile92 = string;
-export type GenerationPlanFile94 = string;
-export type GenerationPlanFile93 = GenerationPlanFile94[];
+export type GenerationPlanFile89 = string;
+export type GenerationPlanFile92 = number;
+export type GenerationPlanFile93 = string;
 export type GenerationPlanFile95 = string;
-export type GenerationPlanFile97 = number;
+export type GenerationPlanFile94 = GenerationPlanFile95[];
+export type GenerationPlanFile96 = string;
 export type GenerationPlanFile98 = number;
 export type GenerationPlanFile99 = number;
 export type GenerationPlanFile100 = number;
-export type GenerationPlanFile101 = string;
-export type GenerationPlanFile89 = GenerationPlanFile90[];
-export type GenerationPlanFile83 = GenerationPlanFile84[];
-export type GenerationPlanFile103 = string;
-export type GenerationPlanFile102 = GenerationPlanFile103[];
-export type GenerationPlanFile104 = boolean;
+export type GenerationPlanFile101 = number;
+export type GenerationPlanFile102 = string;
+export type GenerationPlanFile90 = GenerationPlanFile91[];
+export type GenerationPlanFile84 = GenerationPlanFile85[];
+export type GenerationPlanFile104 = string;
+export type GenerationPlanFile103 = GenerationPlanFile104[];
+export type GenerationPlanFile105 = boolean;
 /**
  * Submission adapters must refuse the job unless runnable is true (requires empty blockers).
  */
-export type GenerationPlanFile105 = boolean;
+export type GenerationPlanFile106 = boolean;
 export type GenerationPlanFile43 = GenerationPlanFile44[];
 
 export interface GenerationPlanFile {
@@ -476,60 +504,61 @@ export interface GenerationPlanFile48 {
 	revision: GenerationPlanFile51;
 	medium: GenerationPlanFile52;
 	mode: GenerationPlanFile53;
-	outputTakePolicy: GenerationPlanFile54;
-	memberInputs: GenerationPlanFile55;
-	dependsOnStillJobId?: GenerationPlanFile62;
-	durationMs?: GenerationPlanFile63;
-	sharedReferenceAssetIds: GenerationPlanFile64;
-	gridLayout?: GenerationPlanFile66;
-	computedMargins?: GenerationPlanFile74;
-	compiledPrompt: GenerationPlanFile79;
-	promptDigest?: GenerationPlanFile82;
-	outputs: GenerationPlanFile83;
-	blockers: GenerationPlanFile102;
-	coherenceException: GenerationPlanFile104;
-	runnable?: GenerationPlanFile105;
+	providerSnapshotId: GenerationPlanFile54;
+	outputTakePolicy: GenerationPlanFile55;
+	memberInputs: GenerationPlanFile56;
+	dependsOnStillJobId?: GenerationPlanFile63;
+	durationMs?: GenerationPlanFile64;
+	sharedReferenceAssetIds: GenerationPlanFile65;
+	gridLayout?: GenerationPlanFile67;
+	computedMargins?: GenerationPlanFile75;
+	compiledPrompt: GenerationPlanFile80;
+	promptDigest?: GenerationPlanFile83;
+	outputs: GenerationPlanFile84;
+	blockers: GenerationPlanFile103;
+	coherenceException: GenerationPlanFile105;
+	runnable?: GenerationPlanFile106;
 }
-export interface GenerationPlanFile56 {
-	order: GenerationPlanFile57;
-	shotId: GenerationPlanFile58;
-	sourceTakeIds: GenerationPlanFile59;
-	keyframeAssetId?: GenerationPlanFile61;
+export interface GenerationPlanFile57 {
+	order: GenerationPlanFile58;
+	shotId: GenerationPlanFile59;
+	sourceTakeIds: GenerationPlanFile60;
+	keyframeAssetId?: GenerationPlanFile62;
 }
-export interface GenerationPlanFile66 {
-	rows: GenerationPlanFile67;
-	cols: GenerationPlanFile68;
-	gutterFraction: GenerationPlanFile69;
-	panelAspect: GenerationPlanFile70;
-	blankCells?: GenerationPlanFile71;
-	minOuterMarginFraction?: GenerationPlanFile73;
+export interface GenerationPlanFile67 {
+	rows: GenerationPlanFile68;
+	cols: GenerationPlanFile69;
+	gutterFraction: GenerationPlanFile70;
+	panelAspect: GenerationPlanFile71;
+	blankCells?: GenerationPlanFile72;
+	minOuterMarginFraction?: GenerationPlanFile74;
 }
-export interface GenerationPlanFile74 {
-	top: GenerationPlanFile75;
-	right: GenerationPlanFile76;
-	bottom: GenerationPlanFile77;
-	left: GenerationPlanFile78;
+export interface GenerationPlanFile75 {
+	top: GenerationPlanFile76;
+	right: GenerationPlanFile77;
+	bottom: GenerationPlanFile78;
+	left: GenerationPlanFile79;
 }
-export interface GenerationPlanFile84 {
-	order: GenerationPlanFile85;
-	artifact: GenerationPlanFile86;
-	assetId?: GenerationPlanFile87;
-	supersededByJobId?: GenerationPlanFile88;
-	panels?: GenerationPlanFile89;
+export interface GenerationPlanFile85 {
+	order: GenerationPlanFile86;
+	artifact: GenerationPlanFile87;
+	assetId?: GenerationPlanFile88;
+	supersededByJobId?: GenerationPlanFile89;
+	panels?: GenerationPlanFile90;
 }
-export interface GenerationPlanFile90 {
-	order: GenerationPlanFile91;
-	shotId: GenerationPlanFile92;
-	sourceTakeIds: GenerationPlanFile93;
-	derivedTakeId?: GenerationPlanFile95;
-	frameRegion: GenerationPlanFile96;
-	derivedAssetId?: GenerationPlanFile101;
+export interface GenerationPlanFile91 {
+	order: GenerationPlanFile92;
+	shotId: GenerationPlanFile93;
+	sourceTakeIds: GenerationPlanFile94;
+	derivedTakeId?: GenerationPlanFile96;
+	frameRegion: GenerationPlanFile97;
+	derivedAssetId?: GenerationPlanFile102;
 }
-export interface GenerationPlanFile96 {
-	x: GenerationPlanFile97;
-	y: GenerationPlanFile98;
-	w: GenerationPlanFile99;
-	h: GenerationPlanFile100;
+export interface GenerationPlanFile97 {
+	x: GenerationPlanFile98;
+	y: GenerationPlanFile99;
+	w: GenerationPlanFile100;
+	h: GenerationPlanFile101;
 }
 
 export type DialoguePerformanceFile1 = string;

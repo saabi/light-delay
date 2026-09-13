@@ -2,6 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { planSegments, resolveDiegeticText, sha256 } from './lib/generation-planning.mjs';
+import { resolveCampaignProviders } from './lib/provider-capabilities.mjs';
 import { buildVisualStretchJobs, pickApprovedVoiceSampleAssetId } from './lib/visual-stretch-jobs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -10,15 +11,11 @@ const campaignId = 'campaign:higgsfield-trial-24h';
 const providerCapabilities = JSON.parse(
 	readFileSync(join(ROOT, 'data', 'production', 'provider-capabilities.json'), 'utf8')
 );
-const campaign = providerCapabilities.campaigns.find((item) => item.id === campaignId);
-if (!campaign) throw new Error(`Missing campaign ${campaignId} in provider-capabilities.json`);
+const { campaign, stillProvider, videoProvider } = resolveCampaignProviders(
+	providerCapabilities,
+	campaignId
+);
 const maxSegmentMs = campaign.maxSegmentMs;
-const stillProvider = providerCapabilities.snapshots.find(
-	(item) => item.id === 'provider:openai:gpt-image-2:2026-09-13'
-);
-const videoProvider = providerCapabilities.snapshots.find(
-	(item) => item.id === campaign.providerSnapshotId
-);
 const stretchMaxSegmentMs = Math.min(
 	maxSegmentMs,
 	videoProvider?.limits?.maxDurationMs ?? maxSegmentMs

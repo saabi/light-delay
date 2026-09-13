@@ -111,13 +111,14 @@
     },
     "visualStretchJob": {
       "type": "object",
-      "required": ["id", "stretchId", "revision", "medium", "mode", "outputTakePolicy", "memberInputs", "sharedReferenceAssetIds", "compiledPrompt", "outputs", "blockers", "coherenceException"],
+      "required": ["id", "stretchId", "revision", "medium", "mode", "providerSnapshotId", "outputTakePolicy", "memberInputs", "sharedReferenceAssetIds", "compiledPrompt", "outputs", "blockers", "coherenceException"],
       "properties": {
         "id": { "type": "string" },
         "stretchId": { "type": "string" },
         "revision": { "type": "integer", "minimum": 1 },
         "medium": { "enum": ["still", "video"] },
         "mode": { "enum": ["combined_storyboard_sheet", "independent_shared_authority", "grouped_seedance"] },
+        "providerSnapshotId": { "type": "string", "minLength": 1 },
         "outputTakePolicy": { "const": "new_candidate" },
         "memberInputs": {
           "type": "array",
