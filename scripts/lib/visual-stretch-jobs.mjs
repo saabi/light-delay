@@ -4,7 +4,7 @@
  */
 
 /**
- * @typedef {import('../../src/lib/types/generated/production.ts').GenerationPlanFile44} VisualStretchJob
+ * @typedef {NonNullable<import('../../src/lib/types/generated/production.ts').GenerationPlanFile['visualStretchJobs']>[number]} VisualStretchJob
  * @typedef {{ shotId: string, order: number, takeScope?: string, takeIds?: string[], frameRegion?: { x: number, y: number, w: number, h: number } }} StretchMember
  * @typedef {{ kind: 'image' | 'video' | 'audio', id: string, role?: string }} StretchReference
  * @typedef {{ id: string, characterId: string, variants?: Array<{ language?: string, sampleAssetIds?: string[] }> }} VoiceProfile

@@ -274,8 +274,8 @@ describe('visual stretch Seedance partition', () => {
 			'still:1'
 		);
 		expect(jobs).toHaveLength(1);
-		expect(jobs[0].durationMs).toBe(29000);
-		expect(jobs[0].durationMs).toBeLessThanOrEqual(EFFECTIVE_CEILING_MS);
+		expect(jobs[0].durationMs ?? 0).toBe(29000);
+		expect(jobs[0].durationMs ?? 0).toBeLessThanOrEqual(EFFECTIVE_CEILING_MS);
 		expect(jobs[0].blockers).not.toContain('member_exceeds_max_duration');
 	});
 
@@ -296,7 +296,7 @@ describe('visual stretch Seedance partition', () => {
 			'still:1'
 		);
 		expect(jobs).toHaveLength(2);
-		expect(jobs.every((job) => job.durationMs <= EFFECTIVE_CEILING_MS)).toBe(true);
+		expect(jobs.every((job) => (job.durationMs ?? 0) <= EFFECTIVE_CEILING_MS)).toBe(true);
 	});
 
 	it('marks a single 45s over-limit member non-runnable', () => {
@@ -310,7 +310,7 @@ describe('visual stretch Seedance partition', () => {
 			'still:1'
 		);
 		expect(jobs).toHaveLength(1);
-		expect(jobs[0].durationMs).toBe(45000);
+		expect(jobs[0].durationMs ?? 0).toBe(45000);
 		expect(jobs[0].blockers).toContain('member_exceeds_max_duration');
 		expect(jobs[0].runnable).toBe(false);
 		expect(isStretchJobRunnable(jobs[0])).toBe(false);
@@ -440,7 +440,7 @@ describe('buildVisualStretchJobs integration', () => {
 			true
 		);
 		expect(video?.sharedReferenceAssetIds).toEqual([]);
-		expect(video?.durationMs).toBeLessThanOrEqual(EFFECTIVE_CEILING_MS);
+		expect(video?.durationMs ?? 0).toBeLessThanOrEqual(EFFECTIVE_CEILING_MS);
 	});
 
 	it('uses the effective campaign/provider ceiling for every Seedance job', () => {
@@ -455,11 +455,13 @@ describe('buildVisualStretchJobs integration', () => {
 		);
 		const videoJobs = jobs.filter((j) => j.medium === 'video');
 		expect(videoJobs.length).toBeGreaterThan(1);
-		expect(videoJobs.every((j) => j.durationMs <= EFFECTIVE_CEILING_MS || !j.runnable)).toBe(true);
+		expect(
+			videoJobs.every((j) => (j.durationMs ?? 0) <= EFFECTIVE_CEILING_MS || !j.runnable)
+		).toBe(true);
 		expect(
 			videoJobs
-				.filter((j) => j.durationMs <= EFFECTIVE_CEILING_MS)
-				.every((j) => j.durationMs <= EFFECTIVE_CEILING_MS)
+				.filter((j) => (j.durationMs ?? 0) <= EFFECTIVE_CEILING_MS)
+				.every((j) => (j.durationMs ?? 0) <= EFFECTIVE_CEILING_MS)
 		).toBe(true);
 	});
 });
