@@ -9,9 +9,9 @@
       "type": "object",
       "required": ["provider", "model", "promptLanguage"],
       "properties": {
-        "provider": { "const": "OpenAI" },
-        "model": { "const": "gpt-image-2" },
-        "promptLanguage": { "const": "en" }
+          "provider": { "const": "OpenAI" },
+          "model": { "type": "string", "minLength": 1 },
+          "promptLanguage": { "const": "en" }
       },
       "additionalProperties": false
     },

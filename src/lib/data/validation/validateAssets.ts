@@ -63,6 +63,14 @@ export function validateAssets(file: AssetsFile): ValidationResult {
 		if (asset.role === 'animatic_placeholder' && asset.kind !== 'image') {
 			errors.push(`assets: ${asset.id} animatic_placeholder must be an image`);
 		}
+		if (asset.source && asset.source.provider !== 'local') {
+			const model = asset.source.model?.trim();
+			if (!model) {
+				errors.push(
+					`assets: ${asset.id} source.model is required when source is present and provider is not local`
+				);
+			}
+		}
 		if (asset.imageStatus)
 			validateImageEditorialStatus(asset.imageStatus, `assets: ${asset.id}`, errors);
 	}

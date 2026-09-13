@@ -1046,6 +1046,8 @@ export interface Asset {
 
   source?: {
     provider?: string;
+    // Image model that produced the file (e.g. "gpt-image-2").
+    // Required whenever source is present and provider is not "local".
     model?: string;
     generatedAt?: string;
     originalAssetId?: AssetId;
@@ -1056,6 +1058,12 @@ export interface Asset {
   imageStatus?: ImageEditorialStatus;
 }
 ```
+
+`Asset.source.model` is the durable record of which image model generated the
+file on disk. Local/non-AI assets (e.g. a pure-black placeholder with
+`provider: "local"`) may omit `model`. `Take.generation.model` remains take-level
+authorship and may mirror the same id; it is not a second system of record for
+the file.
 
 The missing-frame slate is an `animatic_placeholder` asset. `Take.imageStatus`
 describes contextual reuse; `Asset.imageStatus` is reserved for a file that is

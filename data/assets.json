@@ -186,6 +186,7 @@
       "height": 1024,
       "source": {
         "provider": "openai-imagegen",
+        "model": "gpt-image-2",
         "generatedAt": "2026-09-05",
         "originalAssetId": "asset:character-security-crew-sheet"
       },
@@ -325,6 +326,7 @@
       "height": 864,
       "source": {
         "provider": "OpenAI",
+        "model": "gpt-image-2",
         "generatedAt": "2026-08-31"
       },
       "metadata": {
@@ -352,6 +354,7 @@
       "height": 979,
       "source": {
         "provider": "OpenAI",
+        "model": "gpt-image-2",
         "generatedAt": "2026-08-31"
       },
       "metadata": {
@@ -379,6 +382,7 @@
       "height": 864,
       "source": {
         "provider": "OpenAI",
+        "model": "gpt-image-2",
         "generatedAt": "2026-08-31"
       },
       "metadata": {
@@ -2694,6 +2698,7 @@
       "height": 945,
       "source": {
         "provider": "OpenAI",
+        "model": "gpt-image-2",
         "generatedAt": "2026-08-26"
       },
       "metadata": {

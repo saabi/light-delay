@@ -52,8 +52,10 @@ export interface Asset {
 	width?: number;
 	height?: number;
 	durationMs?: number;
+	/** Provenance of the file on disk. When present and provider is not `local`, `model` is required (validated at load). */
 	source?: {
 		provider?: string;
+		/** Image model that produced the file (e.g. `gpt-image-2`). Required unless provider is `local`. */
 		model?: string;
 		generatedAt?: string;
 		originalAssetId?: AssetId;

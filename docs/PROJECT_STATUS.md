@@ -1,10 +1,5 @@
 # Estado del proyecto
 
-## 2026-09-13 — SRT para Resolve junto al OTIO
-
-- El export OTIO escribe también `*.en.srt` / `*.es.srt` en `tmp/resolve-otio/` (reloj del
-  animatic + offset 01:00:00:00). Importar en Resolve como subtítulos, no dentro del OTIO.
-
 ## 2026-09-12 — TTS EN cue-0044 / cue-0045
 
 - Audit: 2 Festival EN cues sin `audioAssetId` (`0044`, `0045`); trailer y main-short completos.
