@@ -2,7 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { planSegments, resolveDiegeticText, sha256 } from './lib/generation-planning.mjs';
-import { buildVisualStretchJobs } from './lib/visual-stretch-jobs.mjs';
+import { buildVisualStretchJobs, pickApprovedVoiceSampleAssetId } from './lib/visual-stretch-jobs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const checkOnly = process.argv.includes('--check');
@@ -68,9 +68,9 @@ for (const slug of scripts) {
 		const diegeticText = shotCues.map((cue) => resolveDiegeticText(cue, 'en')).filter(Boolean);
 		for (const cue of dialogueCues) {
 			const profile = voiceProfiles.find((item) => item.characterId === cue.speakerId);
-			const samples = profile?.variants.flatMap((variant) => variant.sampleAssetIds ?? []) ?? [];
-			if (!samples.length) blockers.push(`missing_voice_sample:${cue.speakerId}`);
-			for (const assetId of samples) uniqueReferences.push(makeReference('audio', assetId, true, 'voice_sample'));
+			const sampleId = pickApprovedVoiceSampleAssetId(profile, 'en');
+			if (!sampleId) blockers.push(`missing_voice_sample:${cue.speakerId}`);
+			else uniqueReferences.push(makeReference('audio', sampleId, true, 'voice_sample'));
 		}
 		const hasContext = contextAssignments.some(
 			(assignment) =>
@@ -103,7 +103,8 @@ for (const slug of scripts) {
 		stillProvider,
 		videoProvider,
 		entityReferenceIds: referenceAssets,
-		voiceProfiles
+		voiceProfiles,
+		language: 'en'
 	});
 	const plan = {
 		schemaVersion: '1.0.0',

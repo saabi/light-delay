@@ -4,9 +4,10 @@
  */
 
 /**
+ * @typedef {import('../../src/lib/types/generated/production.ts').GenerationPlanFile44} VisualStretchJob
  * @typedef {{ shotId: string, order: number, takeScope?: string, takeIds?: string[], frameRegion?: { x: number, y: number, w: number, h: number } }} StretchMember
- * @typedef {{ kind: 'image' | 'video' | 'audio', id: string, role: string }} StretchReference
- * @typedef {{ id: string, characterId: string, variants?: Array<{ sampleAssetIds?: string[] }> }} VoiceProfile
+ * @typedef {{ kind: 'image' | 'video' | 'audio', id: string, role?: string }} StretchReference
+ * @typedef {{ id: string, characterId: string, variants?: Array<{ language?: string, sampleAssetIds?: string[] }> }} VoiceProfile
  */
 
 import { checkReferenceBudget } from './generation-planning.mjs';
@@ -21,6 +22,25 @@ import {
 	stretchJobId,
 	validateGridLayout
 } from './visual-stretch.mjs';
+
+/**
+ * One approved voice sample per speaker for the job language (SEEDANCE_PROMPTING §4 / §6.1).
+ * Prefers the matching language variant; falls back to the first sample on any variant.
+ * @param {VoiceProfile | undefined} profile
+ * @param {string} [language]
+ * @returns {string | null}
+ */
+export function pickApprovedVoiceSampleAssetId(profile, language = 'en') {
+	if (!profile?.variants?.length) return null;
+	const preferred = profile.variants.find((variant) => variant.language === language);
+	const fromPreferred = preferred?.sampleAssetIds?.find((id) => Boolean(id));
+	if (fromPreferred) return fromPreferred;
+	for (const variant of profile.variants) {
+		const sample = variant.sampleAssetIds?.find((id) => Boolean(id));
+		if (sample) return sample;
+	}
+	return null;
+}
 
 /**
  * Still / combined-sheet jobs need every authored visual reference.
@@ -42,12 +62,19 @@ export function collectStillStretchReferences(stretch) {
  *   members: StretchMember[],
  *   shotsById: Map<string, any>,
  *   cuesById?: Map<string, any>,
- *   voiceProfiles?: VoiceProfile[]
+ *   voiceProfiles?: VoiceProfile[],
+ *   language?: string
  * }} args
  * @returns {{ references: StretchReference[], blockers: string[] }}
  */
 export function collectDialogueVoiceSampleReferences(args) {
-	const { members, shotsById, cuesById = new Map(), voiceProfiles = [] } = args;
+	const {
+		members,
+		shotsById,
+		cuesById = new Map(),
+		voiceProfiles = [],
+		language = 'en'
+	} = args;
 	/** @type {StretchReference[]} */
 	const references = [];
 	/** @type {string[]} */
@@ -65,20 +92,16 @@ export function collectDialogueVoiceSampleReferences(args) {
 
 	for (const speakerId of [...speakers].sort()) {
 		const profile = voiceProfiles.find((item) => item.characterId === speakerId);
-		const samples = [
-			...new Set(profile?.variants?.flatMap((variant) => variant.sampleAssetIds ?? []) ?? [])
-		];
-		if (!samples.length) {
+		const sampleId = pickApprovedVoiceSampleAssetId(profile, language);
+		if (!sampleId) {
 			blockers.push(`missing_voice_sample:${speakerId}`);
 			continue;
 		}
-		for (const assetId of samples) {
-			references.push({
-				kind: /** @type {'audio'} */ ('audio'),
-				id: assetId,
-				role: 'voice_sample'
-			});
-		}
+		references.push({
+			kind: /** @type {'audio'} */ ('audio'),
+			id: sampleId,
+			role: 'voice_sample'
+		});
 	}
 	return { references, blockers };
 }
@@ -94,7 +117,8 @@ export function collectDialogueVoiceSampleReferences(args) {
  *   keyframeByShotId?: Map<string, string>,
  *   entityReferenceIds?: Map<string, string[]>,
  *   cuesById?: Map<string, any>,
- *   voiceProfiles?: VoiceProfile[]
+ *   voiceProfiles?: VoiceProfile[],
+ *   language?: string
  * }} args
  * @returns {{ references: StretchReference[], blockers: string[] }}
  */
@@ -106,7 +130,8 @@ export function collectVideoStretchReferences(args) {
 		keyframeByShotId = new Map(),
 		entityReferenceIds = new Map(),
 		cuesById = new Map(),
-		voiceProfiles = []
+		voiceProfiles = [],
+		language = 'en'
 	} = args;
 	/** @type {StretchReference[]} */
 	const refs = [];
@@ -156,7 +181,8 @@ export function collectVideoStretchReferences(args) {
 		members,
 		shotsById,
 		cuesById,
-		voiceProfiles
+		voiceProfiles,
+		language
 	});
 	const seenAudio = new Set();
 	for (const ref of voice.references) {
@@ -181,23 +207,24 @@ export function referenceBudgetBlockers(references, limits) {
 
 /**
  * Submission adapters must refuse any job where this is false.
- * @param {{ blockers?: string[], runnable?: boolean }} job
+ * No in-repo submission adapter exists yet — exercised by tests and plan inspection.
+ * @param {{ blockers?: string[], runnable?: boolean } | null | undefined} job
  */
 export function isStretchJobRunnable(job) {
 	return job?.runnable === true && Array.isArray(job.blockers) && job.blockers.length === 0;
 }
 
 /**
- * @param {object} job
- * @returns {object}
+ * @param {Omit<VisualStretchJob, 'runnable' | 'blockers'> & { blockers?: string[] }} job
+ * @returns {VisualStretchJob}
  */
 function finalizeStretchJob(job) {
 	const blockers = [...new Set(job.blockers || [])];
-	return {
+	return /** @type {VisualStretchJob} */ ({
 		...job,
 		blockers,
 		runnable: blockers.length === 0
-	};
+	});
 }
 
 /**
@@ -215,8 +242,10 @@ function finalizeStretchJob(job) {
  *   entityReferenceIds?: Map<string, string[]>,
  *   cuesById?: Map<string, any>,
  *   voiceProfiles?: VoiceProfile[],
+ *   language?: string,
  *   videoLimits?: { maxImages?: number | null, maxVideos?: number | null, maxAudios?: number | null, maxTotalReferences?: number | null }
  * }} [opts]
+ * @returns {VisualStretchJob[]}
  */
 export function partitionStretchVideoJobs(
 	stretch,
@@ -226,7 +255,7 @@ export function partitionStretchVideoJobs(
 	stillJobId,
 	opts = {}
 ) {
-	/** @type {object[]} */
+	/** @type {VisualStretchJob[]} */
 	const jobs = [];
 	/** @type {StretchMember[]} */
 	let bucket = [];
@@ -236,11 +265,13 @@ export function partitionStretchVideoJobs(
 	const entityReferenceIds = opts.entityReferenceIds ?? new Map();
 	const cuesById = opts.cuesById ?? new Map();
 	const voiceProfiles = opts.voiceProfiles ?? [];
+	const language = opts.language ?? 'en';
 
 	/**
 	 * @param {StretchMember[]} bucketMembers
 	 * @param {number} durationMs
 	 * @param {string[]} [extraBlockers]
+	 * @returns {VisualStretchJob}
 	 */
 	const buildJob = (bucketMembers, durationMs, extraBlockers = []) => {
 		const memberInputs = bucketMembers.map((member) => {
@@ -265,7 +296,8 @@ export function partitionStretchVideoJobs(
 			keyframeByShotId,
 			entityReferenceIds,
 			cuesById,
-			voiceProfiles
+			voiceProfiles,
+			language
 		});
 		/** @type {string[]} */
 		const blockers = [
@@ -330,14 +362,16 @@ export function partitionStretchVideoJobs(
  *   stillProvider?: any,
  *   videoProvider?: any,
  *   entityReferenceIds?: Map<string, string[]>,
- *   voiceProfiles?: VoiceProfile[]
+ *   voiceProfiles?: VoiceProfile[],
+ *   language?: string
  * }} opts
+ * @returns {VisualStretchJob[]}
  */
 export function buildVisualStretchJobs(
 	file,
-	{ maxSegmentMs, stillProvider, videoProvider, entityReferenceIds, voiceProfiles = [] }
+	{ maxSegmentMs, stillProvider, videoProvider, entityReferenceIds, voiceProfiles = [], language = 'en' }
 ) {
-	/** @type {object[]} */
+	/** @type {VisualStretchJob[]} */
 	const jobs = [];
 	const shotsById = new Map((file.shots || []).map(/** @param {any} shot */ (shot) => [shot.id, shot]));
 	const cuesById = new Map((file.cues || []).map(/** @param {any} cue */ (cue) => [cue.id, cue]));
@@ -388,7 +422,7 @@ export function buildVisualStretchJobs(
 				stretch.generationProfile?.gridLayout ??
 				(() => {
 					const selected = selectGridForMemberCount(members.length, { allowFourByFour });
-					if (selected.error) {
+					if ('error' in selected) {
 						blockers.push(selected.error);
 						return {
 							rows: 2,
@@ -505,6 +539,7 @@ export function buildVisualStretchJobs(
 					entityReferenceIds: entityReferenceIds ?? new Map(),
 					cuesById,
 					voiceProfiles,
+					language,
 					videoLimits: videoProvider?.limits
 				}
 			);

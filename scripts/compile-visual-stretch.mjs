@@ -49,7 +49,7 @@ const layout =
 	stretch.generationProfile?.gridLayout ??
 	(() => {
 		const selected = selectGridForMemberCount(members.length, { allowFourByFour });
-		if (selected.error) throw new Error(selected.error);
+		if ('error' in selected) throw new Error(selected.error);
 		return {
 			rows: selected.rows,
 			cols: selected.cols,

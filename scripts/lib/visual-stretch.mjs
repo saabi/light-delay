@@ -218,11 +218,12 @@ export function stretchJobId(stretch) {
 
 /**
  * Stable digest payload for stretch + member shot authority.
- * Pure script-state only (no computed margins / provider ids).
- * @param {{ stretch: any, shotsById: Map<string, any>, takesById?: Map<string, any> }} args
+ * Does not include selectedTakeId or take prompt/refs — selecting a derived
+ * candidate must not invalidate that candidate's own stretchDigest.
+ * @param {{ stretch: any, shotsById: Map<string, any> }} args
  */
 export function buildStretchDigestPayload(args) {
-	const { stretch, shotsById, takesById } = args;
+	const { stretch, shotsById } = args;
 	const members = [...(stretch.members ?? [])].sort((a, b) => a.order - b.order);
 	return {
 		compilerVersion: VISUAL_STRETCH_COMPILER_VERSION,
@@ -241,17 +242,12 @@ export function buildStretchDigestPayload(args) {
 		referenceAssetIds: stretch.referenceAssetIds ?? [],
 		members: members.map((member) => {
 			const shot = shotsById.get(member.shotId);
-			const sourceTakeIds =
-				member.takeScope === 'explicit'
-					? member.takeIds ?? []
-					: shot?.selectedTakeId
-						? [shot.selectedTakeId]
-						: [];
 			return {
 				order: member.order,
 				shotId: member.shotId,
 				takeScope: member.takeScope,
-				sourceTakeIds,
+				/** Explicit compile inputs only — never selectedTakeId. */
+				explicitTakeIds: member.takeScope === 'explicit' ? member.takeIds ?? [] : [],
 				visualDelta: member.visualDelta,
 				startState: member.startState,
 				event: member.event,
@@ -261,17 +257,7 @@ export function buildStretchDigestPayload(args) {
 				composition: shot?.composition,
 				camera: shot?.camera,
 				visibleRefs: shot?.visibleRefs,
-				offScreenCharacterIds: shot?.offScreenCharacterIds,
-				sourceTakeDigests: sourceTakeIds.map(/** @param {string} id */ (id) => {
-					const take = takesById?.get(id);
-					return take
-						? {
-								id,
-								prompt: take.generation?.prompt,
-								referenceAssetIds: take.generation?.referenceAssetIds
-							}
-						: { id };
-				})
+				offScreenCharacterIds: shot?.offScreenCharacterIds
 			};
 		})
 	};

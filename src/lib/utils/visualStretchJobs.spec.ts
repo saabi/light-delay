@@ -182,7 +182,7 @@ describe('visual stretch reference budgets', () => {
 		]);
 	});
 
-	it('budgets voice samples and blocks when maxAudios is exceeded', () => {
+	it('budgets one voice sample per speaker for the job language', () => {
 		const stretch = { referenceAssetIds: [] };
 		const members = [{ shotId: 'shot-a', order: 1 }];
 		const shotsById = new Map([
@@ -202,12 +202,18 @@ describe('visual stretch reference budgets', () => {
 			{
 				id: 'voice:zao',
 				characterId: 'character:zao',
-				variants: [{ sampleAssetIds: ['asset:voice-zao'] }]
+				variants: [
+					{ language: 'es', sampleAssetIds: ['asset:voice-zao-es', 'asset:voice-zao-es-2'] },
+					{ language: 'en', sampleAssetIds: ['asset:voice-zao-en', 'asset:voice-zao-en-2'] }
+				]
 			},
 			{
 				id: 'voice:voss',
 				characterId: 'character:voss',
-				variants: [{ sampleAssetIds: ['asset:voice-voss'] }]
+				variants: [
+					{ language: 'en', sampleAssetIds: ['asset:voice-voss-en'] },
+					{ language: 'es', sampleAssetIds: ['asset:voice-voss-es'] }
+				]
 			}
 		];
 		const { references, blockers } = collectVideoStretchReferences({
@@ -215,10 +221,14 @@ describe('visual stretch reference budgets', () => {
 			members,
 			shotsById,
 			cuesById,
-			voiceProfiles
+			voiceProfiles,
+			language: 'en'
 		});
 		expect(blockers).toEqual([]);
-		expect(references.filter((r) => r.role === 'voice_sample')).toHaveLength(2);
+		expect(references.filter((r) => r.role === 'voice_sample').map((r) => r.id)).toEqual([
+			'asset:voice-voss-en',
+			'asset:voice-zao-en'
+		]);
 		expect(
 			referenceBudgetBlockers(references, {
 				maxImages: 9,
@@ -455,7 +465,7 @@ describe('buildVisualStretchJobs integration', () => {
 });
 
 describe('visual stretch digest agreement', () => {
-	it('report shows no stale derived takes when digests match script state', () => {
+	it('stays fresh after selecting the derived candidate take', () => {
 		const script = JSON.parse(
 			readFileSync(join(ROOT, 'data/scripts/light-delay-festival-master.json'), 'utf8')
 		);
@@ -466,17 +476,23 @@ describe('visual stretch digest agreement', () => {
 		const digest = computeStretchDigest(stretch, script);
 		const clone = structuredClone(script);
 		const shotId = stretch.members[0].shotId;
+		const derivedTakeId = `${shotId}:take-99`;
 		clone.takes.push({
-			id: `${shotId}:take-99`,
+			id: derivedTakeId,
 			shotId,
 			number: 99,
 			status: 'candidate',
 			generation: {
 				visualStretchId: stretch.id,
 				stretchJobId: `${stretch.id}:rev-${stretch.revision}`,
-				stretchDigest: digest
+				stretchDigest: digest,
+				prompt: 'derived panel prompt must not affect digest'
 			}
 		});
+		const shot = clone.shots.find((item: { id: string }) => item.id === shotId);
+		shot.selectedTakeId = derivedTakeId;
+		if (!shot.takeIds.includes(derivedTakeId)) shot.takeIds.push(derivedTakeId);
+		expect(computeStretchDigest(stretch, clone)).toBe(digest);
 		const report = buildVisualStretchesReport(clone);
 		const row = report.rows.find((r: { id: string }) => r.id === stretch.id);
 		expect(row?.staleDerivedTakeIds).toEqual([]);

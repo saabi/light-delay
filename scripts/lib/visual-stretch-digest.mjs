@@ -6,12 +6,11 @@ import { buildStretchDigestPayload } from './visual-stretch.mjs';
 
 /**
  * @param {any} stretch
- * @param {{ shots?: any[], takes?: any[] }} script
+ * @param {{ shots?: any[] }} script
  * @returns {string}
  */
 export function computeStretchDigest(stretch, script) {
-	const shotsById = new Map((script.shots || []).map((s) => [s.id, s]));
-	const takesById = new Map((script.takes || []).map((t) => [t.id, t]));
-	const payload = buildStretchDigestPayload({ stretch, shotsById, takesById });
+	const shotsById = new Map((script.shots || []).map(/** @param {any} s */ (s) => [s.id, s]));
+	const payload = buildStretchDigestPayload({ stretch, shotsById });
 	return createHash('sha256').update(JSON.stringify(payload)).digest('hex');
 }

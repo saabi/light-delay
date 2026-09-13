@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-13 — Stretch digest selection-independent; typed jobs; one voice sample
+
+- Stretch digests no longer hash `selectedTakeId` / take prompts, so selecting a derived panel does not mark it stale.
+- Typed stretch jobs via generated plan schema; one approved voice sample per speaker for the job language; documented that `runnable` has no submission adapter yet.
+
 ## 2026-09-13 — Stretch job voice samples, runnable gate, builder tests
 
 - Seedance stretch jobs budget dialogue voice samples and block on `missing_voice_sample`; jobs expose `runnable` (false whenever blockers exist).
