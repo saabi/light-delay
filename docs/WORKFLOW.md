@@ -1,13 +1,17 @@
 # Flujo de trabajo documental y de datos
 
+> **Not current authority.** For agent policy, working set, and the outline→script→storyboard→prompt layer map, follow [`AGENTS.md`](../AGENTS.md), [`docs/AGENT_ONBOARDING.md`](AGENT_ONBOARDING.md), and [`docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md`](ADR-0002-MASTER-NARRATIVE-AUTHORITY.md). This file is retained as operational hygiene; it must not contradict those sources. `docs/CANON_DECISIONS.md` is previous continuity only.
+
 ## Principio
 
 El inglés es la fuente editorial vigente. Cada guion o cut tiene un único `ScriptFile`; lector, animatic, player y subtítulos se proyectan desde ese archivo. Las traducciones y el estado editorial no crean una segunda continuidad ni sustituyen los IDs estables. Los cuts deprecados conservan su procedencia histórica en español, pero no fijan la política de autoría futura.
 
 ## Fuentes vigentes
 
-- `AGENTS.md`: reglas de trabajo y autoridad de idioma.
-- `docs/CANON_DECISIONS.md`: decisiones de canon transversales.
+- `AGENTS.md`: reglas de trabajo y autoridad de idioma; day-one map in `docs/AGENT_ONBOARDING.md`.
+- `data/outlines/light-delay-master-narrative.json`: autoridad narrativa WIP.
+- `data/editorial-lifecycle.json`: clasificación y derivados WIP autorizados (Festival-master / trailer-master).
+- `docs/CANON_DECISIONS.md`: continuidad anterior (procedencia); no prevalece sobre el master.
 - `data/project.json`: idiomas, continuidades y registro de scripts.
 - `data/scripts/*.json`: actos, escenas, beats, cues, shots y takes de cada producto.
 - `data/characters.json`, `locations.json`, `objects.json`, `vehicles.json` y `factions.json`: entidades compartidas.

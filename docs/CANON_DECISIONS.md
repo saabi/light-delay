@@ -1,6 +1,6 @@
 # Decisiones de canon
 
-> **DEPRECADO — CONTINUIDAD ANTERIOR.** Desde 2026-09-05 la fuente narrativa vigente es `data/outlines/light-delay-master-narrative.json`. Este documento se conserva para procedencia y rescate; sus afirmaciones no prevalecen sobre la escaleta maestra.
+> **DEPRECADO — CONTINUIDAD ANTERIOR.** Desde 2026-09-05 la fuente narrativa vigente es `data/outlines/light-delay-master-narrative.json`. Este documento se conserva para procedencia y rescate; sus afirmaciones no prevalecen sobre la escaleta maestra. Agent policy and working set: `AGENTS.md` and `docs/AGENT_ONBOARDING.md`. Do not use this file to authorize production or to override Festival-master / master facts.
 
 Este documento resume las decisiones que regían la continuidad primaria anterior.
 

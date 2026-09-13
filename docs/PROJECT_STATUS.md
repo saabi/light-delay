@@ -1,5 +1,33 @@
 # Estado del proyecto
 
+## Current working set (agents)
+
+- **Policy:** [`AGENTS.md`](../AGENTS.md) · day-one map: [`docs/AGENT_ONBOARDING.md`](AGENT_ONBOARDING.md)
+- **Narrative SoT:** `outline:light-delay-master-narrative` / `data/outlines/light-delay-master-narrative.json` (WIP authoritative)
+- **Production WIP:** `script:light-delay-festival-master` (+ festival-master outline). **Trailer WIP:** `script:light-delay-trailer-master`
+- **Stub only:** `script:light-delay-master-narrative` / `canonicalScriptId` — empty routes, not “no screenplay”
+- **Do not treat as current:** deprecated `main-short` / `festival` / `trailer` / `long`; `docs/CANON_DECISIONS.md`; `legacy-site/`
+- **Do:** edit EN first; higher layers win; upward-propagation gate for conflicting lower-layer story fixes; edit `Shot.description` before prompts; no image regen unless asked
+- `data/outlines/light-delay-master-narrative.json` es ahora la fuente de verdad narrativa (histórico / ADR-0002). El estado WIP sigue indicando trabajo pendiente, pero ya no la subordina al corto anterior.
+
+## 2026-09-12 — Agent onboarding spine (English source)
+
+- `AGENTS.md` is English-first with working set, layer map, and upward-propagation gate (two approvals).
+- Added `docs/AGENT_ONBOARDING.md`, thin `CLAUDE.md` / `.github/copilot-instructions.md`, and aligned secondary pointers.
+
+## 2026-09-12 — Regenerated Transport Sphere-dependent Festival-master stills (English source)
+
+- Storyboard stills 088, 089, 091, and 092 regenerated against the corrected Transport Sphere reference.
+
+## 2026-09-12 — Regenerated Ardor and Velari visual reference sheets (English source)
+
+- New Ardor/Velari sheets registered; dependent Festival-master takes marked stale for later regeneration.
+
+## 2026-09-12 — OTIO dialect matched to Resolve 20.1 export (English source)
+
+- Assemblies use Windows backslash `target_url`s, `Resolve_OTIO` metadata, float RationalTime,
+  and a 01:00:00:00 start. Re-export and import `smoke-one-still.otio` first.
+
 ## 2026-09-12 — Scrubbing: sin saturación por cues duplicadas
 
 - El seek del secuenciador Web Audio podía arrancar dos veces el mismo cue durante un

@@ -4,14 +4,15 @@ Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe W
 
 ## Estado actual
 
+- **Working set for agents:** read [`AGENTS.md`](AGENTS.md) and the day-one map [`docs/AGENT_ONBOARDING.md`](docs/AGENT_ONBOARDING.md). Narrative SoT = master outline (WIP). **Authorized production WIP** = `script:light-delay-festival-master` (+ outline); trailer WIP = `script:light-delay-trailer-master`. The master script is an empty route stub — not “no screenplay.”
 - Sitio público bilingüe: inglés en `/` y español en `/es/`, con selector de idioma, metadatos SEO, sitemap, identidad visual y landing de presentación. El inglés es la fuente editorial vigente; el español es traducción revisionada.
 - Archivo editorial trasladado a `/project`; el inicio público explica la obra sin depender de conocimiento previo del repositorio.
 - Todo el texto prose enlazado desde el sitio legacy fue portado a documentos estructurados y traducido al inglés. El inventario verificable queda en `data/legacy-text-migration.json`.
 - Autoridad narrativa: `data/outlines/light-delay-master-narrative.json`, todavía WIP, con exports Markdown ES/EN generados desde ese JSON.
-- Seis entradas registradas: la narrativa maestra activa; un nuevo Corte Festival WIP fijado al master rev. 19 con guion fuente en inglés y blueprint de storyboard, todavía sin tomas ni animatic; y cuatro productos de la continuidad anterior —corto principal, tratamiento largo, Festival Cut y tráiler— marcados como deprecados.
+- Productos registrados: narrativa maestra (stub de guion vacío); Corte Festival-master WIP autorizado (guion, tomas y stills de storyboard en curso) y tráiler-master derivado; más cuatro productos de la continuidad anterior —corto principal, tratamiento largo, Festival Cut y tráiler— marcados como deprecados.
 - Comparador editorial entre scripts para canon explícito, eventos principales, reparto, variantes y funciones narrativas.
 - Informes editoriales dinámicos en `/reports/` (deuda visual, tiempos de diálogo, colas de regen) con el mismo motor que `npm run report:*` y `npm run report:all`.
-- El archivo conserva un animatic anterior de 128 tomas y los montajes Festival/tráiler como material de rescate. No son planes de producción vigentes; la producción visual queda suspendida hasta completar el master y aprobar nuevos derivados.
+- El archivo conserva un animatic anterior de 128 tomas y los montajes Festival/tráiler deprecados como material de rescate. La producción visual del Festival-master es WIP autorizado; no regenerar imágenes sin instrucción explícita.
 - Biblia visual: 13 hojas de personajes, 7 hojas de localización, 2 naves y 4 objetos clave. El catálogo suma dos localizaciones del reactor requeridas por el master que todavía no tienen hoja visual y no reutilizan la sala obsoleta del núcleo diplomático.
 - Sitio estático de referencia: `legacy-site/` (HTML/CSS/JavaScript).
 - Aplicación SvelteKit 2 / Svelte 5 en la raíz con rutas de documentos, guion, animatic, arte, entidades y player (Fases 2–6). Medios en `static/assets/`.
@@ -20,12 +21,14 @@ Proyecto de ciencia ficción de primer contacto. La escaleta maestra bilingüe W
 
 ```text
 .
-|-- AGENTS.md                 # Reglas de continuidad para agentes
+|-- AGENTS.md                 # Canonical agent policy (English)
+|-- CLAUDE.md                 # Thin pointer → AGENTS.md + AGENT_ONBOARDING
 |-- README.md
 |-- CHANGELOG.md
 |-- src/                      # Aplicación SvelteKit
 |-- static/                   # Assets públicos usados por la aplicación
 |-- docs/                     # Canon, producción, estado y procedencia
+|-- docs/AGENT_ONBOARDING.md  # Day-one agent index (layers, working set)
 |-- data/                     # Autoridad narrativa y contratos JSON
 `-- legacy-site/              # Archivo HTML obsoleto retenido para rescate
 ```
@@ -75,12 +78,12 @@ Puede abrirse `legacy-site/index.html` directamente para tareas de procedencia o
 
 ## Autoridad documental
 
-1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (inglés como fuente vigente; español como traducción).
+1. `AGENTS.md` fija las instrucciones para agentes y la política de idioma (inglés como fuente vigente; español como traducción). Day-one map: `docs/AGENT_ONBOARDING.md`.
 2. `data/outlines/light-delay-master-narrative.json` es la fuente narrativa vigente, aunque continúa en estado WIP.
-3. `data/editorial-lifecycle.json` clasifica autoridad, material compatible, archivo deprecado, elementos obsoletos y casos que requieren revisión; también define las compuertas previas a cualquier borrado.
-4. `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` documenta la promoción del master y el futuro flujo de derivación.
-5. `data/scripts/light-delay-master-narrative.json` es un stub para rutas y registro: no contiene todavía escenas, cues, shots ni takes y no sustituye la escaleta como autoría.
-6. Los demás outlines, guiones, animatics, planes y ledgers son material de la continuidad anterior. Permanecen accesibles para rescate, pero no fijan canon ni producción vigente.
+3. `data/editorial-lifecycle.json` clasifica autoridad, material compatible, archivo deprecado, elementos obsoletos y casos que requieren revisión; también define las compuertas previas a cualquier borrado. Incluye el derivado Festival-master / trailer-master como WIP autorizado.
+4. `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` documenta la promoción del master y el flujo de derivación.
+5. `data/scripts/light-delay-master-narrative.json` es un stub para rutas y registro: no contiene todavía escenas, cues, shots ni takes y no sustituye la escaleta como autoría. La producción de pantalla vigente vive en `script:light-delay-festival-master`.
+6. Los outlines/guiones `main-short`, `festival`, `trailer` y `long` son material de la continuidad anterior (rescate). No fijan canon ni producción vigente.
 7. `docs/CANON_DECISIONS.md`, `docs/technical/`, documentos prose y `legacy-site/` son fuentes anteriores o complementarias sujetas a la clasificación de ciclo de vida; no pueden contradecir silenciosamente al master.
 
 Ante una contradicción, no se debe elegir silenciosamente: registrar el conflicto en `docs/PROJECT_STATUS.md` y resolverlo explícitamente.

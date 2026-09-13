@@ -1,65 +1,110 @@
-# Instrucciones para agentes
+# Instructions for agents
 
-## Objetivo
+English is the documentation and agent-policy source of truth. A Spanish translation may follow in a later pass (`AGENTS.es.md` if present is not authoritative when it diverges).
 
-Transformar gradualmente el paquete estático de Light Delay en una aplicación SvelteKit basada en datos, sin perder canon, contenido, imágenes ni comportamiento.
+## Objective
 
-## Idioma y autoridad documental
+Gradually transform the static Light Delay package into a data-driven SvelteKit application without losing canon, content, images, or behavior.
 
-El inglés es la fuente de verdad de la documentación y de la autoría narrativa vigente del repositorio. El español es una traducción que puede completarse en un pase posterior.
+## Working set (current)
 
-La fuente de verdad **narrativa** vigente es `data/outlines/light-delay-master-narrative.json`. Es una autoridad WIP: puede seguir cambiando, pero prevalece desde ahora sobre los outlines, guiones, animatics y documentos de canon anteriores. Sus exports Markdown ES/EN son derivados generados y no se editan a mano.
+Read this file at the start of every session. For a short day-one map, also open [`docs/AGENT_ONBOARDING.md`](docs/AGENT_ONBOARDING.md).
 
-- Si un documento existe en varios idiomas, **editar primero la copia en inglés**. Las demás lenguas son traducciones o adaptaciones, no fuentes paralelas de autoría.
-- Si **no hay copia en inglés**, el documento existente conserva su función y procedencia hasta que se cree una fuente inglesa explícita; no traducirlo ni reemplazarlo de forma mecánica.
-- Tras cualquier cambio material en inglés, actualizar las traducciones en un pase posterior o marcar de forma visible su revisión y estado. Una traducción desactualizada no bloquea la autoría inglesa.
-- Ante conflicto entre variantes equivalentes y vigentes, prevalece el inglés. La autoridad narrativa y el estado de ciclo de vida prevalecen sobre el idioma: un documento inglés obsoleto o deprecado no sustituye al master.
-- El copy de historia en JSON vive **en el mismo archivo** como mapas por idioma o, en diálogo/texto, como `content.variants.<lang>`. Editar primero `en`; `es` puede quedar marcado `needs_revision`. La UI chrome sigue en Paraglide (`messages/*.json`). No reintroducir overlays.
-- Convención de nombres cuando haya pares: `nombre.md` o `nombre.en.md` para inglés; `nombre.es.md` para español. Los archivos históricos sin par no se renombran sólo para imponer la convención.
-- `AGENTS.md` es el único lugar canónico de instrucciones para agentes (cualquier modelo o plataforma). Otras guías de herramienta deben **referenciar** este archivo, no duplicar reglas.
+- **Narrative source of truth:** `data/outlines/light-delay-master-narrative.json` (WIP but authoritative). Generated Markdown under `docs/wip/` is not hand-edited SoT.
+- **Production WIP:** `script:light-delay-festival-master` and its outline `outline:light-delay-festival-master` (authorized derivative; check `data/editorial-lifecycle.json`).
+- **Trailer WIP:** `script:light-delay-trailer-master` (derived from Festival-master frames/audio).
+- **`canonicalScriptId` / `script:light-delay-master-narrative`:** empty route stub. It does **not** mean there is no active screenplay.
+- **Ignore as current product:** deprecated `main-short`, `festival`, `trailer`, and `long`. Never confuse `light-delay-festival` with `light-delay-festival-master`.
+- **Incomplete master** blocks *new unauthorized* cuts. It does **not** freeze work on derivatives already authorized in `data/editorial-lifecycle.json`.
+- **English authorship** for story copy and docs; edit `en` first; `es` may stay `needs_revision`. UI chrome = Paraglide (`messages/*.json`), not story overlays.
 
-## Reglas obligatorias
+Before changing narrative or structure, also read `README.md`, the master outline, `data/editorial-lifecycle.json`, `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md`, and `docs/PROJECT_STATUS.md`. `docs/CANON_DECISIONS.md` is previous continuity only. For cut script/animatic work, read `docs/GUIA_ESCALETA.md` (contract: `docs/ESCALETA.md`).
 
-- Leer este archivo completo al inicio de cada sesión de trabajo en el repositorio.
-- Leer `README.md`, `data/outlines/light-delay-master-narrative.json`, `data/editorial-lifecycle.json`, `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` y `docs/PROJECT_STATUS.md` antes de modificar narrativa o estructura. `docs/CANON_DECISIONS.md` es una referencia de la continuidad anterior, no autoridad vigente. Si el trabajo toca guion o animatic de un cut, leer también `docs/GUIA_ESCALETA.md` (contrato en `docs/ESCALETA.md`).
-- No crear ni ampliar un guion/animatic/cut derivado mientras la escaleta maestra siga incompleta, salvo autorización editorial explícita. Tras completarla, crear primero una escaleta derivada en `data/outlines/`, declarar su procedencia y verificar que el guion/animatic la respeta; procedimiento en `docs/GUIA_ESCALETA.md`.
-- Tratar `legacy-site/` como archivo obsoleto retenido sólo para rescate y procedencia. No usarlo como autoridad ni como baseline de regresión vigente.
-- No reescribir el canon para resolver una dificultad de implementación.
-- No inventar datos ausentes. Marcar incertidumbres y decisiones pendientes.
-- Evitar la exposición forzada: no tratar al público como incapaz de inferir. La información se revela de forma natural (pensamiento en acción, decisión bajo presión, consecuencia visible), no con diálogos o monólogos que explican el mundo «para el espectador». Ejemplo: cuando Zao decide dónde apuntar el láser y por qué elige la posición futura de la nave, son su propio razonamiento y la elección lo que exponen el porqué; no hace falta que alguien se lo diga a la audiencia.
-- Al escribir o traducir diálogo del elenco maestro, consultar la variante del idioma en `data/voice-profiles.json`: la prosodia de origen se combina con la variedad aprendida, el registro, la relación y la presión dramática. Mantener estas diferencias sutiles y naturales; no representar acentos mediante ortografía fonética, errores gramaticales ni localismos mecánicos. Editar primero el inglés y traducir el español en un pase posterior.
-- La capa `story` de cada escaleta debe contar una historia continua y causalmente completa con los detalles cerrados. Los pasos `detail`, notas o conocimiento externo no pueden reparar una causa, sujeto o consecuencia ausente del resumen principal.
-- Preservar las omisiones deliberadas de cada cut en todo dato público, incluidas traducciones, metadatos, IDs, referencias y descripciones heredadas. En particular, el tráiler no identifica al culpable ni confirma el envío, la recepción o la muerte de Zao; sólo puede insinuar que ella descubrió a una persona responsable y que quedó en peligro.
-- No confundir exposición forzada con razonamiento dramático: la escaleta debe conservar causas, alternativas descartadas, motivaciones, suposiciones (incluso erróneas) y consecuencias cruciales. Un personaje puede pensar en acción o hablar para sí cuando eso revela una decisión o profundidad propia, no para impartir una lección al público.
-- No reemplazar una versión narrativa más reciente por otra anterior sin verificar procedencia y pedir confirmación ante la duda. Si falta una causa necesaria, detener el trabajo narrativo bloqueado y consultar. Sólo con autorización explícita se puede avanzar dejando una nota/TODO de causa no resuelta o propuestas alternativas.
-- Mantener IDs estables para escenas y tomas; no usar el índice del array como identidad persistente. Los IDs de unidades de guion van namespaced por script (`main:…`, `festival:…`); las entidades de proyecto usan ids globales (`character:voss`).
-- Separar datos narrativos, presentación y estado editorial.
-- El guion textual y el animatic deben renderizarse desde una única fuente de datos **por script/cut** (`ScriptFile`); varios cuts se registran en `project.scripts` (véase `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`).
-- `project.narrativeAuthority` identifica la escaleta maestra WIP y su `ScriptFile` stub. `canonicalScriptId` apunta temporalmente a ese stub para resolver las rutas principales; no implica que exista todavía un guion derivado.
-- Los guiones, outlines y animatics de main-short, festival, trailer y long pertenecen a la continuidad anterior: están deprecados/obsoletos y sólo se conservan para rescatar diálogo, puesta, procedencia o recursos compatibles. No actualizarlos como si fueran productos vigentes ni derivar canon nuevo de ellos.
-- Toda clasificación de dependencias y candidatos a borrado se registra en `data/editorial-lifecycle.json`. Una ausencia en la escaleta maestra no prueba obsolescencia: lo incierto queda `review_required`, y nada se borra hasta cumplir todas las compuertas declaradas.
-- Animatic, overlay de edición y rutas se acotan por `scriptId`.
-- Los subtítulos deben derivarse del diálogo de cada toma, no mantenerse como una copia independiente sin validación.
-- Preservar la reproducción a pantalla completa, play/pausa/stop, navegación, timeline, panel de detalles y retorno a edición conservando posición.
-- No regenerar imágenes existentes salvo instrucción explícita.
-- Actualizar `CHANGELOG.md` y `docs/PROJECT_STATUS.md` después de cambios materiales.
-- Respetar la sección **Idioma y autoridad documental** al editar o crear documentación.
+## Layer map (higher layers win)
 
-## Arquitectura prevista
+```text
+Master outline (canon / causal story)
+  → Derived outline (cut escaleta; sourceRefs + derivation)
+    → ScriptFile (acts / scenes / beats / cues)
+      → Shots + Takes (storyboard: description, composition, still)
+        → Take.generation.prompt (compiled / disposable)
+          → assets.json + static/assets/ (+ production plans / manifest)
+```
 
-- SvelteKit + TypeScript en la raíz.
-- `src/lib/components/`: componentes documentales y del animatic.
-- `src/lib/data/`: carga y validación de JSON.
-- `src/lib/types/`: contratos TypeScript derivados o sincronizados con esquemas.
-- `data/`: JSON canónicos y esquemas legibles por otras herramientas.
-- `static/assets/`: destino futuro de imágenes una vez migradas desde `legacy-site/assets/`.
+Authority flows **downward**. Do not silently “correct” a lower layer so it diverges from the outline (or master) that owns the fact. Storyboard is not a separate schema: it is `Shot` + `Take` + still asset + plan artifact. Blueprint Markdown under `docs/wip/` is staging, not SoT.
 
-No mover los assets a `static/` hasta actualizar y verificar todas las referencias.
+### Upward-propagation gate (two approvals)
 
-## Validación mínima futura
+When a needed edit at a lower layer conflicts with authoritative truth above it:
 
-- El guion corto archivado debe conservar 17 escenas de historia más cartelas de título/créditos, y su animatic deprecado **128** tomas (124 de historia + título diferido + 3 créditos). Este conteo es una prueba de integridad del archivo, no una exigencia para los futuros derivados del master. Los 100 PNG legacy son recursos retenidos, no el recuento de tomas de la autoridad vigente.
-- Todas las rutas de imágenes deben existir.
-- La duración total debe recalcularse desde las tomas.
-- El sitio debe funcionar sin JavaScript externo ni recursos remotos obligatorios.
-- Las páginas principales y el modo Película deben tener pruebas de regresión.
+1. **Stop and notify** the author/developer: state the conflict, the lower-layer change requested, and which higher artifact(s) currently own the fact.
+2. **Do not apply** the conflicting lower-layer edit until they **approve** that direction.
+3. After that approval, **analyze repercussions** up the chain (outline beats, cues, shots, prompts, assets, trailer omissions, lifecycle notes) and present a concrete upward-edit proposal.
+4. **Propagate upward only after a second explicit approval** of that proposal. Then edit from the highest affected authoritative layer downward so derivatives stay consistent.
+5. Compatible lower-only fixes (typos, timing slack, prompt scrub that does not change story facts) do **not** need this gate.
+
+### Durable production rules
+
+- Edit **`Shot.description`** (EN first) before or together with `Take.generation.prompt`. Prompt-only edits get overwritten by compilers. See `docs/production/DIALOGUE_AND_PROMPT_LESSONS.md`.
+- Still prompts: **no spoken dialogue**; English-only diegetic UI. Check with `npm run scrub:still-prompts:check`.
+- **Do not regenerate existing images** unless explicitly instructed. Mark debt with `imageStatus` (`needs_regeneration` + reason). Marking stale ≠ permission to regenerate.
+- Generation depth: `docs/production/AGENT_GENERATION_BRIEF.md`.
+
+## Language and documentary authority
+
+English is the source of truth for documentation and current narrative authorship in the repository. Spanish is a translation that may be completed in a later pass.
+
+The current **narrative** source of truth is `data/outlines/light-delay-master-narrative.json`. It is WIP authority: it may keep changing, but it already prevails over prior outlines, scripts, animatics, and canon documents. Its Markdown ES/EN exports are generated derivatives and are not hand-edited.
+
+- When a document exists in several languages, **edit the English copy first**. Other languages are translations or adaptations, not parallel authorship sources.
+- If **there is no English copy**, the existing document keeps its role and provenance until an explicit English source is created; do not translate or replace it mechanically.
+- After any material English change, update translations in a later pass or mark their review status visibly. An outdated translation does not block English authorship.
+- On conflict between equivalent current variants, English prevails. Narrative authority and lifecycle status prevail over language: an obsolete or deprecated English document does not replace the master.
+- Story copy in JSON lives **in the same file** as per-language maps or, for dialogue/text, as `content.variants.<lang>`. Edit `en` first; `es` may be marked `needs_revision`. UI chrome stays in Paraglide (`messages/*.json`). Do not reintroduce overlays.
+- Naming when pairs exist: `name.md` or `name.en.md` for English; `name.es.md` for Spanish. Historical unpaired files are not renamed only to force the convention.
+- `AGENTS.md` is the only canonical place for agent instructions (any model or platform). Other tool guides must **reference** this file, not duplicate rules.
+
+## Mandatory rules
+
+- Read this file in full at the start of every work session in the repository.
+- Do **not** create or extend a *new unauthorized* derived script/animatic/cut while the master escaleta remains incomplete. Check `data/editorial-lifecycle.json` for already-authorized WIP derivatives (Festival-master, trailer-master). After the master is complete (or with explicit editorial authorization for a new cut), create a derived escaleta in `data/outlines/` first, declare provenance, and verify that the script/animatic respects it; procedure in `docs/GUIA_ESCALETA.md`.
+- Treat `legacy-site/` as obsolete archive retained only for rescue and provenance. Do not use it as authority or as a current regression baseline.
+- Do not rewrite canon to solve an implementation difficulty.
+- Do not invent missing data. Mark uncertainties and pending decisions.
+- Avoid forced exposition: do not treat the audience as unable to infer. Information is revealed naturally (thought in action, decision under pressure, visible consequence), not with dialogue or monologue that explains the world “for the viewer.” Example: when Zao decides where to aim the laser and why she chooses the ship’s future position, her own reasoning and choice expose the why; nobody needs to tell the audience.
+- When writing or translating master-cast dialogue, consult the language variant in `data/voice-profiles.json`: origin prosody combines with learned variety, register, relationship, and dramatic pressure. Keep these differences subtle and natural; do not represent accents through phonetic spelling, grammar errors, or mechanical localisms. Edit English first and translate Spanish in a later pass.
+- The `story` layer of each escaleta must tell a continuous, causally complete story with closed details. `detail` steps, notes, or external knowledge cannot repair a cause, subject, or consequence missing from the main summary.
+- Preserve each cut’s deliberate omissions in all public data, including translations, metadata, IDs, references, and inherited descriptions. In particular, the trailer does not identify the culprit or confirm the send, receipt, or death of Zao; it may only imply that she discovered a responsible person and was left in danger.
+- Do not confuse forced exposition with dramatic reasoning: the escaleta must keep causes, discarded alternatives, motivations, assumptions (even wrong ones), and crucial consequences. A character may think in action or speak to themselves when that reveals their own decision or depth, not to lecture the audience.
+- Do not replace a more recent narrative version with an earlier one without verifying provenance and asking for confirmation when unsure. If a necessary cause is missing, stop the blocked narrative work and consult. Only with explicit authorization may you proceed while leaving a note/TODO of unresolved cause or alternative proposals. Conflicting lower-layer “fixes” follow the **upward-propagation gate** above.
+- Keep stable IDs for scenes and takes; do not use the array index as persistent identity. Script-unit IDs are namespaced by script (`main:…`, `festival:…`, `festival-master:…`); project entities use global ids (`character:voss`).
+- Separate narrative data, presentation, and editorial state.
+- Textual script and animatic must render from a single data source **per script/cut** (`ScriptFile`); multiple cuts are registered in `project.scripts` (see `docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`).
+- `project.narrativeAuthority` identifies the WIP master escaleta and its stub `ScriptFile`. `canonicalScriptId` temporarily points at that stub for main routes; it does not imply a finished derived screenplay exists there.
+- Scripts, outlines, and animatics of main-short, festival, trailer, and long belong to the previous continuity: they are deprecated/obsolete and kept only to rescue dialogue, staging, provenance, or compatible assets. Do not update them as if they were current products or derive new canon from them.
+- All dependency classification and deletion candidates are recorded in `data/editorial-lifecycle.json`. Absence from the master escaleta does not prove obsolescence: the uncertain stays `review_required`, and nothing is deleted until all declared gates are met.
+- Animatic, edit overlay, and routes are scoped by `scriptId`.
+- Subtitles must be derived from each take’s dialogue, not kept as an unvalidated independent copy.
+- Preserve fullscreen playback, play/pause/stop, navigation, timeline, detail panel, and return to edit while keeping position.
+- Do not regenerate existing images unless explicitly instructed.
+- Update `CHANGELOG.md` and `docs/PROJECT_STATUS.md` after material changes.
+- Respect **Language and documentary authority** when editing or creating documentation.
+
+## Planned architecture
+
+- SvelteKit + TypeScript at the repository root.
+- `src/lib/components/`: documentary and animatic components.
+- `src/lib/data/`: JSON load and validation.
+- `src/lib/types/`: TypeScript contracts derived or synced with schemas.
+- `data/`: canonical JSON and schemas readable by other tools.
+- `static/assets/`: public media (migrated from `legacy-site/assets/` where applicable).
+
+Do not move assets to `static/` without updating and verifying all references.
+
+## Minimum validation (archive integrity + product)
+
+- The archived short script must keep 17 story scenes plus title/credit cards, and its deprecated animatic **128** takes (124 story + deferred title + 3 credits). This count is an archive integrity check, not a requirement for future master derivatives. The 100 legacy PNGs are retained resources, not the take count of current authority.
+- All image paths must exist.
+- Total duration must be recalculated from takes.
+- The site must work without obligatory external JavaScript or remote resources.
+- Main pages and Movie mode should have regression tests.

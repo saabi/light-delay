@@ -33,11 +33,15 @@ No se elimina ningún material hasta que se cumplan simultáneamente estas condi
 
 Mientras una compuerta permanezca abierta, incluso los candidatos `delete_after_gates` continúan en el repositorio.
 
+## Estado de implementación (nota 2026-09)
+
+La decisión de este ADR sigue vigente: el **producto** maestro (guion/animatic en `script:light-delay-master-narrative`) permanece vacío a propósito. Eso no niega los **derivados WIP ya autorizados** en `data/editorial-lifecycle.json`: `outline`/`script:light-delay-festival-master` y `script:light-delay-trailer-master` son producción activa bajo el master. Day-one map: `docs/AGENT_ONBOARDING.md`. No confundir el Festival-master con el `light-delay-festival` deprecado.
+
 ## Experiencia de aplicación
 
 - `/outline` abre la escaleta maestra.
-- `/script` y `/animatic` abren estados vacíos que explican que todavía no existen derivados.
-- El selector agrupa el master como autoridad actual y los productos anteriores bajo archivo deprecado.
+- Las rutas abreviadas `/script` y `/animatic` siguen el stub maestro vacío; los derivados autorizados se abren por `scriptId` explícito (Festival-master / trailer-master).
+- El selector agrupa el master como autoridad narrativa actual, los derivados WIP autorizados como producción en curso, y los productos anteriores bajo archivo deprecado.
 - Las rutas explícitas del archivo siguen disponibles con advertencia visible y `noindex`; el sitemap sólo publica productos actuales.
 - Entidades y assets muestran su estado de ciclo de vida cuando se consultan individualmente.
 
@@ -45,8 +49,8 @@ Mientras una compuerta permanezca abierta, incluso los candidatos `delete_after_
 
 - Los informes sin `--script` usan el master.
 - `--all` procesa sólo productos no deprecados; `--include-deprecated` habilita una auditoría archivística explícita.
-- Los planes de generación anteriores se conservan con estado `obsolete`. No autorizan prompts ni medios nuevos.
-- La producción visual futura comienza después del cierre del master y de la aprobación de una escaleta derivada.
+- Los planes de generación de la continuidad anterior se conservan con estado `obsolete`. No autorizan prompts ni medios nuevos.
+- La producción visual del Festival-master es WIP autorizado; no regenerar imágenes sin instrucción explícita. Nuevos cuts adicionales siguen requiriendo cierre del master o autorización editorial + escaleta derivada.
 
 ## Consecuencias
 

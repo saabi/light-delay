@@ -3,17 +3,23 @@
 Companion reference for any agent (human or model) compiling `data/production/plans/*.json`
 generation-plan JSON — storyboard/animatic stills, first/last frame, video-segment prompts,
 and reference-asset requests — for a Light Delay script. It indexes authority, contracts,
-live data and tooling; it does not itself authorize generation. Read `AGENTS.md` first; this
-document only adds the generation-pipeline layer on top of it.
+live data and tooling; it does not itself authorize generation. Read `AGENTS.md` first, then
+`docs/AGENT_ONBOARDING.md` for the day-one working set and layer map; this document only adds the
+generation-pipeline layer on top of them.
 
 Status: reference document, English source. Not narrative authority. Verified against the
 repository on 2026-09-11; re-check line numbers and counts before relying on them long after
 that date, since the festival screenplay this brief supports is being authored concurrently.
 
+**Storyboard stills:** durable source for what a shot shows is `Shot.description`; `Take.generation.prompt`
+is a disposable compiled artifact (see `DIALOGUE_AND_PROMPT_LESSONS.md` §1). Still prompts must not
+paste spoken dialogue (`npm run scrub:still-prompts:check`).
+
 ## 1. Authority chain (read in this order)
 
 | # | File | Why |
 | --- | --- | --- |
+| 0 | `docs/AGENT_ONBOARDING.md` | Day-one working set, layer map, upward-propagation gate |
 | 1 | `AGENTS.md` | Canon, master authority, no invention, no unauthorized (re)generation |
 | 2 | `docs/ADR-0002-MASTER-NARRATIVE-AUTHORITY.md` | Which narrative/plan is current vs. deprecated, deletion gates |
 | 3 | `docs/ARQUITECTURA_GENERACION.md` (ES) | Pipeline: plan → ES brief → freeze → EN prompt → adapter; the 11 compiler sections |

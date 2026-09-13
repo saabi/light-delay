@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026-09-12 — Agent onboarding spine
+
+- Made `AGENTS.md` English-first with a current working set, outline→script→storyboard→prompt
+  layer map, and an upward-propagation gate (notify → approve → analyze → second approve →
+  cascade). Softened the derivative rule so authorized Festival-master / trailer-master WIP is
+  not blocked by an incomplete master.
+- Added `docs/AGENT_ONBOARDING.md` (day-one checklist, worked example, role tracks, command
+  cheat-sheet), thin `CLAUDE.md` and `.github/copilot-instructions.md`, and `AGENTS.es.md` as a
+  non-authoritative Spanish pointer. Aligned README, `data/README.md`, WORKFLOW, ADR-0002 status
+  note, CANON banner, and `AGENT_GENERATION_BRIEF` cross-links.
+
+## 2026-09-12 — Regenerated Transport Sphere-dependent Festival-master stills
+
+- Regenerated and registered storyboard stills for `shot-plan-088`, `089`, `091`, and `092`
+  against the corrected Transport Sphere sheet (envoy floating / wall-braced in microgravity).
+
+## 2026-09-12 — Regenerated Ardor and Velari visual reference sheets
+
+- Replaced Ardor engineering, reactor service bay, and service-cylinder sheets; regenerated
+  Velari Transport Sphere and Envoy sheets. Dependent Festival-master takes marked
+  `needs_regeneration` until regenerated against the new sheets.
+
+## 2026-09-12 — Resolve OTIO dialect from a 20.1 stills export
+
+- Reverse-engineered a Resolve Studio 20.1 stills export. The writer now matches that dialect:
+  native Windows `target_url` backslashes, `Resolve_OTIO` metadata, RationalTime floats
+  (`24.0`), timeline start at 01:00:00:00, tracks `Video 1` / `Audio 1` / `Audio 2`.
+- Clip names map `:` → `__`; stills declare a 1-frame `available_range`; Clip.2 + filesystem
+  paths; smoke-one-still fixture for import proofs.
+
 ## 2026-09-12 — Fix scrubbing dialogue saturation (overlapping cue starts)
 
 - `WebAudioCueSequencer.seek` aborted and replaced its `AbortController`, so in-flight

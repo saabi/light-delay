@@ -1,13 +1,14 @@
 ---
-description: Cargar AGENTS.md como única fuente de instrucciones del proyecto
+description: Load AGENTS.md as the only project instruction source for agents
 alwaysApply: true
 ---
 
-# Instrucciones del repositorio
+# Repository instructions
 
-Al inicio de cada chat o tarea en este proyecto, leer y seguir `AGENTS.md` en la raíz del repositorio.
+At the start of every chat or task in this project, read and follow `AGENTS.md` at the repository root.
 
-- `AGENTS.md` es la fuente canónica de reglas para agentes (independiente del modelo o plataforma).
-- No inventar políticas locales que contradigan `AGENTS.md`.
-- Si una regla de Cursor y `AGENTS.md` divergen, prevalece `AGENTS.md` y hay que alinear la regla.
-- Política de idioma, canon, migración y validación: ver `AGENTS.md` (no duplicar aquí el detalle).
+- `AGENTS.md` is the canonical source of agent rules (any model or platform).
+- Do not invent local policies that contradict `AGENTS.md`.
+- If a Cursor rule and `AGENTS.md` diverge, `AGENTS.md` prevails and the rule must be aligned.
+- For the day-one working set, layer map (outline → script → storyboard → prompt), and upward-propagation gate, also open `docs/AGENT_ONBOARDING.md` when the task is narrative or production.
+- Language, canon, migration, and validation policy: see `AGENTS.md` (do not duplicate detail here).

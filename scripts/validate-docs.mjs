@@ -66,11 +66,13 @@ if (withoutSource !== 360)
 if (withExactModel !== 117)
 	errors.push(`assets: expected 117 records with exact model metadata, got ${withExactModel}`);
 
-requireText('AGENTS.md', 'animatic deprecado **128** tomas');
+requireText('AGENTS.md', 'deprecated animatic **128** takes');
 requireText('README.md', 'animatic anterior de 128 tomas');
 requireText('README.md', 'data/outlines/light-delay-master-narrative.json');
 requireText('docs/PROJECT_STATUS.md', 'es ahora la fuente de verdad narrativa');
-requireText('AGENTS.md', 'El inglés es la fuente de verdad');
+requireText('AGENTS.md', 'English is the source of truth for documentation');
+requireText('AGENTS.md', 'Upward-propagation gate');
+requireText('docs/AGENT_ONBOARDING.md', 'Day-one checklist');
 requireText('README.md', 'El inglés es la fuente editorial vigente');
 requireText('docs/CANON_DECISIONS.md', 'DEPRECADO — CONTINUIDAD ANTERIOR');
 requireText('docs/ASSET_PROVENANCE.md', '**482 assets registrados**');
@@ -87,6 +89,7 @@ requireText('docs/TITLE_AND_CREDITS.md', 'LIGHT DELAY');
 forbidText('docs/WORKFLOW.md', '`data/canon.json`');
 forbidText('docs/WORKFLOW.md', '`data/props.json`');
 forbidText('docs/WORKFLOW.md', '`data/shots.json`');
+requireText('docs/WORKFLOW.md', 'Not current authority');
 
 const historicalBanners = new Map([
 	['docs/MIGRATION_PLAN.md', 'historical architecture baseline'],
