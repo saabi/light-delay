@@ -43,6 +43,7 @@ project.inlang/README.md
 /tmp/
 *.tmp
 *.bak
+*.partial
 /*.zip
 /docs/wip/*.mp3
 /scripts/_debug-*.py

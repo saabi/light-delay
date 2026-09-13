@@ -33,12 +33,12 @@
         "maxVideos": null,
         "maxAudios": null,
         "maxTotalReferences": 50,
-        "maxDurationMs": 30000
+        "maxDurationMs": 40000
       },
       "source": "https://higgsfield.ai/seedance-2-5",
       "notes": {
-        "es": "Perfil de marketing no confirmado en el catálogo CLI/MCP operativo; no usar para validar ni enviar pedidos.",
-        "en": "Marketing profile not confirmed in the operational CLI/MCP catalog; do not use it to validate or submit requests."
+        "es": "Perfil provisional: techo de marketing ~40 s (`maxDurationMs`). La campaña operativa puede usar un techo menor. No usar para pedidos sin preflight.",
+        "en": "Provisional profile: marketing ceiling ~40 s (`maxDurationMs`). The operational campaign may use a lower ceiling. Do not submit jobs without preflight."
       }
     },
     {
@@ -83,8 +83,8 @@
       "noCreditsAllowed": true,
       "concurrency": null,
       "notes": {
-        "es": "Segmentos hasta 30 s, alineados con el single-pass de Seedance 2.5 (`maxDurationMs`). Verificar en preflight que la cuenta/plan no imponga un techo menor (p. ej. Unlimited a 8/15 s).",
-        "en": "Segments up to 30 s, aligned with Seedance 2.5 single-pass (`maxDurationMs`). Preflight must confirm the account/plan does not impose a lower ceiling (e.g. Unlimited at 8/15 s)."
+        "es": "Segmentos hasta 30 s (techo operativo conservador). El snapshot Seedance 2.5 documenta hasta 40 s; preflight debe confirmar el techo real de la cuenta.",
+        "en": "Segments up to 30 s (conservative operational ceiling). The Seedance 2.5 snapshot documents up to 40 s; preflight must confirm the account's real ceiling."
       }
     }
   ]

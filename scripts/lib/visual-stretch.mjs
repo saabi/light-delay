@@ -1,6 +1,12 @@
 /**
  * Visual stretch layout, membership, and digest helpers.
- * Browser-safe (no fs, no sharp). Shared by Node scripts and the SvelteKit app.
+ * Browser-safe (no fs, no sharp, no node:crypto). Shared by Node scripts and the SvelteKit app.
+ */
+
+/**
+ * @typedef {{ rows: number, cols: number, gutterFraction?: number, panelAspect?: string, blankCells?: number[], minOuterMarginFraction?: number }} GridLayout
+ * @typedef {{ x: number, y: number, w: number, h: number }} FrameRegion
+ * @typedef {{ top: number, right: number, bottom: number, left: number }} SheetMargins
  */
 
 export const VISUAL_STRETCH_COMPILER_VERSION = '1.0.0';
@@ -80,9 +86,9 @@ export function computeMargins(outputSize, contentAspect = DEFAULT_PANEL_ASPECT,
 }
 
 /**
- * @param {{ rows: number, cols: number, gutterFraction?: number, blankCells?: number[], panelAspect?: string, minOuterMarginFraction?: number }} layout
- * @param {{ top: number, right: number, bottom: number, left: number }} margins
- * @returns {Array<{ cellIndex: number, orderSlot: number, frameRegion: { x: number, y: number, w: number, h: number } }>}
+ * @param {GridLayout} layout
+ * @param {SheetMargins} margins
+ * @returns {Array<{ cellIndex: number, orderSlot: number, frameRegion: FrameRegion }>}
  */
 export function derivePanelRegions(layout, margins) {
 	const rows = layout.rows;
@@ -117,15 +123,17 @@ export function derivePanelRegions(layout, margins) {
 }
 
 /**
- * @param {{ x: number, y: number, w: number, h: number }} region
+ * @param {FrameRegion} region
+ * @returns {FrameRegion}
  */
 export function roundRegion(region) {
+	/** @type {(n: number) => number} */
 	const q = (n) => Math.round(n * 1e6) / 1e6;
 	return { x: q(region.x), y: q(region.y), w: q(region.w), h: q(region.h) };
 }
 
 /**
- * @param {object} layout
+ * @param {GridLayout | null | undefined} layout
  * @param {number} memberCount
  * @param {{ minPanelResolution?: { width: number, height: number }, outputSize?: { width: number, height: number }, allowFourByFour?: boolean }} [opts]
  * @returns {string[]}
@@ -188,7 +196,7 @@ export function validateGridLayout(layout, memberCount, opts = {}) {
 }
 
 /**
- * @param {object} script
+ * @param {{ visualStretches?: any[] }} script
  * @param {string} shotId
  */
 export function findStretchForShot(script, shotId) {
@@ -208,10 +216,11 @@ export function stretchJobId(stretch) {
 
 /**
  * Stable digest payload for stretch + member shot authority.
- * @param {{ stretch: object, shotsById: Map<string, object>, takesById?: Map<string, object>, computedMargins?: object, providerProfileId?: string }} args
+ * Pure script-state only (no computed margins / provider ids).
+ * @param {{ stretch: any, shotsById: Map<string, any>, takesById?: Map<string, any> }} args
  */
 export function buildStretchDigestPayload(args) {
-	const { stretch, shotsById, takesById, computedMargins, providerProfileId } = args;
+	const { stretch, shotsById, takesById } = args;
 	const members = [...(stretch.members ?? [])].sort((a, b) => a.order - b.order);
 	return {
 		compilerVersion: VISUAL_STRETCH_COMPILER_VERSION,
@@ -227,8 +236,7 @@ export function buildStretchDigestPayload(args) {
 		persistentProps: stretch.persistentProps,
 		generationProfile: stretch.generationProfile,
 		gridLayout: stretch.generationProfile?.gridLayout,
-		computedMargins: computedMargins ?? null,
-		providerProfileId: providerProfileId ?? null,
+		referenceAssetIds: stretch.referenceAssetIds ?? [],
 		members: members.map((member) => {
 			const shot = shotsById.get(member.shotId);
 			const sourceTakeIds =
@@ -269,7 +277,7 @@ export function buildStretchDigestPayload(args) {
 
 /**
  * Soft heuristic: adjacent same-location shots not covered by any stretch.
- * @param {object} script
+ * @param {{ visualStretches?: any[], shots?: any[] }} script
  * @returns {Array<{ shotA: string, shotB: string, locationId: string }>}
  */
 export function findAdjacentUnstretchedPairs(script) {
@@ -288,4 +296,125 @@ export function findAdjacentUnstretchedPairs(script) {
 		pairs.push({ shotA: a.id, shotB: b.id, locationId: a.locationId });
 	}
 	return pairs;
+}
+
+/**
+ * @param {{ presentCharacterIds?: string[], blocking?: Array<{ characterId: string, zoneOrSeat?: string, posture?: string }> }} stretch
+ */
+export function isStretchBlockingComplete(stretch) {
+	return !(stretch.presentCharacterIds || []).some((characterId) => {
+		const row = (stretch.blocking || []).find((b) => b.characterId === characterId);
+		return !row?.zoneOrSeat || !row?.posture;
+	});
+}
+
+/**
+ * @param {{ presentCharacterIds?: string[], blocking?: Array<{ characterId: string, zoneOrSeat?: string, posture?: string }> }} stretch
+ * @returns {string[]}
+ */
+export function stretchBlockingBlockers(stretch) {
+	return isStretchBlockingComplete(stretch) ? [] : ['missing_stretch_blocking'];
+}
+
+/**
+ * @param {{ supportedStoryboardLayouts?: Array<{ rows?: number, columns?: number, cols?: number }> }} [stillProvider]
+ */
+export function providerAllowsFourByFour(stillProvider) {
+	return Boolean(
+		stillProvider?.supportedStoryboardLayouts?.some(
+			(layout) => layout.rows === 4 && (layout.columns === 4 || layout.cols === 4)
+		)
+	);
+}
+
+/**
+ * @param {Array<{ width: number, height: number }> | undefined} outputSizes
+ * @param {GridLayout} layout
+ * @param {{ width: number, height: number } | undefined} minPanelResolution
+ */
+export function selectLargestSuitableOutputSize(outputSizes, layout, minPanelResolution) {
+	const sorted = [...(outputSizes || [])].sort((a, b) => b.width * b.height - a.width * a.height);
+	if (!sorted.length) return { width: 1536, height: 1024 };
+	if (!minPanelResolution) return sorted[0];
+	for (const outputSize of sorted) {
+		const margins = computeMargins(
+			outputSize,
+			layout.panelAspect ?? DEFAULT_PANEL_ASPECT,
+			layout.minOuterMarginFraction ?? 0
+		);
+		const regions = derivePanelRegions(layout, margins);
+		const ok = regions.every((region) => {
+			const pw = outputSize.width * region.frameRegion.w;
+			const ph = outputSize.height * region.frameRegion.h;
+			return pw >= minPanelResolution.width && ph >= minPanelResolution.height;
+		});
+		if (ok) return outputSize;
+	}
+	return sorted[0];
+}
+
+/**
+ * Structured English blocking lines for prompts — no notes / Spanish / invent text.
+ * @param {Array<{
+ *   characterId: string,
+ *   zoneOrSeat?: string,
+ *   screenSide?: string,
+ *   facing?: string,
+ *   posture?: string,
+ *   eyelineTarget?: string,
+ *   heldEntityRef?: { id?: string } | string,
+ *   interactionTarget?: { id?: string } | string
+ * }> | undefined} blocking
+ */
+export function formatBlockingForPrompt(blocking) {
+	return (blocking || [])
+		.map((row) => {
+			const held =
+				row.heldEntityRef == null
+					? null
+					: typeof row.heldEntityRef === 'string'
+						? row.heldEntityRef
+						: row.heldEntityRef.id;
+			const interaction =
+				row.interactionTarget == null
+					? null
+					: typeof row.interactionTarget === 'string'
+						? row.interactionTarget
+						: row.interactionTarget.id;
+			return [
+				row.characterId,
+				row.zoneOrSeat ? `zoneOrSeat=${row.zoneOrSeat}` : null,
+				row.screenSide ? `screenSide=${row.screenSide}` : null,
+				row.facing ? `facing=${row.facing}` : null,
+				row.posture ? `posture=${row.posture}` : null,
+				row.eyelineTarget ? `eyelineTarget=${row.eyelineTarget}` : null,
+				held ? `held=${held}` : null,
+				interaction ? `interactionTarget=${interaction}` : null
+			]
+				.filter(Boolean)
+				.join('; ');
+		})
+		.filter(Boolean)
+		.join('\n');
+}
+
+/**
+ * Path segment under static/assets/animatic/frames/ from a script JSON slug.
+ * @param {string} scriptSlug e.g. light-delay-festival-master
+ */
+export function scriptAnimaticFramesSegment(scriptSlug) {
+	return String(scriptSlug).replace(/^light-delay-/, '');
+}
+
+/**
+ * @param {string[]} args
+ * @param {string} flag
+ * @returns {string | null}
+ */
+export function readArgValue(args, flag) {
+	const index = args.indexOf(flag);
+	if (index < 0 || index + 1 >= args.length) return null;
+	const value = args[index + 1];
+	if (!value || value.startsWith('--')) return null;
+	return value;
 }

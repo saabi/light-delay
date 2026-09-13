@@ -808,10 +808,6 @@ export interface Take {
     stretchJobId?: string;
     coherenceException?: boolean;
   };
-```
-
-`ScriptFile.visualStretches[]` (optional) holds multi-shot shared blocking and grid layout for
-combined storyboard sheets. See `docs/production/VISUAL_STRETCH_PIPELINE.md`.
 
   review?: {
     continuityScore?: number;
@@ -821,6 +817,9 @@ combined storyboard sheets. See `docs/production/VISUAL_STRETCH_PIPELINE.md`.
   };
 }
 ```
+
+`ScriptFile.visualStretches[]` (optional) holds multi-shot shared blocking and grid layout for
+combined storyboard sheets. See `docs/production/VISUAL_STRETCH_PIPELINE.md`.
 
 ## Characters and voices
 

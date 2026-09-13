@@ -6,12 +6,27 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sourceLocalizedString } from './lib/localized-string.mjs';
-import { validateGridLayout } from './lib/visual-stretch.mjs';
+import {
+	providerAllowsFourByFour,
+	stretchBlockingBlockers,
+	validateGridLayout
+} from './lib/visual-stretch.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
 const SCRIPTS_DIR = join(DATA, 'scripts');
 const OUTLINES_DIR = join(DATA, 'outlines');
+const stillProvider = (() => {
+	try {
+		const file = JSON.parse(
+			readFileSync(join(DATA, 'production', 'provider-capabilities.json'), 'utf8')
+		);
+		return file.snapshots?.find((s) => s.model === 'gpt-image-2') ?? null;
+	} catch {
+		return null;
+	}
+})();
+const allowFourByFour = providerAllowsFourByFour(stillProvider);
 const IMAGE_STATES = new Set([
 	'current',
 	'needs_review',
@@ -154,7 +169,7 @@ function validateVisualStretches(script, { label, shotIds, takeIds, characterIds
 			if (!gridLayout) errors.push(`${sLabel}: gridLayout required for combined_storyboard_sheet`);
 			else {
 				for (const err of validateGridLayout(gridLayout, (stretch.members || []).length, {
-					allowFourByFour: false
+					allowFourByFour
 				})) {
 					errors.push(`${sLabel}: ${err}`);
 				}
@@ -214,11 +229,10 @@ function validateVisualStretches(script, { label, shotIds, takeIds, characterIds
 			}
 		}
 
-		const incompleteBlocking = (stretch.presentCharacterIds || []).some((characterId) => {
-			const row = (stretch.blocking || []).find((b) => b.characterId === characterId);
-			return !row?.zoneOrSeat || !row?.posture;
-		});
-		if (['reviewed', 'locked'].includes(stretch.status) && incompleteBlocking) {
+		if (
+			['reviewed', 'locked'].includes(stretch.status) &&
+			stretchBlockingBlockers(stretch).length
+		) {
 			errors.push(`${sLabel}: reviewed/locked requires complete blocking for present cast`);
 		}
 

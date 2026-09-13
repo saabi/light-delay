@@ -16,7 +16,7 @@
 	import type { EntityRef, Note } from '$lib/types/common';
 	import type { Cue, CuePlacement, ScriptFile, Shot, SourceReference } from '$lib/types/script';
 	import { formatClock } from '$lib/utils/duration';
-	import { findStretchForShot } from '$lib/utils/visualStretch';
+	import { findStretchForShot, stretchBlockingBlockers } from '$lib/utils/visualStretch';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let {
@@ -68,6 +68,9 @@
 				media.take.generation.stretchJobId !==
 					`${stretchMembership.stretch.id}:rev-${stretchMembership.stretch.revision}`
 		)
+	);
+	const stretchBlockers = $derived(
+		stretchMembership ? stretchBlockingBlockers(stretchMembership.stretch) : []
 	);
 
 	function present(value: unknown): string {
@@ -224,10 +227,10 @@
 						<dd>{media.take?.generation?.stretchDigest}</dd>
 					</div>
 				{/if}
-				{#if stretchMembership.stretch.status === 'draft'}
+				{#if stretchBlockers.length}
 					<div>
 						<dt>{m.details_stretch_blockers()}</dt>
-						<dd>missing_stretch_blocking (author seating pending)</dd>
+						<dd>{stretchBlockers.join(', ')}</dd>
 					</div>
 				{/if}
 			</dl>

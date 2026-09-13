@@ -134,6 +134,7 @@
           }
         },
         "dependsOnStillJobId": { "type": "string" },
+        "durationMs": { "type": "integer", "minimum": 0 },
         "sharedReferenceAssetIds": { "type": "array", "items": { "type": "string" } },
         "gridLayout": { "$ref": "#/$defs/gridLayout" },
         "computedMargins": { "$ref": "#/$defs/computedMargins" },

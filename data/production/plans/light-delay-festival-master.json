@@ -7641,6 +7641,7 @@
       "mode": "grouped_seedance",
       "outputTakePolicy": "new_candidate",
       "dependsOnStillJobId": "festival-master:stretch-bridge-meal-010-012:rev-1",
+      "durationMs": 20800,
       "memberInputs": [
         {
           "order": 1,

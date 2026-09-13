@@ -1,22 +1,32 @@
 /**
  * Split a registered visual-stretch combined sheet into derived panel PNGs.
  * Usage: node scripts/split-visual-stretch-sheet.mjs --script <slug> --stretch <stretchId> [--dry-run]
+ *
+ * After a successful split, register candidates with:
+ *   node scripts/register-visual-stretch-panels.mjs --script <slug> --stretch <stretchId>
  */
-import { copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { tmpdir } from 'node:os';
-import { randomBytes } from 'node:crypto';
 import sharp from 'sharp';
-import { derivePanelRegions, computeMargins, stretchJobId } from './lib/visual-stretch.mjs';
+import { atomicReplaceFromWriter } from './lib/atomic-fs.mjs';
+import {
+	computeMargins,
+	derivePanelRegions,
+	readArgValue,
+	scriptAnimaticFramesSegment,
+	stretchJobId
+} from './lib/visual-stretch.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');
-const scriptSlug = args[args.indexOf('--script') + 1];
-const stretchId = args[args.indexOf('--stretch') + 1];
-if (!scriptSlug || !stretchId || args.indexOf('--script') < 0 || args.indexOf('--stretch') < 0) {
-	console.error('Usage: node scripts/split-visual-stretch-sheet.mjs --script <slug> --stretch <stretchId> [--dry-run]');
+const scriptSlug = readArgValue(args, '--script');
+const stretchId = readArgValue(args, '--stretch');
+if (!scriptSlug || !stretchId) {
+	console.error(
+		'Usage: node scripts/split-visual-stretch-sheet.mjs --script <slug> --stretch <stretchId> [--dry-run]'
+	);
 	process.exit(1);
 }
 
@@ -45,8 +55,9 @@ if (regions.length !== members.length) {
 }
 
 const jobId = stretchJobId(stretch);
+const framesSegment = scriptAnimaticFramesSegment(scriptSlug);
 const stretchSlug = stretchId.replace(/[^a-zA-Z0-9_-]+/g, '-');
-const outDirRel = `/assets/animatic/frames/festival-master/stretches/${stretchSlug}`;
+const outDirRel = `/assets/animatic/frames/${framesSegment}/stretches/${stretchSlug}`;
 const outDirAbs = join(ROOT, 'static', outDirRel.replace(/^\//, ''));
 if (!dryRun) mkdirSync(outDirAbs, { recursive: true });
 
@@ -61,7 +72,8 @@ console.log(
 			panels: members.map((member, i) => ({
 				order: member.order,
 				shotId: member.shotId,
-				frameRegion: regions[i].frameRegion
+				frameRegion: regions[i].frameRegion,
+				path: `${outDirRel}/panel-${String(member.order).padStart(2, '0')}.png`
 			})),
 			dryRun
 		},
@@ -81,10 +93,15 @@ for (let i = 0; i < members.length; i += 1) {
 	const height = Math.round(region.h * outputSize.height);
 	const panelName = `panel-${String(member.order).padStart(2, '0')}.png`;
 	const panelAbs = join(outDirAbs, panelName);
-	const tempAbs = join(tmpdir(), `vs-panel-${randomBytes(8).toString('hex')}.png`);
-	await sharp(sheetAbs).extract({ left, top, width, height }).png().toFile(tempAbs);
-	renameSync(tempAbs, panelAbs);
+	await atomicReplaceFromWriter(panelAbs, async (partialAbs) => {
+		await sharp(sheetAbs).extract({ left, top, width, height }).png().toFile(partialAbs);
+	});
 	console.log(`wrote ${panelAbs}`);
 }
 
-console.log('split-visual-stretch-sheet: OK (register panels with register-visual-stretch-sheet.mjs)');
+console.log(
+	'split-visual-stretch-sheet: OK — next: npm run register:visual-stretch-panels -- --script ' +
+		scriptSlug +
+		' --stretch ' +
+		stretchId
+);

@@ -4,6 +4,11 @@
 
 - Marked outline:light-delay-festival-master derivation eviewStatus: stale versus master revision 23 (still pinned to r19 until rederived).
 
+## 2026-09-13 — Visual stretch review fixes
+
+- Fixed AnimaticEditor duplicate import; EXDEV-safe same-directory .partial writes; panel registrar creates derived assets + candidate takes (egister:visual-stretch-panels).
+- Provider-driven 4×4 + largest suitable output size; structured blocking prompt lines; shared blocking completeness helper; unified stretch digest; reference-budget and Seedance duration gates with tests.
+
 ## 2026-09-13 — Visual stretches (Schema + dry-run pilot)
 
 - Added `ScriptFile.visualStretches[]` types, validate-data checks, layout helpers, generation-plan `visualStretchJobs`, provisional gpt-image-2 still-provider snapshot, compile/split/register CLIs, `report:visual-stretches`, and ShotCard/ShotDetailsPanel stretch UI.

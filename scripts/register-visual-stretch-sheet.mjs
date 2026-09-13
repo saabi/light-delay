@@ -1,21 +1,21 @@
 /**
  * Register a combined stretch sheet asset (after agent image tool lands the file).
- * Copies from --from (generator output) via OS temp + atomic rename into the final path.
+ * Copies from --from via same-directory .partial + atomic rename (EXDEV-safe).
  * Usage:
  *   node scripts/register-visual-stretch-sheet.mjs --script <slug> --stretch <id> --from <path>
  */
-import { copyFileSync, existsSync, mkdirSync, readFileSync, renameSync, unlinkSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { tmpdir } from 'node:os';
-import { randomBytes } from 'node:crypto';
 import sharp from 'sharp';
+import { atomicCopyFile } from './lib/atomic-fs.mjs';
+import { readArgValue, scriptAnimaticFramesSegment, stretchJobId } from './lib/visual-stretch.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
-const scriptSlug = args[args.indexOf('--script') + 1];
-const stretchId = args[args.indexOf('--stretch') + 1];
-const fromPath = args[args.indexOf('--from') + 1];
+const scriptSlug = readArgValue(args, '--script');
+const stretchId = readArgValue(args, '--stretch');
+const fromPath = readArgValue(args, '--from');
 if (!scriptSlug || !stretchId || !fromPath) {
 	console.error(
 		'Usage: node scripts/register-visual-stretch-sheet.mjs --script <slug> --stretch <id> --from <path>'
@@ -34,20 +34,18 @@ const assetsFile = JSON.parse(readFileSync(assetsPath, 'utf8'));
 const stretch = (script.visualStretches || []).find((item) => item.id === stretchId);
 if (!stretch) throw new Error(`Stretch not found: ${stretchId}`);
 
+const framesSegment = scriptAnimaticFramesSegment(scriptSlug);
 const stretchSlug = stretchId.replace(/[^a-zA-Z0-9_-]+/g, '-');
-const relPath = `/assets/animatic/frames/festival-master/stretches/${stretchSlug}/sheet.png`;
-const absDir = join(ROOT, 'static', 'assets/animatic/frames/festival-master/stretches', stretchSlug);
+const relPath = `/assets/animatic/frames/${framesSegment}/stretches/${stretchSlug}/sheet.png`;
+const absDir = join(ROOT, 'static', 'assets/animatic/frames', framesSegment, 'stretches', stretchSlug);
 const absPath = join(absDir, 'sheet.png');
 mkdirSync(absDir, { recursive: true });
 
-const tempAbs = join(tmpdir(), `vs-sheet-${randomBytes(8).toString('hex')}.png`);
-copyFileSync(fromPath, tempAbs);
-const meta = await sharp(tempAbs).metadata();
+await atomicCopyFile(fromPath, absPath);
+const meta = await sharp(absPath).metadata();
 if (!meta.width || !meta.height) {
-	unlinkSync(tempAbs);
-	throw new Error('sharp could not read dimensions from generator output');
+	throw new Error('sharp could not read dimensions from registered sheet');
 }
-renameSync(tempAbs, absPath);
 
 const assetId = `asset:${stretchSlug}-sheet`;
 const existing = assetsFile.assets.find((a) => a.id === assetId);
@@ -66,7 +64,8 @@ const record = {
 	},
 	metadata: {
 		visualStretchId: stretchId,
-		stretchJobId: `${stretchId}:rev-${stretch.revision}`
+		stretchJobId: stretchJobId(stretch),
+		scriptId: script.script?.id ?? `script:${scriptSlug}`
 	},
 	imageStatus: {
 		status: 'needs_review',
@@ -83,6 +82,6 @@ if (existing) {
 	assetsFile.assets.push(record);
 }
 stretch.combinedStillAssetId = assetId;
-writeFileSync(assetsPath, `${JSON.stringify(assetsFile, null, '\t')}\n`, 'utf8');
-writeFileSync(scriptPath, `${JSON.stringify(script, null, '\t')}\n`, 'utf8');
+writeFileSync(assetsPath, `${JSON.stringify(assetsFile, null, 2)}\n`, 'utf8');
+writeFileSync(scriptPath, `${JSON.stringify(script, null, 2)}\n`, 'utf8');
 console.log(JSON.stringify({ assetId, path: relPath, width: meta.width, height: meta.height }, null, 2));

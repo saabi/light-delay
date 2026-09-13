@@ -365,42 +365,43 @@ export type GenerationPlanFile59 = GenerationPlanFile60[];
 export type GenerationPlanFile61 = string;
 export type GenerationPlanFile55 = GenerationPlanFile56[];
 export type GenerationPlanFile62 = string;
-export type GenerationPlanFile64 = string;
-export type GenerationPlanFile63 = GenerationPlanFile64[];
-export type GenerationPlanFile66 = number;
+export type GenerationPlanFile63 = number;
+export type GenerationPlanFile65 = string;
+export type GenerationPlanFile64 = GenerationPlanFile65[];
 export type GenerationPlanFile67 = number;
 export type GenerationPlanFile68 = number;
-export type GenerationPlanFile69 = '16:9';
-export type GenerationPlanFile71 = number;
-export type GenerationPlanFile70 = GenerationPlanFile71[];
+export type GenerationPlanFile69 = number;
+export type GenerationPlanFile70 = '16:9';
 export type GenerationPlanFile72 = number;
-export type GenerationPlanFile74 = number;
+export type GenerationPlanFile71 = GenerationPlanFile72[];
+export type GenerationPlanFile73 = number;
 export type GenerationPlanFile75 = number;
 export type GenerationPlanFile76 = number;
 export type GenerationPlanFile77 = number;
-export type GenerationPlanFile78 = GenerationPlanFile79 | GenerationPlanFile80;
-export type GenerationPlanFile79 = string;
-export type GenerationPlanFile80 = null;
-export type GenerationPlanFile81 = string;
-export type GenerationPlanFile84 = number;
-export type GenerationPlanFile85 = 'combinedStoryboard' | 'animaticStill' | 'firstFrame' | 'lastFrame' | 'video';
-export type GenerationPlanFile86 = string;
+export type GenerationPlanFile78 = number;
+export type GenerationPlanFile79 = GenerationPlanFile80 | GenerationPlanFile81;
+export type GenerationPlanFile80 = string;
+export type GenerationPlanFile81 = null;
+export type GenerationPlanFile82 = string;
+export type GenerationPlanFile85 = number;
+export type GenerationPlanFile86 = 'combinedStoryboard' | 'animaticStill' | 'firstFrame' | 'lastFrame' | 'video';
 export type GenerationPlanFile87 = string;
-export type GenerationPlanFile90 = number;
-export type GenerationPlanFile91 = string;
-export type GenerationPlanFile93 = string;
-export type GenerationPlanFile92 = GenerationPlanFile93[];
+export type GenerationPlanFile88 = string;
+export type GenerationPlanFile91 = number;
+export type GenerationPlanFile92 = string;
 export type GenerationPlanFile94 = string;
-export type GenerationPlanFile96 = number;
+export type GenerationPlanFile93 = GenerationPlanFile94[];
+export type GenerationPlanFile95 = string;
 export type GenerationPlanFile97 = number;
 export type GenerationPlanFile98 = number;
 export type GenerationPlanFile99 = number;
-export type GenerationPlanFile100 = string;
-export type GenerationPlanFile88 = GenerationPlanFile89[];
-export type GenerationPlanFile82 = GenerationPlanFile83[];
-export type GenerationPlanFile102 = string;
-export type GenerationPlanFile101 = GenerationPlanFile102[];
-export type GenerationPlanFile103 = boolean;
+export type GenerationPlanFile100 = number;
+export type GenerationPlanFile101 = string;
+export type GenerationPlanFile89 = GenerationPlanFile90[];
+export type GenerationPlanFile83 = GenerationPlanFile84[];
+export type GenerationPlanFile103 = string;
+export type GenerationPlanFile102 = GenerationPlanFile103[];
+export type GenerationPlanFile104 = boolean;
 export type GenerationPlanFile43 = GenerationPlanFile44[];
 
 export interface GenerationPlanFile {
@@ -474,14 +475,15 @@ export interface GenerationPlanFile48 {
 	outputTakePolicy: GenerationPlanFile54;
 	memberInputs: GenerationPlanFile55;
 	dependsOnStillJobId?: GenerationPlanFile62;
-	sharedReferenceAssetIds: GenerationPlanFile63;
-	gridLayout?: GenerationPlanFile65;
-	computedMargins?: GenerationPlanFile73;
-	compiledPrompt: GenerationPlanFile78;
-	promptDigest?: GenerationPlanFile81;
-	outputs: GenerationPlanFile82;
-	blockers: GenerationPlanFile101;
-	coherenceException: GenerationPlanFile103;
+	durationMs?: GenerationPlanFile63;
+	sharedReferenceAssetIds: GenerationPlanFile64;
+	gridLayout?: GenerationPlanFile66;
+	computedMargins?: GenerationPlanFile74;
+	compiledPrompt: GenerationPlanFile79;
+	promptDigest?: GenerationPlanFile82;
+	outputs: GenerationPlanFile83;
+	blockers: GenerationPlanFile102;
+	coherenceException: GenerationPlanFile104;
 }
 export interface GenerationPlanFile56 {
 	order: GenerationPlanFile57;
@@ -489,40 +491,40 @@ export interface GenerationPlanFile56 {
 	sourceTakeIds: GenerationPlanFile59;
 	keyframeAssetId?: GenerationPlanFile61;
 }
-export interface GenerationPlanFile65 {
-	rows: GenerationPlanFile66;
-	cols: GenerationPlanFile67;
-	gutterFraction: GenerationPlanFile68;
-	panelAspect: GenerationPlanFile69;
-	blankCells?: GenerationPlanFile70;
-	minOuterMarginFraction?: GenerationPlanFile72;
+export interface GenerationPlanFile66 {
+	rows: GenerationPlanFile67;
+	cols: GenerationPlanFile68;
+	gutterFraction: GenerationPlanFile69;
+	panelAspect: GenerationPlanFile70;
+	blankCells?: GenerationPlanFile71;
+	minOuterMarginFraction?: GenerationPlanFile73;
 }
-export interface GenerationPlanFile73 {
-	top: GenerationPlanFile74;
-	right: GenerationPlanFile75;
-	bottom: GenerationPlanFile76;
-	left: GenerationPlanFile77;
+export interface GenerationPlanFile74 {
+	top: GenerationPlanFile75;
+	right: GenerationPlanFile76;
+	bottom: GenerationPlanFile77;
+	left: GenerationPlanFile78;
 }
-export interface GenerationPlanFile83 {
-	order: GenerationPlanFile84;
-	artifact: GenerationPlanFile85;
-	assetId?: GenerationPlanFile86;
-	supersededByJobId?: GenerationPlanFile87;
-	panels?: GenerationPlanFile88;
+export interface GenerationPlanFile84 {
+	order: GenerationPlanFile85;
+	artifact: GenerationPlanFile86;
+	assetId?: GenerationPlanFile87;
+	supersededByJobId?: GenerationPlanFile88;
+	panels?: GenerationPlanFile89;
 }
-export interface GenerationPlanFile89 {
-	order: GenerationPlanFile90;
-	shotId: GenerationPlanFile91;
-	sourceTakeIds: GenerationPlanFile92;
-	derivedTakeId?: GenerationPlanFile94;
-	frameRegion: GenerationPlanFile95;
-	derivedAssetId?: GenerationPlanFile100;
+export interface GenerationPlanFile90 {
+	order: GenerationPlanFile91;
+	shotId: GenerationPlanFile92;
+	sourceTakeIds: GenerationPlanFile93;
+	derivedTakeId?: GenerationPlanFile95;
+	frameRegion: GenerationPlanFile96;
+	derivedAssetId?: GenerationPlanFile101;
 }
-export interface GenerationPlanFile95 {
-	x: GenerationPlanFile96;
-	y: GenerationPlanFile97;
-	w: GenerationPlanFile98;
-	h: GenerationPlanFile99;
+export interface GenerationPlanFile96 {
+	x: GenerationPlanFile97;
+	y: GenerationPlanFile98;
+	w: GenerationPlanFile99;
+	h: GenerationPlanFile100;
 }
 
 export type DialoguePerformanceFile1 = string;

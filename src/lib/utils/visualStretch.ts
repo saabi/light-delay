@@ -15,5 +15,12 @@ export {
 	findStretchForShot,
 	stretchJobId,
 	buildStretchDigestPayload,
-	findAdjacentUnstretchedPairs
+	findAdjacentUnstretchedPairs,
+	isStretchBlockingComplete,
+	stretchBlockingBlockers,
+	providerAllowsFourByFour,
+	selectLargestSuitableOutputSize,
+	formatBlockingForPrompt,
+	scriptAnimaticFramesSegment,
+	readArgValue
 } from '../../../scripts/lib/visual-stretch.mjs';

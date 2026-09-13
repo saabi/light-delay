@@ -5,22 +5,30 @@
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { createHash } from 'node:crypto';
 import {
-	buildStretchDigestPayload,
 	computeMargins,
 	derivePanelRegions,
+	formatBlockingForPrompt,
+	providerAllowsFourByFour,
+	readArgValue,
 	selectGridForMemberCount,
+	selectLargestSuitableOutputSize,
+	stretchBlockingBlockers,
 	stretchJobId,
 	validateGridLayout,
 	DEFAULT_GUTTER_FRACTION
 } from './lib/visual-stretch.mjs';
+import { computeStretchDigest } from './lib/visual-stretch-digest.mjs';
 import { stripSpokenDialogueQuotes } from './lib/still-prompt-no-dialogue.mjs';
+import {
+	collectStillStretchReferences,
+	referenceBudgetBlockers
+} from './lib/visual-stretch-jobs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
-const scriptSlug = args[args.indexOf('--script') + 1];
-const stretchId = args[args.indexOf('--stretch') + 1];
+const scriptSlug = readArgValue(args, '--script');
+const stretchId = readArgValue(args, '--stretch');
 if (!scriptSlug || !stretchId) {
 	console.error('Usage: node scripts/compile-visual-stretch.mjs --script <slug> --stretch <id>');
 	process.exit(1);
@@ -35,12 +43,12 @@ const stretch = (script.visualStretches || []).find((s) => s.id === stretchId);
 if (!stretch) throw new Error(`Stretch not found: ${stretchId}`);
 
 const shotsById = new Map(script.shots.map((s) => [s.id, s]));
-const takesById = new Map(script.takes.map((t) => [t.id, t]));
 const members = [...stretch.members].sort((a, b) => a.order - b.order);
+const allowFourByFour = providerAllowsFourByFour(stillProvider);
 const layout =
 	stretch.generationProfile?.gridLayout ??
 	(() => {
-		const selected = selectGridForMemberCount(members.length);
+		const selected = selectGridForMemberCount(members.length, { allowFourByFour });
 		if (selected.error) throw new Error(selected.error);
 		return {
 			rows: selected.rows,
@@ -51,20 +59,22 @@ const layout =
 		};
 	})();
 
-const outputSize = stillProvider?.outputSizes?.[0] ?? { width: 1536, height: 1024 };
-const blockers = [];
-for (const err of validateGridLayout(layout, members.length, {
-	outputSize,
-	minPanelResolution: stillProvider?.minPanelResolution
-})) {
-	blockers.push(err);
-}
-const incompleteBlocking = (stretch.presentCharacterIds || []).some((characterId) => {
-	const row = (stretch.blocking || []).find((b) => b.characterId === characterId);
-	return !row?.zoneOrSeat || !row?.posture;
-});
-if (incompleteBlocking) blockers.push('missing_stretch_blocking');
-blockers.push('editorial_prompt_freeze_not_approved');
+const outputSize = selectLargestSuitableOutputSize(
+	stillProvider?.outputSizes,
+	layout,
+	stillProvider?.minPanelResolution
+);
+const stillRefs = collectStillStretchReferences(stretch);
+const blockers = [
+	...stretchBlockingBlockers(stretch),
+	...validateGridLayout(layout, members.length, {
+		outputSize,
+		minPanelResolution: stillProvider?.minPanelResolution,
+		allowFourByFour
+	}),
+	...referenceBudgetBlockers(stillRefs, stillProvider?.limits),
+	'editorial_prompt_freeze_not_approved'
+];
 
 const computedMargins = computeMargins(
 	outputSize,
@@ -72,14 +82,8 @@ const computedMargins = computeMargins(
 	layout.minOuterMarginFraction ?? 0
 );
 const regions = derivePanelRegions(layout, computedMargins);
-const digestPayload = buildStretchDigestPayload({
-	stretch: { ...stretch, generationProfile: { ...stretch.generationProfile, gridLayout: layout } },
-	shotsById,
-	takesById,
-	computedMargins,
-	providerProfileId: stillProvider?.id
-});
-const promptDigest = createHash('sha256').update(JSON.stringify(digestPayload)).digest('hex');
+const promptDigest = computeStretchDigest(stretch, script);
+const blockingLines = formatBlockingForPrompt(stretch.blocking);
 
 const sharedFragment = [
 	'Ordered multi-panel storyboard sheet for a continuous stretch.',
@@ -90,7 +94,7 @@ const sharedFragment = [
 	stretch.lighting?.en ? `Lighting: ${stretch.lighting.en}` : null,
 	stretch.sharedDescription?.en ? `Shared: ${stretch.sharedDescription.en}` : null,
 	`Present cast: ${(stretch.presentCharacterIds || []).join(', ')}.`,
-	`Blocking: ${JSON.stringify(stretch.blocking || [])}.`
+	blockingLines ? `Blocking:\n${blockingLines}` : null
 ]
 	.filter(Boolean)
 	.join('\n');

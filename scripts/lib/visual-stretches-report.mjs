@@ -2,10 +2,11 @@
  * Visual stretches debt / membership report.
  */
 // @ts-nocheck
-import { findAdjacentUnstretchedPairs } from './visual-stretch.mjs';
+import { findAdjacentUnstretchedPairs, stretchBlockingBlockers } from './visual-stretch.mjs';
+import { computeStretchDigest } from './visual-stretch-digest.mjs';
 
 /**
- * @param {object} script
+ * @param {{ visualStretches?: any[], takes?: any[], shots?: any[], script?: { id?: string } }} script
  * @param {object} [_ctx]
  * @param {object} [_projectCtx]
  * @param {string} [language]
@@ -13,19 +14,22 @@ import { findAdjacentUnstretchedPairs } from './visual-stretch.mjs';
 export function buildVisualStretchesReport(script, _ctx, _projectCtx, language = 'en') {
 	const lang = language === 'es' ? 'es' : 'en';
 	const stretches = script.visualStretches || [];
-	const takesById = new Map((script.takes || []).map((t) => [t.id, t]));
 	const rows = stretches.map((stretch) => {
 		const members = [...(stretch.members || [])].sort((a, b) => a.order - b.order);
-		const incompleteBlocking = (stretch.presentCharacterIds || []).some((characterId) => {
-			const row = (stretch.blocking || []).find((b) => b.characterId === characterId);
-			return !row?.zoneOrSeat || !row?.posture;
-		});
+		const blockers = [
+			...stretchBlockingBlockers(stretch),
+			...(!stretch.generationProfile?.gridLayout &&
+			stretch.generationProfile?.stillMode === 'combined_storyboard_sheet'
+				? ['missing_grid_layout']
+				: [])
+		];
+		const currentDigest = computeStretchDigest(stretch, script);
 		const derivedTakes = (script.takes || []).filter(
 			(t) => t.generation?.visualStretchId === stretch.id
 		);
 		const staleDerived = derivedTakes.filter((t) => {
 			if (!t.generation?.stretchDigest) return false;
-			return t.generation.stretchDigest !== stretch.generation?.stretchDigest;
+			return t.generation.stretchDigest !== currentDigest;
 		});
 		return {
 			id: stretch.id,
@@ -37,16 +41,10 @@ export function buildVisualStretchesReport(script, _ctx, _projectCtx, language =
 			stillMode: stretch.generationProfile?.stillMode,
 			gridLayout: stretch.generationProfile?.gridLayout || null,
 			combinedStillAssetId: stretch.combinedStillAssetId || null,
-			incompleteBlocking,
+			incompleteBlocking: blockers.includes('missing_stretch_blocking'),
 			derivedTakeCount: derivedTakes.length,
 			staleDerivedTakeIds: staleDerived.map((t) => t.id),
-			blockers: [
-				...(incompleteBlocking ? ['missing_stretch_blocking'] : []),
-				...(!stretch.generationProfile?.gridLayout &&
-				stretch.generationProfile?.stillMode === 'combined_storyboard_sheet'
-					? ['missing_grid_layout']
-					: [])
-			]
+			blockers
 		};
 	});
 

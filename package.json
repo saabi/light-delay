@@ -81,6 +81,7 @@
 		"compile:visual-stretch": "node scripts/compile-visual-stretch.mjs",
 		"split:visual-stretch": "node scripts/split-visual-stretch-sheet.mjs",
 		"register:visual-stretch-sheet": "node scripts/register-visual-stretch-sheet.mjs",
+		"register:visual-stretch-panels": "node scripts/register-visual-stretch-panels.mjs",
 		"report:editorial": "node scripts/report-editorial.mjs",
 		"report:outline-missing": "node scripts/report-outline-missing.mjs",
 		"report:outline-gaps": "node scripts/report-outline-gaps.mjs",

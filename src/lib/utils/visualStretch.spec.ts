@@ -3,6 +3,7 @@ import {
 	computeMargins,
 	derivePanelRegions,
 	selectGridForMemberCount,
+	selectLargestSuitableOutputSize,
 	validateGridLayout
 } from './visualStretch.ts';
 
@@ -81,5 +82,39 @@ describe('validateGridLayout', () => {
 			3
 		);
 		expect(errors).toEqual([]);
+	});
+
+	it('rejects 4x4 when the provider does not allow it', () => {
+		const errors = validateGridLayout(
+			{ rows: 4, cols: 4, gutterFraction: 0.02, blankCells: [], panelAspect: '16:9' },
+			16,
+			{ allowFourByFour: false }
+		);
+		expect(errors).toContain('grid_layout_4x4_not_allowed');
+	});
+
+	it('accepts 4x4 when the provider allows it', () => {
+		const errors = validateGridLayout(
+			{ rows: 4, cols: 4, gutterFraction: 0.02, blankCells: [], panelAspect: '16:9' },
+			16,
+			{ allowFourByFour: true }
+		);
+		expect(errors).toEqual([]);
+	});
+});
+
+describe('selectLargestSuitableOutputSize', () => {
+	it('picks the largest size that meets min panel resolution', () => {
+		const layout = { rows: 2, cols: 2, gutterFraction: 0.02, blankCells: [4], panelAspect: '16:9' };
+		const size = selectLargestSuitableOutputSize(
+			[
+				{ width: 1024, height: 1024 },
+				{ width: 1536, height: 1024 },
+				{ width: 512, height: 512 }
+			],
+			layout,
+			{ width: 512, height: 288 }
+		);
+		expect(size).toEqual({ width: 1536, height: 1024 });
 	});
 });

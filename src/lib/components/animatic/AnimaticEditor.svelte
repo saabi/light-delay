@@ -1,7 +1,6 @@
 <script lang="ts">
 	import ShotCard from './ShotCard.svelte';
 	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
-	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
 	import ContinuityWarnings from './ContinuityWarnings.svelte';
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import {
