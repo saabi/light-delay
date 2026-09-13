@@ -8,6 +8,8 @@ Local Seed-VC install notes: `E:/Models/Seed-VC/LIGHT_DELAY_NOTES.md`
 
 Spanish translation: [`TTS_VOICE_PIPELINE.es.md`](TTS_VOICE_PIPELINE.es.md).
 
+Deferred parallel stack (not installed): [`production/AUK_INSTALL_PLAN.md`](production/AUK_INSTALL_PLAN.md).
+
 ## 1. Expected tree under `E:\Models\`
 
 ```text

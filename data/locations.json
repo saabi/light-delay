@@ -56,36 +56,6 @@
       }
     },
     {
-      "id": "location:celestial-ardor-command-vestibule",
-      "name": {
-        "es": "Vestíbulo axial de mando",
-        "en": "Command Axial Vestibule"
-      },
-      "description": {
-        "es": "Descanso de la cubierta de mando organizado alrededor de dos escaleras: la abertura de baranda de una queda junto al cilindro de servicio y la de la segunda junto al pozo de ascensor. La escotilla del servicio está retranqueada fuera de la línea visual normal de las consolas.",
-        "en": "Command-deck landing organized around two stairs: one railing opening lands beside the service cylinder and the second beside the lift shaft. The service hatch is recessed beyond the crew stations’ normal sightline."
-      },
-      "referenceAssetIds": [
-        "asset:location-celestial-ardor-bridge-service-shaft-reference"
-      ],
-      "atmosphere": {
-        "es": "Tránsito axial y punto ciego del puente",
-        "en": "Axial transit and bridge blind spot"
-      },
-      "notes": [
-        {
-          "id": "note:celestial-ardor-command-vestibule-visual-reference",
-          "type": "visual",
-          "status": "open",
-          "priority": "medium",
-          "text": {
-            "es": "Falta una referencia visual para el vestíbulo axial de mando; usado en varias escenas del Festival.",
-            "en": "A visual reference for the command axial vestibule is pending; used across several Festival scenes."
-          }
-        }
-      ]
-    },
-    {
       "id": "location:celestial-ardor-central-access",
       "name": {
         "es": "Cilindro central de acceso",
@@ -106,11 +76,11 @@
         {
           "id": "note:celestial-ardor-central-access-visual-reference",
           "type": "visual",
-          "status": "open",
+          "status": "resolved",
           "priority": "medium",
           "text": {
-            "es": "Falta una referencia visual para el cilindro central de acceso; es una de las tres rutas de la persecución del Festival.",
-            "en": "A visual reference for the central access cylinder is pending; it is one of the Festival chase's three routes."
+            "es": "La referencia visual del cilindro central de acceso ya está generada y conectada; queda pendiente la revisión editorial.",
+            "en": "The central access cylinder reference is generated and wired to the master-derived location; editorial review remains pending."
           }
         }
       ]
@@ -136,11 +106,11 @@
         {
           "id": "note:celestial-ardor-service-cylinder-visual-reference",
           "type": "visual",
-          "status": "open",
+          "status": "resolved",
           "priority": "medium",
           "text": {
-            "es": "Falta una referencia visual para el cilindro de servicio; es una de las tres rutas de la persecución del Festival.",
-            "en": "A visual reference for the service cylinder is pending; it is one of the Festival chase's three routes."
+            "es": "La referencia visual del cilindro de servicio ya está generada y conectada; queda pendiente la revisión editorial.",
+            "en": "The service cylinder reference is generated and wired to the master-derived location; editorial review remains pending."
           }
         }
       ]
@@ -185,11 +155,11 @@
         {
           "id": "note:reactor-service-bay-visual-reference",
           "type": "visual",
-          "status": "open",
+          "status": "resolved",
           "priority": "high",
           "text": {
-            "es": "Falta una referencia visual derivada del master para este espacio. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.",
-            "en": "A master-derived visual reference for this space is pending. The obsolete diplomatic-core-room sheet must not be used as a substitute."
+            "es": "La referencia visual derivada del master para este espacio ya está generada y conectada; queda pendiente la revisión editorial.",
+            "en": "The master-derived visual reference for this space is generated and wired; editorial review remains pending."
           }
         }
       ]
@@ -216,11 +186,11 @@
         {
           "id": "note:inner-shielding-vault-visual-reference",
           "type": "visual",
-          "status": "open",
+          "status": "resolved",
           "priority": "high",
           "text": {
-            "es": "Falta una referencia visual derivada del master para la bóveda y su cerradura local. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.",
-            "en": "A master-derived visual reference for the vault and its local lock is pending. The obsolete diplomatic-core-room sheet must not be used as a substitute."
+            "es": "La referencia visual derivada del master para la bóveda y su cerradura local ya está generada y conectada; queda pendiente la revisión editorial.",
+            "en": "The master-derived visual reference for the vault and its local lock is generated and wired; editorial review remains pending."
           }
         }
       ]

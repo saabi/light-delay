@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "98a9a4788d38d2268ed506a138710f0e4a714848e88e0ca29c95d630acc0db0f",
+    "sourceDigest": "b0cce937c9ce7fd2af84597cc6a76b7fa2a95a3241de2dde9b70a6ff4d4929e8",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -1231,7 +1231,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -1307,7 +1307,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -1383,7 +1383,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -1604,14 +1604,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -1674,14 +1674,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -1735,14 +1735,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -1797,7 +1797,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -1852,7 +1852,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -1938,13 +1938,6 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
-          "required": true,
-          "role": "location"
         }
       ],
       "segments": [
@@ -1998,13 +1991,6 @@
           "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
           "required": true,
           "role": "location"
         }
@@ -2135,14 +2121,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2205,7 +2191,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -2260,7 +2246,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -2315,7 +2301,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2370,7 +2356,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2425,7 +2411,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2480,7 +2466,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2534,7 +2520,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2588,7 +2574,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2642,7 +2628,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2704,7 +2690,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2766,7 +2752,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2828,7 +2814,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2883,14 +2869,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -3152,14 +3138,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -3221,7 +3207,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -3277,14 +3263,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -3340,7 +3326,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -3401,14 +3387,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
@@ -3505,7 +3491,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -4166,21 +4152,21 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -4243,7 +4229,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -4319,7 +4305,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -4640,14 +4626,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -4792,7 +4778,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -4847,7 +4833,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -5516,7 +5502,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -5677,7 +5663,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -5753,21 +5739,21 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -5829,7 +5815,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -5892,7 +5878,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -5967,14 +5953,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -6050,7 +6036,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -6127,7 +6113,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -6203,14 +6189,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -6286,7 +6272,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -6356,7 +6342,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -7169,14 +7155,14 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         },
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
           "required": true,
           "role": "location"
         }
@@ -7315,7 +7301,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -7377,7 +7363,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+          "path": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }

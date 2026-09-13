@@ -7,6 +7,19 @@
 > Autoridad vigente: master WIP rev. 19 en `data/outlines/light-delay-master-narrative.json`.
 > Este documento conserva diseño anterior; las notas explícitas del master prevalecen.
 
+> **Corrección pendiente (2026-09-13):** `location:celestial-ardor-command-vestibule` fue
+> eliminada de `data/locations.json` por ser una entidad duplicada/errónea — la descripción
+> propia de `location:celestial-ardor-bridge` ya cubre por completo la escotilla de servicio
+> oculta de la línea visual de los puestos, sin necesitar un "vestíbulo" aparte. Este documento
+> sigue describiendo ese vestíbulo como un espacio 3D independiente con coordenadas Y propias
+> (asa de agarre `Ardor_CommandVestibule_ShaftGrip_*`, riel de acceso al collar, huecos de tronco,
+> etc.) — no se ha reescrito esa parte porque describe geometría ya modelada en Blender que
+> requiere verificación directa contra el archivo `.blend` real antes de tocarla seguro. Quien
+> retome el modelado debe: (1) tratar el "vestíbulo de mando" como una zona dentro de la misma
+> cámara del puente, no como un compartimento separado; (2) revisar si el asa `ShaftGrip` y el
+> tramo de acceso al collar siguen siendo necesarios sin esa distinción de espacios; (3) no
+> reintroducir la entidad de ubicación en `data/locations.json`.
+
 ## 1. Identidad y función
 
 La **Celestial Ardor** es una nave humana de larga duración construida originalmente en la Tierra y destinada posteriormente en la Estación Proxima. Ya se encontraba en Proxima, junto con su tripulación, cuando se descubrió la garganta piloto Velari. No fue diseñada para el primer contacto y recibió en Proxima las adaptaciones necesarias para la misión.

@@ -1733,7 +1733,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -1966,7 +1966,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -2012,7 +2012,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }
@@ -2390,7 +2390,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+          "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
         }
@@ -2525,15 +2525,7 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
-          "required": true,
-          "role": "location"
-        }
-      ],
+      "requiredReferences": [],
       "segments": [
         {
           "id": "main:shot-07-07:segment-01",
@@ -2898,15 +2890,7 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
-          "required": true,
-          "role": "location"
-        }
-      ],
+      "requiredReferences": [],
       "segments": [
         {
           "id": "main:shot-08-05:segment-01",
@@ -2948,7 +2932,7 @@
         {
           "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
-          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
         }

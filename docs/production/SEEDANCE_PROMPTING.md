@@ -160,6 +160,12 @@ microgravity fails, reduce speed and motion range before piling on negatives.
 
 ## 6. Audio, dialogue, and text
 
+**Unlike storyboard stills**, Seedance jobs are allowed — and expected — to include spoken cue
+text and approved voice-sample `@Audio` references. The still-only scrub
+(`npm run scrub:still-prompts:check`) must not be applied here. Visual physics (gravity, suit
+state, etc.) remains explicit in the prompt the same way as stills: the model does not inherit
+scene `setting.continuity` (`DIALOGUE_AND_PROMPT_LESSONS.md` §2c).
+
 2.5 generates native audio in the same pass. Optional explicit markup in some BytePlus/fal materials:
 
 | Content | Markup | Example |

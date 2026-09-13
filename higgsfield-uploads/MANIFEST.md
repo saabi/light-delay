@@ -20,7 +20,7 @@ Copias renombradas para subir a Higgsfield. Origen canónico: `static/assets/`.
 | `locations/light-delay-location-proxima-station.png` | Estación Proxima | location | `static/assets/locations/proxima-station/proxima-with-ardor-berthed.png` |
 | `locations/light-delay-location-proxima-dock.png` | Muelle axial de Proxima | location | `static/assets/locations/proxima-dock/concept-sheet-v3.png` |
 | `locations/light-delay-location-celestial-ardor-bridge.png` | Puente del Celestial Ardor | location | `static/assets/locations/celestial-ardor-bridge/realistic-reference.png` |
-| `locations/light-delay-location-celestial-ardor-engineering.png` | Ingeniería del Celestial Ardor | location | `static/assets/locations/celestial-ardor-engineering/concept-sheet-v2.png` |
+| `locations/light-delay-location-celestial-ardor-engineering.png` | Ingeniería del Celestial Ardor | location | `static/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png` |
 | `locations/light-delay-location-diplomatic-core-room.png` | Sala del núcleo diplomático | location | `static/assets/locations/diplomatic-core-room/concept-sheet.png` |
 | `locations/light-delay-location-velari-wormhole-mouth.png` | Boca Velari del túnel | location | `static/assets/locations/velari-wormhole-mouth/concept-sheet.png` |
 | `locations/light-delay-location-velari-station.png` | Estación Velari | location | `static/assets/locations/velari-station/concept-sheet.png` |

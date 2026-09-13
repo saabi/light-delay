@@ -12,9 +12,9 @@ short → suspicion → reveal → unresolved ticking clock → title/tagline/cr
 resolves — rebuilt entirely from festival-master's actual 103 shots and dialogue.
 
 **Image reuse convention**: each shot's take copies `imageAssetId` directly from its
-`festival-master` source shot when one already exists (no re-render needed). For the 6 shots whose
-source is still mid-regeneration in festival-master (from the earlier gravity-staging fix), the
-trailer take carries its own standalone `generation.prompt` instead of depending on a pending image.
+`festival-master` source shot when one already exists (no re-render needed). Six shots that
+formerly carried only a standalone `generation.prompt` (festival source pending) now reuse the
+current festival stills; `shot-c-03` uses a deliberate pure-black frame.
 
 **Dialogue audio reuse**: every spoken English cue points at the Festival-master WAV via the same
 `audioAssetId` (no new TTS). Shot durations were refit to those measured performances, so the
@@ -44,15 +44,15 @@ Relink and refit: `npm run fit:trailer-master-dialogue-audio`.
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
 | `shot-b-01` | `shot-plan-016` | reused | zao: "Something's off. We used more fuel than we had to." |
-| `shot-b-02` | `shot-plan-021` | **own prompt** (source pending) | zao: "A geophysical impulse package. Multi-megaton." (condensed from the source's fuller line) |
+| `shot-b-02` | `shot-plan-021` | reused | zao: "A geophysical impulse package. Multi-megaton." (condensed from the source's fuller line) |
 
 ## Scene c — The warning (~8.0s)
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
-| `shot-c-01` | `shot-plan-023` | **own prompt** (source pending) | zao: "Bridge, Zao. I have found a grave attempt to sabotage the mission—" |
-| `shot-c-02` | `shot-plan-024` | **own prompt** (source pending) | voss: "Zao? Repeat." |
-| `shot-c-03` | — (new) | new black frame | (hard cut to black, no dialogue — the attack happens off-page) |
+| `shot-c-01` | `shot-plan-023` | reused | zao: "Bridge, Zao. I have found a grave attempt to sabotage the mission—" |
+| `shot-c-02` | `shot-plan-024` | reused | voss: "Zao? Repeat." |
+| `shot-c-03` | — (new) | black frame | (hard cut to black, no dialogue — the attack happens off-page) |
 
 ## Scene d — Suspicion (~9.0s)
 
@@ -72,9 +72,9 @@ Relink and refit: `npm run fit:trailer-master-dialogue-audio`.
 
 | Shot | Source | Image | Line(s) |
 | --- | --- | --- | --- |
-| `shot-f-01` | `shot-plan-081` | **own prompt** (source pending) | rao: "It's keyed to the ship's own clock." (condensed) |
-| `shot-f-02` | `shot-plan-082` | **own prompt** (source pending) | voss: "Status?" / rao: "It isn't disarmed. It just isn't going off here." |
-| `shot-f-03` | `shot-plan-087` | **own prompt** (source pending) | (silent — wordless, unresolved tease of the Velari ship) |
+| `shot-f-01` | `shot-plan-081` | reused | rao: "It's keyed to the ship's own clock." (condensed) |
+| `shot-f-02` | `shot-plan-082` | reused | voss: "Status?" / rao: "It isn't disarmed. It just isn't going off here." |
+| `shot-f-03` | `shot-plan-087` | reused | (silent — wordless, unresolved tease of the Velari ship) |
 | `shot-f-04` | `shot-plan-039` | reused | harlan: "No stopping it now." (button line before the title) |
 
 ## Scene g — Title, tagline, credits (~13s)
@@ -94,7 +94,5 @@ verbatim instead, only the backing images are shared with festival-master's cred
 
 ## Regeneration list
 
-Exactly the 6 shots whose festival-master source is still pending its own regeneration:
-`shot-b-02`, `shot-c-01`, `shot-c-02`, `shot-f-01`, `shot-f-02`, `shot-f-03` — plus the brand-new
-black-frame shot `shot-c-03`. The remaining 15 shots reuse an already-generated frame and need no
-new image work.
+None pending for picture: all 22 trailer takes resolve to an on-disk still (15 festival reuse +
+6 newly wired festival frames + 1 black frame for `shot-c-03`).

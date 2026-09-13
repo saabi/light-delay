@@ -106,6 +106,42 @@
       "status": "reviewed"
     },
     {
+      "id": "context:ardor-post-climax-microgravity",
+      "label": {
+        "es": "Espera en microgravedad tras el clímax",
+        "en": "Post-climax microgravity hold"
+      },
+      "physics": {
+        "es": "Tras el cuarto y último corte de empuje, cerca de las coordenadas de primer contacto, la tripulación mantiene la nave sin empuje deliberadamente por seguridad; ningún reencendido ocurre antes del final de la película: cuerpos y objetos permanecen en microgravedad durante el saludo, la disculpa y el epílogo.",
+        "en": "After the fourth and final thrust cutoff, near the scheduled first-contact coordinates, the crew deliberately holds the ship without thrust for safety; no relight occurs before the film's end — bodies and objects remain in microgravity through the greeting, the apology, and the epilogue."
+      },
+      "visualRules": [
+        {
+          "es": "Igual que en el corte remoto: sólo se elevan correas, cables flexibles, cabello y elementos sueltos ya establecidos; nada de objetos peligrosos sin asegurar.",
+          "en": "Same as the remote cutoff: only straps, flexible cables, hair, and already-established loose items rise; no unsecured hazardous objects."
+        }
+      ],
+      "soundRules": [
+        {
+          "es": "Sin empuje ni vibración estructural; permanecen ventilación, voces y comunicaciones.",
+          "en": "No thrust or structural vibration; ventilation, voices, and comms remain."
+        }
+      ],
+      "sourceRefs": [
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0157"
+        },
+        {
+          "kind": "script",
+          "scriptId": "script:light-delay-festival-master",
+          "cueId": "festival-master:cue-0171"
+        }
+      ],
+      "status": "draft"
+    },
+    {
       "id": "context:ardor-exterior-vacuum",
       "label": {
         "es": "Exterior de la Ardor en vacío",
@@ -397,11 +433,7 @@
         "festival-master:scene-22",
         "festival-master:scene-23",
         "festival-master:scene-24",
-        "festival-master:scene-25",
-        "festival-master:scene-28",
-        "festival-master:scene-29",
-        "festival-master:scene-31",
-        "festival-master:scene-32"
+        "festival-master:scene-25"
       ]
     },
     {
@@ -426,6 +458,16 @@
       "contextId": "context:ardor-remote-cutoff-transition",
       "scriptId": "script:light-delay-festival-master",
       "sceneIds": ["festival-master:scene-26", "festival-master:scene-27"]
+    },
+    {
+      "contextId": "context:ardor-post-climax-microgravity",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": [
+        "festival-master:scene-28",
+        "festival-master:scene-29",
+        "festival-master:scene-31",
+        "festival-master:scene-32"
+      ]
     },
     {
       "contextId": "context:ardor-exterior-vacuum",

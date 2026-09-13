@@ -57,12 +57,52 @@ must not carry an audio cue in its `description`/`prompt` — physical consequen
 gravity — e.g. pressurization, lighting mode changes, alarm states) should get the same "establish
 richly once, then let repetition carry itself" treatment rather than a cue on every occurrence.
 
+**Does not apply to still-image generation prompts.** §2 is about how a **human viewer** experiences
+emphasis across a *sequence* of moving shots. A still generator sees only this request's prompt text
+plus attached reference assets — it has no memory of scene `setting.continuity`, adjacent shots, or
+earlier "teaching" cues. See §2c.
+
 ## 2b. Dialogue clarity for a general audience
 
 Split out into its own document, `DIALOGUE_CLARITY_GUIDE.md` — it covers a distinct failure mode
 (accurate, in-character lines that are still too compressed for an audience to parse on one hearing)
 with its own worked examples and audit method. Read it alongside this section whenever revising
 dialogue, not just when auditing prompts.
+
+## 2c. Stateless still prompts: restate what the model cannot inherit
+
+**What happened (`shot-plan-021` and peers):** scene `setting.continuity` correctly marked
+microgravity, and §2 allowed later vault shots to stay "terse" for the *audience*. The still
+generator never sees that scene field. Prompts that only said "preserve … physics" without naming
+microgravity vs 1 g left gravity underspecified for a one-shot, memoryless request.
+
+**Rule (stills / storyboard / first–last frame image prompts):** every fact the image model must
+know has to arrive in **this** request — as prompt text and/or an attached reference asset. The
+model cannot inherit scene-level continuity, outline context, production contexts, or neighboring
+shots unless those facts are restated or shown in an attached sheet.
+
+Concretely:
+
+- **Gravity:** any still that depicts a body, planted stance, or loose object must carry an
+  **explicit, correct** gravity statement (e.g. microgravity with drift / handholds, or steady
+  thrust 1 g with weight). Full stop. Do not rely on scene continuity alone.
+- **Other non-inherited state:** same bar for suit/helmet, prop ownership, diegetic screen content
+  (English-only), lighting mode, vacuum vs pressurized — anything that changes how the frame
+  should look and is not already unambiguous on an attached reference.
+- **Reference sheets:** appearance locked by an attached sheet need not be re-litigated in prose
+  (§6); **state that the sheet does not show** (gravity, this-moment pose, which prop is in hand)
+  still belongs in the prompt.
+- **Spoken dialogue:** stills must **not** include spoken lines or subtitle text
+  (`npm run scrub:still-prompts:check`). That exception is for **stills only**.
+- **Video (e.g. Seedance 2.5):** different contract — cue text plus approved voice-sample `@Audio`
+  refs are inputs the model is meant to use for speech. Do not apply the still no-dialogue scrub
+  to Seedance job prompts; see `SEEDANCE_PROMPTING.md` §6. Physics and other visual state still
+  need to be explicit in the video prompt the same way (the model does not read `ScriptFile`
+  scene continuity either).
+
+**Apply to the rest of the corpus:** when auditing or compiling still prompts, treat missing
+gravity (or other load-bearing physical state) on a body/loose-object frame as a defect even if
+the scene is correctly marked microgravity/1 g and §2 would omit a repeated *audience* cue.
 
 ## 3. Dialogue must match the speaker's actual belief state, not the audience's later knowledge
 
@@ -123,7 +163,8 @@ prefer the entity's own catalog name plus its own distinguishing physical traits
 ## 6. Standalone-prompt economy: don't compete with a reference sheet that already exists
 
 Every prompt is read standalone, accompanied only by whichever reference-sheet assets are attached —
-never alongside this document or any other prompt. Two failure modes follow directly from that:
+never alongside this document, the scene record, or any other prompt (§2c). Two failure modes follow
+directly from that:
 
 - **No reference sheet exists yet:** describe the entity fully and by name (per §5) — the prompt is
   the only source of truth the generator has.
@@ -159,10 +200,12 @@ same adjacent-shot consistency check.
 
 ## 8. Already solved — don't re-solve these by hand
 
-- **Spoken dialogue leaking into image prompts.** A concurrent pass added
+- **Spoken dialogue leaking into *still* image prompts.** A concurrent pass added
   `scripts/lib/still-prompt-no-dialogue.mjs` and `npm run scrub:still-prompts:check`: omitting the
   spoken line from `generation.prompt` is sufficient; don't pad prompts with "avoid subtitles"
-  boilerplate. Use the existing tool rather than hand-auditing for this.
+  boilerplate. Use the existing tool rather than hand-auditing for this. **Does not apply to
+  Seedance / video prompts**, which intentionally carry cue text and voice-sample audio refs
+  (`SEEDANCE_PROMPTING.md` §6).
 - **Trailer-style condensing without losing the causal payload.** The trailer-master build condensed
   several lines for pacing (e.g. Zao's long vault-discovery paragraph down to *"If this reaches you —
   I found a weapon in the shielded vault."*) — the rule there, worth reusing anywhere else a line gets
@@ -179,11 +222,12 @@ for stills). Concretely:
 - §1 (edit `description`, not the derived artifact) applies unchanged — `firstFrame`/`lastFrame`/video
   prompts will be compiled from the same shot data, so the same drift risk exists the moment any of
   those artifacts get hand-touched independently of `description`.
-- §2 (physics-transition legibility, sound-in-vacuum) maps directly onto the `physics` and `audio`
-  sections of `compilePrompt`. It matters *more* for `firstFrame`/`lastFrame` than for a single still,
-  since a transition shot's first and last frame are the two instants where the "before" and "after"
-  state actually have to read as different at a glance — that's precisely where the established/
-  reinforced legibility cue (§2) should land, not buried mid-shot.
+- §2 (audience physics-transition *legibility* economy) still guides how richly the *story*
+  dramatizes a recurring thrust cut; §2c requires every compiled `physics` string (and still /
+  first–last image prompt) to **name the correct gravity state** anyway — the generator is
+  stateless. Sound-in-vacuum stays in `audio` / description craft. For `firstFrame`/`lastFrame`,
+  put the §2 *teaching* cue on the pair of frames that must read as before/after at a glance, and
+  still state gravity explicitly on both.
 - §5/§6 (catalog naming, reference-sheet economy) apply identically — a video segment's `subjects`/
   `continuity` sections need the same entity-identity discipline as a still's prompt.
 - §7 (costume/equipment continuity) matters most at segment boundaries: a `lastFrame` anchor and the

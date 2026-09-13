@@ -55,7 +55,7 @@
       "entityId": "location:celestial-ardor-reactor-service-bay",
       "kind": "location",
       "status": "generated",
-      "outputPath": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v3.png",
+      "outputPath": "/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
       "dimensions": {
         "width": 1536,
         "height": 1024
@@ -67,11 +67,11 @@
       "references": [
         {
           "assetId": "asset:location-celestial-ardor-engineering-sheet",
-          "role": "style and engineering anchor"
+          "role": "authoritative visual continuity reference"
         },
         {
           "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "role": "interior materials and lighting anchor"
+          "role": "authoritative visual continuity reference"
         }
       ],
       "prompt": {
@@ -94,7 +94,7 @@
         "avoid": "Luxury spaceship styling, fantasy machinery, giant glowing reactor, exposed vacuum, cyan sphere, logos, watermark, illegible dense text."
       },
       "review": {
-        "notes": "Regenerated against current master Ardor/Velari visual continuity; editorial review pending.",
+        "notes": "Regenerated with current master references; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -103,7 +103,7 @@
       "entityId": "location:celestial-ardor-inner-shielding-vault",
       "kind": "location",
       "status": "generated",
-      "outputPath": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet.png",
+      "outputPath": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
       "dimensions": {
         "width": 1536,
         "height": 1024
@@ -115,11 +115,11 @@
       "references": [
         {
           "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "role": "continuity and material anchor"
+          "role": "authoritative visual continuity reference"
         },
         {
           "assetId": "asset:location-celestial-ardor-engineering-sheet",
-          "role": "engineering anchor"
+          "role": "authoritative visual continuity reference"
         }
       ],
       "prompt": {
@@ -140,6 +140,10 @@
         "textVerbatim": "Only generic English safety labels; no Spanish or bilingual labels.",
         "constraints": "The local lock must visibly be separate from the network; preserve physical continuity with the service bay; do not depict the obsolete diplomatic core room.",
         "avoid": "Glowing quantum sphere, luxury styling, fantasy machinery, unexplained neon, logos, watermark."
+      },
+      "review": {
+        "notes": "Regenerated with current master references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -147,42 +151,46 @@
       "entityId": "location:celestial-ardor-central-access",
       "kind": "location",
       "status": "generated",
-      "outputPath": "/assets/locations/celestial-ardor-central-access/concept-sheet-v2.png",
+      "outputPath": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
       "dimensions": {
         "width": 1536,
         "height": 1024
       },
       "styleAnchorAssetIds": [
+        "asset:location-celestial-ardor-engineering-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
       "references": [
         {
-          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "role": "authoritative helical-stair and bridge-material anchor"
+          "assetId": "asset:location-celestial-ardor-engineering-sheet",
+          "role": "authoritative visual continuity reference"
         },
         {
-          "assetId": "asset:location-celestial-ardor-central-access-sheet",
-          "role": "existing shaft geometry anchor"
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "authoritative visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Light Delay master location reference sheet",
-        "primaryRequest": "Create the Celestial Ardor central access cylinder while preserving the bridge's two helical staircases, railing profile, and landing language.",
+        "primaryRequest": "Regenerate the Celestial Ardor central access cylinder with a genuinely open central shaft and twin helical staircases wrapping the void.",
         "inputImages": [
-          "Image 1: authoritative bridge interior with helical stairs and continuous railings",
-          "Image 2: existing central-access shaft geometry"
+          "Image 1: authoritative Ardor engineering cutaway and orientation",
+          "Image 2: authoritative Ardor bridge interior and helical-rail language"
         ],
-        "sceneBackdrop": "Main vertical deck-to-deck circulation shaft connecting transverse decks in microgravity.",
-        "subject": "Two helical staircases around the central opening, continuous inner and outer railings, pressure hatches, landings, and hand-over-hand crew route.",
-        "styleMedium": "Photorealistic cinematic grounded hard science fiction matching the attached Light Delay bridge and shaft references.",
-        "compositionFraming": "1536x1024 sheet with a dominant tall vertical shaft view plus helical-stair junction, landing/hatch, microgravity transit, and section insets.",
+        "sceneBackdrop": "Vertical deck-to-deck circulation shaft in microgravity; longitudinal ship axis presented through stacked decks.",
+        "subject": "Two opposed helical staircases, continuous rails, landings, pressure hatches, and a clear approximately two-metre central opening usable for a microgravity dive.",
+        "styleMedium": "Photorealistic cinematic hard-science-fiction production-design concept art matching Light Delay.",
+        "compositionFraming": "1536x1024 landscape sheet with tall shaft hero, longitudinal elevation, open-center section, and landing detail.",
         "lightingMood": "Neutral practical work lighting.",
-        "colorPalette": "Warm off-white, light gray, graphite, muted slate-blue/teal, amber markers.",
-        "materialsTextures": "Scuffed composite panels, brushed rails matching the bridge, gasketed hatches, cable trays.",
-        "textVerbatim": "CENTRAL ACCESS, DECK 01, DECK 02, DECK 03, FORE, AFT, THRUST AXIS, GRAVITY UNDER THRUST; English only.",
-        "constraints": "The shaft is longitudinal in the ship but must read vertically through stacked decks; preserve the bridge's two helical staircases and continuous railings; distinguish it from the service shaft's ladder segments and side hatches.",
-        "avoid": "Horizontal hallway, impossible ladders, service-shaft geometry, open vacuum, luxury styling, magical gravity, logos, watermark."
+        "colorPalette": "Warm off-white, light gray, graphite, muted slate-blue/teal, small amber markers.",
+        "materialsTextures": "Scuffed composite panels, brushed rails, gasketed hatches, cable trays, realistic maintenance wear.",
+        "constraints": "The center is empty space from top to bottom; no column, pillar, solid core, or filled hub. English-only labels.",
+        "avoid": "Solid central column, filled core, closed stairwell, horizontal hallway, service-shaft ladder geometry, open vacuum, fantasy technology, planets, logos, watermark, bilingual labels."
+      },
+      "review": {
+        "notes": "Regenerated with a clear two-metre central opening; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -190,22 +198,23 @@
       "entityId": "location:celestial-ardor-service-cylinder",
       "kind": "location",
       "status": "generated",
-      "outputPath": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v4.png",
+      "outputPath": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
       "dimensions": {
         "width": 1536,
         "height": 1024
       },
       "styleAnchorAssetIds": [
-        "asset:location-celestial-ardor-bridge-service-shaft-reference"
+        "asset:location-celestial-ardor-bridge-service-shaft-reference",
+        "asset:location-celestial-ardor-engineering-sheet"
       ],
       "references": [
         {
           "assetId": "asset:location-celestial-ardor-bridge-service-shaft-reference",
-          "role": "bridge service-hatch staging anchor"
+          "role": "authoritative visual continuity reference"
         },
         {
-          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "role": "ship material and railing continuity anchor"
+          "assetId": "asset:location-celestial-ardor-engineering-sheet",
+          "role": "authoritative visual continuity reference"
         }
       ],
       "prompt": {
@@ -228,7 +237,7 @@
         "avoid": "Horizontal hallway, end-cap doors, central helical stairs, wireless-only device, fantasy hologram, luxury styling, logos, watermark."
       },
       "review": {
-        "notes": "Regenerated against current master Ardor/Velari visual continuity; editorial review pending.",
+        "notes": "Regenerated with current master references; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -237,18 +246,23 @@
       "entityId": "object:proxima-geophysical-impulse-package",
       "kind": "prop",
       "status": "generated",
-      "outputPath": "/assets/props/proxima-geophysical-impulse-package/prop-sheet.png",
+      "outputPath": "/assets/props/proxima-geophysical-impulse-package/prop-sheet-v2.png",
       "dimensions": {
         "width": 1536,
         "height": 1024
       },
       "styleAnchorAssetIds": [
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:object-optical-contingency-transmitter-sheet",
+        "asset:location-celestial-ardor-inner-shielding-vault-sheet"
       ],
       "references": [
         {
           "assetId": "asset:object-optical-contingency-transmitter-sheet",
-          "role": "prop sheet style anchor"
+          "role": "authoritative visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "role": "authoritative visual continuity reference"
         }
       ],
       "prompt": {
@@ -265,6 +279,10 @@
         "textVerbatim": "RADIATION, SERVICE INPUT, and neutral coordinate/time display; English only.",
         "constraints": "Not a glowing sphere or diplomatic core; believable tonne-scale package.",
         "avoid": "Fantasy weapon, missile silhouette, exposed explosive, logos, watermark."
+      },
+      "review": {
+        "notes": "Regenerated with current master references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -272,18 +290,23 @@
       "entityId": "object:harlan-wrist-device",
       "kind": "prop",
       "status": "generated",
-      "outputPath": "/assets/props/harlan-wrist-device/prop-sheet.png",
+      "outputPath": "/assets/props/harlan-wrist-device/prop-sheet-v2.png",
       "dimensions": {
         "width": 1536,
         "height": 1024
       },
       "styleAnchorAssetIds": [
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:object-optical-contingency-transmitter-sheet",
+        "asset:location-celestial-ardor-service-cylinder-sheet"
       ],
       "references": [
         {
           "assetId": "asset:object-optical-contingency-transmitter-sheet",
-          "role": "prop sheet style anchor"
+          "role": "authoritative visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "role": "authoritative visual continuity reference"
         }
       ],
       "prompt": {
@@ -300,6 +323,10 @@
         "textVerbatim": "JAMMER, VAULT LOCK, STATUS; English only.",
         "constraints": "Compact physical device, not holographic; consistent across both functions.",
         "avoid": "Smartphone, weapon gauntlet, fantasy hologram, logos, watermark."
+      },
+      "review": {
+        "notes": "Regenerated with current master references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -307,18 +334,23 @@
       "entityId": "object:time-reference-diagnostic-unit",
       "kind": "prop",
       "status": "generated",
-      "outputPath": "/assets/props/time-reference-diagnostic-unit/prop-sheet.png",
+      "outputPath": "/assets/props/time-reference-diagnostic-unit/prop-sheet-v2.png",
       "dimensions": {
         "width": 1536,
         "height": 1024
       },
       "styleAnchorAssetIds": [
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:object-optical-contingency-transmitter-sheet",
+        "asset:location-celestial-ardor-inner-shielding-vault-sheet"
       ],
       "references": [
         {
           "assetId": "asset:object-optical-contingency-transmitter-sheet",
-          "role": "prop sheet style anchor"
+          "role": "authoritative visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "role": "authoritative visual continuity reference"
         }
       ],
       "prompt": {
@@ -335,6 +367,10 @@
         "textVerbatim": "TIME REFERENCE, INPUT, OUTPUT, and neutral timecode; English only.",
         "constraints": "Same unit must match in separated scenes; not a detonator or weapon.",
         "avoid": "Bomb detonator, smartphone, giant hologram, logos, watermark."
+      },
+      "review": {
+        "notes": "Regenerated with current master references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -540,7 +576,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -618,7 +654,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -702,7 +738,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -786,7 +822,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -840,7 +876,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -894,7 +930,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -978,8 +1014,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -1056,7 +1092,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1134,7 +1170,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1212,7 +1248,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1290,7 +1326,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1368,7 +1404,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1446,7 +1482,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1512,7 +1548,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1578,7 +1614,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1644,7 +1680,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -1692,8 +1728,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -1746,8 +1782,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -1812,8 +1848,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -1878,8 +1914,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -1944,8 +1980,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -1998,8 +2034,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale: the still shows CONTACT COORDINATES on the controller. The device only has a timer set to arrival time.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2052,7 +2088,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated with current visual references; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -2130,7 +2166,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -2214,7 +2250,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -2292,7 +2328,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -2364,8 +2400,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Reference invalidated: regenerate against central-access v4 with a clear two-metre central opening.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2424,8 +2460,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2472,8 +2508,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2526,8 +2562,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2580,8 +2616,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2634,8 +2670,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2688,8 +2724,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2742,8 +2778,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2796,8 +2832,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2850,8 +2886,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2910,8 +2946,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -2970,8 +3006,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -3030,8 +3066,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -3096,8 +3132,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -3282,8 +3318,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -3360,8 +3396,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -3540,8 +3576,8 @@
         "avoid": "Off-screen characters, planets, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -3678,7 +3714,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -3750,7 +3786,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -3822,7 +3858,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -3894,7 +3930,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -3966,7 +4002,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4038,7 +4074,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4110,7 +4146,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4194,8 +4230,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Reference invalidated: regenerate against central-access v4 with a clear two-metre central opening.",
+        "regenerationRequired": false
       }
     },
     {
@@ -4248,7 +4284,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4314,7 +4350,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4386,7 +4422,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4458,7 +4494,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4506,7 +4542,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4602,8 +4638,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -4680,7 +4716,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4734,7 +4770,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4782,7 +4818,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4854,7 +4890,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4926,7 +4962,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -4998,7 +5034,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -5070,7 +5106,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -5142,7 +5178,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -5214,7 +5250,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -5292,7 +5328,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -5370,8 +5406,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -5436,7 +5472,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -5508,8 +5544,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -5592,8 +5628,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Reference invalidated: regenerate against central-access v4 with a clear two-metre central opening.",
+        "regenerationRequired": false
       }
     },
     {
@@ -5652,8 +5688,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -5706,7 +5742,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -5784,8 +5820,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Reference invalidated: regenerate against central-access v4 with a clear two-metre central opening.",
+        "regenerationRequired": false
       }
     },
     {
@@ -5862,8 +5898,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -5934,8 +5970,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -6018,7 +6054,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6051,7 +6087,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6117,7 +6153,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6177,7 +6213,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6249,7 +6285,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6321,7 +6357,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6393,7 +6429,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6471,7 +6507,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6543,7 +6579,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6717,7 +6753,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6897,7 +6933,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -6963,7 +6999,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -7023,8 +7059,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -7083,8 +7119,8 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Stale after visual reference-sheet regeneration; regenerate with current reference IDs.",
-        "regenerationRequired": true
+        "notes": "Regenerated with current visual references; editorial review pending.",
+        "regenerationRequired": false
       }
     },
     {
@@ -7125,7 +7161,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -7167,7 +7203,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -7209,7 +7245,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -7242,7 +7278,7 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
         "regenerationRequired": false
       }
     },
@@ -7296,7 +7332,54 @@
         "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
       },
       "review": {
-        "notes": "Festival-master storyboard batch 01; generated with visible-shot references and awaiting editorial review.",
+        "notes": "Regenerated individually from current take prompt and references; awaiting editorial review.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-command-vestibule",
+      "entityId": "location:celestial-ardor-command-vestibule",
+      "kind": "location",
+      "status": "generated",
+      "outputPath": "/assets/locations/celestial-ardor-command-vestibule/concept-sheet-v2.png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-celestial-ardor-engineering-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "role": "authoritative visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-engineering-sheet",
+          "role": "authoritative visual continuity reference"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "assetType": "Light Delay master visual reference",
+        "primaryRequest": "Master-derived visual reference generated from the current entity description and attached continuity references.",
+        "inputImages": [
+          "Image 1: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Image 2: asset:location-celestial-ardor-engineering-sheet"
+        ],
+        "sceneBackdrop": "Celestial Ardor command-deck landing between the bridge, central access cylinder, service cylinder, and elevator shaft.",
+        "subject": "Separate service hatch and communications tray beside the central helical stair opening, with the elevator on the opposite side.",
+        "styleMedium": "Photorealistic cinematic hard-science-fiction production-design reference matching Light Delay.",
+        "compositionFraming": "1536x1024 landscape reference sheet with dominant three-quarter staging view plus plan and section insets.",
+        "lightingMood": "Neutral practical ship lighting with quiet blind-spot tension.",
+        "colorPalette": "Warm off-white, light gray, graphite, muted slate-blue/teal, amber markers.",
+        "materialsTextures": "Matte composite panels, continuous metal rails, gasketed hatches, scuffed deck plates, physical cable tray.",
+        "constraints": "English-only technical labels; preserve master outline geometry and continuity; no watermark.",
+        "avoid": "Merged shafts, horizontal hallway, floor hatch, open vacuum, fantasy machinery, planets, logos, watermark, bilingual labels."
+      },
+      "review": {
+        "notes": "Generated with current master references; editorial review pending.",
         "regenerationRequired": false
       }
     }
