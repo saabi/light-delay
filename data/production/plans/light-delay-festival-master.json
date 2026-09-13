@@ -7631,7 +7631,8 @@
         "editorial_prompt_freeze_not_approved",
         "missing_stretch_blocking"
       ],
-      "coherenceException": false
+      "coherenceException": false,
+      "runnable": false
     },
     {
       "id": "festival-master:stretch-bridge-meal-010-012:rev-1:video-1",
@@ -7683,9 +7684,14 @@
       ],
       "blockers": [
         "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated"
+        "seedance_execution_gated",
+        "missing_voice_sample:character:harlan",
+        "missing_voice_sample:character:sorell",
+        "missing_voice_sample:character:voss",
+        "missing_voice_sample:character:zao"
       ],
-      "coherenceException": false
+      "coherenceException": false,
+      "runnable": false
     }
   ]
 }

@@ -1,35 +1,102 @@
 /**
- * Visual-stretch generation-plan helpers: reference budgets and Seedance partition.
- * Node-only (imports generation-planning).
+ * Visual-stretch generation-plan helpers: reference budgets, Seedance partition, job builder.
+ * Node-only (imports generation-planning + visual-stretch).
  */
+
+/**
+ * @typedef {{ shotId: string, order: number, takeScope?: string, takeIds?: string[], frameRegion?: { x: number, y: number, w: number, h: number } }} StretchMember
+ * @typedef {{ kind: 'image' | 'video' | 'audio', id: string, role: string }} StretchReference
+ * @typedef {{ id: string, characterId: string, variants?: Array<{ sampleAssetIds?: string[] }> }} VoiceProfile
+ */
+
 import { checkReferenceBudget } from './generation-planning.mjs';
+import {
+	computeMargins,
+	derivePanelRegions,
+	DEFAULT_GUTTER_FRACTION,
+	providerAllowsFourByFour,
+	selectGridForMemberCount,
+	selectLargestSuitableOutputSize,
+	stretchBlockingBlockers,
+	stretchJobId,
+	validateGridLayout
+} from './visual-stretch.mjs';
 
 /**
  * Still / combined-sheet jobs need every authored visual reference.
  * Nothing is "already in frame" until the sheet exists.
  * @param {{ referenceAssetIds?: string[] }} stretch
- * @returns {Array<{ kind: 'image', id: string, role: string }>}
+ * @returns {StretchReference[]}
  */
 export function collectStillStretchReferences(stretch) {
 	return (stretch.referenceAssetIds || []).map((id) => ({
-		kind: 'image',
+		kind: /** @type {'image'} */ ('image'),
 		id,
 		role: 'visual_reference'
 	}));
 }
 
 /**
- * Seedance jobs: ordered keyframes count; character/location sheets for subjects
- * already depicted in those keyframes are omitted from additional references.
+ * Dialogue voice samples for speakers who talk in the bucket's shots.
+ * @param {{
+ *   members: StretchMember[],
+ *   shotsById: Map<string, any>,
+ *   cuesById?: Map<string, any>,
+ *   voiceProfiles?: VoiceProfile[]
+ * }} args
+ * @returns {{ references: StretchReference[], blockers: string[] }}
+ */
+export function collectDialogueVoiceSampleReferences(args) {
+	const { members, shotsById, cuesById = new Map(), voiceProfiles = [] } = args;
+	/** @type {StretchReference[]} */
+	const references = [];
+	/** @type {string[]} */
+	const blockers = [];
+	/** @type {Set<string>} */
+	const speakers = new Set();
+
+	for (const member of members) {
+		const shot = shotsById.get(member.shotId);
+		for (const placement of shot?.cuePlacements || []) {
+			const cue = cuesById.get(placement.cueId);
+			if (cue?.type === 'dialogue' && cue.speakerId) speakers.add(cue.speakerId);
+		}
+	}
+
+	for (const speakerId of [...speakers].sort()) {
+		const profile = voiceProfiles.find((item) => item.characterId === speakerId);
+		const samples = [
+			...new Set(profile?.variants?.flatMap((variant) => variant.sampleAssetIds ?? []) ?? [])
+		];
+		if (!samples.length) {
+			blockers.push(`missing_voice_sample:${speakerId}`);
+			continue;
+		}
+		for (const assetId of samples) {
+			references.push({
+				kind: /** @type {'audio'} */ ('audio'),
+				id: assetId,
+				role: 'voice_sample'
+			});
+		}
+	}
+	return { references, blockers };
+}
+
+/**
+ * Seedance jobs: ordered keyframes + additional visual refs not already in those frames
+ * + dialogue voice samples for speakers in the bucket.
  *
  * @param {{
  *   stretch: { referenceAssetIds?: string[], locationId?: string, presentCharacterIds?: string[] },
- *   members: Array<{ shotId: string, order: number, takeScope?: string, takeIds?: string[] }>,
+ *   members: StretchMember[],
  *   shotsById: Map<string, any>,
  *   keyframeByShotId?: Map<string, string>,
- *   entityReferenceIds?: Map<string, string[]>
+ *   entityReferenceIds?: Map<string, string[]>,
+ *   cuesById?: Map<string, any>,
+ *   voiceProfiles?: VoiceProfile[]
  * }} args
- * @returns {Array<{ kind: 'image', id: string, role: string }>}
+ * @returns {{ references: StretchReference[], blockers: string[] }}
  */
 export function collectVideoStretchReferences(args) {
 	const {
@@ -37,8 +104,11 @@ export function collectVideoStretchReferences(args) {
 		members,
 		shotsById,
 		keyframeByShotId = new Map(),
-		entityReferenceIds = new Map()
+		entityReferenceIds = new Map(),
+		cuesById = new Map(),
+		voiceProfiles = []
 	} = args;
+	/** @type {StretchReference[]} */
 	const refs = [];
 	const coveredAssetIds = new Set();
 	const coveredEntityIds = new Set();
@@ -48,7 +118,11 @@ export function collectVideoStretchReferences(args) {
 		const keyframeId = keyframeByShotId.get(member.shotId);
 		if (!keyframeId) continue;
 		hasKeyframe = true;
-		refs.push({ kind: 'image', id: keyframeId, role: 'keyframe' });
+		refs.push({
+			kind: /** @type {'image'} */ ('image'),
+			id: keyframeId,
+			role: 'keyframe'
+		});
 		const shot = shotsById.get(member.shotId);
 		if (shot?.locationId) coveredEntityIds.add(shot.locationId);
 		for (const ref of shot?.visibleRefs || []) {
@@ -71,13 +145,30 @@ export function collectVideoStretchReferences(args) {
 
 	for (const assetId of stretch.referenceAssetIds || []) {
 		if (coveredAssetIds.has(assetId)) continue;
-		refs.push({ kind: 'image', id: assetId, role: 'visual_reference' });
+		refs.push({
+			kind: /** @type {'image'} */ ('image'),
+			id: assetId,
+			role: 'visual_reference'
+		});
 	}
-	return refs;
+
+	const voice = collectDialogueVoiceSampleReferences({
+		members,
+		shotsById,
+		cuesById,
+		voiceProfiles
+	});
+	const seenAudio = new Set();
+	for (const ref of voice.references) {
+		if (seenAudio.has(ref.id)) continue;
+		seenAudio.add(ref.id);
+		refs.push(ref);
+	}
+	return { references: refs, blockers: voice.blockers };
 }
 
 /**
- * @param {Array<{ kind: 'image' | 'video' | 'audio', id?: string, role?: string }>} references
+ * @param {StretchReference[]} references
  * @param {{ maxImages?: number | null, maxVideos?: number | null, maxAudios?: number | null, maxTotalReferences?: number | null } | undefined} limits
  * @returns {string[]}
  */
@@ -89,17 +180,41 @@ export function referenceBudgetBlockers(references, limits) {
 }
 
 /**
+ * Submission adapters must refuse any job where this is false.
+ * @param {{ blockers?: string[], runnable?: boolean }} job
+ */
+export function isStretchJobRunnable(job) {
+	return job?.runnable === true && Array.isArray(job.blockers) && job.blockers.length === 0;
+}
+
+/**
+ * @param {object} job
+ * @returns {object}
+ */
+function finalizeStretchJob(job) {
+	const blockers = [...new Set(job.blockers || [])];
+	return {
+		...job,
+		blockers,
+		runnable: blockers.length === 0
+	};
+}
+
+/**
  * Partition stretch members into consecutive Seedance jobs under the segment ceiling.
- * A single member longer than the ceiling is emitted alone with `member_exceeds_max_duration`.
+ * A single member longer than the ceiling is emitted alone with `member_exceeds_max_duration`
+ * and `runnable: false` (descriptor retained for diagnostics; must not be submitted).
  *
- * @param {any} stretch
- * @param {Array<{ shotId: string, order: number, takeScope?: string, takeIds?: string[] }>} members
+ * @param {{ id: string, revision: number, referenceAssetIds?: string[], locationId?: string, presentCharacterIds?: string[] }} stretch
+ * @param {StretchMember[]} members
  * @param {Map<string, any>} shotsById
  * @param {number} maxSegmentMs
  * @param {string} stillJobId
  * @param {{
  *   keyframeByShotId?: Map<string, string>,
  *   entityReferenceIds?: Map<string, string[]>,
+ *   cuesById?: Map<string, any>,
+ *   voiceProfiles?: VoiceProfile[],
  *   videoLimits?: { maxImages?: number | null, maxVideos?: number | null, maxAudios?: number | null, maxTotalReferences?: number | null }
  * }} [opts]
  */
@@ -111,13 +226,22 @@ export function partitionStretchVideoJobs(
 	stillJobId,
 	opts = {}
 ) {
+	/** @type {object[]} */
 	const jobs = [];
+	/** @type {StretchMember[]} */
 	let bucket = [];
 	let bucketMs = 0;
 	let part = 1;
 	const keyframeByShotId = opts.keyframeByShotId ?? new Map();
 	const entityReferenceIds = opts.entityReferenceIds ?? new Map();
+	const cuesById = opts.cuesById ?? new Map();
+	const voiceProfiles = opts.voiceProfiles ?? [];
 
+	/**
+	 * @param {StretchMember[]} bucketMembers
+	 * @param {number} durationMs
+	 * @param {string[]} [extraBlockers]
+	 */
 	const buildJob = (bucketMembers, durationMs, extraBlockers = []) => {
 		const memberInputs = bucketMembers.map((member) => {
 			const shot = shotsById.get(member.shotId);
@@ -134,23 +258,27 @@ export function partitionStretchVideoJobs(
 				keyframeAssetId: keyframeByShotId.get(member.shotId)
 			};
 		});
-		const references = collectVideoStretchReferences({
+		const { references, blockers: voiceBlockers } = collectVideoStretchReferences({
 			stretch,
 			members: bucketMembers,
 			shotsById,
 			keyframeByShotId,
-			entityReferenceIds
+			entityReferenceIds,
+			cuesById,
+			voiceProfiles
 		});
+		/** @type {string[]} */
 		const blockers = [
 			'editorial_prompt_freeze_not_approved',
 			'seedance_execution_gated',
+			...voiceBlockers,
 			...referenceBudgetBlockers(references, opts.videoLimits),
 			...extraBlockers
 		];
 		if (durationMs > maxSegmentMs) {
 			blockers.push('member_exceeds_max_duration');
 		}
-		return {
+		return finalizeStretchJob({
 			id: `${stillJobId}:video-${part}`,
 			stretchId: stretch.id,
 			revision: stretch.revision,
@@ -165,9 +293,9 @@ export function partitionStretchVideoJobs(
 				.map((r) => r.id),
 			compiledPrompt: null,
 			outputs: [{ order: 1, artifact: 'video' }],
-			blockers: [...new Set(blockers)],
+			blockers,
 			coherenceException: false
-		};
+		});
 	};
 
 	const flush = () => {
@@ -191,5 +319,197 @@ export function partitionStretchVideoJobs(
 		bucketMs += duration;
 	}
 	flush();
+	return jobs;
+}
+
+/**
+ * Build still + optional Seedance jobs for every stretch on a script file.
+ * @param {any} file
+ * @param {{
+ *   maxSegmentMs: number,
+ *   stillProvider?: any,
+ *   videoProvider?: any,
+ *   entityReferenceIds?: Map<string, string[]>,
+ *   voiceProfiles?: VoiceProfile[]
+ * }} opts
+ */
+export function buildVisualStretchJobs(
+	file,
+	{ maxSegmentMs, stillProvider, videoProvider, entityReferenceIds, voiceProfiles = [] }
+) {
+	/** @type {object[]} */
+	const jobs = [];
+	const shotsById = new Map((file.shots || []).map(/** @param {any} shot */ (shot) => [shot.id, shot]));
+	const cuesById = new Map((file.cues || []).map(/** @param {any} cue */ (cue) => [cue.id, cue]));
+
+	for (const stretch of file.visualStretches || []) {
+		const stillMode = stretch.generationProfile?.stillMode ?? 'combined_storyboard_sheet';
+		/** @type {StretchMember[]} */
+		const members = [...(stretch.members || [])].sort(
+			/** @param {StretchMember} a @param {StretchMember} b */ (a, b) => a.order - b.order
+		);
+		const memberInputs = members.map((member) => {
+			const shot = shotsById.get(member.shotId);
+			const sourceTakeIds =
+				member.takeScope === 'explicit'
+					? member.takeIds ?? []
+					: shot?.selectedTakeId
+						? [shot.selectedTakeId]
+						: [];
+			return { order: member.order, shotId: member.shotId, sourceTakeIds };
+		});
+		/** @type {string[]} */
+		const blockers = [
+			'editorial_prompt_freeze_not_approved',
+			...stretchBlockingBlockers(stretch)
+		];
+
+		const stillReferences = collectStillStretchReferences(stretch);
+		const sharedReferenceAssetIds = stillReferences.map((r) => r.id);
+		blockers.push(...referenceBudgetBlockers(stillReferences, stillProvider?.limits));
+		const jobId = stretchJobId(stretch);
+		const allowFourByFour = providerAllowsFourByFour(stillProvider);
+		const derivedByShot = new Map();
+		for (const take of file.takes || []) {
+			if (
+				take.generation?.stretchJobId === jobId &&
+				take.generation?.visualStretchId === stretch.id
+			) {
+				derivedByShot.set(take.shotId, take);
+			}
+		}
+		const keyframeByShotId = new Map();
+		for (const [shotId, take] of derivedByShot) {
+			if (take.imageAssetId) keyframeByShotId.set(shotId, take.imageAssetId);
+		}
+
+		if (stillMode === 'combined_storyboard_sheet') {
+			const gridLayout =
+				stretch.generationProfile?.gridLayout ??
+				(() => {
+					const selected = selectGridForMemberCount(members.length, { allowFourByFour });
+					if (selected.error) {
+						blockers.push(selected.error);
+						return {
+							rows: 2,
+							cols: 2,
+							gutterFraction: DEFAULT_GUTTER_FRACTION,
+							panelAspect: '16:9',
+							blankCells: []
+						};
+					}
+					return {
+						rows: selected.rows,
+						cols: selected.cols,
+						gutterFraction: DEFAULT_GUTTER_FRACTION,
+						panelAspect: '16:9',
+						blankCells: selected.blankCells
+					};
+				})();
+			const outputSize = selectLargestSuitableOutputSize(
+				stillProvider?.outputSizes,
+				gridLayout,
+				stillProvider?.minPanelResolution
+			);
+			const layoutErrors = validateGridLayout(gridLayout, members.length, {
+				allowFourByFour,
+				outputSize,
+				minPanelResolution: stillProvider?.minPanelResolution
+			});
+			for (const err of layoutErrors) blockers.push(err);
+			if (!stillProvider?.supportsCombinedStoryboardSheet) {
+				blockers.push('still_provider_lacks_combined_sheet');
+			}
+			const computedMargins = computeMargins(
+				outputSize,
+				gridLayout.panelAspect ?? '16:9',
+				gridLayout.minOuterMarginFraction ?? 0
+			);
+			const regions = derivePanelRegions(gridLayout, computedMargins);
+			jobs.push(
+				finalizeStretchJob({
+					id: jobId,
+					stretchId: stretch.id,
+					revision: stretch.revision,
+					medium: 'still',
+					mode: 'combined_storyboard_sheet',
+					outputTakePolicy: 'new_candidate',
+					memberInputs,
+					sharedReferenceAssetIds,
+					gridLayout,
+					computedMargins,
+					compiledPrompt: null,
+					outputs: [
+						{
+							order: 1,
+							artifact: 'combinedStoryboard',
+							assetId: stretch.combinedStillAssetId,
+							panels: members.map((member, index) => {
+								const derived = derivedByShot.get(member.shotId);
+								return {
+									order: member.order,
+									shotId: member.shotId,
+									sourceTakeIds: memberInputs[index].sourceTakeIds,
+									frameRegion:
+										member.frameRegion ??
+										regions[index]?.frameRegion ?? { x: 0, y: 0, w: 1, h: 1 },
+									...(derived?.id ? { derivedTakeId: derived.id } : {}),
+									...(derived?.imageAssetId ? { derivedAssetId: derived.imageAssetId } : {})
+								};
+							})
+						}
+					],
+					blockers,
+					coherenceException: false
+				})
+			);
+		} else {
+			jobs.push(
+				finalizeStretchJob({
+					id: jobId,
+					stretchId: stretch.id,
+					revision: stretch.revision,
+					medium: 'still',
+					mode: 'independent_shared_authority',
+					outputTakePolicy: 'new_candidate',
+					memberInputs,
+					sharedReferenceAssetIds,
+					compiledPrompt: null,
+					outputs: members.map((member, index) => ({
+						order: member.order,
+						artifact: 'animaticStill',
+						panels: [
+							{
+								order: member.order,
+								shotId: member.shotId,
+								sourceTakeIds: memberInputs[index].sourceTakeIds,
+								frameRegion: { x: 0, y: 0, w: 1, h: 1 }
+							}
+						]
+					})),
+					blockers: [...blockers, 'coherence_exception'],
+					coherenceException: true
+				})
+			);
+		}
+
+		if (stretch.generationProfile?.videoMode === 'grouped_seedance') {
+			const videoJobs = partitionStretchVideoJobs(
+				stretch,
+				members,
+				shotsById,
+				maxSegmentMs,
+				jobId,
+				{
+					keyframeByShotId,
+					entityReferenceIds: entityReferenceIds ?? new Map(),
+					cuesById,
+					voiceProfiles,
+					videoLimits: videoProvider?.limits
+				}
+			);
+			jobs.push(...videoJobs);
+		}
+	}
 	return jobs;
 }

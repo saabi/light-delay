@@ -2,22 +2,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { planSegments, resolveDiegeticText, sha256 } from './lib/generation-planning.mjs';
-import {
-	computeMargins,
-	derivePanelRegions,
-	DEFAULT_GUTTER_FRACTION,
-	providerAllowsFourByFour,
-	selectGridForMemberCount,
-	selectLargestSuitableOutputSize,
-	stretchBlockingBlockers,
-	stretchJobId,
-	validateGridLayout
-} from './lib/visual-stretch.mjs';
-import {
-	collectStillStretchReferences,
-	partitionStretchVideoJobs,
-	referenceBudgetBlockers
-} from './lib/visual-stretch-jobs.mjs';
+import { buildVisualStretchJobs } from './lib/visual-stretch-jobs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const checkOnly = process.argv.includes('--check');
@@ -117,7 +102,8 @@ for (const slug of scripts) {
 		maxSegmentMs: stretchMaxSegmentMs,
 		stillProvider,
 		videoProvider,
-		entityReferenceIds: referenceAssets
+		entityReferenceIds: referenceAssets,
+		voiceProfiles
 	});
 	const plan = {
 		schemaVersion: '1.0.0',
@@ -145,167 +131,3 @@ for (const slug of scripts) {
 	}
 }
 console.log(`production:plans:${checkOnly ? 'check' : 'build'} OK`);
-
-function buildVisualStretchJobs(file, { maxSegmentMs, stillProvider, videoProvider, entityReferenceIds }) {
-	const jobs = [];
-	const shotsById = new Map((file.shots || []).map((shot) => [shot.id, shot]));
-	for (const stretch of file.visualStretches || []) {
-		const stillMode = stretch.generationProfile?.stillMode ?? 'combined_storyboard_sheet';
-		const members = [...(stretch.members || [])].sort((a, b) => a.order - b.order);
-		const memberInputs = members.map((member) => {
-			const shot = shotsById.get(member.shotId);
-			const sourceTakeIds =
-				member.takeScope === 'explicit'
-					? member.takeIds ?? []
-					: shot?.selectedTakeId
-						? [shot.selectedTakeId]
-						: [];
-			return { order: member.order, shotId: member.shotId, sourceTakeIds };
-		});
-		const blockers = [
-			'editorial_prompt_freeze_not_approved',
-			...stretchBlockingBlockers(stretch)
-		];
-
-		const stillReferences = collectStillStretchReferences(stretch);
-		const sharedReferenceAssetIds = stillReferences.map((r) => r.id);
-		blockers.push(...referenceBudgetBlockers(stillReferences, stillProvider?.limits));
-		const jobId = stretchJobId(stretch);
-		const allowFourByFour = providerAllowsFourByFour(stillProvider);
-		const derivedByShot = new Map();
-		for (const take of file.takes || []) {
-			if (
-				take.generation?.stretchJobId === jobId &&
-				take.generation?.visualStretchId === stretch.id
-			) {
-				derivedByShot.set(take.shotId, take);
-			}
-		}
-		const keyframeByShotId = new Map();
-		for (const [shotId, take] of derivedByShot) {
-			if (take.imageAssetId) keyframeByShotId.set(shotId, take.imageAssetId);
-		}
-
-		if (stillMode === 'combined_storyboard_sheet') {
-			const gridLayout =
-				stretch.generationProfile?.gridLayout ??
-				(() => {
-					const selected = selectGridForMemberCount(members.length, { allowFourByFour });
-					if (selected.error) {
-						blockers.push(selected.error);
-						return {
-							rows: 2,
-							cols: 2,
-							gutterFraction: DEFAULT_GUTTER_FRACTION,
-							panelAspect: '16:9',
-							blankCells: []
-						};
-					}
-					return {
-						rows: selected.rows,
-						cols: selected.cols,
-						gutterFraction: DEFAULT_GUTTER_FRACTION,
-						panelAspect: '16:9',
-						blankCells: selected.blankCells
-					};
-				})();
-			const outputSize = selectLargestSuitableOutputSize(
-				stillProvider?.outputSizes,
-				gridLayout,
-				stillProvider?.minPanelResolution
-			);
-			const layoutErrors = validateGridLayout(gridLayout, members.length, {
-				allowFourByFour,
-				outputSize,
-				minPanelResolution: stillProvider?.minPanelResolution
-			});
-			for (const err of layoutErrors) blockers.push(err);
-			if (!stillProvider?.supportsCombinedStoryboardSheet) {
-				blockers.push('still_provider_lacks_combined_sheet');
-			}
-			const computedMargins = computeMargins(
-				outputSize,
-				gridLayout.panelAspect ?? '16:9',
-				gridLayout.minOuterMarginFraction ?? 0
-			);
-			const regions = derivePanelRegions(gridLayout, computedMargins);
-			jobs.push({
-				id: jobId,
-				stretchId: stretch.id,
-				revision: stretch.revision,
-				medium: 'still',
-				mode: 'combined_storyboard_sheet',
-				outputTakePolicy: 'new_candidate',
-				memberInputs,
-				sharedReferenceAssetIds,
-				gridLayout,
-				computedMargins,
-				compiledPrompt: null,
-				outputs: [
-					{
-						order: 1,
-						artifact: 'combinedStoryboard',
-						assetId: stretch.combinedStillAssetId,
-						panels: members.map((member, index) => {
-							const derived = derivedByShot.get(member.shotId);
-							return {
-								order: member.order,
-								shotId: member.shotId,
-								sourceTakeIds: memberInputs[index].sourceTakeIds,
-								frameRegion:
-									member.frameRegion ?? regions[index]?.frameRegion ?? { x: 0, y: 0, w: 1, h: 1 },
-								...(derived?.id ? { derivedTakeId: derived.id } : {}),
-								...(derived?.imageAssetId ? { derivedAssetId: derived.imageAssetId } : {})
-							};
-						})
-					}
-				],
-				blockers: [...new Set(blockers)],
-				coherenceException: false
-			});
-		} else {
-			jobs.push({
-				id: jobId,
-				stretchId: stretch.id,
-				revision: stretch.revision,
-				medium: 'still',
-				mode: 'independent_shared_authority',
-				outputTakePolicy: 'new_candidate',
-				memberInputs,
-				sharedReferenceAssetIds,
-				compiledPrompt: null,
-				outputs: members.map((member, index) => ({
-					order: member.order,
-					artifact: 'animaticStill',
-					panels: [
-						{
-							order: member.order,
-							shotId: member.shotId,
-							sourceTakeIds: memberInputs[index].sourceTakeIds,
-							frameRegion: { x: 0, y: 0, w: 1, h: 1 }
-						}
-					]
-				})),
-				blockers: [...new Set([...blockers, 'coherence_exception'])],
-				coherenceException: true
-			});
-		}
-
-		if (stretch.generationProfile?.videoMode === 'grouped_seedance') {
-			const videoJobs = partitionStretchVideoJobs(
-				stretch,
-				members,
-				shotsById,
-				maxSegmentMs,
-				jobId,
-				{
-					keyframeByShotId,
-					entityReferenceIds: entityReferenceIds ?? new Map(),
-					videoLimits: videoProvider?.limits
-				}
-			);
-			jobs.push(...videoJobs);
-		}
-	}
-	return jobs;
-}

@@ -1,16 +1,21 @@
 # Changelog
 
+## 2026-09-13 — Stretch job voice samples, runnable gate, builder tests
+
+- Seedance stretch jobs budget dialogue voice samples and block on `missing_voice_sample`; jobs expose `runnable` (false whenever blockers exist).
+- Exported `buildVisualStretchJobs` for integration tests covering reference budget, keyframe deduction (incl. vehicle/prop), and the 30 s effective ceiling.
+
 ## 2026-09-13 — Seedance 2.5 duration snapshot corrected to 30s
 
 - Reverted provisional `maxDurationMs` to **30000** after verifying Higgsfield’s Seedance 2.5 FAQ: single-pass max is 30 s at any listed resolution (including 480p).
 
 ## 2026-09-13 — Festival-master outline derivation stale
 
-- Marked outline:light-delay-festival-master derivation eviewStatus: stale versus master revision 23 (still pinned to r19 until rederived).
+- Marked `outline:light-delay-festival-master` derivation `reviewStatus: stale` versus master revision 23 (still pinned to r19 until rederived).
 
 ## 2026-09-13 — Visual stretch review fixes
 
-- Fixed AnimaticEditor duplicate import; EXDEV-safe same-directory .partial writes; panel registrar creates derived assets + candidate takes (egister:visual-stretch-panels).
+- Fixed AnimaticEditor duplicate import; EXDEV-safe same-directory `.partial` writes; panel registrar creates derived assets + candidate takes (`register:visual-stretch-panels`).
 - Provider-driven 4×4 + largest suitable output size; structured blocking prompt lines; shared blocking completeness helper; unified stretch digest; reference-budget and Seedance duration gates with tests.
 
 ## 2026-09-13 — Visual stretches (Schema + dry-run pilot)

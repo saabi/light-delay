@@ -402,6 +402,10 @@ export type GenerationPlanFile83 = GenerationPlanFile84[];
 export type GenerationPlanFile103 = string;
 export type GenerationPlanFile102 = GenerationPlanFile103[];
 export type GenerationPlanFile104 = boolean;
+/**
+ * Submission adapters must refuse the job unless runnable is true (requires empty blockers).
+ */
+export type GenerationPlanFile105 = boolean;
 export type GenerationPlanFile43 = GenerationPlanFile44[];
 
 export interface GenerationPlanFile {
@@ -484,6 +488,7 @@ export interface GenerationPlanFile48 {
 	outputs: GenerationPlanFile83;
 	blockers: GenerationPlanFile102;
 	coherenceException: GenerationPlanFile104;
+	runnable?: GenerationPlanFile105;
 }
 export interface GenerationPlanFile56 {
 	order: GenerationPlanFile57;

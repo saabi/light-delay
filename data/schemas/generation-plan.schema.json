@@ -171,7 +171,11 @@
           }
         },
         "blockers": { "type": "array", "items": { "type": "string" } },
-        "coherenceException": { "type": "boolean" }
+        "coherenceException": { "type": "boolean" },
+        "runnable": {
+          "type": "boolean",
+          "description": "Submission adapters must refuse the job unless runnable is true (requires empty blockers)."
+        }
       },
       "additionalProperties": false,
       "allOf": [

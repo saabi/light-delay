@@ -201,14 +201,16 @@ export function validateGridLayout(layout, memberCount, opts = {}) {
  */
 export function findStretchForShot(script, shotId) {
 	for (const stretch of script.visualStretches ?? []) {
-		const member = (stretch.members ?? []).find((m) => m.shotId === shotId);
+		const member = (stretch.members ?? []).find(
+			/** @param {{ shotId: string }} m */ (m) => m.shotId === shotId
+		);
 		if (member) return { stretch, member };
 	}
 	return null;
 }
 
 /**
- * @param {object} stretch
+ * @param {{ id: string, revision: number }} stretch
  */
 export function stretchJobId(stretch) {
 	return `${stretch.id}:rev-${stretch.revision}`;
@@ -260,7 +262,7 @@ export function buildStretchDigestPayload(args) {
 				camera: shot?.camera,
 				visibleRefs: shot?.visibleRefs,
 				offScreenCharacterIds: shot?.offScreenCharacterIds,
-				sourceTakeDigests: sourceTakeIds.map((id) => {
+				sourceTakeDigests: sourceTakeIds.map(/** @param {string} id */ (id) => {
 					const take = takesById?.get(id);
 					return take
 						? {
