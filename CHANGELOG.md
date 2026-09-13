@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-13 — Resolve OTIO export writes EN/ES SRT sidecars
+
+- `export:resolve-otio` now writes `tmp/resolve-otio/<slug>.en.srt` and `.es.srt` beside the
+  timeline. Cue timings match A1 dialogue (animatic clock) and include the OTIO **01:00:00:00**
+  offset for Resolve “Insert Selected Subtitles to Timeline Using Timecode”.
+- Documented the Media Pool subtitle import path in `RESOLVE_OTIO_EXPORT.md`. Subtitles are not
+  embedded in the `.otio` (Resolve does not use OTIO for caption tracks).
+
 ## 2026-09-12 — Festival-master EN dialogue for cue-0044 / cue-0045
 
 - Audited Festival / trailer / main-short dialogue audio: only `festival-master:cue-0044` and
