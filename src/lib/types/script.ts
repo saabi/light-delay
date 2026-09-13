@@ -134,6 +134,75 @@ export interface ScriptFile {
 	cues: Cue[];
 	shots: Shot[];
 	takes: Take[];
+	visualStretches?: VisualStretch[];
+}
+
+export interface VisualStretchBlocking {
+	characterId: CharacterId;
+	zoneOrSeat?: string;
+	screenSide?: 'left' | 'center' | 'right' | 'off';
+	facing?: string;
+	posture?: 'seated' | 'standing' | 'moving' | 'other';
+	eyelineTarget?: CharacterId | string;
+	heldEntityRef?: EntityRef;
+	interactionTarget?: EntityRef | CharacterId | string;
+	notes?: StoryText;
+}
+
+export interface VisualStretchMember {
+	shotId: ShotId;
+	order: number;
+	takeScope: 'selected' | 'explicit';
+	/** Compile inputs only — never append derivedTakeId here. */
+	takeIds?: TakeId[];
+	visualDelta?: StoryText;
+	keyframeRole?: 'establish' | 'develop' | 'payoff' | 'other';
+	startState?: StoryText;
+	event?: StoryText;
+	endState?: StoryText;
+	/** Optional override; must validate against gridLayout. */
+	frameRegion?: { x: number; y: number; w: number; h: number };
+}
+
+export interface VisualStretchGridLayout {
+	rows: number;
+	cols: number;
+	gutterFraction: number;
+	panelAspect: '16:9';
+	/** 1-based cell indices left empty; omit or [] when full. */
+	blankCells?: number[];
+	/** Optional floor; letterbox margins are computed from output size. */
+	minOuterMarginFraction?: number;
+}
+
+export interface VisualStretch {
+	id: string;
+	title: StoryText;
+	status: 'draft' | 'reviewed' | 'locked';
+	/** Author-bumped; used in stretchJobId = `${id}:rev-${revision}`. */
+	revision: number;
+	members: VisualStretchMember[];
+	locationId: LocationId;
+	secondaryLocationIds?: LocationId[];
+	presentCharacterIds: CharacterId[];
+	absentCharacterIds: CharacterId[];
+	physics?: StoryText;
+	lighting?: StoryText;
+	persistentProps?: Array<{ entityRef: EntityRef; state: StoryText }>;
+	blocking: VisualStretchBlocking[];
+	screenDirection?: StoryText;
+	invariants?: StoryText[];
+	sharedDescription: StoryText;
+	combinedStillAssetId?: AssetId;
+	generationProfile: {
+		stillMode: 'combined_storyboard_sheet' | 'independent_shared_authority';
+		videoMode?: 'grouped_seedance' | 'none';
+		/** Required iff stillMode === combined_storyboard_sheet. */
+		gridLayout?: VisualStretchGridLayout;
+	};
+	referenceAssetIds?: AssetId[];
+	notes?: Note[];
+	sourceRefs?: SourceReference[];
 }
 
 export interface Act {
@@ -393,6 +462,10 @@ export interface Take {
 		seed?: string | number;
 		referenceAssetIds?: AssetId[];
 		generatedAt?: string;
+		visualStretchId?: string;
+		stretchDigest?: string;
+		stretchJobId?: string;
+		coherenceException?: boolean;
 	};
 	review?: {
 		continuityScore?: number;

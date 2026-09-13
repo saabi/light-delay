@@ -57,6 +57,11 @@
         },
         "additionalProperties": false
       }
+    },
+    "visualStretchJobs": {
+      "type": "array",
+      "default": [],
+      "items": { "$ref": "#/$defs/visualStretchJob" }
     }
   },
   "$defs": {
@@ -71,6 +76,132 @@
       "required": ["kind", "id", "required"],
       "properties": { "kind": { "enum": ["image", "video", "audio"] }, "id": { "type": "string" }, "path": { "type": "string", "minLength": 1 }, "required": { "type": "boolean" }, "role": { "type": "string" } },
       "additionalProperties": false
+    },
+    "gridLayout": {
+      "type": "object",
+      "required": ["rows", "cols", "gutterFraction", "panelAspect"],
+      "properties": {
+        "rows": { "type": "integer", "minimum": 1 },
+        "cols": { "type": "integer", "minimum": 1 },
+        "gutterFraction": { "type": "number", "minimum": 0, "exclusiveMaximum": 0.5 },
+        "panelAspect": { "const": "16:9" },
+        "blankCells": { "type": "array", "items": { "type": "integer", "minimum": 1 }, "uniqueItems": true },
+        "minOuterMarginFraction": { "type": "number", "minimum": 0, "maximum": 0.4 }
+      },
+      "additionalProperties": false
+    },
+    "computedMargins": {
+      "type": "object",
+      "required": ["top", "right", "bottom", "left"],
+      "properties": {
+        "top": { "type": "number", "minimum": 0, "maximum": 1 },
+        "right": { "type": "number", "minimum": 0, "maximum": 1 },
+        "bottom": { "type": "number", "minimum": 0, "maximum": 1 },
+        "left": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "frameRegion": {
+      "type": "object",
+      "required": ["x", "y", "w", "h"],
+      "properties": {
+        "x": { "type": "number" }, "y": { "type": "number" }, "w": { "type": "number" }, "h": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "visualStretchJob": {
+      "type": "object",
+      "required": ["id", "stretchId", "revision", "medium", "mode", "outputTakePolicy", "memberInputs", "sharedReferenceAssetIds", "compiledPrompt", "outputs", "blockers", "coherenceException"],
+      "properties": {
+        "id": { "type": "string" },
+        "stretchId": { "type": "string" },
+        "revision": { "type": "integer", "minimum": 1 },
+        "medium": { "enum": ["still", "video"] },
+        "mode": { "enum": ["combined_storyboard_sheet", "independent_shared_authority", "grouped_seedance"] },
+        "outputTakePolicy": { "const": "new_candidate" },
+        "memberInputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["order", "shotId", "sourceTakeIds"],
+            "properties": {
+              "order": { "type": "integer", "minimum": 1 },
+              "shotId": { "type": "string" },
+              "sourceTakeIds": { "type": "array", "items": { "type": "string" } },
+              "keyframeAssetId": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "dependsOnStillJobId": { "type": "string" },
+        "sharedReferenceAssetIds": { "type": "array", "items": { "type": "string" } },
+        "gridLayout": { "$ref": "#/$defs/gridLayout" },
+        "computedMargins": { "$ref": "#/$defs/computedMargins" },
+        "compiledPrompt": { "type": ["string", "null"] },
+        "promptDigest": { "type": "string" },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["order", "artifact"],
+            "properties": {
+              "order": { "type": "integer", "minimum": 1 },
+              "artifact": { "enum": ["combinedStoryboard", "animaticStill", "firstFrame", "lastFrame", "video"] },
+              "assetId": { "type": "string" },
+              "supersededByJobId": { "type": "string" },
+              "panels": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["order", "shotId", "sourceTakeIds", "frameRegion"],
+                  "properties": {
+                    "order": { "type": "integer", "minimum": 1 },
+                    "shotId": { "type": "string" },
+                    "sourceTakeIds": { "type": "array", "items": { "type": "string" } },
+                    "derivedTakeId": { "type": "string" },
+                    "frameRegion": { "$ref": "#/$defs/frameRegion" },
+                    "derivedAssetId": { "type": "string" }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "blockers": { "type": "array", "items": { "type": "string" } },
+        "coherenceException": { "type": "boolean" }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "medium": { "const": "still" } }, "required": ["medium"] },
+          "then": {
+            "properties": {
+              "mode": { "enum": ["combined_storyboard_sheet", "independent_shared_authority"] }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "medium": { "const": "video" } }, "required": ["medium"] },
+          "then": {
+            "properties": {
+              "mode": { "const": "grouped_seedance" },
+              "dependsOnStillJobId": { "type": "string", "minLength": 1 }
+            },
+            "required": ["dependsOnStillJobId"]
+          }
+        },
+        {
+          "if": { "properties": { "mode": { "const": "combined_storyboard_sheet" } }, "required": ["mode"] },
+          "then": {
+            "properties": {
+              "gridLayout": { "$ref": "#/$defs/gridLayout" }
+            },
+            "required": ["gridLayout"]
+          }
+        }
+      ]
     }
   },
   "additionalProperties": false

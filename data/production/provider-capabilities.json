@@ -40,6 +40,38 @@
         "es": "Perfil de marketing no confirmado en el catálogo CLI/MCP operativo; no usar para validar ni enviar pedidos.",
         "en": "Marketing profile not confirmed in the operational CLI/MCP catalog; do not use it to validate or submit requests."
       }
+    },
+    {
+      "id": "provider:openai:gpt-image-2:2026-09-13",
+      "provider": "openai",
+      "model": "gpt-image-2",
+      "capturedAt": "2026-09-13",
+      "confidence": "provisional",
+      "executable": false,
+      "limits": {
+        "maxImages": 8,
+        "maxVideos": 0,
+        "maxAudios": 0,
+        "maxTotalReferences": 8,
+        "maxDurationMs": null
+      },
+      "supportsCombinedStoryboardSheet": true,
+      "maxStoryboardPanels": 9,
+      "minPanelResolution": { "width": 512, "height": 288 },
+      "supportedStoryboardLayouts": [
+        { "rows": 2, "columns": 2, "aspectRatio": "16:9" },
+        { "rows": 3, "columns": 3, "aspectRatio": "16:9" }
+      ],
+      "outputSizes": [
+        { "width": 1536, "height": 1024, "aspectRatio": "3:2" },
+        { "width": 1024, "height": 1024, "aspectRatio": "1:1" },
+        { "width": 1024, "height": 1536, "aspectRatio": "2:3" }
+      ],
+      "source": "https://platform.openai.com/docs/guides/image-generation",
+      "notes": {
+        "es": "Snapshot provisional para hojas storyboard combinadas. Límites de tamaño a verificar en la cuenta/API en uso; la ejecución in-repo sigue deshabilitada.",
+        "en": "Provisional snapshot for combined storyboard sheets. Output sizes must be verified on the account/API in use; in-repo execution remains disabled."
+      }
     }
   ],
   "campaigns": [

@@ -27,6 +27,43 @@
             },
             "additionalProperties": false
           },
+          "supportsCombinedStoryboardSheet": { "type": "boolean" },
+          "maxStoryboardPanels": { "type": ["integer", "null"], "minimum": 1 },
+          "minPanelResolution": {
+            "type": "object",
+            "required": ["width", "height"],
+            "properties": {
+              "width": { "type": "integer", "minimum": 1 },
+              "height": { "type": "integer", "minimum": 1 }
+            },
+            "additionalProperties": false
+          },
+          "supportedStoryboardLayouts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["rows", "columns", "aspectRatio"],
+              "properties": {
+                "rows": { "type": "integer", "minimum": 1 },
+                "columns": { "type": "integer", "minimum": 1 },
+                "aspectRatio": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "outputSizes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["width", "height", "aspectRatio"],
+              "properties": {
+                "width": { "type": "integer", "minimum": 1 },
+                "height": { "type": "integer", "minimum": 1 },
+                "aspectRatio": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          },
           "source": { "type": "string" }, "notes": { "$ref": "common.schema.json#/$defs/localizedString" }
         },
         "additionalProperties": false

@@ -6,6 +6,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sourceLocalizedString } from './lib/localized-string.mjs';
+import { validateGridLayout } from './lib/visual-stretch.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
@@ -86,17 +87,149 @@ function validateContinuousOrders(values, label, errors) {
 }
 
 function validateImageStatus(status, label, errors) {
-	if (!IMAGE_STATES.has(status.status))
-		errors.push(`${label}: invalid image status ${status.status}`);
+	if (!status || typeof status !== 'object') {
+		errors.push(`${label}: imageStatus must be an object`);
+		return;
+	}
+	if (!IMAGE_STATES.has(status.status)) {
+		errors.push(`${label}: invalid imageStatus.status ${status.status}`);
+	}
 	if (!Array.isArray(status.reasons) || status.reasons.length === 0) {
-		errors.push(`${label}: image status requires reasons`);
+		errors.push(`${label}: imageStatus.reasons must be a non-empty array`);
 	} else {
 		for (const reason of status.reasons) {
-			if (!IMAGE_REASONS.has(reason)) errors.push(`${label}: invalid image reason ${reason}`);
+			if (!IMAGE_REASONS.has(reason)) {
+				errors.push(`${label}: invalid imageStatus reason ${reason}`);
+			}
 		}
 	}
 	if (status.status !== 'current' && !sourceLocalizedString(status.explanation)?.trim()) {
-		errors.push(`${label}: non-current image status requires explanation`);
+		errors.push(`${label}: non-current imageStatus requires explanation`);
+	}
+}
+
+function validateVisualStretches(script, { label, shotIds, takeIds, characterIds, errors }) {
+	const stretches = script.visualStretches || [];
+	if (!stretches.length) return;
+	unique(
+		`${label}.visualStretches`,
+		stretches.map((s) => s.id),
+		errors
+	);
+	const membership = new Map();
+	const shotsById = new Map((script.shots || []).map((s) => [s.id, s]));
+	const playbackIndex = new Map((script.shots || []).map((s, i) => [s.id, i]));
+
+	for (const stretch of stretches) {
+		const sLabel = `${label} stretch ${stretch.id}`;
+		if (!stretch.revision || !Number.isInteger(stretch.revision) || stretch.revision < 1) {
+			errors.push(`${sLabel}: revision must be a positive integer`);
+		}
+		if (!['draft', 'reviewed', 'locked'].includes(stretch.status)) {
+			errors.push(`${sLabel}: invalid status ${stretch.status}`);
+		}
+		if (!Array.isArray(stretch.absentCharacterIds)) {
+			errors.push(`${sLabel}: absentCharacterIds must be an array`);
+		}
+		if (!Array.isArray(stretch.presentCharacterIds) || !stretch.presentCharacterIds.length) {
+			errors.push(`${sLabel}: presentCharacterIds required`);
+		}
+		const present = new Set(stretch.presentCharacterIds || []);
+		const absent = new Set(stretch.absentCharacterIds || []);
+		for (const id of present) {
+			if (absent.has(id)) errors.push(`${sLabel}: character ${id} in both present and absent`);
+			if (characterIds.size && !characterIds.has(id)) {
+				errors.push(`${sLabel}: unknown present character ${id}`);
+			}
+		}
+		for (const id of absent) {
+			if (characterIds.size && !characterIds.has(id)) {
+				errors.push(`${sLabel}: unknown absent character ${id}`);
+			}
+		}
+		const stillMode = stretch.generationProfile?.stillMode;
+		if (!stillMode) errors.push(`${sLabel}: generationProfile.stillMode required`);
+		const gridLayout = stretch.generationProfile?.gridLayout;
+		if (stillMode === 'combined_storyboard_sheet') {
+			if (!gridLayout) errors.push(`${sLabel}: gridLayout required for combined_storyboard_sheet`);
+			else {
+				for (const err of validateGridLayout(gridLayout, (stretch.members || []).length, {
+					allowFourByFour: false
+				})) {
+					errors.push(`${sLabel}: ${err}`);
+				}
+			}
+		} else if (stillMode === 'independent_shared_authority' && gridLayout) {
+			errors.push(`${sLabel}: gridLayout must be absent for independent_shared_authority`);
+		}
+
+		const members = [...(stretch.members || [])].sort((a, b) => a.order - b.order);
+		if (!members.length) errors.push(`${sLabel}: members required`);
+		const orders = new Set();
+		for (const member of members) {
+			if (orders.has(member.order)) errors.push(`${sLabel}: duplicate member order ${member.order}`);
+			orders.add(member.order);
+			if (!shotIds.has(member.shotId)) {
+				errors.push(`${sLabel}: unknown member shot ${member.shotId}`);
+				continue;
+			}
+			if (membership.has(member.shotId)) {
+				errors.push(
+					`${sLabel}: shot ${member.shotId} already in stretch ${membership.get(member.shotId)}`
+				);
+			} else {
+				membership.set(member.shotId, stretch.id);
+			}
+			const shot = shotsById.get(member.shotId);
+			if (shot?.locationId && stretch.locationId && shot.locationId !== stretch.locationId) {
+				errors.push(`${sLabel}: shot ${member.shotId} location mismatch`);
+			}
+			if (member.takeScope === 'explicit') {
+				if (!member.takeIds?.length) {
+					errors.push(`${sLabel}: explicit takeScope requires takeIds`);
+				}
+				for (const takeId of member.takeIds || []) {
+					if (!takeIds.has(takeId)) errors.push(`${sLabel}: unknown take ${takeId}`);
+				}
+			}
+			for (const ref of shot?.visibleRefs || []) {
+				if (ref.kind !== 'character') continue;
+				if (absent.has(ref.id)) {
+					errors.push(`${sLabel}: absent character ${ref.id} visible on ${member.shotId}`);
+				}
+				if (!present.has(ref.id)) {
+					errors.push(`${sLabel}: visible character ${ref.id} not in presentCharacterIds`);
+				}
+			}
+		}
+
+		for (let i = 1; i < members.length; i += 1) {
+			const prev = playbackIndex.get(members[i - 1].shotId);
+			const next = playbackIndex.get(members[i].shotId);
+			if (prev == null || next == null) continue;
+			if (next !== prev + 1) {
+				errors.push(
+					`${sLabel}: members not contiguous in playback order (${members[i - 1].shotId} → ${members[i].shotId})`
+				);
+			}
+		}
+
+		const incompleteBlocking = (stretch.presentCharacterIds || []).some((characterId) => {
+			const row = (stretch.blocking || []).find((b) => b.characterId === characterId);
+			return !row?.zoneOrSeat || !row?.posture;
+		});
+		if (['reviewed', 'locked'].includes(stretch.status) && incompleteBlocking) {
+			errors.push(`${sLabel}: reviewed/locked requires complete blocking for present cast`);
+		}
+
+		for (const take of script.takes || []) {
+			if (take.generation?.visualStretchId !== stretch.id) continue;
+			if (take.imageAssetId && take.imageAssetId === stretch.combinedStillAssetId) {
+				errors.push(
+					`${sLabel}: take ${take.id} must not use unsplit sheet as imageAssetId`
+				);
+			}
+		}
 	}
 }
 
@@ -196,10 +329,28 @@ function validateScriptFile(
 
 	const takeIds = new Set((script.takes || []).map((t) => t.id));
 	const shotIds = new Set((script.shots || []).map((shot) => shot.id));
+	const takesByShot = new Map();
+	for (const take of script.takes || []) {
+		if (!takesByShot.has(take.shotId)) takesByShot.set(take.shotId, []);
+		takesByShot.get(take.shotId).push(take);
+		if (!shotIds.has(take.shotId)) {
+			errors.push(`${label} take ${take.id}: unknown shotId ${take.shotId}`);
+		}
+	}
 	if ((script.shots || []).length > 0) {
 		for (const shot of script.shots) {
 			if (!shot.selectedTakeId || !takeIds.has(shot.selectedTakeId)) {
 				errors.push(`${label} shot ${shot.id}: invalid selectedTakeId`);
+			}
+			for (const takeId of shot.takeIds || []) {
+				if (!takeIds.has(takeId)) {
+					errors.push(`${label} shot ${shot.id}: unknown takeId ${takeId}`);
+				}
+			}
+			for (const take of takesByShot.get(shot.id) || []) {
+				if (!(shot.takeIds || []).includes(take.id)) {
+					errors.push(`${label} shot ${shot.id}: take ${take.id} missing from takeIds`);
+				}
 			}
 		}
 	}
@@ -218,6 +369,8 @@ function validateScriptFile(
 			);
 		}
 	}
+
+	validateVisualStretches(script, { label, shotIds, takeIds, characterIds, errors });
 
 	for (const a of script.script?.characterFunctionAssignments || []) {
 		if (functionIds.size && !functionIds.has(a.functionId)) {
