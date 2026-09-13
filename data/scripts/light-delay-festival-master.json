@@ -2545,8 +2545,8 @@
         "en": "Dramatize the package through observable choice, pressure, and consequence."
       },
       "summary": {
-        "es": "Dentro de la bóveda incompletamente asegurada, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. El temporizador de su controlador armado está puesto a la hora de llegada. zao: Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. zao: Multimegatón. El temporizador está puesto a la hora de llegada. Mira el reloj de comunicaciones ordinario. Ningún ida y vuelta puede ganarle al temporizador. zao: No. Nadie mandó esto por error.",
-        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The countdown timer on its armed controller is set to arrival time. zao: This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. zao: Multi-megaton. The timer is set to arrival time! She looks at the ordinary communications clock. No round trip can beat the timer. zao: No. No one sent this by mistake."
+        "es": "Dentro de la bóveda incompletamente asegurada, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. El temporizador de su controlador armado está puesto a la hora de llegada. zao: Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. zao: Multimegatón. El temporizador está puesto a la hora de llegada. zao: ¿Harlan? Él también lleva un dosímetro; lo habría llevado directo aquí, igual que a mí. Si no estuviera detrás de esto, ya estaría avisando. zao: Tengo que avisar a Voss. Que aborte la aproximación, o desactivamos esto, lo retrasamos, y lo detenemos a él.",
+        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The countdown timer on its armed controller is set to arrival time. zao: This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. zao: Multi-megaton. The timer is set to arrival time! zao: Harlan? He carries a dosimeter too — it would've led him straight here, same as it did me. If he weren't behind this, he'd already be calling it in. zao: I have to warn Voss. Abort the approach, or we defuse this, delay it, and detain him."
       },
       "participantRefs": [
         {
@@ -5442,10 +5442,37 @@
           "stepId": "festival-master:story-05"
         }
       ],
-      "type": "action",
-      "text": {
-        "es": "Mira el reloj normal de comunicaciones. Ningún ida y vuelta puede ganarle al temporizador.",
-        "en": "She looks at the ordinary communications clock. No round trip can beat the timer."
+      "type": "dialogue",
+      "speakerId": "character:zao",
+      "presentation": "on_screen",
+      "performance": {
+        "emotion": {
+          "es": "sospecha",
+          "en": "suspicious"
+        },
+        "intention": {
+          "es": "identificar a Harlan como el responsable probable",
+          "en": "identify Harlan as the likely culprit"
+        },
+        "pace": "quick"
+      },
+      "content": {
+        "sourceLanguage": "en",
+        "variants": {
+          "en": {
+            "spokenText": "Harlan? He carries a dosimeter too — it would've led him straight here, same as it did me. If he weren't behind this, he'd already be calling it in.",
+            "status": "source",
+            "delivery": "the pieces landing in real time",
+            "voiceProfileId": "voice:zao-es",
+            "estimatedDurationMs": 6200
+          },
+          "es": {
+            "spokenText": "¿Harlan? Él también lleva un dosímetro; lo habría llevado directo aquí, igual que a mí. Si no estuviera detrás de esto, ya estaría avisando.",
+            "status": "needs_revision",
+            "delivery": "las piezas encajando en tiempo real",
+            "estimatedDurationMs": 6200
+          }
+        }
       }
     },
     {
@@ -5468,27 +5495,26 @@
           "en": "resolved"
         },
         "intention": {
-          "es": "rechazar una explicación inocente",
-          "en": "reject an innocent explanation"
+          "es": "comprometerse con un curso de acción",
+          "en": "commit to a course of action"
         },
-        "pace": "normal"
+        "pace": "quick"
       },
       "content": {
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "No. No one sent this by mistake.",
+            "spokenText": "I have to warn Voss. Abort the approach, or we defuse this, delay it, and detain him.",
             "status": "source",
             "delivery": "fear hardening into action",
             "voiceProfileId": "voice:zao-es",
-            "estimatedDurationMs": 3420,
-            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0045"
+            "estimatedDurationMs": 4700
           },
           "es": {
-            "spokenText": "No. Nadie envió esto por error.",
+            "spokenText": "Tengo que avisar a Voss. Que aborte la aproximación, o desactivamos esto, lo retrasamos, y lo detenemos a él.",
             "status": "needs_revision",
-            "delivery": "fear hardening into action",
-            "estimatedDurationMs": 3420
+            "delivery": "el miedo se endurece en acción",
+            "estimatedDurationMs": 4700
           }
         }
       }
@@ -12686,8 +12712,8 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "Mira del temporizador de la bomba a un reloj de comunicaciones de muñeca corriente; resuelta, descarta una explicación inocente: \"No. Nadie envió esto por error\".",
-        "en": "She looks from the bomb's timer to an ordinary wrist communications clock; resolved, she rejects an innocent explanation: \"No. No one sent this by mistake.\"."
+        "es": "Reasoning aloud, Zao ata cabos: \"¿Harlan? Él también lleva un dosímetro; lo habría llevado directo aquí, igual que a mí. Si no estuviera detrás de esto, ya estaría avisando\". La sospecha se endurece en decisión: \"Tengo que avisar a Voss. Que aborte la aproximación, o desactivamos esto, lo retrasamos, y lo detenemos a él\".",
+        "en": "Reasoning aloud, Zao puts it together: \"Harlan? He carries a dosimeter too — it would've led him straight here, same as it did me. If he weren't behind this, he'd already be calling it in.\" The suspicion hardens into a decision: \"I have to warn Voss. Abort the approach, or we defuse this, delay it, and detain him.\"."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
@@ -12698,27 +12724,27 @@
         }
       ],
       "composition": {
-        "size": "INSERT",
+        "size": "CU",
         "aspectRatio": "16:9"
       },
       "camera": {
-        "movement": "tracking",
+        "movement": "dolly",
         "movementDescription": {
-          "es": "Travelling de seguimiento; encuadre de inserto ortogonal, legible.",
-          "en": "Tracking; orthogonal, legible insert framing."
+          "es": "Dolly de acercamiento lento; sostiene el rostro mientras la sospecha se convierte en decisión.",
+          "en": "Slow push-in dolly; holds on her face as suspicion turns to decision."
         }
       },
-      "durationMs": 8590,
+      "durationMs": 11000,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0044",
           "atMs": 0,
-          "durationMs": 5070
+          "durationMs": 6200
         },
         {
           "cueId": "festival-master:cue-0045",
-          "atMs": 5170,
-          "durationMs": 3420
+          "atMs": 6300,
+          "durationMs": 4700
         }
       ],
       "takeIds": [
@@ -18306,26 +18332,25 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao compares the bomb timer with an ordinary wrist communications clock and rejects an innocent explanation. Composition: INSERT framing. Camera: Tracking; orthogonal, legible insert framing. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao reasons aloud, suspicion hardening into decision — she has just placed Harlan at the scene and is committing to warn Voss. Composition: CU framing. Camera: Slow push-in dolly; holds on her face as suspicion turns to decision. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-harlan-wrist-device-sheet"
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "canon_mismatch"
         ],
         "sourceShotId": "festival-master:shot-plan-022",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "El take fue reasignado: ya no compara el temporizador con un reloj de muñeca; ahora Zao razona en voz alta sobre Harlan y decide avisar a Voss. La imagen existente (inserto del reloj) está desfasada.",
+          "en": "The take was repurposed: it no longer compares the timer to a wrist clock; Zao now reasons aloud about Harlan and decides to warn Voss. The existing still (the clock insert) is stale."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-022"
@@ -20478,17 +20503,17 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-088",
         "explanation": {
-          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
-          "en": "The visual reference sheet changed; regenerate this take with the current reference."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-088"
@@ -20508,18 +20533,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:10:00.000Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-089",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-089",
         "explanation": {
-          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
-          "en": "The visual reference sheet changed; regenerate this take with the current reference."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       }
     },
@@ -20566,18 +20591,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:20:00.000Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-091",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-091",
         "explanation": {
-          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
-          "en": "The visual reference sheet changed; regenerate this take with the current reference."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       }
     },
@@ -20596,17 +20621,17 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-12T22:30:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-092",
         "explanation": {
-          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
-          "en": "The visual reference sheet changed; regenerate this take with the current reference."
+          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
+          "en": "Image regenerated with the current reference; editorial review pending."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-092"

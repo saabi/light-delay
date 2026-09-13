@@ -38,8 +38,8 @@
         "en": "Something shouldn't be there"
       },
       "summary": {
-        "es": "Un exceso de combustible lleva a Zao hasta la bóveda blindada, donde encuentra un paquete de impulso geofísico armado — multimegatón, con coordenadas y hora de contacto.",
-        "en": "A fuel excess leads Zao to the shielded vault, where she finds an armed geophysical impulse package — multi-megaton, with contact coordinates and time."
+        "es": "Un exceso de combustible lleva a Zao hasta la bóveda blindada, donde encuentra un paquete de impulso geofísico armado — multimegatón, con el temporizador puesto a la hora de llegada.",
+        "en": "A fuel excess leads Zao to the shielded vault, where she finds an armed geophysical impulse package — multi-megaton, with its timer set to arrival time."
       },
       "importance": "required",
       "causalLinks": [

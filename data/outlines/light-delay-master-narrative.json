@@ -1954,8 +1954,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Tres hechos se asientan al mismo tiempo:",
-            "en": "Three facts land together:"
+            "es": "Cuatro hechos se asientan al mismo tiempo:",
+            "en": "Four facts land together:"
           }
         },
         {
@@ -1970,10 +1970,21 @@
               "en": "It is timed to first contact."
             },
             {
-              "es": "Ningún mensaje ordinario a la Tierra o a Próxima puede regresar a tiempo para detenerla.",
-              "en": "No ordinary message to Earth or Proxima can return in time to stop it."
+              "es": "Harlan tuvo que haberlo sabido: hay que detenerlo.",
+              "en": "Harlan had to have known — he must be detained."
+            },
+            {
+              "es": "Hay que abortar la aproximación, o intentar desactivarla o retrasarla.",
+              "en": "They must abort the approach, or try to defuse or delay it."
             }
           ]
+        },
+        {
+          "type": "paragraph",
+          "text": {
+            "es": "Todo el equipo lleva un dosímetro, incluido Harlan. El suyo habría hecho tic para él igual que el de ella, llevándolo directo al paquete. Si él no estuviera detrás de esto, ya estaría avisando a Voss por radio, tal como ella está a punto de hacerlo.",
+            "en": "Every crew member carries a dosimeter, Harlan included. His would have ticked for him exactly as hers did for her, leading him straight to the package. If he were not behind this, he would already be on the radio to Voss — just as she is about to be."
+          }
         },
         {
           "type": "paragraph",

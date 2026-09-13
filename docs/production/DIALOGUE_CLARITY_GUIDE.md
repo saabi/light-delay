@@ -26,7 +26,7 @@ reference — the target is closer to the "after" column, not maximal expansion.
 | Cue | Before | After | What changed |
 | --- | --- | --- | --- |
 | vault readout (Zao reads the controller) | *"Geophysical impulse package… one point three tonnes."* | *"This is an impulse warhead for geophysical research from the Proxima… one point three tonnes."* | Named what the object **is** (a warhead), not just its technical label. A general audience doesn't reliably parse "impulse package" as a bomb; "warhead" does the work in one word. |
-| same beat, next line | *"Multi-megaton. Contact coordinates. Contact time."* | *"Multi-megaton. Set for the contact coordinates — and the contact time!"* | Three noun fragments became one clause with a verb (*"Set for"*) connecting them, plus a dash-and-exclamation to keep the mounting horror. The audience now gets *what the numbers mean* (they're a countdown target), not just a list of jargon. |
+| same beat, next line | *"Multi-megaton. Contact coordinates. Contact time."* | *"Multi-megaton. The timer is set to arrival time!"* | Three noun fragments became one clause with a verb (*"is set"*) connecting yield to the timer, plus an exclamation to keep the mounting horror. The audience now gets *what the number is for* (a countdown to arrival), not a list of targeting jargon. |
 | Elin, dismissing Harlan's claim | *"Could have is not did."* | *"Could have doesn't mean did."* | Fixed telegraph-grammar into a real sentence. The compressed version reads as clipped *and* slightly broken English — ambiguous whether that's a character choice or an error. The fix keeps it just as short but grammatically whole, so terseness reads as intentional, not garbled. |
 | Elin, countering Harlan again | *"Agree is not prove."* | *"Agreement isn't proof."* | Same fix, same pattern: noun forms instead of a dropped-article fragment. |
 | Harlan, persuading Okoye | *"You served long enough to know caution isn't treason."* | *"I know you, Dara. I know what duty costs you."* | Not a length fix — a **legibility-of-motive** fix. The original stated an abstract proposition (caution vs. treason) the audience has to unpack under time pressure; the rewrite is concrete and personal (uses her name, names the actual stake — what duty has cost her) and does the same persuasive work faster to parse, not slower. |
@@ -45,8 +45,7 @@ clause), word choice (a precise concrete noun replacing a vague technical one), 
    that *is* the threat, the device that *is* the clue — should be nameable by ear on first hearing.
    Test: could an audience member repeat back what the object/event is, using only what was said aloud?
 2. **Turn noun-fragment lists into a clause.** "Contact coordinates. Contact time." tells you two nouns
-   are important but not what they're *for*. Adding one verb ("Set for the contact coordinates — and
-   the contact time") turns a list into a fact the audience can hold onto.
+   are important but not what they're *for*. Adding one verb ("The timer is set to arrival time") turns a list into a fact the audience can hold onto.
 3. **Fix telegraph-grammar into whole sentences, even short ones.** "Could have is not did" versus
    "Could have doesn't mean did" are the same length and the same bluntness, but only one of them is
    unambiguously a deliberate rhetorical style rather than broken syntax. Terseness should read as a

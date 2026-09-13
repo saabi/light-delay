@@ -148,10 +148,15 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 [QwenInstruct] Speak English. Performance and delivery: each fragment tighter than the last; the timer lands hard
 "Multi-megaton. The timer is set to arrival time!"
 
+<!-- audience-dialogue-id: festival-master:cue-0044 -->
+[Zao]
+[QwenInstruct] Speak English. Performance and delivery: the pieces landing in real time
+"Harlan? He carries a dosimeter too — it would've led him straight here, same as it did me. If he weren't behind this, he'd already be calling it in."
+
 <!-- audience-dialogue-id: festival-master:cue-0045 -->
 [Zao]
 [QwenInstruct] Speak English. Performance and delivery: fear hardening into action
-"No. No one sent this by mistake."
+"I have to warn Voss. Abort the approach, or we defuse this, delay it, and detain him."
 
 <!-- audience-dialogue-id: festival-master:cue-0047 -->
 [Zao]

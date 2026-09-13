@@ -34,8 +34,8 @@ describe('structured project data', () => {
 		expect(festival.sequences).toHaveLength(11);
 		expect(festival.scenes).toHaveLength(33);
 		expect(festival.scenes.filter((scene) => scene.sequenceId)).toHaveLength(31);
-		expect(festival.shots).toHaveLength(103);
-		expect(festival.takes).toHaveLength(103);
+		expect(festival.shots).toHaveLength(104);
+		expect(festival.takes).toHaveLength(104);
 	});
 
 	it('preserves 19 scenes and 128 shots in the deprecated main-short archive', () => {
