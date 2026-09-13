@@ -7556,6 +7556,15 @@
           ]
         }
       ],
+      "stillReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
       "sharedReferenceAssetIds": [
         "asset:character-voss-sheet",
         "asset:character-harlan-sheet",
@@ -7668,6 +7677,26 @@
           ]
         }
       ],
+      "stillReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "videoReferencePolicy": "fallback",
+      "effectiveVideoReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "voiceSampleAssetIds": [],
       "sharedReferenceAssetIds": [
         "asset:character-voss-sheet",
         "asset:character-harlan-sheet",
@@ -7690,7 +7719,10 @@
         "missing_voice_sample:character:harlan",
         "missing_voice_sample:character:sorell",
         "missing_voice_sample:character:voss",
-        "missing_voice_sample:character:zao"
+        "missing_voice_sample:character:zao",
+        "missing_keyframe:festival-master:shot-plan-010",
+        "missing_keyframe:festival-master:shot-plan-011",
+        "missing_keyframe:festival-master:shot-plan-012"
       ],
       "coherenceException": false,
       "runnable": false

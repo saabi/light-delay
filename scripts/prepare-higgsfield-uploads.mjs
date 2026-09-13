@@ -10,7 +10,7 @@
 import { copyFileSync, mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
 import { dirname, extname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { stagingFilenameForAssetId } from './lib/visual-stretch-handoff.mjs';
+import { stagingFilenameForAssetId, orderedStretchStagingAssetIds } from './lib/visual-stretch-handoff.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const STATIC = join(ROOT, 'static', 'assets');
@@ -258,15 +258,27 @@ function stageStretchAssets(rows) {
 	const planPath = join(ROOT, 'data/production/plans/light-delay-festival-master.json');
 	if (!existsSync(planPath)) return 0;
 	const plan = JSON.parse(readFileSync(planPath, 'utf8'));
-	/** @type {Set<string>} */
-	const ids = new Set();
+	/** @type {string[]} */
+	const orderedIds = [];
+	const seen = new Set();
 	for (const job of plan.visualStretchJobs || []) {
-		for (const assetId of job.sharedReferenceAssetIds || []) ids.add(assetId);
-		for (const mi of job.memberInputs || []) {
-			if (mi.keyframeAssetId) ids.add(mi.keyframeAssetId);
+		if (job.medium !== 'video' && job.medium !== 'still') {
+			// stage still shared refs too (legacy); prefer ordered helper for video
+		}
+		const ids =
+			job.medium === 'video'
+				? orderedStretchStagingAssetIds(job)
+				: [
+						...(job.stillReferenceAssetIds || job.sharedReferenceAssetIds || []),
+						...((job.memberInputs || []).map(/** @param {any} mi */ (mi) => mi.keyframeAssetId).filter(Boolean))
+					];
+		for (const assetId of ids) {
+			if (!assetId || seen.has(assetId)) continue;
+			seen.add(assetId);
+			orderedIds.push(assetId);
 		}
 	}
-	for (const assetId of ids) {
+	for (const assetId of orderedIds) {
 		const asset = assetsById.get(assetId);
 		if (!asset?.path) continue;
 		const rel = String(asset.path).replace(/^\/+/, '').replace(/^assets\//, '');

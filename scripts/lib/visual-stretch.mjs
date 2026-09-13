@@ -221,6 +221,16 @@ export function stretchJobId(stretch) {
  * Does not include selectedTakeId or take prompt/refs — selecting a derived
  * candidate must not invalidate that candidate's own stretchDigest.
  * @param {{ stretch: any, shotsById: Map<string, any> }} args
+ * @returns {{
+ *   compilerVersion: string,
+ *   stretchId: string,
+ *   revision: number,
+ *   videoReferencePolicy: 'fallback' | 'explicit',
+ *   videoReferenceAssetIds?: string[],
+ *   referenceAssetIds: string[],
+ *   members: any[],
+ *   [key: string]: unknown
+ * }}
  */
 export function buildStretchDigestPayload(args) {
 	const { stretch, shotsById } = args;
@@ -240,6 +250,12 @@ export function buildStretchDigestPayload(args) {
 		generationProfile: stretch.generationProfile,
 		gridLayout: stretch.generationProfile?.gridLayout,
 		referenceAssetIds: stretch.referenceAssetIds ?? [],
+		...(Object.prototype.hasOwnProperty.call(stretch, 'videoReferenceAssetIds')
+			? {
+					videoReferencePolicy: 'explicit',
+					videoReferenceAssetIds: stretch.videoReferenceAssetIds ?? []
+				}
+			: { videoReferencePolicy: 'fallback' }),
 		members: members.map((member) => {
 			const shot = shotsById.get(member.shotId);
 			return {

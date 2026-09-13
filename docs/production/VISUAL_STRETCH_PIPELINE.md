@@ -38,9 +38,20 @@ Inner gutters only (`gutterFraction`, pilot `0.02`). Letterbox/pillarbox **compu
 
 Plan root `visualStretchJobs[]`. Still modes: `combined_storyboard_sheet` | `independent_shared_authority` (author/provider only; `coherenceException` required). Video: `grouped_seedance` with `dependsOnStillJobId`. A stretch is **not** one video job — partition by segment ceiling (`min(campaign.maxSegmentMs, provider.maxDurationMs)`). Seedance 2.5 hard limit is **30 s** per generation on Higgsfield ([product FAQ](https://higgsfield.ai/seedance-2.5)); resolution (including 480p) does not raise that ceiling. Single members longer than the ceiling get `member_exceeds_max_duration` rather than a clean oversized job.
 
-Still jobs budget every authored `referenceAssetIds` entry against the still-provider limits (gpt-image-2: 8). Seedance jobs count ordered keyframe images plus only additional refs whose subjects are **not** already depicted in those keyframes (any `visibleRefs` entity — characters, locations, props, vehicles), plus one approved voice sample per dialogue speaker in the bucket. Jobs always set `runnable: false` when any blocker is present (including `member_exceeds_max_duration`). Each job pins `providerSnapshotId`. **No submission adapter exists in-repo** — MCP agents consume a §8 **run file** from the handoff CLI.
+Still jobs budget every authored `referenceAssetIds` entry against the still-provider limits (gpt-image-2: 8). Seedance jobs use ordered keyframe images plus **either** authored `videoReferenceAssetIds` (explicit policy) **or** uncovered still-list leftovers (fallback when the property is absent). Coverage is per registered-keyframe shot only — one keyframe does not cover the whole stretch cast. Custom assets not on an entity’s catalog sheet list do not satisfy entity completeness. Jobs always set `runnable: false` when any blocker is present (including `member_exceeds_max_duration` and `missing_keyframe:*`). Each job pins `providerSnapshotId`. **No submission adapter exists in-repo** — MCP agents consume a §8 **run file** from the handoff CLI.
 
 `Take.productionGate` (`deferred` / `blocked`) on any member source take blocks **both** still and Seedance jobs for that stretch (no silent partial). Derived plan field `generationGate` carries `status`, `reasonCode`, `takeIds`, and (when deferred) `prerequisiteAssetIds`. When members mix deferred and blocked, derived `status` is **deferred** (union of deferred prerequisites; all hold takeIds retained). Script takes remain SoT; do not hand-author `generationGate` on the plan.
+
+Plan job reference fields: `stillReferenceAssetIds` (complete still list, never trimmed), `videoReferencePolicy` (`fallback`|`explicit`), optional authored `videoReferenceAssetIds` only when explicit, derived `effectiveVideoReferenceAssetIds` + `voiceSampleAssetIds`. Deprecated `sharedReferenceAssetIds` must equal the still list on still jobs and effective video visuals on video jobs.
+
+### Agent / Fable rules (still vs video refs)
+
+- Never remove a reference from the still/keyframe list because it will appear in video.
+- Populate `videoReferenceAssetIds` separately when video needs a different static set (tri-state: absent = fallback; `[]` = explicit empty).
+- Generate keyframes from the complete still list first.
+- Compile video references only after keyframes are registered.
+- Do not treat a video job as runnable while required keyframes are missing (`missing_keyframe:*`) or explicit completeness fails (`uncovered_video_entity:*`).
+- Staging/`prepare:higgsfield` must preserve handoff order: keyframes → effective visuals → voice.
 
 ### MCP handoff boundary
 
@@ -74,4 +85,4 @@ npm run register:visual-stretch-video -- --from data/production/runs/<runId>-res
 
 ## UI (v1)
 
-JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, selected vs candidate, blockers from the shared completeness predicate. Deferred/blocked `Take.productionGate` shows as a readiness flag and take-section badge (reason + prerequisite catalog/manifest status). Full `/stretches/[scriptId]` deferred.
+JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, still refs, video reference policy (and authored video refs when explicit), selected vs candidate, blockers from the shared completeness predicate. Deferred/blocked `Take.productionGate` shows as a readiness flag and take-section badge (reason + prerequisite catalog/manifest status). Full `/stretches/[scriptId]` deferred.

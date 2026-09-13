@@ -31,6 +31,9 @@ export function buildVisualStretchesReport(script, _ctx, _projectCtx, language =
 			if (!t.generation?.stretchDigest) return false;
 			return t.generation.stretchDigest !== currentDigest;
 		});
+		const videoPolicy = Object.prototype.hasOwnProperty.call(stretch, 'videoReferenceAssetIds')
+			? 'explicit'
+			: 'fallback';
 		return {
 			id: stretch.id,
 			title: stretch.title?.[lang] || stretch.title?.en || stretch.id,
@@ -41,6 +44,10 @@ export function buildVisualStretchesReport(script, _ctx, _projectCtx, language =
 			stillMode: stretch.generationProfile?.stillMode,
 			gridLayout: stretch.generationProfile?.gridLayout || null,
 			combinedStillAssetId: stretch.combinedStillAssetId || null,
+			stillReferenceAssetIds: stretch.referenceAssetIds || [],
+			videoReferencePolicy: videoPolicy,
+			videoReferenceAssetIds:
+				videoPolicy === 'explicit' ? stretch.videoReferenceAssetIds || [] : null,
 			incompleteBlocking: blockers.includes('missing_stretch_blocking'),
 			derivedTakeCount: derivedTakes.length,
 			staleDerivedTakeIds: staleDerived.map((t) => t.id),
@@ -77,6 +84,15 @@ export function formatVisualStretchesMarkdown(report) {
 		lines.push(`- members (${row.memberCount}): ${row.memberShotIds.join(', ')}`);
 		lines.push(`- stillMode: ${row.stillMode}`);
 		lines.push(`- sheet: ${row.combinedStillAssetId || '—'}`);
+		lines.push(
+			`- still refs (${row.stillReferenceAssetIds.length}): ${row.stillReferenceAssetIds.join(', ') || '—'}`
+		);
+		lines.push(`- videoReferencePolicy: ${row.videoReferencePolicy}`);
+		if (row.videoReferencePolicy === 'explicit') {
+			lines.push(
+				`- video refs (${row.videoReferenceAssetIds.length}): ${row.videoReferenceAssetIds.join(', ') || '—'}`
+			);
+		}
 		lines.push(`- blockers: ${row.blockers.length ? row.blockers.join(', ') : 'none'}`);
 		if (row.staleDerivedTakeIds.length) {
 			lines.push(`- stale derived: ${row.staleDerivedTakeIds.join(', ')}`);

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-13 — Separate still vs video stretch references
+
+- `VisualStretch.videoReferenceAssetIds` tri-state (absent = fallback, present including `[]` = explicit); still `referenceAssetIds` never trimmed for Seedance.
+- Plan jobs expose `stillReferenceAssetIds`, `videoReferencePolicy`, `effectiveVideoReferenceAssetIds`, `voiceSampleAssetIds`; `sharedReferenceAssetIds` remains a validated deprecated alias.
+- Per-keyframe coverage only; explicit completeness blockers; ordered staging matches handoff.
+- Agent video docs: `SEEDANCE_PROMPTING.md` §6.2, `AGENT_GENERATION_BRIEF.md`, `HIGGSFIELD_MCP.md` §8b, `VISUAL_STRETCH_PIPELINE.md`, `ARQUITECTURA_GENERACION.md`.
+
 ## 2026-09-13 — Take.productionGate generation deferral
 
 - Added optional `Take.productionGate` (`eligible` | `deferred` | `blocked`) with EN reason + catalog-or-manifest prerequisites; absent gate means eligible.

@@ -115,7 +115,8 @@ Generate **one** ordered multi-panel sheet (agent image tool), then split panels
 **new candidate takes**. Do not invent seating. Do not play the unsplit sheet as each shot's
 animatic frame. Pipeline: `docs/production/VISUAL_STRETCH_PIPELINE.md`. Seedance still uses
 **per-shot panel stills as ordered keyframes** (`SEEDANCE_PROMPTING.md` §6.2); the combined sheet
-is an optional blocking reference only.
+is an optional blocking reference only. Keep stretch `referenceAssetIds` complete for stills;
+Seedance extras use optional `videoReferenceAssetIds` (do not trim the still list for video).
 
 ## 3. Dialogue must match the speaker's actual belief state, not the audience's later knowledge
 

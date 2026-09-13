@@ -173,7 +173,8 @@ and project output paths. The manifest does not authorize a provider run.
   incomplete.
 - **Seedance 2.5 stays `provisional` / `executable: false`** in `provider-capabilities.json` until
   its catalog/CLI/MCP contract is confirmed against a live account.
-- **`higgsfield-uploads/`** still indexes legacy cast sheets; `prepare:higgsfield` also stages stretch refs under `stretch/` with stable names from asset ids.
+- **`higgsfield-uploads/`** still indexes legacy cast sheets; `prepare:higgsfield` also stages stretch refs under `stretch/` in **handoff order** (keyframe slots → effective video visuals → voice), not arbitrary Set insertion order.
+- **Stretch still vs video refs:** keep `VisualStretch.referenceAssetIds` complete for still/keyframe jobs; optional `videoReferenceAssetIds` is a separate tri-state list for Seedance extras (`VISUAL_STRETCH_PIPELINE.md`, `SEEDANCE_PROMPTING.md` §6.2). Do not invent pilot `videoReferenceAssetIds` on Festival-master without author instruction.
 
 ## 7. Dialogue tone pass (harsh → human/colloquial)
 
@@ -289,6 +290,7 @@ negative: <what must not appear>
 > Do not invent missing references — mark blockers and file a reference-asset request (§8.3) instead.
 > Do not submit anything to Higgsfield. Do not regenerate existing PNGs unless explicitly ordered.
 > Skip takes with `productionGate.status` of `deferred` or `blocked` (and any stretch job that lists them in `generationGate.takeIds`) until the author clears the gate — do not treat that as `imageStatus` debt.
+> Never remove a stretch `referenceAssetIds` entry because video will depict the same subject; author Seedance-only static refs on optional `videoReferenceAssetIds` (absent = fallback from still list; present including `[]` = explicit). Generate keyframes from the full still list first; compile video refs only after keyframes are registered; refuse runnable video while `missing_keyframe:*` or `uncovered_video_entity:*` remains (`VISUAL_STRETCH_PIPELINE.md`).
 > Keep `compiledPrompt: null` until editorial freeze unless told otherwise for this session.
 > When rewriting dialogue for tone, edit English only and consult that speaker's voice-profile
 > `dialogueStyle` first; never fix tone by adding exposition.

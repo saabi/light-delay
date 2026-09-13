@@ -79,6 +79,34 @@ export function assertRepoRelativeFileExists(root, relPath) {
 }
 
 /**
+ * Ordered present asset ids for staging (keyframe → visual → voice), matching handoff order.
+ * Skips null keyframe slots; does not dedupe beyond first occurrence.
+ * @param {{ memberInputs?: Array<{ order?: number, keyframeAssetId?: string }>, effectiveVideoReferenceAssetIds?: string[], voiceSampleAssetIds?: string[], sharedReferenceAssetIds?: string[] }} job
+ * @returns {string[]}
+ */
+export function orderedStretchStagingAssetIds(job) {
+	/** @type {string[]} */
+	const ordered = [];
+	const seen = new Set();
+	/** @param {string | undefined | null} id */
+	const push = (id) => {
+		if (!id || seen.has(id)) return;
+		seen.add(id);
+		ordered.push(id);
+	};
+	for (const mi of [...(job.memberInputs || [])].sort(
+		/** @param {any} a @param {any} b */ (a, b) => (a.order ?? 0) - (b.order ?? 0)
+	)) {
+		push(mi.keyframeAssetId);
+	}
+	for (const id of job.effectiveVideoReferenceAssetIds ?? job.sharedReferenceAssetIds ?? []) {
+		push(id);
+	}
+	for (const id of job.voiceSampleAssetIds || []) push(id);
+	return ordered;
+}
+
+/**
  * @param {any} job
  * @param {any} stretch
  * @param {any} script
@@ -100,7 +128,7 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 	const members = (stretch.members || []).filter(/** @param {any} m */ (m) =>
 		(job.memberInputs || []).some(/** @param {any} mi */ (mi) => mi.shotId === m.shotId)
 	);
-	const { references: rawRefs } = collectVideoStretchReferences({
+	const collected = collectVideoStretchReferences({
 		stretch,
 		members,
 		shotsById,
@@ -110,6 +138,14 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 		voiceProfiles: opts.voiceProfiles ?? [],
 		language: opts.language ?? 'en'
 	});
+
+	const storedEffective = job.effectiveVideoReferenceAssetIds;
+	const effectiveVisualIds = Array.isArray(storedEffective)
+		? storedEffective
+		: collected.effectiveVideoReferenceAssetIds;
+	const voiceIds = Array.isArray(job.voiceSampleAssetIds)
+		? job.voiceSampleAssetIds
+		: collected.voiceSampleAssetIds;
 
 	/** @type {Array<any>} */
 	const ordered = [];
@@ -124,16 +160,14 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 			order: mi.order
 		});
 	}
-	for (const ref of rawRefs) {
-		if (ref.role === 'keyframe') continue;
-		ordered.push({
-			kind: ref.kind,
-			role: ref.role || 'visual_reference',
-			assetId: ref.id
-		});
+	for (const id of effectiveVisualIds) {
+		ordered.push({ kind: 'image', role: 'visual_reference', assetId: id });
+	}
+	for (const id of voiceIds) {
+		ordered.push({ kind: 'audio', role: 'voice_sample', assetId: id });
 	}
 
-	const missing = [];
+	const missing = [...collected.blockers.filter((b) => b.startsWith('missing_keyframe:'))];
 	const resolved = [];
 	for (const entry of ordered) {
 		if (!entry.assetId) {
@@ -175,7 +209,11 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 			localStagingPath
 		});
 	}
-	return { references: resolved, missing };
+	return {
+		references: resolved,
+		missing: [...new Set(missing)],
+		recomputedEffectiveVideoReferenceAssetIds: collected.effectiveVideoReferenceAssetIds
+	};
 }
 
 /**

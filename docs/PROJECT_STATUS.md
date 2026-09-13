@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-13 — Separate still/video stretch refs (English source)
+
+- Still and Seedance reference lists are authored separately (`videoReferenceAssetIds` optional tri-state). Keyframe coverage is per registered shot; staging order matches handoff.
+- Agent guides updated: `SEEDANCE_PROMPTING.md` §6.2, `AGENT_GENERATION_BRIEF.md`, `HIGGSFIELD_MCP.md` §8b, `VISUAL_STRETCH_PIPELINE.md`.
+
 ## 2026-09-13 — Take.productionGate (English source)
 
 - Authors can mark takes `deferred` (await named assets) or `blocked` without touching `imageStatus`. Generation plans and stretch jobs derive `generationGate` and stay non-runnable until the gate is cleared.

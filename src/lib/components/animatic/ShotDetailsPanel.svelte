@@ -79,6 +79,15 @@
 	const stretchBlockers = $derived(
 		stretchMembership ? stretchBlockingBlockers(stretchMembership.stretch) : []
 	);
+	const stretchVideoPolicyExplicit = $derived(
+		Boolean(
+			stretchMembership &&
+				Object.prototype.hasOwnProperty.call(
+					stretchMembership.stretch,
+					'videoReferenceAssetIds'
+				)
+		)
+	);
 	const productionGate = $derived(media.take?.productionGate);
 	const gateHold = $derived(isProductionGateHold(media.take));
 	const gateStatus = $derived(effectiveProductionGateStatus(media.take));
@@ -252,6 +261,32 @@
 					<dt>{m.details_stretch_sheet()}</dt>
 					<dd class="mono">{stretchMembership.stretch.combinedStillAssetId ?? '—'}</dd>
 				</div>
+				<div>
+					<dt>{m.details_stretch_still_refs()}</dt>
+					<dd class="mono"
+						>{stretchMembership.stretch.referenceAssetIds?.length
+							? stretchMembership.stretch.referenceAssetIds.join(', ')
+							: '—'}</dd
+					>
+				</div>
+				<div>
+					<dt>{m.details_stretch_video_policy()}</dt>
+					<dd>
+						{stretchVideoPolicyExplicit
+							? m.details_stretch_video_policy_explicit()
+							: m.details_stretch_video_policy_fallback()}
+					</dd>
+				</div>
+				{#if stretchVideoPolicyExplicit}
+					<div>
+						<dt>{m.details_stretch_video_refs()}</dt>
+						<dd class="mono"
+							>{stretchMembership.stretch.videoReferenceAssetIds?.length
+								? stretchMembership.stretch.videoReferenceAssetIds.join(', ')
+								: '—'}</dd
+						>
+					</div>
+				{/if}
 				<div>
 					<dt>{takeIsSelected ? m.details_stretch_selected_take() : m.details_stretch_candidate()}</dt>
 					<dd class="mono">{media.take?.id ?? '—'}</dd>

@@ -242,7 +242,7 @@ Campos a rellenar tras la primera conexión real: `model` exacto aceptado por el
 - Displays diegéticos solo en inglés ([`docs/PRODUCTION_PLAN.md`](../PRODUCTION_PLAN.md)).
 - No superar 12 referencias totales por job si se usa Seedance 2.0 según snapshot.
 - Segmentos ≤ **30 s** según `campaign:higgsfield-trial-24h` / Seedance 2.5 single-pass; confirmar en preflight que el plan de cuenta no baje ese techo.
-- Ejecutar `npm run prepare:higgsfield` antes de cada corrida para refrescar staging (incluye `higgsfield-uploads/stretch/` con nombres estables por `assetId`).
+- Ejecutar `npm run prepare:higgsfield` antes de cada corrida para refrescar staging (incluye `higgsfield-uploads/stretch/` con nombres estables por `assetId`, en el **mismo orden** que `references[]` del handoff: keyframes → visuals efectivos → voice samples).
 
 ---
 
@@ -258,14 +258,15 @@ Hard gates:
 
 Authoring hold SoT is **`Take.productionGate`** on the script take (`deferred` / `blocked`), not `imageStatus` and not plan-hand-authored fields. Plans/stretch jobs only **derive** `generationGate` + blockers (`docs/production/VISUAL_STRETCH_PIPELINE.md`, `AGENT_GENERATION_BRIEF.md`). Agents must:
 
-- Refuse submit/handoff-as-executable when the source plan job is not `runnable` or lists production-gate blockers.
+- Refuse submit/handoff-as-executable when the source plan job is not `runnable` or lists production-gate blockers (including `missing_keyframe:*` / `uncovered_video_entity:*`).
 - Not invent or clear `productionGate` / prerequisites without explicit author instruction; clearing a gate means editing the **script take**, then `npm run production:plans` so derived plan fields update.
 - Not treat a deferred take as regen debt (`imageStatus`).
+- Not trim stretch `referenceAssetIds` for Seedance; not invent `videoReferenceAssetIds` unless the author authored that tri-state list (`SEEDANCE_PROMPTING.md` §6.2).
 
 Agent steps for a **paid** smoke (after freeze exists):
 
 1. `node scripts/higgsfield-preflight.mjs --probe` — record live model catalog, credits, and **concurrency** (account/plan/model; API returns 400 when concurrent cap is hit; Concurrency Boost can raise it; caps change). Campaign `concurrency` is the project ceiling once verified (`null` until then). Smoke always uses `executionPolicy.maxJobs: 1`.
-2. `npm run prepare:higgsfield` — refresh staging; stretch refs under `higgsfield-uploads/stretch/`.
+2. `npm run prepare:higgsfield` — refresh staging; stretch refs under `higgsfield-uploads/stretch/` in handoff order (keyframes → effective visuals → voice).
 3. Use the **exact** frozen run JSON (`reports/runs/` or promoted path). Do **not** re-run handoff between submit and register (`inputDigest` covers the prompt).
 4. Upload references **only** in `references[]` order from that file. Map each `assetId` → remote handle in the result.
 5. Before generating: state the credit cost and **wait for human confirmation**.

@@ -2,6 +2,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
+import { assertSharedReferenceAlias } from './lib/visual-stretch-jobs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = join(ROOT, 'data');
@@ -30,10 +31,20 @@ for (const binding of manifest.bindings) {
 	];
 	for (const file of files) {
 		checked += 1;
-		const valid = validate(JSON.parse(readFileSync(file, 'utf8')));
+		const data = JSON.parse(readFileSync(file, 'utf8'));
+		const valid = validate(data);
 		if (!valid) {
 			for (const error of validate.errors ?? []) {
 				errors.push(`${relative(ROOT, file)}${error.instancePath || '/'} ${error.message}`);
+			}
+		}
+		if (binding.schema === 'generation-plan.schema.json') {
+			for (const job of data.visualStretchJobs || []) {
+				try {
+					assertSharedReferenceAlias(job);
+				} catch (err) {
+					errors.push(`${relative(ROOT, file)} ${err instanceof Error ? err.message : String(err)}`);
+				}
 			}
 		}
 	}

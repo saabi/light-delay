@@ -73,6 +73,8 @@ El brief humano se autoriza en inglés. La versión compilada es un producto rep
 
 El presupuesto se valida por tipo y en total. Las imágenes de personajes, lugares, vehículos y objetos salen de `referenceAssetIds`; no se buscan por parecido visual. Las muestras de voz deben vivir como assets y ser referenciadas por `VoiceProfileVariant.sampleAssetIds`. La ausencia actual de muestras bloquea el audio de Seedance, pero no autoriza a inventar voces ni a sustituir la muestra por un WAV de diálogo generado (`DialogueVariant.audioAssetId`).
 
+En **visual stretches**, la lista still/keyframe (`VisualStretch.referenceAssetIds`) se mantiene completa; las extras de Seedance usan el tri-estado opcional `videoReferenceAssetIds` (ausente = fallback; presente incluyendo `[]` = explícito). Detalle y cobertura por keyframe: [`docs/production/VISUAL_STRETCH_PIPELINE.md`](production/VISUAL_STRETCH_PIPELINE.md) y [`SEEDANCE_PROMPTING.md`](production/SEEDANCE_PROMPTING.md) §6.2.
+
 La integración futura con Higgsfield debe resolver IDs remotos a partir de estos assets locales, adjuntar únicamente las referencias necesarias y registrar qué archivos fueron enviados. Si una toma excede los límites, debe dividir el pedido o reducir referencias mediante una decisión editorial visible; nunca descartar una referencia silenciosamente.
 
 ## Seedance e Higgsfield

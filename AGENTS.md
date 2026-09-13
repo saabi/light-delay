@@ -51,6 +51,7 @@ When a needed edit at a lower layer conflicts with authoritative truth above it:
 - Still prompts: **no spoken dialogue**; English-only diegetic UI. Check with `npm run scrub:still-prompts:check`. Video jobs (e.g. Seedance 2.5) **do** take cue text + voice-sample audio refs — do not apply the still no-dialogue scrub there (`SEEDANCE_PROMPTING.md`).
 - **Do not regenerate existing images** unless explicitly instructed. Mark debt with `imageStatus` (`needs_regeneration` + reason). Marking stale ≠ permission to regenerate.
 - Generation scheduling holds use **`Take.productionGate`** (`deferred` / `blocked`), not `imageStatus`. Plan/stretch `generationGate` is derived only — edit the script take, then rebuild plans. Skip gated takes/jobs until the author clears the gate (`docs/JSON_FORMAT.md`, `docs/production/AGENT_GENERATION_BRIEF.md`).
+- Visual stretch still refs (`referenceAssetIds`) stay complete for keyframe generation; Seedance extras use optional `videoReferenceAssetIds` (see `docs/production/VISUAL_STRETCH_PIPELINE.md`).
 - Generation depth: `docs/production/AGENT_GENERATION_BRIEF.md`.
 
 ## Language and documentary authority

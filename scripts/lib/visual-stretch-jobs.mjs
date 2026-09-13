@@ -102,13 +102,33 @@ export function collectStillStretchReferences(stretch) {
 }
 
 /**
+ * Catalog asset must resolve with a usable path; imageStatus absent or current.
+ * @param {string} assetId
+ * @param {Map<string, any> | undefined} assetsById
+ * @param {'image' | 'audio'} kind
+ * @returns {string[]}
+ */
+export function assetReferenceQualityBlockers(assetId, assetsById, kind = 'image') {
+	if (!assetsById) return [];
+	const asset = assetsById.get(assetId);
+	if (!asset) return [`missing_${kind}_asset:${assetId}`];
+	if (!asset.path) return [`missing_${kind}_path:${assetId}`];
+	const status = asset.imageStatus?.status;
+	if (status && status !== 'current') {
+		return [`stale_${kind}_asset:${assetId}`];
+	}
+	return [];
+}
+
+/**
  * Dialogue voice samples for speakers who talk in the bucket's shots.
  * @param {{
  *   members: StretchMember[],
  *   shotsById: Map<string, any>,
  *   cuesById?: Map<string, any>,
  *   voiceProfiles?: VoiceProfile[],
- *   language?: string
+ *   language?: string,
+ *   assetsById?: Map<string, any>
  * }} args
  * @returns {{ references: StretchReference[], blockers: string[] }}
  */
@@ -118,7 +138,8 @@ export function collectDialogueVoiceSampleReferences(args) {
 		shotsById,
 		cuesById = new Map(),
 		voiceProfiles = [],
-		language = 'en'
+		language = 'en',
+		assetsById
 	} = args;
 	/** @type {StretchReference[]} */
 	const references = [];
@@ -142,6 +163,11 @@ export function collectDialogueVoiceSampleReferences(args) {
 			blockers.push(`missing_voice_sample:${speakerId}`);
 			continue;
 		}
+		const quality = assetReferenceQualityBlockers(sampleId, assetsById, 'audio');
+		if (quality.length) {
+			blockers.push(...quality);
+			continue;
+		}
 		references.push({
 			kind: /** @type {'audio'} */ ('audio'),
 			id: sampleId,
@@ -152,20 +178,84 @@ export function collectDialogueVoiceSampleReferences(args) {
 }
 
 /**
+ * Resolve authored video reference policy (tri-state).
+ * @param {{ videoReferenceAssetIds?: string[] }} stretch
+ * @returns {'fallback' | 'explicit'}
+ */
+export function resolveVideoReferencePolicy(stretch) {
+	return Object.prototype.hasOwnProperty.call(stretch ?? {}, 'videoReferenceAssetIds')
+		? 'explicit'
+		: 'fallback';
+}
+
+/**
+ * Assert deprecated sharedReferenceAssetIds alias matches medium-specific field.
+ * @param {{ id?: string, medium?: string, sharedReferenceAssetIds?: string[], stillReferenceAssetIds?: string[], effectiveVideoReferenceAssetIds?: string[] }} job
+ */
+export function assertSharedReferenceAlias(job) {
+	const shared = job.sharedReferenceAssetIds || [];
+	if (job.medium === 'still') {
+		const still = job.stillReferenceAssetIds || [];
+		if (shared.length !== still.length || shared.some((id, i) => id !== still[i])) {
+			throw new Error(
+				`stretch job ${job.id || '?'}: sharedReferenceAssetIds must equal stillReferenceAssetIds`
+			);
+		}
+		return;
+	}
+	if (job.medium === 'video') {
+		const effective = job.effectiveVideoReferenceAssetIds || [];
+		if (shared.length !== effective.length || shared.some((id, i) => id !== effective[i])) {
+			throw new Error(
+				`stretch job ${job.id || '?'}: sharedReferenceAssetIds must equal effectiveVideoReferenceAssetIds`
+			);
+		}
+	}
+}
+
+/**
+ * Deduplicate references by asset id, preserving first-seen order.
+ * @param {StretchReference[]} references
+ * @returns {StretchReference[]}
+ */
+export function dedupeReferencesByAssetId(references) {
+	const seen = new Set();
+	/** @type {StretchReference[]} */
+	const out = [];
+	for (const ref of references || []) {
+		if (!ref?.id || seen.has(ref.id)) continue;
+		seen.add(ref.id);
+		out.push(ref);
+	}
+	return out;
+}
+
+/**
  * Seedance jobs: ordered keyframes + additional visual refs not already in those frames
- * + dialogue voice samples for speakers in the bucket.
+ * + dialogue voice samples. Still list is never mutated.
+ *
+ * Coverage is per registered-keyframe shot only (no stretch-wide blanket).
+ * Explicit policy: extras from videoReferenceAssetIds; fallback: from referenceAssetIds.
+ * Completeness (explicit): uncovered visible entities whose catalog sheets are absent → blockers.
  *
  * @param {{
- *   stretch: { referenceAssetIds?: string[], locationId?: string, presentCharacterIds?: string[] },
+ *   stretch: { referenceAssetIds?: string[], videoReferenceAssetIds?: string[], locationId?: string, presentCharacterIds?: string[] },
  *   members: StretchMember[],
  *   shotsById: Map<string, any>,
  *   keyframeByShotId?: Map<string, string>,
  *   entityReferenceIds?: Map<string, string[]>,
  *   cuesById?: Map<string, any>,
  *   voiceProfiles?: VoiceProfile[],
- *   language?: string
+ *   language?: string,
+ *   assetsById?: Map<string, any>
  * }} args
- * @returns {{ references: StretchReference[], blockers: string[] }}
+ * @returns {{
+ *   references: StretchReference[],
+ *   blockers: string[],
+ *   videoReferencePolicy: 'fallback' | 'explicit',
+ *   effectiveVideoReferenceAssetIds: string[],
+ *   voiceSampleAssetIds: string[]
+ * }}
  */
 export function collectVideoStretchReferences(args) {
 	const {
@@ -176,50 +266,73 @@ export function collectVideoStretchReferences(args) {
 		entityReferenceIds = new Map(),
 		cuesById = new Map(),
 		voiceProfiles = [],
-		language = 'en'
+		language = 'en',
+		assetsById
 	} = args;
+	const videoReferencePolicy = resolveVideoReferencePolicy(stretch);
 	/** @type {StretchReference[]} */
-	const refs = [];
+	const keyframeRefs = [];
 	const coveredAssetIds = new Set();
-	const coveredEntityIds = new Set();
-	let hasKeyframe = false;
+	/** Entities covered by a registered keyframe shot. */
+	const keyframeCoveredEntityIds = new Set();
+	/** All visible entities on job members (for explicit completeness). */
+	const requiredEntityIds = new Set();
 
 	for (const member of members) {
+		const shot = shotsById.get(member.shotId);
+		if (shot?.locationId) requiredEntityIds.add(shot.locationId);
+		for (const ref of shot?.visibleRefs || []) {
+			if (ref?.id) requiredEntityIds.add(ref.id);
+		}
 		const keyframeId = keyframeByShotId.get(member.shotId);
 		if (!keyframeId) continue;
-		hasKeyframe = true;
-		refs.push({
+		keyframeRefs.push({
 			kind: /** @type {'image'} */ ('image'),
 			id: keyframeId,
 			role: 'keyframe'
 		});
-		const shot = shotsById.get(member.shotId);
-		if (shot?.locationId) coveredEntityIds.add(shot.locationId);
+		if (shot?.locationId) keyframeCoveredEntityIds.add(shot.locationId);
 		for (const ref of shot?.visibleRefs || []) {
-			if (ref?.id) coveredEntityIds.add(ref.id);
+			if (ref?.id) keyframeCoveredEntityIds.add(ref.id);
 		}
 	}
 
-	if (hasKeyframe) {
-		if (stretch.locationId) coveredEntityIds.add(stretch.locationId);
-		for (const characterId of stretch.presentCharacterIds || []) {
-			coveredEntityIds.add(characterId);
-		}
-	}
-
-	for (const entityId of coveredEntityIds) {
+	for (const entityId of keyframeCoveredEntityIds) {
 		for (const assetId of entityReferenceIds.get(entityId) || []) {
 			coveredAssetIds.add(assetId);
 		}
 	}
+	for (const kf of keyframeRefs) coveredAssetIds.add(kf.id);
 
-	for (const assetId of stretch.referenceAssetIds || []) {
-		if (coveredAssetIds.has(assetId)) continue;
-		refs.push({
+	const extraSource =
+		videoReferencePolicy === 'explicit'
+			? stretch.videoReferenceAssetIds || []
+			: stretch.referenceAssetIds || [];
+
+	/** @type {StretchReference[]} */
+	const visualExtras = [];
+	for (const assetId of extraSource) {
+		if (!assetId || coveredAssetIds.has(assetId)) continue;
+		visualExtras.push({
 			kind: /** @type {'image'} */ ('image'),
 			id: assetId,
 			role: 'visual_reference'
 		});
+		coveredAssetIds.add(assetId);
+	}
+
+	const effectiveVideoReferenceAssetIds = visualExtras.map((r) => r.id);
+
+	/** @type {string[]} */
+	const blockers = [];
+	if (videoReferencePolicy === 'explicit') {
+		const effectiveSet = new Set(effectiveVideoReferenceAssetIds);
+		for (const entityId of requiredEntityIds) {
+			if (keyframeCoveredEntityIds.has(entityId)) continue;
+			const sheets = entityReferenceIds.get(entityId) || [];
+			const coveredBySheet = sheets.some(/** @param {string} id */ (id) => effectiveSet.has(id));
+			if (!coveredBySheet) blockers.push(`uncovered_video_entity:${entityId}`);
+		}
 	}
 
 	const voice = collectDialogueVoiceSampleReferences({
@@ -227,15 +340,31 @@ export function collectVideoStretchReferences(args) {
 		shotsById,
 		cuesById,
 		voiceProfiles,
-		language
+		language,
+		assetsById
 	});
-	const seenAudio = new Set();
-	for (const ref of voice.references) {
-		if (seenAudio.has(ref.id)) continue;
-		seenAudio.add(ref.id);
-		refs.push(ref);
+	blockers.push(...voice.blockers);
+
+	const references = dedupeReferencesByAssetId([
+		...keyframeRefs,
+		...visualExtras,
+		...voice.references
+	]);
+	for (const ref of references) {
+		if (ref.role === 'voice_sample') continue;
+		blockers.push(...assetReferenceQualityBlockers(ref.id, assetsById, 'image'));
 	}
-	return { references: refs, blockers: voice.blockers };
+	const voiceSampleAssetIds = references
+		.filter((r) => r.role === 'voice_sample')
+		.map((r) => r.id);
+
+	return {
+		references,
+		blockers,
+		videoReferencePolicy,
+		effectiveVideoReferenceAssetIds,
+		voiceSampleAssetIds
+	};
 }
 
 /**
@@ -270,11 +399,13 @@ function finalizeStretchJob(job, opts = {}) {
 	if (maxOutputs != null && Array.isArray(job.outputs) && job.outputs.length > maxOutputs) {
 		blockers.push(`outputs:${job.outputs.length}>${maxOutputs}`);
 	}
-	return /** @type {VisualStretchJob} */ ({
+	const finalized = /** @type {VisualStretchJob} */ ({
 		...job,
 		blockers,
 		runnable: blockers.length === 0
 	});
+	assertSharedReferenceAlias(finalized);
+	return finalized;
 }
 
 /**
@@ -282,7 +413,7 @@ function finalizeStretchJob(job, opts = {}) {
  * A single member longer than the ceiling is emitted alone with `member_exceeds_max_duration`
  * and `runnable: false` (descriptor retained for diagnostics; must not be submitted).
  *
- * @param {{ id: string, revision: number, referenceAssetIds?: string[], locationId?: string, presentCharacterIds?: string[] }} stretch
+ * @param {{ id: string, revision: number, referenceAssetIds?: string[], videoReferenceAssetIds?: string[], locationId?: string, presentCharacterIds?: string[] }} stretch
  * @param {StretchMember[]} members
  * @param {Map<string, any>} shotsById
  * @param {number} maxSegmentMs
@@ -342,7 +473,7 @@ export function partitionStretchVideoJobs(
 				keyframeAssetId: keyframeByShotId.get(member.shotId)
 			};
 		});
-		const { references, blockers: voiceBlockers } = collectVideoStretchReferences({
+		const collected = collectVideoStretchReferences({
 			stretch,
 			members: bucketMembers,
 			shotsById,
@@ -350,22 +481,39 @@ export function partitionStretchVideoJobs(
 			entityReferenceIds,
 			cuesById,
 			voiceProfiles,
-			language
+			language,
+			assetsById: opts.assetsById
 		});
 		const gate = collectStretchProductionGate(bucketMembers, shotsById, takesById, gateCtx);
+		const stillReferenceAssetIds = [...(stretch.referenceAssetIds || [])];
+		const effectiveVideoReferenceAssetIds = collected.effectiveVideoReferenceAssetIds;
 		/** @type {string[]} */
 		const blockers = [
 			'editorial_prompt_freeze_not_approved',
 			'seedance_execution_gated',
-			...voiceBlockers,
-			...referenceBudgetBlockers(references, opts.videoLimits),
+			...collected.blockers,
+			...referenceBudgetBlockers(collected.references, opts.videoLimits),
 			...gate.blockers,
 			...extraBlockers
 		];
+		for (const mi of memberInputs) {
+			if (!mi.keyframeAssetId) blockers.push(`missing_keyframe:${mi.shotId}`);
+		}
 		if (durationMs > maxSegmentMs) {
 			blockers.push('member_exceeds_max_duration');
 		}
 		if (!providerSnapshotId) blockers.push('missing_provider_snapshot');
+		/** @type {Record<string, unknown>} */
+		const videoFields = {
+			stillReferenceAssetIds,
+			videoReferencePolicy: collected.videoReferencePolicy,
+			effectiveVideoReferenceAssetIds,
+			voiceSampleAssetIds: collected.voiceSampleAssetIds,
+			sharedReferenceAssetIds: effectiveVideoReferenceAssetIds
+		};
+		if (collected.videoReferencePolicy === 'explicit') {
+			videoFields.videoReferenceAssetIds = stretch.videoReferenceAssetIds || [];
+		}
 		return finalizeStretchJob({
 			id: `${stillJobId}:video-${part}`,
 			stretchId: stretch.id,
@@ -377,9 +525,7 @@ export function partitionStretchVideoJobs(
 			dependsOnStillJobId: stillJobId,
 			durationMs,
 			memberInputs,
-			sharedReferenceAssetIds: references
-				.filter((r) => r.role === 'visual_reference')
-				.map((r) => r.id),
+			...videoFields,
 			compiledPrompt: null,
 			outputs: [{ order: 1, artifact: 'video' }],
 			blockers,
@@ -467,8 +613,12 @@ export function buildVisualStretchJobs(
 		];
 
 		const stillReferences = collectStillStretchReferences(stretch);
-		const sharedReferenceAssetIds = stillReferences.map((r) => r.id);
+		const stillReferenceAssetIds = stillReferences.map((r) => r.id);
+		const sharedReferenceAssetIds = stillReferenceAssetIds;
 		blockers.push(...referenceBudgetBlockers(stillReferences, stillProvider?.limits));
+		for (const assetId of stillReferenceAssetIds) {
+			blockers.push(...assetReferenceQualityBlockers(assetId, assetsById, 'image'));
+		}
 		const jobId = stretchJobId(stretch);
 		const allowFourByFour = providerAllowsFourByFour(stillProvider);
 		const derivedByShot = new Map();
@@ -541,6 +691,7 @@ export function buildVisualStretchJobs(
 					providerSnapshotId: stillSnapshotId,
 					outputTakePolicy: 'new_candidate',
 					memberInputs,
+					stillReferenceAssetIds,
 					sharedReferenceAssetIds,
 					gridLayout,
 					computedMargins,
@@ -581,6 +732,7 @@ export function buildVisualStretchJobs(
 					providerSnapshotId: stillSnapshotId,
 					outputTakePolicy: 'new_candidate',
 					memberInputs,
+					stillReferenceAssetIds,
 					sharedReferenceAssetIds,
 					compiledPrompt: null,
 					outputs: members.map((member, index) => ({

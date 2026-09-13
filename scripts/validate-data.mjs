@@ -125,7 +125,7 @@ function validateImageStatus(status, label, errors) {
 	}
 }
 
-function validateVisualStretches(script, { label, shotIds, takeIds, characterIds, errors }) {
+function validateVisualStretches(script, { label, shotIds, takeIds, characterIds, errors, assetIds, assetsById }) {
 	const stretches = script.visualStretches || [];
 	if (!stretches.length) return;
 	unique(
@@ -137,6 +137,29 @@ function validateVisualStretches(script, { label, shotIds, takeIds, characterIds
 	const shotsById = new Map((script.shots || []).map((s) => [s.id, s]));
 	const playbackIndex = new Map((script.shots || []).map((s, i) => [s.id, i]));
 
+	const validateAssetRefList = (sLabel, field, ids) => {
+		if (!Array.isArray(ids)) return;
+		const seen = new Set();
+		for (const id of ids) {
+			if (!id) {
+				errors.push(`${sLabel}: empty id in ${field}`);
+				continue;
+			}
+			if (seen.has(id)) errors.push(`${sLabel}: duplicate ${field} ${id}`);
+			seen.add(id);
+			if (assetIds?.size && !assetIds.has(id)) {
+				errors.push(`${sLabel}: unknown ${field} asset ${id}`);
+				continue;
+			}
+			const asset = assetsById?.get?.(id);
+			if (!asset) continue;
+			if (!asset.path) errors.push(`${sLabel}: ${field} asset ${id} missing path`);
+			const status = asset.imageStatus?.status;
+			if (status && status !== 'current') {
+				errors.push(`${sLabel}: ${field} asset ${id} imageStatus ${status} (must be current or absent)`);
+			}
+		}
+	};
 	for (const stretch of stretches) {
 		const sLabel = `${label} stretch ${stretch.id}`;
 		if (!stretch.revision || !Number.isInteger(stretch.revision) || stretch.revision < 1) {
@@ -236,6 +259,11 @@ function validateVisualStretches(script, { label, shotIds, takeIds, characterIds
 			stretchBlockingBlockers(stretch).length
 		) {
 			errors.push(`${sLabel}: reviewed/locked requires complete blocking for present cast`);
+		}
+
+		validateAssetRefList(sLabel, 'referenceAssetIds', stretch.referenceAssetIds || []);
+		if (Object.prototype.hasOwnProperty.call(stretch, 'videoReferenceAssetIds')) {
+			validateAssetRefList(sLabel, 'videoReferenceAssetIds', stretch.videoReferenceAssetIds || []);
 		}
 
 		for (const take of script.takes || []) {
@@ -398,7 +426,15 @@ function validateScriptFile(
 		}
 	}
 
-	validateVisualStretches(script, { label, shotIds, takeIds, characterIds, errors });
+	validateVisualStretches(script, {
+		label,
+		shotIds,
+		takeIds,
+		characterIds,
+		errors,
+		assetIds,
+		assetsById
+	});
 
 	for (const a of script.script?.characterFunctionAssignments || []) {
 		if (functionIds.size && !functionIds.has(a.functionId)) {

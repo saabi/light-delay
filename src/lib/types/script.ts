@@ -201,6 +201,12 @@ export interface VisualStretch {
 		gridLayout?: VisualStretchGridLayout;
 	};
 	referenceAssetIds?: AssetId[];
+	/**
+	 * Optional Seedance-only static refs. Absent ⇒ fallback (derive extras from
+	 * referenceAssetIds after keyframe coverage). Present (including []) ⇒ explicit
+	 * video-only list; never trim referenceAssetIds because video will depict the same subject.
+	 */
+	videoReferenceAssetIds?: AssetId[];
 	notes?: Note[];
 	sourceRefs?: SourceReference[];
 }

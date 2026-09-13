@@ -838,6 +838,16 @@ export interface Take {
 `ScriptFile.visualStretches[]` (optional) holds multi-shot shared blocking and grid layout for
 combined storyboard sheets. See `docs/production/VISUAL_STRETCH_PIPELINE.md`.
 
+- `referenceAssetIds` — complete static refs for **still/keyframe** generation. Never remove an
+  entry because Seedance will depict the same subject.
+- `videoReferenceAssetIds` — optional **video-only** static refs (tri-state):
+  - **absent** → fallback: video extras derive from `referenceAssetIds` after per-keyframe coverage.
+  - **present** (including `[]`) → explicit: video extras come only from this list after coverage.
+- Entity completeness for explicit video lists uses catalog entity sheets (`referenceAssetIds` on
+  characters/locations/…); a custom orphan asset may attach but does not cover an entity.
+- Plan jobs expose `stillReferenceAssetIds`, `videoReferencePolicy`, `effectiveVideoReferenceAssetIds`,
+  and deprecated alias `sharedReferenceAssetIds` (still = still list; video = effective visuals).
+
 ## Characters and voices
 
 ```ts

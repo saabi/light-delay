@@ -157,7 +157,7 @@
     },
     "visualStretchJob": {
       "type": "object",
-      "required": ["id", "stretchId", "revision", "medium", "mode", "providerSnapshotId", "outputTakePolicy", "memberInputs", "sharedReferenceAssetIds", "compiledPrompt", "outputs", "blockers", "coherenceException"],
+      "required": ["id", "stretchId", "revision", "medium", "mode", "providerSnapshotId", "outputTakePolicy", "memberInputs", "stillReferenceAssetIds", "sharedReferenceAssetIds", "compiledPrompt", "outputs", "blockers", "coherenceException"],
       "properties": {
         "id": { "type": "string" },
         "stretchId": { "type": "string" },
@@ -182,7 +182,35 @@
         },
         "dependsOnStillJobId": { "type": "string" },
         "durationMs": { "type": "integer", "minimum": 0 },
-        "sharedReferenceAssetIds": { "type": "array", "items": { "type": "string" } },
+        "stillReferenceAssetIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Complete stretch still/keyframe reference list (never trimmed for video)."
+        },
+        "videoReferencePolicy": {
+          "enum": ["fallback", "explicit"],
+          "description": "Video jobs only. fallback = derive extras from still list; explicit = use authored videoReferenceAssetIds (may be empty)."
+        },
+        "videoReferenceAssetIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Authored video-only static refs. Present only when videoReferencePolicy is explicit."
+        },
+        "effectiveVideoReferenceAssetIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Derived video visual extras after keyframe coverage (no keyframes, no voice). Never hand-author."
+        },
+        "voiceSampleAssetIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Derived approved dialogue voice samples for the video job."
+        },
+        "sharedReferenceAssetIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Deprecated alias: still jobs = stillReferenceAssetIds; video jobs = effectiveVideoReferenceAssetIds. Must match."
+        },
         "gridLayout": { "$ref": "#/$defs/gridLayout" },
         "computedMargins": { "$ref": "#/$defs/computedMargins" },
         "compiledPrompt": { "type": ["string", "null"] },
@@ -231,7 +259,9 @@
           "if": { "properties": { "medium": { "const": "still" } }, "required": ["medium"] },
           "then": {
             "properties": {
-              "mode": { "enum": ["combined_storyboard_sheet", "independent_shared_authority"] }
+              "mode": { "enum": ["combined_storyboard_sheet", "independent_shared_authority"] },
+              "videoReferencePolicy": false,
+              "videoReferenceAssetIds": false
             }
           }
         },
@@ -240,9 +270,46 @@
           "then": {
             "properties": {
               "mode": { "const": "grouped_seedance" },
-              "dependsOnStillJobId": { "type": "string", "minLength": 1 }
+              "dependsOnStillJobId": { "type": "string", "minLength": 1 },
+              "videoReferencePolicy": { "enum": ["fallback", "explicit"] },
+              "effectiveVideoReferenceAssetIds": { "type": "array", "items": { "type": "string" } },
+              "stillReferenceAssetIds": { "type": "array", "items": { "type": "string" } }
             },
-            "required": ["dependsOnStillJobId"]
+            "required": [
+              "dependsOnStillJobId",
+              "stillReferenceAssetIds",
+              "videoReferencePolicy",
+              "effectiveVideoReferenceAssetIds"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "medium": { "const": "video" },
+              "videoReferencePolicy": { "const": "explicit" }
+            },
+            "required": ["medium", "videoReferencePolicy"]
+          },
+          "then": {
+            "required": ["videoReferenceAssetIds"],
+            "properties": {
+              "videoReferenceAssetIds": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "medium": { "const": "video" },
+              "videoReferencePolicy": { "const": "fallback" }
+            },
+            "required": ["medium", "videoReferencePolicy"]
+          },
+          "then": {
+            "properties": {
+              "videoReferenceAssetIds": false
+            }
           }
         },
         {

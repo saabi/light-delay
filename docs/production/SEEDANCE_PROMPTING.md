@@ -250,6 +250,17 @@ How:
   keyframes; the full sheet may be attached additionally as a blocking/storyboard reference
   (`docs/production/VISUAL_STRETCH_PIPELINE.md`). A long stretch may require **multiple** Seedance
   jobs under the segment ceiling, each depending on the same still job.
+- **Still vs video static refs (stretch):** still/keyframe generation always uses the complete
+  `VisualStretch.referenceAssetIds` list — never drop an entry because Seedance will show the same
+  subject. Seedance extras come from optional `videoReferenceAssetIds`:
+  - **absent** → fallback: leftover still-list assets after per-keyframe entity coverage;
+  - **present** (including `[]`) → explicit: only that list after coverage (`[]` = no video-only
+    static extras).
+  Coverage is per shot with a **registered** keyframe only. Catalog entity sheets in the effective
+  visual list satisfy completeness; a custom orphan asset may attach but does **not** clear
+  `uncovered_video_entity:*`. Plan fields: `stillReferenceAssetIds`, `videoReferencePolicy`,
+  `effectiveVideoReferenceAssetIds`, `voiceSampleAssetIds` (see `VISUAL_STRETCH_PIPELINE.md`).
+  Upload/staging order matches handoff: keyframes → effective visuals → voice samples.
 - Write the timeline as stages that follow those shots: one primary action (or camera move) per
   beat; about four to six beats in a 30 s clip.
 - Attach one voice sample per speaker who talks **anywhere in the run**, still ignoring sample
