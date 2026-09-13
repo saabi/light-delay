@@ -25,7 +25,7 @@
       "id": "provider:higgsfield:seedance-2.5:2026-08-29",
       "provider": "higgsfield",
       "model": "seedance-2.5",
-      "capturedAt": "2026-08-29",
+      "capturedAt": "2026-09-13",
       "confidence": "provisional",
       "executable": false,
       "limits": {
@@ -33,12 +33,12 @@
         "maxVideos": null,
         "maxAudios": null,
         "maxTotalReferences": 50,
-        "maxDurationMs": 40000
+        "maxDurationMs": 30000
       },
-      "source": "https://higgsfield.ai/seedance-2-5",
+      "source": "https://higgsfield.ai/seedance-2.5",
       "notes": {
-        "es": "Perfil provisional: techo de marketing ~40 s (`maxDurationMs`). La campaña operativa puede usar un techo menor. No usar para pedidos sin preflight.",
-        "en": "Provisional profile: marketing ceiling ~40 s (`maxDurationMs`). The operational campaign may use a lower ceiling. Do not submit jobs without preflight."
+        "es": "Techo de generación única: 30 s (FAQ Higgsfield; igual en 480p/720p/1080p). Más allá requiere extensión o corte. Perfil provisional; preflight de cuenta/entitlement antes de ejecutar.",
+        "en": "Single-pass ceiling: 30 s (Higgsfield FAQ; same at 480p/720p/1080p). Longer needs extension or edit. Provisional profile; account/entitlement preflight before execution."
       }
     },
     {
@@ -57,15 +57,38 @@
       },
       "supportsCombinedStoryboardSheet": true,
       "maxStoryboardPanels": 9,
-      "minPanelResolution": { "width": 512, "height": 288 },
+      "minPanelResolution": {
+        "width": 512,
+        "height": 288
+      },
       "supportedStoryboardLayouts": [
-        { "rows": 2, "columns": 2, "aspectRatio": "16:9" },
-        { "rows": 3, "columns": 3, "aspectRatio": "16:9" }
+        {
+          "rows": 2,
+          "columns": 2,
+          "aspectRatio": "16:9"
+        },
+        {
+          "rows": 3,
+          "columns": 3,
+          "aspectRatio": "16:9"
+        }
       ],
       "outputSizes": [
-        { "width": 1536, "height": 1024, "aspectRatio": "3:2" },
-        { "width": 1024, "height": 1024, "aspectRatio": "1:1" },
-        { "width": 1024, "height": 1536, "aspectRatio": "2:3" }
+        {
+          "width": 1536,
+          "height": 1024,
+          "aspectRatio": "3:2"
+        },
+        {
+          "width": 1024,
+          "height": 1024,
+          "aspectRatio": "1:1"
+        },
+        {
+          "width": 1024,
+          "height": 1536,
+          "aspectRatio": "2:3"
+        }
       ],
       "source": "https://platform.openai.com/docs/guides/image-generation",
       "notes": {
@@ -83,8 +106,8 @@
       "noCreditsAllowed": true,
       "concurrency": null,
       "notes": {
-        "es": "Segmentos hasta 30 s (techo operativo conservador). El snapshot Seedance 2.5 documenta hasta 40 s; preflight debe confirmar el techo real de la cuenta.",
-        "en": "Segments up to 30 s (conservative operational ceiling). The Seedance 2.5 snapshot documents up to 40 s; preflight must confirm the account's real ceiling."
+        "es": "Segmentos hasta 30 s, alineados con el techo hard de Seedance 2.5 (`maxDurationMs`). Preflight debe confirmar que la cuenta/plan no imponga un techo menor.",
+        "en": "Segments up to 30 s, aligned with the Seedance 2.5 hard ceiling (`maxDurationMs`). Preflight must confirm the account/plan does not impose a lower ceiling."
       }
     }
   ]

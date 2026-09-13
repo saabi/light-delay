@@ -107,41 +107,60 @@ describe('visual stretch reference budgets', () => {
 
 describe('visual stretch Seedance partition', () => {
 	const stretch = { id: 'stretch:x', revision: 1, referenceAssetIds: [] };
+	const seedanceCeilingMs = 30000;
 
-	it('keeps a 39s stretch under a 40s ceiling as one job', () => {
+	it('keeps a 29s stretch under the 30s Seedance ceiling as one job', () => {
 		const members = [
 			{ shotId: 'a', order: 1 },
 			{ shotId: 'b', order: 2 }
 		];
 		const shotsById = new Map([
-			['a', { id: 'a', durationMs: 20000 }],
-			['b', { id: 'b', durationMs: 19000 }]
+			['a', { id: 'a', durationMs: 15000 }],
+			['b', { id: 'b', durationMs: 14000 }]
 		]);
-		const jobs = partitionStretchVideoJobs(stretch, members, shotsById, 40000, 'still:1');
+		const jobs = partitionStretchVideoJobs(
+			stretch,
+			members,
+			shotsById,
+			seedanceCeilingMs,
+			'still:1'
+		);
 		expect(jobs).toHaveLength(1);
-		expect(jobs[0].durationMs).toBe(39000);
-		expect(jobs[0].durationMs).toBeLessThanOrEqual(40000);
+		expect(jobs[0].durationMs).toBe(29000);
+		expect(jobs[0].durationMs).toBeLessThanOrEqual(seedanceCeilingMs);
 		expect(jobs[0].blockers).not.toContain('member_exceeds_max_duration');
 	});
 
-	it('splits a 41s stretch into multiple jobs under a 40s ceiling', () => {
+	it('splits a 31s stretch into multiple jobs under the 30s ceiling', () => {
 		const members = [
 			{ shotId: 'a', order: 1 },
 			{ shotId: 'b', order: 2 }
 		];
 		const shotsById = new Map([
-			['a', { id: 'a', durationMs: 20000 }],
-			['b', { id: 'b', durationMs: 21000 }]
+			['a', { id: 'a', durationMs: 15000 }],
+			['b', { id: 'b', durationMs: 16000 }]
 		]);
-		const jobs = partitionStretchVideoJobs(stretch, members, shotsById, 40000, 'still:1');
+		const jobs = partitionStretchVideoJobs(
+			stretch,
+			members,
+			shotsById,
+			seedanceCeilingMs,
+			'still:1'
+		);
 		expect(jobs).toHaveLength(2);
-		expect(jobs.every((job) => job.durationMs <= 40000)).toBe(true);
+		expect(jobs.every((job) => job.durationMs <= seedanceCeilingMs)).toBe(true);
 	});
 
 	it('blocks a single 45s member instead of emitting an oversized clean job', () => {
 		const members = [{ shotId: 'a', order: 1 }];
 		const shotsById = new Map([['a', { id: 'a', durationMs: 45000 }]]);
-		const jobs = partitionStretchVideoJobs(stretch, members, shotsById, 40000, 'still:1');
+		const jobs = partitionStretchVideoJobs(
+			stretch,
+			members,
+			shotsById,
+			seedanceCeilingMs,
+			'still:1'
+		);
 		expect(jobs).toHaveLength(1);
 		expect(jobs[0].durationMs).toBe(45000);
 		expect(jobs[0].blockers).toContain('member_exceeds_max_duration');

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-13 — Seedance 2.5 duration snapshot corrected to 30s
+
+- Reverted provisional `maxDurationMs` to **30000** after verifying Higgsfield’s Seedance 2.5 FAQ: single-pass max is 30 s at any listed resolution (including 480p).
+
 ## 2026-09-13 — Festival-master outline derivation stale
 
 - Marked outline:light-delay-festival-master derivation eviewStatus: stale versus master revision 23 (still pinned to r19 until rederived).
