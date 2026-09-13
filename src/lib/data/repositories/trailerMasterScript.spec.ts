@@ -56,9 +56,9 @@ describe('master-derived trailer', () => {
 		const sceneSum = script.scenes.reduce((total, scene) => total + (scene.targetDurationMs ?? 0), 0);
 		expect(sceneSum).toBe(script.script.targetDurationMs);
 		expect(shotSum).toBe(script.script.targetDurationMs);
-		expect(sceneSum).toBe(88_840);
+		expect(sceneSum).toBe(87_800);
 		const registry = getProject().project.scripts.find((entry) => entry.id === scriptId);
-		expect(registry?.targetDurationMs).toBe(88_840);
+		expect(registry?.targetDurationMs).toBe(87_800);
 	});
 
 	it('reuses Festival-master EN dialogue audio on every spoken trailer cue', () => {

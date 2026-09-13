@@ -95,7 +95,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (450)
+## Revisión requerida (455)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -389,6 +389,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:festival-master-storyboard-043` | default-review | retain |
 | asset | `asset:festival-master-storyboard-044` | default-review | retain |
 | asset | `asset:festival-master-storyboard-045` | default-review | retain |
+| asset | `asset:festival-master-storyboard-045b` | default-review | retain |
 | asset | `asset:festival-master-storyboard-046` | default-review | retain |
 | asset | `asset:festival-master-storyboard-047` | default-review | retain |
 | asset | `asset:festival-master-storyboard-048` | default-review | retain |
@@ -533,6 +534,10 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/GUIA_BANDA_SONORA.md` | default-review | retain |
 | static_file | `docs/MIGRATION_INVENTORY.md` | default-review | retain |
 | static_file | `docs/production/AGENT_GENERATION_BRIEF.md` | default-review | retain |
+| static_file | `docs/production/DIALOGUE_AND_PROMPT_LESSONS.md` | default-review | retain |
+| static_file | `docs/production/DIALOGUE_CLARITY_GUIDE.md` | default-review | retain |
+| static_file | `docs/production/RESOLVE_OTIO_EXPORT.md` | default-review | retain |
+| static_file | `docs/production/SEEDANCE_PROMPTING.md` | default-review | retain |
 | static_file | `docs/SIGNAL_BEAM_REQUIREMENTS.md` | default-review | retain |
 | static_file | `docs/technical/ANIMATION_WORKFLOW.md` | default-review | retain |
 | static_file | `docs/technical/CELESTIAL_ARDOR.md` | default-review | retain |

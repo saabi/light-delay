@@ -20,9 +20,12 @@ export class WebAudioCueSequencer {
 	private ctx: AudioContext | null = null;
 	private masterGain: GainNode | null = null;
 	private abort: AbortController | null = null;
+	/** Bumps on every seek/stop/play/pause so in-flight scheduleCue work cannot double-start. */
+	private scheduleEpoch = 0;
 	private scheduled: Scheduled[] = [];
 	private scheduledIds = new Set<string>();
 	private buffers = new Map<string, AudioBuffer>();
+	private loading = new Map<string, Promise<AudioBuffer>>();
 	private cues: TimedAudioCue[] = [];
 	private muted = false;
 	private prefetchTimer: ReturnType<typeof setInterval> | null = null;
@@ -50,6 +53,7 @@ export class WebAudioCueSequencer {
 		this.masterGain.gain.value = this.muted ? 0 : 1;
 		if (this.ctx.state === 'suspended') await this.ctx.resume();
 		this.abort = new AbortController();
+		this.scheduleEpoch += 1;
 		this.status = 'playing';
 		this.startOffsetMs = Math.max(0, fromMs);
 		this.startCtxTime = this.ctx.currentTime;
@@ -60,6 +64,7 @@ export class WebAudioCueSequencer {
 	pause(): void {
 		if (this.status !== 'playing' || !this.ctx) return;
 		this.startOffsetMs = this.currentTimeMs;
+		this.invalidateInFlight();
 		this.clearScheduled();
 		this.stopPrefetchLoop();
 		this.status = 'paused';
@@ -69,6 +74,7 @@ export class WebAudioCueSequencer {
 		if (this.status !== 'paused' || !this.ctx) return;
 		if (this.ctx.state === 'suspended') await this.ctx.resume();
 		this.abort = new AbortController();
+		this.scheduleEpoch += 1;
 		this.status = 'playing';
 		this.startCtxTime = this.ctx.currentTime;
 		await this.ensureWindow();
@@ -76,11 +82,11 @@ export class WebAudioCueSequencer {
 	}
 
 	stop(): void {
-		this.abort?.abort();
-		this.abort = null;
+		this.invalidateInFlight();
 		this.clearScheduled();
 		this.stopPrefetchLoop();
 		this.buffers.clear();
+		this.loading.clear();
 		if (this.ctx) {
 			void this.ctx.close();
 			this.ctx = null;
@@ -94,14 +100,21 @@ export class WebAudioCueSequencer {
 
 	seek(fromMs: number): void {
 		const playing = this.status === 'playing';
+		this.invalidateInFlight();
 		this.clearScheduled();
 		this.startOffsetMs = Math.max(0, fromMs);
 		if (playing && this.ctx) {
 			this.startCtxTime = this.ctx.currentTime;
-			this.abort?.abort();
 			this.abort = new AbortController();
+			this.scheduleEpoch += 1;
 			void this.ensureWindow();
 		}
+	}
+
+	private invalidateInFlight(): void {
+		this.abort?.abort();
+		this.abort = null;
+		this.scheduleEpoch += 1;
 	}
 
 	private startPrefetchLoop(): void {
@@ -132,6 +145,8 @@ export class WebAudioCueSequencer {
 
 	private async ensureWindow(): Promise<void> {
 		if (!this.ctx || !this.abort || this.status !== 'playing') return;
+		const epoch = this.scheduleEpoch;
+		const abort = this.abort;
 		const now = this.currentTimeMs;
 		const horizon = now + LOOKAHEAD_MS;
 		const candidates = this.cues.filter((cue) => {
@@ -141,20 +156,48 @@ export class WebAudioCueSequencer {
 			return knownEnd > now - 250 && cue.startMs < horizon;
 		});
 		for (const cue of candidates.slice(0, PREFETCH)) {
-			if (!this.abort || this.abort.signal.aborted || this.status !== 'playing') return;
-			await this.scheduleCue(cue, now);
+			if (this.scheduleEpoch !== epoch || abort.signal.aborted || this.status !== 'playing') {
+				return;
+			}
+			await this.scheduleCue(cue, now, epoch, abort.signal);
 		}
 	}
 
-	private async scheduleCue(cue: TimedAudioCue, nowMs: number): Promise<void> {
-		if (!this.ctx || !this.masterGain || !this.abort) return;
+	private async scheduleCue(
+		cue: TimedAudioCue,
+		nowMs: number,
+		epoch: number,
+		signal: AbortSignal
+	): Promise<void> {
+		if (!this.ctx || !this.masterGain) return;
 		if (this.scheduledIds.has(cue.id)) return;
-		const buffer = await this.loadUrl(cue.url);
-		if (!this.abort || this.abort.signal.aborted || !this.ctx || !this.masterGain) return;
-		if (this.scheduledIds.has(cue.id) || this.status !== 'playing') return;
+		// Reserve before any await so overlapping ensureWindow/seek cannot start the same cue twice.
+		this.scheduledIds.add(cue.id);
+
+		let buffer: AudioBuffer;
+		try {
+			buffer = await this.loadUrl(cue.url, signal);
+		} catch {
+			this.scheduledIds.delete(cue.id);
+			return;
+		}
+
+		if (
+			this.scheduleEpoch !== epoch ||
+			signal.aborted ||
+			!this.ctx ||
+			!this.masterGain ||
+			this.status !== 'playing'
+		) {
+			this.scheduledIds.delete(cue.id);
+			return;
+		}
 
 		const cueEndMs = cue.startMs + buffer.duration * 1000;
-		if (cueEndMs <= nowMs) return;
+		if (cueEndMs <= nowMs) {
+			this.scheduledIds.delete(cue.id);
+			return;
+		}
 
 		const whenSec = this.startCtxTime + (cue.startMs - this.startOffsetMs) / 1000;
 		const offsetSec = Math.max(0, (nowMs - cue.startMs) / 1000);
@@ -171,30 +214,42 @@ export class WebAudioCueSequencer {
 		try {
 			source.start(startAt, offsetSec);
 		} catch {
+			this.scheduledIds.delete(cue.id);
 			return;
 		}
 
-		this.scheduledIds.add(cue.id);
 		this.scheduled.push({ source, gain: cueGain, cueId: cue.id });
 		source.onended = () => {
 			this.scheduled = this.scheduled.filter((item) => item.source !== source);
 			this.scheduledIds.delete(cue.id);
-			if (this.status === 'playing') {
+			if (this.status === 'playing' && this.scheduleEpoch === epoch) {
 				this.onAdvance?.(cue.id);
 				void this.ensureWindow();
 			}
 		};
 	}
 
-	private async loadUrl(url: string): Promise<AudioBuffer> {
+	private async loadUrl(url: string, signal: AbortSignal): Promise<AudioBuffer> {
 		const hit = this.buffers.get(url);
 		if (hit) return hit;
-		const response = await fetch(url, { signal: this.abort?.signal });
-		if (!response.ok) throw new Error(`audio fetch failed: ${url}`);
-		const raw = await response.arrayBuffer();
-		if (!this.ctx) throw new Error('no audio context');
-		const buffer = await this.ctx.decodeAudioData(raw.slice(0));
-		this.buffers.set(url, buffer);
-		return buffer;
+		const pending = this.loading.get(url);
+		if (pending) return pending;
+
+		const task = (async () => {
+			const response = await fetch(url, { signal });
+			if (!response.ok) throw new Error(`audio fetch failed: ${url}`);
+			const raw = await response.arrayBuffer();
+			if (!this.ctx) throw new Error('no audio context');
+			const buffer = await this.ctx.decodeAudioData(raw.slice(0));
+			this.buffers.set(url, buffer);
+			return buffer;
+		})();
+
+		this.loading.set(url, task);
+		try {
+			return await task;
+		} finally {
+			this.loading.delete(url);
+		}
 	}
 }

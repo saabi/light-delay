@@ -90,4 +90,43 @@ describe('WebAudioCueSequencer', () => {
 		expect(fetchMock.mock.calls.length).toBeGreaterThan(initialFetches);
 		seq.stop();
 	});
+
+	it('rapid seeks do not start the same cue twice (scrub saturation)', async () => {
+		vi.stubGlobal('AudioContext', FakeAudioContext);
+		let resolveFetch: ((value: Response) => void) | null = null;
+		vi.stubGlobal(
+			'fetch',
+			vi.fn(
+				() =>
+					new Promise<Response>((resolve) => {
+						resolveFetch = resolve;
+					})
+			)
+		);
+		const starts: string[] = [];
+		class CountingSource extends FakeBufferSource {
+			override start() {
+				starts.push('start');
+			}
+		}
+		class CountingContext extends FakeAudioContext {
+			override createBufferSource() {
+				return new CountingSource();
+			}
+		}
+		vi.stubGlobal('AudioContext', CountingContext);
+
+		const seq = new WebAudioCueSequencer();
+		const playPromise = seq.play([{ id: 'a', url: '/a.wav', startMs: 0 }], 0);
+		// First schedule is waiting on fetch; scrub before it resolves.
+		seq.seek(100);
+		seq.seek(200);
+		resolveFetch?.(new Response(new ArrayBuffer(8), { status: 200 }));
+		await playPromise;
+		// Let any leftover in-flight scheduleCue settle.
+		await Promise.resolve();
+		await Promise.resolve();
+		expect(starts.length).toBe(1);
+		seq.stop();
+	});
 });

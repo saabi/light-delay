@@ -1,5 +1,22 @@
 # Estado del proyecto
 
+## 2026-09-12 — Scrubbing: sin saturación por cues duplicadas
+
+- El seek del secuenciador Web Audio podía arrancar dos veces el mismo cue durante un
+  scrub (carrera entre `ensureWindow` en vuelo). Corregido con epoch de schedule + reserva
+  de id antes del await.
+
+## 2026-09-12 — Vault readout: timer to arrival, not coordinates (English source)
+
+- Zao’s vault readout (`festival-master:cue-0043`) now reads “Multi-megaton. The timer is set
+  to arrival time!” Shot-021 still marked stale. EN TTS for `0043`/`0126` regenerated;
+  trailer `cue-e-01` re-linked.
+
+## 2026-09-12 — TTS EN del Festival master (claridad + vault)
+
+- Promovidos WAV EN de claridad (`0024`, `0062`, `0133`, `0140`) y vault (`0043`,
+  `0126`). Fit Festival ~809.9 s; tráiler ~87.8 s (16/16). Fit en verde.
+
 ## 2026-09-12 — Export OTIO para DaVinci Resolve
 
 - Nuevo `docs/production/RESOLVE_OTIO_EXPORT.md` (inglés): ensamblado OpenTimelineIO a 24 fps de

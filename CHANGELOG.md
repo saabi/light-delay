@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-09-12 — Fix scrubbing dialogue saturation (overlapping cue starts)
+
+- `WebAudioCueSequencer.seek` aborted and replaced its `AbortController`, so in-flight
+  `ensureWindow`/`scheduleCue` work kept checking the *new* signal and could `source.start`
+  the same cue twice while scrubbing — stacked gains sounded like clipping/saturation.
+- Fix: schedule epoch + reserve `scheduledIds` before `await loadUrl`, and dedupe in-flight
+  buffer fetches per URL.
+
+## 2026-09-12 — Vault readout: timer to arrival, not contact coordinates
+
+- `festival-master:cue-0043` now reads “Multi-megaton. The timer is set to arrival time!” The
+  package is not targeted to contact coordinates; only the countdown is set to arrival.
+- Updated the shot-021 description and generation prompt so the controller display shows mass,
+  yield, and the arrival timer. Marked still `asset:festival-master-storyboard-021` stale
+  (`needs_regeneration` / `canon_mismatch`); the PNG still shows CONTACT COORDINATES.
+- Regenerated and promoted EN WAVs for `cue-0043` and `cue-0126` (and re-linked trailer
+  `cue-e-01` → `0126`). Festival fit ~809.9 s; trailer ~87.8 s.
+
+## 2026-09-12 — Re-synthesize Festival-master EN clarity-pass dialogue
+
+- Regenerated Qwen EN WAVs for the four clarity-pass cues whose `audioAssetId` had been cleared
+  (`cue-0024`, `cue-0062`, `cue-0133`, `cue-0140`); reused unchanged hashes for the rest.
+- Promoted the new chunks, wrote measured `estimatedDurationMs`, re-fitted Festival-master shot
+  timings (including silence hold on `shot-plan-045b`) and re-linked trailer-master dialogue
+  (including `cue-a-04` → `cue-0024`).
+
 ## 2026-09-12 — DaVinci Resolve OTIO export
 
 - Added `docs/production/RESOLVE_OTIO_EXPORT.md` (English source): 24 fps OpenTimelineIO assembly

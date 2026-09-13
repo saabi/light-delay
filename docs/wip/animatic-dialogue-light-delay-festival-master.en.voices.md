@@ -145,8 +145,8 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 
 <!-- audience-dialogue-id: festival-master:cue-0043 -->
 [Zao]
-[QwenInstruct] Speak English. Performance and delivery: each fragment tighter than the last; the deadline lands hard
-"Multi-megaton. Set for the contact coordinates — and the contact time!"
+[QwenInstruct] Speak English. Performance and delivery: each fragment tighter than the last; the timer lands hard
+"Multi-megaton. The timer is set to arrival time!"
 
 <!-- audience-dialogue-id: festival-master:cue-0045 -->
 [Zao]
@@ -210,7 +210,7 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 <!-- audience-dialogue-id: festival-master:cue-0062 -->
 [Zao]
 [QwenInstruct] Speak English. Performance and delivery: quieter, almost cornered
-"And I can’t address the Velari without Sorell. Not back. Not through. Not to them."
+"And I can’t address the Velari without Sorell — not back to Earth, not through the throat, not to them."
 
 <!-- audience-dialogue-id: festival-master:cue-0064 -->
 [Zao]
@@ -421,7 +421,7 @@ At the Jupiter mouth, protesters call it a door humanity never agreed to install
 <!-- audience-dialogue-id: festival-master:cue-0126 -->
 [Zao]
 [QwenInstruct] Speak English. Performance and delivery: compressed urgency, exact enough to act on; fear held at the edges
-"If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, armed for the contact coordinates and time. The neutron signature is real. The controller is protected; don’t cut power or damage it."
+"If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, timer set to arrival time. The neutron signature is real. The controller is protected; don’t cut power or damage it."
 
 <!-- audience-dialogue-id: festival-master:cue-0127 -->
 [Zao]

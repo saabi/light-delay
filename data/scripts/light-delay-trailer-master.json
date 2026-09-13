@@ -5,13 +5,13 @@
     "projectId": "project:light-delay",
     "continuityId": "continuity:light-delay-master-wip",
     "title": {
-      "es": "Light Delay — Tráiler (~89s, WIP)",
-      "en": "Light Delay — Trailer (~89s, WIP)"
+      "es": "Light Delay — Tráiler (~88s, WIP)",
+      "en": "Light Delay — Trailer (~88s, WIP)"
     },
     "version": "0.1.0-draft",
     "status": "draft",
     "kind": "trailer",
-    "targetDurationMs": 88840,
+    "targetDurationMs": 87800,
     "lineage": {
       "sourceScriptId": "script:light-delay-festival-master",
       "relationship": "trailer",
@@ -106,7 +106,7 @@
         "trailer-master:beat-a-01"
       ],
       "shotIds": [],
-      "targetDurationMs": 18000
+      "targetDurationMs": 17360
     },
     {
       "id": "trailer-master:scene-b",
@@ -245,7 +245,7 @@
         "trailer-master:beat-e-01"
       ],
       "shotIds": [],
-      "targetDurationMs": 15180
+      "targetDurationMs": 14780
     },
     {
       "id": "trailer-master:scene-f",
@@ -564,9 +564,10 @@
           "en": {
             "spokenText": "First we arrive. Philosophy can wait.",
             "status": "source",
-            "estimatedDurationMs": 3420,
+            "estimatedDurationMs": 2780,
             "delivery": "dry command warmth",
-            "voiceProfileId": "voice:voss-es"
+            "voiceProfileId": "voice:voss-es",
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0024"
           },
           "es": {
             "spokenText": "Primero llegamos. Filosofía después del relevo.",
@@ -860,10 +861,10 @@
           "en": {
             "spokenText": "If this reaches you — I found a weapon in the shielded vault.",
             "status": "source",
-            "estimatedDurationMs": 15180,
-            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0126",
+            "estimatedDurationMs": 14780,
             "delivery": "compressed urgency, exact enough to act on; fear held at the edges",
-            "voiceProfileId": "voice:zao-es"
+            "voiceProfileId": "voice:zao-es",
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0126"
           },
           "es": {
             "spokenText": "Si esto le llega — encontré un arma en la bóveda blindada.",
@@ -1330,12 +1331,12 @@
           "en": "Locked, holding the frame."
         }
       },
-      "durationMs": 3420,
+      "durationMs": 2780,
       "cuePlacements": [
         {
           "cueId": "trailer-master:cue-a-04",
           "atMs": 0,
-          "durationMs": 3420
+          "durationMs": 2780
         }
       ],
       "takeIds": [
@@ -1973,12 +1974,12 @@
           "en": "Locked, holding the frame."
         }
       },
-      "durationMs": 15180,
+      "durationMs": 14780,
       "cuePlacements": [
         {
           "cueId": "trailer-master:cue-e-01",
           "atMs": 0,
-          "durationMs": 15180
+          "durationMs": 14780
         }
       ],
       "takeIds": [

@@ -11,7 +11,7 @@
     "version": "0.2.0-wip",
     "status": "draft",
     "kind": "festival_cut",
-    "targetDurationMs": 813259,
+    "targetDurationMs": 809939,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -637,7 +637,7 @@
         "festival-master:beat-05"
       ],
       "shotIds": [],
-      "targetDurationMs": 21440,
+      "targetDurationMs": 20800,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -834,8 +834,8 @@
         }
       },
       "summary": {
-        "es": "Dentro de la bóveda asegurada de forma incompleta, Zao sigue marcaciones y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. Las coordenadas y la hora del encuentro figuran en su controlador armado. Mira el reloj de comunicaciones ordinario. Ningún ida y vuelta puede ganarle al temporizador.",
-        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The encounter coordinates and time sit on its armed controller. She looks at the ordinary communications clock. No round trip can beat the timer."
+        "es": "Dentro de la bóveda asegurada de forma incompleta, Zao sigue marcaciones y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. El temporizador de su controlador armado está puesto a la hora de llegada. Mira el reloj de comunicaciones ordinario. Ningún ida y vuelta puede ganarle al temporizador.",
+        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The countdown timer on its armed controller is set to arrival time. She looks at the ordinary communications clock. No round trip can beat the timer."
       },
       "dramaticPurpose": {
         "es": "Implementar la historia del Festival 05 sin alterar su orden causal.",
@@ -851,7 +851,7 @@
         "festival-master:beat-09"
       ],
       "shotIds": [],
-      "targetDurationMs": 26960,
+      "targetDurationMs": 26000,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1011,7 +1011,7 @@
         "festival-master:beat-12"
       ],
       "shotIds": [],
-      "targetDurationMs": 42230,
+      "targetDurationMs": 40830,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1515,7 +1515,7 @@
         "festival-master:beat-21"
       ],
       "shotIds": [],
-      "targetDurationMs": 51800,
+      "targetDurationMs": 51400,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1568,7 +1568,7 @@
         "festival-master:beat-22"
       ],
       "shotIds": [],
-      "targetDurationMs": 25400,
+      "targetDurationMs": 24760,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -1621,7 +1621,7 @@
         "festival-master:beat-23"
       ],
       "shotIds": [],
-      "targetDurationMs": 28740,
+      "targetDurationMs": 29460,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -2545,8 +2545,8 @@
         "en": "Dramatize the package through observable choice, pressure, and consequence."
       },
       "summary": {
-        "es": "Dentro de la bóveda incompletamente asegurada, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. Las coordenadas y el tiempo del encuentro están en su controlador armado. zao: Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. zao: Multimegatón. Ajustada a las coordenadas de contacto — y a la hora de contacto. Mira el reloj de comunicaciones ordinario. Ningún ida y vuelta puede ganarle al temporizador. zao: No. Nadie mandó esto por error.",
-        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The encounter coordinates and time sit on its armed controller. zao: This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. zao: Multi-megaton. Set for the contact coordinates — and the contact time! She looks at the ordinary communications clock. No round trip can beat the timer. zao: No. No one sent this by mistake."
+        "es": "Dentro de la bóveda incompletamente asegurada, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. El temporizador de su controlador armado está puesto a la hora de llegada. zao: Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. zao: Multimegatón. El temporizador está puesto a la hora de llegada. Mira el reloj de comunicaciones ordinario. Ningún ida y vuelta puede ganarle al temporizador. zao: No. Nadie mandó esto por error.",
+        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The countdown timer on its armed controller is set to arrival time. zao: This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. zao: Multi-megaton. The timer is set to arrival time! She looks at the ordinary communications clock. No round trip can beat the timer. zao: No. No one sent this by mistake."
       },
       "participantRefs": [
         {
@@ -3164,8 +3164,8 @@
         "en": "Dramatize zao’s message arrives through observable choice, pressure, and consequence."
       },
       "summary": {
-        "es": "rao: Formato del paquete de Zao. Firma personal. Enviado antes del cruce. voss: Pónganlo. El flashback restaura la solución de apuntado oculta de Zao: luz ordinaria dirigida a la Ardor futura, veintitrés horas-luz más allá de la garganta. zao: Si esto les llega, encontré un paquete de impulso geofísico de Proxima en la bóveda blindada: una coma tres toneladas, multimegatón, armado para las coordenadas y el tiempo de contacto. La firma de neutrones es real. El controlador está protegido; no corten energía ni lo dañen. zao: No pude llegar a Proxima a través de Júpiter. La Tierra podía oírme, pero ninguna respuesta podía alcanzarlos. La garganta piloto no nos recibirá, y yo no tenía un objetivo Velari confirmado. Así que apunté a donde estaría la Ardor después del salto. zao: La bóveda es local. Usen su entrada de sincronización de servicio científico si pueden. Por si acaso: adiós. Harlan está en la puerta. voss: Aborten la aproximación. Detengan a Harlan. okoye: Comandante, quédese donde está.",
-        "en": "rao: Zao’s packet format. Personal signature. Sent before the crossing. voss: Play it. Flashback restores Zao’s hidden pointing solution: ordinary light aimed at the future Ardor, twenty-three light-hours beyond the throat. zao: If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, armed for the contact coordinates and time. The neutron signature is real. The controller is protected; don’t cut power or damage it. zao: I couldn’t reach Proxima through Jupiter. Earth could hear me, but no answer could catch you. The pilot throat won’t receive us, and I had no confirmed Velari target. So I aimed at where the Ardor would be after the jump. zao: The vault’s local. Use its scientific service timing input if you can. Just in case: goodbye. Harlan’s at the door. voss: Abort approach. Hold Harlan. okoye: Commander, stay where you are."
+        "es": "rao: Formato del paquete de Zao. Firma personal. Enviado antes del cruce. voss: Pónganlo. El flashback restaura la solución de apuntado oculta de Zao: luz ordinaria dirigida a la Ardor futura, veintitrés horas-luz más allá de la garganta. zao: Si esto les llega, encontré un paquete de impulso geofísico de Proxima en la bóveda blindada: una coma tres toneladas, multimegatón, temporizador puesto a la hora de llegada. La firma de neutrones es real. El controlador está protegido; no corten energía ni lo dañen. zao: No pude llegar a Proxima a través de Júpiter. La Tierra podía oírme, pero ninguna respuesta podía alcanzarlos. La garganta piloto no nos recibirá, y yo no tenía un objetivo Velari confirmado. Así que apunté a donde estaría la Ardor después del salto. zao: La bóveda es local. Usen su entrada de sincronización de servicio científico si pueden. Por si acaso: adiós. Harlan está en la puerta. voss: Aborten la aproximación. Detengan a Harlan. okoye: Comandante, quédese donde está.",
+        "en": "rao: Zao’s packet format. Personal signature. Sent before the crossing. voss: Play it. Flashback restores Zao’s hidden pointing solution: ordinary light aimed at the future Ardor, twenty-three light-hours beyond the throat. zao: If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, timer set to arrival time. The neutron signature is real. The controller is protected; don’t cut power or damage it. zao: I couldn’t reach Proxima through Jupiter. Earth could hear me, but no answer could catch you. The pilot throat won’t receive us, and I had no confirmed Velari target. So I aimed at where the Ardor would be after the jump. zao: The vault’s local. Use its scientific service timing input if you can. Just in case: goodbye. Harlan’s at the door. voss: Abort approach. Hold Harlan. okoye: Commander, stay where you are."
       },
       "participantRefs": [
         {
@@ -4703,7 +4703,8 @@
             "status": "source",
             "delivery": "dry command warmth",
             "voiceProfileId": "voice:voss-es",
-            "estimatedDurationMs": 3420
+            "estimatedDurationMs": 2780,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0024"
           },
           "es": {
             "spokenText": "Primero llegamos. Filosofía después del relevo.",
@@ -5334,8 +5335,8 @@
       ],
       "type": "action",
       "text": {
-        "es": "Dentro de la cámara acorazada, asegurada a medias, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. Las coordenadas y la hora del encuentro figuran en su controlador armado.",
-        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The encounter coordinates and time sit on its armed controller."
+        "es": "Dentro de la cámara acorazada, asegurada a medias, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima. El temporizador de su controlador armado está puesto a la hora de llegada.",
+        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package. The countdown timer on its armed controller is set to arrival time."
       }
     },
     {
@@ -5404,8 +5405,8 @@
           "en": "afraid"
         },
         "intention": {
-          "es": "reconocer el arma y el plazo",
-          "en": "recognize the weapon and deadline"
+          "es": "reconocer la potencia y que sólo el temporizador está puesto a la llegada",
+          "en": "recognize the yield and that only the timer is set to arrival"
         },
         "pace": "normal"
       },
@@ -5413,17 +5414,17 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "Multi-megaton. Set for the contact coordinates — and the contact time!",
+            "spokenText": "Multi-megaton. The timer is set to arrival time!",
             "status": "source",
-            "delivery": "each fragment tighter than the last; the deadline lands hard",
+            "delivery": "each fragment tighter than the last; the timer lands hard",
             "voiceProfileId": "voice:zao-es",
-            "estimatedDurationMs": 4780,
+            "estimatedDurationMs": 3820,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0043"
           },
           "es": {
-            "spokenText": "Multimegatón. Ajustada a las coordenadas de contacto — y a la hora de contacto.",
+            "spokenText": "Multimegatón. El temporizador está puesto a la hora de llegada.",
             "status": "needs_revision",
-            "delivery": "cada fragmento más tenso que el anterior; el plazo cae con fuerza",
+            "delivery": "cada fragmento más tenso que el anterior; el temporizador cae con fuerza",
             "estimatedDurationMs": 4780,
             "voiceProfileId": "voice:zao-es"
           }
@@ -6119,7 +6120,8 @@
             "status": "source",
             "delivery": "quieter, almost cornered",
             "voiceProfileId": "voice:zao-es",
-            "estimatedDurationMs": 7700
+            "estimatedDurationMs": 6300,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0062"
           },
           "es": {
             "spokenText": "Y no puedo dirigirme a los Velari sin Sorell. Ni de vuelta. Ni a través. Ni a ellos.",
@@ -8626,15 +8628,15 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "spokenText": "If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, armed for the contact coordinates and time. The neutron signature is real. The controller is protected; don’t cut power or damage it.",
+            "spokenText": "If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, timer set to arrival time. The neutron signature is real. The controller is protected; don’t cut power or damage it.",
             "status": "source",
             "delivery": "compressed urgency, exact enough to act on; fear held at the edges",
             "voiceProfileId": "voice:zao-es",
-            "estimatedDurationMs": 15180,
+            "estimatedDurationMs": 14780,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0126"
           },
           "es": {
-            "spokenText": "Si esto le llega, encontré un paquete de impulso geofísico de Proxima en la bóveda blindada: uno punto tres toneladas, multimegatón, armado para las coordenadas y la hora de contacto. La firma de neutrones es real. El controlador está protegido; no corte la energía ni lo dañe.",
+            "spokenText": "Si esto le llega, encontré un paquete de impulso geofísico de Proxima en la bóveda blindada: uno punto tres toneladas, multimegatón, temporizador puesto a la hora de llegada. La firma de neutrones es real. El controlador está protegido; no corte la energía ni lo dañe.",
             "status": "needs_revision",
             "delivery": "compressed urgency, exact enough to act on; fear held at the edges",
             "estimatedDurationMs": 15180
@@ -8945,7 +8947,8 @@
             "status": "source",
             "delivery": "rapid evidence chain, never theatrical",
             "voiceProfileId": "voice:rao-es",
-            "estimatedDurationMs": 10220
+            "estimatedDurationMs": 9580,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0133"
           },
           "es": {
             "spokenText": "Su firma personal y la marca de tiempo son válidas. La masa, los neutrones, el vector, el bloqueo, su ubicación ausente y esa acusación coinciden con ella.",
@@ -9203,7 +9206,8 @@
             "status": "source",
             "delivery": "fast, conclusive",
             "voiceProfileId": "voice:rao-es",
-            "estimatedDurationMs": 5260
+            "estimatedDurationMs": 5980,
+            "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0140"
           },
           "es": {
             "spokenText": "Las órdenes llegan. El plan nunca las ve. La ruta al puente está físicamente abierta.",
@@ -11156,6 +11160,24 @@
           }
         }
       }
+    },
+    {
+      "id": "festival-master:cue-0091c",
+      "beatId": "festival-master:beat-16",
+      "order": 99,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master",
+          "stepId": "festival-master:story-11"
+        }
+      ],
+      "type": "silence",
+      "purpose": {
+        "en": "Hold on the retrieval movement through the service shaft while Sorell is still below deck.",
+        "es": "Mantener el movimiento de rescate por el eje de servicio mientras Sorell sigue bajo cubierta."
+      },
+      "estimatedDurationMs": 3500
     }
   ],
   "shots": [
@@ -12044,7 +12066,7 @@
           "en": "Pan; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 8720,
+      "durationMs": 8080,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0023",
@@ -12054,7 +12076,7 @@
         {
           "cueId": "festival-master:cue-0024",
           "atMs": 5300,
-          "durationMs": 3420
+          "durationMs": 2780
         }
       ],
       "takeIds": [
@@ -12568,8 +12590,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Dentro de la bóveda mal asegurada, Zao sigue marcas y el pico de neutrones hasta un dispositivo bajo y blindado, de escala tonelada, cableado a un pequeño controlador iluminado que muestra coordenadas y hora del encuentro.",
-        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a squat, armored, tonne-scale device wired to a small illuminated controller displaying the encounter coordinates and time."
+        "es": "Dentro de la bóveda mal asegurada, Zao sigue marcas y el pico de neutrones hasta un dispositivo bajo y blindado, de escala tonelada, cableado a un pequeño controlador iluminado que muestra masa, potencia y un temporizador de cuenta atrás puesto a la hora de llegada.",
+        "en": "Inside the incompletely secured vault, Zao follows markings and the neutron peak to a squat, armored, tonne-scale device wired to a small illuminated controller showing mass, yield, and a countdown timer set to arrival time."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "secondaryLocationIds": [
@@ -12615,8 +12637,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Conmocionada y luego asustada, Zao lee el controlador en voz alta para sí: «Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. Multimegatón. Ajustada a las coordenadas de contacto — y a la hora de contacto».",
-        "en": "Shocked, then afraid, Zao reads the controller aloud to herself: \"This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. Multi-megaton. Set for the contact coordinates — and the contact time!\"."
+        "es": "Conmocionada y luego asustada, Zao lee el controlador en voz alta para sí. La pantalla muestra masa, potencia y un temporizador de cuenta atrás puesto a la hora de llegada; no muestra coordenadas de contacto ni una solución de puntería. «Esto es una ojiva de impulso para investigación geofísica de la Proxima… una coma tres toneladas. Multimegatón. El temporizador está puesto a la hora de llegada».",
+        "en": "Shocked, then afraid, Zao reads the controller aloud to herself. The display shows mass, yield, and a countdown timer set to arrival time; it does not show contact coordinates or a targeting solution. \"This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. Multi-megaton. The timer is set to arrival time!\"."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
@@ -12637,7 +12659,7 @@
           "en": "Locked; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 10700,
+      "durationMs": 9740,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0042",
@@ -12647,7 +12669,7 @@
         {
           "cueId": "festival-master:cue-0043",
           "atMs": 5920,
-          "durationMs": 4780
+          "durationMs": 3820
         }
       ],
       "takeIds": [
@@ -13182,7 +13204,7 @@
           "en": "Dolly; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 13620,
+      "durationMs": 12220,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0061",
@@ -13192,7 +13214,7 @@
         {
           "cueId": "festival-master:cue-0062",
           "atMs": 5920,
-          "durationMs": 7700
+          "durationMs": 6300
         }
       ],
       "takeIds": [
@@ -14052,7 +14074,13 @@
         }
       },
       "durationMs": 3500,
-      "cuePlacements": [],
+      "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-0091c",
+          "atMs": 0,
+          "durationMs": 3500
+        }
+      ],
       "takeIds": [
         "festival-master:shot-plan-045b:take-01"
       ],
@@ -15179,8 +15207,8 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "Flashback: Zao, decidida, graba su advertencia junto al dispositivo armado, ahora oída por primera vez: «Si esto te llega, encontré un paquete de impulso geofísico de Proxima en la bóveda blindada: una coma tres toneladas, multimegatón, armado para las coordenadas y la hora de contacto. La firma de neutrones es real. El controlador está protegido; no corten la energía ni lo dañen».",
-        "en": "Flashback: Zao, determined, records her warning beside the armed device, now heard for the first time: \"If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, armed for the contact coordinates and time. The neutron signature is real. The controller is protected; don't cut power or damage it.\"."
+        "es": "Flashback: Zao, decidida, graba su advertencia junto al dispositivo armado, ahora oída por primera vez: «Si esto te llega, encontré un paquete de impulso geofísico de Proxima en la bóveda blindada: una coma tres toneladas, multimegatón, temporizador puesto a la hora de llegada. La firma de neutrones es real. El controlador está protegido; no corten la energía ni lo dañen».",
+        "en": "Flashback: Zao, determined, records her warning beside the armed device, now heard for the first time: \"If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, timer set to arrival time. The neutron signature is real. The controller is protected; don't cut power or damage it.\"."
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
@@ -15201,12 +15229,12 @@
           "en": "Tracking; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 15180,
+      "durationMs": 14780,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0126",
           "atMs": 0,
-          "durationMs": 15180
+          "durationMs": 14780
         }
       ],
       "takeIds": [
@@ -15452,16 +15480,16 @@
           "en": "Tracking; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 11820,
+      "durationMs": 11180,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0133",
           "atMs": 0,
-          "durationMs": 10220
+          "durationMs": 9580
         },
         {
           "cueId": "festival-master:cue-0134",
-          "atMs": 10320,
+          "atMs": 9680,
           "durationMs": 1500
         }
       ],
@@ -15659,7 +15687,7 @@
           "en": "Locked; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 9260,
+      "durationMs": 9980,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0139",
@@ -15669,7 +15697,7 @@
         {
           "cueId": "festival-master:cue-0140",
           "atMs": 4000,
-          "durationMs": 5260
+          "durationMs": 5980
         }
       ],
       "takeIds": [
@@ -17716,14 +17744,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-006",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-006",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18105,14 +18133,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-016",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-016",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18135,14 +18163,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-017",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-017",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18166,14 +18194,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-018",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-018"
@@ -18198,14 +18226,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-019",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-019"
@@ -18216,7 +18244,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao follows the markings and neutron peak to the encounter coordinates and time on the local controller. Composition: MS framing. Camera: Pan; establishes geography and screen direction. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao follows the markings and neutron peak to the Proxima geophysical impulse package and its illuminated controller. The controller shows mass, yield, and a countdown timer set to arrival time; it does not display targeting or contact coordinates. Composition: MS framing. Camera: Pan; establishes geography and screen direction. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -18230,14 +18258,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-020",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-020"
@@ -18248,7 +18276,7 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Zao reads the controller aloud, shocked and afraid. Composition: CU framing. Camera: Locked; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Shocked, then afraid, Zao reads a small illuminated controller on the Proxima geophysical impulse package. The controller screen shows mass, yield, and a countdown timer set to arrival time; it does not display targeting or contact coordinates. English diegetic labels only: mass, yield, timer/arrival, and a countdown — no latitude, longitude, or targeting coordinates. Composition: CU framing. Camera: Locked; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -18260,14 +18288,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "canon_mismatch"
         ],
         "sourceShotId": "festival-master:shot-plan-021",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La imagen está desfasada: el controlador muestra CONTACT COORDINATES. El dispositivo sólo tiene un temporizador puesto a la hora de llegada.",
+          "en": "Stale still: the controller shows CONTACT COORDINATES. The device only has a timer set to arrival time."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-021"
@@ -18417,14 +18445,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-026",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-026",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18447,14 +18475,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-027",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-027",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18476,14 +18504,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-028",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-028",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18505,14 +18533,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-029",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-029"
@@ -18535,14 +18563,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-030",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-030"
@@ -18565,14 +18593,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-031",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-031"
@@ -18595,14 +18623,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-032",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-032"
@@ -18626,14 +18654,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-033",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-033",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18656,14 +18684,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-034",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-034",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18686,14 +18714,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-035",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-035",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18716,14 +18744,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-036",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-036"
@@ -18747,14 +18775,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-037",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-037"
@@ -18778,14 +18806,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-038",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-038"
@@ -18811,14 +18839,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-039",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-039",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18934,14 +18962,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-042",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-042",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -18965,14 +18993,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-043",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-043",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -19058,14 +19086,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-045b",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-045b",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "New retrieval beat; storyboard still pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "durationMs": 3500,
@@ -19358,14 +19386,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-054",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-054",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -19551,14 +19579,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-060",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-060",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -19910,14 +19938,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-071",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-071",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -19975,14 +20003,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-073",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-073",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -20009,14 +20037,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-074",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-074"
@@ -20041,14 +20069,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-075",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-075",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -20105,14 +20133,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-077",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-077",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -20139,14 +20167,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-078",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-078",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -20172,14 +20200,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-079",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-079",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -20453,14 +20481,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-088",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-088"
@@ -20484,14 +20512,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-089",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-089",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -20542,14 +20570,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-091",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-091",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       }
     },
@@ -20571,14 +20599,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-092",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-092"
@@ -20666,14 +20694,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-095",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-095"
@@ -20697,14 +20725,14 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
         "sourceShotId": "festival-master:shot-plan-096",
         "explanation": {
-          "es": "Imagen de storyboard generada; pendiente de revisión editorial.",
-          "en": "Generated storyboard still; pending editorial review."
+          "es": "La hoja de referencia visual cambió; regenerar esta toma con la referencia vigente.",
+          "en": "The visual reference sheet changed; regenerate this take with the current reference."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-096"
