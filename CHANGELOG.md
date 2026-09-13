@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-13 — Festival-master outline derivation stale
+
+- Marked outline:light-delay-festival-master derivation eviewStatus: stale versus master revision 23 (still pinned to r19 until rederived).
+
 ## 2026-09-13 — Visual stretches (Schema + dry-run pilot)
 
 - Added `ScriptFile.visualStretches[]` types, validate-data checks, layout helpers, generation-plan `visualStretchJobs`, provisional gpt-image-2 still-provider snapshot, compile/split/register CLIs, `report:visual-stretches`, and ShotCard/ShotDetailsPanel stretch UI.

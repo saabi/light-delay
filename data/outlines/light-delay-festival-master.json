@@ -24,8 +24,8 @@
       }
     },
     "editorialNotice": {
-      "es": "Derivado WIP autorizado contra el master rev. 19. El guion fuente en inglés cubre la escaleta; la traducción española, las tomas de producción, los takes, el animatic y los planes de generación no comenzaron.",
-      "en": "WIP derivative authorized against master revision 19. Its English screenplay is drafted with complete outline coverage; Spanish translation, production shots, takes, animatic media, and generation plans have not started."
+      "es": "Derivado WIP autorizado contra el master rev. 19; ahora stale respecto al master rev. 23 hasta rederivar. El guion fuente en inglés cubre la escaleta; la traducción española y la deuda de producción siguen abiertas.",
+      "en": "WIP derivative authorized against master revision 19; now stale relative to master revision 23 until rederived. Its English screenplay covers the escaleta; Spanish translation and production debt remain open."
     },
     "derivation": {
       "sourceOutlineId": "outline:light-delay-master-narrative",
@@ -33,7 +33,7 @@
       "sourceVersion": "0.8.0-wip",
       "relationship": "adaptation",
       "fidelity": "complete_causal_chain",
-      "reviewStatus": "current"
+      "reviewStatus": "stale"
     }
   },
   "framing": [

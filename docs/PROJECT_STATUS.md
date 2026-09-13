@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-13 — Festival-master outline derivation stale (English source)
+
+- Marked Festival-master outline derivation.reviewStatus: stale (still pinned to master r19) because master is r23; rederive pending.
+
 ## 2026-09-13 — Visual stretches (English source)
 
 - Festival-master owns draft stretch `festival-master:stretch-bridge-meal-010-012` for shots 010–012 (combined 2×2 sheet policy; seating incomplete on purpose).
