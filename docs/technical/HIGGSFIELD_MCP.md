@@ -254,6 +254,13 @@ Hard gates:
 | --- | --- | --- |
 | `handoff:visual-stretch --allow-preview-prompt` | `true` | **Never** |
 | Future frozen run (`status: ready`) | `false` | Only after human cost confirmation |
+| Plan job with `runnable: false` or `generationGate` / `generation_deferred` / `generation_blocked` blockers | — | **Never** (author must clear `Take.productionGate` first; rebuild plan) |
+
+Authoring hold SoT is **`Take.productionGate`** on the script take (`deferred` / `blocked`), not `imageStatus` and not plan-hand-authored fields. Plans/stretch jobs only **derive** `generationGate` + blockers (`docs/production/VISUAL_STRETCH_PIPELINE.md`, `AGENT_GENERATION_BRIEF.md`). Agents must:
+
+- Refuse submit/handoff-as-executable when the source plan job is not `runnable` or lists production-gate blockers.
+- Not invent or clear `productionGate` / prerequisites without explicit author instruction; clearing a gate means editing the **script take**, then `npm run production:plans` so derived plan fields update.
+- Not treat a deferred take as regen debt (`imageStatus`).
 
 Agent steps for a **paid** smoke (after freeze exists):
 

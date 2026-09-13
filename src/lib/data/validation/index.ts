@@ -70,6 +70,9 @@ export interface CanonicalDataBundle {
 	comparisonTaxonomy?: ComparisonTaxonomyFile;
 	/** Optional outlines keyed by scriptId; absent entries are fine. */
 	outlines?: Record<string, OutlineFile>;
+	/** Asset-generation manifest ids (and optional status rows) for Take.productionGate prereqs. */
+	assetGenerationManifestIds?: Set<string>;
+	assetGenerationManifestById?: Map<string, { status?: string; assetId?: string }>;
 }
 
 export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
@@ -77,6 +80,7 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 	const characterIds = new Set(bundle.characters.characters.map((c) => c.id));
 	const locationIds = new Set(bundle.locations.locations.map((location) => location.id));
 	const assetIds = new Set(bundle.assets.assets.map((asset) => asset.id));
+	const assetsById = new Map(bundle.assets.assets.map((asset) => [asset.id, asset]));
 	const sourceLanguage = bundle.project.project.languages.sourceLanguage;
 	const registeredScriptIds = new Set(bundle.project.project.scripts.map((s) => s.id));
 	const scriptsById = new Map(scripts.map((s) => [s.script.id, s]));
@@ -144,7 +148,10 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 				requireSelectedTakes: script.shots.length > 0,
 				narrativeFunctions: bundle.narrativeFunctions,
 				characterIds,
-				assetIds
+				assetIds,
+				assetsById,
+				assetGenerationManifestIds: bundle.assetGenerationManifestIds,
+				assetGenerationManifestById: bundle.assetGenerationManifestById
 			})
 		);
 		for (const scene of script.scenes) {
@@ -198,5 +205,10 @@ export function validateAll(bundle: CanonicalDataBundle): ValidationResult {
 	}
 
 	const errors = results.flatMap((r) => r.errors);
-	return { ok: errors.length === 0, errors };
+	const warnings = results.flatMap((r) => r.warnings ?? []);
+	return {
+		ok: errors.length === 0,
+		errors,
+		...(warnings.length ? { warnings } : {})
+	};
 }

@@ -41,7 +41,8 @@ do not point it at the deprecated `script:light-delay-festival`.
 
 | File | Why |
 | --- | --- |
-| `data/schemas/generation-plan.schema.json` | Shape of the plan JSON: `plan`, per-shot `artifacts`/`requiredReferences`/`segments` |
+| `data/schemas/generation-plan.schema.json` | Shape of the plan JSON: `plan`, per-shot `artifacts`/`requiredReferences`/`segments`, optional derived `generationGate` |
+| `scripts/lib/production-gate.mjs` | `Take.productionGate` validation + shared take resolution + plan/stretch `generationGate` derivation |
 | `data/schemas/provider-capabilities.schema.json` | Provider snapshots + campaigns (limits, `executable`) |
 | `data/schemas/production-contexts.schema.json` | Physical/visual contexts assigned to scenes/shots |
 | `data/schemas/continuity-ledger.schema.json` | Deprecated cut ledgers (obsolete authorship); live facts are on the master outline |
@@ -287,6 +288,7 @@ negative: <what must not appear>
 > dialogue WAVs (`audioAssetId`) to a Seedance prompt.
 > Do not invent missing references — mark blockers and file a reference-asset request (§8.3) instead.
 > Do not submit anything to Higgsfield. Do not regenerate existing PNGs unless explicitly ordered.
+> Skip takes with `productionGate.status` of `deferred` or `blocked` (and any stretch job that lists them in `generationGate.takeIds`) until the author clears the gate — do not treat that as `imageStatus` debt.
 > Keep `compiledPrompt: null` until editorial freeze unless told otherwise for this session.
 > When rewriting dialogue for tone, edit English only and consult that speaker's voice-profile
 > `dialogueStyle` first; never fix tone by adding exposition.

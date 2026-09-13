@@ -1,6 +1,7 @@
 import type { ValidationResult } from '$lib/types/common';
 import type { Cue, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
 import type { AssetId, CharacterId } from '$lib/types/ids';
+import { collectProductionGateValidation } from '../../../../scripts/lib/production-gate.mjs';
 import { validateImageEditorialStatus } from './validateAssets.ts';
 import { assertLocalizedString } from './localizedString.ts';
 
@@ -58,10 +59,17 @@ export function validateScript(
 		narrativeFunctions?: NarrativeFunctionsFile;
 		characterIds?: Set<CharacterId>;
 		assetIds?: Set<AssetId>;
+		/** Catalog assets by id (for prerequisite imageStatus checks). */
+		assetsById?: Map<string, { imageStatus?: { status?: string } }>;
+		/** Manifest asset ids (planned rows may lack a catalog file). */
+		assetGenerationManifestIds?: Set<string>;
+		/** Manifest rows by assetId (rejected/deprecated → plan blockers only). */
+		assetGenerationManifestById?: Map<string, { status?: string }>;
 		requireSelectedTakes?: boolean;
 	} = {}
 ): ValidationResult {
 	const errors: string[] = [];
+	const warnings: string[] = [];
 	const sourceLanguage = options.sourceLanguage;
 	const requireSelectedTakes = options.requireSelectedTakes ?? true;
 
@@ -153,10 +161,23 @@ export function validateScript(
 		}
 	}
 
+	const gateCtx = {
+		assetIds: options.assetIds,
+		assetsById: options.assetsById,
+		manifestIds: options.assetGenerationManifestIds,
+		manifestById: options.assetGenerationManifestById
+	};
 	for (const take of file.takes) {
 		if (take.imageAssetId && options.assetIds && !options.assetIds.has(take.imageAssetId)) {
 			errors.push(`${label}: take ${take.id} references unknown image asset ${take.imageAssetId}`);
 		}
+		const gateResult = collectProductionGateValidation(
+			take,
+			`${label}: take ${take.id}`,
+			gateCtx
+		);
+		errors.push(...gateResult.errors);
+		warnings.push(...gateResult.warnings);
 		if (!take.imageStatus) continue;
 		validateImageEditorialStatus(take.imageStatus, `${label}: take ${take.id}`, errors);
 		if (take.imageStatus.reasons.includes('placeholder') && !take.imageStatus.sourceShotId) {
@@ -191,5 +212,9 @@ export function validateScript(
 		errors.push(`${label}: lineage.sourceScriptId cannot equal script.id`);
 	}
 
-	return { ok: errors.length === 0, errors };
+	return {
+		ok: errors.length === 0,
+		errors,
+		...(warnings.length ? { warnings } : {})
+	};
 }

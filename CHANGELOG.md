@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-13 — Take.productionGate generation deferral
+
+- Added optional `Take.productionGate` (`eligible` | `deferred` | `blocked`) with EN reason + catalog-or-manifest prerequisites; absent gate means eligible.
+- Derived plan/stretch `generationGate` (schema + builders); deferred/blocked takes block still and Seedance jobs; shared take-resolution helper (no first-take fallback).
+- ShotDetailsPanel badge, regen-briefs exclusion, image-debt holds section; validators warn on unknown reason codes.
+- Agent/MCP docs: `AGENTS.md`, `AGENT_ONBOARDING.md`, `HIGGSFIELD_MCP.md` §8b, and handoff `agentInstructions` refuse gated/non-runnable jobs.
+
 ## 2026-09-13 — MCP handoff review fixes (registrar, prompt, schema)
 
 - Fixed video registrar `createHash` import (crypto); extracted refuse checks into a testable library; sanitized result filenames for NTFS.

@@ -809,6 +809,23 @@ export interface Take {
     coherenceException?: boolean;
   };
 
+  /**
+   * Authoring hold for generation scheduling (not Take.status, not imageStatus,
+   * not provenance Take.generation). Absent ⇒ eligible.
+   * deferred: ≥1 prerequisiteAssetIds + EN reasonCode + EN reason.
+   * blocked: EN reasonCode + EN reason; must not carry prerequisites.
+   * Explicit eligible must not carry hold fields (prefer omitting the object).
+   * Known reasonCode seeds (validator warns on unknown): awaiting_reference_asset,
+   * awaiting_motion_reference, author_hold.
+   * Prerequisites resolve in assets.json or asset-generation-manifest.json.
+   */
+  productionGate?: {
+    status: "eligible" | "deferred" | "blocked";
+    reasonCode?: string;
+    reason?: StoryText;
+    prerequisiteAssetIds?: AssetId[];
+  };
+
   review?: {
     continuityScore?: number;
     compositionScore?: number;

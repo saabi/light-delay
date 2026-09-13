@@ -11,6 +11,11 @@ import {
 	shotReadinessChips,
 	takeNeedsRegeneration
 } from './editorial-readiness-core.mjs';
+import {
+	describePrerequisiteStatus,
+	effectiveProductionGateStatus,
+	isProductionGateHold
+} from './production-gate.mjs';
 
 export {
 	BEAT_PLACEHOLDER_RE,
@@ -203,13 +208,33 @@ export function buildImageDebtReport(script, ctx, projectCtx) {
 	const histogram = {};
 	const queue = [];
 	const byReason = {};
+	const productionGateHolds = [];
 
 	for (const take of script.takes) {
 		const status = take.imageStatus?.status ?? 'current';
 		histogram[status] = (histogram[status] ?? 0) + 1;
-		if (!take.imageStatus || take.imageStatus.status === 'current') continue;
 		const shot = ctx.shotById.get(take.shotId);
 		const scene = shot ? ctx.shotScene(shot) : undefined;
+		if (isProductionGateHold(take)) {
+			const gate = take.productionGate;
+			const assetsById = projectCtx.assetsById ?? projectCtx.assetById;
+			const manifestById = projectCtx.manifestById;
+			productionGateHolds.push({
+				takeId: take.id,
+				shotId: take.shotId,
+				shotNumber: shot?.number,
+				sceneId: shot?.sceneId,
+				sceneNumber: scene?.number,
+				status: effectiveProductionGateStatus(take),
+				reasonCode: gate?.reasonCode,
+				reason: gate?.reason,
+				prerequisiteAssetIds: gate?.prerequisiteAssetIds ?? [],
+				prerequisites: (gate?.prerequisiteAssetIds ?? []).map((id) =>
+					describePrerequisiteStatus(id, { assetsById, manifestById })
+				)
+			});
+		}
+		if (!take.imageStatus || take.imageStatus.status === 'current') continue;
 		for (const reason of take.imageStatus.reasons ?? []) {
 			byReason[reason] = (byReason[reason] ?? 0) + 1;
 		}
@@ -237,10 +262,12 @@ export function buildImageDebtReport(script, ctx, projectCtx) {
 			takeCount: script.takes.length,
 			histogram,
 			queueCount: queue.length,
+			productionGateHoldCount: productionGateHolds.length,
 			byReason,
-			consoleLine: `image debt queue: ${queue.length}/${script.takes.length}`
+			consoleLine: `image debt queue: ${queue.length}/${script.takes.length}; productionGate holds: ${productionGateHolds.length}`
 		},
 		queue,
+		productionGateHolds,
 		byReason
 	};
 }
@@ -255,6 +282,9 @@ export function formatImageDebtMarkdown(report) {
 	lines.push('## Resumen', '');
 	lines.push(`- Tomas totales: **${report.summary.takeCount}**`);
 	lines.push(`- En cola (no current): **${report.summary.queueCount}**`);
+	lines.push(
+		`- ProductionGate (deferred/blocked): **${report.summary.productionGateHoldCount ?? 0}**`
+	);
 	for (const [status, count] of Object.entries(report.summary.histogram)) {
 		lines.push(`- \`${status}\`: ${count}`);
 	}
@@ -265,6 +295,17 @@ export function formatImageDebtMarkdown(report) {
 		report.queue,
 		(r) =>
 			`**Toma ${r.shotNumber}** (\`${r.takeId}\`) escena ${r.sceneNumber} — ${r.status} [${r.reasons?.join(', ')}]`
+	);
+	appendList(
+		lines,
+		'ProductionGate holds (deferred / blocked)',
+		report.productionGateHolds,
+		(r) =>
+			`**Toma ${r.shotNumber}** (\`${r.takeId}\`) — ${r.status}${r.reasonCode ? ` · ${r.reasonCode}` : ''}${
+				r.prerequisiteAssetIds?.length
+					? ` · prereqs: ${r.prerequisiteAssetIds.join(', ')}`
+					: ''
+			}`
 	);
 	return lines.join('\n');
 }
@@ -760,9 +801,20 @@ export function formatDialogueI18nMarkdown(report) {
 
 export function buildRegenBriefsReport(script, ctx, projectCtx) {
 	const briefs = [];
+	const deferredOrBlocked = [];
 	const locationName = (id) => projectCtx.locationById?.get(id)?.name ?? id;
 
 	for (const take of script.takes) {
+		if (isProductionGateHold(take)) {
+			deferredOrBlocked.push({
+				takeId: take.id,
+				shotId: take.shotId,
+				status: effectiveProductionGateStatus(take),
+				reasonCode: take.productionGate?.reasonCode,
+				reason: take.productionGate?.reason
+			});
+			continue;
+		}
 		if (!takeNeedsRegeneration(take)) continue;
 		const shot = ctx.shotById.get(take.shotId);
 		if (!shot) continue;
@@ -798,9 +850,11 @@ export function buildRegenBriefsReport(script, ctx, projectCtx) {
 		generatedAt: new Date().toISOString(),
 		summary: {
 			briefCount: briefs.length,
-			consoleLine: `regen briefs: ${briefs.length}`
+			deferredOrBlockedCount: deferredOrBlocked.length,
+			consoleLine: `regen briefs: ${briefs.length}; deferred/blocked excluded: ${deferredOrBlocked.length}`
 		},
-		briefs
+		briefs,
+		deferredOrBlocked
 	};
 }
 
@@ -812,7 +866,17 @@ export function formatRegenBriefsMarkdown(report) {
 		report.generatedAt
 	);
 	lines.push('## Resumen', '');
-	lines.push(`- Entradas en cola: **${report.summary.briefCount}**`, '');
+	lines.push(`- Entradas en cola: **${report.summary.briefCount}**`);
+	lines.push(
+		`- Excluidas (productionGate deferred/blocked): **${report.summary.deferredOrBlockedCount ?? 0}**`,
+		''
+	);
+	appendList(
+		lines,
+		'Excluidas por productionGate',
+		report.deferredOrBlocked,
+		(r) => `\`${r.takeId}\` — ${r.status}${r.reasonCode ? ` · ${r.reasonCode}` : ''}`
+	);
 	for (const b of report.briefs) {
 		lines.push(`### Toma ${b.shotNumber} (\`${b.shotId}\`)`, '');
 		lines.push(`- Escena: ${b.sceneNumber} · Lugar: ${b.locationName}`);

@@ -40,6 +40,8 @@ Plan root `visualStretchJobs[]`. Still modes: `combined_storyboard_sheet` | `ind
 
 Still jobs budget every authored `referenceAssetIds` entry against the still-provider limits (gpt-image-2: 8). Seedance jobs count ordered keyframe images plus only additional refs whose subjects are **not** already depicted in those keyframes (any `visibleRefs` entity — characters, locations, props, vehicles), plus one approved voice sample per dialogue speaker in the bucket. Jobs always set `runnable: false` when any blocker is present (including `member_exceeds_max_duration`). Each job pins `providerSnapshotId`. **No submission adapter exists in-repo** — MCP agents consume a §8 **run file** from the handoff CLI.
 
+`Take.productionGate` (`deferred` / `blocked`) on any member source take blocks **both** still and Seedance jobs for that stretch (no silent partial). Derived plan field `generationGate` carries `status`, `reasonCode`, `takeIds`, and (when deferred) `prerequisiteAssetIds`. When members mix deferred and blocked, derived `status` is **deferred** (union of deferred prerequisites; all hold takeIds retained). Script takes remain SoT; do not hand-author `generationGate` on the plan.
+
 ### MCP handoff boundary
 
 ```text
@@ -72,4 +74,4 @@ npm run register:visual-stretch-video -- --from data/production/runs/<runId>-res
 
 ## UI (v1)
 
-JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, selected vs candidate, blockers from the shared completeness predicate. Full `/stretches/[scriptId]` deferred.
+JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, selected vs candidate, blockers from the shared completeness predicate. Deferred/blocked `Take.productionGate` shows as a readiness flag and take-section badge (reason + prerequisite catalog/manifest status). Full `/stretches/[scriptId]` deferred.

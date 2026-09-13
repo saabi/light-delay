@@ -9,6 +9,7 @@ import { localizeAsset, translatePublicText } from '$lib/data/selectors/publicTr
 import { thumbnailPathForAsset } from '$lib/utils/thumbnailPath';
 import {
 	getAssets,
+	getAssetGenerationManifestEntry,
 	getCharacters,
 	getDocuments,
 	getFactions,
@@ -93,6 +94,8 @@ export function getAssetById(id: string): Asset | undefined {
 	const asset = getAssets().assets.find((a) => a.id === id);
 	return asset ? localizeAsset(asset, getLocale()) : undefined;
 }
+
+export { getAssetGenerationManifestEntry };
 
 export function getCharacterById(id: string): LocalizedCharacter | undefined {
 	return translatedEntity(getCharacters().characters.find((c) => c.id === id)) as

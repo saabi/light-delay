@@ -20,7 +20,7 @@ function loadScript(scriptId) {
 
 function saveScript(scriptId, script) {
 	const slug = scriptId.replace(/^script:/, '');
-	writeFileSync(join(ROOT, 'data', 'scripts', `${slug}.json`), `${JSON.stringify(script, null, '\t')}\n`, 'utf8');
+	writeFileSync(join(ROOT, 'data', 'scripts', `${slug}.json`), `${JSON.stringify(script, null, 2)}\n`, 'utf8');
 }
 
 const project = JSON.parse(readFileSync(PROJECT_JSON, 'utf8'));

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import {
+		getAssetById,
+		getAssetGenerationManifestEntry,
 		getCharacterById,
 		getFactionById,
 		getLocationById,
@@ -16,6 +18,11 @@
 	import type { EntityRef, Note } from '$lib/types/common';
 	import type { Cue, CuePlacement, ScriptFile, Shot, SourceReference } from '$lib/types/script';
 	import { formatClock } from '$lib/utils/duration';
+	import {
+		describePrerequisiteStatus,
+		effectiveProductionGateStatus,
+		isProductionGateHold
+	} from '$lib/utils/productionGate';
 	import { findStretchForShot, stretchBlockingBlockers } from '$lib/utils/visualStretch';
 	import * as m from '$lib/paraglide/messages.js';
 
@@ -72,6 +79,27 @@
 	const stretchBlockers = $derived(
 		stretchMembership ? stretchBlockingBlockers(stretchMembership.stretch) : []
 	);
+	const productionGate = $derived(media.take?.productionGate);
+	const gateHold = $derived(isProductionGateHold(media.take));
+	const gateStatus = $derived(effectiveProductionGateStatus(media.take));
+	const gatePrereqs = $derived.by(() => {
+		if (!productionGate?.prerequisiteAssetIds?.length) return [];
+		const assetEntries: Array<[string, NonNullable<ReturnType<typeof getAssetById>>]> = [];
+		const manifestEntries: Array<
+			[string, NonNullable<ReturnType<typeof getAssetGenerationManifestEntry>>]
+		> = [];
+		for (const id of productionGate.prerequisiteAssetIds) {
+			const asset = getAssetById(id);
+			if (asset) assetEntries.push([id, asset]);
+			const row = getAssetGenerationManifestEntry(id);
+			if (row) manifestEntries.push([id, row]);
+		}
+		const assetsById = new Map(assetEntries);
+		const manifestById = new Map(manifestEntries);
+		return productionGate.prerequisiteAssetIds.map((id: string) =>
+			describePrerequisiteStatus(id, { assetsById, manifestById })
+		);
+	});
 
 	function present(value: unknown): string {
 		return editorialValueLabel(value, lang.interfaceLanguage);
@@ -151,7 +179,7 @@
 					<DurationPair montageMs={effectiveDurationMs} spokenMs={shotSpokenMs} />
 				</dd>
 			</div>
-			{#if readinessChips.length || dialogueFlags.multiSpeaker || dialogueFlags.offCameraDialogue}
+			{#if readinessChips.length || dialogueFlags.multiSpeaker || dialogueFlags.offCameraDialogue || gateHold}
 				<div>
 					<dt>{m.readiness_label()}</dt>
 					<dd class="flags">
@@ -171,6 +199,13 @@
 						{/if}
 						{#if dialogueFlags.offCameraDialogue}
 							<span class="flag">{m.timing_flag_off_camera()}</span>
+						{/if}
+						{#if gateHold}
+							<span class="flag"
+								>{gateStatus === 'blocked'
+									? m.details_production_gate_blocked()
+									: m.details_production_gate_deferred()}</span
+							>
 						{/if}
 					</dd>
 				</div>
@@ -488,6 +523,51 @@
 					)}
 				</dd>
 			</div>
+			{#if gateHold && productionGate}
+				<div>
+					<dt>{m.details_production_gate()}</dt>
+					<dd class="flags">
+						<span class="flag"
+							>{gateStatus === 'blocked'
+								? m.details_production_gate_blocked()
+								: m.details_production_gate_deferred()}</span
+						>
+					</dd>
+				</div>
+				{#if productionGate.reasonCode}
+					<div>
+						<dt>{m.details_production_gate_reason_code()}</dt>
+						<dd class="mono">{productionGate.reasonCode}</dd>
+					</div>
+				{/if}
+				{#if productionGate.reason}
+					<div>
+						<dt>{m.details_production_gate_reason()}</dt>
+						<dd>{present(productionGate.reason)}</dd>
+					</div>
+				{/if}
+				{#if gatePrereqs.length}
+					<div>
+						<dt>{m.details_production_gate_prerequisites()}</dt>
+						<dd>
+							<ul>
+								{#each gatePrereqs as prereq (prereq.assetId)}
+									<li class="mono">
+										{prereq.assetId}
+										·
+										{prereq.origin === 'catalog'
+											? m.details_production_gate_prereq_catalog()
+											: prereq.origin === 'manifest'
+												? m.details_production_gate_prereq_manifest()
+												: m.details_production_gate_prereq_unknown()}
+										· {present(prereq.status)}
+									</li>
+								{/each}
+							</ul>
+						</dd>
+					</div>
+				{/if}
+			{/if}
 		</dl>
 		{#if imageStatus}
 			<p><b>{m.details_reasons()}</b><br />{imageStatus.reasons.map(present).join(', ')}</p>

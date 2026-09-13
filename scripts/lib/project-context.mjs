@@ -9,6 +9,7 @@ import locationsFile from '../../data/locations.json' with { type: 'json' };
 import objectsFile from '../../data/objects.json' with { type: 'json' };
 import vehiclesFile from '../../data/vehicles.json' with { type: 'json' };
 import factionsFile from '../../data/factions.json' with { type: 'json' };
+import assetGenerationManifestFile from '../../data/production/asset-generation-manifest.json' with { type: 'json' };
 
 function sourceText(value) {
 	if (typeof value === 'string') return value;
@@ -21,6 +22,9 @@ function sourceText(value) {
 export function createProjectContext(options = {}) {
 	const assets = assetsFile.assets ?? [];
 	const assetById = new Map(assets.map((a) => [a.id, a]));
+	const manifestById = new Map(
+		(assetGenerationManifestFile.assets ?? []).map((row) => [row.assetId, row])
+	);
 	const entities = [];
 	for (const [file, key, kind] of [
 		[charactersFile, 'characters', 'character'],
@@ -43,6 +47,9 @@ export function createProjectContext(options = {}) {
 	return {
 		assets,
 		assetById,
+		/** Alias for production-gate / report helpers. */
+		assetsById: assetById,
+		manifestById,
 		entities,
 		supportedLangs,
 		sourceLanguage: project.languages?.sourceLanguage ?? 'en',

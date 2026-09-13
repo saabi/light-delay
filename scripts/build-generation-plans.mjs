@@ -3,6 +3,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { planSegments, resolveDiegeticText, sha256 } from './lib/generation-planning.mjs';
 import { resolveCampaignProviders } from './lib/provider-capabilities.mjs';
+import {
+	deriveGenerationGateFromTakes,
+	resolveShotSourceTakeIds
+} from './lib/production-gate.mjs';
 import { buildVisualStretchJobs, pickApprovedVoiceSampleAssetId } from './lib/visual-stretch-jobs.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -36,6 +40,11 @@ for (const file of entityFiles) {
 const assetsById = new Map(
 	JSON.parse(readFileSync(join(ROOT, 'data', 'assets.json'), 'utf8')).assets.map((asset) => [asset.id, asset])
 );
+const manifestById = new Map(
+	JSON.parse(readFileSync(join(ROOT, 'data', 'production', 'asset-generation-manifest.json'), 'utf8')).assets.map(
+		(row) => [row.assetId, row]
+	)
+);
 const makeReference = (kind, id, required, role) => {
 	const asset = assetsById.get(id);
 	if (!asset) throw new Error(`Missing asset ${id} while building generation plan`);
@@ -48,6 +57,7 @@ for (const slug of scripts) {
 	// Normalize CRLF so sourceDigest matches Linux CI checkouts (Windows autocrlf).
 	const source = readFileSync(scriptPath, 'utf8').replace(/\r\n/g, '\n');
 	const file = JSON.parse(source);
+	const takesById = new Map((file.takes || []).map((take) => [take.id, take]));
 	const shots = file.shots.map((shot) => {
 		const references = [];
 		const offScreen = new Set(shot.offScreenCharacterIds ?? []);
@@ -60,6 +70,11 @@ for (const slug of scripts) {
 		}
 		const uniqueReferences = [...new Map(references.map((reference) => [reference.id, reference])).values()];
 		const blockers = [];
+		const { takeIds, missingSelectedTake } = resolveShotSourceTakeIds(shot);
+		if (missingSelectedTake) blockers.push('missing_selected_take');
+		const sourceTakes = takeIds.map((id) => takesById.get(id)).filter(Boolean);
+		const gate = deriveGenerationGateFromTakes(sourceTakes, { assetsById, manifestById });
+		blockers.push(...gate.blockers);
 		const shotCues = shot.cuePlacements.map((placement) => file.cues.find((cue) => cue.id === placement.cueId)).filter(Boolean);
 		const dialogueCues = shotCues.filter((cue) => cue.type === 'dialogue');
 		const diegeticText = shotCues.map((cue) => resolveDiegeticText(cue, 'en')).filter(Boolean);
@@ -92,6 +107,7 @@ for (const slug of scripts) {
 				finalAudio: { required: dialogueCues.length > 0, status: 'missing' }
 			},
 			requiredReferences: budgetedReferences,
+			...(gate.generationGate ? { generationGate: gate.generationGate } : {}),
 			segments: planSegments(shot, maxSegmentMs)
 		};
 	});
@@ -101,7 +117,9 @@ for (const slug of scripts) {
 		videoProvider,
 		entityReferenceIds: referenceAssets,
 		voiceProfiles,
-		language: 'en'
+		language: 'en',
+		assetsById,
+		manifestById
 	});
 	const plan = {
 		schemaVersion: '1.0.0',

@@ -467,6 +467,16 @@ export interface Take {
 		stretchJobId?: string;
 		coherenceException?: boolean;
 	};
+	/**
+	 * Authoring hold for generation scheduling (not editorial Take.status, not imageStatus).
+	 * Absent ⇒ eligible. submitted/generated live on plan/result/provenance, not here.
+	 */
+	productionGate?: {
+		status: 'eligible' | 'deferred' | 'blocked';
+		reasonCode?: string;
+		reason?: StoryText;
+		prerequisiteAssetIds?: AssetId[];
+	};
 	review?: {
 		continuityScore?: number;
 		compositionScore?: number;

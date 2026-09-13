@@ -40,6 +40,7 @@
             "additionalProperties": false
           },
           "requiredReferences": { "type": "array", "items": { "$ref": "#/$defs/reference" } },
+          "generationGate": { "$ref": "#/$defs/generationGate" },
           "segments": {
             "type": "array", "minItems": 1,
             "items": {
@@ -109,6 +110,51 @@
       },
       "additionalProperties": false
     },
+    "generationGate": {
+      "type": "object",
+      "description": "Derived from Take.productionGate on source takes. Script take remains SoT; never hand-author on the plan. When source takes mix deferred and blocked, derived status is deferred (union of deferred prerequisites; all hold takeIds retained).",
+      "required": ["status", "reasonCode", "takeIds"],
+      "properties": {
+        "status": { "enum": ["deferred", "blocked"] },
+        "reasonCode": { "type": "string", "minLength": 1 },
+        "takeIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
+        "prerequisiteAssetIds": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "deferred" } }, "required": ["status"] },
+          "then": {
+            "required": ["prerequisiteAssetIds"],
+            "properties": {
+              "prerequisiteAssetIds": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "status": { "const": "blocked" } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "prerequisiteAssetIds": {
+                "type": "array",
+                "items": { "type": "string", "minLength": 1 },
+                "maxItems": 0,
+                "uniqueItems": true
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualStretchJob": {
       "type": "object",
       "required": ["id", "stretchId", "revision", "medium", "mode", "providerSnapshotId", "outputTakePolicy", "memberInputs", "sharedReferenceAssetIds", "compiledPrompt", "outputs", "blockers", "coherenceException"],
@@ -176,7 +222,8 @@
         "runnable": {
           "type": "boolean",
           "description": "Submission adapters must refuse the job unless runnable is true (requires empty blockers)."
-        }
+        },
+        "generationGate": { "$ref": "#/$defs/generationGate" }
       },
       "additionalProperties": false,
       "allOf": [

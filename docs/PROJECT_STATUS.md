@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-13 — Take.productionGate (English source)
+
+- Authors can mark takes `deferred` (await named assets) or `blocked` without touching `imageStatus`. Generation plans and stretch jobs derive `generationGate` and stay non-runnable until the gate is cleared.
+- UI and reports surface holds separately from the regen queue.
+
 ## 2026-09-13 — Visual-stretch MCP handoff (English source)
 
 - Dry-run §8 run JSON under `reports/runs/` (`npm run handoff:visual-stretch -- --allow-preview-prompt`); never submit preview/`nonExecutable` runs.

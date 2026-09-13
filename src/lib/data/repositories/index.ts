@@ -18,6 +18,7 @@ import narrativeFunctionsJson from '../../../../data/narrative-functions.json';
 import entityVariantsJson from '../../../../data/entity-variants.json';
 import comparisonTaxonomyJson from '../../../../data/comparison-taxonomy.json';
 import editorialLifecycleJson from '../../../../data/editorial-lifecycle.json';
+import assetGenerationManifestJson from '../../../../data/production/asset-generation-manifest.json';
 
 import type { ProjectFile, ScriptRegistryEntry } from '$lib/types/project';
 import type { EntityVariantsFile, NarrativeFunctionsFile, ScriptFile } from '$lib/types/script';
@@ -300,7 +301,39 @@ export function getDocuments(): DocumentsFile {
 	return assertJsonModule(documentsJson as DocumentsFile, 'documents');
 }
 
+export type AssetGenerationManifestRow = {
+	assetId: string;
+	status?: string;
+	[key: string]: unknown;
+};
+
+function getAssetGenerationManifestFile(): { assets: AssetGenerationManifestRow[] } {
+	return assertJsonModule(
+		assetGenerationManifestJson as { assets: AssetGenerationManifestRow[] },
+		'production/asset-generation-manifest'
+	);
+}
+
+/** Cached id → manifest row map (planned/generated asset rows may lack a catalog file). */
+let assetGenerationManifestByIdCache: Map<string, AssetGenerationManifestRow> | undefined;
+
+export function getAssetGenerationManifestById(): Map<string, AssetGenerationManifestRow> {
+	if (!assetGenerationManifestByIdCache) {
+		assetGenerationManifestByIdCache = new Map(
+			getAssetGenerationManifestFile().assets.map((row) => [row.assetId, row])
+		);
+	}
+	return assetGenerationManifestByIdCache;
+}
+
+export function getAssetGenerationManifestEntry(
+	assetId: string
+): AssetGenerationManifestRow | undefined {
+	return getAssetGenerationManifestById().get(assetId);
+}
+
 export function getCanonicalBundle() {
+	const assetGenerationManifestById = getAssetGenerationManifestById();
 	return {
 		project: getProject(),
 		script: getCanonicalScript(),
@@ -315,7 +348,9 @@ export function getCanonicalBundle() {
 		documents: getDocuments(),
 		narrativeFunctions: getNarrativeFunctions(),
 		entityVariants: getEntityVariants(),
-		comparisonTaxonomy: getComparisonTaxonomy()
+		comparisonTaxonomy: getComparisonTaxonomy(),
+		assetGenerationManifestIds: new Set(assetGenerationManifestById.keys()),
+		assetGenerationManifestById
 	};
 }
 

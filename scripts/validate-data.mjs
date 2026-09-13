@@ -6,6 +6,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sourceLocalizedString } from './lib/localized-string.mjs';
+import { collectProductionGateValidation } from './lib/production-gate.mjs';
 import { resolveStillProvider } from './lib/provider-capabilities.mjs';
 import {
 	providerAllowsFourByFour,
@@ -283,7 +284,11 @@ function validateScriptFile(
 		outlineStepIdsById,
 		documentIds,
 		errors,
-		assetIds
+		warnings,
+		assetIds,
+		assetsById,
+		manifestIds,
+		manifestById
 	}
 ) {
 	const label = `script(${script.script?.id})`;
@@ -373,6 +378,14 @@ function validateScriptFile(
 		if (take.imageAssetId && !assetIds.has(take.imageAssetId)) {
 			errors.push(`${label} take ${take.id}: unknown image asset ${take.imageAssetId}`);
 		}
+		const gateResult = collectProductionGateValidation(take, `${label} take ${take.id}`, {
+			assetIds,
+			assetsById,
+			manifestIds,
+			manifestById
+		});
+		errors.push(...gateResult.errors);
+		warnings.push(...gateResult.warnings);
 		if (!take.imageStatus) continue;
 		validateImageStatus(take.imageStatus, `${label} take ${take.id}`, errors);
 		if (take.imageStatus.reasons?.includes('placeholder') && !take.imageStatus.sourceShotId) {
@@ -676,6 +689,12 @@ function main() {
 	const characterIds = new Set(characters.characters.map((c) => c.id));
 	const documentIds = new Set(documents.documents.map((d) => d.id));
 	const assetIds = new Set(assets.assets.map((asset) => asset.id));
+	const assetsById = new Map(assets.assets.map((asset) => [asset.id, asset]));
+	const assetGenerationManifest = load('production/asset-generation-manifest.json');
+	const manifestById = new Map(
+		(assetGenerationManifest.assets || []).map((row) => [row.assetId, row])
+	);
+	const manifestIds = new Set(manifestById.keys());
 	const ownedIds = new Set();
 	const outlineFiles = readdirSync(OUTLINES_DIR).filter((name) => name.endsWith('.json'));
 	const loadedOutlines = outlineFiles.map((filename) => ({
@@ -703,7 +722,11 @@ function main() {
 			scriptsById,
 			documentIds,
 			errors,
+			warnings,
 			assetIds,
+			assetsById,
+			manifestIds,
+			manifestById,
 			outlineStepIdsById
 		});
 		for (const collection of [

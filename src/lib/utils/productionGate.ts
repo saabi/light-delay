@@ -1,0 +1,17 @@
+/**
+ * Re-export Take.productionGate helpers for the app and Vitest.
+ * @see scripts/lib/production-gate.mjs
+ */
+export {
+	KNOWN_PRODUCTION_GATE_REASON_CODES,
+	PRODUCTION_GATE_STATUSES,
+	effectiveProductionGateStatus,
+	isProductionGateHold,
+	resolveShotSourceTakeIds,
+	resolveStretchMemberSourceTakeIds,
+	evaluatePrerequisiteAssets,
+	collectProductionGateValidation,
+	deriveGenerationGateFromTakes,
+	stretchMemberGateBlockers,
+	describePrerequisiteStatus
+} from '../../../scripts/lib/production-gate.mjs';

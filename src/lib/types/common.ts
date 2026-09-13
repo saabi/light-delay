@@ -41,4 +41,5 @@ export interface Note {
 export interface ValidationResult {
 	ok: boolean;
 	errors: string[];
+	warnings?: string[];
 }

@@ -12,6 +12,13 @@
 
 import { checkReferenceBudget } from './generation-planning.mjs';
 import {
+	deriveGenerationGateFromTakes,
+	effectiveProductionGateStatus,
+	isProductionGateHold,
+	resolveStretchMemberSourceTakeIds,
+	stretchMemberGateBlockers
+} from './production-gate.mjs';
+import {
 	computeMargins,
 	derivePanelRegions,
 	DEFAULT_GUTTER_FRACTION,
@@ -23,6 +30,44 @@ import {
 	validateGridLayout
 } from './visual-stretch.mjs';
 
+/**
+ * Collect production-gate blockers + derived generationGate for stretch members.
+ * @param {StretchMember[]} members
+ * @param {Map<string, any>} shotsById
+ * @param {Map<string, any>} takesById
+ * @param {{ assetsById?: Map<string, any>, manifestById?: Map<string, any> }} [ctx]
+ */
+export function collectStretchProductionGate(members, shotsById, takesById, ctx = {}) {
+	/** @type {string[]} */
+	const blockers = [];
+	/** @type {any[]} */
+	const sourceTakes = [];
+	for (const member of members) {
+		const shot = shotsById.get(member.shotId);
+		const { takeIds, missingSelectedTake } = resolveStretchMemberSourceTakeIds(member, shot);
+		if (missingSelectedTake) blockers.push(`missing_selected_take:${member.shotId}`);
+		for (const takeId of takeIds) {
+			const take = takesById.get(takeId);
+			if (!take) {
+				blockers.push(`unknown_source_take:${takeId}`);
+				continue;
+			}
+			sourceTakes.push(take);
+			if (isProductionGateHold(take)) {
+				const status = /** @type {'deferred' | 'blocked'} */ (
+					effectiveProductionGateStatus(take)
+				);
+				blockers.push(...stretchMemberGateBlockers(member.shotId, [take.id], status));
+			}
+		}
+	}
+	const derived = deriveGenerationGateFromTakes(sourceTakes, ctx);
+	blockers.push(...derived.blockers);
+	return {
+		blockers: [...new Set(blockers)],
+		generationGate: derived.generationGate
+	};
+}
 /**
  * One approved voice sample per speaker for the job language (SEEDANCE_PROMPTING §4 / §6.1).
  * Prefers the matching language variant; falls back to the first sample on any variant.
@@ -250,7 +295,10 @@ function finalizeStretchJob(job, opts = {}) {
  *   language?: string,
  *   videoLimits?: { maxImages?: number | null, maxVideos?: number | null, maxAudios?: number | null, maxTotalReferences?: number | null },
  *   providerSnapshotId?: string,
- *   maxOutputsPerRequest?: number | null
+ *   maxOutputsPerRequest?: number | null,
+ *   takesById?: Map<string, any>,
+ *   assetsById?: Map<string, any>,
+ *   manifestById?: Map<string, any>
  * }} [opts]
  * @returns {VisualStretchJob[]}
  */
@@ -274,6 +322,8 @@ export function partitionStretchVideoJobs(
 	const voiceProfiles = opts.voiceProfiles ?? [];
 	const language = opts.language ?? 'en';
 	const providerSnapshotId = opts.providerSnapshotId ?? '';
+	const takesById = opts.takesById ?? new Map();
+	const gateCtx = { assetsById: opts.assetsById, manifestById: opts.manifestById };
 
 	/**
 	 * @param {StretchMember[]} bucketMembers
@@ -284,16 +334,11 @@ export function partitionStretchVideoJobs(
 	const buildJob = (bucketMembers, durationMs, extraBlockers = []) => {
 		const memberInputs = bucketMembers.map((member) => {
 			const shot = shotsById.get(member.shotId);
-			const sourceTakeIds =
-				member.takeScope === 'explicit'
-					? member.takeIds ?? []
-					: shot?.selectedTakeId
-						? [shot.selectedTakeId]
-						: [];
+			const { takeIds } = resolveStretchMemberSourceTakeIds(member, shot);
 			return {
 				order: member.order,
 				shotId: member.shotId,
-				sourceTakeIds,
+				sourceTakeIds: takeIds,
 				keyframeAssetId: keyframeByShotId.get(member.shotId)
 			};
 		});
@@ -307,12 +352,14 @@ export function partitionStretchVideoJobs(
 			voiceProfiles,
 			language
 		});
+		const gate = collectStretchProductionGate(bucketMembers, shotsById, takesById, gateCtx);
 		/** @type {string[]} */
 		const blockers = [
 			'editorial_prompt_freeze_not_approved',
 			'seedance_execution_gated',
 			...voiceBlockers,
 			...referenceBudgetBlockers(references, opts.videoLimits),
+			...gate.blockers,
 			...extraBlockers
 		];
 		if (durationMs > maxSegmentMs) {
@@ -336,7 +383,8 @@ export function partitionStretchVideoJobs(
 			compiledPrompt: null,
 			outputs: [{ order: 1, artifact: 'video' }],
 			blockers,
-			coherenceException: false
+			coherenceException: false,
+			...(gate.generationGate ? { generationGate: gate.generationGate } : {})
 		}, { maxOutputsPerRequest: opts.maxOutputsPerRequest });
 	};
 
@@ -373,18 +421,31 @@ export function partitionStretchVideoJobs(
  *   videoProvider?: any,
  *   entityReferenceIds?: Map<string, string[]>,
  *   voiceProfiles?: VoiceProfile[],
- *   language?: string
+ *   language?: string,
+ *   assetsById?: Map<string, any>,
+ *   manifestById?: Map<string, any>
  * }} opts
  * @returns {VisualStretchJob[]}
  */
 export function buildVisualStretchJobs(
 	file,
-	{ maxSegmentMs, stillProvider, videoProvider, entityReferenceIds, voiceProfiles = [], language = 'en' }
+	{
+		maxSegmentMs,
+		stillProvider,
+		videoProvider,
+		entityReferenceIds,
+		voiceProfiles = [],
+		language = 'en',
+		assetsById,
+		manifestById
+	}
 ) {
 	/** @type {VisualStretchJob[]} */
 	const jobs = [];
 	const shotsById = new Map((file.shots || []).map(/** @param {any} shot */ (shot) => [shot.id, shot]));
+	const takesById = new Map((file.takes || []).map(/** @param {any} take */ (take) => [take.id, take]));
 	const cuesById = new Map((file.cues || []).map(/** @param {any} cue */ (cue) => [cue.id, cue]));
+	const gateCtx = { assetsById, manifestById };
 
 	for (const stretch of file.visualStretches || []) {
 		const stillMode = stretch.generationProfile?.stillMode ?? 'combined_storyboard_sheet';
@@ -394,18 +455,15 @@ export function buildVisualStretchJobs(
 		);
 		const memberInputs = members.map((member) => {
 			const shot = shotsById.get(member.shotId);
-			const sourceTakeIds =
-				member.takeScope === 'explicit'
-					? member.takeIds ?? []
-					: shot?.selectedTakeId
-						? [shot.selectedTakeId]
-						: [];
-			return { order: member.order, shotId: member.shotId, sourceTakeIds };
+			const { takeIds } = resolveStretchMemberSourceTakeIds(member, shot);
+			return { order: member.order, shotId: member.shotId, sourceTakeIds: takeIds };
 		});
+		const gate = collectStretchProductionGate(members, shotsById, takesById, gateCtx);
 		/** @type {string[]} */
 		const blockers = [
 			'editorial_prompt_freeze_not_approved',
-			...stretchBlockingBlockers(stretch)
+			...stretchBlockingBlockers(stretch),
+			...gate.blockers
 		];
 
 		const stillReferences = collectStillStretchReferences(stretch);
@@ -508,7 +566,8 @@ export function buildVisualStretchJobs(
 						}
 					],
 					blockers,
-					coherenceException: false
+					coherenceException: false,
+					...(gate.generationGate ? { generationGate: gate.generationGate } : {})
 				}, { maxOutputsPerRequest: stillProvider?.limits?.maxOutputsPerRequest })
 			);
 		} else {
@@ -537,7 +596,8 @@ export function buildVisualStretchJobs(
 						]
 					})),
 					blockers: [...blockers, 'coherence_exception'],
-					coherenceException: true
+					coherenceException: true,
+					...(gate.generationGate ? { generationGate: gate.generationGate } : {})
 				}, { maxOutputsPerRequest: stillProvider?.limits?.maxOutputsPerRequest })
 			);
 		}
@@ -557,7 +617,10 @@ export function buildVisualStretchJobs(
 					language,
 					videoLimits: videoProvider?.limits,
 					providerSnapshotId: videoProvider?.id ?? '',
-					maxOutputsPerRequest: videoProvider?.limits?.maxOutputsPerRequest
+					maxOutputsPerRequest: videoProvider?.limits?.maxOutputsPerRequest,
+					takesById,
+					assetsById,
+					manifestById
 				}
 			);
 			jobs.push(...videoJobs);
