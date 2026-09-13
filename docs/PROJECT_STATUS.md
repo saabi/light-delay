@@ -1,5 +1,18 @@
 # Estado del proyecto
 
+## 2026-09-13 — SRT para Resolve junto al OTIO
+
+- El export OTIO escribe también `*.en.srt` / `*.es.srt` en `tmp/resolve-otio/` (reloj del
+  animatic + offset 01:00:00:00). Importar en Resolve como subtítulos, no dentro del OTIO.
+
+## 2026-09-13 — Still generation model on assets (English source)
+
+- `Asset.source.model` is the durable attribution for which image model produced a
+  still or reference file. Validation requires `model` whenever `source` is present
+  and `provider` is not `local`. Current AI assets are filled with `gpt-image-2`.
+- Generation-manifest schema accepts any non-empty model string; live data remains
+  `gpt-image-2`.
+
 ## 2026-09-12 — TTS EN cue-0044 / cue-0045
 
 - Audit: 2 Festival EN cues sin `audioAssetId` (`0044`, `0045`); trailer y main-short completos.
