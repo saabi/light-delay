@@ -40,6 +40,8 @@ Picture chain (same as the animatic): `shot.selectedTakeId` → take → `videoA
 
 Dialogue chain: `cuePlacements` → cue `content.variants.<lang>.audioAssetId` → WAV, timed as `shotOriginMs + atMs` (same formula as `buildShotDialogueTimeline`).
 
+Subtitle chain (sidecar): same absolute timings, `spokenText` for EN and ES (fallback EN→ES). Timestamps include the OTIO **01:00:00:00** offset so Resolve “Insert Selected Subtitles to Timeline Using Timecode” lines up with picture.
+
 Higgsfield ingest is **out of scope** here. When a take is on disk, register it:
 
 `static/assets/animatic/video/<slug>/…` → `assets.json` (`kind: video`) → `take.videoAssetId`.
@@ -57,6 +59,9 @@ This exporter **locks 24 fps**. `durationMs` / `atMs` snap with `round(ms * 24 /
 | V1 Picture | Video | One clip per shot in ScriptFile order. Length = snapped `durationMs`. Video file if `videoAssetId` exists on disk; else the storyboard still. Missing still → `Gap` (reported), not `MissingReference`. |
 | A1 Dialogue | Audio | Cue WAVs **only for shots still on a still**. Gaps where nobody speaks. |
 | A2 Take audio | Audio | For shots already on video: the **same** MOV/MP4 as V1, same range (Resolve often will not pull embedded audio from an OTIO video clip alone). |
+| *(sidecar)* | Subtitles | `tmp/resolve-otio/<slug>.en.srt` and `.es.srt` — **not** inside the OTIO. Import separately (§7). |
+
+**Gaps in Resolve are usually not an import failure.** Empty stretches on V1/A1 mean the assembly emitted OTIO `Gap` items for shots with no resolvable still (or dialogue only attached to pictured shots). Example: an older `light-delay-trailer-master.otio` had seven picture gaps where trailer takes had prompts but no `imageAssetId`; the media pool then listed only the 15 linked PNGs. Festival-master should import as a continuous V1 (104 stills) when every take has an on-disk frame. Re-run `npm run export:resolve-otio:all` after wiring stills, and confirm you are opening the cut you intend (`…-festival-master.otio` vs `…-trailer-master.otio`).
 
 Clip `name` is the shot id with `:` replaced by `__` (e.g. `festival-master__shot-plan-031`). Resolve 20 on Windows aborts the whole OTIO import when clip or timeline names contain a colon. The original `shotId` stays in namespaced metadata:
 
@@ -134,8 +139,9 @@ Swap is **per file**: `--from-otio` plus the matching `--script-id`. Do not swap
 4. Leave **Automatically import source clips into media pool** on.
 5. **Import timeline** can stay empty — OTIO is a single timeline; Resolve uses **Timeline name**.
 6. First import `tmp/resolve-otio/smoke-one-still.otio` (one PNG, no colons). If that lands, import the Festival/trailer files.
-7. If paths miss, point at the repo `static/` tree (subfolders are walked).
-8. Later relink by filename: **Ignore file extensions when matching** so `shot-plan-031.png` can become `shot-plan-031.mov` *if* you use that convention. This repo’s primary path is regenerate / `--swap`, not basename relink.
+7. Subtitles: Media Pool → **Import Subtitle** → pick `light-delay-festival-master.en.srt` (or `.es.srt`). Right-click the subtitle clip → **Insert Selected Subtitles to Timeline Using Timecode**. Timecodes already include the 01:00:00:00 OTIO start. Spanish may still be `needs_revision`.
+8. If paths miss, point at the repo `static/` tree (subfolders are walked).
+9. Later relink by filename: **Ignore file extensions when matching** so `shot-plan-031.png` can become `shot-plan-031.mov` *if* you use that convention. This repo’s primary path is regenerate / `--swap`, not basename relink.
 
 If import still adds nothing: Media Pool → right-click Timelines → Show Log → Import Log. The same lines are in `%AppData%\Blackmagic Design\DaVinci Resolve\Support\logs\davinci_resolve.log` (`Import Log (Fatal) - failed to import OTIO timeline`). Resolve does not log a per-clip reason.
 
@@ -149,11 +155,13 @@ OTIO still-holds are not as explicitly documented as FCPXML stills. After the fi
 2. Then import `tmp/resolve-otio/light-delay-festival-master.otio`.
 3. Confirm a storyboard PNG holds for the shot length (several seconds), not one frame.
 4. Confirm a dialogue WAV sits on A1 at the cue.
+5. Import the matching `.en.srt` and confirm a line lands with the WAV (timecode insert).
 
 If stills collapse to one frame, the fallback is FCPXML / FCP7 XML from the same builder (not implemented in v1).
 
 ## 9. What this does not do
 
+- Embed subtitles inside the `.otio` (Resolve expects a separate SRT/TTML import).
 - Download Higgsfield results or write `videoAssetId`.
 - Update ScriptFile timings from Resolve.
 - Bundle media (`.otioz`).

@@ -1,5 +1,6 @@
 /**
  * Assemble or swap a DaVinci Resolve OTIO timeline from a ScriptFile.
+ * Also writes EN/ES SRT sidecars for subtitle-track import (not embedded in OTIO).
  *
  * Usage:
  *   node scripts/export-resolve-otio.mjs --script-id script:light-delay-festival-master
@@ -15,11 +16,15 @@ import {
 	DEFAULT_FPS,
 	DEFAULT_LANG,
 	FESTIVAL_SCRIPT_ID,
+	TIMELINE_START_SECONDS,
 	assembleSmokeTimeline,
 	assembleTimeline,
 	assetsByIdFromFile,
+	buildSrt,
+	collectSubtitleCues,
 	defaultOtioPath,
 	defaultSmokeOtioPath,
+	defaultSrtPath,
 	scriptPathForId,
 	serializeOtio,
 	slugFromScriptId,
@@ -28,6 +33,7 @@ import {
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const ASSETS_PATH = join(ROOT, 'data/assets.json');
+const SUBTITLE_LANGS = ['en', 'es'];
 
 function loadJson(path) {
 	return JSON.parse(readFileSync(path, 'utf8'));
@@ -67,6 +73,21 @@ function writeOtio(outPath, timeline) {
 	writeFileSync(outPath, serializeOtio(timeline), 'utf8');
 }
 
+function writeSubtitles(script, { fps, check }) {
+	const written = [];
+	for (const lang of SUBTITLE_LANGS) {
+		const cues = collectSubtitleCues(script, { lang, fps });
+		const body = buildSrt(cues, { timelineStartSeconds: TIMELINE_START_SECONDS, fps });
+		const dest = defaultSrtPath(ROOT, script.script?.id, lang);
+		if (!check && body) {
+			mkdirSync(dirname(dest), { recursive: true });
+			writeFileSync(dest, body, 'utf8');
+		}
+		written.push({ lang, dest, cueCount: cues.length, wrote: !check && Boolean(body) });
+	}
+	return written;
+}
+
 function assembleOne(scriptId, { lang, fps, out, check }) {
 	const { script, assetsById } = loadScriptAndAssets(scriptId);
 	const { timeline, report } = assembleTimeline(script, assetsById, {
@@ -76,7 +97,11 @@ function assembleOne(scriptId, { lang, fps, out, check }) {
 	});
 	const dest = out || defaultOtioPath(ROOT, scriptId);
 	if (!check) writeOtio(dest, timeline);
-	return { dest, report, wrote: !check };
+	const subtitles = writeSubtitles(script, { fps, check });
+	report.subtitles = Object.fromEntries(
+		subtitles.map((row) => [row.lang, { cueCount: row.cueCount, out: row.dest }])
+	);
+	return { dest, report, wrote: !check, subtitles };
 }
 
 function swapOne(scriptId, { fromOtio, fps, out, check }) {
@@ -90,7 +115,7 @@ function swapOne(scriptId, { fromOtio, fps, out, check }) {
 	});
 	const dest = out || defaultOtioPath(ROOT, `${slugFromScriptId(scriptId)}.swapped`);
 	if (!check) writeOtio(dest, next);
-	return { dest, report, wrote: !check };
+	return { dest, report, wrote: !check, subtitles: [] };
 }
 
 export function runExport(argv = process.argv.slice(2)) {
@@ -113,7 +138,8 @@ export function runExport(argv = process.argv.slice(2)) {
 			scriptId: 'smoke-one-still',
 			dest: smokeDest,
 			wrote: true,
-			report: { pictureClips: 1, dialogueClips: 0 }
+			report: { pictureClips: 1, dialogueClips: 0 },
+			subtitles: []
 		});
 	}
 	return results;
@@ -137,6 +163,7 @@ if (invokedDirectly()) {
 						scriptId: result.scriptId,
 						out: result.dest,
 						wrote: result.wrote,
+						subtitles: result.subtitles,
 						report: result.report
 					},
 					null,

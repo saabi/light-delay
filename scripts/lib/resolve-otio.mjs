@@ -26,6 +26,10 @@ export function defaultOtioPath(root, scriptId) {
 	return join(root, 'tmp', 'resolve-otio', `${slugFromScriptId(scriptId)}.otio`);
 }
 
+export function defaultSrtPath(root, scriptId, lang = DEFAULT_LANG) {
+	return join(root, 'tmp', 'resolve-otio', `${slugFromScriptId(scriptId)}.${lang}.srt`);
+}
+
 export function msToFrames(ms, fps = DEFAULT_FPS) {
 	return Math.round((Number(ms) || 0) * fps / 1000);
 }
@@ -244,6 +248,16 @@ function resolveDialogueVariant(cue, lang) {
 	return any ? { variant: any, timingLang: lang } : null;
 }
 
+function resolveSpokenVariant(cue, lang) {
+	const variants = cue?.content?.variants ?? {};
+	for (const key of [lang, 'en', 'es', ...Object.keys(variants)]) {
+		const variant = variants[key];
+		const text = String(variant?.spokenText || '').trim();
+		if (text) return { variant, text, lang: key };
+	}
+	return null;
+}
+
 /**
  * Absolute dialogue cues using the animatic startMs formula, then frame-snapped.
  */
@@ -280,6 +294,97 @@ export function collectDialogueCues(script, { lang = DEFAULT_LANG, fps = DEFAULT
 		shotOriginMs += shot.durationMs || 0;
 	}
 	return out.sort((a, b) => a.startFrame - b.startFrame || a.cueId.localeCompare(b.cueId));
+}
+
+/**
+ * Subtitle rows from dialogue placements. Uses spokenText for `lang` (EN→ES fallback).
+ * Timing matches the animatic / OTIO A1 formula; does not require a promoted WAV.
+ */
+export function collectSubtitleCues(script, { lang = DEFAULT_LANG, fps = DEFAULT_FPS } = {}) {
+	const cueById = new Map((script.cues || []).map((cue) => [cue.id, cue]));
+	const out = [];
+	let shotOriginMs = 0;
+	for (const shot of script.shots || []) {
+		for (const placement of shot.cuePlacements || []) {
+			const cue = cueById.get(placement.cueId);
+			if (!cue || cue.type !== 'dialogue') continue;
+			const spoken = resolveSpokenVariant(cue, lang);
+			if (!spoken) continue;
+			const audioResolved = resolveDialogueVariant(cue, lang);
+			const timingLang = audioResolved?.timingLang ?? spoken.lang;
+			const localized =
+				placement.timingByLanguage?.[timingLang] ?? placement.timingByLanguage?.[lang];
+			const relativeAtMs = localized?.atMs ?? placement.atMs ?? 0;
+			const durationMs =
+				localized?.durationMs ??
+				placement.durationMs ??
+				spoken.variant.estimatedDurationMs ??
+				audioResolved?.variant?.estimatedDurationMs ??
+				0;
+			const startMs = shotOriginMs + relativeAtMs;
+			out.push({
+				cueId: cue.id,
+				shotId: shot.id,
+				lang: spoken.lang,
+				text: spoken.text,
+				startMs,
+				durationMs: Math.max(durationMs, framesToMs(1, fps)),
+				startFrame: msToFrames(startMs, fps),
+				durationFrames: Math.max(1, msToFrames(durationMs, fps))
+			});
+		}
+		shotOriginMs += shot.durationMs || 0;
+	}
+	return out.sort((a, b) => a.startFrame - b.startFrame || a.cueId.localeCompare(b.cueId));
+}
+
+/** SRT clock `HH:MM:SS,mmm` from absolute milliseconds. */
+export function msToSrtTimestamp(ms) {
+	const total = Math.max(0, Math.round(Number(ms) || 0));
+	const hours = Math.floor(total / 3_600_000);
+	const minutes = Math.floor((total % 3_600_000) / 60_000);
+	const seconds = Math.floor((total % 60_000) / 1000);
+	const millis = total % 1000;
+	const pad = (n, width = 2) => String(n).padStart(width, '0');
+	return `${pad(hours)}:${pad(minutes)}:${pad(seconds)},${pad(millis, 3)}`;
+}
+
+function sanitizeSrtText(text) {
+	return String(text || '')
+		.replace(/\r\n/g, '\n')
+		.replace(/\r/g, '\n')
+		.split('\n')
+		.map((line) => line.trim())
+		.filter(Boolean)
+		.join('\n');
+}
+
+/**
+ * Build an SRT body aligned to the OTIO timeline start (default 01:00:00:00) so Resolve
+ * “Insert Selected Subtitles to Timeline Using Timecode” lands on the picture.
+ */
+export function buildSrt(
+	cues,
+	{ timelineStartSeconds = TIMELINE_START_SECONDS, fps = DEFAULT_FPS } = {}
+) {
+	const offsetMs = Math.round((Number(timelineStartSeconds) || 0) * 1000);
+	const blocks = [];
+	let index = 0;
+	for (const cue of cues || []) {
+		const text = sanitizeSrtText(cue.text);
+		if (!text) continue;
+		const startMs = offsetMs + (Number(cue.startMs) || 0);
+		const durationMs = Math.max(
+			Number(cue.durationMs) || 0,
+			framesToMs(Math.max(1, cue.durationFrames || 1), fps)
+		);
+		const endMs = startMs + durationMs;
+		index += 1;
+		blocks.push(
+			`${index}\n${msToSrtTimestamp(startMs)} --> ${msToSrtTimestamp(endMs)}\n${text}`
+		);
+	}
+	return blocks.length ? `${blocks.join('\n\n')}\n` : '';
 }
 
 function lightDelayMeta({ shotId, takeId, mediaKind, cueIds }) {

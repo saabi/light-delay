@@ -5,13 +5,17 @@ import { fileURLToPath } from 'node:url';
 import {
 	FESTIVAL_SCRIPT_ID,
 	TRAILER_SCRIPT_ID,
+	TIMELINE_START_SECONDS,
 	assembleTimeline,
 	assetsByIdFromFile,
+	buildSrt,
 	collectDialogueCues,
+	collectSubtitleCues,
 	clipTargetUrl,
 	isStillUrl,
 	matchShotId,
 	msToFrames,
+	msToSrtTimestamp,
 	serializeOtio,
 	swapTakes
 } from '../../../scripts/lib/resolve-otio.mjs';
@@ -200,6 +204,35 @@ describe('resolve OTIO swap', () => {
 				new Set(['festival-master:shot-plan-001'])
 			)
 		).toBe('festival-master:shot-plan-001');
+	});
+});
+
+describe('resolve SRT subtitles', () => {
+	it('formats timestamps and offsets cues to the OTIO 01:00:00:00 start', () => {
+		expect(msToSrtTimestamp(0)).toBe('00:00:00,000');
+		expect(msToSrtTimestamp(3661_500)).toBe('01:01:01,500');
+		const body = buildSrt(
+			[{ text: 'Hi.', startMs: 250, durationMs: 1000 }],
+			{ timelineStartSeconds: TIMELINE_START_SECONDS, fps: 24 }
+		);
+		expect(body).toContain('1\n');
+		expect(body).toContain('01:00:00,250 --> 01:00:01,250');
+		expect(body).toContain('Hi.');
+	});
+
+	it('collects spoken text without requiring a promoted WAV', () => {
+		const script = fixtureScript();
+		delete script.cues[0].content.variants.en.audioAssetId;
+		script.cues[0].content.variants.es = {
+			spokenText: 'Hola.',
+			estimatedDurationMs: 900
+		};
+		const en = collectSubtitleCues(script, { lang: 'en', fps: 24 });
+		expect(en).toHaveLength(1);
+		expect(en[0].text).toBe('Hi.');
+		expect(en[0].startMs).toBe(250);
+		const es = collectSubtitleCues(script, { lang: 'es', fps: 24 });
+		expect(es[0].text).toBe('Hola.');
 	});
 });
 
