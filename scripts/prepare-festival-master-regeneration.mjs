@@ -1,3 +1,8 @@
+/**
+ * Festival-master still prompt preparation (per-shot path).
+ * For stretch-bound shots, prefer `npm run compile:visual-stretch` /
+ * `scripts/lib/visual-stretch.mjs` — do not invent a second shared-prompt SoT here.
+ */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';

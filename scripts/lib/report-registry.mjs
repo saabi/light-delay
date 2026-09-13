@@ -30,6 +30,10 @@ import {
 	buildDialogueTimingReport,
 	formatDialogueTimingMarkdown
 } from './dialogue-timing.mjs';
+import {
+	buildVisualStretchesReport,
+	formatVisualStretchesMarkdown
+} from './visual-stretches-report.mjs';
 
 /** @type {Array<{ id: string; titleKey: string; descriptionKey: string; build: Function; formatMarkdown: Function }>} */
 export const REPORT_ENTRIES = [
@@ -116,6 +120,13 @@ export const REPORT_ENTRIES = [
 		descriptionKey: 'reports_regen_briefs_desc',
 		build: buildRegenBriefsReport,
 		formatMarkdown: formatRegenBriefsMarkdown
+	},
+	{
+		id: 'visual-stretches',
+		titleKey: 'reports_visual_stretches_title',
+		descriptionKey: 'reports_visual_stretches_desc',
+		build: buildVisualStretchesReport,
+		formatMarkdown: formatVisualStretchesMarkdown
 	}
 ];
 

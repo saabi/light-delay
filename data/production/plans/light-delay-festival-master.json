@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "b0cce937c9ce7fd2af84597cc6a76b7fa2a95a3241de2dde9b70a6ff4d4929e8",
+    "sourceDigest": "9e7926cc0447786ada5771148a16f275d41506be594b949577c9ad826066431c",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -7522,6 +7522,169 @@
           "compiledPrompt": null
         }
       ]
+    }
+  ],
+  "visualStretchJobs": [
+    {
+      "id": "festival-master:stretch-bridge-meal-010-012:rev-1",
+      "stretchId": "festival-master:stretch-bridge-meal-010-012",
+      "revision": 1,
+      "medium": "still",
+      "mode": "combined_storyboard_sheet",
+      "outputTakePolicy": "new_candidate",
+      "memberInputs": [
+        {
+          "order": 1,
+          "shotId": "festival-master:shot-plan-010",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-010:take-01"
+          ]
+        },
+        {
+          "order": 2,
+          "shotId": "festival-master:shot-plan-011",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-011:take-01"
+          ]
+        },
+        {
+          "order": 3,
+          "shotId": "festival-master:shot-plan-012",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-012:take-01"
+          ]
+        }
+      ],
+      "sharedReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "gridLayout": {
+        "rows": 2,
+        "cols": 2,
+        "gutterFraction": 0.02,
+        "panelAspect": "16:9",
+        "blankCells": [
+          4
+        ]
+      },
+      "computedMargins": {
+        "top": 0.078125,
+        "right": 0,
+        "bottom": 0.078125,
+        "left": 0
+      },
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "combinedStoryboard",
+          "panels": [
+            {
+              "order": 1,
+              "shotId": "festival-master:shot-plan-010",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-010:take-01"
+              ],
+              "frameRegion": {
+                "x": 0,
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              }
+            },
+            {
+              "order": 2,
+              "shotId": "festival-master:shot-plan-011",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-011:take-01"
+              ],
+              "frameRegion": {
+                "x": 0.51,
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              }
+            },
+            {
+              "order": 3,
+              "shotId": "festival-master:shot-plan-012",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-012:take-01"
+              ],
+              "frameRegion": {
+                "x": 0,
+                "y": 0.51,
+                "w": 0.49,
+                "h": 0.411875
+              }
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved",
+        "missing_stretch_blocking"
+      ],
+      "coherenceException": false
+    },
+    {
+      "id": "festival-master:stretch-bridge-meal-010-012:rev-1:video-1",
+      "stretchId": "festival-master:stretch-bridge-meal-010-012",
+      "revision": 1,
+      "medium": "video",
+      "mode": "grouped_seedance",
+      "outputTakePolicy": "new_candidate",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-meal-010-012:rev-1",
+      "memberInputs": [
+        {
+          "order": 1,
+          "shotId": "festival-master:shot-plan-010",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-010:take-01"
+          ]
+        },
+        {
+          "order": 2,
+          "shotId": "festival-master:shot-plan-011",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-011:take-01"
+          ]
+        },
+        {
+          "order": 3,
+          "shotId": "festival-master:shot-plan-012",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-012:take-01"
+          ]
+        }
+      ],
+      "sharedReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ],
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "video"
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved",
+        "seedance_execution_gated"
+      ],
+      "coherenceException": false
     }
   ]
 }

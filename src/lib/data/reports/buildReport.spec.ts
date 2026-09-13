@@ -12,7 +12,7 @@ const canonical = 'script:light-delay-main-short';
 
 describe('report-runner', () => {
 	it('exposes all 12 report ids', () => {
-		expect(REPORT_IDS).toHaveLength(12);
+		expect(REPORT_IDS).toHaveLength(13);
 		expect(REPORT_IDS).toContain('dialogue-timing');
 		expect(REPORT_IDS).toContain('regen-briefs');
 	});
