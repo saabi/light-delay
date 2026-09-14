@@ -1,5 +1,53 @@
 # Estado del proyecto
 
+## 2026-09-14 — Axial-dock composite approved (English source)
+
+- The approved pair-based composite now replaces the eight separate axial-dock references. The stretch covers all crew, station, and Ardor entities with one current asset and passes the five-image budget.
+- Only the editorial prompt-freeze gate remains for the axial-dock stretch.
+
+## 2026-09-14 — Axial-dock composite pack pending review (English source)
+
+- Created a composite reference sheet for the six-person axial-dock stretch, covering crew placement, the 18–20 m microgravity shaft, and the coaxially berthed Ardor.
+- The asset is registered as `needs_review`; it is intentionally not wired into production references until approved, so the axial-dock five-reference budget blocker remains open.
+
+## 2026-09-14 — Four-panel visual-stretch split (English source)
+
+- Reactor record now groups shots 033–036; bridge command break now groups 064–067. Shots after each four-shot group remain independent.
+- Both stretches use supported 2×2 grids and no longer have panel-resolution blockers. The axial-dock reference-budget issue is the only remaining non-freeze stretch blocker.
+
+## 2026-09-14 — Visual-stretch blocking completed (English source)
+
+- Completed blocking rows for every present character in stretches 057–059, 060–061, 087–088, and 093–094, using existing bridge stations, security positions, and tether geometry.
+- Plan rebuild clears all `missing_stretch_blocking` errors. Remaining structural blockers are axial-dock reference overflow and panel-resolution constraints on 033–038 and 064–070; editorial prompt freeze remains universal.
+
+## 2026-09-14 — Reactor and vault stretch sheets generated (English source)
+
+- Registered storyboard sheets for visual stretches 077–079 and 080–082 after checking the generated panels and correcting the reactor render's gravity staging.
+- The generated sheets are available for panel splitting and review; generation plans were rebuilt and their data/schema gates pass.
+
+## 2026-09-14 — Reactor and vault reference packs (English source)
+
+- Registered the Harlan/Okoye pair, reactor communications props, and inner-vault recovery props as current reference assets.
+- Added visual stretches 077–079 and 080–082. Their still plans use five references, cover all visible entities, and have no reference-budget violations; both remain held only by the editorial prompt-freeze gate.
+
+## 2026-09-14 — Location approvals and stretch coverage (English source)
+
+- Engineering and service-cylinder sheets are approved. Festival-master stretches 016–017, 018–019, 020–022, 023–025, 026–028, 046–049, 050–053, 064–070, and 071–073 are authored and reference-budget complete.
+- Remaining candidate work is limited to consolidated prop references for 077–079 and 080–082.
+
+## 2026-09-14 — Impulse-package reference approved (English source)
+
+- The Proxima geophysical impulse-package sheet is approved and connected to the 062–063 vault flashback stretch; plan and data gates pass.
+
+## 2026-09-14 — Bridge pair reference packs (English source)
+
+- Added and registered three current paired character sheets for bridge visual-stretch generation; affected stretches now pass reference coverage and the five-image still budget.
+
+## 2026-09-14 — Festival-master visual stretches (English source)
+
+- Authored the viable prompt-ready stretches from the candidate report and rebuilt still/video generation plans; all data/schema/lifecycle gates pass.
+- Candidate groups that exceed the five-image still budget or still lack an approved prop reference remain explicitly non-runnable and require editorial reference packs/approval.
+
 ## 2026-09-14 — legacy-site archive removed (English source)
 
 - Deleted legacy-site/. Migrated assets remain under static/assets/; the archive is no longer retained in-tree for rescue.

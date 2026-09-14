@@ -1,5 +1,65 @@
 # Changelog
 
+## 2026-09-14 — Approve axial-dock composite reference
+
+- Promoted `asset:visual-pack-proxima-axial-dock-crew-sheet` to `current` after editorial approval.
+- Wired it into `stretch-axial-dock-006-009`; the stretch now uses one reference, covers all visible entities, and has no budget violations.
+
+## 2026-09-14 — Regenerate axial-dock composite from pair references
+
+- Replaced the pending axial-dock composite with a corrected generation using the Voss/Harlan, Rao/Sorell, and Okoye/Voss pair sheets plus Zao’s sheet and the dock geometry.
+- The revised sheet shows all six crew members and remains `needs_review` pending editorial approval.
+
+## 2026-09-14 — Axial-dock composite reference pack prepared
+
+- Created `asset:visual-pack-proxima-axial-dock-crew-sheet`, a composite reference covering the six crew members, Proxima Dock 1 axial geometry, and the berthed Celestial Ardor.
+- It remains `needs_review` and is not yet wired into the axial-dock stretch; the existing eight-reference list remains authoritative until editorial approval.
+
+## 2026-09-14 — Split oversized visual stretches into four-panel groups
+
+- Reduced the reactor record stretch to shots 033–036 and the bridge command-break stretch to shots 064–067, each using a supported 2×2 layout.
+- Later shots remain independent as requested, preserving their IDs and dialogue timing.
+- Rebuilt plans; the panel-resolution blockers are cleared. Only axial-dock reference consolidation remains beyond the editorial freeze gate.
+
+## 2026-09-14 — Complete missing visual-stretch blocking
+
+- Added sensible station, security, translator, and tether-point blocking for the four stretches that lacked a row for every present character: 057–059, 060–061, 087–088, and 093–094.
+- Rebuilt plans; those stretches now clear `missing_stretch_blocking`.
+- Remaining non-freeze stretch blockers are limited to axial-dock reference consolidation and panel-resolution limits on 033–038 and 064–070.
+
+## 2026-09-14 — Generate reactor and vault visual-stretch sheets
+
+- Generated and registered the approved reactor-confrontation 077–079 and inner-vault recovery 080–082 storyboard sheets.
+- Rejected the first reactor render for incorrect gravity staging and regenerated it with explicit microgravity constraints.
+- Corrected the vault stretch copy to describe four-person continuity before generation.
+
+## 2026-09-14 — Create reactor and vault visual-stretch reference packs
+
+- Added and registered a current Harlan/Okoye bridge pair sheet, a reactor communications prop pack, and an inner-vault recovery prop pack.
+- Authored the 077–079 reactor-confrontation and 080–082 vault-recovery stretches; both now have five-reference still jobs with no uncovered entities or budget violations.
+- Rebuilt production plans; the remaining blocker for both jobs is the existing editorial prompt-freeze gate.
+
+## 2026-09-14 — Approve locations and extend Festival-master stretches
+
+- Approved the Celestial Ardor engineering and service-cylinder reference sheets.
+- Authored the remaining reference-complete stretches through 071–073, reusing the bridge pair packs; service-cylinder 026–028 also includes the wired comms patch-panel reference.
+- Only the reactor confrontation group 077–079 and vault recovery group 080–082 still require additional prop-pack consolidation.
+
+## 2026-09-14 — Approve impulse-package reference
+
+- Promoted `asset:object-proxima-geophysical-impulse-package-sheet` to `current` and wired it into `festival-master:stretch-vault-flashback-062-063`.
+- Rebuilt production plans; the dependent stretch now has complete still-reference coverage within the five-image limit.
+
+## 2026-09-14 — Bridge character-pair reference packs
+
+- Added current bridge-context pair sheets for Voss/Harlan, Rao/Sorell, and Okoye/Voss.
+- Wired the pair packs into the multi-character Festival-master stretches so five-person groups stay within the five-image still-reference limit without dropping on-frame identities.
+
+## 2026-09-14 — Author viable Festival-master visual stretches
+
+- Added prompt-ready visual stretches for the reactor comms/recording beats, Sorell's rescue, the bridge-side alibi, central-vault obstruction, greeting preparation, Velari response/encounter, and the final reactor report.
+- Rebuilt generation plans and kept the five-image gpt-image-2 ceiling enforced. Four advisory candidates remain held by missing or over-budget references (bridge cast groups and the unapproved impulse-package sheet).
+
 ## 2026-09-14 — Remove legacy-site archive
 
 - Deleted the obsolete legacy-site/ static archive (HTML pages and residual character/location/prop/vehicle/animatic assets). Current product assets live under static/assets/; do not treat the removed tree as authority or a regression baseline.
