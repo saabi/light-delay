@@ -11643,7 +11643,8 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-004:take-01"
+        "festival-master:shot-plan-004:take-01",
+        "festival-master:shot-plan-004:take-02"
       ],
       "selectedTakeId": "festival-master:shot-plan-004:take-01",
       "purpose": {
@@ -11706,7 +11707,8 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-005:take-01"
+        "festival-master:shot-plan-005:take-01",
+        "festival-master:shot-plan-005:take-02"
       ],
       "selectedTakeId": "festival-master:shot-plan-005:take-01",
       "purpose": {
@@ -12356,7 +12358,8 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-013:take-01"
+        "festival-master:shot-plan-013:take-01",
+        "festival-master:shot-plan-013:take-02"
       ],
       "selectedTakeId": "festival-master:shot-plan-013:take-01",
       "purpose": {
@@ -12428,7 +12431,8 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-014:take-01"
+        "festival-master:shot-plan-014:take-01",
+        "festival-master:shot-plan-014:take-02"
       ],
       "selectedTakeId": "festival-master:shot-plan-014:take-01",
       "purpose": {
@@ -12500,7 +12504,8 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-015:take-01"
+        "festival-master:shot-plan-015:take-01",
+        "festival-master:shot-plan-015:take-02"
       ],
       "selectedTakeId": "festival-master:shot-plan-015:take-01",
       "purpose": {
@@ -22170,6 +22175,162 @@
           "asset:character-periodista-sheet"
         ]
       }
+    },
+    {
+      "id": "festival-master:shot-plan-004:take-02",
+      "shotId": "festival-master:shot-plan-004",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T06:04:57.575Z",
+        "visualStretchId": "festival-master:stretch-operations-gallery-004-005",
+        "stretchJobId": "festival-master:stretch-operations-gallery-004-005:rev-1",
+        "stretchDigest": "2b2b98b4e07614aba3e7c5557565f011b74b3faead354ac7ec44ddb8744d8e62",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-proxima-operations-gallery-interior-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-005:take-02",
+      "shotId": "festival-master:shot-plan-005",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T06:04:57.575Z",
+        "visualStretchId": "festival-master:stretch-operations-gallery-004-005",
+        "stretchJobId": "festival-master:stretch-operations-gallery-004-005:rev-1",
+        "stretchDigest": "2b2b98b4e07614aba3e7c5557565f011b74b3faead354ac7ec44ddb8744d8e62",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-proxima-operations-gallery-interior-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-013:take-02",
+      "shotId": "festival-master:shot-plan-013",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-central-access-013-015-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T07:00:55.264Z",
+        "visualStretchId": "festival-master:stretch-central-access-013-015",
+        "stretchJobId": "festival-master:stretch-central-access-013-015:rev-1",
+        "stretchDigest": "f35aadd783edb965a5dd49628d2407e8ebda1d7e73b665f73f48023eca51464a",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-014:take-02",
+      "shotId": "festival-master:shot-plan-014",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-central-access-013-015-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T07:00:55.264Z",
+        "visualStretchId": "festival-master:stretch-central-access-013-015",
+        "stretchJobId": "festival-master:stretch-central-access-013-015:rev-1",
+        "stretchDigest": "f35aadd783edb965a5dd49628d2407e8ebda1d7e73b665f73f48023eca51464a",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-015:take-02",
+      "shotId": "festival-master:shot-plan-015",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-central-access-013-015-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T07:00:55.264Z",
+        "visualStretchId": "festival-master:stretch-central-access-013-015",
+        "stretchJobId": "festival-master:stretch-central-access-013-015:rev-1",
+        "stretchDigest": "f35aadd783edb965a5dd49628d2407e8ebda1d7e73b665f73f48023eca51464a",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ]
+      }
     }
   ],
   "visualStretches": [
@@ -22813,6 +22974,273 @@
         }
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet"
+    },
+    {
+      "id": "festival-master:stretch-operations-gallery-004-005",
+      "title": {
+        "en": "Operations Gallery private follow-up (004–005)",
+        "es": "Seguimiento privado en la galería de operaciones (004–005)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-004",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Zao and Voss remain beside the quiet Earth wall after the group disperses.",
+            "es": "Zao y Voss permanecen junto a la pared terrestre silenciosa tras dispersarse el grupo."
+          },
+          "event": {
+            "en": "Zao names what she saw in Harlan without accusing him.",
+            "es": "Zao nombra lo que vio en Harlan sin acusarlo."
+          },
+          "endState": {
+            "en": "Their private concern is established.",
+            "es": "Queda establecida su preocupación privada."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-005",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The same quiet gallery corner and two-person blocking continue.",
+            "es": "Continúan el mismo rincón silencioso y la puesta de dos personas."
+          },
+          "event": {
+            "en": "Voss reassures Zao while she holds his gaze.",
+            "es": "Voss tranquiliza a Zao mientras ella sostiene su mirada."
+          },
+          "endState": {
+            "en": "The exchange ends without either changing position.",
+            "es": "El intercambio termina sin que ninguno cambie de posición."
+          }
+        }
+      ],
+      "locationId": "location:proxima-station",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:zao"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Approximate 0.5 g from the rotating habitat ring; both remain settled to the gallery floor.",
+        "es": "Aproximadamente 0,5 g por el anillo de hábitat; ambos permanecen apoyados en el suelo de la galería."
+      },
+      "lighting": {
+        "en": "Practical gallery light mixed with the dimmed Earth wall.",
+        "es": "Luz práctica de la galería mezclada con la pared terrestre atenuada."
+      },
+      "blocking": [
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "gallery-front-right-by-wall",
+          "screenSide": "left",
+          "facing": "toward Zao and the Earth wall",
+          "posture": "standing",
+          "eyelineTarget": "character:zao",
+          "notes": {
+            "en": "Remains at the wall-side foreground position across both panels.",
+            "es": "Permanece en primer plano junto a la pared en ambos paneles."
+          }
+        },
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "gallery-front-left-by-wall",
+          "screenSide": "right",
+          "facing": "toward Voss and the Earth wall",
+          "posture": "standing",
+          "eyelineTarget": "character:voss",
+          "notes": {
+            "en": "Faces Voss without leaving the quiet viewing corner.",
+            "es": "Mira a Voss sin abandonar el rincón silencioso de visionado."
+          }
+        }
+      ],
+      "sharedDescription": {
+        "en": "Same quiet Operations Gallery corner, 0.5 g, Earth wall, and two-person screen direction across the two panels.",
+        "es": "Mismo rincón silencioso de la galería de operaciones, 0,5 g, pared terrestre y dirección de pantalla de dos personas en los dos paneles."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet",
+        "asset:location-proxima-operations-gallery-interior-sheet"
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-operations-gallery-004-005-sheet"
+    },
+    {
+      "id": "festival-master:stretch-central-access-013-015",
+      "title": {
+        "en": "Central access shaft periapsis (013–015)",
+        "es": "Periapsis en el acceso central (013–015)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-013",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Thrust cuts and the four crew members remain attached to the central shaft geometry.",
+            "es": "Se corta el empuje y los cuatro tripulantes permanecen sujetos a la geometría del pozo central."
+          },
+          "event": {
+            "en": "The central stair loses up and down as the ship turns.",
+            "es": "La escalera central pierde arriba y abajo mientras la nave gira."
+          },
+          "endState": {
+            "en": "The microgravity arrangement is established.",
+            "es": "Queda establecida la disposición en microgravedad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-014",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The same shaft and handhold arrangement continue.",
+            "es": "Continúan el mismo pozo y la disposición de asideros."
+          },
+          "event": {
+            "en": "Elin marks the loss of the floor while loose objects drift.",
+            "es": "Elin señala la pérdida del suelo mientras derivan objetos sueltos."
+          },
+          "endState": {
+            "en": "The crew remains in the same shaft positions.",
+            "es": "La tripulación permanece en las mismas posiciones del pozo."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-015",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The same microgravity arrangement holds.",
+            "es": "Se mantiene la misma disposición en microgravedad."
+          },
+          "event": {
+            "en": "Zao steadies the others through the maneuver.",
+            "es": "Zao tranquiliza a los demás durante la maniobra."
+          },
+          "endState": {
+            "en": "The maneuver continues without a spatial reset.",
+            "es": "La maniobra continúa sin reiniciar el espacio."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-central-access",
+      "presentCharacterIds": [
+        "character:zao",
+        "character:rao",
+        "character:sorell",
+        "character:harlan"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity during the scheduled thrust cutoff; bodies and loose objects drift around the shaft.",
+        "es": "Microgravedad durante el corte de empuje programado; cuerpos y objetos sueltos derivan por el pozo."
+      },
+      "lighting": {
+        "en": "Central-shaft practicals and instrument glow; no artificial floor direction.",
+        "es": "Luces prácticas y brillo de instrumentos del pozo central; sin dirección de suelo artificial."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "central-shaft-lower-rail",
+          "screenSide": "left",
+          "facing": "along the shaft axis",
+          "posture": "other",
+          "eyelineTarget": "the crew",
+          "notes": {
+            "en": "Keeps a handhold and addresses the others without changing shaft station.",
+            "es": "Mantiene un asidero y se dirige a los demás sin cambiar de puesto en el pozo."
+          }
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "central-shaft-console-rail",
+          "screenSide": "center",
+          "facing": "toward the instrument panel",
+          "posture": "other",
+          "eyelineTarget": "the instrument panel",
+          "notes": {
+            "en": "Braced at the console as the floor disappears.",
+            "es": "Sujeta a la consola mientras desaparece el suelo."
+          }
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "central-shaft-mid-rail",
+          "screenSide": "right",
+          "facing": "toward Zao and the shaft axis",
+          "posture": "other",
+          "eyelineTarget": "character:zao",
+          "notes": {
+            "en": "Remains tethered to the same rail through the turn.",
+            "es": "Permanece sujeta al mismo riel durante el giro."
+          }
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "central-shaft-upper-rail",
+          "screenSide": "right",
+          "facing": "along the shaft axis",
+          "posture": "other",
+          "eyelineTarget": "the crew",
+          "notes": {
+            "en": "Uses the upper rail and does not cross the others’ paths.",
+            "es": "Usa el riel superior y no cruza las trayectorias de los demás."
+          }
+        }
+      ],
+      "sharedDescription": {
+        "en": "Same central shaft, helical stairs, rails, and four-person tether arrangement across three ordered panels.",
+        "es": "Mismo pozo central, escaleras helicoidales, rieles y disposición de cuatro personas sujetas en tres paneles ordenados."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-central-access-sheet"
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-central-access-013-015-sheet"
     }
   ]
 }

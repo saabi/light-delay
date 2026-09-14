@@ -93,8 +93,8 @@
         "en": "Harlan's Wrist Device"
       },
       "description": {
-        "es": "Unidad de control que Harlan lleva en la muñeca. Activa el inhibidor que corta el canal inalámbrico de Zao y controla la cerradura local de la bóveda interior de blindaje.",
-        "en": "A wrist-mounted control unit Harlan wears. It activates the jammer that cuts Zao's wireless channel and controls the inner shielding vault's local lock."
+        "es": "Unidad de control digital que Harlan lleva en la muñeca. Sus funciones de inhibición inalámbrica y autorización de la cerradura local se ejecutan mediante una interfaz discreta, sin rótulos explícitos ni botones que digan «JAMMER» o «VAULT LOCK».",
+        "en": "A digital wrist-mounted control unit Harlan wears. Its wireless-inhibition and local-lock authorization functions use a discreet interface, with no explicit labels or buttons reading JAMMER or VAULT LOCK."
       },
       "dramaticFunction": {
         "es": "El medio oculto de Harlan para aislar a Zao y controlar el acceso a la bóveda; Okoye debe recuperarlo.",
@@ -108,11 +108,11 @@
         {
           "id": "note:harlan-wrist-device-visual-reference",
           "type": "visual",
-          "status": "resolved",
+        "status": "resolved",
           "priority": "high",
           "text": {
             "es": "La referencia visual derivada del master para el dispositivo de muñeca ya está generada y conectada; queda pendiente la revisión editorial.",
-            "en": "The master-derived visual reference for the wrist device is generated and wired; editorial review remains pending."
+          "en": "Regenerated sheet now shows a discreet digital controller with no literal JAMMER or VAULT LOCK labels."
           }
         }
       ]

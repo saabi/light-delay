@@ -8,6 +8,16 @@
 
 - Provisional `gpt-image-2` still limits are `maxImages: 5` / `maxTotalReferences: 5` in `provider-capabilities.json`; UI budget preview and provider tests match that ceiling.
 
+## 2026-09-14 — Central access approval and wrist-device correction
+
+- Promoted the Celestial Ardor central-access sheet to `current` and restored `festival-master:stretch-central-access-013-015`; its three dependent takes remain marked for regeneration against the approved sheet.
+- Marked Harlan's wrist-device sheet for replacement: the device is now specified as a discreet digital controller with no literal `JAMMER` or `VAULT LOCK` labels.
+
+## 2026-09-14 — Operations Gallery follow-up visual stretch
+
+- Authored `festival-master:stretch-operations-gallery-004-005` for Zao and Voss's continuous private exchange after the crew disperses.
+- Central-access, reactor-bay, bridge communications-cut, and Velari-response candidates were not retained as stretches because they require `needs_review` location/prop/character references; they remain advisory candidates until those references are promoted and reconciled.
+
 ## 2026-09-14 — Complete Operations Gallery stretch blocking
 
 - Added the authored six-person blocking map for `festival-master:stretch-operations-gallery-001-003`: Harlan–Sorell–Voss in the foreground and Zao–Rao–Okoye behind them, with stable eyelines and in-place turns across shots 001–003.

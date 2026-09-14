@@ -47,8 +47,8 @@
     {
       "slug": "harlan-wrist-device",
       "name": "Harlan Wrist Device",
-      "role": "Jammer and vault-lock control",
-      "note": "Compact physical wrist unit with guarded JAMMER and VAULT LOCK controls.",
+      "role": "Discreet digital jammer and vault-lock controller",
+      "note": "Compact digital wrist unit with a discreet unlabeled interface; no literal JAMMER or VAULT LOCK text.",
       "file": "harlan-wrist-device/prop-sheet.png",
       "generator": "OpenAI GPT-Image-2"
     },

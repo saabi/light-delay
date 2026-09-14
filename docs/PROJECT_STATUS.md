@@ -8,6 +8,16 @@
 
 - Still stretch reference budgeting uses five image inputs per request; older eight-image assumptions are obsolete.
 
+## 2026-09-14 — Central access approved; wrist device redesign pending (English source)
+
+- The central-access reference is editorially approved and the 013–015 visual stretch is restored; its selected takes remain `needs_regeneration`.
+- Harlan's wrist-device reference is `needs_replacement`; the approved design direction is digital, discreet, and unlabeled rather than a prop with literal JAMMER/VAULT LOCK controls.
+
+## 2026-09-14 — Operations Gallery follow-up stretch (English source)
+
+- Added `festival-master:stretch-operations-gallery-004-005` with stable two-person blocking for Zao and Voss after the group disperses.
+- Central-access, reactor-bay, bridge communications-cut, and Velari-response candidates remain advisory because their current location/prop/character sheets are still `needs_review`; no invalid stale reference was promoted into a visual stretch.
+
 ## 2026-09-14 — Operations Gallery blocking completed (English source)
 
 - Authored the six-person blocking map for the opening Operations Gallery stretch: Harlan–Sorell–Voss in front, Zao–Rao–Okoye behind, with stable eyelines and in-place turns across shots 001–003.
