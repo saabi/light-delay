@@ -10,6 +10,14 @@
 		getVehicleById,
 		type ShotMedia
 	} from '$lib/data/repositories/lookups';
+	import {
+		getAssets,
+		getCharacters,
+		getFactions,
+		getLocations,
+		getObjects,
+		getVehicles
+	} from '$lib/data/repositories';
 	import { resolveLocalized } from '$lib/data/selectors/index';
 	import { editorialValueLabel } from '$lib/data/selectors/editorialPresentation';
 	import { analyzeShotDialogue, estimateShotSpokenMs } from '$lib/data/selectors/dialogueTiming';
@@ -25,6 +33,11 @@
 		productionGateMedium
 	} from '$lib/utils/productionGate';
 	import { findStretchForShot, stretchBlockingBlockers } from '$lib/utils/visualStretch';
+	import {
+		collectStretchVisibleEntityIds,
+		evaluateReferenceBudget,
+		indexEntityReferenceAssets
+	} from '$lib/utils/referenceBudget';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let {
@@ -80,6 +93,32 @@
 	const stretchBlockers = $derived(
 		stretchMembership ? stretchBlockingBlockers(stretchMembership.stretch) : []
 	);
+	const stretchReferenceBudget = $derived.by(() => {
+		if (!stretchMembership) return null;
+		const stretch = stretchMembership.stretch;
+		const shotsById = new Map(script.shots.map((item) => [item.id, item]));
+		const requiredEntityIds = collectStretchVisibleEntityIds(stretch, shotsById);
+		const catalogs = [
+			...getCharacters().characters,
+			...getLocations().locations,
+			...getObjects().objects,
+			...getVehicles().vehicles,
+			...getFactions().factions
+		];
+		const assetsById = new Map(getAssets().assets.map((a) => [a.id, a]));
+		const { entityReferenceIds, packEntitiesByAssetId, packAssetIdsByEntity } =
+			indexEntityReferenceAssets({ catalogs, assets: assetsById });
+		const attached = stretch.referenceAssetIds || [];
+		return evaluateReferenceBudget({
+			references: attached.map((id) => ({ kind: 'image' as const, id })),
+			limits: { maxImages: 8 },
+			requiredEntityIds,
+			entityReferenceIds,
+			packEntitiesByAssetId,
+			packAssetIdsByEntity,
+			assetsById
+		});
+	});
 	const stretchVideoPolicyExplicit = $derived(
 		Boolean(
 			stretchMembership &&
@@ -308,6 +347,49 @@
 						<dt>{m.details_stretch_blockers()}</dt>
 						<dd>{stretchBlockers.join(', ')}</dd>
 					</div>
+				{/if}
+				{#if stretchReferenceBudget}
+					{#if stretchReferenceBudget.referenceBudget.uncoveredEntityIds.length}
+						<div>
+							<dt>{m.details_stretch_uncovered_refs()}</dt>
+							<dd class="mono"
+								>{stretchReferenceBudget.referenceBudget.uncoveredEntityIds.join(', ')}</dd
+							>
+						</div>
+					{/if}
+					{#if stretchReferenceBudget.referenceBudget.violations.length}
+						<div>
+							<dt>{m.details_stretch_ref_budget()}</dt>
+							<dd class="mono"
+								>{stretchReferenceBudget.referenceBudget.violations.join(', ')}</dd
+							>
+						</div>
+					{/if}
+					{#if stretchReferenceBudget.referenceBudget.wouldOmitEntityIds.length}
+						<div>
+							<dt>{m.details_stretch_would_omit()}</dt>
+							<dd class="mono"
+								>{stretchReferenceBudget.referenceBudget.wouldOmitEntityIds.join(', ')}</dd
+							>
+						</div>
+					{/if}
+					{#each stretchReferenceBudget.remediation as rem (rem.code)}
+						<div>
+							<dt
+								>{rem.code === 'reference_pack_required'
+									? m.details_stretch_remediation_pack()
+									: m.details_stretch_remediation_consolidate()}</dt
+							>
+							<dd class="mono">
+								{#if rem.code === 'reference_pack_required'}
+									{rem.uncoveredEntityIds.join(', ')} · packsNeeded={rem.packsNeeded ??
+										'authoring_required'}
+								{:else}
+									excess={rem.excessSlots} · {rem.consolidateCandidateAssetIds.join(', ')}
+								{/if}
+							</dd>
+						</div>
+					{/each}
 				{/if}
 			</dl>
 			<p>{present(stretchMembership.stretch.sharedDescription)}</p>

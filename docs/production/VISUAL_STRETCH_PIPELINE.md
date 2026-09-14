@@ -38,7 +38,7 @@ Inner gutters only (`gutterFraction`, pilot `0.02`). Letterbox/pillarbox **compu
 
 Plan root `visualStretchJobs[]`. Still modes: `combined_storyboard_sheet` | `independent_shared_authority` (author/provider only; `coherenceException` required). Video: `grouped_seedance` with `dependsOnStillJobId`. A stretch is **not** one video job — partition by segment ceiling (`min(campaign.maxSegmentMs, provider.maxDurationMs)`). Seedance 2.5 hard limit is **30 s** per generation on Higgsfield ([product FAQ](https://higgsfield.ai/seedance-2.5)); resolution (including 480p) does not raise that ceiling. Single members longer than the ceiling get `member_exceeds_max_duration` rather than a clean oversized job.
 
-Still jobs budget every authored `referenceAssetIds` entry against the still-provider limits (gpt-image-2: 8). Seedance jobs use ordered keyframe images plus **either** authored `videoReferenceAssetIds` (explicit policy) **or** uncovered still-list leftovers (fallback when the property is absent). Coverage is per registered-keyframe shot only — one keyframe does not cover the whole stretch cast. Custom assets not on an entity’s catalog sheet list do not satisfy entity completeness. Jobs always set `runnable: false` when any blocker is present (including `member_exceeds_max_duration` and `missing_keyframe:*`). Each job pins `providerSnapshotId`. **No submission adapter exists in-repo** — MCP agents consume a §8 **run file** from the handoff CLI.
+Still jobs budget every authored `referenceAssetIds` entry against the still-provider limits (gpt-image-2: 8) and never silently trim. Pack assets with `metadata.entityIds` satisfy coverage for those entities (solo catalog sheets still work). Over-budget or uncovered entities emit structured `referenceBudget` + remediations: `reference_pack_required` (uncovered) vs `reference_consolidation_required` (covered overflow). `wouldOmitEntityIds` is hypothetical only. Seedance jobs use ordered keyframe images plus **either** authored `videoReferenceAssetIds` (explicit policy) **or** uncovered still-list leftovers (fallback when the property is absent). Pair packs are valid video visual refs when attached. Coverage is per registered-keyframe shot only — one keyframe does not cover the whole stretch cast. Custom assets not on an entity’s catalog sheet list and packs without declared `entityIds` do not satisfy entity completeness for **explicit** extras. Video `referenceBudget` adds `keyframeCoveredEntityIds`, `videoExtraCoveredEntityIds`, and `uncoveredVideoEntityIds` (mirrored on `coveredEntityIds` / `uncoveredEntityIds` for video jobs). Fallback policy never emits `reference_pack_required` because panel keyframes lack pack `entityIds` — keyframes establish their shot’s entities. Explicit policy remediates only entities still uncovered after keyframes + effective extras (`uncovered_video_entity:*`). Jobs always set `runnable: false` when any blocker is present (including `member_exceeds_max_duration` and `missing_keyframe:*`). Each job pins `providerSnapshotId`. **No submission adapter exists in-repo** — MCP agents consume a §8 **run file** from the handoff CLI.
 
 `Take.productionGate` (`deferred` / `blocked`) on any member source take blocks the stretch jobs its `medium` covers: absent/`all` blocks **both** still and Seedance jobs (no silent partial); `medium: "still"` blocks the still/keyframe job only; `medium: "video"` blocks the Seedance job only and **never** makes the still job non-runnable (blocker codes carry the tag, e.g. `member_generation_deferred:video:<shotId>`, `generation_deferred:video`). Derived plan field `generationGate` carries `status`, `medium`, `reasonCode`, `takeIds`, and (when deferred) `prerequisiteAssetIds`; per-shot plan entries add `videoGenerationGate` and `segments[*].blockers` for video-only holds. When members mix deferred and blocked, derived `status` is **deferred** (union of deferred prerequisites; all hold takeIds retained). Script takes remain SoT; do not hand-author `generationGate` on the plan. `imageStatus: needs_regeneration` is debt metadata and never blocks a still job.
 
@@ -51,7 +51,14 @@ Plan job reference fields: `stillReferenceAssetIds` (complete still list, never 
 - Generate keyframes from the complete still list first.
 - Compile video references only after keyframes are registered.
 - Do not treat a video job as runnable while required keyframes are missing (`missing_keyframe:*`) or explicit completeness fails (`uncovered_video_entity:*`).
+- Refuse `reference_budget:*` / pack / consolidation remediations; never trim still refs to “fit” a provider cap.
 - Staging/`prepare:higgsfield` must preserve handoff order: keyframes → effective visuals → voice.
+
+### Advisory stretch candidates
+
+`npm run report:visual-stretches` (also in `report:all`) emits `visual_stretch_candidate` runs from composite timeline `(scene.order, shot.order, shot.id)`, location ancestry (`parentLocationId`), on-screen cast overlap, and `interiorExterior` compatibility. These are **editorial review suggestions, not pending production tasks**. **Detection never writes `visualStretches` or any script JSON** — editorial approval is required before authoring a stretch. See rejection codes `location_mismatch`, `no_cast_overlap`, `environment_unknown`, `environment_mismatch`, `continuity_break`, `sequence_mismatch`.
+
+`npm run report:reference-budget` summarizes plan-level budget/coverage issues and a separate video keyframe-coverage section (`keyframeCovered` / `videoExtraCovered` / `uncoveredVideo`).
 
 ### MCP handoff boundary
 
@@ -76,6 +83,7 @@ Reuse `imageStatus`: sheet `needs_review` after register; panel candidates `need
 ```bash
 npm run compile:visual-stretch -- --script light-delay-festival-master --stretch festival-master:stretch-bridge-meal-010-012
 npm run report:visual-stretches -- --script script:light-delay-festival-master
+npm run report:reference-budget -- --script=light-delay-festival-master
 npm run handoff:visual-stretch -- --script light-delay-festival-master --job <stretchJobId> --allow-preview-prompt
 npm run register:visual-stretch-sheet -- --script light-delay-festival-master --stretch <id> --from <generator-output.png>
 npm run split:visual-stretch -- --script light-delay-festival-master --stretch <id> [--dry-run]
@@ -85,4 +93,4 @@ npm run register:visual-stretch-video -- --from data/production/runs/<runId>-res
 
 ## UI (v1)
 
-JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, still refs, video reference policy (and authored video refs when explicit), selected vs candidate, blockers from the shared completeness predicate. Deferred/blocked `Take.productionGate` shows as a readiness flag and take-section badge (reason + prerequisite catalog/manifest status). Full `/stretches/[scriptId]` deferred.
+JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, still refs, video reference policy (and authored video refs when explicit), selected vs candidate, seating blockers, and reference-budget / pack-vs-consolidation remediations (would-omit is hypothetical). Deferred/blocked `Take.productionGate` shows as a readiness flag and take-section badge (reason + prerequisite catalog/manifest status). Full `/stretches/[scriptId]` deferred.

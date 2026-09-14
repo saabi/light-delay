@@ -40,6 +40,8 @@
             "additionalProperties": false
           },
           "requiredReferences": { "type": "array", "items": { "$ref": "#/$defs/reference" } },
+          "referenceBudget": { "$ref": "#/$defs/referenceBudget" },
+          "remediation": { "$ref": "#/$defs/referenceRemediationList" },
           "generationGate": { "$ref": "#/$defs/generationGate" },
           "videoGenerationGate": {
             "$ref": "#/$defs/generationGate",
@@ -87,6 +89,89 @@
       "required": ["kind", "id", "required"],
       "properties": { "kind": { "enum": ["image", "video", "audio"] }, "id": { "type": "string" }, "path": { "type": "string", "minLength": 1 }, "required": { "type": "boolean" }, "role": { "type": "string" } },
       "additionalProperties": false
+    },
+    "referenceBudget": {
+      "type": "object",
+      "required": [
+        "requiredEntityIds",
+        "coveredEntityIds",
+        "uncoveredEntityIds",
+        "attachedAssetIds",
+        "coveringAssetByEntity",
+        "wouldOmitEntityIds",
+        "limits",
+        "violations"
+      ],
+      "properties": {
+        "requiredEntityIds": { "type": "array", "items": { "type": "string" } },
+        "coveredEntityIds": { "type": "array", "items": { "type": "string" } },
+        "uncoveredEntityIds": { "type": "array", "items": { "type": "string" } },
+        "attachedAssetIds": { "type": "array", "items": { "type": "string" } },
+        "coveringAssetByEntity": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "wouldOmitEntityIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Hypothetical entities that would lose coverage if the list were trimmed to the binding cap. Never actually omitted."
+        },
+        "limits": {
+          "type": "object",
+          "properties": {
+            "maxImages": { "type": ["integer", "null"] },
+            "maxVideos": { "type": ["integer", "null"] },
+            "maxAudios": { "type": ["integer", "null"] },
+            "maxTotalReferences": { "type": ["integer", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "violations": { "type": "array", "items": { "type": "string" } },
+        "keyframeCoveredEntityIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Video jobs only: entities established by registered keyframe member shots (not pack metadata on panel assets)."
+        },
+        "videoExtraCoveredEntityIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Video jobs only: required entities covered by effective video extras (catalog/pack sheets), excluding those already keyframe-covered."
+        },
+        "uncoveredVideoEntityIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Video jobs only: required entities not covered by keyframes or effective video extras. Same set as uncoveredEntityIds on video jobs."
+        }
+      },
+      "additionalProperties": false
+    },
+    "referenceRemediationList": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["code", "uncoveredEntityIds", "compatiblePackAssetIds", "packsNeeded"],
+            "properties": {
+              "code": { "const": "reference_pack_required" },
+              "uncoveredEntityIds": { "type": "array", "items": { "type": "string" } },
+              "compatiblePackAssetIds": { "type": "array", "items": { "type": "string" } },
+              "packsNeeded": { "type": ["integer", "null"], "minimum": 0 }
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": ["code", "excessSlots", "consolidateCandidateAssetIds"],
+            "properties": {
+              "code": { "const": "reference_consolidation_required" },
+              "excessSlots": { "type": "integer", "minimum": 1 },
+              "consolidateCandidateAssetIds": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
     },
     "gridLayout": {
       "type": "object",
@@ -262,7 +347,9 @@
           "type": "boolean",
           "description": "Submission adapters must refuse the job unless runnable is true (requires empty blockers)."
         },
-        "generationGate": { "$ref": "#/$defs/generationGate" }
+        "generationGate": { "$ref": "#/$defs/generationGate" },
+        "referenceBudget": { "$ref": "#/$defs/referenceBudget" },
+        "remediation": { "$ref": "#/$defs/referenceRemediationList" }
       },
       "additionalProperties": false,
       "allOf": [

@@ -1,5 +1,44 @@
 # Estado del proyecto
 
+## 2026-09-14 — Operations Gallery blocking completed (English source)
+
+- Authored the six-person blocking map for the opening Operations Gallery stretch: Harlan–Sorell–Voss in front, Zao–Rao–Okoye behind, with stable eyelines and in-place turns across shots 001–003.
+- The still stretch job now has no `missing_stretch_blocking` blocker; remaining holds are editorial prompt freeze only. Video retains its separate execution and panel-review gates.
+
+## 2026-09-14 — Video reference-budget keyframe semantics (English source)
+
+- Fallback Seedance stretch jobs no longer get `reference_pack_required` from panel keyframes without pack `entityIds`.
+- Video plans expose `keyframeCoveredEntityIds` / `videoExtraCoveredEntityIds` / `uncoveredVideoEntityIds`; `report:reference-budget` has a video coverage section.
+
+## 2026-09-14 — Reference budget and stretch candidates (English source)
+
+- Still/video/voice reference budgets refuse overflow without trimming; pack sheets with `entityIds` satisfy multi-character coverage (meal stretch pattern).
+- Advisory stretch-candidate report is read-only; Festival positives include 001–003, 006–009, 010–012 (`already_authored` when stretches exist).
+- `npm run report:reference-budget` and updated `report:visual-stretches` / `report:all`.
+
+## 2026-09-14 — Operations Gallery blocking correction (English source)
+
+- Fixed the opening stretch's two-row blocking and regenerated its combined sheet and selected panels; the reporter remains confined to the wall display.
+
+## 2026-09-14 — Meal-stretch seating correction (English source)
+
+- Corrected the generated meal sheet to respect the authored seat map and camera orientation; shots 010–012 now use its replacement derived panels.
+
+## 2026-09-14 — Opening visual stretches (English source)
+
+- Shots 001–003 now share a combined Operations Gallery stretch; the reporter is correctly confined to the Earth broadcast display.
+- Shots 006–009 now use a single coherent axial-dock stretch sheet with derived selected panels.
+
+## 2026-09-14 — Meal-stretch identity packs (English source)
+
+- Registered paired reference sheets for Voss/Harlan, Zao/Rao, and Sorell/Okoye; the meal stretch now uses three pair sheets plus the environment sheet and Ardor sheet, staying within the five-image attachment cap.
+- Replaced the shared meal-stretch panels after the cast-composition correction; shots 010–012 remain selected from the single combined generation.
+
+## 2026-09-14 — Bridge meal stretch registered (English source)
+
+- Added and wired `location:celestial-ardor-bridge-meal-table` with its current environment reference sheet derived from the three bridge meal-table solid renders.
+- Shots 010–012 now use one combined 2×2 visual-stretch sheet with three derived panels as selected takes; the former independent stills are archived for provenance.
+
 ## 2026-09-13 — Curated voice refs registered (English source)
 
 - EN/ES cast WAVs under `static/assets/voices/` are catalog assets with `sampleAssetIds` on voice profiles. Reporter EN sample added for `character:periodista`.

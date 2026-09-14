@@ -281,11 +281,37 @@ export function buildStretchDigestPayload(args) {
 
 /**
  * Soft heuristic: adjacent same-location shots not covered by any stretch.
- * @param {{ visualStretches?: any[], shots?: any[] }} script
+ * Uses composite (scene.order, shot.order, shot.id) — never raw shot.order alone.
+ * @param {{ visualStretches?: any[], shots?: any[], scenes?: any[] }} script
+ * @param {{ locationsById?: Map<string, { parentLocationId?: string }> }} [opts]
  * @returns {Array<{ shotA: string, shotB: string, locationId: string }>}
  */
-export function findAdjacentUnstretchedPairs(script) {
-	const shots = [...(script.shots ?? [])].sort((a, b) => a.order - b.order);
+export function findAdjacentUnstretchedPairs(script, opts = {}) {
+	const scenesById = new Map((script.scenes || []).map(/** @param {any} s */ (s) => [s.id, s]));
+	const locationsById = opts.locationsById ?? new Map();
+	const ancestryRoot = (/** @type {string} */ locationId) => {
+		/** @type {Set<string>} */
+		const seen = new Set();
+		let current = locationId;
+		while (current && !seen.has(current)) {
+			seen.add(current);
+			const parent = locationsById.get(current)?.parentLocationId;
+			if (!parent) return current;
+			current = parent;
+		}
+		return locationId;
+	};
+	const shots = [...(script.shots ?? [])].sort((a, b) => {
+		const sceneA = scenesById.get(a.sceneId);
+		const sceneB = scenesById.get(b.sceneId);
+		const soA = Number.isFinite(sceneA?.order) ? sceneA.order : Number.MAX_SAFE_INTEGER;
+		const soB = Number.isFinite(sceneB?.order) ? sceneB.order : Number.MAX_SAFE_INTEGER;
+		if (soA !== soB) return soA - soB;
+		const oA = Number.isFinite(a.order) ? a.order : Number.MAX_SAFE_INTEGER;
+		const oB = Number.isFinite(b.order) ? b.order : Number.MAX_SAFE_INTEGER;
+		if (oA !== oB) return oA - oB;
+		return String(a.id).localeCompare(String(b.id));
+	});
 	const covered = new Set();
 	for (const stretch of script.visualStretches ?? []) {
 		for (const member of stretch.members ?? []) covered.add(member.shotId);
@@ -294,8 +320,12 @@ export function findAdjacentUnstretchedPairs(script) {
 	for (let i = 0; i < shots.length - 1; i += 1) {
 		const a = shots[i];
 		const b = shots[i + 1];
-		if (!a.locationId || a.locationId !== b.locationId) continue;
-		if (covered.has(a.id) && covered.has(b.id)) continue;
+		if (!a.locationId || !b.locationId) continue;
+		if (locationsById.size) {
+			if (ancestryRoot(a.locationId) !== ancestryRoot(b.locationId)) continue;
+		} else if (a.locationId !== b.locationId) {
+			continue;
+		}
 		if (covered.has(a.id) || covered.has(b.id)) continue;
 		pairs.push({ shotA: a.id, shotB: b.id, locationId: a.locationId });
 	}

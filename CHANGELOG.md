@@ -1,5 +1,48 @@
 # Changelog
 
+## 2026-09-14 — Complete Operations Gallery stretch blocking
+
+- Added the authored six-person blocking map for `festival-master:stretch-operations-gallery-001-003`: Harlan–Sorell–Voss in the foreground and Zao–Rao–Okoye behind them, with stable eyelines and in-place turns across shots 001–003.
+- The Operations Gallery still job no longer carries `missing_stretch_blocking`; video remains gated only by the existing editorial freeze, execution, and panel-review holds.
+
+## 2026-09-14 — Video reference-budget keyframe semantics
+
+- Fallback Seedance jobs no longer inherit `reference_pack_required` from generic pack coverage on keyframe panels that lack `metadata.entityIds`.
+- Video `referenceBudget` now exposes `keyframeCoveredEntityIds`, `videoExtraCoveredEntityIds`, and `uncoveredVideoEntityIds`; reports and docs treat those as the video completeness view.
+- Stretch-candidate reports label candidates as editorial review suggestions, not pending production tasks.
+
+## 2026-09-14 — Reference budget, packs, and stretch candidates
+
+- Pack `metadata.entityIds` now counts toward entity coverage for still and video stretch jobs; attached reference lists are never silently trimmed.
+- Plan jobs and per-shot plans emit structured `referenceBudget` plus split remediations (`reference_pack_required` vs `reference_consolidation_required`) with null-safe provider caps.
+- Advisory `visual_stretch_candidate` detection uses composite `(scene.order, shot.order)` timeline and location ancestry; reports only — never writes `visualStretches`. Wired into `report:visual-stretches` / `report:all` and `report:reference-budget`.
+- ShotDetailsPanel surfaces uncovered entities, budget violations, and pack vs consolidation remediations.
+
+## 2026-09-14 — Correct Operations Gallery blocking
+
+- Authored a fixed two-row floor plan for the opening Earth-stream stretch: front row Harlan–Sorell–Voss, back row Zao–Rao–Okoye from screen-left to screen-right.
+- Replaced the Operations Gallery stretch sheet and derived panels so shots 001–003 preserve those positions while the camera moves from the group to Harlan/Sorell and then Voss.
+
+## 2026-09-14 — Correct meal-stretch seating
+
+- Regenerated the bridge-meal stretch with an explicit camera-oriented seat map: room-side row Zao–Sorell–Rao, hull-side row Okoye–Harlan–Voss from lift end to stations end.
+- Replaced the three derived meal panels and kept the corrected panels selected for shots 010–012.
+
+## 2026-09-14 — Operations Gallery and axial-dock visual stretches
+
+- Added and rendered the axial-dock stretch (006–009) as one coherent four-panel sheet with derived selected panels.
+- Added the Operations Gallery stretch (001–003), including the six-person Earth-stream viewing setup and the reporter only inside the wall display; registered one combined sheet and selected derived panels.
+
+## 2026-09-14 — Meal-stretch character reference packs
+
+- Added paired identity sheets for Voss/Harlan, Zao/Rao, and Sorell/Okoye so the six-person meal stretch can stay within the still provider's five-reference attachment limit while preserving all identities.
+- Re-rendered the shared meal stretch with the paired sheets, replaced its three derived panels, and kept those panels selected for shots 010–012.
+
+## 2026-09-14 — Festival-master bridge meal visual stretch
+
+- Added the `location:celestial-ardor-bridge-meal-table` sublocation and registered its GPT-image-2 environment sheet from the three supplied solid renders.
+- Replaced the independent meal stills for shots 010–012 with one combined 2×2 visual-stretch generation; derived panels are now the selected takes and share the same table blocking, gravity, eyelines, and display continuity.
+
 ## 2026-09-13 — Register curated cast voice references
 
 - Added EN `Reporter.wav` (VoiceDesign) for `character:periodista`.

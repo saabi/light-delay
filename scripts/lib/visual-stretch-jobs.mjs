@@ -12,6 +12,11 @@
 
 import { checkReferenceBudget } from './generation-planning.mjs';
 import {
+	collectStretchVisibleEntityIds,
+	evaluateReferenceBudget,
+	evaluateVideoStretchReferenceBudget
+} from './reference-budget.mjs';
+import {
 	deriveGenerationGateFromTakes,
 	effectiveProductionGateStatus,
 	isProductionGateHold,
@@ -264,7 +269,10 @@ export function dedupeReferencesByAssetId(references) {
  *   blockers: string[],
  *   videoReferencePolicy: 'fallback' | 'explicit',
  *   effectiveVideoReferenceAssetIds: string[],
- *   voiceSampleAssetIds: string[]
+ *   voiceSampleAssetIds: string[],
+ *   requiredEntityIds: string[],
+ *   keyframeCoveredEntityIds: string[],
+ *   keyframeCoveringAssetByEntity: Record<string, string>
  * }}
  */
 export function collectVideoStretchReferences(args) {
@@ -285,6 +293,8 @@ export function collectVideoStretchReferences(args) {
 	const coveredAssetIds = new Set();
 	/** Entities covered by a registered keyframe shot. */
 	const keyframeCoveredEntityIds = new Set();
+	/** @type {Record<string, string>} */
+	const keyframeCoveringAssetByEntity = {};
 	/** All visible entities on job members (for explicit completeness). */
 	const requiredEntityIds = new Set();
 
@@ -301,9 +311,17 @@ export function collectVideoStretchReferences(args) {
 			id: keyframeId,
 			role: 'keyframe'
 		});
-		if (shot?.locationId) keyframeCoveredEntityIds.add(shot.locationId);
+		/** @type {string[]} */
+		const shotEntities = [];
+		if (shot?.locationId) shotEntities.push(shot.locationId);
 		for (const ref of shot?.visibleRefs || []) {
-			if (ref?.id) keyframeCoveredEntityIds.add(ref.id);
+			if (ref?.id) shotEntities.push(ref.id);
+		}
+		for (const entityId of shotEntities) {
+			keyframeCoveredEntityIds.add(entityId);
+			if (!keyframeCoveringAssetByEntity[entityId]) {
+				keyframeCoveringAssetByEntity[entityId] = keyframeId;
+			}
 		}
 	}
 
@@ -373,7 +391,10 @@ export function collectVideoStretchReferences(args) {
 		blockers,
 		videoReferencePolicy,
 		effectiveVideoReferenceAssetIds,
-		voiceSampleAssetIds
+		voiceSampleAssetIds,
+		requiredEntityIds: [...requiredEntityIds].sort(),
+		keyframeCoveredEntityIds: [...keyframeCoveredEntityIds].sort(),
+		keyframeCoveringAssetByEntity
 	};
 }
 
@@ -431,6 +452,8 @@ function finalizeStretchJob(job, opts = {}) {
  * @param {{
  *   keyframeByShotId?: Map<string, string>,
  *   entityReferenceIds?: Map<string, string[]>,
+ *   packEntitiesByAssetId?: Map<string, string[]>,
+ *   packAssetIdsByEntity?: Map<string, string[]>,
  *   cuesById?: Map<string, any>,
  *   voiceProfiles?: VoiceProfile[],
  *   language?: string,
@@ -459,6 +482,8 @@ export function partitionStretchVideoJobs(
 	let part = 1;
 	const keyframeByShotId = opts.keyframeByShotId ?? new Map();
 	const entityReferenceIds = opts.entityReferenceIds ?? new Map();
+	const packEntitiesByAssetId = opts.packEntitiesByAssetId ?? new Map();
+	const packAssetIdsByEntity = opts.packAssetIdsByEntity ?? new Map();
 	const cuesById = opts.cuesById ?? new Map();
 	const voiceProfiles = opts.voiceProfiles ?? [];
 	const language = opts.language ?? 'en';
@@ -499,12 +524,25 @@ export function partitionStretchVideoJobs(
 		});
 		const stillReferenceAssetIds = [...(stretch.referenceAssetIds || [])];
 		const effectiveVideoReferenceAssetIds = collected.effectiveVideoReferenceAssetIds;
+		const evaluated = evaluateVideoStretchReferenceBudget({
+			references: collected.references,
+			limits: opts.videoLimits || {},
+			requiredEntityIds: collected.requiredEntityIds,
+			keyframeCoveredEntityIds: collected.keyframeCoveredEntityIds,
+			keyframeCoveringAssetByEntity: collected.keyframeCoveringAssetByEntity,
+			effectiveVideoReferenceAssetIds,
+			videoReferencePolicy: collected.videoReferencePolicy,
+			entityReferenceIds,
+			packEntitiesByAssetId,
+			packAssetIdsByEntity,
+			assetsById: opts.assetsById
+		});
 		/** @type {string[]} */
 		const blockers = [
 			'editorial_prompt_freeze_not_approved',
 			'seedance_execution_gated',
 			...collected.blockers,
-			...referenceBudgetBlockers(collected.references, opts.videoLimits),
+			...evaluated.blockers,
 			...gate.blockers,
 			...extraBlockers
 		];
@@ -521,7 +559,9 @@ export function partitionStretchVideoJobs(
 			videoReferencePolicy: collected.videoReferencePolicy,
 			effectiveVideoReferenceAssetIds,
 			voiceSampleAssetIds: collected.voiceSampleAssetIds,
-			sharedReferenceAssetIds: effectiveVideoReferenceAssetIds
+			sharedReferenceAssetIds: effectiveVideoReferenceAssetIds,
+			referenceBudget: evaluated.referenceBudget,
+			...(evaluated.remediation.length ? { remediation: evaluated.remediation } : {})
 		};
 		if (collected.videoReferencePolicy === 'explicit') {
 			videoFields.videoReferenceAssetIds = stretch.videoReferenceAssetIds || [];
@@ -578,6 +618,8 @@ export function partitionStretchVideoJobs(
  *   stillProvider?: any,
  *   videoProvider?: any,
  *   entityReferenceIds?: Map<string, string[]>,
+ *   packEntitiesByAssetId?: Map<string, string[]>,
+ *   packAssetIdsByEntity?: Map<string, string[]>,
  *   voiceProfiles?: VoiceProfile[],
  *   language?: string,
  *   assetsById?: Map<string, any>,
@@ -592,6 +634,8 @@ export function buildVisualStretchJobs(
 		stillProvider,
 		videoProvider,
 		entityReferenceIds,
+		packEntitiesByAssetId = new Map(),
+		packAssetIdsByEntity = new Map(),
 		voiceProfiles = [],
 		language = 'en',
 		assetsById,
@@ -604,6 +648,7 @@ export function buildVisualStretchJobs(
 	const takesById = new Map((file.takes || []).map(/** @param {any} take */ (take) => [take.id, take]));
 	const cuesById = new Map((file.cues || []).map(/** @param {any} cue */ (cue) => [cue.id, cue]));
 	const gateCtx = { assetsById, manifestById };
+	const entityIds = entityReferenceIds ?? new Map();
 
 	for (const stretch of file.visualStretches || []) {
 		const stillMode = stretch.generationProfile?.stillMode ?? 'combined_storyboard_sheet';
@@ -629,7 +674,17 @@ export function buildVisualStretchJobs(
 		const stillReferences = collectStillStretchReferences(stretch);
 		const stillReferenceAssetIds = stillReferences.map((r) => r.id);
 		const sharedReferenceAssetIds = stillReferenceAssetIds;
-		blockers.push(...referenceBudgetBlockers(stillReferences, stillProvider?.limits));
+		const requiredEntityIds = collectStretchVisibleEntityIds(stretch, shotsById);
+		const evaluated = evaluateReferenceBudget({
+			references: stillReferences,
+			limits: stillProvider?.limits || {},
+			requiredEntityIds,
+			entityReferenceIds: entityIds,
+			packEntitiesByAssetId,
+			packAssetIdsByEntity,
+			assetsById
+		});
+		blockers.push(...evaluated.blockers);
 		for (const assetId of stillReferenceAssetIds) {
 			blockers.push(...assetReferenceQualityBlockers(assetId, assetsById, 'image'));
 		}
@@ -707,6 +762,8 @@ export function buildVisualStretchJobs(
 					memberInputs,
 					stillReferenceAssetIds,
 					sharedReferenceAssetIds,
+					referenceBudget: evaluated.referenceBudget,
+					...(evaluated.remediation.length ? { remediation: evaluated.remediation } : {}),
 					gridLayout,
 					computedMargins,
 					compiledPrompt: null,
@@ -748,6 +805,8 @@ export function buildVisualStretchJobs(
 					memberInputs,
 					stillReferenceAssetIds,
 					sharedReferenceAssetIds,
+					referenceBudget: evaluated.referenceBudget,
+					...(evaluated.remediation.length ? { remediation: evaluated.remediation } : {}),
 					compiledPrompt: null,
 					outputs: members.map((member, index) => ({
 						order: member.order,
@@ -777,7 +836,9 @@ export function buildVisualStretchJobs(
 				jobId,
 				{
 					keyframeByShotId,
-					entityReferenceIds: entityReferenceIds ?? new Map(),
+					entityReferenceIds: entityIds,
+					packEntitiesByAssetId,
+					packAssetIdsByEntity,
 					cuesById,
 					voiceProfiles,
 					language,

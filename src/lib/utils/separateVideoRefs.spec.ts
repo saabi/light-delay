@@ -378,6 +378,11 @@ describe('separate still/video reference sets', () => {
 		expect(video?.stillReferenceAssetIds).toEqual(
 			expect.arrayContaining(video?.effectiveVideoReferenceAssetIds || [])
 		);
+		expect(
+			(video?.blockers || []).some((b: string) => b.startsWith('reference_pack_required'))
+		).toBe(false);
+		expect(video?.referenceBudget?.keyframeCoveredEntityIds?.length).toBeGreaterThan(0);
+		expect(video?.referenceBudget?.uncoveredVideoEntityIds || []).toEqual([]);
 	});
 
 	it('voice sample quality gates when assetsById is provided', () => {

@@ -259,6 +259,7 @@ Hard gates:
 Authoring hold SoT is **`Take.productionGate`** on the script take (`deferred` / `blocked`), not `imageStatus` and not plan-hand-authored fields. Plans/stretch jobs only **derive** `generationGate` + blockers (`docs/production/VISUAL_STRETCH_PIPELINE.md`, `AGENT_GENERATION_BRIEF.md`). Agents must:
 
 - Refuse submit/handoff-as-executable when the source plan job is not `runnable` or lists production-gate blockers (including `missing_keyframe:*` / `uncovered_video_entity:*`, and video-scoped holds `generation_deferred:video` / `member_generation_deferred:video:*`). A video-scoped hold does not block the corresponding still job.
+- Refuse on `reference_budget:*`. Prefer structured `referenceBudget` on the plan job. `reference_pack_required` = author/attach packs for uncovered entities; `reference_consolidation_required` = merge existing refs (do not add packs for covered overflow). Never silently trim still reference lists.
 - Not invent or clear `productionGate` / prerequisites without explicit author instruction; clearing a gate means editing the **script take**, then `npm run production:plans` so derived plan fields update.
 - Not treat a deferred take as regen debt (`imageStatus`).
 - Not trim stretch `referenceAssetIds` for Seedance; not invent `videoReferenceAssetIds` unless the author authored that tri-state list (`SEEDANCE_PROMPTING.md` §6.2).
