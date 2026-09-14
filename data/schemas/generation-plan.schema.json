@@ -41,6 +41,10 @@
           },
           "requiredReferences": { "type": "array", "items": { "$ref": "#/$defs/reference" } },
           "generationGate": { "$ref": "#/$defs/generationGate" },
+          "videoGenerationGate": {
+            "$ref": "#/$defs/generationGate",
+            "description": "Derived from video-scoped Take.productionGate holds only (medium: video). Affects segments/video jobs; never the animatic still."
+          },
           "segments": {
             "type": "array", "minItems": 1,
             "items": {
@@ -50,7 +54,13 @@
                 "id": { "type": "string" }, "startMs": { "type": "integer", "minimum": 0 }, "endMs": { "type": "integer", "minimum": 1 },
                 "continuation": { "enum": ["none", "accepted_video_and_last_frame", "last_frame_as_next_first"] },
                 "promptStatus": { "enum": ["blocked", "draft", "ready", "frozen"] },
-                "compiledPrompt": { "type": ["string", "null"] }
+                "compiledPrompt": { "type": ["string", "null"] },
+                "blockers": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "uniqueItems": true,
+                  "description": "Video-only blockers for this segment (e.g. video_generation_deferred, generation_deferred:video:<takeId>)."
+                }
               },
               "additionalProperties": false
             }
@@ -112,10 +122,11 @@
     },
     "generationGate": {
       "type": "object",
-      "description": "Derived from Take.productionGate on source takes. Script take remains SoT; never hand-author on the plan. When source takes mix deferred and blocked, derived status is deferred (union of deferred prerequisites; all hold takeIds retained).",
+      "description": "Derived from Take.productionGate on source takes. Script take remains SoT; never hand-author on the plan. When source takes mix deferred and blocked, derived status is deferred (union of deferred prerequisites; all hold takeIds retained). `medium` is the hold scope: 'all' blocks stills and video; 'still' blocks stills only; 'video' blocks video only and never makes a still job non-runnable.",
       "required": ["status", "reasonCode", "takeIds"],
       "properties": {
         "status": { "enum": ["deferred", "blocked"] },
+        "medium": { "enum": ["all", "still", "video"] },
         "reasonCode": { "type": "string", "minLength": 1 },
         "takeIds": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1, "uniqueItems": true },
         "prerequisiteAssetIds": {

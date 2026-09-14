@@ -398,6 +398,8 @@
 	"details_production_gate": "Generation gate",
 	"details_production_gate_deferred": "Deferred",
 	"details_production_gate_blocked": "Blocked",
+	"details_production_gate_medium_still": "stills only",
+	"details_production_gate_medium_video": "video only — stills proceed",
 	"details_production_gate_reason": "Reason",
 	"details_production_gate_reason_code": "Reason code",
 	"details_production_gate_prerequisites": "Prerequisites",

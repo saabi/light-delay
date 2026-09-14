@@ -6,10 +6,41 @@
 export const KNOWN_PRODUCTION_GATE_REASON_CODES = Object.freeze([
 	'awaiting_reference_asset',
 	'awaiting_motion_reference',
-	'author_hold'
+	'author_hold',
+	'video_deferred_external_reference'
 ]);
 
 export const PRODUCTION_GATE_STATUSES = Object.freeze(['eligible', 'deferred', 'blocked']);
+
+/**
+ * Media a hold can apply to. Absent ⇒ 'all' (legacy behaviour: blocks stills and video).
+ * 'still' blocks still/keyframe generation only; 'video' blocks Seedance/video jobs only and
+ * never makes a still job non-runnable.
+ */
+export const PRODUCTION_GATE_MEDIA = Object.freeze(['all', 'still', 'video']);
+
+/**
+ * @param {any} take
+ * @returns {'all' | 'still' | 'video'}
+ */
+export function productionGateMedium(take) {
+	const medium = take?.productionGate?.medium;
+	if (medium === 'still' || medium === 'video') return medium;
+	return 'all';
+}
+
+/**
+ * Whether a take's hold applies to the requested medium.
+ * @param {any} take
+ * @param {'all' | 'still' | 'video' | undefined} [medium] undefined ⇒ any medium
+ * @param {{ exclusive?: boolean }} [opts] exclusive ⇒ only holds scoped exactly to `medium` (not 'all')
+ */
+export function gateAppliesToMedium(take, medium, opts = {}) {
+	const holdMedium = productionGateMedium(take);
+	if (!medium || medium === 'all') return opts.exclusive ? holdMedium === 'all' : true;
+	if (opts.exclusive) return holdMedium === medium;
+	return holdMedium === 'all' || holdMedium === medium;
+}
 
 /**
  * @param {any} take
@@ -23,10 +54,22 @@ export function effectiveProductionGateStatus(take) {
 
 /**
  * @param {any} take
+ * @param {'all' | 'still' | 'video'} [medium] when given, only holds applying to that medium count
+ * @param {{ exclusive?: boolean }} [opts]
  */
-export function isProductionGateHold(take) {
+export function isProductionGateHold(take, medium, opts = {}) {
 	const status = effectiveProductionGateStatus(take);
-	return status === 'deferred' || status === 'blocked';
+	if (!(status === 'deferred' || status === 'blocked')) return false;
+	return gateAppliesToMedium(take, medium, opts);
+}
+
+/**
+ * Blocker-code suffix for a hold's medium ('' for legacy all-media holds).
+ * @param {any} take
+ */
+export function gateMediumTag(take) {
+	const medium = productionGateMedium(take);
+	return medium === 'all' ? '' : `:${medium}`;
 }
 
 /**
@@ -140,6 +183,9 @@ export function collectProductionGateValidation(take, label, ctx = {}) {
 		errors.push(`${label}: invalid productionGate.status ${status}`);
 		return { errors, warnings };
 	}
+	if (gate.medium != null && !PRODUCTION_GATE_MEDIA.includes(gate.medium)) {
+		errors.push(`${label}: invalid productionGate.medium ${gate.medium}`);
+	}
 
 	const reasonCode = typeof gate.reasonCode === 'string' ? gate.reasonCode.trim() : '';
 	const reasonEn =
@@ -181,14 +227,23 @@ export function collectProductionGateValidation(take, label, ctx = {}) {
 
 /**
  * Plan/stretch blockers + derived generationGate from resolved takes.
+ *
+ * `opts.medium` selects which holds count: 'still' ⇒ holds scoped 'all' or 'still';
+ * 'video' ⇒ holds scoped 'all' or 'video'; undefined ⇒ every hold (legacy).
+ * `opts.exclusive` restricts to holds scoped exactly to `opts.medium` (used by the plan
+ * builder to emit a separate video-only gate that never touches still readiness).
+ * Blocker codes carry the hold's medium tag (`generation_deferred:video`) when the hold is
+ * not all-media, so a still job can never be blocked by a video-only hold.
+ *
  * @param {any[]} takes
  * @param {{
  *   assetsById?: Map<string, any>,
  *   manifestById?: Map<string, any>
  * }} [ctx]
+ * @param {{ medium?: 'all' | 'still' | 'video', exclusive?: boolean }} [opts]
  */
-export function deriveGenerationGateFromTakes(takes, ctx = {}) {
-	const holds = (takes || []).filter((t) => isProductionGateHold(t));
+export function deriveGenerationGateFromTakes(takes, ctx = {}, opts = {}) {
+	const holds = (takes || []).filter((t) => isProductionGateHold(t, opts.medium, opts));
 	if (!holds.length) {
 		return { blockers: /** @type {string[]} */ ([]), generationGate: null, prerequisiteBlockers: [] };
 	}
@@ -199,6 +254,9 @@ export function deriveGenerationGateFromTakes(takes, ctx = {}) {
 	const status = effectiveProductionGateStatus(primary);
 	const takeIds = [...new Set(holds.map((t) => t.id).filter(Boolean))];
 	const reasonCode = primary.productionGate?.reasonCode || 'author_hold';
+	/** Derived medium: 'all' when any counted hold is all-media, else the shared scoped medium. */
+	const media = new Set(holds.map((t) => productionGateMedium(t)));
+	const medium = media.has('all') || media.size > 1 ? 'all' : [...media][0];
 	const prerequisiteAssetIds = [
 		...new Set(
 			holds.flatMap((t) =>
@@ -211,12 +269,14 @@ export function deriveGenerationGateFromTakes(takes, ctx = {}) {
 
 	/** @type {string[]} */
 	const blockers = [];
-	if (status === 'deferred') blockers.push('generation_deferred');
-	if (status === 'blocked') blockers.push('generation_blocked');
+	const primaryTag = gateMediumTag(primary);
+	if (status === 'deferred') blockers.push(`generation_deferred${primaryTag}`);
+	if (status === 'blocked') blockers.push(`generation_blocked${primaryTag}`);
 	for (const take of holds) {
 		const st = effectiveProductionGateStatus(take);
-		if (st === 'deferred') blockers.push(`generation_deferred:${take.id}`);
-		if (st === 'blocked') blockers.push(`generation_blocked:${take.id}`);
+		const tag = gateMediumTag(take);
+		if (st === 'deferred') blockers.push(`generation_deferred${tag}:${take.id}`);
+		if (st === 'blocked') blockers.push(`generation_blocked${tag}:${take.id}`);
 	}
 
 	const prereqEval = evaluatePrerequisiteAssets(prerequisiteAssetIds, {
@@ -230,6 +290,7 @@ export function deriveGenerationGateFromTakes(takes, ctx = {}) {
 	/** @type {any} */
 	const generationGate = {
 		status,
+		medium,
 		takeIds,
 		reasonCode,
 		...(status === 'deferred' ? { prerequisiteAssetIds } : {})
@@ -246,11 +307,13 @@ export function deriveGenerationGateFromTakes(takes, ctx = {}) {
  * @param {string} shotId
  * @param {string[]} takeIds
  * @param {'deferred' | 'blocked'} status
+ * @param {'all' | 'still' | 'video'} [medium] hold medium; 'still'/'video' tag the codes
  */
-export function stretchMemberGateBlockers(shotId, takeIds, status) {
-	const prefix = status === 'deferred' ? 'member_generation_deferred' : 'member_generation_blocked';
-	const blockers = [`${prefix}:${shotId}`];
-	for (const takeId of takeIds) blockers.push(`${prefix}_take:${takeId}`);
+export function stretchMemberGateBlockers(shotId, takeIds, status, medium = 'all') {
+	const tag = medium === 'still' || medium === 'video' ? `:${medium}` : '';
+	const base = status === 'deferred' ? 'member_generation_deferred' : 'member_generation_blocked';
+	const blockers = [`${base}${tag}:${shotId}`];
+	for (const takeId of takeIds) blockers.push(`${base}_take${tag}:${takeId}`);
 	return blockers;
 }
 

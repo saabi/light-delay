@@ -73,8 +73,26 @@ for (const slug of scripts) {
 		const { takeIds, missingSelectedTake } = resolveShotSourceTakeIds(shot);
 		if (missingSelectedTake) blockers.push('missing_selected_take');
 		const sourceTakes = takeIds.map((id) => takesById.get(id)).filter(Boolean);
-		const gate = deriveGenerationGateFromTakes(sourceTakes, { assetsById, manifestById });
+		// Still readiness: holds scoped 'all' or 'still' block the shot (animatic still / frames).
+		const gate = deriveGenerationGateFromTakes(sourceTakes, { assetsById, manifestById }, { medium: 'still' });
 		blockers.push(...gate.blockers);
+		// Video readiness: holds scoped exactly 'video' never touch still readiness; they land on the
+		// segments and on a separate videoGenerationGate (all-media holds already cover video above).
+		const videoGate = deriveGenerationGateFromTakes(
+			sourceTakes,
+			{ assetsById, manifestById },
+			{ medium: 'video', exclusive: true }
+		);
+		/** @type {string[]} */
+		const videoBlockers = [];
+		if (videoGate.generationGate) {
+			const marker =
+				videoGate.generationGate.status === 'blocked'
+					? 'video_generation_blocked'
+					: 'video_generation_deferred';
+			blockers.push(marker);
+			videoBlockers.push(marker, ...videoGate.blockers);
+		}
 		const shotCues = shot.cuePlacements.map((placement) => file.cues.find((cue) => cue.id === placement.cueId)).filter(Boolean);
 		const dialogueCues = shotCues.filter((cue) => cue.type === 'dialogue');
 		const diegeticText = shotCues.map((cue) => resolveDiegeticText(cue, 'en')).filter(Boolean);
@@ -108,7 +126,10 @@ for (const slug of scripts) {
 			},
 			requiredReferences: budgetedReferences,
 			...(gate.generationGate ? { generationGate: gate.generationGate } : {}),
-			segments: planSegments(shot, maxSegmentMs)
+			...(videoGate.generationGate ? { videoGenerationGate: videoGate.generationGate } : {}),
+			segments: planSegments(shot, maxSegmentMs).map((segment) =>
+				videoBlockers.length ? { ...segment, blockers: [...new Set(videoBlockers)] } : segment
+			)
 		};
 	});
 	const visualStretchJobs = buildVisualStretchJobs(file, {

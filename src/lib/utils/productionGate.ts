@@ -5,6 +5,10 @@
 export {
 	KNOWN_PRODUCTION_GATE_REASON_CODES,
 	PRODUCTION_GATE_STATUSES,
+	PRODUCTION_GATE_MEDIA,
+	productionGateMedium,
+	gateAppliesToMedium,
+	gateMediumTag,
 	effectiveProductionGateStatus,
 	isProductionGateHold,
 	resolveShotSourceTakeIds,

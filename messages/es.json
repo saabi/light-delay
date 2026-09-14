@@ -398,6 +398,8 @@
 	"details_production_gate": "Puerta de generación",
 	"details_production_gate_deferred": "Diferida",
 	"details_production_gate_blocked": "Bloqueada",
+	"details_production_gate_medium_still": "solo stills",
+	"details_production_gate_medium_video": "solo video — los stills continúan",
 	"details_production_gate_reason": "Motivo",
 	"details_production_gate_reason_code": "Código",
 	"details_production_gate_prerequisites": "Prerrequisitos",

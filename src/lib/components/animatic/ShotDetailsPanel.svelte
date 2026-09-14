@@ -21,7 +21,8 @@
 	import {
 		describePrerequisiteStatus,
 		effectiveProductionGateStatus,
-		isProductionGateHold
+		isProductionGateHold,
+		productionGateMedium
 	} from '$lib/utils/productionGate';
 	import { findStretchForShot, stretchBlockingBlockers } from '$lib/utils/visualStretch';
 	import * as m from '$lib/paraglide/messages.js';
@@ -91,6 +92,7 @@
 	const productionGate = $derived(media.take?.productionGate);
 	const gateHold = $derived(isProductionGateHold(media.take));
 	const gateStatus = $derived(effectiveProductionGateStatus(media.take));
+	const gateMedium = $derived(productionGateMedium(media.take));
 	const gatePrereqs = $derived.by(() => {
 		if (!productionGate?.prerequisiteAssetIds?.length) return [];
 		const assetEntries: Array<[string, NonNullable<ReturnType<typeof getAssetById>>]> = [];
@@ -213,7 +215,11 @@
 							<span class="flag"
 								>{gateStatus === 'blocked'
 									? m.details_production_gate_blocked()
-									: m.details_production_gate_deferred()}</span
+									: m.details_production_gate_deferred()}{gateMedium === 'video'
+									? ` · ${m.details_production_gate_medium_video()}`
+									: gateMedium === 'still'
+										? ` · ${m.details_production_gate_medium_still()}`
+										: ''}</span
 							>
 						{/if}
 					</dd>
@@ -565,7 +571,11 @@
 						<span class="flag"
 							>{gateStatus === 'blocked'
 								? m.details_production_gate_blocked()
-								: m.details_production_gate_deferred()}</span
+								: m.details_production_gate_deferred()}{gateMedium === 'video'
+								? ` · ${m.details_production_gate_medium_video()}`
+								: gateMedium === 'still'
+									? ` · ${m.details_production_gate_medium_still()}`
+									: ''}</span
 						>
 					</dd>
 				</div>

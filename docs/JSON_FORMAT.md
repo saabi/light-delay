@@ -816,11 +816,19 @@ export interface Take {
    * blocked: EN reasonCode + EN reason; must not carry prerequisites.
    * Explicit eligible must not carry hold fields (prefer omitting the object).
    * Known reasonCode seeds (validator warns on unknown): awaiting_reference_asset,
-   * awaiting_motion_reference, author_hold.
+   * awaiting_motion_reference, author_hold, video_deferred_external_reference.
    * Prerequisites resolve in assets.json or asset-generation-manifest.json.
    */
   productionGate?: {
     status: "eligible" | "deferred" | "blocked";
+    /**
+     * Hold scope. Absent ⇒ "all" (blocks stills and video). "still" blocks still/keyframe
+     * generation only. "video" blocks Seedance/video jobs only and never makes a still job
+     * non-runnable (known reasonCode: video_deferred_external_reference). Plans derive
+     * `generationGate` (all/still) and `videoGenerationGate` (video-only) separately;
+     * blocker codes carry the medium tag (`generation_deferred:video`).
+     */
+    medium?: "all" | "still" | "video";
     reasonCode?: string;
     reason?: StoryText;
     prerequisiteAssetIds?: AssetId[];

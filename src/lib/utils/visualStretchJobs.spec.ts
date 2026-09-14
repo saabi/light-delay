@@ -503,3 +503,66 @@ describe('visual stretch digest agreement', () => {
 		expect(row?.staleDerivedTakeIds).toEqual([]);
 	});
 });
+
+describe('still vs video hold split on stretch jobs', () => {
+	it('video-scoped Take.productionGate blocks only the Seedance job', () => {
+		const file = {
+			script: { id: 'script:split' },
+			shots: [
+				{ id: 'shot:1', selectedTakeId: 'take:1', durationMs: 3000, cuePlacements: [] },
+				{ id: 'shot:2', selectedTakeId: 'take:2', durationMs: 3000, cuePlacements: [] }
+			],
+			takes: [
+				{
+					id: 'take:1',
+					shotId: 'shot:1',
+					productionGate: {
+						status: 'deferred',
+						medium: 'video',
+						reasonCode: 'video_deferred_external_reference',
+						reason: { en: 'Seedance pass awaits the exterior guide.' },
+						prerequisiteAssetIds: ['asset:guide']
+					}
+				},
+				{ id: 'take:2', shotId: 'shot:2' }
+			],
+			cues: [],
+			visualStretches: [
+				{
+					id: 'stretch:split',
+					revision: 1,
+					status: 'draft',
+					members: [
+						{ order: 1, shotId: 'shot:1', takeScope: 'selected' },
+						{ order: 2, shotId: 'shot:2', takeScope: 'selected' }
+					],
+					generationProfile: { stillMode: 'combined_storyboard_sheet', videoMode: 'grouped_seedance' },
+					referenceAssetIds: [],
+					sharedDescription: { en: 'shared' },
+					physics: { en: '1g' },
+					lighting: { en: 'soft' }
+				}
+			]
+		};
+		const jobs = buildVisualStretchJobs(file, {
+			maxSegmentMs: EFFECTIVE_CEILING_MS,
+			stillProvider: stillProviderFixture,
+			videoProvider: videoProviderFixture,
+			assetsById: new Map([['asset:guide', {}]])
+		});
+		const still = jobs.find((j) => j.medium === 'still');
+		const video = jobs.find((j) => j.medium === 'video');
+		expect(still).toBeDefined();
+		expect(still?.generationGate).toBeUndefined();
+		expect(still?.blockers).toEqual(['editorial_prompt_freeze_not_approved']);
+		expect(video?.generationGate).toMatchObject({
+			status: 'deferred',
+			medium: 'video',
+			takeIds: ['take:1']
+		});
+		expect(video?.blockers).toEqual(
+			expect.arrayContaining(['member_generation_deferred:video:shot:1', 'generation_deferred:video'])
+		);
+		expect(isStretchJobRunnable(video)).toBe(false);
+	});
+});

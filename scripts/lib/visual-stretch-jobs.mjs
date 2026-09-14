@@ -15,6 +15,7 @@ import {
 	deriveGenerationGateFromTakes,
 	effectiveProductionGateStatus,
 	isProductionGateHold,
+	productionGateMedium,
 	resolveStretchMemberSourceTakeIds,
 	stretchMemberGateBlockers
 } from './production-gate.mjs';
@@ -36,8 +37,10 @@ import {
  * @param {Map<string, any>} shotsById
  * @param {Map<string, any>} takesById
  * @param {{ assetsById?: Map<string, any>, manifestById?: Map<string, any> }} [ctx]
+ * @param {{ medium?: 'all' | 'still' | 'video' }} [opts] still jobs pass 'still', video jobs 'video';
+ *   a video-scoped Take.productionGate then never blocks the still job (and vice versa).
  */
-export function collectStretchProductionGate(members, shotsById, takesById, ctx = {}) {
+export function collectStretchProductionGate(members, shotsById, takesById, ctx = {}, opts = {}) {
 	/** @type {string[]} */
 	const blockers = [];
 	/** @type {any[]} */
@@ -53,15 +56,22 @@ export function collectStretchProductionGate(members, shotsById, takesById, ctx 
 				continue;
 			}
 			sourceTakes.push(take);
-			if (isProductionGateHold(take)) {
+			if (isProductionGateHold(take, opts.medium)) {
 				const status = /** @type {'deferred' | 'blocked'} */ (
 					effectiveProductionGateStatus(take)
 				);
-				blockers.push(...stretchMemberGateBlockers(member.shotId, [take.id], status));
+				blockers.push(
+					...stretchMemberGateBlockers(
+						member.shotId,
+						[take.id],
+						status,
+						productionGateMedium(take)
+					)
+				);
 			}
 		}
 	}
-	const derived = deriveGenerationGateFromTakes(sourceTakes, ctx);
+	const derived = deriveGenerationGateFromTakes(sourceTakes, ctx, { medium: opts.medium });
 	blockers.push(...derived.blockers);
 	return {
 		blockers: [...new Set(blockers)],
@@ -484,7 +494,9 @@ export function partitionStretchVideoJobs(
 			language,
 			assetsById: opts.assetsById
 		});
-		const gate = collectStretchProductionGate(bucketMembers, shotsById, takesById, gateCtx);
+		const gate = collectStretchProductionGate(bucketMembers, shotsById, takesById, gateCtx, {
+			medium: 'video'
+		});
 		const stillReferenceAssetIds = [...(stretch.referenceAssetIds || [])];
 		const effectiveVideoReferenceAssetIds = collected.effectiveVideoReferenceAssetIds;
 		/** @type {string[]} */
@@ -604,7 +616,9 @@ export function buildVisualStretchJobs(
 			const { takeIds } = resolveStretchMemberSourceTakeIds(member, shot);
 			return { order: member.order, shotId: member.shotId, sourceTakeIds: takeIds };
 		});
-		const gate = collectStretchProductionGate(members, shotsById, takesById, gateCtx);
+		const gate = collectStretchProductionGate(members, shotsById, takesById, gateCtx, {
+			medium: 'still'
+		});
 		/** @type {string[]} */
 		const blockers = [
 			'editorial_prompt_freeze_not_approved',

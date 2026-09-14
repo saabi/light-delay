@@ -479,6 +479,12 @@ export interface Take {
 	 */
 	productionGate?: {
 		status: 'eligible' | 'deferred' | 'blocked';
+		/**
+		 * Hold scope. Absent ⇒ 'all' (blocks stills and video). 'still' blocks still/keyframe
+		 * generation only. 'video' blocks Seedance/video jobs only and never makes a still job
+		 * non-runnable (e.g. `video_deferred_external_reference` awaiting a Blender guide).
+		 */
+		medium?: 'all' | 'still' | 'video';
 		reasonCode?: string;
 		reason?: StoryText;
 		prerequisiteAssetIds?: AssetId[];
