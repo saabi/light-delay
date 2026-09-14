@@ -18916,7 +18916,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T03:40:00.000Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-011",
       "imageStatus": {
@@ -18948,7 +18948,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T03:45:00.000Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-012",
       "imageStatus": {
