@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-09-14 - Complete Festival-master visual-stretch batch
+
+- Generated, visually checked, and registered the remaining 14 approved stretch sheets; all 29 authored Festival-master stretches now have registered sheets.
+- Preserved authored grid layouts and blank cells, used current reference assets, and removed temporary staging copies.
+- No Higgsfield/video generation was run; selected takes and canonical dialogue remain unchanged.
+
+## 2026-09-14 — Generate Festival-master visual-stretch batch (partial)
+
+- Generated and registered sheets for reactor optics 029–032, reactor record 033–036, reactor rescue 042–043, bridge alibi 044–045, central-vault obstruction 054–056, bridge vector 057–059, bridge packet 060–061, and vault flashback 062–063.
+- Existing approved sheets were preserved; the remaining missing stretches are queued for the next generation pass.
+
 ## 2026-09-14 — Approve axial-dock composite reference
 
 - Promoted `asset:visual-pack-proxima-axial-dock-crew-sheet` to `current` after editorial approval.

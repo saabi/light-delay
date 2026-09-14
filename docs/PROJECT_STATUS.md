@@ -1,5 +1,16 @@
 # Estado del proyecto
 
+## 2026-09-14 - Festival-master visual-stretch batch complete (English source)
+
+- All 29 authored Festival-master visual stretches now have a registered, reviewed storyboard sheet with its planned grid layout and blank cells.
+- This pass changed only production/reference registration data and generated sheet assets. No Higgsfield/video jobs were submitted and no selected take was changed.
+- The Festival outline lineage warning and universal editorial prompt-freeze gate remain unchanged.
+
+## 2026-09-14 — Festival-master stretch generation progress (English source)
+
+- Registered new sheets for stretches 029–032, 033–036, 042–043, 044–045, 054–056, 057–059, 060–061, and 062–063, in addition to the previously registered approved sheets.
+- Remaining missing sheets are still pending generation; no existing approved sheet was regenerated.
+
 ## 2026-09-14 — Axial-dock composite approved (English source)
 
 - The approved pair-based composite now replaces the eight separate axial-dock references. The stretch covers all crew, station, and Ardor entities with one current asset and passes the five-image budget.
