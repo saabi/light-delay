@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-14 — Fix reports route SSR and wire visual-stretches
+
+- Moved report builds to +page.server.ts and split browser-safe report metadata from Node builders (avoids 
+ode:crypto in the client).
+- Wired visual-stretches title/description into report presentation; reports include generatedAt.
+- Unknown report ids return 404 instead of 500.
+
 ## 2026-09-14 - Lift Festival-master still stretch prompt freeze
 
 - Removed the still-only editorial_prompt_freeze_not_approved hold from visual-stretch still jobs (video/Seedance keeps seedance_execution_gated).

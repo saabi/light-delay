@@ -12,7 +12,8 @@ const TITLE_BY_KEY: Record<string, () => string> = {
 	reports_cue_coverage_title: m.reports_cue_coverage_title,
 	reports_take_workflow_title: m.reports_take_workflow_title,
 	reports_dialogue_i18n_title: m.reports_dialogue_i18n_title,
-	reports_regen_briefs_title: m.reports_regen_briefs_title
+	reports_regen_briefs_title: m.reports_regen_briefs_title,
+	reports_visual_stretches_title: m.reports_visual_stretches_title
 };
 
 const DESC_BY_KEY: Record<string, () => string> = {
@@ -27,7 +28,8 @@ const DESC_BY_KEY: Record<string, () => string> = {
 	reports_cue_coverage_desc: m.reports_cue_coverage_desc,
 	reports_take_workflow_desc: m.reports_take_workflow_desc,
 	reports_dialogue_i18n_desc: m.reports_dialogue_i18n_desc,
-	reports_regen_briefs_desc: m.reports_regen_briefs_desc
+	reports_regen_briefs_desc: m.reports_regen_briefs_desc,
+	reports_visual_stretches_desc: m.reports_visual_stretches_desc
 };
 
 export function reportTitle(titleKey: string): string {

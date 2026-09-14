@@ -72,6 +72,8 @@ export function buildVisualStretchesReport(script, _ctx, projectCtx = {}, langua
 
 	return {
 		scriptId: script.script?.id,
+		language: lang,
+		generatedAt: new Date().toISOString(),
 		stretchCount: stretches.length,
 		rows,
 		adjacentWarnings,

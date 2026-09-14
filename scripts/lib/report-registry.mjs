@@ -1,7 +1,9 @@
 /**
- * Canonical registry of all editorial reports (CLI + web).
+ * Canonical registry of all editorial reports (CLI + web server).
+ * Browser UI should import metadata from `report-meta.mjs` only.
  */
 // @ts-nocheck
+import { REPORT_ENTRIES as REPORT_META } from './report-meta.mjs';
 import {
 	buildCueCoverageReport,
 	buildCuePlacementReport,
@@ -35,100 +37,67 @@ import {
 	formatVisualStretchesMarkdown
 } from './visual-stretches-report.mjs';
 
-/** @type {Array<{ id: string; titleKey: string; descriptionKey: string; build: Function; formatMarkdown: Function }>} */
-export const REPORT_ENTRIES = [
-	{
-		id: 'dialogue-timing',
-		titleKey: 'reports_dialogue_timing_title',
-		descriptionKey: 'reports_dialogue_timing_desc',
+const BUILDERS = {
+	'dialogue-timing': {
 		build: (script, _ctx, _projectCtx, language) => buildDialogueTimingReport(script, language),
 		formatMarkdown: formatDialogueTimingMarkdown
 	},
-	{
-		id: 'visual-art',
-		titleKey: 'reports_visual_art_title',
-		descriptionKey: 'reports_visual_art_desc',
+	'visual-art': {
 		build: buildVisualArtReport,
 		formatMarkdown: formatVisualArtMarkdown
 	},
-	{
-		id: 'image-debt',
-		titleKey: 'reports_image_debt_title',
-		descriptionKey: 'reports_image_debt_desc',
+	'image-debt': {
 		build: buildImageDebtReport,
 		formatMarkdown: formatImageDebtMarkdown
 	},
-	{
-		id: 'shot-completeness',
-		titleKey: 'reports_shot_completeness_title',
-		descriptionKey: 'reports_shot_completeness_desc',
+	'shot-completeness': {
 		build: buildShotCompletenessReport,
 		formatMarkdown: formatShotCompletenessMarkdown
 	},
-	{
-		id: 'cue-placement',
-		titleKey: 'reports_cue_placement_title',
-		descriptionKey: 'reports_cue_placement_desc',
+	'cue-placement': {
 		build: buildCuePlacementReport,
 		formatMarkdown: formatCuePlacementMarkdown
 	},
-	{
-		id: 'dialogue-performance',
-		titleKey: 'reports_dialogue_performance_title',
-		descriptionKey: 'reports_dialogue_performance_desc',
+	'dialogue-performance': {
 		build: buildDialoguePerformanceReport,
 		formatMarkdown: formatDialoguePerformanceMarkdown
 	},
-	{
-		id: 'entity-binding',
-		titleKey: 'reports_entity_binding_title',
-		descriptionKey: 'reports_entity_binding_desc',
+	'entity-binding': {
 		build: buildEntityBindingReport,
 		formatMarkdown: formatEntityBindingMarkdown
 	},
-	{
-		id: 'scene-polish',
-		titleKey: 'reports_scene_polish_title',
-		descriptionKey: 'reports_scene_polish_desc',
+	'scene-polish': {
 		build: buildScenePolishReport,
 		formatMarkdown: formatScenePolishMarkdown
 	},
-	{
-		id: 'cue-coverage',
-		titleKey: 'reports_cue_coverage_title',
-		descriptionKey: 'reports_cue_coverage_desc',
+	'cue-coverage': {
 		build: buildCueCoverageReport,
 		formatMarkdown: formatCueCoverageMarkdown
 	},
-	{
-		id: 'take-workflow',
-		titleKey: 'reports_take_workflow_title',
-		descriptionKey: 'reports_take_workflow_desc',
+	'take-workflow': {
 		build: buildTakeWorkflowReport,
 		formatMarkdown: formatTakeWorkflowMarkdown
 	},
-	{
-		id: 'dialogue-i18n',
-		titleKey: 'reports_dialogue_i18n_title',
-		descriptionKey: 'reports_dialogue_i18n_desc',
+	'dialogue-i18n': {
 		build: buildDialogueI18nReport,
 		formatMarkdown: formatDialogueI18nMarkdown
 	},
-	{
-		id: 'regen-briefs',
-		titleKey: 'reports_regen_briefs_title',
-		descriptionKey: 'reports_regen_briefs_desc',
+	'regen-briefs': {
 		build: buildRegenBriefsReport,
 		formatMarkdown: formatRegenBriefsMarkdown
 	},
-	{
-		id: 'visual-stretches',
-		titleKey: 'reports_visual_stretches_title',
-		descriptionKey: 'reports_visual_stretches_desc',
+	'visual-stretches': {
 		build: buildVisualStretchesReport,
 		formatMarkdown: formatVisualStretchesMarkdown
 	}
-];
+};
+
+/** @type {Array<{ id: string; titleKey: string; descriptionKey: string; build: Function; formatMarkdown: Function }>} */
+export const REPORT_ENTRIES = REPORT_META.map((entry) => {
+	const builder = BUILDERS[entry.id];
+	if (!builder) throw new Error(`Missing report builder for ${entry.id}`);
+	return { ...entry, ...builder };
+});
 
 export const REPORT_IDS = REPORT_ENTRIES.map((entry) => entry.id);
 

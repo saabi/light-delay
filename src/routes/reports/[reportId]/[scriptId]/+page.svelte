@@ -1,18 +1,11 @@
 <script lang="ts">
-	import { error } from '@sveltejs/kit';
-	import { page } from '$app/state';
 	import PageHeader from '$lib/components/app/PageHeader.svelte';
 	import LifecycleNotice from '$lib/components/app/LifecycleNotice.svelte';
 	import DialogueTimingReportView from '$lib/components/reports/DialogueTimingReportView.svelte';
 	import EditorialReportView from '$lib/components/reports/EditorialReportView.svelte';
-	import {
-		buildReport,
-		createProjectContext,
-		getReportEntry
-	} from '$lib/data/reports/index';
+	import { getReportEntry } from '$lib/data/reports/index';
 	import {
 		getLifecycleForRef,
-		getLocalizedScript,
 		listLocalizedScripts
 	} from '$lib/data/repositories/index';
 	import { reportDescription, reportTitle } from '$lib/data/selectors/reportPresentation';
@@ -20,30 +13,16 @@
 	import { getLocale } from '$lib/paraglide/runtime.js';
 	import * as m from '$lib/paraglide/messages.js';
 	import { withLocale } from '$lib/utils/paths';
-	import { decodeScriptId, encodeScriptId } from '$lib/utils/scriptId';
+	import { encodeScriptId } from '$lib/utils/scriptId';
+
+	let { data } = $props();
 
 	const locale = getLocale();
-	const reportId = $derived(page.params.reportId ?? '');
-	const scriptId = $derived(decodeScriptId(page.params.scriptId ?? ''));
-	const entry = $derived.by(() => {
-		try {
-			return getReportEntry(reportId);
-		} catch {
-			error(404, `Report not found: ${reportId}`);
-		}
-	});
+	const entry = $derived(getReportEntry(data.reportId));
 	const scripts = listLocalizedScripts(locale);
-	const scriptEntry = $derived(scripts.find((item) => item.id === scriptId));
-	const lifecycle = $derived(getLifecycleForRef('script', scriptId));
-	$effect(() => {
-		if (!scriptEntry) error(404, `Script not found: ${scriptId}`);
-	});
-	const projectCtx = createProjectContext();
-	const report = $derived(
-		scriptEntry
-			? buildReport(reportId, getLocalizedScript(scriptId, locale), locale, projectCtx)
-			: null
-	);
+	const scriptEntry = $derived(scripts.find((item) => item.id === data.scriptId));
+	const lifecycle = $derived(getLifecycleForRef('script', data.scriptId));
+	const report = $derived(data.report);
 </script>
 
 <svelte:head>
@@ -63,15 +42,21 @@
 		<LifecycleNotice {lifecycle} />
 		<nav class="nav">
 			<a href={withLocale('/reports')}>← {m.reports_back_to_hub()}</a>
-			<a href={withLocale(`/reports/${reportId}`)}>{reportTitle(entry.titleKey)}</a>
-			<a href={withLocale(`/script/${encodeScriptId(scriptId)}`)}>{m.reports_open_script()}</a>
-			<a href={withLocale(`/animatic/${encodeScriptId(scriptId)}`)}>{m.reports_open_animatic()}</a>
+			<a href={withLocale(`/reports/${data.reportId}`)}>{reportTitle(entry.titleKey)}</a>
+			<a href={withLocale(`/script/${encodeScriptId(data.scriptId)}`)}>{m.reports_open_script()}</a>
+			<a href={withLocale(`/animatic/${encodeScriptId(data.scriptId)}`)}
+				>{m.reports_open_animatic()}</a
+			>
 		</nav>
 
-		{#if reportId === 'dialogue-timing'}
+		{#if data.reportId === 'dialogue-timing'}
 			<DialogueTimingReportView {report} />
 		{:else}
-			<EditorialReportView {reportId} {report} diskAuditEnabled={projectCtx.diskAuditEnabled} />
+			<EditorialReportView
+				reportId={data.reportId}
+				{report}
+				diskAuditEnabled={data.diskAuditEnabled}
+			/>
 		{/if}
 	{/if}
 </main>

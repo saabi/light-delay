@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-14 — Reports route SSR fixed (English source)
+
+- Report builds run on the server; browser imports only report metadata.
+- Visual-stretches labels and timestamps render; unknown report ids are 404.
+
 ## 2026-09-14 - Festival-master still stretch prompt freeze lifted (English source)
 
 - Still visual-stretch jobs no longer carry editorial_prompt_freeze_not_approved; all 29 have compiledPrompt and are 
