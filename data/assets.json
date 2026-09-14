@@ -405,6 +405,47 @@
       }
     },
     {
+      "id": "asset:location-celestial-ardor-bridge-meal-table-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-bridge/meal-table-environment-sheet-v1.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Puente del Celestial Ardor — hoja del entorno de la mesa de comida",
+        "en": "Celestial Ardor Bridge — meal-table environment sheet"
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14"
+      },
+      "metadata": {
+        "useCase": "sublocation-reference",
+        "containsNarrativeContent": false,
+        "containsText": true,
+        "revision": 1,
+        "referenceInputs": [
+          "static/assets/locations/celestial-ardor-bridge/meal-table-solid-view-01.png",
+          "static/assets/locations/celestial-ardor-bridge/meal-table-solid-view-02.png",
+          "static/assets/locations/celestial-ardor-bridge/meal-table-solid-view-03.png"
+        ],
+        "approvedBy": "author",
+        "approvedAt": "2026-09-14"
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja de referencia del entorno de la mesa generada a partir de los tres renders sólidos del puente.",
+          "en": "Meal-table environment reference sheet generated from the three solid bridge renders."
+        }
+      }
+    },
+    {
       "id": "asset:location-celestial-ardor-bridge-console-reference",
       "kind": "image",
       "role": "reference",
@@ -11125,6 +11166,570 @@
         "characterId": "character:okoye",
         "voiceProfileId": "voice:okoye",
         "samplePhraseFile": "/assets/voices/es/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-meal-010-012-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-meal-010-012/sheet.png",
+      "mimeType": "image/png",
+      "width": 1671,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:31:33.120Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-meal-010-012-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-meal-010-012/panel-01.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:31:33.630Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-meal-010-012-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2",
+        "shotId": "festival-master:shot-plan-010",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.000565,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.489435,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-meal-010-012-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-meal-010-012/panel-02.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:31:33.630Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-meal-010-012-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2",
+        "shotId": "festival-master:shot-plan-011",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.000565,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.489435,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-meal-010-012-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-meal-010-012/panel-03.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:31:33.630Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-meal-010-012-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2",
+        "shotId": "festival-master:shot-plan-012",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.489435,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:character-pair-voss-harlan-meal-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/pairs/voss-harlan-meal-reference-sheet-v1.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Voss y Harlan — hoja de referencia conjunta para la comida",
+        "en": "Voss and Harlan — meal-scene paired reference sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14"
+      },
+      "metadata": {
+        "useCase": "character-pair-reference-pack",
+        "containsNarrativeContent": false,
+        "containsText": true,
+        "revision": 1,
+        "entityIds": [
+          "character:voss",
+          "character:harlan"
+        ],
+        "purpose": "visual-stretch-reference-budget"
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja conjunta para mantener identidades durante generaciones de tramos visuales.",
+          "en": "Paired sheet for identity consistency during visual-stretch generations."
+        }
+      }
+    },
+    {
+      "id": "asset:character-pair-zao-rao-meal-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/pairs/zao-rao-meal-reference-sheet-v1.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Zao y Rao — hoja de referencia conjunta para la comida",
+        "en": "Zao and Rao — meal-scene paired reference sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14"
+      },
+      "metadata": {
+        "useCase": "character-pair-reference-pack",
+        "containsNarrativeContent": false,
+        "containsText": true,
+        "revision": 1,
+        "entityIds": [
+          "character:zao",
+          "character:rao"
+        ],
+        "purpose": "visual-stretch-reference-budget"
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja conjunta para mantener identidades durante generaciones de tramos visuales.",
+          "en": "Paired sheet for identity consistency during visual-stretch generations."
+        }
+      }
+    },
+    {
+      "id": "asset:character-pair-sorell-okoye-meal-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/characters/pairs/sorell-okoye-meal-reference-sheet-v1.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Sorell y Okoye — hoja de referencia conjunta para la comida",
+        "en": "Sorell and Okoye — meal-scene paired reference sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14"
+      },
+      "metadata": {
+        "useCase": "character-pair-reference-pack",
+        "containsNarrativeContent": false,
+        "containsText": true,
+        "revision": 1,
+        "entityIds": [
+          "character:sorell",
+          "character:okoye"
+        ],
+        "purpose": "visual-stretch-reference-budget"
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja conjunta para mantener identidades durante generaciones de tramos visuales.",
+          "en": "Paired sheet for identity consistency during visual-stretch generations."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-axial-dock-006-009-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/sheet.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 940,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:20:22.345Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-axial-dock-006-009-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-01.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "originalAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "shotId": "festival-master:shot-plan-006",
+        "panelOrder": 1,
+        "panelRegionX": 0.000266,
+        "panelRegionY": 0,
+        "panelRegionW": 0.489734,
+        "panelRegionH": 0.49,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-axial-dock-006-009-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-02.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "originalAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "shotId": "festival-master:shot-plan-007",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0,
+        "panelRegionW": 0.489734,
+        "panelRegionH": 0.49,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-axial-dock-006-009-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-03.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "originalAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "shotId": "festival-master:shot-plan-008",
+        "panelOrder": 3,
+        "panelRegionX": 0.000266,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.489734,
+        "panelRegionH": 0.49,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-axial-dock-006-009-panel-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-04.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "originalAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "shotId": "festival-master:shot-plan-009",
+        "panelOrder": 4,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.489734,
+        "panelRegionH": 0.49,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-operations-gallery-001-003-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-001-003/sheet.png",
+      "mimeType": "image/png",
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:39:55.616Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-operations-gallery-001-003-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-001-003/panel-01.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:39:56.159Z",
+        "originalAssetId": "asset:festival-master-stretch-operations-gallery-001-003-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1",
+        "shotId": "festival-master:shot-plan-001",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.000266,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.489734,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-operations-gallery-001-003-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-001-003/panel-02.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:39:56.159Z",
+        "originalAssetId": "asset:festival-master-stretch-operations-gallery-001-003-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1",
+        "shotId": "festival-master:shot-plan-002",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.000266,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.489734,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-operations-gallery-001-003-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-001-003/panel-03.png",
+      "mimeType": "image/png",
+      "width": 819,
+      "height": 461,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T04:39:56.159Z",
+        "originalAssetId": "asset:festival-master-stretch-operations-gallery-001-003-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1",
+        "shotId": "festival-master:shot-plan-003",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.489734,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
       }
     }
   ]

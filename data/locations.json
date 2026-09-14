@@ -58,6 +58,25 @@
       }
     },
     {
+      "id": "location:celestial-ardor-bridge-meal-table",
+      "name": {
+        "es": "Mesa de comida del puente del Celestial Ardor",
+        "en": "Celestial Ardor Bridge Meal Table"
+      },
+      "description": {
+        "es": "Sububicación de la mesa de reunión de seis plazas junto a la abertura central y la escalera helicoidal del puente. Conserva la orientación, los tres asientos por lado largo, el display de la pared del casco y la gravedad aparente de 1 g bajo empuje del puente principal.",
+        "en": "Six-seat meeting-table sublocation beside the bridge's central opening and helical stair. It preserves the orientation, three seats on each long side, the hull-wall display, and the bridge's apparent 1 g under thrust."
+      },
+      "parentLocationId": "location:celestial-ardor-bridge",
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-bridge-meal-table-sheet"
+      ],
+      "atmosphere": {
+        "es": "Comida y conversación en el puente",
+        "en": "Bridge meal and conversation"
+      }
+    },
+    {
       "id": "location:celestial-ardor-central-access",
       "name": {
         "es": "Cilindro central de acceso",

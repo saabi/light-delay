@@ -11437,9 +11437,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-001:take-01"
+        "festival-master:shot-plan-001:take-01",
+        "festival-master:shot-plan-001:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-001:take-01",
+      "selectedTakeId": "festival-master:shot-plan-001:take-02",
       "purpose": {
         "es": "Abrir con toda la tripulación mirando la reacción dividida de la Tierra; establecer la emisión retardada y la galería de operaciones.",
         "en": "Open on the whole crew watching Earth's divided reaction; establish the delayed feed and the operations gallery."
@@ -11500,9 +11501,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-002:take-01"
+        "festival-master:shot-plan-002:take-01",
+        "festival-master:shot-plan-002:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-002:take-01",
+      "selectedTakeId": "festival-master:shot-plan-002:take-02",
       "offScreenCharacterIds": [
         "character:periodista",
         "character:voss",
@@ -11570,9 +11572,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-003:take-01"
+        "festival-master:shot-plan-003:take-01",
+        "festival-master:shot-plan-003:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-003:take-01",
+      "selectedTakeId": "festival-master:shot-plan-003:take-02",
       "offScreenCharacterIds": [
         "character:periodista",
         "character:harlan",
@@ -11771,9 +11774,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-006:take-01"
+        "festival-master:shot-plan-006:take-01",
+        "festival-master:shot-plan-006:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-006:take-01",
+      "selectedTakeId": "festival-master:shot-plan-006:take-02",
       "offScreenCharacterIds": [
         "character:voss",
         "character:harlan",
@@ -11844,9 +11848,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-007:take-01"
+        "festival-master:shot-plan-007:take-01",
+        "festival-master:shot-plan-007:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-007:take-01",
+      "selectedTakeId": "festival-master:shot-plan-007:take-02",
       "offScreenCharacterIds": [
         "character:sorell",
         "character:zao",
@@ -11913,9 +11918,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-008:take-01"
+        "festival-master:shot-plan-008:take-01",
+        "festival-master:shot-plan-008:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-008:take-01",
+      "selectedTakeId": "festival-master:shot-plan-008:take-02",
       "offScreenCharacterIds": [
         "character:voss",
         "character:harlan",
@@ -11982,9 +11988,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-009:take-01"
+        "festival-master:shot-plan-009:take-01",
+        "festival-master:shot-plan-009:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-009:take-01",
+      "selectedTakeId": "festival-master:shot-plan-009:take-02",
       "offScreenCharacterIds": [
         "character:harlan",
         "character:sorell",
@@ -12008,7 +12015,7 @@
         "es": "Bajo empuje constante, los seis tripulantes comparten una comida en bandejas ancladas en la mesa de reunión del puente. Un display de sistemas en la pared del casco muestra la larga silueta de la Celestial Ardor rotando lentamente; Zao levanta la vista hacia él y suelta la broma del nombre: \"Celestial Ardor. Suena a perfume con problemas de motor\".",
         "en": "Under steady thrust, the six crew share a meal from anchored trays at the bridge's meeting table. A systems display on the hull wall shows the Celestial Ardor's long silhouette slowly rotating; Zao glances up at it and delivers the name joke: \"Celestial Ardor. Sounds like a perfume with engine trouble.\""
       },
-      "locationId": "location:celestial-ardor-bridge",
+      "locationId": "location:celestial-ardor-bridge-meal-table",
       "visibleRefs": [
         {
           "kind": "character",
@@ -12076,9 +12083,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-010:take-01"
+        "festival-master:shot-plan-010:take-01",
+        "festival-master:shot-plan-010:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-010:take-01",
+      "selectedTakeId": "festival-master:shot-plan-010:take-02",
       "purpose": {
         "es": "Establecer la disposición de la comida en el puente y el nombre de la nave en el display antes de la broma.",
         "en": "Establish the bridge-meal arrangement and the ship's name on the display before the joke."
@@ -12096,7 +12104,7 @@
         "es": "Sorell, también divertida, remata la broma de Zao: \"Mejor que decirle a los Velari que llegamos en el Radiador Volador\". Harlan, tanteando, la vuelve seria a través de la mesa: \"¿Y si somos nosotros a quienes están leyendo mal?\"",
         "en": "Sorell, also amused, tops Zao's joke: \"Better than telling the Velari we arrived in the Flying Radiator.\" Harlan, probing, turns it serious across the table: \"And what if we're the ones being read wrong?\""
       },
-      "locationId": "location:celestial-ardor-bridge",
+      "locationId": "location:celestial-ardor-bridge-meal-table",
       "visibleRefs": [
         {
           "kind": "character",
@@ -12149,9 +12157,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-011:take-01"
+        "festival-master:shot-plan-011:take-01",
+        "festival-master:shot-plan-011:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-011:take-01",
+      "selectedTakeId": "festival-master:shot-plan-011:take-02",
       "offScreenCharacterIds": [
         "character:zao",
         "character:okoye"
@@ -12173,7 +12182,7 @@
         "es": "Sorell, ya seria, responde a Harlan: \"Entonces corregimos la lectura. No empezamos castigándolos por eso\". Voss lo zanja desde el extremo de la mesa junto a los puestos: \"Primero llegamos. Filosofía después del relevo\".",
         "en": "Sorell, serious now, answers Harlan: \"Then we correct the reading. We don't begin by punishing them for it.\" Voss ends it from the stations end of the table: \"First we arrive. Philosophy can wait.\""
       },
-      "locationId": "location:celestial-ardor-bridge",
+      "locationId": "location:celestial-ardor-bridge-meal-table",
       "visibleRefs": [
         {
           "kind": "character",
@@ -12221,9 +12230,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-012:take-01"
+        "festival-master:shot-plan-012:take-01",
+        "festival-master:shot-plan-012:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-012:take-01",
+      "selectedTakeId": "festival-master:shot-plan-012:take-02",
       "offScreenCharacterIds": [
         "character:zao",
         "character:rao",
@@ -18499,7 +18509,7 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-      "generatedAt": "2026-09-14T02:40:18.626Z"
+        "generatedAt": "2026-09-14T02:40:18.626Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-title",
       "imageStatus": {
@@ -18530,7 +18540,7 @@
       "id": "festival-master:shot-plan-001:take-01",
       "shotId": "festival-master:shot-plan-001",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: A delayed Earth broadcast fills the operations-gallery wall display: a split feed of hopeful supporters and frightened protesters at the Jupiter mouth, with the caption \"43:18 DELAY\" in clean English. In silhouette against the glow, all six Ardor crew stand loosely grouped, watching a debate that ended forty-three minutes ago. On frame: Voss, Harlan, Sorell, Zao, Elin Rao, Okoye; static appearance per the attached reference sheets. Composition: ELS — from behind the group toward the broadcast wall; figures in silhouette, display dominant; stations of the gallery visible at the edges Camera: Locked; establishes geography and screen direction. Physics: Approximately 0.5 g rotational gravity inside the habitat ring: seated and standing posture normal, movement slightly light, nothing floats; loose objects rest on surfaces. Diegetic display: English-only broadcast graphics, caption \"43:18 DELAY\"; the feed shows the protest crowds, not a presenter. Continuity: Interior of the rotating habitat ring; no exterior view, no habitat rings, no open space inside the room. Reference assets attached: asset:character-voss-sheet, asset:character-harlan-sheet, asset:character-sorell-sheet, asset:character-zao-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-proxima-operations-gallery-interior-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -18565,7 +18575,7 @@
       "id": "festival-master:shot-plan-002:take-01",
       "shotId": "festival-master:shot-plan-002",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan watches the broadcast, guarded, his face unreadable as he speaks quietly to himself; beside him Sorell answers without looking away from the display. The display itself is out of frame; its cool glow lights their faces from screen-left. On frame: Harlan, Sorell; static appearance per the attached reference sheets. Composition: MS — two-shot, Harlan in focus, Sorell beside him, gallery workstations soft behind them Camera: Tracking; preserves eyeline and action-axis continuity. Physics: Approximately 0.5 g rotational gravity inside the habitat ring: seated and standing posture normal, movement slightly light, nothing floats; loose objects rest on surfaces. Continuity: Same gallery and lighting as the establishing shot; Harlan and Sorell keep their places in the group; the other four crew are out of frame. Reference assets attached: asset:character-harlan-sheet, asset:character-sorell-sheet, asset:location-proxima-operations-gallery-interior-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -18596,7 +18606,7 @@
       "id": "festival-master:shot-plan-003:take-01",
       "shotId": "festival-master:shot-plan-003",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Voss, relaxed and amused, glances between Harlan and Sorell, classifying them lightly; at the frame edge Sorell turns toward him, faintly surprised. On frame: Voss, Sorell; static appearance per the attached reference sheets. Composition: CU — tight on Voss, Sorell entering at frame right as she turns; Harlan off-frame left Camera: Dolly; preserves eyeline and action-axis continuity. Physics: Approximately 0.5 g rotational gravity inside the habitat ring: seated and standing posture normal, movement slightly light, nothing floats; loose objects rest on surfaces. Continuity: Voss stands between Harlan (off-frame left) and Sorell; eyelines match the preceding two-shot. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:location-proxima-operations-gallery-interior-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -18690,7 +18700,7 @@
       "id": "festival-master:shot-plan-006:take-01",
       "shotId": "festival-master:shot-plan-006",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Looking along the axis of Proxima's axial transfer shaft toward the docked Celestial Ardor: restrained cargo pallets move hand-over-hand along the guide rails at emergency tempo. Okoye pushes a pallet down the cargo lane, Rao braces at the manifest terminal mid-shaft, Zao works at the ship's docking collar at the far end. The Ardor's bow collar sits engaged in the station capture ring at the shaft tip. On frame: Okoye, Elin Rao, Zao, the Celestial Ardor bow; static appearance per the attached reference sheets. Composition: LS — down the shaft axis toward the berth; cargo lane and handrails lead the eye to the bow collar; station end screen-left, berth end deep in frame Camera: Tracking along the shaft axis; establishes the space and screen direction. Physics: Microgravity inside the pressurized axial transfer shaft on the non-rotating spine: no meaningful floor, bodies oriented along the shaft axis by handrails and tether points, cargo restrained on guides, nothing rests on a surface. Continuity: Pressurized cylindrical shaft roughly 18–20 m across, not a hangar, platform, or landing pad; no floor; Voss, Harlan, and Sorell are out of frame. Reference assets attached: asset:character-okoye-sheet, asset:character-rao-sheet, asset:character-zao-sheet, asset:location-proxima-axial-dock-interior-sheet, asset:vehicle-celestial-ardor-model-sheet-v2. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -18736,7 +18746,7 @@
       "id": "festival-master:shot-plan-007:take-01",
       "shotId": "festival-master:shot-plan-007",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Voss, one hand on the crew rail mid-shaft, addresses Harlan along the shaft; Harlan, braced at a tether point beside the hazardous-stores gate near the berth, answers evenly. Cargo flow continues around them; the shaft's curved wall and the Ardor's engaged bow collar frame the exchange. On frame: Voss, Harlan, the Celestial Ardor bow; static appearance per the attached reference sheets. Composition: ELS — along the shaft; Voss screen-left near the station end, Harlan screen-right toward the berth Camera: Dolly along the shaft; preserves eyeline and action-axis continuity. Physics: Microgravity inside the pressurized axial transfer shaft on the non-rotating spine: no meaningful floor, bodies oriented along the shaft axis by handrails and tether points, cargo restrained on guides, nothing rests on a surface. Continuity: Same shaft and berth as the previous shot; Sorell, Zao, Rao, and Okoye are out of frame. Reference assets attached: asset:character-voss-sheet, asset:character-harlan-sheet, asset:location-proxima-axial-dock-interior-sheet, asset:vehicle-celestial-ardor-model-sheet-v2. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -18780,7 +18790,7 @@
       "id": "festival-master:shot-plan-008:take-01",
       "shotId": "festival-master:shot-plan-008",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Rao, focused, closes out the manifest on the mid-shaft terminal, braced at its grip; Zao arrives hand-over-hand from the berth end and is already turning to recheck from another angle. On frame: Elin Rao, Zao; static appearance per the attached reference sheets. Composition: MS — two-shot at the manifest terminal, Rao at the screen, Zao arriving from frame right Camera: Slow pan; preserves eyeline and action-axis continuity. Physics: Microgravity inside the pressurized axial transfer shaft on the non-rotating spine: no meaningful floor, bodies oriented along the shaft axis by handrails and tether points, cargo restrained on guides, nothing rests on a surface. Diegetic display: Manifest terminal in English only. Continuity: Same shaft; Voss, Harlan, Sorell, and Okoye are out of frame. Reference assets attached: asset:character-rao-sheet, asset:character-zao-sheet, asset:location-proxima-axial-dock-interior-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -18823,7 +18833,7 @@
       "id": "festival-master:shot-plan-009:take-01",
       "shotId": "festival-master:shot-plan-009",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Voss, pressed but yielding to her habit, grants the minute from the rail; Zao, confident, accepts without stopping her work. On frame: Voss, Zao; static appearance per the attached reference sheets. Composition: MCU — two-shot across the terminal, handrails and shaft ribs behind Camera: Locked; preserves eyeline and action-axis continuity. Physics: Microgravity inside the pressurized axial transfer shaft on the non-rotating spine: no meaningful floor, bodies oriented along the shaft axis by handrails and tether points, cargo restrained on guides, nothing rests on a surface. Continuity: Same shaft; the other four crew are out of frame. Reference assets attached: asset:character-voss-sheet, asset:character-zao-sheet, asset:location-proxima-axial-dock-interior-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -18867,9 +18877,9 @@
       "id": "festival-master:shot-plan-010:take-01",
       "shotId": "festival-master:shot-plan-010",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The six crew share a meal from anchored trays at the bridge's rectangular six-seat meeting table, three per long side. A small systems display on the hull wall above the table shows the Ardor's silhouette slowly rotating. Zao, at the room-side lift-end seat, glances up at the silhouette and speaks; the camera tracks low over the trays from the lift end toward the display. On frame: Voss, Harlan, Sorell, Zao, Elin Rao, Okoye, the Celestial Ardor silhouette on the display; static appearance per the attached reference sheets. Composition: LS — tracking low along the table from the lift end toward the hull-wall display; all six seated; stations arc screen-left, lift screen-right Camera: Tracking; clean, legible establishing frame. Physics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating. Diegetic display: English labels only; the silhouette matches the attached Ardor sheet; no invented dimensions (if any dimension label appears it reads 90 m × 18 m). Continuity: Seats: hull side (backs to the hull) Voss at the stations end, Harlan middle, Okoye lift end; room side (backs to the stair, facing the display) Rao stations end, Sorell middle, Zao lift end. Rectangular table, three per side; nobody stands; few small windows. Reference assets attached: asset:character-voss-sheet, asset:character-harlan-sheet, asset:character-sorell-sheet, asset:character-zao-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:vehicle-celestial-ardor-model-sheet-v2. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The six crew share a meal from anchored trays at the attached meal-table environment sheet's rectangular six-seat meeting table, three per long side. A small systems display on the hull wall above the table shows the Ardor's silhouette slowly rotating. Zao, at the room-side lift-end seat, glances up at the silhouette and speaks; the camera tracks low over the trays from the lift end toward the display. On frame: Voss, Harlan, Sorell, Zao, Elin Rao, Okoye, the Celestial Ardor silhouette on the display; static appearance per the attached reference sheets. Composition: LS — tracking low along the table from the lift end toward the hull-wall display; all six seated; stations arc screen-left, lift screen-right Camera: Tracking; clean, legible establishing frame. Physics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating. Diegetic display: English labels only; the silhouette matches the attached Ardor sheet; no invented dimensions (if any dimension label appears it reads 90 m × 18 m). Continuity: Seats: hull side (backs to the hull) Voss at the stations end, Harlan middle, Okoye lift end; room side (backs to the stair, facing the display) Rao stations end, Sorell middle, Zao lift end. Rectangular table, three per side; nobody stands; few small windows. Reference assets attached: asset:character-voss-sheet, asset:character-harlan-sheet, asset:character-sorell-sheet, asset:character-zao-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-meal-table-sheet, asset:vehicle-celestial-ardor-model-sheet-v2. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
@@ -18878,7 +18888,7 @@
           "asset:character-zao-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-meal-table-sheet",
           "asset:vehicle-celestial-ardor-model-sheet-v2"
         ],
         "provider": "OpenAI",
@@ -18903,16 +18913,16 @@
       "id": "festival-master:shot-plan-011:take-01",
       "shotId": "festival-master:shot-plan-011",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell, at the room-side middle seat, tops the joke toward Zao off-frame; Harlan, opposite her on the hull side, turns to her with the serious question. Rao and Voss sit beyond them toward the stations end; the camera dollies down the table from the lift end. On frame: Sorell, Harlan, Elin Rao, Voss; static appearance per the attached reference sheets. Composition: MS — two-shot from the lift end down the table, Sorell room-side, Harlan hull-side across from her, Rao and Voss beyond Camera: Dolly down the table; orthogonal, legible framing. Physics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating. Continuity: Same seats as the establishing shot; Zao and Okoye at the lift-end seats are out of frame; stations arc screen-left. Reference assets attached: asset:character-sorell-sheet, asset:character-harlan-sheet, asset:character-rao-sheet, asset:character-voss-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell, at the room-side middle seat, tops the joke toward Zao off-frame; Harlan, opposite her on the hull side, turns to her with the serious question. Rao and Voss sit beyond them toward the stations end; the camera dollies down the table from the lift end. On frame: Sorell, Harlan, Elin Rao, Voss; static appearance per the attached reference sheets. Composition: MS — two-shot from the lift end down the table, Sorell room-side, Harlan hull-side across from her, Rao and Voss beyond Camera: Dolly down the table; orthogonal, legible framing. Physics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating. Continuity: Follow the attached meal-table environment sheet; same seats as the establishing shot; Zao and Okoye at the lift-end seats are out of frame; stations arc screen-left. Reference assets attached: asset:character-sorell-sheet, asset:character-harlan-sheet, asset:character-rao-sheet, asset:character-voss-sheet, asset:location-celestial-ardor-bridge-meal-table-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-meal-table-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -18936,15 +18946,15 @@
       "id": "festival-master:shot-plan-012:take-01",
       "shotId": "festival-master:shot-plan-012",
       "number": 1,
-      "status": "candidate",
+      "status": "archived",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell answers Harlan across the table, gentle and firm; the camera pans from her to Voss at the hull-side stations-end seat as he closes the subject. Harlan's shoulder holds the frame edge at the start. On frame: Sorell, Voss, Harlan; static appearance per the attached reference sheets. Composition: MCU — panning from Sorell (room side, middle) to Voss (hull side, stations end); Harlan at frame edge at the start Camera: Slow pan; preserves eyeline and action-axis continuity. Physics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating. Continuity: Same seats as the previous two shots; Zao, Rao, and Okoye are out of frame; nobody has moved. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell answers Harlan across the table, gentle and firm; the camera pans from her to Voss at the hull-side stations-end seat as he closes the subject. Harlan's shoulder holds the frame edge at the start. On frame: Sorell, Voss, Harlan; static appearance per the attached reference sheets. Composition: MCU — panning from Sorell (room side, middle) to Voss (hull side, stations end); Harlan at frame edge at the start Camera: Slow pan; preserves eyeline and action-axis continuity. Physics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating. Continuity: Follow the attached meal-table environment sheet; same seats as the previous two shots; Zao, Rao, and Okoye are out of frame; nobody has moved. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-meal-table-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-meal-table-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21828,9 +21838,534 @@
           "en": "Regenerated storyboard still; pending editorial review."
         }
       }
+    },
+    {
+      "id": "festival-master:shot-plan-010:take-02",
+      "shotId": "festival-master:shot-plan-010",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:31:33.630Z",
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2",
+        "stretchDigest": "43ee3350a9502d3ab1124b8c93325d40b0f4a81b66c0b3fb23582911ad13571f",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-meal-sheet",
+          "asset:character-pair-zao-rao-meal-sheet",
+          "asset:character-pair-sorell-okoye-meal-sheet",
+          "asset:location-celestial-ardor-bridge-meal-table-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-011:take-02",
+      "shotId": "festival-master:shot-plan-011",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:31:33.630Z",
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2",
+        "stretchDigest": "43ee3350a9502d3ab1124b8c93325d40b0f4a81b66c0b3fb23582911ad13571f",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-meal-sheet",
+          "asset:character-pair-zao-rao-meal-sheet",
+          "asset:character-pair-sorell-okoye-meal-sheet",
+          "asset:location-celestial-ardor-bridge-meal-table-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-012:take-02",
+      "shotId": "festival-master:shot-plan-012",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:31:33.630Z",
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2",
+        "stretchDigest": "43ee3350a9502d3ab1124b8c93325d40b0f4a81b66c0b3fb23582911ad13571f",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-meal-sheet",
+          "asset:character-pair-zao-rao-meal-sheet",
+          "asset:character-pair-sorell-okoye-meal-sheet",
+          "asset:location-celestial-ardor-bridge-meal-table-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-006:take-02",
+      "shotId": "festival-master:shot-plan-006",
+      "number": 2,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "stretchDigest": "6635618c455a92ff9f9608136a87ebfb6c87a7436c0984a783c4efe83b399e4c",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-007:take-02",
+      "shotId": "festival-master:shot-plan-007",
+      "number": 2,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "stretchDigest": "6635618c455a92ff9f9608136a87ebfb6c87a7436c0984a783c4efe83b399e4c",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-008:take-02",
+      "shotId": "festival-master:shot-plan-008",
+      "number": 2,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "stretchDigest": "6635618c455a92ff9f9608136a87ebfb6c87a7436c0984a783c4efe83b399e4c",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-009:take-02",
+      "shotId": "festival-master:shot-plan-009",
+      "number": 2,
+      "status": "selected",
+      "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-04",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:20:22.940Z",
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1",
+        "stretchDigest": "6635618c455a92ff9f9608136a87ebfb6c87a7436c0984a783c4efe83b399e4c",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-001:take-02",
+      "shotId": "festival-master:shot-plan-001",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:39:56.159Z",
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1",
+        "stretchDigest": "d19215b2c80bf1fc70ab802882d2e7b869669bd6b0b4ccc7fc2a9ffeaf285feb",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-meal-sheet",
+          "asset:character-pair-zao-rao-meal-sheet",
+          "asset:character-pair-sorell-okoye-meal-sheet",
+          "asset:location-proxima-operations-gallery-interior-sheet",
+          "asset:character-periodista-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-002:take-02",
+      "shotId": "festival-master:shot-plan-002",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:39:56.159Z",
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1",
+        "stretchDigest": "d19215b2c80bf1fc70ab802882d2e7b869669bd6b0b4ccc7fc2a9ffeaf285feb",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-meal-sheet",
+          "asset:character-pair-zao-rao-meal-sheet",
+          "asset:character-pair-sorell-okoye-meal-sheet",
+          "asset:location-proxima-operations-gallery-interior-sheet",
+          "asset:character-periodista-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-003:take-02",
+      "shotId": "festival-master:shot-plan-003",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T04:39:56.159Z",
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1",
+        "stretchDigest": "d19215b2c80bf1fc70ab802882d2e7b869669bd6b0b4ccc7fc2a9ffeaf285feb",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-meal-sheet",
+          "asset:character-pair-zao-rao-meal-sheet",
+          "asset:character-pair-sorell-okoye-meal-sheet",
+          "asset:location-proxima-operations-gallery-interior-sheet",
+          "asset:character-periodista-sheet"
+        ]
+      }
     }
   ],
   "visualStretches": [
+    {
+      "id": "festival-master:stretch-operations-gallery-001-003",
+      "title": {
+        "en": "Operations Gallery Earth-stream stretch (001–003)",
+        "es": "Tramo de la galería de operaciones y la transmisión terrestre (001–003)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-001",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "All six crew watch the delayed Earth stream together in the operations gallery.",
+            "es": "Los seis tripulantes miran juntos la transmisión terrestre retardada en la galería de operaciones."
+          },
+          "event": {
+            "en": "The Earth wall divides hopeful supporters and frightened protesters while the delay caption remains visible.",
+            "es": "La pared terrestre divide a partidarios esperanzados y manifestantes asustados mientras permanece visible la cartela del retardo."
+          },
+          "endState": {
+            "en": "The broadcast holds the crew in a shared, uneasy attention.",
+            "es": "La transmisión mantiene a la tripulación en una atención compartida e inquieta."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-002",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The same gallery and delayed broadcast; Harlan and Sorell remain together in the foreground.",
+            "es": "La misma galería y transmisión retardada; Harlan y Sorell permanecen juntos en primer plano."
+          },
+          "event": {
+            "en": "Harlan speaks quietly, and Sorell answers without looking away from the wall.",
+            "es": "Harlan habla en voz baja y Sorell responde sin apartar la vista de la pared."
+          },
+          "endState": {
+            "en": "Their exchange shifts the shared viewing from public debate to personal unease.",
+            "es": "El intercambio desplaza la mirada compartida del debate público a la inquietud personal."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-003",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The same gallery and stream; Voss now joins the foreground exchange.",
+            "es": "La misma galería y transmisión; Voss se incorpora al intercambio en primer plano."
+          },
+          "event": {
+            "en": "Voss lightly classifies Harlan and Sorell as opposites, and Sorell turns toward him.",
+            "es": "Voss clasifica con ligereza a Harlan y Sorell como opuestos, y Sorell se vuelve hacia él."
+          },
+          "endState": {
+            "en": "The crew is still together, but the first interpersonal fault line is visible.",
+            "es": "La tripulación sigue reunida, pero ya se ve la primera línea de fractura interpersonal."
+          }
+        }
+      ],
+      "locationId": "location:proxima-station",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:harlan",
+        "character:sorell",
+        "character:zao",
+        "character:rao",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Approximate 0.5 g from the rotating habitat ring; bodies and the gallery remain settled to the ring floor.",
+        "es": "Aproximadamente 0,5 g por la rotación del anillo de hábitat; los cuerpos y la galería permanecen apoyados en el suelo del anillo."
+      },
+      "lighting": {
+        "en": "Operations gallery practical light mixed with the delayed Earth wall display.",
+        "es": "Luz práctica de la galería de operaciones mezclada con la pared de transmisión terrestre retardada."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "front-row-left-near-display",
+          "screenSide": "left",
+          "facing": "toward the Earth wall display, then slightly toward Sorell",
+          "posture": "standing",
+          "eyelineTarget": "the Earth wall for shot 001; character:sorell for shot 002",
+          "notes": {
+            "en": "Front-row left anchor; close enough for a quiet exchange with Sorell without leaving the shared viewing arrangement.",
+            "es": "Ancla del frente a la izquierda; lo bastante cerca para un intercambio discreto con Sorell sin abandonar la disposición de visionado compartido."
+          }
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "front-row-center-near-display",
+          "screenSide": "center",
+          "facing": "toward the Earth wall display, then toward Harlan and Voss as addressed",
+          "posture": "standing",
+          "eyelineTarget": "the Earth wall for shot 001; character:harlan for shot 002; character:voss for shot 003",
+          "notes": {
+            "en": "Front-row center; remains the hinge of the exchange and turns toward the addressed speaker rather than changing position.",
+            "es": "Centro del frente; sigue siendo el eje del intercambio y gira hacia quien le habla sin cambiar de posición."
+          }
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "front-row-right-near-display",
+          "screenSide": "right",
+          "facing": "toward the Earth wall display, then toward Harlan and Sorell",
+          "posture": "standing",
+          "eyelineTarget": "the Earth wall for shot 001; character:harlan and character:sorell for shot 003",
+          "notes": {
+            "en": "Front-row right anchor; enters the foreground exchange by turning in place, preserving the gallery geography.",
+            "es": "Ancla del frente a la derecha; entra en el intercambio del primer plano girando en el lugar y conserva la geografía de la galería."
+          }
+        },
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "back-row-left-behind-harlan",
+          "screenSide": "left",
+          "facing": "toward the Earth wall display",
+          "posture": "standing",
+          "eyelineTarget": "the Earth wall display",
+          "notes": {
+            "en": "Back-row left; remains an attentive background presence and does not intrude into the foreground exchange.",
+            "es": "Fondo a la izquierda; permanece atenta en segundo plano y no invade el intercambio del primer plano."
+          }
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "back-row-center-behind-sorell",
+          "screenSide": "center",
+          "facing": "toward the Earth wall display",
+          "posture": "standing",
+          "eyelineTarget": "the Earth wall display",
+          "notes": {
+            "en": "Back-row center; remains silent and visually subordinate to the foreground conversation.",
+            "es": "Centro del fondo; permanece en silencio y subordinada visualmente a la conversación del primer plano."
+          }
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "back-row-right-behind-voss",
+          "screenSide": "right",
+          "facing": "toward the Earth wall display",
+          "posture": "standing",
+          "eyelineTarget": "the Earth wall display",
+          "notes": {
+            "en": "Back-row right; remains a quiet security presence behind Voss while the camera narrows to the speakers.",
+            "es": "Fondo a la derecha; permanece como presencia silenciosa de seguridad detrás de Voss mientras la cámara se cierra sobre quienes hablan."
+          }
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous operations-gallery viewing stretch: same rotating-ring room, 0.5 g, Earth wall, six-person crew, and screen direction across three ordered panels. The reporter exists only inside the visible Earth broadcast display.",
+        "es": "Tramo continuo de visionado en la galería de operaciones: misma sala del anillo rotatorio, 0,5 g, pared terrestre, tripulación de seis y dirección de pantalla en tres paneles ordenados. La reportera sólo existe dentro de la pantalla terrestre visible."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-meal-sheet",
+        "asset:character-pair-zao-rao-meal-sheet",
+        "asset:character-pair-sorell-okoye-meal-sheet",
+        "asset:location-proxima-operations-gallery-interior-sheet",
+        "asset:character-periodista-sheet"
+      ],
+      "notes": [
+        {
+          "id": "note:stretch-operations-gallery-001-003",
+          "type": "visual",
+          "status": "todo",
+          "text": {
+            "en": "Initial operations-gallery viewing sequence is a continuous stretch; generate as one sheet before splitting panels.",
+            "es": "La secuencia inicial de visionado en la galería de operaciones es un tramo continuo; generar como una sola hoja antes de dividir los paneles."
+          }
+        }
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-operations-gallery-001-003-sheet"
+    },
     {
       "id": "festival-master:stretch-bridge-meal-010-012",
       "title": {
@@ -21895,7 +22430,7 @@
           }
         }
       ],
-      "locationId": "location:celestial-ardor-bridge",
+      "locationId": "location:celestial-ardor-bridge-meal-table",
       "presentCharacterIds": [
         "character:voss",
         "character:harlan",
@@ -22005,13 +22540,10 @@
         }
       },
       "referenceAssetIds": [
-        "asset:character-voss-sheet",
-        "asset:character-harlan-sheet",
-        "asset:character-sorell-sheet",
-        "asset:character-zao-sheet",
-        "asset:character-rao-sheet",
-        "asset:character-okoye-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:character-pair-voss-harlan-meal-sheet",
+        "asset:character-pair-zao-rao-meal-sheet",
+        "asset:character-pair-sorell-okoye-meal-sheet",
+        "asset:location-celestial-ardor-bridge-meal-table-sheet",
         "asset:vehicle-celestial-ardor-model-sheet-v2"
       ],
       "notes": [
@@ -22050,7 +22582,8 @@
           "es": "Pocas ventanas pequeñas reforzadas; sin vidrio panorámico.",
           "en": "Few small reinforced windows; no panoramic glass."
         }
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-meal-010-012-sheet"
     },
     {
       "id": "festival-master:stretch-axial-dock-006-009",
@@ -22278,7 +22811,8 @@
             "en": "Shaft gravity fixed as microgravity (non-rotating spine, PROXIMA_STATION.md §5/§7); diameter ≈ 18–20 m as a production-design decision."
           }
         }
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet"
     }
   ]
 }
