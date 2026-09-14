@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-14 — Mark Festival-master stretch panels as current
+
+- Promoted 44 stretch-derived panel assets from 
+eeds_review to current so generation ref-ready checks treat approved panels as generation-safe.
+
 ## 2026-09-14 — Stop stubbing shot.status and artifacts.animaticStill in the generation plan
 
 - `scripts/build-generation-plans.mjs` wrote `status: 'blocked'` and

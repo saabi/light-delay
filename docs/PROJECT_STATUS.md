@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-14 — Stretch panel assets marked current (English source)
+
+- 44 Festival-master stretch panel assets moved from 
+eeds_review to current for ref-ready generation checks.
+
 ## 2026-09-14 — Plan compiler stops stubbing shot status/still artifact (English source)
 
 - `build-generation-plans.mjs`'s per-shot `status` and `artifacts.animaticStill` were permanent
