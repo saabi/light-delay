@@ -707,6 +707,9 @@
           "scriptId": "script:light-delay-festival-master",
           "cueId": "festival-master:cue-0047"
         }
+      ],
+      "implementsFactIds": [
+        "master:fact-bridge-hears-cutoff-warning"
       ]
     },
     {
@@ -814,6 +817,9 @@
           "scriptId": "script:light-delay-festival-master",
           "cueId": "festival-master:cue-0096"
         }
+      ],
+      "implementsFactIds": [
+        "master:fact-harlan-accusation-not-proof"
       ]
     },
     {
@@ -878,6 +884,9 @@
           "scriptId": "script:light-delay-festival-master",
           "cueId": "festival-master:cue-0126"
         }
+      ],
+      "implementsFactIds": [
+        "master:fact-impulse-package-identified"
       ]
     },
     {
@@ -1058,7 +1067,7 @@
       }
     },
     {
-      "id": "trailer-master:cue-g-3",
+      "id": "trailer-master:cue-g-03",
       "beatId": "trailer-master:beat-g-01",
       "order": 0,
       "type": "text",
@@ -1067,18 +1076,18 @@
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "text": "WRITTEN AND PRODUCED BY\nAUTHOR_NAME_PLACEHOLDER",
+            "text": "WRITTEN AND PRODUCED BY\nSebastian Ferreyra Pons",
             "status": "source"
           },
           "es": {
-            "text": "ESCRITO Y PRODUCIDO POR\nAUTHOR_NAME_PLACEHOLDER",
+            "text": "ESCRITO Y PRODUCIDO POR\nSebastian Ferreyra Pons",
             "status": "needs_revision"
           }
         }
       }
     },
     {
-      "id": "trailer-master:cue-g-4",
+      "id": "trailer-master:cue-g-04",
       "beatId": "trailer-master:beat-g-01",
       "order": 0,
       "type": "text",
@@ -1098,7 +1107,7 @@
       }
     },
     {
-      "id": "trailer-master:cue-g-5",
+      "id": "trailer-master:cue-g-05",
       "beatId": "trailer-master:beat-g-01",
       "order": 0,
       "type": "text",
@@ -1711,8 +1720,8 @@
       "number": 10,
       "order": 10,
       "description": {
-        "es": "Sorell, conmocionada, hallada junto al cuerpo de Zao.",
-        "en": "Sorell, shaken, found beside Zao's body."
+        "es": "Sorell, conmocionada, arrodillada junto a alguien.",
+        "en": "Sorell, shaken, kneeling over someone."
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [],
@@ -2372,7 +2381,7 @@
       "durationMs": 2500,
       "cuePlacements": [
         {
-          "cueId": "trailer-master:cue-g-3",
+          "cueId": "trailer-master:cue-g-03",
           "atMs": 0,
           "durationMs": 2500
         }
@@ -2426,7 +2435,7 @@
       "durationMs": 2500,
       "cuePlacements": [
         {
-          "cueId": "trailer-master:cue-g-4",
+          "cueId": "trailer-master:cue-g-04",
           "atMs": 0,
           "durationMs": 2500
         }
@@ -2480,7 +2489,7 @@
       "durationMs": 2500,
       "cuePlacements": [
         {
-          "cueId": "trailer-master:cue-g-5",
+          "cueId": "trailer-master:cue-g-05",
           "atMs": 0,
           "durationMs": 2500
         }
@@ -2547,62 +2556,28 @@
       "shotId": "trailer-master:shot-b-02",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:festival-master-storyboard-021",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Zao reads the controller aloud, shocked and afraid:. Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Zao (matching her established reference sheet). Detail. The controller display reading GEOPHYSICAL IMPULSE PACKAGE, MASS 1.3 TONNES, YIELD MULTI-MEGATON, English digits and labels only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
-        "referenceAssetIds": [
-          "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet"
-        ]
-      }
+      "imageAssetId": "asset:festival-master-storyboard-021"
     },
     {
       "id": "trailer-master:shot-c-01:take-01",
       "shotId": "trailer-master:shot-c-01",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:festival-master-storyboard-023",
-      "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan rises unseen from the recessed service hatch as the bridge crew faces forward and hears Zao open the channel. Composition: INSERT framing. Camera: Dolly; orthogonal, legible insert framing. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:character-sorell-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
-        "referenceAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-voss-sheet",
-          "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-bridge-service-shaft-reference"
-        ]
-      }
+      "imageAssetId": "asset:festival-master-storyboard-023"
     },
     {
       "id": "trailer-master:shot-c-02:take-01",
       "shotId": "trailer-master:shot-c-02",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:festival-master-storyboard-024",
-      "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan touches his wrist device only when that accusation lands; the channel dies mid-word and he withdraws into the service hatch before anyone turns. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
-        "referenceAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-bridge-service-shaft-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
-      }
+      "imageAssetId": "asset:festival-master-storyboard-024"
     },
     {
       "id": "trailer-master:shot-c-03:take-01",
       "shotId": "trailer-master:shot-c-03",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:trailer-master-black-frame",
-      "generation": {
-        "prompt": "Pure black frame, no image content, no text, no characters. A held beat of silence and darkness between two scenes.",
-        "negativePrompt": "any visible imagery, text, characters, or light."
-      }
+      "imageAssetId": "asset:trailer-master-black-frame"
     },
     {
       "id": "trailer-master:shot-d-01:take-01",
@@ -2637,51 +2612,21 @@
       "shotId": "trailer-master:shot-f-01",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:festival-master-storyboard-081",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Elin connects the external timing reference beside the bomb:. Setting: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Cast: Elin Rao (matching her established reference sheet). Detail. A compact diagnostic instrument wired directly into the bomb controller's timing input, English digits only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
-        "referenceAssetIds": [
-          "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet",
-          "asset:object-time-reference-diagnostic-unit-sheet"
-        ]
-      }
+      "imageAssetId": "asset:festival-master-storyboard-081"
     },
     {
       "id": "trailer-master:shot-f-02:take-01",
       "shotId": "trailer-master:shot-f-02",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:festival-master-storyboard-082",
-      "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: The display counts 4—3—2—1, then jumps upward. Voss. Elin answers, Composition: OTS framing. Camera: Tracking; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-rao-sheet, asset:location-celestial-ardor-inner-shielding-vault-sheet, asset:object-proxima-geophysical-impulse-package-sheet, asset:character-okoye-sheet, asset:character-harlan-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
-        "referenceAssetIds": [
-          "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
-          "asset:object-proxima-geophysical-impulse-package-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-harlan-sheet"
-        ]
-      }
+      "imageAssetId": "asset:festival-master-storyboard-082"
     },
     {
       "id": "trailer-master:shot-f-03:take-01",
       "shotId": "trailer-master:shot-f-03",
       "number": 1,
       "status": "candidate",
-      "imageAssetId": "asset:festival-master-storyboard-087",
-      "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. The Velari station answers with luminous grammar across its living skin, visible through the bridge's small reinforced windows. Wordless. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, matte light-gray and warm off-white composite panels, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. No characters prominent in frame; the light beyond the windows is the subject. Slow dolly toward the windows. Aspect ratio 16:9.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
-        "referenceAssetIds": [
-          "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-velari-station-sheet"
-        ]
-      }
+      "imageAssetId": "asset:festival-master-storyboard-087"
     },
     {
       "id": "trailer-master:shot-f-04:take-01",

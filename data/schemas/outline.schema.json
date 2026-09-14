@@ -43,7 +43,7 @@
             "sourceRevision": { "type": "integer", "minimum": 1 },
             "sourceVersion": { "type": "string", "minLength": 1 },
             "relationship": { "const": "adaptation" },
-            "fidelity": { "const": "complete_causal_chain" },
+            "fidelity": { "enum": ["complete_causal_chain", "deliberate_omission"] },
             "reviewStatus": { "enum": ["current", "stale", "review_required"] }
           },
           "additionalProperties": false

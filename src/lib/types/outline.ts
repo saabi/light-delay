@@ -86,7 +86,13 @@ export interface OutlineMeta {
 		sourceRevision: number;
 		sourceVersion?: string;
 		relationship: 'adaptation';
-		fidelity: 'complete_causal_chain';
+		/**
+		 * `complete_causal_chain`: every master story step is covered via step `sourceRefs`
+		 * (enforced by `validate-data.mjs`). `deliberate_omission`: a cut that intentionally
+		 * withholds later master facts (e.g. the trailer) — not held to that full-coverage
+		 * check; see `scripts/lib/trailer-master-omitted-facts.mjs`.
+		 */
+		fidelity: 'complete_causal_chain' | 'deliberate_omission';
 		reviewStatus: 'current' | 'stale' | 'review_required';
 	};
 }

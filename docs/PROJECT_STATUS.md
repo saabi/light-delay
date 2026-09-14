@@ -1,5 +1,35 @@
 # Estado del proyecto
 
+## 2026-09-14 — Fact-based trailer spoiler gate (English source)
+
+- `script:light-delay-trailer-master` had no automated spoiler protection at all: the only
+  `check:trailer-spoilers` gate checked the deprecated `light-delay-trailer.json`. New
+  `check:trailer-master-spoilers` covers the live trailer, combining (a) a fact-based check —
+  trailer cues inherit `implementsFactIds` from their Festival-master source cues (`npm run
+  fit:trailer-master-facts`) and must never implement anything on the new
+  `scripts/lib/trailer-master-omitted-facts.mjs` list — with (b) the existing phrasing rules
+  (send/reception/death/containment/outcome) for content shot-level fact bindings don't reach
+  yet (deferred per `docs/production/CAUSAL_AND_MEANING_PIPELINE.md`).
+- Running it caught a real, live disclosure: `shot-d-01`'s description and outline step-04's
+  summary both named Zao and confirmed her death ("found beside Zao's body"), even though the
+  shot's own spoken line was already ambiguous. Reworded to drop both the confirmation and
+  the identity ("kneeling over someone").
+- `outline:light-delay-trailer-master` now has `derivation` (pinned to the Festival-master
+  outline, `fidelity: deliberate_omission` — a new value alongside `complete_causal_chain`,
+  added to the outline schema/types since a deliberate-omission cut shouldn't be held to full
+  master-step coverage).
+- Fixed `trailerMasterScript.spec.ts`'s stale assumption that some takes still needed a
+  standalone prompt; all 22 now reuse Festival-master frames (this was already documented as
+  finished in `docs/wip/trailer-master-blueprint.en.md` and the 2026-09-12/13 entries below —
+  the test just hadn't caught up). Cleared the 7 resulting leftover `generation.prompt`s.
+- Author credit resolved to Sebastian Ferreyra Pons; `trailer-master` registered in
+  `data/editorial-lifecycle.json` as an authorized derivative.
+- **Unrelated drift observed while verifying, not touched here:** Festival-master's own
+  script/production-plan/asset-manifest and several storyboard PNGs changed underneath this
+  work (shots 104→187, master outline revision 19→24, `production:plans:check` now stale,
+  `okoye.spec.ts` failing, svelte-check 147→156) — consistent with the concurrent
+  stretch-panel work logged below, not this trailer change.
+
 ## 2026-09-14 - Festival-master visual-stretch batch complete (English source)
 
 - All 29 authored Festival-master visual stretches now have a registered, reviewed storyboard sheet with its planned grid layout and blank cells.

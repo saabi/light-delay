@@ -12,6 +12,14 @@
     "synopsis": {
       "es": "Un avance condensado, editado a partir del corte Festival derivado del master, presenta la doctrina de primer contacto de la tripulación, el hallazgo de un arma oculta a bordo, la advertencia de Zao cortada a media palabra, la sospecha que recae sobre la tripulación y la carrera contra un reloj que no se resuelve en pantalla. La identidad del saboteador, el desenlace de la desactivación y el resultado del contacto permanecen deliberadamente sin confirmar.",
       "en": "A condensed preview, edited from the master-derived Festival cut, introduces the crew's first-contact doctrine, the discovery of a hidden weapon aboard, Zao's warning cut off mid-word, the suspicion that falls on the crew, and a race against a clock that never resolves on screen. The saboteur's identity, the outcome of the defusal, and the result of contact deliberately remain unconfirmed."
+    },
+    "derivation": {
+      "sourceOutlineId": "outline:light-delay-festival-master",
+      "sourceRevision": 1,
+      "sourceVersion": "0.2.0-wip",
+      "relationship": "adaptation",
+      "fidelity": "deliberate_omission",
+      "reviewStatus": "current"
     }
   },
   "steps": [
@@ -86,8 +94,8 @@
         "en": "Suspicion falls"
       },
       "summary": {
-        "es": "Sorell es hallada junto al cuerpo de Zao y queda bajo sospecha. Rao se niega a aceptar la explicación fácil: el tráiler no revela quién tiene razón.",
-        "en": "Sorell is found beside Zao's body and falls under suspicion. Rao refuses to accept the easy explanation: the trailer does not reveal who is right."
+        "es": "Sorell es hallada arrodillada junto a alguien y queda bajo sospecha. Rao se niega a aceptar la explicación fácil: el tráiler no revela quién tiene razón.",
+        "en": "Sorell is found kneeling over someone and falls under suspicion. Rao refuses to accept the easy explanation: the trailer does not reveal who is right."
       },
       "importance": "required",
       "causalLinks": [

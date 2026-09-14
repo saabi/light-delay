@@ -1,5 +1,39 @@
 # Changelog
 
+## 2026-09-14 — Fact-based trailer spoiler gate
+
+- New `check:trailer-master-spoilers` (wired into `generated:check`) protects the live
+  `script:light-delay-trailer-master` — the previous `check:trailer-spoilers` only ever
+  checked the deprecated `light-delay-trailer.json`, so the current trailer had no automated
+  spoiler coverage at all.
+- Trailer cues now inherit `implementsFactIds` from the Festival-master cues they're sourced
+  from (`npm run fit:trailer-master-facts` / `report:trailer-master-facts`), binding by cue
+  content rather than adjacency (one condensed cue, `cue-e-01`, needed a content-verified
+  override rather than its source cue's full fact set — see
+  `scripts/lib/trailer-master-facts.mjs`).
+- Added `scripts/lib/trailer-master-omitted-facts.mjs`: the explicit list of `master:fact-*`
+  ids the trailer must never disclose (Zao's death, the culprit's actions/identity, send
+  confirmation, resolution), with rationale for what's deliberately excluded.
+- Fixed a real disclosure the new gate caught: `shot-d-01`'s description and the outline's
+  matching step both said "found beside Zao's body," confirming both her death and whose it
+  was, even though the shot's own spoken line stays properly ambiguous. Reworded to "found
+  beside Zao's body" → "kneeling over someone" (script + outline, en/es).
+- Added `outline:light-delay-trailer-master`'s `derivation` (pinned to the Festival-master
+  outline), which needed widening `derivation.fidelity` to an enum
+  (`complete_causal_chain` | `deliberate_omission`) in the outline schema and types — the new
+  value intentionally skips the full master-step-coverage check that only makes sense for a
+  complete adaptation, not a deliberate-omission cut.
+- Fixed the stale `trailerMasterScript.spec.ts` assertion expecting some takes to still need
+  their own standalone prompt: all 22/22 now reuse a Festival-master frame (documented as
+  deliberate in `docs/wip/trailer-master-blueprint.en.md` and the 2026-09-12/13 entries
+  below) — the test never got updated after that backfill. Cleared the resulting 7 leftover,
+  unused `generation.prompt`s (two of which described Harlan's sabotage — dead data, not
+  narrative canon).
+- Resolved `AUTHOR_NAME_PLACEHOLDER` in the end credits (Sebastian Ferreyra Pons) and fixed
+  `cue-g-3/4/5` → `cue-g-03/04/05` id padding.
+- Registered `trailer-master` as an authorized derivative in `data/editorial-lifecycle.json`
+  (previously only the deprecated trailer was listed there).
+
 ## 2026-09-14 - Complete Festival-master visual-stretch batch
 
 - Generated, visually checked, and registered the remaining 14 approved stretch sheets; all 29 authored Festival-master stretches now have registered sheets.

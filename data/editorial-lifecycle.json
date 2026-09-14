@@ -70,6 +70,22 @@
       ]
     },
     {
+      "id": "lifecycle:master-trailer-derivative",
+      "status": "active",
+      "relevance": "required",
+      "disposition": "retain",
+      "reason": {
+        "es": "Derivado del tráiler WIP autorizado (fijado a la revisión de la escaleta Festival-master en derivation, fidelity deliberate_omission); guion EN, cues con implementsFactIds heredados de master:fact-* vía Festival-master, lista explícita de facts omitidos deliberadamente, blueprint de storyboard.",
+        "en": "Authorized trailer WIP derivative (pinned via outline.derivation to the Festival-master outline revision, fidelity deliberate_omission); English screenplay, cues with implementsFactIds inherited from master:fact-* via Festival-master, an explicit deliberate-omission fact list, storyboard blueprint."
+      },
+      "refs": [
+        { "kind": "script", "id": "script:light-delay-trailer-master" },
+        { "kind": "outline", "id": "outline:light-delay-trailer-master" },
+        { "kind": "static_file", "id": "docs/wip/trailer-master-blueprint.en.md" },
+        { "kind": "static_file", "id": "scripts/lib/trailer-master-omitted-facts.mjs" }
+      ]
+    },
+    {
       "id": "lifecycle:current-editorial-contracts",
       "status": "active",
       "relevance": "platform",

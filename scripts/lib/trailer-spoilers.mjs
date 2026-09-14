@@ -1,4 +1,4 @@
-const RULES = [
+export const RULES = [
 	{
 		id: 'culprit-identity',
 		message: 'The trailer identifies the culprit.',
@@ -57,15 +57,16 @@ function collectStrings(value, path = '$', output = []) {
 }
 
 /**
- * @param {...unknown} documents
+ * @param {{ id: string, message: string, pattern: RegExp }[]} rules
+ * @param {unknown[]} documents
  * @returns {SpoilerHit[]}
  */
-export function findTrailerSpoilers(...documents) {
+export function scanWithRules(rules, documents) {
 	/** @type {SpoilerHit[]} */
 	const hits = [];
 	for (const [documentIndex, document] of documents.entries()) {
 		for (const item of collectStrings(document)) {
-			for (const rule of RULES) {
+			for (const rule of rules) {
 				if (rule.pattern.test(item.text)) {
 					hits.push({
 						ruleId: rule.id,
@@ -79,4 +80,12 @@ export function findTrailerSpoilers(...documents) {
 		}
 	}
 	return hits;
+}
+
+/**
+ * @param {...unknown} documents
+ * @returns {SpoilerHit[]}
+ */
+export function findTrailerSpoilers(...documents) {
+	return scanWithRules(RULES, documents);
 }

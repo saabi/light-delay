@@ -33,21 +33,24 @@ describe('master-derived trailer', () => {
 		}
 	});
 
-	it('reuses already-generated Festival-master frames where they exist, and gives every other take its own standalone prompt', () => {
+	it('reuses an already-generated Festival-master frame for every take, and carries no leftover standalone prompt once reused', () => {
 		const script = getScript(scriptId);
 		let reused = 0;
 		let ownPrompt = 0;
 		for (const take of script.takes) {
 			if (take.imageAssetId) {
 				reused += 1;
+				// Regeneration finished for the takes that used to need their own prompt
+				// (docs/wip/trailer-master-blueprint.en.md, PROJECT_STATUS 2026-09-12/13); a
+				// take that now reuses a frame shouldn't still carry a dead standalone prompt.
+				expect(take.generation, take.id).toBeUndefined();
 			} else {
 				ownPrompt += 1;
 				expect(take.generation?.prompt, take.id).toBeTruthy();
 			}
 		}
-		expect(reused).toBeGreaterThan(0);
-		expect(ownPrompt).toBeGreaterThan(0);
-		expect(reused + ownPrompt).toBe(script.takes.length);
+		expect(reused).toBe(script.takes.length);
+		expect(ownPrompt).toBe(0);
 	});
 
 	it('sums scene durations to the script target duration', () => {
