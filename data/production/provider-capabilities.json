@@ -59,10 +59,10 @@
       "confidence": "provisional",
       "executable": false,
       "limits": {
-        "maxImages": 8,
+        "maxImages": 5,
         "maxVideos": 0,
         "maxAudios": 0,
-        "maxTotalReferences": 8,
+        "maxTotalReferences": 5,
         "maxDurationMs": null,
         "maxOutputsPerRequest": 1,
         "maxConcurrentRequests": null

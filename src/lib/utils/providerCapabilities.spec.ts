@@ -34,18 +34,18 @@ describe('provider-capabilities resolver', () => {
 			id: 'provider:test:legacy',
 			provider: 'openai',
 			model: 'gpt-image-2',
-			limits: { maxImages: 8, maxVideos: 0, maxAudios: 0, maxTotalReferences: 8 }
+			limits: { maxImages: 5, maxVideos: 0, maxAudios: 0, maxTotalReferences: 5 }
 		});
 		expect(legacy?.medium).toBe('image');
 		expect(legacy?.limitSurface).toEqual(['model']);
 	});
 
 	it('keeps maxImages as input reference count for budget checks', () => {
-		const limits = { maxImages: 8, maxVideos: 0, maxAudios: 0, maxTotalReferences: 8 };
-		const eight = Array.from({ length: 8 }, (_, i) => ({ kind: 'image' as const, id: `a${i}` }));
-		expect(checkReferenceBudget(eight, limits).ok).toBe(true);
+		const limits = { maxImages: 5, maxVideos: 0, maxAudios: 0, maxTotalReferences: 5 };
+		const five = Array.from({ length: 5 }, (_, i) => ({ kind: 'image' as const, id: `a${i}` }));
+		expect(checkReferenceBudget(five, limits).ok).toBe(true);
 		expect(
-			checkReferenceBudget([...eight, { kind: 'image' as const, id: 'a8' }], limits).ok
+			checkReferenceBudget([...five, { kind: 'image' as const, id: 'a5' }], limits).ok
 		).toBe(false);
 	});
 

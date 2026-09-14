@@ -111,7 +111,7 @@
 		const attached = stretch.referenceAssetIds || [];
 		return evaluateReferenceBudget({
 			references: attached.map((id) => ({ kind: 'image' as const, id })),
-			limits: { maxImages: 8 },
+			limits: { maxImages: 5 },
 			requiredEntityIds,
 			entityReferenceIds,
 			packEntitiesByAssetId,

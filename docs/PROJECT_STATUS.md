@@ -4,6 +4,10 @@
 
 - Deleted legacy-site/. Migrated assets remain under static/assets/; the archive is no longer retained in-tree for rescue.
 
+## 2026-09-14 — gpt-image-2 still reference cap is 5 (English source)
+
+- Still stretch reference budgeting uses five image inputs per request; older eight-image assumptions are obsolete.
+
 ## 2026-09-14 — Operations Gallery blocking completed (English source)
 
 - Authored the six-person blocking map for the opening Operations Gallery stretch: Harlan–Sorell–Voss in front, Zao–Rao–Okoye behind, with stable eyelines and in-place turns across shots 001–003.

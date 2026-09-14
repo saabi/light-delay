@@ -4,6 +4,10 @@
 
 - Deleted the obsolete legacy-site/ static archive (HTML pages and residual character/location/prop/vehicle/animatic assets). Current product assets live under static/assets/; do not treat the removed tree as authority or a regression baseline.
 
+## 2026-09-14 — Correct gpt-image-2 still reference cap to 5
+
+- Provisional `gpt-image-2` still limits are `maxImages: 5` / `maxTotalReferences: 5` in `provider-capabilities.json`; UI budget preview and provider tests match that ceiling.
+
 ## 2026-09-14 — Complete Operations Gallery stretch blocking
 
 - Added the authored six-person blocking map for `festival-master:stretch-operations-gallery-001-003`: Harlan–Sorell–Voss in the foreground and Zao–Rao–Okoye behind them, with stable eyelines and in-place turns across shots 001–003.

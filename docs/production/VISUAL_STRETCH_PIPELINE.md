@@ -4,6 +4,8 @@ English source. Not narrative authority. Implements shared multi-shot still cohe
 
 ## Purpose
 
+**Current provider snapshot correction:** the provisional `gpt-image-2` still-reference cap is **5 image inputs per request** (and `maxTotalReferences: 5`). Any older reference to an 8-image cap in retained plan prose is superseded by `data/production/provider-capabilities.json` and must not be used for new generation jobs.
+
 Consecutive same-location shots often share cast layout, physics, and lighting. Still prompts are **stateless** (`DIALOGUE_AND_PROMPT_LESSONS.md` §2c), so independent generations drift. A **visual stretch** on `ScriptFile.visualStretches[]` holds stretch-constant blocking once; the compiler builds **one ordered multi-panel storyboard sheet**; the repository **splits** panels into derived candidate takes. Seedance later attaches those panels as ordered keyframes (`SEEDANCE_PROMPTING.md` §6.2) and may attach the sheet as an optional blocking reference.
 
 ## Authority
