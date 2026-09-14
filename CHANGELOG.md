@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-09-14 - Regenerate independent Festival-master stills
+
+- Regenerated and registered the 16 selected independent stills flagged for continuity, composition, or quality correction (013b, 016b, 037-041, 045b, 068-070, 074-076, 089-090).
+- Each replacement was visually checked against its current prompt and references; all remain 
+eeds_review for editorial acceptance.
+
+## 2026-09-14 - Split and promote Festival-master stretch panels
+
+- Split 24 previously unsplit stretch sheets into 68 panel PNGs and registered each panel as a derived storyboard asset.
+- Promoted all 83 visual-stretch panel takes across the 29 authored stretches, including the previously registered candidate panels, so selected storyboard takes now use panel assets.
+- Rebuilt production plans after selection changes; no narrative, dialogue, or shot ordering changed.
+- Added scripts/register-festival-master-stretch-manifest.mjs and shared still-prompt compile helper for sheet/panel manifest records.
+
 ## 2026-09-14 — Fact-based trailer spoiler gate
 
 - New `check:trailer-master-spoilers` (wired into `generated:check`) protects the live

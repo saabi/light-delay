@@ -4577,7 +4577,7 @@
         "es": "festival-master:cue-0003",
         "en": "festival-master:cue-0003"
       },
-      "durationMs": 9259,
+      "durationMs": 9900,
       "metadata": {
         "scriptCueId": "festival-master:cue-0003",
         "lang": "en",
@@ -8148,12 +8148,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-037; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-037; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T01:40:00.000Z"
+        "generatedAt": "2026-09-14T16:46:57.393Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8166,10 +8166,9 @@
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-037",
         "explanation": {
-          "es": "Imagen regenerada con las referencias vigentes; pendiente de revisión editorial.",
-          "en": "Image regenerated with current references; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -8187,12 +8186,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-038; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-038; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T01:40:00.000Z"
+        "generatedAt": "2026-09-14T16:51:00.488Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8205,10 +8204,9 @@
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-038",
         "explanation": {
-          "es": "Imagen regenerada con las referencias vigentes; pendiente de revisión editorial.",
-          "en": "Image regenerated with current references; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -8226,12 +8224,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-039; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-039; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T01:40:00.000Z"
+        "generatedAt": "2026-09-14T16:52:41.854Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8244,10 +8242,9 @@
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-039",
         "explanation": {
-          "es": "Imagen regenerada con las referencias vigentes; pendiente de revisión editorial.",
-          "en": "Image regenerated with current references; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -8303,12 +8300,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-041; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-041; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T20:24:00.000Z"
+        "generatedAt": "2026-09-14T16:56:29.484Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8322,8 +8319,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen generada; la aceptación editorial está pendiente.",
-          "en": "Regenerated storyboard still; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -8495,12 +8492,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-045; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-045b; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T03:00:00.000Z"
+        "generatedAt": "2026-09-14T16:58:47.947Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -8513,10 +8510,9 @@
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-045b",
         "explanation": {
-          "es": "Imagen regenerada con las referencias vigentes; pendiente de revisión editorial.",
-          "en": "Image regenerated with current references; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -9372,12 +9368,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-068; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-068; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:35:52.827Z"
+        "generatedAt": "2026-09-14T17:01:44.431Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9391,8 +9387,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -9410,12 +9406,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-069; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-069; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:37:41.077Z"
+        "generatedAt": "2026-09-14T17:03:41.542Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9429,8 +9425,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -9448,12 +9444,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-070; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-070; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:39:30.209Z"
+        "generatedAt": "2026-09-14T17:05:35.198Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9467,8 +9463,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -9602,12 +9598,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-074; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-074; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T03:00:00.000Z"
+        "generatedAt": "2026-09-14T17:09:09.678Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9620,10 +9616,9 @@
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-074",
         "explanation": {
-          "es": "Imagen regenerada con las referencias vigentes; pendiente de revisión editorial.",
-          "en": "Image regenerated with current references; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -9641,12 +9636,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-075; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-075; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T04:00:00.000Z"
+        "generatedAt": "2026-09-14T17:12:26.013Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9659,10 +9654,9 @@
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-075",
         "explanation": {
-          "es": "Imagen regenerada con las referencias vigentes; pendiente de revisión editorial.",
-          "en": "Image regenerated with current references; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -9680,12 +9674,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-076; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-076; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:43:29.375Z"
+        "generatedAt": "2026-09-14T17:14:11.825Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9699,8 +9693,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -9907,12 +9901,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-040b; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-040b; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:09:58.882Z"
+        "generatedAt": "2026-09-14T16:54:33.799Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -9926,8 +9920,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -10250,12 +10244,12 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-089; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-089; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T22:10:00.000Z"
+        "generatedAt": "2026-09-14T17:18:05.507Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -10268,10 +10262,9 @@
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-089",
         "explanation": {
-          "es": "Imagen regenerada con la referencia vigente; pendiente de revisión editorial.",
-          "en": "Image regenerated with the current reference; editorial review pending."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -10289,12 +10282,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-090; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-090; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:58:38.757Z"
+        "generatedAt": "2026-09-14T17:26:37.241Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -10308,8 +10301,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -10673,12 +10666,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-013b; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-013b; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:01:54.317Z"
+        "generatedAt": "2026-09-14T16:43:58.138Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -10692,8 +10685,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -10711,12 +10704,12 @@
         "es": "Imagen de storyboard regenerada para festival-master:shot-plan-016b; pendiente de revisiÃ³n editorial.",
         "en": "Regenerated storyboard still for festival-master:shot-plan-016b; pending editorial review."
       },
-      "width": 1672,
-      "height": 941,
+      "width": 1536,
+      "height": 1024,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:06:24.408Z"
+        "generatedAt": "2026-09-14T16:43:58.138Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -10730,8 +10723,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -12946,6 +12939,2454 @@
         "explanation": {
           "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
           "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "shotId": "festival-master:shot-plan-029",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "shotId": "festival-master:shot-plan-030",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "shotId": "festival-master:shot-plan-031",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-panel-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-04.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "shotId": "festival-master:shot-plan-032",
+        "panelOrder": 4,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-record-033-036-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "shotId": "festival-master:shot-plan-033",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-record-033-036-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "shotId": "festival-master:shot-plan-034",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-record-033-036-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "shotId": "festival-master:shot-plan-035",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-record-033-036-panel-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/panel-04.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "shotId": "festival-master:shot-plan-036",
+        "panelOrder": 4,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-sorell-042-043-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-sorell-042-043/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
+        "stretchJobId": "festival-master:stretch-reactor-sorell-042-043:rev-1",
+        "shotId": "festival-master:shot-plan-042",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-sorell-042-043-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-sorell-042-043/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
+        "stretchJobId": "festival-master:stretch-reactor-sorell-042-043:rev-1",
+        "shotId": "festival-master:shot-plan-043",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-harlan-alibi-044-045/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
+        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
+        "shotId": "festival-master:shot-plan-044",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-harlan-alibi-044-045/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
+        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
+        "shotId": "festival-master:shot-plan-045",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "originalAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "shotId": "festival-master:shot-plan-054",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "originalAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "shotId": "festival-master:shot-plan-055",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "originalAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "shotId": "festival-master:shot-plan-056",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "shotId": "festival-master:shot-plan-057",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "shotId": "festival-master:shot-plan-058",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-vector-057-059-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "shotId": "festival-master:shot-plan-059",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-packet-open-060-061/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.854Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "shotId": "festival-master:shot-plan-060",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-packet-open-060-061/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:24.854Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "shotId": "festival-master:shot-plan-061",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-flashback-062-063-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-flashback-062-063/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.082Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "shotId": "festival-master:shot-plan-062",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-flashback-062-063-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-flashback-062-063/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.082Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "shotId": "festival-master:shot-plan-063",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "shotId": "festival-master:shot-plan-083",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "shotId": "festival-master:shot-plan-084",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "shotId": "festival-master:shot-plan-085",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-04.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "shotId": "festival-master:shot-plan-086",
+        "panelOrder": 4,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-velari-answer-087-088-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "originalAssetId": "asset:festival-master-stretch-velari-answer-087-088-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-velari-answer-087-088",
+        "stretchJobId": "festival-master:stretch-velari-answer-087-088:rev-1",
+        "shotId": "festival-master:shot-plan-087",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-velari-answer-087-088-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "originalAssetId": "asset:festival-master-stretch-velari-answer-087-088-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-velari-answer-087-088",
+        "stretchJobId": "festival-master:stretch-velari-answer-087-088:rev-1",
+        "shotId": "festival-master:shot-plan-088",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-velari-envoy-091-092-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "originalAssetId": "asset:festival-master-stretch-velari-envoy-091-092-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
+        "stretchJobId": "festival-master:stretch-velari-envoy-091-092:rev-1",
+        "shotId": "festival-master:shot-plan-091",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-velari-envoy-091-092-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "originalAssetId": "asset:festival-master-stretch-velari-envoy-091-092-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
+        "stretchJobId": "festival-master:stretch-velari-envoy-091-092:rev-1",
+        "shotId": "festival-master:shot-plan-092",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-watch-093-094-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-watch-093-094/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.976Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-watch-093-094-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-watch-093-094",
+        "stretchJobId": "festival-master:stretch-bridge-watch-093-094:rev-1",
+        "shotId": "festival-master:shot-plan-093",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-watch-093-094-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-watch-093-094/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:25.976Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-watch-093-094-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-watch-093-094",
+        "stretchJobId": "festival-master:stretch-bridge-watch-093-094:rev-1",
+        "shotId": "festival-master:shot-plan-094",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-report-095-096-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-report-095-096/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.195Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-report-095-096-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-report-095-096",
+        "stretchJobId": "festival-master:stretch-reactor-report-095-096:rev-1",
+        "shotId": "festival-master:shot-plan-095",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-report-095-096-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-report-095-096/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.195Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-report-095-096-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-report-095-096",
+        "stretchJobId": "festival-master:stretch-reactor-report-095-096:rev-1",
+        "shotId": "festival-master:shot-plan-096",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-engineering-audit-016-017-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-engineering-audit-016-017/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.432Z",
+        "originalAssetId": "asset:festival-master-stretch-engineering-audit-016-017-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-engineering-audit-016-017",
+        "stretchJobId": "festival-master:stretch-engineering-audit-016-017:rev-1",
+        "shotId": "festival-master:shot-plan-016",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-engineering-audit-016-017-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-engineering-audit-016-017/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.432Z",
+        "originalAssetId": "asset:festival-master-stretch-engineering-audit-016-017-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-engineering-audit-016-017",
+        "stretchJobId": "festival-master:stretch-engineering-audit-016-017:rev-1",
+        "shotId": "festival-master:shot-plan-017",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-entrance-018-019-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.670Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-entrance-018-019",
+        "stretchJobId": "festival-master:stretch-reactor-entrance-018-019:rev-1",
+        "shotId": "festival-master:shot-plan-018",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-entrance-018-019-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.670Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-entrance-018-019",
+        "stretchJobId": "festival-master:stretch-reactor-entrance-018-019:rev-1",
+        "shotId": "festival-master:shot-plan-019",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-discovery-020-022-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-discovery-020-022/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.887Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-discovery-020-022-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1",
+        "shotId": "festival-master:shot-plan-020",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-discovery-020-022-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-discovery-020-022/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.887Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-discovery-020-022-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1",
+        "shotId": "festival-master:shot-plan-021",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-discovery-020-022-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-discovery-020-022/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:26.887Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-discovery-020-022-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1",
+        "shotId": "festival-master:shot-plan-022",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-service-cylinder-route-026-028-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-route-026-028/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.113Z",
+        "originalAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
+        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "shotId": "festival-master:shot-plan-026",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-service-cylinder-route-026-028-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-route-026-028/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.113Z",
+        "originalAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
+        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "shotId": "festival-master:shot-plan-027",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-service-cylinder-route-026-028-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-route-026-028/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.113Z",
+        "originalAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
+        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "shotId": "festival-master:shot-plan-028",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
+        "shotId": "festival-master:shot-plan-023",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
+        "shotId": "festival-master:shot-plan-024",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
+        "shotId": "festival-master:shot-plan-025",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-investigation-046-049-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-investigation-046-049/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "shotId": "festival-master:shot-plan-046",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-investigation-046-049-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-investigation-046-049/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "shotId": "festival-master:shot-plan-047",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-investigation-046-049-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-investigation-046-049/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "shotId": "festival-master:shot-plan-048",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-investigation-046-049-panel-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-investigation-046-049/panel-04.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "shotId": "festival-master:shot-plan-049",
+        "panelOrder": 4,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "shotId": "festival-master:shot-plan-050",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "shotId": "festival-master:shot-plan-051",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "shotId": "festival-master:shot-plan-052",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-04.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "shotId": "festival-master:shot-plan-053",
+        "panelOrder": 4,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-064-067/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "shotId": "festival-master:shot-plan-064",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-064-067/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "shotId": "festival-master:shot-plan-065",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-064-067/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "shotId": "festival-master:shot-plan-066",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-064-067/panel-04.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "shotId": "festival-master:shot-plan-067",
+        "panelOrder": 4,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-device-071-073/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:28.196Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-device-071-073-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
+        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
+        "shotId": "festival-master:shot-plan-071",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-device-071-073-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-device-071-073/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:28.196Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-device-071-073-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
+        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
+        "shotId": "festival-master:shot-plan-072",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-device-071-073-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-device-071-073/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:28.196Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-device-071-073-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
+        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
+        "shotId": "festival-master:shot-plan-073",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-confrontation-077-079-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-confrontation-077-079/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:28.405Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-confrontation-077-079-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-confrontation-077-079",
+        "stretchJobId": "festival-master:stretch-reactor-confrontation-077-079:rev-1",
+        "shotId": "festival-master:shot-plan-077",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-confrontation-077-079-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-confrontation-077-079/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:28.405Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-confrontation-077-079-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-confrontation-077-079",
+        "stretchJobId": "festival-master:stretch-reactor-confrontation-077-079:rev-1",
+        "shotId": "festival-master:shot-plan-078",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-confrontation-077-079-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-confrontation-077-079/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:23:28.405Z",
+        "originalAssetId": "asset:festival-master-stretch-reactor-confrontation-077-079-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-confrontation-077-079",
+        "stretchJobId": "festival-master:stretch-reactor-confrontation-077-079:rev-1",
+        "shotId": "festival-master:shot-plan-079",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-recovery-080-082-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/panel-01.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:24:10.243Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-recovery-080-082-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1",
+        "shotId": "festival-master:shot-plan-080",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-recovery-080-082-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/panel-02.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:24:10.243Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-recovery-080-082-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1",
+        "shotId": "festival-master:shot-plan-081",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.078125,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-recovery-080-082-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/panel-03.png",
+      "mimeType": "image/png",
+      "width": 753,
+      "height": 422,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-14T16:24:10.243Z",
+        "originalAssetId": "asset:festival-master-stretch-vault-recovery-080-082-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1",
+        "shotId": "festival-master:shot-plan-082",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.411875,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     }

@@ -3870,7 +3870,7 @@
             "status": "source",
             "delivery": "broadcast-clear; urgency held behind professional control",
             "voiceProfileId": "voice:reporter-en",
-            "estimatedDurationMs": 9259,
+            "estimatedDurationMs": 9900,
             "audioAssetId": "asset:dialogue-light-delay-festival-master-en-festival-master-cue-0003"
           },
           "es": {
@@ -11646,7 +11646,7 @@
         "festival-master:shot-plan-004:take-01",
         "festival-master:shot-plan-004:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-004:take-01",
+      "selectedTakeId": "festival-master:shot-plan-004:take-02",
       "purpose": {
         "es": "Zao nombra lo que vio en Harlan, en privado y sin acusar.",
         "en": "Zao names what she saw in Harlan, privately and without accusation."
@@ -11710,7 +11710,7 @@
         "festival-master:shot-plan-005:take-01",
         "festival-master:shot-plan-005:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-005:take-01",
+      "selectedTakeId": "festival-master:shot-plan-005:take-02",
       "purpose": {
         "es": "Voss descarta la advertencia con afecto; Zao la deja en pie.",
         "en": "Voss dismisses the warning fondly; Zao lets it stand."
@@ -12361,7 +12361,7 @@
         "festival-master:shot-plan-013:take-01",
         "festival-master:shot-plan-013:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-013:take-01",
+      "selectedTakeId": "festival-master:shot-plan-013:take-02",
       "purpose": {
         "es": "Escena «Primer descenso de gravedad»: hacer visible — En el periapsis de Júpiter, el empuje se corta.",
         "en": "Scene \"First gravity dip\": make visible — At Jupiter periapsis, thrust cuts."
@@ -12434,7 +12434,7 @@
         "festival-master:shot-plan-014:take-01",
         "festival-master:shot-plan-014:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-014:take-01",
+      "selectedTakeId": "festival-master:shot-plan-014:take-02",
       "purpose": {
         "es": "Escena «Primer descenso de gravedad»: Elin Rao — marcar el cambio físico sin explicarlo.",
         "en": "Scene \"First gravity dip\": Elin Rao — mark the physical change without explaining it."
@@ -12507,7 +12507,7 @@
         "festival-master:shot-plan-015:take-01",
         "festival-master:shot-plan-015:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-015:take-01",
+      "selectedTakeId": "festival-master:shot-plan-015:take-02",
       "purpose": {
         "es": "Escena «Primer descenso de gravedad»: Zao — mantener a los demás firmes durante la maniobra.",
         "en": "Scene \"First gravity dip\": Zao — steady the others through the maneuver."
@@ -12620,9 +12620,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-016:take-01"
+        "festival-master:shot-plan-016:take-01",
+        "festival-master:shot-plan-016:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-016:take-01",
+      "selectedTakeId": "festival-master:shot-plan-016:take-02",
       "purpose": {
         "es": "Escena «El encendido extra»: Zao — descartar fallo de motor e identificar la masa oculta.",
         "en": "Scene \"The extra burn\": Zao — notice the fuel discrepancy before investigating its cause; Zao — eliminate engine failure and identify hidden mass."
@@ -12682,9 +12683,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-017:take-01"
+        "festival-master:shot-plan-017:take-01",
+        "festival-master:shot-plan-017:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-017:take-01",
+      "selectedTakeId": "festival-master:shot-plan-017:take-02",
       "purpose": {
         "es": "Escena «El encendido extra»: Zao — apostar por la discrepancia de masa.",
         "en": "Scene \"The extra burn\": Zao — commit to the mass discrepancy."
@@ -12752,9 +12754,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-018:take-01"
+        "festival-master:shot-plan-018:take-01",
+        "festival-master:shot-plan-018:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-018:take-01",
+      "selectedTakeId": "festival-master:shot-plan-018:take-02",
       "purpose": {
         "es": "Escena «Una dirección»: Harlan — hacer que el encuentro suene rutinario; Zao — responder sin acusarlo.",
         "en": "Scene \"A direction\": Harlan — make the encounter sound routine; Zao — answer without accusing him."
@@ -12822,9 +12825,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-019:take-01"
+        "festival-master:shot-plan-019:take-01",
+        "festival-master:shot-plan-019:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-019:take-01",
+      "selectedTakeId": "festival-master:shot-plan-019:take-02",
       "purpose": {
         "es": "Escena «Una dirección»: Harlan — explicar su acceso y el cierre incompleto; Zao — entrar sin revelar sospecha.",
         "en": "Scene \"A direction\": Harlan — explain his access and the imperfect closure; Zao — enter without revealing suspicion."
@@ -12882,9 +12886,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-020:take-01"
+        "festival-master:shot-plan-020:take-01",
+        "festival-master:shot-plan-020:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-020:take-01",
+      "selectedTakeId": "festival-master:shot-plan-020:take-02",
       "purpose": {
         "es": "Escena «El paquete»: hacer visible — Dentro de la cámara acorazada, asegurada a medias, Zao sigue marcas y el pico de neutrones hasta un paquete de impulso geofísico de Proxima.",
         "en": "Scene \"The package\": make visible — Inside the incompletely secured vault, Zao follows markings and the neutron peak to a Proxima geophysical impulse package."
@@ -12944,9 +12949,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-021:take-01"
+        "festival-master:shot-plan-021:take-01",
+        "festival-master:shot-plan-021:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-021:take-01",
+      "selectedTakeId": "festival-master:shot-plan-021:take-02",
       "purpose": {
         "es": "Escena «El paquete»: Zao — identificar la masa oculta; Zao — reconocer la potencia y que sólo el temporizador está puesto a la llegada.",
         "en": "Scene \"The package\": Zao — identify the hidden mass; Zao — recognize the yield and that only the timer is set to arrival."
@@ -13001,9 +13007,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-022:take-01"
+        "festival-master:shot-plan-022:take-01",
+        "festival-master:shot-plan-022:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-022:take-01",
+      "selectedTakeId": "festival-master:shot-plan-022:take-02",
       "purpose": {
         "es": "Escena «El paquete»: Zao — identificar a Harlan como el responsable probable; Zao — comprometerse con un curso de acción.",
         "en": "Scene \"The package\": Zao — identify Harlan as the likely culprit; Zao — commit to a course of action."
@@ -13081,9 +13088,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-023:take-01"
+        "festival-master:shot-plan-023:take-01",
+        "festival-master:shot-plan-023:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-023:take-01",
+      "selectedTakeId": "festival-master:shot-plan-023:take-02",
       "purpose": {
         "es": "Escena «La advertencia se corta»: Zao (fuera de cuadro) — hacer actuar a Voss antes de nombrar a un culpable no probado.",
         "en": "Scene \"The warning breaks\": Zao (off-frame) — make Voss act before naming an unproven culprit."
@@ -13146,9 +13154,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-024:take-01"
+        "festival-master:shot-plan-024:take-01",
+        "festival-master:shot-plan-024:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-024:take-01",
+      "selectedTakeId": "festival-master:shot-plan-024:take-02",
       "purpose": {
         "es": "Escena «La advertencia se corta»: Voss (fuera de cuadro) — restablecer el contacto.",
         "en": "Scene \"The warning breaks\": Voss (off-frame) — restore contact."
@@ -13218,9 +13227,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-025:take-01"
+        "festival-master:shot-plan-025:take-01",
+        "festival-master:shot-plan-025:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-025:take-01",
+      "selectedTakeId": "festival-master:shot-plan-025:take-02",
       "purpose": {
         "es": "Escena «La advertencia se corta»: Elin Rao — medir el alcance del corte; Voss — separar respuestas técnicas y de protección.",
         "en": "Scene \"The warning breaks\": Elin Rao — identify the scope of the outage; Voss — split technical and protective responses."
@@ -13278,9 +13288,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-026:take-01"
+        "festival-master:shot-plan-026:take-01",
+        "festival-master:shot-plan-026:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-026:take-01",
+      "selectedTakeId": "festival-master:shot-plan-026:take-02",
       "purpose": {
         "es": "Escena «Dos rutas hacia popa»: hacer visible — En la bandeja bajo la escotilla, Harlan desconecta, sin decir palabra, los mazos cableados de comunicaciones y cámaras, y luego se lanza en caída balística por el conducto de servicio.",
         "en": "Scene \"Two routes aft\": make visible — At the tray below the hatch, Harlan disconnects the wired communications and camera trunks without speaking, then launches ballistically down the service shaft."
@@ -13340,9 +13351,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-027:take-01"
+        "festival-master:shot-plan-027:take-01",
+        "festival-master:shot-plan-027:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-027:take-01",
+      "selectedTakeId": "festival-master:shot-plan-027:take-02",
       "purpose": {
         "es": "Escena «Dos rutas hacia popa»: Sorell — ofrecer la acción útil que permite su especialidad; Voss — enviar ayuda sin ignorar la incertidumbre.",
         "en": "Scene \"Two routes aft\": Sorell — offer the useful action her specialty allows; Voss — send help without ignoring uncertainty."
@@ -13397,9 +13409,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-028:take-01"
+        "festival-master:shot-plan-028:take-01",
+        "festival-master:shot-plan-028:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-028:take-01",
+      "selectedTakeId": "festival-master:shot-plan-028:take-02",
       "purpose": {
         "es": "Escena «Dos rutas hacia popa»: Sorell — obedecer la orden de escolta antes de seguir.",
         "en": "Scene \"Two routes aft\": Sorell — obey the escort order before proceeding."
@@ -13454,9 +13467,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-029:take-01"
+        "festival-master:shot-plan-029:take-01",
+        "festival-master:shot-plan-029:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-029:take-01",
+      "selectedTakeId": "festival-master:shot-plan-029:take-02",
       "purpose": {
         "es": "Escena «Ni de vuelta, ni a través»: Zao — terminar su idea y pedir confirmación.",
         "en": "Scene \"Not back, not through\": Zao — complete her thought and seek confirmation."
@@ -13516,9 +13530,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-030:take-01"
+        "festival-master:shot-plan-030:take-01",
+        "festival-master:shot-plan-030:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-030:take-01",
+      "selectedTakeId": "festival-master:shot-plan-030:take-02",
       "purpose": {
         "es": "Escena «Ni de vuelta, ni a través»: Zao — reconocer un aislamiento coordinado.",
         "en": "Scene \"Not back, not through\": Zao — recognize coordinated isolation; Zao — state the goal before evaluating destinations."
@@ -13578,9 +13593,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-031:take-01"
+        "festival-master:shot-plan-031:take-01",
+        "festival-master:shot-plan-031:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-031:take-01",
+      "selectedTakeId": "festival-master:shot-plan-031:take-02",
       "purpose": {
         "es": "Escena «Ni de vuelta, ni a través»: Zao — descartar las rutas obvias de aviso; Zao — rechazar un objetivo alienígena no confirmado.",
         "en": "Scene \"Not back, not through\": Zao — eliminate the obvious warning routes; Zao — reject an unconfirmed alien target."
@@ -13640,9 +13656,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-032:take-01"
+        "festival-master:shot-plan-032:take-01",
+        "festival-master:shot-plan-032:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-032:take-01",
+      "selectedTakeId": "festival-master:shot-plan-032:take-02",
       "purpose": {
         "es": "Escena «Ni de vuelta, ni a través»: Zao — apostar por la solución oculta.",
         "en": "Scene \"Not back, not through\": Zao — commit to the concealed solution."
@@ -13692,9 +13709,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-033:take-01"
+        "festival-master:shot-plan-033:take-01",
+        "festival-master:shot-plan-033:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-033:take-01",
+      "selectedTakeId": "festival-master:shot-plan-033:take-02",
       "purpose": {
         "es": "Escena «La grabación silenciosa»: hacer visible — Zao graba en memoria volátil.",
         "en": "Scene \"The silent recording\": make visible — Zao records into volatile memory."
@@ -13749,9 +13767,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-034:take-01"
+        "festival-master:shot-plan-034:take-01",
+        "festival-master:shot-plan-034:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-034:take-01",
+      "selectedTakeId": "festival-master:shot-plan-034:take-02",
       "purpose": {
         "es": "Escena «La grabación silenciosa»: Desde detrás de Zao, viéndola terminar la grabación; su postura está tensa, escuchando la vibración que se acerca desde la escotilla de servicio distante.",
         "en": "Scene \"The silent recording\": From behind Zao, watching her finish recording; her posture is tense, listening for the approaching vibration of the distant service hatch."
@@ -13811,9 +13830,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-035:take-01"
+        "festival-master:shot-plan-035:take-01",
+        "festival-master:shot-plan-035:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-035:take-01",
+      "selectedTakeId": "festival-master:shot-plan-035:take-02",
       "purpose": {
         "es": "Escena «La grabación silenciosa»: hacer visible — Firma el paquete, fija la divergencia y un barrido estrecho de incertidumbre, y transmite.",
         "en": "Scene \"The silent recording\": make visible — She signs the packet, sets divergence and a narrow uncertainty sweep, and transmits."
@@ -13878,9 +13898,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-036:take-01"
+        "festival-master:shot-plan-036:take-01",
+        "festival-master:shot-plan-036:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-036:take-01",
+      "selectedTakeId": "festival-master:shot-plan-036:take-02",
       "purpose": {
         "es": "Escena «Demasiado tarde para responder»: Harlan — averiguar si aún se puede detener la misión.",
         "en": "Scene \"Too late to answer\": Harlan — learn whether the mission can still be stopped."
@@ -14360,9 +14381,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-042:take-01"
+        "festival-master:shot-plan-042:take-01",
+        "festival-master:shot-plan-042:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-042:take-01",
+      "selectedTakeId": "festival-master:shot-plan-042:take-02",
       "purpose": {
         "es": "Escena «La imagen que Harlan quería»: Sorell — intentar traer de vuelta a Zao.",
         "en": "Scene \"The picture Harlan wanted\": Sorell — try to bring Zao back."
@@ -14427,9 +14449,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-043:take-01"
+        "festival-master:shot-plan-043:take-01",
+        "festival-master:shot-plan-043:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-043:take-01",
+      "selectedTakeId": "festival-master:shot-plan-043:take-02",
       "purpose": {
         "es": "Escena «La imagen que Harlan quería»: Sorell — pedir ayuda.",
         "en": "Scene \"The picture Harlan wanted\": Sorell — summon help."
@@ -14497,9 +14520,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-044:take-01"
+        "festival-master:shot-plan-044:take-01",
+        "festival-master:shot-plan-044:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-044:take-01",
+      "selectedTakeId": "festival-master:shot-plan-044:take-02",
       "offScreenCharacterIds": [
         "character:voss"
       ],
@@ -14562,9 +14586,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-045:take-01"
+        "festival-master:shot-plan-045:take-01",
+        "festival-master:shot-plan-045:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-045:take-01",
+      "selectedTakeId": "festival-master:shot-plan-045:take-02",
       "offScreenCharacterIds": [
         "character:voss"
       ],
@@ -14710,9 +14735,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-046:take-01"
+        "festival-master:shot-plan-046:take-01",
+        "festival-master:shot-plan-046:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-046:take-01",
+      "selectedTakeId": "festival-master:shot-plan-046:take-02",
       "purpose": {
         "es": "Escena «La sospecha viaja»: Harlan — fijar en Sorell la primera interpretación del puente.",
         "en": "Scene \"Suspicion travels\": Harlan — fix the bridge’s first interpretation on Sorell."
@@ -14787,9 +14813,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-047:take-01"
+        "festival-master:shot-plan-047:take-01",
+        "festival-master:shot-plan-047:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-047:take-01",
+      "selectedTakeId": "festival-master:shot-plan-047:take-02",
       "purpose": {
         "es": "Escena «La sospecha viaja»: Sorell — decir sólo lo que sabe; Okoye — asegurar la escena sin decidir culpabilidad.",
         "en": "Scene \"Suspicion travels\": Sorell — state only what she knows; Okoye — secure the scene without deciding guilt."
@@ -14864,9 +14891,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-048:take-01"
+        "festival-master:shot-plan-048:take-01",
+        "festival-master:shot-plan-048:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-048:take-01",
+      "selectedTakeId": "festival-master:shot-plan-048:take-02",
       "purpose": {
         "es": "Escena «La sospecha viaja»: Harlan — convertir el malentendido previo de Voss en motivo.",
         "en": "Scene \"Suspicion travels\": Harlan — turn Voss’s earlier misreading into motive."
@@ -14941,9 +14969,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-049:take-01"
+        "festival-master:shot-plan-049:take-01",
+        "festival-master:shot-plan-049:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-049:take-01",
+      "selectedTakeId": "festival-master:shot-plan-049:take-02",
       "purpose": {
         "es": "Escena «La sospecha viaja»: Elin Rao — resistir una acusación que llegó demasiado redonda; Voss — mantener la investigación viva durante el vuelo.",
         "en": "Scene \"Suspicion travels\": Elin Rao — resist an accusation that arrived too neatly; Voss — keep investigation active during flight."
@@ -15018,9 +15047,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-050:take-01"
+        "festival-master:shot-plan-050:take-01",
+        "festival-master:shot-plan-050:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-050:take-01",
+      "selectedTakeId": "festival-master:shot-plan-050:take-02",
       "purpose": {
         "es": "Escena «Una teoría, dos fracasos»: Harlan — unir las pistas en un caso contra Sorell; Voss — poner a prueba la teoría.",
         "en": "Scene \"One theory, two failures\": Harlan — join the clues into a case against Sorell; Voss — test the theory."
@@ -15095,9 +15125,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-051:take-01"
+        "festival-master:shot-plan-051:take-01",
+        "festival-master:shot-plan-051:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-051:take-01",
+      "selectedTakeId": "festival-master:shot-plan-051:take-02",
       "purpose": {
         "es": "Escena «Una teoría, dos fracasos»: Elin Rao — separar la inferencia de la evidencia.",
         "en": "Scene \"One theory, two failures\": Elin Rao — keep inference separate from evidence."
@@ -15172,9 +15203,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-052:take-01"
+        "festival-master:shot-plan-052:take-01",
+        "festival-master:shot-plan-052:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-052:take-01",
+      "selectedTakeId": "festival-master:shot-plan-052:take-02",
       "purpose": {
         "es": "Escena «Una teoría, dos fracasos»: Elin Rao — desmontar la acusación de sabotaje de combustible; Elin Rao — sustituir una causa falsa por dos problemas reales.",
         "en": "Scene \"One theory, two failures\": Elin Rao — break the fuel-sabotage claim; Elin Rao — replace one false cause with two real problems."
@@ -15249,9 +15281,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-053:take-01"
+        "festival-master:shot-plan-053:take-01",
+        "festival-master:shot-plan-053:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-053:take-01",
+      "selectedTakeId": "festival-master:shot-plan-053:take-02",
       "purpose": {
         "es": "Escena «Una teoría, dos fracasos»: Voss — ver cómo se debilita el caso contra Sorell; Elin Rao — cerrar la deducción.",
         "en": "Scene \"One theory, two failures\": Voss — recognize the case against Sorell weakening; Elin Rao — close the deduction."
@@ -15330,9 +15363,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-054:take-01"
+        "festival-master:shot-plan-054:take-01",
+        "festival-master:shot-plan-054:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-054:take-01",
+      "selectedTakeId": "festival-master:shot-plan-054:take-02",
       "purpose": {
         "es": "Escena «Tercer descenso de gravedad»: .",
         "en": "Scene \"Third gravity dip\": Elin Rao — state why the vault specifically, bridging back to the unresolved neutron source."
@@ -15392,9 +15426,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-055:take-01"
+        "festival-master:shot-plan-055:take-01",
+        "festival-master:shot-plan-055:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-055:take-01",
+      "selectedTakeId": "festival-master:shot-plan-055:take-02",
       "purpose": {
         "es": "Escena «Tercer descenso de gravedad»: Okoye — exponer el bloqueo; Harlan — mantener la sospecha sin revelar lo que sabe.",
         "en": "Scene \"Third gravity dip\": Okoye — state the obstruction; Harlan — preserve suspicion without exposing his knowledge."
@@ -15469,9 +15504,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-056:take-01"
+        "festival-master:shot-plan-056:take-01",
+        "festival-master:shot-plan-056:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-056:take-01",
+      "selectedTakeId": "festival-master:shot-plan-056:take-02",
       "purpose": {
         "es": "Escena «Tercer descenso de gravedad»: Elin Rao — negarse a otro puente sin sustento; Elin Rao — sembrar la solución de tiempos para después.",
         "en": "Scene \"Third gravity dip\": Elin Rao — refuse another unsupported bridge; Elin Rao — plant the later timing solution."
@@ -15551,9 +15587,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-057:take-01"
+        "festival-master:shot-plan-057:take-01",
+        "festival-master:shot-plan-057:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-057:take-01",
+      "selectedTakeId": "festival-master:shot-plan-057:take-02",
       "purpose": {
         "es": "Escena «La dirección vacía»: Harlan — enterrar el estallido como una acusación fallida; Elin Rao — mantener el vector vivo como evidencia.",
         "en": "Scene \"The empty direction\": Harlan — bury the burst as a failed accusation; Elin Rao — keep the vector alive as evidence."
@@ -15636,9 +15673,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-058:take-01"
+        "festival-master:shot-plan-058:take-01",
+        "festival-master:shot-plan-058:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-058:take-01",
+      "selectedTakeId": "festival-master:shot-plan-058:take-02",
       "purpose": {
         "es": "Escena «La dirección vacía»: Voss — autorizar la comparación con objetivo móvil; Elin Rao — probar un receptor en movimiento.",
         "en": "Scene \"The empty direction\": Voss — authorize the moving-target comparison; Elin Rao — test a moving receiver."
@@ -15698,9 +15736,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-059:take-01"
+        "festival-master:shot-plan-059:take-01",
+        "festival-master:shot-plan-059:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-059:take-01",
+      "selectedTakeId": "festival-master:shot-plan-059:take-02",
       "offScreenCharacterIds": [
         "character:rao"
       ],
@@ -15763,9 +15802,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-060:take-01"
+        "festival-master:shot-plan-060:take-01",
+        "festival-master:shot-plan-060:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-060:take-01",
+      "selectedTakeId": "festival-master:shot-plan-060:take-02",
       "offScreenCharacterIds": [
         "character:harlan",
         "character:okoye"
@@ -15844,9 +15884,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-061:take-01"
+        "festival-master:shot-plan-061:take-01",
+        "festival-master:shot-plan-061:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-061:take-01",
+      "selectedTakeId": "festival-master:shot-plan-061:take-02",
       "purpose": {
         "es": "Escena «Llega el mensaje de Zao»: Voss — escuchar la advertencia retenida.",
         "en": "Scene \"Zao’s message arrives\": Voss — hear the withheld warning."
@@ -15901,9 +15942,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-062:take-01"
+        "festival-master:shot-plan-062:take-01",
+        "festival-master:shot-plan-062:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-062:take-01",
+      "selectedTakeId": "festival-master:shot-plan-062:take-02",
       "purpose": {
         "es": "Escena «Llega el mensaje de Zao»: Zao — identificar el arma y evitar una respuesta fatal.",
         "en": "Scene \"Zao’s message arrives\": Zao — identify the weapon and prevent a fatal response."
@@ -15958,9 +16000,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-063:take-01"
+        "festival-master:shot-plan-063:take-01",
+        "festival-master:shot-plan-063:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-063:take-01",
+      "selectedTakeId": "festival-master:shot-plan-063:take-02",
       "purpose": {
         "es": "Escena «Llega el mensaje de Zao»: Zao — revelar por qué el intercepto complejo fue la única advertencia útil; Zao — dar una pista segura, señalar el peligro inmediato y despedirse.",
         "en": "Scene \"Zao’s message arrives\": Zao — reveal why the complex intercept was the only useful warning; Zao — supply a safe lead, identify immediate danger, and say farewell."
@@ -16035,9 +16078,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-064:take-01"
+        "festival-master:shot-plan-064:take-01",
+        "festival-master:shot-plan-064:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-064:take-01",
+      "selectedTakeId": "festival-master:shot-plan-064:take-02",
       "purpose": {
         "es": "Escena «Llega el mensaje de Zao»: Voss — detener el encuentro y asegurar al sospechoso nombrado; Okoye — impedir que Harlan se vaya.",
         "en": "Scene \"Zao’s message arrives\": Voss — stop the encounter and secure the named suspect; Okoye — prevent Harlan leaving."
@@ -16112,9 +16156,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-065:take-01"
+        "festival-master:shot-plan-065:take-01",
+        "festival-master:shot-plan-065:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-065:take-01",
+      "selectedTakeId": "festival-master:shot-plan-065:take-02",
       "purpose": {
         "es": "Escena «No era la voz»: Harlan — separar la acusación de la prueba; Elin Rao — negar su premisa.",
         "en": "Scene \"Not the voice\": Harlan — separate the accusation from proof; Elin Rao — deny his premise."
@@ -16189,9 +16234,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-066:take-01"
+        "festival-master:shot-plan-066:take-01",
+        "festival-master:shot-plan-066:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-066:take-01",
+      "selectedTakeId": "festival-master:shot-plan-066:take-02",
       "purpose": {
         "es": "Escena «No era la voz»: Elin Rao — mostrar evidencia independiente que converge; Harlan — preservar la duda razonable.",
         "en": "Scene \"Not the voice\": Elin Rao — show converging independent evidence; Harlan — preserve reasonable doubt."
@@ -16266,9 +16312,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-067:take-01"
+        "festival-master:shot-plan-067:take-01",
+        "festival-master:shot-plan-067:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-067:take-01",
+      "selectedTakeId": "festival-master:shot-plan-067:take-02",
       "purpose": {
         "es": "Escena «No era la voz»: Elin Rao — actuar con proporción sin exagerar la certeza.",
         "en": "Scene \"Not the voice\": Elin Rao — act proportionately without overstating certainty."
@@ -16587,9 +16634,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-071:take-01"
+        "festival-master:shot-plan-071:take-01",
+        "festival-master:shot-plan-071:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-071:take-01",
+      "selectedTakeId": "festival-master:shot-plan-071:take-02",
       "purpose": {
         "es": "Escena «La muñeca ofrecida»: Harlan — comprar un instante de distracción.",
         "en": "Scene \"The offered wrist\": Harlan — buy one distracted instant."
@@ -16659,9 +16707,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-072:take-01"
+        "festival-master:shot-plan-072:take-01",
+        "festival-master:shot-plan-072:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-072:take-01",
+      "selectedTakeId": "festival-master:shot-plan-072:take-02",
       "purpose": {
         "es": "Escena «La muñeca ofrecida»: Okoye — completar la sujeción.",
         "en": "Scene \"The offered wrist\": Okoye — complete the restraint."
@@ -16739,9 +16788,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-073:take-01"
+        "festival-master:shot-plan-073:take-01",
+        "festival-master:shot-plan-073:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-073:take-01",
+      "selectedTakeId": "festival-master:shot-plan-073:take-02",
       "purpose": {
         "es": "Escena «La muñeca ofrecida»: Okoye — dar la alarma; Voss — hacerle ver a Elin la amenaza que no ve; Harlan — decir su objetivo inmediato, no explicar el plan.",
         "en": "Scene \"The offered wrist\": Okoye — raise the alarm; Voss — give Elin the threat she cannot see; Harlan — state his immediate goal, not explain the plot."
@@ -17014,9 +17064,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-077:take-01"
+        "festival-master:shot-plan-077:take-01",
+        "festival-master:shot-plan-077:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-077:take-01",
+      "selectedTakeId": "festival-master:shot-plan-077:take-02",
       "purpose": {
         "es": "Escena «Cuarto bache de gravedad»: hacer visible — Harlan inmoviliza a Elin junto a la bóveda.",
         "en": "Scene \"Fourth gravity dip\": make visible — Harlan pins Elin beside the vault."
@@ -17091,9 +17142,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-078:take-01"
+        "festival-master:shot-plan-078:take-01",
+        "festival-master:shot-plan-078:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-078:take-01",
+      "selectedTakeId": "festival-master:shot-plan-078:take-02",
       "purpose": {
         "es": "Escena «Cuarto bache de gravedad»: Okoye — confirmar el control y el dispositivo necesario.",
         "en": "Scene \"Fourth gravity dip\": Okoye — confirm control and the needed device."
@@ -17173,9 +17225,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-079:take-01"
+        "festival-master:shot-plan-079:take-01",
+        "festival-master:shot-plan-079:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-079:take-01",
+      "selectedTakeId": "festival-master:shot-plan-079:take-02",
       "purpose": {
         "es": "Escena «Cuarto bache de gravedad»: Harlan — decir el miedo moral detrás de su violencia; Harlan — revelar la disuasión como su objetivo; Voss — devolver la atención al arma activa.",
         "en": "Scene \"Fourth gravity dip\": Harlan — state the moral fear behind his violence; Harlan — reveal deterrence as his intended outcome; Voss — return attention to the live weapon."
@@ -17243,9 +17296,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-080:take-01"
+        "festival-master:shot-plan-080:take-01",
+        "festival-master:shot-plan-080:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-080:take-01",
+      "selectedTakeId": "festival-master:shot-plan-080:take-02",
       "purpose": {
         "es": "Escena «Cuatro, tres, dos, uno»: Elin Rao — evitar un intento reflejo de desarmar.",
         "en": "Scene \"Four, three, two, one\": Elin Rao — prevent a reflexive disarm attempt."
@@ -17319,9 +17373,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-081:take-01"
+        "festival-master:shot-plan-081:take-01",
+        "festival-master:shot-plan-081:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-081:take-01",
+      "selectedTakeId": "festival-master:shot-plan-081:take-02",
       "purpose": {
         "es": "Escena «Cuatro, tres, dos, uno»: Elin Rao — elegir el retraso antes que desarmar.",
         "en": "Scene \"Four, three, two, one\": Elin Rao — choose delay over disarmament."
@@ -17404,9 +17459,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-082:take-01"
+        "festival-master:shot-plan-082:take-01",
+        "festival-master:shot-plan-082:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-082:take-01",
+      "selectedTakeId": "festival-master:shot-plan-082:take-02",
       "purpose": {
         "es": "Escena «Cuatro, tres, dos, uno»: Voss (fuera de cuadro) — exigir el resultado exacto; Elin Rao — definir con precisión el éxito limitado; Voss (fuera de cuadro) — preservar el intervalo ganado.",
         "en": "Scene \"Four, three, two, one\": Voss (off-frame) — demand the exact result; Elin Rao — define the limited success accurately; Voss (off-frame) — preserve the interval bought."
@@ -17471,9 +17527,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-083:take-01"
+        "festival-master:shot-plan-083:take-01",
+        "festival-master:shot-plan-083:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-083:take-01",
+      "selectedTakeId": "festival-master:shot-plan-083:take-02",
       "purpose": {
         "es": "Escena «Léelo de vuelta»: hacer visible — Sorell termina de traducir la geometría simultánea del primer en luces ramificadas sobre el casco.",
         "en": "Scene \"Read it back\": make visible — Sorell finishes translating the primer’s simultaneous geometry into branching hull lights."
@@ -17543,9 +17600,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-084:take-01"
+        "festival-master:shot-plan-084:take-01",
+        "festival-master:shot-plan-084:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-084:take-01",
+      "selectedTakeId": "festival-master:shot-plan-084:take-02",
       "purpose": {
         "es": "Escena «Léelo de vuelta»: Sorell — plantear el saludo como una prueba, no como dominio; Voss — asumir la cadena de errores sin exigir perdón.",
         "en": "Scene \"Read it back\": Sorell — frame the greeting as a test, not proof of mastery; Voss — own the chain of errors without demanding forgiveness."
@@ -17615,9 +17673,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-085:take-01"
+        "festival-master:shot-plan-085:take-01",
+        "festival-master:shot-plan-085:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-085:take-01",
+      "selectedTakeId": "festival-master:shot-plan-085:take-02",
       "purpose": {
         "es": "Escena «Léelo de vuelta»: Sorell — evitar que la disculpa robe el momento que queda; Voss — autorizar sólo el mensaje limpio.",
         "en": "Scene \"Read it back\": Sorell — keep the apology from stealing the remaining moment; Voss — authorize only the clean message."
@@ -17685,9 +17744,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-086:take-01"
+        "festival-master:shot-plan-086:take-01",
+        "festival-master:shot-plan-086:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-086:take-01",
+      "selectedTakeId": "festival-master:shot-plan-086:take-02",
       "purpose": {
         "es": "Escena «La estación responde»: hacer visible — La luz estructurada se ramifica sobre el casco del Ardor.",
         "en": "Scene \"The station answers\": make visible — Structured light branches across the Ardor’s hull."
@@ -17750,9 +17810,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-087:take-01"
+        "festival-master:shot-plan-087:take-01",
+        "festival-master:shot-plan-087:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-087:take-01",
+      "selectedTakeId": "festival-master:shot-plan-087:take-02",
       "purpose": {
         "es": "Escena «La estación responde»: Sorell — extraer sólo lo que admite el analizador.",
         "en": "Scene \"The station answers\": Sorell — extract only what the parser supports."
@@ -17816,9 +17877,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-088:take-01"
+        "festival-master:shot-plan-088:take-01",
+        "festival-master:shot-plan-088:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-088:take-01",
+      "selectedTakeId": "festival-master:shot-plan-088:take-02",
       "purpose": {
         "es": "Escena «La estación responde»: Sorell — reconocer la invitación.",
         "en": "Scene \"The station answers\": Sorell — recognize the invitation."
@@ -17992,9 +18054,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-091:take-01"
+        "festival-master:shot-plan-091:take-01",
+        "festival-master:shot-plan-091:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-091:take-01",
+      "selectedTakeId": "festival-master:shot-plan-091:take-02",
       "purpose": {
         "es": "Escena «Alguien»: Sorell — aceptar el riesgo como contención recíproca.",
         "en": "Scene \"Someone\": Sorell — accept risk as reciprocal restraint."
@@ -18059,9 +18122,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-092:take-01"
+        "festival-master:shot-plan-092:take-01",
+        "festival-master:shot-plan-092:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-092:take-01",
+      "selectedTakeId": "festival-master:shot-plan-092:take-02",
       "purpose": {
         "es": "Escena «Alguien»: hacer visible — Dentro de la esfera, un Velari de tamaño real orienta hacia ella su manto alargado.",
         "en": "Scene \"Someone\": make visible — Inside the sphere, a full-size Velari orients its elongated mantle toward her."
@@ -18138,9 +18202,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-093:take-01"
+        "festival-master:shot-plan-093:take-01",
+        "festival-master:shot-plan-093:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-093:take-01",
+      "selectedTakeId": "festival-master:shot-plan-093:take-02",
       "purpose": {
         "es": "Escena «Trabajo antes del regreso»: Elin Rao (fuera de cuadro) — enunciar las obligaciones pendientes.",
         "en": "Scene \"Work before return\": Elin Rao (off-frame) — state the unresolved obligations."
@@ -18213,9 +18278,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-094:take-01"
+        "festival-master:shot-plan-094:take-01",
+        "festival-master:shot-plan-094:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-094:take-01",
+      "selectedTakeId": "festival-master:shot-plan-094:take-02",
       "purpose": {
         "es": "Escena «Trabajo antes del regreso»: Okoye (fuera de cuadro) — cubrir seguridad y el arma; Voss — cambiar la conducta tras el fallo.",
         "en": "Scene \"Work before return\": Okoye (off-frame) — cover security and the weapon; Voss — change behavior after the failure."
@@ -18280,9 +18346,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-095:take-01"
+        "festival-master:shot-plan-095:take-01",
+        "festival-master:shot-plan-095:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-095:take-01",
+      "selectedTakeId": "festival-master:shot-plan-095:take-02",
       "purpose": {
         "es": "Escena «Llegaste a tiempo»: Voss — dar crédito a Zao en el registro oficial.",
         "en": "Scene \"You made it in time\": Voss — credit Zao in the official record."
@@ -18352,9 +18419,10 @@
         }
       ],
       "takeIds": [
-        "festival-master:shot-plan-096:take-01"
+        "festival-master:shot-plan-096:take-01",
+        "festival-master:shot-plan-096:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-096:take-01",
+      "selectedTakeId": "festival-master:shot-plan-096:take-02",
       "purpose": {
         "es": "Escena «Llegaste a tiempo»: Voss — reconocer la victoria que ella no pudo ver.",
         "en": "Scene \"You made it in time\": Voss — recognize the victory she could not witness."
@@ -18564,7 +18632,7 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-001",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
           "canon_mismatch",
           "continuity_error"
@@ -18988,7 +19056,7 @@
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, Saturn-style bold bright rings (Jupiter's rings are faint and thin, barely visible arcs), the ship inside or colliding with the planet's atmosphere",
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z",
+        "generatedAt": "2026-09-14T16:43:58.138Z",
         "referenceAssetIds": [
           "asset:vehicle-celestial-ardor-jupiter",
           "asset:vehicle-celestial-ardor-model-sheet-v2"
@@ -18996,14 +19064,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-013b",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-013b",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -19118,18 +19186,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T16:43:58.138Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-016b",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-016b",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -19672,7 +19740,6 @@
       "imageStatus": {
         "status": "needs_regeneration",
         "reasons": [
-          "continuity_error",
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-033",
@@ -19763,9 +19830,9 @@
         "generatedAt": "2026-09-12T00:00:00.000Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-036",
         "explanation": {
@@ -19791,17 +19858,17 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T16:46:57.393Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-037",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-037"
@@ -19822,17 +19889,17 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T16:51:00.488Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-038",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-038"
@@ -19853,19 +19920,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T16:52:41.854Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-039",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error",
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-039",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes. Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references. Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -19911,7 +19977,7 @@
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra characters, solar sails, wings, fantasy fins, station rings, docking structures, obsolete ship design, cartoonish exaggeration, visible mechanical ring-shaped wormhole, watermark",
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z",
+        "generatedAt": "2026-09-14T16:54:33.799Z",
         "referenceAssetIds": [
           "asset:location-velari-wormhole-mouth-sheet",
           "asset:vehicle-celestial-ardor-model-sheet-v2"
@@ -19919,14 +19985,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-040b",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-040b",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -19947,17 +20013,17 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T20:24:00.000Z"
+        "generatedAt": "2026-09-14T16:56:29.484Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "wrong_composition"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-041",
         "explanation": {
-          "es": "Tamaño de plano placeholder reautorado para ajustarse a la acción en pantalla.",
-          "en": "Placeholder composition size re-authored to fit the on-screen action."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-041"
@@ -20100,18 +20166,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T20:20:00.000Z"
+        "generatedAt": "2026-09-14T16:58:47.947Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-045b",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-045b",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       },
       "durationMs": 3500,
@@ -20848,18 +20914,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T17:01:44.431Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-068",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-068",
         "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -20881,18 +20947,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T17:03:41.542Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-069",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-069",
         "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -20915,19 +20981,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T17:05:35.198Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-070",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error",
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-070",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes. Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references. Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -21050,17 +21115,17 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T00:00:00.000Z"
+        "generatedAt": "2026-09-14T17:09:09.678Z"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-074",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       },
       "imageAssetId": "asset:festival-master-storyboard-074"
@@ -21084,9 +21149,8 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-075",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error",
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-075",
@@ -21115,9 +21179,9 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-076",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-076",
         "explanation": {
@@ -21528,18 +21592,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T22:10:00.000Z"
+        "generatedAt": "2026-09-14T17:18:05.507Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-089",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-089",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -21557,18 +21621,18 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:58:38.757Z"
+        "generatedAt": "2026-09-14T17:26:37.241Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-090",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-090",
         "explanation": {
-          "es": "Prompt depurado de apariencia restatada de referencias; regenerar con las hojas adjuntas.",
-          "en": "Prompt scrubbed of restated reference appearance; regenerate against the attached sheets."
+          "en": "Regenerated independent storyboard still; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
         }
       }
     },
@@ -22329,6 +22393,2114 @@
           "asset:character-sorell-sheet",
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-central-access-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-029:take-02",
+      "shotId": "festival-master:shot-plan-029",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "stretchDigest": "77dc097bd9ea9d97152c7714c1849dd2ab9be04aa7707d685ae6684f8ecd6d18",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-030:take-02",
+      "shotId": "festival-master:shot-plan-030",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "stretchDigest": "77dc097bd9ea9d97152c7714c1849dd2ab9be04aa7707d685ae6684f8ecd6d18",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-031:take-02",
+      "shotId": "festival-master:shot-plan-031",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "stretchDigest": "77dc097bd9ea9d97152c7714c1849dd2ab9be04aa7707d685ae6684f8ecd6d18",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-032:take-02",
+      "shotId": "festival-master:shot-plan-032",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-04",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.339Z",
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "stretchDigest": "77dc097bd9ea9d97152c7714c1849dd2ab9be04aa7707d685ae6684f8ecd6d18",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-033:take-02",
+      "shotId": "festival-master:shot-plan-033",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-034:take-02",
+      "shotId": "festival-master:shot-plan-034",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-035:take-02",
+      "shotId": "festival-master:shot-plan-035",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-036:take-02",
+      "shotId": "festival-master:shot-plan-036",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-04",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.575Z",
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-042:take-02",
+      "shotId": "festival-master:shot-plan-042",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
+        "stretchJobId": "festival-master:stretch-reactor-sorell-042-043:rev-1",
+        "stretchDigest": "1b4067825558968428dee6dc7260cc393c02ce491c5ed7227e27c16bf73f178c",
+        "referenceAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-043:take-02",
+      "shotId": "festival-master:shot-plan-043",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
+        "stretchJobId": "festival-master:stretch-reactor-sorell-042-043:rev-1",
+        "stretchDigest": "1b4067825558968428dee6dc7260cc393c02ce491c5ed7227e27c16bf73f178c",
+        "referenceAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-044:take-02",
+      "shotId": "festival-master:shot-plan-044",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
+        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
+        "stretchDigest": "d97983c0a1addfca6e5cb218d580eb61bd9e03994e4bd6af115bc1c96f01f9e4",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-045:take-02",
+      "shotId": "festival-master:shot-plan-045",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
+        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
+        "stretchDigest": "d97983c0a1addfca6e5cb218d580eb61bd9e03994e4bd6af115bc1c96f01f9e4",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-054:take-02",
+      "shotId": "festival-master:shot-plan-054",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "stretchDigest": "923ecef3a9b080bbae5990dcc1210310092b689a77023c459b049b461f14ef4b",
+        "referenceAssetIds": [
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-055:take-02",
+      "shotId": "festival-master:shot-plan-055",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "stretchDigest": "923ecef3a9b080bbae5990dcc1210310092b689a77023c459b049b461f14ef4b",
+        "referenceAssetIds": [
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-056:take-02",
+      "shotId": "festival-master:shot-plan-056",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "stretchDigest": "923ecef3a9b080bbae5990dcc1210310092b689a77023c459b049b461f14ef4b",
+        "referenceAssetIds": [
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-057:take-02",
+      "shotId": "festival-master:shot-plan-057",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "stretchDigest": "5a7df708c225091b06035aacbefae084ddb11bb731619784592ad34a2da7d0aa",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-058:take-02",
+      "shotId": "festival-master:shot-plan-058",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "stretchDigest": "5a7df708c225091b06035aacbefae084ddb11bb731619784592ad34a2da7d0aa",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-059:take-02",
+      "shotId": "festival-master:shot-plan-059",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "stretchDigest": "5a7df708c225091b06035aacbefae084ddb11bb731619784592ad34a2da7d0aa",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-060:take-02",
+      "shotId": "festival-master:shot-plan-060",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.854Z",
+        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "stretchDigest": "f102a11bbc337aa8073fabb9de9951d537614b35417248cf7f1d0da760b72488",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-061:take-02",
+      "shotId": "festival-master:shot-plan-061",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:24.854Z",
+        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "stretchDigest": "f102a11bbc337aa8073fabb9de9951d537614b35417248cf7f1d0da760b72488",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-062:take-02",
+      "shotId": "festival-master:shot-plan-062",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.082Z",
+        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "stretchDigest": "426322d30f1240322e4fb605608da7e3dd785d798563c12f7fd71069eb1d8ff4",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-063:take-02",
+      "shotId": "festival-master:shot-plan-063",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.082Z",
+        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "stretchDigest": "426322d30f1240322e4fb605608da7e3dd785d798563c12f7fd71069eb1d8ff4",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-083:take-02",
+      "shotId": "festival-master:shot-plan-083",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "referenceAssetIds": [
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-084:take-02",
+      "shotId": "festival-master:shot-plan-084",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "referenceAssetIds": [
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-085:take-02",
+      "shotId": "festival-master:shot-plan-085",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "referenceAssetIds": [
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-086:take-02",
+      "shotId": "festival-master:shot-plan-086",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "referenceAssetIds": [
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-087:take-02",
+      "shotId": "festival-master:shot-plan-087",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-velari-answer-087-088-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "visualStretchId": "festival-master:stretch-velari-answer-087-088",
+        "stretchJobId": "festival-master:stretch-velari-answer-087-088:rev-1",
+        "stretchDigest": "d2ff5aeb9d1df2ef1b0e9f1d7c3a00fa518941ba690d67cdb6eecd8e37bcd4b8",
+        "referenceAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-velari-transport-sphere-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-088:take-02",
+      "shotId": "festival-master:shot-plan-088",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-velari-answer-087-088-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "visualStretchId": "festival-master:stretch-velari-answer-087-088",
+        "stretchJobId": "festival-master:stretch-velari-answer-087-088:rev-1",
+        "stretchDigest": "d2ff5aeb9d1df2ef1b0e9f1d7c3a00fa518941ba690d67cdb6eecd8e37bcd4b8",
+        "referenceAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-velari-transport-sphere-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-091:take-02",
+      "shotId": "festival-master:shot-plan-091",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-velari-envoy-091-092-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
+        "stretchJobId": "festival-master:stretch-velari-envoy-091-092:rev-1",
+        "stretchDigest": "25364b79ab5880f336fac7b3da959f4afd88a15c4fc2c66f9e6129fe12deb5d7",
+        "referenceAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-velari-envoy-sheet",
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-velari-transport-sphere-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-092:take-02",
+      "shotId": "festival-master:shot-plan-092",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-velari-envoy-091-092-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
+        "stretchJobId": "festival-master:stretch-velari-envoy-091-092:rev-1",
+        "stretchDigest": "25364b79ab5880f336fac7b3da959f4afd88a15c4fc2c66f9e6129fe12deb5d7",
+        "referenceAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-velari-envoy-sheet",
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-velari-transport-sphere-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-093:take-02",
+      "shotId": "festival-master:shot-plan-093",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-watch-093-094-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.976Z",
+        "visualStretchId": "festival-master:stretch-bridge-watch-093-094",
+        "stretchJobId": "festival-master:stretch-bridge-watch-093-094:rev-1",
+        "stretchDigest": "a39ab2d77e8fdee425b2a317627d8c1a68cc031cea239d5cfcf326a06ea86502",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-094:take-02",
+      "shotId": "festival-master:shot-plan-094",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-watch-093-094-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:25.976Z",
+        "visualStretchId": "festival-master:stretch-bridge-watch-093-094",
+        "stretchJobId": "festival-master:stretch-bridge-watch-093-094:rev-1",
+        "stretchDigest": "a39ab2d77e8fdee425b2a317627d8c1a68cc031cea239d5cfcf326a06ea86502",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-095:take-02",
+      "shotId": "festival-master:shot-plan-095",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-report-095-096-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.195Z",
+        "visualStretchId": "festival-master:stretch-reactor-report-095-096",
+        "stretchJobId": "festival-master:stretch-reactor-report-095-096:rev-1",
+        "stretchDigest": "e38d38881a326a0f82a797889430e3a9b4153f0b0a541bb92d2eae406b3f8d86",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-096:take-02",
+      "shotId": "festival-master:shot-plan-096",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-report-095-096-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.195Z",
+        "visualStretchId": "festival-master:stretch-reactor-report-095-096",
+        "stretchJobId": "festival-master:stretch-reactor-report-095-096:rev-1",
+        "stretchDigest": "e38d38881a326a0f82a797889430e3a9b4153f0b0a541bb92d2eae406b3f8d86",
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-016:take-02",
+      "shotId": "festival-master:shot-plan-016",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.432Z",
+        "visualStretchId": "festival-master:stretch-engineering-audit-016-017",
+        "stretchJobId": "festival-master:stretch-engineering-audit-016-017:rev-1",
+        "stretchDigest": "d55e020b7af65ab90d7dc71429ee12ea37e82719dd5f7b25aa65173bd2c31783",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-engineering-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-017:take-02",
+      "shotId": "festival-master:shot-plan-017",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.432Z",
+        "visualStretchId": "festival-master:stretch-engineering-audit-016-017",
+        "stretchJobId": "festival-master:stretch-engineering-audit-016-017:rev-1",
+        "stretchDigest": "d55e020b7af65ab90d7dc71429ee12ea37e82719dd5f7b25aa65173bd2c31783",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-engineering-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-018:take-02",
+      "shotId": "festival-master:shot-plan-018",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.670Z",
+        "visualStretchId": "festival-master:stretch-reactor-entrance-018-019",
+        "stretchJobId": "festival-master:stretch-reactor-entrance-018-019:rev-1",
+        "stretchDigest": "d667ba4bf9d6096928003077fccab97c906a4335a1294ad921eddccfa803b43d",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-019:take-02",
+      "shotId": "festival-master:shot-plan-019",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.670Z",
+        "visualStretchId": "festival-master:stretch-reactor-entrance-018-019",
+        "stretchJobId": "festival-master:stretch-reactor-entrance-018-019:rev-1",
+        "stretchDigest": "d667ba4bf9d6096928003077fccab97c906a4335a1294ad921eddccfa803b43d",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-020:take-02",
+      "shotId": "festival-master:shot-plan-020",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.887Z",
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1",
+        "stretchDigest": "bebd4e10106d81497f57b81ddfa27ed8e119f2b3c1ffa0e207537a18e34bc3ef",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-021:take-02",
+      "shotId": "festival-master:shot-plan-021",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.887Z",
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1",
+        "stretchDigest": "bebd4e10106d81497f57b81ddfa27ed8e119f2b3c1ffa0e207537a18e34bc3ef",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-022:take-02",
+      "shotId": "festival-master:shot-plan-022",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:26.887Z",
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1",
+        "stretchDigest": "bebd4e10106d81497f57b81ddfa27ed8e119f2b3c1ffa0e207537a18e34bc3ef",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-026:take-02",
+      "shotId": "festival-master:shot-plan-026",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.113Z",
+        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
+        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "stretchDigest": "2094ed0ffeb3d2729dd9ae195df126d4afad25c58e1094fd60da199d19beaf57",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-service-cylinder-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-027:take-02",
+      "shotId": "festival-master:shot-plan-027",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.113Z",
+        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
+        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "stretchDigest": "2094ed0ffeb3d2729dd9ae195df126d4afad25c58e1094fd60da199d19beaf57",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-service-cylinder-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-028:take-02",
+      "shotId": "festival-master:shot-plan-028",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.113Z",
+        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
+        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "stretchDigest": "2094ed0ffeb3d2729dd9ae195df126d4afad25c58e1094fd60da199d19beaf57",
+        "referenceAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-service-cylinder-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-023:take-02",
+      "shotId": "festival-master:shot-plan-023",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
+        "stretchDigest": "b674f3e2e9eda1934873ab03857d95b1b840ecc61873a8da509b42fd0370484b",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-024:take-02",
+      "shotId": "festival-master:shot-plan-024",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
+        "stretchDigest": "b674f3e2e9eda1934873ab03857d95b1b840ecc61873a8da509b42fd0370484b",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-025:take-02",
+      "shotId": "festival-master:shot-plan-025",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
+        "stretchDigest": "b674f3e2e9eda1934873ab03857d95b1b840ecc61873a8da509b42fd0370484b",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-046:take-02",
+      "shotId": "festival-master:shot-plan-046",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "stretchDigest": "c8ebb6ce60a72d875f493d9671f1fcb9466e7341e2ad84c8f55e6face7dbf440",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-047:take-02",
+      "shotId": "festival-master:shot-plan-047",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "stretchDigest": "c8ebb6ce60a72d875f493d9671f1fcb9466e7341e2ad84c8f55e6face7dbf440",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-048:take-02",
+      "shotId": "festival-master:shot-plan-048",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "stretchDigest": "c8ebb6ce60a72d875f493d9671f1fcb9466e7341e2ad84c8f55e6face7dbf440",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-049:take-02",
+      "shotId": "festival-master:shot-plan-049",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-04",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.543Z",
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "stretchDigest": "c8ebb6ce60a72d875f493d9671f1fcb9466e7341e2ad84c8f55e6face7dbf440",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-050:take-02",
+      "shotId": "festival-master:shot-plan-050",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-051:take-02",
+      "shotId": "festival-master:shot-plan-051",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-052:take-02",
+      "shotId": "festival-master:shot-plan-052",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-053:take-02",
+      "shotId": "festival-master:shot-plan-053",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-04",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-064:take-02",
+      "shotId": "festival-master:shot-plan-064",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-065:take-02",
+      "shotId": "festival-master:shot-plan-065",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-066:take-02",
+      "shotId": "festival-master:shot-plan-066",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-067:take-02",
+      "shotId": "festival-master:shot-plan-067",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:27.993Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-071:take-02",
+      "shotId": "festival-master:shot-plan-071",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:28.196Z",
+        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
+        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
+        "stretchDigest": "760d61b1b6060e895c98d780afb8a3757a1c8ef5743bb558738b988862c1e221",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-072:take-02",
+      "shotId": "festival-master:shot-plan-072",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:28.196Z",
+        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
+        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
+        "stretchDigest": "760d61b1b6060e895c98d780afb8a3757a1c8ef5743bb558738b988862c1e221",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-073:take-02",
+      "shotId": "festival-master:shot-plan-073",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-device-071-073-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:28.196Z",
+        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
+        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
+        "stretchDigest": "760d61b1b6060e895c98d780afb8a3757a1c8ef5743bb558738b988862c1e221",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-077:take-02",
+      "shotId": "festival-master:shot-plan-077",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-confrontation-077-079-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:28.405Z",
+        "visualStretchId": "festival-master:stretch-reactor-confrontation-077-079",
+        "stretchJobId": "festival-master:stretch-reactor-confrontation-077-079:rev-1",
+        "stretchDigest": "7f6c2490d7832050b6f8ffd4d3a3897ef3d53fa252760117ea653fb88240cf40",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:prop-pack-reactor-communications-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-078:take-02",
+      "shotId": "festival-master:shot-plan-078",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-confrontation-077-079-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:28.405Z",
+        "visualStretchId": "festival-master:stretch-reactor-confrontation-077-079",
+        "stretchJobId": "festival-master:stretch-reactor-confrontation-077-079:rev-1",
+        "stretchDigest": "7f6c2490d7832050b6f8ffd4d3a3897ef3d53fa252760117ea653fb88240cf40",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:prop-pack-reactor-communications-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-079:take-02",
+      "shotId": "festival-master:shot-plan-079",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-reactor-confrontation-077-079-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:23:28.405Z",
+        "visualStretchId": "festival-master:stretch-reactor-confrontation-077-079",
+        "stretchJobId": "festival-master:stretch-reactor-confrontation-077-079:rev-1",
+        "stretchDigest": "7f6c2490d7832050b6f8ffd4d3a3897ef3d53fa252760117ea653fb88240cf40",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:prop-pack-reactor-communications-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-080:take-02",
+      "shotId": "festival-master:shot-plan-080",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:24:10.243Z",
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1",
+        "stretchDigest": "6084170534cf9c539f5476695c1ee5088b24e4917b4f8c960dcefdc6293676f3",
+        "referenceAssetIds": [
+          "asset:character-pair-harlan-okoye-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:prop-pack-vault-recovery-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-081:take-02",
+      "shotId": "festival-master:shot-plan-081",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:24:10.243Z",
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1",
+        "stretchDigest": "6084170534cf9c539f5476695c1ee5088b24e4917b4f8c960dcefdc6293676f3",
+        "referenceAssetIds": [
+          "asset:character-pair-harlan-okoye-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:prop-pack-vault-recovery-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-082:take-02",
+      "shotId": "festival-master:shot-plan-082",
+      "number": 2,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T16:24:10.243Z",
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1",
+        "stretchDigest": "6084170534cf9c539f5476695c1ee5088b24e4917b4f8c960dcefdc6293676f3",
+        "referenceAssetIds": [
+          "asset:character-pair-harlan-okoye-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:prop-pack-vault-recovery-sheet"
         ]
       }
     }

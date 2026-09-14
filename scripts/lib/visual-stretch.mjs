@@ -2,6 +2,7 @@
  * Visual stretch layout, membership, and digest helpers.
  * Browser-safe (no fs, no sharp, no node:crypto). Shared by Node scripts and the SvelteKit app.
  */
+import { stripSpokenDialogueQuotes } from './still-prompt-no-dialogue.mjs';
 
 /**
  * @typedef {{ rows: number, cols: number, gutterFraction?: number, panelAspect?: string, blankCells?: number[], minOuterMarginFraction?: number }} GridLayout
@@ -430,6 +431,69 @@ export function formatBlockingForPrompt(blocking) {
 		})
 		.filter(Boolean)
 		.join('\n');
+}
+
+/**
+ * Combined-storyboard-sheet prompt for a visual stretch: one shared fragment (layout, location,
+ * physics, lighting, shared description, present cast, blocking) plus one fragment per ordered
+ * panel (start/event/end state, shot description, composition, visible cast). Single source of
+ * truth for stretch still-prompt text — used by the compile-visual-stretch dry-run CLI and by
+ * asset-generation-manifest registration; do not re-derive this fragment shape elsewhere.
+ * @param {{
+ *   stretch: {
+ *     locationId: string,
+ *     physics?: { en?: string },
+ *     lighting?: { en?: string },
+ *     sharedDescription?: { en?: string },
+ *     presentCharacterIds?: string[],
+ *     blocking?: Parameters<typeof formatBlockingForPrompt>[0]
+ *   },
+ *   members: Array<{ order: number, shotId: string, startState?: { en?: string }, event?: { en?: string }, endState?: { en?: string } }>,
+ *   layout: GridLayout,
+ *   regions: Array<{ cellIndex?: number, frameRegion?: FrameRegion }>,
+ *   shotsById: Map<string, { description?: { en?: string }, composition?: { size?: string }, visibleRefs?: Array<{ kind: string, id: string }> }>
+ * }} args
+ * @returns {{ sharedFragment: string, panelFragments: string[], compiledPreview: string }}
+ */
+export function compileStretchStillPrompt({ stretch, members, layout, regions, shotsById }) {
+	const blockingLines = formatBlockingForPrompt(stretch.blocking);
+	const sharedFragment = [
+		'Ordered multi-panel storyboard sheet for a continuous stretch.',
+		`Layout: ${layout.rows}x${layout.cols} equal 16:9 panels, gutterFraction ${layout.gutterFraction}, blankCells ${JSON.stringify(layout.blankCells ?? [])}.`,
+		'Blank cells must be a flat neutral field with no characters, props, or text.',
+		`Location: ${stretch.locationId}.`,
+		stretch.physics?.en ? `Physics: ${stretch.physics.en}` : null,
+		stretch.lighting?.en ? `Lighting: ${stretch.lighting.en}` : null,
+		stretch.sharedDescription?.en ? `Shared: ${stretch.sharedDescription.en}` : null,
+		`Present cast: ${(stretch.presentCharacterIds || []).join(', ')}.`,
+		blockingLines ? `Blocking:\n${blockingLines}` : null
+	]
+		.filter(Boolean)
+		.join('\n');
+
+	const panelFragments = members.map((member, index) => {
+		const shot = shotsById.get(member.shotId);
+		const region = regions[index];
+		const description = stripSpokenDialogueQuotes(shot?.description?.en ?? '');
+		return [
+			`Panel ${member.order} (cell ${region?.cellIndex}, region ${JSON.stringify(region?.frameRegion)}):`,
+			`Shot ${member.shotId}.`,
+			member.startState?.en ? `Start: ${member.startState.en}` : null,
+			member.event?.en ? `Event: ${member.event.en}` : null,
+			member.endState?.en ? `End: ${member.endState.en}` : null,
+			`Delta/description: ${description}`,
+			shot?.composition?.size ? `Composition size: ${shot.composition.size}.` : null,
+			`Visible: ${(shot?.visibleRefs || [])
+				.filter((r) => r.kind === 'character')
+				.map((r) => r.id)
+				.join(', ')}.`
+		]
+			.filter(Boolean)
+			.join(' ');
+	});
+
+	const compiledPreview = [sharedFragment, ...panelFragments].join('\n\n');
+	return { sharedFragment, panelFragments, compiledPreview };
 }
 
 /**

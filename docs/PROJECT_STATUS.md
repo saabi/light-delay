@@ -1,5 +1,15 @@
 # Estado del proyecto
 
+## 2026-09-14 - Independent Festival-master still regeneration complete (English source)
+
+- Replaced the 16 selected independent stills flagged for regeneration and registered the new files with current 1536x1024 dimensions.
+- The replacements remain pending editorial review; the 83 selected visual-stretch panels are also pending review.
+
+## 2026-09-14 - Festival-master stretch panels bound (English source)
+
+- Split stretch sheets into panel PNGs, registered derived panel assets, and selected panel takes for all 29 authored Festival-master stretches.
+- Production plans rebuilt to match; stretch sheet assets unchanged.
+
 ## 2026-09-14 — Fact-based trailer spoiler gate (English source)
 
 - `script:light-delay-trailer-master` had no automated spoiler protection at all: the only
