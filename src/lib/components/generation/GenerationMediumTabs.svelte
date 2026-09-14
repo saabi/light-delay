@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import { withLocale } from '$lib/utils/paths';
 	import { encodeScriptId } from '$lib/utils/scriptId';
+	import { generationSearchFromUrl } from '$lib/utils/generationFilter';
 	import type { GenerationMedium } from '$lib/data/selectors/generationPackages';
 	import * as m from '$lib/paraglide/messages.js';
 
@@ -13,10 +15,23 @@
 	} = $props();
 
 	const encoded = $derived(encodeScriptId(scriptId));
+	const search = $derived(generationSearchFromUrl(page.url.search));
 	const tabs = $derived([
-		{ id: 'image' as const, href: withLocale(`/generation/image/${encoded}`), label: m.generation_tab_image() },
-		{ id: 'video' as const, href: withLocale(`/generation/video/${encoded}`), label: m.generation_tab_video() },
-		{ id: 'audio' as const, href: withLocale(`/generation/audio/${encoded}`), label: m.generation_tab_audio() }
+		{
+			id: 'image' as const,
+			href: `${withLocale(`/generation/image/${encoded}`)}${search}`,
+			label: m.generation_tab_image()
+		},
+		{
+			id: 'video' as const,
+			href: `${withLocale(`/generation/video/${encoded}`)}${search}`,
+			label: m.generation_tab_video()
+		},
+		{
+			id: 'audio' as const,
+			href: `${withLocale(`/generation/audio/${encoded}`)}${search}`,
+			label: m.generation_tab_audio()
+		}
 	]);
 </script>
 

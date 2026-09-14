@@ -276,9 +276,16 @@ export function getAssets(): AssetsFile {
 export {
 	getGenerationPlan,
 	listGenerationPlanScriptIds,
-	resolveRefPresence
+	resolveRefPresence,
+	resolveAssetPresence,
+	catalogPathIsSafe,
+	catalogFileExists
 } from './generationPlans';
-export type { AssetPresenceKind, ResolvedAssetPresence } from './generationPlans';
+export type {
+	AssetPresenceKind,
+	AssetPresenceStatus,
+	ResolvedAssetPresence
+} from './generationPlans';
 
 export function getCharacters(): CharactersFile {
 	return assertJsonModule(charactersJson as CharactersFile, 'characters');

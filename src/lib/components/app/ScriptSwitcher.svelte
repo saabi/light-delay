@@ -28,7 +28,8 @@
 		void goto(
 			hrefAfterScriptSwitch(page.url.pathname, next, {
 				againstId: page.url.searchParams.get('against'),
-				registeredIds: scripts.map((entry) => entry.id)
+				registeredIds: scripts.map((entry) => entry.id),
+				search: page.url.search
 			})
 		);
 	}

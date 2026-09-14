@@ -67,6 +67,21 @@ describe('hrefAfterScriptSwitch', () => {
 			'/script/script~light-delay-festival/'
 		);
 	});
+
+	it('keeps generation medium and filter query', () => {
+		expect(
+			hrefAfterScriptSwitch('/generation/video/script~light-delay-main-short', festival, {
+				locale: 'en',
+				search: '?filter=blocked'
+			})
+		).toBe('/generation/video/script~light-delay-festival/?filter=blocked');
+		expect(
+			hrefAfterScriptSwitch('/generation/image/script~light-delay-main-short', festival, {
+				locale: 'en',
+				search: '?filter=nope'
+			})
+		).toBe('/generation/image/script~light-delay-festival/');
+	});
 });
 
 describe('scriptSectionHref', () => {

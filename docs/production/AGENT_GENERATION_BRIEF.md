@@ -180,7 +180,7 @@ and project output paths. The manifest does not authorize a provider run.
   its catalog/CLI/MCP contract is confirmed against a live account.
 - **`higgsfield-uploads/`** still indexes legacy cast sheets; `prepare:higgsfield` also stages stretch refs under `stretch/` in **handoff order** (keyframe slots → effective video visuals → voice), not arbitrary Set insertion order.
 - **Stretch still vs video refs:** keep `VisualStretch.referenceAssetIds` complete for still/keyframe jobs; optional `videoReferenceAssetIds` is a separate tri-state list for Seedance extras (`VISUAL_STRETCH_PIPELINE.md`, `SEEDANCE_PROMPTING.md` §6.2). Do not invent pilot `videoReferenceAssetIds` on Festival-master without author instruction.
-- **Generation readiness UI:** `/generation/image|video|audio/[scriptId]` (default Festival-master) lists packages with prompt/ref/output state; read-only — handoff remains CLI/`reports/runs`.
+- **Generation readiness UI:** `/generation/image|video|audio/[scriptId]` (default Festival-master) is read-only. **Prompt ready** is compiled prompt text (or **Text ready** for dialogue). **Refs present** is catalog/file presence; **Refs ready** requires those refs to be `current` (stale/review/regeneration refs are not generation-safe). **Can generate** means a replacement can be generated (prompt ready + refs ready + no blockers); existing output `needs_review` / `needs_regeneration` does not block it. Audio `missing_voice_sample` is a generation blocker even when dialogue text is ready. Handoff remains CLI/`reports/runs`.
 
 ## 7. Dialogue tone pass (harsh → human/colloquial)
 

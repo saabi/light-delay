@@ -1,38 +1,71 @@
 <script lang="ts">
-	import type { GenerationPackageRef } from '$lib/data/selectors/generationPackages';
+	import type { GenerationPackageRef, GenerationRefCategory } from '$lib/data/selectors/generationPackages';
+	import { generationAssetStatusLabel, generationRefCategoryLabel } from '$lib/data/selectors/generationPresentation';
 	import OutputPreview from './OutputPreview.svelte';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let { refs }: { refs: GenerationPackageRef[] } = $props();
+
+	const categories: GenerationRefCategory[] = ['keyframe', 'visual', 'voice_sample', 'other'];
+	const grouped = $derived(
+		categories
+			.map((category) => ({
+				category,
+				refs: refs.filter((ref) => ref.category === category)
+			}))
+			.filter((group) => group.refs.length)
+	);
 </script>
 
 {#if !refs.length}
 	<p class="empty">{m.generation_no_refs()}</p>
 {:else}
-	<ul class="refs">
-		{#each refs as ref (`${ref.role}:${ref.assetId}`)}
-			<li class:missing={!ref.present}>
-				<div class="meta">
-					<span class="badge" class:ok={ref.present} class:bad={!ref.present}>
-						{ref.present ? m.generation_ref_present() : m.generation_ref_missing()}
-					</span>
-					<code class="role">{ref.role}</code>
-					<code class="id">{ref.assetId || '—'}</code>
-				</div>
-				{#if ref.present && ref.path}
-					<div class="preview">
-						<OutputPreview kind={ref.kind} path={ref.path} label={ref.role} present={true} />
-					</div>
-				{/if}
-			</li>
-		{/each}
-	</ul>
+	{#each grouped as group (group.category)}
+		<section class="group">
+			<h4>{generationRefCategoryLabel(group.category)}</h4>
+			<ul class="refs">
+				{#each group.refs as ref (`${ref.role}:${ref.assetId}`)}
+					<li class:missing={!ref.present}>
+						<div class="meta">
+							<span
+								class="badge"
+								class:ok={ref.present && ref.status === 'current'}
+								class:warn={ref.present && ref.status !== 'current'}
+								class:bad={!ref.present}
+							>
+								{generationAssetStatusLabel(ref.status)}
+							</span>
+							<code class="role">{ref.role}</code>
+							<code class="id">{ref.assetId || '—'}</code>
+						</div>
+						{#if ref.present && ref.path}
+							<div class="preview">
+								<OutputPreview kind={ref.kind} path={ref.path} label={ref.role} present={true} />
+							</div>
+						{/if}
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/each}
 {/if}
 
 <style>
 	.empty {
 		color: var(--muted);
 		font-size: 0.9rem;
+	}
+
+	.group + .group {
+		margin-top: 1rem;
+	}
+
+	.group h4 {
+		margin: 0 0 0.45rem;
+		font-size: 0.8rem;
+		color: var(--muted);
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
 	}
 
 	.refs {
@@ -75,6 +108,11 @@
 	.badge.ok {
 		background: color-mix(in srgb, #3d9a6a 28%, transparent);
 		color: #b6f0d0;
+	}
+
+	.badge.warn {
+		background: color-mix(in srgb, #d4a017 28%, transparent);
+		color: #ffe9a8;
 	}
 
 	.badge.bad {

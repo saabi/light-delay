@@ -1,5 +1,6 @@
 import { decodeScriptId, encodeScriptId } from './scriptId';
 import { canonicalPathname, withLocale } from './paths';
+import { generationSearchFromUrl } from './generationFilter';
 import type { Locale } from '$lib/paraglide/runtime.js';
 
 export const ACTIVE_SCRIPT_STORAGE_KEY = 'light-delay.activeScriptId';
@@ -48,7 +49,12 @@ export function resolveActiveScriptId(options: {
 export function hrefAfterScriptSwitch(
 	pathname: string,
 	newScriptId: string,
-	options: { againstId?: string | null; registeredIds?: readonly string[]; locale?: Locale } = {}
+	options: {
+		againstId?: string | null;
+		registeredIds?: readonly string[];
+		locale?: Locale;
+		search?: string | null;
+	} = {}
 ): string {
 	const localPathname = canonicalPathname(new URL(pathname, 'https://light-delay.local'));
 	const encoded = encodeScriptId(newScriptId);
@@ -78,7 +84,7 @@ export function hrefAfterScriptSwitch(
 	}
 	const generationMatch = localPathname.match(/^\/generation\/(image|video|audio)(?:\/[^/]+)?\/?$/);
 	if (generationMatch) {
-		return withLocale(`/generation/${generationMatch[1]}/${encoded}`, options.locale);
+		return `${withLocale(`/generation/${generationMatch[1]}/${encoded}`, options.locale)}${generationSearchFromUrl(options.search)}`;
 	}
 	return withLocale(`/script/${encoded}`, options.locale);
 }

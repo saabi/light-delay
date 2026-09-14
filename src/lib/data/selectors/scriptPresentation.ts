@@ -14,6 +14,10 @@ export function scriptLabel(entry: ScriptRegistryEntry): string {
 			return m.script_long_name();
 		case 'script:light-delay-master-narrative':
 			return m.script_master_narrative_name();
+		case 'script:light-delay-festival-master':
+			return m.script_festival_master_name();
+		case 'script:light-delay-trailer-master':
+			return m.script_trailer_master_name();
 		default:
 			return (
 				resolveLocalizedString(entry.label, 'es', { sourceLanguage: 'es' }) ??
