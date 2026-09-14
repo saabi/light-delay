@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-14 — legacy-site archive removed (English source)
+
+- Deleted legacy-site/. Migrated assets remain under static/assets/; the archive is no longer retained in-tree for rescue.
+
 ## 2026-09-14 — Operations Gallery blocking completed (English source)
 
 - Authored the six-person blocking map for the opening Operations Gallery stretch: Harlan–Sorell–Voss in front, Zao–Rao–Okoye behind, with stable eyelines and in-place turns across shots 001–003.
