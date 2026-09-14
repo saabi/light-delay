@@ -1839,9 +1839,7 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-engineering"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1875,14 +1873,16 @@
         "requiredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-engineering-sheet"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-engineering": "asset:location-celestial-ardor-engineering-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -1892,16 +1892,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-engineering"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-03-01:segment-01",
@@ -1919,9 +1909,7 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-engineering"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1955,14 +1943,16 @@
         "requiredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-engineering-sheet"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-engineering": "asset:location-celestial-ardor-engineering-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -1972,16 +1962,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-engineering"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-03-02:segment-01",
@@ -2001,8 +1981,6 @@
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-engineering",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -2044,15 +2022,17 @@
         "requiredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-engineering-sheet",
           "asset:voice-ref-en-zao"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-engineering": "asset:location-celestial-ardor-engineering-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -2065,14 +2045,6 @@
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-engineering"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -2098,8 +2070,6 @@
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-engineering",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -2141,15 +2111,17 @@
         "requiredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-engineering"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-engineering-sheet",
           "asset:voice-ref-en-zao"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-engineering": "asset:location-celestial-ardor-engineering-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -2162,14 +2134,6 @@
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-engineering"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -3046,9 +3010,7 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-service-cylinder"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3082,14 +3044,16 @@
         "requiredEntityIds": [
           "location:celestial-ardor-service-cylinder"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-service-cylinder"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-service-cylinder-sheet"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-service-cylinder": "asset:location-celestial-ardor-service-cylinder-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -3099,16 +3063,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-service-cylinder"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-05-07:segment-01",
@@ -3422,9 +3376,7 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-service-cylinder"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3458,14 +3410,16 @@
         "requiredEntityIds": [
           "location:celestial-ardor-service-cylinder"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-service-cylinder"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-service-cylinder-sheet"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-service-cylinder": "asset:location-celestial-ardor-service-cylinder-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -3475,16 +3429,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-service-cylinder"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-06-04:segment-01",
@@ -4124,9 +4068,7 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-service-cylinder"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4160,14 +4102,16 @@
         "requiredEntityIds": [
           "location:celestial-ardor-service-cylinder"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-service-cylinder"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-service-cylinder-sheet"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-service-cylinder": "asset:location-celestial-ardor-service-cylinder-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -4177,16 +4121,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-service-cylinder"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-07-04:segment-01",

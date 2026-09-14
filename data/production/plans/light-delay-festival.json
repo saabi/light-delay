@@ -625,9 +625,7 @@
       "shotId": "festival:shot-b-03",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-service-cylinder"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -679,11 +677,10 @@
         ],
         "coveredEntityIds": [
           "character:harlan",
+          "location:celestial-ardor-service-cylinder",
           "object:wired-comms-deck-patch-panel"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-service-cylinder"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-service-cylinder-sheet",
@@ -691,6 +688,7 @@
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
+          "location:celestial-ardor-service-cylinder": "asset:location-celestial-ardor-service-cylinder-sheet",
           "object:wired-comms-deck-patch-panel": "asset:object-wired-comms-deck-patch-panel-sheet"
         },
         "wouldOmitEntityIds": [],
@@ -702,16 +700,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-service-cylinder"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-b-03:segment-01",
@@ -1566,9 +1554,7 @@
       "shotId": "festival:shot-c-06",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-service-cylinder"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1620,11 +1606,10 @@
         ],
         "coveredEntityIds": [
           "character:harlan",
+          "location:celestial-ardor-service-cylinder",
           "object:wired-comms-deck-patch-panel"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-service-cylinder"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-service-cylinder-sheet",
@@ -1632,6 +1617,7 @@
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
+          "location:celestial-ardor-service-cylinder": "asset:location-celestial-ardor-service-cylinder-sheet",
           "object:wired-comms-deck-patch-panel": "asset:object-wired-comms-deck-patch-panel-sheet"
         },
         "wouldOmitEntityIds": [],
@@ -1643,16 +1629,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-service-cylinder"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-c-06:segment-01",
@@ -3596,9 +3572,7 @@
       "shotId": "festival:shot-b-09",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-service-cylinder"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3641,17 +3615,17 @@
           "location:celestial-ardor-service-cylinder"
         ],
         "coveredEntityIds": [
-          "character:harlan"
-        ],
-        "uncoveredEntityIds": [
+          "character:harlan",
           "location:celestial-ardor-service-cylinder"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-service-cylinder-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet"
+          "character:harlan": "asset:character-harlan-sheet",
+          "location:celestial-ardor-service-cylinder": "asset:location-celestial-ardor-service-cylinder-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -3662,16 +3636,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-service-cylinder"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-b-09:segment-01",
