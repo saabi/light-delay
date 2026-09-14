@@ -82,10 +82,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -169,10 +169,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -239,10 +239,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -309,10 +309,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -389,10 +389,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -478,10 +478,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -559,10 +559,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -639,10 +639,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -728,10 +728,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -809,10 +809,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -879,10 +879,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -949,10 +949,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1021,10 +1021,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1091,10 +1091,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1161,10 +1161,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1231,10 +1231,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1301,10 +1301,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1381,10 +1381,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1470,10 +1470,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1551,10 +1551,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1621,10 +1621,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1693,10 +1693,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1764,10 +1764,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1843,10 +1843,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1921,10 +1921,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1992,10 +1992,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2061,10 +2061,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2140,10 +2140,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2218,10 +2218,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2287,10 +2287,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2356,10 +2356,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2425,10 +2425,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2494,10 +2494,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },

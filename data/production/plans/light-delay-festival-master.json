@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "a61a4423495df039e68f6af7aed778ef93468d51ad2113d95c188b28c069abca",
+    "sourceDigest": "ff722c67587e5541a99f5cc5177af9b3defe121188bb0563aac7874c4f5f2e30",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -90,10 +90,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -129,9 +129,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:8>5",
         "reference_budget:audios:1>0",
-        "reference_budget:total:9>8",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:9>5",
+        "reference_consolidation_required:excess:4"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -257,23 +258,30 @@
           "character:zao": "asset:character-zao-sheet",
           "location:proxima-station": "asset:location-proxima-operations-gallery-interior-sheet"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss",
+          "character:zao"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
+          "images:8>5",
           "audios:1>0",
-          "total:9>8"
+          "total:9>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
+          "excessSlots": 4,
           "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:character-zao-sheet",
+            "asset:location-proxima-station-berthed",
             "asset:voice-ref-en-reporter"
           ]
         }
@@ -295,6 +303,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -387,20 +396,23 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-sorell"
+          ]
         }
       ],
       "segments": [
@@ -504,10 +516,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -621,10 +633,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -654,6 +666,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -746,20 +759,23 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-zao"
+          ]
         }
       ],
       "segments": [
@@ -777,7 +793,10 @@
       "shotId": "festival-master:shot-plan-006",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:7>5",
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -883,13 +902,26 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
-        "violations": []
+        "violations": [
+          "images:7>5",
+          "total:7>5"
+        ]
       },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:location-proxima-dock-sheet",
+            "asset:vehicle-celestial-ardor-model-sheet-v2"
+          ]
+        }
+      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-006:segment-01",
@@ -906,8 +938,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1018,20 +1052,26 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:vehicle-celestial-ardor-model-sheet-v2",
+            "asset:voice-ref-en-harlan",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -1051,6 +1091,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -1143,20 +1184,23 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-zao"
+          ]
         }
       ],
       "segments": [
@@ -1176,6 +1220,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -1268,20 +1313,23 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-zao"
+          ]
         }
       ],
       "segments": [
@@ -1300,10 +1348,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
-        "reference_budget:images:9>8",
+        "reference_budget:images:9>5",
         "reference_budget:audios:1>0",
-        "reference_budget:total:10>8",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:10>5",
+        "reference_consolidation_required:excess:5"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1440,24 +1488,31 @@
           "location:celestial-ardor-bridge-meal-table": "asset:location-celestial-ardor-bridge-meal-table-sheet",
           "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:sorell",
+          "character:voss",
+          "character:zao"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "images:9>8",
+          "images:9>5",
           "audios:1>0",
-          "total:10>8"
+          "total:10>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
+          "excessSlots": 5,
           "consolidateCandidateAssetIds": [
+            "asset:character-sorell-sheet",
+            "asset:character-voss-sheet",
+            "asset:character-zao-sheet",
             "asset:vehicle-celestial-ardor-model-sheet-v2",
             "asset:voice-ref-en-zao"
           ]
@@ -1480,6 +1535,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:7>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -1586,20 +1642,24 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-harlan",
+            "asset:voice-ref-en-sorell"
+          ]
         }
       ],
       "segments": [
@@ -1619,6 +1679,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -1714,20 +1775,23 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -1802,10 +1866,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1824,9 +1888,7 @@
       "shotId": "festival-master:shot-plan-013",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1896,11 +1958,10 @@
           "character:harlan",
           "character:rao",
           "character:sorell",
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
@@ -1912,27 +1973,18 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:rao": "asset:character-rao-sheet",
           "character:sorell": "asset:character-sorell-sheet",
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-013:segment-01",
@@ -1950,8 +2002,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -2029,11 +2080,10 @@
           "character:harlan",
           "character:rao",
           "character:sorell",
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
@@ -2046,32 +2096,28 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:rao": "asset:character-rao-sheet",
           "character:sorell": "asset:character-sorell-sheet",
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "audios:1>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -2091,8 +2137,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -2170,11 +2215,10 @@
           "character:harlan",
           "character:rao",
           "character:sorell",
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
@@ -2187,32 +2231,28 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:rao": "asset:character-rao-sheet",
           "character:sorell": "asset:character-sorell-sheet",
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "audios:1>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-zao"
+          ]
         }
       ],
       "segments": [
@@ -2295,10 +2335,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2386,10 +2426,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2494,10 +2534,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2535,8 +2575,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -2603,11 +2641,10 @@
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-zao-sheet",
@@ -2617,28 +2654,21 @@
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
@@ -2662,8 +2692,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -2730,11 +2758,10 @@
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-zao-sheet",
@@ -2744,28 +2771,21 @@
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
@@ -2789,7 +2809,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
         "uncovered_entity:object:proxima-geophysical-impulse-package"
       ],
       "diegeticText": [],
@@ -2841,10 +2860,10 @@
           "object:proxima-geophysical-impulse-package"
         ],
         "coveredEntityIds": [
-          "character:zao"
+          "character:zao",
+          "location:celestial-ardor-inner-shielding-vault"
         ],
         "uncoveredEntityIds": [
-          "location:celestial-ardor-inner-shielding-vault",
           "object:proxima-geophysical-impulse-package"
         ],
         "attachedAssetIds": [
@@ -2853,14 +2872,15 @@
           "asset:object-proxima-geophysical-impulse-package-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2868,7 +2888,6 @@
         {
           "code": "reference_pack_required",
           "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault",
             "object:proxima-geophysical-impulse-package"
           ],
           "compatiblePackAssetIds": [],
@@ -2893,7 +2912,6 @@
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
         "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
         "uncovered_entity:object:proxima-geophysical-impulse-package",
         "reference_consolidation_required:excess:1"
       ],
@@ -2953,10 +2971,10 @@
           "object:proxima-geophysical-impulse-package"
         ],
         "coveredEntityIds": [
-          "character:zao"
+          "character:zao",
+          "location:celestial-ardor-inner-shielding-vault"
         ],
         "uncoveredEntityIds": [
-          "location:celestial-ardor-inner-shielding-vault",
           "object:proxima-geophysical-impulse-package"
         ],
         "attachedAssetIds": [
@@ -2966,14 +2984,15 @@
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2983,7 +3002,6 @@
         {
           "code": "reference_pack_required",
           "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault",
             "object:proxima-geophysical-impulse-package"
           ],
           "compatiblePackAssetIds": [],
@@ -3012,8 +3030,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -3064,39 +3080,31 @@
           "location:celestial-ardor-inner-shielding-vault"
         ],
         "coveredEntityIds": [
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-inner-shielding-vault"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-inner-shielding-vault-sheet",
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -3119,8 +3127,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3227,22 +3237,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-zao"
+          ]
         }
       ],
       "segments": [
@@ -3262,8 +3279,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:object:harlan-wrist-device",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -3323,11 +3338,10 @@
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [
+          "location:celestial-ardor-bridge",
           "object:harlan-wrist-device"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
@@ -3336,28 +3350,21 @@
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "object:harlan-wrist-device"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -3381,6 +3388,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:7>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -3487,20 +3495,24 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -3588,10 +3600,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3708,10 +3720,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -3816,10 +3828,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -3857,8 +3869,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -3909,39 +3919,31 @@
           "location:celestial-ardor-reactor-service-bay"
         ],
         "coveredEntityIds": [
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -3965,8 +3967,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -4017,39 +4017,31 @@
           "location:celestial-ardor-reactor-service-bay"
         ],
         "coveredEntityIds": [
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -4073,8 +4065,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -4134,11 +4124,10 @@
         ],
         "coveredEntityIds": [
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -4147,28 +4136,21 @@
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -4192,8 +4174,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -4253,11 +4233,10 @@
         ],
         "coveredEntityIds": [
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -4266,28 +4245,21 @@
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -4309,9 +4281,7 @@
       "shotId": "festival-master:shot-plan-033",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4354,37 +4324,27 @@
           "location:celestial-ardor-reactor-service-bay"
         ],
         "coveredEntityIds": [
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-033:segment-01",
@@ -4400,9 +4360,7 @@
       "shotId": "festival-master:shot-plan-034",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4454,11 +4412,10 @@
         ],
         "coveredEntityIds": [
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -4466,27 +4423,18 @@
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-034:segment-01",
@@ -4502,9 +4450,7 @@
       "shotId": "festival-master:shot-plan-035",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4556,11 +4502,10 @@
         ],
         "coveredEntityIds": [
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -4568,27 +4513,18 @@
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-035:segment-01",
@@ -4606,8 +4542,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -4676,11 +4610,10 @@
         "coveredEntityIds": [
           "character:harlan",
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-zao-sheet",
@@ -4691,28 +4624,21 @@
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -4736,8 +4662,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -4806,11 +4730,10 @@
         "coveredEntityIds": [
           "character:harlan",
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-zao-sheet",
@@ -4821,28 +4744,21 @@
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -4866,8 +4782,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -4936,11 +4850,10 @@
         "coveredEntityIds": [
           "character:harlan",
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-zao-sheet",
@@ -4951,28 +4864,21 @@
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -4996,9 +4902,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
-        "uncovered_entity:object:harlan-wrist-device",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -5057,12 +4960,11 @@
           "object:harlan-wrist-device"
         ],
         "coveredEntityIds": [
-          "character:harlan"
-        ],
-        "uncoveredEntityIds": [
+          "character:harlan",
           "location:celestial-ardor-reactor-service-bay",
           "object:harlan-wrist-device"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
@@ -5070,29 +4972,22 @@
           "asset:voice-ref-en-harlan"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet"
+          "character:harlan": "asset:character-harlan-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay",
-            "object:harlan-wrist-device"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -5203,10 +5098,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5299,10 +5194,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -5410,10 +5305,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5443,8 +5338,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -5504,11 +5397,10 @@
         ],
         "coveredEntityIds": [
           "character:sorell",
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
@@ -5517,28 +5409,21 @@
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -5562,8 +5447,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -5632,11 +5515,10 @@
         "coveredEntityIds": [
           "character:sorell",
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
@@ -5647,28 +5529,21 @@
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -5692,8 +5567,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:object:harlan-wrist-device",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -5769,11 +5643,10 @@
         "coveredEntityIds": [
           "character:harlan",
           "location:celestial-ardor-bridge",
+          "object:harlan-wrist-device",
           "object:wired-comms-deck-patch-panel"
         ],
-        "uncoveredEntityIds": [
-          "object:harlan-wrist-device"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
@@ -5785,32 +5658,28 @@
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet",
           "object:wired-comms-deck-patch-panel": "asset:object-wired-comms-deck-patch-panel-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "object:harlan-wrist-device"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -5903,10 +5772,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -6004,10 +5873,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -6037,8 +5906,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6145,22 +6016,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-harlan"
+          ]
         }
       ],
       "segments": [
@@ -6179,8 +6057,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6295,22 +6175,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-okoye",
+            "asset:voice-ref-en-sorell"
+          ]
         }
       ],
       "segments": [
@@ -6329,8 +6217,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6437,22 +6327,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-harlan"
+          ]
         }
       ],
       "segments": [
@@ -6471,8 +6368,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6587,22 +6486,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -6621,8 +6528,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6737,22 +6646,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-harlan",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -6771,8 +6688,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6879,22 +6798,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -6913,8 +6839,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -7021,22 +6949,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -7055,8 +6990,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -7171,22 +7108,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -7206,8 +7151,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -7285,11 +7229,10 @@
           "character:harlan",
           "character:okoye",
           "character:rao",
-          "character:voss"
-        ],
-        "uncoveredEntityIds": [
+          "character:voss",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -7302,32 +7245,28 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:okoye": "asset:character-okoye-sheet",
           "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet"
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "audios:1>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -7347,8 +7286,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -7415,11 +7352,10 @@
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "character:okoye"
-        ],
-        "uncoveredEntityIds": [
+          "character:okoye",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -7429,28 +7365,21 @@
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
-          "character:okoye": "asset:character-okoye-sheet"
+          "character:okoye": "asset:character-okoye-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
@@ -7474,8 +7403,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -7553,11 +7481,10 @@
           "character:harlan",
           "character:okoye",
           "character:rao",
-          "character:voss"
-        ],
-        "uncoveredEntityIds": [
+          "character:voss",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -7570,32 +7497,28 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:okoye": "asset:character-okoye-sheet",
           "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet"
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "audios:1>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -7615,6 +7538,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:7>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -7721,20 +7645,24 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-harlan"
+          ]
         }
       ],
       "segments": [
@@ -7753,8 +7681,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -7869,22 +7799,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -7977,10 +7915,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -8097,10 +8035,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -8129,8 +8067,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -8237,22 +8177,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -8273,7 +8220,6 @@
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
         "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
         "uncovered_entity:object:proxima-geophysical-impulse-package",
         "reference_consolidation_required:excess:1"
       ],
@@ -8333,10 +8279,10 @@
           "object:proxima-geophysical-impulse-package"
         ],
         "coveredEntityIds": [
-          "character:zao"
+          "character:zao",
+          "location:celestial-ardor-inner-shielding-vault"
         ],
         "uncoveredEntityIds": [
-          "location:celestial-ardor-inner-shielding-vault",
           "object:proxima-geophysical-impulse-package"
         ],
         "attachedAssetIds": [
@@ -8346,14 +8292,15 @@
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -8363,7 +8310,6 @@
         {
           "code": "reference_pack_required",
           "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault",
             "object:proxima-geophysical-impulse-package"
           ],
           "compatiblePackAssetIds": [],
@@ -8392,8 +8338,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -8444,39 +8388,31 @@
           "location:celestial-ardor-inner-shielding-vault"
         ],
         "coveredEntityIds": [
-          "character:zao"
-        ],
-        "uncoveredEntityIds": [
+          "character:zao",
           "location:celestial-ardor-inner-shielding-vault"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-inner-shielding-vault-sheet",
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
-          "character:zao": "asset:character-zao-sheet"
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -8499,8 +8435,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -8615,22 +8553,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-okoye",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -8649,8 +8595,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -8765,22 +8713,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-harlan"
+          ]
         }
       ],
       "segments": [
@@ -8799,8 +8755,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -8915,22 +8873,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-harlan"
+          ]
         }
       ],
       "segments": [
@@ -8949,8 +8915,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -9057,22 +9025,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -9091,8 +9066,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -9207,22 +9184,30 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-sorell",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -9241,8 +9226,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -9349,22 +9336,29 @@
           "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -9383,11 +9377,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:7>5",
         "reference_budget:audios:2>0",
-        "reference_budget:total:9>8",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:object:harlan-wrist-device",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:9>5",
+        "reference_consolidation_required:excess:4"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -9489,11 +9482,10 @@
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [
+          "location:celestial-ardor-bridge",
           "object:harlan-wrist-device"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -9511,33 +9503,33 @@
           "character:rao": "asset:character-rao-sheet",
           "character:sorell": "asset:character-sorell-sheet",
           "character:voss": "asset:character-voss-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:sorell",
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
+          "images:7>5",
           "audios:2>0",
-          "total:9>8"
+          "total:9>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "object:harlan-wrist-device"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
+          "excessSlots": 4,
           "consolidateCandidateAssetIds": [
+            "asset:character-sorell-sheet",
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-elin",
             "asset:voice-ref-en-voss"
           ]
         }
@@ -9558,10 +9550,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:object:harlan-wrist-device",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -9647,11 +9639,10 @@
           "character:okoye",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
-        ],
-        "uncoveredEntityIds": [
+          "location:celestial-ardor-bridge",
           "object:harlan-wrist-device"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -9666,32 +9657,32 @@
           "character:okoye": "asset:character-okoye-sheet",
           "character:sorell": "asset:character-sorell-sheet",
           "character:voss": "asset:character-voss-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "object:harlan-wrist-device"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-harlan"
+          ]
         }
       ],
       "segments": [
@@ -9711,6 +9702,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -9809,20 +9801,23 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "audios:1>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-okoye"
+          ]
         }
       ],
       "segments": [
@@ -9842,6 +9837,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:3>0",
+        "reference_budget:total:8>5",
         "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
@@ -9956,20 +9952,25 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:3>0"
+          "audios:3>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 3,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-harlan",
+            "asset:voice-ref-en-okoye",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -9989,8 +9990,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -10068,11 +10068,10 @@
           "character:harlan",
           "character:okoye",
           "character:rao",
-          "character:voss"
-        ],
-        "uncoveredEntityIds": [
+          "character:voss",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -10085,32 +10084,28 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:okoye": "asset:character-okoye-sheet",
           "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet"
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "audios:1>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -10130,8 +10125,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -10191,11 +10184,10 @@
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "character:rao"
-        ],
-        "uncoveredEntityIds": [
+          "character:rao",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
@@ -10204,28 +10196,21 @@
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
-          "character:rao": "asset:character-rao-sheet"
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -10249,8 +10234,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -10317,11 +10300,10 @@
         ],
         "coveredEntityIds": [
           "character:okoye",
-          "character:voss"
-        ],
-        "uncoveredEntityIds": [
+          "character:voss",
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-okoye-sheet",
           "asset:character-voss-sheet",
@@ -10331,28 +10313,21 @@
         ],
         "coveringAssetByEntity": {
           "character:okoye": "asset:character-okoye-sheet",
-          "character:voss": "asset:character-voss-sheet"
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
@@ -10374,9 +10349,7 @@
       "shotId": "festival-master:shot-plan-077",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -10446,11 +10419,10 @@
           "character:harlan",
           "character:okoye",
           "character:rao",
-          "character:voss"
-        ],
-        "uncoveredEntityIds": [
+          "character:voss",
           "location:celestial-ardor-reactor-service-bay"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -10462,27 +10434,18 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:okoye": "asset:character-okoye-sheet",
           "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet"
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-077:segment-01",
@@ -10499,11 +10462,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
-        "uncovered_entity:object:harlan-wrist-device",
-        "reference_consolidation_required:excess:1"
+        "reference_budget:total:7>5",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -10588,12 +10550,11 @@
           "character:harlan",
           "character:okoye",
           "character:rao",
-          "character:voss"
-        ],
-        "uncoveredEntityIds": [
+          "character:voss",
           "location:celestial-ardor-reactor-service-bay",
           "object:harlan-wrist-device"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -10607,33 +10568,33 @@
           "character:harlan": "asset:character-harlan-sheet",
           "character:okoye": "asset:character-okoye-sheet",
           "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet"
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "images:6>5",
+          "audios:1>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay",
-            "object:harlan-wrist-device"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-okoye"
+          ]
         }
       ],
       "segments": [
@@ -10652,10 +10613,10 @@
       "status": "blocked",
       "blockers": [
         "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:6>5",
         "reference_budget:audios:2>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
-        "reference_consolidation_required:excess:2"
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -10748,11 +10709,10 @@
           "character:okoye",
           "character:rao",
           "character:voss",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
@@ -10768,32 +10728,33 @@
           "character:okoye": "asset:character-okoye-sheet",
           "character:rao": "asset:character-rao-sheet",
           "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:voss"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "images:6>5",
+          "audios:2>0",
+          "total:8>5"
         ]
       },
       "remediation": [
         {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
-        {
           "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:voice-ref-en-harlan",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -10813,9 +10774,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
-        "uncovered_entity:object:harlan-wrist-device",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -10883,12 +10841,11 @@
         ],
         "coveredEntityIds": [
           "character:rao",
-          "character:voss"
-        ],
-        "uncoveredEntityIds": [
+          "character:voss",
           "location:celestial-ardor-inner-shielding-vault",
           "object:harlan-wrist-device"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
@@ -10898,29 +10855,22 @@
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet"
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault",
-            "object:harlan-wrist-device"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -10945,7 +10895,6 @@
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
         "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
         "uncovered_entity:object:proxima-geophysical-impulse-package",
         "uncovered_entity:object:time-reference-diagnostic-unit",
         "reference_consolidation_required:excess:1"
@@ -11014,10 +10963,10 @@
           "object:time-reference-diagnostic-unit"
         ],
         "coveredEntityIds": [
-          "character:rao"
+          "character:rao",
+          "location:celestial-ardor-inner-shielding-vault"
         ],
         "uncoveredEntityIds": [
-          "location:celestial-ardor-inner-shielding-vault",
           "object:proxima-geophysical-impulse-package",
           "object:time-reference-diagnostic-unit"
         ],
@@ -11029,14 +10978,15 @@
           "asset:voice-ref-en-elin"
         ],
         "coveringAssetByEntity": {
-          "character:rao": "asset:character-rao-sheet"
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -11046,7 +10996,6 @@
         {
           "code": "reference_pack_required",
           "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault",
             "object:proxima-geophysical-impulse-package",
             "object:time-reference-diagnostic-unit"
           ],
@@ -11076,8 +11025,8 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:7>5",
         "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-inner-shielding-vault",
         "uncovered_entity:object:proxima-geophysical-impulse-package",
         "reference_consolidation_required:excess:2"
       ],
@@ -11162,10 +11111,10 @@
         "coveredEntityIds": [
           "character:harlan",
           "character:okoye",
-          "character:rao"
+          "character:rao",
+          "location:celestial-ardor-inner-shielding-vault"
         ],
         "uncoveredEntityIds": [
-          "location:celestial-ardor-inner-shielding-vault",
           "object:proxima-geophysical-impulse-package"
         ],
         "attachedAssetIds": [
@@ -11180,24 +11129,25 @@
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
           "character:okoye": "asset:character-okoye-sheet",
-          "character:rao": "asset:character-rao-sheet"
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-inner-shielding-vault": "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_pack_required",
           "uncoveredEntityIds": [
-            "location:celestial-ardor-inner-shielding-vault",
             "object:proxima-geophysical-impulse-package"
           ],
           "compatiblePackAssetIds": [],
@@ -11206,7 +11156,10 @@
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -11314,10 +11267,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -11338,6 +11291,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:7>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -11444,20 +11398,24 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-sorell",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -11477,6 +11435,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:7>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -11583,20 +11542,24 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-sorell",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -11693,10 +11656,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -11793,10 +11756,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -11826,8 +11789,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:vehicle:velari-transport-sphere",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -11887,11 +11848,10 @@
         ],
         "coveredEntityIds": [
           "character:sorell",
-          "location:velari-station"
-        ],
-        "uncoveredEntityIds": [
+          "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:location-velari-station-sheet",
@@ -11900,28 +11860,21 @@
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
-          "location:velari-station": "asset:location-velari-station-sheet"
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:velari-transport-sphere": "asset:vehicle-velari-transport-sphere-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "vehicle:velari-transport-sphere"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -11943,9 +11896,7 @@
       "shotId": "festival-master:shot-plan-089",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:vehicle:velari-transport-sphere"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -12006,11 +11957,10 @@
         "coveredEntityIds": [
           "character:sorell",
           "character:voss",
-          "location:velari-station"
-        ],
-        "uncoveredEntityIds": [
+          "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
@@ -12020,27 +11970,18 @@
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
           "character:voss": "asset:character-voss-sheet",
-          "location:velari-station": "asset:location-velari-station-sheet"
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:velari-transport-sphere": "asset:vehicle-velari-transport-sphere-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "vehicle:velari-transport-sphere"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-089:segment-01",
@@ -12123,10 +12064,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -12156,8 +12097,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:vehicle:velari-transport-sphere",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -12217,11 +12156,10 @@
         ],
         "coveredEntityIds": [
           "character:sorell",
-          "location:velari-station"
-        ],
-        "uncoveredEntityIds": [
+          "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:location-velari-station-sheet",
@@ -12230,28 +12168,21 @@
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
-          "location:velari-station": "asset:location-velari-station-sheet"
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:velari-transport-sphere": "asset:vehicle-velari-transport-sphere-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "vehicle:velari-transport-sphere"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -12273,10 +12204,7 @@
       "shotId": "festival-master:shot-plan-092",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:character:velari-envoy",
-        "uncovered_entity:vehicle:velari-transport-sphere"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -12336,12 +12264,11 @@
         ],
         "coveredEntityIds": [
           "character:sorell",
-          "location:velari-station"
-        ],
-        "uncoveredEntityIds": [
           "character:velari-envoy",
+          "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-velari-envoy-sheet",
@@ -12350,28 +12277,19 @@
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
-          "location:velari-station": "asset:location-velari-station-sheet"
+          "character:velari-envoy": "asset:character-velari-envoy-sheet",
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:velari-transport-sphere": "asset:vehicle-velari-transport-sphere-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "character:velari-envoy",
-            "vehicle:velari-transport-sphere"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "festival-master:shot-plan-092:segment-01",
@@ -12389,6 +12307,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
+        "reference_budget:total:6>5",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -12487,20 +12406,23 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:1>0"
+          "audios:1>0",
+          "total:6>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-elin"
+          ]
         }
       ],
       "segments": [
@@ -12520,6 +12442,7 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:2>0",
+        "reference_budget:total:7>5",
         "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
@@ -12626,20 +12549,24 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
-          "audios:2>0"
+          "audios:2>0",
+          "total:7>5"
         ]
       },
       "remediation": [
         {
           "code": "reference_consolidation_required",
           "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
+          "consolidateCandidateAssetIds": [
+            "asset:voice-ref-en-okoye",
+            "asset:voice-ref-en-voss"
+          ]
         }
       ],
       "segments": [
@@ -12659,8 +12586,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -12729,11 +12654,10 @@
         "coveredEntityIds": [
           "character:voss",
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-zao-sheet",
@@ -12744,28 +12668,21 @@
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -12789,8 +12706,6 @@
       "blockers": [
         "editorial_prompt_freeze_not_approved",
         "reference_budget:audios:1>0",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-reactor-service-bay",
         "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
@@ -12859,11 +12774,10 @@
         "coveredEntityIds": [
           "character:voss",
           "character:zao",
+          "location:celestial-ardor-reactor-service-bay",
           "object:optical-contingency-transmitter"
         ],
-        "uncoveredEntityIds": [
-          "location:celestial-ardor-reactor-service-bay"
-        ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-zao-sheet",
@@ -12874,28 +12788,21 @@
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
           "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-reactor-service-bay": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
         ]
       },
       "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-reactor-service-bay"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        },
         {
           "code": "reference_consolidation_required",
           "excessSlots": 1,
@@ -12964,10 +12871,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -13033,10 +12940,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -13102,10 +13009,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -13205,10 +13112,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -13506,10 +13413,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -13820,15 +13727,33 @@
           "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet",
           "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-model-sheet-v2"
         },
-        "wouldOmitEntityIds": [],
+        "wouldOmitEntityIds": [
+          "character:sorell",
+          "character:voss",
+          "character:zao"
+        ],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
-        "violations": []
+        "violations": [
+          "images:8>5",
+          "total:8>5"
+        ]
       },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 3,
+          "consolidateCandidateAssetIds": [
+            "asset:character-sorell-sheet",
+            "asset:character-voss-sheet",
+            "asset:character-zao-sheet"
+          ]
+        }
+      ],
       "gridLayout": {
         "rows": 2,
         "cols": 2,
@@ -13912,7 +13837,10 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:images:8>5",
+        "reference_budget:total:8>5",
+        "reference_consolidation_required:excess:3"
       ],
       "coherenceException": false,
       "runnable": false
@@ -14058,6 +13986,503 @@
         "stale_image_asset:asset:festival-master-stretch-axial-dock-006-009-panel-02",
         "stale_image_asset:asset:festival-master-stretch-axial-dock-006-009-panel-03",
         "stale_image_asset:asset:festival-master-stretch-axial-dock-006-009-panel-04"
+      ],
+      "coherenceException": false,
+      "runnable": false
+    },
+    {
+      "id": "festival-master:stretch-operations-gallery-004-005:rev-1",
+      "stretchId": "festival-master:stretch-operations-gallery-004-005",
+      "revision": 1,
+      "medium": "still",
+      "mode": "combined_storyboard_sheet",
+      "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
+      "outputTakePolicy": "new_candidate",
+      "memberInputs": [
+        {
+          "order": 1,
+          "shotId": "festival-master:shot-plan-004",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-004:take-01"
+          ]
+        },
+        {
+          "order": 2,
+          "shotId": "festival-master:shot-plan-005",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-005:take-01"
+          ]
+        }
+      ],
+      "stillReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet",
+        "asset:location-proxima-operations-gallery-interior-sheet"
+      ],
+      "sharedReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet",
+        "asset:location-proxima-operations-gallery-interior-sheet"
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:proxima-station"
+        ],
+        "coveredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:proxima-station"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-proxima-operations-gallery-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:voss": "asset:character-voss-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:proxima-station": "asset:location-proxima-operations-gallery-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 5,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 5
+        },
+        "violations": []
+      },
+      "gridLayout": {
+        "rows": 2,
+        "cols": 2,
+        "gutterFraction": 0.02,
+        "panelAspect": "16:9",
+        "blankCells": [
+          3,
+          4
+        ]
+      },
+      "computedMargins": {
+        "top": 0.078125,
+        "right": 0,
+        "bottom": 0.078125,
+        "left": 0
+      },
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-operations-gallery-004-005-sheet",
+          "panels": [
+            {
+              "order": 1,
+              "shotId": "festival-master:shot-plan-004",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-004:take-01"
+              ],
+              "frameRegion": {
+                "x": 0,
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-004:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-01"
+            },
+            {
+              "order": 2,
+              "shotId": "festival-master:shot-plan-005",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-005:take-01"
+              ],
+              "frameRegion": {
+                "x": 0.51,
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-005:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-02"
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "coherenceException": false,
+      "runnable": false
+    },
+    {
+      "id": "festival-master:stretch-operations-gallery-004-005:rev-1:video-1",
+      "stretchId": "festival-master:stretch-operations-gallery-004-005",
+      "revision": 1,
+      "medium": "video",
+      "mode": "grouped_seedance",
+      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+      "outputTakePolicy": "new_candidate",
+      "dependsOnStillJobId": "festival-master:stretch-operations-gallery-004-005:rev-1",
+      "durationMs": 12260,
+      "memberInputs": [
+        {
+          "order": 1,
+          "shotId": "festival-master:shot-plan-004",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-004:take-01"
+          ],
+          "keyframeAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-01"
+        },
+        {
+          "order": 2,
+          "shotId": "festival-master:shot-plan-005",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-005:take-01"
+          ],
+          "keyframeAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-02"
+        }
+      ],
+      "stillReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet",
+        "asset:location-proxima-operations-gallery-interior-sheet"
+      ],
+      "videoReferencePolicy": "fallback",
+      "effectiveVideoReferenceAssetIds": [],
+      "voiceSampleAssetIds": [
+        "asset:voice-ref-en-voss",
+        "asset:voice-ref-en-zao"
+      ],
+      "sharedReferenceAssetIds": [],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:proxima-station"
+        ],
+        "coveredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:proxima-station"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:festival-master-stretch-operations-gallery-004-005-panel-01",
+          "asset:festival-master-stretch-operations-gallery-004-005-panel-02",
+          "asset:voice-ref-en-voss",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-station": "asset:festival-master-stretch-operations-gallery-004-005-panel-01",
+          "character:voss": "asset:festival-master-stretch-operations-gallery-004-005-panel-01",
+          "character:zao": "asset:festival-master-stretch-operations-gallery-004-005-panel-01"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": null,
+          "maxVideos": null,
+          "maxAudios": null,
+          "maxTotalReferences": 50
+        },
+        "violations": [],
+        "keyframeCoveredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:proxima-station"
+        ],
+        "videoExtraCoveredEntityIds": [],
+        "uncoveredVideoEntityIds": []
+      },
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "video"
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved",
+        "seedance_execution_gated",
+        "stale_image_asset:asset:festival-master-stretch-operations-gallery-004-005-panel-01",
+        "stale_image_asset:asset:festival-master-stretch-operations-gallery-004-005-panel-02"
+      ],
+      "coherenceException": false,
+      "runnable": false
+    },
+    {
+      "id": "festival-master:stretch-central-access-013-015:rev-1",
+      "stretchId": "festival-master:stretch-central-access-013-015",
+      "revision": 1,
+      "medium": "still",
+      "mode": "combined_storyboard_sheet",
+      "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
+      "outputTakePolicy": "new_candidate",
+      "memberInputs": [
+        {
+          "order": 1,
+          "shotId": "festival-master:shot-plan-013",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-013:take-01"
+          ]
+        },
+        {
+          "order": 2,
+          "shotId": "festival-master:shot-plan-014",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-014:take-01"
+          ]
+        },
+        {
+          "order": 3,
+          "shotId": "festival-master:shot-plan-015",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-015:take-01"
+          ]
+        }
+      ],
+      "stillReferenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-central-access-sheet"
+      ],
+      "sharedReferenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-central-access-sheet"
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:sorell",
+          "character:zao",
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:sorell",
+          "character:zao",
+          "location:celestial-ardor-central-access"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "character:sorell": "asset:character-sorell-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 5,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 5
+        },
+        "violations": []
+      },
+      "gridLayout": {
+        "rows": 2,
+        "cols": 2,
+        "gutterFraction": 0.02,
+        "panelAspect": "16:9",
+        "blankCells": [
+          4
+        ]
+      },
+      "computedMargins": {
+        "top": 0.078125,
+        "right": 0,
+        "bottom": 0.078125,
+        "left": 0
+      },
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-central-access-013-015-sheet",
+          "panels": [
+            {
+              "order": 1,
+              "shotId": "festival-master:shot-plan-013",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-013:take-01"
+              ],
+              "frameRegion": {
+                "x": 0,
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-013:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-central-access-013-015-panel-01"
+            },
+            {
+              "order": 2,
+              "shotId": "festival-master:shot-plan-014",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-014:take-01"
+              ],
+              "frameRegion": {
+                "x": 0.51,
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-014:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-central-access-013-015-panel-02"
+            },
+            {
+              "order": 3,
+              "shotId": "festival-master:shot-plan-015",
+              "sourceTakeIds": [
+                "festival-master:shot-plan-015:take-01"
+              ],
+              "frameRegion": {
+                "x": 0,
+                "y": 0.51,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-015:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-central-access-013-015-panel-03"
+            }
+          ]
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved"
+      ],
+      "coherenceException": false,
+      "runnable": false
+    },
+    {
+      "id": "festival-master:stretch-central-access-013-015:rev-1:video-1",
+      "stretchId": "festival-master:stretch-central-access-013-015",
+      "revision": 1,
+      "medium": "video",
+      "mode": "grouped_seedance",
+      "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+      "outputTakePolicy": "new_candidate",
+      "dependsOnStillJobId": "festival-master:stretch-central-access-013-015:rev-1",
+      "durationMs": 15020,
+      "memberInputs": [
+        {
+          "order": 1,
+          "shotId": "festival-master:shot-plan-013",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-013:take-01"
+          ],
+          "keyframeAssetId": "asset:festival-master-stretch-central-access-013-015-panel-01"
+        },
+        {
+          "order": 2,
+          "shotId": "festival-master:shot-plan-014",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-014:take-01"
+          ],
+          "keyframeAssetId": "asset:festival-master-stretch-central-access-013-015-panel-02"
+        },
+        {
+          "order": 3,
+          "shotId": "festival-master:shot-plan-015",
+          "sourceTakeIds": [
+            "festival-master:shot-plan-015:take-01"
+          ],
+          "keyframeAssetId": "asset:festival-master-stretch-central-access-013-015-panel-03"
+        }
+      ],
+      "stillReferenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-central-access-sheet"
+      ],
+      "videoReferencePolicy": "fallback",
+      "effectiveVideoReferenceAssetIds": [],
+      "voiceSampleAssetIds": [
+        "asset:voice-ref-en-elin",
+        "asset:voice-ref-en-zao"
+      ],
+      "sharedReferenceAssetIds": [],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:sorell",
+          "character:zao",
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:sorell",
+          "character:zao",
+          "location:celestial-ardor-central-access"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:festival-master-stretch-central-access-013-015-panel-01",
+          "asset:festival-master-stretch-central-access-013-015-panel-02",
+          "asset:festival-master-stretch-central-access-013-015-panel-03",
+          "asset:voice-ref-en-elin",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-central-access": "asset:festival-master-stretch-central-access-013-015-panel-01",
+          "character:zao": "asset:festival-master-stretch-central-access-013-015-panel-01",
+          "character:rao": "asset:festival-master-stretch-central-access-013-015-panel-01",
+          "character:sorell": "asset:festival-master-stretch-central-access-013-015-panel-01",
+          "character:harlan": "asset:festival-master-stretch-central-access-013-015-panel-01"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": null,
+          "maxVideos": null,
+          "maxAudios": null,
+          "maxTotalReferences": 50
+        },
+        "violations": [],
+        "keyframeCoveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:sorell",
+          "character:zao",
+          "location:celestial-ardor-central-access"
+        ],
+        "videoExtraCoveredEntityIds": [],
+        "uncoveredVideoEntityIds": []
+      },
+      "compiledPrompt": null,
+      "outputs": [
+        {
+          "order": 1,
+          "artifact": "video"
+        }
+      ],
+      "blockers": [
+        "editorial_prompt_freeze_not_approved",
+        "seedance_execution_gated",
+        "stale_image_asset:asset:festival-master-stretch-central-access-013-015-panel-01",
+        "stale_image_asset:asset:festival-master-stretch-central-access-013-015-panel-02",
+        "stale_image_asset:asset:festival-master-stretch-central-access-013-015-panel-03"
       ],
       "coherenceException": false,
       "runnable": false

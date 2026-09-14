@@ -72,10 +72,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -149,10 +149,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -236,10 +236,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -332,10 +332,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -428,10 +428,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -532,10 +532,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -636,10 +636,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -723,10 +723,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -801,10 +801,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -879,10 +879,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -966,10 +966,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1062,10 +1062,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1149,10 +1149,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1236,10 +1236,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1323,10 +1323,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1410,10 +1410,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1506,10 +1506,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1586,10 +1586,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1666,10 +1666,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -1745,10 +1745,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1815,10 +1815,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1885,10 +1885,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -1965,10 +1965,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2055,10 +2055,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2152,10 +2152,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2248,10 +2248,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2336,10 +2336,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2414,10 +2414,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2483,10 +2483,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2552,10 +2552,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2621,10 +2621,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2700,10 +2700,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2788,10 +2788,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -2866,10 +2866,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -2945,10 +2945,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -3023,10 +3023,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3092,10 +3092,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3181,10 +3181,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -3259,10 +3259,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3328,10 +3328,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3399,10 +3399,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3468,10 +3468,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3501,9 +3501,7 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3537,33 +3535,25 @@
         "requiredEntityIds": [
           "location:celestial-ardor-central-access"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-central-access-sheet"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-06-05:segment-01",
@@ -3636,10 +3626,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -3724,10 +3714,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -3820,10 +3810,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -3904,10 +3894,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -3973,10 +3963,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4042,10 +4032,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4111,10 +4101,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4180,10 +4170,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4259,10 +4249,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4338,10 +4328,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -4406,10 +4396,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4485,10 +4475,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4555,10 +4545,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4624,10 +4614,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4694,10 +4684,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -4773,10 +4763,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -4861,10 +4851,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -4949,10 +4939,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5017,10 +5007,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -5050,9 +5040,7 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-central-access"
+        "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5086,33 +5074,25 @@
         "requiredEntityIds": [
           "location:celestial-ardor-central-access"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-central-access"
         ],
+        "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-central-access-sheet"
         ],
-        "coveringAssetByEntity": {},
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-central-access"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-08-06:segment-01",
@@ -5175,10 +5155,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -5244,10 +5224,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -5313,10 +5293,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -5400,10 +5380,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -5488,10 +5468,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5576,10 +5556,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5664,10 +5644,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5742,10 +5722,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -5821,10 +5801,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5909,10 +5889,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -5987,10 +5967,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -6066,10 +6046,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -6154,10 +6134,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -6242,10 +6222,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -6338,10 +6318,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -6426,10 +6406,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -6505,10 +6485,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -6585,10 +6565,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -6673,10 +6653,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -6752,10 +6732,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -6822,10 +6802,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -6901,10 +6881,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -6989,10 +6969,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7069,10 +7049,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -7150,10 +7130,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7240,10 +7220,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7328,10 +7308,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7416,10 +7396,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7504,10 +7484,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7582,10 +7562,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -7651,10 +7631,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -7731,10 +7711,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7809,10 +7789,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -7888,10 +7868,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -7966,10 +7946,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -8035,10 +8015,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -8122,10 +8102,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -8210,10 +8190,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -8299,10 +8279,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -8387,10 +8367,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -8483,10 +8463,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -8571,10 +8551,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -8667,10 +8647,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -8757,10 +8737,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -8835,10 +8815,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -8922,10 +8902,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:2>0"
@@ -9010,10 +8990,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -9098,10 +9078,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -9176,10 +9156,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -9247,10 +9227,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -9327,10 +9307,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -9406,10 +9386,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -9476,10 +9456,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -9546,10 +9526,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -9616,10 +9596,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -9686,10 +9666,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -9766,10 +9746,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -9855,10 +9835,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -9944,10 +9924,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -10023,10 +10003,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -10110,10 +10090,10 @@
         },
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": [
           "audios:1>0"
@@ -10173,10 +10153,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -10227,10 +10207,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -10281,10 +10261,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
@@ -10335,10 +10315,10 @@
         "coveringAssetByEntity": {},
         "wouldOmitEntityIds": [],
         "limits": {
-          "maxImages": 8,
+          "maxImages": 5,
           "maxVideos": 0,
           "maxAudios": 0,
-          "maxTotalReferences": 8
+          "maxTotalReferences": 5
         },
         "violations": []
       },
