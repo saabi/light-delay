@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "notes": "Production credits are metadata, not story shots. The credit cards in script:light-delay-festival-master keep their generic text; this record is the contract for who and what is credited.",
+  "people": [
+    {
+      "name": "Sebastian Ferreyra Pons",
+      "roles": ["author", "producer", "director", "editor", "system designer/developer"]
+    }
+  ],
+  "agents": ["ChatGPT", "Claude", "Cursor Composer"],
+  "tools": {
+    "imageProvider": "gpt-image-2",
+    "videoProvider": "Seedance 2.5",
+    "editing": "DaVinci Resolve",
+    "musicModel": {
+      "status": "undecided",
+      "placeholder": "TBD",
+      "todo": "Music model intentionally undecided; defer music generation until a model is selected."
+    }
+  }
+}

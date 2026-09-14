@@ -20,5 +20,6 @@
     { "schema": "generation-plan.schema.json", "directories": ["production/plans"] }
     ,{ "schema": "asset-generation-manifest.schema.json", "files": ["production/asset-generation-manifest.json"] }
     ,{ "schema": "visual-stretch-result.schema.json", "directories": ["production/runs"] }
+    ,{ "schema": "production-credits.schema.json", "files": ["production/credits.json"] }
   ]
 }

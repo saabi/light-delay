@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/production-credits.schema.json",
+  "title": "Production credits (metadata record, not story shots)",
+  "type": "object",
+  "required": ["schemaVersion", "people", "agents", "tools"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "notes": { "type": "string" },
+    "people": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "roles"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "roles": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
+        },
+        "additionalProperties": false
+      }
+    },
+    "agents": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "tools": {
+      "type": "object",
+      "required": ["imageProvider", "videoProvider", "editing", "musicModel"],
+      "properties": {
+        "imageProvider": { "type": "string", "minLength": 1 },
+        "videoProvider": { "type": "string", "minLength": 1 },
+        "editing": { "type": "string", "minLength": 1 },
+        "musicModel": {
+          "type": "object",
+          "required": ["status"],
+          "properties": {
+            "status": { "enum": ["undecided", "selected"] },
+            "placeholder": { "type": "string" },
+            "model": { "type": "string", "minLength": 1 },
+            "todo": { "type": "string" }
+          },
+          "additionalProperties": false,
+          "allOf": [
+            {
+              "if": { "properties": { "status": { "const": "selected" } }, "required": ["status"] },
+              "then": { "properties": { "model": { "type": "string", "minLength": 1 } }, "required": ["model"] }
+            }
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
