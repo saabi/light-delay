@@ -75,7 +75,7 @@ is non-empty — do not populate a section string to force through a blocked sho
 | `data/characters.json` / `locations.json` / `objects.json` / `vehicles.json` | Entities + `referenceAssetIds` — **see gap in §6: the bomb, vault, jammer and Harlan's wrist device have no catalog entries yet** |
 | `data/entity-variants.json` | Visual variants by continuity |
 | `data/assets.json` | `assetId` → path under `static/assets/` |
-| `data/voice-profiles.json` | Voice samples (`sampleAssetIds`). Empty samples block Seedance speech refs; do not substitute generated cue WAVs |
+| `data/voice-profiles.json` | Voice samples (`sampleAssetIds`). Main cast EN/ES refs + EN Reporter are wired (`asset:voice-ref-*`); do not substitute generated cue WAVs |
 | `data/outlines/light-delay-festival-master.json` + `data/scripts/light-delay-festival-master.json` | Festival WIP outline (authoritative for beats) + script (being populated with shots now) |
 | Deprecated cuts `data/scripts/light-delay-{main-short,festival,trailer,long}.json` | Rescue only — dialogue, staging, compatible assets; never authority |
 
@@ -289,7 +289,7 @@ negative: <what must not appear>
 > dialogue WAVs (`audioAssetId`) to a Seedance prompt.
 > Do not invent missing references — mark blockers and file a reference-asset request (§8.3) instead.
 > Do not submit anything to Higgsfield. Do not regenerate existing PNGs unless explicitly ordered.
-> Skip takes with `productionGate.status` of `deferred` or `blocked` (and any stretch job that lists them in `generationGate.takeIds`) until the author clears the gate — do not treat that as `imageStatus` debt.
+> Skip takes with `productionGate.status` of `deferred` or `blocked` (and any stretch job that lists them in `generationGate.takeIds`) until the author clears the gate — do not treat that as `imageStatus` debt. Respect the gate's `medium`: a `video`-scoped hold (`video_deferred_external_reference`) skips only Seedance/video work; generate the still/keyframe normally. `needs_regeneration` never blocks a still.
 > Never remove a stretch `referenceAssetIds` entry because video will depict the same subject; author Seedance-only static refs on optional `videoReferenceAssetIds` (absent = fallback from still list; present including `[]` = explicit). Generate keyframes from the full still list first; compile video refs only after keyframes are registered; refuse runnable video while `missing_keyframe:*` or `uncovered_video_entity:*` remains (`VISUAL_STRETCH_PIPELINE.md`).
 > Keep `compiledPrompt: null` until editorial freeze unless told otherwise for this session.
 > When rewriting dialogue for tone, edit English only and consult that speaker's voice-profile

@@ -1,6 +1,6 @@
 {
   "selectedDir": "static/assets/voices/en",
-  "note": "Selected-slow-v2: slower ICL from prior native-L1 selected refs; EN L1 accents preserved. Cael not in this set.",
+  "note": "Selected-slow-v2 cast plus VoiceDesign Reporter. Cael not in this set.",
   "engine": "selected-slow-v2 (ICL reclone from prior selected)",
   "phrasePath": "static/assets/voices/en/REF_TEXT.txt",
   "mapping": [
@@ -45,6 +45,13 @@
       "l1": "igbo",
       "source": "en-accents/selected-slow-v2/Okoye.wav",
       "priorSource": "en-accents/native-l1-v2/finalists/Okoye/native-03__Okoye_v2_qwen-en.wav"
+    },
+    {
+      "file": "Reporter.wav",
+      "character": "Reporter",
+      "l1": "general-american",
+      "source": "voice-design/Reporter.wav",
+      "note": "VoiceDesign one-shot for Earth broadcast reporter (en-US); same REF_TEXT as cast."
     }
   ],
   "refTextPath": "static/assets/voices/en/REF_TEXT.txt",
@@ -90,7 +97,14 @@
       "promotedFrom": "E:\\Models\\Qwen3-TTS\\output\\pronunciation-tests\\en-accents\\selected-slow-v2\\Zao.wav",
       "promotedAt": "2026-09-06T04:21:34.127609+00:00",
       "note": "Slower re-clone from prior selected ref (ICL; EN keeps L1 accent, ES softens)."
+    },
+    "Reporter": {
+      "selectedFile": "Reporter.wav",
+      "source": "voice-design",
+      "promotedFrom": "static/assets/voices/en/Reporter.wav",
+      "promotedAt": "2026-09-14T02:31:55.604192+00:00",
+      "note": "VoiceDesign sample matching voice:reporter-en; EN-only profile."
     }
   },
-  "updated": "2026-09-06T04:21:34.127637+00:00"
+  "updated": "2026-09-14T02:31:55.604192+00:00"
 }

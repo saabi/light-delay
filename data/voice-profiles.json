@@ -14,8 +14,14 @@
 					"language": "es",
 					"locale": "es-CO",
 					"languageFormation": {
-						"place": { "es": "Bogotá, Colombia", "en": "Bogotá, Colombia" },
-						"variety": { "es": "español bogotano formal y técnico", "en": "formal, technical Bogotá Spanish" }
+						"place": {
+							"es": "Bogotá, Colombia",
+							"en": "Bogotá, Colombia"
+						},
+						"variety": {
+							"es": "español bogotano formal y técnico",
+							"en": "formal, technical Bogotá Spanish"
+						}
 					},
 					"prosody": {
 						"es": "Español bogotano claro: consonantes definidas, ritmo contenido y finales de frase descendentes, sin arrastrar acento de otra lengua.",
@@ -24,14 +30,23 @@
 					"dialogueStyle": {
 						"es": "Preciso, sobrio y poco idiomático. Prefiere usted en relaciones profesionales, términos técnicos exactos y frases completas; bajo presión recorta la sintaxis sin perder claridad.",
 						"en": "Precise, restrained, and sparing with idiom. She favors usted in professional relationships, exact technical terms, and complete sentences; under pressure she clips syntax without losing clarity."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-es-zao"
+					]
 				},
 				{
 					"language": "en",
 					"locale": "en-SG",
 					"languageFormation": {
-						"place": { "es": "Singapur", "en": "Singapore" },
-						"variety": { "es": "inglés singapurense formal de ámbitos científicos", "en": "formal Singapore English used in scientific settings" }
+						"place": {
+							"es": "Singapur",
+							"en": "Singapore"
+						},
+						"variety": {
+							"es": "inglés singapurense formal de ámbitos científicos",
+							"en": "formal Singapore English used in scientific settings"
+						}
 					},
 					"prosody": {
 						"es": "Conserva una base prosódica de mandarín, con consonantes definidas, ritmo parejo y caídas tonales al cerrar ideas.",
@@ -40,7 +55,10 @@
 					"dialogueStyle": {
 						"es": "Inglés internacional técnico, conciso y de pocas contracciones. Evita tanto la ornamentación como las partículas coloquiales de Singapur; la presión vuelve sus frases fragmentarias, no imprecisas.",
 						"en": "Technical international English, concise and light on contractions. She avoids ornament and colloquial Singapore particles alike; pressure makes her sentences fragmentary, never imprecise."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-en-zao"
+					]
 				}
 			]
 		},
@@ -57,8 +75,14 @@
 					"language": "es",
 					"locale": "es-PE",
 					"languageFormation": {
-						"place": { "es": "Lima, Perú", "en": "Lima, Peru" },
-						"variety": { "es": "español limeño formal e institucional", "en": "formal, institutional Lima Spanish" }
+						"place": {
+							"es": "Lima, Perú",
+							"en": "Lima, Peru"
+						},
+						"variety": {
+							"es": "español limeño formal e institucional",
+							"en": "formal, institutional Lima Spanish"
+						}
 					},
 					"prosody": {
 						"es": "Español limeño institucional: vocales definidas, consonantes firmes, pausas regulares y cierres descendentes, sin inflexión germánica ni nórdica en el castellano.",
@@ -67,14 +91,23 @@
 					"dialogueStyle": {
 						"es": "Registro institucional, instrucciones ordenadas y pocas muletillas. Usa usted al ejercer mando, pero puede tutear a colegas de confianza; la jerarquía y la relación dramática mandan sobre una regla fija de tratamiento.",
 						"en": "Institutional register, ordered instructions, and few fillers. He uses usted when exercising command but may use tú with trusted colleagues; hierarchy and dramatic relationship outrank a fixed form-of-address rule."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-es-voss"
+					]
 				},
 				{
 					"language": "en",
 					"locale": "en-CA",
 					"languageFormation": {
-						"place": { "es": "Toronto, Canadá", "en": "Toronto, Canada" },
-						"variety": { "es": "inglés canadiense estándar de ámbito institucional", "en": "standard Canadian English used in institutional settings" }
+						"place": {
+							"es": "Toronto, Canadá",
+							"en": "Toronto, Canada"
+						},
+						"variety": {
+							"es": "inglés canadiense estándar de ámbito institucional",
+							"en": "standard Canadian English used in institutional settings"
+						}
 					},
 					"prosody": {
 						"es": "Conserva una inflexión germánica o nórdica: consonantes duras, vocales nítidas y cadencia deliberada.",
@@ -83,7 +116,10 @@
 					"dialogueStyle": {
 						"es": "Inglés canadiense estándar, formal y medido. Formula preguntas antes de dictar órdenes, evita muletillas y reserva las contracciones para momentos de cercanía o urgencia.",
 						"en": "Standard Canadian English, formal and measured. He frames questions before issuing orders, avoids fillers, and reserves contractions for intimacy or urgency."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-en-voss"
+					]
 				}
 			]
 		},
@@ -100,8 +136,14 @@
 					"language": "es",
 					"locale": "es-AR",
 					"languageFormation": {
-						"place": { "es": "Buenos Aires, Argentina", "en": "Buenos Aires, Argentina" },
-						"variety": { "es": "español rioplatense porteño", "en": "Buenos Aires Rioplatense Spanish" }
+						"place": {
+							"es": "Buenos Aires, Argentina",
+							"en": "Buenos Aires, Argentina"
+						},
+						"variety": {
+							"es": "español rioplatense porteño",
+							"en": "Buenos Aires Rioplatense Spanish"
+						}
 					},
 					"prosody": {
 						"es": "Rioplatense porteño: control consonántico claro, cadencia de oficial y musicalidad porteña, sin base británica audible en el castellano.",
@@ -110,14 +152,23 @@
 					"dialogueStyle": {
 						"es": "Voseo natural y sobrio, con ironía porteña contenida. Usa formulaciones pulidas para convertir su ideología en sentido común; al perder control acorta frases y deja aflorar el imperativo.",
 						"en": "Natural, restrained voseo with controlled Buenos Aires irony. He uses polished formulations to make ideology sound like common sense; when control slips, sentences shorten and imperatives surface."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-es-harlan"
+					]
 				},
 				{
 					"language": "en",
 					"locale": "en-GB",
 					"languageFormation": {
-						"place": { "es": "Portsmouth, Reino Unido", "en": "Portsmouth, United Kingdom" },
-						"variety": { "es": "inglés británico meridional de formación naval", "en": "southern British English shaped by naval service" }
+						"place": {
+							"es": "Portsmouth, Reino Unido",
+							"en": "Portsmouth, United Kingdom"
+						},
+						"variety": {
+							"es": "inglés británico meridional de formación naval",
+							"en": "southern British English shaped by naval service"
+						}
 					},
 					"prosody": {
 						"es": "Cadencia británica pulida y pareja, ataque consonántico duro y amenaza contenida en el registro bajo.",
@@ -126,7 +177,10 @@
 					"dialogueStyle": {
 						"es": "Inglés británico preciso, persuasivo y estratégicamente cortés. Prefiere understatement y preguntas que ya contienen una conclusión; bajo presión abandona la cortesía antes que la lógica.",
 						"en": "Precise, persuasive, strategically courteous British English. He favors understatement and questions that already contain a conclusion; under pressure he abandons courtesy before logic."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-en-harlan"
+					]
 				}
 			]
 		},
@@ -143,8 +197,14 @@
 					"language": "es",
 					"locale": "es-CO",
 					"languageFormation": {
-						"place": { "es": "Medellín, Colombia", "en": "Medellín, Colombia" },
-						"variety": { "es": "español paisa profesional y urbano", "en": "professional urban Paisa Spanish" }
+						"place": {
+							"es": "Medellín, Colombia",
+							"en": "Medellín, Colombia"
+						},
+						"variety": {
+							"es": "español paisa profesional y urbano",
+							"en": "professional urban Paisa Spanish"
+						}
 					},
 					"prosody": {
 						"es": "Paisa urbano contenido: consonantes suaves, ritmo silábico cercano y leves ascensos cuando duda, sin inflexión del sur de India en el castellano.",
@@ -153,14 +213,23 @@
 					"dialogueStyle": {
 						"es": "Español colombiano cercano pero contenido. Puede alternar usted y formas informales según confianza; socialmente deja frases incompletas, mientras que al explicar sistemas elimina rodeos y encadena diagnósticos breves.",
 						"en": "Warm but restrained Colombian Spanish. She may alternate usted and informal forms according to trust; socially she leaves sentences unfinished, while systems work removes hedging and produces short chained diagnoses."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-es-elin"
+					]
 				},
 				{
 					"language": "en",
 					"locale": "en-IN",
 					"languageFormation": {
-						"place": { "es": "Bengaluru, India", "en": "Bengaluru, India" },
-						"variety": { "es": "inglés indio urbano de ámbitos tecnológicos", "en": "urban Indian English used in technology settings" }
+						"place": {
+							"es": "Bengaluru, India",
+							"en": "Bengaluru, India"
+						},
+						"variety": {
+							"es": "inglés indio urbano de ámbitos tecnológicos",
+							"en": "urban Indian English used in technology settings"
+						}
 					},
 					"prosody": {
 						"es": "Inflexión de India meridional, consonantes suaves y finales ascendentes al tantear una idea; el análisis aplana y acelera la melodía.",
@@ -169,7 +238,10 @@
 					"dialogueStyle": {
 						"es": "Inglés indio técnico y directo, con preferencia por formulaciones lógicas completas. Fuera del trabajo matiza y vacila; ante datos concluyentes usa declaraciones cortas y absolutas.",
 						"en": "Technical, direct Indian English with a preference for complete logical formulations. Away from work she qualifies and hesitates; faced with conclusive data she uses short, absolute statements."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-en-elin"
+					]
 				}
 			]
 		},
@@ -186,8 +258,14 @@
 					"language": "es",
 					"locale": "es-AR",
 					"languageFormation": {
-						"place": { "es": "Santiago del Estero, Argentina", "en": "Santiago del Estero, Argentina" },
-						"variety": { "es": "español argentino del noroeste, académico y claro", "en": "clear academic Northwestern Argentine Spanish" }
+						"place": {
+							"es": "Santiago del Estero, Argentina",
+							"en": "Santiago del Estero, Argentina"
+						},
+						"variety": {
+							"es": "español argentino del noroeste, académico y claro",
+							"en": "clear academic Northwestern Argentine Spanish"
+						}
 					},
 					"prosody": {
 						"es": "Castellano santiagueño claro: ll/y menos rehiladas que el porteño, entonación expresiva y articulación cuidada, sin inflexión francesa en el castellano.",
@@ -197,14 +275,25 @@
 						"es": "Español argentino interior culto y expresivo. Alterna vos y usted según relación; evita coloquialismos cerrados y formula metáforas con precisión lingüística.",
 						"en": "Cultivated, expressive interior Argentine Spanish. She alternates vos and usted according to relationship; she avoids opaque slang and formulates metaphors with linguistic precision."
 					},
-					"pronunciationMap": { "Sorell": "Sorél" }
+					"pronunciationMap": {
+						"Sorell": "Sorél"
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-es-sorell"
+					]
 				},
 				{
 					"language": "en",
 					"locale": "en-CA",
 					"languageFormation": {
-						"place": { "es": "Montréal, Canadá", "en": "Montréal, Canada" },
-						"variety": { "es": "inglés canadiense formado en un entorno francófono", "en": "Canadian English formed in a francophone environment" }
+						"place": {
+							"es": "Montréal, Canadá",
+							"en": "Montréal, Canada"
+						},
+						"variety": {
+							"es": "inglés canadiense formado en un entorno francófono",
+							"en": "Canadian English formed in a francophone environment"
+						}
 					},
 					"prosody": {
 						"es": "Inflexión francesa suave, melodía flexible y erres poco marcadas, siempre con dicción deliberadamente clara.",
@@ -214,7 +303,12 @@
 						"es": "Inglés canadiense preciso y pedagógico, con contracciones naturales y preguntas que abren una idea. Su especialidad aparece en elecciones semánticas cuidadas, no en explicaciones para el público.",
 						"en": "Precise, pedagogical Canadian English, with natural contractions and questions that open an idea. Her expertise appears in careful semantic choices, not explanations aimed at the audience."
 					},
-					"pronunciationMap": { "Sorell": "Soréll" }
+					"pronunciationMap": {
+						"Sorell": "Soréll"
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-en-sorell"
+					]
 				}
 			]
 		},
@@ -287,8 +381,14 @@
 					"language": "es",
 					"locale": "es-VE",
 					"languageFormation": {
-						"place": { "es": "Caracas, Venezuela", "en": "Caracas, Venezuela" },
-						"variety": { "es": "español venezolano formal de Caracas", "en": "formal Venezuelan Spanish from Caracas" }
+						"place": {
+							"es": "Caracas, Venezuela",
+							"en": "Caracas, Venezuela"
+						},
+						"variety": {
+							"es": "español venezolano formal de Caracas",
+							"en": "formal Venezuelan Spanish from Caracas"
+						}
 					},
 					"prosody": {
 						"es": "Español caraqueño operativo: ritmo silábico claro, consonantes definidas y entonación firme y descendente, sin inflexión igbo en el castellano.",
@@ -297,14 +397,23 @@
 					"dialogueStyle": {
 						"es": "Español venezolano formal, directo y plenamente gramatical. Prefiere órdenes breves, verbos operativos y tratamientos respetuosos; no se representa el acento con errores ni ortografía fonética.",
 						"en": "Formal, direct, fully grammatical Venezuelan Spanish. She favors brief commands, operational verbs, and respectful forms of address; her accent is never represented through errors or phonetic spelling."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-es-okoye"
+					]
 				},
 				{
 					"language": "en",
 					"locale": "en-NG",
 					"languageFormation": {
-						"place": { "es": "Enugu, Nigeria", "en": "Enugu, Nigeria" },
-						"variety": { "es": "inglés nigeriano educado con entorno igbo", "en": "educated Nigerian English in an Igbo environment" }
+						"place": {
+							"es": "Enugu, Nigeria",
+							"en": "Enugu, Nigeria"
+						},
+						"variety": {
+							"es": "inglés nigeriano educado con entorno igbo",
+							"en": "educated Nigerian English in an Igbo environment"
+						}
 					},
 					"prosody": {
 						"es": "Inflexión igbo en el inglés: ritmo silábico marcado, consonantes muy claras y cierres descendentes sin exageración.",
@@ -313,7 +422,10 @@
 					"dialogueStyle": {
 						"es": "Inglés nigeriano educado, conciso y orientado a la acción. Da órdenes con estructuras inequívocas y expresa duda mediante una pausa o una pregunta exacta, no mediante vaguedad ni caricatura dialectal.",
 						"en": "Educated Nigerian English, concise and action-oriented. She gives orders in unambiguous structures and expresses doubt through a pause or an exact question, not vagueness or dialect caricature."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-en-okoye"
+					]
 				}
 			]
 		},
@@ -330,8 +442,14 @@
 					"language": "en",
 					"locale": "en-US",
 					"languageFormation": {
-						"place": { "es": "Washington, D. C., Estados Unidos", "en": "Washington, D.C., United States" },
-						"variety": { "es": "inglés estadounidense general de radiodifusión internacional", "en": "General American English shaped by international broadcasting" }
+						"place": {
+							"es": "Washington, D. C., Estados Unidos",
+							"en": "Washington, D.C., United States"
+						},
+						"variety": {
+							"es": "inglés estadounidense general de radiodifusión internacional",
+							"en": "General American English shaped by international broadcasting"
+						}
 					},
 					"prosody": {
 						"es": "Cadencia de informativo contemporáneo: ritmo estable, nombres propios articulados con cuidado y énfasis reservado para contrastes verificables.",
@@ -340,7 +458,10 @@
 					"dialogueStyle": {
 						"es": "Inglés internacional accesible, frases compactas y atribuciones claras. Presenta posiciones enfrentadas sin convertir la narración en editorial ni caricaturizar a manifestantes o partidarios.",
 						"en": "Accessible international English, compact sentences, and clear attribution. She presents opposing positions without turning narration into an editorial or caricaturing protesters or supporters."
-					}
+					},
+					"sampleAssetIds": [
+						"asset:voice-ref-en-reporter"
+					]
 				}
 			]
 		},

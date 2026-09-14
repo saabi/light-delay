@@ -55,6 +55,11 @@
       "selectedRef": "static/assets/voices/en/Okoye.wav",
       "sourceCandidate": "en-accents/selected-slow-v2/Okoye.wav",
       "instruct": "Female, firm contralto with marked chest resonance and direct consonant attack. Educated Nigerian English learned in Enugu with Igbo prosody: syllable-timed rhythm, very clear consonants, firm falling intonation at phrase ends. Security-officer delivery trained for commands under risk; calm authority, unambiguous, not soft, no caricature."
+    },
+    "Reporter": {
+      "selectedRef": "static/assets/voices/en/Reporter.wav",
+      "sourceCandidate": "voice-design/Reporter.wav",
+      "instruct": "Female, mid-30s, clear mid-register mezzo with studio presence and chest support, almost no rasp. General American English shaped by international news broadcasting (Washington, D.C.): steady contemporary news cadence, carefully articulated proper names, emphasis reserved for verifiable contrasts, accessible international diction, no regional caricature and no theatrical drama. Speak clearly at a noticeably slower, deliberate, unhurried pace. Authority without shouting."
     }
   }
 }
