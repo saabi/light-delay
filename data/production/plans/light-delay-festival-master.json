@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "e45b5f3145a925adc145406afe57d2ff3f6abaf28959a33206ddbc92896817cf",
+    "sourceDigest": "890f721fcd8b87e38900fc9064b324ac94432131a541073511a276e6f415a43a",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -14424,6 +14424,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet",
           "panels": [
             {
               "order": 1,
@@ -14784,6 +14785,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-reactor-record-033-036-sheet",
           "panels": [
             {
               "order": 1,
@@ -15147,6 +15149,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet",
           "panels": [
             {
               "order": 1,
@@ -15383,6 +15386,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet",
           "panels": [
             {
               "order": 1,
@@ -15630,6 +15634,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet",
           "panels": [
             {
               "order": 1,
@@ -15907,6 +15912,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet",
           "panels": [
             {
               "order": 1,
@@ -16268,6 +16274,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet",
           "panels": [
             {
               "order": 1,
@@ -16508,6 +16515,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet",
           "panels": [
             {
               "order": 1,
@@ -16826,6 +16834,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet",
           "panels": [
             {
               "order": 1,
@@ -17191,6 +17200,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-velari-answer-087-088-sheet",
           "panels": [
             {
               "order": 1,
@@ -17427,6 +17437,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-velari-envoy-091-092-sheet",
           "panels": [
             {
               "order": 1,
@@ -17669,6 +17680,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-watch-093-094-sheet",
           "panels": [
             {
               "order": 1,
@@ -17917,6 +17929,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-reactor-report-095-096-sheet",
           "panels": [
             {
               "order": 1,
@@ -18141,6 +18154,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-engineering-audit-016-017-sheet",
           "panels": [
             {
               "order": 1,
@@ -18355,6 +18369,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-reactor-entrance-018-019-sheet",
           "panels": [
             {
               "order": 1,
@@ -18585,6 +18600,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-vault-discovery-020-022-sheet",
           "panels": [
             {
               "order": 1,
@@ -18926,6 +18942,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-service-cylinder-route-026-028-sheet",
           "panels": [
             {
               "order": 1,
@@ -19211,6 +19228,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet",
           "panels": [
             {
               "order": 1,
@@ -19504,6 +19522,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet",
           "panels": [
             {
               "order": 1,
@@ -19814,6 +19833,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet",
           "panels": [
             {
               "order": 1,
@@ -20123,6 +20143,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-command-break-064-067-sheet",
           "panels": [
             {
               "order": 1,
@@ -20434,6 +20455,7 @@
         {
           "order": 1,
           "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-device-071-073-sheet",
           "panels": [
             {
               "order": 1,

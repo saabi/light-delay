@@ -23364,7 +23364,8 @@
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet"
     },
     {
       "id": "festival-master:stretch-reactor-record-033-036",
@@ -23499,7 +23500,8 @@
         "asset:character-harlan-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet"
     },
     {
       "id": "festival-master:stretch-reactor-sorell-042-043",
@@ -23604,7 +23606,8 @@
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-harlan-alibi-044-045",
@@ -23702,7 +23705,8 @@
         "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:object-harlan-wrist-device-sheet",
         "asset:object-wired-comms-deck-patch-panel-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet"
     },
     {
       "id": "festival-master:stretch-central-vault-obstruction-054-056",
@@ -23843,7 +23847,8 @@
         "asset:character-pair-voss-harlan-bridge-sheet",
         "asset:character-rao-sheet",
         "asset:location-celestial-ardor-central-access-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-vector-057-059",
@@ -23992,7 +23997,8 @@
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-packet-open-060-061",
@@ -24124,7 +24130,8 @@
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet"
     },
     {
       "id": "festival-master:stretch-vault-flashback-062-063",
@@ -24217,7 +24224,8 @@
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:object-proxima-geophysical-impulse-package-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-greeting-prep-083-086",
@@ -24372,7 +24380,8 @@
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
     },
     {
       "id": "festival-master:stretch-velari-answer-087-088",
@@ -24478,7 +24487,8 @@
         "asset:character-voss-sheet",
         "asset:location-velari-station-sheet",
         "asset:vehicle-velari-transport-sphere-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-velari-answer-087-088-sheet"
     },
     {
       "id": "festival-master:stretch-velari-envoy-091-092",
@@ -24585,7 +24595,8 @@
         "asset:character-velari-envoy-sheet",
         "asset:location-velari-station-sheet",
         "asset:vehicle-velari-transport-sphere-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-velari-envoy-091-092-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-watch-093-094",
@@ -24715,7 +24726,8 @@
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-watch-093-094-sheet"
     },
     {
       "id": "festival-master:stretch-reactor-report-095-096",
@@ -24825,7 +24837,8 @@
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-report-095-096-sheet"
     },
     {
       "id": "festival-master:stretch-engineering-audit-016-017",
@@ -24917,7 +24930,8 @@
       "referenceAssetIds": [
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-engineering-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-engineering-audit-016-017-sheet"
     },
     {
       "id": "festival-master:stretch-reactor-entrance-018-019",
@@ -25019,7 +25033,8 @@
         "asset:character-zao-sheet",
         "asset:character-harlan-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-sheet"
     },
     {
       "id": "festival-master:stretch-vault-discovery-020-022",
@@ -25131,7 +25146,8 @@
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:object-proxima-geophysical-impulse-package-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-vault-discovery-020-022-sheet"
     },
     {
       "id": "festival-master:stretch-service-cylinder-route-026-028",
@@ -25261,7 +25277,8 @@
         "asset:character-voss-sheet",
         "asset:location-celestial-ardor-service-cylinder-sheet",
         "asset:object-wired-comms-deck-patch-panel-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-comms-cut-023-025",
@@ -25409,7 +25426,8 @@
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:object-harlan-wrist-device-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-investigation-046-049",
@@ -25571,7 +25589,8 @@
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -25733,7 +25752,8 @@
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-command-break-064-067",
@@ -25896,7 +25916,8 @@
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:object-harlan-wrist-device-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-sheet"
     },
     {
       "id": "festival-master:stretch-bridge-device-071-073",
@@ -26035,7 +26056,8 @@
         "asset:character-sorell-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:object-harlan-wrist-device-sheet"
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-device-071-073-sheet"
     },
     {
       "id": "festival-master:stretch-reactor-confrontation-077-079",

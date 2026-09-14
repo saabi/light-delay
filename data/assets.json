@@ -12310,6 +12310,644 @@
           "es": "Referencia compuesta aprobada del muelle axial creada a partir de las hojas conjuntas de personajes y la hoja de Zao; cubre a las seis personas, la geometría del pozo, la microgravedad y el Celestial Ardor acoplado coaxialmente."
         }
       }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T09:50:11.441Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-record-033-036-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T09:53:54.297Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-sorell-042-043-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-sorell-042-043/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T09:59:15.836Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
+        "stretchJobId": "festival-master:stretch-reactor-sorell-042-043:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-harlan-alibi-044-045/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T10:02:13.605Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
+        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T10:04:57.129Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
+        "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-vector-057-059-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T10:06:58.242Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-packet-open-060-061/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T10:09:19.709Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-flashback-062-063-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-flashback-062-063/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T10:11:32.295Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-engineering-audit-016-017-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-engineering-audit-016-017/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T10:22:29.517Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-engineering-audit-016-017",
+        "stretchJobId": "festival-master:stretch-engineering-audit-016-017:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-entrance-018-019-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T10:56:31.367Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-entrance-018-019",
+        "stretchJobId": "festival-master:stretch-reactor-entrance-018-019:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-discovery-020-022-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-discovery-020-022/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T13:31:33.260Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:27:29.946Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-service-cylinder-route-026-028-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-route-026-028/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:29:32.573Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
+        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-investigation-046-049-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-investigation-046-049/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:31:15.107Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:32:46.922Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
+        "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-064-067-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-064-067/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:35:36.465Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-device-071-073-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-device-071-073/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:38:41.692Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-device-071-073",
+        "stretchJobId": "festival-master:stretch-bridge-device-071-073:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:42:08.294Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-velari-answer-087-088-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:44:18.594Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-velari-answer-087-088",
+        "stretchJobId": "festival-master:stretch-velari-answer-087-088:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-velari-envoy-091-092-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:45:55.327Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
+        "stretchJobId": "festival-master:stretch-velari-envoy-091-092:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-watch-093-094-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-watch-093-094/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:47:36.558Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-watch-093-094",
+        "stretchJobId": "festival-master:stretch-bridge-watch-093-094:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-report-095-096-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-report-095-096/sheet.png",
+      "mimeType": "image/png",
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14T15:52:12.238Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-report-095-096",
+        "stretchJobId": "festival-master:stretch-reactor-report-095-096:rev-1",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
     }
   ]
 }
