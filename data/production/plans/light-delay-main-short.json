@@ -55,6 +55,30 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-01-01:segment-01",
@@ -108,6 +132,30 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-01-02:segment-01",
@@ -124,7 +172,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -168,6 +218,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-reporter"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-01-03:segment-01",
@@ -184,7 +268,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -226,6 +312,40 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -244,7 +364,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -288,6 +410,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-01-05:segment-01",
@@ -304,7 +460,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -355,6 +513,41 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-zao",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-01-06:segment-01",
@@ -371,7 +564,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -420,6 +615,41 @@
           "path": "/assets/voices/en/Sorell.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-zao",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -476,6 +706,30 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-01-08:segment-01",
@@ -530,6 +784,30 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-01-09:segment-01",
@@ -584,6 +862,30 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-01-10:segment-01",
@@ -600,7 +902,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -642,6 +946,40 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -660,7 +998,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -702,6 +1042,40 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -758,6 +1132,30 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-01-13:segment-01",
@@ -774,7 +1172,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -816,6 +1216,40 @@
           "path": "/assets/voices/en/Sorell.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -872,6 +1306,30 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-01-15:segment-01",
@@ -888,7 +1346,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -932,6 +1392,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-01-16:segment-01",
@@ -948,7 +1442,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -990,6 +1486,40 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1040,6 +1570,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-02-01:segment-01",
@@ -1057,7 +1610,9 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1092,6 +1647,39 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1141,6 +1729,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-02-03:segment-01",
@@ -1188,6 +1799,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-02-04:segment-01",
@@ -1205,7 +1839,9 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-engineering"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1233,6 +1869,37 @@
           "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png",
           "required": true,
           "role": "location"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-engineering-sheet"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-engineering"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -1252,7 +1919,9 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-engineering"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1280,6 +1949,37 @@
           "path": "/assets/locations/celestial-ardor-engineering/concept-sheet-v3.png",
           "required": true,
           "role": "location"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-engineering-sheet"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-engineering"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -1299,7 +1999,11 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-engineering",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1334,6 +2038,45 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-engineering-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-engineering"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        },
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1353,7 +2096,11 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-engineering",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1390,6 +2137,45 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-engineering"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-engineering-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-engineering"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        },
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-03-04:segment-01",
@@ -1406,7 +2192,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1441,6 +2229,39 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1459,7 +2280,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1494,6 +2317,39 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1542,6 +2398,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-04-03:segment-01",
@@ -1588,6 +2467,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-04-04:segment-01",
@@ -1634,6 +2536,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-04-05:segment-01",
@@ -1680,6 +2605,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-05-01:segment-01",
@@ -1696,7 +2644,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1733,6 +2683,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-05-02:segment-01",
@@ -1749,7 +2732,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1784,6 +2769,39 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1832,6 +2850,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-05-04:segment-01",
@@ -1848,7 +2889,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1883,6 +2926,39 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1931,6 +3007,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-05-06:segment-01",
@@ -1947,7 +3046,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-service-cylinder"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1977,6 +3078,37 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-service-cylinder-sheet"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-service-cylinder"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-05-07:segment-01",
@@ -1993,7 +3125,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2028,6 +3162,39 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -2076,6 +3243,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-06-01:segment-01",
@@ -2122,6 +3312,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-06-02:segment-01",
@@ -2170,6 +3383,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-06-03:segment-01",
@@ -2186,7 +3422,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-service-cylinder"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2216,6 +3454,37 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-service-cylinder-sheet"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-service-cylinder"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-06-04:segment-01",
@@ -2232,7 +3501,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-central-access"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2262,6 +3533,37 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-central-access-sheet"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-central-access"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-06-05:segment-01",
@@ -2278,7 +3580,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2313,6 +3617,39 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -2331,7 +3668,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2368,6 +3707,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-06-07:segment-01",
@@ -2384,7 +3756,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2426,6 +3800,40 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-zao",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -2480,6 +3888,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-06-09:segment-01",
@@ -2526,6 +3957,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-07-01:segment-01",
@@ -2572,6 +4026,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-07-02:segment-01",
@@ -2618,6 +4095,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-07-03:segment-01",
@@ -2634,7 +4134,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-service-cylinder"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2662,6 +4164,37 @@
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-service-cylinder-sheet"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-service-cylinder"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -2710,6 +4243,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-07-05:segment-01",
@@ -2726,7 +4282,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2763,6 +4321,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-07-06:segment-01",
@@ -2779,7 +4370,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-command-vestibule"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2801,6 +4394,35 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-command-vestibule"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-command-vestibule"
+        ],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-command-vestibule"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-07-07:segment-01",
@@ -2847,6 +4469,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:velari-wormhole-mouth"
+        ],
+        "coveredEntityIds": [
+          "location:velari-wormhole-mouth"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-velari-wormhole-mouth-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:velari-wormhole-mouth": "asset:location-velari-wormhole-mouth-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-07-08:segment-01",
@@ -2894,6 +4539,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-07-09:segment-01",
@@ -2940,6 +4608,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:velari-wormhole-mouth"
+        ],
+        "coveredEntityIds": [
+          "location:velari-wormhole-mouth"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-velari-wormhole-mouth-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:velari-wormhole-mouth": "asset:location-velari-wormhole-mouth-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-07-10:segment-01",
@@ -2987,6 +4678,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-08-01:segment-01",
@@ -3003,7 +4717,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3040,6 +4756,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-08-02:segment-01",
@@ -3056,7 +4805,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3093,6 +4844,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-08-03:segment-01",
@@ -3109,7 +4893,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3146,6 +4932,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-08-04:segment-01",
@@ -3162,7 +4981,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-command-vestibule"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3184,6 +5005,35 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-command-vestibule"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-command-vestibule"
+        ],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-command-vestibule"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-08-05:segment-01",
@@ -3200,7 +5050,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-central-access"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3228,6 +5080,37 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-central-access-sheet"
+        ],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-central-access"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -3276,6 +5159,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-08-07:segment-01",
@@ -3322,6 +5228,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-09-01:segment-01",
@@ -3368,6 +5297,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-09-02:segment-01",
@@ -3384,7 +5336,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3428,6 +5382,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-09-03:segment-01",
@@ -3444,7 +5432,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3481,6 +5471,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-09-04:segment-01",
@@ -3497,7 +5520,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3534,6 +5559,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-09-05:segment-01",
@@ -3550,7 +5608,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3585,6 +5645,39 @@
           "path": "/assets/voices/en/Sorell.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -3633,6 +5726,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-10-01:segment-01",
@@ -3649,7 +5765,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3684,6 +5802,39 @@
           "path": "/assets/voices/en/Elin.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -3702,7 +5853,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3737,6 +5890,39 @@
           "path": "/assets/voices/en/Elin.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -3785,6 +5971,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-10-04:segment-01",
@@ -3801,7 +6010,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3838,6 +6049,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-10-05:segment-01",
@@ -3854,7 +6098,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3891,6 +6137,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-10-06:segment-01",
@@ -3907,7 +6186,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3942,6 +6223,39 @@
           "path": "/assets/voices/en/Elin.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -3960,7 +6274,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4004,6 +6320,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-11-01:segment-01",
@@ -4020,7 +6370,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4055,6 +6407,39 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -4104,6 +6489,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-11-03:segment-01",
@@ -4121,7 +6529,9 @@
       "blockers": [
         "missing_voice_sample:character:cael",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4156,6 +6566,39 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -4174,7 +6617,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4209,6 +6654,39 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -4258,6 +6736,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-11-06:segment-01",
@@ -4305,6 +6806,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-12-01:segment-01",
@@ -4321,7 +6845,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4358,6 +6884,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-12-02:segment-01",
@@ -4374,7 +6933,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4409,6 +6970,39 @@
           "path": "/assets/voices/en/Elin.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -4459,6 +7053,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-12-04:segment-01",
@@ -4475,7 +7092,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [
         "PHYSICAL MANIFEST · SNAPSHOT INTACT · HARDWARE SIGNATURE VALID\nRELAY ASSIGNED: R. HARLAN"
@@ -4514,6 +7133,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-12-05:segment-01",
@@ -4530,7 +7182,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [
         "OVERRIDE ATTRIBUTED · R. HARLAN · CONVERGENT EVIDENCE"
@@ -4569,6 +7223,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-12-06:segment-01",
@@ -4585,7 +7272,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4622,6 +7311,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-12-07:segment-01",
@@ -4638,7 +7360,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4675,6 +7399,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-12-08:segment-01",
@@ -4691,7 +7448,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4726,6 +7485,39 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -4774,6 +7566,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-13-01:segment-01",
@@ -4820,6 +7635,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-13-02:segment-01",
@@ -4837,7 +7675,9 @@
       "blockers": [
         "missing_voice_sample:character:cael",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4872,6 +7712,39 @@
           "path": "/assets/voices/en/Sorell.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -4920,6 +7793,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-13-04:segment-01",
@@ -4936,7 +7832,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4971,6 +7869,39 @@
           "path": "/assets/voices/en/Elin.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -5019,6 +7950,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-14-01:segment-01",
@@ -5065,6 +8019,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-14-02:segment-01",
@@ -5081,7 +8058,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5125,6 +8104,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-14-03:segment-01",
@@ -5141,7 +8154,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5176,6 +8191,39 @@
           "path": "/assets/voices/en/Sorell.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -5195,7 +8243,9 @@
       "blockers": [
         "missing_voice_sample:character:cael",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5232,6 +8282,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-14-05:segment-01",
@@ -5248,7 +8331,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5285,6 +8370,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-14-06:segment-01",
@@ -5301,7 +8419,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5345,6 +8465,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan",
+          "asset:voice-ref-en-okoye"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-14-07:segment-01",
@@ -5361,7 +8515,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5398,6 +8554,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-14-08:segment-01",
@@ -5414,7 +8603,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5458,6 +8649,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-sorell",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-14-09:segment-01",
@@ -5474,7 +8699,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [
         "PAYLOAD QUARANTINED · OUTBOUND CHANNEL CLEAN · MEDIATION ACTIVE"
@@ -5511,6 +8738,39 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -5559,6 +8819,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-15-01:segment-01",
@@ -5575,7 +8858,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5619,6 +8904,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-15-02:segment-01",
@@ -5635,7 +8954,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5672,6 +8993,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-15-03:segment-01",
@@ -5688,7 +9042,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5723,6 +9079,39 @@
           "path": "/assets/voices/en/Sorell.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -5771,6 +9160,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-15-05:segment-01",
@@ -5819,6 +9231,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-15-06:segment-01",
@@ -5836,7 +9271,9 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -5871,6 +9308,39 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -5920,6 +9390,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-16-01:segment-01",
@@ -5967,6 +9460,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-16-02:segment-01",
@@ -6014,6 +9530,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-16-03:segment-01",
@@ -6061,6 +9600,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-17-01:segment-01",
@@ -6108,6 +9670,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-17-02:segment-01",
@@ -6125,7 +9710,9 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6162,6 +9749,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-sorell"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-17-03:segment-01",
@@ -6179,7 +9799,9 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6216,6 +9838,39 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-17-04:segment-01",
@@ -6233,7 +9888,9 @@
       "blockers": [
         "missing_production_context",
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6268,6 +9925,39 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -6317,6 +10007,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-17-06:segment-01",
@@ -6333,7 +10046,9 @@
       "status": "blocked",
       "blockers": [
         "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -6377,6 +10092,40 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:voice-ref-en-reporter"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "main:shot-01-18:segment-01",
@@ -6416,6 +10165,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-title-01:segment-01",
@@ -6455,6 +10219,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-18-01:segment-01",
@@ -6494,6 +10273,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-18-02:segment-01",
@@ -6533,6 +10327,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "main:shot-18-03:segment-01",

@@ -69,6 +69,35 @@
           "role": "vehicle"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:proxima-dock",
+          "vehicle:celestial-ardor"
+        ],
+        "coveredEntityIds": [
+          "location:proxima-dock",
+          "vehicle:celestial-ardor"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:location-proxima-axial-dock-interior-sheet",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ],
+        "coveringAssetByEntity": {
+          "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet",
+          "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-a-01:segment-01",
@@ -108,15 +137,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-zao-sheet",
-          "path": "/assets/characters/zao/model-sheet.png",
+          "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
+          "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -128,6 +157,37 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-a-02:segment-01",
@@ -167,19 +227,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-a-03:segment-01",
@@ -232,6 +319,33 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-a-04:segment-01",
@@ -271,6 +385,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-title-01:segment-01",
@@ -286,7 +415,9 @@
       "shotId": "festival:shot-b-02",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -310,8 +441,8 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
@@ -324,8 +455,8 @@
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -342,6 +473,51 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:sorell": "asset:character-sorell-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -390,19 +566,50 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-b-01:segment-01",
@@ -418,7 +625,9 @@
       "shotId": "festival:shot-b-03",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-service-cylinder"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -449,17 +658,58 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-wired-comms-deck-patch-panel-sheet",
-          "path": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-wired-comms-deck-patch-panel-sheet",
+          "path": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
+          "required": true,
+          "role": "object"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-service-cylinder",
+          "object:wired-comms-deck-patch-panel"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "object:wired-comms-deck-patch-panel"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-service-cylinder-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "object:wired-comms-deck-patch-panel": "asset:object-wired-comms-deck-patch-panel-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-service-cylinder"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -508,19 +758,50 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-b-04:segment-01",
@@ -569,19 +850,50 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-optical-contingency-transmitter-sheet",
-          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "coveredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-b-05:segment-01",
@@ -597,7 +909,9 @@
       "shotId": "festival:shot-b-06",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -628,17 +942,17 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-optical-contingency-transmitter-sheet",
-          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+          "required": true,
+          "role": "object"
         },
         {
           "kind": "audio",
@@ -646,6 +960,47 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "coveredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -687,13 +1042,6 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-zao-sheet",
-          "path": "/assets/characters/zao/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:character-harlan-sheet",
           "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
@@ -701,10 +1049,10 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-optical-contingency-transmitter-sheet",
-          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+          "id": "asset:character-zao-sheet",
+          "path": "/assets/characters/zao/model-sheet.png",
           "required": true,
-          "role": "object"
+          "role": "character"
         },
         {
           "kind": "image",
@@ -712,8 +1060,50 @@
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-b-07:segment-01",
@@ -729,7 +1119,9 @@
       "shotId": "festival:shot-c-01",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -767,17 +1159,17 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-optical-contingency-transmitter-sheet",
-          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+          "required": true,
+          "role": "object"
         },
         {
           "kind": "audio",
@@ -785,6 +1177,51 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:zao",
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -832,6 +1269,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-c-02:segment-01",
@@ -878,19 +1338,50 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "location:diplomatic-core-room",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-c-03:segment-01",
@@ -906,7 +1397,9 @@
       "shotId": "festival:shot-c-04",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-central-access"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -941,6 +1434,43 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:sorell",
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [
+          "character:sorell"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "attachedAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:sorell": "asset:character-sorell-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-central-access"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -1002,6 +1532,37 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:sorell",
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "character:sorell",
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:sorell": "asset:character-sorell-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-c-05:segment-01",
@@ -1017,7 +1578,9 @@
       "shotId": "festival:shot-c-06",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-service-cylinder"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1048,17 +1611,58 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-wired-comms-deck-patch-panel-sheet",
-          "path": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-service-cylinder-sheet",
           "path": "/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-wired-comms-deck-patch-panel-sheet",
+          "path": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
+          "required": true,
+          "role": "object"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-service-cylinder",
+          "object:wired-comms-deck-patch-panel"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "object:wired-comms-deck-patch-panel"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-service-cylinder-sheet",
+          "asset:object-wired-comms-deck-patch-panel-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "object:wired-comms-deck-patch-panel": "asset:object-wired-comms-deck-patch-panel-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-service-cylinder"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -1076,7 +1680,9 @@
       "shotId": "festival:shot-c-07",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1100,15 +1706,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -1134,6 +1740,48 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-c-07:segment-01",
@@ -1149,7 +1797,9 @@
       "shotId": "festival:shot-c-08",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1173,13 +1823,6 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:character-harlan-sheet",
           "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
@@ -1189,6 +1832,13 @@
           "kind": "image",
           "id": "asset:character-okoye-sheet",
           "path": "/assets/characters/okoye/model-sheet.png",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -1205,6 +1855,51 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:okoye",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:okoye",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:okoye": "asset:character-okoye-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1248,6 +1943,13 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -1259,15 +1961,36 @@
           "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
           "required": true,
           "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "vehicle:celestial-ardor"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "vehicle:celestial-ardor"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-c-09:segment-01",
@@ -1283,7 +2006,9 @@
       "shotId": "festival:shot-c-10",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1332,6 +2057,47 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -1386,6 +2152,33 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-d-01:segment-01",
@@ -1428,19 +2221,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-d-02:segment-01",
@@ -1483,19 +2303,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-physical-override-relay-sheet",
-          "path": "/assets/props/physical-override-relay/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-physical-override-relay-sheet",
+          "path": "/assets/props/physical-override-relay/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:physical-override-relay"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:physical-override-relay"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-physical-override-relay-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:physical-override-relay": "asset:object-physical-override-relay-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-d-03:segment-01",
@@ -1542,19 +2389,50 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-d-04:segment-01",
@@ -1570,7 +2448,9 @@
       "shotId": "festival:shot-d-05",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1594,15 +2474,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
+          "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -1621,6 +2501,47 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-05:segment-01",
@@ -1636,7 +2557,9 @@
       "shotId": "festival:shot-d-06",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1687,6 +2610,47 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-06:segment-01",
@@ -1702,7 +2666,9 @@
       "shotId": "festival:shot-d-07",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:2>0",
+        "reference_consolidation_required:excess:2"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1767,6 +2733,52 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:2>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 2,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-07:segment-01",
@@ -1782,7 +2794,9 @@
       "shotId": "festival:shot-d-08",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1806,6 +2820,13 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
           "id": "asset:character-rao-sheet",
           "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
@@ -1815,13 +2836,6 @@
           "kind": "image",
           "id": "asset:character-voss-sheet",
           "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
@@ -1840,6 +2854,51 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-08:segment-01",
@@ -1855,7 +2914,9 @@
       "shotId": "festival:shot-d-09",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1879,8 +2940,8 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
@@ -1893,8 +2954,8 @@
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -1913,6 +2974,51 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-09:segment-01",
@@ -1928,7 +3034,9 @@
       "shotId": "festival:shot-b-04a",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -1970,6 +3078,43 @@
           "path": "/assets/voices/en/Zao.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "coveredEntityIds": [
+          "character:zao",
+          "location:diplomatic-core-room"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "character:zao": "asset:character-zao-sheet",
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -2014,19 +3159,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-optical-contingency-transmitter-sheet",
-          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-diplomatic-core-room-sheet",
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-b-04b:segment-01",
@@ -2070,6 +3242,13 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:location-diplomatic-core-room-sheet",
+          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
           "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
@@ -2088,15 +3267,40 @@
           "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
           "required": true,
           "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-diplomatic-core-room-sheet",
-          "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
-          "required": true,
-          "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter",
+          "vehicle:celestial-ardor"
+        ],
+        "coveredEntityIds": [
+          "location:diplomatic-core-room",
+          "object:optical-contingency-transmitter",
+          "vehicle:celestial-ardor"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-diplomatic-core-room-sheet",
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ],
+        "coveringAssetByEntity": {
+          "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet",
+          "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet",
+          "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-b-04c:segment-01",
@@ -2138,19 +3342,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-d-00:segment-01",
@@ -2166,7 +3397,9 @@
       "shotId": "festival:shot-d-04b",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2210,6 +3443,43 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-d-04b:segment-01",
@@ -2225,7 +3495,9 @@
       "shotId": "festival:shot-b-08",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2249,15 +3521,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
+          "id": "asset:character-sorell-sheet",
+          "path": "/assets/characters/sorell/model-sheet.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-sorell-sheet",
-          "path": "/assets/characters/sorell/model-sheet.png",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -2276,6 +3548,47 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:sorell",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "character:sorell": "asset:character-sorell-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-08:segment-01",
@@ -2291,7 +3604,9 @@
       "shotId": "festival:shot-b-09",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-service-cylinder"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2328,6 +3643,43 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "coveredEntityIds": [
+          "character:harlan"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-service-cylinder"
+        ],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-service-cylinder-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-service-cylinder"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-b-09:segment-01",
@@ -2343,7 +3695,9 @@
       "shotId": "festival:shot-b-10",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-central-access"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2378,6 +3732,43 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:sorell",
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [
+          "character:sorell"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "attachedAssetIds": [
+          "asset:character-sorell-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:sorell": "asset:character-sorell-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-central-access"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
         }
       ],
       "segments": [
@@ -2419,6 +3810,13 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -2430,15 +3828,36 @@
           "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
           "required": true,
           "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
-          "required": true,
-          "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "vehicle:celestial-ardor"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "vehicle:celestial-ardor"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-e-01:segment-01",
@@ -2480,19 +3899,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-optical-contingency-transmitter-sheet",
-          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-optical-contingency-transmitter-sheet",
+          "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:optical-contingency-transmitter"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:optical-contingency-transmitter"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-optical-contingency-transmitter-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:optical-contingency-transmitter": "asset:object-optical-contingency-transmitter-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-e-02:segment-01",
@@ -2508,7 +3954,9 @@
       "shotId": "festival:shot-e-03",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2552,6 +4000,43 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:zao",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:zao",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-zao"
+        ],
+        "coveringAssetByEntity": {
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-e-03:segment-01",
@@ -2567,7 +4052,9 @@
       "shotId": "festival:shot-e-04",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2611,6 +4098,43 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-e-04:segment-01",
@@ -2626,7 +4150,9 @@
       "shotId": "festival:shot-e-05",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2650,15 +4176,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -2675,6 +4201,47 @@
           "path": "/assets/voices/en/Elin.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-elin"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -2718,15 +4285,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -2738,6 +4305,37 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-e-06:segment-01",
@@ -2779,19 +4377,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-physical-override-relay-sheet",
-          "path": "/assets/props/physical-override-relay/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-physical-override-relay-sheet",
+          "path": "/assets/props/physical-override-relay/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:physical-override-relay"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:physical-override-relay"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-physical-override-relay-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:physical-override-relay": "asset:object-physical-override-relay-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-e-07:segment-01",
@@ -2846,6 +4471,33 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-e-08:segment-01",
@@ -2861,7 +4513,9 @@
       "shotId": "festival:shot-e-09",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -2885,8 +4539,8 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
@@ -2899,8 +4553,8 @@
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -2917,6 +4571,51 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -2971,6 +4670,33 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-e-10:segment-01",
@@ -3012,19 +4738,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-f-01:segment-01",
@@ -3040,7 +4793,11 @@
       "shotId": "festival:shot-f-02",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-central-access",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3071,17 +4828,17 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-physical-override-relay-sheet",
-          "path": "/assets/props/physical-override-relay/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-physical-override-relay-sheet",
+          "path": "/assets/props/physical-override-relay/prop-sheet.png",
+          "required": true,
+          "role": "object"
         },
         {
           "kind": "audio",
@@ -3089,6 +4846,55 @@
           "path": "/assets/voices/en/Harlan.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "location:celestial-ardor-central-access",
+          "object:physical-override-relay"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "object:physical-override-relay"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:object-physical-override-relay-sheet",
+          "asset:voice-ref-en-harlan"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "object:physical-override-relay": "asset:object-physical-override-relay-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-central-access"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        },
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -3106,7 +4912,9 @@
       "shotId": "festival:shot-f-03",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-central-access"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3130,15 +4938,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-okoye-sheet",
-          "path": "/assets/characters/okoye/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -3164,6 +4972,55 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:okoye",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:okoye",
+          "character:rao",
+          "character:voss"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-central-access-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:okoye": "asset:character-okoye-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-central-access"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-f-03:segment-01",
@@ -3179,7 +5036,11 @@
       "shotId": "festival:shot-f-04",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_pack_required:authoring_required",
+        "uncovered_entity:location:celestial-ardor-central-access",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3203,15 +5064,15 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-okoye-sheet",
-          "path": "/assets/characters/okoye/model-sheet.png",
+          "id": "asset:character-harlan-sheet",
+          "path": "/assets/characters/harlan/model-sheet-v2.png",
           "required": true,
           "role": "character"
         },
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
+          "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
           "required": true,
           "role": "character"
         },
@@ -3228,6 +5089,55 @@
           "path": "/assets/voices/en/Okoye.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:harlan",
+          "character:okoye",
+          "location:celestial-ardor-central-access"
+        ],
+        "coveredEntityIds": [
+          "character:harlan",
+          "character:okoye"
+        ],
+        "uncoveredEntityIds": [
+          "location:celestial-ardor-central-access"
+        ],
+        "attachedAssetIds": [
+          "asset:character-harlan-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:voice-ref-en-okoye"
+        ],
+        "coveringAssetByEntity": {
+          "character:harlan": "asset:character-harlan-sheet",
+          "character:okoye": "asset:character-okoye-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_pack_required",
+          "uncoveredEntityIds": [
+            "location:celestial-ardor-central-access"
+          ],
+          "compatiblePackAssetIds": [],
+          "packsNeeded": null
+        },
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -3276,19 +5186,50 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-f-05:segment-01",
@@ -3330,19 +5271,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-read-only-greeting-medium-sheet",
-          "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-read-only-greeting-medium-sheet",
+          "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:read-only-greeting-medium"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:read-only-greeting-medium"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-read-only-greeting-medium-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:read-only-greeting-medium": "asset:object-read-only-greeting-medium-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-f-06:segment-01",
@@ -3389,19 +5357,50 @@
         },
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "character:rao",
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "character:rao": "asset:character-rao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-f-07:segment-01",
@@ -3443,19 +5442,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-f-08:segment-01",
@@ -3497,19 +5523,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-diplomatic-quantum-core-sheet",
-          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-diplomatic-quantum-core-sheet",
+          "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:diplomatic-quantum-core"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-diplomatic-quantum-core-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:diplomatic-quantum-core": "asset:object-diplomatic-quantum-core-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-01:segment-01",
@@ -3525,7 +5578,9 @@
       "shotId": "festival:shot-g-02",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3569,6 +5624,43 @@
           "role": "voice_sample"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
+        }
+      ],
       "segments": [
         {
           "id": "festival:shot-g-02:segment-01",
@@ -3608,19 +5700,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:object-read-only-greeting-medium-sheet",
-          "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:object-read-only-greeting-medium-sheet",
+          "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
+          "required": true,
+          "role": "object"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:read-only-greeting-medium"
+        ],
+        "coveredEntityIds": [
+          "location:celestial-ardor-bridge",
+          "object:read-only-greeting-medium"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-read-only-greeting-medium-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "object:read-only-greeting-medium": "asset:object-read-only-greeting-medium-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-03:segment-01",
@@ -3666,6 +5785,29 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:velari-station"
+        ],
+        "coveredEntityIds": [
+          "location:velari-station"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-velari-station-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:velari-station": "asset:location-velari-station-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-04:segment-01",
@@ -3705,6 +5847,13 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -3716,15 +5865,36 @@
           "path": "/assets/vehicles/celestial-ardor/model-sheet-v2.png",
           "required": true,
           "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-velari-station-sheet",
-          "path": "/assets/locations/velari-station/concept-sheet.png",
-          "required": true,
-          "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:velari-station",
+          "vehicle:celestial-ardor"
+        ],
+        "coveredEntityIds": [
+          "location:velari-station",
+          "vehicle:celestial-ardor"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ],
+        "coveringAssetByEntity": {
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-05:segment-01",
@@ -3764,19 +5934,46 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:vehicle-velari-emissary-sheet",
-          "path": "/assets/vehicles/velari-emissary/model-sheet.png",
-          "required": true,
-          "role": "vehicle"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-velari-station-sheet",
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:vehicle-velari-emissary-sheet",
+          "path": "/assets/vehicles/velari-emissary/model-sheet.png",
+          "required": true,
+          "role": "vehicle"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:velari-station",
+          "vehicle:velari-emissary"
+        ],
+        "coveredEntityIds": [
+          "location:velari-station",
+          "vehicle:velari-emissary"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-velari-emissary-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:velari-emissary": "asset:vehicle-velari-emissary-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-06:segment-01",
@@ -3816,6 +6013,13 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -3834,15 +6038,40 @@
           "path": "/assets/vehicles/velari-emissary/model-sheet.png",
           "required": true,
           "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-velari-station-sheet",
-          "path": "/assets/locations/velari-station/concept-sheet.png",
-          "required": true,
-          "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:velari-station",
+          "vehicle:celestial-ardor",
+          "vehicle:velari-emissary"
+        ],
+        "coveredEntityIds": [
+          "location:velari-station",
+          "vehicle:celestial-ardor",
+          "vehicle:velari-emissary"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "asset:vehicle-velari-emissary-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter",
+          "vehicle:velari-emissary": "asset:vehicle-velari-emissary-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-07:segment-01",
@@ -3902,6 +6131,37 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "character:voss": "asset:character-voss-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-08:segment-01",
@@ -3917,7 +6177,9 @@
       "shotId": "festival:shot-g-09",
       "status": "blocked",
       "blockers": [
-        "editorial_prompt_freeze_not_approved"
+        "editorial_prompt_freeze_not_approved",
+        "reference_budget:audios:1>0",
+        "reference_consolidation_required:excess:1"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -3966,6 +6228,47 @@
           "path": "/assets/voices/en/Voss.wav",
           "required": true,
           "role": "voice_sample"
+        }
+      ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:voss",
+          "character:zao",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:voice-ref-en-voss"
+        ],
+        "coveringAssetByEntity": {
+          "character:voss": "asset:character-voss-sheet",
+          "character:zao": "asset:character-zao-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": [
+          "audios:1>0"
+        ]
+      },
+      "remediation": [
+        {
+          "code": "reference_consolidation_required",
+          "excessSlots": 1,
+          "consolidateCandidateAssetIds": []
         }
       ],
       "segments": [
@@ -4020,6 +6323,33 @@
           "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "coveredEntityIds": [
+          "character:voss",
+          "location:celestial-ardor-bridge"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ],
+        "coveringAssetByEntity": {
+          "character:voss": "asset:character-voss-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-10:segment-01",
@@ -4059,6 +6389,13 @@
       "requiredReferences": [
         {
           "kind": "image",
+          "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -4077,15 +6414,40 @@
           "path": "/assets/vehicles/velari-emissary/model-sheet.png",
           "required": true,
           "role": "vehicle"
-        },
-        {
-          "kind": "image",
-          "id": "asset:location-velari-station-sheet",
-          "path": "/assets/locations/velari-station/concept-sheet.png",
-          "required": true,
-          "role": "location"
         }
       ],
+      "referenceBudget": {
+        "requiredEntityIds": [
+          "location:velari-station",
+          "vehicle:celestial-ardor",
+          "vehicle:velari-emissary"
+        ],
+        "coveredEntityIds": [
+          "location:velari-station",
+          "vehicle:celestial-ardor",
+          "vehicle:velari-emissary"
+        ],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-velari-station-sheet",
+          "asset:vehicle-celestial-ardor-jupiter",
+          "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "asset:vehicle-velari-emissary-sheet"
+        ],
+        "coveringAssetByEntity": {
+          "location:velari-station": "asset:location-velari-station-sheet",
+          "vehicle:celestial-ardor": "asset:vehicle-celestial-ardor-jupiter",
+          "vehicle:velari-emissary": "asset:vehicle-velari-emissary-sheet"
+        },
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-g-11:segment-01",
@@ -4125,6 +6487,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-h-01:segment-01",
@@ -4164,6 +6541,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-h-02:segment-01",
@@ -4203,6 +6595,21 @@
         }
       },
       "requiredReferences": [],
+      "referenceBudget": {
+        "requiredEntityIds": [],
+        "coveredEntityIds": [],
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [],
+        "coveringAssetByEntity": {},
+        "wouldOmitEntityIds": [],
+        "limits": {
+          "maxImages": 8,
+          "maxVideos": 0,
+          "maxAudios": 0,
+          "maxTotalReferences": 8
+        },
+        "violations": []
+      },
       "segments": [
         {
           "id": "festival:shot-h-03:segment-01",
