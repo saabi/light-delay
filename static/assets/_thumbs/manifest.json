@@ -1,6 +1,6 @@
 {
 	"schemaVersion": "1.0.0",
-	"generatedAt": "2026-09-12T19:11:51.712Z",
+	"generatedAt": "2026-09-14T01:56:54.592Z",
 	"entries": {
 		"characters/zao/model-sheet.png.webp": {
 			"source": "/assets/characters/zao/model-sheet.png",
@@ -1765,6 +1765,27 @@
 			"mtimeMs": 1789234606971.5266,
 			"size": 2089805,
 			"hash": "adf13bf741b4de38"
+		},
+		"locations/proxima-station/operations-gallery-interior-sheet-v1.png.webp": {
+			"source": "/assets/locations/proxima-station/operations-gallery-interior-sheet-v1.png",
+			"thumb": "/assets/_thumbs/locations/proxima-station/operations-gallery-interior-sheet-v1.png.webp",
+			"mtimeMs": 1789346133708.1785,
+			"size": 2394274,
+			"hash": "c838539a3c465219"
+		},
+		"locations/proxima-dock/axial-shaft-interior-sheet-v1.png.webp": {
+			"source": "/assets/locations/proxima-dock/axial-shaft-interior-sheet-v1.png",
+			"thumb": "/assets/_thumbs/locations/proxima-dock/axial-shaft-interior-sheet-v1.png.webp",
+			"mtimeMs": 1789350048977.8794,
+			"size": 2806172,
+			"hash": "c0a8b2c93518cca8"
+		},
+		"locations/celestial-ardor-central-access/concept-sheet-v4.png.webp": {
+			"source": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
+			"thumb": "/assets/_thumbs/locations/celestial-ardor-central-access/concept-sheet-v4.png.webp",
+			"mtimeMs": 1789348553210.6028,
+			"size": 3028351,
+			"hash": "2f7957db25972b17"
 		}
 	}
 }

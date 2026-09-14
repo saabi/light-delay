@@ -189,7 +189,7 @@
         "avoid": "Solid central column, filled core, closed stairwell, horizontal hallway, service-shaft ladder geometry, open vacuum, fantasy technology, planets, logos, watermark, bilingual labels."
       },
       "review": {
-        "notes": "Regenerated with a clear two-metre central opening; editorial review pending.",
+        "notes": "Regenerated with a clear two-metre central opening; editorial review pending. Sheet file replaced in place on 2026-09-13 22:15 (-03:00) without a version bump; catalog row refreshed; ten dependent takes marked needs_regeneration.",
         "regenerationRequired": false
       }
     },
@@ -7380,6 +7380,176 @@
       },
       "review": {
         "notes": "Generated with current master references; editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:location-proxima-operations-gallery-interior-sheet",
+      "entityId": "location:proxima-station",
+      "kind": "location",
+      "status": "accepted",
+      "outputPath": "/assets/locations/proxima-station/operations-gallery-interior-sheet-v1.png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-proxima-station-berthed"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-proxima-station-berthed",
+          "role": "station industrial language and age only (not reproduced inside the room)"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "styleMedium": "Photorealistic grounded hard science fiction matching existing Light Delay references.",
+        "assetType": "Proxima Station operations gallery interior reference sheet",
+        "primaryRequest": "Create a photorealistic hard-science-fiction reference sheet for an interior operations gallery inside one of Proxima Station's rotating habitat rings. This is where the local crew watches delayed Earth broadcasts before boarding the Celestial Ardor.",
+        "sceneBackdrop": "Interior of a rotating habitat ring; nominal artificial gravity of approximately 0.5 g. Crew members sit and stand normally relative to a clear floor and ceiling; loose objects rest on surfaces and do not float.",
+        "subject": "A large wall display carrying a delayed Earth news feed, secondary operations monitors, restrained workstations, communications consoles, storage lockers, pressure doors, and enough seating and standing room for the full six-person Celestial Ardor crew (Voss, Harlan, Sorell, Zao, Rao, Okoye) to watch together, with space for two of them to speak apart from the group beside the quiet feed.",
+        "compositionFraming": "1536x1024 reference sheet: one main common view plus detail panels (workstations, storage, ring corridor access).",
+        "lightingMood": "Practical neutral work lighting; functional and inhabited, not luxurious and not a spacecraft bridge.",
+        "colorPalette": "Aged white station modules, graphite retrofit panels, muted display blues, worn neutral surfaces.",
+        "materialsTextures": "Exposed service conduits, patched structural joints, worn but maintained equipment, old scientific station expanded over decades.",
+        "textVerbatim": "English-only Earth broadcast graphics without real-world logos.",
+        "constraints": "Use the existing Proxima exterior reference only for the layered industrial language and age. Do not reproduce the exterior, habitat rings, or open space inside the room.",
+        "avoid": "Microgravity staging, floating objects, a spacecraft bridge, a hangar, a portal, wormhole imagery, panoramic windows, luxury architecture, invented station geometry, watermark, non-English text."
+      },
+      "review": {
+        "notes": "Generated from the four-person brief before master revision 24; author reviewed and approved it against six-person presence on 2026-09-13 (room capacity suffices, figures are incidental). Six-person brief text retained for any future regeneration. Registered 2026-09-13.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:location-proxima-transfer-concourse-sheet",
+      "entityId": "location:proxima-station",
+      "kind": "location",
+      "status": "review_required",
+      "outputPath": "/assets/locations/proxima-station/transfer-concourse-sheet-v1.png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-proxima-dock-sheet"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-proxima-dock-sheet",
+          "role": "exterior dock geography and industrial language only"
+        },
+        {
+          "assetId": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "role": "interface context only; the whole ship is never inside the concourse"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "styleMedium": "Photorealistic grounded hard science fiction matching existing Light Delay references.",
+        "assetType": "Proxima Station transfer concourse reference sheet",
+        "primaryRequest": "Create a photorealistic hard-science-fiction reference sheet for Proxima Station's transfer concourse leading from the rotating habitat system toward the external axial docking ports.",
+        "sceneBackdrop": "The concourse is on the non-rotating station spine and is in microgravity. There is no meaningful floor.",
+        "subject": "Handrails, tether points, restrained cargo, pressure bulkheads, sealed access doors, suit lockers, manifest terminals, service umbilicals, and cargo staging. A visible route toward the dock-transfer vestibule.",
+        "compositionFraming": "1536x1024 reference sheet: main concourse view plus detail panels (habitat access, suit lockers, manifest terminal, cargo staging, dock-transfer vestibule).",
+        "lightingMood": "Practical industrial lighting; worn but maintained surfaces; no decoration.",
+        "colorPalette": "Older white station hardware, newer graphite retrofit structures, exposed utility conduits.",
+        "materialsTextures": "Proxima's layered history: old and new hardware side by side, exposed conduits, restrained cargo webbing, tether hardware.",
+        "textVerbatim": "English-only signage (TO DOCKS, TRANSFER MANIFEST); no real-world logos.",
+        "constraints": "The route must read as a station-to-dock transfer passage, not a hangar or landing platform.",
+        "avoid": "Artificial gravity, normal standing poses, radial or tangential parking, rotating habitat interiors, open space, portal geometry, wormholes, luxury architecture, watermark, non-English text."
+      },
+      "review": {
+        "notes": "File exists on disk (unregistered, untracked). No Festival-master take depends on it yet; optional for transfer-preparation scenes. Editorial review pending.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:location-proxima-axial-dock-interior-sheet",
+      "entityId": "location:proxima-dock",
+      "kind": "location",
+      "status": "accepted",
+      "outputPath": "/assets/locations/proxima-dock/axial-shaft-interior-sheet-v1.png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-proxima-dock-sheet",
+        "asset:vehicle-celestial-ardor-model-sheet-v2"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-proxima-dock-sheet",
+          "role": "station materials and axial geography only"
+        },
+        {
+          "assetId": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "role": "established bow and docking collar only"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "styleMedium": "Photorealistic grounded hard science fiction matching existing Light Delay references.",
+        "assetType": "Proxima Station axial docking port interior reference sheet",
+        "primaryRequest": "Create a photorealistic hard-science-fiction reference sheet for the interior of one of Proxima Station's four external axial docking ports. The camera is inside a pressurized cylindrical transfer shaft approximately 18–20 metres in diameter, looking directly along its longitudinal axis toward the docked Celestial Ardor.",
+        "sceneBackdrop": "This widened transfer structure is attached to Proxima's non-rotating spine and is in microgravity. There is no meaningful floor.",
+        "subject": "At the far end, the Celestial Ardor is docked bow-first and coaxially: its forward docking collar engaged with Proxima's mechanical capture ring, with only the necessary bow and interface visible. Station pressure bulkhead, capture mechanism, transfer vestibule, structural ribs, service umbilicals, power/data/fluid connections, cargo guides, handrails, tether points, maintenance grips, and practical dock lighting.",
+        "compositionFraming": "1536x1024 reference sheet: main along-axis view plus detail panels (transfer shaft, docking interface, transfer vestibule, service umbilicals, crew transfer). Orient the environment through the shaft axis, handrails, equipment rails, labels, and restrained cargo; the route must look usable by personnel moving hand-over-hand between station and ship.",
+        "lightingMood": "Practical dock lighting; industrial, maintained, functional.",
+        "colorPalette": "Grey structural ribs, white pressure panels, yellow safety markings, muted service-line colours.",
+        "materialsTextures": "Ribbed pressure shaft, mechanical capture ring, flexible umbilicals, restrained cargo pallets, handrail runs.",
+        "textVerbatim": "English-only labels (PROXIMA DOCK 1, CELESTIAL ARDOR, PRESSURE BULKHEAD); no logos.",
+        "constraints": "Use the exterior dock sheet only for station materials and axial geography; use the Ardor model sheet only for the established bow and docking collar. Do not reproduce the exterior station view as an interior environment. Shaft diameter ≈ 18–20 m is a production-design decision recorded in docs/technical/PROXIMA_STATION.md §7.",
+        "avoid": "Floors, normal standing poses, radial or tangential parking, ship-sized hangars, rotating habitat interiors, panoramic windows, portal geometry, wormholes, floating dock components, engines, exhaust, logos, watermark, non-English text."
+      },
+      "review": {
+        "notes": "Author corrected the dock label to PROXIMA DOCK 1 (matching the Blender berth) and approved the sheet on 2026-09-13. Registered 2026-09-13. Remaining observations only: panel 3 vestibule reads as a floored square corridor; wall slogans are decorative English.",
+        "regenerationRequired": false
+      }
+    },
+    {
+      "assetId": "asset:location-proxima-station-exterior-guide-still",
+      "entityId": "location:proxima-station",
+      "kind": "location",
+      "status": "draft",
+      "outputPath": "/assets/locations/proxima-station/exterior-guide-still-v1.png",
+      "dimensions": {
+        "width": 1536,
+        "height": 1024
+      },
+      "styleAnchorAssetIds": [
+        "asset:location-proxima-station-berthed",
+        "asset:vehicle-celestial-ardor-model-sheet-v2"
+      ],
+      "references": [
+        {
+          "assetId": "asset:location-proxima-station-berthed",
+          "role": "current approved exterior view"
+        },
+        {
+          "assetId": "asset:vehicle-celestial-ardor-model-sheet-v2",
+          "role": "Ardor proportions and bow collar"
+        }
+      ],
+      "prompt": {
+        "useCase": "stylized-concept",
+        "styleMedium": "Photorealistic grounded hard science fiction matching existing Light Delay references.",
+        "assetType": "Proxima Station exterior guide still (Blender blockout render)",
+        "primaryRequest": "Render (not AI-generate) a guide still from the Blender blockout of Proxima Station with the Celestial Ardor docked bow-first at axial dock 1 on the non-rotating spine, as camera/geometry guidance for the exterior video pass.",
+        "sceneBackdrop": "Open space at Sun–Jupiter L1; Jupiter distant. Non-rotating 650 m spine; two counter-rotating wheel habitats at 150 m radius; four external axial docks with approach gantries.",
+        "subject": "Station geography, dock attachment, Ardor scale and orientation per PROXIMA_STATION.md §13.",
+        "compositionFraming": "Wide exterior establishing framing matching festival-master:shot-plan-title; camera path notes for the later Seedance pass.",
+        "lightingMood": "Sun-lit hard shadows, Jupiter fill.",
+        "colorPalette": "Aged white and graphite station hardware; grey Ardor hull.",
+        "materialsTextures": "Blockout-level detail is sufficient; this is a motion/geometry guide, not a final render.",
+        "textVerbatim": "None.",
+        "constraints": "Prerequisite for the video pass only (Take.productionGate medium: video on the title and 006–009). Still generation for those shots does not wait on it.",
+        "avoid": "Rings on the spine, ships inside hangars, invented docks, non-English text."
+      },
+      "review": {
+        "notes": "Planned dependency; no file exists. Video-only prerequisite (video_deferred_external_reference).",
         "regenerationRequired": false
       }
     }

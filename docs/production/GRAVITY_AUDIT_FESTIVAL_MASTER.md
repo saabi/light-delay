@@ -387,3 +387,15 @@ existing images' correctness is unverified by construction, not merely
   8/8 pass (shot/take/cue counts unchanged; only prompt text and
   `imageStatus` changed).
 - `npm run production:plans` / `:check` — regenerated and up to date again.
+
+## 9. Superseded rows — Proxima interiors (2026-09-13)
+
+Rows 169–177 above (shots 001–009, "1g … OK") predate the Proxima interior
+locations. Per `docs/technical/PROXIMA_STATION.md` §3–§5 and the author's
+2026-09-13 decision: scenes 02–03 take place in the **Operations Gallery**
+inside a rotating habitat ring at **≈ 0.5 g** (`context:proxima-habitat-ring`),
+and scene 04 inside the **axial transfer shaft** on the non-rotating spine in
+**microgravity** (`context:proxima-dock`). Prompts 001–009 now state those
+gravity states; the earlier "1 g" rows are retained as history and are no
+longer correct. Enforced by `node scripts/report-festival-master-reference-audit.mjs`
+(gravity wording by context).

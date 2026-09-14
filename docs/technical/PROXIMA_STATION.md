@@ -172,6 +172,10 @@ El conjunto de atraque incluye:
 
 Los diagramas recientes muestran **cuatro** posiciones para explicar la arquitectura. El número exacto todavía puede tratarse como variable de diseño. Un rango de 3–6 cabezales sería compatible con la lógica general hasta que se fije definitivamente.
 
+### Diámetro del pozo de transferencia axial (decisión de diseño de producción, 2026-09-13)
+
+El interior de cada muelle axial se representa como un **pozo de transferencia presurizado de aproximadamente 18–20 m de diámetro**, ensanchado respecto de la espina desnuda (radio 6 m, §13) y unido a la espina no rotatoria. Está en **microgravedad**: no hay piso útil; pasamanos, puntos de amarre y guías de carga orientan el cuerpo a lo largo del eje. La Ardor atraca proa primero y coaxial en la cabeza del pozo, con el collar de proa encajado en el anillo de captura. Este valor es una decisión de producción visual (hoja `asset:location-proxima-axial-dock-interior-sheet`, etiqueta “PROXIMA DOCK 1”) y debe conciliarse con las cotas del manguito/cabezal del muelle en el bloqueo Blender (§13, §14). No modifica la narrativa maestra.
+
 ### Interpretación narrativa de “muelle interior”
 
 Cuando una escena ocurre “en el muelle” o “dentro del muelle”, el espacio interior debe entenderse como:
@@ -361,6 +365,7 @@ Se añadieron tres líneas de conducto/tubería longitudinal a lo largo de toda 
 - [ ] Número final de cabezales de atraque — se modelaron 4 (coincide con el diagrama), pero el documento deja el rango 3–6 abierto a decisión definitiva (§7, §12).
 - [ ] Longitud axial exacta del tramo habitable del aro (equivalente al viejo valor de trabajo de 110 m) — ver nota en §13, sigue sin fijarse un valor definitivo más allá del diámetro de tubo adoptado.
 - [ ] Interior de cualquier volumen (núcleo científico, hábitats, muelles) — explícitamente fuera de alcance por ahora.
+- [ ] Conciliar el **pozo de transferencia axial de ≈ 18–20 m de diámetro** (decisión de diseño de producción 2026-09-13, §7) con las cotas del manguito de muelle y del cabezal en el bloqueo: hoy la espina desnuda tiene radio 6 m y `DOCK_COLLAR_MAJOR_R = 1.6 m`; el pozo ensanchado debe modelarse como estructura propia del muelle antes de aprobar definitivamente `asset:location-proxima-axial-dock-interior-sheet` como referencia 3D.
 
 ### Detalle añadido durante el modelado, no descrito explícitamente en el documento
 

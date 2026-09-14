@@ -8,11 +8,12 @@
         "en": "Proxima Station"
       },
       "description": {
-        "es": "Infraestructura científica humana ampliada por décadas: módulos blancos antiguos, adiciones grafito y dos hábitats cilíndricos. Júpiter aparece lejano; no es una estación construida para el portal.",
-        "en": "Human science infrastructure expanded over decades: old white modules, graphite additions, and two cylindrical habitats. Jupiter appears distant; the station was not built for the gate."
+        "es": "Infraestructura científica humana ampliada por décadas: módulos blancos antiguos, adiciones grafito y dos hábitats cilíndricos. Júpiter aparece lejano; no es una estación construida para el portal. Los anillos de hábitat rotan a unos 0,5 g; la espina central no rota y permanece en microgravedad. La galería de operaciones (anillo de hábitat) es donde la tripulación local mira la transmisión terrestre retardada antes de embarcar.",
+        "en": "Human science infrastructure expanded over decades: old white modules, graphite additions, and two cylindrical habitats. Jupiter appears distant; the station was not built for the gate. The habitat rings rotate at roughly 0.5 g; the central spine does not rotate and stays in microgravity. The operations gallery (habitat ring) is where the local crew watches the delayed Earth stream before boarding."
       },
       "referenceAssetIds": [
-        "asset:location-proxima-station-berthed"
+        "asset:location-proxima-station-berthed",
+        "asset:location-proxima-operations-gallery-interior-sheet"
       ],
       "atmosphere": {
         "es": "Exterior y silueta orbital",
@@ -26,11 +27,12 @@
         "en": "Proxima Axial Dock"
       },
       "description": {
-        "es": "Puerto industrial estratificado y desgastado. El Ardor ya estaba destinado allí y recibe el retrofit diplomático contra reloj.",
-        "en": "Layered, worn industrial port. Ardor was already stationed there and receives the diplomatic retrofit against the clock."
+        "es": "Puerto industrial estratificado y desgastado sobre la espina no rotatoria. El interior es un pozo de transferencia axial presurizado de unos 18–20 m de diámetro, en microgravedad, sin piso útil: pasamanos, puntos de amarre y guías de carga orientan el cuerpo a lo largo del eje. El Ardor atraca proa primero y coaxial en la cabeza del pozo; ya estaba destinado allí y recibe el retrofit diplomático contra reloj.",
+        "en": "Layered, worn industrial port on the non-rotating spine. The interior is a pressurized axial transfer shaft roughly 18–20 m across, in microgravity, with no meaningful floor: handrails, tether points, and cargo guides orient bodies along the shaft axis. The Ardor docks bow-first and coaxially at the shaft head; it was already stationed there and receives the diplomatic retrofit against the clock."
       },
       "referenceAssetIds": [
-        "asset:location-proxima-dock-sheet"
+        "asset:location-proxima-dock-sheet",
+        "asset:location-proxima-axial-dock-interior-sheet"
       ],
       "atmosphere": {
         "es": "Partida del Celestial Ardor",

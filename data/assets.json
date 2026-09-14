@@ -313,6 +313,70 @@
       }
     },
     {
+      "id": "asset:location-proxima-operations-gallery-interior-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/proxima-station/operations-gallery-interior-sheet-v1.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Galería de operaciones de Proxima — hoja interior",
+        "en": "Proxima operations gallery interior sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-13"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "revision": 1,
+        "geography": "rotating-habitat-ring-operations-gallery-0.5g",
+        "gravity": "approximately 0.5 g rotational",
+        "referenceAssetIds": [
+          "asset:location-proxima-station-berthed"
+        ],
+        "referenceInputsAttached": true,
+        "approvedBy": "author",
+        "approvedAt": "2026-09-13"
+      }
+    },
+    {
+      "id": "asset:location-proxima-axial-dock-interior-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/proxima-dock/axial-shaft-interior-sheet-v1.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Muelle axial de Proxima — interior del pozo de transferencia",
+        "en": "Proxima axial dock transfer-shaft interior sheet"
+      },
+      "width": 1536,
+      "height": 1024,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-13"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "revision": 1,
+        "geography": "pressurized-axial-transfer-shaft-on-non-rotating-spine-microgravity",
+        "gravity": "microgravity",
+        "shaftDiameterMetres": "18-20 (production-design decision, PROXIMA_STATION.md §7)",
+        "referenceAssetIds": [
+          "asset:location-proxima-dock-sheet",
+          "asset:vehicle-celestial-ardor-model-sheet-v2"
+        ],
+        "referenceInputsAttached": true,
+        "approvedBy": "author",
+        "approvedAt": "2026-09-13"
+      }
+    },
+    {
       "id": "asset:location-celestial-ardor-bridge-realistic-reference",
       "kind": "image",
       "role": "reference",
@@ -527,7 +591,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T00:00:00.000Z"
+        "generatedAt": "2026-09-14T01:15:53.000Z"
       },
       "metadata": {
         "useCase": "stylized-concept",
@@ -549,8 +613,8 @@
           "quality"
         ],
         "explanation": {
-          "es": "Hoja regenerada con el centro del eje despejado y las dos escaleras helicoidales alrededor; pendiente de revisión editorial.",
-          "en": "Regenerated with a clear central shaft and both helical staircases wrapping the opening; editorial review pending."
+          "es": "Hoja reemplazada in situ el 2026-09-13 (mismo v4, centro del eje despejado, dos escaleras helicoidales); pendiente de revisión editorial. Las diez tomas dependientes quedaron marcadas para regeneración.",
+          "en": "Sheet replaced in place on 2026-09-13 (same v4 path; clear central shaft, both helical staircases); editorial review pending. The ten dependent takes are marked for regeneration."
         }
       }
     },
@@ -6622,7 +6686,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T17:54:45.081Z"
+        "generatedAt": "2026-09-14T02:40:18.626Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6660,7 +6724,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:46:20.073Z"
+        "generatedAt": "2026-09-14T03:05:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6698,7 +6762,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:47:13.775Z"
+        "generatedAt": "2026-09-14T03:10:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6736,7 +6800,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:48:51.001Z"
+        "generatedAt": "2026-09-14T03:15:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6774,7 +6838,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:50:33.729Z"
+        "generatedAt": "2026-09-14T03:20:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6812,7 +6876,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:52:07.878Z"
+        "generatedAt": "2026-09-14T03:25:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6850,7 +6914,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T23:00:00.000Z"
+        "generatedAt": "2026-09-14T02:45:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6889,7 +6953,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:53:50.718Z"
+        "generatedAt": "2026-09-14T02:50:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6927,7 +6991,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:56:14.134Z"
+        "generatedAt": "2026-09-14T02:55:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -6965,7 +7029,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:57:55.955Z"
+        "generatedAt": "2026-09-14T03:00:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -7003,7 +7067,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-13T16:58:47.623Z"
+        "generatedAt": "2026-09-14T03:35:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -7231,7 +7295,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T23:00:00.000Z"
+        "generatedAt": "2026-09-14T02:50:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -7270,7 +7334,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T23:00:00.000Z"
+        "generatedAt": "2026-09-14T02:55:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -7309,7 +7373,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T23:00:00.000Z"
+        "generatedAt": "2026-09-14T03:00:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -7348,7 +7412,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T23:00:00.000Z"
+        "generatedAt": "2026-09-14T03:05:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -7387,7 +7451,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T23:00:00.000Z"
+        "generatedAt": "2026-09-14T03:10:00.000Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
@@ -10762,6 +10826,305 @@
           "es": "El «vestíbulo axial de mando» era una entidad de ubicación errónea, duplicada de la descripción propia del puente (que ya cubre la escotilla de servicio oculta de la línea visual de los puestos); la ubicación fue eliminada de data/locations.json. Este activo ya no está referenciado por ninguna toma y se conserva sólo por trazabilidad; usar en su lugar asset:location-celestial-ardor-bridge-realistic-reference y asset:location-celestial-ardor-bridge-service-shaft-reference.",
           "en": "The 'command axial vestibule' was an erroneous location entity, duplicating the bridge's own description (which already covers the service hatch hidden from the crew stations' sightline); the location was removed from data/locations.json. This asset is no longer referenced by any take and is kept only for provenance; use asset:location-celestial-ardor-bridge-realistic-reference and asset:location-celestial-ardor-bridge-service-shaft-reference instead."
         }
+      }
+    },
+    {
+      "id": "asset:voice-ref-en-zao",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/en/Zao.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Zao (EN)",
+        "en": "Zao voice reference (EN)"
+      },
+      "durationMs": 13040,
+      "description": {
+        "es": "Muestra de timbre aprobada (en) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (en) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "en",
+        "characterId": "character:zao",
+        "voiceProfileId": "voice:zao-es",
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-en-voss",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/en/Voss.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Voss (EN)",
+        "en": "Voss voice reference (EN)"
+      },
+      "durationMs": 12400,
+      "description": {
+        "es": "Muestra de timbre aprobada (en) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (en) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "en",
+        "characterId": "character:voss",
+        "voiceProfileId": "voice:voss-es",
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-en-harlan",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/en/Harlan.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Harlan (EN)",
+        "en": "Harlan voice reference (EN)"
+      },
+      "durationMs": 12240,
+      "description": {
+        "es": "Muestra de timbre aprobada (en) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (en) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "en",
+        "characterId": "character:harlan",
+        "voiceProfileId": "voice:harlan-es",
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-en-elin",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/en/Elin.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Elin (EN)",
+        "en": "Elin voice reference (EN)"
+      },
+      "durationMs": 12800,
+      "description": {
+        "es": "Muestra de timbre aprobada (en) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (en) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "en",
+        "characterId": "character:rao",
+        "voiceProfileId": "voice:rao-es",
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-en-sorell",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/en/Sorell.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Sorell (EN)",
+        "en": "Sorell voice reference (EN)"
+      },
+      "durationMs": 12480,
+      "description": {
+        "es": "Muestra de timbre aprobada (en) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (en) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "en",
+        "characterId": "character:sorell",
+        "voiceProfileId": "voice:sorell-es",
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-en-okoye",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/en/Okoye.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Okoye (EN)",
+        "en": "Okoye voice reference (EN)"
+      },
+      "durationMs": 12320,
+      "description": {
+        "es": "Muestra de timbre aprobada (en) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (en) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "en",
+        "characterId": "character:okoye",
+        "voiceProfileId": "voice:okoye",
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-en-reporter",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/en/Reporter.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Reporter (EN)",
+        "en": "Reporter voice reference (EN)"
+      },
+      "durationMs": 14720,
+      "description": {
+        "es": "Muestra de timbre aprobada (en) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (en) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "en",
+        "characterId": "character:periodista",
+        "voiceProfileId": "voice:reporter-en",
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-es-zao",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/es/Zao.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Zao (ES)",
+        "en": "Zao voice reference (ES)"
+      },
+      "durationMs": 8800,
+      "description": {
+        "es": "Muestra de timbre aprobada (es) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (es) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "es",
+        "characterId": "character:zao",
+        "voiceProfileId": "voice:zao-es",
+        "samplePhraseFile": "/assets/voices/es/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-es-voss",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/es/Voss.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Voss (ES)",
+        "en": "Voss voice reference (ES)"
+      },
+      "durationMs": 9760,
+      "description": {
+        "es": "Muestra de timbre aprobada (es) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (es) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "es",
+        "characterId": "character:voss",
+        "voiceProfileId": "voice:voss-es",
+        "samplePhraseFile": "/assets/voices/es/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-es-harlan",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/es/Harlan.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Harlan (ES)",
+        "en": "Harlan voice reference (ES)"
+      },
+      "durationMs": 9600,
+      "description": {
+        "es": "Muestra de timbre aprobada (es) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (es) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "es",
+        "characterId": "character:harlan",
+        "voiceProfileId": "voice:harlan-es",
+        "samplePhraseFile": "/assets/voices/es/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-es-elin",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/es/Elin.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Elin (ES)",
+        "en": "Elin voice reference (ES)"
+      },
+      "durationMs": 9600,
+      "description": {
+        "es": "Muestra de timbre aprobada (es) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (es) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "es",
+        "characterId": "character:rao",
+        "voiceProfileId": "voice:rao-es",
+        "samplePhraseFile": "/assets/voices/es/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-es-sorell",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/es/Sorell.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Sorell (ES)",
+        "en": "Sorell voice reference (ES)"
+      },
+      "durationMs": 9840,
+      "description": {
+        "es": "Muestra de timbre aprobada (es) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (es) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "es",
+        "characterId": "character:sorell",
+        "voiceProfileId": "voice:sorell-es",
+        "samplePhraseFile": "/assets/voices/es/REF_TEXT.txt"
+      }
+    },
+    {
+      "id": "asset:voice-ref-es-okoye",
+      "kind": "audio",
+      "role": "voice_sample",
+      "path": "/assets/voices/es/Okoye.wav",
+      "mimeType": "audio/wav",
+      "title": {
+        "es": "Referencia de voz Okoye (ES)",
+        "en": "Okoye voice reference (ES)"
+      },
+      "durationMs": 9120,
+      "description": {
+        "es": "Muestra de timbre aprobada (es) para Seedance / TTS clone.",
+        "en": "Approved timbre sample (es) for Seedance / TTS clone."
+      },
+      "metadata": {
+        "useCase": "voice-reference",
+        "lang": "es",
+        "characterId": "character:okoye",
+        "voiceProfileId": "voice:okoye",
+        "samplePhraseFile": "/assets/voices/es/REF_TEXT.txt"
       }
     }
   ]

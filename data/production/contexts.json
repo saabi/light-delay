@@ -2,14 +2,43 @@
   "schemaVersion": "1.0.0",
   "contexts": [
     {
+      "id": "context:proxima-habitat-ring",
+      "label": {
+        "es": "Anillo de hábitat de Proxima (galería de operaciones)",
+        "en": "Proxima habitat ring (operations gallery)"
+      },
+      "physics": {
+        "es": "Anillo de hábitat rotatorio a aproximadamente 0,5 g: postura sentada y de pie normal, movimiento algo ligero, nada flota; los objetos descansan sobre las superficies.",
+        "en": "Rotating habitat ring at approximately 0.5 g: seated and standing posture normal, movement slightly light, nothing floats; loose objects rest on surfaces."
+      },
+      "visualRules": [
+        {
+          "es": "Galería de operaciones interior: muro con la transmisión terrestre retardada, gráficos de emisión solo en inglés y sin logotipos reales; módulos blancos envejecidos y paneles grafito de retrofit.",
+          "en": "Interior operations gallery: wall display with the delayed Earth feed, English-only broadcast graphics with no real-world logos; aged white modules and graphite retrofit panels."
+        },
+        {
+          "es": "Los seis tripulantes del Ardor están presentes en la galería durante las escenas 02–03 salvo que una toma los marque fuera de cuadro; la presencia es continuidad, no encuadre automático.",
+          "en": "All six Ardor crew are present in the gallery through scenes 02–03 unless a shot marks them off-frame; presence is continuity, not automatic framing."
+        }
+      ],
+      "soundRules": [],
+      "sourceRefs": [
+        {
+          "kind": "document",
+          "documentId": "docs/technical/PROXIMA_STATION.md"
+        }
+      ],
+      "status": "draft"
+    },
+    {
       "id": "context:proxima-dock",
       "label": {
         "es": "Muelle exterior de Proxima",
         "en": "Proxima exterior dock"
       },
       "physics": {
-        "es": "Atraque axial exterior; no representar a la Ardor dentro de un hangar gigante.",
-        "en": "External axial docking; do not depict the Ardor inside a giant hangar."
+        "es": "Atraque axial exterior sobre la espina no rotatoria: pozo de transferencia presurizado de unos 18–20 m de diámetro en microgravedad, sin piso útil; cuerpos orientados a lo largo del eje por pasamanos y puntos de amarre, carga sujeta en guías. No representar a la Ardor dentro de un hangar gigante ni sobre una plataforma.",
+        "en": "External axial docking on the non-rotating spine: pressurized transfer shaft roughly 18–20 m across in microgravity, no meaningful floor; bodies oriented along the shaft axis by handrails and tether points, cargo restrained on guides. Do not depict the Ardor inside a giant hangar or on a platform."
       },
       "visualRules": [
         {
@@ -411,15 +440,15 @@
       "contextId": "context:ardor-docked-at-proxima",
       "scriptId": "script:light-delay-festival-master",
       "sceneIds": [
-        "festival-master:scene-00-title",
-        "festival-master:scene-02",
-        "festival-master:scene-03"
+        "festival-master:scene-00-title"
       ]
     },
     {
       "contextId": "context:proxima-dock",
       "scriptId": "script:light-delay-festival-master",
-      "sceneIds": ["festival-master:scene-04"]
+      "sceneIds": [
+        "festival-master:scene-04"
+      ]
     },
     {
       "contextId": "context:ardor-thrust-gravity",
@@ -457,7 +486,10 @@
     {
       "contextId": "context:ardor-remote-cutoff-transition",
       "scriptId": "script:light-delay-festival-master",
-      "sceneIds": ["festival-master:scene-26", "festival-master:scene-27"]
+      "sceneIds": [
+        "festival-master:scene-26",
+        "festival-master:scene-27"
+      ]
     },
     {
       "contextId": "context:ardor-post-climax-microgravity",
@@ -472,7 +504,9 @@
     {
       "contextId": "context:ardor-exterior-vacuum",
       "scriptId": "script:light-delay-festival-master",
-      "sceneIds": ["festival-master:scene-30"]
+      "sceneIds": [
+        "festival-master:scene-30"
+      ]
     },
     {
       "contextId": "context:ardor-exterior-vacuum",
@@ -515,6 +549,14 @@
         "festival-master:scene-28",
         "festival-master:scene-29",
         "festival-master:scene-32"
+      ]
+    },
+    {
+      "contextId": "context:proxima-habitat-ring",
+      "scriptId": "script:light-delay-festival-master",
+      "sceneIds": [
+        "festival-master:scene-02",
+        "festival-master:scene-03"
       ]
     }
   ]
