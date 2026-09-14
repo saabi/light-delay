@@ -13029,7 +13029,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:proxima-station.\nPhysics: Approximate 0.5 g from the rotating habitat ring; bodies and the gallery remain settled to the ring floor.\nLighting: Operations gallery practical light mixed with the delayed Earth wall display.\nShared: Continuous operations-gallery viewing stretch: same rotating-ring room, 0.5 g, Earth wall, six-person crew, and screen direction across three ordered panels. The reporter exists only inside the visible Earth broadcast display.\nPresent cast: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye.\nBlocking:\ncharacter:harlan; zoneOrSeat=front-row-left-near-display; screenSide=left; facing=toward the Earth wall display, then slightly toward Sorell; posture=standing; eyelineTarget=the Earth wall for shot 001; character:sorell for shot 002\ncharacter:sorell; zoneOrSeat=front-row-center-near-display; screenSide=center; facing=toward the Earth wall display, then toward Harlan and Voss as addressed; posture=standing; eyelineTarget=the Earth wall for shot 001; character:harlan for shot 002; character:voss for shot 003\ncharacter:voss; zoneOrSeat=front-row-right-near-display; screenSide=right; facing=toward the Earth wall display, then toward Harlan and Sorell; posture=standing; eyelineTarget=the Earth wall for shot 001; character:harlan and character:sorell for shot 003\ncharacter:zao; zoneOrSeat=back-row-left-behind-harlan; screenSide=left; facing=toward the Earth wall display; posture=standing; eyelineTarget=the Earth wall display\ncharacter:rao; zoneOrSeat=back-row-center-behind-sorell; screenSide=center; facing=toward the Earth wall display; posture=standing; eyelineTarget=the Earth wall display\ncharacter:okoye; zoneOrSeat=back-row-right-behind-voss; screenSide=right; facing=toward the Earth wall display; posture=standing; eyelineTarget=the Earth wall display\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-001. Start: All six crew watch the delayed Earth stream together in the operations gallery. Event: The Earth wall divides hopeful supporters and frightened protesters while the delay caption remains visible. End: The broadcast holds the crew in a shared, uneasy attention. Delta/description: A delayed Earth broadcast fills Proxima's operations wall: a split feed of hopeful supporters and frightened protesters at the Jupiter mouth, a caption reading '43:18 DELAY' in clean English. In silhouette against the glow, the six-person Celestial Ardor crew stand loosely grouped, watching a debate that ended forty-three minutes ago. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-002. Start: The same gallery and delayed broadcast; Harlan and Sorell remain together in the foreground. Event: Harlan speaks quietly, and Sorell answers without looking away from the wall. End: Their exchange shifts the shared viewing from public debate to personal unease. Delta/description: Harlan watches the broadcast, guarded, his face unreadable as he speaks quietly to himself. Beside him Sorell answers without looking away from the display; the rest of the crew stays off-frame, still facing the wall. Composition size: MS. Visible: character:harlan, character:sorell.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-003. Start: The same gallery and stream; Voss now joins the foreground exchange. Event: Voss lightly classifies Harlan and Sorell as opposites, and Sorell turns toward him. End: The crew is still together, but the first interpersonal fault line is visible. Delta/description: Voss, relaxed and amused, glances between Harlan and Sorell, classifying them lightly. Sorell looks toward Voss, faintly surprised. Composition size: CU. Visible: character:voss, character:sorell.",
       "outputs": [
         {
           "order": 1,
@@ -13084,11 +13084,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-operations-gallery-001-003:rev-1:video-1",
@@ -13330,7 +13328,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge-meal-table.\nPhysics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating.\nLighting: Bridge interior; displays glow blue; practical panel light.\nShared: Continuous bridge-meal stretch: same location, cast, 1 g thrust physics, and a rectangular six-seat meeting table across three ordered panels. Hull side (backs to the hull): Voss at the stations end, Harlan middle, Okoye lift end. Room side (backs to the stair, facing the hull-wall display): Rao stations end, Sorell middle, Zao lift end. Nobody changes seat.\nPresent cast: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye.\nBlocking:\ncharacter:voss; zoneOrSeat=table-hull-side-stations-end; screenSide=left; facing=along the table toward the lift end; posture=seated; eyelineTarget=the table; Sorell for cue-0024\ncharacter:harlan; zoneOrSeat=table-hull-side-middle; screenSide=center; facing=across the table toward Sorell; posture=seated; eyelineTarget=character:sorell\ncharacter:okoye; zoneOrSeat=table-hull-side-lift-end; screenSide=right; facing=across the table; posture=seated; eyelineTarget=Zao, then Harlan\ncharacter:rao; zoneOrSeat=table-room-side-stations-end; screenSide=left; facing=toward the hull-wall display; posture=seated; eyelineTarget=Zao during the joke, then Sorell\ncharacter:sorell; zoneOrSeat=table-room-side-middle; screenSide=center; facing=toward Harlan and the display; posture=seated; eyelineTarget=Zao for cue-0021, Harlan for cue-0023\ncharacter:zao; zoneOrSeat=table-room-side-lift-end; screenSide=right; facing=up toward the hull-wall display; posture=seated; eyelineTarget=the systems display for cue-0020, then Sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-010. Start: Six seated at the meeting table under thrust; trays anchored; the display shows the rotating Ardor silhouette. Event: Zao glances up at the silhouette and delivers the name joke; tracking across the trays toward the display. End: Arrangement established; mood light. Delta/description: Under steady thrust, the six crew share a meal from anchored trays at the bridge's meeting table. A systems display on the hull wall shows the Celestial Ardor's long silhouette slowly rotating; Zao glances up at it and delivers the name joke. Composition size: LS. Visible: character:voss, character:harlan, character:okoye, character:rao, character:sorell, character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-011. Start: Same seats as panel 1. Event: Sorell tops the joke toward Zao, then Harlan turns to Sorell with the serious question. End: Table quiet; Sorell and Harlan locked across the table. Delta/description: Sorell, also amused, tops Zao's joke. Harlan, probing, turns it serious across the table. Composition size: MS. Visible: character:sorell, character:harlan, character:rao, character:voss.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-012. Start: Same seats; Harlan’s question hanging. Event: Sorell answers Harlan; Voss ends it from the stations end. End: Tone serious; seats unchanged. Delta/description: Sorell, serious now, answers Harlan. Voss ends it from the stations end of the table. Composition size: MCU. Visible: character:sorell, character:voss, character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -13385,11 +13383,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-meal-010-012:rev-2:video-1",
@@ -13622,7 +13618,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:proxima-dock.\nPhysics: Microgravity inside the pressurized axial transfer shaft on the non-rotating spine: no meaningful floor, bodies oriented along the shaft axis by handrails and tether points, cargo restrained on guides, nothing rests on a surface.\nLighting: Practical dock lighting: strips along the ribs, yellow safety markings, maintained industrial tone.\nShared: Continuous stretch inside Proxima’s axial transfer shaft: same location, cast, and microgravity across four ordered panels. Harlan at the hazardous-stores gate by the berth; Voss on the crew rail mid-shaft; Rao at the manifest terminal; Okoye in the cargo lane; Zao at the collar then at the terminal; Sorell at the shaft mouth. Only Zao relocates between panels.\nPresent cast: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye.\nBlocking:\ncharacter:harlan; zoneOrSeat=berth-end hazardous-stores gate (tether point beside the vestibule); screenSide=right; facing=toward the station end; posture=other; eyelineTarget=character:voss\ncharacter:voss; zoneOrSeat=mid-shaft, station side, on the crew rail; screenSide=left; facing=toward Harlan down the shaft; posture=other; eyelineTarget=Harlan for cue-0013, Zao for cue-0017\ncharacter:rao; zoneOrSeat=mid-shaft manifest terminal; screenSide=center; facing=the terminal, then Zao; posture=other; eyelineTarget=terminal, Zao for cue-0015\ncharacter:okoye; zoneOrSeat=mid-shaft cargo guide lane; screenSide=center; facing=along the guides toward the berth; posture=moving; eyelineTarget=cargo, then Harlan\ncharacter:zao; zoneOrSeat=berth-end collar checks, then the manifest terminal for 008–009; screenSide=right; facing=the collar, then Rao and Voss; posture=moving; eyelineTarget=collar, Rao for cue-0016, Voss for cue-0018\ncharacter:sorell; zoneOrSeat=shaft-mouth, station end, soft stores; screenSide=left; facing=toward the berth; posture=other; eyelineTarget=the cargo flow\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-006. Start: Cargo moving through the shaft toward the berth; the Ardor engaged at the tip. Event: Tracking along the axis: Okoye pushes a pallet, Rao at the terminal, Zao at the collar. End: Shaft and berth geometry established. Delta/description: Cargo moves through Proxima's axial dock at emergency tempo: the exact opening schedule arrived too late for an Earth delegation, so the local six-person crew loads the Celestial Ardor themselves under visible time pressure. Composition size: LS. Visible: character:okoye, character:rao, character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-007. Start: Same layout; Voss on the crew rail, Harlan at the tether point beside the hazardous-stores gate. Event: Voss addresses Harlan along the shaft; Harlan answers. End: Harlan’s authority over hazardous stores visible. Delta/description: Voss, authoritative, addresses Harlan as Commander across the busy dock. Harlan, controlled, answers evenly:. Composition size: ELS. Visible: character:voss, character:harlan.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-008. Start: Rao at the manifest terminal; Zao arrives from the collar. Event: Rao closes the manifest; Zao is already turning to recheck from another angle. End: Zao at the terminal, audit reopened. Delta/description: Elin Rao, focused, closes out her manifest check. Zao, methodical, is already turning to recheck from another angle. Composition size: MS. Visible: character:rao, character:zao.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-009. Start: Zao at the terminal; Voss on the rail. Event: Voss grants the minute; Zao accepts without stopping. End: Voss moves off toward the station end; Zao stays to close the audit. Delta/description: Voss, pressed for time but yielding to her habit. Zao, confident, accepts:. Composition size: MCU. Visible: character:voss, character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -13692,11 +13688,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-axial-dock-006-009:rev-1:video-1",
@@ -13912,7 +13906,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:proxima-station.\nPhysics: Approximate 0.5 g from the rotating habitat ring; both remain settled to the gallery floor.\nLighting: Practical gallery light mixed with the dimmed Earth wall.\nShared: Same quiet Operations Gallery corner, 0.5 g, Earth wall, and two-person screen direction across the two panels.\nPresent cast: character:voss, character:zao.\nBlocking:\ncharacter:voss; zoneOrSeat=gallery-front-right-by-wall; screenSide=left; facing=toward Zao and the Earth wall; posture=standing; eyelineTarget=character:zao\ncharacter:zao; zoneOrSeat=gallery-front-left-by-wall; screenSide=right; facing=toward Voss and the Earth wall; posture=standing; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-004. Start: Zao and Voss remain beside the quiet Earth wall after the group disperses. Event: Zao names what she saw in Harlan without accusing him. End: Their private concern is established. Delta/description: After the others disperse, Zao catches Voss alone beside the now-quiet delayed feed, her expression low and exact, no accusation yet:. Composition size: OTS. Visible: character:voss, character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-005. Start: The same quiet gallery corner and two-person blocking continue. Event: Voss reassures Zao while she holds his gaze. End: The exchange ends without either changing position. Delta/description: Voss, confident, reassures her. Zao, wary but not backing down, holds his gaze:. Composition size: MCU. Visible: character:voss, character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -13952,11 +13946,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-operations-gallery-004-005:rev-1:video-1",
@@ -14152,7 +14144,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-central-access.\nPhysics: Microgravity during the scheduled thrust cutoff; bodies and loose objects drift around the shaft.\nLighting: Central-shaft practicals and instrument glow; no artificial floor direction.\nShared: Same central shaft, helical stairs, rails, and four-person tether arrangement across three ordered panels.\nPresent cast: character:zao, character:rao, character:sorell, character:harlan.\nBlocking:\ncharacter:zao; zoneOrSeat=central-shaft-lower-rail; screenSide=left; facing=along the shaft axis; posture=other; eyelineTarget=the crew\ncharacter:rao; zoneOrSeat=central-shaft-console-rail; screenSide=center; facing=toward the instrument panel; posture=other; eyelineTarget=the instrument panel\ncharacter:sorell; zoneOrSeat=central-shaft-mid-rail; screenSide=right; facing=toward Zao and the shaft axis; posture=other; eyelineTarget=character:zao\ncharacter:harlan; zoneOrSeat=central-shaft-upper-rail; screenSide=right; facing=along the shaft axis; posture=other; eyelineTarget=the crew\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-013. Start: Thrust cuts and the four crew members remain attached to the central shaft geometry. Event: The central stair loses up and down as the ship turns. End: The microgravity arrangement is established. Delta/description: At Jupiter periapsis thrust cuts: loose straps and hair rise as the central stair becomes a helix without up or down, the ship turning end for end around the crew. Composition size: ELS. Visible: character:zao, character:rao, character:sorell, character:harlan.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-014. Start: The same shaft and handhold arrangement continue. Event: Elin marks the loss of the floor while loose objects drift. End: The crew remains in the same shaft positions. Delta/description: Engine vibration falls away; restraints click softly and a loose spoon taps slowly, end over end, against its own tether. Elin, alert, marks the change:. Composition size: MS. Visible: character:zao, character:rao, character:sorell, character:harlan.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-015. Start: The same microgravity arrangement holds. Event: Zao steadies the others through the maneuver. End: The maneuver continues without a spatial reset. Delta/description: Zao, calm, steadies the others through the maneuver:. Composition size: CU. Visible: character:zao, character:rao, character:sorell, character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -14207,11 +14199,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-central-access-013-015:rev-1:video-1",
@@ -14419,7 +14409,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity in the reactor service bay; Zao works hand-over-hand and nothing rests on a floor.\nLighting: Reactor-bay practicals, instrument glow, and the optical console display.\nShared: Continuous reactor service-bay diagnosis: the same microgravity console cluster, failed comms, countdown, and optical-array geometry across four panels.\nPresent cast: character:zao.\nBlocking:\ncharacter:zao; zoneOrSeat=outer-bay optical console; screenSide=center; facing=the comms panel and optical-array console; posture=moving; eyelineTarget=the active console\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-029. Start: Zao finishes the interrupted bridge call in the reactor service bay. Event: She tests the dead channels while the countdown continues. End: The communications failure is established as deliberate. Delta/description: Zao finishes her sentence into dead air, then rapidly tests every channel in turn while the bomb's timer continues behind her, unseen but implied by a small wall countdown. Composition size: MCU. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-030. Start: Zao remains at the same bay console. Event: She names the radio and hardline failures and searches for another route. End: She turns to the independent optical console. Delta/description: Frightened but precise, Zao names the failed routes at a comms panel:. Composition size: MCU. Visible: character:zao.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-031. Start: Zao reaches the optical-array control console. Event: She rules out Proxima, Earth, and the throat before selecting the forward intercept. End: The crossing clock gives her a viable target. Delta/description: Pressed, Zao eliminates routes aloud at the independent optical-array console:. Composition size: ELS. Visible: character:zao.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-032. Start: The optical console holds the forward geometry. Event: Zao finds the moving intercept and begins the transmission setup. End: The aimed contingency transmission is ready to record. Delta/description: The crossing clock aligns with ordinary light-time on her display. Zao stops talking, resolved, and begins plotting a moving intercept. Only \"23 H 15 MIN\" is legible on screen; destination and trajectory stay hidden from view. Composition size: MS. Visible: character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -14489,11 +14479,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-optics-029-032:rev-1:video-1",
@@ -14779,7 +14767,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity in the reactor service bay; Harlan closes distance by controlled pushes and Zao remains anchored to the console.\nLighting: Reactor-bay practicals and optical-console glow; the transmission display is English-only.\nShared: Continuous reactor-bay confrontation for shots 033–034–035–036, preserving the recording, narrow-beam transmission, Harlan’s arrival, cast, and microgravity geometry.\nPresent cast: character:zao, character:harlan.\nBlocking:\ncharacter:zao; zoneOrSeat=outer-bay optical console; screenSide=left; facing=the console, then Harlan; posture=moving; eyelineTarget=the console and character:harlan\ncharacter:harlan; zoneOrSeat=service-hatch approach to console; screenSide=right; facing=Zao and the console; posture=moving; eyelineTarget=character:zao\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-033. Start: Zao records at the optical console in volatile memory. Event: Her words remain unheard while the recording is captured. End: The warning is recorded but not yet transmitted. Delta/description: Zao records into volatile memory: we see her mouth moving, speaking urgently into a small recorder, but the frame implies no audio is heard — her exact words remain withheld. Composition size: CU. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-034. Start: Zao finishes the recording as the service shaft vibration approaches. Event: She listens without leaving the console cluster. End: The approaching threat is audible in her posture, not yet in frame. Delta/description: From behind Zao, watching her finish recording; her posture is tense, listening for the approaching vibration of the distant service hatch. Composition size: OTS. Visible: character:zao.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-035. Start: Zao signs the packet and sets the narrow optical sweep. Event: The display confirms TRANSMITTED without exposing the aim point. End: The warning has left the ship before Harlan enters. Delta/description: She signs the packet and sets a narrow divergence sweep on the optical-array console, then transmits. The display shows only the word \"TRANSMITTED\" — never an aim point or destination. Composition size: INSERT. Visible: character:zao.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-036. Start: Harlan enters the bay after the pointing solution is closed. Event: He sees only the transmission confirmation and demands its destination. End: Zao refuses to reveal the target; Harlan controls the encounter. Delta/description: Harlan enters as Zao closes the pointing solution before he can read it; he sees only that a transmission left, dangerous and focused:. Composition size: MCU. Visible: character:zao, character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -14849,11 +14837,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-record-033-036:rev-1:video-1",
@@ -15136,7 +15122,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity; Sorell and Zao drift together with no usable floor.\nLighting: Outer-bay practicals, optical-console glow, and blood suspended in the air.\nShared: Continuous outer-bay rescue: Sorell catches and supports Zao, then calls through the still-jammed communications beside the optical console.\nPresent cast: character:sorell, character:zao.\nBlocking:\ncharacter:sorell; zoneOrSeat=outer-bay center beside console; screenSide=center; facing=Zao and the handheld comm; posture=moving; eyelineTarget=character:zao\ncharacter:zao; zoneOrSeat=outer-bay center held by Sorell; screenSide=center; facing=away from camera; posture=other; eyelineTarget=character:sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-042. Start: Sorell enters the outer bay and catches Zao's drifting body. Event: She checks the airway and pulse in microgravity. End: Sorell holds Zao and searches for help. Delta/description: Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity. The optical transmitter and service-shaft trays remain outside this frame. Composition size: MCU. Visible: character:sorell, character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-043. Start: Sorell still cradles Zao beside the optical console. Event: She calls the bridge into the jammed comms and receives no answer. End: Her isolation and fear are established. Delta/description: Sorell, panicked, calls urgently into a handheld comm while still holding Zao's body:. Composition size: ELS. Visible: character:sorell, character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -15176,11 +15162,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-sorell-042-043:rev-1:video-1",
@@ -15367,7 +15351,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Microgravity during the return through the bridge-side service hatch; Harlan uses rails and the tray.\nLighting: Bridge instrument glow and the restored camera monitor.\nShared: Two-panel bridge-side service-hatch stretch: Harlan reconnects the trunks, emerges alone, and places his false alibi while Sorell remains off-frame.\nPresent cast: character:harlan.\nBlocking:\ncharacter:harlan; zoneOrSeat=bridge-side service hatch and comms tray; screenSide=center; facing=the tray, then bridge monitors; posture=moving; eyelineTarget=the comms tray and monitor\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-044. Start: Harlan reaches the bridge-side service tray after the murder. Event: He reconnects the communication trunks and emerges controlled. End: The bridge sees a composed officer returning from the hatch. Delta/description: Harlan reconnects the communications trunks at the service-shaft tray and emerges through the bridge-side hatch, controlled. Composition size: MS. Visible: character:harlan.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-045. Start: Harlan remains alone at the bridge-side hatch and monitor. Event: He denies seeing Sorell while the restored monitor shows her with Zao. End: His alibi is placed before the bridge crew returns. Delta/description: Deceptive, Harlan separates himself from the scene. Harlan is the only physical person in this compartment; behind him, a restored camera-feed monitor shows Sorell alone holding the bloodied body. Composition size: CU. Visible: character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -15407,11 +15391,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1:video-1",
@@ -15609,7 +15591,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-central-access.\nPhysics: Microgravity at thrust cutoff; the four crew use rails around the central access and sealed vault.\nLighting: Central-access practicals and vault indicators; no floor direction.\nShared: Continuous central-access obstruction: Rao, Okoye, Harlan, and Voss share the sealed-vault geometry through the cutoff, accusation, and diagnostic setup.\nPresent cast: character:rao, character:okoye, character:harlan, character:voss.\nBlocking:\ncharacter:rao; zoneOrSeat=vault-side diagnostic rail; screenSide=left; facing=vault door and diagnostic; posture=other; eyelineTarget=the vault\ncharacter:okoye; zoneOrSeat=vault door handhold; screenSide=center; facing=the lock and Harlan; posture=other; eyelineTarget=character:harlan\ncharacter:harlan; zoneOrSeat=upper rail opposite vault; screenSide=right; facing=Okoye and Rao; posture=other; eyelineTarget=character:okoye\ncharacter:voss; zoneOrSeat=remote bridge comm presence; screenSide=off; facing=the access feed; posture=other; eyelineTarget=character:rao\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-054. Start: The ship turns into the third thrust cutoff; Rao and Okoye reach the sealed vault. Event: They float beside the door as weight disappears. End: The vault is the immediate obstacle. Delta/description: Midway to the station, thrust cuts for the third time; the ship turns to begin braking. Elin Rao and Okoye float beside the sealed vault door. Composition size: MCU. Visible: character:rao, character:okoye, character:harlan, character:voss.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-055. Start: Okoye holds the vault while Harlan floats nearby. Event: Okoye reports the local lock; Harlan redirects suspicion toward Sorell. End: Rao refuses to accept the accusation as proof. Delta/description: Okoye, wary, reports the vault's obstruction over comm. Harlan, deceptive, floats nearby:. Composition size: MS. Visible: character:okoye, character:harlan.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-056. Start: The same four-person microgravity arrangement surrounds the vault door. Event: Rao clamps a diagnostic instrument and rejects Harlan's unsupported inference. End: The diagnostic remains for the later vault opening. Delta/description: Elin Rao, skeptical, refuses the unsupported claim, dry and impatient. She then leaves a small diagnostic instrument clamped to a workbench beside the vault, still not understanding its later use. Composition size: MS. Visible: character:rao, character:okoye, character:harlan, character:voss.",
       "outputs": [
         {
           "order": 1,
@@ -15664,11 +15646,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-central-vault-obstruction-054-056:rev-1:video-1",
@@ -15885,7 +15865,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady thrust restores apparent 1 g on the bridge; Harlan's private panel remains within the same station geometry.\nLighting: Bridge practicals and reconstructed vector display.\nShared: Bridge analysis stretch: the reconstructed firing vector is examined, Voss asks the causal question, and Harlan's private grief occupies the same room without a spatial reset.\nPresent cast: character:voss, character:harlan, character:rao, character:okoye, character:sorell.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Rao's display; posture=standing; eyelineTarget=character:rao\ncharacter:harlan; zoneOrSeat=secondary console; screenSide=right; facing=the display; posture=standing; eyelineTarget=the display\ncharacter:rao; zoneOrSeat=analysis station; screenSide=left; facing=the vector display; posture=standing; eyelineTarget=the display\ncharacter:okoye; zoneOrSeat=security station; screenSide=off; facing=the bridge; posture=standing; eyelineTarget=character:voss\ncharacter:sorell; zoneOrSeat=translator station; screenSide=right; facing=the reconstructed vector display; posture=standing; eyelineTarget=the vector display\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-057. Start: Weight returns on the bridge as Rao studies Zao's reconstructed firing angles. Event: The vector points toward a future intercept rather than Earth or Proxima. End: The question of the target remains open. Delta/description: Thrust restores and weight settles Elin at her station as she reads the display: only firing angles and ship attitude survive from Zao's reconstructed burst; the plotted vector points at no planet, station, or beacon. Composition size: MCU. Visible: character:voss, character:harlan, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-058. Start: The bridge crew remains at the same stations. Event: Voss asks what Zao hit and authorizes comparison. End: The bridge turns toward the unexplained signal. Delta/description: Voss, curious, authorizes further comparison:. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-059. Start: Harlan is alone at the bridge console for a moment. Event: He mourns the unknown savior while the record remains unrecoverable. End: The private reaction leads into the incoming packet. Delta/description: Alone for a moment, Harlan watches the unrecoverable burst record, mourning:. Composition size: MCU. Visible: character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -15940,11 +15920,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-vector-057-059:rev-1:video-1",
@@ -16239,7 +16217,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady apparent 1 g on the bridge; all three remain at their stations.\nLighting: Bridge practicals with the incoming optical packet bright on Rao's display.\nShared: Two-panel bridge reception: Rao authenticates the delayed optical packet and Voss orders playback while Sorell remains close enough to hear.\nPresent cast: character:rao, character:voss, character:sorell, character:harlan, character:okoye.\nBlocking:\ncharacter:rao; zoneOrSeat=analysis station; screenSide=left; facing=her display; posture=standing; eyelineTarget=the incoming packet\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Rao; posture=standing; eyelineTarget=character:rao\ncharacter:sorell; zoneOrSeat=translator station; screenSide=right; facing=Rao's display; posture=standing; eyelineTarget=character:rao\ncharacter:harlan; zoneOrSeat=secured aft security position; screenSide=right; facing=Rao and the incoming packet; posture=standing; eyelineTarget=character:rao\ncharacter:okoye; zoneOrSeat=security station; screenSide=left; facing=the command station; posture=standing; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-060. Start: Rao detects an incoming optical signal at her bridge station. Event: The packet resolves as Zao's personal format and pre-crossing signature. End: Voss and Sorell hear that the packet is authentic. Delta/description: An incoming optical signal resolves on Elin's display; urgent, she identifies it:. Composition size: MCU. Visible: character:rao, character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-061. Start: The bridge crew remains focused on Rao's display. Event: Voss orders the packet played. End: The bridge is ready for Zao's recorded flashback. Delta/description: Voss, decisive, orders it opened at once:. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -16279,11 +16257,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-packet-open-060-061:rev-1:video-1",
@@ -16474,7 +16450,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-inner-shielding-vault.\nPhysics: Microgravity flashback in the inner shielding vault; Zao and the package are secured to the vault structure.\nLighting: Vault service lighting and the package controller's diagnostic glow.\nShared: Two-panel delayed flashback in the shielding vault: Zao identifies the package and explains the occlusion that forced her forward optical warning.\nPresent cast: character:zao.\nBlocking:\ncharacter:zao; zoneOrSeat=package service panel; screenSide=center; facing=the package and recorder; posture=other; eyelineTarget=the package\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-062. Start: The delayed packet opens on Zao beside the armed impulse package. Event: She identifies the device and begins the warning. End: The warning establishes the package as a Proxima threat. Delta/description: Flashback. Zao, determined, records her warning beside the armed device, now heard for the first time:. Composition size: MS. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-063. Start: Zao remains beside the package in the shielding vault. Event: She explains the Jupiter occlusion and forward intercept geometry. End: The bridge now understands why the warning was aimed ahead. Delta/description: Zao, resolved, continues her recorded explanation as a faint diagram of the wormhole and a lead point ahead of it appears superimposed:. Composition size: CU. Visible: character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -16514,11 +16490,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-vault-flashback-062-063:rev-1:video-1",
@@ -16784,7 +16758,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady approach conditions with apparent 1 g on the bridge; the hull display remains visible through the reinforced windows.\nLighting: Bridge practicals balanced against the branching greeting light.\nShared: Bridge greeting-preparation stretch: Sorell translates, Voss reconciles, the crew authorizes one clean send, and the Ardor answers the dark station with structured light.\nPresent cast: character:voss, character:sorell, character:rao, character:okoye.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=left; facing=Sorell and hull display; posture=standing; eyelineTarget=character:sorell\ncharacter:sorell; zoneOrSeat=translator station; screenSide=center; facing=Voss and display; posture=standing; eyelineTarget=character:voss\ncharacter:rao; zoneOrSeat=analysis station; screenSide=right; facing=the display; posture=standing; eyelineTarget=the display\ncharacter:okoye; zoneOrSeat=security station; screenSide=off; facing=the bridge; posture=standing; eyelineTarget=the crew\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-083. Start: Sorell and the bridge crew work around the hull-display translation. Event: She finishes converting the Velari primer into branching light. End: The clean greeting is ready for review. Delta/description: Sorell finishes translating the Velari primer's geometry into branching patterns of light for the ship's hull display. Composition size: MCU. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-084. Start: The same bridge stations and display remain active. Event: Sorell explains the primer's significance and Voss acknowledges his earlier mistake. End: The crew treats the greeting as a first answer, not a test. Delta/description: Sorell, awed. Voss, remorseful, speaks quietly to her:. Composition size: MCU. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-085. Start: Sorell and Voss remain at the greeting console. Event: Voss authorizes one clean greeting and Sorell prepares the send. End: The crew is committed to the limited transmission. Delta/description: Sorell, pressed but not cruel. Voss, decisive, authorizes only the clean message:. Composition size: ELS. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-086. Start: The bridge windows and hull display carry the prepared greeting. Event: Structured light branches across the Ardor while the station remains dark. End: The ship waits for the Velari answer. Delta/description: Structured light branches across the Celestial Ardor's hull, visible through the bridge's small reinforced windows; the 4-5 km Velari station beyond stays dark through a deliberate silence. Composition size: MS. Visible: character:voss, character:sorell, character:rao.",
       "outputs": [
         {
           "order": 1,
@@ -16854,11 +16828,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1:video-1",
@@ -17144,7 +17116,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:velari-station.\nPhysics: Microgravity outside the station; Sorell is tethered and the sphere moves without engines or exhaust.\nLighting: Station skin and transport sphere provide the only luminous geometry against deep space.\nShared: Two-panel exterior response: the station answers, then the Velari Transport Sphere departs and approaches Sorell's ship in microgravity.\nPresent cast: character:sorell, character:voss.\nBlocking:\ncharacter:sorell; zoneOrSeat=Ardor bridge window and tether point; screenSide=left; facing=the station and sphere; posture=standing; eyelineTarget=the Velari Transport Sphere\ncharacter:voss; zoneOrSeat=Ardor bridge window and adjacent tether point; screenSide=right; facing=the station and transport sphere; posture=standing; eyelineTarget=vehicle:velari-transport-sphere\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-087. Start: The Velari station answers across the dark exterior while Sorell watches from the Ardor. Event: She catches fragments of the invitation through the parser. End: The station's answer becomes an invitation to approach. Delta/description: The station answers with an immense luminous grammar spreading across its living skin; Sorell, astonished, catches only fragments through her parser:. Composition size: CU. Visible: character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-088. Start: Sorell watches the station and the open space between vehicles. Event: The Velari Transport Sphere separates from the station and approaches without visible exhaust. End: A physical envoy is on its way to the Ardor. Delta/description: A transparent environmental sphere, personal in scale, separates from the station and approaches the Ardor without visible exhaust. Sorell, moved:. Composition size: OTS. Visible: character:sorell.",
       "outputs": [
         {
           "order": 1,
@@ -17184,11 +17156,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-velari-answer-087-088:rev-1:video-1",
@@ -17375,7 +17345,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:velari-station.\nPhysics: Microgravity outside the station; Sorell remains tethered and the envoy floats inside the sphere with no floor.\nLighting: The station and sphere remain readable while the envoy's living light becomes the focal exchange.\nShared: Two-panel first-contact exterior stretch: Sorell reaches the sphere, and the floating Velari envoy answers through its transparent wall in living light.\nPresent cast: character:sorell, character:velari-envoy.\nBlocking:\ncharacter:sorell; zoneOrSeat=tether point at sphere wall; screenSide=left; facing=through the sphere wall; posture=other; eyelineTarget=character:velari-envoy\ncharacter:velari-envoy; zoneOrSeat=floating center inside transport sphere; screenSide=right; facing=Sorell through the transparent wall; posture=other; eyelineTarget=character:sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-091. Start: Sorell drifts on her tether toward the waiting Velari Transport Sphere. Event: She chooses to cross the gap because meeting has meaning beyond the signal. End: Sorell reaches the sphere's transparent wall. Delta/description: Resolved, drifting on her tether toward the waiting sphere:. Composition size: ELS. Visible: character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-092. Start: Sorell faces the transparent sphere in open microgravity. Event: The floating Velari envoy gathers its light, holds Sorell's attention, and extends the greeting back through the wall. End: Human and Velari acknowledge one another without spoken language. Delta/description: Still in her EVA suit and helmet, tether visible, Sorell reaches the transparent sphere in open space; a full-size Velari individual — roughly 2.5 to 3 metres tall, an elongated mantle, branching luminous patterns along its surface — orients its mantle toward her through the sphere's transparent wall, gathers its light, holds attention, then extends the human greeting back in living light. The Ardor, the Velari station, and the starfield stay visible through the sphere. Composition size: MS. Visible: character:sorell, character:velari-envoy.",
       "outputs": [
         {
           "order": 1,
@@ -17415,11 +17385,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-velari-envoy-091-092:rev-1:video-1",
@@ -17612,7 +17580,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady approach with apparent 1 g on the bridge; restrained Harlan remains under controlled supervision.\nLighting: Bridge practicals and restrained-console indicators.\nShared: Two-panel bridge watch: Harlan remains secured, Rao states the remaining repair and bomb-watch duties, and Voss assigns the next rota.\nPresent cast: character:voss, character:sorell, character:rao, character:harlan, character:okoye.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=left; facing=Rao and the crew; posture=standing; eyelineTarget=character:rao\ncharacter:sorell; zoneOrSeat=translator station; screenSide=center; facing=Voss; posture=standing; eyelineTarget=character:voss\ncharacter:rao; zoneOrSeat=analysis station; screenSide=right; facing=the repair display; posture=standing; eyelineTarget=the display\ncharacter:harlan; zoneOrSeat=secured security position; screenSide=center; facing=the command station; posture=other; eyelineTarget=character:voss\ncharacter:okoye; zoneOrSeat=security station and aft watch access; screenSide=right; facing=Harlan and the command station; posture=standing; eyelineTarget=character:harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-093. Start: The bridge keeps Harlan secure while the armed package remains under watch. Event: Okoye takes first watch aft. End: The crew remains committed to the return window. Delta/description: Before the return window, flight commands still need repair and the armed package remains under constant watch. Okoye, steady:. Composition size: CU. Visible: character:voss, character:sorell, character:okoye, character:harlan.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-094. Start: Voss and Rao remain at the bridge stations with Harlan and Sorell present. Event: Rao states the bridge repair and bomb-watch obligations; Voss changes the rota. End: The next watch and the unresolved device are clearly assigned. Delta/description: Elin Rao, focused, states the remaining obligations. Voss, resolved, changes procedure after the failure:. Composition size: OTS. Visible: character:voss, character:sorell, character:rao, character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -17652,11 +17620,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-watch-093-094:rev-1:video-1",
@@ -17855,7 +17821,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity in the reactor service bay; Voss braces at the optical console.\nLighting: Optical-array glow, service-bay practicals, and Zao's photograph on the display.\nShared: Two-panel reactor-bay coda: Voss sends the independent record and then speaks quietly to Zao's displayed photograph.\nPresent cast: character:voss, character:zao.\nBlocking:\ncharacter:voss; zoneOrSeat=outer-bay optical console; screenSide=center; facing=the console and photograph; posture=other; eyelineTarget=the console\ncharacter:zao; zoneOrSeat=personnel photograph on console display; screenSide=right; facing=camera; posture=other; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-095. Start: Voss reaches the restored optical array in the reactor service bay. Event: He attaches the record of discovery, murder, warning, intervention, and contact for Earth. End: The record is ready to leave independently. Delta/description: Voss uses the restored optical array to send Earth an independent record of discovery, murder, warning, intervention, and contact, solemn, attaching Zao's signed message and personnel file:. Composition size: INSERT. Visible: character:voss, character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-096. Start: The optical console confirms TRANSMITTED beside Zao's personnel photograph. Event: Voss addresses the photograph after the record leaves. End: The film closes on Zao's warning reaching beyond the ship. Delta/description: The console reads \"TRANSMITTED.\" Zao's personnel photograph remains on the display. Voss, grieving, speaks to it quietly:. Composition size: MCU. Visible: character:voss, character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -17895,11 +17861,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-report-095-096:rev-1:video-1",
@@ -18074,7 +18038,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-engineering.\nPhysics: Microgravity in the engineering bay during the audit.\nLighting: Engineering practicals and diagnostic displays.\nShared: Two-panel engineering audit stretch; the same bay and Zao's investigation continue without a location reset.\nPresent cast: character:zao.\nBlocking:\ncharacter:zao; zoneOrSeat=engineering audit console; screenSide=center; facing=the diagnostic displays; posture=other; eyelineTarget=the active anomaly\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-016. Start: Zao continues the engineering audit. Event: She inspects the anomalous load without leaving the engineering bay. End: The unexplained extra load remains the active question. Delta/description: Zao braces at an engineering console, concentrating, while loose gear floats past behind her:. Composition size: MCU. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-017. Start: Zao continues the engineering audit. Event: She inspects the anomalous load without leaving the engineering bay. End: The unexplained extra load remains the active question. Delta/description: She recomputes the propellant profile; a small excess repeats exactly across the long leg. Uneasy, she commits. Her wrist dosimeter begins a sparse neutron tick. Composition size: MCU. Visible: character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -18114,11 +18078,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-engineering-audit-016-017:rev-1:video-1",
@@ -18289,7 +18251,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity in the reactor service bay; both use rails and handholds.\nLighting: Reactor-bay practicals and diagnostic glow.\nShared: Two-panel reactor-bay entrance stretch; Zao and Harlan share the same microgravity threshold.\nPresent cast: character:zao, character:harlan.\nBlocking:\ncharacter:zao; zoneOrSeat=bay threshold console; screenSide=left; facing=Harlan and the diagnostics; posture=moving; eyelineTarget=character:harlan\ncharacter:harlan; zoneOrSeat=service-bay access rail; screenSide=right; facing=Zao; posture=moving; eyelineTarget=character:zao\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-018. Start: Zao remains at the reactor service-bay threshold. Event: Harlan crosses her path while the audit continues. End: Their encounter moves the investigation into the bay. Delta/description: The neutron count strengthens toward the vault door. Harlan emerges from its inner bay and meets Zao in the passage, guarded:. Composition size: MCU. Visible: character:zao, character:harlan.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-019. Start: Zao remains at the reactor service-bay threshold. Event: Harlan crosses her path while the audit continues. End: Their encounter moves the investigation into the bay. Delta/description: Harlan, controlled, explains his access. Zao, watchful then firm, answers without revealing suspicion. Continuing the previous shot's blocking, Harlan turns and walks away alone, back to camera, in the opposite direction from the vault; Zao remains standing near the vault access door, watching him go, then turns to enter. He has touched no flight control and given her nothing visible to accuse. Composition size: MLS. Visible: character:zao, character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -18329,11 +18291,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-entrance-018-019:rev-1:video-1",
@@ -18517,7 +18477,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-inner-shielding-vault.\nPhysics: Microgravity in the inner shielding vault; the package is secured to the structure.\nLighting: Vault service lighting and package diagnostics.\nShared: Three-panel vault discovery stretch; Zao recognizes the hidden threat.\nPresent cast: character:zao.\nBlocking:\ncharacter:zao; zoneOrSeat=package service panel; screenSide=center; facing=the impulse package; posture=other; eyelineTarget=the package\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-020. Start: Zao reaches the inner shielding vault and the package is in view. Event: She examines the package and recognizes the threat. End: The discovery forces the warning decision that follows. Delta/description: Inside the incompletely secured vault, Zao follows markings and the neutron peak to a squat, armored, tonne-scale device wired to a small illuminated controller showing mass, yield, and a countdown timer set to arrival time. Composition size: MS. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-021. Start: Zao reaches the inner shielding vault and the package is in view. Event: She examines the package and recognizes the threat. End: The discovery forces the warning decision that follows. Delta/description: Shocked, then afraid, Zao reads the controller aloud to herself. The display shows mass, yield, and a countdown timer set to arrival time; it does not show contact coordinates or a targeting solution. Composition size: CU. Visible: character:zao.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-022. Start: Zao reaches the inner shielding vault and the package is in view. Event: She examines the package and recognizes the threat. End: The discovery forces the warning decision that follows. Delta/description: Reasoning aloud, Zao puts it together. The suspicion hardens into a decision:. Composition size: CU. Visible: character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -18572,11 +18532,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-vault-discovery-020-022:rev-1:video-1",
@@ -18854,7 +18812,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-service-cylinder.\nPhysics: Microgravity in the longitudinal service cylinder; Harlan uses the direct service route while Sorell uses the slower ladder route.\nLighting: Established practical lighting for this location.\nShared: Continuous visual stretch for shots 026–027–028, preserving location, cast, blocking, and physical continuity.\nPresent cast: character:harlan, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-026. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: At the hinged tray below the service hatch, Harlan silently disconnects the wired communications and camera trunks, then launches ballistically down the service shaft. Composition size: MS. Visible: character:harlan.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-027. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Sorell, urgent, volunteers for the faster route. Voss, wary, agrees but sets a condition:. Composition size: MCU. Visible: character:sorell, character:voss.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-028. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Sorell, anxious, calls into a handheld comm as she moves hand-over-hand down the slower helical stair. No answer returns. Composition size: MCU. Visible: character:sorell.",
       "outputs": [
         {
           "order": 1,
@@ -18909,11 +18867,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-service-cylinder-route-026-028:rev-1:video-1",
@@ -19135,7 +19091,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Continuous visual stretch for shots 023–024–025, preserving location, cast, blocking, and physical continuity.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:rao; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-5; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-023. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Harlan rises unseen from the recessed service hatch behind the command vestibule as the bridge crew, facing forward, hears Zao's channel open:. Composition size: MLS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-024. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Only when the word 'sabotage' lands does Harlan touch his wrist device. The channel dies mid-word. He withdraws into the service hatch before anyone on the bridge turns. Composition size: MCU. Visible: character:harlan.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-025. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, focused, reports the outage from her station. Voss, urgent, splits the response:. Composition size: ELS. Visible: character:voss, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -19190,11 +19146,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-1",
@@ -19424,7 +19378,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Continuous visual stretch for shots 046–047–048–049, preserving location, cast, blocking, and physical continuity.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:rao; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-5; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-046. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: After Voss has sent Harlan and Okoye to retrieve her, Sorell is back on the bridge under their supervision. As thrust restores, loose tools and sheets settle to the deck; Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell:. No image of Zao's body appears in this bridge shot. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-047. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Sorell, devastated, states only what she knows:. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-048. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Okoye, alert but neutral, secures the scene without assigning guilt. With no brig aboard, Sorell is held under watch on the bridge as normal 1 g thrust resumes for the long station leg. Composition size: MCU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-049. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, skeptical, resists the too-neat accusation:. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -19494,11 +19448,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-investigation-046-049:rev-1:video-1",
@@ -19737,7 +19689,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Continuous visual stretch for shots 050–051–052–053, preserving location, cast, blocking, and physical continuity.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:rao; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-5; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-050. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Harlan, persuasive, presents a unified theory to the seated bridge crew:. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-051. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, analytical, keeps inference separate from evidence:. Composition size: CU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-052. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Hours of audit compressed. Elin, certain, breaks the fuel-sabotage claim at a data console:. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-053. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Voss, troubled, recognizes the weakening case:. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -19807,11 +19759,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1:video-1",
@@ -20049,7 +19999,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Continuous bridge confrontation for shots 064–065–066–067, preserving the accusation, converging evidence, cast, blocking, and command geometry.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:rao; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-5; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-064. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Back on the bridge, Voss, urgent, reacts the instant he understands. Okoye, alert, moves to block him:. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-065. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Harlan, defensive, tries to separate accusation from proof:. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-066. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, analytical, denies his premise and lists converging evidence. Harlan, cornered, counters:. Composition size: MCU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-067. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, firm, sets the proportionate standard. Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -20119,11 +20069,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-command-break-064-067:rev-1:video-1",
@@ -20365,7 +20313,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Continuous visual stretch for shots 071–072–073, preserving location, cast, blocking, and physical continuity.\nPresent cast: character:harlan, character:okoye, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-071. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Harlan extends his wrist device toward Okoye; she reaches for it without relaxing her stance. Persuasive, quiet:. Composition size: MS. Visible: character:harlan, character:okoye, character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-072. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Okoye, firm, completes the restraint. A revocation alert flashes nearby; her eyes flick to it for one instant. Composition size: MCU. Visible: character:harlan, character:okoye, character:voss, character:sorell.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-073. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: In that instant Harlan drives Okoye into the console and dives into the service shaft, locking the hatch behind him. Okoye, angry, raises the alarm. Over comm, Voss warns Elin:. Composition size: ELS. Visible: character:harlan, character:okoye, character:voss, character:sorell.",
       "outputs": [
         {
           "order": 1,
@@ -20420,11 +20368,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-device-071-073:rev-1:video-1",
@@ -20652,7 +20598,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity in the reactor service bay; handrails and tethers redirect momentum.\nLighting: Established reactor-bay practicals with the optical transmitter and relay consoles readable.\nShared: Continuous microgravity reactor-bay confrontation for shots 077–078–079, preserving the relay, transmitter, handrails, cast, and momentum direction.\nPresent cast: character:harlan, character:rao, character:voss, character:okoye.\nBlocking:\ncharacter:harlan; zoneOrSeat=relay-console-center; screenSide=left; facing=toward the relay; posture=floating; eyelineTarget=the relay override\ncharacter:rao; zoneOrSeat=secondary-console-right; screenSide=right; facing=toward the relay; posture=anchored; eyelineTarget=the execution thread\ncharacter:voss; zoneOrSeat=upper-handrail; screenSide=center; facing=toward Harlan; posture=anchored; eyelineTarget=Harlan\ncharacter:okoye; zoneOrSeat=service-rail-left; screenSide=left; facing=toward Harlan; posture=floating; eyelineTarget=Harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-077. Start: The reactor-bay confrontation is established in microgravity. Event: Harlan reaches the control area as Rao, Voss, and Okoye close in. End: The four-person spatial arrangement remains stable for the struggle. Delta/description: Harlan pins Elin Rao beside the vault; fifteen metres above, Voss and Okoye reach an aligned central opening as the intact automatic plan completes braking and thrust cuts for the fourth time. Composition size: LS. Visible: character:harlan, character:rao, character:voss, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-078. Start: The established reactor-bay arrangement continues. Event: The crew redirects Harlan's momentum away from the relay. End: Harlan is held off the control while the technical intervention continues. Delta/description: With the stairs no longer constraining them, Okoye launches through the opening and Voss follows; together they redirect Harlan's momentum and tether him to a rail. Okoye, focused:. Composition size: MCU. Visible: character:harlan, character:rao, character:voss, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-079. Start: Harlan remains restrained in the same microgravity geometry. Event: Okoye secures Harlan as Rao and Voss retain access to the relay and transmitter. End: The hostile branch is ready for quarantine without changing the location or cast arrangement. Delta/description: Desperate, then frantic, tethered and restrained, Harlan pleads his case. Voss, commanding, turns away:. Composition size: ELS. Visible: character:harlan, character:rao, character:voss, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -20707,11 +20653,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-confrontation-077-079:rev-1:video-1",
@@ -21027,7 +20971,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": null,
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-inner-shielding-vault.\nPhysics: Microgravity in the inner shielding vault; all four characters use handholds and the evidence remains secured.\nLighting: Established cool vault practicals with the impulse package and time-reference display readable.\nShared: Continuous microgravity inner-vault recovery for shots 080–081–082, preserving the evidence layout, access route, cast, and eyelines.\nPresent cast: character:rao, character:harlan, character:okoye, character:voss.\nBlocking:\ncharacter:rao; zoneOrSeat=evidence-console-center; screenSide=center; facing=toward the recovery props; posture=anchored; eyelineTarget=the impulse package and diagnostic unit\ncharacter:harlan; zoneOrSeat=vault-access-left; screenSide=left; facing=toward Rao; posture=floating; eyelineTarget=Rao\ncharacter:okoye; zoneOrSeat=vault-rail-right; screenSide=right; facing=toward Harlan and Rao; posture=anchored; eyelineTarget=the evidence path\ncharacter:voss; zoneOrSeat=vault-console-rear; screenSide=right; facing=toward Rao; posture=anchored; eyelineTarget=Rao\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-080. Start: The inner shielding vault is established in microgravity with the recovery props secured. Event: Rao reaches the evidence console while Harlan and Okoye hold the access route. End: The vault geometry and four-person blocking remain stable. Delta/description: Elin Rao opens the vault with the recovered wrist device; local indicators confirm Zao's warning, fast and focused:. Composition size: MS. Visible: character:rao, character:voss.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-081. Start: The established vault arrangement continues. Event: Rao examines the impulse package and time-reference diagnostic unit. End: The evidence remains in frame while Harlan and Okoye maintain their positions. Delta/description: She sees the bomb's scientific service timing input beside the same portable diagnostic instrument she planted hours earlier; hopeful, she connects it:. Composition size: CU. Visible: character:rao.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-082. Start: The evidence and positions carry into the final vault panel. Event: Rao resolves the implication of the recovered package as Harlan and Okoye react without crossing the evidence path. End: The vault evidence is ready to carry into the next bridge sequence. Delta/description: The display counts 4—3—2—1, then jumps upward past the deadline. Voss, tense, demands over comm. Elin Rao, relieved. Voss, immediate:. Composition size: OTS. Visible: character:rao, character:okoye, character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -21082,11 +21026,9 @@
           ]
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-vault-recovery-080-082:rev-1:video-1",

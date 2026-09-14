@@ -163,6 +163,11 @@ and project output paths. The manifest does not authorize a provider run.
 - **`scripts/build-generation-plans.mjs`** regenerates deprecated cuts plus `light-delay-festival-master` (includes `visualStretchJobs` with pinned `providerSnapshotId`).
 - **`compiledPrompt` must stay `null`** on every real plan until editorial freeze for that cut,
   per `docs/ARQUITECTURA_GENERACION.md` — unless this conversation explicitly says otherwise.
+  Exercised once, session-scoped: on 2026-09-14 the author explicitly lifted this for
+  Festival-master's **still** visual-stretch jobs only (`compiledPrompt` now populated, all 29
+  `runnable: true`); video/Seedance jobs and per-shot `shots[]` blockers were left untouched. This
+  does not change the default rule for other cuts or for a fresh Festival-master freeze decision —
+  treat each instance as needing its own explicit instruction, not standing authorization.
 - **No catalog entries yet for the bomb/vault/jammer/wrist device.** `objects.json` has no
   entry for Proxima's geophysical impulse package, its radiological vault, Harlan's jammer, or his
   wrist device — all central to Festival-master's F03–F05, F09–F10 beats. `TODO.md` already flags

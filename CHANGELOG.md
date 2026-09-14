@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-14 - Lift Festival-master still stretch prompt freeze
+
+- Removed the still-only editorial_prompt_freeze_not_approved hold from visual-stretch still jobs (video/Seedance keeps seedance_execution_gated).
+- Rebuilt light-delay-festival-master plans so all 29 still stretch jobs carry a real compiledPrompt and 
+unnable: true.
+- Recorded the session-scoped exception in docs/production/AGENT_GENERATION_BRIEF.md. No submission adapter; plan JSON only.
+
 ## 2026-09-14 — Generation package readiness routes
 
 - Added /generation/image|video|audio/[scriptId] read-only browsers for prompt readiness, reference presence, and generation outputs (Festival-master default).

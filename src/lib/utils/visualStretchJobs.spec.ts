@@ -554,7 +554,9 @@ describe('still vs video hold split on stretch jobs', () => {
 		const video = jobs.find((j) => j.medium === 'video');
 		expect(still).toBeDefined();
 		expect(still?.generationGate).toBeUndefined();
-		expect(still?.blockers).toEqual(['editorial_prompt_freeze_not_approved']);
+		expect(still?.blockers).toEqual([]);
+		expect(isStretchJobRunnable(still)).toBe(true);
+		expect(typeof still?.compiledPrompt).toBe('string');
 		expect(video?.generationGate).toMatchObject({
 			status: 'deferred',
 			medium: 'video',

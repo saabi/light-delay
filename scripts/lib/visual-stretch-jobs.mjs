@@ -25,6 +25,7 @@ import {
 	stretchMemberGateBlockers
 } from './production-gate.mjs';
 import {
+	compileStretchStillPrompt,
 	computeMargins,
 	derivePanelRegions,
 	DEFAULT_GUTTER_FRACTION,
@@ -430,9 +431,12 @@ function finalizeStretchJob(job, opts = {}) {
 	if (maxOutputs != null && Array.isArray(job.outputs) && job.outputs.length > maxOutputs) {
 		blockers.push(`outputs:${job.outputs.length}>${maxOutputs}`);
 	}
+	// compiledPrompt must stay null unless every blocker has cleared — never surface prompt text
+	// for a job that isn't actually ready (schema keeps this field nullable for that reason).
 	const finalized = /** @type {VisualStretchJob} */ ({
 		...job,
 		blockers,
+		compiledPrompt: blockers.length === 0 ? (job.compiledPrompt ?? null) : null,
 		runnable: blockers.length === 0
 	});
 	assertSharedReferenceAlias(finalized);
@@ -664,12 +668,11 @@ export function buildVisualStretchJobs(
 		const gate = collectStretchProductionGate(members, shotsById, takesById, gateCtx, {
 			medium: 'still'
 		});
+		// Still-side editorial prompt freeze lifted for this cut per explicit session authorization
+		// (docs/production/AGENT_GENERATION_BRIEF.md's own "unless told otherwise" exception) —
+		// video/Seedance jobs keep their separate 'seedance_execution_gated' hold untouched.
 		/** @type {string[]} */
-		const blockers = [
-			'editorial_prompt_freeze_not_approved',
-			...stretchBlockingBlockers(stretch),
-			...gate.blockers
-		];
+		const blockers = [...stretchBlockingBlockers(stretch), ...gate.blockers];
 
 		const stillReferences = collectStillStretchReferences(stretch);
 		const stillReferenceAssetIds = stillReferences.map((r) => r.id);
@@ -750,6 +753,13 @@ export function buildVisualStretchJobs(
 				gridLayout.minOuterMarginFraction ?? 0
 			);
 			const regions = derivePanelRegions(gridLayout, computedMargins);
+			const { compiledPreview } = compileStretchStillPrompt({
+				stretch,
+				members,
+				layout: gridLayout,
+				regions,
+				shotsById
+			});
 			jobs.push(
 				finalizeStretchJob({
 					id: jobId,
@@ -766,7 +776,8 @@ export function buildVisualStretchJobs(
 					...(evaluated.remediation.length ? { remediation: evaluated.remediation } : {}),
 					gridLayout,
 					computedMargins,
-					compiledPrompt: null,
+					// finalizeStretchJob nulls this back out unless the job's blockers end up empty.
+					compiledPrompt: compiledPreview,
 					outputs: [
 						{
 							order: 1,

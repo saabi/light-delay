@@ -1,5 +1,11 @@
 # Estado del proyecto
 
+## 2026-09-14 - Festival-master still stretch prompt freeze lifted (English source)
+
+- Still visual-stretch jobs no longer carry editorial_prompt_freeze_not_approved; all 29 have compiledPrompt and are 
+unnable: true.
+- Video/Seedance holds unchanged. Explicit one-time exception documented in AGENT_GENERATION_BRIEF.
+
 ## 2026-09-14 — Generation package readiness routes (English source)
 
 - New /generation UI lists image, video, and audio packages with prompt/ref/output readiness; default cut is Festival-master.
