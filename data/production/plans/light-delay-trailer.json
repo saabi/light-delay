@@ -17,16 +17,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-01-01"
         },
         "firstFrame": {
           "required": false,
@@ -74,8 +72,7 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-proxima-dock-sheet",
-          "asset:location-proxima-axial-dock-interior-sheet",
-          "asset:voice-ref-en-voss"
+          "asset:location-proxima-axial-dock-interior-sheet"
         ],
         "coveringAssetByEntity": {
           "location:proxima-dock": "asset:location-proxima-axial-dock-interior-sheet"
@@ -87,17 +84,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-a-01:segment-01",
@@ -114,14 +102,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-01-08"
         },
         "firstFrame": {
           "required": false,
@@ -192,14 +180,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-02-04"
         },
         "firstFrame": {
           "required": false,
@@ -262,14 +250,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-04-01"
         },
         "firstFrame": {
           "required": false,
@@ -332,16 +320,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-05"
         },
         "firstFrame": {
           "required": false,
@@ -381,8 +367,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-sorell"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
@@ -394,17 +379,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-b-03:segment-01",
@@ -421,16 +397,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-04-02"
         },
         "firstFrame": {
           "required": false,
@@ -470,8 +444,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-diplomatic-core-room-sheet",
-          "asset:voice-ref-en-zao"
+          "asset:location-diplomatic-core-room-sheet"
         ],
         "coveringAssetByEntity": {
           "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
@@ -483,17 +456,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-c-01:segment-01",
@@ -510,8 +474,7 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [
         "UNDECLARED EXECUTABLE BRANCH"
@@ -519,7 +482,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-04-03"
         },
         "firstFrame": {
           "required": false,
@@ -582,16 +546,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-05-01"
         },
         "firstFrame": {
           "required": false,
@@ -631,8 +593,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-diplomatic-core-room-sheet",
-          "asset:voice-ref-en-zao"
+          "asset:location-diplomatic-core-room-sheet"
         ],
         "coveringAssetByEntity": {
           "location:diplomatic-core-room": "asset:location-diplomatic-core-room-sheet"
@@ -644,17 +605,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-c-03:segment-01",
@@ -671,16 +623,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-05-04"
         },
         "firstFrame": {
           "required": false,
@@ -720,8 +670,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-zao"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
@@ -733,17 +682,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-d-01:segment-01",
@@ -760,8 +700,7 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [
         "NO LINK / COM A-B NO CARRIER"
@@ -769,7 +708,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-05-06"
         },
         "firstFrame": {
           "required": false,
@@ -832,14 +772,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-01"
         },
         "firstFrame": {
           "required": false,
@@ -902,14 +842,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-03"
         },
         "firstFrame": {
           "required": false,
@@ -972,8 +912,7 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [
         "TRANSMISSION 70%… 92%…"
@@ -981,7 +920,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-placeholder-missing-frame"
         },
         "firstFrame": {
           "required": false,
@@ -1044,14 +984,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-02"
         },
         "firstFrame": {
           "required": false,
@@ -1114,14 +1054,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-03"
         },
         "firstFrame": {
           "required": false,
@@ -1184,14 +1124,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-05"
         },
         "firstFrame": {
           "required": false,
@@ -1254,14 +1194,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-08-02"
         },
         "firstFrame": {
           "required": false,
@@ -1324,16 +1264,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-01"
         },
         "firstFrame": {
           "required": false,
@@ -1373,8 +1311,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
@@ -1386,17 +1323,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-f-04:segment-01",
@@ -1413,16 +1341,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-02"
         },
         "firstFrame": {
           "required": false,
@@ -1462,8 +1388,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
@@ -1475,17 +1400,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-g-01:segment-01",
@@ -1502,8 +1418,7 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [
         "AUTONOMOUS PAYLOAD / TRIGGER: CHANNEL OPEN"
@@ -1511,7 +1426,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-03"
         },
         "firstFrame": {
           "required": false,
@@ -1574,14 +1490,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-04"
         },
         "firstFrame": {
           "required": false,
@@ -1644,8 +1560,7 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [
         "OVERRIDE / ENCRYPTED OWNER"
@@ -1653,7 +1568,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-05"
         },
         "firstFrame": {
           "required": false,
@@ -1715,8 +1631,7 @@
       "shotId": "trailer:shot-h-01",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [
         "VELARI CHANNEL — 00:48"
@@ -1724,7 +1639,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-02"
         },
         "firstFrame": {
           "required": false,
@@ -1786,16 +1702,14 @@
       "shotId": "trailer:shot-h-02",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-04"
         },
         "firstFrame": {
           "required": false,
@@ -1835,8 +1749,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
@@ -1848,17 +1761,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-h-02:segment-01",
@@ -1874,14 +1778,14 @@
       "shotId": "trailer:shot-h-03",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-06"
         },
         "firstFrame": {
           "required": false,
@@ -1943,8 +1847,7 @@
       "shotId": "trailer:shot-h-04",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [
         "GREETING SORELL-ZAO / READ ONLY"
@@ -1952,7 +1855,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-05"
         },
         "firstFrame": {
           "required": false,
@@ -2014,14 +1918,14 @@
       "shotId": "trailer:shot-h-05",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-16-01"
         },
         "firstFrame": {
           "required": false,
@@ -2083,16 +1987,14 @@
       "shotId": "trailer:shot-i-01",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-16-03"
         },
         "firstFrame": {
           "required": false,
@@ -2132,8 +2034,7 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-zao"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
@@ -2145,17 +2046,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "trailer:shot-i-01:segment-01",
@@ -2171,14 +2063,14 @@
       "shotId": "trailer:shot-i-02",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-title-trailer-brand"
         },
         "firstFrame": {
           "required": false,
@@ -2240,14 +2132,14 @@
       "shotId": "trailer:shot-i-03",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-title-trailer-tagline"
         },
         "firstFrame": {
           "required": false,
@@ -2309,14 +2201,14 @@
       "shotId": "trailer:shot-i-04",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-placeholder-missing-frame"
         },
         "firstFrame": {
           "required": false,
@@ -2378,14 +2270,14 @@
       "shotId": "trailer:shot-i-05",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-placeholder-missing-frame"
         },
         "firstFrame": {
           "required": false,
@@ -2447,14 +2339,14 @@
       "shotId": "trailer:shot-i-06",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-placeholder-missing-frame"
         },
         "firstFrame": {
           "required": false,

@@ -18572,7 +18572,7 @@
       "id": "festival-master:shot-plan-title:take-01",
       "shotId": "festival-master:shot-plan-title",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Static 16:9 opening title card at Proxima Station in the Sun–Jupiter system. The station and the Celestial Ardor are near Jupiter, before departure toward the Jupiter-mouth throat; Jupiter dominates the left background with unmistakable banded cloud detail. Preserve the established rotating station ring-and-spine geometry and Ardor axial silhouette. Hold the exact English title text \"LIGHT DELAY\" in clean thin widely tracked white sans-serif lettering across the dark negative space. No Earth, no Earth-like blue planet, no continents, no Earth city lights, no other text. Locked camera, quiet observational mood, cold starlight and restrained warm Jovian reflections, grounded cinematic hard-science-fiction concept art, 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -19050,7 +19050,7 @@
       "id": "festival-master:shot-plan-013b:take-01",
       "shotId": "festival-master:shot-plan-013b",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Exterior: the Celestial Ardor coasts past Jupiter at periapsis, radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn. Setting: deep space at Jupiter periapsis — the planet's banded cloud tops fill much of the frame, with faint, thin ring arcs visible near the limb; no atmosphere haze on the ship itself. Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis. No gravity reference (exterior shot). Frame implies a tracking move, establishing geography and screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, Saturn-style bold bright rings (Jupiter's rings are faint and thin, barely visible arcs), the ship inside or colliding with the planet's atmosphere",
@@ -19175,7 +19175,7 @@
       "id": "festival-master:shot-plan-016b:take-01",
       "shotId": "festival-master:shot-plan-016b",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. After nearly a day and a half of deceleration, the Ardor arrives retrograde, engine-first, near the Velari tunnel mouth; its main torch burns bright on approach, then dims and cuts to nothing as the precision-approach burn ends. Setting: the Velari wormhole mouth's threshold — a distributed field of black nodes kilometres apart hangs distant in the background, never forming a visible ring or glowing aperture (the 150-200 m opening only exists during the energy pulse, not now). Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis, oriented engine-first (retrograde) for the deceleration burn. No gravity reference (exterior shot). Frame implies a tracking move, establishing geography and screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, a visible glowing ring-shaped aperture or active wormhole opening (the mouth is closed outside its pulse window), Saturn-style bold bright planetary rings (this is the wormhole mouth's node field, not Jupiter)",
@@ -19846,7 +19846,7 @@
       "id": "festival-master:shot-plan-037:take-01",
       "shotId": "festival-master:shot-plan-037",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan narrows the destination aloud. Then he reassures himself. Composition: ELS framing. Camera: Locked; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -19877,7 +19877,7 @@
       "id": "festival-master:shot-plan-038:take-01",
       "shotId": "festival-master:shot-plan-038",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan, briefly sorrowful. closes the distance, and moves in; cut to black before impact. Composition: MS framing. Camera: Tracking; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-zao-sheet, asset:character-harlan-sheet, asset:location-celestial-ardor-reactor-service-bay-sheet, asset:object-optical-contingency-transmitter-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -19908,7 +19908,7 @@
       "id": "festival-master:shot-plan-039:take-01",
       "shotId": "festival-master:shot-plan-039",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Alone now, Harlan. low. He steadies himself. He closes and rekeys the vault with his wrist device, then reaches to the adjacent local console and physically disconnects the bridge flight-command and remote-cutoff lines. Cold, to himself:. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the inner shielding vault — a recessed, radiation-shielded enclosure built to isolate hazardous research equipment, heavily shielded and restricted-access on every surface. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. On frame: Harlan; static appearance per the attached reference sheets. Detail. Wrist device pressed against the vault's lock panel; separately, a labeled flight-command terminal at the local console with a cable visibly pulled free. Frame implies a dolly move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -19939,7 +19939,7 @@
       "id": "festival-master:shot-plan-040:take-01",
       "shotId": "festival-master:shot-plan-040",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Use the supplied bridge and Velari-mouth references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, over-the-shoulder view from the Celestial Ardor bridge. Voss addresses Elin Rao and Okoye as the ship enters the throat; Sorell is not visible because she remains below in the central shaft. The crew holds handholds in microgravity while loose straps and small tools drift. The throat is only a distant, distributed black-node field glimpsed through small reinforced windows or displays, never a panoramic view. Preserve the specified blocking, physics, timing, and English-only diegetic text.",
         "negativePrompt": "Sorell on the bridge, Sorell visible, any extra unlisted character, Earth, Jupiter, Proxima, any planet, moon, large blue or gray planetary disc, planetary surface, large glass windows, panoramic viewport, floor-to-ceiling window, direct unobstructed throat view, visible mechanical ring-shaped wormhole, non-English text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark",
@@ -19971,7 +19971,7 @@
       "id": "festival-master:shot-plan-040b:take-01",
       "shotId": "festival-master:shot-plan-040b",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard-science-fiction exterior storyboard still, photorealistic VFX concept art, 16:9, extreme long shot with restrained tracking composition. The Celestial Ardor is small in frame as it threads the active Velari throat aperture. Use the supplied multi-angle Celestial Ardor reference as authoritative for static ship geometry; do not add solar sails, wings, fantasy fins, station rings, or docking structures. Surround it with a distributed field of black Velari nodes kilometres apart. The temporary 150–200 metre throat aperture is open only during the energy pulse, with subtle volumetric distortion between the nodes; it is not a circular mechanical ring. The far mouth begins closing silently behind the ship. No characters, no text or watermark.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra characters, solar sails, wings, fantasy fins, station rings, docking structures, obsolete ship design, cartoonish exaggeration, visible mechanical ring-shaped wormhole, watermark",
@@ -20000,7 +20000,7 @@
       "id": "festival-master:shot-plan-041:take-01",
       "shotId": "festival-master:shot-plan-041",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Use the supplied bridge reference as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, locked insert on the Celestial Ardor bridge after the crossing. Elin Rao says, \"We're through.\" Voss, Elin Rao, and Okoye celebrate quietly in microgravity; Sorell remains below in transit and is not visible. Zao's body is not visible. Keep only sparse deep-space stars through the small reinforced windows; no planet or exterior globe. Preserve the specified blocking, physics, timing, and English-only diegetic text. Single cinematic frame only, not a contact sheet or multi-panel layout. Do not render subtitles, captions, or burned-in dialogue.",
         "negativePrompt": "Sorell on the bridge, Sorell visible, Zao, Zao's body, any extra unlisted character, Earth, Jupiter, Proxima, any planet, moon, large blue or gray planetary disc, planetary surface, large glass windows, panoramic viewport, floor-to-ceiling window, direct unobstructed throat view, non-English text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark, subtitles, closed captions, burned-in dialogue, contact sheet, multi-panel grid",
@@ -20154,7 +20154,7 @@
       "id": "festival-master:shot-plan-045b:take-01",
       "shotId": "festival-master:shot-plan-045b",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Use the supplied Harlan, Okoye, bridge-vestibule, service-cylinder, and wired-comms-panel references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, brief tracking view in microgravity: after Voss orders them to go, Harlan and Okoye move rapidly through the direct service shaft toward the outer bay, while Sorell is brought back under supervision through the slower central route. Show the separated vertical service shaft and its wall hatch; preserve clear directional geography. No planet or exterior celestial body is visible.",
         "negativePrompt": "Sorell alone at the bridge, Zao, Zao body, outer-bay medical close-up, Earth, Jupiter, Proxima, any planet, moon, large planetary disc, open central/service shaft connection, floor hatch, extra people, non-English text, obsolete continuity, lens flare, heavy motion blur, watermark",
@@ -20900,7 +20900,7 @@
       "id": "festival-master:shot-plan-068:take-01",
       "shotId": "festival-master:shot-plan-068",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Voss, decisive, restores order. Sorell, focused, returns to work:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a slow pan, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -20933,7 +20933,7 @@
       "id": "festival-master:shot-plan-069:take-01",
       "shotId": "festival-master:shot-plan-069",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. For eight compressed minutes, Elin Rao, urgent, works a console showing repeated failed abort attempts:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Detail. Console showing repeated abort-command attempts against an unresponsive flight-plan status, English labels only. Locked, static frame, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -20966,7 +20966,7 @@
       "id": "festival-master:shot-plan-070:take-01",
       "shotId": "festival-master:shot-plan-070",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. Voss, pressed. Elin Rao, focused. Voss, urgent, divides the final tasks:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. On frame: Voss, Harlan, Sorell, Elin Rao, Okoye; static appearance per the attached reference sheets. Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -21100,7 +21100,7 @@
       "id": "festival-master:shot-plan-074:take-01",
       "shotId": "festival-master:shot-plan-074",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium shot. Elin Rao's elevator reaches the local console first; Harlan descends the segmented service ladder, locking each access behind him; Voss and Okoye lose time at two hatches on the central-access cylinder's helical stair. Setting: the ship's main axial access cylinder — a long trunk built for hand-over-hand movement, with two opposed helical staircases that follow the cylinder's curved wall and interlock with each other at every landing, sharing one continuous inner railing; secondary: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments; secondary: the narrow, restricted service cylinder — a physically separate shaft alongside the central-access cylinder, with straight ladder segments (not a helix), peripheral technical trays, maintenance handholds, a dark rounded-corner hatch at bridge level beside a hinged tray exposing wired-communications couplers. Voss and Okoye are on the central-access cylinder's own curved-wall helical stair; Harlan is on the separate service cylinder's straight ladder — keep the two structures visually distinct, not merged into one shaft. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. On frame: Elin Rao, Harlan, Voss, Okoye; static appearance per the attached reference sheets. Frame implies a tracking move, establishing the space and holding consistent screen direction. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration, two independent staircases that do not follow the shaft's curved wall, staircases not intertwined with each other, a free-standing central ladder merged into the central-access helical stairwell, straight flat walls in the central-access cylinder (it is a curved cylindrical shaft)",
@@ -21134,7 +21134,7 @@
       "id": "festival-master:shot-plan-075:take-01",
       "shotId": "festival-master:shot-plan-075",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Close-up. Strained, Elin Rao reaches for the local console. A service hatch slams open behind her. Harlan, dangerous:. Setting: the outer reactor service bay — a dense, utilitarian engineering workspace beside the reactor, holding the local flight-control console, the optical array's local control, and a drawer of scientific diagnostic instruments. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. On frame: Elin Rao, Harlan; static appearance per the attached reference sheets. Frame implies a dolly move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -21164,7 +21164,7 @@
       "id": "festival-master:shot-plan-076:take-01",
       "shotId": "festival-master:shot-plan-076",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Over-the-shoulder shot. Okoye, urgent, calls ahead while climbing. Voss, determined, presses on:. Setting: the ship's main axial access cylinder — a long handrail-lined trunk with rest landings and hatches, built for hand-over-hand movement. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. On frame: Voss, Okoye; static appearance per the attached reference sheets. Frame implies a slow pan, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -21581,7 +21581,7 @@
       "id": "festival-master:shot-plan-089:take-01",
       "shotId": "festival-master:shot-plan-089",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell exits alone on a tether in a spacesuit; her suit-camera feed appears on Voss's distant bridge display. The Velari Transport Sphere waits, motionless, between ship and station (matching its established reference). Composition: INSERT framing. Camera: Locked; establishes geography and screen direction. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
@@ -21611,7 +21611,7 @@
       "id": "festival-master:shot-plan-090:take-01",
       "shotId": "festival-master:shot-plan-090",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Medium close-up. Voss, concerned, watches her suit-camera feed on the bridge:. Setting: the Celestial Ardor's compact circular bridge — six arc-mounted crew stations, a separate captain's chair, a six-seat meeting table, matte light-gray and warm off-white composite panels with muted slate-blue/teal accents, a helical stair ringing the central opening with continuous outer rails, curved pressure-hull wall with a few small reinforced windows, only the displays glowing blue. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. On frame: Voss; static appearance per the attached reference sheets. Frame implies a tracking move, preserving eyeline and action-axis continuity with adjacent shots. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -21828,7 +21828,7 @@
       "id": "festival-master:shot-plan-credit-01:take-01",
       "shotId": "festival-master:shot-plan-credit-01",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. A static primary-credits card holds over a slow, distant view of the departing light toward the Velari station. Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Detail. Static English title/credit card; exact credited names pending editorial lock — do not invent specific names. Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -21856,7 +21856,7 @@
       "id": "festival-master:shot-plan-credit-02:take-01",
       "shotId": "festival-master:shot-plan-credit-02",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. A static production-credits card holds over the same slow, distant departing light. Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Detail. Static English title/credit card; exact credited names pending editorial lock — do not invent specific names. Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -21884,7 +21884,7 @@
       "id": "festival-master:shot-plan-credit-03:take-01",
       "shotId": "festival-master:shot-plan-credit-03",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Insert shot. A static closing rights/mark card holds as the departing light fades to black. Setting: the Velari station — a continuous organic habitat several kilometres across, its living skin and internal ecosystems implying a civilization far older than humanity. Steady 1 g artificial gravity: feet planted, normal weight, no floating debris. Detail. Static English closing card; exact copy pending editorial lock — do not invent specific rights text. Locked, static frame, a clean, orthogonal, legible insert framing. Aspect ratio 16:9.",
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
@@ -21912,16 +21912,17 @@
       "id": "festival-master:shot-plan-010:take-02",
       "shotId": "festival-master:shot-plan-010",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-010",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -21944,16 +21945,17 @@
       "id": "festival-master:shot-plan-011:take-02",
       "shotId": "festival-master:shot-plan-011",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-011",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -21976,16 +21978,17 @@
       "id": "festival-master:shot-plan-012:take-02",
       "shotId": "festival-master:shot-plan-012",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-012",
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22011,13 +22014,14 @@
       "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-006",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22046,13 +22050,14 @@
       "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-007",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22081,13 +22086,14 @@
       "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-008",
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22116,13 +22122,14 @@
       "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-axial-dock-006-009-panel-04",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-009",
         "explanation": {
-          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22148,16 +22155,17 @@
       "id": "festival-master:shot-plan-001:take-02",
       "shotId": "festival-master:shot-plan-001",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-001",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22180,16 +22188,17 @@
       "id": "festival-master:shot-plan-002:take-02",
       "shotId": "festival-master:shot-plan-002",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-002",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22212,16 +22221,17 @@
       "id": "festival-master:shot-plan-003:take-02",
       "shotId": "festival-master:shot-plan-003",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-003",
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22244,16 +22254,17 @@
       "id": "festival-master:shot-plan-004:take-02",
       "shotId": "festival-master:shot-plan-004",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-004",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22274,16 +22285,17 @@
       "id": "festival-master:shot-plan-005:take-02",
       "shotId": "festival-master:shot-plan-005",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-005",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22304,16 +22316,17 @@
       "id": "festival-master:shot-plan-013:take-02",
       "shotId": "festival-master:shot-plan-013",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-central-access-013-015-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-013",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22336,16 +22349,17 @@
       "id": "festival-master:shot-plan-014:take-02",
       "shotId": "festival-master:shot-plan-014",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-central-access-013-015-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-014",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22368,16 +22382,17 @@
       "id": "festival-master:shot-plan-015:take-02",
       "shotId": "festival-master:shot-plan-015",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-central-access-013-015-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-015",
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22400,16 +22415,17 @@
       "id": "festival-master:shot-plan-029:take-02",
       "shotId": "festival-master:shot-plan-029",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-029",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22430,16 +22446,17 @@
       "id": "festival-master:shot-plan-030:take-02",
       "shotId": "festival-master:shot-plan-030",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-030",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22460,16 +22477,17 @@
       "id": "festival-master:shot-plan-031:take-02",
       "shotId": "festival-master:shot-plan-031",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-031",
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22490,16 +22508,17 @@
       "id": "festival-master:shot-plan-032:take-02",
       "shotId": "festival-master:shot-plan-032",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-04",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-032",
         "explanation": {
-          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22520,16 +22539,17 @@
       "id": "festival-master:shot-plan-033:take-02",
       "shotId": "festival-master:shot-plan-033",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-033",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22551,16 +22571,17 @@
       "id": "festival-master:shot-plan-034:take-02",
       "shotId": "festival-master:shot-plan-034",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-034",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22582,16 +22603,17 @@
       "id": "festival-master:shot-plan-035:take-02",
       "shotId": "festival-master:shot-plan-035",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-035",
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -22613,16 +22635,17 @@
       "id": "festival-master:shot-plan-036:take-02",
       "shotId": "festival-master:shot-plan-036",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-record-033-036-panel-04",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-036",
         "explanation": {
-          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23382,16 +23405,17 @@
       "id": "festival-master:shot-plan-095:take-02",
       "shotId": "festival-master:shot-plan-095",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-report-095-096-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-095",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23413,16 +23437,17 @@
       "id": "festival-master:shot-plan-096:take-02",
       "shotId": "festival-master:shot-plan-096",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-report-095-096-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-096",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23444,16 +23469,17 @@
       "id": "festival-master:shot-plan-016:take-02",
       "shotId": "festival-master:shot-plan-016",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-016",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23473,16 +23499,17 @@
       "id": "festival-master:shot-plan-017:take-02",
       "shotId": "festival-master:shot-plan-017",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-017",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23502,16 +23529,17 @@
       "id": "festival-master:shot-plan-018:take-02",
       "shotId": "festival-master:shot-plan-018",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-018",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23532,16 +23560,17 @@
       "id": "festival-master:shot-plan-019:take-02",
       "shotId": "festival-master:shot-plan-019",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-019",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23844,16 +23873,17 @@
       "id": "festival-master:shot-plan-046:take-02",
       "shotId": "festival-master:shot-plan-046",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-046",
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23875,16 +23905,17 @@
       "id": "festival-master:shot-plan-047:take-02",
       "shotId": "festival-master:shot-plan-047",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-047",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23906,16 +23937,17 @@
       "id": "festival-master:shot-plan-048:take-02",
       "shotId": "festival-master:shot-plan-048",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-048",
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -23937,16 +23969,17 @@
       "id": "festival-master:shot-plan-049:take-02",
       "shotId": "festival-master:shot-plan-049",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-04",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-049",
         "explanation": {
-          "en": "Derived panel 4 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 4 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14.",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14."
         }
       },
       "generation": {
@@ -24697,7 +24730,13 @@
           }
         }
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-operations-gallery-001-003-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-operations-gallery-001-003-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-periodista-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-bridge-meal-010-012",
@@ -24916,7 +24955,13 @@
           "en": "Few small reinforced windows; no panoramic glass."
         }
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-meal-010-012-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-meal-010-012-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-axial-dock-006-009",
@@ -25138,7 +25183,13 @@
           }
         }
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-axial-dock-006-009-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-operations-gallery-004-005",
@@ -25249,7 +25300,11 @@
         "asset:character-zao-sheet",
         "asset:location-proxima-operations-gallery-interior-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-operations-gallery-004-005-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-operations-gallery-004-005-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-central-access-013-015",
@@ -25405,7 +25460,11 @@
         "asset:character-harlan-sheet",
         "asset:location-celestial-ardor-central-access-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-central-access-013-015-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-central-access-013-015-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-rao-sheet",
+        "asset:character-zao-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-reactor-optics-029-032",
@@ -25537,7 +25596,10 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-reactor-record-033-036",
@@ -25673,7 +25735,10 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-reactor-sorell-042-043",
@@ -27010,7 +27075,10 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-reactor-report-095-096-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-report-095-096-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-voss-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-engineering-audit-016-017",
@@ -27103,7 +27171,10 @@
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-engineering-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-engineering-audit-016-017-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-engineering-audit-016-017-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-reactor-entrance-018-019",
@@ -27206,7 +27277,11 @@
         "asset:character-harlan-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-zao-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-vault-discovery-020-022",
@@ -27762,7 +27837,14 @@
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-investigation-046-049-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet"
+      ]
     },
     {
       "id": "festival-master:stretch-bridge-fuel-audit-050-053",

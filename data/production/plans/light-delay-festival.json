@@ -14,17 +14,16 @@
   "shots": [
     {
       "shotId": "festival:shot-a-01",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "FIRST CONTACT — VELARI MISSION"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-01-01"
         },
         "firstFrame": {
           "required": false,
@@ -111,15 +110,14 @@
     },
     {
       "shotId": "festival:shot-a-02",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-04-01"
         },
         "firstFrame": {
           "required": false,
@@ -201,15 +199,14 @@
     },
     {
       "shotId": "festival:shot-a-03",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-04-02"
         },
         "firstFrame": {
           "required": false,
@@ -280,15 +277,14 @@
     },
     {
       "shotId": "festival:shot-a-04",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-03-04"
         },
         "firstFrame": {
           "required": false,
@@ -362,14 +358,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-title-film"
         },
         "firstFrame": {
           "required": false,
@@ -413,17 +409,14 @@
     },
     {
       "shotId": "festival:shot-b-02",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-05-03"
         },
         "firstFrame": {
           "required": false,
@@ -493,8 +486,7 @@
           "asset:character-harlan-sheet",
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-zao"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -509,17 +501,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-b-02:segment-01",
@@ -533,15 +516,14 @@
     },
     {
       "shotId": "festival:shot-b-01",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-05-01"
         },
         "firstFrame": {
           "required": false,
@@ -623,15 +605,14 @@
     },
     {
       "shotId": "festival:shot-b-03",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-05-07"
         },
         "firstFrame": {
           "required": false,
@@ -713,15 +694,14 @@
     },
     {
       "shotId": "festival:shot-b-04",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-01"
         },
         "firstFrame": {
           "required": false,
@@ -803,17 +783,16 @@
     },
     {
       "shotId": "festival:shot-b-05",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "AUTHOR: J. ZAO · PERSONAL TOKEN · DIGITAL SIGNATURE APPLIED\nRELAY SNAPSHOT ATTACHED · HARDWARE SIGNATURE VALID"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-03"
         },
         "firstFrame": {
           "required": false,
@@ -895,17 +874,14 @@
     },
     {
       "shotId": "festival:shot-b-06",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-06"
         },
         "firstFrame": {
           "required": false,
@@ -965,8 +941,7 @@
         "attachedAssetIds": [
           "asset:character-zao-sheet",
           "asset:location-diplomatic-core-room-sheet",
-          "asset:object-optical-contingency-transmitter-sheet",
-          "asset:voice-ref-en-zao"
+          "asset:object-optical-contingency-transmitter-sheet"
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
@@ -980,17 +955,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-b-06:segment-01",
@@ -1004,15 +970,14 @@
     },
     {
       "shotId": "festival:shot-b-07",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-04"
         },
         "firstFrame": {
           "required": false,
@@ -1105,17 +1070,14 @@
     },
     {
       "shotId": "festival:shot-c-01",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-01"
         },
         "firstFrame": {
           "required": false,
@@ -1185,8 +1147,7 @@
           "asset:character-harlan-sheet",
           "asset:character-zao-sheet",
           "asset:location-diplomatic-core-room-sheet",
-          "asset:object-optical-contingency-transmitter-sheet",
-          "asset:voice-ref-en-harlan"
+          "asset:object-optical-contingency-transmitter-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -1201,17 +1162,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-c-01:segment-01",
@@ -1225,15 +1177,14 @@
     },
     {
       "shotId": "festival:shot-c-02",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-02"
         },
         "firstFrame": {
           "required": false,
@@ -1293,15 +1244,14 @@
     },
     {
       "shotId": "festival:shot-c-03",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-03"
         },
         "firstFrame": {
           "required": false,
@@ -1383,15 +1333,14 @@
     },
     {
       "shotId": "festival:shot-c-04",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-05"
         },
         "firstFrame": {
           "required": false,
@@ -1462,15 +1411,14 @@
     },
     {
       "shotId": "festival:shot-c-05",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-05"
         },
         "firstFrame": {
           "required": false,
@@ -1552,15 +1500,14 @@
     },
     {
       "shotId": "festival:shot-c-06",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-04"
         },
         "firstFrame": {
           "required": false,
@@ -1642,17 +1589,14 @@
     },
     {
       "shotId": "festival:shot-c-07",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:2>0",
-        "reference_consolidation_required:excess:2"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-08-03"
         },
         "firstFrame": {
           "required": false,
@@ -1719,9 +1663,7 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss",
-          "asset:voice-ref-en-harlan"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -1735,17 +1677,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:2>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-c-07:segment-01",
@@ -1759,17 +1692,14 @@
     },
     {
       "shotId": "festival:shot-c-08",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-08-04"
         },
         "firstFrame": {
           "required": false,
@@ -1839,8 +1769,7 @@
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -1855,17 +1784,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-c-08:segment-01",
@@ -1879,17 +1799,16 @@
     },
     {
       "shotId": "festival:shot-c-09",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "23 HOURS LATER · VELARI CHANNEL IN 03:00"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-02-04"
         },
         "firstFrame": {
           "required": false,
@@ -1968,17 +1887,14 @@
     },
     {
       "shotId": "festival:shot-c-10",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-07-01"
         },
         "firstFrame": {
           "required": false,
@@ -2038,8 +1954,7 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-zao-sheet",
-          "asset:location-diplomatic-core-room-sheet",
-          "asset:voice-ref-en-harlan"
+          "asset:location-diplomatic-core-room-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -2053,17 +1968,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-c-10:segment-01",
@@ -2077,15 +1983,14 @@
     },
     {
       "shotId": "festival:shot-d-01",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-01"
         },
         "firstFrame": {
           "required": false,
@@ -2156,10 +2061,8 @@
     },
     {
       "shotId": "festival:shot-d-02",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "PAYLOAD DEPLOYED",
         "TRIGGER: VELARI CHANNEL OPENING"
@@ -2167,7 +2070,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-03"
         },
         "firstFrame": {
           "required": false,
@@ -2238,10 +2142,8 @@
     },
     {
       "shotId": "festival:shot-d-03",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "OVERRIDE: SIGNATURE UNIDENTIFIED",
         "QUARANTINE PREPARED"
@@ -2249,7 +2151,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-04"
         },
         "firstFrame": {
           "required": false,
@@ -2320,15 +2223,14 @@
     },
     {
       "shotId": "festival:shot-d-04",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-02"
         },
         "firstFrame": {
           "required": false,
@@ -2410,17 +2312,14 @@
     },
     {
       "shotId": "festival:shot-d-05",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-09-02"
         },
         "firstFrame": {
           "required": false,
@@ -2480,8 +2379,7 @@
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
@@ -2495,17 +2393,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-d-05:segment-01",
@@ -2519,17 +2408,14 @@
     },
     {
       "shotId": "festival:shot-d-06",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-07"
         },
         "firstFrame": {
           "required": false,
@@ -2589,8 +2475,7 @@
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
@@ -2604,17 +2489,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-d-06:segment-01",
@@ -2628,18 +2504,14 @@
     },
     {
       "shotId": "festival:shot-d-07",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:2>0",
-        "reference_budget:total:6>5",
-        "reference_consolidation_required:excess:2"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-11-01"
         },
         "firstFrame": {
           "required": false,
@@ -2716,9 +2588,7 @@
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-harlan",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -2733,20 +2603,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:2>0",
-          "total:6>5"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 2,
-          "consolidateCandidateAssetIds": [
-            "asset:voice-ref-en-harlan"
-          ]
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-d-07:segment-01",
@@ -2760,17 +2618,14 @@
     },
     {
       "shotId": "festival:shot-d-08",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-11-05"
         },
         "firstFrame": {
           "required": false,
@@ -2840,8 +2695,7 @@
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -2856,17 +2710,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-d-08:segment-01",
@@ -2880,17 +2725,14 @@
     },
     {
       "shotId": "festival:shot-d-09",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-11-02"
         },
         "firstFrame": {
           "required": false,
@@ -2960,8 +2802,7 @@
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -2976,17 +2817,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-d-09:segment-01",
@@ -3000,17 +2832,14 @@
     },
     {
       "shotId": "festival:shot-b-04a",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-02"
         },
         "firstFrame": {
           "required": false,
@@ -3060,8 +2889,7 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
-          "asset:location-diplomatic-core-room-sheet",
-          "asset:voice-ref-en-zao"
+          "asset:location-diplomatic-core-room-sheet"
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
@@ -3074,17 +2902,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-b-04a:segment-01",
@@ -3098,10 +2917,8 @@
     },
     {
       "shotId": "festival:shot-b-04b",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "EARTH — DISCARDED: RECEPTION AFTER THE ENCOUNTER",
         "PROXIMA — DISCARDED: OCCLUDED BY JUPITER (NO LINE OF SIGHT)"
@@ -3109,7 +2926,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-02"
         },
         "firstFrame": {
           "required": false,
@@ -3180,10 +2998,8 @@
     },
     {
       "shotId": "festival:shot-b-04c",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "FLIGHT PLAN — LOADED",
         "LIGHT-TIME INTERCEPT — CALCULATING",
@@ -3192,7 +3008,8 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-03"
         },
         "firstFrame": {
           "required": false,
@@ -3282,17 +3099,16 @@
     },
     {
       "shotId": "festival:shot-d-00",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "POST-WIPE CAMERA · SORELL ARRIVED AFTER DEATH · CREDENTIAL SUSPENDED · ESCORT REQUIRED · CORE AUDIT"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-01"
         },
         "firstFrame": {
           "required": false,
@@ -3363,17 +3179,14 @@
     },
     {
       "shotId": "festival:shot-d-04b",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-10-05"
         },
         "firstFrame": {
           "required": false,
@@ -3423,8 +3236,7 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
@@ -3437,17 +3249,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-d-04b:segment-01",
@@ -3461,17 +3264,14 @@
     },
     {
       "shotId": "festival:shot-b-08",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-08-04"
         },
         "firstFrame": {
           "required": false,
@@ -3531,8 +3331,7 @@
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
@@ -3546,17 +3345,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-b-08:segment-01",
@@ -3570,15 +3360,14 @@
     },
     {
       "shotId": "festival:shot-b-09",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-04"
         },
         "firstFrame": {
           "required": false,
@@ -3649,15 +3438,14 @@
     },
     {
       "shotId": "festival:shot-b-10",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-05"
         },
         "firstFrame": {
           "required": false,
@@ -3728,15 +3516,14 @@
     },
     {
       "shotId": "festival:shot-e-01",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-11-05"
         },
         "firstFrame": {
           "required": false,
@@ -3815,17 +3602,16 @@
     },
     {
       "shotId": "festival:shot-e-02",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "EXTERIOR TRANSMITTER · SIGNATURE VALID · TRANSMISSION PREDATES INCIDENT"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-01"
         },
         "firstFrame": {
           "required": false,
@@ -3896,17 +3682,14 @@
     },
     {
       "shotId": "festival:shot-e-03",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-06-06"
         },
         "firstFrame": {
           "required": false,
@@ -3956,8 +3739,7 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-zao"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
@@ -3970,17 +3752,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-e-03:segment-01",
@@ -3994,17 +3767,14 @@
     },
     {
       "shotId": "festival:shot-e-04",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-02"
         },
         "firstFrame": {
           "required": false,
@@ -4054,8 +3824,7 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-harlan"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -4068,17 +3837,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-e-04:segment-01",
@@ -4092,17 +3852,14 @@
     },
     {
       "shotId": "festival:shot-e-05",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-03"
         },
         "firstFrame": {
           "required": false,
@@ -4162,8 +3919,7 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-elin"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -4177,17 +3933,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-e-05:segment-01",
@@ -4201,17 +3948,16 @@
     },
     {
       "shotId": "festival:shot-e-06",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "AUTHOR: J. ZAO · DIGITAL SIGNATURE VALID · PERSONAL TOKEN"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-04"
         },
         "firstFrame": {
           "required": false,
@@ -4293,17 +4039,16 @@
     },
     {
       "shotId": "festival:shot-e-07",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "PHYSICAL MANIFEST · SNAPSHOT INTACT · RELAY ASSIGNED: R. HARLAN"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-05"
         },
         "firstFrame": {
           "required": false,
@@ -4374,17 +4119,16 @@
     },
     {
       "shotId": "festival:shot-e-08",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "OVERRIDE ATTRIBUTED · R. HARLAN · CONVERGENT EVIDENCE"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-06"
         },
         "firstFrame": {
           "required": false,
@@ -4455,17 +4199,14 @@
     },
     {
       "shotId": "festival:shot-e-09",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-08"
         },
         "firstFrame": {
           "required": false,
@@ -4535,8 +4276,7 @@
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -4551,17 +4291,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-e-09:segment-01",
@@ -4575,15 +4306,14 @@
     },
     {
       "shotId": "festival:shot-e-10",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-12-07"
         },
         "firstFrame": {
           "required": false,
@@ -4654,17 +4384,16 @@
     },
     {
       "shotId": "festival:shot-f-01",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "VELARI CHANNEL · OPENS IN 00:48"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-02"
         },
         "firstFrame": {
           "required": false,
@@ -4735,17 +4464,14 @@
     },
     {
       "shotId": "festival:shot-f-02",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-13-02"
         },
         "firstFrame": {
           "required": false,
@@ -4805,8 +4531,7 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-central-access-sheet",
-          "asset:object-physical-override-relay-sheet",
-          "asset:voice-ref-en-harlan"
+          "asset:object-physical-override-relay-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -4820,17 +4545,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-f-02:segment-01",
@@ -4844,15 +4560,14 @@
     },
     {
       "shotId": "festival:shot-f-03",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-13-04"
         },
         "firstFrame": {
           "required": false,
@@ -4956,17 +4671,14 @@
     },
     {
       "shotId": "festival:shot-f-04",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-08"
         },
         "firstFrame": {
           "required": false,
@@ -5026,8 +4738,7 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-central-access-sheet",
-          "asset:voice-ref-en-okoye"
+          "asset:location-celestial-ardor-central-access-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -5041,17 +4752,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-f-04:segment-01",
@@ -5065,15 +4767,14 @@
     },
     {
       "shotId": "festival:shot-f-05",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-04"
         },
         "firstFrame": {
           "required": false,
@@ -5155,17 +4856,16 @@
     },
     {
       "shotId": "festival:shot-f-06",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "SORELL · PASSIVE GREETING · READ ONLY · VERIFIED"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-05"
         },
         "firstFrame": {
           "required": false,
@@ -5236,15 +4936,14 @@
     },
     {
       "shotId": "festival:shot-f-07",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-10"
         },
         "firstFrame": {
           "required": false,
@@ -5326,17 +5025,16 @@
     },
     {
       "shotId": "festival:shot-f-08",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "PAYLOAD QUARANTINED · OUTBOUND CHANNEL CLEAN · MEDIATION ACTIVE"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-15-02"
         },
         "firstFrame": {
           "required": false,
@@ -5407,17 +5105,16 @@
     },
     {
       "shotId": "festival:shot-g-01",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [
         "VELARI CHANNEL · 00:03"
       ],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-14-02"
         },
         "firstFrame": {
           "required": false,
@@ -5488,17 +5185,14 @@
     },
     {
       "shotId": "festival:shot-g-02",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-15-04"
         },
         "firstFrame": {
           "required": false,
@@ -5548,8 +5242,7 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
@@ -5562,17 +5255,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-g-02:segment-01",
@@ -5586,15 +5270,14 @@
     },
     {
       "shotId": "festival:shot-g-03",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-15-05"
         },
         "firstFrame": {
           "required": false,
@@ -5665,15 +5348,14 @@
     },
     {
       "shotId": "festival:shot-g-04",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-15-06"
         },
         "firstFrame": {
           "required": false,
@@ -5733,15 +5415,14 @@
     },
     {
       "shotId": "festival:shot-g-05",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-16-01"
         },
         "firstFrame": {
           "required": false,
@@ -5820,15 +5501,14 @@
     },
     {
       "shotId": "festival:shot-g-06",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-16-02"
         },
         "firstFrame": {
           "required": false,
@@ -5899,15 +5579,14 @@
     },
     {
       "shotId": "festival:shot-g-07",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-16-03"
         },
         "firstFrame": {
           "required": false,
@@ -5997,15 +5676,14 @@
     },
     {
       "shotId": "festival:shot-g-08",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-17-02"
         },
         "firstFrame": {
           "required": false,
@@ -6087,17 +5765,14 @@
     },
     {
       "shotId": "festival:shot-g-09",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "reference_budget:audios:1>0",
-        "reference_consolidation_required:excess:1"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-17-05"
         },
         "firstFrame": {
           "required": false,
@@ -6157,8 +5832,7 @@
         "attachedAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:voice-ref-en-voss"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
@@ -6172,17 +5846,8 @@
           "maxAudios": 0,
           "maxTotalReferences": 5
         },
-        "violations": [
-          "audios:1>0"
-        ]
+        "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_consolidation_required",
-          "excessSlots": 1,
-          "consolidateCandidateAssetIds": []
-        }
-      ],
       "segments": [
         {
           "id": "festival:shot-g-09:segment-01",
@@ -6196,15 +5861,14 @@
     },
     {
       "shotId": "festival:shot-g-10",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-17-02"
         },
         "firstFrame": {
           "required": false,
@@ -6275,15 +5939,14 @@
     },
     {
       "shotId": "festival:shot-g-11",
-      "status": "blocked",
-      "blockers": [
-        "editorial_prompt_freeze_not_approved"
-      ],
+      "status": "ready",
+      "blockers": [],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-17-06"
         },
         "firstFrame": {
           "required": false,
@@ -6376,14 +6039,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-placeholder-missing-frame"
         },
         "firstFrame": {
           "required": false,
@@ -6430,14 +6093,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-placeholder-missing-frame"
         },
         "firstFrame": {
           "required": false,
@@ -6484,14 +6147,14 @@
       "status": "blocked",
       "blockers": [
         "missing_production_context",
-        "missing_entity_binding",
-        "editorial_prompt_freeze_not_approved"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "missing"
+          "status": "generated",
+          "assetId": "asset:animatic-placeholder-missing-frame"
         },
         "firstFrame": {
           "required": false,

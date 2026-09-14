@@ -1,5 +1,40 @@
 # Estado del proyecto
 
+## 2026-09-14 — Plan compiler stops stubbing shot status/still artifact (English source)
+
+- `build-generation-plans.mjs`'s per-shot `status` and `artifacts.animaticStill` were permanent
+  stubs (`"blocked"`/`"missing"`) regardless of actual blockers or take state — e.g.
+  `shot-plan-016b` had zero blockers and an already-generated still but still read `"blocked"` /
+  `"missing"`. Both now derive from the shot's blockers and its selected take's
+  `imageAssetId`/`imageStatus`. Video segments and `plan.plan.status` are untouched (separate,
+  bigger piece of work — no per-shot video prompt compiler exists yet).
+
+## 2026-09-14 — Generation can-generate vs package-complete (English source)
+
+- `/generation` **Can generate** is replacement eligibility (prompt + current refs), not package completeness. Review-pending outputs stay labeled separately and do not clear that badge.
+- Refs split into present vs ready. Audio shows **Text ready** for dialogue and still blocks generation when a voice sample is missing.
+- Expand/collapse all is level-by-level. Playwright coverage now includes copy/export, grouping, and those badges.
+
+
+## 2026-09-14 — Festival-master image packages fully prompt-ready (English source)
+
+- Cleared every remaining "prompt not ready" cause on the 21 independent Festival-master shots:
+  shot-level editorial prompt freeze lifted, a video-only hold no longer leaks into still
+  blockers, voice-sample refs no longer count against the still reference budget, the credit
+  cards' false-positive `missing_entity_binding` is fixed, and 3 bridge shots that genuinely
+  exceeded the still image budget now resolve via an existing multi-character consolidation
+  reference sheet through a new algorithmic pack-cover step in `build-generation-plans.mjs`.
+- The 21 shots' selected takes are promoted to `status: "selected"`.
+- `/generation/image/script~light-delay-festival-master/` now shows all 50 image packages
+  (29 stretch + 21 independent) as prompt-ready with zero blockers.
+
+## 2026-09-14 — Generation route truthfulness (English source)
+
+- Independent stills no longer show “Prompt ready” with an empty compiled prompt; preview comes from the selected take.
+- Present/missing now means a loadable file of the expected medium. Stale or review-pending outputs are labeled separately from a current result.
+- Missing voice samples block audio packages. Filters are URL-addressable; missing generation plans render in-page instead of 404.
+- `/generation` still 307s to Festival-master at prerender time (canonical script has no plan). Nav already preserves the active script.
+
 ## 2026-09-14 — Reports route SSR fixed (English source)
 
 - Report builds run on the server; browser imports only report metadata.

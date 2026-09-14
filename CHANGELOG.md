@@ -1,5 +1,58 @@
 # Changelog
 
+## 2026-09-14 — Stop stubbing shot.status and artifacts.animaticStill in the generation plan
+
+- `scripts/build-generation-plans.mjs` wrote `status: 'blocked'` and
+  `artifacts.animaticStill: { status: 'missing' }` unconditionally for every shot, regardless of
+  its actual `blockers`/take state — e.g. `festival-master:shot-plan-016b` showed `status:
+  "blocked"` with `blockers: []` and an already-generated still marked `"missing"`.
+- `status` is now derived from the shot's own (deduped) blockers: `'ready'` when empty, `'blocked'`
+  otherwise. `artifacts.animaticStill` is now derived from the shot's selected take:
+  `status: 'missing'` with no `imageAssetId`, `'accepted'` when `imageStatus.status === 'current'`,
+  else `'generated'` (covers `needs_review`/`needs_regeneration`/`needs_replacement`) with
+  `assetId` populated.
+- Video segments (`segments[].compiledPrompt`/`promptStatus`), `firstFrame`/`lastFrame`, and
+  `plan.plan.status` are untouched — no per-shot video prompt compiler exists yet and video
+  generation remains unauthorized.
+- Added regression coverage for `shot-plan-016b` in `generationPackages.spec.ts` (zero blockers,
+  `runnable: true`, generated output with the correct asset id and review status).
+
+## 2026-09-14 — Generation runnable aligned with current refs
+
+- Independent stills, stretch jobs, video segments, and audio cues now share one **can generate** predicate: prompt/text ready, required refs present and current, no blockers. Plan `runnable: false` still wins. Existing output review/regeneration does not block generation.
+- **Refs present** stays a diagnostic (files exist); **Refs ready** requires `current` status. Stale stretch refs no longer look generation-ready.
+- Audio labels dialogue **text ready** separately from generation eligibility; missing voice samples still block can-generate.
+- Expand all / collapse all move one tree level at a time (groups, then packages). Manifest object URLs are revoked after a short delay.
+
+
+## 2026-09-14 — Clear remaining "prompt not ready" blockers on Festival-master image packages
+
+- Lifted the still-side `editorial_prompt_freeze_not_approved` hold for the 21 independent
+  (non-stretch) Festival-master shots, mirroring the stretch-job freeze lift from earlier today.
+- Fixed a video-only hold (`video_generation_deferred`/`_blocked`) leaking into the shared shot
+  `blockers` array — it now only reaches `segments[].blockers`, matching the schema's own
+  documented `videoGenerationGate` contract ("never the animatic still").
+- Stopped counting dialogue voice-sample references against the still image budget — they're for
+  the shot's `finalAudio` artifact, not the still; `requiredReferences` still carries them for
+  video consumers, only the still budget check now excludes them.
+- Fixed `missing_entity_binding` firing on shots with a deliberately empty cast (the 3 credit
+  cards) — now checks field presence, not non-empty length.
+- Added algorithmic reference consolidation: when a shot's character count alone would exceed the
+  still image budget, `build-generation-plans.mjs` now runs the same greedy pack-cover used for
+  uncovered-entity remediation to substitute an existing multi-character reference sheet for solo
+  sheets (e.g. the 5-person bridge-crew shots now resolve via the existing
+  `asset:visual-pack-proxima-axial-dock-crew-sheet` composite, built for exactly this purpose).
+- Promoted the 21 independent shots' selected takes from `status: "candidate"` to `"selected"`.
+- All 50 Festival-master image packages (29 stretch + 21 independent) now show `promptReady: true`
+  with zero blockers.
+
+## 2026-09-14 — Generation packages report truthful prompts, refs, and outputs
+
+- Independent still packages now preview `Take.generation.prompt` and require a non-empty prompt for readiness.
+- Reference and output presence checks the catalog, `/assets/` path safety, static file existence, expected medium, and editorial `imageStatus` (current / review / regeneration / missing file).
+- Missing required audio voice samples add a `missing_voice_sample` blocker; prompt-ready still means dialogue text only.
+- The read-only UI uses localized source/blocker/status labels, `?filter=` query state across medium tabs, scene/stretch grouping, split keyframe/visual/voice lists, copy/export actions, and an in-page empty-plan state. `/generation` still defaults to Festival-master for static prerender.
+
 ## 2026-09-14 — Fix reports route SSR and wire visual-stretches
 
 - Moved report builds to +page.server.ts and split browser-safe report metadata from Node builders (avoids 

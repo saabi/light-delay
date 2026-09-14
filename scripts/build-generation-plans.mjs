@@ -8,8 +8,10 @@ import {
 	resolveShotSourceTakeIds
 } from './lib/production-gate.mjs';
 import {
+	assetPassesCoverageQuality,
 	collectShotVisibleEntityIds,
 	evaluateReferenceBudget,
+	greedyPackCover,
 	indexEntityReferenceAssets
 } from './lib/reference-budget.mjs';
 import { buildVisualStretchJobs, pickApprovedVoiceSampleAssetId } from './lib/visual-stretch-jobs.mjs';
@@ -91,7 +93,45 @@ for (const slug of scripts) {
 				references.push(makeReference('image', assetId, true, kind));
 			}
 		}
-		const uniqueReferences = [...new Map(references.map((reference) => [reference.id, reference])).values()];
+		let uniqueReferences = [...new Map(references.map((reference) => [reference.id, reference])).values()];
+
+		// Consolidate solo character sheets into an existing paired reference sheet when the
+		// character count alone would exceed the still image budget — applied algorithmically via
+		// the same greedy pack-cover already used for uncovered-entity remediation, so this only
+		// ever activates for a shot that would otherwise violate the budget.
+		const stillImageCap = stillProvider?.limits?.maxImages ?? null;
+		if (stillImageCap != null) {
+			const characterEntityIds = requiredEntityIds.filter(
+				(entityId) => entityId.startsWith('character:') && !offScreen.has(entityId)
+			);
+			const soloCharacterRefs = uniqueReferences.filter((reference) => reference.role === 'character');
+			const otherImageCount = uniqueReferences.length - soloCharacterRefs.length;
+			if (characterEntityIds.length > 1 && soloCharacterRefs.length + otherImageCount > stillImageCap) {
+				const compatiblePacks = new Set();
+				for (const entityId of characterEntityIds) {
+					for (const packId of packAssetIdsByEntity.get(entityId) ?? []) {
+						if (assetPassesCoverageQuality(packId, assetsById)) compatiblePacks.add(packId);
+					}
+				}
+				const { selected } = greedyPackCover(characterEntityIds, [...compatiblePacks].sort(), packEntitiesByAssetId);
+				const coveredByPacks = new Set();
+				const usefulPacks = [];
+				for (const packId of selected) {
+					const covers = (packEntitiesByAssetId.get(packId) ?? []).filter((id) => characterEntityIds.includes(id));
+					if (covers.length < 2) continue;
+					usefulPacks.push(packId);
+					for (const id of covers) coveredByPacks.add(id);
+				}
+				if (usefulPacks.length) {
+					const soloAssetIdsToRemove = new Set();
+					for (const entityId of coveredByPacks) {
+						for (const assetId of catalogReferenceAssets.get(entityId) ?? []) soloAssetIdsToRemove.add(assetId);
+					}
+					uniqueReferences = uniqueReferences.filter((reference) => !soloAssetIdsToRemove.has(reference.id));
+					for (const packId of usefulPacks) uniqueReferences.push(makeReference('image', packId, true, 'character'));
+				}
+			}
+		}
 		const blockers = [];
 		const { takeIds, missingSelectedTake } = resolveShotSourceTakeIds(shot);
 		if (missingSelectedTake) blockers.push('missing_selected_take');
@@ -113,7 +153,8 @@ for (const slug of scripts) {
 				videoGate.generationGate.status === 'blocked'
 					? 'video_generation_blocked'
 					: 'video_generation_deferred';
-			blockers.push(marker);
+			// Video-scoped holds land on segments/videoGenerationGate only — never the shared
+			// still blockers (schema's own videoGenerationGate doc: "never the animatic still").
 			videoBlockers.push(marker, ...videoGate.blockers);
 		}
 		const shotCues = shot.cuePlacements.map((placement) => file.cues.find((cue) => cue.id === placement.cueId)).filter(Boolean);
@@ -133,11 +174,17 @@ for (const slug of scripts) {
 		if (!hasContext) blockers.push('missing_production_context');
 		if (!shot.purpose?.es || !shot.purpose?.en) blockers.push('missing_purpose');
 		if (!shot.composition?.framing?.es || !shot.composition?.framing?.en) blockers.push('missing_framing');
-		if (!(shot.visibleRefs?.length || shot.offScreenCharacterIds?.length)) blockers.push('missing_entity_binding');
-		blockers.push('editorial_prompt_freeze_not_approved');
+		if (!('visibleRefs' in shot || 'offScreenCharacterIds' in shot)) blockers.push('missing_entity_binding');
+		// Still-side editorial prompt freeze lifted for this cut per explicit session
+		// authorization (mirrors the stretch-job freeze lift; see AGENT_GENERATION_BRIEF.md).
 		const budgetedReferences = [...new Map(uniqueReferences.map((reference) => [`${reference.kind}:${reference.id}`, reference])).values()];
+		// Still budget/coverage uses image references only — audio (voice-sample) refs below
+		// are for the shot's finalAudio artifact, not the still, and must never count against the
+		// still provider budget (mirrors stillReferenceAssetIds on stretch jobs). requiredReferences
+		// below stays the full image+audio list — video packages read it.
+		const stillBudgetReferences = budgetedReferences.filter((r) => r.kind === 'image');
 		const evaluated = evaluateReferenceBudget({
-			references: budgetedReferences.map((r) => ({ kind: r.kind, id: r.id, role: r.role })),
+			references: stillBudgetReferences.map((r) => ({ kind: r.kind, id: r.id, role: r.role })),
 			limits: stillProvider?.limits || {},
 			requiredEntityIds,
 			entityReferenceIds,
@@ -146,13 +193,26 @@ for (const slug of scripts) {
 			assetsById
 		});
 		blockers.push(...evaluated.blockers);
+		const finalBlockers = [...new Set(blockers)];
+		// Still-artifact status/assetId derive from the shot's resolved source take instead of a
+		// permanent stub — mirrors Take.imageStatus (ImageEditorialState) onto the artifact schema's
+		// enum (missing/generated/accepted); needs_review, needs_regeneration, and needs_replacement
+		// all mean 'generated, not yet accepted'.
+		const stillTake = sourceTakes[0];
+		const animaticStill = !stillTake?.imageAssetId
+			? { required: true, status: /** @type {const} */ ('missing') }
+			: {
+					required: true,
+					status: /** @type {const} */ (stillTake.imageStatus?.status === 'current' ? 'accepted' : 'generated'),
+					assetId: stillTake.imageAssetId
+				};
 		return {
 			shotId: shot.id,
-			status: 'blocked',
-			blockers: [...new Set(blockers)],
+			status: finalBlockers.length === 0 ? 'ready' : 'blocked',
+			blockers: finalBlockers,
 			diegeticText,
 			artifacts: {
-				animaticStill: { required: true, status: 'missing' },
+				animaticStill,
 				firstFrame: { required: false, status: 'missing' },
 				lastFrame: { required: shot.durationMs > maxSegmentMs, status: 'missing' },
 				finalAudio: { required: dialogueCues.length > 0, status: 'missing' }
