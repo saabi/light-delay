@@ -57,14 +57,14 @@ if (main.takes.length !== 128)
 	errors.push(`main script: expected 128 takes, got ${main.takes.length}`);
 if (animaticAssets !== 104)
 	errors.push(`assets: expected 104 animatic images (100 legacy + 3 title cards + scene-05 shot 7), got ${animaticAssets}`);
-if (referenceAssets !== 45)
-	errors.push(`assets: expected 45 reference images, got ${referenceAssets}`);
+if (referenceAssets !== 47)
+	errors.push(`assets: expected 47 reference images, got ${referenceAssets}`);
 if (placeholders !== 1) errors.push(`assets: expected 1 animatic placeholder, got ${placeholders}`);
-if (assets.length !== 485) errors.push(`assets: expected current total 485, got ${assets.length}`);
+if (assets.length !== 487) errors.push(`assets: expected current total 487, got ${assets.length}`);
 if (withoutSource !== 361)
 	errors.push(`assets: expected 361 records without source, got ${withoutSource}`);
-if (withExactModel !== 123)
-	errors.push(`assets: expected 123 records with exact model metadata, got ${withExactModel}`);
+if (withExactModel !== 125)
+	errors.push(`assets: expected 125 records with exact model metadata, got ${withExactModel}`);
 
 requireText('AGENTS.md', 'deprecated animatic **128** takes');
 requireText('README.md', 'animatic anterior de 128 tomas');

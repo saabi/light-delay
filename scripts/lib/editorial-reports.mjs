@@ -14,7 +14,8 @@ import {
 import {
 	describePrerequisiteStatus,
 	effectiveProductionGateStatus,
-	isProductionGateHold
+	isProductionGateHold,
+	productionGateMedium
 } from './production-gate.mjs';
 
 export {
@@ -226,6 +227,7 @@ export function buildImageDebtReport(script, ctx, projectCtx) {
 				sceneId: shot?.sceneId,
 				sceneNumber: scene?.number,
 				status: effectiveProductionGateStatus(take),
+				medium: productionGateMedium(take),
 				reasonCode: gate?.reasonCode,
 				reason: gate?.reason,
 				prerequisiteAssetIds: gate?.prerequisiteAssetIds ?? [],
@@ -263,8 +265,10 @@ export function buildImageDebtReport(script, ctx, projectCtx) {
 			histogram,
 			queueCount: queue.length,
 			productionGateHoldCount: productionGateHolds.length,
+			stillHoldCount: productionGateHolds.filter((h) => h.medium !== 'video').length,
+			videoHoldCount: productionGateHolds.filter((h) => h.medium !== 'still').length,
 			byReason,
-			consoleLine: `image debt queue: ${queue.length}/${script.takes.length}; productionGate holds: ${productionGateHolds.length}`
+			consoleLine: `image debt queue: ${queue.length}/${script.takes.length}; productionGate holds: ${productionGateHolds.length} (still ${productionGateHolds.filter((h) => h.medium !== 'video').length}, video ${productionGateHolds.filter((h) => h.medium !== 'still').length})`
 		},
 		queue,
 		productionGateHolds,
@@ -283,7 +287,7 @@ export function formatImageDebtMarkdown(report) {
 	lines.push(`- Tomas totales: **${report.summary.takeCount}**`);
 	lines.push(`- En cola (no current): **${report.summary.queueCount}**`);
 	lines.push(
-		`- ProductionGate (deferred/blocked): **${report.summary.productionGateHoldCount ?? 0}**`
+		`- ProductionGate (deferred/blocked): **${report.summary.productionGateHoldCount ?? 0}** (still holds: ${report.summary.stillHoldCount ?? 0}; video-only holds never block stills: ${report.summary.videoHoldCount ?? 0})`
 	);
 	for (const [status, count] of Object.entries(report.summary.histogram)) {
 		lines.push(`- \`${status}\`: ${count}`);
@@ -301,7 +305,7 @@ export function formatImageDebtMarkdown(report) {
 		'ProductionGate holds (deferred / blocked)',
 		report.productionGateHolds,
 		(r) =>
-			`**Toma ${r.shotNumber}** (\`${r.takeId}\`) — ${r.status}${r.reasonCode ? ` · ${r.reasonCode}` : ''}${
+			`**Toma ${r.shotNumber}** (\`${r.takeId}\`) — ${r.status}${r.medium && r.medium !== 'all' ? ` [${r.medium}]` : ''}${r.reasonCode ? ` · ${r.reasonCode}` : ''}${
 				r.prerequisiteAssetIds?.length
 					? ` · prereqs: ${r.prerequisiteAssetIds.join(', ')}`
 					: ''
@@ -805,11 +809,13 @@ export function buildRegenBriefsReport(script, ctx, projectCtx) {
 	const locationName = (id) => projectCtx.locationById?.get(id)?.name ?? id;
 
 	for (const take of script.takes) {
-		if (isProductionGateHold(take)) {
+		// Regen briefs are still-image work: only holds that apply to stills exclude a take.
+		if (isProductionGateHold(take, 'still')) {
 			deferredOrBlocked.push({
 				takeId: take.id,
 				shotId: take.shotId,
 				status: effectiveProductionGateStatus(take),
+				medium: productionGateMedium(take),
 				reasonCode: take.productionGate?.reasonCode,
 				reason: take.productionGate?.reason
 			});

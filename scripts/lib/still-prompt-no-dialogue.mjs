@@ -65,7 +65,14 @@ export function stripSpokenDialogueQuotes(text) {
 
 	out = out.replace(/:\s+(?=[A-Z])/g, (match, offset, full) => {
 		const before = full.slice(Math.max(0, offset - 24), offset);
-		if (/\b(Action|Composition|Setting|Cast|Camera|Style|NEG)\s*$/i.test(before)) return match;
+		// Structured prompt section labels (compilePrompt sections + still-prompt template) are not
+		// speaker labels; keep their colons.
+		if (
+			/\b(Action|Composition|Setting|Cast|Camera|Style|NEG|On frame|Physics|Continuity|Lighting|Diegetic display|Subjects|Location|Interface|Audio|Negative)\s*$/i.test(
+				before
+			)
+		)
+			return match;
 		return '. ';
 	});
 

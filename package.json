@@ -64,6 +64,8 @@
 		"report:trailer-master-dialogue-audio": "node scripts/link-trailer-master-festival-dialogue-audio.mjs --check",
 		"scrub:still-prompts": "node scripts/scrub-still-prompts-no-dialogue.mjs --write",
 		"scrub:still-prompts:check": "node scripts/scrub-still-prompts-no-dialogue.mjs --check",
+		"scrub:still-prompt-cast": "node scripts/scrub-still-prompt-cast.mjs --write",
+		"scrub:still-prompt-cast:check": "node scripts/scrub-still-prompt-cast.mjs --check",
 		"report:visual-art": "node scripts/report-visual-art.mjs",
 		"report:image-debt": "node scripts/report-image-debt.mjs",
 		"report:shot-completeness": "node scripts/report-shot-completeness.mjs",
