@@ -16,7 +16,6 @@
       "shotId": "trailer:shot-a-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -47,6 +46,20 @@
           "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-proxima-axial-dock-interior-sheet",
+          "path": "/assets/locations/proxima-dock/axial-shaft-interior-sheet-v1.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -92,6 +105,13 @@
           "kind": "image",
           "id": "asset:location-proxima-dock-sheet",
           "path": "/assets/locations/proxima-dock/concept-sheet-v3.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-proxima-axial-dock-interior-sheet",
+          "path": "/assets/locations/proxima-dock/axial-shaft-interior-sheet-v1.png",
           "required": true,
           "role": "location"
         }
@@ -205,7 +225,6 @@
       "shotId": "trailer:shot-b-03",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:sorell",
         "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -236,6 +255,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-sorell",
+          "path": "/assets/voices/en/Sorell.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -253,7 +279,6 @@
       "shotId": "trailer:shot-c-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -284,6 +309,13 @@
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -350,7 +382,6 @@
       "shotId": "trailer:shot-c-03",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -381,6 +412,13 @@
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -398,7 +436,6 @@
       "shotId": "trailer:shot-d-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -429,6 +466,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -826,7 +870,6 @@
       "shotId": "trailer:shot-f-04",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:rao",
         "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -857,6 +900,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -874,7 +924,6 @@
       "shotId": "trailer:shot-g-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:rao",
         "missing_production_context",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
@@ -905,6 +954,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1115,7 +1171,6 @@
       "shotId": "trailer:shot-h-02",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:rao",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -1145,6 +1200,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1302,7 +1364,6 @@
       "shotId": "trailer:shot-i-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "missing_entity_binding",
         "editorial_prompt_freeze_not_approved"
       ],
@@ -1332,6 +1393,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [

@@ -13,7 +13,7 @@
     },
     "status": "draft",
     "version": "0.8.0-wip",
-    "revision": 23,
+    "revision": 24,
     "localization": {
       "sourceLanguage": "en",
       "translations": {
@@ -1240,8 +1240,8 @@
         {
           "type": "paragraph",
           "text": {
-            "es": "Harlan, Sorell, Zao y Voss observan juntos en una única escena.",
-            "en": "Harlan, Sorell, Zao, and Voss watch as a single scene."
+            "es": "Traducción pendiente (needs_revision): The full six-person local crew — Voss, Harlan, Sorell, Zao, Rao, and Okoye — watch the delayed Earth coverage together in Proxima's Operations Gallery before departure, as a single scene. Rao and Okoye are present and silent.",
+            "en": "The full six-person local crew — Voss, Harlan, Sorell, Zao, Rao, and Okoye — watch the delayed Earth coverage together in Proxima's Operations Gallery before departure, as a single scene. Rao and Okoye are present and silent."
           }
         },
         {

@@ -49,6 +49,13 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-proxima-axial-dock-interior-sheet",
+          "path": "/assets/locations/proxima-dock/axial-shaft-interior-sheet-v1.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -279,7 +286,6 @@
       "shotId": "festival:shot-b-02",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -329,6 +335,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -584,7 +597,6 @@
       "shotId": "festival:shot-b-06",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -627,6 +639,13 @@
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -710,7 +729,6 @@
       "shotId": "festival:shot-c-01",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:harlan",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -760,6 +778,13 @@
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-harlan",
+          "path": "/assets/voices/en/Harlan.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1051,8 +1076,6 @@
       "shotId": "festival:shot-c-07",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
-        "missing_voice_sample:character:harlan",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1095,6 +1118,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-harlan",
+          "path": "/assets/voices/en/Harlan.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1112,7 +1149,6 @@
       "shotId": "festival:shot-c-08",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1162,6 +1198,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1240,7 +1283,6 @@
       "shotId": "festival:shot-c-10",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:harlan",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1283,6 +1325,13 @@
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-harlan",
+          "path": "/assets/voices/en/Harlan.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1521,7 +1570,6 @@
       "shotId": "festival:shot-d-05",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1564,6 +1612,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1581,7 +1636,6 @@
       "shotId": "festival:shot-d-06",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:rao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1624,6 +1678,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1641,8 +1702,6 @@
       "shotId": "festival:shot-d-07",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:harlan",
-        "missing_voice_sample:character:rao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1692,6 +1751,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-harlan",
+          "path": "/assets/voices/en/Harlan.wav",
+          "required": true,
+          "role": "voice_sample"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1709,7 +1782,6 @@
       "shotId": "festival:shot-d-08",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:rao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1759,6 +1831,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1776,7 +1855,6 @@
       "shotId": "festival:shot-d-09",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1826,6 +1904,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -1843,7 +1928,6 @@
       "shotId": "festival:shot-b-04a",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -1879,6 +1963,13 @@
           "path": "/assets/locations/diplomatic-core-room/concept-sheet.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -2075,7 +2166,6 @@
       "shotId": "festival:shot-d-04b",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:rao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2111,6 +2201,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -2128,7 +2225,6 @@
       "shotId": "festival:shot-b-08",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2171,6 +2267,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -2405,7 +2508,6 @@
       "shotId": "festival:shot-e-03",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:zao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2441,6 +2543,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-zao",
+          "path": "/assets/voices/en/Zao.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -2458,7 +2567,6 @@
       "shotId": "festival:shot-e-04",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:harlan",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2494,6 +2602,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-harlan",
+          "path": "/assets/voices/en/Harlan.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -2511,7 +2626,6 @@
       "shotId": "festival:shot-e-05",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:rao",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2554,6 +2668,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-elin",
+          "path": "/assets/voices/en/Elin.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -2740,7 +2861,6 @@
       "shotId": "festival:shot-e-09",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2790,6 +2910,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -2913,7 +3040,6 @@
       "shotId": "festival:shot-f-02",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:harlan",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -2956,6 +3082,13 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-harlan",
+          "path": "/assets/voices/en/Harlan.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -3046,7 +3179,6 @@
       "shotId": "festival:shot-f-04",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:okoye",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -3089,6 +3221,13 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-okoye",
+          "path": "/assets/voices/en/Okoye.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -3386,7 +3525,6 @@
       "shotId": "festival:shot-g-02",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -3422,6 +3560,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [
@@ -3772,7 +3917,6 @@
       "shotId": "festival:shot-g-09",
       "status": "blocked",
       "blockers": [
-        "missing_voice_sample:character:voss",
         "editorial_prompt_freeze_not_approved"
       ],
       "diegeticText": [],
@@ -3815,6 +3959,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "audio",
+          "id": "asset:voice-ref-en-voss",
+          "path": "/assets/voices/en/Voss.wav",
+          "required": true,
+          "role": "voice_sample"
         }
       ],
       "segments": [

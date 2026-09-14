@@ -2,7 +2,7 @@
 
 # Light Delay — General Narrative Outline
 
-Working draft, English, revision 23.
+Working draft, English, revision 24.
 
 **Editorial status:** current narrative source of truth; still WIP.
 
@@ -235,7 +235,7 @@ News coverage and protest signage establish the pilot throat, its one-way broadc
 
 ### P2 — Watching together
 
-Harlan, Sorell, Zao, and Voss watch as a single scene.
+The full six-person local crew — Voss, Harlan, Sorell, Zao, Rao, and Okoye — watch the delayed Earth coverage together in Proxima's Operations Gallery before departure, as a single scene. Rao and Okoye are present and silent.
 
 Harlan watches the optimistic crowd.
 

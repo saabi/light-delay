@@ -1,5 +1,15 @@
 # Estado del proyecto
 
+## 2026-09-13 — Curated voice refs registered (English source)
+
+- EN/ES cast WAVs under `static/assets/voices/` are catalog assets with `sampleAssetIds` on voice profiles. Reporter EN sample added for `character:periodista`.
+
+## 2026-09-13 — Festival-master stills prep: still/video split, Proxima interiors, reconciliation (English source)
+
+- Still generation is unblocked for the whole Festival-master (only `editorial_prompt_freeze_not_approved` remains as the universal plan gate for wired speakers); video holds (`medium: video`) on the title and 006–009 await the Blender exterior guide still and never block stills.
+- Master r24 (six-person Operations Gallery presence); Festival lineage still pinned to r19 / `stale` — rederive pending. `report:master-relevance:check` and `tts:audience:check` stay red for the same reason.
+- Registered gallery (0.5 g) and axial-dock (microgravity, 18–20 m) interior sheets; transfer concourse stays manifest-only. Reconciliation report: `docs/production/FESTIVAL_MASTER_REFERENCE_RECONCILIATION_2026-09-13.md` (80 records, 94 takes with regeneration debt, 0 audit errors).
+
 ## 2026-09-13 — Separate still/video stretch refs (English source)
 
 - Still and Seedance reference lists are authored separately (`videoReferenceAssetIds` optional tri-state). Keyframe coverage is per registered shot; staging order matches handoff.

@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-09-13 — Register curated cast voice references
+
+- Added EN `Reporter.wav` (VoiceDesign) for `character:periodista`.
+- Catalogued EN/ES curated refs as `asset:voice-ref-*` and wired `sampleAssetIds` on matching voice-profile variants.
+
+## 2026-09-13 — Festival-master prompt-ready stills prep (still/video split, Proxima interiors, reconciliation)
+
+- Master outline r24: `master:story-p2` now states the full six-person crew watches the delayed Earth coverage together in the Operations Gallery (Rao and Okoye present, silent); facts/knowledgeEvents/actionRequirements unchanged; EN export regenerated, ES retained at r19. Festival outline lineage untouched (pinned r19, `stale`).
+- `Take.productionGate.medium` (`all` | `still` | `video`): video-scoped holds (`video_deferred_external_reference`) never block still/keyframe jobs. Plans emit `videoGenerationGate` + `segments[*].blockers`; stretch collectors are medium-aware; blocker codes carry the medium tag. Tests added (`productionGate.spec.ts`, `visualStretchJobs.spec.ts`).
+- Proxima interiors: registered `asset:location-proxima-operations-gallery-interior-sheet` (habitat ring, ≈ 0.5 g) and `asset:location-proxima-axial-dock-interior-sheet` (axial transfer shaft, microgravity, ≈ 18–20 m, "PROXIMA DOCK 1"); manifest rows for both plus the transfer concourse (unregistered) and a planned exterior guide still. New `context:proxima-habitat-ring`; `context:proxima-dock` states microgravity. `PROXIMA_STATION.md` §7 records the 18–20 m shaft as a production-design decision.
+- Festival-master: bridge-meal stretch rev 2 with full seating/blocking; new `festival-master:stretch-axial-dock-006-009`; purpose/framing on all 104 shots; 23 placeholder sizes re-authored; on-frame reconciliation of every take (exterior sheets off interiors, off-frame cast removed, props/vehicles declared where attached); canon-presence fixes (Zao 060/061/095/096, Harlan 083–088, vestibule 023/024, 044/045 location); title and 006–009 carry video-only holds; 94 takes marked `needs_regeneration` (incl. the ten central-shaft takes after the sheet replacement). Report: `docs/production/FESTIVAL_MASTER_REFERENCE_RECONCILIATION_2026-09-13.md`.
+- Tooling: `scrub:still-prompt-cast[:check]` (no restated appearance in still prompts); reference audit now checks on-frame coverage, interior/exterior authority, budget, stale status, and gravity wording by context. `data/production/credits.json` + schema. No images generated; no Higgsfield/MCP calls.
+
 ## 2026-09-13 — Separate still vs video stretch references
 
 - `VisualStretch.videoReferenceAssetIds` tri-state (absent = fallback, present including `[]` = explicit); still `referenceAssetIds` never trimmed for Seedance.
