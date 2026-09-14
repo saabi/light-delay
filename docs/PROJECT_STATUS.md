@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-14 — Reporter EN dialogue recloned with female sample (English source)
+
+- Animatic TTS now tags character:periodista as Qwen [Reporter] instead of Kokoro Narrator.
+- Festival-master EN cue-0003 re-cloned from static/assets/voices/en/Reporter.wav and re-promoted.
+
 ## 2026-09-14 - Independent Festival-master still regeneration complete (English source)
 
 - Replaced the 16 selected independent stills flagged for regeneration and registered the new files with current 1536x1024 dimensions.

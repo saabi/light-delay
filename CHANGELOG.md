@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-14 — Reporter animatic dialogue uses Qwen clone
+
+- Mapped character:periodista to Qwen [Reporter] in generate-animatic-dialogue-audio.py (was falling back to Kokoro Narrator, male).
+- Force-regenerated and promoted Festival-master EN estival-master:cue-0003 from Reporter.wav.
+
 ## 2026-09-14 - Regenerate independent Festival-master stills
 
 - Regenerated and registered the 16 selected independent stills flagged for continuity, composition, or quality correction (013b, 016b, 037-041, 045b, 068-070, 074-076, 089-090).

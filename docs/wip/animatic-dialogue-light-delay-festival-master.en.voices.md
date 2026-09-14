@@ -1,13 +1,14 @@
 # Animatic dialogue TTS — script:light-delay-festival-master (en)
 
 Generated for dual outline audio. Do not hand-edit; regenerate from ScriptFile.
-Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye], [Cael].
+Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye], [Reporter], [Cael].
 
 ---
 
 <!-- audience-dialogue-id: festival-master:cue-0003 -->
-[Narrator]
-At the Jupiter mouth, protesters call it a door humanity never agreed to install. Supporters call tomorrow an invitation.
+[Reporter]
+[QwenInstruct] Speak English. Performance and delivery: broadcast-clear; urgency held behind professional control
+"At the Jupiter mouth, protesters call it a door humanity never agreed to install. Supporters call tomorrow an invitation."
 
 <!-- audience-dialogue-id: festival-master:cue-0004 -->
 [Harlan]

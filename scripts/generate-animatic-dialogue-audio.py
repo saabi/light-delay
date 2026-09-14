@@ -38,9 +38,10 @@ SPEAKER_BY_CHARACTER = {
     "character:rao": "Elin",
     "character:sorell": "Sorell",
     "character:okoye": "Okoye",
+    "character:periodista": "Reporter",
     "character:cael": "Cael",
 }
-QWEN_SPEAKERS = {"Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye"}
+QWEN_SPEAKERS = {"Zao", "Voss", "Harlan", "Elin", "Sorell", "Okoye", "Reporter"}
 
 
 def script_slug(script_id: str) -> str:
@@ -120,7 +121,7 @@ def build_voices_markdown(script: dict, lang: str) -> tuple[str, list[dict]]:
         f"# Animatic dialogue TTS — {script_id} ({lang})",
         "",
         "Generated for dual outline audio. Do not hand-edit; regenerate from ScriptFile.",
-        "Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye], [Cael].",
+        "Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye], [Reporter], [Cael].",
         "",
         "---",
         "",
