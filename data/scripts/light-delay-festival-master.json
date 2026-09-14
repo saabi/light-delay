@@ -22953,14 +22953,7 @@
         }
       },
       "referenceAssetIds": [
-        "asset:character-voss-sheet",
-        "asset:character-harlan-sheet",
-        "asset:character-sorell-sheet",
-        "asset:character-zao-sheet",
-        "asset:character-rao-sheet",
-        "asset:character-okoye-sheet",
-        "asset:location-proxima-axial-dock-interior-sheet",
-        "asset:vehicle-celestial-ardor-model-sheet-v2"
+        "asset:visual-pack-proxima-axial-dock-crew-sheet"
       ],
       "notes": [
         {
@@ -23241,6 +23234,3088 @@
         "asset:location-celestial-ardor-central-access-sheet"
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-central-access-013-015-sheet"
+    },
+    {
+      "id": "festival-master:stretch-reactor-optics-029-032",
+      "title": {
+        "en": "Reactor-bay comms diagnosis and aiming (029–032)",
+        "es": "Diagnóstico de comunicaciones y puntería en la bahía (029–032)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-029",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Zao finishes the interrupted bridge call in the reactor service bay.",
+            "es": "Zao termina la llamada interrumpida al puente en la bahía de servicio del reactor."
+          },
+          "event": {
+            "en": "She tests the dead channels while the countdown continues.",
+            "es": "Prueba los canales muertos mientras continúa la cuenta atrás."
+          },
+          "endState": {
+            "en": "The communications failure is established as deliberate.",
+            "es": "La falla de comunicaciones queda establecida como deliberada."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-030",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Zao remains at the same bay console.",
+            "es": "Zao permanece en la misma consola de la bahía."
+          },
+          "event": {
+            "en": "She names the radio and hardline failures and searches for another route.",
+            "es": "Nombra las fallas de radio y cableadas y busca otra ruta."
+          },
+          "endState": {
+            "en": "She turns to the independent optical console.",
+            "es": "Se vuelve hacia la consola óptica independiente."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-031",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Zao reaches the optical-array control console.",
+            "es": "Zao llega a la consola de control de la matriz óptica."
+          },
+          "event": {
+            "en": "She rules out Proxima, Earth, and the throat before selecting the forward intercept.",
+            "es": "Descarta Próxima, la Tierra y la garganta antes de elegir la intercepción futura."
+          },
+          "endState": {
+            "en": "The crossing clock gives her a viable target.",
+            "es": "El reloj de cruce le da un objetivo viable."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-032",
+          "order": 4,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The optical console holds the forward geometry.",
+            "es": "La consola óptica conserva la geometría futura."
+          },
+          "event": {
+            "en": "Zao finds the moving intercept and begins the transmission setup.",
+            "es": "Zao encuentra la intercepción móvil y comienza a preparar la transmisión."
+          },
+          "endState": {
+            "en": "The aimed contingency transmission is ready to record.",
+            "es": "La transmisión de contingencia apuntada está lista para grabarse."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "presentCharacterIds": [
+        "character:zao"
+      ],
+      "absentCharacterIds": [
+        "character:harlan"
+      ],
+      "physics": {
+        "en": "Microgravity in the reactor service bay; Zao works hand-over-hand and nothing rests on a floor.",
+        "es": "Microgravedad en la bahía de servicio del reactor; Zao trabaja usando asideros y nada descansa en un piso."
+      },
+      "lighting": {
+        "en": "Reactor-bay practicals, instrument glow, and the optical console display.",
+        "es": "Luces prácticas de la bahía, brillo de instrumentos y pantalla de la consola óptica."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "outer-bay optical console",
+          "screenSide": "center",
+          "facing": "the comms panel and optical-array console",
+          "posture": "moving",
+          "eyelineTarget": "the active console",
+          "notes": {
+            "en": "Stays within the same console cluster; only her hands and eyeline change between panels.",
+            "es": "Permanece en el mismo grupo de consolas; sólo cambian sus manos y su línea de mirada entre paneles."
+          }
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous reactor service-bay diagnosis: the same microgravity console cluster, failed comms, countdown, and optical-array geometry across four panels.",
+        "es": "Diagnóstico continuo en la bahía: mismo grupo de consolas en microgravedad, comunicaciones caídas, cuenta atrás y geometría óptica en cuatro paneles."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9"
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:location-celestial-ardor-reactor-service-bay-sheet",
+        "asset:object-optical-contingency-transmitter-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-reactor-record-033-036",
+      "title": {
+        "en": "Recording, transmission, and confrontation (033–036)",
+        "es": "Grabación, transmisión y confrontación (033–036)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-033",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Zao records at the optical console in volatile memory.",
+            "es": "Zao graba en memoria volátil junto a la consola óptica."
+          },
+          "event": {
+            "en": "Her words remain unheard while the recording is captured.",
+            "es": "Sus palabras no se oyen mientras se captura la grabación."
+          },
+          "endState": {
+            "en": "The warning is recorded but not yet transmitted.",
+            "es": "La advertencia queda grabada pero aún no transmitida."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-034",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Zao finishes the recording as the service shaft vibration approaches.",
+            "es": "Zao termina la grabación mientras se acerca la vibración del pozo de servicio."
+          },
+          "event": {
+            "en": "She listens without leaving the console cluster.",
+            "es": "Escucha sin abandonar el grupo de consolas."
+          },
+          "endState": {
+            "en": "The approaching threat is audible in her posture, not yet in frame.",
+            "es": "La amenaza que se acerca se percibe en su postura, aún fuera de cuadro."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-035",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Zao signs the packet and sets the narrow optical sweep.",
+            "es": "Zao firma el paquete y ajusta el barrido óptico estrecho."
+          },
+          "event": {
+            "en": "The display confirms TRANSMITTED without exposing the aim point.",
+            "es": "La pantalla confirma TRANSMITTED sin revelar el punto de puntería."
+          },
+          "endState": {
+            "en": "The warning has left the ship before Harlan enters.",
+            "es": "La advertencia ha salido de la nave antes de que entre Harlan."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-036",
+          "order": 4,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Harlan enters the bay after the pointing solution is closed.",
+            "es": "Harlan entra en la bahía después de cerrarse la solución de puntería."
+          },
+          "event": {
+            "en": "He sees only the transmission confirmation and demands its destination.",
+            "es": "Sólo ve la confirmación de transmisión y exige saber el destino."
+          },
+          "endState": {
+            "en": "Zao refuses to reveal the target; Harlan controls the encounter.",
+            "es": "Zao se niega a revelar el objetivo; Harlan controla el encuentro."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "presentCharacterIds": [
+        "character:zao",
+        "character:harlan"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the reactor service bay; Harlan closes distance by controlled pushes and Zao remains anchored to the console.",
+        "es": "Microgravedad en la bahía; Harlan acorta la distancia con impulsos controlados y Zao permanece sujeta a la consola."
+      },
+      "lighting": {
+        "en": "Reactor-bay practicals and optical-console glow; the transmission display is English-only.",
+        "es": "Luces prácticas de la bahía y brillo de la consola óptica; la pantalla de transmisión sólo está en inglés."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "outer-bay optical console",
+          "screenSide": "left",
+          "facing": "the console, then Harlan",
+          "posture": "moving",
+          "eyelineTarget": "the console and character:harlan"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "service-hatch approach to console",
+          "screenSide": "right",
+          "facing": "Zao and the console",
+          "posture": "moving",
+          "eyelineTarget": "character:zao"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous reactor-bay confrontation for shots 033–034–035–036, preserving the recording, narrow-beam transmission, Harlan’s arrival, cast, and microgravity geometry.",
+        "es": "Confrontación continua en la bahía del reactor para las tomas 033–034–035–036, que conserva la grabación, la transmisión estrecha, la llegada de Harlan, el elenco y la geometría de microgravedad."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9"
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-reactor-service-bay-sheet",
+        "asset:object-optical-contingency-transmitter-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-reactor-sorell-042-043",
+      "title": {
+        "en": "Sorell reaches Zao (042–043)",
+        "es": "Sorell llega hasta Zao (042–043)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-042",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Sorell enters the outer bay and catches Zao's drifting body.",
+            "es": "Sorell entra en la bahía exterior y atrapa el cuerpo de Zao a la deriva."
+          },
+          "event": {
+            "en": "She checks the airway and pulse in microgravity.",
+            "es": "Comprueba las vías respiratorias y el pulso en microgravedad."
+          },
+          "endState": {
+            "en": "Sorell holds Zao and searches for help.",
+            "es": "Sorell sostiene a Zao y busca ayuda."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-043",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Sorell still cradles Zao beside the optical console.",
+            "es": "Sorell aún sostiene a Zao junto a la consola óptica."
+          },
+          "event": {
+            "en": "She calls the bridge into the jammed comms and receives no answer.",
+            "es": "Llama al puente por las comunicaciones interferidas y no recibe respuesta."
+          },
+          "endState": {
+            "en": "Her isolation and fear are established.",
+            "es": "Quedan establecidas su aislamiento y su angustia."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "presentCharacterIds": [
+        "character:sorell",
+        "character:zao"
+      ],
+      "absentCharacterIds": [
+        "character:harlan"
+      ],
+      "physics": {
+        "en": "Microgravity; Sorell and Zao drift together with no usable floor.",
+        "es": "Microgravedad; Sorell y Zao derivan juntas sin un piso utilizable."
+      },
+      "lighting": {
+        "en": "Outer-bay practicals, optical-console glow, and blood suspended in the air.",
+        "es": "Luces prácticas de la bahía exterior, brillo de la consola y sangre suspendida en el aire."
+      },
+      "blocking": [
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "outer-bay center beside console",
+          "screenSide": "center",
+          "facing": "Zao and the handheld comm",
+          "posture": "moving",
+          "eyelineTarget": "character:zao"
+        },
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "outer-bay center held by Sorell",
+          "screenSide": "center",
+          "facing": "away from camera",
+          "posture": "other",
+          "eyelineTarget": "character:sorell"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous outer-bay rescue: Sorell catches and supports Zao, then calls through the still-jammed communications beside the optical console.",
+        "es": "Rescate continuo en la bahía exterior: Sorell atrapa y sostiene a Zao y luego llama por las comunicaciones aún interferidas junto a la consola óptica."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet",
+        "asset:location-celestial-ardor-reactor-service-bay-sheet",
+        "asset:object-optical-contingency-transmitter-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-harlan-alibi-044-045",
+      "title": {
+        "en": "Harlan restores the bridge and builds his alibi (044–045)",
+        "es": "Harlan restablece el puente y construye su coartada (044–045)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-044",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Harlan reaches the bridge-side service tray after the murder.",
+            "es": "Harlan llega a la bandeja de servicio junto al puente después del asesinato."
+          },
+          "event": {
+            "en": "He reconnects the communication trunks and emerges controlled.",
+            "es": "Reconecta los troncales de comunicación y emerge con calma."
+          },
+          "endState": {
+            "en": "The bridge sees a composed officer returning from the hatch.",
+            "es": "El puente ve regresar por la escotilla a un oficial sereno."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-045",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Harlan remains alone at the bridge-side hatch and monitor.",
+            "es": "Harlan permanece solo junto a la escotilla y el monitor del puente."
+          },
+          "event": {
+            "en": "He denies seeing Sorell while the restored monitor shows her with Zao.",
+            "es": "Niega haber visto a Sorell mientras el monitor restaurado la muestra con Zao."
+          },
+          "endState": {
+            "en": "His alibi is placed before the bridge crew returns.",
+            "es": "Su coartada queda instalada antes de que vuelva la tripulación del puente."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:harlan"
+      ],
+      "absentCharacterIds": [
+        "character:voss",
+        "character:sorell",
+        "character:zao"
+      ],
+      "physics": {
+        "en": "Microgravity during the return through the bridge-side service hatch; Harlan uses rails and the tray.",
+        "es": "Microgravedad durante el regreso por la escotilla de servicio del puente; Harlan usa rieles y la bandeja."
+      },
+      "lighting": {
+        "en": "Bridge instrument glow and the restored camera monitor.",
+        "es": "Brillo de instrumentos del puente y monitor de cámara restaurado."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "bridge-side service hatch and comms tray",
+          "screenSide": "center",
+          "facing": "the tray, then bridge monitors",
+          "posture": "moving",
+          "eyelineTarget": "the comms tray and monitor"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel bridge-side service-hatch stretch: Harlan reconnects the trunks, emerges alone, and places his false alibi while Sorell remains off-frame.",
+        "es": "Tramo de dos paneles junto a la escotilla: Harlan reconecta los troncales, emerge solo y coloca su coartada falsa mientras Sorell permanece fuera de cuadro."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-harlan-wrist-device-sheet",
+        "asset:object-wired-comms-deck-patch-panel-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-central-vault-obstruction-054-056",
+      "title": {
+        "en": "Vault obstruction and rejected authority (054–056)",
+        "es": "Obstrucción de la bóveda y autoridad rechazada (054–056)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-054",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The ship turns into the third thrust cutoff; Rao and Okoye reach the sealed vault.",
+            "es": "La nave gira hacia el tercer corte de empuje; Rao y Okoye llegan a la bóveda sellada."
+          },
+          "event": {
+            "en": "They float beside the door as weight disappears.",
+            "es": "Flotan junto a la puerta al desaparecer el peso."
+          },
+          "endState": {
+            "en": "The vault is the immediate obstacle.",
+            "es": "La bóveda es el obstáculo inmediato."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-055",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Okoye holds the vault while Harlan floats nearby.",
+            "es": "Okoye sujeta la bóveda mientras Harlan flota cerca."
+          },
+          "event": {
+            "en": "Okoye reports the local lock; Harlan redirects suspicion toward Sorell.",
+            "es": "Okoye informa del cierre local; Harlan desvía la sospecha hacia Sorell."
+          },
+          "endState": {
+            "en": "Rao refuses to accept the accusation as proof.",
+            "es": "Rao se niega a aceptar la acusación como prueba."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-056",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The same four-person microgravity arrangement surrounds the vault door.",
+            "es": "La misma disposición de cuatro personas en microgravedad rodea la puerta de la bóveda."
+          },
+          "event": {
+            "en": "Rao clamps a diagnostic instrument and rejects Harlan's unsupported inference.",
+            "es": "Rao fija un instrumento diagnóstico y rechaza la inferencia sin respaldo de Harlan."
+          },
+          "endState": {
+            "en": "The diagnostic remains for the later vault opening.",
+            "es": "El diagnóstico queda instalado para la apertura posterior de la bóveda."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-central-access",
+      "presentCharacterIds": [
+        "character:rao",
+        "character:okoye",
+        "character:harlan",
+        "character:voss"
+      ],
+      "absentCharacterIds": [
+        "character:sorell",
+        "character:zao"
+      ],
+      "physics": {
+        "en": "Microgravity at thrust cutoff; the four crew use rails around the central access and sealed vault.",
+        "es": "Microgravedad durante el corte de empuje; los cuatro tripulantes usan rieles alrededor del acceso central y la bóveda sellada."
+      },
+      "lighting": {
+        "en": "Central-access practicals and vault indicators; no floor direction.",
+        "es": "Luces prácticas del acceso central e indicadores de la bóveda; sin dirección de piso."
+      },
+      "blocking": [
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "vault-side diagnostic rail",
+          "screenSide": "left",
+          "facing": "vault door and diagnostic",
+          "posture": "other",
+          "eyelineTarget": "the vault"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "vault door handhold",
+          "screenSide": "center",
+          "facing": "the lock and Harlan",
+          "posture": "other",
+          "eyelineTarget": "character:harlan"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "upper rail opposite vault",
+          "screenSide": "right",
+          "facing": "Okoye and Rao",
+          "posture": "other",
+          "eyelineTarget": "character:okoye"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "remote bridge comm presence",
+          "screenSide": "off",
+          "facing": "the access feed",
+          "posture": "other",
+          "eyelineTarget": "character:rao"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous central-access obstruction: Rao, Okoye, Harlan, and Voss share the sealed-vault geometry through the cutoff, accusation, and diagnostic setup.",
+        "es": "Obstrucción continua en el acceso central: Rao, Okoye, Harlan y Voss comparten la geometría de la bóveda sellada durante el corte, la acusación y el diagnóstico."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-rao-sheet",
+        "asset:location-celestial-ardor-central-access-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-vector-057-059",
+      "title": {
+        "en": "Reconstructed vector and Harlan alone (057–059)",
+        "es": "Vector reconstruido y Harlan a solas (057–059)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-057",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Weight returns on the bridge as Rao studies Zao's reconstructed firing angles.",
+            "es": "El peso vuelve al puente mientras Rao estudia los ángulos de disparo reconstruidos de Zao."
+          },
+          "event": {
+            "en": "The vector points toward a future intercept rather than Earth or Proxima.",
+            "es": "El vector apunta a una intercepción futura y no a la Tierra ni a Próxima."
+          },
+          "endState": {
+            "en": "The question of the target remains open.",
+            "es": "La pregunta por el objetivo queda abierta."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-058",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The bridge crew remains at the same stations.",
+            "es": "La tripulación permanece en los mismos puestos del puente."
+          },
+          "event": {
+            "en": "Voss asks what Zao hit and authorizes comparison.",
+            "es": "Voss pregunta qué alcanzó Zao y autoriza la comparación."
+          },
+          "endState": {
+            "en": "The bridge turns toward the unexplained signal.",
+            "es": "El puente se orienta hacia la señal inexplicada."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-059",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Harlan is alone at the bridge console for a moment.",
+            "es": "Harlan queda solo un momento ante la consola del puente."
+          },
+          "event": {
+            "en": "He mourns the unknown savior while the record remains unrecoverable.",
+            "es": "Lamenta al salvador desconocido mientras el registro sigue irrecuperable."
+          },
+          "endState": {
+            "en": "The private reaction leads into the incoming packet.",
+            "es": "La reacción privada conduce al paquete entrante."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:harlan",
+        "character:rao",
+        "character:okoye",
+        "character:sorell"
+      ],
+      "absentCharacterIds": [
+        "character:zao"
+      ],
+      "physics": {
+        "en": "Steady thrust restores apparent 1 g on the bridge; Harlan's private panel remains within the same station geometry.",
+        "es": "El empuje restablece 1 g aparente en el puente; el panel privado de Harlan sigue en la misma geometría."
+      },
+      "lighting": {
+        "en": "Bridge practicals and reconstructed vector display.",
+        "es": "Luces prácticas del puente y pantalla del vector reconstruido."
+      },
+      "blocking": [
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "center",
+          "facing": "Rao's display",
+          "posture": "standing",
+          "eyelineTarget": "character:rao"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "secondary console",
+          "screenSide": "right",
+          "facing": "the display",
+          "posture": "standing",
+          "eyelineTarget": "the display"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "left",
+          "facing": "the vector display",
+          "posture": "standing",
+          "eyelineTarget": "the display"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station",
+          "screenSide": "off",
+          "facing": "the bridge",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "translator station",
+          "screenSide": "right",
+          "facing": "the reconstructed vector display",
+          "posture": "standing",
+          "eyelineTarget": "the vector display"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Bridge analysis stretch: the reconstructed firing vector is examined, Voss asks the causal question, and Harlan's private grief occupies the same room without a spatial reset.",
+        "es": "Tramo de análisis en el puente: se examina el vector reconstruido, Voss formula la pregunta causal y el duelo privado de Harlan ocupa la misma sala sin reinicio espacial."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-packet-open-060-061",
+      "title": {
+        "en": "Incoming Zao packet (060–061)",
+        "es": "Paquete entrante de Zao (060–061)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-060",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Rao detects an incoming optical signal at her bridge station.",
+            "es": "Rao detecta una señal óptica entrante en su puesto del puente."
+          },
+          "event": {
+            "en": "The packet resolves as Zao's personal format and pre-crossing signature.",
+            "es": "El paquete se resuelve como formato personal y firma de Zao anteriores al cruce."
+          },
+          "endState": {
+            "en": "Voss and Sorell hear that the packet is authentic.",
+            "es": "Voss y Sorell oyen que el paquete es auténtico."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-061",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The bridge crew remains focused on Rao's display.",
+            "es": "La tripulación permanece concentrada en la pantalla de Rao."
+          },
+          "event": {
+            "en": "Voss orders the packet played.",
+            "es": "Voss ordena reproducir el paquete."
+          },
+          "endState": {
+            "en": "The bridge is ready for Zao's recorded flashback.",
+            "es": "El puente queda listo para el flashback grabado de Zao."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:rao",
+        "character:voss",
+        "character:sorell",
+        "character:harlan",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [
+        "character:zao"
+      ],
+      "physics": {
+        "en": "Steady apparent 1 g on the bridge; all three remain at their stations.",
+        "es": "1 g aparente estable en el puente; los tres permanecen en sus puestos."
+      },
+      "lighting": {
+        "en": "Bridge practicals with the incoming optical packet bright on Rao's display.",
+        "es": "Luces prácticas del puente con el paquete óptico entrante brillante en la pantalla de Rao."
+      },
+      "blocking": [
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "left",
+          "facing": "her display",
+          "posture": "standing",
+          "eyelineTarget": "the incoming packet"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "center",
+          "facing": "Rao",
+          "posture": "standing",
+          "eyelineTarget": "character:rao"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "translator station",
+          "screenSide": "right",
+          "facing": "Rao's display",
+          "posture": "standing",
+          "eyelineTarget": "character:rao"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "secured aft security position",
+          "screenSide": "right",
+          "facing": "Rao and the incoming packet",
+          "posture": "standing",
+          "eyelineTarget": "character:rao"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station",
+          "screenSide": "left",
+          "facing": "the command station",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel bridge reception: Rao authenticates the delayed optical packet and Voss orders playback while Sorell remains close enough to hear.",
+        "es": "Recepción en dos paneles: Rao autentica el paquete óptico retardado y Voss ordena reproducirlo mientras Sorell permanece cerca."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-vault-flashback-062-063",
+      "title": {
+        "en": "Zao's vault flashback (062–063)",
+        "es": "Flashback de Zao en la bóveda (062–063)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-062",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The delayed packet opens on Zao beside the armed impulse package.",
+            "es": "El paquete retardado se abre con Zao junto al paquete de impulso armado."
+          },
+          "event": {
+            "en": "She identifies the device and begins the warning.",
+            "es": "Identifica el dispositivo y comienza la advertencia."
+          },
+          "endState": {
+            "en": "The warning establishes the package as a Proxima threat.",
+            "es": "La advertencia establece el paquete como una amenaza para Próxima."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-063",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Zao remains beside the package in the shielding vault.",
+            "es": "Zao permanece junto al paquete en la bóveda de blindaje."
+          },
+          "event": {
+            "en": "She explains the Jupiter occlusion and forward intercept geometry.",
+            "es": "Explica la ocultación de Júpiter y la geometría de intercepción futura."
+          },
+          "endState": {
+            "en": "The bridge now understands why the warning was aimed ahead.",
+            "es": "El puente entiende ahora por qué la advertencia fue apuntada hacia adelante."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "presentCharacterIds": [
+        "character:zao"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity flashback in the inner shielding vault; Zao and the package are secured to the vault structure.",
+        "es": "Flashback en microgravedad dentro de la bóveda; Zao y el paquete están sujetos a la estructura."
+      },
+      "lighting": {
+        "en": "Vault service lighting and the package controller's diagnostic glow.",
+        "es": "Iluminación de servicio de la bóveda y brillo diagnóstico del controlador."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "package service panel",
+          "screenSide": "center",
+          "facing": "the package and recorder",
+          "posture": "other",
+          "eyelineTarget": "the package"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel delayed flashback in the shielding vault: Zao identifies the package and explains the occlusion that forced her forward optical warning.",
+        "es": "Flashback retardado en dos paneles: Zao identifica el paquete y explica la ocultación que la obligó a enviar la advertencia óptica hacia adelante."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+        "asset:object-proxima-geophysical-impulse-package-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-greeting-prep-083-086",
+      "title": {
+        "en": "Greeting preparation and launch (083–086)",
+        "es": "Preparación y envío del saludo (083–086)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-083",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Sorell and the bridge crew work around the hull-display translation.",
+            "es": "Sorell y la tripulación trabajan alrededor de la traducción en la pantalla del casco."
+          },
+          "event": {
+            "en": "She finishes converting the Velari primer into branching light.",
+            "es": "Termina de convertir el primer Velari en luz ramificada."
+          },
+          "endState": {
+            "en": "The clean greeting is ready for review.",
+            "es": "El saludo limpio queda listo para revisión."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-084",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The same bridge stations and display remain active.",
+            "es": "Los mismos puestos y pantalla del puente siguen activos."
+          },
+          "event": {
+            "en": "Sorell explains the primer's significance and Voss acknowledges his earlier mistake.",
+            "es": "Sorell explica la importancia del primer y Voss reconoce su error anterior."
+          },
+          "endState": {
+            "en": "The crew treats the greeting as a first answer, not a test.",
+            "es": "La tripulación trata el saludo como una primera respuesta, no como una prueba."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-085",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Sorell and Voss remain at the greeting console.",
+            "es": "Sorell y Voss permanecen en la consola del saludo."
+          },
+          "event": {
+            "en": "Voss authorizes one clean greeting and Sorell prepares the send.",
+            "es": "Voss autoriza un solo saludo limpio y Sorell prepara el envío."
+          },
+          "endState": {
+            "en": "The crew is committed to the limited transmission.",
+            "es": "La tripulación queda comprometida con la transmisión limitada."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-086",
+          "order": 4,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The bridge windows and hull display carry the prepared greeting.",
+            "es": "Las ventanas del puente y la pantalla del casco muestran el saludo preparado."
+          },
+          "event": {
+            "en": "Structured light branches across the Ardor while the station remains dark.",
+            "es": "La luz estructurada se ramifica por el Ardor mientras la estación permanece oscura."
+          },
+          "endState": {
+            "en": "The ship waits for the Velari answer.",
+            "es": "La nave espera la respuesta Velari."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:sorell",
+        "character:rao",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [
+        "character:harlan",
+        "character:zao"
+      ],
+      "physics": {
+        "en": "Steady approach conditions with apparent 1 g on the bridge; the hull display remains visible through the reinforced windows.",
+        "es": "Condiciones estables de aproximación con 1 g aparente en el puente; la pantalla del casco se ve por las ventanas reforzadas."
+      },
+      "lighting": {
+        "en": "Bridge practicals balanced against the branching greeting light.",
+        "es": "Luces prácticas del puente equilibradas con la luz ramificada del saludo."
+      },
+      "blocking": [
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "left",
+          "facing": "Sorell and hull display",
+          "posture": "standing",
+          "eyelineTarget": "character:sorell"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "translator station",
+          "screenSide": "center",
+          "facing": "Voss and display",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "right",
+          "facing": "the display",
+          "posture": "standing",
+          "eyelineTarget": "the display"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station",
+          "screenSide": "off",
+          "facing": "the bridge",
+          "posture": "standing",
+          "eyelineTarget": "the crew"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Bridge greeting-preparation stretch: Sorell translates, Voss reconciles, the crew authorizes one clean send, and the Ardor answers the dark station with structured light.",
+        "es": "Tramo de preparación en el puente: Sorell traduce, Voss se reconcilia, la tripulación autoriza un envío limpio y el Ardor responde a la estación oscura con luz estructurada."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9"
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-velari-answer-087-088",
+      "title": {
+        "en": "Velari answer and transport sphere (087–088)",
+        "es": "Respuesta Velari y esfera de transporte (087–088)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-087",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The Velari station answers across the dark exterior while Sorell watches from the Ardor.",
+            "es": "La estación Velari responde en el exterior oscuro mientras Sorell observa desde el Ardor."
+          },
+          "event": {
+            "en": "She catches fragments of the invitation through the parser.",
+            "es": "Capta fragmentos de la invitación mediante el traductor."
+          },
+          "endState": {
+            "en": "The station's answer becomes an invitation to approach.",
+            "es": "La respuesta de la estación se convierte en una invitación a acercarse."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-088",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Sorell watches the station and the open space between vehicles.",
+            "es": "Sorell observa la estación y el espacio abierto entre los vehículos."
+          },
+          "event": {
+            "en": "The Velari Transport Sphere separates from the station and approaches without visible exhaust.",
+            "es": "La Esfera de Transporte Velari se separa de la estación y se acerca sin escape visible."
+          },
+          "endState": {
+            "en": "A physical envoy is on its way to the Ardor.",
+            "es": "Un enviado físico se dirige hacia el Ardor."
+          }
+        }
+      ],
+      "locationId": "location:velari-station",
+      "presentCharacterIds": [
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [
+        "character:rao",
+        "character:okoye"
+      ],
+      "physics": {
+        "en": "Microgravity outside the station; Sorell is tethered and the sphere moves without engines or exhaust.",
+        "es": "Microgravedad fuera de la estación; Sorell está sujeta y la esfera se mueve sin motores ni escape."
+      },
+      "lighting": {
+        "en": "Station skin and transport sphere provide the only luminous geometry against deep space.",
+        "es": "La piel de la estación y la esfera proporcionan la única geometría luminosa contra el espacio profundo."
+      },
+      "blocking": [
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "Ardor bridge window and tether point",
+          "screenSide": "left",
+          "facing": "the station and sphere",
+          "posture": "standing",
+          "eyelineTarget": "the Velari Transport Sphere"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "Ardor bridge window and adjacent tether point",
+          "screenSide": "right",
+          "facing": "the station and transport sphere",
+          "posture": "standing",
+          "eyelineTarget": "vehicle:velari-transport-sphere"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel exterior response: the station answers, then the Velari Transport Sphere departs and approaches Sorell's ship in microgravity.",
+        "es": "Respuesta exterior en dos paneles: la estación responde y luego la Esfera de Transporte Velari parte y se acerca a la nave de Sorell en microgravedad."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet",
+        "asset:location-velari-station-sheet",
+        "asset:vehicle-velari-transport-sphere-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-velari-envoy-091-092",
+      "title": {
+        "en": "Sorell meets the Velari envoy (091–092)",
+        "es": "Sorell conoce al enviado Velari (091–092)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-091",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Sorell drifts on her tether toward the waiting Velari Transport Sphere.",
+            "es": "Sorell deriva sujeta hacia la Esfera de Transporte Velari que espera."
+          },
+          "event": {
+            "en": "She chooses to cross the gap because meeting has meaning beyond the signal.",
+            "es": "Elige cruzar el espacio porque el encuentro tiene un significado que supera la señal."
+          },
+          "endState": {
+            "en": "Sorell reaches the sphere's transparent wall.",
+            "es": "Sorell llega a la pared transparente de la esfera."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-092",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Sorell faces the transparent sphere in open microgravity.",
+            "es": "Sorell enfrenta la esfera transparente en microgravedad abierta."
+          },
+          "event": {
+            "en": "The floating Velari envoy gathers its light, holds Sorell's attention, and extends the greeting back through the wall.",
+            "es": "El enviado Velari flotante reúne su luz, sostiene la atención de Sorell y devuelve el saludo a través de la pared."
+          },
+          "endState": {
+            "en": "Human and Velari acknowledge one another without spoken language.",
+            "es": "Humana y Velari se reconocen sin lenguaje hablado."
+          }
+        }
+      ],
+      "locationId": "location:velari-station",
+      "presentCharacterIds": [
+        "character:sorell",
+        "character:velari-envoy"
+      ],
+      "absentCharacterIds": [
+        "character:voss",
+        "character:rao",
+        "character:okoye"
+      ],
+      "physics": {
+        "en": "Microgravity outside the station; Sorell remains tethered and the envoy floats inside the sphere with no floor.",
+        "es": "Microgravedad fuera de la estación; Sorell permanece sujeta y el enviado flota dentro de la esfera sin piso."
+      },
+      "lighting": {
+        "en": "The station and sphere remain readable while the envoy's living light becomes the focal exchange.",
+        "es": "La estación y la esfera siguen legibles mientras la luz viva del enviado se vuelve el foco del intercambio."
+      },
+      "blocking": [
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "tether point at sphere wall",
+          "screenSide": "left",
+          "facing": "through the sphere wall",
+          "posture": "other",
+          "eyelineTarget": "character:velari-envoy"
+        },
+        {
+          "characterId": "character:velari-envoy",
+          "zoneOrSeat": "floating center inside transport sphere",
+          "screenSide": "right",
+          "facing": "Sorell through the transparent wall",
+          "posture": "other",
+          "eyelineTarget": "character:sorell"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel first-contact exterior stretch: Sorell reaches the sphere, and the floating Velari envoy answers through its transparent wall in living light.",
+        "es": "Tramo exterior de primer contacto en dos paneles: Sorell llega a la esfera y el enviado Velari flotante responde a través de su pared transparente con luz viva."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-sorell-sheet",
+        "asset:character-velari-envoy-sheet",
+        "asset:location-velari-station-sheet",
+        "asset:vehicle-velari-transport-sphere-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-watch-093-094",
+      "title": {
+        "en": "Bridge watch and continuing duty (093–094)",
+        "es": "Guardia del puente y deber continuo (093–094)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-093",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The bridge keeps Harlan secure while the armed package remains under watch.",
+            "es": "El puente mantiene seguro a Harlan mientras el paquete armado sigue vigilado."
+          },
+          "event": {
+            "en": "Okoye takes first watch aft.",
+            "es": "Okoye asume la primera guardia a popa."
+          },
+          "endState": {
+            "en": "The crew remains committed to the return window.",
+            "es": "La tripulación sigue comprometida con la ventana de regreso."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-094",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Voss and Rao remain at the bridge stations with Harlan and Sorell present.",
+            "es": "Voss y Rao permanecen en los puestos del puente con Harlan y Sorell presentes."
+          },
+          "event": {
+            "en": "Rao states the bridge repair and bomb-watch obligations; Voss changes the rota.",
+            "es": "Rao expone las obligaciones de reparar el puente y vigilar la bomba; Voss cambia la rotación."
+          },
+          "endState": {
+            "en": "The next watch and the unresolved device are clearly assigned.",
+            "es": "La siguiente guardia y el dispositivo pendiente quedan claramente asignados."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:sorell",
+        "character:rao",
+        "character:harlan",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Steady approach with apparent 1 g on the bridge; restrained Harlan remains under controlled supervision.",
+        "es": "Aproximación estable con 1 g aparente en el puente; Harlan permanece bajo supervisión controlada."
+      },
+      "lighting": {
+        "en": "Bridge practicals and restrained-console indicators.",
+        "es": "Luces prácticas del puente e indicadores de las consolas de contención."
+      },
+      "blocking": [
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "left",
+          "facing": "Rao and the crew",
+          "posture": "standing",
+          "eyelineTarget": "character:rao"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "translator station",
+          "screenSide": "center",
+          "facing": "Voss",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "right",
+          "facing": "the repair display",
+          "posture": "standing",
+          "eyelineTarget": "the display"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "secured security position",
+          "screenSide": "center",
+          "facing": "the command station",
+          "posture": "other",
+          "eyelineTarget": "character:voss"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station and aft watch access",
+          "screenSide": "right",
+          "facing": "Harlan and the command station",
+          "posture": "standing",
+          "eyelineTarget": "character:harlan"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel bridge watch: Harlan remains secured, Rao states the remaining repair and bomb-watch duties, and Voss assigns the next rota.",
+        "es": "Guardia del puente en dos paneles: Harlan sigue asegurado, Rao expone las reparaciones y la vigilancia pendientes, y Voss asigna la siguiente rotación."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-reactor-report-095-096",
+      "title": {
+        "en": "Voss sends the record (095–096)",
+        "es": "Voss envía el registro (095–096)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-095",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Voss reaches the restored optical array in the reactor service bay.",
+            "es": "Voss llega a la matriz óptica restaurada en la bahía de servicio del reactor."
+          },
+          "event": {
+            "en": "He attaches the record of discovery, murder, warning, intervention, and contact for Earth.",
+            "es": "Adjunta para la Tierra el registro del hallazgo, asesinato, advertencia, intervención y contacto."
+          },
+          "endState": {
+            "en": "The record is ready to leave independently.",
+            "es": "El registro está listo para salir de forma independiente."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-096",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The optical console confirms TRANSMITTED beside Zao's personnel photograph.",
+            "es": "La consola óptica confirma TRANSMITTED junto a la fotografía de personal de Zao."
+          },
+          "event": {
+            "en": "Voss addresses the photograph after the record leaves.",
+            "es": "Voss se dirige a la fotografía después de que sale el registro."
+          },
+          "endState": {
+            "en": "The film closes on Zao's warning reaching beyond the ship.",
+            "es": "La película cierra con la advertencia de Zao alcanzando más allá de la nave."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:zao"
+      ],
+      "absentCharacterIds": [
+        "character:harlan",
+        "character:sorell"
+      ],
+      "physics": {
+        "en": "Microgravity in the reactor service bay; Voss braces at the optical console.",
+        "es": "Microgravedad en la bahía de servicio del reactor; Voss se sujeta en la consola óptica."
+      },
+      "lighting": {
+        "en": "Optical-array glow, service-bay practicals, and Zao's photograph on the display.",
+        "es": "Brillo de la matriz óptica, luces prácticas de la bahía y fotografía de Zao en la pantalla."
+      },
+      "blocking": [
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "outer-bay optical console",
+          "screenSide": "center",
+          "facing": "the console and photograph",
+          "posture": "other",
+          "eyelineTarget": "the console"
+        },
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "personnel photograph on console display",
+          "screenSide": "right",
+          "facing": "camera",
+          "posture": "other",
+          "eyelineTarget": "character:voss",
+          "notes": {
+            "en": "Photograph only; Zao is not physically present.",
+            "es": "Sólo fotografía; Zao no está físicamente presente."
+          }
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel reactor-bay coda: Voss sends the independent record and then speaks quietly to Zao's displayed photograph.",
+        "es": "Coda en dos paneles en la bahía: Voss envía el registro independiente y luego habla en voz baja a la fotografía de Zao en pantalla."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet",
+        "asset:location-celestial-ardor-reactor-service-bay-sheet",
+        "asset:object-optical-contingency-transmitter-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-engineering-audit-016-017",
+      "title": {
+        "en": "Engineering audit opening (016–017)",
+        "es": "Inicio de la auditoría en ingeniería (016–017)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-016",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Zao continues the engineering audit.",
+            "es": "Zao continúa la auditoría de ingeniería."
+          },
+          "event": {
+            "en": "She inspects the anomalous load without leaving the engineering bay.",
+            "es": "Inspecciona la carga anómala sin salir de la bahía de ingeniería."
+          },
+          "endState": {
+            "en": "The unexplained extra load remains the active question.",
+            "es": "La carga extra inexplicada sigue siendo la pregunta activa."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-017",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Zao continues the engineering audit.",
+            "es": "Zao continúa la auditoría de ingeniería."
+          },
+          "event": {
+            "en": "She inspects the anomalous load without leaving the engineering bay.",
+            "es": "Inspecciona la carga anómala sin salir de la bahía de ingeniería."
+          },
+          "endState": {
+            "en": "The unexplained extra load remains the active question.",
+            "es": "La carga extra inexplicada sigue siendo la pregunta activa."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-engineering",
+      "presentCharacterIds": [
+        "character:zao"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the engineering bay during the audit.",
+        "es": "Microgravedad en la bahía de ingeniería durante la auditoría."
+      },
+      "lighting": {
+        "en": "Engineering practicals and diagnostic displays.",
+        "es": "Luces prácticas de ingeniería y pantallas de diagnóstico."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "engineering audit console",
+          "screenSide": "center",
+          "facing": "the diagnostic displays",
+          "posture": "other",
+          "eyelineTarget": "the active anomaly"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel engineering audit stretch; the same bay and Zao's investigation continue without a location reset.",
+        "es": "Tramo de auditoría en ingeniería en dos paneles; la misma bahía y la investigación de Zao continúan sin reinicio espacial."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:location-celestial-ardor-engineering-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-reactor-entrance-018-019",
+      "title": {
+        "en": "Reactor bay encounter (018–019)",
+        "es": "Encuentro en la bahía del reactor (018–019)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-018",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Zao remains at the reactor service-bay threshold.",
+            "es": "Zao permanece en el umbral de la bahía de servicio del reactor."
+          },
+          "event": {
+            "en": "Harlan crosses her path while the audit continues.",
+            "es": "Harlan cruza su camino mientras continúa la auditoría."
+          },
+          "endState": {
+            "en": "Their encounter moves the investigation into the bay.",
+            "es": "Su encuentro lleva la investigación a la bahía."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-019",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Zao remains at the reactor service-bay threshold.",
+            "es": "Zao permanece en el umbral de la bahía de servicio del reactor."
+          },
+          "event": {
+            "en": "Harlan crosses her path while the audit continues.",
+            "es": "Harlan cruza su camino mientras continúa la auditoría."
+          },
+          "endState": {
+            "en": "Their encounter moves the investigation into the bay.",
+            "es": "Su encuentro lleva la investigación a la bahía."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "presentCharacterIds": [
+        "character:zao",
+        "character:harlan"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the reactor service bay; both use rails and handholds.",
+        "es": "Microgravedad en la bahía de servicio del reactor; ambos usan rieles y asideros."
+      },
+      "lighting": {
+        "en": "Reactor-bay practicals and diagnostic glow.",
+        "es": "Luces prácticas de la bahía y brillo diagnóstico."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "bay threshold console",
+          "screenSide": "left",
+          "facing": "Harlan and the diagnostics",
+          "posture": "moving",
+          "eyelineTarget": "character:harlan"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "service-bay access rail",
+          "screenSide": "right",
+          "facing": "Zao",
+          "posture": "moving",
+          "eyelineTarget": "character:zao"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Two-panel reactor-bay entrance stretch; Zao and Harlan share the same microgravity threshold.",
+        "es": "Tramo de entrada en la bahía en dos paneles; Zao y Harlan comparten el mismo umbral en microgravedad."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            3,
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-reactor-service-bay-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-vault-discovery-020-022",
+      "title": {
+        "en": "Impulse package discovery (020–022)",
+        "es": "Hallazgo del paquete de impulso (020–022)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-020",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Zao reaches the inner shielding vault and the package is in view.",
+            "es": "Zao llega a la bóveda de blindaje interior y el paquete queda a la vista."
+          },
+          "event": {
+            "en": "She examines the package and recognizes the threat.",
+            "es": "Examina el paquete y reconoce la amenaza."
+          },
+          "endState": {
+            "en": "The discovery forces the warning decision that follows.",
+            "es": "El hallazgo fuerza la decisión de advertir que sigue."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-021",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Zao reaches the inner shielding vault and the package is in view.",
+            "es": "Zao llega a la bóveda de blindaje interior y el paquete queda a la vista."
+          },
+          "event": {
+            "en": "She examines the package and recognizes the threat.",
+            "es": "Examina el paquete y reconoce la amenaza."
+          },
+          "endState": {
+            "en": "The discovery forces the warning decision that follows.",
+            "es": "El hallazgo fuerza la decisión de advertir que sigue."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-022",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Zao reaches the inner shielding vault and the package is in view.",
+            "es": "Zao llega a la bóveda de blindaje interior y el paquete queda a la vista."
+          },
+          "event": {
+            "en": "She examines the package and recognizes the threat.",
+            "es": "Examina el paquete y reconoce la amenaza."
+          },
+          "endState": {
+            "en": "The discovery forces the warning decision that follows.",
+            "es": "El hallazgo fuerza la decisión de advertir que sigue."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "presentCharacterIds": [
+        "character:zao"
+      ],
+      "absentCharacterIds": [
+        "character:harlan"
+      ],
+      "physics": {
+        "en": "Microgravity in the inner shielding vault; the package is secured to the structure.",
+        "es": "Microgravedad en la bóveda de blindaje interior; el paquete está sujeto a la estructura."
+      },
+      "lighting": {
+        "en": "Vault service lighting and package diagnostics.",
+        "es": "Iluminación de servicio de la bóveda y diagnósticos del paquete."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "package service panel",
+          "screenSide": "center",
+          "facing": "the impulse package",
+          "posture": "other",
+          "eyelineTarget": "the package"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Three-panel vault discovery stretch; Zao recognizes the hidden threat.",
+        "es": "Tramo de hallazgo en la bóveda en tres paneles; Zao reconoce la amenaza oculta."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+        "asset:object-proxima-geophysical-impulse-package-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-service-cylinder-route-026-028",
+      "title": {
+        "en": "Service-cylinder routes to Zao (026–028)",
+        "es": "Service-cylinder routes to Zao (026–028)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-026",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-027",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-028",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the longitudinal service cylinder; Harlan uses the direct service route while Sorell uses the slower ladder route.",
+        "es": "Microgravity in the longitudinal service cylinder; Harlan uses the direct service route while Sorell uses the slower ladder route."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "established-1",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "established-2",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "established-3",
+          "screenSide": "right",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous visual stretch for shots 026–027–028, preserving location, cast, blocking, and physical continuity.",
+        "es": "Tramo visual continuo para las tomas 026–027–028, que conserva ubicación, elenco, puesta y continuidad física."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet",
+        "asset:location-celestial-ardor-service-cylinder-sheet",
+        "asset:object-wired-comms-deck-patch-panel-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-comms-cut-023-025",
+      "title": {
+        "en": "Bridge comms cut and response (023–025)",
+        "es": "Bridge comms cut and response (023–025)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-023",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-024",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-025",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:okoye",
+        "character:rao",
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "established-1",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "established-2",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "established-3",
+          "screenSide": "right",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "established-4",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "established-5",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous visual stretch for shots 023–024–025, preserving location, cast, blocking, and physical continuity.",
+        "es": "Tramo visual continuo para las tomas 023–024–025, que conserva ubicación, elenco, puesta y continuidad física."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-harlan-wrist-device-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-investigation-046-049",
+      "title": {
+        "en": "Bridge investigation and suspension (046–049)",
+        "es": "Bridge investigation and suspension (046–049)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-046",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-047",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-048",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-049",
+          "order": 4,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:okoye",
+        "character:rao",
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "established-1",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "established-2",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "established-3",
+          "screenSide": "right",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "established-4",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "established-5",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous visual stretch for shots 046–047–048–049, preserving location, cast, blocking, and physical continuity.",
+        "es": "Tramo visual continuo para las tomas 046–047–048–049, que conserva ubicación, elenco, puesta y continuidad física."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9"
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-fuel-audit-050-053",
+      "title": {
+        "en": "Bridge fuel audit and hypothesis break (050–053)",
+        "es": "Bridge fuel audit and hypothesis break (050–053)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-050",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-051",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-052",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-053",
+          "order": 4,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:okoye",
+        "character:rao",
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "established-1",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "established-2",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "established-3",
+          "screenSide": "right",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "established-4",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "established-5",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous visual stretch for shots 050–051–052–053, preserving location, cast, blocking, and physical continuity.",
+        "es": "Tramo visual continuo para las tomas 050–051–052–053, que conserva ubicación, elenco, puesta y continuidad física."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9"
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-command-break-064-067",
+      "title": {
+        "en": "Command break and evidence decision (064–067)",
+        "es": "Ruptura del mando y decisión sobre la evidencia (064–067)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-064",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-065",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-066",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-067",
+          "order": 4,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:okoye",
+        "character:rao",
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "established-1",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "established-2",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "established-3",
+          "screenSide": "right",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "established-4",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "established-5",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous bridge confrontation for shots 064–065–066–067, preserving the accusation, converging evidence, cast, blocking, and command geometry.",
+        "es": "Confrontación continua en el puente para las tomas 064–065–066–067, que conserva la acusación, la evidencia convergente, el elenco, la puesta y la geometría de mando."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9"
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-harlan-wrist-device-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-device-071-073",
+      "title": {
+        "en": "Harlan device and escape (071–073)",
+        "es": "Harlan device and escape (071–073)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-071",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-072",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-073",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:okoye",
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "established-1",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "established-2",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "established-3",
+          "screenSide": "right",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "established-4",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous visual stretch for shots 071–072–073, preserving location, cast, blocking, and physical continuity.",
+        "es": "Tramo visual continuo para las tomas 071–072–073, que conserva ubicación, elenco, puesta y continuidad física."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-sorell-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-harlan-wrist-device-sheet"
+      ]
+    },
+    {
+      "id": "festival-master:stretch-reactor-confrontation-077-079",
+      "title": {
+        "en": "Reactor confrontation and restraint (077–079)",
+        "es": "Confrontación y sujeción en el reactor (077–079)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-077",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The reactor-bay confrontation is established in microgravity.",
+            "es": "La confrontación en la bahía del reactor está establecida en microgravedad."
+          },
+          "event": {
+            "en": "Harlan reaches the control area as Rao, Voss, and Okoye close in.",
+            "es": "Harlan llega al área de control mientras Rao, Voss y Okoye se acercan."
+          },
+          "endState": {
+            "en": "The four-person spatial arrangement remains stable for the struggle.",
+            "es": "La disposición espacial de las cuatro personas permanece estable durante la lucha."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-078",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established reactor-bay arrangement continues.",
+            "es": "Continúa la disposición establecida de la bahía del reactor."
+          },
+          "event": {
+            "en": "The crew redirects Harlan's momentum away from the relay.",
+            "es": "La tripulación desvía el impulso de Harlan lejos del relé."
+          },
+          "endState": {
+            "en": "Harlan is held off the control while the technical intervention continues.",
+            "es": "Harlan queda apartado del control mientras continúa la intervención técnica."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-079",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Harlan remains restrained in the same microgravity geometry.",
+            "es": "Harlan permanece sujeto en la misma geometría de microgravedad."
+          },
+          "event": {
+            "en": "Okoye secures Harlan as Rao and Voss retain access to the relay and transmitter.",
+            "es": "Okoye asegura a Harlan mientras Rao y Voss conservan acceso al relé y al transmisor."
+          },
+          "endState": {
+            "en": "The hostile branch is ready for quarantine without changing the location or cast arrangement.",
+            "es": "La rama hostil queda lista para la cuarentena sin cambiar la ubicación ni la disposición del elenco."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:rao",
+        "character:voss",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the reactor service bay; handrails and tethers redirect momentum.",
+        "es": "Microgravedad en la bahía de servicio del reactor; pasamanos y sujeciones redirigen el impulso."
+      },
+      "lighting": {
+        "en": "Established reactor-bay practicals with the optical transmitter and relay consoles readable.",
+        "es": "Iluminación práctica establecida de la bahía del reactor con el transmisor óptico y las consolas del relé legibles."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "relay-console-center",
+          "screenSide": "left",
+          "facing": "toward the relay",
+          "posture": "floating",
+          "eyelineTarget": "the relay override"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "secondary-console-right",
+          "screenSide": "right",
+          "facing": "toward the relay",
+          "posture": "anchored",
+          "eyelineTarget": "the execution thread"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "upper-handrail",
+          "screenSide": "center",
+          "facing": "toward Harlan",
+          "posture": "anchored",
+          "eyelineTarget": "Harlan"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "service-rail-left",
+          "screenSide": "left",
+          "facing": "toward Harlan",
+          "posture": "floating",
+          "eyelineTarget": "Harlan"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous microgravity reactor-bay confrontation for shots 077–078–079, preserving the relay, transmitter, handrails, cast, and momentum direction.",
+        "es": "Confrontación continua en microgravedad en la bahía del reactor para las tomas 077–078–079, conservando el relé, el transmisor, los pasamanos, el elenco y la dirección del impulso."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-rao-sheet",
+        "asset:location-celestial-ardor-reactor-service-bay-sheet",
+        "asset:prop-pack-reactor-communications-sheet"
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-confrontation-077-079-sheet"
+    },
+    {
+      "id": "festival-master:stretch-vault-recovery-080-082",
+      "title": {
+        "en": "Inner vault recovery and evidence (080–082)",
+        "es": "Recuperación y evidencia en la bóveda interior (080–082)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-080",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The inner shielding vault is established in microgravity with the recovery props secured.",
+            "es": "La bóveda interior de blindaje está establecida en microgravedad con los accesorios de recuperación asegurados."
+          },
+          "event": {
+            "en": "Rao reaches the evidence console while Harlan and Okoye hold the access route.",
+            "es": "Rao llega a la consola de evidencia mientras Harlan y Okoye controlan la ruta de acceso."
+          },
+          "endState": {
+            "en": "The vault geometry and four-person blocking remain stable.",
+            "es": "La geometría de la bóveda y la puesta de las cuatro personas permanecen estables."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-081",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "The established vault arrangement continues.",
+            "es": "Continúa la disposición establecida de la bóveda."
+          },
+          "event": {
+            "en": "Rao examines the impulse package and time-reference diagnostic unit.",
+            "es": "Rao examina el paquete de impulso y la unidad de diagnóstico temporal."
+          },
+          "endState": {
+            "en": "The evidence remains in frame while Harlan and Okoye maintain their positions.",
+            "es": "La evidencia permanece en cuadro mientras Harlan y Okoye mantienen sus posiciones."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-082",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "The evidence and positions carry into the final vault panel.",
+            "es": "La evidencia y las posiciones pasan al panel final de la bóveda."
+          },
+          "event": {
+            "en": "Rao resolves the implication of the recovered package as Harlan and Okoye react without crossing the evidence path.",
+            "es": "Rao resuelve la implicación del paquete recuperado mientras Harlan y Okoye reaccionan sin cruzar la ruta de la evidencia."
+          },
+          "endState": {
+            "en": "The vault evidence is ready to carry into the next bridge sequence.",
+            "es": "La evidencia de la bóveda está lista para pasar a la siguiente secuencia del puente."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-inner-shielding-vault",
+      "presentCharacterIds": [
+        "character:rao",
+        "character:harlan",
+        "character:okoye",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the inner shielding vault; all four characters use handholds and the evidence remains secured.",
+        "es": "Microgravedad en la bóveda interior de blindaje; las cuatro personas usan asideros y la evidencia permanece asegurada."
+      },
+      "lighting": {
+        "en": "Established cool vault practicals with the impulse package and time-reference display readable.",
+        "es": "Iluminación fría práctica establecida de la bóveda con el paquete de impulso y la pantalla de referencia temporal legibles."
+      },
+      "blocking": [
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "evidence-console-center",
+          "screenSide": "center",
+          "facing": "toward the recovery props",
+          "posture": "anchored",
+          "eyelineTarget": "the impulse package and diagnostic unit"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "vault-access-left",
+          "screenSide": "left",
+          "facing": "toward Rao",
+          "posture": "floating",
+          "eyelineTarget": "Rao"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "vault-rail-right",
+          "screenSide": "right",
+          "facing": "toward Harlan and Rao",
+          "posture": "anchored",
+          "eyelineTarget": "the evidence path"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "vault-console-rear",
+          "screenSide": "right",
+          "facing": "toward Rao",
+          "posture": "anchored",
+          "eyelineTarget": "Rao"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Continuous microgravity inner-vault recovery for shots 080–081–082, preserving the evidence layout, access route, cast, and eyelines.",
+        "es": "Recuperación continua en microgravedad en la bóveda interior para las tomas 080–081–082, conservando la disposición de la evidencia, la ruta de acceso, el elenco y las miradas."
+      },
+      "generationProfile": {
+        "stillMode": "combined_storyboard_sheet",
+        "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        }
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-harlan-okoye-bridge-sheet",
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-rao-sheet",
+        "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+        "asset:prop-pack-vault-recovery-sheet"
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-vault-recovery-080-082-sheet"
     }
   ]
 }
