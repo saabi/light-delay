@@ -76,13 +76,20 @@ export function hrefAfterScriptSwitch(
 	if (/^\/script(\/[^/]+)?\/?$/.test(localPathname)) {
 		return withLocale(`/script/${encoded}`, options.locale);
 	}
+	const generationMatch = localPathname.match(/^\/generation\/(image|video|audio)(?:\/[^/]+)?\/?$/);
+	if (generationMatch) {
+		return withLocale(`/generation/${generationMatch[1]}/${encoded}`, options.locale);
+	}
 	return withLocale(`/script/${encoded}`, options.locale);
 }
 
 export function scriptSectionHref(
-	section: 'script' | 'animatic' | 'outline',
+	section: 'script' | 'animatic' | 'outline' | 'generation',
 	scriptId: string,
 	locale?: Locale
 ): string {
+	if (section === 'generation') {
+		return withLocale(`/generation/image/${encodeScriptId(scriptId)}`, locale);
+	}
 	return withLocale(`/${section}/${encodeScriptId(scriptId)}`, locale);
 }

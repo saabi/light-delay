@@ -175,6 +175,7 @@ and project output paths. The manifest does not authorize a provider run.
   its catalog/CLI/MCP contract is confirmed against a live account.
 - **`higgsfield-uploads/`** still indexes legacy cast sheets; `prepare:higgsfield` also stages stretch refs under `stretch/` in **handoff order** (keyframe slots → effective video visuals → voice), not arbitrary Set insertion order.
 - **Stretch still vs video refs:** keep `VisualStretch.referenceAssetIds` complete for still/keyframe jobs; optional `videoReferenceAssetIds` is a separate tri-state list for Seedance extras (`VISUAL_STRETCH_PIPELINE.md`, `SEEDANCE_PROMPTING.md` §6.2). Do not invent pilot `videoReferenceAssetIds` on Festival-master without author instruction.
+- **Generation readiness UI:** `/generation/image|video|audio/[scriptId]` (default Festival-master) lists packages with prompt/ref/output state; read-only — handoff remains CLI/`reports/runs`.
 
 ## 7. Dialogue tone pass (harsh → human/colloquial)
 

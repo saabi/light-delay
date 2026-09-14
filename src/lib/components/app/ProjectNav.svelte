@@ -35,6 +35,11 @@
 			label: m.nav_reports(),
 			match: '/reports'
 		},
+		{
+			href: scriptSectionHref('generation', activeScriptId),
+			label: m.nav_generation(),
+			match: '/generation'
+		},
 		...(shouldShowStudioNav()
 			? [{ href: withLocale('/studio'), label: m.nav_studio(), match: '/studio' }]
 			: []),

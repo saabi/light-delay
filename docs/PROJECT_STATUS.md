@@ -1,5 +1,10 @@
 # Estado del proyecto
 
+## 2026-09-14 — Generation package readiness routes (English source)
+
+- New /generation UI lists image, video, and audio packages with prompt/ref/output readiness; default cut is Festival-master.
+- Audio packages are cue-derived (no plan audio jobs yet).
+
 ## 2026-09-14 — Reporter EN dialogue recloned with female sample (English source)
 
 - Animatic TTS now tags character:periodista as Qwen [Reporter] instead of Kokoro Narrator.

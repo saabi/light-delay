@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-14 — Generation package readiness routes
+
+- Added /generation/image|video|audio/[scriptId] read-only browsers for prompt readiness, reference presence, and generation outputs (Festival-master default).
+- Plans load via import.meta.glob into the app; stretch jobs are primary image/video rows; dialogue cues drive audio packages (voice samples as refs, udioAssetId as output only).
+
 ## 2026-09-14 — Reporter animatic dialogue uses Qwen clone
 
 - Mapped character:periodista to Qwen [Reporter] in generate-animatic-dialogue-audio.py (was falling back to Kokoro Narrator, male).

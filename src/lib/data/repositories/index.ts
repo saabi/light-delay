@@ -273,6 +273,13 @@ export function getAssets(): AssetsFile {
 	return assertJsonModule(assetsJson as AssetsFile, 'assets');
 }
 
+export {
+	getGenerationPlan,
+	listGenerationPlanScriptIds,
+	resolveRefPresence
+} from './generationPlans';
+export type { AssetPresenceKind, ResolvedAssetPresence } from './generationPlans';
+
 export function getCharacters(): CharactersFile {
 	return assertJsonModule(charactersJson as CharactersFile, 'characters');
 }
