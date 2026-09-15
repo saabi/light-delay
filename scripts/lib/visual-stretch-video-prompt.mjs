@@ -157,8 +157,22 @@ export function compileStretchVideoPrompt({
 		.filter(Boolean)
 		.join('; ');
 
-	const blocking = formatBlockingForPrompt(stretch.blocking);
-	const present = (stretch.presentCharacterIds || []).join(', ') || BLOCKED;
+	/** Visible cast for this video bucket only (not the whole stretch). */
+	const presentIds = new Set();
+	for (const member of members) {
+		const shot = shotsById.get(member.shotId);
+		for (const ref of shot?.visibleRefs || []) {
+			if (ref?.kind === 'character' && ref.id) presentIds.add(ref.id);
+		}
+	}
+	const present =
+		[...presentIds].sort().join(', ') ||
+		(stretch.presentCharacterIds || []).join(', ') ||
+		BLOCKED;
+	const presentSet = new Set(presentIds.size ? presentIds : stretch.presentCharacterIds || []);
+	const blocking = formatBlockingForPrompt(
+		(stretch.blocking || []).filter((row) => presentSet.has(row.characterId))
+	);
 
 	/** @type {Record<string, string>} */
 	const sections = {

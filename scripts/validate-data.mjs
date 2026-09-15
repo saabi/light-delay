@@ -202,6 +202,12 @@ function validateVisualStretches(script, { label, shotIds, takeIds, characterIds
 		} else if (stillMode === 'independent_shared_authority' && gridLayout) {
 			errors.push(`${sLabel}: gridLayout must be absent for independent_shared_authority`);
 		}
+		const maxMembersPerVideoJob = stretch.generationProfile?.maxMembersPerVideoJob;
+		if (maxMembersPerVideoJob != null) {
+			if (!Number.isInteger(maxMembersPerVideoJob) || maxMembersPerVideoJob < 1) {
+				errors.push(`${sLabel}: generationProfile.maxMembersPerVideoJob must be a positive integer`);
+			}
+		}
 
 		const members = [...(stretch.members || [])].sort((a, b) => a.order - b.order);
 		if (!members.length) errors.push(`${sLabel}: members required`);
@@ -231,6 +237,13 @@ function validateVisualStretches(script, { label, shotIds, takeIds, characterIds
 				for (const takeId of member.takeIds || []) {
 					if (!takeIds.has(takeId)) errors.push(`${sLabel}: unknown take ${takeId}`);
 				}
+			}
+			if (Object.prototype.hasOwnProperty.call(member, 'videoReferenceAssetIds')) {
+				validateAssetRefList(
+					`${sLabel}.member[${member.shotId}]`,
+					'videoReferenceAssetIds',
+					member.videoReferenceAssetIds || []
+				);
 			}
 			for (const ref of shot?.visibleRefs || []) {
 				if (ref.kind !== 'character') continue;

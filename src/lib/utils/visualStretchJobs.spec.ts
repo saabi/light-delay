@@ -6,6 +6,7 @@ import { checkReferenceBudget } from '../../../scripts/lib/generation-planning.m
 import { computeStretchDigest } from '../../../scripts/lib/visual-stretch-digest.mjs';
 import { buildVisualStretchesReport } from '../../../scripts/lib/visual-stretches-report.mjs';
 import {
+	applyRegisteredStretchVideoOutputs,
 	buildVisualStretchJobs,
 	collectStillStretchReferences,
 	collectVideoStretchReferences,
@@ -318,6 +319,37 @@ describe('visual stretch Seedance partition', () => {
 		expect(jobs[0].runnable).toBe(false);
 		expect(isStretchJobRunnable(jobs[0])).toBe(false);
 	});
+
+	it('respects generationProfile.maxMembersPerVideoJob=1 under the duration ceiling', () => {
+		const members = [
+			{ shotId: 'a', order: 1 },
+			{ shotId: 'b', order: 2 },
+			{ shotId: 'c', order: 3 },
+			{ shotId: 'd', order: 4 }
+		];
+		const shotsById = new Map([
+			['a', { id: 'a', durationMs: 8000 }],
+			['b', { id: 'b', durationMs: 14000 }],
+			['c', { id: 'c', durationMs: 12000 }],
+			['d', { id: 'd', durationMs: 7000 }]
+		]);
+		const jobs = partitionStretchVideoJobs(
+			{ ...stretch, generationProfile: { maxMembersPerVideoJob: 1 } },
+			members,
+			shotsById,
+			EFFECTIVE_CEILING_MS,
+			'still:1',
+			{ providerSnapshotId: videoProviderFixture.id }
+		);
+		expect(jobs).toHaveLength(4);
+		expect(jobs.map((job) => job.memberInputs.map((m) => m.shotId))).toEqual([
+			['a'],
+			['b'],
+			['c'],
+			['d']
+		]);
+		expect(jobs.every((job) => (job.durationMs ?? 0) <= EFFECTIVE_CEILING_MS)).toBe(true);
+	});
 });
 
 describe('buildVisualStretchJobs integration', () => {
@@ -534,6 +566,145 @@ describe('buildVisualStretchJobs integration', () => {
 		expect(video?.compiledPrompt).toContain('style:');
 		expect(video?.compiledPrompt).toContain('physics: 1g while thrusting');
 	});
+
+	it('scopes explicit video identity sheets to speakers in each per-member job', () => {
+		const file = makeStretchScript({
+			memberDurationsMs: [5000, 5000],
+			withKeyframes: true,
+			referenceCount: 0
+		});
+		const stretch = file.visualStretches[0];
+		stretch.generationProfile.maxMembersPerVideoJob = 1;
+		stretch.videoReferenceAssetIds = [
+			'asset:character-zao-sheet',
+			'asset:character-rao-sheet',
+			'asset:character-voss-sheet'
+		];
+		stretch.videoPromptFreeze = {
+			status: 'approved',
+			approvedAt: '2026-09-15',
+			source: 'test'
+		};
+		stretch.physics = { en: 'microgravity' };
+		stretch.lighting = { en: 'practicals' };
+		stretch.sharedDescription = { en: 'bridge' };
+		stretch.members = stretch.members.map((member: any, index: number) => ({
+			...member,
+			startState: { en: `start ${index + 1}` },
+			event: { en: `event ${index + 1}` },
+			endState: { en: `end ${index + 1}` }
+		}));
+		file.shots[0].visibleRefs = [{ kind: 'character', id: 'character:voss' }];
+		file.shots[0].offScreenCharacterIds = ['character:zao'];
+		file.shots[0].cuePlacements = [{ cueId: 'cue:zao', atMs: 0, durationMs: 2000 }];
+		file.shots[0].camera = { movementDescription: { en: 'locked' } };
+		file.shots[0].description = { en: 'crew listens' };
+		file.shots[1].visibleRefs = [{ kind: 'character', id: 'character:voss' }];
+		file.shots[1].cuePlacements = [{ cueId: 'cue:voss', atMs: 0, durationMs: 2000 }];
+		file.shots[1].camera = { movementDescription: { en: 'pan' } };
+		file.shots[1].description = { en: 'voss answers' };
+		file.cues = [
+			{
+				id: 'cue:zao',
+				type: 'dialogue',
+				speakerId: 'character:zao',
+				content: { variants: { en: { spokenText: 'Bridge—' } } }
+			},
+			{
+				id: 'cue:voss',
+				type: 'dialogue',
+				speakerId: 'character:voss',
+				content: { variants: { en: { spokenText: 'Repeat.' } } }
+			}
+		];
+		const assetsById = new Map([
+			[
+				'asset:character-zao-sheet',
+				{
+					id: 'asset:character-zao-sheet',
+					metadata: { entityIds: ['character:zao'] },
+					path: '/z.png',
+					imageStatus: { status: 'current' }
+				}
+			],
+			[
+				'asset:character-rao-sheet',
+				{
+					id: 'asset:character-rao-sheet',
+					metadata: { entityIds: ['character:rao'] },
+					path: '/r.png',
+					imageStatus: { status: 'current' }
+				}
+			],
+			[
+				'asset:character-voss-sheet',
+				{
+					id: 'asset:character-voss-sheet',
+					metadata: { entityIds: ['character:voss'] },
+					path: '/v.png',
+					imageStatus: { status: 'current' }
+				}
+			],
+			[
+				'asset:panel-shot-1',
+				{ id: 'asset:panel-shot-1', path: '/p1.png', imageStatus: { status: 'current' } }
+			],
+			[
+				'asset:panel-shot-2',
+				{ id: 'asset:panel-shot-2', path: '/p2.png', imageStatus: { status: 'current' } }
+			],
+			[
+				'asset:voice-ref-en-zao',
+				{
+					id: 'asset:voice-ref-en-zao',
+					metadata: { characterId: 'character:zao' },
+					path: '/z.mp3',
+					imageStatus: { status: 'current' }
+				}
+			],
+			[
+				'asset:voice-ref-en-voss',
+				{
+					id: 'asset:voice-ref-en-voss',
+					metadata: { characterId: 'character:voss' },
+					path: '/v.mp3',
+					imageStatus: { status: 'current' }
+				}
+			]
+		]);
+		const jobs = buildVisualStretchJobs(file, {
+			maxSegmentMs: EFFECTIVE_CEILING_MS,
+			stillProvider: stillProviderFixture,
+			videoProvider: { ...videoProviderFixture, executable: true },
+			assetsById,
+			entityReferenceIds: new Map([
+				['character:zao', ['asset:character-zao-sheet']],
+				['character:rao', ['asset:character-rao-sheet']],
+				['character:voss', ['asset:character-voss-sheet']]
+			]),
+			voiceProfiles: [
+				{
+					characterId: 'character:zao',
+					variants: [{ language: 'en', sampleAssetIds: ['asset:voice-ref-en-zao'] }]
+				},
+				{
+					characterId: 'character:voss',
+					variants: [{ language: 'en', sampleAssetIds: ['asset:voice-ref-en-voss'] }]
+				}
+			]
+		});
+		const videoJobs = jobs.filter((j) => j.medium === 'video');
+		expect(videoJobs).toHaveLength(2);
+		expect(videoJobs[0].effectiveVideoReferenceAssetIds).toEqual(['asset:character-zao-sheet']);
+		expect(videoJobs[0].voiceSampleAssetIds).toEqual(['asset:voice-ref-en-zao']);
+		expect(videoJobs[0].compiledPrompt).toContain('character:zao');
+		expect(videoJobs[0].compiledPrompt).not.toContain('asset:character-rao-sheet');
+		expect(videoJobs[1].effectiveVideoReferenceAssetIds).toEqual([]);
+		expect(videoJobs[1].voiceSampleAssetIds).toEqual(['asset:voice-ref-en-voss']);
+		expect(videoJobs[1].compiledPrompt).toContain('asset:character-voss-sheet');
+		expect(videoJobs[1].compiledPrompt).not.toContain('asset:character-zao-sheet');
+		expect(videoJobs[1].compiledPrompt).not.toContain('asset:character-rao-sheet');
+	});
 });
 
 describe('visual stretch digest agreement', () => {
@@ -633,5 +804,40 @@ describe('still vs video hold split on stretch jobs', () => {
 			expect.arrayContaining(['member_generation_deferred:video:shot:1', 'generation_deferred:video'])
 		);
 		expect(isStretchJobRunnable(video)).toBe(false);
+	});
+});
+
+describe('applyRegisteredStretchVideoOutputs', () => {
+	it('copies assets.json stretchJobId onto matching video job outputs', () => {
+		const jobs = [
+			{
+				id: 'stretch:a:rev-1:video-1',
+				medium: 'video',
+				outputs: [{ order: 1, artifact: 'video' }]
+			},
+			{
+				id: 'stretch:a:rev-1',
+				medium: 'still',
+				outputs: [{ order: 1, artifact: 'combinedStoryboard' }]
+			}
+		];
+		applyRegisteredStretchVideoOutputs(
+			jobs,
+			new Map([
+				[
+					'asset:stretch-a-video',
+					{
+						id: 'asset:stretch-a-video',
+						kind: 'video',
+						metadata: { stretchJobId: 'stretch:a:rev-1:video-1' }
+					}
+				]
+			])
+		);
+		expect(jobs[0]?.outputs?.[0]).toMatchObject({
+			artifact: 'video',
+			assetId: 'asset:stretch-a-video'
+		});
+		expect(jobs[1]?.outputs?.[0]?.assetId).toBeUndefined();
 	});
 });

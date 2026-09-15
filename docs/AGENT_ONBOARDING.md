@@ -15,7 +15,7 @@ Status: English source. Not narrative authority.
 7. Edit English first; Spanish may be `needs_revision`.
 8. Higher layers win. Conflicting lower-layer story fixes → **notify → first approval → repercussion proposal → second approval → edit top-down** (`AGENTS.md`).
 9. Edit `Shot.description` before / with `Take.generation.prompt`. Still prompts: no spoken dialogue (`npm run scrub:still-prompts:check`).
-10. Do not regenerate images unless asked; `imageStatus` records debt only. Generation holds use `Take.productionGate` (skip deferred/blocked until cleared; plan `generationGate` is derived). Stretch still refs stay complete; optional `videoReferenceAssetIds` is separate.
+10. Do not regenerate images unless asked; `imageStatus` records debt only. Generation holds use `Take.productionGate` (skip deferred/blocked until cleared; plan `generationGate` is derived). Stretch still refs stay complete; optional `videoReferenceAssetIds` is separate. After Seedance, register/attach the clip so Movie mode replaces stills (`AGENT_GENERATION_BRIEF.md` §8.5).
 11. After material edits: `CHANGELOG.md`, `docs/PROJECT_STATUS.md`, `npm run validate:data`.
 
 ## Layer map
@@ -54,6 +54,7 @@ Authority flows **down**. Compatible lower-only fixes (typo, timing slack, non-s
 | Storyboard / stills / prompts | [`docs/production/AGENT_GENERATION_BRIEF.md`](production/AGENT_GENERATION_BRIEF.md), [`docs/ARQUITECTURA_GENERACION.md`](ARQUITECTURA_GENERACION.md), prompt lessons above |
 | Causal rebuild / meaning | [`docs/production/CAUSAL_AND_MEANING_PIPELINE.md`](production/CAUSAL_AND_MEANING_PIPELINE.md), `npm run report:causal-structure`, `npm run report:meaning-audit` |
 | Visual stretches (multi-shot stills) | [`docs/production/VISUAL_STRETCH_PIPELINE.md`](production/VISUAL_STRETCH_PIPELINE.md), `npm run compile:visual-stretch`, `npm run report:visual-stretches` |
+| MCP / Seedance smoke | [`docs/technical/HIGGSFIELD_MCP.md`](technical/HIGGSFIELD_MCP.md) §8b — package-prep must report **cost + input assets** before waiting for go |
 | App / Svelte | [`README.md`](../README.md), `src/lib/data/`, [`docs/ADR-0001-MULTI-SCRIPT-CONTINUITIES.md`](ADR-0001-MULTI-SCRIPT-CONTINUITIES.md) |
 | Media tooling | [`docs/production/RESOLVE_OTIO_EXPORT.md`](production/RESOLVE_OTIO_EXPORT.md), TTS scripts in `package.json` — not generation authority |
 
@@ -80,6 +81,7 @@ Authority flows **down**. Compatible lower-only fixes (typo, timing slack, non-s
 | `npm run report:causal-structure` | Live master + Festival fact bindings |
 | `npm run report:causal-validity` | Deprecated/obsolete cut ledgers only |
 | `npm run compile:visual-stretch` | Dry-run combined-sheet prompt for a stretch |
+| `npm run register:visual-stretch-video` | Attach a downloaded Seedance stretch clip so Movie mode replaces member stills |
 | `npm run rebuild:higgsfield-media-ledger` | Seed Higgsfield upload cache + duplicates report (`HIGGSFIELD_MCP.md` §8b) |
 | `npm run report:visual-stretches` | Stretch membership / blockers |
 | `npm run report:meaning-audit` | Meaning-review packet after structure is green |

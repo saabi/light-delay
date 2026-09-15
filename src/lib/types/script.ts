@@ -162,6 +162,13 @@ export interface VisualStretchMember {
 	endState?: StoryText;
 	/** Optional override; must validate against gridLayout. */
 	frameRegion?: { x: number; y: number; w: number; h: number };
+	/**
+	 * Optional Seedance-only extras for jobs that include this member.
+	 * Always attached (after keyframes) even when the character is mute on-screen —
+	 * use for exceptional identity lock when the keyframe has drifted. Prefer stretch
+	 * `videoReferenceAssetIds` for normal speaker sheets.
+	 */
+	videoReferenceAssetIds?: AssetId[];
 }
 
 export interface VisualStretchGridLayout {
@@ -199,6 +206,13 @@ export interface VisualStretch {
 		videoMode?: 'grouped_seedance' | 'none';
 		/** Required iff stillMode === combined_storyboard_sheet. */
 		gridLayout?: VisualStretchGridLayout;
+		/**
+		 * Optional Seedance partition cap. When set, flush a new video job once this
+		 * many members are in the bucket (in addition to the duration ceiling).
+		 * Use `1` for one Seedance generation per stretch member (avoids morphy
+		 * mid-job transitions between adjacent keyframes).
+		 */
+		maxMembersPerVideoJob?: number;
 	};
 	referenceAssetIds?: AssetId[];
 	/**

@@ -17,6 +17,7 @@ import {
 import { compileStretchVideoPrompt } from './visual-stretch-video-prompt.mjs';
 import {
 	collectVideoStretchReferences,
+	dialogueSpeakerIdsForMembers,
 	isStretchJobRunnable,
 	mergeAuthoredIdentityVideoAssetIds
 } from './visual-stretch-jobs.mjs';
@@ -216,7 +217,8 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 		entityReferenceIds: opts.entityReferenceIds ?? new Map(),
 		cuesById,
 		voiceProfiles: opts.voiceProfiles ?? [],
-		language: opts.language ?? 'en'
+		language: opts.language ?? 'en',
+		assetsById
 	});
 
 	const storedEffective = job.effectiveVideoReferenceAssetIds;
@@ -225,12 +227,19 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 		: Array.isArray(stretch.videoReferenceAssetIds)
 			? stretch.videoReferenceAssetIds
 			: [];
+	const speakerIds = dialogueSpeakerIdsForMembers({
+		members,
+		shotsById,
+		cuesById
+	});
+	const entityReferenceIds = opts.entityReferenceIds ?? new Map();
 	// The plan's effective list is budget-oriented and may omit entities already
 	// covered by keyframes. Spoken-character identity is a separate Seedance
-	// requirement, so retain explicit authored identity sheets in the handoff.
+	// requirement, so retain authored identity sheets for speakers in this job.
 	const effectiveVisualIds = mergeAuthoredIdentityVideoAssetIds(
 		Array.isArray(storedEffective) ? storedEffective : collected.effectiveVideoReferenceAssetIds,
-		authoredVideoIds
+		authoredVideoIds,
+		{ speakerIds, assetsById, entityReferenceIds }
 	);
 	const voiceIds = Array.isArray(job.voiceSampleAssetIds)
 		? job.voiceSampleAssetIds

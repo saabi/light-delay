@@ -94,6 +94,23 @@ for (const slug of scripts) {
 			}
 		}
 		let uniqueReferences = [...new Map(references.map((reference) => [reference.id, reference])).values()];
+		// A prepared take may carry an explicit per-shot reference set. This is the
+		// authoritative override for independent regeneration; it prevents a
+		// location catalog default from replacing a shot-specific reference view.
+		const selectedTakeForReferences = shot.selectedTakeId
+			? takesById.get(shot.selectedTakeId)
+			: undefined;
+		const authoredReferenceAssetIds = selectedTakeForReferences?.generation?.referenceAssetIds;
+		if (Array.isArray(authoredReferenceAssetIds) && authoredReferenceAssetIds.length) {
+			uniqueReferences = authoredReferenceAssetIds.map((assetId) => {
+				const asset = assetsById.get(assetId);
+				if (!asset) throw new Error(`Missing authored reference ${assetId} while building generation plan`);
+				const role = assetId.startsWith('asset:character-') ? 'character'
+					: assetId.startsWith('asset:location-') ? 'location'
+					: assetId.startsWith('asset:vehicle-') ? 'vehicle' : 'object';
+				return makeReference('image', assetId, true, role);
+			});
+		}
 
 		// Consolidate solo character sheets into an existing paired reference sheet when the
 		// character count alone would exceed the still image budget — applied algorithmically via

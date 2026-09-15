@@ -334,6 +334,9 @@ export function collectVideoStretchReferences(args) {
 	}
 	for (const kf of keyframeRefs) coveredAssetIds.add(kf.id);
 
+	const speakerIds = dialogueSpeakerIdsForMembers({ members, shotsById, cuesById });
+	const speakers = new Set(speakerIds);
+
 	const extraSource =
 		videoReferencePolicy === 'explicit'
 			? stretch.videoReferenceAssetIds || []
@@ -343,12 +346,37 @@ export function collectVideoStretchReferences(args) {
 	const visualExtras = [];
 	for (const assetId of extraSource) {
 		if (!assetId || coveredAssetIds.has(assetId)) continue;
+		if (videoReferencePolicy === 'explicit') {
+			const entities = entityIdsForAsset(assetId, assetsById, entityReferenceIds);
+			const neededForUncovered = entities.some(
+				(entityId) => requiredEntityIds.has(entityId) && !keyframeCoveredEntityIds.has(entityId)
+			);
+			const neededForSpeaker = entities.some((entityId) => speakers.has(entityId));
+			// Per-job packages must not inherit mute/other-shot identity sheets from the stretch list.
+			if (!neededForUncovered && !neededForSpeaker) continue;
+		}
 		visualExtras.push({
 			kind: /** @type {'image'} */ ('image'),
 			id: assetId,
 			role: 'visual_reference'
 		});
 		coveredAssetIds.add(assetId);
+	}
+
+	/** Exceptional per-member force refs (mute identity lock, etc.). Always attach. */
+	for (const member of members) {
+		for (const assetId of member.videoReferenceAssetIds || []) {
+			if (!assetId) continue;
+			if (visualExtras.some((r) => r.id === assetId) || keyframeRefs.some((r) => r.id === assetId)) {
+				continue;
+			}
+			visualExtras.push({
+				kind: /** @type {'image'} */ ('image'),
+				id: assetId,
+				role: 'visual_reference'
+			});
+			coveredAssetIds.add(assetId);
+		}
 	}
 
 	const effectiveVideoReferenceAssetIds = visualExtras.map((r) => r.id);
@@ -431,11 +459,55 @@ export function isVideoPromptFreezeApproved(stretch) {
 /**
  * Authored identity sheets stay attached for Seedance speaker mapping even when
  * keyframes already cover those entities in the budget-oriented effective list.
+ * When `speakerIds` is provided (per video job), only sheets that map to those
+ * speakers are re-attached — mute cast and other-shot speakers stay out.
  * @param {string[]} [collectedEffectiveIds]
  * @param {string[]} [authoredVideoIds]
+ * @param {{
+ *   speakerIds?: string[],
+ *   assetsById?: Map<string, any>,
+ *   entityReferenceIds?: Map<string, string[]>
+ * }} [opts]
  */
-export function mergeAuthoredIdentityVideoAssetIds(collectedEffectiveIds = [], authoredVideoIds = []) {
-	return [...new Set([...(collectedEffectiveIds || []), ...(authoredVideoIds || [])])];
+export function mergeAuthoredIdentityVideoAssetIds(
+	collectedEffectiveIds = [],
+	authoredVideoIds = [],
+	opts = {}
+) {
+	const speakerIds = opts.speakerIds;
+	let authored = authoredVideoIds || [];
+	if (Array.isArray(speakerIds)) {
+		const speakers = new Set(speakerIds);
+		authored = authored.filter((assetId) =>
+			entityIdsForAsset(assetId, opts.assetsById, opts.entityReferenceIds).some((id) =>
+				speakers.has(id)
+			)
+		);
+	}
+	return [...new Set([...(collectedEffectiveIds || []), ...authored])];
+}
+
+/**
+ * Dialogue speaker IDs for the members in a Seedance video bucket.
+ * @param {{
+ *   members: StretchMember[],
+ *   shotsById: Map<string, any>,
+ *   cuesById?: Map<string, any>
+ * }} args
+ * @returns {string[]}
+ */
+export function dialogueSpeakerIdsForMembers(args) {
+	const { members, shotsById, cuesById = new Map() } = args;
+	/** @type {Set<string>} */
+	const speakers = new Set();
+	for (const member of members) {
+		const shot = shotsById.get(member.shotId);
+		for (const placement of shot?.cuePlacements || []) {
+			const cue = cuesById.get(placement.cueId);
+			if (cue?.type === 'dialogue' && cue.speakerId) speakers.add(cue.speakerId);
+		}
+	}
+	return [...speakers].sort();
 }
 
 /**
@@ -561,7 +633,8 @@ function finalizeStretchJob(job, opts = {}) {
  *   assetsById?: Map<string, any>,
  *   manifestById?: Map<string, any>,
  *   videoProvider?: { id?: string, executable?: boolean, limits?: any },
- *   script?: { shots?: any[], cues?: any[] }
+ *   script?: { shots?: any[], cues?: any[] },
+ *   maxMembersPerVideoJob?: number | null
  * }} [opts]
  * @returns {VisualStretchJob[]}
  */
@@ -589,6 +662,9 @@ export function partitionStretchVideoJobs(
 	const providerSnapshotId = opts.providerSnapshotId ?? '';
 	const takesById = opts.takesById ?? new Map();
 	const gateCtx = { assetsById: opts.assetsById, manifestById: opts.manifestById };
+	const maxMembersRaw = opts.maxMembersPerVideoJob ?? stretch.generationProfile?.maxMembersPerVideoJob;
+	const maxMembersPerVideoJob =
+		Number.isInteger(maxMembersRaw) && maxMembersRaw > 0 ? maxMembersRaw : null;
 
 	/**
 	 * @param {StretchMember[]} bucketMembers
@@ -654,9 +730,19 @@ export function partitionStretchVideoJobs(
 		const uniqueSoFar = [...new Set(blockers)];
 		let compiledPrompt = null;
 		if (uniqueSoFar.length === 0) {
+			const speakerIds = dialogueSpeakerIdsForMembers({
+				members: bucketMembers,
+				shotsById,
+				cuesById
+			});
 			const identityVisualIds = mergeAuthoredIdentityVideoAssetIds(
 				effectiveVideoReferenceAssetIds,
-				stretch.videoReferenceAssetIds || []
+				stretch.videoReferenceAssetIds || [],
+				{
+					speakerIds,
+					assetsById: opts.assetsById,
+					entityReferenceIds
+				}
 			);
 			const compileRefs = buildVideoPromptReferences({
 				memberInputs,
@@ -726,10 +812,59 @@ export function partitionStretchVideoJobs(
 			continue;
 		}
 		if (bucket.length && bucketMs + duration > maxSegmentMs) flush();
+		if (
+			maxMembersPerVideoJob != null &&
+			bucket.length &&
+			bucket.length >= maxMembersPerVideoJob
+		) {
+			flush();
+		}
 		bucket.push(member);
 		bucketMs += duration;
 	}
 	flush();
+	return jobs;
+}
+
+/**
+ * Re-apply registered stretch video assets onto plan jobs after a rebuild.
+ * `register:visual-stretch-video` writes `outputs.assetId`; `production:plans` otherwise
+ * emits empty video outputs and Movie mode would fall back to stills.
+ * Lookup is `Asset.metadata.stretchJobId` → video job id.
+ *
+ * @param {VisualStretchJob[]} jobs
+ * @param {Map<string, any> | Record<string, any> | undefined} assetsById
+ * @returns {VisualStretchJob[]}
+ */
+export function applyRegisteredStretchVideoOutputs(jobs, assetsById) {
+	if (!jobs?.length || !assetsById) return jobs;
+	const values =
+		assetsById instanceof Map ? [...assetsById.values()] : Object.values(assetsById);
+	/** @type {Map<string, any>} */
+	const byJobId = new Map();
+	for (const asset of values) {
+		if (asset?.kind !== 'video') continue;
+		const jobId = asset.metadata?.stretchJobId;
+		if (!jobId) continue;
+		const prev = byJobId.get(jobId);
+		if (!prev) {
+			byJobId.set(jobId, asset);
+			continue;
+		}
+		const prevT = Date.parse(prev.source?.generatedAt || '') || 0;
+		const nextT = Date.parse(asset.source?.generatedAt || '') || 0;
+		if (nextT >= prevT) byJobId.set(jobId, asset);
+	}
+	if (!byJobId.size) return jobs;
+	for (const job of jobs) {
+		if (job.medium !== 'video') continue;
+		const asset = byJobId.get(job.id);
+		if (!asset?.id) continue;
+		const outputs = Array.isArray(job.outputs) ? job.outputs : [];
+		const videoOut = outputs.find((o) => o.artifact === 'video') || { order: 1, artifact: 'video' };
+		videoOut.assetId = asset.id;
+		job.outputs = [videoOut, ...outputs.filter((o) => o.artifact !== 'video')];
+	}
 	return jobs;
 }
 
@@ -824,6 +959,15 @@ export function buildVisualStretchJobs(
 		const keyframeByShotId = new Map();
 		for (const [shotId, take] of derivedByShot) {
 			if (take.imageAssetId) keyframeByShotId.set(shotId, take.imageAssetId);
+		}
+		// Independent author-supplied/selected stills are valid ordered keyframes too.
+		// Stretch-derived metadata is preferred, but a singleton or manually replaced
+		// selected take must not become a false missing_keyframe blocker.
+		for (const member of members) {
+			if (keyframeByShotId.has(member.shotId)) continue;
+			const shot = shotsById.get(member.shotId);
+			const selectedTake = shot?.selectedTakeId ? takesById.get(shot.selectedTakeId) : undefined;
+			if (selectedTake?.imageAssetId) keyframeByShotId.set(member.shotId, selectedTake.imageAssetId);
 		}
 
 		const stillSnapshotId = stillProvider?.id ?? '';
@@ -979,11 +1123,12 @@ export function buildVisualStretchJobs(
 					assetsById,
 					manifestById,
 					videoProvider,
-					script: file
+					script: file,
+					maxMembersPerVideoJob: stretch.generationProfile?.maxMembersPerVideoJob
 				}
 			);
 			jobs.push(...videoJobs);
 		}
 	}
-	return jobs;
+	return applyRegisteredStretchVideoOutputs(jobs, assetsById);
 }

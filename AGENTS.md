@@ -52,6 +52,7 @@ When a needed edit at a lower layer conflicts with authoritative truth above it:
 - **Do not regenerate existing images** unless explicitly instructed. Mark debt with `imageStatus` (`needs_regeneration` + reason). Marking stale ≠ permission to regenerate.
 - Generation scheduling holds use **`Take.productionGate`** (`deferred` / `blocked`), not `imageStatus`. Plan/stretch `generationGate` is derived only — edit the script take, then rebuild plans. Skip gated takes/jobs until the author clears the gate (`docs/JSON_FORMAT.md`, `docs/production/AGENT_GENERATION_BRIEF.md`). Holds are **medium-scoped**: `medium: "video"` (e.g. `video_deferred_external_reference`) defers only Seedance/video jobs and never makes a still/keyframe job non-runnable; absent/`all` blocks both.
 - Visual stretch still refs (`referenceAssetIds`) stay complete for keyframe generation; Seedance extras use optional `videoReferenceAssetIds` (see `docs/production/VISUAL_STRETCH_PIPELINE.md`).
+- After Seedance, **register the clip** or Movie mode keeps the still. Stretch jobs: `npm run register:visual-stretch-video` writes plan `outputs.assetId` (rebuilds re-apply it from `assets.json` `metadata.stretchJobId`). Singleton shot packages (not stretch jobs): land the MP4, add a `kind: video` asset, set the selected take’s `videoAssetId`. An unregistered file on disk does not play. See `docs/production/AGENT_GENERATION_BRIEF.md` §8.5.
 - Generation depth: `docs/production/AGENT_GENERATION_BRIEF.md`.
 
 ## Language and documentary authority

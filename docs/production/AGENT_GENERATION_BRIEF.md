@@ -162,7 +162,7 @@ and project output paths. The manifest does not authorize a provider run.
 - **No `storyboard.schema.json` / no standalone "storyboard JSON" product.** It lives today in
   `Shot.composition` + PNG stills + plan `artifacts.animaticStill`.
 - **`run.schema.json` + stretch handoffs** under `reports/runs/` (`npm run handoff:visual-stretch`). Ready runs (`status: ready`, `nonExecutable: false`) require a per-stretch `videoPromptFreeze.status: approved`, a compiled video prompt, and Seedance `executable: true`. Preview/`--allow-preview-prompt` runs must never be submitted. Tracked results: `data/production/runs/*-results.json` (`visual-stretch-result.schema.json`). Runbook: `HIGGSFIELD_MCP.md` §8b.
-- **`scripts/build-generation-plans.mjs`** regenerates deprecated cuts plus `light-delay-festival-master` (includes `visualStretchJobs` with pinned `providerSnapshotId`).
+- **`scripts/build-generation-plans.mjs`** regenerates deprecated cuts plus `light-delay-festival-master` (includes `visualStretchJobs` with pinned `providerSnapshotId`). Registered stretch videos are re-linked onto job `outputs.assetId` from `assets.json` (`metadata.stretchJobId`) so Movie mode keeps playing them after a rebuild.
 - **`compiledPrompt` must stay `null`** on every real plan until editorial freeze for that cut,
   per `docs/ARQUITECTURA_GENERACION.md` — unless this conversation explicitly says otherwise.
   Exercised: on 2026-09-14 the author lifted this for Festival-master **still** visual-stretch jobs
@@ -183,6 +183,8 @@ and project output paths. The manifest does not authorize a provider run.
   `confidence: provisional` after the 2026-09-14 MCP catalog confirmation. **Always submit at
   `480p`** (`preferredResolution` / run `parameters.resolution`); the MCP model default is 720p if
   omitted. Paid submit still requires `generate_video` `get_cost: true` plus human confirmation.
+  When presenting a ready package for go/no-go, report **credits and every input asset** (`assetId`,
+  role, path, ledger reuse vs upload) — never cost alone (`HIGGSFIELD_MCP.md` §8b step 6).
   Grouped video jobs also need `VisualStretch.videoPromptFreeze.status: approved`.
 - **`higgsfield-uploads/`** still indexes legacy cast sheets; `prepare:higgsfield` also stages stretch refs under `stretch/` in **handoff order** (keyframe slots → effective video visuals → voice), not arbitrary Set insertion order.
 - **Stretch still vs video refs:** keep `VisualStretch.referenceAssetIds` complete for still/keyframe jobs; optional `videoReferenceAssetIds` is a separate tri-state list for Seedance extras (`VISUAL_STRETCH_PIPELINE.md`, `SEEDANCE_PROMPTING.md` §6.2). Do not invent pilot `videoReferenceAssetIds` on Festival-master without author instruction.
@@ -282,6 +284,19 @@ negative: <what must not appear>
 }
 ```
 
+### 8.5 Animatic Movie mode — attach generated video (replaces stills)
+
+Movie mode does **not** scan `static/` for MP4s. A generated clip replaces the storyboard still only after it is registered and linked. Until then the animatic keeps playing the still (and cue WAVs).
+
+| Kind | How it plays | Agent action after download |
+| --- | --- | --- |
+| Visual-stretch Seedance job | One unmuted span covering that job’s `memberInputs` (duration = asset `durationMs`). Member cue WAVs are suppressed. | Land the MP4 on the agreed stretch path. `npm run register:visual-stretch-video -- --from <results> --run <ready-run.json> [--video …]`. That writes `assets.json` **and** plan `outputs.assetId`. Do **not** set member `take.videoAssetId`. |
+| Singleton shot package (039 / 040b / title sting, etc.) | One span on the selected take when no stretch job covers that shot. | **Do not** run `register:visual-stretch-video`. Add a `kind: video` asset (`needs_review`) and set `shot.selectedTakeId` → take `videoAssetId`. |
+
+Playable statuses: `needs_review` or `current`, file present, `durationMs` > 0. `production:plans` rebuilds re-apply stretch `outputs.assetId` from `assets.json` `metadata.stretchJobId` — do not drop those links by hand, and do not assume a rebuilt plan with empty video outputs means the clip is gone.
+
+Leaving a clip “pending review, not bound” is an editorial hold: the still stays on screen until the author asks to attach it. Detail: `VISUAL_STRETCH_PIPELINE.md` (Movie mode), `HIGGSFIELD_MCP.md` §8b.
+
 ## 9. Operating rules (paste-ready)
 
 > You generate Light Delay production JSON only.
@@ -306,7 +321,7 @@ negative: <what must not appear>
 > Skip takes with `productionGate.status` of `deferred` or `blocked` (and any stretch job that lists them in `generationGate.takeIds`) until the author clears the gate — do not treat that as `imageStatus` debt. Respect the gate's `medium`: a `video`-scoped hold (`video_deferred_external_reference`) skips only Seedance/video work; generate the still/keyframe normally. `needs_regeneration` never blocks a still.
 > Never remove a stretch `referenceAssetIds` entry because video will depict the same subject; author Seedance-only static refs on optional `videoReferenceAssetIds` (absent = fallback from still list; present including `[]` = explicit). Generate keyframes from the full still list first; compile video refs only after keyframes are registered; refuse runnable video while `missing_keyframe:*` or `uncovered_video_entity:*` remains (`VISUAL_STRETCH_PIPELINE.md`). Refuse `reference_budget:*` without trimming; use pack `metadata.entityIds` for multi-entity still coverage and explicit video extras. Fallback Seedance jobs do **not** inherit `reference_pack_required` from keyframe panels lacking `entityIds` — read `keyframeCoveredEntityIds` / `uncoveredVideoEntityIds`. `reference_pack_required` vs `reference_consolidation_required` are distinct remediations.
 > Keep `compiledPrompt: null` on video jobs until that stretch's `videoPromptFreeze` is approved (Festival-master still jobs were lifted 2026-09-14; OK stretches listed in `tmp/review-of-generated-stills.md` are frozen for Seedance). Do not submit ready runs until a human confirms `get_cost`.
-> Higgsfield submit: pin Private Ultra workspace `e4d99f54-5f04-4f20-8544-330c41232965`; reuse `remoteMediaId` from the ready run / ledger (upload only misses via `media_upload_widget`); decline IN THE DARK preset `24bae836-2c4a-48e0-89b6-49fcc0b21612` when offered; no auto-retry after failed/422 jobs. Singleton packages (039 / 040b / title sting) are not stretch jobs — do not `register:visual-stretch-video` on them.
+> Higgsfield submit: pin Private Ultra workspace `e4d99f54-5f04-4f20-8544-330c41232965`; reuse `remoteMediaId` from the ready run / ledger (upload only misses via `media_upload_widget`); decline IN THE DARK preset `24bae836-2c4a-48e0-89b6-49fcc0b21612` when offered; no auto-retry after failed/422 jobs. Singleton packages (039 / 040b / title sting) are not stretch jobs — do not `register:visual-stretch-video` on them; attach via a video asset + selected-take `videoAssetId` so Movie mode replaces the still (§8.5). Stretch clips: always `register:visual-stretch-video` after download — an unregistered MP4 does not play.
 > When rewriting dialogue for tone, edit English only and consult that speaker's voice-profile
 > `dialogueStyle` first; never fix tone by adding exposition.
 > Read `docs/ARQUITECTURA_GENERACION.md`, `docs/technical/HIGGSFIELD_MCP.md`, and

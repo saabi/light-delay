@@ -787,6 +787,8 @@ export interface Take {
     | "archived";
 
   imageAssetId?: AssetId;
+  // Movie mode plays this clip instead of the still when the file exists and no
+  // stretch video job covers the shot. Stretch clips bind at plan job outputs, not here.
   videoAssetId?: AssetId;
 
   // Editorial state of this image in the context of this take. A reused
@@ -852,6 +854,7 @@ combined storyboard sheets. See `docs/production/VISUAL_STRETCH_PIPELINE.md`.
   - **absent** → fallback: video extras derive from `referenceAssetIds` after per-keyframe coverage.
   - **present** (including `[]`) → explicit: video extras come only from this list after coverage.
 - `videoPromptFreeze` — optional per-stretch Seedance freeze. `{ status: "approved", approvedAt, source }` is required before a grouped video job can drop `editorial_prompt_freeze_not_approved` and receive `compiledPrompt`. Still jobs do not read this field.
+- `generationProfile.maxMembersPerVideoJob` — optional positive integer. Caps how many stretch members may share one Seedance job (in addition to the duration ceiling). Set `1` to generate each member as its own clip and avoid mid-job morphs between ordered keyframes.
 - Entity completeness for explicit video lists uses catalog entity sheets (`referenceAssetIds` on
   characters/locations/…); a custom orphan asset may attach but does not cover an entity.
 - Plan jobs expose `stillReferenceAssetIds`, `videoReferencePolicy`, `effectiveVideoReferenceAssetIds`,
