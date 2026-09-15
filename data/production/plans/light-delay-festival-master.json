@@ -17886,7 +17886,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-1-video"
         }
       ],
       "blockers": [],
@@ -17992,7 +17993,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-2-video"
         }
       ],
       "blockers": [],
@@ -18105,7 +18107,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-3-video"
         }
       ],
       "blockers": [],

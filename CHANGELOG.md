@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 — Bridge-comms 023–025 Seedance videos submitted
+
+- Submitted all three parallel Seedance jobs (`51151957…` / `872cd172…` / `03d34830…`), **55 cr** total (17.5+20+17.5). Downloaded and registered pending review under the bridge-comms stretch path. Split package with forced mute-cast sheets; 024 keeps cue-0047 J-cut note for post.
+
 ## 2026-09-15 — Bridge-comms exceptional Seedance identity sheets
 
 - Exceptional mute-cast lock for face drift: member `videoReferenceAssetIds` force Voss/Sorell/Rao/Okoye sheets on 023 and 025, and Harlan + wrist-device sheets on 024. Speaker protocol unchanged; no guideline edits.

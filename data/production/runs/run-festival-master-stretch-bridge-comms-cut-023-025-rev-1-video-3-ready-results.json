@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "b6b68e3adfcc0ea0474e8d5aa5c74e5b9605c32fb2a0b08868d93360aaa8595b",
+  "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-3-ready.json",
+  "providerJobId": "03d34830-755d-4436-b75c-0518e7f70cd3",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 17.5,
+  "submittedAt": "2026-09-15T12:00:00Z",
+  "completedAt": "2026-09-15T12:05:00Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-025-rev-3": "7c5f91dd-470e-4d8e-b0d3-11d281ff4139",
+    "asset:character-voss-sheet": "88fed050-c15b-4950-a779-d67ec203a29f",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:character-okoye-sheet": "d275cf75-6828-4acc-8d27-dba850214e29",
+    "asset:voice-ref-en-elin": "0938dded-f8bd-4fb2-9145-566f50b3eabc",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-3.mp4",
+    "sha256": "e8f1e87191f89b99313ef24e2283f929916d0dd6874b55a452866d89f4a4822b",
+    "durationMs": 7042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 7410,
+  "notes": "Author go all three parallel; 480p omni_reference native audio; declined IN THE DARK preset 24bae836-2c4a-48e0-89b6-49fcc0b21612. Split package: speaker-scoped identity + forced mute-cast sheets (023/025 crew; 024 Harlan+wrist). 024 includes cue-0047 J-cut for Seedance (post replaces with 023 audio). Ledger reused character sheets + voices; keyframes uploaded per job.",
+  "registeredAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-3-video"
+}

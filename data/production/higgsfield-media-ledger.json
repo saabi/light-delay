@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-  "updatedAt": "2026-09-15T10:55:44.557Z",
+  "updatedAt": "2026-09-15T12:08:59.130Z",
   "notes": "Seeded from data/production/runs/*-results.json uploadHandles. Key is assetId + sha256 of current staging bytes (resolveStretchStagingSource). Voice assets with seedanceUploadPath are not seeded from historical handles (often full WAV).",
   "entries": [
     {
@@ -10,8 +10,8 @@
       "mediaId": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T07:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/characters/harlan/model-sheet-v2.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -21,8 +21,8 @@
       "mediaId": "d275cf75-6828-4acc-8d27-dba850214e29",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-vault-recovery-080-082:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-14T22:47:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/characters/okoye/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -43,8 +43,8 @@
       "mediaId": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T06:25:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/characters/rao/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -54,8 +54,8 @@
       "mediaId": "6ad0326d-d672-4834-b2ac-14e748528407",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-investigation-046-049:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-14T21:34:05.310Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/characters/sorell/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -65,8 +65,8 @@
       "mediaId": "88fed050-c15b-4950-a779-d67ec203a29f",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T05:52:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/characters/voss/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -76,8 +76,8 @@
       "mediaId": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-4:ready",
-      "uploadedAt": "2026-09-15T10:55:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/characters/zao/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -406,8 +406,8 @@
       "mediaId": "5d9ca18c-2105-4961-a876-2a195857e419",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:shot-plan-039:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-14T23:24:30Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/props/harlan-wrist-device/prop-sheet-v2.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -478,8 +478,8 @@
       "mediaId": "0938dded-f8bd-4fb2-9145-566f50b3eabc",
       "kind": "audio",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T06:25:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/voices/en/seedance-5s/Elin.mp3"
     },
     {
@@ -488,8 +488,8 @@
       "mediaId": "a53f345b-1044-408c-91e2-e0d37ea9a6d8",
       "kind": "audio",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T05:52:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/voices/en/seedance-5s/Voss.mp3"
     },
     {
@@ -498,8 +498,8 @@
       "mediaId": "6a62dc1d-8f6f-499d-bb01-4db9ebbb874e",
       "kind": "audio",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-4:ready",
-      "uploadedAt": "2026-09-15T10:55:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/voices/en/seedance-5s/Zao.mp3"
     },
     {
@@ -611,6 +611,36 @@
       "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-4:ready",
       "uploadedAt": "2026-09-15T10:55:00Z",
       "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-04.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-023-rev-2",
+      "sha256": "5076d0313d813f17c8aa0ff54a9479d698f053d4b82ff5cbcb12ad7478cbc535",
+      "mediaId": "a027da98-119a-4a76-99fb-8b39325ce9b4",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-023-rev-2.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-024-rev-3",
+      "sha256": "f6f252fd63205df858d9c286b4fb26b145a8802428a5977f89538a824ddca158",
+      "mediaId": "2f9aace3-243e-4822-a507-8624f2a6f22e",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-024-rev-3.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-025-rev-3",
+      "sha256": "58bcdc2fd1fb36c7d8fb73de132e6cf738c59f16e27fbfa20372e1f3bad0a47e",
+      "mediaId": "7c5f91dd-470e-4d8e-b0d3-11d281ff4139",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-025-rev-3.png"
     }
   ]
 }

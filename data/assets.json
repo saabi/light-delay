@@ -16598,6 +16598,105 @@
           "es": "Preámbulo de título unido a la picadura Tierra→Júpiter (~27 s). Pendiente de revisión editorial. Ligado a la toma de título seleccionada para el modo Película; rev-1 permanece en disco como la mitad de la picadura."
         }
       }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 7042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T12:05:00Z",
+        "externalId": "51151957-a7b8-48b5-b678-8dc317ff13a8"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "440eb68ff18a727d9d90ec0efe1073b03a93b23d59e0abc983340dc854418026",
+        "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-2-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T12:05:00Z",
+        "externalId": "872cd172-3740-4b2a-a12b-a9697578270e"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "4f9197399c844c8bdc6c50c1ef6bb99044c85bc33fe57131294bcbb5101c2f8a",
+        "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-3-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/festival-master-stretch-bridge-comms-cut-023-025-rev-1-video-3.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 7042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T12:05:00Z",
+        "externalId": "03d34830-755d-4436-b75c-0518e7f70cd3"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
+        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "b6b68e3adfcc0ea0474e8d5aa5c74e5b9605c32fb2a0b08868d93360aaa8595b",
+        "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
     }
   ]
 }

@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Bridge-comms 023–025 Seedance videos submitted (English source)
+
+- Three one-shot clips registered pending review (023/024/025). Total **55 cr**. Post still needs 024 audio J-cut from 023 for cue-0047.
+
 ## 2026-09-15 — Bridge-comms exceptional Seedance identity sheets (English source)
 
 - 023/025 Seedance jobs also attach the four bridge-crew sheets; 024 attaches Harlan + wrist-device sheets (exceptional face-drift lock via member `videoReferenceAssetIds`).
