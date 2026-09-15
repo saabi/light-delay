@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
+	animaticHrefForShot,
+	generationHrefForShot,
 	hrefAfterScriptSwitch,
 	resolveActiveScriptId,
 	scriptSectionHref
@@ -81,6 +83,25 @@ describe('hrefAfterScriptSwitch', () => {
 				search: '?filter=nope'
 			})
 		).toBe('/generation/image/script~light-delay-festival/');
+		expect(
+			hrefAfterScriptSwitch('/generation/audio/script~light-delay-main-short', festival, {
+				locale: 'en',
+				search: '?filter=blocked&shot=festival-master:shot-plan-040'
+			})
+		).toBe(
+			'/generation/audio/script~light-delay-festival/?filter=blocked&shot=festival-master%3Ashot-plan-040'
+		);
+	});
+});
+
+describe('generationHrefForShot', () => {
+	it('builds medium links that keep the shot query', () => {
+		expect(generationHrefForShot(main, 'image', 'festival-master:shot-plan-001', 'en')).toBe(
+			'/generation/image/script~light-delay-main-short/?shot=festival-master%3Ashot-plan-001'
+		);
+		expect(animaticHrefForShot(festival, 'festival-master:shot-plan-040b', 'en')).toBe(
+			'/animatic/script~light-delay-festival/?shot=festival-master%3Ashot-plan-040b'
+		);
 	});
 });
 

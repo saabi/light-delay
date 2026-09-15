@@ -10,9 +10,11 @@ import {
 	derivePackageRunnable,
 	filterPackages,
 	independentStillPrompt,
+	generationHrefsForShot,
 	listAudioPackages,
 	listImagePackages,
 	listVideoPackages,
+	packagesForShot,
 	packageHasOutput,
 	packageOutputStatus,
 	packageRefReadiness,
@@ -394,5 +396,55 @@ describe('generation package readiness predicates', () => {
 		expect(shot016b!.blockers).toEqual([]);
 		expect(packageOutputStatus(shot016b!)).toBe('needs_review');
 		expect(shot016b!.runnable).toBe(true);
+	});
+});
+
+describe('packagesForShot', () => {
+	const script = getScript(FESTIVAL);
+	const stretchShot = 'festival-master:shot-plan-001';
+	const independentStill = 'festival-master:shot-plan-016b';
+	const dialogueShot = 'festival-master:shot-plan-040';
+	const silentShot = 'festival-master:shot-plan-040b';
+
+	it('resolves stretch stills for members and independent stills by shot id', () => {
+		const images = listImagePackages(FESTIVAL);
+		const stretch = packagesForShot(images, stretchShot, script);
+		expect(stretch.some((pkg) => pkg.source === 'stretch_still')).toBe(true);
+		expect(stretch.every((pkg) => pkg.memberShotIds?.includes(stretchShot))).toBe(true);
+		expect(stretch.some((pkg) => pkg.id === `shot-still:${stretchShot}`)).toBe(false);
+
+		const independent = packagesForShot(images, independentStill, script);
+		expect(independent.map((pkg) => pkg.id)).toEqual([`shot-still:${independentStill}`]);
+		expect(independent[0]?.hrefs?.animaticShot).toContain(`shot=${encodeURIComponent(independentStill)}`);
+	});
+
+	it('resolves stretch video for members and singleton video segments', () => {
+		const videos = listVideoPackages(FESTIVAL);
+		const stretch = packagesForShot(videos, stretchShot, script);
+		expect(stretch.some((pkg) => pkg.source === 'stretch_video')).toBe(true);
+
+		const singleton = packagesForShot(videos, silentShot, script);
+		expect(singleton.length).toBeGreaterThan(0);
+		expect(singleton.every((pkg) => pkg.memberShotIds?.includes(silentShot))).toBe(true);
+		expect(singleton[0]?.hrefs?.animaticShot).toContain(`shot=${encodeURIComponent(silentShot)}`);
+	});
+
+	it('matches dialogue cue packages on the shot, not every cue in the scene', () => {
+		const audio = listAudioPackages(FESTIVAL);
+		const dialogue = packagesForShot(audio, dialogueShot, script);
+		expect(dialogue.length).toBeGreaterThan(0);
+		expect(
+			dialogue.every(
+				(pkg) => pkg.id.includes('cue-0079') || pkg.id.includes('cue-0080')
+			)
+		).toBe(true);
+
+		const silent = packagesForShot(audio, silentShot, script);
+		expect(silent).toEqual([]);
+		expect(audio.some((pkg) => pkg.memberShotIds?.includes(silentShot))).toBe(true);
+
+		const hrefs = generationHrefsForShot(FESTIVAL, dialogueShot);
+		expect(hrefs.audio).toContain(`shot=${encodeURIComponent(dialogueShot)}`);
+		expect(generationHrefsForShot(FESTIVAL, silentShot).audio).toBeNull();
 	});
 });

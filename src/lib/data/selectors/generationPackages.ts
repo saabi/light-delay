@@ -11,6 +11,7 @@ import { getScript, getVoiceProfiles } from '$lib/data/repositories/index';
 import { storyText } from '$lib/data/selectors/localized';
 import { getLocale } from '$lib/paraglide/runtime.js';
 import type { GenerationPackageFilter } from '$lib/utils/generationFilter';
+import { animaticHrefForShot, generationHrefForShot } from '$lib/utils/scriptRouting';
 
 export type GenerationMedium = 'image' | 'video' | 'audio';
 
@@ -304,7 +305,63 @@ function sceneGroupForSceneId(
 	return { groupId: scene.id, groupLabel: label || scene.id };
 }
 
-function imagePackageFromStretch(job: StretchJob): GenerationPackage {
+function animaticShotHrefs(
+	scriptId: string,
+	shotId: string | undefined
+): GenerationPackage['hrefs'] | undefined {
+	if (!shotId) return undefined;
+	return { animaticShot: animaticHrefForShot(scriptId, shotId) };
+}
+
+function firstShotIdForCue(script: ScriptFile, cueId: string): string | undefined {
+	return script.shots.find((shot) =>
+		shot.cuePlacements.some((placement) => placement.cueId === cueId)
+	)?.id;
+}
+
+export function cueIdFromAudioPackageId(packageId: string): string | null {
+	const match = /^cue:(.+):(en|es)$/.exec(packageId);
+	return match?.[1] ?? null;
+}
+
+export function packagesForShot(
+	packages: GenerationPackage[],
+	shotId: string,
+	script?: ScriptFile
+): GenerationPackage[] {
+	const cueIds = new Set(
+		script?.shots
+			.find((shot) => shot.id === shotId)
+			?.cuePlacements.map((placement) => placement.cueId) ?? []
+	);
+	return packages.filter((pkg) => {
+		if (pkg.source === 'dialogue_cue') {
+			const cueId = cueIdFromAudioPackageId(pkg.id);
+			return cueId != null && cueIds.has(cueId);
+		}
+		return Boolean(pkg.memberShotIds?.includes(shotId));
+	});
+}
+
+export function generationHrefsForShot(
+	scriptId: string,
+	shotId: string,
+	locale?: Parameters<typeof animaticHrefForShot>[2]
+): { image: string; video: string; audio: string | null } {
+	const script = getScript(scriptId as ScriptId);
+	const shot = script.shots.find((item) => item.id === shotId);
+	const cueIds = new Set(shot?.cuePlacements.map((placement) => placement.cueId) ?? []);
+	const hasDialogue = (script.cues || []).some(
+		(cue) => cue.type === 'dialogue' && cueIds.has(cue.id)
+	);
+	return {
+		image: generationHrefForShot(scriptId, 'image', shotId, locale),
+		video: generationHrefForShot(scriptId, 'video', shotId, locale),
+		audio: hasDialogue ? generationHrefForShot(scriptId, 'audio', shotId, locale) : null
+	};
+}
+
+function imagePackageFromStretch(job: StretchJob, scriptId: string): GenerationPackage {
 	const blockers = [...(job.blockers || [])];
 	const refs = (job.stillReferenceAssetIds || []).map((id) => refFromAssetId(id, 'still_reference'));
 	const promptReady = promptReadyFromCompiled(job.compiledPrompt, blockers);
@@ -321,7 +378,8 @@ function imagePackageFromStretch(job: StretchJob): GenerationPackage {
 		runnable: derivePackageRunnable({ promptReady, refs, blockers }, job.runnable),
 		memberShotIds: (job.memberInputs || []).map((m) => m.shotId),
 		groupId: job.stretchId,
-		groupLabel: job.stretchId
+		groupLabel: job.stretchId,
+		hrefs: animaticShotHrefs(scriptId, job.memberInputs?.[0]?.shotId)
 	};
 }
 
@@ -358,11 +416,12 @@ function imagePackageFromShot(shot: PlanShot, script: ScriptFile): GenerationPac
 		runnable: derivePackageRunnable({ promptReady, refs, blockers }),
 		memberShotIds: [shot.shotId],
 		groupId: group.groupId,
-		groupLabel: group.groupLabel
+		groupLabel: group.groupLabel,
+		hrefs: animaticShotHrefs(script.script.id, shot.shotId)
 	};
 }
 
-function videoPackageFromStretch(job: StretchJob): GenerationPackage {
+function videoPackageFromStretch(job: StretchJob, scriptId: string): GenerationPackage {
 	const blockers = [...(job.blockers || [])];
 	const refs: GenerationPackageRef[] = [];
 	for (const member of job.memberInputs || []) {
@@ -405,7 +464,8 @@ function videoPackageFromStretch(job: StretchJob): GenerationPackage {
 		runnable: derivePackageRunnable({ promptReady, refs, blockers }, job.runnable),
 		memberShotIds: (job.memberInputs || []).map((m) => m.shotId),
 		groupId: job.stretchId,
-		groupLabel: job.stretchId
+		groupLabel: job.stretchId,
+		hrefs: animaticShotHrefs(scriptId, job.memberInputs?.[0]?.shotId)
 	};
 }
 
@@ -447,7 +507,8 @@ function videoPackageFromSegment(
 		runnable: derivePackageRunnable({ promptReady, refs, blockers }),
 		memberShotIds: [shot.shotId],
 		groupId: group.groupId,
-		groupLabel: group.groupLabel
+		groupLabel: group.groupLabel,
+		hrefs: animaticShotHrefs(script.script.id, shot.shotId)
 	};
 }
 
@@ -506,7 +567,8 @@ function audioPackageFromCue(
 		runnable: derivePackageRunnable({ promptReady, refs, blockers }),
 		memberShotIds: shotIds,
 		groupId: group.groupId,
-		groupLabel: group.groupLabel
+		groupLabel: group.groupLabel,
+		hrefs: animaticShotHrefs(script.script.id, firstShotIdForCue(script, cue.id))
 	};
 }
 
@@ -518,7 +580,7 @@ export function listImagePackages(scriptId: ScriptId | string): GenerationPackag
 	const covered = stretchCoveredShotIds(jobs, 'still');
 	const packages: GenerationPackage[] = [];
 	for (const job of jobs) {
-		if (job.medium === 'still') packages.push(imagePackageFromStretch(job));
+		if (job.medium === 'still') packages.push(imagePackageFromStretch(job, script.script.id));
 	}
 	for (const shot of plan.shots || []) {
 		if (covered.has(shot.shotId)) continue;
@@ -535,7 +597,7 @@ export function listVideoPackages(scriptId: ScriptId | string): GenerationPackag
 	const covered = stretchCoveredShotIds(jobs, 'video');
 	const packages: GenerationPackage[] = [];
 	for (const job of jobs) {
-		if (job.medium === 'video') packages.push(videoPackageFromStretch(job));
+		if (job.medium === 'video') packages.push(videoPackageFromStretch(job, script.script.id));
 	}
 	for (const shot of plan.shots || []) {
 		if (covered.has(shot.shotId)) continue;

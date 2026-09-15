@@ -20,6 +20,12 @@ export default defineConfig({
 			paths: {
 				base,
 				relative: false
+			},
+			prerender: {
+				handleHttpError: ({ path, status, message }) => {
+					if (status === 404 && path.startsWith('/assets/')) return;
+					throw new Error(message);
+				}
 			}
 		}),
 		paraglideVitePlugin(paraglideOptions(base))

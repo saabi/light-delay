@@ -210,6 +210,7 @@
 							stretchMembership={findStretchForShot(script, shot.id)}
 							selected={shot.id === selectedShotId}
 							playerHref={`${playerHref}?shot=${encodeURIComponent(shot.id)}`}
+							scriptId={script.script.id}
 							onselect={() => selectShot(shot.id)}
 							onduration={(ms) => setDuration(shot.id, ms)}
 						/>

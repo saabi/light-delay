@@ -41,7 +41,7 @@
 	{#if !hasPlan}
 		<p class="empty">{m.generation_plan_missing()}</p>
 	{:else}
-		<GenerationPackageList {packages} />
+		<GenerationPackageList {packages} {scriptId} />
 	{/if}
 </main>
 

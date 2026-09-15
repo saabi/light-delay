@@ -9,6 +9,7 @@
 	import { getLanguageState } from '$lib/state/language.svelte';
 	import type { Cue, Shot, VisualStretch, VisualStretchMember } from '$lib/types/script';
 	import type { ShotMedia } from '$lib/data/repositories/lookups';
+	import ShotGenerationLinks from './ShotGenerationLinks.svelte';
 	import * as m from '$lib/paraglide/messages.js';
 
 	let {
@@ -20,6 +21,7 @@
 		cues = [],
 		readinessChips = [],
 		playerHref,
+		scriptId,
 		selected = false,
 		stretchMembership = null,
 		onselect,
@@ -36,6 +38,7 @@
 		cues?: Cue[];
 		readinessChips?: ShotReadinessChip[];
 		playerHref: string;
+		scriptId: string;
 		selected?: boolean;
 		stretchMembership?: { stretch: VisualStretch; member: VisualStretchMember } | null;
 		onselect?: () => void;
@@ -49,14 +52,14 @@
 
 	function onSelectClick(event: MouseEvent) {
 		const target = event.target as HTMLElement | null;
-		if (target?.closest('input, button, select, textarea, label')) return;
+		if (target?.closest('a, input, button, select, textarea, label')) return;
 		onselect?.();
 	}
 
 	function onSelectKeydown(event: KeyboardEvent) {
 		if (event.key !== 'Enter' && event.key !== ' ') return;
 		const target = event.target as HTMLElement | null;
-		if (target?.closest('input, button, select, textarea, label')) return;
+		if (target?.closest('a, input, button, select, textarea, label')) return;
 		event.preventDefault();
 		onselect?.();
 	}
@@ -144,6 +147,7 @@
 				{/if}
 			</div>
 		</div>
+		<ShotGenerationLinks {scriptId} shotId={shot.id} />
 	</div>
 </article>
 

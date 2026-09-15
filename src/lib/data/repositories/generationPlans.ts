@@ -23,7 +23,9 @@ for (const [path, mod] of Object.entries(planGlob)) {
 }
 
 /** Keys only — does not import file bytes into the client bundle. */
-const STATIC_ASSET_FILES = import.meta.glob('../../../../static/assets/**/*');
+const STATIC_ASSET_FILES = import.meta.glob('../../../../static/assets/**/*', {
+	query: '?url'
+});
 
 const STATIC_CATALOG_PATHS = new Set(
 	Object.keys(STATIC_ASSET_FILES)

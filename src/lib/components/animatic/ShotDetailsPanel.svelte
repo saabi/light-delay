@@ -32,6 +32,7 @@
 		isProductionGateHold,
 		productionGateMedium
 	} from '$lib/utils/productionGate';
+	import ShotGenerationLinks from './ShotGenerationLinks.svelte';
 	import { findStretchForShot, stretchBlockingBlockers } from '$lib/utils/visualStretch';
 	import {
 		collectStretchVisibleEntityIds,
@@ -210,6 +211,7 @@
 <div class="details-content">
 	<section>
 		<h3>{m.details_identity_time()}</h3>
+		<ShotGenerationLinks scriptId={script.script.id} shotId={shot.id} />
 		<dl>
 			<div>
 				<dt>{m.details_scene_shot()}</dt>

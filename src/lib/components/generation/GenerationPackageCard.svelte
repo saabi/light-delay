@@ -64,7 +64,7 @@
 	}
 </script>
 
-<article class="card" class:blocked={pkg.blockers.length > 0}>
+<article class="card" class:blocked={pkg.blockers.length > 0} id={packageDomId(pkg.id)} tabindex="-1">
 	<button
 		type="button"
 		class="head"
@@ -100,6 +100,11 @@
 			{/if}
 		</ul>
 	</button>
+	{#if pkg.hrefs?.animaticShot}
+		<p class="hop">
+			<a href={pkg.hrefs.animaticShot} data-generation-animatic-link>{m.generation_open_animatic()}</a>
+		</p>
+	{/if}
 
 	{#if expanded}
 		<div class="body" id={bodyId} role="region" aria-labelledby={`${packageDomId(pkg.id)}-toggle`}>
@@ -278,6 +283,21 @@
 		display: grid;
 		gap: 1rem;
 		border-top: 1px solid var(--line);
+	}
+
+	.hop {
+		margin: 0;
+		padding: 0 1.1rem 0.75rem;
+		font-size: 0.82rem;
+	}
+
+	.hop a {
+		color: var(--cyan);
+		text-decoration: none;
+	}
+
+	.hop a:hover {
+		text-decoration: underline;
 	}
 
 	.body h3 {

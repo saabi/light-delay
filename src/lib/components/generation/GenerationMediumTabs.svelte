@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { browser } from '$app/environment';
 	import { withLocale } from '$lib/utils/paths';
 	import { encodeScriptId } from '$lib/utils/scriptId';
 	import { generationSearchFromUrl } from '$lib/utils/generationFilter';
@@ -15,7 +16,9 @@
 	} = $props();
 
 	const encoded = $derived(encodeScriptId(scriptId));
-	const search = $derived(generationSearchFromUrl(page.url.search));
+	const search = $derived(
+		generationSearchFromUrl(browser ? page.url.searchParams : null)
+	);
 	const tabs = $derived([
 		{
 			id: 'image' as const,

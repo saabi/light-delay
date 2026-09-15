@@ -99,3 +99,18 @@ export function scriptSectionHref(
 	}
 	return withLocale(`/${section}/${encodeScriptId(scriptId)}`, locale);
 }
+
+export function generationHrefForShot(
+	scriptId: string,
+	medium: 'image' | 'video' | 'audio',
+	shotId: string,
+	locale?: Locale
+): string {
+	const path = withLocale(`/generation/${medium}/${encodeScriptId(scriptId)}`, locale);
+	return `${path}?shot=${encodeURIComponent(shotId)}`;
+}
+
+export function animaticHrefForShot(scriptId: string, shotId: string, locale?: Locale): string {
+	const path = withLocale(`/animatic/${encodeScriptId(scriptId)}`, locale);
+	return `${path}?shot=${encodeURIComponent(shotId)}`;
+}

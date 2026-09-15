@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { generationSearchFromUrl, parseGenerationFilter } from './generationFilter';
+import { generationSearchFromUrl, parseGenerationFilter, parseGenerationShot } from './generationFilter';
 
 describe('generation filter query', () => {
 	it('accepts known filters and defaults invalid values to all', () => {
@@ -15,5 +15,21 @@ describe('generation filter query', () => {
 		expect(generationSearchFromUrl('?filter=blocked')).toBe('?filter=blocked');
 		expect(generationSearchFromUrl('?filter=blocked&x=1')).toBe('?filter=blocked');
 		expect(generationSearchFromUrl('')).toBe('');
+	});
+
+	it('preserves shot with filter when switching generation tabs', () => {
+		expect(parseGenerationShot('  festival-master:shot-plan-001  ')).toBe(
+			'festival-master:shot-plan-001'
+		);
+		expect(parseGenerationShot('')).toBeNull();
+		expect(generationSearchFromUrl('?shot=festival-master:shot-plan-001')).toBe(
+			'?shot=festival-master%3Ashot-plan-001'
+		);
+		expect(generationSearchFromUrl('?filter=blocked&shot=festival-master:shot-plan-001&x=1')).toBe(
+			'?filter=blocked&shot=festival-master%3Ashot-plan-001'
+		);
+		expect(generationSearchFromUrl('?filter=all&shot=festival-master:shot-plan-001')).toBe(
+			'?shot=festival-master%3Ashot-plan-001'
+		);
 	});
 });

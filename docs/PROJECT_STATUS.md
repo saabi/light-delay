@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Animatic-to-generation package jumps (English source)
+
+- Festival-master animatic shot cards (and the details drawer) expose Image / Video / Audio jumps to `/generation/{medium}/{script}?shot=`. The generation list honors that query even when groups are collapsed: matching packages stay expanded and scrolled into view, and a hiding filter is ignored for display. Audio is hidden when the shot has no dialogue cue packages. Generation cards reverse-link with Open in animatic.
+
 ## 2026-09-15 — Festival-master title take Seedance sting (English source)
 
 - Earth→Jupiter title sting (job `d0602f1d-f9af-4651-bb06-38f321f3beae`) bound to `festival-master:shot-plan-title:take-01` as `videoAssetId`. Clip: `static/assets/animatic/frames/festival-master/shot-plan-title-rev-1-video-1.mp4`. Pending review; selected take and Blender video hold unchanged. Movie mode plays take-level videos on shots with no stretch cover.

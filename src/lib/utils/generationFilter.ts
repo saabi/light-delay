@@ -16,13 +16,27 @@ export function parseGenerationFilter(value: string | null | undefined): Generat
 	return 'all';
 }
 
-/** Query suffix for generation routes; empty when the filter is the default `all`. */
+export function parseGenerationShot(value: string | null | undefined): string | null {
+	const shot = value?.trim();
+	return shot ? shot : null;
+}
+
+function searchParamsFrom(search: string | URLSearchParams | null | undefined): URLSearchParams {
+	if (!search) return new URLSearchParams();
+	if (typeof search === 'string') {
+		return new URLSearchParams(search.startsWith('?') ? search.slice(1) : search);
+	}
+	return search;
+}
+
+/** Query suffix for generation routes; empty when filter is `all` and no shot is set. */
 export function generationSearchFromUrl(search: string | URLSearchParams | null | undefined): string {
-	if (!search) return '';
-	const params =
-		typeof search === 'string'
-			? new URLSearchParams(search.startsWith('?') ? search.slice(1) : search)
-			: search;
+	const params = searchParamsFrom(search);
+	const next = new URLSearchParams();
 	const filter = parseGenerationFilter(params.get('filter'));
-	return filter === 'all' ? '' : `?filter=${filter}`;
+	if (filter !== 'all') next.set('filter', filter);
+	const shot = parseGenerationShot(params.get('shot'));
+	if (shot) next.set('shot', shot);
+	const qs = next.toString();
+	return qs ? `?${qs}` : '';
 }

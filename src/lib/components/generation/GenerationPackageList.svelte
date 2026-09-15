@@ -1,13 +1,18 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
+	import { browser } from '$app/environment';
 	import { page } from '$app/state';
+	import { tick } from 'svelte';
 	import type { GenerationPackage } from '$lib/data/selectors/generationPackages';
 	import {
 		filterPackages,
 		groupPackages,
+		packagesForShot,
 		summarizePackages
 	} from '$lib/data/selectors/generationPackages';
+	import { packageDomId } from '$lib/data/selectors/generationPresentation';
+	import { getScript } from '$lib/data/repositories/index';
 	import GenerationPackageCard from './GenerationPackageCard.svelte';
 	import {
 		collapseNextLevel,
@@ -15,26 +20,52 @@
 	} from '$lib/utils/generationExpand';
 	import {
 		parseGenerationFilter,
+		parseGenerationShot,
 		type GenerationPackageFilter
 	} from '$lib/utils/generationFilter';
+	import type { ScriptId } from '$lib/types/ids';
 	import { SvelteSet } from 'svelte/reactivity';
 	import * as m from '$lib/paraglide/messages.js';
 
-	let { packages }: { packages: GenerationPackage[] } = $props();
+	let { packages, scriptId }: { packages: GenerationPackage[]; scriptId: string } = $props();
 
-	const filter = $derived(parseGenerationFilter(page.url.searchParams.get('filter')));
+	const requestedFilter = $derived(
+		parseGenerationFilter(browser ? page.url.searchParams.get('filter') : null)
+	);
+	const focusShotId = $derived(
+		parseGenerationShot(browser ? page.url.searchParams.get('shot') : null)
+	);
+	const script = $derived(getScript(scriptId as ScriptId));
+	const focusPackages = $derived(
+		focusShotId ? packagesForShot(packages, focusShotId, script) : []
+	);
+	const filter = $derived.by(() => {
+		if (!focusPackages.length) return requestedFilter;
+		if (filterPackages(focusPackages, requestedFilter).length === 0) return 'all';
+		return requestedFilter;
+	});
 	const summary = $derived(summarizePackages(packages));
 	const filtered = $derived(filterPackages(packages, filter));
 	const groups = $derived(groupPackages(filtered));
-	let expandedIds = new SvelteSet<string>();
+	let userExpandedIds = new SvelteSet<string>();
 	let userOpenGroupIds = $state<SvelteSet<string> | null>(null);
 	const openGroupIds = $derived.by(() => {
-		if (userOpenGroupIds) {
-			return new SvelteSet(
-				[...userOpenGroupIds].filter((id) => groups.some((group) => group.id === id))
-			);
+		const base = userOpenGroupIds
+			? new SvelteSet(
+					[...userOpenGroupIds].filter((id) => groups.some((group) => group.id === id))
+				)
+			: groups[0]
+				? new SvelteSet([groups[0].id])
+				: new SvelteSet<string>();
+		for (const pkg of focusPackages) {
+			if (groups.some((group) => group.id === pkg.groupId)) base.add(pkg.groupId);
 		}
-		return groups[0] ? new SvelteSet([groups[0].id]) : new SvelteSet<string>();
+		return base;
+	});
+	const expandedIds = $derived.by(() => {
+		const next = new SvelteSet(userExpandedIds);
+		for (const pkg of focusPackages) next.add(pkg.id);
+		return next;
 	});
 
 	const filterOptions = $derived([
@@ -58,8 +89,8 @@
 	}
 
 	function toggleCard(id: string) {
-		if (expandedIds.has(id)) expandedIds.delete(id);
-		else expandedIds.add(id);
+		if (userExpandedIds.has(id)) userExpandedIds.delete(id);
+		else userExpandedIds.add(id);
 	}
 
 	function toggleGroup(id: string) {
@@ -71,10 +102,10 @@
 
 	function applyExpandPatch(patch: { openGroupIds: Set<string>; expandedCardIds: Set<string> }) {
 		userOpenGroupIds = new SvelteSet(patch.openGroupIds);
-		for (const id of [...expandedIds]) {
-			if (!patch.expandedCardIds.has(id)) expandedIds.delete(id);
+		for (const id of [...userExpandedIds]) {
+			if (!patch.expandedCardIds.has(id)) userExpandedIds.delete(id);
 		}
-		for (const id of patch.expandedCardIds) expandedIds.add(id);
+		for (const id of patch.expandedCardIds) userExpandedIds.add(id);
 	}
 
 	function expandAll() {
@@ -82,8 +113,8 @@
 			expandNextLevel({
 				groupIds: groups.map((group) => group.id),
 				cardIds: filtered.map((pkg) => pkg.id),
-				openGroupIds,
-				expandedCardIds: expandedIds
+				openGroupIds: new Set(openGroupIds),
+				expandedCardIds: new Set(expandedIds)
 			})
 		);
 	}
@@ -93,8 +124,8 @@
 			collapseNextLevel({
 				groupIds: groups.map((group) => group.id),
 				cardIds: filtered.map((pkg) => pkg.id),
-				openGroupIds,
-				expandedCardIds: expandedIds
+				openGroupIds: new Set(openGroupIds),
+				expandedCardIds: new Set(expandedIds)
 			})
 		);
 	}
@@ -102,6 +133,23 @@
 	function groupAnchor(id: string) {
 		return `generation-group-${id.replace(/[^a-zA-Z0-9_-]+/g, '-')}`;
 	}
+
+	let lastFocusKey = '';
+	$effect(() => {
+		const first = focusPackages[0];
+		const key = first && focusShotId ? `${focusShotId}:${first.id}` : '';
+		if (!browser || !first || !key || key === lastFocusKey) return;
+		lastFocusKey = key;
+		const id = packageDomId(first.id);
+		void tick().then(() => {
+			requestAnimationFrame(() => {
+				const el = document.getElementById(id);
+				if (!el) return;
+				el.scrollIntoView({ block: 'center' });
+				if (el instanceof HTMLElement) el.focus({ preventScroll: true });
+			});
+		});
+	});
 </script>
 
 <div class="summary" role="status">
