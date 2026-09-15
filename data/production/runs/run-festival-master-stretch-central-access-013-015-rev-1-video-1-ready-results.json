@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-central-access-013-015:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-central-access-013-015",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "af0e3a6563a4b573993a786b2625aa31a9b5ae565ee4235ba333d2e02a56b726",
+  "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-central-access-013-015-rev-1-video-1-ready.json",
+  "providerJobId": "870bba91-51e4-4d6c-aa6c-055b91721854",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 37.5,
+  "submittedAt": "2026-09-15T06:19:00Z",
+  "completedAt": "2026-09-15T06:25:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-central-access-013-015-panel-01": "2464e809-882a-4a68-bb9f-0630d9c4bac2",
+    "asset:festival-master-stretch-central-access-013-015-panel-02": "73475cde-6e68-413e-a841-1246e266a3b7",
+    "asset:festival-master-stretch-central-access-013-015-panel-03": "4a2d65e9-459b-4536-9f1e-6ad9fff4f1f3",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:character-zao-sheet": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
+    "asset:voice-ref-en-elin": "0938dded-f8bd-4fb2-9145-566f50b3eabc",
+    "asset:voice-ref-en-zao": "6a62dc1d-8f6f-499d-bb01-4db9ebbb874e"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/festival-master-stretch-central-access-013-015-rev-1-video-1.mp4",
+    "sha256": "4422032f932ebcd262211a61b9d81624de2ed8e5e219762761e0a7bd3178df39",
+    "durationMs": 15042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 15020,
+  "notes": "Author send central-access-013-015 video-1; skipped exterior periapsis 013b. 480p omni_reference native audio; 37.5 cr; declined IN THE DARK. Ledger reused Elin/Zao sheets and Seedance 5s voices; uploaded three keyframe panels. Selected takes unchanged.",
+  "registeredAssetId": "asset:festival-master-stretch-central-access-013-015-rev-1-video-1-video"
+}

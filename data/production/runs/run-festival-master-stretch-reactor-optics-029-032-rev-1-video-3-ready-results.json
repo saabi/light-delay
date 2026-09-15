@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-reactor-optics-029-032:rev-1:video-3",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-reactor-optics-029-032",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "fe2115a400596334668acaba73fc7ef5e4e081c278b9f30ee3b08096afbd19b0",
+  "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-3:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-reactor-optics-029-032-rev-1-video-3-ready.json",
+  "providerJobId": "2bc1b5c3-2e11-4e55-a106-d87c93aca10f",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 30,
+  "submittedAt": "2026-09-15T10:48:56Z",
+  "completedAt": "2026-09-15T10:55:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-reactor-optics-029-032-panel-03": "8f460ca2-2c59-475f-963e-3a9271558e37",
+    "asset:character-zao-sheet": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
+    "asset:voice-ref-en-zao": "6a62dc1d-8f6f-499d-bb01-4db9ebbb874e"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/festival-master-stretch-reactor-optics-029-032-rev-1-video-3.mp4",
+    "sha256": "cc944851f1a814198a70bc7c2d24a0b6e0766457ab0ab01347f06656d0d1eeea",
+    "durationMs": 12042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 12220,
+  "notes": "Author go all four parallel; 480p omni_reference native audio; declined IN THE DARK preset 24bae836-2c4a-48e0-89b6-49fcc0b21612. Per-take package (maxMembersPerVideoJob:1). Ledger reused Zao sheet + 5s voice; keyframe panel uploaded for this job. Selected takes unchanged.",
+  "registeredAssetId": "asset:festival-master-stretch-reactor-optics-029-032-rev-1-video-3-video"
+}

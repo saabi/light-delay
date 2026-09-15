@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-title:rev-2:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-title",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "133d96b27192f163724bbab51e089acc5af99a3bfaa7b80182710f8db0c69627",
+  "sourceRunId": "run:festival-master:shot-plan-title:rev-2:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-title-rev-2-video-1-ready.json",
+  "providerJobId": "0964ef44-e5a7-48af-9f87-3b4c0217d834",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 30,
+  "submittedAt": "2026-09-15T08:11:00Z",
+  "completedAt": "2026-09-15T08:11:39Z",
+  "uploadHandles": {
+    "asset:art-bible-earth-protests-birds-eye-evening": "9a9c01af-b7b5-44dc-b26d-b5db7baa985a",
+    "asset:festival-master-shot-plan-title-rev-1-first-frame": "601706d1-fdd1-4910-b492-1ba17a0882b2"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-title-rev-2-video-1.mp4",
+    "sha256": "ab48fedebe41bb581fb011ff58be60e36d1b7acc2e7539197f81012c7812d121",
+    "durationMs": 27114,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 27000,
+  "notes": "Singleton title preamble (option 2), not a visual-stretch job; do not run register:visual-stretch-video. Seedance returned the 12s new segment only (job 0964ef44-e5a7-48af-9f87-3b4c0217d834, 30 cr, 480p). Raw at higgsfield-uploads/title/festival-master-shot-plan-title-rev-2-preamble-raw.mp4 and static/assets/animatic/frames/festival-master/shot-plan-title-rev-2-preamble-raw.mp4. Joined locally in front of shot-plan-title-rev-1 (~12.04s + 15.05s = ~27.11s). No start_image; dusk plaza as image_references; end_image = sting first frame. Declined IN THE DARK. selectedTakeId, take videoAssetId, and script durationMs unchanged. Review: last-frame lock to sting open is close; opening is closer than the wide plate but not a tight crowd hold; ~4s snaps to the dusk still; sign text garbles; left-dish flyby is a lift silhouette not a near pass."
+}

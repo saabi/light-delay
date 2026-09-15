@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-reactor-entrance-018-019:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-reactor-entrance-018-019",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "3792f34a130fc9e87c3b65536ff592ae730bb09067faae3c147ef1c0aec55a7b",
+  "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-reactor-entrance-018-019-rev-1-video-1-ready.json",
+  "providerJobId": "0b8db206-6fe5-4345-a3b9-10e4223b02ae",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 40,
+  "submittedAt": "2026-09-15T06:58:00Z",
+  "completedAt": "2026-09-15T07:05:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-reactor-entrance-018-019-panel-01": "78a72bb7-4198-4c56-a24b-b0690780d722",
+    "asset:festival-master-stretch-reactor-entrance-018-019-panel-02": "f623918f-fe54-4058-be27-18a3446bae93",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+    "asset:character-zao-sheet": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-zao": "6a62dc1d-8f6f-499d-bb01-4db9ebbb874e"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/festival-master-stretch-reactor-entrance-018-019-rev-1-video-1.mp4",
+    "sha256": "57bd9374e1dc6804a319b076a601a97f7419dbf37b707dd048d934143a9b80ed",
+    "durationMs": 16042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 15740,
+  "notes": "Author send reactor-entrance-018-019 video-1; 480p omni_reference native audio; 40 cr. Declined Higgsfield FREE FALL preset 9f2af35c-0b16-4cc9-860b-656e41403948 (literal Seedance, not a style preset). Ledger reused Harlan/Zao sheets and Seedance 5s voices; uploaded two keyframe panels. Selected takes unchanged.",
+  "registeredAssetId": "asset:festival-master-stretch-reactor-entrance-018-019-rev-1-video-1-video"
+}
