@@ -58,7 +58,7 @@ Public 2.5 guides converge on the same stack. Write it in English.
 Asset mapping
 + one-sentence brief (subject + location + event + style + camera treatment)
 + timeline or stages (action, camera, lighting, audio per beat)
-+ global constraints (identity, physics, no subtitles, no BGM, aspect)
++ global constraints (identity, physics, no subtitles, no music/dramatic instrumentation, aspect)
 ```
 
 Base formula when there are few or no references:
@@ -198,16 +198,26 @@ text and approved voice-sample `@Audio` references. The still-only scrub
 state, etc.) remains explicit in the prompt the same way as stills: the model does not inherit
 scene `setting.continuity` (`DIALOGUE_AND_PROMPT_LESSONS.md` §2c).
 
+### Audio contract (dialogue yes / music no)
+
+Seedance may generate **dialogue** (and diegetic SFX where the vacuum/interior rules allow). It must
+**never** generate **music** — no score, underscore, melody, BGM, musical bed, or **dramatic
+instrumentation** (stings, tension pads, orchestral swells, trailer hits, emotional underscore).
+Script `type: "music"` cues and the final soundtrack are mixed in **post** (`finalAudio` /
+Resolve), not inside the Seedance pass. Keep `generate_audio: true` so speech and diegesis can
+land; forbid score and dramatic instrumentation in the prompt and negative. Do not attach music
+reference clips.
+
 2.5 generates native audio in the same pass. Light Delay MCP jobs pass `generate_audio: true` by
 default. Set `false` only when the author asks for a silent clip. Optional explicit markup in some
 BytePlus/fal materials:
 
-| Content | Markup | Example |
-| --- | --- | --- |
-| Music | `( )` | `(low structural hull tone, no melody)` |
-| Sound effects | `< >` | `<restraint click>` |
-| Dialogue | `{ }` | `{Burn's clean.}` |
-| On-screen captions | `【 】` | avoid for Light Delay picture |
+| Content | Markup | Example | Light Delay |
+| --- | --- | --- | --- |
+| Music / score | `( )` | — | **Forbidden.** Do not request score, underscore, melody, BGM, or dramatic instrumentation. |
+| Sound effects | `< >` | `<restraint click>` | Diegetic only; vacuum rule applies outdoors. |
+| Dialogue | `{ }` | `{Burn's clean.}` | **Allowed** from script cues + voice samples (§6.1). |
+| On-screen captions | `【 】` | — | Avoid for Light Delay picture. |
 
 If English is spoken as the wrong language, reinforce **before** the line: language + variety +
 delivery + speaker + `{line}`. Do **not** represent accent with phonetic spelling
@@ -218,6 +228,9 @@ Light Delay constraints that override generic Seedance examples:
 - Prompt language is **English**.
 - Spoken lines come from the script cue, not invented coverage. Put the cue in `{ }` (or the
   equivalent spoken-line markup) and let Seedance perform it.
+- **No music / score / underscore / BGM / dramatic instrumentation** in the Seedance clip. Music
+  is authored and mixed later in post; never ask Seedance for a musical bed, sting, tension pad,
+  or emotional underscore, and reject review takes that add one.
 - **No burned-in subtitles or caption cards** in the picture (`No subtitles` as a global
   constraint). Subtitles are derived later from dialogue data.
 - Diegetic display text stays English-only (`JSON_FORMAT.md`).
@@ -225,7 +238,7 @@ Light Delay constraints that override generic Seedance examples:
   death of Zao).
 
 Vacuum: no diegetic SFX in open space. Interior pressurized shots may carry hull/restraint/engine
-cues (`DIALOGUE_AND_PROMPT_LESSONS.md` §2).
+cues (`DIALOGUE_AND_PROMPT_LESSONS.md` §2). Those are SFX, not score.
 
 ### 6.1 Voice samples only — never generated dialogue audio
 
@@ -342,8 +355,8 @@ assembling a Seedance-facing string from those sections, fold them as:
 | `physics` | Gravity/thrust state, speed, holds |
 | `interfaceVfx` | English diegetic UI only; no subtitle burn-in |
 | `continuity` | End states, wardrobe/equipment, screen direction |
-| `audio` | Voice-sample role map + cue text in `{ }`; vacuum rule; no cue WAVs |
-| `negative` | Failure-specific only |
+| `audio` | Voice-sample role map + cue text in `{ }`; diegetic SFX; vacuum rule; no cue WAVs; **no music / dramatic instrumentation** |
+| `negative` | Failure-specific only — always include no score/underscore/BGM/dramatic instrumentation/background music |
 
 Shot `description` remains the durable source. Do not hand-edit a compiled Seedance string while
 leaving `description` stale (`DIALOGUE_AND_PROMPT_LESSONS.md` §1).
@@ -371,9 +384,9 @@ MCP/CLI always charge.
 - Identity, wardrobe, prop count, and gravity/thrust state do not change unless the story does.
 - The last beat can land.
 - Uncommon camera terms describe the visible result.
-- Global constraints cover subtitles, extra characters, BGM, and the specific physics failure.
-- English dialogue matches the cue; trailer omissions are intact.
-- Audio refs are approved `sampleAssetIds` for speakers in the job only — no generated cue WAVs.
+- Global constraints cover subtitles, extra characters, **no music/score/BGM/dramatic instrumentation**, and the specific physics failure.
+- English dialogue matches the cue; trailer omissions are intact. Music and dramatic instrumentation stay for post mix.
+- Audio refs are approved `sampleAssetIds` for speakers in the job only — no generated cue WAVs, no music refs.
 - Consecutive same-location, same-cast shots under 30 s are one job unless a split is required.
 - `compiledPrompt` stays `null` until that stretch's `videoPromptFreeze` is approved (and Seedance is executable). Preview handoffs never authorize submit.
 
@@ -401,7 +414,8 @@ on the console.
 had to.} Hold the last frame.
 
 Global: Steady microgravity (hair and tether drift; no planted stance). No subtitles, no captions,
-no BGM, no extra characters, no large windows. Interior hull vibration only; no vacuum SFX.
+no music/score/BGM/dramatic instrumentation (soundtrack in post), no extra characters, no large
+windows. Interior hull vibration only; no vacuum SFX.
 ```
 
 ## 12. Open items (live Higgsfield 2.5 catalog)

@@ -16,8 +16,9 @@ is a disposable compiled artifact (see `DIALOGUE_AND_PROMPT_LESSONS.md` §1). Ea
 **stateless** — restate gravity and other load-bearing visual state in the prompt (or via attached
 refs); scene continuity is not visible to the image model (§2c). Still prompts must not paste spoken
 dialogue (`npm run scrub:still-prompts:check`); Seedance/video prompts intentionally include cue text
-and voice-sample `@Audio` refs instead. Higgsfield Seedance jobs pass `generate_audio: true` (native
-sound) unless the author asks for a silent clip.
+and voice-sample `@Audio` refs instead, and must **forbid music/score/BGM and dramatic
+instrumentation** (soundtrack is mixed in post — `SEEDANCE_PROMPTING.md` §6). Higgsfield Seedance
+jobs pass `generate_audio: true` (native speech/diegesis) unless the author asks for a silent clip.
 
 ## 1. Authority chain (read in this order)
 
@@ -254,8 +255,8 @@ lighting: <source, quality, motivated practicals>
 physics: <gravity state — 1g / microgravity / transition — from context id>
 interfaceVfx: <diegetic screens/holograms — English text only, from resolveDiegeticText>
 continuity: <what must match the surrounding shots/takes>
-audio: <voice-sample role map + script cue as spoken text; diegetic SFX; never generated cue WAVs>
-negative: <what must not appear>
+audio: <voice-sample role map + script cue as spoken text; diegetic SFX; never generated cue WAVs; never music/score/dramatic instrumentation>
+negative: <what must not appear — include no score/underscore/BGM/dramatic instrumentation/background music>
 ```
 
 ### 8.3 Reference-asset request (when `requiredReferences` names something uncataloged)

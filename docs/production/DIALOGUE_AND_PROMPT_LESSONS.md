@@ -96,9 +96,10 @@ Concretely:
   (`npm run scrub:still-prompts:check`). That exception is for **stills only**.
 - **Video (e.g. Seedance 2.5):** different contract — cue text plus approved voice-sample `@Audio`
   refs are inputs the model is meant to use for speech. Do not apply the still no-dialogue scrub
-  to Seedance job prompts; see `SEEDANCE_PROMPTING.md` §6. Physics and other visual state still
-  need to be explicit in the video prompt the same way (the model does not read `ScriptFile`
-  scene continuity either).
+  to Seedance job prompts; see `SEEDANCE_PROMPTING.md` §6. **No music/score/BGM or dramatic
+  instrumentation** in Seedance output — soundtrack is mixed in post. Physics and other visual
+  state still need to be explicit in the video prompt the same way (the model does not read
+  `ScriptFile` scene continuity either).
 
 **Apply to the rest of the corpus:** when auditing or compiling still prompts, treat missing
 gravity (or other load-bearing physical state) on a body/loose-object frame as a defect even if

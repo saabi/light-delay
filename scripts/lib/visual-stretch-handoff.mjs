@@ -379,7 +379,7 @@ export function buildVisualStretchRunHandoff(args) {
 					compiled: compiledPrompt,
 					blockers: [],
 					negativeEn:
-						'No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.'
+						'No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, score, underscore, BGM, dramatic instrumentation, or background music.'
 				}
 			: job.medium === 'video'
 				? compileStretchVideoPrompt({
