@@ -10924,7 +10924,11 @@
         "lang": "en",
         "characterId": "character:zao",
         "voiceProfileId": "voice:zao-es",
-        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt",
+        "seedanceUploadPath": "/assets/voices/en/seedance-5s/Zao.mp3",
+        "seedanceUploadMimeType": "audio/mpeg",
+        "seedanceUploadDurationMs": 5000,
+        "seedanceUploadNote": "Truncated MP3 for Seedance MCP voice refs (combined ≤30s). Canonical bank remains path (.wav)."
       }
     },
     {
@@ -10947,7 +10951,11 @@
         "lang": "en",
         "characterId": "character:voss",
         "voiceProfileId": "voice:voss-es",
-        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt",
+        "seedanceUploadPath": "/assets/voices/en/seedance-5s/Voss.mp3",
+        "seedanceUploadMimeType": "audio/mpeg",
+        "seedanceUploadDurationMs": 5000,
+        "seedanceUploadNote": "Truncated MP3 for Seedance MCP voice refs (combined ≤30s). Canonical bank remains path (.wav)."
       }
     },
     {
@@ -10970,7 +10978,11 @@
         "lang": "en",
         "characterId": "character:harlan",
         "voiceProfileId": "voice:harlan-es",
-        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt",
+        "seedanceUploadPath": "/assets/voices/en/seedance-5s/Harlan.mp3",
+        "seedanceUploadMimeType": "audio/mpeg",
+        "seedanceUploadDurationMs": 5000,
+        "seedanceUploadNote": "Truncated MP3 for Seedance MCP voice refs (combined ≤30s). Canonical bank remains path (.wav)."
       }
     },
     {
@@ -10993,7 +11005,11 @@
         "lang": "en",
         "characterId": "character:rao",
         "voiceProfileId": "voice:rao-es",
-        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt",
+        "seedanceUploadPath": "/assets/voices/en/seedance-5s/Elin.mp3",
+        "seedanceUploadMimeType": "audio/mpeg",
+        "seedanceUploadDurationMs": 5000,
+        "seedanceUploadNote": "Truncated MP3 for Seedance MCP voice refs (combined ≤30s). Canonical bank remains path (.wav)."
       }
     },
     {
@@ -11016,7 +11032,11 @@
         "lang": "en",
         "characterId": "character:sorell",
         "voiceProfileId": "voice:sorell-es",
-        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt",
+        "seedanceUploadPath": "/assets/voices/en/seedance-5s/Sorell.mp3",
+        "seedanceUploadMimeType": "audio/mpeg",
+        "seedanceUploadDurationMs": 5000,
+        "seedanceUploadNote": "Truncated MP3 for Seedance MCP voice refs (combined ≤30s). Canonical bank remains path (.wav)."
       }
     },
     {
@@ -11039,7 +11059,11 @@
         "lang": "en",
         "characterId": "character:okoye",
         "voiceProfileId": "voice:okoye",
-        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt",
+        "seedanceUploadPath": "/assets/voices/en/seedance-5s/Okoye.mp3",
+        "seedanceUploadMimeType": "audio/mpeg",
+        "seedanceUploadDurationMs": 5000,
+        "seedanceUploadNote": "Truncated MP3 for Seedance MCP voice refs (combined ≤30s). Canonical bank remains path (.wav)."
       }
     },
     {
@@ -11062,7 +11086,11 @@
         "lang": "en",
         "characterId": "character:periodista",
         "voiceProfileId": "voice:reporter-en",
-        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt"
+        "samplePhraseFile": "/assets/voices/en/REF_TEXT.txt",
+        "seedanceUploadPath": "/assets/voices/en/seedance-5s/Reporter.mp3",
+        "seedanceUploadMimeType": "audio/mpeg",
+        "seedanceUploadDurationMs": 5000,
+        "seedanceUploadNote": "Truncated MP3 for Seedance MCP voice refs (combined ≤30s). Canonical bank remains path (.wav)."
       }
     },
     {

@@ -51,6 +51,7 @@
 		"build:brand": "node scripts/build-brand-assets.mjs",
 		"port:legacy-text": "node scripts/port-legacy-documents.mjs",
 		"prepare:higgsfield": "node scripts/prepare-higgsfield-uploads.mjs",
+		"prepare:seedance-voice-clips": "node scripts/prepare-seedance-voice-clips.mjs",
 		"rebuild:higgsfield-media-ledger": "node scripts/rebuild-higgsfield-media-ledger.mjs",
 		"export:resolve-otio": "node scripts/export-resolve-otio.mjs --script-id script:light-delay-festival-master",
 		"export:resolve-otio:festival": "node scripts/export-resolve-otio.mjs --script-id script:light-delay-festival-master",

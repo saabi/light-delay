@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-15 — Durable Seedance 5s voice clips
+
+- Keep approved EN bank WAVs under `static/assets/voices/en/*.wav`. Store one-time **5 s MP3** Seedance clips under `static/assets/voices/en/seedance-5s/` (`npm run prepare:seedance-voice-clips`).
+- EN `asset:voice-ref-en-*` assets keep `path` on the bank WAV and add `metadata.seedanceUploadPath` for MCP staging; handoff and `prepare:higgsfield` prefer the clip for `voice_sample` roles.
+
 ## 2026-09-15 — Higgsfield media ledger
 
 - Added `data/production/higgsfield-media-ledger.json` (assetId + staging sha256 → remote `media_id`) seeded from run `uploadHandles`, plus `higgsfield-media-duplicates.json` for manual Assets UI cleanup.

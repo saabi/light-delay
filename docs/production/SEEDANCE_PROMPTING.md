@@ -100,8 +100,15 @@ delivers a line. Mute/off-frame characters do not receive identity or voice refs
 2.5 documented ceilings (ByteDance / fal, 2026-08-07): up to **30 images**, **10 videos**, **10
 audio** (50 slots). **Hard cap:** combined duration of all audio references (and separately all
 video references) must stay **≤ 30 s**. Full ~12 s voice WAVs × four speakers ≈ 48 s → Higgsfield
-MCP `generate_video` returns **422**; truncate each sample to ~5 s (or fewer speakers) before
-upload. Recommended stability is much smaller: **1–8 image-defined subjects**, **1–5**
+MCP `generate_video` returns **422**. Light Delay keeps the approved bank WAVs under
+`static/assets/voices/en/*.wav` and stores durable **5 s MP3** Seedance clips once at
+`static/assets/voices/en/seedance-5s/` (`npm run prepare:seedance-voice-clips`). EN
+`asset:voice-ref-en-*` records point at the bank via `path` and at the clip via
+`metadata.seedanceUploadPath`; handoff / `prepare:higgsfield` stage the clip for video jobs.
+Do not delete or overwrite the bank WAVs. After upload, handles land in
+`data/production/higgsfield-media-ledger.json` (reuse via ready-run `remoteMediaId` —
+see `HIGGSFIELD_MCP.md` §8b). Historical full-WAV uploads are not valid cache hits for
+these MP3s. Recommended stability is much smaller: **1–8 image-defined subjects**, **1–5**
 video/audio subjects, **5–10 s** per motion-reference clip. Capacity is not a target.
 
 Higgsfield 2.0 snapshot in this repo: 9 / 3 / 3 / 12 total

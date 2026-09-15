@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Durable Seedance 5s voice clips (English source)
+
+- EN bank voice WAVs unchanged. Durable 5 s MP3 clips live at `static/assets/voices/en/seedance-5s/` and are staged for Seedance via `metadata.seedanceUploadPath` (`npm run prepare:seedance-voice-clips`).
+
 ## 2026-09-15 — Higgsfield media ledger (English source)
 
 - Committed SoT `data/production/higgsfield-media-ledger.json` maps assetId + staging-file sha to Higgsfield `media_id` (Private Ultra workspace). Ready runs reuse via `remoteMediaId`; register upserts. `npm run rebuild:higgsfield-media-ledger` also writes `higgsfield-media-duplicates.json` for manual deletion of non-keeper input uploads. Voice Seedance MP3s are not seeded from historical WAV uploads.

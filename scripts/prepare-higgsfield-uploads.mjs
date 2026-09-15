@@ -10,7 +10,7 @@
 import { copyFileSync, mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
 import { dirname, extname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { stagingFilenameForAssetId, orderedStretchStagingAssetIds } from './lib/visual-stretch-handoff.mjs';
+import { stagingFilenameForAssetId, orderedStretchStagingAssetIds, resolveStretchStagingSource } from './lib/visual-stretch-handoff.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const STATIC = join(ROOT, 'static', 'assets');
@@ -280,8 +280,10 @@ function stageStretchAssets(rows) {
 	}
 	for (const assetId of orderedIds) {
 		const asset = assetsById.get(assetId);
-		if (!asset?.path) continue;
-		const rel = String(asset.path).replace(/^\/+/, '').replace(/^assets\//, '');
+		const role = asset?.role === 'voice_sample' ? 'voice_sample' : undefined;
+		const stagingSource = resolveStretchStagingSource(asset, { role });
+		if (!stagingSource.publicPath) continue;
+		const rel = String(stagingSource.publicPath).replace(/^\/+/, '').replace(/^assets\//, '');
 		const src = join(STATIC, rel);
 		if (!existsSync(src)) continue;
 		const ext = extname(src).replace(/^\./, '') || 'png';
