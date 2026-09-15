@@ -4748,8 +4748,8 @@
       ],
       "type": "action",
       "text": {
-        "es": "Exterior: el Celestial Ardor bordea Júpiter en la periapsis cerca de la velocidad pico (~1.000 km/s), radiadores recogidos, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras inicia el giro lento de punta a punta de prógrada (proa adelante) hacia retrógrada (motores adelante).",
-        "en": "Exterior: the Celestial Ardor coasts past Jupiter at periapsis near peak speed (~1,000 km/s), radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as it begins its slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward)."
+        "es": "Exterior: el Celestial Ardor bordea Júpiter en la periapsis, radiadores recogidos; un flyby lento de cámara pasa junto a la nave mientras inicia el giro lento de punta a punta de prógrada hacia retrógrada. Júpiter permanece casi fijo de fondo.",
+        "en": "Exterior: the Celestial Ardor coasts past Jupiter at periapsis, radiators retracted; a slow camera flyby passes the ship as it begins a slow end-for-end turn from prograde toward retrograde. Jupiter stays nearly fixed as backdrop."
       }
     },
     {
@@ -12549,8 +12549,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Exterior: el Ardor bordea Júpiter en la periapsis cerca de la velocidad pico (~1.000 km/s), radiadores recogidos, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras la nave inicia el giro lento de punta a punta de prógrada (proa adelante) hacia retrógrada (motores adelante).",
-        "en": "Exterior: the Ardor coasts past Jupiter at periapsis near peak speed (~1,000 km/s), radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward)."
+        "es": "Exterior: el Ardor bordea Júpiter en la periapsis, radiadores recogidos, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo; un flyby lento de cámara pasa junto a la nave mientras esta inicia un giro lento de punta a punta de prógrada (proa adelante) hacia retrógrada (motores adelante). Júpiter permanece casi fijo de fondo.",
+        "en": "Exterior: the Ardor coasts past Jupiter at periapsis, radiators retracted, backlit by the planet's banded cloud tops and faint ring arcs; a slow camera flyby passes the ship as it begins a slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward). Jupiter stays nearly fixed as backdrop."
       },
       "locationId": "location:jupiter-periapsis",
       "secondaryLocationIds": [],
@@ -12565,15 +12565,15 @@
         "size": "ELS",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Gran plano general sobre Periapsis de Júpiter; travelling bloqueado a la traslación de la nave; el parallax de las bandas y el anillo vende ~1.000 km/s; establece geografía y dirección de pantalla.",
-          "en": "Extreme long shot on Jupiter Periapsis; tracking locked to the ship's translation; band and ring parallax sells ~1,000 km/s; establishes geography and screen direction."
+          "es": "Gran plano general en periapsis; flyby lento / travelling suave a lo largo del casco; Júpiter casi estacionario; establece geografía y dirección de pantalla.",
+          "en": "Extreme long shot at periapsis; slow flyby / gentle truck along the hull; Jupiter nearly stationary; establishes geography and screen direction."
         }
       },
       "camera": {
         "movement": "tracking",
         "movementDescription": {
-          "es": "Travelling bloqueado a la traslación de la nave; el parallax de las bandas nubosas y los arcos del anillo vende ~1.000 km/s; establece geografía y dirección de pantalla.",
-          "en": "Tracking locked to the ship's translation; Jupiter cloud-band and ring-arc parallax sells ~1,000 km/s; establishes geography and screen direction."
+          "es": "Flyby lento / travelling suave a lo largo o ligeramente pasado el casco; Júpiter casi fijo; sin scroll rápido de bandas.",
+          "en": "Slow flyby / gentle truck along or slightly past the hull; Jupiter nearly fixed; no fast band scroll."
         }
       },
       "durationMs": 5000,
@@ -12593,8 +12593,8 @@
       ],
       "selectedTakeId": "festival-master:shot-plan-013b:take-01",
       "purpose": {
-        "es": "Escena «Primer descenso de gravedad»: hacer visible el inicio del giro prógrada→retrógrada a ~1.000 km/s en periapsis.",
-        "en": "Scene \"First gravity dip\": make visible the start of the prograde→retrograde turn at ~1,000 km/s at periapsis."
+        "es": "Escena «Primer descenso de gravedad»: flyby lento del Ardor mientras inicia el giro prógrada→retrógrada; Júpiter calmado de fondo.",
+        "en": "Scene \"First gravity dip\": slow flyby of the Ardor as it begins the prograde→retrograde turn; calm Jupiter backdrop."
       }
     },
     {
@@ -15930,7 +15930,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-057:take-01",
-        "festival-master:shot-plan-057:take-02"
+        "festival-master:shot-plan-057:take-02",
+        "festival-master:shot-plan-057:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-057:take-02",
       "purpose": {
@@ -16016,7 +16017,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-058:take-01",
-        "festival-master:shot-plan-058:take-02"
+        "festival-master:shot-plan-058:take-02",
+        "festival-master:shot-plan-058:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-058:take-02",
       "purpose": {
@@ -16080,7 +16082,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-059:take-01",
-        "festival-master:shot-plan-059:take-02"
+        "festival-master:shot-plan-059:take-02",
+        "festival-master:shot-plan-059:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-059:take-02",
       "offScreenCharacterIds": [
@@ -16153,7 +16156,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-060:take-01",
-        "festival-master:shot-plan-060:take-02"
+        "festival-master:shot-plan-060:take-02",
+        "festival-master:shot-plan-060:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-060:take-02",
       "offScreenCharacterIds": [
@@ -16235,7 +16239,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-061:take-01",
-        "festival-master:shot-plan-061:take-02"
+        "festival-master:shot-plan-061:take-02",
+        "festival-master:shot-plan-061:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-061:take-02",
       "purpose": {
@@ -16293,7 +16298,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-062:take-01",
-        "festival-master:shot-plan-062:take-02"
+        "festival-master:shot-plan-062:take-02",
+        "festival-master:shot-plan-062:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-062:take-02",
       "purpose": {
@@ -16351,7 +16357,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-063:take-01",
-        "festival-master:shot-plan-063:take-02"
+        "festival-master:shot-plan-063:take-02",
+        "festival-master:shot-plan-063:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-063:take-02",
       "purpose": {
@@ -16429,7 +16436,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-064:take-01",
-        "festival-master:shot-plan-064:take-02"
+        "festival-master:shot-plan-064:take-02",
+        "festival-master:shot-plan-064:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-064:take-02",
       "purpose": {
@@ -16507,7 +16515,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-065:take-01",
-        "festival-master:shot-plan-065:take-02"
+        "festival-master:shot-plan-065:take-02",
+        "festival-master:shot-plan-065:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-065:take-02",
       "purpose": {
@@ -16585,7 +16594,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-066:take-01",
-        "festival-master:shot-plan-066:take-02"
+        "festival-master:shot-plan-066:take-02",
+        "festival-master:shot-plan-066:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-066:take-02",
       "purpose": {
@@ -16663,7 +16673,8 @@
       ],
       "takeIds": [
         "festival-master:shot-plan-067:take-01",
-        "festival-master:shot-plan-067:take-02"
+        "festival-master:shot-plan-067:take-02",
+        "festival-master:shot-plan-067:take-03"
       ],
       "selectedTakeId": "festival-master:shot-plan-067:take-02",
       "purpose": {
@@ -19435,8 +19446,8 @@
       "number": 1,
       "status": "selected",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Exterior: the Celestial Ardor coasts past Jupiter at periapsis near peak speed (~1,000 km/s), radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward). Setting: deep space at Jupiter periapsis — the planet's banded cloud tops fill much of the frame, with faint, thin ring arcs visible near the limb; no atmosphere haze on the ship itself. Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis. No gravity reference (exterior shot). Frame implies a tracking move locked to the ship's translation, with cloud-band and ring parallax selling extreme velocity; establishes geography and screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, Saturn-style bold bright rings (Jupiter's rings are faint and thin, barely visible arcs), the ship inside or colliding with the planet's atmosphere, lit main torch plume, completed 180-degree flip",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Exterior: the Celestial Ardor coasts past Jupiter at periapsis, radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward). Setting: deep space at Jupiter periapsis — the planet's banded cloud tops fill much of the frame as a stable backdrop, with faint, thin ring arcs visible near the limb; no atmosphere haze on the ship itself. Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis. No gravity reference (exterior shot). Frame implies a slow flyby / gentle truck along the hull; Jupiter nearly stationary. Aspect ratio 16:9.",
+        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, Saturn-style bold bright rings (Jupiter's rings are faint and thin, barely visible arcs), the ship inside or colliding with the planet's atmosphere, lit main torch plume, completed 180-degree flip, spinning Jupiter, fast cloud-band scroll",
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:43:58.138Z",
@@ -19453,8 +19464,8 @@
         ],
         "sourceShotId": "festival-master:shot-plan-013b",
         "explanation": {
-          "en": "Author-approved periapsis exterior still; Seedance keyframe for singleton I2V (prograde→retrograde turn start; velocity via camera parallax).",
-          "es": "Still exterior de periapsis aprobado por el autor; fotograma clave Seedance para I2V singleton (inicio del giro prógrada→retrógrada; velocidad vía parallax de cámara)."
+          "en": "Author-approved periapsis exterior still; Seedance keyframe for singleton I2V (slow flyby + slow prograde→retrograde turn start; calm Jupiter).",
+          "es": "Still exterior de periapsis aprobado; fotograma clave Seedance (flyby lento + inicio lento del giro prógrada→retrógrada; Júpiter calmado)."
         }
       },
       "videoAssetId": "asset:festival-master-shot-plan-013b-rev-1-video-1-video"
@@ -24943,6 +24954,349 @@
           "asset:prop-pack-vault-recovery-sheet"
         ]
       }
+    },
+    {
+      "id": "festival-master:shot-plan-057:take-03",
+      "shotId": "festival-master:shot-plan-057",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:21.867Z",
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
+        "stretchDigest": "8ed56a64b2c128e2639c2d1f3aa079f69539af4dc73d65641ade1f4d333a8ca9",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-058:take-03",
+      "shotId": "festival-master:shot-plan-058",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:21.867Z",
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
+        "stretchDigest": "8ed56a64b2c128e2639c2d1f3aa079f69539af4dc73d65641ade1f4d333a8ca9",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-059:take-03",
+      "shotId": "festival-master:shot-plan-059",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:21.867Z",
+        "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
+        "stretchDigest": "8ed56a64b2c128e2639c2d1f3aa079f69539af4dc73d65641ade1f4d333a8ca9",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-060:take-03",
+      "shotId": "festival-master:shot-plan-060",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:31.829Z",
+        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
+        "stretchDigest": "df7ac8c6e9f0e5a0565144d6d035429f5615f73df63600deb48a7d10e182ad7f",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-061:take-03",
+      "shotId": "festival-master:shot-plan-061",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:31.829Z",
+        "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
+        "stretchDigest": "df7ac8c6e9f0e5a0565144d6d035429f5615f73df63600deb48a7d10e182ad7f",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-062:take-03",
+      "shotId": "festival-master:shot-plan-062",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:43.560Z",
+        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
+        "stretchDigest": "f7d46ca316f093d7c59ae2cdeb0ea209e3828280e78158f0dae29ed7eab10f00",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-063:take-03",
+      "shotId": "festival-master:shot-plan-063",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:43.560Z",
+        "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
+        "stretchDigest": "f7d46ca316f093d7c59ae2cdeb0ea209e3828280e78158f0dae29ed7eab10f00",
+        "referenceAssetIds": [
+          "asset:character-zao-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "asset:object-proxima-geophysical-impulse-package-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-064:take-03",
+      "shotId": "festival-master:shot-plan-064",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-064-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:45.955Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064:rev-2",
+        "stretchDigest": "960ef03e6536b9143a2234dd128ad697b11abbec06277e13f98606492019ef14",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-065:take-03",
+      "shotId": "festival-master:shot-plan-065",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:48.124Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
+        "stretchDigest": "39e7154ac30a9453c9003dbd07dc7c0b6d3f34fd774707485fee8d9db8110dba",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-066:take-03",
+      "shotId": "festival-master:shot-plan-066",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:48.124Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
+        "stretchDigest": "39e7154ac30a9453c9003dbd07dc7c0b6d3f34fd774707485fee8d9db8110dba",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
+    },
+    {
+      "id": "festival-master:shot-plan-067:take-03",
+      "shotId": "festival-master:shot-plan-067",
+      "number": 3,
+      "status": "candidate",
+      "imageAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      },
+      "generation": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:48.124Z",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
+        "stretchDigest": "39e7154ac30a9453c9003dbd07dc7c0b6d3f34fd774707485fee8d9db8110dba",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:object-harlan-wrist-device-sheet"
+        ]
+      }
     }
   ],
   "visualStretches": [
@@ -26766,7 +27120,7 @@
         "es": "Vector reconstruido y Harlan a solas (057–059)"
       },
       "status": "draft",
-      "revision": 1,
+      "revision": 2,
       "members": [
         {
           "shotId": "festival-master:shot-plan-057",
@@ -26922,7 +27276,7 @@
         "es": "Paquete entrante de Zao (060–061)"
       },
       "status": "draft",
-      "revision": 1,
+      "revision": 2,
       "members": [
         {
           "shotId": "festival-master:shot-plan-060",
@@ -27061,7 +27415,7 @@
         "es": "Flashback de Zao en la bóveda (062–063)"
       },
       "status": "draft",
-      "revision": 1,
+      "revision": 2,
       "members": [
         {
           "shotId": "festival-master:shot-plan-062",
@@ -28983,7 +29337,7 @@
         "es": "Ruptura de mando (064)"
       },
       "status": "draft",
-      "revision": 1,
+      "revision": 2,
       "members": [
         {
           "shotId": "festival-master:shot-plan-064",
@@ -29115,7 +29469,7 @@
         "es": "Ruptura de mando (065–067)"
       },
       "status": "draft",
-      "revision": 1,
+      "revision": 2,
       "members": [
         {
           "shotId": "festival-master:shot-plan-065",

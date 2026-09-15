@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "a558c6ee797ac6d3961308bfaa743da4560442c169dcb586b7a50781588f7347",
+    "sourceDigest": "08987f26fb72746efd0fdd2b2fbdad150b94e3801084cbabbf590b745630fb3d",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -16000,9 +16000,9 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-1",
+      "id": "festival-master:stretch-bridge-vector-057-059:rev-2",
       "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 1,
+      "revision": 2,
       "medium": "still",
       "mode": "combined_storyboard_sheet",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
@@ -16117,7 +16117,7 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-057:take-02",
+              "derivedTakeId": "festival-master:shot-plan-057:take-03",
               "derivedAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-01"
             },
             {
@@ -16132,7 +16132,7 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-058:take-02",
+              "derivedTakeId": "festival-master:shot-plan-058:take-03",
               "derivedAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-02"
             },
             {
@@ -16147,7 +16147,7 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-059:take-02",
+              "derivedTakeId": "festival-master:shot-plan-059:take-03",
               "derivedAssetId": "asset:festival-master-stretch-bridge-vector-057-059-panel-03"
             }
           ]
@@ -16158,14 +16158,14 @@
       "runnable": true
     },
     {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-1:video-1",
+      "id": "festival-master:stretch-bridge-vector-057-059:rev-2:video-1",
       "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
       "durationMs": 9160,
       "memberInputs": [
         {
@@ -16250,14 +16250,14 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-1:video-2",
+      "id": "festival-master:stretch-bridge-vector-057-059:rev-2:video-2",
       "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
       "durationMs": 8900,
       "memberInputs": [
         {
@@ -16346,14 +16346,14 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-vector-057-059:rev-1:video-3",
+      "id": "festival-master:stretch-bridge-vector-057-059:rev-2:video-3",
       "stretchId": "festival-master:stretch-bridge-vector-057-059",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
       "durationMs": 12400,
       "memberInputs": [
         {
@@ -16434,9 +16434,9 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
       "stretchId": "festival-master:stretch-bridge-packet-open-060-061",
-      "revision": 1,
+      "revision": 2,
       "medium": "still",
       "mode": "combined_storyboard_sheet",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
@@ -16545,7 +16545,7 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-060:take-02",
+              "derivedTakeId": "festival-master:shot-plan-060:take-03",
               "derivedAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-01"
             },
             {
@@ -16560,7 +16560,7 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-061:take-02",
+              "derivedTakeId": "festival-master:shot-plan-061:take-03",
               "derivedAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
             }
           ]
@@ -16571,14 +16571,14 @@
       "runnable": true
     },
     {
-      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-1:video-1",
+      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-2:video-1",
       "stretchId": "festival-master:stretch-bridge-packet-open-060-061",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
       "durationMs": 4300,
       "memberInputs": [
         {
@@ -16657,14 +16657,14 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-1:video-2",
+      "id": "festival-master:stretch-bridge-packet-open-060-061:rev-2:video-2",
       "stretchId": "festival-master:stretch-bridge-packet-open-060-061",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
       "durationMs": 7400,
       "memberInputs": [
         {
@@ -16751,9 +16751,9 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-vault-flashback-062-063:rev-1",
+      "id": "festival-master:stretch-vault-flashback-062-063:rev-2",
       "stretchId": "festival-master:stretch-vault-flashback-062-063",
-      "revision": 1,
+      "revision": 2,
       "medium": "still",
       "mode": "combined_storyboard_sheet",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
@@ -16850,7 +16850,7 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-062:take-02",
+              "derivedTakeId": "festival-master:shot-plan-062:take-03",
               "derivedAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-01"
             },
             {
@@ -16865,7 +16865,7 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-063:take-02",
+              "derivedTakeId": "festival-master:shot-plan-063:take-03",
               "derivedAssetId": "asset:festival-master-stretch-vault-flashback-062-063-panel-02"
             }
           ]
@@ -16876,14 +16876,14 @@
       "runnable": true
     },
     {
-      "id": "festival-master:stretch-vault-flashback-062-063:rev-1:video-1",
+      "id": "festival-master:stretch-vault-flashback-062-063:rev-2:video-1",
       "stretchId": "festival-master:stretch-vault-flashback-062-063",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
       "durationMs": 14780,
       "memberInputs": [
         {
@@ -16957,14 +16957,14 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-vault-flashback-062-063:rev-1:video-2",
+      "id": "festival-master:stretch-vault-flashback-062-063:rev-2:video-2",
       "stretchId": "festival-master:stretch-vault-flashback-062-063",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
       "durationMs": 20860,
       "memberInputs": [
         {
@@ -22041,9 +22041,9 @@
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-command-break-064:rev-1",
+      "id": "festival-master:stretch-bridge-command-break-064:rev-2",
       "stretchId": "festival-master:stretch-bridge-command-break-064",
-      "revision": 1,
+      "revision": 2,
       "medium": "still",
       "mode": "combined_storyboard_sheet",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
@@ -22149,8 +22149,8 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-064:take-02",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01"
+              "derivedTakeId": "festival-master:shot-plan-064:take-03",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-panel-01"
             }
           ]
         }
@@ -22160,14 +22160,14 @@
       "runnable": true
     },
     {
-      "id": "festival-master:stretch-bridge-command-break-064:rev-1:video-1",
+      "id": "festival-master:stretch-bridge-command-break-064:rev-2:video-1",
       "stretchId": "festival-master:stretch-bridge-command-break-064",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-064:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-064:rev-2",
       "durationMs": 4200,
       "memberInputs": [
         {
@@ -22176,7 +22176,7 @@
           "sourceTakeIds": [
             "festival-master:shot-plan-064:take-02"
           ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01"
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-064-panel-01"
         }
       ],
       "stillReferenceAssetIds": [
@@ -22216,18 +22216,18 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
+          "asset:festival-master-stretch-bridge-command-break-064-panel-01",
           "asset:object-harlan-wrist-device-sheet",
           "asset:voice-ref-en-okoye",
           "asset:voice-ref-en-voss"
         ],
         "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
-          "character:voss": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
-          "character:harlan": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
-          "character:sorell": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
-          "character:rao": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
-          "character:okoye": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01"
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-064-panel-01",
+          "character:voss": "asset:festival-master-stretch-bridge-command-break-064-panel-01",
+          "character:harlan": "asset:festival-master-stretch-bridge-command-break-064-panel-01",
+          "character:sorell": "asset:festival-master-stretch-bridge-command-break-064-panel-01",
+          "character:rao": "asset:festival-master-stretch-bridge-command-break-064-panel-01",
+          "character:okoye": "asset:festival-master-stretch-bridge-command-break-064-panel-01"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -22256,15 +22256,15 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-01"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-panel-01"
       ],
       "coherenceException": false,
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-command-break-065-067:rev-1",
+      "id": "festival-master:stretch-bridge-command-break-065-067:rev-2",
       "stretchId": "festival-master:stretch-bridge-command-break-065-067",
-      "revision": 1,
+      "revision": 2,
       "medium": "still",
       "mode": "combined_storyboard_sheet",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
@@ -22382,8 +22382,8 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-065:take-02",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02"
+              "derivedTakeId": "festival-master:shot-plan-065:take-03",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01"
             },
             {
               "order": 2,
@@ -22397,8 +22397,8 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-066:take-02",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03"
+              "derivedTakeId": "festival-master:shot-plan-066:take-03",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02"
             },
             {
               "order": 3,
@@ -22412,8 +22412,8 @@
                 "w": 0.49,
                 "h": 0.411875
               },
-              "derivedTakeId": "festival-master:shot-plan-067:take-02",
-              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04"
+              "derivedTakeId": "festival-master:shot-plan-067:take-03",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03"
             }
           ]
         }
@@ -22423,14 +22423,14 @@
       "runnable": true
     },
     {
-      "id": "festival-master:stretch-bridge-command-break-065-067:rev-1:video-1",
+      "id": "festival-master:stretch-bridge-command-break-065-067:rev-2:video-1",
       "stretchId": "festival-master:stretch-bridge-command-break-065-067",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
       "durationMs": 5580,
       "memberInputs": [
         {
@@ -22439,7 +22439,7 @@
           "sourceTakeIds": [
             "festival-master:shot-plan-065:take-02"
           ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02"
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01"
         }
       ],
       "stillReferenceAssetIds": [
@@ -22479,18 +22479,18 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
+          "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
           "asset:object-harlan-wrist-device-sheet",
           "asset:voice-ref-en-harlan",
           "asset:voice-ref-en-elin"
         ],
         "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
-          "character:voss": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
-          "character:harlan": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
-          "character:sorell": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
-          "character:rao": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
-          "character:okoye": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02"
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+          "character:voss": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+          "character:harlan": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+          "character:sorell": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+          "character:rao": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+          "character:okoye": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -22519,20 +22519,20 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-065-067-panel-01"
       ],
       "coherenceException": false,
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-command-break-065-067:rev-1:video-2",
+      "id": "festival-master:stretch-bridge-command-break-065-067:rev-2:video-2",
       "stretchId": "festival-master:stretch-bridge-command-break-065-067",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
       "durationMs": 11180,
       "memberInputs": [
         {
@@ -22541,7 +22541,7 @@
           "sourceTakeIds": [
             "festival-master:shot-plan-066:take-02"
           ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03"
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02"
         }
       ],
       "stillReferenceAssetIds": [
@@ -22581,18 +22581,18 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
+          "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
           "asset:object-harlan-wrist-device-sheet",
           "asset:voice-ref-en-harlan",
           "asset:voice-ref-en-elin"
         ],
         "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-          "character:voss": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-          "character:harlan": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-          "character:sorell": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-          "character:rao": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-          "character:okoye": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03"
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
+          "character:voss": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
+          "character:harlan": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
+          "character:sorell": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
+          "character:rao": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
+          "character:okoye": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -22621,20 +22621,20 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-065-067-panel-02"
       ],
       "coherenceException": false,
       "runnable": false
     },
     {
-      "id": "festival-master:stretch-bridge-command-break-065-067:rev-1:video-3",
+      "id": "festival-master:stretch-bridge-command-break-065-067:rev-2:video-3",
       "stretchId": "festival-master:stretch-bridge-command-break-065-067",
-      "revision": 1,
+      "revision": 2,
       "medium": "video",
       "mode": "grouped_seedance",
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
-      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
+      "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
       "durationMs": 8000,
       "memberInputs": [
         {
@@ -22643,7 +22643,7 @@
           "sourceTakeIds": [
             "festival-master:shot-plan-067:take-02"
           ],
-          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04"
+          "keyframeAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03"
         }
       ],
       "stillReferenceAssetIds": [
@@ -22682,17 +22682,17 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
+          "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
           "asset:object-harlan-wrist-device-sheet",
           "asset:voice-ref-en-elin"
         ],
         "coveringAssetByEntity": {
-          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
-          "character:voss": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
-          "character:harlan": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
-          "character:sorell": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
-          "character:rao": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
-          "character:okoye": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04"
+          "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
+          "character:voss": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
+          "character:harlan": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
+          "character:sorell": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
+          "character:rao": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
+          "character:okoye": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -22721,7 +22721,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-04"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-065-067-panel-03"
       ],
       "coherenceException": false,
       "runnable": false

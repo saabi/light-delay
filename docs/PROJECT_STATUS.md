@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Scenes 20–22 stills registered; awaiting approval (English source)
+
+- Higgsfield sheets landed and split for 057–067; new panels registered as `take-03` candidates on stretch `:rev-2`. Do not bind `selectedTakeId` until author approves. Video still waits on that approval.
+
 ## 2026-09-15 - Scene 18-19 still generation (English source)
 
 - Generated independent Festival-master stills for shots 050-056 using the authored bridge and central-access/vault blocking with their existing reference sets. Combined source sheets remain untouched; editorial review is pending.

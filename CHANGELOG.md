@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 — Scenes 20–22 stretch stills registered (rev-2 candidates)
+
+- Generated five Festival-master combined storyboard sheets in Higgsfield (`gpt_image_2`) for stretches 057–059, 060–061, 062–063, 064, and 065–067; split and registered as `take-03` candidates (`:rev-2`). `selectedTakeId` unchanged pending approval. Restored null-corrupted `scripts/register-visual-stretch-panels.mjs` from `cd4958c`.
+
 ## 2026-09-15 - Scene 18-19 still generation
 
 - Generated independent Festival-master stills for shots 050-056 from the authored scene blocking and existing reference sets. Combined source sheets remain untouched; replacements are pending editorial review.

@@ -12960,11 +12960,11 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:22:40.846Z"
+        "generatedAt": "2026-09-15T22:25:20.199Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -12984,16 +12984,16 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-packet-open-060-061/sheet.png",
       "mimeType": "image/png",
-      "width": 1536,
-      "height": 1024,
+      "width": 2688,
+      "height": 1520,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T10:09:19.709Z"
+        "generatedAt": "2026-09-15T22:25:22.568Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
-        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13013,16 +13013,16 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-flashback-062-063/sheet.png",
       "mimeType": "image/png",
-      "width": 1536,
-      "height": 1024,
+      "width": 2688,
+      "height": 1520,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T10:11:32.295Z"
+        "generatedAt": "2026-09-15T22:25:41.845Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
-        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -14041,33 +14041,33 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1317,
+      "height": 741,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "generatedAt": "2026-09-15T22:25:21.867Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
         "shotId": "festival-master:shot-plan-057",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.002632,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.487368,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
-          "es": "needs_revision"
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     },
@@ -14077,33 +14077,33 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1317,
+      "height": 741,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "generatedAt": "2026-09-15T22:25:21.867Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
         "shotId": "festival-master:shot-plan-058",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.002632,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.487368,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
-          "es": "needs_revision"
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     },
@@ -14113,33 +14113,33 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/panel-03.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1317,
+      "height": 741,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.609Z",
+        "generatedAt": "2026-09-15T22:25:21.867Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
-        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-1",
+        "stretchJobId": "festival-master:stretch-bridge-vector-057-059:rev-2",
         "shotId": "festival-master:shot-plan-059",
         "panelOrder": 3,
         "panelRegionX": 0,
         "panelRegionY": 0.51,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.487368,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
-          "es": "needs_revision"
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     },
@@ -14149,33 +14149,33 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-packet-open-060-061/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1317,
+      "height": 741,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.854Z",
+        "generatedAt": "2026-09-15T22:25:31.829Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
-        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
         "shotId": "festival-master:shot-plan-060",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.002632,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.487368,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
-          "es": "needs_revision"
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     },
@@ -14185,33 +14185,33 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-packet-open-060-061/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1317,
+      "height": 741,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.854Z",
+        "generatedAt": "2026-09-15T22:25:31.829Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-packet-open-060-061",
-        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-1",
+        "stretchJobId": "festival-master:stretch-bridge-packet-open-060-061:rev-2",
         "shotId": "festival-master:shot-plan-061",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.002632,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.487368,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
-          "es": "needs_revision"
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     },
@@ -14221,33 +14221,33 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-flashback-062-063/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1317,
+      "height": 741,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.082Z",
+        "generatedAt": "2026-09-15T22:25:43.560Z",
         "originalAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
-        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
         "shotId": "festival-master:shot-plan-062",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.002632,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.487368,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
-          "es": "needs_revision"
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     },
@@ -14257,33 +14257,33 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-flashback-062-063/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1317,
+      "height": 741,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.082Z",
+        "generatedAt": "2026-09-15T22:25:43.560Z",
         "originalAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-vault-flashback-062-063",
-        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-1",
+        "stretchJobId": "festival-master:stretch-vault-flashback-062-063:rev-2",
         "shotId": "festival-master:shot-plan-063",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.002632,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.487368,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
         "explanation": {
-          "en": "Stale after scenes 20–22 stretch authorship fix (gravity/identity/blocking/scrub-safe). Needs regeneration; do not use for Seedance until replaced.",
-          "es": "needs_revision"
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     },
@@ -17286,6 +17286,208 @@
         "explanation": {
           "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
           "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-064-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-064/sheet.png",
+      "mimeType": "image/png",
+      "width": 2688,
+      "height": 1520,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:44.384Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064:rev-2",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-064-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-064/panel-01.png",
+      "mimeType": "image/png",
+      "width": 1317,
+      "height": 741,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-15T22:25:45.955Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-064-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064:rev-2",
+        "shotId": "festival-master:shot-plan-064",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.002632,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.487368,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-065-067-sheet",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-065-067/sheet.png",
+      "mimeType": "image/png",
+      "width": 2688,
+      "height": 1520,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:25:46.628Z"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
+          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-065-067-panel-01",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-065-067/panel-01.png",
+      "mimeType": "image/png",
+      "width": 1317,
+      "height": 741,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-15T22:25:48.124Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
+        "shotId": "festival-master:shot-plan-065",
+        "panelOrder": 1,
+        "panelRegionX": 0,
+        "panelRegionY": 0.002632,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.487368,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-065-067-panel-02",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-065-067/panel-02.png",
+      "mimeType": "image/png",
+      "width": 1317,
+      "height": 741,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-15T22:25:48.124Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
+        "shotId": "festival-master:shot-plan-066",
+        "panelOrder": 2,
+        "panelRegionX": 0.51,
+        "panelRegionY": 0.002632,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.487368,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-command-break-065-067-panel-03",
+      "kind": "image",
+      "role": "animatic",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-command-break-065-067/panel-03.png",
+      "mimeType": "image/png",
+      "width": 1317,
+      "height": 741,
+      "source": {
+        "provider": "local",
+        "model": "sharp-split",
+        "generatedAt": "2026-09-15T22:25:48.124Z",
+        "originalAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-sheet"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-2",
+        "shotId": "festival-master:shot-plan-067",
+        "panelOrder": 3,
+        "panelRegionX": 0,
+        "panelRegionY": 0.51,
+        "panelRegionW": 0.49,
+        "panelRegionH": 0.487368,
+        "scriptId": "script:light-delay-festival-master"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       }
     }
