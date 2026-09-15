@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-axial-dock-006-009:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-axial-dock-006-009",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "15a95f8b529aa5aaee72dcf0a4c362aee85e60a1e8e98fb19e6c21ba8d21ce06",
+  "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-axial-dock-006-009-rev-1-video-1-ready.json",
+  "providerJobId": "241428bd-15d1-48f3-b615-8f40149292a8",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 52.5,
+  "submittedAt": "2026-09-15T05:47:00Z",
+  "completedAt": "2026-09-15T05:52:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-axial-dock-006-009-panel-01": "64fd0d75-db1f-4a48-8120-063cc05730c6",
+    "asset:festival-master-stretch-axial-dock-006-009-panel-02": "0ff23a43-c70b-450d-b3dc-e8412b47580b",
+    "asset:festival-master-stretch-axial-dock-006-009-panel-03": "58f5c9fe-5f0f-4726-bbb9-dd8ec55e7c9e",
+    "asset:festival-master-stretch-axial-dock-006-009-panel-04": "23b8d94f-3598-4d7d-953e-06abb35c35d8",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:character-voss-sheet": "88fed050-c15b-4950-a779-d67ec203a29f",
+    "asset:character-zao-sheet": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-elin": "0938dded-f8bd-4fb2-9145-566f50b3eabc",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8",
+    "asset:voice-ref-en-zao": "6a62dc1d-8f6f-499d-bb01-4db9ebbb874e"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/festival-master-stretch-axial-dock-006-009-rev-1-video-1.mp4",
+    "sha256": "ba646f37f4c6b8a775ddfddae4314cead78d42ddde270e7c7b03d463513e96bb",
+    "durationMs": 21042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 21310,
+  "notes": "Author send axial-dock-006-009 video-1; 480p omni_reference native audio; 52.5 cr; declined IN THE DARK. Ledger reused 4 character sheets; uploaded 4 panels + 4 seedance-5s voices. SUBMIT PROMPT TYPO: @Image7 entity map said character:zao instead of character:voss (Voss sheet media still correct as Image7). Review speaker identity before accept.",
+  "registeredAssetId": "asset:festival-master-stretch-axial-dock-006-009-rev-1-video-1-video"
+}

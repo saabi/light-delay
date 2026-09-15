@@ -15984,6 +15984,39 @@
           "es": "Picadura de título Seedance (Tierra → Júpiter, último fotograma bloqueado en shot-plan-087) reutilizada en la toma de título de Festival-master. Pendiente de revisión editorial. selectedTakeId sin cambios."
         }
       }
+    },
+    {
+      "id": "asset:festival-master-stretch-axial-dock-006-009-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/festival-master-stretch-axial-dock-006-009-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 21042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T05:52:00Z",
+        "externalId": "241428bd-15d1-48f3-b615-8f40149292a8"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-axial-dock-006-009",
+        "stretchJobId": "festival-master:stretch-axial-dock-006-009:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "15a95f8b529aa5aaee72dcf0a4c362aee85e60a1e8e98fb19e6c21ba8d21ce06",
+        "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
     }
   ]
 }

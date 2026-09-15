@@ -11586,7 +11586,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-axial-dock-006-009-rev-1-video-1-video"
         }
       ],
       "blockers": [],

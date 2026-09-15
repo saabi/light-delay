@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Axial-dock 006–009 Seedance (English source)
+
+- Submitted and registered pending review: job `241428bd-15d1-48f3-b615-8f40149292a8`, ~21 s / 480p / 52.5 cr → `…/festival-master-stretch-axial-dock-006-009-rev-1-video-1.mp4`. Ledger reused identity sheets. Review for Image7 entity-map typo before accept.
+
 ## 2026-09-15 — Animatic-to-generation package jumps (English source)
 
 - Festival-master animatic shot cards (and the details drawer) expose Image / Video / Audio jumps to `/generation/{medium}/{script}?shot=`. The generation list honors that query even when groups are collapsed: matching packages stay expanded and scrolled into view, and a hiding filter is ignored for display. Audio is hidden when the shot has no dialogue cue packages. Generation cards reverse-link with Open in animatic.

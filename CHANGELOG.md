@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 — Axial-dock 006–009 Seedance video-1
+
+- Submitted `festival-master:stretch-axial-dock-006-009:rev-1:video-1` (Higgsfield `241428bd-15d1-48f3-b615-8f40149292a8`), **52.5 cr**, ~21 s / 480p. Registered pending review. Ledger reused four character sheets; uploaded four panels + four Seedance 5s voices. Note: submit prompt had Image7 entity-map typo (`zao` vs `voss`); sheet order still correct — review before accept.
+
 ## 2026-09-15 — Animatic-to-generation package jumps
 
 - Animatic shot cards and the details drawer link to Image / Video / Audio generation lists with `?shot=`. The generation list opens the matching group, expands those cards, and keeps `shot` when switching mediums. Audio is omitted when the shot has no dialogue packages. Generation cards link back to the animatic shot.
