@@ -2,62 +2,51 @@
 
 > Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
 
-Pendientes vigentes o por revisar: **23**
+Pendientes vigentes o por revisar: **19**
 
 Notas archivadas para rescate: **167**
 
 ## Accionables
 
-### high
-
-- **note:reactor-service-bay-visual-reference** [visual · open · active] — Falta una referencia visual derivada del master para este espacio. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.
-  - Origen: `data/locations.json` · `$.locations[7].notes[0]`
-- **note:inner-shielding-vault-visual-reference** [visual · open · active] — Falta una referencia visual derivada del master para la bóveda y su cerradura local. La hoja obsoleta de la sala del núcleo diplomático no debe usarse como sustituto.
-  - Origen: `data/locations.json` · `$.locations[8].notes[0]`
-- **note:proxima-geophysical-impulse-package-visual-reference** [visual · open · review_required] — Falta una referencia visual derivada del master para el paquete y su controlador.
-  - Origen: `data/objects.json` · `$.objects[3].notes[0]`
-- **note:harlan-wrist-device-visual-reference** [visual · open · review_required] — Falta una referencia visual derivada del master para el dispositivo de muñeca.
-  - Origen: `data/objects.json` · `$.objects[4].notes[0]`
-- **note:time-reference-diagnostic-unit-visual-reference** [visual · open · review_required] — Falta una referencia visual derivada del master para el instrumento; debe verse idéntico en las dos escenas separadas donde aparece (plantado en beat-19, conectado en beat-27).
-  - Origen: `data/objects.json` · `$.objects[5].notes[0]`
-
 ### medium
 
-- **note:celestial-ardor-command-vestibule-visual-reference** [visual · open · active] — Falta una referencia visual para el vestíbulo axial de mando; usado en varias escenas del Festival.
-  - Origen: `data/locations.json` · `$.locations[3].notes[0]`
-- **note:celestial-ardor-central-access-visual-reference** [visual · open · active] — Falta una referencia visual para el cilindro central de acceso; es una de las tres rutas de la persecución del Festival.
-  - Origen: `data/locations.json` · `$.locations[4].notes[0]`
-- **note:celestial-ardor-service-cylinder-visual-reference** [visual · open · active] — Falta una referencia visual para el cilindro de servicio; es una de las tres rutas de la persecución del Festival.
-  - Origen: `data/locations.json` · `$.locations[5].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[0].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
+- **note:festival-master-shot-plan-023-zao-radio-j-cut** [sound · open · active] — needs_revision
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.shots[25].notes[0]`
+- **note:festival-master-shot-plan-024-zao-audio-from-023** [sound · open · active] — needs_revision
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.shots[26].notes[0]`
+- **note:stretch-operations-gallery-001-003** [visual · todo · active] — La secuencia inicial de visionado en la galería de operaciones es un tramo continuo; generar como una sola hoja antes de dividir los paneles.
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[0].notes[0]`
+- **note:bridge-comms-exceptional-video-identity** [production · open · active] — needs_revision
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[22].notes[0]`
+- **data/scripts/light-delay-trailer-master.json:$.shots[0].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[0].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[1].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-002 (asset asset:festival-master-storyboard-002).
+- **data/scripts/light-delay-trailer-master.json:$.shots[1].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-002 (asset asset:festival-master-storyboard-002).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[1].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[10].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-048 (asset asset:festival-master-storyboard-048).
+- **data/scripts/light-delay-trailer-master.json:$.shots[10].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-048 (asset asset:festival-master-storyboard-048).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[10].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[11].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058).
+- **data/scripts/light-delay-trailer-master.json:$.shots[11].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-058 (asset asset:festival-master-storyboard-058).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[11].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[12].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-062 (asset asset:festival-master-storyboard-062).
+- **data/scripts/light-delay-trailer-master.json:$.shots[12].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-062 (asset asset:festival-master-storyboard-062).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[12].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[16].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-039 (asset asset:festival-master-storyboard-039).
+- **data/scripts/light-delay-trailer-master.json:$.shots[16].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-039 (asset asset:festival-master-storyboard-039).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[16].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[17].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
+- **data/scripts/light-delay-trailer-master.json:$.shots[17].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[17].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[18].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
+- **data/scripts/light-delay-trailer-master.json:$.shots[18].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[18].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[19].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-credit-01 (asset asset:festival-master-storyboard-credit-01).
+- **data/scripts/light-delay-trailer-master.json:$.shots[19].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-credit-01 (asset asset:festival-master-storyboard-credit-01).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[19].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[2].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-012 (asset asset:festival-master-storyboard-012).
+- **data/scripts/light-delay-trailer-master.json:$.shots[2].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-012 (asset asset:festival-master-storyboard-012).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[2].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[20].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-credit-02 (asset asset:festival-master-storyboard-credit-02).
+- **data/scripts/light-delay-trailer-master.json:$.shots[20].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-credit-02 (asset asset:festival-master-storyboard-credit-02).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[20].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[21].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-credit-03 (asset asset:festival-master-storyboard-credit-03).
+- **data/scripts/light-delay-trailer-master.json:$.shots[21].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-credit-03 (asset asset:festival-master-storyboard-credit-03).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[21].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[3].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-011 (asset asset:festival-master-storyboard-011).
+- **data/scripts/light-delay-trailer-master.json:$.shots[3].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-011 (asset asset:festival-master-storyboard-011).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[3].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[4].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-016 (asset asset:festival-master-storyboard-016).
+- **data/scripts/light-delay-trailer-master.json:$.shots[4].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-016 (asset asset:festival-master-storyboard-016).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[4].notes[0]`
-- **data/scripts/light-delay-trailer-master.json:$.shots[9].notes[0]** [editorial · open · review_required] — Reutiliza el frame de festival-master:shot-plan-047 (asset asset:festival-master-storyboard-047).
+- **data/scripts/light-delay-trailer-master.json:$.shots[9].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-047 (asset asset:festival-master-storyboard-047).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[9].notes[0]`
 
 ## Archivo deprecado/obsoleto — sólo rescate

@@ -16,14 +16,18 @@ const script = JSON.parse(readFileSync(scriptPath, 'utf8'));
 
 const targetIds = new Set([
 	...(script.takes ?? []).filter((take) => !take.imageAssetId).map((take) => take.shotId),
+	'festival-master:shot-plan-023',
+	'festival-master:shot-plan-024',
+	'festival-master:shot-plan-025',
 	'festival-master:shot-plan-089',
 	'festival-master:shot-plan-091'
 ]);
 const sphere = 'asset:vehicle-velari-transport-sphere-sheet';
 const envoy = 'asset:character-velari-envoy-sheet';
 const refOverrides = {
-	'023': ['asset:character-harlan-sheet', 'asset:character-voss-sheet', 'asset:character-sorell-sheet', 'asset:location-celestial-ardor-bridge-realistic-reference', 'asset:location-celestial-ardor-bridge-service-shaft-reference'],
-	'025': ['asset:character-voss-sheet', 'asset:character-sorell-sheet', 'asset:character-rao-sheet', 'asset:character-okoye-sheet', 'asset:location-celestial-ardor-bridge-realistic-reference'],
+	'023': ['asset:character-voss-sheet', 'asset:character-sorell-sheet', 'asset:character-rao-sheet', 'asset:character-okoye-sheet', 'asset:location-celestial-ardor-bridge-crew-stations-reference'],
+	'024': ['asset:character-harlan-sheet', 'asset:character-voss-sheet', 'asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference', 'asset:object-harlan-wrist-device-sheet'],
+	'025': ['asset:character-voss-sheet', 'asset:character-sorell-sheet', 'asset:character-rao-sheet', 'asset:character-okoye-sheet', 'asset:location-celestial-ardor-bridge-crew-stations-reference'],
 	'046': ['asset:character-voss-sheet', 'asset:character-harlan-sheet', 'asset:character-sorell-sheet', 'asset:character-rao-sheet', 'asset:location-celestial-ardor-bridge-realistic-reference'],
 	'057': ['asset:character-voss-sheet', 'asset:character-harlan-sheet', 'asset:character-rao-sheet', 'asset:character-okoye-sheet', 'asset:location-celestial-ardor-bridge-realistic-reference'],
 	'080': ['asset:character-rao-sheet', 'asset:location-celestial-ardor-inner-shielding-vault-sheet', 'asset:object-harlan-wrist-device-sheet', 'asset:object-optical-contingency-transmitter-sheet', 'asset:character-voss-sheet'],
@@ -51,9 +55,9 @@ const actions = {
 	'020': 'Zao follows the markings and neutron peak to the encounter coordinates and time on the local controller.',
 	'021': 'Zao reads the controller aloud, shocked and afraid.',
 	'022': 'Zao compares the bomb timer with an ordinary wrist communications clock and rejects an innocent explanation.',
-	'023': 'Harlan rises unseen from the recessed service hatch as the bridge crew faces forward and hears Zao open the channel.',
-	'024': 'Harlan touches his wrist device only when that accusation lands; the channel dies mid-word and he withdraws into the service hatch before anyone turns.',
-	'025': 'Elin reports the wireless outage. Voss urgently assigns the response.',
+	'023': 'Voss and the bridge crew sit secured at their forward stations and listen to Zao’s off-screen warning through the word sabotage. Harlan remains concealed behind the left-side stairs at the recessed service hatch.',
+	'024': 'Harlan emerges from the recessed service hatch, hears Zao’s warning reach sabotage, touches his discreet wrist device late to cut the wireless comms, then backs into and disappears through the same hatch before the seated crew can turn.',
+	'025': 'From the wider crew-stations view, Voss assigns the response while Rao reports the wireless outage, Sorell remains at her translator station, and Okoye takes bridge security. Harlan is off-frame.',
 	'029': 'Zao finishes into dead air and rapidly tests every channel in turn while the small wall countdown continues behind her.',
 	'030': 'Zao names the failed routes at the comms panel.',
 	'031': 'Zao eliminates the destinations aloud at the independent optical-array console.',
@@ -84,8 +88,15 @@ const actions = {
 function promptFor(shot, take, id) {
 	const movement = shot.camera?.movementDescription?.en ?? shot.camera?.movement ?? 'planned camera movement';
 	const refs = take.generation?.referenceAssetIds ?? [];
-	const action = stripSpokenDialogueQuotes(actions[id] ?? shot.description?.en ?? 'Storyboard still.');
-	return `Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: ${action} Composition: ${shot.composition?.size ?? 'production'} framing. Camera: ${movement}. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: ${refs.join(', ')}. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.`;
+	const authoredAction = actions[id] ?? shot.description?.en ?? 'Storyboard still.';
+	const action = stripSpokenDialogueQuotes(
+		id === '024'
+			? `${authoredAction} Voss is visible seated and secured in the station behind the hatch, keeps facing forward, and never looks back toward Harlan; preserve the supplied hatch geometry.`
+			: id === '025'
+				? `${authoredAction} Microgravity is continuous: Voss, Rao, and Okoye are strapped into fixed floor-mounted chairs; Sorell alone leaves her chair hand-over-hand and never stands on the deck.`
+				: authoredAction
+	);
+	return `Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: ${action} Composition: ${shot.composition?.size ?? 'production'} framing. Camera: ${movement}. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: ${refs.join(', ')}. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.`;
 }
 
 for (const take of script.takes ?? []) {

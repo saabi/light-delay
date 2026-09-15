@@ -50,7 +50,9 @@
         "en": "Compact circular bridge designed to remain habitable through long watches, with six stations in an arc, a separate captain’s chair, and a six-seat meeting table. Matte composite panels in light gray, warm off-white, and muted slate-blue/teal reduce exposed metal; upholstery, soft-touch surfaces, and neutral work lighting add comfort without making the room luxurious. A helical stair wraps the central opening, and every exposed stair edge has continuous outer railings in addition to the inner rails; access gaps beside service and the lift remain clear. The curved wall is pressure hull with a few small reinforced windows; only the displays are blue. The dark service hatch and adjacent tray remain hidden from the stations."
       },
       "referenceAssetIds": [
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-celestial-ardor-bridge-service-shaft-reference",
+        "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
       ],
       "atmosphere": {
         "es": "Centro de mando",

@@ -438,6 +438,51 @@
       }
     },
     {
+      "id": "asset:location-celestial-ardor-bridge-crew-stations-reference",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-bridge/bridge-crew-stations.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Puente del Celestial Ardor — estaciones de la tripulación",
+        "en": "Celestial Ardor Bridge — crew stations reference"
+      },
+      "description": {
+        "es": "Referencia de sububicación para la vista de las estaciones de la tripulación; las escaleras y el acceso al eje de servicio quedan a la izquierda.",
+        "en": "Sublocation reference for the crew-station view; the stairs and service-shaft access remain on the left. The fixed seats have visible restraint belts for microgravity blocking."
+      },
+      "width": 1536,
+      "height": 864,
+      "source": {
+        "provider": "local",
+        "model": "user-provided reference",
+        "generatedAt": "2026-09-15"
+      },
+      "metadata": {
+        "useCase": "sublocation-reference",
+        "containsNarrativeContent": false,
+        "entityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "referencePerspective": "bridge crew stations and left-side service-shaft orientation, with visible fixed-seat restraint belts",
+        "revision": 1,
+        "approvedForShotIds": [
+          "festival-master:shot-plan-023",
+          "festival-master:shot-plan-025"
+        ]
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Author-provided bridge-stations reference for scene 10 coverage.",
+          "es": "Referencia de estaciones del puente proporcionada por el autor para la cobertura de la escena 10."
+        }
+      }
+    },
+    {
       "id": "asset:location-celestial-ardor-bridge-meal-table-sheet",
       "kind": "image",
       "role": "reference",
@@ -532,6 +577,48 @@
         "competitionEligibility": "unverified",
         "revision": 1,
         "editNotes": "Bridge angle for staging Harlan's concealed arrival from behind the stairs; preserves the supplied geometry and railings, gives the captain's chair stronger visual hierarchy, and continues reinforced windows around the visible pressure hull"
+      }
+    },
+    {
+      "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Puente del Celestial Ardor — escotilla del eje de servicio y estaciones",
+        "en": "Celestial Ardor Bridge — service-shaft hatch with crew stations behind"
+      },
+      "description": {
+        "es": "Segunda referencia de sububicación: el cilindro de servicio y su escotilla en primer plano, bandeja naranja adyacente, y las estaciones de la tripulación visibles detrás del eje.",
+        "en": "Second sublocation reference: the service cylinder and its hatch in the foreground, adjacent orange-trimmed tray, and crew stations visible behind the shaft. The station seats have visible restraint belts for microgravity blocking."
+      },
+      "width": 976,
+      "height": 528,
+      "source": {
+        "provider": "local",
+        "model": "user-provided reference",
+        "generatedAt": "2026-09-15"
+      },
+      "metadata": {
+        "useCase": "sublocation-reference",
+        "containsNarrativeContent": false,
+        "containsText": false,
+        "entityIds": [
+          "location:celestial-ardor-bridge"
+        ],
+        "referencePerspective": "service-shaft hatch in foreground, crew stations behind the shaft, with visible fixed-seat restraint belts",
+        "revision": 1
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Author-provided second bridge view of the service-shaft hatch with crew stations behind the shaft. Complements asset:location-celestial-ardor-bridge-service-shaft-reference; not assigned to shots yet.",
+          "es": "Segunda vista del puente proporcionada por el autor: escotilla del eje de servicio con las estaciones de la tripulación detrás del eje. Complementa asset:location-celestial-ardor-bridge-service-shaft-reference; aún no asignada a tomas."
+        }
       }
     },
     {
@@ -7735,6 +7822,201 @@
         "explanation": {
           "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
           "en": "Regenerated storyboard still; pending editorial review."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-storyboard-024-rev-3",
+      "kind": "image",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-024-rev-3.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Storyboard Festival Master 024 rev. 3",
+        "en": "Festival Master storyboard 024 rev. 3"
+      },
+      "description": {
+        "es": "Imagen independiente reemplazada manualmente para festival-master:shot-plan-024; aprobada para referencia de video.",
+        "en": "Manually replaced independent still for festival-master:shot-plan-024; approved for video reference."
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-024",
+        "batch": "festival-master-scene-10-independent-stills-rev-3",
+        "storyboardEligible": true
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-024",
+        "explanation": {
+          "en": "Manually replaced still with visible fixed-seat belts; approved for video reference.",
+          "es": "Imagen reemplazada manualmente con cinturones visibles en los asientos fijos; aprobada para referencia de video."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-storyboard-025-rev-3",
+      "kind": "image",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-025-rev-3.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Storyboard Festival Master 025 rev. 3",
+        "en": "Festival Master storyboard 025 rev. 3"
+      },
+      "description": {
+        "es": "Imagen independiente reemplazada manualmente para festival-master:shot-plan-025; aprobada para referencia de video.",
+        "en": "Manually replaced independent still for festival-master:shot-plan-025; approved for video reference."
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-025",
+        "batch": "festival-master-scene-10-independent-stills-rev-3",
+        "storyboardEligible": true
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-025",
+        "explanation": {
+          "en": "Manually replaced still with visible fixed-seat belts and microgravity blocking; approved for video reference.",
+          "es": "Imagen reemplazada manualmente con cinturones visibles en los asientos fijos y bloqueo en microgravedad; aprobada para referencia de video."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-storyboard-023-rev-2",
+      "kind": "image",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-023-rev-2.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Storyboard Festival Master 023 rev. 2",
+        "en": "Festival Master storyboard 023 rev. 2"
+      },
+      "description": {
+        "es": "Imagen independiente reemplazada manualmente para festival-master:shot-plan-023; aprobada para referencia de video.",
+        "en": "Manually replaced independent still for festival-master:shot-plan-023; approved for video reference."
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-023",
+        "batch": "festival-master-scene-10-independent-stills-rev-2",
+        "storyboardEligible": true
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-023",
+        "explanation": {
+          "en": "Manually replaced still with visible fixed-seat belts; approved for video reference.",
+          "es": "Imagen reemplazada manualmente con cinturones visibles en los asientos fijos; aprobada para referencia de video."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-storyboard-024-rev-2",
+      "kind": "image",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-024-rev-2.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Storyboard Festival Master 024 rev. 2",
+        "en": "Festival Master storyboard 024 rev. 2"
+      },
+      "description": {
+        "es": "Imagen independiente nueva para festival-master:shot-plan-024; pendiente de revisión editorial.",
+        "en": "New independent still for festival-master:shot-plan-024; pending editorial review."
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-024",
+        "batch": "festival-master-scene-10-independent-stills-rev-2",
+        "storyboardEligible": true
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-024",
+        "explanation": {
+          "en": "New independent still generated with the current bridge/hatch reference; pending editorial review.",
+          "es": "Nueva imagen independiente generada con la referencia actual del puente y la escotilla; pendiente de revisión editorial."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-storyboard-025-rev-2",
+      "kind": "image",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-025-rev-2.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Storyboard Festival Master 025 rev. 2",
+        "en": "Festival Master storyboard 025 rev. 2"
+      },
+      "description": {
+        "es": "Imagen independiente nueva para festival-master:shot-plan-025; pendiente de revisión editorial.",
+        "en": "New independent still for festival-master:shot-plan-025; pending editorial review."
+      },
+      "width": 1672,
+      "height": 941,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-025",
+        "batch": "festival-master-scene-10-independent-stills-rev-2",
+        "storyboardEligible": true
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "sourceShotId": "festival-master:shot-plan-025",
+        "explanation": {
+          "en": "New independent still generated with the author-provided crew-stations reference; pending editorial review.",
+          "es": "Nueva imagen independiente generada con la referencia de estaciones proporcionada por el autor; pendiente de revisión editorial."
         }
       }
     },
@@ -16015,6 +16297,305 @@
         "explanation": {
           "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
           "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-central-access-013-015-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/festival-master-stretch-central-access-013-015-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T06:25:00Z",
+        "externalId": "870bba91-51e4-4d6c-aa6c-055b91721854"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-central-access-013-015",
+        "stretchJobId": "festival-master:stretch-central-access-013-015:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "af0e3a6563a4b573993a786b2625aa31a9b5ae565ee4235ba333d2e02a56b726",
+        "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-entrance-018-019-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/festival-master-stretch-reactor-entrance-018-019-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 16042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T07:05:00Z",
+        "externalId": "0b8db206-6fe5-4345-a3b9-10e4223b02ae"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-entrance-018-019",
+        "stretchJobId": "festival-master:stretch-reactor-entrance-018-019:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "3792f34a130fc9e87c3b65536ff592ae730bb09067faae3c147ef1c0aec55a7b",
+        "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/festival-master-stretch-reactor-optics-029-032-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 8050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T10:55:00Z",
+        "externalId": "2c5d2191-f784-49ce-99d8-fe8cb7a37864"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "ae2af05a5d9e2fb9dab8187f8781f65b4373f7c5309c3fb576dc9130e07b7264",
+        "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-rev-1-video-2-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/festival-master-stretch-reactor-optics-029-032-rev-1-video-2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 14050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T10:55:00Z",
+        "externalId": "e3762e4a-1381-4765-8b78-4b2b3a2e1826"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1:video-2",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "924c2067626202e1d7deb29dfce772d59f980f41af0bd4abafb82e5fe077c2b3",
+        "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-2:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-rev-1-video-3-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/festival-master-stretch-reactor-optics-029-032-rev-1-video-3.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T10:55:00Z",
+        "externalId": "2bc1b5c3-2e11-4e55-a106-d87c93aca10f"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1:video-3",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "fe2115a400596334668acaba73fc7ef5e4e081c278b9f30ee3b08096afbd19b0",
+        "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-3:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-optics-029-032-rev-1-video-4-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/festival-master-stretch-reactor-optics-029-032-rev-1-video-4.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 7050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T10:55:00Z",
+        "externalId": "7c716c7c-0ed0-4136-897a-e0f36d3cb49d"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-optics-029-032",
+        "stretchJobId": "festival-master:stretch-reactor-optics-029-032:rev-1:video-4",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "902ab84b6435c056f52c7604367ae80a84aa8d98b28b19d84d89526857364888",
+        "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-4:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-039-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-039-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 13042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T23:24:30Z",
+        "externalId": "c37c679d-e672-4960-af42-9308f929a72c"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-039",
+        "takeId": "festival-master:shot-plan-039:take-01",
+        "sourceRunId": "run:festival-master:shot-plan-039:rev-1:video-1:ready",
+        "inputDigest": "698c91d96a3fdcbd26c1447d1ac7caf657c0b9489b0aa11be3516c08714bde49"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance I2V for Harlan's vault lock and cutoff. Pending editorial review. Bound to the selected take for Movie mode.",
+          "es": "I2V Seedance único de Harlan cerrando la cámara y cortando líneas. Pendiente de revisión editorial. Ligado a la toma seleccionada para el modo Película."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-040b-rev-2-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-040b-rev-2-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T23:41:00Z",
+        "externalId": "9ee4d969-e5e0-46b2-b1c7-d54405afcac9"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-040b",
+        "takeId": "festival-master:shot-plan-040b:take-01",
+        "sourceRunId": "run:festival-master:shot-plan-040b:rev-2:video-1:ready",
+        "inputDigest": "7cc957cd393085a03272cca9533f7741c80577064742449450b2f60baaf8b1e0",
+        "supersedesPath": "/assets/animatic/frames/festival-master/shot-plan-040b-rev-1-video-1.mp4"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton Seedance throat-entry clip (rev-1 plus local forward extension). Pending editorial review. Bound to the selected take for Movie mode. Script still durationMs is unchanged.",
+          "es": "Clip Seedance único de entrada a la garganta (rev-1 más extensión local). Pendiente de revisión editorial. Ligado a la toma seleccionada para el modo Película. durationMs del guion sin cambios."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-shot-plan-title-rev-2-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/shot-plan-title-rev-2-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 27114,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T08:11:39Z",
+        "externalId": "0964ef44-e5a7-48af-9f87-3b4c0217d834"
+      },
+      "metadata": {
+        "scriptId": "script:light-delay-festival-master",
+        "shotId": "festival-master:shot-plan-title",
+        "takeId": "festival-master:shot-plan-title:take-01",
+        "sourceRunId": "run:festival-master:shot-plan-title:rev-2:video-1:ready",
+        "inputDigest": "133d96b27192f163724bbab51e089acc5af99a3bfaa7b80182710f8db0c69627",
+        "supersedesAssetId": "asset:festival-master-shot-plan-title-rev-1-video-1-video"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Singleton title preamble joined onto the Earth→Jupiter sting (~27 s). Pending editorial review. Bound to the selected title take for Movie mode; rev-1 remains on disk as the sting half.",
+          "es": "Preámbulo de título unido a la picadura Tierra→Júpiter (~27 s). Pendiente de revisión editorial. Ligado a la toma de título seleccionada para el modo Película; rev-1 permanece en disco como la mitad de la picadura."
         }
       }
     }

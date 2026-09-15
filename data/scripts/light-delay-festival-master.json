@@ -13288,18 +13288,13 @@
       "order": 1,
       "description": {
         "es": "Harlan asciende, sin ser visto, desde la escotilla de servicio empotrada detrás del vestíbulo de mando mientras la tripulación del puente, mirando al frente, oye abrirse el canal de Zao: \"Puente, Zao. He encontrado un grave intento de sabotear la misión—\".",
-        "en": "Use the current Celestial Ardor bridge reference: the five bridge crew face the curved forward consoles with their backs to the central shaft. Harlan is not visible; he is concealed at the recessed service hatch behind the stations while Zao’s channel opens."
+        "en": "Use the closer bridge-stations reference with the visible seat belts. Voss and the bridge crew are seated and secured by those belts at their established forward stations, facing the curved consoles with their backs to the central shaft. Zao’s channel opens and her full warning runs through the word sabotage. Harlan remains concealed at the recessed service hatch behind the stations and is not visible in this frame. Preserve the belts and fixed chair positions."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:voss",
-          "role": "present, listening"
-        },
-        {
-          "kind": "character",
-          "id": "character:harlan",
           "role": "present, listening"
         },
         {
@@ -13361,7 +13356,18 @@
       "purpose": {
         "es": "Escena «La advertencia se corta»: Zao (fuera de cuadro) — hacer actuar a Voss antes de nombrar a un culpable no probado.",
         "en": "Scene \"The warning breaks\": Zao (off-frame) — make Voss act before naming an unproven culprit."
-      }
+      },
+      "notes": [
+        {
+          "id": "note:festival-master-shot-plan-023-zao-radio-j-cut",
+          "type": "sound",
+          "status": "open",
+          "text": {
+            "en": "Cue festival-master:cue-0047 is the SoT radio take for Zao's warning. Shot 024 is a picture J-cut under this same line in post: lay this cue's audio from 023 under Harlan's hatch action; do not treat 024's Seedance radio bed as final.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:shot-plan-024",
@@ -13373,23 +13379,28 @@
       "order": 2,
       "description": {
         "es": "Sólo cuando cae la palabra 'sabotaje' Harlan toca su dispositivo de muñeca. El canal muere a mitad de palabra. Se repliega en la escotilla de servicio antes de que nadie en el puente se vuelva.",
-        "en": "At the recessed service hatch, Harlan alone touches the small digital wrist device when the word “sabotage” lands, then retreats into the hatch before the bridge crew turns. Do not show a labeled jammer or any other crew in this close framing."
+        "en": "Use the zoomed Celestial Ardor service-shaft hatch/stations reference with its visible seat belts as authoritative for this close view. Harlan comes out of the recessed hatch into the bridge-side access space, hears Zao’s warning reach the word sabotage, touches the small digital wrist device late to cut the wireless comms, then backs into and disappears through the same hatch. Voss is visible seated and secured by the belt in the empty station behind the hatch, facing forward; in video he never looks back toward Harlan. Keep the hatch, stairs, rails, stations, fixed chairs, and belts exact; do not show any other crew or a labeled jammer."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:harlan",
-          "role": "foreground, back to camera, beside the service hatch"
+          "role": "foreground, emerging from the service hatch, back to camera, one hand on the hatch rim"
         },
         {
           "kind": "object",
           "id": "object:harlan-wrist-device",
-          "role": "Harlan touches the device"
+          "role": "Harlan touches the device late in the action"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "visible behind the hatch at the empty station, seated and secured by the visible belt in microgravity, facing forward and never looking back toward Harlan"
         }
       ],
       "offScreenCharacterIds": [
-        "character:voss"
+        "character:zao"
       ],
       "composition": {
         "size": "MCU",
@@ -13409,6 +13420,14 @@
       "durationMs": 7710,
       "cuePlacements": [
         {
+          "cueId": "festival-master:cue-0047",
+          "atMs": 0,
+          "durationMs": 4780,
+          "sourceOffsetMs": 0,
+          "presentationOverride": "radio",
+          "gainDb": -96
+        },
+        {
           "cueId": "festival-master:cue-0048",
           "atMs": 0,
           "durationMs": 5870
@@ -13427,7 +13446,18 @@
       "purpose": {
         "es": "Escena «La advertencia se corta»: Voss (fuera de cuadro) — restablecer el contacto.",
         "en": "Scene \"The warning breaks\": Voss (off-frame) — restore contact."
-      }
+      },
+      "notes": [
+        {
+          "id": "note:festival-master-shot-plan-024-zao-audio-from-023",
+          "type": "sound",
+          "status": "open",
+          "text": {
+            "en": "Post: play festival-master:cue-0047 from shot 023 under this picture (J-cut while Harlan emerges, cuts the channel on \"sabotage,\" and retreats). The cue is also placed here with presentationOverride radio so Seedance attaches Zao sheet/voice and repeats the same line for a temporary radio bed; animatic gainDb -96 mutes the duplicate; replace Seedance Zao audio with the 023 take in the edit. Voss \"Zao? Repeat.\" remains local to this shot after the cut.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:shot-plan-025",
@@ -13439,29 +13469,29 @@
       "order": 3,
       "description": {
         "es": "Elin Rao, concentrada, reporta el corte desde su puesto: \"La inalámbrica acaba de desaparecer en toda su cubierta\". Voss, urgente, reparte la respuesta: \"Elin, encuentra la rotura. Okoye, seguridad del puente\".",
-        "en": "Wide current-bridge view: Voss stands at command, Rao reports from her analysis station, Sorell remains at her translator station, and Okoye takes bridge security. The central shaft and helical stairs remain in the established geometry; Harlan is hidden off-frame."
+        "en": "Use the new Celestial Ardor crew-stations reference with its visible seat belts for the wider response view. All three takes are in microgravity: Voss, Rao, and Okoye remain seated and secured by the visible belts in fixed floor-mounted chairs at their stations; their chairs do not move or float. Sorell is the only one leaving her chair, pulling hand-over-hand on a fixed handhold toward the response rather than standing on the deck. The curved console arc fills the right side of frame; the spiral stairs and service-shaft access remain on the left. Harlan is hidden off-frame. Preserve every belt and fixed chair position."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:voss",
-          "role": "center, standing, addressing the bridge"
+          "role": "center, seated and secured by the visible belt in the fixed command chair"
         },
         {
           "kind": "character",
           "id": "character:sorell",
-          "role": "background, at her station"
+          "role": "background, leaving her belted fixed chair hand-over-hand; not standing on the deck"
         },
         {
           "kind": "character",
           "id": "character:rao",
-          "role": "screen left, at her console, handset raised"
+          "role": "screen left, seated and secured by the visible belt in the fixed chair, handset raised"
         },
         {
           "kind": "character",
           "id": "character:okoye",
-          "role": "screen right, alert stance"
+          "role": "screen right, seated and secured by the visible belt in the fixed chair, alert"
         }
       ],
       "composition": {
@@ -13500,7 +13530,10 @@
       "purpose": {
         "es": "Escena «La advertencia se corta»: Elin Rao — medir el alcance del corte; Voss — separar respuestas técnicas y de protección.",
         "en": "Scene \"The warning breaks\": Elin Rao — identify the scope of the outage; Voss — split technical and protective responses."
-      }
+      },
+      "offScreenCharacterIds": [
+        "character:harlan"
+      ]
     },
     {
       "id": "festival-master:shot-plan-026",
@@ -18905,7 +18938,7 @@
         "generatedAt": "2026-09-14T02:40:18.626Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-title",
-      "videoAssetId": "asset:festival-master-shot-plan-title-rev-1-video-1-video",
+      "videoAssetId": "asset:festival-master-shot-plan-title-rev-2-video-1-video",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -19740,16 +19773,14 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan rises unseen from the recessed service hatch as the bridge crew faces forward and hears Zao open the channel. Composition: MLS framing. Camera: Dolly; orthogonal, legible insert framing. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:character-sorell-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Voss and the bridge crew sit secured at their forward stations and listen to Zao's off-screen warning through the word sabotage. Harlan remains concealed behind the left-side stairs at the recessed service hatch. Composition: MLS framing. Camera: Dolly; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-crew-stations-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-harlan-sheet",
           "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-bridge-service-shaft-reference",
           "asset:character-rao-sheet",
-          "asset:character-okoye-sheet"
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -19775,12 +19806,12 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan touches his wrist device only when that accusation lands; the channel dies mid-word and he withdraws into the service hatch before anyone turns. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:location-celestial-ardor-bridge-realistic-reference, asset:location-celestial-ardor-bridge-service-shaft-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan emerges from the recessed service hatch, hears Zao's warning reach sabotage, touches his discreet wrist device late to cut the wireless comms, then backs into and disappears through the same hatch before the seated crew can turn. Voss is visible seated and secured in the station behind the hatch, keeps facing forward, and never looks back toward Harlan; preserve the supplied hatch geometry. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-harlan-wrist-device-sheet"
         ],
         "provider": "OpenAI",
@@ -19806,14 +19837,14 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Elin reports the wireless outage. Voss urgently assigns the response. Composition: ELS framing. Camera: Locked; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-realistic-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: From the wider crew-stations view, Voss assigns the response while Rao reports the wireless outage, Sorell remains at her translator station, and Okoye takes bridge security. Harlan is off-frame. Microgravity is continuous. Voss, Rao, and Okoye are strapped into fixed floor-mounted chairs; Sorell alone leaves her chair hand-over-hand and never stands on the deck. Composition: ELS framing. Camera: Locked; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-crew-stations-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-sorell-sheet",
           "asset:character-rao-sheet",
           "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-crew-stations-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -20244,6 +20275,7 @@
         "generatedAt": "2026-09-14T16:52:41.854Z"
       },
       "imageAssetId": "asset:festival-master-storyboard-039",
+      "videoAssetId": "asset:festival-master-shot-plan-039-rev-1-video-1-video",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -20305,6 +20337,7 @@
         ]
       },
       "imageAssetId": "asset:festival-master-storyboard-040b",
+      "videoAssetId": "asset:festival-master-shot-plan-040b-rev-2-video-1-video",
       "imageStatus": {
         "status": "needs_review",
         "reasons": [
@@ -21908,14 +21941,12 @@
       "number": 1,
       "status": "selected",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for static appearance; do not redesign or restate them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Inside the Celestial Ardor bridge, Voss is physically present in the foreground, seen from behind or three-quarter view, watching a large wall-mounted suit-camera monitor. The curved pressure hull and bridge consoles fill the background. The monitor alone contains the exterior feed: Sorell in the established EVA suit, tether visible, with the Velari Transport Sphere waiting beyond her. Do not show Sorell, the sphere, the Velari station, or the exterior Ardor hull anywhere outside the monitor. Keep the bridge in microgravity with Voss braced at the console; locked insert composition and clear eyeline from Voss to the monitor. Any diegetic monitor labels are English-only and minimal; no spoken dialogue or subtitles in the still.",
-        "negativePrompt": "Sorell physically present outside monitor, duplicate Sorell, duplicate sphere, exterior Ardor hull behind Voss, Velari station outside monitor, open space as bridge background, wrong bridge geometry, extra crew, platform dock, planet, moon, non-English text, subtitles, watermark, logo",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell exits alone on a tether in a spacesuit; her suit-camera feed appears on Voss's distant bridge display. The Velari Transport Sphere waits, motionless, between ship and station (matching its established reference). Composition: INSERT framing. Camera: Locked; establishes geography and screen direction.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:character-sorell-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet",
-          "asset:prop-celestial-ardor-eva-suit-sheet"
+          "asset:character-voss-sheet",
+          "asset:vehicle-velari-transport-sphere-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21970,12 +22001,11 @@
       "number": 1,
       "status": "candidate",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Resolved, Sorell drifts on her tether toward the waiting Velari Transport Sphere. Composition: ELS framing. Camera: Dolly; preserves eyeline and action-axis continuity. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Resolved, Sorell drifts on her tether toward the waiting Velari Transport Sphere. Composition: ELS framing. Camera: Dolly; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet",
-          "asset:prop-celestial-ardor-eva-suit-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -23005,7 +23035,7 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
+          "en": "New independent still generated with the author-provided crew-stations reference; pending editorial review.",
           "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       },
@@ -23037,7 +23067,7 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
+          "en": "New independent still generated with the current bridge/hatch reference; pending editorial review.",
           "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       },
@@ -23069,8 +23099,8 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Manually replaced scene 10 still with visible fixed-seat belts; approved for video reference.",
+          "es": "Imagen reemplazada manualmente de la escena 10 con cinturones visibles en los asientos fijos; aprobada para referencia de video."
         }
       },
       "generation": {
@@ -23128,7 +23158,7 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
@@ -23195,7 +23225,7 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
+          "en": "New independent still generated with the author-provided crew-stations reference; pending editorial review.",
           "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
         }
       },
@@ -23288,8 +23318,8 @@
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Manually replaced scene 10 still with visible fixed-seat belts; approved for video reference.",
+          "es": "Imagen reemplazada manualmente de la escena 10 con cinturones visibles en los asientos fijos; aprobada para referencia de video."
         }
       },
       "generation": {
@@ -23640,11 +23670,10 @@
         "stretchDigest": "ed349c6c728c196d35bdeaa5f341dc216d7d2c7950375ff1ec44ab34a8d702ce",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:character-velari-envoy-sheet",
-          "asset:location-velari-station-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet",
-          "asset:prop-celestial-ardor-eva-suit-sheet"
-        ]
+          "asset:vehicle-velari-transport-sphere-sheet"
+        ],
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Resolved, Sorell drifts on her tether toward the waiting Velari Transport Sphere. Composition: ELS framing. Camera: Dolly; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark."
       }
     },
     {
@@ -24118,31 +24147,30 @@
       "shotId": "festival-master:shot-plan-023",
       "number": 2,
       "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-01",
+      "imageAssetId": "asset:festival-master-storyboard-023-rev-2",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Manually replaced scene 10 still with visible fixed-seat belts; approved for video reference.",
+          "es": "Imagen reemplazada manualmente de la escena 10 con cinturones visibles en los asientos fijos; aprobada para referencia de video."
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T19:46:29.856Z",
-        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
-        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
-        "stretchDigest": "d7858889f01a3caa7e31e34345b605cd8c3215706a8f458e4cec079b74d3bb84",
+        "generatedAt": "2026-09-15",
         "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
+          "asset:character-voss-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference"
+        ],
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Voss and the bridge crew sit secured at their forward stations and listen to Zao's off-screen warning through the word sabotage. Harlan remains concealed behind the left-side stairs at the recessed service hatch. Composition: MLS framing. Camera: Dolly; orthogonal, legible insert framing.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-crew-stations-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark."
       }
     },
     {
@@ -24150,31 +24178,29 @@
       "shotId": "festival-master:shot-plan-024",
       "number": 2,
       "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-02",
+      "imageAssetId": "asset:festival-master-storyboard-024-rev-3",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Manually replaced scene 10 still with visible fixed-seat belts; approved for video reference.",
+          "es": "Imagen reemplazada manualmente de la escena 10 con cinturones visibles en los asientos fijos; aprobada para referencia de video."
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T19:46:29.856Z",
-        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
-        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
-        "stretchDigest": "d7858889f01a3caa7e31e34345b605cd8c3215706a8f458e4cec079b74d3bb84",
+        "generatedAt": "2026-09-15",
         "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:character-harlan-sheet",
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-harlan-wrist-device-sheet"
-        ]
+        ],
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Harlan emerges from the recessed service hatch, hears Zao's warning reach sabotage, touches his discreet wrist device late to cut the wireless comms, then backs into and disappears through the same hatch before the seated crew can turn. Voss is visible seated and secured in the station behind the hatch, keeps facing forward, and never looks back toward Harlan; preserve the supplied hatch geometry. Composition: MCU framing. Camera: Pan; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-harlan-sheet, asset:character-voss-sheet, asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference, asset:object-harlan-wrist-device-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark."
       }
     },
     {
@@ -24182,31 +24208,30 @@
       "shotId": "festival-master:shot-plan-025",
       "number": 2,
       "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-03",
+      "imageAssetId": "asset:festival-master-storyboard-025-rev-3",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Manually replaced scene 10 still with visible fixed-seat belts; approved for video reference.",
+          "es": "Imagen reemplazada manualmente de la escena 10 con cinturones visibles en los asientos fijos; aprobada para referencia de video."
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T19:46:29.856Z",
-        "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
-        "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
-        "stretchDigest": "d7858889f01a3caa7e31e34345b605cd8c3215706a8f458e4cec079b74d3bb84",
+        "generatedAt": "2026-09-15",
         "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet"
-        ]
+          "asset:character-voss-sheet",
+          "asset:character-sorell-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference"
+        ],
+        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Preserve the visible fixed-chair seat belts/restraint harnesses shown in the bridge references; do not remove, loosen, relocate, or redesign them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: From the wider crew-stations view, Voss assigns the response while Rao reports the wireless outage, Sorell remains at her translator station, and Okoye takes bridge security. Harlan is off-frame. Microgravity is continuous. Voss, Rao, and Okoye are strapped into fixed floor-mounted chairs; Sorell alone leaves her chair hand-over-hand and never stands on the deck. Composition: ELS framing. Camera: Locked; preserves eyeline and action-axis continuity.. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-voss-sheet, asset:character-sorell-sheet, asset:character-rao-sheet, asset:character-okoye-sheet, asset:location-celestial-ardor-bridge-crew-stations-reference. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
+        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark."
       }
     },
     {
@@ -25949,6 +25974,7 @@
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
         "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1,
         "gridLayout": {
           "rows": 2,
           "cols": 2,
@@ -27830,8 +27856,8 @@
             "es": "Continúa el estado establecido del panel anterior."
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Harlan emerges, activates the wrist device late, and retreats through the same hatch while Voss remains belted, facing forward, and never looks back toward Harlan.",
+            "es": "Harlan emerge, activa tarde el dispositivo de muñeca y vuelve por la misma escotilla mientras Voss permanece abrochado, mirando al frente, sin mirar hacia Harlan."
           },
           "endState": {
             "en": "The next panel inherits the same continuity.",
@@ -27957,17 +27983,23 @@
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
+            "en": "Bridge crew seated and belted at forward stations; Harlan concealed at the recessed hatch; Zao's channel not yet open.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Zao's radio warning plays through \"sabotage\" while the crew listens forward; Harlan stays hidden.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
-          }
+            "en": "Warning still on the channel; crew has not turned; hatch still conceals Harlan.",
+            "es": "needs_revision"
+          },
+          "videoReferenceAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:character-sorell-sheet",
+            "asset:character-rao-sheet",
+            "asset:character-okoye-sheet"
+          ]
         },
         {
           "shotId": "festival-master:shot-plan-024",
@@ -27975,17 +28007,21 @@
           "takeScope": "selected",
           "keyframeRole": "develop",
           "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
+            "en": "Same Zao radio line continues under picture; Harlan at the hatch rim with Voss belted forward behind him.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Harlan emerges, activates the wrist device late on \"sabotage,\" and retreats through the same hatch while Voss remains belted, facing forward, and never looks back toward Harlan. Off-screen Zao radio repeats cue-0047 for Seedance; post replaces with 023 audio.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
-          }
+            "en": "Channel dead; Harlan gone through the hatch; Voss still facing forward.",
+            "es": "needs_revision"
+          },
+          "videoReferenceAssetIds": [
+            "asset:character-harlan-sheet",
+            "asset:object-harlan-wrist-device-sheet"
+          ]
         },
         {
           "shotId": "festival-master:shot-plan-025",
@@ -27993,17 +28029,23 @@
           "takeScope": "selected",
           "keyframeRole": "payoff",
           "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
+            "en": "Wider crew-stations view; Voss, Rao, and Okoye belted in fixed chairs; Sorell still at her station; Harlan off-frame.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Rao reports the wireless outage; Voss splits Elin to the break and Okoye to bridge security; Sorell leaves her chair hand-over-hand.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
-          }
+            "en": "Response orders issued; Sorell in motion on handholds; Harlan still hidden.",
+            "es": "needs_revision"
+          },
+          "videoReferenceAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:character-sorell-sheet",
+            "asset:character-rao-sheet",
+            "asset:character-okoye-sheet"
+          ]
         }
       ],
       "locationId": "location:celestial-ardor-bridge",
@@ -28016,7 +28058,7 @@
       ],
       "absentCharacterIds": [],
       "physics": {
-        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "en": "Microgravity on the bridge; crew remain seated and secured at their stations. Harlan uses the recessed service hatch behind the left-side stairs, and the bridge geometry stays fixed while he enters and withdraws.",
         "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
       },
       "lighting": {
@@ -28037,7 +28079,7 @@
           "zoneOrSeat": "command station",
           "screenSide": "left",
           "facing": "forward consoles",
-          "posture": "standing",
+          "posture": "seated and secured by the fixed chair belt",
           "eyelineTarget": "forward display"
         },
         {
@@ -28045,7 +28087,7 @@
           "zoneOrSeat": "analysis station",
           "screenSide": "right",
           "facing": "forward consoles",
-          "posture": "seated",
+          "posture": "seated and secured by the fixed chair belt",
           "eyelineTarget": "console"
         },
         {
@@ -28053,7 +28095,7 @@
           "zoneOrSeat": "translator station",
           "screenSide": "center-left",
           "facing": "forward consoles",
-          "posture": "seated",
+          "posture": "seated and secured by the fixed chair belt until leaving hand-over-hand",
           "eyelineTarget": "forward display"
         },
         {
@@ -28061,34 +28103,50 @@
           "zoneOrSeat": "security station",
           "screenSide": "center-right",
           "facing": "forward consoles",
-          "posture": "standing",
+          "posture": "seated and secured by the fixed chair belt",
           "eyelineTarget": "forward display"
         }
       ],
       "sharedDescription": {
-        "en": "Current Celestial Ardor bridge geometry: the five bridge crew face the curved forward consoles with their backs to the central shaft; Harlan remains concealed at the recessed service hatch until the channel cuts, then retreats before anyone turns."
+        "en": "Current Celestial Ardor bridge geometry from the crew-stations / hatch-stations references with visible seat belts. Shots 023 and 025 use the wider crew-stations view; shot 024 uses the zoomed service-shaft hatch/stations view. Zao is off-screen radio only on 023-024 (attach Zao sheet + voice for those Seedance jobs). Preserve fixed chair mounts and belts. Harlan stays concealed in 023, acts at the hatch in 024, and is hidden again in 025; Voss remains facing forward and never looks back toward Harlan."
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            4
-          ]
-        }
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:character-harlan-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-crew-stations-reference",
+        "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
         "asset:object-harlan-wrist-device-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
+      "videoReferencePolicy": "explicit",
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-voss-sheet"
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "user-approved independent shot video conversion"
+      },
+      "notes": [
+        {
+          "id": "note:bridge-comms-exceptional-video-identity",
+          "type": "production",
+          "status": "open",
+          "text": {
+            "en": "Exceptional Seedance identity lock: member videoReferenceAssetIds force mute crew sheets on 023/025 and Harlan + wrist device on 024 because selected still faces drifted from sheets. Does not change the mute-cast protocol for other stretches.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:stretch-bridge-investigation-046-049",

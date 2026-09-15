@@ -434,31 +434,31 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-sorell-sheet",
-          "path": "/assets/characters/sorell/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "path": "/assets/locations/proxima-dock/axial-dock-crew-composite-sheet-v1.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -483,15 +483,15 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "asset:visual-pack-proxima-axial-dock-crew-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "character:sorell": "asset:character-sorell-sheet",
-          "character:voss": "asset:character-voss-sheet",
+          "character:harlan": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:sorell": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:voss": "asset:visual-pack-proxima-axial-dock-crew-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
@@ -1634,6 +1634,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-voss",
           "path": "/assets/voices/en/Voss.wav",
@@ -1663,7 +1677,9 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -1717,31 +1733,31 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-okoye-sheet",
-          "path": "/assets/characters/okoye/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "path": "/assets/locations/proxima-dock/axial-dock-crew-composite-sheet-v1.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -1766,15 +1782,15 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "asset:visual-pack-proxima-axial-dock-crew-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "character:okoye": "asset:character-okoye-sheet",
-          "character:voss": "asset:character-voss-sheet",
+          "character:harlan": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:okoye": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:voss": "asset:visual-pack-proxima-axial-dock-crew-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
@@ -1833,6 +1849,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -1858,6 +1888,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:vehicle-celestial-ardor-jupiter",
           "asset:vehicle-celestial-ardor-model-sheet-v2"
         ],
@@ -2019,6 +2051,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -2033,7 +2079,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
@@ -2096,6 +2144,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -2114,6 +2176,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -2177,6 +2241,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-physical-override-relay-sheet",
           "path": "/assets/props/physical-override-relay/prop-sheet.png",
           "required": true,
@@ -2195,6 +2273,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-physical-override-relay-sheet"
         ],
         "coveringAssetByEntity": {
@@ -2262,6 +2342,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -2283,6 +2377,8 @@
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -2357,6 +2453,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-voss",
           "path": "/assets/voices/en/Voss.wav",
@@ -2379,7 +2489,9 @@
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
@@ -2453,6 +2565,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-elin",
           "path": "/assets/voices/en/Elin.wav",
@@ -2475,7 +2601,9 @@
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
@@ -2529,31 +2657,31 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "path": "/assets/locations/proxima-dock/axial-dock-crew-composite-sheet-v1.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -2585,15 +2713,15 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "asset:visual-pack-proxima-axial-dock-crew-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet",
+          "character:harlan": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:rao": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:voss": "asset:visual-pack-proxima-axial-dock-crew-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
@@ -2643,31 +2771,31 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "path": "/assets/locations/proxima-dock/axial-dock-crew-composite-sheet-v1.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -2692,15 +2820,15 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "asset:visual-pack-proxima-axial-dock-crew-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet",
+          "character:harlan": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:rao": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:voss": "asset:visual-pack-proxima-axial-dock-crew-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
@@ -2750,31 +2878,31 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "path": "/assets/locations/proxima-dock/axial-dock-crew-composite-sheet-v1.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -2799,15 +2927,15 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "asset:visual-pack-proxima-axial-dock-crew-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet",
+          "character:harlan": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:rao": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:voss": "asset:visual-pack-proxima-axial-dock-crew-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
@@ -3133,6 +3261,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -3151,6 +3293,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -3217,6 +3361,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-elin",
           "path": "/assets/voices/en/Elin.wav",
@@ -3236,7 +3394,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
@@ -3309,6 +3469,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-voss",
           "path": "/assets/voices/en/Voss.wav",
@@ -3331,7 +3505,9 @@
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
@@ -3548,6 +3724,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:vehicle-celestial-ardor-jupiter",
           "path": "/assets/vehicles/celestial-ardor/celestial-ardor-with-jupiter.png",
           "required": true,
@@ -3573,6 +3763,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:vehicle-celestial-ardor-jupiter",
           "asset:vehicle-celestial-ardor-model-sheet-v2"
         ],
@@ -3636,6 +3828,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-optical-contingency-transmitter-sheet",
           "path": "/assets/props/optical-contingency-transmitter/prop-sheet.png",
           "required": true,
@@ -3654,6 +3860,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-optical-contingency-transmitter-sheet"
         ],
         "coveringAssetByEntity": {
@@ -3720,6 +3928,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-zao",
           "path": "/assets/voices/en/Zao.wav",
@@ -3739,7 +3961,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:zao": "asset:character-zao-sheet",
@@ -3805,6 +4029,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-harlan",
           "path": "/assets/voices/en/Harlan.wav",
@@ -3824,7 +4062,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -3897,6 +4137,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-elin",
           "path": "/assets/voices/en/Elin.wav",
@@ -3919,7 +4173,9 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -3993,6 +4249,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -4010,7 +4280,9 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -4073,6 +4345,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-physical-override-relay-sheet",
           "path": "/assets/props/physical-override-relay/prop-sheet.png",
           "required": true,
@@ -4091,6 +4377,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-physical-override-relay-sheet"
         ],
         "coveringAssetByEntity": {
@@ -4157,6 +4445,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -4171,7 +4473,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -4224,31 +4528,31 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "path": "/assets/locations/proxima-dock/axial-dock-crew-composite-sheet-v1.png",
+          "required": true,
+          "role": "character"
         },
         {
           "kind": "audio",
@@ -4273,15 +4577,15 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "asset:visual-pack-proxima-axial-dock-crew-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet",
+          "character:harlan": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:rao": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:voss": "asset:visual-pack-proxima-axial-dock-crew-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
@@ -4342,6 +4646,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -4356,7 +4674,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
@@ -4418,6 +4738,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -4436,6 +4770,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -4806,6 +5142,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -4827,6 +5177,8 @@
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -4890,6 +5242,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-read-only-greeting-medium-sheet",
           "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
           "required": true,
@@ -4908,6 +5274,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-read-only-greeting-medium-sheet"
         ],
         "coveringAssetByEntity": {
@@ -4975,6 +5343,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -4996,6 +5378,8 @@
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -5059,6 +5443,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -5077,6 +5475,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -5139,6 +5539,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-diplomatic-quantum-core-sheet",
           "path": "/assets/props/diplomatic-quantum-core/prop-sheet.png",
           "required": true,
@@ -5157,6 +5571,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-diplomatic-quantum-core-sheet"
         ],
         "coveringAssetByEntity": {
@@ -5223,6 +5639,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-voss",
           "path": "/assets/voices/en/Voss.wav",
@@ -5242,7 +5672,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
@@ -5302,6 +5734,20 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-read-only-greeting-medium-sheet",
           "path": "/assets/props/read-only-greeting-medium/prop-sheet.png",
           "required": true,
@@ -5320,6 +5766,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
           "asset:object-read-only-greeting-medium-sheet"
         ],
         "coveringAssetByEntity": {
@@ -5719,6 +6167,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -5736,7 +6198,9 @@
         "attachedAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
@@ -5810,6 +6274,20 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-voss",
           "path": "/assets/voices/en/Voss.wav",
@@ -5832,7 +6310,9 @@
         "attachedAssetIds": [
           "asset:character-voss-sheet",
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
@@ -5897,6 +6377,20 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/service-shaft-hatch-crew-stations.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -5911,7 +6405,9 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference"
         ],
         "coveringAssetByEntity": {
           "character:voss": "asset:character-voss-sheet",
