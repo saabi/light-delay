@@ -1,5 +1,70 @@
 # Estado del proyecto
 
+## 2026-09-15 — Bridge-comms exceptional Seedance identity sheets (English source)
+
+- 023/025 Seedance jobs also attach the four bridge-crew sheets; 024 attaches Harlan + wrist-device sheets (exceptional face-drift lock via member `videoReferenceAssetIds`).
+
+## 2026-09-15 — Festival Seedance clips attached in Movie mode (English source)
+
+- Stretch videos that had assets on disk but empty plan `outputs.assetId` after Scene 10 rebuilds are linked again. Plan rebuild now preserves those ids from `assets.json`. Movie mode plays them as unmuted spans over member stills.
+- Singleton binds (still `needs_review`): title take uses joined rev-2 (~27 s); 039 and 040b rev-2 play on their selected takes. Script `durationMs` and `selectedTakeId` unchanged. Trailer title sting file remains unbound on the trailer cut.
+
+## 2026-09-15 — Bridge-comms 023–025 Seedance assets + Zao J-cut (English source)
+
+- Fixed the split packages: 023 = Zao sheet+voice; 024 = Zao+Voss with cue-0047 repeated for Seedance and annotated post J-cut from 023; 025 = Rao/Elin+Voss, no Zao. Stretch still refs corrected. Plans rebuilt; three video jobs runnable.
+
+## 2026-09-15 — Scene 10 video split into singleton jobs (English source)
+
+- The 023–025 bridge video is now three independent one-shot Seedance jobs rather than one continuous grouped generation. Each uses its selected still, current belt-continuity refs, and the required voice/identity refs. Prompt freeze approved; all three jobs are runnable.
+
+## 2026-09-15 — Scene 10 replacement stills and belt continuity (English source)
+
+- Adopted the manually replaced shot 23–25 stills at their existing paths and updated reference metadata/prompts for the visible fixed-seat belts. Shot 24 video continuity explicitly keeps Voss facing forward without looking back toward Harlan. No image generation was performed.
+
+## 2026-09-15 — Reactor-optics 029–032 Seedance submitted (English source)
+
+- All four per-take jobs submitted in parallel and registered pending review: 029 `2c5d2191…` (8s/20cr), 030 `e3762e4a…` (14s/35cr), 031 `2bc1b5c3…` (12s/30cr), 032 `7c716c7c…` (7s/17.5cr) → **102.5 cr**. Clips under `…/stretches/festival-master-stretch-reactor-optics-029-032/`. Selected takes unchanged. Ultra balance after: 2075.5.
+
+## 2026-09-15 — MCP package-prep asset list (English source)
+
+- Ready Seedance package reports must include the input asset list with the credit quote (`HIGGSFIELD_MCP.md` §8b step 6).
+
+## 2026-09-15 — Reactor-optics 029–032 per-take Seedance package (English source)
+
+- Stretch video partition is now one Seedance job per member (`maxMembersPerVideoJob: 1`): video-1=029 (8s/20cr), video-2=030 (14s/35cr), video-3=031 (12s/30cr), video-4=032 (7s/17.5cr). Ready runs under `reports/runs/`; keyframes uploaded. Submitted after author go.
+
+## 2026-09-15 — Scene 10 shots 024–025 corrected and regenerated (English source)
+
+- Shot 024 now uses the zoomed hatch/stations reference and includes Voss’s character sheet and secured rear-station presence. Shot 025 now encodes fixed floor-mounted chairs, restraint harnesses, and Sorell as the sole crew member leaving her chair in microgravity. Rev. 3 stills are registered; shot-level plans are ready and remain pending editorial review.
+
+## 2026-09-15 — Bridge service-shaft hatch second reference (English source)
+
+- Author-provided second hatch/stations view registered as `asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference`. Complements the existing concealed-access still; listed on `location:celestial-ardor-bridge`. Not bound to shot takes yet.
+
+## 2026-09-15 — Festival-master scene 10 independent stills generated (English source)
+
+- New independent stills for shots 023–025 are registered and wired into the selected takes. Shot-level generation plans are ready with the intended reference sets: five images for 023/025 and three for 024. All three assets remain pending editorial review; shot 024 overlap timing and the video prompt freeze remain open.
+
+## 2026-09-15 — Scene 10 bridge-stations reference registered (English source)
+
+- Registered the author-provided crew-stations reference for shots 023 and 025 and prepared independent per-shot regeneration references/prompts. Shot 024 retains the existing bridge/hatch reference. Plan splitting and shot-024 overlap timing remain to be rebuilt.
+
+## 2026-09-15 — Festival-master scene 10 blocking reauthored (English source)
+
+- Shots 023–024 now carry the revised independent-still blocking in English: seated bridge crew and Zao’s full warning in 023; Harlan’s late wrist-device activation and retreat through the same hatch in 024. A closer bridge-stations reference for 023/025 is still pending. The combined 023–025 stretch and shot 024 overlap duration remain to be rebuilt after that reference is supplied.
+
+## 2026-09-15 — Festival title preamble Seedance (English source)
+
+- Option-2 singleton submitted: job `0964ef44-e5a7-48af-9f87-3b4c0217d834`, ~12 s / 480p / 30 cr. Raw preamble plus local join onto the existing Earth→Jupiter sting (~27 s) at `static/assets/animatic/frames/festival-master/shot-plan-title-rev-2-video-1.mp4`. Pending review; take `videoAssetId` still points at rev-1. Last-frame lock is close; opening is not a tight crowd hold.
+
+## 2026-09-15 — Reactor-entrance 018–019 Seedance (English source)
+
+- Submitted and registered pending review: job `0b8db206-6fe5-4345-a3b9-10e4223b02ae`, ~16 s / 480p / 40 cr → `…/festival-master-stretch-reactor-entrance-018-019-rev-1-video-1.mp4`. Selected takes unchanged.
+
+## 2026-09-15 — Central-access 013–015 Seedance (English source)
+
+- Submitted and registered pending review: job `870bba91-51e4-4d6c-aa6c-055b91721854`, ~15 s / 480p / 37.5 cr → `…/festival-master-stretch-central-access-013-015-rev-1-video-1.mp4`. Exterior periapsis 013b skipped. Selected takes unchanged.
+
 ## 2026-09-15 — Axial-dock 006–009 Seedance (English source)
 
 - Submitted and registered pending review: job `241428bd-15d1-48f3-b615-8f40149292a8`, ~21 s / 480p / 52.5 cr → `…/festival-master-stretch-axial-dock-006-009-rev-1-video-1.mp4`. Ledger reused identity sheets. Review for Image7 entity-map typo before accept.

@@ -1,5 +1,71 @@
 # Changelog
 
+## 2026-09-15 — Bridge-comms exceptional Seedance identity sheets
+
+- Exceptional mute-cast lock for face drift: member `videoReferenceAssetIds` force Voss/Sorell/Rao/Okoye sheets on 023 and 025, and Harlan + wrist-device sheets on 024. Speaker protocol unchanged; no guideline edits.
+
+## 2026-09-15 — Festival Seedance clips attached in Movie mode
+
+- Re-linked 18 registered stretch videos onto Festival-master plan job `outputs.assetId` so Movie mode replaces those stills. `production:plans` now re-applies those ids from `assets.json` (`metadata.stretchJobId`) instead of dropping them on rebuild.
+- Bound singleton clips pending review: title take → joined rev-2 sting (~27 s); 039 Harlan I2V; 040b throat-entry rev-2 (~15 s). Selected takes unchanged. 040b rev-1 and the title preamble raw stay on disk only.
+- Documented the still→video attach path for agents (`AGENT_GENERATION_BRIEF.md` §8.5, stretch pipeline, Higgsfield §8b, onboarding, `AGENTS.md`).
+
+## 2026-09-15 — Bridge-comms 023–025 Seedance assets + Zao J-cut
+
+- Corrected the three one-shot Seedance packages after the split: off-screen Zao on 023/024; cue-0047 repeated on 024 (`presentationOverride: radio`, animatic `gainDb: -96`) with shot notes that post lays 023 audio under Harlan’s reaction. Stretch still refs use solo sheets + crew-stations + hatch-stations. Compiler scopes identity sheets and present cast per `maxMembersPerVideoJob: 1` job (023 Zao only; 024 Zao+Voss; 025 Rao+Voss, no Zao).
+
+## 2026-09-15 — Scene 10 video split into singleton jobs
+
+- Converted the 023–025 bridge video from one grouped stretch into three one-shot Seedance jobs using the manually replaced stills as ordered keyframes. Added explicit dialogue identity refs, removed the combined-sheet still mode, and approved the video prompt freeze. All three jobs compile and are runnable.
+
+## 2026-09-15 — Scene 10 replacement stills and belt continuity
+
+- Updated the registered scene 10 bridge references and shot prompts to preserve the newly visible fixed-seat belts. Shot 24 video continuity now keeps Voss facing forward without looking back toward Harlan. No images were regenerated.
+
+## 2026-09-15 — Reactor-optics 029–032 Seedance videos submitted
+
+- Submitted all four per-take jobs in parallel (`2c5d2191…`, `e3762e4a…`, `2bc1b5c3…`, `7c716c7c…`), **102.5 cr** total (20+35+30+17.5). 480p `omni_reference` with native audio; declined IN THE DARK preset. Registered pending review; selected takes unchanged.
+
+## 2026-09-15 — MCP package-prep must list assets with cost
+
+- Documented in `HIGGSFIELD_MCP.md` §8b (and cross-refs in stretch / generation briefs / onboarding): when presenting a ready Seedance package for go/no-go, report credits **and** every input asset (`assetId`, role, path, ledger reuse vs upload) — not cost alone.
+
+## 2026-09-15 — Reactor-optics 029–032 video jobs split per take
+
+- Set `generationProfile.maxMembersPerVideoJob: 1` on `festival-master:stretch-reactor-optics-029-032` so Seedance packages one shot per job (four jobs) instead of two paired continuous takes. Added the optional partition cap to the stretch pipeline/docs. Ready handoffs + keyframe uploads staged; waiting for author go before MCP submit.
+
+## 2026-09-15 — Scene 10 shots 024–025 corrected and regenerated
+
+- Replaced shot 024 with a still using the zoomed service-shaft hatch/stations reference plus Harlan, Voss, and wrist-device sheets; Voss is secured at the rear station. Replaced shot 025 with explicit microgravity restraint blocking: Voss, Rao, and Okoye stay strapped to fixed chairs while Sorell alone leaves her seat hand-over-hand. Registered rev. 3 assets; plans validate and remain pending editorial review.
+
+## 2026-09-15 — Bridge service-shaft hatch second reference
+
+- Registered author-provided second bridge view `asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference` (`service-shaft-hatch-crew-stations.png`): service cylinder and hatch in foreground with crew stations behind the shaft. Complements the existing `…-service-shaft-reference`; not assigned to specific shots yet. Wired onto `location:celestial-ardor-bridge` reference list.
+
+## 2026-09-15 — Festival-master scene 10 independent stills generated
+
+- Generated and registered new independent stills for shots 023–025 as `asset:festival-master-storyboard-023-rev-2`, `...024-rev-2`, and `...025-rev-2`. Shots 023/025 use the author-provided crew-stations reference; shot 024 uses the existing bridge/hatch reference. All three remain pending editorial review.
+
+## 2026-09-15 — Scene 10 bridge-stations reference registered
+
+- Registered the author-provided `asset:location-celestial-ardor-bridge-crew-stations-reference` for shots 023 and 025. It establishes the seated console arc on the right and the spiral stairs/service-shaft orientation on the left. Shot 024 keeps the existing bridge/hatch reference.
+
+## 2026-09-15 — Festival-master scene 10 blocking reauthored for independent stills
+
+- Updated shots 023–024 in English for the new cut: the bridge crew remain seated while Zao’s full warning plays in 023; Harlan emerges, activates the wrist device after “sabotage,” and retreats through the same hatch in 024. The closer bridge-stations reference for 023/025 remains pending; the current bridge/hatch reference stays assigned to 024.
+
+## 2026-09-15 — Festival title preamble Seedance (option 2)
+
+- Submitted singleton `festival-master:shot-plan-title:rev-2:video-1` (Higgsfield `0964ef44-e5a7-48af-9f87-3b4c0217d834`), **30 cr**, ~12 s / 480p. No `start_image`; dusk plaza as layout ref; last frame locked to the existing sting open. Joined locally in front of rev-1 (~27 s) at `shot-plan-title-rev-2-video-1.mp4`. Not bound; selected take and duration unchanged. Did not run `register:visual-stretch-video`.
+
+## 2026-09-15 — Reactor-entrance 018–019 Seedance video-1
+
+- Submitted `festival-master:stretch-reactor-entrance-018-019:rev-1:video-1` (Higgsfield `0b8db206-6fe5-4345-a3b9-10e4223b02ae`), **40 cr**, ~16 s / 480p. Registered pending review. Declined FREE FALL style preset. Ledger reused Harlan/Zao sheets and 5s voices; uploaded two keyframe panels.
+
+## 2026-09-15 — Central-access 013–015 Seedance video-1
+
+- Submitted `festival-master:stretch-central-access-013-015:rev-1:video-1` (Higgsfield `870bba91-51e4-4d6c-aa6c-055b91721854`), **37.5 cr**, ~15 s / 480p. Registered pending review. Exterior periapsis `shot-plan-013b` skipped. Ledger reused Elin/Zao sheets and 5s voices; uploaded three keyframe panels.
+
 ## 2026-09-15 — Axial-dock 006–009 Seedance video-1
 
 - Submitted `festival-master:stretch-axial-dock-006-009:rev-1:video-1` (Higgsfield `241428bd-15d1-48f3-b615-8f40149292a8`), **52.5 cr**, ~21 s / 480p. Registered pending review. Ledger reused four character sheets; uploaded four panels + four Seedance 5s voices. Note: submit prompt had Image7 entity-map typo (`zao` vs `voss`); sheet order still correct — review before accept.
