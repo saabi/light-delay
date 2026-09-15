@@ -257,8 +257,8 @@ export function getShotMedia(scriptOrId: ScriptFile | ScriptId, shot: Shot): Sho
 			: undefined;
 	const provisional =
 		(take?.imageStatus && take.imageStatus.status !== 'current') ||
-		take?.imageStatus?.reasons.includes('placeholder') ||
-		asset?.imageStatus?.reasons.includes('placeholder');
+		take?.imageStatus?.reasons?.includes('placeholder') ||
+		asset?.imageStatus?.reasons?.includes('placeholder');
 
 	return {
 		take,

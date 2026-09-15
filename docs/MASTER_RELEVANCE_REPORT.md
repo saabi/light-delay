@@ -98,7 +98,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | voice_profile | `voice:voss-es` | explicit | retain |
 | voice_profile | `voice:zao-es` | explicit | retain |
 
-## Revisión requerida (544)
+## Revisión requerida (545)
 
 | Tipo | ID | Base | Disposición |
 | --- | --- | --- | --- |
@@ -352,6 +352,7 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | asset | `asset:dialogue-light-delay-main-short-en-main-cue-17-01` | default-review | retain |
 | asset | `asset:dialogue-light-delay-main-short-en-main-cue-17-02` | default-review | retain |
 | asset | `asset:dialogue-light-delay-main-short-en-main-cue-17-03` | default-review | retain |
+| asset | `asset:festival-master-shot-plan-013b-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-039-rev-1-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-040b-rev-2-video-1-video` | default-review | retain |
 | asset | `asset:festival-master-shot-plan-title-rev-1-video-1-video` | default-review | retain |

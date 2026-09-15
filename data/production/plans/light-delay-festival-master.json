@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "009e036e2c4a8efa175bf5ba8c931286bbcdfec649a7755c7e7a6106e7dece85",
+    "sourceDigest": "a558c6ee797ac6d3961308bfaa743da4560442c169dcb586b7a50781588f7347",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -5244,7 +5244,7 @@
         {
           "id": "festival-master:shot-plan-044:segment-01",
           "startMs": 0,
-          "endMs": 5042,
+          "endMs": 5160,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -6437,6 +6437,13 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-elin",
           "path": "/assets/voices/en/Elin.wav",
@@ -6462,7 +6469,8 @@
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
@@ -6544,6 +6552,13 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-okoye",
           "path": "/assets/voices/en/Okoye.wav",
@@ -6574,7 +6589,8 @@
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
@@ -6655,6 +6671,13 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-inner-shielding-vault-sheet",
+          "path": "/assets/locations/celestial-ardor-inner-shielding-vault/concept-sheet-v2.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-elin",
           "path": "/assets/voices/en/Elin.wav",
@@ -6680,7 +6703,8 @@
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
@@ -15224,7 +15248,7 @@
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
       "dependsOnStillJobId": "festival-master:stretch-service-cylinder-harlan-044:rev-1",
-      "durationMs": 5042,
+      "durationMs": 5160,
       "memberInputs": [
         {
           "order": 1,
@@ -15302,7 +15326,7 @@
         "asset:character-voss-sheet",
         "asset:object-wired-comms-deck-patch-panel-sheet"
       ],
-      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-044, ~5s): start: Harlan at the service-cylinder wired-comms tray; trunks cut; hands on the cable. event: He reconnects a trunk cable into the patch panel with a clean, anatomically correct grip — fingers and connector stay readable. camera progression: Pan; keeps the cable grip and tray readable without bridge wash. end: Trunks restored; Harlan still inside the cylinder; hands look normal. shot description: Inside the Celestial Ardor service cylinder (same geography as shot 026), Harlan reconnects the wired communications trunks at the patch-panel tray in microgravity. His hands gripping the cable/connector must stay anatomically readable. Bridge interior and hatch-egress framing stay off-frame.\nsubjects: Present cast: character:harlan. Reference map: @Image1 (asset:festival-master-storyboard-044, ordered keyframe); @Image2 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Image3 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image4 (asset:object-wired-comms-deck-patch-panel-sheet, visual_reference, entity map: object:wired-comms-deck-patch-panel); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-service-cylinder. Ignore people in location stills.\ncamera: festival-master:shot-plan-044: Pan; keeps the cable grip and tray readable without bridge wash.\nlighting: Cool graphite/slate-blue cylinder practicals; no bridge wash.\nphysics: Microgravity inside the restricted service cylinder; Harlan works the tray and launches/holds with rails — no standing deck.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Singleton Seedance: Harlan reconnects wired trunks at the service-cylinder tray. Hands and cable grip stay anatomically correct in motion. Match approved shot-026 geography and the landed keyframe. Bridge and outer bay stay off-frame. Blocking:\ncharacter:harlan; zoneOrSeat=hinged tray below bridge service hatch; screenSide=center; facing=tray / trunks, then hatch; posture=working at tray then moving to hatch; eyelineTarget=object:wired-comms-deck-patch-panel Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Commander Rylen Harlan [character:harlan] at ~0ms in festival-master:shot-plan-044 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {Found the break. Both trunks were out at the service tray.} Captain Elias Voss [character:voss] at ~3542ms in festival-master:shot-plan-044 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {Did Sorell find you?}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, score, underscore, BGM, dramatic instrumentation, or background music.",
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-044, ~5s): start: Harlan at the service-cylinder wired-comms tray; trunks cut; hands on the cable. event: He reconnects a trunk cable into the patch panel with a clean, anatomically correct grip — fingers and connector stay readable. camera progression: Pan; keeps the cable grip and tray readable without bridge wash. end: Trunks restored; Harlan still inside the cylinder; hands look normal. shot description: Inside the Celestial Ardor service cylinder (same geography as shot 026), Harlan reconnects the wired communications trunks at the patch-panel tray in microgravity. His hands gripping the cable/connector must stay anatomically readable. Bridge interior and hatch-egress framing stay off-frame.\nsubjects: Present cast: character:harlan. Reference map: @Image1 (asset:festival-master-storyboard-044, ordered keyframe); @Image2 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Image3 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image4 (asset:object-wired-comms-deck-patch-panel-sheet, visual_reference, entity map: object:wired-comms-deck-patch-panel); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-service-cylinder. Ignore people in location stills.\ncamera: festival-master:shot-plan-044: Pan; keeps the cable grip and tray readable without bridge wash.\nlighting: Cool graphite/slate-blue cylinder practicals; no bridge wash.\nphysics: Microgravity inside the restricted service cylinder; Harlan works the tray and launches/holds with rails — no standing deck.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Singleton Seedance: Harlan reconnects wired trunks at the service-cylinder tray. Hands and cable grip stay anatomically correct in motion. Match approved shot-026 geography and the landed keyframe. Bridge and outer bay stay off-frame. Blocking:\ncharacter:harlan; zoneOrSeat=hinged tray below bridge service hatch; screenSide=center; facing=tray / trunks, then hatch; posture=working at tray then moving to hatch; eyelineTarget=object:wired-comms-deck-patch-panel Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Commander Rylen Harlan [character:harlan] at ~0ms in festival-master:shot-plan-044 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {Found the break. Both trunks were out at the service tray.} Captain Elias Voss [character:voss] at ~3660ms in festival-master:shot-plan-044 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {Did Sorell find you?}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, score, underscore, BGM, dramatic instrumentation, or background music.",
       "outputs": [
         {
           "order": 1,

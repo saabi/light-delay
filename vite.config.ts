@@ -23,7 +23,12 @@ export default defineConfig({
 			},
 			prerender: {
 				handleHttpError: ({ path, status, message }) => {
-					if (status === 404 && path.startsWith('/assets/')) return;
+					// Missing optional thumbs must not fail Pages builds; BASE_PATH is prefixed on CI.
+					const asset404 =
+						status === 404 &&
+						(path.startsWith('/assets/') ||
+							(base !== '' && path.startsWith(`${base}/assets/`)));
+					if (asset404) return;
 					throw new Error(message);
 				}
 			}

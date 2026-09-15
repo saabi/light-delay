@@ -14848,16 +14848,16 @@
           "es": "needs_revision"
         }
       },
-      "durationMs": 5042,
+      "durationMs": 5160,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0087",
           "atMs": 0,
-          "durationMs": 3540
+          "durationMs": 3660
         },
         {
           "cueId": "festival-master:cue-0088",
-          "atMs": 3542,
+          "atMs": 3660,
           "durationMs": 1500
         }
       ],
@@ -14943,7 +14943,7 @@
         {
           "cueId": "festival-master:cue-0091",
           "atMs": 9200,
-          "durationMs": 2380
+          "durationMs": 3842
         }
       ],
       "takeIds": [
@@ -16424,7 +16424,7 @@
         {
           "cueId": "festival-master:cue-0130",
           "atMs": 2480,
-          "durationMs": 1580
+          "durationMs": 1720
         }
       ],
       "takeIds": [
@@ -19456,7 +19456,8 @@
           "en": "Author-approved periapsis exterior still; Seedance keyframe for singleton I2V (prograde→retrograde turn start; velocity via camera parallax).",
           "es": "Still exterior de periapsis aprobado por el autor; fotograma clave Seedance para I2V singleton (inicio del giro prógrada→retrógrada; velocidad vía parallax de cámara)."
         }
-      }
+      },
+      "videoAssetId": "asset:festival-master-shot-plan-013b-rev-1-video-1-video"
     },
     {
       "id": "festival-master:shot-plan-013:take-01",
@@ -23171,23 +23172,23 @@
       "id": "festival-master:shot-plan-054:take-02",
       "shotId": "festival-master:shot-plan-054",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-01",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-054",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
         "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
         "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
         "stretchDigest": "923ecef3a9b080bbae5990dcc1210310092b689a77023c459b049b461f14ef4b",
@@ -23195,31 +23196,34 @@
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
-        ]
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+        ],
+        "prompt": "Use the supplied Okoye-Voss, Voss-Harlan, Rao character sheets, Celestial Ardor central-access location sheet, and inner-shielding vault sheet as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. At the third thrust cutoff, the central-access trunk is in microgravity at the sealed inner-shielding vault door. Elin Rao and Okoye have just reached the heavy sealed vault door; Rao is screen left, the East-Asian scientist, and Okoye is center, the Black security officer with short natural hair. They float beside the door using handholds or restrained tethers, with hair, loose straps, and small debris drifting; no planted footing and no usable floor orientation. Show the massive circular shielding vault, local-lock panel, radial handholds, and central-access geometry clearly; it is not a generic airlock, bridge, or service cylinder. Harlan may appear soft in depth on an upper rail, younger, clean-shaven, dark-haired; Voss is remote only if suggested by a small comm inset, never a standing body. Establish the sealed vault as the immediate obstacle. Cool central-access practical strips and vault indicators, physically plausible worn spacecraft hardware. English-only diegetic UI if any, no spoken dialogue text.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, standing on a deck, planted footing, bridge interior, service cylinder, generic airlock, extra characters, Earth, Jupiter, Proxima, any planet."
       }
     },
     {
       "id": "festival-master:shot-plan-055:take-02",
       "shotId": "festival-master:shot-plan-055",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-02",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-055",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
         "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
         "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
         "stretchDigest": "923ecef3a9b080bbae5990dcc1210310092b689a77023c459b049b461f14ef4b",
@@ -23227,31 +23231,34 @@
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
-        ]
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+        ],
+        "prompt": "Use the supplied Okoye-Voss, Voss-Harlan, Rao character sheets, Celestial Ardor central-access location sheet, and inner-shielding vault sheet as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. Inside the same central-access trunk at the sealed inner-shielding vault door during microgravity, Okoye is the Black security officer with short natural hair, floating at the vault handhold in the foreground/center, wary as she reports the local-lock obstruction over a handheld comm. Harlan is nearby on an upper rail, the younger clean-shaven dark-haired officer, deceptively steering suspicion toward Sorell; he is visibly floating or braced by handhold, never standing. Rao is the East-Asian scientist with dark bobbed hair, floating at the vault-side rail, skeptical and ready to challenge the accusation. Keep the heavy sealed shielding vault, circular hatch, local-lock panel, radial handholds, and central-access geometry clearly readable; not a generic airlock, bridge, or service cylinder. Microgravity is explicit: hair, straps, small tools and debris drift, bodies move by handhold or tether, no planted footing or floor orientation. Voss is remote only if suggested by a small comm display, never a physical standing body. Cool central-access practical strips and vault indicators, worn maintainable spacecraft. English-only diegetic UI if any, no spoken dialogue text.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, standing on a deck, planted footing, bridge interior, service cylinder, generic airlock, extra characters, Earth, Jupiter, Proxima, any planet."
       }
     },
     {
       "id": "festival-master:shot-plan-056:take-02",
       "shotId": "festival-master:shot-plan-056",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-056",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.359Z",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
         "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
         "stretchJobId": "festival-master:stretch-central-vault-obstruction-054-056:rev-1",
         "stretchDigest": "923ecef3a9b080bbae5990dcc1210310092b689a77023c459b049b461f14ef4b",
@@ -23259,8 +23266,11 @@
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-rao-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
-        ]
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+        ],
+        "prompt": "Use the supplied Okoye-Voss, Voss-Harlan, Rao character sheets, Celestial Ardor central-access location sheet, and inner-shielding vault sheet as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. At the same sealed inner-shielding vault door in the central-access trunk during the third thrust cutoff and microgravity, Rao is the East-Asian scientist, floating screen left at the vault-side diagnostic rail, skeptical as she refuses an unsupported claim; Okoye is the Black security officer with short natural hair, floating at the vault handhold; Harlan is the younger clean-shaven dark-haired officer floating nearby on an upper rail. Rao has just magnetically clamped a compact diagnostic instrument to the workbench beside the vault door; make the clamped device visibly secured and prominent enough to recur later. Keep bodies supported by handholds or tether, never standing on a deck; hair, straps, and small debris drift freely. Show the heavy circular shielding vault, local-lock panel, radial handholds, central-access trunk, and the diagnostic instrument clearly. Voss is remote only if suggested by a small comm display, never a physical standing body. Cool central-access practical strips and vault indicators, worn maintainable spacecraft. English-only diegetic UI if any, no spoken dialogue text.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, standing on a deck, planted footing, bridge interior, service cylinder, generic airlock, unsecured instrument, extra characters, Earth, Jupiter, Proxima, any planet."
       }
     },
     {
@@ -24386,23 +24396,23 @@
       "id": "festival-master:shot-plan-050:take-02",
       "shotId": "festival-master:shot-plan-050",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-01",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-050",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
         "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
         "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
@@ -24411,30 +24421,32 @@
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
+        ],
+        "prompt": "Use the supplied Voss-Harlan, Rao-Sorell, Okoye-Voss character pair sheets and Celestial Ardor bridge location reference as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. The compact circular Celestial Ardor bridge is under steady artificial 1 g. Harlan is the younger clean-shaven dark-haired officer, standing at the meeting table near camera left of center, persuasive and controlled, presenting a unified theory with open-handed gestures. Voss is the older silver-bearded captain, seated at the captain-side table position; Rao, Sorell, and Okoye are seated at their bridge stations listening. Keep all five identities distinct and correctly assigned: Rao is the East-Asian woman in the lighter gray jacket, Sorell is the other woman from her pair sheet, Okoye is the Black woman with short natural hair. Feet are planted or seated normally under 1 g; no floating hair, straps, debris, or microgravity. Medium-wide bridge composition with Harlan clearly the speaker and the crew readable behind him. Worn maintainable spacecraft, cool graphite and slate-blue consoles with restrained amber practicals. English-only diegetic UI if any, no spoken dialogue text.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, floating bodies, drifting hair, drifting debris, EVA suits, extra characters, wrong identities, Earth, Jupiter, Proxima, any planet."
       }
     },
     {
       "id": "festival-master:shot-plan-051:take-02",
       "shotId": "festival-master:shot-plan-051",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-02",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-051",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
         "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
         "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
@@ -24443,30 +24455,32 @@
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
+        ],
+        "prompt": "Use the supplied Voss-Harlan, Rao-Sorell, Okoye-Voss character pair sheets and Celestial Ardor bridge location reference as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. The compact circular Celestial Ardor bridge is under steady artificial 1 g. Make this a close shot on Elin Rao at her bridge data console. Rao is the East-Asian woman in the lighter gray jacket, seated securely at the science/data console, analytical and composed, keeping inference separate from evidence. The other four crew remain softly readable in background depth: Harlan is the younger clean-shaven dark-haired officer, Voss the older silver-bearded captain, Sorell the other woman from the Rao-Sorell sheet, and Okoye the Black woman with short natural hair. Everyone is normally weighted under 1 g: feet planted or seated, no floating hair, straps, debris, or drifting bodies. Rao dominates the foreground with her hands near the controls; bridge consoles and practicals remain coherent with the location reference. Worn maintainable spacecraft, cool graphite and slate-blue console glow with restrained amber accents. Any interface text is English-only diegetic UI, no spoken dialogue text.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, floating bodies, drifting hair, drifting debris, EVA suits, wrong identities, extra characters, Earth, Jupiter, Proxima, any planet."
       }
     },
     {
       "id": "festival-master:shot-plan-052:take-02",
       "shotId": "festival-master:shot-plan-052",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-03",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-052",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
         "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
         "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
@@ -24475,30 +24489,32 @@
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
+        ],
+        "prompt": "Use the supplied Voss-Harlan, Rao-Sorell, Okoye-Voss character pair sheets and Celestial Ardor bridge location reference as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. Over Elin Rao’s shoulder at her bridge data console under steady artificial 1 g: Rao is the East-Asian woman in the lighter gray jacket, seated securely with hands on the controls, certain and analytical. The foreground console must show English-only mixture and efficiency readouts whose trend visibly breaks the fuel-sabotage claim; use restrained technical UI, no spoken words. In the bridge background, keep the other crew seated or normally weighted: Harlan is the younger clean-shaven dark-haired officer, Voss the older silver-bearded captain, Sorell the other woman from the Rao-Sorell sheet, and Okoye the Black woman with short natural hair. No floating hair, straps, debris, or microgravity. Rao and the disproof readouts are dominant while the crew and bridge architecture remain softly readable. Worn maintainable spacecraft, cool graphite/slate-blue console glow and restrained amber accents.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English UI, spoken dialogue text, floating bodies, drifting hair, drifting debris, EVA suits, wrong identities, extra characters, Earth, Jupiter, Proxima, any planet."
       }
     },
     {
       "id": "festival-master:shot-plan-053:take-02",
       "shotId": "festival-master:shot-plan-053",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-04",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-053",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
+        "generatedAt": "2026-09-15T22:10:45.564Z",
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
         "stretchJobId": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
         "stretchDigest": "517cdec3b4a8b54e3b327fc2d295d0885d96983f80d4105330d3cf9f4e8a020c",
@@ -24507,7 +24523,9 @@
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
-        ]
+        ],
+        "prompt": "Use the supplied Voss-Harlan, Rao-Sorell, Okoye-Voss character pair sheets and Celestial Ardor bridge location reference as authoritative; ignore pair-sheet backgrounds. Generate one single grounded cinematic hard-science-fiction storyboard still, 16:9 landscape, photorealistic VFX render quality. The compact circular Celestial Ardor bridge is under steady artificial 1 g after a failed fuel-sabotage theory. Voss is foreground/right at the captain-side meeting table, the older silver-bearded captain, visibly troubled as he recognizes the theory explains neither anomaly. Rao is seated at her data console and gives a minimal confirming nod; show her as the East-Asian woman in the lighter gray jacket. Harlan is the younger clean-shaven dark-haired officer at the table, with Sorell and Okoye seated at their stations in the background. Keep all identities distinct and correctly assigned. Feet are planted or seated normally under 1 g; no floating hair, straps, debris, or drifting bodies. Medium close-up favoring Voss’s troubled reaction while retaining Rao’s confirming nod and the unchanged seated bridge geography. Worn maintainable spacecraft, cool graphite and slate-blue console glow with restrained amber practicals. English-only diegetic UI if any, no spoken dialogue text.",
+        "negativePrompt": "No subtitles, captions, logos, watermark, collage, contact sheet, multi-panel grid, non-English text, floating bodies, drifting hair, drifting debris, EVA suits, wrong identities, extra characters, Earth, Jupiter, Proxima, any planet."
       }
     },
     {
