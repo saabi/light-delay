@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-bridge-route-decision-027:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-bridge-route-decision-027",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "29cd701e89fe7d091d90f333888fb69e0c47cf0dbfb5cce64e4898b0cfa2fc35",
+  "sourceRunId": "run:festival-master:stretch-bridge-route-decision-027:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-bridge-route-decision-027-rev-1-video-1-ready.json",
+  "providerJobId": "7f74b869-bdaa-4bb6-b0b6-780522505176",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 17.5,
+  "submittedAt": "2026-09-15T18:57:00Z",
+  "completedAt": "2026-09-15T19:00:00Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-027": "994b7420-120a-4037-af04-d719ddf49434",
+    "asset:character-voss-sheet": "88fed050-c15b-4950-a779-d67ec203a29f",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:voice-ref-en-sorell": "9b905fc4-c6c4-4dc6-8773-76977f54d2ed",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-route-decision-027/festival-master-stretch-bridge-route-decision-027-rev-1-video-1.mp4",
+    "sha256": "8908b469f61cfa8f477b0613248f72c5d0c387e1957469f9becced7091e740e6",
+    "durationMs": 7042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 6640,
+  "notes": "Author go 026+027+028; bridge microgravity; regenerated storyboard keyframe; Voss+Sorell sheets+voices.",
+  "registeredAssetId": "asset:festival-master-stretch-bridge-route-decision-027-rev-1-video-1-video"
+}

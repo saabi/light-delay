@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0.0",
   "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-  "updatedAt": "2026-09-15T12:08:59.130Z",
+  "updatedAt": "2026-09-15T21:08:01.426Z",
   "notes": "Seeded from data/production/runs/*-results.json uploadHandles. Key is assetId + sha256 of current staging bytes (resolveStretchStagingSource). Voice assets with seedanceUploadPath are not seeded from historical handles (often full WAV).",
   "entries": [
     {
@@ -10,8 +10,8 @@
       "mediaId": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-okoye-045b:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:07:35.934Z",
       "localPath": "static/assets/characters/harlan/model-sheet-v2.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -21,8 +21,8 @@
       "mediaId": "d275cf75-6828-4acc-8d27-dba850214e29",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-okoye-045b:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:07:35.934Z",
       "localPath": "static/assets/characters/okoye/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -43,8 +43,8 @@
       "mediaId": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.867Z",
       "localPath": "static/assets/characters/rao/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -54,8 +54,8 @@
       "mediaId": "6ad0326d-d672-4834-b2ac-14e748528407",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T21:06:28.689Z",
       "localPath": "static/assets/characters/sorell/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -65,8 +65,8 @@
       "mediaId": "88fed050-c15b-4950-a779-d67ec203a29f",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.867Z",
       "localPath": "static/assets/characters/voss/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -76,8 +76,8 @@
       "mediaId": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
       "localPath": "static/assets/characters/zao/model-sheet.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -274,8 +274,8 @@
       "mediaId": "aff923d9-9acb-4904-a084-f55aad89b20e",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-record-033-036:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T00:00:00Z",
+      "sourceRunId": "run:festival-master:stretch-reactor-record-033-035:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
       "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/panel-01.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -285,8 +285,8 @@
       "mediaId": "b383d2d5-11cb-441c-99d0-922140539ff0",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-record-033-036:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T00:00:00Z",
+      "sourceRunId": "run:festival-master:stretch-reactor-record-033-035:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
       "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/panel-02.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -296,8 +296,8 @@
       "mediaId": "59bd1cd2-f60d-4d2d-a43f-a667b1b1cca4",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-record-033-036:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T00:00:00Z",
+      "sourceRunId": "run:festival-master:stretch-reactor-record-033-035:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
       "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/panel-03.png",
       "seedConfidence": "assumed_current_bytes"
     },
@@ -468,8 +468,8 @@
       "mediaId": "5a68b791-75e3-49ec-9924-1294a27df1b8",
       "kind": "audio",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T07:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.867Z",
       "localPath": "static/assets/voices/en/seedance-5s/Harlan.mp3"
     },
     {
@@ -488,8 +488,8 @@
       "mediaId": "a53f345b-1044-408c-91e2-e0d37ea9a6d8",
       "kind": "audio",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
+      "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.867Z",
       "localPath": "static/assets/voices/en/seedance-5s/Voss.mp3"
     },
     {
@@ -641,6 +641,136 @@
       "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
       "uploadedAt": "2026-09-15T12:05:00Z",
       "localPath": "static/assets/animatic/frames/festival-master/shot-plan-025-rev-3.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-026",
+      "sha256": "958dee6ce33a73a2c9489195632c373d693acd60f9f1774c9591727847fc5d23",
+      "mediaId": "624bf0a6-0301-4d9c-98d0-6ad1907550eb",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-026:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-026.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-027",
+      "sha256": "e999458746996f6d47ca77603070a4677b659fbe476713d5c91edec3174aff25",
+      "mediaId": "994b7420-120a-4037-af04-d719ddf49434",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-route-decision-027:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-027.png"
+    },
+    {
+      "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
+      "sha256": "d37b87ba365227189fb1bdab733a996b92e9081d4789b8e913ec6066e62fcf1b",
+      "mediaId": "c8518faa-615f-4caa-a81c-1b5e482d6f0b",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.779Z",
+      "localPath": "static/assets/props/wired-comms-deck-patch-panel/prop-sheet.png"
+    },
+    {
+      "assetId": "asset:voice-ref-en-sorell",
+      "sha256": "a0edc611f487f35a1cc46171064991876d5f11bed62006b672dfae75de873dec",
+      "mediaId": "9b905fc4-c6c4-4dc6-8773-76977f54d2ed",
+      "kind": "audio",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T21:06:28.689Z",
+      "localPath": "static/assets/voices/en/seedance-5s/Sorell.mp3"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-028",
+      "sha256": "af58721fd418c9dbf3a41e50d8e98c6d26dcb55b012b347c6a562bd92d930e84",
+      "mediaId": "375aa467-2bf1-4a35-84fb-16ba02d20944",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-central-access-sorell-028:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-028.png"
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+      "sha256": "d23ef9c91e14837f730aa99984ad3b83c1b26eac846feb3b15542a2f9df3911b",
+      "mediaId": "66325695-de9e-45e4-aced-3b2c8185585b",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-central-access-sorell-028:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-037",
+      "sha256": "8f27d6a47fb438e6f8f4c0117ee57398ba4cea3d293f3ad7fe9be7ba7f972680",
+      "mediaId": "477fe011-7297-4907-a21b-ab4475eb21fd",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-037.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-038",
+      "sha256": "784e68111f10ca28fadfca71b1c6d398e10bc30d9f9c8254ee2308fbe6584259",
+      "mediaId": "4a83d387-cdb4-417d-9e3d-6999448c1c29",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-038.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-042",
+      "sha256": "d46175cbd10d160d95c8c8b689a9aafdb887898806e5786765a6399c067d5ddc",
+      "mediaId": "e4da4f83-2e0e-44f4-98ea-4964e3a2f96a",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.605Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-042.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-043",
+      "sha256": "2cc08ba27e588187b2fa482f5ada870e680a80a24d5dbd65da79203c12ed1354",
+      "mediaId": "96eaaef4-96aa-4a68-abce-29c143930b22",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T21:06:28.689Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-043.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-044",
+      "sha256": "675f3dce0fbb8f37b108a563d884592fd2550b73856577b77c85e04369236909",
+      "mediaId": "9e652dd1-c721-4aea-ba3d-87f71485dd01",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.779Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-044.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-045",
+      "sha256": "751fbff538e6fd54b4e2bb3ad01e666fcd3b90b272706b9c92676755fa734b42",
+      "mediaId": "307a4a29-899b-4115-ae70-c70d8b881e37",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.867Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-045.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-045b",
+      "sha256": "ed3a4d0ecdebe224228b409fd2d3c35300e14555cf503a2f2e5ea10d4293489d",
+      "mediaId": "51f1f0eb-5410-411a-93ca-f4967030a5b9",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-okoye-045b:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:07:35.934Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-045b.png"
     }
   ]
 }

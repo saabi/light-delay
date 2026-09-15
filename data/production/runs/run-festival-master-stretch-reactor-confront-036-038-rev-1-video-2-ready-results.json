@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-reactor-confront-036-038:rev-1:video-2",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-reactor-confront-036-038",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "0b0fe0a208ae3029f8c57badd63d3ac385720e95e80e2d3a6c770b023c3b6fb2",
+  "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-2:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-reactor-confront-036-038-rev-1-video-2-ready.json",
+  "providerJobId": "339dbf01-931d-4098-b694-b3a620cf11ae",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 25,
+  "submittedAt": "2026-09-15T19:09:00Z",
+  "completedAt": "2026-09-15T19:12:00Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-037": "477fe011-7297-4907-a21b-ab4475eb21fd",
+    "asset:character-zao-sheet": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-confront-036-038/festival-master-stretch-reactor-confront-036-038-rev-1-video-2.mp4",
+    "sha256": "5320f6f1f7a30b9f2c48fe0c7dc58d16ece801dd5afbf064095f440a34cd85af",
+    "durationMs": 10042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 9920,
+  "notes": "Scene 14 shot 037. 480p omni_reference; declined IN THE DARK. Fresh upload of storyboard-037. Author go all scene 13/14 ready jobs. Register at job level only.",
+  "registeredAssetId": "asset:festival-master-stretch-reactor-confront-036-038-rev-1-video-2-video"
+}

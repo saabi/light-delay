@@ -1,5 +1,81 @@
 # Estado del proyecto
 
+## 2026-09-15 — Scene 16 Seedance 042–045b package (English source)
+
+- Submitted and registered five Seedance clips (042–045b): **108 cr** (27+27+15+27+12). Codex/approved stills as keyframes. 045b singleton stretch locked to service-cylinder + 026 continuity.
+- Movie mode should play registered stretch videos pending editorial review.
+
+## 2026-09-15 — Scene 16 Seedance 042–044 package (English source)
+
+- Codex stills for 042/043/044 are accepted Seedance keyframes. BFL candidates stay under `tmp/bfl/` only.
+- Three ready one-shot jobs (9s / 9s / 5s at 480p): **69 cr** total (27+27+15) if all go. Smoke policy: one job at a time after confirmation.
+
+## 2026-09-15 — Shot 045 monitor-feed clarity (English source)
+
+- Shot 045 now selects an independent bridge still with a prominent monitor feed that clearly identifies the same outer reactor service bay established in shot 043. The obsolete combined-stretch panel remains retained as a non-selected candidate; editorial review is pending.
+
+## 2026-09-15 — Scene 16 still regeneration (English source)
+
+- Regenerated the Festival-master stills for shots 042, 043, 044, 045, and 045b using the approved selected-take prompts and reference sets. Active storyboard and production-plan links now point to the replacements; editorial review is pending.
+
+## 2026-09-15 — Scene 16 stills 042–045b regen-ready (English source)
+
+- Prompts/refs verified for regeneration: 042–043 (combined stretch, Sorell sheet only), 044 (cylinder+patch panel), 045 (bridge crew), 045b (Harlan+Okoye cylinder). Awaiting generation go.
+- 045b re-audited and rewritten: prior still showed central-access spiral bleed; now locked to service-cylinder v5 + approved 026 keyframe continuity.
+- BFL FLUX.2 still CLI ready for exploratory 042 (`npm run bfl:still:042`); candidates write to `tmp/bfl/` only until review.
+
+## 2026-09-15 — Scene 16 044/045 stretch split (English source)
+
+- 044 and 045 are separate singleton stretches (service cylinder vs bridge). Shot 045 must show bridge crew with Harlan; still pending regeneration.
+
+## 2026-09-15 — Scene 16 042–044 refs (English source)
+
+- Sorell on 042–043 locked to character sheet (EVA suit removed). Shot 044 uses the same service-cylinder + patch-panel props as the 026 disconnect. Stills pending regeneration.
+
+## 2026-09-15 — Scene 16 animatic panels (English source)
+
+- 042–043 stretch panels restored (re-split). 044–045 combined sheet is corrupt in LFS (`needs_replacement`); animatic temporarily uses independent take-01 stills. Seedance still blocked pending freeze + good keyframes.
+
+## 2026-09-15 — Seedance no-music rule (English source)
+
+- Seedance may generate dialogue; it must not generate music/score/BGM or dramatic instrumentation (post mix). Documented in `SEEDANCE_PROMPTING.md` §6 and agent policy cross-refs.
+
+## 2026-09-15 — Scenes 13–14 Seedance submitted (English source)
+
+- Five of six ready reactor-bay jobs landed pending review: 033–035 (scene 13) and 037–038 (scene 14). Shot 036 failed Higgsfield `ip_detected` (credits refunded; not retried). Selected takes unchanged. Ultra balance: 1845.5.
+
+## 2026-09-15 — Shots 026–028 Seedance submitted (English source)
+
+- All three scene-11 singleton jobs submitted and registered pending review: 026 service-cylinder Harlan, 027 bridge route decision, 028 central-access Sorell. **52.5 cr** (+discarded placeholder). Selected takes unchanged. Ultra balance: 1953.
+
+## 2026-09-15 — Scene 11 shot 028 still (English source)
+
+- Regenerated the Festival-master keyframe for shot 028: Sorell alone on the central-access helical stair in microgravity, using the v4-b location lock. The active storyboard and production plan now point to the new still; editorial review is pending.
+
+## 2026-09-15 — Shots 026–027 Seedance packages use regenerated keyframes (English source)
+
+- Both video jobs are submit-ready with the new storyboard stills as ordered keyframes.
+
+## 2026-09-15 — Scene 11 shots 026–027 stills (English source)
+
+- Regenerated Festival-master keyframes for 026 (service cylinder) and 027 (bridge). Wired into production assets and Seedance ready runs.
+
+## 2026-09-15 — Shot 028 central-access + v4-b (English source)
+
+- Central-access looking-down sheet v4-b registered. Shot 028 uses that location lock; Seedance preview ready; keyframe still needs authorized regeneration off the old service-cylinder panel.
+
+## 2026-09-15 — Shot 026 Harlan trunk-cut Seedance ready (English source)
+
+- Shot 026 ready for Seedance submit (service cylinder, Harlan alone, silent disconnect + ballistic launch). 6s / 480p ready run under `reports/runs/`.
+
+## 2026-09-15 — Shot 027 bridge microgravity (English source)
+
+- Shot 027 is a bridge MCU (Sorell volunteers / Voss conditions) in microgravity. Ready Seedance package uses the regenerated storyboard keyframe.
+
+## 2026-09-15 — Per-shot Seedance partition + scene 14 ready (English source)
+
+- All Festival-master stretches now partition to one Seedance job per shot (`maxMembersPerVideoJob: 1`). Cross-scene stretches split by scene. Scene 14 confrontation (036–038) has three ready handoffs pending author go; prompts can be refined later before submit.
+
 ## 2026-09-15 — Bridge-comms 023–025 Seedance videos submitted (English source)
 
 - Three one-shot clips registered pending review (023/024/025). Total **55 cr**. Post still needs 024 audio J-cut from 023 for cue-0047.

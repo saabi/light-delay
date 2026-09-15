@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-service-cylinder-harlan-044",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "8e3641545c999998a16b0deecb9a6a9c585ebedafcc763f7180c348fe8349455",
+  "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-service-cylinder-harlan-044-rev-1-video-1-ready.json",
+  "providerJobId": "8d850412-d36d-473e-af4b-5a325d38d52d",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 15,
+  "submittedAt": "2026-09-15T20:58:00Z",
+  "completedAt": "2026-09-15T21:06:28.779Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-044": "9e652dd1-c721-4aea-ba3d-87f71485dd01",
+    "asset:character-voss-sheet": "88fed050-c15b-4950-a779-d67ec203a29f",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+    "asset:object-wired-comms-deck-patch-panel-sheet": "c8518faa-615f-4caa-a81c-1b5e482d6f0b",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-service-cylinder-harlan-044/festival-master-stretch-service-cylinder-harlan-044-rev-1-video-1.mp4",
+    "sha256": "bde74ac69d66aa954cdf83f17d3b9413d5fc2c2f29f6ebe1cd6c8417f24e5272",
+    "durationMs": 5042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 5260,
+  "notes": "Scene 16 shot 044 cylinder reconnect. Parallel batch 042-044.",
+  "registeredAssetId": "asset:festival-master-stretch-service-cylinder-harlan-044-rev-1-video-1-video"
+}

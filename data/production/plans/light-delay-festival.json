@@ -1369,6 +1369,13 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -1383,7 +1390,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-central-access-sheet-v4-b"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
@@ -3650,6 +3658,13 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -3664,7 +3679,8 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-central-access-sheet-v4-b"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
@@ -4839,6 +4855,13 @@
         },
         {
           "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
           "id": "asset:object-physical-override-relay-sheet",
           "path": "/assets/props/physical-override-relay/prop-sheet.png",
           "required": true,
@@ -4867,6 +4890,7 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-central-access-sheet-v4-b",
           "asset:object-physical-override-relay-sheet"
         ],
         "coveringAssetByEntity": {
@@ -4921,38 +4945,24 @@
       "requiredReferences": [
         {
           "kind": "image",
-          "id": "asset:character-harlan-sheet",
-          "path": "/assets/characters/harlan/model-sheet-v2.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-okoye-sheet",
-          "path": "/assets/characters/okoye/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-rao-sheet",
-          "path": "/assets/characters/rao/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-celestial-ardor-central-access-sheet",
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png",
+          "required": true,
+          "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "path": "/assets/locations/proxima-dock/axial-dock-crew-composite-sheet-v1.png",
+          "required": true,
+          "role": "character"
         }
       ],
       "referenceBudget": {
@@ -4972,17 +4982,15 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
-          "asset:character-okoye-sheet",
-          "asset:character-rao-sheet",
-          "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "asset:visual-pack-proxima-axial-dock-crew-sheet"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "character:okoye": "asset:character-okoye-sheet",
-          "character:rao": "asset:character-rao-sheet",
-          "character:voss": "asset:character-voss-sheet",
+          "character:harlan": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:okoye": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:rao": "asset:visual-pack-proxima-axial-dock-crew-sheet",
+          "character:voss": "asset:visual-pack-proxima-axial-dock-crew-sheet",
           "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
         },
         "wouldOmitEntityIds": [],
@@ -5052,6 +5060,13 @@
           "role": "location"
         },
         {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png",
+          "required": true,
+          "role": "location"
+        },
+        {
           "kind": "audio",
           "id": "asset:voice-ref-en-okoye",
           "path": "/assets/voices/en/Okoye.wav",
@@ -5074,7 +5089,8 @@
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-central-access-sheet-v4-b"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",

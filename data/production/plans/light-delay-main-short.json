@@ -3355,6 +3355,13 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -3366,7 +3373,8 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-central-access-sheet-v4-b"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"
@@ -4879,6 +4887,13 @@
           "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+          "path": "/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -4890,7 +4905,8 @@
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:location-celestial-ardor-central-access-sheet"
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-central-access-sheet-v4-b"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-central-access": "asset:location-celestial-ardor-central-access-sheet"

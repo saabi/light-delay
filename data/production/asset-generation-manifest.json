@@ -2344,10 +2344,7 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-harlan-sheet",
-        "asset:character-sorell-sheet",
-        "asset:character-voss-sheet",
         "asset:location-celestial-ardor-service-cylinder-sheet",
-        "asset:location-celestial-ardor-central-access-sheet",
         "asset:object-wired-comms-deck-patch-panel-sheet"
       ],
       "references": [
@@ -2356,19 +2353,7 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:character-sorell-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-voss-sheet",
-          "role": "visual continuity reference"
-        },
-        {
           "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:location-celestial-ardor-central-access-sheet",
           "role": "visual continuity reference"
         },
         {
@@ -2379,28 +2364,25 @@
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "At the hinged tray below the service hatch, Harlan silently disconnects the wired communications and camera trunks, then launches ballistically down the service shaft.",
+        "primaryRequest": "Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX render quality, 16:9 landscape. In the narrow Celestial Ardor service cylinder immediately below the bridge hatch, Harlan is alone at the hinged communications tray, one wired communications/camera trunk visibly unplugged, beginning a ballistic push away from the tray down the longitudinal service shaft. Keep the tray and couplers readable behind him. Microgravity is explicit: Harlan and loose straps/tools drift freely; he moves by handhold and free-flight, not footing. Medium tracking composition, service-cylinder practicals and restrained hatch spill, cool graphite/slate-blue with small amber hardware accents. Use the attached Harlan, service-cylinder, and wired communications distributor references as authoritative. No other crew, no bridge-console wash, no ladder-route invention, no text, no subtitles, no logos, no watermark.",
         "inputImages": [
           "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:character-sorell-sheet",
-          "Reference asset: asset:character-voss-sheet",
           "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet",
-          "Reference asset: asset:location-celestial-ardor-central-access-sheet",
           "Reference asset: asset:object-wired-comms-deck-patch-panel-sheet"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-service-cylinder.",
-        "subject": "character:harlan, character:sorell, character:voss",
+        "sceneBackdrop": "Continuity setting for festival-master:shot-plan-026.",
+        "subject": "The visible subjects specified by the shot description.",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "MS composition, 16:9 aspect ratio; follow the shot camera plan.",
-        "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
+        "compositionFraming": "16:9 landscape; follow the shot camera plan.",
+        "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship continuity.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
-        "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.",
-        "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "materialsTextures": "Worn maintainable spacecraft surfaces, physically plausible hardware and textiles.",
+        "textVerbatim": "None; no subtitles or spoken dialogue in the still.",
+        "constraints": "Use only the visible characters and props declared by the shot; preserve current geography; no watermark.",
+        "avoid": "No extra people, bridge crew, bridge console, redesigned references, obsolete continuity, terrestrial or fantasy technology, luxury-liner styling, text, subtitles, logos, watermark, heavy motion blur, incorrect gravity, or standing on a deck."
       },
       "review": {
-        "notes": "Reference invalidated: regenerate against central-access v4 with a clear two-metre central opening.",
+        "notes": "Regenerated on 2026-09-15 after scene-11 geography/reference corrections; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -2415,16 +2397,11 @@
         "height": 941
       },
       "styleAnchorAssetIds": [
-        "asset:character-harlan-sheet",
         "asset:character-sorell-sheet",
         "asset:character-voss-sheet",
-        "asset:location-celestial-ardor-service-cylinder-sheet"
+        "asset:location-celestial-ardor-bridge-crew-stations-reference"
       ],
       "references": [
-        {
-          "assetId": "asset:character-harlan-sheet",
-          "role": "visual continuity reference"
-        },
         {
           "assetId": "asset:character-sorell-sheet",
           "role": "visual continuity reference"
@@ -2434,33 +2411,32 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "assetId": "asset:location-celestial-ardor-bridge-crew-stations-reference",
           "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Sorell, urgent, volunteers for the faster route: \"I can reach her faster than I can repair a repeater.\" Voss, wary, agrees but sets a condition: \"Find Harlan. Do not go in alone.\".",
+        "primaryRequest": "Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX render quality, 16:9 landscape. On the Celestial Ardor bridge crew-stations area, Sorell is on screen left near the stations and handholds, urgent and volunteering; Voss is on screen right at the command station, wary and measured. Both remain on the bridge in microgravity, with visible fixed-seat restraint harnesses and readable bridge-stations geography; the service shaft is not the setting. Medium close-up two-shot with clear eyelines facing each other and preserved action axis, established bridge practicals and cool console glow, cool graphite/slate-blue with restrained amber accents. Use the attached Sorell, Voss, and bridge-stations references as authoritative. Show only Sorell and Voss. No text, no subtitles, no logos, no watermark.",
         "inputImages": [
-          "Reference asset: asset:character-harlan-sheet",
           "Reference asset: asset:character-sorell-sheet",
           "Reference asset: asset:character-voss-sheet",
-          "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet"
+          "Reference asset: asset:location-celestial-ardor-bridge-crew-stations-reference"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-service-cylinder.",
-        "subject": "character:harlan, character:sorell, character:voss",
+        "sceneBackdrop": "Continuity setting for festival-master:shot-plan-027.",
+        "subject": "The visible subjects specified by the shot description.",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "CU composition, 16:9 aspect ratio; follow the shot camera plan.",
-        "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
+        "compositionFraming": "16:9 landscape; follow the shot camera plan.",
+        "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship continuity.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
-        "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.",
-        "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "materialsTextures": "Worn maintainable spacecraft surfaces, physically plausible hardware and textiles.",
+        "textVerbatim": "None; no subtitles or spoken dialogue in the still.",
+        "constraints": "Use only the visible characters and props declared by the shot; preserve current geography; no watermark.",
+        "avoid": "No service-cylinder interior, ladder route, shaft-only geography, Harlan, extra people, planted standing, gravity-supported posture, redesigned references, terrestrial or fantasy technology, text, subtitles, logos, watermark, heavy motion blur, or incorrect gravity."
       },
       "review": {
-        "notes": "Regenerated with current visual references; editorial review pending.",
+        "notes": "Regenerated on 2026-09-15 after scene-11 geography/reference corrections; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -2476,7 +2452,7 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-sorell-sheet",
-        "asset:location-celestial-ardor-service-cylinder-sheet"
+        "asset:location-celestial-ardor-central-access-sheet-v4-b"
       ],
       "references": [
         {
@@ -2484,31 +2460,31 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
+          "assetId": "asset:location-celestial-ardor-central-access-sheet-v4-b",
           "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Sorell, anxious, calls into a handheld comm as she moves hand-over-hand down the slower helical stair: \"Harlan, answer. Where are you?\" No answer returns.",
+        "primaryRequest": "Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX render quality, 16:9 landscape. In the Celestial Ardor central access cylinder, Sorell is alone and anxious, moving hand-over-hand down the slower helical stair while holding a handheld communications unit near her face. Preserve the v4-b bridge-level-looking-down geometry: open center, helical stairs, transparent/mesh landings, and continuous yellow handrails. This is the central-access route, distinct from the narrower service-cylinder ladder route used by Harlan. Medium close-up, center Sorell with enough shaft depth to establish the downward route, pan-friendly composition. Explicit microgravity: Sorell is suspended and moves by handhold; hair, loose straps, and small objects drift; no planted standing or footing. Central-access practicals, cool shaft depth, restrained amber highlights, cool graphite/slate-blue palette. Use the attached Sorell and central-access v4-b references as authoritative. Show only Sorell. No service-cylinder geometry, Harlan, Voss, bridge stations, other people, text, subtitles, logos, or watermark.",
         "inputImages": [
           "Reference asset: asset:character-sorell-sheet",
-          "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet"
+          "Reference asset: asset:location-celestial-ardor-central-access-sheet-v4-b"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-service-cylinder.",
-        "subject": "character:sorell",
+        "sceneBackdrop": "Continuity setting location:celestial-ardor-central-access.",
+        "subject": "Sorell alone on the central-access helical stair.",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "OTS composition, 16:9 aspect ratio; follow the shot camera plan.",
-        "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
+        "compositionFraming": "MCU, 16:9 landscape; follow the shot pan plan.",
+        "lightingMood": "Central-access practicals and cool shaft depth with restrained amber highlights.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
-        "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.",
-        "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "materialsTextures": "Worn maintainable spacecraft panels, mesh landings, yellow handrails and realistic textiles.",
+        "textVerbatim": "None; no subtitles or spoken dialogue in the still.",
+        "constraints": "Use only Sorell and the current central-access v4-b geography; preserve explicit microgravity; no watermark.",
+        "avoid": "No service-cylinder interior, ladder segments, Harlan, Voss, bridge stations, extra people, standing on a deck, incorrect gravity, redesigned references, fantasy technology, text, subtitles, logos, watermark, or heavy motion blur."
       },
       "review": {
-        "notes": "Regenerated with current visual references; editorial review pending.",
+        "notes": "Regenerated on 2026-09-15 after shot-028 moved to central access; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -3300,25 +3276,25 @@
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity. The optical transmitter and service-shaft trays remain outside this frame.",
+        "primaryRequest": "Use the supplied Sorell character sheet, Zao sheet, and outer-reactor-bay references as authoritative for static appearance (Sorell wardrobe and identity from her character sheet only — not an EVA suit). Grounded cinematic hard-science-fiction storyboard still, 16:9, medium close-up in microgravity. Sorell catches Zao's drifting, bloodied body, checks airway and pulse, and tries to stop blood that no longer circulates. Sorell screen left; Zao screen right. Preserve the established service-bay geography and handhold-based movement. The service-shaft tray and optical transmitter are off-frame; do not show them.",
         "inputImages": [
           "Reference asset: asset:character-sorell-sheet",
           "Reference asset: asset:character-zao-sheet",
           "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-reactor-service-bay.",
+        "sceneBackdrop": "Continuity setting for festival-master:shot-plan-042.",
         "subject": "character:sorell, character:zao",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "MCU composition, 16:9 aspect ratio; follow the shot camera plan.",
+        "compositionFraming": "16:9 landscape; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
         "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.",
-        "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "textVerbatim": "English-only diegetic display text only where the shot requires it; no subtitles, captions, burned-in dialogue, or spoken dialogue in the still.",
+        "constraints": "Preserve the approved shot blocking, route/location geography, and declared visual references; no watermark.",
+        "avoid": "non-English text, Earth, Jupiter, Proxima, any planet, moon, large planetary disc, extra unlisted characters, service-shaft tray in frame, optical transmitter in frame, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark"
       },
       "review": {
-        "notes": "Regenerated with current visual references; editorial review pending.",
+        "notes": "Regenerated on 2026-09-15 from the approved selected-take prompt and references; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -3334,28 +3310,12 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-sorell-sheet",
-        "asset:character-harlan-sheet",
-        "asset:character-voss-sheet",
-        "asset:character-okoye-sheet",
         "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:location-celestial-ardor-reactor-service-bay-sheet"
       ],
       "references": [
         {
           "assetId": "asset:character-sorell-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-harlan-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-voss-sheet",
-          "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:character-okoye-sheet",
           "role": "visual continuity reference"
         },
         {
@@ -3365,38 +3325,30 @@
         {
           "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
           "role": "visual continuity reference"
-        },
-        {
-          "assetId": "asset:object-optical-contingency-transmitter-sheet",
-          "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Sorell, panicked, calls urgently into a handheld comm while still holding Zao's body: \"Bridge, Zao is down. Medical emergency. Does anyone copy?\".",
+        "primaryRequest": "Use the supplied Sorell character sheet, Zao sheet, and outer-reactor-bay references as authoritative for static appearance (Sorell wardrobe and identity from her character sheet only — not an EVA suit). Grounded cinematic hard-science-fiction storyboard still, 16:9, extreme long shot in microgravity. Sorell remains screen left, supporting Zao's limp body screen right, while raising a handheld comm. Optical transmitter stays outside frame. Microgravity: hair, loose straps, tools, and small debris drift freely; bodies move by handhold, not footing. Preserve eyeline and action-axis continuity with the prior rescue beat.",
         "inputImages": [
           "Reference asset: asset:character-sorell-sheet",
-          "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:character-voss-sheet",
-          "Reference asset: asset:character-okoye-sheet",
           "Reference asset: asset:character-zao-sheet",
-          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "Reference asset: asset:object-optical-contingency-transmitter-sheet"
+          "Reference asset: asset:location-celestial-ardor-reactor-service-bay-sheet"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-reactor-service-bay.",
+        "sceneBackdrop": "Continuity setting for festival-master:shot-plan-043.",
         "subject": "character:sorell, character:harlan, character:voss, character:okoye, character:zao",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "ELS composition, 16:9 aspect ratio; follow the shot camera plan.",
+        "compositionFraming": "16:9 landscape; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
         "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.",
-        "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "textVerbatim": "English-only diegetic display text only where the shot requires it; no subtitles, captions, burned-in dialogue, or spoken dialogue in the still.",
+        "constraints": "Preserve the approved shot blocking, route/location geography, and declared visual references; no watermark.",
+        "avoid": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration"
       },
       "review": {
-        "notes": "Regenerated with current visual references; editorial review pending.",
+        "notes": "Regenerated on 2026-09-15 from the approved selected-take prompt and references; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -3412,9 +3364,9 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-harlan-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-celestial-ardor-service-cylinder-sheet",
         "asset:object-wired-comms-deck-patch-panel-sheet",
-        "asset:object-harlan-wrist-device-sheet"
+        "asset:festival-master-storyboard-026"
       ],
       "references": [
         {
@@ -3422,7 +3374,7 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
           "role": "visual continuity reference"
         },
         {
@@ -3430,33 +3382,33 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:object-harlan-wrist-device-sheet",
+          "assetId": "asset:festival-master-storyboard-026",
           "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Harlan reconnects the communications trunks at the service-shaft tray and emerges through the bridge-side hatch, controlled: \"Found the break. Both trunks were out at the service tray.\"",
+        "primaryRequest": "Use the attached Harlan sheet, Celestial Ardor service-cylinder concept sheet (current v5), wired-comms distributor prop sheet, and the approved shot-026 keyframe as authoritative. Match shot 026 geography and prop identity exactly: same narrow service cylinder, same hinged COM A/COM B tray beside the bridge-level radial hatch, same coupler language — only the action differs. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX render quality, 16:9 landscape. Peak moment. Harlan alone inside the cylinder at the open tray, mid-reconnect — at least one wired communications/camera trunk coupler is visibly seating back into the board (the inverse of the 026 unplug). Microgravity is explicit. Harlan and loose straps/tools drift; he braces by handhold, not footing. Keep the cylinder shaft continuing past him; the bridge-side hatch may appear as a closed radial wall hatch only. Do not show bridge interior, bridge consoles, spiral stairs, or Harlan emerging through the hatch into another compartment. Medium pan composition, service-cylinder practicals and restrained hatch spill, cool graphite/slate-blue with small amber hardware accents. No other crew, no ladder-route invention beyond the cylinder-sheet ladder segments, no text, no subtitles, no logos, no watermark.",
         "inputImages": [
           "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
+          "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet",
           "Reference asset: asset:object-wired-comms-deck-patch-panel-sheet",
-          "Reference asset: asset:object-harlan-wrist-device-sheet"
+          "Reference asset: asset:festival-master-storyboard-026"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-reactor-service-bay.",
+        "sceneBackdrop": "Continuity setting for festival-master:shot-plan-044.",
         "subject": "character:harlan",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "MS composition, 16:9 aspect ratio; follow the shot camera plan.",
+        "compositionFraming": "16:9 landscape; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
         "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.",
-        "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "textVerbatim": "English-only diegetic display text only where the shot requires it; no subtitles, captions, burned-in dialogue, or spoken dialogue in the still.",
+        "constraints": "Preserve the approved shot blocking, route/location geography, and declared visual references; no watermark.",
+        "avoid": "Bridge interior, bridge crew, bridge console wash, spiral staircase, hatch egress into another deck as the main setting, Harlan outside the cylinder, unplugged-only disconnect beat from 026, extra people, redesigned references, obsolete continuity, terrestrial or fantasy technology, luxury-liner styling, text, subtitles, logos, watermark, heavy motion blur, incorrect gravity, standing on a deck"
       },
       "review": {
-        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
+        "notes": "Regenerated on 2026-09-15 from the approved selected-take prompt and references; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -3472,8 +3424,12 @@
       },
       "styleAnchorAssetIds": [
         "asset:character-harlan-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-wired-comms-deck-patch-panel-sheet"
+        "asset:character-voss-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-crew-stations-reference",
+        "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+        "asset:festival-master-storyboard-043"
       ],
       "references": [
         {
@@ -3481,36 +3437,56 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "assetId": "asset:character-voss-sheet",
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
+          "assetId": "asset:character-rao-sheet",
           "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:character-okoye-sheet",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "role": "visual continuity reference"
+        },
+        {
+          "assetId": "asset:festival-master-storyboard-043",
+          "role": "monitor-feed continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Deceptive, Harlan separates himself from the scene: \"I never saw her.\" Harlan is the only physical person in this compartment; behind him, a restored camera-feed monitor shows Sorell alone holding the bloodied body.",
+        "primaryRequest": "Use the supplied Harlan, Voss, Rao, Okoye, bridge crew-stations, service-shaft hatch/stations, and approved shot-043 rescue-still references as authoritative for static appearance and continuity. Preserve visible fixed-chair seat belts/restraint harnesses; do not remove or redesign them. Grounded cinematic hard-science-fiction storyboard still, 16:9, medium shot on the Celestial Ardor bridge in microgravity. Harlan has just returned through the bridge-side service hatch and faces Voss, Rao, and Okoye, who remain at their stations (Voss command, Rao analysis, Okoye security). Make the restored camera-feed monitor prominent and large enough to read. Inside the rectangular monitor, show a clear, recognizable live view of the same outer reactor service bay established by shot 043: Sorell screen left supporting Zao's limp body screen right, handheld comm raised, with the radial hatch, handholds, cable runs, and surrounding bay architecture visibly readable. The monitor feed must communicate their exact location, not just show abstract faces or dark silhouettes. Keep Sorell and Zao confined to the monitor image only; they are not physically present on the bridge. Cool console practicals; English-only diegetic display text. No subtitles, captions, or burned-in dialogue.",
         "inputImages": [
           "Reference asset: asset:character-harlan-sheet",
-          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
-          "Reference asset: asset:object-wired-comms-deck-patch-panel-sheet"
+          "Reference asset: asset:character-voss-sheet",
+          "Reference asset: asset:character-rao-sheet",
+          "Reference asset: asset:character-okoye-sheet",
+          "Reference asset: asset:location-celestial-ardor-bridge-crew-stations-reference",
+          "Reference asset: asset:location-celestial-ardor-bridge-service-shaft-hatch-stations-reference",
+          "Reference asset: asset:festival-master-storyboard-043"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-reactor-service-bay.",
+        "sceneBackdrop": "Continuity setting for festival-master:shot-plan-045.",
         "subject": "character:harlan",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "CU composition, 16:9 aspect ratio; follow the shot camera plan.",
+        "compositionFraming": "16:9 landscape; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
         "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor and Proxima geography; no watermark.",
-        "avoid": "Off-screen characters, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "textVerbatim": "English-only diegetic display text only where the shot requires it; no subtitles, captions, burned-in dialogue, or spoken dialogue in the still.",
+        "constraints": "Preserve the approved shot blocking, route/location geography, and declared visual references; no watermark.",
+        "avoid": "physical Sorell on the bridge, physical Zao, outer reactor bay as the main setting, EVA suit on bridge crew, extra unlisted characters, non-English text, Earth, Jupiter, Proxima, any planet, luxury-liner styling, lens flare, heavy motion blur, watermark, subtitles, closed captions, burned-in dialogue, contact sheet, collage, multi-panel grid"
       },
       "review": {
-        "notes": "Prompt and references synchronized after continuity and planetary-background audit.",
+        "notes": "Regenerated on 2026-09-15 from the approved selected-take prompt and references; editorial review pending.",
         "regenerationRequired": false
       }
     },
@@ -3521,15 +3497,14 @@
       "status": "generated",
       "outputPath": "/assets/animatic/frames/festival-master/shot-plan-045b.png",
       "dimensions": {
-        "width": 1536,
-        "height": 1024
+        "width": 1672,
+        "height": 941
       },
       "styleAnchorAssetIds": [
         "asset:character-harlan-sheet",
         "asset:character-okoye-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:location-celestial-ardor-service-cylinder-sheet",
-        "asset:object-wired-comms-deck-patch-panel-sheet"
+        "asset:festival-master-storyboard-026"
       ],
       "references": [
         {
@@ -3541,42 +3516,37 @@
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "role": "visual continuity reference"
-        },
-        {
           "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
           "role": "visual continuity reference"
         },
         {
-          "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
+          "assetId": "asset:festival-master-storyboard-026",
           "role": "visual continuity reference"
         }
       ],
       "prompt": {
         "useCase": "stylized-concept",
         "assetType": "Festival-master storyboard still",
-        "primaryRequest": "Voss’s order sends Harlan and Okoye through the service route to retrieve Sorell. They reach the outer bay and bring her back under supervision; the movement is quick through the service shaft and slow through the central route.",
+        "primaryRequest": "Use the attached Harlan sheet, Okoye sheet, Celestial Ardor service-cylinder concept sheet (current v5), and the approved shot-026 keyframe as authoritative. Match shot 026 service-cylinder geography exactly: the same narrow circular restricted shaft with radial side-wall hatches, straight ladder segments as handholds, cable runs, and cool graphite/slate-blue practicals — not the central-access cylinder. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX render quality, 16:9 landscape. Peak moment: after Voss orders Okoye with Harlan, both are mid-transit together inside the service cylinder, moving toward the outer bay (destination still off-frame). Harlan leads; Okoye follows close, identifiable from her sheet (charcoal security flight suit, short coiled natural hair, restraint tether / non-lethal kit). Microgravity is explicit: both drift and progress by handhold or ballistic push, never standing on a deck. Keep the shaft axis readable past them. Do not show bridge interior, spiral or helical stairs, central-access openings, the outer reactor bay interior, Sorell, Zao, or the wired-comms tray reconnect beat. Medium tracking composition; restrained hatch spill only. No text, subtitles, logos, or watermark.",
         "inputImages": [
           "Reference asset: asset:character-harlan-sheet",
           "Reference asset: asset:character-okoye-sheet",
-          "Reference asset: asset:location-celestial-ardor-bridge-realistic-reference",
           "Reference asset: asset:location-celestial-ardor-service-cylinder-sheet",
-          "Reference asset: asset:object-wired-comms-deck-patch-panel-sheet"
+          "Reference asset: asset:festival-master-storyboard-026"
         ],
-        "sceneBackdrop": "Continuity setting location:celestial-ardor-command-vestibule.",
+        "sceneBackdrop": "Continuity setting for festival-master:shot-plan-045b.",
         "subject": "character:harlan, character:okoye",
         "styleMedium": "Grounded cinematic hard-science-fiction storyboard concept art matching the attached Light Delay references.",
-        "compositionFraming": "CU composition, 16:9 aspect ratio; follow the shot camera plan.",
+        "compositionFraming": "16:9 landscape; follow the shot camera plan.",
         "lightingMood": "Practical cinematic lighting appropriate to the shot description and ship/station continuity.",
         "colorPalette": "Cool graphite, off-white, slate-blue and restrained practical amber accents.",
         "materialsTextures": "Worn maintainable spacecraft and station surfaces, physically plausible hardware and textiles.",
-        "textVerbatim": "English-only diegetic text where the shot requires it; no bilingual display text.",
-        "constraints": "Use only the visible characters and props declared by the shot; preserve current Celestial Ardor geography, separated shafts, and microgravity movement; no planet or exterior celestial body; no watermark.",
-        "avoid": "Off-screen characters, planets, obsolete location layouts, extra people, fantasy technology, logos, watermark."
+        "textVerbatim": "English-only diegetic display text only where the shot requires it; no subtitles, captions, burned-in dialogue, or spoken dialogue in the still.",
+        "constraints": "Preserve the approved shot blocking, route/location geography, and declared visual references; no watermark.",
+        "avoid": "Bridge interior, bridge consoles, spiral staircase, helical central-access stairs, square elevator shaft, outer reactor bay interior, Sorell, Zao, wired-comms tray reconnect, Harlan alone, Okoye alone, EVA suits, Earth, Jupiter, Proxima, any planet, luxury-liner styling, text, subtitles, logos, watermark, heavy motion blur, incorrect gravity, standing on a deck"
       },
       "review": {
-        "notes": "Regenerated individually from current selected-take prompt and references; awaiting editorial review.",
+        "notes": "Regenerated on 2026-09-15 from the approved selected-take prompt and references; editorial review pending.",
         "regenerationRequired": false
       }
     },

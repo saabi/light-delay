@@ -1,5 +1,93 @@
 # Changelog
 
+## 2026-09-15 — Scene 16 Seedance 042–045b submitted
+
+- Submitted five Festival-master Seedance jobs in two parallel batches: 042/043/044 (**69 cr**) then 045/045b (**39 cr**) after prep. Codex/approved stills used as keyframes; BFL candidates remain under `tmp/bfl/` only.
+- 045: bridge alibi with Harlan+Voss+Rao+Okoye sheets + Harlan/Voss voices; Sorell/Zao monitor-feed only. 045b: new singleton `stretch-service-cylinder-harlan-okoye-045b` locked to 026 cylinder geography with Harlan+Okoye force sheets (silent).
+
+## 2026-09-15 — Scene 16 Seedance 042–044 ready (Codex keyframes)
+
+- Abandoned BFL still promotion for 042–044; keep Codex storyboard stills as Seedance keyframes (`imageStatus: current`).
+- Approved video freezes on `stretch-reactor-sorell-042-043` and `stretch-service-cylinder-harlan-044`; prompts allow blood/injury to intensify in motion; Sorell wardrobe locked to character sheet (no EVA).
+- Ready handoffs under `reports/runs/` for video-1 (042), video-2 (043), and 044 video-1. Keyframes uploaded; waiting for author go before MCP submit.
+
+## 2026-09-15 — Shot 045 monitor-feed clarity
+
+- Replaced the selected Festival-master shot 045 still with an independent bridge frame whose prominent monitor clearly shows the shot-043 outer reactor service bay, including Sorell, Zao, the handheld comm, radial hatch, and handholds. The obsolete combined-stretch panel remains retained as a non-selected candidate; editorial review is pending.
+
+## 2026-09-15 — Scene 16 still regeneration
+
+- Regenerated Festival-master stills for shots 042, 043, 044, 045, and 045b using the approved selected-take prompts and reference sets; refreshed active storyboard and production-plan links. Stills remain pending editorial review.
+
+## 2026-09-15 — BFL FLUX.2 still generator (shot 042 ready)
+
+- Added `scripts/generate-bfl-still.mjs` + `scripts/lib/bfl-client.mjs` for dashboard.bfl.ai API stills (multi-ref `input_image*`, `safety_tolerance`, dry-run by default). npm: `bfl:still`, `bfl:still:042`, `bfl:credits`. Outputs land under `tmp/bfl/` until reviewed.
+- Aligned client with BFL sample pattern (`asJson`, Pending poll, Ready vs stop). Still prompts rewritten Flux-native: no negative dumps; Image 1/2/3 roles; positive constraints; optional `--json-prompt` / `--model flux-2-max`.
+
+## 2026-09-15 — Scene 16 stills 042–045b regen-ready
+
+- Verified/fixed prompts and refs for 042–045b: Sorell character-sheet only on 042–043; 044 matched to 026 cylinder/patch-panel; 045 bridge crew + crew-stations + hatch-stations; 045b narrowed to Harlan+Okoye in current service-cylinder (dropped phantom wired-comms / dual-route prompt). All marked `needs_regeneration`.
+- Tightened `stretch-service-cylinder-harlan-044` still prompt: peak reconnect inside cylinder only; attached approved `storyboard-026` as continuity ref; forbids bridge-wash / hatch-egress framing that the prior 044 still showed.
+- Full 045b pass: prior still bled central-access spiral stairs; prompt/refs rewritten to lock cylinder v5 + approved 026 geography; removed reactor-bay secondary; explicit bans on spiral/helix/bridge/bay interior.
+
+## 2026-09-15 — Split scene 16 shots 044–045 by location
+
+- Removed cross-location stretch `bridge-harlan-alibi-044-045`. Replaced with singleton `stretch-service-cylinder-harlan-044` and `stretch-bridge-harlan-alibi-045`.
+- Shot 045 stays on the bridge with Harlan + Voss + Rao + Okoye on-frame (Sorell/Zao only in the monitor feed). Prompt/refs and framing updated; marked `needs_regeneration`.
+
+## 2026-09-15 — Scene 16 shots 042–044 ref corrections
+
+- **042–043:** Removed EVA-suit wardrobe lock; Sorell appearance is `asset:character-sorell-sheet` only. Stretch/shared copy and take prompts updated; optical transmitter kept off-frame.
+- **044:** Location/prop refs matched to shot 026 disconnect — Harlan + service-cylinder + wired-comms patch panel (not bridge vestibule). Shot location and description aligned to the service-cylinder tray reconnect. Stills marked `needs_regeneration`.
+
+## 2026-09-15 — Scene 16 stretch panels: corrupt files vs wiring
+
+- Animatic JSON for 042–045 was already wired (`selectedTakeId` → stretch panels); on-disk/LFS blobs for several stretch PNGs were zero-filled invalid files, so `/animatic` could not display them.
+- Re-split valid `reactor-sorell-042-043` panels from the good sheet. `bridge-harlan-alibi-044-045` sheet is corrupt in LFS — marked `needs_replacement`; temporarily reselected independent take-01 stills for 044/045 so the animatic shows frames until the sheet is regenerated.
+
+## 2026-09-15 — Seedance audio: dialogue yes, music no
+
+- Documented the Light Delay Seedance contract: spoken cue dialogue is allowed; score/underscore/BGM/**dramatic instrumentation** is forbidden and mixed in post (`SEEDANCE_PROMPTING.md` §6, with cross-refs in `AGENTS.md`, generation brief, dialogue lessons, and Higgsfield MCP). Compiler negatives spell out score/underscore/BGM/dramatic instrumentation explicitly.
+
+## 2026-09-15 — Scenes 13–14 Seedance videos submitted
+
+- Submitted all six ready one-shot jobs (033–038) at 480p / native audio. **107.5 cr** charged (20+22.5+20+25+20); 036 `f9c7195a…` failed `ip_detected` and **17.5 cr refunded**. Registered 033/034/035/037/038 pending review at job level. Selected takes unchanged. Ultra balance after: 1845.5.
+
+## 2026-09-15 — Shots 026–028 Seedance videos submitted
+
+- Submitted scene-11 one-shot Seedance jobs in parallel: 026 `ff924eff…` (6s/15cr), 027 `7f74b869…` (7s/17.5cr), 028 `e79309a5…` (8s/20cr) → **52.5 cr** (+~15 wasted on discarded PLACEHOLDER 026 `890c9ad0…`). Clips registered pending review under their singleton stretch paths. 028 provider output trimmed ~0.5s for duration gate. Ultra balance after: 1953.
+
+## 2026-09-15 — Scene 11 shot 028 still regeneration
+
+- Regenerated the Festival-master still for shot 028 with the current Sorell and central-access v4-b references; updated the selected storyboard take and derived plan link. The still remains pending editorial review.
+
+## 2026-09-15 — Shots 026–027 Seedance packages use regenerated keyframes
+
+- Marked regenerated `asset:festival-master-storyboard-026` / `027` current for Seedance and refreshed ready handoffs. Compiled prompts now attach those stills as `@Image1` ordered keyframes (026: + Harlan + patch panel; 027: + Voss/Sorell sheets + voices).
+
+## 2026-09-15 — Scene 11 shots 026–027 still regeneration
+
+- Regenerated the Festival-master stills for shot 026 (Harlan’s service-cylinder ballistic launch) and shot 027 (Sorell/Voss bridge decision) with the current references and updated the active storyboard/plan links.
+
+## 2026-09-15 — Shot 028 central-access + concept-sheet-v4-b
+
+- Registered `asset:location-celestial-ardor-central-access-sheet-v4-b` (`concept-sheet-v4-b.png`, bridge-level looking down) and wired it onto `location:celestial-ardor-central-access`.
+- Moved shot 028 / stretch to central access (helical stair, not service cylinder). Seedance preview handoff prepared; old shaft panel marked `needs_regeneration` (no regen).
+
+## 2026-09-15 — Shot 026 Harlan trunk-cut Seedance ready
+
+- Prepared singleton `stretch-service-cylinder-harlan-026`: corrected member timing (removed stray hatch/jammer copy), microgravity tray→ballistic launch, Harlan + patch-panel refs, freeze approved. Ready handoff `…:video-1` (silent action, 6s). Panel-01 marked current as keyframe (no regen).
+
+## 2026-09-15 — Shot 027 bridge microgravity (not service shaft)
+
+- Corrected `shot-plan-027`: Voss and Sorell remain on the Celestial Ardor bridge in microgravity (festival story-06), not the service-cylinder ladder. Peeled 027 into `stretch-bridge-route-decision-027`; split former 026–028 stretch into singleton 026 / 028 packs. Shaft panel still marked `needs_regeneration` (no regen). Preview Seedance handoff prepared; ready submit waits on a bridge keyframe.
+
+## 2026-09-15 — Per-shot Seedance partition + scene 14 ready
+
+- Set `generationProfile.maxMembersPerVideoJob: 1` on every Festival-master visual stretch (85 one-shot video jobs; no multi-member Seedance buckets).
+- Split the three cross-scene stretches into scene-scoped packs: reactor-record → `033-035` + scene-14 `036-038`; greeting-prep → `083-085` + `086`; command-break → `064` + `065-067`. Split packs use `independent_shared_authority` on existing stills.
+- Scene 14 (`stretch-reactor-confront-036-038`) freeze-approved; 037/038 stills marked current as keyframes (no regen). Force-attach mute Zao sheet on all three members. Ready handoffs: `…:video-1|2|3` under `reports/runs/`.
+
 ## 2026-09-15 — Bridge-comms 023–025 Seedance videos submitted
 
 - Submitted all three parallel Seedance jobs (`51151957…` / `872cd172…` / `03d34830…`), **55 cr** total (17.5+20+17.5). Downloaded and registered pending review under the bridge-comms stretch path. Split package with forced mute-cast sheets; 024 keeps cue-0047 J-cut note for post.

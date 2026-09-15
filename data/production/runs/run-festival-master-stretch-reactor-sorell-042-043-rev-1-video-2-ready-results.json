@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-reactor-sorell-042-043:rev-1:video-2",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-reactor-sorell-042-043",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "7b3d39dd4ef7c35f8bbec2992948a8173d98d9d5c8cc749871974fadee71543a",
+  "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-reactor-sorell-042-043-rev-1-video-2-ready.json",
+  "providerJobId": "8ac416e2-61cd-4f5d-842a-718ae31f7be5",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 27,
+  "submittedAt": "2026-09-15T20:58:00Z",
+  "completedAt": "2026-09-15T21:06:28.689Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-043": "96eaaef4-96aa-4a68-abce-29c143930b22",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:voice-ref-en-sorell": "9b905fc4-c6c4-4dc6-8773-76977f54d2ed"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-sorell-042-043/festival-master-stretch-reactor-sorell-042-043-rev-1-video-2.mp4",
+    "sha256": "34b88434c047c0e30097d757fe03d34215d28352d6b5500e1397f8d851037cf1",
+    "durationMs": 9042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 8840,
+  "notes": "Scene 16 shot 043. Parallel batch 042-044.",
+  "registeredAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-rev-1-video-2-video"
+}

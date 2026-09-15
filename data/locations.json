@@ -89,7 +89,8 @@
         "en": "Main axial trunk with handrails, rests, and hatches. In microgravity it supports safe hand-over-hand movement between decks. Two opposed helical staircases run the length of the central hollow, each following the cylinder's curved wall and interlocking with the other at every landing; they share a continuous inner railing and leave no open drops. This staircase is a distinct structure from the adjacent service cylinder, which uses straight ladder segments, not the helix."
       },
       "referenceAssetIds": [
-        "asset:location-celestial-ardor-central-access-sheet"
+        "asset:location-celestial-ardor-central-access-sheet",
+        "asset:location-celestial-ardor-central-access-sheet-v4-b"
       ],
       "atmosphere": {
         "es": "Circulación cotidiana en microgravedad",

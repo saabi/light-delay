@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-bridge-harlan-alibi-045",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "32ff786dbd23eb3dd6f6423167bc80e0440173712e9f44343b0b954ed99d41bb",
+  "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-bridge-harlan-alibi-045-rev-1-video-1-ready.json",
+  "providerJobId": "2f71e3e8-1c5e-4346-ad2f-30e98b777b8d",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 27,
+  "submittedAt": "2026-09-15T20:58:00Z",
+  "completedAt": "2026-09-15T21:06:28.867Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-045": "307a4a29-899b-4115-ae70-c70d8b881e37",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:character-okoye-sheet": "d275cf75-6828-4acc-8d27-dba850214e29",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+    "asset:character-voss-sheet": "88fed050-c15b-4950-a779-d67ec203a29f",
+    "asset:voice-ref-en-harlan": "5a68b791-75e3-49ec-9924-1294a27df1b8",
+    "asset:voice-ref-en-voss": "a53f345b-1044-408c-91e2-e0d37ea9a6d8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-harlan-alibi-045/festival-master-stretch-bridge-harlan-alibi-045-rev-1-video-1.mp4",
+    "sha256": "fe2b7389b231037c74727c4cc4f6a4001152dd3e4159c9738d00b2a3db77537d",
+    "durationMs": 9042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 8660,
+  "notes": "Scene 16 shot 045 bridge alibi. Parallel batch 045/045b.",
+  "registeredAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-045-rev-1-video-1-video"
+}

@@ -929,7 +929,8 @@
       },
       "locationId": "location:celestial-ardor-service-cylinder",
       "secondaryLocationIds": [
-        "location:celestial-ardor-central-access"
+        "location:celestial-ardor-central-access",
+        "location:celestial-ardor-bridge"
       ],
       "setting": {
         "interiorExterior": "INT",
@@ -938,13 +939,13 @@
           "en": "Festival sequence F04"
         },
         "continuity": {
-          "es": "Microgravedad; seguir el evento de vuelo enunciado.",
-          "en": "Microgravity; follow the stated flight event."
+          "en": "Microgravity throughout. Shot 027 is still on the bridge; 026/028 are the service-cylinder routes.",
+          "es": "needs_revision"
         }
       },
       "summary": {
-        "es": "En la bandeja bajo la escotilla, Harlan desconecta sin hablar las troncales cableadas de comunicaciones y cámaras, y luego se lanza en trayectoria balística por el pozo de servicio. Sin respuesta. Ella desciende mano sobre mano por la escalera helicoidal, más lenta, mientras Harlan cruza las cubiertas en una línea recta de vuelo libre.",
-        "en": "At the tray below the hatch, Harlan disconnects the wired communications and camera trunks without speaking, then launches ballistically down the service shaft. No answer. She moves hand over hand down the slower helical stair while Harlan crosses decks in a straight free-flight line."
+        "en": "Intercut: at the tray below the hatch, Harlan silently disconnects the wired communications and camera trunks, then launches ballistically down the service shaft. On the bridge in microgravity, Sorell volunteers to reach Zao faster than repairing a repeater; Voss orders her to find Harlan and not go alone. She then moves hand-over-hand down the slower helical stair while Harlan crosses decks in a straight free-flight line.",
+        "es": "needs_revision"
       },
       "dramaticPurpose": {
         "es": "Implementar la historia del Festival 06 sin alterar su orden causal.",
@@ -13605,35 +13606,35 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Sorell, urgente, se ofrece para la ruta más rápida: \"Puedo llegar a ella más rápido de lo que puedo reparar un repetidor\". Voss, receloso, acepta pero pone una condición: \"Encuentra a Harlan. No entres sola\".",
-        "en": "Sorell, urgent, volunteers for the faster route: \"I can reach her faster than I can repair a repeater.\" Voss, wary, agrees but sets a condition: \"Find Harlan. Do not go in alone.\"."
+        "en": "On the Celestial Ardor bridge in microgravity, Sorell urgent beside the stations volunteers for the faster route to Zao: \"I can reach her faster than I can repair a repeater.\" Voss, still at command, wary, agrees but sets a condition: \"Find Harlan. Do not go in alone.\" Neither is in the service shaft; both remain on the bridge.",
+        "es": "needs_revision"
       },
-      "locationId": "location:celestial-ardor-service-cylinder",
+      "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:sorell",
-          "role": "screen left on the ladder, reaching up"
+          "role": "MCU, screen left near the bridge stations, handhold posture in microgravity, volunteering"
         },
         {
           "kind": "character",
           "id": "character:voss",
-          "role": "screen right, above her, pointing down"
+          "role": "MCU, screen right at the command station, facing Sorell, wary"
         }
       ],
       "composition": {
         "size": "MCU",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Plano medio corto sobre Sorell, Voss; Dolly (en carro); mantiene las líneas de mirada y la continuidad del eje de acción.",
-          "en": "Medium close-up on Sorell, Voss; Dolly; preserves eyeline and action-axis continuity."
+          "en": "Medium close-up on Sorell and Voss on the bridge; Dolly; preserves eyeline and action-axis continuity in microgravity.",
+          "es": "needs_revision"
         }
       },
       "camera": {
         "movement": "dolly",
         "movementDescription": {
-          "es": "Dolly (en carro); mantiene las líneas de mirada y la continuidad del eje de acción.",
-          "en": "Dolly; preserves eyeline and action-axis continuity."
+          "en": "Dolly; preserves eyeline and action-axis continuity on the bridge in microgravity.",
+          "es": "needs_revision"
         }
       },
       "durationMs": 6640,
@@ -13655,8 +13656,8 @@
       ],
       "selectedTakeId": "festival-master:shot-plan-027:take-02",
       "purpose": {
-        "es": "Escena «Dos rutas hacia popa»: Sorell — ofrecer la acción útil que permite su especialidad; Voss — enviar ayuda sin ignorar la incertidumbre.",
-        "en": "Scene \"Two routes aft\": Sorell — offer the useful action her specialty allows; Voss — send help without ignoring uncertainty."
+        "en": "Bridge decision before the aft routes: Sorell offers the useful action her specialty allows; Voss sends help without ignoring uncertainty.",
+        "es": "needs_revision"
       }
     },
     {
@@ -13671,7 +13672,7 @@
         "es": "Sorell, ansiosa, llama a un comunicador de mano mientras desciende, mano sobre mano, por la escalera helicoidal más lenta: \"Harlan, responde. ¿Dónde estás?\" No vuelve ninguna respuesta.",
         "en": "Sorell, anxious, calls into a handheld comm as she moves hand-over-hand down the slower helical stair: \"Harlan, answer. Where are you?\" No answer returns."
       },
-      "locationId": "location:celestial-ardor-service-cylinder",
+      "locationId": "location:celestial-ardor-central-access",
       "visibleRefs": [
         {
           "kind": "character",
@@ -14644,13 +14645,11 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Sorell llega a la bahía exterior y atrapa el cuerpo de Zao, a la deriva y ensangrentado; le comprueba la vía aérea y el pulso, y presiona en vano una sangre que ya no circula en microgravedad.",
-        "en": "In microgravity, Sorell—clearly the active rescuer—catches and cradles Zao, the unconscious injured engineer. Sorell stays screen left in her dark EVA/security suit; Zao stays screen right in her engineer clothing. The optical transmitter remains outside frame."
+        "es": "needs_revision",
+        "en": "In microgravity, Sorell—clearly the active rescuer—catches and cradles Zao, the unconscious injured engineer. Sorell stays screen left in her shipboard security clothing per her character sheet; Zao stays screen right in her engineer clothing. The optical transmitter remains outside frame."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
-      "secondaryLocationIds": [
-        "location:celestial-ardor-service-cylinder"
-      ],
+      "secondaryLocationIds": [],
       "visibleRefs": [
         {
           "kind": "character",
@@ -14710,7 +14709,7 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Sorell, en pánico, llama con urgencia a un comunicador de mano mientras aún sostiene el cuerpo de Zao: \"Puente, Zao está caída. Emergencia médica. ¿Alguien copia?\".",
+        "es": "needs_revision",
         "en": "Still in microgravity, Sorell remains screen left, supporting Zao’s limp body screen right while raising the handheld comm. Keep their identities and positions unchanged; the optical transmitter remains outside frame."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
@@ -14778,18 +14777,21 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "Arriba, Harlan reconecta los troncales de comunicaciones y desactiva en silencio su inhibidor, luego sale al vestíbulo, controlado: \"Encontré la rotura. Ambos troncales estaban desconectados en la bandeja de servicio\".",
-        "en": "Inside the vertical service shaft, Harlan reconnects the camera and communications trunks at the deck connector board. Show the shaft walls and side access hatch, not a bridge console; he then moves toward the bridge-side hatch."
+        "es": "needs_revision",
+        "en": "Inside the Celestial Ardor service cylinder (same geography as shot 026), Harlan reconnects the wired communications trunks at the patch-panel tray in microgravity. Bridge interior and hatch-egress framing stay off-frame."
       },
-      "locationId": "location:celestial-ardor-bridge",
-      "secondaryLocationIds": [
-        "location:celestial-ardor-service-cylinder"
-      ],
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "secondaryLocationIds": [],
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:harlan",
-          "role": "alone inside the service shaft at the connector board"
+          "role": "at the wired-comms tray, reconnecting trunks"
+        },
+        {
+          "kind": "object",
+          "id": "object:wired-comms-deck-patch-panel",
+          "role": "tray / patch panel being restored"
         }
       ],
       "composition": {
@@ -14824,9 +14826,13 @@
         "festival-master:shot-plan-044:take-01",
         "festival-master:shot-plan-044:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-044:take-02",
+      "selectedTakeId": "festival-master:shot-plan-044:take-01",
       "offScreenCharacterIds": [
-        "character:voss"
+        "character:voss",
+        "character:rao",
+        "character:okoye",
+        "character:sorell",
+        "character:zao"
       ],
       "purpose": {
         "es": "Escena «La imagen que Harlan quería»: Harlan — montar una reparación y una coartada; Voss (fuera de cuadro) — localizar al tripulante desaparecido.",
@@ -14842,45 +14848,45 @@
       "number": 4,
       "order": 4,
       "description": {
-        "es": "Engañoso, Harlan se despega de la escena: \"Yo no la vi\". Detrás de él, el feed de cámara restaurado muestra sólo a Sorell sosteniendo el cuerpo ensangrentado.",
-        "en": "Harlan emerges into the current bridge and looks toward Voss and the other bridge crew while the restored monitor beside them shows Sorell alone holding Zao’s body. Sorell and Zao are visible only inside the feed, never as physical people in the bridge."
+        "en": "On the Celestial Ardor bridge in microgravity, Harlan returns through the bridge-side service hatch and faces Voss, Rao, and Okoye at their stations. A restored monitor beside them shows Sorell alone holding Zao’s body in the outer reactor service bay; Sorell and Zao appear only inside that feed, never as physical people on the bridge.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:harlan",
-          "role": "physical foreground, returning through the bridge-side hatch"
+          "role": "physical foreground near the bridge-side hatch, addressing the crew"
         },
         {
           "kind": "character",
           "id": "character:voss",
-          "role": "physical command station, questioning Harlan"
+          "role": "physical command station, seated/secured, questioning Harlan"
         },
         {
           "kind": "character",
           "id": "character:rao",
-          "role": "physical analysis station, watching the restored feed"
+          "role": "physical analysis station, seated/secured, watching the restored feed"
         },
         {
           "kind": "character",
           "id": "character:okoye",
-          "role": "physical security station, watching Harlan"
+          "role": "physical security station, seated/secured, watching Harlan"
         }
       ],
       "composition": {
-        "size": "CU",
+        "size": "MS",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Primer plano sobre Harlan; Cámara fija; mantiene las líneas de mirada y la continuidad del eje de acción.",
-          "en": "Close-up on Harlan; Locked; preserves eyeline and action-axis continuity."
+          "en": "Medium shot on Harlan with Voss, Rao, and Okoye readable at their bridge stations; Locked; monitor feed of 043 geography readable but secondary.",
+          "es": "needs_revision"
         }
       },
       "camera": {
-        "movement": "locked",
+        "movement": "static",
         "movementDescription": {
-          "es": "Cámara fija; mantiene las líneas de mirada y la continuidad del eje de acción.",
-          "en": "Locked; preserves eyeline and action-axis continuity."
+          "en": "Locked; holds Harlan and the bridge crew in one readable frame.",
+          "es": "needs_revision"
         }
       },
       "durationMs": 8660,
@@ -14905,7 +14911,7 @@
         "festival-master:shot-plan-045:take-01",
         "festival-master:shot-plan-045:take-02"
       ],
-      "selectedTakeId": "festival-master:shot-plan-045:take-02",
+      "selectedTakeId": "festival-master:shot-plan-045:take-01",
       "offScreenCharacterIds": [
         "character:sorell",
         "character:zao"
@@ -14913,7 +14919,8 @@
       "purpose": {
         "es": "Escena «La imagen que Harlan quería»: Harlan — separarse de su ruta; Voss (fuera de cuadro) — enviar seguridad y al testigo aparente.",
         "en": "Scene \"The picture Harlan wanted\": Harlan — separate himself from her route; Voss (off-frame) — send security and the apparent witness."
-      }
+      },
+      "secondaryLocationIds": []
     },
     {
       "id": "festival-master:shot-plan-045b",
@@ -14924,39 +14931,36 @@
       "number": 5,
       "order": 5,
       "description": {
-        "es": "Por orden de Voss, Harlan y Okoye toman la ruta de servicio para buscar a Sorell. Llegan a la bahía exterior y la traen de regreso bajo supervisión; avanzan rápido por el eje de servicio y más despacio por la ruta central.",
-        "en": "Voss’s order sends Harlan and Okoye through the service route to retrieve Sorell. They reach the outer bay and bring her back under supervision; the movement is quick through the service shaft and slow through the central route."
+        "en": "In the restricted service cylinder (same geography as shot 026), Harlan and Okoye move together in microgravity toward the outer bay on Voss’s retrieval order. Both are on-frame in the circular shaft; the outer bay and bridge remain off-frame. Sorell is not in this shot.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-service-cylinder",
-      "secondaryLocationIds": [
-        "location:celestial-ardor-reactor-service-bay",
-        "location:celestial-ardor-bridge"
-      ],
+      "secondaryLocationIds": [],
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:harlan",
-          "role": "moving through the service route"
+          "role": "leads mid-transit in the service cylinder toward the outer bay"
         },
         {
           "kind": "character",
           "id": "character:okoye",
-          "role": "moving with Harlan toward the outer bay"
+          "role": "follows close in the same shaft, identifiable from her sheet"
         }
       ],
       "composition": {
-        "size": "CU",
+        "size": "MS",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Primer plano sobre Harlan, Okoye; Cámara fija; mantiene las líneas de mirada y la continuidad del eje de acción.",
-          "en": "Close-up on Harlan, Okoye; Locked; preserves eyeline and action-axis continuity."
+          "en": "Medium tracking shot inside the circular service cylinder; shaft axis readable past Harlan and Okoye.",
+          "es": "needs_revision"
         }
       },
       "camera": {
-        "movement": "locked",
+        "movement": "tracking",
         "movementDescription": {
-          "es": "Cámara fija; mantiene las líneas de mirada y la continuidad del eje de acción.",
-          "en": "Locked; preserves eyeline and action-axis continuity."
+          "en": "Tracking with the pair along the shaft; preserves microgravity handhold motion.",
+          "es": "needs_revision"
         }
       },
       "durationMs": 3500,
@@ -14972,8 +14976,10 @@
       ],
       "selectedTakeId": "festival-master:shot-plan-045b:take-01",
       "offScreenCharacterIds": [
+        "character:sorell",
+        "character:zao",
         "character:voss",
-        "character:sorell"
+        "character:rao"
       ],
       "purpose": {
         "es": "Escena «La imagen que Harlan quería»: Por orden de Voss, Harlan y Okoye toman la ruta de servicio para buscar a Sorell.",
@@ -20210,7 +20216,9 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:46:57.393Z"
+        "generatedAt": "2026-09-14T16:46:57.393Z",
+        "visualStretchId": "festival-master:stretch-reactor-confront-036-038",
+        "stretchJobId": "festival-master:stretch-reactor-confront-036-038:rev-1"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20241,7 +20249,9 @@
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:51:00.488Z"
+        "generatedAt": "2026-09-14T16:51:00.488Z",
+        "visualStretchId": "festival-master:stretch-reactor-confront-036-038",
+        "stretchJobId": "festival-master:stretch-reactor-confront-036-038:rev-1"
       },
       "imageStatus": {
         "status": "needs_review",
@@ -20450,30 +20460,31 @@
       "id": "festival-master:shot-plan-044:take-01",
       "shotId": "festival-master:shot-plan-044",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
         "prompt": "Use the supplied Harlan, bridge, and wired-comms-panel references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, medium shot in the bridge-side command vestibule. Harlan alone reconnects the wired communications trunks at the service-shaft tray, disables the jammer, and emerges through the recessed hatch. Preserve microgravity handhold movement, the closed service-shaft geometry, and English-only diegetic text. The outer reactor bay, optical transmitter, Sorell, Zao, and any planet are off-frame. Single cinematic frame only, not a contact sheet, model sheet, collage, or multi-panel layout. Do not render subtitles, captions, or burned-in dialogue.",
         "negativePrompt": "Sorell, Zao, outer reactor service bay, optical transmitter, Earth, Jupiter, Proxima, any planet, moon, large planetary disc, service shaft open to the central shaft, floor hatch, extra unlisted characters, non-English text, obsolete continuity, lens flare, heavy motion blur, watermark, subtitles, closed captions, burned-in dialogue, contact sheet, model sheet, collage, multi-panel grid",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-celestial-ardor-service-cylinder-sheet",
           "asset:object-wired-comms-deck-patch-panel-sheet",
-          "asset:object-harlan-wrist-device-sheet"
+          "asset:festival-master-storyboard-026"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T20:28:00.000Z"
+        "generatedAt": "2026-09-12T20:28:00.000Z",
+        "visualStretchId": "festival-master:stretch-service-cylinder-harlan-044",
+        "stretchJobId": "festival-master:stretch-service-cylinder-harlan-044:rev-1"
       },
       "imageAssetId": "asset:festival-master-storyboard-044",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "current",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-044",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Author accepted Codex still as Seedance keyframe (2026-09-15).",
+          "es": "needs_revision"
         }
       }
     },
@@ -20481,28 +20492,32 @@
       "id": "festival-master:shot-plan-045:take-01",
       "shotId": "festival-master:shot-plan-045",
       "number": 1,
-      "status": "candidate",
+      "status": "selected",
       "generation": {
-        "prompt": "Use the supplied Harlan, bridge, and wired-comms-panel references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, close-up in microgravity at the bridge-side service vestibule. Harlan is the only physical person in the compartment, separating himself from the scene after saying, \"I never saw her.\" A restored camera-feed monitor behind him shows Sorell alone holding Zao's bloodied body in the distant outer bay. No physical Sorell, Zao, or outer-bay space appears beside Harlan. Preserve the specified blocking, physics, timing, and English-only diegetic display text.",
-        "negativePrompt": "physical Sorell in Harlan's compartment, physical Zao, outer reactor bay as the foreground setting, optical transmitter in frame, Earth, Jupiter, Proxima, any planet, moon, large blue or gray planetary disc, planetary surface, extra unlisted characters, non-English text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, watermark",
+        "prompt": "Use the supplied Harlan, Voss, Rao, Okoye, and bridge crew-stations references as authoritative for static appearance. Preserve visible fixed-chair seat belts/restraint harnesses; do not remove or redesign them. Grounded cinematic hard-science-fiction storyboard still, 16:9, medium shot on the Celestial Ardor bridge in microgravity. Harlan has just returned through the bridge-side service hatch and faces Voss, Rao, and Okoye, who remain at their stations (Voss command, Rao analysis, Okoye security). A restored camera-feed monitor in frame shows only Sorell holding Zao’s bloodied body in the distant outer bay — Sorell and Zao are not physically present on the bridge. Cool console practicals; English-only diegetic display text. No subtitles, captions, or burned-in dialogue.",
+        "negativePrompt": "physical Sorell on the bridge, physical Zao, outer reactor bay as the main setting, EVA suit on bridge crew, extra unlisted characters, non-English text, Earth, Jupiter, Proxima, any planet, luxury-liner styling, lens flare, heavy motion blur, watermark, subtitles, closed captions, burned-in dialogue, contact sheet, collage, multi-panel grid",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:character-voss-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-12T20:12:00.000Z"
+        "generatedAt": "2026-09-15T20:38:02.515Z",
+        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-045",
+        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-045:rev-1"
       },
       "imageAssetId": "asset:festival-master-storyboard-045",
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "current",
         "reasons": [
-          "continuity_error"
+          "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-045",
         "explanation": {
-          "es": "Cambió la lista de referencias o una hoja referenciada (conciliación en cuadro, retiro de exterior como interior, o hoja del cilindro central reemplazada el 2026-09-13); regenerar con las referencias vigentes.",
-          "en": "Reference list or a referenced sheet changed (on-frame reconciliation, exterior-for-interior removal, or the central-access sheet replaced on 2026-09-13); regenerate against the current references."
+          "en": "Author approved Codex/ regenerated still as Seedance keyframe (2026-09-15).",
+          "es": "needs_revision"
         }
       }
     },
@@ -20512,28 +20527,29 @@
       "number": 1,
       "status": "selected",
       "generation": {
-        "prompt": "Use the supplied Harlan, Okoye, bridge-vestibule, service-cylinder, and wired-comms-panel references as authoritative for static appearance. Grounded cinematic hard-science-fiction storyboard still, 16:9, brief tracking view in microgravity: after Voss orders them to go, Harlan and Okoye move rapidly through the direct service shaft toward the outer bay, while Sorell is brought back under supervision through the slower central route. Show the separated vertical service shaft and its wall hatch; preserve clear directional geography. No planet or exterior celestial body is visible.",
+        "prompt": "Use the attached Harlan sheet, Okoye sheet, Celestial Ardor service-cylinder concept sheet (current v5), and the approved shot-026 keyframe as authoritative. Match shot 026 service-cylinder geography exactly: the same narrow circular restricted shaft with radial side-wall hatches, straight ladder segments as handholds, cable runs, and cool graphite/slate-blue practicals — not the central-access cylinder. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX render quality, 16:9 landscape. Peak moment: after Voss orders Okoye with Harlan, both are mid-transit together inside the service cylinder, moving toward the outer bay (destination still off-frame). Harlan leads; Okoye follows close, identifiable from her sheet (charcoal security flight suit, short coiled natural hair, restraint tether / non-lethal kit). Microgravity is explicit: both drift and progress by handhold or ballistic push, never standing on a deck. Keep the shaft axis readable past them. Do not show bridge interior, spiral or helical stairs, central-access openings, the outer reactor bay interior, Sorell, Zao, or the wired-comms tray reconnect beat. Medium tracking composition; restrained hatch spill only. No text, subtitles, logos, or watermark.",
         "negativePrompt": "Sorell alone at the bridge, Zao, Zao body, outer-bay medical close-up, Earth, Jupiter, Proxima, any planet, moon, large planetary disc, open central/service shaft connection, floor hatch, extra people, non-English text, obsolete continuity, lens flare, heavy motion blur, watermark",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
           "asset:character-okoye-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-service-cylinder-sheet"
+          "asset:location-celestial-ardor-service-cylinder-sheet",
+          "asset:festival-master-storyboard-026"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:58:47.947Z"
+        "generatedAt": "2026-09-14T16:58:47.947Z",
+        "visualStretchId": "festival-master:stretch-service-cylinder-harlan-okoye-045b",
+        "stretchJobId": "festival-master:stretch-service-cylinder-harlan-okoye-045b:rev-1"
       },
       "imageAssetId": "asset:festival-master-storyboard-045b",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
-        "sourceShotId": "festival-master:shot-plan-045b",
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Author approved still as Seedance keyframe (2026-09-15).",
+          "es": "needs_revision"
         }
       },
       "durationMs": 3500,
@@ -22916,8 +22932,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:23.575Z",
-        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
-        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "visualStretchId": "festival-master:stretch-reactor-record-033-035",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-035:rev-1",
         "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -22948,8 +22964,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:23.575Z",
-        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
-        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "visualStretchId": "festival-master:stretch-reactor-record-033-035",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-035:rev-1",
         "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -22980,8 +22996,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:23.575Z",
-        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
-        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "visualStretchId": "festival-master:stretch-reactor-record-033-035",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-035:rev-1",
         "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -23012,8 +23028,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:23.575Z",
-        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
-        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1",
+        "visualStretchId": "festival-master:stretch-reactor-confront-036-038",
+        "stretchJobId": "festival-master:stretch-reactor-confront-036-038:rev-1",
         "stretchDigest": "81a82bd47243f28b4ef2635fedf9f6a6f3570dee5fc600d47c354d79daec694b",
         "referenceAssetIds": [
           "asset:character-zao-sheet",
@@ -23028,15 +23044,15 @@
       "shotId": "festival-master:shot-plan-042",
       "number": 2,
       "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-panel-01",
+      "imageAssetId": "asset:festival-master-storyboard-042",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "New independent still generated with the author-provided crew-stations reference; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author accepted Codex still as Seedance keyframe (2026-09-15).",
+          "es": "needs_revision"
         }
       },
       "generation": {
@@ -23060,15 +23076,15 @@
       "shotId": "festival-master:shot-plan-043",
       "number": 2,
       "status": "selected",
-      "imageAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-panel-02",
+      "imageAssetId": "asset:festival-master-storyboard-043",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "New independent still generated with the current bridge/hatch reference; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Author accepted Codex still as Seedance keyframe (2026-09-15).",
+          "es": "needs_revision"
         }
       },
       "generation": {
@@ -23091,25 +23107,23 @@
       "id": "festival-master:shot-plan-044:take-02",
       "shotId": "festival-master:shot-plan-044",
       "number": 2,
-      "status": "selected",
+      "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_replacement",
         "reasons": [
+          "continuity_error",
           "quality"
         ],
         "explanation": {
-          "en": "Manually replaced scene 10 still with visible fixed-seat belts; approved for video reference.",
-          "es": "Imagen reemplazada manualmente de la escena 10 con cinturones visibles en los asientos fijos; aprobada para referencia de video."
+          "en": "Derived from obsolete combined 044–045 stretch. Do not use; regenerate independent service-cylinder still on take-01.",
+          "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:32.405Z",
-        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
-        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
-        "stretchDigest": "73a37d90da0d9a69bb52c50ab4fc56abacd7548554ae92e4341551341976a9f5",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
@@ -23123,31 +23137,29 @@
       "id": "festival-master:shot-plan-045:take-02",
       "shotId": "festival-master:shot-plan-045",
       "number": 2,
-      "status": "selected",
+      "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_replacement",
         "reasons": [
+          "continuity_error",
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Derived from obsolete combined 044–045 stretch (cross-location). Do not use; regenerate independent bridge still on take-01.",
+          "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:32.405Z",
-        "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
-        "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
-        "stretchDigest": "73a37d90da0d9a69bb52c50ab4fc56abacd7548554ae92e4341551341976a9f5",
         "referenceAssetIds": [
-          "asset:character-pair-voss-harlan-bridge-sheet",
-          "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:character-pair-rao-sorell-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:location-celestial-ardor-bridge-service-shaft-reference"
+          "asset:character-harlan-sheet",
+          "asset:character-voss-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-okoye-sheet",
+          "asset:location-celestial-ardor-bridge-crew-stations-reference"
         ]
       }
     },
@@ -23479,8 +23491,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:35.435Z",
-        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
-        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
         "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -23510,8 +23522,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:35.435Z",
-        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
-        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
         "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -23541,8 +23553,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:35.435Z",
-        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
-        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-085",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-085:rev-1",
         "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -23572,8 +23584,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T19:46:35.435Z",
-        "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
-        "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-greeting-086",
+        "stretchJobId": "festival-master:stretch-bridge-greeting-086:rev-1",
         "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -24066,8 +24078,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:27.113Z",
-        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
-        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "visualStretchId": "festival-master:stretch-service-cylinder-harlan-026",
+        "stretchJobId": "festival-master:stretch-service-cylinder-harlan-026:rev-1",
         "stretchDigest": "2094ed0ffeb3d2729dd9ae195df126d4afad25c58e1094fd60da199d19beaf57",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -24085,21 +24097,22 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "continuity_error"
         ],
+        "sourceShotId": "festival-master:shot-plan-027",
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Selected still shows service-shaft ladder geography; shot 027 is bridge microgravity (Voss + Sorell). Do not regenerate until authorized; Seedance needs a bridge keyframe first.",
+          "es": "needs_revision"
         }
       },
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:27.113Z",
-        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
-        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-route-decision-027",
+        "stretchJobId": "festival-master:stretch-bridge-route-decision-027:rev-1",
         "stretchDigest": "2094ed0ffeb3d2729dd9ae195df126d4afad25c58e1094fd60da199d19beaf57",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -24130,8 +24143,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:27.113Z",
-        "visualStretchId": "festival-master:stretch-service-cylinder-route-026-028",
-        "stretchJobId": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
+        "visualStretchId": "festival-master:stretch-central-access-sorell-028",
+        "stretchJobId": "festival-master:stretch-central-access-sorell-028:rev-1",
         "stretchDigest": "2094ed0ffeb3d2729dd9ae195df126d4afad25c58e1094fd60da199d19beaf57",
         "referenceAssetIds": [
           "asset:character-harlan-sheet",
@@ -24506,8 +24519,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-064",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-064:rev-1",
         "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
@@ -24538,8 +24551,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
         "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
@@ -24570,8 +24583,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
         "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
@@ -24602,8 +24615,8 @@
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:23:27.993Z",
-        "visualStretchId": "festival-master:stretch-bridge-command-break-064-067",
-        "stretchJobId": "festival-master:stretch-bridge-command-break-064-067:rev-1",
+        "visualStretchId": "festival-master:stretch-bridge-command-break-065-067",
+        "stretchJobId": "festival-master:stretch-bridge-command-break-065-067:rev-1",
         "stretchDigest": "f5b0f1895cdeb02025303ae9e396d12b64e69cc797908171b3398b2c91a81fbc",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
@@ -25075,7 +25088,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-meal-sheet",
@@ -25279,7 +25293,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-meal-sheet",
@@ -25542,7 +25557,8 @@
           "cols": 2,
           "gutterFraction": 0.02,
           "panelAspect": "16:9"
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:visual-pack-proxima-axial-dock-crew-sheet"
@@ -25673,7 +25689,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-voss-sheet",
@@ -25836,7 +25853,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-zao-sheet",
@@ -25998,10 +26016,10 @@
       }
     },
     {
-      "id": "festival-master:stretch-reactor-record-033-036",
+      "id": "festival-master:stretch-reactor-record-033-035",
       "title": {
-        "en": "Recording, transmission, and confrontation (033–036)",
-        "es": "Grabación, transmisión y confrontación (033–036)"
+        "en": "Recording and transmission (033–035)",
+        "es": "Grabación y transmisión (033–035)"
       },
       "status": "draft",
       "revision": 1,
@@ -26059,12 +26077,78 @@
             "en": "The warning has left the ship before Harlan enters.",
             "es": "La advertencia ha salido de la nave antes de que entre Harlan."
           }
-        },
+        }
+      ],
+      "locationId": "location:celestial-ardor-reactor-service-bay",
+      "presentCharacterIds": [
+        "character:zao"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the reactor service bay; Harlan closes distance by controlled pushes and Zao remains anchored to the console.",
+        "es": "Microgravedad en la bahía; Harlan acorta la distancia con impulsos controlados y Zao permanece sujeta a la consola."
+      },
+      "lighting": {
+        "en": "Reactor-bay practicals and optical-console glow; the transmission display is English-only.",
+        "es": "Luces prácticas de la bahía y brillo de la consola óptica; la pantalla de transmisión sólo está en inglés."
+      },
+      "blocking": [
+        {
+          "characterId": "character:zao",
+          "zoneOrSeat": "outer-bay optical console",
+          "screenSide": "left",
+          "facing": "the console, then Harlan",
+          "posture": "moving",
+          "eyelineTarget": "the console and character:harlan"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Reactor-bay recording and narrow-beam transmission for shots 033–035 (scene 13), preserving Zao, console geometry, and microgravity. One Seedance job per shot.",
+        "es": "needs_revision"
+      },
+      "generationProfile": {
+        "stillMode": "independent_shared_authority",
+        "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1
+      },
+      "referenceAssetIds": [
+        "asset:character-zao-sheet",
+        "asset:location-celestial-ardor-reactor-service-bay-sheet",
+        "asset:object-optical-contingency-transmitter-sheet"
+      ],
+      "videoReferenceAssetIds": [],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "user-approved per-shot Seedance partition (scene separation)"
+      },
+      "videoReferencePolicy": "explicit",
+      "notes": [
+        {
+          "id": "note:reactor-record-scene-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Split from stretch-reactor-record-033-036: scene 13 only. Still mode independent_shared_authority using existing panel stills as keyframes.",
+            "es": "needs_revision"
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival-master:stretch-reactor-confront-036-038",
+      "title": {
+        "en": "Confrontation (036–038)",
+        "es": "Confrontación (036–038)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
         {
           "shotId": "festival-master:shot-plan-036",
-          "order": 4,
+          "order": 1,
           "takeScope": "selected",
-          "keyframeRole": "payoff",
+          "keyframeRole": "establish",
           "startState": {
             "en": "Harlan enters the bay after the pointing solution is closed.",
             "es": "Harlan entra en la bahía después de cerrarse la solución de puntería."
@@ -26076,6 +26160,42 @@
           "endState": {
             "en": "Zao refuses to reveal the target; Harlan controls the encounter.",
             "es": "Zao se niega a revelar el objetivo; Harlan controla el encuentro."
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-037",
+          "order": 2,
+          "takeScope": "selected",
+          "keyframeRole": "develop",
+          "startState": {
+            "en": "Zao silent after Harlan’s demand; Harlan calculating the destination aloud.",
+            "es": "needs_revision"
+          },
+          "event": {
+            "en": "Harlan rules out Proxima and the throat, then settles on Earth as the only remaining answer.",
+            "es": "needs_revision"
+          },
+          "endState": {
+            "en": "Harlan has named Earth; Zao still does not speak.",
+            "es": "needs_revision"
+          }
+        },
+        {
+          "shotId": "festival-master:shot-plan-038",
+          "order": 3,
+          "takeScope": "selected",
+          "keyframeRole": "payoff",
+          "startState": {
+            "en": "Harlan briefly sorrowful across from Zao in the reactor bay.",
+            "es": "needs_revision"
+          },
+          "event": {
+            "en": "He closes the distance with a final line; the frame cuts to black before impact.",
+            "es": "needs_revision"
+          },
+          "endState": {
+            "en": "Black frame; violence withheld.",
+            "es": "needs_revision"
           }
         }
       ],
@@ -26112,18 +26232,13 @@
         }
       ],
       "sharedDescription": {
-        "en": "Continuous reactor-bay confrontation for shots 033–034–035–036, preserving the recording, narrow-beam transmission, Harlan’s arrival, cast, and microgravity geometry.",
-        "es": "Confrontación continua en la bahía del reactor para las tomas 033–034–035–036, que conserva la grabación, la transmisión estrecha, la llegada de Harlan, el elenco y la geometría de microgravedad."
+        "en": "Scene 14 reactor-bay confrontation for shots 036–038. One Seedance job per shot using existing stills as ordered keyframes; prompts may be refined later.",
+        "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9"
-        }
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-zao-sheet",
@@ -26131,15 +26246,27 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet",
       "videoReferenceAssetIds": [
+        "asset:character-zao-sheet",
         "asset:character-harlan-sheet"
       ],
+      "videoReferencePolicy": "explicit",
       "videoPromptFreeze": {
         "status": "approved",
-        "approvedAt": "2026-09-14",
-        "source": "tmp/review-of-generated-stills.md"
-      }
+        "approvedAt": "2026-09-15",
+        "source": "user-approved per-shot Seedance partition (scene separation)"
+      },
+      "notes": [
+        {
+          "id": "note:reactor-confront-scene-14",
+          "type": "production",
+          "status": "open",
+          "text": {
+            "en": "Scene 14 peeled from reactor-record stretch; 037/038 enrolled for per-shot Seedance. Prompt freeze approved for readiness; refine member timing copy later as needed.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:stretch-reactor-sorell-042-043",
@@ -26156,16 +26283,16 @@
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "Sorell enters the outer bay and catches Zao's drifting body.",
-            "es": "Sorell entra en la bahía exterior y atrapa el cuerpo de Zao a la deriva."
+            "en": "Sorell enters the outer bay and catches Zao’s drifting, injured body in microgravity.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "She checks the airway and pulse in microgravity.",
-            "es": "Comprueba las vías respiratorias y el pulso en microgravedad."
+            "en": "She checks airway and pulse while cradling Zao; visible injury and blood on Zao become clear, with small droplets and residue drifting in zero-g as she works. Blood may read more strongly in motion than the still.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "Sorell holds Zao and searches for help.",
-            "es": "Sorell sostiene a Zao y busca ayuda."
+            "en": "Sorell holds the bloodied, unconscious Zao and searches for help.",
+            "es": "needs_revision"
           }
         },
         {
@@ -26174,16 +26301,16 @@
           "takeScope": "selected",
           "keyframeRole": "payoff",
           "startState": {
-            "en": "Sorell still cradles Zao beside the optical console.",
-            "es": "Sorell aún sostiene a Zao junto a la consola óptica."
+            "en": "Sorell still cradles Zao in the outer bay (optical transmitter outside frame).",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "She calls the bridge into the jammed comms and receives no answer.",
-            "es": "Llama al puente por las comunicaciones interferidas y no recibe respuesta."
+            "en": "She raises the handheld comm toward the bridge; the channel stays jammed. Blood and injury remain visible on Zao.",
+            "es": "needs_revision"
           },
           "endState": {
             "en": "Her isolation and fear are established.",
-            "es": "Quedan establecidas su aislamiento y su angustia."
+            "es": "needs_revision"
           }
         }
       ],
@@ -26200,8 +26327,8 @@
         "es": "Microgravedad; Sorell y Zao derivan juntas sin un piso utilizable."
       },
       "lighting": {
-        "en": "Outer-bay practicals, optical-console glow, and blood suspended in the air.",
-        "es": "Luces prácticas de la bahía exterior, brillo de la consola y sangre suspendida en el aire."
+        "en": "Outer-bay practicals and optical-console glow; clear air; blood and small droplets suspended in microgravity.",
+        "es": "needs_revision"
       },
       "blocking": [
         {
@@ -26222,7 +26349,8 @@
         }
       ],
       "sharedDescription": {
-        "en": "Continuous microgravity rescue: Sorell is the active rescuer in the dark EVA/security suit, screen left; Zao is the unconscious injured engineer, screen right, cradled by Sorell. Never swap their identities or clothing."
+        "en": "Continuous microgravity rescue: Sorell is the active rescuer in her shipboard security clothing per her character sheet, screen left; Zao is the unconscious injured engineer, screen right, cradled by Sorell. Injury and blood on Zao may intensify in video motion from the Codex keyframe. Never swap their identities or clothing. Do not dress Sorell in an EVA suit. No smoke or haze.",
+        "es": "needs_revision"
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -26236,22 +26364,30 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-sorell-sheet",
         "asset:character-zao-sheet",
-        "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet",
-        "asset:prop-celestial-ardor-eva-suit-sheet"
+        "asset:location-celestial-ardor-reactor-service-bay-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-sorell-sheet",
+        "asset:character-zao-sheet"
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "author: Codex stills as Seedance keyframes; blood/gore allowed in video motion (042–044)"
+      }
     },
     {
-      "id": "festival-master:stretch-bridge-harlan-alibi-044-045",
+      "id": "festival-master:stretch-service-cylinder-harlan-044",
       "title": {
-        "en": "Harlan restores the bridge and builds his alibi (044–045)",
-        "es": "Harlan restablece el puente y construye su coartada (044–045)"
+        "en": "Harlan reconnects trunks (044)",
+        "es": "needs_revision"
       },
       "status": "draft",
       "revision": 1,
@@ -26262,35 +26398,109 @@
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "Harlan reaches the bridge-side service tray after the murder.",
-            "es": "Harlan llega a la bandeja de servicio junto al puente después del asesinato."
+            "en": "Harlan at the service-cylinder wired-comms tray after the murder, trunks still cut.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "He reconnects the communication trunks and emerges controlled.",
-            "es": "Reconecta los troncales de comunicación y emerge con calma."
+            "en": "He reconnects the communication trunks at the patch panel inside the cylinder only.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The bridge sees a composed officer returning from the hatch.",
-            "es": "El puente ve regresar por la escotilla a un oficial sereno."
-          }
-        },
+            "en": "Trunks restored; Harlan still inside the cylinder geography (no bridge wash).",
+            "es": "needs_revision"
+          },
+          "videoReferenceAssetIds": [
+            "asset:character-harlan-sheet",
+            "asset:object-wired-comms-deck-patch-panel-sheet"
+          ]
+        }
+      ],
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "presentCharacterIds": [
+        "character:harlan"
+      ],
+      "absentCharacterIds": [
+        "character:sorell",
+        "character:zao",
+        "character:voss",
+        "character:rao",
+        "character:okoye"
+      ],
+      "physics": {
+        "en": "Microgravity inside the restricted service cylinder; Harlan works the tray and launches/holds with rails — no standing deck.",
+        "es": "needs_revision"
+      },
+      "lighting": {
+        "en": "Cool graphite/slate-blue cylinder practicals; no bridge wash.",
+        "es": "needs_revision"
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "hinged tray below bridge service hatch",
+          "screenSide": "center",
+          "facing": "tray / trunks, then hatch",
+          "posture": "working at tray then moving to hatch",
+          "eyelineTarget": "object:wired-comms-deck-patch-panel"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Singleton Seedance: Harlan reconnects wired trunks at the service-cylinder tray (peak reconnect inside the shaft). Match approved shot-026 geography. Bridge, hatch-egress wash, and outer bay stay off-frame.",
+        "es": "needs_revision"
+      },
+      "generationProfile": {
+        "stillMode": "independent_shared_authority",
+        "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1
+      },
+      "referenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-service-cylinder-sheet",
+        "asset:object-wired-comms-deck-patch-panel-sheet",
+        "asset:festival-master-storyboard-026"
+      ],
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-voss-sheet",
+        "asset:object-wired-comms-deck-patch-panel-sheet"
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "author: Codex stills as Seedance keyframes; blood/gore allowed in video motion (042–044)"
+      },
+      "coherenceException": true
+    },
+    {
+      "id": "festival-master:stretch-bridge-harlan-alibi-045",
+      "title": {
+        "en": "Harlan’s alibi on the bridge (045)",
+        "es": "needs_revision"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
         {
           "shotId": "festival-master:shot-plan-045",
-          "order": 2,
+          "order": 1,
           "takeScope": "selected",
-          "keyframeRole": "payoff",
+          "keyframeRole": "establish",
           "startState": {
-            "en": "Harlan remains alone at the bridge-side hatch and monitor.",
-            "es": "Harlan permanece solo junto a la escotilla y el monitor del puente."
+            "en": "Harlan has just returned through the bridge-side hatch; Voss, Rao, and Okoye are at their stations; the restored monitor shows the outer-bay feed.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "He denies seeing Sorell while the restored monitor shows her with Zao.",
-            "es": "Niega haber visto a Sorell mientras el monitor restaurado la muestra con Zao."
+            "en": "Harlan denies seeing Sorell (“I never saw her.”). Voss orders Okoye with Harlan (“Okoye, with Harlan. Go.”).",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "His alibi is placed before the bridge crew returns.",
-            "es": "Su coartada queda instalada antes de que vuelva la tripulación del puente."
-          }
+            "en": "Alibi placed; Okoye prepared to leave with Harlan; monitor still shows Sorell/Zao only as feed.",
+            "es": "needs_revision"
+          },
+          "videoReferenceAssetIds": [
+            "asset:character-rao-sheet",
+            "asset:character-okoye-sheet"
+          ]
         }
       ],
       "locationId": "location:celestial-ardor-bridge",
@@ -26305,36 +26515,36 @@
         "character:zao"
       ],
       "physics": {
-        "en": "Microgravity during the return through the bridge-side service hatch; Harlan uses rails and the tray.",
-        "es": "Microgravedad durante el regreso por la escotilla de servicio del puente; Harlan usa rieles y la bandeja."
+        "en": "Microgravity on the bridge; crew remain secured at stations; Harlan uses hatch rails.",
+        "es": "needs_revision"
       },
       "lighting": {
-        "en": "Bridge instrument glow and the restored camera monitor.",
-        "es": "Brillo de instrumentos del puente y monitor de cámara restaurado."
+        "en": "Cool bridge console practicals; restored camera-monitor glow secondary.",
+        "es": "needs_revision"
       },
       "blocking": [
         {
           "characterId": "character:harlan",
-          "zoneOrSeat": "service-shaft comms tray then bridge-side hatch",
+          "zoneOrSeat": "bridge-side service hatch foreground",
           "screenSide": "center",
-          "facing": "patch panel, then bridge crew and monitor",
-          "posture": "moving",
-          "eyelineTarget": "object:wired-comms-deck-patch-panel"
+          "facing": "Voss and bridge crew",
+          "posture": "braced at hatch / rails",
+          "eyelineTarget": "character:voss"
         },
         {
           "characterId": "character:voss",
           "zoneOrSeat": "command station",
           "screenSide": "left",
-          "facing": "Harlan and restored monitor",
-          "posture": "standing",
+          "facing": "Harlan",
+          "posture": "secured seated",
           "eyelineTarget": "character:harlan"
         },
         {
           "characterId": "character:rao",
           "zoneOrSeat": "analysis station",
           "screenSide": "right",
-          "facing": "Harlan and monitor",
-          "posture": "seated",
+          "facing": "monitor and Harlan",
+          "posture": "secured seated",
           "eyelineTarget": "monitor"
         },
         {
@@ -26342,35 +26552,38 @@
           "zoneOrSeat": "security station",
           "screenSide": "far right",
           "facing": "Harlan",
-          "posture": "standing",
+          "posture": "secured seated/standing",
           "eyelineTarget": "character:harlan"
         }
       ],
       "sharedDescription": {
-        "en": "Two-panel continuity: Harlan reconnects the camera and comms in the service shaft, then emerges into the current bridge where Voss and the bridge crew can see him and the restored feed. Sorell appears only inside the monitor feed, never physically in the bridge."
+        "en": "Singleton Seedance: Harlan’s alibi on the bridge with Voss, Rao, and Okoye on-frame. Sorell/Zao only inside the restored monitor feed (043 outer-bay geography). Never place Sorell or Zao physically on the bridge.",
+        "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            3,
-            4
-          ]
-        }
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
-        "asset:character-pair-voss-harlan-bridge-sheet",
-        "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:character-pair-rao-sorell-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:location-celestial-ardor-bridge-service-shaft-reference"
+        "asset:character-harlan-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-bridge-crew-stations-reference"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet"
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-okoye-sheet"
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "author: Codex stills approved; Seedance 045/045b prep"
+      },
+      "coherenceException": true
     },
     {
       "id": "festival-master:stretch-central-vault-obstruction-054-056",
@@ -26504,7 +26717,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-okoye-voss-bridge-sheet",
@@ -26654,7 +26868,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -26787,7 +27002,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -26882,7 +27098,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-zao-sheet",
@@ -26892,10 +27109,10 @@
       "combinedStillAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet"
     },
     {
-      "id": "festival-master:stretch-bridge-greeting-prep-083-086",
+      "id": "festival-master:stretch-bridge-greeting-prep-083-085",
       "title": {
-        "en": "Greeting preparation and launch (083–086)",
-        "es": "Preparación y envío del saludo (083–086)"
+        "en": "Greeting prep (083–085)",
+        "es": "Preparación del saludo (083–085)"
       },
       "status": "draft",
       "revision": 1,
@@ -26953,12 +27170,102 @@
             "en": "The crew is committed to the limited transmission.",
             "es": "La tripulación queda comprometida con la transmisión limitada."
           }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:voss",
+        "character:sorell",
+        "character:rao",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [
+        "character:harlan",
+        "character:zao"
+      ],
+      "physics": {
+        "en": "Steady approach conditions with apparent 1 g on the bridge; the hull display remains visible through the reinforced windows.",
+        "es": "Condiciones estables de aproximación con 1 g aparente en el puente; la pantalla del casco se ve por las ventanas reforzadas."
+      },
+      "lighting": {
+        "en": "Bridge practicals balanced against the branching greeting light.",
+        "es": "Luces prácticas del puente equilibradas con la luz ramificada del saludo."
+      },
+      "blocking": [
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "left",
+          "facing": "Sorell and hull display",
+          "posture": "standing",
+          "eyelineTarget": "character:sorell"
         },
         {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "translator station",
+          "screenSide": "center",
+          "facing": "Voss and display",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "right",
+          "facing": "the display",
+          "posture": "standing",
+          "eyelineTarget": "the display"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station",
+          "screenSide": "off",
+          "facing": "the bridge",
+          "posture": "standing",
+          "eyelineTarget": "the crew"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Bridge greeting preparation for shots 083–085 (scene 28). One Seedance job per shot.",
+        "es": "needs_revision"
+      },
+      "generationProfile": {
+        "stillMode": "independent_shared_authority",
+        "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
+      ],
+      "notes": [
+        {
+          "id": "note:greeting-prep-scene-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Split from stretch-bridge-greeting-prep-083-086: scene 28 only.",
+            "es": "needs_revision"
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-greeting-086",
+      "title": {
+        "en": "Greeting send (086)",
+        "es": "Envío del saludo (086)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
           "shotId": "festival-master:shot-plan-086",
-          "order": 4,
+          "order": 1,
           "takeScope": "selected",
-          "keyframeRole": "payoff",
+          "keyframeRole": "establish",
           "startState": {
             "en": "The bridge windows and hull display carry the prepared greeting.",
             "es": "Las ventanas del puente y la pantalla del casco muestran el saludo preparado."
@@ -27027,17 +27334,13 @@
         }
       ],
       "sharedDescription": {
-        "en": "Current Celestial Ardor bridge continuity: Sorell, Voss, and Rao work at the interior hull-display stations while Okoye remains at security. The bridge windows show the dark exterior and the Velari station only; never show the Ardor’s exterior hull from inside the bridge. The greeting is visible on the interior display and later as reflected structured light, not as a different ship."
+        "en": "Scene 29 greeting send for shot 086. One Seedance job.",
+        "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9"
-        }
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-rao-sorell-bridge-sheet",
@@ -27045,7 +27348,17 @@
         "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:location-velari-station-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
+      "notes": [
+        {
+          "id": "note:greeting-086-scene-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Peeled from stretch-bridge-greeting-prep-083-086 into scene 29.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:stretch-velari-answer-087-088",
@@ -27135,7 +27448,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-sorell-sheet",
@@ -27242,7 +27556,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-sorell-sheet",
@@ -27374,7 +27689,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -27485,7 +27801,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-voss-sheet",
@@ -27588,7 +27905,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-zao-sheet",
@@ -27698,7 +28016,8 @@
             3,
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-zao-sheet",
@@ -27820,7 +28139,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-zao-sheet",
@@ -27838,10 +28158,10 @@
       }
     },
     {
-      "id": "festival-master:stretch-service-cylinder-route-026-028",
+      "id": "festival-master:stretch-service-cylinder-harlan-026",
       "title": {
-        "en": "Service-cylinder routes to Zao (026–028)",
-        "es": "Service-cylinder routes to Zao (026–028)"
+        "en": "Harlan cuts trunks (026)",
+        "es": "needs_revision"
       },
       "status": "draft",
       "revision": 1,
@@ -27863,49 +28183,11 @@
             "en": "The next panel inherits the same continuity.",
             "es": "El panel siguiente hereda la misma continuidad."
           }
-        },
-        {
-          "shotId": "festival-master:shot-plan-027",
-          "order": 2,
-          "takeScope": "selected",
-          "keyframeRole": "develop",
-          "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
-          },
-          "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
-          },
-          "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
-          }
-        },
-        {
-          "shotId": "festival-master:shot-plan-028",
-          "order": 3,
-          "takeScope": "selected",
-          "keyframeRole": "payoff",
-          "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
-          },
-          "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
-          },
-          "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
-          }
         }
       ],
       "locationId": "location:celestial-ardor-service-cylinder",
       "presentCharacterIds": [
-        "character:harlan",
-        "character:sorell",
-        "character:voss"
+        "character:harlan"
       ],
       "absentCharacterIds": [],
       "physics": {
@@ -27924,7 +28206,176 @@
           "facing": "toward the active exchange or console",
           "posture": "other",
           "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Service-cylinder shot 026: Harlan disconnects wired trunks and launches down the shaft. One Seedance job.",
+        "es": "needs_revision"
+      },
+      "generationProfile": {
+        "stillMode": "independent_shared_authority",
+        "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1
+      },
+      "referenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:location-celestial-ardor-service-cylinder-sheet",
+        "asset:object-wired-comms-deck-patch-panel-sheet"
+      ],
+      "notes": [
+        {
+          "id": "note:service-cylinder-026-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Peeled from stretch-service-cylinder-route-026-028 after moving 027 to the bridge.",
+            "es": "needs_revision"
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-route-decision-027",
+      "title": {
+        "en": "Bridge route decision (027)",
+        "es": "needs_revision"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-027",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Bridge in microgravity; Voss at command; Sorell near the stations; neither in the service shaft.",
+            "es": "needs_revision"
+          },
+          "event": {
+            "en": "Sorell volunteers to reach Zao faster than repairing a repeater; Voss accepts on condition she find Harlan and not go alone.",
+            "es": "needs_revision"
+          },
+          "endState": {
+            "en": "Order given; Sorell still on the bridge, about to leave for the slower route.",
+            "es": "needs_revision"
+          },
+          "videoReferenceAssetIds": [
+            "asset:character-voss-sheet",
+            "asset:character-sorell-sheet"
+          ]
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity on the Celestial Ardor bridge; crew use handholds and fixed stations. No ladder or service-shaft geometry.",
+        "es": "needs_revision"
+      },
+      "lighting": {
+        "en": "Established bridge practicals and console glow.",
+        "es": "needs_revision"
+      },
+      "blocking": [
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "near bridge stations / handholds",
+          "screenSide": "left",
+          "facing": "Voss",
+          "posture": "handhold microgravity, urgent",
+          "eyelineTarget": "character:voss"
         },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "right",
+          "facing": "Sorell",
+          "posture": "at station, wary",
+          "eyelineTarget": "character:sorell"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Singleton bridge MCU for shot 027: Sorell and Voss decide the aft search in microgravity. Not the service shaft.",
+        "es": "needs_revision"
+      },
+      "generationProfile": {
+        "stillMode": "independent_shared_authority",
+        "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1
+      },
+      "referenceAssetIds": [
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet",
+        "asset:location-celestial-ardor-bridge-crew-stations-reference"
+      ],
+      "videoReferenceAssetIds": [
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet"
+      ],
+      "videoReferencePolicy": "explicit",
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "user-approved shot-027 bridge microgravity Seedance prep"
+      },
+      "notes": [
+        {
+          "id": "note:bridge-027-not-shaft",
+          "type": "production",
+          "status": "open",
+          "text": {
+            "en": "Corrected from service-cylinder stretch: Voss and Sorell remain on the bridge in microgravity. Selected still is a shaft panel and needs regeneration before Seedance submit.",
+            "es": "needs_revision"
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival-master:stretch-central-access-sorell-028",
+      "title": {
+        "en": "Sorell on the helical stair (028)",
+        "es": "needs_revision"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-028",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "The established state continues from the previous panel.",
+            "es": "Continúa el estado establecido del panel anterior."
+          },
+          "event": {
+            "en": "The shot action proceeds without changing the shared spatial arrangement.",
+            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+          },
+          "endState": {
+            "en": "The next panel inherits the same continuity.",
+            "es": "El panel siguiente hereda la misma continuidad."
+          }
+        }
+      ],
+      "locationId": "location:celestial-ardor-central-access",
+      "presentCharacterIds": [
+        "character:sorell"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Microgravity in the longitudinal service cylinder; Harlan uses the direct service route while Sorell uses the slower ladder route.",
+        "es": "Microgravity in the longitudinal service cylinder; Harlan uses the direct service route while Sorell uses the slower ladder route."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
         {
           "characterId": "character:sorell",
           "zoneOrSeat": "established-2",
@@ -27932,41 +28383,32 @@
           "facing": "toward the active exchange or console",
           "posture": "other",
           "eyelineTarget": "the active action"
-        },
-        {
-          "characterId": "character:voss",
-          "zoneOrSeat": "established-3",
-          "screenSide": "right",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
         }
       ],
       "sharedDescription": {
-        "en": "Continuous visual stretch for shots 026–027–028, preserving location, cast, blocking, and physical continuity.",
-        "es": "Tramo visual continuo para las tomas 026–027–028, que conserva ubicación, elenco, puesta y continuidad física."
+        "en": "Service-cylinder shot 028: Sorell calls for Harlan while descending the slower helical stair. One Seedance job.",
+        "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9",
-          "blankCells": [
-            4
-          ]
-        }
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
-        "asset:character-harlan-sheet",
         "asset:character-sorell-sheet",
-        "asset:character-voss-sheet",
-        "asset:location-celestial-ardor-service-cylinder-sheet",
-        "asset:object-wired-comms-deck-patch-panel-sheet"
+        "asset:location-celestial-ardor-service-cylinder-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-service-cylinder-route-026-028-sheet"
+      "notes": [
+        {
+          "id": "note:service-cylinder-028-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Peeled from stretch-service-cylinder-route-026-028 after moving 027 to the bridge.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:stretch-bridge-comms-cut-023-025",
@@ -28301,7 +28743,8 @@
           "cols": 2,
           "gutterFraction": 0.02,
           "panelAspect": "16:9"
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -28476,7 +28919,8 @@
           "cols": 2,
           "gutterFraction": 0.02,
           "panelAspect": "16:9"
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -28487,10 +28931,10 @@
       "combinedStillAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
     },
     {
-      "id": "festival-master:stretch-bridge-command-break-064-067",
+      "id": "festival-master:stretch-bridge-command-break-064",
       "title": {
-        "en": "Command break and evidence decision (064–067)",
-        "es": "Ruptura del mando y decisión sobre la evidencia (064–067)"
+        "en": "Command break (064)",
+        "es": "Ruptura de mando (064)"
       },
       "status": "draft",
       "revision": 1,
@@ -28512,10 +28956,107 @@
             "en": "The next panel inherits the same continuity.",
             "es": "El panel siguiente hereda la misma continuidad."
           }
+        }
+      ],
+      "locationId": "location:celestial-ardor-bridge",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:okoye",
+        "character:rao",
+        "character:sorell",
+        "character:voss"
+      ],
+      "absentCharacterIds": [],
+      "physics": {
+        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
+        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+      },
+      "lighting": {
+        "en": "Established practical lighting for this location.",
+        "es": "Iluminación práctica establecida para esta ubicación."
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "established-1",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
         },
         {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "established-2",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "established-3",
+          "screenSide": "right",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "established-4",
+          "screenSide": "left",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "established-5",
+          "screenSide": "center",
+          "facing": "toward the active exchange or console",
+          "posture": "other",
+          "eyelineTarget": "the active action"
+        }
+      ],
+      "sharedDescription": {
+        "en": "Scene 21 command-break beat for shot 064. One Seedance job.",
+        "es": "needs_revision"
+      },
+      "generationProfile": {
+        "stillMode": "independent_shared_authority",
+        "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1
+      },
+      "referenceAssetIds": [
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:object-harlan-wrist-device-sheet"
+      ],
+      "notes": [
+        {
+          "id": "note:command-break-064-scene-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Peeled from stretch-bridge-command-break-064-067 into scene 21.",
+            "es": "needs_revision"
+          }
+        }
+      ]
+    },
+    {
+      "id": "festival-master:stretch-bridge-command-break-065-067",
+      "title": {
+        "en": "Command break (065–067)",
+        "es": "Ruptura de mando (065–067)"
+      },
+      "status": "draft",
+      "revision": 1,
+      "members": [
+        {
           "shotId": "festival-master:shot-plan-065",
-          "order": 2,
+          "order": 1,
           "takeScope": "selected",
           "keyframeRole": "develop",
           "startState": {
@@ -28533,7 +29074,7 @@
         },
         {
           "shotId": "festival-master:shot-plan-066",
-          "order": 3,
+          "order": 2,
           "takeScope": "selected",
           "keyframeRole": "develop",
           "startState": {
@@ -28551,7 +29092,7 @@
         },
         {
           "shotId": "festival-master:shot-plan-067",
-          "order": 4,
+          "order": 3,
           "takeScope": "selected",
           "keyframeRole": "develop",
           "startState": {
@@ -28628,18 +29169,13 @@
         }
       ],
       "sharedDescription": {
-        "en": "Continuous bridge confrontation for shots 064–065–066–067, preserving the accusation, converging evidence, cast, blocking, and command geometry.",
-        "es": "Confrontación continua en el puente para las tomas 064–065–066–067, que conserva la acusación, la evidencia convergente, el elenco, la puesta y la geometría de mando."
+        "en": "Scene 22 command-break continuation for shots 065–067. One Seedance job per shot.",
+        "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "combined_storyboard_sheet",
+        "stillMode": "independent_shared_authority",
         "videoMode": "grouped_seedance",
-        "gridLayout": {
-          "rows": 2,
-          "cols": 2,
-          "gutterFraction": 0.02,
-          "panelAspect": "16:9"
-        }
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -28648,7 +29184,17 @@
         "asset:location-celestial-ardor-bridge-realistic-reference",
         "asset:object-harlan-wrist-device-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-sheet"
+      "notes": [
+        {
+          "id": "note:command-break-scene-split",
+          "type": "production",
+          "status": "resolved",
+          "text": {
+            "en": "Split from stretch-bridge-command-break-064-067: scene 22 only.",
+            "es": "needs_revision"
+          }
+        }
+      ]
     },
     {
       "id": "festival-master:stretch-bridge-device-071-073",
@@ -28779,7 +29325,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -28919,7 +29466,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-voss-harlan-bridge-sheet",
@@ -29059,7 +29607,8 @@
           "blankCells": [
             4
           ]
-        }
+        },
+        "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
         "asset:character-pair-harlan-okoye-bridge-sheet",
@@ -29080,6 +29629,101 @@
         "approvedAt": "2026-09-14",
         "source": "author approved vault-recovery-080-082 for Seedance package/render"
       }
+    },
+    {
+      "id": "festival-master:stretch-service-cylinder-harlan-okoye-045b",
+      "status": "draft",
+      "revision": 1,
+      "title": {
+        "en": "Harlan and Okoye through the service cylinder (045b)",
+        "es": "needs_revision"
+      },
+      "locationId": "location:celestial-ardor-service-cylinder",
+      "presentCharacterIds": [
+        "character:harlan",
+        "character:okoye"
+      ],
+      "absentCharacterIds": [
+        "character:sorell",
+        "character:zao",
+        "character:voss",
+        "character:rao"
+      ],
+      "physics": {
+        "en": "Microgravity inside the restricted service cylinder; both progress by handhold or ballistic push — never standing on a deck.",
+        "es": "needs_revision"
+      },
+      "lighting": {
+        "en": "Cool graphite/slate-blue cylinder practicals matching approved 026; no bridge wash.",
+        "es": "needs_revision"
+      },
+      "sharedDescription": {
+        "en": "Singleton Seedance: Harlan leads, Okoye follows inside the service cylinder after Voss’s order. Match approved shot-026 shaft geography. No bridge interior, no spiral/helical central-access stairs, no outer bay interior, no Sorell/Zao.",
+        "es": "needs_revision"
+      },
+      "blocking": [
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "service-cylinder mid-shaft, leading",
+          "screenSide": "center-left",
+          "facing": "along shaft toward outer bay",
+          "posture": "handhold / ballistic push",
+          "eyelineTarget": "shaft ahead"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "service-cylinder mid-shaft, following",
+          "screenSide": "center-right",
+          "facing": "along shaft / Harlan",
+          "posture": "handhold / ballistic push",
+          "eyelineTarget": "character:harlan"
+        }
+      ],
+      "referenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet",
+        "asset:location-celestial-ardor-service-cylinder-sheet",
+        "asset:festival-master-storyboard-026"
+      ],
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet"
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "author: Codex stills approved; Seedance 045/045b prep"
+      },
+      "generationProfile": {
+        "stillMode": "independent_shared_authority",
+        "videoMode": "grouped_seedance",
+        "maxMembersPerVideoJob": 1
+      },
+      "coherenceException": true,
+      "members": [
+        {
+          "shotId": "festival-master:shot-plan-045b",
+          "order": 1,
+          "takeScope": "selected",
+          "keyframeRole": "establish",
+          "startState": {
+            "en": "Harlan and Okoye already inside the service cylinder after Voss’s order, oriented toward the outer bay.",
+            "es": "needs_revision"
+          },
+          "event": {
+            "en": "Silent mid-transit: both advance together in microgravity along the shaft (Harlan leads, Okoye follows).",
+            "es": "needs_revision"
+          },
+          "endState": {
+            "en": "Still inside the cylinder; outer bay and bridge remain off-frame.",
+            "es": "needs_revision"
+          },
+          "videoReferenceAssetIds": [
+            "asset:character-harlan-sheet",
+            "asset:character-okoye-sheet"
+          ]
+        }
+      ]
     }
   ]
 }

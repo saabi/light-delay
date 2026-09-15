@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-reactor-record-033-035:rev-1:video-2",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-reactor-record-033-035",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "f3859cc2cceda45f4522ee644fa630a5a3d4a58abfa8a774bc8a3fe6710c4a0d",
+  "sourceRunId": "run:festival-master:stretch-reactor-record-033-035:rev-1:video-2:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-reactor-record-033-035-rev-1-video-2-ready.json",
+  "providerJobId": "1cf8994e-4096-4f19-af41-08eb9e0ca724",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 22.5,
+  "submittedAt": "2026-09-15T19:09:00Z",
+  "completedAt": "2026-09-15T19:12:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-reactor-record-033-036-panel-02": "b383d2d5-11cb-441c-99d0-922140539ff0"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-035/festival-master-stretch-reactor-record-033-035-rev-1-video-2.mp4",
+    "sha256": "9a727487eac20755301728824e888daaae8d3c745a4c74ed0bb0b7057783079f",
+    "durationMs": 9042,
+    "width": 854,
+    "height": 478,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 9000,
+  "notes": "Scene 13 shot 034. 480p omni_reference; declined IN THE DARK. Author go all scene 13/14 ready jobs. Register at job level only.",
+  "registeredAssetId": "asset:festival-master-stretch-reactor-record-033-035-rev-1-video-2-video"
+}

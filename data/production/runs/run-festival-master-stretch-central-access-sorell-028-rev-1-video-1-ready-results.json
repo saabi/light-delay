@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-central-access-sorell-028:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-central-access-sorell-028",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "e9ee1952b4524f7618dbd76f768cfcc167f1d98aba089b7adc5d7eb3fd3f5129",
+  "sourceRunId": "run:festival-master:stretch-central-access-sorell-028:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-central-access-sorell-028-rev-1-video-1-ready.json",
+  "providerJobId": "e79309a5-6123-496e-a360-514b510b3e3d",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 20,
+  "submittedAt": "2026-09-15T18:57:00Z",
+  "completedAt": "2026-09-15T19:00:00Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-028": "375aa467-2bf1-4a35-84fb-16ba02d20944",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:location-celestial-ardor-central-access-sheet-v4-b": "66325695-de9e-45e4-aced-3b2c8185585b",
+    "asset:voice-ref-en-sorell": "9b905fc4-c6c4-4dc6-8773-76977f54d2ed"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-sorell-028/festival-master-stretch-central-access-sorell-028-rev-1-video-1.mp4",
+    "sha256": "eb0cec8b5a64f9cbe5b2bcdbc79de29760149cae704ff4b6fe6a30e64189473d",
+    "durationMs": 7625,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 7540,
+  "notes": "Author go with 026/027; central-access helical stair; v4-b location lock; regenerated storyboard keyframe. Provider clip was 8042ms (>500ms over declared 7540); stream-copy trimmed to ~7540s for registration.",
+  "registeredAssetId": "asset:festival-master-stretch-central-access-sorell-028-rev-1-video-1-video"
+}
