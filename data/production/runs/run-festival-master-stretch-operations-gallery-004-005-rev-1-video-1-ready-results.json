@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-operations-gallery-004-005:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-operations-gallery-004-005",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "4a1442b77dd4376244ec98df5c80ccdb72b38148a9f9b9b148c24b6bb3799ecb",
+  "sourceRunId": "run:festival-master:stretch-operations-gallery-004-005:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-operations-gallery-004-005-rev-1-video-1-ready.json",
+  "providerJobId": "72cf8c68-f06d-4436-b80d-309ceb1c2961",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 30,
+  "submittedAt": "2026-09-15T05:03:22Z",
+  "completedAt": "2026-09-15T05:06:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-operations-gallery-004-005-panel-01": "722ac3ce-be87-4a12-b29a-5c3217ade5fb",
+    "asset:festival-master-stretch-operations-gallery-004-005-panel-02": "ce131a03-5bd7-4b13-bd20-15b072bb2455",
+    "asset:character-voss-sheet": "88fed050-c15b-4950-a779-d67ec203a29f",
+    "asset:character-zao-sheet": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
+    "asset:voice-ref-en-voss": "ea46c8bc-207c-4ff3-b44d-ec1026d934f0",
+    "asset:voice-ref-en-zao": "05dda4d9-17c5-41b0-a4ef-f98ea056853c"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-004-005/festival-master-stretch-operations-gallery-004-005-rev-1-video-1.mp4",
+    "sha256": "5bece9ffdb8da89d22b8b4bc46f7a160f4d865ad4596e218214cddd123c2a3cb",
+    "durationMs": 12042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 12260,
+  "notes": "Operations gallery 004–005 (Zao/Voss private exchange). 480p omni_reference. Voice samples truncated to 5s MP3 each. Cinema Studio declined.",
+  "registeredAssetId": "asset:festival-master-stretch-operations-gallery-004-005-rev-1-video-1-video"
+}

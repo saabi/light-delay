@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-15 — Operations gallery 004–005 Seedance
+
+- Submitted `festival-master:stretch-operations-gallery-004-005:rev-1:video-1` (Zao/Voss private exchange). Higgsfield `72cf8c68-f06d-4436-b80d-309ceb1c2961`, **30 cr**, 854×480 / ~12 s. Registered pending review as `asset:festival-master-stretch-operations-gallery-004-005-rev-1-video-1-video`.
+
+## 2026-09-15 — Relink stretch videos on Festival plan
+
+- Restored `outputs.assetId` on six Festival stretch video jobs (including operations-gallery 001–003 smoke) that had assets on disk but lost the plan link after rebuilds, so Movie mode can resolve them as spans.
+
 ## 2026-09-15 — Movie mode plays Seedance stretch videos
 
 - Animatic Movie mode resolves registered stretch video jobs (`needs_review` / `current`) into unmuted playback spans that replace member stills and suppress cue WAVs for that range (Seedance audio). A/B video preload for the next span. Job-level register unchanged (no `take.videoAssetId` bind).

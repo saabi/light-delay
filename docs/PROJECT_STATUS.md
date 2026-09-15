@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Operations gallery 004–005 Seedance (English source)
+
+- Submitted and registered pending review: job `72cf8c68-f06d-4436-b80d-309ceb1c2961`, ~12 s / 480p / 30 cr → `…/festival-master-stretch-operations-gallery-004-005-rev-1-video-1.mp4`. Selected takes unchanged.
+
 ## 2026-09-15 — Movie mode Seedance stretch spans (English source)
 
 - Movie mode plays job-level Seedance stretch videos (`needs_review` or `current`) as unmuted montage spans covering each video job’s member shots; dialogue WAVs are suppressed on those shots. Dual-video preload for the next span. Register still does not bind `take.videoAssetId`.

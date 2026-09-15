@@ -10980,7 +10980,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-operations-gallery-001-003-rev-1-video-1-video"
         }
       ],
       "blockers": [],
@@ -11278,7 +11279,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-bridge-meal-010-012-rev-2-video-1-video"
         }
       ],
       "blockers": [],
@@ -11803,7 +11805,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-operations-gallery-004-005-rev-1-video-1-video"
         }
       ],
       "blockers": [],
@@ -15947,7 +15950,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-engineering-audit-016-017-rev-1-video-1-video"
         }
       ],
       "blockers": [],
@@ -16403,7 +16407,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-vault-discovery-020-022-rev-1-video-1-video"
         }
       ],
       "blockers": [],
@@ -16481,7 +16486,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-vault-discovery-020-022-rev-1-video-2-video"
         }
       ],
       "blockers": [],
@@ -17352,7 +17358,8 @@
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-rev-1-video-1-video"
         }
       ],
       "blockers": [],

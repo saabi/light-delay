@@ -15890,6 +15890,39 @@
           "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
         }
       }
+    },
+    {
+      "id": "asset:festival-master-stretch-operations-gallery-004-005-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-004-005/festival-master-stretch-operations-gallery-004-005-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 12042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T05:06:00Z",
+        "externalId": "72cf8c68-f06d-4436-b80d-309ceb1c2961"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-operations-gallery-004-005",
+        "stretchJobId": "festival-master:stretch-operations-gallery-004-005:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "4a1442b77dd4376244ec98df5c80ccdb72b38148a9f9b9b148c24b6bb3799ecb",
+        "sourceRunId": "run:festival-master:stretch-operations-gallery-004-005:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
     }
   ]
 }
