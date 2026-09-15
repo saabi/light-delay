@@ -1,10 +1,10 @@
 # Light Delay — Guía de banda sonora
 
-**Estado:** borrador de dirección musical. Define registros y principios; **no** es todavía una hoja de cues escena por escena.
+**Estado:** borrador de dirección musical. **Autoridad actual en inglés:** [`GUIA_BANDA_SONORA.en.md`](GUIA_BANDA_SONORA.en.md) (retarget a Festival-master). Este archivo español **puede quedar desfasado** (`needs_revision`); no usarlo como fuente de autoría cuando diverja.
 
 **Propósito:** orientar la composición o generación de música (p. ej. Suno u otra herramienta) para que el sonido refuerce la física y el tono del corto sin explicar el mundo al espectador.
 
-**Alcance de este documento:** registros sonoros, motivo central y un dispositivo compositivo derivado del retraso de la luz. La asignación toma a toma queda para un trabajo posterior.
+**Alcance de este documento:** registros sonoros, motivo central y un dispositivo compositivo derivado del retraso de la luz. La asignación toma a toma para Festival-master está en `docs/wip/festival-master-music-cues.en.md`.
 
 ---
 
