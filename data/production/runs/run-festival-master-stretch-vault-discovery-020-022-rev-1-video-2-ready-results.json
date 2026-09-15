@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-vault-discovery-020-022:rev-1:video-2",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-vault-discovery-020-022",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "a38d01b6e9a0a6b18318444439830c11c778f5796795d654dc04462b65d1e3e4",
+  "sourceRunId": "run:festival-master:stretch-vault-discovery-020-022:rev-1:video-2:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-vault-discovery-020-022-rev-1-video-2-ready.json",
+  "providerJobId": "11bb0338-bbc3-4ec9-a7c1-4dfc18099f53",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 37.5,
+  "submittedAt": "2026-09-14T21:59:03Z",
+  "completedAt": "2026-09-14T22:06:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-vault-discovery-020-022-panel-03": "a5db3ca5-3bd5-4f73-aaa4-a07ec9a5e737",
+    "asset:character-zao-sheet": "927968ee-4335-454f-83c0-31671c580116",
+    "asset:voice-ref-en-zao": "bdc50c7f-9b67-43f5-95bd-7a471d4c33a0"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-discovery-020-022/festival-master-stretch-vault-discovery-020-022-rev-1-video-2.mp4",
+    "sha256": "6f3ae6e1aa44bf545a73619103a0db7c43d88af71f2f27e623953243417e551b",
+    "durationMs": 15042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 15420,
+  "notes": "Author cleared possibly-OK defer; videoPromptFreeze approved; Zao voice truncated to 5s MP3; 480p omni_reference; no failed-job retry.",
+  "registeredAssetId": "asset:festival-master-stretch-vault-discovery-020-022-rev-1-video-2-video"
+}

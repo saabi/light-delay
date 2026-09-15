@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-reactor-record-033-036:rev-1:video-2",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-reactor-record-033-036",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "b23644546023b4b05716f0ade1c4763709cfcb53fd7c44261063f3b740f9a6e0",
+  "sourceRunId": "run:festival-master:stretch-reactor-record-033-036:rev-1:video-2:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-reactor-record-033-036-rev-1-video-2-ready.json",
+  "providerJobId": "1248bbd4-6a4e-4d31-a1e8-f68c0f704a34",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 17.5,
+  "submittedAt": "2026-09-15T03:47:59Z",
+  "completedAt": "2026-09-15T03:55:36.165Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-reactor-record-033-036-panel-04": "ce050208-ab1d-4758-ad59-040ddd499ddc",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+    "asset:voice-ref-en-harlan": "85a2e1ec-aa04-4d9c-9f2e-81bc59f3a6c7"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/festival-master-stretch-reactor-record-033-036-rev-1-video-2.mp4",
+    "sha256": "3364c3cc17c4654b622ccd8c63fb420eee809539b233c7327ff85b64d532c17f",
+    "durationMs": 7042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 7130,
+  "notes": "Murder stretch video-2 (036 confrontation). Cinema Studio declined. 480p omni_reference.",
+  "registeredAssetId": "asset:festival-master-stretch-reactor-record-033-036-rev-1-video-2-video"
+}

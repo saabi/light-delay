@@ -1,5 +1,101 @@
 # Estado del proyecto
 
+## 2026-09-15 — Murder stretch video-2 036 (English source)
+
+- Reactor-record video-2 submitted and registered pending review: job `1248bbd4-6a4e-4d31-a1e8-f68c0f704a34`, ~7 s / 480p / 17.5 cr → `…/festival-master-stretch-reactor-record-033-036-rev-1-video-2.mp4`. Selected takes unchanged. Stretch 033–036 now has both Seedance parts pending review.
+
+## 2026-09-14 — Murder stretch Seedance smoke 033–035 (English source)
+
+- Reactor-record video-1 submitted and registered pending review: job `5b8ec773-ecfc-42ae-a103-4d39ad7ba52f`, ~24 s / 480p / 60 cr → `static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/festival-master-stretch-reactor-record-033-036-rev-1-video-1.mp4`. Selected takes unchanged.
+- video-2 (036 confrontation) ready run + staged/uploaded refs held for a separate go (smoke stopped after one job). Full `prepare:higgsfield` still fails on missing engineering concept sheet.
+
+## 2026-09-14 — Festival 040b forward extension submitted (English source)
+
+- Forward `video_extension` of accepted 040b rev-1 completed: job `9ee4d969-e5e0-46b2-b1c7-d54405afcac9`, +10 s / 480p / 25 cr. Higgsfield returned the new segment only; joined onto rev-1 at `static/assets/animatic/frames/festival-master/shot-plan-040b-rev-2-video-1.mp4` (~15 s). Pending review; not bound to the selected take. Script duration remains 5 s.
+
+## 2026-09-14 — Festival 040b forward extension packaged (English source)
+
+- Forward `video_extension` of accepted 040b rev-1 is frozen and ready: +10 s new segment (~15 s total), 480p, **25 cr** preflight. Refs uploaded (clip + last frame + wormhole + Ardor). Waiting for an explicit go before MCP submit. Script duration remains 5 s until the longer clip is accepted.
+
+## 2026-09-14 — Festival 039 Seedance submitted (English source)
+
+- Singleton I2V completed for Harlan’s “No stopping it now.” (`festival-master:shot-plan-039`): job `c37c679d-e672-4960-af42-9308f929a72c`, 13 s / 480p / 32.5 cr. Landed at `static/assets/animatic/frames/festival-master/shot-plan-039-rev-1-video-1.mp4`. Pending review; not bound to the selected take.
+
+## 2026-09-14 — Festival 040b Seedance submitted (English source)
+
+- Singleton I2V completed: job `1dee29bd-e0de-4a87-9646-062dc73a20b9`, 5 s / 480p / 12.5 cr. Landed at `static/assets/animatic/frames/festival-master/shot-plan-040b-rev-1-video-1.mp4`. Pending review; not bound to the selected take.
+
+## 2026-09-14 — Trailer end title sting Earth → Jupiter (English source)
+
+- One-off Seedance 2.5 omni_reference title sting (not a visual stretch): 15 s / 480p / native audio, last frame locked to `static/assets/animatic/frames/festival-master/shot-plan-087.png`.
+- Clip landed at `static/assets/animatic/frames/trailer-master/title-end-earth-jupiter/trailer-master-title-end-earth-jupiter-rev-1-video-1.mp4` (job `d0602f1d-…`, 37.5 cr). Earth start still is on disk for grade reference only. Trailer `shot-g-01` still reuses the static title card until an editorial bind is approved.
+
+## 2026-09-14 — Vault-recovery Seedance 080–082 (English source)
+
+- Author approved vault-recovery stills; stretch freeze stamped; ready handoffs for both video parts.
+- Higgsfield jobs completed at 480p: `95ba9e77-e95c-45de-b3a0-82b8f979e9a1` (video-1, ~24 s, 60 cr) and `3a10dada-1cff-4bde-a9ae-fba0121cca2e` (video-2, ~9 s, 22.5 cr). Registered pending review; selected takes unchanged.
+
+## 2026-09-14 — Vault-discovery Seedance 020–022 (English source)
+
+- Author cleared the possibly-OK defer on vault-discovery; stretch freeze approved; ready handoffs emitted for both video parts.
+- Higgsfield jobs completed at 480p: `8c38189a-9af7-4869-97a4-842de104c977` (video-1, ~17 s, 42.5 cr) and `11bb0338-bbc3-4ec9-a7c1-4dfc18099f53` (video-2, ~15 s, 37.5 cr). Registered pending review; selected takes unchanged.
+- Trailer “Zao finds the bomb” coverage now has Festival video candidates for shots 020–022 (retarget of trailer `shot-f-04` still optional).
+
+## 2026-09-14 — Festival Seedance 480p smoke (English source)
+
+- All Festival Seedance MCP jobs use **480p** (`preferredResolution` on the Seedance 2.5 snapshot). Catalog default 720p must not be used by omission.
+- Voice-sample attachments must keep **combined duration ≤ 30 s**; truncate long bank WAVs before MCP upload. Prefer real MP3 bytes for `audio/mpeg` signed PUTs.
+- Gallery smoke (operations 001–003) completed and registered pending review: Higgsfield job `ab5931b2-dd05-42c6-a1fe-8be5111a89ce` → `asset:festival-master-stretch-operations-gallery-001-003-rev-1-video-1-video` (854×480, ~23 s).
+- Trailer-overlap parallel batch also registered pending review (all 854×480): meal 010–012, engineering-audit 016–017, investigation 046–049. Failed submits are not auto-retried; wait for author review.
+- First smoke: `festival-master:stretch-operations-gallery-001-003:rev-1:video-1` after cost confirm.
+
+## 2026-09-14 - Festival-master shot 089 continuity correction (English source)
+
+- Shot 089 now uses the bridge as its location and a five-reference package (Voss, bridge, Sorell, Transport Sphere, EVA suit). The suit-camera monitor is the only place where the exterior feed appears.
+- The independent storyboard still was regenerated and registered with the corrected prompt; no reference-budget violations remain.
+
+## 2026-09-14 — OK stretch Seedance packages (English source)
+
+- Eleven Festival-master visual stretches from `tmp/review-of-generated-stills.md` (OK to render) now carry `videoPromptFreeze.status: approved`. Their 13 grouped Seedance jobs compile frozen prompts when the Seedance 2.5 snapshot is executable. Other stretches stay freeze-gated.
+- Ready §8 run JSON is emitted with `handoff:visual-stretch` (no `--allow-preview-prompt`). Preview runs remain non-submittable. No MCP `generate_video` in this pass. First later smoke: operations-gallery 001–003 after credit confirmation.
+
+
+## 2026-09-14 - Canonical Celestial Ardor EVA suit reference (English source)
+
+- Added `/assets/props/celestial-ardor-eva-suit/model-sheet.png`, derived from the approved Sorell EVA frame, and registered it in the asset catalog and props manifest.
+- Attached it to suit-visible Festival-master takes and the three affected visual stretches. Plan rebuild and data/schema validation remain green; no existing stretch still was regenerated.
+
+## 2026-09-14 — Seedance native audio on by default (English source)
+
+- Paid Seedance/MCP video jobs use native sound (`generate_audio: true`) unless the author asks for a silent clip. Voice-sample refs still attach only for speakers; ambient/SFX come from the native pass.
+
+## 2026-09-14 — Higgsfield MCP connected (English source)
+
+- Official Cursor Higgsfield MCP is authenticated on Ultra (3010 credits). Workspace pinned to the private Ultra workspace.
+- Catalog snapshot: `data/production/higgsfield-mcp-catalog.snapshot.json`. Seedance 2.5 MCP id is `seedance_2_5` (4–30 s, 480p/720p/1080p). MCP always spends credits; do not submit preview/`nonExecutable` runs. No generation was sent in this pass.
+
+## 2026-09-14 - Festival-master rejected stretch regeneration (English source)
+
+- Six rejected visual stretches were corrected at the durable shot/blocking level and recompiled for still generation: bridge comms 023-025, reactor rescue 042-043, Harlan alibi 044-045, bridge greeting preparation 083-086, Velari answer 087-088, and Velari envoy 091-092.
+- Replacement gpt-image-2 sheets were generated, split, registered, and selected panel takes restored. The new sheets and panels remain `needs_review` until editorial approval; no Higgsfield/MCP request was made.
+- Production plans rebuild cleanly with the corrected prompts and references; the pre-existing Festival-master lineage warning remains unchanged.
+
+## 2026-09-14 — Festival-master music integration (Suno free handoff) (English source)
+
+- Soundtrack direction SoT is now `docs/GUIA_BANDA_SONORA.en.md`; Festival-master beat cue sheet and Suno free-tier prompt pack live under `docs/wip/`.
+- Festival-master script has 13 `MusicCue`s covering the cut (ship / sabotage / Velari / Zao motif / credits); music ducks at `beat-13` and stops at `beat-14` death. No WAVs or `trackAssetId` yet.
+- Production credits: `musicModel.status === "selected"`, model `Suno`; visible attribution line `Music: generated with Suno`. Confirm Suno free-tier license before festival submission. Trailer-master music and OTIO/animatic playback remain follow-on.
+
+## 2026-09-14 — Seedance stretch prompt previews with speaker identity and motion continuity (English source)
+
+- Approved Festival-master visual stretches now have non-executable Seedance preview run files under
+  `reports/runs/`. Each preview attaches ordered keyframes, explicit individual speaker sheets, and
+  approved voice samples; no Higgsfield/MCP request was made.
+- The video prompt compiler maps every spoken cue to its canonical character image and `@Audio`
+  sample, and reports unmapped identity/voice blockers instead of guessing. Stage prompts carry prior
+  settled state, blocking, camera progression, physics, and motion continuity across the stretch.
+- The previews remain blocked by the existing editorial freeze and Seedance execution gates.
+
 ## 2026-09-14 — Stretch panel assets marked current (English source)
 
 - 44 Festival-master stretch panel assets moved from 

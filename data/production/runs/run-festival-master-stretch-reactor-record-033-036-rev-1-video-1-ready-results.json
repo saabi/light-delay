@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-reactor-record-033-036:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-reactor-record-033-036",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "53de77f114f09efd460ccff8bfc0953b92825d7060c90a9dbdd60a9da5895bf1",
+  "sourceRunId": "run:festival-master:stretch-reactor-record-033-036:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-reactor-record-033-036-rev-1-video-1-ready.json",
+  "providerJobId": "5b8ec773-ecfc-42ae-a103-4d39ad7ba52f",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 60,
+  "submittedAt": "2026-09-14T23:55:00Z",
+  "completedAt": "2026-09-15T00:00:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-reactor-record-033-036-panel-01": "aff923d9-9acb-4904-a084-f55aad89b20e",
+    "asset:festival-master-stretch-reactor-record-033-036-panel-02": "b383d2d5-11cb-441c-99d0-922140539ff0",
+    "asset:festival-master-stretch-reactor-record-033-036-panel-03": "59bd1cd2-f60d-4d2d-a43f-a667b1b1cca4",
+    "asset:character-harlan-sheet": "a4cfc514-9708-4a76-80d8-a8b38979eec9"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/festival-master-stretch-reactor-record-033-036-rev-1-video-1.mp4",
+    "sha256": "e97f5367f51b216056b6527f5481db509833283f00779de952d62002a8220882",
+    "durationMs": 24042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 24340,
+  "notes": "Murder stretch smoke (video-1). Re-downloaded 2026-09-15 after local zero-fill. video-2 not submitted (smoke maxJobs:1).",
+  "registeredAssetId": "asset:festival-master-stretch-reactor-record-033-036-rev-1-video-1-video"
+}

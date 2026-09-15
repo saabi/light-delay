@@ -1,5 +1,102 @@
 # Changelog
 
+## 2026-09-15 — Murder stretch video-2 (036)
+
+- Submitted `festival-master:stretch-reactor-record-033-036:rev-1:video-2` (Harlan confrontation). Higgsfield `1248bbd4-6a4e-4d31-a1e8-f68c0f704a34`, **17.5 cr**, 854×480 / ~7 s. Registered pending review as `asset:festival-master-stretch-reactor-record-033-036-rev-1-video-2-video`.
+
+## 2026-09-14 — Murder stretch Seedance smoke (033–035)
+
+- Submitted `festival-master:stretch-reactor-record-033-036:rev-1:video-1` (recording → TRANSMITTED). Higgsfield `5b8ec773-ecfc-42ae-a103-4d39ad7ba52f`, **60 cr**, 854×480 / ~24 s. Registered pending review as `asset:festival-master-stretch-reactor-record-033-036-rev-1-video-1-video`. Smoke `maxJobs:1` — video-2 (036 Harlan confrontation) not submitted; refs already uploaded.
+
+## 2026-09-14 — Festival 040b forward extension submitted
+
+- Submitted Seedance 2.5 `video_extension` forward of accepted 040b rev-1. Higgsfield `9ee4d969-e5e0-46b2-b1c7-d54405afcac9`, **25 cr**, 854×480. Provider returned the +10 s segment only; joined locally onto rev-1 as `static/assets/animatic/frames/festival-master/shot-plan-040b-rev-2-video-1.mp4` (~15 s). Pending review; selected take and script duration unchanged.
+
+## 2026-09-14 — Festival 040b forward extension packaged (no submit)
+
+- Packaged a Seedance 2.5 `video_extension` forward of the accepted 5 s 040b clip so the Ardor has time to enter the throat. Ready run `reports/runs/run-festival-master-shot-plan-040b-rev-2-video-1-ready.json`: +10 s new segment (~15 s total), 480p, native audio. Cost preflight **25 credits**. Source clip and last frame uploaded; not submitted. Script `durationMs` stays 5000 until the longer clip is accepted.
+
+## 2026-09-14 — Festival 040b Seedance submitted
+
+- Submitted the singleton 040b I2V as one omni_reference job (keyframe + wormhole sheet + Ardor v2 sheet). Higgsfield `1dee29bd-e0de-4a87-9646-062dc73a20b9`, **12.5 cr**, 854×480 / ~5 s. Clip: `static/assets/animatic/frames/festival-master/shot-plan-040b-rev-1-video-1.mp4`. Pending review; selected take unchanged.
+
+## 2026-09-14 — Festival 039 Seedance submitted
+
+- Submitted the singleton 039 I2V (Harlan: “No stopping it now.”) as one omni_reference job. Higgsfield `c37c679d-e672-4960-af42-9308f929a72c`, **32.5 cr**, 854×480 / ~13 s. Clip: `static/assets/animatic/frames/festival-master/shot-plan-039-rev-1-video-1.mp4`. Pending review; selected take unchanged.
+
+## 2026-09-14 — Vault-recovery Seedance (080–082)
+
+- Author-approved `festival-master:stretch-vault-recovery-080-082`: stills marked current, `videoPromptFreeze` approved, speaker identity sheets in `videoReferenceAssetIds`.
+- Both grouped jobs submitted at 480p / omni_reference (video-1 `95ba9e77…` 60 cr / ~24 s; video-2 `3a10dada…` 22.5 cr / ~9 s). Registered pending review as `…-rev-1-video-1-video` and `…-rev-1-video-2-video` (854×480).
+
+## 2026-09-14 — Festival 040b Seedance package (no submit)
+
+- Packaged singleton I2V for `festival-master:shot-plan-040b` (no visual stretch: 040/041 are bridge interiors). Ready run `reports/runs/run-festival-master-shot-plan-040b-rev-1-video-1-ready.json` with the animatic still plus wormhole and Ardor v2 sheets. Cost preflight **12.5 credits** at 5 s / 480p; not submitted.
+
+## 2026-09-14 — Trailer end title sting (Earth → Jupiter)
+
+- Seedance 2.5 first/last-frame package for a 15 s trailer end title: Earth night-side, follow a thin optical-comms pulse, settle on `shot-plan-087` (`LIGHT DELAY` over Proxima + Jupiter). Ready run: `reports/runs/run-trailer-master-title-end-earth-jupiter-rev-1-video-1-ready.json`.
+- Generated a matching Earth opening still (2 cr) then omitted it from the video job after Higgsfield `ip_detected` on the two-frame submit (37.5 cr refunded). Recovery job `d0602f1d-f9af-4651-bb06-38f321f3beae` completed 854×480 / ~15 s / 37.5 cr, pending review. `trailer-master:shot-g-01` was not rewritten.
+
+## 2026-09-14 — Vault-discovery Seedance (020–022)
+
+- Cleared the possibly-OK defer for `festival-master:stretch-vault-discovery-020-022`: stills marked current, `videoPromptFreeze` approved, Zao sheet added to `videoReferenceAssetIds` for speaker identity.
+- Both grouped jobs submitted at 480p / omni_reference (video-1 `8c38189a…` 42.5 cr / 17 s; video-2 `11bb0338…` 37.5 cr / 15 s). Registered pending review as `…-rev-1-video-1-video` and `…-rev-1-video-2-video` (854×480).
+
+## 2026-09-14 — Festival Seedance smoke at 480p
+
+- Locked Seedance video resolution to **480p** (`provider-capabilities` `preferredResolution`, handoff Seedance fallback, HIGGSFIELD_MCP / SEEDANCE_PROMPTING / AGENT_GENERATION_BRIEF). MCP catalog default is 720p; omit never upgrades.
+- First paid smoke: operations-gallery 001–003 ready run after `get_cost` (~57.5 credits at 23 s / 480p / omni). Job id `ab5931b2-dd05-42c6-a1fe-8be5111a89ce` completed **854×480**, registered `pending_review` as `asset:festival-master-stretch-operations-gallery-001-003-rev-1-video-1-video`.
+- Trailer-overlap parallel batch (no failed-job auto-retry): bridge-meal 010–012 (`8a7760a8…`, 52.5 cr), engineering-audit 016–017 (`0a113187…`, 42.5 cr), bridge-investigation 046–049 (`ef28f364…`, 62.5 cr). All 854×480, registered pending review.
+- Documented Seedance hard cap: combined voice-sample duration **≤ 30 s** (four full ~12 s bank WAVs → MCP 422; truncate to ~5 s each). Upload real MP3 when the signed URL expects `audio/mpeg`.
+
+## 2026-09-14 - Regenerated Festival-master shot 089
+
+- Corrected shot 089 so Voss is physically inside the bridge and Sorell plus the Velari Transport Sphere appear only within the suit-camera monitor feed; the bridge hull now fills the background.
+- Rebuilt the five-reference prompt and regenerated `/assets/animatic/frames/festival-master/shot-plan-089.png`; the replacement remains `needs_review` pending editorial approval.
+
+## 2026-09-14 — OK stretch Seedance packages (freeze, no submit)
+
+- Per-stretch `videoPromptFreeze` on the 11 Festival-master stretches marked OK in `tmp/review-of-generated-stills.md`. Grouped Seedance jobs compile `compiledPrompt` only when that freeze is approved and the Seedance 2.5 snapshot is executable.
+- Seedance 2.5 snapshot is `executable: true` (`confidence` still `provisional`). Ready handoff emits `status: ready` / `nonExecutable: false` for those 13 video jobs. No Higgsfield job was submitted; paid smoke still needs `get_cost` plus human confirmation. Full `prepare:higgsfield` still fails on a missing engineering concept sheet; 42 OK-stretch refs were staged under `higgsfield-uploads/stretch/`.
+- Trailer-overlapping packages first: operations-gallery 001–003, bridge-meal 010–012, engineering-audit 016–017, bridge-investigation 046–049.
+
+
+## 2026-09-14 - Canonical Celestial Ardor EVA suit reference
+
+- Derived and registered a canonical EVA suit model sheet from the approved Velari-answer panel, preserving its established suit design without regenerating any stretch still.
+- Attached the suit reference to every Festival-master take where the suit is visible, including the suit-camera display shots. Rebuilt plans remain within the still reference budget: 5 references at most.
+
+## 2026-09-14 — Seedance native audio on by default
+
+- Higgsfield Seedance video jobs now pass `generate_audio: true` unless the author asks for a silent clip. Handoff compiler, run schema, MCP catalog notes, and Seedance/MCP agent docs match that policy.
+
+## 2026-09-14 — Higgsfield MCP connected (Ultra)
+
+- Cursor Higgsfield plugin authenticated against the paid Ultra account (3010 credits). Project MCP URL: `.cursor/mcp.json` → `https://mcp.higgsfield.ai/mcp`.
+- Live tool catalog and Seedance 2.5 constraints snapshotted to `data/production/higgsfield-mcp-catalog.snapshot.json`. Cost preflight only (8 s / 480p / silent Seedance 2.5 = 20 credits); no generation submitted.
+
+## 2026-09-14 - Regenerated rejected Festival-master visual stretches
+
+- Corrected six rejected stretch prompts and persisted the revised English source descriptions and compiled still prompts: bridge comms (023-025), reactor rescue (042-043), Harlan alibi (044-045), bridge greeting preparation (083-086), Velari answer (087-088), and Velari envoy (091-092).
+- Generated replacement gpt-image-2 stretch sheets, split and re-registered their panels, and restored the regenerated panel takes as selected. Outputs remain `needs_review` pending editorial review; no Higgsfield/MCP request was made.
+- Prompt corrections preserve current bridge/service-shaft geometry, character identity and screen direction, EVA continuity, interior-only bridge windows, and the larger Velari Transport Sphere.
+
+## 2026-09-14 — Festival-master music integration (Suno free handoff)
+
+- English soundtrack authority: `docs/GUIA_BANDA_SONORA.en.md` (Festival-master / trailer-master naming); Spanish `GUIA_BANDA_SONORA.md` marked as lagging translation.
+- WIP cue sheet + Suno prompt pack: `docs/wip/festival-master-music-cues.en.md`, `docs/wip/festival-master-suno-prompts.en.md` (~11 stems).
+- Encoded 13 `MusicCue`s on `script:light-delay-festival-master` with placements; duck at withheld recording, stop at death; `trackAssetId` unset until stems exist.
+- `data/production/credits.json` selects Suno; on-screen / docs credit copy adds `Music: generated with Suno` (ES `needs_revision`). Credit-02 still marked `needs_regeneration` (no regen this pass).
+
+## 2026-09-14 — Seedance stretch prompt previews with speaker identity and motion continuity
+
+- Added non-executable video prompt previews for the 11 approved Festival-master visual stretches.
+- Seedance handoffs retain explicit individual character sheets for every speaker alongside ordered
+  keyframes and approved voice samples; each dialogue cue is mapped to both identity and voice.
+- Stretch prompts now carry prior end states, blocking, camera progression, physics, and motion
+  continuity between stages. No provider submission or image regeneration occurred.
+
 ## 2026-09-14 — Mark Festival-master stretch panels as current
 
 - Promoted 44 stretch-derived panel assets from 

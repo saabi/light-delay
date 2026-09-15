@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-040b:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-040b",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "fcafd0503046808ffc0c937ac65fa42176dfc0e6e09e28fc47ec239015d1c622",
+  "sourceRunId": "run:festival-master:shot-plan-040b:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-040b-rev-1-video-1-ready.json",
+  "providerJobId": "1dee29bd-e0de-4a87-9646-062dc73a20b9",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 12.5,
+  "submittedAt": "2026-09-14T22:50:00Z",
+  "completedAt": "2026-09-14T22:52:17Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-040b": "2436c3ce-1ba3-41b8-9240-1bf87e604191",
+    "asset:location-velari-wormhole-mouth-sheet": "a2067b4d-2771-4bca-93de-060103a4d36d",
+    "asset:vehicle-celestial-ardor-model-sheet-v2": "d06a5a0a-65cf-4991-b5f7-0c58dc104ca2"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-040b-rev-1-video-1.mp4",
+    "sha256": "47e8bc99b0702bc734c30400a58930f82074fb84ae89e9742e633a844cc482bd",
+    "durationMs": 5042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 5000,
+  "notes": "Singleton I2V, not a visual-stretch plan job; do not run register:visual-stretch-video. One package: start_image 040b + wormhole sheet + Ardor v2 sheet. Declined preset 24bae836-2c4a-48e0-89b6-49fcc0b21612. selectedTakeId unchanged."
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-bridge-meal-010-012:rev-2:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-bridge-meal-010-012",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "695dcb1f68a91a1dc006a96cafa01f8efdc4e2b5dd683332e15ddebdf51ea759",
+  "sourceRunId": "run:festival-master:stretch-bridge-meal-010-012:rev-2:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-bridge-meal-010-012-rev-2-video-1-ready.json",
+  "providerJobId": "8a7760a8-7319-4b81-a71f-83177060c9ec",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 52.5,
+  "submittedAt": "2026-09-14T21:23:14Z",
+  "completedAt": "2026-09-14T21:34:04.280Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-bridge-meal-010-012-panel-01": "43b09cea-742e-49e6-8568-8129452e0a14",
+    "asset:festival-master-stretch-bridge-meal-010-012-panel-02": "164ea611-b6b9-47a5-ab6b-39007bfaefea",
+    "asset:festival-master-stretch-bridge-meal-010-012-panel-03": "4236d285-064b-4fb5-bd93-379350332aa3",
+    "asset:character-harlan-sheet": "ba0c02c6-0beb-443e-9415-6535ca0079d1",
+    "asset:character-sorell-sheet": "6ad0326d-d672-4834-b2ac-14e748528407",
+    "asset:character-voss-sheet": "2f3865ee-e36b-4e30-8077-3d9a99f2db46",
+    "asset:character-zao-sheet": "8f809b28-bd51-45b5-9f19-bed2507085f8",
+    "asset:voice-ref-en-harlan": "0a7aa7ec-0746-49e7-ac26-2005aa6dd18e",
+    "asset:voice-ref-en-sorell": "926ffdb7-ec90-4497-9ba5-55b09c439892",
+    "asset:voice-ref-en-voss": "da3fbe44-08f7-49fb-8863-e533519f970d",
+    "asset:voice-ref-en-zao": "26ff28fa-19c0-430f-8100-2132b49d75c7"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-meal-010-012/festival-master-stretch-bridge-meal-010-012-rev-2-video-1.mp4",
+    "sha256": "333a19e0968279e306c3c4ea59f24d9c7b6a78457e25b5d6a3ba72bf9d4f346d",
+    "durationMs": 21050,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 20800,
+  "notes": "Trailer-overlap parallel batch at 480p; voice samples truncated to 5s (combined audio-ref <=30s).",
+  "registeredAssetId": "asset:festival-master-stretch-bridge-meal-010-012-rev-2-video-1-video"
+}

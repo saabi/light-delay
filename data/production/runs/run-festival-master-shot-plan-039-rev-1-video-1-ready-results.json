@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-039:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-039",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "698c91d96a3fdcbd26c1447d1ac7caf657c0b9489b0aa11be3516c08714bde49",
+  "sourceRunId": "run:festival-master:shot-plan-039:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-039-rev-1-video-1-ready.json",
+  "providerJobId": "c37c679d-e672-4960-af42-9308f929a72c",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 32.5,
+  "submittedAt": "2026-09-14T23:16:11Z",
+  "completedAt": "2026-09-14T23:24:30Z",
+  "uploadHandles": {
+    "asset:festival-master-storyboard-039": "fa8f741e-54b5-4c1d-ab0a-156920055d6f",
+    "asset:character-harlan-sheet": "5dcb525a-cd3f-4dc3-9281-9591650c3502",
+    "asset:location-celestial-ardor-reactor-service-bay-sheet": "b52b8526-2b44-4f98-accc-449648d56e06",
+    "asset:object-harlan-wrist-device-sheet": "5d9ca18c-2105-4961-a876-2a195857e419",
+    "asset:voice-ref-en-harlan": "9b9b9842-2ac0-443f-bfa6-503de163d00f"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-039-rev-1-video-1.mp4",
+    "sha256": "db67475cbea75f93f2385929da8c89f4c3f847385874f64359d956ca20ecd818",
+    "durationMs": 13042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 12340,
+  "notes": "Singleton I2V, not a visual-stretch plan job; do not run register:visual-stretch-video. One package: start_image 039 + Harlan sheet + reactor-service-bay sheet + wrist-device sheet + Harlan voice. Declined preset 24bae836-2c4a-48e0-89b6-49fcc0b21612. selectedTakeId unchanged."
+}

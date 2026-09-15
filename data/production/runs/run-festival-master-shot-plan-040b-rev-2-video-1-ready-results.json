@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:shot-plan-040b:rev-2:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:shot-plan-040b",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "7cc957cd393085a03272cca9533f7741c80577064742449450b2f60baaf8b1e0",
+  "sourceRunId": "run:festival-master:shot-plan-040b:rev-2:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-shot-plan-040b-rev-2-video-1-ready.json",
+  "providerJobId": "9ee4d969-e5e0-46b2-b1c7-d54405afcac9",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 25,
+  "submittedAt": "2026-09-14T23:34:15Z",
+  "completedAt": "2026-09-14T23:41:00Z",
+  "uploadHandles": {
+    "video:festival-master-shot-plan-040b-rev-1": "d1bb0bc7-737f-4fcb-a7c9-2cca60013fd3",
+    "image:festival-master-shot-plan-040b-rev-1-last-frame": "26443c12-2d4d-415c-9256-a404ca92e7f9",
+    "asset:location-velari-wormhole-mouth-sheet": "a2067b4d-2771-4bca-93de-060103a4d36d",
+    "asset:vehicle-celestial-ardor-model-sheet-v2": "d06a5a0a-65cf-4991-b5f7-0c58dc104ca2"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/shot-plan-040b-rev-2-video-1.mp4",
+    "sha256": "e83812d5d8791eb21080426689dbcc5a3539be0f051dcfd96510780944227ada",
+    "durationMs": 15042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 15000,
+  "notes": "Singleton forward video_extension, not a visual-stretch plan job; do not run register:visual-stretch-video. First submit 422 (start_image not allowed on video_extension); last frame sent as image_references. Higgsfield returned the 10s new segment only; joined locally onto rev-1 (~5.04s + 10s = ~15.04s). Raw extension staged at higgsfield-uploads/shots/festival-master-shot-plan-040b-rev-2-extension-raw.mp4. Declined preset 24bae836-2c4a-48e0-89b6-49fcc0b21612. selectedTakeId and script durationMs unchanged. Review: join continuity is good; the new segment does not complete the entry — ship grows toward camera with a visible plume, far mouth brighter not closed."
+}

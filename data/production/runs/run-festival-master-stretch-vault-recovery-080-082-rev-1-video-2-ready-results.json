@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-vault-recovery-080-082:rev-1:video-2",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-vault-recovery-080-082",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "788cca4e3660404f93bb15fbf1df545102d7c7266fba82b0efa6c2716fb2d08a",
+  "sourceRunId": "run:festival-master:stretch-vault-recovery-080-082:rev-1:video-2:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-vault-recovery-080-082-rev-1-video-2-ready.json",
+  "providerJobId": "3a10dada-1cff-4bde-a9ae-fba0121cca2e",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 22.5,
+  "submittedAt": "2026-09-14T22:39:30Z",
+  "completedAt": "2026-09-14T22:47:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-vault-recovery-080-082-panel-03": "34c194d5-cb9f-4761-8b9f-71ecb2f5544e",
+    "asset:character-voss-sheet": "c961ec6e-b973-4859-bead-9d13499ac9ac",
+    "asset:character-rao-sheet": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+    "asset:character-harlan-sheet": "f042ff41-e790-4f82-9556-4429e4d6358b",
+    "asset:character-okoye-sheet": "d275cf75-6828-4acc-8d27-dba850214e29",
+    "asset:voice-ref-en-elin": "a9d6664b-a8e4-4939-b3aa-ddb9b812bb63",
+    "asset:voice-ref-en-voss": "1eb71ebb-57cf-46fc-a469-585df17242a8"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/festival-master-stretch-vault-recovery-080-082-rev-1-video-2.mp4",
+    "sha256": "3b44ff87ab69e94334b216e4e05345c6fff8709c3b02ec02fe2803e6c16d4f1b",
+    "durationMs": 9042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 9420,
+  "notes": "Author approved vault-recovery-080-082; videoPromptFreeze approved; Elin+Voss voices truncated to 5s MP3 each; 480p omni_reference; no failed-job retry.",
+  "registeredAssetId": "asset:festival-master-stretch-vault-recovery-080-082-rev-1-video-2-video"
+}

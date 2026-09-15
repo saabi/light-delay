@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-engineering-audit-016-017:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-engineering-audit-016-017",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "1c6854d98e1062f4066dad630045759d970cfdf18589c8ae4850f95edc4e93b8",
+  "sourceRunId": "run:festival-master:stretch-engineering-audit-016-017:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-engineering-audit-016-017-rev-1-video-1-ready.json",
+  "providerJobId": "0a113187-63a7-4961-af37-6dae90f6f3a6",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 42.5,
+  "submittedAt": "2026-09-14T21:23:14Z",
+  "completedAt": "2026-09-14T21:34:04.792Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-engineering-audit-016-017-panel-01": "05c595e7-f615-4e1d-87d8-3654ca3744b2",
+    "asset:festival-master-stretch-engineering-audit-016-017-panel-02": "c47cb4d0-6641-4548-836b-9a62c8b883d0",
+    "asset:character-zao-sheet": "8f809b28-bd51-45b5-9f19-bed2507085f8",
+    "asset:voice-ref-en-zao": "26ff28fa-19c0-430f-8100-2132b49d75c7"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-engineering-audit-016-017/festival-master-stretch-engineering-audit-016-017-rev-1-video-1.mp4",
+    "sha256": "21d4bc28b1c6be8084499dcf16669221354ba85e32246837f7765febb77a83e4",
+    "durationMs": 17050,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 16740,
+  "notes": "Trailer-overlap parallel batch at 480p; voice samples truncated to 5s (combined audio-ref <=30s).",
+  "registeredAssetId": "asset:festival-master-stretch-engineering-audit-016-017-rev-1-video-1-video"
+}

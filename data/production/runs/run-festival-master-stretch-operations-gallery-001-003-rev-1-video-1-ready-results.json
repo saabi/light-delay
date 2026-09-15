@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0.0",
+  "jobId": "festival-master:stretch-operations-gallery-001-003:rev-1:video-1",
+  "scriptId": "script:light-delay-festival-master",
+  "stretchId": "festival-master:stretch-operations-gallery-001-003",
+  "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
+  "inputDigest": "611cb252e75c5499b75157fc1ec8b1816d665bcefb9e015d0a3a354d2dacad37",
+  "sourceRunId": "run:festival-master:stretch-operations-gallery-001-003:rev-1:video-1:ready",
+  "sourceRunPath": "reports/runs/run-festival-master-stretch-operations-gallery-001-003-rev-1-video-1-ready.json",
+  "providerJobId": "ab5931b2-dd05-42c6-a1fe-8be5111a89ce",
+  "provider": "higgsfield-mcp-official",
+  "model": "seedance-2.5",
+  "artifact": "video",
+  "status": "pending_review",
+  "creditsSpent": 57.5,
+  "submittedAt": "2026-09-14T20:46:51Z",
+  "completedAt": "2026-09-14T20:55:00Z",
+  "uploadHandles": {
+    "asset:festival-master-stretch-operations-gallery-001-003-panel-01": "81dfe46c-e59d-4e36-9d08-fffdb2d21ad6",
+    "asset:festival-master-stretch-operations-gallery-001-003-panel-02": "d485b271-75a1-4ea4-8baf-f1a933b05f79",
+    "asset:festival-master-stretch-operations-gallery-001-003-panel-03": "b66bae68-14ac-485d-a82f-22945277c3c0",
+    "asset:character-periodista-sheet": "efdf1726-542d-48f0-90e4-90fec35a1b88",
+    "asset:character-harlan-sheet": "fd2872aa-f190-418b-909a-eefe612f2580",
+    "asset:character-sorell-sheet": "b68252a5-7166-4a01-9d82-4c4939a250c6",
+    "asset:character-voss-sheet": "a4c5afb4-467e-4f48-b4f4-67e211d2c0bc",
+    "asset:voice-ref-en-harlan": "238eabf7-7c63-4159-a489-29decf6f5e04",
+    "asset:voice-ref-en-reporter": "6298b7d0-af6c-40af-9b53-cfda8d37763f",
+    "asset:voice-ref-en-sorell": "1ee6d46f-4658-4852-a01f-9112047dca04",
+    "asset:voice-ref-en-voss": "37596543-c467-4b55-929e-d3ee67c11cbc"
+  },
+  "output": {
+    "repoPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-001-003/festival-master-stretch-operations-gallery-001-003-rev-1-video-1.mp4",
+    "sha256": "024bcb4e3f5bb7c0039d721bf76445aedda65df6a88d4e881ff7362badcc53af",
+    "durationMs": 23042,
+    "width": 854,
+    "height": 480,
+    "mimeType": "video/mp4"
+  },
+  "declaredDurationMs": 22889,
+  "notes": "First Festival Seedance smoke at 480p. Voice samples truncated to 5s each (combined ≤30s audio-ref cap). Accidental prior probe jobs during 422 diagnosis are not registered.",
+  "registeredAssetId": "asset:festival-master-stretch-operations-gallery-001-003-rev-1-video-1-video"
+}
