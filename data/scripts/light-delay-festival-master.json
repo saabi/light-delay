@@ -15864,30 +15864,30 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "El empuje se restablece y el peso asienta a Elin en su puesto mientras revisa la pantalla: de la ráfaga reconstruida de Zao sólo sobreviven los ángulos de disparo y la actitud de la nave; el vector trazado no apunta a ningún planeta, estación ni baliza.",
-        "en": "Thrust restores and weight settles Elin at her station as she reads the display: only firing angles and ship attitude survive from Zao's reconstructed burst; the plotted vector points at no planet, station, or beacon."
+        "en": "Thrust restores and weight settles Elin Rao at her station as she reads the display: only firing angles and ship attitude survive from Zao’s reconstructed burst; the plotted vector points at no planet, station, or beacon.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
+          "id": "character:rao",
+          "role": "in focus at analysis console, reading the vector"
+        },
+        {
+          "kind": "character",
           "id": "character:voss",
-          "role": "present, listening"
+          "role": "present at command, listening"
         },
         {
           "kind": "character",
           "id": "character:harlan",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
-          "id": "character:rao",
-          "role": "speaking, in focus"
+          "role": "present screen-right, watching the display"
         },
         {
           "kind": "character",
           "id": "character:okoye",
-          "role": "present, listening"
+          "role": "deep background left, listening"
         }
       ],
       "composition": {
@@ -15895,7 +15895,7 @@
         "aspectRatio": "16:9",
         "framing": {
           "es": "Plano medio corto sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Fija; establece la geografía y la dirección en pantalla.",
-          "en": "Medium close-up on Voss, Harlan, Sorell, Elin Rao, Okoye; Locked; establishes geography and screen direction."
+          "en": "Medium close-up favoring Elin Rao at the vector display with Voss and Harlan readable; Okoye deep left; Sorell out of frame; Locked; establishes geography and screen direction."
         }
       },
       "camera": {
@@ -15950,8 +15950,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Voss, curioso, autoriza comparar más: «Entonces, ¿qué golpeó?».",
-        "en": "Voss, curious, authorizes further comparison: \"Then what did she hit?\"."
+        "en": "Voss, curious, authorizes further comparison—what did the burst hit—while Rao stays ready to test a moving receiver.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -15959,6 +15959,11 @@
           "kind": "character",
           "id": "character:voss",
           "role": "speaking, in focus"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "at console, ready to compare"
         },
         {
           "kind": "character",
@@ -15972,11 +15977,6 @@
         },
         {
           "kind": "character",
-          "id": "character:rao",
-          "role": "speaking, in focus"
-        },
-        {
-          "kind": "character",
           "id": "character:okoye",
           "role": "present, listening"
         }
@@ -15986,7 +15986,7 @@
         "aspectRatio": "16:9",
         "framing": {
           "es": "Plano por encima del hombro sobre Voss, Harlan, Sorell, Elin Rao, Okoye; Travelling; mantiene la línea de mirada y la continuidad del eje de acción.",
-          "en": "Over-the-shoulder shot on Voss, Harlan, Sorell, Elin Rao, Okoye; Tracking; preserves eyeline and action-axis continuity."
+          "en": "Over-the-shoulder on Voss toward Rao and the crew under 1 g; Tracking; preserves eyeline and action-axis continuity."
         }
       },
       "camera": {
@@ -16022,7 +16022,8 @@
       "purpose": {
         "es": "Escena «La dirección vacía»: Voss — autorizar la comparación con objetivo móvil; Elin Rao — probar un receptor en movimiento.",
         "en": "Scene \"The empty direction\": Voss — authorize the moving-target comparison; Elin Rao — test a moving receiver."
-      }
+      },
+      "offScreenCharacterIds": []
     },
     {
       "id": "festival-master:shot-plan-059",
@@ -16033,8 +16034,8 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "A solas un instante, Harlan mira el registro irrecuperable de la ráfaga, de duelo: «Ahora nunca sabrán quién los salvó».",
-        "en": "Alone for a moment, Harlan watches the unrecoverable burst record, mourning: \"Now they'll never know who saved them.\"."
+        "en": "Alone for a moment, Harlan watches the unrecoverable burst record, mourning that they will never know who saved them.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -16049,7 +16050,7 @@
         "aspectRatio": "16:9",
         "framing": {
           "es": "Plano medio corto sobre Harlan; Dolly; encuadre ortogonal y legible, de inserto.",
-          "en": "Medium close-up on Harlan; Dolly; orthogonal, legible insert framing."
+          "en": "Medium close-up on Harlan alone; Dolly; orthogonal, legible insert framing."
         }
       },
       "camera": {
@@ -16083,7 +16084,10 @@
       ],
       "selectedTakeId": "festival-master:shot-plan-059:take-02",
       "offScreenCharacterIds": [
-        "character:rao"
+        "character:rao",
+        "character:voss",
+        "character:sorell",
+        "character:okoye"
       ],
       "purpose": {
         "es": "Escena «La dirección vacía»: Harlan — revelar su necesidad de una vindicación futura; Elin Rao (fuera de cuadro) — identificar al Ardor como receptor.",
@@ -16099,8 +16103,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Una señal óptica entrante se define en la pantalla de Elin; urgente, la identifica: «Formato de paquete de Zao. Firma personal. Enviado antes del cruce».",
-        "en": "An incoming optical signal resolves on Elin's display; urgent, she identifies it: \"Zao's packet format. Personal signature. Sent before the crossing.\"."
+        "en": "An incoming optical signal resolves on Elin’s display; urgent, she identifies Zao’s packet format, personal signature, and pre-crossing send.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -16125,7 +16129,7 @@
         "aspectRatio": "16:9",
         "framing": {
           "es": "Plano medio corto sobre Elin Rao, Voss, Sorell; Paneo; establece la geografía y la dirección en pantalla.",
-          "en": "Medium close-up on Elin Rao, Voss, Sorell; Pan; establishes geography and screen direction."
+          "en": "Medium close-up on Elin Rao with Voss and Sorell at frame edges under 1 g; Pan; establishes geography and screen direction."
         }
       },
       "camera": {
@@ -16170,8 +16174,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Voss, decidido, ordena abrirlo de inmediato: «Reprodúzcanlo».",
-        "en": "Voss, decisive, orders it opened at once: \"Play it.\"."
+        "en": "Voss orders the authenticated packet opened at once while Rao stays at the console ready to play it.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -16248,15 +16252,15 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "Flashback: Zao, decidida, graba su advertencia junto al dispositivo armado, ahora oída por primera vez: «Si esto te llega, encontré un paquete de impulso geofísico de Proxima en la bóveda blindada: una coma tres toneladas, multimegatón, temporizador puesto a la hora de llegada. La firma de neutrones es real. El controlador está protegido; no corten la energía ni lo dañen».",
-        "en": "Flashback: Zao, determined, records her warning beside the armed device, now heard for the first time: \"If this reaches you, I found a Proxima geophysical impulse package in the shielded vault: one point three tonnes, multi-megaton, timer set to arrival time. The neutron signature is real. The controller is protected; don't cut power or damage it.\"."
+        "en": "Flashback: Zao, determined and braced in microgravity, records her warning beside the armed Proxima impulse package in the shielding vault—identifying mass, timer, neutron signature, and the protected controller.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:zao",
-          "role": "in focus, center frame"
+          "role": "in focus, center frame, handhold braced"
         },
         {
           "kind": "object",
@@ -16306,8 +16310,8 @@
       "number": 4,
       "order": 4,
       "description": {
-        "es": "Zao, resuelta, continúa su explicación grabada mientras se superpone un diagrama tenue del agujero de gusano y un punto adelantado: «No podía llegar a Proxima a través de Júpiter. La Tierra podía oírme, pero ninguna respuesta podía alcanzarlos… Así que apunté a donde estaría el Ardor después del salto».",
-        "en": "Zao, resolved, continues her recorded explanation as a faint diagram of the wormhole and a lead point ahead of it appears superimposed: \"I couldn't reach Proxima through Jupiter. Earth could hear me, but no answer could catch you... So I aimed at where the Ardor would be after the jump.\"."
+        "en": "Zao, resolved and still vault-braced in microgravity, continues the recorded explanation as a faint English-only diagram of the wormhole and a lead point ahead of it appears superimposed.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-inner-shielding-vault",
       "visibleRefs": [
@@ -16364,8 +16368,8 @@
       "number": 5,
       "order": 5,
       "description": {
-        "es": "De vuelta en el puente, Voss, urgente, reacciona en cuanto entiende: «Aborten la aproximación. Detengan a Harlan». Okoye, alerta, se mueve para bloquearlo: «Comandante, quédese donde está».",
-        "en": "Back on the bridge, Voss, urgent, reacts the instant he understands: \"Abort approach. Hold Harlan.\" Okoye, alert, moves to block him: \"Commander, stay where you are.\"."
+        "en": "Back on the bridge under 1 g, Voss urgently aborts the approach and orders Harlan held; Okoye moves to block him.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -16410,7 +16414,7 @@
           "en": "Pan; preserves eyeline and action-axis continuity."
         }
       },
-      "durationMs": 4060,
+      "durationMs": 4200,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0129",
@@ -16442,8 +16446,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Harlan, a la defensiva, intenta separar acusación de prueba: «Una voz y una cara se pueden construir a partir de los archivos de la nave. Lo sabes».",
-        "en": "Harlan, defensive, tries to separate accusation from proof: \"A voice and a face can be built from ship archives. You know that.\"."
+        "en": "Harlan, defensive and still held, tries to separate accusation from proof—arguing a voice and face could be built from ship archives.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -16520,8 +16524,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Elin Rao, analítica, niega su premisa y enumera evidencias convergentes: «No estoy usando la voz. Su firma personal y la marca de tiempo son válidas. La masa, los neutrones, el vector, la cerradura, tu ubicación faltante y esa acusación coinciden con ella». Harlan, acorralado, replica: «La coincidencia no es prueba».",
-        "en": "Elin Rao, analytical, denies his premise and lists converging evidence: \"I'm not using the voice. Her personal signature and timestamp are valid. All agree with her: the mass, neutrons, vector, lock, your missing location, and that accusation.\" Harlan, cornered, counters: \"Agreement isn't proof.\"."
+        "en": "Elin Rao, analytical, denies his premise and lists converging evidence—signature, timestamp, mass, neutrons, vector, lock, missing location, accusation—while Harlan counters that agreement is not proof.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -16598,8 +16602,8 @@
       "number": 3,
       "order": 3,
       "description": {
-        "es": "Elin Rao, firme, fija el estándar proporcional: «No. Es suficiente para aislarte. Es suficiente para liberarla». Voss mira entre Harlan y Sorell, viendo cuánto de su caso vino de su propio primer error.",
-        "en": "Elin Rao, firm, sets the proportionate standard: \"No. It is enough to isolate you. It is enough to release her.\" Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake."
+        "en": "Elin Rao, firm, sets the proportionate standard: enough to isolate Harlan, enough to release Zao. Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake.",
+        "es": "needs_revision"
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -26752,16 +26756,16 @@
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "Weight returns on the bridge as Rao studies Zao's reconstructed firing angles.",
-            "es": "El peso vuelve al puente mientras Rao estudia los ángulos de disparo reconstruidos de Zao."
+            "en": "Thrust has restored steady 1 g; Rao is planted at her analysis console reading the reconstructed firing-angle display.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The vector points toward a future intercept rather than Earth or Proxima.",
-            "es": "El vector apunta a una intercepción futura y no a la Tierra ni a Próxima."
+            "en": "On the English-only display, the plotted vector aims at empty future intercept space—no planet, station, or beacon—while Voss listens center-frame and Harlan watches from screen right.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The question of the target remains open.",
-            "es": "La pregunta por el objetivo queda abierta."
+            "en": "The empty-direction problem is readable on Rao’s console; Sorell and Okoye stay deep in background depth.",
+            "es": "needs_revision"
           }
         },
         {
@@ -26770,16 +26774,16 @@
           "takeScope": "selected",
           "keyframeRole": "develop",
           "startState": {
-            "en": "The bridge crew remains at the same stations.",
-            "es": "La tripulación permanece en los mismos puestos del puente."
+            "en": "Same 1 g bridge geography; full crew still at the blocked stations.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "Voss asks what Zao hit and authorizes comparison.",
-            "es": "Voss pregunta qué alcanzó Zao y autoriza la comparación."
+            "en": "Voss (silver beard—never Harlan) leans in and authorizes further comparison—curious, decisive—while Rao stays ready at the console to test a moving-receiver hypothesis.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The bridge turns toward the unexplained signal.",
-            "es": "El puente se orienta hacia la señal inexplicada."
+            "en": "The bridge is primed to chase the unexplained optical packet; identities and seats unchanged.",
+            "es": "needs_revision"
           }
         },
         {
@@ -26788,16 +26792,16 @@
           "takeScope": "selected",
           "keyframeRole": "payoff",
           "startState": {
-            "en": "Harlan is alone at the bridge console for a moment.",
-            "es": "Harlan queda solo un momento ante la consola del puente."
+            "en": "Brief insert: Harlan alone at the secondary console under 1 g; other crew out of frame.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "He mourns the unknown savior while the record remains unrecoverable.",
-            "es": "Lamenta al salvador desconocido mientras el registro sigue irrecuperable."
+            "en": "Harlan (younger, clean-shaven) watches the unrecoverable burst record with private mourning, hand near chin—no floating, feet planted.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The private reaction leads into the incoming packet.",
-            "es": "La reacción privada conduce al paquete entrante."
+            "en": "His private reaction closes the vector beat before the incoming packet.",
+            "es": "needs_revision"
           }
         }
       ],
@@ -26813,58 +26817,58 @@
         "character:zao"
       ],
       "physics": {
-        "en": "Steady thrust restores apparent 1 g on the bridge; Harlan's private panel remains within the same station geometry.",
-        "es": "El empuje restablece 1 g aparente en el puente; el panel privado de Harlan sigue en la misma geometría."
+        "en": "Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.",
+        "es": "needs_revision"
       },
       "lighting": {
-        "en": "Bridge practicals and reconstructed vector display.",
-        "es": "Luces prácticas del puente y pantalla del vector reconstruido."
+        "en": "Bridge practicals with the reconstructed vector display glowing English-only; no smoke.",
+        "es": "needs_revision"
       },
       "blocking": [
         {
           "characterId": "character:voss",
-          "zoneOrSeat": "command station",
+          "zoneOrSeat": "command station / meeting-table captain side",
           "screenSide": "center",
-          "facing": "Rao's display",
-          "posture": "standing",
-          "eyelineTarget": "character:rao"
-        },
-        {
-          "characterId": "character:harlan",
-          "zoneOrSeat": "secondary console",
-          "screenSide": "right",
-          "facing": "the display",
-          "posture": "standing",
-          "eyelineTarget": "the display"
+          "facing": "the active exchange and displays",
+          "posture": "standing or braced at command",
+          "eyelineTarget": "the active exchange"
         },
         {
           "characterId": "character:rao",
-          "zoneOrSeat": "analysis station",
+          "zoneOrSeat": "science/analysis console along the station arc",
           "screenSide": "left",
-          "facing": "the vector display",
+          "facing": "her display and the crew",
+          "posture": "standing or seated at console",
+          "eyelineTarget": "the display"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "secondary console / aft security approach, screen right",
+          "screenSide": "right",
+          "facing": "the displays and command",
           "posture": "standing",
           "eyelineTarget": "the display"
         },
         {
           "characterId": "character:okoye",
-          "zoneOrSeat": "security station",
-          "screenSide": "off",
-          "facing": "the bridge",
-          "posture": "standing",
-          "eyelineTarget": "character:voss"
+          "zoneOrSeat": "security station deep left along the arc",
+          "screenSide": "left",
+          "facing": "Harlan and command",
+          "posture": "standing, ready to interpose",
+          "eyelineTarget": "character:harlan"
         },
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "translator station",
+          "zoneOrSeat": "translator/crew station deep right background",
           "screenSide": "right",
-          "facing": "the reconstructed vector display",
-          "posture": "standing",
-          "eyelineTarget": "the vector display"
+          "facing": "the active display",
+          "posture": "standing, listening",
+          "eyelineTarget": "the display"
         }
       ],
       "sharedDescription": {
-        "en": "Bridge analysis stretch: the reconstructed firing vector is examined, Voss asks the causal question, and Harlan's private grief occupies the same room without a spatial reset.",
-        "es": "Tramo de análisis en el puente: se examina el vector reconstruido, Voss formula la pregunta causal y el duelo privado de Harlan ocupa la misma sala sin reinicio espacial."
+        "en": "Continuous bridge vector beat under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Panel 1 favors Rao at the vector display; panel 2 keeps the five-person geography; panel 3 is Harlan alone.",
+        "es": "needs_revision"
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -26886,7 +26890,12 @@
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-vector-057-059-sheet",
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
+      }
     },
     {
       "id": "festival-master:stretch-bridge-packet-open-060-061",
@@ -26903,16 +26912,16 @@
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "Rao detects an incoming optical signal at her bridge station.",
-            "es": "Rao detecta una señal óptica entrante en su puesto del puente."
+            "en": "Same 1 g bridge; Rao at analysis left, Voss center, Sorell near-right; Harlan and Okoye readable in depth.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The packet resolves as Zao's personal format and pre-crossing signature.",
-            "es": "El paquete se resuelve como formato personal y firma de Zao anteriores al cruce."
+            "en": "An incoming optical packet resolves on Rao’s English-only display; she urgently identifies Zao’s personal format and pre-crossing signature.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "Voss and Sorell hear that the packet is authentic.",
-            "es": "Voss y Sorell oyen que el paquete es auténtico."
+            "en": "Authenticity is established on the display; Voss and Sorell attend.",
+            "es": "needs_revision"
           }
         },
         {
@@ -26921,16 +26930,16 @@
           "takeScope": "selected",
           "keyframeRole": "payoff",
           "startState": {
-            "en": "The bridge crew remains focused on Rao's display.",
-            "es": "La tripulación permanece concentrada en la pantalla de Rao."
+            "en": "Crew still planted under 1 g, attention on Rao’s packet display.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "Voss orders the packet played.",
-            "es": "Voss ordena reproducir el paquete."
+            "en": "Voss orders the packet opened/played at once—decisive, no floating—while Rao confirms readiness at the console.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The bridge is ready for Zao's recorded flashback.",
-            "es": "El puente queda listo para el flashback grabado de Zao."
+            "en": "The bridge is ready for Zao’s recorded vault flashback.",
+            "es": "needs_revision"
           }
         }
       ],
@@ -26946,12 +26955,12 @@
         "character:zao"
       ],
       "physics": {
-        "en": "Steady apparent 1 g on the bridge; all three remain at their stations.",
-        "es": "1 g aparente estable en el puente; los tres permanecen en sus puestos."
+        "en": "Steady 1 g on the bridge; all five remain at their blocked stations with feet planted—no microgravity.",
+        "es": "needs_revision"
       },
       "lighting": {
-        "en": "Bridge practicals with the incoming optical packet bright on Rao's display.",
-        "es": "Luces prácticas del puente con el paquete óptico entrante brillante en la pantalla de Rao."
+        "en": "Bridge practicals with the incoming optical packet bright on Rao’s English-only display.",
+        "es": "needs_revision"
       },
       "blocking": [
         {
@@ -26959,7 +26968,7 @@
           "zoneOrSeat": "analysis station",
           "screenSide": "left",
           "facing": "her display",
-          "posture": "standing",
+          "posture": "standing at console",
           "eyelineTarget": "the incoming packet"
         },
         {
@@ -26972,32 +26981,32 @@
         },
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "translator station",
+          "zoneOrSeat": "translator station near-right",
           "screenSide": "right",
-          "facing": "Rao's display",
+          "facing": "Rao’s display",
           "posture": "standing",
           "eyelineTarget": "character:rao"
         },
         {
           "characterId": "character:harlan",
-          "zoneOrSeat": "secured aft security position",
+          "zoneOrSeat": "aft secondary console, far right depth",
           "screenSide": "right",
-          "facing": "Rao and the incoming packet",
+          "facing": "Rao and the packet",
           "posture": "standing",
           "eyelineTarget": "character:rao"
         },
         {
           "characterId": "character:okoye",
-          "zoneOrSeat": "security station",
+          "zoneOrSeat": "security station, far left depth",
           "screenSide": "left",
-          "facing": "the command station",
+          "facing": "command",
           "posture": "standing",
           "eyelineTarget": "character:voss"
         }
       ],
       "sharedDescription": {
-        "en": "Two-panel bridge reception: Rao authenticates the delayed optical packet and Voss orders playback while Sorell remains close enough to hear.",
-        "es": "Recepción en dos paneles: Rao autentica el paquete óptico retardado y Voss ordena reproducirlo mientras Sorell permanece cerca."
+        "en": "Two-panel bridge packet reception under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Focus is Rao authenticating Zao’s delayed optical packet, then Voss ordering playback; Harlan and Okoye remain in depth.",
+        "es": "needs_revision"
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -27020,7 +27029,12 @@
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-packet-open-060-061-sheet",
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
+      }
     },
     {
       "id": "festival-master:stretch-vault-flashback-062-063",
@@ -27037,16 +27051,16 @@
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "The delayed packet opens on Zao beside the armed impulse package.",
-            "es": "El paquete retardado se abre con Zao junto al paquete de impulso armado."
+            "en": "Delayed flashback: microgravity vault; Zao braced/handhold beside the armed impulse package and controller.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "She identifies the device and begins the warning.",
-            "es": "Identifica el dispositivo y comienza la advertencia."
+            "en": "She records the warning beside the device—determined, secured to structure—identifying the Proxima geophysical impulse package as the threat.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The warning establishes the package as a Proxima threat.",
-            "es": "La advertencia establece el paquete como una amenaza para Próxima."
+            "en": "Package and Zao remain vault-anchored; no bridge architecture.",
+            "es": "needs_revision"
           }
         },
         {
@@ -27055,16 +27069,16 @@
           "takeScope": "selected",
           "keyframeRole": "payoff",
           "startState": {
-            "en": "Zao remains beside the package in the shielding vault.",
-            "es": "Zao permanece junto al paquete en la bóveda de blindaje."
+            "en": "Same MG vault footing; Zao still secured beside the package.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "She explains the Jupiter occlusion and forward intercept geometry.",
-            "es": "Explica la ocultación de Júpiter y la geometría de intercepción futura."
+            "en": "She explains Jupiter occlusion and forward intercept; a faint English-only diagram of the wormhole and a lead point ahead may superimpose near her.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The bridge now understands why the warning was aimed ahead.",
-            "es": "El puente entiende ahora por qué la advertencia fue apuntada hacia adelante."
+            "en": "The aimed-ahead optical warning is visually motivated; still microgravity, still vault only.",
+            "es": "needs_revision"
           }
         }
       ],
@@ -27074,26 +27088,26 @@
       ],
       "absentCharacterIds": [],
       "physics": {
-        "en": "Microgravity flashback in the inner shielding vault; Zao and the package are secured to the vault structure.",
-        "es": "Flashback en microgravedad dentro de la bóveda; Zao y el paquete están sujetos a la estructura."
+        "en": "Microgravity flashback in the inner shielding vault: no usable floor; Zao and the package are secured to vault structure with handholds—nothing rests as if under 1 g.",
+        "es": "needs_revision"
       },
       "lighting": {
-        "en": "Vault service lighting and the package controller's diagnostic glow.",
-        "es": "Iluminación de servicio de la bóveda y brillo diagnóstico del controlador."
+        "en": "Vault service lighting and the package controller’s diagnostic glow; English-only diegetic UI if any.",
+        "es": "needs_revision"
       },
       "blocking": [
         {
           "characterId": "character:zao",
-          "zoneOrSeat": "package service panel",
+          "zoneOrSeat": "package service panel, handhold braced",
           "screenSide": "center",
           "facing": "the package and recorder",
-          "posture": "other",
+          "posture": "braced / handhold in microgravity",
           "eyelineTarget": "the package"
         }
       ],
       "sharedDescription": {
-        "en": "Two-panel delayed flashback in the shielding vault: Zao identifies the package and explains the occlusion that forced her forward optical warning.",
-        "es": "Flashback retardado en dos paneles: Zao identifica el paquete y explica la ocultación que la obligó a enviar la advertencia óptica hacia adelante."
+        "en": "Two-panel delayed vault flashback in microgravity only—ignore any bridge background. Zao alone with the armed Proxima geophysical impulse package per the attached sheets. No burned-in spoken dialogue or subtitles; English-only diegetic diagram/UI if shown.",
+        "es": "needs_revision"
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -27115,7 +27129,12 @@
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:object-proxima-geophysical-impulse-package-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-vault-flashback-062-063-sheet",
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
+      }
     },
     {
       "id": "festival-master:stretch-bridge-greeting-prep-083-085",
@@ -28954,16 +28973,16 @@
           "takeScope": "selected",
           "keyframeRole": "establish",
           "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
+            "en": "Back on the 1 g bridge after the flashback; five crew in the shared geography.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Voss urgently aborts the approach and orders Harlan held; Okoye moves in to block Harlan’s exit while Harlan’s wrist device remains visible on his arm.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
+            "en": "Harlan is stopped in place; Okoye interposed; command break begins.",
+            "es": "needs_revision"
           }
         }
       ],
@@ -28977,62 +28996,73 @@
       ],
       "absentCharacterIds": [],
       "physics": {
-        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
-        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+        "en": "Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.",
+        "es": "needs_revision"
       },
       "lighting": {
-        "en": "Established practical lighting for this location.",
-        "es": "Iluminación práctica establecida para esta ubicación."
+        "en": "Bridge practicals and English-only console glow; matte panels; no smoke or haze.",
+        "es": "needs_revision"
       },
       "blocking": [
         {
-          "characterId": "character:harlan",
-          "zoneOrSeat": "established-1",
-          "screenSide": "left",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "center",
+          "facing": "Harlan and Okoye",
+          "posture": "standing, urgent",
+          "eyelineTarget": "character:harlan"
         },
         {
           "characterId": "character:okoye",
-          "zoneOrSeat": "established-2",
-          "screenSide": "center",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "zoneOrSeat": "between Harlan and the exit / hatch line",
+          "screenSide": "left",
+          "facing": "Harlan",
+          "posture": "standing, blocking",
+          "eyelineTarget": "character:harlan"
+        },
+        {
+          "characterId": "character:harlan",
+          "zoneOrSeat": "aft approach, stopped",
+          "screenSide": "right",
+          "facing": "Voss / Okoye",
+          "posture": "standing, halted",
+          "eyelineTarget": "character:voss"
         },
         {
           "characterId": "character:rao",
-          "zoneOrSeat": "established-3",
-          "screenSide": "right",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "zoneOrSeat": "analysis console",
+          "screenSide": "left",
+          "facing": "the confrontation",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
         },
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "established-4",
-          "screenSide": "left",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
-        },
-        {
-          "characterId": "character:voss",
-          "zoneOrSeat": "established-5",
-          "screenSide": "center",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "zoneOrSeat": "translator station depth",
+          "screenSide": "right",
+          "facing": "the confrontation",
+          "posture": "standing",
+          "eyelineTarget": "character:harlan"
         }
       ],
       "sharedDescription": {
-        "en": "Scene 21 command-break beat for shot 064. One Seedance job.",
+        "en": "Single-panel command-break under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Okoye physically interposes to hold Harlan; Harlan’s wrist device matches the prop sheet. Ignore pair-sheet backgrounds.",
         "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "independent_shared_authority",
+        "stillMode": "combined_storyboard_sheet",
         "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            2,
+            3,
+            4
+          ]
+        },
         "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
@@ -29052,7 +29082,13 @@
             "es": "needs_revision"
           }
         }
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-command-break-064-sheet",
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
+      }
     },
     {
       "id": "festival-master:stretch-bridge-command-break-065-067",
@@ -29067,18 +29103,18 @@
           "shotId": "festival-master:shot-plan-065",
           "order": 1,
           "takeScope": "selected",
-          "keyframeRole": "develop",
+          "keyframeRole": "establish",
           "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
+            "en": "Same 1 g bridge confrontation geography; Okoye still interposed near Harlan.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Harlan, defensive, tries to separate accusation from proof—voice and face could be built from ship archives—while Rao listens ready to deny the premise.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
+            "en": "Doubt is planted; Harlan remains held in place.",
+            "es": "needs_revision"
           }
         },
         {
@@ -29087,34 +29123,34 @@
           "takeScope": "selected",
           "keyframeRole": "develop",
           "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
+            "en": "Continuous 1 g blocking; Rao steps the evidence forward at her console / toward Harlan.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Rao, analytical, lists converging independent evidence (signature, timestamp, mass, neutrons, vector, lock, missing location, accusation) without relying on the voice; Harlan counters that agreement is not proof.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
+            "en": "The case against Harlan is stronger but not closed.",
+            "es": "needs_revision"
           }
         },
         {
           "shotId": "festival-master:shot-plan-067",
           "order": 3,
           "takeScope": "selected",
-          "keyframeRole": "develop",
+          "keyframeRole": "payoff",
           "startState": {
-            "en": "The established state continues from the previous panel.",
-            "es": "Continúa el estado establecido del panel anterior."
+            "en": "Wide bridge under 1 g; five still in the same geography.",
+            "es": "needs_revision"
           },
           "event": {
-            "en": "The shot action proceeds without changing the shared spatial arrangement.",
-            "es": "La acción de la toma continúa sin cambiar la disposición espacial compartida."
+            "en": "Rao sets the proportionate standard—enough to isolate Harlan, enough to release Zao; Voss looks between Harlan and Sorell, recognizing how much of his case came from his own first mistake.",
+            "es": "needs_revision"
           },
           "endState": {
-            "en": "The next panel inherits the same continuity.",
-            "es": "El panel siguiente hereda la misma continuidad."
+            "en": "Isolation of Harlan and the path to releasing Zao are established.",
+            "es": "needs_revision"
           }
         }
       ],
@@ -29128,62 +29164,71 @@
       ],
       "absentCharacterIds": [],
       "physics": {
-        "en": "Continuous established geometry and physics from the Festival-master shot descriptions.",
-        "es": "Continuous established geometry and physics from the Festival-master shot descriptions."
+        "en": "Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.",
+        "es": "needs_revision"
       },
       "lighting": {
-        "en": "Established practical lighting for this location.",
-        "es": "Iluminación práctica establecida para esta ubicación."
+        "en": "Bridge practicals and English-only console glow; matte panels; no smoke or haze.",
+        "es": "needs_revision"
       },
       "blocking": [
         {
           "characterId": "character:harlan",
-          "zoneOrSeat": "established-1",
-          "screenSide": "left",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
-        },
-        {
-          "characterId": "character:okoye",
-          "zoneOrSeat": "established-2",
-          "screenSide": "center",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "zoneOrSeat": "held position screen-right",
+          "screenSide": "right",
+          "facing": "Rao and Voss",
+          "posture": "standing, defensive",
+          "eyelineTarget": "character:rao"
         },
         {
           "characterId": "character:rao",
-          "zoneOrSeat": "established-3",
-          "screenSide": "right",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
-        },
-        {
-          "characterId": "character:sorell",
-          "zoneOrSeat": "established-4",
+          "zoneOrSeat": "analysis / confrontation mid-left",
           "screenSide": "left",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "facing": "Harlan",
+          "posture": "standing, analytical then firm",
+          "eyelineTarget": "character:harlan"
         },
         {
           "characterId": "character:voss",
-          "zoneOrSeat": "established-5",
+          "zoneOrSeat": "command center",
           "screenSide": "center",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "facing": "Harlan and Sorell",
+          "posture": "standing",
+          "eyelineTarget": "character:harlan"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "interposed near Harlan",
+          "screenSide": "right",
+          "facing": "Harlan",
+          "posture": "standing, securing",
+          "eyelineTarget": "character:harlan"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "depth near translator station",
+          "screenSide": "left",
+          "facing": "Voss and Harlan",
+          "posture": "standing",
+          "eyelineTarget": "character:voss"
         }
       ],
       "sharedDescription": {
-        "en": "Scene 22 command-break continuation for shots 065–067. One Seedance job per shot.",
+        "en": "Three-panel command-break argument under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Harlan remains held; Okoye stays interposed; Rao drives the evidence; Voss absorbs the cost of his first mistake. Wrist device visible on Harlan when framed. Ignore pair-sheet backgrounds.",
         "es": "needs_revision"
       },
       "generationProfile": {
-        "stillMode": "independent_shared_authority",
+        "stillMode": "combined_storyboard_sheet",
         "videoMode": "grouped_seedance",
+        "gridLayout": {
+          "rows": 2,
+          "cols": 2,
+          "gutterFraction": 0.02,
+          "panelAspect": "16:9",
+          "blankCells": [
+            4
+          ]
+        },
         "maxMembersPerVideoJob": 1
       },
       "referenceAssetIds": [
@@ -29203,7 +29248,13 @@
             "es": "needs_revision"
           }
         }
-      ]
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-bridge-command-break-065-067-sheet",
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-15",
+        "source": "agent authorship prep scenes 20-22; submit Seedance only after still regen + human go"
+      }
     },
     {
       "id": "festival-master:stretch-bridge-device-071-073",

@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "bfa2450960706a70735f116e3db981ddb988797aab7c42281ab558c72267fc91",
+    "sourceDigest": "009e036e2c4a8efa175bf5ba8c931286bbcdfec649a7755c7e7a6106e7dece85",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -7583,7 +7583,7 @@
         {
           "id": "festival-master:shot-plan-064:segment-01",
           "startMs": 0,
-          "endMs": 4060,
+          "endMs": 4200,
           "continuation": "none",
           "promptStatus": "blocked",
           "compiledPrompt": null
@@ -16074,7 +16074,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady thrust restores apparent 1 g on the bridge; Harlan's private panel remains within the same station geometry.\nLighting: Bridge practicals and reconstructed vector display.\nShared: Bridge analysis stretch: the reconstructed firing vector is examined, Voss asks the causal question, and Harlan's private grief occupies the same room without a spatial reset.\nPresent cast: character:voss, character:harlan, character:rao, character:okoye, character:sorell.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Rao's display; posture=standing; eyelineTarget=character:rao\ncharacter:harlan; zoneOrSeat=secondary console; screenSide=right; facing=the display; posture=standing; eyelineTarget=the display\ncharacter:rao; zoneOrSeat=analysis station; screenSide=left; facing=the vector display; posture=standing; eyelineTarget=the display\ncharacter:okoye; zoneOrSeat=security station; screenSide=off; facing=the bridge; posture=standing; eyelineTarget=character:voss\ncharacter:sorell; zoneOrSeat=translator station; screenSide=right; facing=the reconstructed vector display; posture=standing; eyelineTarget=the vector display\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-057. Start: Weight returns on the bridge as Rao studies Zao's reconstructed firing angles. Event: The vector points toward a future intercept rather than Earth or Proxima. End: The question of the target remains open. Delta/description: Thrust restores and weight settles Elin at her station as she reads the display: only firing angles and ship attitude survive from Zao's reconstructed burst; the plotted vector points at no planet, station, or beacon. Composition size: MCU. Visible: character:voss, character:harlan, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-058. Start: The bridge crew remains at the same stations. Event: Voss asks what Zao hit and authorizes comparison. End: The bridge turns toward the unexplained signal. Delta/description: Voss, curious, authorizes further comparison:. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-059. Start: Harlan is alone at the bridge console for a moment. Event: He mourns the unknown savior while the record remains unrecoverable. End: The private reaction leads into the incoming packet. Delta/description: Alone for a moment, Harlan watches the unrecoverable burst record, mourning:. Composition size: MCU. Visible: character:harlan.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals with the reconstructed vector display glowing English-only; no smoke.\nShared: Continuous bridge vector beat under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Panel 1 favors Rao at the vector display; panel 2 keeps the five-person geography; panel 3 is Harlan alone.\nPresent cast: character:voss, character:harlan, character:rao, character:okoye, character:sorell.\nBlocking:\ncharacter:voss; zoneOrSeat=command station / meeting-table captain side; screenSide=center; facing=the active exchange and displays; posture=standing or braced at command; eyelineTarget=the active exchange\ncharacter:rao; zoneOrSeat=science/analysis console along the station arc; screenSide=left; facing=her display and the crew; posture=standing or seated at console; eyelineTarget=the display\ncharacter:harlan; zoneOrSeat=secondary console / aft security approach, screen right; screenSide=right; facing=the displays and command; posture=standing; eyelineTarget=the display\ncharacter:okoye; zoneOrSeat=security station deep left along the arc; screenSide=left; facing=Harlan and command; posture=standing, ready to interpose; eyelineTarget=character:harlan\ncharacter:sorell; zoneOrSeat=translator/crew station deep right background; screenSide=right; facing=the active display; posture=standing, listening; eyelineTarget=the display\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-057. Start: Thrust has restored steady 1 g; Rao is planted at her analysis console reading the reconstructed firing-angle display. Event: On the English-only display, the plotted vector aims at empty future intercept space—no planet, station, or beacon—while Voss listens center-frame and Harlan watches from screen right. End: The empty-direction problem is readable on Rao’s console; Sorell and Okoye stay deep in background depth. Delta/description: Thrust restores and weight settles Elin Rao at her station as she reads the display: only firing angles and ship attitude survive from Zao's reconstructed burst; the plotted vector points at no planet, station, or beacon. Composition size: MCU. Visible: character:rao, character:voss, character:harlan, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-058. Start: Same 1 g bridge geography; full crew still at the blocked stations. Event: Voss (silver beard—never Harlan) leans in and authorizes further comparison—curious, decisive—while Rao stays ready at the console to test a moving-receiver hypothesis. End: The bridge is primed to chase the unexplained optical packet; identities and seats unchanged. Delta/description: Voss, curious, authorizes further comparison—what did the burst hit—while Rao stays ready to test a moving receiver. Composition size: OTS. Visible: character:voss, character:rao, character:harlan, character:sorell, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-059. Start: Brief insert: Harlan alone at the secondary console under 1 g; other crew out of frame. Event: Harlan (younger, clean-shaven) watches the unrecoverable burst record with private mourning, hand near chin—no floating, feet planted. End: His private reaction closes the vector beat before the incoming packet. Delta/description: Alone for a moment, Harlan watches the unrecoverable burst record, mourning that they will never know who saved them. Composition size: MCU. Visible: character:harlan.",
       "outputs": [
         {
           "order": 1,
@@ -16189,9 +16189,9 @@
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
+          "character:rao": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
           "character:voss": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
           "character:harlan": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-          "character:rao": "asset:festival-master-stretch-bridge-vector-057-059-panel-01",
           "character:okoye": "asset:festival-master-stretch-bridge-vector-057-059-panel-01"
         },
         "wouldOmitEntityIds": [],
@@ -16220,8 +16220,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-01"
       ],
       "coherenceException": false,
       "runnable": false
@@ -16285,9 +16284,9 @@
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
           "character:voss": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
+          "character:rao": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
           "character:harlan": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
           "character:sorell": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-          "character:rao": "asset:festival-master-stretch-bridge-vector-057-059-panel-02",
           "character:okoye": "asset:festival-master-stretch-bridge-vector-057-059-panel-02"
         },
         "wouldOmitEntityIds": [],
@@ -16317,8 +16316,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-02",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-02"
       ],
       "coherenceException": false,
       "runnable": false
@@ -16406,8 +16404,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-03",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-03"
       ],
       "coherenceException": false,
       "runnable": false
@@ -16505,7 +16502,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady apparent 1 g on the bridge; all three remain at their stations.\nLighting: Bridge practicals with the incoming optical packet bright on Rao's display.\nShared: Two-panel bridge reception: Rao authenticates the delayed optical packet and Voss orders playback while Sorell remains close enough to hear.\nPresent cast: character:rao, character:voss, character:sorell, character:harlan, character:okoye.\nBlocking:\ncharacter:rao; zoneOrSeat=analysis station; screenSide=left; facing=her display; posture=standing; eyelineTarget=the incoming packet\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Rao; posture=standing; eyelineTarget=character:rao\ncharacter:sorell; zoneOrSeat=translator station; screenSide=right; facing=Rao's display; posture=standing; eyelineTarget=character:rao\ncharacter:harlan; zoneOrSeat=secured aft security position; screenSide=right; facing=Rao and the incoming packet; posture=standing; eyelineTarget=character:rao\ncharacter:okoye; zoneOrSeat=security station; screenSide=left; facing=the command station; posture=standing; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-060. Start: Rao detects an incoming optical signal at her bridge station. Event: The packet resolves as Zao's personal format and pre-crossing signature. End: Voss and Sorell hear that the packet is authentic. Delta/description: An incoming optical signal resolves on Elin's display; urgent, she identifies it:. Composition size: MCU. Visible: character:rao, character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-061. Start: The bridge crew remains focused on Rao's display. Event: Voss orders the packet played. End: The bridge is ready for Zao's recorded flashback. Delta/description: Voss, decisive, orders it opened at once:. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g on the bridge; all five remain at their blocked stations with feet planted—no microgravity.\nLighting: Bridge practicals with the incoming optical packet bright on Rao’s English-only display.\nShared: Two-panel bridge packet reception under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Focus is Rao authenticating Zao’s delayed optical packet, then Voss ordering playback; Harlan and Okoye remain in depth.\nPresent cast: character:rao, character:voss, character:sorell, character:harlan, character:okoye.\nBlocking:\ncharacter:rao; zoneOrSeat=analysis station; screenSide=left; facing=her display; posture=standing at console; eyelineTarget=the incoming packet\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Rao; posture=standing; eyelineTarget=character:rao\ncharacter:sorell; zoneOrSeat=translator station near-right; screenSide=right; facing=Rao’s display; posture=standing; eyelineTarget=character:rao\ncharacter:harlan; zoneOrSeat=aft secondary console, far right depth; screenSide=right; facing=Rao and the packet; posture=standing; eyelineTarget=character:rao\ncharacter:okoye; zoneOrSeat=security station, far left depth; screenSide=left; facing=command; posture=standing; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-060. Start: Same 1 g bridge; Rao at analysis left, Voss center, Sorell near-right; Harlan and Okoye readable in depth. Event: An incoming optical packet resolves on Rao’s English-only display; she urgently identifies Zao’s personal format and pre-crossing signature. End: Authenticity is established on the display; Voss and Sorell attend. Delta/description: An incoming optical signal resolves on Elin's display; urgent, she identifies Zao's packet format, personal signature, and pre-crossing send. Composition size: MCU. Visible: character:rao, character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-061. Start: Crew still planted under 1 g, attention on Rao’s packet display. Event: Voss orders the packet opened/played at once—decisive, no floating—while Rao confirms readiness at the console. End: The bridge is ready for Zao’s recorded vault flashback. Delta/description: Voss orders the authenticated packet opened at once while Rao stays at the console ready to play it. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -16630,8 +16627,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-01"
       ],
       "coherenceException": false,
       "runnable": false
@@ -16725,8 +16721,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
       ],
       "coherenceException": false,
       "runnable": false
@@ -16812,7 +16807,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-inner-shielding-vault.\nPhysics: Microgravity flashback in the inner shielding vault; Zao and the package are secured to the vault structure.\nLighting: Vault service lighting and the package controller's diagnostic glow.\nShared: Two-panel delayed flashback in the shielding vault: Zao identifies the package and explains the occlusion that forced her forward optical warning.\nPresent cast: character:zao.\nBlocking:\ncharacter:zao; zoneOrSeat=package service panel; screenSide=center; facing=the package and recorder; posture=other; eyelineTarget=the package\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-062. Start: The delayed packet opens on Zao beside the armed impulse package. Event: She identifies the device and begins the warning. End: The warning establishes the package as a Proxima threat. Delta/description: Flashback. Zao, determined, records her warning beside the armed device, now heard for the first time:. Composition size: MS. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-063. Start: Zao remains beside the package in the shielding vault. Event: She explains the Jupiter occlusion and forward intercept geometry. End: The bridge now understands why the warning was aimed ahead. Delta/description: Zao, resolved, continues her recorded explanation as a faint diagram of the wormhole and a lead point ahead of it appears superimposed:. Composition size: CU. Visible: character:zao.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-inner-shielding-vault.\nPhysics: Microgravity flashback in the inner shielding vault: no usable floor; Zao and the package are secured to vault structure with handholds—nothing rests as if under 1 g.\nLighting: Vault service lighting and the package controller’s diagnostic glow; English-only diegetic UI if any.\nShared: Two-panel delayed vault flashback in microgravity only—ignore any bridge background. Zao alone with the armed Proxima geophysical impulse package per the attached sheets. No burned-in spoken dialogue or subtitles; English-only diegetic diagram/UI if shown.\nPresent cast: character:zao.\nBlocking:\ncharacter:zao; zoneOrSeat=package service panel, handhold braced; screenSide=center; facing=the package and recorder; posture=braced / handhold in microgravity; eyelineTarget=the package\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-062. Start: Delayed flashback: microgravity vault; Zao braced/handhold beside the armed impulse package and controller. Event: She records the warning beside the device—determined, secured to structure—identifying the Proxima geophysical impulse package as the threat. End: Package and Zao remain vault-anchored; no bridge architecture. Delta/description: Flashback. Zao, determined and braced in microgravity, records her warning beside the armed Proxima impulse package in the shielding vault—identifying mass, timer, neutron signature, and the protected controller. Composition size: MS. Visible: character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-063. Start: Same MG vault footing; Zao still secured beside the package. Event: She explains Jupiter occlusion and forward intercept; a faint English-only diagram of the wormhole and a lead point ahead may superimpose near her. End: The aimed-ahead optical warning is visually motivated; still microgravity, still vault only. Delta/description: Zao, resolved and still vault-braced in microgravity, continues the recorded explanation as a faint English-only diagram of the wormhole and a lead point ahead of it appears superimposed. Composition size: CU. Visible: character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -16932,8 +16927,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-01",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-01"
       ],
       "coherenceException": false,
       "runnable": false
@@ -17015,8 +17009,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-02",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-02"
       ],
       "coherenceException": false,
       "runnable": false
@@ -22028,7 +22021,7 @@
       "stretchId": "festival-master:stretch-bridge-command-break-064",
       "revision": 1,
       "medium": "still",
-      "mode": "independent_shared_authority",
+      "mode": "combined_storyboard_sheet",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
       "outputTakePolicy": "new_candidate",
       "memberInputs": [
@@ -22096,11 +22089,29 @@
         },
         "violations": []
       },
-      "compiledPrompt": null,
+      "gridLayout": {
+        "rows": 2,
+        "cols": 2,
+        "gutterFraction": 0.02,
+        "panelAspect": "16:9",
+        "blankCells": [
+          2,
+          3,
+          4
+        ]
+      },
+      "computedMargins": {
+        "top": 0.078125,
+        "right": 0,
+        "bottom": 0.078125,
+        "left": 0
+      },
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [2,3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals and English-only console glow; matte panels; no smoke or haze.\nShared: Single-panel command-break under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Okoye physically interposes to hold Harlan; Harlan’s wrist device matches the prop sheet. Ignore pair-sheet backgrounds.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=center; facing=Harlan and Okoye; posture=standing, urgent; eyelineTarget=character:harlan\ncharacter:okoye; zoneOrSeat=between Harlan and the exit / hatch line; screenSide=left; facing=Harlan; posture=standing, blocking; eyelineTarget=character:harlan\ncharacter:harlan; zoneOrSeat=aft approach, stopped; screenSide=right; facing=Voss / Okoye; posture=standing, halted; eyelineTarget=character:voss\ncharacter:rao; zoneOrSeat=analysis console; screenSide=left; facing=the confrontation; posture=standing; eyelineTarget=character:voss\ncharacter:sorell; zoneOrSeat=translator station depth; screenSide=right; facing=the confrontation; posture=standing; eyelineTarget=character:harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-064. Start: Back on the 1 g bridge after the flashback; five crew in the shared geography. Event: Voss urgently aborts the approach and orders Harlan held; Okoye moves in to block Harlan’s exit while Harlan’s wrist device remains visible on his arm. End: Harlan is stopped in place; Okoye interposed; command break begins. Delta/description: Back on the bridge under 1 g, Voss urgently aborts the approach and orders Harlan held; Okoye moves to block him. Composition size: OTS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
-          "artifact": "animaticStill",
+          "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-command-break-064-sheet",
           "panels": [
             {
               "order": 1,
@@ -22110,19 +22121,19 @@
               ],
               "frameRegion": {
                 "x": 0,
-                "y": 0,
-                "w": 1,
-                "h": 1
-              }
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-064:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-01"
             }
           ]
         }
       ],
-      "blockers": [
-        "coherence_exception"
-      ],
-      "coherenceException": true,
-      "runnable": false
+      "blockers": [],
+      "coherenceException": false,
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-command-break-064:rev-1:video-1",
@@ -22133,7 +22144,7 @@
       "providerSnapshotId": "provider:higgsfield:seedance-2.5:2026-08-29",
       "outputTakePolicy": "new_candidate",
       "dependsOnStillJobId": "festival-master:stretch-bridge-command-break-064:rev-1",
-      "durationMs": 4060,
+      "durationMs": 4200,
       "memberInputs": [
         {
           "order": 1,
@@ -22221,8 +22232,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-01"
       ],
       "coherenceException": false,
       "runnable": false
@@ -22232,7 +22242,7 @@
       "stretchId": "festival-master:stretch-bridge-command-break-065-067",
       "revision": 1,
       "medium": "still",
-      "mode": "independent_shared_authority",
+      "mode": "combined_storyboard_sheet",
       "providerSnapshotId": "provider:openai:gpt-image-2:2026-09-13",
       "outputTakePolicy": "new_candidate",
       "memberInputs": [
@@ -22314,11 +22324,27 @@
         },
         "violations": []
       },
-      "compiledPrompt": null,
+      "gridLayout": {
+        "rows": 2,
+        "cols": 2,
+        "gutterFraction": 0.02,
+        "panelAspect": "16:9",
+        "blankCells": [
+          4
+        ]
+      },
+      "computedMargins": {
+        "top": 0.078125,
+        "right": 0,
+        "bottom": 0.078125,
+        "left": 0
+      },
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady 1 g artificial gravity on the bridge after thrust restore: feet planted, normal weight, seated or standing as blocked, no floating debris or drifting hair.\nLighting: Bridge practicals and English-only console glow; matte panels; no smoke or haze.\nShared: Three-panel command-break argument under steady 1 g. Harlan is the younger clean-shaven dark-haired officer (right panel of the Voss–Harlan pair sheet); Voss is the older silver-bearded captain (left panel of that sheet)—never swap them. Rao is the East-Asian woman in the lighter gray jacket (Rao–Sorell pair sheet); Sorell is the other woman on that sheet; Okoye is the Black woman with short natural hair (Okoye–Voss pair sheet). Ignore studio/pair-sheet backgrounds; use only the bridge location reference for architecture. No burned-in spoken dialogue or subtitles; English-only diegetic UI when visible. Harlan remains held; Okoye stays interposed; Rao drives the evidence; Voss absorbs the cost of his first mistake. Wrist device visible on Harlan when framed. Ignore pair-sheet backgrounds.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=held position screen-right; screenSide=right; facing=Rao and Voss; posture=standing, defensive; eyelineTarget=character:rao\ncharacter:rao; zoneOrSeat=analysis / confrontation mid-left; screenSide=left; facing=Harlan; posture=standing, analytical then firm; eyelineTarget=character:harlan\ncharacter:voss; zoneOrSeat=command center; screenSide=center; facing=Harlan and Sorell; posture=standing; eyelineTarget=character:harlan\ncharacter:okoye; zoneOrSeat=interposed near Harlan; screenSide=right; facing=Harlan; posture=standing, securing; eyelineTarget=character:harlan\ncharacter:sorell; zoneOrSeat=depth near translator station; screenSide=left; facing=Voss and Harlan; posture=standing; eyelineTarget=character:voss\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-065. Start: Same 1 g bridge confrontation geography; Okoye still interposed near Harlan. Event: Harlan, defensive, tries to separate accusation from proof—voice and face could be built from ship archives—while Rao listens ready to deny the premise. End: Doubt is planted; Harlan remains held in place. Delta/description: Harlan, defensive and still held, tries to separate accusation from proof—arguing a voice and face could be built from ship archives. Composition size: MS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-066. Start: Continuous 1 g blocking; Rao steps the evidence forward at her console / toward Harlan. Event: Rao, analytical, lists converging independent evidence (signature, timestamp, mass, neutrons, vector, lock, missing location, accusation) without relying on the voice; Harlan counters that agreement is not proof. End: The case against Harlan is stronger but not closed. Delta/description: Elin Rao, analytical, denies his premise and lists converging evidence—signature, timestamp, mass, neutrons, vector, lock, missing location, accusation—while Harlan counters that agreement is not proof. Composition size: MCU. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-067. Start: Wide bridge under 1 g; five still in the same geography. Event: Rao sets the proportionate standard—enough to isolate Harlan, enough to release Zao; Voss looks between Harlan and Sorell, recognizing how much of his case came from his own first mistake. End: Isolation of Harlan and the path to releasing Zao are established. Delta/description: Elin Rao, firm, sets the proportionate standard: enough to isolate Harlan, enough to release Zao. Voss looks between Harlan and Sorell, seeing how much of his case came from his own first mistake. Composition size: ELS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
-          "artifact": "animaticStill",
+          "artifact": "combinedStoryboard",
+          "assetId": "asset:festival-master-stretch-bridge-command-break-065-067-sheet",
           "panels": [
             {
               "order": 1,
@@ -22328,17 +22354,13 @@
               ],
               "frameRegion": {
                 "x": 0,
-                "y": 0,
-                "w": 1,
-                "h": 1
-              }
-            }
-          ]
-        },
-        {
-          "order": 2,
-          "artifact": "animaticStill",
-          "panels": [
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-065:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-02"
+            },
             {
               "order": 2,
               "shotId": "festival-master:shot-plan-066",
@@ -22346,18 +22368,14 @@
                 "festival-master:shot-plan-066:take-02"
               ],
               "frameRegion": {
-                "x": 0,
-                "y": 0,
-                "w": 1,
-                "h": 1
-              }
-            }
-          ]
-        },
-        {
-          "order": 3,
-          "artifact": "animaticStill",
-          "panels": [
+                "x": 0.51,
+                "y": 0.078125,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-066:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-03"
+            },
             {
               "order": 3,
               "shotId": "festival-master:shot-plan-067",
@@ -22366,20 +22384,19 @@
               ],
               "frameRegion": {
                 "x": 0,
-                "y": 0,
-                "w": 1,
-                "h": 1
-              }
+                "y": 0.51,
+                "w": 0.49,
+                "h": 0.411875
+              },
+              "derivedTakeId": "festival-master:shot-plan-067:take-02",
+              "derivedAssetId": "asset:festival-master-stretch-bridge-command-break-064-067-panel-04"
             }
           ]
         }
       ],
-      "blockers": [
-        "coherence_exception",
-        "outputs:3>1"
-      ],
-      "coherenceException": true,
-      "runnable": false
+      "blockers": [],
+      "coherenceException": false,
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-command-break-065-067:rev-1:video-1",
@@ -22478,8 +22495,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-02"
       ],
       "coherenceException": false,
       "runnable": false
@@ -22581,8 +22597,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-03"
       ],
       "coherenceException": false,
       "runnable": false
@@ -22682,8 +22697,7 @@
         }
       ],
       "blockers": [
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
-        "editorial_prompt_freeze_not_approved"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-04"
       ],
       "coherenceException": false,
       "runnable": false

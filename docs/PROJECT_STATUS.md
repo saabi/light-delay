@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Scenes 20–22 authorship fixed; video freeze ready (English source)
+
+- Stretches 057–067 still prompts self-contained (1 g bridge / MG vault flashback; identity locks; command-break sheets runnable). `videoPromptFreeze` approved for those stretches; video jobs still blocked on stale panels until still regen. No Higgsfield generation this pass. Committed by Auto (Composer).
+
 ## 2026-09-15 — Seedance 044/045 regen registered (English source)
 
 - 044: author-selected bare-hands still `044-b0` landed; Seedance reconnect clip registered (~5.0s, 15 cr).
