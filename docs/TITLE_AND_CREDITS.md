@@ -37,11 +37,16 @@ ChatGPT · Claude · Gemini · Cursor Composer
 PRODUCTION TOOLS
 Light Delay schema & production tools
 
+MUSIC
+Music: generated with Suno
+
 FIRST CONTACT
 FIRST CONTACT — VELARI MISSION
 ```
 
 Los cues JSON archivados conservan español fuente + inglés draft por procedencia histórica. Los futuros derivados usan inglés como fuente. `AUTHOR_NAME_PLACEHOLDER` se sustituye cuando el autor aporte el nombre legal.
+
+**Music attribution (current Festival-master):** English SoT line is `Music: generated with Suno` (copyright/attribution to Suno per their free-tier terms). Confirm Suno’s current license before festival submission. Spanish credit copy may lag (`needs_revision`).
 
 ## Prompts (EN → modelo)
 
@@ -115,6 +120,18 @@ Role line: PRODUCTION TOOLS
 Names line: Light Delay schema & production tools
 Typographic only; no IDE screenshots, no JSON braces as decoration, no logos, no Spanish text.
 Minimal hard-SF end-credit aesthetic.
+```
+
+### D3b — Music attribution (full frame or shared production card)
+
+```text
+End credit still, 1536x864, 16:9, full opaque pure black background.
+Centered English credit block, clean geometric sans, cool white:
+Role line: MUSIC
+Names line: Music: generated with Suno
+Typographic only; no logos, no waveform art, no Spanish text on the plate.
+Minimal hard-SF end-credit aesthetic.
+Confirm Suno free-tier license wording before festival submission; do not invent further legal claims.
 ```
 
 ### E — Trailer mid mission label (alpha)

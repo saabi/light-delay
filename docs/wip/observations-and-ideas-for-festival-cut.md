@@ -1,4 +1,5 @@
-Yes, at 9–10 minutes. Not at 6. At six you'd have to cut either the murder or the meeting, and then it's a trailer, not a story. Plan for ten and treat six as out of reach.
+# Festival cut previsional plan
+Length: 9–10 minutes. Not at 6. At six you'd have to cut either the murder or the meeting, and then it's a trailer, not a story. Plan for ten and treat six as out of reach.
 
 ## The irreducible chain
 

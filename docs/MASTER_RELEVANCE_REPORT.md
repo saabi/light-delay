@@ -533,7 +533,8 @@ Gates: `master_outline_complete` (open), `salvage_review_complete` (open), `repl
 | static_file | `docs/ASSET_REFERENCE_AUDIT.tmp.md` | default-review | retain |
 | static_file | `docs/CUIDADOS_NARRATIVOS.md` | default-review | retain |
 | static_file | `docs/DESCRIPCION_DE_VOCES_DE_PERSONAJES.md` | default-review | retain |
-| static_file | `docs/GUIA_BANDA_SONORA.md` | default-review | retain |
+| static_file | `docs/GUIA_BANDA_SONORA.en.md` | default-review | retain |
+| static_file | `docs/GUIA_BANDA_SONORA.md` | default-review | retain (ES translation; may lag EN) |
 | static_file | `docs/MIGRATION_INVENTORY.md` | default-review | retain |
 | static_file | `docs/production/AGENT_GENERATION_BRIEF.md` | default-review | retain |
 | static_file | `docs/production/DIALOGUE_AND_PROMPT_LESSONS.md` | default-review | retain |

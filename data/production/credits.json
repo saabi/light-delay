@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "notes": "Production credits are metadata, not story shots. The credit cards in script:light-delay-festival-master keep their generic text; this record is the contract for who and what is credited.",
+  "notes": "Production credits are metadata, not story shots. Credit-card on-screen copy should surface people, agents, tools, and music attribution; this record is the contract for who and what is credited.",
   "people": [
     {
       "name": "Sebastian Ferreyra Pons",
@@ -13,9 +13,9 @@
     "videoProvider": "Seedance 2.5",
     "editing": "DaVinci Resolve",
     "musicModel": {
-      "status": "undecided",
-      "placeholder": "TBD",
-      "todo": "Music model intentionally undecided; defer music generation until a model is selected."
+      "status": "selected",
+      "model": "Suno",
+      "todo": "Festival-master score is Suno-generated (free tier). Attribute on-screen as Music: generated with Suno. Confirm Suno’s current free-tier license before festival submission; stems and trackAssetId wiring are a follow-on pass."
     }
   }
 }

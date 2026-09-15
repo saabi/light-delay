@@ -2168,6 +2168,7 @@
         "en": "LIGHT DELAY appears over the delayed Earth feed."
       },
       "cueIds": [
+        "festival-master:cue-music-ship-01-start",
         "festival-master:cue-0001"
       ],
       "targetDurationMs": 10000
@@ -2219,6 +2220,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-ship-01-continue",
         "festival-master:cue-0002",
         "festival-master:cue-0003",
         "festival-master:cue-0004",
@@ -2430,6 +2432,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-ship-02-change",
         "festival-master:cue-0025",
         "festival-master:cue-0026",
         "festival-master:cue-0027",
@@ -2468,6 +2471,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-sabotage-01-change",
         "festival-master:cue-0030",
         "festival-master:cue-0030b",
         "festival-master:cue-0031",
@@ -2613,6 +2617,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-sabotage-02-change",
         "festival-master:cue-0046",
         "festival-master:cue-0047",
         "festival-master:cue-0048",
@@ -2739,6 +2744,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-duck-recording",
         "festival-master:cue-0065",
         "festival-master:cue-0066",
         "festival-master:cue-0067",
@@ -2780,6 +2786,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-stop-death",
         "festival-master:cue-0069",
         "festival-master:cue-0070",
         "festival-master:cue-0071",
@@ -2842,6 +2849,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-sabotage-03-start",
         "festival-master:cue-0077",
         "festival-master:cue-0078",
         "festival-master:cue-0078b",
@@ -3194,6 +3202,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-zao-01-change",
         "festival-master:cue-0123",
         "festival-master:cue-0124",
         "festival-master:cue-0125",
@@ -3306,6 +3315,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-sabotage-04-change",
         "festival-master:cue-0137",
         "festival-master:cue-0138",
         "festival-master:cue-0139",
@@ -3570,6 +3580,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-velari-01-change",
         "festival-master:cue-0172",
         "festival-master:cue-0173",
         "festival-master:cue-0174",
@@ -3721,6 +3732,7 @@
         }
       ],
       "cueIds": [
+        "festival-master:cue-music-zao-02-change",
         "festival-master:cue-0188",
         "festival-master:cue-0189",
         "festival-master:cue-0190",
@@ -3794,6 +3806,7 @@
         "en": "Three static credit cards follow the departing signal."
       },
       "cueIds": [
+        "festival-master:cue-music-credits-fade",
         "festival-master:cue-credits"
       ],
       "targetDurationMs": 20000
@@ -3803,7 +3816,7 @@
     {
       "id": "festival-master:cue-0001",
       "beatId": "festival-master:beat-00-title",
-      "order": 1,
+      "order": 2,
       "type": "text",
       "presentation": "title",
       "content": {
@@ -3823,7 +3836,7 @@
     {
       "id": "festival-master:cue-0002",
       "beatId": "festival-master:beat-02",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -3840,7 +3853,7 @@
     {
       "id": "festival-master:cue-0003",
       "beatId": "festival-master:beat-02",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -3885,7 +3898,7 @@
     {
       "id": "festival-master:cue-0004",
       "beatId": "festival-master:beat-02",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -3930,7 +3943,7 @@
     {
       "id": "festival-master:cue-0005",
       "beatId": "festival-master:beat-02",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -3975,7 +3988,7 @@
     {
       "id": "festival-master:cue-0006",
       "beatId": "festival-master:beat-02",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4020,7 +4033,7 @@
     {
       "id": "festival-master:cue-0007",
       "beatId": "festival-master:beat-02",
-      "order": 6,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4741,7 +4754,7 @@
     {
       "id": "festival-master:cue-0025",
       "beatId": "festival-master:beat-06",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4758,7 +4771,7 @@
     {
       "id": "festival-master:cue-0026",
       "beatId": "festival-master:beat-06",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4776,7 +4789,7 @@
     {
       "id": "festival-master:cue-0027",
       "beatId": "festival-master:beat-06",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4821,7 +4834,7 @@
     {
       "id": "festival-master:cue-0028",
       "beatId": "festival-master:beat-06",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4866,7 +4879,7 @@
     {
       "id": "festival-master:cue-0029",
       "beatId": "festival-master:beat-06",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4913,7 +4926,7 @@
     {
       "id": "festival-master:cue-0030",
       "beatId": "festival-master:beat-07",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -4930,7 +4943,7 @@
     {
       "id": "festival-master:cue-0030b",
       "beatId": "festival-master:beat-07",
-      "order": 0,
+      "order": 3,
       "type": "dialogue",
       "speakerId": "character:zao",
       "presentation": "on_screen",
@@ -4965,7 +4978,7 @@
     {
       "id": "festival-master:cue-0031",
       "beatId": "festival-master:beat-07",
-      "order": 2,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5010,7 +5023,7 @@
     {
       "id": "festival-master:cue-0032",
       "beatId": "festival-master:beat-07",
-      "order": 3,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5030,7 +5043,7 @@
     {
       "id": "festival-master:cue-0033",
       "beatId": "festival-master:beat-07",
-      "order": 4,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5075,7 +5088,7 @@
     {
       "id": "festival-master:cue-0034",
       "beatId": "festival-master:beat-07",
-      "order": 5,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5542,7 +5555,7 @@
     {
       "id": "festival-master:cue-0046",
       "beatId": "festival-master:beat-10",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5559,7 +5572,7 @@
     {
       "id": "festival-master:cue-0047",
       "beatId": "festival-master:beat-10",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5607,7 +5620,7 @@
     {
       "id": "festival-master:cue-0048",
       "beatId": "festival-master:beat-10",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5627,7 +5640,7 @@
     {
       "id": "festival-master:cue-0049",
       "beatId": "festival-master:beat-10",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5672,7 +5685,7 @@
     {
       "id": "festival-master:cue-0050",
       "beatId": "festival-master:beat-10",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -5717,7 +5730,7 @@
     {
       "id": "festival-master:cue-0051",
       "beatId": "festival-master:beat-10",
-      "order": 6,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6255,7 +6268,7 @@
     {
       "id": "festival-master:cue-0065",
       "beatId": "festival-master:beat-13",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6272,7 +6285,7 @@
     {
       "id": "festival-master:cue-0066",
       "beatId": "festival-master:beat-13",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6293,7 +6306,7 @@
     {
       "id": "festival-master:cue-0067",
       "beatId": "festival-master:beat-13",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6310,7 +6323,7 @@
     {
       "id": "festival-master:cue-0068",
       "beatId": "festival-master:beat-13",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6328,7 +6341,7 @@
     {
       "id": "festival-master:cue-0069",
       "beatId": "festival-master:beat-14",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6350,7 +6363,7 @@
     {
       "id": "festival-master:cue-0070",
       "beatId": "festival-master:beat-14",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6400,7 +6413,7 @@
     {
       "id": "festival-master:cue-0071",
       "beatId": "festival-master:beat-14",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6422,7 +6435,7 @@
     {
       "id": "festival-master:cue-0072",
       "beatId": "festival-master:beat-14",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6472,7 +6485,7 @@
     {
       "id": "festival-master:cue-0073",
       "beatId": "festival-master:beat-14",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6522,7 +6535,7 @@
     {
       "id": "festival-master:cue-0074",
       "beatId": "festival-master:beat-14",
-      "order": 6,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6572,7 +6585,7 @@
     {
       "id": "festival-master:cue-0075",
       "beatId": "festival-master:beat-14",
-      "order": 7,
+      "order": 8,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6594,7 +6607,7 @@
     {
       "id": "festival-master:cue-0076",
       "beatId": "festival-master:beat-14",
-      "order": 8,
+      "order": 9,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6704,7 +6717,7 @@
     {
       "id": "festival-master:cue-0077",
       "beatId": "festival-master:beat-15",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6725,7 +6738,7 @@
     {
       "id": "festival-master:cue-0078",
       "beatId": "festival-master:beat-15",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6742,7 +6755,7 @@
     {
       "id": "festival-master:cue-0078b",
       "beatId": "festival-master:beat-15",
-      "order": 3,
+      "order": 4,
       "type": "dialogue",
       "speakerId": "character:harlan",
       "presentation": "on_screen",
@@ -6777,7 +6790,7 @@
     {
       "id": "festival-master:cue-0079",
       "beatId": "festival-master:beat-15",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6795,7 +6808,7 @@
     {
       "id": "festival-master:cue-0080",
       "beatId": "festival-master:beat-15",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6840,7 +6853,7 @@
     {
       "id": "festival-master:cue-0081",
       "beatId": "festival-master:beat-15",
-      "order": 6,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -6895,7 +6908,7 @@
     {
       "id": "festival-master:cue-0082",
       "beatId": "festival-master:beat-15",
-      "order": 7,
+      "order": 8,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8587,7 +8600,7 @@
     {
       "id": "festival-master:cue-0123",
       "beatId": "festival-master:beat-21",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8632,7 +8645,7 @@
     {
       "id": "festival-master:cue-0124",
       "beatId": "festival-master:beat-21",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8677,7 +8690,7 @@
     {
       "id": "festival-master:cue-0125",
       "beatId": "festival-master:beat-21",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8694,7 +8707,7 @@
     {
       "id": "festival-master:cue-0126",
       "beatId": "festival-master:beat-21",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8742,7 +8755,7 @@
     {
       "id": "festival-master:cue-0127",
       "beatId": "festival-master:beat-21",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8787,7 +8800,7 @@
     {
       "id": "festival-master:cue-0128",
       "beatId": "festival-master:beat-21",
-      "order": 6,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8832,7 +8845,7 @@
     {
       "id": "festival-master:cue-0129",
       "beatId": "festival-master:beat-21",
-      "order": 7,
+      "order": 8,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -8877,7 +8890,7 @@
     {
       "id": "festival-master:cue-0130",
       "beatId": "festival-master:beat-21",
-      "order": 8,
+      "order": 9,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -9170,7 +9183,7 @@
     {
       "id": "festival-master:cue-0137",
       "beatId": "festival-master:beat-23",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -9215,7 +9228,7 @@
     {
       "id": "festival-master:cue-0138",
       "beatId": "festival-master:beat-23",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -9260,7 +9273,7 @@
     {
       "id": "festival-master:cue-0139",
       "beatId": "festival-master:beat-23",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -9277,7 +9290,7 @@
     {
       "id": "festival-master:cue-0140",
       "beatId": "festival-master:beat-23",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -9322,7 +9335,7 @@
     {
       "id": "festival-master:cue-0141",
       "beatId": "festival-master:beat-23",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -9367,7 +9380,7 @@
     {
       "id": "festival-master:cue-0142",
       "beatId": "festival-master:beat-23",
-      "order": 6,
+      "order": 7,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -9412,7 +9425,7 @@
     {
       "id": "festival-master:cue-0143",
       "beatId": "festival-master:beat-23",
-      "order": 7,
+      "order": 8,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -10466,7 +10479,7 @@
     {
       "id": "festival-master:cue-0172",
       "beatId": "festival-master:beat-28",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -10486,7 +10499,7 @@
     {
       "id": "festival-master:cue-0173",
       "beatId": "festival-master:beat-28",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -10531,7 +10544,7 @@
     {
       "id": "festival-master:cue-0174",
       "beatId": "festival-master:beat-28",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -10576,7 +10589,7 @@
     {
       "id": "festival-master:cue-0175",
       "beatId": "festival-master:beat-28",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -10621,7 +10634,7 @@
     {
       "id": "festival-master:cue-0176",
       "beatId": "festival-master:beat-28",
-      "order": 5,
+      "order": 6,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -10973,7 +10986,7 @@
     {
       "id": "festival-master:cue-0188",
       "beatId": "festival-master:beat-31",
-      "order": 1,
+      "order": 2,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -10990,7 +11003,7 @@
     {
       "id": "festival-master:cue-0189",
       "beatId": "festival-master:beat-31",
-      "order": 2,
+      "order": 3,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -11035,7 +11048,7 @@
     {
       "id": "festival-master:cue-0190",
       "beatId": "festival-master:beat-31",
-      "order": 3,
+      "order": 4,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -11080,7 +11093,7 @@
     {
       "id": "festival-master:cue-0191",
       "beatId": "festival-master:beat-31",
-      "order": 4,
+      "order": 5,
       "sourceRefs": [
         {
           "kind": "outline",
@@ -11269,18 +11282,18 @@
     {
       "id": "festival-master:cue-credits",
       "beatId": "festival-master:beat-32-credits",
-      "order": 1,
+      "order": 2,
       "type": "text",
       "presentation": "credits",
       "content": {
         "sourceLanguage": "en",
         "variants": {
           "en": {
-            "text": "LIGHT DELAY\nA film developed by the Light Delay project",
+            "text": "LIGHT DELAY\nA film developed by the Light Delay project\n\nMUSIC\nMusic: generated with Suno",
             "status": "source"
           },
           "es": {
-            "text": "LIGHT DELAY\nUna película desarrollada por el proyecto Light Delay",
+            "text": "LIGHT DELAY\nUna película desarrollada por el proyecto Light Delay\n\nMÚSICA\nMúsica: generada con Suno",
             "status": "needs_revision"
           }
         }
@@ -11303,6 +11316,239 @@
         "es": "Mantener el movimiento de rescate por el eje de servicio mientras Sorell sigue bajo cubierta."
       },
       "estimatedDurationMs": 3500
+    },
+    {
+      "id": "festival-master:cue-music-ship-01-start",
+      "beatId": "festival-master:beat-00-title",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Start ship register: sparse cold synth drone under the title card (stem fm-stem-ship-01).",
+        "es": "Inicia registro nave: drone frío y escaso bajo la cartela de título (stem fm-stem-ship-01)."
+      },
+      "operation": "start",
+      "gainDb": -8
+    },
+    {
+      "id": "festival-master:cue-music-ship-01-continue",
+      "beatId": "festival-master:beat-02",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Continue ship register under ops-gallery delay feed; duck under dialogue (stem fm-stem-ship-01).",
+        "es": "Continúa registro nave bajo el feed diferido de la galería; duck bajo diálogo (stem fm-stem-ship-01)."
+      },
+      "operation": "continue",
+      "gainDb": -10
+    },
+    {
+      "id": "festival-master:cue-music-ship-02-change",
+      "beatId": "festival-master:beat-06",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Change within ship register: denser low end for first gravity dip (stem fm-stem-ship-02).",
+        "es": "Cambio dentro del registro nave: graves más densos en el primer bajón de gravedad (stem fm-stem-ship-02)."
+      },
+      "operation": "change",
+      "gainDb": -8
+    },
+    {
+      "id": "festival-master:cue-music-sabotage-01-change",
+      "beatId": "festival-master:beat-07",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Change to sabotage register: procedural dissonance from the extra burn (stem fm-stem-sabotage-01).",
+        "es": "Cambio a registro sabotaje: disonancia procedimental desde el quemado extra (stem fm-stem-sabotage-01)."
+      },
+      "operation": "change",
+      "gainDb": -8
+    },
+    {
+      "id": "festival-master:cue-music-sabotage-02-change",
+      "beatId": "festival-master:beat-10",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Change sabotage texture for broken warning / optics contingency (stem fm-stem-sabotage-02).",
+        "es": "Cambia textura de sabotaje para aviso roto / óptica de contingencia (stem fm-stem-sabotage-02)."
+      },
+      "operation": "change",
+      "gainDb": -8
+    },
+    {
+      "id": "festival-master:cue-music-duck-recording",
+      "beatId": "festival-master:beat-13",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Duck underscore under withheld recording silence (cue-0066); music yields to diegetic hatch and breath.",
+        "es": "Duck del underscore bajo el silencio de la grabación retenida (cue-0066); la música cede a escotilla y respiración diegéticas."
+      },
+      "operation": "duck",
+      "gainDb": -24
+    },
+    {
+      "id": "festival-master:cue-music-stop-death",
+      "beatId": "festival-master:beat-14",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Stop music before / at fatality impact (cue-0076); leave black to diegesis and silence — no pulse through death.",
+        "es": "Detén la música antes / en el impacto fatal (cue-0076); deja el negro a la diégesis y el silencio — sin pulso en la muerte."
+      },
+      "operation": "stop"
+    },
+    {
+      "id": "festival-master:cue-music-sabotage-03-start",
+      "beatId": "festival-master:beat-15",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Restart colder, thinner sabotage bed after murder black (stem fm-stem-sabotage-03).",
+        "es": "Reinicia cama de sabotaje más fría y fina tras el negro del asesinato (stem fm-stem-sabotage-03)."
+      },
+      "operation": "start",
+      "gainDb": -10
+    },
+    {
+      "id": "festival-master:cue-music-zao-01-change",
+      "beatId": "festival-master:beat-21",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Change to Zao motif under message return (stem fm-stem-zao-01); swell in playback gaps.",
+        "es": "Cambio al motivo de Zao bajo el retorno del mensaje (stem fm-stem-zao-01); swell en huecos de reproducción."
+      },
+      "operation": "change",
+      "gainDb": -6
+    },
+    {
+      "id": "festival-master:cue-music-sabotage-04-change",
+      "beatId": "festival-master:beat-23",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Change to urgent sabotage for eleven-minute countdown (stem fm-stem-sabotage-04).",
+        "es": "Cambio a sabotaje urgente para la cuenta de once minutos (stem fm-stem-sabotage-04)."
+      },
+      "operation": "change",
+      "gainDb": -8
+    },
+    {
+      "id": "festival-master:cue-music-velari-01-change",
+      "beatId": "festival-master:beat-28",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Change to Velari register under greeting / contact (stem fm-stem-velari-01); alien, not triumphant.",
+        "es": "Cambio a registro Velari bajo el saludo / contacto (stem fm-stem-velari-01); alienígena, no triunfal."
+      },
+      "operation": "change",
+      "gainDb": -8
+    },
+    {
+      "id": "festival-master:cue-music-zao-02-change",
+      "beatId": "festival-master:beat-31",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Soft return of Zao motif over faint ship drone (stem fm-stem-zao-02).",
+        "es": "Retorno suave del motivo de Zao sobre un drone de nave tenue (stem fm-stem-zao-02)."
+      },
+      "operation": "change",
+      "gainDb": -8
+    },
+    {
+      "id": "festival-master:cue-music-credits-fade",
+      "beatId": "festival-master:beat-32-credits",
+      "order": 1,
+      "sourceRefs": [
+        {
+          "kind": "outline",
+          "outlineId": "outline:light-delay-festival-master"
+        }
+      ],
+      "type": "music",
+      "description": {
+        "en": "Credits residual ship bed fading to silence (stem fm-stem-credits).",
+        "es": "Cama residual de nave en créditos que se desvanece al silencio (stem fm-stem-credits)."
+      },
+      "operation": "fade_out",
+      "gainDb": -12
     }
   ],
   "shots": [
@@ -11344,6 +11590,10 @@
       },
       "durationMs": 10000,
       "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-music-ship-01-start",
+          "atMs": 0
+        },
         {
           "cueId": "festival-master:cue-0001",
           "atMs": 0,
@@ -11425,6 +11675,10 @@
       },
       "durationMs": 10159,
       "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-music-ship-01-continue",
+          "atMs": 0
+        },
         {
           "cueId": "festival-master:cue-0002",
           "atMs": 0,
@@ -12285,6 +12539,10 @@
       "durationMs": 5000,
       "cuePlacements": [
         {
+          "cueId": "festival-master:cue-music-ship-02-change",
+          "atMs": 0
+        },
+        {
           "cueId": "festival-master:cue-0024b",
           "atMs": 0,
           "durationMs": 5000
@@ -12551,6 +12809,10 @@
       },
       "durationMs": 7500,
       "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-music-sabotage-01-change",
+          "atMs": 0
+        },
         {
           "cueId": "festival-master:cue-0029c",
           "atMs": 0,
@@ -13026,7 +13288,7 @@
       "order": 1,
       "description": {
         "es": "Harlan asciende, sin ser visto, desde la escotilla de servicio empotrada detrás del vestíbulo de mando mientras la tripulación del puente, mirando al frente, oye abrirse el canal de Zao: \"Puente, Zao. He encontrado un grave intento de sabotear la misión—\".",
-        "en": "Harlan rises unseen from the recessed service hatch behind the command vestibule as the bridge crew, facing forward, hears Zao's channel open: \"Bridge, Zao. I have found a grave attempt to sabotage the mission—\"."
+        "en": "Use the current Celestial Ardor bridge reference: the five bridge crew face the curved forward consoles with their backs to the central shaft. Harlan is not visible; he is concealed at the recessed service hatch behind the stations while Zao’s channel opens."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -13077,6 +13339,10 @@
       "durationMs": 7050,
       "cuePlacements": [
         {
+          "cueId": "festival-master:cue-music-sabotage-02-change",
+          "atMs": 0
+        },
+        {
           "cueId": "festival-master:cue-0046",
           "atMs": 0,
           "durationMs": 2170
@@ -13107,7 +13373,7 @@
       "order": 2,
       "description": {
         "es": "Sólo cuando cae la palabra 'sabotaje' Harlan toca su dispositivo de muñeca. El canal muere a mitad de palabra. Se repliega en la escotilla de servicio antes de que nadie en el puente se vuelva.",
-        "en": "Only when the word 'sabotage' lands does Harlan touch his wrist device. The channel dies mid-word. He withdraws into the service hatch before anyone on the bridge turns."
+        "en": "At the recessed service hatch, Harlan alone touches the small digital wrist device when the word “sabotage” lands, then retreats into the hatch before the bridge crew turns. Do not show a labeled jammer or any other crew in this close framing."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -13173,7 +13439,7 @@
       "order": 3,
       "description": {
         "es": "Elin Rao, concentrada, reporta el corte desde su puesto: \"La inalámbrica acaba de desaparecer en toda su cubierta\". Voss, urgente, reparte la respuesta: \"Elin, encuentra la rotura. Okoye, seguridad del puente\".",
-        "en": "Elin Rao, focused, reports the outage from her station: \"Wireless just vanished across her deck.\" Voss, urgent, splits the response: \"Elin, find the break. Okoye, bridge security.\"."
+        "en": "Wide current-bridge view: Voss stands at command, Rao reports from her analysis station, Sorell remains at her translator station, and Okoye takes bridge security. The central shaft and helical stairs remain in the established geometry; Harlan is hidden off-frame."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
@@ -13703,6 +13969,10 @@
       "durationMs": 7670,
       "cuePlacements": [
         {
+          "cueId": "festival-master:cue-music-duck-recording",
+          "atMs": 0
+        },
+        {
           "cueId": "festival-master:cue-0065",
           "atMs": 0,
           "durationMs": 7670
@@ -13886,6 +14156,10 @@
       },
       "durationMs": 7130,
       "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-music-stop-death",
+          "atMs": 0
+        },
         {
           "cueId": "festival-master:cue-0069",
           "atMs": 0,
@@ -14096,6 +14370,10 @@
       },
       "durationMs": 12340,
       "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-music-sabotage-03-start",
+          "atMs": 0
+        },
         {
           "cueId": "festival-master:cue-0076b",
           "atMs": 0,
@@ -14334,7 +14612,7 @@
       "order": 1,
       "description": {
         "es": "Sorell llega a la bahía exterior y atrapa el cuerpo de Zao, a la deriva y ensangrentado; le comprueba la vía aérea y el pulso, y presiona en vano una sangre que ya no circula en microgravedad.",
-        "en": "Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity. The optical transmitter and service-shaft trays remain outside this frame."
+        "en": "In microgravity, Sorell—clearly the active rescuer—catches and cradles Zao, the unconscious injured engineer. Sorell stays screen left in her dark EVA/security suit; Zao stays screen right in her engineer clothing. The optical transmitter remains outside frame."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
       "secondaryLocationIds": [
@@ -14400,7 +14678,7 @@
       "order": 2,
       "description": {
         "es": "Sorell, en pánico, llama con urgencia a un comunicador de mano mientras aún sostiene el cuerpo de Zao: \"Puente, Zao está caída. Emergencia médica. ¿Alguien copia?\".",
-        "en": "Sorell, panicked, calls urgently into a handheld comm while still holding Zao's body: \"Bridge, Zao is down. Medical emergency. Does anyone copy?\"."
+        "en": "Still in microgravity, Sorell remains screen left, supporting Zao’s limp body screen right while raising the handheld comm. Keep their identities and positions unchanged; the optical transmitter remains outside frame."
       },
       "locationId": "location:celestial-ardor-reactor-service-bay",
       "visibleRefs": [
@@ -14468,7 +14746,7 @@
       "order": 3,
       "description": {
         "es": "Arriba, Harlan reconecta los troncales de comunicaciones y desactiva en silencio su inhibidor, luego sale al vestíbulo, controlado: \"Encontré la rotura. Ambos troncales estaban desconectados en la bandeja de servicio\".",
-        "en": "Harlan reconnects the communications trunks at the service-shaft tray and emerges through the bridge-side hatch, controlled: \"Found the break. Both trunks were out at the service tray.\""
+        "en": "Inside the vertical service shaft, Harlan reconnects the camera and communications trunks at the deck connector board. Show the shaft walls and side access hatch, not a bridge console; he then moves toward the bridge-side hatch."
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
@@ -14478,17 +14756,7 @@
         {
           "kind": "character",
           "id": "character:harlan",
-          "role": "center frame, alone, at the reconnected communications tray"
-        },
-        {
-          "kind": "object",
-          "id": "object:harlan-wrist-device",
-          "role": "worn on Harlan’s wrist"
-        },
-        {
-          "kind": "object",
-          "id": "object:wired-comms-deck-patch-panel",
-          "role": "tray at which the trunks are reconnected"
+          "role": "alone inside the service shaft at the connector board"
         }
       ],
       "composition": {
@@ -14542,14 +14810,29 @@
       "order": 4,
       "description": {
         "es": "Engañoso, Harlan se despega de la escena: \"Yo no la vi\". Detrás de él, el feed de cámara restaurado muestra sólo a Sorell sosteniendo el cuerpo ensangrentado.",
-        "en": "Deceptive, Harlan separates himself from the scene: \"I never saw her.\" Harlan is the only physical person in this compartment; behind him, a restored camera-feed monitor shows Sorell alone holding the bloodied body."
+        "en": "Harlan emerges into the current bridge and looks toward Voss and the other bridge crew while the restored monitor beside them shows Sorell alone holding Zao’s body. Sorell and Zao are visible only inside the feed, never as physical people in the bridge."
       },
       "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
           "id": "character:harlan",
-          "role": "foreground, alone, glancing toward a monitor inset showing Sorell and Zao"
+          "role": "physical foreground, returning through the bridge-side hatch"
+        },
+        {
+          "kind": "character",
+          "id": "character:voss",
+          "role": "physical command station, questioning Harlan"
+        },
+        {
+          "kind": "character",
+          "id": "character:rao",
+          "role": "physical analysis station, watching the restored feed"
+        },
+        {
+          "kind": "character",
+          "id": "character:okoye",
+          "role": "physical security station, watching Harlan"
         }
       ],
       "composition": {
@@ -14591,7 +14874,8 @@
       ],
       "selectedTakeId": "festival-master:shot-plan-045:take-02",
       "offScreenCharacterIds": [
-        "character:voss"
+        "character:sorell",
+        "character:zao"
       ],
       "purpose": {
         "es": "Escena «La imagen que Harlan quería»: Harlan — separarse de su ruta; Voss (fuera de cuadro) — enviar seguridad y al testigo aparente.",
@@ -15796,6 +16080,10 @@
       "durationMs": 4300,
       "cuePlacements": [
         {
+          "cueId": "festival-master:cue-music-zao-01-change",
+          "atMs": 0
+        },
+        {
           "cueId": "festival-master:cue-0123",
           "atMs": 0,
           "durationMs": 4300
@@ -16378,6 +16666,10 @@
       },
       "durationMs": 7260,
       "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-music-sabotage-04-change",
+          "atMs": 0
+        },
         {
           "cueId": "festival-master:cue-0137",
           "atMs": 0,
@@ -17521,6 +17813,10 @@
       "durationMs": 6670,
       "cuePlacements": [
         {
+          "cueId": "festival-master:cue-music-velari-01-change",
+          "atMs": 0
+        },
+        {
           "cueId": "festival-master:cue-0172",
           "atMs": 0,
           "durationMs": 6670
@@ -17692,7 +17988,7 @@
       "order": 1,
       "description": {
         "es": "Luz estructurada se ramifica sobre el casco de la Celestial Ardor, visible a través de las pequeñas ventanas reforzadas del puente; la estación velari de 4–5 km más allá permanece oscura, en un silencio deliberado.",
-        "en": "Structured light branches across the Celestial Ardor's hull, visible through the bridge's small reinforced windows; the 4-5 km Velari station beyond stays dark through a deliberate silence."
+        "en": "Inside the bridge, the interior hull display shows structured branching light while the small reinforced windows show only dark space and the distant Velari station. Do not show the exterior Ardor hull through a bridge window and do not substitute another ship or vehicle."
       },
       "locationId": "location:celestial-ardor-bridge",
       "secondaryLocationIds": [
@@ -17702,17 +17998,22 @@
         {
           "kind": "character",
           "id": "character:voss",
-          "role": "present, listening"
+          "role": "present at command station"
         },
         {
           "kind": "character",
           "id": "character:sorell",
-          "role": "present, listening"
+          "role": "present at translator station"
         },
         {
           "kind": "character",
           "id": "character:rao",
-          "role": "present, listening"
+          "role": "present at analysis station"
+        },
+        {
+          "kind": "location",
+          "id": "location:velari-station",
+          "role": "distant exterior visible through windows only"
         }
       ],
       "composition": {
@@ -17766,19 +18067,19 @@
       "order": 2,
       "description": {
         "es": "La estación responde con una gramática luminosa inmensa que se extiende por su piel viva; Sorell, atónita, sólo capta fragmentos a través de su analizador: «Aproximación. Permiso… encuentro».",
-        "en": "The station answers with an immense luminous grammar spreading across its living skin; Sorell, astonished, catches only fragments through her parser: \"Approach. Permission… meeting.\"."
+        "en": "Outside the Ardor in microgravity, Sorell alone watches the Velari station through her sealed EVA helmet; her tether and suit are visible. Voss and the other crew stay off-frame."
       },
       "locationId": "location:velari-station",
       "visibleRefs": [
         {
           "kind": "character",
-          "id": "character:voss",
-          "role": "present, listening"
+          "id": "character:sorell",
+          "role": "alone in sealed EVA suit, watching the station"
         },
         {
-          "kind": "character",
-          "id": "character:sorell",
-          "role": "speaking, in focus"
+          "kind": "location",
+          "id": "location:velari-station",
+          "role": "distant station in frame"
         }
       ],
       "composition": {
@@ -17819,6 +18120,7 @@
         "en": "Scene \"The station answers\": Sorell — extract only what the parser supports."
       },
       "offScreenCharacterIds": [
+        "character:voss",
         "character:rao",
         "character:okoye"
       ]
@@ -17833,7 +18135,7 @@
       "order": 3,
       "description": {
         "es": "Una esfera ambiental transparente, de escala personal, se separa de la estación y se acerca al Ardor sin escape visible. Sorell, conmovida: «Están enviando a alguien».",
-        "en": "A transparent environmental sphere, personal in scale, separates from the station and approaches the Ardor without visible exhaust. Sorell, moved: \"They're sending someone.\"."
+        "en": "Sorell remains alone in her sealed EVA suit and helmet, tether visible, as the Velari Transport Sphere separates from the station and approaches without engines or exhaust."
       },
       "locationId": "location:velari-station",
       "visibleRefs": [
@@ -17900,33 +18202,38 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Sorell sale sola, sujeta por un cabo, en traje espacial; la señal de la cámara del casco aparece en la pantalla distante del puente de Voss. La esfera transparente espera, inmóvil, entre nave y estación.",
-        "en": "Sorell exits alone on a tether in a spacesuit, her helmet suit-camera feed showing on Voss's distant bridge display. The transparent sphere waits, motionless, between ship and station."
+        "es": "Dentro del puente de la Celestial Ardor, Voss observa a Sorell únicamente en el monitor grande de la cámara del traje. El casco de presión curvo del puente ocupa el fondo; fuera del monitor no aparecen el casco exterior del Ardor, la estación ni Sorell flotando. La señal muestra a Sorell atada en el espacio abierto, con la Esfera de transporte Velari esperándola más allá.",
+        "en": "Inside the Celestial Ardor's bridge, Voss watches Sorell only on the large suit-camera monitor. The bridge's curved pressure hull fills the background; no exterior Ardor hull, station, or free-floating Sorell appears outside the monitor. The monitor feed shows Sorell tethered in open space with the Velari Transport Sphere waiting beyond her."
       },
-      "locationId": "location:velari-station",
+      "locationId": "location:celestial-ardor-bridge",
       "visibleRefs": [
         {
           "kind": "character",
-          "id": "character:sorell",
-          "role": "present, listening"
+          "id": "character:voss",
+          "role": "physically present in the bridge, watching the monitor"
+        },
+        {
+          "kind": "location",
+          "id": "location:celestial-ardor-bridge",
+          "role": "bridge interior and curved pressure-hull background"
         },
         {
           "kind": "character",
-          "id": "character:voss",
-          "role": "present, listening"
+          "id": "character:sorell",
+          "role": "visible only inside the suit-camera monitor feed"
         },
         {
           "kind": "vehicle",
           "id": "vehicle:velari-transport-sphere",
-          "role": "the Velari transport sphere, in frame"
+          "role": "visible only inside the monitor feed behind Sorell"
         }
       ],
       "composition": {
         "size": "INSERT",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Inserto sobre Sorell, Voss; Fija; establece la geografía y la dirección en pantalla.",
-          "en": "Insert on Sorell, Voss; Locked; establishes geography and screen direction."
+          "es": "Inserto sobre Voss y el monitor grande de la cámara del traje; el casco del puente ocupa el fondo y el exterior aparece sólo dentro de la señal del monitor.",
+          "en": "Insert on Voss and the large suit-camera monitor; the bridge hull fills the background and the exterior appears only inside the monitor feed."
         }
       },
       "camera": {
@@ -17951,7 +18258,12 @@
       "purpose": {
         "es": "Escena «Alguien»: hacer visible — Sorell sale sola con una línea de seguridad; la cámara de su traje alimenta la vista del puente de Voss.",
         "en": "Scene \"Someone\": make visible — Sorell exits alone on a tether, her suit camera feeding Voss’s bridge view."
-      }
+      },
+      "offScreenCharacterIds": [
+        "character:rao",
+        "character:okoye",
+        "character:harlan"
+      ]
     },
     {
       "id": "festival-master:shot-plan-090",
@@ -18015,7 +18327,7 @@
       "order": 3,
       "description": {
         "es": "Resuelta, deriva por su cabo hacia la esfera que espera: «Eso es lo que hace que ir signifique algo».",
-        "en": "Resolved, drifting on her tether toward the waiting sphere: \"That's what makes going mean something.\"."
+        "en": "Sorell drifts on her tether toward the large Velari Transport Sphere; the sphere grows to occupy much of the frame while remaining clearly separate from the Ardor and station."
       },
       "locationId": "location:velari-station",
       "visibleRefs": [
@@ -18073,7 +18385,7 @@
       "order": 4,
       "description": {
         "es": "Todavía en su traje EVA y casco, con el cable de seguridad visible, Sorell alcanza la esfera transparente en el espacio abierto; un individuo velari de tamaño completo —de unos 2,5 a 3 metros de altura, con un manto alargado y patrones luminosos ramificados a lo largo de su superficie— orienta su manto hacia ella a través de la pared transparente de la esfera, reúne su luz, sostiene la atención y luego devuelve el saludo humano en luz viva. El Ardor, la estación Velari y el campo de estrellas permanecen visibles a través de la esfera.",
-        "en": "Still in her EVA suit and helmet, tether visible, Sorell reaches the transparent sphere in open space; a full-size Velari individual — roughly 2.5 to 3 metres tall, an elongated mantle, branching luminous patterns along its surface — orients its mantle toward her through the sphere's transparent wall, gathers its light, holds attention, then extends the human greeting back in living light. The Ardor, the Velari station, and the starfield stay visible through the sphere."
+        "en": "Still in her EVA suit and helmet, Sorell reaches the large transparent Velari Transport Sphere. The floating Velari envoy is clearly visible inside with no floor; it gathers its light, holds her attention, and extends the human greeting back through the wall. Keep the Ardor, station, and starfield behind the sphere."
       },
       "locationId": "location:velari-station",
       "visibleRefs": [
@@ -18190,6 +18502,10 @@
       },
       "durationMs": 6220,
       "cuePlacements": [
+        {
+          "cueId": "festival-master:cue-music-zao-02-change",
+          "atMs": 0
+        },
         {
           "cueId": "festival-master:cue-0188",
           "atMs": 0,
@@ -18460,6 +18776,10 @@
       "durationMs": 7000,
       "cuePlacements": [
         {
+          "cueId": "festival-master:cue-music-credits-fade",
+          "atMs": 0
+        },
+        {
           "cueId": "festival-master:cue-credits",
           "atMs": 0,
           "durationMs": 7000
@@ -18483,8 +18803,8 @@
       "number": 2,
       "order": 2,
       "description": {
-        "es": "Una cartela estática de créditos de producción se mantiene sobre la misma luz que se aleja, lenta y distante.",
-        "en": "A static production-credits card holds over the same slow, distant departing light."
+        "es": "Una cartela estática de créditos de producción se sostiene sobre la misma luz lejana que se aleja, incluyendo Music: generated with Suno.",
+        "en": "A static production-credits card holds over the same slow, distant departing light, including Music: generated with Suno."
       },
       "locationId": "location:velari-station",
       "visibleRefs": [],
@@ -20039,7 +20359,8 @@
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
-          "asset:location-celestial-ardor-reactor-service-bay-sheet"
+          "asset:location-celestial-ardor-reactor-service-bay-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -20070,7 +20391,8 @@
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21527,7 +21849,8 @@
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:location-velari-station-sheet"
+          "asset:location-velari-station-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21557,7 +21880,8 @@
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21583,12 +21907,14 @@
       "number": 1,
       "status": "selected",
       "generation": {
-        "prompt": "Use the supplied reference images as authoritative for the static appearance of every referenced character, location, prop, and vehicle; do not redesign or restate those references. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Action: Sorell exits alone on a tether in a spacesuit; her suit-camera feed appears on Voss's distant bridge display. The Velari Transport Sphere waits, motionless, between ship and station (matching its established reference). Composition: INSERT framing. Camera: Locked; establishes geography and screen direction. Preserve the specified blocking, physics, timing, dynamic behavior, and English-only diegetic display text. Reference assets attached: asset:character-sorell-sheet, asset:character-voss-sheet, asset:vehicle-velari-transport-sphere-sheet. Avoid off-screen characters, extra entities, redesigned referenced assets, obsolete continuity, logos, and watermark.",
-        "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
+        "prompt": "Use the supplied reference images as authoritative for static appearance; do not redesign or restate them. Grounded cinematic hard-science-fiction storyboard still, photorealistic VFX concept art, 16:9. Inside the Celestial Ardor bridge, Voss is physically present in the foreground, seen from behind or three-quarter view, watching a large wall-mounted suit-camera monitor. The curved pressure hull and bridge consoles fill the background. The monitor alone contains the exterior feed: Sorell in the established EVA suit, tether visible, with the Velari Transport Sphere waiting beyond her. Do not show Sorell, the sphere, the Velari station, or the exterior Ardor hull anywhere outside the monitor. Keep the bridge in microgravity with Voss braced at the console; locked insert composition and clear eyeline from Voss to the monitor. Any diegetic monitor labels are English-only and minimal; no spoken dialogue or subtitles in the still.",
+        "negativePrompt": "Sorell physically present outside monitor, duplicate Sorell, duplicate sphere, exterior Ardor hull behind Voss, Velari station outside monitor, open space as bridge background, wrong bridge geometry, extra crew, platform dock, planet, moon, non-English text, subtitles, watermark, logo",
         "referenceAssetIds": [
-          "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:character-sorell-sheet",
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21617,7 +21943,8 @@
         "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, extra unlisted characters, cartoonish exaggeration",
         "referenceAssetIds": [
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21646,7 +21973,8 @@
         "negativePrompt": "No redesign of supplied references; no off-screen characters; no obsolete emissary spacecraft; no extra people or vehicles; no text except explicitly specified English diegetic text; no watermark.",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21676,7 +22004,8 @@
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:vehicle-velari-transport-sphere-sheet",
-          "asset:character-velari-envoy-sheet"
+          "asset:character-velari-envoy-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "provider": "OpenAI",
         "model": "gpt-image-2",
@@ -21869,14 +22198,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-credit-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "needs_regeneration",
         "reasons": [
-          "quality"
+          "canon_mismatch"
         ],
         "sourceShotId": "festival-master:shot-plan-credit-02",
         "explanation": {
-          "es": "Imagen de storyboard regenerada; pendiente de revisiÃ³n editorial.",
-          "en": "Regenerated storyboard still; pending editorial review."
+          "en": "Production-credits card copy now requires on-screen Music: generated with Suno attribution; existing still predates that line. Do not regenerate until explicitly authorized.",
+          "es": "La cartela de créditos de producción ahora requiere la atribución Music: generated with Suno; la still actual es anterior. No regenerar hasta autorización explícita."
         }
       }
     },
@@ -22667,7 +22996,7 @@
       "id": "festival-master:shot-plan-042:take-02",
       "shotId": "festival-master:shot-plan-042",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-panel-01",
       "imageStatus": {
         "status": "needs_review",
@@ -22682,15 +23011,16 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "generatedAt": "2026-09-14T19:46:03.600Z",
         "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
         "stretchJobId": "festival-master:stretch-reactor-sorell-042-043:rev-1",
-        "stretchDigest": "1b4067825558968428dee6dc7260cc393c02ce491c5ed7227e27c16bf73f178c",
+        "stretchDigest": "942333fdf3e8c2a116b1bc827081d60f1022fd4da877a8063ff7a81520f226aa",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ]
       }
     },
@@ -22698,7 +23028,7 @@
       "id": "festival-master:shot-plan-043:take-02",
       "shotId": "festival-master:shot-plan-043",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-panel-02",
       "imageStatus": {
         "status": "needs_review",
@@ -22713,15 +23043,16 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "generatedAt": "2026-09-14T19:46:03.600Z",
         "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
         "stretchJobId": "festival-master:stretch-reactor-sorell-042-043:rev-1",
-        "stretchDigest": "1b4067825558968428dee6dc7260cc393c02ce491c5ed7227e27c16bf73f178c",
+        "stretchDigest": "942333fdf3e8c2a116b1bc827081d60f1022fd4da877a8063ff7a81520f226aa",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ]
       }
     },
@@ -22729,7 +23060,7 @@
       "id": "festival-master:shot-plan-044:take-02",
       "shotId": "festival-master:shot-plan-044",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
       "imageStatus": {
         "status": "needs_review",
@@ -22744,15 +23075,16 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "generatedAt": "2026-09-14T19:46:32.405Z",
         "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
         "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
-        "stretchDigest": "d97983c0a1addfca6e5cb218d580eb61bd9e03994e4bd6af115bc1c96f01f9e4",
+        "stretchDigest": "73a37d90da0d9a69bb52c50ab4fc56abacd7548554ae92e4341551341976a9f5",
         "referenceAssetIds": [
-          "asset:character-harlan-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet",
-          "asset:object-wired-comms-deck-patch-panel-sheet"
+          "asset:location-celestial-ardor-bridge-service-shaft-reference"
         ]
       }
     },
@@ -22760,7 +23092,7 @@
       "id": "festival-master:shot-plan-045:take-02",
       "shotId": "festival-master:shot-plan-045",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
       "imageStatus": {
         "status": "needs_review",
@@ -22775,15 +23107,16 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "generatedAt": "2026-09-14T19:46:32.405Z",
         "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-044-045",
         "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-044-045:rev-1",
-        "stretchDigest": "d97983c0a1addfca6e5cb218d580eb61bd9e03994e4bd6af115bc1c96f01f9e4",
+        "stretchDigest": "73a37d90da0d9a69bb52c50ab4fc56abacd7548554ae92e4341551341976a9f5",
         "referenceAssetIds": [
-          "asset:character-harlan-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet",
-          "asset:object-wired-comms-deck-patch-panel-sheet"
+          "asset:location-celestial-ardor-bridge-service-shaft-reference"
         ]
       }
     },
@@ -23099,7 +23432,7 @@
       "id": "festival-master:shot-plan-083:take-02",
       "shotId": "festival-master:shot-plan-083",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
       "imageStatus": {
         "status": "needs_review",
@@ -23114,14 +23447,15 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
         "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
-        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ]
       }
     },
@@ -23129,7 +23463,7 @@
       "id": "festival-master:shot-plan-084:take-02",
       "shotId": "festival-master:shot-plan-084",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
       "imageStatus": {
         "status": "needs_review",
@@ -23144,14 +23478,15 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
         "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
-        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ]
       }
     },
@@ -23159,7 +23494,7 @@
       "id": "festival-master:shot-plan-085:take-02",
       "shotId": "festival-master:shot-plan-085",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
       "imageStatus": {
         "status": "needs_review",
@@ -23174,14 +23509,15 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
         "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
-        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ]
       }
     },
@@ -23189,7 +23525,7 @@
       "id": "festival-master:shot-plan-086:take-02",
       "shotId": "festival-master:shot-plan-086",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
       "imageStatus": {
         "status": "needs_review",
@@ -23204,14 +23540,15 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "visualStretchId": "festival-master:stretch-bridge-greeting-prep-083-086",
         "stretchJobId": "festival-master:stretch-bridge-greeting-prep-083-086:rev-1",
-        "stretchDigest": "f20980d5b270857a3b0600f416e56c6625845e9d9bed22efdcda486d62fa2184",
+        "stretchDigest": "5b6b8a999b7ef1160f91c1cc6073393a6650fe97e435d34e99352fb9743d2420",
         "referenceAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ]
       }
     },
@@ -23219,7 +23556,7 @@
       "id": "festival-master:shot-plan-087:take-02",
       "shotId": "festival-master:shot-plan-087",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-velari-answer-087-088-panel-01",
       "imageStatus": {
         "status": "needs_review",
@@ -23234,15 +23571,15 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "generatedAt": "2026-09-14T19:46:38.926Z",
         "visualStretchId": "festival-master:stretch-velari-answer-087-088",
         "stretchJobId": "festival-master:stretch-velari-answer-087-088:rev-1",
-        "stretchDigest": "d2ff5aeb9d1df2ef1b0e9f1d7c3a00fa518941ba690d67cdb6eecd8e37bcd4b8",
+        "stretchDigest": "06a08a21c926b0f42d7c2ea613ee49b788cfba5ab61bc450e00627981c57a2a6",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
           "asset:location-velari-station-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ]
       }
     },
@@ -23250,7 +23587,7 @@
       "id": "festival-master:shot-plan-088:take-02",
       "shotId": "festival-master:shot-plan-088",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-velari-answer-087-088-panel-02",
       "imageStatus": {
         "status": "needs_review",
@@ -23265,15 +23602,15 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "generatedAt": "2026-09-14T19:46:38.926Z",
         "visualStretchId": "festival-master:stretch-velari-answer-087-088",
         "stretchJobId": "festival-master:stretch-velari-answer-087-088:rev-1",
-        "stretchDigest": "d2ff5aeb9d1df2ef1b0e9f1d7c3a00fa518941ba690d67cdb6eecd8e37bcd4b8",
+        "stretchDigest": "06a08a21c926b0f42d7c2ea613ee49b788cfba5ab61bc450e00627981c57a2a6",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
           "asset:location-velari-station-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ]
       }
     },
@@ -23281,7 +23618,7 @@
       "id": "festival-master:shot-plan-091:take-02",
       "shotId": "festival-master:shot-plan-091",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-velari-envoy-091-092-panel-01",
       "imageStatus": {
         "status": "needs_review",
@@ -23296,15 +23633,16 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "generatedAt": "2026-09-14T19:46:41.345Z",
         "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
         "stretchJobId": "festival-master:stretch-velari-envoy-091-092:rev-1",
-        "stretchDigest": "25364b79ab5880f336fac7b3da959f4afd88a15c4fc2c66f9e6129fe12deb5d7",
+        "stretchDigest": "ed349c6c728c196d35bdeaa5f341dc216d7d2c7950375ff1ec44ab34a8d702ce",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-velari-envoy-sheet",
           "asset:location-velari-station-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ]
       }
     },
@@ -23312,7 +23650,7 @@
       "id": "festival-master:shot-plan-092:take-02",
       "shotId": "festival-master:shot-plan-092",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-velari-envoy-091-092-panel-02",
       "imageStatus": {
         "status": "needs_review",
@@ -23327,15 +23665,16 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "generatedAt": "2026-09-14T19:46:41.345Z",
         "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
         "stretchJobId": "festival-master:stretch-velari-envoy-091-092:rev-1",
-        "stretchDigest": "25364b79ab5880f336fac7b3da959f4afd88a15c4fc2c66f9e6129fe12deb5d7",
+        "stretchDigest": "ed349c6c728c196d35bdeaa5f341dc216d7d2c7950375ff1ec44ab34a8d702ce",
         "referenceAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-velari-envoy-sheet",
           "asset:location-velari-station-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ]
       }
     },
@@ -23594,13 +23933,13 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author cleared possibly-OK defer).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor levantó el defer possibly-OK)."
         }
       },
       "generation": {
@@ -23624,13 +23963,13 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author cleared possibly-OK defer).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor levantó el defer possibly-OK)."
         }
       },
       "generation": {
@@ -23654,13 +23993,13 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author cleared possibly-OK defer).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor levantó el defer possibly-OK)."
         }
       },
       "generation": {
@@ -23777,7 +24116,7 @@
       "id": "festival-master:shot-plan-023:take-02",
       "shotId": "festival-master:shot-plan-023",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-01",
       "imageStatus": {
         "status": "needs_review",
@@ -23792,10 +24131,10 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "generatedAt": "2026-09-14T19:46:29.856Z",
         "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
         "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
-        "stretchDigest": "b674f3e2e9eda1934873ab03857d95b1b840ecc61873a8da509b42fd0370484b",
+        "stretchDigest": "d7858889f01a3caa7e31e34345b605cd8c3215706a8f458e4cec079b74d3bb84",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -23809,7 +24148,7 @@
       "id": "festival-master:shot-plan-024:take-02",
       "shotId": "festival-master:shot-plan-024",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-02",
       "imageStatus": {
         "status": "needs_review",
@@ -23824,10 +24163,10 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "generatedAt": "2026-09-14T19:46:29.856Z",
         "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
         "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
-        "stretchDigest": "b674f3e2e9eda1934873ab03857d95b1b840ecc61873a8da509b42fd0370484b",
+        "stretchDigest": "d7858889f01a3caa7e31e34345b605cd8c3215706a8f458e4cec079b74d3bb84",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -23841,7 +24180,7 @@
       "id": "festival-master:shot-plan-025:take-02",
       "shotId": "festival-master:shot-plan-025",
       "number": 2,
-      "status": "candidate",
+      "status": "selected",
       "imageAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-panel-03",
       "imageStatus": {
         "status": "needs_review",
@@ -23856,10 +24195,10 @@
       "generation": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "generatedAt": "2026-09-14T19:46:29.856Z",
         "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
         "stretchJobId": "festival-master:stretch-bridge-comms-cut-023-025:rev-1",
-        "stretchDigest": "b674f3e2e9eda1934873ab03857d95b1b840ecc61873a8da509b42fd0370484b",
+        "stretchDigest": "d7858889f01a3caa7e31e34345b605cd8c3215706a8f458e4cec079b74d3bb84",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -24448,13 +24787,13 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-01",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author approved vault-recovery-080-082).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor aprobó vault-recovery-080-082)."
         }
       },
       "generation": {
@@ -24480,13 +24819,13 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-02",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author approved vault-recovery-080-082).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor aprobó vault-recovery-080-082)."
         }
       },
       "generation": {
@@ -24512,13 +24851,13 @@
       "status": "candidate",
       "imageAssetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-03",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author approved vault-recovery-080-082).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor aprobó vault-recovery-080-082)."
         }
       },
       "generation": {
@@ -24736,7 +25075,12 @@
         "asset:character-periodista-sheet",
         "asset:character-sorell-sheet",
         "asset:character-voss-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-bridge-meal-010-012",
@@ -24961,7 +25305,12 @@
         "asset:character-sorell-sheet",
         "asset:character-voss-sheet",
         "asset:character-zao-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-axial-dock-006-009",
@@ -25189,7 +25538,12 @@
         "asset:character-rao-sheet",
         "asset:character-voss-sheet",
         "asset:character-zao-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-operations-gallery-004-005",
@@ -25304,7 +25658,12 @@
       "videoReferenceAssetIds": [
         "asset:character-voss-sheet",
         "asset:character-zao-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-central-access-013-015",
@@ -25464,7 +25823,12 @@
       "videoReferenceAssetIds": [
         "asset:character-rao-sheet",
         "asset:character-zao-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-reactor-optics-029-032",
@@ -25599,7 +25963,12 @@
       "combinedStillAssetId": "asset:festival-master-stretch-reactor-optics-029-032-sheet",
       "videoReferenceAssetIds": [
         "asset:character-zao-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-reactor-record-033-036",
@@ -25738,7 +26107,12 @@
       "combinedStillAssetId": "asset:festival-master-stretch-reactor-record-033-036-sheet",
       "videoReferenceAssetIds": [
         "asset:character-harlan-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-reactor-sorell-042-043",
@@ -25805,24 +26179,23 @@
       "blocking": [
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "outer-bay center beside console",
-          "screenSide": "center",
-          "facing": "Zao and the handheld comm",
-          "posture": "moving",
+          "zoneOrSeat": "outer-bay center, screen left",
+          "screenSide": "left",
+          "facing": "Zao and handheld comm",
+          "posture": "moving then braced",
           "eyelineTarget": "character:zao"
         },
         {
           "characterId": "character:zao",
-          "zoneOrSeat": "outer-bay center held by Sorell",
-          "screenSide": "center",
+          "zoneOrSeat": "outer-bay center, screen right, held by Sorell",
+          "screenSide": "right",
           "facing": "away from camera",
-          "posture": "other",
+          "posture": "unconscious and limp",
           "eyelineTarget": "character:sorell"
         }
       ],
       "sharedDescription": {
-        "en": "Continuous outer-bay rescue: Sorell catches and supports Zao, then calls through the still-jammed communications beside the optical console.",
-        "es": "Rescate continuo en la bahía exterior: Sorell atrapa y sostiene a Zao y luego llama por las comunicaciones aún interferidas junto a la consola óptica."
+        "en": "Continuous microgravity rescue: Sorell is the active rescuer in the dark EVA/security suit, screen left; Zao is the unconscious injured engineer, screen right, cradled by Sorell. Never swap their identities or clothing."
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -25842,7 +26215,8 @@
         "asset:character-sorell-sheet",
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:object-optical-contingency-transmitter-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet"
     },
@@ -25894,10 +26268,12 @@
       ],
       "locationId": "location:celestial-ardor-bridge",
       "presentCharacterIds": [
-        "character:harlan"
+        "character:harlan",
+        "character:voss",
+        "character:rao",
+        "character:okoye"
       ],
       "absentCharacterIds": [
-        "character:voss",
         "character:sorell",
         "character:zao"
       ],
@@ -25912,16 +26288,39 @@
       "blocking": [
         {
           "characterId": "character:harlan",
-          "zoneOrSeat": "bridge-side service hatch and comms tray",
+          "zoneOrSeat": "service-shaft comms tray then bridge-side hatch",
           "screenSide": "center",
-          "facing": "the tray, then bridge monitors",
+          "facing": "patch panel, then bridge crew and monitor",
           "posture": "moving",
-          "eyelineTarget": "the comms tray and monitor"
+          "eyelineTarget": "object:wired-comms-deck-patch-panel"
+        },
+        {
+          "characterId": "character:voss",
+          "zoneOrSeat": "command station",
+          "screenSide": "left",
+          "facing": "Harlan and restored monitor",
+          "posture": "standing",
+          "eyelineTarget": "character:harlan"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "right",
+          "facing": "Harlan and monitor",
+          "posture": "seated",
+          "eyelineTarget": "monitor"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station",
+          "screenSide": "far right",
+          "facing": "Harlan",
+          "posture": "standing",
+          "eyelineTarget": "character:harlan"
         }
       ],
       "sharedDescription": {
-        "en": "Two-panel bridge-side service-hatch stretch: Harlan reconnects the trunks, emerges alone, and places his false alibi while Sorell remains off-frame.",
-        "es": "Tramo de dos paneles junto a la escotilla: Harlan reconecta los troncales, emerge solo y coloca su coartada falsa mientras Sorell permanece fuera de cuadro."
+        "en": "Two-panel continuity: Harlan reconnects the camera and comms in the service shaft, then emerges into the current bridge where Voss and the bridge crew can see him and the restored feed. Sorell appears only inside the monitor feed, never physically in the bridge."
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -25938,10 +26337,11 @@
         }
       },
       "referenceAssetIds": [
-        "asset:character-harlan-sheet",
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet",
-        "asset:object-wired-comms-deck-patch-panel-sheet"
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet"
     },
@@ -26600,8 +27000,7 @@
         }
       ],
       "sharedDescription": {
-        "en": "Bridge greeting-preparation stretch: Sorell translates, Voss reconciles, the crew authorizes one clean send, and the Ardor answers the dark station with structured light.",
-        "es": "Tramo de preparación en el puente: Sorell traduce, Voss se reconcilia, la tripulación autoriza un envío limpio y el Ardor responde a la estación oscura con luz estructurada."
+        "en": "Current Celestial Ardor bridge continuity: Sorell, Voss, and Rao work at the interior hull-display stations while Okoye remains at security. The bridge windows show the dark exterior and the Velari station only; never show the Ardor’s exterior hull from inside the bridge. The greeting is visible on the interior display and later as reflected structured light, not as a different ship."
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -26616,7 +27015,8 @@
       "referenceAssetIds": [
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
     },
@@ -26668,10 +27068,10 @@
       ],
       "locationId": "location:velari-station",
       "presentCharacterIds": [
-        "character:sorell",
-        "character:voss"
+        "character:sorell"
       ],
       "absentCharacterIds": [
+        "character:voss",
         "character:rao",
         "character:okoye"
       ],
@@ -26686,24 +27086,15 @@
       "blocking": [
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "Ardor bridge window and tether point",
+          "zoneOrSeat": "Ardor external tether point",
           "screenSide": "left",
-          "facing": "the station and sphere",
-          "posture": "standing",
-          "eyelineTarget": "the Velari Transport Sphere"
-        },
-        {
-          "characterId": "character:voss",
-          "zoneOrSeat": "Ardor bridge window and adjacent tether point",
-          "screenSide": "right",
-          "facing": "the station and transport sphere",
-          "posture": "standing",
+          "facing": "station and sphere",
+          "posture": "tethered in EVA",
           "eyelineTarget": "vehicle:velari-transport-sphere"
         }
       ],
       "sharedDescription": {
-        "en": "Two-panel exterior response: the station answers, then the Velari Transport Sphere departs and approaches Sorell's ship in microgravity.",
-        "es": "Respuesta exterior en dos paneles: la estación responde y luego la Esfera de Transporte Velari parte y se acerca a la nave de Sorell en microgravedad."
+        "en": "Exterior microgravity response: Sorell alone watches the Velari station from the Ardor in a sealed EVA suit and helmet, tether visible. No Voss or other crew member appears in either panel; the transport sphere then leaves the station and approaches."
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -26721,9 +27112,9 @@
       },
       "referenceAssetIds": [
         "asset:character-sorell-sheet",
-        "asset:character-voss-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-velari-answer-087-088-sheet"
     },
@@ -26794,24 +27185,23 @@
       "blocking": [
         {
           "characterId": "character:sorell",
-          "zoneOrSeat": "tether point at sphere wall",
+          "zoneOrSeat": "tether point beside the large sphere",
           "screenSide": "left",
           "facing": "through the sphere wall",
-          "posture": "other",
+          "posture": "floating in EVA",
           "eyelineTarget": "character:velari-envoy"
         },
         {
           "characterId": "character:velari-envoy",
-          "zoneOrSeat": "floating center inside transport sphere",
+          "zoneOrSeat": "floating center inside the large sphere",
           "screenSide": "right",
           "facing": "Sorell through the transparent wall",
-          "posture": "other",
+          "posture": "floating, limbs lightly braced on the wall",
           "eyelineTarget": "character:sorell"
         }
       ],
       "sharedDescription": {
-        "en": "Two-panel first-contact exterior stretch: Sorell reaches the sphere, and the floating Velari envoy answers through its transparent wall in living light.",
-        "es": "Tramo exterior de primer contacto en dos paneles: Sorell llega a la esfera y el enviado Velari flotante responde a través de su pared transparente con luz viva."
+        "en": "Exterior microgravity first contact: the large transparent Velari Transport Sphere occupies most of the approach and contact framing, with Sorell outside in her tethered EVA suit and the envoy visibly floating inside with no floor."
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -26831,7 +27221,8 @@
         "asset:character-sorell-sheet",
         "asset:character-velari-envoy-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "combinedStillAssetId": "asset:festival-master-stretch-velari-envoy-091-092-sheet"
     },
@@ -27078,7 +27469,12 @@
       "combinedStillAssetId": "asset:festival-master-stretch-reactor-report-095-096-sheet",
       "videoReferenceAssetIds": [
         "asset:character-voss-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-engineering-audit-016-017",
@@ -27174,7 +27570,12 @@
       "combinedStillAssetId": "asset:festival-master-stretch-engineering-audit-016-017-sheet",
       "videoReferenceAssetIds": [
         "asset:character-zao-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-reactor-entrance-018-019",
@@ -27281,7 +27682,12 @@
       "videoReferenceAssetIds": [
         "asset:character-harlan-sheet",
         "asset:character-zao-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-vault-discovery-020-022",
@@ -27394,7 +27800,15 @@
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:object-proxima-geophysical-impulse-package-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-vault-discovery-020-022-sheet"
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ],
+      "combinedStillAssetId": "asset:festival-master-stretch-vault-discovery-020-022-sheet",
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md (author cleared defer for vault-discovery-020-022)"
+      }
     },
     {
       "id": "festival-master:stretch-service-cylinder-route-026-028",
@@ -27611,48 +28025,47 @@
       "blocking": [
         {
           "characterId": "character:harlan",
-          "zoneOrSeat": "established-1",
-          "screenSide": "left",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
-        },
-        {
-          "characterId": "character:okoye",
-          "zoneOrSeat": "established-2",
-          "screenSide": "center",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
-        },
-        {
-          "characterId": "character:rao",
-          "zoneOrSeat": "established-3",
-          "screenSide": "right",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
-        },
-        {
-          "characterId": "character:sorell",
-          "zoneOrSeat": "established-4",
-          "screenSide": "left",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "zoneOrSeat": "recessed service hatch behind bridge stations",
+          "screenSide": "far center",
+          "facing": "comms tray then hatch",
+          "posture": "concealed then withdrawing",
+          "eyelineTarget": "object:harlan-wrist-device"
         },
         {
           "characterId": "character:voss",
-          "zoneOrSeat": "established-5",
-          "screenSide": "center",
-          "facing": "toward the active exchange or console",
-          "posture": "other",
-          "eyelineTarget": "the active action"
+          "zoneOrSeat": "command station",
+          "screenSide": "left",
+          "facing": "forward consoles",
+          "posture": "standing",
+          "eyelineTarget": "forward display"
+        },
+        {
+          "characterId": "character:rao",
+          "zoneOrSeat": "analysis station",
+          "screenSide": "right",
+          "facing": "forward consoles",
+          "posture": "seated",
+          "eyelineTarget": "console"
+        },
+        {
+          "characterId": "character:sorell",
+          "zoneOrSeat": "translator station",
+          "screenSide": "center-left",
+          "facing": "forward consoles",
+          "posture": "seated",
+          "eyelineTarget": "forward display"
+        },
+        {
+          "characterId": "character:okoye",
+          "zoneOrSeat": "security station",
+          "screenSide": "center-right",
+          "facing": "forward consoles",
+          "posture": "standing",
+          "eyelineTarget": "forward display"
         }
       ],
       "sharedDescription": {
-        "en": "Continuous visual stretch for shots 023–024–025, preserving location, cast, blocking, and physical continuity.",
-        "es": "Tramo visual continuo para las tomas 023–024–025, que conserva ubicación, elenco, puesta y continuidad física."
+        "en": "Current Celestial Ardor bridge geometry: the five bridge crew face the curved forward consoles with their backs to the central shaft; Harlan remains concealed at the recessed service hatch until the channel cuts, then retreats before anyone turns."
       },
       "generationProfile": {
         "stillMode": "combined_storyboard_sheet",
@@ -27844,7 +28257,12 @@
         "asset:character-rao-sheet",
         "asset:character-sorell-sheet",
         "asset:character-voss-sheet"
-      ]
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "tmp/review-of-generated-stills.md"
+      }
     },
     {
       "id": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -28591,7 +29009,18 @@
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:prop-pack-vault-recovery-sheet"
       ],
-      "combinedStillAssetId": "asset:festival-master-stretch-vault-recovery-080-082-sheet"
+      "combinedStillAssetId": "asset:festival-master-stretch-vault-recovery-080-082-sheet",
+      "videoReferenceAssetIds": [
+        "asset:character-rao-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet"
+      ],
+      "videoPromptFreeze": {
+        "status": "approved",
+        "approvedAt": "2026-09-14",
+        "source": "author approved vault-recovery-080-082 for Seedance package/render"
+      }
     }
   ]
 }

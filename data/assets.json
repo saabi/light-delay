@@ -10277,18 +10277,26 @@
         "es": "Imagen de storyboard generada para festival-master:shot-plan-089; pendiente de revisión editorial.",
         "en": "Generated storyboard still for festival-master:shot-plan-089; pending editorial review."
       },
-      "width": 1536,
-      "height": 1024,
+      "width": 1672,
+      "height": 941,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T17:18:05.507Z"
+        "generatedAt": "2026-09-14T20:29:24.400Z"
       },
       "metadata": {
         "scriptId": "script:light-delay-festival-master",
         "shotId": "festival-master:shot-plan-089",
         "batch": "festival-master-storyboard-01",
-        "storyboardEligible": true
+        "storyboardEligible": true,
+        "referenceAssetIds": [
+          "asset:character-voss-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:character-sorell-sheet",
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
+        ],
+        "regenerationNote": "Corrected: Voss is physically inside the bridge; Sorell and the sphere appear only in the suit-camera monitor feed; the bridge hull fills the background."
       },
       "imageStatus": {
         "status": "needs_review",
@@ -10296,8 +10304,8 @@
           "quality"
         ],
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Regenerated independent storyboard still with corrected bridge/monitor continuity; pending editorial review.",
+          "es": "Imagen de storyboard independiente regenerada con continuidad corregida de puente/monitor; pendiente de revisión editorial."
         }
       }
     },
@@ -12322,13 +12330,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author approved vault-recovery-080-082).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor aprobó vault-recovery-080-082)."
         }
       }
     },
@@ -12445,12 +12453,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-sorell-042-043/sheet.png",
       "mimeType": "image/png",
-      "width": 1536,
-      "height": 1024,
+      "width": 1672,
+      "height": 941,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T09:59:15.836Z"
+        "generatedAt": "2026-09-14T19:42:26.673Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-reactor-sorell-042-043",
@@ -12694,13 +12702,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Combined visual-stretch storyboard sheet pending editorial review and split.",
-          "es": "Hoja storyboard combinada de visual stretch pendiente de revisión editorial y partición."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author cleared possibly-OK defer).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor levantó el defer possibly-OK)."
         }
       }
     },
@@ -12710,12 +12718,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/sheet.png",
       "mimeType": "image/png",
-      "width": 1536,
-      "height": 1024,
+      "width": 1672,
+      "height": 941,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T15:27:29.946Z"
+        "generatedAt": "2026-09-14T19:46:28.323Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-comms-cut-023-025",
@@ -12944,12 +12952,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/sheet.png",
       "mimeType": "image/png",
-      "width": 1536,
-      "height": 1024,
+      "width": 1672,
+      "height": 941,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T15:45:55.327Z"
+        "generatedAt": "2026-09-14T19:46:39.732Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-velari-envoy-091-092",
@@ -13337,12 +13345,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-sorell-042-043/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "generatedAt": "2026-09-14T19:46:03.600Z",
         "originalAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet"
       },
       "metadata": {
@@ -13351,9 +13359,9 @@
         "shotId": "festival-master:shot-plan-042",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13373,12 +13381,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-sorell-042-043/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:23.804Z",
+        "generatedAt": "2026-09-14T19:46:03.600Z",
         "originalAssetId": "asset:festival-master-stretch-reactor-sorell-042-043-sheet"
       },
       "metadata": {
@@ -13387,9 +13395,9 @@
         "shotId": "festival-master:shot-plan-043",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13409,12 +13417,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-harlan-alibi-044-045/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "generatedAt": "2026-09-14T19:46:32.405Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet"
       },
       "metadata": {
@@ -13423,9 +13431,9 @@
         "shotId": "festival-master:shot-plan-044",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13445,12 +13453,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-harlan-alibi-044-045/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.097Z",
+        "generatedAt": "2026-09-14T19:46:32.405Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-sheet"
       },
       "metadata": {
@@ -13459,9 +13467,9 @@
         "shotId": "festival-master:shot-plan-045",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13841,12 +13849,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
       },
       "metadata": {
@@ -13855,9 +13863,9 @@
         "shotId": "festival-master:shot-plan-083",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13877,12 +13885,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
       },
       "metadata": {
@@ -13891,9 +13899,9 @@
         "shotId": "festival-master:shot-plan-084",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13913,12 +13921,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-03.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
       },
       "metadata": {
@@ -13929,7 +13937,7 @@
         "panelRegionX": 0,
         "panelRegionY": 0.51,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13949,12 +13957,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-greeting-prep-083-086/panel-04.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.291Z",
+        "generatedAt": "2026-09-14T19:46:35.435Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-greeting-prep-083-086-sheet"
       },
       "metadata": {
@@ -13965,7 +13973,7 @@
         "panelRegionX": 0.51,
         "panelRegionY": 0.51,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -13985,12 +13993,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "generatedAt": "2026-09-14T19:46:38.926Z",
         "originalAssetId": "asset:festival-master-stretch-velari-answer-087-088-sheet"
       },
       "metadata": {
@@ -13999,9 +14007,9 @@
         "shotId": "festival-master:shot-plan-087",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -14021,12 +14029,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-answer-087-088/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.522Z",
+        "generatedAt": "2026-09-14T19:46:38.926Z",
         "originalAssetId": "asset:festival-master-stretch-velari-answer-087-088-sheet"
       },
       "metadata": {
@@ -14035,9 +14043,9 @@
         "shotId": "festival-master:shot-plan-088",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -14057,12 +14065,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "generatedAt": "2026-09-14T19:46:41.345Z",
         "originalAssetId": "asset:festival-master-stretch-velari-envoy-091-092-sheet"
       },
       "metadata": {
@@ -14071,9 +14079,9 @@
         "shotId": "festival-master:shot-plan-091",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -14093,12 +14101,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-velari-envoy-091-092/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:25.736Z",
+        "generatedAt": "2026-09-14T19:46:41.345Z",
         "originalAssetId": "asset:festival-master-stretch-velari-envoy-091-092-sheet"
       },
       "metadata": {
@@ -14107,9 +14115,9 @@
         "shotId": "festival-master:shot-plan-092",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -14449,13 +14457,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author cleared possibly-OK defer).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor levantó el defer possibly-OK)."
         }
       }
     },
@@ -14485,13 +14493,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author cleared possibly-OK defer).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor levantó el defer possibly-OK)."
         }
       }
     },
@@ -14521,13 +14529,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author cleared possibly-OK defer).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor levantó el defer possibly-OK)."
         }
       }
     },
@@ -14645,12 +14653,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "generatedAt": "2026-09-14T19:46:29.856Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
       },
       "metadata": {
@@ -14659,9 +14667,9 @@
         "shotId": "festival-master:shot-plan-023",
         "panelOrder": 1,
         "panelRegionX": 0,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -14681,12 +14689,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "generatedAt": "2026-09-14T19:46:29.856Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
       },
       "metadata": {
@@ -14695,9 +14703,9 @@
         "shotId": "festival-master:shot-plan-024",
         "panelOrder": 2,
         "panelRegionX": 0.51,
-        "panelRegionY": 0.078125,
+        "panelRegionY": 0.000266,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -14717,12 +14725,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-comms-cut-023-025/panel-03.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 819,
+      "height": 461,
       "source": {
         "provider": "local",
         "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:27.315Z",
+        "generatedAt": "2026-09-14T19:46:29.856Z",
         "originalAssetId": "asset:festival-master-stretch-bridge-comms-cut-023-025-sheet"
       },
       "metadata": {
@@ -14733,7 +14741,7 @@
         "panelRegionX": 0,
         "panelRegionY": 0.51,
         "panelRegionW": 0.49,
-        "panelRegionH": 0.411875,
+        "panelRegionH": 0.489734,
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
@@ -15429,13 +15437,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 1 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 1 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author approved vault-recovery-080-082).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor aprobó vault-recovery-080-082)."
         }
       }
     },
@@ -15465,13 +15473,13 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 2 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 2 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author approved vault-recovery-080-082).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor aprobó vault-recovery-080-082)."
         }
       }
     },
@@ -15501,13 +15509,385 @@
         "scriptId": "script:light-delay-festival-master"
       },
       "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Storyboard visual stretch approved for Seedance video prompt preparation on 2026-09-14 (author approved vault-recovery-080-082).",
+          "es": "Tramo visual del storyboard aprobado para preparar prompts de video Seedance el 2026-09-14 (autor aprobó vault-recovery-080-082)."
+        }
+      }
+    },
+    {
+      "id": "asset:prop-celestial-ardor-eva-suit-sheet",
+      "kind": "image",
+      "role": "reference",
+      "path": "/assets/props/celestial-ardor-eva-suit/model-sheet.png",
+      "mimeType": "image/png",
+      "title": {
+        "es": "Traje EVA del Celestial Ardor — hoja de referencia",
+        "en": "Celestial Ardor EVA suit — reference sheet"
+      },
+      "description": {
+        "es": "Hoja de referencia del traje EVA presurizado usado por la tripulación fuera de la nave, derivada de un cuadro aprobado de Sorell.",
+        "en": "Reference sheet for the pressurized EVA suit used by the crew outside the ship, derived from an approved Sorell frame."
+      },
+      "width": 1668,
+      "height": 936,
+      "source": {
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-14",
+        "referenceAssetId": "asset:festival-master-stretch-velari-answer-087-088-panel-01"
+      },
+      "metadata": {
+        "useCase": "stylized-concept",
+        "containsNarrativeContent": false,
+        "containsText": false,
+        "referenceAssetIds": [
+          "asset:festival-master-stretch-velari-answer-087-088-panel-01"
+        ],
+        "generationPrompt": "EVA suit model sheet derived from the approved Sorell EVA frame; preserve the established white-gray segmented pressure suit, spherical clear helmet, dark joint panels, chest life-support module, tether attachment, and utilitarian Celestial Ardor construction; show front, side, back, helmet, chest, and tether details without a character face."
+      },
+      "imageStatus": {
+        "status": "current",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "es": "Hoja de referencia derivada de un cuadro aprobado; pendiente de revisión editorial.",
+          "en": "Reference sheet derived from an approved frame; editorial review pending."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-operations-gallery-001-003-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-001-003/festival-master-stretch-operations-gallery-001-003-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 23042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T20:55:00Z",
+        "externalId": "ab5931b2-dd05-42c6-a1fe-8be5111a89ce"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-operations-gallery-001-003",
+        "stretchJobId": "festival-master:stretch-operations-gallery-001-003:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "611cb252e75c5499b75157fc1ec8b1816d665bcefb9e015d0a3a354d2dacad37",
+        "sourceRunId": "run:festival-master:stretch-operations-gallery-001-003:rev-1:video-1:ready"
+      },
+      "imageStatus": {
         "status": "needs_review",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Derived panel 3 from visual-stretch sheet; pending editorial review.",
-          "es": "Panel 3 derivado de la hoja visual-stretch; pendiente de revisión editorial."
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-meal-010-012-rev-2-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-meal-010-012/festival-master-stretch-bridge-meal-010-012-rev-2-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 21050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T21:34:04.280Z",
+        "externalId": "8a7760a8-7319-4b81-a71f-83177060c9ec"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-meal-010-012",
+        "stretchJobId": "festival-master:stretch-bridge-meal-010-012:rev-2:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "695dcb1f68a91a1dc006a96cafa01f8efdc4e2b5dd683332e15ddebdf51ea759",
+        "sourceRunId": "run:festival-master:stretch-bridge-meal-010-012:rev-2:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-engineering-audit-016-017-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-engineering-audit-016-017/festival-master-stretch-engineering-audit-016-017-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T21:34:04.792Z",
+        "externalId": "0a113187-63a7-4961-af37-6dae90f6f3a6"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-engineering-audit-016-017",
+        "stretchJobId": "festival-master:stretch-engineering-audit-016-017:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "1c6854d98e1062f4066dad630045759d970cfdf18589c8ae4850f95edc4e93b8",
+        "sourceRunId": "run:festival-master:stretch-engineering-audit-016-017:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-bridge-investigation-046-049-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-investigation-046-049/festival-master-stretch-bridge-investigation-046-049-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 25050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T21:34:05.310Z",
+        "externalId": "ef28f364-87f8-45d8-812a-499514d05970"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-bridge-investigation-046-049",
+        "stretchJobId": "festival-master:stretch-bridge-investigation-046-049:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "20bb31b52b4f4a60764d6b300ee45a4fc28a9258fb5d3b85e06286b4a7ccc620",
+        "sourceRunId": "run:festival-master:stretch-bridge-investigation-046-049:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-discovery-020-022-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-discovery-020-022/festival-master-stretch-vault-discovery-020-022-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 17042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T22:06:00Z",
+        "externalId": "8c38189a-9af7-4869-97a4-842de104c977"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "5052e8ebf37ae070050fc24d7a7bcdb62e82eb09c5a5f9fecadd0e06e82a58bd",
+        "sourceRunId": "run:festival-master:stretch-vault-discovery-020-022:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-discovery-020-022-rev-1-video-2-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-discovery-020-022/festival-master-stretch-vault-discovery-020-022-rev-1-video-2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 15042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T22:06:00Z",
+        "externalId": "11bb0338-bbc3-4ec9-a7c1-4dfc18099f53"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-discovery-020-022",
+        "stretchJobId": "festival-master:stretch-vault-discovery-020-022:rev-1:video-2",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "a38d01b6e9a0a6b18318444439830c11c778f5796795d654dc04462b65d1e3e4",
+        "sourceRunId": "run:festival-master:stretch-vault-discovery-020-022:rev-1:video-2:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-recovery-080-082-rev-1-video-2-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/festival-master-stretch-vault-recovery-080-082-rev-1-video-2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 9042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T22:47:00Z",
+        "externalId": "3a10dada-1cff-4bde-a9ae-fba0121cca2e"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1:video-2",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "788cca4e3660404f93bb15fbf1df545102d7c7266fba82b0efa6c2716fb2d08a",
+        "sourceRunId": "run:festival-master:stretch-vault-recovery-080-082:rev-1:video-2:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-vault-recovery-080-082-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-vault-recovery-080-082/festival-master-stretch-vault-recovery-080-082-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 24050,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-14T22:47:00Z",
+        "externalId": "95ba9e77-e95c-45de-b3a0-82b8f979e9a1"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-vault-recovery-080-082",
+        "stretchJobId": "festival-master:stretch-vault-recovery-080-082:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "31b4c9266cf0d0b53ca4bd5ba280e3fe9088c1e149256588aa9fb442d1b946ae",
+        "sourceRunId": "run:festival-master:stretch-vault-recovery-080-082:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-record-033-036-rev-1-video-1-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/festival-master-stretch-reactor-record-033-036-rev-1-video-1.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 24042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T00:00:00Z",
+        "externalId": "5b8ec773-ecfc-42ae-a103-4d39ad7ba52f"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1:video-1",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "53de77f114f09efd460ccff8bfc0953b92825d7060c90a9dbdd60a9da5895bf1",
+        "sourceRunId": "run:festival-master:stretch-reactor-record-033-036:rev-1:video-1:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
+        }
+      }
+    },
+    {
+      "id": "asset:festival-master-stretch-reactor-record-033-036-rev-1-video-2-video",
+      "kind": "video",
+      "role": "production",
+      "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-record-033-036/festival-master-stretch-reactor-record-033-036-rev-1-video-2.mp4",
+      "mimeType": "video/mp4",
+      "durationMs": 7042,
+      "width": 854,
+      "height": 480,
+      "source": {
+        "provider": "higgsfield-mcp-official",
+        "model": "seedance-2.5",
+        "generatedAt": "2026-09-15T03:55:36.165Z",
+        "externalId": "1248bbd4-6a4e-4d31-a1e8-f68c0f704a34"
+      },
+      "metadata": {
+        "visualStretchId": "festival-master:stretch-reactor-record-033-036",
+        "stretchJobId": "festival-master:stretch-reactor-record-033-036:rev-1:video-2",
+        "scriptId": "script:light-delay-festival-master",
+        "inputDigest": "b23644546023b4b05716f0ade1c4763709cfcb53fd7c44261063f3b740f9a6e0",
+        "sourceRunId": "run:festival-master:stretch-reactor-record-033-036:rev-1:video-2:ready"
+      },
+      "imageStatus": {
+        "status": "needs_review",
+        "reasons": [
+          "quality"
+        ],
+        "explanation": {
+          "en": "Grouped Seedance stretch video pending editorial review (job-level; not bound to member takes).",
+          "es": "Video Seedance del stretch pendiente de revisión editorial (nivel job; no ligado a tomas miembro)."
         }
       }
     }

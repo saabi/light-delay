@@ -4,7 +4,7 @@
     "id": "generation-plan:light-delay-festival-master",
     "scriptId": "script:light-delay-festival-master",
     "scriptVersion": "0.2.0-wip",
-    "sourceDigest": "c949f5cbfc30d014fa9a8d378c2667bda983b6211779821743fa5c4c38899587",
+    "sourceDigest": "95dd33e7a41088bb25b54aed3a9873937f58d8723b87387598f1fad367f2ed85",
     "campaignId": "campaign:higgsfield-trial-24h",
     "status": "blocked",
     "promptLanguage": "en",
@@ -130,7 +130,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-01"
         },
         "firstFrame": {
@@ -238,7 +238,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-02"
         },
         "firstFrame": {
@@ -349,7 +349,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-03"
         },
         "firstFrame": {
@@ -453,7 +453,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-01"
         },
         "firstFrame": {
@@ -557,7 +557,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-02"
         },
         "firstFrame": {
@@ -668,7 +668,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-01"
         },
         "firstFrame": {
@@ -779,7 +779,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-02"
         },
         "firstFrame": {
@@ -901,7 +901,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-03"
         },
         "firstFrame": {
@@ -1012,7 +1012,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-04"
         },
         "firstFrame": {
@@ -1123,7 +1123,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-01"
         },
         "firstFrame": {
@@ -1242,7 +1242,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-02"
         },
         "firstFrame": {
@@ -1367,7 +1367,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-03"
         },
         "firstFrame": {
@@ -1559,7 +1559,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-central-access-013-015-panel-01"
         },
         "firstFrame": {
@@ -1670,7 +1670,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-central-access-013-015-panel-02"
         },
         "firstFrame": {
@@ -1788,7 +1788,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-central-access-013-015-panel-03"
         },
         "firstFrame": {
@@ -1992,7 +1992,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-01"
         },
         "firstFrame": {
@@ -2077,7 +2077,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-02"
         },
         "firstFrame": {
@@ -2162,7 +2162,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-01"
         },
         "firstFrame": {
@@ -2265,7 +2265,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-02"
         },
         "firstFrame": {
@@ -2368,7 +2368,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-01"
         },
         "firstFrame": {
@@ -2457,7 +2457,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-02"
         },
         "firstFrame": {
@@ -2553,7 +2553,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-03"
         },
         "firstFrame": {
@@ -3233,7 +3233,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-01"
         },
         "firstFrame": {
@@ -3318,7 +3318,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-02"
         },
         "firstFrame": {
@@ -3403,7 +3403,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-03"
         },
         "firstFrame": {
@@ -3499,7 +3499,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-04"
         },
         "firstFrame": {
@@ -3595,7 +3595,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-01"
         },
         "firstFrame": {
@@ -3673,7 +3673,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-02"
         },
         "firstFrame": {
@@ -3762,7 +3762,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-03"
         },
         "firstFrame": {
@@ -3851,7 +3851,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-04"
         },
         "firstFrame": {
@@ -4803,20 +4803,6 @@
           "role": "location"
         },
         {
-          "kind": "image",
-          "id": "asset:object-harlan-wrist-device-sheet",
-          "path": "/assets/props/harlan-wrist-device/prop-sheet-v2.png",
-          "required": true,
-          "role": "object"
-        },
-        {
-          "kind": "image",
-          "id": "asset:object-wired-comms-deck-patch-panel-sheet",
-          "path": "/assets/props/wired-comms-deck-patch-panel/prop-sheet.png",
-          "required": true,
-          "role": "object"
-        },
-        {
           "kind": "audio",
           "id": "asset:voice-ref-en-harlan",
           "path": "/assets/voices/en/Harlan.wav",
@@ -4834,28 +4820,20 @@
       "referenceBudget": {
         "requiredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device",
-          "object:wired-comms-deck-patch-panel"
+          "location:celestial-ardor-bridge"
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device",
-          "object:wired-comms-deck-patch-panel"
+          "location:celestial-ardor-bridge"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet",
-          "asset:object-wired-comms-deck-patch-panel-sheet"
+          "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet",
-          "object:wired-comms-deck-patch-panel": "asset:object-wired-comms-deck-patch-panel-sheet"
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -4911,6 +4889,27 @@
         },
         {
           "kind": "image",
+          "id": "asset:character-okoye-sheet",
+          "path": "/assets/characters/okoye/model-sheet.png",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-rao-sheet",
+          "path": "/assets/characters/rao/model-sheet.png",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
+          "id": "asset:character-voss-sheet",
+          "path": "/assets/characters/voss/model-sheet.png",
+          "required": true,
+          "role": "character"
+        },
+        {
+          "kind": "image",
           "id": "asset:location-celestial-ardor-bridge-realistic-reference",
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
@@ -4934,19 +4933,31 @@
       "referenceBudget": {
         "requiredEntityIds": [
           "character:harlan",
+          "character:okoye",
+          "character:rao",
+          "character:voss",
           "location:celestial-ardor-bridge"
         ],
         "coveredEntityIds": [
           "character:harlan",
+          "character:okoye",
+          "character:rao",
+          "character:voss",
           "location:celestial-ardor-bridge"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-harlan-sheet",
+          "asset:character-okoye-sheet",
+          "asset:character-rao-sheet",
+          "asset:character-voss-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference"
         ],
         "coveringAssetByEntity": {
           "character:harlan": "asset:character-harlan-sheet",
+          "character:okoye": "asset:character-okoye-sheet",
+          "character:rao": "asset:character-rao-sheet",
+          "character:voss": "asset:character-voss-sheet",
           "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
@@ -5066,7 +5077,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-01"
         },
         "firstFrame": {
@@ -5163,7 +5174,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-02"
         },
         "firstFrame": {
@@ -5267,7 +5278,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-03"
         },
         "firstFrame": {
@@ -5364,7 +5375,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-04"
         },
         "firstFrame": {
@@ -8640,7 +8651,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-01"
         },
         "firstFrame": {
@@ -8750,7 +8761,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-02"
         },
         "firstFrame": {
@@ -8869,7 +8880,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-03"
         },
         "firstFrame": {
@@ -9399,6 +9410,13 @@
           "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
+        },
+        {
+          "kind": "image",
+          "id": "asset:location-velari-station-sheet",
+          "path": "/assets/locations/velari-station/concept-sheet.png",
+          "required": true,
+          "role": "location"
         }
       ],
       "referenceBudget": {
@@ -9406,26 +9424,30 @@
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "coveredEntityIds": [
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-rao-sheet",
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ],
         "coveringAssetByEntity": {
           "character:rao": "asset:character-rao-sheet",
           "character:sorell": "asset:character-sorell-sheet",
           "character:voss": "asset:character-voss-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "location:velari-station": "asset:location-velari-station-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -9481,13 +9503,6 @@
         },
         {
           "kind": "image",
-          "id": "asset:character-voss-sheet",
-          "path": "/assets/characters/voss/model-sheet.png",
-          "required": true,
-          "role": "character"
-        },
-        {
-          "kind": "image",
           "id": "asset:location-velari-station-sheet",
           "path": "/assets/locations/velari-station/concept-sheet.png",
           "required": true,
@@ -9504,23 +9519,19 @@
       "referenceBudget": {
         "requiredEntityIds": [
           "character:sorell",
-          "character:voss",
           "location:velari-station"
         ],
         "coveredEntityIds": [
           "character:sorell",
-          "character:voss",
           "location:velari-station"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
           "asset:location-velari-station-sheet"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
-          "character:voss": "asset:character-voss-sheet",
           "location:velari-station": "asset:location-velari-station-sheet"
         },
         "wouldOmitEntityIds": [],
@@ -9680,8 +9691,8 @@
         },
         {
           "kind": "image",
-          "id": "asset:location-velari-station-sheet",
-          "path": "/assets/locations/velari-station/concept-sheet.png",
+          "id": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-reference.png",
           "required": true,
           "role": "location"
         },
@@ -9697,26 +9708,26 @@
         "requiredEntityIds": [
           "character:sorell",
           "character:voss",
-          "location:velari-station",
+          "location:celestial-ardor-bridge",
           "vehicle:velari-transport-sphere"
         ],
         "coveredEntityIds": [
           "character:sorell",
           "character:voss",
-          "location:velari-station",
+          "location:celestial-ardor-bridge",
           "vehicle:velari-transport-sphere"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
           "asset:character-voss-sheet",
-          "asset:location-velari-station-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference",
           "asset:vehicle-velari-transport-sphere-sheet"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
           "character:voss": "asset:character-voss-sheet",
-          "location:velari-station": "asset:location-velari-station-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
           "vehicle:velari-transport-sphere": "asset:vehicle-velari-transport-sphere-sheet"
         },
         "wouldOmitEntityIds": [],
@@ -10271,7 +10282,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-report-095-096-panel-01"
         },
         "firstFrame": {
@@ -10378,7 +10389,7 @@
       "artifacts": {
         "animaticStill": {
           "required": true,
-          "status": "generated",
+          "status": "accepted",
           "assetId": "asset:festival-master-stretch-reactor-report-095-096-panel-02"
         },
         "firstFrame": {
@@ -10887,7 +10898,7 @@
         "asset:location-proxima-operations-gallery-interior-sheet",
         "asset:character-periodista-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [
         "asset:character-periodista-sheet"
       ],
@@ -10959,22 +10970,22 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-periodista-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-001, ~10s): start: All six crew watch the delayed Earth stream together in the operations gallery. event: The Earth wall divides hopeful supporters and frightened protesters while the delay caption remains visible. camera progression: Locked; establishes geography and screen direction. end: The broadcast holds the crew in a shared, uneasy attention. shot description: A delayed Earth broadcast fills Proxima's operations wall: a split feed of hopeful supporters and frightened protesters at the Jupiter mouth, a caption reading '43:18 DELAY' in clean English. In silhouette against the glow, the six-person Celestial Ardor crew stand loosely grouped, watching a debate that ended forty-three minutes ago. | Stage 2 (festival-master:shot-plan-002, ~7s): continue from prior settled state: The broadcast holds the crew in a shared, uneasy attention. start: The same gallery and delayed broadcast; Harlan and Sorell remain together in the foreground. event: Harlan speaks quietly, and Sorell answers without looking away from the wall. camera progression: Tracking; preserves eyeline and action-axis continuity. end: Their exchange shifts the shared viewing from public debate to personal unease. shot description: Harlan watches the broadcast, guarded, his face unreadable as he speaks quietly to himself: \"I wish they were right.\" Beside him Sorell answers without looking away from the display; the rest of the crew stays off-frame, still facing the wall. | Stage 3 (festival-master:shot-plan-003, ~6s): continue from prior settled state: Their exchange shifts the shared viewing from public debate to personal unease. start: The same gallery and stream; Voss now joins the foreground exchange. event: Voss lightly classifies Harlan and Sorell as opposites, and Sorell turns toward him. camera progression: Dolly; preserves eyeline and action-axis continuity. end: The crew is still together, but the first interpersonal fault line is visible. shot description: Voss, relaxed and amused, glances between Harlan and Sorell, classifying them lightly: \"So one optimist and one reluctant linguist. That may be balance.\" Sorell looks toward Voss, faintly surprised.\nsubjects: Present cast: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye. Reference map: @Image1 (asset:festival-master-stretch-operations-gallery-001-003-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-operations-gallery-001-003-panel-02, ordered keyframe); @Image3 (asset:festival-master-stretch-operations-gallery-001-003-panel-03, ordered keyframe); @Image4 (asset:character-periodista-sheet, visual_reference, entity map: character:periodista); @Image5 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image6 (asset:character-sorell-sheet, visual_reference, entity map: character:sorell); @Image7 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan); @Audio (asset:voice-ref-en-reporter, voice sample, entity map: character:periodista); @Audio (asset:voice-ref-en-sorell, voice sample, entity map: character:sorell); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:proxima-station. Ignore people in location stills.\ncamera: festival-master:shot-plan-001: Locked; establishes geography and screen direction.; festival-master:shot-plan-002: Tracking; preserves eyeline and action-axis continuity.; festival-master:shot-plan-003: Dolly; preserves eyeline and action-axis continuity.\nlighting: Operations gallery practical light mixed with the delayed Earth wall display.\nphysics: Approximate 0.5 g from the rotating habitat ring; bodies and the gallery remain settled to the ring floor.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous operations-gallery viewing stretch: same rotating-ring room, 0.5 g, Earth wall, six-person crew, and screen direction across three ordered panels. The reporter exists only inside the visible Earth broadcast display. Blocking:\ncharacter:harlan; zoneOrSeat=front-row-left-near-display; screenSide=left; facing=toward the Earth wall display, then slightly toward Sorell; posture=standing; eyelineTarget=the Earth wall for shot 001; character:sorell for shot 002\ncharacter:sorell; zoneOrSeat=front-row-center-near-display; screenSide=center; facing=toward the Earth wall display, then toward Harlan and Voss as addressed; posture=standing; eyelineTarget=the Earth wall for shot 001; character:harlan for shot 002; character:voss for shot 003\ncharacter:voss; zoneOrSeat=front-row-right-near-display; screenSide=right; facing=toward the Earth wall display, then toward Harlan and Sorell; posture=standing; eyelineTarget=the Earth wall for shot 001; character:harlan and character:sorell for shot 003\ncharacter:zao; zoneOrSeat=back-row-left-behind-harlan; screenSide=left; facing=toward the Earth wall display; posture=standing; eyelineTarget=the Earth wall display\ncharacter:rao; zoneOrSeat=back-row-center-behind-sorell; screenSide=center; facing=toward the Earth wall display; posture=standing; eyelineTarget=the Earth wall display\ncharacter:okoye; zoneOrSeat=back-row-right-behind-voss; screenSide=right; facing=toward the Earth wall display; posture=standing; eyelineTarget=the Earth wall display Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. the Earth reporter [character:periodista] at ~900ms in festival-master:shot-plan-001 (image asset:character-periodista-sheet, voice asset:voice-ref-en-reporter): {At the Jupiter mouth, protesters call it a door humanity never agreed to install. Supporters call tomorrow an invitation.} Commander Rylen Harlan [character:harlan] at ~0ms in festival-master:shot-plan-002 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {I wish they were right.} Dr. Lian Sorell [character:sorell] at ~1440ms in festival-master:shot-plan-002 (image asset:character-sorell-sheet, voice asset:voice-ref-en-sorell): {They gave us a primer and waited. We answer carefully, we listen, then we judge.} Captain Elias Voss [character:voss] at ~0ms in festival-master:shot-plan-003 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {So one optimist and one reluctant linguist. That may be balance.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-operations-gallery-001-003-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-operations-gallery-001-003-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-operations-gallery-001-003-panel-03"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-meal-010-012:rev-2",
@@ -11186,7 +11197,7 @@
         "asset:location-celestial-ardor-bridge-meal-table-sheet",
         "asset:vehicle-celestial-ardor-model-sheet-v2"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-harlan",
@@ -11257,22 +11268,22 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-010, ~6s): start: Six seated at the meeting table under thrust; trays anchored; the display shows the rotating Ardor silhouette. event: Zao glances up at the silhouette and delivers the name joke; tracking across the trays toward the display. camera progression: Tracking; orthogonal, legible insert framing. end: Arrangement established; mood light. shot description: Under steady thrust, the six crew share a meal from anchored trays at the bridge's meeting table. A systems display on the hull wall shows the Celestial Ardor's long silhouette slowly rotating; Zao glances up at it and delivers the name joke: \"Celestial Ardor. Sounds like a perfume with engine trouble.\" | Stage 2 (festival-master:shot-plan-011, ~6s): continue from prior settled state: Arrangement established; mood light. start: Same seats as panel 1. event: Sorell tops the joke toward Zao, then Harlan turns to Sorell with the serious question. camera progression: Dolly; orthogonal, legible insert framing. end: Table quiet; Sorell and Harlan locked across the table. shot description: Sorell, also amused, tops Zao's joke: \"Better than telling the Velari we arrived in the Flying Radiator.\" Harlan, probing, turns it serious across the table: \"And what if we're the ones being read wrong?\" | Stage 3 (festival-master:shot-plan-012, ~8s): continue from prior settled state: Table quiet; Sorell and Harlan locked across the table. start: Same seats; Harlan’s question hanging. event: Sorell answers Harlan; Voss ends it from the stations end. camera progression: Pan; preserves eyeline and action-axis continuity. end: Tone serious; seats unchanged. shot description: Sorell, serious now, answers Harlan: \"Then we correct the reading. We don't begin by punishing them for it.\" Voss ends it from the stations end of the table: \"First we arrive. Philosophy can wait.\"\nsubjects: Present cast: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye. Reference map: @Image1 (asset:festival-master-stretch-bridge-meal-010-012-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-bridge-meal-010-012-panel-02, ordered keyframe); @Image3 (asset:festival-master-stretch-bridge-meal-010-012-panel-03, ordered keyframe); @Image4 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image5 (asset:character-sorell-sheet, visual_reference, entity map: character:sorell); @Image6 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Image7 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan); @Audio (asset:voice-ref-en-sorell, voice sample, entity map: character:sorell); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-bridge-meal-table. Ignore people in location stills.\ncamera: festival-master:shot-plan-010: Tracking; orthogonal, legible insert framing.; festival-master:shot-plan-011: Dolly; orthogonal, legible insert framing.; festival-master:shot-plan-012: Pan; preserves eyeline and action-axis continuity.\nlighting: Bridge interior; displays glow blue; practical panel light.\nphysics: Steady 1 g apparent gravity from constant thrust toward the stern; decks transverse to the thrust axis; trays anchored, cups lidded, nothing floating.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous bridge-meal stretch: same location, cast, 1 g thrust physics, and a rectangular six-seat meeting table across three ordered panels. Hull side (backs to the hull): Voss at the stations end, Harlan middle, Okoye lift end. Room side (backs to the stair, facing the hull-wall display): Rao stations end, Sorell middle, Zao lift end. Nobody changes seat. Blocking:\ncharacter:voss; zoneOrSeat=table-hull-side-stations-end; screenSide=left; facing=along the table toward the lift end; posture=seated; eyelineTarget=the table; Sorell for cue-0024\ncharacter:harlan; zoneOrSeat=table-hull-side-middle; screenSide=center; facing=across the table toward Sorell; posture=seated; eyelineTarget=character:sorell\ncharacter:okoye; zoneOrSeat=table-hull-side-lift-end; screenSide=right; facing=across the table; posture=seated; eyelineTarget=Zao, then Harlan\ncharacter:rao; zoneOrSeat=table-room-side-stations-end; screenSide=left; facing=toward the hull-wall display; posture=seated; eyelineTarget=Zao during the joke, then Sorell\ncharacter:sorell; zoneOrSeat=table-room-side-middle; screenSide=center; facing=toward Harlan and the display; posture=seated; eyelineTarget=Zao for cue-0021, Harlan for cue-0023\ncharacter:zao; zoneOrSeat=table-room-side-lift-end; screenSide=right; facing=up toward the hull-wall display; posture=seated; eyelineTarget=the systems display for cue-0020, then Sorell Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Chief Engineer Zao [character:zao] at ~1700ms in festival-master:shot-plan-010 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Celestial Ardor. Sounds like a perfume with engine trouble.} Dr. Lian Sorell [character:sorell] at ~0ms in festival-master:shot-plan-011 (image asset:character-sorell-sheet, voice asset:voice-ref-en-sorell): {Better than telling the Velari we arrived in the Flying Radiator.} Commander Rylen Harlan [character:harlan] at ~4100ms in festival-master:shot-plan-011 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {And what if we’re the ones being read wrong?} Dr. Lian Sorell [character:sorell] at ~0ms in festival-master:shot-plan-012 (image asset:character-sorell-sheet, voice asset:voice-ref-en-sorell): {Then we correct the reading. We don’t begin by punishing them for it.} Captain Elias Voss [character:voss] at ~5300ms in festival-master:shot-plan-012 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {First we arrive. Philosophy can wait.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-bridge-meal-010-012-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-bridge-meal-010-012-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-bridge-meal-010-012-panel-03"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-axial-dock-006-009:rev-1",
@@ -11495,7 +11506,7 @@
       "stillReferenceAssetIds": [
         "asset:visual-pack-proxima-axial-dock-crew-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-harlan",
@@ -11563,23 +11574,22 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-006, ~4s): start: Cargo moving through the shaft toward the berth; the Ardor engaged at the tip. event: Tracking along the axis: Okoye pushes a pallet, Rao at the terminal, Zao at the collar. camera progression: Tracking; establishes geography and screen direction. end: Shaft and berth geometry established. shot description: Cargo moves through Proxima's axial dock at emergency tempo: the exact opening schedule arrived too late for an Earth delegation, so the local six-person crew loads the Celestial Ardor themselves under visible time pressure. | Stage 2 (festival-master:shot-plan-007, ~7s): continue from prior settled state: Shaft and berth geometry established. start: Same layout; Voss on the crew rail, Harlan at the tether point beside the hazardous-stores gate. event: Voss addresses Harlan along the shaft; Harlan answers. camera progression: Dolly; preserves eyeline and action-axis continuity. end: Harlan’s authority over hazardous stores visible. shot description: Voss, authoritative, addresses Harlan as \"Commander\" across the busy dock: \"Hazardous stores are yours. Nothing boards without your mark.\" Harlan, controlled, answers evenly: \"Understood. I'll close the vault myself.\". | Stage 3 (festival-master:shot-plan-008, ~6s): continue from prior settled state: Harlan’s authority over hazardous stores visible. start: Rao at the manifest terminal; Zao arrives from the collar. event: Rao closes the manifest; Zao is already turning to recheck from another angle. camera progression: Pan; preserves eyeline and action-axis continuity. end: Zao at the terminal, audit reopened. shot description: Elin Rao, focused, closes out her manifest check: \"Manifest balances. We're ready.\" Zao, methodical, is already turning to recheck from another angle. | Stage 4 (festival-master:shot-plan-009, ~4s): continue from prior settled state: Zao at the terminal, audit reopened. start: Zao at the terminal; Voss on the rail. event: Voss grants the minute; Zao accepts without stopping. camera progression: Locked; preserves eyeline and action-axis continuity. end: Voss moves off toward the station end; Zao stays to close the audit. shot description: Voss, pressed for time but yielding to her habit: \"One minute, Zao. Then I need my ship.\" Zao, confident, accepts: \"You'll have her.\".\nsubjects: Present cast: character:voss, character:harlan, character:sorell, character:zao, character:rao, character:okoye. Reference map: @Image1 (asset:festival-master-stretch-axial-dock-006-009-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-axial-dock-006-009-panel-02, ordered keyframe); @Image3 (asset:festival-master-stretch-axial-dock-006-009-panel-03, ordered keyframe); @Image4 (asset:festival-master-stretch-axial-dock-006-009-panel-04, ordered keyframe); @Image5 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image6 (asset:character-rao-sheet, visual_reference, entity map: character:rao); @Image7 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Image8 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan); @Audio (asset:voice-ref-en-elin, voice sample, entity map: character:rao); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:proxima-dock. Ignore people in location stills.\ncamera: festival-master:shot-plan-006: Tracking; establishes geography and screen direction.; festival-master:shot-plan-007: Dolly; preserves eyeline and action-axis continuity.; festival-master:shot-plan-008: Pan; preserves eyeline and action-axis continuity.; festival-master:shot-plan-009: Locked; preserves eyeline and action-axis continuity.\nlighting: Practical dock lighting: strips along the ribs, yellow safety markings, maintained industrial tone.\nphysics: Microgravity inside the pressurized axial transfer shaft on the non-rotating spine: no meaningful floor, bodies oriented along the shaft axis by handrails and tether points, cargo restrained on guides, nothing rests on a surface.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous stretch inside Proxima’s axial transfer shaft: same location, cast, and microgravity across four ordered panels. Harlan at the hazardous-stores gate by the berth; Voss on the crew rail mid-shaft; Rao at the manifest terminal; Okoye in the cargo lane; Zao at the collar then at the terminal; Sorell at the shaft mouth. Only Zao relocates between panels. Blocking:\ncharacter:harlan; zoneOrSeat=berth-end hazardous-stores gate (tether point beside the vestibule); screenSide=right; facing=toward the station end; posture=other; eyelineTarget=character:voss\ncharacter:voss; zoneOrSeat=mid-shaft, station side, on the crew rail; screenSide=left; facing=toward Harlan down the shaft; posture=other; eyelineTarget=Harlan for cue-0013, Zao for cue-0017\ncharacter:rao; zoneOrSeat=mid-shaft manifest terminal; screenSide=center; facing=the terminal, then Zao; posture=other; eyelineTarget=terminal, Zao for cue-0015\ncharacter:okoye; zoneOrSeat=mid-shaft cargo guide lane; screenSide=center; facing=along the guides toward the berth; posture=moving; eyelineTarget=cargo, then Harlan\ncharacter:zao; zoneOrSeat=berth-end collar checks, then the manifest terminal for 008–009; screenSide=right; facing=the collar, then Rao and Voss; posture=moving; eyelineTarget=collar, Rao for cue-0016, Voss for cue-0018\ncharacter:sorell; zoneOrSeat=shaft-mouth, station end, soft stores; screenSide=left; facing=toward the berth; posture=other; eyelineTarget=the cargo flow Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Captain Elias Voss [character:voss] at ~0ms in festival-master:shot-plan-007 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {Commander, hazardous stores are yours. Nothing boards without your mark.} Commander Rylen Harlan [character:harlan] at ~4480ms in festival-master:shot-plan-007 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {Understood. I’ll close the vault myself.} Elin Rao [character:rao] at ~0ms in festival-master:shot-plan-008 (image asset:character-rao-sheet, voice asset:voice-ref-en-elin): {Manifest balances. We’re ready.} Chief Engineer Zao [character:zao] at ~2480ms in festival-master:shot-plan-008 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {From this direction. Give me one pass from the other.} Captain Elias Voss [character:voss] at ~0ms in festival-master:shot-plan-009 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {One minute, Zao. Then I need my ship.} Chief Engineer Zao [character:zao] at ~2480ms in festival-master:shot-plan-009 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {You’ll have her.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-axial-dock-006-009-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-axial-dock-006-009-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-axial-dock-006-009-panel-03",
-        "stale_image_asset:asset:festival-master-stretch-axial-dock-006-009-panel-04"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-operations-gallery-004-005:rev-1",
@@ -11739,7 +11749,7 @@
         "asset:character-zao-sheet",
         "asset:location-proxima-operations-gallery-interior-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-voss",
@@ -11785,21 +11795,20 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-voss-sheet",
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-004, ~6s): start: Zao and Voss remain beside the quiet Earth wall after the group disperses. event: Zao names what she saw in Harlan without accusing him. camera progression: Pan; establishes geography and screen direction. end: Their private concern is established. shot description: After the others disperse, Zao catches Voss alone beside the now-quiet delayed feed, her expression low and exact, no accusation yet: \"That wasn't hope. Not from Harlan.\". | Stage 2 (festival-master:shot-plan-005, ~6s): continue from prior settled state: Their private concern is established. start: The same quiet gallery corner and two-person blocking continue. event: Voss reassures Zao while she holds his gaze. camera progression: Locked; orthogonal, legible insert framing. end: The exchange ends without either changing position. shot description: Voss, confident, reassures her: \"You find faults for a living. That doesn't make everyone a fault.\" Zao, wary but not backing down, holds his gaze: \"I'm not talking about everyone.\".\nsubjects: Present cast: character:voss, character:zao. Reference map: @Image1 (asset:festival-master-stretch-operations-gallery-004-005-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-operations-gallery-004-005-panel-02, ordered keyframe); @Image3 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Image4 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:proxima-station. Ignore people in location stills.\ncamera: festival-master:shot-plan-004: Pan; establishes geography and screen direction.; festival-master:shot-plan-005: Locked; orthogonal, legible insert framing.\nlighting: Practical gallery light mixed with the dimmed Earth wall.\nphysics: Approximate 0.5 g from the rotating habitat ring; both remain settled to the gallery floor.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Same quiet Operations Gallery corner, 0.5 g, Earth wall, and two-person screen direction across the two panels. Blocking:\ncharacter:voss; zoneOrSeat=gallery-front-right-by-wall; screenSide=left; facing=toward Zao and the Earth wall; posture=standing; eyelineTarget=character:zao\ncharacter:zao; zoneOrSeat=gallery-front-left-by-wall; screenSide=right; facing=toward Voss and the Earth wall; posture=standing; eyelineTarget=character:voss Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Chief Engineer Zao [character:zao] at ~3500ms in festival-master:shot-plan-004 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {That wasn’t hope. Not from Harlan.} Captain Elias Voss [character:voss] at ~0ms in festival-master:shot-plan-005 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {You find faults for a living. That doesn’t make everyone a fault.} Chief Engineer Zao [character:zao] at ~3840ms in festival-master:shot-plan-005 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {I’m not talking about everyone.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-operations-gallery-004-005-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-operations-gallery-004-005-panel-02"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-central-access-013-015:rev-1",
@@ -12002,7 +12011,7 @@
         "asset:character-harlan-sheet",
         "asset:location-celestial-ardor-central-access-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-elin",
@@ -12057,22 +12066,20 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-rao-sheet",
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-013, ~5s): start: Thrust cuts and the four crew members remain attached to the central shaft geometry. event: The central stair loses up and down as the ship turns. camera progression: Locked; establishes geography and screen direction. end: The microgravity arrangement is established. shot description: At Jupiter periapsis thrust cuts: loose straps and hair rise as the central stair becomes a helix without up or down, the ship turning end for end around the crew. | Stage 2 (festival-master:shot-plan-014, ~5s): continue from prior settled state: The microgravity arrangement is established. start: The same shaft and handhold arrangement continue. event: Elin marks the loss of the floor while loose objects drift. camera progression: Tracking; preserves eyeline and action-axis continuity. end: The crew remains in the same shaft positions. shot description: Engine vibration falls away; restraints click softly and a loose spoon taps slowly, end over end, against its own tether. Elin, alert, marks the change: \"There goes the floor.\". | Stage 3 (festival-master:shot-plan-015, ~5s): continue from prior settled state: The crew remains in the same shaft positions. start: The same microgravity arrangement holds. event: Zao steadies the others through the maneuver. camera progression: Dolly; preserves eyeline and action-axis continuity. end: The maneuver continues without a spatial reset. shot description: Zao, calm, steadies the others through the maneuver: \"Keep a hand on something you like.\".\nsubjects: Present cast: character:zao, character:rao, character:sorell, character:harlan. Reference map: @Image1 (asset:festival-master-stretch-central-access-013-015-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-central-access-013-015-panel-02, ordered keyframe); @Image3 (asset:festival-master-stretch-central-access-013-015-panel-03, ordered keyframe); @Image4 (asset:character-rao-sheet, visual_reference, entity map: character:rao); @Image5 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-elin, voice sample, entity map: character:rao); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-central-access. Ignore people in location stills.\ncamera: festival-master:shot-plan-013: Locked; establishes geography and screen direction.; festival-master:shot-plan-014: Tracking; preserves eyeline and action-axis continuity.; festival-master:shot-plan-015: Dolly; preserves eyeline and action-axis continuity.\nlighting: Central-shaft practicals and instrument glow; no artificial floor direction.\nphysics: Microgravity during the scheduled thrust cutoff; bodies and loose objects drift around the shaft.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Same central shaft, helical stairs, rails, and four-person tether arrangement across three ordered panels. Blocking:\ncharacter:zao; zoneOrSeat=central-shaft-lower-rail; screenSide=left; facing=along the shaft axis; posture=other; eyelineTarget=the crew\ncharacter:rao; zoneOrSeat=central-shaft-console-rail; screenSide=center; facing=toward the instrument panel; posture=other; eyelineTarget=the instrument panel\ncharacter:sorell; zoneOrSeat=central-shaft-mid-rail; screenSide=right; facing=toward Zao and the shaft axis; posture=other; eyelineTarget=character:zao\ncharacter:harlan; zoneOrSeat=central-shaft-upper-rail; screenSide=right; facing=along the shaft axis; posture=other; eyelineTarget=the crew Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Elin Rao [character:rao] at ~3600ms in festival-master:shot-plan-014 (image asset:character-rao-sheet, voice asset:voice-ref-en-elin): {There goes the floor.} Chief Engineer Zao [character:zao] at ~0ms in festival-master:shot-plan-015 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Keep a hand on something you like.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-central-access-013-015-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-central-access-013-015-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-central-access-013-015-panel-03"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-optics-029-032:rev-1",
@@ -12272,16 +12279,12 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [
-        "asset:object-optical-contingency-transmitter-sheet"
-      ],
+      "videoReferencePolicy": "explicit",
+      "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-zao"
       ],
-      "sharedReferenceAssetIds": [
-        "asset:object-optical-contingency-transmitter-sheet"
-      ],
+      "sharedReferenceAssetIds": [],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:zao",
@@ -12295,7 +12298,6 @@
         "attachedAssetIds": [
           "asset:festival-master-stretch-reactor-optics-029-032-panel-01",
           "asset:festival-master-stretch-reactor-optics-029-032-panel-02",
-          "asset:object-optical-contingency-transmitter-sheet",
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
@@ -12317,21 +12319,19 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-029, ~8s): start: Zao finishes the interrupted bridge call in the reactor service bay. event: She tests the dead channels while the countdown continues. camera progression: Locked; orthogonal, legible insert framing. end: The communications failure is established as deliberate. shot description: Zao finishes her sentence into dead air, then rapidly tests every channel in turn while the bomb's timer continues behind her, unseen but implied by a small wall countdown. | Stage 2 (festival-master:shot-plan-030, ~14s): continue from prior settled state: The communications failure is established as deliberate. start: Zao remains at the same bay console. event: She names the radio and hardline failures and searches for another route. camera progression: Tracking; preserves eyeline and action-axis continuity. end: She turns to the independent optical console. shot description: Frightened but precise, Zao names the failed routes at a comms panel: \"Radio. Hardline. Emergency. All three. That's deliberate.\" \"Internal comms are cut. I need another way to reach someone.\".\nsubjects: Present cast: character:zao. Reference map: @Image1 (asset:festival-master-stretch-reactor-optics-029-032-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-reactor-optics-029-032-panel-02, ordered keyframe); @Image3 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-reactor-service-bay. Ignore people in location stills.\ncamera: festival-master:shot-plan-029: Locked; orthogonal, legible insert framing.; festival-master:shot-plan-030: Tracking; preserves eyeline and action-axis continuity.\nlighting: Reactor-bay practicals, instrument glow, and the optical console display.\nphysics: Microgravity in the reactor service bay; Zao works hand-over-hand and nothing rests on a floor.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous reactor service-bay diagnosis: the same microgravity console cluster, failed comms, countdown, and optical-array geometry across four panels. Blocking:\ncharacter:zao; zoneOrSeat=outer-bay optical console; screenSide=center; facing=the comms panel and optical-array console; posture=moving; eyelineTarget=the active console Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Chief Engineer Zao [character:zao] at ~5350ms in festival-master:shot-plan-029 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {—and Harlan knows. Bridge?} Chief Engineer Zao [character:zao] at ~0ms in festival-master:shot-plan-030 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Radio. Hardline. Emergency. All three. That’s deliberate.} Chief Engineer Zao [character:zao] at ~5840ms in festival-master:shot-plan-030 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Internal comms are cut. I need another way to reach someone.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-reactor-optics-029-032-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-reactor-optics-029-032-panel-02"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-optics-029-032:rev-1:video-2",
@@ -12366,7 +12366,7 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-zao"
@@ -12410,21 +12410,19 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-031, ~12s): start: Zao reaches the optical-array control console. event: She rules out Proxima, Earth, and the throat before selecting the forward intercept. camera progression: Dolly; preserves eyeline and action-axis continuity. end: The crossing clock gives her a viable target. shot description: Pressed, Zao eliminates routes aloud at the independent optical-array console: \"Proxima's behind Jupiter. Earth gets it, answers too late. The throat won't listen.\". | Stage 2 (festival-master:shot-plan-032, ~7s): continue from prior settled state: The crossing clock gives her a viable target. start: The optical console holds the forward geometry. event: Zao finds the moving intercept and begins the transmission setup. camera progression: Pan; preserves eyeline and action-axis continuity. end: The aimed contingency transmission is ready to record. shot description: The crossing clock aligns with ordinary light-time on her display. Zao stops talking, resolved, and begins plotting a moving intercept: \"There you are.\" Only \"23 H 15 MIN\" is legible on screen; destination and trajectory stay hidden from view.\nsubjects: Present cast: character:zao. Reference map: @Image1 (asset:festival-master-stretch-reactor-optics-029-032-panel-03, ordered keyframe); @Image2 (asset:festival-master-stretch-reactor-optics-029-032-panel-04, ordered keyframe); @Image3 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-reactor-service-bay. Ignore people in location stills.\ncamera: festival-master:shot-plan-031: Dolly; preserves eyeline and action-axis continuity.; festival-master:shot-plan-032: Pan; preserves eyeline and action-axis continuity.\nlighting: Reactor-bay practicals, instrument glow, and the optical console display.\nphysics: Microgravity in the reactor service bay; Zao works hand-over-hand and nothing rests on a floor.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous reactor service-bay diagnosis: the same microgravity console cluster, failed comms, countdown, and optical-array geometry across four panels. Blocking:\ncharacter:zao; zoneOrSeat=outer-bay optical console; screenSide=center; facing=the comms panel and optical-array console; posture=moving; eyelineTarget=the active console Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Chief Engineer Zao [character:zao] at ~0ms in festival-master:shot-plan-031 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Proxima’s behind Jupiter. Earth gets it, answers too late. The throat won’t listen.} Chief Engineer Zao [character:zao] at ~5920ms in festival-master:shot-plan-031 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {And I can’t address the Velari without Sorell — not back to Earth, not through the throat, not to them.} Chief Engineer Zao [character:zao] at ~5750ms in festival-master:shot-plan-032 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {There you are.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-reactor-optics-029-032-panel-03",
-        "stale_image_asset:asset:festival-master-stretch-reactor-optics-029-032-panel-04"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-record-033-036:rev-1",
@@ -12639,7 +12637,7 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [
         "asset:character-harlan-sheet"
       ],
@@ -12686,22 +12684,20 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-033, ~8s): start: Zao records at the optical console in volatile memory. event: Her words remain unheard while the recording is captured. camera progression: Locked; establishes geography and screen direction. end: The warning is recorded but not yet transmitted. shot description: Zao records into volatile memory: we see her mouth moving, speaking urgently into a small recorder, but the frame implies no audio is heard — her exact words remain withheld. | Stage 2 (festival-master:shot-plan-034, ~9s): continue from prior settled state: The warning is recorded but not yet transmitted. start: Zao finishes the recording as the service shaft vibration approaches. event: She listens without leaving the console cluster. camera progression: Tracking; preserves eyeline and action-axis continuity. end: The approaching threat is audible in her posture, not yet in frame. shot description: From behind Zao, watching her finish recording; her posture is tense, listening for the approaching vibration of the distant service hatch. | Stage 3 (festival-master:shot-plan-035, ~8s): continue from prior settled state: The approaching threat is audible in her posture, not yet in frame. start: Zao signs the packet and sets the narrow optical sweep. event: The display confirms TRANSMITTED without exposing the aim point. camera progression: Dolly; orthogonal, legible insert framing. end: The warning has left the ship before Harlan enters. shot description: She signs the packet and sets a narrow divergence sweep on the optical-array console, then transmits. The display shows only the word \"TRANSMITTED\" — never an aim point or destination.\nsubjects: Present cast: character:zao, character:harlan. Reference map: @Image1 (asset:festival-master-stretch-reactor-record-033-036-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-reactor-record-033-036-panel-02, ordered keyframe); @Image3 (asset:festival-master-stretch-reactor-record-033-036-panel-03, ordered keyframe); @Image4 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-reactor-service-bay. Ignore people in location stills.\ncamera: festival-master:shot-plan-033: Locked; establishes geography and screen direction.; festival-master:shot-plan-034: Tracking; preserves eyeline and action-axis continuity.; festival-master:shot-plan-035: Dolly; orthogonal, legible insert framing.\nlighting: Reactor-bay practicals and optical-console glow; the transmission display is English-only.\nphysics: Microgravity in the reactor service bay; Harlan closes distance by controlled pushes and Zao remains anchored to the console.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous reactor-bay confrontation for shots 033–034–035–036, preserving the recording, narrow-beam transmission, Harlan’s arrival, cast, and microgravity geometry. Blocking:\ncharacter:zao; zoneOrSeat=outer-bay optical console; screenSide=left; facing=the console, then Harlan; posture=moving; eyelineTarget=the console and character:harlan\ncharacter:harlan; zoneOrSeat=service-hatch approach to console; screenSide=right; facing=Zao and the console; posture=moving; eyelineTarget=character:zao Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: No dialogue cues in this bucket; ambient bridge only unless samples attached.\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-reactor-record-033-036-rev-1-video-1-video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-reactor-record-033-036-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-reactor-record-033-036-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-reactor-record-033-036-panel-03"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-record-033-036:rev-1:video-2",
@@ -12729,7 +12725,7 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-harlan"
@@ -12776,20 +12772,20 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-036, ~7s): start: Harlan enters the bay after the pointing solution is closed. event: He sees only the transmission confirmation and demands its destination. camera progression: Pan; establishes geography and screen direction. end: Zao refuses to reveal the target; Harlan controls the encounter. shot description: Harlan enters as Zao closes the pointing solution before he can read it; he sees only that a transmission left, dangerous and focused: \"Who did you send that to?\".\nsubjects: Present cast: character:zao, character:harlan. Reference map: @Image1 (asset:festival-master-stretch-reactor-record-033-036-panel-04, ordered keyframe); @Image2 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-reactor-service-bay. Ignore people in location stills.\ncamera: festival-master:shot-plan-036: Pan; establishes geography and screen direction.\nlighting: Reactor-bay practicals and optical-console glow; the transmission display is English-only.\nphysics: Microgravity in the reactor service bay; Harlan closes distance by controlled pushes and Zao remains anchored to the console.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous reactor-bay confrontation for shots 033–034–035–036, preserving the recording, narrow-beam transmission, Harlan’s arrival, cast, and microgravity geometry. Blocking:\ncharacter:zao; zoneOrSeat=outer-bay optical console; screenSide=left; facing=the console, then Harlan; posture=moving; eyelineTarget=the console and character:harlan\ncharacter:harlan; zoneOrSeat=service-hatch approach to console; screenSide=right; facing=Zao and the console; posture=moving; eyelineTarget=character:zao Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Commander Rylen Harlan [character:harlan] at ~5470ms in festival-master:shot-plan-036 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {Who did you send that to?}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-reactor-record-033-036-rev-1-video-2-video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-reactor-record-033-036-panel-04"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-sorell-042-043:rev-1",
@@ -12819,13 +12815,15 @@
         "asset:character-sorell-sheet",
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:object-optical-contingency-transmitter-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "sharedReferenceAssetIds": [
         "asset:character-sorell-sheet",
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:object-optical-contingency-transmitter-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
@@ -12845,7 +12843,8 @@
           "asset:character-sorell-sheet",
           "asset:character-zao-sheet",
           "asset:location-celestial-ardor-reactor-service-bay-sheet",
-          "asset:object-optical-contingency-transmitter-sheet"
+          "asset:object-optical-contingency-transmitter-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
@@ -12878,7 +12877,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity; Sorell and Zao drift together with no usable floor.\nLighting: Outer-bay practicals, optical-console glow, and blood suspended in the air.\nShared: Continuous outer-bay rescue: Sorell catches and supports Zao, then calls through the still-jammed communications beside the optical console.\nPresent cast: character:sorell, character:zao.\nBlocking:\ncharacter:sorell; zoneOrSeat=outer-bay center beside console; screenSide=center; facing=Zao and the handheld comm; posture=moving; eyelineTarget=character:zao\ncharacter:zao; zoneOrSeat=outer-bay center held by Sorell; screenSide=center; facing=away from camera; posture=other; eyelineTarget=character:sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-042. Start: Sorell enters the outer bay and catches Zao's drifting body. Event: She checks the airway and pulse in microgravity. End: Sorell holds Zao and searches for help. Delta/description: Sorell reaches the outer bay and catches Zao's drifting, bloodied body, checking her airway and pulse, pressing uselessly at blood that no longer circulates in microgravity. The optical transmitter and service-shaft trays remain outside this frame. Composition size: MCU. Visible: character:sorell, character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-043. Start: Sorell still cradles Zao beside the optical console. Event: She calls the bridge into the jammed comms and receives no answer. End: Her isolation and fear are established. Delta/description: Sorell, panicked, calls urgently into a handheld comm while still holding Zao's body:. Composition size: ELS. Visible: character:sorell, character:zao.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-reactor-service-bay.\nPhysics: Microgravity; Sorell and Zao drift together with no usable floor.\nLighting: Outer-bay practicals, optical-console glow, and blood suspended in the air.\nShared: Continuous microgravity rescue: Sorell is the active rescuer in the dark EVA/security suit, screen left; Zao is the unconscious injured engineer, screen right, cradled by Sorell. Never swap their identities or clothing.\nPresent cast: character:sorell, character:zao.\nBlocking:\ncharacter:sorell; zoneOrSeat=outer-bay center, screen left; screenSide=left; facing=Zao and handheld comm; posture=moving then braced; eyelineTarget=character:zao\ncharacter:zao; zoneOrSeat=outer-bay center, screen right, held by Sorell; screenSide=right; facing=away from camera; posture=unconscious and limp; eyelineTarget=character:sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-042. Start: Sorell enters the outer bay and catches Zao's drifting body. Event: She checks the airway and pulse in microgravity. End: Sorell holds Zao and searches for help. Delta/description: In microgravity, Sorell—clearly the active rescuer—catches and cradles Zao, the unconscious injured engineer. Sorell stays screen left in her dark EVA/security suit; Zao stays screen right in her engineer clothing. The optical transmitter remains outside frame. Composition size: MCU. Visible: character:sorell, character:zao.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-043. Start: Sorell still cradles Zao beside the optical console. Event: She calls the bridge into the jammed comms and receives no answer. End: Her isolation and fear are established. Delta/description: Still in microgravity, Sorell remains screen left, supporting Zao's limp body screen right while raising the handheld comm. Keep their identities and positions unchanged; the optical transmitter remains outside frame. Composition size: ELS. Visible: character:sorell, character:zao.",
       "outputs": [
         {
           "order": 1,
@@ -12954,14 +12953,19 @@
         "asset:character-sorell-sheet",
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
-        "asset:object-optical-contingency-transmitter-sheet"
+        "asset:object-optical-contingency-transmitter-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
+      "effectiveVideoReferenceAssetIds": [
+        "asset:prop-celestial-ardor-eva-suit-sheet"
+      ],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-sorell"
       ],
-      "sharedReferenceAssetIds": [],
+      "sharedReferenceAssetIds": [
+        "asset:prop-celestial-ardor-eva-suit-sheet"
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:sorell",
@@ -12979,6 +12983,7 @@
         "attachedAssetIds": [
           "asset:festival-master-stretch-reactor-sorell-042-043-panel-01",
           "asset:festival-master-stretch-reactor-sorell-042-043-panel-02",
+          "asset:prop-celestial-ardor-eva-suit-sheet",
           "asset:voice-ref-en-sorell"
         ],
         "coveringAssetByEntity": {
@@ -13012,10 +13017,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-reactor-sorell-042-043-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-reactor-sorell-042-043-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-reactor-sorell-042-043-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -13045,42 +13049,48 @@
         }
       ],
       "stillReferenceAssetIds": [
-        "asset:character-harlan-sheet",
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet",
-        "asset:object-wired-comms-deck-patch-panel-sheet"
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
       ],
       "sharedReferenceAssetIds": [
-        "asset:character-harlan-sheet",
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet",
-        "asset:object-wired-comms-deck-patch-panel-sheet"
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device",
-          "object:wired-comms-deck-patch-panel"
+          "character:okoye",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device",
-          "object:wired-comms-deck-patch-panel"
+          "character:okoye",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
-          "asset:character-harlan-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:location-celestial-ardor-bridge-realistic-reference",
-          "asset:object-harlan-wrist-device-sheet",
-          "asset:object-wired-comms-deck-patch-panel-sheet"
+          "asset:location-celestial-ardor-bridge-service-shaft-reference"
         ],
         "coveringAssetByEntity": {
-          "character:harlan": "asset:character-harlan-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
-          "object:harlan-wrist-device": "asset:object-harlan-wrist-device-sheet",
-          "object:wired-comms-deck-patch-panel": "asset:object-wired-comms-deck-patch-panel-sheet"
+          "character:harlan": "asset:character-pair-voss-harlan-bridge-sheet",
+          "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
+          "character:rao": "asset:character-pair-rao-sorell-bridge-sheet",
+          "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -13107,7 +13117,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Microgravity during the return through the bridge-side service hatch; Harlan uses rails and the tray.\nLighting: Bridge instrument glow and the restored camera monitor.\nShared: Two-panel bridge-side service-hatch stretch: Harlan reconnects the trunks, emerges alone, and places his false alibi while Sorell remains off-frame.\nPresent cast: character:harlan.\nBlocking:\ncharacter:harlan; zoneOrSeat=bridge-side service hatch and comms tray; screenSide=center; facing=the tray, then bridge monitors; posture=moving; eyelineTarget=the comms tray and monitor\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-044. Start: Harlan reaches the bridge-side service tray after the murder. Event: He reconnects the communication trunks and emerges controlled. End: The bridge sees a composed officer returning from the hatch. Delta/description: Harlan reconnects the communications trunks at the service-shaft tray and emerges through the bridge-side hatch, controlled. Composition size: MS. Visible: character:harlan.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-045. Start: Harlan remains alone at the bridge-side hatch and monitor. Event: He denies seeing Sorell while the restored monitor shows her with Zao. End: His alibi is placed before the bridge crew returns. Delta/description: Deceptive, Harlan separates himself from the scene. Harlan is the only physical person in this compartment; behind him, a restored camera-feed monitor shows Sorell alone holding the bloodied body. Composition size: CU. Visible: character:harlan.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Microgravity during the return through the bridge-side service hatch; Harlan uses rails and the tray.\nLighting: Bridge instrument glow and the restored camera monitor.\nShared: Two-panel continuity: Harlan reconnects the camera and comms in the service shaft, then emerges into the current bridge where Voss and the bridge crew can see him and the restored feed. Sorell appears only inside the monitor feed, never physically in the bridge.\nPresent cast: character:harlan, character:voss, character:rao, character:okoye.\nBlocking:\ncharacter:harlan; zoneOrSeat=service-shaft comms tray then bridge-side hatch; screenSide=center; facing=patch panel, then bridge crew and monitor; posture=moving; eyelineTarget=object:wired-comms-deck-patch-panel\ncharacter:voss; zoneOrSeat=command station; screenSide=left; facing=Harlan and restored monitor; posture=standing; eyelineTarget=character:harlan\ncharacter:rao; zoneOrSeat=analysis station; screenSide=right; facing=Harlan and monitor; posture=seated; eyelineTarget=monitor\ncharacter:okoye; zoneOrSeat=security station; screenSide=far right; facing=Harlan; posture=standing; eyelineTarget=character:harlan\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-044. Start: Harlan reaches the bridge-side service tray after the murder. Event: He reconnects the communication trunks and emerges controlled. End: The bridge sees a composed officer returning from the hatch. Delta/description: Inside the vertical service shaft, Harlan reconnects the camera and communications trunks at the deck connector board. Show the shaft walls and side access hatch, not a bridge console; he then moves toward the bridge-side hatch. Composition size: MS. Visible: character:harlan.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-045. Start: Harlan remains alone at the bridge-side hatch and monitor. Event: He denies seeing Sorell while the restored monitor shows her with Zao. End: His alibi is placed before the bridge crew returns. Delta/description: Harlan emerges into the current bridge and looks toward Voss and the other bridge crew while the restored monitor beside them shows Sorell alone holding Zao's body. Sorell and Zao are visible only inside the feed, never as physical people in the bridge. Composition size: CU. Visible: character:harlan, character:voss, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -13180,43 +13190,52 @@
         }
       ],
       "stillReferenceAssetIds": [
-        "asset:character-harlan-sheet",
+        "asset:character-pair-voss-harlan-bridge-sheet",
+        "asset:character-pair-okoye-voss-bridge-sheet",
+        "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference",
-        "asset:object-harlan-wrist-device-sheet",
-        "asset:object-wired-comms-deck-patch-panel-sheet"
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
       ],
       "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
+      "effectiveVideoReferenceAssetIds": [
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
+      ],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-harlan",
         "asset:voice-ref-en-voss"
       ],
-      "sharedReferenceAssetIds": [],
+      "sharedReferenceAssetIds": [
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device",
-          "object:wired-comms-deck-patch-panel"
+          "character:okoye",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
         ],
         "coveredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device",
-          "object:wired-comms-deck-patch-panel"
+          "character:okoye",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
           "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
+          "asset:location-celestial-ardor-bridge-service-shaft-reference",
           "asset:voice-ref-en-harlan",
           "asset:voice-ref-en-voss"
         ],
         "coveringAssetByEntity": {
           "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
           "character:harlan": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
-          "object:harlan-wrist-device": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
-          "object:wired-comms-deck-patch-panel": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01"
+          "character:voss": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
+          "character:rao": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
+          "character:okoye": "asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -13228,9 +13247,10 @@
         "violations": [],
         "keyframeCoveredEntityIds": [
           "character:harlan",
-          "location:celestial-ardor-bridge",
-          "object:harlan-wrist-device",
-          "object:wired-comms-deck-patch-panel"
+          "character:okoye",
+          "character:rao",
+          "character:voss",
+          "location:celestial-ardor-bridge"
         ],
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
@@ -13243,10 +13263,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-bridge-harlan-alibi-044-045-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -13513,11 +13532,10 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-central-vault-obstruction-054-056-panel-01",
         "stale_image_asset:asset:festival-master-stretch-central-vault-obstruction-054-056-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-central-vault-obstruction-054-056-panel-03",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -13782,10 +13800,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -13873,9 +13890,8 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-bridge-vector-057-059-panel-03",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -14117,10 +14133,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-bridge-packet-open-060-061-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -14326,9 +14341,8 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-01"
+        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-01",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -14410,9 +14424,8 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-vault-flashback-062-063-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -14458,12 +14471,14 @@
       "stillReferenceAssetIds": [
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "sharedReferenceAssetIds": [
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
@@ -14471,27 +14486,31 @@
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "coveredEntityIds": [
           "character:okoye",
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-pair-rao-sorell-bridge-sheet",
           "asset:character-pair-okoye-voss-bridge-sheet",
-          "asset:location-celestial-ardor-bridge-realistic-reference"
+          "asset:location-celestial-ardor-bridge-realistic-reference",
+          "asset:location-velari-station-sheet"
         ],
         "coveringAssetByEntity": {
           "character:okoye": "asset:character-pair-okoye-voss-bridge-sheet",
           "character:rao": "asset:character-pair-rao-sorell-bridge-sheet",
           "character:sorell": "asset:character-pair-rao-sorell-bridge-sheet",
           "character:voss": "asset:character-pair-okoye-voss-bridge-sheet",
-          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference"
+          "location:celestial-ardor-bridge": "asset:location-celestial-ardor-bridge-realistic-reference",
+          "location:velari-station": "asset:location-velari-station-sheet"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -14514,7 +14533,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady approach conditions with apparent 1 g on the bridge; the hull display remains visible through the reinforced windows.\nLighting: Bridge practicals balanced against the branching greeting light.\nShared: Bridge greeting-preparation stretch: Sorell translates, Voss reconciles, the crew authorizes one clean send, and the Ardor answers the dark station with structured light.\nPresent cast: character:voss, character:sorell, character:rao, character:okoye.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=left; facing=Sorell and hull display; posture=standing; eyelineTarget=character:sorell\ncharacter:sorell; zoneOrSeat=translator station; screenSide=center; facing=Voss and display; posture=standing; eyelineTarget=character:voss\ncharacter:rao; zoneOrSeat=analysis station; screenSide=right; facing=the display; posture=standing; eyelineTarget=the display\ncharacter:okoye; zoneOrSeat=security station; screenSide=off; facing=the bridge; posture=standing; eyelineTarget=the crew\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-083. Start: Sorell and the bridge crew work around the hull-display translation. Event: She finishes converting the Velari primer into branching light. End: The clean greeting is ready for review. Delta/description: Sorell finishes translating the Velari primer's geometry into branching patterns of light for the ship's hull display. Composition size: MCU. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-084. Start: The same bridge stations and display remain active. Event: Sorell explains the primer's significance and Voss acknowledges his earlier mistake. End: The crew treats the greeting as a first answer, not a test. Delta/description: Sorell, awed. Voss, remorseful, speaks quietly to her:. Composition size: MCU. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-085. Start: Sorell and Voss remain at the greeting console. Event: Voss authorizes one clean greeting and Sorell prepares the send. End: The crew is committed to the limited transmission. Delta/description: Sorell, pressed but not cruel. Voss, decisive, authorizes only the clean message:. Composition size: ELS. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-086. Start: The bridge windows and hull display carry the prepared greeting. Event: Structured light branches across the Ardor while the station remains dark. End: The ship waits for the Velari answer. Delta/description: Structured light branches across the Celestial Ardor's hull, visible through the bridge's small reinforced windows; the 4-5 km Velari station beyond stays dark through a deliberate silence. Composition size: MS. Visible: character:voss, character:sorell, character:rao.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Steady approach conditions with apparent 1 g on the bridge; the hull display remains visible through the reinforced windows.\nLighting: Bridge practicals balanced against the branching greeting light.\nShared: Current Celestial Ardor bridge continuity: Sorell, Voss, and Rao work at the interior hull-display stations while Okoye remains at security. The bridge windows show the dark exterior and the Velari station only; never show the Ardor’s exterior hull from inside the bridge. The greeting is visible on the interior display and later as reflected structured light, not as a different ship.\nPresent cast: character:voss, character:sorell, character:rao, character:okoye.\nBlocking:\ncharacter:voss; zoneOrSeat=command station; screenSide=left; facing=Sorell and hull display; posture=standing; eyelineTarget=character:sorell\ncharacter:sorell; zoneOrSeat=translator station; screenSide=center; facing=Voss and display; posture=standing; eyelineTarget=character:voss\ncharacter:rao; zoneOrSeat=analysis station; screenSide=right; facing=the display; posture=standing; eyelineTarget=the display\ncharacter:okoye; zoneOrSeat=security station; screenSide=off; facing=the bridge; posture=standing; eyelineTarget=the crew\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-083. Start: Sorell and the bridge crew work around the hull-display translation. Event: She finishes converting the Velari primer into branching light. End: The clean greeting is ready for review. Delta/description: Sorell finishes translating the Velari primer's geometry into branching patterns of light for the ship's hull display. Composition size: MCU. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-084. Start: The same bridge stations and display remain active. Event: Sorell explains the primer's significance and Voss acknowledges his earlier mistake. End: The crew treats the greeting as a first answer, not a test. Delta/description: Sorell, awed. Voss, remorseful, speaks quietly to her:. Composition size: MCU. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-085. Start: Sorell and Voss remain at the greeting console. Event: Voss authorizes one clean greeting and Sorell prepares the send. End: The crew is committed to the limited transmission. Delta/description: Sorell, pressed but not cruel. Voss, decisive, authorizes only the clean message:. Composition size: ELS. Visible: character:voss, character:sorell, character:rao, character:okoye.\n\nPanel 4 (cell 4, region {\"x\":0.51,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-086. Start: The bridge windows and hull display carry the prepared greeting. Event: Structured light branches across the Ardor while the station remains dark. End: The ship waits for the Velari answer. Delta/description: Inside the bridge, the interior hull display shows structured branching light while the small reinforced windows show only dark space and the distant Velari station. Do not show the exterior Ardor hull through a bridge window and do not substitute another ship or vehicle. Composition size: MS. Visible: character:voss, character:sorell, character:rao.",
       "outputs": [
         {
           "order": 1,
@@ -14627,15 +14646,20 @@
       "stillReferenceAssetIds": [
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
+      "effectiveVideoReferenceAssetIds": [
+        "asset:location-velari-station-sheet"
+      ],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-sorell",
         "asset:voice-ref-en-voss"
       ],
-      "sharedReferenceAssetIds": [],
+      "sharedReferenceAssetIds": [
+        "asset:location-velari-station-sheet"
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:okoye",
@@ -14656,6 +14680,7 @@
           "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
           "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
           "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+          "asset:location-velari-station-sheet",
           "asset:voice-ref-en-sorell",
           "asset:voice-ref-en-voss"
         ],
@@ -14692,11 +14717,10 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-01",
         "stale_image_asset:asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-03",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -14724,7 +14748,8 @@
       "stillReferenceAssetIds": [
         "asset:character-pair-rao-sorell-bridge-sheet",
         "asset:character-pair-okoye-voss-bridge-sheet",
-        "asset:location-celestial-ardor-bridge-realistic-reference"
+        "asset:location-celestial-ardor-bridge-realistic-reference",
+        "asset:location-velari-station-sheet"
       ],
       "videoReferencePolicy": "fallback",
       "effectiveVideoReferenceAssetIds": [],
@@ -14735,13 +14760,15 @@
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "coveredEntityIds": [
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
@@ -14751,7 +14778,8 @@
           "location:celestial-ardor-bridge": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
           "character:voss": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
           "character:sorell": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
-          "character:rao": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04"
+          "character:rao": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+          "location:velari-station": "asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04"
         },
         "wouldOmitEntityIds": [],
         "limits": {
@@ -14765,7 +14793,8 @@
           "character:rao",
           "character:sorell",
           "character:voss",
-          "location:celestial-ardor-bridge"
+          "location:celestial-ardor-bridge",
+          "location:velari-station"
         ],
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
@@ -14778,9 +14807,8 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04"
+        "stale_image_asset:asset:festival-master-stretch-bridge-greeting-prep-083-086-panel-04",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -14811,39 +14839,36 @@
       ],
       "stillReferenceAssetIds": [
         "asset:character-sorell-sheet",
-        "asset:character-voss-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "sharedReferenceAssetIds": [
         "asset:character-sorell-sheet",
-        "asset:character-voss-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:sorell",
-          "character:voss",
           "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
         "coveredEntityIds": [
           "character:sorell",
-          "character:voss",
           "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:character-sorell-sheet",
-          "asset:character-voss-sheet",
           "asset:location-velari-station-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
-          "character:voss": "asset:character-voss-sheet",
           "location:velari-station": "asset:location-velari-station-sheet",
           "vehicle:velari-transport-sphere": "asset:vehicle-velari-transport-sphere-sheet"
         },
@@ -14872,7 +14897,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:velari-station.\nPhysics: Microgravity outside the station; Sorell is tethered and the sphere moves without engines or exhaust.\nLighting: Station skin and transport sphere provide the only luminous geometry against deep space.\nShared: Two-panel exterior response: the station answers, then the Velari Transport Sphere departs and approaches Sorell's ship in microgravity.\nPresent cast: character:sorell, character:voss.\nBlocking:\ncharacter:sorell; zoneOrSeat=Ardor bridge window and tether point; screenSide=left; facing=the station and sphere; posture=standing; eyelineTarget=the Velari Transport Sphere\ncharacter:voss; zoneOrSeat=Ardor bridge window and adjacent tether point; screenSide=right; facing=the station and transport sphere; posture=standing; eyelineTarget=vehicle:velari-transport-sphere\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-087. Start: The Velari station answers across the dark exterior while Sorell watches from the Ardor. Event: She catches fragments of the invitation through the parser. End: The station's answer becomes an invitation to approach. Delta/description: The station answers with an immense luminous grammar spreading across its living skin; Sorell, astonished, catches only fragments through her parser:. Composition size: CU. Visible: character:voss, character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-088. Start: Sorell watches the station and the open space between vehicles. Event: The Velari Transport Sphere separates from the station and approaches without visible exhaust. End: A physical envoy is on its way to the Ardor. Delta/description: A transparent environmental sphere, personal in scale, separates from the station and approaches the Ardor without visible exhaust. Sorell, moved:. Composition size: OTS. Visible: character:sorell.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:velari-station.\nPhysics: Microgravity outside the station; Sorell is tethered and the sphere moves without engines or exhaust.\nLighting: Station skin and transport sphere provide the only luminous geometry against deep space.\nShared: Exterior microgravity response: Sorell alone watches the Velari station from the Ardor in a sealed EVA suit and helmet, tether visible. No Voss or other crew member appears in either panel; the transport sphere then leaves the station and approaches.\nPresent cast: character:sorell.\nBlocking:\ncharacter:sorell; zoneOrSeat=Ardor external tether point; screenSide=left; facing=station and sphere; posture=tethered in EVA; eyelineTarget=vehicle:velari-transport-sphere\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-087. Start: The Velari station answers across the dark exterior while Sorell watches from the Ardor. Event: She catches fragments of the invitation through the parser. End: The station's answer becomes an invitation to approach. Delta/description: Outside the Ardor in microgravity, Sorell alone watches the Velari station through her sealed EVA helmet; her tether and suit are visible. Voss and the other crew stay off-frame. Composition size: CU. Visible: character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-088. Start: Sorell watches the station and the open space between vehicles. Event: The Velari Transport Sphere separates from the station and approaches without visible exhaust. End: A physical envoy is on its way to the Ardor. Delta/description: Sorell remains alone in her sealed EVA suit and helmet, tether visible, as the Velari Transport Sphere separates from the station and approaches without engines or exhaust. Composition size: OTS. Visible: character:sorell.",
       "outputs": [
         {
           "order": 1,
@@ -14946,26 +14971,28 @@
       ],
       "stillReferenceAssetIds": [
         "asset:character-sorell-sheet",
-        "asset:character-voss-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
+      "effectiveVideoReferenceAssetIds": [
+        "asset:prop-celestial-ardor-eva-suit-sheet"
+      ],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-sorell"
       ],
-      "sharedReferenceAssetIds": [],
+      "sharedReferenceAssetIds": [
+        "asset:prop-celestial-ardor-eva-suit-sheet"
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:sorell",
-          "character:voss",
           "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
         "coveredEntityIds": [
           "character:sorell",
-          "character:voss",
           "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
@@ -14973,11 +15000,11 @@
         "attachedAssetIds": [
           "asset:festival-master-stretch-velari-answer-087-088-panel-01",
           "asset:festival-master-stretch-velari-answer-087-088-panel-02",
+          "asset:prop-celestial-ardor-eva-suit-sheet",
           "asset:voice-ref-en-sorell"
         ],
         "coveringAssetByEntity": {
           "location:velari-station": "asset:festival-master-stretch-velari-answer-087-088-panel-01",
-          "character:voss": "asset:festival-master-stretch-velari-answer-087-088-panel-01",
           "character:sorell": "asset:festival-master-stretch-velari-answer-087-088-panel-01",
           "vehicle:velari-transport-sphere": "asset:festival-master-stretch-velari-answer-087-088-panel-02"
         },
@@ -14991,7 +15018,6 @@
         "violations": [],
         "keyframeCoveredEntityIds": [
           "character:sorell",
-          "character:voss",
           "location:velari-station",
           "vehicle:velari-transport-sphere"
         ],
@@ -15006,10 +15032,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-velari-answer-087-088-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-velari-answer-087-088-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-velari-answer-087-088-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -15042,13 +15067,15 @@
         "asset:character-sorell-sheet",
         "asset:character-velari-envoy-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "sharedReferenceAssetIds": [
         "asset:character-sorell-sheet",
         "asset:character-velari-envoy-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
@@ -15068,7 +15095,8 @@
           "asset:character-sorell-sheet",
           "asset:character-velari-envoy-sheet",
           "asset:location-velari-station-sheet",
-          "asset:vehicle-velari-transport-sphere-sheet"
+          "asset:vehicle-velari-transport-sphere-sheet",
+          "asset:prop-celestial-ardor-eva-suit-sheet"
         ],
         "coveringAssetByEntity": {
           "character:sorell": "asset:character-sorell-sheet",
@@ -15101,7 +15129,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:velari-station.\nPhysics: Microgravity outside the station; Sorell remains tethered and the envoy floats inside the sphere with no floor.\nLighting: The station and sphere remain readable while the envoy's living light becomes the focal exchange.\nShared: Two-panel first-contact exterior stretch: Sorell reaches the sphere, and the floating Velari envoy answers through its transparent wall in living light.\nPresent cast: character:sorell, character:velari-envoy.\nBlocking:\ncharacter:sorell; zoneOrSeat=tether point at sphere wall; screenSide=left; facing=through the sphere wall; posture=other; eyelineTarget=character:velari-envoy\ncharacter:velari-envoy; zoneOrSeat=floating center inside transport sphere; screenSide=right; facing=Sorell through the transparent wall; posture=other; eyelineTarget=character:sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-091. Start: Sorell drifts on her tether toward the waiting Velari Transport Sphere. Event: She chooses to cross the gap because meeting has meaning beyond the signal. End: Sorell reaches the sphere's transparent wall. Delta/description: Resolved, drifting on her tether toward the waiting sphere:. Composition size: ELS. Visible: character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-092. Start: Sorell faces the transparent sphere in open microgravity. Event: The floating Velari envoy gathers its light, holds Sorell's attention, and extends the greeting back through the wall. End: Human and Velari acknowledge one another without spoken language. Delta/description: Still in her EVA suit and helmet, tether visible, Sorell reaches the transparent sphere in open space; a full-size Velari individual — roughly 2.5 to 3 metres tall, an elongated mantle, branching luminous patterns along its surface — orients its mantle toward her through the sphere's transparent wall, gathers its light, holds attention, then extends the human greeting back in living light. The Ardor, the Velari station, and the starfield stay visible through the sphere. Composition size: MS. Visible: character:sorell, character:velari-envoy.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [3,4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:velari-station.\nPhysics: Microgravity outside the station; Sorell remains tethered and the envoy floats inside the sphere with no floor.\nLighting: The station and sphere remain readable while the envoy's living light becomes the focal exchange.\nShared: Exterior microgravity first contact: the large transparent Velari Transport Sphere occupies most of the approach and contact framing, with Sorell outside in her tethered EVA suit and the envoy visibly floating inside with no floor.\nPresent cast: character:sorell, character:velari-envoy.\nBlocking:\ncharacter:sorell; zoneOrSeat=tether point beside the large sphere; screenSide=left; facing=through the sphere wall; posture=floating in EVA; eyelineTarget=character:velari-envoy\ncharacter:velari-envoy; zoneOrSeat=floating center inside the large sphere; screenSide=right; facing=Sorell through the transparent wall; posture=floating, limbs lightly braced on the wall; eyelineTarget=character:sorell\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-091. Start: Sorell drifts on her tether toward the waiting Velari Transport Sphere. Event: She chooses to cross the gap because meeting has meaning beyond the signal. End: Sorell reaches the sphere's transparent wall. Delta/description: Sorell drifts on her tether toward the large Velari Transport Sphere; the sphere grows to occupy much of the frame while remaining clearly separate from the Ardor and station. Composition size: ELS. Visible: character:sorell.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-092. Start: Sorell faces the transparent sphere in open microgravity. Event: The floating Velari envoy gathers its light, holds Sorell's attention, and extends the greeting back through the wall. End: Human and Velari acknowledge one another without spoken language. Delta/description: Still in her EVA suit and helmet, Sorell reaches the large transparent Velari Transport Sphere. The floating Velari envoy is clearly visible inside with no floor; it gathers its light, holds her attention, and extends the human greeting back through the wall. Keep the Ardor, station, and starfield behind the sphere. Composition size: MS. Visible: character:sorell, character:velari-envoy.",
       "outputs": [
         {
           "order": 1,
@@ -15177,14 +15205,19 @@
         "asset:character-sorell-sheet",
         "asset:character-velari-envoy-sheet",
         "asset:location-velari-station-sheet",
-        "asset:vehicle-velari-transport-sphere-sheet"
+        "asset:vehicle-velari-transport-sphere-sheet",
+        "asset:prop-celestial-ardor-eva-suit-sheet"
       ],
       "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
+      "effectiveVideoReferenceAssetIds": [
+        "asset:prop-celestial-ardor-eva-suit-sheet"
+      ],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-sorell"
       ],
-      "sharedReferenceAssetIds": [],
+      "sharedReferenceAssetIds": [
+        "asset:prop-celestial-ardor-eva-suit-sheet"
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:sorell",
@@ -15202,6 +15235,7 @@
         "attachedAssetIds": [
           "asset:festival-master-stretch-velari-envoy-091-092-panel-01",
           "asset:festival-master-stretch-velari-envoy-091-092-panel-02",
+          "asset:prop-celestial-ardor-eva-suit-sheet",
           "asset:voice-ref-en-sorell"
         ],
         "coveringAssetByEntity": {
@@ -15235,10 +15269,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-velari-envoy-091-092-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-velari-envoy-091-092-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-velari-envoy-091-092-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -15482,10 +15515,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-watch-093-094-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-bridge-watch-093-094-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-bridge-watch-093-094-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -15655,7 +15687,7 @@
         "asset:location-celestial-ardor-reactor-service-bay-sheet",
         "asset:object-optical-contingency-transmitter-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-voss"
@@ -15703,21 +15735,19 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-voss-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-095, ~10s): start: Voss reaches the restored optical array in the reactor service bay. event: He attaches the record of discovery, murder, warning, intervention, and contact for Earth. camera progression: Dolly; establishes geography and screen direction. end: The record is ready to leave independently. shot description: Voss uses the restored optical array to send Earth an independent record of discovery, murder, warning, intervention, and contact, solemn, attaching Zao's signed message and personnel file: \"Proxima Control, this is Celestial Ardor. Full record follows. Chief Engineer Zao found the weapon, warned us, and preserved first contact.\". | Stage 2 (festival-master:shot-plan-096, ~7s): continue from prior settled state: The record is ready to leave independently. start: The optical console confirms TRANSMITTED beside Zao's personnel photograph. event: Voss addresses the photograph after the record leaves. camera progression: Pan; orthogonal, legible insert framing. end: The film closes on Zao's warning reaching beyond the ship. shot description: The console reads \"TRANSMITTED.\" Zao's personnel photograph remains on the display. Voss, grieving, speaks to it quietly: \"You made it in time.\".\nsubjects: Present cast: character:voss, character:zao. Reference map: @Image1 (asset:festival-master-stretch-reactor-report-095-096-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-reactor-report-095-096-panel-02, ordered keyframe); @Image3 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-reactor-service-bay. Ignore people in location stills.\ncamera: festival-master:shot-plan-095: Dolly; establishes geography and screen direction.; festival-master:shot-plan-096: Pan; orthogonal, legible insert framing.\nlighting: Optical-array glow, service-bay practicals, and Zao's photograph on the display.\nphysics: Microgravity in the reactor service bay; Voss braces at the optical console.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Two-panel reactor-bay coda: Voss sends the independent record and then speaks quietly to Zao's displayed photograph. Blocking:\ncharacter:voss; zoneOrSeat=outer-bay optical console; screenSide=center; facing=the console and photograph; posture=other; eyelineTarget=the console\ncharacter:zao; zoneOrSeat=personnel photograph on console display; screenSide=right; facing=camera; posture=other; eyelineTarget=character:voss Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Captain Elias Voss [character:voss] at ~900ms in festival-master:shot-plan-095 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {Proxima Control, this is Celestial Ardor. Full record follows. Chief Engineer Zao found the weapon, warned us, and preserved first contact.} Captain Elias Voss [character:voss] at ~3900ms in festival-master:shot-plan-096 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {You made it in time.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-reactor-report-095-096-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-reactor-report-095-096-panel-02"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-engineering-audit-016-017:rev-1",
@@ -15870,7 +15900,7 @@
         "asset:character-zao-sheet",
         "asset:location-celestial-ardor-engineering-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-zao"
@@ -15910,21 +15940,19 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-016, ~8s): start: Zao continues the engineering audit. event: She inspects the anomalous load without leaving the engineering bay. camera progression: Pan; establishes geography and screen direction. end: The unexplained extra load remains the active question. shot description: Zao braces at an engineering console, concentrating, while loose gear floats past behind her: \"Burn's clean. Feed is clean. So what were we carrying?\". | Stage 2 (festival-master:shot-plan-017, ~9s): continue from prior settled state: The unexplained extra load remains the active question. start: Zao continues the engineering audit. event: She inspects the anomalous load without leaving the engineering bay. camera progression: Locked; orthogonal, legible insert framing. end: The unexplained extra load remains the active question. shot description: She recomputes the propellant profile; a small excess repeats exactly across the long leg. Uneasy, she commits: \"One point three tonnes. Not noise.\" Her wrist dosimeter begins a sparse neutron tick.\nsubjects: Present cast: character:zao. Reference map: @Image1 (asset:festival-master-stretch-engineering-audit-016-017-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-engineering-audit-016-017-panel-02, ordered keyframe); @Image3 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-engineering. Ignore people in location stills.\ncamera: festival-master:shot-plan-016: Pan; establishes geography and screen direction.; festival-master:shot-plan-017: Locked; orthogonal, legible insert framing.\nlighting: Engineering practicals and diagnostic displays.\nphysics: Microgravity in the engineering bay during the audit.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Two-panel engineering audit stretch; the same bay and Zao's investigation continue without a location reset. Blocking:\ncharacter:zao; zoneOrSeat=engineering audit console; screenSide=center; facing=the diagnostic displays; posture=other; eyelineTarget=the active anomaly Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Chief Engineer Zao [character:zao] at ~0ms in festival-master:shot-plan-016 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Something's off. We used more fuel than we had to.} Chief Engineer Zao [character:zao] at ~3680ms in festival-master:shot-plan-016 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Burn’s clean. Feed is clean. So what were we carrying?} Chief Engineer Zao [character:zao] at ~5000ms in festival-master:shot-plan-017 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {One point three tonnes. Not noise.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-engineering-audit-016-017-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-engineering-audit-016-017-panel-02"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-reactor-entrance-018-019:rev-1",
@@ -16084,7 +16112,7 @@
         "asset:character-harlan-sheet",
         "asset:location-celestial-ardor-reactor-service-bay-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-harlan",
@@ -16130,21 +16158,20 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-018, ~8s): start: Zao remains at the reactor service-bay threshold. event: Harlan crosses her path while the audit continues. camera progression: Tracking; establishes geography and screen direction. end: Their encounter moves the investigation into the bay. shot description: The neutron count strengthens toward the vault door. Harlan emerges from its inner bay and meets Zao in the passage, guarded: \"Engineer. Your readings brought you aft as well?\". | Stage 2 (festival-master:shot-plan-019, ~8s): continue from prior settled state: Their encounter moves the investigation into the bay. start: Zao remains at the reactor service-bay threshold. event: Harlan crosses her path while the audit continues. camera progression: Dolly; preserves eyeline and action-axis continuity. end: Their encounter moves the investigation into the bay. shot description: Harlan, controlled, explains his access: \"Scheduled inspection. The latch is temperamental in free-fall.\" Zao, watchful then firm, answers without revealing suspicion: \"They brought me to the door you just left. I’ll take it from here.\" Continuing the previous shot’s blocking, Harlan turns and walks away alone, back to camera, in the opposite direction from the vault; Zao remains standing near the vault access door, watching him go, then turns to enter. He has touched no flight control and given her nothing visible to accuse.\nsubjects: Present cast: character:zao, character:harlan. Reference map: @Image1 (asset:festival-master-stretch-reactor-entrance-018-019-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-reactor-entrance-018-019-panel-02, ordered keyframe); @Image3 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image4 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-reactor-service-bay. Ignore people in location stills.\ncamera: festival-master:shot-plan-018: Tracking; establishes geography and screen direction.; festival-master:shot-plan-019: Dolly; preserves eyeline and action-axis continuity.\nlighting: Reactor-bay practicals and diagnostic glow.\nphysics: Microgravity in the reactor service bay; both use rails and handholds.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Two-panel reactor-bay entrance stretch; Zao and Harlan share the same microgravity threshold. Blocking:\ncharacter:zao; zoneOrSeat=bay threshold console; screenSide=left; facing=Harlan and the diagnostics; posture=moving; eyelineTarget=character:harlan\ncharacter:harlan; zoneOrSeat=service-bay access rail; screenSide=right; facing=Zao; posture=moving; eyelineTarget=character:zao Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Commander Rylen Harlan [character:harlan] at ~1700ms in festival-master:shot-plan-018 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {Engineer. Your readings brought you aft as well?} Chief Engineer Zao [character:zao] at ~5220ms in festival-master:shot-plan-018 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {They brought me to the door you just left.} Commander Rylen Harlan [character:harlan] at ~0ms in festival-master:shot-plan-019 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {Scheduled inspection. The latch is temperamental in free-fall.} Chief Engineer Zao [character:zao] at ~4080ms in festival-master:shot-plan-019 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {I’ll take it from here.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-reactor-entrance-018-019-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-reactor-entrance-018-019-panel-02"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-vault-discovery-020-022:rev-1",
@@ -16325,7 +16352,7 @@
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:object-proxima-geophysical-impulse-package-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-zao"
@@ -16369,21 +16396,19 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-020, ~8s): start: Zao reaches the inner shielding vault and the package is in view. event: She examines the package and recognizes the threat. camera progression: Pan; establishes geography and screen direction. end: The discovery forces the warning decision that follows. shot description: Inside the incompletely secured vault, Zao follows markings and the neutron peak to a squat, armored, tonne-scale device wired to a small illuminated controller showing mass, yield, and a countdown timer set to arrival time. | Stage 2 (festival-master:shot-plan-021, ~10s): continue from prior settled state: The discovery forces the warning decision that follows. start: Zao reaches the inner shielding vault and the package is in view. event: She examines the package and recognizes the threat. camera progression: Locked; preserves eyeline and action-axis continuity. end: The discovery forces the warning decision that follows. shot description: Shocked, then afraid, Zao reads the controller aloud to herself. The display shows mass, yield, and a countdown timer set to arrival time; it does not show contact coordinates or a targeting solution. \"This is an impulse warhead for geophysical research from the Proxima… one point three tonnes. Multi-megaton. The timer is set to arrival time!\".\nsubjects: Present cast: character:zao. Reference map: @Image1 (asset:festival-master-stretch-vault-discovery-020-022-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-vault-discovery-020-022-panel-02, ordered keyframe); @Image3 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-inner-shielding-vault. Ignore people in location stills.\ncamera: festival-master:shot-plan-020: Pan; establishes geography and screen direction.; festival-master:shot-plan-021: Locked; preserves eyeline and action-axis continuity.\nlighting: Vault service lighting and package diagnostics.\nphysics: Microgravity in the inner shielding vault; the package is secured to the structure.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Three-panel vault discovery stretch; Zao recognizes the hidden threat. Blocking:\ncharacter:zao; zoneOrSeat=package service panel; screenSide=center; facing=the impulse package; posture=other; eyelineTarget=the package Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Chief Engineer Zao [character:zao] at ~0ms in festival-master:shot-plan-021 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {This is an impulse warhead for geophysical research from the Proxima… one point three tonnes.} Chief Engineer Zao [character:zao] at ~5920ms in festival-master:shot-plan-021 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Multi-megaton. The timer is set to arrival time!}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-vault-discovery-020-022-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-vault-discovery-020-022-panel-02"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-vault-discovery-020-022:rev-1:video-2",
@@ -16410,16 +16435,12 @@
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:object-proxima-geophysical-impulse-package-sheet"
       ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
+      "videoReferencePolicy": "explicit",
+      "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-zao"
       ],
-      "sharedReferenceAssetIds": [
-        "asset:object-proxima-geophysical-impulse-package-sheet"
-      ],
+      "sharedReferenceAssetIds": [],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:zao",
@@ -16432,7 +16453,6 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:festival-master-stretch-vault-discovery-020-022-panel-03",
-          "asset:object-proxima-geophysical-impulse-package-sheet",
           "asset:voice-ref-en-zao"
         ],
         "coveringAssetByEntity": {
@@ -16454,20 +16474,19 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-zao-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-022, ~15s): start: Zao reaches the inner shielding vault and the package is in view. event: She examines the package and recognizes the threat. camera progression: Slow push-in dolly; holds on her face as suspicion turns to decision. end: The discovery forces the warning decision that follows. shot description: Reasoning aloud, Zao puts it together: \"Harlan? He carries a dosimeter too — it would've led him straight here, same as it did me. If he weren't behind this, he'd already be calling it in.\" The suspicion hardens into a decision: \"I have to warn Voss. Abort the approach, or we defuse this, delay it, and detain him.\".\nsubjects: Present cast: character:zao. Reference map: @Image1 (asset:festival-master-stretch-vault-discovery-020-022-panel-03, ordered keyframe); @Image2 (asset:character-zao-sheet, visual_reference, entity map: character:zao); @Audio (asset:voice-ref-en-zao, voice sample, entity map: character:zao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-inner-shielding-vault. Ignore people in location stills.\ncamera: festival-master:shot-plan-022: Slow push-in dolly; holds on her face as suspicion turns to decision.\nlighting: Vault service lighting and package diagnostics.\nphysics: Microgravity in the inner shielding vault; the package is secured to the structure.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Three-panel vault discovery stretch; Zao recognizes the hidden threat. Blocking:\ncharacter:zao; zoneOrSeat=package service panel; screenSide=center; facing=the impulse package; posture=other; eyelineTarget=the package Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Chief Engineer Zao [character:zao] at ~0ms in festival-master:shot-plan-022 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {Harlan? He carries a dosimeter too — it would've led him straight here, same as it did me. If he weren't behind this, he'd already be calling it in.} Chief Engineer Zao [character:zao] at ~9200ms in festival-master:shot-plan-022 (image asset:character-zao-sheet, voice asset:voice-ref-en-zao): {I have to warn Voss. Abort the approach, or we defuse this, delay it, and detain him.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-vault-discovery-020-022-panel-03"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-service-cylinder-route-026-028:rev-1",
@@ -16733,11 +16752,10 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-service-cylinder-route-026-028-panel-01",
         "stale_image_asset:asset:festival-master-stretch-service-cylinder-route-026-028-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-service-cylinder-route-026-028-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-service-cylinder-route-026-028-panel-03",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -16847,7 +16865,7 @@
         "bottom": 0.078125,
         "left": 0
       },
-      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Continuous visual stretch for shots 023–024–025, preserving location, cast, blocking, and physical continuity.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:rao; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-5; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-023. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Harlan rises unseen from the recessed service hatch behind the command vestibule as the bridge crew, facing forward, hears Zao's channel open:. Composition size: MLS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-024. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Only when the word 'sabotage' lands does Harlan touch his wrist device. The channel dies mid-word. He withdraws into the service hatch before anyone on the bridge turns. Composition size: MCU. Visible: character:harlan.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-025. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Elin Rao, focused, reports the outage from her station. Voss, urgent, splits the response:. Composition size: ELS. Visible: character:voss, character:sorell, character:rao, character:okoye.",
+      "compiledPrompt": "Ordered multi-panel storyboard sheet for a continuous stretch.\nLayout: 2x2 equal 16:9 panels, gutterFraction 0.02, blankCells [4].\nBlank cells must be a flat neutral field with no characters, props, or text.\nLocation: location:celestial-ardor-bridge.\nPhysics: Continuous established geometry and physics from the Festival-master shot descriptions.\nLighting: Established practical lighting for this location.\nShared: Current Celestial Ardor bridge geometry: the five bridge crew face the curved forward consoles with their backs to the central shaft; Harlan remains concealed at the recessed service hatch until the channel cuts, then retreats before anyone turns.\nPresent cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss.\nBlocking:\ncharacter:harlan; zoneOrSeat=recessed service hatch behind bridge stations; screenSide=far center; facing=comms tray then hatch; posture=concealed then withdrawing; eyelineTarget=object:harlan-wrist-device\ncharacter:voss; zoneOrSeat=command station; screenSide=left; facing=forward consoles; posture=standing; eyelineTarget=forward display\ncharacter:rao; zoneOrSeat=analysis station; screenSide=right; facing=forward consoles; posture=seated; eyelineTarget=console\ncharacter:sorell; zoneOrSeat=translator station; screenSide=center-left; facing=forward consoles; posture=seated; eyelineTarget=forward display\ncharacter:okoye; zoneOrSeat=security station; screenSide=center-right; facing=forward consoles; posture=standing; eyelineTarget=forward display\n\nPanel 1 (cell 1, region {\"x\":0,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-023. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Use the current Celestial Ardor bridge reference: the five bridge crew face the curved forward consoles with their backs to the central shaft. Harlan is not visible; he is concealed at the recessed service hatch behind the stations while Zao's channel opens. Composition size: MLS. Visible: character:voss, character:harlan, character:sorell, character:rao, character:okoye.\n\nPanel 2 (cell 2, region {\"x\":0.51,\"y\":0.078125,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-024. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: At the recessed service hatch, Harlan alone touches the small digital wrist device when that accusation lands, then retreats into the hatch before the bridge crew turns. Do not show a labeled jammer or any other crew in this close framing. Composition size: MCU. Visible: character:harlan.\n\nPanel 3 (cell 3, region {\"x\":0,\"y\":0.51,\"w\":0.49,\"h\":0.411875}): Shot festival-master:shot-plan-025. Start: The established state continues from the previous panel. Event: The shot action proceeds without changing the shared spatial arrangement. End: The next panel inherits the same continuity. Delta/description: Wide current-bridge view. Voss stands at command, Rao reports from her analysis station, Sorell remains at her translator station, and Okoye takes bridge security. The central shaft and helical stairs remain in the established geometry; Harlan is hidden off-frame. Composition size: ELS. Visible: character:voss, character:sorell, character:rao, character:okoye.",
       "outputs": [
         {
           "order": 1,
@@ -17022,11 +17040,10 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-comms-cut-023-025-panel-01",
         "stale_image_asset:asset:festival-master-stretch-bridge-comms-cut-023-025-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-bridge-comms-cut-023-025-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-bridge-comms-cut-023-025-panel-03",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -17258,7 +17275,7 @@
         "asset:character-pair-okoye-voss-bridge-sheet",
         "asset:location-celestial-ardor-bridge-realistic-reference"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-harlan",
@@ -17324,23 +17341,23 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet",
+        "asset:character-rao-sheet",
+        "asset:character-sorell-sheet",
+        "asset:character-voss-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-046, ~3s): start: The established state continues from the previous panel. event: The shot action proceeds without changing the shared spatial arrangement. camera progression: Tracking; establishes geography and screen direction. end: The next panel inherits the same continuity. shot description: After Voss has sent Harlan and Okoye to retrieve her, Sorell is back on the bridge under their supervision. As thrust restores, loose tools and sheets settle to the deck; Harlan's stance shifts from braced-at-a-handhold to firmly planted as he turns accusing toward Sorell: \"How could you? Why?\". No image of Zao's body appears in this bridge shot. | Stage 2 (festival-master:shot-plan-047, ~6s): continue from prior settled state: The next panel inherits the same continuity. start: The established state continues from the previous panel. event: The shot action proceeds without changing the shared spatial arrangement. camera progression: Dolly; orthogonal, legible insert framing. end: The next panel inherits the same continuity. shot description: Sorell, devastated, states only what she knows: \"I found her like this. I tried to help her.\". | Stage 3 (festival-master:shot-plan-048, ~7s): continue from prior settled state: The next panel inherits the same continuity. start: The established state continues from the previous panel. event: The shot action proceeds without changing the shared spatial arrangement. camera progression: Pan; preserves eyeline and action-axis continuity. end: The next panel inherits the same continuity. shot description: Okoye, alert but neutral, secures the scene without assigning guilt. With no brig aboard, Sorell is held under watch on the bridge as normal 1 g thrust resumes for the long station leg. | Stage 4 (festival-master:shot-plan-049, ~11s): continue from prior settled state: The next panel inherits the same continuity. start: The established state continues from the previous panel. event: The shot action proceeds without changing the shared spatial arrangement. camera progression: Locked; preserves eyeline and action-axis continuity. end: The next panel inherits the same continuity. shot description: Elin Rao, skeptical, resists the too-neat accusation: \"I heard her disagree with you. That isn't the same thing.\".\nsubjects: Present cast: character:harlan, character:okoye, character:rao, character:sorell, character:voss. Reference map: @Image1 (asset:festival-master-stretch-bridge-investigation-046-049-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-bridge-investigation-046-049-panel-02, ordered keyframe); @Image3 (asset:festival-master-stretch-bridge-investigation-046-049-panel-03, ordered keyframe); @Image4 (asset:festival-master-stretch-bridge-investigation-046-049-panel-04, ordered keyframe); @Image5 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image6 (asset:character-okoye-sheet, visual_reference, entity map: character:okoye); @Image7 (asset:character-rao-sheet, visual_reference, entity map: character:rao); @Image8 (asset:character-sorell-sheet, visual_reference, entity map: character:sorell); @Image9 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Audio (asset:voice-ref-en-harlan, voice sample, entity map: character:harlan); @Audio (asset:voice-ref-en-okoye, voice sample, entity map: character:okoye); @Audio (asset:voice-ref-en-elin, voice sample, entity map: character:rao); @Audio (asset:voice-ref-en-sorell, voice sample, entity map: character:sorell); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-bridge. Ignore people in location stills.\ncamera: festival-master:shot-plan-046: Tracking; establishes geography and screen direction.; festival-master:shot-plan-047: Dolly; orthogonal, legible insert framing.; festival-master:shot-plan-048: Pan; preserves eyeline and action-axis continuity.; festival-master:shot-plan-049: Locked; preserves eyeline and action-axis continuity.\nlighting: Established practical lighting for this location.\nphysics: Continuous established geometry and physics from the Festival-master shot descriptions.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous visual stretch for shots 046–047–048–049, preserving location, cast, blocking, and physical continuity. Blocking:\ncharacter:harlan; zoneOrSeat=established-1; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:okoye; zoneOrSeat=established-2; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:rao; zoneOrSeat=established-3; screenSide=right; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:sorell; zoneOrSeat=established-4; screenSide=left; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action\ncharacter:voss; zoneOrSeat=established-5; screenSide=center; facing=toward the active exchange or console; posture=other; eyelineTarget=the active action Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Commander Rylen Harlan [character:harlan] at ~1100ms in festival-master:shot-plan-046 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {How could you? Why?} Dr. Lian Sorell [character:sorell] at ~0ms in festival-master:shot-plan-047 (image asset:character-sorell-sheet, voice asset:voice-ref-en-sorell): {I found her like this. I tried to help her.} Lt. Commander Dara Okoye [character:okoye] at ~3520ms in festival-master:shot-plan-047 (image asset:character-okoye-sheet, voice asset:voice-ref-en-okoye): {Hands where I can see them. Both of you.} Commander Rylen Harlan [character:harlan] at ~3350ms in festival-master:shot-plan-048 (image asset:character-harlan-sheet, voice asset:voice-ref-en-harlan): {She wanted the contact delayed. You heard her.} Elin Rao [character:rao] at ~0ms in festival-master:shot-plan-049 (image asset:character-rao-sheet, voice asset:voice-ref-en-elin): {I heard her disagree with you. That isn’t the same thing.} Captain Elias Voss [character:voss] at ~3760ms in festival-master:shot-plan-049 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {Nobody closes this case. Elin: mass and records. Okoye: preserve everything.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
           "artifact": "video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-bridge-investigation-046-049-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-bridge-investigation-046-049-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-bridge-investigation-046-049-panel-03",
-        "stale_image_asset:asset:festival-master-stretch-bridge-investigation-046-049-panel-04"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-bridge-fuel-audit-050-053:rev-1",
@@ -17639,12 +17656,11 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-01",
         "stale_image_asset:asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-02",
         "stale_image_asset:asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-03",
-        "stale_image_asset:asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-04"
+        "stale_image_asset:asset:festival-master-stretch-bridge-fuel-audit-050-053-panel-04",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -17957,12 +17973,11 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-01",
         "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-02",
         "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-03",
-        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-04"
+        "stale_image_asset:asset:festival-master-stretch-bridge-command-break-064-067-panel-04",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -18240,11 +18255,10 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-bridge-device-071-073-panel-01",
         "stale_image_asset:asset:festival-master-stretch-bridge-device-071-073-panel-02",
-        "stale_image_asset:asset:festival-master-stretch-bridge-device-071-073-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-bridge-device-071-073-panel-03",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -18512,10 +18526,9 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
         "stale_image_asset:asset:festival-master-stretch-reactor-confrontation-077-079-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-reactor-confrontation-077-079-panel-02"
+        "stale_image_asset:asset:festival-master-stretch-reactor-confrontation-077-079-panel-02",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -18612,9 +18625,8 @@
         }
       ],
       "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-reactor-confrontation-077-079-panel-03"
+        "stale_image_asset:asset:festival-master-stretch-reactor-confrontation-077-079-panel-03",
+        "editorial_prompt_freeze_not_approved"
       ],
       "coherenceException": false,
       "runnable": false
@@ -18821,15 +18833,17 @@
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:prop-pack-vault-recovery-sheet"
       ],
-      "videoReferencePolicy": "fallback",
+      "videoReferencePolicy": "explicit",
       "effectiveVideoReferenceAssetIds": [
-        "asset:character-pair-harlan-okoye-bridge-sheet"
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet"
       ],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-elin"
       ],
       "sharedReferenceAssetIds": [
-        "asset:character-pair-harlan-okoye-bridge-sheet"
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet"
       ],
       "referenceBudget": {
         "requiredEntityIds": [
@@ -18852,7 +18866,8 @@
         "attachedAssetIds": [
           "asset:festival-master-stretch-vault-recovery-080-082-panel-01",
           "asset:festival-master-stretch-vault-recovery-080-082-panel-02",
-          "asset:character-pair-harlan-okoye-bridge-sheet",
+          "asset:character-harlan-sheet",
+          "asset:character-okoye-sheet",
           "asset:voice-ref-en-elin"
         ],
         "coveringAssetByEntity": {
@@ -18882,21 +18897,23 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-rao-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-080, ~9s): start: The inner shielding vault is established in microgravity with the recovery props secured. event: Rao reaches the evidence console while Harlan and Okoye hold the access route. camera progression: Pan; establishes geography and screen direction. end: The vault geometry and four-person blocking remain stable. shot description: Elin Rao opens the vault with the recovered wrist device; local indicators confirm Zao's warning, fast and focused: \"No power cut. No damage. She was right.\". | Stage 2 (festival-master:shot-plan-081, ~16s): continue from prior settled state: The vault geometry and four-person blocking remain stable. start: The established vault arrangement continues. event: Rao examines the impulse package and time-reference diagnostic unit. camera progression: Locked; preserves eyeline and action-axis continuity. end: The evidence remains in frame while Harlan and Okoye maintain their positions. shot description: She sees the bomb's scientific service timing input beside the same portable diagnostic instrument she planted hours earlier; hopeful, she connects it: \"It's keyed to the ship's own clock, not a separate one. Feed it a different time reference and it stops trusting when 'now' is.\".\nsubjects: Present cast: character:rao, character:harlan, character:okoye, character:voss. Reference map: @Image1 (asset:festival-master-stretch-vault-recovery-080-082-panel-01, ordered keyframe); @Image2 (asset:festival-master-stretch-vault-recovery-080-082-panel-02, ordered keyframe); @Image3 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image4 (asset:character-okoye-sheet, visual_reference, entity map: character:okoye); @Image5 (asset:character-rao-sheet, visual_reference, entity map: character:rao); @Image6 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Audio (asset:voice-ref-en-elin, voice sample, entity map: character:rao). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-inner-shielding-vault. Ignore people in location stills.\ncamera: festival-master:shot-plan-080: Pan; establishes geography and screen direction.; festival-master:shot-plan-081: Locked; preserves eyeline and action-axis continuity.\nlighting: Established cool vault practicals with the impulse package and time-reference display readable.\nphysics: Microgravity in the inner shielding vault; all four characters use handholds and the evidence remains secured.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous microgravity inner-vault recovery for shots 080–081–082, preserving the evidence layout, access route, cast, and eyelines. Blocking:\ncharacter:rao; zoneOrSeat=evidence-console-center; screenSide=center; facing=toward the recovery props; posture=anchored; eyelineTarget=the impulse package and diagnostic unit\ncharacter:harlan; zoneOrSeat=vault-access-left; screenSide=left; facing=toward Rao; posture=floating; eyelineTarget=Rao\ncharacter:okoye; zoneOrSeat=vault-rail-right; screenSide=right; facing=toward Harlan and Rao; posture=anchored; eyelineTarget=the evidence path\ncharacter:voss; zoneOrSeat=vault-console-rear; screenSide=right; facing=toward Rao; posture=anchored; eyelineTarget=Rao Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Elin Rao [character:rao] at ~5500ms in festival-master:shot-plan-080 (image asset:character-rao-sheet, voice asset:voice-ref-en-elin): {No power cut. No damage. She was right.} Elin Rao [character:rao] at ~5000ms in festival-master:shot-plan-081 (image asset:character-rao-sheet, voice asset:voice-ref-en-elin): {It's keyed to the ship's own clock, not a separate one. Feed it a different time reference and it stops trusting when 'now' is.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-vault-recovery-080-082-rev-1-video-1-video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-vault-recovery-080-082-panel-01",
-        "stale_image_asset:asset:festival-master-stretch-vault-recovery-080-082-panel-02"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     },
     {
       "id": "festival-master:stretch-vault-recovery-080-082:rev-1:video-2",
@@ -18925,13 +18942,17 @@
         "asset:location-celestial-ardor-inner-shielding-vault-sheet",
         "asset:prop-pack-vault-recovery-sheet"
       ],
-      "videoReferencePolicy": "fallback",
-      "effectiveVideoReferenceAssetIds": [],
+      "videoReferencePolicy": "explicit",
+      "effectiveVideoReferenceAssetIds": [
+        "asset:character-voss-sheet"
+      ],
       "voiceSampleAssetIds": [
         "asset:voice-ref-en-elin",
         "asset:voice-ref-en-voss"
       ],
-      "sharedReferenceAssetIds": [],
+      "sharedReferenceAssetIds": [
+        "asset:character-voss-sheet"
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "character:harlan",
@@ -18950,6 +18971,7 @@
         "uncoveredEntityIds": [],
         "attachedAssetIds": [
           "asset:festival-master-stretch-vault-recovery-080-082-panel-03",
+          "asset:character-voss-sheet",
           "asset:voice-ref-en-elin",
           "asset:voice-ref-en-voss"
         ],
@@ -18978,20 +19000,23 @@
         "videoExtraCoveredEntityIds": [],
         "uncoveredVideoEntityIds": []
       },
-      "compiledPrompt": null,
+      "videoReferenceAssetIds": [
+        "asset:character-rao-sheet",
+        "asset:character-voss-sheet",
+        "asset:character-harlan-sheet",
+        "asset:character-okoye-sheet"
+      ],
+      "compiledPrompt": "style: Grounded cinematic hard-science-fiction continuous take, photorealistic VFX, Seedance 2.5. Attached keyframes establish composition; attached character sheets establish identity.\nactionTiming: Stage 1 (festival-master:shot-plan-082, ~9s): start: The evidence and positions carry into the final vault panel. event: Rao resolves the implication of the recovered package as Harlan and Okoye react without crossing the evidence path. camera progression: Tracking; preserves eyeline and action-axis continuity. end: The vault evidence is ready to carry into the next bridge sequence. shot description: The display counts 4—3—2—1, then jumps upward past the deadline. Voss, tense, demands over comm: \"Status?\" Elin Rao, relieved: \"It isn't disarmed. It just isn't going off here.\" Voss, immediate: \"Keep it watched. No thrust, no vibration — nothing that shakes this ship until we're certain it's safe.\".\nsubjects: Present cast: character:rao, character:harlan, character:okoye, character:voss. Reference map: @Image1 (asset:festival-master-stretch-vault-recovery-080-082-panel-03, ordered keyframe); @Image2 (asset:character-voss-sheet, visual_reference, entity map: character:voss); @Image3 (asset:character-rao-sheet, visual_reference, entity map: character:rao); @Image4 (asset:character-harlan-sheet, visual_reference, entity map: character:harlan); @Image5 (asset:character-okoye-sheet, visual_reference, entity map: character:okoye); @Audio (asset:voice-ref-en-elin, voice sample, entity map: character:rao); @Audio (asset:voice-ref-en-voss, voice sample, entity map: character:voss). For every spoken cue, match the named speaker to that speaker's individual image reference and voice sample; do not infer identity from keyframes alone.\nlocation: Location location:celestial-ardor-inner-shielding-vault. Ignore people in location stills.\ncamera: festival-master:shot-plan-082: Tracking; preserves eyeline and action-axis continuity.\nlighting: Established cool vault practicals with the impulse package and time-reference display readable.\nphysics: Microgravity in the inner shielding vault; all four characters use handholds and the evidence remains secured.\ninterfaceVfx: English-only diegetic UI when visible; no subtitle burn-in; no logos or watermark.\ncontinuity: Continuous microgravity inner-vault recovery for shots 080–081–082, preserving the evidence layout, access route, cast, and eyelines. Blocking:\ncharacter:rao; zoneOrSeat=evidence-console-center; screenSide=center; facing=toward the recovery props; posture=anchored; eyelineTarget=the impulse package and diagnostic unit\ncharacter:harlan; zoneOrSeat=vault-access-left; screenSide=left; facing=toward Rao; posture=floating; eyelineTarget=Rao\ncharacter:okoye; zoneOrSeat=vault-rail-right; screenSide=right; facing=toward Harlan and Rao; posture=anchored; eyelineTarget=the evidence path\ncharacter:voss; zoneOrSeat=vault-console-rear; screenSide=right; facing=toward Rao; posture=anchored; eyelineTarget=Rao Preserve screen direction, seating, eyelines, wardrobe, props, lighting, gravity/thrust, and motion direction across stages. Continue each stage from the previous settled end state; preserve momentum and camera-axis continuity without teleporting, resetting blocking, or inventing transitions.\naudio: Voice samples attached; perform cues from samples + text. Captain Elias Voss [character:voss] at ~0ms in festival-master:shot-plan-082 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {Status?} Elin Rao [character:rao] at ~480ms in festival-master:shot-plan-082 (image asset:character-rao-sheet, voice asset:voice-ref-en-elin): {It isn’t disarmed. It just isn’t going off here.} Captain Elias Voss [character:voss] at ~3760ms in festival-master:shot-plan-082 (image asset:character-voss-sheet, voice asset:voice-ref-en-voss): {Keep it watched. No thrust, no vibration — nothing that shakes this ship until we're certain it's safe.}\nnegative: No identity swaps, ambiguous speaker assignment, extra cast, discontinuous motion, camera-axis jump, teleporting, gravity error, zero-g drift during thrust, invented dialogue, spoken-line subtitle burn-in, logos, watermark, or background music.",
       "outputs": [
         {
           "order": 1,
-          "artifact": "video"
+          "artifact": "video",
+          "assetId": "asset:festival-master-stretch-vault-recovery-080-082-rev-1-video-2-video"
         }
       ],
-      "blockers": [
-        "editorial_prompt_freeze_not_approved",
-        "seedance_execution_gated",
-        "stale_image_asset:asset:festival-master-stretch-vault-recovery-080-082-panel-03"
-      ],
+      "blockers": [],
       "coherenceException": false,
-      "runnable": false
+      "runnable": true
     }
   ]
 }
