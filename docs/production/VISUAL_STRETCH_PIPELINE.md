@@ -94,6 +94,8 @@ npm run register:visual-stretch-panels -- --script light-delay-festival-master -
 npm run register:visual-stretch-video -- --from data/production/runs/<runId>-results.json --run <ready-run.json> [--video <downloaded.mp4>]
 ```
 
+**Movie mode (animatic player):** After job-level video register, Movie mode builds **playback spans** from the generation plan’s video jobs + `assets.json`. A playable video (`needs_review` or `current`, file on disk) collapses that job’s `memberInputs` into one unmuted Seedance clip (duration = asset `durationMs`). Cue WAVs for those member shots are suppressed so Seedance audio is not doubled. Register still does **not** write `take.videoAssetId`; OTIO take bind remains a later editorial step.
+
 ## UI (v1)
 
-JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, still refs, video reference policy (and authored video refs when explicit), selected vs candidate, seating blockers, and reference-budget / pack-vs-consolidation remediations (would-omit is hypothetical). Deferred/blocked `Take.productionGate` shows as a readiness flag and take-section badge (reason + prerequisite catalog/manifest status). Full `/stretches/[scriptId]` deferred.
+JSON/CLI authoring. ShotCard badge + ShotDetailsPanel expose stretch id, revision, members, sheet, still refs, video reference policy (and authored video refs when explicit), selected vs candidate, seating blockers, and reference-budget / pack-vs-consolidation remediations (would-omit is hypothetical). Deferred/blocked `Take.productionGate` shows as a readiness flag and take-section badge (reason + prerequisite catalog/manifest status). Full `/stretches/[scriptId]` deferred. Movie mode consumes registered stretch videos as spans (see above).

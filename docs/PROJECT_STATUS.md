@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Movie mode Seedance stretch spans (English source)
+
+- Movie mode plays job-level Seedance stretch videos (`needs_review` or `current`) as unmuted montage spans covering each video job’s member shots; dialogue WAVs are suppressed on those shots. Dual-video preload for the next span. Register still does not bind `take.videoAssetId`.
+
 ## 2026-09-15 — Murder stretch video-2 036 (English source)
 
 - Reactor-record video-2 submitted and registered pending review: job `1248bbd4-6a4e-4d31-a1e8-f68c0f704a34`, ~7 s / 480p / 17.5 cr → `…/festival-master-stretch-reactor-record-033-036-rev-1-video-2.mp4`. Selected takes unchanged. Stretch 033–036 now has both Seedance parts pending review.

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import LanguageControls from '$lib/components/controls/LanguageControls.svelte';
-	import AnimaticFrame from './AnimaticFrame.svelte';
+	import AnimaticMediaStage from './AnimaticMediaStage.svelte';
 	import ShotDetailsPanel from './ShotDetailsPanel.svelte';
 	import DurationPair from '$lib/components/timing/DurationPair.svelte';
 	import { WebAudioCueSequencer } from '$lib/audio/webAudioCueSequencer';
@@ -19,10 +19,20 @@
 	import { getSubtitleSegments } from '$lib/data/selectors/index';
 	import { buildShotDialogueTimeline } from '$lib/data/selectors/animaticDialogueTimeline';
 	import {
+		buildAnimaticPlaybackSpans,
+		filterDialogueCuesOutsideStretchVideo,
+		isStretchVideoSpan,
+		shotDurationsAlignedToSpans,
+		spanDurationsMs,
+		spanIndexForShotIndex,
+		type AnimaticPlaybackSpan
+	} from '$lib/data/selectors/animaticPlaybackSpans';
+	import {
 		analyzeShotDialogue,
 		estimateScriptSpokenMs,
 		montageScriptMs
 	} from '$lib/data/selectors/dialogueTiming';
+	import { getGenerationPlan } from '$lib/data/repositories/generationPlans';
 	import { formatClock } from '$lib/utils/duration';
 	import { withBase, withLocale } from '$lib/utils/paths';
 	import type { Cue, ScriptFile, Shot } from '$lib/types/script';
@@ -53,21 +63,51 @@
 	const dialogueLanguage = $derived(lang.dialogueLanguage);
 	const subtitleLanguage = $derived(lang.subtitleLanguage);
 	const edits = $derived(loadAnimaticEdits(script.script.id, script.script.version));
+	const generationPlan = $derived(getGenerationPlan(script.script.id));
 
-	const durations = $derived(
+	const stillDurations = $derived(
 		shots.map((s) => durationFromEdits(edits, s.shot.id, s.shot.durationMs))
 	);
 
-	const totalMs = $derived(durations.reduce((a, b) => a + b, 0));
+	const spans = $derived(
+		buildAnimaticPlaybackSpans(
+			script,
+			shots.map((s) => s.shot),
+			generationPlan,
+			{
+				shotDurationMs: (shot) => durationFromEdits(edits, shot.id, shot.durationMs)
+			}
+		)
+	);
+
+	const spanDurs = $derived(spanDurationsMs(spans));
+	const totalMs = $derived(spanDurs.reduce((a, b) => a + b, 0));
 	const scriptMontageMs = $derived(montageScriptMs(script, edits));
 	const scriptSpokenMs = $derived(estimateScriptSpokenMs(script, dialogueLanguage));
 
+	const orderedShotIds = $derived(shots.map((s) => s.shot.id));
+
+	const currentSpanIndex = $derived(
+		Math.max(0, spanIndexForShotIndex(spans, orderedShotIds, player.shotIndex))
+	);
+	const currentSpan = $derived(spans[currentSpanIndex] as AnimaticPlaybackSpan | undefined);
+	const nextSpan = $derived(spans[currentSpanIndex + 1] ?? null);
+
 	const absoluteMs = $derived(
-		durations.slice(0, player.shotIndex).reduce((a, b) => a + b, 0) + player.elapsedInShotMs
+		spanDurs.slice(0, currentSpanIndex).reduce((a, b) => a + b, 0) + player.elapsedInShotMs
 	);
 
+	const alignedShotDurations = $derived(
+		shotDurationsAlignedToSpans(shots.map((s) => s.shot), spans, (shot, i) =>
+			durationFromEdits(edits, shot.id, stillDurations[i] ?? shot.durationMs)
+		)
+	);
+
+	const rawDialogueTimeline = $derived(
+		buildShotDialogueTimeline(script, alignedShotDurations, dialogueLanguage, 'es')
+	);
 	const dialogueTimeline = $derived(
-		buildShotDialogueTimeline(script, durations, dialogueLanguage, 'es')
+		filterDialogueCuesOutsideStretchVideo(rawDialogueTimeline, spans)
 	);
 
 	const timelineFingerprint = $derived(
@@ -76,8 +116,15 @@
 			.join(';')}`
 	);
 
-	const current = $derived(shots[player.shotIndex]);
-	const currentDuration = $derived(durations[player.shotIndex] ?? 0);
+	const primaryShotIndex = $derived(
+		currentSpan?.kind === 'still'
+			? currentSpan.shotIndex
+			: currentSpan?.kind === 'stretchVideo'
+				? currentSpan.primaryShotIndex
+				: player.shotIndex
+	);
+	const current = $derived(shots[primaryShotIndex]);
+	const currentDuration = $derived(spanDurs[currentSpanIndex] ?? 0);
 	const currentShotAnalysis = $derived(
 		current ? analyzeShotDialogue(script, current.shot, dialogueLanguage) : undefined
 	);
@@ -91,13 +138,19 @@
 		const sceneN = String(currentScene?.number ?? 0).padStart(2, '0');
 		const tomaN = String(current.shot.number).padStart(2, '0');
 		const code = framingCode(current.shot);
+		if (isStretchVideoSpan(currentSpan)) {
+			const last = currentSpan.shotIds[currentSpan.shotIds.length - 1];
+			const lastShot = shots.find((s) => s.shot.id === last)?.shot;
+			const lastN = String(lastShot?.number ?? tomaN).padStart(2, '0');
+			return `${m.script_scene().toUpperCase()} ${sceneN} · ${m.animatic_take().toUpperCase()} ${tomaN}–${lastN} · ${code}`;
+		}
 		return `${m.script_scene().toUpperCase()} ${sceneN} · ${m.animatic_take().toUpperCase()} ${tomaN} · ${code}`;
 	});
 
 	const sceneTitle = $derived(currentScene?.title ?? currentScene?.summary ?? '');
 
 	const currentAbsoluteInMs = $derived(
-		durations.slice(0, player.shotIndex).reduce((sum, duration) => sum + duration, 0)
+		spanDurs.slice(0, currentSpanIndex).reduce((sum, duration) => sum + duration, 0)
 	);
 
 	const editorHref = $derived(
@@ -105,17 +158,40 @@
 	);
 
 	const activeSubtitles = $derived.by(() => {
-		if (!current || subtitleLanguage === null) return [];
+		if (!current || subtitleLanguage === null || !currentSpan) return [];
+		const shotIds =
+			currentSpan.kind === 'stretchVideo' ? currentSpan.shotIds : [current.shot.id];
 		const segments = getSubtitleSegments(script, {
 			dialogueLanguage,
 			subtitleLanguage,
 			projectFallback: 'es',
-			shotIds: [current.shot.id]
+			shotIds: [...shotIds]
 		});
+		if (currentSpan.kind === 'still') {
+			return segments.filter((seg) => {
+				const start = seg.atMs;
+				const end = start + (seg.durationMs ?? Math.max(1200, currentDuration - start));
+				return player.elapsedInShotMs >= start && player.elapsedInShotMs < end;
+			});
+		}
+		// Map member-relative cues into span time via aligned durations.
+		const members = currentSpan.shotIds;
+		const origins = new Map<string, number>();
+		let origin = 0;
+		for (const id of members) {
+			origins.set(id, origin);
+			const idx = shots.findIndex((s) => s.shot.id === id);
+			origin += alignedShotDurations[idx] ?? 0;
+		}
+		const stillById = new Map(shots.map((s) => [s.shot.id, s.shot.durationMs]));
 		return segments.filter((seg) => {
-			const start = seg.atMs;
-			const end = start + (seg.durationMs ?? Math.max(1200, currentDuration - start));
-			return player.elapsedInShotMs >= start && player.elapsedInShotMs < end;
+			const memberOrigin = origins.get(seg.shotId) ?? 0;
+			const stillDur = Math.max(1, stillById.get(seg.shotId) ?? 1);
+			const alignedIdx = shots.findIndex((s) => s.shot.id === seg.shotId);
+			const alignedDur = Math.max(1, alignedShotDurations[alignedIdx] ?? stillDur);
+			const start = memberOrigin + (seg.atMs * alignedDur) / stillDur;
+			const rawEnd = start + ((seg.durationMs ?? 1200) * alignedDur) / stillDur;
+			return player.elapsedInShotMs >= start && player.elapsedInShotMs < rawEnd;
 		});
 	});
 
@@ -143,22 +219,42 @@
 		return (size && map[size]) || size || '—';
 	}
 
-	function computeAbsoluteMs(shotIndex: number, elapsedInShotMs: number): number {
-		return durations.slice(0, shotIndex).reduce((a, b) => a + b, 0) + elapsedInShotMs;
+	function primaryShotIndexForSpan(span: AnimaticPlaybackSpan): number {
+		return span.kind === 'still' ? span.shotIndex : span.primaryShotIndex;
+	}
+
+	function seekToSpan(spanIndex: number, elapsedInSpanMs = 0) {
+		const span = spans[spanIndex];
+		if (!span) return;
+		setShotIndex(primaryShotIndexForSpan(span));
+		setElapsedInShotMs(Math.max(0, Math.min(elapsedInSpanMs, span.durationMs)));
+	}
+
+	function computeAbsoluteMs(spanIndex: number, elapsedInSpanMs: number): number {
+		return spanDurs.slice(0, spanIndex).reduce((a, b) => a + b, 0) + elapsedInSpanMs;
 	}
 
 	function visualAbsoluteMs(): number {
-		const state = getPlayerState();
-		return computeAbsoluteMs(state.shotIndex, state.elapsedInShotMs);
+		return computeAbsoluteMs(currentSpanIndex, getPlayerState().elapsedInShotMs);
 	}
 
 	function startAudioFromVisualClock() {
+		if (isStretchVideoSpan(currentSpan)) {
+			sequencer.stop();
+			scheduledFingerprint = timelineFingerprint;
+			lastRescheduleKey = timelineFingerprint;
+			return;
+		}
 		void sequencer.play(dialogueTimeline, visualAbsoluteMs());
 		scheduledFingerprint = timelineFingerprint;
 		lastRescheduleKey = timelineFingerprint;
 	}
 
 	function syncSequencerSeek(nextAbsoluteMs: number) {
+		if (isStretchVideoSpan(currentSpan)) {
+			sequencer.stop();
+			return;
+		}
 		if (sequencer.status === 'playing' || sequencer.status === 'paused') {
 			sequencer.seek(nextAbsoluteMs);
 		}
@@ -174,21 +270,20 @@
 		lastTs = ts;
 
 		const state = getPlayerState();
-		const overlay = loadAnimaticEdits(script.script.id, script.script.version);
-		const durs = shots.map((s) => durationFromEdits(overlay, s.shot.id, s.shot.durationMs));
-		let idx = state.shotIndex;
+		const durs = untrack(() => spanDurs);
+		const spanList = untrack(() => spans);
+		let idx = untrack(() => currentSpanIndex);
 		let elapsed = state.elapsedInShotMs + delta;
 		let curDur = durs[idx] ?? 0;
 
-		while (elapsed >= curDur && idx < shots.length - 1) {
+		while (elapsed >= curDur && idx < spanList.length - 1) {
 			elapsed -= curDur;
 			idx += 1;
 			curDur = durs[idx] ?? 0;
 		}
 
-		if (idx >= shots.length - 1 && elapsed >= curDur) {
-			setShotIndex(shots.length - 1);
-			setElapsedInShotMs(curDur);
+		if (idx >= spanList.length - 1 && elapsed >= curDur) {
+			seekToSpan(spanList.length - 1, curDur);
 			setStatus('idle');
 			lastTs = 0;
 			sequencer.stop();
@@ -197,7 +292,11 @@
 			return;
 		}
 
-		if (idx !== state.shotIndex) setShotIndex(idx);
+		const target = spanList[idx];
+		if (target) {
+			const primary = primaryShotIndexForSpan(target);
+			if (primary !== state.shotIndex) setShotIndex(primary);
+		}
 		setElapsedInShotMs(elapsed);
 		raf = requestAnimationFrame(tick);
 	}
@@ -215,7 +314,9 @@
 			sequencer.pause();
 		} else {
 			const canResume =
-				sequencer.status === 'paused' && scheduledFingerprint === timelineFingerprint;
+				!isStretchVideoSpan(currentSpan) &&
+				sequencer.status === 'paused' &&
+				scheduledFingerprint === timelineFingerprint;
 			play();
 			startLoop();
 			if (canResume) {
@@ -238,55 +339,62 @@
 	function goPrev() {
 		const state = getPlayerState();
 		if (state.elapsedInShotMs > 400) {
-			setElapsedInShotMs(0);
-			syncSequencerSeek(computeAbsoluteMs(state.shotIndex, 0));
+			seekToSpan(currentSpanIndex, 0);
+			syncSequencerSeek(computeAbsoluteMs(currentSpanIndex, 0));
 			return;
 		}
-		const idx = Math.max(0, state.shotIndex - 1);
-		setShotIndex(idx);
+		const idx = Math.max(0, currentSpanIndex - 1);
+		seekToSpan(idx, 0);
 		syncSequencerSeek(computeAbsoluteMs(idx, 0));
+		if (!isStretchVideoSpan(spans[idx])) startAudioFromVisualClock();
+		else sequencer.stop();
 	}
 
 	function goNext() {
-		const state = getPlayerState();
-		const idx = Math.min(shots.length - 1, state.shotIndex + 1);
-		setShotIndex(idx);
+		const idx = Math.min(spans.length - 1, currentSpanIndex + 1);
+		seekToSpan(idx, 0);
 		syncSequencerSeek(computeAbsoluteMs(idx, 0));
+		if (!isStretchVideoSpan(spans[idx])) startAudioFromVisualClock();
+		else sequencer.stop();
 	}
 
 	function seekAbsoluteBy(deltaSec: number) {
 		const next = Math.max(0, Math.min(totalMs - 1, absoluteMs + deltaSec * 1000));
-		const overlay = loadAnimaticEdits(script.script.id, script.script.version);
-		const durs = shots.map((s) => durationFromEdits(overlay, s.shot.id, s.shot.durationMs));
+		seekAbsolute(next);
+	}
+
+	function seekAbsolute(next: number) {
+		const durs = spanDurs;
 		let remaining = next;
 		let idx = 0;
 		while (idx < durs.length - 1 && remaining >= durs[idx]!) {
 			remaining -= durs[idx]!;
 			idx += 1;
 		}
-		setShotIndex(idx);
-		setElapsedInShotMs(remaining);
-		syncSequencerSeek(next);
+		seekToSpan(idx, remaining);
+		const span = spans[idx];
+		if (isStretchVideoSpan(span)) sequencer.stop();
+		else syncSequencerSeek(next);
 	}
 
 	function onScrub(e: Event) {
 		const value = Number((e.currentTarget as HTMLInputElement).value);
-		const overlay = loadAnimaticEdits(script.script.id, script.script.version);
-		const durs = shots.map((s) => durationFromEdits(overlay, s.shot.id, s.shot.durationMs));
-		let remaining = value;
-		let idx = 0;
-		while (idx < durs.length - 1 && remaining >= durs[idx]!) {
-			remaining -= durs[idx]!;
-			idx += 1;
-		}
-		setShotIndex(idx);
-		setElapsedInShotMs(remaining);
-		syncSequencerSeek(value);
+		seekAbsolute(value);
 	}
 
 	function toggleMute() {
 		audioMuted = !audioMuted;
 		sequencer.setMuted(audioMuted);
+	}
+
+	function onVideoTime(ms: number) {
+		if (getPlayerState().status !== 'playing') return;
+		if (!isStretchVideoSpan(currentSpan)) return;
+		// Light sync from element when rAF and decode drift; keep within span.
+		const clamped = Math.max(0, Math.min(ms, currentDuration));
+		if (Math.abs(clamped - getPlayerState().elapsedInShotMs) > 250) {
+			setElapsedInShotMs(clamped);
+		}
 	}
 
 	async function toggleFullscreen() {
@@ -320,19 +428,45 @@
 
 	$effect(() => {
 		if (typeof Image === 'undefined') return;
-		const next = shots[player.shotIndex + 1];
-		if (next?.media.displayPath) {
-			const pre = new Image();
-			pre.src = withBase(next.media.displayPath);
+		const next = nextSpan;
+		if (next?.kind === 'still') {
+			const shot = shots[next.shotIndex];
+			if (shot?.media.displayPath) {
+				const pre = new Image();
+				pre.src = withBase(shot.media.displayPath);
+			}
 		}
+	});
+
+	// When the span changes while playing, stop Seedance-range WAVs or resume still dialogue.
+	$effect(() => {
+		const idx = currentSpanIndex;
+		const stretch = isStretchVideoSpan(currentSpan);
+		if (untrack(() => getPlayerState().status) !== 'playing') return;
+		void idx;
+		if (stretch) {
+			sequencer.stop();
+			scheduledFingerprint = timelineFingerprint;
+			lastRescheduleKey = timelineFingerprint;
+			return;
+		}
+		lastRescheduleKey = '';
+		startAudioFromVisualClock();
 	});
 
 	// Reschedule dialogue only when the audio timeline fingerprint changes.
 	// Do not depend on subtitleLanguage or absoluteMs (rAF updates every frame).
 	$effect(() => {
 		const key = timelineFingerprint;
+		const stretch = isStretchVideoSpan(currentSpan);
 
 		if (untrack(() => getPlayerState().status) !== 'playing') return;
+		if (stretch) {
+			sequencer.stop();
+			lastRescheduleKey = key;
+			scheduledFingerprint = key;
+			return;
+		}
 		if (key === lastRescheduleKey) return;
 
 		const cues = untrack(() => dialogueTimeline);
@@ -340,8 +474,6 @@
 		lastRescheduleKey = key;
 		void (async () => {
 			await sequencer.play(cues, untrack(() => visualAbsoluteMs()));
-			// Align to the visual clock after async context/decode so audio cannot
-			// drift ahead of subtitles across a language-driven reschedule.
 			if (untrack(() => getPlayerState().status) === 'playing' && sequencer.status === 'playing') {
 				sequencer.seek(untrack(() => visualAbsoluteMs()));
 			}
@@ -352,6 +484,8 @@
 		if (rootEl) {
 			void rootEl.requestFullscreen().catch(() => undefined);
 		}
+		const spanIdx = spanIndexForShotIndex(spans, orderedShotIds, getPlayerState().shotIndex);
+		if (spanIdx >= 0) seekToSpan(spanIdx, getPlayerState().elapsedInShotMs);
 		play();
 		startLoop();
 		startAudioFromVisualClock();
@@ -370,11 +504,17 @@
 <div class="player" bind:this={rootEl} aria-label={m.animatic_player()}>
 	<div class="movie-layout">
 		<div class="movie-frame">
-			{#if current}
-				<AnimaticFrame
+			{#if current && currentSpan}
+				<AnimaticMediaStage
+					span={currentSpan}
+					{nextSpan}
 					media={current.media}
 					shotId={current.shot.id}
 					alt={`${m.animatic_take()} ${current.shot.number}`}
+					playing={player.status === 'playing'}
+					elapsedMs={player.elapsedInShotMs}
+					muted={audioMuted}
+					{onVideoTime}
 				/>
 			{/if}
 
@@ -411,7 +551,7 @@
 				<div class="movie-meta-stats">
 					<span class="movie-meta-label">{m.animatic_shots()}</span>
 					<div class="movie-meta-stats-body">
-						<div class="movie-counter">{player.shotIndex + 1} / {shots.length}</div>
+						<div class="movie-counter">{currentSpanIndex + 1} / {spans.length}</div>
 						<DurationPair montageMs={scriptMontageMs} spokenMs={scriptSpokenMs} compact />
 					</div>
 				</div>

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 — Movie mode plays Seedance stretch videos
+
+- Animatic Movie mode resolves registered stretch video jobs (`needs_review` / `current`) into unmuted playback spans that replace member stills and suppress cue WAVs for that range (Seedance audio). A/B video preload for the next span. Job-level register unchanged (no `take.videoAssetId` bind).
+
 ## 2026-09-15 — Murder stretch video-2 (036)
 
 - Submitted `festival-master:stretch-reactor-record-033-036:rev-1:video-2` (Harlan confrontation). Higgsfield `1248bbd4-6a4e-4d31-a1e8-f68c0f704a34`, **17.5 cr**, 854×480 / ~7 s. Registered pending review as `asset:festival-master-stretch-reactor-record-033-036-rev-1-video-2-video`.
