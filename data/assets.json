@@ -12955,12 +12955,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-vector-057-059/sheet.png",
       "mimeType": "image/png",
-      "width": 1536,
-      "height": 1024,
+      "width": 2688,
+      "height": 1520,
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-14T10:06:58.242Z"
+        "generatedAt": "2026-09-15T22:22:40.846Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-vector-057-059",
@@ -13909,13 +13909,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1672,
+      "height": 941,
       "source": {
-        "provider": "local",
-        "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.359Z",
-        "originalAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet"
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
@@ -13926,16 +13925,24 @@
         "panelRegionY": 0.078125,
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
-        "scriptId": "script:light-delay-festival-master"
+        "scriptId": "script:light-delay-festival-master",
+        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "referenceAssetIds": [
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+        ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-054",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -13946,13 +13953,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1672,
+      "height": 941,
       "source": {
-        "provider": "local",
-        "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.359Z",
-        "originalAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet"
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
@@ -13963,16 +13969,24 @@
         "panelRegionY": 0.078125,
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
-        "scriptId": "script:light-delay-festival-master"
+        "scriptId": "script:light-delay-festival-master",
+        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "referenceAssetIds": [
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+        ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-055",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -13983,13 +13997,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-vault-obstruction-054-056/panel-03.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1672,
+      "height": 941,
       "source": {
-        "provider": "local",
-        "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:24.359Z",
-        "originalAssetId": "asset:festival-master-stretch-central-vault-obstruction-054-056-sheet"
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-central-vault-obstruction-054-056",
@@ -14000,16 +14013,24 @@
         "panelRegionY": 0.51,
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
-        "scriptId": "script:light-delay-festival-master"
+        "scriptId": "script:light-delay-festival-master",
+        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "referenceAssetIds": [
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-rao-sheet",
+          "asset:location-celestial-ardor-central-access-sheet",
+          "asset:location-celestial-ardor-inner-shielding-vault-sheet"
+        ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-056",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15336,13 +15357,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-01.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1672,
+      "height": 941,
       "source": {
-        "provider": "local",
-        "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
-        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15353,16 +15373,23 @@
         "panelRegionY": 0.078125,
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
-        "scriptId": "script:light-delay-festival-master"
+        "scriptId": "script:light-delay-festival-master",
+        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-050",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15373,13 +15400,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-02.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1672,
+      "height": 941,
       "source": {
-        "provider": "local",
-        "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
-        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15390,16 +15416,23 @@
         "panelRegionY": 0.078125,
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
-        "scriptId": "script:light-delay-festival-master"
+        "scriptId": "script:light-delay-festival-master",
+        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-051",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15410,13 +15443,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-03.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1672,
+      "height": 941,
       "source": {
-        "provider": "local",
-        "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
-        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15427,16 +15459,23 @@
         "panelRegionY": 0.51,
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
-        "scriptId": "script:light-delay-festival-master"
+        "scriptId": "script:light-delay-festival-master",
+        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-052",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15447,13 +15486,12 @@
       "role": "animatic",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-fuel-audit-050-053/panel-04.png",
       "mimeType": "image/png",
-      "width": 753,
-      "height": 422,
+      "width": 1672,
+      "height": 941,
       "source": {
-        "provider": "local",
-        "model": "sharp-split",
-        "generatedAt": "2026-09-14T16:23:27.771Z",
-        "originalAssetId": "asset:festival-master-stretch-bridge-fuel-audit-050-053-sheet"
+        "provider": "OpenAI",
+        "model": "gpt-image-2",
+        "generatedAt": "2026-09-15T22:10:45.564Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15464,16 +15502,23 @@
         "panelRegionY": 0.51,
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
-        "scriptId": "script:light-delay-festival-master"
+        "scriptId": "script:light-delay-festival-master",
+        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "referenceAssetIds": [
+          "asset:character-pair-voss-harlan-bridge-sheet",
+          "asset:character-pair-rao-sorell-bridge-sheet",
+          "asset:character-pair-okoye-voss-bridge-sheet",
+          "asset:location-celestial-ardor-bridge-realistic-reference"
+        ]
       },
       "imageStatus": {
-        "status": "needs_regeneration",
+        "status": "needs_review",
         "reasons": [
-          "quality",
-          "continuity_error"
+          "quality"
         ],
+        "sourceShotId": "festival-master:shot-plan-053",
         "explanation": {
-          "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
+          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }

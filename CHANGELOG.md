@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 - Scene 18-19 still generation
+
+- Generated independent Festival-master stills for shots 050-056 from the authored scene blocking and existing reference sets. Combined source sheets remain untouched; replacements are pending editorial review.
+
 ## 2026-09-15 — Scenes 20–22 still authorship + video freeze prep
 
 - Reauthored Festival-master stretches 057–067 (vector, packet-open, vault flashback, command-break 064 and 065–067): explicit 1 g / MG, identity locks vs pair sheets, scrub-safe shot descriptions, non-placeholder blocking/members. Command-break converted from `independent_shared_authority` to combined storyboard sheets. Shot 064 duration set to 4200 ms. `videoPromptFreeze` stamped (submit only after still regen + human go). Plans rebuilt; panels marked `needs_regeneration` (not regenerated). Surgical script: `scripts/_fix-scene-20-22-authorship.mjs` (Auto/Composer).

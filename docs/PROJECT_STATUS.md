@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 - Scene 18-19 still generation (English source)
+
+- Generated independent Festival-master stills for shots 050-056 using the authored bridge and central-access/vault blocking with their existing reference sets. Combined source sheets remain untouched; editorial review is pending.
+
 ## 2026-09-15 — Scenes 20–22 authorship fixed; video freeze ready (English source)
 
 - Stretches 057–067 still prompts self-contained (1 g bridge / MG vault flashback; identity locks; command-break sheets runnable). `videoPromptFreeze` approved for those stretches; video jobs still blocked on stale panels until still regen. No Higgsfield generation this pass. Committed by Auto (Composer).
