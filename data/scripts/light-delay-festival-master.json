@@ -23173,7 +23173,7 @@
         "status": "needs_regeneration",
         "reasons": [
           "quality",
-          "continuity"
+          "continuity_error"
         ],
         "explanation": {
           "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
@@ -23205,7 +23205,7 @@
         "status": "needs_regeneration",
         "reasons": [
           "quality",
-          "continuity"
+          "continuity_error"
         ],
         "explanation": {
           "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
@@ -23237,7 +23237,7 @@
         "status": "needs_regeneration",
         "reasons": [
           "quality",
-          "continuity"
+          "continuity_error"
         ],
         "explanation": {
           "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
@@ -24388,7 +24388,7 @@
         "status": "needs_regeneration",
         "reasons": [
           "quality",
-          "continuity"
+          "continuity_error"
         ],
         "explanation": {
           "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
@@ -24420,7 +24420,7 @@
         "status": "needs_regeneration",
         "reasons": [
           "quality",
-          "continuity"
+          "continuity_error"
         ],
         "explanation": {
           "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
@@ -24452,7 +24452,7 @@
         "status": "needs_regeneration",
         "reasons": [
           "quality",
-          "continuity"
+          "continuity_error"
         ],
         "explanation": {
           "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
@@ -24484,7 +24484,7 @@
         "status": "needs_regeneration",
         "reasons": [
           "quality",
-          "continuity"
+          "continuity_error"
         ],
         "explanation": {
           "en": "Prior still generated from hollow/placeholder stretch prompt (wrong identity or gravity/location). Reauthored prompt+refs 2026-09-15; regenerate when authorized.",
