@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-15 — Higgsfield media ledger
+
+- Added `data/production/higgsfield-media-ledger.json` (assetId + staging sha256 → remote `media_id`) seeded from run `uploadHandles`, plus `higgsfield-media-duplicates.json` for manual Assets UI cleanup.
+- Ready handoffs set `references[].remoteMediaId` on cache hit; `register:visual-stretch-video` upserts the ledger. Rebuild: `npm run rebuild:higgsfield-media-ledger`.
+- Documented reuse, workspace pin, IN THE DARK decline, no failed-job retry, and singleton-vs-stretch register in `HIGGSFIELD_MCP.md` §8b / generation guides.
+
 ## 2026-09-15 — Operations gallery 004–005 Seedance
 
 - Submitted `festival-master:stretch-operations-gallery-004-005:rev-1:video-1` (Zao/Voss private exchange). Higgsfield `72cf8c68-f06d-4436-b80d-309ceb1c2961`, **30 cr**, 854×480 / ~12 s. Registered pending review as `asset:festival-master-stretch-operations-gallery-004-005-rev-1-video-1-video`.

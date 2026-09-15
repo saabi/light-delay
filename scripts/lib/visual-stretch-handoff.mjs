@@ -5,6 +5,15 @@ import { createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import { join, normalize, relative, sep } from 'node:path';
 import { sha256 } from './generation-planning.mjs';
+import {
+	DEFAULT_HIGGSFIELD_WORKSPACE_ID,
+	inferLedgerKind,
+	loadLedger,
+	lookup,
+	saveLedger,
+	sha256File,
+	upsertEntry
+} from './higgsfield-media-ledger.mjs';
 import { compileStretchVideoPrompt } from './visual-stretch-video-prompt.mjs';
 import {
 	collectVideoStretchReferences,
@@ -39,15 +48,17 @@ export const AGENT_INSTRUCTIONS_PREVIEW = [
 
 export const AGENT_INSTRUCTIONS_READY = [
 	'This run is status ready and nonExecutable false. Do NOT submit to Higgsfield MCP or any paid API until a human confirms the credit cost from generate_video get_cost:true immediately before submit.',
+	'Pin Higgsfield workspace first: select_workspace Private Ultra e4d99f54-5f04-4f20-8544-330c41232965.',
 	'Refuse submit when the source plan job has runnable false or generationGate / generation_deferred / generation_blocked blockers; clear Take.productionGate on the script take and rebuild plans first — do not hand-edit plan generationGate.',
 	'Refuse submit on reference_budget:* blockers. Prefer structured job.referenceBudget (required/covered/uncovered/attached/wouldOmit/violations) over reparsing strings.',
 	'Keep this exact run file for submit and register; do not re-run handoff between submit and register (inputDigest covers the prompt).',
 	'Before paid submit: run node scripts/higgsfield-preflight.mjs --probe; confirm live concurrency and credits; call generate_video with get_cost true; state the credit cost and wait for human confirmation.',
-	'Video jobs pass generate_audio true (Seedance native sound) unless the author asked for a silent clip.',
-	'executionPolicy.smoke_test: submit exactly one job, then stop. No retries, no queue continuation, no auto-accept.',
-	'Upload references ONLY in the order of references[] in this file. Do not reconstruct or reorder from the generation plan.',
-	'After completion: download the generated video from Higgsfield Assets into the repo under static/ (agreed stretch path), record remote upload handles per assetId, write data/production/runs/*-results.json, then npm run register:visual-stretch-video -- --from <results> --run <this-ready-run.json> [--video <downloaded>].',
-	'Register at job level only (no take binding).'
+	'Video jobs pass generate_audio true (Seedance native sound) unless the author asked for a silent clip. Prefer omni_reference, resolution 480p, aspect_ratio 16:9; never omit resolution (catalog default 720p).',
+	'When offered, decline style preset 24bae836-2c4a-48e0-89b6-49fcc0b21612 (IN THE DARK) and note it in results.',
+	'executionPolicy.smoke_test: submit exactly one job, then stop. No retries, no queue continuation, no auto-accept. On failure/422/timeout do not auto-resubmit — report and wait for human.',
+	'For each references[] entry: if remoteMediaId is set, pass that media_id and do NOT upload; if absent, upload via media_upload_widget (local staging path; not chat attachment) in references[] order only.',
+	'After completion: download the generated video from Higgsfield Assets into the repo under static/ (agreed stretch path), record remote upload handles per assetId (including reused remoteMediaId values), write data/production/runs/*-results.json, then npm run register:visual-stretch-video -- --from <results> --run <this-ready-run.json> [--video <downloaded>].',
+	'Register at job level only (no take binding). Register upserts data/production/higgsfield-media-ledger.json.'
 ].join(' ');
 
 /**
@@ -113,6 +124,38 @@ export function assertRepoRelativeFileExists(root, relPath) {
 		throw new Error(`Path outside static/: ${relPath}`);
 	}
 	return abs;
+}
+
+/**
+ * Prefer durable Seedance upload clips for voice samples when authored.
+ * Canonical bank WAV stays on asset.path; truncated MP3 is metadata only.
+ * @param {{ path?: string, mimeType?: string, durationMs?: number, metadata?: Record<string, unknown> } | null | undefined} asset
+ * @param {{ role?: string }} [opts]
+ * @returns {{ publicPath: string, mimeType?: string, durationMs?: number | null }}
+ */
+export function resolveStretchStagingSource(asset, opts = {}) {
+	const seedancePath =
+		opts.role === 'voice_sample' && typeof asset?.metadata?.seedanceUploadPath === 'string'
+			? asset.metadata.seedanceUploadPath
+			: null;
+	if (seedancePath) {
+		return {
+			publicPath: seedancePath,
+			mimeType:
+				typeof asset.metadata?.seedanceUploadMimeType === 'string'
+					? asset.metadata.seedanceUploadMimeType
+					: 'audio/mpeg',
+			durationMs:
+				typeof asset.metadata?.seedanceUploadDurationMs === 'number'
+					? asset.metadata.seedanceUploadDurationMs
+					: null
+		};
+	}
+	return {
+		publicPath: asset?.path || '',
+		mimeType: asset?.mimeType,
+		durationMs: typeof asset?.durationMs === 'number' ? asset.durationMs : null
+	};
 }
 
 /**
@@ -226,7 +269,8 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 			continue;
 		}
 		const asset = assetsById.get(entry.assetId);
-		if (!asset?.path) {
+		const stagingSource = resolveStretchStagingSource(asset, { role: entry.role });
+		if (!asset || !stagingSource.publicPath) {
 			missing.push(`missing_asset:${entry.assetId}`);
 			resolved.push({
 				role: entry.role,
@@ -237,23 +281,27 @@ export function buildEffectiveReferences(job, stretch, script, assetsById, opts)
 			});
 			continue;
 		}
-		const ext = asset.path.split('.').pop() || (entry.kind === 'audio' ? 'wav' : 'png');
+		const ext =
+			stagingSource.publicPath.split('.').pop() ||
+			(entry.kind === 'audio' ? 'wav' : 'png');
 		const stagingName = stagingFilenameForAssetId(entry.assetId, ext);
 		const localStagingPath = `higgsfield-uploads/stretch/${stagingName}`;
 		let repoPath = null;
 		try {
-			repoPath = repoRelativeFromAssetPath(opts.root, asset.path);
+			repoPath = repoRelativeFromAssetPath(opts.root, stagingSource.publicPath);
 			assertRepoRelativeFileExists(opts.root, repoPath);
 		} catch (err) {
 			missing.push(`path:${entry.assetId}:${err instanceof Error ? err.message : String(err)}`);
 		}
-			resolved.push({
-				role: entry.role,
-				assetId: entry.assetId,
-				kind: entry.kind,
-				entityIds: asset.metadata?.entityIds || (asset.metadata?.characterId ? [asset.metadata.characterId] : []),
-				repoPath,
-			localStagingPath
+		resolved.push({
+			role: entry.role,
+			assetId: entry.assetId,
+			kind: entry.kind,
+			entityIds: asset.metadata?.entityIds || (asset.metadata?.characterId ? [asset.metadata.characterId] : []),
+			repoPath,
+			localStagingPath,
+			...(stagingSource.mimeType ? { mimeType: stagingSource.mimeType } : {}),
+			...(stagingSource.durationMs != null ? { durationMs: stagingSource.durationMs } : {})
 		});
 	}
 	return {
@@ -386,6 +434,30 @@ export function buildVisualStretchRunHandoff(args) {
 			? '480p'
 			: null);
 
+	const ledger = loadLedger(root);
+	const runReferences = references.map((r) => {
+		/** @type {{ role: string, assetId: string | null, kind: string, localStagingPath: string | null, repoPath: string | null, remoteMediaId?: string }} */
+		const out = {
+			role: r.role,
+			assetId: r.assetId,
+			kind: r.kind,
+			localStagingPath: r.localStagingPath,
+			repoPath: r.repoPath
+		};
+		if (r.assetId && r.repoPath) {
+			try {
+				const abs = join(root, ...String(r.repoPath).split('/'));
+				if (existsSync(abs)) {
+					const remoteMediaId = lookup(ledger, r.assetId, sha256File(abs));
+					if (remoteMediaId) out.remoteMediaId = remoteMediaId;
+				}
+			} catch {
+				/* miss stays upload-required */
+			}
+		}
+		return out;
+	});
+
 	return {
 		schemaVersion: '1.0.0',
 		runId,
@@ -408,13 +480,7 @@ export function buildVisualStretchRunHandoff(args) {
 			...(resolution ? { resolution } : {}),
 			generateAudio: job.medium === 'video'
 		},
-		references: references.map((r) => ({
-			role: r.role,
-			assetId: r.assetId,
-			kind: r.kind,
-			localStagingPath: r.localStagingPath,
-			repoPath: r.repoPath
-		})),
+		references: runReferences,
 		effectiveReferencesDigest,
 		promptDigest,
 		inputDigest,
@@ -440,4 +506,59 @@ export function buildVisualStretchRunHandoff(args) {
  */
 export function sha256HexFileBuffer(buf) {
 	return createHash('sha256').update(buf).digest('hex');
+}
+
+/**
+ * After a successful video register, upsert result.uploadHandles into the media ledger.
+ * @param {string} root
+ * @param {{
+ *   uploadHandles?: Record<string, string>,
+ *   sourceRunId?: string,
+ *   completedAt?: string,
+ *   submittedAt?: string
+ * }} result
+ * @param {Map<string, any>} assetsById
+ * @returns {{ upserted: number, skipped: string[] }}
+ */
+export function upsertResultUploadHandles(root, result, assetsById) {
+	const handles = result.uploadHandles || {};
+	/** @type {string[]} */
+	const skipped = [];
+	let upserted = 0;
+	if (!Object.keys(handles).length) return { upserted, skipped };
+
+	const ledger = loadLedger(root);
+	for (const [assetId, mediaId] of Object.entries(handles)) {
+		if (typeof mediaId !== 'string' || !mediaId) {
+			skipped.push(assetId);
+			continue;
+		}
+		const asset = assetsById.get(assetId);
+		const role =
+			asset?.kind === 'audio' || String(assetId).includes('voice') ? 'voice_sample' : undefined;
+		const staging = resolveStretchStagingSource(asset, { role });
+		if (!asset || !staging.publicPath) {
+			skipped.push(assetId);
+			continue;
+		}
+		try {
+			const rel = repoRelativeFromAssetPath(root, staging.publicPath);
+			const abs = assertRepoRelativeFileExists(root, rel);
+			upsertEntry(ledger, {
+				assetId,
+				sha256: sha256File(abs),
+				mediaId,
+				kind: inferLedgerKind(asset, assetId),
+				workspaceId: DEFAULT_HIGGSFIELD_WORKSPACE_ID,
+				sourceRunId: result.sourceRunId ?? null,
+				uploadedAt: result.completedAt || result.submittedAt || null,
+				localPath: rel
+			});
+			upserted += 1;
+		} catch {
+			skipped.push(assetId);
+		}
+	}
+	saveLedger(root, ledger);
+	return { upserted, skipped };
 }

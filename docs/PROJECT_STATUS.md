@@ -1,5 +1,9 @@
 # Estado del proyecto
 
+## 2026-09-15 — Higgsfield media ledger (English source)
+
+- Committed SoT `data/production/higgsfield-media-ledger.json` maps assetId + staging-file sha to Higgsfield `media_id` (Private Ultra workspace). Ready runs reuse via `remoteMediaId`; register upserts. `npm run rebuild:higgsfield-media-ledger` also writes `higgsfield-media-duplicates.json` for manual deletion of non-keeper input uploads. Voice Seedance MP3s are not seeded from historical WAV uploads.
+
 ## 2026-09-15 — Operations gallery 004–005 Seedance (English source)
 
 - Submitted and registered pending review: job `72cf8c68-f06d-4436-b80d-309ceb1c2961`, ~12 s / 480p / 30 cr → `…/festival-master-stretch-operations-gallery-004-005-rev-1-video-1.mp4`. Selected takes unchanged.

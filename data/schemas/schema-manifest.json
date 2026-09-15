@@ -21,5 +21,6 @@
     ,{ "schema": "asset-generation-manifest.schema.json", "files": ["production/asset-generation-manifest.json"] }
     ,{ "schema": "visual-stretch-result.schema.json", "directories": ["production/runs"] }
     ,{ "schema": "production-credits.schema.json", "files": ["production/credits.json"] }
+    ,{ "schema": "higgsfield-media-ledger.schema.json", "files": ["production/higgsfield-media-ledger.json"] }
   ]
 }

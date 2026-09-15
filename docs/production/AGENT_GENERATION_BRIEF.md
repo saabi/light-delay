@@ -146,6 +146,7 @@ covering the run (`SEEDANCE_PROMPTING.md` §6.2); shot IDs stay distinct.
 | `npm run report:causal-validity` | Obsolete/deprecated cut ledgers only |
 | `npm run report:meaning-audit` | Meaning packet after structure green |
 | `npm run prepare:higgsfield` | Copies sheets → `higgsfield-uploads/` |
+| `npm run rebuild:higgsfield-media-ledger` | Seed/refresh `data/production/higgsfield-media-ledger.json` + duplicates report from run `uploadHandles` |
 | `npm run validate:schemas` / `npm run schema:types` | Contracts |
 | `node scripts/higgsfield-preflight.mjs` | Preflight only — never submits |
 | `npm run export:resolve-otio:all` | OTIO assembly for Festival-master and trailer-master (`RESOLVE_OTIO_EXPORT.md`) |
@@ -175,7 +176,7 @@ and project output paths. The manifest does not authorize a provider run.
   wrist device — all central to Festival-master's F03–F05, F09–F10 beats. `TODO.md` already flags
   this ("Catálogo faltante del master"); it blocks `requiredReferences` for any shot that needs them
   until modeled (description + reference sheet), not before.
-- **Result manifests record remote upload handles** per `assetId` when an MCP smoke completes; there is still no general asset↔remote registry beyond that.
+- **Higgsfield media ledger** (`data/production/higgsfield-media-ledger.json`) is the assetId + staging-sha → `media_id` SoT. Ready runs may carry `references[].remoteMediaId`; reuse those and upload only misses. Results still record `uploadHandles`; `register:visual-stretch-video` upserts the ledger. Rebuild: `npm run rebuild:higgsfield-media-ledger`. Duplicate input uploads: `data/production/higgsfield-media-duplicates.json` (manual Assets UI delete of `deleteCandidates` only).
 - **`shots_index.json` / `_shot_template.blend`** are documented in `ANIMATION_WORKFLOW.md` but
   incomplete.
 - **Seedance 2.5** snapshot `provider:higgsfield:seedance-2.5:2026-08-29` is `executable: true` with
@@ -305,6 +306,7 @@ negative: <what must not appear>
 > Skip takes with `productionGate.status` of `deferred` or `blocked` (and any stretch job that lists them in `generationGate.takeIds`) until the author clears the gate — do not treat that as `imageStatus` debt. Respect the gate's `medium`: a `video`-scoped hold (`video_deferred_external_reference`) skips only Seedance/video work; generate the still/keyframe normally. `needs_regeneration` never blocks a still.
 > Never remove a stretch `referenceAssetIds` entry because video will depict the same subject; author Seedance-only static refs on optional `videoReferenceAssetIds` (absent = fallback from still list; present including `[]` = explicit). Generate keyframes from the full still list first; compile video refs only after keyframes are registered; refuse runnable video while `missing_keyframe:*` or `uncovered_video_entity:*` remains (`VISUAL_STRETCH_PIPELINE.md`). Refuse `reference_budget:*` without trimming; use pack `metadata.entityIds` for multi-entity still coverage and explicit video extras. Fallback Seedance jobs do **not** inherit `reference_pack_required` from keyframe panels lacking `entityIds` — read `keyframeCoveredEntityIds` / `uncoveredVideoEntityIds`. `reference_pack_required` vs `reference_consolidation_required` are distinct remediations.
 > Keep `compiledPrompt: null` on video jobs until that stretch's `videoPromptFreeze` is approved (Festival-master still jobs were lifted 2026-09-14; OK stretches listed in `tmp/review-of-generated-stills.md` are frozen for Seedance). Do not submit ready runs until a human confirms `get_cost`.
+> Higgsfield submit: pin Private Ultra workspace `e4d99f54-5f04-4f20-8544-330c41232965`; reuse `remoteMediaId` from the ready run / ledger (upload only misses via `media_upload_widget`); decline IN THE DARK preset `24bae836-2c4a-48e0-89b6-49fcc0b21612` when offered; no auto-retry after failed/422 jobs. Singleton packages (039 / 040b / title sting) are not stretch jobs — do not `register:visual-stretch-video` on them.
 > When rewriting dialogue for tone, edit English only and consult that speaker's voice-profile
 > `dialogueStyle` first; never fix tone by adding exposition.
 > Read `docs/ARQUITECTURA_GENERACION.md`, `docs/technical/HIGGSFIELD_MCP.md`, and

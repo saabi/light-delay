@@ -5,6 +5,7 @@ import {
 	AGENT_INSTRUCTIONS_READY,
 	DEFAULT_SMOKE_EXECUTION_POLICY,
 	buildVisualStretchRunHandoff,
+	resolveStretchStagingSource,
 	stagingFilenameForAssetId
 } from '../../../scripts/lib/visual-stretch-handoff.mjs';
 
@@ -46,6 +47,28 @@ describe('visual stretch handoff', () => {
 	it('uses stable staging filenames from asset ids', () => {
 		expect(stagingFilenameForAssetId('asset:character-zao-sheet', 'png')).toBe(
 			'asset-character-zao-sheet.png'
+		);
+	});
+
+	it('prefers durable Seedance voice clips over bank WAVs for staging', () => {
+		const asset = {
+			id: 'asset:voice-ref-en-zao',
+			path: '/assets/voices/en/Zao.wav',
+			mimeType: 'audio/wav',
+			durationMs: 13040,
+			metadata: {
+				seedanceUploadPath: '/assets/voices/en/seedance-5s/Zao.mp3',
+				seedanceUploadMimeType: 'audio/mpeg',
+				seedanceUploadDurationMs: 5000
+			}
+		};
+		expect(resolveStretchStagingSource(asset, { role: 'voice_sample' })).toEqual({
+			publicPath: '/assets/voices/en/seedance-5s/Zao.mp3',
+			mimeType: 'audio/mpeg',
+			durationMs: 5000
+		});
+		expect(resolveStretchStagingSource(asset, { role: 'visual_reference' }).publicPath).toBe(
+			'/assets/voices/en/Zao.wav'
 		);
 	});
 
@@ -171,6 +194,8 @@ describe('visual stretch handoff', () => {
 		expect(run.blockers).toEqual([]);
 		expect(run.agentInstructions).toBe(AGENT_INSTRUCTIONS_READY);
 		expect(run.agentInstructions).toContain('get_cost');
+		expect(run.agentInstructions).toContain('remoteMediaId');
+		expect(run.agentInstructions).toContain('e4d99f54-5f04-4f20-8544-330c41232965');
 		expect(run.executionPolicy).toEqual(DEFAULT_SMOKE_EXECUTION_POLICY);
 	});
 

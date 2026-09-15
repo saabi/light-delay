@@ -18,6 +18,7 @@ import {
 	sanitizeRunResultFilename,
 	validateVisualStretchVideoRegistration
 } from './lib/visual-stretch-result-register.mjs';
+import { upsertResultUploadHandles } from './lib/visual-stretch-handoff.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -192,6 +193,9 @@ const tracked = {
 };
 writeFileSync(trackedPath, `${JSON.stringify(tracked, null, 2)}\n`, 'utf8');
 
+const assetsById = new Map((assetsFile.assets || []).map((a) => [a.id, a]));
+const ledgerUpdate = upsertResultUploadHandles(ROOT, tracked, assetsById);
+
 console.log(
 	JSON.stringify(
 		{
@@ -200,7 +204,9 @@ console.log(
 			path: webPath,
 			planPath: relative(ROOT, planPath).split(sep).join('/'),
 			resultPath: relative(ROOT, trackedPath).split(sep).join('/'),
-			selectedTakesUnchanged: true
+			selectedTakesUnchanged: true,
+			ledgerUpserted: ledgerUpdate.upserted,
+			ledgerSkipped: ledgerUpdate.skipped
 		},
 		null,
 		2

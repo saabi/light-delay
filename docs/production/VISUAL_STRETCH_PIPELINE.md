@@ -70,6 +70,7 @@ generation plan job → §8 run JSON (preview or ready) → one MCP smoke (ready
 
 - `npm run handoff:visual-stretch -- --script … --job … --allow-preview-prompt` writes `reports/runs/*.json` with `nonExecutable: true` / `status: preview`. **Never submit preview runs to Higgsfield.**
 - Ready handoff (no preview flag) requires plan `compiledPrompt`, `runnable: true`, stretch `videoPromptFreeze.status: approved`, and Seedance `executable: true`. It writes `status: ready` / `nonExecutable: false`. Human cost confirmation is still required before MCP submit.
+- Ready `references[]` may include `remoteMediaId` from `data/production/higgsfield-media-ledger.json` (assetId + staging sha). Reuse that handle; upload only misses. `register:visual-stretch-video` upserts the ledger from `uploadHandles`. Rebuild: `npm run rebuild:higgsfield-media-ledger`.
 - `executionPolicy.smoke_test` forces `maxJobs: 1` regardless of platform parallel capacity (account concurrency is recorded separately; see `HIGGSFIELD_MCP.md`).
 - Keep the exact run file used for any future submit; do not re-handoff between submit and register (`inputDigest` covers the prompt).
 - After completion: download the generated video from Higgsfield Assets into the repo under `static/` (agreed stretch path), then register with `--run` pointing at the exact ready run file used for submit. Freeze must omit null keyframe slots from executable `references[]` while keeping `missing_keyframe:*` blockers until panels exist.
@@ -92,6 +93,7 @@ npm run register:visual-stretch-sheet -- --script light-delay-festival-master --
 npm run split:visual-stretch -- --script light-delay-festival-master --stretch <id> [--dry-run]
 npm run register:visual-stretch-panels -- --script light-delay-festival-master --stretch <id> [--dry-run]
 npm run register:visual-stretch-video -- --from data/production/runs/<runId>-results.json --run <ready-run.json> [--video <downloaded.mp4>]
+npm run rebuild:higgsfield-media-ledger
 ```
 
 **Movie mode (animatic player):** After job-level video register, Movie mode builds **playback spans** from the generation plan’s video jobs + `assets.json`. A playable video (`needs_review` or `current`, file on disk) collapses that job’s `memberInputs` into one unmuted Seedance clip (duration = asset `durationMs`). Cue WAVs for those member shots are suppressed so Seedance audio is not doubled. Register still does **not** write `take.videoAssetId`; OTIO take bind remains a later editorial step.

@@ -80,6 +80,7 @@ Authority flows **down**. Compatible lower-only fixes (typo, timing slack, non-s
 | `npm run report:causal-structure` | Live master + Festival fact bindings |
 | `npm run report:causal-validity` | Deprecated/obsolete cut ledgers only |
 | `npm run compile:visual-stretch` | Dry-run combined-sheet prompt for a stretch |
+| `npm run rebuild:higgsfield-media-ledger` | Seed Higgsfield upload cache + duplicates report (`HIGGSFIELD_MCP.md` §8b) |
 | `npm run report:visual-stretches` | Stretch membership / blockers |
 | `npm run report:meaning-audit` | Meaning-review packet after structure is green |
 | `npm run check:trailer-spoilers` | Trailer omission rules |

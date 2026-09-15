@@ -68,7 +68,11 @@
           "assetId": { "type": ["string", "null"] },
           "kind": { "enum": ["image", "video", "audio"] },
           "localStagingPath": { "type": ["string", "null"] },
-          "repoPath": { "type": ["string", "null"] }
+          "repoPath": { "type": ["string", "null"] },
+          "remoteMediaId": {
+            "type": "string",
+            "description": "Cached Higgsfield media_id from higgsfield-media-ledger when staging bytes match. Reuse; do not re-upload."
+          }
         },
         "additionalProperties": false
       }

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-delay.local/schemas/higgsfield-media-ledger.schema.json",
+  "type": "object",
+  "required": ["schemaVersion", "workspaceId", "updatedAt", "entries"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "workspaceId": {
+      "type": "string",
+      "description": "Higgsfield workspace these media_ids belong to."
+    },
+    "updatedAt": { "type": "string" },
+    "notes": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["assetId", "sha256", "mediaId", "kind"],
+        "properties": {
+          "assetId": { "type": "string" },
+          "sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+          "mediaId": { "type": "string" },
+          "kind": { "enum": ["image", "video", "audio"] },
+          "workspaceId": { "type": "string" },
+          "sourceRunId": { "type": ["string", "null"] },
+          "uploadedAt": { "type": ["string", "null"] },
+          "localPath": { "type": ["string", "null"] },
+          "supersededMediaIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "seedConfidence": {
+            "type": "string",
+            "description": "assumed_current_bytes when seeded from results without historical byte proof."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

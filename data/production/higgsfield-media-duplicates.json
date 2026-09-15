@@ -1,0 +1,354 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-09-15T05:37:22.748Z",
+  "notes": "Delete only deleteCandidates in the Higgsfield Assets UI (input uploads). Never delete keepers. Never delete generation output videos you still want remote. MCP has no delete-media tool. Workspace: Private Ultra e4d99f54-5f04-4f20-8544-330c41232965.",
+  "keepers": [
+    {
+      "assetId": "asset:character-harlan-sheet",
+      "mediaId": "a4cfc514-9708-4a76-80d8-a8b38979eec9",
+      "sha256": "719392421fb58cd49dadc63a1cf72f0f6da480730d906800b0b917eabdf75092"
+    },
+    {
+      "assetId": "asset:character-okoye-sheet",
+      "mediaId": "d275cf75-6828-4acc-8d27-dba850214e29",
+      "sha256": "55eb50ab4f3ae90c8f3c0defb1dee7268bc445ba8925caa20bf2a253b5a0cda0"
+    },
+    {
+      "assetId": "asset:character-periodista-sheet",
+      "mediaId": "efdf1726-542d-48f0-90e4-90fec35a1b88",
+      "sha256": "02e2fc7af0a27d368970cf439140e5ed0f4dd4431bd73de298db27452ba69a29"
+    },
+    {
+      "assetId": "asset:character-rao-sheet",
+      "mediaId": "b33b42f4-3abf-457e-af8c-3f769025cbc1",
+      "sha256": "673bc28bdf6bd0a4f0142c9f34a72c13b8b26ba2c8e84fd1d8fc630663d72641"
+    },
+    {
+      "assetId": "asset:character-sorell-sheet",
+      "mediaId": "6ad0326d-d672-4834-b2ac-14e748528407",
+      "sha256": "0938a259dabbeb42f87d8d28b3160d7a39bb38a6b9b36d3ac616a09ea6d697e6"
+    },
+    {
+      "assetId": "asset:character-voss-sheet",
+      "mediaId": "88fed050-c15b-4950-a779-d67ec203a29f",
+      "sha256": "ba66028c0801c18af911364a95eae1d9e01317ba65c14859c6c001b949f94b4f"
+    },
+    {
+      "assetId": "asset:character-zao-sheet",
+      "mediaId": "9ac9d629-25e6-4e96-bfad-63ecb70e705b",
+      "sha256": "04d8e932f68c7e567ed6c4f2353340349e109a8754630f49b1d2c38621fe728e"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-039",
+      "mediaId": "fa8f741e-54b5-4c1d-ab0a-156920055d6f",
+      "sha256": "8918109b8f66dfd32a4305ee09463565c4f5f8190a57e21533da2ea4d528accb"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-040b",
+      "mediaId": "2436c3ce-1ba3-41b8-9240-1bf87e604191",
+      "sha256": "109bfd8c33abb7c2f9db416eaea2d8ae60dafb2e3dae8439da594ababe65df71"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-087",
+      "mediaId": "12f95bd2-419c-47cd-b555-8e6af07daa5d",
+      "sha256": "19996996e299d62cde6fd2892dfad204b7008d6f1d606879892a7ee98f3755d2"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-01",
+      "mediaId": "c4e01881-6601-4c37-96a4-364c46588d27",
+      "sha256": "bf9ce24534faad4116ebddc31ebdb7deb8fdb4c13479db6ebea362e84a234b31"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-02",
+      "mediaId": "0f762b4c-ba76-44c1-9a4a-af6dad35e4da",
+      "sha256": "e5757eef7559b5f2007baa40b27f661279568ec41829b3d766c6523e58e7c633"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-03",
+      "mediaId": "bb41627d-645e-4c78-a5b3-d6e7fde98a60",
+      "sha256": "7a3467252dc06ece0f6f56671dbb2eb50e7d8b8d8f7b46403681b748a8160392"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-04",
+      "mediaId": "f34fb160-97a6-4c06-91e7-3de0b4ceb248",
+      "sha256": "272f283b4670d9edba2efc127f2118a1791270f51b574624af9fe189533b8022"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-01",
+      "mediaId": "43b09cea-742e-49e6-8568-8129452e0a14",
+      "sha256": "b0d0f2b2c09e9867a36bc759efeab77ff30f785cabe0be78915b75f80c067328"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-02",
+      "mediaId": "164ea611-b6b9-47a5-ab6b-39007bfaefea",
+      "sha256": "400448c2826558b9b8ee5e38e03d39e636c99de8e7e56163c1a553839059ac12"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-bridge-meal-010-012-panel-03",
+      "mediaId": "4236d285-064b-4fb5-bd93-379350332aa3",
+      "sha256": "48ddd6cfef001ce7b283732c5620e96723757e77b393921f7948958de4d745b2"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-01",
+      "mediaId": "05c595e7-f615-4e1d-87d8-3654ca3744b2",
+      "sha256": "ab61e5142b9c68ffe6b8fde44ea9fd09416e5f35d4ab478a98cf446ff2cf10e7"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-02",
+      "mediaId": "c47cb4d0-6641-4548-836b-9a62c8b883d0",
+      "sha256": "b7813f5e4ea4efc8d86b156d26b004a72f0db7b4db149ff8535057ce7efa611f"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-01",
+      "mediaId": "81dfe46c-e59d-4e36-9d08-fffdb2d21ad6",
+      "sha256": "96e02f1e5a4f259c620201e6c257aa23cadd0fbe781ec215c80d33cec547370a"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-02",
+      "mediaId": "d485b271-75a1-4ea4-8baf-f1a933b05f79",
+      "sha256": "d72976ef1f44cdfd7dc3bf8e449a658cfb70563be904a8e6e9219f42463eaaa5"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-operations-gallery-001-003-panel-03",
+      "mediaId": "b66bae68-14ac-485d-a82f-22945277c3c0",
+      "sha256": "915a9dcfc42d9ba8c3058a599b7a437aaa4da11de2b404f2d62133ca4d2d4826"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-01",
+      "mediaId": "722ac3ce-be87-4a12-b29a-5c3217ade5fb",
+      "sha256": "9b240ebc5c743babc7230373e58930b63288a1926744a4eeae4520c3b9ed7138"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-operations-gallery-004-005-panel-02",
+      "mediaId": "ce131a03-5bd7-4b13-bd20-15b072bb2455",
+      "sha256": "5ba906b4086909eaf5e26743e56a58559cb5e14419b7b9a9ff2c6ed6f3758fe8"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-01",
+      "mediaId": "aff923d9-9acb-4904-a084-f55aad89b20e",
+      "sha256": "cfe0ba8cbaa1d4e37cf5d01d583ffd300cdac7982de16f97c3cdb9ce4b48f529"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-02",
+      "mediaId": "b383d2d5-11cb-441c-99d0-922140539ff0",
+      "sha256": "2c7dd87676ab27060d2cce8f5bf52c588bd56bb700fddfd259ec68929a321909"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-03",
+      "mediaId": "59bd1cd2-f60d-4d2d-a43f-a667b1b1cca4",
+      "sha256": "ceca38af8d12509395b5cc9fe3888e20971f279f7730b2b96f95d55f9cd410e2"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-04",
+      "mediaId": "ce050208-ab1d-4758-ad59-040ddd499ddc",
+      "sha256": "b3dd5f3352bf23f033b3c502c5464ebdae542d713373c7dbff86e9f97e977121"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-01",
+      "mediaId": "96ad6c1b-677d-4069-aa88-846f633ab3e1",
+      "sha256": "3f21c13467719130f59a4ed1cb200a60a2945f6f22f16ecdab8e238874ce5970"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-02",
+      "mediaId": "319662f3-daea-4d9c-94a1-a5a61e0d394c",
+      "sha256": "9898a43882fd82fa6843cd11bfaed40b7db32e287bd86d6e9320168b4c911a54"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-vault-discovery-020-022-panel-03",
+      "mediaId": "a5db3ca5-3bd5-4f73-aaa4-a07ec9a5e737",
+      "sha256": "f9bec221b2515db56089fd817b0e3d6ab3cb22e935a9d35fd3ec9350deb1b08b"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-01",
+      "mediaId": "71361bf8-0734-493d-9740-30e303368cd3",
+      "sha256": "be96c01b2247cdbd427c8a6fb46f052b7cf1fb0811f1dc12131eacab3b085ccb"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-02",
+      "mediaId": "4fc64944-d89a-4b92-ae41-29b57668d902",
+      "sha256": "aaa429d7d83bf323291ed7a19d3ae78ef67aa69b5158f08f80299289c9d7dc28"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-vault-recovery-080-082-panel-03",
+      "mediaId": "34c194d5-cb9f-4761-8b9f-71ecb2f5544e",
+      "sha256": "2c15c809cdee41cc8f579fcc2676a2478486a363dd4d377879d7a64d188b25b8"
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
+      "mediaId": "b52b8526-2b44-4f98-accc-449648d56e06",
+      "sha256": "641f049562b38fab9110eeb1c53dc49f12041c7f98a64355902d3f70a242e30f"
+    },
+    {
+      "assetId": "asset:location-velari-wormhole-mouth-sheet",
+      "mediaId": "a2067b4d-2771-4bca-93de-060103a4d36d",
+      "sha256": "76f82fa989f1a643ae3cd5697afe3fc6d0fc9f7a36ab786cf6c99e84e246c977"
+    },
+    {
+      "assetId": "asset:object-harlan-wrist-device-sheet",
+      "mediaId": "5d9ca18c-2105-4961-a876-2a195857e419",
+      "sha256": "5c8925ec77d32879d29070e3d59f19ab512c31b4ff6399c2a68c58989f2b3120"
+    },
+    {
+      "assetId": "asset:vehicle-celestial-ardor-model-sheet-v2",
+      "mediaId": "d06a5a0a-65cf-4991-b5f7-0c58dc104ca2",
+      "sha256": "924daa0f329a796358c9f2f9feeb74b3730dc616d705fafdf7f546d895c44396"
+    }
+  ],
+  "deleteCandidates": [
+    {
+      "assetId": "asset:character-harlan-sheet",
+      "mediaId": "5dcb525a-cd3f-4dc3-9281-9591650c3502",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-harlan-sheet",
+      "mediaId": "ba0c02c6-0beb-443e-9415-6535ca0079d1",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-harlan-sheet",
+      "mediaId": "fd2872aa-f190-418b-909a-eefe612f2580",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-harlan-sheet",
+      "mediaId": "f042ff41-e790-4f82-9556-4429e4d6358b",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-harlan",
+      "mediaId": "9b9b9842-2ac0-443f-bfa6-503de163d00f",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-harlan",
+      "mediaId": "0a7aa7ec-0746-49e7-ac26-2005aa6dd18e",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-harlan",
+      "mediaId": "238eabf7-7c63-4159-a489-29decf6f5e04",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-harlan",
+      "mediaId": "85a2e1ec-aa04-4d9c-9f2e-81bc59f3a6c7",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "video:festival-master-shot-plan-040b-rev-1",
+      "mediaId": "d1bb0bc7-737f-4fcb-a7c9-2cca60013fd3",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "image:festival-master-shot-plan-040b-rev-1-last-frame",
+      "mediaId": "26443c12-2d4d-415c-9256-a404ca92e7f9",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-okoye-sheet",
+      "mediaId": "e2072fb1-e3ee-4fb1-8548-371d1dd4d568",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-rao-sheet",
+      "mediaId": "17b4e67c-2d67-410f-84b7-7161dcc685fd",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-sorell-sheet",
+      "mediaId": "b68252a5-7166-4a01-9d82-4c4939a250c6",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-voss-sheet",
+      "mediaId": "2f3865ee-e36b-4e30-8077-3d9a99f2db46",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-voss-sheet",
+      "mediaId": "a4c5afb4-467e-4f48-b4f4-67e211d2c0bc",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-voss-sheet",
+      "mediaId": "c961ec6e-b973-4859-bead-9d13499ac9ac",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-okoye",
+      "mediaId": "fc722c50-bd72-4387-ab28-1d36bd669e7c",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-elin",
+      "mediaId": "a7982a25-a7ae-42d1-96ee-b47a6b096982",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-elin",
+      "mediaId": "a9d6664b-a8e4-4939-b3aa-ddb9b812bb63",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-sorell",
+      "mediaId": "926ffdb7-ec90-4497-9ba5-55b09c439892",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-sorell",
+      "mediaId": "1ee6d46f-4658-4852-a01f-9112047dca04",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-voss",
+      "mediaId": "da3fbe44-08f7-49fb-8863-e533519f970d",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-voss",
+      "mediaId": "37596543-c467-4b55-929e-d3ee67c11cbc",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-voss",
+      "mediaId": "ea46c8bc-207c-4ff3-b44d-ec1026d934f0",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-voss",
+      "mediaId": "1eb71ebb-57cf-46fc-a469-585df17242a8",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-zao-sheet",
+      "mediaId": "8f809b28-bd51-45b5-9f19-bed2507085f8",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:character-zao-sheet",
+      "mediaId": "927968ee-4335-454f-83c0-31671c580116",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-zao",
+      "mediaId": "26ff28fa-19c0-430f-8100-2132b49d75c7",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-zao",
+      "mediaId": "05dda4d9-17c5-41b0-a4ef-f98ea056853c",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-zao",
+      "mediaId": "bdc50c7f-9b67-43f5-95bd-7a471d4c33a0",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    },
+    {
+      "assetId": "asset:voice-ref-en-reporter",
+      "mediaId": "6298b7d0-af6c-40af-9b53-cfda8d37763f",
+      "reason": "superseded_or_non_keeper_upload_for_asset"
+    }
+  ]
+}

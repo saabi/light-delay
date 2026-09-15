@@ -146,7 +146,7 @@ Catálogo vivo tras OAuth en Cursor: [`data/production/higgsfield-mcp-catalog.sn
 | Referencias | `media_upload_widget` (archivos locales; no adjuntar al chat); `media_import_url`; `show_medias`; `show_characters`; `show_reference_elements` |
 | Cuenta | `list_workspaces`, `select_workspace` |
 
-**Seedance 2.5** (`seedance_2_5`): modos `t2v` / `omni_reference` / `video_edit` / `video_extension`; duración **4–30 s**; resolución `480p` / `720p` / `1080p`. Light Delay pasa **`generate_audio: true`** (sonido nativo) salvo clip mudo pedido por el autor, y **`resolution: 480p`** on every Festival Seedance job (snapshot `preferredResolution`; MCP catalog default is **720p** — never omit). Voice-sample `@Audio` refs: combined duration **≤ 30 s** (truncate long WAVs before upload; 2026-09-14 smoke: four ~12 s samples → MCP **422**, four × 5 s → accepted). Upload real **MP3** bytes when the signed URL expects `audio/mpeg` — do not PUT raw WAV under an `.mp3` key. Preflight 2026-09-14: 8 s, 480p, 16:9, `t2v` = **20 créditos** con audio on u off; sin job. Gallery smoke 23 s / 480p / omni ≈ **57.5 créditos**. Unlimited web **no** es gastable por MCP en esta cuenta.
+**Seedance 2.5** (`seedance_2_5`): modos `t2v` / `omni_reference` / `video_edit` / `video_extension`; duración **4–30 s**; resolución `480p` / `720p` / `1080p`. Light Delay pasa **`generate_audio: true`** (sonido nativo) salvo clip mudo pedido por el autor, y **`resolution: 480p`** on every Festival Seedance job (snapshot `preferredResolution`; MCP catalog default is **720p** — never omit). Voice-sample `@Audio` refs: combined duration **≤ 30 s**. Approved bank WAVs stay at `static/assets/voices/en/*.wav`; durable **5 s MP3** clips live under `static/assets/voices/en/seedance-5s/` (`npm run prepare:seedance-voice-clips`) and are what handoff/`prepare:higgsfield` stages (`metadata.seedanceUploadPath`). Upload real **MP3** bytes when the signed URL expects `audio/mpeg`. Preflight 2026-09-14: 8 s, 480p, 16:9, `t2v` = **20 créditos** con audio on u off; sin job. Gallery smoke 23 s / 480p / omni ≈ **57.5 créditos**. Unlimited web **no** es gastable por MCP en esta cuenta.
 
 Nombres antiguos de wrappers no oficiales (`generate_raw`, `account_info`, `list_models`) **no** coinciden con el servidor hospedado.
 
@@ -268,15 +268,33 @@ Authoring hold SoT is **`Take.productionGate`** on the script take (`deferred` /
 
 Agent steps for a **paid** smoke (after a stretch `videoPromptFreeze` is approved and the plan job is `runnable`):
 
-1. `node scripts/higgsfield-preflight.mjs --probe` — record live model catalog, credits, and **concurrency** (account/plan/model; API returns 400 when concurrent cap is hit; Concurrency Boost can raise it; caps change). Campaign `concurrency` is the project ceiling once verified (`null` until then). Smoke always uses `executionPolicy.maxJobs: 1`.
-2. `npm run prepare:higgsfield` — refresh staging; stretch refs under `higgsfield-uploads/stretch/` in handoff order (keyframes → effective visuals → voice).
-3. Use the **exact** frozen run JSON (`reports/runs/` or promoted path). Do **not** re-run handoff between submit and register (`inputDigest` covers the prompt).
-4. Upload references **only** in `references[]` order from that file. Map each `assetId` → remote handle in the result.
-5. Before generating: state the credit cost and **wait for human confirmation**.
-6. Submit **exactly one** job; stop (`stopAfterFirst`, no retry/continue/auto-accept).
-7. **Download** the completed video from Higgsfield Assets into the repo under `static/assets/animatic/frames/<segment>/stretches/.../` (or a temp path you will pass to `--video`). Record remote upload handles per `assetId`.
-8. Write `data/production/runs/<runId>-results.json` (`visual-stretch-result.schema.json`) with `sourceRunId`, `inputDigest`, `providerJobId` when returned, output hash/duration, upload handles, and `output.repoPath` / sha256 of the downloaded file.
-9. `npm run register:visual-stretch-video -- --from … --run <ready-run.json> [--video …]` — binds the clip at **job** level only; never changes `selectedTakeId`. Requires a `status: ready` / `nonExecutable: false` run whose digests match.
+1. **Pin workspace:** `select_workspace` → Private Ultra `e4d99f54-5f04-4f20-8544-330c41232965` (see `data/production/higgsfield-mcp-catalog.snapshot.json`).
+2. `node scripts/higgsfield-preflight.mjs --probe` — record live model catalog, credits, and **concurrency** (account/plan/model; API returns 400 when concurrent cap is hit; Concurrency Boost can raise it; caps change). Campaign `concurrency` is the project ceiling once verified (`null` until then). Smoke always uses `executionPolicy.maxJobs: 1`.
+3. `npm run prepare:higgsfield` — refresh staging; stretch refs under `higgsfield-uploads/stretch/` in handoff order (keyframes → effective visuals → voice).
+4. Use the **exact** frozen run JSON (`reports/runs/` or promoted path). Do **not** re-run handoff between submit and register (`inputDigest` covers the prompt).
+5. **References / media ledger:** for each `references[]` entry in order — if `remoteMediaId` is set, pass that `media_id` and **do not** upload; if absent, upload the staging file via Cursor MCP `media_upload_widget` (local path; not a chat attachment). Map every used `assetId` → remote handle in the result (including reused ids). Never put `mimeType` / `durationMs` on ready-run `references[]` (schema `additionalProperties: false`); remote ids live on `remoteMediaId` / results `uploadHandles` / the ledger.
+6. Before generating: `generate_video` with `get_cost: true`; state the credit cost and **wait for human confirmation**. Stretch defaults: `omni_reference`, `resolution: 480p`, `aspect_ratio: 16:9`, `generate_audio: true` unless the author asked for a silent clip. **Never omit** `resolution` (catalog default is 720p). When offered, **decline** style preset `24bae836-2c4a-48e0-89b6-49fcc0b21612` (“IN THE DARK”) and note it in result notes.
+7. Submit **exactly one** job; stop (`stopAfterFirst`, no retry/continue/auto-accept). On failure / 422 / timeout: **stop and report** — do not auto-resubmit a second paid job.
+8. **Download** the completed video from Higgsfield Assets into the repo under `static/assets/animatic/frames/<segment>/stretches/.../` (or a temp path you will pass to `--video`). Record remote upload handles per `assetId`.
+9. Write `data/production/runs/<runId>-results.json` (`visual-stretch-result.schema.json`) with `sourceRunId`, `inputDigest`, `providerJobId` when returned, output hash/duration, upload handles, and `output.repoPath` / sha256 of the downloaded file.
+10. `npm run register:visual-stretch-video -- --from … --run <ready-run.json> [--video …]` — binds the clip at **job** level only; never changes `selectedTakeId`. Requires a `status: ready` / `nonExecutable: false` run whose digests match. Register **upserts** `data/production/higgsfield-media-ledger.json`.
+
+### Media ledger (reuse uploads)
+
+- **SoT:** `data/production/higgsfield-media-ledger.json` (schema `higgsfield-media-ledger.schema.json`). Key = `assetId` + sha256 of **staging bytes** (`resolveStretchStagingSource` — Seedance 5s MP3s ≠ bank WAVs).
+- Ready handoff fills optional `references[].remoteMediaId` on cache hit.
+- Rebuild / seed from run results: `npm run rebuild:higgsfield-media-ledger` → also writes `data/production/higgsfield-media-duplicates.json` (`keepers` + `deleteCandidates`).
+- Voice assets with `metadata.seedanceUploadPath` are **not** seeded from historical handles (often full WAV); next job uploads the MP3 once, then caches.
+- **Duplicate cleanup:** MCP has **no** delete-media tool. In Higgsfield Assets UI, delete only `deleteCandidates` (input uploads). Never delete keepers. Never delete generation **output** videos you still want remote. Inputs are reusable; outputs are separate assets.
+- Do not invent a parallel handle map outside the ledger + per-run `uploadHandles`.
+
+### Singleton packages vs stretch register
+
+Festival shot packages such as 039, 040b, and the title sting are **not** `visualStretchJobs`. Land the MP4 under `static/`, record a results note / asset as needed, and **do not** run `register:visual-stretch-video` on them.
+
+### `video_extension` quirks (pointer)
+
+See notes on `run-festival-master-shot-plan-040b-rev-2-video-1-ready-results.json`: `start_image` is rejected on `video_extension`; send the last frame via image refs; the provider may return only the new segment — join locally onto the prior clip.
 
 Ready (frozen, executable plan job):
 
@@ -290,7 +308,7 @@ Preview (never submit):
 npm run handoff:visual-stretch -- --script light-delay-festival-master --job <videoJobId> --allow-preview-prompt
 ```
 
-Schemas: `data/schemas/run.schema.json` (handoff), `data/schemas/visual-stretch-result.schema.json` (tracked results). Same rules are embedded in each run file’s `agentInstructions`.
+Schemas: `data/schemas/run.schema.json` (handoff), `data/schemas/visual-stretch-result.schema.json` (tracked results), `data/schemas/higgsfield-media-ledger.schema.json` (upload cache). Same rules are embedded in each ready run file’s `agentInstructions`.
 
 ---
 
