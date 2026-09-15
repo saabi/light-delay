@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-15 — Regen Seedance 044/045 (author-selected stills)
+
+- Landed author-selected `044-b0` as `shot-plan-044` keyframe (`current`); restored Codex still for 045 (no image regen).
+- Resubmitted Seedance for both singleton stretches (**54 cr**: 15+39): 044 cylinder reconnect; 045 longer take (~13s) with display-look surprise directed in the video prompt only. Registered stretch videos pending review.
+
+## 2026-09-15 — Approve periapsis 013b still; Seedance package ready
+
+- Author-approved `festival-master:shot-plan-013b` still (`imageStatus: current` on take + asset). Shot/cue/location copy now state the start of the prograde→retrograde end-for-end turn near ~1,000 km/s, with tracking + Jupiter/ring parallax as the velocity read.
+- Still refs unchanged and verified: `asset:vehicle-celestial-ardor-jupiter` + `asset:vehicle-celestial-ardor-model-sheet-v2`. Singleton I2V ready-run authored at `reports/runs/run-festival-master-shot-plan-013b-rev-1-video-1-ready.json` (start_image 013b + model-sheet-v2). Waiting for go before MCP submit.
+
 ## 2026-09-15 — Unblock Pages CI after Seedance push
 
 - Refresh generated editorial artifacts (master relevance, pending notes, schema types, production plans, audience TTS). Restore missing `location:celestial-ardor-command-vestibule`. Align shot-045 `durationMs` with cue span. Add `@ts-nocheck` on Node script modules imported under `checkJs`, fix `ShotId` import and ShotDetailsPanel typing, and update Festival unit expectations so `svelte-check` and Vitest pass.

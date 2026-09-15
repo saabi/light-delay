@@ -4748,8 +4748,8 @@
       ],
       "type": "action",
       "text": {
-        "es": "",
-        "en": "Exterior: the Celestial Ardor coasts past Jupiter at periapsis, radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn."
+        "es": "Exterior: el Celestial Ardor bordea Júpiter en la periapsis cerca de la velocidad pico (~1.000 km/s), radiadores recogidos, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras inicia el giro lento de punta a punta de prógrada (proa adelante) hacia retrógrada (motores adelante).",
+        "en": "Exterior: the Celestial Ardor coasts past Jupiter at periapsis near peak speed (~1,000 km/s), radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as it begins its slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward)."
       }
     },
     {
@@ -12549,8 +12549,8 @@
       "number": 1,
       "order": 1,
       "description": {
-        "es": "Exterior: el Ardor bordea Júpiter en la periapsis, radiadores recogidos, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras la nave inicia el giro lento de punta a punta.",
-        "en": "Exterior: the Ardor coasts past Jupiter at periapsis, radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn."
+        "es": "Exterior: el Ardor bordea Júpiter en la periapsis cerca de la velocidad pico (~1.000 km/s), radiadores recogidos, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras la nave inicia el giro lento de punta a punta de prógrada (proa adelante) hacia retrógrada (motores adelante).",
+        "en": "Exterior: the Ardor coasts past Jupiter at periapsis near peak speed (~1,000 km/s), radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward)."
       },
       "locationId": "location:jupiter-periapsis",
       "secondaryLocationIds": [],
@@ -12565,15 +12565,15 @@
         "size": "ELS",
         "aspectRatio": "16:9",
         "framing": {
-          "es": "Gran plano general sobre Periapsis de Júpiter; Travelling; establece geografía y dirección de pantalla.",
-          "en": "Extreme long shot on Jupiter Periapsis; Tracking; establishes geography and screen direction."
+          "es": "Gran plano general sobre Periapsis de Júpiter; travelling bloqueado a la traslación de la nave; el parallax de las bandas y el anillo vende ~1.000 km/s; establece geografía y dirección de pantalla.",
+          "en": "Extreme long shot on Jupiter Periapsis; tracking locked to the ship's translation; band and ring parallax sells ~1,000 km/s; establishes geography and screen direction."
         }
       },
       "camera": {
         "movement": "tracking",
         "movementDescription": {
-          "es": "Travelling; establece geografía y dirección de pantalla.",
-          "en": "Tracking; establishes geography and screen direction."
+          "es": "Travelling bloqueado a la traslación de la nave; el parallax de las bandas nubosas y los arcos del anillo vende ~1.000 km/s; establece geografía y dirección de pantalla.",
+          "en": "Tracking locked to the ship's translation; Jupiter cloud-band and ring-arc parallax sells ~1,000 km/s; establishes geography and screen direction."
         }
       },
       "durationMs": 5000,
@@ -12593,8 +12593,8 @@
       ],
       "selectedTakeId": "festival-master:shot-plan-013b:take-01",
       "purpose": {
-        "es": "Escena «Primer descenso de gravedad»: hacer visible — ",
-        "en": "Scene \"First gravity dip\": make visible — Exterior: the Celestial Ardor coasts past Jupiter at periapsis, radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn."
+        "es": "Escena «Primer descenso de gravedad»: hacer visible el inicio del giro prógrada→retrógrada a ~1.000 km/s en periapsis.",
+        "en": "Scene \"First gravity dip\": make visible the start of the prograde→retrograde turn at ~1,000 km/s at periapsis."
       }
     },
     {
@@ -14848,16 +14848,16 @@
           "es": "needs_revision"
         }
       },
-      "durationMs": 5260,
+      "durationMs": 5042,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0087",
           "atMs": 0,
-          "durationMs": 3660
+          "durationMs": 3540
         },
         {
           "cueId": "festival-master:cue-0088",
-          "atMs": 3760,
+          "atMs": 3542,
           "durationMs": 1500
         }
       ],
@@ -14928,7 +14928,7 @@
           "es": "needs_revision"
         }
       },
-      "durationMs": 11580,
+      "durationMs": 13042,
       "cuePlacements": [
         {
           "cueId": "festival-master:cue-0089",
@@ -19431,8 +19431,8 @@
       "number": 1,
       "status": "selected",
       "generation": {
-        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Exterior: the Celestial Ardor coasts past Jupiter at periapsis, radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn. Setting: deep space at Jupiter periapsis — the planet's banded cloud tops fill much of the frame, with faint, thin ring arcs visible near the limb; no atmosphere haze on the ship itself. Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis. No gravity reference (exterior shot). Frame implies a tracking move, establishing geography and screen direction. Aspect ratio 16:9.",
-        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, Saturn-style bold bright rings (Jupiter's rings are faint and thin, barely visible arcs), the ship inside or colliding with the planet's atmosphere",
+        "prompt": "Grounded cinematic hard science fiction, photoreal render quality. Extreme long shot. Exterior: the Celestial Ardor coasts past Jupiter at periapsis near peak speed (~1,000 km/s), radiators retracted, backlit by the planet's banded cloud tops and the faint arcs of its ring as the ship begins its slow end-for-end turn from prograde (nose-forward) toward retrograde (engines-forward). Setting: deep space at Jupiter periapsis — the planet's banded cloud tops fill much of the frame, with faint, thin ring arcs visible near the limb; no atmosphere haze on the ship itself. Setting: vehicle:celestial-ardor — an 80–100 m axial ship with D–³He torch, liquid-metal radiators, transverse decks perpendicular to the thrust axis. No gravity reference (exterior shot). Frame implies a tracking move locked to the ship's translation, with cloud-band and ring parallax selling extreme velocity; establishes geography and screen direction. Aspect ratio 16:9.",
+        "negativePrompt": "non-English on-screen text, anachronistic or luxury-liner styling, lens flare, heavy motion blur, characters, cartoonish exaggeration, Saturn-style bold bright rings (Jupiter's rings are faint and thin, barely visible arcs), the ship inside or colliding with the planet's atmosphere, lit main torch plume, completed 180-degree flip",
         "provider": "OpenAI",
         "model": "gpt-image-2",
         "generatedAt": "2026-09-14T16:43:58.138Z",
@@ -19443,14 +19443,14 @@
       },
       "imageAssetId": "asset:festival-master-storyboard-013b",
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "sourceShotId": "festival-master:shot-plan-013b",
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Author-approved periapsis exterior still; Seedance keyframe for singleton I2V (prograde→retrograde turn start; velocity via camera parallax).",
+          "es": "Still exterior de periapsis aprobado por el autor; fotograma clave Seedance para I2V singleton (inicio del giro prógrada→retrógrada; velocidad vía parallax de cámara)."
         }
       }
     },

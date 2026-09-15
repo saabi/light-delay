@@ -1,5 +1,14 @@
 # Estado del proyecto
 
+## 2026-09-15 — Seedance 044/045 regen registered (English source)
+
+- 044: author-selected bare-hands still `044-b0` landed; Seedance reconnect clip registered (~5.0s, 15 cr).
+- 045: Codex still kept; Seedance alibi clip lengthened (~13.0s, 39 cr) with look-to-displays surprise in the video prompt. Videos `needs_review`.
+
+## 2026-09-15 — Periapsis 013b still approved; video package ready (English source)
+
+- Festival-master exterior `shot-plan-013b` still marked `current`. Copy clarifies prograde→retrograde turn start at ~1,000 km/s (camera parallax). Singleton Seedance ready-run waiting for author go (not a stretch job).
+
 ## 2026-09-15 — Scenes 18–19 still prompts fixed (English source)
 
 - Stretch still authorship for 050–053 and 054–056 corrected (gravity, identity, blocking, vault ref). Compiled prompts rebuilt. Wrong panels marked `needs_regeneration`; no image generation run.

@@ -292,8 +292,8 @@
         "en": "Jupiter Periapsis"
       },
       "description": {
-        "es": "El Ardor pasa junto a Júpiter en la periapsis, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras la nave gira de punta a punta; radiadores recogidos para la maniobra.",
-        "en": "The Ardor passes Jupiter at periapsis, backlit by the planet's banded cloud tops and faint ring arcs as the ship turns end for end; radiators retracted for the maneuver."
+        "es": "El Ardor pasa junto a Júpiter en la periapsis cerca de ~1.000 km/s, retroiluminado por las bandas nubosas del planeta y los arcos tenues de su anillo mientras inicia el giro de punta a punta de prógrada a retrógrada; radiadores recogidos para la maniobra.",
+        "en": "The Ardor passes Jupiter at periapsis near ~1,000 km/s, backlit by the planet's banded cloud tops and faint ring arcs as it begins the end-for-end turn from prograde to retrograde; radiators retracted for the maneuver."
       },
       "referenceAssetIds": [
         "asset:vehicle-celestial-ardor-jupiter"

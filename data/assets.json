@@ -11086,8 +11086,8 @@
         "en": "Festival Master storyboard 013b"
       },
       "description": {
-        "es": "Imagen de storyboard regenerada para festival-master:shot-plan-013b; pendiente de revisiÃ³n editorial.",
-        "en": "Regenerated storyboard still for festival-master:shot-plan-013b; pending editorial review."
+        "es": "Still exterior de periapsis aprobado para festival-master:shot-plan-013b (inicio del giro prógrada→retrógrada).",
+        "en": "Author-approved periapsis exterior still for festival-master:shot-plan-013b (prograde→retrograde turn start)."
       },
       "width": 1536,
       "height": 1024,
@@ -11100,16 +11100,18 @@
         "scriptId": "script:light-delay-festival-master",
         "shotId": "festival-master:shot-plan-013b",
         "batch": "festival-master-regeneration",
-        "storyboardEligible": true
+        "storyboardEligible": true,
+        "approvedBy": "author",
+        "approvedAt": "2026-09-15"
       },
       "imageStatus": {
-        "status": "needs_review",
+        "status": "current",
         "reasons": [
           "quality"
         ],
         "explanation": {
-          "en": "Regenerated independent storyboard still; pending editorial review.",
-          "es": "Imagen de storyboard independiente regenerada; pendiente de revisión editorial."
+          "en": "Author-approved periapsis exterior still; Seedance keyframe for singleton I2V.",
+          "es": "Still exterior de periapsis aprobado por el autor; fotograma clave Seedance para I2V singleton."
         }
       }
     },
@@ -17155,14 +17157,14 @@
       "source": {
         "provider": "higgsfield-mcp-official",
         "model": "seedance-2.5",
-        "generatedAt": "2026-09-15T21:06:28.779Z",
-        "externalId": "8d850412-d36d-473e-af4b-5a325d38d52d"
+        "generatedAt": "2026-09-15T22:01:32.385Z",
+        "externalId": "80c33c08-274d-4251-8997-0afd2138c0ec"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-service-cylinder-harlan-044",
         "stretchJobId": "festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1",
         "scriptId": "script:light-delay-festival-master",
-        "inputDigest": "8e3641545c999998a16b0deecb9a6a9c585ebedafcc763f7180c348fe8349455",
+        "inputDigest": "3abae17609025aea8f7db5c0cfca53df8c21a17592e036a56c361284f17aab46",
         "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready"
       },
       "imageStatus": {
@@ -17182,20 +17184,20 @@
       "role": "production",
       "path": "/assets/animatic/frames/festival-master/stretches/festival-master-stretch-bridge-harlan-alibi-045/festival-master-stretch-bridge-harlan-alibi-045-rev-1-video-1.mp4",
       "mimeType": "video/mp4",
-      "durationMs": 9042,
+      "durationMs": 13042,
       "width": 854,
       "height": 480,
       "source": {
         "provider": "higgsfield-mcp-official",
         "model": "seedance-2.5",
-        "generatedAt": "2026-09-15T21:06:28.867Z",
-        "externalId": "2f71e3e8-1c5e-4346-ad2f-30e98b777b8d"
+        "generatedAt": "2026-09-15T22:01:32.511Z",
+        "externalId": "2852e24b-c0d4-4858-aefc-747e802dcdd3"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-harlan-alibi-045",
         "stretchJobId": "festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1",
         "scriptId": "script:light-delay-festival-master",
-        "inputDigest": "32ff786dbd23eb3dd6f6423167bc80e0440173712e9f44343b0b954ed99d41bb",
+        "inputDigest": "75c9d7cf096949ff123b4903c2d3220e65efad0047679889cd7818d026479b84",
         "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready"
       },
       "imageStatus": {
