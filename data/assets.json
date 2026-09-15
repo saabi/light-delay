@@ -15362,7 +15362,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:10:45.564Z"
+        "generatedAt": "2026-09-15T23:00:19.161Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15374,7 +15374,7 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "regeneratedAt": "2026-09-15T23:00:19.161Z",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -15389,7 +15389,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-050",
         "explanation": {
-          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "en": "Still regenerated from the approved scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15405,7 +15405,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:10:45.564Z"
+        "generatedAt": "2026-09-15T23:01:16.113Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15417,7 +15417,7 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "regeneratedAt": "2026-09-15T23:01:16.113Z",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -15432,7 +15432,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-051",
         "explanation": {
-          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "en": "Still regenerated from the approved scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15448,7 +15448,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:10:45.564Z"
+        "generatedAt": "2026-09-15T23:02:16.536Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15460,7 +15460,7 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "regeneratedAt": "2026-09-15T23:02:16.536Z",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -15475,7 +15475,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-052",
         "explanation": {
-          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "en": "Still regenerated from the approved scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
@@ -15491,7 +15491,7 @@
       "source": {
         "provider": "OpenAI",
         "model": "gpt-image-2",
-        "generatedAt": "2026-09-15T22:10:45.564Z"
+        "generatedAt": "2026-09-15T23:03:18.022Z"
       },
       "metadata": {
         "visualStretchId": "festival-master:stretch-bridge-fuel-audit-050-053",
@@ -15503,7 +15503,7 @@
         "panelRegionW": 0.49,
         "panelRegionH": 0.411875,
         "scriptId": "script:light-delay-festival-master",
-        "regeneratedAt": "2026-09-15T22:10:45.564Z",
+        "regeneratedAt": "2026-09-15T23:03:18.022Z",
         "referenceAssetIds": [
           "asset:character-pair-voss-harlan-bridge-sheet",
           "asset:character-pair-rao-sorell-bridge-sheet",
@@ -15518,7 +15518,7 @@
         ],
         "sourceShotId": "festival-master:shot-plan-053",
         "explanation": {
-          "en": "Still regenerated from the authored scene prompt and reference set; editorial review pending.",
+          "en": "Still regenerated from the approved scene prompt and reference set; editorial review pending.",
           "es": "needs_revision"
         }
       }
