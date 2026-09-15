@@ -2,7 +2,7 @@
 
 ## Inventario actual
 
-- **485 assets registrados** en `data/assets.json` (incluidos 104 frames de animatic archivados, 104 stills de storyboard del Festival Master, 1 fotograma negro del tráiler-master, 45 referencias, 1 placeholder y los recursos de voz registrados).
+- **670 assets registrados** en `data/assets.json` (incluidos 104 frames de animatic archivados, stills y clips de storyboard del Festival Master, 1 fotograma negro del tráiler-master, 62 referencias, 1 placeholder y los recursos de voz registrados).
 - 100 fotogramas legacy del animatic en 17 escenas.
 - 1 fotograma nuevo de escena 5 toma 7 (Harlan / COM A/B) en `static/assets/animatic/frames/scene-05/shot-07.png`.
 - La hoja de referencia de Harlan fue regenerada como `static/assets/characters/harlan/model-sheet-v2.png` para separar su identidad visual de Voss; la hoja anterior permanece como procedencia histórica.
@@ -10,7 +10,7 @@
 - Se separaron las referencias de `manifestante-acheron` y `joven-contacto` desde la hoja combinada de manifestantes; la hoja grupal se conserva para multitudes.
 - Se añadió `periodista/model-sheet.png` como referencia neutral para posibles insertos de la transmisión terrestre; su voz en off no cambia.
 - 3 cartelas de título (main/Festival, marca y lema del tráiler) en `static/assets/animatic/titles/`.
-- 45 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
+- 62 imágenes de referencia para personajes, localizaciones, vehículos, objetos, escala, presentación y bloqueo 3D.
 - 1 placeholder técnico para frames faltantes o fallidos.
 - No hay todavía assets de audio ni video registrados.
 - Las tres referencias realistas del puente están registradas como assets independientes; conservan proveedor, fecha, referencias de entrada y elegibilidad no verificada.

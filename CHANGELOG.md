@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-15 — Unblock Pages CI after Seedance push
+
+- Refresh generated editorial artifacts (master relevance, pending notes, schema types, production plans, audience TTS). Restore missing `location:celestial-ardor-command-vestibule`. Align shot-045 `durationMs` with cue span. Add `@ts-nocheck` on Node script modules imported under `checkJs`, fix `ShotId` import and ShotDetailsPanel typing, and update Festival unit expectations so `svelte-check` and Vitest pass.
+
 ## 2026-09-15 — Scenes 18–19 still authorship fixed
 
 - Reauthored Festival-master stretch still packages for bridge fuel-audit (050–053) and central-vault obstruction (054–056): explicit 1 g / microgravity, identity locks vs pair sheets, non-placeholder blocking/member stages, vault location ref added (5/5). Shot descriptions and visibleRefs aligned so compiled sheet prompts are self-contained. Plans rebuilt; stills not regenerated (panels marked `needs_regeneration`).

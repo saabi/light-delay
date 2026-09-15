@@ -1,6 +1,6 @@
 # Light Delay
 
-*Audience narrative. Revision 19. English source.*
+*Audience narrative. Revision 24. English source.*
 
 ## Prologue — Lights of Earth
 

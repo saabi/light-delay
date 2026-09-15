@@ -44,6 +44,10 @@
 
 - Seedance may generate dialogue; it must not generate music/score/BGM or dramatic instrumentation (post mix). Documented in `SEEDANCE_PROMPTING.md` §6 and agent policy cross-refs.
 
+## 2026-09-15 — Pages CI unblocked after Seedance push (English source)
+
+- Regenerated stale editorial artifacts; restored command-vestibule location; shot-045 duration matches cue span; Node script modules used by Vitest marked `@ts-nocheck`; Festival unit expectations updated. Local `validate:*`, `generated:check`, `check`, and `test:unit` pass.
+
 ## 2026-09-15 — Scenes 18–19 still prompts fixed (English source)
 
 - Stretch still authorship for 050–053 and 054–056 corrected (gravity, identity, blocking, vault ref). Compiled prompts rebuilt. Existing wrong panels remain `needs_review` until authorized regen.

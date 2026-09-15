@@ -4134,9 +4134,7 @@
       "shotId": "main:shot-07-07",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-command-vestibule"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4158,17 +4156,29 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "location:celestial-ardor-command-vestibule"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-command-vestibule"
         ],
-        "attachedAssetIds": [],
-        "coveringAssetByEntity": {},
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-service-shaft-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-command-vestibule": "asset:location-celestial-ardor-bridge-service-shaft-reference"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -4178,16 +4188,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-command-vestibule"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-07-07:segment-01",
@@ -4789,9 +4789,7 @@
       "shotId": "main:shot-08-05",
       "status": "blocked",
       "blockers": [
-        "missing_entity_binding",
-        "reference_pack_required:authoring_required",
-        "uncovered_entity:location:celestial-ardor-command-vestibule"
+        "missing_entity_binding"
       ],
       "diegeticText": [],
       "artifacts": {
@@ -4813,17 +4811,29 @@
           "status": "missing"
         }
       },
-      "requiredReferences": [],
+      "requiredReferences": [
+        {
+          "kind": "image",
+          "id": "asset:location-celestial-ardor-bridge-service-shaft-reference",
+          "path": "/assets/locations/celestial-ardor-bridge/realistic-service-shaft-reference.png",
+          "required": true,
+          "role": "location"
+        }
+      ],
       "referenceBudget": {
         "requiredEntityIds": [
           "location:celestial-ardor-command-vestibule"
         ],
-        "coveredEntityIds": [],
-        "uncoveredEntityIds": [
+        "coveredEntityIds": [
           "location:celestial-ardor-command-vestibule"
         ],
-        "attachedAssetIds": [],
-        "coveringAssetByEntity": {},
+        "uncoveredEntityIds": [],
+        "attachedAssetIds": [
+          "asset:location-celestial-ardor-bridge-service-shaft-reference"
+        ],
+        "coveringAssetByEntity": {
+          "location:celestial-ardor-command-vestibule": "asset:location-celestial-ardor-bridge-service-shaft-reference"
+        },
         "wouldOmitEntityIds": [],
         "limits": {
           "maxImages": 5,
@@ -4833,16 +4843,6 @@
         },
         "violations": []
       },
-      "remediation": [
-        {
-          "code": "reference_pack_required",
-          "uncoveredEntityIds": [
-            "location:celestial-ardor-command-vestibule"
-          ],
-          "compatiblePackAssetIds": [],
-          "packsNeeded": null
-        }
-      ],
       "segments": [
         {
           "id": "main:shot-08-05:segment-01",

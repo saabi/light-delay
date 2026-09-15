@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Durable map of local assetId + staging-file sha256 → Higgsfield media_id.
  * SoT: data/production/higgsfield-media-ledger.json

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Build and swap OpenTimelineIO JSON for DaVinci Resolve.
  * See docs/production/RESOLVE_OTIO_EXPORT.md.

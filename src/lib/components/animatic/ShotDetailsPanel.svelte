@@ -111,7 +111,7 @@
 			indexEntityReferenceAssets({ catalogs, assets: assetsById });
 		const attached = stretch.referenceAssetIds || [];
 		return evaluateReferenceBudget({
-			references: attached.map((id) => ({ kind: 'image' as const, id })),
+			references: attached.map((id: string) => ({ kind: 'image' as const, id })),
 			limits: { maxImages: 5 },
 			requiredEntityIds,
 			entityReferenceIds,

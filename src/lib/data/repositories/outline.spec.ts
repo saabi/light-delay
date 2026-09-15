@@ -54,7 +54,7 @@ describe('outlines (optional)', () => {
 	it('loads the complete story-only master outline with structured framing', () => {
 		const source = getOutline(masterId)!;
 		expect(source.outline.provenance?.importedFrom?.[0]?.revision).toBe('13');
-		expect(source.outline.revision).toBe(19);
+		expect(source.outline.revision).toBe(24);
 		expect(source.outline.version).toBe('0.8.0-wip');
 		expect(source.outline.localization).toEqual({
 			sourceLanguage: 'en',

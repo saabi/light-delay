@@ -1,9 +1,19 @@
 {
   "schemaVersion": "1.0.0",
   "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-  "updatedAt": "2026-09-15T21:08:01.426Z",
+  "updatedAt": "2026-09-15T21:46:00.069Z",
   "notes": "Seeded from data/production/runs/*-results.json uploadHandles. Key is assetId + sha256 of current staging bytes (resolveStretchStagingSource). Voice assets with seedanceUploadPath are not seeded from historical handles (often full WAV).",
   "entries": [
+    {
+      "assetId": "asset:art-bible-earth-protests-birds-eye-evening",
+      "sha256": "05a83a0c18a77217327f867a526f064520863a13793441ab8732e2b28d16e23d",
+      "mediaId": "9a9c01af-b7b5-44dc-b26d-b5db7baa985a",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-title:rev-2:video-1:ready",
+      "uploadedAt": "2026-09-15T07:48:41Z",
+      "localPath": "static/assets/art-bible/earth-protests/birds-eye-view-evening.png"
+    },
     {
       "assetId": "asset:character-harlan-sheet",
       "sha256": "719392421fb58cd49dadc63a1cf72f0f6da480730d906800b0b917eabdf75092",
@@ -82,6 +92,96 @@
       "seedConfidence": "assumed_current_bytes"
     },
     {
+      "assetId": "asset:festival-master-shot-plan-title-rev-1-first-frame",
+      "sha256": "f96ca9d8b82a335ff6d0f6bc5637cd7796548be7ffe7c11be2871ab77571a720",
+      "mediaId": "601706d1-fdd1-4910-b492-1ba17a0882b2",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:shot-plan-title:rev-2:video-1:ready",
+      "uploadedAt": "2026-09-15T07:48:41Z",
+      "localPath": "higgsfield-uploads/title/festival-master-shot-plan-title-rev-1-first-frame.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-023-rev-2",
+      "sha256": "5076d0313d813f17c8aa0ff54a9479d698f053d4b82ff5cbcb12ad7478cbc535",
+      "mediaId": "a027da98-119a-4a76-99fb-8b39325ce9b4",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-023-rev-2.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-024-rev-3",
+      "sha256": "f6f252fd63205df858d9c286b4fb26b145a8802428a5977f89538a824ddca158",
+      "mediaId": "2f9aace3-243e-4822-a507-8624f2a6f22e",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-024-rev-3.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-025-rev-3",
+      "sha256": "58bcdc2fd1fb36c7d8fb73de132e6cf738c59f16e27fbfa20372e1f3bad0a47e",
+      "mediaId": "7c5f91dd-470e-4d8e-b0d3-11d281ff4139",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-025-rev-3.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-026",
+      "sha256": "958dee6ce33a73a2c9489195632c373d693acd60f9f1774c9591727847fc5d23",
+      "mediaId": "624bf0a6-0301-4d9c-98d0-6ad1907550eb",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-026:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-026.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-027",
+      "sha256": "e999458746996f6d47ca77603070a4677b659fbe476713d5c91edec3174aff25",
+      "mediaId": "994b7420-120a-4037-af04-d719ddf49434",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-route-decision-027:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-027.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-028",
+      "sha256": "af58721fd418c9dbf3a41e50d8e98c6d26dcb55b012b347c6a562bd92d930e84",
+      "mediaId": "375aa467-2bf1-4a35-84fb-16ba02d20944",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-central-access-sorell-028:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-028.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-037",
+      "sha256": "8f27d6a47fb438e6f8f4c0117ee57398ba4cea3d293f3ad7fe9be7ba7f972680",
+      "mediaId": "477fe011-7297-4907-a21b-ab4475eb21fd",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-037.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-038",
+      "sha256": "784e68111f10ca28fadfca71b1c6d398e10bc30d9f9c8254ee2308fbe6584259",
+      "mediaId": "4a83d387-cdb4-417d-9e3d-6999448c1c29",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T19:12:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-038.png"
+    },
+    {
       "assetId": "asset:festival-master-storyboard-039",
       "sha256": "8918109b8f66dfd32a4305ee09463565c4f5f8190a57e21533da2ea4d528accb",
       "mediaId": "fa8f741e-54b5-4c1d-ab0a-156920055d6f",
@@ -104,6 +204,56 @@
       "seedConfidence": "assumed_current_bytes"
     },
     {
+      "assetId": "asset:festival-master-storyboard-042",
+      "sha256": "d46175cbd10d160d95c8c8b689a9aafdb887898806e5786765a6399c067d5ddc",
+      "mediaId": "e4da4f83-2e0e-44f4-98ea-4964e3a2f96a",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.605Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-042.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-043",
+      "sha256": "2cc08ba27e588187b2fa482f5ada870e680a80a24d5dbd65da79203c12ed1354",
+      "mediaId": "96eaaef4-96aa-4a68-abce-29c143930b22",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T21:06:28.689Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-043.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-044",
+      "sha256": "675f3dce0fbb8f37b108a563d884592fd2550b73856577b77c85e04369236909",
+      "mediaId": "9e652dd1-c721-4aea-ba3d-87f71485dd01",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.779Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-044.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-045",
+      "sha256": "751fbff538e6fd54b4e2bb3ad01e666fcd3b90b272706b9c92676755fa734b42",
+      "mediaId": "307a4a29-899b-4115-ae70-c70d8b881e37",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.867Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-045.png"
+    },
+    {
+      "assetId": "asset:festival-master-storyboard-045b",
+      "sha256": "ed3a4d0ecdebe224228b409fd2d3c35300e14555cf503a2f2e5ea10d4293489d",
+      "mediaId": "51f1f0eb-5410-411a-93ca-f4967030a5b9",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-okoye-045b:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:07:35.934Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-045b.png"
+    },
+    {
       "assetId": "asset:festival-master-storyboard-087",
       "sha256": "19996996e299d62cde6fd2892dfad204b7008d6f1d606879892a7ee98f3755d2",
       "mediaId": "12f95bd2-419c-47cd-b555-8e6af07daa5d",
@@ -113,6 +263,46 @@
       "uploadedAt": "2026-09-14T22:13:05Z",
       "localPath": "static/assets/animatic/frames/festival-master/shot-plan-087.png",
       "seedConfidence": "assumed_current_bytes"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-01",
+      "sha256": "cdf6e728ea5149700d7d22bdcdf3693712ecfc8673a1894a3a3842ff7dc9131a",
+      "mediaId": "64fd0d75-db1f-4a48-8120-063cc05730c6",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T05:52:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-01.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-02",
+      "sha256": "6957b321ea37b7f1dfb249daf5167b03a6db274acac19e80dd0200edab22ab8b",
+      "mediaId": "0ff23a43-c70b-450d-b3dc-e8412b47580b",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T05:52:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-02.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-03",
+      "sha256": "eb0ac44e3e54714c7788a620d073d2339b8ecb34a459537551f84a3dd468b985",
+      "mediaId": "58f5c9fe-5f0f-4726-bbb9-dd8ec55e7c9e",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T05:52:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-03.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-04",
+      "sha256": "b784d817dd3c9f322a6c0aa335f55d0ccb903015c5d884b71d5b525ce4187e63",
+      "mediaId": "23b8d94f-3598-4d7d-953e-06abb35c35d8",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T05:52:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-04.png"
     },
     {
       "assetId": "asset:festival-master-stretch-bridge-investigation-046-049-panel-01",
@@ -192,6 +382,36 @@
       "seedConfidence": "assumed_current_bytes"
     },
     {
+      "assetId": "asset:festival-master-stretch-central-access-013-015-panel-01",
+      "sha256": "dee61f1b24eb8dc02eca5ac6dc5446174dcef96543652fd8d3c4cef0abf5c36f",
+      "mediaId": "2464e809-882a-4a68-bb9f-0630d9c4bac2",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T06:25:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/panel-01.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-central-access-013-015-panel-02",
+      "sha256": "d328ff5b3246883a2f9fe4e5fed349b57e5883163e403174c42fca1c367b3f05",
+      "mediaId": "73475cde-6e68-413e-a841-1246e266a3b7",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T06:25:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/panel-02.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-central-access-013-015-panel-03",
+      "sha256": "b69627fef9a4c09beead3dd34214570e98ff649266b543de48093b13b492b9c4",
+      "mediaId": "4a2d65e9-459b-4536-9f1e-6ad9fff4f1f3",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T06:25:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/panel-03.png"
+    },
+    {
       "assetId": "asset:festival-master-stretch-engineering-audit-016-017-panel-01",
       "sha256": "ab61e5142b9c68ffe6b8fde44ea9fd09416e5f35d4ab478a98cf446ff2cf10e7",
       "mediaId": "05c595e7-f615-4e1d-87d8-3654ca3744b2",
@@ -267,6 +487,66 @@
       "uploadedAt": "2026-09-15T05:06:00Z",
       "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-operations-gallery-004-005/panel-02.png",
       "seedConfidence": "assumed_current_bytes"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-01",
+      "sha256": "72063ff0946336d95c4d1940ccd24e7013964e42a1b2501391bd31055934253a",
+      "mediaId": "78a72bb7-4198-4c56-a24b-b0690780d722",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T07:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/panel-01.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-02",
+      "sha256": "e901cfe7325d63ee3726598bd386601ab3bd5829ecd5e6e51ead725dddb26b45",
+      "mediaId": "f623918f-fe54-4058-be27-18a3446bae93",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T07:05:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/panel-02.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-01",
+      "sha256": "05ed957b3a2b5034a466966c8a2d809cba95dd4637f134e0f27846e6b7b70d25",
+      "mediaId": "1388d6b1-c589-4743-9969-e91634aac427",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T10:55:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-01.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-02",
+      "sha256": "ee8de0a32f23bc3b9c347164556affacc57a9391c19290c05926292a48d3c50b",
+      "mediaId": "1f1933a1-f77b-4a09-a79b-cb9045dcc722",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T10:55:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-02.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-03",
+      "sha256": "441d69f0685f2cf4ea08a8e45b768436b430985eab9a9fa1806a3e504d542702",
+      "mediaId": "8f460ca2-2c59-475f-963e-3a9271558e37",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T10:55:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-03.png"
+    },
+    {
+      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-04",
+      "sha256": "0b0a7b90188ba114d6d276cf754863c31eba2a41af80e0b49af9c1b021eb7e6b",
+      "mediaId": "3fdf7a6e-4a23-44f7-a71b-728f5665c541",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-4:ready",
+      "uploadedAt": "2026-09-15T10:55:00Z",
+      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-04.png"
     },
     {
       "assetId": "asset:festival-master-stretch-reactor-record-033-036-panel-01",
@@ -379,6 +659,27 @@
       "seedConfidence": "assumed_current_bytes"
     },
     {
+      "assetId": "asset:location-celestial-ardor-bridge-crew-stations-reference",
+      "sha256": "5bbfca7451215386ed2bd23eca18f4f4521d5e7735a89edaf73073b1187cd1d7",
+      "mediaId": "88ef973e-1865-4c11-b914-9555ee9a5e45",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": null,
+      "uploadedAt": "2026-09-15T21:29:11.611Z",
+      "localPath": "static/assets/locations/celestial-ardor-bridge/bridge-crew-stations.png",
+      "seedConfidence": "assumed_current_bytes"
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-central-access-sheet-v4-b",
+      "sha256": "d23ef9c91e14837f730aa99984ad3b83c1b26eac846feb3b15542a2f9df3911b",
+      "mediaId": "66325695-de9e-45e4-aced-3b2c8185585b",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-central-access-sorell-028:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T19:00:00Z",
+      "localPath": "static/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png"
+    },
+    {
       "assetId": "asset:location-celestial-ardor-reactor-service-bay-sheet",
       "sha256": "641f049562b38fab9110eeb1c53dc49f12041c7f98a64355902d3f70a242e30f",
       "mediaId": "b52b8526-2b44-4f98-accc-449648d56e06",
@@ -387,6 +688,17 @@
       "sourceRunId": "run:festival-master:shot-plan-039:rev-1:video-1:ready",
       "uploadedAt": "2026-09-14T23:24:30Z",
       "localPath": "static/assets/locations/celestial-ardor-reactor-service-bay/concept-sheet-v4.png",
+      "seedConfidence": "assumed_current_bytes"
+    },
+    {
+      "assetId": "asset:location-celestial-ardor-service-cylinder-sheet",
+      "sha256": "1921e7d9bd0250b92ba767d5a8fa405aaac8b959690705541c9f38a0fe8d17ff",
+      "mediaId": "2450ada3-c797-4fa0-bc3b-a47face7b033",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": null,
+      "uploadedAt": "2026-09-15T21:29:11.611Z",
+      "localPath": "static/assets/locations/celestial-ardor-service-cylinder/concept-sheet-v5.png",
       "seedConfidence": "assumed_current_bytes"
     },
     {
@@ -412,6 +724,16 @@
       "seedConfidence": "assumed_current_bytes"
     },
     {
+      "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
+      "sha256": "d37b87ba365227189fb1bdab733a996b92e9081d4789b8e913ec6066e62fcf1b",
+      "mediaId": "c8518faa-615f-4caa-a81c-1b5e482d6f0b",
+      "kind": "image",
+      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
+      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
+      "uploadedAt": "2026-09-15T21:06:28.779Z",
+      "localPath": "static/assets/props/wired-comms-deck-patch-panel/prop-sheet.png"
+    },
+    {
       "assetId": "asset:vehicle-celestial-ardor-model-sheet-v2",
       "sha256": "924daa0f329a796358c9f2f9feeb74b3730dc616d705fafdf7f546d895c44396",
       "mediaId": "d06a5a0a-65cf-4991-b5f7-0c58dc104ca2",
@@ -423,44 +745,14 @@
       "seedConfidence": "assumed_current_bytes"
     },
     {
-      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-01",
-      "sha256": "cdf6e728ea5149700d7d22bdcdf3693712ecfc8673a1894a3a3842ff7dc9131a",
-      "mediaId": "64fd0d75-db1f-4a48-8120-063cc05730c6",
-      "kind": "image",
+      "assetId": "asset:voice-ref-en-elin",
+      "sha256": "4f5989dec9843cd90bac1e75eb9b1d48a8615a3376e6a744fe6116fd0544a49b",
+      "mediaId": "0938dded-f8bd-4fb2-9145-566f50b3eabc",
+      "kind": "audio",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T05:52:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-01.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-02",
-      "sha256": "6957b321ea37b7f1dfb249daf5167b03a6db274acac19e80dd0200edab22ab8b",
-      "mediaId": "0ff23a43-c70b-450d-b3dc-e8412b47580b",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T05:52:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-02.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-03",
-      "sha256": "eb0ac44e3e54714c7788a620d073d2339b8ecb34a459537551f84a3dd468b985",
-      "mediaId": "58f5c9fe-5f0f-4726-bbb9-dd8ec55e7c9e",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T05:52:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-03.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-axial-dock-006-009-panel-04",
-      "sha256": "b784d817dd3c9f322a6c0aa335f55d0ccb903015c5d884b71d5b525ce4187e63",
-      "mediaId": "23b8d94f-3598-4d7d-953e-06abb35c35d8",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-axial-dock-006-009:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T05:52:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-axial-dock-006-009/panel-04.png"
+      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
+      "uploadedAt": "2026-09-15T12:05:00Z",
+      "localPath": "static/assets/voices/en/seedance-5s/Elin.mp3"
     },
     {
       "assetId": "asset:voice-ref-en-harlan",
@@ -473,14 +765,14 @@
       "localPath": "static/assets/voices/en/seedance-5s/Harlan.mp3"
     },
     {
-      "assetId": "asset:voice-ref-en-elin",
-      "sha256": "4f5989dec9843cd90bac1e75eb9b1d48a8615a3376e6a744fe6116fd0544a49b",
-      "mediaId": "0938dded-f8bd-4fb2-9145-566f50b3eabc",
+      "assetId": "asset:voice-ref-en-sorell",
+      "sha256": "a0edc611f487f35a1cc46171064991876d5f11bed62006b672dfae75de873dec",
+      "mediaId": "9b905fc4-c6c4-4dc6-8773-76977f54d2ed",
       "kind": "audio",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
-      "localPath": "static/assets/voices/en/seedance-5s/Elin.mp3"
+      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
+      "uploadedAt": "2026-09-15T21:06:28.689Z",
+      "localPath": "static/assets/voices/en/seedance-5s/Sorell.mp3"
     },
     {
       "assetId": "asset:voice-ref-en-voss",
@@ -503,274 +795,15 @@
       "localPath": "static/assets/voices/en/seedance-5s/Zao.mp3"
     },
     {
-      "assetId": "asset:festival-master-stretch-central-access-013-015-panel-01",
-      "sha256": "dee61f1b24eb8dc02eca5ac6dc5446174dcef96543652fd8d3c4cef0abf5c36f",
-      "mediaId": "2464e809-882a-4a68-bb9f-0630d9c4bac2",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T06:25:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/panel-01.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-central-access-013-015-panel-02",
-      "sha256": "d328ff5b3246883a2f9fe4e5fed349b57e5883163e403174c42fca1c367b3f05",
-      "mediaId": "73475cde-6e68-413e-a841-1246e266a3b7",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T06:25:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/panel-02.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-central-access-013-015-panel-03",
-      "sha256": "b69627fef9a4c09beead3dd34214570e98ff649266b543de48093b13b492b9c4",
-      "mediaId": "4a2d65e9-459b-4536-9f1e-6ad9fff4f1f3",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-central-access-013-015:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T06:25:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-central-access-013-015/panel-03.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-01",
-      "sha256": "72063ff0946336d95c4d1940ccd24e7013964e42a1b2501391bd31055934253a",
-      "mediaId": "78a72bb7-4198-4c56-a24b-b0690780d722",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T07:05:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/panel-01.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-reactor-entrance-018-019-panel-02",
-      "sha256": "e901cfe7325d63ee3726598bd386601ab3bd5829ecd5e6e51ead725dddb26b45",
-      "mediaId": "f623918f-fe54-4058-be27-18a3446bae93",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-entrance-018-019:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T07:05:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-entrance-018-019/panel-02.png"
-    },
-    {
-      "assetId": "asset:art-bible-earth-protests-birds-eye-evening",
-      "sha256": "05a83a0c18a77217327f867a526f064520863a13793441ab8732e2b28d16e23d",
-      "mediaId": "9a9c01af-b7b5-44dc-b26d-b5db7baa985a",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:shot-plan-title:rev-2:video-1:ready",
-      "uploadedAt": "2026-09-15T07:48:41Z",
-      "localPath": "static/assets/art-bible/earth-protests/birds-eye-view-evening.png"
-    },
-    {
-      "assetId": "asset:festival-master-shot-plan-title-rev-1-first-frame",
-      "sha256": "f96ca9d8b82a335ff6d0f6bc5637cd7796548be7ffe7c11be2871ab77571a720",
-      "mediaId": "601706d1-fdd1-4910-b492-1ba17a0882b2",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:shot-plan-title:rev-2:video-1:ready",
-      "uploadedAt": "2026-09-15T07:48:41Z",
-      "localPath": "higgsfield-uploads/title/festival-master-shot-plan-title-rev-1-first-frame.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-01",
-      "sha256": "05ed957b3a2b5034a466966c8a2d809cba95dd4637f134e0f27846e6b7b70d25",
-      "mediaId": "1388d6b1-c589-4743-9969-e91634aac427",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T10:55:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-01.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-02",
-      "sha256": "ee8de0a32f23bc3b9c347164556affacc57a9391c19290c05926292a48d3c50b",
-      "mediaId": "1f1933a1-f77b-4a09-a79b-cb9045dcc722",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-15T10:55:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-02.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-03",
-      "sha256": "441d69f0685f2cf4ea08a8e45b768436b430985eab9a9fa1806a3e504d542702",
-      "mediaId": "8f460ca2-2c59-475f-963e-3a9271558e37",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T10:55:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-03.png"
-    },
-    {
-      "assetId": "asset:festival-master-stretch-reactor-optics-029-032-panel-04",
-      "sha256": "0b0a7b90188ba114d6d276cf754863c31eba2a41af80e0b49af9c1b021eb7e6b",
-      "mediaId": "3fdf7a6e-4a23-44f7-a71b-728f5665c541",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-optics-029-032:rev-1:video-4:ready",
-      "uploadedAt": "2026-09-15T10:55:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/stretches/festival-master-stretch-reactor-optics-029-032/panel-04.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-023-rev-2",
-      "sha256": "5076d0313d813f17c8aa0ff54a9479d698f053d4b82ff5cbcb12ad7478cbc535",
-      "mediaId": "a027da98-119a-4a76-99fb-8b39325ce9b4",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-023-rev-2.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-024-rev-3",
-      "sha256": "f6f252fd63205df858d9c286b4fb26b145a8802428a5977f89538a824ddca158",
-      "mediaId": "2f9aace3-243e-4822-a507-8624f2a6f22e",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-024-rev-3.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-025-rev-3",
-      "sha256": "58bcdc2fd1fb36c7d8fb73de132e6cf738c59f16e27fbfa20372e1f3bad0a47e",
-      "mediaId": "7c5f91dd-470e-4d8e-b0d3-11d281ff4139",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-comms-cut-023-025:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T12:05:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-025-rev-3.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-026",
-      "sha256": "958dee6ce33a73a2c9489195632c373d693acd60f9f1774c9591727847fc5d23",
-      "mediaId": "624bf0a6-0301-4d9c-98d0-6ad1907550eb",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-026:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T19:00:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-026.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-027",
-      "sha256": "e999458746996f6d47ca77603070a4677b659fbe476713d5c91edec3174aff25",
-      "mediaId": "994b7420-120a-4037-af04-d719ddf49434",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-route-decision-027:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T19:00:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-027.png"
-    },
-    {
-      "assetId": "asset:object-wired-comms-deck-patch-panel-sheet",
-      "sha256": "d37b87ba365227189fb1bdab733a996b92e9081d4789b8e913ec6066e62fcf1b",
-      "mediaId": "c8518faa-615f-4caa-a81c-1b5e482d6f0b",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T21:06:28.779Z",
-      "localPath": "static/assets/props/wired-comms-deck-patch-panel/prop-sheet.png"
-    },
-    {
-      "assetId": "asset:voice-ref-en-sorell",
-      "sha256": "a0edc611f487f35a1cc46171064991876d5f11bed62006b672dfae75de873dec",
-      "mediaId": "9b905fc4-c6c4-4dc6-8773-76977f54d2ed",
-      "kind": "audio",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-15T21:06:28.689Z",
-      "localPath": "static/assets/voices/en/seedance-5s/Sorell.mp3"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-028",
-      "sha256": "af58721fd418c9dbf3a41e50d8e98c6d26dcb55b012b347c6a562bd92d930e84",
-      "mediaId": "375aa467-2bf1-4a35-84fb-16ba02d20944",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-central-access-sorell-028:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T19:00:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-028.png"
-    },
-    {
-      "assetId": "asset:location-celestial-ardor-central-access-sheet-v4-b",
-      "sha256": "d23ef9c91e14837f730aa99984ad3b83c1b26eac846feb3b15542a2f9df3911b",
-      "mediaId": "66325695-de9e-45e4-aced-3b2c8185585b",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-central-access-sorell-028:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T19:00:00Z",
-      "localPath": "static/assets/locations/celestial-ardor-central-access/concept-sheet-v4-b.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-037",
-      "sha256": "8f27d6a47fb438e6f8f4c0117ee57398ba4cea3d293f3ad7fe9be7ba7f972680",
-      "mediaId": "477fe011-7297-4907-a21b-ab4475eb21fd",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-15T19:12:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-037.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-038",
-      "sha256": "784e68111f10ca28fadfca71b1c6d398e10bc30d9f9c8254ee2308fbe6584259",
-      "mediaId": "4a83d387-cdb4-417d-9e3d-6999448c1c29",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-confront-036-038:rev-1:video-3:ready",
-      "uploadedAt": "2026-09-15T19:12:00Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-038.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-042",
-      "sha256": "d46175cbd10d160d95c8c8b689a9aafdb887898806e5786765a6399c067d5ddc",
-      "mediaId": "e4da4f83-2e0e-44f4-98ea-4964e3a2f96a",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T21:06:28.605Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-042.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-043",
-      "sha256": "2cc08ba27e588187b2fa482f5ada870e680a80a24d5dbd65da79203c12ed1354",
-      "mediaId": "96eaaef4-96aa-4a68-abce-29c143930b22",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-reactor-sorell-042-043:rev-1:video-2:ready",
-      "uploadedAt": "2026-09-15T21:06:28.689Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-043.png"
-    },
-    {
       "assetId": "asset:festival-master-storyboard-044",
-      "sha256": "675f3dce0fbb8f37b108a563d884592fd2550b73856577b77c85e04369236909",
-      "mediaId": "9e652dd1-c721-4aea-ba3d-87f71485dd01",
+      "sha256": "934b71d40999849fa52b74b19d9db66397a6f219491537d6f499a5f5099463cf",
+      "mediaId": "3c4a3f2b-06f7-4b70-aff3-668815c27cf9",
       "kind": "image",
       "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
       "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-044:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T21:06:28.779Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-044.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-045",
-      "sha256": "751fbff538e6fd54b4e2bb3ad01e666fcd3b90b272706b9c92676755fa734b42",
-      "mediaId": "307a4a29-899b-4115-ae70-c70d8b881e37",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-bridge-harlan-alibi-045:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T21:06:28.867Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-045.png"
-    },
-    {
-      "assetId": "asset:festival-master-storyboard-045b",
-      "sha256": "ed3a4d0ecdebe224228b409fd2d3c35300e14555cf503a2f2e5ea10d4293489d",
-      "mediaId": "51f1f0eb-5410-411a-93ca-f4967030a5b9",
-      "kind": "image",
-      "workspaceId": "e4d99f54-5f04-4f20-8544-330c41232965",
-      "sourceRunId": "run:festival-master:stretch-service-cylinder-harlan-okoye-045b:rev-1:video-1:ready",
-      "uploadedAt": "2026-09-15T21:07:35.934Z",
-      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-045b.png"
+      "uploadedAt": "2026-09-15T21:46:00.069Z",
+      "localPath": "static/assets/animatic/frames/festival-master/shot-plan-044.png",
+      "seedConfidence": "assumed_current_bytes"
     }
   ]
 }

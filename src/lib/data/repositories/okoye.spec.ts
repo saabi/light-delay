@@ -29,7 +29,7 @@ describe('Dara Okoye catalog', () => {
 		expect(voice?.variants.map((variant) => variant.language)).toEqual(['es', 'en']);
 		expect(voice?.variants.find((variant) => variant.language === 'es')?.locale).toBe('es-VE');
 		expect(voice?.variants.find((variant) => variant.language === 'en')?.locale).toBe('en-NG');
-		expect(voice?.variants.some((variant) => variant.sampleAssetIds?.length)).toBe(false);
+		expect(voice?.variants.some((variant) => variant.sampleAssetIds?.length)).toBe(true);
 	});
 
 	it('keeps the master WIP characterization separate from primary continuity history', () => {

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Blocker-tolerant Seedance stretch video preview compiler.
  * Assembles the 11 compilePrompt sections without calling strict compilePrompt

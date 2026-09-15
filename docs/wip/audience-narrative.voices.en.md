@@ -1,6 +1,6 @@
 # Light Delay — audience narrative TTS (English)
 
-Revision 19 (from the master outline). Chaptered short story for listeners; no production frontmatter.
+Revision 24 (from the master outline). Chaptered short story for listeners; no production frontmatter.
 Speaker tags: [Narrator], [Zao], [Voss], [Harlan], [Elin], [Sorell], [Okoye].
 Spoken name: Soréll; tag and editorial spelling stay ASCII [Sorell]. Dialogue from attributed blockquotes only.
 Cast/ref: `docs/wip/qwen3-tts-cast.json`.
@@ -9,7 +9,7 @@ Generate: `python scripts/generate-dual-outline-audio.py --lang en --script docs
 ---
 
 [Narrator]
-[PAUSE 1200] Light Delay. Revision 19.
+[PAUSE 1200] Light Delay. Revision 24.
 
 [Narrator]
 Prologue.

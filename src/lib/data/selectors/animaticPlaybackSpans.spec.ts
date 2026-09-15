@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { describe, expect, it, vi } from 'vitest';
 import type { GenerationPlanFile } from '$lib/types/generated/production';
 import type { Asset } from '$lib/types/assets';

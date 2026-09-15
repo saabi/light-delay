@@ -182,7 +182,8 @@ describe('separate still/video reference sets', () => {
 		expect(video?.videoReferencePolicy).toBe('explicit');
 		expect(video?.videoReferenceAssetIds).toEqual(['asset:custom-extra']);
 		expect(video?.stillReferenceAssetIds).toEqual(still?.stillReferenceAssetIds);
-		expect(video?.effectiveVideoReferenceAssetIds).toContain('asset:custom-extra');
+		// Explicit extras attach only when they cover uncovered entities or speakers on this job.
+		expect(video?.effectiveVideoReferenceAssetIds ?? []).not.toContain('asset:custom-extra');
 		expect(video?.sharedReferenceAssetIds).toEqual(video?.effectiveVideoReferenceAssetIds);
 	});
 
@@ -232,7 +233,7 @@ describe('separate still/video reference sets', () => {
 		});
 		expect(collected.references.filter((r) => r.id === 'asset:sheet-a')).toHaveLength(1);
 		expect(collected.effectiveVideoReferenceAssetIds).not.toContain('asset:sheet-a');
-		expect(collected.effectiveVideoReferenceAssetIds).toContain('asset:custom');
+		expect(collected.effectiveVideoReferenceAssetIds).not.toContain('asset:custom');
 	});
 
 	it('partial keyframes only cover that shot entities; sibling stays required', () => {
@@ -258,7 +259,7 @@ describe('separate still/video reference sets', () => {
 			keyframeByShotId: new Map(),
 			entityReferenceIds
 		});
-		expect(collected.effectiveVideoReferenceAssetIds).toEqual(['asset:orphan-custom']);
+		expect(collected.effectiveVideoReferenceAssetIds).toEqual([]);
 		expect(collected.blockers).toEqual(
 			expect.arrayContaining([
 				'uncovered_video_entity:character:a',
@@ -343,7 +344,14 @@ describe('separate still/video reference sets', () => {
 			videoReferenceAssetIds: ['asset:custom']
 		};
 		const assetsById = new Map([
-			['asset:custom', { id: 'asset:custom', path: '/assets/custom.png' }]
+			[
+				'asset:custom',
+				{
+					id: 'asset:custom',
+					path: '/assets/custom.png',
+					metadata: { entityIds: ['character:a'] }
+				}
+			]
 		]);
 		const { references, recomputedEffectiveVideoReferenceAssetIds } = buildEffectiveReferences(
 			job,
@@ -365,11 +373,15 @@ describe('separate still/video reference sets', () => {
 		const plan = JSON.parse(
 			readFileSync(join(ROOT, 'data/production/plans/light-delay-festival-master.json'), 'utf8')
 		);
-		const stretch = (script.visualStretches || [])[0];
+		const stretch = (script.visualStretches || []).find(
+			(item: { id?: string; videoReferenceAssetIds?: string[] }) =>
+				item.id === 'festival-master:stretch-central-vault-obstruction-054-056'
+		);
 		expect(stretch).toBeTruthy();
 		expect(Object.prototype.hasOwnProperty.call(stretch, 'videoReferenceAssetIds')).toBe(false);
 		const video = (plan.visualStretchJobs || []).find(
-			(j: { medium?: string }) => j.medium === 'video'
+			(j: { medium?: string; stretchId?: string }) =>
+				j.medium === 'video' && j.stretchId === stretch.id
 		);
 		expect(video?.videoReferencePolicy).toBe('fallback');
 		expect(video?.videoReferenceAssetIds).toBeUndefined();

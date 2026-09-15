@@ -60,6 +60,36 @@
       }
     },
     {
+      "id": "location:celestial-ardor-command-vestibule",
+      "name": {
+        "es": "Vestíbulo axial de mando",
+        "en": "Command Axial Vestibule"
+      },
+      "description": {
+        "es": "Descanso de la cubierta de mando organizado alrededor de dos escaleras: la abertura de baranda de una queda junto al cilindro de servicio y la de la segunda junto al pozo de ascensor. La escotilla del servicio está retranqueada fuera de la línea visual normal de las consolas.",
+        "en": "Command-deck landing organized around two stairs: one railing opening lands beside the service cylinder and the second beside the lift shaft. The service hatch is recessed beyond the crew stations’ normal sightline."
+      },
+      "referenceAssetIds": [
+        "asset:location-celestial-ardor-bridge-service-shaft-reference"
+      ],
+      "atmosphere": {
+        "es": "Tránsito axial y punto ciego del puente",
+        "en": "Axial transit and bridge blind spot"
+      },
+      "notes": [
+        {
+          "id": "note:celestial-ardor-command-vestibule-visual-reference",
+          "type": "visual",
+          "status": "open",
+          "priority": "medium",
+          "text": {
+            "es": "Falta una referencia visual para el vestíbulo axial de mando; usado en varias escenas del Festival.",
+            "en": "A visual reference for the command axial vestibule is pending; used across several Festival scenes."
+          }
+        }
+      ]
+    },
+    {
       "id": "location:celestial-ardor-bridge-meal-table",
       "name": {
         "es": "Mesa de comida del puente del Celestial Ardor",

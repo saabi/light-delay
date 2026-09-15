@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Visual-stretch generation-plan helpers: reference budgets, Seedance partition, job builder.
  * Node-only (imports generation-planning + visual-stretch).

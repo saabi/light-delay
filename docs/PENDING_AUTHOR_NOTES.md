@@ -2,7 +2,7 @@
 
 > Archivo generado por `npm run notes:build`. Editar las notas en sus JSON de origen, no este informe.
 
-Pendientes vigentes o por revisar: **19**
+Pendientes vigentes o por revisar: **22**
 
 Notas archivadas para rescate: **167**
 
@@ -10,14 +10,20 @@ Notas archivadas para rescate: **167**
 
 ### medium
 
+- **note:celestial-ardor-command-vestibule-visual-reference** [visual · open · review_required] — Falta una referencia visual para el vestíbulo axial de mando; usado en varias escenas del Festival.
+  - Origen: `data/locations.json` · `$.locations[3].notes[0]`
 - **note:festival-master-shot-plan-023-zao-radio-j-cut** [sound · open · active] — needs_revision
   - Origen: `data/scripts/light-delay-festival-master.json` · `$.shots[25].notes[0]`
 - **note:festival-master-shot-plan-024-zao-audio-from-023** [sound · open · active] — needs_revision
   - Origen: `data/scripts/light-delay-festival-master.json` · `$.shots[26].notes[0]`
 - **note:stretch-operations-gallery-001-003** [visual · todo · active] — La secuencia inicial de visionado en la galería de operaciones es un tramo continuo; generar como una sola hoja antes de dividir los paneles.
   - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[0].notes[0]`
+- **note:bridge-027-not-shaft** [production · open · active] — needs_revision
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[25].notes[0]`
 - **note:bridge-comms-exceptional-video-identity** [production · open · active] — needs_revision
-  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[22].notes[0]`
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[27].notes[0]`
+- **note:reactor-confront-scene-14** [production · open · active] — needs_revision
+  - Origen: `data/scripts/light-delay-festival-master.json` · `$.visualStretches[7].notes[0]`
 - **data/scripts/light-delay-trailer-master.json:$.shots[0].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-title (asset asset:festival-master-storyboard-title).
   - Origen: `data/scripts/light-delay-trailer-master.json` · `$.shots[0].notes[0]`
 - **data/scripts/light-delay-trailer-master.json:$.shots[1].notes[0]** [editorial · open · active] — Reutiliza el frame de festival-master:shot-plan-002 (asset asset:festival-master-storyboard-002).

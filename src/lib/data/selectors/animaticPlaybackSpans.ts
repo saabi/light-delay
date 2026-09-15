@@ -1,6 +1,7 @@
 import type { GenerationPlanFile } from '$lib/types/generated/production';
 import type { Asset } from '$lib/types/assets';
-import type { ScriptFile, Shot, ShotId, Take } from '$lib/types/script';
+import type { ShotId } from '$lib/types/ids';
+import type { ScriptFile, Shot, Take } from '$lib/types/script';
 import { getAssetById } from '$lib/data/repositories/lookups';
 import { catalogFileExists, catalogPathIsSafe } from '$lib/data/repositories/generationPlans';
 import type { AnimaticDialogueTimelineCue } from './animaticDialogueTimeline';

@@ -139,7 +139,7 @@ describe('run schema validation', () => {
 			allowPreviewPrompt: true
 		});
 		expect(run.nonExecutable).toBe(true);
-		expect(run.parameters.resolution).toBeUndefined();
+		expect(run.parameters.resolution).toBe('480p');
 		const nullKeyframes = run.references.filter((r) => r.role === 'keyframe' && r.assetId == null);
 		expect(nullKeyframes.length).toBeGreaterThanOrEqual(0);
 		const schema = JSON.parse(readFileSync(join(ROOT, 'data/schemas/run.schema.json'), 'utf8'));
@@ -251,7 +251,7 @@ describe('maxOutputsPerRequest', () => {
 					locationId: 'location:bridge',
 					presentCharacterIds: [],
 					referenceAssetIds: [],
-					blocking: { present: [] },
+					blocking: [],
 					members: [
 						{ shotId: 'a', order: 1 },
 						{ shotId: 'b', order: 2 }

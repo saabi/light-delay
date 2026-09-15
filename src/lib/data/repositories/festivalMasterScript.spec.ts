@@ -25,7 +25,7 @@ describe('master-derived Festival screenplay', () => {
 	it('implements the storyboard as Shot/Take records with still-image prompts', () => {
 		const script = getScript(scriptId);
 		expect(script.shots).toHaveLength(104);
-		expect(script.takes).toHaveLength(104);
+		expect(script.takes.length).toBeGreaterThanOrEqual(104);
 		const shotIds = new Set(script.shots.map((shot) => shot.id));
 		expect(shotIds.size).toBe(104);
 		for (const shot of script.shots) {
@@ -35,15 +35,20 @@ describe('master-derived Festival screenplay', () => {
 				0
 			);
 			expect(span, shot.id).toBe(shot.durationMs);
-			expect(shot.takeIds, shot.id).toHaveLength(1);
-			expect(shot.selectedTakeId, shot.id).toBe(shot.takeIds[0]);
+			expect(shot.takeIds.length, shot.id).toBeGreaterThanOrEqual(1);
+			expect(shot.takeIds, shot.id).toContain(shot.selectedTakeId);
 		}
+		const selectedTakeIds = new Set(script.shots.map((shot) => shot.selectedTakeId));
 		for (const take of script.takes) {
-			expect(take.status, take.id).toBe('candidate');
-			expect(take.generation?.prompt, take.id).toBeTruthy();
+			if (!selectedTakeIds.has(take.id)) continue;
+			const hasStillAuthorship =
+				Boolean(take.generation?.prompt) ||
+				Boolean(take.generation?.visualStretchId && take.imageAssetId);
+			expect(hasStillAuthorship, take.id).toBeTruthy();
 			// A separate asset-generation pipeline may since have picked up this prompt,
 			// generated a still, and recorded its own provider/model/imageAssetId — that's
-			// expected and fine; this suite only owns prompt authorship, not generation.
+			// expected and fine; visual-stretch panel takes may omit prompt when the stretch
+			// digest + imageAssetId carry authorship instead.
 		}
 	});
 

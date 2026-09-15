@@ -131,69 +131,73 @@ export type ProviderCapabilitiesFile10 = string;
 export type ProviderCapabilitiesFile11 = 'verified' | 'provisional' | 'unknown';
 export type ProviderCapabilitiesFile12 = boolean;
 /**
+ * Default MCP/API resolution for this video snapshot when emitting run files (e.g. 480p). Seedance 2.5 catalog default is 720p; Light Delay Festival smoke uses 480p.
+ */
+export type ProviderCapabilitiesFile13 = string;
+/**
  * Input reference image count (not outputs).
  */
-export type ProviderCapabilitiesFile14 = ProviderCapabilitiesFile15 | ProviderCapabilitiesFile16;
-export type ProviderCapabilitiesFile15 = number;
-export type ProviderCapabilitiesFile16 = null;
-export type ProviderCapabilitiesFile17 = ProviderCapabilitiesFile18 | ProviderCapabilitiesFile19;
-export type ProviderCapabilitiesFile18 = number;
-export type ProviderCapabilitiesFile19 = null;
-export type ProviderCapabilitiesFile20 = ProviderCapabilitiesFile21 | ProviderCapabilitiesFile22;
-export type ProviderCapabilitiesFile21 = number;
-export type ProviderCapabilitiesFile22 = null;
-export type ProviderCapabilitiesFile23 = ProviderCapabilitiesFile24 | ProviderCapabilitiesFile25;
-export type ProviderCapabilitiesFile24 = number;
-export type ProviderCapabilitiesFile25 = null;
-export type ProviderCapabilitiesFile26 = ProviderCapabilitiesFile27 | ProviderCapabilitiesFile28;
-export type ProviderCapabilitiesFile27 = number;
-export type ProviderCapabilitiesFile28 = null;
-export type ProviderCapabilitiesFile29 = ProviderCapabilitiesFile30 | ProviderCapabilitiesFile31;
-export type ProviderCapabilitiesFile30 = number;
-export type ProviderCapabilitiesFile31 = null;
+export type ProviderCapabilitiesFile15 = ProviderCapabilitiesFile16 | ProviderCapabilitiesFile17;
+export type ProviderCapabilitiesFile16 = number;
+export type ProviderCapabilitiesFile17 = null;
+export type ProviderCapabilitiesFile18 = ProviderCapabilitiesFile19 | ProviderCapabilitiesFile20;
+export type ProviderCapabilitiesFile19 = number;
+export type ProviderCapabilitiesFile20 = null;
+export type ProviderCapabilitiesFile21 = ProviderCapabilitiesFile22 | ProviderCapabilitiesFile23;
+export type ProviderCapabilitiesFile22 = number;
+export type ProviderCapabilitiesFile23 = null;
+export type ProviderCapabilitiesFile24 = ProviderCapabilitiesFile25 | ProviderCapabilitiesFile26;
+export type ProviderCapabilitiesFile25 = number;
+export type ProviderCapabilitiesFile26 = null;
+export type ProviderCapabilitiesFile27 = ProviderCapabilitiesFile28 | ProviderCapabilitiesFile29;
+export type ProviderCapabilitiesFile28 = number;
+export type ProviderCapabilitiesFile29 = null;
+export type ProviderCapabilitiesFile30 = ProviderCapabilitiesFile31 | ProviderCapabilitiesFile32;
+export type ProviderCapabilitiesFile31 = number;
+export type ProviderCapabilitiesFile32 = null;
 /**
  * Last-known concurrent generation slots for this model/surface; null until verified for the account.
  */
-export type ProviderCapabilitiesFile32 = ProviderCapabilitiesFile33 | ProviderCapabilitiesFile34;
-export type ProviderCapabilitiesFile33 = number;
-export type ProviderCapabilitiesFile34 = null;
-export type ProviderCapabilitiesFile35 = boolean;
-export type ProviderCapabilitiesFile36 = ProviderCapabilitiesFile37 | ProviderCapabilitiesFile38;
-export type ProviderCapabilitiesFile37 = number;
-export type ProviderCapabilitiesFile38 = null;
-export type ProviderCapabilitiesFile40 = number;
+export type ProviderCapabilitiesFile33 = ProviderCapabilitiesFile34 | ProviderCapabilitiesFile35;
+export type ProviderCapabilitiesFile34 = number;
+export type ProviderCapabilitiesFile35 = null;
+export type ProviderCapabilitiesFile36 = boolean;
+export type ProviderCapabilitiesFile37 = ProviderCapabilitiesFile38 | ProviderCapabilitiesFile39;
+export type ProviderCapabilitiesFile38 = number;
+export type ProviderCapabilitiesFile39 = null;
 export type ProviderCapabilitiesFile41 = number;
-export type ProviderCapabilitiesFile44 = number;
+export type ProviderCapabilitiesFile42 = number;
 export type ProviderCapabilitiesFile45 = number;
-export type ProviderCapabilitiesFile46 = string;
-export type ProviderCapabilitiesFile42 = ProviderCapabilitiesFile43[];
-export type ProviderCapabilitiesFile49 = number;
+export type ProviderCapabilitiesFile46 = number;
+export type ProviderCapabilitiesFile47 = string;
+export type ProviderCapabilitiesFile43 = ProviderCapabilitiesFile44[];
 export type ProviderCapabilitiesFile50 = number;
-export type ProviderCapabilitiesFile51 = string;
-export type ProviderCapabilitiesFile47 = ProviderCapabilitiesFile48[];
+export type ProviderCapabilitiesFile51 = number;
 export type ProviderCapabilitiesFile52 = string;
-export type ProviderCapabilitiesFile54 = string;
+export type ProviderCapabilitiesFile48 = ProviderCapabilitiesFile49[];
+export type ProviderCapabilitiesFile53 = string;
 export type ProviderCapabilitiesFile55 = string;
 export type ProviderCapabilitiesFile56 = string;
+export type ProviderCapabilitiesFile57 = string;
 export type ProviderCapabilitiesFile2 = ProviderCapabilitiesFile3[];
-export type ProviderCapabilitiesFile59 = string;
 export type ProviderCapabilitiesFile60 = string;
 export type ProviderCapabilitiesFile61 = string;
-export type ProviderCapabilitiesFile62 = number;
-export type ProviderCapabilitiesFile63 = boolean;
+export type ProviderCapabilitiesFile62 = string;
+export type ProviderCapabilitiesFile63 = number;
 export type ProviderCapabilitiesFile64 = boolean;
+export type ProviderCapabilitiesFile65 = boolean;
 /**
  * Authoritative project concurrent-job ceiling once verified; null until preflight records the account limit. Smoke always uses maxJobs: 1.
  */
-export type ProviderCapabilitiesFile65 = ProviderCapabilitiesFile66 | ProviderCapabilitiesFile67;
-export type ProviderCapabilitiesFile66 = number;
-export type ProviderCapabilitiesFile67 = null;
-export type ProviderCapabilitiesFile57 = ProviderCapabilitiesFile58[];
+export type ProviderCapabilitiesFile66 = ProviderCapabilitiesFile67 | ProviderCapabilitiesFile68;
+export type ProviderCapabilitiesFile67 = number;
+export type ProviderCapabilitiesFile68 = null;
+export type ProviderCapabilitiesFile58 = ProviderCapabilitiesFile59[];
 
 export interface ProviderCapabilitiesFile {
 	schemaVersion: ProviderCapabilitiesFile1;
 	snapshots: ProviderCapabilitiesFile2;
-	campaigns: ProviderCapabilitiesFile57;
+	campaigns: ProviderCapabilitiesFile58;
 }
 export interface ProviderCapabilitiesFile3 {
 	id: ProviderCapabilitiesFile4;
@@ -204,52 +208,53 @@ export interface ProviderCapabilitiesFile3 {
 	capturedAt: ProviderCapabilitiesFile10;
 	confidence: ProviderCapabilitiesFile11;
 	executable: ProviderCapabilitiesFile12;
-	limits: ProviderCapabilitiesFile13;
-	supportsCombinedStoryboardSheet?: ProviderCapabilitiesFile35;
-	maxStoryboardPanels?: ProviderCapabilitiesFile36;
-	minPanelResolution?: ProviderCapabilitiesFile39;
-	supportedStoryboardLayouts?: ProviderCapabilitiesFile42;
-	outputSizes?: ProviderCapabilitiesFile47;
-	source: ProviderCapabilitiesFile52;
-	notes?: ProviderCapabilitiesFile53;
+	preferredResolution?: ProviderCapabilitiesFile13;
+	limits: ProviderCapabilitiesFile14;
+	supportsCombinedStoryboardSheet?: ProviderCapabilitiesFile36;
+	maxStoryboardPanels?: ProviderCapabilitiesFile37;
+	minPanelResolution?: ProviderCapabilitiesFile40;
+	supportedStoryboardLayouts?: ProviderCapabilitiesFile43;
+	outputSizes?: ProviderCapabilitiesFile48;
+	source: ProviderCapabilitiesFile53;
+	notes?: ProviderCapabilitiesFile54;
 }
-export interface ProviderCapabilitiesFile13 {
-	maxImages: ProviderCapabilitiesFile14;
-	maxVideos: ProviderCapabilitiesFile17;
-	maxAudios: ProviderCapabilitiesFile20;
-	maxTotalReferences: ProviderCapabilitiesFile23;
-	maxDurationMs?: ProviderCapabilitiesFile26;
-	maxOutputsPerRequest?: ProviderCapabilitiesFile29;
-	maxConcurrentRequests?: ProviderCapabilitiesFile32;
+export interface ProviderCapabilitiesFile14 {
+	maxImages: ProviderCapabilitiesFile15;
+	maxVideos: ProviderCapabilitiesFile18;
+	maxAudios: ProviderCapabilitiesFile21;
+	maxTotalReferences: ProviderCapabilitiesFile24;
+	maxDurationMs?: ProviderCapabilitiesFile27;
+	maxOutputsPerRequest?: ProviderCapabilitiesFile30;
+	maxConcurrentRequests?: ProviderCapabilitiesFile33;
 }
-export interface ProviderCapabilitiesFile39 {
-	width: ProviderCapabilitiesFile40;
-	height: ProviderCapabilitiesFile41;
+export interface ProviderCapabilitiesFile40 {
+	width: ProviderCapabilitiesFile41;
+	height: ProviderCapabilitiesFile42;
 }
-export interface ProviderCapabilitiesFile43 {
-	rows: ProviderCapabilitiesFile44;
-	columns: ProviderCapabilitiesFile45;
-	aspectRatio: ProviderCapabilitiesFile46;
+export interface ProviderCapabilitiesFile44 {
+	rows: ProviderCapabilitiesFile45;
+	columns: ProviderCapabilitiesFile46;
+	aspectRatio: ProviderCapabilitiesFile47;
 }
-export interface ProviderCapabilitiesFile48 {
-	width: ProviderCapabilitiesFile49;
-	height: ProviderCapabilitiesFile50;
-	aspectRatio: ProviderCapabilitiesFile51;
+export interface ProviderCapabilitiesFile49 {
+	width: ProviderCapabilitiesFile50;
+	height: ProviderCapabilitiesFile51;
+	aspectRatio: ProviderCapabilitiesFile52;
 }
-export interface ProviderCapabilitiesFile53 {
-	es?: ProviderCapabilitiesFile54;
-	en: ProviderCapabilitiesFile55;
-	[k: string]: ProviderCapabilitiesFile56 | undefined;
+export interface ProviderCapabilitiesFile54 {
+	es?: ProviderCapabilitiesFile55;
+	en: ProviderCapabilitiesFile56;
+	[k: string]: ProviderCapabilitiesFile57 | undefined;
 }
-export interface ProviderCapabilitiesFile58 {
-	id: ProviderCapabilitiesFile59;
-	providerSnapshotId: ProviderCapabilitiesFile60;
-	stillProviderSnapshotId: ProviderCapabilitiesFile61;
-	maxSegmentMs: ProviderCapabilitiesFile62;
-	requiresEntitlementPreflight: ProviderCapabilitiesFile63;
-	noCreditsAllowed: ProviderCapabilitiesFile64;
-	concurrency?: ProviderCapabilitiesFile65;
-	notes?: ProviderCapabilitiesFile53;
+export interface ProviderCapabilitiesFile59 {
+	id: ProviderCapabilitiesFile60;
+	providerSnapshotId: ProviderCapabilitiesFile61;
+	stillProviderSnapshotId: ProviderCapabilitiesFile62;
+	maxSegmentMs: ProviderCapabilitiesFile63;
+	requiresEntitlementPreflight: ProviderCapabilitiesFile64;
+	noCreditsAllowed: ProviderCapabilitiesFile65;
+	concurrency?: ProviderCapabilitiesFile66;
+	notes?: ProviderCapabilitiesFile54;
 }
 
 export type ContinuityLedgerFile1 = string;

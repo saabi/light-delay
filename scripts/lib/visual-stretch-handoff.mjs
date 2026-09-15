@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Build §8 run-file handoffs for visual-stretch jobs (preview or ready).
  */

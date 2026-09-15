@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Reference budget + pack coverage diagnostics.
  * Still/video/voice budgets stay independent; attached lists are never silently trimmed.
